@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.793210076336" font-weight="bold" fill="var(--text)">Authorization Code Flow: Step by Step</text>
+
+  <rect x="40" y="86.194690265487" width="248.275862068966" height="102.654867256637" rx="6.183048479155" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="164.137931034483" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--primary-text)">Step 1</text>
+  <text x="164.137931034483" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">/authorize redirect</text>
+  <text x="164.137931034483" y="171.398230088496" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.33558887845" fill="var(--primary-text)">client_id, scope, state</text>
+
+  <rect x="340" y="86.194690265487" width="248.275862068966" height="102.654867256637" rx="6.183048479155" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="464.137931034483" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--info-text)">Step 2</text>
+  <text x="464.137931034483" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">user authenticates</text>
+  <text x="464.137931034483" y="171.398230088496" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.33558887845" fill="var(--info-text)">+ consents to scopes</text>
+
+  <rect x="640" y="86.194690265487" width="248.275862068966" height="102.654867256637" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="764.137931034483" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">Step 3</text>
+  <text x="764.137931034483" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">redirect with code</text>
+  <text x="764.137931034483" y="171.398230088496" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.33558887845" fill="var(--warn-text)">to client redirect_uri</text>
+
+  <rect x="940" y="86.194690265487" width="248.275862068966" height="102.654867256637" rx="6.183048479155" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1064.137931034483" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--ok-text)">Step 4</text>
+  <text x="1064.137931034483" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">POST /token</text>
+  <text x="1064.137931034483" y="171.398230088496" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.33558887845" fill="var(--ok-text)">code → access token</text>
+
+  <path d="M 288.275862068966 137.522123893805 L 340 137.522123893805" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 588.275862068966 137.522123893805 L 640 137.522123893805" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 888.275862068966 137.522123893805 L 940 137.522123893805" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="229.911504424779" width="1200" height="123.185840707965" rx="6.183048479155" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="60.689655172414" y="260.70796460177" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--surface)">/authorize parameters</text>
+  <text x="60.689655172414" y="286.371681415929" font-family="Courier New, monospace" font-size="13.396605038168" fill="var(--surface)">response_type=code &amp; client_id=app123 &amp; redirect_uri=https://app/cb</text>
+  <text x="60.689655172414" y="312.035398230089" font-family="Courier New, monospace" font-size="13.396605038168" fill="var(--surface)">&amp; scope=read:profile &amp; state=abc123</text>
+  <text x="60.689655172414" y="337.699115044248" font-family="Courier New, monospace" font-size="13.396605038168" fill="var(--surface)">&amp; code_challenge=hashed_value &amp; code_challenge_method=S256</text>
+
+  <rect x="40" y="373.628318584071" width="1200" height="102.654867256637" rx="6.183048479155" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="60.689655172414" y="404.424778761062" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--surface)">/token request body</text>
+  <text x="60.689655172414" y="430.088495575221" font-family="Courier New, monospace" font-size="13.396605038168" fill="var(--surface)">grant_type=authorization_code &amp; code=AUTHCODE</text>
+  <text x="60.689655172414" y="455.752212389381" font-family="Courier New, monospace" font-size="13.396605038168" fill="var(--surface)">&amp; redirect_uri=... &amp; code_verifier=original_value</text>
+
+  <rect x="40" y="496.814159292035" width="1200" height="123.185840707965" rx="6.183048479155" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="527.610619469027" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--text)">Why this flow?</text>
+  <text x="60.689655172414" y="556.353982300885" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text)">- short-lived, single-use code</text>
+  <text x="60.689655172414" y="580.991150442478" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text)">- server-to-server exchange</text>
+  <text x="60.689655172414" y="605.628318584071" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text)">- PKCE defeats code interception</text>
+</svg>

@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="661.428571428571" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.512019135483" font-weight="bold" fill="var(--text)">OpenID Connect: Identity Layer on OAuth2</text>
+
+  <rect x="40" y="87.027027027027" width="578.571428571429" height="334.414414414414" rx="6.348927492804" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.285714285714" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.163091642679" font-weight="bold" fill="var(--primary-text)">OAuth2 alone</text>
+  <text x="329.285714285714" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--primary-text)">just authorization</text>
+  <text x="61.428571428571" y="201.981981981982" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--primary-text)">- access token grants action</text>
+  <text x="61.428571428571" y="233.333333333333" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--primary-text)">- no user identity</text>
+  <text x="61.428571428571" y="264.684684684685" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--primary-text)">- no identity standard</text>
+  <text x="61.428571428571" y="301.261261261261" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--primary-text)">use cases:</text>
+  <text x="61.428571428571" y="332.612612612613" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--primary-text)">- delegated access</text>
+  <text x="61.428571428571" y="356.648648648649" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--primary-text)">- M2M API auth</text>
+  <text x="61.428571428571" y="384.864864864865" font-family="Arial, sans-serif" font-size="12.697854985608" font-style="italic" fill="var(--primary-text)">permissions, not login</text>
+
+  <rect x="661.428571428571" y="87.027027027027" width="578.571428571429" height="334.414414414414" rx="6.348927492804" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.714285714286" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.163091642679" font-weight="bold" fill="var(--info-text)">OAuth2 + OIDC</text>
+  <text x="950.714285714286" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--info-text)">authz + identity</text>
+  <text x="682.857142857143" y="201.981981981982" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--info-text)">- access token</text>
+  <text x="682.857142857143" y="233.333333333333" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--info-text)">- ID token: identity</text>
+  <text x="682.857142857143" y="264.684684684685" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--info-text)">- claims: sub, name, email</text>
+  <text x="682.857142857143" y="301.261261261261" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--info-text)">use cases:</text>
+  <text x="682.857142857143" y="332.612612612613" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--info-text)">- social login</text>
+  <text x="682.857142857143" y="356.648648648649" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--info-text)">- enterprise SSO</text>
+  <text x="682.857142857143" y="384.864864864865" font-family="Arial, sans-serif" font-size="12.697854985608" font-style="italic" fill="var(--info-text)">scope=openid → OIDC</text>
+
+  <rect x="40" y="452.792792792793" width="1200" height="167.207207207207" rx="6.348927492804" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="489.369369369369" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.046782478411" font-weight="bold" fill="var(--text)">What OIDC adds on top</text>
+  <text x="61.428571428571" y="520.720720720721" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--text)">- ID token (signed JWT)</text>
+  <text x="61.428571428571" y="546.846846846847" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--text)">- claims: iss, sub, aud, exp, nonce</text>
+  <text x="61.428571428571" y="572.972972972973" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--text)">- /userinfo endpoint</text>
+  <text x="61.428571428571" y="599.099099099099" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--text)">- discovery: well-known config</text>
+</svg>
