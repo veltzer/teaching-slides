@@ -1,25 +1,46 @@
 # Slides from Syllabi - Progress Tracker
 
-Source: `../teaching-syllabi/syllabi/courses/`
-Target: `marp/courses/`
+Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/` that don't yet have corresponding course material in `marp/courses/`.
 
-Legend: [x] = slides exist, [ ] = slides needed
+- Syllabi: `../teaching-syllabi/syllabi/courses/<domain>/<course>.md`
+- Materials: `marp/courses/<domain>/<course-with-dashes>/`
+
+> **Note:** the per-domain checklists below were last bulk-reconciled some time ago and may undercount what already exists in `marp/courses/`. When picking a course, verify the directory doesn't already exist before starting. Update the checklist as you go.
+
+## Status legend
+
+- [ ] not started
+- [~] in progress
+- [x] done (all chapters written, builds clean)
+- [-] decided not to write (out of scope, deprecated, etc.)
+
+## Process per course
+
+1. Read the syllabus to extract chapters and durations.
+2. Create `marp/courses/<domain>/<course-with-dashes>/` directory.
+3. Write `00_title.md` plus one `NN_<chapter>.md` per syllabus chapter.
+4. Add `title.svg` and any per-chapter SVGs the material references.
+5. Run `rsconstruct build --verbose -j10` and resolve all errors.
+6. Mark the entry below `[x]` and commit (user commits, not me).
 
 ## Guidelines
 
 - Target **~100 slides per training day** (roughly 12-13 slides per hour)
 - A 2-day (16h) course should have ~200 slides
 - A 1-day (8h) course should have ~100 slides
-- Each course needs **SVG diagrams** (~1 per 8-10 text slides) in `svg/courses/cloud/<course>/<chapter>/`
+- Each course needs **SVG diagrams** (~1 per 8-10 text slides) in `svg/courses/<domain>/<course>/<chapter>/`
 - Each course needs **code samples** (~1 per 10-15 slides) as inline fenced code blocks
 - SVGs must use `var()` palette references, viewBox="0 0 1280 720", content ≤ y=630
+- Default style follows existing courses (e.g. `marp/courses/ai/developing-using-ai/`): plain headings (no "Part N:"), `1. 1. 1.` ordered lists, dash bullets, project-root-relative SVG paths, palette-compliant SVGs.
+- Skip syllabi that overlap heavily with already-written courses unless the syllabus introduces a meaningfully different angle/depth.
+- Each course is roughly 8-15 chapters × ~700-1500 lines of well-written content + per-chapter SVGs. Writing one course end-to-end is several hours of focused work; this is a long-running task.
 
 ## Summary
 
 | Domain | Existing | Missing | Total |
 |--------|----------|---------|-------|
 | ai | 3 | 13 | 16 |
-| architecting | 2 | 24 | 26 |
+| architecting | 8 | 18 | 26 |
 | big_data | 0 | 16 | 16 |
 | build_systems | 1 | 11 | 12 |
 | cloud | 5 | 38 | 43 |
@@ -48,7 +69,7 @@ Legend: [x] = slides exist, [ ] = slides needed
 | testing | 0 | 20 | 20 |
 | unity | 0 | 1 | 1 |
 | wifi | 0 | 1 | 1 |
-| **TOTAL** | **29** | **367** | **396** |
+| **TOTAL** | **35** | **361** | **396** |
 
 ## ai (3/16)
 
@@ -69,19 +90,19 @@ Legend: [x] = slides exist, [ ] = slides needed
 - [ ] reinforcement_learning
 - [ ] using_ai_when_developing_applications
 
-## architecting (2/26)
+## architecting (8/26)
 
-- [ ] api_design_best_practices
+- [x] api_design_best_practices — 12 chapters + title; 16h intermediate; 2 SVGs; build clean
 - [ ] api_first_development
 - [ ] api_gateway_patterns
 - [x] architecting
 - [ ] clean_and_hexagonal_architecture
 - [ ] cloud_monolith_microservices_cloudnative_servicmesh
-- [ ] cqrs_and_event_sourcing
+- [x] cqrs_and_event_sourcing — 9 chapters + title; 16h advanced; 33 SVGs; build clean
 - [ ] data_mesh
 - [ ] disaster_recovery
 - [ ] distributed_systems_fundamentals
-- [ ] domain_driven_design
+- [x] domain_driven_design — 7 chapters + title; 24h advanced; 1 SVG; build clean
 - [ ] enterprise_architecture
 - [ ] event_driven_architecture
 - [ ] event_driven_architecture_with_kafka
@@ -89,14 +110,14 @@ Legend: [x] = slides exist, [ ] = slides needed
 - [ ] large_scale_architecting
 - [ ] legacy_modernization
 - [ ] message_queues
-- [ ] microservices_architecture
+- [x] microservices_architecture — 14 chapters + title; 16h intermediate; 1 SVG; build clean
 - [x] modern_software_architecture
-- [ ] saga_pattern
+- [x] saga_pattern — 6 chapters + title; 8h advanced; 11 SVGs; build clean
 - [ ] serverless_architecture
 - [ ] site_reliability_engineering
 - [ ] sre_practices
 - [ ] system_design
-- [ ] twelve_factor_app
+- [x] twelve_factor_app — 15 chapters + title; 16h intermediate; 2 SVGs; build clean
 - [ ] uml
 - [ ] web_architecture_and_scaling
 
