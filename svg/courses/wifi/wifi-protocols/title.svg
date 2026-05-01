@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
+
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">Wi-Fi Protocols</text>
+  <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">802.11 from the physical layer to WPA3</text>
+
+  <!-- Stylised access point with concentric arcs -->
+  <ellipse cx="640" cy="430" rx="60" ry="20" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="615" y="380" width="50" height="55" rx="4" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="635" y="350" width="10" height="40" fill="var(--primary-accent)"/>
+
+  <path d="M 540 370 Q 640 290 740 370" fill="none" stroke="var(--primary-fill)" stroke-width="3" opacity="0.85"/>
+  <path d="M 480 360 Q 640 230 800 360" fill="none" stroke="var(--primary-fill)" stroke-width="3" opacity="0.6"/>
+  <path d="M 420 350 Q 640 170 860 350" fill="none" stroke="var(--primary-fill)" stroke-width="3" opacity="0.35"/>
+
+  <text x="240" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">OFDM &#8226; MIMO</text>
+  <text x="500" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">802.11 a/b/g/n/ac/ax</text>
+  <text x="780" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Wi-Fi 6 / Wi-Fi 6E</text>
+  <text x="1040" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">WEP &#8594; WPA3</text>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/></marker>
+  </defs>
+
+  <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Two delivery models</text>
+
+  <text x="240" y="100" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Waterfall</text>
+
+  <rect x="60" y="130" width="160" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="140" y="167" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Requirements</text>
+  <line x1="220" y1="160" x2="260" y2="160" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="260" y="130" width="160" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="340" y="167" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Design</text>
+
+  <line x1="340" y1="190" x2="340" y2="220" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="260" y="220" width="160" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="340" y="257" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Build</text>
+  <line x1="260" y1="250" x2="220" y2="250" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="60" y="220" width="160" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="140" y="257" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Test</text>
+
+  <line x1="140" y1="280" x2="140" y2="310" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="60" y="310" width="360" height="60" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="240" y="347" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Release (months later)</text>
+
+  <text x="240" y="420" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">one big handoff &#8226; late feedback</text>
+  <text x="240" y="445" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">change is expensive after design</text>
+
+  <text x="900" y="100" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Agile (iterative)</text>
+
+  <rect x="540" y="130" width="160" height="80" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="620" y="170" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Sprint 1</text>
+  <text x="620" y="195" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">plan / build / review</text>
+
+  <line x1="700" y1="170" x2="740" y2="170" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="740" y="130" width="160" height="80" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="820" y="170" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Sprint 2</text>
+  <text x="820" y="195" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">plan / build / review</text>
+
+  <line x1="900" y1="170" x2="940" y2="170" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="940" y="130" width="160" height="80" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1020" y="170" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Sprint 3</text>
+  <text x="1020" y="195" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">plan / build / review</text>
+
+  <line x1="1100" y1="170" x2="1240" y2="170" stroke="var(--text)" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="1170" y="160" text-anchor="middle" font-size="12" fill="var(--text-muted)" font-family="Arial, sans-serif">...</text>
+
+  <line x1="620" y1="220" x2="620" y2="250" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="820" y1="220" x2="820" y2="250" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1020" y1="220" x2="1020" y2="250" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="560" y="260" width="120" height="40" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="620" y="285" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">v0.1 release</text>
+  <rect x="760" y="260" width="120" height="40" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="820" y="285" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">v0.2 release</text>
+  <rect x="960" y="260" width="120" height="40" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1020" y="285" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">v0.3 release</text>
+
+  <text x="820" y="350" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">small handoffs &#8226; feedback every cycle</text>
+  <text x="820" y="375" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">change is built into the model</text>
+
+  <text x="640" y="500" text-anchor="middle" font-size="16" fill="var(--text-muted)" font-family="Arial, sans-serif">Agile trades a single big plan for many small ones &#8594; learn faster, change cheaper</text>
+  <text x="640" y="620" text-anchor="middle" font-size="13" fill="var(--text-faint)" font-family="Arial, sans-serif">Waterfall isn't always wrong &#8212; it's wrong for projects where requirements emerge from use</text>
+</svg>

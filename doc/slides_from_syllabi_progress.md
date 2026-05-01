@@ -60,16 +60,16 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 | networking | 1 | 15 | 16 |
 | observability_and_monitoring | 0 | 14 | 14 |
 | operating_systems | 0 | 5 | 5 |
-| practices | 0 | 1 | 1 |
-| principles | 0 | 2 | 2 |
+| practices | 1 | 0 | 1 |
+| principles | 2 | 0 | 2 |
 | professional_skills | 0 | 5 | 5 |
 | queues | 0 | 5 | 5 |
 | real_time | 0 | 2 | 2 |
 | security | 4 | 23 | 27 |
 | testing | 0 | 20 | 20 |
-| unity | 0 | 1 | 1 |
-| wifi | 0 | 1 | 1 |
-| **TOTAL** | **35** | **361** | **396** |
+| unity | 1 | 0 | 1 |
+| wifi | 1 | 0 | 1 |
+| **TOTAL** | **40** | **356** | **396** |
 
 ## ai (3/16)
 
@@ -451,14 +451,14 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [ ] vxworks
 - [ ] windows
 
-## practices (0/1)
+## practices (1/1)
 
-- [ ] agile_and_scrum
+- [x] agile_and_scrum — 8 chapters + title; 8h beginner; 4 SVGs; build clean
 
-## principles (0/2)
+## principles (2/2)
 
-- [ ] object_oriented_programming
-- [ ] solid_clean_code
+- [x] object_oriented_programming — 11 chapters + title; 16h beginner; 3 SVGs; build clean
+- [x] solid_clean_code — 8 chapters + title; 8h intermediate; 1 SVG; build clean
 
 ## professional_skills (0/5)
 
@@ -534,10 +534,10 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [ ] testcontainers
 - [ ] testing_theory
 
-## unity (0/1)
+## unity (1/1)
 
-- [ ] introduction_to_game_development_with_unity
+- [x] introduction_to_game_development_with_unity — 7 chapters + title; 24h beginner; 7 SVGs; build clean
 
-## wifi (0/1)
+## wifi (1/1)
 
-- [ ] wifi_protocols
+- [x] wifi_protocols — 6 chapters + title; 24h intermediate; 6 SVGs; build clean

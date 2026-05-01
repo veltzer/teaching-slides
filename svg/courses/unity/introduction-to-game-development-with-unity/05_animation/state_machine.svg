@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/></marker>
+  </defs>
+
+  <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">A simple Animator: Idle &#8596; Walk &#8596; Run, with a Jump from any state</text>
+
+  <ellipse cx="280" cy="280" rx="140" ry="70" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="280" y="280" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Idle</text>
+  <text x="280" y="305" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">default state</text>
+
+  <ellipse cx="640" cy="280" rx="140" ry="70" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="280" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Walk</text>
+  <text x="640" y="305" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">walking clip</text>
+
+  <ellipse cx="1100" cy="280" rx="140" ry="70" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1100" y="280" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Run</text>
+  <text x="1100" y="305" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">running clip</text>
+
+  <line x1="420" y1="265" x2="500" y2="265" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="460" y="255" text-anchor="middle" font-size="12" fill="var(--text-muted)" font-family="Arial, sans-serif">Speed &gt; 0.1</text>
+  <line x1="500" y1="295" x2="420" y2="295" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="460" y="315" text-anchor="middle" font-size="12" fill="var(--text-muted)" font-family="Arial, sans-serif">Speed &lt; 0.1</text>
+
+  <line x1="780" y1="265" x2="960" y2="265" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="870" y="255" text-anchor="middle" font-size="12" fill="var(--text-muted)" font-family="Arial, sans-serif">Speed &gt; 4</text>
+  <line x1="960" y1="295" x2="780" y2="295" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="870" y="315" text-anchor="middle" font-size="12" fill="var(--text-muted)" font-family="Arial, sans-serif">Speed &lt; 4</text>
+
+  <ellipse cx="640" cy="500" rx="140" ry="70" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="500" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Jump</text>
+  <text x="640" y="525" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">trigger: Jump</text>
+
+  <line x1="280" y1="350" x2="540" y2="475" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <line x1="640" y1="350" x2="640" y2="430" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <line x1="1100" y1="350" x2="740" y2="475" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+
+  <text x="640" y="620" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">solid: parameter-driven transitions &#8226; dashed: &quot;any state&quot; transition</text>
+</svg>

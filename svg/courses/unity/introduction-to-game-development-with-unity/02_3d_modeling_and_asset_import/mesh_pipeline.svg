@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/></marker>
+  </defs>
+
+  <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">From modeling tool to pixel on screen</text>
+
+  <rect x="40" y="120" width="220" height="160" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="150" y="180" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Blender / Maya</text>
+  <text x="150" y="220" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">model + UVs</text>
+  <text x="150" y="245" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">export FBX</text>
+
+  <rect x="320" y="120" width="220" height="160" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="430" y="180" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Texture tool</text>
+  <text x="430" y="220" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">Substance / Photoshop</text>
+  <text x="430" y="245" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">export PNG / EXR</text>
+
+  <rect x="600" y="120" width="220" height="160" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="710" y="180" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Unity Importer</text>
+  <text x="710" y="220" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">scale, normals,</text>
+  <text x="710" y="245" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">compression, mips</text>
+
+  <rect x="960" y="120" width="280" height="160" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1100" y="180" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Material</text>
+  <text x="1100" y="220" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">shader + textures</text>
+  <text x="1100" y="245" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">+ parameters</text>
+
+  <rect x="500" y="380" width="280" height="160" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="640" y="440" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">GameObject</text>
+  <text x="640" y="475" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">MeshFilter + MeshRenderer</text>
+  <text x="640" y="500" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">drawn each frame</text>
+
+  <line x1="260" y1="200" x2="320" y2="200" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="540" y1="200" x2="600" y2="200" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="820" y1="200" x2="960" y2="200" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="710" y1="280" x2="640" y2="380" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1100" y1="280" x2="780" y2="430" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="640" y="600" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">two pipelines (geometry + texture) meet at the Material, then drive a GameObject</text>
+  <text x="640" y="620" text-anchor="middle" font-size="13" fill="var(--text-faint)" font-family="Arial, sans-serif">keep the import step honest &#8212; sloppy settings show up at runtime</text>
+</svg>
