@@ -1,15 +1,11 @@
 ---
 tags:
-  - concepts:architecture
-  - concepts:distributed-systems
-  - concepts:microservices
+  - architecting:patterns
 level: intermediate
-category: architecture
-duration_hours: 24
+category: architecting
+duration_hours: 16
 audience:
-  - audiences:developers
   - audiences:architects
-  - audiences:devops
 
 ---
 # Event-Driven Architecture

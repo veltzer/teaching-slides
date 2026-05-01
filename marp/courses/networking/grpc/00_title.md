@@ -1,17 +1,14 @@
 ---
 tags:
   - networking:grpc
-  - networking:protocols
-  - concepts:api
-  - concepts:microservices
 level: intermediate
 category: networking
-duration_hours: 24
+duration_hours: 16
 audience:
   - audiences:developers
 
 ---
-# gRPC Development
+# gRPC
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 

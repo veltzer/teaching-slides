@@ -1,18 +1,16 @@
 ---
 tags:
-  - security:oauth2
-  - security:oidc
-  - networking:authentication
+  - security:authentication
+  - security:authorization
 level: intermediate
-category: security
+category: networking
 duration_hours: 16
 audience:
   - audiences:developers
-  - audiences:architects
-  - audiences:security-professionals
+  - audiences:security
 
 ---
-# OAuth2 and OpenID Connect
+# OAuth2 and OIDC
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
