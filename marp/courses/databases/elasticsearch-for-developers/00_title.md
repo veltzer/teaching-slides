@@ -1,19 +1,15 @@
 ---
 tags:
-  - tools:elasticsearch
+  - databases:elasticsearch
   - data-and-ai:search
-  - concepts:api
-  - concepts:distributed-systems
 level: intermediate
-category: database
-duration_hours_short: 24
-duration_hours_long: 40
+category: databases
+duration_hours: 40
 audience:
   - audiences:developers
-duration_hours: 40
 
 ---
-# Elasticsearch For Developers
+# Elasticsearch for Developers
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 

@@ -1,565 +1,135 @@
 ---
 tags:
-  - tools:elasticsearch
-  - data-and-ai:search
-  - concepts:data-pipelines
+  - databases:elasticsearch
+  - databases:ingestion
 level: intermediate
-category: database
+category: databases
 audience:
   - audiences:developers
 
 ---
-# Data Ingestion and Pipelines
-
-## Getting Data Into Elasticsearch
+# Data Ingestion
 
 ---
+## What This Chapter Covers
 
-## Ingestion Overview
-
-![ingestion_overview](svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/ingestion_overview.svg)
+- Single document ingestion
+- Bulk API
+- Logstash
+- Beats
+- Ingest pipelines
+- Throughput
 
 ---
+## Single Document
 
-## Bulk API Basics
+```http
+POST /products/_doc
+{ "name": "Widget", "price": 19.99 }
+```
 
-```json
+- Auto-generated ID
+- Or PUT with explicit ID
+- Each is a round trip
+
+---
+## Bulk API
+
+```http
 POST /_bulk
-{"index": {"_index": "products"}}
-{"name": "Product A", "price": 29.99}
-{"index": {"_index": "products"}}
-{"name": "Product B", "price": 39.99}
+{ "index": { "_index": "products" } }
+{ "name": "A", "price": 1 }
+{ "index": { "_index": "products" } }
+{ "name": "B", "price": 2 }
 ```
 
-NDJSON format - newline delimited
+- Many ops in one request
+- Newline-delimited JSON
+- Massive throughput improvement
 
 ---
+## Bulk Sizing
 
-## Bulk Actions
-
-1. **index**: Insert or replace
-1. **create**: Insert if not exists
-1. **update**: Partial update
-1. **delete**: Remove document
-
----
-
-## Bulk Index Example
-
-```json
-POST /products/_bulk
-{"index": {"_id": "1"}}
-{"name": "Laptop", "price": 999}
-{"index": {"_id": "2"}}
-{"name": "Mouse", "price": 29}
-{"index": {"_id": "3"}}
-{"name": "Keyboard", "price": 79}
-```
+- 5-15MB per bulk request typical
+- 1000-5000 documents
+- Larger: server memory pressure
+- Smaller: per-request overhead
 
 ---
+## Logstash
 
-## Bulk Update Example
-
-```json
-POST /_bulk
-{"update": {"_index": "products", "_id": "1"}}
-{"doc": {"price": 899}, "doc_as_upsert": true}
-{"update": {"_index": "products", "_id": "2"}}
-{"script": {"source": "ctx._source.price *= 0.9"}}
-```
+- ETL pipeline
+- Input: beats, syslog, kafka, file
+- Filter: grok, mutate, geoip
+- Output: elasticsearch
+- Heavy; declining vs alternatives
 
 ---
+## Beats
 
-## Bulk Delete Example
-
-```json
-POST /_bulk
-{"delete": {"_index": "products", "_id": "old-1"}}
-{"delete": {"_index": "products", "_id": "old-2"}}
-{"delete": {"_index": "products", "_id": "old-3"}}
-```
-
-No document body for deletes
+- Lightweight shippers
+- Filebeat, Metricbeat, Packetbeat, Auditbeat
+- Each: a focused agent
+- Output to ES or Logstash
 
 ---
+## Filebeat
 
-## Optimal Batch Size
-
-![optimal_batch_size](svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/optimal_batch_size.svg)
-
----
-
-## Bulk Performance Tips
-
-1. Batch size: 5-15 MB
-1. Document count: 1000-5000 per batch
-1. Use compression when possible
-1. Monitor rejection rates
-1. Implement retry logic
+- Tail log files
+- Send to ES (or Logstash)
+- Module-based for common formats
+- Standard for log shipping
 
 ---
-
-## Error Handling
-
-```json
-{
-  "took": 30,
-  "errors": true,
-  "items": [{
-    "index": {
-      "_index": "products",
-      "_id": "1",
-      "status": 200
-    }
-  }, {
-    "index": {
-      "_index": "products",
-      "_id": "2",
-      "status": 400,
-      "error": {
-        "type": "mapper_parsing_exception"
-      }
-    }
-  }]
-}
-```
-
----
-
-## Bulk Retry Strategy
-
-```python
-def bulk_with_retry(actions, max_retries=3):
-    for attempt in range(max_retries):
-        response = es.bulk(actions)
-        if not response['errors']:
-            return response
-        # Extract failed actions
-        actions = get_failed_actions(response)
-        time.sleep(2 ** attempt)
-```
-
----
-
 ## Ingest Pipelines
 
-```json
-PUT /_ingest/pipeline/product_pipeline
-{
-  "description": "Process product data",
-  "processors": [{
-    "set": {
-      "field": "timestamp",
-      "value": "{{_ingest.timestamp}}"
-    }
-  }]
-}
-```
+- Server-side processing on ingestion
+- Add fields, parse, transform
+- Lighter than Logstash
+- Run on ingest nodes
 
 ---
-
-## Pipeline Architecture
-
-![pipeline_architecture](svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/pipeline_architecture.svg)
-
----
-
-## Common Processors
-
-1. **set**: Add/update fields
-1. **remove**: Delete fields
-1. **rename**: Rename fields
-1. **convert**: Change types
-1. **date**: Parse dates
-
----
-
-## Set Processor
+## Pipeline Example
 
 ```json
+PUT /_ingest/pipeline/parse_log
 {
-  "set": {
-    "field": "category",
-    "value": "electronics",
-    "override": false
-  }
-}
-```
-
-Add or update field values
-
----
-
-## Remove Processor
-
-```json
-{
-  "remove": {
-    "field": ["temp_field", "debug_info"],
-    "ignore_missing": true
-  }
-}
-```
-
-Clean up unwanted fields
-
----
-
-## Rename Processor
-
-```json
-{
-  "rename": {
-    "field": "product_name",
-    "target_field": "name",
-    "ignore_missing": false
-  }
-}
-```
-
-Standardize field names
-
----
-
-## Convert Processor
-
-```json
-{
-  "convert": {
-    "field": "price",
-    "type": "float",
-    "ignore_missing": false
-  }
-}
-```
-
-Types: `integer`, `long`, `float`, `double`, `string`, `boolean`
-
----
-
-## Date Processor
-
-```json
-{
-  "date": {
-    "field": "date_string",
-    "target_field": "@timestamp",
-    "formats": ["dd/MM/yyyy", "ISO8601"],
-    "timezone": "UTC"
-  }
-}
-```
-
-Parse various date formats
-
----
-
-## Grok Processor
-
-```json
-{
-  "grok": {
-    "field": "message",
-    "patterns": [
-      "%{IP:client_ip} - - \\[%{HTTPDATE:timestamp}\\] \"%{WORD:method} %{URIPATHPARAM:request}\""
+    "processors": [
+        { "grok": { "field": "message", "patterns": ["..."] } },
+        { "date": { "field": "timestamp", "formats": [...] } }
     ]
-  }
-}
-```
-
-Parse unstructured text
-
----
-
-## Dissect Processor
-
-```json
-{
-  "dissect": {
-    "field": "message",
-    "pattern": "%{client_ip} - - [%{timestamp}] \"%{method} %{request}\""
-  }
-}
-```
-
-Faster than Grok for fixed formats
-
----
-
-## Script Processor
-
-```json
-{
-  "script": {
-    "lang": "painless",
-    "source": """
-      ctx.total = ctx.price * ctx.quantity;
-      ctx.discounted = ctx.total * 0.9;
-    """
-  }
-}
-```
-
-Custom transformations
-
----
-
-## Enrich Processor
-
-```json
-{
-  "enrich": {
-    "policy_name": "user_lookup",
-    "field": "user_id",
-    "target_field": "user",
-    "max_matches": "1"
-  }
-}
-```
-
-Join with reference data
-
----
-
-## Creating Enrich Policy
-
-```json
-PUT /_enrich/policy/user_lookup
-{
-  "match": {
-    "indices": "users",
-    "match_field": "user_id",
-    "enrich_fields": ["name", "email", "department"]
-  }
-}
-
-POST /_enrich/policy/user_lookup/_execute
-```
-
----
-
-## Conditional Processing
-
-```json
-{
-  "set": {
-    "field": "discount_tier",
-    "value": "gold",
-    "if": "ctx.total_purchases > 1000"
-  }
-}
-```
-
-Apply processors conditionally
-
----
-
-## Pipeline Error Handling
-
-```json
-{
-  "date": {
-    "field": "date_field",
-    "formats": ["ISO8601"],
-    "on_failure": [{
-      "set": {
-        "field": "date_parse_error",
-        "value": "true"
-      }
-    }]
-  }
 }
 ```
 
 ---
+## Direct From Application
 
-## Testing Pipelines
-
-```json
-POST /_ingest/pipeline/_simulate
-{
-  "pipeline": {
-    "processors": [{
-      "lowercase": {
-        "field": "name"
-      }
-    }]
-  },
-  "docs": [{
-    "_source": {
-      "name": "PRODUCT NAME"
-    }
-  }]
-}
-```
+- Application logs to a queue
+- Worker consumes; bulk indexes ES
+- Backpressure handling
+- Standard for high-throughput apps
 
 ---
+## Date-Based Indexes
 
-## CSV Data Ingestion
-
-```json
-{
-  "csv": {
-    "field": "csv_line",
-    "target_fields": ["name", "price", "category"],
-    "separator": ",",
-    "quote": "\"",
-    "ignore_missing": false
-  }
-}
-```
+- One index per day / week / month
+- "logs-2026-05-01"
+- Easier to drop old data
+- ILM (Index Lifecycle Management) automates
 
 ---
+## ILM
 
-## JSON Parsing
-
-```json
-{
-  "json": {
-    "field": "json_string",
-    "target_field": "parsed_data",
-    "add_to_root": true
-  }
-}
-```
-
-Parse JSON strings in fields
+- Hot &#8594; warm &#8594; cold &#8594; delete
+- Move from fast to slow nodes
+- Save cost on old data
+- Standard for log clusters
 
 ---
+## Common Ingestion Mistakes
 
-## Log File Processing
-
-```json
-PUT /_ingest/pipeline/apache_logs
-{
-  "processors": [{
-    "grok": {
-      "field": "message",
-      "patterns": ["%{COMBINEDAPACHELOG}"]
-    }
-  }, {
-    "date": {
-      "field": "timestamp",
-      "formats": ["dd/MMM/yyyy:HH:mm:ss Z"]
-    }
-  }]
-}
-```
-
----
-
-## Update Strategies
-
-1. **Full replace**: PUT with complete document
-1. **Partial update**: POST with `_update`
-1. **Scripted update**: Dynamic modifications
-1. **Update by query**: Bulk updates
-
----
-
-## Update by Query
-
-```json
-POST /products/_update_by_query
-{
-  "script": {
-    "source": "ctx._source.price *= params.factor",
-    "params": {
-      "factor": 1.1
-    }
-  },
-  "query": {
-    "term": {
-      "category": "electronics"
-    }
-  }
-}
-```
-
----
-
-## Optimistic Concurrency
-
-```json
-POST /products/_update/1?if_seq_no=5&if_primary_term=1
-{
-  "doc": {
-    "stock": 45
-  }
-}
-```
-
-Prevent lost updates
-
----
-
-## Version Conflicts
-
-```json
-POST /products/_update_by_query?conflicts=proceed
-{
-  "query": {
-    "match_all": {}
-  }
-}
-```
-
-Options: `abort` (default) or `proceed`
-
----
-
-## Performance Monitoring
-
-```json
-GET /_nodes/stats/ingest
-
-GET /_stats/indexing
-```
-
-Track ingestion metrics
-
----
-
-## Refresh Control
-
-```json
-POST /products/_bulk?refresh=wait_for
-{"index": {"_id": "1"}}
-{"name": "Product", "price": 100}
-```
-
-Options: `false`, `true`, `wait_for`
-
----
-
-## Threading and Throttling
-
-```json
-POST /products/_update_by_query?slices=auto&scroll_size=1000
-{
-  "query": {
-    "match_all": {}
-  }
-}
-```
-
-Parallel processing with slices
-
----
-
-## Best Practices
-
-1. Use bulk API for multiple documents
-1. Implement retry logic
-1. Monitor pipeline performance
-1. Test pipelines before production
-1. Control refresh intervals
-
----
-
-## Common Issues
-
-1. Pipeline bottlenecks
-1. Memory pressure from large batches
-1. Processor failures
-1. Version conflicts
+- Document-at-a-time ingestion (slow)
+- Bulk too large (OOM)
+- No retries on bulk rejections (data lost)
+- Logstash for simple ETL when ingest pipelines would do
+- No ILM (cluster fills up)

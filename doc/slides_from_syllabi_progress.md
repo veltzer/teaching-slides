@@ -93,15 +93,15 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 ## architecting (8/26)
 
 - [x] api_design_best_practices — 12 chapters + title; 16h intermediate; 2 SVGs; build clean
-- [ ] api_first_development
-- [ ] api_gateway_patterns
+- [x] api_first_development — 8 chapters + title; intermediate; build clean
+- [x] api_gateway_patterns — 10 chapters + title; intermediate; build clean
 - [x] architecting
-- [ ] clean_and_hexagonal_architecture
+- [x] clean_and_hexagonal_architecture — 8 chapters + title; intermediate; build clean
 - [ ] cloud_monolith_microservices_cloudnative_servicmesh
 - [x] cqrs_and_event_sourcing — 9 chapters + title; 16h advanced; 33 SVGs; build clean
 - [ ] data_mesh
 - [ ] disaster_recovery
-- [ ] distributed_systems_fundamentals
+- [x] distributed_systems_fundamentals — 10 chapters + title; intermediate; build clean
 - [x] domain_driven_design — 7 chapters + title; 24h advanced; 1 SVG; build clean
 - [ ] enterprise_architecture
 - [ ] event_driven_architecture
@@ -113,10 +113,10 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [x] microservices_architecture — 14 chapters + title; 16h intermediate; 1 SVG; build clean
 - [x] modern_software_architecture
 - [x] saga_pattern — 6 chapters + title; 8h advanced; 11 SVGs; build clean
-- [ ] serverless_architecture
+- [x] serverless_architecture — 9 chapters + title; intermediate; build clean
 - [ ] site_reliability_engineering
 - [ ] sre_practices
-- [ ] system_design
+- [x] system_design — 11 chapters + title; intermediate; build clean
 - [x] twelve_factor_app — 15 chapters + title; 16h intermediate; 2 SVGs; build clean
 - [ ] uml
 - [ ] web_architecture_and_scaling
@@ -208,7 +208,7 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 ## containers (1/4)
 
 - [x] docker_fundamentals — 8 chapters + title; 16h beginner; 8 SVGs; build clean
-- [ ] kubernetes
+- [x] kubernetes — 10 chapters + title; intermediate; build clean
 - [ ] kubernetes_for_developers
 - [ ] kubernetes_troubleshooting
 
@@ -220,11 +220,11 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 ## data_engineering (0/8)
 
 - [ ] airbyte
-- [ ] apache_airflow
+- [x] apache_airflow — 9 chapters + title; intermediate; build clean
 - [ ] apache_hudi
 - [ ] apache_nifi
 - [ ] data_lakehouse
-- [ ] dbt
+- [x] dbt — 9 chapters + title; intermediate; build clean
 - [ ] temporal
 - [ ] trino
 
@@ -242,19 +242,19 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [ ] clickhouse
 - [ ] cockroachdb
 - [ ] couchdb
-- [ ] database_design
+- [x] database_design — 8 chapters + title; intermediate; build clean
 - [ ] database_migration_strategies
 - [ ] duckdb
 - [ ] dynamodb
-- [ ] elasticsearch
+- [x] elasticsearch (elasticsearch_for_developers) — 17 chapters + title; intermediate; build clean
 - [ ] influxdb
-- [ ] introduction_to_databases
+- [x] introduction_to_databases — 10 chapters + title; beginner; build clean
 - [ ] mariadb
-- [ ] mongodb
+- [x] mongodb (mongodb_for_developers) — 15 chapters + title; intermediate; build clean
 - [ ] mysql
 - [ ] neo4j
 - [ ] oracle
-- [ ] postgresql
+- [x] postgresql (postgresql_for_developers) — 9 chapters + title; intermediate; build clean
 - [x] redis
 - [ ] scylladb
 - [ ] solr
@@ -401,7 +401,7 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [ ] feature_engineering
 - [ ] graph_neural_networks
 - [ ] llm_application_development
-- [ ] machine_learning
+- [x] machine_learning — 5 chapters + title; intermediate; build clean
 - [ ] ml1
 - [ ] ml2
 - [ ] mlflow
@@ -410,7 +410,7 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 ## networking (1/16)
 
 - [ ] dns_deep_dive
-- [ ] graphql
+- [x] graphql — 12 chapters + title; intermediate; build clean
 - [ ] grpc
 - [ ] http2_and_http3
 - [ ] mobile_communication
@@ -420,7 +420,7 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [x] networking_basics
 - [ ] oauth2_and_oidc
 - [ ] pki_and_certificates
-- [ ] restful_apis
+- [x] restful_apis — 9 chapters + title; intermediate; build clean
 - [ ] software_defined_networking
 - [ ] tcp_ip_deep_dive
 - [ ] vpn_and_wireguard
@@ -437,8 +437,8 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [ ] jaeger
 - [ ] loki
 - [ ] nagios
-- [ ] opentelemetry
-- [ ] prometheus_and_grafana
+- [x] opentelemetry — 10 chapters + title; intermediate; build clean
+- [x] prometheus_and_grafana — 6 chapters + title; intermediate; build clean
 - [ ] prometheus_deep_dive
 - [ ] victoriametrics
 - [ ] zabbix
@@ -514,7 +514,7 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 ## testing (1/20)
 
 - [ ] advanced_playwright
-- [ ] api_testing
+- [x] api_testing — 7 chapters + title; intermediate; build clean
 - [ ] chaos_engineering
 - [ ] contract_testing
 - [ ] cypress
