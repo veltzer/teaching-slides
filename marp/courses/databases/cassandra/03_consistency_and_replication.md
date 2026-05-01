@@ -36,6 +36,11 @@ audience:
 - Common: 3 in production
 
 ---
+## Ring &amp; Replication
+
+![cassandra_ring](svg/courses/databases/cassandra/03_consistency_and_replication/cassandra_ring.svg)
+
+---
 ## Tunable Consistency
 
 - Per query

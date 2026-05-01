@@ -62,6 +62,11 @@ audience:
 - Return answer with citations
 
 ---
+## RAG Flow Visualized
+
+![rag_flow](svg/courses/ai/rag-applications/01_introduction/rag_flow.svg)
+
+---
 ## Use Cases
 
 - Internal knowledge base

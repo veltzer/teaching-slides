@@ -43,6 +43,11 @@ audience:
 - Per-region deployment
 
 ---
+## Workspace Components
+
+![databricks_arch](svg/courses/data_engineering/databricks/01_introduction/databricks_arch.svg)
+
+---
 ## Repos and Notebooks
 
 - Notebooks: interactive cells

@@ -35,6 +35,11 @@ audience:
 - Slow but inevitable
 
 ---
+## The Pattern Over Time
+
+![strangler](svg/courses/architecting/legacy-modernization/03_strangler_pattern/strangler.svg)
+
+---
 ## When To Use
 
 - Cannot stop and rewrite

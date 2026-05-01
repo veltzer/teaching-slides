@@ -100,6 +100,11 @@ audience:
 - Database for state
 
 ---
+## Sources to Dashboards
+
+![grafana_arch](svg/courses/observability_and_monitoring/grafana-basics/01_introduction/grafana_arch.svg)
+
+---
 ## Hosting Options
 
 - Self-hosted Grafana

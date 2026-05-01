@@ -43,6 +43,11 @@ audience:
 - Storage external
 
 ---
+## Cluster Architecture
+
+![spark_cluster](svg/courses/data_engineering/spark/01_introduction/spark_cluster.svg)
+
+---
 ## Driver
 
 - Plans the job

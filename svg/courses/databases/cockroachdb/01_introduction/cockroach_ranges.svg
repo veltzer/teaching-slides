@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.652189403965" font-weight="bold" fill="var(--text)">CockroachDB Ranges &amp; Raft Replication</text>
+
+  <rect x="40" y="105.046728971963" width="1200" height="65.046728971963" rx="10.590067644273" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="142.990654205607" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.062121759692" font-weight="bold" fill="var(--info-text)">Logical key space (sorted, unbounded)</text>
+
+  <rect x="60.689655172414" y="191.775700934579" width="289.655172413793" height="65.046728971963" rx="8.472054115418" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.51724137931" y="218.878504672897" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.88510146641" font-weight="bold" fill="var(--warn-text)">Range A</text>
+  <text x="205.51724137931" y="242.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" fill="var(--warn-text)">[start ... key100)</text>
+
+  <rect x="495.172413793103" y="191.775700934579" width="289.655172413793" height="65.046728971963" rx="8.472054115418" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="218.878504672897" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.88510146641" font-weight="bold" fill="var(--warn-text)">Range B</text>
+  <text x="640" y="242.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" fill="var(--warn-text)">[key100 ... key500)</text>
+
+  <rect x="929.655172413793" y="191.775700934579" width="289.655172413793" height="65.046728971963" rx="8.472054115418" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1074.48275862069" y="218.878504672897" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.88510146641" font-weight="bold" fill="var(--warn-text)">Range C</text>
+  <text x="1074.48275862069" y="242.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" fill="var(--warn-text)">[key500 ... end)</text>
+
+  <text x="205.51724137931" y="305.607476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.826094701982" font-weight="bold" fill="var(--text-muted)">Raft group A</text>
+  <rect x="60.689655172414" y="321.869158878505" width="82.758620689655" height="65.046728971963" rx="8.472054115418" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="102.068965517241" y="348.971962616822" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" font-weight="bold" fill="var(--primary-text)">N1</text>
+  <text x="102.068965517241" y="370.654205607477" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6490744087" fill="var(--primary-text)">leader</text>
+
+  <rect x="164.137931034483" y="321.869158878505" width="82.758620689655" height="65.046728971963" rx="8.472054115418" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.51724137931" y="348.971962616822" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" font-weight="bold" fill="var(--ok-text)">N2</text>
+  <text x="205.51724137931" y="370.654205607477" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6490744087" fill="var(--ok-text)">follower</text>
+
+  <rect x="267.586206896552" y="321.869158878505" width="82.758620689655" height="65.046728971963" rx="8.472054115418" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="308.965517241379" y="348.971962616822" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" font-weight="bold" fill="var(--ok-text)">N3</text>
+  <text x="308.965517241379" y="370.654205607477" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6490744087" fill="var(--ok-text)">follower</text>
+
+  <text x="640" y="305.607476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.826094701982" font-weight="bold" fill="var(--text-muted)">Raft group B</text>
+  <rect x="495.172413793103" y="321.869158878505" width="82.758620689655" height="65.046728971963" rx="8.472054115418" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="536.551724137931" y="348.971962616822" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" font-weight="bold" fill="var(--ok-text)">N1</text>
+  <text x="536.551724137931" y="370.654205607477" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6490744087" fill="var(--ok-text)">follower</text>
+
+  <rect x="598.620689655172" y="321.869158878505" width="82.758620689655" height="65.046728971963" rx="8.472054115418" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="348.971962616822" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" font-weight="bold" fill="var(--primary-text)">N2</text>
+  <text x="640" y="370.654205607477" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6490744087" fill="var(--primary-text)">leader</text>
+
+  <rect x="702.068965517241" y="321.869158878505" width="82.758620689655" height="65.046728971963" rx="8.472054115418" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="743.448275862069" y="348.971962616822" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" font-weight="bold" fill="var(--ok-text)">N4</text>
+  <text x="743.448275862069" y="370.654205607477" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6490744087" fill="var(--ok-text)">follower</text>
+
+  <text x="1074.48275862069" y="305.607476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.826094701982" font-weight="bold" fill="var(--text-muted)">Raft group C</text>
+  <rect x="929.655172413793" y="321.869158878505" width="82.758620689655" height="65.046728971963" rx="8.472054115418" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="971.034482758621" y="348.971962616822" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" font-weight="bold" fill="var(--ok-text)">N3</text>
+  <text x="971.034482758621" y="370.654205607477" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6490744087" fill="var(--ok-text)">follower</text>
+
+  <rect x="1033.103448275862" y="321.869158878505" width="82.758620689655" height="65.046728971963" rx="8.472054115418" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1074.48275862069" y="348.971962616822" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" font-weight="bold" fill="var(--ok-text)">N4</text>
+  <text x="1074.48275862069" y="370.654205607477" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6490744087" fill="var(--ok-text)">follower</text>
+
+  <rect x="1136.551724137931" y="321.869158878505" width="82.758620689655" height="65.046728971963" rx="8.472054115418" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1177.931034482759" y="348.971962616822" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" font-weight="bold" fill="var(--primary-text)">N5</text>
+  <text x="1177.931034482759" y="370.654205607477" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6490744087" fill="var(--primary-text)">leader</text>
+
+  <path d="M 205.51724137931 256.822429906542 L 205.51724137931 321.869158878505" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M 640 256.822429906542 L 640 321.869158878505" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M 1074.48275862069 256.822429906542 L 1074.48275862069 321.869158878505" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <rect x="40" y="441.121495327103" width="1200" height="108.411214953271" rx="10.590067644273" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="473.644859813084" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.944108230837" font-weight="bold" fill="var(--text)">Each range = its own Raft consensus group</text>
+  <text x="640" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.826094701982" fill="var(--text-muted)">Writes need majority ack → strong consistency, survives minority loss</text>
+  <text x="640" y="527.85046728972" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.826094701982" fill="var(--text-muted)">Ranges split when too large (~512MB), rebalance automatically</text>
+
+  <text x="640" y="592.897196261682" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.826094701982" font-weight="bold" fill="var(--text)">Leaders distributed across nodes — no single hot node by default</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.767087937555" fill="var(--text-muted)">Follower reads + bounded staleness for low-latency reads in any region</text>
+</svg>

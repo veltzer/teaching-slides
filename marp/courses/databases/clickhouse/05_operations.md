@@ -28,6 +28,11 @@ audience:
 - Distributed table fans out reads
 
 ---
+## Topology Visualized
+
+![clickhouse_topology](svg/courses/databases/clickhouse/05_operations/clickhouse_topology.svg)
+
+---
 ## Coordination
 
 - ZooKeeper or Keeper

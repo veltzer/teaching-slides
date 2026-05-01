@@ -68,6 +68,11 @@ audience:
 - Failure of one is not failure of all
 
 ---
+## Defense In Depth Visualized
+
+![defense_in_depth](svg/courses/networking/network-security/01_introduction/defense_in_depth.svg)
+
+---
 ## Network Layers
 
 - Physical

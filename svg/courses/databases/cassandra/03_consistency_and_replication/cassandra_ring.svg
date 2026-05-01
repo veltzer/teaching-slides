@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="712" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.215380824203" font-weight="bold" fill="var(--text)">Cassandra Ring &amp; Replication (RF=3)</text>
+
+  <rect x="664" y="102.142857142857" width="96" height="41.428571428571" rx="6.689010176615" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="712" y="129.071428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.837360470973" font-weight="bold" fill="var(--warn-text)">N1</text>
+
+  <rect x="1024" y="205.714285714286" width="96" height="41.428571428571" rx="6.689010176615" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1072" y="232.642857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.837360470973" font-weight="bold" fill="var(--warn-text)">N2</text>
+
+  <rect x="1144" y="443.928571428571" width="96" height="41.428571428571" rx="6.689010176615" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1192" y="470.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.837360470973" font-weight="bold" fill="var(--warn-text)">N3</text>
+
+  <rect x="664" y="537.142857142857" width="96" height="41.428571428571" rx="6.689010176615" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="712" y="564.071428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.837360470973" font-weight="bold" fill="var(--warn-text)">N4</text>
+
+  <rect x="184" y="443.928571428571" width="96" height="41.428571428571" rx="6.689010176615" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="232" y="470.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.837360470973" font-weight="bold" fill="var(--warn-text)">N5</text>
+
+  <rect x="304" y="205.714285714286" width="96" height="41.428571428571" rx="6.689010176615" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="352" y="232.642857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.837360470973" font-weight="bold" fill="var(--warn-text)">N6</text>
+
+  <path d="M 760 122.857142857143 L 1024 226.428571428571" fill="none" stroke="var(--border)" stroke-width="2"/>
+  <path d="M 1120 247.142857142857 L 1192 443.928571428571" fill="none" stroke="var(--border)" stroke-width="2"/>
+  <path d="M 1144 475 L 760 557.857142857143" fill="none" stroke="var(--border)" stroke-width="2"/>
+  <path d="M 664 557.857142857143 L 280 475" fill="none" stroke="var(--border)" stroke-width="2"/>
+  <path d="M 232 443.928571428571 L 352 247.142857142857" fill="none" stroke="var(--border)" stroke-width="2"/>
+  <path d="M 400 226.428571428571 L 664 122.857142857143" fill="none" stroke="var(--border)" stroke-width="2"/>
+
+  <rect x="544" y="278.214285714286" width="336" height="207.142857142857" rx="11.148350294358" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="712" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.837360470973" font-weight="bold" fill="var(--info-text)">Key "alice"</text>
+  <text x="712" y="345.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.607690412101" fill="var(--info-text)">hash → token range</text>
+  <text x="712" y="376.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.607690412101" fill="var(--info-text)">primary: N2</text>
+  <text x="712" y="400.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.607690412101" fill="var(--info-text)">replicas: N3, N4</text>
+  <text x="712" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.492855382666" fill="var(--info-text)">QUORUM = 2 of 3</text>
+  <text x="712" y="462.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.492855382666" fill="var(--info-text)">tolerates 1 replica down</text>
+
+  <path d="M 880 340.357142857143 L 1024 236.785714285714" fill="none" stroke="var(--ok-accent)" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M 880 371.428571428571 L 1144 454.285714285714" fill="none" stroke="var(--ok-accent)" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M 784 464.642857142857 L 760 537.142857142857" fill="none" stroke="var(--ok-accent)" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <text x="40" y="143.571428571429" font-family="Arial, sans-serif" font-size="15.607690412101" font-weight="bold" fill="var(--text)">No master</text>
+  <text x="40" y="168.428571428571" font-family="Arial, sans-serif" font-size="14.492855382666" fill="var(--text-muted)">Every node is equal</text>
+  <text x="40" y="191.214285714286" font-family="Arial, sans-serif" font-size="14.492855382666" fill="var(--text-muted)">Coordinator picked per request</text>
+
+  <text x="40" y="267.857142857143" font-family="Arial, sans-serif" font-size="15.607690412101" font-weight="bold" fill="var(--text)">Token-based partitioning</text>
+  <text x="40" y="292.714285714286" font-family="Arial, sans-serif" font-size="14.492855382666" fill="var(--text-muted)">Each node owns ranges</text>
+  <text x="40" y="315.5" font-family="Arial, sans-serif" font-size="14.492855382666" fill="var(--text-muted)">Hash(key) decides home</text>
+
+  <text x="40" y="392.142857142857" font-family="Arial, sans-serif" font-size="15.607690412101" font-weight="bold" fill="var(--text)">Replication</text>
+  <text x="40" y="417" font-family="Arial, sans-serif" font-size="14.492855382666" fill="var(--text-muted)">RF copies across the ring</text>
+  <text x="40" y="439.785714285714" font-family="Arial, sans-serif" font-size="14.492855382666" fill="var(--text-muted)">Spread across racks/DCs</text>
+
+  <text x="712" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.607690412101" fill="var(--text-muted)">Tunable consistency: ONE / QUORUM / LOCAL_QUORUM / ALL — per query, per side</text>
+</svg>

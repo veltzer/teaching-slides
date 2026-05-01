@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.26339891413" font-weight="bold" fill="var(--text)">RAG Query Flow</text>
+
+  <rect x="40" y="125.925925925926" width="183.050847457627" height="85.925925925926" rx="10.451213897904" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="131.525423728814" y="163.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.812185016227" font-weight="bold" fill="var(--primary-text)">User</text>
+  <text x="131.525423728814" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">question</text>
+
+  <rect x="304.406779661017" y="125.925925925926" width="183.050847457627" height="85.925925925926" rx="10.451213897904" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="395.932203389831" y="163.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.812185016227" font-weight="bold" fill="var(--info-text)">Embed</text>
+  <text x="395.932203389831" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">query vector</text>
+
+  <rect x="568.813559322034" y="125.925925925926" width="183.050847457627" height="85.925925925926" rx="10.451213897904" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="660.338983050847" y="163.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.812185016227" font-weight="bold" fill="var(--warn-text)">Vector index</text>
+  <text x="660.338983050847" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--warn-text)">top-k chunks</text>
+
+  <rect x="833.220338983051" y="125.925925925926" width="183.050847457627" height="85.925925925926" rx="10.451213897904" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="924.745762711864" y="163.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.812185016227" font-weight="bold" fill="var(--info-text)">Rerank</text>
+  <text x="924.745762711864" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">cross-encoder</text>
+
+  <rect x="1056.949152542373" y="125.925925925926" width="183.050847457627" height="85.925925925926" rx="10.451213897904" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1148.474576271186" y="163.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.812185016227" font-weight="bold" fill="var(--primary-text)">LLM</text>
+  <text x="1148.474576271186" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">prompt + ctx</text>
+
+  <path d="M 223.050847457627 168.888888888889 L 304.406779661017 168.888888888889" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 487.457627118644 168.888888888889 L 568.813559322034 168.888888888889" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 751.864406779661 168.888888888889 L 833.220338983051 168.888888888889" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1016.271186440678 168.888888888889 L 1056.949152542373 168.888888888889" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="319.259259259259" width="183.050847457627" height="85.925925925926" rx="10.451213897904" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="131.525423728814" y="356.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.812185016227" font-weight="bold" fill="var(--ok-text)">Documents</text>
+  <text x="131.525423728814" y="383.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--ok-text)">source corpus</text>
+
+  <rect x="304.406779661017" y="319.259259259259" width="183.050847457627" height="85.925925925926" rx="10.451213897904" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="395.932203389831" y="356.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.812185016227" font-weight="bold" fill="var(--info-text)">Chunk</text>
+  <text x="395.932203389831" y="383.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">200-1000 tok</text>
+
+  <rect x="568.813559322034" y="319.259259259259" width="183.050847457627" height="85.925925925926" rx="10.451213897904" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="660.338983050847" y="356.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.812185016227" font-weight="bold" fill="var(--info-text)">Embed</text>
+  <text x="660.338983050847" y="383.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">chunk vectors</text>
+
+  <rect x="833.220338983051" y="319.259259259259" width="183.050847457627" height="85.925925925926" rx="10.451213897904" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="924.745762711864" y="356.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.812185016227" font-weight="bold" fill="var(--warn-text)">Index</text>
+  <text x="924.745762711864" y="383.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--warn-text)">vector store</text>
+
+  <path d="M 223.050847457627 362.222222222222 L 304.406779661017 362.222222222222" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 487.457627118644 362.222222222222 L 568.813559322034 362.222222222222" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 751.864406779661 362.222222222222 L 833.220338983051 362.222222222222" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="131.525423728814" y="287.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" font-weight="bold" fill="var(--text-muted)">Query path (online)</text>
+  <text x="131.525423728814" y="437.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" font-weight="bold" fill="var(--text-muted)">Ingestion path (offline)</text>
+
+  <path d="M 924.745762711864 319.259259259259 Q 741.694915254237 265.555555555556 660.338983050847 211.851851851852" fill="none" stroke="var(--warn-accent)" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="792.542372881356" y="276.296296296296" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--warn-accent)">shared store</text>
+
+  <rect x="40" y="501.851851851852" width="1200" height="64.444444444444" rx="8.360971118323" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="629.830508474576" y="528.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.721942236646" font-weight="bold" fill="var(--text)">Answer with citations</text>
+  <text x="629.830508474576" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--text-muted)">LLM grounds response in retrieved chunks; refuses when context lacks the answer</text>
+
+  <text x="629.830508474576" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--text-muted)">Two pipelines, one shared vector store</text>
+</svg>

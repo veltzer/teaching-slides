@@ -68,6 +68,11 @@ audience:
 - Split and rebalance automatically
 
 ---
+## Ranges Visualized
+
+![cockroach_ranges](svg/courses/databases/cockroachdb/01_introduction/cockroach_ranges.svg)
+
+---
 ## Raft
 
 - Consensus per range

@@ -37,6 +37,11 @@ audience:
 - Measure to verify
 
 ---
+## Experiment Flow
+
+![chaos_flow](svg/courses/testing/chaos-engineering/02_designing_experiments/chaos_flow.svg)
+
+---
 ## Independent Variables
 
 - What you change

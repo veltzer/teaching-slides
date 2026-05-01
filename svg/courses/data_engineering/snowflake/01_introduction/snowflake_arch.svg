@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046200557" font-weight="bold" fill="var(--text)">Snowflake: Decoupled Storage and Compute</text>
+
+  <rect x="40" y="103.272727272727" width="1200" height="84.363636363636" rx="10.444659357342" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--info-text)">Cloud Services Layer</text>
+  <text x="640" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--info-text)">Auth, query optimization, metadata, transactions, security</text>
+
+  <rect x="40" y="229.818181818182" width="279.310344827586" height="189.818181818182" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="179.655172413793" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--primary-text)">Warehouse XS</text>
+  <text x="179.655172413793" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--primary-text)">BI dashboards</text>
+  <text x="179.655172413793" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">small queries</text>
+  <text x="179.655172413793" y="393.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">auto-suspend</text>
+
+  <rect x="340" y="229.818181818182" width="279.310344827586" height="189.818181818182" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.655172413793" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--primary-text)">Warehouse M</text>
+  <text x="479.655172413793" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--primary-text)">ETL pipelines</text>
+  <text x="479.655172413793" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">batch loads</text>
+  <text x="479.655172413793" y="393.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">multi-cluster</text>
+
+  <rect x="640" y="229.818181818182" width="279.310344827586" height="189.818181818182" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="779.655172413793" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--primary-text)">Warehouse L</text>
+  <text x="779.655172413793" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--primary-text)">data science</text>
+  <text x="779.655172413793" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">ad-hoc analytics</text>
+  <text x="779.655172413793" y="393.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">isolation</text>
+
+  <rect x="940" y="229.818181818182" width="279.310344827586" height="189.818181818182" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1079.655172413793" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--primary-text)">Warehouse XL</text>
+  <text x="1079.655172413793" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--primary-text)">heavy joins</text>
+  <text x="1079.655172413793" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">monthly reports</text>
+  <text x="1079.655172413793" y="393.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">scale out</text>
+
+  <rect x="40" y="461.818181818182" width="1200" height="126.545454545455" rx="10.444659357342" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--warn-text)">Storage Layer (cloud object store)</text>
+  <text x="640" y="533.527272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--warn-text)">Compressed columnar micro-partitions, automatic clustering, time travel</text>
+  <text x="640" y="558.836363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--warn-text)">Single source of truth — every warehouse sees the same data</text>
+
+  <path d="M 179.655172413793 419.636363636364 L 640 461.818181818182" fill="none" stroke="var(--text-muted)" stroke-width="1.5"/>
+  <path d="M 479.655172413793 419.636363636364 L 640 461.818181818182" fill="none" stroke="var(--text-muted)" stroke-width="1.5"/>
+  <path d="M 779.655172413793 419.636363636364 L 640 461.818181818182" fill="none" stroke="var(--text-muted)" stroke-width="1.5"/>
+  <path d="M 1079.655172413793 419.636363636364 L 640 461.818181818182" fill="none" stroke="var(--text-muted)" stroke-width="1.5"/>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--text-muted)">Multiple warehouses isolate workloads; storage is shared and metered separately from compute</text>
+</svg>

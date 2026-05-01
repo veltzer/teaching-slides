@@ -68,6 +68,11 @@ audience:
 - Has tags and logs
 
 ---
+## Trace Tree
+
+![trace_tree](svg/courses/observability_and_monitoring/jaeger/01_introduction/trace_tree.svg)
+
+---
 ## Tags
 
 - Key-value metadata

@@ -77,6 +77,11 @@ audience:
 - Replication-based
 
 ---
+## Strategy Spectrum Visualized
+
+![migration_spectrum](svg/courses/databases/database-migration-strategies/01_introduction/migration_spectrum.svg)
+
+---
 ## Big Bang
 
 - Stop, change, start

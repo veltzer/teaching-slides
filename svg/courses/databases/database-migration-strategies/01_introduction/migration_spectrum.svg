@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.588198052228" font-weight="bold" fill="var(--text)">Migration Strategy Spectrum</text>
+
+  <line x1="40" y1="512.592592592593" x2="1240" y2="512.592592592593" stroke="var(--text)" stroke-width="2"/>
+  <text x="128.888888888889" y="550.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--text-muted)">downtime</text>
+  <text x="128.888888888889" y="571.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" fill="var(--text-muted)">simple</text>
+  <text x="1151.111111111111" y="550.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--text-muted)">zero downtime</text>
+  <text x="1151.111111111111" y="571.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" fill="var(--text-muted)">complex</text>
+
+  <rect x="62.222222222222" y="168.888888888889" width="244.444444444444" height="300.740740740741" rx="10.924356447224" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.444444444444" y="206.481481481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.663841605004" font-weight="bold" fill="var(--info-text)">Big Bang</text>
+  <text x="184.444444444444" y="246.222222222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--info-text)">stop service</text>
+  <text x="184.444444444444" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--info-text)">migrate data</text>
+  <text x="184.444444444444" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--info-text)">switch app</text>
+  <text x="184.444444444444" y="323.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--info-text)">restart</text>
+  <text x="184.444444444444" y="372.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" fill="var(--info-text)">predictable outage</text>
+  <text x="184.444444444444" y="399.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" fill="var(--info-text)">simple rollback</text>
+  <text x="184.444444444444" y="437.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" font-weight="bold" fill="var(--info-text)">small systems only</text>
+
+  <rect x="340" y="168.888888888889" width="244.444444444444" height="300.740740740741" rx="10.924356447224" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="462.222222222222" y="206.481481481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.663841605004" font-weight="bold" fill="var(--info-text)">Online Schema</text>
+  <text x="462.222222222222" y="246.222222222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--info-text)">add new column</text>
+  <text x="462.222222222222" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--info-text)">backfill</text>
+  <text x="462.222222222222" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--info-text)">switch reads</text>
+  <text x="462.222222222222" y="323.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--info-text)">drop old</text>
+  <text x="462.222222222222" y="372.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" fill="var(--info-text)">app keeps running</text>
+  <text x="462.222222222222" y="399.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" fill="var(--info-text)">multi-step</text>
+  <text x="462.222222222222" y="437.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" font-weight="bold" fill="var(--info-text)">most schema changes</text>
+
+  <rect x="617.777777777778" y="168.888888888889" width="244.444444444444" height="300.740740740741" rx="10.924356447224" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="740" y="206.481481481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.663841605004" font-weight="bold" fill="var(--warn-text)">Dual Writes</text>
+  <text x="740" y="246.222222222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--warn-text)">write old + new</text>
+  <text x="740" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--warn-text)">read old</text>
+  <text x="740" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--warn-text)">verify equality</text>
+  <text x="740" y="323.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--warn-text)">flip reads</text>
+  <text x="740" y="372.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" fill="var(--warn-text)">verifiable</text>
+  <text x="740" y="399.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" fill="var(--warn-text)">complex code</text>
+  <text x="740" y="437.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" font-weight="bold" fill="var(--warn-text)">engine moves</text>
+
+  <rect x="895.555555555556" y="168.888888888889" width="244.444444444444" height="300.740740740741" rx="10.924356447224" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1017.777777777778" y="206.481481481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.663841605004" font-weight="bold" fill="var(--primary-text)">Replication</text>
+  <text x="1017.777777777778" y="246.222222222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--primary-text)">stream changes</text>
+  <text x="1017.777777777778" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--primary-text)">target catches up</text>
+  <text x="1017.777777777778" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--primary-text)">flip on quiesce</text>
+  <text x="1017.777777777778" y="323.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--primary-text)">drain old</text>
+  <text x="1017.777777777778" y="372.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" fill="var(--primary-text)">minimal downtime</text>
+  <text x="1017.777777777778" y="399.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" fill="var(--primary-text)">tooling required</text>
+  <text x="1017.777777777778" y="437.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.201663381391" font-weight="bold" fill="var(--primary-text)">large databases</text>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--text-muted)">Pick by size, downtime budget, and rollback risk — usually mix strategies per migration</text>
+</svg>

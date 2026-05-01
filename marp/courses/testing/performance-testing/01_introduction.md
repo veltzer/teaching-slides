@@ -45,6 +45,11 @@ audience:
 - Capacity test
 
 ---
+## Test Types Visualized
+
+![perf_test_types](svg/courses/testing/performance-testing/01_introduction/perf_test_types.svg)
+
+---
 ## Load Test
 
 - Expected production traffic

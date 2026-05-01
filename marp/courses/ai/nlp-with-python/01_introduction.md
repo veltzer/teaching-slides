@@ -61,6 +61,11 @@ audience:
 - Evaluate
 
 ---
+## Pipelines Compared
+
+![nlp_pipelines](svg/courses/ai/nlp-with-python/01_introduction/nlp_pipelines.svg)
+
+---
 ## Key Libraries
 
 - spaCy: production NLP

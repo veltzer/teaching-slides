@@ -36,6 +36,11 @@ audience:
 - Just a library
 
 ---
+## Embedded vs Server
+
+![duckdb_embedded](svg/courses/databases/duckdb/01_introduction/duckdb_embedded.svg)
+
+---
 ## Why It Exists
 
 - Notebook analytics need fast SQL

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.89891225661" font-weight="bold" fill="var(--text)">DuckDB: Embedded Analytics</text>
+
+  <text x="297.142857142857" y="93.211009174312" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.356365897578" font-weight="bold" fill="var(--text-muted)">Server (Postgres, MySQL)</text>
+  <text x="982.857142857143" y="93.211009174312" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.356365897578" font-weight="bold" fill="var(--text-muted)">Embedded (DuckDB)</text>
+
+  <line x1="640" y1="82.56880733945" x2="640" y2="614.678899082569" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <rect x="40" y="135.779816513761" width="214.285714285714" height="85.137614678899" rx="8.542546359031" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147.142857142857" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--info-text)">App process</text>
+
+  <rect x="340" y="135.779816513761" width="214.285714285714" height="85.137614678899" rx="8.542546359031" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="447.142857142857" y="167.706422018349" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--warn-text)">DB Server</text>
+  <text x="447.142857142857" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--warn-text)">network</text>
+
+  <rect x="40" y="263.48623853211" width="514.285714285714" height="63.853211009174" rx="8.542546359031" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="297.142857142857" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.017274423184" font-weight="bold" fill="var(--primary-text)">Disk (data files)</text>
+
+  <path d="M 254.285714285714 178.348623853211 L 340 178.348623853211" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 340 188.990825688073 L 254.285714285714 188.990825688073" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="297.142857142857" y="231.559633027523" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">protocol</text>
+
+  <path d="M 447.142857142857 220.917431192661 L 447.142857142857 263.48623853211" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 457.857142857143 263.48623853211 L 457.857142857143 220.917431192661" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="297.142857142857" y="380.550458715596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.949456128305" font-weight="bold" fill="var(--text)">Two processes</text>
+  <text x="297.142857142857" y="406.091743119266" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">Network round-trip per query</text>
+  <text x="297.142857142857" y="429.504587155963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">Concurrent users</text>
+  <text x="297.142857142857" y="452.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">Replication, HA, ACL</text>
+
+  <rect x="725.714285714286" y="135.779816513761" width="514.285714285714" height="191.559633027523" rx="8.542546359031" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="982.857142857143" y="167.706422018349" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--info-text)">App process</text>
+
+  <rect x="790" y="188.990825688073" width="385.714285714286" height="106.422018348624" rx="8.542546359031" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="982.857142857143" y="231.559633027523" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--warn-text)">DuckDB library</text>
+  <text x="982.857142857143" y="263.48623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--warn-text)">in-process function calls</text>
+
+  <rect x="725.714285714286" y="348.623853211009" width="514.285714285714" height="63.853211009174" rx="8.542546359031" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="982.857142857143" y="385.871559633028" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.017274423184" font-weight="bold" fill="var(--primary-text)">Local files (Parquet, CSV, native)</text>
+
+  <path d="M 982.857142857143 295.412844036697 L 982.857142857143 348.623853211009" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="982.857142857143" y="455.045871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.949456128305" font-weight="bold" fill="var(--text)">One process, no network</text>
+  <text x="982.857142857143" y="480.587155963303" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">Microsecond query overhead</text>
+  <text x="982.857142857143" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">One writer, many readers</text>
+  <text x="982.857142857143" y="527.412844036697" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">Vectorized columnar engine</text>
+
+  <rect x="40" y="566.788990825688" width="1200" height="53.211009174312" rx="6.406909769273" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="593.394495412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.949456128305" font-weight="bold" fill="var(--text)">"SQLite for analytics" — runs inside notebooks, scripts, apps</text>
+  <text x="640" y="612.550458715596" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">No server to deploy, no network to debug</text>
+</svg>

@@ -52,6 +52,11 @@ audience:
 - Repeat until goal met
 
 ---
+## Agent Loop Visualized
+
+![agent_loop](svg/courses/ai/ai-agents-development/01_introduction/agent_loop.svg)
+
+---
 ## ReAct Pattern
 
 - Reason + Act

@@ -53,6 +53,11 @@ audience:
 - Highest cost
 
 ---
+## Tier Comparison
+
+![dr_tiers](svg/courses/architecting/disaster-recovery/02_strategies/dr_tiers.svg)
+
+---
 ## Active-Passive
 
 - One region serves

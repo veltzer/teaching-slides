@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.514591494905" font-weight="bold" fill="var(--text)">Defense in Depth</text>
+
+  <rect x="40" y="100" width="1200" height="490" rx="14.757295747452" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" opacity="0.3" filter="url(#shadow)"/>
+  <text x="640" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--info-accent)">Perimeter (firewall, WAF, edge proxy)</text>
+
+  <rect x="128.888888888889" y="150" width="1022.222222222222" height="420" rx="12.649110640674" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" opacity="0.35" filter="url(#shadow)"/>
+  <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--warn-accent)">Network segmentation (VPC, subnets, security groups)</text>
+
+  <rect x="217.777777777778" y="200" width="844.444444444444" height="350" rx="12.649110640674" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" opacity="0.4" filter="url(#shadow)"/>
+  <text x="640" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--primary-accent)">Identity &amp; access (mTLS, IAM, MFA)</text>
+
+  <rect x="306.666666666667" y="250" width="666.666666666667" height="280" rx="12.649110640674" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" opacity="0.5" filter="url(#shadow)"/>
+  <text x="640" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--ok-accent)">Application controls (input validation, rate limit, audit log)</text>
+
+  <rect x="395.555555555556" y="300" width="488.888888888889" height="210" rx="12.649110640674" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" opacity="0.55" filter="url(#shadow)"/>
+  <text x="640" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--danger-accent)">Data protection (encryption, masking, secrets)</text>
+
+  <rect x="484.444444444444" y="350" width="311.111111111111" height="140" rx="10.540925533895" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.081851067789" font-weight="bold" fill="var(--info-text)">Asset</text>
+  <text x="640" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--info-text)">customer data</text>
+  <text x="640" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--info-text)">credentials</text>
+  <text x="640" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--info-text)">code &amp; secrets</text>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--text)">No single layer is enough — every barrier slows or stops one class of attack</text>
+</svg>

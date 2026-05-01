@@ -37,6 +37,11 @@ audience:
 - Database
 
 ---
+## Layers Visualized
+
+![web_layers](svg/courses/architecting/web-architecture-and-scaling/01_introduction/web_layers.svg)
+
+---
 ## Request Lifecycle
 
 - Client to DNS

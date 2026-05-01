@@ -67,6 +67,11 @@ audience:
 - Power of single-table
 
 ---
+## Single-Table Example
+
+![single_table](svg/courses/databases/dynamodb/02_data_modeling/single_table.svg)
+
+---
 ## GSI
 
 - Global secondary index

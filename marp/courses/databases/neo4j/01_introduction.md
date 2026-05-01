@@ -61,6 +61,11 @@ audience:
 - No fixed schema
 
 ---
+## Property Graph Visualized
+
+![property_graph](svg/courses/databases/neo4j/01_introduction/property_graph.svg)
+
+---
 ## Cypher
 
 - Declarative query language

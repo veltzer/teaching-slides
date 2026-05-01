@@ -51,6 +51,11 @@ audience:
 - Most modern warehouses use ELT
 
 ---
+## ETL vs ELT Visualized
+
+![etl_vs_elt](svg/courses/data_engineering/etl/01_introduction/etl_vs_elt.svg)
+
+---
 ## Why ELT Won
 
 - Cheap warehouse compute

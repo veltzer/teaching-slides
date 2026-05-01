@@ -43,6 +43,11 @@ audience:
 - Each scales independently
 
 ---
+## Architecture Visualized
+
+![snowflake_arch](svg/courses/data_engineering/snowflake/01_introduction/snowflake_arch.svg)
+
+---
 ## Virtual Warehouses
 
 - Compute clusters

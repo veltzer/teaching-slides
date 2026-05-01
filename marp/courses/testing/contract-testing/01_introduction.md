@@ -84,6 +84,11 @@ audience:
 - Industry-standard tools
 
 ---
+## End-to-End Flow
+
+![contract_flow](svg/courses/testing/contract-testing/01_introduction/contract_flow.svg)
+
+---
 ## OpenAPI Style
 
 - Spec-driven contracts

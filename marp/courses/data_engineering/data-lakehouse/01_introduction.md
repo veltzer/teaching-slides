@@ -52,6 +52,11 @@ audience:
 - Wasted storage
 
 ---
+## Lake vs Warehouse vs Lakehouse
+
+![lakehouse_compare](svg/courses/data_engineering/data-lakehouse/01_introduction/lakehouse_compare.svg)
+
+---
 ## Lakehouse Promise
 
 - One copy of the data

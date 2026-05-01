@@ -47,6 +47,11 @@ audience:
 - Monitoring
 
 ---
+## ML Lifecycle Visualized
+
+![ml_lifecycle](svg/courses/ai/mlops/01_introduction/ml_lifecycle.svg)
+
+---
 ## Reproducibility
 
 - Pin data version

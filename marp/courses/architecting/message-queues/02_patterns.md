@@ -37,6 +37,11 @@ audience:
 - Filtered subscriptions optional
 
 ---
+## Queue vs Topic
+
+![queue_vs_topic](svg/courses/architecting/message-queues/02_patterns/queue_vs_topic.svg)
+
+---
 ## Fan-Out
 
 - One producer, many consumers

@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.982753492379" font-weight="bold" fill="var(--text)">A Distributed Trace</text>
+
+  <text x="40" y="95" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--text-muted)">time →</text>
+  <line x1="40" y1="105" x2="1240" y2="105" stroke="var(--text-muted)" stroke-width="1"/>
+
+  <rect x="40" y="140" width="1178.571428571428" height="40" rx="4.140393356054" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="61.428571428571" y="165" font-family="Arial, sans-serif" font-size="14.491376746189" font-weight="bold" fill="var(--primary-text)">api-gateway: GET /checkout (450ms)</text>
+
+  <rect x="82.857142857143" y="200" width="964.285714285714" height="40" rx="4.140393356054" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="104.285714285714" y="225" font-family="Arial, sans-serif" font-size="14.491376746189" font-weight="bold" fill="var(--info-text)">cart-service: get_cart (380ms)</text>
+
+  <rect x="125.714285714286" y="260" width="300" height="40" rx="4.140393356054" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147.142857142857" y="285" font-family="Arial, sans-serif" font-size="13.456278407176" font-weight="bold" fill="var(--warn-text)">cache.get (15ms) miss</text>
+
+  <rect x="447.142857142857" y="260" width="535.714285714286" height="40" rx="4.140393356054" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="468.571428571428" y="285" font-family="Arial, sans-serif" font-size="13.456278407176" font-weight="bold" fill="var(--warn-text)">db.query (320ms) ← slow!</text>
+
+  <rect x="125.714285714286" y="320" width="257.142857142857" height="40" rx="4.140393356054" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147.142857142857" y="345" font-family="Arial, sans-serif" font-size="13.456278407176" font-weight="bold" fill="var(--ok-text)">cache.set (8ms)</text>
+
+  <rect x="82.857142857143" y="380" width="171.428571428571" height="40" rx="4.140393356054" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="104.285714285714" y="405" font-family="Arial, sans-serif" font-size="13.456278407176" font-weight="bold" fill="var(--info-text)">price-svc (35ms)</text>
+
+  <rect x="297.142857142857" y="380" width="257.142857142857" height="40" rx="4.140393356054" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="318.571428571429" y="405" font-family="Arial, sans-serif" font-size="13.456278407176" font-weight="bold" fill="var(--info-text)">tax-svc (40ms)</text>
+
+  <rect x="597.142857142857" y="380" width="214.285714285714" height="40" rx="4.140393356054" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="618.571428571429" y="405" font-family="Arial, sans-serif" font-size="13.456278407176" font-weight="bold" fill="var(--info-text)">stock-svc (30ms)</text>
+
+  <rect x="40" y="480" width="1178.571428571428" height="100" rx="10.350983390135" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.561573424217" font-weight="bold" fill="var(--text)">One trace, many spans, one parent-child tree</text>
+  <text x="640" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--text-muted)">Width = duration; gaps = waiting; depth = call chain</text>
+  <text x="640" y="558" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--text-muted)">Critical path is the longest chain — fix the slowest span first</text>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--text-muted)">Each span has tags (status, user_id), logs (events), and links to logs by trace_id</text>
+</svg>
