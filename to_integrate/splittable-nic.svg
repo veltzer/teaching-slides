@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 880" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="guestGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#ddd6fe"/>
+    </linearGradient>
+    <linearGradient id="hostGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#bbf7d0"/>
+    </linearGradient>
+    <linearGradient id="hyperGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="nicGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fee2e2"/>
+      <stop offset="100%" stop-color="#fecaca"/>
+    </linearGradient>
+    <linearGradient id="wireGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e5e7eb"/>
+      <stop offset="100%" stop-color="#9ca3af"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2937"/>
+    </marker>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1d4ed8"/>
+    </marker>
+    <marker id="arrPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6d28d9"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="880" fill="#f9fafb"/>
+
+  <!-- Title -->
+  <text x="550" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">
+    Two OSes Sharing One Splittable NIC (SR-IOV)
+  </text>
+  <text x="550" y="56" text-anchor="middle" font-size="13" fill="#6b7280">
+    A single physical network card is partitioned into Virtual Functions — host and guest each get direct, isolated access
+  </text>
+
+  <!-- ===== GUEST OS ===== -->
+  <g>
+    <rect x="600" y="80" width="470" height="220" rx="10" fill="url(#guestGrad)" stroke="#6d28d9" stroke-width="2"/>
+    <text x="620" y="105" font-size="14" font-weight="700" fill="#4c1d95">GUEST OS  (e.g. Linux VM)</text>
+
+    <rect x="620" y="120" width="430" height="44" rx="6" fill="#ffffff" stroke="#6d28d9"/>
+    <text x="835" y="147" text-anchor="middle" font-size="12" fill="#4c1d95">
+      Guest applications  (sockets, send / recv)
+    </text>
+
+    <rect x="620" y="172" width="430" height="44" rx="6" fill="#ffffff" stroke="#6d28d9"/>
+    <text x="835" y="199" text-anchor="middle" font-size="12" fill="#4c1d95">
+      Guest kernel TCP/IP stack
+    </text>
+
+    <rect x="620" y="224" width="430" height="60" rx="6" fill="#ffffff" stroke="#6d28d9" stroke-width="2"/>
+    <text x="835" y="247" text-anchor="middle" font-size="13" font-weight="700" fill="#4c1d95">
+      VF driver  (e.g. ixgbevf, mlx5_core VF)
+    </text>
+    <text x="835" y="268" text-anchor="middle" font-size="11" fill="#5b21b6">
+      sees Virtual Function as if it were a real NIC
+    </text>
+  </g>
+
+  <!-- ===== HOST OS ===== -->
+  <g>
+    <rect x="30" y="80" width="470" height="220" rx="10" fill="url(#hostGrad)" stroke="#15803d" stroke-width="2"/>
+    <text x="50" y="105" font-size="14" font-weight="700" fill="#14532d">HOST OS  (hypervisor host / dom0)</text>
+
+    <rect x="50" y="120" width="430" height="44" rx="6" fill="#ffffff" stroke="#15803d"/>
+    <text x="265" y="147" text-anchor="middle" font-size="12" fill="#14532d">
+      Host applications  (sockets, send / recv)
+    </text>
+
+    <rect x="50" y="172" width="430" height="44" rx="6" fill="#ffffff" stroke="#15803d"/>
+    <text x="265" y="199" text-anchor="middle" font-size="12" fill="#14532d">
+      Host kernel TCP/IP stack
+    </text>
+
+    <rect x="50" y="224" width="430" height="60" rx="6" fill="#ffffff" stroke="#15803d" stroke-width="2"/>
+    <text x="265" y="247" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">
+      PF driver  (Physical Function driver)
+    </text>
+    <text x="265" y="268" text-anchor="middle" font-size="11" fill="#166534">
+      controls the card + manages VFs
+    </text>
+  </g>
+
+  <!-- VM boundary label between host and guest -->
+  <text x="550" y="195" text-anchor="middle" font-size="11" fill="#6b7280" font-style="italic">VM boundary</text>
+  <line x1="550" y1="80" x2="550" y2="300" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- ===== HYPERVISOR / IOMMU ===== -->
+  <g>
+    <rect x="30" y="320" width="1040" height="100" rx="10" fill="url(#hyperGrad)" stroke="#b45309" stroke-width="2"/>
+    <text x="50" y="345" font-size="14" font-weight="700" fill="#78350f">
+      HYPERVISOR  +  IOMMU  (KVM / Xen / Hyper-V  +  Intel VT-d / AMD-Vi)
+    </text>
+    <text x="550" y="372" text-anchor="middle" font-size="12" fill="#78350f">
+      Sets up DMA remapping so each VF can read/write only its assigned guest memory.
+    </text>
+    <text x="550" y="392" text-anchor="middle" font-size="12" fill="#78350f">
+      After setup, data-plane traffic bypasses the hypervisor entirely — no per-packet trap.
+    </text>
+    <text x="550" y="411" text-anchor="middle" font-size="11" fill="#92400e" font-style="italic">
+      (control path goes through it; fast path does not)
+    </text>
+  </g>
+
+  <!-- ===== PHYSICAL NIC ===== -->
+  <g>
+    <rect x="30" y="450" width="1040" height="240" rx="12" fill="url(#nicGrad)" stroke="#b91c1c" stroke-width="2.5"/>
+    <text x="50" y="478" font-size="15" font-weight="700" fill="#7f1d1d">
+      PHYSICAL NIC  (SR-IOV capable — one PCIe device, many functions)
+    </text>
+
+    <!-- PF box -->
+    <rect x="60" y="500" width="260" height="170" rx="8" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+    <text x="190" y="525" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">
+      Physical Function (PF)
+    </text>
+    <text x="190" y="548" text-anchor="middle" font-size="11" fill="#991b1b">
+      Full device: config, VF mgmt,
+    </text>
+    <text x="190" y="564" text-anchor="middle" font-size="11" fill="#991b1b">
+      stats, link control
+    </text>
+    <rect x="80" y="585" width="220" height="32" rx="4" fill="#fee2e2" stroke="#b91c1c"/>
+    <text x="190" y="606" text-anchor="middle" font-size="11" fill="#7f1d1d">
+      RX queue  •  TX queue
+    </text>
+    <text x="190" y="640" text-anchor="middle" font-size="11" fill="#7f1d1d" font-style="italic">
+      assigned to the HOST
+    </text>
+    <text x="190" y="658" text-anchor="middle" font-size="11" fill="#7f1d1d" font-style="italic">
+      (looks like one PCIe device)
+    </text>
+
+    <!-- VF1 box -->
+    <rect x="340" y="500" width="220" height="170" rx="8" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+    <text x="450" y="525" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">
+      Virtual Function 1
+    </text>
+    <text x="450" y="548" text-anchor="middle" font-size="11" fill="#991b1b">
+      lightweight PCIe function
+    </text>
+    <rect x="360" y="565" width="180" height="32" rx="4" fill="#fee2e2" stroke="#b91c1c"/>
+    <text x="450" y="586" text-anchor="middle" font-size="11" fill="#7f1d1d">
+      own RX / TX queues
+    </text>
+    <rect x="360" y="605" width="180" height="28" rx="4" fill="#fef2f2" stroke="#b91c1c"/>
+    <text x="450" y="624" text-anchor="middle" font-size="11" fill="#7f1d1d">
+      own MAC + MSI-X
+    </text>
+    <text x="450" y="655" text-anchor="middle" font-size="11" fill="#7f1d1d" font-style="italic">
+      assigned to the GUEST
+    </text>
+
+    <!-- VF2 box -->
+    <rect x="580" y="500" width="220" height="170" rx="8" fill="#ffffff" stroke="#b91c1c" stroke-width="2" stroke-dasharray="4 3"/>
+    <text x="690" y="525" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">
+      Virtual Function 2
+    </text>
+    <text x="690" y="548" text-anchor="middle" font-size="11" fill="#991b1b">
+      (free — could go to</text>
+    <text x="690" y="564" text-anchor="middle" font-size="11" fill="#991b1b">
+       another VM / container)</text>
+    <rect x="600" y="585" width="180" height="32" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-dasharray="3 2"/>
+    <text x="690" y="606" text-anchor="middle" font-size="11" fill="#7f1d1d">
+      own RX / TX queues
+    </text>
+
+    <!-- Internal switch / classifier -->
+    <rect x="820" y="500" width="230" height="170" rx="8" fill="#fff7ed" stroke="#b91c1c" stroke-width="2"/>
+    <text x="935" y="525" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">
+      Embedded L2 switch
+    </text>
+    <text x="935" y="548" text-anchor="middle" font-size="11" fill="#991b1b">
+      classifier on chip steers
+    </text>
+    <text x="935" y="564" text-anchor="middle" font-size="11" fill="#991b1b">
+      packets to the right
+    </text>
+    <text x="935" y="580" text-anchor="middle" font-size="11" fill="#991b1b">
+      function by MAC / VLAN
+    </text>
+    <rect x="840" y="595" width="190" height="50" rx="4" fill="#fee2e2" stroke="#b91c1c"/>
+    <text x="935" y="615" text-anchor="middle" font-size="11" fill="#7f1d1d">
+      one wire in / out
+    </text>
+    <text x="935" y="632" text-anchor="middle" font-size="11" fill="#7f1d1d">
+      shared bandwidth
+    </text>
+  </g>
+
+  <!-- ===== WIRE / NETWORK ===== -->
+  <g>
+    <rect x="30" y="720" width="1040" height="60" rx="10" fill="url(#wireGrad)" stroke="#374151" stroke-width="2"/>
+    <text x="550" y="757" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">
+      Physical wire  →  switch / network
+    </text>
+  </g>
+
+  <!-- ===== ARROWS: data paths ===== -->
+  <!-- Host PF driver -> PF (green/blue path) -->
+  <line x1="265" y1="284" x2="265" y2="318" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+  <line x1="265" y1="420" x2="190" y2="498" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+
+  <!-- Guest VF driver -> VF1 (purple path, bypasses hypervisor data-wise) -->
+  <line x1="835" y1="284" x2="835" y2="318" stroke="#6d28d9" stroke-width="2.5" stroke-dasharray="6 3" marker-end="url(#arrPurple)"/>
+  <line x1="835" y1="420" x2="450" y2="498" stroke="#6d28d9" stroke-width="2.5" stroke-dasharray="6 3" marker-end="url(#arrPurple)"/>
+
+  <!-- NIC functions -> internal switch -->
+  <line x1="320" y1="600" x2="820" y2="600" stroke="#7f1d1d" stroke-width="1.5"/>
+  <line x1="560" y1="600" x2="820" y2="600" stroke="#7f1d1d" stroke-width="1.5"/>
+
+  <!-- internal switch -> wire -->
+  <line x1="935" y1="670" x2="935" y2="718" stroke="#1f2937" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="935" y1="718" x2="935" y2="670" stroke="#1f2937" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Legend -->
+  <g>
+    <rect x="30" y="800" width="1040" height="60" rx="8" fill="#ffffff" stroke="#d1d5db"/>
+    <line x1="60" y1="822" x2="100" y2="822" stroke="#1d4ed8" stroke-width="2.5"/>
+    <text x="110" y="826" font-size="12" fill="#111827">Host data path  (PF driver → PF)</text>
+
+    <line x1="370" y1="822" x2="410" y2="822" stroke="#6d28d9" stroke-width="2.5" stroke-dasharray="6 3"/>
+    <text x="420" y="826" font-size="12" fill="#111827">Guest data path  (VF driver → VF, hypervisor bypassed)</text>
+
+    <text x="60" y="850" font-size="11" fill="#374151" font-style="italic">
+      Control path (VF setup, MAC/VLAN config) goes through hypervisor + PF driver; data path does not.
+    </text>
+  </g>
+</svg>

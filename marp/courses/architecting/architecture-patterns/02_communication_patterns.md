@@ -174,26 +174,25 @@ Cons:
 ---
 ## Event Bus Overview
 
-- Components communicate through a central event dispatcher (bus)
-- Publishers send events to the bus without knowing the subscribers
-- Subscribers register interest in specific events and are notified by the bus
-- Decouples publishers from subscribers and enables event-driven architecture
+- An in-process dispatcher that wires components together inside a single application
+- Publishers raise events; the bus invokes registered handlers in the same process
+- Routing is by event type (the class or name of the event), not by network topic
+- Typically synchronous and in-memory — no broker, no network hop, no durability
+- Examples: Guava EventBus, Spring ApplicationEventPublisher, .NET MediatR, browser EventTarget
 
 ---
 ## Event Bus Roles
 
 - Event Bus
-    - Central communication channel for events
-    - Receives events from publishers and dispatches them to subscribers
-    - Can provide additional services like event filtering, transformation, or persistence
+    - A library object living inside the application process
+    - Maintains an in-memory map from event type to handler list
+    - Dispatches each event by calling its handlers directly (often on the publisher's thread)
 - Publisher
-    - Sends events to the event bus
-    - Does not need to know or depend on the subscribers
-    - Can publish different types of events
+    - Code that constructs an event object and hands it to the bus
+    - Does not know which handlers exist, or whether any do
 - Subscriber
-    - Registers interest in specific events with the event bus
-    - Receives and handles events dispatched by the bus
-    - Can subscribe to different types of events
+    - Code in the same process that registers a handler for an event type
+    - Runs as a callback when an event of that type is dispatched
 
 ---
 
@@ -206,56 +205,57 @@ Cons:
 ## Event Bus Pros and Cons
 
 Pros:
-- Decouples publishers from subscribers
-- Enables event-driven and reactive architectures
-- Supports dynamic and flexible event routing
-- Can scale publishers and subscribers independently
+- Decouples modules within one process without inventing interfaces between them
+- Trivial to set up — just a library, no infrastructure to deploy or operate
+- Cheap and fast — direct method calls, no serialization, no network
+- Easy to add a new reaction to an existing event without touching the publisher
 
 Cons:
-- Introduces additional complexity and potential performance overhead
-- Event bus can become a bottleneck or single point of failure
-- Subscribers need to carefully handle event ordering and duplicates
-- Debugging and tracing event flows can be challenging
+- Bounded to one process — does not span services or machines
+- Synchronous dispatch means a slow handler blocks the publisher
+- A throwing handler can break the publisher unless the bus isolates errors
+- No durability or replay — if no one is subscribed when the event fires, it is lost
+- Implicit wiring makes the call graph hard to read in an IDE
 
 ---
 
 ## Event Bus When to Use
 
-- Publishers need to broadcast events without knowing the subscribers
-- Subscribers need to dynamically register interest in specific events
-- Event-driven communication and reactive processing are required
-- Flexibility and extensibility in event routing and handling are desired
-- Loose coupling and independent scalability of components are important
+- Inside a single application that wants internal modules to react to domain events
+- When you want to break a direct call dependency between two modules in the same process
+- For UI frameworks where widgets react to user actions
+- For lightweight in-process domain events in a modular monolith
+- Not appropriate when publisher and subscriber live in different services — use pub-sub for that
 
 ---
 ## Pub-Sub Overview
 
-- Defines a messaging pattern for communication between publishers and subscribers
-- Publishers send messages to a message broker or event bus
-- Subscribers register their interest in specific topics or message types
-- The message broker delivers the messages to all interested subscribers
-- Enables loose coupling and asynchronous communication between components
+- A messaging pattern that runs over a message broker shared by many processes or services
+- Publishers send messages to a topic on the broker; they do not call subscribers
+- Subscribers connect to the broker and ask to receive messages from specific topics
+- Communication is asynchronous and crosses process, machine, and network boundaries
+- The broker can buffer, persist, replay, fan-out, and filter messages
+- Examples: Kafka, RabbitMQ, NATS, MQTT, AWS SNS/SQS, Google Pub/Sub, Redis Pub/Sub
 
 ---
 
 ## Publish-Subscribe Key Concepts
 
 - Publisher
-    - A component that sends messages to the message broker
-    - Publishes messages without knowledge of the subscribers
-    - Can publish messages to multiple topics or channels
+    - A separate process or service that sends messages to the broker over the network
+    - Does not know who, or how many, subscribers exist
 - Subscriber
-    - A component that registers interest in specific topics or message types
-    - Receives messages from the message broker based on its subscriptions
-    - Can subscribe to multiple topics or channels
+    - A separate process or service that connects to the broker and consumes from topics
+    - Multiple independent subscribers can each receive their own copy of the same message
 - Message Broker
-    - A central component that receives messages from publishers and delivers them to subscribers
-    - Maintains a registry of subscriptions and their associated subscribers
-    - Can perform message filtering, transformation, and routing based on topic or message type
+    - A dedicated piece of infrastructure (Kafka, RabbitMQ, NATS, etc.) that you deploy and operate
+    - Buffers messages so publisher and subscriber do not need to be online at the same time
+    - May persist messages on disk and allow replay from an offset
+    - Performs routing, filtering, and fan-out based on topic and subscription
 - Topic or Channel
-    - A logical grouping or category of messages
-    - Used by publishers to organize and categorize messages
-    - Used by subscribers to express their interest in specific types of messages
+    - A named stream on the broker that publishers write to and subscribers read from
+    - The unit of routing — there is no event-type dispatch, just topic membership
+    - Often supports hierarchies or wildcards (e.g. `orders.*`, `sensors/+/temp`)
 
 ---
 
@@ -268,29 +268,42 @@ Cons:
 ## Publish-Subscribe Pros and Cons
 
 Pros:
-- Enables loose coupling between publishers and subscribers
-- Supports asynchronous communication and independent scalability of components
-- Allows for dynamic registration and deregistration of subscribers
-- Facilitates event-driven architectures and reactive systems
-- Provides flexibility in message routing and filtering based on topics or message types
+- Decouples services across process and machine boundaries — publisher and subscriber can be written in different languages and deployed independently
+- Asynchronous: a slow or down subscriber does not block the publisher
+- Buffering and persistence let producers and consumers run at different rates and survive restarts
+- Replay from a stored offset enables new subscribers to catch up on history (Kafka-style brokers)
+- Fan-out: a single message reaches many independent subscriber groups
 
 Cons:
-- Introduces additional complexity and potential performance overhead due to the message broker
-- Requires careful design and management of topics and subscriptions to avoid message flooding
-- Can lead to increased latency due to the indirection through the message broker
-- Requires reliable message delivery and handling of failures in the message broker
-- May not be suitable for scenarios requiring strict message ordering or real-time processing
+- You must deploy, secure, monitor, and upgrade the broker — real operational cost
+- Network and serialization add latency a function call would not
+- At-least-once delivery is the norm — subscribers must be idempotent
+- Global ordering across topics or partitions is usually not guaranteed
+- Tracing a request across many topics and consumers is harder than reading a stack trace
 
 ---
 
 ## Publish-Subscribe When to Use
 
-- When loose coupling and asynchronous communication between components are desired
-- When the system needs to support dynamic registration and deregistration of subscribers
-- When the system benefits from event-driven architectures and reactive processing
-- When the scalability and independent evolution of publishers and subscribers are important
-- When the system needs to handle a high volume of messages and perform message routing and filtering
-- When the system can tolerate some level of latency and eventual consistency in message delivery
+- One service needs to inform many other services that something happened, without knowing them
+- Producers and consumers need to scale, deploy, and fail independently
+- A burst of work needs to be absorbed by the broker and drained at the consumers' pace
+- New consumers must be able to join later and replay historical events
+- Cross-language, cross-platform, or cross-team integration where shared code is not an option
+
+---
+## Event Bus vs Publish-Subscribe
+
+| | Event Bus | Publish-Subscribe |
+|---|---|---|
+| Scope | Inside one process | Across processes / services / machines |
+| Transport | In-memory method calls | Network protocol over a broker |
+| Routing key | Event type (class) | Topic / channel name |
+| Default timing | Synchronous | Asynchronous |
+| Infrastructure | A library | A broker you must operate |
+| Durability / replay | None | Available (Kafka-style) |
+| If no subscriber | Event is dropped | Broker buffers (and may persist) |
+| Failure isolation | Handler exception can hit publisher | Broker isolates publisher from subscribers |
 
 ---
 ## Summary
@@ -298,5 +311,6 @@ Cons:
 - Client-Server centralizes resources behind one server contract
 - Broker adds an intermediary that decouples clients from concrete servers
 - Peer-to-Peer removes the central coordinator entirely
-- Event Bus and Publish-Subscribe both decouple sender from receiver, with topic-based filtering
-- Choose synchronous (client-server, broker) for request-response, asynchronous (event bus, pub-sub) for fire-and-forget
+- Event Bus is an *in-process* dispatcher routed by event type — a library, synchronous, no durability
+- Publish-Subscribe is a *cross-process* messaging pattern routed by topic over a broker — asynchronous, buffered, often durable
+- Pick by where the boundary is: same process → event bus; different services → pub-sub

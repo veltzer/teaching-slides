@@ -36,43 +36,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
@@ -95,18 +85,68 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="112.5" width="240" height="145" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="8.586501" filter="url(#shadow)"/>
-  <text x="160" y="193.7" text-anchor="middle" font-size="31.658143" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Publisher 1</text>
-  <rect x="40" y="402.5" width="240" height="145" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="8.586501" filter="url(#shadow)"/>
-  <text x="160" y="483.7" text-anchor="middle" font-size="31.658143" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Publisher 2</text>
-  <rect x="460" y="40" width="360" height="580" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="8.586501" filter="url(#shadow)"/>
-  <text x="640" y="338.7" text-anchor="middle" font-size="31.658143" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Event Bus</text>
-  <rect x="1000" y="112.5" width="240" height="145" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="8.586501" filter="url(#shadow)"/>
-  <text x="1120" y="193.7" text-anchor="middle" font-size="31.658143" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Subscriber 1</text>
-  <rect x="1000" y="402.5" width="240" height="145" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="8.586501" filter="url(#shadow)"/>
-  <text x="1120" y="483.7" text-anchor="middle" font-size="31.658143" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Subscriber 2</text>
-  <line x1="280" y1="185" x2="460" y2="185" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="280" y1="475" x2="460" y2="475" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="820" y1="185" x2="1000" y2="185" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="820" y1="475" x2="1000" y2="475" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Publisher process A -->
+  <rect x="40" y="40" width="240" height="190" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
+  <text x="160" y="65" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Service A (process)</text>
+  <rect x="60" y="100" width="200" height="110" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="160" y="145" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Publisher A</text>
+  <text x="160" y="180" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">publish("orders", m)</text>
+
+  <!-- Publisher process B -->
+  <rect x="40" y="430" width="240" height="190" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
+  <text x="160" y="455" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Service B (process)</text>
+  <rect x="60" y="475" width="200" height="130" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="160" y="525" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Publisher B</text>
+  <text x="160" y="565" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">publish("metrics", m)</text>
+
+  <!-- Broker process -->
+  <rect x="430" y="40" width="420" height="580" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
+  <text x="640" y="85" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Broker (separate process — Kafka / RabbitMQ / NATS)</text>
+  <rect x="450" y="100" width="380" height="480" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="640" y="140" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Message Broker</text>
+
+  <!-- Topic boxes inside broker -->
+  <rect x="480" y="180" width="320" height="100" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2" rx="6"/>
+  <text x="640" y="215" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Topic: orders</text>
+  <text x="640" y="250" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">durable log &#8226; offsets &#8226; partitions</text>
+
+  <rect x="480" y="310" width="320" height="100" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2" rx="6"/>
+  <text x="640" y="345" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Topic: metrics</text>
+  <text x="640" y="380" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">durable log &#8226; offsets &#8226; partitions</text>
+
+  <text x="640" y="445" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">routed by TOPIC name</text>
+  <text x="640" y="470" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">asynchronous &#8226; buffered</text>
+  <text x="640" y="495" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">persistent &#8226; replayable</text>
+  <text x="640" y="540" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">network protocol (TCP / AMQP / Kafka wire)</text>
+
+  <!-- Subscriber process A -->
+  <rect x="1000" y="40" width="240" height="190" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
+  <text x="1120" y="65" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Service C (process)</text>
+  <rect x="1020" y="100" width="200" height="110" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1120" y="145" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Subscriber C</text>
+  <text x="1120" y="180" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">subscribe("orders")</text>
+
+  <!-- Subscriber process B -->
+  <rect x="1000" y="245" width="240" height="170" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
+  <text x="1120" y="270" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Service D (process)</text>
+  <rect x="1020" y="285" width="200" height="110" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1120" y="330" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Subscriber D</text>
+  <text x="1120" y="365" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">subscribe("orders")</text>
+
+  <!-- Subscriber process E -->
+  <rect x="1000" y="430" width="240" height="190" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
+  <text x="1120" y="455" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Service E (process)</text>
+  <rect x="1020" y="475" width="200" height="130" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1120" y="525" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Subscriber E</text>
+  <text x="1120" y="565" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">subscribe("metrics")</text>
+
+  <!-- Publishers -> topics -->
+  <line x1="280" y1="155" x2="480" y2="220" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="280" y1="525" x2="480" y2="360" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Topics -> subscribers -->
+  <line x1="800" y1="220" x2="1020" y2="155" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="800" y1="240" x2="1020" y2="340" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="800" y1="360" x2="1020" y2="525" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>
