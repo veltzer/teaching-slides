@@ -352,7 +352,7 @@ render();
 (function() {
     const THEME_KEY = "course-browser-theme";
     const sel = document.getElementById("theme-select");
-    const saved = localStorage.getItem(THEME_KEY) || "midnight";
+    const saved = localStorage.getItem(THEME_KEY) || "paper";
 
     function applyTheme(name) {
         document.documentElement.setAttribute("data-theme", name);
