@@ -20,7 +20,7 @@ audience:
 - Classes and how Unity scripts fit into the type system
 
 ---
-## Why C#
+## Why C# Specifically
 
 - Strongly typed, garbage collected, mature ecosystem
 - Runs on .NET — Unity ships its own runtime
