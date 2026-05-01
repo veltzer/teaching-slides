@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/></marker>
+  </defs>
+
+  <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Docker bridge network: containers reach each other by name</text>
+
+  <!-- Host -->
+  <rect x="40" y="100" width="1200" height="520" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
+  <text x="60" y="130" font-size="18" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Docker Host</text>
+
+  <!-- Bridge network -->
+  <rect x="120" y="180" width="1080" height="280" fill="var(--surface)" stroke="var(--border)" stroke-width="2" rx="6"/>
+  <text x="660" y="215" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">user-defined bridge: app-net (172.18.0.0/16)</text>
+
+  <rect x="180" y="260" width="220" height="160" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="290" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">api</text>
+  <text x="290" y="335" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">172.18.0.2</text>
+  <text x="290" y="365" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">listening :8080</text>
+
+  <rect x="540" y="260" width="220" height="160" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="650" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">db</text>
+  <text x="650" y="335" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">172.18.0.3</text>
+  <text x="650" y="365" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">listening :5432</text>
+
+  <rect x="900" y="260" width="220" height="160" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1010" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">cache</text>
+  <text x="1010" y="335" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">172.18.0.4</text>
+  <text x="1010" y="365" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">listening :6379</text>
+
+  <line x1="400" y1="340" x2="540" y2="340" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="470" y="330" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Courier New, monospace">db:5432</text>
+  <line x1="400" y1="380" x2="900" y2="380" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="650" y="395" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Courier New, monospace">cache:6379</text>
+
+  <!-- Outside world / port mapping -->
+  <rect x="180" y="500" width="220" height="80" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="290" y="535" text-anchor="middle" font-size="14" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">host port 80</text>
+  <text x="290" y="560" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Courier New, monospace">-p 80:8080</text>
+
+  <line x1="290" y1="500" x2="290" y2="420" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="800" y="540" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">db and cache are NOT published &#8594; only api can reach them</text>
+</svg>

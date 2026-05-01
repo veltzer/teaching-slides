@@ -44,13 +44,13 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 | big_data | 0 | 16 | 16 |
 | build_systems | 1 | 11 | 12 |
 | cloud | 5 | 38 | 43 |
-| containers | 0 | 4 | 4 |
-| data_driven | 0 | 2 | 2 |
+| containers | 1 | 3 | 4 |
+| data_driven | 1 | 1 | 2 |
 | data_engineering | 0 | 8 | 8 |
-| data_science | 0 | 3 | 3 |
+| data_science | 1 | 2 | 3 |
 | databases | 1 | 26 | 27 |
-| design_patterns | 0 | 2 | 2 |
-| development_methodologies | 0 | 8 | 8 |
+| design_patterns | 1 | 1 | 2 |
+| development_methodologies | 2 | 6 | 8 |
 | devops | 4 | 33 | 37 |
 | embedded | 1 | 10 | 11 |
 | git | 1 | 4 | 5 |
@@ -63,13 +63,13 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 | practices | 1 | 0 | 1 |
 | principles | 2 | 0 | 2 |
 | professional_skills | 0 | 5 | 5 |
-| queues | 0 | 5 | 5 |
-| real_time | 0 | 2 | 2 |
+| queues | 2 | 3 | 5 |
+| real_time | 1 | 1 | 2 |
 | security | 4 | 23 | 27 |
-| testing | 0 | 20 | 20 |
+| testing | 1 | 19 | 20 |
 | unity | 1 | 0 | 1 |
 | wifi | 1 | 0 | 1 |
-| **TOTAL** | **40** | **356** | **396** |
+| **TOTAL** | **50** | **346** | **396** |
 
 ## ai (3/16)
 
@@ -205,16 +205,16 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - **openstack (0/1)**
     - [ ] openstack
 
-## containers (0/4)
+## containers (1/4)
 
-- [ ] docker_fundamentals
+- [x] docker_fundamentals — 8 chapters + title; 16h beginner; 8 SVGs; build clean
 - [ ] kubernetes
 - [ ] kubernetes_for_developers
 - [ ] kubernetes_troubleshooting
 
-## data_driven (0/2)
+## data_driven (1/2)
 
-- [ ] data_analytics_for_managers
+- [x] data_analytics_for_managers — 9 chapters + title; 32h beginner; 2 SVGs; build clean
 - [ ] data_driven_project_management
 
 ## data_engineering (0/8)
@@ -228,9 +228,9 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [ ] temporal
 - [ ] trino
 
-## data_science (0/3)
+## data_science (1/3)
 
-- [ ] data_analyst_fundamentals
+- [x] data_analyst_fundamentals — 12 chapters + title; 24h beginner; 1 SVG; build clean
 - [ ] data_science
 - [ ] time_series_analysis
 
@@ -263,19 +263,19 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [ ] timescaledb
 - [ ] vector_databases
 
-## design_patterns (0/2)
+## design_patterns (1/2)
 
 - [ ] advanced_design_patterns
-- [ ] design_patterns
+- [x] design_patterns — 4 chapters + title; 24h intermediate; 2 SVGs; build clean
 
-## development_methodologies (0/8)
+## development_methodologies (2/8)
 
-- [ ] code_review_best_practices
+- [x] code_review_best_practices — 15 chapters + title; 16h beginner; 1 SVG; build clean
 - [ ] development_methodologies
 - [ ] incident_management
 - [ ] modern_development
 - [ ] scrum
-- [ ] technical_writing
+- [x] technical_writing — 14 chapters + title; 16h beginner; 1 SVG; build clean
 - [ ] terminal_productivity
 - [ ] vim_and_neovim
 
@@ -468,18 +468,18 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [ ] interviewing_and_hiring_for_tech_leads
 - [ ] linux_for_managers
 
-## queues (0/5)
+## queues (2/5)
 
 - [ ] activemq
-- [ ] kafka
+- [x] kafka — 5 chapters + title; 16h beginner; 1 SVG; build clean
 - [ ] nats
 - [ ] pulsar
-- [ ] rabbitmq
+- [x] rabbitmq — 9 chapters + title; 16h intermediate; 1 SVG; build clean
 
-## real_time (0/2)
+## real_time (1/2)
 
 - [ ] real_time_design_patterns
-- [ ] real_time_programming
+- [x] real_time_programming — 10 chapters + title; 56h advanced; 3 SVGs; build clean
 
 ## security (4/27)
 
@@ -511,7 +511,7 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [x] working_with_llms_securely
 - [ ] zero_trust_security
 
-## testing (0/20)
+## testing (1/20)
 
 - [ ] advanced_playwright
 - [ ] api_testing
@@ -530,7 +530,7 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [ ] pytest_advanced
 - [ ] robot_framework
 - [ ] security_testing
-- [ ] test_driven_development
+- [x] test_driven_development — 10 chapters + title; 16h intermediate; 1 SVG; build clean
 - [ ] testcontainers
 - [ ] testing_theory
 

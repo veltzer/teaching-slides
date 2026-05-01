@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
+
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">RabbitMQ for Developers</text>
+  <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">AMQP, exchanges, queues, patterns</text>
+
+  <!-- Producer -> Exchange -> Queues -> Consumers -->
+  <rect x="100" y="320" width="160" height="60" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
+  <text x="180" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Producer</text>
+
+  <ellipse cx="500" cy="350" rx="80" ry="60" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="500" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Exchange</text>
+
+  <rect x="700" y="240" width="140" height="50" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
+  <text x="770" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">queue.a</text>
+  <rect x="700" y="320" width="140" height="50" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
+  <text x="770" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">queue.b</text>
+  <rect x="700" y="400" width="140" height="50" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
+  <text x="770" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">queue.c</text>
+
+  <rect x="950" y="320" width="160" height="60" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
+  <text x="1030" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Consumer</text>
+
+  <line x1="260" y1="350" x2="420" y2="350" stroke="var(--surface)" stroke-width="2"/>
+  <line x1="580" y1="320" x2="700" y2="270" stroke="var(--surface)" stroke-width="2"/>
+  <line x1="580" y1="350" x2="700" y2="345" stroke="var(--surface)" stroke-width="2"/>
+  <line x1="580" y1="380" x2="700" y2="425" stroke="var(--surface)" stroke-width="2"/>
+  <line x1="840" y1="345" x2="950" y2="350" stroke="var(--surface)" stroke-width="2"/>
+
+  <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">AMQP &#8226; routing &#8226; pub/sub &#8226; RPC &#8226; reliability &#8226; testing</text>
+</svg>

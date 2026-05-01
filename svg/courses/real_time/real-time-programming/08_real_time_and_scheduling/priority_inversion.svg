@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/></marker>
+  </defs>
+
+  <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Priority inversion: medium thread blocks the high one indirectly</text>
+
+  <!-- Time axis -->
+  <line x1="100" y1="540" x2="1240" y2="540" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1230" y="530" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">time</text>
+
+  <!-- Lanes -->
+  <text x="40" y="160" font-size="14" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">High prio</text>
+  <text x="40" y="290" font-size="14" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Medium prio</text>
+  <text x="40" y="420" font-size="14" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Low prio</text>
+
+  <line x1="160" y1="100" x2="160" y2="540" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="380" y1="100" x2="380" y2="540" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="700" y1="100" x2="700" y2="540" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="1020" y1="100" x2="1020" y2="540" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Low prio runs first, takes the lock -->
+  <rect x="160" y="400" width="220" height="40" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="4" filter="url(#shadow)"/>
+  <text x="270" y="425" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">low takes lock</text>
+
+  <!-- High prio wakes, blocks on lock -->
+  <rect x="380" y="140" width="40" height="40" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="4" filter="url(#shadow)"/>
+  <text x="400" y="130" text-anchor="middle" font-size="12" fill="var(--text)" font-family="Arial, sans-serif">runs</text>
+  <text x="430" y="170" font-size="13" fill="var(--danger-border)" font-family="Arial, sans-serif">blocks on lock!</text>
+
+  <!-- Medium prio preempts low -->
+  <rect x="380" y="270" width="320" height="40" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="4" filter="url(#shadow)"/>
+  <text x="540" y="295" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">medium runs (low can't release)</text>
+
+  <!-- Low waits while medium runs -->
+  <rect x="380" y="400" width="320" height="40" fill="var(--surface)" stroke="var(--border)" stroke-width="2" rx="4" stroke-dasharray="4,4"/>
+  <text x="540" y="425" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">low preempted, holds lock</text>
+
+  <!-- Medium done; low resumes, releases lock -->
+  <rect x="700" y="400" width="320" height="40" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="4" filter="url(#shadow)"/>
+  <text x="860" y="425" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">low finally runs, releases</text>
+
+  <!-- High prio resumes -->
+  <rect x="1020" y="140" width="220" height="40" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="4" filter="url(#shadow)"/>
+  <text x="1130" y="165" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">high finally runs</text>
+
+  <text x="640" y="600" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">high prio waited for medium &#8212; the inversion</text>
+  <text x="640" y="620" text-anchor="middle" font-size="13" fill="var(--text-faint)" font-family="Arial, sans-serif">priority inheritance bumps low to high while it holds the lock</text>
+</svg>
