@@ -31,6 +31,11 @@ audience:
 - Comments start with `#`
 
 ---
+## Layers and Multi-stage
+
+![dockerfile_layers](svg/courses/containers/docker-fundamentals/04_building_images_with_dockerfile/dockerfile_layers.svg)
+
+---
 ## A Minimal Dockerfile
 
 ```dockerfile

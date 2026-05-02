@@ -25,6 +25,11 @@ audience:
 ![rest_constraints](svg/courses/networking/restful-apis/03_rest_principles/rest_constraints.svg)
 
 ---
+## Uniform Interface in Detail
+
+![uniform_interface](svg/courses/networking/restful-apis/03_rest_principles/uniform_interface.svg)
+
+---
 ## Origin
 
 - Roy Fielding, 2000 dissertation

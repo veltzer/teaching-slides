@@ -29,6 +29,11 @@ audience:
 - Lateral movement after one compromise is trivial
 
 ---
+## Why It Matters
+
+![policy_intent](svg/courses/security/kubernetes-security/03_network_policies/policy_intent.svg)
+
+---
 ## Why NetworkPolicies Matter
 
 - Limit east-west traffic (pod-to-pod)

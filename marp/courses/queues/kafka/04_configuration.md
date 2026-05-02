@@ -30,6 +30,11 @@ audience:
 - Most production tuning happens at client level
 
 ---
+## Layers Visualized
+
+![config_layers](svg/courses/queues/kafka/04_configuration/config_layers.svg)
+
+---
 ## Broker Config: The Basics
 
 - `broker.id`: unique per broker

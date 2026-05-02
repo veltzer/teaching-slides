@@ -28,6 +28,11 @@ audience:
 - Bridge between LLM and code
 
 ---
+## Three Modes
+
+![structured_modes](svg/courses/ai/prompt-engineering/04_structured_output/structured_modes.svg)
+
+---
 ## JSON Mode
 
 - Model outputs valid JSON

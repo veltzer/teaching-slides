@@ -19,6 +19,11 @@ audience:
 - Choosing tools
 
 ---
+## Tool Landscape
+
+![tool_landscape](svg/courses/testing/api-testing/02_tooling/tool_landscape.svg)
+
+---
 ## Postman
 
 - GUI client + scripting

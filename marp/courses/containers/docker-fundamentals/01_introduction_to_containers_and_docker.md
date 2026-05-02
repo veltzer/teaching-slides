@@ -31,6 +31,11 @@ audience:
 - "Works on my machine" becomes "works the same everywhere"
 
 ---
+## Container vs VM
+
+![container_vs_vm](svg/courses/containers/docker-fundamentals/01_introduction_to_containers_and_docker/container_vs_vm.svg)
+
+---
 ## Why Containers
 
 - Consistent environments from laptop to production

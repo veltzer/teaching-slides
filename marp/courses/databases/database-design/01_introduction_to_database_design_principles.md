@@ -26,6 +26,11 @@ audience:
 - The single most important DB skill
 
 ---
+## Three Phases
+
+![design_phases](svg/courses/databases/database-design/01_introduction_to_database_design_principles/design_phases.svg)
+
+---
 ## Goals
 
 - Data integrity

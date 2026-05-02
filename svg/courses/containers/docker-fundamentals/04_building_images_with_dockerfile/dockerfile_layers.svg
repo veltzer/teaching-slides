@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Image Layers</text>
+  <rect x="40" y="80" width="585" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="332" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">How layers work</text>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Each instruction adds one layer</text>
+  <text x="60" y="190" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Layers are content-addressed</text>
+  <text x="60" y="220" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Cached if nothing changed</text>
+  <text x="60" y="270" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-text)">Order matters</text>
+  <text x="60" y="300" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Stable layers first (deps)</text>
+  <text x="60" y="325" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Volatile last (source)</text>
+  <text x="60" y="375" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-text)">Cache busting</text>
+  <text x="60" y="405" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">A change invalidates downstream</text>
+
+  <rect x="640" y="80" width="600" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Multi-stage</text>
+  <text x="660" y="160" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">FROM build AS builder</text>
+  <text x="660" y="190" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">FROM runtime</text>
+  <text x="660" y="220" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">COPY --from=builder ...</text>
+  <text x="660" y="270" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Why</text>
+  <text x="660" y="300" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Build needs SDK; runtime doesn't</text>
+  <text x="660" y="325" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Final image stays small</text>
+  <text x="660" y="375" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Pair with .dockerignore</text>
+  <text x="660" y="405" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Skip node_modules, .git</text>
+</svg>

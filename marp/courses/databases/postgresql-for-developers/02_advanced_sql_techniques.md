@@ -21,6 +21,11 @@ audience:
 - Returning clauses
 
 ---
+## CTE and Window at a Glance
+
+![cte_window](svg/courses/databases/postgresql-for-developers/02_advanced_sql_techniques/cte_window.svg)
+
+---
 ## CTEs
 
 ```sql

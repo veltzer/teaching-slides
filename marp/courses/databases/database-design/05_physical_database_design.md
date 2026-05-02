@@ -28,6 +28,11 @@ audience:
 - Each adds storage and slows writes
 
 ---
+## Index Kinds
+
+![index_kinds](svg/courses/databases/database-design/05_physical_database_design/index_kinds.svg)
+
+---
 ## Index Choice
 
 - B-tree: equality and range queries

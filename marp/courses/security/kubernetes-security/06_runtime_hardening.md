@@ -29,6 +29,11 @@ audience:
 - Image scanning + runtime detection = full coverage
 
 ---
+## Hardening Layers
+
+![hardening_layers](svg/courses/security/kubernetes-security/06_runtime_hardening/hardening_layers.svg)
+
+---
 ## Falco
 
 - Open-source runtime security tool

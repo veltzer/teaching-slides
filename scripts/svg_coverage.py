@@ -37,31 +37,34 @@ def course_dirs(root: Path):
             yield course_dir, md_files
 
 
-def slide_count(md_files):
-    """Count Marp slides across the given markdown files.
+def slide_count_one(md):
+    """Count Marp slides in a single markdown file (ex front matter)."""
+    content = md.read_text(encoding="utf-8", errors="replace")
+    if content.startswith("---"):
+        end = content.find("\n---", 3)
+        if end != -1:
+            content = content[end + 4:]
+    return 1 + sum(1 for line in content.splitlines() if line.strip() == "---")
 
-    Each file contributes (1 + number of `---` separators after front matter).
-    """
-    total = 0
-    for md in md_files:
-        content = md.read_text(encoding="utf-8", errors="replace")
-        if content.startswith("---"):
-            end = content.find("\n---", 3)
-            if end != -1:
-                content = content[end + 4:]
-        total += 1 + sum(1 for line in content.splitlines() if line.strip() == "---")
-    return total
+
+def svg_count_one(md):
+    """Count non-title SVG references in a single markdown file."""
+    n = 0
+    for line in md.read_text(encoding="utf-8", errors="replace").splitlines():
+        for ref in SVG_REF.findall(line):
+            if not TITLE_SVG.search(ref):
+                n += 1
+    return n
+
+
+def slide_count(md_files):
+    """Count Marp slides across the given markdown files."""
+    return sum(slide_count_one(md) for md in md_files)
 
 
 def svg_count(md_files):
     """Count non-title SVG references across the given markdown files."""
-    n = 0
-    for md in md_files:
-        for line in md.read_text(encoding="utf-8", errors="replace").splitlines():
-            for ref in SVG_REF.findall(line):
-                if not TITLE_SVG.search(ref):
-                    n += 1
-    return n
+    return sum(svg_count_one(md) for md in md_files)
 
 
 def tier_for(ratio):
@@ -96,6 +99,11 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     p.add_argument("--detail", action="store_true", help="per-course table")
+    p.add_argument(
+        "--md",
+        action="store_true",
+        help="per-markdown-file table (one row per chapter file)",
+    )
     p.add_argument("--root", default="marp", help="marp root (default: marp)")
     args = p.parse_args()
 
@@ -107,6 +115,35 @@ def main():
         rows.append((ratio, svgs, slides, course_dir))
 
     rows.sort()
+
+    if args.md:
+        md_rows = []
+        for course_dir, md_files in course_dirs(Path(args.root)):
+            for md in sorted(md_files):
+                if md.name.startswith("00_title") or md.name == "00_title.md":
+                    continue
+                slides = slide_count_one(md)
+                svgs = svg_count_one(md)
+                ratio = svgs / slides if slides else 0.0
+                md_rows.append((ratio, svgs, slides, md))
+        md_rows.sort()
+        print("Per-markdown-file SVG coverage")
+        print()
+        print("Columns:")
+        print("  ratio   - svgs / slides for this single chapter file")
+        print("  svgs    - non-title SVG references in the file")
+        print("  slides  - Marp slides in the file (--- separated, ex front matter)")
+        print("  file    - path to the markdown file")
+        print()
+        detail_rows = [
+            (f"{r:.2f}", s, sl, str(p)) for r, s, sl, p in md_rows
+        ]
+        print_table(
+            ["ratio", "svgs", "slides", "file"],
+            detail_rows,
+            aligns=["r", "r", "r", "l"],
+        )
+        print()
 
     if args.detail:
         print("Per-course SVG coverage")

@@ -32,6 +32,11 @@ audience:
 - Sequential disk I/O is fast even on spinning disks
 
 ---
+## Durability Levers
+
+![durability_levers](svg/courses/queues/kafka/05_design_points/durability_levers.svg)
+
+---
 ## Why It's Fast
 
 - Sequential I/O (not random)

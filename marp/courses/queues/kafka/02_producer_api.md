@@ -31,6 +31,11 @@ audience:
 - That's the whole job; everything else is configuration
 
 ---
+## Acks Trade-off
+
+![producer_acks](svg/courses/queues/kafka/02_producer_api/producer_acks.svg)
+
+---
 ## A Minimal Java Producer
 
 ```java

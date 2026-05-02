@@ -28,6 +28,11 @@ audience:
 - Most-used UI for Prometheus
 
 ---
+## Dashboard Anatomy
+
+![dashboard_anatomy](svg/courses/observability_and_monitoring/prometheus-and-grafana/05_grafana_and_dashboards/dashboard_anatomy.svg)
+
+---
 ## Data Sources
 
 - Prometheus: most common

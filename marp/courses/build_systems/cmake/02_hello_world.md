@@ -41,6 +41,12 @@ add_executable(hello main.cpp)
 
 ---
 
+## Build Flow Recap
+
+![cmake_minimal](svg/courses/build_systems/cmake/02_hello_world/cmake_minimal.svg)
+
+---
+
 ## The Source File
 
 ```cmake

@@ -59,6 +59,11 @@ audience:
 - Release branches and hotfix integration
 
 ---
+## The Golden Rule
+
+![golden_rule](svg/courses/git/advanced-git/01_rebasing_strategies/golden_rule.svg)
+
+---
 ## Interactive Rebase: The Power Tool
 
 - `git rebase -i HEAD~5` opens an editor with the last 5 commits

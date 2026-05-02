@@ -20,6 +20,11 @@ audience:
 - Production patterns
 
 ---
+## Alert Pipeline
+
+![alert_pipeline](svg/courses/observability_and_monitoring/prometheus-and-grafana/06_alerting_and_production/alert_pipeline.svg)
+
+---
 ## Alerting Rules
 
 ```yaml

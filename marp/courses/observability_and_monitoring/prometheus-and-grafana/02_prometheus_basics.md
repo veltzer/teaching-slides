@@ -34,6 +34,11 @@ audience:
 - Exporters: bridge non-native systems
 
 ---
+## Pull, Not Push
+
+![scrape_pull](svg/courses/observability_and_monitoring/prometheus-and-grafana/02_prometheus_basics/scrape_pull.svg)
+
+---
 ## Pull Model
 
 - Prometheus scrapes targets on interval

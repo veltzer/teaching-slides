@@ -44,6 +44,11 @@ audience:
 ![dnssec_chain](svg/courses/networking/dns-deep-dive/05_dnssec/dnssec_chain.svg)
 
 ---
+## DNSSEC Record Types
+
+![dnssec_records](svg/courses/networking/dns-deep-dive/05_dnssec/dnssec_records.svg)
+
+---
 ## RRSIG: Record Signatures
 
 - Each record set is signed

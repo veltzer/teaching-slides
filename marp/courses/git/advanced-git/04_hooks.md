@@ -51,6 +51,11 @@ post-update.sample     pre-push.sample        update.sample
 ![hook_lifecycle](svg/courses/git/advanced-git/04_hooks/hook_lifecycle.svg)
 
 ---
+## What Hooks Are For
+
+![hook_uses](svg/courses/git/advanced-git/04_hooks/hook_uses.svg)
+
+---
 ## pre-commit: Run Before Commit Is Created
 
 - Fires when `git commit` is invoked

@@ -30,6 +30,11 @@ audience:
 - Pick whichever your team prefers
 
 ---
+## Patterns Side by Side
+
+![pattern_comparison](svg/courses/architecting/clean-and-hexagonal-architecture/08_comparing_clean_and_hexagonal_with_other_patterns/pattern_comparison.svg)
+
+---
 ## Onion Architecture
 
 - Same idea: layers, dependencies inward

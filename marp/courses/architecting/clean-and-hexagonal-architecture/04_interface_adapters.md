@@ -30,6 +30,11 @@ audience:
 - Replaceable
 
 ---
+## Adapter Roles
+
+![adapter_pattern](svg/courses/architecting/clean-and-hexagonal-architecture/04_interface_adapters/adapter_pattern.svg)
+
+---
 ## Controllers
 
 - Receive HTTP request

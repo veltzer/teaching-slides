@@ -33,6 +33,11 @@ audience:
 - 80% of the work
 
 ---
+## Feature Engineering
+
+![feature_engineering](svg/courses/machine_learning/machine-learning/02_practical_data_science/feature_engineering.svg)
+
+---
 ## Missing Values
 
 - Drop rows / columns

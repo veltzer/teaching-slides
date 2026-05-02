@@ -44,6 +44,11 @@ audience:
 ![4cs](svg/courses/security/kubernetes-security/01_threat_landscape/4cs.svg)
 
 ---
+## Common Attack Surfaces
+
+![attack_surfaces](svg/courses/security/kubernetes-security/01_threat_landscape/attack_surfaces.svg)
+
+---
 ## Cloud Layer
 
 - Identity and access management

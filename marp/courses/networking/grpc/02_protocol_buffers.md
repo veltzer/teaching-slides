@@ -29,6 +29,11 @@ audience:
 - Independent of gRPC — usable on its own too
 
 ---
+## End-to-End Workflow
+
+![proto_workflow](svg/courses/networking/grpc/02_protocol_buffers/proto_workflow.svg)
+
+---
 ## proto3 vs proto2
 
 - proto3 is the current default

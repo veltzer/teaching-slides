@@ -20,6 +20,11 @@ audience:
 - Clustering
 
 ---
+## The Landscape
+
+![algorithm_landscape](svg/courses/machine_learning/machine-learning/04_the_algorithms/algo_landscape.svg)
+
+---
 ## Linear Regression
 
 - Predict continuous y from linear combination of X

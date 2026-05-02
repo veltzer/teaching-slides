@@ -20,6 +20,11 @@ audience:
 - For each: intent, structure, code sketch, when to use
 
 ---
+## The Headline Four
+
+![behavioral_patterns](svg/courses/design_patterns/design-patterns/04_behavioral_design_patterns/behavioral_patterns.svg)
+
+---
 ## Strategy
 
 - *Intent*: encapsulate algorithms behind a common interface, switch them at runtime

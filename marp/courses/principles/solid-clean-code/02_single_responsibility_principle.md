@@ -16,6 +16,11 @@ audience:
 ![srp](svg/courses/principles/solid-clean-code/02_single_responsibility_principle/srp.svg)
 
 ---
+## One Reason to Change
+
+![srp_one_reason](svg/courses/principles/solid-clean-code/02_single_responsibility_principle/srp_one_reason.svg)
+
+---
 ## What This Chapter Covers
 
 - A precise statement of SRP

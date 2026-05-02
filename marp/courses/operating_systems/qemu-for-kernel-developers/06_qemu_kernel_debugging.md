@@ -34,6 +34,11 @@ QEMU Debugging Architecture
 ![debugging_kernels_with_qemu](svg/courses/operating_systems/qemu-for-kernel-developers/06_qemu_kernel_debugging/debugging_kernels_with_qemu.svg)
 
 ---
+## GDB + QEMU Flow
+
+![gdb_qemu_flow](svg/courses/operating_systems/qemu-for-kernel-developers/06_qemu_kernel_debugging/gdb_qemu_flow.svg)
+
+---
 
 Setting Up QEMU for Kernel Debugging
 - Compiling the kernel with debug symbols

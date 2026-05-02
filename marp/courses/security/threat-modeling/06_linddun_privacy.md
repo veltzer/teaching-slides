@@ -47,6 +47,11 @@ audience:
 ![linddun_overview](svg/courses/security/threat-modeling/06_linddun_privacy/linddun_overview.svg)
 
 ---
+## Categories Detailed
+
+![linddun_categories](svg/courses/security/threat-modeling/06_linddun_privacy/linddun_categories.svg)
+
+---
 ## Linkability
 
 - Threat: separate items can be tied to the same subject

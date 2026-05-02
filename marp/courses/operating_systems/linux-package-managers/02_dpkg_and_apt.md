@@ -17,6 +17,11 @@ audience:
 ![apt_workflow](svg/courses/operating_systems/linux-package-managers/02_dpkg_and_apt/apt_workflow.svg)
 
 ---
+## apt Daily Lifecycle
+
+![apt_lifecycle](svg/courses/operating_systems/linux-package-managers/02_dpkg_and_apt/apt_lifecycle.svg)
+
+---
 ## What Is a `.deb` File?
 
 A `.deb` is the package format used by `Debian`, `Ubuntu`, `Mint`, `Raspbian`, `Kali`, and many derivatives.
