@@ -27,6 +27,11 @@ audience:
 - Most-used panel type
 
 ---
+## Panel Types Compared
+
+![panel_types](svg/courses/observability_and_monitoring/grafana-basics/03_panels_and_queries/panel_types.svg)
+
+---
 ## Stat Panel
 
 - Single big number

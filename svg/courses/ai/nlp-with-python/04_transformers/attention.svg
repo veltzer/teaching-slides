@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.762697824931" font-weight="bold" fill="var(--text)">Attention: Each Token Looks at Every Token</text>
+
+  <text x="640" y="87.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" fill="var(--text-muted)">Sentence: "The cat sat on the mat"</text>
+
+  <rect x="40" y="124.363636363636" width="128.571428571429" height="52.727272727273" rx="8.50362794998" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="104.285714285714" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" font-weight="bold" fill="var(--info-text)">The</text>
+
+  <rect x="211.428571428571" y="124.363636363636" width="128.571428571429" height="52.727272727273" rx="8.50362794998" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="275.714285714286" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" font-weight="bold" fill="var(--info-text)">cat</text>
+
+  <rect x="382.857142857143" y="124.363636363636" width="128.571428571429" height="52.727272727273" rx="8.50362794998" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="447.142857142857" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" font-weight="bold" fill="var(--warn-text)">sat</text>
+
+  <rect x="554.285714285714" y="124.363636363636" width="128.571428571429" height="52.727272727273" rx="8.50362794998" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="618.571428571429" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" font-weight="bold" fill="var(--info-text)">on</text>
+
+  <rect x="725.714285714286" y="124.363636363636" width="128.571428571429" height="52.727272727273" rx="8.50362794998" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="790" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" font-weight="bold" fill="var(--info-text)">the</text>
+
+  <rect x="897.142857142857" y="124.363636363636" width="128.571428571429" height="52.727272727273" rx="8.50362794998" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="961.428571428571" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" font-weight="bold" fill="var(--info-text)">mat</text>
+
+  <text x="640" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--warn-accent)">"sat" attends to all tokens with different weights</text>
+
+  <path d="M 447.142857142857 177.090909090909 Q 275.714285714286 272 104.285714285714 314.181818181818" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+  <path d="M 447.142857142857 177.090909090909 Q 361.428571428571 261.454545454545 275.714285714286 314.181818181818" fill="none" stroke="var(--warn-accent)" stroke-width="3" marker-end="url(#arrow-warn)"/>
+  <path d="M 447.142857142857 177.090909090909 L 447.142857142857 314.181818181818" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+  <path d="M 447.142857142857 177.090909090909 Q 532.857142857143 261.454545454545 618.571428571429 314.181818181818" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+  <path d="M 447.142857142857 177.090909090909 Q 597.142857142857 261.454545454545 790 314.181818181818" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+  <path d="M 447.142857142857 177.090909090909 Q 704.285714285714 272 961.428571428571 314.181818181818" fill="none" stroke="var(--warn-accent)" stroke-width="3" marker-end="url(#arrow-warn)"/>
+
+  <rect x="40" y="314.181818181818" width="128.571428571429" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="104.285714285714" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text)">0.05</text>
+
+  <rect x="211.428571428571" y="314.181818181818" width="128.571428571429" height="42.181818181818" rx="6.377720962485" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="275.714285714286" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" font-weight="bold" fill="var(--warn-text)">0.45</text>
+
+  <rect x="382.857142857143" y="314.181818181818" width="128.571428571429" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="447.142857142857" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text)">0.10</text>
+
+  <rect x="554.285714285714" y="314.181818181818" width="128.571428571429" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="618.571428571429" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text)">0.05</text>
+
+  <rect x="725.714285714286" y="314.181818181818" width="128.571428571429" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="790" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text)">0.05</text>
+
+  <rect x="897.142857142857" y="314.181818181818" width="128.571428571429" height="42.181818181818" rx="6.377720962485" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="961.428571428571" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" font-weight="bold" fill="var(--warn-text)">0.30</text>
+
+  <text x="640" y="393.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">attention weights for "sat" — sums to 1.0</text>
+
+  <rect x="40" y="430.181818181818" width="578.571428571429" height="189.818181818182" rx="10.629534937476" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="329.285714285714" y="461.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--text)">How it works</text>
+  <text x="61.428571428571" y="493.454545454545" font-family="Courier New, monospace" font-size="13.818395418718" fill="var(--text)">Q = x · W_q  (query)</text>
+  <text x="61.428571428571" y="517.709090909091" font-family="Courier New, monospace" font-size="13.818395418718" fill="var(--text)">K = x · W_k  (key)</text>
+  <text x="61.428571428571" y="541.963636363636" font-family="Courier New, monospace" font-size="13.818395418718" fill="var(--text)">V = x · W_v  (value)</text>
+  <text x="61.428571428571" y="572.545454545455" font-family="Courier New, monospace" font-size="13.818395418718" fill="var(--text)">attn = softmax(Q · K^T / sqrt(d))</text>
+  <text x="61.428571428571" y="598.909090909091" font-family="Courier New, monospace" font-size="13.818395418718" fill="var(--text)">out = attn · V</text>
+
+  <rect x="661.428571428571" y="430.181818181818" width="578.571428571429" height="189.818181818182" rx="10.629534937476" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950.714285714286" y="461.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--text)">Why it matters</text>
+  <text x="682.857142857143" y="495" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">Long-range dependencies</text>
+  <text x="682.857142857143" y="523" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">No recurrence, parallelizable</text>
+  <text x="682.857142857143" y="551" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">Multi-head: many patterns</text>
+  <text x="682.857142857143" y="595" font-family="Arial, sans-serif" font-size="13.818395418718" font-weight="bold" fill="var(--ok-accent)">Foundation of transformers</text>
+</svg>

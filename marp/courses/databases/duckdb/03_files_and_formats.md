@@ -36,6 +36,11 @@ audience:
 - Column pruning supported
 
 ---
+## Query Path
+
+![reading_parquet](svg/courses/databases/duckdb/03_files_and_formats/reading_parquet.svg)
+
+---
 ## Globs
 
 - read_parquet('data/*.parquet')

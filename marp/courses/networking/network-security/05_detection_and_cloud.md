@@ -44,6 +44,11 @@ audience:
 - Investigation workflows
 
 ---
+## Detection Pipeline
+
+![siem_pipeline](svg/courses/networking/network-security/05_detection_and_cloud/siem_pipeline.svg)
+
+---
 ## IDS And IPS
 
 - Intrusion detection observes

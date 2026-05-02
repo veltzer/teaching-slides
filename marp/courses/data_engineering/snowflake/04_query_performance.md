@@ -43,6 +43,11 @@ audience:
 - Watch for stale-looking expectations
 
 ---
+## Cache Layers
+
+![caching_layers](svg/courses/data_engineering/snowflake/04_query_performance/caching_layers.svg)
+
+---
 ## Local Disk Cache
 
 - Per-warehouse cache of micro-partitions

@@ -68,6 +68,11 @@ audience:
 - Similar topology
 
 ---
+## Likeness Spectrum
+
+![env_likeness](svg/courses/testing/performance-testing/02_tools_and_environments/env_likeness.svg)
+
+---
 ## Why Production-Likeness
 
 - Different config breaks results

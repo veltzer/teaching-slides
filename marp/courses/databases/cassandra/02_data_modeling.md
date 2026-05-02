@@ -28,6 +28,11 @@ audience:
 - Multiple tables per entity is normal
 
 ---
+## SQL vs Cassandra Mindset
+
+![query_first_design](svg/courses/databases/cassandra/02_data_modeling/query_first_design.svg)
+
+---
 ## Partition Key
 
 - Determines node placement

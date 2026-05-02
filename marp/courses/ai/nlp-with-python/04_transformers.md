@@ -36,6 +36,11 @@ audience:
 - No recurrence required
 
 ---
+## Attention Visualized
+
+![attention](svg/courses/ai/nlp-with-python/04_transformers/attention.svg)
+
+---
 ## BERT, RoBERTa
 
 - Encoder-only

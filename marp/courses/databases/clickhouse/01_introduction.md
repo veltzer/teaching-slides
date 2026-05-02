@@ -28,6 +28,11 @@ audience:
 - Fast scans on huge tables
 
 ---
+## Vectorized Execution
+
+![vectorized_engine](svg/courses/databases/clickhouse/01_introduction/vectorized_engine.svg)
+
+---
 ## Why It Wins
 
 - Bytes scanned per second is huge

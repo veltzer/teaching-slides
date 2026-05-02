@@ -100,6 +100,11 @@ audience:
 - Standardize tooling
 
 ---
+## Adoption Path
+
+![adoption_path](svg/courses/testing/contract-testing/05_pitfalls_and_strategy/adoption_path.svg)
+
+---
 ## Team Buy-In
 
 - Provider teams must verify

@@ -100,6 +100,11 @@ audience:
 - Iterate
 
 ---
+## Hunt Visualized
+
+![bottleneck_hunt](svg/courses/testing/performance-testing/04_running_and_analyzing/bottleneck_hunt.svg)
+
+---
 ## Bottleneck Categories
 
 - CPU

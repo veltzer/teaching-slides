@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.03701420285" font-weight="bold" fill="var(--text)">Consumer Lag: The Key Metric</text>
+
+  <line x1="40" y1="319.259259259259" x2="40" y2="104.444444444444" stroke="var(--text)" stroke-width="2"/>
+  <line x1="40" y1="319.259259259259" x2="1240" y2="319.259259259259" stroke="var(--text)" stroke-width="2"/>
+  <text x="40" y="351.481481481482" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--text-muted)">time →</text>
+
+  <path d="M 40 276.296296296296 L 168.571428571429 265.555555555556 L 297.142857142857 244.074074074074 L 425.714285714286 233.333333333333 L 554.285714285714 211.851851851852 L 682.857142857143 190.37037037037 L 811.428571428571 158.148148148148 L 940 136.666666666667 L 1068.571428571428 115.185185185185 L 1197.142857142857 104.444444444444" fill="none" stroke="var(--primary-accent)" stroke-width="3"/>
+  <text x="1218.571428571428" y="104.444444444444" font-family="Arial, sans-serif" font-size="13.94575659418" font-weight="bold" fill="var(--primary-accent)">produced</text>
+
+  <path d="M 40 287.037037037037 L 168.571428571429 276.296296296296 L 297.142857142857 265.555555555556 L 425.714285714286 254.814814814815 L 554.285714285714 244.074074074074 L 682.857142857143 211.851851851852 L 811.428571428571 206.481481481481 L 940 185 L 1068.571428571428 163.518518518519 L 1197.142857142857 142.037037037037" fill="none" stroke="var(--ok-accent)" stroke-width="3"/>
+  <text x="1218.571428571428" y="142.037037037037" font-family="Arial, sans-serif" font-size="13.94575659418" font-weight="bold" fill="var(--ok-accent)">consumed</text>
+
+  <line x1="811.428571428571" y1="158.148148148148" x2="811.428571428571" y2="206.481481481481" stroke="var(--warn-accent)" stroke-width="3" marker-start="url(#arrow-warn)" marker-end="url(#arrow-warn)"/>
+  <text x="832.857142857143" y="185" font-family="Arial, sans-serif" font-size="15.018507101425" font-weight="bold" fill="var(--warn-accent)">lag</text>
+
+  <text x="640" y="383.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--text-muted)">Lag = produced offset − consumed offset (per partition)</text>
+
+  <rect x="40" y="426.666666666667" width="385.714285714286" height="193.333333333333" rx="10.727505072446" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="232.857142857143" y="458.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" font-weight="bold" fill="var(--text)">Healthy</text>
+  <text x="61.428571428571" y="491.111111111111" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--ok-accent)">Lag stays low and steady</text>
+  <text x="61.428571428571" y="517.962962962963" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--ok-accent)">Consumers keep up</text>
+  <text x="61.428571428571" y="544.814814814815" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--ok-accent)">Spikes drain quickly</text>
+  <text x="61.428571428571" y="582.407407407408" font-family="Arial, sans-serif" font-size="13.94575659418" font-weight="bold" fill="var(--text)">Alert: lag &gt; threshold for N min</text>
+
+  <rect x="447.142857142857" y="426.666666666667" width="385.714285714286" height="193.333333333333" rx="10.727505072446" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="458.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" font-weight="bold" fill="var(--text)">Bursty but ok</text>
+  <text x="468.571428571428" y="491.111111111111" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--warn-accent)">Lag spikes during peaks</text>
+  <text x="468.571428571428" y="517.962962962963" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--warn-accent)">Drains during quiet</text>
+  <text x="468.571428571428" y="544.814814814815" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--warn-accent)">Auto-scaling helps</text>
+  <text x="468.571428571428" y="582.407407407408" font-family="Arial, sans-serif" font-size="13.94575659418" font-weight="bold" fill="var(--text)">Add workers if drain is too slow</text>
+
+  <rect x="854.285714285714" y="426.666666666667" width="385.714285714286" height="193.333333333333" rx="10.727505072446" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1047.142857142857" y="458.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" font-weight="bold" fill="var(--text)">Broken</text>
+  <text x="875.714285714286" y="491.111111111111" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--danger-accent)">Lag grows unbounded</text>
+  <text x="875.714285714286" y="517.962962962963" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--danger-accent)">Consumer slower than producer</text>
+  <text x="875.714285714286" y="544.814814814815" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--danger-accent)">Disk fills, backpressure builds</text>
+  <text x="875.714285714286" y="582.407407407408" font-family="Arial, sans-serif" font-size="13.94575659418" font-weight="bold" fill="var(--text)">Page on-call now</text>
+</svg>

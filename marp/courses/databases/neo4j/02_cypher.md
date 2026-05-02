@@ -28,6 +28,11 @@ audience:
 - Returns rows
 
 ---
+## Pattern Syntax
+
+![match_pattern](svg/courses/databases/neo4j/02_cypher/match_pattern.svg)
+
+---
 ## Patterns
 
 - (a:Label) for node

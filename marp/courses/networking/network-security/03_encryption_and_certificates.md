@@ -44,6 +44,11 @@ audience:
 - Encrypt the rest
 
 ---
+## Handshake Sequence
+
+![tls_handshake](svg/courses/networking/network-security/03_encryption_and_certificates/tls_handshake.svg)
+
+---
 ## Certificates
 
 - Identity binding to a public key

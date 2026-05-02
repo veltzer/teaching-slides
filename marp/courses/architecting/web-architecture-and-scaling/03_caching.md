@@ -46,6 +46,11 @@ audience:
 - Most common
 
 ---
+## Patterns Compared
+
+![cache_aside_patterns](svg/courses/architecting/web-architecture-and-scaling/03_caching/cache_aside_patterns.svg)
+
+---
 ## Read-Through
 
 - Cache fronts the DB

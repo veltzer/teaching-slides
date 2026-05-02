@@ -69,6 +69,11 @@ audience:
 - By sample
 
 ---
+## Backfill and Reconciliation
+
+![backfill_recon](svg/courses/databases/database-migration-strategies/03_data_migrations/backfill_recon.svg)
+
+---
 ## Inconsistencies
 
 - Find differences

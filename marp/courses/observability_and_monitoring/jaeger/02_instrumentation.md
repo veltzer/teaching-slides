@@ -52,6 +52,11 @@ audience:
 - Required for stitching
 
 ---
+## Propagation Visualized
+
+![context_propagation](svg/courses/observability_and_monitoring/jaeger/02_instrumentation/context_propagation.svg)
+
+---
 ## Standard Headers
 
 - W3C Trace Context preferred

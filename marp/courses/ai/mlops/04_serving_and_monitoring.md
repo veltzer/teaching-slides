@@ -101,6 +101,11 @@ audience:
 - Promote on success
 
 ---
+## Shadow vs Canary
+
+![shadow_canary](svg/courses/ai/mlops/04_serving_and_monitoring/shadow_canary.svg)
+
+---
 ## A/B Testing
 
 - Split users

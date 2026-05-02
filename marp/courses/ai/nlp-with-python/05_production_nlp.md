@@ -36,6 +36,11 @@ audience:
 - Network round trip
 
 ---
+## Request Path
+
+![serving_path](svg/courses/ai/nlp-with-python/05_production_nlp/serving_path.svg)
+
+---
 ## Throughput
 
 - Dynamic batching

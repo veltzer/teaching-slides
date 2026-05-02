@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.762697824931" font-weight="bold" fill="var(--text)">Change Data Capture Flow</text>
+
+  <rect x="40" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="157.857142857143" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--info-text)">Source DB</text>
+  <text x="157.857142857143" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--info-text)">app writes</text>
+  <text x="157.857142857143" y="238.254545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--info-text)">WAL or binlog</text>
+
+  <rect x="361.428571428571" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.285714285714" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--warn-text)">CDC connector</text>
+  <text x="479.285714285714" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">reads change log</text>
+  <text x="479.285714285714" y="238.254545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">emits events</text>
+
+  <rect x="682.857142857143" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="800.714285714286" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--warn-text)">Stream</text>
+  <text x="800.714285714286" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">ordered, durable</text>
+  <text x="800.714285714286" y="238.254545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">per-table topic</text>
+
+  <rect x="1004.285714285714" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1122.142857142857" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--ok-text)">Target lake</text>
+  <text x="1122.142857142857" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-text)">apply changes</text>
+  <text x="1122.142857142857" y="238.254545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-text)">MERGE upsert</text>
+
+  <path d="M 275.714285714286 208.727272727273 L 361.428571428571 208.727272727273" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 597.142857142857 208.727272727273 L 682.857142857143 208.727272727273" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 918.571428571429 208.727272727273 L 1004.285714285714 208.727272727273" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="314.181818181818" width="578.571428571429" height="189.818181818182" rx="10.629534937476" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="329.285714285714" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--text)">Event payload</text>
+  <text x="61.428571428571" y="382.727272727273" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">op: insert / update / delete</text>
+  <text x="61.428571428571" y="409.090909090909" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">before: previous row state</text>
+  <text x="61.428571428571" y="435.454545454545" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">after: new row state</text>
+  <text x="61.428571428571" y="461.818181818182" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">timestamp, transaction_id</text>
+  <text x="61.428571428571" y="488.181818181818" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">source position (LSN, offset)</text>
+
+  <rect x="661.428571428571" y="314.181818181818" width="578.571428571429" height="189.818181818182" rx="10.629534937476" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950.714285714286" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--text)">Why CDC over batch</text>
+  <text x="682.857142857143" y="382.727272727273" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-accent)">Latency in seconds, not hours</text>
+  <text x="682.857142857143" y="409.090909090909" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-accent)">Captures hard deletes</text>
+  <text x="682.857142857143" y="435.454545454545" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-accent)">No watermark column needed</text>
+  <text x="682.857142857143" y="461.818181818182" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-accent)">Less load on source</text>
+  <text x="682.857142857143" y="488.181818181818" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--danger-accent)">Requires source support &amp; ops</text>
+
+  <rect x="40" y="525.090909090909" width="1200" height="94.909090909091" rx="8.50362794998" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--primary-text)">Reliability needs idempotent apply</text>
+  <text x="640" y="588.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--primary-text)">Track last-applied offset; replay safe; survives restarts</text>
+</svg>

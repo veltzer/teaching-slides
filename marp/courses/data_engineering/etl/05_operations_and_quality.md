@@ -52,6 +52,11 @@ audience:
 - Warn on soft fails
 
 ---
+## Quality Gates
+
+![quality_gates](svg/courses/data_engineering/etl/05_operations_and_quality/quality_gates.svg)
+
+---
 ## Anomaly Detection
 
 - Volume changes

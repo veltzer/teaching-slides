@@ -92,6 +92,11 @@ audience:
 - Vocab is part of the model
 
 ---
+## Strategies Compared
+
+![tokenization](svg/courses/ai/nlp-with-python/02_text_preprocessing/tokenization.svg)
+
+---
 ## Vectorization
 
 - Bag of words

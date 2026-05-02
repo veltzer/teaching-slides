@@ -37,6 +37,11 @@ audience:
 - Full failover
 
 ---
+## Drill Levels
+
+![drill_levels](svg/courses/architecting/disaster-recovery/05_testing_and_runbooks/drill_levels.svg)
+
+---
 ## Walkthrough
 
 - Read the runbook with the team

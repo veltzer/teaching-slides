@@ -77,6 +77,11 @@ audience:
 - Required when correctness matters
 
 ---
+## Outbox Visualized
+
+![outbox_pattern](svg/courses/architecting/message-queues/03_reliability/outbox_pattern.svg)
+
+---
 ## Inbox Pattern
 
 - Receiver records processed IDs

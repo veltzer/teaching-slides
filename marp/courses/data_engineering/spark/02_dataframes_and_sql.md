@@ -59,6 +59,11 @@ audience:
 - Pick by data size
 
 ---
+## Join Strategies
+
+![join_strategies](svg/courses/data_engineering/spark/02_dataframes_and_sql/join_strategies.svg)
+
+---
 ## Broadcast Join
 
 - Send small table to all executors

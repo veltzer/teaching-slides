@@ -30,6 +30,11 @@ audience:
 - Operational
 
 ---
+## Categories Visualized
+
+![injection_categories](svg/courses/testing/chaos-engineering/03_failure_injection/injection_categories.svg)
+
+---
 ## Killing Instances
 
 - Stop a node

@@ -89,6 +89,11 @@ audience:
 - Promote to prod
 
 ---
+## Promotion Visualized
+
+![registry_promotion](svg/courses/ai/mlops/03_experiment_tracking_and_registry/registry_promotion.svg)
+
+---
 ## Approval Gates
 
 - Metric thresholds

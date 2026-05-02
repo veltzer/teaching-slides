@@ -28,6 +28,11 @@ audience:
 - Query and UI
 
 ---
+## Pipeline Visualized
+
+![collector_pipeline](svg/courses/observability_and_monitoring/jaeger/05_operations/collector_pipeline.svg)
+
+---
 ## Sidecar Agents
 
 - One per host or pod

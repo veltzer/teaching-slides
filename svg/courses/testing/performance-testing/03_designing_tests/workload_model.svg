@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Workload Model</text>
+
+  <rect x="40" y="102.142857142857" width="1200" height="82.857142857143" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--info-text)">Production traffic mix from logs</text>
+  <text x="640" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">browse 60% | search 15% | sign-in 12% | checkout 8% | settings 5%</text>
+
+  <rect x="40" y="226.428571428571" width="235.714285714286" height="124.285714285714" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="157.857142857143" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">Browse</text>
+  <text x="157.857142857143" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">60% of traffic</text>
+  <text x="157.857142857143" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">read-heavy</text>
+  <text x="157.857142857143" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">cache-heavy</text>
+
+  <rect x="297.142857142857" y="226.428571428571" width="214.285714285714" height="124.285714285714" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="404.285714285714" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">Search</text>
+  <text x="404.285714285714" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">15% of traffic</text>
+  <text x="404.285714285714" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">CPU-heavy</text>
+
+  <rect x="532.857142857143" y="226.428571428571" width="214.285714285714" height="124.285714285714" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">Sign-in</text>
+  <text x="640" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">12% of traffic</text>
+  <text x="640" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">auth bottleneck</text>
+
+  <rect x="768.571428571429" y="226.428571428571" width="214.285714285714" height="124.285714285714" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="875.714285714286" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--primary-text)">Checkout</text>
+  <text x="875.714285714286" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">8% of traffic</text>
+  <text x="875.714285714286" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">DB-heavy</text>
+  <text x="875.714285714286" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">money matters</text>
+
+  <rect x="1004.285714285714" y="226.428571428571" width="235.714285714286" height="124.285714285714" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1122.142857142857" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--info-text)">Settings</text>
+  <text x="1122.142857142857" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--info-text)">5% of traffic</text>
+  <text x="1122.142857142857" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--info-text)">low load</text>
+
+  <rect x="40" y="392.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="329.285714285714" y="423.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">Realistic load</text>
+  <text x="61.428571428571" y="460" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Real ratios from logs</text>
+  <text x="61.428571428571" y="490" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Real burst patterns</text>
+  <text x="61.428571428571" y="520" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Many user IDs</text>
+  <text x="61.428571428571" y="550" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Realistic think time</text>
+  <text x="61.428571428571" y="594.107142857143" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">Mirror prod, do not fabricate</text>
+
+  <rect x="661.428571428571" y="392.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.714285714286" y="423.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--danger-text)">Anti-patterns</text>
+  <text x="682.857142857143" y="454.285714285714" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--danger-text)">Hammer one endpoint at 100% rate</text>
+  <text x="682.857142857143" y="480.178571428571" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--danger-text)">No think time → unrealistic load</text>
+  <text x="682.857142857143" y="506.071428571429" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--danger-text)">One user ID → cache always hits</text>
+  <text x="682.857142857143" y="531.964285714286" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--danger-text)">Closed model for HTTP traffic</text>
+  <text x="682.857142857143" y="594.107142857143" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--danger-text)">Garbage in = garbage out</text>
+</svg>

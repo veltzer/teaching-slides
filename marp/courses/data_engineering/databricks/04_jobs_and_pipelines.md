@@ -76,6 +76,11 @@ audience:
 - Conditional logic
 
 ---
+## Workflow DAG
+
+![workflow_dag](svg/courses/data_engineering/databricks/04_jobs_and_pipelines/workflow_dag.svg)
+
+---
 ## Declarative Pipelines
 
 - Define datasets, not steps

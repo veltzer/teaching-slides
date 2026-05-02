@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Skip Indexes: Granule Pruning</text>
+
+  <text x="640" y="86.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--text-muted)">Each granule carries metadata</text>
+
+  <rect x="40" y="122.857142857143" width="235.714285714286" height="103.571428571429" rx="8.427360687859" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="157.857142857143" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">Min-max</text>
+  <text x="157.857142857143" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">numeric columns</text>
+  <text x="157.857142857143" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">range filters</text>
+
+  <rect x="297.142857142857" y="122.857142857143" width="235.714285714286" height="103.571428571429" rx="8.427360687859" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="415" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">Set</text>
+  <text x="415" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">small enums</text>
+  <text x="415" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">equality filters</text>
+
+  <rect x="554.285714285714" y="122.857142857143" width="235.714285714286" height="103.571428571429" rx="8.427360687859" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="672.142857142857" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">Bloom (token)</text>
+  <text x="672.142857142857" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">word lookup</text>
+  <text x="672.142857142857" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">in long strings</text>
+
+  <rect x="811.428571428571" y="122.857142857143" width="235.714285714286" height="103.571428571429" rx="8.427360687859" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="929.285714285714" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">Bloom (n-gram)</text>
+  <text x="929.285714285714" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">substring search</text>
+  <text x="929.285714285714" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">LIKE patterns</text>
+
+  <text x="640" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">Query: WHERE event_time BETWEEN '2026-03-01' AND '2026-03-02' AND status = 'ERROR'</text>
+
+  <rect x="40" y="309.285714285714" width="171.428571428571" height="62.142857142857" rx="6.320520515894" fill="url(#grad-info)" stroke="var(--info-border)" filter="url(#shadow)"/>
+  <text x="125.714285714286" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--info-text)">G1: Mar 1</text>
+  <text x="125.714285714286" y="355.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">all status</text>
+
+  <rect x="232.857142857143" y="309.285714285714" width="171.428571428571" height="62.142857142857" rx="6.320520515894" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="318.571428571429" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" font-weight="bold" fill="var(--ok-text)">G2: Mar 1, ERROR</text>
+  <text x="318.571428571429" y="355.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--ok-text)">READ THIS</text>
+
+  <rect x="425.714285714286" y="309.285714285714" width="171.428571428571" height="62.142857142857" rx="6.320520515894" fill="url(#grad-info)" stroke="var(--info-border)" filter="url(#shadow)"/>
+  <text x="511.428571428571" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--info-text)">G3: Mar 1</text>
+  <text x="511.428571428571" y="355.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">no ERROR</text>
+
+  <rect x="618.571428571429" y="309.285714285714" width="171.428571428571" height="62.142857142857" rx="6.320520515894" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="704.285714285714" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" font-weight="bold" fill="var(--ok-text)">G4: Mar 2, ERROR</text>
+  <text x="704.285714285714" y="355.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--ok-text)">READ THIS</text>
+
+  <rect x="811.428571428571" y="309.285714285714" width="171.428571428571" height="62.142857142857" rx="6.320520515894" fill="url(#grad-info)" stroke="var(--info-border)" filter="url(#shadow)"/>
+  <text x="897.142857142857" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--info-text)">G5: Mar 3</text>
+  <text x="897.142857142857" y="355.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">out of range</text>
+
+  <rect x="1004.285714285714" y="309.285714285714" width="171.428571428571" height="62.142857142857" rx="6.320520515894" fill="url(#grad-info)" stroke="var(--info-border)" filter="url(#shadow)"/>
+  <text x="1090" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--info-text)">G6: Mar 4</text>
+  <text x="1090" y="355.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">out of range</text>
+
+  <text x="640" y="423.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--ok-accent)">Read 2 of 6 granules — 4 skipped</text>
+
+  <rect x="40" y="464.642857142857" width="1200" height="155.357142857143" rx="10.534200859823" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="495.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">When to add</text>
+  <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--text-muted)">Frequent filter, non-sort-key column</text>
+  <text x="640" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--text-muted)">High selectivity helps most</text>
+  <text x="640" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--danger-accent)">Costs storage; add only what helps</text>
+</svg>

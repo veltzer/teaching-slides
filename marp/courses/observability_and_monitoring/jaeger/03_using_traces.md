@@ -92,6 +92,11 @@ audience:
 - Saves context-switching
 
 ---
+## Three Pillars
+
+![trace_to_logs](svg/courses/observability_and_monitoring/jaeger/03_using_traces/trace_to_logs.svg)
+
+---
 ## Linking To Metrics
 
 - Tag-based panels

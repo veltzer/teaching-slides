@@ -35,6 +35,11 @@ audience:
 - Health checks at the load balancer
 
 ---
+## HA Topology
+
+![ha_topology](svg/courses/observability_and_monitoring/grafana-basics/05_operations/ha_topology.svg)
+
+---
 ## Backend Database
 
 - SQLite for small setups

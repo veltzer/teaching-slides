@@ -51,6 +51,11 @@ audience:
 - Avoid embedding secrets
 
 ---
+## Auth Patterns
+
+![source_auth](svg/courses/observability_and_monitoring/grafana-basics/02_data_sources/source_auth.svg)
+
+---
 ## TLS To Backends
 
 - Always TLS in production

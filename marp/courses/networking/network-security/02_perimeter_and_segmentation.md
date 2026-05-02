@@ -84,6 +84,11 @@ audience:
 - Default for any non-trivial network
 
 ---
+## Trust Zones
+
+![segmentation_zones](svg/courses/networking/network-security/02_perimeter_and_segmentation/segmentation_zones.svg)
+
+---
 ## VLANs
 
 - Logical separation on shared hardware

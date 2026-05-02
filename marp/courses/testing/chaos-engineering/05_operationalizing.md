@@ -37,6 +37,11 @@ audience:
 - Catch issues before deploy
 
 ---
+## CI Pipeline
+
+![ci_chaos](svg/courses/testing/chaos-engineering/05_operationalizing/ci_chaos.svg)
+
+---
 ## Why It Pays Off
 
 - Bugs found in working hours

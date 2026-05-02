@@ -52,6 +52,11 @@ audience:
 - Each with own SLA
 
 ---
+## Medallion Layers
+
+![bronze_silver_gold](svg/courses/data_engineering/data-lakehouse/04_ingestion_and_querying/bronze_silver_gold.svg)
+
+---
 ## Bronze Properties
 
 - Append-only

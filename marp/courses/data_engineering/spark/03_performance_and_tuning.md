@@ -51,6 +51,11 @@ audience:
 - Adaptive query execution mitigates
 
 ---
+## Shuffle and Skew
+
+![shuffle_skew](svg/courses/data_engineering/spark/03_performance_and_tuning/shuffle_skew.svg)
+
+---
 ## Broadcast Joins
 
 - Avoid shuffle

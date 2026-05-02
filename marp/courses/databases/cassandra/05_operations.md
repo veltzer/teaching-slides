@@ -28,6 +28,11 @@ audience:
 - Rack and DC awareness
 
 ---
+## Topology Layout
+
+![topology_seeds](svg/courses/databases/cassandra/05_operations/topology_seeds.svg)
+
+---
 ## Seed Nodes
 
 - Bootstrap contacts

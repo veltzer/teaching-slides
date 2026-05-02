@@ -61,6 +61,11 @@ audience:
 - Drives architecture cost
 
 ---
+## RPO and RTO Visualized
+
+![rpo_rto](svg/courses/architecting/disaster-recovery/01_introduction/rpo_rto_axes.svg)
+
+---
 ## Cost Curve
 
 - Lower RPO and RTO cost more

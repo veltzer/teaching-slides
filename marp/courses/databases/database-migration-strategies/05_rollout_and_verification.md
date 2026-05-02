@@ -61,6 +61,11 @@ audience:
 - Default for risky changes
 
 ---
+## Cutover Schedule
+
+![canary_cutover](svg/courses/databases/database-migration-strategies/05_rollout_and_verification/canary_cutover.svg)
+
+---
 ## Verification Layers
 
 - Syntactic: counts, sums

@@ -28,6 +28,11 @@ audience:
 - Plan replicas to survive
 
 ---
+## Topology Tiers
+
+![cluster_topology](svg/courses/databases/cockroachdb/05_operations/cluster_topology.svg)
+
+---
 ## Cluster Init
 
 - Start nodes

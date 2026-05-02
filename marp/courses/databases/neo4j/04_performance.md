@@ -44,6 +44,11 @@ audience:
 - Cardinality stats drive plan
 
 ---
+## Plan Comparison
+
+![expansion_plan](svg/courses/databases/neo4j/04_performance/expansion_plan.svg)
+
+---
 ## Variable Length Paths
 
 - Bound depth

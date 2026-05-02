@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="803.636363636364" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="33.886322141578" font-weight="bold" fill="var(--text)">Write Path and Read Path</text>
+
+  <text x="367.272727272727" y="99.074074074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.204515815413" font-weight="bold" fill="var(--text-muted)">Write</text>
+  <text x="1240" y="99.074074074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.204515815413" font-weight="bold" fill="var(--text-muted)">Read</text>
+  <line x1="803.636363636364" y1="82.962962962963" x2="803.636363636364" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <rect x="40" y="147.407407407407" width="245.454545454545" height="64.444444444444" rx="9.681806326165" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="162.727272727273" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" font-weight="bold" fill="var(--primary-text)">Client write</text>
+
+  <rect x="40" y="233.333333333333" width="245.454545454545" height="64.444444444444" rx="9.681806326165" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="162.727272727273" y="270.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" font-weight="bold" fill="var(--warn-text)">Commit log</text>
+
+  <rect x="40" y="319.259259259259" width="245.454545454545" height="64.444444444444" rx="9.681806326165" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="162.727272727273" y="356.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" font-weight="bold" fill="var(--info-text)">Memtable</text>
+
+  <rect x="40" y="405.185185185185" width="245.454545454545" height="64.444444444444" rx="9.681806326165" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="162.727272727273" y="442.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" font-weight="bold" fill="var(--ok-text)">Ack to client</text>
+
+  <rect x="449.090909090909" y="319.259259259259" width="245.454545454545" height="64.444444444444" rx="9.681806326165" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="571.818181818182" y="351.481481481482" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" font-weight="bold" fill="var(--info-text)">Flush</text>
+  <text x="571.818181818182" y="372.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.312483698477" fill="var(--info-text)">async</text>
+
+  <rect x="449.090909090909" y="405.185185185185" width="245.454545454545" height="64.444444444444" rx="9.681806326165" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="571.818181818182" y="442.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" font-weight="bold" fill="var(--warn-text)">SSTable on disk</text>
+
+  <path d="M 162.727272727273 211.851851851852 L 162.727272727273 233.333333333333" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 162.727272727273 297.777777777778 L 162.727272727273 319.259259259259" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 162.727272727273 383.703703703704 L 162.727272727273 405.185185185185" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 285.454545454545 351.481481481482 L 449.090909090909 351.481481481482" fill="none" stroke="var(--ok-accent)" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow-ok)"/>
+  <path d="M 571.818181818182 383.703703703704 L 571.818181818182 405.185185185185" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="367.272727272727" y="523.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.732935280019" font-weight="bold" fill="var(--ok-accent)">Append-only, very fast</text>
+  <text x="367.272727272727" y="550.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.732935280019" fill="var(--text-muted)">No in-place update; old versions linger</text>
+  <text x="367.272727272727" y="577.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.732935280019" fill="var(--text-muted)">Compaction merges later</text>
+
+  <rect x="885.454545454545" y="147.407407407407" width="272.727272727273" height="64.444444444444" rx="9.681806326165" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1021.818181818182" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" font-weight="bold" fill="var(--primary-text)">Client read</text>
+
+  <rect x="885.454545454545" y="233.333333333333" width="272.727272727273" height="64.444444444444" rx="9.681806326165" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1021.818181818182" y="270.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" font-weight="bold" fill="var(--info-text)">Bloom filter</text>
+
+  <rect x="885.454545454545" y="319.259259259259" width="272.727272727273" height="64.444444444444" rx="9.681806326165" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1021.818181818182" y="356.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" font-weight="bold" fill="var(--info-text)">Memtable check</text>
+
+  <rect x="885.454545454545" y="405.185185185185" width="272.727272727273" height="64.444444444444" rx="9.681806326165" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1021.818181818182" y="432.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" font-weight="bold" fill="var(--warn-text)">SSTable lookups</text>
+  <text x="1021.818181818182" y="453.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.312483698477" fill="var(--warn-text)">multiple files</text>
+
+  <rect x="885.454545454545" y="491.111111111111" width="272.727272727273" height="64.444444444444" rx="9.681806326165" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1021.818181818182" y="528.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" font-weight="bold" fill="var(--ok-text)">Merge &amp; return</text>
+
+  <path d="M 1021.818181818182 211.851851851852 L 1021.818181818182 233.333333333333" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1021.818181818182 297.777777777778 L 1021.818181818182 319.259259259259" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1021.818181818182 383.703703703704 L 1021.818181818182 405.185185185185" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1021.818181818182 469.62962962963 L 1021.818181818182 491.111111111111" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="1021.818181818182" y="587.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.732935280019" font-weight="bold" fill="var(--danger-accent)">Reads slower than writes</text>
+  <text x="1021.818181818182" y="614.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.732935280019" fill="var(--text-muted)">Tombstones &amp; many SSTables hurt</text>
+</svg>

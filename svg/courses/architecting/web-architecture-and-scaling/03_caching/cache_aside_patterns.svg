@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.628328299751" font-weight="bold" fill="var(--text)">Cache Patterns</text>
+
+  <text x="297.142857142857" y="97.477477477477" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.163091642679" font-weight="bold" fill="var(--text-muted)">Cache-aside (lazy)</text>
+  <text x="982.857142857143" y="97.477477477477" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.163091642679" font-weight="bold" fill="var(--text-muted)">Read-through</text>
+  <line x1="640" y1="81.801801801802" x2="640" y2="604.324324324324" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <rect x="40" y="144.504504504504" width="171.428571428571" height="62.702702702703" rx="8.465236657072" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="125.714285714286" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--primary-text)">App</text>
+
+  <rect x="297.142857142857" y="144.504504504504" width="171.428571428571" height="62.702702702703" rx="8.465236657072" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="382.857142857143" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--warn-text)">Cache</text>
+
+  <rect x="40" y="269.90990990991" width="428.571428571429" height="62.702702702703" rx="8.465236657072" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="254.285714285714" y="306.486486486486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--info-text)">Database</text>
+
+  <path d="M 211.428571428571 165.405405405405 L 297.142857142857 165.405405405405" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="254.285714285714" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.639700403474" fill="var(--text-muted)">1. read</text>
+
+  <path d="M 297.142857142857 186.306306306306 L 211.428571428571 186.306306306306" fill="none" stroke="var(--danger-accent)" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow-danger)"/>
+  <text x="254.285714285714" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.639700403474" fill="var(--danger-accent)">2. miss</text>
+
+  <path d="M 125.714285714286 207.207207207207 L 168.571428571429 269.90990990991" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="61.428571428571" y="249.009009009009" font-family="Arial, sans-serif" font-size="11.639700403474" fill="var(--text-muted)">3. read DB</text>
+
+  <path d="M 168.571428571429 269.90990990991 L 254.285714285714 217.657657657658" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="190" y="259.459459459459" font-family="Arial, sans-serif" font-size="11.639700403474" fill="var(--text-muted)">4. fill</text>
+
+  <text x="297.142857142857" y="379.63963963964" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--text)">Trade-offs</text>
+  <text x="40" y="410.990990990991" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-accent)">+ simple, app controls cache</text>
+  <text x="40" y="435.027027027027" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-accent)">+ cache only used data</text>
+  <text x="40" y="463.243243243243" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- 3 round-trips on miss</text>
+  <text x="40" y="487.279279279279" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- thundering herd risk</text>
+  <text x="40" y="515.495495495495" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- stale on writes</text>
+
+  <rect x="725.714285714286" y="144.504504504504" width="171.428571428571" height="62.702702702703" rx="8.465236657072" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="811.428571428571" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--primary-text)">App</text>
+
+  <rect x="982.857142857143" y="144.504504504504" width="171.428571428571" height="62.702702702703" rx="8.465236657072" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1068.571428571428" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--warn-text)">Cache</text>
+
+  <rect x="725.714285714286" y="269.90990990991" width="428.571428571429" height="62.702702702703" rx="8.465236657072" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="306.486486486486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--info-text)">Database</text>
+
+  <path d="M 897.142857142857 165.405405405405 L 982.857142857143 165.405405405405" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="940" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.639700403474" fill="var(--text-muted)">1. read</text>
+
+  <path d="M 1068.571428571428 207.207207207207 L 1068.571428571428 269.90990990991" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1090" y="243.783783783784" font-family="Arial, sans-serif" font-size="11.639700403474" fill="var(--text-muted)">on miss</text>
+
+  <path d="M 982.857142857143 186.306306306306 L 897.142857142857 186.306306306306" fill="none" stroke="var(--ok-accent)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="940" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.639700403474" fill="var(--ok-accent)">2. value</text>
+
+  <text x="982.857142857143" y="379.63963963964" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--text)">Trade-offs</text>
+  <text x="725.714285714286" y="410.990990990991" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-accent)">+ app sees one source</text>
+  <text x="725.714285714286" y="435.027027027027" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-accent)">+ cache handles fill logic</text>
+  <text x="725.714285714286" y="463.243243243243" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- cache needs DB access</text>
+  <text x="725.714285714286" y="487.279279279279" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- harder to debug</text>
+
+  <rect x="40" y="557.297297297297" width="1200" height="62.702702702703" rx="8.465236657072" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="583.423423423423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--text)">Stampede defense: single-flight, stale-while-revalidate, negative caching</text>
+  <text x="640" y="607.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text-muted)">Always have an invalidation plan: TTL, active invalidate, or both</text>
+</svg>

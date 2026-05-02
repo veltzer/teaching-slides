@@ -37,6 +37,11 @@ audience:
 - Sharded by region
 
 ---
+## Failover Modes
+
+![failover_modes](svg/courses/architecting/disaster-recovery/04_multi_region/failover_modes.svg)
+
+---
 ## Read-Local, Write-Global
 
 - Reads local, fast

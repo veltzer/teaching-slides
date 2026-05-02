@@ -87,6 +87,11 @@ audience:
 - Replace
 
 ---
+## The Six R's Visualized
+
+![six_rs](svg/courses/architecting/legacy-modernization/01_introduction/six_rs.svg)
+
+---
 ## The Six R's
 
 - Each R has cost

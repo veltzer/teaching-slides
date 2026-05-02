@@ -51,6 +51,11 @@ audience:
 - Refresh policy chosen
 
 ---
+## Variables Visualized
+
+![variables](svg/courses/observability_and_monitoring/grafana-basics/04_dashboards_and_alerts/variables_drilldown.svg)
+
+---
 ## Templating
 
 - One dashboard, many environments

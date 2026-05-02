@@ -37,6 +37,11 @@ audience:
 - Alert thresholds by topic
 
 ---
+## Lag Visualized
+
+![lag_metrics](svg/courses/architecting/message-queues/05_operations/lag_metrics.svg)
+
+---
 ## Latency
 
 - End-to-end time

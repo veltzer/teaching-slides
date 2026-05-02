@@ -44,6 +44,11 @@ audience:
 - Queries scan only needed columns
 
 ---
+## Layout Compared
+
+![columnar_layout](svg/courses/data_engineering/data-lakehouse/02_storage_and_formats/columnar_layout.svg)
+
+---
 ## Columnar Formats
 
 - Parquet

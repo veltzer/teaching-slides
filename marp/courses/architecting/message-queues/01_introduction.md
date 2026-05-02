@@ -53,6 +53,11 @@ audience:
 - Broker is the trust boundary
 
 ---
+## Three Roles
+
+![producer_broker_consumer](svg/courses/architecting/message-queues/01_introduction/producer_broker_consumer.svg)
+
+---
 ## Pull vs Push
 
 - Pull: consumer asks for work

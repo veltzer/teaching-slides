@@ -51,6 +51,11 @@ audience:
 - Match to cluster
 
 ---
+## Allocation Layout
+
+![resource_allocation](svg/courses/data_engineering/spark/05_operations/resource_allocation.svg)
+
+---
 ## Dynamic Allocation
 
 - Add executors under load

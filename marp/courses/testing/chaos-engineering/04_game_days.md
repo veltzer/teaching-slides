@@ -61,6 +61,11 @@ audience:
 - Stakeholders read the report
 
 ---
+## Roles Visualized
+
+![game_day_roles](svg/courses/testing/chaos-engineering/04_game_days/game_day_roles.svg)
+
+---
 ## Pre-Brief
 
 - Recap roles

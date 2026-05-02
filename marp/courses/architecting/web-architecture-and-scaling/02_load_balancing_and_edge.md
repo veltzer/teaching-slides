@@ -36,6 +36,11 @@ audience:
 - Modern load balancers do both
 
 ---
+## L4 vs L7 Visualized
+
+![l4_l7_balancing](svg/courses/architecting/web-architecture-and-scaling/02_load_balancing_and_edge/l4_l7_balancing.svg)
+
+---
 ## Algorithms
 
 - Round robin

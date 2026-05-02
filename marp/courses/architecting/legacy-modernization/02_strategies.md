@@ -98,6 +98,11 @@ audience:
 - Skipping steps risks rework
 
 ---
+## Sequence Over Time
+
+![strategy_combos](svg/courses/architecting/legacy-modernization/02_strategies/strategy_combos.svg)
+
+---
 ## What Not to Do
 
 - Big bang

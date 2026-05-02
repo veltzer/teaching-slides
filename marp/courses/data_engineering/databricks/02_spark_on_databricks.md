@@ -107,6 +107,11 @@ audience:
 - Often a free win
 
 ---
+## Catalyst Pipeline
+
+![catalyst_optimizer](svg/courses/data_engineering/databricks/02_spark_on_databricks/catalyst_optimizer.svg)
+
+---
 ## Cost vs Performance
 
 - Bigger clusters not always faster

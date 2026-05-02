@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="619.310344827586" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046200557" font-weight="bold" fill="var(--text)">Shadow vs Canary Rollouts</text>
+
+  <text x="288.275862068966" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--text-muted)">Shadow</text>
+  <text x="950.344827586207" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--text-muted)">Canary</text>
+
+  <line x1="619.310344827586" y1="82.181818181818" x2="619.310344827586" y2="609.454545454545" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <rect x="40" y="145.454545454545" width="124.137931034483" height="84.363636363636" rx="8.355727485873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="102.068965517241" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--primary-text)">Client</text>
+  <text x="102.068965517241" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">100% traffic</text>
+
+  <rect x="246.896551724138" y="103.272727272727" width="165.51724137931" height="63.272727272727" rx="8.355727485873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--ok-text)">Model A (live)</text>
+
+  <rect x="246.896551724138" y="208.727272727273" width="165.51724137931" height="63.272727272727" rx="8.355727485873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="245.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--warn-text)">Model B (shadow)</text>
+
+  <rect x="453.793103448276" y="103.272727272727" width="124.137931034483" height="63.272727272727" rx="8.355727485873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="515.862068965517" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">user gets A</text>
+
+  <rect x="453.793103448276" y="208.727272727273" width="124.137931034483" height="63.272727272727" rx="8.355727485873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="515.862068965517" y="229.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--warn-text)">predictions</text>
+  <text x="515.862068965517" y="256.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">logged only</text>
+
+  <path d="M 164.137931034483 187.636363636364 L 246.896551724138 134.909090909091" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 164.137931034483 187.636363636364 L 246.896551724138 240.363636363636" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="4 4"/>
+  <path d="M 412.413793103448 134.909090909091 L 453.793103448276 134.909090909091" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 412.413793103448 240.363636363636 L 453.793103448276 240.363636363636" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+
+  <text x="288.275862068966" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--text)">Both models score every request</text>
+  <text x="288.275862068966" y="338.436363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">B's prediction never reaches user</text>
+  <text x="288.275862068966" y="361.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">offline compare A vs B</text>
+  <text x="288.275862068966" y="384.836363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-accent)">+ zero user risk</text>
+  <text x="288.275862068966" y="406.981818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-accent)">- 2x compute</text>
+
+  <rect x="681.379310344828" y="166.545454545455" width="124.137931034483" height="84.363636363636" rx="8.355727485873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="743.448275862069" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--primary-text)">Client</text>
+  <text x="743.448275862069" y="229.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">100% traffic</text>
+
+  <rect x="888.275862068966" y="103.272727272727" width="165.51724137931" height="52.727272727273" rx="8.355727485873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="971.034482758621" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--ok-text)">Model A — 95%</text>
+
+  <rect x="888.275862068966" y="177.090909090909" width="165.51724137931" height="52.727272727273" rx="8.355727485873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="971.034482758621" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--warn-text)">Model B — 5%</text>
+
+  <rect x="1136.551724137931" y="103.272727272727" width="103.448275862069" height="126.545454545455" rx="8.355727485873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1188.275862068966" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--info-text)">user</text>
+  <text x="1188.275862068966" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">sees scoring</text>
+  <text x="1188.275862068966" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">model</text>
+
+  <path d="M 805.51724137931 208.727272727273 L 888.275862068966 129.636363636364" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 805.51724137931 208.727272727273 L 888.275862068966 203.454545454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1053.793103448276 129.636363636364 L 1136.551724137931 150.727272727273" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1053.793103448276 203.454545454545 L 1136.551724137931 182.363636363636" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="950.344827586207" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--text)">Small slice gets new model</text>
+  <text x="950.344827586207" y="338.436363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">ramp 1% → 5% → 25% → 100%</text>
+  <text x="950.344827586207" y="361.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">halt on regression</text>
+  <text x="950.344827586207" y="384.836363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-accent)">+ live signal cheap</text>
+  <text x="950.344827586207" y="406.981818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-accent)">- some users see B</text>
+
+  <rect x="40" y="451.272727272727" width="1158.620689655173" height="168.727272727273" rx="10.444659357342" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="619.310344827586" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--text)">Combined: shadow then canary</text>
+  <text x="619.310344827586" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--text-muted)">Auto-rollback on regression</text>
+  <text x="619.310344827586" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Measure customer KPI</text>
+</svg>

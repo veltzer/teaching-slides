@@ -29,6 +29,11 @@ audience:
 - Index
 
 ---
+## Pipeline Visualized
+
+![ingestion_pipeline](svg/courses/ai/rag-applications/05_production_rag/ingestion_pipeline.svg)
+
+---
 ## Source Connectors
 
 - File systems

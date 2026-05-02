@@ -46,6 +46,11 @@ audience:
 - Failures stop downstream
 
 ---
+## DAG Visualized
+
+![pipeline_dag](svg/courses/ai/mlops/02_pipelines/pipeline_dag.svg)
+
+---
 ## Orchestrators
 
 - Airflow: mature, Python, broad

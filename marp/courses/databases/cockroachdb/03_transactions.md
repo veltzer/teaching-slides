@@ -28,6 +28,11 @@ audience:
 - Costs more than weaker levels
 
 ---
+## Serializable and Retries
+
+![serializable_retries](svg/courses/databases/cockroachdb/03_transactions/serializable_retries.svg)
+
+---
 ## Why Serializable
 
 - App developers reason simply

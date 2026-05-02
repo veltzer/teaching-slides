@@ -28,6 +28,11 @@ audience:
 - Format: how to answer
 
 ---
+## Layout Example
+
+![prompt_layout](svg/courses/ai/rag-applications/04_prompting_and_evaluation/prompt_layout.svg)
+
+---
 ## Quoting Sources
 
 - Number each chunk

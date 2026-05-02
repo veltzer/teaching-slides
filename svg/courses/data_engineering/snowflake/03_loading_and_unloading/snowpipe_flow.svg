@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="629.473684210526" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.257544839691" font-weight="bold" fill="var(--text)">Snowpipe Continuous Loading</text>
+
+  <rect x="40" y="166.086956521739" width="210.526315789474" height="126.086956521739" rx="11.520551728461" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="145.263157894737" y="216.521739130435" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.432882765538" font-weight="bold" fill="var(--info-text)">Source app</text>
+  <text x="145.263157894737" y="248.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--info-text)">writes files</text>
+  <text x="145.263157894737" y="277.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--info-text)">to object store</text>
+
+  <rect x="292.631578947368" y="166.086956521739" width="210.526315789474" height="126.086956521739" rx="11.520551728461" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="397.894736842105" y="216.521739130435" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.432882765538" font-weight="bold" fill="var(--warn-text)">Object store</text>
+  <text x="397.894736842105" y="248.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--warn-text)">S3 / Azure / GCS</text>
+  <text x="397.894736842105" y="277.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--warn-text)">event notification</text>
+
+  <rect x="545.263157894737" y="166.086956521739" width="210.526315789474" height="126.086956521739" rx="11.520551728461" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650.526315789474" y="216.521739130435" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.432882765538" font-weight="bold" fill="var(--warn-text)">Snowpipe queue</text>
+  <text x="650.526315789474" y="248.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--warn-text)">file arrival event</text>
+  <text x="650.526315789474" y="277.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--warn-text)">deduplication</text>
+
+  <rect x="797.894736842105" y="166.086956521739" width="210.526315789474" height="126.086956521739" rx="11.520551728461" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="903.157894736842" y="216.521739130435" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.432882765538" font-weight="bold" fill="var(--primary-text)">Serverless load</text>
+  <text x="903.157894736842" y="248.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--primary-text)">no warehouse needed</text>
+  <text x="903.157894736842" y="277.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--primary-text)">per-file billing</text>
+
+  <rect x="1050.526315789474" y="166.086956521739" width="189.473684210526" height="126.086956521739" rx="11.520551728461" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1145.263157894737" y="216.521739130435" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.432882765538" font-weight="bold" fill="var(--ok-text)">Target table</text>
+  <text x="1145.263157894737" y="248.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--ok-text)">rows queryable</text>
+  <text x="1145.263157894737" y="277.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--ok-text)">in seconds</text>
+
+  <path d="M 250.526315789474 229.130434782609 L 292.631578947368 229.130434782609" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 503.157894736842 229.130434782609 L 545.263157894737 229.130434782609" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 755.789473684211 229.130434782609 L 797.894736842105 229.130434782609" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1008.421052631579 229.130434782609 L 1050.526315789474 229.130434782609" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="393.04347826087" width="568.421052631579" height="226.95652173913" rx="11.520551728461" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="324.210526315789" y="430.869565217391" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.432882765538" font-weight="bold" fill="var(--text)">vs COPY INTO</text>
+  <text x="61.052631578947" y="468.695652173913" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--text-muted)">COPY: scheduled, batch</text>
+  <text x="61.052631578947" y="500.217391304348" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--text-muted)">needs warehouse running</text>
+  <text x="61.052631578947" y="531.739130434783" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--text-muted)">cheaper for big batches</text>
+  <text x="61.052631578947" y="575.869565217391" font-family="Arial, sans-serif" font-size="14.976717246999" font-weight="bold" fill="var(--ok-accent)">Snowpipe: continuous, serverless</text>
+  <text x="61.052631578947" y="607.391304347826" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--text-muted)">cheaper for trickle loads</text>
+
+  <rect x="650.526315789474" y="393.04347826087" width="568.421052631579" height="226.95652173913" rx="11.520551728461" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="934.736842105263" y="430.869565217391" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.432882765538" font-weight="bold" fill="var(--text)">Snowpipe Streaming</text>
+  <text x="671.578947368421" y="468.695652173913" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--text-muted)">API-based ingest</text>
+  <text x="671.578947368421" y="500.217391304348" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--text-muted)">no files involved</text>
+  <text x="671.578947368421" y="531.739130434783" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--text-muted)">sub-second latency</text>
+  <text x="671.578947368421" y="575.869565217391" font-family="Arial, sans-serif" font-size="14.976717246999" font-weight="bold" fill="var(--ok-accent)">For event streams</text>
+  <text x="671.578947368421" y="607.391304347826" font-family="Arial, sans-serif" font-size="14.976717246999" fill="var(--text-muted)">Kafka, Kinesis sources</text>
+</svg>

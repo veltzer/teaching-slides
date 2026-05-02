@@ -92,6 +92,11 @@ audience:
 - No implicit trust by IP
 
 ---
+## Request Path
+
+![zero_trust_request](svg/courses/networking/network-security/04_identity_and_access/zero_trust_request.svg)
+
+---
 ## Audit Logs
 
 - Every login, every access

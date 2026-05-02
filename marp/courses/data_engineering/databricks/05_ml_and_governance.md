@@ -75,6 +75,11 @@ audience:
 - Cross-workspace sharing
 
 ---
+## Three-Level Namespace
+
+![unity_catalog_levels](svg/courses/data_engineering/databricks/05_ml_and_governance/unity_catalog_levels.svg)
+
+---
 ## Lineage
 
 - Automatic capture

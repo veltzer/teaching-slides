@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.609199220546" font-weight="bold" fill="var(--text)">Catalyst Query Optimizer</text>
+
+  <rect x="40" y="129.230769230769" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="168.571428571429" y="168.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.490970983169" font-weight="bold" fill="var(--info-text)">SQL or DataFrame</text>
+  <text x="168.571428571429" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--info-text)">user code</text>
+
+  <rect x="40" y="263.076923076923" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="168.571428571429" y="302.115384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.490970983169" font-weight="bold" fill="var(--warn-text)">Logical plan</text>
+  <text x="168.571428571429" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--warn-text)">parsed, unresolved</text>
+
+  <rect x="40" y="396.923076923077" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="168.571428571429" y="435.961538461539" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.490970983169" font-weight="bold" fill="var(--warn-text)">Optimized plan</text>
+  <text x="168.571428571429" y="463.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--warn-text)">rules applied</text>
+
+  <rect x="40" y="530.769230769231" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="168.571428571429" y="569.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.490970983169" font-weight="bold" fill="var(--primary-text)">Physical plan</text>
+  <text x="168.571428571429" y="597.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--primary-text)">cheapest chosen</text>
+
+  <path d="M 168.571428571429 218.461538461538 L 168.571428571429 263.076923076923" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 168.571428571429 352.307692307692 L 168.571428571429 396.923076923077" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 168.571428571429 486.153846153846 L 168.571428571429 530.769230769231" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="382.857142857143" y="129.230769230769" width="857.142857142857" height="133.846153846154" rx="10.931856864481" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="811.428571428571" y="162.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.490970983169" font-weight="bold" fill="var(--text)">Optimization rules</text>
+  <text x="404.285714285714" y="196.153846153846" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--text-muted)">Predicate pushdown — filter at source, not after read</text>
+  <text x="404.285714285714" y="220.692307692308" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--text-muted)">Column pruning — read only needed columns</text>
+  <text x="404.285714285714" y="245.230769230769" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--text-muted)">Constant folding — compute static expressions once</text>
+
+  <rect x="382.857142857143" y="285.384615384615" width="857.142857142857" height="133.846153846154" rx="10.931856864481" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="811.428571428571" y="318.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.490970983169" font-weight="bold" fill="var(--text)">Physical choices</text>
+  <text x="404.285714285714" y="352.307692307692" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--text-muted)">Broadcast hash join (small table) vs sort-merge (big-vs-big)</text>
+  <text x="404.285714285714" y="376.846153846154" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--text-muted)">Cost-based: stats on row counts</text>
+  <text x="404.285714285714" y="401.384615384615" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--text-muted)">Adaptive query execution re-plans at runtime</text>
+
+  <rect x="382.857142857143" y="441.538461538462" width="857.142857142857" height="178.461538461538" rx="10.931856864481" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="811.428571428571" y="480.576923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.677342356065" font-weight="bold" fill="var(--ok-text)">Result</text>
+  <text x="811.428571428571" y="514.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.304599610273" fill="var(--ok-text)">DataFrame and SQL both run through Catalyst</text>
+  <text x="811.428571428571" y="541.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.304599610273" fill="var(--ok-text)">Same engine plans both — performance parity</text>
+  <text x="811.428571428571" y="575.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--ok-text)">Profile with EXPLAIN to see plan choices</text>
+  <text x="811.428571428571" y="603.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--ok-text)">UDFs in Python bypass Catalyst — slower</text>
+</svg>

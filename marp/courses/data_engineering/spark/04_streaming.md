@@ -75,6 +75,11 @@ audience:
 - Tune to source lateness
 
 ---
+## Watermark Visualized
+
+![watermark](svg/courses/data_engineering/spark/04_streaming/watermark.svg)
+
+---
 ## Joins
 
 - Stream to static

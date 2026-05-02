@@ -28,6 +28,11 @@ audience:
 - Realistic burst patterns
 
 ---
+## Workload Visualized
+
+![workload_model](svg/courses/testing/performance-testing/03_designing_tests/workload_model.svg)
+
+---
 ## Sources Of Truth
 
 - Production logs

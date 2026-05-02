@@ -52,6 +52,11 @@ audience:
 - Each suits a pattern
 
 ---
+## Localities Compared
+
+![table_localities](svg/courses/databases/cockroachdb/04_multi_region/table_localities.svg)
+
+---
 ## Regional By Row
 
 - Each row pinned to a region

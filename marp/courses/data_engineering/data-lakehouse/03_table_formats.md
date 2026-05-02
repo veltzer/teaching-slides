@@ -52,6 +52,11 @@ audience:
 - Reproducible analytics
 
 ---
+## Snapshots Over Time
+
+![snapshots_time_travel](svg/courses/data_engineering/data-lakehouse/03_table_formats/snapshots_time_travel.svg)
+
+---
 ## Schema Evolution
 
 - Add column

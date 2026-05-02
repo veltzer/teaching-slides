@@ -67,6 +67,11 @@ audience:
 - Flip reads when ready
 
 ---
+## Dual-Write Phases
+
+![dual_write_recon](svg/courses/architecting/legacy-modernization/04_data_migration/dual_write_recon.svg)
+
+---
 ## Read Replica Promotion
 
 - Replicate from old to new

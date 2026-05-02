@@ -107,6 +107,11 @@ audience:
 - Default retention is conservative
 
 ---
+## Operations Compared
+
+![merge_optimize_vacuum](svg/courses/data_engineering/databricks/03_delta_tables/merge_optimize_vacuum.svg)
+
+---
 ## Streaming Sources and Sinks
 
 - Read changes as a stream

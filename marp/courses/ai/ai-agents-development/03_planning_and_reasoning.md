@@ -83,6 +83,11 @@ audience:
 - Hard problems: tree of thoughts
 
 ---
+## Approaches Compared
+
+![planning_approaches](svg/courses/ai/ai-agents-development/03_planning_and_reasoning/planning_approaches.svg)
+
+---
 ## Stopping Conditions
 
 - Goal met by tool result

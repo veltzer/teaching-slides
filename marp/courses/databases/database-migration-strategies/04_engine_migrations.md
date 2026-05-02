@@ -53,6 +53,11 @@ audience:
 - Cutover when caught up
 
 ---
+## Cutover Flow
+
+![replication_cutover](svg/courses/databases/database-migration-strategies/04_engine_migrations/replication_cutover.svg)
+
+---
 ## Tools
 
 - Built-in logical replication

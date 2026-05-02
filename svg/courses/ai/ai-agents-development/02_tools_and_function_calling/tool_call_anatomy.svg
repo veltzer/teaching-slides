@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046200557" font-weight="bold" fill="var(--text)">Anatomy of a Tool Call</text>
+
+  <rect x="40" y="103.272727272727" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="164.137931034483" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--primary-text)">LLM</text>
+  <text x="164.137931034483" y="171.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">decides to call</text>
+  <text x="164.137931034483" y="196.072727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">emits structured</text>
+  <text x="164.137931034483" y="217.163636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">JSON arguments</text>
+
+  <rect x="371.034482758621" y="103.272727272727" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495.172413793103" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--warn-text)">Runtime</text>
+  <text x="495.172413793103" y="171.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">parses JSON</text>
+  <text x="495.172413793103" y="196.072727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">validates schema</text>
+  <text x="495.172413793103" y="217.163636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">checks ACL</text>
+
+  <rect x="702.068965517241" y="103.272727272727" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="826.206896551724" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--info-text)">Tool fn</text>
+  <text x="826.206896551724" y="171.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">executes</text>
+  <text x="826.206896551724" y="196.072727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">may call APIs</text>
+  <text x="826.206896551724" y="217.163636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">returns result</text>
+
+  <rect x="1033.103448275862" y="103.272727272727" width="206.896551724138" height="126.545454545455" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1136.551724137931" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--ok-text)">Result</text>
+  <text x="1136.551724137931" y="171.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">structured</text>
+  <text x="1136.551724137931" y="196.072727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">JSON or error</text>
+
+  <path d="M 288.275862068966 166.545454545455 L 371.034482758621 166.545454545455" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 619.310344827586 166.545454545455 L 702.068965517241 166.545454545455" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 950.344827586207 166.545454545455 L 1033.103448275862 166.545454545455" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M 1136.551724137931 229.818181818182 Q 1136.551724137931 377.454545454545 164.137931034483 377.454545454545 Q 164.137931034483 377.454545454545 164.137931034483 229.818181818182" fill="none" stroke="var(--ok-accent)" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow-ok)"/>
+  <text x="640" y="366.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-accent)">result fed back into model context</text>
+
+  <rect x="40" y="430.181818181818" width="1200" height="189.818181818182" rx="10.444659357342" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="461.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--text)">Tool definition (passed to model)</text>
+  <text x="81.379310344828" y="493.454545454545" font-family="Courier New, monospace" font-size="13.578057164544" fill="var(--text)">name: "get_weather"</text>
+  <text x="81.379310344828" y="516.654545454545" font-family="Courier New, monospace" font-size="13.578057164544" fill="var(--text)">description: "Returns current weather for a city"</text>
+  <text x="81.379310344828" y="539.854545454545" font-family="Courier New, monospace" font-size="13.578057164544" fill="var(--text)">parameters: { type: object, properties: { city: { type: string } } }</text>
+  <text x="81.379310344828" y="572.545454545455" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Description is a prompt — vague descriptions cause wrong tool selection</text>
+  <text x="81.379310344828" y="596.8" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Validate args server-side too — never trust the model</text>
+</svg>

@@ -68,6 +68,11 @@ audience:
 - Simplifies operations
 
 ---
+## Architecture Overview
+
+![ring_overview](svg/courses/databases/cassandra/01_introduction/ring_overview.svg)
+
+---
 ## Replication Factor
 
 - Number of copies per row

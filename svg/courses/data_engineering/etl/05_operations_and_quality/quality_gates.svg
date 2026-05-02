@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="629.473684210526" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.235882783068" font-weight="bold" fill="var(--text)">Data Quality Gates</text>
+
+  <rect x="40" y="122.857142857143" width="189.473684210526" height="82.857142857143" rx="8.353109366591" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="134.736842105263" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.662080062358" font-weight="bold" fill="var(--info-text)">Source data</text>
+  <text x="134.736842105263" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--info-text)">arrives</text>
+
+  <rect x="292.631578947368" y="122.857142857143" width="189.473684210526" height="82.857142857143" rx="8.353109366591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="387.368421052632" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.662080062358" font-weight="bold" fill="var(--warn-text)">Gate 1: schema</text>
+  <text x="387.368421052632" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--warn-text)">columns &amp; types</text>
+
+  <rect x="545.263157894737" y="122.857142857143" width="189.473684210526" height="82.857142857143" rx="8.353109366591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.662080062358" font-weight="bold" fill="var(--warn-text)">Gate 2: row count</text>
+  <text x="640" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--warn-text)">vs expected range</text>
+
+  <rect x="797.894736842105" y="122.857142857143" width="189.473684210526" height="82.857142857143" rx="8.353109366591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="892.631578947368" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.662080062358" font-weight="bold" fill="var(--warn-text)">Gate 3: unique</text>
+  <text x="892.631578947368" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--warn-text)">primary keys</text>
+
+  <rect x="1050.526315789474" y="122.857142857143" width="189.473684210526" height="82.857142857143" rx="8.353109366591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1145.263157894737" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.662080062358" font-weight="bold" fill="var(--warn-text)">Gate 4: ranges</text>
+  <text x="1145.263157894737" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--warn-text)">value bounds</text>
+
+  <path d="M 229.473684210526 164.285714285714 L 292.631578947368 164.285714285714" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 482.105263157895 164.285714285714 L 545.263157894737 164.285714285714" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 734.736842105263 164.285714285714 L 797.894736842105 164.285714285714" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 987.368421052632 164.285714285714 L 1050.526315789474 164.285714285714" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="267.857142857143" width="568.421052631579" height="82.857142857143" rx="8.353109366591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="324.210526315789" y="298.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.706218733181" font-weight="bold" fill="var(--ok-text)">All pass → publish to consumers</text>
+  <text x="324.210526315789" y="327.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--ok-text)">silver layer marked ready</text>
+
+  <rect x="650.526315789474" y="267.857142857143" width="568.421052631579" height="82.857142857143" rx="8.353109366591" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="934.736842105263" y="298.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.706218733181" font-weight="bold" fill="var(--danger-text)">Any fail → block, alert, quarantine</text>
+  <text x="934.736842105263" y="327.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--danger-text)">stop downstream, page on-call</text>
+
+  <rect x="40" y="392.142857142857" width="1178.947368421052" height="227.857142857143" rx="10.441386708238" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="629.473684210526" y="423.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.706218733181" font-weight="bold" fill="var(--text)">Test severities</text>
+
+  <text x="61.052631578947" y="459.464285714286" font-family="Arial, sans-serif" font-size="14.617941391534" font-weight="bold" fill="var(--danger-accent)">Critical (block)</text>
+  <text x="61.052631578947" y="485.357142857143" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--text-muted)">primary key violation, schema drift, total row count zero</text>
+
+  <text x="61.052631578947" y="521.607142857143" font-family="Arial, sans-serif" font-size="14.617941391534" font-weight="bold" fill="var(--warn-accent)">Warning (alert, continue)</text>
+  <text x="61.052631578947" y="547.5" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--text-muted)">row count outside soft range, null rate above threshold</text>
+
+  <text x="61.052631578947" y="583.75" font-family="Arial, sans-serif" font-size="14.617941391534" font-weight="bold" fill="var(--info-accent)">Info (log only)</text>
+  <text x="61.052631578947" y="609.642857142857" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--text-muted)">distribution comparison, statistical drift</text>
+</svg>

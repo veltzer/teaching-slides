@@ -83,6 +83,11 @@ audience:
 - Per-file billing
 
 ---
+## Snowpipe Flow
+
+![snowpipe_flow](svg/courses/data_engineering/snowflake/03_loading_and_unloading/snowpipe_flow.svg)
+
+---
 ## Snowpipe Streaming
 
 - API-based ingest

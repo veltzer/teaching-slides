@@ -28,6 +28,11 @@ audience:
 - Likely to be queried directly
 
 ---
+## Node vs Property
+
+![node_vs_property](svg/courses/databases/neo4j/03_modeling/node_vs_property.svg)
+
+---
 ## When To Make A Property
 
 - Adjective of a node

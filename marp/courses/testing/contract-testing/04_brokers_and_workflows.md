@@ -68,6 +68,11 @@ audience:
 - Wired into deploy pipeline
 
 ---
+## Compatibility Gate
+
+![can_i_deploy](svg/courses/testing/contract-testing/04_brokers_and_workflows/can_i_deploy.svg)
+
+---
 ## Webhooks
 
 - Notify provider on new contract

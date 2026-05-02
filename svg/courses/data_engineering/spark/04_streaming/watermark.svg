@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Watermarks: Late Data Window</text>
+
+  <line x1="40" y1="309.285714285714" x2="1240" y2="309.285714285714" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="40" y="340.357142857143" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">event time →</text>
+
+  <line x1="168.571428571429" y1="164.285714285714" x2="168.571428571429" y2="309.285714285714" stroke="var(--ok-accent)" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="168.571428571429" y="153.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">window 09:00</text>
+
+  <line x1="490" y1="164.285714285714" x2="490" y2="309.285714285714" stroke="var(--ok-accent)" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="490" y="153.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">window 09:05</text>
+
+  <line x1="811.428571428571" y1="164.285714285714" x2="811.428571428571" y2="309.285714285714" stroke="var(--ok-accent)" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="811.428571428571" y="153.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">window 09:10</text>
+
+  <line x1="1132.857142857143" y1="164.285714285714" x2="1132.857142857143" y2="309.285714285714" stroke="var(--ok-accent)" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="1132.857142857143" y="153.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">window 09:15</text>
+
+  <line x1="918.571428571429" y1="164.285714285714" x2="918.571428571429" y2="309.285714285714" stroke="var(--danger-accent)" stroke-width="3"/>
+  <text x="918.571428571429" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--danger-accent)">watermark = max(event_time) - 5min</text>
+
+  <rect x="865" y="226.428571428571" width="107.142857142857" height="41.428571428571" rx="4.213680343929" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <text x="918.571428571429" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" font-weight="bold" fill="var(--warn-text)">5 min lag</text>
+
+  <rect x="168.571428571429" y="361.071428571429" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="190" y="386.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">e1</text>
+  <rect x="232.857142857143" y="361.071428571429" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="254.285714285714" y="386.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">e2</text>
+  <rect x="500.714285714286" y="361.071428571429" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="522.142857142857" y="386.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">e3</text>
+
+  <rect x="865" y="361.071428571429" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <text x="886.428571428571" y="386.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--warn-text)">e6</text>
+  <text x="886.428571428571" y="418.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--warn-accent)">arrived now</text>
+
+  <rect x="329.285714285714" y="361.071428571429" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="350.714285714286" y="386.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--ok-text)">e4</text>
+  <text x="350.714285714286" y="418.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.534200859823" fill="var(--ok-accent)">late</text>
+
+  <rect x="597.142857142857" y="361.071428571429" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="618.571428571429" y="386.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--ok-text)">e5</text>
+  <text x="618.571428571429" y="418.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.534200859823" fill="var(--ok-accent)">late</text>
+
+  <rect x="61.428571428571" y="361.071428571429" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-danger)" filter="url(#shadow)"/>
+  <text x="82.857142857143" y="386.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--danger-text)">e0</text>
+  <text x="82.857142857143" y="418.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.534200859823" fill="var(--danger-accent)">DROPPED</text>
+
+  <rect x="40" y="464.642857142857" width="1200" height="155.357142857143" rx="10.534200859823" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="495.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">Watermark = how late we accept events</text>
+  <text x="640" y="524.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--text-muted)">Within window: aggregated normally</text>
+  <text x="640" y="549.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--text-muted)">Late but within watermark: window updated</text>
+  <text x="640" y="576.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--text-muted)">Beyond watermark: dropped, window finalized</text>
+  <text x="640" y="604.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">Tune to source lateness — measure first</text>
+</svg>

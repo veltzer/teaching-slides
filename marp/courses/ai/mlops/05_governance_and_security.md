@@ -61,6 +61,11 @@ audience:
 - Monitor in production
 
 ---
+## Slice Metrics
+
+![bias_slices](svg/courses/ai/mlops/05_governance_and_security/bias_slices.svg)
+
+---
 ## Threats: Data Poisoning
 
 - Attacker plants bad samples

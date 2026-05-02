@@ -67,6 +67,11 @@ audience:
 - Watch the pruning metric
 
 ---
+## Pruning Visualized
+
+![micro_partitions](svg/courses/data_engineering/snowflake/02_tables_and_storage/micro_partitions.svg)
+
+---
 ## Clustering
 
 - Co-locate related rows

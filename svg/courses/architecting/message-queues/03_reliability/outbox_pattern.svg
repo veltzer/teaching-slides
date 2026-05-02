@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="619.310344827586" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.514591494905" font-weight="bold" fill="var(--text)">Outbox Pattern: Solving Dual-Write</text>
+
+  <text x="288.275862068966" y="99.074074074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.081851067789" font-weight="bold" fill="var(--danger-accent)">Problem: Dual write</text>
+  <text x="950.344827586207" y="99.074074074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.081851067789" font-weight="bold" fill="var(--ok-accent)">Solution: Outbox</text>
+
+  <line x1="619.310344827586" y1="82.962962962963" x2="619.310344827586" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <rect x="40" y="147.407407407407" width="206.896551724138" height="85.925925925926" rx="8.432740427116" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="143.448275862069" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" font-weight="bold" fill="var(--primary-text)">Application</text>
+
+  <rect x="40" y="276.296296296296" width="248.275862068966" height="64.444444444444" rx="8.432740427116" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="164.137931034483" y="313.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--info-text)">Database write</text>
+
+  <rect x="350.344827586207" y="276.296296296296" width="206.896551724138" height="64.444444444444" rx="8.432740427116" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="453.793103448276" y="313.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--warn-text)">Broker publish</text>
+
+  <path d="M 143.448275862069 233.333333333333 L 164.137931034483 276.296296296296" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 205.51724137931 233.333333333333 L 453.793103448276 276.296296296296" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="288.275862068966" y="405.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--danger-accent)">2 systems, 2 writes</text>
+  <text x="40" y="437.407407407407" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--danger-accent)">DB succeeds, broker fails</text>
+  <text x="40" y="464.259259259259" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--danger-accent)">→ row exists, no event</text>
+  <text x="40" y="496.481481481482" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--danger-accent)">Broker succeeds, DB fails</text>
+  <text x="40" y="523.333333333333" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--danger-accent)">→ event for ghost row</text>
+  <text x="40" y="555.555555555556" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--danger-accent)">No atomicity across</text>
+
+  <rect x="681.379310344828" y="147.407407407407" width="206.896551724138" height="85.925925925926" rx="8.432740427116" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="784.827586206897" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" font-weight="bold" fill="var(--primary-text)">Application</text>
+
+  <rect x="681.379310344828" y="276.296296296296" width="393.103448275862" height="85.925925925926" rx="8.432740427116" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="877.931034482759" y="303.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--info-text)">Single transaction</text>
+  <text x="877.931034482759" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--info-text)">data row + outbox row</text>
+
+  <rect x="1095.172413793103" y="276.296296296296" width="144.827586206897" height="85.925925925926" rx="8.432740427116" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1167.586206896552" y="313.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--warn-text)">Relay</text>
+
+  <rect x="1095.172413793103" y="405.185185185185" width="144.827586206897" height="64.444444444444" rx="8.432740427116" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1167.586206896552" y="442.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--warn-text)">Broker</text>
+
+  <path d="M 784.827586206897 233.333333333333 L 784.827586206897 276.296296296296" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1074.48275862069 319.259259259259 L 1095.172413793103 319.259259259259" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1167.586206896552 362.222222222222 L 1167.586206896552 405.185185185185" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="950.344827586207" y="512.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--ok-accent)">One transaction, async publish</text>
+  <text x="681.379310344828" y="544.814814814815" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--ok-accent)">DB and outbox commit atomically</text>
+  <text x="681.379310344828" y="571.666666666667" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--ok-accent)">Relay reads, publishes, marks done</text>
+  <text x="681.379310344828" y="598.518518518519" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--ok-accent)">Crash anywhere → resume safely</text>
+</svg>

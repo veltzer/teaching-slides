@@ -52,6 +52,11 @@ audience:
 - Required for debugging
 
 ---
+## Lineage and Quality
+
+![lineage_quality](svg/courses/data_engineering/data-lakehouse/05_governance_and_operations/lineage_quality.svg)
+
+---
 ## Cataloging
 
 - Inventory of tables

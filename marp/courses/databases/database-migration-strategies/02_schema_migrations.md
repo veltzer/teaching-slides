@@ -29,6 +29,11 @@ audience:
 - Some operations still lock heavily
 
 ---
+## Online Phases
+
+![online_phases](svg/courses/databases/database-migration-strategies/02_schema_migrations/online_phases.svg)
+
+---
 ## Locking Levels
 
 - Exclusive: blocks reads and writes

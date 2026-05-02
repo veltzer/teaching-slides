@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Partitioning by Key</text>
+
+  <rect x="40" y="102.142857142857" width="214.285714285714" height="82.857142857143" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147.142857142857" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--primary-text)">Producer</text>
+  <text x="147.142857142857" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--primary-text)">key = user_id</text>
+
+  <rect x="361.428571428571" y="81.428571428571" width="750" height="41.428571428571" rx="6.320520515894" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="736.428571428571" y="107.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">hash(key) % N → partition</text>
+
+  <path d="M 254.285714285714 143.571428571429 L 361.428571428571 102.142857142857" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="361.428571428571" y="164.285714285714" width="235.714285714286" height="227.857142857143" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.285714285714" y="200.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--info-text)">Partition 0</text>
+  <text x="479.285714285714" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">user_42 m1</text>
+  <text x="479.285714285714" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">user_42 m2</text>
+  <text x="479.285714285714" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">user_88 m1</text>
+  <text x="479.285714285714" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">user_42 m3</text>
+  <text x="479.285714285714" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" font-weight="bold" fill="var(--info-text)">order preserved</text>
+  <text x="479.285714285714" y="350.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--info-text)">per partition</text>
+
+  <rect x="618.571428571429" y="164.285714285714" width="235.714285714286" height="227.857142857143" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="736.428571428571" y="200.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--info-text)">Partition 1</text>
+  <text x="736.428571428571" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">user_07 m1</text>
+  <text x="736.428571428571" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">user_15 m1</text>
+  <text x="736.428571428571" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">user_07 m2</text>
+
+  <rect x="875.714285714286" y="164.285714285714" width="235.714285714286" height="227.857142857143" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="993.571428571429" y="200.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--info-text)">Partition 2</text>
+  <text x="993.571428571429" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">user_99 m1</text>
+  <text x="993.571428571429" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">user_31 m1</text>
+  <text x="993.571428571429" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">user_99 m2</text>
+
+  <rect x="361.428571428571" y="423.214285714286" width="235.714285714286" height="82.857142857143" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.285714285714" y="459.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.801301289735" font-weight="bold" fill="var(--ok-text)">Worker 0</text>
+
+  <rect x="618.571428571429" y="423.214285714286" width="235.714285714286" height="82.857142857143" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="736.428571428571" y="459.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.801301289735" font-weight="bold" fill="var(--ok-text)">Worker 1</text>
+
+  <rect x="875.714285714286" y="423.214285714286" width="235.714285714286" height="82.857142857143" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="993.571428571429" y="459.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.801301289735" font-weight="bold" fill="var(--ok-text)">Worker 2</text>
+
+  <path d="M 479.285714285714 392.142857142857 L 479.285714285714 423.214285714286" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 736.428571428571 392.142857142857 L 736.428571428571 423.214285714286" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 993.571428571429 392.142857142857 L 993.571428571429 423.214285714286" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="537.142857142857" width="1200" height="82.857142857143" rx="8.427360687859" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="568.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--text)">Same key → same partition → ordered processing per user</text>
+  <text x="640" y="594.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Hot keys break the model — pick high-cardinality, even-distribution keys</text>
+</svg>

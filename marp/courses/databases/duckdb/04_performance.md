@@ -28,6 +28,11 @@ audience:
 - Source of speed
 
 ---
+## Pipeline Visualized
+
+![vectorized_pipeline](svg/courses/databases/duckdb/04_performance/vectorized_pipeline.svg)
+
+---
 ## Parallelism
 
 - Multi-threaded by default

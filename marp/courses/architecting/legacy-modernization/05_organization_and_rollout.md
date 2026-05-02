@@ -35,6 +35,11 @@ audience:
 - Dedicated teams help
 
 ---
+## Two Teams Visualized
+
+![two_speed_teams](svg/courses/architecting/legacy-modernization/05_organization_and_rollout/two_speed_teams.svg)
+
+---
 ## Rotation
 
 - Avoid permanent old-system jail

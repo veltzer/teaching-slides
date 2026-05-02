@@ -67,6 +67,11 @@ audience:
 - Watch for retries on errors
 
 ---
+## Trigger Patterns
+
+![lambda_triggers](svg/courses/databases/dynamodb/05_global_and_streams/lambda_triggers.svg)
+
+---
 ## Use Cases
 
 - Replicate to search index

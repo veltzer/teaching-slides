@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="619.310344827586" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046200557" font-weight="bold" fill="var(--text)">NLP Serving Request Path</text>
+
+  <rect x="40" y="103.272727272727" width="165.51724137931" height="84.363636363636" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="122.758620689655" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--primary-text)">Client</text>
+  <text x="122.758620689655" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">raw text</text>
+
+  <rect x="246.896551724138" y="103.272727272727" width="165.51724137931" height="84.363636363636" rx="10.444659357342" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--info-text)">Pre-process</text>
+  <text x="329.655172413793" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">strip PII, validate</text>
+
+  <rect x="453.793103448276" y="103.272727272727" width="165.51724137931" height="84.363636363636" rx="10.444659357342" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="536.551724137931" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--info-text)">Tokenize</text>
+  <text x="536.551724137931" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">pinned to model</text>
+
+  <rect x="660.689655172414" y="103.272727272727" width="165.51724137931" height="84.363636363636" rx="10.444659357342" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="743.448275862069" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--warn-text)">Cache lookup</text>
+  <text x="743.448275862069" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">hash → result?</text>
+
+  <rect x="867.586206896552" y="103.272727272727" width="165.51724137931" height="84.363636363636" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--primary-text)">Inference</text>
+  <text x="950.344827586207" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">batched on GPU</text>
+
+  <rect x="1074.48275862069" y="103.272727272727" width="165.51724137931" height="84.363636363636" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1157.241379310345" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--ok-text)">Post-process</text>
+  <text x="1157.241379310345" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">format, redact</text>
+
+  <path d="M 205.51724137931 145.454545454545 L 246.896551724138 145.454545454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 412.413793103448 145.454545454545 L 453.793103448276 145.454545454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 619.310344827586 145.454545454545 L 660.689655172414 145.454545454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 826.206896551724 145.454545454545 L 867.586206896552 145.454545454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1033.103448275862 145.454545454545 L 1074.48275862069 145.454545454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M 743.448275862069 187.636363636364 Q 743.448275862069 272 1157.241379310345 187.636363636364" fill="none" stroke="var(--ok-accent)" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow-ok)"/>
+  <text x="940" y="256.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-accent)">cache hit shortcut</text>
+
+  <rect x="40" y="335.272727272727" width="558.620689655172" height="284.727272727273" rx="10.444659357342" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="319.310344827586" y="366.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--text)">Latency budget (typical)</text>
+
+  <rect x="60.689655172414" y="393.272727272727" width="41.379310344828" height="23.2" rx="3.133397807203" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="122.758620689655" y="411.2" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">5ms — pre-process</text>
+
+  <rect x="60.689655172414" y="424.909090909091" width="62.068965517241" height="23.2" rx="3.133397807203" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="143.448275862069" y="442.836363636364" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">8ms — tokenize</text>
+
+  <rect x="60.689655172414" y="456.545454545455" width="20.689655172414" height="23.2" rx="3.133397807203" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <text x="102.068965517241" y="474.472727272727" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">2ms — cache check</text>
+
+  <rect x="60.689655172414" y="488.181818181818" width="393.103448275862" height="23.2" rx="3.133397807203" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="469.310344827586" y="506.109090909091" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">~50ms — inference</text>
+
+  <rect x="60.689655172414" y="519.818181818182" width="41.379310344828" height="23.2" rx="3.133397807203" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="122.758620689655" y="537.745454545455" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">5ms — post-process</text>
+
+  <text x="60.689655172414" y="572.545454545455" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--text)">Total: ~70ms p50 / ~150ms p99</text>
+  <text x="60.689655172414" y="596.8" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Inference dominates — quantize or distill if budget tight</text>
+
+  <rect x="640" y="335.272727272727" width="558.620689655172" height="284.727272727273" rx="10.444659357342" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="919.310344827586" y="366.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--text)">Cost levers</text>
+  <text x="660.689655172414" y="400" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">Distill or quantize</text>
+  <text x="660.689655172414" y="430" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">Dynamic batching</text>
+  <text x="660.689655172414" y="460" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">Cache repeated queries</text>
+  <text x="660.689655172414" y="490" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">Stream output</text>
+
+  <text x="919.310344827586" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--text)">Production gotchas</text>
+  <text x="660.689655172414" y="546.181818181818" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-accent)">Tokenizer mismatch: silent bad results</text>
+  <text x="660.689655172414" y="570.436363636364" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-accent)">PII in logs: compliance violation</text>
+  <text x="660.689655172414" y="594.690909090909" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-accent)">Mixed model versions across replicas</text>
+</svg>

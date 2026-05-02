@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Merge Tree Compaction</text>
+
+  <text x="640" y="86.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" fill="var(--text-muted)">Inserts create parts; background merges combine them</text>
+
+  <text x="40" y="138.392857142857" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--text)">Time 0</text>
+  <rect x="136.428571428571" y="117.678571428571" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-info)" stroke="var(--info-border)" filter="url(#shadow)"/>
+  <text x="157.857142857143" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">P1</text>
+  <rect x="190" y="117.678571428571" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-info)" stroke="var(--info-border)" filter="url(#shadow)"/>
+  <text x="211.428571428571" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">P2</text>
+  <rect x="243.571428571429" y="117.678571428571" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-info)" stroke="var(--info-border)" filter="url(#shadow)"/>
+  <text x="265" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">P3</text>
+  <rect x="297.142857142857" y="117.678571428571" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-info)" stroke="var(--info-border)" filter="url(#shadow)"/>
+  <text x="318.571428571429" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">P4</text>
+  <rect x="350.714285714286" y="117.678571428571" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-info)" stroke="var(--info-border)" filter="url(#shadow)"/>
+  <text x="372.142857142857" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">P5</text>
+  <rect x="404.285714285714" y="117.678571428571" width="42.857142857143" height="41.428571428571" rx="4.213680343929" fill="url(#grad-info)" stroke="var(--info-border)" filter="url(#shadow)"/>
+  <text x="425.714285714286" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--info-text)">P6</text>
+  <text x="490" y="143.571428571429" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">6 parts after inserts</text>
+
+  <text x="40" y="231.607142857143" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--text)">Time 1</text>
+  <rect x="136.428571428571" y="210.892857142857" width="96.428571428571" height="41.428571428571" rx="4.213680343929" fill="url(#grad-warn)" stroke="var(--warn-border)" filter="url(#shadow)"/>
+  <text x="184.642857142857" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--warn-text)">P1+P2</text>
+  <rect x="243.571428571429" y="210.892857142857" width="96.428571428571" height="41.428571428571" rx="4.213680343929" fill="url(#grad-warn)" stroke="var(--warn-border)" filter="url(#shadow)"/>
+  <text x="291.785714285714" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--warn-text)">P3+P4</text>
+  <rect x="350.714285714286" y="210.892857142857" width="96.428571428571" height="41.428571428571" rx="4.213680343929" fill="url(#grad-warn)" stroke="var(--warn-border)" filter="url(#shadow)"/>
+  <text x="398.928571428571" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--warn-text)">P5+P6</text>
+  <text x="490" y="236.785714285714" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">3 merged parts</text>
+
+  <text x="40" y="324.821428571429" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--text)">Time 2</text>
+  <rect x="136.428571428571" y="304.107142857143" width="203.571428571429" height="41.428571428571" rx="4.213680343929" fill="url(#grad-primary)" stroke="var(--primary-border)" filter="url(#shadow)"/>
+  <text x="238.214285714286" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--primary-text)">P1-P4</text>
+  <rect x="350.714285714286" y="304.107142857143" width="96.428571428571" height="41.428571428571" rx="4.213680343929" fill="url(#grad-warn)" stroke="var(--warn-border)" filter="url(#shadow)"/>
+  <text x="398.928571428571" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--warn-text)">P5+P6</text>
+  <text x="490" y="330" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">size-tiered merging</text>
+
+  <text x="40" y="418.035714285714" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--text)">Time 3</text>
+  <rect x="136.428571428571" y="397.321428571429" width="310.714285714286" height="41.428571428571" rx="4.213680343929" fill="url(#grad-ok)" stroke="var(--ok-border)" filter="url(#shadow)"/>
+  <text x="291.785714285714" y="423.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--ok-text)">P1-P6 fully merged</text>
+  <text x="490" y="423.214285714286" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">final compacted part</text>
+
+  <rect x="40" y="485.357142857143" width="578.571428571429" height="134.642857142857" rx="10.534200859823" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="329.285714285714" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">Why parts</text>
+  <text x="61.428571428571" y="542.321428571429" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Each insert is one or more parts</text>
+  <text x="61.428571428571" y="566.142857142857" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Background thread merges</text>
+  <text x="61.428571428571" y="589.964285714286" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Reads merge across parts</text>
+
+  <rect x="661.428571428571" y="485.357142857143" width="578.571428571429" height="134.642857142857" rx="10.534200859823" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.714285714286" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--danger-text)">Anti-pattern</text>
+  <text x="682.857142857143" y="545.428571428572" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--danger-text)">Many tiny inserts → too many parts</text>
+  <text x="682.857142857143" y="570.285714285714" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--danger-text)">Compaction cannot keep up</text>
+  <text x="682.857142857143" y="594.107142857143" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--danger-text)">Always batch inserts</text>
+</svg>

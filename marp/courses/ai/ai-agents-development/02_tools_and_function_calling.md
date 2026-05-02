@@ -59,6 +59,11 @@ audience:
 - Result serialized back
 
 ---
+## Tool Call Visualized
+
+![tool_call_anatomy](svg/courses/ai/ai-agents-development/02_tools_and_function_calling/tool_call_anatomy.svg)
+
+---
 ## Choosing What to Expose
 
 - One tool per coherent action

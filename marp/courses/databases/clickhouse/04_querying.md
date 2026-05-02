@@ -84,6 +84,11 @@ audience:
 - Define per filter pattern
 
 ---
+## Pruning Visualized
+
+![skip_indexes](svg/courses/databases/clickhouse/04_querying/skip_indexes.svg)
+
+---
 ## Settings
 
 - Per-query overrides

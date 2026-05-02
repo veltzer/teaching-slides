@@ -36,6 +36,11 @@ audience:
 - Returns canned response
 
 ---
+## Mock Provider Visualized
+
+![mock_provider](svg/courses/testing/contract-testing/02_consumer_tests/mock_provider.svg)
+
+---
 ## Pre-Conditions
 
 - Set up provider state

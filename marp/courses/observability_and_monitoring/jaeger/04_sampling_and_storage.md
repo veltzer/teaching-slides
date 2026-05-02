@@ -60,6 +60,11 @@ audience:
 - More expensive collector
 
 ---
+## Head vs Tail
+
+![tail_sampling](svg/courses/observability_and_monitoring/jaeger/04_sampling_and_storage/tail_sampling.svg)
+
+---
 ## Force Sampling
 
 - App-level decision to keep

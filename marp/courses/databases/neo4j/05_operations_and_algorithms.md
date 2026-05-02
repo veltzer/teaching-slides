@@ -28,6 +28,11 @@ audience:
 - Survives core minority loss
 
 ---
+## Cluster Topology
+
+![causal_cluster](svg/courses/databases/neo4j/05_operations_and_algorithms/causal_cluster.svg)
+
+---
 ## Topology
 
 - Three or five core servers

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046200557" font-weight="bold" fill="var(--text)">Delta Operations: MERGE, OPTIMIZE, VACUUM</text>
+
+  <rect x="40" y="103.272727272727" width="393.103448275862" height="232" rx="10.444659357342" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.551724137931" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--info-text)">MERGE</text>
+  <text x="236.551724137931" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">upsert pattern</text>
+  <text x="60.689655172414" y="203.454545454545" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">MATCH on key:</text>
+  <text x="81.379310344828" y="226.654545454545" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">UPDATE existing</text>
+  <text x="60.689655172414" y="256.181818181818" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">NOT MATCHED:</text>
+  <text x="81.379310344828" y="279.381818181818" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">INSERT new</text>
+  <text x="60.689655172414" y="314.181818181818" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--info-text)">CDC sync, deduplication</text>
+
+  <rect x="443.448275862069" y="103.272727272727" width="393.103448275862" height="232" rx="10.444659357342" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--warn-text)">OPTIMIZE</text>
+  <text x="640" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">compaction</text>
+  <text x="464.137931034483" y="203.454545454545" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">Many small files →</text>
+  <text x="484.827586206897" y="226.654545454545" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">Few large files</text>
+  <text x="464.137931034483" y="256.181818181818" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">Z-ORDER:</text>
+  <text x="484.827586206897" y="279.381818181818" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">co-locate filter columns</text>
+  <text x="464.137931034483" y="314.181818181818" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--warn-text)">After heavy writes</text>
+
+  <rect x="846.896551724138" y="103.272727272727" width="393.103448275862" height="232" rx="10.444659357342" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1043.448275862069" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--danger-text)">VACUUM</text>
+  <text x="1043.448275862069" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-text)">retention cleanup</text>
+  <text x="867.586206896552" y="203.454545454545" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-text)">Delete files past</text>
+  <text x="888.275862068966" y="226.654545454545" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-text)">retention window</text>
+  <text x="867.586206896552" y="256.181818181818" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-text)">Frees storage</text>
+  <text x="867.586206896552" y="279.381818181818" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-text)">Loses time travel</text>
+  <text x="867.586206896552" y="314.181818181818" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--danger-text)">Default 7 days</text>
+
+  <rect x="40" y="377.454545454545" width="1200" height="105.454545454545" rx="10.444659357342" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="409.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--text)">Maintenance schedule</text>
+  <text x="640" y="438.618181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--text-muted)">MERGE on every batch — primary write path</text>
+  <text x="640" y="463.927272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--text-muted)">OPTIMIZE nightly — keep file count under control</text>
+
+  <rect x="40" y="514.545454545455" width="1200" height="105.454545454545" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="546.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--primary-text)">Watch out for</text>
+  <text x="640" y="575.709090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--primary-text)">VACUUM with too-short retention breaks readers mid-query</text>
+  <text x="640" y="601.018181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--primary-text)">Z-ORDER on every column dilutes the benefit</text>
+</svg>

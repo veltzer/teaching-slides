@@ -37,6 +37,11 @@ audience:
 - Distribution depends on key choice
 
 ---
+## Partitioning Visualized
+
+![partitions_keys](svg/courses/architecting/message-queues/04_routing_and_partitioning/partitions_keys.svg)
+
+---
 ## Choosing a Key
 
 - High cardinality

@@ -27,6 +27,11 @@ audience:
 - Least privilege by default
 
 ---
+## Role Inheritance
+
+![role_hierarchy](svg/courses/data_engineering/snowflake/05_security_and_sharing/role_hierarchy.svg)
+
+---
 ## Custom Roles
 
 - Per-team or per-project

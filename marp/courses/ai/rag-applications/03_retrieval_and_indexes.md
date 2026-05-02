@@ -76,6 +76,11 @@ audience:
 - Strong default in production
 
 ---
+## Hybrid Visualized
+
+![hybrid_search](svg/courses/ai/rag-applications/03_retrieval_and_indexes/hybrid_search.svg)
+
+---
 ## Reranking
 
 - Take top N from retrieval

@@ -37,6 +37,11 @@ audience:
 - Snapshot
 
 ---
+## Backup Cadence
+
+![backup_types](svg/courses/architecting/disaster-recovery/03_backups_and_restore/backup_types.svg)
+
+---
 ## Frequency
 
 - Driven by RPO

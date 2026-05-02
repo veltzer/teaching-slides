@@ -59,6 +59,11 @@ audience:
 - Hard caps on actions
 
 ---
+## Defense in Depth
+
+![guardrails_layers](svg/courses/ai/ai-agents-development/05_production_concerns/guardrails_layers.svg)
+
+---
 ## Prompt Injection
 
 - User input may try to override system

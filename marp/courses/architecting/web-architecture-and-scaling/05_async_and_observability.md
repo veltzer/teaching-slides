@@ -76,6 +76,11 @@ audience:
 - Restores under load gracefully
 
 ---
+## State Machine
+
+![circuit_breaker](svg/courses/architecting/web-architecture-and-scaling/05_async_and_observability/circuit_breaker.svg)
+
+---
 ## Observability Layers
 
 - Metrics

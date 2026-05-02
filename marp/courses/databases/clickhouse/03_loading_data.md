@@ -36,6 +36,11 @@ audience:
 - Or aggregate at the edge
 
 ---
+## Pattern Compared
+
+![batch_insert_pattern](svg/courses/databases/clickhouse/03_loading_data/batch_insert_pattern.svg)
+
+---
 ## Async Inserts
 
 - Server-side batching

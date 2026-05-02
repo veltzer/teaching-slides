@@ -75,6 +75,11 @@ audience:
 - Latency in seconds
 
 ---
+## CDC Flow
+
+![cdc_flow](svg/courses/data_engineering/etl/02_extraction_and_loading/cdc_flow.svg)
+
+---
 ## Loading Modes
 
 - Append

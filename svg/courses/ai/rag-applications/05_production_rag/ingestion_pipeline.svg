@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046200557" font-weight="bold" fill="var(--text)">Production RAG Ingestion Pipeline</text>
+
+  <rect x="40" y="103.272727272727" width="186.206896551724" height="84.363636363636" rx="8.355727485873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133.103448275862" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.666989036013" font-weight="bold" fill="var(--info-text)">Source connectors</text>
+  <text x="133.103448275862" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">Drive, Notion, S3</text>
+
+  <rect x="267.586206896552" y="103.272727272727" width="186.206896551724" height="84.363636363636" rx="8.355727485873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360.689655172414" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.666989036013" font-weight="bold" fill="var(--info-text)">Detect changes</text>
+  <text x="360.689655172414" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">new + modified</text>
+
+  <rect x="495.172413793103" y="103.272727272727" width="186.206896551724" height="84.363636363636" rx="8.355727485873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="588.275862068966" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.666989036013" font-weight="bold" fill="var(--warn-text)">Parse + clean</text>
+  <text x="588.275862068966" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">strip boilerplate</text>
+
+  <rect x="722.758620689655" y="103.272727272727" width="186.206896551724" height="84.363636363636" rx="8.355727485873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="815.862068965517" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.666989036013" font-weight="bold" fill="var(--warn-text)">Chunk</text>
+  <text x="815.862068965517" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">structure-aware</text>
+
+  <rect x="950.344827586207" y="103.272727272727" width="186.206896551724" height="84.363636363636" rx="8.355727485873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1043.448275862069" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.666989036013" font-weight="bold" fill="var(--primary-text)">Embed</text>
+  <text x="1043.448275862069" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">batch API</text>
+
+  <path d="M 226.206896551724 145.454545454545 L 267.586206896552 145.454545454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 453.793103448276 145.454545454545 L 495.172413793103 145.454545454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 681.379310344828 145.454545454545 L 722.758620689655 145.454545454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 908.965517241379 145.454545454545 L 950.344827586207 145.454545454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="371.034482758621" y="250.909090909091" width="517.241379310345" height="105.454545454545" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="629.655172413793" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--ok-text)">Vector index + ACL</text>
+  <text x="629.655172413793" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">{embedding, doc_id, chunk_id, metadata,</text>
+  <text x="629.655172413793" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">version, permissions, source_url, updated_at}</text>
+
+  <path d="M 1043.448275862069 187.636363636364 Q 1043.448275862069 229.818181818182 629.655172413793 250.909090909091" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="409.090909090909" width="393.103448275862" height="210.909090909091" rx="10.444659357342" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="236.551724137931" y="440.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--text)">Incremental updates</text>
+  <text x="60.689655172414" y="475" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Re-embed changed only</text>
+  <text x="60.689655172414" y="505" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Track source lineage</text>
+  <text x="60.689655172414" y="535" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Version for audit</text>
+  <text x="60.689655172414" y="580" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--ok-accent)">Avoid full re-index</text>
+
+  <rect x="453.793103448276" y="409.090909090909" width="393.103448275862" height="210.909090909091" rx="10.444659357342" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="650.344827586207" y="440.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--text)">Permissions</text>
+  <text x="474.48275862069" y="475" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Store ACL per chunk</text>
+  <text x="474.48275862069" y="505" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Filter at query time</text>
+  <text x="474.48275862069" y="535" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Audit access</text>
+  <text x="474.48275862069" y="580" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--danger-accent)">Test for leakage</text>
+
+  <rect x="867.586206896552" y="409.090909090909" width="372.413793103448" height="210.909090909091" rx="10.444659357342" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1053.793103448276" y="440.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--text)">Operations</text>
+  <text x="888.275862068966" y="475" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Schedule by source</text>
+  <text x="888.275862068966" y="505" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Monitor freshness</text>
+  <text x="888.275862068966" y="535" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Cache embeddings</text>
+  <text x="888.275862068966" y="580" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">Re-evaluate on drift</text>
+</svg>

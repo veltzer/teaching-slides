@@ -35,6 +35,11 @@ audience:
 - Failure stops downstream
 
 ---
+## DAG Visualized
+
+![dag_dependencies](svg/courses/data_engineering/etl/04_orchestration/dag_dependencies.svg)
+
+---
 ## Static vs Dynamic DAGs
 
 - Static: shape known up front

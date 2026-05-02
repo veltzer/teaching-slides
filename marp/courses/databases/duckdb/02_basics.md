@@ -28,6 +28,11 @@ audience:
 - Close releases resources
 
 ---
+## Connection Lifecycle
+
+![connection_lifecycle](svg/courses/databases/duckdb/02_basics/connection_lifecycle.svg)
+
+---
 ## Tables
 
 - CREATE TABLE like SQL

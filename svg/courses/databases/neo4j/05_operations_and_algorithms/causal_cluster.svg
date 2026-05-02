@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Causal Cluster Topology</text>
+
+  <text x="640" y="96.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.961561547682" font-weight="bold" fill="var(--text-muted)">Core servers (Raft consensus for writes)</text>
+
+  <rect x="168.571428571429" y="122.857142857143" width="214.285714285714" height="103.571428571429" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="275.714285714286" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--primary-text)">Core 1 (leader)</text>
+  <text x="275.714285714286" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--primary-text)">accepts writes</text>
+  <text x="275.714285714286" y="207.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--primary-text)">replicates to peers</text>
+
+  <rect x="532.857142857143" y="122.857142857143" width="214.285714285714" height="103.571428571429" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--warn-text)">Core 2 (follower)</text>
+  <text x="640" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--warn-text)">votes</text>
+  <text x="640" y="207.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--warn-text)">applies log</text>
+
+  <rect x="897.142857142857" y="122.857142857143" width="214.285714285714" height="103.571428571429" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1004.285714285714" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--warn-text)">Core 3 (follower)</text>
+  <text x="1004.285714285714" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--warn-text)">votes</text>
+  <text x="1004.285714285714" y="207.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--warn-text)">applies log</text>
+
+  <text x="640" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.961561547682" font-weight="bold" fill="var(--text-muted)">Read replicas (scale reads)</text>
+
+  <rect x="40" y="309.285714285714" width="192.857142857143" height="82.857142857143" rx="8.427360687859" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.428571428571" y="345.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--ok-text)">Replica A</text>
+  <text x="136.428571428571" y="369.357142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--ok-text)">read-only</text>
+
+  <rect x="254.285714285714" y="309.285714285714" width="192.857142857143" height="82.857142857143" rx="8.427360687859" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="350.714285714286" y="345.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--ok-text)">Replica B</text>
+
+  <rect x="468.571428571428" y="309.285714285714" width="192.857142857143" height="82.857142857143" rx="8.427360687859" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="565" y="345.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--ok-text)">Replica C</text>
+
+  <rect x="682.857142857143" y="309.285714285714" width="192.857142857143" height="82.857142857143" rx="8.427360687859" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="779.285714285714" y="345.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--ok-text)">Replica D</text>
+
+  <rect x="897.142857142857" y="309.285714285714" width="192.857142857143" height="82.857142857143" rx="8.427360687859" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="993.571428571429" y="345.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--ok-text)">Replica E</text>
+
+  <rect x="1111.428571428571" y="309.285714285714" width="128.571428571429" height="82.857142857143" rx="8.427360687859" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1175.714285714286" y="345.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">add more</text>
+  <text x="1175.714285714286" y="366.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">as needed</text>
+
+  <path d="M 275.714285714286 226.428571428571 L 136.428571428571 309.285714285714" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M 275.714285714286 226.428571428571 L 350.714285714286 309.285714285714" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M 640 226.428571428571 L 565 309.285714285714" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M 640 226.428571428571 L 779.285714285714 309.285714285714" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M 1004.285714285714 226.428571428571 L 993.571428571429 309.285714285714" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <rect x="40" y="423.214285714286" width="1200" height="196.785714285714" rx="10.534200859823" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="454.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">Sizing</text>
+  <text x="61.428571428571" y="485.357142857143" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">3 or 5 cores — must be odd for majority quorum</text>
+  <text x="61.428571428571" y="509.178571428572" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Survives minority loss (1 of 3, 2 of 5)</text>
+  <text x="61.428571428571" y="533" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Replicas are not voters — add many for read scale</text>
+  <text x="61.428571428571" y="563.035714285714" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">Multi-DC: cores spread across DCs</text>
+  <text x="61.428571428571" y="594.107142857143" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--danger-accent)">Single-node = no HA</text>
+</svg>

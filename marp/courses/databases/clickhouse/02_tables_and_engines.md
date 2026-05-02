@@ -36,6 +36,11 @@ audience:
 - Indexed by primary key
 
 ---
+## Compaction Over Time
+
+![mergetree_compaction](svg/courses/databases/clickhouse/02_tables_and_engines/mergetree_compaction.svg)
+
+---
 ## Sort Key
 
 - On-disk order

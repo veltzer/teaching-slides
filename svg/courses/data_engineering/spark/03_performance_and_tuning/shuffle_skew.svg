@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Shuffle and Skew</text>
+
+  <text x="640" y="86.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" fill="var(--text-muted)">Shuffle: data crosses the network between stages</text>
+
+  <rect x="40" y="122.857142857143" width="192.857142857143" height="82.857142857143" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.428571428571" y="153.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--info-text)">Stage N</text>
+  <text x="136.428571428571" y="179.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">map / filter</text>
+
+  <rect x="361.428571428571" y="122.857142857143" width="192.857142857143" height="82.857142857143" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="457.857142857143" y="153.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">Shuffle</text>
+  <text x="457.857142857143" y="179.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--warn-text)">repartition by key</text>
+
+  <rect x="682.857142857143" y="122.857142857143" width="192.857142857143" height="82.857142857143" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="779.285714285714" y="153.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--info-text)">Stage N+1</text>
+  <text x="779.285714285714" y="179.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">groupBy / join</text>
+
+  <path d="M 232.857142857143 164.285714285714 L 361.428571428571 164.285714285714" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 554.285714285714 164.285714285714 L 682.857142857143 164.285714285714" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="640" y="267.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">Partition sizes after shuffle</text>
+
+  <rect x="61.428571428571" y="298.928571428571" width="85.714285714286" height="41.428571428571" rx="4.213680343929" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="104.285714285714" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">200K</text>
+
+  <rect x="168.571428571429" y="309.285714285714" width="85.714285714286" height="31.071428571429" rx="4.213680343929" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="211.428571428571" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">180K</text>
+
+  <rect x="275.714285714286" y="293.75" width="85.714285714286" height="46.607142857143" rx="4.213680343929" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="318.571428571429" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">220K</text>
+
+  <rect x="382.857142857143" y="143.571428571429" width="85.714285714286" height="196.785714285714" rx="4.213680343929" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="425.714285714286" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--danger-text)">5M</text>
+  <text x="425.714285714286" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.587620945806" fill="var(--danger-text)">SKEW</text>
+
+  <rect x="490" y="304.107142857143" width="85.714285714286" height="36.25" rx="4.213680343929" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="532.857142857143" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">190K</text>
+
+  <rect x="597.142857142857" y="309.285714285714" width="85.714285714286" height="31.071428571429" rx="4.213680343929" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="640" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">175K</text>
+
+  <rect x="704.285714285714" y="293.75" width="85.714285714286" height="46.607142857143" rx="4.213680343929" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="747.142857142857" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">210K</text>
+
+  <rect x="811.428571428571" y="309.285714285714" width="85.714285714286" height="31.071428571429" rx="4.213680343929" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="854.285714285714" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">195K</text>
+
+  <text x="640" y="376.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--danger-accent)">One partition 25x bigger → one task drags the whole stage</text>
+
+  <rect x="40" y="412.857142857143" width="578.571428571429" height="207.142857142857" rx="10.534200859823" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="329.285714285714" y="443.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">Reduce shuffle</text>
+  <text x="61.428571428571" y="472.928571428571" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Filter early, before shuffle</text>
+  <text x="61.428571428571" y="495.714285714286" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Broadcast small side of joins</text>
+  <text x="61.428571428571" y="518.5" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Co-partition pre-shuffled inputs</text>
+  <text x="61.428571428571" y="541.285714285714" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Avoid distinct on huge data</text>
+  <text x="61.428571428571" y="570.285714285714" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">Inspect Spark UI Shuffle Read/Write</text>
+
+  <rect x="661.428571428571" y="412.857142857143" width="578.571428571429" height="207.142857142857" rx="10.534200859823" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950.714285714286" y="443.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">Fix skew</text>
+  <text x="682.857142857143" y="472.928571428571" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Salt: append random suffix to key</text>
+  <text x="682.857142857143" y="495.714285714286" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">Adaptive query execution (auto)</text>
+  <text x="682.857142857143" y="518.5" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Hint with skew join annotations</text>
+  <text x="682.857142857143" y="541.285714285714" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Pre-aggregate hot keys</text>
+  <text x="682.857142857143" y="570.285714285714" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Or split hot key into many tasks</text>
+</svg>

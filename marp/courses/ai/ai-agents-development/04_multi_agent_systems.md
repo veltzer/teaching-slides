@@ -52,6 +52,11 @@ audience:
 - Swarm shares scratchpad
 
 ---
+## Patterns Visualized
+
+![orchestration_patterns](svg/courses/ai/ai-agents-development/04_multi_agent_systems/orchestration_patterns.svg)
+
+---
 ## Supervisor Pattern
 
 - One agent routes work

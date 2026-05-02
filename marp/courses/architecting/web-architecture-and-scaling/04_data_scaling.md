@@ -60,6 +60,11 @@ audience:
 - Cross-shard queries are hard
 
 ---
+## Replication vs Sharding
+
+![replication_sharding](svg/courses/architecting/web-architecture-and-scaling/04_data_scaling/replication_sharding.svg)
+
+---
 ## Shard Keys
 
 - High cardinality

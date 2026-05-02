@@ -67,6 +67,11 @@ audience:
 - Filter is server-side but post-read
 
 ---
+## Query vs Scan
+
+![query_vs_scan](svg/courses/databases/dynamodb/03_operations_and_querying/query_vs_scan.svg)
+
+---
 ## Conditional Writes
 
 - Optimistic concurrency

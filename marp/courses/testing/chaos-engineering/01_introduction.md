@@ -93,6 +93,11 @@ audience:
 - Automated chaos in CI
 
 ---
+## Maturity Levels
+
+![maturity_model](svg/courses/testing/chaos-engineering/01_introduction/maturity_model.svg)
+
+---
 ## Tools Landscape
 
 - Open source frameworks

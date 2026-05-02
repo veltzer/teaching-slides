@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="634.690265486726" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.630711818383" font-weight="bold" fill="var(--text)">Row vs Columnar Storage</text>
+
+  <text x="294.867256637168" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.164794155988" font-weight="bold" fill="var(--text-muted)">Row-oriented</text>
+  <text x="974.513274336283" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.164794155988" font-weight="bold" fill="var(--text-muted)">Columnar (Parquet)</text>
+  <line x1="634.690265486726" y1="82.181818181818" x2="634.690265486726" y2="609.454545454545" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <rect x="40" y="145.454545454545" width="530.973451327434" height="52.727272727273" rx="6.349438246796" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="305.486725663717" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.757116201392" fill="var(--info-text)">id=1, name=Alice, age=30, city=Paris</text>
+
+  <rect x="40" y="208.727272727273" width="530.973451327434" height="52.727272727273" rx="6.349438246796" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="305.486725663717" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.757116201392" fill="var(--info-text)">id=2, name=Bob, age=25, city=Lyon</text>
+
+  <rect x="40" y="272" width="530.973451327434" height="52.727272727273" rx="6.349438246796" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="305.486725663717" y="303.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.757116201392" fill="var(--info-text)">id=3, name=Carol, age=42, city=Nice</text>
+
+  <text x="294.867256637168" y="366.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.815355909191" font-weight="bold" fill="var(--text)">Properties</text>
+  <text x="40" y="398.545454545455" font-family="Arial, sans-serif" font-size="13.757116201392" fill="var(--ok-accent)">+ fast row lookups</text>
+  <text x="40" y="424.909090909091" font-family="Arial, sans-serif" font-size="13.757116201392" fill="var(--ok-accent)">+ insert one row cheap</text>
+  <text x="40" y="451.272727272727" font-family="Arial, sans-serif" font-size="13.757116201392" fill="var(--danger-accent)">- "avg(age)" reads all bytes</text>
+  <text x="40" y="477.636363636364" font-family="Arial, sans-serif" font-size="13.757116201392" fill="var(--danger-accent)">- poor compression (mixed types)</text>
+  <text x="40" y="514.545454545455" font-family="Arial, sans-serif" font-size="13.757116201392" font-weight="bold" fill="var(--text)">Use: OLTP, transactions</text>
+
+  <rect x="698.407079646018" y="145.454545454545" width="127.433628318584" height="52.727272727273" rx="6.349438246796" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="762.12389380531" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.757116201392" font-weight="bold" fill="var(--warn-text)">id col</text>
+  <rect x="698.407079646018" y="208.727272727273" width="127.433628318584" height="52.727272727273" rx="6.349438246796" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="762.12389380531" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.698876493593" fill="var(--text)">[1, 2, 3]</text>
+
+  <rect x="836.460176991151" y="145.454545454545" width="127.433628318584" height="52.727272727273" rx="6.349438246796" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="900.176991150443" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.757116201392" font-weight="bold" fill="var(--warn-text)">name col</text>
+  <rect x="836.460176991151" y="208.727272727273" width="127.433628318584" height="52.727272727273" rx="6.349438246796" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="900.176991150443" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.640636785793" fill="var(--text)">[Alice,Bob,Carol]</text>
+
+  <rect x="974.513274336283" y="145.454545454545" width="127.433628318584" height="52.727272727273" rx="6.349438246796" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1038.230088495575" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.757116201392" font-weight="bold" fill="var(--warn-text)">age col</text>
+  <rect x="974.513274336283" y="208.727272727273" width="127.433628318584" height="52.727272727273" rx="6.349438246796" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1038.230088495575" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.698876493593" fill="var(--text)">[30, 25, 42]</text>
+
+  <rect x="1112.566371681416" y="145.454545454545" width="127.433628318584" height="52.727272727273" rx="6.349438246796" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1176.283185840708" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.757116201392" font-weight="bold" fill="var(--warn-text)">city col</text>
+  <rect x="1112.566371681416" y="208.727272727273" width="127.433628318584" height="52.727272727273" rx="6.349438246796" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1176.283185840708" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.640636785793" fill="var(--text)">[Paris,Lyon,Nice]</text>
+
+  <text x="974.513274336283" y="366.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.815355909191" font-weight="bold" fill="var(--text)">Properties</text>
+  <text x="698.407079646018" y="398.545454545455" font-family="Arial, sans-serif" font-size="13.757116201392" fill="var(--ok-accent)">+ "avg(age)" reads one column</text>
+  <text x="698.407079646018" y="424.909090909091" font-family="Arial, sans-serif" font-size="13.757116201392" fill="var(--ok-accent)">+ excellent compression</text>
+  <text x="698.407079646018" y="451.272727272727" font-family="Arial, sans-serif" font-size="13.757116201392" fill="var(--ok-accent)">+ vectorized scans</text>
+  <text x="698.407079646018" y="477.636363636364" font-family="Arial, sans-serif" font-size="13.757116201392" fill="var(--danger-accent)">- single-row lookup is wasteful</text>
+  <text x="698.407079646018" y="514.545454545455" font-family="Arial, sans-serif" font-size="13.757116201392" font-weight="bold" fill="var(--text)">Use: OLAP, analytics</text>
+
+  <rect x="40" y="562" width="1189.380530973451" height="58" rx="8.465917662395" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="634.690265486726" y="593.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.815355909191" font-weight="bold" fill="var(--text)">Lakehouse uses Parquet — compresses 5-10x</text>
+</svg>

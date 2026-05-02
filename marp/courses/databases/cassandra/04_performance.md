@@ -60,6 +60,11 @@ audience:
 - Merge results
 
 ---
+## Both Paths Visualized
+
+![write_read_paths](svg/courses/databases/cassandra/04_performance/write_read_paths.svg)
+
+---
 ## Bloom Filters
 
 - Quickly reject misses

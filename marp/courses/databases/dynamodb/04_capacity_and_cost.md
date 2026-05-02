@@ -43,6 +43,11 @@ audience:
 - Best for unpredictable traffic
 
 ---
+## Modes Compared
+
+![on_demand_vs_provisioned](svg/courses/databases/dynamodb/04_capacity_and_cost/on_demand_vs_provisioned.svg)
+
+---
 ## Provisioned
 
 - Buy units up front

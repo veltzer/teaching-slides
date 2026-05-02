@@ -28,6 +28,11 @@ audience:
 - Faster than loading into memory
 
 ---
+## Integration Patterns
+
+![integration_patterns](svg/courses/databases/duckdb/05_use_cases_and_operations/integration_patterns.svg)
+
+---
 ## Embedded Reporting
 
 - Ship DuckDB in your application

@@ -44,6 +44,11 @@ audience:
 - Or random UUIDs
 
 ---
+## Hot Range Visualized
+
+![hot_range](svg/courses/databases/cockroachdb/02_schema_and_indexes/hot_range.svg)
+
+---
 ## Hash-Sharded Index
 
 - Built-in attribute for primary or secondary

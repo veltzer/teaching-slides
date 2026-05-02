@@ -75,6 +75,11 @@ audience:
 - Semantic boundaries
 
 ---
+## Strategies Compared
+
+![chunking_strategies](svg/courses/ai/rag-applications/02_embeddings_and_chunking/chunking_strategies.svg)
+
+---
 ## Structure-Aware Chunking
 
 - Use headings

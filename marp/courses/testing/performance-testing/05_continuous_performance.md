@@ -52,6 +52,11 @@ audience:
 - Alert on threshold breach
 
 ---
+## Trend Over Builds
+
+![trend_tracking](svg/courses/testing/performance-testing/05_continuous_performance/trend_tracking.svg)
+
+---
 ## Regression Alerts
 
 - p99 latency above target

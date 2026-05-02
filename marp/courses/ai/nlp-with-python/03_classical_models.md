@@ -60,6 +60,11 @@ audience:
 - Coefficient inspection is interpretable
 
 ---
+## TF-IDF Plus Logistic Regression
+
+![pipeline](svg/courses/ai/nlp-with-python/03_classical_models/tfidf_to_lr.svg)
+
+---
 ## SVM
 
 - Margin maximization

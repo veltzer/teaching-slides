@@ -51,6 +51,11 @@ audience:
 - Medallion (bronze, silver, gold)
 
 ---
+## Approaches Compared
+
+![modeling_approaches](svg/courses/data_engineering/etl/03_transformation/modeling_approaches.svg)
+
+---
 ## Star Schema
 
 - Fact table at center

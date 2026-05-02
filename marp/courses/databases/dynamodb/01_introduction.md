@@ -67,6 +67,11 @@ audience:
 - Most important design choice
 
 ---
+## Partition Routing
+
+![partition_routing](svg/courses/databases/dynamodb/01_introduction/partition_routing.svg)
+
+---
 ## Capacity Modes
 
 - On-demand: pay per request

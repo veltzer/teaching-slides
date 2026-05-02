@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.628328299751" font-weight="bold" fill="var(--text)">Chunking Strategies</text>
+
+  <text x="297.142857142857" y="97.477477477477" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.046782478411" font-weight="bold" fill="var(--text-muted)">Fixed-size sliding window</text>
+  <text x="982.857142857143" y="97.477477477477" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.046782478411" font-weight="bold" fill="var(--text-muted)">Structure-aware</text>
+
+  <line x1="640" y1="81.801801801802" x2="640" y2="604.324324324324" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <rect x="40" y="134.054054054054" width="214.285714285714" height="62.702702702703" rx="6.348927492804" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147.142857142857" y="165.405405405405" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" font-weight="bold" fill="var(--info-text)">chunk 1: tokens 0-500</text>
+  <text x="147.142857142857" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--info-text)">overlap 50</text>
+
+  <rect x="147.142857142857" y="207.207207207207" width="214.285714285714" height="62.702702702703" rx="6.348927492804" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="254.285714285714" y="238.558558558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" font-weight="bold" fill="var(--info-text)">chunk 2: tokens 450-950</text>
+  <text x="254.285714285714" y="259.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--info-text)">overlap 50</text>
+
+  <rect x="254.285714285714" y="280.36036036036" width="214.285714285714" height="62.702702702703" rx="6.348927492804" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="361.428571428571" y="311.711711711712" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" font-weight="bold" fill="var(--info-text)">chunk 3: tokens 900-1400</text>
+  <text x="361.428571428571" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--info-text)">overlap 50</text>
+
+  <text x="297.142857142857" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--text)">Pros</text>
+  <text x="40" y="416.216216216216" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-accent)">+ uniform sizes</text>
+  <text x="40" y="437.117117117117" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-accent)">+ trivial to implement</text>
+  <text x="40" y="458.018018018018" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-accent)">+ overlap preserves context</text>
+
+  <text x="297.142857142857" y="489.369369369369" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--text)">Cons</text>
+  <text x="40" y="515.495495495495" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- splits sentences mid-word</text>
+  <text x="40" y="536.396396396396" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- loses headings as context</text>
+  <text x="40" y="557.297297297297" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- table rows separated</text>
+
+  <rect x="704.285714285714" y="134.054054054054" width="535.714285714286" height="62.702702702703" rx="6.348927492804" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="972.142857142857" y="165.405405405405" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" font-weight="bold" fill="var(--warn-text)">Section: "Authentication"</text>
+  <text x="972.142857142857" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--warn-text)">paragraphs + heading prepended</text>
+
+  <rect x="704.285714285714" y="207.207207207207" width="535.714285714286" height="62.702702702703" rx="6.348927492804" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="972.142857142857" y="238.558558558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" font-weight="bold" fill="var(--warn-text)">Section: "Authentication / OAuth"</text>
+  <text x="972.142857142857" y="259.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--warn-text)">subsection paragraphs + breadcrumb</text>
+
+  <rect x="704.285714285714" y="280.36036036036" width="535.714285714286" height="62.702702702703" rx="6.348927492804" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="972.142857142857" y="311.711711711712" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" font-weight="bold" fill="var(--warn-text)">Code block: full function</text>
+  <text x="972.142857142857" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--warn-text)">never split by line count</text>
+
+  <text x="982.857142857143" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--text)">Pros</text>
+  <text x="704.285714285714" y="420" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-accent)">+ semantic boundaries</text>
+  <text x="704.285714285714" y="445" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-accent)">+ better retrieval quality</text>
+
+  <text x="982.857142857143" y="489.369369369369" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--text)">Cons</text>
+  <text x="704.285714285714" y="515.495495495495" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- variable sizes</text>
+  <text x="704.285714285714" y="536.396396396396" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- per-format parser needed</text>
+  <text x="704.285714285714" y="557.297297297297" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- harder to implement</text>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--text-muted)">Always evaluate on your queries</text>
+</svg>

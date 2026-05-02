@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.762697824931" font-weight="bold" fill="var(--text)">Producer, Broker, Consumer</text>
+
+  <rect x="40" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="157.857142857143" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.133162887456" font-weight="bold" fill="var(--primary-text)">Producer</text>
+  <text x="157.857142857143" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--primary-text)">writes messages</text>
+  <text x="157.857142857143" y="231.927272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--primary-text)">app sending events</text>
+  <text x="157.857142857143" y="255.127272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--primary-text)">does not wait</text>
+
+  <rect x="415" y="145.454545454545" width="450" height="210.909090909091" rx="10.629534937476" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.259069874951" font-weight="bold" fill="var(--warn-text)">Broker</text>
+
+  <rect x="447.142857142857" y="208.727272727273" width="85.714285714286" height="42.181818181818" rx="4.25181397499" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="490" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text)">m1</text>
+  <rect x="543.571428571429" y="208.727272727273" width="85.714285714286" height="42.181818181818" rx="4.25181397499" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="586.428571428571" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text)">m2</text>
+  <rect x="640" y="208.727272727273" width="85.714285714286" height="42.181818181818" rx="4.25181397499" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="682.857142857143" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text)">m3</text>
+  <rect x="736.428571428571" y="208.727272727273" width="85.714285714286" height="42.181818181818" rx="4.25181397499" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="779.285714285714" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text)">m4</text>
+
+  <text x="640" y="287.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">durable, ordered, replicated</text>
+  <text x="640" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">trust boundary between producer &amp; consumer</text>
+  <text x="640" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">tracks consumer offsets</text>
+
+  <rect x="1004.285714285714" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1122.142857142857" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.133162887456" font-weight="bold" fill="var(--ok-text)">Consumer</text>
+  <text x="1122.142857142857" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-text)">pulls messages</text>
+  <text x="1122.142857142857" y="231.927272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-text)">processes, acks</text>
+  <text x="1122.142857142857" y="255.127272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-text)">scales horizontally</text>
+
+  <path d="M 275.714285714286 208.727272727273 L 415 208.727272727273" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 865 208.727272727273 L 1004.285714285714 208.727272727273" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="430.181818181818" width="407.142857142857" height="189.818181818182" rx="10.629534937476" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="243.571428571429" y="461.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--text)">Decoupling benefits</text>
+  <text x="61.428571428571" y="493.454545454545" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">Time: producer ahead of consumer</text>
+  <text x="61.428571428571" y="519.818181818182" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">Load: broker absorbs spikes</text>
+  <text x="61.428571428571" y="546.181818181818" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">Topology: many-to-many</text>
+  <text x="61.428571428571" y="572.545454545455" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">Failure: consumer down ok</text>
+  <text x="61.428571428571" y="598.909090909091" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">Scale: independent per side</text>
+
+  <rect x="490" y="430.181818181818" width="750" height="189.818181818182" rx="10.629534937476" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="865" y="461.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--text)">Delivery semantics</text>
+  <text x="511.428571428571" y="493.454545454545" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">at-most-once: may lose, never duplicate (telemetry)</text>
+  <text x="511.428571428571" y="519.818181818182" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">at-least-once: never lose, may duplicate (default)</text>
+  <text x="511.428571428571" y="546.181818181818" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">exactly-once: never lose, never duplicate (hard)</text>
+  <text x="511.428571428571" y="583.090909090909" font-family="Arial, sans-serif" font-size="13.818395418718" font-weight="bold" fill="var(--ok-accent)">at-least-once + idempotent consumer = practical</text>
+</svg>
