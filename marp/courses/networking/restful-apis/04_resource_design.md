@@ -28,6 +28,11 @@ audience:
 - No verbs
 
 ---
+## Do This / Avoid This
+
+![url_design](svg/courses/networking/restful-apis/04_resource_design/url_design.svg)
+
+---
 ## Hierarchical Resources
 
 - /users/123/orders

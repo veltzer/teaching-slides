@@ -36,6 +36,11 @@ audience:
 - "Clean" is what you wish *yesterday's* developer had written
 
 ---
+## Quality Attributes
+
+![quality_attributes](svg/courses/principles/solid-clean-code/01_introduction_to_software_quality_and_design_principles/quality_attributes.svg)
+
+---
 ## Three Audiences for Code
 
 - **The compiler / interpreter**: needs syntactic correctness

@@ -30,6 +30,11 @@ audience:
 - Refactor with confidence
 
 ---
+## Tests by Layer
+
+![test_layers](svg/courses/architecting/clean-and-hexagonal-architecture/07_testing_clean_architecture/test_layers.svg)
+
+---
 ## Domain Tests
 
 - Pure entity tests

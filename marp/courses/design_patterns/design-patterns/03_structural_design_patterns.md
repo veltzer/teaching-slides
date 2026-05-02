@@ -27,6 +27,11 @@ audience:
 - Most are about indirection — adding a layer to gain flexibility
 
 ---
+## Patterns at a Glance
+
+![structural_patterns](svg/courses/design_patterns/design-patterns/03_structural_design_patterns/structural_patterns.svg)
+
+---
 ## Adapter
 
 - *Intent*: convert one interface to another expected by clients

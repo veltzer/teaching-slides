@@ -43,6 +43,11 @@ audience:
 - Different questions, different tools
 
 ---
+## Three Pillars Visualized
+
+![three_pillars](svg/courses/observability_and_monitoring/prometheus-and-grafana/01_introduction_to_observability/three_pillars.svg)
+
+---
 ## Metrics
 
 - CPU, memory, requests/sec

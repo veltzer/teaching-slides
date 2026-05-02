@@ -43,6 +43,11 @@ audience:
 - Communicate
 
 ---
+## Pipeline at a Glance
+
+![ml_pipeline](svg/courses/machine_learning/machine-learning/01_data_science/ml_pipeline.svg)
+
+---
 ## Tools
 
 - Python: pandas, scikit-learn, matplotlib

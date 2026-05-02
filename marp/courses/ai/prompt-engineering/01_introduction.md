@@ -28,6 +28,11 @@ audience:
 - Empirical, iterative
 
 ---
+## What Goes In a Prompt
+
+![prompt_basics](svg/courses/ai/prompt-engineering/01_introduction/prompt_basics.svg)
+
+---
 ## Why It Matters
 
 - Same model, different prompts: vastly different results
