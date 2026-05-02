@@ -11,6 +11,11 @@ audience:
 # Choosing the Right Database
 
 ---
+## Decision Tree
+
+![decision_tree](svg/courses/databases/introduction-to-databases/10_choosing_the_right_database/decision_tree.svg)
+
+---
 ## What This Chapter Covers
 
 - A decision framework

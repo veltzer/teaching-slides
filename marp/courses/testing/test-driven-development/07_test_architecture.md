@@ -11,6 +11,11 @@ audience:
 # Test Architecture
 
 ---
+## AAA Pattern
+
+![test_architecture](svg/courses/testing/test-driven-development/07_test_architecture/test_architecture.svg)
+
+---
 ## What This Chapter Covers
 
 - The testing pyramid

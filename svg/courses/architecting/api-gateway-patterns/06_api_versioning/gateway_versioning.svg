@@ -2,46 +2,139 @@
   <metadata>
     <type>regular</type>
   </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
   <defs/>
 
-  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Gateway Handles Version Routing</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Gateway Handles Version Routing</text>
 
-  <rect x="60" y="100" width="200" height="120" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="160" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Old client</text>
-  <text x="160" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">/v1/users/42</text>
+  <rect x="40" y="86.194690265487" width="206.896551724138" height="123.185840707965" rx="8.244064638873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="143.448275862069" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--info-text)">Old client</text>
+  <text x="143.448275862069" y="152.920353982301" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">/v1/users/42</text>
 
-  <rect x="60" y="260" width="200" height="120" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="160" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">New client</text>
-  <text x="160" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">/v2/users/42</text>
+  <rect x="40" y="250.442477876106" width="206.896551724138" height="123.185840707965" rx="8.244064638873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="143.448275862069" y="286.371681415929" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--info-text)">New client</text>
+  <text x="143.448275862069" y="317.16814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">/v2/users/42</text>
 
-  <rect x="60" y="420" width="200" height="120" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="160" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Beta tester</text>
-  <text x="160" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Header: x-canary</text>
+  <rect x="40" y="414.690265486726" width="206.896551724138" height="123.185840707965" rx="8.244064638873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="143.448275862069" y="450.619469026549" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--info-text)">Beta tester</text>
+  <text x="143.448275862069" y="481.41592920354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">Header: x-canary</text>
 
-  <path d="M 262 160 L 392 290" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 262 320 L 392 320" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 262 480 L 392 350" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 248.965517241379 147.787610619469 L 383.448275862069 281.238938053097" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 248.965517241379 312.035398230089 L 383.448275862069 312.035398230089" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 248.965517241379 476.283185840708 L 383.448275862069 342.83185840708" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="400" y="240" width="280" height="160" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
-  <text x="540" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">API Gateway</text>
-  <text x="540" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Path / header routing</text>
-  <text x="540" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Per-version rate limit</text>
-  <text x="540" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Sunset header injection</text>
+  <rect x="391.724137931034" y="229.911504424779" width="289.655172413793" height="164.247787610619" rx="14.427113118027" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="536.551724137931" y="270.973451327434" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--primary-text)">API Gateway</text>
+  <text x="536.551724137931" y="301.769911504425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">Path / header routing</text>
+  <text x="536.551724137931" y="327.433628318584" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">Per-version rate limit</text>
+  <text x="536.551724137931" y="353.097345132743" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">Sunset header injection</text>
 
-  <path d="M 682 280 L 832 200" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 682 320 L 832 320" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 682 360 L 832 440" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 683.448275862069 270.973451327434 L 838.620689655172 188.849557522124" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 683.448275862069 312.035398230089 L 838.620689655172 312.035398230089" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 683.448275862069 353.097345132743 L 838.620689655172 435.221238938053" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="840" y="160" width="320" height="80" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1000" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">v1 service (legacy)</text>
-  <text x="1000" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">deprecated, kept alive</text>
+  <rect x="846.896551724138" y="147.787610619469" width="331.034482758621" height="82.12389380531" rx="8.244064638873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1012.413793103448" y="183.716814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--warn-text)">v1 service (legacy)</text>
+  <text x="1012.413793103448" y="209.380530973451" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--warn-text)">deprecated, kept alive</text>
 
-  <rect x="840" y="280" width="320" height="80" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1000" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">v2 service (current)</text>
+  <rect x="846.896551724138" y="270.973451327434" width="331.034482758621" height="82.12389380531" rx="8.244064638873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1012.413793103448" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--ok-text)">v2 service (current)</text>
 
-  <rect x="840" y="400" width="320" height="80" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1000" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">v3 service (canary)</text>
+  <rect x="846.896551724138" y="394.159292035398" width="331.034482758621" height="82.12389380531" rx="8.244064638873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1012.413793103448" y="430.088495575221" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--info-text)">v3 service (canary)</text>
 
-  <rect x="60" y="560" width="1160" height="60" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Versions decoupled at edge: backends evolve independently, clients migrate at their pace</text>
+  <rect x="40" y="558.407079646018" width="1200" height="61.592920353982" rx="8.244064638873" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="594.336283185841" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text-muted)">Versions decoupled at edge: backends evolve independently, clients migrate at their pace</text>
 </svg>

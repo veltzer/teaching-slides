@@ -11,6 +11,11 @@ audience:
 # Mocking Strategies
 
 ---
+## When to Mock
+
+![mocking_strategies](svg/courses/testing/test-driven-development/05_mocking_strategies/mocking_strategies.svg)
+
+---
 ## What This Chapter Covers
 
 - Mocking frameworks

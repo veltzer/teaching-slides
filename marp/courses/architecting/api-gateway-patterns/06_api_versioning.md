@@ -11,6 +11,11 @@ audience:
 # API Versioning at the Gateway
 
 ---
+## Gateway Versioning
+
+![gateway_versioning](svg/courses/architecting/api-gateway-patterns/06_api_versioning/gateway_versioning.svg)
+
+---
 ## What This Chapter Covers
 
 - Versioning strategies revisited

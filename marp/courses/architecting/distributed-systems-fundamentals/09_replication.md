@@ -11,6 +11,11 @@ audience:
 # Replication
 
 ---
+## Topologies
+
+![replication_topologies](svg/courses/architecting/distributed-systems-fundamentals/09_replication/replication_topologies.svg)
+
+---
 ## What This Chapter Covers
 
 - Why replicate

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs/>
+
+  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Modern BI Stack</text>
+
+  <rect x="60" y="100" width="1160" height="80" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Sources</text>
+  <text x="640" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">App DBs, SaaS APIs (Salesforce, Stripe), event streams</text>
+
+  <path d="M 640 185 L 640 215" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="60" y="220" width="1160" height="80" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Ingest (EL)</text>
+  <text x="640" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Fivetran, Airbyte, custom -- land raw data in warehouse</text>
+
+  <path d="M 640 305 L 640 335" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="60" y="340" width="1160" height="80" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Warehouse + Transform (T)</text>
+  <text x="640" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Snowflake / BigQuery / Redshift; dbt for SQL transforms</text>
+
+  <path d="M 640 425 L 640 455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="60" y="460" width="1160" height="80" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">BI Tools</text>
+  <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Tableau, Looker, Power BI, Metabase, Superset</text>
+
+  <rect x="60" y="560" width="1160" height="60" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">ELT &gt; ETL: cheap warehouse compute lets you transform after loading</text>
+</svg>

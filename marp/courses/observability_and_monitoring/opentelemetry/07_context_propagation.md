@@ -10,6 +10,11 @@ audience:
 # Context Propagation
 
 ---
+## traceparent header
+
+![w3c_traceparent](svg/courses/observability_and_monitoring/opentelemetry/07_context_propagation/w3c_traceparent.svg)
+
+---
 ## What This Chapter Covers
 
 - Why context matters

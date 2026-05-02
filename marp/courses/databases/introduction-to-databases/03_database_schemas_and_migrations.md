@@ -11,6 +11,11 @@ audience:
 # Database Schemas and Migrations
 
 ---
+## Migration Workflow
+
+![migration_workflow](svg/courses/databases/introduction-to-databases/03_database_schemas_and_migrations/migration_workflow.svg)
+
+---
 ## What This Chapter Covers
 
 - Schema definition

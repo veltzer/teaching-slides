@@ -11,6 +11,11 @@ audience:
 # Authentication and Authorisation
 
 ---
+## Auth at the Gateway
+
+![jwt_flow](svg/courses/architecting/api-gateway-patterns/07_authentication_and_authorization/jwt_flow.svg)
+
+---
 ## What This Chapter Covers
 
 - Auth at the gateway: why

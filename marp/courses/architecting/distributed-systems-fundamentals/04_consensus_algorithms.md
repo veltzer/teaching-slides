@@ -11,6 +11,11 @@ audience:
 # Consensus Algorithms
 
 ---
+## Raft States
+
+![raft_phases](svg/courses/architecting/distributed-systems-fundamentals/04_consensus_algorithms/raft_phases.svg)
+
+---
 ## What This Chapter Covers
 
 - Why consensus

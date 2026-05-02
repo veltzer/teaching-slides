@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs/>
+
+  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Airflow Production Patterns</text>
+
+  <rect x="60" y="100" width="370" height="240" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Idempotent tasks</text>
+  <text x="80" y="170" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Re-running has no extra effect</text>
+  <text x="80" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">UPSERT not INSERT</text>
+  <text x="80" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Replace partition not append</text>
+  <text x="80" y="265" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-text)">Survives retries safely</text>
+
+  <rect x="455" y="100" width="370" height="240" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Atomic tasks</text>
+  <text x="475" y="170" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">One task = one logical unit</text>
+  <text x="475" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Partial failure = retry whole</text>
+  <text x="475" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">No "extract+transform" together</text>
+  <text x="475" y="265" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">Fail fast and clear</text>
+
+  <rect x="850" y="100" width="370" height="240" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Don't compute in DAG</text>
+  <text x="870" y="170" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">DAG file parsed often</text>
+  <text x="870" y="195" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Imports run every time</text>
+  <text x="870" y="220" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">No DB queries at top-level</text>
+  <text x="870" y="265" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">Heavy work in operators</text>
+
+  <rect x="60" y="380" width="370" height="220" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Use connections</text>
+  <text x="80" y="450" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Don't hardcode credentials</text>
+  <text x="80" y="475" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Connection objects in UI</text>
+  <text x="80" y="500" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Or secret backend</text>
+
+  <rect x="455" y="380" width="370" height="220" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Test DAGs</text>
+  <text x="475" y="450" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Import without errors</text>
+  <text x="475" y="475" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">No cycles in dep graph</text>
+  <text x="475" y="500" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Operators run dry</text>
+
+  <rect x="850" y="380" width="370" height="220" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Avoid</text>
+  <text x="870" y="450" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">- Top-level DB calls</text>
+  <text x="870" y="475" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">- Variables.get in tasks</text>
+  <text x="870" y="500" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">- Mutable global state</text>
+</svg>

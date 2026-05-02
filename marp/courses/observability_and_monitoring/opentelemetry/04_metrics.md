@@ -10,6 +10,11 @@ audience:
 # Metrics
 
 ---
+## Instrument Types
+
+![metric_types](svg/courses/observability_and_monitoring/opentelemetry/04_metrics/metric_types.svg)
+
+---
 ## What This Chapter Covers
 
 - OTel metrics model

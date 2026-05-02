@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs/>
+
+  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Serverless Patterns</text>
+
+  <rect x="60" y="100" width="370" height="240" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">API Gateway -&gt; Function</text>
+  <text x="80" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">HTTP request</text>
+  <text x="80" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">REST or GraphQL</text>
+  <text x="80" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Sync response</text>
+  <text x="80" y="265" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--primary-text)">Classic web backend</text>
+
+  <rect x="455" y="100" width="370" height="240" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Event-driven</text>
+  <text x="475" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">S3 / SQS / Kinesis</text>
+  <text x="475" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Reacts to events</text>
+  <text x="475" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Async, scales naturally</text>
+  <text x="475" y="265" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">ETL, image resize</text>
+
+  <rect x="850" y="100" width="370" height="240" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Scheduled</text>
+  <text x="870" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">EventBridge / cron</text>
+  <text x="870" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Fires on a timer</text>
+  <text x="870" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Replaces cron jobs</text>
+  <text x="870" y="265" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--ok-text)">Reports, cleanup</text>
+
+  <rect x="60" y="380" width="370" height="220" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Fan-out</text>
+  <text x="80" y="450" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">SNS -&gt; many subscribers</text>
+  <text x="80" y="475" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Each runs independently</text>
+  <text x="80" y="525" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="var(--info-text)">Decoupled side effects</text>
+
+  <rect x="455" y="380" width="370" height="220" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Step Functions</text>
+  <text x="475" y="450" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Orchestrate workflow</text>
+  <text x="475" y="475" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">State machine</text>
+  <text x="475" y="525" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="var(--warn-text)">Long-running processes</text>
+
+  <rect x="850" y="380" width="370" height="220" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Avoid</text>
+  <text x="870" y="450" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">- Long-running &gt; 15 min</text>
+  <text x="870" y="475" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">- Heavy state per call</text>
+  <text x="870" y="500" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">- Chatty function chains</text>
+</svg>
