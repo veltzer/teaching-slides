@@ -11,6 +11,11 @@ audience:
 # Pagination, Filtering, Sorting, and Searching
 
 ---
+## Pagination Strategies
+
+![pagination](svg/courses/architecting/api-design-best-practices/05_pagination_filtering_sorting/pagination.svg)
+
+---
 ## Why Pagination
 
 - Lists grow; full-list responses don't scale

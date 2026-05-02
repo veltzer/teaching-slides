@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs/>
+
+  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Gateway Handles Version Routing</text>
+
+  <rect x="60" y="100" width="200" height="120" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Old client</text>
+  <text x="160" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">/v1/users/42</text>
+
+  <rect x="60" y="260" width="200" height="120" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">New client</text>
+  <text x="160" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">/v2/users/42</text>
+
+  <rect x="60" y="420" width="200" height="120" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Beta tester</text>
+  <text x="160" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Header: x-canary</text>
+
+  <path d="M 262 160 L 392 290" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 262 320 L 392 320" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 262 480 L 392 350" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="400" y="240" width="280" height="160" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="540" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">API Gateway</text>
+  <text x="540" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Path / header routing</text>
+  <text x="540" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Per-version rate limit</text>
+  <text x="540" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Sunset header injection</text>
+
+  <path d="M 682 280 L 832 200" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 682 320 L 832 320" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 682 360 L 832 440" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="840" y="160" width="320" height="80" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">v1 service (legacy)</text>
+  <text x="1000" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">deprecated, kept alive</text>
+
+  <rect x="840" y="280" width="320" height="80" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">v2 service (current)</text>
+
+  <rect x="840" y="400" width="320" height="80" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">v3 service (canary)</text>
+
+  <rect x="60" y="560" width="1160" height="60" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Versions decoupled at edge: backends evolve independently, clients migrate at their pace</text>
+</svg>

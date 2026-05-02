@@ -11,6 +11,11 @@ audience:
 # Storytelling with Data
 
 ---
+## Story Structure
+
+![story_structure](svg/courses/data_science/data-analyst-fundamentals/08_storytelling_with_data/story_structure.svg)
+
+---
 ## What This Chapter Covers
 
 - Why storytelling matters for analysts

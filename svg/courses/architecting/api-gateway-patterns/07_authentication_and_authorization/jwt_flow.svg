@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs/>
+
+  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Auth at the Gateway</text>
+
+  <rect x="60" y="100" width="200" height="100" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Client</text>
+  <text x="160" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">Bearer JWT</text>
+  <text x="160" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">in header</text>
+
+  <path d="M 262 150 L 392 230" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="400" y="200" width="280" height="200" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="540" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Gateway</text>
+  <text x="540" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">- Verify JWT signature</text>
+  <text x="540" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">- Check expiry</text>
+  <text x="540" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">- Resolve user, scopes</text>
+  <text x="540" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">- Inject x-user-id header</text>
+  <text x="540" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">- Reject 401 if invalid</text>
+
+  <path d="M 540 80 L 540 200" stroke="var(--text)" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <text x="555" y="105" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">JWKS keys</text>
+
+  <rect x="380" y="40" width="320" height="50" rx="6" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <text x="540" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">Auth provider (Auth0, Cognito, ...)</text>
+
+  <path d="M 682 280 L 832 220" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 682 310 L 832 310" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 682 340 L 832 400" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="840" y="180" width="320" height="80" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">users svc</text>
+  <text x="1000" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">trusts gateway</text>
+
+  <rect x="840" y="270" width="320" height="80" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">orders svc</text>
+  <text x="1000" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">no JWT parsing</text>
+
+  <rect x="840" y="360" width="320" height="80" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">billing svc</text>
+  <text x="1000" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">reads x-user-id</text>
+
+  <rect x="60" y="490" width="1160" height="130" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Why centralize auth at the gateway</text>
+  <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Each service doesn't reimplement auth. Internal traffic stays simple.</text>
+  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">But: services must trust the gateway, and the gateway becomes critical infra.</text>
+  <text x="640" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">For zero-trust: re-verify at each service, cheaply (cached JWKS)</text>
+</svg>

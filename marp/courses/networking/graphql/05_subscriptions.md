@@ -10,6 +10,11 @@ audience:
 # Subscriptions
 
 ---
+## Over WebSocket
+
+![subscriptions](svg/courses/networking/graphql/05_subscriptions/subscriptions.svg)
+
+---
 ## What This Chapter Covers
 
 - What subscriptions are

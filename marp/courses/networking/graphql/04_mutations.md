@@ -10,6 +10,11 @@ audience:
 # Mutations
 
 ---
+## Inputs and Payloads
+
+![mutation_pattern](svg/courses/networking/graphql/04_mutations/mutation_pattern.svg)
+
+---
 ## What This Chapter Covers
 
 - Mutation basics

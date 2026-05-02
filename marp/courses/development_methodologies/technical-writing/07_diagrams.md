@@ -11,6 +11,11 @@ audience:
 # Diagrams
 
 ---
+## When Diagrams Earn Their Place
+
+![diagram_purposes](svg/courses/development_methodologies/technical-writing/07_diagrams/diagram_purposes.svg)
+
+---
 ## What This Chapter Covers
 
 - When and how to use diagrams

@@ -12,6 +12,11 @@ audience:
 # Versioning Strategies
 
 ---
+## Three Strategies
+
+![versioning](svg/courses/architecting/api-design-best-practices/04_versioning_strategies/versioning.svg)
+
+---
 ## Why Version
 
 - APIs change; consumers depend on specific behavior

@@ -10,6 +10,11 @@ audience:
 # Audience Analysis
 
 ---
+## Audience Quadrants
+
+![audience_quadrants](svg/courses/development_methodologies/technical-writing/02_audience_analysis/audience_quadrants.svg)
+
+---
 ## What This Chapter Covers
 
 - Why audience matters

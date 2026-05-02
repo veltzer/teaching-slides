@@ -10,6 +10,11 @@ audience:
 # Statistical Fundamentals
 
 ---
+## Distribution Shapes
+
+![dist_shapes](svg/courses/data_science/data-analyst-fundamentals/05_statistical_fundamentals/dist_shapes.svg)
+
+---
 ## What This Chapter Covers
 
 - Descriptive statistics: mean, median, mode, variance

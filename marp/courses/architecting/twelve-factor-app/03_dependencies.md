@@ -11,6 +11,11 @@ audience:
 # Factor II: Dependencies
 
 ---
+## Declared and Isolated
+
+![declared_isolated](svg/courses/architecting/twelve-factor-app/03_dependencies/declared_isolated.svg)
+
+---
 ## The Rule
 
 - Explicitly declare and isolate dependencies

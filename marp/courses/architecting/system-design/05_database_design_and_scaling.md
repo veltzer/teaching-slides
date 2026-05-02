@@ -11,6 +11,11 @@ audience:
 # Database Design and Scaling
 
 ---
+## Scaling Paths
+
+![scaling_paths](svg/courses/architecting/system-design/05_database_design_and_scaling/scaling_paths.svg)
+
+---
 ## What This Chapter Covers
 
 - SQL vs NoSQL choice

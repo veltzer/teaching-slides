@@ -11,6 +11,11 @@ audience:
 # Consistent Hashing
 
 ---
+## Naive vs Consistent
+
+![consistent_hashing](svg/courses/architecting/system-design/07_consistent_hashing/consistent_hashing.svg)
+
+---
 ## What This Chapter Covers
 
 - The problem: rebalancing

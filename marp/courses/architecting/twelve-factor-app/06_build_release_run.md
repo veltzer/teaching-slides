@@ -12,6 +12,11 @@ audience:
 # Factor V: Build, Release, Run
 
 ---
+## Three Stages
+
+![three_stages](svg/courses/architecting/twelve-factor-app/06_build_release_run/three_stages.svg)
+
+---
 ## The Rule
 
 - Strictly separate build, release, and run stages

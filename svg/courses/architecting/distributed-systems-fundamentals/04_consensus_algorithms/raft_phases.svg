@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs/>
+
+  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Raft: Leader Election &amp; Log Replication</text>
+
+  <rect x="60" y="100" width="370" height="240" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Follower</text>
+  <text x="80" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Default state</text>
+  <text x="80" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Listens for leader heartbeat</text>
+  <text x="80" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Replies to AppendEntries</text>
+  <text x="80" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Trigger:</text>
+  <text x="80" y="290" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Election timeout -&gt; Candidate</text>
+  <text x="80" y="315" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="var(--info-text)">timeout randomized</text>
+
+  <path d="M 432 220 L 472 220" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="480" y="100" width="370" height="240" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="665" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Candidate</text>
+  <text x="500" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">Bumps term, votes for self</text>
+  <text x="500" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Requests votes from others</text>
+  <text x="500" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">Outcome:</text>
+  <text x="500" y="290" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Majority -&gt; Leader</text>
+  <text x="500" y="312" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Higher term seen -&gt; Follower</text>
+
+  <path d="M 852 220 L 892 220" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="900" y="100" width="320" height="240" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1060" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Leader</text>
+  <text x="920" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Sends heartbeats</text>
+  <text x="920" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Accepts client writes</text>
+  <text x="920" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Replicates log entries</text>
+  <text x="920" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Commit when:</text>
+  <text x="920" y="290" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Majority acknowledges</text>
+
+  <rect x="60" y="380" width="1160" height="220" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Safety properties</text>
+  <text x="80" y="450" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- At most one leader per term</text>
+  <text x="80" y="480" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Log entries committed once never lost</text>
+  <text x="80" y="510" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- New leader has all committed entries</text>
+  <text x="80" y="555" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">Used by etcd, Consul, CockroachDB, TiDB</text>
+</svg>
