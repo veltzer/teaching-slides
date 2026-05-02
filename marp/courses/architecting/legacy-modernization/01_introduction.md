@@ -52,6 +52,11 @@ audience:
 - Vendor lock-in
 
 ---
+## Common Signs
+
+![legacy_signs](svg/courses/architecting/legacy-modernization/01_introduction/legacy_signs.svg)
+
+---
 ## Hidden Risks
 
 - Compliance debt

@@ -61,6 +61,11 @@ audience:
 - 1. Repeat until done
 
 ---
+## Loop Visualised
+
+![agent_loop](svg/courses/ai/prompt-engineering/05_tool_use_and_agents/agent_loop.svg)
+
+---
 ## Tools to Provide
 
 - Search: Google, internal docs

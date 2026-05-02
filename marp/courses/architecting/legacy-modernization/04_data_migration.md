@@ -43,6 +43,11 @@ audience:
 - Read replica then promote
 
 ---
+## Migration Styles
+
+![migration_styles](svg/courses/architecting/legacy-modernization/04_data_migration/migration_styles.svg)
+
+---
 ## Big Bang
 
 - Stop, copy, start

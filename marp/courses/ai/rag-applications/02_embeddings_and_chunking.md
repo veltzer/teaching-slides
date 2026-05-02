@@ -36,6 +36,11 @@ audience:
 - Latency to embed
 
 ---
+## Embedding Choices
+
+![embedding_choices](svg/courses/ai/rag-applications/02_embeddings_and_chunking/embedding_choices.svg)
+
+---
 ## Popular Models
 
 - Hosted embedding APIs

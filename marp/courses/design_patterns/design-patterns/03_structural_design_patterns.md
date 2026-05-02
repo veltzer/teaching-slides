@@ -32,6 +32,11 @@ audience:
 ![structural_patterns](svg/courses/design_patterns/design-patterns/03_structural_design_patterns/structural_patterns.svg)
 
 ---
+## Compared
+
+![structural_compared](svg/courses/design_patterns/design-patterns/03_structural_design_patterns/structural_compared.svg)
+
+---
 ## Adapter
 
 - *Intent*: convert one interface to another expected by clients

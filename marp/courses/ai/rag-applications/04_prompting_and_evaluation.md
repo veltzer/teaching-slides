@@ -89,6 +89,11 @@ audience:
 - Are right chunks in top K
 
 ---
+## Eval Metrics Overview
+
+![eval_metrics](svg/courses/ai/rag-applications/04_prompting_and_evaluation/eval_metrics.svg)
+
+---
 ## Generation Metrics
 
 - Faithfulness: matches sources

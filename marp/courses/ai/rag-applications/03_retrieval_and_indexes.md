@@ -28,6 +28,11 @@ audience:
 - Scale to billions
 
 ---
+## Index Kinds
+
+![index_kinds](svg/courses/ai/rag-applications/03_retrieval_and_indexes/index_kinds.svg)
+
+---
 ## ANN Algorithms
 
 - Graph-based methods

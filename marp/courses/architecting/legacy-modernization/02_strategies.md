@@ -82,6 +82,11 @@ audience:
 - Money drives scope
 
 ---
+## Effort vs Value
+
+![effort_vs_value](svg/courses/architecting/legacy-modernization/02_strategies/effort_vs_value.svg)
+
+---
 ## Combining
 
 - Encapsulate first to slow bleeding

@@ -66,6 +66,11 @@ audience:
 - Costs differ by orders of magnitude
 
 ---
+## Tiers Compared
+
+![storage_tiers](svg/courses/architecting/disaster-recovery/03_backups_and_restore/storage_tiers.svg)
+
+---
 ## Offsite
 
 - Same region is not enough

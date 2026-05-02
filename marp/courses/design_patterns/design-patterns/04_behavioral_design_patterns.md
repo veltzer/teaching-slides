@@ -25,6 +25,11 @@ audience:
 ![behavioral_patterns](svg/courses/design_patterns/design-patterns/04_behavioral_design_patterns/behavioral_patterns.svg)
 
 ---
+## Compared
+
+![behavioural_compared](svg/courses/design_patterns/design-patterns/04_behavioral_design_patterns/behavioural_compared.svg)
+
+---
 ## Strategy
 
 - *Intent*: encapsulate algorithms behind a common interface, switch them at runtime

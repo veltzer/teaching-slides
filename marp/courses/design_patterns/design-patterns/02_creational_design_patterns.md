@@ -33,6 +33,11 @@ audience:
 - Pulling these concerns out of consumers makes the code cleaner
 
 ---
+## Creational Patterns Compared
+
+![factories_compared](svg/courses/design_patterns/design-patterns/02_creational_design_patterns/factories_compared.svg)
+
+---
 ## Singleton
 
 - *Intent*: ensure a class has exactly one instance, give global access

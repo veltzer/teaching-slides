@@ -33,6 +33,11 @@ audience:
 ![structured_modes](svg/courses/ai/prompt-engineering/04_structured_output/structured_modes.svg)
 
 ---
+## Format Choices
+
+![format_choices](svg/courses/ai/prompt-engineering/04_structured_output/format_choices.svg)
+
+---
 ## JSON Mode
 
 - Model outputs valid JSON

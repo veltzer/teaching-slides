@@ -83,6 +83,11 @@ audience:
 - Natural events
 
 ---
+## Categories Overview
+
+![disaster_categories](svg/courses/architecting/disaster-recovery/01_introduction/disaster_categories.svg)
+
+---
 ## DR Strategies Spectrum
 
 - Backup and restore

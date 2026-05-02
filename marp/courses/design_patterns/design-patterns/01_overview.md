@@ -80,6 +80,11 @@ audience:
 - **Implementation**: language-specific notes
 
 ---
+## Pattern Anatomy
+
+![pattern_anatomy](svg/courses/design_patterns/design-patterns/01_overview/pattern_anatomy.svg)
+
+---
 ## Patterns and Language
 
 - The Gang of Four book uses C++ and Smalltalk

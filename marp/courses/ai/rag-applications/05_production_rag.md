@@ -50,6 +50,11 @@ audience:
 - Track lineage
 
 ---
+## Freshness Pipeline
+
+![freshness_pipeline](svg/courses/ai/rag-applications/05_production_rag/freshness_pipeline.svg)
+
+---
 ## Permissions
 
 - Store ACL with each chunk

@@ -21,6 +21,11 @@ audience:
 - Choosing among them
 
 ---
+## Strategy Spectrum
+
+![strategy_spectrum](svg/courses/architecting/disaster-recovery/02_strategies/strategy_spectrum.svg)
+
+---
 ## Backup and Restore
 
 - Cheapest tier

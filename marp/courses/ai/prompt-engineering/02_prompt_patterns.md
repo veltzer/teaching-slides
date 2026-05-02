@@ -57,6 +57,11 @@ audience:
 - Useful but not magical
 
 ---
+## Common Patterns
+
+![persona_template](svg/courses/ai/prompt-engineering/02_prompt_patterns/persona_template.svg)
+
+---
 ## Instructions
 
 - Be specific and explicit

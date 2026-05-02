@@ -61,6 +61,11 @@ audience:
 - Code understanding
 
 ---
+## CoT Helps vs Hurts
+
+![cot_when](svg/courses/ai/prompt-engineering/03_chain_of_thought/cot_when.svg)
+
+---
 ## When It Hurts
 
 - Simple lookups

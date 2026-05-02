@@ -91,6 +91,11 @@ audience:
 - Rollback steps
 
 ---
+## Runbook Sections
+
+![runbook_anatomy](svg/courses/architecting/disaster-recovery/05_testing_and_runbooks/runbook_anatomy.svg)
+
+---
 ## Runbook Quality
 
 - Linkable from alerts

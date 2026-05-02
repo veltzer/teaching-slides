@@ -88,6 +88,11 @@ audience:
 - Per-tenant
 
 ---
+## Pattern Catalog
+
+![rollout_patterns](svg/courses/architecting/legacy-modernization/05_organization_and_rollout/rollout_patterns.svg)
+
+---
 ## Feature Flags
 
 - Decouple deploy from release
