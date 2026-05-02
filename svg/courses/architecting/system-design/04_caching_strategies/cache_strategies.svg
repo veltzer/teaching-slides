@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Caching Strategies</text>
+
+  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="231.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--primary-text)">Cache-aside</text>
+  <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Read: try cache, miss -&gt; DB,</text>
+  <text x="60.689655172414" y="183.669724770642" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">populate cache</text>
+  <text x="60.689655172414" y="215.596330275229" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Write: update DB, invalidate</text>
+  <text x="60.689655172414" y="236.880733944954" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">cache</text>
+  <text x="60.689655172414" y="284.770642201835" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--primary-text)">Most common pattern</text>
+  <text x="60.689655172414" y="316.697247706422" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--primary-text)">App owns the cache logic</text>
+
+  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">Read-through</text>
+  <text x="469.310344827586" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">App always asks cache</text>
+  <text x="469.310344827586" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Cache fetches on miss</text>
+  <text x="469.310344827586" y="226.238532110092" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">App never sees DB directly</text>
+  <text x="469.310344827586" y="284.770642201835" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--ok-text)">Library / sidecar provides</text>
+  <text x="469.310344827586" y="316.697247706422" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--ok-text)">Simpler app code</text>
+
+  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1048.620689655173" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--warn-text)">Write-through</text>
+  <text x="877.931034482759" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Write goes to cache</text>
+  <text x="877.931034482759" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Cache writes to DB</text>
+  <text x="877.931034482759" y="226.238532110092" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Cache always fresh</text>
+  <text x="877.931034482759" y="284.770642201835" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--warn-text)">Slower writes</text>
+  <text x="877.931034482759" y="316.697247706422" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--warn-text)">Data integrity guaranteed</text>
+
+  <rect x="40" y="364.587155963303" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="231.379310344828" y="401.834862385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--info-text)">Write-behind</text>
+  <text x="60.689655172414" y="439.082568807339" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Write to cache, return</text>
+  <text x="60.689655172414" y="471.009174311927" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Cache flushes to DB async</text>
+  <text x="60.689655172414" y="502.935779816514" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Fast writes</text>
+  <text x="60.689655172414" y="556.146788990826" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--info-text)">Risk: lose buffer on crash</text>
+  <text x="60.689655172414" y="588.073394495413" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--info-text)">For high-throughput writes</text>
+
+  <rect x="448.620689655172" y="364.587155963303" width="791.379310344828" height="255.412844036697" rx="10.49246125174" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="844.827586206897" y="401.834862385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--text)">Invalidation rules</text>
+  <text x="469.310344827586" y="433.761467889908" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--text)">TTL:</text>
+  <text x="521.034482758621" y="433.761467889908" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text-muted)">expire after N seconds (simple, can be stale)</text>
+  <text x="469.310344827586" y="465.688073394495" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--text)">Write-invalidate:</text>
+  <text x="629.655172413793" y="465.688073394495" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text-muted)">delete on update (race conditions)</text>
+  <text x="469.310344827586" y="497.614678899083" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--text)">Tag-based:</text>
+  <text x="583.103448275862" y="497.614678899083" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text-muted)">invalidate keys by tag</text>
+  <text x="469.310344827586" y="540.183486238532" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--text)">Famous quote:</text>
+  <text x="469.310344827586" y="572.110091743119" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--text-muted)">"Two hard things: cache invalidation, naming, off-by-one."</text>
+</svg>

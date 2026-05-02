@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.113013714962" font-weight="bold" fill="var(--text)">Consistency Models Spectrum</text>
+
+  <line x1="60.689655172414" y1="107.927927927928" x2="1219.310344827586" y2="107.927927927928" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="60.689655172414" y="87.027027027027" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--ok-fill)">Strong</text>
+  <text x="1146.896551724138" y="87.027027027027" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--danger-fill)">Weak (fast)</text>
+
+  <rect x="40" y="139.279279279279" width="289.655172413793" height="229.90990990991" rx="10.397504898201" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--ok-text)">Linearizable</text>
+  <text x="60.689655172414" y="207.207207207207" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">All ops see latest write</text>
+  <text x="60.689655172414" y="233.333333333333" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">Single global order</text>
+  <text x="60.689655172414" y="259.459459459459" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">As if one machine</text>
+  <text x="60.689655172414" y="301.261261261261" font-family="Arial, sans-serif" font-size="13.516756367661" font-weight="bold" fill="var(--ok-text)">Cost: latency, availability</text>
+  <text x="60.689655172414" y="332.612612612613" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--ok-text)">Spanner, etcd, ZooKeeper</text>
+
+  <rect x="350.344827586207" y="139.279279279279" width="289.655172413793" height="229.90990990991" rx="10.397504898201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495.172413793103" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--primary-text)">Sequential</text>
+  <text x="371.034482758621" y="207.207207207207" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">All clients see same order</text>
+  <text x="371.034482758621" y="233.333333333333" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">Order respects per-client</text>
+  <text x="371.034482758621" y="259.459459459459" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">No real-time guarantee</text>
+  <text x="371.034482758621" y="301.261261261261" font-family="Arial, sans-serif" font-size="13.516756367661" font-weight="bold" fill="var(--primary-text)">Cheaper than linearizable</text>
+  <text x="371.034482758621" y="332.612612612613" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--primary-text)">Multi-leader DBs</text>
+
+  <rect x="660.689655172414" y="139.279279279279" width="289.655172413793" height="229.90990990991" rx="10.397504898201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="805.51724137931" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--warn-text)">Causal</text>
+  <text x="681.379310344828" y="207.207207207207" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">Cause-effect order kept</text>
+  <text x="681.379310344828" y="233.333333333333" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">Concurrent ops can disagree</text>
+  <text x="681.379310344828" y="259.459459459459" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">Vector clocks track</text>
+  <text x="681.379310344828" y="301.261261261261" font-family="Arial, sans-serif" font-size="13.516756367661" font-weight="bold" fill="var(--warn-text)">Good for collaboration</text>
+  <text x="681.379310344828" y="332.612612612613" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--warn-text)">Comments, chat, social feeds</text>
+
+  <rect x="971.034482758621" y="139.279279279279" width="268.965517241379" height="229.90990990991" rx="10.397504898201" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105.51724137931" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--danger-text)">Eventual</text>
+  <text x="991.724137931035" y="207.207207207207" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">Replicas converge</text>
+  <text x="991.724137931035" y="233.333333333333" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">Reads may be stale</text>
+  <text x="991.724137931035" y="259.459459459459" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">Conflict resolution needed</text>
+  <text x="991.724137931035" y="301.261261261261" font-family="Arial, sans-serif" font-size="13.516756367661" font-weight="bold" fill="var(--danger-text)">Highest availability</text>
+  <text x="991.724137931035" y="332.612612612613" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--danger-text)">DynamoDB, Cassandra</text>
+
+  <rect x="40" y="410.990990990991" width="1200" height="209.009009009009" rx="10.397504898201" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="447.567567567568" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--text)">Read-your-writes (a useful sub-guarantee)</text>
+  <text x="640" y="478.918918918919" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text-muted)">A client always sees its own most recent writes</text>
+  <text x="640" y="505.045045045045" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text-muted)">"I just commented and it's not there?" -&gt; bad UX</text>
+  <text x="640" y="546.846846846847" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--text)">Pick the weakest model that satisfies your invariants</text>
+  <text x="640" y="578.198198198198" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--text-muted)">Stronger means slower or less available -- always</text>
+</svg>
