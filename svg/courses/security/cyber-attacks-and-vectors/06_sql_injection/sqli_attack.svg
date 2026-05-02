@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">SQL Injection</text>
+
+  <rect x="40" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--danger-text)">Vulnerable</text>
+  <rect x="60.689655172414" y="151.743119266055" width="537.931034482759" height="191.559633027523" rx="6.295476751044" fill="var(--surface)"/>
+  <text x="81.379310344828" y="183.669724770642" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">query = "SELECT * FROM users</text>
+  <text x="81.379310344828" y="210.275229357798" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">  WHERE name = '" + name + "'"</text>
+  <text x="81.379310344828" y="258.165137614679" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--text)">User submits:</text>
+  <text x="81.379310344828" y="284.770642201835" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-fill)">' OR '1'='1</text>
+  <text x="81.379310344828" y="316.697247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">Result: returns all rows</text>
+
+  <text x="60.689655172414" y="391.192660550459" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--danger-text)">Attacker can</text>
+  <text x="60.689655172414" y="423.119266055046" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Read any table</text>
+  <text x="60.689655172414" y="449.724770642202" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Modify or delete data</text>
+  <text x="60.689655172414" y="476.330275229358" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Sometimes execute commands</text>
+  <text x="60.689655172414" y="524.220183486239" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--danger-text)">OWASP top 10 since forever</text>
+
+  <rect x="660.689655172414" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">Safe: parameterized</text>
+  <rect x="681.379310344828" y="151.743119266055" width="537.931034482759" height="191.559633027523" rx="6.295476751044" fill="var(--surface)"/>
+  <text x="702.068965517241" y="183.669724770642" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">cur.execute(</text>
+  <text x="702.068965517241" y="210.275229357798" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">  "SELECT * FROM users</text>
+  <text x="702.068965517241" y="231.559633027523" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">   WHERE name = ?",</text>
+  <text x="702.068965517241" y="258.165137614679" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">  (name,)</text>
+  <text x="702.068965517241" y="284.770642201835" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">)</text>
+  <text x="702.068965517241" y="322.018348623853" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--ok-fill)">DB driver escapes for you</text>
+
+  <text x="681.379310344828" y="391.192660550459" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-text)">Always</text>
+  <text x="681.379310344828" y="423.119266055046" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Bind variables, not concat</text>
+  <text x="681.379310344828" y="449.724770642202" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- ORM with param queries</text>
+  <text x="681.379310344828" y="476.330275229358" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Least-privilege DB user</text>
+  <text x="681.379310344828" y="502.935779816514" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- WAF as defense-in-depth</text>
+</svg>

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">OWASP Top 10 (2021)</text>
+
+  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="231.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--danger-text)">Most common</text>
+  <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">A01 Broken access control</text>
+  <text x="60.689655172414" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">A02 Cryptographic failures</text>
+  <text x="60.689655172414" y="215.596330275229" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">A03 Injection</text>
+  <text x="60.689655172414" y="242.201834862385" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">A04 Insecure design</text>
+
+  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">Common</text>
+  <text x="469.310344827586" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">A05 Misconfiguration</text>
+  <text x="469.310344827586" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">A06 Vulnerable components</text>
+  <text x="469.310344827586" y="215.596330275229" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">A07 Auth failures</text>
+
+  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1048.620689655173" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--info-text)">Newer entries</text>
+  <text x="877.931034482759" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">A08 Integrity failures</text>
+  <text x="877.931034482759" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">A09 Logging failures</text>
+  <text x="877.931034482759" y="215.596330275229" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">A10 SSRF</text>
+
+  <rect x="40" y="385.871559633028" width="1200" height="234.128440366972" rx="10.49246125174" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--text)">Reading the list</text>
+  <text x="60.689655172414" y="460.366972477064" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">Updated every few years; reflects field data from real breaches</text>
+  <text x="60.689655172414" y="492.293577981651" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">Categories merge over time (XSS folded into Injection in 2021)</text>
+  <text x="60.689655172414" y="524.220183486239" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--text)">Use as a checklist for app reviews</text>
+  <text x="60.689655172414" y="572.110091743119" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--text-muted)">Not exhaustive; just the most-seen</text>
+</svg>

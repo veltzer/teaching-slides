@@ -29,6 +29,11 @@ audience:
 - A 100 MHz processor that always responds within 10us may be fit
 
 ---
+## Real-Time Spectrum
+
+![realtime_spectrum](svg/courses/real_time/real-time-programming/01_definitions/realtime_spectrum.svg)
+
+---
 ## Latency
 
 - Time between an *event* and a *response*

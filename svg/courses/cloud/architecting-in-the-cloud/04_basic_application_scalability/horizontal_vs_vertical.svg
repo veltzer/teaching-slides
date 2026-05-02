@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Scaling: Horizontal vs Vertical</text>
+
+  <rect x="40" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--warn-text)">Vertical (scale up)</text>
+
+  <rect x="267.586206896552" y="162.385321100917" width="124.137931034483" height="170.275229357798" rx="8.393969001392" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="242.201834862385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--info-text)">Bigger box</text>
+  <text x="329.655172413793" y="268.807339449541" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--info-text)">more CPU, RAM</text>
+
+  <text x="60.689655172414" y="375.229357798165" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--warn-text)">+ Wins</text>
+  <text x="60.689655172414" y="407.155963302752" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">- No code changes</text>
+  <text x="60.689655172414" y="433.761467889908" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">- Simple to manage</text>
+  <text x="60.689655172414" y="476.330275229358" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--warn-text)">- Limits</text>
+  <text x="60.689655172414" y="508.256880733945" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">- Cost grows non-linearly</text>
+  <text x="60.689655172414" y="534.862385321101" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">- Hard ceiling per host</text>
+  <text x="60.689655172414" y="561.467889908257" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">- Single point of failure</text>
+
+  <rect x="660.689655172414" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">Horizontal (scale out)</text>
+
+  <rect x="702.068965517241" y="162.385321100917" width="103.448275862069" height="106.422018348624" rx="6.295476751044" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="753.793103448276" y="220.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">box 1</text>
+  <rect x="826.206896551724" y="162.385321100917" width="103.448275862069" height="106.422018348624" rx="6.295476751044" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="877.931034482759" y="220.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">box 2</text>
+  <rect x="950.344827586207" y="162.385321100917" width="103.448275862069" height="106.422018348624" rx="6.295476751044" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="1002.068965517241" y="220.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">box 3</text>
+  <rect x="1074.48275862069" y="162.385321100917" width="103.448275862069" height="106.422018348624" rx="6.295476751044" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="1126.206896551724" y="220.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">box N</text>
+
+  <text x="702.068965517241" y="322.018348623853" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">More boxes, same size</text>
+
+  <text x="681.379310344828" y="375.229357798165" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-text)">+ Wins</text>
+  <text x="681.379310344828" y="407.155963302752" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Effectively unbounded</text>
+  <text x="681.379310344828" y="433.761467889908" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Survives node loss</text>
+  <text x="681.379310344828" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Linear cost</text>
+  <text x="681.379310344828" y="502.935779816514" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-text)">- Costs</text>
+  <text x="681.379310344828" y="534.862385321101" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- App must be stateless</text>
+  <text x="681.379310344828" y="561.467889908257" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Coordination harder</text>
+</svg>

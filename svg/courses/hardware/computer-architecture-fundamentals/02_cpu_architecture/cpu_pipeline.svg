@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.128853838633" font-weight="bold" fill="var(--text)">5-Stage CPU Pipeline</text>
+
+  <rect x="40" y="109.174311926606" width="223.728813559322" height="106.422018348624" rx="8.322529668181" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="151.864406779661" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.645059336361" font-weight="bold" fill="var(--info-text)">Fetch</text>
+  <text x="151.864406779661" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--info-text)">Load instruction</text>
+  <text x="151.864406779661" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--info-text)">from I-cache</text>
+
+  <path d="M 265.762711864407 162.385321100917 L 306.440677966102 162.385321100917" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="314.576271186441" y="109.174311926606" width="223.728813559322" height="106.422018348624" rx="8.322529668181" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="426.440677966102" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.645059336361" font-weight="bold" fill="var(--primary-text)">Decode</text>
+  <text x="426.440677966102" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--primary-text)">Parse opcode</text>
+  <text x="426.440677966102" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--primary-text)">Read registers</text>
+
+  <path d="M 540.338983050847 162.385321100917 L 581.016949152542 162.385321100917" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="589.152542372881" y="109.174311926606" width="223.728813559322" height="106.422018348624" rx="8.322529668181" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="701.016949152542" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.645059336361" font-weight="bold" fill="var(--warn-text)">Execute</text>
+  <text x="701.016949152542" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--warn-text)">ALU computes</text>
+  <text x="701.016949152542" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--warn-text)">Branch resolves</text>
+
+  <path d="M 814.915254237288 162.385321100917 L 855.593220338983 162.385321100917" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="863.728813559322" y="109.174311926606" width="183.050847457627" height="106.422018348624" rx="8.322529668181" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="955.254237288136" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.645059336361" font-weight="bold" fill="var(--ok-text)">Memory</text>
+  <text x="955.254237288136" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--ok-text)">Load / store</text>
+
+  <path d="M 1048.813559322034 162.385321100917 L 1089.491525423729 162.385321100917" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="1097.627118644068" y="109.174311926606" width="142.372881355932" height="106.422018348624" rx="8.322529668181" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1168.813559322034" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.645059336361" font-weight="bold" fill="var(--danger-text)">Write</text>
+  <text x="1168.813559322034" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--danger-text)">Result back</text>
+  <text x="1168.813559322034" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--danger-text)">to register</text>
+
+  <rect x="40" y="258.165137614679" width="1179.661016949153" height="361.834862385321" rx="10.403162085226" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="629.830508474576" y="295.412844036697" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.725691753407" font-weight="bold" fill="var(--text)">Why pipelining wins</text>
+  <text x="60.338983050847" y="332.660550458716" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--text)">Each stage runs in parallel on a different instruction</text>
+  <text x="60.338983050847" y="359.266055045872" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--text)">Throughput approaches one instruction per cycle</text>
+  <text x="60.338983050847" y="401.834862385321" font-family="Arial, sans-serif" font-size="14.564426919316" font-weight="bold" fill="var(--text)">Hazards</text>
+  <text x="60.338983050847" y="433.761467889908" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--text-muted)">Data hazard: next inst needs result of previous</text>
+  <text x="60.338983050847" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--text-muted)">Control hazard: branch outcome unknown until execute</text>
+  <text x="60.338983050847" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--text-muted)">Structural: two stages need same hardware unit</text>
+  <text x="60.338983050847" y="534.862385321101" font-family="Arial, sans-serif" font-size="14.564426919316" font-weight="bold" fill="var(--text)">Modern CPUs: 14-20 stages, OoO, superscalar</text>
+  <text x="60.338983050847" y="572.110091743119" font-family="Arial, sans-serif" font-size="13.524110710794" font-style="italic" fill="var(--text-muted)">Branch prediction + speculation hide hazards</text>
+</svg>

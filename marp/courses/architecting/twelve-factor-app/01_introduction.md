@@ -46,6 +46,11 @@ audience:
 1. Admin processes — run as one-off tasks
 
 ---
+## Grouped View
+
+![twelve_factors](svg/courses/architecting/twelve-factor-app/01_introduction/twelve_factors.svg)
+
+---
 ## Twelve-Factor and Cloud-Native
 
 - "Cloud-native" was coined later but builds on the twelve factors

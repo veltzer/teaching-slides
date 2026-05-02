@@ -130,6 +130,11 @@ audience:
 - Good service compounds; bad service drives them away
 
 ---
+## Audience First
+
+![audience_first](svg/courses/development_methodologies/technical-writing/01_technical_writing_fundamentals/audience_first.svg)
+
+---
 ## What to Take Away
 
 - Technical writing is a high-leverage engineering skill

@@ -41,6 +41,11 @@ audience:
 - One mapping (schema)
 
 ---
+## Index, Shard, Replica
+
+![index_anatomy](svg/courses/databases/elasticsearch-for-developers/02_elasticsearch_fundamentals/index_anatomy.svg)
+
+---
 ## Shard
 
 - A subset of an index's data

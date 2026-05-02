@@ -37,6 +37,11 @@ audience:
 - Run through these every time
 
 ---
+## A Reviewer's Lens
+
+![review_checklist](svg/courses/development_methodologies/code-review-best-practices/04_what_to_look_for/review_checklist.svg)
+
+---
 ## Bugs and Logic Errors
 
 - Off-by-one errors

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Automation Layers</text>
+
+  <rect x="40" y="86.194690265487" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--info-text)">Application code</text>
+  <text x="640" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">Tests, linting, formatting</text>
+
+  <path d="M 640 176.530973451327 L 640 207.327433628319" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="209.380530973451" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--primary-text)">CI/CD pipeline</text>
+  <text x="640" y="270.973451327434" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">Jenkins, GitHub Actions, GitLab CI -- build, test, deploy</text>
+
+  <path d="M 640 299.716814159292 L 640 330.513274336283" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="332.566371681416" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="368.495575221239" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">Configuration management</text>
+  <text x="640" y="394.159292035398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">Ansible, Chef, Puppet -- install + configure</text>
+
+  <path d="M 640 422.902654867257 L 640 453.699115044248" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="455.752212389381" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="491.681415929204" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--ok-text)">Infrastructure as Code</text>
+  <text x="640" y="517.345132743363" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">Terraform, Pulumi, CloudFormation -- provision compute, network, storage</text>
+
+  <rect x="40" y="558.407079646018" width="1200" height="61.592920353982" rx="6.183048479155" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="589.203539823009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--text)">Each layer is reproducible from a git repo</text>
+  <text x="640" y="609.734513274336" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" font-style="italic" fill="var(--text-muted)">No more "it works on the prod box"</text>
+</svg>

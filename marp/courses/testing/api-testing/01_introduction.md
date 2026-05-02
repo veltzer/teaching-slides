@@ -53,6 +53,11 @@ audience:
 - Inversion is a smell
 
 ---
+## Where API Tests Sit
+
+![api_testing_pyramid](svg/courses/testing/api-testing/01_introduction/api_testing_pyramid.svg)
+
+---
 ## What to Test
 
 - Happy paths: 200 responses, correct shape

@@ -12,6 +12,11 @@ audience:
 # Word Embeddings
 
 ---
+## Sparse vs Dense
+
+![embeddings](svg/courses/ai/natural-language-processing/05_word_embeddings/embeddings.svg)
+
+---
 ## What This Chapter Covers
 
 - From sparse counts to dense vectors and why that shift mattered

@@ -12,6 +12,11 @@ audience:
 # Text Preprocessing and Tokenization
 
 ---
+## Tokenization Strategies
+
+![tokenization](svg/courses/ai/natural-language-processing/02_text_preprocessing_and_tokenization/tokenization.svg)
+
+---
 ## What This Chapter Covers
 
 - Character encoding and the realities of `Unicode`

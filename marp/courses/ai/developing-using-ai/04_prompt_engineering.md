@@ -12,9 +12,16 @@ audience:
 ---
 # Prompt Engineering for Developers
 
+## The Art and Science of AI Communication
+
+---
+## Prompt Anatomy
+
+![prompt_anatomy](svg/courses/ai/developing-using-ai/04_prompt_engineering/prompt_anatomy.svg)
+
 ---
 
-## The Art and Science of AI Communication
+## Chapter Overview
 
 Master the language that makes AI understand exactly what you need
 

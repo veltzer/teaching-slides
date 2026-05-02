@@ -45,6 +45,11 @@ audience:
 - HA: multiple control plane replicas
 
 ---
+## Control Plane and Nodes
+
+![control_plane](svg/courses/containers/kubernetes/01_introduction_to_kubernetes/control_plane.svg)
+
+---
 ## Pod
 
 - The smallest deployable unit

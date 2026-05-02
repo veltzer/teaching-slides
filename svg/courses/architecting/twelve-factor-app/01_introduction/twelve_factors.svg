@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Twelve Factors at a Glance</text>
+  <rect x="40" y="80" width="290" height="160" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Codebase + deps</text>
+  <text x="60" y="140" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">1. One codebase, many deploys</text>
+  <text x="60" y="165" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">2. Explicit dependencies</text>
+  <text x="60" y="195" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">3. Config in environment</text>
+  <text x="60" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">4. Backing services as resources</text>
+
+  <rect x="345" y="80" width="290" height="160" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Build &amp; run</text>
+  <text x="365" y="140" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">5. Build, release, run separated</text>
+  <text x="365" y="165" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">6. Stateless processes</text>
+  <text x="365" y="195" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">7. Port binding</text>
+  <text x="365" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">8. Concurrency via process model</text>
+
+  <rect x="650" y="80" width="290" height="160" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="795" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Operations</text>
+  <text x="670" y="140" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">9. Disposable, fast startup</text>
+  <text x="670" y="165" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">10. Dev / prod parity</text>
+  <text x="670" y="195" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">11. Logs as event streams</text>
+  <text x="670" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">12. Admin tasks as one-offs</text>
+
+  <rect x="955" y="80" width="285" height="160" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1097" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Why it matters</text>
+  <text x="975" y="140" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Cloud-native by default</text>
+  <text x="975" y="165" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Twelve heuristics</text>
+  <text x="975" y="195" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Not laws, defaults</text>
+  <text x="975" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Defaults</text>
+
+  <rect x="40" y="280" width="1200" height="340" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">The big idea</text>
+  <text x="60" y="365" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">Portability between environments</text>
+  <text x="60" y="400" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">Cloud deployment ready</text>
+  <text x="60" y="435" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">Dev / prod parity</text>
+  <text x="60" y="470" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">Continuous deployment</text>
+  <text x="60" y="505" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">Scale without rewrites</text>
+  <text x="60" y="565" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">By Heroku, 2011 — still the playbook</text>
+</svg>

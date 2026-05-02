@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">VPC Anatomy</text>
+
+  <rect x="40" y="86.194690265487" width="1200" height="461.946902654867" rx="14.427113118027" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="81.379310344828" y="122.12389380531" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--primary-text)">VPC 10.0.0.0/16</text>
+
+  <rect x="81.379310344828" y="147.787610619469" width="517.241379310345" height="195.044247787611" rx="10.305080798591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="183.716814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--ok-text)">Public subnet 10.0.1.0/24</text>
+  <text x="102.068965517241" y="214.513274336283" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">Routes 0.0.0.0/0 -&gt; IGW</text>
+  <text x="102.068965517241" y="240.176991150443" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">EC2 with public IP, ALB, NAT gw</text>
+  <text x="102.068965517241" y="281.238938053097" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--ok-text)">Internet-facing</text>
+
+  <rect x="660.689655172414" y="147.787610619469" width="558.620689655172" height="195.044247787611" rx="10.305080798591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="183.716814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--warn-text)">Private subnet 10.0.2.0/24</text>
+  <text x="681.379310344828" y="214.513274336283" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">No 0.0.0.0/0 -&gt; IGW</text>
+  <text x="681.379310344828" y="240.176991150443" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">Egress via NAT gw in public subnet</text>
+  <text x="681.379310344828" y="281.238938053097" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--warn-text)">DBs, app servers</text>
+
+  <rect x="81.379310344828" y="373.628318584071" width="517.241379310345" height="143.716814159292" rx="10.305080798591" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="409.557522123894" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--info-text)">Security Group</text>
+  <text x="102.068965517241" y="440.353982300885" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">Stateful firewall on instance</text>
+  <text x="102.068965517241" y="466.017699115044" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">Allow rules only</text>
+  <text x="102.068965517241" y="491.681415929204" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">Reference other SGs</text>
+
+  <rect x="660.689655172414" y="373.628318584071" width="558.620689655172" height="143.716814159292" rx="10.305080798591" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="409.557522123894" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--info-text)">Network ACL</text>
+  <text x="681.379310344828" y="440.353982300885" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">Stateless firewall on subnet</text>
+  <text x="681.379310344828" y="466.017699115044" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">Allow + deny rules</text>
+  <text x="681.379310344828" y="491.681415929204" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">Coarser, defense in depth</text>
+
+  <rect x="40" y="568.672566371681" width="1200" height="51.327433628319" rx="6.183048479155" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="599.469026548673" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text-muted)">Multi-AZ: replicate subnets across availability zones</text>
+</svg>

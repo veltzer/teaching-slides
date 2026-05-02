@@ -29,6 +29,11 @@ audience:
 - A practice, not a tool
 
 ---
+## Why It Earns Its Time
+
+![review_value](svg/courses/development_methodologies/code-review-best-practices/01_why_code_review_matters/review_value.svg)
+
+---
 ## The Direct Benefits
 
 - **Catches bugs early**: cheaper to fix before merge

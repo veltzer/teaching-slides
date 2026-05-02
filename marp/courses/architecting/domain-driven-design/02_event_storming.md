@@ -46,6 +46,11 @@ audience:
 - **Purple**: policies and process managers
 
 ---
+## Sticky Colors at a Glance
+
+![sticky_colors](svg/courses/architecting/domain-driven-design/02_event_storming/sticky_colors.svg)
+
+---
 ## Three Levels of Event Storming
 
 - **Big Picture**: explore the whole domain; broad strokes

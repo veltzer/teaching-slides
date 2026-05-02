@@ -20,6 +20,11 @@ audience:
 - Best practices
 
 ---
+## Compare and Contrast
+
+![config_secret](svg/courses/containers/kubernetes/05_configmaps_and_secrets/config_secret.svg)
+
+---
 ## ConfigMap
 
 - Key-value pairs

@@ -19,6 +19,11 @@ audience:
 - A short tour of OOP's history
 
 ---
+## The Four Pillars
+
+![object_pillars](svg/courses/principles/object-oriented-programming/01_introduction_to_object_oriented_thinking/object_pillars.svg)
+
+---
 ## The Procedural Model
 
 - Code is organised as functions that operate on data

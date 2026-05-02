@@ -31,6 +31,11 @@ audience:
 - Most warehouses speak SQL — learn it once, use it everywhere
 
 ---
+## Anatomy of a Query
+
+![sql_query_anatomy](svg/courses/data_science/data-analyst-fundamentals/02_sql_for_analysts/sql_query_anatomy.svg)
+
+---
 ## SELECT, WHERE
 
 ```sql

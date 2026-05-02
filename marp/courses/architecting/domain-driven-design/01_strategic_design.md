@@ -59,6 +59,11 @@ audience:
 - The unit of "this is one team's responsibility"
 
 ---
+## Bounded Contexts in Practice
+
+![bounded_context](svg/courses/architecting/domain-driven-design/01_strategic_design/bounded_context.svg)
+
+---
 ## Why Bounded Contexts
 
 - Without them, every concept becomes "global" — `User` means everything

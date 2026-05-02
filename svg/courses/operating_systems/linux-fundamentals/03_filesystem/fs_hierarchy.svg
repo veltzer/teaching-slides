@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Linux Filesystem Hierarchy</text>
+
+  <rect x="536.551724137931" y="86.194690265487" width="206.896551724138" height="61.592920353982" rx="6.183048479155" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--primary-text)">/ (root)</text>
+
+  <path d="M 640 149.840707964602 L 184.827586206897 209.380530973451" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 640 149.840707964602 L 391.724137931034 209.380530973451" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 640 149.840707964602 L 640 209.380530973451" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 640 149.840707964602 L 888.275862068966 209.380530973451" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 640 149.840707964602 L 1095.172413793103 209.380530973451" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="81.379310344828" y="209.380530973451" width="206.896551724138" height="164.247787610619" rx="6.183048479155" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--info-text)">/bin /usr/bin</text>
+  <text x="184.827586206897" y="276.106194690266" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">User commands</text>
+  <text x="184.827586206897" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">/sbin /usr/sbin</text>
+  <text x="184.827586206897" y="332.566371681416" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">Admin commands</text>
+
+  <rect x="308.965517241379" y="209.380530973451" width="165.51724137931" height="164.247787610619" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="391.724137931034" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--warn-text)">/etc</text>
+  <text x="391.724137931034" y="276.106194690266" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--warn-text)">Config files</text>
+  <text x="391.724137931034" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--warn-text)">passwd, ssh,</text>
+  <text x="391.724137931034" y="332.566371681416" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--warn-text)">systemd</text>
+
+  <rect x="536.551724137931" y="209.380530973451" width="206.896551724138" height="164.247787610619" rx="6.183048479155" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--ok-text)">/home</text>
+  <text x="640" y="276.106194690266" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--ok-text)">User homes</text>
+  <text x="640" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--ok-text)">~/.bashrc</text>
+  <text x="640" y="332.566371681416" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--ok-text)">~/.config</text>
+
+  <rect x="784.827586206897" y="209.380530973451" width="206.896551724138" height="164.247787610619" rx="6.183048479155" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="888.275862068966" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--info-text)">/var</text>
+  <text x="888.275862068966" y="276.106194690266" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">Variable data</text>
+  <text x="888.275862068966" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">/var/log</text>
+  <text x="888.275862068966" y="332.566371681416" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">/var/lib</text>
+
+  <rect x="1033.103448275862" y="209.380530973451" width="206.896551724138" height="164.247787610619" rx="6.183048479155" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1136.551724137931" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--danger-text)">/proc /sys</text>
+  <text x="1136.551724137931" y="276.106194690266" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--danger-text)">Virtual fs</text>
+  <text x="1136.551724137931" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--danger-text)">Kernel state</text>
+  <text x="1136.551724137931" y="332.566371681416" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--danger-text)">/proc/PID</text>
+
+  <rect x="40" y="414.690265486726" width="1200" height="205.309734513274" rx="10.305080798591" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="450.619469026549" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--text)">FHS = Filesystem Hierarchy Standard</text>
+  <text x="60.689655172414" y="486.548672566372" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">/tmp -- ephemeral, often cleared on reboot</text>
+  <text x="60.689655172414" y="512.212389380531" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">/opt -- third-party packages</text>
+  <text x="60.689655172414" y="537.87610619469" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">/dev -- device nodes (sda, tty, null)</text>
+  <text x="60.689655172414" y="578.938053097345" font-family="Arial, sans-serif" font-size="13.396605038168" font-style="italic" fill="var(--text-muted)">Predictable layout = portable scripts</text>
+</svg>

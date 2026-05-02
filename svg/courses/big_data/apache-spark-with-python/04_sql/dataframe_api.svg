@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Spark DataFrame API</text>
+
+  <rect x="40" y="86.194690265487" width="579.310344827586" height="225.840707964602" rx="10.305080798591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">RDD (low-level)</text>
+  <rect x="60.689655172414" y="147.787610619469" width="537.931034482759" height="123.185840707965" rx="6.183048479155" fill="var(--surface)"/>
+  <text x="81.379310344828" y="178.58407079646" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text)">data.map(parse).filter(...)</text>
+  <text x="81.379310344828" y="204.247787610619" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text)">  .map(extract).reduceByKey(...)</text>
+  <text x="81.379310344828" y="245.309734513274" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">No optimizer; you tune</text>
+
+  <rect x="660.689655172414" y="86.194690265487" width="579.310344827586" height="225.840707964602" rx="10.305080798591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--ok-text)">DataFrame (high-level)</text>
+  <rect x="681.379310344828" y="147.787610619469" width="537.931034482759" height="123.185840707965" rx="6.183048479155" fill="var(--surface)"/>
+  <text x="702.068965517241" y="178.58407079646" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text)">df.filter(col("status") == "ok")</text>
+  <text x="702.068965517241" y="204.247787610619" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text)">  .groupBy("country").count()</text>
+  <text x="702.068965517241" y="245.309734513274" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">Catalyst optimizer plans it</text>
+
+  <rect x="40" y="353.097345132743" width="1200" height="266.902654867257" rx="10.305080798591" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="389.026548672566" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--text)">Why DataFrame wins</text>
+  <text x="60.689655172414" y="424.955752212389" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">- Catalyst rewrites: predicate pushdown, column pruning</text>
+  <text x="60.689655172414" y="455.752212389381" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">- Tungsten: code-gen, off-heap memory</text>
+  <text x="60.689655172414" y="486.548672566372" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">- Same plan whether Python, Scala, SQL</text>
+  <text x="60.689655172414" y="517.345132743363" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">- Schema enforced; clear errors</text>
+  <text x="60.689655172414" y="563.53982300885" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--text)">Use DataFrame / SQL by default; RDD only for special cases</text>
+  <text x="60.689655172414" y="594.336283185841" font-family="Arial, sans-serif" font-size="13.396605038168" font-style="italic" fill="var(--text-muted)">PySpark UDFs are slow; prefer built-in functions</text>
+</svg>

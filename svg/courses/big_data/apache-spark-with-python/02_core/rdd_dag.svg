@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Spark RDD: Lineage &amp; Lazy Evaluation</text>
+
+  <rect x="40" y="86.194690265487" width="165.51724137931" height="82.12389380531" rx="6.183048479155" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="122.758620689655" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--info-text)">RDD</text>
+  <text x="122.758620689655" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">load file</text>
+
+  <path d="M 207.586206896552 127.256637168142 L 248.965517241379 127.256637168142" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="257.241379310345" y="86.194690265487" width="165.51724137931" height="82.12389380531" rx="6.183048479155" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--ok-text)">map()</text>
+  <text x="340" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--ok-text)">parse JSON</text>
+
+  <path d="M 424.827586206897 127.256637168142 L 466.206896551724 127.256637168142" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="474.48275862069" y="86.194690265487" width="165.51724137931" height="82.12389380531" rx="6.183048479155" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="557.241379310345" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--ok-text)">filter()</text>
+  <text x="557.241379310345" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--ok-text)">status=ok</text>
+
+  <path d="M 642.068965517241 127.256637168142 L 683.448275862069 127.256637168142" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="691.724137931035" y="86.194690265487" width="165.51724137931" height="82.12389380531" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="774.48275862069" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--warn-text)">groupBy()</text>
+  <text x="774.48275862069" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--warn-text)">SHUFFLE</text>
+
+  <path d="M 859.310344827586 127.256637168142 L 900.689655172414 127.256637168142" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="908.965517241379" y="86.194690265487" width="165.51724137931" height="82.12389380531" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="991.724137931035" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--warn-text)">count()</text>
+  <text x="991.724137931035" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--warn-text)">action!</text>
+
+  <text x="81.379310344828" y="209.380530973451" font-family="Arial, sans-serif" font-size="13.396605038168" font-style="italic" fill="var(--text-muted)">Transformations are lazy: they build a DAG. Action triggers execution.</text>
+
+  <rect x="40" y="250.442477876106" width="579.310344827586" height="205.309734513274" rx="10.305080798591" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="286.371681415929" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--info-text)">Narrow vs wide</text>
+  <text x="60.689655172414" y="317.16814159292" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">Narrow: map, filter, union</text>
+  <text x="60.689655172414" y="342.83185840708" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">  one parent partition -&gt; one child</text>
+  <text x="60.689655172414" y="373.628318584071" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">Wide: groupBy, join, distinct</text>
+  <text x="60.689655172414" y="399.29203539823" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">  shuffle: many -&gt; many</text>
+  <text x="60.689655172414" y="435.221238938053" font-family="Arial, sans-serif" font-size="12.366096958309" font-style="italic" fill="var(--info-text)">Wide is the cost</text>
+
+  <rect x="660.689655172414" y="250.442477876106" width="579.310344827586" height="205.309734513274" rx="10.305080798591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="286.371681415929" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">Stages and tasks</text>
+  <text x="681.379310344828" y="317.16814159292" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">Wide deps split into stages</text>
+  <text x="681.379310344828" y="342.83185840708" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">Stage = pipeline of narrow</text>
+  <text x="681.379310344828" y="373.628318584071" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">Each task = one partition</text>
+  <text x="681.379310344828" y="404.424778761062" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">Tasks distributed to workers</text>
+
+  <rect x="40" y="486.548672566372" width="1200" height="133.451327433628" rx="10.305080798591" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="522.477876106195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--text)">Lineage = fault tolerance</text>
+  <text x="640" y="553.274336283186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text-muted)">If a partition is lost, recompute from its parents</text>
+  <text x="640" y="584.070796460177" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text-muted)">No replication needed; the recipe is enough</text>
+</svg>

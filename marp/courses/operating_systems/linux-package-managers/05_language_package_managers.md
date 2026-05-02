@@ -40,6 +40,11 @@ Every modern language package manager has roughly the same parts:
 Once you know one, the rest are vocabulary changes.
 
 ---
+## Three Common Themes
+
+![lang_pkg_themes](svg/courses/operating_systems/linux-package-managers/05_language_package_managers/lang_pkg_themes.svg)
+
+---
 ## `Python`: `pip`, `venv`, `pipx`, `poetry`, `uv`
 
 `Python` packaging is famously fragmented. The pieces:

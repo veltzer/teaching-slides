@@ -20,6 +20,11 @@ audience:
 - Errors
 
 ---
+## CRUD at a Glance
+
+![crud_methods](svg/courses/databases/mongodb-for-developers/05_crud_operations_in_applications/crud_methods.svg)
+
+---
 ## Insert
 
 ```python

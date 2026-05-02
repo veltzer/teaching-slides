@@ -19,6 +19,11 @@ audience:
 - A service description fits in one sentence
 
 ---
+## Four Service Principles
+
+![service_principles](svg/courses/architecting/microservices-architecture/02_principles/service_principles.svg)
+
+---
 ## Independent Deployability
 
 - A service can be deployed without coordinating with other services

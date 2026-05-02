@@ -27,6 +27,11 @@ audience:
 - Not the only good API style — gRPC and GraphQL are also valid
 
 ---
+## REST in One Picture
+
+![rest_principles](svg/courses/architecting/api-design-best-practices/02_rest_api_design/rest_principles.svg)
+
+---
 ## Resources
 
 - A resource is anything important enough to name and refer to
