@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="637.510373443983" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.941848327675" font-weight="bold" fill="var(--text)">A Typical ML Pipeline</text>
+  <rect x="40" y="100" width="189.211618257261" height="160" rx="9.979231545598" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="134.605809128631" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.966770472957" font-weight="bold" fill="var(--info-text)">1. Data</text>
+  <text x="134.605809128631" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--info-text)">Collect, label</text>
+  <text x="134.605809128631" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--info-text)">Clean, split</text>
+  <text x="134.605809128631" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--info-text)">Train / val / test</text>
+
+  <rect x="244.149377593361" y="100" width="189.211618257261" height="160" rx="9.979231545598" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="338.755186721992" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.966770472957" font-weight="bold" fill="var(--primary-text)">2. Features</text>
+  <text x="338.755186721992" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--primary-text)">Encode, scale</text>
+  <text x="338.755186721992" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--primary-text)">Engineer signals</text>
+  <text x="338.755186721992" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--primary-text)">Select features</text>
+
+  <rect x="448.298755186722" y="100" width="189.211618257261" height="160" rx="9.979231545598" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="542.904564315353" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.966770472957" font-weight="bold" fill="var(--warn-text)">3. Model</text>
+  <text x="542.904564315353" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--warn-text)">Pick algorithm</text>
+  <text x="542.904564315353" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--warn-text)">Train, tune</text>
+  <text x="542.904564315353" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--warn-text)">Cross-validate</text>
+
+  <rect x="652.448132780083" y="100" width="189.211618257261" height="160" rx="9.979231545598" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="747.053941908714" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.966770472957" font-weight="bold" fill="var(--ok-text)">4. Evaluate</text>
+  <text x="747.053941908714" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--ok-text)">Metrics on test</text>
+  <text x="747.053941908714" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--ok-text)">Confusion matrix</text>
+  <text x="747.053941908714" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--ok-text)">Honest report</text>
+
+  <rect x="856.597510373444" y="100" width="189.211618257261" height="160" rx="9.979231545598" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="951.203319502075" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.966770472957" font-weight="bold" fill="var(--danger-text)">5. Deploy</text>
+  <text x="951.203319502075" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--danger-text)">Package model</text>
+  <text x="951.203319502075" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--danger-text)">Serve via API</text>
+  <text x="951.203319502075" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--danger-text)">Shadow mode first</text>
+
+  <rect x="1060.746887966805" y="100" width="179.253112033195" height="160" rx="9.979231545598" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1150.373443983402" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.966770472957" font-weight="bold" fill="var(--info-text)">6. Monitor</text>
+  <text x="1150.373443983402" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--info-text)">Drift, accuracy</text>
+  <text x="1150.373443983402" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--info-text)">Latency, errors</text>
+  <text x="1150.373443983402" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.973001009278" fill="var(--info-text)">Retrain plan</text>
+
+  <rect x="40" y="320" width="1195.020746887967" height="300" rx="9.979231545598" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="637.510373443983" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.958463091197" font-weight="bold" fill="var(--text)">It's a loop, not a line</text>
+  <text x="59.917012448133" y="400" font-family="Arial, sans-serif" font-size="14.968847318397" fill="var(--text)">Most time goes to data and features, not model selection</text>
+  <text x="59.917012448133" y="435" font-family="Arial, sans-serif" font-size="14.968847318397" fill="var(--text)">A worse model with better features beats the reverse</text>
+  <text x="59.917012448133" y="470" font-family="Arial, sans-serif" font-size="14.968847318397" fill="var(--text)">Production reveals problems your test set never did</text>
+  <text x="59.917012448133" y="525" font-family="Arial, sans-serif" font-size="12.973001009278" font-style="italic" fill="var(--text-muted)">Keep training data versioned alongside model artifacts</text>
+</svg>

@@ -28,6 +28,11 @@ audience:
 - Each connection: separate Linux process
 
 ---
+## Process Architecture
+
+![postgres_processes](svg/courses/databases/postgresql-for-developers/01_postgresql_architecture_and_internals/postgres_processes.svg)
+
+---
 ## Storage Layout
 
 - Database = directory

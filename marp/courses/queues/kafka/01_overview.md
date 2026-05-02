@@ -35,6 +35,11 @@ audience:
 - Originally built at LinkedIn (2010); now Apache top-level
 
 ---
+## Cluster Topology
+
+![kafka_topology](svg/courses/queues/kafka/01_overview/kafka_topology.svg)
+
+---
 ## What "Commit Log" Means
 
 - An append-only sequence of records
