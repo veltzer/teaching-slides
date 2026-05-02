@@ -11,6 +11,11 @@ audience:
 # Best Practices and Production Patterns
 
 ---
+## Patterns
+
+![best_practices](svg/courses/data_engineering/apache-airflow/09_best_practices_and_production_patterns/best_practices.svg)
+
+---
 ## What This Chapter Covers
 
 - DAG design

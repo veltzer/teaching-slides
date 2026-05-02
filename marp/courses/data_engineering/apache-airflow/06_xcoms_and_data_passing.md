@@ -10,6 +10,11 @@ audience:
 # XComs and Data Passing
 
 ---
+## XCom Pattern
+
+![xcom_pattern](svg/courses/data_engineering/apache-airflow/06_xcoms_and_data_passing/xcom_pattern.svg)
+
+---
 ## What This Chapter Covers
 
 - XComs (cross-communication)

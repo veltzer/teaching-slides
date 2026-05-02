@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs/>
+
+  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Three Layers of Durability</text>
+
+  <rect x="60" y="100" width="370" height="240" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">1. Durable queue</text>
+  <text x="80" y="170" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">queue.declare(durable=true)</text>
+  <text x="80" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Survives broker restart</text>
+  <text x="80" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Definition persists</text>
+  <text x="80" y="270" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">Without this, queue gone</text>
+  <text x="80" y="295" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">on broker restart</text>
+
+  <rect x="455" y="100" width="370" height="240" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">2. Persistent message</text>
+  <text x="475" y="170" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">delivery_mode=2</text>
+  <text x="475" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Written to disk</text>
+  <text x="475" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Slower but safer</text>
+  <text x="475" y="270" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">Without this, msg lost</text>
+  <text x="475" y="295" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">on broker restart</text>
+
+  <rect x="850" y="100" width="370" height="240" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">3. Publisher confirms</text>
+  <text x="870" y="170" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">channel.confirm_select()</text>
+  <text x="870" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Broker acks each publish</text>
+  <text x="870" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Async or sync</text>
+  <text x="870" y="270" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-text)">Without this, msg lost</text>
+  <text x="870" y="295" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">if broker crashes mid-publish</text>
+
+  <rect x="60" y="380" width="1160" height="220" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Consumer-side reliability</text>
+  <text x="80" y="450" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Manual ack: ack only after successful processing</text>
+  <text x="80" y="480" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Prefetch: limit unacked count to prevent overload</text>
+  <text x="80" y="510" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Idempotent handlers: retries don't cause duplicates</text>
+  <text x="80" y="555" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">All three layers needed for at-least-once delivery</text>
+  <text x="80" y="585" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">Cluster + mirrored queues for HA</text>
+</svg>

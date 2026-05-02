@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs/>
+
+  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">JSONB in PostgreSQL</text>
+
+  <rect x="60" y="100" width="560" height="240" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">json vs jsonb</text>
+  <text x="80" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">json</text>
+  <text x="80" y="195" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">- Stored as text</text>
+  <text x="80" y="220" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">- Preserves whitespace, key order</text>
+  <text x="80" y="245" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">- Re-parsed on each query</text>
+  <text x="80" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">jsonb (almost always)</text>
+  <text x="80" y="305" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">- Binary, indexed, faster</text>
+  <text x="80" y="330" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">- Drops duplicate keys</text>
+
+  <rect x="660" y="100" width="560" height="240" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Operators</text>
+  <text x="680" y="170" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-text)">-&gt;</text>
+  <text x="720" y="170" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">get json field</text>
+  <text x="680" y="195" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-text)">-&gt;&gt;</text>
+  <text x="720" y="195" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">get text field</text>
+  <text x="680" y="220" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-text)">@&gt;</text>
+  <text x="720" y="220" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">contains</text>
+  <text x="680" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-text)">?</text>
+  <text x="720" y="245" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">key exists</text>
+  <text x="680" y="290" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">data -&gt; 'addr' -&gt;&gt; 'city'</text>
+  <text x="680" y="315" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">data @&gt; '{"role": "admin"}'</text>
+
+  <rect x="60" y="380" width="1160" height="220" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Indexing JSONB</text>
+  <text x="80" y="450" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">CREATE INDEX ON t USING gin (data jsonb_path_ops);</text>
+  <text x="80" y="480" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">CREATE INDEX ON t ((data-&gt;&gt;'email'));   -- expression index for one key</text>
+  <text x="80" y="525" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">When to use jsonb</text>
+  <text x="80" y="555" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Schema is dynamic, sparse, or evolves often. Don't use for everything.</text>
+  <text x="80" y="585" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">Promote frequently-queried fields to real columns</text>
+</svg>

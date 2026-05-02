@@ -11,6 +11,11 @@ audience:
 # State Management
 
 ---
+## State Options
+
+![state_options](svg/courses/architecting/serverless-architecture/04_state_management/state_options.svg)
+
+---
 ## What This Chapter Covers
 
 - Serverless functions are stateless

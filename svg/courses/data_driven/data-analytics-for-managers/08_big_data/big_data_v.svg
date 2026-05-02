@@ -2,45 +2,138 @@
   <metadata>
     <type>regular</type>
   </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
   <defs/>
 
-  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">The "V"s of Big Data</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">The "V"s of Big Data</text>
 
-  <rect x="60" y="100" width="370" height="240" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="245" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Volume</text>
-  <text x="80" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">A lot of data</text>
-  <text x="80" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Terabytes to exabytes</text>
-  <text x="80" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Beyond one machine</text>
-  <text x="80" y="265" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Distributed storage</text>
-  <text x="80" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--primary-text)">Hadoop, S3, GCS</text>
+  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="231.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--primary-text)">Volume</text>
+  <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--primary-text)">A lot of data</text>
+  <text x="60.689655172414" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Terabytes to exabytes</text>
+  <text x="60.689655172414" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Beyond one machine</text>
+  <text x="60.689655172414" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Distributed storage</text>
+  <text x="60.689655172414" y="290.091743119266" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--primary-text)">Hadoop, S3, GCS</text>
 
-  <rect x="455" y="100" width="370" height="240" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Velocity</text>
-  <text x="475" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">Fast incoming</text>
-  <text x="475" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Streams, IoT</text>
-  <text x="475" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Real-time processing</text>
-  <text x="475" y="265" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Sub-second decisions</text>
-  <text x="475" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">Kafka, Flink, Spark Streaming</text>
+  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--warn-text)">Velocity</text>
+  <text x="469.310344827586" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--warn-text)">Fast incoming</text>
+  <text x="469.310344827586" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Streams, IoT</text>
+  <text x="469.310344827586" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Real-time processing</text>
+  <text x="469.310344827586" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Sub-second decisions</text>
+  <text x="469.310344827586" y="290.091743119266" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--warn-text)">Kafka, Flink, Spark Streaming</text>
 
-  <rect x="850" y="100" width="370" height="240" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1035" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Variety</text>
-  <text x="870" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Many shapes</text>
-  <text x="870" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Structured (rows)</text>
-  <text x="870" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Semi (JSON, logs)</text>
-  <text x="870" y="265" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Unstructured (text, images)</text>
-  <text x="870" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--ok-text)">Lake stores all</text>
+  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1048.620689655173" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">Variety</text>
+  <text x="877.931034482759" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-text)">Many shapes</text>
+  <text x="877.931034482759" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Structured (rows)</text>
+  <text x="877.931034482759" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Semi (JSON, logs)</text>
+  <text x="877.931034482759" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Unstructured (text, images)</text>
+  <text x="877.931034482759" y="290.091743119266" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--ok-text)">Lake stores all</text>
 
-  <rect x="60" y="380" width="560" height="220" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Veracity (and now Value)</text>
-  <text x="80" y="450" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Quality matters: dirty data = bad</text>
-  <text x="80" y="475" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">decisions at scale</text>
-  <text x="80" y="510" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Value: don't store data without a use</text>
-  <text x="80" y="540" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">Data swamps are real</text>
+  <rect x="40" y="385.871559633028" width="579.310344827586" height="234.128440366972" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--info-text)">Veracity (and now Value)</text>
+  <text x="60.689655172414" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Quality matters: dirty data = bad</text>
+  <text x="60.689655172414" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">decisions at scale</text>
+  <text x="60.689655172414" y="524.220183486239" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Value: don't store data without a use</text>
+  <text x="60.689655172414" y="556.146788990826" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--info-text)">Data swamps are real</text>
 
-  <rect x="660" y="380" width="560" height="220" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="940" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">When you don't need it</text>
-  <text x="680" y="450" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Most companies' data fits in Postgres</text>
-  <text x="680" y="475" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Big data tools have big complexity</text>
-  <text x="680" y="510" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Use only when needed</text>
-  <text x="680" y="540" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">"Big data" is often medium data</text>
+  <rect x="660.689655172414" y="385.871559633028" width="579.310344827586" height="234.128440366972" rx="10.49246125174" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950.344827586207" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--text)">When you don't need it</text>
+  <text x="681.379310344828" y="460.366972477064" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">Most companies' data fits in Postgres</text>
+  <text x="681.379310344828" y="486.97247706422" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">Big data tools have big complexity</text>
+  <text x="681.379310344828" y="524.220183486239" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--text)">Use only when needed</text>
+  <text x="681.379310344828" y="556.146788990826" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--text-muted)">"Big data" is often medium data</text>
 </svg>

@@ -10,6 +10,11 @@ audience:
 # BI Introduction
 
 ---
+## Modern BI Stack
+
+![bi_stack](svg/courses/data_driven/data-analytics-for-managers/05_bi_introduction/bi_stack.svg)
+
+---
 ## What This Chapter Covers
 
 - What Business Intelligence is

@@ -2,47 +2,140 @@
   <metadata>
     <type>regular</type>
   </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
   <defs/>
 
-  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">XCom: Data Between Tasks</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">XCom: Data Between Tasks</text>
 
-  <rect x="60" y="100" width="240" height="100" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="180" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">extract_task</text>
-  <text x="180" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">return file_path</text>
-  <text x="180" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">(small string)</text>
+  <rect x="40" y="86.194690265487" width="248.275862068966" height="102.654867256637" rx="8.244064638873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="164.137931034483" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--info-text)">extract_task</text>
+  <text x="164.137931034483" y="152.920353982301" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">return file_path</text>
+  <text x="164.137931034483" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">(small string)</text>
 
-  <path d="M 302 150 L 432 150" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="367" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--text-muted)">XCom push</text>
+  <path d="M 290.344827586207 137.522123893805 L 424.827586206897 137.522123893805" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="357.586206896552" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.33558887845" font-weight="bold" fill="var(--text-muted)">XCom push</text>
 
-  <rect x="440" y="100" width="280" height="100" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="580" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Metadata DB</text>
-  <text x="580" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">Stored as serialized value</text>
-  <text x="580" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">Keyed by dag_id, task_id</text>
+  <rect x="433.103448275862" y="86.194690265487" width="289.655172413793" height="102.654867256637" rx="8.244064638873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="577.931034482759" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--warn-text)">Metadata DB</text>
+  <text x="577.931034482759" y="152.920353982301" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--warn-text)">Stored as serialized value</text>
+  <text x="577.931034482759" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--warn-text)">Keyed by dag_id, task_id</text>
 
-  <path d="M 722 150 L 852 150" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="787" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--text-muted)">XCom pull</text>
+  <path d="M 724.827586206897 137.522123893805 L 859.310344827586 137.522123893805" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="792.068965517241" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.33558887845" font-weight="bold" fill="var(--text-muted)">XCom pull</text>
 
-  <rect x="860" y="100" width="240" height="100" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="980" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">transform_task</text>
-  <text x="980" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">read file_path</text>
+  <rect x="867.586206896552" y="86.194690265487" width="248.275862068966" height="102.654867256637" rx="8.244064638873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="991.724137931035" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--ok-text)">transform_task</text>
+  <text x="991.724137931035" y="152.920353982301" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--ok-text)">read file_path</text>
 
-  <rect x="60" y="240" width="560" height="200" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Use XCom for</text>
-  <text x="80" y="305" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">- Small metadata (file paths, IDs)</text>
-  <text x="80" y="330" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">- Counts, status, primary keys</text>
-  <text x="80" y="355" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">- Job IDs from external systems</text>
-  <text x="80" y="395" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--ok-text)">Default backend: SQL row</text>
+  <rect x="40" y="229.911504424779" width="579.310344827586" height="205.309734513274" rx="10.305080798591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="265.840707964602" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--ok-text)">Use XCom for</text>
+  <text x="60.689655172414" y="296.637168141593" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">- Small metadata (file paths, IDs)</text>
+  <text x="60.689655172414" y="322.300884955752" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">- Counts, status, primary keys</text>
+  <text x="60.689655172414" y="347.964601769912" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">- Job IDs from external systems</text>
+  <text x="60.689655172414" y="389.026548672566" font-family="Arial, sans-serif" font-size="13.396605038168" font-style="italic" fill="var(--ok-text)">Default backend: SQL row</text>
 
-  <rect x="660" y="240" width="560" height="200" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Don't use for</text>
-  <text x="680" y="305" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">- Large dataframes</text>
-  <text x="680" y="330" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">- File contents</text>
-  <text x="680" y="355" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">- Anything &gt; few KB</text>
-  <text x="680" y="395" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--danger-text)">DB grows fast</text>
+  <rect x="660.689655172414" y="229.911504424779" width="579.310344827586" height="205.309734513274" rx="10.305080798591" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="265.840707964602" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--danger-text)">Don't use for</text>
+  <text x="681.379310344828" y="296.637168141593" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">- Large dataframes</text>
+  <text x="681.379310344828" y="322.300884955752" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">- File contents</text>
+  <text x="681.379310344828" y="347.964601769912" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">- Anything &gt; few KB</text>
+  <text x="681.379310344828" y="389.026548672566" font-family="Arial, sans-serif" font-size="13.396605038168" font-style="italic" fill="var(--danger-text)">DB grows fast</text>
 
-  <rect x="60" y="470" width="1160" height="150" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Pattern: pass references, not data</text>
-  <text x="640" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Task A writes file to S3 -&gt; XCom contains the S3 URL</text>
-  <text x="640" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Task B reads from S3</text>
-  <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">For real data: custom XCom backend (S3, Redis)</text>
+  <rect x="40" y="466.017699115044" width="1200" height="153.982300884956" rx="10.305080798591" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="501.946902654867" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--text)">Pattern: pass references, not data</text>
+  <text x="640" y="532.743362831858" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text-muted)">Task A writes file to S3 -&gt; XCom contains the S3 URL</text>
+  <text x="640" y="558.407079646018" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text-muted)">Task B reads from S3</text>
+  <text x="640" y="594.336283185841" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" font-style="italic" fill="var(--text-muted)">For real data: custom XCom backend (S3, Redis)</text>
 </svg>

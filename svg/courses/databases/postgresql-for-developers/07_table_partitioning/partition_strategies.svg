@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs/>
+
+  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Partitioning Strategies</text>
+
+  <rect x="60" y="100" width="370" height="240" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Range</text>
+  <text x="80" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">By value range</text>
+  <text x="80" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">events_2024_01</text>
+  <text x="80" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">events_2024_02</text>
+  <text x="80" y="250" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">events_2024_03</text>
+  <text x="80" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--primary-text)">Time-series default</text>
+
+  <rect x="455" y="100" width="370" height="240" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">List</text>
+  <text x="475" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">By exact value</text>
+  <text x="475" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">orders_us</text>
+  <text x="475" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">orders_eu</text>
+  <text x="475" y="250" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">orders_apac</text>
+  <text x="475" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--ok-text)">Region, tenant</text>
+
+  <rect x="850" y="100" width="370" height="240" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Hash</text>
+  <text x="870" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">By hash(key) % N</text>
+  <text x="870" y="200" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Even distribution</text>
+  <text x="870" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">No natural ranges</text>
+  <text x="870" y="250" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Fixed N at creation</text>
+  <text x="870" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">High-cardinality IDs</text>
+
+  <rect x="60" y="380" width="1160" height="220" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Why partition</text>
+  <text x="80" y="450" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Drop old data: DROP partition is instant; DELETE is slow</text>
+  <text x="80" y="480" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Constraint exclusion: planner skips irrelevant partitions</text>
+  <text x="80" y="510" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Vacuum / analyze run per partition (smaller working set)</text>
+  <text x="80" y="555" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">When NOT to partition</text>
+  <text x="80" y="585" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">Tables under ~10M rows; partition pruning isn't worth the complexity</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs/>
+
+  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Breaking vs Non-Breaking</text>
+
+  <rect x="60" y="100" width="560" height="500" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Non-breaking (additive)</text>
+  <text x="80" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Add new endpoint</text>
+  <text x="80" y="195" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Old clients ignore it</text>
+  <text x="80" y="240" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Add optional field</text>
+  <text x="80" y="265" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Request: optional with default</text>
+  <text x="80" y="290" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Response: clients ignore unknown</text>
+  <text x="80" y="335" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Add new enum value</text>
+  <text x="80" y="360" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">If clients tolerate unknowns</text>
+  <text x="80" y="405" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Loosen validation</text>
+  <text x="80" y="430" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Accept more inputs</text>
+  <text x="80" y="475" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Bump v1 -&gt; v1.1</text>
+  <text x="80" y="525" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--ok-text)">Stay on same major version</text>
+
+  <rect x="660" y="100" width="560" height="500" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Breaking</text>
+  <text x="680" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">Remove field or endpoint</text>
+  <text x="680" y="195" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Existing clients break</text>
+  <text x="680" y="240" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">Rename field</text>
+  <text x="680" y="265" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Equivalent to remove + add</text>
+  <text x="680" y="310" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">Change semantics</text>
+  <text x="680" y="335" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Same name, different meaning</text>
+  <text x="680" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">Tighten validation</text>
+  <text x="680" y="405" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Reject what was OK before</text>
+  <text x="680" y="450" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">Change auth requirements</text>
+  <text x="680" y="475" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Add new required scope</text>
+  <text x="680" y="525" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--danger-text)">v1 -&gt; v2; deprecation period</text>
+</svg>

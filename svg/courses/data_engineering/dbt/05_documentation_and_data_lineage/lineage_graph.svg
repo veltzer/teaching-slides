@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs/>
+
+  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">dbt Lineage</text>
+
+  <rect x="60" y="100" width="180" height="80" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">raw.users</text>
+  <text x="150" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">source</text>
+
+  <rect x="60" y="220" width="180" height="80" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">raw.orders</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">source</text>
+
+  <rect x="60" y="340" width="180" height="80" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">raw.events</text>
+  <text x="150" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">source</text>
+
+  <path d="M 242 140 L 372 200" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 242 260 L 372 240" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 242 380 L 372 280" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="380" y="180" width="200" height="120" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">stg_user_activity</text>
+  <text x="480" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-text)">staging</text>
+  <text x="480" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-text)">light cleanup</text>
+
+  <path d="M 582 240 L 712 240" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="720" y="180" width="200" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="820" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">int_active_users</text>
+  <text x="820" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-text)">intermediate</text>
+  <text x="820" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-text)">business logic</text>
+
+  <path d="M 922 240 L 1052 240" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="1060" y="180" width="180" height="120" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1150" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">mart_dau</text>
+  <text x="1150" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-text)">mart</text>
+  <text x="1150" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-text)">consumed by BI</text>
+
+  <rect x="60" y="450" width="1160" height="170" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Why lineage matters</text>
+  <text x="80" y="520" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Impact analysis: change a source, see what downstream breaks</text>
+  <text x="80" y="545" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Debugging: bad number in dashboard? Trace upstream</text>
+  <text x="80" y="570" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Auto-generated from `ref()` calls in models</text>
+  <text x="80" y="600" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">dbt docs generate -- builds the graph</text>
+</svg>

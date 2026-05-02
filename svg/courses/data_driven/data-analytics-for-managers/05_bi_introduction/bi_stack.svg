@@ -2,32 +2,125 @@
   <metadata>
     <type>regular</type>
   </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
   <defs/>
 
-  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Modern BI Stack</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Modern BI Stack</text>
 
-  <rect x="60" y="100" width="1160" height="80" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Sources</text>
-  <text x="640" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">App DBs, SaaS APIs (Salesforce, Stripe), event streams</text>
+  <rect x="40" y="86.194690265487" width="1200" height="82.12389380531" rx="10.305080798591" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--info-text)">Sources</text>
+  <text x="640" y="152.920353982301" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">App DBs, SaaS APIs (Salesforce, Stripe), event streams</text>
 
-  <path d="M 640 185 L 640 215" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 640 173.451327433628 L 640 204.247787610619" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="60" y="220" width="1160" height="80" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Ingest (EL)</text>
-  <text x="640" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Fivetran, Airbyte, custom -- land raw data in warehouse</text>
+  <rect x="40" y="209.380530973451" width="1200" height="82.12389380531" rx="10.305080798591" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--primary-text)">Ingest (EL)</text>
+  <text x="640" y="276.106194690266" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">Fivetran, Airbyte, custom -- land raw data in warehouse</text>
 
-  <path d="M 640 305 L 640 335" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 640 296.637168141593 L 640 327.433628318584" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="60" y="340" width="1160" height="80" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Warehouse + Transform (T)</text>
-  <text x="640" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Snowflake / BigQuery / Redshift; dbt for SQL transforms</text>
+  <rect x="40" y="332.566371681416" width="1200" height="82.12389380531" rx="10.305080798591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="368.495575221239" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">Warehouse + Transform (T)</text>
+  <text x="640" y="399.29203539823" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">Snowflake / BigQuery / Redshift; dbt for SQL transforms</text>
 
-  <path d="M 640 425 L 640 455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 640 419.823008849558 L 640 450.619469026549" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="60" y="460" width="1160" height="80" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">BI Tools</text>
-  <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Tableau, Looker, Power BI, Metabase, Superset</text>
+  <rect x="40" y="455.752212389381" width="1200" height="82.12389380531" rx="10.305080798591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="491.681415929204" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--ok-text)">BI Tools</text>
+  <text x="640" y="522.477876106195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">Tableau, Looker, Power BI, Metabase, Superset</text>
 
-  <rect x="60" y="560" width="1160" height="60" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">ELT &gt; ETL: cheap warehouse compute lets you transform after loading</text>
+  <rect x="40" y="558.407079646018" width="1200" height="61.592920353982" rx="8.244064638873" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="594.336283185841" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text-muted)">ELT &gt; ETL: cheap warehouse compute lets you transform after loading</text>
 </svg>

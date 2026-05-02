@@ -10,6 +10,11 @@ audience:
 # Big Data
 
 ---
+## The "V"s
+
+![big_data_v](svg/courses/data_driven/data-analytics-for-managers/08_big_data/big_data_v.svg)
+
+---
 ## What This Chapter Covers
 
 - What "big" means, in practice

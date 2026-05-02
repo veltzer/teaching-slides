@@ -10,6 +10,11 @@ audience:
 # Serverless Design Patterns
 
 ---
+## Pattern Overview
+
+![event_patterns](svg/courses/architecting/serverless-architecture/02_serverless_design_patterns/event_patterns.svg)
+
+---
 ## What This Chapter Covers
 
 - Common serverless patterns
