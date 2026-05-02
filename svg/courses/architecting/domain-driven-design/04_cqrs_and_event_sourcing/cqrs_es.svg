@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <metadata><type>regular</type></metadata>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">CQRS and Event Sourcing</text>
+  <rect x="40" y="80" width="585" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="332" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">CQRS — split read and write</text>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Commands change state</text>
+  <text x="60" y="190" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Queries return data, no side effects</text>
+  <text x="60" y="220" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Different models on each side</text>
+  <text x="60" y="270" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">Why bother</text>
+  <text x="60" y="300" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Read paths can denormalize freely</text>
+  <text x="60" y="330" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Write paths stay consistent</text>
+  <text x="60" y="360" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Scale them independently</text>
+  <text x="60" y="420" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--primary-text)">Overkill for simple CRUD</text>
+  <rect x="640" y="80" width="600" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Event sourcing — store events</text>
+  <text x="660" y="160" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">State = fold of past events</text>
+  <text x="660" y="190" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Append-only event store</text>
+  <text x="660" y="220" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Replay to rebuild any view</text>
+  <text x="660" y="270" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">Trade-offs</text>
+  <text x="660" y="300" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Full audit log for free</text>
+  <text x="660" y="330" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Schema migration is painful</text>
+  <text x="660" y="360" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Need a snapshot strategy</text>
+  <text x="660" y="420" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">Pairs naturally with CQRS</text>
+</svg>
