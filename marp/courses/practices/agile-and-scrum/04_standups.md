@@ -31,6 +31,11 @@ audience:
 - *Not* a problem-solving meeting
 
 ---
+## Pitfalls and Patterns
+
+![standup_pitfalls](svg/courses/practices/agile-and-scrum/04_standups/standup_pitfalls.svg)
+
+---
 ## Why It Exists
 
 - Developers coordinate: what one person did affects what another does

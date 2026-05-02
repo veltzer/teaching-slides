@@ -29,6 +29,11 @@ audience:
 - Coined by Bertrand Meyer for the Eiffel language (1980s)
 
 ---
+## Three Clauses
+
+![contract_clauses](svg/courses/principles/object-oriented-programming/09_design_by_contract/contract_clauses.svg)
+
+---
 ## Preconditions
 
 - What must be true *before* a method runs

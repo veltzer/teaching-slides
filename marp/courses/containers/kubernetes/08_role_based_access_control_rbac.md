@@ -29,6 +29,11 @@ audience:
 - Combine: who can do what to what
 
 ---
+## RBAC Model
+
+![rbac_model](svg/courses/containers/kubernetes/08_role_based_access_control_rbac/rbac_model.svg)
+
+---
 ## Roles
 
 - Permissions per namespace

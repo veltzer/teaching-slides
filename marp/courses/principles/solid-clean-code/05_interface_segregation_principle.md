@@ -29,6 +29,11 @@ audience:
 - Solution: many small interfaces, each focused on a *role*
 
 ---
+## Fat vs Split
+
+![isp_split](svg/courses/principles/solid-clean-code/05_interface_segregation_principle/isp_split.svg)
+
+---
 ## A Smelly Interface
 
 ```java

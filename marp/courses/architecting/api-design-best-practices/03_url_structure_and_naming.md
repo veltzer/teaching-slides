@@ -18,6 +18,11 @@ audience:
 - Spend effort getting URLs right; they outlast almost everything else
 
 ---
+## URL Anatomy
+
+![url_anatomy](svg/courses/architecting/api-design-best-practices/03_url_structure_and_naming/url_anatomy.svg)
+
+---
 ## Resource Naming
 
 - Use nouns, not verbs: `/orders`, not `/getOrders`

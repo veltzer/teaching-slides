@@ -30,6 +30,11 @@ audience:
 - 100M URLs / month
 
 ---
+## Key Decisions
+
+![url_shortener](svg/courses/architecting/system-design/08_case_study_url_shortener/url_shortener.svg)
+
+---
 ## Capacity Estimation
 
 - 100M / month = ~40 / sec writes

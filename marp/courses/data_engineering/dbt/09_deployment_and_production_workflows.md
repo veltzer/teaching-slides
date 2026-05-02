@@ -21,6 +21,11 @@ audience:
 - Monitoring
 
 ---
+## Environments and Schedules
+
+![dbt_envs](svg/courses/data_engineering/dbt/09_deployment_and_production_workflows/dbt_envs.svg)
+
+---
 ## dbt Cloud
 
 - Hosted IDE + scheduler

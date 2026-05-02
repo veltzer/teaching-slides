@@ -30,6 +30,11 @@ audience:
 - Even "your laptop" + cloud is a distributed system
 
 ---
+## Fallacies
+
+![fallacies](svg/courses/architecting/distributed-systems-fundamentals/01_introduction_to_distributed_systems/fallacies.svg)
+
+---
 ## Why Distribute
 
 - Scale: more capacity than one machine

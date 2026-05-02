@@ -29,6 +29,11 @@ audience:
 - **Singleton**: exactly one instance (use sparingly)
 
 ---
+## Smells to Watch For
+
+![oop_smells](svg/courses/principles/object-oriented-programming/11_oop_in_practice/oop_smells.svg)
+
+---
 ## Refactoring Procedural to OOP
 
 - Find functions that always operate on the same dictionary or struct

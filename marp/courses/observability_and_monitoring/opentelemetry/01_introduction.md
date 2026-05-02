@@ -28,6 +28,11 @@ audience:
 - CNCF graduated project
 
 ---
+## What OTel Standardizes
+
+![otel_pillars](svg/courses/observability_and_monitoring/opentelemetry/01_introduction/otel_pillars.svg)
+
+---
 ## History
 
 - Merger of OpenCensus + OpenTracing (2019)

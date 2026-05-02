@@ -19,6 +19,11 @@ audience:
 - The app does not manage log files
 
 ---
+## Streams Not Files
+
+![logs_as_streams](svg/courses/architecting/twelve-factor-app/12_logs/logs_as_streams.svg)
+
+---
 ## Logs Are Streams
 
 - A log is a time-ordered stream of events

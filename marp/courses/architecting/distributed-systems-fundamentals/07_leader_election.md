@@ -30,6 +30,11 @@ audience:
 - Most distributed systems have a leader somewhere
 
 ---
+## Election Approaches
+
+![election_methods](svg/courses/architecting/distributed-systems-fundamentals/07_leader_election/election_methods.svg)
+
+---
 ## When You Need One
 
 - Replication: leader takes writes; followers copy

@@ -19,6 +19,11 @@ audience:
 - The same codebase produces every environment's deploy
 
 ---
+## Mental Model
+
+![one_repo_many_deploys](svg/courses/architecting/twelve-factor-app/02_codebase/one_repo_many_deploys.svg)
+
+---
 ## What "One Codebase" Means
 
 - A single git repository (or equivalent) per app

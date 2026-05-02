@@ -28,6 +28,11 @@ audience:
 - Tokens encode (or reference) the granted permissions
 
 ---
+## Four Actors
+
+![oauth_actors](svg/courses/networking/oauth2-and-oidc/02_oauth2_basics/oauth_actors.svg)
+
+---
 ## Standard Endpoints
 
 - `/authorize` — where users land to grant consent

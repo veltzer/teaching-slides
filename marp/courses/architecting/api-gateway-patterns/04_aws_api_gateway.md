@@ -30,6 +30,11 @@ audience:
 - Choose: HTTP API by default for new work; REST when you need a feature
 
 ---
+## At a Glance
+
+![aws_gateway_kinds](svg/courses/architecting/api-gateway-patterns/04_aws_api_gateway/aws_gateway_kinds.svg)
+
+---
 ## Integration Types
 
 - **Lambda Proxy**: gateway forwards request to Lambda; passes return

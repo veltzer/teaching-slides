@@ -19,6 +19,11 @@ audience:
 - Custom packages
 
 ---
+## Package Ecosystem
+
+![package_ecosystem](svg/courses/data_engineering/dbt/08_macros_packages_and_reusability/package_ecosystem.svg)
+
+---
 ## Macros
 
 - Reusable Jinja code

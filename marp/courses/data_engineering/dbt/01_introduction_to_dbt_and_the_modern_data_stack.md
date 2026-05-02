@@ -28,6 +28,11 @@ audience:
 - Open source + dbt Cloud
 
 ---
+## ELT Position
+
+![elt_position](svg/courses/data_engineering/dbt/01_introduction_to_dbt_and_the_modern_data_stack/elt_position.svg)
+
+---
 ## Modern Data Stack
 
 - Source &#8594; Loader (Fivetran, Airbyte) &#8594; Warehouse (Snowflake, BigQuery)

@@ -28,6 +28,11 @@ audience:
 - None: manually triggered
 
 ---
+## Scheduling Concepts
+
+![schedule_intervals](svg/courses/data_engineering/apache-airflow/05_scheduling_and_execution/schedule_intervals.svg)
+
+---
 ## Data Interval
 
 - Each DAG run covers a data interval

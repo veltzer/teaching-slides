@@ -27,6 +27,11 @@ audience:
 - Each operator is one task type
 
 ---
+## Operator Kinds
+
+![operator_kinds](svg/courses/data_engineering/apache-airflow/03_operators/operator_kinds.svg)
+
+---
 ## PythonOperator
 
 ```python

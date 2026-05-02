@@ -30,6 +30,11 @@ audience:
 - A perennial source of distributed-system pain
 
 ---
+## Clock Kinds
+
+![clock_kinds](svg/courses/architecting/distributed-systems-fundamentals/05_distributed_clocks/clock_kinds.svg)
+
+---
 ## Wall Clocks
 
 - Each machine has its own clock

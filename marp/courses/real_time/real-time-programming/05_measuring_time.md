@@ -31,6 +31,11 @@ audience:
 - Knowing which to use is the first skill
 
 ---
+## Time APIs
+
+![clock_apis](svg/courses/real_time/real-time-programming/05_measuring_time/clock_apis.svg)
+
+---
 ## Hardware Time Sources (x86)
 
 - **TSC (Time Stamp Counter)**: a 64-bit counter that ticks at CPU clock rate

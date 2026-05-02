@@ -28,6 +28,11 @@ audience:
 - Combine: head at edge, tail at gateway
 
 ---
+## Sampling Strategies
+
+![sampling](svg/courses/observability_and_monitoring/opentelemetry/09_production_patterns/sampling.svg)
+
+---
 ## Tail Sampling Rules
 
 - Always keep errors

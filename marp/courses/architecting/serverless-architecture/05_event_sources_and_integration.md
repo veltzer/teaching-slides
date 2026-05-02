@@ -31,6 +31,11 @@ audience:
 - Sync: caller responsible for handling errors
 
 ---
+## Event Source Categories
+
+![event_sources](svg/courses/architecting/serverless-architecture/05_event_sources_and_integration/event_sources.svg)
+
+---
 ## API Gateway + Lambda
 
 - HTTP requests trigger Lambda

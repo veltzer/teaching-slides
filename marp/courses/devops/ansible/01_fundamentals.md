@@ -33,6 +33,12 @@ audience:
 
 ---
 
+## Architecture
+
+![ansible_arch](svg/courses/devops/ansible/01_fundamentals/ansible_arch.svg)
+
+---
+
 ## Why Ansible?
 
 - **Simple**: `YAML`-based, human-readable playbooks

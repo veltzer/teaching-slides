@@ -31,6 +31,11 @@ audience:
 - Skipping the Retro is the most expensive saving in Scrum
 
 ---
+## Five Phases
+
+![retro_phases](svg/courses/practices/agile-and-scrum/05_retrospectives/retro_phases.svg)
+
+---
 ## Time-Box and Attendees
 
 - Up to 3 hours for a 4-week Sprint, proportionally less for shorter

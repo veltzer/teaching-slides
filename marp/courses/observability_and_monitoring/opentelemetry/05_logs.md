@@ -27,6 +27,11 @@ audience:
 - Stable since 2023
 
 ---
+## Log Correlation
+
+![log_correlation](svg/courses/observability_and_monitoring/opentelemetry/05_logs/log_correlation.svg)
+
+---
 ## Log Model
 
 - Timestamp

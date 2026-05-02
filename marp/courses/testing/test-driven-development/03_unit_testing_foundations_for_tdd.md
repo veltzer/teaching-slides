@@ -31,6 +31,11 @@ audience:
 - Easy to read
 
 ---
+## FIRST Principles
+
+![test_fundamentals](svg/courses/testing/test-driven-development/03_unit_testing_foundations_for_tdd/test_fundamentals.svg)
+
+---
 ## Arrange-Act-Assert
 
 ```python

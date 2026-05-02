@@ -19,6 +19,11 @@ audience:
 - A well-documented API onboards developers in minutes; a bad one takes days
 
 ---
+## Doc Practices
+
+![doc_practices](svg/courses/architecting/api-design-best-practices/08_api_documentation/doc_practices.svg)
+
+---
 ## OpenAPI / Swagger
 
 - The de facto standard for HTTP API specs

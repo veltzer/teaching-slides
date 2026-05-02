@@ -34,6 +34,11 @@ audience:
 - All happen; design for each
 
 ---
+## Failure Modes
+
+![failure_modes](svg/courses/architecting/distributed-systems-fundamentals/10_failure_modes/failure_modes.svg)
+
+---
 ## Network Failures
 
 - Packet loss: TCP retransmits; latency spikes

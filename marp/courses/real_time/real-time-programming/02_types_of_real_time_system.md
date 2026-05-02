@@ -30,6 +30,11 @@ audience:
 - Don't pay for hard RT when soft will do
 
 ---
+## Examples by Category
+
+![system_examples](svg/courses/real_time/real-time-programming/02_types_of_real_time_system/system_examples.svg)
+
+---
 ## Near Real-Time
 
 - "As fast as we can manage"

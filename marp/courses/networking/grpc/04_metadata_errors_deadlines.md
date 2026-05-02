@@ -29,6 +29,11 @@ audience:
 - Auth tokens, request IDs, tracing context
 
 ---
+## Deadlines Propagate
+
+![deadlines](svg/courses/networking/grpc/04_metadata_errors_deadlines/deadlines.svg)
+
+---
 ## Initial vs Trailing Metadata
 
 - Initial metadata — sent before the response body

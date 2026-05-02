@@ -21,6 +21,12 @@ audience:
 
 ---
 
+## Targets, Scope, Visibility
+
+![scope_and_targets](svg/courses/build_systems/cmake/03_in_depth_syntax/scope_and_targets.svg)
+
+---
+
 ## Chapter Overview
 
 - Variables: normal, cache, and environment

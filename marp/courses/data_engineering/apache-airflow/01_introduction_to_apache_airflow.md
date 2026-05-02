@@ -28,6 +28,11 @@ audience:
 - Apache top-level since 2019
 
 ---
+## Architecture
+
+![airflow_arch](svg/courses/data_engineering/apache-airflow/01_introduction_to_apache_airflow/airflow_arch.svg)
+
+---
 ## Use Cases
 
 - ETL / ELT pipelines

@@ -28,6 +28,11 @@ audience:
 - Many language: graphql-go, graphene (Python), graphql-java
 
 ---
+## Server Choices
+
+![server_choices](svg/courses/networking/graphql/08_servers/server_choices.svg)
+
+---
 ## Apollo Server
 
 - Mature, large ecosystem

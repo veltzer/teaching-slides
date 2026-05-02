@@ -28,6 +28,11 @@ audience:
 - Versus: ad-hoc files
 
 ---
+## Major Database Kinds
+
+![db_kinds](svg/courses/databases/introduction-to-databases/01_what_are_databases/db_kinds.svg)
+
+---
 ## Why Databases
 
 - Persistence beyond memory

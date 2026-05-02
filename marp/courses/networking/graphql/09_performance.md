@@ -28,6 +28,11 @@ audience:
 - Classic GraphQL pitfall
 
 ---
+## Performance Levers
+
+![perf_levers](svg/courses/networking/graphql/09_performance/perf_levers.svg)
+
+---
 ## DataLoader
 
 - Batches keys within a tick

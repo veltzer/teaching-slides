@@ -30,6 +30,11 @@ audience:
 - Standard for installing common tools
 
 ---
+## Helm Concepts
+
+![helm_concepts](svg/courses/containers/kubernetes/09_helm/helm_concepts.svg)
+
+---
 ## Charts
 
 - A chart: a bundle of manifests + config

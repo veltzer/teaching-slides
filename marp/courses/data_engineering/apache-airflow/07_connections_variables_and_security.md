@@ -30,6 +30,11 @@ audience:
 - Centralised credential management
 
 ---
+## Secrets Layers
+
+![secrets_layers](svg/courses/data_engineering/apache-airflow/07_connections_variables_and_security/secrets_layers.svg)
+
+---
 ## Defining A Connection
 
 - UI: Admin &#8594; Connections

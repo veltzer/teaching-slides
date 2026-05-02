@@ -31,6 +31,11 @@ audience:
 - Hard to reproduce production locally
 
 ---
+## Testing Layers
+
+![testing_layers](svg/courses/architecting/serverless-architecture/06_testing_serverless_applications/testing_layers.svg)
+
+---
 ## Unit Testing
 
 - Test the handler function directly

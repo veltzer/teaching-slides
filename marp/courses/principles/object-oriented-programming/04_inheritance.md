@@ -30,6 +30,11 @@ audience:
 - Common in libraries: extending base classes the framework provides
 
 ---
+## Forms
+
+![inheritance_kinds](svg/courses/principles/object-oriented-programming/04_inheritance/inheritance_kinds.svg)
+
+---
 ## A First Example
 
 ```java

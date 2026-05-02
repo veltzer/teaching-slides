@@ -24,6 +24,11 @@ audience:
 - RCU and copy-on-write
 
 ---
+## Techniques
+
+![fast_techniques](svg/courses/real_time/real-time-programming/06_writing_fast_software/fast_techniques.svg)
+
+---
 ## Know Your Standard Library
 
 - `memcpy` is heavily optimised; do not write your own

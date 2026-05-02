@@ -30,6 +30,11 @@ audience:
 - Bridge protocol differences (JSON in / XML out)
 
 ---
+## Transformation Pipeline
+
+![transform_pipeline](svg/courses/architecting/api-gateway-patterns/08_request_transformation/transform_pipeline.svg)
+
+---
 ## Transforming Requests
 
 - Add headers: tracing IDs, auth context

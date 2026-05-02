@@ -19,6 +19,11 @@ audience:
 - Common estimation traps
 
 ---
+## Back-of-Envelope
+
+![back_of_envelope](svg/courses/architecting/system-design/01_requirements_analysis_and_estimation/back_of_envelope.svg)
+
+---
 ## Functional Requirements
 
 - What the system *does*

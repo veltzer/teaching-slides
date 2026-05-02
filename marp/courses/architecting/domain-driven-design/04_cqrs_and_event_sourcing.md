@@ -18,6 +18,11 @@ audience:
 ![cqrs](svg/courses/architecting/domain-driven-design/04_cqrs_and_event_sourcing/cqrs.svg)
 
 ---
+## CQRS + Event Sourcing
+
+![cqrs_es](svg/courses/architecting/domain-driven-design/04_cqrs_and_event_sourcing/cqrs_es.svg)
+
+---
 ## Why DDD Pairs Well With CQRS and ES
 
 - DDD aggregates emit domain events naturally

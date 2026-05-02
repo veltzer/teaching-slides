@@ -31,6 +31,11 @@ audience:
 - Add up across services
 
 ---
+## Cost Levers
+
+![cost_levers](svg/courses/architecting/serverless-architecture/07_cost_optimization/cost_levers.svg)
+
+---
 ## When Serverless Is Cheap
 
 - Sporadic workloads (idle most of the time)

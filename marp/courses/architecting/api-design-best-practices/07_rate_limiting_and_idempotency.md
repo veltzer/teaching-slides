@@ -20,6 +20,11 @@ audience:
 - Make capacity planning predictable
 
 ---
+## Two Concerns
+
+![rate_idempotency](svg/courses/architecting/api-design-best-practices/07_rate_limiting_and_idempotency/rate_idempotency.svg)
+
+---
 ## Rate Limiting Strategies
 
 - **Fixed window**: N requests per minute, resets on the boundary

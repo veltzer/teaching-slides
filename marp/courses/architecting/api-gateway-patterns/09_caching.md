@@ -30,6 +30,11 @@ audience:
 - The lowest-hanging perf optimisation
 
 ---
+## Cache Layers
+
+![cache_layers](svg/courses/architecting/api-gateway-patterns/09_caching/cache_layers.svg)
+
+---
 ## What To Cache
 
 - GET requests (idempotent, side-effect-free)

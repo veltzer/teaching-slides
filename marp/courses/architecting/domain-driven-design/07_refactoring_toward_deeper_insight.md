@@ -44,6 +44,11 @@ audience:
 - All three apply; DDD emphasizes the latter two
 
 ---
+## Levels Visualized
+
+![refactor_levels](svg/courses/architecting/domain-driven-design/07_refactoring_toward_deeper_insight/refactor_levels.svg)
+
+---
 ## Continuous Refactoring as Discipline
 
 - Refactoring isn't a project; it's a daily practice

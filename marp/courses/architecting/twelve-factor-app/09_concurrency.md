@@ -19,6 +19,11 @@ audience:
 - Adding capacity = adding more processes
 
 ---
+## Process Types
+
+![concurrency_via_processes](svg/courses/architecting/twelve-factor-app/09_concurrency/concurrency_via_processes.svg)
+
+---
 ## The Process Model
 
 - Each process is a unit of horizontal scaling

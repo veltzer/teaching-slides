@@ -29,6 +29,11 @@ audience:
 - The first half of access control
 
 ---
+## Side by Side
+
+![authn_vs_authz](svg/courses/networking/oauth2-and-oidc/01_authn_authz/authn_vs_authz.svg)
+
+---
 ## Authorization
 
 - What can you do?

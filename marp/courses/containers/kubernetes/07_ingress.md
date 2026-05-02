@@ -29,6 +29,11 @@ audience:
 - Replaces many LoadBalancers
 
 ---
+## Ingress Path
+
+![ingress_path](svg/courses/containers/kubernetes/07_ingress/ingress_path.svg)
+
+---
 ## Ingress vs Service
 
 - Service: layer 4 (TCP)

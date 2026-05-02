@@ -22,6 +22,11 @@ audience:
 - Hard to misuse: defaults are safe
 
 ---
+## Quality Pillars
+
+![api_qualities](svg/courses/architecting/api-design-best-practices/01_design_principles/api_qualities.svg)
+
+---
 ## API as a Product
 
 - An API has consumers — users, even when those users are developers

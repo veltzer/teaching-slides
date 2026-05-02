@@ -29,6 +29,11 @@ audience:
 - Or: ELK / Loki stack
 
 ---
+## Logs and Monitoring
+
+![log_pipeline](svg/courses/data_engineering/apache-airflow/08_monitoring_logging_and_troubleshooting/log_pipeline.svg)
+
+---
 ## Log Backend Configuration
 
 ```ini

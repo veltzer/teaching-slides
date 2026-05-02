@@ -26,6 +26,11 @@ audience:
 - Symmetric: requests and responses
 
 ---
+## Status Code Classes
+
+![status_class](svg/courses/networking/restful-apis/05_request_and_response/status_class.svg)
+
+---
 ## Sample Request
 
 ```json

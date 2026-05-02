@@ -28,6 +28,11 @@ audience:
 - Many language-specific
 
 ---
+## Client Choices
+
+![client_choices](svg/courses/networking/graphql/07_clients/client_choices.svg)
+
+---
 ## What Clients Provide
 
 - Query execution

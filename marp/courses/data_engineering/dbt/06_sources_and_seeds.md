@@ -27,6 +27,11 @@ audience:
 - Documentation lives here
 
 ---
+## Sources vs Seeds
+
+![sources_and_seeds](svg/courses/data_engineering/dbt/06_sources_and_seeds/sources_and_seeds.svg)
+
+---
 ## Defining Sources
 
 ```yaml

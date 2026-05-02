@@ -28,6 +28,11 @@ Universal formats answer:
 - Run the app in a sandbox so it can't read your whole `$HOME`.
 
 ---
+## Side by Side
+
+![universal_compare](svg/courses/operating_systems/linux-package-managers/04_universal_formats/universal_compare.svg)
+
+---
 ## The Three Big Universal Formats
 
 | | `flatpak` | `snap` | `appimage` |

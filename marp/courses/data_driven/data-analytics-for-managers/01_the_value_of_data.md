@@ -29,6 +29,11 @@ audience:
 - The gap between them is where this course lives
 
 ---
+## Where Data Creates Value
+
+![data_value](svg/courses/data_driven/data-analytics-for-managers/01_the_value_of_data/data_value.svg)
+
+---
 ## What "Data Value" Means
 
 - Data has value when it changes a decision

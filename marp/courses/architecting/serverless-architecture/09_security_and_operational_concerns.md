@@ -30,6 +30,11 @@ audience:
 - A common security failing in serverless
 
 ---
+## Security Concerns
+
+![serverless_security](svg/courses/architecting/serverless-architecture/09_security_and_operational_concerns/serverless_security.svg)
+
+---
 ## Sample IAM Policy
 
 ```json

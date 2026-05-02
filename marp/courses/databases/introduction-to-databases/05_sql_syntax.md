@@ -20,6 +20,11 @@ audience:
 - Subqueries
 
 ---
+## Statement Categories
+
+![sql_categories](svg/courses/databases/introduction-to-databases/05_sql_syntax/sql_categories.svg)
+
+---
 ## SELECT
 
 ```sql

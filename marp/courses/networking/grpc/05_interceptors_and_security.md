@@ -30,6 +30,11 @@ audience:
 - Equivalent to HTTP middleware in REST frameworks
 
 ---
+## Common Interceptor Chain
+
+![interceptor_chain](svg/courses/networking/grpc/05_interceptors_and_security/interceptor_chain.svg)
+
+---
 ## Why Interceptors?
 
 - Cross-cutting concerns: logging, tracing, auth

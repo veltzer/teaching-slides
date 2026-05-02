@@ -29,6 +29,11 @@ audience:
 - A test that passes immediately tells you nothing
 
 ---
+## Cycle in Detail
+
+![cycle_steps](svg/courses/testing/test-driven-development/02_the_red_green_refactor_cycle/cycle_steps.svg)
+
+---
 ## Why The Failure Matters
 
 - Confirms the test is actually testing something

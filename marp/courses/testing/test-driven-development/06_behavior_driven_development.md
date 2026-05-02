@@ -31,6 +31,11 @@ audience:
 - Coined by Dan North in the 2000s
 
 ---
+## Given / When / Then
+
+![bdd_format](svg/courses/testing/test-driven-development/06_behavior_driven_development/bdd_format.svg)
+
+---
 ## Why BDD
 
 - Bridges the gap between business and developers

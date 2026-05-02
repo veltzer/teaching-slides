@@ -35,6 +35,11 @@ audience:
 ![grant_picker](svg/courses/networking/oauth2-and-oidc/04_grant_types/grant_picker.svg)
 
 ---
+## Grants Overview
+
+![grant_overview](svg/courses/networking/oauth2-and-oidc/04_grant_types/grant_overview.svg)
+
+---
 ## Client Credentials Grant
 
 - For machine-to-machine (no user)

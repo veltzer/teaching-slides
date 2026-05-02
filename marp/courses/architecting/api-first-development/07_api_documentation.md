@@ -31,6 +31,11 @@ audience:
 - The single biggest UX touchpoint for many APIs
 
 ---
+## Three Layers
+
+![doc_layers](svg/courses/architecting/api-first-development/07_api_documentation/doc_layers.svg)
+
+---
 ## OpenAPI Renders to Docs
 
 - Spec describes the API

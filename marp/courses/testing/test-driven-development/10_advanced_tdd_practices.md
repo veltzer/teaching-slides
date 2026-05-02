@@ -31,6 +31,11 @@ audience:
 - Common in BDD-style work
 
 ---
+## Advanced Tools
+
+![advanced_tdd](svg/courses/testing/test-driven-development/10_advanced_tdd_practices/advanced_tdd.svg)
+
+---
 ## Inside-Out TDD
 
 - Start at the lowest level (a class, a function)

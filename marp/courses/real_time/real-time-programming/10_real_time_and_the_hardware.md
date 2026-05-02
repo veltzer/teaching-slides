@@ -31,6 +31,11 @@ audience:
 - Pick hardware before tuning software
 
 ---
+## Hardware Concerns
+
+![hw_concerns](svg/courses/real_time/real-time-programming/10_real_time_and_the_hardware/hw_concerns.svg)
+
+---
 ## I/O Buses and Latency
 
 - **PCIe**: high throughput, variable latency

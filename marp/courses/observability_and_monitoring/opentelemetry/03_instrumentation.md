@@ -19,6 +19,11 @@ audience:
 - Best practices
 
 ---
+## Three Ways to Instrument
+
+![instrumentation_kinds](svg/courses/observability_and_monitoring/opentelemetry/03_instrumentation/instrumentation_kinds.svg)
+
+---
 ## Auto-Instrumentation
 
 - Agent or library wraps frameworks

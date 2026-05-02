@@ -30,6 +30,11 @@ audience:
 - Solid testing requires deliberate patterns
 
 ---
+## Testing Strategies
+
+![testing_strategies](svg/courses/queues/rabbitmq/09_testing_messaging_workflows/testing_strategies.svg)
+
+---
 ## Three Layers of Testing
 
 - **Unit**: producer / consumer logic in isolation

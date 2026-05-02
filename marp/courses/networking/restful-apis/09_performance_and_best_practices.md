@@ -21,6 +21,11 @@ audience:
 - Putting it together
 
 ---
+## Performance Levers
+
+![perf_levers](svg/courses/networking/restful-apis/09_performance_and_best_practices/perf_levers.svg)
+
+---
 ## Caching
 
 - HTTP caching: built-in

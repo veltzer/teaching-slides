@@ -12,6 +12,11 @@ audience:
 # The Red Hat Family: rpm, yum, and dnf
 
 ---
+## Tooling Layers
+
+![rpm_lifecycle](svg/courses/operating_systems/linux-package-managers/03_rpm_and_dnf/rpm_lifecycle.svg)
+
+---
 ## What Is a `.rpm` File?
 
 `.rpm` is the package format used by `RHEL`, `CentOS Stream`, `Rocky`, `Alma`, `Fedora`, `openSUSE`, `Amazon Linux`, and others.

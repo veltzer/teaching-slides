@@ -31,6 +31,11 @@ audience:
 - Same length each time — predictability lets people plan
 
 ---
+## Sprint Anatomy
+
+![sprint_anatomy](svg/courses/practices/agile-and-scrum/03_sprints/sprint_anatomy.svg)
+
+---
 ## The Sprint Goal
 
 - One coherent objective for the Sprint

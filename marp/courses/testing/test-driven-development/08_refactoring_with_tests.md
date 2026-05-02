@@ -30,6 +30,11 @@ audience:
 - Coined / popularised by Martin Fowler
 
 ---
+## Tests as Safety Net
+
+![refactor_safety](svg/courses/testing/test-driven-development/08_refactoring_with_tests/refactor_safety.svg)
+
+---
 ## Why Tests Matter
 
 - Without tests: refactor by faith, hope it still works

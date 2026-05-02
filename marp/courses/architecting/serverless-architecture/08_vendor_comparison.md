@@ -22,6 +22,11 @@ audience:
 - Multi-cloud considerations
 
 ---
+## Major Platforms
+
+![vendor_compare](svg/courses/architecting/serverless-architecture/08_vendor_comparison/vendor_compare.svg)
+
+---
 ## AWS Lambda
 
 - Original FaaS; deepest ecosystem

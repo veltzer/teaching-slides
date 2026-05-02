@@ -30,6 +30,11 @@ audience:
 - Decouples sender and receiver in time and space
 
 ---
+## AMQP Model
+
+![amqp_model](svg/courses/queues/rabbitmq/01_introduction_to_rabbitmq_and_amqp/amqp_model.svg)
+
+---
 ## Why Use a Broker
 
 - Asynchronous processing (web request returns fast; work happens later)

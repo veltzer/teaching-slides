@@ -27,6 +27,11 @@ audience:
 - Backend choice independent of OTel
 
 ---
+## Where Telemetry Lands
+
+![backend_choices](svg/courses/observability_and_monitoring/opentelemetry/08_backends_and_visualisation/backend_choices.svg)
+
+---
 ## Open-Source: Jaeger
 
 - Tracing-focused

@@ -19,6 +19,11 @@ audience:
 - Swappable without code changes — only config changes
 
 ---
+## Attached Resources
+
+![attached_resources](svg/courses/architecting/twelve-factor-app/05_backing_services/attached_resources.svg)
+
+---
 ## What Counts as a Backing Service
 
 - Databases (Postgres, MySQL, MongoDB)

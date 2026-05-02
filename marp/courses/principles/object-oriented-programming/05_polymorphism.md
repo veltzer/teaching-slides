@@ -30,6 +30,11 @@ audience:
 - The discipline of programming to a common contract
 
 ---
+## Forms
+
+![polymorphism_kinds](svg/courses/principles/object-oriented-programming/05_polymorphism/polymorphism_kinds.svg)
+
+---
 ## A First Example
 
 ```python

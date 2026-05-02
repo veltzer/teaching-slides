@@ -30,6 +30,11 @@ audience:
 - Use for: routing logs by severity, jobs by type
 
 ---
+## Routing Patterns
+
+![routing_patterns](svg/courses/queues/rabbitmq/03_routing_patterns/routing_patterns.svg)
+
+---
 ## Direct Routing Example
 
 - Exchange `log` (type direct)

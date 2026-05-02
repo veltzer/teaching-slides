@@ -31,6 +31,12 @@ audience:
 
 ---
 
+## Playbook Anatomy
+
+![playbook_anatomy](svg/courses/devops/ansible/04_playbook_basics/playbook_anatomy.svg)
+
+---
+
 ## Defining Variables in Playbooks
 
 ```yaml

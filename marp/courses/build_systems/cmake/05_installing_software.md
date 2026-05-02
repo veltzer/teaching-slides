@@ -21,6 +21,12 @@ audience:
 
 ---
 
+## Install Destinations
+
+![install_destinations](svg/courses/build_systems/cmake/05_installing_software/install_destinations.svg)
+
+---
+
 ## Chapter Overview
 
 - Why install rules matter

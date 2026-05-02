@@ -20,6 +20,11 @@ audience:
 - DDD provides the boundaries; microservices are the deployment
 
 ---
+## Context Per Service
+
+![context_per_service](svg/courses/architecting/domain-driven-design/06_ddd_with_microservices/context_per_service.svg)
+
+---
 ## Why The Match Works
 
 - Both emphasize boundaries

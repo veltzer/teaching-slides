@@ -32,6 +32,11 @@ audience:
 - A single malloc can blow a tight deadline
 
 ---
+## Allocation Strategies
+
+![alloc_strategies](svg/courses/real_time/real-time-programming/07_real_time_and_memory_allocations/alloc_strategies.svg)
+
+---
 ## What malloc Does
 
 - Maintains free lists of memory chunks

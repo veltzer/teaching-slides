@@ -27,6 +27,11 @@ audience:
 - Tools generate code from SDL
 
 ---
+## Type System
+
+![type_system](svg/courses/networking/graphql/02_schema_and_types/type_system.svg)
+
+---
 ## Object Types
 
 ```graphql

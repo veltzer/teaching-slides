@@ -21,6 +21,11 @@ audience:
 - And makes Kubernetes deployment straightforward
 
 ---
+## Mapping to K8s
+
+![twelve_factor_in_k8s](svg/courses/architecting/twelve-factor-app/15_kubernetes_application/twelve_factor_in_k8s.svg)
+
+---
 ## Factor I: Codebase
 
 - One codebase → one container image

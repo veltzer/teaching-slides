@@ -30,6 +30,11 @@ audience:
 - Soak: sustained, long duration
 
 ---
+## Load Test Shapes
+
+![load_shapes](svg/courses/testing/api-testing/06_performance_and_load/load_shapes.svg)
+
+---
 ## Tools
 
 - k6: modern, JS scripts

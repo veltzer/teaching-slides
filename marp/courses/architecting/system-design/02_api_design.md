@@ -31,6 +31,11 @@ audience:
 - Each fits different needs
 
 ---
+## Style Choices
+
+![api_design_choices](svg/courses/architecting/system-design/02_api_design/api_design_choices.svg)
+
+---
 ## REST
 
 - Resources are nouns: `/users`, `/orders`

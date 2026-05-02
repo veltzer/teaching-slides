@@ -30,6 +30,11 @@ audience:
 - "I don't need to know whether this is a FileLogger or NetLogger" = abstraction
 
 ---
+## Levels
+
+![abstraction_levels](svg/courses/principles/object-oriented-programming/06_abstraction/abstraction_levels.svg)
+
+---
 ## Abstract Classes
 
 - A class that *cannot* be instantiated directly

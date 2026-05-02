@@ -30,6 +30,12 @@ audience:
 
 ---
 
+## Inventory Sources
+
+![inventory_kinds](svg/courses/devops/ansible/02_inventory_deep_dive/inventory_kinds.svg)
+
+---
+
 ## Static Inventory Patterns
 
 ```ini

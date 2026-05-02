@@ -30,6 +30,11 @@ audience:
 - "Server-side scripting"
 
 ---
+## When to Use PL/pgSQL
+
+![plpgsql_uses](svg/courses/databases/postgresql-for-developers/06_pl_pgsql_programming/plpgsql_uses.svg)
+
+---
 ## A Simple Function
 
 ```sql

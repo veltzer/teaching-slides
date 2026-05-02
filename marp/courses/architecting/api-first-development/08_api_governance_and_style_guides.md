@@ -31,6 +31,11 @@ audience:
 - Without it: a fragmented API surface
 
 ---
+## Three Layers of Enforcement
+
+![style_governance](svg/courses/architecting/api-first-development/08_api_governance_and_style_guides/style_governance.svg)
+
+---
 ## What To Standardise
 
 - Naming: paths, fields, query params

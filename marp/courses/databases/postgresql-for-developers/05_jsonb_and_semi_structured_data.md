@@ -16,6 +16,11 @@ audience:
 ![jsonb_ops](svg/courses/databases/postgresql-for-developers/05_jsonb_and_semi_structured_data/jsonb_ops.svg)
 
 ---
+## JSONB Index Types
+
+![jsonb_indexes](svg/courses/databases/postgresql-for-developers/05_jsonb_and_semi_structured_data/jsonb_indexes.svg)
+
+---
 ## What This Chapter Covers
 
 - JSONB vs JSON

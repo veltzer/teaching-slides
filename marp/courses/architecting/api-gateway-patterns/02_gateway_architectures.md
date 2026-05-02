@@ -20,6 +20,11 @@ audience:
 - Architecture trade-offs
 
 ---
+## Topology Choices
+
+![gateway_topologies](svg/courses/architecting/api-gateway-patterns/02_gateway_architectures/gateway_topologies.svg)
+
+---
 ## Monolith + Gateway
 
 - A single backend; gateway in front

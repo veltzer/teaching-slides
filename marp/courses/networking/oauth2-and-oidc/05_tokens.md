@@ -29,6 +29,11 @@ audience:
 - Mixing them up is a common bug
 
 ---
+## Access vs Refresh
+
+![token_lifecycle](svg/courses/networking/oauth2-and-oidc/05_tokens/token_lifecycle.svg)
+
+---
 ## Access Token
 
 - Short-lived (5-60 minutes typically)

@@ -31,6 +31,11 @@ audience:
 - When in doubt: it's probably has-a
 
 ---
+## Side by Side
+
+![composition_over_inheritance](svg/courses/principles/object-oriented-programming/07_composition_vs_inheritance/composition_over_inheritance.svg)
+
+---
 ## Composition: A First Example
 
 ```python

@@ -30,6 +30,11 @@ audience:
 - Spend reallocation is the highest-ROI use of marketing data
 
 ---
+## Building the Case
+
+![roi_dimensions](svg/courses/data_driven/data-analytics-for-managers/04_the_business_case_for_data_analysis/roi_dimensions.svg)
+
+---
 ## Multi-Touch Attribution
 
 - Last-click attribution: simple, gives 100% credit to the final touch

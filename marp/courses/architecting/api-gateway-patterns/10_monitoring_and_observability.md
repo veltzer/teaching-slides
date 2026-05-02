@@ -31,6 +31,11 @@ audience:
 - The most-leveraged observability point
 
 ---
+## Gateway Metrics
+
+![gateway_metrics](svg/courses/architecting/api-gateway-patterns/10_monitoring_and_observability/gateway_metrics.svg)
+
+---
 ## What To Log
 
 - Request: method, path, query params, headers (selectively)

@@ -23,6 +23,11 @@ audience:
 - HATEOAS
 
 ---
+## Four Design Principles
+
+![design_principles](svg/courses/architecting/api-first-development/03_api_design_best_practices/design_principles.svg)
+
+---
 ## Resource Modelling
 
 - Nouns, not verbs: `/users`, `/orders`, not `/getUsers`

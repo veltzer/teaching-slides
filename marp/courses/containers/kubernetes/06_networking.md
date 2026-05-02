@@ -29,6 +29,11 @@ audience:
 - Containers within a pod share a network namespace
 
 ---
+## Network Layers
+
+![cluster_network](svg/courses/containers/kubernetes/06_networking/cluster_network.svg)
+
+---
 ## CNI Plugins
 
 - Calico, Flannel, Weave, Cilium

@@ -31,6 +31,11 @@ audience:
 - A debug log added "just to investigate" can break the system
 
 ---
+## Patterns
+
+![rt_logging](svg/courses/real_time/real-time-programming/09_real_time_and_logging/rt_logging.svg)
+
+---
 ## What printf Does
 
 - Parses the format string

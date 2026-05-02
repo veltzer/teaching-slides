@@ -31,6 +31,11 @@ audience:
 - Scale consumers independently
 
 ---
+## When to Reach for One
+
+![queue_uses](svg/courses/architecting/system-design/06_message_queues/queue_uses.svg)
+
+---
 ## Kafka
 
 - Distributed log

@@ -95,33 +95,25 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
+  <text x="641.001669449082" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.023362540568" font-weight="bold" fill="var(--text)">Auth Code Grant + PKCE</text>
+  <rect x="40" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="231.318864774624" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--info-text)">1. Authorize</text>
+  <text x="60.033388981636" y="160" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">Client makes verifier (random)</text>
+  <text x="60.033388981636" y="190" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">Sends sha256 challenge</text>
+  <text x="60.033388981636" y="220" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">User authenticates</text>
+  <text x="60.033388981636" y="285" font-family="Arial, sans-serif" font-size="13.010846893835" font-style="italic" fill="var(--info-text)">Browser-mediated</text>
 
-  <text x="661.428571428571" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.512019135483" font-weight="bold" fill="var(--text)">PKCE: Proof Key for Code Exchange</text>
+  <rect x="448.681135225376" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="641.001669449082" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--primary-text)">2. Code returned</text>
+  <text x="468.714524207012" y="160" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--primary-text)">Browser redirect</text>
+  <text x="468.714524207012" y="190" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--primary-text)">Short-lived auth code</text>
+  <text x="468.714524207012" y="220" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--primary-text)">Visible in URL</text>
+  <text x="468.714524207012" y="285" font-family="Arial, sans-serif" font-size="13.010846893835" font-style="italic" fill="var(--primary-text)">Useless without verifier</text>
 
-  <rect x="40" y="87.027027027027" width="578.571428571429" height="229.90990990991" rx="6.348927492804" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="329.285714285714" y="128.828828828829" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.046782478411" font-weight="bold" fill="var(--primary-text)">1. Client generates secret</text>
-  <text x="61.428571428571" y="170.630630630631" font-family="Courier New, monospace" font-size="14.814164149876" fill="var(--primary-text)">verifier = random_bytes(32)</text>
-  <text x="61.428571428571" y="199.891891891892" font-family="Courier New, monospace" font-size="14.814164149876" fill="var(--primary-text)">challenge = SHA256(verifier)</text>
-  <text x="61.428571428571" y="241.693693693694" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--primary-text)">verifier kept private</text>
-  <text x="61.428571428571" y="269.90990990991" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--primary-text)">challenge sent in /authorize</text>
-  <text x="61.428571428571" y="298.126126126126" font-family="Arial, sans-serif" font-size="12.697854985608" font-style="italic" fill="var(--primary-text)">stolen code is useless</text>
-
-  <rect x="661.428571428571" y="87.027027027027" width="578.571428571429" height="229.90990990991" rx="6.348927492804" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="950.714285714286" y="128.828828828829" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.046782478411" font-weight="bold" fill="var(--ok-text)">2. Server verifies match</text>
-  <text x="682.857142857143" y="170.630630630631" font-family="Courier New, monospace" font-size="14.814164149876" fill="var(--ok-text)">on /authorize: store challenge</text>
-  <text x="682.857142857143" y="199.891891891892" font-family="Courier New, monospace" font-size="14.814164149876" fill="var(--ok-text)">on /token: SHA256(verifier)</text>
-  <text x="682.857142857143" y="241.693693693694" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-text)">if hash matches, issue tokens</text>
-  <text x="682.857142857143" y="269.90990990991" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-text)">if not, reject</text>
-  <text x="682.857142857143" y="298.126126126126" font-family="Arial, sans-serif" font-size="12.697854985608" font-style="italic" fill="var(--ok-text)">works for public clients</text>
-
-  <rect x="40" y="358.738738738739" width="1200" height="125.405405405405" rx="6.348927492804" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="395.315315315315" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.046782478411" font-weight="bold" fill="var(--warn-text)">Attack scenario: code interception on mobile</text>
-  <text x="61.428571428571" y="426.666666666667" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--warn-text)">- app hijacks URL scheme</text>
-  <text x="61.428571428571" y="452.792792792793" font-family="Arial, sans-serif" font-size="14.814164149876" fill="var(--warn-text)">- intercepts the code</text>
-  <text x="61.428571428571" y="476.828828828829" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--warn-text)">without PKCE: attacker gets tokens; with PKCE: code is useless</text>
-
-  <rect x="40" y="515.495495495495" width="1200" height="104.504504504504" rx="6.348927492804" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="546.846846846847" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--text)">Properties</text>
-  <text x="61.428571428571" y="576.108108108108" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text)">- verifier: 43-128 URL-safe chars</text>
-  <text x="61.428571428571" y="600.144144144144" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text)">- method=S256; never plain</text>
+  <rect x="857.362270450751" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1048.681135225376" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--ok-text)">3. Token exchange</text>
+  <text x="877.395659432387" y="160" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--ok-text)">Code + verifier</text>
+  <text x="877.395659432387" y="190" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--ok-text)">Server checks hash</text>
+  <text x="877.395659432387" y="220" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--ok-text)">Returns access token</text>
+  <text x="877.395659432387" y="285" font-family="Arial, sans-serif" font-size="13.010846893835" font-style="italic" fill="var(--ok-text)">Defeats code interception</text>
 </svg>

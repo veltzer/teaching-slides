@@ -30,6 +30,11 @@ audience:
 - Many transports: HTTP, gRPC, AMQP, custom
 
 ---
+## RPC Pattern
+
+![rpc_pattern](svg/courses/queues/rabbitmq/05_rpc_with_rabbitmq/rpc_pattern.svg)
+
+---
 ## Why Use RabbitMQ For RPC
 
 - The broker handles routing

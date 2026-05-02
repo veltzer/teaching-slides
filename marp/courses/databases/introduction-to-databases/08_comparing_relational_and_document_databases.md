@@ -28,6 +28,11 @@ audience:
 - "Customer with orders" looks very different
 
 ---
+## Side by Side
+
+![rel_vs_doc](svg/courses/databases/introduction-to-databases/08_comparing_relational_and_document_databases/rel_vs_doc.svg)
+
+---
 ## Relational Example
 
 ```sql

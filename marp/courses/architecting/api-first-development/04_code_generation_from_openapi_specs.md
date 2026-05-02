@@ -31,6 +31,11 @@ audience:
 - Saves hours per service
 
 ---
+## Codegen Outputs
+
+![codegen_flow](svg/courses/architecting/api-first-development/04_code_generation_from_openapi_specs/codegen_flow.svg)
+
+---
 ## OpenAPI Generator
 
 - Open-source, java-based, supports many languages

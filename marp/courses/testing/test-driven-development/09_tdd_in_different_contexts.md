@@ -20,6 +20,11 @@ audience:
 - Where TDD struggles
 
 ---
+## Across Contexts
+
+![tdd_contexts](svg/courses/testing/test-driven-development/09_tdd_in_different_contexts/tdd_contexts.svg)
+
+---
 ## Web Applications
 
 - Unit tests: components, controllers, business logic

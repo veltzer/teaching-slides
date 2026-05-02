@@ -27,6 +27,11 @@ audience:
 - Single endpoint, one POST per request
 
 ---
+## Why It Exists
+
+![why_graphql](svg/courses/networking/graphql/01_introduction/why_graphql.svg)
+
+---
 ## Origin
 
 - Built at Facebook, 2012

@@ -28,6 +28,11 @@ audience:
 - Web app default
 
 ---
+## Quick Tour
+
+![mysql_features](svg/courses/databases/introduction-to-databases/06_mysql/mysql_features.svg)
+
+---
 ## MySQL vs Postgres
 
 - MySQL: simpler, faster for some workloads

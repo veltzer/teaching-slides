@@ -20,6 +20,11 @@ audience:
 - The client doesn't enforce either — only suggests intent
 
 ---
+## Auth Layers
+
+![auth_layers](svg/courses/architecting/api-design-best-practices/09_authentication_and_security/auth_layers.svg)
+
+---
 ## API Keys
 
 - A simple shared secret

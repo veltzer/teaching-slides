@@ -29,6 +29,11 @@ audience:
 - Or: shortcut for test envs
 
 ---
+## Security Test Categories
+
+![security_tests](svg/courses/testing/api-testing/05_authentication_and_security_testing/security_tests.svg)
+
+---
 ## Test Users
 
 - Dedicated test accounts

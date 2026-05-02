@@ -31,6 +31,11 @@ audience:
 - Also called *sharding*
 
 ---
+## Strategies
+
+![partitioning_strategies](svg/courses/architecting/distributed-systems-fundamentals/08_partitioning/partitioning_strategies.svg)
+
+---
 ## Why Partition
 
 - Scale beyond one machine's capacity

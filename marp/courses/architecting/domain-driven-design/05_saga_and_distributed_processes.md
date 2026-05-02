@@ -28,6 +28,11 @@ audience:
 - Eventual consistency, not atomic
 
 ---
+## Two Coordination Styles
+
+![saga_pattern](svg/courses/architecting/domain-driven-design/05_saga_and_distributed_processes/saga_pattern.svg)
+
+---
 ## A Process Manager
 
 - A DDD term closely related to saga

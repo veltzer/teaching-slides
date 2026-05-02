@@ -24,6 +24,11 @@ audience:
 ![aggregate](svg/courses/architecting/domain-driven-design/03_tactical_building_blocks/aggregate.svg)
 
 ---
+## Building Blocks
+
+![tactical_blocks](svg/courses/architecting/domain-driven-design/03_tactical_building_blocks/tactical_blocks.svg)
+
+---
 ## Entities
 
 - An object with identity that persists over time

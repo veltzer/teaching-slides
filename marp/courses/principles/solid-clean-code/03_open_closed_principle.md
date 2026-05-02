@@ -29,6 +29,11 @@ audience:
 - Reduces the risk of breaking working code when adding features
 
 ---
+## Closed vs Open
+
+![ocp_extension](svg/courses/principles/solid-clean-code/03_open_closed_principle/ocp_extension.svg)
+
+---
 ## A Smelly Function
 
 ```python

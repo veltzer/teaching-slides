@@ -28,6 +28,11 @@ audience:
 - Compiles to plain SQL
 
 ---
+## Jinja, ref, Macros
+
+![jinja_macros](svg/courses/data_engineering/dbt/03_jinja_and_advanced_transformations/jinja_macros.svg)
+
+---
 ## Variables
 
 ```sql

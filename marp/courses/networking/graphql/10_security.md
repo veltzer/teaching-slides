@@ -27,6 +27,11 @@ audience:
 - Set into context
 
 ---
+## Security Concerns
+
+![security_concerns](svg/courses/networking/graphql/10_security/security_concerns.svg)
+
+---
 ## Authorisation
 
 - Field-level: per resolver

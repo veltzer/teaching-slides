@@ -20,6 +20,11 @@ audience:
 - Need a process for change that respects existing users
 
 ---
+## Deprecation Timeline
+
+![deprecation_timeline](svg/courses/architecting/api-design-best-practices/11_backward_compatibility_and_deprecation/deprecation_timeline.svg)
+
+---
 ## Additive Changes Are Safe
 
 - Adding a new endpoint
