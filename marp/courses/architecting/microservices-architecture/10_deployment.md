@@ -21,6 +21,11 @@ audience:
 - Deploy strategy is part of architecture
 
 ---
+## Deploy Strategies
+
+![deploy_strategies](svg/courses/architecting/microservices-architecture/10_deployment/deploy_strategies.svg)
+
+---
 ## Containerization
 
 - Each service runs as a container

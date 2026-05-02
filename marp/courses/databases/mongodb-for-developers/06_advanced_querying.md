@@ -20,6 +20,11 @@ audience:
 - Cursor methods
 
 ---
+## Operator Categories
+
+![query_operators](svg/courses/databases/mongodb-for-developers/06_advanced_querying/query_operators.svg)
+
+---
 ## Array Queries
 
 ```python

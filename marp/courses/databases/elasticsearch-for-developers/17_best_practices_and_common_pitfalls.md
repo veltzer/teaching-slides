@@ -20,6 +20,11 @@ audience:
 - A checklist
 
 ---
+## Common Pitfalls
+
+![pitfalls](svg/courses/databases/elasticsearch-for-developers/17_best_practices_and_common_pitfalls/pitfalls.svg)
+
+---
 ## Mapping Pitfalls
 
 - Letting auto-mapping run uncritically

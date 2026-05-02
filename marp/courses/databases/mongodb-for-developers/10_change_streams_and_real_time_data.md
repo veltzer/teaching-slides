@@ -29,6 +29,11 @@ audience:
 - Backed by oplog
 
 ---
+## Change Streams Overview
+
+![change_streams](svg/courses/databases/mongodb-for-developers/10_change_streams_and_real_time_data/change_streams.svg)
+
+---
 ## Subscribing
 
 ```python

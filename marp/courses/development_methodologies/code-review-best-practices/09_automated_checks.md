@@ -30,6 +30,11 @@ audience:
 - Free up your senior engineers
 
 ---
+## CI Checks
+
+![ci_checks](svg/courses/development_methodologies/code-review-best-practices/09_automated_checks/ci_checks.svg)
+
+---
 ## Linters
 
 - Tools that flag suspicious patterns

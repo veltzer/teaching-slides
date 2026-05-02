@@ -21,6 +21,11 @@ audience:
 - Throughput
 
 ---
+## Ingestion Paths
+
+![ingest_paths](svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/ingest_paths.svg)
+
+---
 ## Single Document
 
 ```http

@@ -31,6 +31,11 @@ audience:
 - More important than the tooling
 
 ---
+## Healthy Culture Practices
+
+![healthy_culture](svg/courses/development_methodologies/code-review-best-practices/13_review_culture/healthy_culture.svg)
+
+---
 ## Psychological Safety
 
 - A team where people feel safe to be wrong

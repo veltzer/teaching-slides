@@ -10,6 +10,11 @@ audience:
 # Case Study: Chat System
 
 ---
+## Chat Design
+
+![chat_design](svg/courses/architecting/system-design/09_case_study_chat_system/chat_design.svg)
+
+---
 ## What This Chapter Covers
 
 - Requirements

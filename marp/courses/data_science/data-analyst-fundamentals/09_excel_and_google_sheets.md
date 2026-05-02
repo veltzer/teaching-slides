@@ -30,6 +30,11 @@ audience:
 - Master a few patterns; they cover 90% of work
 
 ---
+## Power Features
+
+![sheets_features](svg/courses/data_science/data-analyst-fundamentals/09_excel_and_google_sheets/sheets_features.svg)
+
+---
 ## When to Use a Spreadsheet
 
 - Small datasets (under ~100K rows)

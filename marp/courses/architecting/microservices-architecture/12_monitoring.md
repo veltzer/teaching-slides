@@ -20,6 +20,11 @@ audience:
 - All three together = observability
 
 ---
+## Three Signals
+
+![three_signals](svg/courses/architecting/microservices-architecture/12_monitoring/three_signals.svg)
+
+---
 ## Why Observability Matters in Microservices
 
 - A single user request touches many services

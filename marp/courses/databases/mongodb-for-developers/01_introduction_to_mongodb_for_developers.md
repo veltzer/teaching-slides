@@ -28,6 +28,11 @@ audience:
 - Most-deployed document DB
 
 ---
+## When MongoDB Shines
+
+![mongo_strengths](svg/courses/databases/mongodb-for-developers/01_introduction_to_mongodb_for_developers/mongo_strengths.svg)
+
+---
 ## Document Model
 
 - A document = JSON-ish object

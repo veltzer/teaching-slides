@@ -30,6 +30,11 @@ audience:
 - Docs are the API's first impression
 
 ---
+## Pieces of Good API Docs
+
+![api_doc_pieces](svg/courses/development_methodologies/technical-writing/09_api_documentation/api_doc_pieces.svg)
+
+---
 ## OpenAPI Specification
 
 - Industry-standard format for REST APIs

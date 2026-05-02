@@ -20,6 +20,11 @@ audience:
 - Read preferences
 
 ---
+## Connection Anatomy
+
+![connection_pooling](svg/courses/databases/mongodb-for-developers/04_mongodb_drivers_and_connections/connection_pooling.svg)
+
+---
 ## Official Drivers
 
 - Python (pymongo / motor for async)

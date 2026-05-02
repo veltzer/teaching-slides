@@ -30,6 +30,11 @@ audience:
 - Industry standard in many large organisations
 
 ---
+## Quick Tour
+
+![tableau_basics](svg/courses/data_science/data-analyst-fundamentals/07_tableau_for_data_visualization/tableau_basics.svg)
+
+---
 ## Tableau Editions
 
 - **Tableau Desktop**: build worksheets, dashboards (the analyst's tool)

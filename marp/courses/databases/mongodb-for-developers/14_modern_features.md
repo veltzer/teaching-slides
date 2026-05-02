@@ -29,6 +29,11 @@ audience:
 - Native support for: granularity, expireAfter
 
 ---
+## Recent Features
+
+![recent_features](svg/courses/databases/mongodb-for-developers/14_modern_features/recent_features.svg)
+
+---
 ## Time-Series Example
 
 ```javascript

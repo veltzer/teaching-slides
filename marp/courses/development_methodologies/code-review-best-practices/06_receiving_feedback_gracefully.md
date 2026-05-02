@@ -29,6 +29,11 @@ audience:
 - Practice this; it's a skill
 
 ---
+## Receiving Practices
+
+![receiving_feedback](svg/courses/development_methodologies/code-review-best-practices/06_receiving_feedback_gracefully/receiving_feedback.svg)
+
+---
 ## Default Response: Curiosity
 
 - "Why do they think that?"

@@ -30,6 +30,11 @@ audience:
 - A 3-line example often beats a 30-line description
 
 ---
+## Quality Checklist
+
+![example_quality](svg/courses/development_methodologies/technical-writing/08_code_examples_and_snippets/example_quality.svg)
+
+---
 ## What Makes A Good Example
 
 - **Self-contained**: works on its own

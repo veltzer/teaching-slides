@@ -12,6 +12,11 @@ audience:
 # CI and Practices
 
 ---
+## API Test CI Pipeline
+
+![ci_pipeline](svg/courses/testing/api-testing/07_ci_and_practices/ci_pipeline.svg)
+
+---
 ## What This Chapter Covers
 
 - CI integration

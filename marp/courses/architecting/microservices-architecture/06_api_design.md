@@ -26,6 +26,11 @@ audience:
 - Both still need contracts; internal "freer" doesn't mean unstructured
 
 ---
+## Style Choices
+
+![api_styles](svg/courses/architecting/microservices-architecture/06_api_design/api_styles.svg)
+
+---
 ## Contract First
 
 - Write the API spec before the implementation

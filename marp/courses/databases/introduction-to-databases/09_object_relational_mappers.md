@@ -10,6 +10,11 @@ audience:
 # Object-Relational Mappers (ORMs)
 
 ---
+## ORM Trade-offs
+
+![orm_tradeoffs](svg/courses/databases/introduction-to-databases/09_object_relational_mappers/orm_tradeoffs.svg)
+
+---
 ## What This Chapter Covers
 
 - What an ORM is

@@ -12,6 +12,11 @@ audience:
 # Composition Patterns
 
 ---
+## Composition Patterns
+
+![composition_patterns](svg/courses/architecting/microservices-architecture/13_composition/composition_patterns.svg)
+
+---
 ## What Composition Means
 
 - A user request often needs data from multiple services

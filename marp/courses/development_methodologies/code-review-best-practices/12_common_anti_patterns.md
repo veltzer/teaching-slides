@@ -30,6 +30,11 @@ audience:
 - Often a symptom of overload or lack of authority
 
 ---
+## Anti-Patterns
+
+![anti_patterns](svg/courses/development_methodologies/code-review-best-practices/12_common_anti_patterns/anti_patterns.svg)
+
+---
 ## How Rubber Stamping Happens
 
 - One person reviews 10 PRs an afternoon

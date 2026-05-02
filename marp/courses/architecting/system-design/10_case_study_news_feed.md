@@ -10,6 +10,11 @@ audience:
 # Case Study: News Feed
 
 ---
+## Feed Design
+
+![feed_design](svg/courses/architecting/system-design/10_case_study_news_feed/feed_design.svg)
+
+---
 ## What This Chapter Covers
 
 - Requirements

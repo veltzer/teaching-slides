@@ -30,6 +30,11 @@ audience:
 - Low barrier to contribution
 
 ---
+## Tooling Layers
+
+![doc_tools](svg/courses/development_methodologies/technical-writing/06_markdown_and_documentation_tools/doc_tools.svg)
+
+---
 ## Markdown Basics
 
 ```markdown

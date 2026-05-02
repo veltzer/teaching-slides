@@ -27,6 +27,11 @@ audience:
 - Translation happens at the boundary (anti-corruption layer)
 
 ---
+## Drawing Boundaries
+
+![boundary_choices](svg/courses/architecting/microservices-architecture/04_boundaries/boundary_choices.svg)
+
+---
 ## A Concrete Example
 
 - In Sales context: `Customer` has order history, lifetime value

@@ -18,6 +18,11 @@ audience:
 ![package_layers](svg/courses/operating_systems/linux-package-managers/01_introduction/package_layers.svg)
 
 ---
+## Version Pinning
+
+![version_pinning](svg/courses/operating_systems/linux-package-managers/01_introduction/version_pinning.svg)
+
+---
 ## Where Does Software Come From?
 
 A modern Linux machine pulls software from many places:

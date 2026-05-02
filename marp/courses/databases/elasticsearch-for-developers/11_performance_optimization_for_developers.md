@@ -21,6 +21,11 @@ audience:
 - Common slow queries
 
 ---
+## Performance Levers
+
+![perf_levers](svg/courses/databases/elasticsearch-for-developers/11_performance_optimization_for_developers/perf_levers.svg)
+
+---
 ## Profile API
 
 ```json

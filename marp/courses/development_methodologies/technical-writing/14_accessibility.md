@@ -30,6 +30,11 @@ audience:
 - A small effort that helps a lot of people
 
 ---
+## Accessibility Checklist
+
+![accessible_docs](svg/courses/development_methodologies/technical-writing/14_accessibility/accessible_docs.svg)
+
+---
 ## WCAG Standards
 
 - Web Content Accessibility Guidelines

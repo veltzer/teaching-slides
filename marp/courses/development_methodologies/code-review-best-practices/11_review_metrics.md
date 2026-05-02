@@ -31,6 +31,11 @@ audience:
 - *Not*: ranking individuals
 
 ---
+## Healthy Metrics
+
+![healthy_metrics](svg/courses/development_methodologies/code-review-best-practices/11_review_metrics/healthy_metrics.svg)
+
+---
 ## Time to First Review
 
 - Hours from PR opened to first comment / approval

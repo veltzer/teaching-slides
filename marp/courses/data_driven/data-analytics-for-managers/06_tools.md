@@ -11,6 +11,11 @@ audience:
 # Tools
 
 ---
+## The Analyst Tool Stack
+
+![tool_choices](svg/courses/data_driven/data-analytics-for-managers/06_tools/tool_choices.svg)
+
+---
 ## What This Chapter Covers
 
 - Web analytics: Google Analytics

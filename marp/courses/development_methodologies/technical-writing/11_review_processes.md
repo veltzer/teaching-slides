@@ -11,6 +11,11 @@ audience:
 # Review Processes
 
 ---
+## Reviewing Docs
+
+![review_for_docs](svg/courses/development_methodologies/technical-writing/11_review_processes/review_for_docs.svg)
+
+---
 ## What This Chapter Covers
 
 - Peer review for documentation

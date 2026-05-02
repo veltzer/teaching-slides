@@ -31,6 +31,11 @@ audience:
 - The patterns differ at each size
 
 ---
+## Levers for Scale
+
+![scale_review](svg/courses/development_methodologies/code-review-best-practices/15_scaling_review_processes/scale_review.svg)
+
+---
 ## Small Teams (under 10)
 
 - Ad-hoc routing: pick anyone available

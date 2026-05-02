@@ -21,6 +21,11 @@ audience:
 - Distance sort
 
 ---
+## Geospatial Features
+
+![geo_features](svg/courses/databases/elasticsearch-for-developers/10_geospatial_search/geo_features.svg)
+
+---
 ## geo_point
 
 - Single lat/lon

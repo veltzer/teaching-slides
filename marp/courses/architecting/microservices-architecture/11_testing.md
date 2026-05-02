@@ -27,6 +27,11 @@ audience:
 - Fewer: end-to-end tests across the system
 
 ---
+## Testing Layers
+
+![microservice_testing](svg/courses/architecting/microservices-architecture/11_testing/microservice_testing.svg)
+
+---
 ## Unit Tests
 
 - Same as for any code

@@ -25,6 +25,11 @@ audience:
 ![red_green_refactor](svg/courses/testing/test-driven-development/01_introduction_to_tdd/red_green_refactor.svg)
 
 ---
+## TDD Benefits
+
+![tdd_benefits](svg/courses/testing/test-driven-development/01_introduction_to_tdd/tdd_benefits.svg)
+
+---
 ## What TDD Is
 
 - Write a failing test first

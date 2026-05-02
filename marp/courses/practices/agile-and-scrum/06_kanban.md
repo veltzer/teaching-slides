@@ -12,6 +12,11 @@ audience:
 # Kanban
 
 ---
+## Kanban Basics
+
+![kanban_basics](svg/courses/practices/agile-and-scrum/06_kanban/kanban_basics.svg)
+
+---
 ## What This Chapter Covers
 
 - Where Kanban came from

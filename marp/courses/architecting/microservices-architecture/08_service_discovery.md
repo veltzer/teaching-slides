@@ -20,6 +20,11 @@ audience:
 - A needs to find current B instances at any time
 
 ---
+## Discovery Modes
+
+![discovery_modes](svg/courses/architecting/microservices-architecture/08_service_discovery/discovery_modes.svg)
+
+---
 ## Static Configuration
 
 - A's config has B's URL: `http://b.example.com`

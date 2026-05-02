@@ -11,6 +11,11 @@ audience:
 # Exchanges, Queues, and Bindings
 
 ---
+## Binding Keys
+
+![binding_keys](svg/courses/queues/rabbitmq/02_exchanges_queues_and_bindings/binding_keys.svg)
+
+---
 ## What This Chapter Covers
 
 - Queue declaration and properties

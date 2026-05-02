@@ -15,6 +15,11 @@ audience:
 ![big_data_v](svg/courses/data_driven/data-analytics-for-managers/08_big_data/big_data_v.svg)
 
 ---
+## NoSQL Families
+
+![nosql_families](svg/courses/data_driven/data-analytics-for-managers/08_big_data/nosql_families.svg)
+
+---
 ## What This Chapter Covers
 
 - What "big" means, in practice

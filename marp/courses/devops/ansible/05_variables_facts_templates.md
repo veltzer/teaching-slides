@@ -23,6 +23,11 @@ audience:
 - Template best practices
 
 ---
+## Variable Precedence
+
+![precedence_overview](svg/courses/devops/ansible/05_variables_facts_templates/precedence_overview.svg)
+
+---
 
 ## Ansible Variable Precedence
 

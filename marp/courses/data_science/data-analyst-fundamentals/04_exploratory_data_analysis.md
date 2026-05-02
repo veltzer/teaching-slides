@@ -31,6 +31,11 @@ audience:
 - Most insights come from EDA, not from formal modelling
 
 ---
+## Steps
+
+![eda_steps](svg/courses/data_science/data-analyst-fundamentals/04_exploratory_data_analysis/eda_steps.svg)
+
+---
 ## Why EDA First
 
 - The data is rarely what you expected

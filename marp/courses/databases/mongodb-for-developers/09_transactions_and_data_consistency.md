@@ -29,6 +29,11 @@ audience:
 - Design schema to fit (embed related data)
 
 ---
+## Transaction Scope
+
+![transactions_scope](svg/courses/databases/mongodb-for-developers/09_transactions_and_data_consistency/transactions_scope.svg)
+
+---
 ## Multi-Document Transactions
 
 - Available since MongoDB 4.0 (replica sets) and 4.2 (sharded)

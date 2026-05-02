@@ -29,6 +29,11 @@ audience:
 - Drives UX improvements
 
 ---
+## Analytics Dimensions
+
+![search_analytics](svg/courses/databases/elasticsearch-for-developers/15_search_analytics_and_monitoring/search_analytics.svg)
+
+---
 ## Zero-Result Queries
 
 - Surface gaps: missing inventory, typos

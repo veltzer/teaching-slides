@@ -30,6 +30,11 @@ audience:
 - *Not*: as soon as you finish typing
 
 ---
+## Process Choices
+
+![process_choices](svg/courses/development_methodologies/code-review-best-practices/03_review_process_design/process_choices.svg)
+
+---
 ## Choosing Reviewers
 
 - One reviewer is the minimum

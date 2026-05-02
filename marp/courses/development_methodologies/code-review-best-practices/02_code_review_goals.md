@@ -29,6 +29,11 @@ audience:
 - "Why are we doing this?" should always have an answer
 
 ---
+## Goals at a Glance
+
+![review_goals](svg/courses/development_methodologies/code-review-best-practices/02_code_review_goals/review_goals.svg)
+
+---
 ## Goal: Correctness
 
 - Does the code do what it says?

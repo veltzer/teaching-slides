@@ -30,6 +30,11 @@ audience:
 - Pick the right type for the job
 
 ---
+## Four Doc Modes
+
+![doc_modes](svg/courses/development_methodologies/technical-writing/03_document_types/diataxis.svg)
+
+---
 ## The Diátaxis Framework
 
 - Four kinds of docs:

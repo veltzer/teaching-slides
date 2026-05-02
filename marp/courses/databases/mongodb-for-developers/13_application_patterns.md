@@ -21,6 +21,11 @@ audience:
 - Schema versioning
 
 ---
+## Common Patterns
+
+![app_patterns](svg/courses/databases/mongodb-for-developers/13_application_patterns/app_patterns.svg)
+
+---
 ## Embed Pattern
 
 - Related data inside parent document

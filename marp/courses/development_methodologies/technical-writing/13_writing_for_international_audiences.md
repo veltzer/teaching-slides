@@ -30,6 +30,11 @@ audience:
 - Even US-only docs benefit
 
 ---
+## Practices
+
+![global_writing](svg/courses/development_methodologies/technical-writing/13_writing_for_international_audiences/intl_writing.svg)
+
+---
 ## Plain Language Basics
 
 - Short sentences (under 25 words)

@@ -31,6 +31,11 @@ audience:
 - The most-used spreadsheet feature for analysis
 
 ---
+## Anatomy
+
+![pivot_anatomy](svg/courses/data_science/data-analyst-fundamentals/10_pivot_tables/pivot_anatomy.svg)
+
+---
 ## A Concrete Example
 
 - Source: orders table with `country`, `month`, `amount`

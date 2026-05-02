@@ -20,6 +20,11 @@ audience:
 - Write-heavy patterns
 
 ---
+## Patterns
+
+![app_patterns](svg/courses/databases/elasticsearch-for-developers/13_application_development_patterns/app_patterns.svg)
+
+---
 ## ES As Primary Store
 
 - Risky: no transactions, no joins

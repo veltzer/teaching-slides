@@ -21,6 +21,11 @@ audience:
 - Auditing
 
 ---
+## Security Layers
+
+![security_layers](svg/courses/databases/mongodb-for-developers/11_data_validation_and_security/security_layers.svg)
+
+---
 ## Schema Validation
 
 ```javascript

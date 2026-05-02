@@ -30,6 +30,11 @@ audience:
 - Each has a different structure and audience
 
 ---
+## Effective Structure
+
+![report_structure](svg/courses/data_science/data-analyst-fundamentals/12_reporting/report_structure.svg)
+
+---
 ## What a Report Is For
 
 - A document that *triggers* a decision or *records* one

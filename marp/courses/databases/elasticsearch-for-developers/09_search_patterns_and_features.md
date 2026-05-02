@@ -20,6 +20,11 @@ audience:
 - Common patterns
 
 ---
+## Common Patterns
+
+![search_patterns](svg/courses/databases/elasticsearch-for-developers/09_search_patterns_and_features/search_patterns.svg)
+
+---
 ## Faceting
 
 - Show counts of matching values

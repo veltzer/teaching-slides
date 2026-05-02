@@ -31,6 +31,11 @@ audience:
 - A team with high doc debt has frustrated users
 
 ---
+## Fighting Doc Decay
+
+![doc_decay](svg/courses/development_methodologies/technical-writing/12_maintaining_documentation/doc_decay.svg)
+
+---
 ## Why Docs Decay
 
 - Code changes; docs don't

@@ -20,6 +20,11 @@ audience:
 - Synonyms
 
 ---
+## Relevance Levers
+
+![relevance_features](svg/courses/databases/elasticsearch-for-developers/06_advanced_search_features/relevance_features.svg)
+
+---
 ## Multi-Match
 
 ```json

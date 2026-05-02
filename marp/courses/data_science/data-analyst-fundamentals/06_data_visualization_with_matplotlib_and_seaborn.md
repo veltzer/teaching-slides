@@ -30,6 +30,11 @@ audience:
 - Read Tufte; the principles outlast any tool
 
 ---
+## Pick the Chart
+
+![chart_choices](svg/courses/data_science/data-analyst-fundamentals/06_data_visualization_with_matplotlib_and_seaborn/chart_choices.svg)
+
+---
 ## Common Chart Types
 
 - **Bar / column**: compare categories

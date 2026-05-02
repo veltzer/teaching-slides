@@ -12,6 +12,11 @@ audience:
 # gRPC-Web, Gateway, Testing, Performance
 
 ---
+## Web And Gateway
+
+![web_and_gateway](svg/courses/networking/grpc/07_grpc_web_gateway_testing/web_and_gateway.svg)
+
+---
 ## What This Chapter Covers
 
 - gRPC-Web: bringing gRPC to browsers

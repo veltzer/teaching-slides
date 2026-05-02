@@ -29,6 +29,11 @@ audience:
 - Not a report, not a one-off chart
 
 ---
+## Design Pattern
+
+![dashboard_design](svg/courses/data_science/data-analyst-fundamentals/11_dashboards/dashboard_design.svg)
+
+---
 ## Why Dashboards Often Fail
 
 - Built without a clear consumer in mind

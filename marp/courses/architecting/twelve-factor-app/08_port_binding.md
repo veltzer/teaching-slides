@@ -11,6 +11,11 @@ audience:
 # Factor VII: Port Binding
 
 ---
+## Port Binding At A Glance
+
+![port_binding](svg/courses/architecting/twelve-factor-app/08_port_binding/port_binding.svg)
+
+---
 ## The Rule
 
 - Export services via port binding

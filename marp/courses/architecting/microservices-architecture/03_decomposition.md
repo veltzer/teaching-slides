@@ -19,6 +19,11 @@ audience:
 - This is the hardest microservices design problem
 
 ---
+## Decomposition Strategies
+
+![decomposition_strategies](svg/courses/architecting/microservices-architecture/03_decomposition/decomposition_strategies.svg)
+
+---
 ## Decompose by Business Capability
 
 - Identify the business activities the system supports

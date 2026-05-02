@@ -30,6 +30,11 @@ audience:
 - The modern industry default for technical docs
 
 ---
+## The Pipeline
+
+![docs_as_code](svg/courses/development_methodologies/technical-writing/10_documentation_as_code/docs_as_code.svg)
+
+---
 ## Why It Wins
 
 - Docs evolve with code (no drift)

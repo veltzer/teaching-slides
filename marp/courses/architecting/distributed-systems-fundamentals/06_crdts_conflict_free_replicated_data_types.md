@@ -29,6 +29,11 @@ audience:
 - CRDTs provide deterministic merges
 
 ---
+## Common CRDT Types
+
+![crdt_kinds](svg/courses/architecting/distributed-systems-fundamentals/06_crdts_conflict_free_replicated_data_types/crdt_kinds.svg)
+
+---
 ## What "Conflict-Free" Means
 
 - Concurrent updates merge to a deterministic result
