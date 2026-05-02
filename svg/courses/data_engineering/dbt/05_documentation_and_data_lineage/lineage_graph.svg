@@ -2,49 +2,142 @@
   <metadata>
     <type>regular</type>
   </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
   <defs/>
 
-  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">dbt Lineage</text>
+  <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.608653887349" font-weight="bold" fill="var(--text)">dbt Lineage</text>
 
-  <rect x="60" y="100" width="180" height="80" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="150" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">raw.users</text>
-  <text x="150" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">source</text>
+  <rect x="40" y="86.194690265487" width="183.050847457627" height="82.12389380531" rx="6.130425833003" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="131.525423728814" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.304326943675" font-weight="bold" fill="var(--info-text)">raw.users</text>
+  <text x="131.525423728814" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.239114027173" fill="var(--info-text)">source</text>
 
-  <rect x="60" y="220" width="180" height="80" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="150" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">raw.orders</text>
-  <text x="150" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">source</text>
+  <rect x="40" y="209.380530973451" width="183.050847457627" height="82.12389380531" rx="6.130425833003" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="131.525423728814" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.304326943675" font-weight="bold" fill="var(--info-text)">raw.orders</text>
+  <text x="131.525423728814" y="270.973451327434" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.239114027173" fill="var(--info-text)">source</text>
 
-  <rect x="60" y="340" width="180" height="80" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">raw.events</text>
-  <text x="150" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">source</text>
+  <rect x="40" y="332.566371681416" width="183.050847457627" height="82.12389380531" rx="6.130425833003" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="131.525423728814" y="368.495575221239" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.304326943675" font-weight="bold" fill="var(--info-text)">raw.events</text>
+  <text x="131.525423728814" y="394.159292035398" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.239114027173" fill="var(--info-text)">source</text>
 
-  <path d="M 242 140 L 372 200" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 242 260 L 372 240" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 242 380 L 372 280" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 225.084745762712 127.256637168142 L 357.28813559322 188.849557522124" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 225.084745762712 250.442477876106 L 357.28813559322 229.911504424779" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 225.084745762712 373.628318584071 L 357.28813559322 270.973451327434" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="380" y="180" width="200" height="120" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="480" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">stg_user_activity</text>
-  <text x="480" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-text)">staging</text>
-  <text x="480" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-text)">light cleanup</text>
+  <rect x="365.423728813559" y="168.318584070796" width="203.389830508475" height="123.185840707965" rx="6.130425833003" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="467.118644067797" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.304326943675" font-weight="bold" fill="var(--warn-text)">stg_user_activity</text>
+  <text x="467.118644067797" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.239114027173" fill="var(--warn-text)">staging</text>
+  <text x="467.118644067797" y="260.70796460177" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.239114027173" fill="var(--warn-text)">light cleanup</text>
 
-  <path d="M 582 240 L 712 240" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 570.847457627119 229.911504424779 L 703.050847457627 229.911504424779" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="720" y="180" width="200" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="820" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">int_active_users</text>
-  <text x="820" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-text)">intermediate</text>
-  <text x="820" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-text)">business logic</text>
+  <rect x="711.186440677966" y="168.318584070796" width="203.389830508475" height="123.185840707965" rx="6.130425833003" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="812.881355932203" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.304326943675" font-weight="bold" fill="var(--primary-text)">int_active_users</text>
+  <text x="812.881355932203" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.239114027173" fill="var(--primary-text)">intermediate</text>
+  <text x="812.881355932203" y="260.70796460177" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.239114027173" fill="var(--primary-text)">business logic</text>
 
-  <path d="M 922 240 L 1052 240" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 916.610169491525 229.911504424779 L 1048.813559322034 229.911504424779" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="1060" y="180" width="180" height="120" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1150" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">mart_dau</text>
-  <text x="1150" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-text)">mart</text>
-  <text x="1150" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-text)">consumed by BI</text>
+  <rect x="1056.949152542373" y="168.318584070796" width="183.050847457627" height="123.185840707965" rx="6.130425833003" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1148.474576271186" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.304326943675" font-weight="bold" fill="var(--ok-text)">mart_dau</text>
+  <text x="1148.474576271186" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.239114027173" fill="var(--ok-text)">mart</text>
+  <text x="1148.474576271186" y="260.70796460177" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.239114027173" fill="var(--ok-text)">consumed by BI</text>
 
-  <rect x="60" y="450" width="1160" height="170" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Why lineage matters</text>
-  <text x="80" y="520" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Impact analysis: change a source, see what downstream breaks</text>
-  <text x="80" y="545" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Debugging: bad number in dashboard? Trace upstream</text>
-  <text x="80" y="570" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">- Auto-generated from `ref()` calls in models</text>
-  <text x="80" y="600" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">dbt docs generate -- builds the graph</text>
+  <rect x="40" y="445.486725663717" width="1179.661016949153" height="174.513274336283" rx="10.217376388339" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="629.830508474576" y="481.41592920354" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.39127749901" font-weight="bold" fill="var(--text)">Why lineage matters</text>
+  <text x="60.338983050847" y="517.345132743363" font-family="Arial, sans-serif" font-size="14.304326943675" fill="var(--text)">- Impact analysis: change a source, see what downstream breaks</text>
+  <text x="60.338983050847" y="543.008849557522" font-family="Arial, sans-serif" font-size="14.304326943675" fill="var(--text)">- Debugging: bad number in dashboard? Trace upstream</text>
+  <text x="60.338983050847" y="568.672566371681" font-family="Arial, sans-serif" font-size="14.304326943675" fill="var(--text)">- Auto-generated from `ref()` calls in models</text>
+  <text x="60.338983050847" y="599.469026548673" font-family="Arial, sans-serif" font-size="13.282589304841" font-style="italic" fill="var(--text-muted)">dbt docs generate -- builds the graph</text>
 </svg>

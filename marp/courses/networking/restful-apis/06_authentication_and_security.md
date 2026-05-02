@@ -11,6 +11,11 @@ audience:
 # Authentication and Security
 
 ---
+## Auth Methods
+
+![auth_methods](svg/courses/networking/restful-apis/06_authentication_and_security/auth_methods.svg)
+
+---
 ## What This Chapter Covers
 
 - Auth concepts

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.885093454119" font-weight="bold" fill="var(--text)">Version Deprecation Lifecycle</text>
+
+  <rect x="40" y="109.174311926606" width="200" height="106.422018348624" rx="8.252883844034" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" font-weight="bold" fill="var(--ok-text)">Active</text>
+  <text x="140" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--ok-text)">Current major</text>
+  <text x="140" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--ok-text)">Get bug fixes</text>
+
+  <path d="M 242 162.385321100917 L 282 162.385321100917" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="290" y="109.174311926606" width="200" height="106.422018348624" rx="8.252883844034" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="390" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" font-weight="bold" fill="var(--info-text)">Maintenance</text>
+  <text x="390" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--info-text)">v(N+1) released</text>
+  <text x="390" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--info-text)">Critical fixes only</text>
+
+  <path d="M 492 162.385321100917 L 532 162.385321100917" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="540" y="109.174311926606" width="200" height="106.422018348624" rx="8.252883844034" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" font-weight="bold" fill="var(--warn-text)">Deprecated</text>
+  <text x="640" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--warn-text)">Sunset announced</text>
+  <text x="640" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--warn-text)">Nothing new added</text>
+
+  <path d="M 742 162.385321100917 L 782 162.385321100917" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="790" y="109.174311926606" width="200" height="106.422018348624" rx="8.252883844034" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="890" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" font-weight="bold" fill="var(--danger-text)">Sunset</text>
+  <text x="890" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--danger-text)">Returns 410 Gone</text>
+  <text x="890" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--danger-text)">Or 301 to v(N+1)</text>
+
+  <path d="M 992 162.385321100917 L 1032 162.385321100917" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="1040" y="109.174311926606" width="200" height="106.422018348624" rx="8.252883844034" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1140" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" font-weight="bold" fill="var(--text)">Removed</text>
+  <text x="1140" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--text-muted)">Code deleted</text>
+
+  <rect x="60" y="279.449541284404" width="1160" height="340.550458715596" rx="10.316104805043" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="316.697247706422" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.568988649077" font-weight="bold" fill="var(--text)">Communicate clearly</text>
+  <text x="80" y="353.94495412844" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--text)">Sunset header (RFC 8594)</text>
+  <text x="80" y="385.871559633028" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--text)">Sunset: Sat, 31 Dec 2025 00:00:00 GMT</text>
+  <text x="80" y="412.477064220184" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--text)">Deprecation: true</text>
+  <text x="80" y="439.082568807339" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--text)">Link: &lt;https://api.example.com/v2/users&gt;; rel="successor-version"</text>
+  <text x="80" y="486.97247706422" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--text)">Timeline</text>
+  <text x="80" y="518.899082568807" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--text-muted)">Public APIs: 12-24 months from deprecation to sunset</text>
+  <text x="80" y="545.504587155963" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--text-muted)">Internal APIs: weeks to months</text>
+  <text x="80" y="588.073394495413" font-family="Arial, sans-serif" font-size="13.410936246555" font-style="italic" fill="var(--text-muted)">Notify in changelog, email, dashboard, response headers</text>
+</svg>

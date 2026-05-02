@@ -11,6 +11,11 @@ audience:
 # Single Responsibility Principle (SRP)
 
 ---
+## With vs Without SRP
+
+![srp](svg/courses/principles/solid-clean-code/02_single_responsibility_principle/srp.svg)
+
+---
 ## What This Chapter Covers
 
 - A precise statement of SRP

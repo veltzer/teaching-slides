@@ -14,6 +14,11 @@ audience:
 # Networking and Content Delivery
 
 ---
+## VPC Anatomy
+
+![vpc_anatomy](svg/courses/cloud/introduction-to-aws/04_networking_and_content_delivery/vpc_anatomy.svg)
+
+---
 
 ## Networking in AWS
 - Virtual networks you fully control

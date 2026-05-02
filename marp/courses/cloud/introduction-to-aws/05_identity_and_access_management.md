@@ -14,6 +14,11 @@ audience:
 # Identity and Access Management
 
 ---
+## IAM Model
+
+![iam_model](svg/courses/cloud/introduction-to-aws/05_identity_and_access_management/iam_model.svg)
+
+---
 
 ## Security in AWS
 - Security is the top priority

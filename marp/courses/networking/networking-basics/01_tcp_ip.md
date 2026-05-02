@@ -13,6 +13,11 @@ audience:
 ## Understanding the Internet's Core Protocols
 
 ---
+## Layered Stack
+
+![tcp_ip_layers](svg/courses/networking/networking-basics/01_tcp_ip/tcp_ip_layers.svg)
+
+---
 
 ## What is TCP/IP?
 - Transmission Control Protocol/Internet Protocol

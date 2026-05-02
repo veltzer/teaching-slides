@@ -15,6 +15,11 @@ audience:
 # Buffer Overflows in C
 
 ---
+## Stack Smashing
+
+![stack_smash](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/stack_smash.svg)
+
+---
 ## What is a Buffer Overflow?
 - Occurs when a program tries to write data beyond the bounds of a buffer
 - Can overwrite adjacent memory locations

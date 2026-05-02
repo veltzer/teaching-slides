@@ -13,6 +13,11 @@ audience:
 # Processes in Linux
 
 ---
+## Process Lifecycle
+
+![process_lifecycle](svg/courses/operating_systems/linux-systems-programming/04_processes/process_lifecycle.svg)
+
+---
 
 ## Chapter Overview
 

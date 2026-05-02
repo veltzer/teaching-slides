@@ -14,6 +14,11 @@ audience:
 # Memory Systems
 
 ---
+## Memory Hierarchy
+
+![memory_hierarchy](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/memory_hierarchy.svg)
+
+---
 
 ## Table of Contents
 

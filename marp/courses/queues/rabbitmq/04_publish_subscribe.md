@@ -11,6 +11,11 @@ audience:
 # Publish/Subscribe
 
 ---
+## Pub/Sub Pattern
+
+![pubsub_pattern](svg/courses/queues/rabbitmq/04_publish_subscribe/pubsub_pattern.svg)
+
+---
 ## What This Chapter Covers
 
 - The pub/sub pattern with fanout

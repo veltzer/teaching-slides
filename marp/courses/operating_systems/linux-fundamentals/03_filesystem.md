@@ -14,6 +14,11 @@ audience:
 ## Understanding Structure and Navigation
 
 ---
+## Hierarchy
+
+![fs_hierarchy](svg/courses/operating_systems/linux-fundamentals/03_filesystem/fs_hierarchy.svg)
+
+---
 
 ## Basic File System Structure
 ![basic_file_system_structure](svg/courses/operating_systems/linux-fundamentals/03_filesystem/basic_file_system_structure.svg)

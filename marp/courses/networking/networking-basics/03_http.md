@@ -14,6 +14,11 @@ audience:
 ## From 1.0 to 3.0
 
 ---
+## Methods Overview
+
+![http_methods](svg/courses/networking/networking-basics/03_http/http_methods.svg)
+
+---
 
 ## What is HTTP: Details
 

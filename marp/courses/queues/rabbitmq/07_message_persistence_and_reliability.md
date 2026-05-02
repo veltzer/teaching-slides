@@ -11,6 +11,11 @@ audience:
 # Message Persistence and Reliability
 
 ---
+## Three Layers of Durability
+
+![durability](svg/courses/queues/rabbitmq/07_message_persistence_and_reliability/durability.svg)
+
+---
 ## What This Chapter Covers
 
 - Durable queues and persistent messages

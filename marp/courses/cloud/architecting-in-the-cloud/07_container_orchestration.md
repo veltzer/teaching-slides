@@ -14,6 +14,11 @@ audience:
 # Container Orchestration in the Cloud
 
 ---
+## Orchestration Choices
+
+![orchestration](svg/courses/cloud/architecting-in-the-cloud/07_container_orchestration/orchestration.svg)
+
+---
 
 ## Why Containers?
 - Package application with all dependencies

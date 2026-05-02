@@ -11,6 +11,11 @@ audience:
 # Documentation and Data Lineage
 
 ---
+## Lineage Graph
+
+![lineage_graph](svg/courses/data_engineering/dbt/05_documentation_and_data_lineage/lineage_graph.svg)
+
+---
 ## What This Chapter Covers
 
 - Model and column descriptions

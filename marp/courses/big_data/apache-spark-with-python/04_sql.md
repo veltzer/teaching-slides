@@ -14,6 +14,11 @@ audience:
 # Spark SQL & DataFrames
 
 ---
+## RDD vs DataFrame
+
+![dataframe_api](svg/courses/big_data/apache-spark-with-python/04_sql/dataframe_api.svg)
+
+---
 ## Spark SQL Overview
 - High-level API for structured data processing
 - Seamless integration with SQL and DataFrame operations

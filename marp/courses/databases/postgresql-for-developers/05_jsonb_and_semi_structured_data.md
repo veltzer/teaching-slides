@@ -11,6 +11,11 @@ audience:
 # JSONB and Semi-Structured Data
 
 ---
+## Operators &amp; Indexing
+
+![jsonb_ops](svg/courses/databases/postgresql-for-developers/05_jsonb_and_semi_structured_data/jsonb_ops.svg)
+
+---
 ## What This Chapter Covers
 
 - JSONB vs JSON

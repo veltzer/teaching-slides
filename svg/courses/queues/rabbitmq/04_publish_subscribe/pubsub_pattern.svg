@@ -2,45 +2,138 @@
   <metadata>
     <type>regular</type>
   </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
   <defs/>
 
-  <text x="640" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Publish/Subscribe Pattern</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Publish/Subscribe Pattern</text>
 
-  <rect x="60" y="120" width="200" height="100" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="160" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Publisher</text>
-  <text x="160" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">order_placed event</text>
+  <rect x="40" y="106.725663716814" width="206.896551724138" height="102.654867256637" rx="8.244064638873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="143.448275862069" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--info-text)">Publisher</text>
+  <text x="143.448275862069" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">order_placed event</text>
 
-  <path d="M 262 170 L 392 170" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 248.965517241379 158.053097345133 L 383.448275862069 158.053097345133" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="400" y="120" width="240" height="100" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="520" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Fanout exchange</text>
-  <text x="520" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">routing key ignored</text>
+  <rect x="391.724137931034" y="106.725663716814" width="248.275862068966" height="102.654867256637" rx="8.244064638873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="515.862068965517" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--primary-text)">Fanout exchange</text>
+  <text x="515.862068965517" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--primary-text)">routing key ignored</text>
 
-  <path d="M 642 145 L 752 100" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 642 170 L 752 170" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 642 195 L 752 240" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 642 220 L 752 320" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 642.068965517241 132.389380530973 L 755.862068965517 86.194690265487" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 642.068965517241 158.053097345133 L 755.862068965517 158.053097345133" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 642.068965517241 183.716814159292 L 755.862068965517 229.911504424779" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 642.068965517241 209.380530973451 L 755.862068965517 312.035398230089" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="760" y="60" width="220" height="80" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="870" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">queue.email</text>
-  <text x="870" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">send confirmation</text>
+  <rect x="764.137931034483" y="45.132743362832" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="877.931034482759" y="81.061946902655" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--ok-text)">queue.email</text>
+  <text x="877.931034482759" y="106.725663716814" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--ok-text)">send confirmation</text>
 
-  <rect x="760" y="140" width="220" height="80" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="870" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">queue.warehouse</text>
-  <text x="870" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">pick &amp; pack</text>
+  <rect x="764.137931034483" y="127.256637168142" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="877.931034482759" y="163.185840707965" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--ok-text)">queue.warehouse</text>
+  <text x="877.931034482759" y="188.849557522124" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--ok-text)">pick &amp; pack</text>
 
-  <rect x="760" y="220" width="220" height="80" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="870" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">queue.analytics</text>
-  <text x="870" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">track funnel</text>
+  <rect x="764.137931034483" y="209.380530973451" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="877.931034482759" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--ok-text)">queue.analytics</text>
+  <text x="877.931034482759" y="270.973451327434" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--ok-text)">track funnel</text>
 
-  <rect x="760" y="300" width="220" height="80" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="870" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">queue.inventory</text>
-  <text x="870" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">decrement stock</text>
+  <rect x="764.137931034483" y="291.504424778761" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="877.931034482759" y="327.433628318584" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--ok-text)">queue.inventory</text>
+  <text x="877.931034482759" y="353.097345132743" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--ok-text)">decrement stock</text>
 
-  <rect x="60" y="440" width="1160" height="180" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Why pub/sub</text>
-  <text x="80" y="510" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Publisher doesn't know who's listening (loose coupling)</text>
-  <text x="80" y="540" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Add a new consumer = bind a queue, no publisher change</text>
-  <text x="80" y="570" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Each queue is independent: consumer crashing doesn't affect others</text>
-  <text x="80" y="600" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">Use topic exchange when consumers want subsets of events</text>
+  <rect x="40" y="435.221238938053" width="1200" height="184.778761061947" rx="10.305080798591" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="471.150442477876" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--text)">Why pub/sub</text>
+  <text x="60.689655172414" y="507.079646017699" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">Publisher doesn't know who's listening (loose coupling)</text>
+  <text x="60.689655172414" y="537.87610619469" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">Add a new consumer = bind a queue, no publisher change</text>
+  <text x="60.689655172414" y="568.672566371681" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">Each queue is independent: consumer crashing doesn't affect others</text>
+  <text x="60.689655172414" y="599.469026548673" font-family="Arial, sans-serif" font-size="13.396605038168" font-style="italic" fill="var(--text-muted)">Use topic exchange when consumers want subsets of events</text>
 </svg>

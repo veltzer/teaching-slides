@@ -15,6 +15,11 @@ audience:
 # SQL Injection
 
 ---
+## Vulnerable vs Safe
+
+![sqli_attack](svg/courses/security/cyber-attacks-and-vectors/06_sql_injection/sqli_attack.svg)
+
+---
 ## What is SQL Injection?
 - A technique to exploit web applications by injecting malicious SQL statements
 - Attacker can gain unauthorized access to databases

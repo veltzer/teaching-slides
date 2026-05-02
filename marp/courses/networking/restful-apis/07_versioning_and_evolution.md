@@ -11,6 +11,11 @@ audience:
 # Versioning and Evolution
 
 ---
+## Breaking vs Non-Breaking
+
+![breaking_changes](svg/courses/networking/restful-apis/07_versioning_and_evolution/breaking_changes.svg)
+
+---
 ## What This Chapter Covers
 
 - Why versioning

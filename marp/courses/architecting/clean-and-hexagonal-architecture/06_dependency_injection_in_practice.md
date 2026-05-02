@@ -11,6 +11,11 @@ audience:
 # Dependency Injection in Practice
 
 ---
+## Container Pattern
+
+![di_container](svg/courses/architecting/clean-and-hexagonal-architecture/06_dependency_injection_in_practice/di_container.svg)
+
+---
 ## What This Chapter Covers
 
 - Why DI

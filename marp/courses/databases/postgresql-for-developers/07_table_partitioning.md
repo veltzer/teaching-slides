@@ -11,6 +11,11 @@ audience:
 # Table Partitioning
 
 ---
+## Strategies
+
+![partition_strategies](svg/courses/databases/postgresql-for-developers/07_table_partitioning/partition_strategies.svg)
+
+---
 ## What This Chapter Covers
 
 - What partitioning is

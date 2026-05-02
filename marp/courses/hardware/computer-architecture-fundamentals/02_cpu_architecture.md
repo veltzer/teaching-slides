@@ -14,6 +14,11 @@ audience:
 # CPU Architecture
 
 ---
+## Pipeline Stages
+
+![cpu_pipeline](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cpu_pipeline.svg)
+
+---
 
 ## Table of Contents
 

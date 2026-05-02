@@ -16,6 +16,11 @@ audience:
 Advanced Kubernetes Course - Day 2, Module 3
 
 ---
+## Sidecar Pattern
+
+![service_mesh](svg/courses/devops/advanced-kubernetes/08_service_mesh/service_mesh.svg)
+
+---
 
 ## Module Overview
 

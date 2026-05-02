@@ -11,6 +11,11 @@ audience:
 # Performance Optimisation in Design
 
 ---
+## Design for Performance
+
+![perf_design](svg/courses/databases/database-design/07_performance_optimization_in_design/perf_design.svg)
+
+---
 ## What This Chapter Covers
 
 - Indexes for queries

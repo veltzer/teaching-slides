@@ -11,6 +11,11 @@ audience:
 # Liskov Substitution Principle (LSP)
 
 ---
+## With vs Without LSP
+
+![lsp](svg/courses/principles/solid-clean-code/04_liskov_substitution_principle/lsp.svg)
+
+---
 ## What This Chapter Covers
 
 - Barbara Liskov's original formulation

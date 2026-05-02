@@ -16,6 +16,11 @@ audience:
 # Pods and Health Checks
 
 ---
+## Health Probes
+
+![probes](svg/courses/devops/k8s-introduction/06_pods_and_health/probes.svg)
+
+---
 
 ## Pod Overview
 

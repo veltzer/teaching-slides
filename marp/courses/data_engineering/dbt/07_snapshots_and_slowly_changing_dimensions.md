@@ -10,6 +10,11 @@ audience:
 # Snapshots and Slowly Changing Dimensions
 
 ---
+## SCD Types
+
+![scd_types](svg/courses/data_engineering/dbt/07_snapshots_and_slowly_changing_dimensions/scd_types.svg)
+
+---
 ## What This Chapter Covers
 
 - What snapshots are

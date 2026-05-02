@@ -14,6 +14,11 @@ audience:
 # Basic Application Scalability
 
 ---
+## Horizontal vs Vertical
+
+![horizontal_vs_vertical](svg/courses/cloud/architecting-in-the-cloud/04_basic_application_scalability/horizontal_vs_vertical.svg)
+
+---
 
 ## Why Scalability Matters
 - Users expect fast, always-available applications

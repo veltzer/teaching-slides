@@ -10,6 +10,11 @@ audience:
 # OpenAPI 3.x Specification
 
 ---
+## Document Structure
+
+![openapi_structure](svg/courses/architecting/api-first-development/02_openapi_3x_specification/openapi_structure.svg)
+
+---
 ## What This Chapter Covers
 
 - The OpenAPI document structure

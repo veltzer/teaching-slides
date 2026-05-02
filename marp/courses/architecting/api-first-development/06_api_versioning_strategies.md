@@ -11,6 +11,11 @@ audience:
 # API Versioning Strategies
 
 ---
+## Deprecation Lifecycle
+
+![deprecation_lifecycle](svg/courses/architecting/api-first-development/06_api_versioning_strategies/deprecation_lifecycle.svg)
+
+---
 ## What This Chapter Covers
 
 - Why APIs need versioning

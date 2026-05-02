@@ -11,6 +11,11 @@ audience:
 # Data Modeling Fundamentals
 
 ---
+## Three Levels
+
+![conceptual_logical_physical](svg/courses/databases/database-design/03_data_modeling_fundamentals/conceptual_logical_physical.svg)
+
+---
 ## What This Chapter Covers
 
 - Data types
