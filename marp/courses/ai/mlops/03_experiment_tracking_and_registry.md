@@ -72,6 +72,11 @@ audience:
 - Evaluation reports
 
 ---
+## Run Artifacts
+
+![run_artifacts](svg/courses/ai/mlops/03_experiment_tracking_and_registry/run_artifacts.svg)
+
+---
 ## Model Registry
 
 - Source of truth for models

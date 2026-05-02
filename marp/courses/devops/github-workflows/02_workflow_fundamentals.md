@@ -103,6 +103,12 @@ jobs:
 
 ---
 
+## Runner Choices
+
+![runner_choices](svg/courses/devops/github-workflows/02_workflow_fundamentals/runner_choices.svg)
+
+---
+
 ## Understanding Runners
 
 | Runner Label       | Operating System        | CPU  | RAM   |

@@ -138,6 +138,12 @@ Autonomous agents can escalate beyond intended scope
 
 ---
 
+## Risks vs. Least Privilege
+
+![least_privilege](svg/courses/security/working-with-llms-securely/09_excessive_agency/least_privilege.svg)
+
+---
+
 ## Mitigation: Principle of Least Privilege
 
 ```python

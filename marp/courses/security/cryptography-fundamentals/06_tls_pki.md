@@ -90,6 +90,12 @@ A cert without its chain is unverifiable. A cert without a trusted root in the c
 
 ## The trust chain
 
+![trust_chain](svg/courses/security/cryptography-fundamentals/06_tls_pki/trust_chain.svg)
+
+---
+
+## The trust chain — text view
+
 ```output
 Root CA (in browser/OS trust store)
    └── Intermediate CA (signed by root)

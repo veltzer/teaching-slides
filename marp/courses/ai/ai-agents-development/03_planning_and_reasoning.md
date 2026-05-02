@@ -35,6 +35,11 @@ audience:
 - Simple to implement
 
 ---
+## ReAct Loop
+
+![react_loop](svg/courses/ai/ai-agents-development/03_planning_and_reasoning/react_loop.svg)
+
+---
 ## ReAct Trade-offs
 
 - Easy to start with

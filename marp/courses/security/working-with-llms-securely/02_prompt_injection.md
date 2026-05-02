@@ -209,6 +209,12 @@ def process_with_separation(user_query, context_data):
 
 ---
 
+## Layered Defense
+
+![defense_layers](svg/courses/security/working-with-llms-securely/02_prompt_injection/defense_layers.svg)
+
+---
+
 ## Defense in Depth Strategy
 
 No single mitigation is sufficient. Combine multiple layers:

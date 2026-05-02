@@ -43,6 +43,11 @@ audience:
 - Return type: structured
 
 ---
+## Designing Good Tools
+
+![tool_design_traits](svg/courses/ai/ai-agents-development/02_tools_and_function_calling/tool_design_traits.svg)
+
+---
 ## JSON Schema for Tools
 
 - Type, properties, required fields

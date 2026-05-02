@@ -23,6 +23,12 @@ audience:
 
 ---
 
+## Roles At A Glance
+
+![role_overview](svg/courses/cloud/introduction-to-cloud-computing/13_cloud_career_paths/role_overview.svg)
+
+---
+
 ## Cloud Architect
 - Design cloud solutions and architectures
 - Choose services, patterns, and strategies

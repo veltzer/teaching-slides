@@ -51,6 +51,12 @@ Pick 2-3 SLIs per service. More SLIs means more dashboards no one reads.
 
 ---
 
+## SLI Categories
+
+![sli_categories](svg/courses/architecting/site-reliability-engineering/02_slos_slis/sli_categories.svg)
+
+---
+
 ## SLI to SLO to SLA
 
 ![slo_pyramid](svg/courses/architecting/site-reliability-engineering/02_slos_slis/slo_pyramid.svg)

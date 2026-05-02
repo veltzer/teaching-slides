@@ -80,6 +80,11 @@ audience:
 - Set per-user and per-tenant budgets
 
 ---
+## Cost Levers
+
+![cost_levers](svg/courses/ai/ai-agents-development/05_production_concerns/cost_levers.svg)
+
+---
 ## Latency
 
 - Streaming for perceived speed

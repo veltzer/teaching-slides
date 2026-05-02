@@ -74,6 +74,12 @@ audience:
 
 ---
 
+## Managed K8s
+
+![managed_k8s](svg/courses/cloud/architecting-in-the-cloud/07_container_orchestration/managed_k8s.svg)
+
+---
+
 ## EKS vs AKS vs GKE
 - GKE: most mature, fastest updates, best auto-scaling
 - EKS: deepest AWS integration, largest customer base

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="39.597979746447" font-weight="bold" fill="var(--text)">Certificate Trust Chain</text>
+  <rect x="40" y="80" width="1200" height="120" rx="14.142135623731" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.112698372208" font-weight="bold" fill="var(--ok-text)">Root CA</text>
+  <text x="640" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--ok-text)">Pre-installed in browser/OS trust store</text>
+  <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--ok-text)">Self-signed; the root of all trust</text>
+  <path d="M 640 200 L 640 240" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="680" y="225" font-family="Arial, sans-serif" font-size="18.38477631085" fill="var(--text-muted)">signs</text>
+  <rect x="40" y="250" width="1200" height="120" rx="14.142135623731" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.112698372208" font-weight="bold" fill="var(--primary-text)">Intermediate CA</text>
+  <text x="640" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--primary-text)">Issued and signed by the root</text>
+  <text x="640" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--primary-text)">Used day-to-day so the root stays offline</text>
+  <path d="M 640 370 L 640 410" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="680" y="395" font-family="Arial, sans-serif" font-size="18.38477631085" fill="var(--text-muted)">signs</text>
+  <rect x="40" y="420" width="1200" height="120" rx="14.142135623731" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.112698372208" font-weight="bold" fill="var(--info-text)">Leaf Certificate</text>
+  <text x="640" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--info-text)">Your server's cert; presented at handshake</text>
+  <text x="640" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--info-text)">Browser verifies the chain back to the root</text>
+  <rect x="40" y="560" width="1200" height="60" rx="14.142135623731" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--warn-text)">Server sends leaf + intermediates; browser supplies the root</text>
+</svg>

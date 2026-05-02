@@ -151,6 +151,12 @@ steps:
 
 ---
 
+## Version Pinning
+
+![version_pinning](svg/courses/devops/github-workflows/04_actions_and_marketplace/version_pinning.svg)
+
+---
+
 ## Version Pinning Strategies
 
 | Strategy        | Example              | Security | Updates     |

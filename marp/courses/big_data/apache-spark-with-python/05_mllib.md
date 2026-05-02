@@ -39,6 +39,11 @@ audience:
 
 ---
 
+## ML Pipeline Stages
+
+![ml_pipeline](svg/courses/big_data/apache-spark-with-python/05_mllib/ml_pipeline.svg)
+
+---
 ## Basic Pipeline Structure
 
 ```python

@@ -89,6 +89,12 @@ audience:
 
 ---
 
+## LB Algorithms
+
+![lb_algorithms](svg/courses/cloud/architecting-in-the-cloud/04_basic_application_scalability/lb_algorithms.svg)
+
+---
+
 ## Health Checks
 - Load balancer pings instances periodically
 - HTTP check: expects 200 response

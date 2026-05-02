@@ -66,6 +66,12 @@ audience:
 
 ---
 
+## Instance Families At A Glance
+
+![instance_families](svg/courses/cloud/introduction-to-aws/02_core_compute_services/instance_families.svg)
+
+---
+
 ## EC2 Instance Types: General Purpose
 - t3, t3a: burstable performance, web servers
 - m6i, m6a: balanced compute/memory/networking

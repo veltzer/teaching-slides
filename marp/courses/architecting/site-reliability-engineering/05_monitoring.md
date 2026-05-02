@@ -78,6 +78,12 @@ A microservices-oriented framework. Closely related to golden signals but framed
 
 ---
 
+## Alert Quality
+
+![alert_quality](svg/courses/architecting/site-reliability-engineering/05_monitoring/alert_quality.svg)
+
+---
+
 ## Designing alerts
 
 ```output

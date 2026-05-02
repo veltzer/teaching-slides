@@ -32,6 +32,12 @@ audience:
 
 ---
 
+## CI/CD Stages
+
+![cicd_stages](svg/courses/cloud/introduction-to-cloud-computing/11_cloud_and_devops/cicd_stages.svg)
+
+---
+
 ## CI/CD Pipeline
 
 ![cicd](svg/courses/cloud/introduction-to-cloud-computing/11_cloud_and_devops/cicd_pipeline.svg)

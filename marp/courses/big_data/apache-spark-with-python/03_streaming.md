@@ -52,6 +52,11 @@ audience:
 - Automatic batching of data
 
 ---
+## DStream Lifecycle
+
+![dstream_lifecycle](svg/courses/big_data/apache-spark-with-python/03_streaming/dstream_lifecycle.svg)
+
+---
 ## Creating DStreams
 
 ```python

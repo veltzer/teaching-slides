@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.736087274791" font-weight="bold" fill="var(--text)">Spark MLlib Pipeline</text>
+  <rect x="40" y="102.142857142857" width="203.389830508475" height="517.857142857143" rx="10.262888312425" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="141.694915254237" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.473198962366" font-weight="bold" fill="var(--info-text)">Raw Data</text>
+  <text x="60.338983050847" y="185" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--info-text)">CSV / Parquet</text>
+  <text x="60.338983050847" y="216.071428571429" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--info-text)">DataFrame load</text>
+  <text x="60.338983050847" y="247.142857142857" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--info-text)">Schema inference</text>
+  <path d="M 248.474576271186 361.071428571429 L 289.152542372881 361.071428571429" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="294.237288135593" y="102.142857142857" width="203.389830508475" height="517.857142857143" rx="10.262888312425" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="395.932203389831" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.473198962366" font-weight="bold" fill="var(--primary-text)">Transformers</text>
+  <text x="314.576271186441" y="185" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--primary-text)">StringIndexer</text>
+  <text x="314.576271186441" y="216.071428571429" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--primary-text)">VectorAssembler</text>
+  <text x="314.576271186441" y="247.142857142857" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--primary-text)">StandardScaler</text>
+  <text x="314.576271186441" y="278.214285714286" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--primary-text)">Tokenizer</text>
+  <path d="M 502.71186440678 361.071428571429 L 543.389830508475 361.071428571429" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="548.474576271186" y="102.142857142857" width="203.389830508475" height="517.857142857143" rx="10.262888312425" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650.169491525424" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.473198962366" font-weight="bold" fill="var(--warn-text)">Estimator</text>
+  <text x="568.813559322034" y="185" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--warn-text)">Logistic regression</text>
+  <text x="568.813559322034" y="216.071428571429" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--warn-text)">Random forest</text>
+  <text x="568.813559322034" y="247.142857142857" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--warn-text)">k-means</text>
+  <text x="568.813559322034" y="278.214285714286" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--warn-text)">.fit() to train</text>
+  <path d="M 756.949152542373 361.071428571429 L 797.627118644068 361.071428571429" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="802.71186440678" y="102.142857142857" width="203.389830508475" height="517.857142857143" rx="10.262888312425" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="904.406779661017" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.473198962366" font-weight="bold" fill="var(--ok-text)">Model</text>
+  <text x="823.050847457627" y="185" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--ok-text)">.transform() infers</text>
+  <text x="823.050847457627" y="216.071428571429" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--ok-text)">Predictions DF</text>
+  <text x="823.050847457627" y="247.142857142857" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--ok-text)">.save() to disk</text>
+  <path d="M 1011.186440677966 361.071428571429 L 1051.864406779661 361.071428571429" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="1056.949152542373" y="102.142857142857" width="183.050847457627" height="517.857142857143" rx="10.262888312425" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1148.474576271186" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.473198962366" font-weight="bold" fill="var(--info-text)">Evaluator</text>
+  <text x="1072.203389830509" y="185" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--info-text)">Accuracy, AUC</text>
+  <text x="1072.203389830509" y="216.071428571429" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--info-text)">RMSE, F1</text>
+  <text x="1072.203389830509" y="247.142857142857" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--info-text)">Cross-validation</text>
+</svg>

@@ -38,6 +38,11 @@ audience:
 - Sinks
 
 ---
+## Pipeline Layers
+
+![pipeline_layers](svg/courses/ai/mlops/02_pipelines/pipeline_layers.svg)
+
+---
 ## DAG Model
 
 - Tasks form a graph

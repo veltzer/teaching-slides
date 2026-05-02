@@ -91,6 +91,12 @@ steps:
 
 ---
 
+## Secrets Scoping
+
+![secrets_layers](svg/courses/devops/github-workflows/05_environment_management/secrets_layers.svg)
+
+---
+
 ## GitHub Secrets
 
 - Encrypted variables stored in repository settings

@@ -85,6 +85,11 @@ audience:
 - Alert when drift exceeds threshold
 
 ---
+## Drift Kinds
+
+![drift_kinds](svg/courses/ai/mlops/04_serving_and_monitoring/drift_kinds.svg)
+
+---
 ## Concept Drift
 
 - Relationship between input and label changes

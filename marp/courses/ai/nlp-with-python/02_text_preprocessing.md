@@ -52,6 +52,11 @@ audience:
 - Number handling
 
 ---
+## Normalisation Steps
+
+![normalisation_steps](svg/courses/ai/nlp-with-python/02_text_preprocessing/normalisation_steps.svg)
+
+---
 ## Stop Words
 
 - Common low-content words

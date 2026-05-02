@@ -41,6 +41,12 @@ audience:
 
 ---
 
+## Lock-In Levels
+
+![lock_in_levels](svg/courses/cloud/introduction-to-cloud-computing/12_choosing_a_cloud_provider/lockin_levels.svg)
+
+---
+
 ## Vendor Lock-In
 - Proprietary services create dependencies
 - Data egress costs make leaving expensive

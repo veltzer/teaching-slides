@@ -52,6 +52,11 @@ audience:
 - Multinomial variant for counts
 
 ---
+## Classifier Choices
+
+![classifier_choices](svg/courses/ai/nlp-with-python/03_classical_models/classifier_choices.svg)
+
+---
 ## Logistic Regression
 
 - Linear model with sigmoid

@@ -24,6 +24,12 @@ audience:
 
 ---
 
+## Ancillary Service Areas
+
+![ancillary_services](svg/courses/cloud/architecting-in-the-cloud/13_other_cloud_services/ancillary_services.svg)
+
+---
+
 ## DevOps Services
 - CI/CD pipelines in the cloud
 - AWS CodePipeline/CodeBuild, Azure DevOps, Cloud Build

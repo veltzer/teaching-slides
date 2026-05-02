@@ -82,6 +82,11 @@ audience:
 - Retrain or re-evaluate
 
 ---
+## Drift Signals
+
+![drift_signals](svg/courses/ai/nlp-with-python/05_production_nlp/drift_signals.svg)
+
+---
 ## Multilingual
 
 - Detect language first
