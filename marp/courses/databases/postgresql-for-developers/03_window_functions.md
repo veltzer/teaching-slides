@@ -11,6 +11,11 @@ audience:
 # Window Functions
 
 ---
+## Windows vs GROUP BY
+
+![window_basics](svg/courses/databases/postgresql-for-developers/03_window_functions/window_basics.svg)
+
+---
 ## What This Chapter Covers
 
 - What window functions are

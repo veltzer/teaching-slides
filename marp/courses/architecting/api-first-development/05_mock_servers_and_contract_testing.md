@@ -11,6 +11,11 @@ audience:
 # Mock Servers and Contract Testing
 
 ---
+## Contract Testing
+
+![contract_testing](svg/courses/architecting/api-first-development/05_mock_servers_and_contract_testing/contract_testing.svg)
+
+---
 ## What This Chapter Covers
 
 - Mock servers from OpenAPI specs

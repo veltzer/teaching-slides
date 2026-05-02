@@ -11,6 +11,11 @@ audience:
 # Contract Testing
 
 ---
+## Pact Flow
+
+![pact_flow](svg/courses/testing/api-testing/04_contract_testing/pact_flow.svg)
+
+---
 ## What This Chapter Covers
 
 - Contracts and consumers

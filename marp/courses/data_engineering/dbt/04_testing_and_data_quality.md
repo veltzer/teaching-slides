@@ -11,6 +11,11 @@ audience:
 # Testing and Data Quality
 
 ---
+## Test Types
+
+![test_types](svg/courses/data_engineering/dbt/04_testing_and_data_quality/test_types.svg)
+
+---
 ## What This Chapter Covers
 
 - dbt tests

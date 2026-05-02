@@ -11,6 +11,11 @@ audience:
 # Error Handling
 
 ---
+## Structured Errors
+
+![error_response](svg/courses/architecting/api-design-best-practices/06_error_handling/error_response.svg)
+
+---
 ## Why Error Design Matters
 
 - Errors are part of the API contract

@@ -10,6 +10,11 @@ audience:
 # Services and Service Discovery
 
 ---
+## Service Types
+
+![service_types](svg/courses/containers/kubernetes/04_services_and_service_discovery/service_types.svg)
+
+---
 ## What This Chapter Covers
 
 - What a Service is

@@ -10,6 +10,11 @@ audience:
 # Review Checklists
 
 ---
+## Reviewer's Checklist
+
+![review_checklist](svg/courses/development_methodologies/code-review-best-practices/10_review_checklists/review_checklist.svg)
+
+---
 ## What This Chapter Covers
 
 - Why use checklists

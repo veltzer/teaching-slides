@@ -10,6 +10,11 @@ audience:
 # Sensors
 
 ---
+## Sensor Modes
+
+![sensor_modes](svg/courses/data_engineering/apache-airflow/04_sensors/sensor_modes.svg)
+
+---
 ## What This Chapter Covers
 
 - What sensors are

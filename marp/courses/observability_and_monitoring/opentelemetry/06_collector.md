@@ -10,6 +10,11 @@ audience:
 # Collector
 
 ---
+## Pipeline
+
+![collector_pipeline](svg/courses/observability_and_monitoring/opentelemetry/06_collector/collector_pipeline.svg)
+
+---
 ## What This Chapter Covers
 
 - What the collector is

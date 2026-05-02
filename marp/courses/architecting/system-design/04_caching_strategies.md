@@ -11,6 +11,11 @@ audience:
 # Caching Strategies
 
 ---
+## Strategy Overview
+
+![cache_strategies](svg/courses/architecting/system-design/04_caching_strategies/cache_strategies.svg)
+
+---
 ## What This Chapter Covers
 
 - Where to cache

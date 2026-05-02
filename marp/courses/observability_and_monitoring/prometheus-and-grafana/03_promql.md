@@ -10,6 +10,11 @@ audience:
 # PromQL
 
 ---
+## PromQL Building Blocks
+
+![promql_examples](svg/courses/observability_and_monitoring/prometheus-and-grafana/03_promql/promql_examples.svg)
+
+---
 ## What This Chapter Covers
 
 - Selectors

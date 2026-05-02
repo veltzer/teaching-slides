@@ -10,6 +10,11 @@ audience:
 # Data Cleaning
 
 ---
+## Cleaning Steps
+
+![cleaning_steps](svg/courses/data_science/data-analyst-fundamentals/03_data_cleaning/cleaning_steps.svg)
+
+---
 ## What This Chapter Covers
 
 - Identifying data quality issues

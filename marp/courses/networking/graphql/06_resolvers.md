@@ -10,6 +10,11 @@ audience:
 # Resolvers
 
 ---
+## N+1 Problem
+
+![resolver_chain](svg/courses/networking/graphql/06_resolvers/resolver_chain.svg)
+
+---
 ## What This Chapter Covers
 
 - What resolvers are

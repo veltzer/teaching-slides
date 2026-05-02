@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Encapsulation</text>
+
+  <rect x="40" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--danger-text)">Bad: leaky</text>
+  <rect x="60.689655172414" y="151.743119266055" width="537.931034482759" height="234.128440366972" rx="6.295476751044" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="81.379310344828" y="183.669724770642" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">class Account {</text>
+  <text x="102.068965517241" y="210.275229357798" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">public balance: number;</text>
+  <text x="81.379310344828" y="236.880733944954" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">}</text>
+  <text x="81.379310344828" y="279.449541284404" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">// somewhere far away:</text>
+  <text x="81.379310344828" y="306.05504587156" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">account.balance -= 100</text>
+  <text x="81.379310344828" y="337.981651376147" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">// also: forgot to log...</text>
+  <text x="81.379310344828" y="364.587155963303" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">// also: balance went &lt;0</text>
+
+  <text x="60.689655172414" y="428.440366972477" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--danger-text)">Issues</text>
+  <text x="60.689655172414" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Invariants scattered everywhere</text>
+  <text x="60.689655172414" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- No central enforcement</text>
+  <text x="60.689655172414" y="513.577981651376" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Refactor breaks callers</text>
+  <text x="60.689655172414" y="540.183486238532" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Hard to add validation</text>
+
+  <rect x="660.689655172414" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">Good: encapsulated</text>
+  <rect x="681.379310344828" y="151.743119266055" width="537.931034482759" height="297.981651376147" rx="6.295476751044" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="702.068965517241" y="183.669724770642" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">class Account {</text>
+  <text x="722.758620689655" y="210.275229357798" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">private balance: number;</text>
+  <text x="722.758620689655" y="242.201834862385" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">withdraw(amount) {</text>
+  <text x="743.448275862069" y="268.807339449541" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">if (amount &gt; balance)</text>
+  <text x="764.137931034483" y="295.412844036697" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">throw new Error(...)</text>
+  <text x="743.448275862069" y="322.018348623853" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">balance -= amount</text>
+  <text x="743.448275862069" y="348.623853211009" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">log(...)</text>
+  <text x="722.758620689655" y="375.229357798165" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">}</text>
+  <text x="702.068965517241" y="401.834862385321" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">}</text>
+  <text x="702.068965517241" y="433.761467889908" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text)">account.withdraw(100)</text>
+
+  <text x="681.379310344828" y="481.651376146789" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-text)">Wins</text>
+  <text x="681.379310344828" y="513.577981651376" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Invariants live with data</text>
+  <text x="681.379310344828" y="540.183486238532" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Side effects centralized</text>
+  <text x="681.379310344828" y="566.788990825688" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Refactor without breakage</text>
+  <text x="681.379310344828" y="593.394495412844" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Testable interface</text>
+</svg>

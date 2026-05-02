@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Kubernetes Service Types</text>
+
+  <rect x="40" y="86.194690265487" width="289.655172413793" height="287.433628318584" rx="10.305080798591" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--primary-text)">ClusterIP</text>
+  <text x="184.827586206897" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">(default)</text>
+  <text x="60.689655172414" y="188.849557522124" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">Internal-only IP</text>
+  <text x="60.689655172414" y="214.513274336283" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">Pods reach via DNS:</text>
+  <text x="60.689655172414" y="240.176991150443" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">  myapp.ns.svc.cluster.local</text>
+  <text x="60.689655172414" y="281.238938053097" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">For: pod-to-pod</text>
+  <text x="60.689655172414" y="306.902654867257" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">microservice traffic</text>
+  <text x="60.689655172414" y="347.964601769912" font-family="Arial, sans-serif" font-size="12.366096958309" font-style="italic" fill="var(--primary-text)">Most common</text>
+
+  <rect x="350.344827586207" y="86.194690265487" width="289.655172413793" height="287.433628318584" rx="10.305080798591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495.172413793103" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">NodePort</text>
+  <text x="371.034482758621" y="158.053097345133" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">Opens port on every node</text>
+  <text x="371.034482758621" y="183.716814159292" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">Range: 30000-32767</text>
+  <text x="371.034482758621" y="214.513274336283" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">node-IP:port -&gt; service</text>
+  <text x="371.034482758621" y="255.575221238938" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">For: dev/test</text>
+  <text x="371.034482758621" y="281.238938053097" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">on-prem clusters</text>
+  <text x="371.034482758621" y="327.433628318584" font-family="Arial, sans-serif" font-size="12.366096958309" font-style="italic" fill="var(--warn-text)">Avoid in cloud prod</text>
+
+  <rect x="660.689655172414" y="86.194690265487" width="289.655172413793" height="287.433628318584" rx="10.305080798591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="805.51724137931" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--ok-text)">LoadBalancer</text>
+  <text x="681.379310344828" y="158.053097345133" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">Cloud provisions LB</text>
+  <text x="681.379310344828" y="183.716814159292" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">External IP assigned</text>
+  <text x="681.379310344828" y="214.513274336283" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">Public traffic enters</text>
+  <text x="681.379310344828" y="255.575221238938" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">For: prod public APIs</text>
+  <text x="681.379310344828" y="281.238938053097" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">on cloud</text>
+  <text x="681.379310344828" y="327.433628318584" font-family="Arial, sans-serif" font-size="12.366096958309" font-style="italic" fill="var(--ok-text)">Prefer Ingress (one LB)</text>
+
+  <rect x="971.034482758621" y="86.194690265487" width="268.965517241379" height="287.433628318584" rx="10.305080798591" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105.51724137931" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--info-text)">ExternalName</text>
+  <text x="991.724137931035" y="158.053097345133" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">DNS CNAME alias</text>
+  <text x="991.724137931035" y="183.716814159292" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">No proxy</text>
+  <text x="991.724137931035" y="209.380530973451" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">Points outside cluster</text>
+  <text x="991.724137931035" y="250.442477876106" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">For: external DBs,</text>
+  <text x="991.724137931035" y="276.106194690266" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">legacy services</text>
+  <text x="991.724137931035" y="327.433628318584" font-family="Arial, sans-serif" font-size="12.366096958309" font-style="italic" fill="var(--info-text)">Migration tool</text>
+
+  <rect x="40" y="414.690265486726" width="1200" height="205.309734513274" rx="10.305080798591" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="450.619469026549" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--text)">How services find pods</text>
+  <text x="60.689655172414" y="490" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">Selector matches labels</text>
+  <text x="60.689655172414" y="525" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">kube-proxy updates iptables</text>
+  <text x="60.689655172414" y="560" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--text)">Stable virtual IP</text>
+  <text x="60.689655172414" y="595" font-family="Arial, sans-serif" font-size="13.396605038168" font-style="italic" fill="var(--text-muted)">Pods come and go</text>
+</svg>

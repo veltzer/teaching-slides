@@ -11,6 +11,11 @@ audience:
 # Rate Limiting and Throttling
 
 ---
+## Token Bucket
+
+![token_bucket](svg/courses/architecting/api-gateway-patterns/05_rate_limiting_and_throttling/token_bucket.svg)
+
+---
 ## What This Chapter Covers
 
 - Why rate limiting matters

@@ -11,6 +11,11 @@ audience:
 # Consumer API
 
 ---
+## Consumer Groups
+
+![consumer_groups](svg/courses/queues/kafka/03_consumer_api/consumer_groups.svg)
+
+---
 ## What This Chapter Covers
 
 - The high-level Consumer

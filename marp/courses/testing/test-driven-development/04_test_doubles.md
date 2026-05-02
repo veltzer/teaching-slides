@@ -11,6 +11,11 @@ audience:
 # Test Doubles
 
 ---
+## Four Flavors
+
+![test_doubles](svg/courses/testing/test-driven-development/04_test_doubles/test_doubles.svg)
+
+---
 ## What This Chapter Covers
 
 - Types of test doubles: dummy, stub, spy, mock, fake

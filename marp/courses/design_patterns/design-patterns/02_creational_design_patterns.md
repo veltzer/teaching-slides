@@ -11,6 +11,11 @@ audience:
 # Creational Design Patterns
 
 ---
+## Patterns Overview
+
+![creational_patterns](svg/courses/design_patterns/design-patterns/02_creational_design_patterns/creational_patterns.svg)
+
+---
 ## What This Chapter Covers
 
 - Five patterns that *create* objects with intent

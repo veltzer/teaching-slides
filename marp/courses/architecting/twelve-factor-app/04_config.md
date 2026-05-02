@@ -12,6 +12,11 @@ audience:
 # Factor III: Config
 
 ---
+## Config in Environment
+
+![config_in_env](svg/courses/architecting/twelve-factor-app/04_config/config_in_env.svg)
+
+---
 ## The Rule
 
 - Strict separation of config from code

@@ -10,6 +10,11 @@ audience:
 # Practical Data Science
 
 ---
+## ML Workflow
+
+![ml_workflow](svg/courses/machine_learning/machine-learning/02_practical_data_science/ml_workflow.svg)
+
+---
 ## What This Chapter Covers
 
 - Data cleaning

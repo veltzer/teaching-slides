@@ -11,6 +11,11 @@ audience:
 # Entity-Relationship Modeling
 
 ---
+## ER Diagram
+
+![diagram](svg/courses/databases/database-design/02_entity_relationship_modeling/erd.svg)
+
+---
 ## What This Chapter Covers
 
 - Entities, attributes, relationships

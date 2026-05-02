@@ -11,6 +11,11 @@ audience:
 # Consistency Models
 
 ---
+## Spectrum
+
+![consistency_spectrum](svg/courses/architecting/distributed-systems-fundamentals/03_consistency_models/consistency_spectrum.svg)
+
+---
 ## What This Chapter Covers
 
 - A spectrum of consistency

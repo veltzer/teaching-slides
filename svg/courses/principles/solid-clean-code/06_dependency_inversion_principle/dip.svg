@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Dependency Inversion</text>
+
+  <rect x="40" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--danger-text)">Without DIP</text>
+
+  <rect x="81.379310344828" y="162.385321100917" width="186.206896551724" height="63.853211009174" rx="6.295476751044" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="174.48275862069" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--info-text)">OrderService</text>
+
+  <path d="M 174.48275862069 228.366972477064 L 174.48275862069 279.449541284404" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="81.379310344828" y="290.091743119266" width="186.206896551724" height="63.853211009174" rx="6.295476751044" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <text x="174.48275862069" y="327.339449541284" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--warn-text)">PostgresRepo</text>
+
+  <text x="60.689655172414" y="401.834862385321" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--danger-text)">High-level depends on low-level</text>
+  <text x="60.689655172414" y="433.761467889908" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Can't swap DB</text>
+  <text x="60.689655172414" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Can't unit test</text>
+  <text x="60.689655172414" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Business logic tied to infra</text>
+  <text x="60.689655172414" y="540.183486238532" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--danger-text)">"new PostgresRepo()"</text>
+  <text x="60.689655172414" y="572.110091743119" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--danger-text)">hardcoded inside service</text>
+
+  <rect x="660.689655172414" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">With DIP</text>
+
+  <rect x="702.068965517241" y="162.385321100917" width="186.206896551724" height="63.853211009174" rx="6.295476751044" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="795.172413793103" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--info-text)">OrderService</text>
+
+  <path d="M 795.172413793103 228.366972477064 L 795.172413793103 279.449541284404" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="702.068965517241" y="290.091743119266" width="186.206896551724" height="63.853211009174" rx="6.295476751044" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="795.172413793103" y="327.339449541284" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--primary-text)">OrderRepo (interface)</text>
+
+  <rect x="991.724137931035" y="290.091743119266" width="206.896551724138" height="63.853211009174" rx="6.295476751044" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <text x="1095.172413793103" y="327.339449541284" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--warn-text)">PostgresRepo</text>
+  <path d="M 991.724137931035 322.018348623853 L 888.275862068966 322.018348623853" stroke="var(--text)" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+  <text x="940" y="311.376146788991" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--text-muted)">implements</text>
+
+  <text x="681.379310344828" y="401.834862385321" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-text)">Both depend on abstraction</text>
+  <text x="681.379310344828" y="433.761467889908" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Swap to InMemoryRepo for tests</text>
+  <text x="681.379310344828" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Add MongoRepo without changes</text>
+  <text x="681.379310344828" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Service stays clean</text>
+  <text x="681.379310344828" y="540.183486238532" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--ok-text)">Inject via constructor</text>
+  <text x="681.379310344828" y="572.110091743119" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--ok-text)">"abstractions don't depend on details"</text>
+</svg>

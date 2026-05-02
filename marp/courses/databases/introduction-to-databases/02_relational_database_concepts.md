@@ -10,6 +10,11 @@ audience:
 # Relational Database Concepts
 
 ---
+## Tables &amp; Foreign Keys
+
+![relational_concepts](svg/courses/databases/introduction-to-databases/02_relational_database_concepts/relational_concepts.svg)
+
+---
 ## What This Chapter Covers
 
 - Tables, rows, columns

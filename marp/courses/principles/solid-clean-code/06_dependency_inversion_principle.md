@@ -11,6 +11,11 @@ audience:
 # Dependency Inversion Principle (DIP)
 
 ---
+## With vs Without DIP
+
+![dip](svg/courses/principles/solid-clean-code/06_dependency_inversion_principle/dip.svg)
+
+---
 ## What This Chapter Covers
 
 - A precise statement of DIP

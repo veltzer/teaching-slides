@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Real-Time Scheduling</text>
+
+  <rect x="40" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="231.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--primary-text)">Rate Monotonic (RMS)</text>
+  <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--primary-text)">Static priority</text>
+  <text x="60.689655172414" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Higher rate -&gt; higher priority</text>
+  <text x="60.689655172414" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Period-based</text>
+  <text x="60.689655172414" y="268.807339449541" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--primary-text)">Schedulable if</text>
+  <text x="60.689655172414" y="300.733944954128" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">U &lt;= n(2^(1/n) - 1)</text>
+  <text x="60.689655172414" y="327.339449541284" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">~ 69% for many tasks</text>
+  <text x="60.689655172414" y="375.229357798165" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Optimal among static</text>
+  <text x="60.689655172414" y="401.834862385321" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">priority schemes</text>
+  <text x="60.689655172414" y="455.045871559633" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--primary-text)">Use when</text>
+  <text x="60.689655172414" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Periodic tasks</text>
+  <text x="60.689655172414" y="513.577981651376" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Known periods</text>
+  <text x="60.689655172414" y="566.788990825688" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--primary-text)">Simple, predictable</text>
+
+  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">Earliest Deadline First</text>
+  <text x="469.310344827586" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-text)">Dynamic priority</text>
+  <text x="469.310344827586" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Closest deadline = highest</text>
+  <text x="469.310344827586" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Re-evaluate continuously</text>
+  <text x="469.310344827586" y="268.807339449541" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-text)">Schedulable if</text>
+  <text x="469.310344827586" y="300.733944954128" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">U &lt;= 1.0 (100%)</text>
+  <text x="469.310344827586" y="327.339449541284" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Optimal usage</text>
+  <text x="469.310344827586" y="375.229357798165" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Handles aperiodic</text>
+  <text x="469.310344827586" y="401.834862385321" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">tasks well</text>
+  <text x="469.310344827586" y="455.045871559633" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--ok-text)">Use when</text>
+  <text x="469.310344827586" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Tight CPU budget</text>
+  <text x="469.310344827586" y="513.577981651376" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Mixed workloads</text>
+  <text x="469.310344827586" y="566.788990825688" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--ok-text)">Domino effect on overload</text>
+
+  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1048.620689655173" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--warn-text)">Hazards</text>
+  <text x="877.931034482759" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--warn-text)">Priority inversion</text>
+  <text x="877.931034482759" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Low-prio holds lock</text>
+  <text x="877.931034482759" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">High-prio waits</text>
+  <text x="877.931034482759" y="268.807339449541" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--warn-text)">Fix</text>
+  <text x="877.931034482759" y="300.733944954128" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Priority inheritance</text>
+  <text x="877.931034482759" y="327.339449541284" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Priority ceiling</text>
+  <text x="877.931034482759" y="375.229357798165" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--warn-text)">Other</text>
+  <text x="877.931034482759" y="407.155963302752" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Unbounded jitter</text>
+  <text x="877.931034482759" y="433.761467889908" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">ISR latency</text>
+  <text x="877.931034482759" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Cache misses</text>
+  <text x="877.931034482759" y="513.577981651376" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--warn-text)">RT kernel matters</text>
+  <text x="877.931034482759" y="550.825688073395" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--warn-text)">Linux PREEMPT_RT</text>
+</svg>

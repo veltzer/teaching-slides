@@ -10,6 +10,11 @@ audience:
 # Chain of Thought
 
 ---
+## Variants
+
+![cot_variants](svg/courses/ai/prompt-engineering/03_chain_of_thought/cot_variants.svg)
+
+---
 ## What This Chapter Covers
 
 - Reasoning prompts

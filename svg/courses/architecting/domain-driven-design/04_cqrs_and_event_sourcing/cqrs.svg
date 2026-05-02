@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.113013714962" font-weight="bold" fill="var(--text)">CQRS: Split Reads &amp; Writes</text>
+
+  <rect x="40" y="87.027027027027" width="206.896551724138" height="104.504504504504" rx="8.318003918561" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="143.448275862069" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--info-text)">Client</text>
+  <text x="143.448275862069" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--info-text)">commands + queries</text>
+
+  <path d="M 248.965517241379 118.378378378378 L 311.034482758621 118.378378378378" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="277.931034482759" y="107.927927927928" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.437255388021" fill="var(--text-muted)">cmd</text>
+
+  <path d="M 248.965517241379 160.18018018018 L 311.034482758621 160.18018018018" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="277.931034482759" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.437255388021" fill="var(--text-muted)">query</text>
+
+  <rect x="319.310344827586" y="87.027027027027" width="289.655172413793" height="104.504504504504" rx="8.318003918561" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="464.137931034483" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--warn-text)">Write side</text>
+  <text x="464.137931034483" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">domain model + transactions</text>
+  <text x="464.137931034483" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--warn-text)">aggregate, invariants</text>
+
+  <rect x="640" y="87.027027027027" width="289.655172413793" height="104.504504504504" rx="8.318003918561" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="784.827586206897" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--ok-text)">Read side</text>
+  <text x="784.827586206897" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">denormalized views</text>
+  <text x="784.827586206897" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--ok-text)">tuned for queries</text>
+
+  <path d="M 464.137931034483 212.432432432432 L 464.137931034483 275.135135135135" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="319.310344827586" y="285.585585585586" width="289.655172413793" height="104.504504504504" rx="8.318003918561" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="464.137931034483" y="322.162162162162" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--warn-text)">Write DB (event store)</text>
+  <text x="464.137931034483" y="353.513513513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--warn-text)">append-only events</text>
+
+  <path d="M 611.034482758621 316.936936936937 L 743.448275862069 316.936936936937" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="677.241379310345" y="306.486486486487" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.437255388021" font-weight="bold" fill="var(--text-muted)">events</text>
+
+  <rect x="640" y="285.585585585586" width="289.655172413793" height="104.504504504504" rx="8.318003918561" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="784.827586206897" y="322.162162162162" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--ok-text)">Read DB (projections)</text>
+  <text x="784.827586206897" y="353.513513513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--ok-text)">SQL, search, cache</text>
+
+  <path d="M 784.827586206897 212.432432432432 L 784.827586206897 275.135135135135" stroke="var(--text)" stroke-width="3" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="431.891891891892" width="382.758620689655" height="188.108108108108" rx="10.397504898201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="231.379310344828" y="468.468468468468" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--primary-text)">Wins</text>
+  <text x="60.689655172414" y="499.81981981982" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">- Different scaling per side</text>
+  <text x="60.689655172414" y="525.945945945946" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">- Multiple read shapes</text>
+  <text x="60.689655172414" y="552.072072072072" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">- Audit trail (events)</text>
+  <text x="60.689655172414" y="578.198198198198" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">- Replay history</text>
+
+  <rect x="448.620689655172" y="431.891891891892" width="382.758620689655" height="188.108108108108" rx="10.397504898201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="468.468468468468" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--warn-text)">Costs</text>
+  <text x="469.310344827586" y="499.81981981982" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">- Eventual consistency</text>
+  <text x="469.310344827586" y="525.945945945946" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">- Two models to maintain</text>
+  <text x="469.310344827586" y="552.072072072072" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">- Complex projections</text>
+  <text x="469.310344827586" y="578.198198198198" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">- Versioned events</text>
+
+  <rect x="857.241379310345" y="431.891891891892" width="382.758620689655" height="188.108108108108" rx="10.397504898201" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1048.620689655173" y="468.468468468468" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--text)">Use when</text>
+  <text x="877.931034482759" y="499.81981981982" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text)">- Read-heavy + complex</text>
+  <text x="877.931034482759" y="525.945945945946" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text)">- Audit / replay needed</text>
+  <text x="877.931034482759" y="552.072072072072" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text)">- Complex domain</text>
+  <text x="877.931034482759" y="588.648648648649" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--text-muted)">Overkill for CRUD</text>
+</svg>

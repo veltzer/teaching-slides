@@ -10,6 +10,11 @@ audience:
 # Dependency Rule and Layer Separation
 
 ---
+## Dependency Rule
+
+![dependency_rule](svg/courses/architecting/clean-and-hexagonal-architecture/02_dependency_rule_and_layer_separation/dependency_rule.svg)
+
+---
 ## What This Chapter Covers
 
 - The dependency rule, precisely

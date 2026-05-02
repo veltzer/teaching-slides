@@ -12,6 +12,11 @@ audience:
 # Real-Time and Scheduling
 
 ---
+## RMS vs EDF
+
+![scheduling](svg/courses/real_time/real-time-programming/08_real_time_and_scheduling/scheduling.svg)
+
+---
 ## What This Chapter Covers
 
 - Designing threads and priorities

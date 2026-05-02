@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Chain-of-Thought Variants</text>
+
+  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="231.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--primary-text)">Zero-shot CoT</text>
+  <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Append: "Let's think step by step"</text>
+  <text x="60.689655172414" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">No examples needed</text>
+  <text x="60.689655172414" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Cheapest baseline</text>
+  <text x="60.689655172414" y="268.807339449541" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--primary-text)">Works on capable models</text>
+
+  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--ok-text)">Few-shot CoT</text>
+  <text x="469.310344827586" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Show 2-5 worked examples</text>
+  <text x="469.310344827586" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Each with reasoning + answer</text>
+  <text x="469.310344827586" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Best for hard tasks</text>
+  <text x="469.310344827586" y="268.807339449541" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--ok-text)">More tokens, more accuracy</text>
+
+  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1048.620689655173" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">Self-consistency</text>
+  <text x="877.931034482759" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Sample multiple reasonings</text>
+  <text x="877.931034482759" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Take majority vote</text>
+  <text x="877.931034482759" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Higher accuracy on math</text>
+  <text x="877.931034482759" y="268.807339449541" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--warn-text)">N times the cost</text>
+
+  <rect x="40" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="231.379310344828" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--info-text)">Tree of Thoughts</text>
+  <text x="60.689655172414" y="455.045871559633" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Explore multiple branches</text>
+  <text x="60.689655172414" y="481.651376146789" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Backtrack on dead ends</text>
+  <text x="60.689655172414" y="508.256880733945" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">For planning, search</text>
+  <text x="60.689655172414" y="545.504587155963" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--info-text)">Expensive; orchestration</text>
+
+  <rect x="448.620689655172" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--danger-text)">Reflection</text>
+  <text x="469.310344827586" y="455.045871559633" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">Generate, then critique</text>
+  <text x="469.310344827586" y="481.651376146789" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">Self-edit answer</text>
+  <text x="469.310344827586" y="508.256880733945" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">Iterate N times</text>
+  <text x="469.310344827586" y="545.504587155963" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--danger-text)">Catches own errors</text>
+
+  <rect x="857.241379310345" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1048.620689655173" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--text)">Hidden CoT</text>
+  <text x="877.931034482759" y="455.045871559633" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">o1, o3, Claude thinking</text>
+  <text x="877.931034482759" y="481.651376146789" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">Models reason internally</text>
+  <text x="877.931034482759" y="508.256880733945" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">Don't add "step by step"</text>
+  <text x="877.931034482759" y="545.504587155963" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--text-muted)">Just ask the question</text>
+</svg>

@@ -12,6 +12,11 @@ audience:
 # Data Management Patterns
 
 ---
+## Database-per-Service
+
+![database_per_service](svg/courses/architecting/microservices-architecture/07_data_management/database_per_service.svg)
+
+---
 ## Database Per Service
 
 - Each service has its own database

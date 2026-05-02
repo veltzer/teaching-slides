@@ -12,6 +12,11 @@ audience:
 # The Debian Family: dpkg and apt
 
 ---
+## apt &amp; dpkg Workflow
+
+![apt_workflow](svg/courses/operating_systems/linux-package-managers/02_dpkg_and_apt/apt_workflow.svg)
+
+---
 ## What Is a `.deb` File?
 
 A `.deb` is the package format used by `Debian`, `Ubuntu`, `Mint`, `Raspbian`, `Kali`, and many derivatives.

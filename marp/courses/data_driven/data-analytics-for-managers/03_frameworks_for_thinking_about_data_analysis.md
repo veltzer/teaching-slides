@@ -11,6 +11,11 @@ audience:
 # Frameworks for Thinking About Data Analysis
 
 ---
+## Four Levels of Analytics
+
+![four_levels](svg/courses/data_driven/data-analytics-for-managers/03_frameworks_for_thinking_about_data_analysis/four_levels.svg)
+
+---
 ## What This Chapter Covers
 
 - Why frameworks help (and how they hurt)

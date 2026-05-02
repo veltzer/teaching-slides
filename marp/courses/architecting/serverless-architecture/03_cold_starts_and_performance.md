@@ -11,6 +11,11 @@ audience:
 # Cold Starts and Performance
 
 ---
+## Cold Start Anatomy
+
+![cold_start](svg/courses/architecting/serverless-architecture/03_cold_starts_and_performance/cold_start.svg)
+
+---
 ## What This Chapter Covers
 
 - What a cold start is

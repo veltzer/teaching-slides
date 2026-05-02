@@ -11,6 +11,11 @@ audience:
 # HTTP Fundamentals
 
 ---
+## Request &amp; Response
+
+![http_request](svg/courses/networking/restful-apis/02_http_fundamentals/http_request.svg)
+
+---
 ## What This Chapter Covers
 
 - HTTP request and response

@@ -11,6 +11,11 @@ audience:
 # Structure and Organization
 
 ---
+## Inverted Pyramid
+
+![inverted_pyramid](svg/courses/development_methodologies/technical-writing/05_structure_and_organization/inverted_pyramid.svg)
+
+---
 ## What This Chapter Covers
 
 - Information architecture

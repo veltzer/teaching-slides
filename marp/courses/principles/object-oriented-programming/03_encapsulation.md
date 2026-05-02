@@ -11,6 +11,11 @@ audience:
 # Encapsulation
 
 ---
+## With vs Without
+
+![encapsulation](svg/courses/principles/object-oriented-programming/03_encapsulation/encapsulation.svg)
+
+---
 ## What This Chapter Covers
 
 - What encapsulation actually means
