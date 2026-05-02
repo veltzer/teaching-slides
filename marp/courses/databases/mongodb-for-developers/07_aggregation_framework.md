@@ -35,6 +35,11 @@ db.orders.aggregate([
 - Each stage's output is next stage's input
 
 ---
+## Pipeline Visualized
+
+![pipeline_stages](svg/courses/databases/mongodb-for-developers/07_aggregation_framework/pipeline_stages.svg)
+
+---
 ## $match
 
 - Like find()

@@ -19,6 +19,11 @@ audience:
 - Strategic design defined the boundaries; tactical design fills them
 
 ---
+## Aggregate
+
+![aggregate](svg/courses/architecting/domain-driven-design/03_tactical_building_blocks/aggregate.svg)
+
+---
 ## Entities
 
 - An object with identity that persists over time

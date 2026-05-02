@@ -20,6 +20,11 @@ audience:
 - Labels
 
 ---
+## Architecture Overview
+
+![architecture](svg/courses/observability_and_monitoring/prometheus-and-grafana/02_prometheus_basics/architecture.svg)
+
+---
 ## Architecture
 
 - Prometheus server: scrapes targets, stores TSDB

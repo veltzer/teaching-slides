@@ -20,6 +20,11 @@ audience:
 - Practical guidance
 
 ---
+## Normal Forms
+
+![normalization_forms](svg/courses/databases/database-design/04_normalization_theory_and_practice/normalization_forms.svg)
+
+---
 ## Why Normalise
 
 - Eliminate redundancy

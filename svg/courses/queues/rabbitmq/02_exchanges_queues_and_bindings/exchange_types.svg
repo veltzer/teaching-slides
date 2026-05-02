@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.79172988954" font-weight="bold" fill="var(--text)">RabbitMQ Exchange Types</text>
+
+  <rect x="40" y="83.77358490566" width="305.172413793103" height="273.584905660377" rx="10.639903531979" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="192.068965517241" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--primary-text)">direct</text>
+  <text x="60.689655172414" y="160.377358490566" font-family="Arial, sans-serif" font-size="13.831874591572" font-weight="bold" fill="var(--primary-text)">Routes by exact key</text>
+  <text x="60.689655172414" y="193.207547169811" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--primary-text)">key="error" -&gt; queue tagged</text>
+  <text x="60.689655172414" y="212.905660377358" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--primary-text)">with "error"</text>
+  <text x="60.689655172414" y="253.396226415094" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--primary-text)">For: per-type routing</text>
+  <text x="60.689655172414" y="297.169811320755" font-family="Arial, sans-serif" font-size="12.767884238374" font-style="italic" fill="var(--primary-text)">Like switch by enum</text>
+
+  <rect x="371.034482758621" y="83.77358490566" width="305.172413793103" height="273.584905660377" rx="10.639903531979" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="523.103448275862" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--ok-text)">fanout</text>
+  <text x="391.724137931034" y="160.377358490566" font-family="Arial, sans-serif" font-size="13.831874591572" font-weight="bold" fill="var(--ok-text)">Broadcast to all</text>
+  <text x="391.724137931034" y="193.207547169811" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--ok-text)">Routing key ignored</text>
+  <text x="391.724137931034" y="212.905660377358" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--ok-text)">Every bound queue gets it</text>
+  <text x="391.724137931034" y="253.396226415094" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--ok-text)">For: pub/sub events</text>
+  <text x="391.724137931034" y="297.169811320755" font-family="Arial, sans-serif" font-size="12.767884238374" font-style="italic" fill="var(--ok-text)">Notify all consumers</text>
+
+  <rect x="702.068965517241" y="83.77358490566" width="305.172413793103" height="273.584905660377" rx="10.639903531979" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="854.137931034483" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--warn-text)">topic</text>
+  <text x="722.758620689655" y="160.377358490566" font-family="Arial, sans-serif" font-size="13.831874591572" font-weight="bold" fill="var(--warn-text)">Pattern match key</text>
+  <text x="722.758620689655" y="193.207547169811" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--warn-text)">"orders.eu.*"</text>
+  <text x="722.758620689655" y="212.905660377358" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--warn-text)">"logs.#"</text>
+  <text x="722.758620689655" y="253.396226415094" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--warn-text)">For: hierarchical events</text>
+  <text x="722.758620689655" y="297.169811320755" font-family="Arial, sans-serif" font-size="12.767884238374" font-style="italic" fill="var(--warn-text)">* one word, # zero+</text>
+
+  <rect x="1033.103448275862" y="83.77358490566" width="206.896551724138" height="273.584905660377" rx="10.639903531979" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1136.551724137931" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--info-text)">headers</text>
+  <text x="1053.793103448276" y="160.377358490566" font-family="Arial, sans-serif" font-size="13.831874591572" font-weight="bold" fill="var(--info-text)">Route by header</text>
+  <text x="1053.793103448276" y="198.679245283019" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--info-text)">Match key/value</text>
+  <text x="1053.793103448276" y="231.509433962264" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--info-text)">all/any logic</text>
+  <text x="1053.793103448276" y="275.283018867925" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--info-text)">Niche use</text>
+  <text x="1053.793103448276" y="313.584905660377" font-family="Arial, sans-serif" font-size="12.767884238374" font-style="italic" fill="var(--info-text)">Topic usually wins</text>
+
+  <text x="640" y="417.547169811321" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--text)">Topology</text>
+
+  <rect x="60.689655172414" y="455.849056603774" width="186.206896551724" height="87.547169811321" rx="8.511922825583" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="153.793103448276" y="494.150943396226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.89586494477" font-weight="bold" fill="var(--info-text)">Producer</text>
+  <text x="153.793103448276" y="521.509433962264" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--info-text)">publishes</text>
+
+  <path d="M 248.965517241379 499.622641509434 L 311.034482758621 499.622641509434" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="319.310344827586" y="455.849056603774" width="248.275862068966" height="87.547169811321" rx="8.511922825583" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="443.448275862069" y="494.150943396226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.89586494477" font-weight="bold" fill="var(--primary-text)">Exchange</text>
+  <text x="443.448275862069" y="521.509433962264" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--primary-text)">routes by type</text>
+
+  <path d="M 572.758620689655 499.622641509434 L 634.827586206897 499.622641509434" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="640" y="455.849056603774" width="206.896551724138" height="87.547169811321" rx="8.511922825583" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="743.448275862069" y="494.150943396226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.89586494477" font-weight="bold" fill="var(--ok-text)">Queue</text>
+  <text x="743.448275862069" y="521.509433962264" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--ok-text)">stores until consumed</text>
+
+  <path d="M 852.068965517241 499.622641509434 L 914.137931034483 499.622641509434" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="919.310344827586" y="455.849056603774" width="248.275862068966" height="87.547169811321" rx="8.511922825583" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="1043.448275862069" y="494.150943396226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.89586494477" font-weight="bold" fill="var(--info-text)">Consumer</text>
+  <text x="1043.448275862069" y="521.509433962264" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.767884238374" fill="var(--info-text)">acks message</text>
+
+  <text x="640" y="592.641509433962" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.831874591572" fill="var(--text)">Bindings link queues to exchanges by routing-key pattern</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.831874591572" font-style="italic" fill="var(--text-muted)">Producers don't know which queues exist</text>
+</svg>

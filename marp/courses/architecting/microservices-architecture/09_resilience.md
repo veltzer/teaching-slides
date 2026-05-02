@@ -58,6 +58,11 @@ audience:
 - States transition based on success/failure rates
 
 ---
+## Circuit Breaker Visualized
+
+![circuit_breaker](svg/courses/architecting/microservices-architecture/09_resilience/circuit_breaker.svg)
+
+---
 ## Bulkhead
 
 - Isolate failure domains so one bad area doesn't sink the rest

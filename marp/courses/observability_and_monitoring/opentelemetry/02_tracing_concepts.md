@@ -20,6 +20,11 @@ audience:
 - Events and links
 
 ---
+## Spans, Traces, Propagation
+
+![spans_and_traces](svg/courses/observability_and_monitoring/opentelemetry/02_tracing_concepts/spans_and_traces.svg)
+
+---
 ## What Tracing Is
 
 - Track a request through services

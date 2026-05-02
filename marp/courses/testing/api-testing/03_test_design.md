@@ -21,6 +21,11 @@ audience:
 - Negative tests
 
 ---
+## Test Pyramid
+
+![test_pyramid](svg/courses/testing/api-testing/03_test_design/test_pyramid.svg)
+
+---
 ## A Good Test
 
 - Clear name

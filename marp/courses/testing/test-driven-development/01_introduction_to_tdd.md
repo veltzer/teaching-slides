@@ -20,6 +20,11 @@ audience:
 - When to use TDD; when not to
 
 ---
+## The Cycle
+
+![red_green_refactor](svg/courses/testing/test-driven-development/01_introduction_to_tdd/red_green_refactor.svg)
+
+---
 ## What TDD Is
 
 - Write a failing test first

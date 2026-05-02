@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.236291109018" font-weight="bold" fill="var(--text)">SQL vs NoSQL</text>
+
+  <rect x="40" y="89.152542372881" width="579.310344827586" height="491.525423728814" rx="10.084389681792" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="123.559322033898" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.185657299943" font-weight="bold" fill="var(--primary-text)">SQL (Relational)</text>
+
+  <text x="60.689655172414" y="167.796610169492" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--primary-text)">Data model</text>
+  <text x="60.689655172414" y="192.372881355932" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--primary-text)">Tables of rows + columns, fixed schema</text>
+
+  <text x="60.689655172414" y="231.694915254237" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--primary-text)">Strengths</text>
+  <text x="60.689655172414" y="256.271186440678" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--primary-text)">- ACID transactions</text>
+  <text x="60.689655172414" y="280.847457627119" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--primary-text)">- Joins, complex queries</text>
+  <text x="60.689655172414" y="305.423728813559" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--primary-text)">- Mature tooling</text>
+
+  <text x="60.689655172414" y="344.745762711864" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--primary-text)">Use when</text>
+  <text x="60.689655172414" y="369.322033898305" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--primary-text)">- Strong consistency required</text>
+  <text x="60.689655172414" y="393.898305084746" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--primary-text)">- Stable schema, related data</text>
+  <text x="60.689655172414" y="418.474576271186" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--primary-text)">- Reporting, transactions</text>
+
+  <text x="60.689655172414" y="457.796610169492" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--primary-text)">Examples</text>
+  <text x="60.689655172414" y="482.372881355932" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--primary-text)">PostgreSQL, MySQL, SQL Server</text>
+
+  <rect x="660.689655172414" y="89.152542372881" width="579.310344827586" height="491.525423728814" rx="10.084389681792" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="123.559322033898" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.185657299943" font-weight="bold" fill="var(--ok-text)">NoSQL</text>
+
+  <text x="681.379310344828" y="167.796610169492" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--ok-text)">Data model</text>
+  <text x="681.379310344828" y="192.372881355932" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--ok-text)">Document, key-value, column, graph</text>
+
+  <text x="681.379310344828" y="231.694915254237" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--ok-text)">Strengths</text>
+  <text x="681.379310344828" y="256.271186440678" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--ok-text)">- Horizontal scale</text>
+  <text x="681.379310344828" y="280.847457627119" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--ok-text)">- Flexible schema</text>
+  <text x="681.379310344828" y="305.423728813559" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--ok-text)">- High write throughput</text>
+
+  <text x="681.379310344828" y="344.745762711864" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--ok-text)">Use when</text>
+  <text x="681.379310344828" y="369.322033898305" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--ok-text)">- Schema changes often</text>
+  <text x="681.379310344828" y="393.898305084746" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--ok-text)">- Massive scale needed</text>
+  <text x="681.379310344828" y="418.474576271186" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--ok-text)">- Document or KV access</text>
+
+  <text x="681.379310344828" y="457.796610169492" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--ok-text)">Examples</text>
+  <text x="681.379310344828" y="482.372881355932" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--ok-text)">MongoDB, DynamoDB, Cassandra</text>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.10970658633" font-style="italic" fill="var(--text-muted)">Many systems mix both</text>
+</svg>

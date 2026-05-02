@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.628328299751" font-weight="bold" fill="var(--text)">Circuit Breaker States</text>
+
+  <rect x="40" y="107.927927927928" width="342.857142857143" height="292.612612612613" rx="14.814164149876" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="211.428571428571" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.279400806947" font-weight="bold" fill="var(--ok-text)">CLOSED</text>
+  <text x="211.428571428571" y="191.531531531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--ok-text)">Calls flow through</text>
+  <text x="211.428571428571" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-text)">Track failures</text>
+  <text x="211.428571428571" y="259.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-text)">Normal operation</text>
+  <text x="211.428571428571" y="316.936936936937" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" font-weight="bold" fill="var(--ok-text)">Trigger:</text>
+  <text x="211.428571428571" y="343.063063063063" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--ok-text)">N failures in window</text>
+  <text x="211.428571428571" y="369.189189189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--ok-text)">-&gt; OPEN</text>
+
+  <rect x="468.571428571428" y="107.927927927928" width="342.857142857143" height="292.612612612613" rx="14.814164149876" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.279400806947" font-weight="bold" fill="var(--danger-text)">OPEN</text>
+  <text x="640" y="191.531531531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--danger-text)">Reject immediately</text>
+  <text x="640" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-text)">No calls to downstream</text>
+  <text x="640" y="259.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-text)">Caller gets fast error</text>
+  <text x="640" y="316.936936936937" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" font-weight="bold" fill="var(--danger-text)">Trigger:</text>
+  <text x="640" y="343.063063063063" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--danger-text)">Cooldown elapsed</text>
+  <text x="640" y="369.189189189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--danger-text)">-&gt; HALF-OPEN</text>
+
+  <rect x="897.142857142857" y="107.927927927928" width="342.857142857143" height="292.612612612613" rx="14.814164149876" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1068.571428571428" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.279400806947" font-weight="bold" fill="var(--warn-text)">HALF-OPEN</text>
+  <text x="1068.571428571428" y="191.531531531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--warn-text)">Trial requests</text>
+  <text x="1068.571428571428" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--warn-text)">Limited probe traffic</text>
+  <text x="1068.571428571428" y="259.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--warn-text)">Test if recovered</text>
+  <text x="1068.571428571428" y="316.936936936937" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" font-weight="bold" fill="var(--warn-text)">Result:</text>
+  <text x="1068.571428571428" y="343.063063063063" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--warn-text)">success -&gt; CLOSED</text>
+  <text x="1068.571428571428" y="369.189189189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--warn-text)">fail -&gt; OPEN</text>
+
+  <path d="M 382.857142857143 233.333333333333 L 468.571428571428 233.333333333333" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="425.714285714286" y="217.657657657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" font-weight="bold" fill="var(--text-muted)">trip</text>
+
+  <path d="M 811.428571428571 233.333333333333 L 897.142857142857 233.333333333333" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="854.285714285714" y="217.657657657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" font-weight="bold" fill="var(--text-muted)">timeout</text>
+
+  <path d="M 1068.571428571428 400.540540540541 Q 1068.571428571428 463.243243243243 640 463.243243243243 Q 211.428571428571 463.243243243243 211.428571428571 400.540540540541" stroke="var(--text)" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="640" y="499.81981981982" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" font-weight="bold" fill="var(--text-muted)">probe ok -&gt; reset</text>
+
+  <rect x="40" y="515.495495495495" width="1200" height="104.504504504504" rx="8.465236657072" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="546.846846846847" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930473314144" font-weight="bold" fill="var(--text)">Why circuit breakers</text>
+  <text x="640" y="576.108108108108" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text-muted)">Stop hammering a sick service. Free your threads. Fail fast for the caller.</text>
+  <text x="640" y="601.189189189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text-muted)">Pair with timeouts, retries-with-backoff, and bulkheads.</text>
+</svg>

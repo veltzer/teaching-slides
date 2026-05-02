@@ -21,6 +21,11 @@ audience:
 - A practical guide to choosing
 
 ---
+## Exchange Types
+
+![exchange_types](svg/courses/queues/rabbitmq/02_exchanges_queues_and_bindings/exchange_types.svg)
+
+---
 ## Queues
 
 - Hold messages until consumed

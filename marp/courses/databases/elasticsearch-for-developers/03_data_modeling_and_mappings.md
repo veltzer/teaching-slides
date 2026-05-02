@@ -55,6 +55,11 @@ audience:
 - Sort / aggregate: name.keyword (raw)
 
 ---
+## text vs keyword
+
+![text_vs_keyword](svg/courses/databases/elasticsearch-for-developers/03_data_modeling_and_mappings/text_vs_keyword.svg)
+
+---
 ## Date Type
 
 - ISO 8601 strings

@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Match vs Term Queries</text>
+
+  <rect x="40" y="86.194690265487" width="579.310344827586" height="246.371681415929" rx="10.305080798591" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="127.256637168142" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.6711777569" font-weight="bold" fill="var(--primary-text)">match (analyzed)</text>
+  <rect x="60.689655172414" y="147.787610619469" width="537.931034482759" height="61.592920353982" rx="6.183048479155" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="81.379310344828" y="183.716814159292" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">{ "match": { "title": "Fast Cars" } }</text>
+  <text x="81.379310344828" y="245" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--primary-text)">Tokenizes -&gt; [fast, cars]</text>
+  <text x="81.379310344828" y="275" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--primary-text)">Matches either token</text>
+  <text x="81.379310344828" y="310" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--primary-text)">For: text-type fields</text>
+
+  <rect x="660.689655172414" y="86.194690265487" width="579.310344827586" height="246.371681415929" rx="10.305080798591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="127.256637168142" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.6711777569" font-weight="bold" fill="var(--warn-text)">term (exact)</text>
+  <rect x="681.379310344828" y="147.787610619469" width="537.931034482759" height="61.592920353982" rx="6.183048479155" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="702.068965517241" y="183.716814159292" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">{ "term": { "status.keyword": "active" } }</text>
+  <text x="702.068965517241" y="245" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--warn-text)">No analysis; byte-exact match</text>
+  <text x="702.068965517241" y="275" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--warn-text)">Case-sensitive</text>
+  <text x="702.068965517241" y="310" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--warn-text)">For: keyword, IDs, enums</text>
+
+  <rect x="40" y="373.628318584071" width="1200" height="102.654867256637" rx="10.305080798591" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="409.557522123894" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.610161597182" font-weight="bold" fill="var(--danger-text)">Common Bug</text>
+  <text x="640" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--danger-text)">term on analyzed "text" returns nothing</text>
+
+  <rect x="40" y="507.079646017699" width="1200" height="112.920353982301" rx="10.305080798591" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="543.008849557522" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.488129277745" font-weight="bold" fill="var(--text)">Rule of thumb</text>
+  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text-muted)">User text -&gt; match. Exact value -&gt; term.</text>
+</svg>

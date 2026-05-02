@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.880085102079" font-weight="bold" fill="var(--text)">CAP Theorem: Pick Two</text>
+
+  <path d="M 640 93.538461538462 L 195.555555555556 512.923076923077 L 1084.444444444445 512.923076923077 Z" fill="none" stroke="var(--border)" stroke-width="2"/>
+
+  <rect x="528.888888888889" y="66.769230769231" width="222.222222222222" height="71.384615384615" rx="9.957173250742" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.914346501485" font-weight="bold" fill="var(--primary-text)">Consistency</text>
+  <text x="640" y="120.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.944325225965" fill="var(--primary-text)">all reads see latest write</text>
+
+  <rect x="40" y="490.615384615385" width="222.222222222222" height="71.384615384615" rx="9.957173250742" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="151.111111111111" y="521.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.914346501485" font-weight="bold" fill="var(--ok-text)">Availability</text>
+  <text x="151.111111111111" y="544.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.944325225965" fill="var(--ok-text)">every request gets answer</text>
+
+  <rect x="1017.777777777778" y="490.615384615385" width="222.222222222222" height="71.384615384615" rx="9.957173250742" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1128.888888888889" y="521.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.914346501485" font-weight="bold" fill="var(--warn-text)">Partition</text>
+  <text x="1128.888888888889" y="544.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.944325225965" fill="var(--warn-text)">network split tolerated</text>
+
+  <rect x="340" y="191.692307692308" width="266.666666666667" height="89.230769230769" rx="7.965738600594" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="473.333333333333" y="222.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.931477201188" font-weight="bold" fill="var(--info-text)">CA (no partitions)</text>
+  <text x="473.333333333333" y="245.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.944325225965" fill="var(--info-text)">single-node DBs</text>
+  <text x="473.333333333333" y="267.538461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.944325225965" fill="var(--info-text)">classic SQL</text>
+
+  <rect x="673.333333333333" y="191.692307692308" width="266.666666666667" height="89.230769230769" rx="7.965738600594" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="806.666666666667" y="222.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.931477201188" font-weight="bold" fill="var(--info-text)">CP</text>
+  <text x="806.666666666667" y="245.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.944325225965" fill="var(--info-text)">Spanner, etcd</text>
+  <text x="806.666666666667" y="267.538461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.944325225965" fill="var(--info-text)">refuse on split</text>
+
+  <rect x="506.666666666667" y="334.461538461538" width="266.666666666667" height="89.230769230769" rx="7.965738600594" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="365.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.931477201188" font-weight="bold" fill="var(--info-text)">AP</text>
+  <text x="640" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.944325225965" fill="var(--info-text)">Cassandra, Dynamo</text>
+  <text x="640" y="410.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.944325225965" fill="var(--info-text)">stale reads possible</text>
+
+  <text x="640" y="597.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.940042551039" font-style="italic" fill="var(--text-muted)">In a partition, choose: refuse (CP) or answer with old data (AP)</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.944325225965" font-style="italic" fill="var(--text-muted)">CA only holds when there are no partitions, which on real networks never happens</text>
+</svg>

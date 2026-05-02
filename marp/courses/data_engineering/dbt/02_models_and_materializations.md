@@ -19,6 +19,11 @@ audience:
 - Folder structure
 
 ---
+## Materialisations
+
+![materialisations](svg/courses/data_engineering/dbt/02_models_and_materializations/materializations.svg)
+
+---
 ## Model Files
 
 - One SQL file per model

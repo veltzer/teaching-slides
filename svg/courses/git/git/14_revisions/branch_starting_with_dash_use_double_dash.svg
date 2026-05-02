@@ -2,22 +2,6 @@
   <metadata>
     <type>regular</type>
   </metadata>
-  <!-- PLACEHOLDERSVG — replace with real diagram -->
-  <rect x="40" y="40" width="288.736689" height="290" fill="url(#grad-primary)" rx="7.030467548692" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="184.368144" y="221.250017187499" text-anchor="middle" fill="var(--bg)" font-size="42.264887566183" font-family="Arial, sans-serif">main</text>
-  <rect x="572.418532" y="123.050271420247" width="90.10889" height="123.8995946595" rx="16.416463013807" fill="url(#grad-ok)" filter="url(#shadow)"/>
-  <text x="617.473377" y="221.250017187499" text-anchor="middle" fill="var(--bg)" font-size="35.220700551688" font-family="Arial, sans-serif">A</text>
-  <rect x="861.155821" y="123.050271420247" width="90.10889" height="123.8995946595" rx="16.416463013807" fill="url(#grad-ok)" filter="url(#shadow)"/>
-  <text x="906.210166" y="221.250017187499" text-anchor="middle" fill="var(--bg)" font-size="35.220700551688" font-family="Arial, sans-serif">B</text>
-  <rect x="1149.89111" y="123.050271420247" width="90.10889" height="123.8995946595" rx="16.416463013807" fill="url(#grad-ok)" filter="url(#shadow)"/>
-  <text x="1194.946755" y="221.250017187499" text-anchor="middle" fill="var(--bg)" font-size="35.220700551688" font-family="Arial, sans-serif">C</text>
-  <line x1="328.736689" y1="184.999931250003" x2="574.162834" y2="184.999931250003" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="660.783821" y1="184.999931250003" x2="862.899623" y2="184.999931250003" stroke="var(--text)" stroke-width="2"/>
-  <line x1="949.52061" y1="184.999931250003" x2="1151.636312" y2="184.999931250003" stroke="var(--text)" stroke-width="2"/>
-  <text x="617.473377" y="402.500034374999" text-anchor="middle" font-size="35.220700551688" font-family="Arial, sans-serif" fill="var(--text)">a1b2c3d</text>
-  <text x="906.210166" y="402.500034374999" text-anchor="middle" font-size="35.220700551688" font-family="Arial, sans-serif" fill="var(--text)">d4e5f6g</text>
-  <text x="1194.946755" y="402.500034374999" text-anchor="middle" font-size="35.220700551688" font-family="Arial, sans-serif" fill="var(--text)">g7h8i9j</text>
-  <text x="473.105133" y="620" text-anchor="middle" font-size="42.264887566183" font-family="Arial, sans-serif" fill="var(--text)">"main" resolves to commit C (g7h8i9j)</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -89,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -111,4 +95,31 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Branch Names Starting with Dash</text>
+
+  <rect x="40" y="102.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.285714285714" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--danger-text)">Without --</text>
+  <text x="61.428571428571" y="179.821428571429" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--danger-text)">$ git checkout -broken</text>
+  <text x="61.428571428571" y="216.071428571429" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--danger-text)">git treats "-broken" as an option flag</text>
+  <text x="61.428571428571" y="241.964285714286" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--danger-text)">"unknown switch -b" or worse</text>
+  <text x="329.285714285714" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--danger-text)">Confusing error</text>
+
+  <rect x="661.428571428571" y="102.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.714285714286" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--ok-text)">With -- separator</text>
+  <text x="682.857142857143" y="179.821428571429" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--ok-text)">$ git checkout -- -broken</text>
+  <text x="682.857142857143" y="216.071428571429" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--ok-text)">"--" ends option parsing</text>
+  <text x="682.857142857143" y="241.964285714286" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--ok-text)">"-broken" parsed as branch name</text>
+  <text x="950.714285714286" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--ok-text)">Works correctly</text>
+
+  <rect x="40" y="371.428571428571" width="1200" height="103.571428571429" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="407.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.961561547682" font-weight="bold" fill="var(--warn-text)">The "--" convention</text>
+  <text x="640" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">Standard POSIX/Unix convention: "--" separates options from positional arguments</text>
+  <text x="640" y="462.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">Works with most CLI tools, not just git</text>
+
+  <rect x="40" y="506.071428571429" width="1200" height="113.928571428571" rx="10.534200859823" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="537.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">Better practice</text>
+  <text x="640" y="566.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--text-muted)">Don't create branches starting with "-" in the first place</text>
+  <text x="640" y="594.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Same for filenames: rename or always pass with "--" or "./prefix"</text>
 </svg>

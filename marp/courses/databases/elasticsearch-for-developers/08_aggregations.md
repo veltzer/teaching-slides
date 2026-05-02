@@ -20,6 +20,11 @@ audience:
 - Performance
 
 ---
+## Aggregation Families
+
+![agg_types](svg/courses/databases/elasticsearch-for-developers/08_aggregations/agg_types.svg)
+
+---
 ## Bucket Aggregations
 
 - Group documents into buckets

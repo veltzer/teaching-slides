@@ -13,6 +13,11 @@ audience:
 # Introduction to Linux Package Management
 
 ---
+## Package Manager Layers
+
+![package_layers](svg/courses/operating_systems/linux-package-managers/01_introduction/package_layers.svg)
+
+---
 ## Where Does Software Come From?
 
 A modern Linux machine pulls software from many places:

@@ -21,6 +21,11 @@ audience:
 - Common adoption challenges
 
 ---
+## API-First Workflow
+
+![api_first_flow](svg/courses/architecting/api-first-development/01_introduction_to_api_first_design/api_first_flow.svg)
+
+---
 ## What API-First Means
 
 - Design the API *before* writing the implementation

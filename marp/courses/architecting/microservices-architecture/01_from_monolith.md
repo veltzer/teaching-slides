@@ -19,6 +19,11 @@ audience:
 - This course covers the design choices and trade-offs
 
 ---
+## Monolith vs Microservices
+
+![monolith_to_services](svg/courses/architecting/microservices-architecture/01_from_monolith/monolith_to_services.svg)
+
+---
 ## A Monolith
 
 - One codebase, one deployment

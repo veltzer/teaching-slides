@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046200557" font-weight="bold" fill="var(--text)">Chain-of-Thought Pattern</text>
+
+  <rect x="40" y="82.181818181818" width="579.310344827586" height="537.818181818182" rx="10.444659357342" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--danger-text)">Direct prompt</text>
+
+  <rect x="60.689655172414" y="145.454545454545" width="537.931034482759" height="168.727272727273" rx="6.266795614405" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="81.379310344828" y="177.090909090909" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">Prompt:</text>
+  <text x="81.379310344828" y="203.454545454545" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">"Roger has 5 tennis balls.</text>
+  <text x="81.379310344828" y="224.545454545455" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">He buys 2 cans, 3 balls each.</text>
+  <text x="81.379310344828" y="245.636363636364" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">How many now?"</text>
+  <text x="81.379310344828" y="282.545454545455" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--danger-fill)">Model: 11</text>
+
+  <text x="60.689655172414" y="351.090909090909" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--danger-text)">Issues</text>
+  <text x="60.689655172414" y="382.727272727273" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-text)">- Skips reasoning steps</text>
+  <text x="60.689655172414" y="409.090909090909" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-text)">- Hard to debug if wrong</text>
+  <text x="60.689655172414" y="435.454545454545" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-text)">- Math error rate climbs</text>
+  <text x="60.689655172414" y="461.818181818182" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-text)">- Worse on complex tasks</text>
+
+  <text x="329.655172413793" y="572.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" font-style="italic" fill="var(--danger-text)">Compute + answer in one shot</text>
+
+  <rect x="660.689655172414" y="82.181818181818" width="579.310344827586" height="537.818181818182" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--ok-text)">CoT prompt</text>
+
+  <rect x="681.379310344828" y="145.454545454545" width="537.931034482759" height="232" rx="6.266795614405" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="702.068965517241" y="177.090909090909" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">Prompt: same + "Let's think</text>
+  <text x="702.068965517241" y="198.181818181818" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">step by step."</text>
+  <text x="702.068965517241" y="235.090909090909" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--ok-fill)">Model:</text>
+  <text x="702.068965517241" y="259.345454545455" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">"Roger started with 5.</text>
+  <text x="702.068965517241" y="280.436363636364" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">2 cans times 3 = 6 new.</text>
+  <text x="702.068965517241" y="301.527272727273" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text)">5 + 6 = 11"</text>
+  <text x="702.068965517241" y="340.545454545455" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--ok-fill)">Reasoned answer</text>
+
+  <text x="681.379310344828" y="403.818181818182" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--ok-text)">Wins</text>
+  <text x="681.379310344828" y="435.454545454545" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">- Better accuracy on multi-step</text>
+  <text x="681.379310344828" y="461.818181818182" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">- Errors are localized</text>
+  <text x="681.379310344828" y="488.181818181818" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">- Self-checks possible</text>
+  <text x="681.379310344828" y="514.545454545455" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">- Larger model = bigger gain</text>
+
+  <text x="950.344827586207" y="572.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" font-style="italic" fill="var(--ok-text)">Thinking tokens pay off</text>
+</svg>

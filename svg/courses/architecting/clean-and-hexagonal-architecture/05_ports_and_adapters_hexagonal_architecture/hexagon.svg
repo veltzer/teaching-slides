@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.236291109018" font-weight="bold" fill="var(--text)">Hexagonal Architecture</text>
+
+  <path d="M 640 89.152542372881 L 888.275862068966 207.118644067797 L 888.275862068966 443.050847457627 L 640 561.016949152542 L 391.724137931034 443.050847457627 L 391.724137931034 207.118644067797 Z" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="305.423728813559" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.185657299943" font-weight="bold" fill="var(--primary-text)">Domain</text>
+  <text x="640" y="334.915254237288" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.118145554509" fill="var(--primary-text)">business logic</text>
+  <text x="640" y="354.576271186441" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.118145554509" fill="var(--primary-text)">no framework deps</text>
+
+  <text x="640" y="413.559322033898" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.10970658633" font-style="italic" fill="var(--primary-text)">Defines ports (interfaces)</text>
+
+  <rect x="40" y="187.457627118644" width="268.965517241379" height="78.64406779661" rx="8.067511745434" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="174.48275862069" y="216.949152542373" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--info-text)">REST adapter (in)</text>
+  <text x="174.48275862069" y="241.525423728814" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.101267618151" fill="var(--info-text)">HTTP -&gt; use case</text>
+
+  <rect x="40" y="305.423728813559" width="268.965517241379" height="78.64406779661" rx="8.067511745434" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="174.48275862069" y="334.915254237288" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--info-text)">CLI adapter (in)</text>
+  <text x="174.48275862069" y="359.491525423729" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.101267618151" fill="var(--info-text)">argv -&gt; use case</text>
+
+  <rect x="40" y="423.389830508475" width="268.965517241379" height="78.64406779661" rx="8.067511745434" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="174.48275862069" y="452.881355932203" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--info-text)">Test adapter (in)</text>
+  <text x="174.48275862069" y="477.457627118644" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.101267618151" fill="var(--info-text)">direct call</text>
+
+  <path d="M 311.034482758621 226.779661016949 L 391.724137931034 236.610169491525" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 311.034482758621 344.745762711864 L 391.724137931034 334.915254237288" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 311.034482758621 462.71186440678 L 391.724137931034 413.559322033898" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="971.034482758621" y="187.457627118644" width="268.965517241379" height="78.64406779661" rx="8.067511745434" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105.51724137931" y="216.949152542373" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--warn-text)">Postgres (out)</text>
+  <text x="1105.51724137931" y="241.525423728814" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.101267618151" fill="var(--warn-text)">repository impl</text>
+
+  <rect x="971.034482758621" y="305.423728813559" width="268.965517241379" height="78.64406779661" rx="8.067511745434" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105.51724137931" y="334.915254237288" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--warn-text)">Email svc (out)</text>
+  <text x="1105.51724137931" y="359.491525423729" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.101267618151" fill="var(--warn-text)">notifier impl</text>
+
+  <rect x="971.034482758621" y="423.389830508475" width="268.965517241379" height="78.64406779661" rx="8.067511745434" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105.51724137931" y="452.881355932203" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.118145554509" font-weight="bold" fill="var(--warn-text)">In-memory (test)</text>
+  <text x="1105.51724137931" y="477.457627118644" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.101267618151" fill="var(--warn-text)">fake for tests</text>
+
+  <path d="M 888.275862068966 236.610169491525 L 971.034482758621 226.779661016949" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 888.275862068966 334.915254237288 L 971.034482758621 344.745762711864" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 888.275862068966 413.559322033898 L 971.034482758621 462.71186440678" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.10970658633" fill="var(--text-muted)">Domain knows nothing about adapters. Swap any adapter without touching the domain.</text>
+</svg>

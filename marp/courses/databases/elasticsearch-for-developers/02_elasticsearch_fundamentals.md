@@ -57,6 +57,11 @@ audience:
 - Replicas survive node failure
 
 ---
+## Cluster Topology
+
+![cluster_nodes_shards](svg/courses/databases/elasticsearch-for-developers/02_elasticsearch_fundamentals/cluster_nodes_shards.svg)
+
+---
 ## Documents
 
 - JSON objects

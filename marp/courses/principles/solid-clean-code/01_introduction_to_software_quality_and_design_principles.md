@@ -22,6 +22,11 @@ audience:
 - A short tour of the day ahead
 
 ---
+## SOLID Overview
+
+![solid_overview](svg/courses/principles/solid-clean-code/01_introduction_to_software_quality_and_design_principles/solid_overview.svg)
+
+---
 ## What "Clean" Means
 
 - Code that reads like prose

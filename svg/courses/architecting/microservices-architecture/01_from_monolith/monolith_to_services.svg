@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Monolith to Microservices</text>
+
+  <rect x="40" y="87.889908256881" width="517.241379310345" height="532.110091743119" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="298.620689655172" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--warn-text)">Monolith</text>
+
+  <rect x="81.379310344828" y="151.743119266055" width="434.48275862069" height="383.119266055046" rx="8.393969001392" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="102.068965517241" y="173.02752293578" width="393.103448275862" height="63.853211009174" rx="4.196984500696" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="298.620689655172" y="210.275229357798" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--info-text)">Web UI / API</text>
+
+  <rect x="102.068965517241" y="252.844036697248" width="186.206896551724" height="63.853211009174" rx="4.196984500696" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="195.172413793103" y="290.091743119266" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--primary-text)">Users</text>
+  <rect x="308.965517241379" y="252.844036697248" width="186.206896551724" height="63.853211009174" rx="4.196984500696" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="402.068965517241" y="290.091743119266" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--primary-text)">Orders</text>
+  <rect x="102.068965517241" y="332.660550458716" width="186.206896551724" height="63.853211009174" rx="4.196984500696" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="195.172413793103" y="369.908256880734" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--primary-text)">Inventory</text>
+  <rect x="308.965517241379" y="332.660550458716" width="186.206896551724" height="63.853211009174" rx="4.196984500696" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="402.068965517241" y="369.908256880734" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--primary-text)">Billing</text>
+
+  <rect x="102.068965517241" y="417.798165137615" width="393.103448275862" height="85.137614678899" rx="4.196984500696" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="298.620689655172" y="455.045871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--info-text)">Shared database</text>
+  <text x="298.620689655172" y="481.651376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--info-text)">single PostgreSQL</text>
+
+  <text x="298.620689655172" y="572.110091743119" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">- One process, one repo, one deploy</text>
+  <text x="298.620689655172" y="598.715596330275" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">- Tight coupling, slow team scale</text>
+
+  <path d="M 577.931034482759 353.94495412844 L 702.068965517241 353.94495412844" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="640" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--text-muted)">decompose</text>
+
+  <rect x="722.758620689655" y="87.889908256881" width="517.241379310345" height="532.110091743119" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="981.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">Microservices</text>
+
+  <rect x="743.448275862069" y="151.743119266055" width="227.586206896552" height="106.422018348624" rx="6.295476751044" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="857.241379310345" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--primary-text)">Users svc</text>
+  <text x="857.241379310345" y="220.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--primary-text)">own DB</text>
+  <text x="857.241379310345" y="245.394495412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--primary-text)">team A</text>
+
+  <rect x="991.724137931035" y="151.743119266055" width="227.586206896552" height="106.422018348624" rx="6.295476751044" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="1105.51724137931" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--primary-text)">Orders svc</text>
+  <text x="1105.51724137931" y="220.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--primary-text)">own DB</text>
+  <text x="1105.51724137931" y="245.394495412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--primary-text)">team B</text>
+
+  <rect x="743.448275862069" y="279.449541284404" width="227.586206896552" height="106.422018348624" rx="6.295476751044" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="857.241379310345" y="311.376146788991" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--primary-text)">Inventory svc</text>
+  <text x="857.241379310345" y="348.623853211009" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--primary-text)">own DB</text>
+  <text x="857.241379310345" y="373.100917431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--primary-text)">team C</text>
+
+  <rect x="991.724137931035" y="279.449541284404" width="227.586206896552" height="106.422018348624" rx="6.295476751044" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="1105.51724137931" y="311.376146788991" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--primary-text)">Billing svc</text>
+  <text x="1105.51724137931" y="348.623853211009" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--primary-text)">own DB</text>
+  <text x="1105.51724137931" y="373.100917431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--primary-text)">team D</text>
+
+  <rect x="743.448275862069" y="407.155963302752" width="475.862068965517" height="63.853211009174" rx="6.295476751044" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="981.379310344828" y="444.403669724771" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--info-text)">Message bus / API gateway</text>
+
+  <text x="981.379310344828" y="513.577981651376" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Each service owns its data</text>
+  <text x="981.379310344828" y="540.183486238532" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Independent deploy</text>
+  <text x="981.379310344828" y="566.788990825688" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Network calls instead of fn calls</text>
+  <text x="981.379310344828" y="593.394495412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Distributed systems pain too</text>
+</svg>

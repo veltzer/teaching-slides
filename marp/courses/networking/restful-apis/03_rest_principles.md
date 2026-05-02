@@ -20,6 +20,11 @@ audience:
 - Pragmatic REST
 
 ---
+## Six Constraints
+
+![rest_constraints](svg/courses/networking/restful-apis/03_rest_principles/rest_constraints.svg)
+
+---
 ## Origin
 
 - Roy Fielding, 2000 dissertation

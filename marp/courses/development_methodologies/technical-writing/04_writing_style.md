@@ -21,6 +21,11 @@ audience:
 - A few rules that fix most prose
 
 ---
+## Active Voice
+
+![passive_to_active](svg/courses/development_methodologies/technical-writing/04_writing_style/passive_to_active.svg)
+
+---
 ## Clarity Above All
 
 - The reader's first reading is the right reading

@@ -21,6 +21,11 @@ audience:
 - Turning raw data into actionable insight
 
 ---
+## Workflow
+
+![workflow](svg/courses/data_science/data-analyst-fundamentals/01_data_analysis_workflow/workflow.svg)
+
+---
 ## What Data Analysis Is
 
 - Looking at data to *answer a question* or *make a decision*

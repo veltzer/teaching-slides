@@ -20,6 +20,11 @@ audience:
 - TaskFlow API
 
 ---
+## Example DAG
+
+![dag_example](svg/courses/data_engineering/apache-airflow/02_dags_and_task_dependencies/dag_example.svg)
+
+---
 ## DAG Structure
 
 - DAG: container of tasks + dependencies

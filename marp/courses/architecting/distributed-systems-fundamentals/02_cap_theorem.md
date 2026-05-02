@@ -21,6 +21,11 @@ audience:
 - Misuses of CAP
 
 ---
+## CAP Triangle
+
+![cap_triangle](svg/courses/architecting/distributed-systems-fundamentals/02_cap_theorem/cap_triangle.svg)
+
+---
 ## CAP Stated
 
 - A distributed data store cannot simultaneously provide more than two of:

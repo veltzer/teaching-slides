@@ -19,6 +19,11 @@ audience:
 - A worked example
 
 ---
+## Hexagon
+
+![hexagon](svg/courses/architecting/clean-and-hexagonal-architecture/05_ports_and_adapters_hexagonal_architecture/hexagon.svg)
+
+---
 ## Origins
 
 - Coined by Alistair Cockburn (2005)

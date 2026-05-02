@@ -21,6 +21,11 @@ audience:
 - Vocabulary you'll need
 
 ---
+## Topics, Partitions, Offsets
+
+![topic_partitions](svg/courses/queues/kafka/01_overview/topic_partitions.svg)
+
+---
 ## What Kafka Is
 
 - A distributed, partitioned, replicated commit log

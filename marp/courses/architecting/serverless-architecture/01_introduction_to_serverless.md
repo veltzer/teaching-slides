@@ -20,6 +20,11 @@ audience:
 - The major providers
 
 ---
+## Serverless Anatomy
+
+![serverless_anatomy](svg/courses/architecting/serverless-architecture/01_introduction_to_serverless/serverless_anatomy.svg)
+
+---
 ## What "Serverless" Means
 
 - You don't manage servers; the cloud does

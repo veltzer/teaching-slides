@@ -19,6 +19,11 @@ audience:
 - Tradeoffs
 
 ---
+## Three Flavors
+
+![ml_categories](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/ml_categories.svg)
+
+---
 ## What ML Is
 
 - Algorithms learn patterns from data

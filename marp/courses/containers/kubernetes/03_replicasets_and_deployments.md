@@ -20,6 +20,11 @@ audience:
 - StatefulSet briefly
 
 ---
+## Deployment Hierarchy
+
+![deployment_hierarchy](svg/courses/containers/kubernetes/03_replicasets_and_deployments/deployment_hierarchy.svg)
+
+---
 ## ReplicaSet
 
 - Ensures N pod replicas running

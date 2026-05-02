@@ -21,6 +21,11 @@ audience:
 - Maintenance
 
 ---
+## Index Types Overview
+
+![index_choice](svg/courses/databases/postgresql-for-developers/04_indexing_strategies/index_choice.svg)
+
+---
 ## B-Tree
 
 - Default

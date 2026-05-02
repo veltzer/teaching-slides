@@ -20,6 +20,11 @@ audience:
 - Templates
 
 ---
+## Chain-of-Thought
+
+![cot_pattern](svg/courses/ai/prompt-engineering/02_prompt_patterns/cot_pattern.svg)
+
+---
 ## Zero-Shot
 
 - Just ask

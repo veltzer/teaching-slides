@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.982753492379" font-weight="bold" fill="var(--text)">Linux Package Manager Layers</text>
+
+  <rect x="40" y="91.785714285714" width="1200" height="103.571428571429" rx="10.350983390135" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="128.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.701966780271" font-weight="bold" fill="var(--primary-text)">High-level (resolves dependencies)</text>
+  <text x="640" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--primary-text)">apt (Debian/Ubuntu)  dnf (Fedora/RHEL)  pacman (Arch)  zypper (openSUSE)</text>
+  <text x="640" y="182.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--primary-text)">"apt install firefox" -- find, fetch, resolve, install</text>
+
+  <path d="M 640 195.357142857143 L 640 236.785714285714" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="247.142857142857" width="1200" height="103.571428571429" rx="10.350983390135" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="283.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.701966780271" font-weight="bold" fill="var(--ok-text)">Low-level (one-package operations)</text>
+  <text x="640" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--ok-text)">dpkg (.deb files)   rpm (.rpm files)</text>
+  <text x="640" y="338.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--ok-text)">No dependency resolution; install/remove a single file</text>
+
+  <rect x="40" y="392.142857142857" width="382.758620689655" height="227.857142857143" rx="10.350983390135" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="231.379310344828" y="428.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--warn-text)">Universal formats</text>
+  <text x="60.689655172414" y="459.464285714286" font-family="Arial, sans-serif" font-size="14.491376746189" font-weight="bold" fill="var(--warn-text)">Flatpak</text>
+  <text x="60.689655172414" y="483.285714285714" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--warn-text)">Sandboxed desktop apps</text>
+  <text x="60.689655172414" y="516.428571428571" font-family="Arial, sans-serif" font-size="14.491376746189" font-weight="bold" fill="var(--warn-text)">Snap</text>
+  <text x="60.689655172414" y="540.25" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--warn-text)">Auto-update, classic+strict</text>
+  <text x="60.689655172414" y="573.392857142857" font-family="Arial, sans-serif" font-size="14.491376746189" font-weight="bold" fill="var(--warn-text)">AppImage</text>
+  <text x="60.689655172414" y="597.214285714286" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--warn-text)">One-file portable</text>
+
+  <rect x="448.620689655172" y="392.142857142857" width="382.758620689655" height="227.857142857143" rx="10.350983390135" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="428.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--info-text)">Language-specific</text>
+  <text x="469.310344827586" y="459.464285714286" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">- pip (Python)</text>
+  <text x="469.310344827586" y="483.285714285714" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">- npm/yarn (Node)</text>
+  <text x="469.310344827586" y="506.071428571429" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">- cargo (Rust)</text>
+  <text x="469.310344827586" y="528.857142857143" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">- gem (Ruby)</text>
+  <text x="469.310344827586" y="551.642857142857" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">- go install (Go)</text>
+  <text x="469.310344827586" y="588.928571428571" font-family="Arial, sans-serif" font-size="12.421180068162" font-style="italic" fill="var(--info-text)">Per-project, not system-wide</text>
+
+  <rect x="857.241379310345" y="392.142857142857" width="382.758620689655" height="227.857142857143" rx="10.350983390135" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1048.620689655173" y="428.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--text)">Container layer</text>
+  <text x="877.931034482759" y="459.464285714286" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--text)">- Docker, podman</text>
+  <text x="877.931034482759" y="483.285714285714" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--text)">- OCI images</text>
+  <text x="877.931034482759" y="506.071428571429" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--text)">- Hermetic builds</text>
+  <text x="877.931034482759" y="542.321428571429" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--text-muted)">Often replaces system pkgs</text>
+  <text x="877.931034482759" y="566.142857142857" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--text-muted)">for app deployment</text>
+</svg>

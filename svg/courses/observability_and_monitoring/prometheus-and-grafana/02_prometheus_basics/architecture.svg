@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="620" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.244546127791" font-weight="bold" fill="var(--text)">Prometheus Architecture</text>
+
+  <rect x="40" y="90.877192982456" width="220" height="101.754385964912" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--info-text)">App with /metrics</text>
+  <text x="150" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--info-text)">client library</text>
+  <text x="150" y="175.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--info-text)">exposes counters</text>
+
+  <rect x="40" y="212.982456140351" width="220" height="101.754385964912" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="248.59649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--info-text)">node_exporter</text>
+  <text x="150" y="279.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--info-text)">host metrics</text>
+  <text x="150" y="297.438596491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--info-text)">cpu/mem/disk</text>
+
+  <rect x="40" y="335.087719298246" width="220" height="101.754385964912" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="370.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--info-text)">postgres_exporter</text>
+  <text x="150" y="401.228070175439" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--info-text)">DB metrics</text>
+
+  <path d="M 262 141.754385964912 L 417 263.859649122807" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 262 263.859649122807 L 417 284.210526315789" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 262 385.964912280702 L 417 304.561403508772" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="420" y="212.982456140351" width="280" height="223.859649122807" rx="14.122273063895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="560" y="248.59649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--primary-text)">Prometheus</text>
+  <text x="560" y="279.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">scrapes targets</text>
+  <text x="560" y="299.473684210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">on a schedule</text>
+  <text x="560" y="340.175438596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">stores in TSDB</text>
+  <text x="560" y="360.526315789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">evaluates rules</text>
+  <text x="560" y="391.052631578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-weight="bold" fill="var(--primary-text)">PULL model</text>
+
+  <path d="M 700 284.210526315789 L 780 243.508771929825" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 700 345.263157894737 L 780 406.315789473684" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="780" y="212.982456140351" width="240" height="81.40350877193" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="900" y="243.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--warn-text)">Alertmanager</text>
+  <text x="900" y="274.035087719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--warn-text)">groups, routes alerts</text>
+
+  <rect x="780" y="375.789473684211" width="240" height="81.40350877193" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="900" y="406.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--ok-text)">Grafana</text>
+  <text x="900" y="436.842105263158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--ok-text)">queries via PromQL</text>
+
+  <path d="M 1022 243.508771929825 L 1060 243.508771929825" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1060" y="212.982456140351" width="180" height="81.40350877193" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1150" y="243.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" font-weight="bold" fill="var(--danger-text)">Slack/Email</text>
+  <text x="1150" y="268.947368421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--danger-text)">PagerDuty</text>
+
+  <rect x="40" y="487.719298245614" width="1160" height="132.280701754386" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="620" y="523.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--text)">Pull model trade-offs</text>
+  <text x="620" y="553.859649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">+ Easy service discovery; centralized scrape config</text>
+  <text x="620" y="579.298245614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">+ Health visible at scrape time (target up/down)</text>
+  <text x="620" y="602.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text-muted)">- Short jobs need pushgateway; firewall harder than push</text>
+</svg>

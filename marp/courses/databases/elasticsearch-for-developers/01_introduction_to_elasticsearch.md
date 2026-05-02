@@ -87,6 +87,11 @@ audience:
 - Updated as documents are indexed
 
 ---
+## Inverted Index Visualized
+
+![inverted_index](svg/courses/databases/elasticsearch-for-developers/01_introduction_to_elasticsearch/inverted_index.svg)
+
+---
 ## Distributed By Design
 
 - Cluster of nodes

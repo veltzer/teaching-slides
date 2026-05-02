@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.235882783068" font-weight="bold" fill="var(--text)">Deployment, ReplicaSet, Pod</text>
+
+  <rect x="361.428571428571" y="90.877192982456" width="557.142857142857" height="101.754385964912" rx="14.617941391534" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.971050758124" font-weight="bold" fill="var(--primary-text)">Deployment</text>
+  <text x="640" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--primary-text)">declares desired state, manages rollouts</text>
+  <text x="640" y="177.368421052632" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--primary-text)">replicas: 3, image, strategy</text>
+
+  <path d="M 640 192.631578947368 L 640 243.508771929825" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="661.428571428571" y="223.157894736842" font-family="Arial, sans-serif" font-size="13.57380272071" font-style="italic" fill="var(--text-muted)">creates / updates</text>
+
+  <rect x="361.428571428571" y="253.684210526316" width="557.142857142857" height="101.754385964912" rx="14.617941391534" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="289.298245614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.971050758124" font-weight="bold" fill="var(--ok-text)">ReplicaSet (per version)</text>
+  <text x="640" y="319.824561403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--ok-text)">ensures N pods exist with this template</text>
+  <text x="640" y="340.175438596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--ok-text)">old RS scaled to 0 after rollout</text>
+
+  <path d="M 640 355.438596491228 L 640 396.140350877193" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="661.428571428571" y="380.877192982456" font-family="Arial, sans-serif" font-size="13.57380272071" font-style="italic" fill="var(--text-muted)">creates</text>
+
+  <rect x="40" y="406.315789473684" width="342.857142857143" height="162.80701754386" rx="10.441386708238" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="211.428571428571" y="441.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.794496074829" font-weight="bold" fill="var(--info-text)">Pod 1</text>
+  <text x="211.428571428571" y="472.456140350877" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--info-text)">myapp-7d-aaa</text>
+  <text x="211.428571428571" y="502.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.529664049886" fill="var(--info-text)">node A</text>
+  <text x="211.428571428571" y="538.59649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.529664049886" font-style="italic" fill="var(--info-text)">running</text>
+
+  <rect x="468.571428571428" y="406.315789473684" width="342.857142857143" height="162.80701754386" rx="10.441386708238" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="441.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.794496074829" font-weight="bold" fill="var(--info-text)">Pod 2</text>
+  <text x="640" y="472.456140350877" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--info-text)">myapp-7d-bbb</text>
+  <text x="640" y="502.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.529664049886" fill="var(--info-text)">node B</text>
+  <text x="640" y="538.59649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.529664049886" font-style="italic" fill="var(--info-text)">running</text>
+
+  <rect x="897.142857142857" y="406.315789473684" width="342.857142857143" height="162.80701754386" rx="10.441386708238" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1068.571428571428" y="441.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.794496074829" font-weight="bold" fill="var(--info-text)">Pod 3</text>
+  <text x="1068.571428571428" y="472.456140350877" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" fill="var(--info-text)">myapp-7d-ccc</text>
+  <text x="1068.571428571428" y="502.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.529664049886" fill="var(--info-text)">node C</text>
+  <text x="1068.571428571428" y="538.59649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.529664049886" font-style="italic" fill="var(--info-text)">running</text>
+
+  <rect x="40" y="584.385964912281" width="1200" height="35.614035087719" rx="6.264832024943" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="607.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.57380272071" font-weight="bold" fill="var(--text)">Pod dies -&gt; ReplicaSet creates a new one. You manage the Deployment.</text>
+</svg>

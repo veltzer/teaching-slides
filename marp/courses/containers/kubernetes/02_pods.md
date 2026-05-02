@@ -20,6 +20,11 @@ audience:
 - Init containers
 
 ---
+## Pod Anatomy
+
+![pod_anatomy](svg/courses/containers/kubernetes/02_pods/pod_anatomy.svg)
+
+---
 ## What A Pod Is
 
 - One or more containers; shared network and storage

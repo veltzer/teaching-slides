@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.514591494905" font-weight="bold" fill="var(--text)">Inverted Index</text>
+
+  <rect x="40" y="82.962962962963" width="393.103448275862" height="537.037037037037" rx="10.540925533895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.551724137931" y="120.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.081851067789" font-weight="bold" fill="var(--primary-text)">Documents</text>
+
+  <rect x="60.689655172414" y="147.407407407407" width="351.724137931035" height="85.925925925926" rx="6.324555320337" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="81.379310344828" y="174.259259259259" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--text)">doc1</text>
+  <text x="81.379310344828" y="201.111111111111" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--text)">"the quick brown fox"</text>
+
+  <rect x="60.689655172414" y="254.814814814815" width="351.724137931035" height="85.925925925926" rx="6.324555320337" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="81.379310344828" y="281.666666666667" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--text)">doc2</text>
+  <text x="81.379310344828" y="308.518518518519" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--text)">"the lazy dog"</text>
+
+  <rect x="60.689655172414" y="362.222222222222" width="351.724137931035" height="85.925925925926" rx="6.324555320337" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="81.379310344828" y="389.074074074074" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--text)">doc3</text>
+  <text x="81.379310344828" y="415.925925925926" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--text)">"quick brown fox jumps"</text>
+
+  <rect x="60.689655172414" y="469.62962962963" width="351.724137931035" height="85.925925925926" rx="6.324555320337" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="81.379310344828" y="496.481481481482" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--text)">doc4</text>
+  <text x="81.379310344828" y="523.333333333333" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--text)">"the dog barks"</text>
+
+  <path d="M 453.793103448276 351.481481481482 L 536.551724137931 351.481481481482" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="495.172413793103" y="335.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--text-muted)">analyze</text>
+
+  <rect x="557.241379310345" y="82.962962962963" width="682.758620689655" height="537.037037037037" rx="10.540925533895" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="898.620689655172" y="120.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.081851067789" font-weight="bold" fill="var(--ok-text)">Inverted Index</text>
+
+  <text x="577.931034482759" y="168.888888888889" font-family="Arial, sans-serif" font-size="16.865480854231" font-weight="bold" fill="var(--ok-text)">term</text>
+  <text x="784.827586206897" y="168.888888888889" font-family="Arial, sans-serif" font-size="16.865480854231" font-weight="bold" fill="var(--ok-text)">posting list</text>
+  <line x1="577.931034482759" y1="179.62962962963" x2="1219.310344827586" y2="179.62962962963" stroke="var(--ok-text)" stroke-width="1"/>
+
+  <text x="577.931034482759" y="211.851851851852" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">"barks"</text>
+  <text x="784.827586206897" y="211.851851851852" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">[doc4]</text>
+
+  <text x="577.931034482759" y="249.444444444444" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">"brown"</text>
+  <text x="784.827586206897" y="249.444444444444" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">[doc1, doc3]</text>
+
+  <text x="577.931034482759" y="287.037037037037" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">"dog"</text>
+  <text x="784.827586206897" y="287.037037037037" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">[doc2, doc4]</text>
+
+  <text x="577.931034482759" y="324.62962962963" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">"fox"</text>
+  <text x="784.827586206897" y="324.62962962963" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">[doc1, doc3]</text>
+
+  <text x="577.931034482759" y="362.222222222222" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">"jumps"</text>
+  <text x="784.827586206897" y="362.222222222222" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">[doc3]</text>
+
+  <text x="577.931034482759" y="399.814814814815" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">"lazy"</text>
+  <text x="784.827586206897" y="399.814814814815" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">[doc2]</text>
+
+  <text x="577.931034482759" y="437.407407407407" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">"quick"</text>
+  <text x="784.827586206897" y="437.407407407407" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">[doc1, doc3]</text>
+
+  <text x="577.931034482759" y="475" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">"the"</text>
+  <text x="784.827586206897" y="475" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--ok-text)">[doc1, doc2, doc4]</text>
+
+  <rect x="577.931034482759" y="523.333333333333" width="641.379310344828" height="75.185185185185" rx="6.324555320337" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="898.620689655172" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" font-weight="bold" fill="var(--text)">Search "quick brown" -&gt; intersect lists -&gt; [doc1, doc3]</text>
+  <text x="898.620689655172" y="582.407407407408" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--text-muted)">No table scan: jump straight to matching documents</text>
+</svg>

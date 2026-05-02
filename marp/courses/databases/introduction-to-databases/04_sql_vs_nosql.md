@@ -20,6 +20,11 @@ audience:
 - Choosing
 
 ---
+## SQL vs NoSQL Side-by-Side
+
+![sql_vs_nosql](svg/courses/databases/introduction-to-databases/04_sql_vs_nosql/sql_vs_nosql.svg)
+
+---
 ## SQL Strengths
 
 - Mature: 50 years of optimisation

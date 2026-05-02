@@ -31,6 +31,11 @@ audience:
 - Foundation of scalable systems
 
 ---
+## Strategies Overview
+
+![lb_strategies](svg/courses/architecting/system-design/03_load_balancing/lb_strategies.svg)
+
+---
 ## Layer 4 (Transport)
 
 - Operates on TCP / UDP

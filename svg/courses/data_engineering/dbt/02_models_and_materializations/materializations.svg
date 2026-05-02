@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">dbt Materializations</text>
+
+  <rect x="40" y="87.889908256881" width="300" height="532.110091743119" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--primary-text)">view</text>
+  <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--primary-text)">CREATE VIEW</text>
+  <text x="60.689655172414" y="194.311926605505" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--primary-text)">No data stored</text>
+  <text x="60.689655172414" y="220.917431192661" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--primary-text)">Recomputed on read</text>
+  <text x="60.689655172414" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--primary-text)">Use:</text>
+  <text x="60.689655172414" y="290.091743119266" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--primary-text)">- Light transforms</text>
+  <text x="60.689655172414" y="313.504587155963" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--primary-text)">- Always-fresh</text>
+  <text x="60.689655172414" y="365" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--primary-text)">Trade: slow on big queries</text>
+  <text x="60.689655172414" y="450" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--primary-text)">Default in dbt</text>
+
+  <rect x="360.689655172414" y="87.889908256881" width="300" height="532.110091743119" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="510.689655172414" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">table</text>
+  <text x="381.379310344828" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--ok-text)">CREATE TABLE AS</text>
+  <text x="381.379310344828" y="194.311926605505" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--ok-text)">Persisted to disk</text>
+  <text x="381.379310344828" y="220.917431192661" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--ok-text)">Rebuilt on each run</text>
+  <text x="381.379310344828" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--ok-text)">Use:</text>
+  <text x="381.379310344828" y="290.091743119266" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--ok-text)">- Heavy transforms</text>
+  <text x="381.379310344828" y="313.504587155963" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--ok-text)">- Many reads</text>
+  <text x="381.379310344828" y="365" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--ok-text)">Trade: stale + storage</text>
+
+  <rect x="681.379310344828" y="87.889908256881" width="300" height="532.110091743119" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="831.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--warn-text)">incremental</text>
+  <text x="702.068965517241" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--warn-text)">Append/merge new rows</text>
+  <text x="702.068965517241" y="194.311926605505" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--warn-text)">Only new since last run</text>
+  <text x="702.068965517241" y="220.917431192661" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--warn-text)">is_incremental() check</text>
+  <text x="702.068965517241" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--warn-text)">Use:</text>
+  <text x="702.068965517241" y="290.091743119266" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--warn-text)">- Event tables</text>
+  <text x="702.068965517241" y="313.504587155963" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--warn-text)">- Time series</text>
+  <text x="702.068965517241" y="365" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--warn-text)">Trade: late data tricky</text>
+
+  <rect x="1002.068965517241" y="87.889908256881" width="237.931034482759" height="532.110091743119" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1121.034482758621" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--info-text)">ephemeral</text>
+  <text x="1022.758620689655" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--info-text)">Inlined as CTE</text>
+  <text x="1022.758620689655" y="194.311926605505" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--info-text)">No object created</text>
+  <text x="1022.758620689655" y="220.917431192661" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--info-text)">In dependent models</text>
+  <text x="1022.758620689655" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--info-text)">Use:</text>
+  <text x="1022.758620689655" y="290.091743119266" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--info-text)">- Internal logic</text>
+  <text x="1022.758620689655" y="313.504587155963" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--info-text)">- Hide from BI</text>
+  <text x="1022.758620689655" y="365" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--info-text)">Trade: hard to debug</text>
+</svg>

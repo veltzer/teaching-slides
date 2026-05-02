@@ -20,6 +20,11 @@ audience:
 - Choosing per case is the design skill
 
 ---
+## Sync vs Async
+
+![sync_vs_async](svg/courses/architecting/microservices-architecture/05_communication/sync_vs_async.svg)
+
+---
 ## Synchronous: Examples
 
 - HTTP/REST: most common

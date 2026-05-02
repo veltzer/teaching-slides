@@ -29,6 +29,11 @@ audience:
 - Keep momentum on the team
 
 ---
+## Defect Detection vs PR Size
+
+![pr_size_curve](svg/courses/development_methodologies/code-review-best-practices/07_pr_size_and_structure/pr_size_curve.svg)
+
+---
 ## How Small Is Small
 
 - Industry research: ~100-200 lines is the sweet spot

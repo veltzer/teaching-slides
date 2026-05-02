@@ -21,6 +21,11 @@ audience:
 - A mental checklist
 
 ---
+## Review Priorities
+
+![review_priorities](svg/courses/development_methodologies/code-review-best-practices/04_what_to_look_for/review_priorities.svg)
+
+---
 ## A Mental Checklist
 
 - Does it work? (correctness)

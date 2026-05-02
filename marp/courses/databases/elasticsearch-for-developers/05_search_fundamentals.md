@@ -65,6 +65,11 @@ POST /products/_search
 - For keyword fields, IDs, exact values
 
 ---
+## Match vs Term
+
+![match_vs_term](svg/courses/databases/elasticsearch-for-developers/05_search_fundamentals/match_vs_term.svg)
+
+---
 ## Match Phrase
 
 ```json

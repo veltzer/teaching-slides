@@ -21,6 +21,11 @@ audience:
 - Maintenance
 
 ---
+## Index Types
+
+![index_types](svg/courses/databases/mongodb-for-developers/08_indexing_for_developers/index_types.svg)
+
+---
 ## Single-Field Index
 
 ```javascript

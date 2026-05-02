@@ -21,6 +21,11 @@ audience:
 - A short tour of the landscape
 
 ---
+## Gateway in the Big Picture
+
+![gateway_role](svg/courses/architecting/api-gateway-patterns/01_introduction_to_api_gateways/gateway_role.svg)
+
+---
 ## What An API Gateway Is
 
 - A single entry point in front of multiple services

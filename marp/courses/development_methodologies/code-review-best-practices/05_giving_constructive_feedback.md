@@ -20,6 +20,11 @@ audience:
 - A few rephrasings to learn
 
 ---
+## Anatomy of Feedback
+
+![feedback_anatomy](svg/courses/development_methodologies/code-review-best-practices/05_giving_constructive_feedback/feedback_anatomy.svg)
+
+---
 ## Why Tone Matters
 
 - Reviews persist in writing; tone reads worse than spoken
