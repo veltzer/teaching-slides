@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="40" font-size="20.263747655025" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">File-Backed mmap: One Page Cache, Many Views</text>
+
+  <rect x="40" y="65.663716814159" width="1200" height="184.778761061947" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="640" y="96.46017699115" text-anchor="middle" font-size="16.21099812402" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">User space</text>
+
+  <rect x="65" y="122.12389380531" width="370" height="118.053097345133" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="250" y="147.787610619469" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">P1 read-only</text>
+  <text x="80" y="178.58407079646" font-size="12.158248593015" fill="var(--info-text)" font-family="Courier New, monospace">mmap(.., PROT_READ,</text>
+  <text x="80" y="197.061946902655" font-size="12.158248593015" fill="var(--info-text)" font-family="Courier New, monospace">     MAP_SHARED, fd, 0)</text>
+  <text x="250" y="226.83185840708" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Arial, sans-serif">scans like an array</text>
+
+  <rect x="455" y="122.12389380531" width="370" height="118.053097345133" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="640" y="147.787610619469" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">P2 shared write</text>
+  <text x="470" y="178.58407079646" font-size="12.158248593015" fill="var(--info-text)" font-family="Courier New, monospace">mmap(.., RW,</text>
+  <text x="470" y="197.061946902655" font-size="12.158248593015" fill="var(--info-text)" font-family="Courier New, monospace">     MAP_SHARED, fd, 0)</text>
+  <text x="640" y="226.83185840708" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Arial, sans-serif">stores reach the file</text>
+
+  <rect x="845" y="122.12389380531" width="370" height="118.053097345133" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="1030" y="147.787610619469" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">P3 private</text>
+  <text x="860" y="178.58407079646" font-size="12.158248593015" fill="var(--info-text)" font-family="Courier New, monospace">mmap(.., RW,</text>
+  <text x="860" y="197.061946902655" font-size="12.158248593015" fill="var(--info-text)" font-family="Courier New, monospace">     MAP_PRIVATE, fd, 0)</text>
+  <text x="1030" y="226.83185840708" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Arial, sans-serif">copy-on-write</text>
+
+  <path d="M 250 250.442477876106 L 250 301.769911504425" stroke="var(--text-muted)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 640 250.442477876106 L 640 301.769911504425" stroke="var(--text-muted)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 1030 250.442477876106 L 1030 301.769911504425" stroke="var(--text-muted)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="312.035398230089" width="1200" height="184.778761061947" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="640" y="342.83185840708" text-anchor="middle" font-size="16.21099812402" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Kernel</text>
+
+  <rect x="65" y="363.362831858407" width="280" height="123.185840707965" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="205" y="394.159292035398" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Page cache</text>
+  <text x="205" y="424.955752212389" text-anchor="middle" font-size="12.158248593015" fill="var(--ok-text)" font-family="Arial, sans-serif">one page per offset</text>
+  <text x="205" y="450.619469026549" text-anchor="middle" font-size="12.158248593015" fill="var(--ok-text)" font-family="Arial, sans-serif">P1 + P2 share pages</text>
+  <text x="205" y="474.230088495575" text-anchor="middle" font-size="11.145061210264" fill="var(--ok-text)" font-family="Arial, sans-serif" font-style="italic">P3 forks on write</text>
+
+  <rect x="365" y="363.362831858407" width="280" height="123.185840707965" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="505" y="394.159292035398" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Page tables</text>
+  <text x="505" y="424.955752212389" text-anchor="middle" font-size="12.158248593015" fill="var(--info-text)" font-family="Arial, sans-serif">VMA per process</text>
+  <text x="505" y="450.619469026549" text-anchor="middle" font-size="12.158248593015" fill="var(--info-text)" font-family="Arial, sans-serif">demand-paged</text>
+  <text x="505" y="474.230088495575" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Arial, sans-serif" font-style="italic">MMU resolves</text>
+
+  <rect x="665" y="363.362831858407" width="280" height="123.185840707965" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="805" y="394.159292035398" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Writeback</text>
+  <text x="805" y="424.955752212389" text-anchor="middle" font-size="12.158248593015" fill="var(--warn-text)" font-family="Courier New, monospace">msync()</text>
+  <text x="805" y="450.619469026549" text-anchor="middle" font-size="12.158248593015" fill="var(--warn-text)" font-family="Arial, sans-serif">lazy by default</text>
+  <text x="805" y="474.230088495575" text-anchor="middle" font-size="11.145061210264" fill="var(--warn-text)" font-family="Arial, sans-serif" font-style="italic">crash loses dirty</text>
+
+  <rect x="965" y="363.362831858407" width="255" height="123.185840707965" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="1090" y="394.159292035398" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Block layer</text>
+  <text x="1090" y="424.955752212389" text-anchor="middle" font-size="12.158248593015" fill="var(--danger-text)" font-family="Arial, sans-serif">DMA into pages</text>
+  <text x="1090" y="450.619469026549" text-anchor="middle" font-size="12.158248593015" fill="var(--danger-text)" font-family="Arial, sans-serif">SSD / NVMe</text>
+  <text x="1090" y="474.230088495575" text-anchor="middle" font-size="11.145061210264" fill="var(--danger-text)" font-family="Arial, sans-serif" font-style="italic">disk &lt;-&gt; cache</text>
+
+  <rect x="40" y="522.477876106195" width="1200" height="97.522123893805" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="640" y="563.53982300885" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Why fast</text>
+  <text x="640" y="594.336283185841" text-anchor="middle" font-size="12.158248593015" fill="var(--primary-text)" font-family="Arial, sans-serif">no buffer copy; pages mapped directly</text>
+</svg>

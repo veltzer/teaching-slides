@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="40" font-size="20.263747655025" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Shared Storage Across Pods (RWX)</text>
+
+  <rect x="40" y="65.663716814159" width="540" height="184.778761061947" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="310" y="96.46017699115" text-anchor="middle" font-size="16.21099812402" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Control Plane</text>
+
+  <rect x="60" y="116.991150442478" width="160" height="61.592920353982" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="140" y="154.973451327434" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">PVC</text>
+
+  <rect x="240" y="116.991150442478" width="160" height="61.592920353982" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="320" y="154.973451327434" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">StorageClass</text>
+
+  <rect x="420" y="116.991150442478" width="140" height="61.592920353982" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="490" y="154.973451327434" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">CSI driver</text>
+
+  <text x="310" y="214.513274336283" text-anchor="middle" font-size="12.158248593015" fill="var(--warn-text)" font-family="Arial, sans-serif">PVC → CSI provisions PV</text>
+
+  <rect x="610" y="65.663716814159" width="630" height="184.778761061947" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="925" y="96.46017699115" text-anchor="middle" font-size="16.21099812402" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Storage Backend</text>
+
+  <rect x="640" y="116.991150442478" width="270" height="118.053097345133" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="775" y="147.787610619469" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">PersistentVolume</text>
+  <text x="775" y="176.530973451327" text-anchor="middle" font-size="12.158248593015" fill="var(--ok-text)" font-family="Arial, sans-serif">accessModes: RWX</text>
+  <text x="775" y="199.115044247788" text-anchor="middle" font-size="12.158248593015" fill="var(--ok-text)" font-family="Arial, sans-serif">capacity: 100Gi</text>
+  <text x="775" y="221.699115044248" text-anchor="middle" font-size="12.158248593015" fill="var(--ok-text)" font-family="Arial, sans-serif">reclaim: Retain</text>
+
+  <rect x="940" y="116.991150442478" width="280" height="118.053097345133" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="1080" y="147.787610619469" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Network FS</text>
+  <text x="1080" y="173.451327433628" text-anchor="middle" font-size="12.158248593015" fill="var(--warn-text)" font-family="Arial, sans-serif">EFS / NFS / CephFS</text>
+  <text x="1080" y="199.115044247788" text-anchor="middle" font-size="11.145061210264" fill="var(--warn-text)" font-family="Arial, sans-serif" font-style="italic">block stores cannot do RWX</text>
+  <text x="1080" y="221.699115044248" text-anchor="middle" font-size="11.145061210264" fill="var(--warn-text)" font-family="Arial, sans-serif" font-style="italic">EBS / GCE PD / Azure Disk</text>
+
+  <rect x="40" y="291.504424778761" width="380" height="225.840707964602" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="230" y="322.300884955752" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Pod A (node-1)</text>
+  <rect x="60" y="342.83185840708" width="340" height="159.115044247788" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="230" y="371.575221238938" text-anchor="middle" font-size="13.171435975767" fill="var(--info-text)" font-family="Courier New, monospace">/data (PVC: shared-data)</text>
+  <text x="230" y="404.424778761062" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Courier New, monospace">echo "hi" &gt; /data/note.txt</text>
+  <text x="230" y="440.353982300885" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Arial, sans-serif">writer</text>
+  <text x="230" y="476.283185840708" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Arial, sans-serif" font-style="italic">file lands on the network FS</text>
+
+  <rect x="450" y="291.504424778761" width="380" height="225.840707964602" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="640" y="322.300884955752" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Pod B (node-2)</text>
+  <rect x="470" y="342.83185840708" width="340" height="159.115044247788" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="640" y="371.575221238938" text-anchor="middle" font-size="13.171435975767" fill="var(--info-text)" font-family="Courier New, monospace">/data (PVC: shared-data)</text>
+  <text x="640" y="404.424778761062" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Courier New, monospace">cat /data/note.txt</text>
+  <text x="640" y="440.353982300885" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Arial, sans-serif">reader</text>
+  <text x="640" y="476.283185840708" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Arial, sans-serif" font-style="italic">same backend bytes</text>
+
+  <rect x="860" y="291.504424778761" width="380" height="225.840707964602" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="1050" y="322.300884955752" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Pod C (node-3)</text>
+  <rect x="880" y="342.83185840708" width="340" height="159.115044247788" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="1050" y="371.575221238938" text-anchor="middle" font-size="13.171435975767" fill="var(--info-text)" font-family="Courier New, monospace">/data (PVC: shared-data)</text>
+  <text x="1050" y="404.424778761062" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Courier New, monospace">find /data -mtime -1</text>
+  <text x="1050" y="440.353982300885" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Arial, sans-serif">batch worker</text>
+  <text x="1050" y="476.283185840708" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Arial, sans-serif" font-style="italic">scales horizontally</text>
+
+  <path d="M 230 507.079646017699 L 750 240.176991150443" stroke="var(--text-muted)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 640 507.079646017699 L 770 240.176991150443" stroke="var(--text-muted)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 1050 507.079646017699 L 800 240.176991150443" stroke="var(--text-muted)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="553.274336283186" width="1200" height="66.725663716814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <text x="640" y="594.336283185841" text-anchor="middle" font-size="14.184623358518" fill="var(--warn-text)" font-family="Arial, sans-serif">RWO: one pod (block) | RWX: many pods (file)</text>
+</svg>
