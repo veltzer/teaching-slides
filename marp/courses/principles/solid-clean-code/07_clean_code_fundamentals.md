@@ -184,3 +184,18 @@ if order.total > HIGH_VALUE_THRESHOLD:
 - Long parameter lists with boolean flags
 - Block comments restating the code below them
 - Magic numbers in conditional branches
+
+---
+## Naming Quality Levels
+
+![naming_levels](svg/courses/principles/solid-clean-code/07_clean_code_fundamentals/naming_levels.svg)
+
+---
+## Common Code Smells
+
+![code_smells](svg/courses/principles/solid-clean-code/07_clean_code_fundamentals/code_smells.svg)
+
+---
+## Comment Strategy
+
+![comment_strategy](svg/courses/principles/solid-clean-code/07_clean_code_fundamentals/comment_strategy.svg)

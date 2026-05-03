@@ -45,6 +45,11 @@ Once you know one, the rest are vocabulary changes.
 ![lang_pkg_themes](svg/courses/operating_systems/linux-package-managers/05_language_package_managers/lang_pkg_themes.svg)
 
 ---
+## Lockfiles and Resolution
+
+![lock_file_resolution](svg/courses/operating_systems/linux-package-managers/05_language_package_managers/lockfile_resolution.svg)
+
+---
 ## `Python`: `pip`, `venv`, `pipx`, `poetry`, `uv`
 
 `Python` packaging is famously fragmented. The pieces:

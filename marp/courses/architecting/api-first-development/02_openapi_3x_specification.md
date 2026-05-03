@@ -248,3 +248,8 @@ schemas:
 - Inconsistent error response shapes
 - $ref typos (broken references)
 - Validating only manually; should run in CI
+
+---
+## components Section Layout
+
+![components_section](svg/courses/architecting/api-first-development/02_openapi_3x_specification/components_section.svg)

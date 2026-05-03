@@ -137,13 +137,13 @@ while (true) {
 - Newer protocol; only the affected partitions move
 - `partition.assignment.strategy=CooperativeStickyAssignor`
 - Less downtime during rebalance
+- Available since Kafka 2.4
+- The default for new deployments
 
 ---
 ## Rebalance Protocol Map
 
 ![rebalance_protocol](svg/courses/queues/kafka/03_consumer_api/rebalance_protocol.svg)
-- Available since Kafka 2.4
-- The default for new deployments
 
 ---
 ## Pause and Resume

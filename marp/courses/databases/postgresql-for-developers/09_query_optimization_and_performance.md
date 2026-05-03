@@ -11,6 +11,11 @@ audience:
 # Query Optimisation and Performance
 
 ---
+## EXPLAIN Anatomy
+
+![explain_anatomy](svg/courses/databases/postgresql-for-developers/09_query_optimization_and_performance/explain_anatomy.svg)
+
+---
 ## What This Chapter Covers
 
 - EXPLAIN

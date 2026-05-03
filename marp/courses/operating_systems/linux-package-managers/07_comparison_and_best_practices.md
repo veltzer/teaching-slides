@@ -43,6 +43,11 @@ For a given thing you want to install:
 Walk the list top-to-bottom. Stop at the first match.
 
 ---
+## Distro Package Manager Matrix
+
+![distro_matrix](svg/courses/operating_systems/linux-package-managers/07_comparison_and_best_practices/distro_matrix.svg)
+
+---
 ## Comparison: Trust Surface
 
 How much do you have to trust to install this?

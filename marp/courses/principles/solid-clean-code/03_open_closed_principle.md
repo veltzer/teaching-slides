@@ -188,3 +188,8 @@ def black_friday(amount): return amount * 0.8
 - Subclasses that only override one method — could be a function instead
 - Plugin frameworks for things that change once a year — overengineering
 - Forgetting that *adding the abstraction* is itself a modification
+
+---
+## Strategies for OCP
+
+![ocp_strategies](svg/courses/principles/solid-clean-code/03_open_closed_principle/ocp_strategies.svg)

@@ -106,3 +106,8 @@ audience:
 - Returning HTML errors from JSON APIs
 - Versioning ignored until breaking change
 - No deprecation policy
+
+---
+## Comparing API Styles
+
+![api_styles](svg/courses/networking/restful-apis/01_introduction_to_apis/api_styles.svg)

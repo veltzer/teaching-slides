@@ -138,3 +138,8 @@ paths:
 - No quickstart for new users
 - Missing error responses in spec
 - Tutorial only for happy path
+
+---
+## OpenAPI Document Pieces
+
+![openapi_pieces](svg/courses/networking/restful-apis/08_documentation_and_openapi/openapi_pieces.svg)

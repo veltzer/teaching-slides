@@ -137,3 +137,8 @@ audience:
 - Missing rate limits
 - Verbose error messages leaking internals
 - CORS with `*` for credentialed requests
+
+---
+## Layered Security Controls
+
+![security_layers](svg/courses/networking/restful-apis/06_authentication_and_security/security_layers.svg)

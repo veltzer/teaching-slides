@@ -134,3 +134,8 @@ audience:
 - Specs designed without consumer input
 - Ignoring developer experience (no examples, terse errors)
 - Treating the spec as final; never updating
+
+---
+## Process Comparison
+
+![process_compare](svg/courses/architecting/api-first-development/01_introduction_to_api_first_design/process_compare.svg)

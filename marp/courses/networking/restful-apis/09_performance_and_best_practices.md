@@ -143,3 +143,8 @@ audience:
 - N+1 patterns forcing many round trips
 - Synchronous long-running endpoints
 - No latency monitoring
+
+---
+## HTTP Caching Layers
+
+![cache_layers](svg/courses/networking/restful-apis/09_performance_and_best_practices/cache_layers.svg)

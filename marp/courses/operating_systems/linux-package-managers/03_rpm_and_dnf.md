@@ -30,6 +30,11 @@ audience:
 Unlike `.deb` you don't usually take a `.rpm` apart by hand. `rpm -qp` and `rpm2cpio` exist if you must.
 
 ---
+## Anatomy of an RPM Package
+
+![rpm_anatomy](svg/courses/operating_systems/linux-package-managers/03_rpm_and_dnf/rpm_anatomy.svg)
+
+---
 ## Inspecting an `.rpm` Without Installing
 
 ```bash

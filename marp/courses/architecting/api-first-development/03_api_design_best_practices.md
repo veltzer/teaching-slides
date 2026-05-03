@@ -199,3 +199,8 @@ Content-Type: application/json
 - Different error shapes for different endpoints
 - Mixing snake_case and camelCase in JSON
 - "Login" as a POST without idempotency considerations
+
+---
+## Error Strategy
+
+![error_strategy](svg/courses/architecting/api-first-development/03_api_design_best_practices/error_strategy.svg)

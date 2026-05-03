@@ -164,3 +164,8 @@ class ReportSender:
 - Ending up with a "GodFacade" that wires up the small classes — recreates the original
 - Splitting by what *can* change rather than what *does* change
 - Forgetting that "what changes together stays together" is also valid
+
+---
+## Splitting by Actor
+
+![srp_split](svg/courses/principles/solid-clean-code/02_single_responsibility_principle/srp_split.svg)

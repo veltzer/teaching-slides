@@ -11,6 +11,11 @@ audience:
 # PL/pgSQL Programming
 
 ---
+## PL/pgSQL Features
+
+![plpgsql_features](svg/courses/databases/postgresql-for-developers/06_pl_pgsql_programming/plpgsql_features.svg)
+
+---
 ## What This Chapter Covers
 
 - What PL/pgSQL is

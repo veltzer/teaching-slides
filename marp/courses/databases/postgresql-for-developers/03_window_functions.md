@@ -16,6 +16,11 @@ audience:
 ![window_basics](svg/courses/databases/postgresql-for-developers/03_window_functions/window_basics.svg)
 
 ---
+## Common Window Functions
+
+![window_functions_overview](svg/courses/databases/postgresql-for-developers/03_window_functions/window_functions_overview.svg)
+
+---
 ## What This Chapter Covers
 
 - What window functions are

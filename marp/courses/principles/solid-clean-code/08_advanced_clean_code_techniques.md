@@ -203,3 +203,13 @@ result = safe_divide(x, y)
 - Clean code is a discipline, not a checklist
 - Good naming, small functions, focused classes — these compound
 - The team that takes the time to read each other's code writes the cleanest code
+
+---
+## Refactoring Workflow
+
+![refactoring_steps](svg/courses/principles/solid-clean-code/08_advanced_clean_code_techniques/refactoring_steps.svg)
+
+---
+## Levels of Duplication
+
+![dry_levels](svg/courses/principles/solid-clean-code/08_advanced_clean_code_techniques/dry_levels.svg)

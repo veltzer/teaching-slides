@@ -134,3 +134,8 @@ audience:
 - Caching POST responses
 - Missing Content-Type header
 - Logging sensitive headers (Authorization)
+
+---
+## HTTP Method Semantics
+
+![http_methods](svg/courses/networking/restful-apis/02_http_fundamentals/http_methods.svg)

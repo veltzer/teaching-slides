@@ -187,6 +187,11 @@ sudo chmod +x /usr/local/bin/install-gh
 This isn't beautiful. It is, however, the difference between "I can recreate this server" and "I cannot."
 
 ---
+## Source Install Flow
+
+![source_install_flow](svg/courses/operating_systems/linux-package-managers/06_github_and_source/source_install_flow.svg)
+
+---
 ## Building From Source: The Classic `autotools` Recipe
 
 ```bash

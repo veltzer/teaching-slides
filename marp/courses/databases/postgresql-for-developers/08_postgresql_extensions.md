@@ -11,6 +11,11 @@ audience:
 # PostgreSQL Extensions
 
 ---
+## Popular Extensions
+
+![popular_extensions](svg/courses/databases/postgresql-for-developers/08_postgresql_extensions/popular_extensions.svg)
+
+---
 ## What This Chapter Covers
 
 - Extension model

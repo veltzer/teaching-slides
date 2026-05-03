@@ -33,6 +33,11 @@ Universal formats answer:
 ![universal_compare](svg/courses/operating_systems/linux-package-managers/04_universal_formats/universal_compare.svg)
 
 ---
+## Containment Models
+
+![containment_models](svg/courses/operating_systems/linux-package-managers/04_universal_formats/containment_models.svg)
+
+---
 ## The Three Big Universal Formats
 
 | | `flatpak` | `snap` | `appimage` |

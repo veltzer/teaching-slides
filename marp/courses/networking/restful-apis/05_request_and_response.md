@@ -133,3 +133,8 @@ HTTP/1.1 400 Bad Request
 - HTML error pages from JSON APIs
 - Missing Location header on 201
 - Throwing on first validation error instead of collecting all
+
+---
+## Anatomy of an Error Response
+
+![error_response](svg/courses/networking/restful-apis/05_request_and_response/error_response.svg)

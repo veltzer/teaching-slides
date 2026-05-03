@@ -133,3 +133,8 @@ audience:
 - Deep nesting (/a/b/c/d/e)
 - Mixing snake_case and camelCase
 - Filtering in path instead of query
+
+---
+## Modeling Relationships
+
+![relationship_patterns](svg/courses/networking/restful-apis/04_resource_design/relationship_patterns.svg)

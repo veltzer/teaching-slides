@@ -11,6 +11,11 @@ audience:
 # Indexing Strategies
 
 ---
+## Index Types
+
+![index_types](svg/courses/databases/postgresql-for-developers/04_indexing_strategies/index_types.svg)
+
+---
 ## What This Chapter Covers
 
 - Index types in Postgres
