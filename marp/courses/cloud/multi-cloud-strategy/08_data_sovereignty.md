@@ -16,6 +16,12 @@ audience:
 
 ---
 
+## Regulatory Frameworks
+
+![regulatory_frameworks](svg/courses/cloud/multi-cloud-strategy/08_data_sovereignty/regulatory_frameworks.svg)
+
+---
+
 ## What is Data Sovereignty?
 - Data is subject to the laws of the country where it is stored
 - Governments require certain data to remain within borders

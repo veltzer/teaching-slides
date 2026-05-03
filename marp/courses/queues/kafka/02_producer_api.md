@@ -89,6 +89,11 @@ producer.close();
 - Trade-off: latency vs durability
 
 ---
+## Producer Send Flow
+
+![producer_send_flow](svg/courses/queues/kafka/02_producer_api/producer_send_flow.svg)
+
+---
 ## Idempotent Producer
 
 - `enable.idempotence=true`
@@ -96,6 +101,11 @@ producer.close();
 - Prevents duplicates from retries
 - Costs nothing meaningful; turn it on
 - Required for transactional producer
+
+---
+## Idempotent Producer Diagram
+
+![idempotent_producer](svg/courses/queues/kafka/02_producer_api/idempotent_producer.svg)
 
 ---
 ## Transactional Producer

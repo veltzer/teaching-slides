@@ -28,6 +28,11 @@ audience:
 - Faster fixes
 
 ---
+## CI Strategy
+
+![ci_strategy](svg/courses/testing/performance-testing/05_continuous_performance/ci_strategy.svg)
+
+---
 ## Smoke Perf In CI
 
 - Small synthetic load

@@ -16,6 +16,12 @@ audience:
 
 ---
 
+## DR Strategies
+
+![dr_strategies](svg/courses/cloud/multi-cloud-strategy/10_disaster_recovery/dr_strategies.svg)
+
+---
+
 ## Why Multi-Cloud DR?
 - Single-cloud DR protects against Region failure
 - Multi-cloud DR protects against provider-level failure

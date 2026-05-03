@@ -11,6 +11,11 @@ audience:
 # Advanced SQL Techniques
 
 ---
+## UPSERT and RETURNING
+
+![upsert_returning](svg/courses/databases/postgresql-for-developers/02_advanced_sql_techniques/upsert_returning.svg)
+
+---
 ## What This Chapter Covers
 
 - CTEs and recursive queries

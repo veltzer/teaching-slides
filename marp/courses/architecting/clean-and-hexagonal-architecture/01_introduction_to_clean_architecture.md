@@ -10,6 +10,11 @@ audience:
 # Introduction to Clean Architecture
 
 ---
+## Goals of Clean Architecture
+
+![clean_goals](svg/courses/architecting/clean-and-hexagonal-architecture/01_introduction/clean_goals.svg)
+
+---
 ## What This Chapter Covers
 
 - What clean architecture is

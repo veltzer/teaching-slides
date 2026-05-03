@@ -290,6 +290,12 @@ CFLAGS += -DBUILD_DATE=\"$(BUILD_DATE)\"
 
 ---
 
+## Common Pitfalls Visual
+
+![common_pitfalls](svg/courses/build_systems/make/05_best_practices/common_pitfalls.svg)
+
+---
+
 ## Pitfall: Shell Variables
 
 ```makefile

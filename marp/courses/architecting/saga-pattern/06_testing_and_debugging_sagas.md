@@ -12,6 +12,11 @@ audience:
 # Testing and Debugging Sagas
 
 ---
+## Saga Testing Layers
+
+![saga_testing_layers](svg/courses/architecting/saga-pattern/06_testing_and_debugging_sagas/saga_testing_layers.svg)
+
+---
 ## What This Chapter Covers
 
 - Unit-testing orchestrators and choreography handlers

@@ -26,6 +26,11 @@ audience:
 - Many official and community
 
 ---
+## Exporter Categories
+
+![exporter_kinds](svg/courses/observability_and_monitoring/prometheus-and-grafana/04_exporters_and_instrumentation/exporter_kinds.svg)
+
+---
 ## Node Exporter
 
 - Linux host metrics

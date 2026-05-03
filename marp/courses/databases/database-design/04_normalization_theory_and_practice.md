@@ -87,6 +87,11 @@ audience:
 - Reporting tables alongside transactional
 
 ---
+## Denormalisation Trade-offs
+
+![denormalization_tradeoffs](svg/courses/databases/database-design/04_normalization_theory_and_practice/denormalization_tradeoffs.svg)
+
+---
 ## Hybrid Approach
 
 - Normalise transactional tables

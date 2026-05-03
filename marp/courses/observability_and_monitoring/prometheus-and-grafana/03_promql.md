@@ -72,6 +72,11 @@ rate(http_requests_total[5m])
 - Watch for resets
 
 ---
+## PromQL Function Families
+
+![promql_functions](svg/courses/observability_and_monitoring/prometheus-and-grafana/03_promql/promql_functions.svg)
+
+---
 ## Aggregations
 
 ```promql

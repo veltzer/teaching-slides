@@ -39,6 +39,11 @@ audience:
 - Lower frequency = better range; higher frequency = more capacity
 
 ---
+## Frequency Bands at a Glance
+
+![frequency_bands](svg/courses/wifi/wifi-protocols/02_protocols_review/frequency_bands.svg)
+
+---
 ## Channels and Overlap (2.4 GHz)
 
 - 2.4 GHz channels are 5 MHz apart but 20 MHz wide — adjacent channels overlap

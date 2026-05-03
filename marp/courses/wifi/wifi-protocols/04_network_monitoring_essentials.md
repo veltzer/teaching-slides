@@ -75,6 +75,11 @@ audience:
 - `iw phy phy0 info` — what the radio supports
 
 ---
+## Spectrum and Capture Tools
+
+![spectrum_view](svg/courses/wifi/wifi-protocols/04_network_monitoring_essentials/spectrum_view.svg)
+
+---
 ## Putting wlan0 in Monitor Mode
 
 ```bash

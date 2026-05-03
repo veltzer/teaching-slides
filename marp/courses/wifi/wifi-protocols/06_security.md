@@ -77,6 +77,11 @@ audience:
 - Vulnerable to KRACK in 2017, patched in clients and APs
 
 ---
+## WPA Evolution
+
+![wpa_evolution](svg/courses/wifi/wifi-protocols/06_security/wpa_evolution.svg)
+
+---
 ## The 4-Way Handshake
 
 - After association, AP and client run a 4-frame exchange to derive session keys

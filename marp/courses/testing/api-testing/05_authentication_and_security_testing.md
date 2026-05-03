@@ -48,6 +48,11 @@ audience:
 - Don't commit secrets
 
 ---
+## Auth Flows in Tests
+
+![auth_flows](svg/courses/testing/api-testing/05_authentication_and_security_testing/auth_flows.svg)
+
+---
 ## Authorisation Tests
 
 - Same endpoint, different roles

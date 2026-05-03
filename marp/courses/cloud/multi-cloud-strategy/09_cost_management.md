@@ -16,6 +16,12 @@ audience:
 
 ---
 
+## FinOps Practices
+
+![finops_practices](svg/courses/cloud/multi-cloud-strategy/09_cost_management/finops_practices.svg)
+
+---
+
 ## The Multi-Cloud Cost Challenge
 - Each cloud has different pricing models and units
 - Comparing costs across providers is not straightforward

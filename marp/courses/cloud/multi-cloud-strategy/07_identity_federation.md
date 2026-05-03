@@ -16,6 +16,12 @@ audience:
 
 ---
 
+## Federation Protocols
+
+![federation_protocols](svg/courses/cloud/multi-cloud-strategy/07_identity_federation/federation_protocols.svg)
+
+---
+
 ## Why Identity Federation Matters
 - Users need access to AWS, Azure, and GCP
 - Separate credentials per cloud is unsustainable

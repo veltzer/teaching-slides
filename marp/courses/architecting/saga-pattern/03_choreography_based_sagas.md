@@ -12,6 +12,11 @@ audience:
 # Choreography-Based Sagas
 
 ---
+## Event Design
+
+![event_design](svg/courses/architecting/saga-pattern/03_choreography_based_sagas/event_design.svg)
+
+---
 ## What This Chapter Covers
 
 - How choreography works at the message level

@@ -53,11 +53,21 @@ audience:
 - Better integrity
 
 ---
+## Inheritance Mapping Patterns
+
+![inheritance_patterns](svg/courses/databases/database-design/06_advanced_relationship_patterns/inheritance_patterns.svg)
+
+---
 ## M:N With Metadata
 
 - Junction table has its own columns
 - enrollment(student_id, course_id, grade, enrolled_at)
 - Now it's a first-class entity, not just a join
+
+---
+## Beyond Plain Junctions
+
+![junction_extras](svg/courses/databases/database-design/06_advanced_relationship_patterns/junction_extras.svg)
 
 ---
 ## Soft Deletes

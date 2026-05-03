@@ -12,6 +12,11 @@ audience:
 # Agile Engineering Practices
 
 ---
+## Engineering Practices
+
+![engineering_practices](svg/courses/practices/agile-and-scrum/08_agile_engineering_practices/engineering_practices.svg)
+
+---
 ## What This Chapter Covers
 
 - The engineering practices that make Agile actually work

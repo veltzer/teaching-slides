@@ -109,6 +109,11 @@ while (true) {
 - Failure handling for async: callback parameter
 
 ---
+## Offset Management Options
+
+![offset_management](svg/courses/queues/kafka/03_consumer_api/offset_management.svg)
+
+---
 ## Rebalances
 
 - When consumers join or leave the group
@@ -132,6 +137,11 @@ while (true) {
 - Newer protocol; only the affected partitions move
 - `partition.assignment.strategy=CooperativeStickyAssignor`
 - Less downtime during rebalance
+
+---
+## Rebalance Protocol Map
+
+![rebalance_protocol](svg/courses/queues/kafka/03_consumer_api/rebalance_protocol.svg)
 - Available since Kafka 2.4
 - The default for new deployments
 

@@ -54,6 +54,11 @@ audience:
 - Drives the schema
 
 ---
+## Cardinality Visual
+
+![cardinality_types](svg/courses/databases/database-design/02_entity_relationship_modeling/cardinality_types.svg)
+
+---
 ## Mapping 1:N
 
 - The "many" side has a foreign key

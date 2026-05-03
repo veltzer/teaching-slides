@@ -11,6 +11,11 @@ audience:
 # 3D Modeling and Asset Import
 
 ---
+## Common Texture Maps
+
+![texture_types](svg/courses/unity/introduction-to-game-development-with-unity/02_3d_modeling_and_asset_import/texture_types.svg)
+
+---
 ## What This Chapter Covers
 
 - The vocabulary of 3D modeling — meshes, vertices, polygons, UVs

@@ -93,6 +93,11 @@ audience:
 - Mesh is a workaround, not a substitute for a wired backbone
 
 ---
+## Deployment Topologies
+
+![deployment_topologies](svg/courses/wifi/wifi-protocols/05_how_to_use_and_select_access_points/deployment_topologies.svg)
+
+---
 ## Architecture Comparison
 
 ![architecture_comparison](svg/courses/wifi/wifi-protocols/05_how_to_use_and_select_access_points/architecture_comparison.svg)

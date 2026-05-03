@@ -11,6 +11,11 @@ audience:
 # C# Scripting Fundamentals
 
 ---
+## C# Building Blocks
+
+![csharp_basics](svg/courses/unity/introduction-to-game-development-with-unity/03_csharp_scripting_fundamentals/csharp_basics.svg)
+
+---
 ## What This Chapter Covers
 
 - Why Unity uses C#

@@ -12,6 +12,11 @@ audience:
 # Orchestration-Based Sagas
 
 ---
+## Trade-offs
+
+![orchestration_pros_cons](svg/courses/architecting/saga-pattern/04_orchestration_based_sagas/orchestration_pros_cons.svg)
+
+---
 ## What This Chapter Covers
 
 - How orchestration works

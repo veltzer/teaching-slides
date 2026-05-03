@@ -12,6 +12,11 @@ audience:
 # Sprints
 
 ---
+## Sprint Events
+
+![sprint_events](svg/courses/practices/agile-and-scrum/03_sprints/sprint_events.svg)
+
+---
 ## What This Chapter Covers
 
 - What a Sprint actually is, in mechanical terms

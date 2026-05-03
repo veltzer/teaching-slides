@@ -91,6 +91,11 @@ audience:
 - MySQL: clustered primary key (default)
 
 ---
+## Storage Layouts Compared
+
+![storage_layouts](svg/courses/databases/database-design/05_physical_database_design/storage_layouts.svg)
+
+---
 ## Storage Parameters
 
 - Fillfactor: leave space for updates

@@ -11,6 +11,11 @@ audience:
 # Comparing Clean and Hexagonal with Other Patterns
 
 ---
+## Related Patterns
+
+![related_patterns](svg/courses/architecting/clean-and-hexagonal-architecture/08_comparing_clean_and_hexagonal_with_other_patterns/related_patterns.svg)
+
+---
 ## What This Chapter Covers
 
 - Clean vs Hexagonal

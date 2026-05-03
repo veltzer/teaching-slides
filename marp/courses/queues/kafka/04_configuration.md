@@ -45,6 +45,11 @@ audience:
 - `auto.create.topics.enable`: usually false in prod
 
 ---
+## Broker Settings That Matter
+
+![broker_settings](svg/courses/queues/kafka/04_configuration/broker_settings.svg)
+
+---
 ## Replication Settings
 
 - `replication.factor`: how many copies of each partition

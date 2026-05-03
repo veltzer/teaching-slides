@@ -16,6 +16,12 @@ audience:
 
 ---
 
+## The Seven Rs
+
+![seven_rs](svg/courses/cloud/multi-cloud-strategy/12_migration_strategies/seven_rs.svg)
+
+---
+
 ## Why Migrate to Multi-Cloud?
 - Avoid vendor lock-in after single-cloud adoption
 - Leverage best-of-breed services across providers

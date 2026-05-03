@@ -16,6 +16,11 @@ audience:
 ![di_container](svg/courses/architecting/clean-and-hexagonal-architecture/06_dependency_injection_in_practice/di_container.svg)
 
 ---
+## DI Styles
+
+![di_styles](svg/courses/architecting/clean-and-hexagonal-architecture/06_dependency_injection_in_practice/di_styles.svg)
+
+---
 ## What This Chapter Covers
 
 - Why DI

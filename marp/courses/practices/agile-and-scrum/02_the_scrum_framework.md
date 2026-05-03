@@ -11,6 +11,11 @@ audience:
 # The Scrum Framework
 
 ---
+## Scrum Roles
+
+![scrum_roles](svg/courses/practices/agile-and-scrum/02_the_scrum_framework/scrum_roles.svg)
+
+---
 ## What This Chapter Covers
 
 - Scrum's origin and what it actually is (and isn't)

@@ -11,6 +11,11 @@ audience:
 # Introduction to Unity
 
 ---
+## Why Choose Unity
+
+![why_unity](svg/courses/unity/introduction-to-game-development-with-unity/01_introduction_to_unity/why_unity.svg)
+
+---
 ## What This Chapter Covers
 
 - What Unity is, and what kinds of games people make in it

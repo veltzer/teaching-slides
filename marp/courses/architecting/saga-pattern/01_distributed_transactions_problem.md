@@ -12,6 +12,11 @@ audience:
 # The Distributed Transactions Problem
 
 ---
+## Why Two-Phase Commit Breaks Down
+
+![two_phase_commit](svg/courses/architecting/saga-pattern/01_distributed_transactions_problem/two_phase_commit.svg)
+
+---
 ## What This Chapter Covers
 
 - ACID transactions and where they break

@@ -11,6 +11,11 @@ audience:
 # Scripting Game Objects
 
 ---
+## Movement Options
+
+![movement_options](svg/courses/unity/introduction-to-game-development-with-unity/04_scripting_game_objects/movement_options.svg)
+
+---
 ## What This Chapter Covers
 
 - Attaching scripts to GameObjects

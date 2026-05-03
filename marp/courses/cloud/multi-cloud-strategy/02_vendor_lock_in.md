@@ -16,6 +16,12 @@ audience:
 
 ---
 
+## Where Lock-In Hides
+
+![lock_in_vectors](svg/courses/cloud/multi-cloud-strategy/02_vendor_lock_in/lock_in_vectors.svg)
+
+---
+
 ## What Is Vendor Lock-In?
 - Dependency on a provider that makes switching costly
 - Not just technical — also contractual and operational

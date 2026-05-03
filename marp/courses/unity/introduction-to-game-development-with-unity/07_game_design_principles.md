@@ -11,6 +11,11 @@ audience:
 # Game Design Principles
 
 ---
+## Feedback Loops
+
+![feedback_loops](svg/courses/unity/introduction-to-game-development-with-unity/07_game_design_principles/feedback_loops.svg)
+
+---
 ## What This Chapter Covers
 
 - The core ingredients of a game

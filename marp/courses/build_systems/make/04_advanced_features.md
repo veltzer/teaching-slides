@@ -385,6 +385,18 @@ $(eval $(call PROGRAM_template,server))
 
 ---
 
+## Pattern and Implicit Rules
+
+![pattern_rules](svg/courses/build_systems/make/04_advanced_features/pattern_rules.svg)
+
+---
+
+## Functions and Macros
+
+![functions_and_macros](svg/courses/build_systems/make/04_advanced_features/functions_and_macros.svg)
+
+---
+
 ## Summary
 
 - Pattern rules with `%` for generic building

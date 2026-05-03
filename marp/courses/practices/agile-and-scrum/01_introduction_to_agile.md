@@ -11,6 +11,11 @@ audience:
 # Introduction to Agile
 
 ---
+## Manifesto Values
+
+![manifesto_values](svg/courses/practices/agile-and-scrum/01_introduction_to_agile/manifesto_values.svg)
+
+---
 ## What This Chapter Covers
 
 - Where Agile came from

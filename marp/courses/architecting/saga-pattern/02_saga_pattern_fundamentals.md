@@ -11,6 +11,11 @@ audience:
 # Saga Pattern Fundamentals
 
 ---
+## Forward vs Backward Recovery
+
+![forward_vs_backward](svg/courses/architecting/saga-pattern/02_saga_pattern_fundamentals/forward_vs_backward.svg)
+
+---
 ## What This Chapter Covers
 
 - The structure of a saga: steps, transactions, compensations

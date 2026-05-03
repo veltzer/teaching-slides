@@ -10,6 +10,11 @@ audience:
 # Ports and Adapters (Hexagonal)
 
 ---
+## Driving vs Driven
+
+![driving_vs_driven](svg/courses/architecting/clean-and-hexagonal-architecture/05_ports_and_adapters_hexagonal_architecture/driving_vs_driven.svg)
+
+---
 ## What This Chapter Covers
 
 - Hexagonal architecture origins

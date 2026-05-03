@@ -86,6 +86,11 @@ audience:
 - No separate pact file
 
 ---
+## Contract Testing Styles
+
+![contract_styles](svg/courses/testing/api-testing/04_contract_testing/contract_styles.svg)
+
+---
 ## Schemathesis
 
 - From OpenAPI spec

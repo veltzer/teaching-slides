@@ -286,6 +286,12 @@ make --trace      # Trace rule execution
 
 ---
 
+## Anatomy of a Rule
+
+![rule_anatomy](svg/courses/build_systems/make/02_basic_makefiles/rule_anatomy.svg)
+
+---
+
 ## Summary
 
 - Rules consist of target, prerequisites, recipe

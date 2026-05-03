@@ -11,6 +11,11 @@ audience:
 # Compensating Transactions
 
 ---
+## Designing Compensations
+
+![compensation_design](svg/courses/architecting/saga-pattern/05_compensating_transactions/compensation_design.svg)
+
+---
 ## What This Chapter Covers
 
 - Compensation vs rollback

@@ -96,6 +96,11 @@ http_requests_total{method="GET", status="200"} 1234
 - Summary: percentiles client-side
 
 ---
+## Types Compared
+
+![metric_types](svg/courses/observability_and_monitoring/prometheus-and-grafana/02_prometheus_basics/metric_types.svg)
+
+---
 ## Counter
 
 - Requests, errors, bytes sent

@@ -64,11 +64,21 @@ audience:
 - Stronger than ad-hoc assertions
 
 ---
+## Assertion Layers
+
+![assertion_layers](svg/courses/testing/api-testing/03_test_design/assertion_layers.svg)
+
+---
 ## Test Data
 
 - Fixed: known test users
 - Dynamic: created per test
 - Reset between runs (transactions, cleanup)
+
+---
+## Test Data Strategy
+
+![test_data_strategy](svg/courses/testing/api-testing/03_test_design/test_data_strategy.svg)
 
 ---
 ## Independence

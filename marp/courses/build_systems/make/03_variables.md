@@ -326,6 +326,12 @@ $(TARGET): $(OBJS)
 
 ---
 
+## Variable Flavors
+
+![variable_flavors](svg/courses/build_systems/make/03_variables/variable_flavors.svg)
+
+---
+
 ## Summary
 
 - Use `:=` for simple assignment (evaluated once)

@@ -16,6 +16,11 @@ audience:
 ![entities_use_cases](svg/courses/architecting/clean-and-hexagonal-architecture/03_entities_and_use_cases/entities_use_cases.svg)
 
 ---
+## Ports Overview
+
+![ports_overview](svg/courses/architecting/clean-and-hexagonal-architecture/03_entities_and_use_cases/ports_overview.svg)
+
+---
 ## What This Chapter Covers
 
 - What an entity is

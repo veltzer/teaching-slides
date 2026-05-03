@@ -35,6 +35,11 @@ audience:
 - Overlap; observability is the broader concept
 
 ---
+## Compared
+
+![monitoring_vs_observability](svg/courses/observability_and_monitoring/prometheus-and-grafana/01_introduction_to_observability/monitoring_vs_observability.svg)
+
+---
 ## Three Pillars
 
 - Metrics: numerical, time-series

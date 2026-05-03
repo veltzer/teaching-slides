@@ -45,6 +45,16 @@ audience:
 - Powerful; setup carefully
 
 ---
+## Access Control Layers
+
+![access_control](svg/courses/databases/database-design/08_security_and_integrity_in_database_design/access_control.svg)
+
+---
+## Layers of Data Integrity
+
+![integrity_layers](svg/courses/databases/database-design/08_security_and_integrity_in_database_design/integrity_layers.svg)
+
+---
 ## Encryption At Rest
 
 - Disk-level: TDE (Transparent Data Encryption)

@@ -11,6 +11,11 @@ audience:
 # Interface Adapters
 
 ---
+## Adapter Roles
+
+![adapter_roles](svg/courses/architecting/clean-and-hexagonal-architecture/04_interface_adapters/adapter_roles.svg)
+
+---
 ## What This Chapter Covers
 
 - The role of adapters

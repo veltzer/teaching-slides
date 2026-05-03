@@ -10,6 +10,11 @@ audience:
 # PostgreSQL Architecture and Internals
 
 ---
+## MVCC Basics
+
+![mvcc_basics](svg/courses/databases/postgresql-for-developers/01_postgresql_architecture_and_internals/mvcc_basics.svg)
+
+---
 ## What This Chapter Covers
 
 - Process architecture

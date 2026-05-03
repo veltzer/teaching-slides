@@ -13,6 +13,11 @@ audience:
 # User Stories and Estimation
 
 ---
+## INVEST Criteria
+
+![invest_criteria](svg/courses/practices/agile-and-scrum/07_user_stories_and_estimation/invest_criteria.svg)
+
+---
 ## What This Chapter Covers
 
 - The user story format and why it works

@@ -48,6 +48,11 @@ audience:
 - HTML / JUnit reports
 
 ---
+## From Manual to Automated
+
+![tool_workflow](svg/courses/testing/api-testing/02_tooling/tool_workflow.svg)
+
+---
 ## Insomnia
 
 - Postman alternative

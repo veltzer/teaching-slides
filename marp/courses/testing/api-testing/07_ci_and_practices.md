@@ -49,6 +49,11 @@ audience:
 - Production: smoke tests post-deploy
 
 ---
+## Test Environment Tiers
+
+![test_environments](svg/courses/testing/api-testing/07_ci_and_practices/test_environments.svg)
+
+---
 ## Ephemeral Environments
 
 - Spin up on PR open

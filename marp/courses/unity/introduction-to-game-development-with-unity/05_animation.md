@@ -11,6 +11,11 @@ audience:
 # Animation
 
 ---
+## Animation Principles
+
+![animation_principles](svg/courses/unity/introduction-to-game-development-with-unity/05_animation/animation_principles.svg)
+
+---
 ## What This Chapter Covers
 
 - The principles that make animation feel alive

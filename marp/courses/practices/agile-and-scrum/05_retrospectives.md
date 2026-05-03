@@ -12,6 +12,11 @@ audience:
 # Retrospectives
 
 ---
+## Retro Formats
+
+![retro_formats](svg/courses/practices/agile-and-scrum/05_retrospectives/retro_formats.svg)
+
+---
 ## What This Chapter Covers
 
 - Why the Retrospective is the most important Scrum event

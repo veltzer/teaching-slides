@@ -123,6 +123,11 @@ audience:
 - Fix and re-test
 
 ---
+## Common Bottleneck Patterns
+
+![bottleneck_patterns](svg/courses/testing/api-testing/06_performance_and_load/bottleneck_patterns.svg)
+
+---
 ## Common Performance-Testing Mistakes
 
 - Test environment too small

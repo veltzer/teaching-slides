@@ -12,6 +12,11 @@ audience:
 # Standups (Daily Scrum)
 
 ---
+## Standup Formats
+
+![standup_formats](svg/courses/practices/agile-and-scrum/04_standups/standup_formats.svg)
+
+---
 ## What This Chapter Covers
 
 - What the Daily Scrum is for

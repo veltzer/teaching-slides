@@ -66,6 +66,11 @@ audience:
 - Modern APs report SNR per client; check that, not just bars
 
 ---
+## Key Signal Metrics
+
+![signal_metrics](svg/courses/wifi/wifi-protocols/03_network_monitoring_and_performance_tuning/signal_metrics.svg)
+
+---
 ## Where Latency Hides
 
 - Airtime contention adds variable delay
