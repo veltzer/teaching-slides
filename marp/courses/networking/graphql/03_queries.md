@@ -25,6 +25,11 @@ audience:
 ![graphql_vs_rest](svg/courses/networking/graphql/03_queries/graphql_vs_rest.svg)
 
 ---
+## Query Features
+
+![query_features](svg/courses/networking/graphql/03_queries/query_features.svg)
+
+---
 ## Basic Query
 
 ```graphql

@@ -35,6 +35,11 @@ audience:
 ![fallacies](svg/courses/architecting/distributed-systems-fundamentals/01_introduction_to_distributed_systems/fallacies.svg)
 
 ---
+## System Properties
+
+![system_properties](svg/courses/architecting/distributed-systems-fundamentals/01_introduction_to_distributed_systems/system_properties.svg)
+
+---
 ## Why Distribute
 
 - Scale: more capacity than one machine

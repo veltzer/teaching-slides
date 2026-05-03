@@ -79,6 +79,11 @@ audience:
 - Performance-critical (cold starts hurt)
 
 ---
+## Wins and Loses
+
+![serverless_wins_loses](svg/courses/architecting/serverless-architecture/01_introduction_to_serverless/wins_loses.svg)
+
+---
 ## Cold Starts
 
 - First invocation after idle: slow

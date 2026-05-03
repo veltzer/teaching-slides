@@ -30,6 +30,11 @@ audience:
 - Congestion-controlled: respects network capacity
 
 ---
+## TCP Feature Map
+
+![tcp_features](svg/courses/networking/tcp-ip-deep-dive/05_tcp/tcp_features.svg)
+
+---
 ## When to Use TCP
 
 - Web (HTTP)
@@ -165,6 +170,11 @@ audience:
 - Doesn't react primarily to packet loss
 - Better in modern networks (cloud, mobile)
 - Increasing adoption
+
+---
+## Algorithm Trade-Offs
+
+![congestion_algorithms](svg/courses/networking/tcp-ip-deep-dive/05_tcp/congestion_algorithms.svg)
 
 ---
 ## Connection Close

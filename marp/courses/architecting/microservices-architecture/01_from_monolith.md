@@ -108,6 +108,16 @@ audience:
 - Remove the capability from the monolith
 
 ---
+## Strangler Fig Visualised
+
+![strangler_fig](svg/courses/architecting/microservices-architecture/01_from_monolith/strangler_fig.svg)
+
+---
+## Migration Anti Patterns
+
+![migration_anti_patterns](svg/courses/architecting/microservices-architecture/01_from_monolith/migration_anti_patterns.svg)
+
+---
 ## Anti-Patterns
 
 - **Distributed monolith**: services exist but are tightly coupled

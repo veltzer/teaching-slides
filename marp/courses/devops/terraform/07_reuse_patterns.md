@@ -15,6 +15,14 @@ audience:
 ---
 # Reuse Patterns
 
+---
+
+## Reuse Strategies
+
+![reuse_strategies](svg/courses/devops/terraform/07_reuse_patterns/reuse_strategies.svg)
+
+---
+
 ## Why Reuse?
 
 - Avoid duplicating configuration across environments

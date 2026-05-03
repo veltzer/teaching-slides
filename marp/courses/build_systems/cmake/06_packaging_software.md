@@ -116,6 +116,12 @@ include(CPack)
 
 ---
 
+## Packaging Workflow Visualised
+
+![cpack_workflow](svg/courses/build_systems/cmake/06_packaging_software/cpack_workflow.svg)
+
+---
+
 ## Running cpack
 
 ```console

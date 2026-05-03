@@ -15,6 +15,14 @@ audience:
 ---
 # Project Structure
 
+---
+
+## Standard Project Layout
+
+![standard_layout](svg/courses/devops/terraform/02_project_structure/standard_layout.svg)
+
+---
+
 ## Terraform File Types
 
 | Extension | Purpose |

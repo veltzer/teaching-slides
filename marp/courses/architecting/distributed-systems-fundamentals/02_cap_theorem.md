@@ -26,6 +26,11 @@ audience:
 ![cap_triangle](svg/courses/architecting/distributed-systems-fundamentals/02_cap_theorem/cap_triangle.svg)
 
 ---
+## CP Versus AP
+
+![cp_vs_ap](svg/courses/architecting/distributed-systems-fundamentals/02_cap_theorem/cp_vs_ap.svg)
+
+---
 ## CAP Stated
 
 - A distributed data store cannot simultaneously provide more than two of:

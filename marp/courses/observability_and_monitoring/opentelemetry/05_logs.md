@@ -84,6 +84,11 @@ audience:
 - Click trace, see its logs
 
 ---
+## Correlation Keys
+
+![log_correlation_keys](svg/courses/observability_and_monitoring/opentelemetry/05_logs/log_correlation_keys.svg)
+
+---
 ## Structured Logging
 
 - Key-value pairs, not free text

@@ -650,3 +650,9 @@ dig @127.0.0.1 example.com +stats
 
 1. Verify DNS over TLS is working by capturing traffic on port `853`
 1. Add a local zone override for an internal hostname
+
+---
+
+## DNS Record Types
+
+![dns_record_types](svg/courses/operating_systems/linux-system-administration/11_dns_optional/dns_record_types.svg)

@@ -102,6 +102,11 @@ audience:
 - One-off scripts you'll throw away
 
 ---
+## Where TDD Pays Off
+
+![when_tdd_wins](svg/courses/testing/test-driven-development/01_introduction_to_tdd/when_tdd_wins.svg)
+
+---
 ## TDD Is Not Testing
 
 - Testing is verifying correctness; TDD is a *design* method
@@ -136,6 +141,11 @@ audience:
 - Test 2: `add(1, 1) == 2`. Code: `return a + b`. Both pass.
 - The naive `return 5` was forced out by the second test
 - Toy example; real problems benefit similarly
+
+---
+## Triangulation Strategy
+
+![triangulation](svg/courses/testing/test-driven-development/01_introduction_to_tdd/triangulation.svg)
 
 ---
 ## TDD Doesn't Mean Tiny Steps

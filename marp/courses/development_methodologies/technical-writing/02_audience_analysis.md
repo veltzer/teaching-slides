@@ -15,6 +15,12 @@ audience:
 ![audience_quadrants](svg/courses/development_methodologies/technical-writing/02_audience_analysis/audience_quadrants.svg)
 
 ---
+
+## Reader Personas
+
+![reader_personas](svg/courses/development_methodologies/technical-writing/02_audience_analysis/reader_personas.svg)
+
+---
 ## What This Chapter Covers
 
 - Why audience matters

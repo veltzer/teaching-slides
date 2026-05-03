@@ -61,6 +61,11 @@ audience:
 - Reduces primitive obsession in the codebase
 
 ---
+## Value Object vs Entity
+
+![value_vs_entity](svg/courses/architecting/domain-driven-design/03_tactical_building_blocks/value_vs_entity.svg)
+
+---
 ## Aggregates
 
 - A cluster of entities and value objects treated as one unit

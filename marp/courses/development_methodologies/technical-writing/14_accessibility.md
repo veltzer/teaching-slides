@@ -11,6 +11,12 @@ audience:
 # Accessibility
 
 ---
+
+## Accessibility Focus Areas
+
+![accessibility_areas](svg/courses/development_methodologies/technical-writing/14_accessibility/accessibility_areas.svg)
+
+---
 ## What This Chapter Covers
 
 - Why accessibility matters in docs

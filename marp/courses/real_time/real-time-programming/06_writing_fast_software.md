@@ -29,6 +29,11 @@ audience:
 ![fast_techniques](svg/courses/real_time/real-time-programming/06_writing_fast_software/fast_techniques.svg)
 
 ---
+## Cache Friendly Patterns
+
+![cache_patterns](svg/courses/real_time/real-time-programming/06_writing_fast_software/cache_patterns.svg)
+
+---
 ## Know Your Standard Library
 
 - `memcpy` is heavily optimised; do not write your own

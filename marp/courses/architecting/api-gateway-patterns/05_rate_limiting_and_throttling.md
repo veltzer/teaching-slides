@@ -87,6 +87,11 @@ audience:
 - The pragmatic choice for high-volume
 
 ---
+## Algorithm Cheatsheet
+
+![rate_limiting_algorithms](svg/courses/architecting/api-gateway-patterns/05_rate_limiting_and_throttling/algorithms.svg)
+
+---
 ## Distributed Rate Limiting
 
 - Multi-instance gateways need shared state

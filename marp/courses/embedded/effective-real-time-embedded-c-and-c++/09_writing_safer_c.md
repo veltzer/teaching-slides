@@ -731,3 +731,15 @@ void secure_function(void) {
 1. **Tools** catch bugs early
 1. **Validation** prevents exploits
 1. **Testing** ensures correctness
+
+---
+
+## Coding Standards
+
+![coding_standards](svg/courses/embedded/effective-real-time-embedded-c-and-c++/09_writing_safer_c/coding_standards.svg)
+
+---
+
+## Defensive Programming
+
+![defensive_programming](svg/courses/embedded/effective-real-time-embedded-c-and-c++/09_writing_safer_c/defensive_programming.svg)

@@ -140,3 +140,8 @@ def heavy_query(): ...
 - Pool not configured (overwhelm downstream)
 - max_active_runs default (often too low or high)
 - Time zone surprises
+
+---
+## Choosing an Executor
+
+![executor_types](svg/courses/data_engineering/apache-airflow/05_scheduling_and_execution/executor_types.svg)

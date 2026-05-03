@@ -83,6 +83,11 @@ counter.Add(ctx, 1, attribute.String("status", "ok"))
 - Per-instrument default
 
 ---
+## Cumulative or Delta
+
+![aggregation_modes](svg/courses/observability_and_monitoring/opentelemetry/04_metrics/aggregation_temporality.svg)
+
+---
 ## Views
 
 - Customise aggregation

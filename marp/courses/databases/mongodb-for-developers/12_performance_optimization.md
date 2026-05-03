@@ -16,6 +16,11 @@ audience:
 ![perf_checklist](svg/courses/databases/mongodb-for-developers/12_performance_optimization/perf_checklist.svg)
 
 ---
+## Performance Workflow
+
+![perf_workflow](svg/courses/databases/mongodb-for-developers/12_performance_optimization/perf_workflow.svg)
+
+---
 ## What This Chapter Covers
 
 - Profiling

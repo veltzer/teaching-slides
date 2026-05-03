@@ -162,3 +162,8 @@ packages:
 - Reinventing dbt_utils
 - Macros with side effects
 - Not version-pinning packages
+
+---
+## Macro Patterns
+
+![macro_examples](svg/courses/data_engineering/dbt/08_macros_packages_and_reusability/macro_examples.svg)

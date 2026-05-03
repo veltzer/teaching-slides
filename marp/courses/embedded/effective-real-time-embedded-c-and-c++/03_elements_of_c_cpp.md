@@ -175,3 +175,15 @@ struct Packed {
 };  // Total: 6 bytes
 #pragma pack(pop)
 ```
+
+---
+
+## Storage Classes
+
+![storage_classes](svg/courses/embedded/effective-real-time-embedded-c-and-c++/03_elements_of_c_cpp/storage_classes.svg)
+
+---
+
+## Preprocessor Basics
+
+![preprocessor_basics](svg/courses/embedded/effective-real-time-embedded-c-and-c++/03_elements_of_c_cpp/preprocessor_basics.svg)

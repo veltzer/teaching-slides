@@ -73,6 +73,11 @@ spec:
 - Unknown: lost contact
 
 ---
+## Phase Reference
+
+![pod_lifecycle_phases](svg/courses/containers/kubernetes/02_pods/lifecycle_phases.svg)
+
+---
 ## Resource Requests
 
 ```yaml

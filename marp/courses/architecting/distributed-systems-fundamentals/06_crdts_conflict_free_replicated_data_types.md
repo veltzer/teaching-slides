@@ -34,6 +34,11 @@ audience:
 ![crdt_kinds](svg/courses/architecting/distributed-systems-fundamentals/06_crdts_conflict_free_replicated_data_types/crdt_kinds.svg)
 
 ---
+## CRDT Use Cases
+
+![crdt_use_cases](svg/courses/architecting/distributed-systems-fundamentals/06_crdts_conflict_free_replicated_data_types/crdt_use_cases.svg)
+
+---
 ## What "Conflict-Free" Means
 
 - Concurrent updates merge to a deterministic result

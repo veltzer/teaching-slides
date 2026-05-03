@@ -175,3 +175,8 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - Few: end-to-end tests (against full AWS)
 - Always: smoke tests after deploy
 - Match cost to risk
+
+---
+## Pyramid Levels
+
+![test_pyramid](svg/courses/architecting/serverless-architecture/06_testing_serverless_applications/test_pyramid.svg)

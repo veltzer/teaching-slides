@@ -11,6 +11,12 @@ audience:
 # API Documentation
 
 ---
+
+## Application Programming Interface Sections
+
+![api_doc_sections](svg/courses/development_methodologies/technical-writing/09_api_documentation/api_doc_sections.svg)
+
+---
 ## What This Chapter Covers
 
 - OpenAPI / Swagger specification

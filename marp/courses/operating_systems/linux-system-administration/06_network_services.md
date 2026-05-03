@@ -1415,3 +1415,21 @@ iptables -A INPUT -m limit \
 systemctl restart rsyslog
 tail -f /var/log/firewall.log
 ```
+
+---
+
+## Network Interfaces Overview
+
+![network_interfaces_overview](svg/courses/operating_systems/linux-system-administration/06_network_services/network_interfaces_overview.svg)
+
+---
+
+## Firewall Overview
+
+![firewall_overview](svg/courses/operating_systems/linux-system-administration/06_network_services/firewall_overview.svg)
+
+---
+
+## SSH Hardening
+
+![ssh_hardening](svg/courses/operating_systems/linux-system-administration/06_network_services/ssh_hardening.svg)

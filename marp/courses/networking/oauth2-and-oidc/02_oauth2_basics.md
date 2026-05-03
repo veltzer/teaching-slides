@@ -42,6 +42,11 @@ audience:
 - `/.well-known/openid-configuration` — discovery (OIDC)
 
 ---
+## Standard Endpoint Roles
+
+![standard_endpoints](svg/courses/networking/oauth2-and-oidc/02_oauth2_basics/standard_endpoints.svg)
+
+---
 ## The Authorize Endpoint
 
 - The user's browser is redirected here
@@ -85,6 +90,11 @@ audience:
 - Different security guarantees and grant types per type
 - Older spec called native clients confidential — wrong; they are public
 - Choose grants based on client type
+
+---
+## Client Type Comparison
+
+![client_types](svg/courses/networking/oauth2-and-oidc/02_oauth2_basics/client_types.svg)
 
 ---
 ## Confidential Clients

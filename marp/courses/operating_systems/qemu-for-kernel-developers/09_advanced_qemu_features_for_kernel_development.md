@@ -14,6 +14,18 @@ audience:
 
 ---
 
+## Advanced Kernel Development Features
+
+![advanced_features](svg/courses/operating_systems/qemu-for-kernel-developers/09_advanced_qemu_features_for_kernel_development/advanced_features.svg)
+
+---
+
+## Snapshot, Record, Replay
+
+![snapshot_replay](svg/courses/operating_systems/qemu-for-kernel-developers/09_advanced_qemu_features_for_kernel_development/snapshot_replay.svg)
+
+---
+
 Chapter Overview
 - QEMU tracing and instrumentation
 - Using QEMU for kernel fuzzing

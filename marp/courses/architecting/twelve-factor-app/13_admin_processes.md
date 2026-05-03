@@ -53,6 +53,11 @@ audience:
 - A Kubernetes Job that runs the same image with a different command
 
 ---
+## Admin Done Right
+
+![admin_done_right](svg/courses/architecting/twelve-factor-app/13_admin_processes/admin_done_right.svg)
+
+---
 ## Why It Matters
 
 - Production fixes that diverge from production code are how outages happen

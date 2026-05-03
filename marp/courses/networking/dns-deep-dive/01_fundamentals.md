@@ -39,6 +39,11 @@ audience:
 - Often the actual cause of "internet is down"
 
 ---
+## DNS Hierarchy and Roles
+
+![dns_hierarchy](svg/courses/networking/dns-deep-dive/01_fundamentals/dns_hierarchy.svg)
+
+---
 ## The Namespace Hierarchy
 
 - Root (`.`) at the top
@@ -51,6 +56,16 @@ audience:
 ## Hierarchy Visualized
 
 ![hierarchy](svg/courses/networking/dns-deep-dive/01_fundamentals/hierarchy.svg)
+
+---
+## DNS Actors
+
+![dns_actors](svg/courses/networking/dns-deep-dive/01_fundamentals/dns_actors.svg)
+
+---
+## Message Format
+
+![dns_message_format](svg/courses/networking/dns-deep-dive/01_fundamentals/dns_message_format.svg)
 
 ---
 ## Domain Name Anatomy

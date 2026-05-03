@@ -71,6 +71,11 @@ audience:
 ![schema_compatibility](svg/courses/architecting/event-driven-architecture/06_schema_evolution/schema_compatibility.svg)
 
 ---
+## Registry Workflow
+
+![registry_workflow](svg/courses/architecting/event-driven-architecture/06_schema_evolution/registry_workflow.svg)
+
+---
 ## Schema Registries
 
 - A central service that stores and validates schemas

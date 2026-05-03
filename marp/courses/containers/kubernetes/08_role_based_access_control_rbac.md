@@ -86,6 +86,11 @@ rules:
 - Use as starting points
 
 ---
+## Subjects of Access
+
+![rbac_subjects](svg/courses/containers/kubernetes/08_role_based_access_control_rbac/rbac_subjects.svg)
+
+---
 ## ServiceAccount
 
 - Identity for pods

@@ -278,3 +278,15 @@ ansible-inventory -i inventory --graph | grep -c '|--'
 - Version control your inventory files
 - Use dynamic inventory for cloud environments
 - Validate inventory before running playbooks
+
+---
+
+## Inventory Groups and Hosts
+
+![inventory_groups_and_hosts](svg/courses/devops/ansible/02_inventory_deep_dive/inventory_groups_and_hosts.svg)
+
+---
+
+## Inventory Variable Files
+
+![inventory_variable_files](svg/courses/devops/ansible/02_inventory_deep_dive/inventory_variable_files.svg)

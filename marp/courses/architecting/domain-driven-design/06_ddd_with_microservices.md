@@ -65,6 +65,11 @@ audience:
 - The domain depends on nothing; everything depends on the domain
 
 ---
+## Layers Side By Side
+
+![hexagonal_architecture](svg/courses/architecting/domain-driven-design/06_ddd_with_microservices/hexagonal_architecture.svg)
+
+---
 ## Ports
 
 - Interfaces declared in the domain or application layer

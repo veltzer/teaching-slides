@@ -752,3 +752,15 @@ echo "Timestamp: $(date -u)" >> /evidence/acquisition_notes.txt
 echo "Running processes: $(ps aux | wc -l)" >> \
   /evidence/acquisition_notes.txt
 ```
+
+---
+
+## Imaging Methods
+
+![imaging_methods](svg/courses/security/linux-forensics/08_drive_data_acquisition/imaging_methods.svg)
+
+---
+
+## Network Acquisition
+
+![network_acquisition](svg/courses/security/linux-forensics/08_drive_data_acquisition/network_acquisition.svg)

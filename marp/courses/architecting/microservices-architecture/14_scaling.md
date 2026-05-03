@@ -20,6 +20,11 @@ audience:
 - Tech: pick the right tool per service
 
 ---
+## Scaling Axes
+
+![scaling_axes](svg/courses/architecting/microservices-architecture/14_scaling/scaling_axes.svg)
+
+---
 ## Horizontal vs Vertical
 
 - **Horizontal**: more instances of the same service

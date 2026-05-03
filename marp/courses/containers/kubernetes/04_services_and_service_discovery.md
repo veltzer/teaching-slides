@@ -89,6 +89,11 @@ spec:
 - CoreDNS provides; configurable
 
 ---
+## Discovery Plumbing
+
+![dns_and_endpoints](svg/courses/containers/kubernetes/04_services_and_service_discovery/dns_and_endpoints.svg)
+
+---
 ## Pod-To-Service
 
 - Pod queries DNS for service name

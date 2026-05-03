@@ -81,6 +81,11 @@ audience:
 - Across services: each subscribes to the events it cares about
 
 ---
+## Saga Coordination Patterns
+
+![saga_patterns](svg/courses/architecting/microservices-architecture/07_data_management/saga_patterns.svg)
+
+---
 ## Outbox Pattern
 
 - A service writes its state and an event in the same database transaction

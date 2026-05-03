@@ -21,6 +21,24 @@ audience:
 
 ---
 
+## Dependency Sourcing Options
+
+![dependency_options](svg/courses/build_systems/cmake/04_importing_dependencies/dependency_options.svg)
+
+---
+
+## find package Modes
+
+![find_package_modes](svg/courses/build_systems/cmake/04_importing_dependencies/find_package_modes.svg)
+
+---
+
+## Dependency Strategies
+
+![dependency_strategies](svg/courses/build_systems/cmake/04_importing_dependencies/dependency_strategies.svg)
+
+---
+
 ## Chapter Overview
 
 - Why dependency management matters

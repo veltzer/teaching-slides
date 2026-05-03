@@ -602,3 +602,15 @@ echo "$ANSIBLE_VAULT_PASSWORD"
 1. Implement a rolling deployment with health checks
 1. Add Slack notifications for deploy results
 1. Practice blue/green switching
+
+---
+
+## Secrets in Pipelines
+
+![secrets_in_pipelines](svg/courses/devops/ansible/16_cicd_integration/secrets_in_pipelines.svg)
+
+---
+
+## Pipeline Stages
+
+![pipeline_stages](svg/courses/devops/ansible/16_cicd_integration/pipeline_stages.svg)

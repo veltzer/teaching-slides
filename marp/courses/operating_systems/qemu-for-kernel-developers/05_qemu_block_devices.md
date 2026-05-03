@@ -14,6 +14,18 @@ audience:
 
 ---
 
+## Disk Image Formats
+
+![disk_formats](svg/courses/operating_systems/qemu-for-kernel-developers/05_qemu_block_devices/disk_formats.svg)
+
+---
+
+## Virtual Storage Interfaces
+
+![storage_interfaces](svg/courses/operating_systems/qemu-for-kernel-developers/05_qemu_block_devices/storage_interfaces.svg)
+
+---
+
 Chapter Overview
 - Virtual block devices in QEMU
 - Implementing and testing file system drivers

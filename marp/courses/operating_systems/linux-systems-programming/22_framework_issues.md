@@ -14,6 +14,12 @@ audience:
 
 ---
 
+## Framework Design Concerns
+
+![framework_concerns](svg/courses/operating_systems/linux-systems-programming/22_framework_issues/framework_concerns.svg)
+
+---
+
 ## Overview
 
 1. **Namespaces** - Process isolation and virtualization

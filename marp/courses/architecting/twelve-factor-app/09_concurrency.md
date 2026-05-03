@@ -69,6 +69,11 @@ scheduler: python scheduler.py
 - Threads ≠ processes; the factor is about processes
 
 ---
+## Scaling By Process Type
+
+![scaling_axes](svg/courses/architecting/twelve-factor-app/09_concurrency/scaling_axes.svg)
+
+---
 ## Horizontal Scaling Patterns
 
 - Stateless processes (factor VI) make horizontal scaling work

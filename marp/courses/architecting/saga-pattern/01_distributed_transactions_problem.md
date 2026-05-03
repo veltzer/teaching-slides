@@ -72,6 +72,11 @@ audience:
 - **Vendor coupling**: requires participants that speak XA or similar
 
 ---
+## Two-Phase Commit Pain
+
+![two_pc_pain](svg/courses/architecting/saga-pattern/01_distributed_transactions_problem/two_pc_pain.svg)
+
+---
 ## The 2PC Tradeoff
 
 - 2PC trades availability for consistency

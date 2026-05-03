@@ -43,6 +43,11 @@ audience:
 ![bisect_search](svg/courses/git/advanced-git/03_bisect/bisect_search.svg)
 
 ---
+## Bisect Workflow Visualised
+
+![bisect_workflow](svg/courses/git/advanced-git/03_bisect/bisect_workflow.svg)
+
+---
 ## Starting a Manual Bisect
 
 ```bash
@@ -102,6 +107,11 @@ git bisect run ./test_for_bug.sh
 - Exit 1-124 or 126-127 — bad
 - Exit 125 — skip this commit
 - Exit 128+ — abort the bisect
+
+---
+## Automated Bisect Visualised
+
+![bisect_automation](svg/courses/git/advanced-git/03_bisect/bisect_automation.svg)
 
 ---
 ## Writing a Bisect Script

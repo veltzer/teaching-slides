@@ -11,6 +11,12 @@ audience:
 # Review Process Design
 
 ---
+
+## Process Design Options
+
+![process_options](svg/courses/development_methodologies/code-review-best-practices/03_review_process_design/process_options.svg)
+
+---
 ## What This Chapter Covers
 
 - When to request a review

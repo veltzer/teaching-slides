@@ -114,6 +114,11 @@ audience:
 - A good dashboard mixes both
 
 ---
+## Two Indicator Families
+
+![lagging_vs_leading](svg/courses/data_driven/data-analytics-for-managers/03_frameworks_for_thinking_about_data_analysis/lagging_vs_leading.svg)
+
+---
 ## OKRs and Metrics
 
 - Objectives and Key Results: a goal-setting framework

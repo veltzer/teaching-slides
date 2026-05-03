@@ -45,6 +45,11 @@ audience:
 - Pair with rate limiting per key
 
 ---
+## Auth Schemes Compared
+
+![auth_models](svg/courses/architecting/api-gateway-patterns/07_authentication_and_authorization/auth_models.svg)
+
+---
 ## JWT (JSON Web Tokens)
 
 - Self-contained; signed

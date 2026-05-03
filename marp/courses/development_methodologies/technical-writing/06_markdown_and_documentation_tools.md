@@ -11,6 +11,12 @@ audience:
 # Markdown and Documentation Tools
 
 ---
+
+## Markdown Features
+
+![markdown_features](svg/courses/development_methodologies/technical-writing/06_markdown_and_documentation_tools/markdown_features.svg)
+
+---
 ## What This Chapter Covers
 
 - Markdown syntax basics and extensions

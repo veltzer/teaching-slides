@@ -1047,3 +1047,9 @@ int main() {
     return 0;
 }
 ```
+
+---
+
+## Manipulators and Formatting
+
+![manipulators_and_formatting](svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/manipulators_and_formatting.svg)

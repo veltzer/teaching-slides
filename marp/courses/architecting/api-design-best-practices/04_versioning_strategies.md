@@ -17,6 +17,11 @@ audience:
 ![versioning](svg/courses/architecting/api-design-best-practices/04_versioning_strategies/versioning.svg)
 
 ---
+## Versioning Options
+
+![versioning_options](svg/courses/architecting/api-design-best-practices/04_versioning_strategies/versioning_options.svg)
+
+---
 ## Why Version
 
 - APIs change; consumers depend on specific behavior
@@ -47,6 +52,11 @@ audience:
 - Encourages major-version explosion if used carelessly
 - Migrating consumers means changing every URL they call
 - Real-world: most APIs accept the trade-off
+
+---
+## Versioning Style Comparison
+
+![versioning_styles](svg/courses/architecting/api-design-best-practices/04_versioning_strategies/versioning_styles.svg)
 
 ---
 ## Header-Based Versioning
@@ -110,6 +120,11 @@ audience:
 - Removing a parameter or making an optional one required
 - Changing the meaning of a status code
 - Changing default values that affect behavior
+
+---
+## Breaking Versus Additive
+
+![breaking_vs_additive](svg/courses/architecting/api-design-best-practices/04_versioning_strategies/breaking_vs_additive.svg)
 
 ---
 ## Choosing a Strategy

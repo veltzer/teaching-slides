@@ -15,6 +15,14 @@ audience:
 ---
 # Built-in Functions and Interpolation
 
+---
+
+## Expression Language Features
+
+![expression_features](svg/courses/devops/terraform/10_functions/expression_features.svg)
+
+---
+
 ## String Interpolation
 
 ```hcl

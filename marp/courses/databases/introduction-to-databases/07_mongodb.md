@@ -67,6 +67,11 @@ db.users.delete_one({"_id": 1})
 - Pick by query patterns
 
 ---
+## Modelling Choice
+
+![embed_vs_reference](svg/courses/databases/introduction-to-databases/07_mongodb/embed_vs_reference.svg)
+
+---
 ## Aggregation
 
 - Pipeline: $match, $group, $project, $lookup

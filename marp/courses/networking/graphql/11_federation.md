@@ -27,6 +27,11 @@ audience:
 - Avoid monolith
 
 ---
+## Federation Topology
+
+![federation_topology](svg/courses/networking/graphql/11_federation/federation_topology.svg)
+
+---
 ## Subgraphs
 
 - Each service: a subgraph

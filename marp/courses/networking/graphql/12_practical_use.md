@@ -28,6 +28,11 @@ audience:
 - Frontend-driven shapes
 
 ---
+## Adoption Path
+
+![adoption_path](svg/courses/networking/graphql/12_practical_use/adoption_path.svg)
+
+---
 ## When Not To
 
 - Public read-only API: REST + CDN simpler

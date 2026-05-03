@@ -22,6 +22,11 @@ audience:
 - Chaos engineering
 
 ---
+## Failure Catalogue
+
+![failure_catalogue](svg/courses/architecting/distributed-systems-fundamentals/10_failure_modes/failure_catalogue.svg)
+
+---
 ## Catalogue of Failures
 
 - Node crashes

@@ -640,3 +640,15 @@ build-info:
 1. **Initialization** happens before main()
 1. **Analysis tools** find issues early
 1. **Build system** affects final binary
+
+---
+
+## Cross Compilation Basics
+
+![cross_compilation_basics](svg/courses/embedded/effective-real-time-embedded-c-and-c++/07_toolchain/cross_compilation_basics.svg)
+
+---
+
+## Linker Scripts
+
+![linker_scripts](svg/courses/embedded/effective-real-time-embedded-c-and-c++/07_toolchain/linker_scripts.svg)

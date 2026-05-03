@@ -34,6 +34,11 @@ audience:
 ![deadlines](svg/courses/networking/grpc/04_metadata_errors_deadlines/deadlines.svg)
 
 ---
+## Metadata Flow
+
+![metadata_flow](svg/courses/networking/grpc/04_metadata_errors_deadlines/metadata_flow.svg)
+
+---
 ## Initial vs Trailing Metadata
 
 - Initial metadata — sent before the response body

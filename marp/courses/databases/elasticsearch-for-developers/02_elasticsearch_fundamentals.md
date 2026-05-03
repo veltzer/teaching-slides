@@ -10,6 +10,12 @@ audience:
 # Elasticsearch Fundamentals
 
 ---
+
+## Cluster Anatomy
+
+![cluster_anatomy](svg/courses/databases/elasticsearch-for-developers/02_elasticsearch_fundamentals/cluster_anatomy.svg)
+
+---
 ## What This Chapter Covers
 
 - Cluster, node, index, shard

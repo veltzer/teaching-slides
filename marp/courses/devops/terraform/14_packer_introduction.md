@@ -15,6 +15,14 @@ audience:
 ---
 # Introduction to Packer
 
+---
+
+## Packer Core Concepts
+
+![packer_concepts](svg/courses/devops/terraform/14_packer_introduction/packer_concepts.svg)
+
+---
+
 ## What is Packer?
 
 - Open-source tool by HashiCorp for building machine images

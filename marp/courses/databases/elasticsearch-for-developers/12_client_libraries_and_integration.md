@@ -10,6 +10,12 @@ audience:
 # Client Libraries and Integration
 
 ---
+
+## Client Library Options
+
+![client_options](svg/courses/databases/elasticsearch-for-developers/12_client_libraries_and_integration/client_options.svg)
+
+---
 ## What This Chapter Covers
 
 - Official clients

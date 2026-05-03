@@ -57,6 +57,11 @@ mongodb+srv://user:pass@cluster.mongodb.net/db
 - Easier to maintain across cluster changes
 
 ---
+## Driver Connection Lifecycle
+
+![driver_lifecycle](svg/courses/databases/mongodb-for-developers/04_mongodb_drivers_and_connections/driver_lifecycle.svg)
+
+---
 ## Connection Pool
 
 - Driver maintains a pool of TCP connections

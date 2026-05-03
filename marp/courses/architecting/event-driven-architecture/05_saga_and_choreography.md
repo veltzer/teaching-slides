@@ -39,9 +39,19 @@ audience:
 - Eventual consistency by design
 
 ---
+## Saga Coordination Styles
+
+![saga_styles](svg/courses/architecting/event-driven-architecture/05_saga_and_choreography/saga_styles.svg)
+
+---
 ## Saga Visualized
 
 ![saga_overview](svg/courses/architecting/event-driven-architecture/05_saga_and_choreography/saga_overview.svg)
+
+---
+## Orchestration Versus Choreography
+
+![orchestration_vs_choreography](svg/courses/architecting/event-driven-architecture/05_saga_and_choreography/orchestration_vs_choreography.svg)
 
 ---
 ## Two Approaches

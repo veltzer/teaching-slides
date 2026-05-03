@@ -101,6 +101,11 @@ audience:
 - ObjectId: the default _id type
 
 ---
+## Document Versus Relational
+
+![document_vs_relational](svg/courses/databases/mongodb-for-developers/01_introduction_to_mongodb_for_developers/document_vs_relational.svg)
+
+---
 ## SQL Comparison
 
 - Database = Database

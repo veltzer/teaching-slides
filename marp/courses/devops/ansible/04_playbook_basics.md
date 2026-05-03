@@ -806,3 +806,15 @@ ansible-playbook site.yml --list-tags
 - Tags allow selective execution of tasks
 - Blocks group tasks and enable error handling
 - Handlers run only when notified and deduplicate
+
+---
+
+## Play Handlers and Notify
+
+![play_handlers_and_notify](svg/courses/devops/ansible/04_playbook_basics/play_handlers_and_notify.svg)
+
+---
+
+## Play Targeting Patterns
+
+![play_targeting_patterns](svg/courses/devops/ansible/04_playbook_basics/play_targeting_patterns.svg)

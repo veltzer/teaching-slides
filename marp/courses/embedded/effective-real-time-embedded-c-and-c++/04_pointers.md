@@ -535,3 +535,15 @@ void safe_copy(char* dest, size_t dest_size,
 1. **Generic programming** via void pointers
 1. **Performance** gains through pointer optimization
 1. **Safety** through defensive programming
+
+---
+
+## Dangling Pointers
+
+![dangling_pointers](svg/courses/embedded/effective-real-time-embedded-c-and-c++/04_pointers/dangling_pointers.svg)
+
+---
+
+## Pointer to Function
+
+![pointer_to_function](svg/courses/embedded/effective-real-time-embedded-c-and-c++/04_pointers/pointer_to_function.svg)

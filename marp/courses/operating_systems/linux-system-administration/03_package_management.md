@@ -1198,3 +1198,21 @@ dpkg -s nginx &>/dev/null || apt-get install -y nginx
 ```
 
 Use `apt-get` instead of `apt` in scripts for stable, machine-readable output.
+
+---
+
+## Package Managers Compared
+
+![package_managers_compared](svg/courses/operating_systems/linux-system-administration/03_package_management/package_managers_compared.svg)
+
+---
+
+## Repository Management
+
+![repository_management](svg/courses/operating_systems/linux-system-administration/03_package_management/repository_management.svg)
+
+---
+
+## Dependency Resolution
+
+![dependency_resolution](svg/courses/operating_systems/linux-system-administration/03_package_management/dependency_resolution.svg)

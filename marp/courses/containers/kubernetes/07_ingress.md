@@ -147,6 +147,11 @@ spec:
 - Adoption growing
 
 ---
+## Two Routing APIs
+
+![ingress_vs_gateway](svg/courses/containers/kubernetes/07_ingress/ingress_vs_gateway.svg)
+
+---
 ## When To Use Gateway API
 
 - Need TCP / UDP routing

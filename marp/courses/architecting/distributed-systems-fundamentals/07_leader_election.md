@@ -35,6 +35,11 @@ audience:
 ![election_methods](svg/courses/architecting/distributed-systems-fundamentals/07_leader_election/election_methods.svg)
 
 ---
+## Handling Leader Failure
+
+![leader_failure](svg/courses/architecting/distributed-systems-fundamentals/07_leader_election/leader_failure.svg)
+
+---
 ## When You Need One
 
 - Replication: leader takes writes; followers copy

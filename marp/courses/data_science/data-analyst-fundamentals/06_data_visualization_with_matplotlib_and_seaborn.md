@@ -35,6 +35,11 @@ audience:
 ![chart_choices](svg/courses/data_science/data-analyst-fundamentals/06_data_visualization_with_matplotlib_and_seaborn/chart_choices.svg)
 
 ---
+## Chart Decision Guide
+
+![chart_decisions](svg/courses/data_science/data-analyst-fundamentals/06_data_visualization_with_matplotlib_and_seaborn/chart_decisions.svg)
+
+---
 ## Common Chart Types
 
 - **Bar / column**: compare categories

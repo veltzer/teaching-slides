@@ -35,6 +35,11 @@ audience:
 ![abstraction_levels](svg/courses/principles/object-oriented-programming/06_abstraction/abstraction_levels.svg)
 
 ---
+## Interface Versus Abstract Class
+
+![interface_versus_class](svg/courses/principles/object-oriented-programming/06_abstraction/interface_versus_class.svg)
+
+---
 ## Abstract Classes
 
 - A class that *cannot* be instantiated directly

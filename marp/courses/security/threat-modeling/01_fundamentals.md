@@ -39,6 +39,16 @@ audience:
 - These four frame every methodology — STRIDE, PASTA, etc
 
 ---
+## The Four Questions Visualized
+
+![threat_questions](svg/courses/security/threat-modeling/01_fundamentals/threat_questions.svg)
+
+---
+## Four Questions Visualised
+
+![four_questions](svg/courses/security/threat-modeling/01_fundamentals/four_questions.svg)
+
+---
 ## Why It Matters
 
 - Security bugs found in design are 10x cheaper than in code
@@ -87,6 +97,11 @@ audience:
 - Insider — already inside, hard to detect
 - Nation-state — well-resourced, patient, targeted
 - Different profiles target different assets
+
+---
+## Attacker Profile Comparison
+
+![attacker_profiles](svg/courses/security/threat-modeling/01_fundamentals/attacker_profiles.svg)
 
 ---
 ## Threat Actor Considerations

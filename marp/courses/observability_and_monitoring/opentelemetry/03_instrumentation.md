@@ -32,6 +32,11 @@ audience:
 - Fast onboarding
 
 ---
+## Three Ways Side By Side
+
+![instrumentation_three_ways](svg/courses/observability_and_monitoring/opentelemetry/03_instrumentation/three_ways.svg)
+
+---
 ## Manual Instrumentation
 
 - Explicit span creation

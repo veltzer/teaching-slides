@@ -62,6 +62,11 @@ audience:
 - Use them for what they mean
 
 ---
+## HTTP Method Semantics
+
+![http_methods](svg/courses/architecting/api-design-best-practices/02_rest_api_design/http_methods.svg)
+
+---
 ## Method Semantics in Practice
 
 - `GET /users/42` — fetch user 42
@@ -77,6 +82,11 @@ audience:
 - **3xx redirection**: 301 Moved, 304 Not Modified
 - **4xx client error**: 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 409 Conflict, 422 Unprocessable Content, 429 Too Many Requests
 - **5xx server error**: 500 Internal Error, 502 Bad Gateway, 503 Service Unavailable
+
+---
+## Status Code Buckets
+
+![status_code_buckets](svg/courses/architecting/api-design-best-practices/02_rest_api_design/status_code_buckets.svg)
 
 ---
 ## Status Code Discipline

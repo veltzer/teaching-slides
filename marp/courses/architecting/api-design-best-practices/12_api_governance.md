@@ -28,6 +28,11 @@ audience:
 - The cost is invisible until it isn't
 
 ---
+## Governance Pillars
+
+![governance_pillars](svg/courses/architecting/api-design-best-practices/12_api_governance/governance_pillars.svg)
+
+---
 ## API Design Guidelines
 
 - A document that specifies the standards

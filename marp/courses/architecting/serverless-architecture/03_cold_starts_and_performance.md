@@ -71,6 +71,11 @@ audience:
 - Configure: per-function, per-region
 
 ---
+## Mitigation Toolbox
+
+![cold_start_mitigations](svg/courses/architecting/serverless-architecture/03_cold_starts_and_performance/cold_start_mitigations.svg)
+
+---
 ## Smaller Runtimes
 
 - Less code = faster init

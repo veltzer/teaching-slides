@@ -36,6 +36,11 @@ audience:
 ![rt_logging](svg/courses/real_time/real-time-programming/09_real_time_and_logging/rt_logging.svg)
 
 ---
+## Log Pipelines
+
+![log_pipelines](svg/courses/real_time/real-time-programming/09_real_time_and_logging/log_pipelines.svg)
+
+---
 ## What printf Does
 
 - Parses the format string

@@ -467,3 +467,9 @@ keyed_groups:
 1. Enable caching and test cache behavior
 1. Combine with a static inventory file
 1. Run a playbook against dynamically discovered hosts
+
+---
+
+## Cloud Provider Plugins
+
+![cloud_provider_plugins](svg/courses/devops/ansible/11_dynamic_inventory/cloud_provider_plugins.svg)

@@ -40,6 +40,11 @@ audience:
 ![grpc_web](svg/courses/networking/grpc/07_grpc_web_gateway_testing/grpc_web.svg)
 
 ---
+## Testing Strategies
+
+![testing_strategies](svg/courses/networking/grpc/07_grpc_web_gateway_testing/testing_strategies.svg)
+
+---
 ## gRPC-Web Protocol
 
 - HTTP/1.1 or HTTP/2 between browser and proxy

@@ -44,6 +44,11 @@ audience:
 ![eda_overview](svg/courses/architecting/event-driven-architecture/01_eda_fundamentals/eda_overview.svg)
 
 ---
+## Kinds Of Events
+
+![event_types](svg/courses/architecting/event-driven-architecture/01_eda_fundamentals/event_types.svg)
+
+---
 ## Events vs Commands
 
 - Event: "OrderPlaced" — a fact, possibly with many listeners

@@ -113,6 +113,11 @@ audience:
 - Schema registries enforce compatibility
 
 ---
+## Async Messaging Patterns
+
+![messaging_patterns](svg/courses/architecting/microservices-architecture/05_communication/messaging_patterns.svg)
+
+---
 ## Choosing a Broker
 
 - Kafka: durable log; many consumers; high throughput; complex to operate

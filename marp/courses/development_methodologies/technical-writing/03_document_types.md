@@ -10,6 +10,12 @@ audience:
 # Document Types
 
 ---
+
+## Document Categories
+
+![document_categories](svg/courses/development_methodologies/technical-writing/03_document_types/document_categories.svg)
+
+---
 ## What This Chapter Covers
 
 - READMEs

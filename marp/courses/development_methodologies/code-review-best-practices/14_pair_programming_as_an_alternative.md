@@ -11,6 +11,12 @@ audience:
 # Pair Programming as an Alternative
 
 ---
+
+## Pair Programming Styles
+
+![pair_styles](svg/courses/development_methodologies/code-review-best-practices/14_pair_programming_as_an_alternative/pair_styles.svg)
+
+---
 ## What This Chapter Covers
 
 - What pair programming is

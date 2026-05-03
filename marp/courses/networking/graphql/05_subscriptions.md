@@ -15,6 +15,11 @@ audience:
 ![subscriptions](svg/courses/networking/graphql/05_subscriptions/subscriptions.svg)
 
 ---
+## Transport Choices
+
+![transport_choices](svg/courses/networking/graphql/05_subscriptions/transport_choices.svg)
+
+---
 ## What This Chapter Covers
 
 - What subscriptions are

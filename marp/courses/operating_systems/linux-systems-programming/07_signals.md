@@ -14,6 +14,12 @@ audience:
 
 ---
 
+## Signal Categories
+
+![signal_categories](svg/courses/operating_systems/linux-systems-programming/07_signals/signal_categories.svg)
+
+---
+
 ## Chapter Overview
 
 1. **Why Signals?**

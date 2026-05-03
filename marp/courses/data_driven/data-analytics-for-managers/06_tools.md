@@ -152,6 +152,11 @@ audience:
 - Exit cost: how hard is it to migrate off?
 
 ---
+## Buying Lenses
+
+![buying_framework](svg/courses/data_driven/data-analytics-for-managers/06_tools/buying_framework.svg)
+
+---
 ## Tool Sprawl
 
 - Most companies end up with 5-10 analytics tools

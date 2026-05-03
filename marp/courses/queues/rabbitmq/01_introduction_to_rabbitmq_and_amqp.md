@@ -35,6 +35,11 @@ audience:
 ![amqp_model](svg/courses/queues/rabbitmq/01_introduction_to_rabbitmq_and_amqp/amqp_model.svg)
 
 ---
+## Connection Lifecycle
+
+![connection_lifecycle](svg/courses/queues/rabbitmq/01_introduction_to_rabbitmq_and_amqp/connection_lifecycle.svg)
+
+---
 ## Why Use a Broker
 
 - Asynchronous processing (web request returns fast; work happens later)

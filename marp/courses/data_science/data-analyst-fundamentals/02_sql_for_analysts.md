@@ -86,6 +86,11 @@ WHERE o.status = 'completed';
 - Pick by which side's missing data matters
 
 ---
+## Join Type Comparison
+
+![join_types](svg/courses/data_science/data-analyst-fundamentals/02_sql_for_analysts/join_types.svg)
+
+---
 ## When To Use Which JOIN
 
 - Customers with orders (only matched) &#8594; INNER
@@ -152,6 +157,11 @@ FROM orders;
 - Useful for: rank within group, running totals, moving averages
 - `PARTITION BY` defines the group; `ORDER BY` defines the sequence
 - The analyst's secret weapon — learn these well
+
+---
+## Window Function Patterns
+
+![window_functions](svg/courses/data_science/data-analyst-fundamentals/02_sql_for_analysts/window_functions.svg)
 
 ---
 ## Useful Window Functions

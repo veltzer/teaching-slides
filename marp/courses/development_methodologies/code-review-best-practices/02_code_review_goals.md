@@ -10,6 +10,12 @@ audience:
 # Code Review Goals
 
 ---
+
+## Goal Dimensions
+
+![goal_dimensions](svg/courses/development_methodologies/code-review-best-practices/02_code_review_goals/goal_dimensions.svg)
+
+---
 ## What This Chapter Covers
 
 - The goals of a code review

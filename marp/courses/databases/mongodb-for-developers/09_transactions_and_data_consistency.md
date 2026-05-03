@@ -70,6 +70,11 @@ with client.start_session() as session:
 - "Convenient" but unnecessary
 
 ---
+## Consistency Choices
+
+![consistency_choices](svg/courses/databases/mongodb-for-developers/09_transactions_and_data_consistency/consistency_choices.svg)
+
+---
 ## Read Concerns
 
 - `local`: latest data on this server (default)

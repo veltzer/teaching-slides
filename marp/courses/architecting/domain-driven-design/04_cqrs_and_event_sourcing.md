@@ -47,6 +47,11 @@ audience:
 - Events are the source of truth
 
 ---
+## ES End to End
+
+![event_sourcing_flow](svg/courses/architecting/domain-driven-design/04_cqrs_and_event_sourcing/event_sourcing_flow.svg)
+
+---
 ## CQRS Without ES
 
 - Possible: write model in a normal database, read models updated separately

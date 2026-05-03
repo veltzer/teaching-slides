@@ -25,6 +25,11 @@ audience:
 ![crud_methods](svg/courses/databases/mongodb-for-developers/05_crud_operations_in_applications/crud_methods.svg)
 
 ---
+## CRUD Choosing The Right Call
+
+![crud_decision](svg/courses/databases/mongodb-for-developers/05_crud_operations_in_applications/crud_decision.svg)
+
+---
 ## Insert
 
 ```python
@@ -135,6 +140,11 @@ db.users.bulk_write([
 - One round trip
 - Massive speedup
 - Error handling per op
+
+---
+## Bulk Write Strategy
+
+![bulk_write_strategy](svg/courses/databases/mongodb-for-developers/05_crud_operations_in_applications/bulk_write_strategy.svg)
 
 ---
 ## Cursors

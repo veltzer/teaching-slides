@@ -43,6 +43,11 @@ audience:
 - Implementing them is mandatory in 2026
 
 ---
+## Defence Layers
+
+![policy_layers](svg/courses/security/kubernetes-security/03_network_policies/policy_layers.svg)
+
+---
 ## Network Topology Visualized
 
 ![network_default](svg/courses/security/kubernetes-security/03_network_policies/network_default.svg)

@@ -35,6 +35,16 @@ audience:
 - The skill of catching data issues separates senior from junior analysts
 
 ---
+## Data Quality Dimensions
+
+![data_quality_dimensions](svg/courses/data_science/data-analyst-fundamentals/03_data_cleaning/data_quality_dimensions.svg)
+
+---
+## Cleaning Pillars
+
+![cleaning_pillars](svg/courses/data_science/data-analyst-fundamentals/03_data_cleaning/cleaning_pillars.svg)
+
+---
 ## Common Quality Issues
 
 - **Missing values**: NULL, empty string, "N/A", 0 (often wrong)

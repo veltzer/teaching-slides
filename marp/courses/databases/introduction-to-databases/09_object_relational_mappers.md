@@ -83,6 +83,11 @@ audience:
 - ORMs hide this; you must catch it
 
 ---
+## Cause and Cure
+
+![n_plus_one_problem](svg/courses/databases/introduction-to-databases/09_object_relational_mappers/n_plus_one.svg)
+
+---
 ## Eager Loading
 
 - Pre-fetch related objects

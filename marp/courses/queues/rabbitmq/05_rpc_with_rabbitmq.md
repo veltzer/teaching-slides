@@ -35,6 +35,11 @@ audience:
 ![rpc_pattern](svg/courses/queues/rabbitmq/05_rpc_with_rabbitmq/rpc_pattern.svg)
 
 ---
+## Correlation Identifier Pattern
+
+![correlation_id](svg/courses/queues/rabbitmq/05_rpc_with_rabbitmq/correlation_id.svg)
+
+---
 ## Why Use RabbitMQ For RPC
 
 - The broker handles routing

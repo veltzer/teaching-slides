@@ -12,6 +12,12 @@ audience:
 # Review Metrics
 
 ---
+
+## Useful Review Metrics
+
+![useful_metrics](svg/courses/development_methodologies/code-review-best-practices/11_review_metrics/useful_metrics.svg)
+
+---
 ## What This Chapter Covers
 
 - Why measure review work

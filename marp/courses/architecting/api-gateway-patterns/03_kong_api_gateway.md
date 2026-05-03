@@ -31,6 +31,11 @@ audience:
 - The most-deployed gateway in the open-source world
 
 ---
+## Kong Pieces
+
+![kong_pieces](svg/courses/architecting/api-gateway-patterns/03_kong_api_gateway/kong_pieces.svg)
+
+---
 ## Architecture
 
 - nginx for HTTP handling
@@ -64,6 +69,11 @@ services:
 - Service: an upstream (your real service)
 - Route: a URL pattern that maps to a service
 - One service can have many routes
+
+---
+## Object Model
+
+![kong_concepts](svg/courses/architecting/api-gateway-patterns/03_kong_api_gateway/kong_concepts.svg)
 
 ---
 ## Plugins

@@ -87,6 +87,11 @@ audience:
 - TCP fallback adds latency on miss
 
 ---
+## DNS Record Types
+
+![dns_record_types](svg/courses/networking/tcp-ip-deep-dive/06_udp_dns/dns_record_types.svg)
+
+---
 ## DHCP
 
 - Dynamic Host Configuration Protocol

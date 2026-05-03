@@ -145,6 +145,11 @@ audience:
 - Dependency confusion in package supply chain
 
 ---
+## Web Application Threat Surface
+
+![web_app_threats](svg/courses/security/threat-modeling/07_threat_modeling_in_practice/web_app_threats.svg)
+
+---
 ## REST API Threat Surface
 
 - Authentication on every endpoint, not just login

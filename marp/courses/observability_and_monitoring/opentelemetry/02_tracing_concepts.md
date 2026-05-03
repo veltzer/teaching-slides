@@ -40,6 +40,11 @@ audience:
 - Building block of traces
 
 ---
+## What Lives Inside a Span
+
+![span_anatomy](svg/courses/observability_and_monitoring/opentelemetry/02_tracing_concepts/span_anatomy.svg)
+
+---
 ## Trace
 
 - Tree of spans

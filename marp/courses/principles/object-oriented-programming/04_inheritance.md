@@ -35,6 +35,11 @@ audience:
 ![inheritance_kinds](svg/courses/principles/object-oriented-programming/04_inheritance/inheritance_kinds.svg)
 
 ---
+## Liskov Substitution
+
+![liskov_principle](svg/courses/principles/object-oriented-programming/04_inheritance/liskov_principle.svg)
+
+---
 ## A First Example
 
 ```java

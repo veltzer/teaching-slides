@@ -1158,3 +1158,15 @@ Bad& operator=(const Bad& other) {
 1. **Smart pointers** manage ownership
 1. **noexcept** enables optimizations
 1. **Test** resource management thoroughly
+
+---
+
+## Smart Pointer Types
+
+![smart_pointer_types](svg/courses/embedded/effective-real-time-embedded-c-and-c++/15_resource_management/smart_pointer_types.svg)
+
+---
+
+## Move Semantics
+
+![move_semantics](svg/courses/embedded/effective-real-time-embedded-c-and-c++/15_resource_management/move_semantics.svg)

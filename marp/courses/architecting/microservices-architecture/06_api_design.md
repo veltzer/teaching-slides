@@ -31,6 +31,11 @@ audience:
 ![api_styles](svg/courses/architecting/microservices-architecture/06_api_design/api_styles.svg)
 
 ---
+## API Style Comparison
+
+![api_styles_compared](svg/courses/architecting/microservices-architecture/06_api_design/api_styles_compared.svg)
+
+---
 ## Contract First
 
 - Write the API spec before the implementation

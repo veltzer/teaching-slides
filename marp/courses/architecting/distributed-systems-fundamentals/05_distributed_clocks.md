@@ -35,6 +35,11 @@ audience:
 ![clock_kinds](svg/courses/architecting/distributed-systems-fundamentals/05_distributed_clocks/clock_kinds.svg)
 
 ---
+## Lamport And Vector Clocks
+
+![lamport_clocks](svg/courses/architecting/distributed-systems-fundamentals/05_distributed_clocks/lamport_clocks.svg)
+
+---
 ## Wall Clocks
 
 - Each machine has its own clock

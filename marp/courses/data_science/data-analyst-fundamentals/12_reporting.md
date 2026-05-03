@@ -35,6 +35,11 @@ audience:
 ![report_structure](svg/courses/data_science/data-analyst-fundamentals/12_reporting/report_structure.svg)
 
 ---
+## Reporting Audiences
+
+![report_audiences](svg/courses/data_science/data-analyst-fundamentals/12_reporting/report_audiences.svg)
+
+---
 ## What a Report Is For
 
 - A document that *triggers* a decision or *records* one

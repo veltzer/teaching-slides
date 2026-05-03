@@ -83,6 +83,11 @@ git log feature@{2.weeks.ago}..feature
 - Times are local-only — the reflog you query is your local one
 
 ---
+## Reflog Recovery Scenarios
+
+![reflog_uses](svg/courses/git/advanced-git/07_reflog/reflog_uses.svg)
+
+---
 ## Recovering a Lost Commit
 
 ```bash

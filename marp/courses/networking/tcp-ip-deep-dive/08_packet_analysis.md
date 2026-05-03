@@ -158,6 +158,11 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Each layer up only when the lower one is OK
 
 ---
+## A Workflow Loop
+
+![troubleshooting_workflow](svg/courses/networking/tcp-ip-deep-dive/08_packet_analysis/troubleshooting_workflow.svg)
+
+---
 ## Capture Strategy
 
 - Both ends if possible

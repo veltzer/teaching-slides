@@ -246,3 +246,15 @@ When man pages are not enough, use these trusted sources:
     - `kernel.org/doc` for kernel docs
     - `systemd.io` for `systemd` docs
     - `man7.org` for comprehensive man pages online
+
+---
+
+## Sysadmin Responsibilities
+
+![sysadmin_responsibilities](svg/courses/operating_systems/linux-system-administration/01_introduction/sysadmin_responsibilities.svg)
+
+---
+
+## Why Linux for Servers
+
+![why_linux_for_servers](svg/courses/operating_systems/linux-system-administration/01_introduction/why_linux_for_servers.svg)

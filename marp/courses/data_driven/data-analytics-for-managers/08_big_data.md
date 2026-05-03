@@ -151,6 +151,11 @@ audience:
 - "Real-time" requirements are often "fresh enough" requirements
 
 ---
+## Architecture Choices
+
+![lambda_kappa_architectures](svg/courses/data_driven/data-analytics-for-managers/08_big_data/lambda_kappa.svg)
+
+---
 ## When Big Data Is Worth It
 
 - Genuine scale that makes regular DBs unworkable

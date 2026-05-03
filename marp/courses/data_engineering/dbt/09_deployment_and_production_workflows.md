@@ -162,3 +162,8 @@ my_project:
 - Documentation is a feature
 - Macros and packages for reusability
 - Production: CI / CD / scheduling / alerting
+
+---
+## CI/CD Pipeline Steps
+
+![cicd_steps](svg/courses/data_engineering/dbt/09_deployment_and_production_workflows/cicd_steps.svg)

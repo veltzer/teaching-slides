@@ -92,6 +92,11 @@ audience:
 - Don't use `email` — it can change or be reused
 
 ---
+## Claim Buckets
+
+![oidc_claim_buckets](svg/courses/networking/oauth2-and-oidc/06_oidc/oidc_claim_buckets.svg)
+
+---
 ## Standard Scopes
 
 - `openid` — required, asks for an ID token
@@ -133,6 +138,11 @@ audience:
 - Check `aud` matches your `client_id`
 - Check `exp` is in the future
 - Check `nonce` matches what you sent
+
+---
+## Validation Step Detail
+
+![oidc_validation_steps](svg/courses/networking/oauth2-and-oidc/06_oidc/oidc_validation_steps.svg)
 
 ---
 ## The Nonce Parameter

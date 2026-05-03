@@ -57,6 +57,11 @@ audience:
 - Each has trade-offs (covered in the saga course)
 
 ---
+## Two Saga Styles
+
+![choreography_vs_orchestration](svg/courses/architecting/domain-driven-design/05_saga_and_distributed_processes/choreography_vs_orchestration.svg)
+
+---
 ## When to Choreograph
 
 - Few steps, stable flow, autonomous teams

@@ -35,6 +35,16 @@ audience:
 ![record_types](svg/courses/networking/dns-deep-dive/02_record_types/record_types.svg)
 
 ---
+## CNAME And Aliases
+
+![cname_aname](svg/courses/networking/dns-deep-dive/02_record_types/cname_aname.svg)
+
+---
+## Specialised Records
+
+![special_records](svg/courses/networking/dns-deep-dive/02_record_types/special_records.svg)
+
+---
 ## CNAME
 
 - Canonical name — alias one domain to another

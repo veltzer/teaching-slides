@@ -77,6 +77,12 @@ audience:
 | IDE support | Excellent | Basic | Good | Good |
 
 ---
+## Build Tool Comparison
+
+![cmake_vs_others](svg/courses/build_systems/cmake/01_introduction/cmake_vs_others.svg)
+
+---
+
 ## The CMake Pipeline
 
 ![the_cmake_pipeline](svg/courses/build_systems/cmake/01_introduction/the_cmake_pipeline.svg)
@@ -134,6 +140,12 @@ my_project/
 - Source tree stays clean
 - Multiple build directories allowed (Debug, Release)
 - Never run `cmake .` in the source directory
+
+---
+
+## Out Of Source Build Wins
+
+![out_of_source_benefits](svg/courses/build_systems/cmake/01_introduction/out_of_source_benefits.svg)
 
 ---
 

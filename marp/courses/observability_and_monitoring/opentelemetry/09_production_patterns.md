@@ -41,6 +41,11 @@ audience:
 - Per-tenant policies
 
 ---
+## Strategy Trade-Offs
+
+![sampling_strategies](svg/courses/observability_and_monitoring/opentelemetry/09_production_patterns/sampling_strategies.svg)
+
+---
 ## Cost Drivers
 
 - Span volume

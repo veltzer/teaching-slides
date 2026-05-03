@@ -99,6 +99,16 @@ audience:
 - The crown-jewel threat — once achieved, everything else follows
 
 ---
+## STRIDE With Examples
+
+![stride_examples](svg/courses/security/threat-modeling/03_stride/stride_examples.svg)
+
+---
+## STRIDE Per Element Visualised
+
+![stride_per_element](svg/courses/security/threat-modeling/03_stride/stride_per_element.svg)
+
+---
 ## STRIDE Per Element
 
 - For each DFD element, ask: which of the STRIDE threats apply?

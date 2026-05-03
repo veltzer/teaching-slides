@@ -48,6 +48,11 @@ audience:
 - After the fact, it's an ongoing tax
 
 ---
+## Identity States
+
+![identity_resolution](svg/courses/data_driven/data-analytics-for-managers/02_collecting_data/identity_resolution.svg)
+
+---
 ## Outliers
 
 - Data has anomalies: bots, test accounts, system glitches

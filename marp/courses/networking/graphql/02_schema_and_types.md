@@ -32,6 +32,16 @@ audience:
 ![type_system](svg/courses/networking/graphql/02_schema_and_types/type_system.svg)
 
 ---
+## Scalars And Customs
+
+![scalar_types](svg/courses/networking/graphql/02_schema_and_types/scalar_types.svg)
+
+---
+## Type Kinds
+
+![type_kinds](svg/courses/networking/graphql/02_schema_and_types/type_kinds.svg)
+
+---
 ## Object Types
 
 ```graphql

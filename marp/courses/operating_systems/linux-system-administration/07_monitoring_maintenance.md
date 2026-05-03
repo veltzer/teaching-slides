@@ -1179,3 +1179,21 @@ systemctl enable --now node_exporter
 curl -s localhost:9100/metrics | head -20
 curl -s localhost:9090/api/v1/targets
 ```
+
+---
+
+## System Monitoring Tools
+
+![system_monitoring_tools](svg/courses/operating_systems/linux-system-administration/07_monitoring_maintenance/system_monitoring_tools.svg)
+
+---
+
+## Log Management
+
+![log_management](svg/courses/operating_systems/linux-system-administration/07_monitoring_maintenance/log_management.svg)
+
+---
+
+## Backup Strategies
+
+![backup_strategies](svg/courses/operating_systems/linux-system-administration/07_monitoring_maintenance/backup_strategies.svg)

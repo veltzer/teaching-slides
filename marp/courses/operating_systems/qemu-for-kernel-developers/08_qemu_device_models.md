@@ -14,6 +14,18 @@ audience:
 
 ---
 
+## Device Model Categories
+
+![device_categories](svg/courses/operating_systems/qemu-for-kernel-developers/08_qemu_device_models/device_categories.svg)
+
+---
+
+## Virtio Device Family
+
+![virtio_devices](svg/courses/operating_systems/qemu-for-kernel-developers/08_qemu_device_models/virtio_devices.svg)
+
+---
+
 Chapter Overview
 - Understanding QEMU device models
 - Implementing custom device models

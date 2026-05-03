@@ -84,6 +84,11 @@ audience:
 - Revocation is harder (covered later)
 
 ---
+## JWT Versus Opaque Comparison
+
+![jwt_vs_opaque](svg/courses/networking/oauth2-and-oidc/05_tokens/jwt_vs_opaque.svg)
+
+---
 ## Choosing Between Them
 
 - High volume, low latency → JWT
@@ -100,6 +105,11 @@ audience:
 - ID token: same as access typically
 - Match to your security and UX trade-offs
 - Shorter access + rotation refresh = strong default
+
+---
+## Token Storage Choices
+
+![storage_choices](svg/courses/networking/oauth2-and-oidc/05_tokens/storage_choices.svg)
 
 ---
 ## Storage: Server-Side Apps

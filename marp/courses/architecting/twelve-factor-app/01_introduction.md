@@ -51,6 +51,11 @@ audience:
 ![twelve_factors](svg/courses/architecting/twelve-factor-app/01_introduction/twelve_factors.svg)
 
 ---
+## Factors Grouped By Concern
+
+![factor_groupings](svg/courses/architecting/twelve-factor-app/01_introduction/factor_groupings.svg)
+
+---
 ## Twelve-Factor and Cloud-Native
 
 - "Cloud-native" was coined later but builds on the twelve factors

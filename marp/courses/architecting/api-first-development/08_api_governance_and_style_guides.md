@@ -185,3 +185,8 @@ rules:
 - Versioning carefully; documentation seriously
 - Governance keeps the surface coherent across teams
 - Done well: APIs become a competitive advantage
+
+---
+## Governance Coverage Areas
+
+![governance_areas](svg/courses/architecting/api-first-development/08_api_governance_and_style_guides/governance_areas.svg)

@@ -131,3 +131,8 @@ S3KeySensor(..., mode='reschedule')
 - Polling too frequently (wasted reads)
 - ExternalTaskSensor across non-aligned DAGs (deadlocks)
 - Sensors that should be event listeners
+
+---
+## Common Sensor Use Cases
+
+![sensor_use_cases](svg/courses/data_engineering/apache-airflow/04_sensors/sensor_use_cases.svg)

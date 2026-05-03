@@ -114,6 +114,11 @@ roleRef:
 - Reduces blast radius of compromise
 
 ---
+## Verb Resource Scope
+
+![least_privilege_rbac](svg/courses/security/kubernetes-security/04_admission_rbac/least_privilege_rbac.svg)
+
+---
 ## RBAC Anti-Patterns
 
 - Wildcard verbs (`*`)
@@ -148,6 +153,11 @@ roleRef:
 - ResourceQuota — enforces namespace quotas
 - LimitRanger — applies default limits
 - Many more; some defaulted on per cluster
+
+---
+## Admission Controller Kinds
+
+![admission_kinds](svg/courses/security/kubernetes-security/04_admission_rbac/admission_kinds.svg)
 
 ---
 ## Validating Admission Webhooks

@@ -48,6 +48,11 @@ docker run -d -p 27017:27017 -v mongo-data:/data/db mongo:7
 - Fine for development
 
 ---
+## Tooling Landscape
+
+![tooling_landscape](svg/courses/databases/mongodb-for-developers/02_development_tools_and_environment/tooling_landscape.svg)
+
+---
 ## mongosh
 
 - Modern shell (replaces legacy `mongo`)
@@ -81,6 +86,11 @@ mongodb+srv://user:pass@cluster.mongodb.net/dbname
 
 - `mongodb+srv`: DNS-based for Atlas
 - Options: timeouts, replicas, auth
+
+---
+## Connection String Anatomy
+
+![connection_string](svg/courses/databases/mongodb-for-developers/02_development_tools_and_environment/connection_string.svg)
 
 ---
 ## Database Users

@@ -63,6 +63,11 @@ audience:
 ![broker_architecture](svg/courses/architecting/event-driven-architecture/02_message_brokers/broker_architecture.svg)
 
 ---
+## Broker Feature Comparison
+
+![broker_features](svg/courses/architecting/event-driven-architecture/02_message_brokers/broker_features.svg)
+
+---
 ## Apache Kafka: The Big Idea
 
 - A distributed, persistent, replicated log

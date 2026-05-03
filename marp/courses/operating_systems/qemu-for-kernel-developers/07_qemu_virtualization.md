@@ -14,6 +14,18 @@ audience:
 
 ---
 
+## Virtualization Layers
+
+![virtualization_layers](svg/courses/operating_systems/qemu-for-kernel-developers/07_qemu_virtualization/virtualization_layers.svg)
+
+---
+
+## Acceleration Modes
+
+![virtualization_modes](svg/courses/operating_systems/qemu-for-kernel-developers/07_qemu_virtualization/virt_modes.svg)
+
+---
+
 Chapter Overview
 - KVM integration with QEMU
 - Performance optimization for virtualized environments

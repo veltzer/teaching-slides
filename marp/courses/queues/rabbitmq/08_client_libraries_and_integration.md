@@ -36,6 +36,11 @@ audience:
 ![client_libraries](svg/courses/queues/rabbitmq/08_client_libraries_and_integration/client_libraries.svg)
 
 ---
+## Library Choices
+
+![library_choices](svg/courses/queues/rabbitmq/08_client_libraries_and_integration/library_choices.svg)
+
+---
 ## Higher-Level Frameworks
 
 - **Spring AMQP** (Java): templated patterns, annotations

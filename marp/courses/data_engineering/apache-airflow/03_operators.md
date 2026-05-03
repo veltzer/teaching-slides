@@ -142,3 +142,8 @@ class MyOperator(BaseOperator):
 - Custom operators for one-off tasks
 - Forgetting templating
 - Not checking provider docs for existing operators
+
+---
+## Common Operator Examples
+
+![operator_examples](svg/courses/data_engineering/apache-airflow/03_operators/operator_examples.svg)

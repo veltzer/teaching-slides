@@ -16,6 +16,11 @@ audience:
 ![consistent_hashing](svg/courses/architecting/system-design/07_consistent_hashing/consistent_hashing.svg)
 
 ---
+## Virtual Nodes
+
+![virtual_nodes](svg/courses/architecting/system-design/07_consistent_hashing/virtual_nodes.svg)
+
+---
 ## What This Chapter Covers
 
 - The problem: rebalancing

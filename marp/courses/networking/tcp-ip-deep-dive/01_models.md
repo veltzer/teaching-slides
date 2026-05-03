@@ -51,6 +51,11 @@ audience:
 - Maps roughly to OSI
 
 ---
+## What Each Layer Does
+
+![layer_responsibilities](svg/courses/networking/tcp-ip-deep-dive/01_models/layer_responsibilities.svg)
+
+---
 ## Models Visualized
 
 ![models](svg/courses/networking/tcp-ip-deep-dive/01_models/models.svg)

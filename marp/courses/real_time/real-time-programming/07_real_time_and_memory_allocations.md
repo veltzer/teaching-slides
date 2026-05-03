@@ -37,6 +37,11 @@ audience:
 ![alloc_strategies](svg/courses/real_time/real-time-programming/07_real_time_and_memory_allocations/alloc_strategies.svg)
 
 ---
+## Pool Allocator
+
+![pool_allocator](svg/courses/real_time/real-time-programming/07_real_time_and_memory_allocations/pool_allocator.svg)
+
+---
 ## What malloc Does
 
 - Maintains free lists of memory chunks

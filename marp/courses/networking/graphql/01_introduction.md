@@ -32,6 +32,11 @@ audience:
 ![why_graphql](svg/courses/networking/graphql/01_introduction/why_graphql.svg)
 
 ---
+## Origins And Adoption
+
+![graphql_history](svg/courses/networking/graphql/01_introduction/graphql_history.svg)
+
+---
 ## Origin
 
 - Built at Facebook, 2012

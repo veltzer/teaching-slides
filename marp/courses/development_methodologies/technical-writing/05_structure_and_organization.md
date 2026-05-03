@@ -16,6 +16,12 @@ audience:
 ![inverted_pyramid](svg/courses/development_methodologies/technical-writing/05_structure_and_organization/inverted_pyramid.svg)
 
 ---
+
+## Document Structure Patterns
+
+![structure_patterns](svg/courses/development_methodologies/technical-writing/05_structure_and_organization/structure_patterns.svg)
+
+---
 ## What This Chapter Covers
 
 - Information architecture

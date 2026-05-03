@@ -763,3 +763,9 @@ public:
 1. **Type safety** prevents errors
 1. **RAII** manages resources automatically
 1. **Templates** enable reusable code
+
+---
+
+## C++ Features to Avoid
+
+![cpp_features_to_avoid](svg/courses/embedded/effective-real-time-embedded-c-and-c++/14_embedded_c++/cpp_features_to_avoid.svg)

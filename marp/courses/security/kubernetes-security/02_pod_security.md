@@ -34,6 +34,11 @@ audience:
 ![pss_levels](svg/courses/security/kubernetes-security/02_pod_security/pss_levels.svg)
 
 ---
+## Capabilities and Hardening
+
+![capabilities_overview](svg/courses/security/kubernetes-security/02_pod_security/capabilities_overview.svg)
+
+---
 ## Privileged
 
 - Anything goes
@@ -111,6 +116,11 @@ spec:
 - Container-level wins on conflict
 - Set defaults at pod, exceptions at container
 - Easier to audit consistent policies
+
+---
+## Key Fields
+
+![security_context_fields](svg/courses/security/kubernetes-security/02_pod_security/security_context_fields.svg)
 
 ---
 ## Running as Non-Root

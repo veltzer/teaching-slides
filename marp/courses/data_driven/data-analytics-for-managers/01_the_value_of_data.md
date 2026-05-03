@@ -124,6 +124,11 @@ audience:
 - Skipping levels rarely works
 
 ---
+## Maturity Climb
+
+![data_maturity_levels](svg/courses/data_driven/data-analytics-for-managers/01_the_value_of_data/maturity_levels.svg)
+
+---
 ## Who Owns the Decision?
 
 - Data without a decision-maker is shelfware

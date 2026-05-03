@@ -767,3 +767,15 @@ print(t.render(name='World'))
 - Avoid deeply nested variable structures when possible
 - Document required variables in role README or defaults
 - Use `ansible-lint` to catch template issues
+
+---
+
+## Jinja2 Template Basics
+
+![jinja2_template_basics](svg/courses/devops/ansible/05_variables_facts_templates/jinja2_template_basics.svg)
+
+---
+
+## Ansible Facts Overview
+
+![ansible_facts_overview](svg/courses/devops/ansible/05_variables_facts_templates/ansible_facts_overview.svg)

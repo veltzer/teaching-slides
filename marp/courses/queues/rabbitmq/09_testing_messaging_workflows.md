@@ -35,6 +35,11 @@ audience:
 ![testing_strategies](svg/courses/queues/rabbitmq/09_testing_messaging_workflows/testing_strategies.svg)
 
 ---
+## Test Environments
+
+![test_environments](svg/courses/queues/rabbitmq/09_testing_messaging_workflows/test_environments.svg)
+
+---
 ## Three Layers of Testing
 
 - **Unit**: producer / consumer logic in isolation

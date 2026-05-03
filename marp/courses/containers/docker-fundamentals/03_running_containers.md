@@ -215,3 +215,8 @@ docker stop web && docker rm web
 - No resource limits &#8594; one container takes the whole host
 - Editing files inside containers &#8594; gone after recreate
 - Using `:latest` everywhere &#8594; restart pulls a different image
+
+---
+## Key docker run Flags
+
+![run_options](svg/courses/containers/docker-fundamentals/03_running_containers/run_options.svg)

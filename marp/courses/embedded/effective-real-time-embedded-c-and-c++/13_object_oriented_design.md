@@ -346,3 +346,15 @@ public:
 - Prefer composition and static allocation when possible
 - OO design improves modularity, testability, and maintainability
 - OO patterns like State and Strategy enhance clarity and flexibility
+
+---
+
+## SOLID Principles
+
+![solid_principles](svg/courses/embedded/effective-real-time-embedded-c-and-c++/13_object_oriented_design/solid_principles.svg)
+
+---
+
+## Design Patterns
+
+![design_patterns](svg/courses/embedded/effective-real-time-embedded-c-and-c++/13_object_oriented_design/design_patterns.svg)

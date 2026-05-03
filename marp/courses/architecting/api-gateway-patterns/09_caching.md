@@ -80,6 +80,11 @@ audience:
 - Versioned URLs: `/v1/users` &#8594; `/v2/users` (effectively cache bust)
 
 ---
+## Invalidation Knobs
+
+![cache_invalidation](svg/courses/architecting/api-gateway-patterns/09_caching/cache_invalidation.svg)
+
+---
 ## TTL Strategy
 
 - Long TTL: fewer backend hits; staler data

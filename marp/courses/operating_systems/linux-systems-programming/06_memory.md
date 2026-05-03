@@ -19,6 +19,12 @@ audience:
 
 ---
 
+## Process Memory Regions
+
+![memory_regions](svg/courses/operating_systems/linux-systems-programming/06_memory/memory_regions.svg)
+
+---
+
 ## Chapter Overview
 
 1. **Memory Layout**

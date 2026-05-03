@@ -158,3 +158,8 @@ SELECT * FROM {{ ref('orders') }} WHERE total < 0
 - Tests that flake (timezone, etc.)
 - Many warnings; nobody reads them
 - Adding tests after data has been wrong for months
+
+---
+## Test Severity and Configuration
+
+![test_severity](svg/courses/data_engineering/dbt/04_testing_and_data_quality/test_severity.svg)

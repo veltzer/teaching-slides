@@ -33,6 +33,11 @@ audience:
 ![server_choices](svg/courses/networking/graphql/08_servers/server_choices.svg)
 
 ---
+## Server Pipeline
+
+![server_pipeline](svg/courses/networking/graphql/08_servers/server_pipeline.svg)
+
+---
 ## Apollo Server
 
 - Mature, large ecosystem

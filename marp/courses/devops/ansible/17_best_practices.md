@@ -827,3 +827,15 @@ Build a complete `Ansible` project that:
 - Continue practicing with your lab environment
 - Join the `Ansible` community forums
 - Consider Red Hat Ansible certification
+
+---
+
+## Code Organization
+
+![code_organization](svg/courses/devops/ansible/17_best_practices/code_organization.svg)
+
+---
+
+## Idempotence Principles
+
+![idempotence_principles](svg/courses/devops/ansible/17_best_practices/idempotence_principles.svg)

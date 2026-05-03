@@ -14,6 +14,18 @@ audience:
 
 ---
 
+## Command Line Option Groups
+
+![cli_options](svg/courses/operating_systems/qemu-for-kernel-developers/03_qemu_basic_usage/cli_options.svg)
+
+---
+
+## Typical Workflow
+
+![typical_workflow](svg/courses/operating_systems/qemu-for-kernel-developers/03_qemu_basic_usage/typical_workflow.svg)
+
+---
+
 Chapter Overview
 - Booting kernels with QEMU
 - Configuring virtual hardware

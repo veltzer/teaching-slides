@@ -262,3 +262,8 @@ volumes:
 - Rolling updates with zero downtime
 - Service mesh, ingress, RBAC
 - All of the above &#8594; Kubernetes (or Nomad, ECS, etc.)
+
+---
+## What Docker Compose Provides
+
+![compose_features](svg/courses/containers/docker-fundamentals/07_docker_compose/compose_features.svg)

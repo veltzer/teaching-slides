@@ -1316,3 +1316,15 @@ timedatectl set-ntp true
 # Check NTP sync status
 timedatectl timesync-status
 ```
+
+---
+
+## Systemd Unit Types
+
+![systemd_unit_types](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/systemd_unit_types.svg)
+
+---
+
+## Journald Logging
+
+![journald_logging](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/journald_logging.svg)

@@ -34,6 +34,16 @@ audience:
 - A little knowledge prevents a lot of embarrassment
 
 ---
+## Central Tendency And Spread
+
+![central_tendency](svg/courses/data_science/data-analyst-fundamentals/05_statistical_fundamentals/central_tendency.svg)
+
+---
+## Statistical Pillars
+
+![stat_pillars](svg/courses/data_science/data-analyst-fundamentals/05_statistical_fundamentals/stat_pillars.svg)
+
+---
 ## Mean
 
 - Sum / count
@@ -140,6 +150,11 @@ audience:
 - Compute a test statistic, get a p-value
 - p-value: "probability of seeing this data if H0 were true"
 - Small p &#8594; reject H0; large p &#8594; can't distinguish from noise
+
+---
+## Hypothesis Test Flow
+
+![hypothesis_test_flow](svg/courses/data_science/data-analyst-fundamentals/05_statistical_fundamentals/hypothesis_test_flow.svg)
 
 ---
 ## P-Values, Carefully

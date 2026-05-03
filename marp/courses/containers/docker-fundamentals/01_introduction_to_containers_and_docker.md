@@ -179,3 +179,8 @@ curl http://localhost:8080
 - Running containers: arguments, lifecycle, debugging
 - Dockerfile: building your own images
 - Networking, storage, Compose, security
+
+---
+## Why Teams Adopt Containers
+
+![container_benefits](svg/courses/containers/docker-fundamentals/01_introduction_to_containers_and_docker/container_benefits.svg)

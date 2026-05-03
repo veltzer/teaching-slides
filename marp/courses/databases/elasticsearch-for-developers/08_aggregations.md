@@ -11,6 +11,12 @@ audience:
 # Aggregations
 
 ---
+
+## Aggregation Kinds
+
+![aggregation_kinds](svg/courses/databases/elasticsearch-for-developers/08_aggregations/aggregation_kinds.svg)
+
+---
 ## What This Chapter Covers
 
 - Bucket aggregations
@@ -23,6 +29,11 @@ audience:
 ## Aggregation Families
 
 ![agg_types](svg/courses/databases/elasticsearch-for-developers/08_aggregations/agg_types.svg)
+
+---
+## Aggregation Overview
+
+![agg_overview](svg/courses/databases/elasticsearch-for-developers/08_aggregations/agg_overview.svg)
 
 ---
 ## Bucket Aggregations

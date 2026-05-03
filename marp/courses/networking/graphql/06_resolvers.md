@@ -15,6 +15,11 @@ audience:
 ![resolver_chain](svg/courses/networking/graphql/06_resolvers/resolver_chain.svg)
 
 ---
+## DataLoader Pattern
+
+![dataloader_pattern](svg/courses/networking/graphql/06_resolvers/dataloader_pattern.svg)
+
+---
 ## What This Chapter Covers
 
 - What resolvers are

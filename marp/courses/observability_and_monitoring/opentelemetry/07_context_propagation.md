@@ -53,6 +53,11 @@ audience:
 - Use for: user id, tenant, feature flag
 
 ---
+## Two Headers Compared
+
+![baggage_vs_traceparent](svg/courses/observability_and_monitoring/opentelemetry/07_context_propagation/baggage.svg)
+
+---
 ## Sample Baggage
 
 - "user.tenant=acme"

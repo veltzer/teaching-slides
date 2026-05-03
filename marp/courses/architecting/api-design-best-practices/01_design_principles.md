@@ -52,6 +52,11 @@ audience:
 - Deploy with confidence that contracts are met
 
 ---
+## API First Workflow
+
+![api_first_workflow](svg/courses/architecting/api-design-best-practices/01_design_principles/api_first_workflow.svg)
+
+---
 ## Consumer-Driven Design
 
 - The consumer's needs shape the API, not the producer's internals
@@ -75,6 +80,11 @@ audience:
 - One error format
 - One date/time format (ISO 8601, with timezone)
 - Consistency is more important than which convention you pick
+
+---
+## Consistency Dimensions
+
+![consistency_dimensions](svg/courses/architecting/api-design-best-practices/01_design_principles/consistency_dimensions.svg)
 
 ---
 ## Discoverability

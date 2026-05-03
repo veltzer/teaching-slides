@@ -786,3 +786,15 @@ void GOOD_IRQHandler2(void) {
 1. **Context** must be properly saved/restored
 1. **Deferred processing** for complex operations
 1. **Measurement** helps optimization
+
+---
+
+## Memory Mapped Input Output
+
+![memory_mapped_io](svg/courses/embedded/effective-real-time-embedded-c-and-c++/10_hardware_programming/memory_mapped_io.svg)
+
+---
+
+## Interrupt Service Routine Design
+
+![isr_design](svg/courses/embedded/effective-real-time-embedded-c-and-c++/10_hardware_programming/interrupt_service_routine_design.svg)

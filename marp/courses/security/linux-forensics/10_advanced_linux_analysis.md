@@ -1029,3 +1029,15 @@ strings /evidence/crash_dump.core | grep -iE \
 # - Command arguments
 # - Encryption keys
 ```
+
+---
+
+## Rootkit Detection
+
+![rootkit_detection](svg/courses/security/linux-forensics/10_advanced_linux_analysis/rootkit_detection.svg)
+
+---
+
+## Binary Analysis Techniques
+
+![binary_analysis_techniques](svg/courses/security/linux-forensics/10_advanced_linux_analysis/binary_analysis_techniques.svg)

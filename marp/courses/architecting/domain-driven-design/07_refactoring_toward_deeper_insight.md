@@ -36,6 +36,11 @@ audience:
 - The codebase has more `if special_case` than business logic
 
 ---
+## Drift Symptoms
+
+![drift_signs](svg/courses/architecting/domain-driven-design/07_refactoring_toward_deeper_insight/drift_signs.svg)
+
+---
 ## Three Levels of Refactoring
 
 - **Code-level**: rename, extract method, simplify (the standard refactorings)

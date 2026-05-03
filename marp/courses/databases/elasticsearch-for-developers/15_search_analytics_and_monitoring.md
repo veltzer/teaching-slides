@@ -11,6 +11,12 @@ audience:
 # Search Analytics and Monitoring
 
 ---
+
+## Cluster Observability
+
+![observability](svg/courses/databases/elasticsearch-for-developers/15_search_analytics_and_monitoring/observability.svg)
+
+---
 ## What This Chapter Covers
 
 - Search logs

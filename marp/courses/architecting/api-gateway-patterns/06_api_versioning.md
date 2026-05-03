@@ -68,6 +68,11 @@ Accept: application/vnd.example.v2+json
 - Consolidate when versions diverge minimally
 
 ---
+## Strategy Compared
+
+![versioning_strategies](svg/courses/architecting/api-gateway-patterns/06_api_versioning/versioning_strategies.svg)
+
+---
 ## Stages of an API Lifecycle
 
 - New: behind a feature flag, internal users only

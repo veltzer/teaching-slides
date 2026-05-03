@@ -10,6 +10,12 @@ audience:
 # Search Patterns and Features
 
 ---
+
+## Search Pattern Uses
+
+![pattern_uses](svg/courses/databases/elasticsearch-for-developers/09_search_patterns_and_features/pattern_uses.svg)
+
+---
 ## What This Chapter Covers
 
 - Faceting

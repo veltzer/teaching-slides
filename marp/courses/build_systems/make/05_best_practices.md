@@ -30,6 +30,12 @@ audience:
 
 ---
 
+## Anti-Patterns
+
+![anti_patterns](svg/courses/build_systems/make/05_best_practices/anti_patterns.svg)
+
+---
+
 ## Makefile Structure
 
 ```makefile

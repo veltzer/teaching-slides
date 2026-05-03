@@ -98,6 +98,11 @@ audience:
 - Many more
 
 ---
+## ICMP Categories
+
+![icmp_kinds](svg/courses/networking/tcp-ip-deep-dive/04_arp_icmp/icmp_kinds.svg)
+
+---
 ## Ping
 
 - Sends Echo Request, expects Echo Reply

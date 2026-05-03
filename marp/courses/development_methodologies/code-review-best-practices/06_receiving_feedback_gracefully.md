@@ -10,6 +10,12 @@ audience:
 # Receiving Feedback Gracefully
 
 ---
+
+## Receiving Feedback Well
+
+![receiving_feedback](svg/courses/development_methodologies/code-review-best-practices/06_receiving_feedback_gracefully/receiving_feedback.svg)
+
+---
 ## What This Chapter Covers
 
 - Separating ego from code

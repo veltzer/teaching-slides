@@ -15,6 +15,20 @@ audience:
 ---
 # State Management
 
+---
+
+## State Backend Options
+
+![state_backends](svg/courses/devops/terraform/06_state_management/state_backends.svg)
+
+---
+
+## State Pillars
+
+![state_pillars](svg/courses/devops/terraform/06_state_management/state_pillars.svg)
+
+---
+
 ## What is Terraform State?
 
 - A JSON file that maps configuration to real-world resources

@@ -10,6 +10,12 @@ audience:
 # Giving Constructive Feedback
 
 ---
+
+## Constructive Feedback Guidelines
+
+![feedback_guidelines](svg/courses/development_methodologies/code-review-best-practices/05_giving_constructive_feedback/feedback_guidelines.svg)
+
+---
 ## What This Chapter Covers
 
 - Tone and language
@@ -23,6 +29,11 @@ audience:
 ## Anatomy of Feedback
 
 ![feedback_anatomy](svg/courses/development_methodologies/code-review-best-practices/05_giving_constructive_feedback/feedback_anatomy.svg)
+
+---
+## Feedback Principles
+
+![feedback_principles](svg/courses/development_methodologies/code-review-best-practices/05_giving_constructive_feedback/feedback_principles.svg)
 
 ---
 ## Why Tone Matters

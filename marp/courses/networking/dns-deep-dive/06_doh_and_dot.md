@@ -44,6 +44,11 @@ audience:
 ![doh_dot](svg/courses/networking/dns-deep-dive/06_doh_and_dot/doh_dot.svg)
 
 ---
+## Encrypted DNS Compared
+
+![encrypted_dns_compared](svg/courses/networking/dns-deep-dive/06_doh_and_dot/encrypted_dns_compared.svg)
+
+---
 ## DNS over TLS (DoT)
 
 - DNS queries inside TLS sessions

@@ -16,6 +16,11 @@ audience:
 ![durability](svg/courses/queues/rabbitmq/07_message_persistence_and_reliability/durability.svg)
 
 ---
+## Publisher Confirms
+
+![publisher_confirms](svg/courses/queues/rabbitmq/07_message_persistence_and_reliability/publisher_confirms.svg)
+
+---
 ## What This Chapter Covers
 
 - Durable queues and persistent messages

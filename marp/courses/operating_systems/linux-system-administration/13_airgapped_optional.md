@@ -634,3 +634,9 @@ openssl version
 ```
 
 1. Document the transfer in the audit log with date, operator, media ID, and approval ticket number
+
+---
+
+## Airgap Environment Basics
+
+![airgap_environment_basics](svg/courses/operating_systems/linux-system-administration/13_airgapped_optional/airgap_environment_basics.svg)

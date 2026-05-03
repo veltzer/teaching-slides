@@ -17,6 +17,11 @@ audience:
 ![scheduling](svg/courses/real_time/real-time-programming/08_real_time_and_scheduling/scheduling.svg)
 
 ---
+## Scheduling Classes
+
+![scheduling_classes](svg/courses/real_time/real-time-programming/08_real_time_and_scheduling/scheduling_classes.svg)
+
+---
 ## What This Chapter Covers
 
 - Designing threads and priorities

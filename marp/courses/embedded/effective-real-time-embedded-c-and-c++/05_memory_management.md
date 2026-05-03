@@ -519,3 +519,15 @@ void* tracked_malloc(size_t size) {
 1. **Static allocation** preferred in embedded
 1. **DMA** offloads CPU for transfers
 1. **Alignment** matters for correctness and speed
+
+---
+
+## Heap Fragmentation
+
+![heap_fragmentation](svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/heap_fragmentation.svg)
+
+---
+
+## Stack Overflow Protection
+
+![stack_overflow_protection](svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/stack_overflow_protection.svg)

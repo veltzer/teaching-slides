@@ -62,6 +62,11 @@ audience:
 - Backpressure built in (queue depth)
 
 ---
+## Topology Compared
+
+![fan_out_fan_in](svg/courses/architecting/serverless-architecture/02_serverless_design_patterns/fanout_fanin.svg)
+
+---
 ## Step Functions
 
 - AWS's orchestration service

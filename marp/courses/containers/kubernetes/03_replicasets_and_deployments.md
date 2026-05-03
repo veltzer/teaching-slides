@@ -86,6 +86,11 @@ spec:
 - For apps that can't run two versions concurrently
 
 ---
+## Strategy Compared
+
+![rollout_strategies](svg/courses/containers/kubernetes/03_replicasets_and_deployments/rollout_strategies.svg)
+
+---
 ## Rollback
 
 - `kubectl rollout undo deployment/web`

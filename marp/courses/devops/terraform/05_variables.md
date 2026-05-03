@@ -15,6 +15,14 @@ audience:
 ---
 # Variables
 
+---
+
+## Variable Types
+
+![variable_types](svg/courses/devops/terraform/05_variables/variable_types.svg)
+
+---
+
 ## Why Use Variables?
 
 - Make configurations reusable and flexible

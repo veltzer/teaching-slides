@@ -61,6 +61,11 @@ audience:
 - Trade-off: more services to maintain
 
 ---
+## BFF Variants
+
+![bff_pattern](svg/courses/architecting/api-gateway-patterns/02_gateway_architectures/bff_pattern.svg)
+
+---
 ## Multi-Region
 
 - Gateway in each region

@@ -12,6 +12,12 @@ audience:
 # Maintaining Documentation
 
 ---
+
+## Maintenance Tasks
+
+![maintenance_tasks](svg/courses/development_methodologies/technical-writing/12_maintaining_documentation/maintenance_tasks.svg)
+
+---
 ## What This Chapter Covers
 
 - Documentation debt

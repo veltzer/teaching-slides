@@ -60,6 +60,11 @@ audience:
 - Cache in init code; expire after N minutes
 
 ---
+## Defence in Depth
+
+![security_layers](svg/courses/architecting/serverless-architecture/09_security_and_operational_concerns/security_layers.svg)
+
+---
 ## VPC Lambda
 
 - Lambda runs in AWS-managed VPC by default

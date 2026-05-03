@@ -522,3 +522,15 @@ void large_function(void) {
 1. **Direct** hardware control
 1. **Minimal** resource usage
 1. **Robust** error handling
+
+---
+
+## Volatile Keyword
+
+![volatile_keyword](svg/courses/embedded/effective-real-time-embedded-c-and-c++/02_embedded_c/volatile_keyword.svg)
+
+---
+
+## Integer Overflow Dangers
+
+![integer_overflow_dangers](svg/courses/embedded/effective-real-time-embedded-c-and-c++/02_embedded_c/integer_overflow_dangers.svg)

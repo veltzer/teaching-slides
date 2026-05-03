@@ -34,6 +34,12 @@ audience:
 
 ---
 
+## CTest Workflow
+
+![ctest_workflow](svg/courses/build_systems/cmake/07_testing_with_ctest/ctest_workflow.svg)
+
+---
+
 ## Enabling Testing
 
 ```cmake
@@ -46,6 +52,12 @@ enable_testing()
 - `enable_testing()` activates CTest support in the project
 - Must appear in the top-level `CMakeLists.txt`
 - Without it, `add_test()` calls are silently ignored
+
+---
+
+## CTest Concepts Visualised
+
+![ctest_concepts](svg/courses/build_systems/cmake/07_testing_with_ctest/ctest_concepts.svg)
 
 ---
 

@@ -36,6 +36,11 @@ audience:
 ![hw_concerns](svg/courses/real_time/real-time-programming/10_real_time_and_the_hardware/hw_concerns.svg)
 
 ---
+## Hardware Isolation
+
+![hw_isolation](svg/courses/real_time/real-time-programming/10_real_time_and_the_hardware/hw_isolation.svg)
+
+---
 ## I/O Buses and Latency
 
 - **PCIe**: high throughput, variable latency

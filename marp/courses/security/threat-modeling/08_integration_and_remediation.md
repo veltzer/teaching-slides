@@ -41,6 +41,11 @@ audience:
 - Friction kills the practice — keep it fast
 
 ---
+## Agile Integration Visualised
+
+![agile_integration](svg/courses/security/threat-modeling/08_integration_and_remediation/agile_integration.svg)
+
+---
 ## Lightweight Threat Modeling
 
 - "What can go wrong?" on the whiteboard
@@ -154,6 +159,11 @@ audience:
 - Each is valid in context
 
 ---
+## Mitigation Strategies Visualised
+
+![mitigation_strategies](svg/courses/security/threat-modeling/08_integration_and_remediation/mitigation_strategies.svg)
+
+---
 ## Eliminate by Design
 
 - Don't store data you don't need
@@ -233,6 +243,11 @@ audience:
 - "The cloud handles it" without verification
 - Skipping threat models for "internal" systems
 - Treating low-rated threats as "no threat"
+
+---
+## Maturity Stages Visualised
+
+![maturity_levels](svg/courses/security/threat-modeling/08_integration_and_remediation/maturity_levels.svg)
 
 ---
 ## Maturing the Practice

@@ -149,3 +149,8 @@ models/
 - Incremental without considering late-arriving data
 - Ephemeral that should be a real table (queries duplicate work)
 - Same materialisation everywhere (one size doesn't fit all)
+
+---
+## Incremental Strategies
+
+![incremental_strategies](svg/courses/data_engineering/dbt/02_models_and_materializations/incremental_strategies.svg)

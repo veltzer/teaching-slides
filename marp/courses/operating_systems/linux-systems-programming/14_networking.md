@@ -14,6 +14,12 @@ audience:
 
 ---
 
+## Socket Lifecycle
+
+![socket_lifecycle](svg/courses/operating_systems/linux-systems-programming/14_networking/socket_lifecycle.svg)
+
+---
+
 ## Chapter Overview
 
 1. **Socket Basics**

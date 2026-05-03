@@ -11,6 +11,12 @@ audience:
 # Geospatial Search
 
 ---
+
+## Geospatial Capabilities
+
+![geo_capabilities](svg/courses/databases/elasticsearch-for-developers/10_geospatial_search/geo_capabilities.svg)
+
+---
 ## What This Chapter Covers
 
 - geo_point and geo_shape

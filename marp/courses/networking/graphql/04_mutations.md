@@ -15,6 +15,11 @@ audience:
 ![mutation_pattern](svg/courses/networking/graphql/04_mutations/mutation_pattern.svg)
 
 ---
+## Validating Inputs
+
+![input_validation](svg/courses/networking/graphql/04_mutations/input_validation.svg)
+
+---
 ## What This Chapter Covers
 
 - Mutation basics

@@ -48,6 +48,11 @@ audience:
 - Combined into pipelines
 
 ---
+## Component Roles
+
+![collector_components](svg/courses/observability_and_monitoring/opentelemetry/06_collector/collector_components.svg)
+
+---
 ## Receivers
 
 - otlp: native protocol

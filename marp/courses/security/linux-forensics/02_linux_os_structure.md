@@ -1608,3 +1608,21 @@ journalctl | grep -i "oom\|out of memory"
 cat /proc/sys/vm/swappiness
 # Higher value = more aggressive swapping
 ```
+
+---
+
+## File System Hierarchy
+
+![file_system_hierarchy](svg/courses/security/linux-forensics/02_linux_os_structure/file_system_hierarchy.svg)
+
+---
+
+## Process Artifacts
+
+![process_artifacts](svg/courses/security/linux-forensics/02_linux_os_structure/process_artifacts.svg)
+
+---
+
+## Users Groups and Permissions
+
+![users_groups_and_permissions](svg/courses/security/linux-forensics/02_linux_os_structure/users_groups_and_permissions.svg)

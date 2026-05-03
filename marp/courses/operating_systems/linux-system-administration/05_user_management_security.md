@@ -1425,3 +1425,21 @@ Key practices across all frameworks:
 1. Enable logging and audit trails (`auditd`, `journald`)
 1. Enforce least privilege and access controls
 1. Document and review security configurations regularly
+
+---
+
+## Sudo Configuration File
+
+![sudoers_configuration](svg/courses/operating_systems/linux-system-administration/05_user_management_security/sudoers_configuration.svg)
+
+---
+
+## Password Policies
+
+![password_policies](svg/courses/operating_systems/linux-system-administration/05_user_management_security/password_policies.svg)
+
+---
+
+## Account Lifecycle
+
+![account_lifecycle](svg/courses/operating_systems/linux-system-administration/05_user_management_security/account_lifecycle.svg)

@@ -90,6 +90,12 @@ DESTDIR=/tmp/package cmake --install .
 
 ---
 
+## Install Command Family
+
+![install_commands](svg/courses/build_systems/cmake/05_installing_software/install_commands.svg)
+
+---
+
 ## install(TARGETS) - Executables
 
 ```cmake

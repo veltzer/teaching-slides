@@ -26,6 +26,11 @@ audience:
 - Mocking time, randomness, and environment
 
 ---
+## Mock Stub Fake Spy
+
+![mock_vs_stub](svg/courses/testing/test-driven-development/05_mocking_strategies/mock_vs_stub.svg)
+
+---
 ## Mocking Frameworks
 
 - **Java**: Mockito, EasyMock, JMockit

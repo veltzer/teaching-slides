@@ -92,6 +92,11 @@ git worktree remove ../hotfix-tree
 - Workflows scale naturally to many parallel tasks
 
 ---
+## Worktree Use Cases
+
+![worktree_use_cases](svg/courses/git/advanced-git/08_worktrees/worktree_use_cases.svg)
+
+---
 ## Use Case: Long-Running Builds
 
 - Branch A is in the middle of a 20-minute build

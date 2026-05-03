@@ -37,6 +37,16 @@ audience:
 ![latency_sources](svg/courses/real_time/real-time-programming/04_the_sources_of_latency/latency_sources.svg)
 
 ---
+## Latency by Layer
+
+![latency_layers](svg/courses/real_time/real-time-programming/04_the_sources_of_latency/latency_layers.svg)
+
+---
+## Latency Budget
+
+![latency_budget](svg/courses/real_time/real-time-programming/04_the_sources_of_latency/latency_budget.svg)
+
+---
 ## Interrupt Latency
 
 - Time between hardware event and the start of the ISR

@@ -49,6 +49,11 @@ audience:
 - Use InnoDB unless special reason
 
 ---
+## Engine Comparison
+
+![storage_engines_compare](svg/courses/databases/introduction-to-databases/06_mysql/storage_engines.svg)
+
+---
 ## Connecting
 
 ```bash

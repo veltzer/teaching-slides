@@ -44,6 +44,16 @@ audience:
 ![event_sourcing](svg/courses/architecting/event-driven-architecture/03_event_sourcing_and_cqrs/event_sourcing.svg)
 
 ---
+## Snapshotting
+
+![snapshotting](svg/courses/architecting/event-driven-architecture/03_event_sourcing_and_cqrs/snapshotting.svg)
+
+---
+## Projection Lifecycle
+
+![projection_lifecycle](svg/courses/architecting/event-driven-architecture/03_event_sourcing_and_cqrs/projection_lifecycle.svg)
+
+---
 ## Why Event Sourcing?
 
 - Audit trail is automatic and complete

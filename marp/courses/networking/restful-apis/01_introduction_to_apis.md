@@ -75,6 +75,11 @@ audience:
 - Internal tools
 
 ---
+## Both Sides Of The API
+
+![api_consumers_producers](svg/courses/networking/restful-apis/01_introduction_to_apis/api_consumers_producers.svg)
+
+---
 ## API Producers
 
 - Build the API

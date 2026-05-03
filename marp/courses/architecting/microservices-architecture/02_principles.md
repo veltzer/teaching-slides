@@ -87,6 +87,11 @@ audience:
 - Inverse Conway's: design the team structure to fit the desired system structure
 
 ---
+## Conway's Law Visualised
+
+![conway_law](svg/courses/architecting/microservices-architecture/02_principles/conways_law.svg)
+
+---
 ## Observability First
 
 - A monolith is debuggable with logs and a debugger

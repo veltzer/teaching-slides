@@ -24,6 +24,11 @@ audience:
 ![decomposition_strategies](svg/courses/architecting/microservices-architecture/03_decomposition/decomposition_strategies.svg)
 
 ---
+## Strategy Choice Visualised
+
+![strategy_choice](svg/courses/architecting/microservices-architecture/03_decomposition/strategy_choice.svg)
+
+---
 ## Decompose by Business Capability
 
 - Identify the business activities the system supports

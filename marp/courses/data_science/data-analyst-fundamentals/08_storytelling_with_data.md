@@ -44,6 +44,11 @@ audience:
 - A good report has layers — surface to depth
 
 ---
+## Story Arc Visualised
+
+![story_arc](svg/courses/data_science/data-analyst-fundamentals/08_storytelling_with_data/story_arc.svg)
+
+---
 ## The Structure of a Data Narrative
 
 - **Setup**: what's the situation?

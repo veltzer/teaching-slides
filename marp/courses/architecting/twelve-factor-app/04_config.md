@@ -17,6 +17,11 @@ audience:
 ![config_in_env](svg/courses/architecting/twelve-factor-app/04_config/config_in_env.svg)
 
 ---
+## Config Practices
+
+![config_practices](svg/courses/architecting/twelve-factor-app/04_config/config_practices.svg)
+
+---
 ## The Rule
 
 - Strict separation of config from code
@@ -95,6 +100,11 @@ FEATURE_X    = os.environ.get("FEATURE_X", "false") == "true"
 - Plain config is non-sensitive: log levels, feature flags
 - Both go through environment variables in twelve-factor
 - The injection mechanism differs (secret manager vs. plain config map)
+
+---
+## Where to Put Configuration
+
+![config_storage_options](svg/courses/architecting/twelve-factor-app/04_config/config_storage_options.svg)
 
 ---
 ## Secrets Management

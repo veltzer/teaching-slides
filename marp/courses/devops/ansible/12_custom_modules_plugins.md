@@ -642,3 +642,9 @@ def test_create_new_config(module_args, tmp_path):
 - Use `AnsibleModule` helper methods
 - Write unit tests
 - Follow Ansible module development guidelines
+
+---
+
+## Plugin Types
+
+![plugin_types](svg/courses/devops/ansible/12_custom_modules_plugins/plugin_types.svg)

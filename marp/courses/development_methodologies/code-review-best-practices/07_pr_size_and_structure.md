@@ -10,6 +10,12 @@ audience:
 # PR Size and Structure
 
 ---
+
+## Pull Request Sizing
+
+![pr_sizing](svg/courses/development_methodologies/code-review-best-practices/07_pr_size_and_structure/pr_sizing.svg)
+
+---
 ## What This Chapter Covers
 
 - Why smaller PRs are better

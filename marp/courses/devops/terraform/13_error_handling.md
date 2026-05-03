@@ -22,6 +22,12 @@ audience:
 
 ---
 
+## Error Recovery Strategies
+
+![error_recovery](svg/courses/devops/terraform/13_error_handling/error_recovery.svg)
+
+---
+
 ## Configuration Errors: Syntax
 
 ```output

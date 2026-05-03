@@ -10,6 +10,12 @@ audience:
 # Advanced Search Features
 
 ---
+
+## Advanced Search Capabilities
+
+![advanced_features](svg/courses/databases/elasticsearch-for-developers/06_advanced_search_features/advanced_features.svg)
+
+---
 ## What This Chapter Covers
 
 - Multi-match

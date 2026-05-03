@@ -22,6 +22,11 @@ audience:
 - Atlas vs self-hosted
 
 ---
+## Cluster Topology Choices
+
+![cluster_topologies](svg/courses/databases/mongodb-for-developers/15_deployment_and_devops/cluster_topologies.svg)
+
+---
 ## Replica Sets
 
 - Primary + secondaries (typically 3 nodes)

@@ -51,6 +51,11 @@ audience:
 - Invest most in the core; buy or use libraries for generic
 
 ---
+## Subdomain Investment
+
+![subdomain_kinds](svg/courses/architecting/domain-driven-design/01_strategic_design/subdomain_kinds.svg)
+
+---
 ## Bounded Context
 
 - A boundary within which a particular domain model applies
@@ -112,6 +117,11 @@ audience:
 - **Anti-Corruption Layer (ACL)**: downstream translates upstream's model
 - **Open Host Service**: upstream provides a clean public protocol
 - **Published Language**: a shared schema between two contexts
+
+---
+## Relationship Stances
+
+![context_relationships](svg/courses/architecting/domain-driven-design/01_strategic_design/context_relationships.svg)
 
 ---
 ## Anti-Corruption Layer

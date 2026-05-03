@@ -10,6 +10,12 @@ audience:
 # Why Code Review Matters
 
 ---
+
+## Code Review Benefits
+
+![review_benefits](svg/courses/development_methodologies/code-review-best-practices/01_why_code_review_matters/review_benefits.svg)
+
+---
 ## What This Chapter Covers
 
 - The benefits of code review

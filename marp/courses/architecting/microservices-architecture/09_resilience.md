@@ -18,6 +18,11 @@ audience:
 - These patterns are how distributed systems survive
 
 ---
+## Resilience Pillars
+
+![resilience_pillars](svg/courses/architecting/microservices-architecture/09_resilience/resilience_pillars.svg)
+
+---
 ## Timeouts
 
 - Every cross-service call must have a timeout
@@ -61,6 +66,11 @@ audience:
 ## Circuit Breaker Visualized
 
 ![circuit_breaker](svg/courses/architecting/microservices-architecture/09_resilience/circuit_breaker.svg)
+
+---
+## Resilience Pattern Toolkit
+
+![resilience_patterns](svg/courses/architecting/microservices-architecture/09_resilience/resilience_patterns.svg)
 
 ---
 ## Bulkhead

@@ -11,6 +11,12 @@ audience:
 # Common Anti-Patterns
 
 ---
+
+## Review Traps to Avoid
+
+![review_traps](svg/courses/development_methodologies/code-review-best-practices/12_common_anti_patterns/review_traps.svg)
+
+---
 ## What This Chapter Covers
 
 - Rubber stamping

@@ -24,6 +24,11 @@ audience:
 - Required for any list endpoint that could grow
 
 ---
+## Pagination Style Choice
+
+![pagination_styles](svg/courses/architecting/api-design-best-practices/05_pagination_filtering_sorting/pagination_styles.svg)
+
+---
 ## Offset-Based Pagination
 
 - `/orders?offset=20&limit=10`

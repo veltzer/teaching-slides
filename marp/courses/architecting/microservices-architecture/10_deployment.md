@@ -26,6 +26,11 @@ audience:
 ![deploy_strategies](svg/courses/architecting/microservices-architecture/10_deployment/deploy_strategies.svg)
 
 ---
+## Deployment Pipeline
+
+![deployment_pipeline](svg/courses/architecting/microservices-architecture/10_deployment/deployment_pipeline.svg)
+
+---
 ## Containerization
 
 - Each service runs as a container

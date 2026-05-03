@@ -93,6 +93,11 @@ audience:
 - Each warrants different defenses
 
 ---
+## Actor Profiles
+
+![threat_actors](svg/courses/security/kubernetes-security/01_threat_landscape/threat_actors.svg)
+
+---
 ## Common Attack Paths
 
 - Exposed dashboard or API server

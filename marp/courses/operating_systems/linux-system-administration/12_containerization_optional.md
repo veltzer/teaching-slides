@@ -858,3 +858,15 @@ docker exec app ping -c1 nginx
 
 1. Test the backup and restore procedure for the database volume
 1. Scale the application to 3 replicas and verify load balancing
+
+---
+
+## Container Runtime Options
+
+![container_runtime_options](svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_runtime_options.svg)
+
+---
+
+## Container Image Layers
+
+![container_image_layers](svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_image_layers.svg)

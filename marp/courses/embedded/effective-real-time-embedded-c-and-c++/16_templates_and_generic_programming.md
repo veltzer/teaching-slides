@@ -960,3 +960,9 @@ void printType() {
 1. **Traits** enable compile-time decisions
 1. **CRTP** provides static polymorphism
 1. **Concepts** improve error messages
+
+---
+
+## Template Metaprogramming
+
+![template_metaprogramming](svg/courses/embedded/effective-real-time-embedded-c-and-c++/16_templates_and_generic_programming/template_metaprogramming.svg)

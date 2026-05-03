@@ -214,6 +214,12 @@ target_link_libraries(hello PRIVATE mylib)
 
 ---
 
+## Visibility Scopes Visualised
+
+![scope_visibility](svg/courses/build_systems/cmake/02_hello_world/scope_visibility.svg)
+
+---
+
 ## The set() Command
 
 ```cmake
@@ -331,6 +337,12 @@ cmake -DCMAKE_BUILD_TYPE=MinSizeRel ..
 | `Release` | `-O3` | No |
 | `RelWithDebInfo` | `-O2` | Yes (`-g`) |
 | `MinSizeRel` | `-Os` | No |
+
+---
+
+## Build Types Visualised
+
+![build_types](svg/courses/build_systems/cmake/02_hello_world/build_types.svg)
 
 ---
 

@@ -35,6 +35,16 @@ audience:
 ![delivery_semantics](svg/courses/architecting/event-driven-architecture/04_reliability_and_delivery/delivery_semantics.svg)
 
 ---
+## Deduplication Strategies
+
+![dedup_strategies](svg/courses/architecting/event-driven-architecture/04_reliability_and_delivery/dedup_strategies.svg)
+
+---
+## Poison Pill Handling
+
+![poison_pill](svg/courses/architecting/event-driven-architecture/04_reliability_and_delivery/poison_pill.svg)
+
+---
 ## At-Most-Once
 
 - The producer sends, doesn't track

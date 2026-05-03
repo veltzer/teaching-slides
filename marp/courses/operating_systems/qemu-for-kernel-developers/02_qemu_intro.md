@@ -14,6 +14,18 @@ audience:
 
 ---
 
+## Quick Emulator Modes
+
+![qemu_modes](svg/courses/operating_systems/qemu-for-kernel-developers/02_qemu_intro/qemu_modes.svg)
+
+---
+
+## Supported Architectures
+
+![architectures_supported](svg/courses/operating_systems/qemu-for-kernel-developers/02_qemu_intro/architectures_supported.svg)
+
+---
+
 Course Introduction
 - Welcome to "QEMU for Kernel Developers"
 - Instructor introduction

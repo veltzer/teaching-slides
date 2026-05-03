@@ -43,6 +43,11 @@ audience:
 - The standard for non-trivial apps
 
 ---
+## What Databases Manage
+
+![database_responsibilities](svg/courses/databases/introduction-to-databases/01_what_are_databases/database_responsibilities.svg)
+
+---
 ## SQL vs NoSQL
 
 - SQL: relational, schema-on-write

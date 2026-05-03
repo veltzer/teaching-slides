@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="650.169491525424" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.236291109018" font-weight="bold" fill="var(--text)">Orchestration Versus Choreography</text>
+
+  <rect x="40" y="80" width="569.491525423729" height="540" rx="10.084389681792" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="324.745762711864" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.185657299943" font-weight="bold" fill="var(--primary-text)">Orchestration</text>
+  <text x="60.338983050847" y="170" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--primary-text)">Central coordinator drives steps</text>
+  <text x="60.338983050847" y="210" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--primary-text)">State machine in one place</text>
+  <text x="60.338983050847" y="250" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--primary-text)">Easy to visualise and debug</text>
+  <text x="60.338983050847" y="290" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--primary-text)">Compensations are explicit</text>
+  <text x="60.338983050847" y="330" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--primary-text)">Single point of failure risk</text>
+  <text x="60.338983050847" y="370" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--primary-text)">Tools: Temporal, Camunda</text>
+  <text x="60.338983050847" y="410" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--primary-text)">Good for compliance flows</text>
+  <text x="60.338983050847" y="450" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--primary-text)">Couples services to coordinator</text>
+  <text x="60.338983050847" y="490" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--primary-text)">Versioning needs care</text>
+  <text x="60.338983050847" y="530" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--primary-text)">Operational dashboards rich</text>
+  <text x="60.338983050847" y="570" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--primary-text)">Replay or skip steps possible</text>
+
+  <rect x="629.830508474576" y="80" width="610.169491525424" height="540" rx="10.084389681792" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="934.915254237288" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.185657299943" font-weight="bold" fill="var(--ok-text)">Choreography</text>
+  <text x="650.169491525424" y="170" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--ok-text)">Each service reacts to events</text>
+  <text x="650.169491525424" y="210" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--ok-text)">No central authority</text>
+  <text x="650.169491525424" y="250" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--ok-text)">Loose coupling between teams</text>
+  <text x="650.169491525424" y="290" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--ok-text)">Compensating events in flow</text>
+  <text x="650.169491525424" y="330" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--ok-text)">Hard to see the whole picture</text>
+  <text x="650.169491525424" y="370" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--ok-text)">Distributed tracing essential</text>
+  <text x="650.169491525424" y="410" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--ok-text)">Scales naturally with services</text>
+  <text x="650.169491525424" y="450" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--ok-text)">Schema versioning matters more</text>
+  <text x="650.169491525424" y="490" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--ok-text)">Cycle detection is your job</text>
+  <text x="650.169491525424" y="530" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--ok-text)">Document the event map</text>
+  <text x="650.169491525424" y="570" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--ok-text)">Use sparingly for long flows</text>
+</svg>

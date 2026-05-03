@@ -51,12 +51,22 @@ audience:
 ![sticky_colors](svg/courses/architecting/domain-driven-design/02_event_storming/sticky_colors.svg)
 
 ---
+## Sticky Palette
+
+![sticky_palette](svg/courses/architecting/domain-driven-design/02_event_storming/sticky_palette.svg)
+
+---
 ## Three Levels of Event Storming
 
 - **Big Picture**: explore the whole domain; broad strokes
 - **Process Modeling**: drill into specific business processes
 - **Software Design**: identify aggregates, commands, events for implementation
 - Each level builds on the previous
+
+---
+## Levels Compared
+
+![storming_levels](svg/courses/architecting/domain-driven-design/02_event_storming/storming_levels.svg)
 
 ---
 ## Big Picture Storming

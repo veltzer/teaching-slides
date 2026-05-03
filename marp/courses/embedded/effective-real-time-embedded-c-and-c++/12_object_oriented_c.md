@@ -873,3 +873,9 @@ void led_on_dynamic(led_t* led) {
 1. **First member** inheritance works
 1. **Composition** often better than inheritance
 1. **C/C++ mixing** requires care
+
+---
+
+## C OOP Techniques
+
+![c_oop_techniques](svg/courses/embedded/effective-real-time-embedded-c-and-c++/12_object_oriented_c/c_oop_techniques.svg)

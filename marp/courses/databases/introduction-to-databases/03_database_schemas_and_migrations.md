@@ -102,6 +102,11 @@ DROP TABLE users;
 - Critical for prod systems
 
 ---
+## Expand-Backfill-Switch-Contract
+
+![online_migration_steps](svg/courses/databases/introduction-to-databases/03_database_schemas_and_migrations/online_migration.svg)
+
+---
 ## CI / CD
 
 - Migrations run on deploy

@@ -916,3 +916,21 @@ for dev in /dev/sd?? /dev/nvme?n?p?; do
     echo "LUKS: $dev"
 done
 ```
+
+---
+
+## Storage Device Types
+
+![storage_device_types](svg/courses/security/linux-forensics/01_hardware/storage_device_types.svg)
+
+---
+
+## RAID Levels Overview
+
+![raid_levels_overview](svg/courses/security/linux-forensics/01_hardware/raid_levels_overview.svg)
+
+---
+
+## System Buses Overview
+
+![system_buses_overview](svg/courses/security/linux-forensics/01_hardware/system_buses_overview.svg)

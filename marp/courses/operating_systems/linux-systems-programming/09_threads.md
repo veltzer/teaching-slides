@@ -14,6 +14,12 @@ audience:
 
 ---
 
+## Thread Synchronization Primitives
+
+![thread_synchronization](svg/courses/operating_systems/linux-systems-programming/09_threads/thread_synchronization.svg)
+
+---
+
 ## Chapter Overview
 
 1. **pthread Library Overview**

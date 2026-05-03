@@ -54,6 +54,11 @@ audience:
 - The cross-over point depends; do the math
 
 ---
+## Cost Profiles
+
+![cheap_vs_expensive](svg/courses/architecting/serverless-architecture/07_cost_optimization/cheap_vs_expensive.svg)
+
+---
 ## Lambda Memory and Cost
 
 - Memory tier sets CPU as well

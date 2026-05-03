@@ -53,6 +53,11 @@ service Chat {
 ![rpc_types](svg/courses/networking/grpc/03_rpc_types/rpc_types.svg)
 
 ---
+## Streaming Modes Compared
+
+![streaming_modes](svg/courses/networking/grpc/03_rpc_types/streaming_modes.svg)
+
+---
 ## Unary RPC
 
 - The simplest pattern — like a function call

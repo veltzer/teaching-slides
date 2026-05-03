@@ -83,6 +83,11 @@ audience:
 - **Scroll View**: panel with vertical/horizontal scrolling
 
 ---
+## Widgets Overview
+
+![ui_widgets](svg/courses/unity/introduction-to-game-development-with-unity/06_user_interface_design/ui_widgets.svg)
+
+---
 ## TextMeshPro Is the Default Text
 
 - Sharp text at any zoom (signed distance field)

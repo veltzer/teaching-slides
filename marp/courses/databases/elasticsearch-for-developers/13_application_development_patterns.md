@@ -11,6 +11,12 @@ audience:
 # Application Development Patterns
 
 ---
+
+## Application Development Patterns Overview
+
+![dev_patterns](svg/courses/databases/elasticsearch-for-developers/13_application_development_patterns/dev_patterns.svg)
+
+---
 ## What This Chapter Covers
 
 - ES as primary store?

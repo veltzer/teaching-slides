@@ -33,6 +33,11 @@ audience:
 - Optional: a link to documentation, a request id for support
 
 ---
+## Error Response Anatomy
+
+![error_envelope](svg/courses/architecting/api-design-best-practices/06_error_handling/error_envelope.svg)
+
+---
 ## RFC 7807: Problem Details
 
 - Standard format for error responses

@@ -19,6 +19,12 @@ audience:
 
 ---
 
+## Fork and Exec Pattern
+
+![fork_exec_flow](svg/courses/operating_systems/linux-systems-programming/04_processes/fork_exec_flow.svg)
+
+---
+
 ## Chapter Overview
 
 1. **Process Tree and Init**

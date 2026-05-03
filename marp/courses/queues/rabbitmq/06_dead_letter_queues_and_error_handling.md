@@ -16,6 +16,11 @@ audience:
 ![dlq_flow](svg/courses/queues/rabbitmq/06_dead_letter_queues_and_error_handling/dlq_flow.svg)
 
 ---
+## Retry Strategy
+
+![retry_strategy](svg/courses/queues/rabbitmq/06_dead_letter_queues_and_error_handling/retry_strategy.svg)
+
+---
 ## What This Chapter Covers
 
 - Dead letter exchanges and queues

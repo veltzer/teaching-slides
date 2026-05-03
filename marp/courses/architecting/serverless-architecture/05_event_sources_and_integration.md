@@ -31,6 +31,11 @@ audience:
 - Sync: caller responsible for handling errors
 
 ---
+## Two Invocation Modes
+
+![sync_vs_async_invocation](svg/courses/architecting/serverless-architecture/05_event_sources_and_integration/sync_vs_async.svg)
+
+---
 ## Event Source Categories
 
 ![event_sources](svg/courses/architecting/serverless-architecture/05_event_sources_and_integration/event_sources.svg)

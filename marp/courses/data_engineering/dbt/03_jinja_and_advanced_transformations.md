@@ -147,3 +147,8 @@ FROM events
 - Variables that should be config
 - Compile errors hidden in runtime errors
 - Treating Jinja as a programming language
+
+---
+## Jinja Features in dbt
+
+![jinja_features](svg/courses/data_engineering/dbt/03_jinja_and_advanced_transformations/jinja_features.svg)

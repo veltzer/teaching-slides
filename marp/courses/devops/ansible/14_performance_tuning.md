@@ -460,3 +460,9 @@ Mitogen + 20 forks                ~2 minutes
 1. Use `async` for a long-running task
 1. Implement a rolling update with `serial`
 1. Compare `linear` vs `free` strategy
+
+---
+
+## Parallelism and Forks
+
+![parallelism_and_forks](svg/courses/devops/ansible/14_performance_tuning/parallelism_and_forks.svg)

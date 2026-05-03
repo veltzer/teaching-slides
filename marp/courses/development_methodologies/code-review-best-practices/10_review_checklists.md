@@ -15,6 +15,12 @@ audience:
 ![review_checklist](svg/courses/development_methodologies/code-review-best-practices/10_review_checklists/review_checklist.svg)
 
 ---
+
+## Checklist Topics
+
+![checklist_topics](svg/courses/development_methodologies/code-review-best-practices/10_review_checklists/checklist_topics.svg)
+
+---
 ## What This Chapter Covers
 
 - Why use checklists

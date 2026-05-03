@@ -36,6 +36,11 @@ audience:
 ![composition_over_inheritance](svg/courses/principles/object-oriented-programming/07_composition_vs_inheritance/composition_over_inheritance.svg)
 
 ---
+## Delegation Pattern
+
+![delegation_pattern](svg/courses/principles/object-oriented-programming/07_composition_vs_inheritance/delegation_pattern.svg)
+
+---
 ## Composition: A First Example
 
 ```python

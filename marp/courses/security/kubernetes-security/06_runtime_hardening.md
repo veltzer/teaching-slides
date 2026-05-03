@@ -99,6 +99,11 @@ audience:
 - Audit logging enabled
 
 ---
+## Hardening Targets
+
+![cis_focus](svg/courses/security/kubernetes-security/06_runtime_hardening/cis_focus.svg)
+
+---
 ## API Server Hardening
 
 - Disable anonymous auth (--anonymous-auth=false)
@@ -196,6 +201,11 @@ rules:
 - Eradicate — remove the threat
 - Recover — restore service
 - Learn — postmortem, fix root cause
+
+---
+## Response Loop
+
+![incident_response_loop](svg/courses/security/kubernetes-security/06_runtime_hardening/incident_response_loop.svg)
 
 ---
 ## Containment Tactics

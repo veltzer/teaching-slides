@@ -14,6 +14,18 @@ audience:
 
 ---
 
+## Kernel Debug Techniques
+
+![debug_techniques](svg/courses/operating_systems/qemu-for-kernel-developers/06_qemu_kernel_debugging/debug_techniques.svg)
+
+---
+
+## Break Point Kinds
+
+![breakpoint_kinds](svg/courses/operating_systems/qemu-for-kernel-developers/06_qemu_kernel_debugging/breakpoint_kinds.svg)
+
+---
+
 Chapter Overview
 - GDB integration with QEMU
 - Kernel debugging techniques using QEMU

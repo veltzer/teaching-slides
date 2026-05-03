@@ -28,6 +28,11 @@ audience:
 - Operations have one place to look at incoming traffic
 
 ---
+## Gateway Responsibilities Visualised
+
+![gateway_responsibilities](svg/courses/architecting/api-design-best-practices/10_api_gateways/gateway_responsibilities.svg)
+
+---
 ## Common Gateway Responsibilities
 
 - Request routing (path → service)

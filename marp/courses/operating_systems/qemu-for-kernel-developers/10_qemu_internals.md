@@ -14,6 +14,12 @@ audience:
 
 ---
 
+## Internal Subsystems
+
+![internal_subsystems](svg/courses/operating_systems/qemu-for-kernel-developers/10_qemu_internals/internal_subsystems.svg)
+
+---
+
 Chapter Overview
 - QEMU source code organization
 - TCG (Tiny Code Generator) basics

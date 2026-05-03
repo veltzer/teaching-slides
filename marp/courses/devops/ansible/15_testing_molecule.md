@@ -539,3 +539,9 @@ molecule:
 1. Add a second platform (Debian + Ubuntu)
 1. Add `testinfra` tests for port and config validation
 1. Fix any idempotency issues
+
+---
+
+## Molecule Workflow
+
+![molecule_workflow](svg/courses/devops/ansible/15_testing_molecule/molecule_workflow.svg)

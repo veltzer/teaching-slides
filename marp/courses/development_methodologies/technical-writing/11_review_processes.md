@@ -16,6 +16,12 @@ audience:
 ![review_for_docs](svg/courses/development_methodologies/technical-writing/11_review_processes/review_for_docs.svg)
 
 ---
+
+## Documentation Review Stages
+
+![review_stages](svg/courses/development_methodologies/technical-writing/11_review_processes/review_stages.svg)
+
+---
 ## What This Chapter Covers
 
 - Peer review for documentation

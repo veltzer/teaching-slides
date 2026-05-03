@@ -180,3 +180,8 @@ schemathesis run http://localhost:8000 \
 - Custom templates that bit-rot
 - Generating into the wrong directory (gets committed accidentally)
 - Treating the generator's output as final; it's a starting point
+
+---
+## Codegen Targets
+
+![codegen_targets](svg/courses/architecting/api-first-development/04_code_generation_from_openapi_specs/codegen_targets.svg)

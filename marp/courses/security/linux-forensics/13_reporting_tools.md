@@ -1049,3 +1049,15 @@ Deliverables:
 - Full technical report
 - Evidence integrity documentation
 ```
+
+---
+
+## Timeline Visualization
+
+![timeline_visualization](svg/courses/security/linux-forensics/13_reporting_tools/timeline_visualization.svg)
+
+---
+
+## Evidence Preservation Tools
+
+![evidence_preservation_tools](svg/courses/security/linux-forensics/13_reporting_tools/evidence_preservation_tools.svg)

@@ -186,6 +186,11 @@ df.groupby('country').apply(lambda g: g.nlargest(3, 'spend'))
 - Notebooks are documentation as much as analysis
 
 ---
+## Exploratory Outputs Visualised
+
+![eda_outputs](svg/courses/data_science/data-analyst-fundamentals/04_exploratory_data_analysis/eda_outputs.svg)
+
+---
 ## EDA Output
 
 - A short writeup (the analyst's report)

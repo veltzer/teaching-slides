@@ -15,6 +15,14 @@ audience:
 ---
 # Data Sources
 
+---
+
+## Data Source Use Cases
+
+![data_source_uses](svg/courses/devops/terraform/04_data_sources/data_source_uses.svg)
+
+---
+
 ## What are Data Sources?
 
 - Data sources allow Terraform to read information from outside

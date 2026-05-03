@@ -45,6 +45,11 @@ audience:
 - Config (Parameter Store, Secrets Manager)
 
 ---
+## State Stores Compared
+
+![state_decision](svg/courses/architecting/serverless-architecture/04_state_management/state_decision.svg)
+
+---
 ## DynamoDB With Lambda
 
 - Serverless DB; scales to zero (per-request pricing)

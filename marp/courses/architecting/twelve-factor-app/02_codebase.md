@@ -54,6 +54,11 @@ audience:
 - Each app has its own codebase
 
 ---
+## Repository Topologies
+
+![repo_topologies](svg/courses/architecting/twelve-factor-app/02_codebase/repo_topologies.svg)
+
+---
 ## Monorepo Considerations
 
 - A monorepo can hold multiple codebases — that's fine

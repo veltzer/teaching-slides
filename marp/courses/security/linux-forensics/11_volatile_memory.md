@@ -858,3 +858,15 @@ File Size: $(ls -la /evidence/ram.lime | awk '{print $5}') bytes
 SHA-256: $(cat /evidence/ram.lime.sha256)
 EOF
 ```
+
+---
+
+## Memory Analysis Artifacts
+
+![memory_analysis_artifacts](svg/courses/security/linux-forensics/11_volatile_memory/memory_analysis_artifacts.svg)
+
+---
+
+## Volatility Framework Overview
+
+![volatility_framework_overview](svg/courses/security/linux-forensics/11_volatile_memory/volatility_framework_overview.svg)

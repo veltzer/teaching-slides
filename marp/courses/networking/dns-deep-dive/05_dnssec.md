@@ -49,6 +49,11 @@ audience:
 ![dnssec_records](svg/courses/networking/dns-deep-dive/05_dnssec/dnssec_records.svg)
 
 ---
+## Key Rollover
+
+![key_rollover](svg/courses/networking/dns-deep-dive/05_dnssec/key_rollover.svg)
+
+---
 ## RRSIG: Record Signatures
 
 - Each record set is signed

@@ -44,6 +44,11 @@ audience:
 - Graph: relationship traversal
 
 ---
+## Workload Map
+
+![workload_patterns](svg/courses/databases/introduction-to-databases/10_choosing_the_right_database/workload_patterns.svg)
+
+---
 ## Default: Postgres
 
 - Capable for 90% of OLTP workloads

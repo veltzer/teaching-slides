@@ -385,6 +385,12 @@ endif()
 
 ---
 
+## Control Flow Constructs
+
+![control_flow](svg/courses/build_systems/cmake/03_in_depth_syntax/control_flow.svg)
+
+---
+
 ## foreach() Loops: Basic Forms
 
 ```cmake
@@ -492,6 +498,12 @@ target_compile_definitions(app PRIVATE
     $<$<CONFIG:Debug>:DEBUG_MODE>
 )
 ```
+
+---
+
+## Generator Expression Uses
+
+![generator_expressions](svg/courses/build_systems/cmake/03_in_depth_syntax/generator_expressions.svg)
 
 ---
 

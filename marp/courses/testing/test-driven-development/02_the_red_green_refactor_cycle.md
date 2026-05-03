@@ -34,6 +34,16 @@ audience:
 ![cycle_steps](svg/courses/testing/test-driven-development/02_the_red_green_refactor_cycle/cycle_steps.svg)
 
 ---
+## Cycle Phases at a Glance
+
+![cycle_phases](svg/courses/testing/test-driven-development/02_the_red_green_refactor_cycle/cycle_phases.svg)
+
+---
+## Cycle Phases In Detail
+
+![cycle_in_detail](svg/courses/testing/test-driven-development/02_the_red_green_refactor_cycle/cycle_in_detail.svg)
+
+---
 ## Why The Failure Matters
 
 - Confirms the test is actually testing something
@@ -137,6 +147,11 @@ def add(a, b):
 - Working alone, in flow
 - Fast tests
 - High confidence
+
+---
+## Step Size Choices
+
+![step_sizes](svg/courses/testing/test-driven-development/02_the_red_green_refactor_cycle/step_sizes.svg)
 
 ---
 ## When You Get Stuck

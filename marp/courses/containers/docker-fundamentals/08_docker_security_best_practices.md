@@ -223,3 +223,8 @@ ENTRYPOINT ["/server"]
 - Compose runs multi-container apps with one file
 - Security is not optional; the defaults are reasonable but not enough
 - Next steps: Kubernetes for production orchestration
+
+---
+## Layered Container Security
+
+![security_layers](svg/courses/containers/docker-fundamentals/08_docker_security_best_practices/security_layers.svg)

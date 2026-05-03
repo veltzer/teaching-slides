@@ -55,6 +55,11 @@ git cherry-pick abc1234
 ![cherry_pick_flow](svg/courses/git/advanced-git/02_cherry_pick/cherry_pick_flow.svg)
 
 ---
+## Cherry Pick Use Cases
+
+![cherry_pick_uses](svg/courses/git/advanced-git/02_cherry_pick/cherry_pick_uses.svg)
+
+---
 ## The Hotfix Use Case
 
 - Bug discovered on `main`

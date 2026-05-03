@@ -14,6 +14,12 @@ audience:
 
 ---
 
+## Zero Copy Techniques
+
+![zero_copy_techniques](svg/courses/operating_systems/linux-systems-programming/19_zero_copy/zero_copy_techniques.svg)
+
+---
+
 ## What is Zero Copy?
 
 1. **Eliminate data copying** - Data moves without CPU involvement

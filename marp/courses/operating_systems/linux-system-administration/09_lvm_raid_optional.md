@@ -550,3 +550,9 @@ mdadm --create /dev/md99 --level=1 \
 1. Take an LVM snapshot, modify data, then merge to restore
 1. Simulate a disk failure with `mdadm --fail` and observe rebuild after adding a replacement
 1. Verify data integrity after each operation
+
+---
+
+## LVM Thin Provisioning
+
+![lvm_thin_provisioning](svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_thin_provisioning.svg)

@@ -31,9 +31,19 @@ audience:
 - Scale consumers independently
 
 ---
+## Use Cases at a Glance
+
+![queue_use_cases](svg/courses/architecting/system-design/06_message_queues/queue_use_cases.svg)
+
+---
 ## When to Reach for One
 
 ![queue_uses](svg/courses/architecting/system-design/06_message_queues/queue_uses.svg)
+
+---
+## Queue Versus Log
+
+![queue_vs_log](svg/courses/architecting/system-design/06_message_queues/queue_vs_log.svg)
 
 ---
 ## Kafka

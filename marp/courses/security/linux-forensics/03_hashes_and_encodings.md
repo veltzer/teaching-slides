@@ -738,3 +738,15 @@ journalctl --directory=/forensics/mounted/var/log/journal/ | \
 # 5. Convert all timestamps to UTC
 # Create a normalized timeline with UTC timestamps only
 ```
+
+---
+
+## Cryptographic Hash Strength
+
+![cryptographic_hash_strength](svg/courses/security/linux-forensics/03_hashes_and_encodings/cryptographic_hash_strength.svg)
+
+---
+
+## Encoding Schemes
+
+![encoding_schemes](svg/courses/security/linux-forensics/03_hashes_and_encodings/encoding_schemes.svg)

@@ -44,6 +44,11 @@ audience:
 ![lb_approaches](svg/courses/networking/grpc/06_load_balancing_health/lb_approaches.svg)
 
 ---
+## Health Checking
+
+![health_check](svg/courses/networking/grpc/06_load_balancing_and_health/health_check.svg)
+
+---
 ## Client-Side Load Balancing
 
 - Client knows all backends

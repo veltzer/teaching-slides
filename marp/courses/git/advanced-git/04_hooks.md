@@ -56,6 +56,11 @@ post-update.sample     pre-push.sample        update.sample
 ![hook_uses](svg/courses/git/advanced-git/04_hooks/hook_uses.svg)
 
 ---
+## Hook Categories
+
+![hook_categories](svg/courses/git/advanced-git/04_hooks/hook_categories.svg)
+
+---
 ## pre-commit: Run Before Commit Is Created
 
 - Fires when `git commit` is invoked

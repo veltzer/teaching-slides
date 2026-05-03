@@ -11,6 +11,12 @@ audience:
 # Performance Optimisation for Developers
 
 ---
+
+## Performance Tactics
+
+![perf_tactics](svg/courses/databases/elasticsearch-for-developers/11_performance_optimization_for_developers/perf_tactics.svg)
+
+---
 ## What This Chapter Covers
 
 - Query profiling
@@ -24,6 +30,11 @@ audience:
 ## Performance Levers
 
 ![perf_levers](svg/courses/databases/elasticsearch-for-developers/11_performance_optimization_for_developers/perf_levers.svg)
+
+---
+## Performance Pillars
+
+![perf_pillars](svg/courses/databases/elasticsearch-for-developers/11_performance_optimization_for_developers/perf_pillars.svg)
 
 ---
 ## Profile API

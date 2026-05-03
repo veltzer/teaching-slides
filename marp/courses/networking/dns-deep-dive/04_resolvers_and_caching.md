@@ -35,6 +35,11 @@ audience:
 ![recursive_resolution](svg/courses/networking/dns-deep-dive/04_resolvers_and_caching/recursive_resolution.svg)
 
 ---
+## TTL Strategy
+
+![ttl_strategy](svg/courses/networking/dns-deep-dive/04_resolvers_and_caching/ttl_strategy.svg)
+
+---
 ## Cache: The Critical Optimization
 
 - Without cache: every query walks the hierarchy

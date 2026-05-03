@@ -11,6 +11,12 @@ audience:
 # Elasticsearch Query Language (ES|QL)
 
 ---
+
+## Elasticsearch Query Language Capabilities
+
+![esql_capabilities](svg/courses/databases/elasticsearch-for-developers/07_elasticsearch_query_language_es_ql/esql_capabilities.svg)
+
+---
 ## What This Chapter Covers
 
 - What ES|QL is

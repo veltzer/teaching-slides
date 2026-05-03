@@ -143,3 +143,8 @@ BashOperator(
 - XCom for config (use Variables)
 - Forgetting to specify task_ids correctly
 - Overusing instead of: writing to a real store
+
+---
+## Passing Data Between Tasks
+
+![xcom_choices](svg/courses/data_engineering/apache-airflow/06_xcoms_and_data_passing/xcom_choices.svg)

@@ -14,6 +14,12 @@ audience:
 
 ---
 
+## Multiplexing APIs
+
+![multiplexing_apis](svg/courses/operating_systems/linux-systems-programming/18_multiplexing/multiplexing_apis.svg)
+
+---
+
 ## What is I/O Multiplexing?
 
 1. **Single thread** - Monitor multiple file descriptors

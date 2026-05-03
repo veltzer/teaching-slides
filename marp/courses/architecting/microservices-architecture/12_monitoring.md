@@ -25,6 +25,11 @@ audience:
 ![three_signals](svg/courses/architecting/microservices-architecture/12_monitoring/three_signals.svg)
 
 ---
+## Observability Pillars
+
+![observability_pillars](svg/courses/architecting/microservices-architecture/12_monitoring/observability_pillars.svg)
+
+---
 ## Why Observability Matters in Microservices
 
 - A single user request touches many services

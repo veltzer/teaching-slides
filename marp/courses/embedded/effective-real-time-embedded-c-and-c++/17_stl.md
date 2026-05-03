@@ -875,3 +875,9 @@ std::set_intersection(v1.begin(), v1.end(),
 1. **Algorithms** are generic and reusable
 1. **Complexity** matters for performance
 1. **Modern STL** features improve efficiency
+
+---
+
+## STL in Embedded
+
+![stl_in_embedded](svg/courses/embedded/effective-real-time-embedded-c-and-c++/17_stl/stl_in_embedded.svg)

@@ -10,6 +10,12 @@ audience:
 # What to Look For
 
 ---
+
+## Review Focus Areas
+
+![review_focus_areas](svg/courses/development_methodologies/code-review-best-practices/04_what_to_look_for/review_focus_areas.svg)
+
+---
 ## What This Chapter Covers
 
 - Bugs and logic errors

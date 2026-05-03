@@ -1376,3 +1376,15 @@ cat /var/log/syslog | grep -i "nvidia\|cuda\|gpu"
 # - Models may reveal intellectual property
 # - GPU usage may indicate unauthorized crypto mining
 ```
+
+---
+
+## Bash History Artifacts
+
+![bash_history_artifacts](svg/courses/security/linux-forensics/04_linux_os_artifacts/bash_history_artifacts.svg)
+
+---
+
+## Log File Artifacts
+
+![log_file_artifacts](svg/courses/security/linux-forensics/04_linux_os_artifacts/log_file_artifacts.svg)

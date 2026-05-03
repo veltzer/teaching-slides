@@ -612,3 +612,9 @@ restorecon -Rv /data/pgdata
     - Deny access to `/home` and `/tmp` beyond the `PostgreSQL` socket
 
 1. Verify the confined service starts correctly and test that access to unauthorized paths is blocked
+
+---
+
+## SELinux Modes
+
+![selinux_modes](svg/courses/operating_systems/linux-system-administration/10_selinux_apparmor_optional/selinux_modes.svg)

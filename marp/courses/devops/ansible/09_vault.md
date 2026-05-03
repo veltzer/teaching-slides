@@ -322,3 +322,9 @@ db_host: db.prod.internal
 1. Run a playbook using `--vault-password-file`
 1. Practice `ansible-vault edit`, `view`, `rekey`
 1. Implement the `vault_` prefix naming convention
+
+---
+
+## Vault Best Practices
+
+![vault_best_practices](svg/courses/devops/ansible/09_vault/vault_best_practices.svg)

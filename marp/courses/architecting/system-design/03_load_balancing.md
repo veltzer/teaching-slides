@@ -36,6 +36,11 @@ audience:
 ![lb_strategies](svg/courses/architecting/system-design/03_load_balancing/lb_strategies.svg)
 
 ---
+## Algorithms
+
+![lb_algorithms](svg/courses/architecting/system-design/03_load_balancing/lb_algorithms.svg)
+
+---
 ## Layer 4 (Transport)
 
 - Operates on TCP / UDP

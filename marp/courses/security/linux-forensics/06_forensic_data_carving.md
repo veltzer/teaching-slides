@@ -835,3 +835,15 @@ NOTABLE FILES:
 - carved/zip/00123456.zip: Password-protected archive
 EOF
 ```
+
+---
+
+## File Signature Analysis
+
+![file_signature_analysis](svg/courses/security/linux-forensics/06_forensic_data_carving/file_signature_analysis.svg)
+
+---
+
+## Carving Tools Overview
+
+![carving_tools_overview](svg/courses/security/linux-forensics/06_forensic_data_carving/carving_tools_overview.svg)

@@ -121,6 +121,11 @@ audience:
 - Usually a small subset of domain events become integration events
 
 ---
+## Boundary Smells Visualised
+
+![boundary_smells](svg/courses/architecting/microservices-architecture/04_boundaries/boundary_smells.svg)
+
+---
 ## When Boundaries Are Wrong
 
 - Lots of cross-service synchronous calls

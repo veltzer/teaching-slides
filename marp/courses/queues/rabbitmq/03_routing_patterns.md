@@ -35,6 +35,11 @@ audience:
 ![routing_patterns](svg/courses/queues/rabbitmq/03_routing_patterns/routing_patterns.svg)
 
 ---
+## Topic Routing
+
+![topic_routing](svg/courses/queues/rabbitmq/03_routing_patterns/topic_routing.svg)
+
+---
 ## Direct Routing Example
 
 - Exchange `log` (type direct)

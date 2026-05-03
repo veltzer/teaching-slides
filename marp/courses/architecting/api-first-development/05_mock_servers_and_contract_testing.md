@@ -172,3 +172,8 @@ pact-verifier --provider-base-url=http://localhost:8080 \
 - Schemathesis tests skipped because slow; regressions slip through
 - Treating mocks as authoritative
 - Forgetting Pact when removing endpoints
+
+---
+## Mock Realism Levels
+
+![mock_levels](svg/courses/architecting/api-first-development/05_mock_servers_and_contract_testing/mock_levels.svg)

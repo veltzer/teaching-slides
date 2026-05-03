@@ -14,6 +14,18 @@ audience:
 
 ---
 
+## Networking Modes
+
+![network_modes](svg/courses/operating_systems/qemu-for-kernel-developers/04_qemu_networking/network_modes.svg)
+
+---
+
+## Network Debugging Tools
+
+![network_debugging](svg/courses/operating_systems/qemu-for-kernel-developers/04_qemu_networking/network_debugging.svg)
+
+---
+
 Chapter Overview
 - Network models in QEMU
 - Configuring and using virtual network devices

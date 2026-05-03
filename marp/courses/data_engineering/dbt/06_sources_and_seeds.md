@@ -155,3 +155,8 @@ seeds:
 - Big seeds (slow to load every run)
 - Using seeds for anything non-trivial
 - Hardcoded source paths in models (use source())
+
+---
+## When to Use Seeds
+
+![seeds_uses](svg/courses/data_engineering/dbt/06_sources_and_seeds/seeds_uses.svg)

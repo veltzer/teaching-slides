@@ -36,6 +36,11 @@ audience:
 ![api_design_choices](svg/courses/architecting/system-design/02_api_design/api_design_choices.svg)
 
 ---
+## Methods And Idempotency
+
+![rest_idempotency](svg/courses/architecting/system-design/02_api_design/rest_idempotency.svg)
+
+---
 ## REST
 
 - Resources are nouns: `/users`, `/orders`

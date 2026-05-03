@@ -34,6 +34,11 @@ audience:
 - Documentation drift = trust loss
 
 ---
+## Documentation Artifacts
+
+![doc_artifacts](svg/courses/data_engineering/dbt/05_documentation_and_data_lineage/doc_artifacts.svg)
+
+---
 ## Model Descriptions
 
 ```yaml

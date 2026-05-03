@@ -36,6 +36,11 @@ audience:
 ![partitioning_strategies](svg/courses/architecting/distributed-systems-fundamentals/08_partitioning/partitioning_strategies.svg)
 
 ---
+## Rebalancing
+
+![rebalancing](svg/courses/architecting/distributed-systems-fundamentals/08_partitioning/rebalancing.svg)
+
+---
 ## Why Partition
 
 - Scale beyond one machine's capacity

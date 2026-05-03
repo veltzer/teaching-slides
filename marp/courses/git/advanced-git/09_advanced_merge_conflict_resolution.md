@@ -100,6 +100,11 @@ Their version
 - Don't commit until all markers are gone
 
 ---
+## Conflict Resolution Strategies
+
+![conflict_strategies](svg/courses/git/advanced-git/09_advanced_merge_conflict_resolution/conflict_strategies.svg)
+
+---
 ## Strategy Options: ours and theirs
 
 ```bash

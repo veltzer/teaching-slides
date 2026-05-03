@@ -55,6 +55,11 @@ audience:
 - Easy rollback: deploy an older release tag
 
 ---
+## Release Immutability Visualised
+
+![release_immutability](svg/courses/architecting/twelve-factor-app/06_build_release_run/release_immutability.svg)
+
+---
 ## Release Versioning
 
 - Monotonically increasing release id (`v123`, `v124`)

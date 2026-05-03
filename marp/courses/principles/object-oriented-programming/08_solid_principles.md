@@ -34,6 +34,11 @@ audience:
 ![solid_overview](svg/courses/principles/object-oriented-programming/08_solid_principles/solid_overview.svg)
 
 ---
+## Dependency Inversion
+
+![dependency_inversion](svg/courses/principles/object-oriented-programming/08_solid_principles/dependency_inversion.svg)
+
+---
 ## S: Single Responsibility Principle
 
 - A class should have *one reason to change*

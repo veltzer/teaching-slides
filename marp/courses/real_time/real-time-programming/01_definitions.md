@@ -34,6 +34,11 @@ audience:
 ![realtime_spectrum](svg/courses/real_time/real-time-programming/01_definitions/realtime_spectrum.svg)
 
 ---
+## Timing Vocabulary
+
+![timing_terms](svg/courses/real_time/real-time-programming/01_definitions/timing_terms.svg)
+
+---
 ## Latency
 
 - Time between an *event* and a *response*

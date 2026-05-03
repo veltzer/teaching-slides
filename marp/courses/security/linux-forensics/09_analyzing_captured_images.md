@@ -1096,3 +1096,15 @@ done
 # - LVM physical volumes (need special handling)
 # - Unallocated space between partitions
 ```
+
+---
+
+## Timeline Analysis
+
+![timeline_analysis](svg/courses/security/linux-forensics/09_analyzing_captured_images/timeline_analysis.svg)
+
+---
+
+## String Extraction Analysis
+
+![string_extraction_analysis](svg/courses/security/linux-forensics/09_analyzing_captured_images/string_extraction_analysis.svg)

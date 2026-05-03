@@ -44,6 +44,11 @@ audience:
 ![service_boundaries](svg/courses/architecting/event-driven-architecture/07_microservices_in_practice/service_boundaries.svg)
 
 ---
+## EDA Smells
+
+![eda_smells](svg/courses/architecting/event-driven-architecture/07_microservices_in_practice/eda_smells.svg)
+
+---
 ## Event Ownership
 
 - Each event is owned by one service

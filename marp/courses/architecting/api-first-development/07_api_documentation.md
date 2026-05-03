@@ -89,6 +89,11 @@ audience:
 - Match the polish to the audience and stakes
 
 ---
+## Renderer Catalog
+
+![doc_renderers](svg/courses/architecting/api-first-development/07_api_documentation/doc_renderers.svg)
+
+---
 ## Hosting
 
 - Generated docs: static HTML

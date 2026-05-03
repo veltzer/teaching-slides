@@ -170,6 +170,11 @@ git subtree push --prefix=lib/example \
 - Onboarding speed matters more than version isolation
 
 ---
+## Decision Matrix
+
+![decision_matrix](svg/courses/git/advanced-git/05_subtrees_and_submodules/decision_matrix.svg)
+
+---
 ## Common Submodule Mistakes
 
 - Forgetting `--recurse-submodules` on clone

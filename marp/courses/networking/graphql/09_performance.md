@@ -33,6 +33,11 @@ audience:
 ![perf_levers](svg/courses/networking/graphql/09_performance/perf_levers.svg)
 
 ---
+## Caching Layers
+
+![caching_layers](svg/courses/networking/graphql/09_performance/caching_layers.svg)
+
+---
 ## DataLoader
 
 - Batches keys within a tick

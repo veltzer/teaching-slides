@@ -18,6 +18,11 @@ audience:
 - Sudden termination is normal, not exceptional
 
 ---
+## Process Lifecycle
+
+![process_lifecycle](svg/courses/architecting/twelve-factor-app/10_disposability/process_lifecycle.svg)
+
+---
 ## Fast Startup
 
 - The process should be ready to serve in seconds, not minutes

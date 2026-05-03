@@ -385,3 +385,9 @@ ansible-playbook site.yml --tags "deploy" --limit "web01"
 - Use `loop_control.loop_var` to avoid variable conflicts
 - Prefer `import_role` in the `roles:` section of a play
 - Use `include_role` with `tasks_from` for partial role execution
+
+---
+
+## Tag Strategies
+
+![tag_strategies](svg/courses/devops/ansible/10_tags_includes_imports/tag_strategies.svg)

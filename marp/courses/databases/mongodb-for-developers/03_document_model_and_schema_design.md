@@ -29,6 +29,11 @@ audience:
 - Reference: avoid duplication
 
 ---
+## Schema Patterns
+
+![schema_patterns](svg/courses/databases/mongodb-for-developers/03_document_model_and_schema_design/schema_patterns.svg)
+
+---
 ## When To Embed
 
 - One-to-few (3-100)
@@ -48,6 +53,11 @@ audience:
 ## Embed vs Reference
 
 ![embed_vs_reference](svg/courses/databases/mongodb-for-developers/03_document_model_and_schema_design/embed_vs_reference.svg)
+
+---
+## Schema Design Decisions
+
+![schema_decisions](svg/courses/databases/mongodb-for-developers/03_document_model_and_schema_design/schema_decisions.svg)
 
 ---
 ## Document Size

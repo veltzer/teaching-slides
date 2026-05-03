@@ -79,6 +79,16 @@ mail IN A    5.6.7.8
 ![zone_transfer](svg/courses/networking/dns-deep-dive/03_authoritative_dns/zone_transfer.svg)
 
 ---
+## Zone File Anatomy
+
+![zone_file](svg/courses/networking/dns-deep-dive/03_authoritative_dns/zone_file.svg)
+
+---
+## Anycast Deployment
+
+![anycast_deployment](svg/courses/networking/dns-deep-dive/03_authoritative_dns/anycast_deployment.svg)
+
+---
 ## AXFR — Full Zone Transfer
 
 - Transfer the entire zone

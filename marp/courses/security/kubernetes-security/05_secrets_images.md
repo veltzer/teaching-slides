@@ -85,6 +85,11 @@ resources:
 - Single source of truth outside the cluster
 
 ---
+## Storage Choices
+
+![secret_storage_options](svg/courses/security/kubernetes-security/05_secrets_images/secret_storage_options.svg)
+
+---
 ## External Secrets Operator
 
 - Sync from external store to Kubernetes Secrets
@@ -145,6 +150,11 @@ spec:
 - Run in CI; block on critical findings
 - Run in registry; alert on new CVEs
 - Keep vulnerability DB current
+
+---
+## Supply-Chain Stages
+
+![image_supply_chain](svg/courses/security/kubernetes-security/05_secrets_images/image_supply_chain.svg)
 
 ---
 ## Trivy in CI

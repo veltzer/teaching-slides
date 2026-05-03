@@ -20,6 +20,11 @@ audience:
 - Modern teams add factors to address these gaps
 
 ---
+## Beyond The Original Twelve
+
+![beyond_factors](svg/courses/architecting/twelve-factor-app/14_beyond_twelve_factor/beyond_factors.svg)
+
+---
 ## API-First Design
 
 - Define the API before writing code

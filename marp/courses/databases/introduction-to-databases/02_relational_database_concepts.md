@@ -71,6 +71,11 @@ audience:
 - Most apps: 3NF is fine
 
 ---
+## Normal Forms
+
+![normal_forms](svg/courses/databases/introduction-to-databases/02_relational_database_concepts/normal_forms.svg)
+
+---
 ## Data Types
 
 - Integer: TINYINT, INT, BIGINT

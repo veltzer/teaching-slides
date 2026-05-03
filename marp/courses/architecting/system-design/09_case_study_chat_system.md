@@ -15,6 +15,11 @@ audience:
 ![chat_design](svg/courses/architecting/system-design/09_case_study_chat_system/chat_design.svg)
 
 ---
+## Component Breakdown
+
+![chat_components](svg/courses/architecting/system-design/09_case_study_chat_system/chat_components.svg)
+
+---
 ## What This Chapter Covers
 
 - Requirements

@@ -16,6 +16,12 @@ audience:
 ![diagram_purposes](svg/courses/development_methodologies/technical-writing/07_diagrams/diagram_purposes.svg)
 
 ---
+
+## Diagram Types
+
+![diagram_types](svg/courses/development_methodologies/technical-writing/07_diagrams/diagram_types.svg)
+
+---
 ## What This Chapter Covers
 
 - When and how to use diagrams

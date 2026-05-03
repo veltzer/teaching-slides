@@ -43,6 +43,11 @@ audience:
 ![rebase_vs_merge](svg/courses/git/advanced-git/01_rebasing_strategies/rebase_vs_merge.svg)
 
 ---
+## Rebase Workflow Pillars
+
+![rebase_workflow](svg/courses/git/advanced-git/01_rebasing_strategies/rebase_workflow.svg)
+
+---
 ## When to Rebase
 
 - Your local feature branch before opening a PR
@@ -81,6 +86,11 @@ audience:
 - `squash` — fold into the previous commit, combine messages
 - `fixup` — fold into the previous commit, drop this message
 - `drop` — remove the commit entirely
+
+---
+## Interactive Rebase Action Map
+
+![interactive_rebase_actions](svg/courses/git/advanced-git/01_rebasing_strategies/interactive_rebase_actions.svg)
 
 ---
 ## Squashing: A Practical Example
@@ -162,6 +172,11 @@ git rebase --onto main feature topic
 - `git reset --hard HEAD@{5}` restores a previous state
 - Reflog entries persist for 90 days by default
 - A bad rebase is recoverable, not catastrophic
+
+---
+## Recovery Steps Visualised
+
+![rebase_recovery](svg/courses/git/advanced-git/01_rebasing_strategies/rebase_recovery.svg)
 
 ---
 ## Aborting an In-Progress Rebase

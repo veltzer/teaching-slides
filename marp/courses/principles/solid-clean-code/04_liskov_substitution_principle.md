@@ -94,6 +94,11 @@ def test_resize(r: Rectangle):
 - **Type narrowing** — subclass returns a more specific type but the consumer relied on the base type's interface
 
 ---
+## Violations At A Glance
+
+![lsp_violations](svg/courses/principles/solid-clean-code/04_liskov_substitution_principle/lsp_violations.svg)
+
+---
 ## Throwing on Inherited Methods
 
 ```python

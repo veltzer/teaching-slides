@@ -89,6 +89,11 @@ volumeMounts:
 - Combine with: encryption at rest, RBAC
 
 ---
+## Two Object Types
+
+![configmap_vs_secret](svg/courses/containers/kubernetes/05_configmaps_and_secrets/configmap_vs_secret.svg)
+
+---
 ## Sample Secret
 
 ```yaml

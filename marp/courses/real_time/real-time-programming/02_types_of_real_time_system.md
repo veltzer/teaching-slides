@@ -35,6 +35,11 @@ audience:
 ![system_examples](svg/courses/real_time/real-time-programming/02_types_of_real_time_system/system_examples.svg)
 
 ---
+## Hard, Firm, Soft
+
+![hard_soft_firm](svg/courses/real_time/real-time-programming/02_types_of_real_time_system/hard_soft_firm.svg)
+
+---
 ## Near Real-Time
 
 - "As fast as we can manage"

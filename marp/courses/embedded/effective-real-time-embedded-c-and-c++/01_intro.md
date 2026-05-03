@@ -175,3 +175,15 @@ Popular choices:
 1. Code demonstrations
 1. Best practices
 1. Common pitfalls
+
+---
+
+## Real Time Categories
+
+![real_time_categories](svg/courses/embedded/effective-real-time-embedded-c-and-c++/01_intro/real_time_categories.svg)
+
+---
+
+## Embedded Development Workflow
+
+![embedded_development_workflow](svg/courses/embedded/effective-real-time-embedded-c-and-c++/01_intro/embedded_development_workflow.svg)

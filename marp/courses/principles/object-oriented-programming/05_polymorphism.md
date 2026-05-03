@@ -35,6 +35,11 @@ audience:
 ![polymorphism_kinds](svg/courses/principles/object-oriented-programming/05_polymorphism/polymorphism_kinds.svg)
 
 ---
+## Method Dispatch
+
+![dispatch_kinds](svg/courses/principles/object-oriented-programming/05_polymorphism/dispatch_kinds.svg)
+
+---
 ## A First Example
 
 ```python

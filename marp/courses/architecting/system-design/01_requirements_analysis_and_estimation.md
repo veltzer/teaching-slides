@@ -24,6 +24,11 @@ audience:
 ![back_of_envelope](svg/courses/architecting/system-design/01_requirements_analysis_and_estimation/back_of_envelope.svg)
 
 ---
+## Capacity Estimation
+
+![capacity_estimation](svg/courses/architecting/system-design/01_requirements_analysis_and_estimation/capacity_estimation.svg)
+
+---
 ## Functional Requirements
 
 - What the system *does*

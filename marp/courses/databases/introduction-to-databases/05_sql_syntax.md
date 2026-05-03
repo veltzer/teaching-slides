@@ -103,6 +103,11 @@ LEFT JOIN orders o ON u.id = o.user_id;
 - All users; orders if any (NULL if not)
 
 ---
+## Join Variants Compared
+
+![join_kinds](svg/courses/databases/introduction-to-databases/05_sql_syntax/join_kinds.svg)
+
+---
 ## GROUP BY
 
 ```sql

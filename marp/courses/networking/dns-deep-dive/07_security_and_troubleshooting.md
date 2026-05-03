@@ -36,6 +36,11 @@ audience:
 ![attack_map](svg/courses/networking/dns-deep-dive/07_security_and_troubleshooting/attack_map.svg)
 
 ---
+## Diagnostic Tools
+
+![diagnostic_tools](svg/courses/networking/dns-deep-dive/07_security_and_troubleshooting/diagnostic_tools.svg)
+
+---
 ## Cache Poisoning
 
 - Inject fake records into a resolver's cache

@@ -670,3 +670,15 @@ ansible all -m setup \
     name: nginx
     state: present
 ```
+
+---
+
+## Ad Hoc Command Anatomy
+
+![ad_hoc_command_anatomy](svg/courses/devops/ansible/03_modules_and_ad_hoc/ad_hoc_command_anatomy.svg)
+
+---
+
+## Common Module Categories
+
+![common_module_categories](svg/courses/devops/ansible/03_modules_and_ad_hoc/common_module_categories.svg)

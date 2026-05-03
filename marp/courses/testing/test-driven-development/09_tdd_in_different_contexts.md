@@ -25,6 +25,11 @@ audience:
 ![tdd_contexts](svg/courses/testing/test-driven-development/09_tdd_in_different_contexts/tdd_contexts.svg)
 
 ---
+## Context Trade Offs
+
+![context_tradeoffs](svg/courses/testing/test-driven-development/09_tdd_in_different_contexts/context_tradeoffs.svg)
+
+---
 ## Web Applications
 
 - Unit tests: components, controllers, business logic

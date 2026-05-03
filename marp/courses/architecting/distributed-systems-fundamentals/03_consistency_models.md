@@ -16,6 +16,11 @@ audience:
 ![consistency_spectrum](svg/courses/architecting/distributed-systems-fundamentals/03_consistency_models/consistency_spectrum.svg)
 
 ---
+## Linearisable Compared
+
+![linearisable_example](svg/courses/architecting/distributed-systems-fundamentals/03_consistency_models/linearisable_example.svg)
+
+---
 ## What This Chapter Covers
 
 - A spectrum of consistency

@@ -11,6 +11,12 @@ audience:
 # Writing for International Audiences
 
 ---
+
+## Global Writing Tips
+
+![global_writing_tips](svg/courses/development_methodologies/technical-writing/13_writing_for_international_audiences/global_writing_tips.svg)
+
+---
 ## What This Chapter Covers
 
 - Plain language principles

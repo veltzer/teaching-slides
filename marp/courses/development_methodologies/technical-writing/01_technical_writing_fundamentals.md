@@ -10,6 +10,12 @@ audience:
 # Technical Writing Fundamentals
 
 ---
+
+## Technical Writing Pillars
+
+![writing_pillars](svg/courses/development_methodologies/technical-writing/01_technical_writing_fundamentals/writing_pillars.svg)
+
+---
 ## What This Chapter Covers
 
 - Why technical writing matters

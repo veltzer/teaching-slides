@@ -15,6 +15,14 @@ audience:
 ---
 # Security and Terraform
 
+---
+
+## Security Practices
+
+![security_practices](svg/courses/devops/terraform/09_security/security_practices.svg)
+
+---
+
 ## Security Concerns with Terraform
 
 - State files contain sensitive data in plaintext
@@ -28,6 +36,12 @@ audience:
 ## Security Layers
 
 ![security_layers](svg/courses/devops/terraform/09_security/security_layers.svg)
+
+---
+
+## Security Controls
+
+![security_controls](svg/courses/devops/terraform/09_security/security_controls.svg)
 
 ---
 

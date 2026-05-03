@@ -125,6 +125,11 @@ audience:
 - Pick by: how much staleness can you tolerate
 
 ---
+## Two Consistency Models
+
+![acid_vs_base](svg/courses/databases/introduction-to-databases/04_sql_vs_nosql/acid_vs_base.svg)
+
+---
 ## Common SQL/NoSQL Mistakes
 
 - Choosing NoSQL for hype

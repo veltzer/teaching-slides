@@ -105,6 +105,11 @@ audience:
 - UI (Kibana, Grafana, Datadog) queries and alerts
 
 ---
+## End to End Log Pipeline
+
+![log_pipeline](svg/courses/architecting/twelve-factor-app/12_logs/log_pipeline.svg)
+
+---
 ## Tracing Complements Logging
 
 - Logs answer "what happened?"

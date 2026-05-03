@@ -167,6 +167,16 @@ message Notification {
 ![protobuf_anatomy](svg/courses/networking/grpc/02_protocol_buffers/protobuf_anatomy.svg)
 
 ---
+## Wire Format
+
+![wire_format](svg/courses/networking/grpc/02_protocol_buffers/wire_format.svg)
+
+---
+## Schema Evolution Rules
+
+![proto_evolution](svg/courses/networking/grpc/02_protocol_buffers/proto_evolution.svg)
+
+---
 ## Well-Known Types
 
 - `google.protobuf.Timestamp` — UTC time, second + nanos

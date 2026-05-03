@@ -172,3 +172,8 @@ default_args = {
 - DAGs that span days of execution time
 - Heavy work in DAG definition (parsing slows)
 - No retries on flaky tasks
+
+---
+## Task Dependency Patterns
+
+![dependency_patterns](svg/courses/data_engineering/apache-airflow/02_dags_and_task_dependencies/dependency_patterns.svg)

@@ -129,6 +129,11 @@ audience:
 - Used heavily in enterprise networks
 
 ---
+## VLAN Mechanics
+
+![vlan_tagging](svg/courses/networking/tcp-ip-deep-dive/02_link_layer/vlan_tagging.svg)
+
+---
 ## Spanning Tree Protocol
 
 - Prevents loops in switched networks

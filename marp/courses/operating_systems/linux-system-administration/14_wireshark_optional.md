@@ -671,3 +671,9 @@ tshark -r /tmp/exercise.pcap -q -z conv,tcp
 ```
 
 1. Identify any retransmissions or TCP anomalies in the capture using the expert info feature
+
+---
+
+## Wireshark Capture Filters
+
+![wireshark_capture_filters](svg/courses/operating_systems/linux-system-administration/14_wireshark_optional/wireshark_capture_filters.svg)

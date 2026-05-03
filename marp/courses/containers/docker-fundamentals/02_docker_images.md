@@ -183,3 +183,8 @@ docker push registry.example.com/team/myapp:v1.1
 - Building one image per environment (dev/staging/prod) instead of one image + config
 - Pulling without authentication, then puzzled by rate limits
 - Pushing secrets baked into image layers (they stay forever, even if "deleted")
+
+---
+## Image Registry Lifecycle
+
+![registry_workflow](svg/courses/containers/docker-fundamentals/02_docker_images/registry_workflow.svg)

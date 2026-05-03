@@ -35,6 +35,16 @@ audience:
 ![interceptor_chain](svg/courses/networking/grpc/05_interceptors_and_security/interceptor_chain.svg)
 
 ---
+## Interceptor Use Cases
+
+![interceptor_uses](svg/courses/networking/grpc/05_interceptors_and_security/interceptor_uses.svg)
+
+---
+## Authentication Layers
+
+![auth_layers](svg/courses/networking/grpc/05_interceptors_and_security/auth_layers.svg)
+
+---
 ## Why Interceptors?
 
 - Cross-cutting concerns: logging, tracing, auth

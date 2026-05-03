@@ -41,6 +41,12 @@ audience:
 
 ---
 
+## Why Use Roles
+
+![role_benefits](svg/courses/devops/ansible/07_roles/role_benefits.svg)
+
+---
+
 ## Why Use Roles?
 
 ```misc
@@ -745,3 +751,15 @@ ansible-project/
     - Custom error pages
 1. Use both roles in a `site.yml` playbook
 1. Test with different variable values per environment
+
+---
+
+## Role Dependencies
+
+![role_dependencies](svg/courses/devops/ansible/07_roles/role_dependencies.svg)
+
+---
+
+## Role Search Path
+
+![role_search_path](svg/courses/devops/ansible/07_roles/role_search_path.svg)

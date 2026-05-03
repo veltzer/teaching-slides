@@ -58,6 +58,11 @@ audience:
 - Requires CNI that enforces (Calico, Cilium)
 
 ---
+## Building Blocks
+
+![network_policy_intent](svg/courses/containers/kubernetes/06_networking/network_policy_intent.svg)
+
+---
 ## Sample NetworkPolicy
 
 ```yaml

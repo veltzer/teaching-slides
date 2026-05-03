@@ -44,6 +44,11 @@ audience:
 - **Mock**: returns canned data; useful for testing
 
 ---
+## Integration Targets
+
+![integration_kinds](svg/courses/architecting/api-gateway-patterns/04_aws_api_gateway/integration_kinds.svg)
+
+---
 ## Lambda Proxy
 
 ```yaml

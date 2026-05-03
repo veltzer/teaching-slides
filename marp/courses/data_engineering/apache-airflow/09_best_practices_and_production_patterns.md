@@ -149,3 +149,8 @@ def test_dag_loads():
 - XComs for small inter-task data; external stores for big
 - Production: idempotency, monitoring, secrets
 - The standard for batch data pipelines
+
+---
+## DAG Anti-Patterns
+
+![dag_anti_patterns](svg/courses/data_engineering/apache-airflow/09_best_practices_and_production_patterns/dag_anti_patterns.svg)

@@ -494,3 +494,15 @@ tasks:
     1. Uses `block/rescue` for error handling
 1. Test with `--check --diff` first
 1. Verify idempotency by running twice
+
+---
+
+## Loop Constructs
+
+![loop_constructs](svg/courses/devops/ansible/06_conditionals_and_loops/loop_constructs.svg)
+
+---
+
+## Conditional Expressions
+
+![conditional_expressions](svg/courses/devops/ansible/06_conditionals_and_loops/conditional_expressions.svg)

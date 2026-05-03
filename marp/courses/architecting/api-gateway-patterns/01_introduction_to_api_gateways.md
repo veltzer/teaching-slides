@@ -55,6 +55,11 @@ audience:
 - Logging, metrics, tracing
 
 ---
+## Four Pillars
+
+![gateway_responsibilities](svg/courses/architecting/api-gateway-patterns/01_introduction_to_api_gateways/responsibilities.svg)
+
+---
 ## Cross-Cutting Concerns
 
 - Same logic that every service would need

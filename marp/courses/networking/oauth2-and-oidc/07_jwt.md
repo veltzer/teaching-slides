@@ -113,6 +113,11 @@ audience:
 - Use RS256 (or ES256) in OAuth2/OIDC
 
 ---
+## JWT Pitfall Catalogue
+
+![jwt_pitfalls](svg/courses/networking/oauth2-and-oidc/07_jwt/jwt_pitfalls.svg)
+
+---
 ## The "alg=none" Attack
 
 - A malicious token with `alg: "none"`

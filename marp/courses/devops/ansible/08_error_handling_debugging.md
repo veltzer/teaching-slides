@@ -517,3 +517,15 @@ Template rendering wrong    -->  template to /tmp first
 1. Use `failed_when` for custom failure conditions
 1. Run `ansible-lint` on your playbooks and fix issues
 1. Use `--check --diff -v` to debug
+
+---
+
+## Debugging Techniques
+
+![debugging_techniques](svg/courses/devops/ansible/08_error_handling_debugging/debugging_techniques.svg)
+
+---
+
+## Error Recovery Strategies
+
+![error_recovery_strategies](svg/courses/devops/ansible/08_error_handling_debugging/error_recovery_strategies.svg)

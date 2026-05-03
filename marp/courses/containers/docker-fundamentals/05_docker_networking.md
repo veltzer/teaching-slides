@@ -175,3 +175,8 @@ docker exec api getent hosts db
 - Forgetting `-p` &#8594; the container is up but unreachable from the host
 - Publishing too many ports &#8594; widens attack surface
 - Reusing the default bridge for new projects &#8594; lose DNS, lose isolation
+
+---
+## Docker Network Drivers
+
+![network_drivers](svg/courses/containers/docker-fundamentals/05_docker_networking/network_drivers.svg)

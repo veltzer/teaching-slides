@@ -11,6 +11,12 @@ audience:
 # Writing Style
 
 ---
+
+## Writing Style Principles
+
+![style_principles](svg/courses/development_methodologies/technical-writing/04_writing_style/style_principles.svg)
+
+---
 ## What This Chapter Covers
 
 - Clarity and conciseness
@@ -24,6 +30,11 @@ audience:
 ## Active Voice
 
 ![passive_to_active](svg/courses/development_methodologies/technical-writing/04_writing_style/passive_to_active.svg)
+
+---
+## Style Pillars
+
+![style_pillars](svg/courses/development_methodologies/technical-writing/04_writing_style/style_pillars.svg)
 
 ---
 ## Clarity Above All

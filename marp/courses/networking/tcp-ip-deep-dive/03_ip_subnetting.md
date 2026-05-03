@@ -90,6 +90,11 @@ audience:
 - For internal networks behind NAT
 
 ---
+## Address Range Map
+
+![private_ranges](svg/courses/networking/tcp-ip-deep-dive/03_ip_subnetting/private_ranges.svg)
+
+---
 ## Special Reserved Ranges
 
 - 127.0.0.0/8 — loopback (`localhost`)

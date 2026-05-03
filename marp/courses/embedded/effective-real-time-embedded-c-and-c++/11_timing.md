@@ -849,3 +849,15 @@ void good_isr(void) {
 1. **Jitter compensation** - for periodic events
 1. **Watchdog design** - balance safety and false triggers
 1. **Debug impact** - measure and compensate
+
+---
+
+## Scheduling Algorithms
+
+![scheduling_algorithms](svg/courses/embedded/effective-real-time-embedded-c-and-c++/11_timing/scheduling_algorithms.svg)
+
+---
+
+## Jitter and Latency
+
+![jitter_and_latency](svg/courses/embedded/effective-real-time-embedded-c-and-c++/11_timing/jitter_and_latency.svg)

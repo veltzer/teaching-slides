@@ -32,6 +32,11 @@ audience:
 - Sells the desktop conveniences for predictability
 
 ---
+## RTOS Features
+
+![rtos_features](svg/courses/real_time/real-time-programming/03_the_connections_between_real_time_systems_and_operating_systems/rtos_features.svg)
+
+---
 ## Common RTOSes
 
 - **FreeRTOS**: dominant in microcontrollers; open source; small footprint

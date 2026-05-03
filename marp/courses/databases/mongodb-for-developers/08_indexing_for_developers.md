@@ -26,6 +26,11 @@ audience:
 ![index_types](svg/courses/databases/mongodb-for-developers/08_indexing_for_developers/index_types.svg)
 
 ---
+## Index Design Rules
+
+![index_design_rules](svg/courses/databases/mongodb-for-developers/08_indexing_for_developers/index_design_rules.svg)
+
+---
 ## Single-Field Index
 
 ```javascript

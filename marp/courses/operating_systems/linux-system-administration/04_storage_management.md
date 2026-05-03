@@ -1183,3 +1183,21 @@ parted -s /dev/sdb mkpart primary ext4 1MiB 100%
 # fdisk may not align properly on older versions
 # Use parted or gdisk for reliable alignment
 ```
+
+---
+
+## Filesystem Types
+
+![filesystem_types](svg/courses/operating_systems/linux-system-administration/04_storage_management/filesystem_types.svg)
+
+---
+
+## Disk Partitioning Schemes
+
+![disk_partitioning_schemes](svg/courses/operating_systems/linux-system-administration/04_storage_management/disk_partitioning_schemes.svg)
+
+---
+
+## Swap Space Management
+
+![swap_space_management](svg/courses/operating_systems/linux-system-administration/04_storage_management/swap_space_management.svg)

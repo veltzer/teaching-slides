@@ -12,6 +12,12 @@ audience:
 # Review Tools
 
 ---
+
+## Review Tool Categories
+
+![tool_categories](svg/courses/development_methodologies/code-review-best-practices/08_review_tools/tool_categories.svg)
+
+---
 ## What This Chapter Covers
 
 - GitHub pull requests

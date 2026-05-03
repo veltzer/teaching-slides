@@ -27,6 +27,11 @@ audience:
 ![vendor_compare](svg/courses/architecting/serverless-architecture/08_vendor_comparison/vendor_compare.svg)
 
 ---
+## Platform Comparison
+
+![platform_compare](svg/courses/architecting/serverless-architecture/08_vendor_comparison/platform_compare.svg)
+
+---
 ## AWS Lambda
 
 - Original FaaS; deepest ecosystem

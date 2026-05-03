@@ -636,3 +636,15 @@ void publish(publisher_t* pub, void* data) {
 1. **Atomic operations** enable lock-free code
 1. **Message passing** reduces coupling
 1. **Priority inversion** needs special handling
+
+---
+
+## Synchronization Primitives
+
+![synchronization_primitives](svg/courses/embedded/effective-real-time-embedded-c-and-c++/06_intertask_communication/synchronization_primitives.svg)
+
+---
+
+## Message Queues
+
+![message_queues](svg/courses/embedded/effective-real-time-embedded-c-and-c++/06_intertask_communication/message_queues.svg)

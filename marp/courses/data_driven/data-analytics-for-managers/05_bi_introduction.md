@@ -92,6 +92,11 @@ audience:
 - Test by handing it to someone unfamiliar with the data
 
 ---
+## Design Principles at a Glance
+
+![dashboard_design](svg/courses/data_driven/data-analytics-for-managers/05_bi_introduction/dashboard_design.svg)
+
+---
 ## Self-Service vs Curated
 
 - **Curated**: data team builds and owns dashboards; users consume

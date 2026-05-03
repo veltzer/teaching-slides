@@ -16,6 +16,16 @@ audience:
 ![encapsulation](svg/courses/principles/object-oriented-programming/03_encapsulation/encapsulation.svg)
 
 ---
+## Access Modifiers
+
+![access_modifiers](svg/courses/principles/object-oriented-programming/03_encapsulation/access_modifiers.svg)
+
+---
+## Why It Matters
+
+![encapsulation_benefits](svg/courses/principles/object-oriented-programming/03_encapsulation/encapsulation_benefits.svg)
+
+---
 ## What This Chapter Covers
 
 - What encapsulation actually means

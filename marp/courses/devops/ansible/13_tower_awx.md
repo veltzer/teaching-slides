@@ -270,3 +270,9 @@ ansible-builder build -t my-custom-ee:latest
 - API-driven automation integration
 - Centralized credential management
 - Compliance and reporting requirements
+
+---
+
+## Tower and AWX Features
+
+![tower_awx_features](svg/courses/devops/ansible/13_tower_awx/tower_awx_features.svg)

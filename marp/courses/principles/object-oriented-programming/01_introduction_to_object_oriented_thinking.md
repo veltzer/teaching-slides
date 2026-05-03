@@ -24,6 +24,11 @@ audience:
 ![object_pillars](svg/courses/principles/object-oriented-programming/01_introduction_to_object_oriented_thinking/object_pillars.svg)
 
 ---
+## OOP Versus Other Paradigms
+
+![oop_paradigm](svg/courses/principles/object-oriented-programming/01_introduction_to_object_oriented_thinking/oop_paradigm.svg)
+
+---
 ## The Procedural Model
 
 - Code is organised as functions that operate on data

@@ -58,6 +58,11 @@ audience:
 - Auto-instrumentation: agents
 
 ---
+## Component Layers
+
+![otel_components](svg/courses/observability_and_monitoring/opentelemetry/01_introduction/components.svg)
+
+---
 ## Why Use OTel
 
 - One instrumentation; many backends

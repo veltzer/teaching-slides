@@ -30,6 +30,11 @@ audience:
 - Read it; it's the cumulative wisdom of the community
 
 ---
+## Threat Catalogue
+
+![security_threats](svg/courses/networking/oauth2-and-oidc/08_security/security_threats.svg)
+
+---
 ## CSRF on Authorize
 
 - Attacker tricks user into starting an auth flow
@@ -100,6 +105,11 @@ audience:
 - Pair with OAuth2/OIDC for a strong stack
 - Increasingly required for high-value apps
 - Best practice in 2026
+
+---
+## Defence In Depth Layers
+
+![defence_layers](svg/courses/networking/oauth2-and-oidc/08_security/defence_layers.svg)
 
 ---
 ## TLS Everywhere

@@ -39,6 +39,11 @@ audience:
 - The path of least resistance for most organizations
 
 ---
+## Trade Off Summary
+
+![monorepo_tradeoffs](svg/courses/git/advanced-git/06_monorepo_strategies/monorepo_tradeoffs.svg)
+
+---
 ## Why Choose Monorepo?
 
 - One change, one PR, even when it spans services

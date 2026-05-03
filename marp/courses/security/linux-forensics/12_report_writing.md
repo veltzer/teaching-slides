@@ -970,3 +970,15 @@ Resources to Follow:
 - DFIR community Discord/Slack channels
 - Conference talks (DFRWS, OSDFCon, SANS)
 ```
+
+---
+
+## Report Writing Principles
+
+![report_writing_principles](svg/courses/security/linux-forensics/12_report_writing/report_writing_principles.svg)
+
+---
+
+## Case Documentation
+
+![case_documentation](svg/courses/security/linux-forensics/12_report_writing/case_documentation.svg)

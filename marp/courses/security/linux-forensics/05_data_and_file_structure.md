@@ -854,3 +854,15 @@ gdb /forensics/mounted/tmp/.hidden/tool \
 # - Timestamp
 # - Core dump file location
 ```
+
+---
+
+## Superblock Structure
+
+![superblock_structure](svg/courses/security/linux-forensics/05_data_and_file_structure/superblock_structure.svg)
+
+---
+
+## Journaling Filesystems
+
+![journaling_filesystems](svg/courses/security/linux-forensics/05_data_and_file_structure/journaling_filesystems.svg)

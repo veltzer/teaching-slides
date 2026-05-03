@@ -35,6 +35,11 @@ audience:
 ![providers](svg/courses/networking/oauth2-and-oidc/09_providers/providers.svg)
 
 ---
+## Provider Picker
+
+![provider_picker](svg/courses/networking/oauth2-and-oidc/09_providers/provider_picker.svg)
+
+---
 ## Keycloak
 
 - Open source, run by Red Hat
@@ -165,6 +170,11 @@ docker run -p 8080:8080 \
 - Not pinning the algorithm in JWT validation
 - Default lifetimes that don't match your security posture
 - Custom middleware that bypasses validation
+
+---
+## Integration Patterns
+
+![integration_patterns](svg/courses/networking/oauth2-and-oidc/09_providers/integration_patterns.svg)
 
 ---
 ## Federation

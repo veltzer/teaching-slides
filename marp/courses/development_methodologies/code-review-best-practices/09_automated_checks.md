@@ -11,6 +11,12 @@ audience:
 # Automated Checks
 
 ---
+
+## Automated Check Layers
+
+![automation_layers](svg/courses/development_methodologies/code-review-best-practices/09_automated_checks/automation_layers.svg)
+
+---
 ## What This Chapter Covers
 
 - Linters and formatters

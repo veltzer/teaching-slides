@@ -10,6 +10,12 @@ audience:
 # Introduction to Elasticsearch
 
 ---
+
+## Common Use Cases
+
+![use_cases](svg/courses/databases/elasticsearch-for-developers/01_introduction_to_elasticsearch/use_cases.svg)
+
+---
 ## What This Chapter Covers
 
 - What Elasticsearch is

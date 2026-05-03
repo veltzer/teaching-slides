@@ -16,6 +16,11 @@ audience:
 ![cache_strategies](svg/courses/architecting/system-design/04_caching_strategies/cache_strategies.svg)
 
 ---
+## Cache Invalidation
+
+![cache_invalidation](svg/courses/architecting/system-design/04_caching_strategies/cache_invalidation.svg)
+
+---
 ## What This Chapter Covers
 
 - Where to cache

@@ -113,6 +113,11 @@ audience:
 - Polyglot stacks
 
 ---
+## Fit and Misfit
+
+![k8s_wins_loses](svg/courses/containers/kubernetes/01_introduction_to_kubernetes/wins_loses.svg)
+
+---
 ## When K8s Is Overkill
 
 - One service

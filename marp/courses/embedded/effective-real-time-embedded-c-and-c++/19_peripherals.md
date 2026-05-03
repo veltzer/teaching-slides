@@ -1629,3 +1629,9 @@ void initializePeripheralsCorrectly() {
     startPeripheralOperations();
 }
 ```
+
+---
+
+## Timer Peripheral Modes
+
+![timer_peripheral_modes](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/timer_peripheral_modes.svg)

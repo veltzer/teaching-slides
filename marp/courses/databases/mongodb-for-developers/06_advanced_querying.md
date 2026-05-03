@@ -25,6 +25,11 @@ audience:
 ![query_operators](svg/courses/databases/mongodb-for-developers/06_advanced_querying/query_operators.svg)
 
 ---
+## Operator Categories Detail
+
+![operator_categories](svg/courses/databases/mongodb-for-developers/06_advanced_querying/operator_categories.svg)
+
+---
 ## Array Queries
 
 ```python

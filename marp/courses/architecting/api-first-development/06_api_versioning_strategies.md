@@ -186,3 +186,8 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Multiple major versions running for years (multiple maintenance burdens)
 - No versioning, just trust ("nothing breaking happens here")
 - Versioning at the wrong level (per-endpoint when you have a whole API contract)
+
+---
+## Where to Put the Version
+
+![version_methods](svg/courses/architecting/api-first-development/06_api_versioning_strategies/version_methods.svg)

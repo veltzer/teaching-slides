@@ -139,3 +139,8 @@ with DAG('my_dag', start_date=datetime(2026, 1, 1), schedule='@daily') as dag:
 - XComs
 - Connections
 - Production patterns
+
+---
+## Where Airflow Fits
+
+![airflow_use_cases](svg/courses/data_engineering/apache-airflow/01_introduction_to_apache_airflow/airflow_use_cases.svg)

@@ -99,6 +99,11 @@ audience:
 - Migrate over time
 
 ---
+## Decision Lenses
+
+![backend_picker](svg/courses/observability_and_monitoring/opentelemetry/08_backends_and_visualisation/backend_picker.svg)
+
+---
 ## Switching Backends
 
 - Reconfigure collector exporter

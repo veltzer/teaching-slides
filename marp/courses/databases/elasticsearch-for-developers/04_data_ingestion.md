@@ -11,6 +11,12 @@ audience:
 # Data Ingestion
 
 ---
+
+## Ingestion Methods
+
+![ingestion_methods](svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/ingestion_methods.svg)
+
+---
 ## What This Chapter Covers
 
 - Single document ingestion

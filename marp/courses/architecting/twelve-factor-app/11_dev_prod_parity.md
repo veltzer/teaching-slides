@@ -19,6 +19,11 @@ audience:
 - Closing the gap is a continuous discipline, not a one-time setup
 
 ---
+## Three Parity Gaps
+
+![parity_gaps](svg/courses/architecting/twelve-factor-app/11_dev_prod_parity/parity_gaps.svg)
+
+---
 ## Three Gaps to Close
 
 - **Time gap**: code written today reaches production weeks later

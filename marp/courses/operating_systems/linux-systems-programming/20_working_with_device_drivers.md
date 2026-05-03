@@ -14,6 +14,12 @@ audience:
 
 ---
 
+## Device Driver Classes
+
+![device_classes](svg/courses/operating_systems/linux-systems-programming/20_working_with_device_drivers/device_classes.svg)
+
+---
+
 ## Everything is a File
 
 1. **UNIX philosophy** - Uniform interface for all I/O

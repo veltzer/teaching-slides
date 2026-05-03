@@ -11,6 +11,12 @@ audience:
 # Code Examples and Snippets
 
 ---
+
+## Code Snippet Best Practices
+
+![snippet_practices](svg/courses/development_methodologies/technical-writing/08_code_examples_and_snippets/snippet_practices.svg)
+
+---
 ## What This Chapter Covers
 
 - Writing effective code examples

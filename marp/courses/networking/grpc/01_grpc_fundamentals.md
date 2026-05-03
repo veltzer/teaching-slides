@@ -70,6 +70,16 @@ audience:
 ![grpc_architecture](svg/courses/networking/grpc/01_grpc_fundamentals/grpc_architecture.svg)
 
 ---
+## HTTP/2 Features
+
+![http2_features](svg/courses/networking/grpc/01_grpc_fundamentals/http2_features.svg)
+
+---
+## gRPC Compared To REST
+
+![grpc_vs_rest](svg/courses/networking/grpc/01_grpc_fundamentals/grpc_vs_rest.svg)
+
+---
 ## Communication Model
 
 - Client invokes a method on a stub (generated)

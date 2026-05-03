@@ -26,6 +26,11 @@ audience:
 ![workflow](svg/courses/data_science/data-analyst-fundamentals/01_data_analysis_workflow/workflow.svg)
 
 ---
+## Core Analyst Skills
+
+![analyst_skills](svg/courses/data_science/data-analyst-fundamentals/01_data_analysis_workflow/analyst_skills.svg)
+
+---
 ## What Data Analysis Is
 
 - Looking at data to *answer a question* or *make a decision*

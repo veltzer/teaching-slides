@@ -201,3 +201,8 @@ docker run --rm \
 - `docker volume prune` in a hurry &#8594; deleted production data
 - Sharing a volume between two writers without coordination &#8594; corruption
 - Trusting bind mount performance on Mac/Windows for hot loops
+
+---
+## Choosing the Right Storage Type
+
+![volume_use_cases](svg/courses/containers/docker-fundamentals/06_docker_volumes_and_storage/volume_use_cases.svg)

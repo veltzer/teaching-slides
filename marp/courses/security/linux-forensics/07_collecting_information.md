@@ -1033,3 +1033,15 @@ Before touching any device:
    - Evidence tags with case number
    - Sign and date all seals
 ```
+
+---
+
+## Chain of Custody
+
+![chain_of_custody](svg/courses/security/linux-forensics/07_collecting_information/chain_of_custody.svg)
+
+---
+
+## Live Response Steps
+
+![live_response_steps](svg/courses/security/linux-forensics/07_collecting_information/live_response_steps.svg)

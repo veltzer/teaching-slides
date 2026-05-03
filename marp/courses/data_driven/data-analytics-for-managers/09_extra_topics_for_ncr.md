@@ -49,6 +49,11 @@ audience:
 - Strong fit for organisations already on Microsoft enterprise stack
 
 ---
+## Three Clouds Side By Side
+
+![cloud_stack_compare](svg/courses/data_driven/data-analytics-for-managers/09_extra_topics_for_ncr/cloud_compare.svg)
+
+---
 ## Containers
 
 - Application packaged with all its dependencies

@@ -309,6 +309,12 @@ execute_process(
 
 ---
 
+## Toolchain File Anatomy
+
+![toolchain_files](svg/courses/build_systems/cmake/08_miscellaneous_and_advanced/toolchain_files.svg)
+
+---
+
 ## Toolchain File Variables
 
 | Variable | Description |

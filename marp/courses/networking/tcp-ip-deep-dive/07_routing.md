@@ -62,6 +62,11 @@ audience:
 - The default for any non-trivial network
 
 ---
+## Protocol Families
+
+![routing_protocols](svg/courses/networking/tcp-ip-deep-dive/07_routing/routing_protocols.svg)
+
+---
 ## Distance-Vector
 
 - Each router knows distance + next hop per destination

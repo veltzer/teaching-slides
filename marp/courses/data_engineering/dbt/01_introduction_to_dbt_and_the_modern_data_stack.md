@@ -144,3 +144,8 @@ WHERE total > 0
 - Sources, seeds, snapshots
 - Macros
 - Production deployment
+
+---
+## dbt Development Workflow
+
+![dbt_workflow](svg/courses/data_engineering/dbt/01_introduction_to_dbt_and_the_modern_data_stack/dbt_workflow.svg)

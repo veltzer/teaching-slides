@@ -80,6 +80,11 @@ audience:
 - Mobile preview if relevant
 
 ---
+## Information Layers
+
+![dashboard_layers](svg/courses/data_science/data-analyst-fundamentals/11_dashboards/dashboard_layers.svg)
+
+---
 ## Visual Hierarchy
 
 - Big numbers for headline metrics

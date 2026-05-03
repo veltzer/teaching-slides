@@ -80,6 +80,11 @@ audience:
 - Standard tool for SaaS; underused everywhere else
 
 ---
+## Cohort Workflow
+
+![cohort_analysis](svg/courses/data_driven/data-analytics-for-managers/04_the_business_case_for_data_analysis/cohort_analysis.svg)
+
+---
 ## New Products: Build vs Buy vs Skip
 
 - Data on existing usage hints at unmet needs

@@ -36,6 +36,11 @@ audience:
 ![test_fundamentals](svg/courses/testing/test-driven-development/03_unit_testing_foundations_for_tdd/test_fundamentals.svg)
 
 ---
+## FIRST Expanded
+
+![first_principles](svg/courses/testing/test-driven-development/03_unit_testing_foundations_for_tdd/first_principles.svg)
+
+---
 ## Arrange-Act-Assert
 
 ```python
@@ -54,6 +59,11 @@ def test_user_promotion():
 - Each test follows the same structure
 - A reader can scan for "what's being tested?"
 - Spaces or comments separate the sections
+
+---
+## Arrange Act Assert Layout
+
+![arrange_act_assert](svg/courses/testing/test-driven-development/03_unit_testing_foundations_for_tdd/arrange_act_assert.svg)
 
 ---
 ## Test Naming
@@ -111,6 +121,11 @@ def test_user_promotion():
 - Don't share mutable state across tests
 - Test runners often randomise order
 - Failures should be reproducible in isolation
+
+---
+## Independence Pitfalls
+
+![test_independence](svg/courses/testing/test-driven-development/03_unit_testing_foundations_for_tdd/test_independence.svg)
 
 ---
 ## Test Isolation

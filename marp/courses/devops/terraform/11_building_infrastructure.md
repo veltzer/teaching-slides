@@ -15,6 +15,14 @@ audience:
 ---
 # Building Infrastructure
 
+---
+
+## Infrastructure Build Workflow
+
+![infrastructure_workflow](svg/courses/devops/terraform/11_building_infrastructure/infrastructure_workflow.svg)
+
+---
+
 ## Configuration Management vs Provisioning
 
 ```misc

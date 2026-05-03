@@ -229,3 +229,8 @@ docker build --build-arg NODE_VERSION=22 -t myapp .
 - Leaving package manager caches behind (`apt-get clean` or `rm -rf /var/lib/apt/lists/*`)
 - Building as root, never adding USER (security smell)
 - Using `:latest` base images (your build is non-reproducible)
+
+---
+## Dockerfile Best Practices
+
+![dockerfile_best_practices](svg/courses/containers/docker-fundamentals/04_building_images_with_dockerfile/dockerfile_best_practices.svg)

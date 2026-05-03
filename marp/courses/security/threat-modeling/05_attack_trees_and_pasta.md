@@ -91,6 +91,11 @@ audience:
 - Each leaf gets cost and probability — reveals the easy path
 
 ---
+## Attack Tree Worked Visual
+
+![attack_tree_example](svg/courses/security/threat-modeling/05_attack_trees_and_pasta/attack_tree_example.svg)
+
+---
 ## Attack Trees in Practice
 
 - Treat as living documents — update with new techniques
@@ -132,6 +137,11 @@ audience:
 ## PASTA Stages Visualized
 
 ![pasta_stages](svg/courses/security/threat-modeling/05_attack_trees_and_pasta/pasta_stages.svg)
+
+---
+## PASTA Outcomes By Phase
+
+![pasta_outcomes](svg/courses/security/threat-modeling/05_attack_trees_and_pasta/pasta_outcomes.svg)
 
 ---
 ## Stage 1: Define Objectives

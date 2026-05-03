@@ -11,6 +11,12 @@ audience:
 # Documentation as Code
 
 ---
+
+## Documentation as Code Pillars
+
+![docs_as_code_pillars](svg/courses/development_methodologies/technical-writing/10_documentation_as_code/docs_as_code_pillars.svg)
+
+---
 ## What This Chapter Covers
 
 - Why docs in the code repo

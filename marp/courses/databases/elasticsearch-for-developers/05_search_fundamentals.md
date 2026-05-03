@@ -11,6 +11,18 @@ audience:
 # Search Fundamentals
 
 ---
+
+## Query Categories
+
+![query_categories](svg/courses/databases/elasticsearch-for-developers/05_search_fundamentals/query_categories.svg)
+
+---
+
+## Search Essentials
+
+![search_essentials](svg/courses/databases/elasticsearch-for-developers/05_search_fundamentals/search_essentials.svg)
+
+---
 ## What This Chapter Covers
 
 - The search API

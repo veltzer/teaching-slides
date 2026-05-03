@@ -23,6 +23,11 @@ audience:
 - Same examples in Python and Java
 
 ---
+## Anatomy Of A Class
+
+![object_anatomy](svg/courses/principles/object-oriented-programming/02_classes_and_objects/object_anatomy.svg)
+
+---
 ## A Class in Python
 
 ```python

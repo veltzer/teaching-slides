@@ -16,6 +16,11 @@ audience:
 ![raft_phases](svg/courses/architecting/distributed-systems-fundamentals/04_consensus_algorithms/raft_phases.svg)
 
 ---
+## Quorum Basics
+
+![quorum_basics](svg/courses/architecting/distributed-systems-fundamentals/04_consensus_algorithms/quorum_basics.svg)
+
+---
 ## What This Chapter Covers
 
 - Why consensus

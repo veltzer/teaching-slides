@@ -693,3 +693,9 @@ ab -n 1000 -c 50 http://localhost/
 
 1. Verify rate limiting triggers `503` errors under load
 1. Check the access log to confirm requests are distributed across backends
+
+---
+
+## Web Server Basics
+
+![web_server_basics](svg/courses/operating_systems/linux-system-administration/08_network_services_optional/web_server_basics.svg)

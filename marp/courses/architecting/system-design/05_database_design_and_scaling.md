@@ -16,6 +16,11 @@ audience:
 ![scaling_paths](svg/courses/architecting/system-design/05_database_design_and_scaling/scaling_paths.svg)
 
 ---
+## Sharding Styles
+
+![sharding_styles](svg/courses/architecting/system-design/05_database_design_and_scaling/sharding_styles.svg)
+
+---
 ## What This Chapter Covers
 
 - SQL vs NoSQL choice

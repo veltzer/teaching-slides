@@ -12,6 +12,12 @@ audience:
 # Review Culture
 
 ---
+
+## Review Culture Pillars
+
+![culture_pillars](svg/courses/development_methodologies/code-review-best-practices/13_review_culture/culture_pillars.svg)
+
+---
 ## What This Chapter Covers
 
 - Psychological safety

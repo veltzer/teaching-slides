@@ -31,6 +31,11 @@ audience:
 ![exchange_types](svg/courses/queues/rabbitmq/02_exchanges_queues_and_bindings/exchange_types.svg)
 
 ---
+## Queue Properties
+
+![queue_properties](svg/courses/queues/rabbitmq/02_exchanges_queues_and_bindings/queue_properties.svg)
+
+---
 ## Queues
 
 - Hold messages until consumed
@@ -167,6 +172,11 @@ ch.basic_publish(exchange='log', routing_key='auth.error', body='login failed')
 - Routing keys: `<entity>.<action>.<context>` (e.g., `user.signup.web`)
 - Consistency makes ops easier
 - Document the conventions for your project
+
+---
+## Exchange Choice Guide
+
+![exchange_choice_guide](svg/courses/queues/rabbitmq/02_exchanges_queues_and_bindings/exchange_choice_guide.svg)
 
 ---
 ## Choosing An Exchange Type

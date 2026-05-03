@@ -11,6 +11,12 @@ audience:
 # Data Modeling and Mappings
 
 ---
+
+## Common Field Types
+
+![field_types](svg/courses/databases/elasticsearch-for-developers/03_data_modeling_and_mappings/field_types.svg)
+
+---
 ## What This Chapter Covers
 
 - Field types

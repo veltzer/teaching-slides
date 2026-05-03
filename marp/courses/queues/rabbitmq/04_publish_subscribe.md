@@ -16,6 +16,11 @@ audience:
 ![pubsub_pattern](svg/courses/queues/rabbitmq/04_publish_subscribe/pubsub_pattern.svg)
 
 ---
+## Fanout Topology
+
+![fanout_topology](svg/courses/queues/rabbitmq/04_publish_subscribe/fanout_topology.svg)
+
+---
 ## What This Chapter Covers
 
 - The pub/sub pattern with fanout

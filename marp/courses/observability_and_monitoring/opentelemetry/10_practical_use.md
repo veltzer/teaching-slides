@@ -36,6 +36,11 @@ audience:
 - Coexist forever or migrate
 
 ---
+## Common Migration Paths
+
+![migration_paths](svg/courses/observability_and_monitoring/opentelemetry/10_practical_use/migration_paths.svg)
+
+---
 ## Common Architectures
 
 - App SDK to local collector (sidecar)

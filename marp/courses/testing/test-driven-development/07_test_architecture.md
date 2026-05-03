@@ -36,6 +36,11 @@ audience:
 - Inverted pyramid (mostly E2E) is a smell
 
 ---
+## Pyramid Visualised
+
+![test_pyramid](svg/courses/testing/test-driven-development/07_test_architecture/test_pyramid.svg)
+
+---
 ## Why Pyramid Shape
 
 - Unit tests are fast and pinpoint failures

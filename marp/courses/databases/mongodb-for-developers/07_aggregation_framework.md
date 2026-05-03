@@ -40,6 +40,11 @@ db.orders.aggregate([
 ![pipeline_stages](svg/courses/databases/mongodb-for-developers/07_aggregation_framework/pipeline_stages.svg)
 
 ---
+## Pipeline Thinking
+
+![pipeline_thinking](svg/courses/databases/mongodb-for-developers/07_aggregation_framework/pipeline_thinking.svg)
+
+---
 ## $match
 
 - Like find()

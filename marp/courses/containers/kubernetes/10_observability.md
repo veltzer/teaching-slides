@@ -30,6 +30,11 @@ audience:
 - Together: full picture
 
 ---
+## Cluster Signals
+
+![four_signals](svg/courses/containers/kubernetes/10_observability/four_signals.svg)
+
+---
 ## Logging
 
 - Apps log to stdout / stderr
