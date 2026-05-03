@@ -75,6 +75,11 @@ audience:
 ![categories](svg/courses/design_patterns/design-patterns/01_overview/categories.svg)
 
 ---
+## All 23 GoF Patterns at a Glance
+
+![patterns_map](svg/courses/design_patterns/design-patterns/01_overview/patterns_map.svg)
+
+---
 ## Reading a Pattern Description
 
 - **Intent**: one sentence — what problem the pattern solves

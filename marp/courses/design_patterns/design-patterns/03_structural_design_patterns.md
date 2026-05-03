@@ -220,6 +220,20 @@ class ImageProxy(Image):
 - Disk read happens only on first `display()`
 
 ---
+## AOP: Generalising Proxy and Decorator
+
+- Aspect-oriented programming pulls out *cross-cutting concerns* and weaves them in
+- Logging, security checks, transactions otherwise tangle every method
+- Pointcut: where to intercept; advice: what to run; aspect: the bundled module
+- Implemented at runtime via dynamic proxies, or at compile/load time via bytecode rewriting
+- Closely related to Proxy and Decorator — same idea, different machinery
+
+---
+## Tangled vs Woven
+
+![aop_cross_cutting](svg/courses/design_patterns/design-patterns/03_structural_design_patterns/aop_cross_cutting.svg)
+
+---
 ## Choosing Among Structural Patterns
 
 - Wrong-shaped interface &#8594; Adapter

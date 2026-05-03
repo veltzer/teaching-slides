@@ -141,6 +141,20 @@ resources:
 - For HA
 
 ---
+## Sharing Storage Across Pods
+
+- A `PersistentVolumeClaim` outlives the pod and can be mounted by many pods
+- Access modes: `ReadWriteOnce` (one pod), `ReadWriteMany` (many pods), `ReadOnlyMany`
+- `ReadWriteMany` requires a network filesystem backend (EFS, NFS, CephFS)
+- Block-only stores (EBS, GCE PD, Azure Disk) cannot do RWX
+- The CSI driver provisions a `PersistentVolume` and binds it to the claim
+
+---
+## Shared Storage in Practice
+
+![shared_storage](svg/courses/containers/kubernetes/02_pods/shared_storage.svg)
+
+---
 ## Common Pod Mistakes
 
 - No resource requests (scheduler can't plan)

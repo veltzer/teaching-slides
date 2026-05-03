@@ -92,6 +92,11 @@ audience:
 - All Linux kernel features; Docker just orchestrates them
 
 ---
+## Docker on Linux
+
+![docker_on_linux](svg/courses/containers/docker-fundamentals/01_introduction_to_containers_and_docker/docker_on_linux.svg)
+
+---
 ## Installing Docker on Linux
 
 ```bash

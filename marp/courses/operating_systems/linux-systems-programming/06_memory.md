@@ -274,6 +274,12 @@ close(fd);
 
 ---
 
+## Page Cache View
+
+![file_backed_mmap](svg/courses/operating_systems/linux-systems-programming/06_memory/file_backed_mmap.svg)
+
+---
+
 ## Shared Memory with mmap()
 
 ```c

@@ -221,6 +221,12 @@ Advanced Topics: SR-IOV and DPDK
 
 ---
 
+## SR-IOV: Splitting a NIC Among VMs
+
+![sr_iov_split_nic](svg/courses/operating_systems/qemu-for-kernel-developers/04_qemu_networking/sr_iov_split_nic.svg)
+
+---
+
 Troubleshooting QEMU Networking Issues
 - Common problems and their solutions
 - Debugging tools and techniques

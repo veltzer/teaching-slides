@@ -44,6 +44,11 @@ audience:
 - The most natural fit
 
 ---
+## Queue-Decoupled Worker
+
+![queue_decoupled_worker](svg/courses/architecting/serverless-architecture/02_serverless_design_patterns/queue_decoupled_worker.svg)
+
+---
 ## Fan-Out
 
 - One event triggers many parallel Lambdas
