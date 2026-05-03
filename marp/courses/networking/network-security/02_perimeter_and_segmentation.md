@@ -28,6 +28,11 @@ audience:
 - Logged on every drop
 
 ---
+## Firewall Kinds
+
+![firewall_kinds](svg/courses/networking/network-security/02_perimeter_and_segmentation/firewall_kinds.svg)
+
+---
 ## Stateful vs Stateless
 
 - Stateful tracks connections

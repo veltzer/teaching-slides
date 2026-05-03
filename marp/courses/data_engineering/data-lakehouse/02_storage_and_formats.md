@@ -89,6 +89,11 @@ audience:
 - Lz4: fastest
 
 ---
+## Format Choices
+
+![format_choices](svg/courses/data_engineering/data-lakehouse/02_storage_and_formats/format_choices.svg)
+
+---
 ## File Size
 
 - Small files are an anti-pattern

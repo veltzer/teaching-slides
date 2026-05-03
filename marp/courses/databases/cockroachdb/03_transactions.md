@@ -57,6 +57,11 @@ audience:
 - Cap retries to avoid loops
 
 ---
+## Surviving Serializable
+
+![isolation_recipe](svg/courses/databases/cockroachdb/03_transactions/isolation_recipe.svg)
+
+---
 ## Hot Rows
 
 - Same row written constantly

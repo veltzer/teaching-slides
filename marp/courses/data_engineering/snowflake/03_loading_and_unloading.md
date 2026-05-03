@@ -59,6 +59,11 @@ audience:
 - Tracks loaded files
 
 ---
+## Loading Paths
+
+![load_paths](svg/courses/data_engineering/snowflake/03_loading_and_unloading/load_paths.svg)
+
+---
 ## Load Validation
 
 - VALIDATION_MODE for dry run

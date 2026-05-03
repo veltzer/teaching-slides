@@ -72,6 +72,11 @@ audience:
 - Causal inference is hard
 
 ---
+## Compared
+
+![correlation_causation](svg/courses/machine_learning/machine-learning/01_data_science/correlation_causation.svg)
+
+---
 ## Probability Basics
 
 - Conditional: P(A|B)

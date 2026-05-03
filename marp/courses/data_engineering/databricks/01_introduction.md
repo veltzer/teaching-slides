@@ -72,6 +72,11 @@ audience:
 - Production prefers job clusters
 
 ---
+## Cluster Choices
+
+![cluster_types](svg/courses/data_engineering/databricks/01_introduction/cluster_types.svg)
+
+---
 ## Runtime
 
 - Bundle of Spark plus libraries

@@ -43,6 +43,11 @@ audience:
 - Often combines entity type and id
 
 ---
+## Modelling Building Blocks
+
+![access_patterns](svg/courses/databases/dynamodb/02_data_modeling/access_patterns.svg)
+
+---
 ## Sort Key
 
 - Within a partition

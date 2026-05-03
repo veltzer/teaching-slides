@@ -29,6 +29,11 @@ audience:
 - Tunes the at-least-once guarantee
 
 ---
+## Delivery Guarantees
+
+![delivery_guarantees](svg/courses/architecting/message-queues/03_reliability/delivery_guarantees.svg)
+
+---
 ## Auto-Ack
 
 - Ack on receive

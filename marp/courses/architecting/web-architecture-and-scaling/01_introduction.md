@@ -67,6 +67,11 @@ audience:
 - Cheaper per unit at scale
 
 ---
+## Scale Axes
+
+![scale_axes](svg/courses/architecting/web-architecture-and-scaling/01_introduction/scale_axes.svg)
+
+---
 ## Stateless vs Stateful
 
 - Stateless is easy to scale

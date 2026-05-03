@@ -28,6 +28,11 @@ audience:
 - Lambdas inline
 
 ---
+## Query Patterns
+
+![query_patterns](svg/courses/databases/clickhouse/04_querying/query_patterns.svg)
+
+---
 ## Aggregations
 
 - Standard sum, count, avg

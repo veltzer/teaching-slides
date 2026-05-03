@@ -80,6 +80,11 @@ audience:
 - Resource monitors for cost
 
 ---
+## Core Concepts
+
+![snowflake_concepts](svg/courses/data_engineering/snowflake/01_introduction/snowflake_concepts.svg)
+
+---
 ## Roles
 
 - Hierarchical

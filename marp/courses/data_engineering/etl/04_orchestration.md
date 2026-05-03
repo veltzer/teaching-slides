@@ -56,6 +56,11 @@ audience:
 - Beware sensor backlogs
 
 ---
+## Orchestrator Choices
+
+![scheduler_choices](svg/courses/data_engineering/etl/04_orchestration/scheduler_choices.svg)
+
+---
 ## SLAs
 
 - Latest acceptable arrival

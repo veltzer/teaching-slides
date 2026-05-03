@@ -43,6 +43,11 @@ audience:
 - Storage external
 
 ---
+## Components
+
+![spark_pieces](svg/courses/data_engineering/spark/01_introduction/spark_pieces.svg)
+
+---
 ## Cluster Architecture
 
 ![spark_cluster](svg/courses/data_engineering/spark/01_introduction/spark_cluster.svg)

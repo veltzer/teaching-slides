@@ -41,6 +41,11 @@ audience:
 - High cardinality required
 
 ---
+## Modelling Building Blocks
+
+![partitions_clustering](svg/courses/databases/cassandra/02_data_modeling/partitions_clustering.svg)
+
+---
 ## Composite Partition Keys
 
 - Multiple columns combine into one key

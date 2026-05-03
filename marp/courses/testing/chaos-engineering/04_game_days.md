@@ -45,6 +45,11 @@ audience:
 - Prepare materials
 
 ---
+## Game Day Phases
+
+![game_day_phases](svg/courses/testing/chaos-engineering/04_game_days/game_day_phases.svg)
+
+---
 ## Scenario Design
 
 - Realistic but bounded

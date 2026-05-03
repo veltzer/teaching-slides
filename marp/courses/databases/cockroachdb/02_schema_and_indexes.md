@@ -65,6 +65,11 @@ audience:
 - Each index multiplies write cost
 
 ---
+## Index Kinds
+
+![index_kinds](svg/courses/databases/cockroachdb/02_schema_and_indexes/index_kinds.svg)
+
+---
 ## Inverted Indexes
 
 - For JSONB and arrays

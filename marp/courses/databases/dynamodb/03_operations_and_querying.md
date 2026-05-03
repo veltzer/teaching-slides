@@ -27,6 +27,11 @@ audience:
 - Cheapest read
 
 ---
+## Operation Costs
+
+![operation_costs](svg/courses/databases/dynamodb/03_operations_and_querying/operation_costs.svg)
+
+---
 ## Put Operation
 
 - Insert or replace

@@ -44,6 +44,11 @@ audience:
 - Always-on requirement
 
 ---
+## Strengths Visualised
+
+![cassandra_strengths](svg/courses/databases/cassandra/01_introduction/cassandra_strengths.svg)
+
+---
 ## When Not To Use
 
 - Complex joins

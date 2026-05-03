@@ -28,6 +28,11 @@ audience:
 - Compaction merges them later
 
 ---
+## Storage Layers
+
+![storage_layers](svg/courses/databases/cassandra/04_performance/storage_layers.svg)
+
+---
 ## Memtable
 
 - In-memory write buffer

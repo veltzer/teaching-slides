@@ -44,6 +44,11 @@ audience:
 - Easier app porting
 
 ---
+## In Context
+
+![cockroach_compare](svg/courses/databases/cockroachdb/01_introduction/cockroach_compare.svg)
+
+---
 ## How It Differs From Postgres
 
 - No single primary

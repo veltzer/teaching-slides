@@ -36,6 +36,11 @@ audience:
 - Audit trail
 
 ---
+## Broker Value
+
+![broker_value](svg/courses/testing/contract-testing/04_brokers_and_workflows/broker_value.svg)
+
+---
 ## Publishing Contracts
 
 - Consumer publishes after generation

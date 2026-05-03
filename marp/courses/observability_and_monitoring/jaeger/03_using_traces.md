@@ -76,6 +76,11 @@ audience:
 - Read its logs
 
 ---
+## Diagnose Workflow
+
+![diagnose_workflow](svg/courses/observability_and_monitoring/jaeger/03_using_traces/diagnose_workflow.svg)
+
+---
 ## Workflow For Errors
 
 - Filter by error tag

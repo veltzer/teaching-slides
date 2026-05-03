@@ -88,6 +88,11 @@ audience:
 - Save with descriptive name
 
 ---
+## Query And Transform
+
+![query_layers](svg/courses/observability_and_monitoring/grafana-basics/03_panels_and_queries/query_layers.svg)
+
+---
 ## Variables In Queries
 
 - Dollar-sign substitution

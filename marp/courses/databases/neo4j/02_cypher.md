@@ -28,6 +28,11 @@ audience:
 - Returns rows
 
 ---
+## Core Clauses
+
+![cypher_clauses](svg/courses/databases/neo4j/02_cypher/cypher_clauses.svg)
+
+---
 ## Pattern Syntax
 
 ![match_pattern](svg/courses/databases/neo4j/02_cypher/match_pattern.svg)

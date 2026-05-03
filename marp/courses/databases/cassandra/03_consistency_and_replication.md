@@ -57,6 +57,11 @@ audience:
 - ALL: every replica
 
 ---
+## Levels Compared
+
+![consistency_levels](svg/courses/databases/cassandra/03_consistency_and_replication/consistency_levels.svg)
+
+---
 ## Strong Consistency Recipe
 
 - W + R > N

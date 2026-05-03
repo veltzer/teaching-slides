@@ -28,6 +28,11 @@ audience:
 - Good baseline
 
 ---
+## Instrumentation Levels
+
+![instrumentation_levels](svg/courses/observability_and_monitoring/jaeger/02_instrumentation/instrumentation_levels.svg)
+
+---
 ## Manual Spans
 
 - Wrap units of work

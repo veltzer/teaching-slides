@@ -41,6 +41,11 @@ audience:
 - Tied to one node
 
 ---
+## Modelling Choices
+
+![modelling_choices](svg/courses/databases/neo4j/03_modeling/modelling_choices.svg)
+
+---
 ## Relationship Types
 
 - Use specific types not generic

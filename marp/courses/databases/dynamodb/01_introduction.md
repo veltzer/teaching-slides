@@ -43,6 +43,11 @@ audience:
 - Multi-region active-active
 
 ---
+## Fit Visualised
+
+![dynamo_fit](svg/courses/databases/dynamodb/01_introduction/dynamo_fit.svg)
+
+---
 ## When Not To Use
 
 - Ad-hoc analytics

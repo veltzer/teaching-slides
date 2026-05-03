@@ -36,6 +36,11 @@ audience:
 - Misses rare bugs
 
 ---
+## Sampling Strategies
+
+![sampling_strategies](svg/courses/observability_and_monitoring/jaeger/04_sampling_and_storage/sampling_strategies.svg)
+
+---
 ## Rate Limiting
 
 - N traces per second per service

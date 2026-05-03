@@ -35,6 +35,11 @@ audience:
 - Streaming and batch on one table
 
 ---
+## Delta Features
+
+![delta_features](svg/courses/data_engineering/databricks/03_delta_tables/delta_features.svg)
+
+---
 ## Transaction Log
 
 - JSON files in _delta_log

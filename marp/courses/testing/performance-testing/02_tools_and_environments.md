@@ -28,6 +28,11 @@ audience:
 - Cloud provider services
 
 ---
+## Tool Choices
+
+![tool_choices](svg/courses/testing/performance-testing/02_tools_and_environments/tool_choices.svg)
+
+---
 ## Script-Based
 
 - JavaScript or Lua test scripts

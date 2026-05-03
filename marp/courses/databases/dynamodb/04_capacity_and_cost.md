@@ -27,6 +27,11 @@ audience:
 - Transactional ops cost twice
 
 ---
+## Cost Levers
+
+![cost_levers](svg/courses/databases/dynamodb/04_capacity_and_cost/cost_levers.svg)
+
+---
 ## Sizing
 
 - Average and peak rates

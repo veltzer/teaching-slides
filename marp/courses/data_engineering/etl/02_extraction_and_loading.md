@@ -88,6 +88,11 @@ audience:
 - Truncate and reload
 
 ---
+## Modes Compared
+
+![load_modes](svg/courses/data_engineering/etl/02_extraction_and_loading/load_modes.svg)
+
+---
 ## Bulk Loading
 
 - Use the warehouse loader

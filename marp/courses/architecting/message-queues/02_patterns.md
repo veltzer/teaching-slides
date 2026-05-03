@@ -29,6 +29,11 @@ audience:
 - Classic work queue
 
 ---
+## Pattern Catalog
+
+![messaging_patterns](svg/courses/architecting/message-queues/02_patterns/messaging_patterns.svg)
+
+---
 ## Publish-Subscribe
 
 - Topic, not queue

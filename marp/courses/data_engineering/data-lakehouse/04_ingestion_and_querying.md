@@ -89,6 +89,11 @@ audience:
 - Choose by workload
 
 ---
+## Engine Choices
+
+![query_engines](svg/courses/data_engineering/data-lakehouse/04_ingestion_and_querying/query_engines.svg)
+
+---
 ## SQL on Files
 
 - Engines push predicates to storage

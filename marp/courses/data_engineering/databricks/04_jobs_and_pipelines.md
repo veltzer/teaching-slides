@@ -35,6 +35,11 @@ audience:
 - Schedule or trigger
 
 ---
+## Job Anatomy Diagram
+
+![job_anatomy](svg/courses/data_engineering/databricks/04_jobs_and_pipelines/job_anatomy.svg)
+
+---
 ## Task Types
 
 - Notebook

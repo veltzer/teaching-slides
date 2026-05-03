@@ -36,6 +36,11 @@ audience:
 - Each with strengths
 
 ---
+## Table Formats Compared
+
+![table_formats](svg/courses/data_engineering/data-lakehouse/03_table_formats/table_formats.svg)
+
+---
 ## Snapshots
 
 - Each commit creates a snapshot

@@ -53,6 +53,11 @@ audience:
 - Minimize blast radius
 
 ---
+## Principles Visualised
+
+![principles](svg/courses/testing/chaos-engineering/01_introduction/principles.svg)
+
+---
 ## Steady State
 
 - Define what healthy looks like

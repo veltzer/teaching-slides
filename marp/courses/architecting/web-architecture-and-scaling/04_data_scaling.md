@@ -44,6 +44,11 @@ audience:
 - Replica lag must be measured
 
 ---
+## Scaling Patterns
+
+![scaling_patterns](svg/courses/architecting/web-architecture-and-scaling/04_data_scaling/scaling_patterns.svg)
+
+---
 ## Lag Effects
 
 - Read your writes broken

@@ -29,6 +29,11 @@ audience:
 - Often all three at once
 
 ---
+## Migration Kinds
+
+![migration_kinds](svg/courses/databases/database-migration-strategies/01_introduction/migration_kinds.svg)
+
+---
 ## Schema Migration
 
 - Adding, removing, altering columns

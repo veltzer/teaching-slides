@@ -25,6 +25,11 @@ audience:
 ![algorithm_landscape](svg/courses/machine_learning/machine-learning/04_the_algorithms/algo_landscape.svg)
 
 ---
+## Picking An Algorithm
+
+![algorithm_choice](svg/courses/machine_learning/machine-learning/04_the_algorithms/algo_choice.svg)
+
+---
 ## Linear Regression
 
 - Predict continuous y from linear combination of X

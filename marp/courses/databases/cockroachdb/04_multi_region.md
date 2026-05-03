@@ -52,6 +52,11 @@ audience:
 - Each suits a pattern
 
 ---
+## Locality Choices
+
+![locality_choices](svg/courses/databases/cockroachdb/04_multi_region/locality_choices.svg)
+
+---
 ## Localities Compared
 
 ![table_localities](svg/courses/databases/cockroachdb/04_multi_region/table_localities.svg)

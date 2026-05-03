@@ -89,6 +89,11 @@ audience:
 - Dynamic responses with care
 
 ---
+## Edge Layers
+
+![edge_layers](svg/courses/architecting/web-architecture-and-scaling/02_load_balancing_and_edge/edge_layers.svg)
+
+---
 ## Cache Keys
 
 - URL plus headers

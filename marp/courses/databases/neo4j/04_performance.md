@@ -65,6 +65,11 @@ audience:
 - Engine warns when detected
 
 ---
+## Pitfalls Overview
+
+![perf_pitfalls](svg/courses/databases/neo4j/04_performance/perf_pitfalls.svg)
+
+---
 ## Heap And Page Cache
 
 - Heap for queries and transactions

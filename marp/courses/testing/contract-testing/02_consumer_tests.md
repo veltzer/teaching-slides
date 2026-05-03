@@ -28,6 +28,11 @@ audience:
 - All in test code
 
 ---
+## Interaction Anatomy
+
+![interaction_anatomy](svg/courses/testing/contract-testing/02_consumer_tests/interaction_anatomy.svg)
+
+---
 ## Mock Provider
 
 - Library spins up local mock

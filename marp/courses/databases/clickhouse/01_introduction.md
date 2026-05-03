@@ -49,6 +49,11 @@ audience:
 - High-cardinality counts
 
 ---
+## Strengths Overview
+
+![clickhouse_strengths](svg/courses/databases/clickhouse/01_introduction/clickhouse_strengths.svg)
+
+---
 ## When Not To Use
 
 - Transactional workloads

@@ -44,6 +44,11 @@ audience:
 - What they would do once in
 
 ---
+## Threat Model Inputs
+
+![threat_model](svg/courses/networking/network-security/01_introduction/threat_model.svg)
+
+---
 ## Common Adversaries
 
 - Opportunistic scanners

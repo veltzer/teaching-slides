@@ -37,6 +37,11 @@ audience:
 - Pause on errors
 
 ---
+## Backfill Modes
+
+![backfill_modes](svg/courses/databases/database-migration-strategies/03_data_migrations/backfill_modes.svg)
+
+---
 ## Live Transformation
 
 - Application writes new format

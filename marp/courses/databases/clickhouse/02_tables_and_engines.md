@@ -28,6 +28,11 @@ audience:
 - Integration engines for sources
 
 ---
+## Engine Choices
+
+![engine_choices](svg/courses/databases/clickhouse/02_tables_and_engines/engine_choices.svg)
+
+---
 ## Merge Tree
 
 - Default workhorse

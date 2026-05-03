@@ -59,6 +59,11 @@ audience:
 - Pick by query type
 
 ---
+## Streaming Modes
+
+![streaming_modes](svg/courses/data_engineering/spark/04_streaming/streaming_modes.svg)
+
+---
 ## Stateful Operations
 
 - Aggregations need state

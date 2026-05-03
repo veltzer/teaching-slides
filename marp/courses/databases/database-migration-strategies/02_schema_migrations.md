@@ -42,6 +42,11 @@ audience:
 - Inspect before running
 
 ---
+## Change Safety
+
+![safe_changes](svg/courses/databases/database-migration-strategies/02_schema_migrations/safe_changes.svg)
+
+---
 ## Adding a Column
 
 - Default null is fast

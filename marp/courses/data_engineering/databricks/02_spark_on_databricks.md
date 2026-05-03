@@ -35,6 +35,11 @@ audience:
 - Same API across languages
 
 ---
+## API Layers
+
+![dataframe_layers](svg/courses/data_engineering/databricks/02_spark_on_databricks/dataframe_layers.svg)
+
+---
 ## Datasets
 
 - Typed rows, JVM languages

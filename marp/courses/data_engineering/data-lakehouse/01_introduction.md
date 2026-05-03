@@ -73,6 +73,11 @@ audience:
 - Cloud platforms support it
 
 ---
+## Lakehouse History
+
+![lakehouse_history](svg/courses/data_engineering/data-lakehouse/01_introduction/lakehouse_history.svg)
+
+---
 ## Open Table Formats
 
 - Provide ACID over object stores

@@ -45,6 +45,11 @@ audience:
 - Hierarchies and dependencies
 
 ---
+## Fit At A Glance
+
+![when_graph](svg/courses/databases/neo4j/01_introduction/when_graph.svg)
+
+---
 ## When Graph Loses
 
 - Aggregations over rows

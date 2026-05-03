@@ -30,6 +30,11 @@ audience:
 - Operational
 
 ---
+## Injection Levels
+
+![injection_levels](svg/courses/testing/chaos-engineering/03_failure_injection/injection_levels.svg)
+
+---
 ## Categories Visualized
 
 ![injection_categories](svg/courses/testing/chaos-engineering/03_failure_injection/injection_categories.svg)

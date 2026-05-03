@@ -28,6 +28,11 @@ audience:
 - No import step needed
 
 ---
+## File Sources
+
+![file_sources](svg/courses/databases/duckdb/03_files_and_formats/file_sources.svg)
+
+---
 ## Reading Parquet
 
 - read_parquet('file.parquet')

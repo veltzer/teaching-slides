@@ -28,6 +28,11 @@ audience:
 - Stakeholders informed
 
 ---
+## Run Phases
+
+![run_phases](svg/courses/testing/performance-testing/04_running_and_analyzing/run_phases.svg)
+
+---
 ## Warm-Up
 
 - Run at low rate first

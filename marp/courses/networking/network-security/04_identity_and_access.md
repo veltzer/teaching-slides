@@ -28,6 +28,11 @@ audience:
 - Or certificates
 
 ---
+## Identity Layers
+
+![auth_layers](svg/courses/networking/network-security/04_identity_and_access/auth_layers.svg)
+
+---
 ## MFA
 
 - Two factors: knowledge plus possession

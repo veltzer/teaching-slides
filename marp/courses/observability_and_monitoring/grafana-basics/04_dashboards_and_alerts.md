@@ -88,6 +88,11 @@ audience:
 - Severity levels matter
 
 ---
+## Alerting Pipeline
+
+![alerting_pipeline](svg/courses/observability_and_monitoring/grafana-basics/04_dashboards_and_alerts/alerting_pipeline.svg)
+
+---
 ## Alert Routing
 
 - Send by labels

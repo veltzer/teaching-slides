@@ -89,6 +89,11 @@ audience:
 - Replace many self-joins
 
 ---
+## SQL Features Overview
+
+![sql_features](svg/courses/databases/duckdb/02_basics/sql_features.svg)
+
+---
 ## Joins
 
 - All standard join types

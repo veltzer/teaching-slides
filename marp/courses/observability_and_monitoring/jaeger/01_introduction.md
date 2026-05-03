@@ -60,6 +60,11 @@ audience:
 - Stitched from many spans
 
 ---
+## Vocabulary
+
+![spans_terms](svg/courses/observability_and_monitoring/jaeger/01_introduction/spans_terms.svg)
+
+---
 ## Span
 
 - Named operation in a trace

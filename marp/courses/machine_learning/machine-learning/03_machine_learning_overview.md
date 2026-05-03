@@ -82,6 +82,11 @@ audience:
 - Balance with regularisation, more data
 
 ---
+## Bias vs Variance
+
+![bias_variance](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/bias_variance.svg)
+
+---
 ## Overfitting
 
 - Model memorises training data

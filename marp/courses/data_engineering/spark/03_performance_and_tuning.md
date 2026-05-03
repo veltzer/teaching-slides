@@ -51,6 +51,11 @@ audience:
 - Adaptive query execution mitigates
 
 ---
+## Skew Solutions
+
+![skew_solutions](svg/courses/data_engineering/spark/03_performance_and_tuning/skew_solutions.svg)
+
+---
 ## Shuffle and Skew
 
 ![shuffle_skew](svg/courses/data_engineering/spark/03_performance_and_tuning/shuffle_skew.svg)

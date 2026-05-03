@@ -27,6 +27,11 @@ audience:
 - Move data where it is useful
 
 ---
+## Pipeline Steps
+
+![data_pipeline_steps](svg/courses/data_engineering/etl/01_introduction/data_pipeline_steps.svg)
+
+---
 ## What Each Step Does
 
 - Extract: read from systems

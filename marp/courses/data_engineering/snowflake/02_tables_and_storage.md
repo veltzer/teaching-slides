@@ -27,6 +27,11 @@ audience:
 - Cost includes retention
 
 ---
+## Table Kinds
+
+![table_kinds](svg/courses/data_engineering/snowflake/02_tables_and_storage/table_kinds.svg)
+
+---
 ## Transient Tables
 
 - No fail-safe

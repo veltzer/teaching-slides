@@ -28,6 +28,11 @@ audience:
 - Realistic burst patterns
 
 ---
+## Scenario Inputs
+
+![scenario_inputs](svg/courses/testing/performance-testing/03_designing_tests/scenario_inputs.svg)
+
+---
 ## Workload Visualized
 
 ![workload_model](svg/courses/testing/performance-testing/03_designing_tests/workload_model.svg)

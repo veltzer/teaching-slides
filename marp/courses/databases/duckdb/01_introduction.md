@@ -57,6 +57,11 @@ audience:
 - Tests and dev environments
 
 ---
+## Fit At A Glance
+
+![when_to_use](svg/courses/databases/duckdb/01_introduction/when_to_use.svg)
+
+---
 ## When Not To Use
 
 - Multi-user transactional service

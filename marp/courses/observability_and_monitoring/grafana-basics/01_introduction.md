@@ -27,6 +27,11 @@ audience:
 - Self-hosted or hosted
 
 ---
+## What It Is And Is Not
+
+![grafana_pieces](svg/courses/observability_and_monitoring/grafana-basics/01_introduction/grafana_pieces.svg)
+
+---
 ## Why Use It
 
 - Single UI across many backends

@@ -37,6 +37,11 @@ audience:
 - Async workflows
 
 ---
+## Reasons Visualised
+
+![why_queues](svg/courses/architecting/message-queues/01_introduction/why_queues.svg)
+
+---
 ## Queue vs Topic
 
 - Queue: one consumer per message

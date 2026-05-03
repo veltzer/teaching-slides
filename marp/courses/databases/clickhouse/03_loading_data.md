@@ -36,6 +36,11 @@ audience:
 - Or aggregate at the edge
 
 ---
+## Insert Patterns
+
+![insert_anti_patterns](svg/courses/databases/clickhouse/03_loading_data/insert_anti_patterns.svg)
+
+---
 ## Pattern Compared
 
 ![batch_insert_pattern](svg/courses/databases/clickhouse/03_loading_data/batch_insert_pattern.svg)

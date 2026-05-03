@@ -28,6 +28,11 @@ audience:
 - Pass or fail per interaction
 
 ---
+## Verification Anatomy
+
+![verification_anatomy](svg/courses/testing/contract-testing/03_provider_verification/verification_anatomy.svg)
+
+---
 ## Verification Run
 
 ![verification_run](svg/courses/testing/contract-testing/03_provider_verification/verification_run.svg)

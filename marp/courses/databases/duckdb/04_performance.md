@@ -41,6 +41,11 @@ audience:
 - Profile to verify usage
 
 ---
+## Performance Tips
+
+![perf_tips](svg/courses/databases/duckdb/04_performance/perf_tips.svg)
+
+---
 ## Memory Limit
 
 - PRAGMA memory_limit

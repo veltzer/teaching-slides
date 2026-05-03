@@ -57,6 +57,11 @@ audience:
 - Revoked when compromised
 
 ---
+## Certificate Lifecycle
+
+![cert_lifecycle](svg/courses/networking/network-security/03_encryption_and_certificates/cert_lifecycle.svg)
+
+---
 ## Certificate Authorities
 
 - Public CAs for the web

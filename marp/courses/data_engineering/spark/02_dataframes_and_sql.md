@@ -27,6 +27,11 @@ audience:
 - Same API across languages
 
 ---
+## Transform vs Action
+
+![transform_action](svg/courses/data_engineering/spark/02_dataframes_and_sql/transform_action.svg)
+
+---
 ## Reading Data
 
 - CSV, JSON, Parquet, Delta

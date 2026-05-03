@@ -47,6 +47,11 @@ audience:
 - A team needs both
 
 ---
+## Principles vs Patterns
+
+![principles_vs_patterns](svg/courses/design_patterns/design-patterns/01_overview/principles_vs_patterns.svg)
+
+---
 ## What Patterns Are Not
 
 - A complete solution you drop in

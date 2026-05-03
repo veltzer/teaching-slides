@@ -27,6 +27,11 @@ audience:
 - Relational and document databases
 
 ---
+## Source Categories
+
+![source_kinds](svg/courses/observability_and_monitoring/grafana-basics/02_data_sources/source_kinds.svg)
+
+---
 ## Adding A Source
 
 - Configuration UI or API

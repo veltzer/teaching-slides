@@ -27,6 +27,11 @@ audience:
 - Resize without downtime
 
 ---
+## Performance Levers
+
+![perf_levers](svg/courses/data_engineering/snowflake/04_query_performance/perf_levers.svg)
+
+---
 ## Auto-Suspend
 
 - Keep small for ad-hoc

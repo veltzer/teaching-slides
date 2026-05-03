@@ -66,6 +66,11 @@ audience:
 - Maintenance window if needed
 
 ---
+## Experiment Anatomy
+
+![experiment_anatomy](svg/courses/testing/chaos-engineering/02_designing_experiments/experiment_anatomy.svg)
+
+---
 ## Abort Conditions
 
 - Customer impact threshold

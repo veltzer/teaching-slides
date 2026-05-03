@@ -44,6 +44,11 @@ audience:
 - Slow to run in CI
 
 ---
+## Contract Tests vs E2E
+
+![contract_vs_e2e](svg/courses/testing/contract-testing/01_introduction/contract_vs_e2e.svg)
+
+---
 ## End-To-End Has Its Place
 
 - Smoke tests for critical journeys

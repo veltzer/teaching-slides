@@ -74,6 +74,11 @@ audience:
 - Powerful but complex
 
 ---
+## Routing Models
+
+![routing_models](svg/courses/architecting/message-queues/04_routing_and_partitioning/routing_models.svg)
+
+---
 ## Topic Hierarchy
 
 - "orders.placed", "orders.cancelled"

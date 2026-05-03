@@ -50,6 +50,11 @@ audience:
 ![perf_test_types](svg/courses/testing/performance-testing/01_introduction/perf_test_types.svg)
 
 ---
+## Test Purposes
+
+![test_purposes](svg/courses/testing/performance-testing/01_introduction/test_purposes.svg)
+
+---
 ## Load Test
 
 - Expected production traffic

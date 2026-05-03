@@ -89,6 +89,11 @@ audience:
 - Profiles
 
 ---
+## Observability Pillars
+
+![observability_pillars](svg/courses/architecting/web-architecture-and-scaling/05_async_and_observability/observability_pillars.svg)
+
+---
 ## Metrics That Matter
 
 - Request rate

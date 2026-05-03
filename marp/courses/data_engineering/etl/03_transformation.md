@@ -88,6 +88,11 @@ audience:
 - Required for backfills
 
 ---
+## Idempotency Levers
+
+![idempotency_keys](svg/courses/data_engineering/etl/03_transformation/idempotency_keys.svg)
+
+---
 ## Reusability
 
 - Macros and shared models

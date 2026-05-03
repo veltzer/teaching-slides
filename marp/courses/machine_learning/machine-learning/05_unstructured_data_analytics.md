@@ -28,6 +28,11 @@ audience:
 - Harder to model than tabular
 
 ---
+## Data Kinds
+
+![data_kinds](svg/courses/machine_learning/machine-learning/05_unstructured_data_analytics/data_kinds.svg)
+
+---
 ## Text Preprocessing
 
 - Tokenisation: words / subwords
