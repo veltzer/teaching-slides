@@ -349,4 +349,4 @@ if (location.hash && location.hash.startsWith("#folder=")) {
 render();
 
 // Theme switcher (shared from shared-themes/theme-switcher.js)
-initThemeSwitcher({ storageKey: "course-browser-theme" });
+initThemeSwitcher();
