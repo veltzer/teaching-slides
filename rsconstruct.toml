@@ -35,6 +35,10 @@ src_dirs = ["scripts"]
 [processor.markdownlint]
 src_dirs = ["marp"]
 
+[processor.stylelint]
+src_dirs = ["resources"]
+src_extensions = [".css"]
+
 [processor.zspell]
 src_dirs = ["marp"]
 
@@ -49,6 +53,9 @@ inputs = [
     "resources/courses_index.css",
     "resources/courses_index.js",
     "shared/shared-themes/themes.css",
+    "shared/shared-themes/base.css",
+    "shared/shared-themes/typography.css",
+    "shared/shared-themes/components.css",
     "shared/shared-themes/theme-switcher.js",
 ]
 input_globs = [
