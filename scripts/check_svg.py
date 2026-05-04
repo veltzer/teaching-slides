@@ -87,10 +87,7 @@ def _check_words(path: Path) -> list[str]:
     Counts words across <text>/<tspan> elements outside <defs>. Heavy-text
     diagrams belong in prose slides or speaker notes, not inside a diagram.
     """
-    try:
-        content = path.read_text(encoding="utf-8")
-    except Exception:
-        return []
+    content = path.read_text(encoding="utf-8")
     outside = _WORDS_DEFS_RE.sub('', content)
     total = 0
     for m in _WORDS_TEXT_RE.finditer(outside):
@@ -105,13 +102,14 @@ def _check_fonts(tree: ET.ElementTree) -> list[str]:
     """Flag SVGs with font-size below minimum."""
     for elem in tree.iter():
         fs = elem.get("font-size")
-        if fs is not None:
-            try:
-                val = float(fs)
-                if val < MIN_FONT_SIZE:
-                    return [f"font-size {fs} too small (min {MIN_FONT_SIZE})"]
-            except ValueError:
-                pass
+        if fs is None:
+            continue
+        try:
+            val = float(fs)
+        except ValueError:
+            return [f"font-size {fs!r} is not a number"]
+        if val < MIN_FONT_SIZE:
+            return [f"font-size {fs} too small (min {MIN_FONT_SIZE})"]
     return []
 
 
@@ -152,7 +150,6 @@ def _check_bounds(tree: ET.ElementTree) -> list[str]:
     for elem in tree.iter():
         tag = elem.tag.split('}')[-1]
         y_max = None
-        
         try:
             if tag in ('rect', 'image', 'foreignObject'):
                 y = float(elem.get('y', '0').replace('px', ''))
@@ -172,9 +169,9 @@ def _check_bounds(tree: ET.ElementTree) -> list[str]:
                 y1 = float(elem.get('y1', '0').replace('px', ''))
                 y2 = float(elem.get('y2', '0').replace('px', ''))
                 y_max = max(y1, y2)
-        except ValueError:
-            pass
-            
+        except ValueError as e:
+            return [f"element <{tag}> has malformed numeric attribute: {e}"]
+
         if y_max is not None and y_max > MAX_Y_BOUND:
             return [f"element <{tag}> extends below y={MAX_Y_BOUND} (found bottom y={y_max})"]
     return []
@@ -323,10 +320,7 @@ def _check_fill(path: Path) -> list[str]:
     """Flag SVGs whose drawing bbox fills less than MIN_FILL_PCT of the
     usable area (1200x580)."""
     from svg_lib import compute_bbox
-    try:
-        content = path.read_text(encoding="utf-8", errors="replace")
-    except OSError:
-        return []
+    content = path.read_text(encoding="utf-8", errors="replace")
     outside = re.sub(r'<defs\b.*?</defs>', '', content, flags=re.DOTALL)
     bbox = compute_bbox(outside)
     if bbox is None:
@@ -348,10 +342,7 @@ def _check_fit(path: Path) -> list[str]:
 
     Run scripts/svg_fix.py --fit to fix."""
     from svg_lib import compute_bbox
-    try:
-        content = path.read_text(encoding="utf-8", errors="replace")
-    except OSError:
-        return []
+    content = path.read_text(encoding="utf-8", errors="replace")
     outside = re.sub(r'<defs\b.*?</defs>', '', content, flags=re.DOTALL)
     bbox = compute_bbox(outside)
     if bbox is None:
@@ -568,8 +559,8 @@ def _check_no_border(tree: ET.ElementTree) -> list[str]:
             y = float(elem.get('y', ''))
             w = float(elem.get('width', ''))
             h = float(elem.get('height', ''))
-        except ValueError:
-            return []
+        except ValueError as e:
+            return [f"first <rect> has malformed numeric attribute: {e}"]
         if (abs(x - 40) < 1 and abs(y - 40) < 1
                 and abs(w - 1200) < 1 and abs(h - 580) < 1):
             return ["contains full-slide border <rect> (x=40,y=40,w=1200,h=580) — remove it, the slide edge is the frame"]

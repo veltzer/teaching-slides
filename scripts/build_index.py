@@ -50,10 +50,7 @@ def find_course_dirs(source_dir: Path, ext: str) -> list[Path]:
 def _collect(directory: Path, ext: str, result: list[Path]) -> None:
     has_file = False
     subdirs: list[Path] = []
-    try:
-        entries = sorted(directory.iterdir())
-    except OSError:
-        return
+    entries = sorted(directory.iterdir())
     for entry in entries:
         if entry.is_dir():
             subdirs.append(entry)
@@ -110,11 +107,11 @@ def parse_front_matter(directory: Path, ext: str) -> dict[str, Any]:
         return {}
     end = content.find("\n---", 3)
     if end == -1:
-        return {}
+        raise ValueError(f"unterminated YAML front matter in {files[0]}")
     try:
         return yaml.safe_load(content[3:end]) or {}
-    except yaml.YAMLError:
-        return {}
+    except yaml.YAMLError as e:
+        raise ValueError(f"invalid YAML front matter in {files[0]}: {e}") from e
 
 
 def pdf_path_for_course(rel: Path, output_dir: Path, site_dir: Path) -> str | None:
@@ -180,11 +177,11 @@ def parse_file_front_matter(filepath: Path) -> dict[str, Any]:
         return {}
     end = content.find("\n---", 3)
     if end == -1:
-        return {}
+        raise ValueError(f"unterminated YAML front matter in {filepath}")
     try:
         return yaml.safe_load(content[3:end]) or {}
-    except yaml.YAMLError:
-        return {}
+    except yaml.YAMLError as e:
+        raise ValueError(f"invalid YAML front matter in {filepath}: {e}") from e
 
 
 def build_lecture_entries(

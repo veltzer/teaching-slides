@@ -201,8 +201,8 @@ def fix_no_circles(svg: SvgFile) -> None:
             cx = float(elem.get("cx", "0"))
             cy = float(elem.get("cy", "0"))
             r = float(elem.get("r", "0"))
-        except ValueError:
-            continue
+        except ValueError as e:
+            raise ValueError(f"<circle> in {svg.path} has malformed numeric attribute: {e}") from e
         rect = etree.Element("rect")
         rect.set("x", str(cx - r))
         rect.set("y", str(cy - r))
@@ -238,8 +238,8 @@ def fix_no_background(svg: SvgFile) -> None:
             y = float(elem.get("y", "0"))
             w = float(elem.get("width", "0"))
             h = float(elem.get("height", "0"))
-        except ValueError:
-            continue
+        except ValueError as e:
+            raise ValueError(f"<rect> in {svg.path} has malformed numeric attribute: {e}") from e
         if x <= 60 and y <= 60 and w >= 1000 and h >= 500:
             fill = (elem.get("fill") or "").strip()
             if fill in _NEUTRAL_FILLS:
@@ -272,8 +272,8 @@ def fix_text_fill(svg: SvgFile) -> None:
                 float(elem.get("width", "0")), float(elem.get("height", "0")),
                 fam,
             ))
-        except ValueError:
-            pass
+        except ValueError as e:
+            raise ValueError(f"<rect> in {svg.path} has malformed numeric attribute: {e}") from e
 
     def containing_family(px: float, py: float) -> str | None:
         best, best_area = None, None
@@ -292,8 +292,8 @@ def fix_text_fill(svg: SvgFile) -> None:
         try:
             px = float(elem.get("x", "0"))
             py = float(elem.get("y", "0"))
-        except ValueError:
-            px, py = 0.0, 0.0
+        except ValueError as e:
+            raise ValueError(f"<{tag(elem)}> in {svg.path} has malformed numeric attribute: {e}") from e
         fam = containing_family(px, py)
         elem.set("fill", f"var(--{fam}-text)" if fam else "var(--text)")
         svg.changed = True
@@ -352,11 +352,7 @@ FIX_MAP = {
 
 
 def process_file(path: Path, fixes: set[str], dry_run: bool) -> bool:
-    try:
-        svg = SvgFile.load(path)
-    except Exception:
-        print(f"  SKIP (parse error): {path}", file=sys.stderr)
-        return False
+    svg = SvgFile.load(path)
 
     for name in ALL_FIXES:
         if name not in fixes:

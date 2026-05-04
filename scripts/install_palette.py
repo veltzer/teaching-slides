@@ -151,11 +151,7 @@ def _convert_colors(svg: SvgFile, hex_to_name: dict[str, str]) -> None:
 def process_file(path: Path, hex_to_name_map: dict[str, dict[str, str]],
                  apply: bool) -> bool:
     """Process one SVG. Returns True if the file changed."""
-    try:
-        svg = SvgFile.load(path)
-    except Exception:
-        return False
-
+    svg = SvgFile.load(path)
     hex_to_name = hex_to_name_map.get(svg.svg_type, hex_to_name_map["regular"])
     _apply_renames(svg)
     _convert_colors(svg, hex_to_name)
