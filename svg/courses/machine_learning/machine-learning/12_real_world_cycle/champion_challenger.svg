@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="320" height="200" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Champion</text>
+  <text x="200" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">currently in production</text>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">100% of traffic</text>
+  <text x="60" y="195" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Logged predictions</text>
+  <rect x="40" y="280" width="320" height="200" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Challenger</text>
+  <text x="200" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">candidate for promotion</text>
+  <text x="60" y="400" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Shadow / canary mode</text>
+  <text x="60" y="435" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Same inputs, side by side</text>
+  <line x1="360" y1="140" x2="500" y2="280" stroke="var(--text)" stroke-width="2"/>
+  <line x1="360" y1="380" x2="500" y2="380" stroke="var(--text)" stroke-width="2"/>
+  <rect x="500" y="240" width="280" height="280" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Compare on</text>
+  <text x="640" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">held-out window</text>
+  <text x="520" y="365" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Business KPI</text>
+  <text x="520" y="400" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Latency &amp; cost</text>
+  <text x="520" y="435" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Subgroup parity</text>
+  <text x="520" y="470" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Calibration drift</text>
+  <line x1="780" y1="380" x2="900" y2="380" stroke="var(--text)" stroke-width="2"/>
+  <rect x="900" y="240" width="280" height="280" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1040" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Challenger wins</text>
+  <text x="1040" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">across slices?</text>
+  <text x="920" y="370" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Promote to champion</text>
+  <text x="920" y="405" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Old one becomes baseline</text>
+  <text x="920" y="440" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Keep warm for rollback</text>
+  <text x="920" y="495" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Repeat with next candidate</text>
+  <rect x="40" y="540" width="1200" height="80" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Continuous evaluation: never deploy without baseline comparison</text>
+  <text x="640" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Standard pattern for production ML</text>
+</svg>

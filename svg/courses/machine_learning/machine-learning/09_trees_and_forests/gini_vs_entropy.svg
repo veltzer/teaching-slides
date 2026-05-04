@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="700" height="580" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="390" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Impurity vs class probability (binary)</text>
+  <line x1="100" y1="120" x2="100" y2="540" stroke="var(--text)" stroke-width="2"/>
+  <line x1="100" y1="540" x2="700" y2="540" stroke="var(--text)" stroke-width="2"/>
+  <text x="80" y="125" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">1.0</text>
+  <text x="80" y="335" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">0.5</text>
+  <text x="80" y="545" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">0</text>
+  <text x="100" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">0</text>
+  <text x="400" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">0.5</text>
+  <text x="700" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">1.0</text>
+  <text x="400" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">P(class = 1)</text>
+  <text x="60" y="335" font-family="Arial, sans-serif" font-size="14" fill="var(--text)" transform="rotate(-90 60 335)">impurity</text>
+  <path d="M 100 540 Q 250 220 400 220 Q 550 220 700 540" stroke="var(--primary-border)" stroke-width="3" fill="none"/>
+  <path d="M 100 540 Q 250 120 400 120 Q 550 120 700 540" stroke="var(--ok-border)" stroke-width="3" fill="none"/>
+  <text x="170" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-border)">Gini</text>
+  <text x="170" y="200" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-border)">Entropy</text>
+  <text x="60" y="615" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Both peak at 0.5 (max impurity), drop to 0 at pure nodes</text>
+  <rect x="760" y="40" width="480" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Splitting Criteria</text>
+  <text x="780" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Gini impurity:</text>
+  <text x="780" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">1 − Σ pᵢ²</text>
+  <text x="780" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Faster to compute</text>
+  <text x="780" y="245" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Default in sklearn</text>
+  <text x="780" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Entropy:</text>
+  <text x="780" y="335" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">−Σ pᵢ log pᵢ</text>
+  <text x="780" y="370" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">From information theory</text>
+  <text x="780" y="405" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Slower (uses log)</text>
+  <text x="780" y="460" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">In practice:</text>
+  <text x="780" y="495" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Both give similar trees</text>
+  <text x="780" y="530" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Pick Gini for speed</text>
+  <text x="780" y="585" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">For regression: variance reduction</text>
+</svg>

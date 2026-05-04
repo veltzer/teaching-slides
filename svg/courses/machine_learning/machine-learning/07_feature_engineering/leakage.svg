@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="395" height="580" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="237" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Leakage</text>
+  <text x="237" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">info absent at predict time</text>
+  <text x="60" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-text)">Sources:</text>
+  <text x="60" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Future values</text>
+  <text x="60" y="245" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Full-dataset aggregates</text>
+  <text x="60" y="280" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Target encoding sans folds</text>
+  <text x="60" y="315" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Scaling on all data</text>
+  <text x="60" y="350" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Imputing on all data</text>
+  <text x="60" y="440" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-text)">Symptoms:</text>
+  <text x="60" y="480" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">CV too good</text>
+  <text x="60" y="515" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Prod accuracy drops</text>
+  <text x="60" y="600" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-text)">Silent killer</text>
+  <rect x="445" y="40" width="395" height="580" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="642" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Prevention</text>
+  <text x="465" y="135" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Fit on train only:</text>
+  <text x="465" y="170" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">scaler.fit(X_train)</text>
+  <text x="465" y="260" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Use Pipeline:</text>
+  <text x="465" y="295" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Per-fold transforms</text>
+  <text x="465" y="385" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Time-series:</text>
+  <text x="465" y="420" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Forward-only splits</text>
+  <text x="465" y="510" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Group splits:</text>
+  <text x="465" y="545" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Related rows stay together</text>
+  <text x="465" y="615" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">GroupKFold</text>
+  <rect x="850" y="40" width="390" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Audit checklist</text>
+  <text x="870" y="140" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Will this feature exist</text>
+  <text x="870" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">at predict time?</text>
+  <text x="870" y="265" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Per feature:</text>
+  <text x="870" y="300" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">When computed?</text>
+  <text x="870" y="335" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">From what data?</text>
+  <text x="870" y="370" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Touches target?</text>
+  <text x="870" y="405" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Sees future?</text>
+  <text x="870" y="460" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Rule of thumb:</text>
+  <text x="870" y="495" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Too-good means suspect</text>
+  <text x="870" y="585" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Investigate first</text>
+</svg>

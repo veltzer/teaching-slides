@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="380" height="380" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="230" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Grid Search</text>
+  <line x1="80" y1="120" x2="80" y2="380" stroke="var(--text)" stroke-width="2"/>
+  <line x1="80" y1="380" x2="380" y2="380" stroke="var(--text)" stroke-width="2"/>
+  <ellipse cx="120" cy="140" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="180" cy="140" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="240" cy="140" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="300" cy="140" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="360" cy="140" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="120" cy="200" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="180" cy="200" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="240" cy="200" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="300" cy="200" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="360" cy="200" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="120" cy="260" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="180" cy="260" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="240" cy="260" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="300" cy="260" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="360" cy="260" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="120" cy="320" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="180" cy="320" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="240" cy="320" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="300" cy="320" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="360" cy="320" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <text x="80" y="400" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">param 1</text>
+  <text x="60" y="240" font-family="Arial, sans-serif" font-size="14" fill="var(--text)" transform="rotate(-90 60 240)">param 2</text>
+  <rect x="40" y="440" width="380" height="180" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="475" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Grid: exhaustive</text>
+  <text x="60" y="510" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">All combinations tried</text>
+  <text x="60" y="545" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Cost grows exponentially</text>
+  <text x="60" y="580" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Wastes time on low-impact dims</text>
+  <text x="60" y="615" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">sklearn: GridSearchCV</text>
+  <rect x="450" y="40" width="380" height="380" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Random Search</text>
+  <line x1="490" y1="120" x2="490" y2="380" stroke="var(--text)" stroke-width="2"/>
+  <line x1="490" y1="380" x2="790" y2="380" stroke="var(--text)" stroke-width="2"/>
+  <ellipse cx="540" cy="160" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="630" cy="200" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="720" cy="140" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="580" cy="240" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="690" cy="280" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="770" cy="220" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="520" cy="320" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="660" cy="350" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="750" cy="320" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="610" cy="170" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <text x="490" y="400" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">param 1</text>
+  <text x="470" y="240" font-family="Arial, sans-serif" font-size="14" fill="var(--text)" transform="rotate(-90 470 240)">param 2</text>
+  <rect x="450" y="440" width="380" height="180" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="470" y="475" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Random: budget-bounded</text>
+  <text x="470" y="510" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Explores more along each axis</text>
+  <text x="470" y="545" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Better for many params</text>
+  <text x="470" y="580" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Often beats grid for same budget</text>
+  <text x="470" y="615" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">sklearn: RandomizedSearchCV</text>
+  <rect x="860" y="40" width="380" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Bayesian Search</text>
+  <text x="880" y="140" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Build surrogate model</text>
+  <text x="880" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Use it to pick next config</text>
+  <text x="880" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Balances explore / exploit</text>
+  <text x="880" y="265" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Tools:</text>
+  <text x="880" y="300" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Optuna</text>
+  <text x="880" y="335" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Hyperopt</text>
+  <text x="880" y="370" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">scikit-optimize</text>
+  <text x="880" y="425" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Best for:</text>
+  <text x="880" y="460" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Expensive evaluations</text>
+  <text x="880" y="495" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Many hyperparameters</text>
+  <text x="880" y="550" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Always:</text>
+  <text x="880" y="585" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Use cross-validation</text>
+</svg>

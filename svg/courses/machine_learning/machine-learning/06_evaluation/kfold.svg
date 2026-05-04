@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+  </defs>
+  <rect x="40" y="40" width="800" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="80" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Fold 1</text>
+  <text x="60" y="115" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Validate part 1, train rest</text>
+  <rect x="40" y="155" width="800" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="195" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Fold 2</text>
+  <text x="60" y="230" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Validate part 2, train rest</text>
+  <rect x="40" y="270" width="800" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="310" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Fold 3</text>
+  <text x="60" y="345" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Validate part 3, train rest</text>
+  <rect x="40" y="385" width="800" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="425" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Fold 4</text>
+  <text x="60" y="460" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Validate part 4, train rest</text>
+  <rect x="40" y="500" width="800" height="120" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="540" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Fold 5</text>
+  <text x="60" y="575" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Validate part 5, train rest</text>
+  <text x="60" y="610" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Average the 5 scores</text>
+  <rect x="860" y="40" width="380" height="560" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">k-Fold</text>
+  <text x="880" y="140" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Split into k parts</text>
+  <text x="880" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Each validates once</text>
+  <text x="880" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Train on the rest</text>
+  <text x="880" y="245" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Average all scores</text>
+  <text x="880" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Why:</text>
+  <text x="880" y="335" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Lower variance</text>
+  <text x="880" y="370" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Uses all data</text>
+  <text x="880" y="405" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Reveals overfitting</text>
+  <text x="880" y="460" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Variants:</text>
+  <text x="880" y="495" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Stratified</text>
+  <text x="880" y="530" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Grouped</text>
+  <text x="880" y="565" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Time-series</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="700" height="280" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="390" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Target encoding</text>
+  <text x="60" y="135" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Replace category with target mean</text>
+  <text x="60" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">"NYC" → 850k</text>
+  <text x="60" y="215" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">"LA"  → 720k</text>
+  <text x="60" y="255" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">"tiny"→ 180k</text>
+  <text x="60" y="295" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">One column per categorical</text>
+  <rect x="40" y="340" width="395" height="280" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="237" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Naive: leakage!</text>
+  <text x="60" y="425" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Fit on full data:</text>
+  <text x="60" y="460" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Row sees its own target</text>
+  <text x="60" y="535" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-text)">Result:</text>
+  <text x="60" y="570" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Optimistic CV scores</text>
+  <text x="60" y="605" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Bad in production</text>
+  <rect x="445" y="340" width="295" height="280" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="592" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Out-of-fold</text>
+  <text x="465" y="425" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Per fold:</text>
+  <text x="465" y="460" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Mean on other folds</text>
+  <text x="465" y="550" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Apply to this fold</text>
+  <text x="465" y="600" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">No leakage</text>
+  <rect x="760" y="40" width="480" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Smoothing</text>
+  <text x="780" y="140" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Rare cats: noisy mean</text>
+  <text x="780" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Pull to global mean</text>
+  <text x="780" y="220" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Bayesian:</text>
+  <text x="780" y="255" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">(n·mean + α·global)/(n+α)</text>
+  <text x="780" y="290" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">α = strength</text>
+  <text x="780" y="345" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Effect:</text>
+  <text x="780" y="380" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Common: own mean</text>
+  <text x="780" y="415" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Rare: global mean</text>
+  <text x="780" y="470" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Tools:</text>
+  <text x="780" y="505" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">category_encoders</text>
+  <text x="780" y="540" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">CatBoost native</text>
+  <text x="780" y="595" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Best for high cardinality</text>
+</svg>

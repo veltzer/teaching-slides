@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="600" height="580" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Bagging</text>
+  <text x="340" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">parallel, independent</text>
+  <rect x="80" y="160" width="120" height="60" rx="5" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="140" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">tree 1</text>
+  <rect x="80" y="240" width="120" height="60" rx="5" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="140" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">tree 2</text>
+  <rect x="80" y="320" width="120" height="60" rx="5" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="140" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">tree 3</text>
+  <rect x="80" y="400" width="120" height="60" rx="5" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="140" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">tree N</text>
+  <text x="240" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">bootstrap sample 1</text>
+  <text x="240" y="270" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">bootstrap sample 2</text>
+  <text x="240" y="350" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">bootstrap sample 3</text>
+  <text x="240" y="430" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">bootstrap sample N</text>
+  <line x1="200" y1="430" x2="500" y2="490" stroke="var(--primary-text)" stroke-width="2"/>
+  <line x1="200" y1="350" x2="500" y2="490" stroke="var(--primary-text)" stroke-width="2"/>
+  <line x1="200" y1="270" x2="500" y2="490" stroke="var(--primary-text)" stroke-width="2"/>
+  <line x1="200" y1="190" x2="500" y2="490" stroke="var(--primary-text)" stroke-width="2"/>
+  <rect x="440" y="475" width="160" height="40" rx="5" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="520" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">average / vote</text>
+  <text x="60" y="555" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Each tree sees a different bootstrap sample</text>
+  <text x="60" y="580" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">All trees train independently in parallel</text>
+  <text x="60" y="605" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Reduces variance (e.g. Random Forest)</text>
+  <rect x="660" y="40" width="580" height="580" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Boosting</text>
+  <text x="950" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">sequential, corrective</text>
+  <rect x="700" y="160" width="120" height="60" rx="5" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1"/>
+  <text x="760" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">tree 1</text>
+  <rect x="700" y="260" width="120" height="60" rx="5" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1"/>
+  <text x="760" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">tree 2</text>
+  <rect x="700" y="360" width="120" height="60" rx="5" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1"/>
+  <text x="760" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">tree 3</text>
+  <rect x="700" y="460" width="120" height="60" rx="5" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1"/>
+  <text x="760" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">tree N</text>
+  <line x1="760" y1="220" x2="760" y2="260" stroke="var(--warn-text)" stroke-width="2"/>
+  <line x1="760" y1="320" x2="760" y2="360" stroke="var(--warn-text)" stroke-width="2"/>
+  <line x1="760" y1="420" x2="760" y2="460" stroke="var(--warn-text)" stroke-width="2"/>
+  <text x="840" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">fit residual</text>
+  <text x="840" y="345" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">fit residual</text>
+  <text x="840" y="445" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">fit residual</text>
+  <text x="840" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">first guess</text>
+  <text x="680" y="555" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Each tree corrects the previous tree's errors</text>
+  <text x="680" y="580" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Sequential — can't parallelise the chain</text>
+  <text x="680" y="605" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Reduces bias (e.g. XGBoost, LightGBM)</text>
+</svg>

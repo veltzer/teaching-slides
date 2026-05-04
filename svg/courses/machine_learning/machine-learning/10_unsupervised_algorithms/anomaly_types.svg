@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="395" height="280" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="237" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Point anomaly</text>
+  <text x="60" y="125" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">A single data point that's</text>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">very different from the rest</text>
+  <text x="60" y="215" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Examples:</text>
+  <text x="60" y="250" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Fraudulent transaction</text>
+  <text x="60" y="285" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Sensor outlier</text>
+  <rect x="445" y="40" width="395" height="280" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="642" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Contextual anomaly</text>
+  <text x="465" y="125" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Normal in general but</text>
+  <text x="465" y="160" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">unusual in this context</text>
+  <text x="465" y="215" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Examples:</text>
+  <text x="465" y="250" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">High AC use in winter</text>
+  <text x="465" y="285" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Login at 3am</text>
+  <rect x="850" y="40" width="390" height="280" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Collective anomaly</text>
+  <text x="870" y="125" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Group of points abnormal</text>
+  <text x="870" y="160" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">together; individuals fine</text>
+  <text x="870" y="215" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Examples:</text>
+  <text x="870" y="250" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">DDoS attack pattern</text>
+  <text x="870" y="285" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Coordinated bot activity</text>
+  <rect x="40" y="340" width="395" height="280" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="237" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Isolation Forest</text>
+  <text x="60" y="425" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Random splits, isolate fast</text>
+  <text x="60" y="460" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Scales to big data</text>
+  <text x="60" y="515" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Best for:</text>
+  <text x="60" y="550" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Point anomalies</text>
+  <text x="60" y="585" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Tabular data</text>
+  <rect x="445" y="340" width="395" height="280" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="642" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">One-Class SVM</text>
+  <text x="465" y="425" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Boundary around normal</text>
+  <text x="465" y="460" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Outside = anomaly</text>
+  <text x="465" y="515" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Best for:</text>
+  <text x="465" y="550" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Small clean training set</text>
+  <text x="465" y="585" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Novelty detection</text>
+  <rect x="850" y="340" width="390" height="280" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Local Outlier Factor</text>
+  <text x="870" y="425" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Compare local densities</text>
+  <text x="870" y="460" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Catches local anomalies</text>
+  <text x="870" y="515" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Best for:</text>
+  <text x="870" y="550" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Varying density regions</text>
+  <text x="870" y="585" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Spatial data</text>
+</svg>

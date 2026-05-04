@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="700" height="580" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="390" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Performance vs deployment time</text>
+  <line x1="100" y1="120" x2="100" y2="540" stroke="var(--text)" stroke-width="2"/>
+  <line x1="100" y1="540" x2="700" y2="540" stroke="var(--text)" stroke-width="2"/>
+  <text x="60" y="335" font-family="Arial, sans-serif" font-size="14" fill="var(--text)" transform="rotate(-90 60 335)">accuracy</text>
+  <text x="395" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">days since deployment</text>
+  <line x1="100" y1="200" x2="700" y2="200" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="710" y="195" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-border)">target SLA</text>
+  <line x1="100" y1="280" x2="700" y2="280" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="710" y="275" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-border)">alert</text>
+  <line x1="100" y1="380" x2="700" y2="380" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="710" y="375" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-border)">page on-call</text>
+  <path d="M 110 190 Q 200 200 280 220 Q 360 250 440 280 Q 520 310 600 360 Q 680 420 700 440" stroke="var(--primary-border)" stroke-width="3" fill="none"/>
+  <ellipse cx="110" cy="190" rx="5" ry="5" fill="var(--primary-border)"/>
+  <ellipse cx="280" cy="220" rx="5" ry="5" fill="var(--primary-border)"/>
+  <ellipse cx="440" cy="280" rx="5" ry="5" fill="var(--primary-border)"/>
+  <ellipse cx="600" cy="360" rx="5" ry="5" fill="var(--primary-border)"/>
+  <line x1="540" y1="120" x2="540" y2="540" stroke="var(--warn-border)" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="550" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-border)">drift detected</text>
+  <text x="60" y="615" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Performance decays as world changes — monitor and retrain</text>
+  <rect x="760" y="40" width="480" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">What to monitor</text>
+  <text x="780" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Inputs:</text>
+  <text x="780" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Feature distributions</text>
+  <text x="780" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Missing rates</text>
+  <text x="780" y="245" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Schema violations</text>
+  <text x="780" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Outputs:</text>
+  <text x="780" y="335" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Prediction distribution</text>
+  <text x="780" y="370" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Calibration</text>
+  <text x="780" y="425" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Performance:</text>
+  <text x="780" y="460" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Lagging — needs labels</text>
+  <text x="780" y="495" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Slice by subgroup</text>
+  <text x="780" y="550" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Trigger:</text>
+  <text x="780" y="585" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Auto-retrain or alert</text>
+</svg>

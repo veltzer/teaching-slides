@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="595" height="580" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="337" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Sigmoid</text>
+  <text x="337" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">binary or multi-label</text>
+  <text x="60" y="170" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">σ(z) = 1 / (1 + e⁻ᶻ)</text>
+  <text x="60" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Per output:</text>
+  <text x="60" y="260" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Independent probability</text>
+  <text x="60" y="295" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Each in [0, 1]</text>
+  <text x="60" y="330" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Sum can be anything</text>
+  <text x="60" y="385" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Use for:</text>
+  <text x="60" y="420" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Binary classification</text>
+  <text x="60" y="455" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Multi-label (several true)</text>
+  <text x="60" y="490" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Independent yes/no per tag</text>
+  <text x="60" y="545" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Loss:</text>
+  <text x="60" y="580" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Binary cross-entropy</text>
+  <text x="60" y="615" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">summed over labels</text>
+  <rect x="645" y="40" width="595" height="580" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="942" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Softmax</text>
+  <text x="942" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">multi-class (mutually exclusive)</text>
+  <text x="665" y="170" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">σ(z)ᵢ = e^zᵢ / Σ e^zⱼ</text>
+  <text x="665" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Across outputs:</text>
+  <text x="665" y="260" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Coupled probabilities</text>
+  <text x="665" y="295" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Each in [0, 1]</text>
+  <text x="665" y="330" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Sum is exactly 1</text>
+  <text x="665" y="385" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Use for:</text>
+  <text x="665" y="420" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Multi-class single-label</text>
+  <text x="665" y="455" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">e.g. digit, language</text>
+  <text x="665" y="490" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Pick argmax</text>
+  <text x="665" y="545" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Loss:</text>
+  <text x="665" y="580" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Categorical cross-entropy</text>
+  <text x="665" y="615" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">aka log loss</text>
+</svg>

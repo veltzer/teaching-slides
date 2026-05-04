@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="700" height="580" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <line x1="100" y1="80" x2="100" y2="560" stroke="var(--text)" stroke-width="2"/>
+  <line x1="100" y1="560" x2="700" y2="560" stroke="var(--text)" stroke-width="2"/>
+  <ellipse cx="220" cy="200" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="260" cy="240" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="200" cy="270" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="280" cy="180" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="240" cy="320" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="320" cy="220" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="500" cy="380" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <ellipse cx="540" cy="420" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <ellipse cx="480" cy="460" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <ellipse cx="580" cy="380" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <ellipse cx="520" cy="500" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <ellipse cx="620" cy="440" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <line x1="120" y1="540" x2="680" y2="200" stroke="var(--info-border)" stroke-width="3"/>
+  <text x="600" y="195" font-family="Arial, sans-serif" font-size="14" fill="var(--info-border)">LDA axis</text>
+  <line x1="160" y1="120" x2="600" y2="600" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="180" y="135" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-border)">decision boundary</text>
+  <text x="60" y="540" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">LDA projects to maximise between/within scatter ratio</text>
+  <text x="60" y="570" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Then a linear boundary perpendicular to the axis</text>
+  <rect x="760" y="40" width="480" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Linear Discriminant</text>
+  <text x="780" y="140" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Project to a single axis</text>
+  <text x="780" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Maximise class separation</text>
+  <text x="780" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Linear classifier in projection</text>
+  <text x="780" y="265" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Assumes:</text>
+  <text x="780" y="300" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Gaussian per class</text>
+  <text x="780" y="335" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Equal class covariance</text>
+  <text x="780" y="370" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Closed form solution</text>
+  <text x="780" y="425" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Use for:</text>
+  <text x="780" y="460" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Small data classification</text>
+  <text x="780" y="495" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Dimensionality reduction</text>
+  <text x="780" y="550" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Variant:</text>
+  <text x="780" y="585" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">QDA: per-class covariance</text>
+</svg>

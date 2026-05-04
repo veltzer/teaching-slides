@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+  </defs>
+  <rect x="40" y="40" width="700" height="580" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <ellipse cx="170" cy="180" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="210" cy="220" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="150" cy="240" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="230" cy="160" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="190" cy="280" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="260" cy="200" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="180" cy="140" rx="10" ry="10" fill="var(--primary-fill)"/>
+  <ellipse cx="190" cy="210" rx="22" ry="22" fill="none" stroke="var(--primary-border)" stroke-width="3"/>
+  <text x="190" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Cluster A</text>
+  <ellipse cx="500" cy="160" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <ellipse cx="550" cy="200" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <ellipse cx="480" cy="220" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <ellipse cx="530" cy="160" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <ellipse cx="590" cy="180" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <ellipse cx="510" cy="260" rx="10" ry="10" fill="var(--ok-fill)"/>
+  <ellipse cx="530" cy="200" rx="22" ry="22" fill="none" stroke="var(--ok-border)" stroke-width="3"/>
+  <text x="530" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Cluster B</text>
+  <ellipse cx="310" cy="430" rx="10" ry="10" fill="var(--warn-fill)"/>
+  <ellipse cx="370" cy="470" rx="10" ry="10" fill="var(--warn-fill)"/>
+  <ellipse cx="340" cy="500" rx="10" ry="10" fill="var(--warn-fill)"/>
+  <ellipse cx="410" cy="440" rx="10" ry="10" fill="var(--warn-fill)"/>
+  <ellipse cx="380" cy="410" rx="10" ry="10" fill="var(--warn-fill)"/>
+  <ellipse cx="360" cy="450" rx="22" ry="22" fill="none" stroke="var(--warn-border)" stroke-width="3"/>
+  <text x="370" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Cluster C</text>
+  <text x="390" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Rings show cluster centroids</text>
+  <rect x="760" y="40" width="480" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">k-Means Algorithm</text>
+  <text x="780" y="140" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">1. Pick k starting centroids</text>
+  <text x="780" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">2. Assign each point to nearest</text>
+  <text x="780" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">3. Recompute centroid as mean</text>
+  <text x="780" y="245" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">4. Repeat until stable</text>
+  <text x="780" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Choosing k:</text>
+  <text x="780" y="335" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Elbow method on inertia</text>
+  <text x="780" y="370" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Silhouette score</text>
+  <text x="780" y="405" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Domain knowledge</text>
+  <text x="780" y="460" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Watch out:</text>
+  <text x="780" y="495" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Sensitive to initialisation</text>
+  <text x="780" y="530" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Assumes spherical clusters</text>
+  <text x="780" y="565" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Scale features first</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="1200" height="120" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">Goodhart's Law</text>
+  <text x="640" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">"A measure made target stops being a good measure"</text>
+  <rect x="40" y="180" width="395" height="440" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="237" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">The trap</text>
+  <text x="60" y="275" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Pick a proxy metric</text>
+  <text x="60" y="345" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">(clicks, dwell time)</text>
+  <text x="60" y="400" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Model crushes it</text>
+  <text x="60" y="490" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Real goal was elsewhere</text>
+  <text x="60" y="560" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">(satisfaction, value)</text>
+  <text x="60" y="610" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Proxy decouples</text>
+  <rect x="445" y="180" width="395" height="440" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="642" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Examples</text>
+  <text x="465" y="275" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Feed clicks</text>
+  <text x="465" y="305" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">→ clickbait</text>
+  <text x="465" y="360" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Watch time</text>
+  <text x="465" y="390" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">→ rabbit holes</text>
+  <text x="465" y="445" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Dwell time</text>
+  <text x="465" y="475" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">→ confusing pages</text>
+  <text x="465" y="530" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Stock price</text>
+  <text x="465" y="560" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">→ short-term gaming</text>
+  <text x="465" y="610" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-text)">Wrong thing optimised</text>
+  <rect x="850" y="180" width="390" height="440" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Mitigations</text>
+  <text x="870" y="275" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Multiple metrics</text>
+  <text x="870" y="335" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Long-term outcomes</text>
+  <text x="870" y="425" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Counter-balance pairs</text>
+  <text x="870" y="515" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Review outliers</text>
+  <text x="870" y="570" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Distrust single</text>
+  <text x="870" y="600" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">numeric objective</text>
+</svg>

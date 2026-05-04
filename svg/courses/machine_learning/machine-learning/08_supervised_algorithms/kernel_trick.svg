@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="380" height="580" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="230" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Original space</text>
+  <text x="230" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Not linearly separable</text>
+  <ellipse cx="230" cy="370" rx="120" ry="120" fill="none" stroke="var(--text-faint)" stroke-width="1"/>
+  <ellipse cx="200" cy="350" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="260" cy="360" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="240" cy="400" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="220" cy="380" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="280" cy="380" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="180" cy="380" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="120" cy="280" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="340" cy="280" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="120" cy="460" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="340" cy="460" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="80" cy="370" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="380" cy="370" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="230" cy="240" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="230" cy="500" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <text x="230" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">No straight line separates</text>
+  <text x="450" y="370" font-family="Arial, sans-serif" font-size="40" fill="var(--text)">→</text>
+  <text x="445" y="345" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">φ(x)</text>
+  <text x="430" y="410" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">add a feature</text>
+  <text x="430" y="430" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">e.g. x² + y²</text>
+  <rect x="510" y="40" width="380" height="580" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="700" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Transformed space</text>
+  <text x="700" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Linearly separable</text>
+  <line x1="540" y1="500" x2="870" y2="500" stroke="var(--text)" stroke-width="2"/>
+  <line x1="540" y1="350" x2="870" y2="350" stroke="var(--danger-border)" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="700" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-border)">linear boundary</text>
+  <ellipse cx="600" cy="450" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="640" cy="460" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="680" cy="470" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="720" cy="465" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="760" cy="455" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="800" cy="445" rx="8" ry="8" fill="var(--ok-fill)"/>
+  <ellipse cx="560" cy="220" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="600" cy="200" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="640" cy="240" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="700" cy="180" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="750" cy="220" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="800" cy="200" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="840" cy="250" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <ellipse cx="700" cy="260" rx="8" ry="8" fill="var(--primary-fill)"/>
+  <text x="700" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Greens at low height; blues higher</text>
+  <rect x="910" y="40" width="330" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1075" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Kernel Trick</text>
+  <text x="930" y="140" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Map to higher dim space</text>
+  <text x="930" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Where data is separable</text>
+  <text x="930" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Compute via kernel only</text>
+  <text x="930" y="245" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">No explicit projection</text>
+  <text x="930" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Common kernels:</text>
+  <text x="930" y="335" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Linear: x · y</text>
+  <text x="930" y="370" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Polynomial: (x · y + c)^d</text>
+  <text x="930" y="405" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">RBF: exp(−γ ‖x−y‖²)</text>
+  <text x="930" y="440" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Sigmoid: tanh(...)</text>
+  <text x="930" y="495" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Used by:</text>
+  <text x="930" y="530" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">SVM (most famously)</text>
+  <text x="930" y="565" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Kernel ridge regression</text>
+  <text x="930" y="600" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Gaussian processes</text>
+</svg>

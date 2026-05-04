@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="700" height="580" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="390" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Dendrogram</text>
+  <line x1="100" y1="100" x2="100" y2="540" stroke="var(--text)" stroke-width="2"/>
+  <line x1="100" y1="540" x2="700" y2="540" stroke="var(--text)" stroke-width="2"/>
+  <text x="60" y="335" font-family="Arial, sans-serif" font-size="14" fill="var(--text)" transform="rotate(-90 60 335)">distance</text>
+  <line x1="150" y1="540" x2="150" y2="500" stroke="var(--primary-border)" stroke-width="2"/>
+  <line x1="190" y1="540" x2="190" y2="500" stroke="var(--primary-border)" stroke-width="2"/>
+  <line x1="150" y1="500" x2="190" y2="500" stroke="var(--primary-border)" stroke-width="2"/>
+  <line x1="170" y1="500" x2="170" y2="430" stroke="var(--primary-border)" stroke-width="2"/>
+  <line x1="240" y1="540" x2="240" y2="470" stroke="var(--primary-border)" stroke-width="2"/>
+  <line x1="280" y1="540" x2="280" y2="470" stroke="var(--primary-border)" stroke-width="2"/>
+  <line x1="240" y1="470" x2="280" y2="470" stroke="var(--primary-border)" stroke-width="2"/>
+  <line x1="260" y1="470" x2="260" y2="430" stroke="var(--primary-border)" stroke-width="2"/>
+  <line x1="170" y1="430" x2="260" y2="430" stroke="var(--primary-border)" stroke-width="2"/>
+  <line x1="215" y1="430" x2="215" y2="280" stroke="var(--primary-border)" stroke-width="2"/>
+  <line x1="380" y1="540" x2="380" y2="490" stroke="var(--ok-border)" stroke-width="2"/>
+  <line x1="420" y1="540" x2="420" y2="490" stroke="var(--ok-border)" stroke-width="2"/>
+  <line x1="380" y1="490" x2="420" y2="490" stroke="var(--ok-border)" stroke-width="2"/>
+  <line x1="400" y1="490" x2="400" y2="380" stroke="var(--ok-border)" stroke-width="2"/>
+  <line x1="480" y1="540" x2="480" y2="450" stroke="var(--ok-border)" stroke-width="2"/>
+  <line x1="520" y1="540" x2="520" y2="450" stroke="var(--ok-border)" stroke-width="2"/>
+  <line x1="480" y1="450" x2="520" y2="450" stroke="var(--ok-border)" stroke-width="2"/>
+  <line x1="500" y1="450" x2="500" y2="380" stroke="var(--ok-border)" stroke-width="2"/>
+  <line x1="400" y1="380" x2="500" y2="380" stroke="var(--ok-border)" stroke-width="2"/>
+  <line x1="450" y1="380" x2="450" y2="280" stroke="var(--ok-border)" stroke-width="2"/>
+  <line x1="600" y1="540" x2="600" y2="350" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="660" y1="540" x2="660" y2="350" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="600" y1="350" x2="660" y2="350" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="630" y1="350" x2="630" y2="200" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="215" y1="280" x2="450" y2="280" stroke="var(--text)" stroke-width="2"/>
+  <line x1="332" y1="280" x2="332" y2="200" stroke="var(--text)" stroke-width="2"/>
+  <line x1="332" y1="200" x2="630" y2="200" stroke="var(--text)" stroke-width="2"/>
+  <line x1="100" y1="320" x2="700" y2="320" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="710" y="325" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-border)">cut here → 3 clusters</text>
+  <text x="170" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">A B C</text>
+  <text x="450" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">D E F G</text>
+  <text x="630" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">H I</text>
+  <text x="60" y="600" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Cutting horizontal line yields cluster count</text>
+  <rect x="760" y="40" width="480" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Hierarchical Clustering</text>
+  <text x="780" y="140" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Agglomerative: bottom-up</text>
+  <text x="780" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Each point starts as cluster</text>
+  <text x="780" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Merge nearest pair, repeat</text>
+  <text x="780" y="265" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Linkage criteria:</text>
+  <text x="780" y="300" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Single: closest pair</text>
+  <text x="780" y="335" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Complete: farthest pair</text>
+  <text x="780" y="370" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Average: average distance</text>
+  <text x="780" y="405" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Ward: minimise variance</text>
+  <text x="780" y="460" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Strengths:</text>
+  <text x="780" y="495" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">No need to choose k</text>
+  <text x="780" y="530" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Visualise the structure</text>
+  <text x="780" y="585" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Limit: O(n²) memory</text>
+</svg>

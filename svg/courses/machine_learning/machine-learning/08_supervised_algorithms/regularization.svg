@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="395" height="580" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="237" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">L2 / Ridge</text>
+  <text x="60" y="135" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Loss + λ · Σ wᵢ²</text>
+  <text x="60" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Shrinks all weights</text>
+  <text x="60" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">No weights become zero</text>
+  <text x="60" y="245" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Smooth</text>
+  <text x="60" y="295" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">When:</text>
+  <text x="60" y="330" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Many small effects</text>
+  <text x="60" y="400" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Default linear</text>
+  <text x="60" y="455" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Effect:</text>
+  <text x="60" y="490" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Lower variance</text>
+  <text x="60" y="580" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">sklearn: Ridge</text>
+  <rect x="445" y="40" width="395" height="580" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="642" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">L1 / Lasso</text>
+  <text x="465" y="135" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Loss + λ · Σ |wᵢ|</text>
+  <text x="465" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Drives weights to zero</text>
+  <text x="465" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Performs feature selection</text>
+  <text x="465" y="245" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Sparse</text>
+  <text x="465" y="295" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">When:</text>
+  <text x="465" y="330" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Few features matter</text>
+  <text x="465" y="400" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">High-dim data</text>
+  <text x="465" y="455" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Effect:</text>
+  <text x="465" y="490" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Fewer features</text>
+  <text x="465" y="580" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">sklearn: Lasso</text>
+  <rect x="850" y="40" width="390" height="580" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">Elastic Net</text>
+  <text x="870" y="135" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Loss + α·L1 + (1−α)·L2</text>
+  <text x="870" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Mix of L1 and L2</text>
+  <text x="870" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Sparse but stable</text>
+  <text x="870" y="245" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Two knobs</text>
+  <text x="870" y="295" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">When:</text>
+  <text x="870" y="330" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Correlated features</text>
+  <text x="870" y="400" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">L1 too unstable</text>
+  <text x="870" y="455" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Effect:</text>
+  <text x="870" y="490" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Best of both</text>
+  <text x="870" y="580" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">sklearn: ElasticNet</text>
+</svg>

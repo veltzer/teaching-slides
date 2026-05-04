@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata><type>regular</type></metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e;
+        --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+  </defs>
+  <rect x="40" y="40" width="395" height="580" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="237" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">One-Hot</text>
+  <text x="60" y="135" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">color = "red"</text>
+  <text x="60" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">→ red=1, green=0, blue=0</text>
+  <text x="60" y="220" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">color = "blue"</text>
+  <text x="60" y="260" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">→ red=0, green=0, blue=1</text>
+  <text x="60" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">When:</text>
+  <text x="60" y="355" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Nominal categories</text>
+  <text x="60" y="390" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">No natural order</text>
+  <text x="60" y="425" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Few unique values</text>
+  <text x="60" y="480" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Watch out:</text>
+  <text x="60" y="515" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Explodes high cardinality</text>
+  <text x="60" y="550" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Sparse matrices help</text>
+  <text x="60" y="600" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">sklearn: OneHotEncoder</text>
+  <rect x="445" y="40" width="395" height="580" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="642" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Ordinal</text>
+  <text x="465" y="135" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">size = "small"  → 1</text>
+  <text x="465" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">size = "medium" → 2</text>
+  <text x="465" y="215" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">size = "large"  → 3</text>
+  <text x="465" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">When:</text>
+  <text x="465" y="355" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">True ordering exists</text>
+  <text x="465" y="390" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Tree-based models</text>
+  <text x="465" y="425" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Memory-efficient</text>
+  <text x="465" y="480" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Watch out:</text>
+  <text x="465" y="515" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Implies linear distance</text>
+  <text x="465" y="550" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Wrong for nominal!</text>
+  <text x="465" y="600" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">sklearn: OrdinalEncoder</text>
+  <rect x="850" y="40" width="390" height="580" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">High cardinality?</text>
+  <text x="870" y="135" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Thousands of categories</text>
+  <text x="870" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">e.g. zip code, user_id</text>
+  <text x="870" y="230" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Options:</text>
+  <text x="870" y="265" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Target encoding</text>
+  <text x="870" y="300" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Frequency encoding</text>
+  <text x="870" y="335" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Hash encoding</text>
+  <text x="870" y="370" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Embeddings</text>
+  <text x="870" y="425" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Or use:</text>
+  <text x="870" y="460" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">CatBoost (handles natively)</text>
+  <text x="870" y="495" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">LightGBM with cat_features</text>
+  <text x="870" y="550" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Always:</text>
+  <text x="870" y="600" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Fit encoder on train only</text>
+</svg>
