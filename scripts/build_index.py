@@ -34,6 +34,7 @@ if not (ROOT / ".git").exists():
     print("Error: script must be run from the root of the repository", file=sys.stderr)
     sys.exit(1)
 RESOURCES_DIR = ROOT / "resources"
+SHARED_THEMES_DIR = ROOT / "shared" / "shared-themes"
 
 
 def find_course_dirs(source_dir: Path, ext: str) -> list[Path]:
@@ -279,8 +280,10 @@ def build_info_html() -> str:
 
 def generate_index(entries: list[dict[str, Any]]) -> str:
     """Generate the self-contained HTML index page."""
-    css = (RESOURCES_DIR / "courses_index.css").read_text(encoding="utf-8")
-    js = (RESOURCES_DIR / "courses_index.js").read_text(encoding="utf-8")
+    shared_css = (SHARED_THEMES_DIR / "themes.css").read_text(encoding="utf-8")
+    shared_js = (SHARED_THEMES_DIR / "theme-switcher.js").read_text(encoding="utf-8")
+    css = shared_css + "\n" + (RESOURCES_DIR / "courses_index.css").read_text(encoding="utf-8")
+    js = shared_js + "\n" + (RESOURCES_DIR / "courses_index.js").read_text(encoding="utf-8")
     template = (RESOURCES_DIR / "courses_index.html").read_text(encoding="utf-8")
 
     levels = [e["level"] for e in entries]
