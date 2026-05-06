@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Helvetica, Arial, sans-serif">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#27ae60"/>
+    </marker>
+
+    <linearGradient id="cutGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#27ae60" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#27ae60" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#27ae60" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#27ae60" stop-opacity="0"/>
+    </linearGradient>
+
+    <style>
+      .comp { fill: #ecf0f1; stroke: #34495e; stroke-width: 1.5; }
+      .comp-frontend { fill: #d6eaf8; stroke: #2874a6; }
+      .comp-backend  { fill: #fdebd0; stroke: #af601a; }
+      .comp-data     { fill: #d5f5e3; stroke: #1e8449; }
+      .label   { font-size: 13px; fill: #2c3e50; text-anchor: middle; font-weight: 600; }
+      .sublabel{ font-size: 10px; fill: #566573; text-anchor: middle; }
+      .title   { font-size: 20px; fill: #1b2631; font-weight: 700; }
+      .legend  { font-size: 12px; fill: #2c3e50; }
+      .edge       { stroke: #555; stroke-width: 1.4; fill: none; }
+      .edge-heavy { stroke: #c0392b; stroke-width: 2.6; fill: none; }
+      .edge-thin  { stroke: #27ae60; stroke-width: 1.4; fill: none; stroke-dasharray: 4 3; }
+      .cut-line { stroke: url(#cutGradient); stroke-width: 5; fill: none; stroke-dasharray: 12 6; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="700" fill="#fbfcfc"/>
+
+  <text x="500" y="34" class="title" text-anchor="middle">
+    System Architecture — Line of Least Resistance
+  </text>
+  <text x="500" y="54" class="sublabel">
+    cut where dependencies are few, one-way, and carry only plain data
+  </text>
+
+  <!-- ============ FRONTEND CLUSTER (top) ============ -->
+  <g>
+    <rect x="60"  y="90"  width="130" height="55" rx="8" class="comp comp-frontend"/>
+    <text x="125" y="112" class="label">Web UI</text>
+    <text x="125" y="128" class="sublabel">React SPA</text>
+
+    <rect x="220" y="90"  width="130" height="55" rx="8" class="comp comp-frontend"/>
+    <text x="285" y="112" class="label">Mobile App</text>
+    <text x="285" y="128" class="sublabel">iOS / Android</text>
+
+    <rect x="380" y="90"  width="130" height="55" rx="8" class="comp comp-frontend"/>
+    <text x="445" y="112" class="label">Admin Console</text>
+    <text x="445" y="128" class="sublabel">internal tools</text>
+
+    <rect x="540" y="90"  width="130" height="55" rx="8" class="comp comp-frontend"/>
+    <text x="605" y="112" class="label">Public API SDK</text>
+    <text x="605" y="128" class="sublabel">3rd party</text>
+
+    <rect x="700" y="90"  width="130" height="55" rx="8" class="comp comp-frontend"/>
+    <text x="765" y="112" class="label">Webhook Sender</text>
+    <text x="765" y="128" class="sublabel">outbound</text>
+  </g>
+
+  <!-- ============ BACKEND CLUSTER (middle, tightly coupled) ============ -->
+  <g>
+    <!-- Tight cluster background -->
+    <rect x="40" y="200" width="800" height="220" rx="14"
+          fill="#fadbd8" fill-opacity="0.35" stroke="#c0392b"
+          stroke-dasharray="6 4" stroke-width="1.2"/>
+    <text x="60" y="220" class="sublabel" text-anchor="start" fill="#922b21" font-weight="700">
+      ▓ TIGHTLY COUPLED CORE — do NOT cut through here
+    </text>
+
+    <rect x="70"  y="240" width="130" height="55" rx="8" class="comp comp-backend"/>
+    <text x="135" y="262" class="label">Auth Service</text>
+    <text x="135" y="278" class="sublabel">sessions, JWT</text>
+
+    <rect x="230" y="240" width="130" height="55" rx="8" class="comp comp-backend"/>
+    <text x="295" y="262" class="label">User Service</text>
+    <text x="295" y="278" class="sublabel">profiles</text>
+
+    <rect x="390" y="240" width="130" height="55" rx="8" class="comp comp-backend"/>
+    <text x="455" y="262" class="label">Order Service</text>
+    <text x="455" y="278" class="sublabel">checkout, cart</text>
+
+    <rect x="550" y="240" width="130" height="55" rx="8" class="comp comp-backend"/>
+    <text x="615" y="262" class="label">Payment Service</text>
+    <text x="615" y="278" class="sublabel">Stripe, refunds</text>
+
+    <rect x="710" y="240" width="120" height="55" rx="8" class="comp comp-backend"/>
+    <text x="770" y="262" class="label">Inventory</text>
+    <text x="770" y="278" class="sublabel">stock, SKUs</text>
+
+    <rect x="150" y="345" width="140" height="55" rx="8" class="comp comp-backend"/>
+    <text x="220" y="367" class="label">Notification Svc</text>
+    <text x="220" y="383" class="sublabel">email, push</text>
+
+    <rect x="320" y="345" width="140" height="55" rx="8" class="comp comp-backend"/>
+    <text x="390" y="367" class="label">Pricing Engine</text>
+    <text x="390" y="383" class="sublabel">discounts, tax</text>
+
+    <rect x="490" y="345" width="140" height="55" rx="8" class="comp comp-backend"/>
+    <text x="560" y="367" class="label">Search Indexer</text>
+    <text x="560" y="383" class="sublabel">elastic sync</text>
+
+    <rect x="660" y="345" width="140" height="55" rx="8" class="comp comp-backend"/>
+    <text x="730" y="367" class="label">Recommendation</text>
+    <text x="730" y="383" class="sublabel">ML scoring</text>
+  </g>
+
+  <!-- Heavy intra-core couplings (red, thick) -->
+  <g>
+    <path class="edge-heavy" d="M200,267 L230,267" marker-end="url(#arrowRed)"/>
+    <path class="edge-heavy" d="M360,267 L390,267" marker-end="url(#arrowRed)"/>
+    <path class="edge-heavy" d="M520,267 L550,267" marker-end="url(#arrowRed)"/>
+    <path class="edge-heavy" d="M680,267 L710,267" marker-end="url(#arrowRed)"/>
+    <path class="edge-heavy" d="M455,295 Q455,320 390,345" marker-end="url(#arrowRed)"/>
+    <path class="edge-heavy" d="M455,295 Q500,320 560,345" marker-end="url(#arrowRed)"/>
+    <path class="edge-heavy" d="M615,295 Q620,320 560,345" marker-end="url(#arrowRed)"/>
+    <path class="edge-heavy" d="M295,295 Q295,325 220,345" marker-end="url(#arrowRed)"/>
+    <path class="edge-heavy" d="M770,295 Q760,320 730,345" marker-end="url(#arrowRed)"/>
+    <path class="edge-heavy" d="M390,375 Q420,375 490,375" marker-end="url(#arrowRed)"/>
+    <path class="edge-heavy" d="M630,375 Q645,375 660,375" marker-end="url(#arrowRed)"/>
+    <!-- back-edges (cycles) -->
+    <path class="edge-heavy" d="M295,240 Q295,215 135,240" marker-end="url(#arrowRed)"/>
+    <path class="edge-heavy" d="M615,240 Q540,210 455,240" marker-end="url(#arrowRed)"/>
+  </g>
+
+  <!-- Frontend -> Backend edges -->
+  <g>
+    <path class="edge" d="M125,145 L135,240" marker-end="url(#arrow)"/>
+    <path class="edge" d="M285,145 L295,240" marker-end="url(#arrow)"/>
+    <path class="edge" d="M445,145 L455,240" marker-end="url(#arrow)"/>
+    <path class="edge" d="M605,145 L615,240" marker-end="url(#arrow)"/>
+    <path class="edge" d="M765,145 L770,240" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ THE LINE OF LEAST RESISTANCE ============ -->
+  <g>
+    <line x1="20" y1="455" x2="980" y2="455" class="cut-line"/>
+    <text x="500" y="448" text-anchor="middle" font-size="14" font-weight="700" fill="#1e8449">
+      ✂  LINE OF LEAST RESISTANCE  ✂
+    </text>
+    <text x="500" y="474" text-anchor="middle" font-size="11" fill="#1e8449">
+      narrow seam · few crossings · all one-way · plain DTOs only
+    </text>
+  </g>
+
+  <!-- ============ DATA / INFRA CLUSTER (bottom, leaves) ============ -->
+  <g>
+    <rect x="60"  y="510" width="140" height="55" rx="8" class="comp comp-data"/>
+    <text x="130" y="532" class="label">Event Bus</text>
+    <text x="130" y="548" class="sublabel">Kafka topics</text>
+
+    <rect x="230" y="510" width="140" height="55" rx="8" class="comp comp-data"/>
+    <text x="300" y="532" class="label">Postgres</text>
+    <text x="300" y="548" class="sublabel">primary OLTP</text>
+
+    <rect x="400" y="510" width="140" height="55" rx="8" class="comp comp-data"/>
+    <text x="470" y="532" class="label">Redis Cache</text>
+    <text x="470" y="548" class="sublabel">ephemeral</text>
+
+    <rect x="570" y="510" width="140" height="55" rx="8" class="comp comp-data"/>
+    <text x="640" y="532" class="label">Object Store</text>
+    <text x="640" y="548" class="sublabel">S3, blobs</text>
+
+    <rect x="740" y="510" width="140" height="55" rx="8" class="comp comp-data"/>
+    <text x="810" y="532" class="label">Data Warehouse</text>
+    <text x="810" y="548" class="sublabel">analytics, ETL</text>
+
+    <rect x="320" y="600" width="140" height="55" rx="8" class="comp comp-data"/>
+    <text x="390" y="622" class="label">Metrics Store</text>
+    <text x="390" y="638" class="sublabel">Prometheus</text>
+
+    <rect x="490" y="600" width="140" height="55" rx="8" class="comp comp-data"/>
+    <text x="560" y="622" class="label">Log Pipeline</text>
+    <text x="560" y="638" class="sublabel">Loki / S3</text>
+  </g>
+
+  <!-- Backend -> Data edges (these CROSS the cut line — but they are thin & one-way) -->
+  <g>
+    <path class="edge-thin" d="M220,400 L130,510" marker-end="url(#arrowGreen)"/>
+    <path class="edge-thin" d="M295,295 Q260,420 300,510" marker-end="url(#arrowGreen)"/>
+    <path class="edge-thin" d="M455,295 Q450,440 300,510" marker-end="url(#arrowGreen)"/>
+    <path class="edge-thin" d="M390,400 L470,510" marker-end="url(#arrowGreen)"/>
+    <path class="edge-thin" d="M615,295 Q620,440 640,510" marker-end="url(#arrowGreen)"/>
+    <path class="edge-thin" d="M730,400 L810,510" marker-end="url(#arrowGreen)"/>
+    <path class="edge-thin" d="M560,400 Q560,450 560,510"/>
+    <path class="edge-thin" d="M770,295 Q800,420 810,510" marker-end="url(#arrowGreen)"/>
+  </g>
+
+  <!-- Data internal (one-way, thin) -->
+  <g>
+    <path class="edge-thin" d="M370,538 L400,538" marker-end="url(#arrowGreen)"/>
+    <path class="edge-thin" d="M710,538 L740,538" marker-end="url(#arrowGreen)"/>
+    <path class="edge-thin" d="M390,600 Q390,580 470,565" marker-end="url(#arrowGreen)"/>
+    <path class="edge-thin" d="M560,600 Q560,580 640,565" marker-end="url(#arrowGreen)"/>
+  </g>
+
+  <!-- ============ LEGEND ============ -->
+  <g transform="translate(60, 670)">
+    <line x1="0"  y1="0" x2="30" y2="0" class="edge-heavy"/>
+    <text x="38" y="4" class="legend" fill="#922b21">tight coupling (cycles, shared state)</text>
+
+    <line x1="290" y1="0" x2="320" y2="0" class="edge-thin"/>
+    <text x="328" y="4" class="legend" fill="#1e8449">thin one-way dependency (data only)</text>
+
+    <line x1="600" y1="0" x2="630" y2="0" class="edge"/>
+    <text x="638" y="4" class="legend">ordinary call</text>
+
+    <line x1="760" y1="0" x2="800" y2="0" class="cut-line"/>
+    <text x="808" y="4" class="legend" fill="#1e8449">cut here</text>
+  </g>
+
+</svg>
