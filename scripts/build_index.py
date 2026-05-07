@@ -36,6 +36,12 @@ if not (ROOT / ".git").exists():
 RESOURCES_DIR = ROOT / "resources"
 SHARED_THEMES_DIR = ROOT / "shared" / "shared-themes"
 
+# Two parallel UI variants live in resources/:
+#   material_web — real <md-*> custom elements from @material/web (CDN). Default.
+#   material_css — native HTML controls + hand-rolled Material-look CSS. No deps.
+# Pick via env var. Files named courses_index_<variant>.{html,css,js}.
+UI_VARIANT = os.environ.get("MATERIAL_VARIANT", "material_web")
+
 
 def find_course_dirs(source_dir: Path, ext: str) -> list[Path]:
     """Recursively find directories containing files with the given extension."""
@@ -228,8 +234,15 @@ def build_lecture_entries(
 
 
 def make_options(values: list[str]) -> str:
-    """Generate HTML <option> tags from a sorted list of unique values."""
-    return "\n".join(f'<option value="{v}">{v}</option>' for v in sorted(set(values)) if v)
+    """Generate option tags from a sorted list of unique values, in
+    whichever flavour the active UI variant expects."""
+    sorted_values = [v for v in sorted(set(values)) if v]
+    if UI_VARIANT == "material_web":
+        return "\n".join(
+            f'<md-select-option value="{v}"><div slot="headline">{v}</div></md-select-option>'
+            for v in sorted_values
+        )
+    return "\n".join(f'<option value="{v}">{v}</option>' for v in sorted_values)
 
 
 def _git(*args: str) -> str:
@@ -284,9 +297,18 @@ def generate_index(entries: list[dict[str, Any]]) -> str:
         (SHARED_THEMES_DIR / "components.css").read_text(encoding="utf-8"),
     ]
     shared_js = (SHARED_THEMES_DIR / "theme-switcher.js").read_text(encoding="utf-8")
-    css = "\n".join(shared_css_parts) + "\n" + (RESOURCES_DIR / "courses_index.css").read_text(encoding="utf-8")
-    js = shared_js + "\n" + (RESOURCES_DIR / "courses_index.js").read_text(encoding="utf-8")
-    template = (RESOURCES_DIR / "courses_index.html").read_text(encoding="utf-8")
+
+    html_path = RESOURCES_DIR / f"courses_index_{UI_VARIANT}.html"
+    css_path = RESOURCES_DIR / f"courses_index_{UI_VARIANT}.css"
+    js_path = RESOURCES_DIR / f"courses_index_{UI_VARIANT}.js"
+    if not html_path.exists():
+        raise SystemExit(
+            f"Unknown MATERIAL_VARIANT '{UI_VARIANT}': {html_path} not found"
+        )
+
+    css = "\n".join(shared_css_parts) + "\n" + css_path.read_text(encoding="utf-8")
+    js = shared_js + "\n" + js_path.read_text(encoding="utf-8")
+    template = html_path.read_text(encoding="utf-8")
 
     levels = [e["level"] for e in entries]
     categories = [e["category"] for e in entries]

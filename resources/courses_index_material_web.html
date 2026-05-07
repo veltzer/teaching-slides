@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Course &amp; Lecture Browser - Mark Veltzer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="module">
+import "https://cdn.jsdelivr.net/npm/@material/web@2/all.js/+esm";
+window.__mdReady = Promise.all([
+  customElements.whenDefined("md-outlined-text-field"),
+  customElements.whenDefined("md-outlined-select"),
+  customElements.whenDefined("md-select-option"),
+  customElements.whenDefined("md-assist-chip"),
+  customElements.whenDefined("md-switch"),
+]);
+</script>
+<style>
+{{CSS}}
+</style>
+</head>
+<body>
+<div id="index-view">
+<div class="header-bar">
+<h1>Course &amp; Lecture Browser</h1>
+<md-outlined-select id="theme-select" title="Choose theme" label="Theme">
+<md-select-option value="azure" selected><div slot="headline">Azure (cool light, blue)</div></md-select-option>
+<md-select-option value="midnight"><div slot="headline">Midnight (dark blue)</div></md-select-option>
+<md-select-option value="paper"><div slot="headline">Paper (warm light)</div></md-select-option>
+<md-select-option value="nord"><div slot="headline">Nord (cool dark)</div></md-select-option>
+<md-select-option value="solarized"><div slot="headline">Solarized (warm light)</div></md-select-option>
+<md-select-option value="rosepine"><div slot="headline">Rose Pine (purple dark)</div></md-select-option>
+</md-outlined-select>
+</div>
+<p id="total-count">{{TOTAL_COUNT}} items</p>
+
+<div id="breadcrumb"></div>
+<div id="subfolders"></div>
+
+<div class="filters">
+<div class="filter-row filter-row-search">
+<div class="autocomplete-wrap">
+<md-outlined-text-field id="search" label="Search" placeholder="Type to filter by name..." autocomplete="off"></md-outlined-text-field>
+<div id="autocomplete-list" class="autocomplete-list"></div>
+</div>
+</div>
+<div class="filter-row">
+<md-outlined-select id="filter-level" label="Level">
+<md-select-option value="" selected><div slot="headline">All levels</div></md-select-option>
+{{LEVEL_OPTIONS}}
+</md-outlined-select>
+</div>
+<div class="filter-row">
+<md-outlined-select id="filter-category" label="Category">
+<md-select-option value="" selected><div slot="headline">All categories</div></md-select-option>
+{{CATEGORY_OPTIONS}}
+</md-outlined-select>
+</div>
+<div class="filter-row">
+<md-outlined-select id="filter-type" label="Type">
+<md-select-option value="" selected><div slot="headline">All types</div></md-select-option>
+{{TYPE_OPTIONS}}
+</md-outlined-select>
+</div>
+<div class="filter-row">
+<md-outlined-select id="filter-tag" label="Tag">
+<md-select-option value="" selected><div slot="headline">All tags</div></md-select-option>
+{{TAG_OPTIONS}}
+</md-outlined-select>
+</div>
+<div class="filter-row">
+<md-outlined-select id="filter-duration" label="Duration"></md-outlined-select>
+</div>
+<div class="filter-row">
+<md-outlined-select id="filter-audience" label="Audience">
+<md-select-option value="" selected><div slot="headline">All audiences</div></md-select-option>
+{{AUDIENCE_OPTIONS}}
+</md-outlined-select>
+</div>
+<div class="filter-row filter-row-toggle">
+<label for="show-numbers" class="toggle-label">Numbering</label>
+<md-switch id="show-numbers"></md-switch>
+</div>
+<div class="filter-row filter-row-sort">
+<md-outlined-select id="sort-primary" label="Sort by">
+<md-select-option value="folder" selected><div slot="headline">Folder</div></md-select-option>
+<md-select-option value="name"><div slot="headline">Name</div></md-select-option>
+<md-select-option value="level"><div slot="headline">Level</div></md-select-option>
+<md-select-option value="category"><div slot="headline">Category</div></md-select-option>
+<md-select-option value="duration"><div slot="headline">Duration</div></md-select-option>
+<md-select-option value="slides"><div slot="headline">Slides</div></md-select-option>
+<md-select-option value="chapters"><div slot="headline">Chapters</div></md-select-option>
+</md-outlined-select>
+<md-outlined-select id="sort-primary-dir" label="Direction">
+<md-select-option value="asc" selected><div slot="headline">Asc</div></md-select-option>
+<md-select-option value="desc"><div slot="headline">Desc</div></md-select-option>
+</md-outlined-select>
+<md-outlined-select id="sort-secondary" label="Then by">
+<md-select-option value="name" selected><div slot="headline">Name</div></md-select-option>
+<md-select-option value="folder"><div slot="headline">Folder</div></md-select-option>
+<md-select-option value="level"><div slot="headline">Level</div></md-select-option>
+<md-select-option value="category"><div slot="headline">Category</div></md-select-option>
+<md-select-option value="duration"><div slot="headline">Duration</div></md-select-option>
+<md-select-option value="slides"><div slot="headline">Slides</div></md-select-option>
+<md-select-option value="chapters"><div slot="headline">Chapters</div></md-select-option>
+</md-outlined-select>
+<md-outlined-select id="sort-secondary-dir" label="Direction">
+<md-select-option value="asc" selected><div slot="headline">Asc</div></md-select-option>
+<md-select-option value="desc"><div slot="headline">Desc</div></md-select-option>
+</md-outlined-select>
+</div>
+</div>
+
+<div id="results"></div>
+
+<hr>
+<p>Mark Veltzer <a href="mailto:mark.veltzer@gmail.com">mark.veltzer@gmail.com</a> <a href="https://github.com/veltzer">@veltzer</a></p>
+{{BUILD_INFO}}
+</div>
+
+<script>
+const DATA = {{DATA_JSON}};
+{{JS}}
+</script>
+</body>
+</html>
