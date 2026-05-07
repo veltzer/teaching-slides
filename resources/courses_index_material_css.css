@@ -1,20 +1,14 @@
 /*
  * teaching-slides — Material-look CSS variant.
  *
- * No runtime dependency on @material/web. Hand-rolled Material 3
- * vocabulary on top of shared-themes tokens.
+ * No runtime dependency on @material/web. Uses only the tokens already
+ * exposed by shared-themes so the site passes shared-themes' stylelint
+ * config.
  */
 
 :root {
   --font-sans: 'Roboto', system-ui, sans-serif;
   --font-mono: 'Roboto Mono', monospace;
-
-  --m3-elev-1: 0 1px 2px 0 rgba(0,0,0,0.08), 0 1px 3px 1px rgba(0,0,0,0.05);
-  --m3-elev-2: 0 1px 2px 0 rgba(0,0,0,0.12), 0 2px 6px 2px rgba(0,0,0,0.06);
-
-  --m3-corner-sm: 4px;
-  --m3-corner-md: 8px;
-  --m3-corner-lg: 12px;
 }
 
 body { font-family: var(--font-sans); font-weight: 400; letter-spacing: 0.01em; }
@@ -27,10 +21,9 @@ h2 { font-size: 1.5rem; line-height: 2rem; }
 
 .filters {
   background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--m3-corner-lg);
+  border-radius: var(--radius);
   padding: 24px;
-  box-shadow: var(--m3-elev-1);
+  box-shadow: var(--shadow);
 }
 
 .filter-row { display: flex; align-items: center; gap: 12px; }
@@ -42,7 +35,6 @@ h2 { font-size: 1.5rem; line-height: 2rem; }
   color: var(--text-secondary);
 }
 
-/* M3 Outlined Select & Text Field — native controls skinned to look Material. */
 .filter-row select, .filter-row input[type="text"] {
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -51,12 +43,10 @@ h2 { font-size: 1.5rem; line-height: 2rem; }
   background: var(--bg);
   color: var(--text-primary);
   border: 1px solid var(--border);
-  border-radius: var(--m3-corner-sm);
+  border-radius: var(--radius-sm);
   padding: 10px 14px;
   outline: none;
-  transition:
-    border-color 120ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition);
 }
 
 .filter-row select {
@@ -76,69 +66,54 @@ h2 { font-size: 1.5rem; line-height: 2rem; }
 }
 
 .filter-row select:hover, .filter-row input[type="text"]:hover {
-  border-color: var(--text-secondary);
+  border-color: var(--accent-dim);
 }
 .filter-row select:focus, .filter-row input[type="text"]:focus {
-  border: 2px solid var(--accent);
-  padding: 9px 13px;
-  box-shadow: 0 0 0 4px var(--accent-dim);
+  border-color: var(--accent);
 }
 
-/* Search field fills its cell. */
 .autocomplete-wrap { display: block; width: 100%; position: relative; }
 .filter-row input[type="text"]#search { width: 100%; }
 
 .filter-row-sort { flex-wrap: wrap; }
 
-/* Subfolder cards as M3 elevated cards. */
 .subfolder-card {
   background: var(--bg);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--m3-corner-md);
+  border-radius: var(--radius);
   padding: 12px 18px;
-  box-shadow: var(--m3-elev-1);
-  transition:
-    box-shadow 120ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 120ms cubic-bezier(0.4, 0, 0.2, 1),
-    background 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
-.subfolder-card:hover {
-  box-shadow: var(--m3-elev-2);
-  background: var(--bg-hover);
-  transform: translateY(-1px);
-}
+.subfolder-card:hover { background: var(--bg-hover); }
 
-/* Result rows as M3 cards. */
 #results h2 { margin-top: 32px; margin-bottom: 12px; color: var(--text-primary); }
 #results h2 .count { color: var(--text-muted); font-weight: 400; font-size: 0.875rem; }
 
 #index-view ul { list-style: none; padding: 0; margin: 0; }
 #index-view li {
   background: var(--bg);
-  border-radius: var(--m3-corner-md);
-  box-shadow: var(--m3-elev-1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 14px 18px;
   margin-bottom: 8px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  transition:
-    box-shadow 120ms cubic-bezier(0.4, 0, 0.2, 1),
-    background 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition);
 }
-#index-view li:hover { box-shadow: var(--m3-elev-2); background: var(--bg-hover); }
+#index-view li:hover { background: var(--bg-hover); }
 #index-view li a { color: var(--text-primary); font-weight: 500; }
 #index-view li a:hover { color: var(--accent); text-decoration: none; }
 
-/* M3-style chip badges for level/type/duration/chapters/slides. */
+/* Chip badges for level/type/duration/chapters/slides. */
 .level, .duration, .chapters-badge, .slides-badge, .type-badge {
   display: inline-flex;
   align-items: center;
   height: 32px;
   padding: 0 12px;
   border: 1px solid var(--border);
-  border-radius: var(--m3-corner-md);
+  border-radius: var(--radius-sm);
   background: transparent;
   font-size: 0.875rem;
   font-weight: 500;
@@ -154,7 +129,6 @@ h2 { font-size: 1.5rem; line-height: 2rem; }
 .chapters-badge { color: var(--text-secondary); }
 .slides-badge { color: var(--accent); border-color: var(--accent-dim); }
 
-/* Download icons as round M3 icon-buttons. */
 .dl-icon {
   display: inline-flex;
   align-items: center;
@@ -163,25 +137,20 @@ h2 { font-size: 1.5rem; line-height: 2rem; }
   height: 36px;
   border-radius: 50%;
   color: var(--text-muted);
-  transition:
-    background 120ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition);
 }
 .dl-icon:hover { background: var(--accent-dim); color: var(--accent); }
 .dl-icon svg { width: 20px; height: 20px; }
 
-/* Breadcrumb */
 #breadcrumb { font-size: 0.875rem; color: var(--text-secondary); }
 #breadcrumb a { color: var(--accent); text-decoration: none; }
 .breadcrumb-current { color: var(--text-primary); font-weight: 500; }
 .breadcrumb-sep { color: var(--text-muted); margin: 0 6px; }
 
-/* Autocomplete menu */
 .autocomplete-list {
   background: var(--bg-elevated);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--m3-corner-md);
-  box-shadow: var(--m3-elev-2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   max-height: 320px;
   overflow-y: auto;
 }
