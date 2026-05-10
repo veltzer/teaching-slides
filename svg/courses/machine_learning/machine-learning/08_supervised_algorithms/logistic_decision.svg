@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Logistic Regression Decision Boundary</text>
+  <rect x="40" y="80" width="800" height="540" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="440" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Feature space</text>
+  <line x1="120" y1="540" x2="760" y2="160" stroke="var(--primary-accent)" stroke-width="4"/>
+  <rect x="143" y="493" width="14" height="14" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="183" y="463" width="14" height="14" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="223" y="513" width="14" height="14" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="173" y="533" width="14" height="14" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="213" y="483" width="14" height="14" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="253" y="523" width="14" height="14" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="163" y="453" width="14" height="14" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="273" y="493" width="14" height="14" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="303" y="463" width="14" height="14" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="213" y="433" width="14" height="14" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="543" y="253" width="14" height="14" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="593" y="213" width="14" height="14" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="643" y="193" width="14" height="14" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="593" y="293" width="14" height="14" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="673" y="243" width="14" height="14" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="713" y="173" width="14" height="14" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="553" y="323" width="14" height="14" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="633" y="173" width="14" height="14" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="693" y="303" width="14" height="14" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="673" y="193" width="14" height="14" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="373" y="393" width="14" height="14" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="413" y="353" width="14" height="14" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="453" y="413" width="14" height="14" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="433" y="333" width="14" height="14" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="393" y="433" width="14" height="14" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="410" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-accent)">P ≈ 0</text>
+  <text x="700" y="380" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-accent)">P ≈ 1</text>
+  <text x="440" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-accent)">P = 0.5</text>
+  <text x="60" y="580" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Linear in log-odds: log(P/(1-P)) = w·x + b</text>
+  <text x="60" y="610" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">Decision boundary is the hyperplane w·x + b = 0</text>
+  <rect x="870" y="80" width="370" height="540" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1055" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Reading the picture</text>
+  <text x="890" y="155" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">• Far from boundary:</text>
+  <text x="890" y="185" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">    P ≈ 0 or P ≈ 1</text>
+  <text x="890" y="215" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">• On the boundary:</text>
+  <text x="890" y="245" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">    P = 0.5</text>
+  <text x="890" y="275" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">• Sigmoid stretches</text>
+  <text x="890" y="305" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">    log-odds → probability</text>
+  <text x="890" y="350" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Strengths:</text>
+  <text x="890" y="380" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">  Simple, interpretable</text>
+  <text x="890" y="410" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">  Calibrated probabilities</text>
+  <text x="890" y="440" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">  Fast to train</text>
+  <text x="890" y="470" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">  Strong baseline</text>
+  <text x="890" y="510" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Weaknesses:</text>
+  <text x="890" y="540" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">  Linear assumption</text>
+  <text x="890" y="570" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">  Needs feature engineering</text>
+  <text x="890" y="600" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">  Sensitive to outliers</text>
+</svg>

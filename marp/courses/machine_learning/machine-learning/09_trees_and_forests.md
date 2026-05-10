@@ -464,6 +464,21 @@ stack = StackingClassifier(estimators=estimators, final_estimator=LogisticRegres
 ![early_stopping](svg/courses/machine_learning/machine-learning/09_trees_and_forests/early_stopping.svg)
 
 ---
+## Information Gain
+
+![information_gain](svg/courses/machine_learning/machine-learning/09_trees_and_forests/information_gain.svg)
+
+---
+## Learning Rate
+
+![learning_rate](svg/courses/machine_learning/machine-learning/09_trees_and_forests/learning_rate.svg)
+
+---
+## Out-of-Bag Score
+
+![oob_score](svg/courses/machine_learning/machine-learning/09_trees_and_forests/oob_score.svg)
+
+---
 ## Summary
 
 - One tree: interpretable but unstable

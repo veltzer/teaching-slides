@@ -364,6 +364,26 @@ ct = ColumnTransformer([
 ![leakage](svg/courses/machine_learning/machine-learning/07_feature_engineering/leakage.svg)
 
 ---
+## Binning
+
+![binning](svg/courses/machine_learning/machine-learning/07_feature_engineering/binning.svg)
+
+---
+## Log Transform
+
+![log_transform](svg/courses/machine_learning/machine-learning/07_feature_engineering/log_transform.svg)
+
+---
+## Embedding Encoding
+
+![embedding_encoding](svg/courses/machine_learning/machine-learning/07_feature_engineering/embedding_encoding.svg)
+
+---
+## Feature Pipeline
+
+![feature_pipeline](svg/courses/machine_learning/machine-learning/07_feature_engineering/feature_pipeline.svg)
+
+---
 ## Summary
 
 - Features beat algorithms

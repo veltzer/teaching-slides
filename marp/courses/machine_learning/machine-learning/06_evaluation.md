@@ -375,6 +375,21 @@ from sklearn.metrics import (
 ![train_val_test_split](svg/courses/machine_learning/machine-learning/06_evaluation/train_val_test_split.svg)
 
 ---
+## Precision-Recall Tradeoff
+
+![precision_recall_tradeoff](svg/courses/machine_learning/machine-learning/06_evaluation/precision_recall_tradeoff.svg)
+
+---
+## Time Series CV
+
+![time_series_cv](svg/courses/machine_learning/machine-learning/06_evaluation/time_series_cv.svg)
+
+---
+## Leakage in Pipelines
+
+![leakage_pipeline](svg/courses/machine_learning/machine-learning/06_evaluation/leakage_pipeline.svg)
+
+---
 ## Summary
 
 - Match metric to business cost

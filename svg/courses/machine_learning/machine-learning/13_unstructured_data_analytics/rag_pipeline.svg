@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Retrieval-Augmented Generation (RAG)</text>
+  <rect x="40" y="80" width="1200" height="70" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Indexing (offline) — build the knowledge base</text>
+  <rect x="40.0" y="170" width="270" height="80" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="175.0" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Documents</text>
+  <line x1="315.0" y1="210" x2="345.0" y2="210" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="350.0" y="170" width="270" height="80" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485.0" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Chunk</text>
+  <line x1="625.0" y1="210" x2="655.0" y2="210" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="660.0" y="170" width="270" height="80" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="795.0" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Embed</text>
+  <line x1="935.0" y1="210" x2="965.0" y2="210" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="970.0" y="170" width="270" height="80" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105.0" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Vector DB</text>
+  <rect x="40" y="280" width="1200" height="70" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Querying (online) — answer the user</text>
+  <rect x="40.0" y="370" width="215" height="80" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147.5" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">User question</text>
+  <line x1="260.0" y1="410" x2="281.25" y2="410" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="286.25" y="370" width="215" height="80" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="393.75" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Embed query</text>
+  <line x1="506.25" y1="410" x2="527.5" y2="410" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="532.5" y="370" width="215" height="80" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Top-k search</text>
+  <line x1="752.5" y1="410" x2="773.75" y2="410" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="778.75" y="370" width="215" height="80" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="886.25" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">LLM + context</text>
+  <line x1="998.75" y1="410" x2="1020.0" y2="410" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1025.0" y="370" width="215" height="80" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1132.5" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Answer</text>
+  <rect x="40" y="480" width="380" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Why RAG</text>
+  <text x="60" y="545" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Cuts hallucinations</text>
+  <text x="60" y="575" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Cites sources</text>
+  <text x="60" y="605" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">No fine-tuning needed</text>
+  <rect x="450" y="480" width="380" height="140" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Components</text>
+  <text x="470" y="545" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Embedding model + tokeniser</text>
+  <text x="470" y="575" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Vector DB (FAISS, pgvector)</text>
+  <text x="470" y="605" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">LLM (GPT, Claude, Llama, Mistral)</text>
+  <rect x="860" y="480" width="380" height="140" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Pitfalls</text>
+  <text x="880" y="545" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Bad chunking → bad retrieval</text>
+  <text x="880" y="575" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Out-of-domain queries miss</text>
+  <text x="880" y="605" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Latency: embed + search + LLM</text>
+</svg>

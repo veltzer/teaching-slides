@@ -366,6 +366,16 @@ audience:
 ![train_serve_skew](svg/courses/machine_learning/machine-learning/12_real_world_cycle/train_serve_skew.svg)
 
 ---
+## Canary / Shadow
+
+![canary_shadow](svg/courses/machine_learning/machine-learning/12_real_world_cycle/canary_shadow.svg)
+
+---
+## Retraining Loop
+
+![retraining_loop](svg/courses/machine_learning/machine-learning/12_real_world_cycle/retraining_loop.svg)
+
+---
 ## End Of Module
 
 - ML is engineering plus statistics

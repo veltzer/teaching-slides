@@ -475,6 +475,26 @@ preds = iso.fit_predict(X)
 ![anomaly_types](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/anomaly_types.svg)
 
 ---
+## Elbow Method
+
+![elbow_method](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/elbow_method.svg)
+
+---
+## Silhouette
+
+![silhouette](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/silhouette.svg)
+
+---
+## EM Algorithm
+
+![em_algorithm](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/em_algorithm.svg)
+
+---
+## Vector Distance
+
+![vector_distance](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/vector_distance.svg)
+
+---
 ## Summary
 
 - Clustering, association, dimensionality reduction, anomaly

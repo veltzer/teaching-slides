@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.49561369755" font-weight="bold" fill="var(--text)">Expectation–Maximization (EM)</text>
+  <rect x="40" y="81.428571428571" width="1200" height="93.214285714286" rx="6.106202935189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--primary-text)">Iterative algorithm for fitting GMMs and other latent-variable models</text>
+  <text x="640" y="153.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--primary-text)">Alternate between estimating membership and updating parameters</text>
+  <rect x="40" y="195.357142857143" width="290" height="331.428571428571" rx="6.106202935189" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--ok-text)">Init</text>
+  <text x="60" y="280" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--ok-text)">Random k centroids</text>
+  <text x="60" y="315" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--ok-text)">or k-means warm start</text>
+  <text x="60" y="350" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--ok-text)">Σₖ = I, πₖ = 1/k</text>
+  <text x="60" y="420" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--ok-text)">Sensitive to init</text>
+  <text x="60" y="465" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--ok-text)">Run multiple restarts</text>
+  <line x1="330" y1="361.071428571429" x2="350" y2="361.071428571429" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="355" y="195.357142857143" width="290" height="331.428571428571" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--warn-text)">E-step (Expectation)</text>
+  <text x="375" y="280" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--warn-text)">For each point and cluster,</text>
+  <text x="375" y="310" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--warn-text)">compute responsibility:</text>
+  <text x="375" y="350" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">γᵢₖ = πₖ · N(xᵢ | μₖ, Σₖ)</text>
+  <text x="375" y="380" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--warn-text)">(normalise across k)</text>
+  <text x="375" y="430" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">Soft assignment, sums to 1</text>
+  <text x="375" y="465" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--warn-text)">Fractional membership</text>
+  <line x1="645" y1="361.071428571429" x2="665" y2="361.071428571429" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="670" y="195.357142857143" width="290" height="331.428571428571" rx="6.106202935189" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="815" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--info-text)">M-step (Maximization)</text>
+  <text x="690" y="280" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--info-text)">Update params:</text>
+  <text x="690" y="320" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-text)">μₖ ← Σ γᵢₖ xᵢ / Σ γᵢₖ</text>
+  <text x="690" y="350" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-text)">Σₖ ← weighted covariance</text>
+  <text x="690" y="380" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-text)">πₖ ← Σ γᵢₖ / N</text>
+  <text x="690" y="430" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-text)">Closed-form ML estimates</text>
+  <line x1="960" y1="361.071428571429" x2="980" y2="361.071428571429" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="985" y="195.357142857143" width="255" height="331.428571428571" rx="6.106202935189" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1112" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--danger-text)">Repeat</text>
+  <text x="1005" y="280" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--danger-text)">Until log-likelihood</text>
+  <text x="1005" y="310" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--danger-text)">stops increasing</text>
+  <text x="1005" y="340" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--danger-text)">(or max iter)</text>
+  <text x="1005" y="395" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--danger-text)">Guaranteed:</text>
+  <text x="1005" y="425" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--danger-text)">log-likelihood never decreases</text>
+  <text x="1005" y="475" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--danger-text)">May hit local max</text>
+  <path d="M 1115 526.785714285714 Q 1115 578.571428571429 800 578.571428571429 Q 500 578.571428571429 200 578.571428571429 Q 185 578.571428571429 185 526.785714285714" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--text)">Same skeleton: HMMs, topic models, mixtures</text>
+</svg>

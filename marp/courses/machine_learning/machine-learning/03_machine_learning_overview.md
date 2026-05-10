@@ -355,6 +355,21 @@ for clf in [LogisticRegression(), RandomForestClassifier(), GradientBoostingClas
 - Not retraining on shifting distributions
 
 ---
+## Supervised vs Unsupervised
+
+![supervised_vs_unsupervised](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/supervised_vs_unsupervised.svg)
+
+---
+## Loss Landscape
+
+![loss_landscape](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/loss_landscape.svg)
+
+---
+## Gradient Descent
+
+![gradient_descent](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/gradient_descent.svg)
+
+---
 ## Summary
 
 - ML learns from data, not rules

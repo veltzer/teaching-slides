@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Precision–Recall Tradeoff</text>
+  <line x1="80" y1="120" x2="1200" y2="120" stroke="var(--text)" stroke-width="2"/>
+  <text x="80" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">0.0</text>
+  <text x="640" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Threshold</text>
+  <text x="1200" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">1.0</text>
+  <rect x="80" y="113" width="1120" height="14" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="160" width="580" height="270" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Lower threshold</text>
+  <text x="60" y="230" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Predict positive more often</text>
+  <text x="60" y="260" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">↑ Recall (catch more positives)</text>
+  <text x="60" y="290" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">↓ Precision (more false positives)</text>
+  <text x="60" y="330" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Use when missing a positive</text>
+  <text x="60" y="360" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">is expensive:</text>
+  <text x="60" y="390" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">  cancer screening, fraud</text>
+  <text x="60" y="420" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">  early-stage retrieval</text>
+  <rect x="660" y="160" width="580" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Higher threshold</text>
+  <text x="680" y="230" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Predict positive only when sure</text>
+  <text x="680" y="260" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">↑ Precision (fewer false alarms)</text>
+  <text x="680" y="290" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">↓ Recall (miss real positives)</text>
+  <text x="680" y="330" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Use when false positives are</text>
+  <text x="680" y="360" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">expensive:</text>
+  <text x="680" y="390" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">  spam filter, deportation</text>
+  <text x="680" y="420" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">  high-precision search</text>
+  <rect x="40" y="460" width="1200" height="160" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">F1 = harmonic mean of P and R</text>
+  <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">F1 = 2 · P · R / (P + R)</text>
+  <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Penalises lopsided trade-offs — both must be high</text>
+  <text x="640" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Prefer Fβ (β &gt; 1 favors recall, β &lt; 1 favors precision) when costs differ</text>
+</svg>

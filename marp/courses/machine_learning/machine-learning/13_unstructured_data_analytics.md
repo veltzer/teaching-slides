@@ -374,6 +374,16 @@ pipe = Pipeline([
 - Not measuring inference latency
 
 ---
+## Spectrogram
+
+![spectrogram](svg/courses/machine_learning/machine-learning/13_unstructured_data_analytics/spectrogram.svg)
+
+---
+## RAG Pipeline
+
+![rag_pipeline](svg/courses/machine_learning/machine-learning/13_unstructured_data_analytics/rag_pipeline.svg)
+
+---
 ## Summary
 
 - Unstructured data dominates the wild

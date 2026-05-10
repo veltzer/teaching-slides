@@ -422,6 +422,26 @@ loaded = joblib.load("model.pkl")
 - Single train/test split for noisy data
 
 ---
+## NumPy Broadcasting
+
+![numpy_broadcasting](svg/courses/machine_learning/machine-learning/02_practical_data_science/numpy_broadcasting.svg)
+
+---
+## Pandas GroupBy
+
+![pandas_groupby](svg/courses/machine_learning/machine-learning/02_practical_data_science/pandas_groupby.svg)
+
+---
+## Train / Test Split Visualised
+
+![train_test_split](svg/courses/machine_learning/machine-learning/02_practical_data_science/train_test_split.svg)
+
+---
+## Cross Validation Visualised
+
+![cross_validation](svg/courses/machine_learning/machine-learning/02_practical_data_science/cross_validation.svg)
+
+---
 ## Summary
 
 - numpy, pandas, matplotlib, scipy are the toolkit

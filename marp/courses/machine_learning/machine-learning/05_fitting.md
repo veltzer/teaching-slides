@@ -354,6 +354,21 @@ sizes, train, test = learning_curve(
 ![dropout](svg/courses/machine_learning/machine-learning/05_fitting/dropout.svg)
 
 ---
+## Polynomial Capacity
+
+![polynomial_capacity](svg/courses/machine_learning/machine-learning/05_fitting/polynomial_capacity.svg)
+
+---
+## Noise Decomposition
+
+![noise_decomposition](svg/courses/machine_learning/machine-learning/05_fitting/noise_decomposition.svg)
+
+---
+## Curse of Dimensionality
+
+![curse_of_dimensionality](svg/courses/machine_learning/machine-learning/05_fitting/curse_of_dimensionality.svg)
+
+---
 ## Summary
 
 - Underfit and overfit are the two failure modes

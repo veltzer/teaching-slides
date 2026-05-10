@@ -553,6 +553,21 @@ gs.fit(X_train, y_train)
 ![grid_vs_random_search](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/grid_vs_random_search.svg)
 
 ---
+## Logistic Decision Boundary
+
+![logistic_decision](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/logistic_decision.svg)
+
+---
+## QDA Boundary
+
+![qda_boundary](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/qda_boundary.svg)
+
+---
+## Soft Margin
+
+![soft_margin](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/soft_margin.svg)
+
+---
 ## Summary
 
 - Linear models are strong baselines

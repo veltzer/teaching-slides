@@ -439,6 +439,16 @@ audience:
 ![fairness_tradeoff](svg/courses/machine_learning/machine-learning/11_when_ml_fails/fairness_tradeoff.svg)
 
 ---
+## Survivorship Bias
+
+![survivorship_bias](svg/courses/machine_learning/machine-learning/11_when_ml_fails/survivorship_bias.svg)
+
+---
+## Adversarial Example
+
+![adversarial_example](svg/courses/machine_learning/machine-learning/11_when_ml_fails/adversarial_example.svg)
+
+---
 ## Summary
 
 - ML is a tool, not the answer

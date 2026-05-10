@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Canary vs Shadow Deployment</text>
+  <rect x="40" y="80" width="580" height="270" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Canary</text>
+  <rect x="60" y="150" width="540" height="50" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">95% → Old model (production)</text>
+  <rect x="60" y="220" width="540" height="50" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">5% → New model (canary)</text>
+  <text x="60" y="305" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">Watch metrics, ramp up if good</text>
+  <rect x="660" y="80" width="580" height="270" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Shadow</text>
+  <rect x="680" y="150" width="540" height="50" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">100% → Old model (serves users)</text>
+  <rect x="680" y="220" width="540" height="50" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">100% (mirrored) → New model (logged only)</text>
+  <text x="680" y="305" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-text)">Compare offline, no user risk</text>
+  <rect x="40" y="380" width="380" height="240" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Canary pros</text>
+  <text x="60" y="455" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Real production conditions</text>
+  <text x="60" y="485" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Catches load issues</text>
+  <text x="60" y="535" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Cons:</text>
+  <text x="60" y="565" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">  Bad model hits users</text>
+  <text x="60" y="595" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">  Needs rollback</text>
+  <rect x="450" y="380" width="380" height="240" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Shadow pros</text>
+  <text x="470" y="455" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Zero user risk</text>
+  <text x="470" y="485" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Full-traffic compare</text>
+  <text x="470" y="535" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-text)">Cons:</text>
+  <text x="470" y="565" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">  Doubles inference cost</text>
+  <text x="470" y="595" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">  No user feedback</text>
+  <rect x="860" y="380" width="380" height="240" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Strategy</text>
+  <text x="880" y="455" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">1. Shadow to validate</text>
+  <text x="880" y="485" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">2. Canary 1% → 100%</text>
+  <text x="880" y="515" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">3. Monitor every step</text>
+  <text x="880" y="555" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">4. Auto-rollback on regress</text>
+  <text x="880" y="585" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">5. Keep old for revert</text>
+  <text x="880" y="615" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">Combine — defence in depth</text>
+</svg>

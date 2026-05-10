@@ -287,6 +287,16 @@ reg.fit(X, y_real).predict(X_new)
 ![sigmoid_vs_softmax](svg/courses/machine_learning/machine-learning/04_classification_vs_regression/sigmoid_vs_softmax.svg)
 
 ---
+## Binary vs Multiclass
+
+![binary_vs_multiclass](svg/courses/machine_learning/machine-learning/04_classification_vs_regression/binary_vs_multiclass.svg)
+
+---
+## Class Imbalance
+
+![class_imbalance](svg/courses/machine_learning/machine-learning/04_classification_vs_regression/class_imbalance.svg)
+
+---
 ## Summary
 
 - Classification = label; regression = number

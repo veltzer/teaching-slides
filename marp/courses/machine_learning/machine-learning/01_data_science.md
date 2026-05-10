@@ -319,6 +319,31 @@ audience:
 - Not communicating uncertainty
 
 ---
+## Mean vs Median Visualised
+
+![mean_median](svg/courses/machine_learning/machine-learning/01_data_science/mean_median.svg)
+
+---
+## Variance and Std Visualised
+
+![variance_std](svg/courses/machine_learning/machine-learning/01_data_science/variance_std.svg)
+
+---
+## Normal Distribution Visualised
+
+![normal_distribution](svg/courses/machine_learning/machine-learning/01_data_science/normal_distribution.svg)
+
+---
+## Hypothesis Test Visualised
+
+![hypothesis_test](svg/courses/machine_learning/machine-learning/01_data_science/hypothesis_test.svg)
+
+---
+## Bayes' Theorem Visualised
+
+![bayes_theorem](svg/courses/machine_learning/machine-learning/01_data_science/bayes_theorem.svg)
+
+---
 ## Summary
 
 - Data science combines stats, code, domain
