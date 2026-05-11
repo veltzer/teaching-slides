@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
+
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">Statistical Inference</text>
+  <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">estimation, testing, regression, and resampling</text>
+
+  <!-- scatter + fitted regression line -->
+  <line x1="230" y1="500" x2="640" y2="500" stroke="var(--surface)" stroke-width="2"/>
+  <line x1="230" y1="220" x2="230" y2="500" stroke="var(--surface)" stroke-width="2"/>
+  <ellipse cx="270" cy="460" rx="7" ry="7" fill="var(--primary-fill)"/>
+  <ellipse cx="320" cy="440" rx="7" ry="7" fill="var(--primary-fill)"/>
+  <ellipse cx="360" cy="410" rx="7" ry="7" fill="var(--primary-fill)"/>
+  <ellipse cx="410" cy="400" rx="7" ry="7" fill="var(--primary-fill)"/>
+  <ellipse cx="450" cy="360" rx="7" ry="7" fill="var(--primary-fill)"/>
+  <ellipse cx="500" cy="350" rx="7" ry="7" fill="var(--primary-fill)"/>
+  <ellipse cx="550" cy="310" rx="7" ry="7" fill="var(--primary-fill)"/>
+  <ellipse cx="600" cy="280" rx="7" ry="7" fill="var(--primary-fill)"/>
+  <line x1="255" y1="470" x2="615" y2="270" stroke="var(--ok-fill)" stroke-width="4"/>
+
+  <!-- two-group comparison (box-plot style) -->
+  <line x1="760" y1="240" x2="760" y2="490" stroke="var(--surface)" stroke-width="2"/>
+  <rect x="730" y="310" width="60" height="80" fill="var(--info-fill)"/>
+  <line x1="730" y1="350" x2="790" y2="350" stroke="var(--surface)" stroke-width="3"/>
+  <line x1="760" y1="280" x2="760" y2="310" stroke="var(--surface)" stroke-width="2"/>
+  <line x1="760" y1="390" x2="760" y2="430" stroke="var(--surface)" stroke-width="2"/>
+  <line x1="900" y1="240" x2="900" y2="490" stroke="var(--surface)" stroke-width="2"/>
+  <rect x="870" y="350" width="60" height="90" fill="var(--info-fill)"/>
+  <line x1="870" y1="400" x2="930" y2="400" stroke="var(--surface)" stroke-width="3"/>
+  <line x1="900" y1="320" x2="900" y2="350" stroke="var(--surface)" stroke-width="2"/>
+  <line x1="900" y1="440" x2="900" y2="475" stroke="var(--surface)" stroke-width="2"/>
+  <line x1="1000" y1="240" x2="1000" y2="490" stroke="var(--surface)" stroke-width="2"/>
+  <rect x="970" y="290" width="60" height="100" fill="var(--info-fill)"/>
+  <line x1="970" y1="340" x2="1030" y2="340" stroke="var(--surface)" stroke-width="3"/>
+  <line x1="1000" y1="260" x2="1000" y2="290" stroke="var(--surface)" stroke-width="2"/>
+  <line x1="1000" y1="390" x2="1000" y2="425" stroke="var(--surface)" stroke-width="2"/>
+
+  <text x="640" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">estimators &#183; t-tests &#183; ANOVA &#183; chi-square &#183; non-parametrics &#183; regression &#183; logistic &#183; design &#183; Bayesian &#183; bootstrap</text>
+</svg>

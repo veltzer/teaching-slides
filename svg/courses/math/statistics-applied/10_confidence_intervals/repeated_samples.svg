@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.848712894448" fill="var(--text)" font-weight="bold">20 confidence intervals, one true mean</text>
+  <line x1="640" y1="93.703703703704" x2="640" y2="598.518518518518" stroke="var(--ok-fill)" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="640" y="82.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--ok-fill)" font-weight="bold">true μ</text>
+  <line x1="494.0108930795" y1="115.185185185185" x2="751.871735127487" y2="115.185185185185" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="494.0108930795" y1="107.666666666667" x2="494.0108930795" y2="122.703703703704" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="751.871735127487" y1="107.666666666667" x2="751.871735127487" y2="122.703703703704" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="622.941314103493" cy="115.185185185185" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="570.87604364921" y1="138.814814814815" x2="777.314824686325" y2="138.814814814815" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="570.87604364921" y1="131.296296296296" x2="570.87604364921" y2="146.333333333333" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="777.314824686325" y1="131.296296296296" x2="777.314824686325" y2="146.333333333333" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="674.095434167768" cy="138.814814814815" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="475.421057321829" y1="162.444444444444" x2="680.576517301803" y2="162.444444444444" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="475.421057321829" y1="154.925925925926" x2="475.421057321829" y2="169.962962962963" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="680.576517301803" y1="154.925925925926" x2="680.576517301803" y2="169.962962962963" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="577.998787311816" cy="162.444444444444" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="503.227170919057" y1="186.074074074074" x2="748.332569424783" y2="186.074074074074" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="503.227170919057" y1="178.555555555556" x2="503.227170919057" y2="193.592592592593" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="748.332569424783" y1="178.555555555556" x2="748.332569424783" y2="193.592592592593" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="625.77987017192" cy="186.074074074074" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="606.020586433772" y1="209.703703703704" x2="812.229957418183" y2="209.703703703704" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="606.020586433772" y1="202.185185185185" x2="606.020586433772" y2="217.222222222222" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="812.229957418183" y1="202.185185185185" x2="812.229957418183" y2="217.222222222222" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="709.125271925978" cy="209.703703703704" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="552.561825695723" y1="233.333333333333" x2="760.625204659622" y2="233.333333333333" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="552.561825695723" y1="225.814814814815" x2="552.561825695723" y2="240.851851851852" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="760.625204659622" y1="225.814814814815" x2="760.625204659622" y2="240.851851851852" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="656.593515177673" cy="233.333333333333" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="423.426855594775" y1="256.962962962963" x2="634.431474363633" y2="256.962962962963" stroke="var(--danger-fill)" stroke-width="4"/>
+  <line x1="423.426855594775" y1="249.444444444444" x2="423.426855594775" y2="264.481481481482" stroke="var(--danger-fill)" stroke-width="3"/>
+  <line x1="634.431474363633" y1="249.444444444444" x2="634.431474363633" y2="264.481481481482" stroke="var(--danger-fill)" stroke-width="3"/>
+  <ellipse cx="528.929164979204" cy="256.962962962963" rx="5.555555555556" ry="5.37037037037" fill="var(--danger-fill)"/>
+  <line x1="587.094999490671" y1="280.592592592593" x2="806.938463011294" y2="280.592592592593" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="587.094999490671" y1="273.074074074074" x2="587.094999490671" y2="288.111111111111" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="806.938463011294" y1="273.074074074074" x2="806.938463011294" y2="288.111111111111" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="697.016731250983" cy="280.592592592593" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="401.59334327155" y1="304.222222222222" x2="652.891383148661" y2="304.222222222222" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="401.59334327155" y1="296.703703703704" x2="401.59334327155" y2="311.740740740741" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="652.891383148661" y1="296.703703703704" x2="652.891383148661" y2="311.740740740741" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="527.242363210105" cy="304.222222222222" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="406.110548863814" y1="327.851851851852" x2="641.371035499439" y2="327.851851851852" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="406.110548863814" y1="320.333333333333" x2="406.110548863814" y2="335.37037037037" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="641.371035499439" y1="320.333333333333" x2="641.371035499439" y2="335.37037037037" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="523.740792181626" cy="327.851851851852" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="522.208912386666" y1="351.481481481482" x2="798.51721985766" y2="351.481481481482" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="522.208912386666" y1="343.962962962963" x2="522.208912386666" y2="359" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="798.51721985766" y1="343.962962962963" x2="798.51721985766" y2="359" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="660.363066122163" cy="351.481481481482" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="524.067694128864" y1="375.111111111111" x2="749.810741802791" y2="375.111111111111" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="524.067694128864" y1="367.592592592593" x2="524.067694128864" y2="382.62962962963" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="749.810741802791" y1="367.592592592593" x2="749.810741802791" y2="382.62962962963" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="636.939217965828" cy="375.111111111111" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="546.869906653973" y1="398.740740740741" x2="774.290513240811" y2="398.740740740741" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="546.869906653973" y1="391.222222222222" x2="546.869906653973" y2="406.259259259259" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="774.290513240811" y1="391.222222222222" x2="774.290513240811" y2="406.259259259259" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="660.580209947392" cy="398.740740740741" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="530.004682496391" y1="422.37037037037" x2="802.549247751504" y2="422.37037037037" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="530.004682496391" y1="414.851851851852" x2="530.004682496391" y2="429.888888888889" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="802.549247751504" y1="414.851851851852" x2="802.549247751504" y2="429.888888888889" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="666.276965123947" cy="422.37037037037" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="548.711136216667" y1="446" x2="805.503444565661" y2="446" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="548.711136216667" y1="438.481481481482" x2="548.711136216667" y2="453.518518518519" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="805.503444565661" y1="438.481481481482" x2="805.503444565661" y2="453.518518518519" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="677.107290391164" cy="446" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="603.249347299679" y1="469.62962962963" x2="836.351351097522" y2="469.62962962963" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="603.249347299679" y1="462.111111111111" x2="603.249347299679" y2="477.148148148148" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="836.351351097522" y1="462.111111111111" x2="836.351351097522" y2="477.148148148148" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="719.800349198601" cy="469.62962962963" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="514.414613835067" y1="493.259259259259" x2="719.712495609844" y2="493.259259259259" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="514.414613835067" y1="485.740740740741" x2="514.414613835067" y2="500.777777777778" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="719.712495609844" y1="485.740740740741" x2="719.712495609844" y2="500.777777777778" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="617.063554722455" cy="493.259259259259" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="523.751523994349" y1="516.888888888889" x2="742.058965133845" y2="516.888888888889" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="523.751523994349" y1="509.37037037037" x2="523.751523994349" y2="524.407407407407" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="742.058965133845" y1="509.37037037037" x2="742.058965133845" y2="524.407407407407" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="632.905244564097" cy="516.888888888889" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="496.214243856665" y1="540.518518518518" x2="724.138436779046" y2="540.518518518518" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="496.214243856665" y1="533" x2="496.214243856665" y2="548.037037037037" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="724.138436779046" y1="533" x2="724.138436779046" y2="548.037037037037" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="610.176340317856" cy="540.518518518518" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <line x1="450.180874044391" y1="564.148148148148" x2="702.230817467293" y2="564.148148148148" stroke="var(--primary-fill)" stroke-width="4"/>
+  <line x1="450.180874044391" y1="556.62962962963" x2="450.180874044391" y2="571.666666666667" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="702.230817467293" y1="556.62962962963" x2="702.230817467293" y2="571.666666666667" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="576.205845755842" cy="564.148148148148" rx="5.555555555556" ry="5.37037037037" fill="var(--primary-fill)"/>
+  <text x="40" y="620" text-anchor="start" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--text-muted)" font-style="italic">blue: contains μ   |   red: misses μ</text>
+  <text x="1240" y="620" text-anchor="end" font-family="Arial, sans-serif" font-size="15.294099026114" fill="var(--text-muted)" font-style="italic">~1 in 20 misses, by design</text>
+</svg>

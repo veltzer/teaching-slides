@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="616.923076923077" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.226857606928" fill="var(--text)" font-weight="bold">Odds ratio: forest plot</text>
+  <line x1="40" y1="575.384615384615" x2="1240" y2="575.384615384615" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="640" y1="129.230769230769" x2="640" y2="575.384615384615" stroke="var(--text-muted)" stroke-width="3"/>
+  <text x="640" y="597.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--text-muted)">OR = 1 (no effect)</text>
+  <text x="293.846153846154" y="620" text-anchor="start" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--ok-fill)" font-style="italic">lowers risk</text>
+  <text x="986.153846153846" y="620" text-anchor="start" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--danger-fill)" font-style="italic">raises risk</text>
+  <text x="57.307692307692" y="179.423076923077" text-anchor="start" font-family="Arial, sans-serif" font-size="17.01678600433" fill="var(--text)">tenure (per year)</text>
+  <line x1="587.493884316103" y1="173.846153846154" x2="636.752968416561" y2="173.846153846154" stroke="var(--ok-fill)" stroke-width="3"/>
+  <line x1="587.493884316103" y1="166.038461538462" x2="587.493884316103" y2="181.653846153846" stroke="var(--ok-fill)" stroke-width="3"/>
+  <line x1="636.752968416561" y1="166.038461538462" x2="636.752968416561" y2="181.653846153846" stroke="var(--ok-fill)" stroke-width="3"/>
+  <ellipse cx="613.061326342768" cy="173.846153846154" rx="10.384615384615" ry="10.038461538462" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1240" y="179.423076923077" text-anchor="end" font-family="Arial, sans-serif" font-size="15.882333604041" fill="var(--text)" font-weight="bold">0.92</text>
+  <text x="57.307692307692" y="257.5" text-anchor="start" font-family="Arial, sans-serif" font-size="17.01678600433" fill="var(--text)">plan = pro</text>
+  <line x1="698.903887579585" y1="251.923076923077" x2="820.798946871444" y2="251.923076923077" stroke="var(--danger-fill)" stroke-width="3"/>
+  <line x1="698.903887579585" y1="244.115384615385" x2="698.903887579585" y2="259.730769230769" stroke="var(--danger-fill)" stroke-width="3"/>
+  <line x1="820.798946871444" y1="244.115384615385" x2="820.798946871444" y2="259.730769230769" stroke="var(--danger-fill)" stroke-width="3"/>
+  <ellipse cx="760.043610539725" cy="251.923076923077" rx="10.384615384615" ry="10.038461538462" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1240" y="257.5" text-anchor="end" font-family="Arial, sans-serif" font-size="15.882333604041" fill="var(--text)" font-weight="bold">1.45</text>
+  <text x="57.307692307692" y="335.576923076923" text-anchor="start" font-family="Arial, sans-serif" font-size="17.01678600433" fill="var(--text)">support tickets &gt; 3</text>
+  <line x1="781.590054608527" y1="330" x2="978.364598152181" y2="330" stroke="var(--danger-fill)" stroke-width="3"/>
+  <line x1="781.590054608527" y1="322.192307692308" x2="781.590054608527" y2="337.807692307692" stroke="var(--danger-fill)" stroke-width="3"/>
+  <line x1="978.364598152181" y1="322.192307692308" x2="978.364598152181" y2="337.807692307692" stroke="var(--danger-fill)" stroke-width="3"/>
+  <ellipse cx="879.70283445103" cy="330" rx="10.384615384615" ry="10.038461538462" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1240" y="335.576923076923" text-anchor="end" font-family="Arial, sans-serif" font-size="15.882333604041" fill="var(--text)" font-weight="bold">2.10</text>
+  <text x="57.307692307692" y="413.653846153846" text-anchor="start" font-family="Arial, sans-serif" font-size="17.01678600433" fill="var(--text)">region = south</text>
+  <line x1="613.061326342768" y1="408.076923076923" x2="698.903887579585" y2="408.076923076923" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="613.061326342768" y1="400.269230769231" x2="613.061326342768" y2="415.884615384615" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="698.903887579585" y1="400.269230769231" x2="698.903887579585" y2="415.884615384615" stroke="var(--primary-fill)" stroke-width="3"/>
+  <ellipse cx="655.762976116278" cy="408.076923076923" rx="10.384615384615" ry="10.038461538462" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1240" y="413.653846153846" text-anchor="end" font-family="Arial, sans-serif" font-size="15.882333604041" fill="var(--text)" font-weight="bold">1.05</text>
+  <text x="57.307692307692" y="491.730769230769" text-anchor="start" font-family="Arial, sans-serif" font-size="17.01678600433" fill="var(--text)">uses mobile app</text>
+  <line x1="500.823980954745" y1="486.153846153846" x2="620.009484952618" y2="486.153846153846" stroke="var(--ok-fill)" stroke-width="3"/>
+  <line x1="500.823980954745" y1="478.346153846154" x2="500.823980954745" y2="493.961538461539" stroke="var(--ok-fill)" stroke-width="3"/>
+  <line x1="620.009484952618" y1="478.346153846154" x2="620.009484952618" y2="493.961538461539" stroke="var(--ok-fill)" stroke-width="3"/>
+  <ellipse cx="559.727868534331" cy="486.153846153846" rx="10.384615384615" ry="10.038461538462" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1240" y="491.730769230769" text-anchor="end" font-family="Arial, sans-serif" font-size="15.882333604041" fill="var(--text)" font-weight="bold">0.78</text>
+</svg>

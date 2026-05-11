@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.284725634844" fill="var(--text)" font-weight="bold">What you can compute at each level</text>
+  <rect x="40" y="130.980392156863" width="235.714285714286" height="113.725490196078" rx="8.830809321762" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="157.857142857143" y="183.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.284725634844" font-weight="bold" fill="var(--info-text)">nominal</text>
+  <text x="157.857142857143" y="208.313725490196" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.453916313083" fill="var(--info-text)">count / mode</text>
+  <rect x="361.428571428571" y="130.980392156863" width="235.714285714286" height="113.725490196078" rx="8.830809321762" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.285714285714" y="183.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.284725634844" font-weight="bold" fill="var(--info-text)">ordinal</text>
+  <text x="479.285714285714" y="208.313725490196" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.453916313083" fill="var(--info-text)">+ median, percentiles</text>
+  <rect x="682.857142857143" y="130.980392156863" width="235.714285714286" height="113.725490196078" rx="8.830809321762" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="800.714285714286" y="183.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.284725634844" font-weight="bold" fill="var(--warn-text)">interval</text>
+  <text x="800.714285714286" y="208.313725490196" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.453916313083" fill="var(--warn-text)">+ mean, SD</text>
+  <rect x="1004.285714285714" y="130.980392156863" width="235.714285714286" height="113.725490196078" rx="8.830809321762" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1122.142857142857" y="183.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.284725634844" font-weight="bold" fill="var(--ok-text)">ratio</text>
+  <text x="1122.142857142857" y="208.313725490196" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.453916313083" fill="var(--ok-text)">+ ratios</text>
+  <text x="640" y="312.941176470588" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.661618643523" fill="var(--text-muted)" font-style="italic">each level unlocks more operations</text>
+  <rect x="40" y="381.176470588235" width="235.714285714286" height="56.862745098039" rx="8.830809321762" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="157.857142857143" y="414.915032679739" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.453916313083" font-weight="bold" fill="var(--info-text)">± _</text>
+  <rect x="361.428571428571" y="381.176470588235" width="235.714285714286" height="56.862745098039" rx="8.830809321762" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.285714285714" y="414.915032679739" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.453916313083" font-weight="bold" fill="var(--info-text)">± __</text>
+  <rect x="682.857142857143" y="381.176470588235" width="235.714285714286" height="56.862745098039" rx="8.830809321762" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="800.714285714286" y="414.915032679739" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.453916313083" font-weight="bold" fill="var(--warn-text)">± ___</text>
+  <rect x="1004.285714285714" y="381.176470588235" width="235.714285714286" height="56.862745098039" rx="8.830809321762" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1122.142857142857" y="414.915032679739" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.453916313083" font-weight="bold" fill="var(--ok-text)">± ____</text>
+  <text x="640" y="483.529411764706" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.869320973964" fill="var(--text)" font-weight="bold">examples</text>
+  <text x="157.857142857143" y="529.019607843137" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.350065147863" fill="var(--text-muted)">browser, ZIP code</text>
+  <text x="479.285714285714" y="529.019607843137" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.350065147863" fill="var(--text-muted)">rating 1-5</text>
+  <text x="800.714285714286" y="529.019607843137" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.350065147863" fill="var(--text-muted)">Celsius, year</text>
+  <text x="1122.142857142857" y="529.019607843137" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.350065147863" fill="var(--text-muted)">weight, count</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.557767478303" fill="var(--danger-fill)" font-style="italic">averaging ZIP codes is the classic mistake</text>
+</svg>

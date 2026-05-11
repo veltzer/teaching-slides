@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.98776407084" fill="var(--text)" font-weight="bold">Non-parametric replacements</text>
+  <rect x="40" y="116.603773584906" width="1200" height="503.396226415094" rx="8.662588023613" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="307.857142857143" y="165.849056603774" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.49082305313" fill="var(--text)" font-weight="bold">PARAMETRIC</text>
+  <text x="972.142857142857" y="165.849056603774" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.49082305313" fill="var(--text)" font-weight="bold">NON-PARAMETRIC</text>
+  <rect x="72.142857142857" y="204.150943396226" width="492.857142857143" height="54.716981132075" rx="8.662588023613" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="318.571428571429" y="236.981132075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--primary-text)">one-sample t-test</text>
+  <path d="M 575.714285714286 231.509433962264 L 693.571428571429 231.509433962264" fill="none" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="704.285714285714" y="204.150943396226" width="514.285714285714" height="54.716981132075" rx="8.662588023613" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="961.428571428571" y="236.981132075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--warn-text)">Wilcoxon signed-rank</text>
+  <rect x="72.142857142857" y="269.811320754717" width="492.857142857143" height="54.716981132075" rx="8.662588023613" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="318.571428571429" y="302.641509433962" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--primary-text)">paired t-test</text>
+  <path d="M 575.714285714286 297.169811320755 L 693.571428571429 297.169811320755" fill="none" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="704.285714285714" y="269.811320754717" width="514.285714285714" height="54.716981132075" rx="8.662588023613" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="961.428571428571" y="302.641509433962" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--warn-text)">Wilcoxon signed-rank (on diffs)</text>
+  <rect x="72.142857142857" y="335.471698113208" width="492.857142857143" height="54.716981132075" rx="8.662588023613" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="318.571428571429" y="368.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--primary-text)">two-sample t-test</text>
+  <path d="M 575.714285714286 362.830188679245 L 693.571428571429 362.830188679245" fill="none" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="704.285714285714" y="335.471698113208" width="514.285714285714" height="54.716981132075" rx="8.662588023613" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="961.428571428571" y="368.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--warn-text)">Mann-Whitney U</text>
+  <rect x="72.142857142857" y="401.132075471698" width="492.857142857143" height="54.716981132075" rx="8.662588023613" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="318.571428571429" y="433.962264150943" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--primary-text)">one-way ANOVA</text>
+  <path d="M 575.714285714286 428.490566037736 L 693.571428571429 428.490566037736" fill="none" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="704.285714285714" y="401.132075471698" width="514.285714285714" height="54.716981132075" rx="8.662588023613" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="961.428571428571" y="433.962264150943" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--warn-text)">Kruskal-Wallis</text>
+  <rect x="72.142857142857" y="466.792452830189" width="492.857142857143" height="54.716981132075" rx="8.662588023613" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="318.571428571429" y="499.622641509434" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--primary-text)">repeated-measures ANOVA</text>
+  <path d="M 575.714285714286 494.150943396226 L 693.571428571429 494.150943396226" fill="none" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="704.285714285714" y="466.792452830189" width="514.285714285714" height="54.716981132075" rx="8.662588023613" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="961.428571428571" y="499.622641509434" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--warn-text)">Friedman test</text>
+  <rect x="72.142857142857" y="532.452830188679" width="492.857142857143" height="54.716981132075" rx="8.662588023613" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="318.571428571429" y="565.283018867925" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--primary-text)">Pearson r</text>
+  <path d="M 575.714285714286 559.811320754717 L 693.571428571429 559.811320754717" fill="none" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="704.285714285714" y="532.452830188679" width="514.285714285714" height="54.716981132075" rx="8.662588023613" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="961.428571428571" y="565.283018867925" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" font-weight="bold" fill="var(--warn-text)">Spearman / Kendall</text>
+</svg>

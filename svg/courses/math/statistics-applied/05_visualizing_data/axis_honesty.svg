@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="630.862944162437" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.283214801707" fill="var(--text)" font-weight="bold">Truncated y-axis: don't.</text>
+  <text x="228.832487309645" y="94.205607476636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.387792583059" fill="var(--danger-fill)" font-weight="bold">what they show</text>
+  <line x1="46.091370558376" y1="538.691588785047" x2="423.756345177665" y2="538.691588785047" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="46.091370558376" y1="170.093457943925" x2="46.091370558376" y2="538.691588785047" stroke="var(--text-muted)" stroke-width="2"/>
+  <text x="40" y="170.093457943925" text-anchor="end" font-family="Arial, sans-serif" font-size="13.790844437295" fill="var(--text-muted)">100</text>
+  <text x="40" y="538.691588785047" text-anchor="end" font-family="Arial, sans-serif" font-size="13.790844437295" fill="var(--text-muted)">95</text>
+  <rect x="94.822335025381" y="451.96261682243" width="73.096446700508" height="86.728971962617" rx="4.596948145765" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="192.284263959391" y="365.233644859813" width="73.096446700508" height="173.457943925234" rx="4.596948145765" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="289.746192893401" y="278.504672897196" width="73.096446700508" height="260.18691588785" rx="4.596948145765" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="131.370558375635" y="582.056074766355" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.089318510177" fill="var(--text)">A</text>
+  <text x="228.832487309645" y="582.056074766355" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.089318510177" fill="var(--text)">B</text>
+  <text x="326.294416243655" y="582.056074766355" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.089318510177" fill="var(--text)">C</text>
+  <text x="228.832487309645" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.940081473736" fill="var(--danger-fill)" font-style="italic">"C is 3× A" -- false</text>
+  <text x="947.61421319797" y="94.205607476636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.387792583059" fill="var(--ok-fill)" font-weight="bold">what's true</text>
+  <line x1="777.055837563452" y1="538.691588785047" x2="1240" y2="538.691588785047" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="777.055837563452" y1="170.093457943925" x2="777.055837563452" y2="538.691588785047" stroke="var(--text-muted)" stroke-width="2"/>
+  <text x="770.964467005076" y="170.093457943925" text-anchor="end" font-family="Arial, sans-serif" font-size="13.790844437295" fill="var(--text-muted)">100</text>
+  <text x="770.964467005076" y="538.691588785047" text-anchor="end" font-family="Arial, sans-serif" font-size="13.790844437295" fill="var(--text-muted)">0</text>
+  <rect x="850.152284263959" y="192.859813084112" width="73.096446700508" height="345.831775700935" rx="4.596948145765" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="971.979695431472" y="189.607476635514" width="73.096446700508" height="349.084112149533" rx="4.596948145765" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1093.807106598985" y="184.18691588785" width="73.096446700508" height="354.504672897196" rx="4.596948145765" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="886.700507614213" y="582.056074766355" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.089318510177" fill="var(--text)">A</text>
+  <text x="1008.527918781726" y="582.056074766355" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.089318510177" fill="var(--text)">B</text>
+  <text x="1130.355329949239" y="582.056074766355" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.089318510177" fill="var(--text)">C</text>
+  <text x="1008.527918781726" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.940081473736" fill="var(--ok-fill)" font-style="italic">C is barely above A</text>
+</svg>

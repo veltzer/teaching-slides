@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="628.679245283019" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.053869629125" fill="var(--text)" font-weight="bold">CI for the mean response vs prediction interval</text>
+  <line x1="40" y1="577.037037037037" x2="1240" y2="577.037037037037" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="40" y1="93.703703703704" x2="40" y2="577.037037037037" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="73.962264150943" y1="534.074074074074" x2="1206.037735849057" y2="168.888888888889" stroke="var(--ok-fill)" stroke-width="3"/>
+  <path d="M 73.962264150943 550.185185185185 C 356.981132075472 448.148148148148 696.603773584906 297.777777777778 1206.037735849057 185 L 1206.037735849057 152.777777777778 C 696.603773584906 265.555555555556 356.981132075472 415.925925925926 73.962264150943 517.962962962963 Z" fill="var(--info-fill)" opacity="0.45"/>
+  <path d="M 73.962264150943 577.037037037037 C 356.981132075472 480.37037037037 696.603773584906 330 1206.037735849057 217.222222222222 L 1206.037735849057 120.555555555556 C 696.603773584906 233.333333333333 356.981132075472 383.703703703704 73.962264150943 491.111111111111 Z" fill="var(--warn-fill)" opacity="0.25"/>
+  <ellipse cx="73.962264150943" cy="556.326460303195" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="119.245283018868" cy="486.466043303728" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="164.528301886792" cy="488.797858597258" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="209.811320754717" cy="499.006713927404" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="255.094339622641" cy="451.628496500297" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="300.377358490566" cy="459.332867609745" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="345.660377358491" cy="450.663976254865" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="390.943396226415" cy="412.183655579893" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="436.22641509434" cy="386.282746721294" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="481.509433962264" cy="407.188902922849" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="526.792452830189" cy="411.470122624276" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="572.075471698113" cy="358.104656285581" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="617.358490566038" cy="350.900734308828" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="662.641509433962" cy="383.064391972287" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="707.924528301887" cy="316.364012199585" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="753.207547169811" cy="302.813631443421" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="798.490566037736" cy="357.164004963203" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="843.77358490566" cy="249.569233546171" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="889.056603773585" cy="289.960933559529" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="934.33962264151" cy="209.187860965089" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="979.622641509434" cy="227.819917285975" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="1024.905660377359" cy="262.849940852721" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="1070.188679245283" cy="241.573201168256" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="1115.471698113208" cy="176.810568298065" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <ellipse cx="1160.754716981132" cy="172.775563340018" rx="7.924528301887" ry="7.518518518519" fill="var(--primary-fill)"/>
+  <text x="1160.754716981132" y="190.37037037037" text-anchor="end" font-family="Arial, sans-serif" font-size="15.437708740388" fill="var(--ok-fill)">fitted line</text>
+  <text x="1160.754716981132" y="233.333333333333" text-anchor="end" font-family="Arial, sans-serif" font-size="15.437708740388" fill="var(--warn-fill)" font-weight="bold">PI (prediction)</text>
+  <text x="1160.754716981132" y="265.555555555556" text-anchor="end" font-family="Arial, sans-serif" font-size="15.437708740388" fill="var(--info-fill)" font-weight="bold">CI (mean response)</text>
+  <text x="628.679245283019" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.437708740388" fill="var(--text-muted)" font-style="italic">PI is always wider — it also includes the noise of a new observation</text>
+</svg>

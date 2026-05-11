@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="616.923076923077" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.226857606928" fill="var(--text)" font-weight="bold">Adjusted R² vs plain R²</text>
+  <line x1="40" y1="575.384615384615" x2="1240" y2="575.384615384615" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="40" y1="129.230769230769" x2="40" y2="575.384615384615" stroke="var(--text-muted)" stroke-width="2"/>
+  <polyline points="115,370.153846153846 190,293.192307692308 265,226.492307692308 340,195.707692307692 415,175.184615384615 490,159.792307692308 565,149.530769230769 640,146.965384615385 715,144.4 790,141.834615384615 865,140.830769230769 940,139.826923076923 1015,138.711538461538 1090,137.707692307692 1165,137.261538461538" fill="none" stroke="var(--primary-fill)" stroke-width="4"/>
+  <polyline points="115,370.153846153846 190,308.584615384615 265,241.884615384615 340,211.1 415,195.707692307692 490,185.446153846154 565,180.315384615385 640,185.446153846154 715,190.576923076923 790,193.142307692308 865,195.707692307692 940,198.273076923077 1015,200.838461538462 1090,203.403846153846 1165,205.969230769231" fill="none" stroke="var(--danger-fill)" stroke-width="4" stroke-dasharray="6 4"/>
+  <ellipse cx="115" cy="370.153846153846" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="190" cy="293.192307692308" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="265" cy="226.492307692308" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="340" cy="195.707692307692" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="415" cy="175.184615384615" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="490" cy="159.792307692308" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="565" cy="149.530769230769" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="640" cy="146.965384615385" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="715" cy="144.4" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="790" cy="141.834615384615" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="865" cy="140.808461538462" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="940" cy="139.782307692308" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="1015" cy="138.756153846154" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="1090" cy="137.73" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="1165" cy="137.216923076923" rx="5.769230769231" ry="5.576923076923" fill="var(--primary-fill)"/>
+  <ellipse cx="115" cy="370.153846153846" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="190" cy="308.584615384615" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="265" cy="241.884615384615" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="340" cy="211.1" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="415" cy="195.707692307692" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="490" cy="185.446153846154" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="565" cy="180.315384615385" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="640" cy="185.446153846154" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="715" cy="190.576923076923" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="790" cy="193.142307692308" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="865" cy="195.707692307692" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="940" cy="198.273076923077" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="1015" cy="200.838461538462" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="1090" cy="203.403846153846" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <ellipse cx="1165" cy="205.969230769231" rx="5.769230769231" ry="5.576923076923" fill="var(--danger-fill)"/>
+  <text x="1147.692307692308" y="151.538461538462" text-anchor="end" font-family="Arial, sans-serif" font-size="17.01678600433" fill="var(--primary-fill)" font-weight="bold">R² (only rises)</text>
+  <text x="1147.692307692308" y="341.153846153846" text-anchor="end" font-family="Arial, sans-serif" font-size="17.01678600433" fill="var(--danger-fill)" font-weight="bold">Adjusted R² (penalised)</text>
+  <text x="616.923076923077" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.01678600433" fill="var(--text-muted)" font-style="italic">compare nested models by Adjusted R² / AIC / cross-validated error, NOT R²</text>
+</svg>

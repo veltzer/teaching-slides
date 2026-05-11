@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.732476513875" fill="var(--text)" font-weight="bold">Cramér-Rao: the precision floor</text>
+  <rect x="40" y="344.646464646465" width="1200" height="82.020202020202" rx="6.577492171292" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="379.79797979798" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.243087813635" fill="var(--surface)" font-weight="bold">Var(θ̂) ≥ 1 / [n I₁(θ)]</text>
+  <text x="640" y="409.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.154984342583" fill="var(--text-faint)" font-style="italic">any unbiased estimator's variance has a lower bound</text>
+  <text x="63.076923076923" y="461.818181818182" text-anchor="start" font-family="Arial, sans-serif" font-size="12.332797821172" fill="var(--text)" font-weight="bold">efficiency curve (variance vs n)</text>
+  <line x1="63.076923076923" y1="602.424242424242" x2="1240" y2="602.424242424242" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="63.076923076923" y1="473.535353535354" x2="63.076923076923" y2="602.424242424242" stroke="var(--text-muted)" stroke-width="2"/>
+  <polyline points="63.076923076923,75.151515151515 97.692307692308,163.030303030303 132.307692307692,225.775757575758 166.923076923077,272.878787878788 201.538461538462,309.494949494949 236.153846153846,338.787878787879 270.769230769231,362.749494949495 305.384615384615,382.727272727273 340,399.6 374.615384615385,414.129292929293 409.230769230769,426.666666666667 443.846153846154,437.680808080808 478.461538461538,447.347474747475 513.076923076923,455.959595959596 547.692307692308,463.692929292929 582.307692307692,470.606060606061 616.923076923077,476.874747474747 651.538461538461,482.616161616162 686.153846153846,487.771717171717 720.769230769231,492.575757575758 755.384615384615,496.969696969697 790,501.012121212121 824.615384615385,504.761616161616 859.230769230769,508.276767676768 893.846153846154,511.49898989899 928.461538461538,514.545454545455 963.076923076923,517.357575757576 997.692307692308,520.052525252525 1032.307692307692,522.513131313131 1066.923076923077,524.856565656566 1101.538461538461,527.082828282828 1136.153846153846,529.191919191919 1170.76923076923,531.183838383838 1205.384615384615,533.058585858586" fill="none" stroke="var(--ok-fill)" stroke-width="3"/>
+  <text x="940" y="508.686868686869" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.688424778349" fill="var(--ok-fill)" font-weight="bold">efficient estimator</text>
+  <polyline points="63.076923076923,40 97.692307692308,127.878787878788 132.307692307692,190.624242424242 166.923076923077,237.727272727273 201.538461538462,274.343434343434 236.153846153846,303.636363636364 270.769230769231,327.59797979798 305.384615384615,347.575757575758 340,364.448484848485 374.615384615385,378.977777777778 409.230769230769,391.515151515152 443.846153846154,402.529292929293 478.461538461538,412.19595959596 513.076923076923,420.808080808081 547.692307692308,428.541414141414 582.307692307692,435.454545454545 616.923076923077,441.723232323232 651.538461538461,447.464646464646 686.153846153846,452.620202020202 720.769230769231,457.424242424242 755.384615384615,461.818181818182 790,465.860606060606 824.615384615385,469.610101010101 859.230769230769,473.125252525253 893.846153846154,476.347474747475 928.461538461538,479.393939393939 963.076923076923,482.206060606061 997.692307692308,484.90101010101 1032.307692307692,487.361616161616 1066.923076923077,489.705050505051 1101.538461538461,491.931313131313 1136.153846153846,494.040404040404 1170.76923076923,496.032323232323 1205.384615384615,497.907070707071" fill="none" stroke="var(--danger-fill)" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="940" y="473.535353535354" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.688424778349" fill="var(--danger-fill)" font-weight="bold">inefficient (above the bound)</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.51061129976" fill="var(--text-muted)" font-style="italic">more data + more information → tighter floor</text>
+</svg>

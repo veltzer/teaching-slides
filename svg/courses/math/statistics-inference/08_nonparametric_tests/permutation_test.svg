@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.526370647588" fill="var(--text)" font-weight="bold">Permutation test: shuffle the labels</text>
+  <text x="640" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.607690412101" fill="var(--text-muted)" font-style="italic">build the null distribution from the data itself, no assumptions</text>
+  <rect x="40" y="156" width="300" height="116" rx="8.918680235486" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="209.36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.067030529845" font-weight="bold" fill="var(--primary-text)">1. observe</text>
+  <text x="190" y="232.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.37802035323" fill="var(--primary-text)">stat = mean(A) - mean(B)</text>
+  <path d="M 340 214 L 382.857142857143 214" fill="none" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="382.857142857143" y="156" width="300" height="116" rx="8.918680235486" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="532.857142857143" y="209.36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.067030529845" font-weight="bold" fill="var(--info-text)">2. shuffle labels</text>
+  <text x="532.857142857143" y="232.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.37802035323" fill="var(--info-text)">many times</text>
+  <path d="M 682.857142857143 214 L 725.714285714286 214" fill="none" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="725.714285714286" y="156" width="300" height="116" rx="8.918680235486" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="875.714285714286" y="209.36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.067030529845" font-weight="bold" fill="var(--warn-text)">3. recompute stat</text>
+  <text x="875.714285714286" y="232.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.37802035323" fill="var(--warn-text)">build the null</text>
+  <path d="M 1025.714285714286 214 L 1068.571428571428 214" fill="none" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="1068.571428571428" y="156" width="171.428571428571" height="116" rx="8.918680235486" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1154.285714285714" y="209.36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.067030529845" font-weight="bold" fill="var(--ok-text)">4. p</text>
+  <text x="1154.285714285714" y="232.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.37802035323" fill="var(--ok-text)">(extremes)</text>
+  <line x1="104.285714285714" y1="620" x2="1197.142857142857" y2="620" stroke="var(--text-muted)" stroke-width="2"/>
+  <rect x="104.285714285714" y="619.884" width="6.428571428571" height="0.116" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="112.857142857143" y="619.768" width="6.428571428571" height="0.232" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="121.428571428571" y="619.768" width="6.428571428571" height="0.232" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="130" y="619.768" width="6.428571428571" height="0.232" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="138.571428571429" y="619.652" width="6.428571428571" height="0.348" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="147.142857142857" y="619.536" width="6.428571428571" height="0.464" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="155.714285714286" y="619.42" width="6.428571428571" height="0.58" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="164.285714285714" y="619.304" width="6.428571428571" height="0.696" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="172.857142857143" y="619.188" width="6.428571428571" height="0.812" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="181.428571428571" y="618.956" width="6.428571428571" height="1.044" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="190" y="618.724" width="6.428571428571" height="1.276" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="198.571428571429" y="618.492" width="6.428571428571" height="1.508" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="207.142857142857" y="618.144" width="6.428571428571" height="1.856" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="215.714285714286" y="617.796" width="6.428571428571" height="2.204" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="224.285714285714" y="617.332" width="6.428571428571" height="2.668" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="232.857142857143" y="616.752" width="6.428571428571" height="3.248" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="241.428571428571" y="616.172" width="6.428571428571" height="3.828" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="250" y="615.36" width="6.428571428571" height="4.64" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="258.571428571429" y="614.548" width="6.428571428571" height="5.452" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="267.142857142857" y="613.504" width="6.428571428571" height="6.496" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="275.714285714286" y="612.46" width="6.428571428571" height="7.54" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="284.285714285714" y="611.068" width="6.428571428571" height="8.932" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="292.857142857143" y="609.56" width="6.428571428571" height="10.44" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="301.428571428571" y="607.936" width="6.428571428571" height="12.064" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="310" y="605.964" width="6.428571428571" height="14.036" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="318.571428571429" y="603.76" width="6.428571428571" height="16.24" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="327.142857142857" y="601.324" width="6.428571428571" height="18.676" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="335.714285714286" y="598.656" width="6.428571428571" height="21.344" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="344.285714285714" y="595.64" width="6.428571428571" height="24.36" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="352.857142857143" y="592.276" width="6.428571428571" height="27.724" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="361.428571428571" y="588.564" width="6.428571428571" height="31.436" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="370" y="584.504" width="6.428571428571" height="35.496" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="378.571428571429" y="580.096" width="6.428571428571" height="39.904" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="387.142857142857" y="575.34" width="6.428571428571" height="44.66" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="395.714285714286" y="570.12" width="6.428571428571" height="49.88" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="404.285714285714" y="564.552" width="6.428571428571" height="55.448" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="412.857142857143" y="558.636" width="6.428571428571" height="61.364" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="421.428571428571" y="552.256" width="6.428571428571" height="67.744" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="430" y="545.528" width="6.428571428571" height="74.472" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="438.571428571429" y="538.452" width="6.428571428571" height="81.548" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="447.142857142857" y="531.028" width="6.428571428571" height="88.972" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="455.714285714286" y="523.256" width="6.428571428571" height="96.744" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="464.285714285714" y="515.368" width="6.428571428571" height="104.632" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="472.857142857143" y="507.016" width="6.428571428571" height="112.984" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="481.428571428571" y="498.664" width="6.428571428571" height="121.336" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="490" y="490.08" width="6.428571428571" height="129.92" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="498.571428571428" y="481.496" width="6.428571428571" height="138.504" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="507.142857142857" y="472.796" width="6.428571428571" height="147.204" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="515.714285714286" y="464.212" width="6.428571428571" height="155.788" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="524.285714285714" y="455.744" width="6.428571428571" height="164.256" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="532.857142857143" y="447.392" width="6.428571428571" height="172.608" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="541.428571428571" y="439.388" width="6.428571428571" height="180.612" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="550" y="431.732" width="6.428571428571" height="188.268" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="558.571428571429" y="424.424" width="6.428571428571" height="195.576" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="567.142857142857" y="417.696" width="6.428571428571" height="202.304" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="575.714285714286" y="411.432" width="6.428571428571" height="208.568" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="584.285714285714" y="405.864" width="6.428571428571" height="214.136" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="592.857142857143" y="400.876" width="6.428571428571" height="219.124" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="601.428571428571" y="396.7" width="6.428571428571" height="223.3" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="610" y="393.336" width="6.428571428571" height="226.664" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="618.571428571429" y="390.784" width="6.428571428571" height="229.216" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="627.142857142857" y="389.044" width="6.428571428571" height="230.956" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="635.714285714286" y="388.116" width="6.428571428571" height="231.884" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="644.285714285714" y="388.116" width="6.428571428571" height="231.884" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="652.857142857143" y="389.044" width="6.428571428571" height="230.956" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="661.428571428571" y="390.784" width="6.428571428571" height="229.216" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="670" y="393.336" width="6.428571428571" height="226.664" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="678.571428571429" y="396.7" width="6.428571428571" height="223.3" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="687.142857142857" y="400.876" width="6.428571428571" height="219.124" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="695.714285714286" y="405.864" width="6.428571428571" height="214.136" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="704.285714285714" y="411.432" width="6.428571428571" height="208.568" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="712.857142857143" y="417.696" width="6.428571428571" height="202.304" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="721.428571428571" y="424.424" width="6.428571428571" height="195.576" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="730" y="431.732" width="6.428571428571" height="188.268" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="738.571428571429" y="439.388" width="6.428571428571" height="180.612" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="747.142857142857" y="447.392" width="6.428571428571" height="172.608" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="755.714285714286" y="455.744" width="6.428571428571" height="164.256" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="764.285714285714" y="464.212" width="6.428571428571" height="155.788" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="772.857142857143" y="472.796" width="6.428571428571" height="147.204" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="781.428571428571" y="481.496" width="6.428571428571" height="138.504" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="790" y="490.08" width="6.428571428571" height="129.92" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="798.571428571429" y="498.664" width="6.428571428571" height="121.336" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="807.142857142857" y="507.016" width="6.428571428571" height="112.984" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="815.714285714286" y="515.368" width="6.428571428571" height="104.632" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="824.285714285714" y="523.256" width="6.428571428571" height="96.744" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="832.857142857143" y="531.028" width="6.428571428571" height="88.972" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="841.428571428571" y="538.452" width="6.428571428571" height="81.548" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="850" y="545.528" width="6.428571428571" height="74.472" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="858.571428571429" y="552.256" width="6.428571428571" height="67.744" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="867.142857142857" y="558.636" width="6.428571428571" height="61.364" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="875.714285714286" y="564.552" width="6.428571428571" height="55.448" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="884.285714285714" y="570.12" width="6.428571428571" height="49.88" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="892.857142857143" y="575.34" width="6.428571428571" height="44.66" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="901.428571428571" y="580.096" width="6.428571428571" height="39.904" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="910" y="584.504" width="6.428571428571" height="35.496" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="918.571428571429" y="588.564" width="6.428571428571" height="31.436" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="927.142857142857" y="592.276" width="6.428571428571" height="27.724" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="935.714285714286" y="595.64" width="6.428571428571" height="24.36" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="944.285714285714" y="598.656" width="6.428571428571" height="21.344" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="952.857142857143" y="601.324" width="6.428571428571" height="18.676" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="961.428571428571" y="603.76" width="6.428571428571" height="16.24" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="970" y="605.964" width="6.428571428571" height="14.036" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="978.571428571429" y="607.936" width="6.428571428571" height="12.064" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="987.142857142857" y="609.56" width="6.428571428571" height="10.44" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="995.714285714286" y="611.068" width="6.428571428571" height="8.932" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1004.285714285714" y="612.46" width="6.428571428571" height="7.54" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1012.857142857143" y="613.504" width="6.428571428571" height="6.496" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1021.428571428571" y="614.548" width="6.428571428571" height="5.452" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1030" y="615.36" width="6.428571428571" height="4.64" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1038.571428571428" y="616.172" width="6.428571428571" height="3.828" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1047.142857142857" y="616.752" width="6.428571428571" height="3.248" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1055.714285714286" y="617.332" width="6.428571428571" height="2.668" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1064.285714285714" y="617.796" width="6.428571428571" height="2.204" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1072.857142857143" y="618.144" width="6.428571428571" height="1.856" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1081.428571428571" y="618.492" width="6.428571428571" height="1.508" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1090" y="618.724" width="6.428571428571" height="1.276" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1098.571428571428" y="618.956" width="6.428571428571" height="1.044" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1107.142857142857" y="619.188" width="6.428571428571" height="0.812" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1115.714285714286" y="619.304" width="6.428571428571" height="0.696" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1124.285714285714" y="619.42" width="6.428571428571" height="0.58" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1132.857142857143" y="619.536" width="6.428571428571" height="0.464" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1141.428571428571" y="619.652" width="6.428571428571" height="0.348" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1150" y="619.768" width="6.428571428571" height="0.232" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1158.571428571428" y="619.768" width="6.428571428571" height="0.232" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1167.142857142857" y="619.768" width="6.428571428571" height="0.232" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1175.714285714286" y="619.884" width="6.428571428571" height="0.116" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1184.285714285714" y="619.884" width="6.428571428571" height="0.116" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1192.857142857143" y="619.884" width="6.428571428571" height="0.116" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <line x1="961.428571428571" y1="353.2" x2="961.428571428571" y2="620" stroke="var(--danger-fill)" stroke-width="4"/>
+  <text x="961.428571428571" y="341.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.607690412101" fill="var(--danger-fill)" font-weight="bold">observed</text>
+  <text x="640" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.607690412101" fill="var(--primary-fill)" font-weight="bold">permutation null</text>
+</svg>

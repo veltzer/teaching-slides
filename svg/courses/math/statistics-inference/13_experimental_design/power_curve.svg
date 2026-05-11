@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="650.909090909091" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.267737367193" fill="var(--text)" font-weight="bold">Power curve: n vs detectable effect</text>
+  <line x1="105.454545454545" y1="575.384615384615" x2="1240" y2="575.384615384615" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="105.454545454545" y1="129.230769230769" x2="105.454545454545" y2="575.384615384615" stroke="var(--text-muted)" stroke-width="2"/>
+  <text x="105.454545454545" y="620" text-anchor="start" font-family="Arial, sans-serif" font-size="15.443105597305" fill="var(--text-muted)">n per group →</text>
+  <text x="40" y="341.153846153846" text-anchor="start" font-family="Arial, sans-serif" font-size="15.443105597305" fill="var(--text-muted)">MDE  ↑</text>
+  <polyline points="190.545454545455,229.838461538462 226,285.05 261.454545454545,320.184615384615 296.909090909091,344.946153846154 332.363636363636,363.796153846154 367.818181818182,378.519230769231 403.272727272727,390.676923076923 438.727272727273,400.715384615385 474.181818181818,409.415384615385 509.636363636364,416.776923076923 545.090909090909,423.357692307692 580.545454545455,429.157692307692 616,434.288461538462 651.454545454545,438.973076923077 686.909090909091,443.211538461538 722.363636363636,447.003846153846 757.818181818182,450.573076923077 793.272727272727,453.807692307692 828.727272727273,456.819230769231 864.181818181818,459.607692307692 899.636363636364,462.284615384615 935.090909090909,464.738461538462 970.545454545455,466.969230769231 1006,469.2 1041.454545454545,471.207692307692 1076.909090909091,473.103846153846 1112.363636363636,474.888461538462 1147.818181818182,476.673076923077 1183.272727272727,478.234615384615 1218.727272727273,479.796153846154" fill="none" stroke="var(--ok-fill)" stroke-width="3"/>
+  <polyline points="190.545454545455,160.684615384615 226,226.938461538462 261.454545454545,269.1 296.909090909091,298.880769230769 332.363636363636,321.411538461538 367.818181818182,339.257692307692 403.272727272727,353.757692307692 438.727272727273,365.803846153846 474.181818181818,376.176923076923 509.636363636364,385.1 545.090909090909,392.907692307692 580.545454545455,399.823076923077 616,406.069230769231 651.454545454545,411.646153846154 686.909090909091,416.776923076923 722.363636363636,421.35 757.818181818182,425.588461538462 793.272727272727,429.492307692308 828.727272727273,433.173076923077 864.181818181818,436.519230769231 899.636363636364,439.642307692308 935.090909090909,442.542307692308 970.545454545455,445.330769230769 1006,447.896153846154 1041.454545454545,450.35 1076.909090909091,452.692307692308 1112.363636363636,454.811538461538 1147.818181818182,456.930769230769 1183.272727272727,458.826923076923 1218.727272727273,460.723076923077" fill="none" stroke="var(--primary-fill)" stroke-width="3"/>
+  <polyline points="226,139.826923076923 261.454545454545,192.584615384615 296.909090909091,229.838461538462 332.363636363636,257.946153846154 367.818181818182,280.142307692308 403.272727272727,298.323076923077 438.727272727273,313.492307692308 474.181818181818,326.319230769231 509.636363636364,337.584615384615 545.090909090909,347.288461538462 580.545454545455,355.988461538462 616,363.796153846154 651.454545454545,370.711538461538 686.909090909091,377.069230769231 722.363636363636,382.869230769231 757.818181818182,388.111538461538 793.272727272727,393.019230769231 828.727272727273,397.592307692308 864.181818181818,401.830769230769 899.636363636364,405.734615384615 935.090909090909,409.415384615385 970.545454545455,412.761538461538 1006,415.996153846154 1041.454545454545,419.119230769231 1076.909090909091,422.019230769231 1112.363636363636,424.696153846154 1147.818181818182,427.261538461538 1183.272727272727,429.715384615385 1218.727272727273,432.057692307692" fill="none" stroke="var(--danger-fill)" stroke-width="3"/>
+  <text x="1152.727272727273" y="196.153846153846" text-anchor="end" font-family="Arial, sans-serif" font-size="15.443105597305" fill="var(--danger-fill)" font-weight="bold">power = 0.9</text>
+  <text x="1152.727272727273" y="274.230769230769" text-anchor="end" font-family="Arial, sans-serif" font-size="15.443105597305" fill="var(--primary-fill)" font-weight="bold">power = 0.8</text>
+  <text x="1152.727272727273" y="352.307692307692" text-anchor="end" font-family="Arial, sans-serif" font-size="15.443105597305" fill="var(--ok-fill)" font-weight="bold">power = 0.7</text>
+  <text x="650.909090909091" y="173.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.546184568541" fill="var(--text-muted)" font-style="italic">n grows like 1 / MDE²: half the effect → 4× the sample size</text>
+</svg>

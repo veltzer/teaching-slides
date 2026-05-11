@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.822117064936" fill="var(--text)" font-weight="bold">Credible vs Confidence interval</text>
+  <rect x="40" y="127.547169811321" width="578.571428571429" height="251.698113207547" rx="8.662588023613" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="329.285714285714" y="111.132075471698" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" fill="var(--ok-fill)" font-weight="bold">Bayesian: 95% credible</text>
+  <polyline points="82.857142857143,328.796226415094 87.142857142857,328.030188679245 91.428571428571,327.154716981132 95.714285714286,326.169811320755 100,325.075471698113 104.285714285714,323.981132075472 108.571428571429,322.667924528302 112.857142857143,321.354716981132 117.142857142857,319.932075471698 121.428571428571,318.290566037736 125.714285714286,316.649056603774 130,314.788679245283 134.285714285714,312.818867924528 138.571428571429,310.739622641509 142.857142857143,308.441509433962 147.142857142857,306.033962264151 151.428571428571,303.516981132075 155.714285714286,300.781132075472 160,297.935849056604 164.285714285714,294.981132075472 168.571428571429,291.807547169811 172.857142857143,288.524528301887 177.142857142857,285.022641509434 181.428571428571,281.411320754717 185.714285714286,277.690566037736 190,273.750943396226 194.285714285714,269.811320754717 198.571428571429,265.652830188679 202.857142857143,261.384905660377 207.142857142857,257.007547169811 211.428571428571,252.520754716981 215.714285714286,247.924528301887 220,243.328301886792 224.285714285714,238.732075471698 228.571428571429,234.02641509434 232.857142857143,229.320754716981 237.142857142857,224.505660377358 241.428571428571,219.909433962264 245.714285714286,215.203773584906 250,210.607547169811 254.285714285714,206.120754716981 258.571428571429,201.633962264151 262.857142857143,197.366037735849 267.142857142857,193.207547169811 271.428571428571,189.267924528302 275.714285714286,185.437735849057 280,181.82641509434 284.285714285714,178.433962264151 288.571428571429,175.260377358491 292.857142857143,172.415094339623 297.142857142857,169.788679245283 301.428571428571,167.490566037736 305.714285714286,165.520754716981 310,163.879245283019 314.285714285714,162.456603773585 318.571428571429,161.471698113208 322.857142857143,160.815094339623 327.142857142857,160.377358490566 331.428571428571,160.377358490566 335.714285714286,160.815094339623 340,161.471698113208 344.285714285714,162.456603773585 348.571428571429,163.879245283019 352.857142857143,165.520754716981 357.142857142857,167.490566037736 361.428571428571,169.788679245283 365.714285714286,172.415094339623 370,175.260377358491 374.285714285714,178.433962264151 378.571428571429,181.82641509434 382.857142857143,185.437735849057 387.142857142857,189.267924528302 391.428571428571,193.207547169811 395.714285714286,197.366037735849 400,201.633962264151 404.285714285714,206.120754716981 408.571428571429,210.607547169811 412.857142857143,215.203773584906 417.142857142857,219.909433962264 421.428571428571,224.505660377358 425.714285714286,229.320754716981 430,234.02641509434 434.285714285714,238.732075471698 438.571428571429,243.328301886792 442.857142857143,247.924528301887 447.142857142857,252.520754716981 451.428571428571,257.007547169811 455.714285714286,261.384905660377 460,265.652830188679 464.285714285714,269.811320754717 468.571428571428,273.750943396226 472.857142857143,277.690566037736 477.142857142857,281.411320754717 481.428571428571,285.022641509434 485.714285714286,288.524528301887 490,291.807547169811 494.285714285714,294.981132075472 498.571428571428,297.935849056604 502.857142857143,300.781132075472 507.142857142857,303.516981132075 511.428571428571,306.033962264151 515.714285714286,308.441509433962 520,310.739622641509 524.285714285714,312.818867924528 528.571428571429,314.788679245283 532.857142857143,316.649056603774 537.142857142857,318.290566037736 541.428571428571,319.932075471698 545.714285714286,321.354716981132 550,322.667924528302 554.285714285714,323.981132075472 558.571428571429,325.075471698113 562.857142857143,326.169811320755 567.142857142857,327.154716981132 571.428571428571,328.030188679245 575.714285714286,328.796226415094" fill="none" stroke="var(--primary-fill)" stroke-width="3"/>
+  <line x1="82.857142857143" y1="335.471698113208" x2="575.714285714286" y2="335.471698113208" stroke="var(--text-muted)" stroke-width="2"/>
+  <path d="M 211.428571428571 335.471698113208 L 211.428571428571 193.207547169811 C 265 171.320754716981 393.571428571429 171.320754716981 447.142857142857 193.207547169811 L 447.142857142857 335.471698113208 Z" fill="var(--ok-fill)" opacity="0.4"/>
+  <text x="329.285714285714" y="368.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.076705538371" fill="var(--ok-fill)" font-weight="bold">P(θ ∈ [a, b] | data) = 0.95</text>
+  <rect x="661.428571428571" y="127.547169811321" width="578.571428571429" height="251.698113207547" rx="8.662588023613" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="950.714285714286" y="111.132075471698" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.242352544275" fill="var(--info-fill)" font-weight="bold">Frequentist: 95% confidence</text>
+  <line x1="950.714285714286" y1="149.433962264151" x2="950.714285714286" y2="368.301886792453" stroke="var(--info-fill)" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="950.714285714286" y="138.490566037736" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.99388203542" fill="var(--info-fill)">true θ</text>
+  <line x1="892.777576098669" y1="171.320754716981" x2="1059.100034866366" y2="171.320754716981" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="835.34076236466" y1="184.452830188679" x2="991.271124883493" y2="184.452830188679" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="828.654271400988" y1="197.584905660377" x2="1018.327037838937" y2="197.584905660377" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="869.390304622863" y1="210.716981132075" x2="1028.174694156508" y2="210.716981132075" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="816.818584999274" y1="223.849056603774" x2="1014.482984761832" y2="223.849056603774" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="870.042772703614" y1="236.981132075472" x2="1041.77264200616" y2="236.981132075472" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="852.25774696948" y1="250.11320754717" x2="1031.295753898609" y2="250.11320754717" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="917.099932614672" y1="263.245283018868" x2="1072.489625987972" y2="263.245283018868" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="919.424785243821" y1="276.377358490566" x2="1110.795893272173" y2="276.377358490566" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="811.062096426755" y1="289.509433962264" x2="1008.344193240729" y2="289.509433962264" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="836.190124277305" y1="302.641509433962" x2="1033.25829993239" y2="302.641509433962" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="899.363397254913" y1="315.77358490566" x2="1082.619507163762" y2="315.77358490566" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="854.963260732076" y1="328.905660377358" x2="1022.160021582677" y2="328.905660377358" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="863.584875203876" y1="342.037735849057" x2="1042.141894925263" y2="342.037735849057" stroke="var(--primary-fill)" stroke-width="2"/>
+  <line x1="925.406220362686" y1="355.169811320755" x2="1095.356848855361" y2="355.169811320755" stroke="var(--primary-fill)" stroke-width="2"/>
+  <text x="950.714285714286" y="390.188679245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.076705538371" fill="var(--info-fill)" font-weight="bold">19 of 20 RECIPES contain θ</text>
+  <rect x="40" y="444.905660377358" width="1200" height="175.094339622642" rx="8.662588023613" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="494.150943396226" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.49082305313" fill="var(--surface)" font-weight="bold">credible: probability statement about θ given data</text>
+  <text x="640" y="532.452830188679" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.159529041323" fill="var(--text-faint)">confidence: long-run property of the PROCEDURE over repeated samples</text>
+  <text x="640" y="581.698113207547" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.076705538371" fill="var(--text-faint)" font-style="italic">with weak priors and large n the two often coincide numerically — they differ in MEANING</text>
+</svg>

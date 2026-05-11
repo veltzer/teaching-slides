@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
+
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">Applied Statistics</text>
+  <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">describing data, probability, sampling, and tests</text>
+
+  <!-- axes -->
+  <line x1="220" y1="500" x2="1060" y2="500" stroke="var(--surface)" stroke-width="2"/>
+  <line x1="220" y1="230" x2="220" y2="500" stroke="var(--surface)" stroke-width="2"/>
+
+  <!-- histogram bars -->
+  <rect x="250" y="430" width="50" height="70" fill="var(--primary-fill)"/>
+  <rect x="310" y="380" width="50" height="120" fill="var(--primary-fill)"/>
+  <rect x="370" y="310" width="50" height="190" fill="var(--primary-fill)"/>
+  <rect x="430" y="260" width="50" height="240" fill="var(--primary-fill)"/>
+  <rect x="490" y="290" width="50" height="210" fill="var(--primary-fill)"/>
+  <rect x="550" y="350" width="50" height="150" fill="var(--primary-fill)"/>
+  <rect x="610" y="410" width="50" height="90" fill="var(--primary-fill)"/>
+  <rect x="670" y="450" width="50" height="50" fill="var(--primary-fill)"/>
+
+  <!-- normal curve overlay -->
+  <path d="M250,470 C360,470 380,250 455,250 C530,250 560,470 720,478" fill="none" stroke="var(--ok-fill)" stroke-width="4"/>
+
+  <!-- confidence interval -->
+  <line x1="800" y1="350" x2="1000" y2="350" stroke="var(--surface)" stroke-width="3"/>
+  <line x1="800" y1="335" x2="800" y2="365" stroke="var(--surface)" stroke-width="3"/>
+  <line x1="1000" y1="335" x2="1000" y2="365" stroke="var(--surface)" stroke-width="3"/>
+  <ellipse cx="900" cy="350" rx="10" ry="10" fill="var(--ok-fill)"/>
+
+  <text x="640" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">mean &amp; spread &#183; distributions &#183; sampling &#183; confidence intervals &#183; hypothesis tests &#183; regression &#183; A/B testing</text>
+</svg>

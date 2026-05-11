@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="610.342205323194" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.688926189299" fill="var(--text)" font-weight="bold">k-fold cross-validation</text>
+  <text x="40" y="137.570093457944" text-anchor="start" font-family="Arial, sans-serif" font-size="15.568540277091" fill="var(--text)" font-weight="bold">fold layout</text>
+  <rect x="108.441064638783" y="148.411214953271" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="217.946768060836" y="189.607476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.568540277091" fill="var(--danger-text)" font-weight="bold">TEST</text>
+  <rect x="336.577946768061" y="148.411214953271" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="446.083650190114" y="189.607476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="564.714828897338" y="148.411214953271" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="674.220532319392" y="189.607476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="792.851711026616" y="148.411214953271" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="902.357414448669" y="189.607476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="1020.988593155893" y="148.411214953271" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130.494296577947" y="189.607476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="108.441064638783" y="245.981308411215" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="217.946768060836" y="287.177570093458" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="336.577946768061" y="245.981308411215" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="446.083650190114" y="287.177570093458" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.568540277091" fill="var(--danger-text)" font-weight="bold">TEST</text>
+  <rect x="564.714828897338" y="245.981308411215" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="674.220532319392" y="287.177570093458" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="792.851711026616" y="245.981308411215" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="902.357414448669" y="287.177570093458" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="1020.988593155893" y="245.981308411215" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130.494296577947" y="287.177570093458" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="108.441064638783" y="343.551401869159" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="217.946768060836" y="384.747663551402" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="336.577946768061" y="343.551401869159" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="446.083650190114" y="384.747663551402" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="564.714828897338" y="343.551401869159" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="674.220532319392" y="384.747663551402" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.568540277091" fill="var(--danger-text)" font-weight="bold">TEST</text>
+  <rect x="792.851711026616" y="343.551401869159" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="902.357414448669" y="384.747663551402" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="1020.988593155893" y="343.551401869159" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130.494296577947" y="384.747663551402" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="108.441064638783" y="441.121495327103" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="217.946768060836" y="482.317757009346" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="336.577946768061" y="441.121495327103" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="446.083650190114" y="482.317757009346" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="564.714828897338" y="441.121495327103" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="674.220532319392" y="482.317757009346" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="792.851711026616" y="441.121495327103" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="902.357414448669" y="482.317757009346" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.568540277091" fill="var(--danger-text)" font-weight="bold">TEST</text>
+  <rect x="1020.988593155893" y="441.121495327103" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130.494296577947" y="482.317757009346" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="108.441064638783" y="538.691588785047" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="217.946768060836" y="579.88785046729" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="336.577946768061" y="538.691588785047" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="446.083650190114" y="579.88785046729" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="564.714828897338" y="538.691588785047" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="674.220532319392" y="579.88785046729" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="792.851711026616" y="538.691588785047" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="902.357414448669" y="579.88785046729" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.344463094649" fill="var(--primary-text)">train</text>
+  <rect x="1020.988593155893" y="538.691588785047" width="219.011406844106" height="65.046728971963" rx="4.448154364883" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130.494296577947" y="579.88785046729" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.568540277091" fill="var(--danger-text)" font-weight="bold">TEST</text>
+  <text x="40" y="620" text-anchor="start" font-family="Arial, sans-serif" font-size="16.680578868312" fill="var(--text-muted)" font-style="italic">5 folds, 5 fits  →  average the test errors</text>
+</svg>

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="622.52427184466" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.078815270159" fill="var(--text)" font-weight="bold">Multicollinearity: VIF in pictures</text>
+  <line x1="40" y1="553.076923076923" x2="1228.349514563107" y2="553.076923076923" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="40" y1="129.230769230769" x2="40" y2="553.076923076923" stroke="var(--text-muted)" stroke-width="2"/>
+  <rect x="109.902912621359" y="526.307692307692" width="128.155339805825" height="26.769230769231" rx="4.559784594574" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="173.980582524272" y="575.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.95924608101" fill="var(--text)">x1</text>
+  <text x="173.980582524272" y="517.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.819299932366" fill="var(--text)" font-weight="bold">1.5</text>
+  <rect x="261.359223300971" y="515.6" width="128.155339805825" height="37.476923076923" rx="4.559784594574" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="325.436893203883" y="575.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.95924608101" fill="var(--text)">x2</text>
+  <text x="325.436893203883" y="506.676923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.819299932366" fill="var(--text)" font-weight="bold">2.1</text>
+  <rect x="412.815533980582" y="478.123076923077" width="128.155339805825" height="74.953846153846" rx="4.559784594574" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="476.893203883495" y="575.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.95924608101" fill="var(--text)">x3</text>
+  <text x="476.893203883495" y="469.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.819299932366" fill="var(--text)" font-weight="bold">4.2</text>
+  <rect x="564.271844660194" y="431.723076923077" width="128.155339805825" height="121.353846153846" rx="4.559784594574" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <text x="628.349514563107" y="575.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.95924608101" fill="var(--text)">x4</text>
+  <text x="628.349514563107" y="422.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.819299932366" fill="var(--text)" font-weight="bold">6.8</text>
+  <rect x="715.728155339806" y="387.107692307692" width="128.155339805825" height="165.969230769231" rx="4.559784594574" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <text x="779.805825242718" y="575.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.95924608101" fill="var(--text)">x5</text>
+  <text x="779.805825242718" y="378.184615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.819299932366" fill="var(--text)" font-weight="bold">9.3</text>
+  <rect x="867.184466019417" y="303.230769230769" width="128.155339805825" height="249.846153846154" rx="4.559784594574" fill="url(#grad-danger)" filter="url(#shadow)"/>
+  <text x="931.26213592233" y="575.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.95924608101" fill="var(--text)">x6</text>
+  <text x="931.26213592233" y="294.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.819299932366" fill="var(--text)" font-weight="bold">14.0</text>
+  <rect x="1018.640776699029" y="151.538461538462" width="128.155339805825" height="401.538461538462" rx="4.559784594574" fill="url(#grad-danger)" filter="url(#shadow)"/>
+  <text x="1082.718446601942" y="575.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.95924608101" fill="var(--text)">x7</text>
+  <text x="1082.718446601942" y="142.615384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.819299932366" fill="var(--text)" font-weight="bold">22.5</text>
+  <line x1="40" y1="463.846153846154" x2="1228.349514563107" y2="463.846153846154" stroke="var(--warn-fill)" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="1240" y="463.846153846154" text-anchor="end" font-family="Arial, sans-serif" font-size="14.819299932366" fill="var(--warn-fill)">5</text>
+  <line x1="40" y1="374.615384615385" x2="1228.349514563107" y2="374.615384615385" stroke="var(--danger-fill)" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="1240" y="374.615384615385" text-anchor="end" font-family="Arial, sans-serif" font-size="14.819299932366" fill="var(--danger-fill)">10</text>
+  <text x="40" y="620" text-anchor="start" font-family="Arial, sans-serif" font-size="15.95924608101" fill="var(--text-muted)" font-style="italic">VIF &gt; ~5 warns; &gt; ~10 means trouble</text>
+</svg>
