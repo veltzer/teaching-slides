@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.031654938239" font-weight="bold" fill="var(--text)">What goes into your software — and where attackers get in</text>
+
+  <rect x="40" y="94.588235294118" width="227.586206896552" height="136.470588235294" rx="6.50791373456" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="153.793103448276" y="137.803921568627" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.439088914586" font-weight="bold" fill="var(--text)">Your code</text>
+  <text x="153.793103448276" y="171.921568627451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--text-muted)">reviewed, tested</text>
+  <text x="153.793103448276" y="196.941176470588" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--text-muted)">a small fraction</text>
+
+  <rect x="40" y="276.549019607843" width="227.586206896552" height="136.470588235294" rx="6.50791373456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="153.793103448276" y="319.764705882353" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.439088914586" font-weight="bold" fill="var(--primary-text)">Dependencies</text>
+  <text x="153.793103448276" y="353.882352941176" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--primary-text)">direct + transitive</text>
+  <text x="153.793103448276" y="378.901960784314" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--primary-text)">most of what ships</text>
+
+  <rect x="40" y="458.509803921569" width="227.586206896552" height="136.470588235294" rx="6.50791373456" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="153.793103448276" y="501.725490196078" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.439088914586" font-weight="bold" fill="var(--info-text)">Build + tooling</text>
+  <text x="153.793103448276" y="535.843137254902" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--info-text)">CI runners, compilers</text>
+  <text x="153.793103448276" y="560.862745098039" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--info-text)">base images</text>
+
+  <rect x="371.034482758621" y="185.56862745098" width="248.275862068966" height="318.43137254902" rx="6.50791373456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495.172413793103" y="228.78431372549" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.439088914586" font-weight="bold" fill="var(--warn-text)">Build / assemble</text>
+  <text x="495.172413793103" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--warn-text)">compile, link, package</text>
+  <text x="495.172413793103" y="303.843137254902" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--warn-text)">sign + generate SBOM</text>
+  <text x="495.172413793103" y="349.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" font-style="italic" fill="var(--warn-text)">artifact may be poisoned</text>
+  <text x="495.172413793103" y="374.352941176471" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" font-style="italic" fill="var(--warn-text)">even when source is clean</text>
+
+  <rect x="722.758620689655" y="253.803921568627" width="248.275862068966" height="181.960784313725" rx="6.50791373456" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="846.896551724138" y="299.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.439088914586" font-weight="bold" fill="var(--ok-text)">Artifact + provenance</text>
+  <text x="846.896551724138" y="337.960784313725" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--ok-text)">hashed, signed, attested</text>
+  <text x="846.896551724138" y="367.529411764706" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--ok-text)">immutable registry</text>
+  <text x="846.896551724138" y="406.196078431373" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--ok-text)">verified on the way in</text>
+
+  <rect x="1012.413793103448" y="276.549019607843" width="227.586206896552" height="136.470588235294" rx="6.50791373456" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1126.206896551724" y="324.313725490196" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.439088914586" font-weight="bold" fill="var(--text)">Deployed</text>
+  <text x="1126.206896551724" y="362.980392156863" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--text-muted)">production</text>
+
+  <line x1="267.586206896552" y1="162.823529411765" x2="368.965517241379" y2="276.549019607843" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="267.586206896552" y1="344.78431372549" x2="368.965517241379" y2="344.78431372549" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="267.586206896552" y1="526.745098039216" x2="368.965517241379" y2="424.392156862745" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="619.310344827586" y1="344.78431372549" x2="720.689655172414" y2="344.78431372549" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="971.034482758621" y1="344.78431372549" x2="1010.344827586207" y2="344.78431372549" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="495.172413793103" y="549.490196078431" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.100479758213" fill="var(--danger-accent)">typosquatting · dependency confusion · account takeover · build compromise · tampered binaries</text>
+  <line x1="495.172413793103" y1="560.862745098039" x2="495.172413793103" y2="501.725490196078" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.354436625492" font-style="italic" fill="var(--ok-accent)">pin · verify · minimize · SBOM · sign · separation of duties</text>
+</svg>
