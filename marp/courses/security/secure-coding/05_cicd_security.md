@@ -80,7 +80,7 @@ audience:
 - Rebuild on a cadence so base-image fixes actually land — a scan result rots fast
 - Use minimal bases (distroless, Alpine, scratch) — fewer packages, fewer CVEs, smaller surface
 - **Sign** images with `cosign` (keyless via Sigstore, or with a KMS key)
-- **Enforce** verification at deploy — admission controllers (Kyverno, Gatekeeper, Connaisseur) reject unsigned or unscanned images
+- **Enforce** verification at deploy — admission controllers (Kyverno, Gatekeeper, Connaisseur) reject images that are unsigned or not scanned
 - Pin by digest in deployment manifests, not by `:latest`
 
 ---

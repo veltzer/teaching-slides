@@ -36,7 +36,7 @@ audience:
 
 ## The Boot Chain Of Trust
 
-- Each stage **verifies the next before handing off**, starting from something unforgeable
+- Each stage **verifies the next before handing off**, starting from something that cannot be forged
 - **Root of trust** — immutable code/keys in ROM or fuses; you cannot change it, so you must be able to trust it
 - ROM → first-stage bootloader → second-stage bootloader → kernel → init / OS
 - Break any link and everything *above* it is suspect — the chain is only as strong as its weakest verification
@@ -76,7 +76,7 @@ audience:
 
 - The verified kernel must extend the chain into what *it* loads
 - **Module signing** — the kernel refuses to load unsigned modules (`module.sig_enforce=1`); blocks malicious driver injection
-- **Lockdown mode** — restricts even root from paths that could patch the running kernel (`/dev/mem`, kexec of unsigned images, certain debug interfaces)
+- **Kernel lockdown mode** — restricts even root from paths that could patch the running kernel (`/dev/mem`, `kexec` of unsigned images, certain debug interfaces)
 - **IMA/EVM** — Linux Integrity Measurement Architecture: measure and/or appraise files (including userspace binaries) against signatures before execution
 - **dm-verity** — read-only root filesystem with a hash tree; any tampered block is detected on read (Android, ChromeOS, many appliances)
 

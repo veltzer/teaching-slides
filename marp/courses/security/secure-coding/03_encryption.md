@@ -73,7 +73,7 @@ Real systems use both: asymmetric to agree on a key, symmetric to move the data 
 ## TLS / SSL And Secure Transport
 
 - "SSL" is dead terminology — what runs today is **TLS 1.2 and TLS 1.3**; disable everything older
-- `TLS 1.3` removed the legacy footguns (RC4, CBC modes, renegotiation, static `RSA` key exchange)
+- `TLS 1.3` removed the dangerous legacy options (RC4, CBC modes, renegotiation, static `RSA` key exchange)
 - **Validate certificates** — check the chain, the hostname, the expiry. Disabling verification "to make it work" is the classic catastrophic bug
 - Use the platform / library defaults for cipher suites — do not hand-pick
 - Consider mutual `TLS` for service-to-service traffic; pin or use a private CA
