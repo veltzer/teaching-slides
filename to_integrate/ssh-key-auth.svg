@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2e7d32"/>
+    </marker>
+    <style>
+      .title  { font-size: 22px; font-weight: bold; fill: #1a1a1a; }
+      .host   { font-size: 16px; font-weight: bold; }
+      .lbl    { font-size: 13px; fill: #222; }
+      .lblsm  { font-size: 11.5px; fill: #555; }
+      .step   { font-size: 13px; fill: #0d47a1; font-weight: bold; }
+      .flow   { stroke: #333; stroke-width: 2; fill: none; }
+      .flowg  { stroke: #2e7d32; stroke-width: 2; fill: none; }
+      .key    { font-size: 12px; }
+    </style>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" class="title">SSH public-key authentication (works the same with a GPG auth subkey)</text>
+
+  <!-- Client box -->
+  <rect x="40" y="70" width="330" height="500" rx="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="2"/>
+  <text x="205" y="98" text-anchor="middle" class="host" fill="#1a3a8a">CLIENT  (your laptop)</text>
+
+  <!-- private key on client -->
+  <rect x="70" y="120" width="270" height="86" rx="8" fill="#fff" stroke="#c62828" stroke-width="2"/>
+  <text x="205" y="142" text-anchor="middle" class="key" font-weight="bold" fill="#c62828">🔒  PRIVATE key — kept secret</text>
+  <text x="205" y="162" text-anchor="middle" class="lblsm">~/.ssh/id_ed25519</text>
+  <text x="205" y="178" text-anchor="middle" class="lblsm">or held by ssh-agent / gpg-agent</text>
+  <text x="205" y="194" text-anchor="middle" class="lblsm">(GPG: an [A]-capable subkey via gpg-agent)</text>
+
+  <!-- agent -->
+  <rect x="70" y="220" width="270" height="44" rx="8" fill="#fff" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="205" y="247" text-anchor="middle" class="lbl">ssh-agent / gpg-agent  — does the signing</text>
+
+  <!-- Server box -->
+  <rect x="530" y="70" width="330" height="500" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="2"/>
+  <text x="695" y="98" text-anchor="middle" class="host" fill="#1b5e20">SERVER  (sshd)</text>
+
+  <!-- public key on server -->
+  <rect x="560" y="120" width="270" height="86" rx="8" fill="#fff" stroke="#2e7d32" stroke-width="2"/>
+  <text x="695" y="142" text-anchor="middle" class="key" font-weight="bold" fill="#2e7d32">🔓  PUBLIC key — not secret</text>
+  <text x="695" y="162" text-anchor="middle" class="lblsm">~/.ssh/authorized_keys</text>
+  <text x="695" y="180" text-anchor="middle" class="lblsm">(you copied it here once,</text>
+  <text x="695" y="196" text-anchor="middle" class="lblsm">e.g. ssh-copy-id)</text>
+
+  <!-- ============ FLOW ============ -->
+
+  <!-- Step 1 -->
+  <text x="60" y="300" class="step">1.  "I want to log in as user X, with this key"</text>
+  <path class="flow" d="M70,312 H830" marker-end="url(#arrow)"/>
+  <text x="450" y="328" text-anchor="middle" class="lblsm">client offers the public key's fingerprint</text>
+
+  <!-- Step 2 -->
+  <text x="535" y="362" text-anchor="end" class="step" fill="#1b5e20">2.  check authorized_keys</text>
+  <rect x="560" y="372" width="270" height="40" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="695" y="397" text-anchor="middle" class="lblsm">Is this public key listed? If yes → continue.</text>
+
+  <!-- Step 3: challenge -->
+  <text x="840" y="446" text-anchor="end" class="step" fill="#1b5e20">3.  send a random challenge (nonce)</text>
+  <path class="flow" d="M830,458 H70" marker-end="url(#arrow)"/>
+  <text x="450" y="474" text-anchor="middle" class="lblsm">a fresh random number, tied to this session</text>
+
+  <!-- Step 4: sign -->
+  <text x="60" y="508" class="step">4.  sign the challenge with the PRIVATE key</text>
+  <rect x="70" y="518" width="270" height="40" rx="6" fill="#fff" stroke="#c62828" stroke-width="1.5"/>
+  <text x="205" y="543" text-anchor="middle" class="lblsm">private key never leaves the client</text>
+
+  <!-- Step 5: send signature -->
+  <text x="60" y="592" class="step">5.  send the signature  →</text>
+  <path class="flowg" d="M340,604 H560" marker-end="url(#arrowGreen)"/>
+
+  <!-- Step 6: verify -->
+  <text x="840" y="592" text-anchor="end" class="step" fill="#1b5e20">6.  verify signature with the PUBLIC key  ✓  → access granted</text>
+
+  <!-- side note -->
+  <rect x="40" y="618" width="820" height="2" fill="none"/>
+</svg>
