@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="634.285714285714" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.613045019179" font-weight="bold" fill="var(--text)">The Training Loop</text>
+
+  <rect x="40" y="129.230769230769" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="154.285714285714" y="168.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--info-text)">Get batch</text>
+  <text x="154.285714285714" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--info-text)">x, y from loader</text>
+
+  <rect x="40" y="263.076923076923" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="154.285714285714" y="302.115384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--primary-text)">Forward</text>
+  <text x="154.285714285714" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--primary-text)">y_hat = model(x)</text>
+
+  <rect x="40" y="396.923076923077" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="154.285714285714" y="435.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--danger-text)">Loss</text>
+  <text x="154.285714285714" y="463.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--danger-text)">L = loss_fn(y_hat, y)</text>
+
+  <rect x="40" y="530.769230769231" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="154.285714285714" y="569.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--warn-text)">Backward</text>
+  <text x="154.285714285714" y="597.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--warn-text)">L.backward()</text>
+
+  <rect x="702.857142857143" y="263.076923076923" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="817.142857142857" y="302.115384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--warn-text)">Step</text>
+  <text x="817.142857142857" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--warn-text)">opt.step()</text>
+
+  <rect x="702.857142857143" y="396.923076923077" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="817.142857142857" y="435.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--ok-text)">Zero grads</text>
+  <text x="817.142857142857" y="463.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--ok-text)">opt.zero_grad()</text>
+
+  <rect x="988.571428571428" y="318.846153846154" width="251.428571428571" height="133.846153846154" rx="6.774223932681" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1114.285714285714" y="363.461538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--text)">Done?</text>
+  <text x="1114.285714285714" y="402.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--text)">all batches done</text>
+  <text x="1114.285714285714" y="430.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--text)">all epochs done</text>
+
+  <line x1="154.285714285714" y1="218.461538461538" x2="154.285714285714" y2="257.5" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="154.285714285714" y1="352.307692307692" x2="154.285714285714" y2="391.346153846154" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="154.285714285714" y1="486.153846153846" x2="154.285714285714" y2="525.192307692308" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="268.571428571429" y1="575.384615384615" x2="702.857142857143" y2="318.846153846154" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="817.142857142857" y1="352.307692307692" x2="817.142857142857" y2="391.346153846154" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="931.428571428571" y1="441.538461538462" x2="988.571428571428" y2="385.769230769231" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 988.571428571428 363.461538461538 Q 702.857142857143 185 268.571428571429 173.846153846154" stroke="var(--text-muted)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="634.285714285714" y="151.538461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" font-style="italic" fill="var(--text-muted)">loop</text>
+</svg>

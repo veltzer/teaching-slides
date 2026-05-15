@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.03701420285" font-weight="bold" fill="var(--text)">GAN Training Loop</text>
+
+  <rect x="40" y="104.444444444444" width="578.571428571429" height="461.851851851852" rx="10.727505072446" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="329.285714285714" y="142.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.600511159382" font-weight="bold" fill="var(--danger-border)">Step 1: Train D</text>
+
+  <rect x="125.714285714286" y="179.62962962963" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="232.857142857143" y="219.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" fill="var(--info-text)">Real batch</text>
+
+  <rect x="125.714285714286" y="276.296296296296" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="232.857142857143" y="316.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" fill="var(--info-text)">G(z) fakes</text>
+
+  <rect x="382.857142857143" y="222.592592592593" width="171.428571428571" height="85.925925925926" rx="6.436503043468" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="468.571428571428" y="260.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" font-weight="bold" fill="var(--danger-text)">D</text>
+  <text x="468.571428571428" y="287.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.873006086936" fill="var(--danger-text)">classify</text>
+
+  <line x1="340" y1="211.851851851852" x2="382.857142857143" y2="244.074074074074" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="340" y1="308.518518518519" x2="382.857142857143" y2="287.037037037037" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="329.285714285714" y="389.074074074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.09125760867" font-weight="bold" fill="var(--danger-border)">Maximize D accuracy</text>
+  <text x="329.285714285714" y="421.296296296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--text-muted)">real -&gt; 1</text>
+  <text x="329.285714285714" y="448.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--text-muted)">fake -&gt; 0</text>
+  <text x="329.285714285714" y="512.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.018507101425" font-style="italic" fill="var(--text-muted)">G frozen this step</text>
+
+  <rect x="661.428571428571" y="104.444444444444" width="578.571428571429" height="461.851851851852" rx="10.727505072446" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="950.714285714286" y="142.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.600511159382" font-weight="bold" fill="var(--primary-border)">Step 2: Train G</text>
+
+  <rect x="747.142857142857" y="179.62962962963" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="854.285714285714" y="219.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" fill="var(--info-text)">Noise z</text>
+
+  <rect x="747.142857142857" y="276.296296296296" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="854.285714285714" y="316.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" font-weight="bold" fill="var(--primary-text)">G(z)</text>
+
+  <rect x="1004.285714285714" y="276.296296296296" width="171.428571428571" height="64.444444444444" rx="6.436503043468" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="316.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" font-weight="bold" fill="var(--danger-text)">D (frozen)</text>
+
+  <line x1="854.285714285714" y1="244.074074074074" x2="854.285714285714" y2="270.925925925926" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="961.428571428571" y1="308.518518518519" x2="1004.285714285714" y2="308.518518518519" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="950.714285714286" y="389.074074074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.09125760867" font-weight="bold" fill="var(--primary-border)">Make D say "real"</text>
+  <text x="950.714285714286" y="421.296296296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--text-muted)">G updates to fool D</text>
+  <text x="950.714285714286" y="448.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--text-muted)">gradients flow through D into G</text>
+  <text x="950.714285714286" y="512.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.018507101425" font-style="italic" fill="var(--text-muted)">D frozen this step</text>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" fill="var(--text-muted)">Alternate D and G updates. At equilibrium D outputs 0.5 — it can't tell them apart.</text>
+</svg>

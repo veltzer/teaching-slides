@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="652.765957446808" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.487581320232" font-weight="bold" fill="var(--text)">Multi-Head Attention</text>
+
+  <rect x="525.106382978723" y="92.727272727273" width="255.31914893617" height="63.272727272727" rx="6.961624568621" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="652.765957446808" y="132.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" font-weight="bold" fill="var(--info-text)">Input (Q, K, V)</text>
+
+  <rect x="40" y="219.272727272727" width="229.787234042553" height="84.363636363636" rx="6.961624568621" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="154.893617021277" y="258.290909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" font-weight="bold" fill="var(--warn-text)">Head 1</text>
+  <text x="154.893617021277" y="284.654545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.083519898679" fill="var(--warn-text)">Attention(Q1,K1,V1)</text>
+
+  <rect x="346.382978723404" y="219.272727272727" width="229.787234042553" height="84.363636363636" rx="6.961624568621" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="461.276595744681" y="258.290909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" font-weight="bold" fill="var(--warn-text)">Head 2</text>
+  <text x="461.276595744681" y="284.654545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.083519898679" fill="var(--warn-text)">Attention(Q2,K2,V2)</text>
+
+  <rect x="652.765957446808" y="219.272727272727" width="229.787234042553" height="84.363636363636" rx="6.961624568621" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="767.659574468085" y="258.290909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" font-weight="bold" fill="var(--warn-text)">Head 3</text>
+  <text x="767.659574468085" y="284.654545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.083519898679" fill="var(--warn-text)">Attention(Q3,K3,V3)</text>
+
+  <rect x="959.148936170213" y="219.272727272727" width="280.851063829787" height="84.363636363636" rx="6.961624568621" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1099.574468085106" y="258.290909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" font-weight="bold" fill="var(--warn-text)">Head h</text>
+  <text x="1099.574468085106" y="284.654545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.083519898679" fill="var(--warn-text)">Attention(Qh,Kh,Vh)</text>
+
+  <line x1="601.702127659574" y1="156" x2="154.893617021277" y2="214" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="627.234042553192" y1="156" x2="461.276595744681" y2="214" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="678.297872340426" y1="156" x2="767.659574468085" y2="214" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="703.829787234043" y1="156" x2="1099.574468085106" y2="214" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="320.851063829787" y="388" width="638.297872340426" height="84.363636363636" rx="6.961624568621" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="427.018181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" font-weight="bold" fill="var(--primary-text)">Concatenate</text>
+  <text x="640" y="453.381818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.083519898679" fill="var(--primary-text)">stack head outputs along the feature axis</text>
+
+  <line x1="154.893617021277" y1="303.636363636364" x2="410.212765957447" y2="382.727272727273" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="461.276595744681" y1="303.636363636364" x2="550.63829787234" y2="382.727272727273" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="767.659574468085" y1="303.636363636364" x2="742.127659574468" y2="382.727272727273" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1099.574468085106" y1="303.636363636364" x2="882.553191489362" y2="382.727272727273" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="474.042553191489" y="504" width="331.914893617021" height="63.272727272727" rx="6.961624568621" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="544.072727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" font-weight="bold" fill="var(--ok-text)">Output Projection W_o</text>
+  <line x1="640" y1="472.363636363636" x2="640" y2="498.727272727273" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="652.765957446808" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.404061421553" fill="var(--text-muted)">Heads focus on different patterns; concat + project blends them back.</text>
+</svg>

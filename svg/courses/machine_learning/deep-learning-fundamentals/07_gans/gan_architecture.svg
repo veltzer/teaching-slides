@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="618.571428571429" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.03701420285" font-weight="bold" fill="var(--text)">GAN Architecture</text>
+
+  <rect x="40" y="222.592592592593" width="171.428571428571" height="85.925925925926" rx="6.436503043468" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="125.714285714286" y="263.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.309509130404" font-weight="bold" fill="var(--info-text)">Noise z</text>
+  <text x="125.714285714286" y="292.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--info-text)">random vector</text>
+
+  <rect x="275.714285714286" y="201.111111111111" width="214.285714285714" height="128.888888888889" rx="6.436503043468" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="382.857142857143" y="249.444444444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.455010144893" font-weight="bold" fill="var(--primary-text)">Generator</text>
+  <text x="382.857142857143" y="281.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--primary-text)">noise -&gt; fake</text>
+  <text x="382.857142857143" y="308.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--primary-text)">G(z)</text>
+
+  <rect x="554.285714285714" y="136.666666666667" width="171.428571428571" height="85.925925925926" rx="6.436503043468" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="174.259259259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.309509130404" font-weight="bold" fill="var(--ok-text)">Real data</text>
+  <text x="640" y="201.111111111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--ok-text)">training set</text>
+
+  <rect x="554.285714285714" y="308.518518518519" width="171.428571428571" height="85.925925925926" rx="6.436503043468" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="346.111111111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.309509130404" font-weight="bold" fill="var(--warn-text)">Fake data</text>
+  <text x="640" y="372.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--warn-text)">from generator</text>
+
+  <rect x="811.428571428571" y="222.592592592593" width="214.285714285714" height="128.888888888889" rx="6.436503043468" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="918.571428571429" y="270.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.455010144893" font-weight="bold" fill="var(--danger-text)">Discriminator</text>
+  <text x="918.571428571429" y="303.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--danger-text)">real or fake?</text>
+  <text x="918.571428571429" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--danger-text)">D(x) in [0,1]</text>
+
+  <rect x="1090" y="244.074074074074" width="150" height="85.925925925926" rx="6.436503043468" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1165" y="281.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.309509130404" font-weight="bold" fill="var(--info-text)">Prediction</text>
+  <text x="1165" y="308.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--info-text)">real / fake</text>
+
+  <line x1="211.428571428571" y1="265.555555555556" x2="275.714285714286" y2="265.555555555556" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="490" y1="265.555555555556" x2="554.285714285714" y2="351.481481481482" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="725.714285714286" y1="179.62962962963" x2="811.428571428571" y2="254.814814814815" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="725.714285714286" y1="351.481481481482" x2="811.428571428571" y2="308.518518518519" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1025.714285714286" y1="287.037037037037" x2="1090" y2="287.037037037037" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M 1090 330 Q 682.857142857143 544.814814814815 382.857142857143 340.740740740741" stroke="var(--danger-border)" stroke-width="3" stroke-dasharray="6,4" fill="none" marker-end="url(#arrow)"/>
+  <text x="618.571428571429" y="560.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.09125760867" font-weight="bold" fill="var(--danger-border)">G learns to fool D</text>
+
+  <text x="618.571428571429" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" fill="var(--text-muted)">Two networks improve together: G makes better fakes; D gets better at spotting them.</text>
+</svg>

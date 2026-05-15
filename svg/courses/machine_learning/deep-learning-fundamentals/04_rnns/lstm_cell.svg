@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="629.473684210526" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.940350081373" font-weight="bold" fill="var(--text)">LSTM Cell</text>
+
+  <rect x="145.263157894737" y="121.2" width="968.421052631579" height="440.8" rx="11.050125029062" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="629.473684210526" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.680200046499" font-style="italic" fill="var(--text-muted)">LSTM cell</text>
+
+  <rect x="229.473684210526" y="190.8" width="168.421052631579" height="92.8" rx="6.630075017437" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="313.684210526316" y="231.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.890225052311" font-weight="bold" fill="var(--danger-text)">forget gate</text>
+  <text x="313.684210526316" y="260.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.36516253778" fill="var(--danger-text)">drop old info</text>
+
+  <rect x="440" y="190.8" width="168.421052631579" height="92.8" rx="6.630075017437" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="524.210526315789" y="231.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.890225052311" font-weight="bold" fill="var(--ok-text)">input gate</text>
+  <text x="524.210526315789" y="260.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.36516253778" fill="var(--ok-text)">add new info</text>
+
+  <rect x="650.526315789474" y="190.8" width="168.421052631579" height="92.8" rx="6.630075017437" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="734.736842105263" y="231.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.890225052311" font-weight="bold" fill="var(--primary-text)">cell state</text>
+  <text x="734.736842105263" y="260.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.36516253778" fill="var(--primary-text)">long memory</text>
+
+  <rect x="861.052631578947" y="190.8" width="168.421052631579" height="92.8" rx="6.630075017437" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945.263157894737" y="231.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.890225052311" font-weight="bold" fill="var(--warn-text)">output gate</text>
+  <text x="945.263157894737" y="260.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.36516253778" fill="var(--warn-text)">what to expose</text>
+
+  <text x="629.473684210526" y="353.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.470175040686" fill="var(--text)">c_t = f_t * c_{t-1} + i_t * c~_t</text>
+  <text x="629.473684210526" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.470175040686" fill="var(--text)">h_t = o_t * tanh(c_t)</text>
+  <text x="629.473684210526" y="434.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.36516253778" font-style="italic" fill="var(--text-muted)">Cell state c_t is mostly additive — gradients flow back cleanly.</text>
+
+  <rect x="40" y="237.2" width="63.157894736842" height="46.4" rx="4.420050011625" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="71.578947368421" y="267.36" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.470175040686" fill="var(--text)">x_t</text>
+  <line x1="103.157894736842" y1="260.4" x2="145.263157894737" y2="260.4" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="1155.789473684211" y="237.2" width="84.210526315789" height="46.4" rx="4.420050011625" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1197.894736842105" y="267.36" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.470175040686" fill="var(--text)">h_t</text>
+  <line x1="1113.684210526316" y1="260.4" x2="1155.789473684211" y2="260.4" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="629.473684210526" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.680200046499" fill="var(--text-muted)">Three gates learn what to forget, add, and emit. Long dependencies become tractable.</text>
+</svg>

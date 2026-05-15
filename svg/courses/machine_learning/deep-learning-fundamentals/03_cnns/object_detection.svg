@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="35.70596431761" font-weight="bold" fill="var(--text)">Object Detection Output</text>
+
+  <rect x="40" y="94.205607476636" width="1200" height="487.85046728972" rx="10.201704090746" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+
+  <rect x="160" y="180.934579439252" width="330" height="195.140186915888" rx="5.100852045373" fill="none" stroke="var(--primary-border)" stroke-width="4"/>
+  <rect x="154" y="159.252336448598" width="165" height="28.18691588785" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="236.5" y="180.934579439252" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.852982158805" font-weight="bold" fill="var(--primary-text)">person 0.94</text>
+
+  <rect x="580" y="245.981308411215" width="270" height="173.457943925234" rx="5.100852045373" fill="none" stroke="var(--ok-border)" stroke-width="4"/>
+  <rect x="574" y="224.299065420561" width="120" height="28.18691588785" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="634" y="245.981308411215" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.852982158805" font-weight="bold" fill="var(--ok-text)">dog 0.88</text>
+
+  <rect x="910" y="332.710280373832" width="240" height="130.093457943925" rx="5.100852045373" fill="none" stroke="var(--warn-border)" stroke-width="4"/>
+  <rect x="904" y="311.028037383178" width="114" height="28.18691588785" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <text x="961" y="332.710280373832" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.852982158805" font-weight="bold" fill="var(--warn-text)">car 0.81</text>
+
+  <rect x="220" y="451.96261682243" width="225" height="108.411214953271" rx="5.100852045373" fill="none" stroke="var(--danger-border)" stroke-width="4"/>
+  <rect x="214" y="430.280373831776" width="120" height="28.18691588785" fill="url(#grad-danger)" filter="url(#shadow)"/>
+  <text x="274" y="451.96261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.852982158805" font-weight="bold" fill="var(--danger-text)">bike 0.76</text>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.403408181492" fill="var(--text-muted)">Detection = bounding boxes + class labels + confidence scores per object.</text>
+</svg>

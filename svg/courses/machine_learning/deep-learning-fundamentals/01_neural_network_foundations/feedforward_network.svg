@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="627.755102040816" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.412436467132" font-weight="bold" fill="var(--text)">A Feedforward Network</text>
+
+  <text x="88.979591836735" y="105.660377358491" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.836566300299" font-weight="bold" fill="var(--text)">Input</text>
+  <text x="456.326530612245" y="105.660377358491" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.836566300299" font-weight="bold" fill="var(--text)">Hidden 1</text>
+  <text x="823.673469387755" y="105.660377358491" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.836566300299" font-weight="bold" fill="var(--text)">Hidden 2</text>
+  <text x="1191.020408163265" y="105.660377358491" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.836566300299" font-weight="bold" fill="var(--text)">Output</text>
+
+  <line x1="137.959183673469" y1="204.150943396226" x2="407.34693877551" y2="182.264150943396" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="137.959183673469" y1="204.150943396226" x2="407.34693877551" y2="291.698113207547" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="137.959183673469" y1="204.150943396226" x2="407.34693877551" y2="401.132075471698" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="137.959183673469" y1="204.150943396226" x2="407.34693877551" y2="510.566037735849" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="137.959183673469" y1="346.415094339623" x2="407.34693877551" y2="182.264150943396" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="137.959183673469" y1="346.415094339623" x2="407.34693877551" y2="291.698113207547" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="137.959183673469" y1="346.415094339623" x2="407.34693877551" y2="401.132075471698" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="137.959183673469" y1="346.415094339623" x2="407.34693877551" y2="510.566037735849" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="137.959183673469" y1="488.679245283019" x2="407.34693877551" y2="182.264150943396" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="137.959183673469" y1="488.679245283019" x2="407.34693877551" y2="291.698113207547" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="137.959183673469" y1="488.679245283019" x2="407.34693877551" y2="401.132075471698" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="137.959183673469" y1="488.679245283019" x2="407.34693877551" y2="510.566037735849" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+
+  <line x1="505.30612244898" y1="182.264150943396" x2="774.69387755102" y2="204.150943396226" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="505.30612244898" y1="182.264150943396" x2="774.69387755102" y2="346.415094339623" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="505.30612244898" y1="182.264150943396" x2="774.69387755102" y2="488.679245283019" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="505.30612244898" y1="291.698113207547" x2="774.69387755102" y2="204.150943396226" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="505.30612244898" y1="291.698113207547" x2="774.69387755102" y2="346.415094339623" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="505.30612244898" y1="291.698113207547" x2="774.69387755102" y2="488.679245283019" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="505.30612244898" y1="401.132075471698" x2="774.69387755102" y2="204.150943396226" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="505.30612244898" y1="401.132075471698" x2="774.69387755102" y2="346.415094339623" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="505.30612244898" y1="401.132075471698" x2="774.69387755102" y2="488.679245283019" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="505.30612244898" y1="510.566037735849" x2="774.69387755102" y2="204.150943396226" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="505.30612244898" y1="510.566037735849" x2="774.69387755102" y2="346.415094339623" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="505.30612244898" y1="510.566037735849" x2="774.69387755102" y2="488.679245283019" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+
+  <line x1="872.65306122449" y1="204.150943396226" x2="1142.040816326531" y2="280.754716981132" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="872.65306122449" y1="204.150943396226" x2="1142.040816326531" y2="412.075471698113" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="872.65306122449" y1="346.415094339623" x2="1142.040816326531" y2="280.754716981132" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="872.65306122449" y1="346.415094339623" x2="1142.040816326531" y2="412.075471698113" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="872.65306122449" y1="488.679245283019" x2="1142.040816326531" y2="280.754716981132" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+  <line x1="872.65306122449" y1="488.679245283019" x2="1142.040816326531" y2="412.075471698113" stroke="var(--text-faint)" stroke-width="1" opacity="0.5"/>
+
+  <ellipse cx="88.979591836735" cy="204.150943396226" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="88.979591836735" cy="346.415094339623" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="88.979591836735" cy="488.679245283019" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+
+  <ellipse cx="456.326530612245" cy="182.264150943396" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="456.326530612245" cy="291.698113207547" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="456.326530612245" cy="401.132075471698" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="456.326530612245" cy="510.566037735849" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+
+  <ellipse cx="823.673469387755" cy="204.150943396226" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="823.673469387755" cy="346.415094339623" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="823.673469387755" cy="488.679245283019" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+
+  <ellipse cx="1191.020408163265" cy="280.754716981132" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="1191.020408163265" cy="412.075471698113" rx="48.979591836735" ry="43.77358490566" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="627.755102040816" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.521392266932" fill="var(--text-muted)">Each layer fully connects to the next; information flows left to right.</text>
+</svg>
