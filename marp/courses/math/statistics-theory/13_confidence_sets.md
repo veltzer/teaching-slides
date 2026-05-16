@@ -21,6 +21,11 @@ audience:
 - Simultaneous confidence regions and multiplicity
 
 ---
+## What "95% Confidence" Actually Means
+
+![ci duality](svg/courses/math/statistics-theory/13_confidence_sets/ci_duality.svg)
+
+---
 ## What A Confidence Set Is
 
 - A **confidence set** of level 1&minus;&alpha; for &psi;(&theta;) is a *data-dependent* set C(X) with **coverage** P&#952;( &psi;(&theta;) &isin; C(X) ) &geq; 1&minus;&alpha; for **every** &theta; — the guarantee is uniform over the parameter space, and it's a statement about the *procedure*

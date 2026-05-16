@@ -113,6 +113,11 @@ audience:
 - Designed to preserve long-range information
 
 ---
+## LSTM Gates Visualized
+
+![lstm gates](svg/courses/machine_learning/deep-learning-fundamentals/04_rnns/lstm_gates.svg)
+
+---
 ## LSTM Cell
 
 ![lstm_cell](svg/courses/machine_learning/deep-learning-fundamentals/04_rnns/lstm_cell.svg)

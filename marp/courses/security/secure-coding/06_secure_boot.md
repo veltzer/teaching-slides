@@ -82,6 +82,12 @@ audience:
 
 ---
 
+## Verified Vs Measured Boot
+
+![measured boot](svg/courses/security/secure-coding/06_secure_boot/measured_boot.svg)
+
+---
+
 ## Measured Boot And TPMs
 
 - Different goal from "refuse to boot": **record** what executed so a verifier can judge it later

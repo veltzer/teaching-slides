@@ -50,6 +50,11 @@ audience:
 ![attention](svg/courses/machine_learning/deep-learning-fundamentals/05_transformers/attention.svg)
 
 ---
+## Query, Key, Value
+
+![qkv attention](svg/courses/machine_learning/deep-learning-fundamentals/05_transformers/qkv_attention.svg)
+
+---
 ## Scaled Dot-Product Attention
 
 - Score = Q dot K^T

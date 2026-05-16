@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">Discrete vs continuous: PMF, PDF, CDF</text>
+
+  <rect x="40" y="75.929203539823" width="585" height="277.16814159292" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="332" y="106.725663716814" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)">Discrete X: PMF p(k) = P(X = k)</text>
+  <line x1="100" y1="312.035398230089" x2="560" y2="312.035398230089" stroke="var(--primary-text)" stroke-width="2"/>
+  <line x1="100" y1="147.787610619469" x2="100" y2="312.035398230089" stroke="var(--primary-text)" stroke-width="2"/>
+  <rect x="140" y="281.238938053097" width="40" height="30.796460176991" fill="var(--primary-text)"/>
+  <rect x="200" y="229.911504424779" width="40" height="82.12389380531" fill="var(--primary-text)"/>
+  <rect x="260" y="188.849557522124" width="40" height="123.185840707965" fill="var(--primary-text)"/>
+  <rect x="320" y="209.380530973451" width="40" height="102.654867256637" fill="var(--primary-text)"/>
+  <rect x="380" y="250.442477876106" width="40" height="61.592920353982" fill="var(--primary-text)"/>
+  <rect x="440" y="286.371681415929" width="40" height="25.663716814159" fill="var(--primary-text)"/>
+  <text x="160" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">0</text>
+  <text x="220" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">1</text>
+  <text x="280" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">2</text>
+  <text x="340" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">3</text>
+  <text x="400" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">4</text>
+  <text x="460" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">5</text>
+
+  <rect x="655" y="75.929203539823" width="585" height="277.16814159292" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="947" y="106.725663716814" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--ok-text)">Continuous X: PDF f(x), P(X = x) = 0</text>
+  <line x1="715" y1="312.035398230089" x2="1175" y2="312.035398230089" stroke="var(--ok-text)" stroke-width="2"/>
+  <line x1="715" y1="147.787610619469" x2="715" y2="312.035398230089" stroke="var(--ok-text)" stroke-width="2"/>
+  <path d="M 715 312.035398230089 Q 800 309.982300884956 850 281.238938053097 Q 900 240.176991150443 945 163.185840707965 Q 990 240.176991150443 1040 281.238938053097 Q 1090 309.982300884956 1175 312.035398230089 Z" fill="var(--ok-text)" fill-opacity="0.6" stroke="var(--ok-text)" stroke-width="2"/>
+  <text x="945" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--ok-text)">P(a ≤ X ≤ b) = ∫ f(x) dx</text>
+
+  <rect x="40" y="383.893805309735" width="1200" height="236.106194690265" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="419.823008849558" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--info-text)">CDF: the universal description — F(x) = P(X ≤ x)</text>
+  <line x1="220" y1="589.203539823009" x2="1060" y2="589.203539823009" stroke="var(--info-text)" stroke-width="2"/>
+  <line x1="220" y1="445.486725663717" x2="220" y2="589.203539823009" stroke="var(--info-text)" stroke-width="2"/>
+  <path d="M 220 589.203539823009 Q 350 587.150442477876 450 558.407079646018 Q 560 522.477876106195 640 486.548672566372 Q 720 455.752212389381 830 450.619469026549 Q 940 447.53982300885 1060 446.513274336283" fill="none" stroke="var(--info-text)" stroke-width="3"/>
+  <line x1="220" y1="446.513274336283" x2="1060" y2="446.513274336283" stroke="var(--info-text)" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="200" y="450.619469026549" text-anchor="end" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">1</text>
+  <text x="200" y="593.309734513274" text-anchor="end" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">0</text>
+  <text x="1080" y="522.477876106195" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">non-decreasing</text>
+  <text x="1080" y="548.141592920354" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">right-continuous</text>
+  <text x="1080" y="573.805309734513" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">limits 0, 1</text>
+</svg>

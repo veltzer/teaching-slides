@@ -21,6 +21,11 @@ audience:
 - Where the MLE misbehaves
 
 ---
+## The Likelihood Surface
+
+![mle likelihood](svg/courses/math/statistics-theory/11_maximum_likelihood/mle_likelihood.svg)
+
+---
 ## The Likelihood And The MLE
 
 - Given data x and a model { f(&middot; | &theta;) : &theta; &isin; &Theta; }, the **likelihood function** is L(&theta; | x) = f(x | &theta;) — the *same* density, but read as a function of &theta; with x fixed; it is **not** a probability distribution over &theta;

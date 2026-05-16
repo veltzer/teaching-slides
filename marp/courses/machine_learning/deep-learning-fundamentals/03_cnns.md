@@ -89,6 +89,11 @@ audience:
 - Key concept for what a layer can learn
 
 ---
+## Receptive Field Grows With Depth
+
+![receptive field](svg/courses/machine_learning/deep-learning-fundamentals/03_cnns/receptive_field.svg)
+
+---
 ## Pooling
 
 - Downsample feature maps

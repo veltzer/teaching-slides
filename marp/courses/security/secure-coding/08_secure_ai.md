@@ -77,6 +77,12 @@ audience:
 
 ---
 
+## Attack Surface Across The AI Pipeline
+
+![ai attack surface](svg/courses/security/secure-coding/08_secure_ai/ai_attack_surface.svg)
+
+---
+
 ## Adversarial Attacks And Defenses
 
 - **Evasion / adversarial examples** — small, often imperceptible input perturbations that flip the prediction (the classic "panda → gibbon" image)

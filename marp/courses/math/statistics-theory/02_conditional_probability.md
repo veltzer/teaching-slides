@@ -21,6 +21,11 @@ audience:
 - A glimpse of conditioning on &sigma;-algebras
 
 ---
+## Bayes' Theorem
+
+![bayes rule](svg/courses/math/statistics-theory/02_conditional_probability/bayes_rule.svg)
+
+---
 ## Conditioning Restricts The World
 
 - Given an event B with P(B) &gt; 0, define **P(A | B) = P(A &cap; B) / P(B)**

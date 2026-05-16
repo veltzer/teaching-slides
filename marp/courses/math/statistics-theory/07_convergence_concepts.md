@@ -21,6 +21,11 @@ audience:
 - The delta method
 
 ---
+## The Hierarchy Of Convergence Modes
+
+![convergence hierarchy](svg/courses/math/statistics-theory/07_convergence_concepts/convergence_hierarchy.svg)
+
+---
 ## Why "Converges" Needs Qualifying
 
 - For sequences of *random variables* X&#8345;, "X&#8345; &#8594; X" can mean several genuinely different things

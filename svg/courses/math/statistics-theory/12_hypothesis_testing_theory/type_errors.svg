@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="547.692307692308" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.842459150158" font-weight="bold" fill="var(--text)">Type I and Type II errors</text>
+
+  <text x="247.692307692308" y="110.467289719626" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.131844362618" font-weight="bold" fill="var(--text)">Truth (unknown)</text>
+  <text x="160" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)" transform="rotate(-90 160 370)">Decision</text>
+
+  <rect x="120.769230769231" y="142.990654205607" width="253.846153846154" height="65.046728971963" rx="6.710614787539" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="247.692307692308" y="186.355140186916" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.894972766772" font-weight="bold" fill="var(--text)">H₀ true</text>
+
+  <rect x="386.153846153846" y="142.990654205607" width="253.846153846154" height="65.046728971963" rx="6.710614787539" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="513.076923076923" y="186.355140186916" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.894972766772" font-weight="bold" fill="var(--text)">H₁ true</text>
+
+  <rect x="40" y="229.719626168224" width="69.230769230769" height="238.504672897196" rx="6.710614787539" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="230" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)" transform="rotate(-90 230 345)">accept H₀</text>
+
+  <rect x="40" y="489.906542056075" width="69.230769230769" height="130.093457943925" rx="6.710614787539" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="230" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)" transform="rotate(-90 230 530)">reject H₀</text>
+
+  <rect x="120.769230769231" y="229.719626168224" width="253.846153846154" height="238.504672897196" rx="6.710614787539" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="247.692307692308" y="300.18691588785" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.013408564695" font-weight="bold" fill="var(--ok-text)">Correct</text>
+  <text x="247.692307692308" y="343.551401869159" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.776536968849" fill="var(--ok-text)">true negative</text>
+  <text x="247.692307692308" y="392.336448598131" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.658101170925" fill="var(--ok-text)">prob = 1 − α</text>
+
+  <rect x="386.153846153846" y="229.719626168224" width="253.846153846154" height="238.504672897196" rx="6.710614787539" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="513.076923076923" y="300.18691588785" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.013408564695" font-weight="bold" fill="var(--danger-text)">Type II error β</text>
+  <text x="513.076923076923" y="343.551401869159" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.776536968849" fill="var(--danger-text)">false negative</text>
+  <text x="513.076923076923" y="392.336448598131" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.658101170925" fill="var(--danger-text)">missed the effect</text>
+  <text x="513.076923076923" y="430.280373831776" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.539665373002" font-style="italic" fill="var(--danger-text)">power = 1 − β</text>
+
+  <rect x="120.769230769231" y="489.906542056075" width="253.846153846154" height="130.093457943925" rx="6.710614787539" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="247.692307692308" y="533.271028037383" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.013408564695" font-weight="bold" fill="var(--warn-text)">Type I error α</text>
+  <text x="247.692307692308" y="565.794392523364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.776536968849" fill="var(--warn-text)">false positive</text>
+  <text x="247.692307692308" y="598.317757009346" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.658101170925" fill="var(--warn-text)">"significance level"</text>
+
+  <rect x="386.153846153846" y="489.906542056075" width="253.846153846154" height="130.093457943925" rx="6.710614787539" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="513.076923076923" y="533.271028037383" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.013408564695" font-weight="bold" fill="var(--ok-text)">Correct</text>
+  <text x="513.076923076923" y="565.794392523364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.776536968849" fill="var(--ok-text)">true positive</text>
+  <text x="513.076923076923" y="598.317757009346" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.658101170925" fill="var(--ok-text)">prob = 1 − β = power</text>
+
+  <rect x="686.153846153846" y="142.990654205607" width="553.846153846154" height="238.504672897196" rx="6.710614787539" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="963.076923076923" y="180.934579439252" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.013408564695" font-weight="bold" fill="var(--info-text)">Neyman–Pearson recipe</text>
+  <text x="963.076923076923" y="224.299065420561" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.658101170925" fill="var(--info-text)">1. fix α (typically 0.05 or 0.01)</text>
+  <text x="963.076923076923" y="256.822429906542" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.658101170925" fill="var(--info-text)">2. maximize power (minimize β)</text>
+  <text x="963.076923076923" y="289.345794392523" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.658101170925" fill="var(--info-text)">3. use likelihood ratio as statistic</text>
+  <text x="963.076923076923" y="332.710280373832" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.539665373002" font-style="italic" fill="var(--info-text)">LR test is uniformly most powerful</text>
+  <text x="963.076923076923" y="359.81308411215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.539665373002" font-style="italic" fill="var(--info-text)">for simple hypotheses</text>
+
+  <rect x="686.153846153846" y="403.177570093458" width="553.846153846154" height="216.822429906542" rx="6.710614787539" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="963.076923076923" y="441.121495327103" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.013408564695" font-weight="bold" fill="var(--primary-text)">Trade-off</text>
+  <text x="963.076923076923" y="479.065420560748" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.658101170925" fill="var(--primary-text)">↓ α (stricter) ⇒ ↑ β (less power)</text>
+  <text x="963.076923076923" y="511.588785046729" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.658101170925" fill="var(--primary-text)">only way to shrink both: larger n</text>
+  <text x="963.076923076923" y="554.953271028037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.539665373002" font-style="italic" fill="var(--primary-text)">power analysis gives n needed</text>
+  <text x="963.076923076923" y="582.056074766355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.539665373002" font-style="italic" fill="var(--primary-text)">for a given effect size</text>
+</svg>

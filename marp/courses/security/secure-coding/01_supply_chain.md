@@ -64,6 +64,12 @@ audience:
 
 ---
 
+## SBOM And Provenance In Practice
+
+![sbom provenance](svg/courses/security/secure-coding/01_supply_chain/sbom_provenance.svg)
+
+---
+
 ## Software Bill Of Materials (SBOM)
 
 - A machine-readable inventory of every component in your software

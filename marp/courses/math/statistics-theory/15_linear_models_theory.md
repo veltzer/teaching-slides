@@ -21,6 +21,11 @@ audience:
 - Diagnostics, generalized least squares, and ridge/Stein shrinkage
 
 ---
+## OLS As Orthogonal Projection
+
+![linear model geometry](svg/courses/math/statistics-theory/15_linear_models_theory/linear_model_geometry.svg)
+
+---
 ## The Linear Model In Matrix Form
 
 - **y = X&beta; + &epsilon;**: y &isin; &#8477;&#8319; the response, X the n&times;p **design matrix** (columns = predictors; usually a column of 1s for the intercept), &beta; &isin; &#8477;&#7510; the unknown coefficients, &epsilon; the random error

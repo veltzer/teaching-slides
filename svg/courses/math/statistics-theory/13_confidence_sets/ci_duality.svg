@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">Confidence intervals: 95% of intervals contain the true θ</text>
+
+  <line x1="120" y1="537.87610619469" x2="1160" y2="537.87610619469" stroke="var(--text)" stroke-width="2"/>
+  <line x1="640" y1="86.194690265487" x2="640" y2="553.274336283186" stroke="var(--danger-fill)" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="640" y="75.929203539823" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--danger-accent)">true θ</text>
+  <text x="640" y="573.805309734513" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--text-muted)">parameter axis</text>
+
+  <line x1="450" y1="116.991150442478" x2="780" y2="116.991150442478" stroke="var(--ok-border)" stroke-width="4"/>
+  <line x1="450" y1="106.725663716814" x2="450" y2="127.256637168142" stroke="var(--ok-border)" stroke-width="3"/>
+  <line x1="780" y1="106.725663716814" x2="780" y2="127.256637168142" stroke="var(--ok-border)" stroke-width="3"/>
+  <ellipse cx="615" cy="116.991150442478" rx="5" ry="5.132743362832" fill="var(--ok-border)"/>
+
+  <line x1="540" y1="158.053097345133" x2="870" y2="158.053097345133" stroke="var(--ok-border)" stroke-width="4"/>
+  <line x1="540" y1="147.787610619469" x2="540" y2="168.318584070796" stroke="var(--ok-border)" stroke-width="3"/>
+  <line x1="870" y1="147.787610619469" x2="870" y2="168.318584070796" stroke="var(--ok-border)" stroke-width="3"/>
+  <ellipse cx="705" cy="158.053097345133" rx="5" ry="5.132743362832" fill="var(--ok-border)"/>
+
+  <line x1="380" y1="199.115044247788" x2="710" y2="199.115044247788" stroke="var(--ok-border)" stroke-width="4"/>
+  <line x1="380" y1="188.849557522124" x2="380" y2="209.380530973451" stroke="var(--ok-border)" stroke-width="3"/>
+  <line x1="710" y1="188.849557522124" x2="710" y2="209.380530973451" stroke="var(--ok-border)" stroke-width="3"/>
+  <ellipse cx="545" cy="199.115044247788" rx="5" ry="5.132743362832" fill="var(--ok-border)"/>
+
+  <line x1="520" y1="240.176991150443" x2="850" y2="240.176991150443" stroke="var(--ok-border)" stroke-width="4"/>
+  <line x1="520" y1="229.911504424779" x2="520" y2="250.442477876106" stroke="var(--ok-border)" stroke-width="3"/>
+  <line x1="850" y1="229.911504424779" x2="850" y2="250.442477876106" stroke="var(--ok-border)" stroke-width="3"/>
+  <ellipse cx="685" cy="240.176991150443" rx="5" ry="5.132743362832" fill="var(--ok-border)"/>
+
+  <line x1="180" y1="281.238938053097" x2="510" y2="281.238938053097" stroke="var(--danger-border)" stroke-width="4"/>
+  <line x1="180" y1="270.973451327434" x2="180" y2="291.504424778761" stroke="var(--danger-border)" stroke-width="3"/>
+  <line x1="510" y1="270.973451327434" x2="510" y2="291.504424778761" stroke="var(--danger-border)" stroke-width="3"/>
+  <ellipse cx="345" cy="281.238938053097" rx="5" ry="5.132743362832" fill="var(--danger-border)"/>
+  <text x="540" y="286.371681415929" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--danger-accent)">misses!</text>
+
+  <line x1="460" y1="322.300884955752" x2="790" y2="322.300884955752" stroke="var(--ok-border)" stroke-width="4"/>
+  <line x1="460" y1="312.035398230089" x2="460" y2="332.566371681416" stroke="var(--ok-border)" stroke-width="3"/>
+  <line x1="790" y1="312.035398230089" x2="790" y2="332.566371681416" stroke="var(--ok-border)" stroke-width="3"/>
+  <ellipse cx="625" cy="322.300884955752" rx="5" ry="5.132743362832" fill="var(--ok-border)"/>
+
+  <line x1="550" y1="363.362831858407" x2="880" y2="363.362831858407" stroke="var(--ok-border)" stroke-width="4"/>
+  <line x1="550" y1="353.097345132743" x2="550" y2="373.628318584071" stroke="var(--ok-border)" stroke-width="3"/>
+  <line x1="880" y1="353.097345132743" x2="880" y2="373.628318584071" stroke="var(--ok-border)" stroke-width="3"/>
+  <ellipse cx="715" cy="363.362831858407" rx="5" ry="5.132743362832" fill="var(--ok-border)"/>
+
+  <line x1="420" y1="404.424778761062" x2="750" y2="404.424778761062" stroke="var(--ok-border)" stroke-width="4"/>
+  <line x1="420" y1="394.159292035398" x2="420" y2="414.690265486726" stroke="var(--ok-border)" stroke-width="3"/>
+  <line x1="750" y1="394.159292035398" x2="750" y2="414.690265486726" stroke="var(--ok-border)" stroke-width="3"/>
+  <ellipse cx="585" cy="404.424778761062" rx="5" ry="5.132743362832" fill="var(--ok-border)"/>
+
+  <line x1="500" y1="445.486725663717" x2="830" y2="445.486725663717" stroke="var(--ok-border)" stroke-width="4"/>
+  <line x1="500" y1="435.221238938053" x2="500" y2="455.752212389381" stroke="var(--ok-border)" stroke-width="3"/>
+  <line x1="830" y1="435.221238938053" x2="830" y2="455.752212389381" stroke="var(--ok-border)" stroke-width="3"/>
+  <ellipse cx="665" cy="445.486725663717" rx="5" ry="5.132743362832" fill="var(--ok-border)"/>
+
+  <line x1="480" y1="486.548672566372" x2="810" y2="486.548672566372" stroke="var(--ok-border)" stroke-width="4"/>
+  <line x1="480" y1="476.283185840708" x2="480" y2="496.814159292035" stroke="var(--ok-border)" stroke-width="3"/>
+  <line x1="810" y1="476.283185840708" x2="810" y2="496.814159292035" stroke="var(--ok-border)" stroke-width="3"/>
+  <ellipse cx="645" cy="486.548672566372" rx="5" ry="5.132743362832" fill="var(--ok-border)"/>
+
+  <text x="900" y="286.371681415929" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--ok-accent)">9 of 10 cover</text>
+  <text x="900" y="306.902654867257" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--ok-accent)">≈ nominal 95%</text>
+
+  <rect x="40" y="578.938053097345" width="1200" height="41.061946902655" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="607.681415929204" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" font-weight="bold" fill="var(--info-text)">Duality: 95% CI for θ = set of θ₀ that a level-0.05 test would NOT reject</text>
+</svg>

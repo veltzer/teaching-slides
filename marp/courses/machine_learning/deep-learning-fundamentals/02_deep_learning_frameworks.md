@@ -52,6 +52,11 @@ audience:
 - Choice often comes down to ecosystem
 
 ---
+## The Framework Stack
+
+![framework stack](svg/courses/machine_learning/deep-learning-fundamentals/02_deep_learning_frameworks/framework_stack.svg)
+
+---
 ## TensorFlow
 
 - Released 2015 by Google

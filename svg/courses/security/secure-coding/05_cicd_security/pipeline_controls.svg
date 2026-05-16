@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">Security controls along the pipeline</text>
+
+  <rect x="40" y="106.725663716814" width="200" height="123.185840707965" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--primary-text)">Commit</text>
+  <text x="140" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)"/>
+  <text x="140" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">pre-commit</text>
+  <text x="140" y="221.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" font-style="italic" fill="var(--primary-text)">secret scan</text>
+
+  <rect x="280" y="106.725663716814" width="200" height="123.185840707965" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="380" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--info-text)">PR review</text>
+  <text x="380" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">2 reviews</text>
+  <text x="380" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">CODEOWNERS gate</text>
+  <text x="380" y="221.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" font-style="italic" fill="var(--info-text)"/>
+
+  <rect x="520" y="106.725663716814" width="200" height="123.185840707965" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="620" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--ok-text)">Build</text>
+  <text x="620" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--ok-text)">ephemeral runner</text>
+  <text x="620" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--ok-text)">pinned images</text>
+  <text x="620" y="221.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" font-style="italic" fill="var(--ok-text)">SLSA L3</text>
+
+  <rect x="760" y="106.725663716814" width="200" height="123.185840707965" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="860" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--warn-text)">Test + scan</text>
+  <text x="860" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">SAST / SCA / DAST</text>
+  <text x="860" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">container scan</text>
+  <text x="860" y="221.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" font-style="italic" fill="var(--warn-text)">break build on high</text>
+
+  <rect x="1000" y="106.725663716814" width="240" height="123.185840707965" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--danger-text)">Sign + deploy</text>
+  <text x="1120" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--danger-text)">cosign</text>
+  <text x="1120" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--danger-text)">OPA gate</text>
+  <text x="1120" y="221.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" font-style="italic" fill="var(--danger-text)">manual prod</text>
+
+  <line x1="240" y1="168.318584070796" x2="280" y2="168.318584070796" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="480" y1="168.318584070796" x2="520" y2="168.318584070796" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="720" y1="168.318584070796" x2="760" y2="168.318584070796" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="960" y1="168.318584070796" x2="1000" y2="168.318584070796" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="281.238938053097" width="1200" height="107.787610619469" rx="6.079124296508" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="317.16814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--text)">High-blast-radius targets</text>
+  <text x="640" y="347.964601769912" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--text-muted)">poisoned dep backdoors every build</text>
+  <text x="640" y="373.628318584071" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--text-muted)">treat pipeline as production</text>
+
+  <rect x="40" y="414.690265486726" width="595" height="205.309734513274" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="337" y="450.619469026549" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--ok-text)">Pin everything</text>
+  <text x="337" y="486.548672566372" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">GH Actions: pin by SHA</text>
+  <text x="337" y="517.345132743363" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">docker pull image@sha256:&lt;hash&gt;</text>
+  <text x="337" y="548.141592920354" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">requirements.txt --hashes</text>
+  <text x="337" y="594.336283185841" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">@latest is a foot-gun</text>
+
+  <rect x="655" y="414.690265486726" width="585" height="205.309734513274" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="947" y="450.619469026549" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--danger-text)">Least privilege for runners</text>
+  <text x="947" y="486.548672566372" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">no long-lived cloud creds</text>
+  <text x="947" y="517.345132743363" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">OIDC → short-lived role</text>
+  <text x="947" y="548.141592920354" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">read-only default; write only for deploy</text>
+  <text x="947" y="594.336283185841" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--danger-text)">PR action must not reach prod</text>
+</svg>

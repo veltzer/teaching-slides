@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.758651532102" font-weight="bold" fill="var(--text)">Joint, marginal, conditional: three views of the same table</text>
+
+  <rect x="40" y="87.889908256881" width="380" height="532.110091743119" rx="6.189662883026" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="130.45871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--primary-text)">Joint</text>
+  <text x="230" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.474157207564" fill="var(--primary-text)">p(x, y) over all pairs</text>
+  <rect x="100" y="194.311926605505" width="260" height="276.697247706422" fill="var(--primary-text)" fill-opacity="0.15" stroke="var(--primary-text)" stroke-width="2"/>
+  <rect x="100" y="194.311926605505" width="86" height="91.522935779817" fill="var(--primary-text)" fill-opacity="0.35"/>
+  <rect x="186" y="194.311926605505" width="86" height="91.522935779817" fill="var(--primary-text)" fill-opacity="0.55"/>
+  <rect x="272" y="194.311926605505" width="86" height="91.522935779817" fill="var(--primary-text)" fill-opacity="0.25"/>
+  <rect x="100" y="285.834862385321" width="86" height="91.522935779817" fill="var(--primary-text)" fill-opacity="0.45"/>
+  <rect x="186" y="285.834862385321" width="86" height="91.522935779817" fill="var(--primary-text)" fill-opacity="0.75"/>
+  <rect x="272" y="285.834862385321" width="86" height="91.522935779817" fill="var(--primary-text)" fill-opacity="0.35"/>
+  <rect x="100" y="377.357798165138" width="86" height="91.522935779817" fill="var(--primary-text)" fill-opacity="0.25"/>
+  <rect x="186" y="377.357798165138" width="86" height="91.522935779817" fill="var(--primary-text)" fill-opacity="0.45"/>
+  <rect x="272" y="377.357798165138" width="86" height="91.522935779817" fill="var(--primary-text)" fill-opacity="0.15"/>
+  <text x="80" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">x →</text>
+  <text x="80" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">y</text>
+  <text x="230" y="524.220183486239" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-style="italic" fill="var(--primary-text)">complete description</text>
+  <text x="230" y="556.146788990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-style="italic" fill="var(--primary-text)">of both variables</text>
+  <text x="230" y="598.715596330275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--primary-text)">∑∑ p(x, y) = 1</text>
+
+  <rect x="450" y="87.889908256881" width="380" height="532.110091743119" rx="6.189662883026" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="130.45871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--info-text)">Marginal</text>
+  <text x="640" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.474157207564" fill="var(--info-text)">p(x) = ∑ᵢ p(x, yᵢ)</text>
+  <rect x="510" y="215.596330275229" width="86" height="255.412844036697" fill="var(--info-text)" fill-opacity="0.4" stroke="var(--info-text)" stroke-width="2"/>
+  <rect x="596" y="215.596330275229" width="86" height="255.412844036697" fill="var(--info-text)" fill-opacity="0.6" stroke="var(--info-text)" stroke-width="2"/>
+  <rect x="682" y="215.596330275229" width="86" height="255.412844036697" fill="var(--info-text)" fill-opacity="0.25" stroke="var(--info-text)" stroke-width="2"/>
+  <text x="553" y="502.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--info-text)">x₁</text>
+  <text x="639" y="502.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--info-text)">x₂</text>
+  <text x="725" y="502.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--info-text)">x₃</text>
+  <text x="640" y="545.504587155963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-style="italic" fill="var(--info-text)">sum out the other variable</text>
+  <text x="640" y="572.110091743119" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-style="italic" fill="var(--info-text)">project to one axis</text>
+  <text x="640" y="604.036697247706" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--info-text)">information about X alone</text>
+
+  <rect x="860" y="87.889908256881" width="380" height="532.110091743119" rx="6.189662883026" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="130.45871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--ok-text)">Conditional</text>
+  <text x="1050" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.474157207564" fill="var(--ok-text)">p(y | x) = p(x, y) / p(x)</text>
+  <rect x="920" y="194.311926605505" width="260" height="91.522935779817" fill="var(--ok-text)" fill-opacity="0.55" stroke="var(--ok-text)" stroke-width="2"/>
+  <text x="900" y="247.522935779817" text-anchor="end" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--ok-text)">y | X=x₂</text>
+  <rect x="920" y="322.018348623853" width="260" height="91.522935779817" fill="var(--ok-text)" fill-opacity="0.25" stroke="var(--ok-text)" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="900" y="375.229357798165" text-anchor="end" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--ok-text)">y | X=x₃</text>
+  <text x="1050" y="476.330275229358" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-style="italic" fill="var(--ok-text)">slice the joint by X = x</text>
+  <text x="1050" y="508.256880733945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-style="italic" fill="var(--ok-text)">renormalize so ∑ = 1</text>
+  <text x="1050" y="556.146788990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--ok-text)">independence:</text>
+  <text x="1050" y="582.752293577982" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--ok-text)">p(y | x) = p(y) for all x</text>
+</svg>

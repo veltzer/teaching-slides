@@ -37,6 +37,12 @@ audience:
 
 ---
 
+## Symmetric vs Asymmetric — At A Glance
+
+![symmetric vs asymmetric](svg/courses/security/secure-coding/03_encryption/symmetric_vs_asymmetric.svg)
+
+---
+
 ## Symmetric vs Asymmetric
 
 | | Symmetric | Asymmetric |

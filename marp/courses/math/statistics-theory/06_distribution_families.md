@@ -21,6 +21,11 @@ audience:
 - Heavy tails and where finite-moment intuition fails
 
 ---
+## The Distribution Zoo
+
+![distribution zoo](svg/courses/math/statistics-theory/06_distribution_families/distribution_zoo.svg)
+
+---
 ## The Discrete Catalogue
 
 - **Bernoulli(p)**: one trial; mean p, variance p(1&minus;p) — the atom everything else is built from

@@ -385,6 +385,11 @@ audience:
 - Deep nets favor high capacity plus regularization
 
 ---
+## The Training Loop
+
+![training loop](svg/courses/machine_learning/deep-learning-fundamentals/01_neural_network_foundations/training_loop.svg)
+
+---
 ## A Training Recipe
 
 - Start with a known architecture

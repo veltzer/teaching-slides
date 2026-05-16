@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">OLS geometry: y projects onto the column space of X</text>
+
+  <rect x="40" y="86.194690265487" width="580" height="533.805309734513" rx="6.079124296508" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <path d="M 100 527.610619469027 L 560 527.610619469027 L 480 373.628318584071 L 60 373.628318584071 Z" fill="var(--primary-fill)" fill-opacity="0.25" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="100" y="553.274336283186" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--primary-accent)">col(X) plane</text>
+
+  <line x1="290" y1="450.619469026549" x2="290" y2="188.849557522124" stroke="var(--danger-border)" stroke-width="3" marker-end="url(#arrow-danger)"/>
+  <text x="305" y="188.849557522124" font-family="Arial, sans-serif" font-size="15.197810741269" font-weight="bold" fill="var(--danger-accent)">y</text>
+  <text x="305" y="209.380530973451" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--danger-accent)">observed data</text>
+
+  <line x1="290" y1="450.619469026549" x2="290" y2="214.513274336283" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow-ok)" stroke-dasharray="0"/>
+  <line x1="290" y1="450.619469026549" x2="290" y2="188.849557522124" stroke="var(--danger-border)" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="290" y1="450.619469026549" x2="290" y2="450.619469026549" stroke="var(--ok-border)" stroke-width="3"/>
+  <ellipse cx="290" cy="450.619469026549" rx="6" ry="6.159292035398" fill="var(--ok-border)"/>
+  <text x="305" y="450.619469026549" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--ok-accent)">ŷ = Xβ̂</text>
+  <text x="305" y="471.150442477876" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--ok-accent)">fitted values (projection)</text>
+
+  <line x1="290" y1="450.619469026549" x2="290" y2="188.849557522124" stroke="none"/>
+  <line x1="295" y1="188.849557522124" x2="295" y2="450.619469026549" stroke="var(--warn-border)" stroke-width="3" marker-end="url(#arrow-warn)"/>
+  <text x="320" y="322.300884955752" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--warn-accent)">e = y − ŷ</text>
+  <text x="320" y="342.83185840708" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--warn-accent)">residual — perpendicular</text>
+  <text x="320" y="363.362831858407" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--warn-accent)">to col(X)</text>
+
+  <text x="330" y="527.610619469027" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--text-muted)">a covariate direction</text>
+  <text x="100" y="424.955752212389" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--text-muted)">another covariate</text>
+
+  <rect x="650" y="86.194690265487" width="590" height="251.504424778761" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)">Normal equations</text>
+  <text x="945" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" fill="var(--primary-text)">β̂ = (XᵀX)⁻¹ Xᵀy</text>
+  <text x="945" y="214.513274336283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">minimizes ∑(yᵢ − xᵢᵀβ)²</text>
+  <text x="945" y="250.442477876106" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">residuals are orthogonal to every column of X</text>
+  <text x="945" y="286.371681415929" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">Xᵀe = 0 — the source of "the residuals sum to zero"</text>
+  <text x="945" y="317.16814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">whenever the model has an intercept</text>
+
+  <rect x="650" y="358.230088495575" width="590" height="261.769911504425" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="394.159292035398" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--ok-text)">Gauss–Markov</text>
+  <text x="945" y="433.16814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--ok-text)">if E[e] = 0, Var(e) = σ² I,</text>
+  <text x="945" y="460.884955752212" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--ok-text)">then OLS is BLUE</text>
+  <text x="945" y="499.893805309734" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Best Linear Unbiased Estimator</text>
+  <text x="945" y="543.008849557522" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">no normality required — just zero-mean,</text>
+  <text x="945" y="568.672566371681" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">homoscedastic, uncorrelated errors</text>
+  <text x="945" y="604.601769911504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-weight="bold" fill="var(--ok-text)">add normality ⇒ t, F, exact CIs</text>
+</svg>

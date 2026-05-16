@@ -21,6 +21,11 @@ audience:
 - Basu's theorem and the exponential-family case
 
 ---
+## Sufficiency: Lossless Compression
+
+![sufficiency](svg/courses/math/statistics-theory/09_statistical_models_and_sufficiency/sufficiency.svg)
+
+---
 ## A Statistical Model, Formally
 
 - Data X lives in a sample space &#119987;; a **statistical model** is a family of candidate distributions **P = { P&#952; : &theta; &isin; &Theta; }** for the law of X

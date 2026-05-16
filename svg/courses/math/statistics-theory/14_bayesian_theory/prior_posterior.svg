@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">Bayesian updating: prior + data → posterior</text>
+
+  <rect x="40" y="81.061946902655" width="385" height="297.699115044248" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="232" y="111.858407079646" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)">Prior π(θ)</text>
+  <line x1="80" y1="327.433628318584" x2="385" y2="327.433628318584" stroke="var(--primary-text)" stroke-width="2"/>
+  <line x1="80" y1="158.053097345133" x2="80" y2="327.433628318584" stroke="var(--primary-text)" stroke-width="2"/>
+  <path d="M 80 327.433628318584 Q 130 324.353982300885 175 281.238938053097 Q 220 219.646017699115 232 219.646017699115 Q 250 219.646017699115 290 281.238938053097 Q 335 324.353982300885 385 327.433628318584 Z" fill="var(--primary-text)" fill-opacity="0.45"/>
+  <text x="232" y="358.230088495575" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">beliefs before seeing data</text>
+
+  <rect x="447" y="81.061946902655" width="386" height="297.699115044248" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="111.858407079646" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--warn-text)">Likelihood L(θ ; x)</text>
+  <line x1="487" y1="327.433628318584" x2="833" y2="327.433628318584" stroke="var(--warn-text)" stroke-width="2"/>
+  <line x1="487" y1="158.053097345133" x2="487" y2="327.433628318584" stroke="var(--warn-text)" stroke-width="2"/>
+  <path d="M 487 327.433628318584 Q 540 324.353982300885 600 281.238938053097 Q 660 188.849557522124 720 281.238938053097 Q 780 324.353982300885 833 327.433628318584 Z" fill="var(--warn-text)" fill-opacity="0.45"/>
+  <text x="640" y="358.230088495575" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">peaked where data say θ lies</text>
+
+  <rect x="855" y="81.061946902655" width="385" height="297.699115044248" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1047" y="111.858407079646" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--ok-text)">Posterior π(θ | x)</text>
+  <line x1="895" y1="327.433628318584" x2="1240" y2="327.433628318584" stroke="var(--ok-text)" stroke-width="2"/>
+  <line x1="895" y1="158.053097345133" x2="895" y2="327.433628318584" stroke="var(--ok-text)" stroke-width="2"/>
+  <path d="M 895 327.433628318584 Q 940 324.353982300885 1000 270.973451327434 Q 1040 183.716814159292 1047 183.716814159292 Q 1060 183.716814159292 1100 270.973451327434 Q 1160 324.353982300885 1240 327.433628318584 Z" fill="var(--ok-text)" fill-opacity="0.55"/>
+  <text x="1047" y="358.230088495575" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--ok-text)">tighter than prior &amp; pulled toward data</text>
+
+  <rect x="40" y="404.424778761062" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="440.353982300885" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" font-weight="bold" fill="var(--info-text)">π(θ | x) ∝ L(θ ; x) · π(θ)</text>
+  <text x="640" y="481.41592920354" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-style="italic" fill="var(--info-text)">normalize by ∫ L(θ ; x) π(θ) dθ — usually the hard part (intractable, use MCMC/VI)</text>
+
+  <rect x="40" y="527.610619469027" width="595" height="92.389380530973" rx="6.079124296508" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="337" y="558.407079646018" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" font-weight="bold" fill="var(--text)">Conjugate priors</text>
+  <text x="337" y="584.070796460177" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--text-muted)">Beta–Binomial, Normal–Normal, Gamma–Poisson</text>
+  <text x="337" y="607.681415929204" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" font-style="italic" fill="var(--text-muted)">closed-form posterior — analytical updates</text>
+
+  <rect x="655" y="527.610619469027" width="585" height="92.389380530973" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="947" y="558.407079646018" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" font-weight="bold" fill="var(--danger-text)">Bernstein–von Mises</text>
+  <text x="947" y="584.070796460177" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--danger-text)">as n → ∞ the posterior concentrates and looks Gaussian</text>
+  <text x="947" y="607.681415929204" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" font-style="italic" fill="var(--danger-text)">Bayesian and MLE answers agree asymptotically</text>
+</svg>

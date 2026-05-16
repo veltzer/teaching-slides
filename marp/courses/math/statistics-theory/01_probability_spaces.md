@@ -30,6 +30,11 @@ audience:
 - Everything later — random variables, expectation, the CLT — is defined on top of this scaffold
 
 ---
+## The Probability Triple
+
+![probability triple](svg/courses/math/statistics-theory/01_probability_spaces/probability_triple.svg)
+
+---
 ## Sample Space And Events
 
 - The **sample space** &Omega; is the set of all possible outcomes &omega; of the experiment

@@ -21,6 +21,11 @@ audience:
 - p-values, multiplicity, and the duality with confidence sets
 
 ---
+## Type I And Type II Errors
+
+![type errors](svg/courses/math/statistics-theory/12_hypothesis_testing_theory/type_errors.svg)
+
+---
 ## Tests As Decision Rules
 
 - A hypothesis test partitions the parameter space: **null** H&#8320;: &theta; &isin; &Theta;&#8320; vs **alternative** H&#8321;: &theta; &isin; &Theta;&#8321;; a (possibly randomized) **test** is a function &phi;(x) &isin; [0, 1] giving the probability of rejecting H&#8320; when x is observed

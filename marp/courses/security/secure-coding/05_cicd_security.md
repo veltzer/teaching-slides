@@ -63,6 +63,12 @@ audience:
 
 ---
 
+## Controls Along The Pipeline
+
+![pipeline controls](svg/courses/security/secure-coding/05_cicd_security/pipeline_controls.svg)
+
+---
+
 ## Static And Dynamic Analysis In The Pipeline
 
 - **SAST** — analyze source for bug patterns: `Semgrep`, `CodeQL`, `bandit`, clang static analyzer

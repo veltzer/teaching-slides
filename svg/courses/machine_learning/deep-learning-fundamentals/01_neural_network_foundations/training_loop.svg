@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">The training loop: one step inside an epoch</text>
+
+  <rect x="40" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="132.389380530973" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--primary-text)">1. Forward</text>
+  <text x="150" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">ŷ = f(x ; θ)</text>
+  <text x="150" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">layer by layer</text>
+  <text x="150" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">cache activations</text>
+
+  <rect x="295" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="405" y="132.389380530973" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--info-text)">2. Loss</text>
+  <text x="405" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">L = loss(ŷ, y)</text>
+  <text x="405" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">scalar — how wrong</text>
+  <text x="405" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--info-text)">CE, MSE, ...</text>
+
+  <rect x="550" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="660" y="132.389380530973" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">3. Backward</text>
+  <text x="660" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">∇θ L = autograd(L)</text>
+  <text x="660" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">chain rule, reversed</text>
+  <text x="660" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--warn-text)">gradient per weight</text>
+
+  <rect x="805" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="915" y="132.389380530973" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--ok-text)">4. Update</text>
+  <text x="915" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">θ ← θ − η ∇θ L</text>
+  <text x="915" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--ok-text)">optimizer step</text>
+  <text x="915" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">SGD, Adam, ...</text>
+
+  <rect x="1060" y="96.46017699115" width="180" height="164.247787610619" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1150" y="132.389380530973" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">5. Zero grads</text>
+  <text x="1150" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">grad.zero_()</text>
+  <text x="1150" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--danger-text)">grads accumulate</text>
+  <text x="1150" y="229.911504424779" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--danger-text)">by default!</text>
+
+  <line x1="260" y1="178.58407079646" x2="295" y2="178.58407079646" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="515" y1="178.58407079646" x2="550" y2="178.58407079646" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="770" y1="178.58407079646" x2="805" y2="178.58407079646" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1025" y1="178.58407079646" x2="1060" y2="178.58407079646" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <path d="M 1150 260.70796460177 Q 1150 312.035398230089 640 312.035398230089 Q 130 312.035398230089 150 260.70796460177" fill="none" stroke="var(--text-muted)" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+  <text x="640" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--text-muted)">next batch — repeat until val loss stops improving</text>
+
+  <rect x="40" y="373.628318584071" width="1200" height="246.371681415929" rx="6.079124296508" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="409.557522123894" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--text)">In PyTorch — the canonical five lines</text>
+  <text x="200" y="455.752212389381" font-family="Courier New, monospace" font-size="15.197810741269" fill="var(--text)">y_hat = model(x)</text>
+  <text x="200" y="486.548672566372" font-family="Courier New, monospace" font-size="15.197810741269" fill="var(--text)">loss = loss_fn(y_hat, y)</text>
+  <text x="200" y="517.345132743363" font-family="Courier New, monospace" font-size="15.197810741269" fill="var(--text)">loss.backward()</text>
+  <text x="200" y="548.141592920354" font-family="Courier New, monospace" font-size="15.197810741269" fill="var(--text)">optimizer.step()</text>
+  <text x="200" y="578.938053097345" font-family="Courier New, monospace" font-size="15.197810741269" fill="var(--text)">optimizer.zero_grad()</text>
+  <text x="640" y="609.734513274336" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--text-muted)">every modern framework is built around this skeleton — everything else is convenience around it</text>
+</svg>

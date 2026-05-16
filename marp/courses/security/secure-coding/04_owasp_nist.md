@@ -91,6 +91,12 @@ audience:
 
 ---
 
+## Defense In Depth
+
+![defense in depth](svg/courses/security/secure-coding/04_owasp_nist/defense_in_depth.svg)
+
+---
+
 ## NIST Cybersecurity Framework (CSF)
 
 - An organization-level framework for managing cybersecurity risk — broader than code

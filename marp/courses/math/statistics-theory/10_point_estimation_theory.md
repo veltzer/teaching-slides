@@ -21,6 +21,11 @@ audience:
 - Admissibility, minimaxity, and Stein's surprise
 
 ---
+## Bias, Variance, And MSE
+
+![bias variance mse](svg/courses/math/statistics-theory/10_point_estimation_theory/bias_variance_mse.svg)
+
+---
 ## Loss, Risk, And How To Rank Estimators
 
 - Fix a parameter &psi;(&theta;) and an estimator &delta;(X). A **loss function** L(&theta;, a) &geq; 0 prices the error of guessing a; the **risk** is the expected loss R(&theta;, &delta;) = E&#952;[ L(&theta;, &delta;(X)) ]

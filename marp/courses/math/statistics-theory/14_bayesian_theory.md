@@ -21,6 +21,11 @@ audience:
 - Admissibility, the complete-class theorems, and objective priors
 
 ---
+## Prior, Likelihood, Posterior
+
+![prior posterior](svg/courses/math/statistics-theory/14_bayesian_theory/prior_posterior.svg)
+
+---
 ## The Bayesian Model, Formally
 
 - Add to the sampling model { f(x | &theta;) : &theta; &isin; &Theta; } a **prior** &pi;(&theta;) — a probability distribution on &Theta; encoding beliefs (or a chosen reference) *before* the data; this turns &theta; into a random variable

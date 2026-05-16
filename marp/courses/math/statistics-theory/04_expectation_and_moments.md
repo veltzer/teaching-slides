@@ -21,6 +21,11 @@ audience:
 - Key inequalities: Markov, Chebyshev, Jensen, Cauchy&ndash;Schwarz
 
 ---
+## What Each Moment Tells You
+
+![moments](svg/courses/math/statistics-theory/04_expectation_and_moments/moments.svg)
+
+---
 ## Expectation Is An Integral
 
 - **E[X] = &#8747;_&Omega; X dP** — the Lebesgue integral of the random variable against the probability measure

@@ -21,6 +21,11 @@ audience:
 - Sums of independent variables and convolution
 
 ---
+## Joint, Marginal, Conditional
+
+![joint marginal conditional](svg/courses/math/statistics-theory/05_joint_distributions/joint_marginal_conditional.svg)
+
+---
 ## Joint Distribution Of A Random Vector
 
 - A random vector X = (X&#8321;,...,X&#8345;) : &Omega; &#8594; &#8477;&#8319; is measurable into the Borel sets of &#8477;&#8319;; its **joint law** is the pushforward P_X(B) = P(X &isin; B) for Borel B &sube; &#8477;&#8319;

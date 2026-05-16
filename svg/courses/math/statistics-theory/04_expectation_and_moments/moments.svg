@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.424811740757" font-weight="bold" fill="var(--text)">What each moment tells you about the shape</text>
+
+  <rect x="40" y="76.25" width="290" height="543.75" rx="6.106202935189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--primary-text)">1st: mean</text>
+  <text x="185" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.30090831637" fill="var(--primary-text)">μ = E[X]</text>
+  <line x1="80" y1="314.464285714286" x2="290" y2="314.464285714286" stroke="var(--primary-text)" stroke-width="2"/>
+  <path d="M 80 314.464285714286 Q 130 312.392857142857 160 262.678571428571 Q 185 200.535714285714 210 262.678571428571 Q 240 312.392857142857 290 314.464285714286 Z" fill="var(--primary-text)" fill-opacity="0.6"/>
+  <line x1="185" y1="190.178571428571" x2="185" y2="319.642857142857" stroke="var(--primary-text)" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="185" y="340.357142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">μ</text>
+  <text x="185" y="392.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--primary-text)">center of mass</text>
+  <text x="185" y="423.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">where the bulk sits</text>
+  <text x="185" y="490.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--primary-text)">may fail to exist</text>
+  <text x="185" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--primary-text)">(Cauchy)</text>
+
+  <rect x="345" y="76.25" width="290" height="543.75" rx="6.106202935189" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--ok-text)">2nd: variance</text>
+  <text x="490" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.30090831637" fill="var(--ok-text)">σ² = E[(X − μ)²]</text>
+  <line x1="385" y1="314.464285714286" x2="595" y2="314.464285714286" stroke="var(--ok-text)" stroke-width="2"/>
+  <path d="M 385 314.464285714286 Q 430 311.357142857143 480 210.892857142857 Q 490 231.607142857143 500 210.892857142857 Q 550 311.357142857143 595 314.464285714286 Z" fill="var(--ok-text)" fill-opacity="0.5"/>
+  <path d="M 385 314.464285714286 Q 420 311.357142857143 460 262.678571428571 Q 490 226.428571428571 520 262.678571428571 Q 560 311.357142857143 595 314.464285714286 Z" fill="none" stroke="var(--ok-text)" stroke-width="3"/>
+  <text x="490" y="392.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--ok-text)">spread around μ</text>
+  <text x="490" y="423.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">narrow vs wide</text>
+  <text x="490" y="490.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--ok-text)">always ≥ 0</text>
+  <text x="490" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--ok-text)">SD σ is on X's scale</text>
+
+  <rect x="650" y="76.25" width="290" height="543.75" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="795" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--warn-text)">3rd: skewness</text>
+  <text x="795" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.30090831637" fill="var(--warn-text)">E[(X − μ)³] / σ³</text>
+  <line x1="690" y1="314.464285714286" x2="900" y2="314.464285714286" stroke="var(--warn-text)" stroke-width="2"/>
+  <path d="M 690 314.464285714286 Q 715 312.392857142857 740 221.25 Q 760 273.035714285714 800 298.928571428571 Q 850 312.392857142857 900 314.464285714286 Z" fill="var(--warn-text)" fill-opacity="0.6"/>
+  <text x="795" y="392.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--warn-text)">left-vs-right asymmetry</text>
+  <text x="795" y="423.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">positive = long right tail</text>
+  <text x="795" y="490.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--warn-text)">income, file sizes,</text>
+  <text x="795" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--warn-text)">latency — all positive-skewed</text>
+
+  <rect x="955" y="76.25" width="285" height="543.75" rx="6.106202935189" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1097" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--danger-text)">4th: kurtosis</text>
+  <text x="1097" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.30090831637" fill="var(--danger-text)">E[(X − μ)⁴] / σ⁴</text>
+  <line x1="995" y1="314.464285714286" x2="1200" y2="314.464285714286" stroke="var(--danger-text)" stroke-width="2"/>
+  <path d="M 995 314.464285714286 Q 1050 312.392857142857 1075 273.035714285714 Q 1097 190.178571428571 1120 273.035714285714 Q 1145 312.392857142857 1200 314.464285714286 Z" fill="var(--danger-text)" fill-opacity="0.6"/>
+  <path d="M 995 314.464285714286 Q 1040 311.357142857143 1075 252.321428571429 Q 1097 231.607142857143 1120 252.321428571429 Q 1155 311.357142857143 1200 314.464285714286 Z" fill="none" stroke="var(--danger-text)" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="1097" y="392.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--danger-text)">tail heaviness</text>
+  <text x="1097" y="423.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--danger-text)">excess = big outliers</text>
+  <text x="1097" y="490.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--danger-text)">market returns,</text>
+  <text x="1097" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--danger-text)">extreme events</text>
+</svg>

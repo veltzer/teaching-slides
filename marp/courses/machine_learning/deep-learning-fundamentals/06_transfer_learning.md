@@ -127,6 +127,11 @@ model = keras.Model(inputs, outputs)
 ![fine_tuning](svg/courses/machine_learning/deep-learning-fundamentals/06_transfer_learning/fine_tuning.svg)
 
 ---
+## Three Freezing Strategies
+
+![freezing strategy](svg/courses/machine_learning/deep-learning-fundamentals/06_transfer_learning/freezing_strategy.svg)
+
+---
 ## Picking What to Unfreeze
 
 - Last block often: most task-specific

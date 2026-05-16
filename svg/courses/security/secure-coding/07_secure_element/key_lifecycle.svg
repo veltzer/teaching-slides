@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">Key lifecycle in a secure element</text>
+
+  <rect x="40" y="86.194690265487" width="220" height="184.778761061947" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)">1. Generate</text>
+  <text x="150" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">on-die TRNG</text>
+  <text x="150" y="183.716814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)"/>
+  <text x="150" y="209.380530973451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)"/>
+  <text x="150" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">never leaves</text>
+
+  <rect x="285" y="86.194690265487" width="220" height="184.778761061947" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="395" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--ok-text)">2. Provision</text>
+  <text x="395" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">CSR → CA</text>
+  <text x="395" y="183.716814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">device cert</text>
+  <text x="395" y="209.380530973451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">enrollment</text>
+  <text x="395" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)"/>
+
+  <rect x="530" y="86.194690265487" width="220" height="184.778761061947" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--info-text)">3. Use</text>
+  <text x="640" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">sign / decrypt</text>
+  <text x="640" y="183.716814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">API only</text>
+  <text x="640" y="209.380530973451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">PIN / bio gate</text>
+  <text x="640" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--info-text)">attestation</text>
+
+  <rect x="775" y="86.194690265487" width="220" height="184.778761061947" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="885" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--warn-text)">4. Rotate</text>
+  <text x="885" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)"/>
+  <text x="885" y="183.716814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">or on suspicion</text>
+  <text x="885" y="209.380530973451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)"/>
+  <text x="885" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--warn-text)">limit blast</text>
+
+  <rect x="1020" y="86.194690265487" width="220" height="184.778761061947" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--danger-text)">5. Destroy</text>
+  <text x="1130" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">decommission</text>
+  <text x="1130" y="183.716814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">zeroize</text>
+  <text x="1130" y="209.380530973451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">revoke cert</text>
+  <text x="1130" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--danger-text)">CRL / OCSP</text>
+
+  <line x1="260" y1="178.58407079646" x2="285" y2="178.58407079646" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="505" y1="178.58407079646" x2="530" y2="178.58407079646" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="750" y1="178.58407079646" x2="775" y2="178.58407079646" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="995" y1="178.58407079646" x2="1020" y2="178.58407079646" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="322.300884955752" width="1200" height="297.699115044248" rx="6.079124296508" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="358.230088495575" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--text)">The unforgeable boundary</text>
+  <rect x="200" y="389.026548672566" width="880" height="205.309734513274" rx="12.158248593015" fill="none" stroke="var(--primary-border)" stroke-width="4" stroke-dasharray="8 6"/>
+  <text x="640" y="424.955752212389" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" font-weight="bold" fill="var(--primary-accent)">Secure element / TPM / HSM die</text>
+  <text x="640" y="460.884955752212" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--text-muted)">keys live + die inside</text>
+  <text x="640" y="486.548672566372" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--text-muted)">tamper, side-channel, anti-fault</text>
+  <text x="640" y="522.477876106195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--text-muted)">CPU sees only the API, never the bits</text>
+  <text x="640" y="553.274336283186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--text-muted)">host OS pwn ⇒ no new signs, past sigs safe</text>
+  <text x="640" y="584.070796460177" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-weight="bold" fill="var(--primary-accent)">the boundary must be HW, not policy</text>
+</svg>

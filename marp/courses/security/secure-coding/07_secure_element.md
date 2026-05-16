@@ -91,6 +91,12 @@ Pick by question: protecting *a key on a device* → `TPM`/SE. *A fleet of keys 
 
 ---
 
+## Key Lifecycle Inside The Element
+
+![key lifecycle](svg/courses/security/secure-coding/07_secure_element/key_lifecycle.svg)
+
+---
+
 ## Integrating Secure Elements Into Applications
 
 - Code to a standard interface — **`PKCS#11`** for `HSM`s/`TPM`s, vendor SDKs for SEs/TEEs — not directly to the silicon

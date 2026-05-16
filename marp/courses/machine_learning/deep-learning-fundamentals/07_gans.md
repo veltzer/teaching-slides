@@ -57,6 +57,11 @@ audience:
 - Goal: tell them apart
 
 ---
+## The Minimax Game Visualized
+
+![gan minimax](svg/courses/machine_learning/deep-learning-fundamentals/07_gans/gan_minimax.svg)
+
+---
 ## The Minimax Game
 
 - Generator minimizes discriminator success

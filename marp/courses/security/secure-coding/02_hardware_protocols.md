@@ -61,6 +61,12 @@ audience:
 
 ---
 
+## Anatomy Of A Secure Channel
+
+![secure channel](svg/courses/security/secure-coding/02_hardware_protocols/secure_channel.svg)
+
+---
+
 ## Designing Secure Communication Protocols
 
 - **Do not invent your own** — use `TLS`, `Noise`, or another reviewed protocol

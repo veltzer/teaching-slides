@@ -21,6 +21,11 @@ audience:
 - Functions of a random variable
 
 ---
+## Distribution Functions: CDF, PMF, PDF
+
+![cdf pmf pdf](svg/courses/math/statistics-theory/03_random_variables/cdf_pmf_pdf.svg)
+
+---
 ## A Random Variable Is A Function
 
 - Given (&Omega;, F, P), a **random variable** X is a function X : &Omega; &#8594; &#8477; that is **measurable**: for every Borel set B, X&#8315;&sup1;(B) = {&omega; : X(&omega;) &isin; B} &isin; F

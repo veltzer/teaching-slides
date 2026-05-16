@@ -21,6 +21,11 @@ audience:
 - When the LLN/CLT fail, and what replaces them
 
 ---
+## LLN And CLT, Side By Side
+
+![lln clt](svg/courses/math/statistics-theory/08_lln_and_clt/lln_clt.svg)
+
+---
 ## The Weak Law Of Large Numbers
 
 - Let X&#8321;, X&#8322;, ... be i.i.d. with mean &mu; (and, for the easy proof, finite variance &sigma;&sup2;). Let X&#772;&#8345; = (1/n)&Sigma;X&#8345;

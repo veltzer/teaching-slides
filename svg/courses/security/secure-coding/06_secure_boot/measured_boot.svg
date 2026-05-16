@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">Verified vs measured boot: trust the path you took</text>
+
+  <rect x="40" y="86.194690265487" width="600" height="533.805309734513" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--primary-text)">Verified (chain of trust)</text>
+
+  <rect x="80" y="158.053097345133" width="520" height="56.46017699115" rx="6.079124296508" fill="var(--primary-text)" fill-opacity="0.2" stroke="var(--primary-text)" stroke-width="2"/>
+  <text x="340" y="193.982300884956" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--primary-text)">Root of trust (immutable, in ROM/HSM)</text>
+
+  <line x1="340" y1="214.513274336283" x2="340" y2="242.230088495575" stroke="var(--primary-text)" stroke-width="3" marker-end="url(#arrow-white)"/>
+  <text x="360" y="238.12389380531" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--primary-text)">verifies sig</text>
+
+  <rect x="80" y="250.442477876106" width="520" height="56.46017699115" rx="6.079124296508" fill="var(--primary-text)" fill-opacity="0.2" stroke="var(--primary-text)" stroke-width="2"/>
+  <text x="340" y="286.371681415929" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--primary-text)">Stage 1 bootloader (signed)</text>
+
+  <line x1="340" y1="306.902654867257" x2="340" y2="334.619469026549" stroke="var(--primary-text)" stroke-width="3" marker-end="url(#arrow-white)"/>
+  <text x="360" y="330.513274336283" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--primary-text)">verifies sig</text>
+
+  <rect x="80" y="342.83185840708" width="520" height="56.46017699115" rx="6.079124296508" fill="var(--primary-text)" fill-opacity="0.2" stroke="var(--primary-text)" stroke-width="2"/>
+  <text x="340" y="378.761061946903" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--primary-text)">Stage 2 / kernel (signed)</text>
+
+  <line x1="340" y1="399.29203539823" x2="340" y2="427.008849557522" stroke="var(--primary-text)" stroke-width="3" marker-end="url(#arrow-white)"/>
+  <text x="360" y="422.902654867257" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--primary-text)">verifies sig</text>
+
+  <rect x="80" y="435.221238938053" width="520" height="56.46017699115" rx="6.079124296508" fill="var(--primary-text)" fill-opacity="0.2" stroke="var(--primary-text)" stroke-width="2"/>
+  <text x="340" y="471.150442477876" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--primary-text)">OS / userspace (signed)</text>
+
+  <text x="340" y="522.477876106195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">Each stage checks the next stage's signature</text>
+  <text x="340" y="553.274336283186" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">before handing over control</text>
+  <text x="340" y="589.203539823009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-style="italic" fill="var(--primary-text)">unauthorized binary ⇒ refuses to run</text>
+
+  <rect x="670" y="86.194690265487" width="570" height="533.805309734513" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="955" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--ok-text)">Measured (TPM/PCR-extended)</text>
+
+  <rect x="710" y="158.053097345133" width="500" height="56.46017699115" rx="6.079124296508" fill="var(--ok-text)" fill-opacity="0.2" stroke="var(--ok-text)" stroke-width="2"/>
+  <text x="960" y="193.982300884956" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--ok-text)">Each stage computes hash(next)</text>
+
+  <line x1="960" y1="214.513274336283" x2="960" y2="242.230088495575" stroke="var(--ok-text)" stroke-width="3" marker-end="url(#arrow-white)"/>
+  <text x="980" y="238.12389380531" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--ok-text)">PCR_extend()</text>
+
+  <rect x="710" y="250.442477876106" width="500" height="56.46017699115" rx="6.079124296508" fill="var(--ok-text)" fill-opacity="0.2" stroke="var(--ok-text)" stroke-width="2"/>
+  <text x="960" y="286.371681415929" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--ok-text)">TPM accumulates PCR_n = H(PCR_n ∥ h)</text>
+
+  <line x1="960" y1="306.902654867257" x2="960" y2="334.619469026549" stroke="var(--ok-text)" stroke-width="3" marker-end="url(#arrow-white)"/>
+
+  <rect x="710" y="342.83185840708" width="500" height="56.46017699115" rx="6.079124296508" fill="var(--ok-text)" fill-opacity="0.2" stroke="var(--ok-text)" stroke-width="2"/>
+  <text x="960" y="378.761061946903" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--ok-text)">Final PCR = fingerprint of the entire boot</text>
+
+  <line x1="960" y1="399.29203539823" x2="960" y2="427.008849557522" stroke="var(--ok-text)" stroke-width="3" marker-end="url(#arrow-white)"/>
+
+  <rect x="710" y="435.221238938053" width="500" height="56.46017699115" rx="6.079124296508" fill="var(--ok-text)" fill-opacity="0.2" stroke="var(--ok-text)" stroke-width="2"/>
+  <text x="960" y="471.150442477876" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--ok-text)">Remote attestation: PCRs signed by AK</text>
+
+  <text x="955" y="522.477876106195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Boots even with tampered software</text>
+  <text x="955" y="553.274336283186" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">but the PCR record exposes what ran</text>
+  <text x="955" y="589.203539823009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-style="italic" fill="var(--ok-text)">verifier decides whether to trust</text>
+</svg>
