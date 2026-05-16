@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">The exponential family</text>
+
+  <rect x="40" y="86.194690265487" width="1200" height="123.185840707965" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="127.256637168142" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--info-text)">Canonical form</text>
+  <text x="640" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" fill="var(--info-text)">f(x ; η) = h(x) exp( η · T(x) − A(η) )</text>
+  <text x="640" y="197.061946902655" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--info-text)">η: natural param · T: sufficient stat · A: log-partition · h: base</text>
+
+  <rect x="40" y="235.044247787611" width="290" height="184.778761061947" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="270.973451327434" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--primary-text)">Bernoulli / Binomial</text>
+  <text x="185" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">η = log(p/(1−p))</text>
+  <text x="185" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">T(x) = x</text>
+  <text x="185" y="378.761061946903" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">logit is natural</text>
+
+  <rect x="345" y="235.044247787611" width="290" height="184.778761061947" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="270.973451327434" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--ok-text)">Poisson</text>
+  <text x="490" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">η = log λ</text>
+  <text x="490" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">T(x) = x</text>
+  <text x="490" y="378.761061946903" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">log-link in GLM</text>
+
+  <rect x="650" y="235.044247787611" width="290" height="184.778761061947" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="795" y="270.973451327434" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">Gaussian N(μ, σ²)</text>
+  <text x="795" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">η = (μ/σ², −1/2σ²)</text>
+  <text x="795" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">T(x) = (x, x²)</text>
+  <text x="795" y="378.761061946903" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--warn-text)">two parameters</text>
+
+  <rect x="955" y="235.044247787611" width="285" height="184.778761061947" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1097" y="270.973451327434" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">Gamma / Exp</text>
+  <text x="1097" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">η = (α−1, −β)</text>
+  <text x="1097" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">T(x) = (log x, x)</text>
+  <text x="1097" y="378.761061946903" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--danger-text)">conjugate prior</text>
+
+  <rect x="40" y="445.486725663717" width="1200" height="174.513274336283" rx="6.079124296508" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="481.41592920354" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--text)">Why this form is special</text>
+  <text x="640" y="517.345132743363" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--text-muted)">T(x) is sufficient — Fisher–Neyman is automatic</text>
+  <text x="640" y="548.141592920354" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--text-muted)">A(η) is convex; ∇A = E[T], ∇²A = Var(T)</text>
+  <text x="640" y="578.938053097345" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--text-muted)">conjugate priors keep Bayesian updates in-family</text>
+  <text x="640" y="607.681415929204" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--text-muted)">GLMs (logistic, Poisson, linear) are all exp-family + link</text>
+</svg>

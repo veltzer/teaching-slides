@@ -80,6 +80,11 @@ audience:
 - **Borel&ndash;Cantelli, part 2**: if the A&#8345; are independent and &Sigma; P(A&#8345;) = &infin;, then P(A&#8345; infinitely often) = 1 — together, a sharp 0&ndash;1 dichotomy
 
 ---
+## Borel&ndash;Cantelli Visualized
+
+![borel cantelli](svg/courses/math/statistics-theory/01_probability_spaces/borel_cantelli.svg)
+
+---
 ## Why Not All Subsets Of &#8477;?
 
 - Suppose a translation-invariant probability (a "uniform distribution") existed on *every* subset of [0, 1)

@@ -62,6 +62,11 @@ audience:
 - Dependent data: there are CLTs under mixing / martingale-difference conditions (the **martingale CLT**), but the *long-run variance* replaces &sigma;&sup2; — naive variance estimates are then wrong (need HAC/Newey&ndash;West-type corrections)
 
 ---
+## CLT In Action
+
+![clt in action](svg/courses/math/statistics-theory/08_lln_and_clt/clt_in_action.svg)
+
+---
 ## How Fast: Berry&ndash;Esseen
 
 - The CLT is a *limit*; for finite n the normal approximation has error. **Berry&ndash;Esseen**: if &rho; = E|X&#8321; &minus; &mu;|&sup3; &lt; &infin;, then sup_x | F&#8345;(x) &minus; &Phi;(x) | &leq; C &rho; / (&sigma;&sup3; &radic;n), with C an absolute constant (&lt; 0.5)

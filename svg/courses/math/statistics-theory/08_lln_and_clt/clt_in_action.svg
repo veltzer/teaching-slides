@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <defs/>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">CLT in action: skewed start → Gaussian average</text>
+
+  <rect x="40" y="86.194690265487" width="290" height="302.83185840708" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--primary-text)">n = 1</text>
+  <line x1="80" y1="342.83185840708" x2="320" y2="342.83185840708" stroke="var(--primary-text)" stroke-width="2"/>
+  <rect x="100" y="178.58407079646" width="30" height="164.247787610619" fill="var(--primary-text)"/>
+  <rect x="135" y="219.646017699115" width="30" height="123.185840707965" fill="var(--primary-text)"/>
+  <rect x="170" y="250.442477876106" width="30" height="92.389380530973" fill="var(--primary-text)"/>
+  <rect x="205" y="276.106194690266" width="30" height="66.725663716814" fill="var(--primary-text)"/>
+  <rect x="240" y="296.637168141593" width="30" height="46.194690265487" fill="var(--primary-text)"/>
+  <rect x="275" y="317.16814159292" width="30" height="25.663716814159" fill="var(--primary-text)"/>
+  <text x="185" y="373.628318584071" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-style="italic" fill="var(--primary-text)">starting distribution: skewed</text>
+
+  <rect x="345" y="86.194690265487" width="290" height="302.83185840708" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--info-text)">n = 2</text>
+  <line x1="385" y1="342.83185840708" x2="625" y2="342.83185840708" stroke="var(--info-text)" stroke-width="2"/>
+  <rect x="400" y="260.70796460177" width="30" height="82.12389380531" fill="var(--info-text)"/>
+  <rect x="435" y="214.513274336283" width="30" height="128.318584070796" fill="var(--info-text)"/>
+  <rect x="470" y="188.849557522124" width="30" height="153.982300884956" fill="var(--info-text)"/>
+  <rect x="505" y="204.247787610619" width="30" height="138.58407079646" fill="var(--info-text)"/>
+  <rect x="540" y="235.044247787611" width="30" height="107.787610619469" fill="var(--info-text)"/>
+  <rect x="575" y="281.238938053097" width="30" height="61.592920353982" fill="var(--info-text)"/>
+  <text x="490" y="373.628318584071" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-style="italic" fill="var(--info-text)">a hump starts to form</text>
+
+  <rect x="650" y="86.194690265487" width="290" height="302.83185840708" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="795" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">n = 5</text>
+  <line x1="690" y1="342.83185840708" x2="930" y2="342.83185840708" stroke="var(--warn-text)" stroke-width="2"/>
+  <path d="M 690 342.83185840708 Q 730 340.778761061947 760 312.035398230089 Q 790 260.70796460177 795 229.911504424779 Q 800 260.70796460177 830 312.035398230089 Q 860 340.778761061947 930 342.83185840708 Z" fill="var(--warn-text)" fill-opacity="0.55"/>
+  <text x="795" y="373.628318584071" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-style="italic" fill="var(--warn-text)">visibly bell-shaped</text>
+
+  <rect x="955" y="86.194690265487" width="285" height="302.83185840708" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1097" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--ok-text)">n = 30</text>
+  <line x1="995" y1="342.83185840708" x2="1235" y2="342.83185840708" stroke="var(--ok-text)" stroke-width="2"/>
+  <path d="M 995 342.83185840708 Q 1040 341.805309734513 1070 312.035398230089 Q 1090 260.70796460177 1097 188.849557522124 Q 1104 260.70796460177 1124 312.035398230089 Q 1154 341.805309734513 1235 342.83185840708 Z" fill="var(--ok-text)" fill-opacity="0.6"/>
+  <text x="1097" y="373.628318584071" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-style="italic" fill="var(--ok-text)">indistinguishable from Gaussian</text>
+
+  <line x1="330" y1="235.044247787611" x2="345" y2="235.044247787611" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="635" y1="235.044247787611" x2="650" y2="235.044247787611" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="940" y1="235.044247787611" x2="955" y2="235.044247787611" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="414.690265486726" width="1200" height="205.309734513274" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="450.619469026549" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">When does the CLT NOT apply?</text>
+  <text x="640" y="486.548672566372" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--danger-text)">when the variance is infinite — Cauchy, Pareto with α ≤ 2</text>
+  <text x="640" y="517.345132743363" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--danger-text)">when samples are strongly correlated — need a CLT for dependent data</text>
+  <text x="640" y="553.274336283186" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Berry–Esseen: |Fₙ(x) − Φ(x)| ≤ C · E[|X|³] / (σ³ √n)</text>
+  <text x="640" y="584.070796460177" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--danger-text)">the rate of convergence is 1/√n — heavier tails ⇒ larger C ⇒ slower normality</text>
+  <text x="640" y="609.734513274336" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--danger-text)">"n=30 is enough" is folklore — depends on skewness/kurtosis of the underlying distribution</text>
+</svg>

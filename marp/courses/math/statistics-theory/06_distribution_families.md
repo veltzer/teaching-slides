@@ -53,6 +53,11 @@ audience:
 - **Multivariate Normal** N(&mu;, &Sigma;): every affine image is Normal, marginals and conditionals are Normal, and *uncorrelated implies independent* — the uniquely tractable multivariate model
 
 ---
+## The Exponential Family Form
+
+![exponential family](svg/courses/math/statistics-theory/06_distribution_families/exponential_family.svg)
+
+---
 ## The Exponential Family
 
 - A family has **exponential-family** form if its density/pmf is f(x | &theta;) = h(x) exp( &eta;(&theta;)&#7488; T(x) &minus; A(&theta;) ) — natural parameter &eta;, sufficient statistic T, log-partition / cumulant function A, carrier h
