@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Plot frame: fills left two thirds.  Coordinates:
+       Math x in [0,10]  -> pixel  60 + 80x   (so x=0->60, x=10->860)
+       Math y in [-3,11] -> pixel  500 - 40y  (so y=0->500, y=11->60, y=-3->620) -->
+  <rect x="40" y="40" width="860" height="580" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+
+  <!-- Light vertical gridlines at x = 1..9 -->
+  <line x1="140" y1="40" x2="140" y2="620" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/>
+  <line x1="220" y1="40" x2="220" y2="620" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/>
+  <line x1="300" y1="40" x2="300" y2="620" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/>
+  <line x1="380" y1="40" x2="380" y2="620" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/>
+  <line x1="460" y1="40" x2="460" y2="620" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/>
+  <line x1="540" y1="40" x2="540" y2="620" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/>
+  <line x1="620" y1="40" x2="620" y2="620" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/>
+  <line x1="700" y1="40" x2="700" y2="620" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/>
+  <line x1="780" y1="40" x2="780" y2="620" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/>
+
+  <!-- X-axis (y = 0) -->
+  <line x1="40" y1="500" x2="890" y2="500" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="880" y="520" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">x</text>
+
+  <!-- Y-axis -->
+  <line x1="60" y1="620" x2="60" y2="50" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="44" y="56" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">y</text>
+
+  <!-- X-axis tick labels -->
+  <text x="60" y="518" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">0</text>
+  <text x="220" y="518" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">2</text>
+  <text x="300" y="518" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">3</text>
+  <text x="460" y="518" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">5</text>
+  <text x="540" y="518" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">6</text>
+  <text x="700" y="518" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">8</text>
+
+  <!-- Curve f(x) = x^2/8 - 2.  Sampled at integer x with pixel y = 500 - 40*(x^2/8 - 2). -->
+  <path d="M 60,580 L 140,575 L 220,560 L 300,535 L 380,500 L 460,455 L 540,400 L 620,335 L 700,260 L 780,175 L 860,80"
+        fill="none" stroke="var(--primary-border)" stroke-width="3"/>
+  <text x="850" y="105" text-anchor="end" font-family="Arial, sans-serif" font-size="18" font-style="italic" font-weight="bold" fill="var(--primary-accent)">y = f(x)</text>
+
+  <!-- Root marker at x = 4 -->
+  <ellipse cx="380" cy="500" rx="7" ry="7" fill="var(--ok-fill)" stroke="var(--ok-accent)" stroke-width="2"/>
+  <text x="380" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)">root α</text>
+
+  <!-- Iteration 1: tangent at x0 = 9 -->
+  <line x1="780" y1="500" x2="780" y2="175" stroke="var(--danger-border)" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <ellipse cx="780" cy="175" rx="6" ry="6" fill="var(--danger-fill)" stroke="var(--danger-accent)" stroke-width="2"/>
+  <text x="795" y="170" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--danger-accent)">(x₀, f(x₀))</text>
+  <!-- Tangent: slope = f'(9) = 2.25; passes through (780,175) and (491,500). -->
+  <line x1="830" y1="62.5" x2="475" y2="518" stroke="var(--danger-border)" stroke-width="2.5"/>
+  <text x="835" y="58" font-family="Arial, sans-serif" font-size="13" font-style="italic" font-weight="bold" fill="var(--danger-accent)">tangent at x₀</text>
+  <text x="780" y="518" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-accent)">x₀</text>
+
+  <!-- Iteration 2: tangent at x1 ≈ 5.39  → pixel x = 60 + 80*5.39 ≈ 491 -->
+  <ellipse cx="491" cy="500" rx="5" ry="5" fill="var(--warn-border)" stroke="var(--warn-accent)" stroke-width="2"/>
+  <text x="491" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-accent)">x₁</text>
+  <line x1="491" y1="500" x2="491" y2="435" stroke="var(--warn-border)" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <ellipse cx="491" cy="435" rx="5" ry="5" fill="var(--warn-fill)" stroke="var(--warn-accent)" stroke-width="2"/>
+  <text x="505" y="430" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-accent)">(x₁, f(x₁))</text>
+  <!-- Tangent at x1: slope = 1.347, through (491,435), hits x-axis at x2 ≈ 4.18 → pixel 394. -->
+  <line x1="540" y1="369" x2="375" y2="588" stroke="var(--warn-border)" stroke-width="2.5"/>
+  <text x="548" y="364" font-family="Arial, sans-serif" font-size="13" font-style="italic" font-weight="bold" fill="var(--warn-accent)">tangent at x₁</text>
+
+  <ellipse cx="394" cy="500" rx="5" ry="5" fill="var(--info-border)" stroke="var(--info-accent)" stroke-width="2"/>
+  <text x="418" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-accent)">x₂</text>
+
+  <!-- Convergence indicator on x-axis -->
+  <path d="M 770,558 Q 635,600 501,560" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <text x="635" y="615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--text-muted)">each step gets closer to the root</text>
+
+  <!-- ===== Right panels: x = 920..1240, y = 40..620 ===== -->
+  <rect x="920" y="40" width="320" height="290" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Newton–Raphson</text>
+  <text x="1080" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--primary-text)">root-finding by tangent line</text>
+
+  <!-- Iteration formula -->
+  <text x="1015" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">x</text>
+  <text x="1027" y="178" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">n+1</text>
+  <text x="1062" y="170" font-family="Arial, sans-serif" font-size="24" fill="var(--primary-text)">= x</text>
+  <text x="1100" y="178" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">n</text>
+  <text x="1110" y="170" font-family="Arial, sans-serif" font-size="24" fill="var(--primary-text)">−</text>
+  <text x="1165" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">f(x</text>
+  <text x="1178" y="168" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-text)">n</text>
+  <text x="1183" y="160" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">)</text>
+  <line x1="1140" y1="170" x2="1200" y2="170" stroke="var(--primary-text)" stroke-width="2"/>
+  <text x="1165" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">f ′(x</text>
+  <text x="1185" y="198" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-text)">n</text>
+  <text x="1191" y="190" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">)</text>
+
+  <!-- Step description -->
+  <text x="1080" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">1. guess x₀</text>
+  <text x="1080" y="256" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">2. draw tangent at (xₙ, f(xₙ))</text>
+  <text x="1080" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">3. its x-intercept is xₙ₊₁</text>
+  <text x="1080" y="304" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">4. repeat</text>
+
+  <!-- Caveats panel -->
+  <rect x="920" y="350" width="320" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Caveats</text>
+
+  <text x="940" y="425" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">• f ′(xₙ) ≠ 0</text>
+  <text x="960" y="447" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">flat slope ⇒ tangent misses</text>
+
+  <text x="940" y="478" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">• good initial x₀</text>
+  <text x="960" y="500" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">bad guess ⇒ may diverge</text>
+
+  <text x="940" y="531" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">• f differentiable</text>
+  <text x="960" y="553" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">kinks break the method</text>
+
+  <text x="940" y="584" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">• quadratic convergence</text>
+  <text x="960" y="606" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">error roughly squares</text>
+</svg>
