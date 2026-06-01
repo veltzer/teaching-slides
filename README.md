@@ -14,9 +14,9 @@ chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
 
 - Currently there are 138 courses in this repo.
 - Currently there are 28 lectures in this repo.
-- Currently there are 1587 marp files in this repo.
+- Currently there are 1588 marp files in this repo.
 - Currently there are 36965 marp slides in this repo.
-- Currently there are 5095 SVG diagrams in this repo.
+- Currently there are 5096 SVG diagrams in this repo.
 - Currently there are 796 tables in this repo.
 
 Mark Veltzer [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com), © 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
