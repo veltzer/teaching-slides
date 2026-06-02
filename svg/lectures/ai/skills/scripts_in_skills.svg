@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="514.285714285714" height="240.754716981132" rx="6.49694101771" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="297.142857142857" y="89.245283018868" text-anchor="middle" font-size="23.822117064936" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Let the model do it (tokens)</text>
+  <text x="297.142857142857" y="143.962264150943" text-anchor="middle" font-size="17.325176047226" fill="var(--info-text)" font-family="Arial, sans-serif">Good for fuzzy, judgement work:</text>
+  <text x="297.142857142857" y="182.264150943396" text-anchor="middle" font-size="17.325176047226" fill="var(--info-text)" font-family="Arial, sans-serif">summarize, classify, rewrite</text>
+  <text x="297.142857142857" y="231.509433962264" text-anchor="middle" font-size="17.325176047226" fill="var(--info-text)" font-family="Arial, sans-serif">Flexible, but can drift or err</text>
+
+  <rect x="725.714285714286" y="40" width="514.285714285714" height="240.754716981132" rx="6.49694101771" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="982.857142857143" y="89.245283018868" text-anchor="middle" font-size="23.822117064936" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Ship a script (code)</text>
+  <text x="982.857142857143" y="143.962264150943" text-anchor="middle" font-size="17.325176047226" fill="var(--ok-text)" font-family="Arial, sans-serif">Good for exact, repeatable work:</text>
+  <text x="982.857142857143" y="182.264150943396" text-anchor="middle" font-size="17.325176047226" fill="var(--ok-text)" font-family="Arial, sans-serif">parse, validate, transform files</text>
+  <text x="982.857142857143" y="231.509433962264" text-anchor="middle" font-size="17.325176047226" fill="var(--ok-text)" font-family="Arial, sans-serif">Deterministic, cheap, testable</text>
+
+  <rect x="318.571428571429" y="357.358490566038" width="642.857142857143" height="109.433962264151" rx="6.49694101771" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="401.132075471698" text-anchor="middle" font-size="21.656470059033" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">SKILL.md tells the agent which to pick</text>
+  <text x="640" y="439.433962264151" text-anchor="middle" font-size="17.325176047226" fill="var(--primary-text)" font-family="Arial, sans-serif">"For step 3, run scripts/validate.py — do not eyeball it"</text>
+
+  <line x1="297.142857142857" y1="280.754716981132" x2="532.857142857143" y2="355.169811320755" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="982.857142857143" y1="280.754716981132" x2="747.142857142857" y2="355.169811320755" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="168.571428571429" y="510.566037735849" width="942.857142857143" height="109.433962264151" rx="6.49694101771" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="554.339622641509" text-anchor="middle" font-size="19.49082305313" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Rule of thumb</text>
+  <text x="640" y="592.641509433962" text-anchor="middle" font-size="17.325176047226" fill="var(--text-muted)" font-family="Arial, sans-serif">If the task has a single correct answer every time, give it a script — not a paragraph</text>
+</svg>

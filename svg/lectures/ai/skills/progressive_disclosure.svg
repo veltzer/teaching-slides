@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="1200" height="138.348623853211" rx="6.524477552988" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="82.56880733945" text-anchor="middle" font-size="23.923084360957" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Level 1 — Metadata (always in context)</text>
+  <text x="640" y="119.816513761468" text-anchor="middle" font-size="18.486019733467" fill="var(--primary-text)" font-family="Arial, sans-serif">Just name + description, a few dozen tokens per skill</text>
+  <text x="640" y="154.935779816514" text-anchor="middle" font-size="18.486019733467" fill="var(--primary-text)" font-family="Arial, sans-serif">Lets the agent decide IF this skill is relevant</text>
+
+  <rect x="195.555555555556" y="242.201834862385" width="888.888888888889" height="138.348623853211" rx="6.524477552988" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="284.770642201835" text-anchor="middle" font-size="23.923084360957" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Level 2 — SKILL.md body (loaded when triggered)</text>
+  <text x="640" y="322.018348623853" text-anchor="middle" font-size="18.486019733467" fill="var(--info-text)" font-family="Arial, sans-serif">The core instructions, read once the skill fires</text>
+  <text x="640" y="357.137614678899" text-anchor="middle" font-size="18.486019733467" fill="var(--info-text)" font-family="Arial, sans-serif">Kept under a few hundred lines on purpose</text>
+
+  <rect x="351.111111111111" y="444.403669724771" width="577.777777777778" height="138.348623853211" rx="6.524477552988" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="486.97247706422" text-anchor="middle" font-size="23.923084360957" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Level 3 — Linked files &amp; scripts</text>
+  <text x="640" y="524.220183486239" text-anchor="middle" font-size="18.486019733467" fill="var(--ok-text)" font-family="Arial, sans-serif">reference.md, code, templates</text>
+  <text x="640" y="559.339449541284" text-anchor="middle" font-size="18.486019733467" fill="var(--ok-text)" font-family="Arial, sans-serif">Pulled in only if the task reaches that deep</text>
+
+  <line x1="640" y1="178.348623853211" x2="640" y2="240.073394495413" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="380.550458715596" x2="640" y2="442.275229357798" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1017.777777777778" y="215.596330275229" text-anchor="middle" font-size="16.311193882471" fill="var(--text-muted)" font-family="Arial, sans-serif">"this looks relevant"</text>
+  <text x="1017.777777777778" y="417.798165137615" text-anchor="middle" font-size="16.311193882471" fill="var(--text-muted)" font-family="Arial, sans-serif">"I need the details"</text>
+
+  <text x="640" y="620" text-anchor="middle" font-size="17.398606807969" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Context cost grows only with what the task actually uses</text>
+</svg>
