@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>diagram</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="628.679245283019" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.069993379085" font-weight="bold" fill="var(--text-muted)">Cold start: phases run once per new environment</text>
+
+  <rect x="40" y="147.407407407407" width="249.056603773585" height="236.296296296296" rx="9.356664459695" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="164.528301886792" y="254.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.188881532317" font-weight="bold" fill="var(--info-text)">Init</text>
+  <text x="164.528301886792" y="319.259259259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.391661149238" fill="var(--info-text)">boot runtime, load code</text>
+
+  <rect x="379.622641509434" y="147.407407407407" width="249.056603773585" height="236.296296296296" rx="9.356664459695" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="504.150943396226" y="254.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.188881532317" font-weight="bold" fill="var(--primary-text)">Invoke</text>
+  <text x="504.150943396226" y="319.259259259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.391661149238" fill="var(--primary-text)">run handler()</text>
+
+  <rect x="719.245283018868" y="147.407407407407" width="249.056603773585" height="236.296296296296" rx="9.356664459695" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="843.77358490566" y="254.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.188881532317" font-weight="bold" fill="var(--ok-text)">Respond</text>
+  <text x="843.77358490566" y="319.259259259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.391661149238" fill="var(--ok-text)">return result</text>
+
+  <rect x="1058.867924528302" y="147.407407407407" width="181.132075471698" height="236.296296296296" rx="9.356664459695" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1149.433962264151" y="254.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.188881532317" font-weight="bold" fill="var(--text)">Shutdown</text>
+  <text x="1149.433962264151" y="319.259259259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.391661149238" fill="var(--text)">env reclaimed</text>
+
+  <line x1="289.056603773585" y1="265.555555555556" x2="373.962264150943" y2="265.555555555556" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="628.679245283019" y1="265.555555555556" x2="713.584905660377" y2="265.555555555556" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="968.301886792453" y1="265.555555555556" x2="1053.207547169811" y2="265.555555555556" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M 843.77358490566 405.185185185185 C 843.77358490566 620 504.150943396226 620 504.150943396226 405.185185185185" fill="none" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="673.962264150943" y="609.259259259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.510549302469" font-weight="bold" fill="var(--ok-border)">warm start: reuse env, skip Init</text>
+</svg>
