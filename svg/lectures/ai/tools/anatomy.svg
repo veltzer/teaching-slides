@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Header box -->
+  <rect x="420" y="40" width="440" height="106.842105263158" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.227078547234" font-weight="bold" fill="var(--primary-text)">Tool Definition</text>
+  <text x="640" y="118.350877192982" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.14847443473" fill="var(--primary-text)">All the model knows about the tool</text>
+
+  <!-- Connectors -->
+  <line x1="540" y1="146.842105263158" x2="222" y2="226.210526315789" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="640" y1="146.842105263158" x2="640" y2="226.210526315789" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+  <line x1="740" y1="146.842105263158" x2="1058" y2="226.210526315789" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+
+  <!-- Box 1: name -->
+  <rect x="40" y="228.245614035088" width="364" height="203.508771929825" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="222" y="279.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--ok-text)">name</text>
+  <text x="222" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">A short, unique identifier</text>
+  <text x="222" y="362.561403508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">The model emits it to call the tool</text>
+  <text x="222" y="395.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">e.g. get_weather, run_query</text>
+
+  <!-- Box 2: description -->
+  <rect x="458" y="228.245614035088" width="364" height="203.508771929825" rx="6.052402741669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="279.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--info-text)">description</text>
+  <text x="640" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--info-text)">What it does AND when to use it</text>
+  <text x="640" y="362.561403508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--info-text)">The model reads this to decide</text>
+  <text x="640" y="395.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--info-text)">Trigger-rich, concrete, no overlap</text>
+
+  <!-- Box 3: input_schema -->
+  <rect x="876" y="228.245614035088" width="364" height="203.508771929825" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1058" y="279.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--warn-text)">input_schema</text>
+  <text x="1058" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--warn-text)">The arguments, typed, in JSON Schema</text>
+  <text x="1058" y="362.561403508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--warn-text)">Constrains valid calls</text>
+  <text x="1058" y="395.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--warn-text)">Lets you validate before running</text>
+
+  <!-- Bottom summary bar -->
+  <rect x="40" y="513.157894736842" width="1200" height="106.842105263158" rx="6.052402741669" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="564.035087719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--text)">name + description + input_schema — that is the whole contract</text>
+  <text x="640" y="596.59649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.14847443473" fill="var(--text-muted)">Everything the model needs to pick the tool and call it correctly</text>
+</svg>

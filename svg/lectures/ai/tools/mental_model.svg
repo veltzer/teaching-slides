@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- tagline -->
+  <text x="640" y="40" text-anchor="middle" font-size="22.737188528336" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Judgement + Hands</text>
+
+  <!-- The Model box (center top) -->
+  <rect x="490" y="91.270718232044" width="300" height="160.220994475138" rx="6.201051416819" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="160.699815837937" text-anchor="middle" font-size="26.871222806216" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">The Model</text>
+  <text x="640" y="195.948434622468" text-anchor="middle" font-size="17.569645680987" fill="var(--primary-text)" font-family="Arial, sans-serif">Decides WHEN and WHICH</text>
+  <text x="640" y="223.720073664825" text-anchor="middle" font-size="15.502628542048" fill="var(--primary-text)" font-family="Arial, sans-serif">(the brain / judgement)</text>
+
+  <!-- The Tools box (bottom left) -->
+  <rect x="110" y="358.305709023941" width="300" height="149.539594843462" rx="6.201051416819" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="260" y="417.053406998158" text-anchor="middle" font-size="26.871222806216" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">The Tools</text>
+  <text x="260" y="450.165745856354" text-anchor="middle" font-size="17.569645680987" fill="var(--ok-text)" font-family="Arial, sans-serif">Reach, action, exact compute</text>
+  <text x="260" y="477.937384898711" text-anchor="middle" font-size="15.502628542048" fill="var(--ok-text)" font-family="Arial, sans-serif">(the hands / capability)</text>
+
+  <!-- The World box (bottom right) -->
+  <rect x="870" y="358.305709023941" width="300" height="149.539594843462" rx="6.201051416819" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1020" y="417.053406998158" text-anchor="middle" font-size="26.871222806216" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">The World</text>
+  <text x="1020" y="450.165745856354" text-anchor="middle" font-size="17.569645680987" fill="var(--warn-text)" font-family="Arial, sans-serif">Files, APIs, data</text>
+  <text x="1020" y="477.937384898711" text-anchor="middle" font-size="15.502628542048" fill="var(--warn-text)" font-family="Arial, sans-serif">(side-effects)</text>
+
+  <!-- Arrow: Model -> Tools (calls) -->
+  <line x1="500" y1="251.491712707182" x2="300" y2="352.965009208103" stroke="var(--primary-border)" stroke-width="3" marker-end="url(#arrow-primary)"/>
+  <text x="360" y="288.876611418048" text-anchor="middle" font-size="15.502628542048" fill="var(--text-muted)" font-family="Arial, sans-serif">calls</text>
+
+  <!-- Arrow: Tools -> World (acts on) -->
+  <line x1="415" y1="433.075506445672" x2="865" y2="433.075506445672" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow-ok)"/>
+  <text x="640" y="422.394106813996" text-anchor="middle" font-size="15.502628542048" fill="var(--text-muted)" font-family="Arial, sans-serif">acts on</text>
+
+  <!-- Arrow: World -> Model (result) -->
+  <line x1="980" y1="352.965009208103" x2="780" y2="251.491712707182" stroke="var(--warn-border)" stroke-width="3" marker-end="url(#arrow-warn)"/>
+  <text x="920" y="288.876611418048" text-anchor="middle" font-size="15.502628542048" fill="var(--text-muted)" font-family="Arial, sans-serif">result</text>
+
+  <!-- Bottom summary bar -->
+  <rect x="40" y="523.867403314917" width="1200" height="96.132596685083" rx="6.201051416819" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="566.593001841621" text-anchor="middle" font-size="20.670171389397" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">The model supplies judgement; the tool supplies the hands to act</text>
+  <text x="640" y="598.637200736648" text-anchor="middle" font-size="16.536137111517" fill="var(--text-muted)" font-family="Arial, sans-serif">The model only asks — your runtime executes and feeds the result back</text>
+</svg>
