@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-size="29.376499509034" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">The roles compose into a pipeline</text>
+
+  <rect x="40" y="286.808510638298" width="186.206896551724" height="111.063829787234" rx="6.779192194392" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133.103448275862" y="336.170212765957" text-anchor="middle" font-size="22.597307314641" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Router</text>
+  <text x="133.103448275862" y="370.723404255319" text-anchor="middle" font-size="16.947980485981" fill="var(--info-text)" font-family="Arial, sans-serif">picks the path</text>
+
+  <rect x="308.965517241379" y="286.808510638298" width="186.206896551724" height="111.063829787234" rx="6.779192194392" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="402.068965517241" y="336.170212765957" text-anchor="middle" font-size="22.597307314641" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Planner</text>
+  <text x="402.068965517241" y="370.723404255319" text-anchor="middle" font-size="16.947980485981" fill="var(--primary-text)" font-family="Arial, sans-serif">splits the goal</text>
+
+  <rect x="577.931034482759" y="138.723404255319" width="186.206896551724" height="98.723404255319" rx="6.779192194392" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="671.034482758621" y="194.255319148936" text-anchor="middle" font-size="21.467441948909" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Worker A</text>
+  <rect x="577.931034482759" y="299.148936170213" width="186.206896551724" height="98.723404255319" rx="6.779192194392" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="671.034482758621" y="354.68085106383" text-anchor="middle" font-size="21.467441948909" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Worker B</text>
+  <rect x="577.931034482759" y="459.574468085106" width="186.206896551724" height="98.723404255319" rx="6.779192194392" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="671.034482758621" y="515.106382978723" text-anchor="middle" font-size="21.467441948909" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Worker C</text>
+
+  <rect x="846.896551724138" y="299.148936170213" width="186.206896551724" height="111.063829787234" rx="6.779192194392" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="348.510638297872" text-anchor="middle" font-size="22.597307314641" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Critic</text>
+  <text x="940" y="383.063829787234" text-anchor="middle" font-size="16.947980485981" fill="var(--warn-text)" font-family="Arial, sans-serif">checks results</text>
+
+  <rect x="1074.48275862069" y="299.148936170213" width="165.51724137931" height="111.063829787234" rx="6.779192194392" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1157.241379310345" y="348.510638297872" text-anchor="middle" font-size="22.597307314641" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Judge</text>
+  <text x="1157.241379310345" y="383.063829787234" text-anchor="middle" font-size="16.947980485981" fill="var(--danger-text)" font-family="Arial, sans-serif">picks final</text>
+
+  <line x1="226.206896551724" y1="342.340425531915" x2="303.793103448276" y2="342.340425531915" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="495.172413793103" y1="323.829787234043" x2="572.758620689655" y2="200.425531914894" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="495.172413793103" y1="342.340425531915" x2="572.758620689655" y2="348.510638297872" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="495.172413793103" y1="360.851063829787" x2="572.758620689655" y2="496.595744680851" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="764.137931034483" y1="194.255319148936" x2="841.724137931035" y2="330" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="764.137931034483" y1="348.510638297872" x2="841.724137931035" y2="348.510638297872" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="764.137931034483" y1="502.765957446809" x2="841.724137931035" y2="379.36170212766" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="1033.103448275862" y1="354.68085106383" x2="1069.310344827586" y2="354.68085106383" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+
+  <path d="M 940 299.148936170213 Q 940 225.106382978723 495.172413793103 225.106382978723 Q 402.068965517241 225.106382978723 402.068965517241 280.63829787234" fill="none" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+  <text x="640" y="620" text-anchor="middle" font-size="18.077845851713" fill="var(--text-faint)" font-family="Arial, sans-serif">the critic can send work back for revision (dashed)</text>
+</svg>
