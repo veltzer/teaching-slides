@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="696.603773584906" y="40" text-anchor="middle" font-size="31.019359601317" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">One buffer holds everything the model sees</text>
+
+  <rect x="40" y="83.364485981308" width="792.452830188679" height="487.85046728972" rx="6.647005628854" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="8,6"/>
+  <text x="436.22641509434" y="115.88785046729" text-anchor="middle" font-size="22.156685429512" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">context window</text>
+
+  <rect x="85.283018867925" y="137.570093457944" width="701.88679245283" height="65.046728971963" rx="6.647005628854" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="436.22641509434" y="177.682242990654" text-anchor="middle" font-size="19.941016886561" fill="var(--primary-text)" font-family="Arial, sans-serif">system prompt — rules and persona</text>
+
+  <rect x="85.283018867925" y="218.878504672897" width="701.88679245283" height="65.046728971963" rx="6.647005628854" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="436.22641509434" y="258.990654205607" text-anchor="middle" font-size="19.941016886561" fill="var(--info-text)" font-family="Arial, sans-serif">tool schemas</text>
+
+  <rect x="85.283018867925" y="300.18691588785" width="701.88679245283" height="119.252336448598" rx="6.647005628854" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="436.22641509434" y="351.140186915888" text-anchor="middle" font-size="19.941016886561" fill="var(--warn-text)" font-family="Arial, sans-serif">conversation history,</text>
+  <text x="436.22641509434" y="381.495327102804" text-anchor="middle" font-size="19.941016886561" fill="var(--warn-text)" font-family="Arial, sans-serif">files read, tool results</text>
+
+  <rect x="85.283018867925" y="435.700934579439" width="701.88679245283" height="65.046728971963" rx="6.647005628854" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="436.22641509434" y="475.81308411215" text-anchor="middle" font-size="19.941016886561" fill="var(--ok-text)" font-family="Arial, sans-serif">your current question</text>
+
+  <rect x="990.943396226415" y="202.616822429907" width="249.056603773585" height="130.093457943925" rx="6.647005628854" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115.471698113208" y="278.504672897196" text-anchor="middle" font-size="35.45069668722" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">LLM</text>
+
+  <rect x="990.943396226415" y="430.280373831776" width="249.056603773585" height="75.88785046729" rx="6.647005628854" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115.471698113208" y="475.81308411215" text-anchor="middle" font-size="19.941016886561" fill="var(--info-text)" font-family="Arial, sans-serif">next reply</text>
+
+  <line x1="838.11320754717" y1="289.345794392523" x2="985.283018867925" y2="273.084112149533" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="1115.471698113208" y1="338.130841121495" x2="1115.471698113208" y2="424.859813084112" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+
+  <text x="696.603773584906" y="620" text-anchor="middle" font-size="19.941016886561" fill="var(--text-muted)" font-family="Arial, sans-serif">If it is not in the buffer, the model does not know it</text>
+</svg>

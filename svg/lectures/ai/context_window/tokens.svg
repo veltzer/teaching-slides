@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-size="31.532296368735" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Text is split into tokens before the model sees it</text>
+
+  <rect x="372.142857142857" y="75.510204081633" width="535.714285714286" height="59.183673469388" rx="6.756920650443" fill="var(--code-bg)"/>
+  <text x="640" y="113.387755102041" text-anchor="middle" font-size="22.52306883481" fill="var(--bg)" font-family="Courier New, monospace">The context window is everything</text>
+
+  <line x1="640" y1="140.612244897959" x2="640" y2="187.959183673469" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="206.071428571429" y="199.795918367347" width="85.714285714286" height="59.183673469388" rx="6.756920650443" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="248.928571428571" y="237.673469387755" text-anchor="middle" font-size="20.270761951329" fill="var(--primary-text)" font-family="Courier New, monospace">The</text>
+  <rect x="313.214285714286" y="199.795918367347" width="160.714285714286" height="59.183673469388" rx="6.756920650443" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="393.571428571429" y="237.673469387755" text-anchor="middle" font-size="20.270761951329" fill="var(--primary-text)" font-family="Courier New, monospace">context</text>
+  <rect x="495.357142857143" y="199.795918367347" width="150" height="59.183673469388" rx="6.756920650443" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="570.357142857143" y="237.673469387755" text-anchor="middle" font-size="20.270761951329" fill="var(--primary-text)" font-family="Courier New, monospace">window</text>
+  <rect x="666.785714285714" y="199.795918367347" width="75" height="59.183673469388" rx="6.756920650443" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="704.285714285714" y="237.673469387755" text-anchor="middle" font-size="20.270761951329" fill="var(--primary-text)" font-family="Courier New, monospace">is</text>
+  <rect x="763.214285714286" y="199.795918367347" width="139.285714285714" height="59.183673469388" rx="6.756920650443" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="832.857142857143" y="237.673469387755" text-anchor="middle" font-size="20.270761951329" fill="var(--warn-text)" font-family="Courier New, monospace">every</text>
+  <rect x="923.928571428571" y="199.795918367347" width="139.285714285714" height="59.183673469388" rx="6.756920650443" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="993.571428571429" y="237.673469387755" text-anchor="middle" font-size="20.270761951329" fill="var(--warn-text)" font-family="Courier New, monospace">thing</text>
+
+  <text x="640" y="306.326530612245" text-anchor="middle" font-size="18.018455067848" fill="var(--text-muted)" font-family="Arial, sans-serif">common words are one token — rarer words split into pieces</text>
+
+  <rect x="40" y="359.591836734694" width="364.285714285714" height="165.714285714286" rx="6.756920650443" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="222.142857142857" y="430.612244897959" text-anchor="middle" font-size="29.279989485254" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">1 token</text>
+  <text x="222.142857142857" y="477.959183673469" text-anchor="middle" font-size="20.270761951329" fill="var(--ok-text)" font-family="Arial, sans-serif">~ 4 characters</text>
+
+  <rect x="457.857142857143" y="359.591836734694" width="364.285714285714" height="165.714285714286" rx="6.756920650443" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="430.612244897959" text-anchor="middle" font-size="29.279989485254" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">1 token</text>
+  <text x="640" y="477.959183673469" text-anchor="middle" font-size="20.270761951329" fill="var(--ok-text)" font-family="Arial, sans-serif">~ 3/4 of a word</text>
+
+  <rect x="875.714285714286" y="359.591836734694" width="364.285714285714" height="165.714285714286" rx="6.756920650443" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1057.857142857143" y="430.612244897959" text-anchor="middle" font-size="29.279989485254" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">100K tokens</text>
+  <text x="1057.857142857143" y="477.959183673469" text-anchor="middle" font-size="20.270761951329" fill="var(--ok-text)" font-family="Arial, sans-serif">~ a short novel</text>
+
+  <text x="640" y="620" text-anchor="middle" font-size="20.270761951329" fill="var(--text-muted)" font-family="Arial, sans-serif">Code, numbers, and non-English text usually cost more tokens per word</text>
+</svg>
