@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- stdio panel -->
+  <rect x="40" y="40" width="579.310344827586" height="529.320388349515" rx="6.47624486665" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="329.655172413793" y="85.04854368932" text-anchor="middle" font-size="25.904979466602" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">stdio</text>
+  <text x="329.655172413793" y="116.582524271845" text-anchor="middle" font-size="17.269986311068" fill="var(--text-muted)" font-family="Arial, sans-serif">local subprocess</text>
+
+  <rect x="91.724137931034" y="163.883495145631" width="206.896551724138" height="90.097087378641" rx="6.47624486665" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="195.172413793103" y="215.68932038835" text-anchor="middle" font-size="19.428734599951" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Host</text>
+  <rect x="360.689655172414" y="163.883495145631" width="206.896551724138" height="90.097087378641" rx="6.47624486665" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="464.137931034483" y="215.68932038835" text-anchor="middle" font-size="19.428734599951" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Server</text>
+
+  <line x1="298.620689655172" y1="197.669902912621" x2="358.620689655172" y2="197.669902912621" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="358.620689655172" y1="225.825242718447" x2="298.620689655172" y2="225.825242718447" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="329.655172413793" y="293.398058252427" text-anchor="middle" font-size="16.190612166626" fill="var(--text-muted)" font-family="Arial, sans-serif">stdin / stdout</text>
+
+  <text x="329.655172413793" y="366.601941747573" text-anchor="middle" font-size="17.269986311068" fill="var(--text)" font-family="Arial, sans-serif">Host launches the server</text>
+  <text x="329.655172413793" y="400.388349514563" text-anchor="middle" font-size="17.269986311068" fill="var(--text)" font-family="Arial, sans-serif">Simple, private, fast</text>
+  <text x="329.655172413793" y="479.223300970874" text-anchor="middle" font-size="17.269986311068" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Best for local tools:</text>
+  <text x="329.655172413793" y="513.009708737864" text-anchor="middle" font-size="17.269986311068" fill="var(--text)" font-family="Arial, sans-serif">filesystem, git, scripts</text>
+
+  <!-- HTTP panel -->
+  <rect x="660.689655172414" y="40" width="579.310344827586" height="529.320388349515" rx="6.47624486665" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950.344827586207" y="85.04854368932" text-anchor="middle" font-size="25.904979466602" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">HTTP</text>
+  <text x="950.344827586207" y="116.582524271845" text-anchor="middle" font-size="17.269986311068" fill="var(--text-muted)" font-family="Arial, sans-serif">remote service</text>
+
+  <rect x="712.413793103448" y="163.883495145631" width="206.896551724138" height="90.097087378641" rx="6.47624486665" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="815.862068965517" y="215.68932038835" text-anchor="middle" font-size="19.428734599951" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Host</text>
+  <rect x="981.379310344828" y="163.883495145631" width="206.896551724138" height="90.097087378641" rx="6.47624486665" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1084.827586206897" y="215.68932038835" text-anchor="middle" font-size="19.428734599951" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Server</text>
+
+  <line x1="919.310344827586" y1="197.669902912621" x2="979.310344827586" y2="197.669902912621" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="979.310344827586" y1="225.825242718447" x2="919.310344827586" y2="225.825242718447" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="950.344827586207" y="293.398058252427" text-anchor="middle" font-size="16.190612166626" fill="var(--text-muted)" font-family="Arial, sans-serif">HTTP + streaming</text>
+
+  <text x="950.344827586207" y="366.601941747573" text-anchor="middle" font-size="17.269986311068" fill="var(--text)" font-family="Arial, sans-serif">Server runs independently</text>
+  <text x="950.344827586207" y="400.388349514563" text-anchor="middle" font-size="17.269986311068" fill="var(--text)" font-family="Arial, sans-serif">Hosted, multi-user</text>
+  <text x="950.344827586207" y="479.223300970874" text-anchor="middle" font-size="17.269986311068" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Best for shared tools:</text>
+  <text x="950.344827586207" y="513.009708737864" text-anchor="middle" font-size="17.269986311068" fill="var(--text)" font-family="Arial, sans-serif">team APIs, SaaS connectors</text>
+
+  <text x="640" y="620" text-anchor="middle" font-size="19.428734599951" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Same JSON-RPC messages — only the pipe differs</text>
+</svg>

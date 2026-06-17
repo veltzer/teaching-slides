@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="634.871794871795" y="40" text-anchor="middle" font-size="24.750583432537" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">A session opens once, then serves many calls</text>
+
+  <rect x="40" y="188.085106382979" width="246.153846153846" height="148.085106382979" rx="6.750159117965" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="163.076923076923" y="255.957446808511" text-anchor="middle" font-size="24.750583432537" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Connect</text>
+  <text x="163.076923076923" y="296.68085106383" text-anchor="middle" font-size="16.875397794911" fill="var(--primary-text)" font-family="Arial, sans-serif">client opens link</text>
+
+  <rect x="357.948717948718" y="188.085106382979" width="246.153846153846" height="148.085106382979" rx="6.750159117965" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="481.025641025641" y="247.31914893617" text-anchor="middle" font-size="24.750583432537" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Initialize</text>
+  <text x="481.025641025641" y="284.340425531915" text-anchor="middle" font-size="16.875397794911" fill="var(--info-text)" font-family="Arial, sans-serif">exchange versions</text>
+  <text x="481.025641025641" y="311.489361702128" text-anchor="middle" font-size="16.875397794911" fill="var(--info-text)" font-family="Arial, sans-serif">+ capabilities</text>
+
+  <rect x="675.897435897436" y="188.085106382979" width="246.153846153846" height="148.085106382979" rx="6.750159117965" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="798.974358974359" y="247.31914893617" text-anchor="middle" font-size="24.750583432537" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Discover</text>
+  <text x="798.974358974359" y="284.340425531915" text-anchor="middle" font-size="15.750371275251" fill="var(--ok-text)" font-family="Arial, sans-serif">tools/list, resources/list,</text>
+  <text x="798.974358974359" y="311.489361702128" text-anchor="middle" font-size="15.750371275251" fill="var(--ok-text)" font-family="Arial, sans-serif">prompts/list</text>
+
+  <rect x="993.846153846154" y="188.085106382979" width="246.153846153846" height="148.085106382979" rx="6.750159117965" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1116.923076923077" y="247.31914893617" text-anchor="middle" font-size="24.750583432537" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Use</text>
+  <text x="1116.923076923077" y="284.340425531915" text-anchor="middle" font-size="16.875397794911" fill="var(--warn-text)" font-family="Arial, sans-serif">many calls over</text>
+  <text x="1116.923076923077" y="311.489361702128" text-anchor="middle" font-size="16.875397794911" fill="var(--warn-text)" font-family="Arial, sans-serif">an open session</text>
+
+  <line x1="286.153846153846" y1="262.127659574468" x2="355.897435897436" y2="262.127659574468" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="604.102564102564" y1="262.127659574468" x2="673.846153846154" y2="262.127659574468" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="922.051282051282" y1="262.127659574468" x2="991.794871794872" y2="262.127659574468" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="471.914893617021" width="1200" height="148.085106382979" rx="6.750159117965" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="634.871794871795" y="531.148936170213" text-anchor="middle" font-size="21.375503873554" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Discovery is dynamic — the host learns the server's capabilities at run time</text>
+  <text x="634.871794871795" y="576.808510638298" text-anchor="middle" font-size="19.125450834233" fill="var(--text-muted)" font-family="Arial, sans-serif">Add a tool to the server and every host sees it on the next session — no host recompile</text>
+</svg>
