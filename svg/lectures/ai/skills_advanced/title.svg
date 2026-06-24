@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- connector lines (drawn first, behind boxes) -->
+  <!-- center box anchor ~ (640, 330) -->
+  <line x1="484.444444444444" y1="264.897959183673" x2="284.444444444444" y2="122.857142857143" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="640" y1="229.387755102041" x2="640" y2="146.530612244898" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="795.555555555556" y1="264.897959183673" x2="995.555555555556" y2="122.857142857143" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="484.444444444444" y1="335.918367346939" x2="284.444444444444" y2="477.959183673469" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="640" y1="371.428571428571" x2="640" y2="454.285714285714" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="795.555555555556" y1="335.918367346939" x2="995.555555555556" y2="477.959183673469" stroke="var(--text-muted)" stroke-width="2"/>
+
+  <!-- top row satellites -->
+  <g>
+    <rect x="40" y="40" width="322.222222222222" height="106.530612244898" rx="16.05545943839" fill="url(#grad-info)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+    <text x="201.111111111111" y="87.34693877551" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Dependencies</text>
+    <text x="201.111111111111" y="118.122448979592" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">&amp; Composition</text>
+  </g>
+  <g>
+    <rect x="478.888888888889" y="40" width="322.222222222222" height="106.530612244898" rx="16.05545943839" fill="url(#grad-ok)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+    <text x="640" y="87.34693877551" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Selection</text>
+    <text x="640" y="118.122448979592" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">at Scale</text>
+  </g>
+  <g>
+    <rect x="917.777777777778" y="40" width="322.222222222222" height="106.530612244898" rx="16.05545943839" fill="url(#grad-warn)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+    <text x="1078.888888888889" y="87.34693877551" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Evaluation</text>
+    <text x="1078.888888888889" y="118.122448979592" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">&amp; Regression</text>
+  </g>
+
+  <!-- center box -->
+  <g>
+    <rect x="451.111111111111" y="229.387755102041" width="377.777777777778" height="142.040816326531" rx="20.642733563644" fill="url(#grad-primary)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+    <text x="640" y="294.489795918367" text-anchor="middle" font-size="34.404555939407" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Skill</text>
+    <text x="640" y="338.285714285714" text-anchor="middle" font-size="34.404555939407" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Library</text>
+  </g>
+
+  <!-- bottom row satellites -->
+  <g>
+    <rect x="40" y="454.285714285714" width="322.222222222222" height="106.530612244898" rx="16.05545943839" fill="url(#grad-danger)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+    <text x="201.111111111111" y="501.632653061225" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">State</text>
+    <text x="201.111111111111" y="532.408163265306" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">&amp; Side Effects</text>
+  </g>
+  <g>
+    <rect x="478.888888888889" y="454.285714285714" width="322.222222222222" height="106.530612244898" rx="16.05545943839" fill="url(#grad-primary)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+    <text x="640" y="501.632653061225" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Security &amp;</text>
+    <text x="640" y="532.408163265306" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Supply Chain</text>
+  </g>
+  <g>
+    <rect x="917.777777777778" y="454.285714285714" width="322.222222222222" height="106.530612244898" rx="16.05545943839" fill="url(#grad-info)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+    <text x="1078.888888888889" y="501.632653061225" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Versioning</text>
+    <text x="1078.888888888889" y="532.408163265306" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">&amp; Governance</text>
+  </g>
+
+  <!-- caption -->
+  <text x="640" y="620" text-anchor="middle" font-size="20.642733563644" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">From one skill to a production library</text>
+</svg>

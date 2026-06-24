@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Left: version bump types -->
+  <text x="280" y="40" text-anchor="middle" font-size="21.852460208239" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Semantic Versioning</text>
+
+  <rect x="40" y="67.358490566038" width="480" height="109.433962264151" rx="13.111476124943" fill="url(#grad-ok)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="280" y="111.132075471698" text-anchor="middle" font-size="21.852460208239" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">PATCH: wording fix</text>
+  <text x="280" y="147.245283018868" text-anchor="middle" font-size="16.389345156179" fill="var(--ok-text)" font-family="Arial, sans-serif">safe, no behavior change for dependents</text>
+
+  <rect x="40" y="193.207547169811" width="480" height="109.433962264151" rx="13.111476124943" fill="url(#grad-info)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="280" y="236.981132075472" text-anchor="middle" font-size="21.852460208239" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">MINOR: new capability</text>
+  <text x="280" y="273.094339622642" text-anchor="middle" font-size="16.389345156179" fill="var(--info-text)" font-family="Arial, sans-serif">additive, backward compatible</text>
+
+  <rect x="40" y="319.056603773585" width="480" height="120.377358490566" rx="13.111476124943" fill="url(#grad-warn)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="280" y="362.830188679245" text-anchor="middle" font-size="21.852460208239" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">MAJOR: trigger / script change</text>
+  <text x="280" y="398.943396226415" text-anchor="middle" font-size="16.389345156179" fill="var(--warn-text)" font-family="Arial, sans-serif">→ dependents must update</text>
+
+  <!-- Right: deprecation lifecycle -->
+  <text x="934.545454545454" y="40" text-anchor="middle" font-size="21.852460208239" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Deprecation Lifecycle</text>
+
+  <rect x="629.090909090909" y="72.830188679245" width="218.181818181818" height="87.547169811321" rx="13.111476124943" fill="url(#grad-ok)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="738.181818181818" y="125.358490566038" text-anchor="middle" font-size="21.852460208239" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Active</text>
+
+  <line x1="738.181818181818" y1="160.377358490566" x2="738.181818181818" y2="193.207547169811" stroke="var(--text-muted)" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="629.090909090909" y="195.396226415094" width="218.181818181818" height="87.547169811321" rx="13.111476124943" fill="url(#grad-warn)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="738.181818181818" y="247.924528301887" text-anchor="middle" font-size="21.852460208239" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Deprecated</text>
+
+  <line x1="847.272727272727" y1="239.169811320755" x2="1021.818181818182" y2="239.169811320755" stroke="var(--text-muted)" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="1021.818181818182" y="195.396226415094" width="218.181818181818" height="87.547169811321" rx="13.111476124943" fill="url(#grad-warn)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1130.909090909091" y="247.924528301887" text-anchor="middle" font-size="21.852460208239" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Warned</text>
+
+  <line x1="1130.909090909091" y1="282.943396226415" x2="1130.909090909091" y2="315.77358490566" stroke="var(--text-muted)" stroke-width="2.5" marker-end="url(#arrow-danger)"/>
+
+  <rect x="1021.818181818182" y="317.962264150943" width="218.181818181818" height="87.547169811321" rx="13.111476124943" fill="url(#grad-danger)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1130.909090909091" y="370.490566037736" text-anchor="middle" font-size="21.852460208239" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Removed</text>
+
+  <!-- Governance note -->
+  <text x="934.545454545454" y="477.735849056604" text-anchor="middle" font-size="16.389345156179" fill="var(--text-muted)" font-family="Arial, sans-serif">owner: accountable for the skill</text>
+  <text x="934.545454545454" y="505.094339622642" text-anchor="middle" font-size="16.389345156179" fill="var(--text-muted)" font-family="Arial, sans-serif">registry: list of approved skills</text>
+
+  <!-- Bottom caption -->
+  <text x="672.727272727273" y="620" text-anchor="middle" font-size="19.667214187415" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Version shared skills; give each an owner and a lifecycle</text>
+</svg>

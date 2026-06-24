@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- ===== PIPELINE ===== -->
+  <!-- Labelled prompts -->
+  <rect x="40" y="96.640625" width="244.067796610169" height="203.90625" rx="12.879822611685" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="162.033898305085" y="153.28125" font-size="23.613008121423" font-weight="bold" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Labelled</text>
+  <text x="162.033898305085" y="185" font-size="23.613008121423" font-weight="bold" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">prompts</text>
+  <text x="162.033898305085" y="230.3125" font-size="16.099778264606" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">inputs + expected</text>
+  <text x="162.033898305085" y="255.234375" font-size="16.099778264606" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">fire? / answer?</text>
+
+  <!-- arrow prompts -> skill -->
+  <line x1="284.067796610169" y1="198.59375" x2="426.440677966102" y2="198.59375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Skill under test -->
+  <rect x="426.440677966102" y="96.640625" width="254.237288135593" height="203.90625" rx="12.879822611685" fill="url(#grad-primary)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="553.559322033898" y="181.6015625" font-size="23.613008121423" font-weight="bold" text-anchor="middle" fill="var(--primary-text)" font-family="Arial, sans-serif">Skill</text>
+  <text x="553.559322033898" y="215.5859375" font-size="23.613008121423" font-weight="bold" text-anchor="middle" fill="var(--primary-text)" font-family="Arial, sans-serif">under test</text>
+
+  <!-- arrow skill -> fired check -->
+  <line x1="680.677966101695" y1="153.28125" x2="833.220338983051" y2="102.3046875" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <!-- arrow skill -> succeed check -->
+  <line x1="680.677966101695" y1="243.90625" x2="833.220338983051" y2="294.8828125" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+
+  <!-- Did it FIRE -->
+  <rect x="843.389830508475" y="40" width="396.610169491525" height="124.609375" rx="12.879822611685" fill="url(#grad-ok)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1041.694915254237" y="96.640625" font-size="25.75964522337" font-weight="bold" text-anchor="middle" fill="var(--ok-text)" font-family="Arial, sans-serif">Did it FIRE?</text>
+  <text x="1041.694915254237" y="132.890625" font-size="17.17309681558" text-anchor="middle" fill="var(--ok-text)" font-family="Arial, sans-serif">trigger / selection</text>
+
+  <!-- Did it SUCCEED -->
+  <rect x="843.389830508475" y="232.578125" width="396.610169491525" height="124.609375" rx="12.879822611685" fill="url(#grad-info)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1041.694915254237" y="289.21875" font-size="25.75964522337" font-weight="bold" text-anchor="middle" fill="var(--info-text)" font-family="Arial, sans-serif">Did it SUCCEED?</text>
+  <text x="1041.694915254237" y="325.46875" font-size="17.17309681558" text-anchor="middle" fill="var(--info-text)" font-family="Arial, sans-serif">correct output</text>
+
+  <!-- axis labels -->
+  <text x="553.559322033898" y="73.984375" font-size="16.099778264606" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">evaluate on two axes</text>
+
+  <!-- ===== CONFUSION MATRIX LEGEND ===== -->
+  <text x="284.067796610169" y="413.828125" font-size="18.246415366554" font-weight="bold" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Outcome matrix</text>
+  <!-- cell 1: fires + right -->
+  <rect x="50.169491525424" y="436.484375" width="233.898305084746" height="79.296875" rx="8.58654840779" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="167.118644067797" y="472.734375" font-size="16.099778264606" font-weight="bold" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">fires + right</text>
+  <text x="167.118644067797" y="497.65625" font-size="12.879822611685" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">the win</text>
+  <!-- cell 2: fires + wrong -->
+  <rect x="294.237288135593" y="436.484375" width="233.898305084746" height="79.296875" rx="8.58654840779" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="411.186440677966" y="472.734375" font-size="16.099778264606" font-weight="bold" text-anchor="middle" fill="var(--danger-accent)" font-family="Arial, sans-serif">fires + wrong</text>
+  <text x="411.186440677966" y="497.65625" font-size="12.879822611685" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">false-fire</text>
+  <!-- cell 3: silent + needed -->
+  <rect x="50.169491525424" y="524.84375" width="233.898305084746" height="79.296875" rx="8.58654840779" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="167.118644067797" y="561.09375" font-size="16.099778264606" font-weight="bold" text-anchor="middle" fill="var(--danger-accent)" font-family="Arial, sans-serif">silent + needed</text>
+  <text x="167.118644067797" y="586.015625" font-size="12.879822611685" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">never-fires</text>
+  <!-- cell 4: silent + not needed -->
+  <rect x="294.237288135593" y="524.84375" width="233.898305084746" height="79.296875" rx="8.58654840779" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="411.186440677966" y="561.09375" font-size="16.099778264606" font-weight="bold" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">silent + not needed</text>
+  <text x="411.186440677966" y="586.015625" font-size="12.879822611685" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">correctly quiet</text>
+
+  <!-- side note linking axes to matrix -->
+  <text x="884.067796610169" y="436.484375" font-size="17.17309681558" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Each axis is a yes/no label</text>
+  <text x="884.067796610169" y="468.203125" font-size="16.099778264606" fill="var(--text-muted)" font-family="Arial, sans-serif">FIRE? sorts rows (fires vs silent)</text>
+  <text x="884.067796610169" y="495.390625" font-size="16.099778264606" fill="var(--text-muted)" font-family="Arial, sans-serif">SUCCEED? sorts columns (right vs wrong)</text>
+  <text x="884.067796610169" y="538.4375" font-size="16.099778264606" fill="var(--text-muted)" font-family="Arial, sans-serif">Score precision/recall on both,</text>
+  <text x="884.067796610169" y="565.625" font-size="16.099778264606" fill="var(--text-muted)" font-family="Arial, sans-serif">not just final answer accuracy.</text>
+
+  <!-- caption -->
+  <text x="640" y="620" font-size="19.319733917528" font-weight="bold" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Two questions, both testable — run them in CI</text>
+</svg>

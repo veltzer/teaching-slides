@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Third-party skill (danger) -->
+  <rect x="40" y="91.555555555556" width="310.344827586207" height="232" rx="16.16580753731" fill="url(#grad-danger)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="195.172413793103" y="156" text-anchor="middle" font-size="25.403411844344" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Third-party Skill</text>
+  <text x="195.172413793103" y="204.977777777778" text-anchor="middle" font-size="17.320508075689" fill="var(--danger-text)" font-family="Arial, sans-serif">untrusted code + text</text>
+  <text x="195.172413793103" y="241.066666666667" text-anchor="middle" font-size="17.320508075689" fill="var(--danger-text)" font-family="Arial, sans-serif">SKILL.md + bundled scripts</text>
+  <text x="195.172413793103" y="277.155555555556" text-anchor="middle" font-size="17.320508075689" fill="var(--danger-text)" font-family="Arial, sans-serif">from someone else</text>
+
+  <!-- install / load arrow into agent -->
+  <line x1="350.344827586207" y1="207.555555555556" x2="495.172413793103" y2="207.555555555556" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="422.758620689655" y="189.511111111111" text-anchor="middle" font-size="16.16580753731" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">install / load</text>
+
+  <!-- Your Agent + Context (primary) -->
+  <rect x="495.172413793103" y="78.666666666667" width="310.344827586207" height="257.777777777778" rx="16.16580753731" fill="url(#grad-primary)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="650.344827586207" y="156" text-anchor="middle" font-size="25.403411844344" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Your Agent</text>
+  <text x="650.344827586207" y="197.244444444444" text-anchor="middle" font-size="25.403411844344" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">+ Context</text>
+  <text x="650.344827586207" y="248.8" text-anchor="middle" font-size="17.320508075689" fill="var(--primary-text)" font-family="Arial, sans-serif">instructions become</text>
+  <text x="650.344827586207" y="279.733333333333" text-anchor="middle" font-size="17.320508075689" fill="var(--primary-text)" font-family="Arial, sans-serif">trusted, acted-upon</text>
+
+  <!-- files / creds / network (neutral) -->
+  <rect x="950.344827586207" y="104.444444444444" width="289.655172413793" height="206.222222222222" rx="16.16580753731" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1095.172413793103" y="171.466666666667" text-anchor="middle" font-size="23.094010767585" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Files / Creds</text>
+  <text x="1095.172413793103" y="210.133333333333" text-anchor="middle" font-size="23.094010767585" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">/ Network</text>
+  <text x="1095.172413793103" y="261.688888888889" text-anchor="middle" font-size="16.16580753731" fill="var(--text-muted)" font-family="Arial, sans-serif">your real resources</text>
+
+  <!-- Threat 1: malicious instructions -> prompt injection (into context) -->
+  <line x1="272.758620689655" y1="91.555555555556" x2="557.241379310345" y2="76.088888888889" stroke="var(--danger-border)" stroke-width="2.5" marker-end="url(#arrow-danger)"/>
+  <text x="422.758620689655" y="40" text-anchor="middle" font-size="17.320508075689" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">malicious instructions</text>
+  <text x="422.758620689655" y="65.777777777778" text-anchor="middle" font-size="16.16580753731" fill="var(--danger-accent)" font-family="Arial, sans-serif">→ prompt injection</text>
+
+  <!-- Threat 2: bundled script -> runs with your privileges (into resources) -->
+  <line x1="288.275862068966" y1="323.555555555556" x2="976.206896551724" y2="330" stroke="var(--danger-border)" stroke-width="2.5" marker-end="url(#arrow-danger)"/>
+  <text x="640" y="388" text-anchor="middle" font-size="17.320508075689" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">bundled script → runs with your privileges</text>
+
+  <!-- Defenses along the bottom -->
+  <text x="640" y="504" text-anchor="middle" font-size="18.475208614068" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Defenses</text>
+  <text x="640" y="542.666666666667" text-anchor="middle" font-size="18.475208614068" fill="var(--text-muted)" font-family="Arial, sans-serif">review · scope · allow-list · sign &amp; pin</text>
+
+  <!-- Bottom caption -->
+  <text x="640" y="620" text-anchor="middle" font-size="20.784609690827" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">An installed skill is a trusted dependency — same threat model as any package</text>
+</svg>

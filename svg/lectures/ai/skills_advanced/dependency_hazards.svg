@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- ===================== Panel 1: Version Skew ===================== -->
+  <rect x="40" y="40" width="386.440677966102" height="60.929292929293" rx="8.732749522746" fill="url(#grad-danger)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="233.220338983051" y="78.666666666667" text-anchor="middle" font-size="24.015061187551" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Version Skew</text>
+
+  <!-- Skill A -->
+  <rect x="80.677966101695" y="168.888888888889" width="172.881355932203" height="72.646464646465" rx="8.732749522746" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="167.118644067797" y="212.242424242424" text-anchor="middle" font-size="18.557092735835" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Skill A</text>
+
+  <!-- arrow A -> Helper -->
+  <line x1="253.559322033898" y1="205.212121212121" x2="355.254237288136" y2="205.212121212121" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Helper B v2 -->
+  <rect x="207.796610169492" y="321.212121212121" width="193.220338983051" height="72.646464646465" rx="8.732749522746" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="304.406779661017" y="357.535353535354" text-anchor="middle" font-size="18.557092735835" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Helper B v2</text>
+  <text x="304.406779661017" y="382.141414141414" text-anchor="middle" font-size="14.190717974462" fill="var(--text-muted)" font-family="Arial, sans-serif">(loaded at runtime)</text>
+
+  <!-- vertical arrow turning down -->
+  <line x1="304.406779661017" y1="241.535353535354" x2="304.406779661017" y2="318.868686868687" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+
+  <!-- break label -->
+  <rect x="334.915254237288" y="241.535353535354" width="87.457627118644" height="39.838383838384" rx="6.549562142059" fill="url(#grad-danger)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="378.64406779661" y="267.313131313131" text-anchor="middle" font-size="16.373905355148" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">break!</text>
+
+  <!-- expects note -->
+  <text x="233.220338983051" y="461.818181818182" text-anchor="middle" font-size="16.373905355148" fill="var(--danger-accent)" font-family="Arial, sans-serif">Skill A expects the v1 signature</text>
+  <text x="233.220338983051" y="487.59595959596" text-anchor="middle" font-size="15.282311664805" fill="var(--text-muted)" font-family="Arial, sans-serif">callsite no longer matches</text>
+
+  <!-- divider -->
+  <line x1="436.610169491525" y1="51.717171717172" x2="436.610169491525" y2="520.40404040404" stroke="var(--border)" stroke-width="1"/>
+
+  <!-- ===================== Panel 2: Diamond ===================== -->
+  <rect x="446.779661016949" y="40" width="386.440677966102" height="60.929292929293" rx="8.732749522746" fill="url(#grad-danger)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="78.666666666667" text-anchor="middle" font-size="24.015061187551" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Diamond</text>
+
+  <!-- A top -->
+  <rect x="599.322033898305" y="157.171717171717" width="81.35593220339" height="63.272727272727" rx="8.732749522746" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="195.838383838384" text-anchor="middle" font-size="19.648686426178" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">A</text>
+
+  <!-- B left -->
+  <rect x="497.627118644068" y="297.777777777778" width="81.35593220339" height="63.272727272727" rx="8.732749522746" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="538.305084745763" y="336.444444444444" text-anchor="middle" font-size="19.648686426178" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">B</text>
+
+  <!-- C right -->
+  <rect x="701.016949152542" y="297.777777777778" width="81.35593220339" height="63.272727272727" rx="8.732749522746" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="741.694915254237" y="336.444444444444" text-anchor="middle" font-size="19.648686426178" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">C</text>
+
+  <!-- D bottom -->
+  <rect x="599.322033898305" y="438.383838383838" width="81.35593220339" height="63.272727272727" rx="8.732749522746" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="477.050505050505" text-anchor="middle" font-size="19.648686426178" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">D</text>
+
+  <!-- A -> B -->
+  <line x1="609.491525423729" y1="220.444444444444" x2="546.440677966102" y2="295.434343434343" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- A -> C -->
+  <line x1="670.508474576271" y1="220.444444444444" x2="733.559322033898" y2="295.434343434343" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- B -> D -->
+  <line x1="546.440677966102" y1="361.050505050505" x2="609.491525423729" y2="436.040404040404" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- C -> D -->
+  <line x1="733.559322033898" y1="361.050505050505" x2="670.508474576271" y2="436.040404040404" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- note -->
+  <text x="640" y="543.838383838384" text-anchor="middle" font-size="16.373905355148" fill="var(--danger-accent)" font-family="Arial, sans-serif">B and C need different versions of D</text>
+
+  <!-- divider -->
+  <line x1="843.389830508475" y1="51.717171717172" x2="843.389830508475" y2="520.40404040404" stroke="var(--border)" stroke-width="1"/>
+
+  <!-- ===================== Panel 3: Circular ===================== -->
+  <rect x="853.559322033898" y="40" width="386.440677966102" height="60.929292929293" rx="8.732749522746" fill="url(#grad-danger)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1046.779661016949" y="78.666666666667" text-anchor="middle" font-size="24.015061187551" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Circular</text>
+
+  <!-- A -->
+  <rect x="909.491525423729" y="227.474747474747" width="101.694915254237" height="70.30303030303" rx="8.732749522746" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="960.338983050847" y="270.828282828283" text-anchor="middle" font-size="19.648686426178" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">A</text>
+
+  <!-- B -->
+  <rect x="1082.372881355932" y="344.646464646465" width="101.694915254237" height="70.30303030303" rx="8.732749522746" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1133.220338983051" y="388" text-anchor="middle" font-size="19.648686426178" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">B</text>
+
+  <!-- A -> B (upper path) -->
+  <line x1="1011.186440677966" y1="256.767676767677" x2="1082.372881355932" y2="356.363636363636" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+  <!-- B -> A (lower path) -->
+  <line x1="1092.542372881356" y1="409.090909090909" x2="985.762711864407" y2="300.121212121212" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+
+  <!-- note -->
+  <text x="1046.779661016949" y="485.252525252525" text-anchor="middle" font-size="16.373905355148" fill="var(--danger-accent)" font-family="Arial, sans-serif">A waits on B, B waits on A</text>
+  <text x="1046.779661016949" y="511.030303030303" text-anchor="middle" font-size="15.282311664805" fill="var(--text-muted)" font-family="Arial, sans-serif">the agent loops forever</text>
+
+  <!-- ===================== Bottom caption ===================== -->
+  <text x="640" y="620" text-anchor="middle" font-size="19.648686426178" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Familiar package-manager failures — without the tooling that catches them</text>
+</svg>

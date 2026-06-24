@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- User request box -->
+  <rect x="40" y="269.70297029703" width="279.310344827586" height="114.851485148515" rx="10.900086292691" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="179.655172413793" y="321.386138613861" text-anchor="middle" font-size="21.800172585383" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">User request</text>
+  <text x="179.655172413793" y="352.39603960396" text-anchor="middle" font-size="15.260120809768" fill="var(--text-muted)" font-family="Arial, sans-serif">"send the customer their bill"</text>
+
+  <!-- arrow into match space -->
+  <line x1="319.310344827586" y1="327.128712871287" x2="400" y2="327.128712871287" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Semantic match space big region -->
+  <rect x="402.068965517241" y="40" width="837.931034482759" height="528.316831683168" rx="21.800172585383" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="821.034482758621" y="83.643564356436" text-anchor="middle" font-size="21.800172585383" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Semantic match space</text>
+
+  <!-- scattered skill boxes -->
+  <!-- invoice (collision) -->
+  <rect x="474.48275862069" y="154.851485148515" width="155.172413793103" height="64.316831683168" rx="8.720069034153" fill="url(#grad-info)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="3"/>
+  <text x="552.068965517241" y="193.90099009901" text-anchor="middle" font-size="18.530146697575" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">invoice</text>
+
+  <!-- quote (collision) -->
+  <rect x="753.793103448276" y="292.673267326733" width="155.172413793103" height="64.316831683168" rx="8.720069034153" fill="url(#grad-warn)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="3"/>
+  <text x="831.379310344828" y="331.722772277228" text-anchor="middle" font-size="18.530146697575" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">quote</text>
+
+  <!-- collision tension line (double-headed) -->
+  <line x1="629.655172413793" y1="200.792079207921" x2="753.793103448276" y2="315.643564356436" stroke="var(--danger-border)" stroke-width="3" stroke-dasharray="6 5" marker-start="url(#arrow-danger-start)" marker-end="url(#arrow-danger)"/>
+
+  <!-- collision label -->
+  <rect x="619.310344827586" y="232.950495049505" width="124.137931034483" height="41.346534653465" rx="8.720069034153" fill="url(#grad-danger)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="681.379310344828" y="259.366336633663" text-anchor="middle" font-size="16.350129439037" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">collision!</text>
+
+  <!-- other skills -->
+  <rect x="960.689655172414" y="120.39603960396" width="155.172413793103" height="59.722772277228" rx="8.720069034153" fill="url(#grad-ok)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1038.275862068966" y="157.148514851485" text-anchor="middle" font-size="17.440138068306" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">refund</text>
+
+  <rect x="464.137931034483" y="315.643564356436" width="155.172413793103" height="59.722772277228" rx="8.720069034153" fill="url(#grad-primary)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="541.724137931035" y="352.39603960396" text-anchor="middle" font-size="17.440138068306" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">receipt</text>
+
+  <rect x="1002.068965517242" y="269.70297029703" width="155.172413793103" height="59.722772277228" rx="8.720069034153" fill="url(#grad-info)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1079.655172413793" y="306.455445544554" text-anchor="middle" font-size="17.440138068306" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">report</text>
+
+  <rect x="691.724137931035" y="441.980198019802" width="155.172413793103" height="59.722772277228" rx="8.720069034153" fill="url(#grad-primary)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="769.310344827586" y="478.732673267327" text-anchor="middle" font-size="17.440138068306" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">export</text>
+
+  <rect x="474.48275862069" y="453.465346534653" width="155.172413793103" height="59.722772277228" rx="8.720069034153" fill="url(#grad-ok)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="552.068965517241" y="490.217821782178" text-anchor="middle" font-size="17.440138068306" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">summary</text>
+
+  <rect x="1002.068965517242" y="441.980198019802" width="155.172413793103" height="59.722772277228" rx="8.720069034153" fill="url(#grad-warn)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1079.655172413793" y="478.732673267327" text-anchor="middle" font-size="17.440138068306" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">statement</text>
+
+  <!-- Bottom caption -->
+  <text x="640" y="620" text-anchor="middle" font-size="19.620155326845" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">More skills → more trigger collisions in the same space</text>
+</svg>
