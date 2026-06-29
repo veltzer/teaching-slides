@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <!-- palette: resources/palette_diagram.yaml -->
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="35.664324694911" font-weight="bold" fill="var(--text)">Edit / Build / Flash / Debug Loop</text>
+  <rect x="40" y="158.974358974359" width="272.727272727273" height="163.589743589744" rx="7.642355291767" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="176.363636363636" y="231.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" font-weight="bold" fill="var(--info-text)">Edit</text>
+  <text x="176.363636363636" y="273.041025641026" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" fill="var(--info-text)">source code</text>
+  <rect x="367.272727272727" y="158.974358974359" width="272.727272727273" height="163.589743589744" rx="7.642355291767" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="503.636363636364" y="231.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" font-weight="bold" fill="var(--primary-text)">Build</text>
+  <text x="503.636363636364" y="273.041025641026" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" fill="var(--primary-text)">gcc + ld</text>
+  <rect x="694.545454545455" y="158.974358974359" width="272.727272727273" height="163.589743589744" rx="7.642355291767" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="830.909090909091" y="231.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" font-weight="bold" fill="var(--primary-text)">Flash</text>
+  <text x="830.909090909091" y="273.041025641026" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" fill="var(--primary-text)">openocd</text>
+  <rect x="1021.818181818182" y="158.974358974359" width="218.181818181818" height="163.589743589744" rx="7.642355291767" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130.909090909091" y="231.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" font-weight="bold" fill="var(--ok-text)">Run</text>
+  <text x="1130.909090909091" y="273.041025641026" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" fill="var(--ok-text)">on board</text>
+  <line x1="312.727272727273" y1="240.769230769231" x2="367.272727272727" y2="240.769230769231" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="240.769230769231" x2="694.545454545455" y2="240.769230769231" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="967.272727272727" y1="240.769230769231" x2="1021.818181818182" y2="240.769230769231" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="367.272727272727" y="456.410256410256" width="272.727272727273" height="163.589743589744" rx="7.642355291767" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="503.636363636364" y="528.835897435897" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" font-weight="bold" fill="var(--warn-text)">Debug</text>
+  <text x="503.636363636364" y="570.476923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" fill="var(--warn-text)">gdb + SWD</text>
+  <rect x="694.545454545455" y="456.410256410256" width="272.727272727273" height="163.589743589744" rx="7.642355291767" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="830.909090909091" y="528.835897435897" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" font-weight="bold" fill="var(--warn-text)">Observe</text>
+  <text x="830.909090909091" y="570.476923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.021969403145" fill="var(--warn-text)">UART console</text>
+  <line x1="830.909090909091" y1="322.564102564103" x2="830.909090909091" y2="456.410256410256" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="538.205128205128" x2="694.545454545455" y2="538.205128205128" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="421.818181818182" y1="538.205128205128" x2="176.363636363636" y2="322.564102564103" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

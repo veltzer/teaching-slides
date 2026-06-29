@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <!-- palette: resources/palette_diagram.yaml -->
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="617.777777777778" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="35.993035097065" font-weight="bold" fill="var(--text)">From Reset To main()</text>
+  <rect x="40" y="158.974358974359" width="355.555555555556" height="148.717948717949" rx="7.712793235085" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="217.777777777778" y="223.964102564103" text-anchor="middle" font-family="Courier New, monospace" font-size="28.28024186198" font-weight="bold" fill="var(--info-text)">Load SP</text>
+  <text x="217.777777777778" y="265.605128205128" text-anchor="middle" font-family="Courier New, monospace" font-size="28.28024186198" fill="var(--info-text)">from vector[0]</text>
+  <rect x="40" y="367.179487179487" width="355.555555555556" height="148.717948717949" rx="7.712793235085" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="217.777777777778" y="432.169230769231" text-anchor="middle" font-family="Courier New, monospace" font-size="28.28024186198" font-weight="bold" fill="var(--primary-text)">Reset_Handler</text>
+  <text x="217.777777777778" y="473.810256410256" text-anchor="middle" font-family="Courier New, monospace" font-size="28.28024186198" fill="var(--primary-text)">runs</text>
+  <rect x="506.666666666667" y="158.974358974359" width="355.555555555556" height="148.717948717949" rx="7.712793235085" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="684.444444444444" y="223.964102564103" text-anchor="middle" font-family="Courier New, monospace" font-size="28.28024186198" font-weight="bold" fill="var(--primary-text)">Copy .data</text>
+  <text x="684.444444444444" y="265.605128205128" text-anchor="middle" font-family="Courier New, monospace" font-size="28.28024186198" fill="var(--primary-text)">flash -&gt; RAM</text>
+  <rect x="506.666666666667" y="367.179487179487" width="355.555555555556" height="148.717948717949" rx="7.712793235085" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="684.444444444444" y="432.169230769231" text-anchor="middle" font-family="Courier New, monospace" font-size="28.28024186198" font-weight="bold" fill="var(--primary-text)">Zero .bss</text>
+  <text x="684.444444444444" y="473.810256410256" text-anchor="middle" font-family="Courier New, monospace" font-size="28.28024186198" fill="var(--primary-text)">in RAM</text>
+  <rect x="973.333333333333" y="263.076923076923" width="266.666666666667" height="148.717948717949" rx="7.712793235085" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1106.666666666667" y="328.066666666667" text-anchor="middle" font-family="Courier New, monospace" font-size="28.28024186198" font-weight="bold" fill="var(--ok-text)">main()</text>
+  <text x="1106.666666666667" y="369.707692307692" text-anchor="middle" font-family="Courier New, monospace" font-size="28.28024186198" fill="var(--ok-text)">your code</text>
+  <line x1="217.777777777778" y1="307.692307692308" x2="217.777777777778" y2="367.179487179487" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="395.555555555556" y1="441.538461538462" x2="506.666666666667" y2="441.538461538462" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="684.444444444444" y1="367.179487179487" x2="684.444444444444" y2="307.692307692308" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="862.222222222222" y1="233.333333333333" x2="973.333333333333" y2="292.820512820513" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="617.777777777778" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.28024186198" font-style="italic" fill="var(--text-muted)">main() must never return</text>
+</svg>

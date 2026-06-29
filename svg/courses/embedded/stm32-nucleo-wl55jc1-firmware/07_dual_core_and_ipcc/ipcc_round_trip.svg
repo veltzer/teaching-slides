@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <!-- palette: resources/palette_diagram.yaml -->
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="33.411583004806" font-weight="bold" fill="var(--text)">Request / Response Round Trip</text>
+  <text x="247.692307692308" y="101.702127659574" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.251958075205" font-weight="bold" fill="var(--primary-border)">CPU1 (M4)</text>
+  <text x="1032.307692307692" y="101.702127659574" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.251958075205" font-weight="bold" fill="var(--warn-border)">CPU2 (M0+)</text>
+  <rect x="40" y="151.063829787234" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="247.692307692308" y="209.063829787234" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.865416432005" font-weight="bold" fill="var(--primary-text)">1. write payload to RAM</text>
+  <rect x="40" y="274.468085106383" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="247.692307692308" y="332.468085106383" text-anchor="middle" font-family="Courier New, monospace" font-size="23.865416432005" font-weight="bold" fill="var(--primary-text)">2. __DMB(), ring channel</text>
+  <rect x="824.615384615385" y="274.468085106383" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1032.307692307692" y="332.468085106383" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.865416432005" font-weight="bold" fill="var(--warn-text)">3. IRQ: read payload</text>
+  <rect x="824.615384615385" y="397.872340425532" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1032.307692307692" y="455.872340425532" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.865416432005" font-weight="bold" fill="var(--warn-text)">4. process command</text>
+  <rect x="824.615384615385" y="521.276595744681" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1032.307692307692" y="579.276595744681" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.865416432005" font-weight="bold" fill="var(--ok-text)">5. clear channel = done</text>
+  <rect x="40" y="521.276595744681" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="247.692307692308" y="579.276595744681" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.865416432005" font-weight="bold" fill="var(--ok-text)">6. completion IRQ</text>
+  <line x1="455.384615384615" y1="323.829787234043" x2="824.615384615385" y2="323.829787234043" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1032.307692307692" y1="373.191489361702" x2="1032.307692307692" y2="397.872340425532" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1032.307692307692" y1="496.595744680851" x2="1032.307692307692" y2="521.276595744681" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="824.615384615385" y1="570.63829787234" x2="455.384615384615" y2="570.63829787234" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

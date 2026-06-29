@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <!-- palette: resources/palette_diagram.yaml -->
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="34.145991242732" font-weight="bold" fill="var(--text)">The Reordering Trap</text>
+  <text x="247.692307692308" y="117.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.828993119289" font-weight="bold" fill="var(--primary-border)">CPU1 writes</text>
+  <text x="1032.307692307692" y="117.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.828993119289" font-weight="bold" fill="var(--warn-border)">CPU2 sees</text>
+  <rect x="40" y="168.888888888889" width="415.384615384615" height="103.111111111111" rx="7.316998123443" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="247.692307692308" y="229.466666666667" text-anchor="middle" font-family="Courier New, monospace" font-size="24.389993744808" font-weight="bold" fill="var(--primary-text)">payload = 0x42</text>
+  <rect x="40" y="310.666666666667" width="415.384615384615" height="103.111111111111" rx="7.316998123443" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="247.692307692308" y="371.244444444444" text-anchor="middle" font-family="Courier New, monospace" font-size="24.389993744808" font-weight="bold" fill="var(--primary-text)">ready = 1</text>
+  <rect x="824.615384615385" y="168.888888888889" width="415.384615384615" height="103.111111111111" rx="7.316998123443" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1032.307692307692" y="229.466666666667" text-anchor="middle" font-family="Courier New, monospace" font-size="24.389993744808" font-weight="bold" fill="var(--danger-text)">ready == 1 (early!)</text>
+  <rect x="824.615384615385" y="310.666666666667" width="415.384615384615" height="103.111111111111" rx="7.316998123443" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1032.307692307692" y="371.244444444444" text-anchor="middle" font-family="Courier New, monospace" font-size="24.389993744808" font-weight="bold" fill="var(--danger-text)">payload == stale</text>
+  <line x1="455.384615384615" y1="220.444444444444" x2="824.615384615385" y2="362.222222222222" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="455.384615384615" y1="362.222222222222" x2="824.615384615385" y2="220.444444444444" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="316.923076923077" y="504" width="646.153846153846" height="116" rx="7.316998123443" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="571.924444444444" text-anchor="middle" font-family="Courier New, monospace" font-size="26.828993119289" font-weight="bold" fill="var(--ok-text)">Fix: __DMB() between data and the flag</text>
+</svg>

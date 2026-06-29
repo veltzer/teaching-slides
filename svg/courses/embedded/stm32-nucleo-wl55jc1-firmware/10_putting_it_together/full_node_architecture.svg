@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <!-- palette: resources/palette_diagram.yaml -->
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.962815297751" font-weight="bold" fill="var(--text)">Sensor-To-Cloud WL55 Node</text>
+  <rect x="40" y="121.075268817204" width="333.333333333333" height="124.731182795699" rx="7.063460420947" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="206.666666666667" y="175.582795698925" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" font-weight="bold" fill="var(--text)">Sensor</text>
+  <text x="206.666666666667" y="210.50752688172" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" fill="var(--text)">I2C / SPI</text>
+  <rect x="40" y="308.172043010753" width="333.333333333333" height="137.204301075269" rx="7.063460420947" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="206.666666666667" y="368.916129032258" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" font-weight="bold" fill="var(--primary-text)">CPU1 (M4)</text>
+  <text x="206.666666666667" y="403.840860215054" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" fill="var(--primary-text)">app + sleep</text>
+  <line x1="206.666666666667" y1="245.806451612903" x2="206.666666666667" y2="308.172043010753" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="473.333333333333" y="308.172043010753" width="333.333333333333" height="137.204301075269" rx="7.063460420947" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="368.916129032258" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" font-weight="bold" fill="var(--info-text)">IPCC +</text>
+  <text x="640" y="403.840860215054" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" fill="var(--info-text)">shared SRAM</text>
+  <line x1="373.333333333333" y1="376.774193548387" x2="473.333333333333" y2="376.774193548387" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="906.666666666667" y="308.172043010753" width="333.333333333333" height="137.204301075269" rx="7.063460420947" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1073.333333333333" y="368.916129032258" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" font-weight="bold" fill="var(--warn-text)">CPU2 (M0+)</text>
+  <text x="1073.333333333333" y="403.840860215054" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" fill="var(--warn-text)">LoRaWAN stack</text>
+  <line x1="806.666666666667" y1="376.774193548387" x2="906.666666666667" y2="376.774193548387" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="906.666666666667" y="495.268817204301" width="333.333333333333" height="124.731182795699" rx="7.063460420947" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1073.333333333333" y="549.776344086021" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" font-weight="bold" fill="var(--ok-text)">Sub-GHz radio</text>
+  <text x="1073.333333333333" y="584.701075268817" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" fill="var(--ok-text)">to gateway</text>
+  <line x1="1073.333333333333" y1="445.376344086022" x2="1073.333333333333" y2="495.268817204301" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="473.333333333333" y="495.268817204301" width="333.333333333333" height="124.731182795699" rx="7.063460420947" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="549.776344086021" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" font-weight="bold" fill="var(--text)">Low power:</text>
+  <text x="640" y="584.701075268817" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.899354876804" fill="var(--text)">both cores sleep</text>
+  <line x1="640" y1="445.376344086022" x2="640" y2="495.268817204301" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>
