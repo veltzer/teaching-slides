@@ -8,6 +8,8 @@ concurrency:
 permissions:
   pages: write
   id-token: write
+  # needed to delete stale pages artifacts on re-run
+  actions: write
 
 jobs:
   build:
@@ -54,5 +56,18 @@ jobs:
       run: rsconstruct build --pset marp.max_jobs=2
     - name: status
       run: rsconstruct status
+    - name: delete stale pages artifact
+      # Artifacts survive re-run attempts, and deploy-pages fails hard when it
+      # finds more than one artifact named "github-pages" in the run. Delete
+      # any leftover from a previous attempt before uploading a fresh one.
+      run: |
+        gh api --paginate "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" \
+          --jq '.artifacts[] | select(.name == "github-pages") | .id' |
+        while read -r artifact_id; do
+          echo "deleting stale artifact $artifact_id"
+          gh api -X DELETE "repos/${{ github.repository }}/actions/artifacts/$artifact_id"
+        done
+      env:
+        GH_TOKEN: ${{ github.token }}
     - uses: actions/upload-pages-artifact@v5
     - uses: actions/deploy-pages@v5
