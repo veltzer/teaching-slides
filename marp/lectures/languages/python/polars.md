@@ -62,6 +62,12 @@ audience:
 
 ---
 
+## Inside the Engine
+
+![engine](svg/lectures/languages/python/polars/engine.svg)
+
+---
+
 ## Getting Started
 
 ```bash
@@ -106,6 +112,12 @@ df.write_csv("out.csv")
 - The engine runs them in parallel and optimizes them as a group
 - The same expression works in every context: select, filter, group by
 - This is the single most important concept in Polars
+
+---
+
+## One Expression, Every Context
+
+![expressions](svg/lectures/languages/python/polars/expressions.svg)
 
 ---
 
@@ -198,6 +210,12 @@ df.with_columns(
 
 ---
 
+## Two Ways to Run a Query
+
+![eager_vs_lazy](svg/lectures/languages/python/polars/eager_vs_lazy.svg)
+
+---
+
 ## The LazyFrame
 
 ```python
@@ -233,6 +251,12 @@ result = (
 - Predicate pushdown: skip whole blocks that cannot match the filter
 - The fastest work is the work that never happens
 - On wide tables this alone can dwarf every other speedup
+
+---
+
+## Skipping Work at the File
+
+![pushdown](svg/lectures/languages/python/polars/pushdown.svg)
 
 ---
 
@@ -359,6 +383,12 @@ result = (
 
 ---
 
+## Batch In, Batch Out
+
+![streaming](svg/lectures/languages/python/polars/streaming.svg)
+
+---
+
 ## Interop: pandas, NumPy, Arrow
 
 ```python
@@ -372,6 +402,12 @@ tbl = df.to_arrow()
 - Arrow makes conversion cheap — often zero-copy
 - Keep the pipeline in Polars; convert at the edges when a
   library demands pandas or NumPy
+
+---
+
+## Polars at the Center
+
+![interop](svg/lectures/languages/python/polars/interop.svg)
 
 ---
 
