@@ -51,7 +51,7 @@ jobs:
         rsconstruct tools install-deps --yes
         rsconstruct tools install --yes
     - name: build
-      run: rsconstruct build --iset marp.max_jobs=2
+      run: rsconstruct build --pset marp.max_jobs=2
     - name: status
       run: rsconstruct status
     - uses: actions/upload-pages-artifact@v5

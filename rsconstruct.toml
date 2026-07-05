@@ -22,9 +22,20 @@ src_extensions = [".md"]
 src_dirs = ["marp"]
 batch = true
 
-[processor.marp]
+# Per-chapter course PDFs are only inputs for ipdfunite merging; they render
+# outside _site so the published site carries only the united course PDFs.
+# Note: paths under out/marp would be remapped to out/marp.courses by the
+# named-instance output_dir rule, hence out/chapters.
+[processor.marp.courses]
 formats = [ "pdf" ]
-output_dir = "_site/marp"
+src_dirs = ["marp/courses"]
+output_dir = "out/chapters/courses"
+
+# Standalone lectures have no united PDF; the site links them individually.
+[processor.marp.lectures]
+formats = [ "pdf" ]
+src_dirs = ["marp/lectures"]
+output_dir = "_site/marp/lectures"
 
 [processor.ruff]
 src_dirs = ["scripts"]
@@ -44,7 +55,7 @@ src_dirs = ["marp"]
 
 [processor.ipdfunite]
 output_dir = "_site/pdfunite"
-source_output_dir = "_site/marp"
+source_output_dir = "out/chapters"
 
 [processor.explicit]
 command = "scripts/build_index.py"
