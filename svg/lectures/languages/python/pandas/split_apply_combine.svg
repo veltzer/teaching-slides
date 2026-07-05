@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="160" y="40" text-anchor="middle" font-size="18.484391449889" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">one frame</text>
+  <text x="570" y="40" text-anchor="middle" font-size="18.484391449889" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">split by key</text>
+  <text x="880" y="40" text-anchor="middle" font-size="18.484391449889" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">apply</text>
+  <text x="1145" y="40" text-anchor="middle" font-size="18.484391449889" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">combine</text>
+
+  <!-- The frame: rows colored by group -->
+  <rect x="40" y="71.636363636364" width="240" height="58" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="107.490909090909" text-anchor="middle" font-size="15.403659541574" fill="var(--primary-text)" font-family="Arial, sans-serif">dev, 98000</text>
+  <rect x="40" y="140.181818181818" width="240" height="58" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="176.036363636364" text-anchor="middle" font-size="15.403659541574" fill="var(--warn-text)" font-family="Arial, sans-serif">ops, 84000</text>
+  <rect x="40" y="208.727272727273" width="240" height="58" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="244.581818181818" text-anchor="middle" font-size="15.403659541574" fill="var(--primary-text)" font-family="Arial, sans-serif">dev, 121000</text>
+  <rect x="40" y="277.272727272727" width="240" height="58" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="313.127272727273" text-anchor="middle" font-size="15.403659541574" fill="var(--warn-text)" font-family="Arial, sans-serif">ops, 79000</text>
+  <rect x="40" y="345.818181818182" width="240" height="58" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="381.672727272727" text-anchor="middle" font-size="15.403659541574" fill="var(--primary-text)" font-family="Arial, sans-serif">dev, 105000</text>
+
+  <line x1="280" y1="156" x2="416" y2="124.363636363636" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="280" y1="314.181818181818" x2="416" y2="388" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+
+  <!-- Groups -->
+  <rect x="420" y="71.636363636364" width="300" height="210.909090909091" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="570" y="113.818181818182" text-anchor="middle" font-size="18.484391449889" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">dev</text>
+  <text x="570" y="156" text-anchor="middle" font-size="15.403659541574" fill="var(--primary-text)" font-family="Arial, sans-serif">98000</text>
+  <text x="570" y="192.909090909091" text-anchor="middle" font-size="15.403659541574" fill="var(--primary-text)" font-family="Arial, sans-serif">121000</text>
+  <text x="570" y="229.818181818182" text-anchor="middle" font-size="15.403659541574" fill="var(--primary-text)" font-family="Arial, sans-serif">105000</text>
+
+  <rect x="420" y="324.727272727273" width="300" height="147.636363636364" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="570" y="366.909090909091" text-anchor="middle" font-size="18.484391449889" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">ops</text>
+  <text x="570" y="406.981818181818" text-anchor="middle" font-size="15.403659541574" fill="var(--warn-text)" font-family="Arial, sans-serif">84000</text>
+  <text x="570" y="442.836363636364" text-anchor="middle" font-size="15.403659541574" fill="var(--warn-text)" font-family="Arial, sans-serif">79000</text>
+
+  <line x1="720" y1="177.090909090909" x2="786" y2="177.090909090909" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="720" y1="398.545454545455" x2="786" y2="398.545454545455" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+
+  <!-- Apply -->
+  <rect x="790" y="140.181818181818" width="180" height="73.818181818182" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="880" y="184.472727272727" text-anchor="middle" font-size="17.457480813784" fill="var(--info-text)" font-family="Arial, sans-serif">mean()</text>
+  <rect x="790" y="361.636363636364" width="180" height="73.818181818182" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="880" y="405.927272727273" text-anchor="middle" font-size="17.457480813784" fill="var(--info-text)" font-family="Arial, sans-serif">mean()</text>
+
+  <line x1="970" y1="177.090909090909" x2="1046" y2="235.090909090909" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+  <line x1="970" y1="398.545454545455" x2="1046" y2="330" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+
+  <!-- Combined result -->
+  <rect x="1050" y="219.272727272727" width="190" height="63.272727272727" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1145" y="258.290909090909" text-anchor="middle" font-size="15.403659541574" fill="var(--ok-text)" font-family="Arial, sans-serif">dev: 108000</text>
+  <rect x="1050" y="282.545454545455" width="190" height="63.272727272727" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1145" y="321.563636363636" text-anchor="middle" font-size="15.403659541574" fill="var(--ok-text)" font-family="Arial, sans-serif">ops: 81500</text>
+
+  <rect x="40" y="525.090909090909" width="1200" height="94.909090909091" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="567.272727272727" text-anchor="middle" font-size="22.592033994309" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">groupby: split into groups, apply a function, combine the results</text>
+  <text x="640" y="601.018181818182" text-anchor="middle" font-size="16.430570177679" fill="var(--ok-text)" font-family="Arial, sans-serif">one row per group comes back, labeled by the group key</text>
+</svg>

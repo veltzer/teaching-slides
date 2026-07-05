@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Header row -->
+  <rect x="40" y="61.88679245283" width="160" height="65.660377358491" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="101.283018867925" text-anchor="middle" font-size="16.737710219628" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">index</text>
+  <rect x="200" y="61.88679245283" width="320" height="65.660377358491" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360" y="101.283018867925" text-anchor="middle" font-size="16.737710219628" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">name</text>
+  <rect x="520" y="61.88679245283" width="320" height="65.660377358491" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680" y="101.283018867925" text-anchor="middle" font-size="16.737710219628" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">dept</text>
+  <rect x="840" y="61.88679245283" width="320" height="65.660377358491" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="101.283018867925" text-anchor="middle" font-size="16.737710219628" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">salary</text>
+
+  <!-- Data rows -->
+  <rect x="40" y="127.547169811321" width="160" height="60.188679245283" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="164.754716981132" text-anchor="middle" font-size="15.691603330901" fill="var(--info-text)" font-family="Arial, sans-serif">0</text>
+  <rect x="200" y="127.547169811321" width="320" height="60.188679245283" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="360" y="164.754716981132" text-anchor="middle" font-size="15.691603330901" fill="var(--text)" font-family="Arial, sans-serif">alice</text>
+  <rect x="520" y="127.547169811321" width="320" height="60.188679245283" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="680" y="164.754716981132" text-anchor="middle" font-size="15.691603330901" fill="var(--text)" font-family="Arial, sans-serif">dev</text>
+  <rect x="840" y="127.547169811321" width="320" height="60.188679245283" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1000" y="164.754716981132" text-anchor="middle" font-size="15.691603330901" fill="var(--text)" font-family="Arial, sans-serif">98000</text>
+
+  <rect x="40" y="187.735849056604" width="160" height="60.188679245283" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="224.943396226415" text-anchor="middle" font-size="15.691603330901" fill="var(--info-text)" font-family="Arial, sans-serif">1</text>
+  <rect x="200" y="187.735849056604" width="320" height="60.188679245283" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="360" y="224.943396226415" text-anchor="middle" font-size="15.691603330901" fill="var(--text)" font-family="Arial, sans-serif">bob</text>
+  <rect x="520" y="187.735849056604" width="320" height="60.188679245283" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="680" y="224.943396226415" text-anchor="middle" font-size="15.691603330901" fill="var(--text)" font-family="Arial, sans-serif">ops</text>
+  <rect x="840" y="187.735849056604" width="320" height="60.188679245283" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1000" y="224.943396226415" text-anchor="middle" font-size="15.691603330901" fill="var(--text)" font-family="Arial, sans-serif">84000</text>
+
+  <rect x="40" y="247.924528301887" width="160" height="60.188679245283" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="285.132075471698" text-anchor="middle" font-size="15.691603330901" fill="var(--info-text)" font-family="Arial, sans-serif">2</text>
+  <rect x="200" y="247.924528301887" width="320" height="60.188679245283" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="360" y="285.132075471698" text-anchor="middle" font-size="15.691603330901" fill="var(--text)" font-family="Arial, sans-serif">carol</text>
+  <rect x="520" y="247.924528301887" width="320" height="60.188679245283" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="680" y="285.132075471698" text-anchor="middle" font-size="15.691603330901" fill="var(--text)" font-family="Arial, sans-serif">dev</text>
+  <rect x="840" y="247.924528301887" width="320" height="60.188679245283" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1000" y="285.132075471698" text-anchor="middle" font-size="15.691603330901" fill="var(--text)" font-family="Arial, sans-serif">121000</text>
+
+  <!-- dtype chips -->
+  <rect x="200" y="346.415094339623" width="320" height="54.716981132075" rx="6.27664133236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360" y="380.339622641509" text-anchor="middle" font-size="15.691603330901" fill="var(--warn-text)" font-family="Arial, sans-serif">dtype: string</text>
+  <rect x="520" y="346.415094339623" width="320" height="54.716981132075" rx="6.27664133236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680" y="380.339622641509" text-anchor="middle" font-size="15.691603330901" fill="var(--warn-text)" font-family="Arial, sans-serif">dtype: category</text>
+  <rect x="840" y="346.415094339623" width="320" height="54.716981132075" rx="6.27664133236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="380.339622641509" text-anchor="middle" font-size="15.691603330901" fill="var(--warn-text)" font-family="Arial, sans-serif">dtype: int64</text>
+
+  <!-- Series callout -->
+  <rect x="834" y="55.320754716981" width="332" height="259.358490566038" rx="6.27664133236" fill="none" stroke="var(--danger-border)" stroke-width="3" stroke-dasharray="10 6"/>
+  <text x="1195" y="40" text-anchor="middle" font-size="17.783817108354" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">a Series</text>
+  <line x1="1180" y1="48.754716981132" x2="1130" y2="72.830188679245" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+
+  <text x="120" y="444.905660377358" text-anchor="middle" font-size="16.737710219628" fill="var(--text-muted)" font-family="Arial, sans-serif">row labels</text>
+
+  <rect x="40" y="521.509433962264" width="1200" height="98.490566037736" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="565.283018867925" text-anchor="middle" font-size="23.014351551988" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">A DataFrame is a set of typed columns sharing one index</text>
+  <text x="640" y="600.301886792453" text-anchor="middle" font-size="16.737710219628" fill="var(--ok-text)" font-family="Arial, sans-serif">each column is a Series; the index labels the rows</text>
+</svg>
