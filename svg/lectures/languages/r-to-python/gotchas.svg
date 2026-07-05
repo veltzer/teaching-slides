@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <text x="40" y="40" font-size="31.236211911489" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Gotchas That Bite R Users</text>
+
+  <rect x="40" y="77.943925233645" width="380" height="254.766355140187" rx="6.247242382298" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="126.728971962617" text-anchor="middle" font-size="23.947762465475" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Copy vs View</text>
+  <text x="230" y="175.514018691589" text-anchor="middle" font-size="19.78293421061" fill="var(--danger-text)" font-family="Arial, sans-serif">pandas may return a view</text>
+  <text x="230" y="256.822429906542" text-anchor="middle" font-size="19.78293421061" fill="var(--danger-text)" font-family="Arial, sans-serif">R copies; Python</text>
+  <text x="230" y="294.766355140187" text-anchor="middle" font-size="19.78293421061" fill="var(--danger-text)" font-family="Arial, sans-serif">shares — use .copy()</text>
+
+  <rect x="450" y="77.943925233645" width="380" height="254.766355140187" rx="6.247242382298" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="126.728971962617" text-anchor="middle" font-size="23.947762465475" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Integer Division</text>
+  <text x="640" y="180.934579439252" text-anchor="middle" font-size="20.824141274326" fill="var(--warn-text)" font-family="Courier New, monospace">7 / 2  ==  3.5</text>
+  <text x="640" y="224.299065420561" text-anchor="middle" font-size="20.824141274326" fill="var(--warn-text)" font-family="Courier New, monospace">7 // 2  ==  3</text>
+  <text x="640" y="273.084112149533" text-anchor="middle" font-size="19.78293421061" fill="var(--warn-text)" font-family="Arial, sans-serif">/ is always float</text>
+  <text x="640" y="308.859813084112" text-anchor="middle" font-size="19.78293421061" fill="var(--warn-text)" font-family="Arial, sans-serif">// floors the result</text>
+
+  <rect x="860" y="77.943925233645" width="380" height="254.766355140187" rx="6.247242382298" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="126.728971962617" text-anchor="middle" font-size="23.947762465475" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Recycling</text>
+  <text x="1050" y="175.514018691589" text-anchor="middle" font-size="19.78293421061" fill="var(--info-text)" font-family="Arial, sans-serif">R silently recycles</text>
+  <text x="1050" y="213.457943925234" text-anchor="middle" font-size="19.78293421061" fill="var(--info-text)" font-family="Arial, sans-serif">short vectors</text>
+  <text x="1050" y="256.822429906542" text-anchor="middle" font-size="19.78293421061" fill="var(--info-text)" font-family="Arial, sans-serif">NumPy broadcasts by</text>
+  <text x="1050" y="294.766355140187" text-anchor="middle" font-size="19.78293421061" fill="var(--info-text)" font-family="Arial, sans-serif">strict shape rules</text>
+
+  <rect x="40" y="365.233644859813" width="380" height="254.766355140187" rx="6.247242382298" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="414.018691588785" text-anchor="middle" font-size="23.947762465475" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Logical Operators</text>
+  <text x="230" y="462.803738317757" text-anchor="middle" font-size="19.78293421061" fill="var(--primary-text)" font-family="Courier New, monospace">and / or : scalars</text>
+  <text x="230" y="500.747663551402" text-anchor="middle" font-size="19.78293421061" fill="var(--primary-text)" font-family="Courier New, monospace">&amp; / | : elementwise</text>
+  <text x="230" y="544.11214953271" text-anchor="middle" font-size="19.78293421061" fill="var(--primary-text)" font-family="Arial, sans-serif">Wrap masks in ( )</text>
+  <text x="230" y="582.056074766355" text-anchor="middle" font-size="19.78293421061" fill="var(--primary-text)" font-family="Arial, sans-serif">on a data frame</text>
+
+  <rect x="450" y="365.233644859813" width="380" height="254.766355140187" rx="6.247242382298" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="414.018691588785" text-anchor="middle" font-size="23.947762465475" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Mutable Defaults</text>
+  <text x="640" y="462.803738317757" text-anchor="middle" font-size="19.78293421061" fill="var(--ok-text)" font-family="Arial, sans-serif">Never write def f(x=[])</text>
+  <text x="640" y="500.747663551402" text-anchor="middle" font-size="19.78293421061" fill="var(--ok-text)" font-family="Arial, sans-serif">The list is shared</text>
+  <text x="640" y="538.691588785047" text-anchor="middle" font-size="19.78293421061" fill="var(--ok-text)" font-family="Arial, sans-serif">across calls — use None</text>
+  <text x="640" y="582.056074766355" text-anchor="middle" font-size="19.78293421061" fill="var(--ok-text)" font-family="Arial, sans-serif">as the sentinel</text>
+
+  <rect x="860" y="365.233644859813" width="380" height="254.766355140187" rx="6.247242382298" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="414.018691588785" text-anchor="middle" font-size="23.947762465475" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Aliasing</text>
+  <text x="1050" y="462.803738317757" text-anchor="middle" font-size="19.78293421061" fill="var(--danger-text)" font-family="Courier New, monospace">b = a</text>
+  <text x="1050" y="500.747663551402" text-anchor="middle" font-size="19.78293421061" fill="var(--danger-text)" font-family="Arial, sans-serif">binds the same object</text>
+  <text x="1050" y="538.691588785047" text-anchor="middle" font-size="19.78293421061" fill="var(--danger-text)" font-family="Arial, sans-serif">Editing b edits a too</text>
+  <text x="1050" y="582.056074766355" text-anchor="middle" font-size="19.78293421061" fill="var(--danger-text)" font-family="Arial, sans-serif">Copy explicitly</text>
+</svg>
