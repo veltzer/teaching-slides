@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--code-bg)"/>
+  <rect x="540" y="250" width="200" height="200" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="340" text-anchor="middle" font-size="44" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">LLM</text>
+  <text x="640" y="385" text-anchor="middle" font-size="18" fill="var(--primary-text)" font-family="Arial, sans-serif">in a loop</text>
+
+  <rect x="120" y="280" width="160" height="60" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="317" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">think</text>
+  <rect x="120" y="370" width="160" height="60" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="407" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">observe</text>
+  <rect x="1000" y="280" width="160" height="60" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="317" text-anchor="middle" font-size="18" fill="var(--info-text)" font-family="Arial, sans-serif">use tools</text>
+  <rect x="1000" y="370" width="160" height="60" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="407" text-anchor="middle" font-size="18" fill="var(--info-text)" font-family="Arial, sans-serif">verify</text>
+
+  <line x1="280" y1="310" x2="535" y2="330" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="280" y1="400" x2="535" y2="365" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="1000" y1="310" x2="745" y2="330" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+  <line x1="1000" y1="400" x2="745" y2="365" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">Writing Agents</text>
+  <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">Designing and Building LLM Agents That Work</text>
+  <text x="640" y="520" text-anchor="middle" font-size="18" fill="var(--text-muted)" font-family="Arial, sans-serif">A model, in a loop, with tools, until the goal is reached</text>
+</svg>

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect x="40" y="60" width="320" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="115" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Planner</text>
+  <text x="200" y="152" text-anchor="middle" font-size="16" fill="var(--primary-text)" font-family="Arial, sans-serif">strong model, thinks once,</text>
+  <text x="200" y="180" text-anchor="middle" font-size="16" fill="var(--primary-text)" font-family="Arial, sans-serif">writes the plan down</text>
+
+  <rect x="450" y="40" width="360" height="220" rx="6" fill="var(--code-bg)"/>
+  <text x="480" y="90" text-anchor="start" font-size="16" fill="var(--surface)" font-family="Courier New, monospace">1. reproduce the bug</text>
+  <text x="480" y="130" text-anchor="start" font-size="16" fill="var(--surface)" font-family="Courier New, monospace">2. read the failing test</text>
+  <text x="480" y="170" text-anchor="start" font-size="16" fill="var(--surface)" font-family="Courier New, monospace">3. patch the fixture</text>
+  <text x="480" y="210" text-anchor="start" font-size="16" fill="var(--surface)" font-family="Courier New, monospace">4. run the whole suite</text>
+
+  <rect x="900" y="60" width="340" height="150" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070" y="115" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Executor</text>
+  <text x="1070" y="152" text-anchor="middle" font-size="16" fill="var(--warn-text)" font-family="Arial, sans-serif">cheap model or plain code,</text>
+  <text x="1070" y="180" text-anchor="middle" font-size="16" fill="var(--warn-text)" font-family="Arial, sans-serif">one step at a time</text>
+
+  <rect x="900" y="350" width="340" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070" y="405" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Verify</text>
+  <text x="1070" y="442" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">check outcomes against the plan</text>
+
+  <line x1="365" y1="135" x2="443" y2="135" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="815" y1="135" x2="893" y2="135" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1070" y1="215" x2="1070" y2="343" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="893" y1="420" x2="660" y2="268" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <text x="740" y="380" text-anchor="start" font-size="16" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">adjust the plan</text>
+
+  <rect x="40" y="520" width="1200" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="562" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Plan in one place, execute in small steps, verify against the plan</text>
+  <text x="640" y="596" text-anchor="middle" font-size="16" fill="var(--text-muted)" font-family="Arial, sans-serif">the plan may change — but changes are explicit, not drift</text>
+</svg>
