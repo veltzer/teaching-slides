@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--code-bg)"/>
+
+  <rect x="150" y="290" width="150" height="60" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="225" y="327" text-anchor="middle" font-size="18" fill="var(--primary-text)" font-family="Arial, sans-serif">step</text>
+  <rect x="360" y="290" width="150" height="60" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="435" y="327" text-anchor="middle" font-size="18" fill="var(--primary-text)" font-family="Arial, sans-serif">step</text>
+  <line x1="300" y1="320" x2="353" y2="320" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <text x="330" y="260" text-anchor="middle" font-size="18" fill="var(--text-faint)" font-family="Arial, sans-serif">fixed graph</text>
+
+  <rect x="570" y="280" width="160" height="80" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650" y="327" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">script</text>
+  <line x1="510" y1="320" x2="563" y2="320" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+
+  <rect x="850" y="190" width="150" height="50" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="925" y="221" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">worker</text>
+  <rect x="850" y="295" width="150" height="50" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="925" y="326" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">worker</text>
+  <rect x="850" y="400" width="150" height="50" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="925" y="431" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">worker</text>
+  <line x1="730" y1="300" x2="843" y2="220" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+  <line x1="730" y1="320" x2="843" y2="320" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+  <line x1="730" y1="340" x2="843" y2="420" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+  <text x="1090" y="326" text-anchor="middle" font-size="18" fill="var(--text-faint)" font-family="Arial, sans-serif">× N at runtime</text>
+
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">Workflows and Dynamic Workflows</text>
+  <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">Fixed Structure Where You Can, Runtime Structure Where You Must</text>
+  <text x="640" y="520" text-anchor="middle" font-size="18" fill="var(--text-muted)" font-family="Arial, sans-serif">The code decides the shape — the model fills the nodes</text>
+</svg>
