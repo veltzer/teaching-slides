@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect x="40" y="40" width="260" height="127.6" rx="6.462197768561" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="170" y="92.2" text-anchor="middle" font-size="20.463626267111" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Base model</text>
+  <text x="170" y="132.8" text-anchor="middle" font-size="14.00142849855" fill="var(--primary-text)" font-family="Arial, sans-serif">open weights from the hub</text>
+
+  <rect x="40" y="341.6" width="260" height="127.6" rx="6.462197768561" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="170" y="393.8" text-anchor="middle" font-size="20.463626267111" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Your dataset</text>
+  <text x="170" y="434.4" text-anchor="middle" font-size="14.00142849855" fill="var(--ok-text)" font-family="Arial, sans-serif">examples of the behavior</text>
+
+  <rect x="470" y="190.8" width="300" height="139.2" rx="6.462197768561" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="620" y="246.48" text-anchor="middle" font-size="19.386593305684" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Trainer — LoRA / PEFT</text>
+  <text x="620" y="289.4" text-anchor="middle" font-size="14.00142849855" fill="var(--warn-text)" font-family="Arial, sans-serif">Axolotl · Unsloth · LLaMA-Factory</text>
+
+  <rect x="940" y="190.8" width="300" height="139.2" rx="6.462197768561" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="246.48" text-anchor="middle" font-size="20.463626267111" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Adapter weights</text>
+  <text x="1090" y="289.4" text-anchor="middle" font-size="14.00142849855" fill="var(--info-text)" font-family="Arial, sans-serif">small · cheap to store and swap</text>
+
+  <rect x="940" y="492.4" width="300" height="127.6" rx="6.462197768561" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1090" y="544.6" text-anchor="middle" font-size="18.309560344257" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Serve + eval</text>
+  <text x="1090" y="579.4" text-anchor="middle" font-size="14.00142849855" fill="var(--text-muted)" font-family="Arial, sans-serif">vLLM · Ollama — eval before rollout</text>
+
+  <line x1="300" y1="103.8" x2="465" y2="231.4" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="300" y1="405.4" x2="465" y2="289.4" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="770" y1="260.4" x2="935" y2="260.4" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+  <line x1="1090" y1="330" x2="1090" y2="486.6" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+  <line x1="935" y1="556.2" x2="170" y2="556.2" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="170" y1="556.2" x2="170" y2="475" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="550" y="533" text-anchor="middle" font-size="15.078461459977" fill="var(--text-muted)" font-family="Arial, sans-serif">failures become new training data</text>
+</svg>

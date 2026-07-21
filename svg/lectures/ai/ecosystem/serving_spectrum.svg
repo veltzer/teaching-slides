@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect x="40" y="40" width="340" height="98.490566037736" rx="6.27664133236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="210" y="81.584905660377" text-anchor="middle" font-size="23.014351551988" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Laptop</text>
+  <text x="210" y="116.603773584906" text-anchor="middle" font-size="14.645496442174" fill="var(--ok-text)" font-family="Arial, sans-serif">one user, CPU or small GPU</text>
+
+  <rect x="40" y="182.264150943396" width="340" height="70.037735849057" rx="6.27664133236" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="210" y="223.849056603774" text-anchor="middle" font-size="16.737710219628" fill="var(--text)" font-family="Arial, sans-serif">Ollama</text>
+  <rect x="40" y="274.188679245283" width="340" height="70.037735849057" rx="6.27664133236" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="210" y="315.77358490566" text-anchor="middle" font-size="16.737710219628" fill="var(--text)" font-family="Arial, sans-serif">LM Studio</text>
+  <rect x="40" y="366.11320754717" width="340" height="70.037735849057" rx="6.27664133236" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="210" y="407.698113207547" text-anchor="middle" font-size="16.737710219628" fill="var(--text)" font-family="Arial, sans-serif">llama.cpp</text>
+
+  <rect x="470" y="40" width="340" height="98.490566037736" rx="6.27664133236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="81.584905660377" text-anchor="middle" font-size="23.014351551988" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Team server</text>
+  <text x="640" y="116.603773584906" text-anchor="middle" font-size="14.645496442174" fill="var(--warn-text)" font-family="Arial, sans-serif">a few users, one GPU</text>
+
+  <rect x="470" y="182.264150943396" width="340" height="70.037735849057" rx="6.27664133236" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="223.849056603774" text-anchor="middle" font-size="16.737710219628" fill="var(--text)" font-family="Arial, sans-serif">llama.cpp server</text>
+  <rect x="470" y="274.188679245283" width="340" height="70.037735849057" rx="6.27664133236" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="315.77358490566" text-anchor="middle" font-size="16.737710219628" fill="var(--text)" font-family="Arial, sans-serif">TGI</text>
+  <rect x="470" y="366.11320754717" width="340" height="70.037735849057" rx="6.27664133236" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="407.698113207547" text-anchor="middle" font-size="16.737710219628" fill="var(--text)" font-family="Arial, sans-serif">one-GPU vLLM</text>
+
+  <rect x="900" y="40" width="340" height="98.490566037736" rx="6.27664133236" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070" y="81.584905660377" text-anchor="middle" font-size="23.014351551988" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Production cluster</text>
+  <text x="1070" y="116.603773584906" text-anchor="middle" font-size="14.645496442174" fill="var(--danger-text)" font-family="Arial, sans-serif">many users, many GPUs</text>
+
+  <rect x="900" y="182.264150943396" width="340" height="70.037735849057" rx="6.27664133236" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1070" y="223.849056603774" text-anchor="middle" font-size="16.737710219628" fill="var(--text)" font-family="Arial, sans-serif">vLLM</text>
+  <rect x="900" y="274.188679245283" width="340" height="70.037735849057" rx="6.27664133236" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1070" y="315.77358490566" text-anchor="middle" font-size="16.737710219628" fill="var(--text)" font-family="Arial, sans-serif">SGLang</text>
+  <rect x="900" y="366.11320754717" width="340" height="70.037735849057" rx="6.27664133236" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1070" y="407.698113207547" text-anchor="middle" font-size="16.737710219628" fill="var(--text)" font-family="Arial, sans-serif">TensorRT-LLM</text>
+
+  <line x1="60" y1="565.283018867925" x2="1220" y2="565.283018867925" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="620" text-anchor="middle" font-size="16.737710219628" fill="var(--text-muted)" font-family="Arial, sans-serif">scale: concurrent users and throughput</text>
+</svg>

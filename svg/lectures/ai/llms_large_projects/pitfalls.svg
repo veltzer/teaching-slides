@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="92.727272727273" text-anchor="middle" font-size="21.565123358204" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">big-bang refactor</text>
+  <text x="320" y="129.636363636364" text-anchor="middle" font-size="16.430570177679" fill="var(--danger-text)" font-family="Arial, sans-serif">thousands of unreviewable lines</text>
+  <rect x="70" y="177.090909090909" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="216.109090909091" text-anchor="middle" font-size="15.403659541574" fill="var(--ok-text)" font-family="Arial, sans-serif">fix: slice by seam, review each step</text>
+
+  <rect x="680" y="40" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="92.727272727273" text-anchor="middle" font-size="21.565123358204" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">hallucinated internals</text>
+  <text x="960" y="129.636363636364" text-anchor="middle" font-size="16.430570177679" fill="var(--danger-text)" font-family="Arial, sans-serif">calls helpers that do not exist here</text>
+  <rect x="710" y="177.090909090909" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="216.109090909091" text-anchor="middle" font-size="15.403659541574" fill="var(--ok-text)" font-family="Arial, sans-serif">fix: ground in real files; the build catches the rest</text>
+
+  <rect x="40" y="314.181818181818" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="366.909090909091" text-anchor="middle" font-size="21.565123358204" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">architecture erosion</text>
+  <text x="320" y="403.818181818182" text-anchor="middle" font-size="16.430570177679" fill="var(--danger-text)" font-family="Arial, sans-serif">each merge is fine, the sum drifts</text>
+  <rect x="70" y="451.272727272727" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="490.290909090909" text-anchor="middle" font-size="15.403659541574" fill="var(--ok-text)" font-family="Arial, sans-serif">fix: encode the rules in instructions and linters</text>
+
+  <rect x="680" y="314.181818181818" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="366.909090909091" text-anchor="middle" font-size="21.565123358204" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">trust creep</text>
+  <text x="960" y="403.818181818182" text-anchor="middle" font-size="16.430570177679" fill="var(--danger-text)" font-family="Arial, sans-serif">week ten: skim and merge</text>
+  <rect x="710" y="451.272727272727" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="490.290909090909" text-anchor="middle" font-size="15.403659541574" fill="var(--ok-text)" font-family="Arial, sans-serif">fix: keep diffs small; review is never optional</text>
+
+  <text x="640" y="620" text-anchor="middle" font-size="18.484391449889" fill="var(--text-muted)" font-family="Arial, sans-serif">All four are failures of method, not failures of the model</text>
+</svg>

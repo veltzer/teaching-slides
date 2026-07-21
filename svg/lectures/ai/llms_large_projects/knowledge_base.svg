@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="380" height="101.754385964912" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="82.736842105263" text-anchor="middle" font-size="20.174675805565" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">instructions file</text>
+  <text x="230" y="116.315789473684" text-anchor="middle" font-size="15.131006854174" fill="var(--primary-text)" font-family="Arial, sans-serif">commands, conventions, boundaries</text>
+
+  <rect x="40" y="182.456140350877" width="380" height="101.754385964912" rx="6.052402741669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="225.19298245614" text-anchor="middle" font-size="20.174675805565" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">ADRs</text>
+  <text x="230" y="258.771929824561" text-anchor="middle" font-size="15.131006854174" fill="var(--info-text)" font-family="Arial, sans-serif">why decisions were made</text>
+
+  <rect x="40" y="324.912280701754" width="380" height="101.754385964912" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="367.649122807018" text-anchor="middle" font-size="20.174675805565" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">code map</text>
+  <text x="230" y="401.228070175439" text-anchor="middle" font-size="15.131006854174" fill="var(--warn-text)" font-family="Arial, sans-serif">what lives where, who owns it</text>
+
+  <rect x="40" y="467.368421052632" width="380" height="101.754385964912" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="510.105263157895" text-anchor="middle" font-size="20.174675805565" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">runbooks</text>
+  <text x="230" y="543.684210526316" text-anchor="middle" font-size="15.131006854174" fill="var(--ok-text)" font-family="Arial, sans-serif">deploys, migrations, releases</text>
+
+  <rect x="760" y="212.982456140351" width="480" height="183.157894736842" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="279.122807017544" text-anchor="middle" font-size="24.209610966678" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">new LLM session</text>
+  <text x="1000" y="319.824561403509" text-anchor="middle" font-size="17.14847443473" fill="var(--primary-text)" font-family="Arial, sans-serif">starts informed, not blind</text>
+  <text x="1000" y="353.40350877193" text-anchor="middle" font-size="17.14847443473" fill="var(--primary-text)" font-family="Arial, sans-serif">same rules, every time</text>
+
+  <line x1="420" y1="90.877192982456" x2="755" y2="253.684210526316" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="420" y1="233.333333333333" x2="755" y2="289.298245614035" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="420" y1="375.789473684211" x2="755" y2="324.912280701754" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="420" y1="518.245614035088" x2="755" y2="360.526315789474" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="640" y="620" text-anchor="middle" font-size="18.157208225008" fill="var(--text-muted)" font-family="Arial, sans-serif">If it must be remembered, it belongs in a file — versioned in the repo</text>
+</svg>
