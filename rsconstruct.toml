@@ -31,12 +31,14 @@ batch = true
 formats = [ "pdf" ]
 src_dirs = ["marp/courses"]
 output_dir = "out/chapters/courses"
+timeout_secs = 120
 
 # Standalone lectures have no united PDF; the site links them individually.
 [processor.marp.lectures]
 formats = [ "pdf" ]
 src_dirs = ["marp/lectures"]
 output_dir = "_site/marp/lectures"
+timeout_secs = 120
 
 [processor.ruff]
 src_dirs = ["scripts"]
