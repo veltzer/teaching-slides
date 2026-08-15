@@ -206,7 +206,7 @@ class SvgFile:
 
     @classmethod
     def load(cls, path: Path,
-             palette_path: Path | None = None) -> "SvgFile":
+             palette_path: Path | None = None) -> SvgFile:
         text = path.read_text(encoding="utf-8")
         parser = etree.XMLParser(remove_blank_text=False)
         root = etree.fromstring(text.encode(), parser)
@@ -340,7 +340,7 @@ def _parse_num(val: str | None) -> float | None:
 
 
 def _fmt_num(v: float) -> str:
-    if v != v:
+    if v != v:  # noqa: PLR0124 - NaN check: NaN is the only value not equal to itself
         return "0"
     out = f"{v:.12f}".rstrip("0").rstrip(".")
     return out if out else "0"

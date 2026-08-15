@@ -40,9 +40,12 @@ import sys
 from pathlib import Path
 
 from lxml import etree
-
 from svg_lib import (
-    SvgFile, load_palette, tag, is_comment, fit_svg,
+    SvgFile,
+    fit_svg,
+    is_comment,
+    load_palette,
+    tag,
 )
 
 _palette_cache: dict | None = None

@@ -40,7 +40,7 @@ import re
 import sys
 from pathlib import Path
 
-from svg_lib import SvgFile, load_palette, PALETTES
+from svg_lib import PALETTES, SvgFile, load_palette
 
 SVG_ROOT = Path("svg")
 
@@ -130,7 +130,7 @@ def _convert_colors(svg: SvgFile, hex_to_name: dict[str, str]) -> None:
             # Skip non-color values
             if val.lower() in ("none", "currentcolor", "inherit", "transparent"):
                 continue
-            if val.startswith("url(") or val.startswith("var("):
+            if val.startswith(("url(", "var(")):
                 continue
             # Named CSS color
             if val.lower() in CSS_TO_PALETTE:
@@ -197,7 +197,7 @@ def main() -> None:
         try:
             if process_file(path, hex_to_name_map, args.apply):
                 changed.append(path)
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 - collect per-file failures, keep processing
             errors.append((path, exc))
 
     action = "Updated" if args.apply else "Would update"

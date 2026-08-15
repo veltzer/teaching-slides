@@ -22,10 +22,10 @@ import json
 import pathlib
 import random
 import socketserver
+import subprocess
 import sys
 import threading
 import urllib.parse
-import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SVG_DIR = ROOT / "svg"

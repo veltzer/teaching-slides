@@ -30,8 +30,8 @@ import argparse
 import os
 import re
 import sys
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Iterator
 
 import yaml
 
@@ -58,10 +58,7 @@ MAX_SLIDE_LINES = 40
 # ── Helpers ──
 
 def _is_local_link(link: str) -> bool:
-    return not (link.startswith('http://') or
-                link.startswith('https://') or
-                link.startswith('ftp://') or
-                link.startswith('mailto:'))
+    return not link.startswith(('http://', 'https://', 'ftp://', 'mailto:'))
 
 
 def _remove_code_blocks(content: str) -> str:
@@ -128,7 +125,7 @@ def _check_urls(path: Path, text: str, text_no_code: str, lines: list[str]) -> l
     for line_no, line in enumerate(text_no_code.splitlines(), 1):
         for m in _IMAGE_RE.finditer(line):
             url = m.group(2)
-            if url.startswith('http://') or url.startswith('https://'):
+            if url.startswith(('http://', 'https://')):
                 errors.append(f"{path}:{line_no}: external image URL: {url}")
     return errors
 
@@ -249,7 +246,7 @@ def _check_images(path: Path, text: str, text_no_code: str, lines: list[str]) ->
     for line_no, line in enumerate(text_no_code.splitlines(), 1):
         for m in _IMAGE_RE.finditer(line):
             target = m.group(2)
-            if target.startswith('http://') or target.startswith('https://'):
+            if target.startswith(('http://', 'https://')):
                 continue
             clean = target.strip()
             if ' ' in clean:
@@ -423,7 +420,7 @@ def _check_title_count(path: Path, text: str, text_no_code: str, lines: list[str
 
     # Strip YAML frontmatter (starts with --- on first line, ends with --- alone)
     body = text_no_code
-    if body.startswith('---\n') or body.startswith('---\r\n'):
+    if body.startswith(('---\n', '---\r\n')):
         m = re.match(r'^---\s*\n.*?\n---\s*\n', body, re.DOTALL)
         if m:
             body = body[m.end():]

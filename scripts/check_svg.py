@@ -33,8 +33,9 @@ import argparse
 import re
 import sys
 import xml.etree.ElementTree as ET
-import yaml
 from pathlib import Path
+
+import yaml
 
 MIN_FILE_SIZE = 500
 MIN_ELEMENTS = 5
@@ -233,7 +234,7 @@ def _svg_type_from_file(svg_path: Path) -> str:
                 local = t.split("}", 1)[1] if "}" in t else t
                 if local == "type" and child.text:
                     return child.text.strip()
-    except Exception:
+    except Exception:  # noqa: BLE001,S110 - best-effort probe, default below
         pass
     return "regular"
 
@@ -331,8 +332,10 @@ def _check_fill(path: Path) -> list[str]:
     fill_pct = 100 * (w * h) / (USABLE_W * USABLE_H)
     if fill_pct < MIN_FILL_PCT:
         return [
-            f"fill ratio {fill_pct:.1f}% < {MIN_FILL_PCT:.0f}% "
-            f"(bbox {w:.0f}x{h:.0f}) — expand content to fill 1200x580"
+            (
+                f"fill ratio {fill_pct:.1f}% < {MIN_FILL_PCT:.0f}% "
+                f"(bbox {w:.0f}x{h:.0f}) — expand content to fill 1200x580"
+            )
         ]
     return []
 
@@ -357,9 +360,11 @@ def _check_fit(path: Path) -> list[str]:
     if (abs(x0 - target_x0) > FIT_TOL or abs(y0 - target_y0) > FIT_TOL
             or abs(w - target_w) > FIT_TOL or abs(h - target_h) > FIT_TOL):
         return [
-            f"content not fitted: bbox ({x0:.1f},{y0:.1f})+{w:.1f}x{h:.1f}"
-            f" != target ({target_x0:.0f},{target_y0:.0f})+{target_w:.0f}x{target_h:.0f}"
-            f" — run scripts/svg_fix.py --fit"
+            (
+                f"content not fitted: bbox ({x0:.1f},{y0:.1f})+{w:.1f}x{h:.1f}"
+                f" != target ({target_x0:.0f},{target_y0:.0f})+{target_w:.0f}x{target_h:.0f}"
+                f" — run scripts/svg_fix.py --fit"
+            )
         ]
     return []
 
@@ -393,7 +398,7 @@ def _shadow_policy() -> tuple[bool, str, set[str]]:
 
 def _check_shadows(tree: ET.ElementTree) -> list[str]:
     """Validate <rect> shadow usage against palette effects.rect-shadow."""
-    enabled, apply_to, family_fills = _shadow_policy()
+    _enabled, apply_to, family_fills = _shadow_policy()
     errors: list[str] = []
     defs_children: set[ET.Element] = set()
     root = tree.getroot()
@@ -875,10 +880,9 @@ def main() -> None:
                     errors.extend(_check_gradients(tree))
 
             # Checks that apply ONLY to title SVGs
-            if is_title:
-                if do_title_text:
-                    errors.extend(_check_title_text(tree, path))
-                    errors.extend(_check_title_bg_rect(tree))
+            if is_title and do_title_text:
+                errors.extend(_check_title_text(tree, path))
+                errors.extend(_check_title_bg_rect(tree))
 
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)
