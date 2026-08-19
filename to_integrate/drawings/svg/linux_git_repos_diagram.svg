@@ -1,0 +1,236 @@
+<svg viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1400" height="1000" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="700" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2d3748">Linux Kernel Git Repository Ecosystem</text>
+  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">Code Flow Between Major Git Trees</text>
+  
+  <!-- Linus Torvalds Mainline (Center) -->
+  <g id="mainline">
+    <rect x="550" y="400" width="300" height="120" fill="#d32f2f" stroke="#b71c1c" stroke-width="3" rx="10"/>
+    <text x="700" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Linus Torvalds</text>
+    <text x="700" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Linux Mainline</text>
+    <text x="700" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git</text>
+    <text x="700" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Stable releases: v6.x, v5.x</text>
+    <text x="700" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Final integration point</text>
+  </g>
+  
+  <!-- Linux-next Integration Tree -->
+  <g id="linux-next">
+    <rect x="550" y="200" width="300" height="100" fill="#388e3c" stroke="#2e7d32" stroke-width="2" rx="8"/>
+    <text x="700" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Stephen Rothwell</text>
+    <text x="700" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white">linux-next</text>
+    <text x="700" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Integration testing tree</text>
+    <text x="700" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Daily builds for testing</text>
+    <text x="700" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">git://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git</text>
+  </g>
+  
+  <!-- Architecture Trees (Top Row) -->
+  
+  <!-- ARM Tree -->
+  <g id="arm-tree">
+    <rect x="50" y="120" width="200" height="90" fill="#1976d2" stroke="#1565c0" stroke-width="2" rx="5"/>
+    <text x="150" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">ARM Architecture</text>
+    <text x="150" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Russell King, Arnd Bergmann</text>
+    <text x="150" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">arm-soc.git</text>
+    <text x="150" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">ARM32/ARM64 support</text>
+    <text x="150" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">SoC, device trees</text>
+  </g>
+  
+  <!-- x86 Tree -->
+  <g id="x86-tree">
+    <rect x="300" y="120" width="200" height="90" fill="#7b1fa2" stroke="#6a1b9a" stroke-width="2" rx="5"/>
+    <text x="400" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">x86 Architecture</text>
+    <text x="400" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Thomas Gleixner</text>
+    <text x="400" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Ingo Molnar</text>
+    <text x="400" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">tip.git</text>
+    <text x="400" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Intel/AMD support</text>
+  </g>
+  
+  <!-- PowerPC Tree -->
+  <g id="powerpc-tree">
+    <rect x="950" y="120" width="200" height="90" fill="#f57c00" stroke="#ef6c00" stroke-width="2" rx="5"/>
+    <text x="1050" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">PowerPC</text>
+    <text x="1050" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Michael Ellerman</text>
+    <text x="1050" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">powerpc.git</text>
+    <text x="1050" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">IBM POWER</text>
+    <text x="1050" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Big endian support</text>
+  </g>
+  
+  <!-- Subsystem Trees (Middle Rows) -->
+  
+  <!-- Networking -->
+  <g id="net-tree">
+    <rect x="50" y="300" width="180" height="90" fill="#00796b" stroke="#00695c" stroke-width="2" rx="5"/>
+    <text x="140" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Networking</text>
+    <text x="140" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">David Miller</text>
+    <text x="140" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Jakub Kicinski</text>
+    <text x="140" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">net.git, net-next.git</text>
+    <text x="140" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">TCP/IP, drivers</text>
+  </g>
+  
+  <!-- DRM/Graphics -->
+  <g id="drm-tree">
+    <rect x="270" y="300" width="180" height="90" fill="#5d4037" stroke="#4e342e" stroke-width="2" rx="5"/>
+    <text x="360" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">DRM/Graphics</text>
+    <text x="360" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Dave Airlie</text>
+    <text x="360" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">drm.git</text>
+    <text x="360" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">GPU drivers</text>
+    <text x="360" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Intel, AMD, NVIDIA</text>
+  </g>
+  
+  <!-- Block Layer -->
+  <g id="block-tree">
+    <rect x="950" y="300" width="180" height="90" fill="#795548" stroke="#6d4c41" stroke-width="2" rx="5"/>
+    <text x="1040" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Block Layer</text>
+    <text x="1040" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Jens Axboe</text>
+    <text x="1040" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">block.git</text>
+    <text x="1040" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Storage I/O</text>
+    <text x="1040" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">NVMe, SCSI</text>
+  </g>
+  
+  <!-- Filesystem Trees -->
+  <g id="fs-tree">
+    <rect x="50" y="600" width="180" height="90" fill="#512da8" stroke="#4527a0" stroke-width="2" rx="5"/>
+    <text x="140" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Filesystems</text>
+    <text x="140" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Al Viro</text>
+    <text x="140" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">vfs.git</text>
+    <text x="140" y="670" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">VFS, ext4, XFS</text>
+    <text x="140" y="685" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">FUSE, Btrfs</text>
+  </g>
+  
+  <!-- Security -->
+  <g id="security-tree">
+    <rect x="270" y="600" width="180" height="90" fill="#c62828" stroke="#b71c1c" stroke-width="2" rx="5"/>
+    <text x="360" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Security</text>
+    <text x="360" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">James Morris</text>
+    <text x="360" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">security.git</text>
+    <text x="360" y="670" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">SELinux, AppArmor</text>
+    <text x="360" y="685" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Crypto, keys</text>
+  </g>
+  
+  <!-- Driver Trees -->
+  <g id="driver-tree">
+    <rect x="950" y="600" width="180" height="90" fill="#2e7d32" stroke="#1b5e20" stroke-width="2" rx="5"/>
+    <text x="1040" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Driver Core</text>
+    <text x="1040" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Greg KH</text>
+    <text x="1040" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">driver-core.git</text>
+    <text x="1040" y="670" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">USB, staging</text>
+    <text x="1040" y="685" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">sysfs, kobject</text>
+  </g>
+  
+  <!-- MM/Memory Management -->
+  <g id="mm-tree">
+    <rect x="1170" y="300" width="180" height="90" fill="#ad1457" stroke="#880e4f" stroke-width="2" rx="5"/>
+    <text x="1260" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Memory Mgmt</text>
+    <text x="1260" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Andrew Morton</text>
+    <text x="1260" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">mm.git</text>
+    <text x="1260" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">VM, slab</text>
+    <text x="1260" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">page allocation</text>
+  </g>
+  
+  <!-- Stable Trees -->
+  <g id="stable-tree">
+    <rect x="550" y="750" width="300" height="100" fill="#558b2f" stroke="#33691e" stroke-width="2" rx="8"/>
+    <text x="700" y="775" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Stable Trees</text>
+    <text x="700" y="795" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Greg Kroah-Hartman</text>
+    <text x="700" y="815" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">linux-stable.git</text>
+    <text x="700" y="830" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">LTS: 6.6.x, 6.1.x, 5.15.x, 5.10.x, 5.4.x</text>
+    <text x="700" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Backported fixes for production</text>
+  </g>
+  
+  <!-- Flow Arrows -->
+  
+  <!-- Architecture trees to linux-next -->
+  <line x1="150" y1="210" x2="600" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="210" x2="650" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="1050" y1="210" x2="800" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Subsystem trees to linux-next -->
+  <line x1="230" y1="345" x2="600" y2="280" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="345" x2="650" y2="280" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="950" y1="345" x2="800" y2="280" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="1170" y1="345" x2="850" y2="280" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Lower subsystem trees to linux-next -->
+  <line x1="230" y1="600" x2="650" y2="300" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="600" x2="700" y2="300" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="950" y1="600" x2="750" y2="300" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- linux-next to mainline -->
+  <line x1="700" y1="300" x2="700" y2="400" stroke="#2e7d32" stroke-width="4" marker-end="url(#arrowhead-green)"/>
+  
+  <!-- mainline to stable -->
+  <line x1="700" y1="520" x2="700" y2="750" stroke="#d32f2f" stroke-width="3" marker-end="url(#arrowhead-red)"/>
+  
+  <!-- Direct subsystem to mainline (for urgent fixes) -->
+  <path d="M 140 390 Q 300 450 550 460" fill="none" stroke="#ff9800" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead-orange)"/>
+  
+  <!-- Labels for flows -->
+  <g font-family="Arial, sans-serif" font-size="10" fill="#495057">
+    <text x="450" y="240" text-anchor="middle">Pull requests</text>
+    <text x="720" y="360" text-anchor="middle" font-weight="bold" fill="#2e7d32">Integration testing</text>
+    <text x="720" y="650" text-anchor="middle" font-weight="bold" fill="#d32f2f">Release</text>
+    <text x="300" y="430" text-anchor="middle" fill="#ff9800">Urgent fixes</text>
+    <text x="720" y="700" text-anchor="middle" font-weight="bold" fill="#558b2f">Stable backports</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 870)">
+    <rect x="0" y="0" width="1100" height="120" fill="#ffffff" stroke="#dee2e6" stroke-width="1" rx="5"/>
+    <text x="10" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#495057">Git Repository Flow Legend:</text>
+    
+    <g font-family="Arial, sans-serif" font-size="11" fill="#495057">
+      <!-- Flow types -->
+      <line x1="20" y1="35" x2="60" y2="35" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+      <text x="70" y="40">Regular pull requests to linux-next</text>
+      
+      <line x1="20" y1="50" x2="60" y2="50" stroke="#2e7d32" stroke-width="4" marker-end="url(#arrowhead-green)"/>
+      <text x="70" y="55">Integration and testing flow</text>
+      
+      <line x1="20" y1="65" x2="60" y2="65" stroke="#d32f2f" stroke-width="3" marker-end="url(#arrowhead-red)"/>
+      <text x="70" y="70">Official release process</text>
+      
+      <line x1="20" y1="80" x2="60" y2="80" stroke="#ff9800" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead-orange)"/>
+      <text x="70" y="85">Direct urgent fixes (bypassing linux-next)</text>
+      
+      <!-- Repository types -->
+      <rect x="400" y="30" width="20" height="15" fill="#d32f2f"/>
+      <text x="430" y="42">Mainline (Linus)</text>
+      
+      <rect x="400" y="50" width="20" height="15" fill="#388e3c"/>
+      <text x="430" y="62">Integration (linux-next)</text>
+      
+      <rect x="400" y="70" width="20" height="15" fill="#1976d2"/>
+      <text x="430" y="82">Architecture trees</text>
+      
+      <rect x="600" y="30" width="20" height="15" fill="#00796b"/>
+      <text x="630" y="42">Subsystem trees</text>
+      
+      <rect x="600" y="50" width="20" height="15" fill="#558b2f"/>
+      <text x="630" y="62">Stable/LTS trees</text>
+      
+      <text x="800" y="40" font-weight="bold">Key Git Hosts:</text>
+      <text x="800" y="55">• git.kernel.org (official)</text>
+      <text x="800" y="70">• github.com/torvalds/linux</text>
+      <text x="800" y="85">• Various maintainer repos</text>
+    </g>
+  </g>
+  
+  <!-- Arrow marker definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d32f2f"/>
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff9800"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,119 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2d3748">Git Star Diagram - Distributed Architecture</text>
+  
+  <!-- Central Remote Repository -->
+  <g id="central-repo">
+    <circle cx="400" cy="300" r="60" fill="#ff6b6b" stroke="#c92a2a" stroke-width="3"/>
+    <text x="400" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Remote</text>
+    <text x="400" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Repository</text>
+    <text x="400" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">(GitHub/GitLab)</text>
+  </g>
+  
+  <!-- Developer repositories positioned in star formation -->
+  <!-- Developer 1 - Top -->
+  <g id="dev1">
+    <line x1="400" y1="240" x2="400" y2="140" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <circle cx="400" cy="100" r="40" fill="#4dabf7" stroke="#1864ab" stroke-width="2"/>
+    <text x="400" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Developer 1</text>
+    <text x="400" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Local Repo</text>
+    <text x="400" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1864ab">Alice</text>
+  </g>
+  
+  <!-- Developer 2 - Top Right -->
+  <g id="dev2">
+    <line x1="442" y1="254" x2="520" y2="176" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <circle cx="550" cy="150" r="40" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+    <text x="550" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Developer 2</text>
+    <text x="550" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Local Repo</text>
+    <text x="550" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2b8a3e">Bob</text>
+  </g>
+  
+  <!-- Developer 3 - Right -->
+  <g id="dev3">
+    <line x1="460" y1="300" x2="560" y2="300" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <circle cx="600" cy="300" r="40" fill="#ffd43b" stroke="#fab005" stroke-width="2"/>
+    <text x="600" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#495057">Developer 3</text>
+    <text x="600" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#495057">Local Repo</text>
+    <text x="600" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fab005">Carol</text>
+  </g>
+  
+  <!-- Developer 4 - Bottom Right -->
+  <g id="dev4">
+    <line x1="442" y1="346" x2="520" y2="424" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <circle cx="550" cy="450" r="40" fill="#da77f2" stroke="#9c36b5" stroke-width="2"/>
+    <text x="550" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Developer 4</text>
+    <text x="550" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Local Repo</text>
+    <text x="550" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9c36b5">Dave</text>
+  </g>
+  
+  <!-- Developer 5 - Bottom -->
+  <g id="dev5">
+    <line x1="400" y1="360" x2="400" y2="460" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <circle cx="400" cy="500" r="40" fill="#ff8787" stroke="#e03131" stroke-width="2"/>
+    <text x="400" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Developer 5</text>
+    <text x="400" y="508" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Local Repo</text>
+    <text x="400" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e03131">Eve</text>
+  </g>
+  
+  <!-- Developer 6 - Bottom Left -->
+  <g id="dev6">
+    <line x1="358" y1="346" x2="280" y2="424" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <circle cx="250" cy="450" r="40" fill="#74c0fc" stroke="#1c7ed6" stroke-width="2"/>
+    <text x="250" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Developer 6</text>
+    <text x="250" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Local Repo</text>
+    <text x="250" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1c7ed6">Frank</text>
+  </g>
+  
+  <!-- Developer 7 - Left -->
+  <g id="dev7">
+    <line x1="340" y1="300" x2="240" y2="300" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <circle cx="200" cy="300" r="40" fill="#91a7ff" stroke="#5c7cfa" stroke-width="2"/>
+    <text x="200" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Developer 7</text>
+    <text x="200" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Local Repo</text>
+    <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#5c7cfa">Grace</text>
+  </g>
+  
+  <!-- Developer 8 - Top Left -->
+  <g id="dev8">
+    <line x1="358" y1="254" x2="280" y2="176" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <circle cx="250" cy="150" r="40" fill="#8ce99a" stroke="#51cf66" stroke-width="2"/>
+    <text x="250" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2d3748">Developer 8</text>
+    <text x="250" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2d3748">Local Repo</text>
+    <text x="250" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#51cf66">Henry</text>
+  </g>
+  
+  <!-- Action labels -->
+  <g id="actions" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">
+    <text x="400" y="190" text-anchor="middle">pull/fetch</text>
+    <text x="475" y="215" text-anchor="middle" transform="rotate(45 475 215)">pull/fetch</text>
+    <text x="530" y="300" text-anchor="middle">pull/fetch</text>
+    <text x="475" y="385" text-anchor="middle" transform="rotate(-45 475 385)">pull/fetch</text>
+    <text x="400" y="410" text-anchor="middle">pull/fetch</text>
+    <text x="325" y="385" text-anchor="middle" transform="rotate(45 325 385)">pull/fetch</text>
+    <text x="270" y="300" text-anchor="middle">pull/fetch</text>
+    <text x="325" y="215" text-anchor="middle" transform="rotate(-45 325 215)">pull/fetch</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 520)">
+    <rect x="0" y="0" width="300" height="70" fill="#ffffff" stroke="#dee2e6" stroke-width="1" rx="5"/>
+    <text x="10" y="15" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#495057">Legend:</text>
+    <circle cx="20" cy="30" r="8" fill="#ff6b6b"/>
+    <text x="35" y="35" font-family="Arial, sans-serif" font-size="10" fill="#495057">Remote Repository (Origin)</text>
+    <circle cx="20" cy="50" r="8" fill="#4dabf7"/>
+    <text x="35" y="55" font-family="Arial, sans-serif" font-size="10" fill="#495057">Developer Local Repositories</text>
+    <line x1="170" y1="30" x2="190" y2="30" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="195" y="35" font-family="Arial, sans-serif" font-size="10" fill="#495057">Git operations (push/pull/fetch)</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#495057"/>
+    </marker>
+  </defs>
+</svg>

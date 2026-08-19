@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float vs Double Representation</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #4a9eff;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+            background: #0a0a0a;
+            border: 2px solid #333;
+            border-radius: 4px;
+        }
+        .info {
+            background: #252525;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border-left: 4px solid #4a9eff;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 2px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-box {
+            background: #252525;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .stat-label {
+            color: #888;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        .stat-value {
+            color: #4a9eff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Representable Numbers: Float (32-bit) vs Double (64-bit)</h1>
+        <div class="subtitle">IEEE 754 Floating Point Distribution</div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #ff4444;"></div>
+                <span>Float (32-bit) only</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #ffaa44;"></div>
+                <span>Both Float and Double</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #44ff44;"></div>
+                <span>Double (64-bit) only</span>
+            </div>
+        </div>
+
+        <canvas id="canvas" width="1100" height="600"></canvas>
+
+        <div class="info">
+            <strong>Key Insight:</strong> Representable numbers are NOT uniformly distributed! They're densest near zero and become increasingly sparse as you move away. Each tick mark represents a representable number. Notice how doubles fill in the gaps between floats and extend much further in range.
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">Float (32-bit) Precision</div>
+                <div class="stat-value">~7 decimal digits</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Double (64-bit) Precision</div>
+                <div class="stat-value">~16 decimal digits</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Float Max Value</div>
+                <div class="stat-value">~3.4 × 10³⁸</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Double Max Value</div>
+                <div class="stat-value">~1.8 × 10³⁰⁸</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const w = canvas.width;
+        const h = canvas.height;
+
+        // Colors
+        const floatOnlyColor = '#ff4444';
+        const bothColor = '#ffaa44';
+        const doubleOnlyColor = '#44ff44';
+        const axisColor = '#666';
+        const textColor = '#e0e0e0';
+
+        // Generate representable numbers for visualization
+        function generateFloatNumbers(minExp, maxExp, mantissaSamples) {
+            const numbers = [0];
+            for (let exp = minExp; exp <= maxExp; exp++) {
+                const base = Math.pow(2, exp);
+                for (let i = 0; i < mantissaSamples; i++) {
+                    const mantissa = 1 + i / mantissaSamples;
+                    numbers.push(base * mantissa);
+                    numbers.push(-base * mantissa);
+                }
+            }
+            return numbers.sort((a, b) => a - b);
+        }
+
+        // Draw multiple scales showing different regions
+        function drawScale(y, minVal, maxVal, label, floatExp, doubleExp) {
+            const scaleWidth = w - 100;
+            const startX = 50;
+            
+            // Draw axis
+            ctx.strokeStyle = axisColor;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(startX, y);
+            ctx.lineTo(startX + scaleWidth, y);
+            ctx.stroke();
+
+            // Draw label
+            ctx.fillStyle = textColor;
+            ctx.font = '14px Courier New';
+            ctx.textAlign = 'right';
+            ctx.fillText(label, startX - 10, y + 5);
+
+            // Draw min/max values
+            ctx.font = '11px Courier New';
+            ctx.textAlign = 'center';
+            ctx.fillText(minVal.toExponential(1), startX, y + 20);
+            ctx.fillText(maxVal.toExponential(1), startX + scaleWidth, y + 20);
+
+            // Generate and draw representable numbers
+            const floatNums = generateFloatNumbers(floatExp[0], floatExp[1], 8);
+            const doubleNums = generateFloatNumbers(doubleExp[0], doubleExp[1], 32);
+
+            // Draw double-only numbers (green)
+            ctx.strokeStyle = doubleOnlyColor;
+            ctx.lineWidth = 1;
+            for (const num of doubleNums) {
+                if (num >= minVal && num <= maxVal && !floatNums.includes(num)) {
+                    const x = startX + ((num - minVal) / (maxVal - minVal)) * scaleWidth;
+                    ctx.beginPath();
+                    ctx.moveTo(x, y - 8);
+                    ctx.lineTo(x, y + 8);
+                    ctx.stroke();
+                }
+            }
+
+            // Draw float numbers (red or orange depending if double also has it)
+            for (const num of floatNums) {
+                if (num >= minVal && num <= maxVal) {
+                    const x = startX + ((num - minVal) / (maxVal - minVal)) * scaleWidth;
+                    const isInDouble = doubleNums.includes(num);
+                    ctx.strokeStyle = isInDouble ? bothColor : floatOnlyColor;
+                    ctx.lineWidth = isInDouble ? 2 : 1;
+                    ctx.beginPath();
+                    ctx.moveTo(x, y - 10);
+                    ctx.lineTo(x, y + 10);
+                    ctx.stroke();
+                }
+            }
+
+            // Draw zero marker
+            if (minVal <= 0 && maxVal >= 0) {
+                const zeroX = startX + ((0 - minVal) / (maxVal - minVal)) * scaleWidth;
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(zeroX, y - 15);
+                ctx.lineTo(zeroX, y + 15);
+                ctx.stroke();
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '10px Courier New';
+                ctx.textAlign = 'center';
+                ctx.fillText('0', zeroX, y - 20);
+            }
+        }
+
+        // Draw multiple scales at different magnitudes
+        ctx.fillStyle = textColor;
+        ctx.font = '12px Courier New';
+        ctx.textAlign = 'left';
+        
+        // Scale 1: Very close to zero (shows density near zero)
+        drawScale(100, -0.001, 0.001, 'Near Zero:', [-12, -8], [-12, -8]);
+        
+        // Scale 2: Small numbers
+        drawScale(200, -1, 1, 'Small:', [-2, 2], [-2, 2]);
+        
+        // Scale 3: Medium numbers
+        drawScale(300, -100, 100, 'Medium:', [4, 8], [4, 8]);
+        
+        // Scale 4: Large numbers (float limit visible)
+        drawScale(400, -1e10, 1e10, 'Large:', [28, 34], [28, 34]);
+        
+        // Scale 5: Very large (beyond float range)
+        drawScale(500, -1e100, 1e100, 'Huge:', [330, 336], [330, 336]);
+
+        // Add note about sparsity
+        ctx.fillStyle = '#888';
+        ctx.font = '11px Courier New';
+        ctx.textAlign = 'center';
+        ctx.fillText('← Numbers are densest here', w/2 - 200, 130);
+        ctx.fillText('Numbers become sparser →', w/2 + 200, 530);
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+    <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="4" height="4">
+      <path d="m0,4 l4,-4 M-1,1 l2,-2 M3,5 l2,-2" stroke="#999" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">
+    RCU (Read-Copy-Update) Mechanism
+  </text>
+  
+  <!-- Phase 1: Initial State -->
+  <g id="phase1">
+    <text x="50" y="80" font-size="16" font-weight="bold" fill="#2563eb">Phase 1: Initial State</text>
+    
+    <!-- Data structure -->
+    <rect x="50" y="100" width="80" height="40" fill="#e0f2fe" stroke="#0891b2" stroke-width="2" rx="5"/>
+    <text x="90" y="125" text-anchor="middle" font-size="12" fill="#0891b2">Data v1</text>
+    
+    <!-- Readers -->
+    <circle cx="200" cy="120" r="15" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <text x="200" y="125" text-anchor="middle" font-size="10" fill="white">R1</text>
+    
+    <circle cx="240" cy="120" r="15" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <text x="240" y="125" text-anchor="middle" font-size="10" fill="white">R2</text>
+    
+    <circle cx="280" cy="120" r="15" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <text x="280" y="125" text-anchor="middle" font-size="10" fill="white">R3</text>
+    
+    <!-- Reader arrows -->
+    <line x1="130" y1="120" x2="185" y2="120" stroke="#16a34a" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="130" y1="120" x2="225" y2="120" stroke="#16a34a" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="130" y1="120" x2="265" y2="120" stroke="#16a34a" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <text x="320" y="125" font-size="12" fill="#16a34a">Multiple readers access data</text>
+  </g>
+  
+  <!-- Phase 2: Copy -->
+  <g id="phase2">
+    <text x="50" y="200" font-size="16" font-weight="bold" fill="#dc2626">Phase 2: Copy</text>
+    
+    <!-- Original data -->
+    <rect x="50" y="220" width="80" height="40" fill="#e0f2fe" stroke="#0891b2" stroke-width="2" rx="5"/>
+    <text x="90" y="245" text-anchor="middle" font-size="12" fill="#0891b2">Data v1</text>
+    
+    <!-- New data -->
+    <rect x="180" y="220" width="80" height="40" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="5"/>
+    <text x="220" y="245" text-anchor="middle" font-size="12" fill="#f59e0b">Data v2</text>
+    
+    <!-- Copy arrow -->
+    <line x1="130" y1="240" x2="180" y2="240" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowhead)"/>
+    <text x="155" y="230" text-anchor="middle" font-size="10" fill="#dc2626">copy</text>
+    
+    <!-- Writer -->
+    <rect x="300" y="225" width="40" height="30" fill="#dc2626" stroke="#b91c1c" stroke-width="2" rx="3"/>
+    <text x="320" y="245" text-anchor="middle" font-size="12" fill="white">W</text>
+    
+    <!-- Writer arrow -->
+    <line x1="300" y1="240" x2="260" y2="240" stroke="#dc2626" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Readers still on v1 -->
+    <circle cx="200" cy="290" r="15" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <text x="200" y="295" text-anchor="middle" font-size="10" fill="white">R1</text>
+    
+    <circle cx="240" cy="290" r="15" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <text x="240" y="295" text-anchor="middle" font-size="10" fill="white">R2</text>
+    
+    <line x1="130" y1="240" x2="185" y2="285" stroke="#16a34a" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="130" y1="240" x2="225" y2="285" stroke="#16a34a" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <text x="380" y="245" font-size="12" fill="#dc2626">Writer creates modified copy</text>
+  </g>
+  
+  <!-- Phase 3: Update -->
+  <g id="phase3">
+    <text x="50" y="350" font-size="16" font-weight="bold" fill="#7c3aed">Phase 3: Update Pointer</text>
+    
+    <!-- Old data (grayed) -->
+    <rect x="50" y="370" width="80" height="40" fill="url(#diagonalHatch)" stroke="#6b7280" stroke-width="2" rx="5"/>
+    <text x="90" y="395" text-anchor="middle" font-size="12" fill="#6b7280">Data v1</text>
+    
+    <!-- New data (active) -->
+    <rect x="180" y="370" width="80" height="40" fill="#a7f3d0" stroke="#059669" stroke-width="3" rx="5"/>
+    <text x="220" y="395" text-anchor="middle" font-size="12" fill="#059669">Data v2</text>
+    
+    <!-- Pointer update -->
+    <line x1="30" y1="390" x2="180" y2="390" stroke="#7c3aed" stroke-width="4" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+    <text x="105" y="380" text-anchor="middle" font-size="10" fill="#7c3aed">atomic pointer update</text>
+    
+    <!-- New readers go to v2 -->
+    <circle cx="320" cy="390" r="15" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <text x="320" y="395" text-anchor="middle" font-size="10" fill="white">R4</text>
+    
+    <line x1="260" y1="390" x2="305" y2="390" stroke="#16a34a" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Old readers still on v1 -->
+    <circle cx="200" cy="440" r="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+    <text x="200" y="445" text-anchor="middle" font-size="10" fill="white">R1</text>
+    
+    <line x1="90" y1="410" x2="185" y2="435" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)" stroke-dasharray="3,3"/>
+    
+    <text x="380" y="390" font-size="12" fill="#7c3aed">New readers see v2</text>
+    <text x="380" y="410" font-size="12" fill="#f59e0b">Old readers finish with v1</text>
+  </g>
+  
+  <!-- Phase 4: Grace Period -->
+  <g id="phase4">
+    <text x="50" y="500" font-size="16" font-weight="bold" fill="#059669">Phase 4: Grace Period & Cleanup</text>
+    
+    <!-- Only new data -->
+    <rect x="180" y="520" width="80" height="40" fill="#a7f3d0" stroke="#059669" stroke-width="3" rx="5"/>
+    <text x="220" y="545" text-anchor="middle" font-size="12" fill="#059669">Data v2</text>
+    
+    <!-- All readers on v2 -->
+    <circle cx="320" cy="540" r="15" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <text x="320" y="545" text-anchor="middle" font-size="10" fill="white">R1</text>
+    
+    <circle cx="360" cy="540" r="15" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <text x="360" y="545" text-anchor="middle" font-size="10" fill="white">R4</text>
+    
+    <line x1="260" y1="540" x2="305" y2="540" stroke="#16a34a" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="260" y1="540" x2="345" y2="540" stroke="#16a34a" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Garbage collection -->
+    <rect x="50" y="530" width="60" height="20" fill="#ef4444" stroke="#dc2626" stroke-width="2" rx="3"/>
+    <text x="80" y="544" text-anchor="middle" font-size="10" fill="white">freed</text>
+    
+    <text x="420" y="540" font-size="12" fill="#059669">Old data safely freed</text>
+    <text x="420" y="560" font-size="12" fill="#6b7280">after grace period</text>
+  </g>
+  
+  <!-- Key principles -->
+  <g id="principles">
+    <rect x="450" y="80" width="320" height="180" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+    <text x="610" y="105" text-anchor="middle" font-size="16" font-weight="bold" fill="#334155">RCU Key Principles</text>
+    
+    <text x="470" y="130" font-size="13" fill="#0891b2">• Readers never block or use locks</text>
+    <text x="470" y="150" font-size="13" fill="#dc2626">• Writers copy data before modifying</text>
+    <text x="470" y="170" font-size="13" fill="#7c3aed">• Atomic pointer update switches versions</text>
+    <text x="470" y="190" font-size="13" fill="#059669">• Grace period ensures safe cleanup</text>
+    <text x="470" y="210" font-size="13" fill="#6b7280">• Multiple readers, single writer model</text>
+    <text x="470" y="230" font-size="13" fill="#f59e0b">• Memory ordering guarantees consistency</text>
+    <text x="470" y="250" font-size="13" fill="#8b5cf6">• No reader starvation possible</text>
+  </g>
+</svg>

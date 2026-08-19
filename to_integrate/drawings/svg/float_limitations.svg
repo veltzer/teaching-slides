@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 750">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="750" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#f8fafc" font-family="monospace" font-size="22" font-weight="bold">Limitations of float &amp; double</text>
+  
+  <!-- Section 1: The Classic Problem -->
+  <rect x="20" y="55" width="860" height="100" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="40" y="80" fill="#f97316" font-family="monospace" font-size="14" font-weight="bold">1. The Classic: 0.1 + 0.2 ≠ 0.3</text>
+  
+  <text x="40" y="110" fill="#94a3b8" font-family="monospace" font-size="12">printf("%.17f", 0.1 + 0.2);</text>
+  <text x="340" y="110" fill="#22c55e" font-family="monospace" font-size="12">→ 0.30000000000000004</text>
+  
+  <text x="40" y="135" fill="#94a3b8" font-family="monospace" font-size="12">0.1 in binary:</text>
+  <text x="180" y="135" fill="#f87171" font-family="monospace" font-size="12">0.0001100110011001100110011... (repeating forever)</text>
+  
+  <text x="580" y="135" fill="#64748b" font-family="monospace" font-size="11">Just like 1/3 = 0.333... in decimal</text>
+  
+  <!-- Section 2: IEEE 754 Layout -->
+  <rect x="20" y="165" width="860" height="130" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="40" y="190" fill="#f97316" font-family="monospace" font-size="14" font-weight="bold">2. IEEE 754 Bit Layout (finite bits = finite precision)</text>
+  
+  <!-- Float 32-bit -->
+  <text x="40" y="215" fill="#94a3b8" font-family="monospace" font-size="12">float (32 bits):</text>
+  <rect x="180" y="200" width="30" height="25" fill="#ef4444" stroke="#fca5a5"/>
+  <text x="195" y="217" text-anchor="middle" fill="#fff" font-family="monospace" font-size="10">1</text>
+  <rect x="210" y="200" width="80" height="25" fill="#3b82f6" stroke="#93c5fd"/>
+  <text x="250" y="217" text-anchor="middle" fill="#fff" font-family="monospace" font-size="10">8 bits</text>
+  <rect x="290" y="200" width="230" height="25" fill="#22c55e" stroke="#86efac"/>
+  <text x="405" y="217" text-anchor="middle" fill="#fff" font-family="monospace" font-size="10">23 bits mantissa</text>
+  <text x="540" y="217" fill="#64748b" font-family="monospace" font-size="11">≈ 7 decimal digits precision</text>
+  
+  <!-- Double 64-bit -->
+  <text x="40" y="255" fill="#94a3b8" font-family="monospace" font-size="12">double (64 bits):</text>
+  <rect x="180" y="240" width="30" height="25" fill="#ef4444" stroke="#fca5a5"/>
+  <text x="195" y="257" text-anchor="middle" fill="#fff" font-family="monospace" font-size="10">1</text>
+  <rect x="210" y="240" width="110" height="25" fill="#3b82f6" stroke="#93c5fd"/>
+  <text x="265" y="257" text-anchor="middle" fill="#fff" font-family="monospace" font-size="10">11 bits</text>
+  <rect x="320" y="240" width="320" height="25" fill="#22c55e" stroke="#86efac"/>
+  <text x="480" y="257" text-anchor="middle" fill="#fff" font-family="monospace" font-size="10">52 bits mantissa</text>
+  <text x="660" y="257" fill="#64748b" font-family="monospace" font-size="11">≈ 15-16 decimal digits</text>
+  
+  <!-- Legend -->
+  <rect x="720" y="200" width="12" height="12" fill="#ef4444"/>
+  <text x="738" y="210" fill="#94a3b8" font-family="monospace" font-size="10">sign</text>
+  <rect x="720" y="218" width="12" height="12" fill="#3b82f6"/>
+  <text x="738" y="228" fill="#94a3b8" font-family="monospace" font-size="10">exponent</text>
+  <rect x="720" y="236" width="12" height="12" fill="#22c55e"/>
+  <text x="738" y="246" fill="#94a3b8" font-family="monospace" font-size="10">mantissa</text>
+  
+  <!-- Section 3: Density Problem - Number Line -->
+  <rect x="20" y="305" width="860" height="140" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="40" y="330" fill="#f97316" font-family="monospace" font-size="14" font-weight="bold">3. Representable Numbers Are NOT Evenly Spaced</text>
+  
+  <!-- Number line near 0 -->
+  <line x1="60" y1="370" x2="400" y2="370" stroke="#64748b" stroke-width="2"/>
+  <text x="60" y="390" fill="#94a3b8" font-family="monospace" font-size="10">0</text>
+  <text x="400" y="390" fill="#94a3b8" font-family="monospace" font-size="10">1</text>
+  
+  <!-- Dense ticks near 0 -->
+  <line x1="70" y1="365" x2="70" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="80" y1="365" x2="80" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="90" y1="365" x2="90" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="100" y1="365" x2="100" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="110" y1="365" x2="110" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="120" y1="365" x2="120" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="130" y1="365" x2="130" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="145" y1="365" x2="145" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="165" y1="365" x2="165" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="190" y1="365" x2="190" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="230" y1="365" x2="230" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="290" y1="365" x2="290" y2="375" stroke="#22c55e" stroke-width="2"/>
+  <line x1="400" y1="365" x2="400" y2="375" stroke="#22c55e" stroke-width="2"/>
+  
+  <text x="230" y="355" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">dense near 0</text>
+  
+  <!-- Number line at large values -->
+  <line x1="480" y1="370" x2="850" y2="370" stroke="#64748b" stroke-width="2"/>
+  <text x="480" y="390" fill="#94a3b8" font-family="monospace" font-size="10">10⁶</text>
+  <text x="850" y="390" fill="#94a3b8" font-family="monospace" font-size="10">10⁶+10</text>
+  
+  <!-- Sparse ticks at large values -->
+  <line x1="480" y1="365" x2="480" y2="375" stroke="#ef4444" stroke-width="2"/>
+  <line x1="600" y1="365" x2="600" y2="375" stroke="#ef4444" stroke-width="2"/>
+  <line x1="720" y1="365" x2="720" y2="375" stroke="#ef4444" stroke-width="2"/>
+  <line x1="850" y1="365" x2="850" y2="375" stroke="#ef4444" stroke-width="2"/>
+  
+  <text x="665" y="355" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="9">sparse at large values (gaps!)</text>
+  
+  <!-- Example -->
+  <text x="60" y="425" fill="#94a3b8" font-family="monospace" font-size="11">float: 16777216.0f + 1.0f == 16777216.0f</text>
+  <text x="400" y="425" fill="#ef4444" font-family="monospace" font-size="11">← The +1 is lost! Gap too big.</text>
+  
+  <!-- Section 4: Comparison Danger -->
+  <rect x="20" y="455" width="420" height="130" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="40" y="480" fill="#f97316" font-family="monospace" font-size="14" font-weight="bold">4. Never Use == for Floats</text>
+  
+  <text x="40" y="510" fill="#ef4444" font-family="monospace" font-size="12">✗ if (x == 0.3) { ... }</text>
+  <text x="280" y="510" fill="#64748b" font-family="monospace" font-size="11">// may never be true!</text>
+  
+  <text x="40" y="540" fill="#22c55e" font-family="monospace" font-size="12">✓ if (fabs(x - 0.3) &lt; 1e-9) { ... }</text>
+  
+  <text x="40" y="570" fill="#22c55e" font-family="monospace" font-size="12">✓ if (fabs(a - b) &lt; eps * fabs(a)) { ... }</text>
+  <text x="370" y="570" fill="#64748b" font-family="monospace" font-size="10">relative</text>
+  
+  <!-- Section 5: Catastrophic Cancellation -->
+  <rect x="460" y="455" width="420" height="130" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="480" y="480" fill="#f97316" font-family="monospace" font-size="14" font-weight="bold">5. Catastrophic Cancellation</text>
+  
+  <text x="480" y="510" fill="#94a3b8" font-family="monospace" font-size="11">a = 1.0000000000000001</text>
+  <text x="480" y="530" fill="#94a3b8" font-family="monospace" font-size="11">b = 1.0000000000000000</text>
+  <text x="480" y="550" fill="#94a3b8" font-family="monospace" font-size="11">a - b = ?</text>
+  
+  <text x="620" y="550" fill="#ef4444" font-family="monospace" font-size="11">→ 0.0 (or garbage)</text>
+  
+  <text x="480" y="575" fill="#64748b" font-family="monospace" font-size="10">Subtracting similar values loses significant digits</text>
+  
+  <!-- Section 6: Special Values -->
+  <rect x="20" y="595" width="520" height="85" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="40" y="620" fill="#f97316" font-family="monospace" font-size="14" font-weight="bold">6. Special Values (more surprises)</text>
+  
+  <text x="40" y="650" fill="#94a3b8" font-family="monospace" font-size="11">1.0/0.0 = +inf    -1.0/0.0 = -inf    0.0/0.0 = NaN</text>
+  <text x="40" y="670" fill="#ef4444" font-family="monospace" font-size="11">NaN != NaN  ← always false, even to itself!</text>
+  
+  <!-- Section 7: Money Warning -->
+  <rect x="560" y="595" width="320" height="85" rx="8" fill="#7f1d1d" stroke="#ef4444"/>
+  <text x="580" y="620" fill="#fca5a5" font-family="monospace" font-size="14" font-weight="bold">⚠ NEVER Use for Money!</text>
+  
+  <text x="580" y="650" fill="#f8fafc" font-family="monospace" font-size="11">Use integers (cents) or</text>
+  <text x="580" y="670" fill="#f8fafc" font-family="monospace" font-size="11">decimal types (BigDecimal, etc.)</text>
+  
+  <!-- Bottom summary -->
+  <rect x="20" y="695" width="860" height="45" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="450" y="722" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="12">Floats are approximations. They trade exactness for range. ~7 digits (float) or ~15 digits (double) is all you get.</text>
+</svg>

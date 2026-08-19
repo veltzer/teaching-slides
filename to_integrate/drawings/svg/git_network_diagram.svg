@@ -1,0 +1,166 @@
+<svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="500" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2d3748">Git Network Diagram - Branch Workflow</text>
+  
+  <!-- Time axis -->
+  <line x1="80" y1="650" x2="920" y2="650" stroke="#adb5bd" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="930" y="655" font-family="Arial, sans-serif" font-size="12" fill="#495057">Time →</text>
+  
+  <!-- Main branch line -->
+  <g id="main-branch">
+    <line x1="100" y1="500" x2="900" y2="500" stroke="#ff6b6b" stroke-width="4"/>
+    <text x="50" y="505" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#c92a2a">main</text>
+    
+    <!-- Main branch commits -->
+    <circle cx="120" cy="500" r="8" fill="#ff6b6b" stroke="#c92a2a" stroke-width="2"/>
+    <text x="120" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#495057">v1.0</text>
+    
+    <circle cx="300" cy="500" r="8" fill="#ff6b6b" stroke="#c92a2a" stroke-width="2"/>
+    <text x="300" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#495057">merge</text>
+    
+    <circle cx="600" cy="500" r="8" fill="#ff6b6b" stroke="#c92a2a" stroke-width="2"/>
+    <text x="600" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#495057">merge</text>
+    
+    <circle cx="880" cy="500" r="8" fill="#ff6b6b" stroke="#c92a2a" stroke-width="2"/>
+    <text x="880" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#495057">v2.0</text>
+  </g>
+  
+  <!-- Develop branch -->
+  <g id="develop-branch">
+    <path d="M 120 500 Q 140 480 160 400 L 800 400 Q 820 420 840 500" fill="none" stroke="#51cf66" stroke-width="3"/>
+    <text x="50" y="405" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2b8a3e">develop</text>
+    
+    <!-- Develop branch commits -->
+    <circle cx="180" cy="400" r="6" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+    <circle cx="240" cy="400" r="6" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+    <circle cx="360" cy="400" r="6" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+    <circle cx="480" cy="400" r="6" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+    <circle cx="540" cy="400" r="6" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+    <circle cx="720" cy="400" r="6" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+    <circle cx="780" cy="400" r="6" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+  </g>
+  
+  <!-- Feature branch 1 -->
+  <g id="feature-branch-1">
+    <path d="M 180 400 Q 190 380 200 300 L 280 300 Q 290 320 300 400" fill="none" stroke="#4dabf7" stroke-width="2"/>
+    <text x="50" y="305" font-family="Arial, sans-serif" font-size="12" fill="#1864ab">feature/login</text>
+    
+    <!-- Feature branch 1 commits -->
+    <circle cx="220" cy="300" r="5" fill="#4dabf7" stroke="#1864ab" stroke-width="2"/>
+    <circle cx="260" cy="300" r="5" fill="#4dabf7" stroke="#1864ab" stroke-width="2"/>
+    
+    <!-- Merge arrows -->
+    <path d="M 280 300 Q 290 350 300 400" fill="none" stroke="#4dabf7" stroke-width="2" marker-end="url(#arrowhead-blue)" stroke-dasharray="3,3"/>
+  </g>
+  
+  <!-- Feature branch 2 -->
+  <g id="feature-branch-2">
+    <path d="M 360 400 Q 370 380 380 250 L 460 250 Q 470 270 480 400" fill="none" stroke="#ffd43b" stroke-width="2"/>
+    <text x="50" y="255" font-family="Arial, sans-serif" font-size="12" fill="#fab005">feature/dashboard</text>
+    
+    <!-- Feature branch 2 commits -->
+    <circle cx="400" cy="250" r="5" fill="#ffd43b" stroke="#fab005" stroke-width="2"/>
+    <circle cx="440" cy="250" r="5" fill="#ffd43b" stroke="#fab005" stroke-width="2"/>
+    
+    <!-- Merge arrows -->
+    <path d="M 460 250 Q 470 325 480 400" fill="none" stroke="#ffd43b" stroke-width="2" marker-end="url(#arrowhead-yellow)" stroke-dasharray="3,3"/>
+  </g>
+  
+  <!-- Hotfix branch -->
+  <g id="hotfix-branch">
+    <path d="M 300 500 Q 320 480 340 150 L 420 150 Q 440 200 480 250 Q 520 300 560 400 Q 580 450 600 500" fill="none" stroke="#da77f2" stroke-width="2"/>
+    <text x="50" y="155" font-family="Arial, sans-serif" font-size="12" fill="#9c36b5">hotfix/security</text>
+    
+    <!-- Hotfix branch commits -->
+    <circle cx="360" cy="150" r="5" fill="#da77f2" stroke="#9c36b5" stroke-width="2"/>
+    <circle cx="400" cy="150" r="5" fill="#da77f2" stroke="#9c36b5" stroke-width="2"/>
+    
+    <!-- Hotfix merge to develop -->
+    <path d="M 420 150 Q 460 200 540 400" fill="none" stroke="#da77f2" stroke-width="2" marker-end="url(#arrowhead-purple)" stroke-dasharray="3,3"/>
+    
+    <!-- Hotfix merge to main -->
+    <path d="M 560 400 Q 580 450 600 500" fill="none" stroke="#da77f2" stroke-width="2" marker-end="url(#arrowhead-purple)" stroke-dasharray="3,3"/>
+  </g>
+  
+  <!-- Release branch -->
+  <g id="release-branch">
+    <path d="M 720 400 Q 730 420 740 450 Q 750 470 760 500" fill="none" stroke="#ff8787" stroke-width="2"/>
+    <text x="720" y="435" font-family="Arial, sans-serif" font-size="12" fill="#e03131">release/v2.0</text>
+    
+    <!-- Release branch commit -->
+    <circle cx="740" cy="450" r="5" fill="#ff8787" stroke="#e03131" stroke-width="2"/>
+    
+    <!-- Release merge to main -->
+    <path d="M 750 470 Q 760 485 840 500" fill="none" stroke="#ff8787" stroke-width="2" marker-end="url(#arrowhead-red)" stroke-dasharray="3,3"/>
+  </g>
+  
+  <!-- Branch connections from develop to main -->
+  <path d="M 240 400 Q 260 450 300 500" fill="none" stroke="#51cf66" stroke-width="2" marker-end="url(#arrowhead-green)" stroke-dasharray="3,3"/>
+  
+  <!-- Tags -->
+  <g id="tags" font-family="Arial, sans-serif" font-size="10" fill="#495057">
+    <polygon points="115,470 125,470 125,475 120,480 115,475" fill="#ffd43b" stroke="#fab005"/>
+    <text x="115" y="465" text-anchor="middle">v1.0</text>
+    
+    <polygon points="875,470 885,470 885,475 880,480 875,475" fill="#ffd43b" stroke="#fab005"/>
+    <text x="875" y="465" text-anchor="middle">v2.0</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 550)">
+    <rect x="0" y="0" width="900" height="80" fill="#ffffff" stroke="#dee2e6" stroke-width="1" rx="5"/>
+    <text x="10" y="15" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#495057">Git Flow Legend:</text>
+    
+    <!-- Branch types -->
+    <g font-family="Arial, sans-serif" font-size="11" fill="#495057">
+      <line x1="20" y1="30" x2="50" y2="30" stroke="#ff6b6b" stroke-width="4"/>
+      <text x="55" y="35">main branch - Production ready code</text>
+      
+      <line x1="20" y1="45" x2="50" y2="45" stroke="#51cf66" stroke-width="3"/>
+      <text x="55" y="50">develop branch - Integration branch for features</text>
+      
+      <line x1="300" y1="30" x2="330" y2="30" stroke="#4dabf7" stroke-width="2"/>
+      <text x="335" y="35">feature branches - New features development</text>
+      
+      <line x1="300" y1="45" x2="330" y2="45" stroke="#da77f2" stroke-width="2"/>
+      <text x="335" y="50">hotfix branches - Critical bug fixes</text>
+      
+      <line x1="600" y1="30" x2="630" y2="30" stroke="#ff8787" stroke-width="2"/>
+      <text x="635" y="35">release branches - Release preparation</text>
+      
+      <line x1="600" y1="45" x2="630" y2="45" stroke="#495057" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)"/>
+      <text x="635" y="50">merge operations</text>
+      
+      <circle cx="780" cy="30" r="8" fill="#ff6b6b"/>
+      <text x="795" y="35">commits</text>
+      
+      <polygon points="775,45 785,45 785,50 780,55 775,50" fill="#ffd43b" stroke="#fab005"/>
+      <text x="795" y="50">version tags</text>
+    </g>
+  </g>
+  
+  <!-- Arrow marker definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#495057"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4dabf7"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#51cf66"/>
+    </marker>
+    <marker id="arrowhead-yellow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffd43b"/>
+    </marker>
+    <marker id="arrowhead-purple" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#da77f2"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff8787"/>
+    </marker>
+  </defs>
+</svg>
