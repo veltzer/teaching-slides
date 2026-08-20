@@ -1,0 +1,1061 @@
+<title>The Agentic Stack</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#0F1520; --bg2:#121A28; --panel:#171F2E; --panel2:#1D2635;
+    --line:#2A3547; --text:#E7ECF4; --muted:#8C98AA; --faint:#5A6678;
+    --acc:#E4A263;
+    --c-intro:#E4A263; --c-context:#6FB4E8; --c-tools:#7ED0A0; --c-mcp:#C79BF2;
+    --c-agents:#E4A263; --c-skills:#E8D06F; --c-plugins:#F08FA4; --c-config:#7FD8D0;
+    --disp:"Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+    --body:"IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono:"IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  }
+  html,body{height:100%;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:var(--body); font-size:16px; line-height:1.55;
+    overflow:hidden;
+  }
+  .deck{position:fixed; inset:0 0 52px 0; overflow:hidden;}
+  .slide{
+    position:absolute; inset:0; display:none; overflow-y:auto;
+    padding:5vh 6vw 4vh;
+  }
+  .slide.active{display:flex; flex-direction:column; justify-content:center; animation:fadein .28s ease;}
+  @keyframes fadein{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;}}
+  @media (prefers-reduced-motion: reduce){ .slide.active{animation:none;} }
+
+  .slide[data-sec="intro"]{--acc:var(--c-intro);}
+  .slide[data-sec="context"]{--acc:var(--c-context);}
+  .slide[data-sec="tools"]{--acc:var(--c-tools);}
+  .slide[data-sec="mcp"]{--acc:var(--c-mcp);}
+  .slide[data-sec="agents"]{--acc:var(--c-agents);}
+  .slide[data-sec="skills"]{--acc:var(--c-skills);}
+  .slide[data-sec="plugins"]{--acc:var(--c-plugins);}
+  .slide[data-sec="config"]{--acc:var(--c-config);}
+
+  .inner{max-width:1060px; margin:0 auto; width:100%;}
+  .eyebrow{
+    font-family:var(--mono); font-size:.78rem; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--acc); margin:0 0 14px;
+  }
+  h1{
+    font-family:var(--disp); font-weight:800; text-wrap:balance;
+    font-size:clamp(2.2rem, 5.2vw, 4.2rem); line-height:1.04; margin:0 0 10px;
+  }
+  h2{
+    font-family:var(--disp); font-weight:700; text-wrap:balance;
+    font-size:clamp(1.6rem, 3.4vw, 2.5rem); line-height:1.12; margin:0 0 18px;
+  }
+  .lede{color:var(--muted); font-size:clamp(1rem, 1.6vw, 1.25rem); max-width:44em; margin:0 0 8px;}
+  .cols{display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start; margin-top:18px;}
+  @media (max-width:820px){ .cols{grid-template-columns:1fr;} }
+
+  ul.pts{list-style:none; margin:14px 0 0; padding:0; display:flex; flex-direction:column; gap:12px;}
+  ul.pts li{padding-left:22px; position:relative; max-width:46em;}
+  ul.pts li::before{content:""; position:absolute; left:0; top:.55em; width:9px; height:9px; border-radius:2px; background:var(--acc); opacity:.85;}
+  ul.pts b{color:var(--text); font-weight:600;}
+  ul.pts li, .lede{color:#C4CDDA;}
+  ul.pts li small, .note{color:var(--muted);}
+
+  .panel{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:18px 20px;}
+  .note{font-size:.9rem; margin-top:18px; max-width:50em;}
+  .note b{color:var(--acc); font-weight:600;}
+
+  pre.code{
+    font-family:var(--mono); font-size:.84rem; line-height:1.6; color:#CBD6E5;
+    background:var(--bg2); border:1px solid var(--line); border-left:3px solid var(--acc);
+    border-radius:8px; padding:16px 18px; overflow-x:auto; margin:14px 0 0; tab-size:2;
+  }
+  pre.code .k{color:var(--acc);} pre.code .s{color:#9CC7EE;} pre.code .c{color:var(--faint);}
+
+  /* dividers */
+  .divider .secnum{font-family:var(--mono); color:var(--acc); font-size:.9rem; letter-spacing:.2em; margin-bottom:18px;}
+  .divider h1{font-size:clamp(3rem, 8vw, 6.4rem);}
+  .divider .lede{font-size:clamp(1.05rem, 1.8vw, 1.4rem);}
+  .divider .rule{width:72px; height:4px; background:var(--acc); border-radius:2px; margin:26px 0;}
+  .divider .toc{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;}
+  .divider .toc span{font-family:var(--mono); font-size:.8rem; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:5px 12px;}
+
+  /* diagram boxes */
+  .flow{display:flex; align-items:stretch; gap:0; flex-wrap:wrap; margin-top:20px;}
+  .fbox{
+    background:var(--panel); border:1px solid var(--line); border-radius:8px;
+    padding:12px 16px; min-width:120px; text-align:center;
+  }
+  .fbox .t{font-family:var(--mono); font-size:.82rem; color:var(--acc); font-weight:600;}
+  .fbox .d{font-size:.82rem; color:var(--muted); margin-top:2px;}
+  .farrow{align-self:center; padding:0 12px; color:var(--faint); font-family:var(--mono); font-size:1.1rem;}
+  .stack{display:flex; flex-direction:column; gap:8px; margin-top:18px;}
+  .stack .row{display:flex; gap:8px; align-items:stretch;}
+  .bar{
+    border-radius:6px; padding:10px 14px; font-family:var(--mono); font-size:.82rem;
+    border:1px solid var(--line); background:var(--panel); display:flex; justify-content:space-between; gap:16px; align-items:center;
+  }
+  .bar .pct{color:var(--muted);}
+  .tint{background:color-mix(in srgb, var(--acc) 14%, var(--panel)); border-color:color-mix(in srgb, var(--acc) 40%, var(--line));}
+
+  table.cmp{border-collapse:collapse; width:100%; margin-top:16px; font-size:.92rem;}
+  table.cmp th{font-family:var(--mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--acc); text-align:left; padding:10px 14px; border-bottom:2px solid var(--line);}
+  table.cmp td{padding:10px 14px; border-bottom:1px solid var(--line); color:#C4CDDA; vertical-align:top;}
+  table.cmp td:first-child{color:var(--text); font-weight:600; white-space:nowrap;}
+  .tablewrap{overflow-x:auto;}
+
+  .big{font-family:var(--disp); font-weight:700; font-size:clamp(1.3rem,2.6vw,1.9rem); line-height:1.25; max-width:26em; text-wrap:balance;}
+  .big em{color:var(--acc); font-style:normal;}
+
+  /* chrome */
+  .hud{
+    position:fixed; left:0; right:0; bottom:0; height:52px;
+    background:var(--bg2); border-top:1px solid var(--line);
+    display:flex; align-items:center; gap:18px; padding:0 18px; z-index:10;
+  }
+  .hud .sec{font-family:var(--mono); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--acc); min-width:150px;}
+  .dots{display:flex; gap:6px; flex:1; justify-content:center;}
+  .dots button{
+    width:12px; height:12px; border-radius:50%; border:1px solid var(--line);
+    background:var(--panel); cursor:pointer; padding:0;
+  }
+  .dots button.on{background:var(--acc); border-color:var(--acc);}
+  .dots button:focus-visible{outline:2px solid var(--text); outline-offset:2px;}
+  .count{font-family:var(--mono); font-size:.8rem; color:var(--muted); min-width:84px; text-align:right; font-variant-numeric:tabular-nums;}
+  .navbtns{display:flex; gap:8px;}
+  .navbtns button{
+    font-family:var(--mono); font-size:.9rem; color:var(--text);
+    background:var(--panel); border:1px solid var(--line); border-radius:6px;
+    width:34px; height:30px; cursor:pointer;
+  }
+  .navbtns button:hover{border-color:var(--acc); color:var(--acc);}
+  .navbtns button:focus-visible{outline:2px solid var(--acc); outline-offset:2px;}
+  .prog{position:fixed; left:0; bottom:52px; height:3px; background:var(--acc); width:0%; z-index:11; transition:width .2s ease;}
+  .hint{font-family:var(--mono); font-size:.72rem; color:var(--faint);}
+  @media (max-width:820px){ .hud .sec,.hint{display:none;} }
+
+  kbd{font-family:var(--mono); font-size:.78rem; border:1px solid var(--line); border-bottom-width:2px; border-radius:5px; padding:1px 7px; background:var(--panel); color:var(--muted);}
+</style>
+
+<div class="deck" id="deck">
+
+<!-- ============ 1 · TITLE ============ -->
+<section class="slide divider" data-sec="intro">
+  <div class="inner">
+    <p class="secnum">A FIELD GUIDE · 2026</p>
+    <h1>The Agentic Stack</h1>
+    <div class="rule"></div>
+    <p class="lede">Context windows, tools, MCP, agents, skills, plugins, and Claude configuration — the seven layers that turn a language model into a working system.</p>
+    <div class="toc">
+      <span>context</span><span>tools</span><span>mcp</span><span>agents</span><span>skills</span><span>plugins</span><span>config</span>
+    </div>
+    <p class="note">Navigate with <kbd>←</kbd> <kbd>→</kbd> or the arrows below. 50 slides.</p>
+  </div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="slide" data-sec="intro">
+  <div class="inner">
+    <p class="eyebrow">Why this map</p>
+    <h2>A model alone answers questions. A system does work.</h2>
+    <ul class="pts">
+      <li><b>The model is the engine, not the vehicle.</b> Raw LLMs are stateless text-in, text-out functions. Everything useful around them is engineering.</li>
+      <li><b>Every production AI app answers the same questions.</b> What does the model see (context)? What can it do (tools)? How does it connect to the world (MCP)? How does it work autonomously (agents)? How does it learn procedures (skills)? How is it packaged (plugins) and governed (config)?</li>
+      <li><b>These layers compose.</b> Understanding each one — and where its boundaries are — is the difference between a demo and a dependable system.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="slide" data-sec="intro">
+  <div class="inner">
+    <p class="eyebrow">The stack at a glance</p>
+    <h2>Seven layers, bottom to top</h2>
+    <div class="stack">
+      <div class="bar" style="--acc:var(--c-config)"><span><b>7 · Config</b> — who's allowed to do what, and how the harness behaves</span><span class="pct">governance</span></div>
+      <div class="bar" style="--acc:var(--c-plugins)"><span><b>6 · Plugins</b> — packaged bundles of everything below, shared as one install</span><span class="pct">distribution</span></div>
+      <div class="bar" style="--acc:var(--c-skills)"><span><b>5 · Skills</b> — procedural knowledge loaded on demand</span><span class="pct">know-how</span></div>
+      <div class="bar" style="--acc:var(--c-agents)"><span><b>4 · Agents</b> — models running tools in a loop toward a goal</span><span class="pct">autonomy</span></div>
+      <div class="bar" style="--acc:var(--c-mcp)"><span><b>3 · MCP</b> — a standard protocol connecting models to external systems</span><span class="pct">connectivity</span></div>
+      <div class="bar" style="--acc:var(--c-tools)"><span><b>2 · Tools</b> — structured actions the model can invoke</span><span class="pct">capability</span></div>
+      <div class="bar" style="--acc:var(--c-context)"><span><b>1 · Context window</b> — everything the model can see at once</span><span class="pct">foundation</span></div>
+    </div>
+    <p class="note">Each section of this deck is one layer, color-coded in the footer.</p>
+  </div>
+</section>
+
+<!-- ============ 4 · CONTEXT DIVIDER ============ -->
+<section class="slide divider" data-sec="context">
+  <div class="inner">
+    <p class="secnum">01 / 07</p>
+    <h1>Context Windows</h1>
+    <div class="rule"></div>
+    <p class="lede">The model's entire working memory — and the single hardest constraint in AI engineering.</p>
+  </div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="slide" data-sec="context">
+  <div class="inner">
+    <p class="eyebrow">Context · Definition</p>
+    <h2>The context window is everything the model sees in one pass</h2>
+    <div class="cols">
+      <ul class="pts">
+        <li><b>One request, one window.</b> System prompt, conversation history, tool results, files — all of it flattens into a single token sequence the model reads before producing output.</li>
+        <li><b>Nothing outside it exists.</b> The model has no hidden database of your conversation. If a fact isn't in the window (or in the weights), the model doesn't know it.</li>
+        <li><b>It's working memory, not storage.</b> Persistent memory is something you build on top — by writing things into future windows.</li>
+      </ul>
+      <div class="panel">
+        <p class="big">Every technique in this deck is, at bottom, an answer to one question: <em>what should be in the window right now?</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="slide" data-sec="context">
+  <div class="inner">
+    <p class="eyebrow">Context · Tokens</p>
+    <h2>Tokens are the unit of everything</h2>
+    <ul class="pts">
+      <li><b>Models read tokens, not characters.</b> A token is a common chunk of text — roughly 3–4 characters of English, or about ¾ of a word.</li>
+      <li><b>Everything is metered in tokens:</b> window size, API pricing, rate limits, latency. "200K context" means 200,000 tokens — about 500 pages of text or a mid-sized codebase.</li>
+      <li><b>Code and non-English text tokenize worse.</b> Whitespace-heavy code, CJK languages, and base64 blobs consume far more tokens per character than English prose.</li>
+    </ul>
+    <pre class="code"><span class="c">// "The quick brown fox jumps over the lazy dog"</span>
+["The", " quick", " brown", " fox", " jumps", " over", " the", " lazy", " dog"]
+<span class="c">// 9 tokens · 43 characters · ≈ 4.8 chars per token</span></pre>
+  </div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="slide" data-sec="context">
+  <div class="inner">
+    <p class="eyebrow">Context · Composition</p>
+    <h2>What actually fills the window</h2>
+    <p class="lede">In an agent session, your prompt is a sliver. A typical mid-session breakdown:</p>
+    <div class="stack">
+      <div class="bar"><span>System prompt &amp; harness instructions</span><span class="pct">~5%</span></div>
+      <div class="bar"><span>Tool definitions (schemas for every available tool)</span><span class="pct">~10%</span></div>
+      <div class="bar tint"><span><b>Tool results — file contents, command output, search hits</b></span><span class="pct">~60%</span></div>
+      <div class="bar"><span>Conversation history &amp; model reasoning</span><span class="pct">~20%</span></div>
+      <div class="bar"><span>Your actual messages</span><span class="pct">~5%</span></div>
+    </div>
+    <p class="note"><b>Implication:</b> the biggest lever on context health isn't shorter prompts — it's controlling what tools dump into the window.</p>
+  </div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="slide" data-sec="context">
+  <div class="inner">
+    <p class="eyebrow">Context · Scale</p>
+    <h2>Windows grew ~250× in four years</h2>
+    <div class="stack">
+      <div class="bar"><span>2020 · GPT-3</span><span class="pct">2K tokens · a long email</span></div>
+      <div class="bar"><span>2023 · GPT-4, Claude 2</span><span class="pct">8K–100K · a paper, a novella</span></div>
+      <div class="bar tint"><span><b>2024–25 · Claude 3/4 era</b></span><span class="pct">200K standard · a codebase</span></div>
+      <div class="bar tint"><span><b>2025–26 · frontier</b></span><span class="pct">1M+ · a monorepo, hours of transcript</span></div>
+    </div>
+    <ul class="pts">
+      <li><b>Qualitative shift:</b> at 200K+ you stop summarizing inputs and start dropping whole artifacts in — full files, full logs, full documents.</li>
+      <li><b>But growth didn't repeal the economics</b> — which is the next slide.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="slide" data-sec="context">
+  <div class="inner">
+    <p class="eyebrow">Context · The catch</p>
+    <h2>Bigger windows aren't free</h2>
+    <ul class="pts">
+      <li><b>Cost scales with input.</b> You pay for every token, every turn. A 150K-token conversation re-sends 150K tokens with each new message.</li>
+      <li><b>Latency scales too.</b> More input tokens means slower time-to-first-token.</li>
+      <li><b>Attention degrades — "context rot."</b> Retrieval quality isn't uniform across the window; instructions buried mid-window get followed less reliably than ones near the start or end. Long, noisy histories dilute the signal.</li>
+      <li><b>Stale context misleads.</b> An old file version or a superseded plan sitting in history can be worse than nothing.</li>
+    </ul>
+    <p class="note"><b>Rule of thumb:</b> treat context as a scarce budget with diminishing returns — spend it on what's load-bearing for the next step.</p>
+  </div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="slide" data-sec="context">
+  <div class="inner">
+    <p class="eyebrow">Context · Management</p>
+    <h2>Four strategies for staying inside the budget</h2>
+    <div class="cols">
+      <div class="panel">
+        <p class="big" style="font-size:1.1rem">1 · <em>Compaction</em></p>
+        <p class="note" style="margin-top:6px">When the window nears its limit, summarize the conversation and continue with the summary plus recent turns. Claude Code does this automatically.</p>
+      </div>
+      <div class="panel">
+        <p class="big" style="font-size:1.1rem">2 · <em>Retrieval (RAG)</em></p>
+        <p class="note" style="margin-top:6px">Keep knowledge outside the window; search and pull in only relevant snippets at ask time, instead of carrying everything always.</p>
+      </div>
+      <div class="panel">
+        <p class="big" style="font-size:1.1rem">3 · <em>Subagents</em></p>
+        <p class="note" style="margin-top:6px">Delegate a noisy task (a broad code search, a log dive) to a separate agent with its own window; only its conclusion returns to yours.</p>
+      </div>
+      <div class="panel">
+        <p class="big" style="font-size:1.1rem">4 · <em>External notes</em></p>
+        <p class="note" style="margin-top:6px">Write state to files — plans, memory directories, scratchpads — and re-read what's needed. Files are memory that survives the window.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="slide" data-sec="context">
+  <div class="inner">
+    <p class="eyebrow">Context · Economics</p>
+    <h2>Prompt caching: pay for the prefix once</h2>
+    <ul class="pts">
+      <li><b>The observation:</b> in multi-turn use, most of each request is identical to the last one — same system prompt, same tool schemas, same early history.</li>
+      <li><b>The mechanism:</b> the API caches a processed prefix; subsequent requests that share it skip recomputation. Cache reads cost ~10% of normal input tokens.</li>
+      <li><b>The design consequence:</b> put stable content first (system prompt, tools, documents) and volatile content last. One changed byte early in the prefix invalidates everything after it.</li>
+    </ul>
+    <div class="flow">
+      <div class="fbox"><div class="t">system + tools</div><div class="d">stable → cached</div></div>
+      <div class="farrow">·</div>
+      <div class="fbox"><div class="t">documents</div><div class="d">stable → cached</div></div>
+      <div class="farrow">·</div>
+      <div class="fbox tint"><div class="t">new turn</div><div class="d">only this is full-price</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 · TOOLS DIVIDER ============ -->
+<section class="slide divider" data-sec="tools">
+  <div class="inner">
+    <p class="secnum">02 / 07</p>
+    <h1>Tools</h1>
+    <div class="rule"></div>
+    <p class="lede">How a text predictor gets hands: structured actions the model can request and your code executes.</p>
+  </div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section class="slide" data-sec="tools">
+  <div class="inner">
+    <p class="eyebrow">Tools · Definition</p>
+    <h2>The model never runs anything. It asks.</h2>
+    <div class="cols">
+      <ul class="pts">
+        <li><b>Tool use is a contract.</b> You describe available functions; the model replies with a structured request — tool name plus JSON arguments — instead of (or alongside) prose.</li>
+        <li><b>Your code executes.</b> The harness runs the function and feeds the result back as a new message. The model never touches your system directly.</li>
+        <li><b>This boundary is the safety model.</b> Because execution happens in your code, you can validate, sandbox, log, rate-limit, or refuse any call.</li>
+      </ul>
+      <div class="panel">
+        <p class="big">A tool call is a <em>proposal</em>. The harness — and its permission rules — decide whether it becomes an action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14 ============ -->
+<section class="slide" data-sec="tools">
+  <div class="inner">
+    <p class="eyebrow">Tools · Anatomy</p>
+    <h2>A tool is a name, a description, and a schema</h2>
+    <pre class="code">{
+  <span class="k">"name"</span>: <span class="s">"get_weather"</span>,
+  <span class="k">"description"</span>: <span class="s">"Get current weather for a location.
+      Returns temperature, conditions, and humidity.
+      Use when the user asks about weather or outdoor plans."</span>,
+  <span class="k">"input_schema"</span>: {
+    <span class="k">"type"</span>: <span class="s">"object"</span>,
+    <span class="k">"properties"</span>: {
+      <span class="k">"location"</span>: { <span class="k">"type"</span>: <span class="s">"string"</span>, <span class="k">"description"</span>: <span class="s">"City name or lat,lon"</span> },
+      <span class="k">"unit"</span>:     { <span class="k">"enum"</span>: [<span class="s">"celsius"</span>, <span class="s">"fahrenheit"</span>] }
+    },
+    <span class="k">"required"</span>: [<span class="s">"location"</span>]
+  }
+}</pre>
+    <p class="note"><b>The description is a prompt.</b> It's the only thing the model reads to decide when and how to call the tool — write it like documentation for a sharp new teammate.</p>
+  </div>
+</section>
+
+<!-- ============ 15 ============ -->
+<section class="slide" data-sec="tools">
+  <div class="inner">
+    <p class="eyebrow">Tools · The loop</p>
+    <h2>One round-trip of tool use</h2>
+    <div class="flow">
+      <div class="fbox"><div class="t">1 · prompt</div><div class="d">"What's the weather in Oslo?"</div></div>
+      <div class="farrow">→</div>
+      <div class="fbox tint"><div class="t">2 · tool_use</div><div class="d">model: get_weather({location:"Oslo"})</div></div>
+      <div class="farrow">→</div>
+      <div class="fbox"><div class="t">3 · execute</div><div class="d">your code calls the API</div></div>
+      <div class="farrow">→</div>
+      <div class="fbox"><div class="t">4 · tool_result</div><div class="d">{"temp": 6, "cond": "rain"}</div></div>
+      <div class="farrow">→</div>
+      <div class="fbox tint"><div class="t">5 · answer</div><div class="d">"6°C and raining — bring a coat."</div></div>
+    </div>
+    <ul class="pts">
+      <li><b>Steps 2–4 can repeat</b> many times before a final answer. That repetition, aimed at a goal, is what we'll later call an agent.</li>
+      <li><b>Results land in the context window</b> — which is why tool output size is a context-management concern (slide 7).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 16 ============ -->
+<section class="slide" data-sec="tools">
+  <div class="inner">
+    <p class="eyebrow">Tools · Composition</p>
+    <h2>Parallel when independent, chained when dependent</h2>
+    <div class="cols">
+      <div class="panel">
+        <p class="big" style="font-size:1.1rem"><em>Parallel</em></p>
+        <p class="note" style="margin-top:6px">The model can emit several tool calls in one turn — read three files at once, run lint and tests together. Halves the wall-clock of independent work.</p>
+      </div>
+      <div class="panel">
+        <p class="big" style="font-size:1.1rem"><em>Chained</em></p>
+        <p class="note" style="margin-top:6px">Output of one call feeds the next: search for the file → read it → edit it → run the tests. Each step's result shapes the model's next decision.</p>
+      </div>
+    </div>
+    <ul class="pts">
+      <li><b>Good harnesses exploit both:</b> batch what's independent, sequence what isn't — and interleave model reasoning between steps to react to failures.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 17 ============ -->
+<section class="slide" data-sec="tools">
+  <div class="inner">
+    <p class="eyebrow">Tools · Design</p>
+    <h2>What separates good tools from bad</h2>
+    <ul class="pts">
+      <li><b>Few and powerful beats many and narrow.</b> Twenty overlapping tools confuse selection; five orthogonal ones with clear boundaries get chosen correctly.</li>
+      <li><b>Return signal, not dumps.</b> A search tool that returns 10 relevant snippets beats one that returns 3,000 raw lines — every result token is context budget spent.</li>
+      <li><b>Errors should teach.</b> "File not found: did you mean src/config.ts?" lets the model self-correct in one step; a bare stack trace wastes a turn.</li>
+      <li><b>Make misuse hard.</b> Enums over free strings, required fields, sensible defaults. The schema is a guardrail.</li>
+    </ul>
+    <p class="note"><b>Test of a good tool:</b> could a competent human use it correctly from the description alone? The model is in the same position.</p>
+  </div>
+</section>
+
+<!-- ============ 18 ============ -->
+<section class="slide" data-sec="tools">
+  <div class="inner">
+    <p class="eyebrow">Tools · In practice</p>
+    <h2>The tool families inside Claude Code</h2>
+    <div class="tablewrap"><table class="cmp">
+      <tr><th>Family</th><th>Tools</th><th>What it enables</th></tr>
+      <tr><td>Files</td><td>Read · Write · Edit · Glob · Grep</td><td>Navigate and modify a codebase surgically</td></tr>
+      <tr><td>Execution</td><td>Bash (foreground &amp; background)</td><td>Build, test, run anything with a CLI</td></tr>
+      <tr><td>Web</td><td>WebSearch · WebFetch</td><td>Pull in docs and current information</td></tr>
+      <tr><td>Delegation</td><td>Agent (subagents) · Workflow</td><td>Fan work out to parallel contexts</td></tr>
+      <tr><td>Interaction</td><td>AskUserQuestion · Artifact · Skill</td><td>Clarify, publish, load procedures</td></tr>
+    </table></div>
+    <p class="note">A general-purpose file+shell+web toolset turns out to cover a remarkable share of knowledge work — which is why the same loop handles coding, research, and ops.</p>
+  </div>
+</section>
+
+<!-- ============ 19 · MCP DIVIDER ============ -->
+<section class="slide divider" data-sec="mcp">
+  <div class="inner">
+    <p class="secnum">03 / 07</p>
+    <h1>MCP</h1>
+    <div class="rule"></div>
+    <p class="lede">The Model Context Protocol — an open standard that lets any AI app talk to any data source or service.</p>
+  </div>
+</section>
+
+<!-- ============ 20 ============ -->
+<section class="slide" data-sec="mcp">
+  <div class="inner">
+    <p class="eyebrow">MCP · The problem</p>
+    <h2>Before MCP: the N × M integration tax</h2>
+    <div class="cols">
+      <ul class="pts">
+        <li><b>Every AI app × every service = a custom integration.</b> Slack for Claude, Slack for Cursor, Slack for your internal bot — three implementations of the same thing.</li>
+        <li><b>N apps × M services means N×M connectors,</b> each with its own auth, schema, and bugs. Nobody maintains that matrix for long.</li>
+        <li><b>The fix is the same as it always is:</b> a protocol. Build to the standard once; interoperate with everything that speaks it.</li>
+      </ul>
+      <div class="panel">
+        <p class="big">MCP is to AI integrations what <em>USB-C</em> is to peripherals: one port, any device.</p>
+        <p class="note" style="margin-top:10px">Open-sourced by Anthropic in Nov 2024; since adopted across the industry — N×M becomes N+M.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 21 ============ -->
+<section class="slide" data-sec="mcp">
+  <div class="inner">
+    <p class="eyebrow">MCP · Definition</p>
+    <h2>Three roles: host, client, server</h2>
+    <div class="flow">
+      <div class="fbox"><div class="t">HOST</div><div class="d">the AI app — Claude Code, Claude.ai, an IDE</div></div>
+      <div class="farrow">→</div>
+      <div class="fbox"><div class="t">CLIENT</div><div class="d">one connection per server, managed by the host</div></div>
+      <div class="farrow">→</div>
+      <div class="fbox tint"><div class="t">SERVER</div><div class="d">wraps a capability: GitHub, Postgres, Slack, your API</div></div>
+    </div>
+    <ul class="pts">
+      <li><b>A server is a small program</b> that exposes what a system can do in a standard, machine-readable form.</li>
+      <li><b>The host aggregates.</b> Connect five servers and the model sees one unified tool list — it neither knows nor cares where each tool lives.</li>
+      <li><b>Anyone can publish a server</b> — vendors ship official ones; thousands of community servers exist for databases, browsers, clouds, and SaaS tools.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 22 ============ -->
+<section class="slide" data-sec="mcp">
+  <div class="inner">
+    <p class="eyebrow">MCP · Architecture</p>
+    <h2>One host, many worlds</h2>
+    <div class="stack">
+      <div class="row">
+        <div class="bar tint" style="flex:1; justify-content:center"><b>Claude (model) — sees one merged tool list</b></div>
+      </div>
+      <div class="row">
+        <div class="bar" style="flex:1; justify-content:center">Host app: routes calls, enforces permissions</div>
+      </div>
+      <div class="row">
+        <div class="bar" style="flex:1; justify-content:center">github server</div>
+        <div class="bar" style="flex:1; justify-content:center">postgres server</div>
+        <div class="bar" style="flex:1; justify-content:center">browser server</div>
+        <div class="bar" style="flex:1; justify-content:center">internal-api server</div>
+      </div>
+    </div>
+    <ul class="pts">
+      <li><b>Tools namespace automatically</b> (e.g. <code style="font-family:var(--mono); font-size:.85em">mcp__github__create_pr</code>), so servers can't collide.</li>
+      <li><b>Permissions apply at the host,</b> uniformly — a server only gets invoked when the harness allows that call.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 23 ============ -->
+<section class="slide" data-sec="mcp">
+  <div class="inner">
+    <p class="eyebrow">MCP · Primitives</p>
+    <h2>Servers can offer three kinds of things</h2>
+    <div class="tablewrap"><table class="cmp">
+      <tr><th>Primitive</th><th>Direction</th><th>Meaning</th><th>Example</th></tr>
+      <tr><td>Tools</td><td>model-controlled</td><td>Actions the model may invoke</td><td>create_issue, run_query</td></tr>
+      <tr><td>Resources</td><td>app-controlled</td><td>Data the host can attach as context</td><td>a file, a schema, a dashboard</td></tr>
+      <tr><td>Prompts</td><td>user-controlled</td><td>Reusable templates a user invokes</td><td>a "summarize PR" command</td></tr>
+    </table></div>
+    <ul class="pts">
+      <li><b>Tools dominate in practice</b> — most servers are effectively tool collections — but the three-way split keeps who-decides-what explicit.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 24 ============ -->
+<section class="slide" data-sec="mcp">
+  <div class="inner">
+    <p class="eyebrow">MCP · Transports</p>
+    <h2>Local process or remote service</h2>
+    <div class="cols">
+      <div class="panel">
+        <p class="big" style="font-size:1.1rem"><em>stdio</em> — local</p>
+        <p class="note" style="margin-top:6px">The host spawns the server as a child process and speaks JSON-RPC over stdin/stdout. Zero network setup; full access to your machine. Right for filesystem, git, local browsers.</p>
+      </div>
+      <div class="panel">
+        <p class="big" style="font-size:1.1rem"><em>Streamable HTTP</em> — remote</p>
+        <p class="note" style="margin-top:6px">The server runs as a web service; auth via OAuth. Right for SaaS integrations — one hosted server, many users, no local install.</p>
+      </div>
+    </div>
+    <pre class="code"><span class="c"># wiring servers into Claude Code</span>
+claude mcp add github -- npx -y @modelcontextprotocol/server-github
+claude mcp add --transport http linear https://mcp.linear.app/mcp</pre>
+  </div>
+</section>
+
+<!-- ============ 25 ============ -->
+<section class="slide" data-sec="mcp">
+  <div class="inner">
+    <p class="eyebrow">MCP · Caution</p>
+    <h2>A server is code you're trusting</h2>
+    <ul class="pts">
+      <li><b>Servers run with real credentials</b> — your GitHub token, your database. Install from sources you trust, exactly as you would any dependency.</li>
+      <li><b>Tool results are untrusted input.</b> A web page or ticket fetched through MCP can contain adversarial text ("ignore your instructions and…"). Prompt injection enters through data, not just prompts.</li>
+      <li><b>Every server spends context.</b> Each connected server adds tool schemas to the window; a host with tool-search loads them on demand instead. Connect what you use.</li>
+      <li><b>Scope with permissions.</b> Allow the read tools broadly, gate the write tools — the config layer (section 07) is where this lands.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 26 · AGENTS DIVIDER ============ -->
+<section class="slide divider" data-sec="agents">
+  <div class="inner">
+    <p class="secnum">04 / 07</p>
+    <h1>Agents</h1>
+    <div class="rule"></div>
+    <p class="lede">What you get when a model, tools, and a loop meet a goal — and the patterns that make autonomy dependable.</p>
+  </div>
+</section>
+
+<!-- ============ 27 ============ -->
+<section class="slide" data-sec="agents">
+  <div class="inner">
+    <p class="eyebrow">Agents · Definition</p>
+    <h2>Agent = model + tools + loop, aimed at a goal</h2>
+    <div class="cols">
+      <ul class="pts">
+        <li><b>The defining trait is who decides.</b> An agent chooses its own next step from what it just observed — which file to open, whether to re-run the tests, when it's done.</li>
+        <li><b>Chat answers; agents accomplish.</b> "Fix the failing CI build" ends not with an explanation but with a green build — after reading logs, editing code, and re-running checks.</li>
+        <li><b>Autonomy is a dial, not a switch:</b> from single tool call, to human-approves-each-step, to hours of unattended work.</li>
+      </ul>
+      <div class="panel">
+        <p class="big">An agent is a model using tools <em>in a loop</em>, where the model's own output decides the next iteration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 28 ============ -->
+<section class="slide" data-sec="agents">
+  <div class="inner">
+    <p class="eyebrow">Agents · Spectrum</p>
+    <h2>Workflows vs agents: who owns the control flow?</h2>
+    <div class="cols">
+      <div class="panel">
+        <p class="big" style="font-size:1.1rem"><em>Workflow</em> — code decides</p>
+        <p class="note" style="margin-top:6px">Fixed steps you author: classify → route → draft → review. Predictable, testable, cheap. Right when the path is known in advance.</p>
+      </div>
+      <div class="panel">
+        <p class="big" style="font-size:1.1rem"><em>Agent</em> — model decides</p>
+        <p class="note" style="margin-top:6px">The model plans and adapts as it observes. Right for open-ended tasks — debugging, research — where the path can't be scripted.</p>
+      </div>
+    </div>
+    <ul class="pts">
+      <li><b>Best systems are hybrids:</b> deterministic scaffolding (a script that fans out work, a required verify stage) around agentic steps where judgment is needed.</li>
+      <li><b>Start with the simplest thing that works.</b> Reach for full autonomy only when a workflow can't express the task.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 29 ============ -->
+<section class="slide" data-sec="agents">
+  <div class="inner">
+    <p class="eyebrow">Agents · The loop</p>
+    <h2>Gather context → act → verify → repeat</h2>
+    <div class="flow">
+      <div class="fbox"><div class="t">gather</div><div class="d">read files, search, ask</div></div>
+      <div class="farrow">→</div>
+      <div class="fbox"><div class="t">plan</div><div class="d">decide the next step</div></div>
+      <div class="farrow">→</div>
+      <div class="fbox"><div class="t">act</div><div class="d">edit, run, call APIs</div></div>
+      <div class="farrow">→</div>
+      <div class="fbox tint"><div class="t">verify</div><div class="d">tests, lint, re-read the diff</div></div>
+      <div class="farrow">↺</div>
+    </div>
+    <ul class="pts">
+      <li><b>Verification is what makes agents work.</b> Environments with checkable feedback — tests, compilers, linters — let the agent catch and fix its own mistakes. That's why coding was the first domain agents cracked.</li>
+      <li><b>No feedback signal, no reliability.</b> If success can't be checked, the loop degrades to hoping the first attempt was right.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 30 ============ -->
+<section class="slide" data-sec="agents">
+  <div class="inner">
+    <p class="eyebrow">Agents · Delegation</p>
+    <h2>Subagents: fresh windows for messy work</h2>
+    <ul class="pts">
+      <li><b>The mechanism:</b> an agent spawns another agent with its own context window, gives it a task, and receives only the final report back.</li>
+      <li><b>Why it matters for context:</b> a search that touches 40 files burns tens of thousands of tokens — in the <i>subagent's</i> window. The orchestrator keeps the one-paragraph conclusion.</li>
+      <li><b>Why it matters for speed:</b> independent subagents run in parallel — five reviewers over five modules at once.</li>
+      <li><b>Specialization:</b> subagents can carry their own system prompt, model tier, and restricted tool set (a read-only "explorer", a test-runner).</li>
+    </ul>
+    <p class="note"><b>Rule of thumb:</b> delegate when the work's <i>process</i> is noisy but its <i>result</i> is compact.</p>
+  </div>
+</section>
+
+<!-- ============ 31 ============ -->
+<section class="slide" data-sec="agents">
+  <div class="inner">
+    <p class="eyebrow">Agents · Patterns</p>
+    <h2>Multi-agent shapes that recur</h2>
+    <div class="tablewrap"><table class="cmp">
+      <tr><th>Pattern</th><th>Shape</th><th>Use when</th></tr>
+      <tr><td>Orchestrator</td><td>one lead plans, workers execute in parallel</td><td>divisible work: audits, migrations, sweeps</td></tr>
+      <tr><td>Pipeline</td><td>each item flows through stages independently</td><td>many items × several steps, no cross-item deps</td></tr>
+      <tr><td>Judge panel</td><td>N independent attempts, then scoring &amp; synthesis</td><td>wide solution spaces: design, naming, strategy</td></tr>
+      <tr><td>Adversarial verify</td><td>skeptic agents try to refute each finding</td><td>killing plausible-but-wrong results before you act</td></tr>
+    </table></div>
+    <p class="note"><b>Cost note:</b> multi-agent runs multiply tokens. Reach for these when coverage or confidence genuinely needs them, not by default.</p>
+  </div>
+</section>
+
+<!-- ============ 32 ============ -->
+<section class="slide" data-sec="agents">
+  <div class="inner">
+    <p class="eyebrow">Agents · Memory</p>
+    <h2>Long horizons need memory beyond the window</h2>
+    <ul class="pts">
+      <li><b>Within a session — compaction:</b> summarize the transcript as it grows so work continues past the window limit (section 01's strategies, applied automatically).</li>
+      <li><b>Across steps — working files:</b> agents that write plans and progress notes to disk survive interruptions and stay on track; the file is the source of truth, not the transcript.</li>
+      <li><b>Across sessions — persistent memory:</b> a directory of small fact files (who the user is, project conventions, feedback received) reloaded at startup. Memory becomes an editable artifact, not a black box.</li>
+      <li><b>Curation beats accumulation:</b> stale memory misleads exactly like stale context. Update and delete, don't just append.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 33 ============ -->
+<section class="slide" data-sec="agents">
+  <div class="inner">
+    <p class="eyebrow">Agents · Safety</p>
+    <h2>Guardrails: trust is earned per action, not per agent</h2>
+    <ul class="pts">
+      <li><b>Permission gates:</b> reads flow freely; writes, pushes, and deletes require rules or a human. The gate lives in the harness, outside the model's control.</li>
+      <li><b>Sandboxing:</b> risky execution happens in containers, worktrees, or restricted shells — blast radius by construction, not by promise.</li>
+      <li><b>Reversibility bias:</b> prefer branches over main, staged rollouts over big-bang, dry-runs before real runs. Cheap undo makes autonomy affordable.</li>
+      <li><b>Evaluation:</b> agents are stochastic — measure end-to-end task success across runs, not single demos. Evals are to agents what tests are to code.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 34 · SKILLS DIVIDER ============ -->
+<section class="slide divider" data-sec="skills">
+  <div class="inner">
+    <p class="secnum">05 / 07</p>
+    <h1>Skills</h1>
+    <div class="rule"></div>
+    <p class="lede">Procedural knowledge in a folder: how an agent learns your way of doing things — without spending context until it's needed.</p>
+  </div>
+</section>
+
+<!-- ============ 35 ============ -->
+<section class="slide" data-sec="skills">
+  <div class="inner">
+    <p class="eyebrow">Skills · Definition</p>
+    <h2>A skill is a folder with instructions inside</h2>
+    <div class="cols">
+      <ul class="pts">
+        <li><b>At its core: a directory with a SKILL.md file</b> — instructions for a specific kind of task, plus optional scripts, templates, and reference docs alongside.</li>
+        <li><b>Loaded on demand.</b> The agent sees only each skill's name and one-line description; when a task matches, it reads the full instructions into context and follows them.</li>
+        <li><b>Knowledge, not capability.</b> Tools give an agent the <i>ability</i> to act; skills tell it <i>how your team wants it done</i> — the deploy runbook, the brand rules, the review checklist.</li>
+      </ul>
+      <div class="panel">
+        <p class="big">Tools are the hands. Skills are the <em>training</em>: expertise on paper, read just-in-time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 36 ============ -->
+<section class="slide" data-sec="skills">
+  <div class="inner">
+    <p class="eyebrow">Skills · Anatomy</p>
+    <h2>SKILL.md: frontmatter for triggering, body for doing</h2>
+    <pre class="code"><span class="c">my-plugin/skills/deploy-checklist/</span>
+<span class="c">├── SKILL.md          ← the entry point</span>
+<span class="c">├── rollback.sh       ← helper the skill can run</span>
+<span class="c">└── reference.md      ← details, read only if needed</span>
+
+---
+<span class="k">name</span>: deploy-checklist
+<span class="k">description</span>: <span class="s">Safe production deploy steps. Use when the user
+  asks to deploy, release, or ship to production.</span>
+---
+## Steps
+1. Run the full test suite; abort on any failure.
+2. Check current on-call in #ops before proceeding. ...</pre>
+    <p class="note"><b>The description is the trigger.</b> It's the only part always in context — it must say both what the skill does and when to use it.</p>
+  </div>
+</section>
+
+<!-- ============ 37 ============ -->
+<section class="slide" data-sec="skills">
+  <div class="inner">
+    <p class="eyebrow">Skills · Mechanism</p>
+    <h2>Progressive disclosure: three levels of loading</h2>
+    <div class="stack">
+      <div class="bar tint"><span><b>Level 1 · Metadata</b> — name + description of every skill, always in context</span><span class="pct">~50 tokens each</span></div>
+      <div class="bar"><span><b>Level 2 · SKILL.md body</b> — full instructions, loaded when the task matches</span><span class="pct">~500–5K tokens</span></div>
+      <div class="bar"><span><b>Level 3 · Bundled resources</b> — scripts, templates, reference docs, read only if the work requires them</span><span class="pct">unbounded</span></div>
+    </div>
+    <ul class="pts">
+      <li><b>This is context economics again:</b> you can install a hundred skills and pay only for the ones a task actually invokes.</li>
+      <li><b>Scripts beat prose for determinism:</b> a bundled script runs the same way every time — better than asking the model to improvise the same 12 shell commands.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 38 ============ -->
+<section class="slide" data-sec="skills">
+  <div class="inner">
+    <p class="eyebrow">Skills · Boundaries</p>
+    <h2>Skill, tool, or MCP server?</h2>
+    <div class="tablewrap"><table class="cmp">
+      <tr><th>You need…</th><th>Reach for</th><th>Because</th></tr>
+      <tr><td>A new capability</td><td>Tool / MCP server</td><td>The agent literally can't do it today (query prod DB, call your API)</td></tr>
+      <tr><td>A procedure done your way</td><td>Skill</td><td>The agent could fumble through; the skill makes it reliable and yours</td></tr>
+      <tr><td>Both</td><td>MCP + skill</td><td>MCP provides access; the skill encodes how to use it well</td></tr>
+      <tr><td>Always-on facts</td><td>CLAUDE.md (section 07)</td><td>Small, universal context that should load every session</td></tr>
+    </table></div>
+    <p class="note"><b>Litmus test:</b> "it can't" → tool. "it can, but inconsistently" → skill.</p>
+  </div>
+</section>
+
+<!-- ============ 39 ============ -->
+<section class="slide" data-sec="skills">
+  <div class="inner">
+    <p class="eyebrow">Skills · Craft</p>
+    <h2>Writing skills that actually fire and actually help</h2>
+    <ul class="pts">
+      <li><b>Tune the description for triggering.</b> Include the verbs and nouns users actually say ("deploy", "release", "ship"). A skill that never fires is dead weight; one that overfires pollutes unrelated tasks.</li>
+      <li><b>Write for a capable reader.</b> State the non-obvious: constraints, order, failure modes. Skip what any competent agent already knows.</li>
+      <li><b>One skill, one job.</b> A skill that covers everything matches nothing. Split by task, not by team.</li>
+      <li><b>Evaluate like software.</b> Run representative prompts with and without the skill; keep only what measurably changes behavior. Tooling like skill-creator scaffolds and benchmarks this.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 40 · PLUGINS DIVIDER ============ -->
+<section class="slide divider" data-sec="plugins">
+  <div class="inner">
+    <p class="secnum">06 / 07</p>
+    <h1>Plugins</h1>
+    <div class="rule"></div>
+    <p class="lede">The distribution layer: skills, agents, commands, hooks, and MCP servers, packaged as one installable unit.</p>
+  </div>
+</section>
+
+<!-- ============ 41 ============ -->
+<section class="slide" data-sec="plugins">
+  <div class="inner">
+    <p class="eyebrow">Plugins · Definition</p>
+    <h2>A plugin bundles the other layers into one install</h2>
+    <div class="cols">
+      <ul class="pts">
+        <li><b>The problem it solves:</b> a useful setup is scattered — three skills here, an MCP server there, a custom agent, two hooks. Sharing that piecemeal doesn't survive contact with a team.</li>
+        <li><b>A plugin is the package:</b> one versioned directory carrying any mix of skills, slash commands, subagent definitions, MCP server configs, and hooks.</li>
+        <li><b>One install, whole capability.</b> "Our release toolkit" becomes a single name a teammate adds — not a wiki page of setup steps.</li>
+      </ul>
+      <div class="panel">
+        <p class="big">Skills teach. MCP connects. Agents specialize. A plugin is how all of that <em>ships</em>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 42 ============ -->
+<section class="slide" data-sec="plugins">
+  <div class="inner">
+    <p class="eyebrow">Plugins · Anatomy</p>
+    <h2>Inside a plugin directory</h2>
+    <pre class="code"><span class="c">release-toolkit/</span>
+├── .claude-plugin/
+│   └── plugin.json      <span class="c">← name, version, description</span>
+├── commands/            <span class="c">← slash commands (/release, /hotfix)</span>
+├── skills/              <span class="c">← procedures (changelog style, deploy steps)</span>
+├── agents/              <span class="c">← specialized subagents (release-reviewer)</span>
+├── hooks/
+│   └── hooks.json       <span class="c">← e.g. block direct pushes to main</span>
+└── .mcp.json            <span class="c">← MCP servers this plugin needs (CI, Sentry)</span></pre>
+    <ul class="pts">
+      <li><b>Every part is optional</b> — a plugin can be a single skill or a full toolkit.</li>
+      <li><b>Components behave exactly as if installed individually;</b> the plugin is packaging, not a new runtime.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 43 ============ -->
+<section class="slide" data-sec="plugins">
+  <div class="inner">
+    <p class="eyebrow">Plugins · Distribution</p>
+    <h2>Marketplaces are just git repos</h2>
+    <pre class="code"><span class="c"># add a marketplace (any git repo with a marketplace manifest)</span>
+/plugin marketplace add acme-corp/claude-plugins
+
+<span class="c"># then browse &amp; install from it</span>
+/plugin install release-toolkit@acme-corp</pre>
+    <ul class="pts">
+      <li><b>No central store required.</b> A marketplace is a repo with a manifest listing plugins — your org can run a private one next to public community ones.</li>
+      <li><b>Teams pin plugins in project config,</b> so cloning the repo and starting Claude yields the same toolkit for everyone — capabilities as code.</li>
+      <li><b>Same trust rule as MCP:</b> a plugin executes with your permissions. Review what you install; prefer sources you'd accept a dependency from.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 44 ============ -->
+<section class="slide" data-sec="plugins">
+  <div class="inner">
+    <p class="eyebrow">Plugins · When</p>
+    <h2>When a plugin is the right container</h2>
+    <ul class="pts">
+      <li><b>The same setup keeps getting rebuilt.</b> If a workflow's skills and servers are being copy-pasted between people or repos, that's a plugin asking to exist.</li>
+      <li><b>You want a workflow standardized,</b> not just available — the plugin's hooks and commands make the right way the easy way.</li>
+      <li><b>You maintain a product others integrate with:</b> shipping an official plugin beats every team writing its own glue.</li>
+      <li><b>Not yet worth it:</b> a single personal skill or one MCP server — install those directly and skip the packaging until sharing demands it.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 45 · CONFIG DIVIDER ============ -->
+<section class="slide divider" data-sec="config">
+  <div class="inner">
+    <p class="secnum">07 / 07</p>
+    <h1>Claude Config</h1>
+    <div class="rule"></div>
+    <p class="lede">The governance layer: settings, memory files, permissions, and hooks that decide how all the other layers behave.</p>
+  </div>
+</section>
+
+<!-- ============ 46 ============ -->
+<section class="slide" data-sec="config">
+  <div class="inner">
+    <p class="eyebrow">Config · Settings</p>
+    <h2>Settings cascade: enterprise → project → user</h2>
+    <div class="stack">
+      <div class="bar tint"><span><b>Managed policy</b> — org-enforced, can't be overridden</span><span class="pct">highest</span></div>
+      <div class="bar"><span><b>.claude/settings.local.json</b> — your personal per-project tweaks (gitignored)</span><span class="pct">↑</span></div>
+      <div class="bar"><span><b>.claude/settings.json</b> — the project's shared, committed settings</span><span class="pct">↑</span></div>
+      <div class="bar"><span><b>~/.claude/settings.json</b> — your defaults across all projects</span><span class="pct">base</span></div>
+    </div>
+    <ul class="pts">
+      <li><b>More specific wins.</b> Permissions, env vars, hooks, and model choice merge down this chain.</li>
+      <li><b>Committed project settings are the team lever:</b> one file makes every teammate's Claude behave consistently in this repo.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 47 ============ -->
+<section class="slide" data-sec="config">
+  <div class="inner">
+    <p class="eyebrow">Config · Memory files</p>
+    <h2>CLAUDE.md: standing instructions, loaded every session</h2>
+    <ul class="pts">
+      <li><b>What it is:</b> a Markdown file of instructions and facts injected into context at startup — build commands, conventions, hard rules ("never disable a CI check").</li>
+      <li><b>Where it lives:</b> <code style="font-family:var(--mono); font-size:.85em">~/.claude/CLAUDE.md</code> for personal global rules; repo-root <code style="font-family:var(--mono); font-size:.85em">CLAUDE.md</code> for the project; subdirectory files for area-specific guidance.</li>
+      <li><b>It spends context every single session</b> — that's its power and its cost. Keep it to what's always relevant; push occasional procedures into skills (level-loaded) instead.</li>
+      <li><b>Auto-memory complements it:</b> Claude can maintain its own directory of small fact files across sessions — learned preferences and project state, indexed and editable.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 48 ============ -->
+<section class="slide" data-sec="config">
+  <div class="inner">
+    <p class="eyebrow">Config · Permissions</p>
+    <h2>Permissions: allow, ask, deny — per tool, per pattern</h2>
+    <pre class="code">{
+  <span class="k">"permissions"</span>: {
+    <span class="k">"allow"</span>: [<span class="s">"Bash(npm test:*)"</span>, <span class="s">"Bash(git diff:*)"</span>, <span class="s">"Read(**)"</span>],
+    <span class="k">"ask"</span>:   [<span class="s">"Bash(git push:*)"</span>],
+    <span class="k">"deny"</span>:  [<span class="s">"Read(.env*)"</span>, <span class="s">"Bash(rm -rf:*)"</span>]
+  }
+}</pre>
+    <ul class="pts">
+      <li><b>Rules are patterns over tool calls</b> — command prefixes, file globs, MCP tool names. Deny always beats allow.</li>
+      <li><b>Modes set the day's stance:</b> normal (ask for unknowns), plan mode (read-only until a plan is approved), auto-accept edits, sandboxed bash — autonomy tuned to risk.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 49 ============ -->
+<section class="slide" data-sec="config">
+  <div class="inner">
+    <p class="eyebrow">Config · Hooks &amp; environment</p>
+    <h2>Hooks make behavior guaranteed, not requested</h2>
+    <ul class="pts">
+      <li><b>Hooks are your scripts on harness events</b> — PreToolUse, PostToolUse, Stop, and more. A hook can block a tool call, reformat a file after every edit, or notify you when a run finishes.</li>
+      <li><b>The key property: hooks are enforced by the harness,</b> not remembered by the model. "Always run the formatter" as a hook is a guarantee; as a prompt line it's a hope.</li>
+      <li><b>The rest of the surface:</b> env vars per project, default model selection, output styles, status line, keybindings — plus slash commands as user-invoked entry points into all of it.</li>
+    </ul>
+    <p class="note"><b>Pattern:</b> anything phrased "every time X, do Y" belongs in a hook, not in a prompt.</p>
+  </div>
+</section>
+
+<!-- ============ 50 · CLOSE ============ -->
+<section class="slide" data-sec="intro">
+  <div class="inner">
+    <p class="eyebrow">Closing</p>
+    <h2>The stack, assembled</h2>
+    <ul class="pts">
+      <li><b>Context is the budget</b> — every other layer exists partly to spend it well.</li>
+      <li><b>Tools give capability; MCP standardizes where they come from.</b></li>
+      <li><b>Agents are tools-in-a-loop with verification</b> — trustworthy exactly to the degree their work can be checked and their permissions are scoped.</li>
+      <li><b>Skills load know-how on demand; plugins ship it; config governs it.</b></li>
+    </ul>
+    <div class="panel" style="margin-top:22px">
+      <p class="big">Build the smallest thing that works, verify relentlessly, and let the model decide only what code can't. The rest is <em>context engineering</em>.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="prog" id="prog"></div>
+<footer class="hud">
+  <span class="sec" id="secname">Intro</span>
+  <div class="navbtns">
+    <button id="prev" aria-label="Previous slide">←</button>
+    <button id="next" aria-label="Next slide">→</button>
+  </div>
+  <div class="dots" id="dots" role="tablist" aria-label="Sections"></div>
+  <span class="hint">← → navigate · Home/End jump</span>
+  <span class="count" id="count">1 / 50</span>
+</footer>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var N = slides.length;
+  var secNames = {intro:'Intro', context:'01 · Context Windows', tools:'02 · Tools', mcp:'03 · MCP',
+                  agents:'04 · Agents', skills:'05 · Skills', plugins:'06 · Plugins', config:'07 · Claude Config'};
+  var cur = 0;
+  var hash = parseInt(location.hash.slice(1), 10);
+  if (hash >= 1 && hash <= N) cur = hash - 1;
+
+  // section dots: one per divider/intro boundary
+  var dotsEl = document.getElementById('dots');
+  var sections = [];
+  slides.forEach(function(s, i){
+    var sec = s.getAttribute('data-sec');
+    if (!sections.length || sections[sections.length-1].sec !== sec) sections.push({sec:sec, start:i});
+  });
+  sections.forEach(function(s){
+    var b = document.createElement('button');
+    b.title = secNames[s.sec] || s.sec;
+    b.setAttribute('aria-label', b.title);
+    b.addEventListener('click', function(){ go(s.start); });
+    b.style.setProperty('--acc', getComputedStyle(document.documentElement).getPropertyValue('--c-' + s.sec) || '');
+    dotsEl.appendChild(b);
+    s.btn = b;
+  });
+
+  function go(i){
+    if (i < 0) i = 0;
+    if (i >= N) i = N - 1;
+    slides[cur].classList.remove('active');
+    cur = i;
+    slides[cur].classList.add('active');
+    var sec = slides[cur].getAttribute('data-sec');
+    document.getElementById('secname').textContent = secNames[sec] || sec;
+    document.getElementById('secname').style.color = getComputedStyle(slides[cur]).getPropertyValue('--acc');
+    document.getElementById('count').textContent = (cur+1) + ' / ' + N;
+    document.getElementById('prog').style.width = ((cur+1) / N * 100) + '%';
+    sections.forEach(function(s, idx){
+      var next = sections[idx+1] ? sections[idx+1].start : N;
+      s.btn.classList.toggle('on', cur >= s.start && cur < next);
+    });
+    if (history.replaceState) history.replaceState(null, '', '#' + (cur+1));
+    slides[cur].scrollTop = 0;
+  }
+
+  document.getElementById('prev').addEventListener('click', function(){ go(cur-1); });
+  document.getElementById('next').addEventListener('click', function(){ go(cur+1); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(cur+1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(cur-1); }
+    else if (e.key === 'Home') { e.preventDefault(); go(0); }
+    else if (e.key === 'End') { e.preventDefault(); go(N-1); }
+  });
+
+  // touch swipe
+  var tx = null;
+  document.addEventListener('touchstart', function(e){ tx = e.touches[0].clientX; }, {passive:true});
+  document.addEventListener('touchend', function(e){
+    if (tx === null) return;
+    var dx = e.changedTouches[0].clientX - tx;
+    if (dx < -50) go(cur+1); else if (dx > 50) go(cur-1);
+    tx = null;
+  }, {passive:true});
+
+  go(cur);
+})();
+</script>
