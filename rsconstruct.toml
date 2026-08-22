@@ -32,6 +32,10 @@ formats = [ "pdf" ]
 src_dirs = ["marp/courses"]
 output_dir = "out/chapters/courses"
 timeout_secs = 120
+# marp spawns Chromium per job, so cap its concurrency. This used to be
+# --pset marp.max_jobs=2 in build.yml — kept here so the workflow file can
+# stay identical across repos.
+max_jobs = 2
 
 # Standalone lectures have no united PDF; the site links them individually.
 [processor.marp.lectures]
@@ -39,6 +43,8 @@ formats = [ "pdf" ]
 src_dirs = ["marp/lectures"]
 output_dir = "_site/marp/lectures"
 timeout_secs = 120
+# See the max_jobs note on marp.courses.
+max_jobs = 2
 
 [processor.ruff]
 src_dirs = ["scripts"]
@@ -91,3 +97,6 @@ output_dirs = [ "_site" ]
 [processor.terms]
 src_dirs = [ "marp" ]
 enabled = false
+
+[pages]
+dir = "_site"

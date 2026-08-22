@@ -5,20 +5,20 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  pages: write
-  id-token: write
-  # needed to delete stale pages artifacts on re-run
-  actions: write
-
 jobs:
   build:
     runs-on: ubuntu-24.04
-    environment:
-      name: github-pages
+    permissions:
+      contents: read
+      # needed by the stale-pages-artifact cleanup below
+      actions: write
+    outputs:
+      pages-dir: ${{ steps.pages.outputs.dir }}
     steps:
     - uses: actions/checkout@v6
       with:
+        # A no-op in repos without submodules, so every repo shares this
+        # exact file.
         submodules: recursive
     - uses: actions/cache@v5
       with:
@@ -35,7 +35,6 @@ jobs:
         gh release download --repo veltzer/rsconstruct --pattern 'rsconstruct-linux-x86_64' --output /usr/local/bin/rsconstruct
         chmod +x /usr/local/bin/rsconstruct
         rsconstruct version
-        rsconstruct processors config
       env:
         GH_TOKEN: ${{ github.token }}
     - name: install
@@ -43,13 +42,20 @@ jobs:
         rsconstruct tools install-deps
         rsconstruct tools install
     - name: build
-      run: rsconstruct build --pset marp.max_jobs=2
+      run: rsconstruct build
     - name: status
       run: rsconstruct status
+    - name: pages dir
+      # Empty when [pages] is not configured in rsconstruct.toml; the upload
+      # step and the deploy job skip on empty, which is what lets Pages and
+      # non-Pages repos share this exact file.
+      id: pages
+      run: echo "dir=$(rsconstruct pages dir)" >> "$GITHUB_OUTPUT"
     - name: delete stale pages artifact
-      # Artifacts survive re-run attempts, and deploy-pages fails hard when it
-      # finds more than one artifact named "github-pages" in the run. Delete
-      # any leftover from a previous attempt before uploading a fresh one.
+      # Artifacts survive re-run attempts, and both the upload and
+      # deploy-pages fail hard when a "github-pages" artifact already exists
+      # in the run. Delete any leftover from a previous attempt first.
+      if: steps.pages.outputs.dir != ''
       run: |
         gh api --paginate "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" \
           --jq '.artifacts[] | select(.name == "github-pages") | .id' |
@@ -60,4 +66,20 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
     - uses: actions/upload-pages-artifact@v5
+      if: steps.pages.outputs.dir != ''
+      with:
+        path: ${{ steps.pages.outputs.dir }}
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.pages-dir != ''
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
     - uses: actions/deploy-pages@v5
+      id: deployment
