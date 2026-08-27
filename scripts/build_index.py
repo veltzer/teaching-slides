@@ -23,7 +23,7 @@ import json
 import os
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -265,7 +265,7 @@ def build_info_html() -> str:
     sha = os.environ.get("GITHUB_SHA", "") or _git("rev-parse", "HEAD")
     sha_short = sha[:12] if sha else "unknown"
 
-    build_date = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    build_date = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
 
     run_id = os.environ.get("GITHUB_RUN_ID", "")
     server = os.environ.get("GITHUB_SERVER_URL", "https://github.com")
