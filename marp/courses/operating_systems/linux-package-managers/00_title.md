@@ -4,7 +4,6 @@ tags:
   - infrastructure:unix
   - practices:command-line
   - audiences:sysadmin
-  - audiences:devops
 level: intermediate
 category: operating-systems
 duration_hours: 16

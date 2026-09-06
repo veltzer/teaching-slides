@@ -1,7 +1,6 @@
 ---
 tags:
   - infrastructure:linux
-  - audiences:developers
 level: intermediate
 category: operating-systems
 audience:
