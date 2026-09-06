@@ -21,6 +21,7 @@ audience:
 ![domain_hijacking_attack_flow](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/domain_hijacking_attack_flow.svg)
 
 ---
+
 ## What is Domain Hijacking
 
 - Domain hijacking is the act of illegally transferring or redirecting a domain name to a different destination
@@ -29,11 +30,13 @@ audience:
 - One of the most damaging attacks for businesses, as it can intercept all web and email traffic
 
 ---
+
 ## Domain Hijacking vs DNS Hijacking
 
 ![domain_hijacking_vs_dns_hijacking](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/domain_hijacking_vs_dns_hijacking.svg)
 
 ---
+
 ## Types of Domain Hijacking
 
 | Type                        | Method                                    | Difficulty |
@@ -67,6 +70,7 @@ audience:
 ![dns_hijacking_methods](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/dns_hijacking_methods.svg)
 
 ---
+
 ## DNS Hijacking Techniques
 
 ### 1. Local DNS Hijacking
@@ -137,6 +141,7 @@ whois example.com | grep -i "expir"
 ## Subdomain Takeover: Comparison
 
 **Vulnerable services for subdomain takeover:**
+
 | Service          | DNS Record Type | Fingerprint (when unclaimed)     |
 |------------------|-----------------|----------------------------------|
 | GitHub Pages     | CNAME           | "There isn't a GitHub Pages site"|
@@ -147,6 +152,7 @@ whois example.com | grep -i "expir"
 | Fastly           | CNAME           | "Fastly error: unknown domain"   |
 
 ---
+
 ## Detecting Subdomain Takeover Vulnerabilities
 
 ```bash
@@ -174,6 +180,7 @@ nuclei -l subdomains.txt -t takeovers/
 ```
 
 ---
+
 ## Monitoring Tools and Services
 
 | Tool / Service       | Type           | Purpose                              |
@@ -203,6 +210,7 @@ diff /tmp/ns_baseline.txt /tmp/ns_current.txt
 ```
 
 ---
+
 ## Domain Lock Features
 
 ### Registry Lock (Highest Protection)
@@ -264,11 +272,13 @@ dig DS example.com @a.gtld-servers.net +short
 ![registrar_security_measures](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/registrar_security_measures.svg)
 
 ---
+
 ## Registrar Security Checklist
 
 ![registrar_security_checklist](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/registrar_security_checklist.svg)
 
 ---
+
 ## DNS Monitoring and Alerting
 
 ```bash
@@ -300,6 +310,7 @@ fi
 ```
 
 ---
+
 ## Real-World Domain Hijacking Incidents
 
 | Incident                    | Year | Impact                                    |
@@ -313,6 +324,7 @@ fi
 | Squarespace mass hijack     | 2024 | Domains migrated from Google Domains      |
 
 ---
+
 ## Incident Response for Domain Hijacking
 
 1. **Detect**: Monitor for unauthorized DNS/WHOIS changes
@@ -326,6 +338,7 @@ fi
 1. **Post-incident**: Strengthen registrar security, enable registry lock
 
 ---
+
 ## Key Takeaways
 
 - Domain hijacking can completely redirect your web and email traffic

@@ -8,9 +8,11 @@ audience:
   - audiences:security
 
 ---
+
 # Introduction to Network Security
 
 ---
+
 ## What This Chapter Covers
 
 - What network security is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What Network Security Is
 
 - Protecting data and systems on networks
@@ -28,6 +31,7 @@ audience:
 - Continuous, not one-time
 
 ---
+
 ## Why It Matters
 
 - Networks are the front door
@@ -36,6 +40,7 @@ audience:
 - Outages and breaches cost real money
 
 ---
+
 ## Threat Model
 
 - Who might attack
@@ -44,11 +49,13 @@ audience:
 - What they would do once in
 
 ---
+
 ## Threat Model Inputs
 
 ![threat_model](svg/courses/networking/network-security/01_introduction/threat_model.svg)
 
 ---
+
 ## Common Adversaries
 
 - Opportunistic scanners
@@ -57,6 +64,7 @@ audience:
 - Nation-state actors
 
 ---
+
 ## Common Attack Goals
 
 - Steal data
@@ -65,6 +73,7 @@ audience:
 - Use you as a stepping stone
 
 ---
+
 ## Defense In Depth
 
 - No single control suffices
@@ -73,11 +82,13 @@ audience:
 - Failure of one is not failure of all
 
 ---
+
 ## Defense In Depth Visualized
 
 ![defense_in_depth](svg/courses/networking/network-security/01_introduction/defense_in_depth.svg)
 
 ---
+
 ## Network Layers
 
 - Physical
@@ -87,6 +98,7 @@ audience:
 - Application
 
 ---
+
 ## Where Controls Live
 
 - At the perimeter
@@ -95,6 +107,7 @@ audience:
 - Inside the application
 
 ---
+
 ## Zero Trust
 
 - Trust no network
@@ -103,6 +116,7 @@ audience:
 - Encrypt every connection
 
 ---
+
 ## Compliance Drivers
 
 - PCI for payments
@@ -111,6 +125,7 @@ audience:
 - Many sector-specific rules
 
 ---
+
 ## Logging And Visibility
 
 - You cannot secure what you cannot see
@@ -119,6 +134,7 @@ audience:
 - Practice search
 
 ---
+
 ## Course Outline
 
 - Perimeter and segmentation
@@ -128,6 +144,7 @@ audience:
 - Cloud network security
 
 ---
+
 ## Common Beginner Mistakes
 
 - Treating compliance as security

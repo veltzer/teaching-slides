@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Caching at the Gateway
 
 ---
+
 ## What This Chapter Covers
 
 - Why cache at the gateway
@@ -21,6 +23,7 @@ audience:
 - Pitfalls
 
 ---
+
 ## Why Cache At The Gateway
 
 - Faster responses for repeated requests
@@ -30,11 +33,13 @@ audience:
 - The lowest-hanging perf optimisation
 
 ---
+
 ## Cache Layers
 
 ![cache_layers](svg/courses/architecting/api-gateway-patterns/09_caching/cache_layers.svg)
 
 ---
+
 ## What To Cache
 
 - GET requests (idempotent, side-effect-free)
@@ -44,6 +49,7 @@ audience:
 - Avoid: user-specific data without per-user cache keys
 
 ---
+
 ## HTTP Caching Headers
 
 - `Cache-Control: public, max-age=60`
@@ -53,6 +59,7 @@ audience:
 - The standard; works with browsers, CDNs, gateways
 
 ---
+
 ## Cache-Control Directives
 
 - `public`: anyone can cache
@@ -63,6 +70,7 @@ audience:
 - `s-maxage=N`: shared cache TTL (overrides max-age for CDNs)
 
 ---
+
 ## ETag-Based Revalidation
 
 - Server returns ETag with response
@@ -71,6 +79,7 @@ audience:
 - Saves bandwidth even when data hasn't changed
 
 ---
+
 ## Cache Invalidation
 
 - The hardest problem in caching
@@ -80,11 +89,13 @@ audience:
 - Versioned URLs: `/v1/users` &#8594; `/v2/users` (effectively cache bust)
 
 ---
+
 ## Invalidation Knobs
 
 ![cache_invalidation](svg/courses/architecting/api-gateway-patterns/09_caching/cache_invalidation.svg)
 
 ---
+
 ## TTL Strategy
 
 - Long TTL: fewer backend hits; staler data
@@ -93,6 +104,7 @@ audience:
 - Health checks: short TTL or no cache
 
 ---
+
 ## Cache Keys
 
 - Default: URL + method + relevant headers (Authorization, Accept)
@@ -101,6 +113,7 @@ audience:
 - Critical for correctness
 
 ---
+
 ## Per-Route Caching
 
 ```yaml
@@ -117,6 +130,7 @@ routes:
 - Match TTL to data volatility
 
 ---
+
 ## CDN Integration
 
 - Gateway emits proper headers; CDN does the work
@@ -126,6 +140,7 @@ routes:
 - Gateway is the origin
 
 ---
+
 ## Cache Hit / Miss Metrics
 
 - Track: cache hit ratio per route
@@ -134,6 +149,7 @@ routes:
 - Drives: TTL tuning, what to cache more aggressively
 
 ---
+
 ## Negative Caching
 
 - Cache 404s briefly (a few seconds)
@@ -142,6 +158,7 @@ routes:
 - TTL much shorter than positive cache
 
 ---
+
 ## Stale-While-Revalidate
 
 - `Cache-Control: max-age=60, stale-while-revalidate=300`
@@ -150,6 +167,7 @@ routes:
 - Trade-off: slight staleness for low latency
 
 ---
+
 ## Cache Stampede
 
 - Cache expires; many clients request the same key simultaneously
@@ -158,6 +176,7 @@ routes:
 - Most CDNs handle this automatically
 
 ---
+
 ## Common Caching Mistakes
 
 - Caching user-specific data without `Vary: Authorization`

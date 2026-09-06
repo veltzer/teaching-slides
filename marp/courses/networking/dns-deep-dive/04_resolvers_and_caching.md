@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Recursive Resolvers and Caching
 
 ---
+
 ## What This Chapter Covers
 
 - How resolvers walk the hierarchy
@@ -21,6 +23,7 @@ audience:
 - EDNS and resolver selection
 
 ---
+
 ## What a Resolver Does
 
 - Receives a query from a stub
@@ -30,16 +33,19 @@ audience:
 - Handles retries, fallbacks, EDNS extensions
 
 ---
+
 ## Recursive Resolution
 
 ![recursive_resolution](svg/courses/networking/dns-deep-dive/04_resolvers_and_caching/recursive_resolution.svg)
 
 ---
+
 ## TTL Strategy
 
 ![ttl_strategy](svg/courses/networking/dns-deep-dive/04_resolvers_and_caching/ttl_strategy.svg)
 
 ---
+
 ## Cache: The Critical Optimization
 
 - Without cache: every query walks the hierarchy
@@ -49,11 +55,13 @@ audience:
 - Tuning the cache is core resolver tuning
 
 ---
+
 ## Cache Behavior Visualized
 
 ![cache_flow](svg/courses/networking/dns-deep-dive/04_resolvers/cache_flow.svg)
 
 ---
+
 ## Positive Caching
 
 - Cache successful responses
@@ -63,6 +71,7 @@ audience:
 - All respect the TTL
 
 ---
+
 ## Negative Caching
 
 - Cache "no such record" responses
@@ -72,6 +81,7 @@ audience:
 - Reduces load when scanning bad names
 
 ---
+
 ## Cache Poisoning
 
 - Attacker tricks the resolver into accepting bad data
@@ -81,6 +91,7 @@ audience:
 - Active defense remains essential
 
 ---
+
 ## Source Port Randomization
 
 - Old DNS used predictable source ports
@@ -90,6 +101,7 @@ audience:
 - Massive defense improvement; not perfect
 
 ---
+
 ## Unbound
 
 - Validating, caching, recursive resolver
@@ -99,6 +111,7 @@ audience:
 - Default in many distros and projects
 
 ---
+
 ## Configuring Unbound
 
 ```output
@@ -115,6 +128,7 @@ server:
 - Pair with `unbound-anchor` for DNSSEC keys
 
 ---
+
 ## BIND as Recursive Resolver
 
 - The original DNS server
@@ -124,6 +138,7 @@ server:
 - Often overkill if you only need recursion (use Unbound)
 
 ---
+
 ## Public Resolvers
 
 - 8.8.8.8 / 8.8.4.4 — Google
@@ -133,6 +148,7 @@ server:
 - Different privacy, filtering, performance trade-offs
 
 ---
+
 ## Comparing Public Resolvers
 
 - Google — fast, neutral
@@ -142,6 +158,7 @@ server:
 - Pick based on privacy and feature needs
 
 ---
+
 ## Should You Run Your Own?
 
 - Pros: privacy, control, optimization for your apps
@@ -151,6 +168,7 @@ server:
 - Critical infrastructure: own + redundancy
 
 ---
+
 ## Resolver Selection
 
 - Stubs configured with one or more
@@ -160,6 +178,7 @@ server:
 - Visibility: who queries what
 
 ---
+
 ## EDNS(0)
 
 - Extension Mechanisms for DNS
@@ -169,6 +188,7 @@ server:
 - The "DNS doesn't work" cause more often than you think
 
 ---
+
 ## EDNS Client Subnet (ECS)
 
 - Resolvers tell auth servers the client's IP prefix
@@ -178,6 +198,7 @@ server:
 - Trade-off: better routing vs more privacy exposure
 
 ---
+
 ## Forwarders
 
 - Resolver passes queries to another resolver
@@ -187,6 +208,7 @@ server:
 - Adds a hop; affects latency and trust
 
 ---
+
 ## DNS Views (Split-Horizon)
 
 - Different answers for different clients
@@ -196,6 +218,7 @@ server:
 - Foundation for "intranet" DNS
 
 ---
+
 ## Query Logging
 
 - Resolvers can log every query
@@ -205,6 +228,7 @@ server:
 - Compliance-friendly retention policies
 
 ---
+
 ## Query Minimization
 
 - Old: send full query name to root
@@ -214,6 +238,7 @@ server:
 - Still rolling out
 
 ---
+
 ## Aggressive NSEC
 
 - Use DNSSEC NSEC records to deduce non-existence
@@ -223,6 +248,7 @@ server:
 - DNSSEC adds value beyond authentication
 
 ---
+
 ## Resolver Performance Tuning
 
 - Cache size: bigger is better up to a point
@@ -232,6 +258,7 @@ server:
 - Benchmark with `dnsperf`
 
 ---
+
 ## Troubleshooting Resolvers
 
 - `dig +trace` — manual recursive walk
@@ -241,6 +268,7 @@ server:
 - Verify EDNS support per network path
 
 ---
+
 ## Common Pitfalls
 
 - Misconfigured forwarder loops
@@ -250,6 +278,7 @@ server:
 - Stale cache after a TTL drop wasn't honored
 
 ---
+
 ## Best Practices
 
 - Run your own internal resolver
@@ -259,6 +288,7 @@ server:
 - Test from multiple network paths
 
 ---
+
 ## Summary
 
 - Resolvers walk the hierarchy and cache aggressively

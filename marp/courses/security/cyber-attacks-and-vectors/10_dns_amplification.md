@@ -15,6 +15,7 @@ audience:
 # DNS Amplification Attacks
 
 ---
+
 ## How DNS Amplification Works
 
 1. Attacker finds open DNS resolvers on the internet
@@ -23,6 +24,7 @@ audience:
 1. With many open resolvers, amplified traffic overwhelms victim's resources
 
 ---
+
 ## Amplification Factor
 
 - Attacker's query is small (e.g., few bytes)
@@ -31,11 +33,13 @@ audience:
 - Generates massive traffic with little bandwidth from attacker
 
 ---
+
 ## Diagram
 
 ![diagram](svg/courses/security/cyber-attacks-and-vectors/10_dns_amplification/diagram.svg)
 
 ---
+
 ## Demo: DNS Trace
 
 ```bash
@@ -45,6 +49,7 @@ dig . NS +trace
 - Look at the large response size compared to the small query
 
 ---
+
 ## Impact of DNS Amplification
 
 - Overwhelms victim's network and server resources
@@ -53,6 +58,7 @@ dig . NS +trace
 - Can target any system or network on the internet
 
 ---
+
 ## Mitigating DNS Amplification
 
 - Disable open DNS resolvers (only respond to legitimate sources)

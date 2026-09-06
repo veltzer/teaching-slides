@@ -7,14 +7,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Case Study: News Feed
 
 ---
+
 ## Feed Design
 
 ![feed_design](svg/courses/architecting/system-design/10_case_study_news_feed/feed_design.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Requirements
@@ -26,6 +29,7 @@ audience:
 - Scale
 
 ---
+
 ## Requirements
 
 - Users post; followers see in feed
@@ -35,6 +39,7 @@ audience:
 - 1B users
 
 ---
+
 ## Two Approaches
 
 - **Push (fan-out on write)**: post to feed of every follower at write time
@@ -42,6 +47,7 @@ audience:
 - Trade-offs for each
 
 ---
+
 ## Push Model
 
 - User A posts &#8594; insert into feed table for each follower
@@ -50,6 +56,7 @@ audience:
 - Best for: low-celebrity, high-read
 
 ---
+
 ## Pull Model
 
 - Read time: query "what did all my followings post recently?"
@@ -57,6 +64,7 @@ audience:
 - Best for: highly-active accounts, fewer reads
 
 ---
+
 ## Hybrid
 
 - Default: push
@@ -65,6 +73,7 @@ audience:
 - Used by Twitter, Instagram
 
 ---
+
 ## Storage
 
 - Posts: write-once; partition by user
@@ -73,6 +82,7 @@ audience:
 - Hot users: in-memory (Redis)
 
 ---
+
 ## Feed Generation
 
 - Active users: precomputed (Redis)
@@ -80,6 +90,7 @@ audience:
 - TTL: 7-30 days; expire idle users
 
 ---
+
 ## Ranking
 
 - Chronological: simplest
@@ -88,6 +99,7 @@ audience:
 - The hard, valuable part
 
 ---
+
 ## Ranking Inputs
 
 - Recency
@@ -98,6 +110,7 @@ audience:
 - Combine: ML model
 
 ---
+
 ## Caching
 
 - Top-of-feed: in-memory
@@ -106,6 +119,7 @@ audience:
 - Hit rate critical
 
 ---
+
 ## Real-Time Updates
 
 - WebSocket / SSE: push new posts to active clients
@@ -113,6 +127,7 @@ audience:
 - Match to user expectation
 
 ---
+
 ## Scale
 
 - 1B users * 100 reads/day = 100B feed reads/day
@@ -121,6 +136,7 @@ audience:
 - Fan-out pipeline: massive Kafka deployment
 
 ---
+
 ## Failure Modes
 
 - Cache miss storm: gradual warm-up
@@ -129,6 +145,7 @@ audience:
 - Most failures: degrade to "good enough"
 
 ---
+
 ## Cost Considerations
 
 - Storage: petabytes for posts + feeds
@@ -137,6 +154,7 @@ audience:
 - Can be the biggest spend at scale
 
 ---
+
 ## Common Discussion Points
 
 - "How do celebrities work?" — pull on read; cache aggressively

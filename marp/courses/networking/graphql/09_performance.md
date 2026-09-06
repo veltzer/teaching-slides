@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Performance
 
 ---
+
 ## What This Chapter Covers
 
 - N+1 problem
@@ -20,6 +22,7 @@ audience:
 - Complexity analysis
 
 ---
+
 ## N+1 Problem
 
 - Query for posts, then per post: query author
@@ -28,16 +31,19 @@ audience:
 - Classic GraphQL pitfall
 
 ---
+
 ## Performance Levers
 
 ![perf_levers](svg/courses/networking/graphql/09_performance/perf_levers.svg)
 
 ---
+
 ## Caching Layers
 
 ![caching_layers](svg/courses/networking/graphql/09_performance/caching_layers.svg)
 
 ---
+
 ## DataLoader
 
 - Batches keys within a tick
@@ -46,6 +52,7 @@ audience:
 - Standard solution
 
 ---
+
 ## Sample DataLoader
 
 ```javascript
@@ -60,6 +67,7 @@ ctx.userLoader.load(post.authorId);
 - Batched DB call
 
 ---
+
 ## Per-Request Cache
 
 - DataLoader cache scoped to one request
@@ -67,6 +75,7 @@ ctx.userLoader.load(post.authorId);
 - Don't reuse across requests
 
 ---
+
 ## Response Caching
 
 - Apollo Cache Control directives
@@ -74,6 +83,7 @@ ctx.userLoader.load(post.authorId);
 - CDN integration with persisted queries
 
 ---
+
 ## Persisted Queries
 
 - Pre-register query strings; send hash
@@ -82,6 +92,7 @@ ctx.userLoader.load(post.authorId);
 - CDN-friendly
 
 ---
+
 ## CDN
 
 - GET with persisted query hash
@@ -89,6 +100,7 @@ ctx.userLoader.load(post.authorId);
 - Massive perf win for read-heavy
 
 ---
+
 ## Query Complexity Analysis
 
 - Score each field
@@ -97,6 +109,7 @@ ctx.userLoader.load(post.authorId);
 - Standard plugins
 
 ---
+
 ## Depth Limit
 
 - Reject deeply nested queries
@@ -104,6 +117,7 @@ ctx.userLoader.load(post.authorId);
 - Easy to add
 
 ---
+
 ## Server Tracing
 
 - Apollo Tracing extension
@@ -111,6 +125,7 @@ ctx.userLoader.load(post.authorId);
 - Find slow paths
 
 ---
+
 ## Database Optimisation
 
 - Indexes on join keys
@@ -118,6 +133,7 @@ ctx.userLoader.load(post.authorId);
 - Project only needed columns
 
 ---
+
 ## Avoid Over-Fetching at the DB
 
 - Field selection: GraphQL knows what is needed
@@ -125,6 +141,7 @@ ctx.userLoader.load(post.authorId);
 - Or: dedicated services per type
 
 ---
+
 ## Common Performance Mistakes
 
 - Skipping DataLoader; n+1 in production

@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Common Anti-Patterns
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![review_traps](svg/courses/development_methodologies/code-review-best-practices/12_common_anti_patterns/review_traps.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Rubber stamping
@@ -27,6 +29,7 @@ audience:
 - Author and reviewer anti-patterns
 
 ---
+
 ## Rubber Stamping
 
 - "LGTM" with no actual reading
@@ -36,11 +39,13 @@ audience:
 - Often a symptom of overload or lack of authority
 
 ---
+
 ## Anti-Patterns
 
 ![anti_patterns](svg/courses/development_methodologies/code-review-best-practices/12_common_anti_patterns/anti_patterns.svg)
 
 ---
+
 ## How Rubber Stamping Happens
 
 - One person reviews 10 PRs an afternoon
@@ -50,6 +55,7 @@ audience:
 - The author isn't surprised either
 
 ---
+
 ## Fixing Rubber Stamping
 
 - Smaller PRs make real reviews tractable
@@ -59,6 +65,7 @@ audience:
 - Cultural expectation: reviews are work, not a formality
 
 ---
+
 ## Nitpick-Only Reviews
 
 - The reviewer comments on whitespace, naming, no logic
@@ -68,6 +75,7 @@ audience:
 - Or: the reviewer is avoiding harder topics
 
 ---
+
 ## Fixing Nitpick-Only
 
 - Set expectations: substance first, style second
@@ -77,6 +85,7 @@ audience:
 - Make tone a team value: "be helpful, not pedantic"
 
 ---
+
 ## Gate-Keeping
 
 - One reviewer who blocks everything
@@ -86,6 +95,7 @@ audience:
 - Authors lose initiative; queue grows behind the gate
 
 ---
+
 ## Fixing Gate-Keeping
 
 - Multiple reviewers can approve
@@ -95,6 +105,7 @@ audience:
 - Coaching helps; firing rarely
 
 ---
+
 ## Review Bottlenecks
 
 - Two people, 30 PRs in their queue, never enough time
@@ -104,6 +115,7 @@ audience:
 - Review is part of the work, not a tax on it
 
 ---
+
 ## Overly Large PRs
 
 - Half the codebase changed in one PR
@@ -113,6 +125,7 @@ audience:
 - Solution: split (covered in chapter 7)
 
 ---
+
 ## "I'll Fix It Later" PRs
 
 - TODO comments that never become tickets
@@ -122,6 +135,7 @@ audience:
 - Or: don't merge until cleaned up
 
 ---
+
 ## "Just A Quick Fix"
 
 - A bug fix that adds 200 lines
@@ -131,6 +145,7 @@ audience:
 - Solution: read the diff, not the description
 
 ---
+
 ## Author Anti-Pattern: Defensive Replies
 
 - Every comment gets a multi-paragraph defence
@@ -140,6 +155,7 @@ audience:
 - Fix: receive feedback gracefully (chapter 6)
 
 ---
+
 ## Author Anti-Pattern: Friend-Shopping
 
 - "Bob always approves; let me ask Bob"
@@ -149,6 +165,7 @@ audience:
 - Cultural: this is gaming; address the underlying issue
 
 ---
+
 ## Reviewer Anti-Pattern: Drive-By Bombs
 
 - Comment days after approval
@@ -158,6 +175,7 @@ audience:
 - Fix: comment promptly; once approved, move on
 
 ---
+
 ## Reviewer Anti-Pattern: Scope Creep
 
 - "While you're here, can you also fix Y?"
@@ -167,6 +185,7 @@ audience:
 - Keep PRs focused
 
 ---
+
 ## Team Anti-Pattern: No Reviews
 
 - "We trust each other"
@@ -176,6 +195,7 @@ audience:
 - The most expensive shortcut
 
 ---
+
 ## Team Anti-Pattern: All Reviews Are Equal
 
 - Hot patches reviewed with the same rigour as feature work
@@ -185,6 +205,7 @@ audience:
 - Tier your process
 
 ---
+
 ## Common Mistakes
 
 - Approving without reading

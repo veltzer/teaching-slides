@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Future of Assembly Programming
 
 ---
@@ -96,6 +97,7 @@ aesenc xmm0, xmm1   ; AES encryption round
 - Foundation for systems programming
 
 ---
+
 ## WebAssembly (Wasm)
 - Binary instruction format for stack-based VM
 - Designed for client and server-side web programming
@@ -121,6 +123,7 @@ Example:
 - Often uses low-level optimization techniques
 
 ---
+
 ## Assembly in Heterogeneous Computing
 - CPU-GPU hybrid systems
 - FPGA programming
@@ -136,6 +139,7 @@ __global__ void add(int *a, int *b, int *c) {
 ```
 
 ---
+
 ## Optimizing for Modern Hardware
 - Instruction pipelining
 - Branch prediction
@@ -156,6 +160,7 @@ Example of loop unrolling:
 ```
 
 ---
+
 ## Security Considerations
 - Control-flow Integrity (CFI)
 - Return-Oriented Programming (ROP) defenses
@@ -174,6 +179,7 @@ check_target:
 ```
 
 ---
+
 ## Assembly in IoT and Embedded Systems
 - Resource-constrained devices
 - Real-time systems

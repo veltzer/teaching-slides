@@ -10,9 +10,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Text Generation and Decoding
 
 ---
+
 ## What This Chapter Covers
 
 - The decoding step that turns a language model into a text generator
@@ -23,6 +25,7 @@ audience:
 - Evaluating generated text when there is no single right answer
 
 ---
+
 ## Why Decoding Matters
 
 - A trained model gives us probabilities; decoding turns them into text
@@ -32,6 +35,7 @@ audience:
 - Also where the most surprising and frustrating failures hide
 
 ---
+
 ## The Generation Loop
 
 - The model emits a probability distribution over the next token
@@ -41,11 +45,13 @@ audience:
 - Modern serving stacks intermix decoding with caching and batching
 
 ---
+
 ## Decoding Strategies Overview
 
 ![decoding_strategies](svg/courses/ai/natural-language-processing/21_text_generation_and_decoding/decoding_strategies.svg)
 
 ---
+
 ## Greedy Decoding
 
 - Pick the most probable next token at every step
@@ -55,6 +61,7 @@ audience:
 - A fine baseline for short structured outputs
 
 ---
+
 ## Beam Search
 
 - Maintain a beam of `k` partial sequences and extend each step
@@ -64,6 +71,7 @@ audience:
 - Bland and repetitive on open-ended creative tasks
 
 ---
+
 ## When Beam Search Goes Wrong
 
 - Repetitive output: `the dog the dog the dog`
@@ -73,6 +81,7 @@ audience:
 - For closed-ended generation, beam still wins on average
 
 ---
+
 ## Temperature Sampling
 
 - Divide logits by `T` before softmax
@@ -82,6 +91,7 @@ audience:
 - A starting point for almost every other sampling method
 
 ---
+
 ## Top-K Sampling
 
 - Sample from the top `K` most probable tokens after renormalizing
@@ -91,6 +101,7 @@ audience:
 - Loses information when the top-K is dominated by one token
 
 ---
+
 ## Top-P (Nucleus) Sampling
 
 - Sample from the smallest set of tokens whose cumulative probability exceeds `p`
@@ -100,6 +111,7 @@ audience:
 - The default in many `LLM` APIs
 
 ---
+
 ## Typical Sampling
 
 - Sample tokens whose information content is closest to the entropy of the distribution
@@ -109,11 +121,13 @@ audience:
 - A diagnostic option more than a default
 
 ---
+
 ## Sampling Distributions Compared
 
 ![sampling_distributions](svg/courses/ai/natural-language-processing/21_text_generation_and_decoding/sampling_distributions.svg)
 
 ---
+
 ## Repetition Penalties
 
 - Discount tokens that appear in the recent context
@@ -123,6 +137,7 @@ audience:
 - Useful, but a red flag if you need them just to make output readable
 
 ---
+
 ## Stop Sequences and EOS
 
 - The decoder stops when it emits an end-of-sequence token
@@ -132,6 +147,7 @@ audience:
 - Always set a max-tokens cap as a safety net
 
 ---
+
 ## Constrained Decoding
 
 - Restrict the candidate tokens to those allowed by a grammar or schema
@@ -141,6 +157,7 @@ audience:
 - Higher quality structured output than prompt-only approaches
 
 ---
+
 ## JSON-Constrained Decoding
 
 ```python
@@ -157,6 +174,7 @@ result = generator("Generate a person record.")
 - Essentially free to add when the model is a local one
 
 ---
+
 ## Logit Biases
 
 - Force or suppress specific tokens by adding to their logits
@@ -166,6 +184,7 @@ result = generator("Generate a person record.")
 - Pair with sampling strategies, not greedy decoding
 
 ---
+
 ## Speculative Decoding
 
 - A small draft model proposes several tokens at once
@@ -175,11 +194,13 @@ result = generator("Generate a person record.")
 - Standard in latency-sensitive `LLM` serving
 
 ---
+
 ## Speculative Decoding Diagram
 
 ![speculative_decoding](svg/courses/ai/natural-language-processing/21_text_generation_and_decoding/speculative_decoding.svg)
 
 ---
+
 ## Streaming Output
 
 - Send tokens to the user as they are decoded
@@ -189,6 +210,7 @@ result = generator("Generate a person record.")
 - Streaming changes the shape of error handling — partial outputs visible
 
 ---
+
 ## Batching at Inference
 
 - Multiple requests share one forward pass for speedup
@@ -198,6 +220,7 @@ result = generator("Generate a person record.")
 - The single biggest cost lever for self-hosted `LLM` services
 
 ---
+
 ## Caching at Inference
 
 - KV cache reuses attention keys and values across decode steps
@@ -207,6 +230,7 @@ result = generator("Generate a person record.")
 - Knowing what is cached and what is recomputed is part of operating an `LLM`
 
 ---
+
 ## Decoding for Different Tasks
 
 - Translation: beam search, length-penalty 1.0, beam 4-6
@@ -216,6 +240,7 @@ result = generator("Generate a person record.")
 - Structured extraction: constrained decoding with grammars
 
 ---
+
 ## Evaluating Generated Text
 
 - Reference-based: `BLEU`, `ROUGE`, `BERTScore`, `chrF`
@@ -225,6 +250,7 @@ result = generator("Generate a person record.")
 - Multiple metrics catch different failure modes
 
 ---
+
 ## Hallucination Under Different Decoders
 
 - Greedy and low-temperature sampling reduce hallucination but reduce variety
@@ -234,6 +260,7 @@ result = generator("Generate a person record.")
 - The decoder alone cannot solve a model's prior beliefs
 
 ---
+
 ## Production Decoding Patterns
 
 - Per-task default: temperature 0 for tools, 0.7 for chat
@@ -243,6 +270,7 @@ result = generator("Generate a person record.")
 - Logging the decoder configuration alongside the output
 
 ---
+
 ## Common Production Pitfalls
 
 - Forgetting to set max tokens and burning a budget on a runaway response
@@ -252,6 +280,7 @@ result = generator("Generate a person record.")
 - Logit biases that distort calibration on benchmarks
 
 ---
+
 ## Anti-Patterns
 
 - One temperature for every task in a system
@@ -261,6 +290,7 @@ result = generator("Generate a person record.")
 - Reporting evaluation numbers without disclosing the decoding setup
 
 ---
+
 ## Summary
 
 - Decoding bridges probabilities and text and dominates output quality

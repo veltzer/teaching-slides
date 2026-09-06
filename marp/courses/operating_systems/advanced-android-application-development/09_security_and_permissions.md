@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Security and Permissions
 ## Implementing Android Security Best Practices
 

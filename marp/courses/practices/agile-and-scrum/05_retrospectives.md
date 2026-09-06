@@ -9,14 +9,17 @@ audience:
   - audiences:team-leads
 
 ---
+
 # Retrospectives
 
 ---
+
 ## Retro Formats
 
 ![retro_formats](svg/courses/practices/agile-and-scrum/05_retrospectives/retro_formats.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why the Retrospective is the most important Scrum event
@@ -27,6 +30,7 @@ audience:
 - Distributed and remote retros
 
 ---
+
 ## Why Retrospectives Matter
 
 - Every other Scrum event is about the *product*
@@ -36,11 +40,13 @@ audience:
 - Skipping the Retro is the most expensive saving in Scrum
 
 ---
+
 ## Five Phases
 
 ![retro_phases](svg/courses/practices/agile-and-scrum/05_retrospectives/retro_phases.svg)
 
 ---
+
 ## Time-Box and Attendees
 
 - Up to 3 hours for a 4-week Sprint, proportionally less for shorter
@@ -50,6 +56,7 @@ audience:
 - Same time, same cadence — the rhythm is part of the discipline
 
 ---
+
 ## The Three Questions
 
 - What went well?
@@ -59,6 +66,7 @@ audience:
 - Many teams use this without ceremony — it works
 
 ---
+
 ## Format: Start / Stop / Continue
 
 - What should we **start** doing?
@@ -68,6 +76,7 @@ audience:
 - Pairs well with sticky notes on a wall (or a virtual board)
 
 ---
+
 ## Format: Mad / Sad / Glad
 
 - What made you **mad** this Sprint?
@@ -77,6 +86,7 @@ audience:
 - Less suitable for teams uncomfortable with emotional vocabulary
 
 ---
+
 ## Format: 4Ls
 
 - **Liked**: what worked
@@ -86,6 +96,7 @@ audience:
 - Good for teams new to retros — gentler entry than "what went wrong"
 
 ---
+
 ## Vary the Format
 
 - Same format every Sprint &#8594; people game it, give shallow answers
@@ -95,6 +106,7 @@ audience:
 - Variety keeps the conversation alive
 
 ---
+
 ## From Discussion to Action
 
 - A Retro that produces only complaints is wasted
@@ -104,6 +116,7 @@ audience:
 - Three actions taken beats fifteen written down and forgotten
 
 ---
+
 ## Psychological Safety
 
 - People won't share real problems if they fear consequences
@@ -113,6 +126,7 @@ audience:
 - A safe Retro is the foundation of a useful Retro
 
 ---
+
 ## The Vegas Rule
 
 - "What's said in the Retro stays in the Retro"
@@ -122,6 +136,7 @@ audience:
 - Worth restating at the start of every Retro
 
 ---
+
 ## Common Anti-Patterns
 
 - "Same as last time" answers — format has gone stale
@@ -131,6 +146,7 @@ audience:
 - Skipping the Retro because "we're behind on the Sprint"
 
 ---
+
 ## Remote Retrospectives
 
 - A virtual board (Miro, Mural, EasyRetro) is the workhorse
@@ -140,6 +156,7 @@ audience:
 - Time-box discussion of each topic — virtual silences are heavier than in-person ones
 
 ---
+
 ## Measuring Retrospectives
 
 - Count completed actions over the last 4 Retros

@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to Cloud Computing
 
 ## What is Cloud Computing?

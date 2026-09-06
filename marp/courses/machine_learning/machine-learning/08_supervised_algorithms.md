@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Supervised Algorithms
 
 ---
+
 ## What This Chapter Covers
 
 - Linear regression
@@ -22,16 +24,19 @@ audience:
 - Picking among them
 
 ---
+
 ## The Landscape
 
 ![algorithm_landscape](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/algo_landscape.svg)
 
 ---
+
 ## Picking An Algorithm
 
 ![algorithm_choice](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/algo_choice.svg)
 
 ---
+
 ## Linear Regression
 
 - Predict continuous y from linear combination of X
@@ -40,6 +45,7 @@ audience:
 - Baseline for regression
 
 ---
+
 ## Linear Regression Math
 
 - y = w · x + b
@@ -48,6 +54,7 @@ audience:
 - Or solve with gradient descent
 
 ---
+
 ## Linear Regression Assumptions
 
 - Linearity in inputs
@@ -56,6 +63,7 @@ audience:
 - Normal residuals (for inference)
 
 ---
+
 ## Linear Regression in sklearn
 
 ```python
@@ -66,6 +74,7 @@ preds = model.predict(X_test)
 ```
 
 ---
+
 ## Linear Regression Strengths
 
 - Interpretable
@@ -74,6 +83,7 @@ preds = model.predict(X_test)
 - Easy to deploy
 
 ---
+
 ## Linear Regression Weaknesses
 
 - Misses nonlinearity
@@ -82,6 +92,7 @@ preds = model.predict(X_test)
 - Multicollinearity issues
 
 ---
+
 ## Logistic Regression
 
 - Despite the name: classification
@@ -90,6 +101,7 @@ preds = model.predict(X_test)
 - Baseline for classification
 
 ---
+
 ## Logistic Regression Math
 
 - p = sigmoid(w · x + b)
@@ -98,6 +110,7 @@ preds = model.predict(X_test)
 - Solve with SGD or quasi-Newton
 
 ---
+
 ## Logistic Regression in sklearn
 
 ```python
@@ -108,6 +121,7 @@ clf.predict_proba(X_test)
 ```
 
 ---
+
 ## Multinomial Logistic
 
 - Softmax instead of sigmoid
@@ -115,6 +129,7 @@ clf.predict_proba(X_test)
 - Default in sklearn for >2 classes
 
 ---
+
 ## Logistic Regression Strengths
 
 - Calibrated probabilities
@@ -123,6 +138,7 @@ clf.predict_proba(X_test)
 - Fast inference
 
 ---
+
 ## Regularisation
 
 - L1 (Lasso): sparsity, feature selection
@@ -131,6 +147,7 @@ clf.predict_proba(X_test)
 - Control overfitting
 
 ---
+
 ## Ridge
 
 - Linear regression + L2
@@ -139,6 +156,7 @@ clf.predict_proba(X_test)
 - Default for linear
 
 ---
+
 ## Lasso
 
 - Linear regression + L1
@@ -147,6 +165,7 @@ clf.predict_proba(X_test)
 - Coordinate descent
 
 ---
+
 ## ElasticNet
 
 - L1 + L2 mix
@@ -155,6 +174,7 @@ clf.predict_proba(X_test)
 - Often the best linear baseline
 
 ---
+
 ## k-Nearest Neighbours
 
 - Predict from k closest training points
@@ -163,6 +183,7 @@ clf.predict_proba(X_test)
 - Slow at inference for big data
 
 ---
+
 ## kNN Math
 
 - Distance metric: Euclidean, cosine, Manhattan
@@ -170,6 +191,7 @@ clf.predict_proba(X_test)
 - k controls smoothness
 
 ---
+
 ## Choosing k
 
 - Small k: low bias, high variance
@@ -178,6 +200,7 @@ clf.predict_proba(X_test)
 - Odd for binary classification
 
 ---
+
 ## kNN in sklearn
 
 ```python
@@ -187,6 +210,7 @@ model.fit(X_train, y_train)
 ```
 
 ---
+
 ## kNN Strengths
 
 - Simple
@@ -195,6 +219,7 @@ model.fit(X_train, y_train)
 - Good baseline for small data
 
 ---
+
 ## kNN Weaknesses
 
 - Slow at inference
@@ -203,6 +228,7 @@ model.fit(X_train, y_train)
 - Memory hungry
 
 ---
+
 ## Naive Bayes
 
 - Bayes' theorem with feature independence
@@ -211,6 +237,7 @@ model.fit(X_train, y_train)
 - Surprisingly effective baseline
 
 ---
+
 ## Naive Bayes Math
 
 - P(y|x) ∝ P(y) Π P(x_i | y)
@@ -219,6 +246,7 @@ model.fit(X_train, y_train)
 - Closed form
 
 ---
+
 ## Variants
 
 - Gaussian: continuous features
@@ -226,6 +254,7 @@ model.fit(X_train, y_train)
 - Bernoulli: binary features
 
 ---
+
 ## Naive Bayes in sklearn
 
 ```python
@@ -235,6 +264,7 @@ clf.fit(X_train, y_train)
 ```
 
 ---
+
 ## Naive Bayes Strengths
 
 - Trains on tiny data
@@ -243,6 +273,7 @@ clf.fit(X_train, y_train)
 - Robust to irrelevant features
 
 ---
+
 ## Naive Bayes Weaknesses
 
 - Independence assumption violated
@@ -250,6 +281,7 @@ clf.fit(X_train, y_train)
 - Not for complex interactions
 
 ---
+
 ## Linear Discriminant Analysis
 
 - Project to maximise class separation
@@ -258,6 +290,7 @@ clf.fit(X_train, y_train)
 - Both classifier and reducer
 
 ---
+
 ## LDA Math
 
 - Within-class and between-class scatter
@@ -265,6 +298,7 @@ clf.fit(X_train, y_train)
 - Projection then linear classifier
 
 ---
+
 ## LDA in sklearn
 
 ```python
@@ -274,6 +308,7 @@ lda.fit(X_train, y_train)
 ```
 
 ---
+
 ## LDA Strengths
 
 - Closed form, fast
@@ -282,6 +317,7 @@ lda.fit(X_train, y_train)
 - Stable
 
 ---
+
 ## LDA Weaknesses
 
 - Gaussian assumption
@@ -289,6 +325,7 @@ lda.fit(X_train, y_train)
 - Sensitive to outliers
 
 ---
+
 ## QDA
 
 - Quadratic Discriminant Analysis
@@ -297,6 +334,7 @@ lda.fit(X_train, y_train)
 - More parameters, more data needed
 
 ---
+
 ## Support Vector Machines
 
 - Find max-margin hyperplane
@@ -305,6 +343,7 @@ lda.fit(X_train, y_train)
 - Once dominant, less so now
 
 ---
+
 ## SVM Math
 
 - Maximise margin to nearest points
@@ -313,6 +352,7 @@ lda.fit(X_train, y_train)
 - Quadratic programming
 
 ---
+
 ## Soft Margin
 
 - Allow some misclassifications
@@ -321,6 +361,7 @@ lda.fit(X_train, y_train)
 - Tuning matters
 
 ---
+
 ## Kernel Trick
 
 - Implicit mapping to higher space
@@ -329,6 +370,7 @@ lda.fit(X_train, y_train)
 - RBF is the default
 
 ---
+
 ## RBF Kernel
 
 - exp(-gamma * ||x - x'||^2)
@@ -337,6 +379,7 @@ lda.fit(X_train, y_train)
 - Tune with C
 
 ---
+
 ## SVM in sklearn
 
 ```python
@@ -346,6 +389,7 @@ clf.fit(X_train, y_train)
 ```
 
 ---
+
 ## SVM for Regression
 
 - SVR: epsilon-insensitive loss
@@ -353,6 +397,7 @@ clf.fit(X_train, y_train)
 - Less common in practice
 
 ---
+
 ## SVM Strengths
 
 - High accuracy with little tuning
@@ -361,6 +406,7 @@ clf.fit(X_train, y_train)
 - Strong theory
 
 ---
+
 ## SVM Weaknesses
 
 - Slow on big data
@@ -369,6 +415,7 @@ clf.fit(X_train, y_train)
 - Sensitive to scale
 
 ---
+
 ## Stochastic Gradient Descent
 
 - Train any linear model on huge data
@@ -377,6 +424,7 @@ clf.fit(X_train, y_train)
 - Foundation of deep learning too
 
 ---
+
 ## SGD Math
 
 - w = w - eta * gradient(loss(sample))
@@ -385,6 +433,7 @@ clf.fit(X_train, y_train)
 - Many tricks: momentum, Adam
 
 ---
+
 ## SGD in sklearn
 
 ```python
@@ -394,6 +443,7 @@ clf.fit(X_train, y_train)
 ```
 
 ---
+
 ## SGD Loss Choices
 
 - log_loss: logistic regression
@@ -402,6 +452,7 @@ clf.fit(X_train, y_train)
 - huber: robust regression
 
 ---
+
 ## SGD Strengths
 
 - Scales to millions of samples
@@ -410,6 +461,7 @@ clf.fit(X_train, y_train)
 - Foundation of deep learning
 
 ---
+
 ## SGD Weaknesses
 
 - Sensitive to learning rate
@@ -418,6 +470,7 @@ clf.fit(X_train, y_train)
 - Tuning required
 
 ---
+
 ## Perceptron
 
 - Original neural building block
@@ -426,6 +479,7 @@ clf.fit(X_train, y_train)
 - Historical, but instructive
 
 ---
+
 ## Linear Models Summary
 
 - Logistic regression: solid baseline
@@ -434,6 +488,7 @@ clf.fit(X_train, y_train)
 - Linear is always a fair starting point
 
 ---
+
 ## Distance Models Summary
 
 - kNN: simple, slow at inference
@@ -441,6 +496,7 @@ clf.fit(X_train, y_train)
 - Both need scaled features
 
 ---
+
 ## Probabilistic Models Summary
 
 - Naive Bayes: text and small data
@@ -448,6 +504,7 @@ clf.fit(X_train, y_train)
 - Logistic regression: calibrated, scalable
 
 ---
+
 ## Choosing An Algorithm
 
 - Small tabular: logistic regression, NB
@@ -456,6 +513,7 @@ clf.fit(X_train, y_train)
 - High dim: linear with regularisation
 
 ---
+
 ## Multiple Models
 
 ```python
@@ -465,6 +523,7 @@ for clf in [LogisticRegression(), GaussianNB(), KNeighborsClassifier()]:
 ```
 
 ---
+
 ## Hyperparameter Tuning
 
 - Grid search
@@ -473,6 +532,7 @@ for clf in [LogisticRegression(), GaussianNB(), KNeighborsClassifier()]:
 - Always with cross-validation
 
 ---
+
 ## GridSearchCV
 
 ```python
@@ -483,6 +543,7 @@ gs.fit(X_train, y_train)
 ```
 
 ---
+
 ## RandomizedSearchCV
 
 - Sample random configs
@@ -490,6 +551,7 @@ gs.fit(X_train, y_train)
 - Cheaper, often as good
 
 ---
+
 ## Common Algorithm Mistakes
 
 - Skipping the linear baseline
@@ -498,76 +560,91 @@ gs.fit(X_train, y_train)
 - Overfitting kNN with k=1
 
 ---
+
 ## Linear Regression Fit
 
 ![linear_regression_fit](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/linear_regression_fit.svg)
 
 ---
+
 ## Sigmoid Curve
 
 ![sigmoid_curve](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/sigmoid_curve.svg)
 
 ---
+
 ## Regularisation
 
 ![regularization](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/regularization.svg)
 
 ---
+
 ## kNN Neighbourhood
 
 ![knn_neighborhood](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/knn_neighborhood.svg)
 
 ---
+
 ## Naive Bayes
 
 ![naive_bayes](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/naive_bayes.svg)
 
 ---
+
 ## LDA Projection
 
 ![lda_projection](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/lda_projection.svg)
 
 ---
+
 ## SVM Margin
 
 ![svm_margin](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/svm_margin.svg)
 
 ---
+
 ## Kernel Trick
 
 ![kernel_trick](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/kernel_trick.svg)
 
 ---
+
 ## SGD Steps
 
 ![sgd_steps](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/sgd_steps.svg)
 
 ---
+
 ## Perceptron
 
 ![perceptron](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/perceptron.svg)
 
 ---
+
 ## Grid vs Random Search
 
 ![grid_vs_random_search](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/grid_vs_random_search.svg)
 
 ---
+
 ## Logistic Decision Boundary
 
 ![logistic_decision](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/logistic_decision.svg)
 
 ---
+
 ## QDA Boundary
 
 ![qda_boundary](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/qda_boundary.svg)
 
 ---
+
 ## Soft Margin
 
 ![soft_margin](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/soft_margin.svg)
 
 ---
+
 ## Summary
 
 - Linear models are strong baselines

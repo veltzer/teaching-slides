@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Python
 
 ---
+
 ## What is Python?
 
 ![bg left](jpg/courses/languages/python/python-programming/guido_van_rossum.jpg)
@@ -21,6 +23,7 @@ audience:
 - Emphasizes code readability and simplicity
 
 ---
+
 ## A Brief History of Python
 - 1989: Guido van Rossum starts working on Python
 - 1991: Python 0.9.0 released
@@ -32,7 +35,9 @@ audience:
 - 2020: Python 2 end of life
 
 ---
+
 ## Python 2 vs Python 3
+
 | Feature | Python 2 | Python 3 |
 |---------|----------|----------|
 | Print | `print "hello"` | `print("hello")` |
@@ -42,6 +47,7 @@ audience:
 | Support | Ended 2020 | Active |
 
 ---
+
 ## Why Python?
 - Easy to learn and read
 - Huge standard library ("batteries included")
@@ -51,6 +57,7 @@ audience:
 - Large and active community
 
 ---
+
 ## Python Use Cases
 - Web development (Django, Flask, FastAPI)
 - Data science and machine learning (NumPy, Pandas, scikit-learn)
@@ -61,6 +68,7 @@ audience:
 - Game development
 
 ---
+
 ## Who Uses Python?
 - Google (YouTube, search infrastructure)
 - Netflix (recommendation engine)
@@ -71,7 +79,9 @@ audience:
 - Reddit (web platform)
 
 ---
+
 ## Python vs C/C++
+
 | Aspect | Python | C/C++ |
 |--------|--------|-------|
 | Typing | Dynamic | Static |
@@ -81,7 +91,9 @@ audience:
 | Use case | Rapid development | Systems programming |
 
 ---
+
 ## Python vs Java
+
 | Aspect | Python | Java |
 |--------|--------|------|
 | Typing | Dynamic | Static |
@@ -91,7 +103,9 @@ audience:
 | OOP | Optional | Required |
 
 ---
+
 ## Python vs JavaScript
+
 | Aspect | Python | JavaScript |
 |--------|--------|------------|
 | Primary use | General purpose | Web (now general) |
@@ -101,7 +115,9 @@ audience:
 | Package manager | pip | npm |
 
 ---
+
 ## Python vs Bash
+
 | Aspect | Python | Bash |
 |--------|--------|------|
 | Readability | High | Low for complex scripts |
@@ -111,6 +127,7 @@ audience:
 | Best for | Complex scripts | Simple automation |
 
 ---
+
 ## The Zen of Python
 
 ```python
@@ -124,6 +141,7 @@ import this
 - There should be one obvious way to do it
 
 ---
+
 ## Python is Interpreted: Details
 
 - Python code is compiled to bytecode (`.pyc` files)
@@ -132,11 +150,13 @@ import this
 - Trade-off: slower execution, faster development
 
 ---
+
 ## Python is Interpreted
 
 ![python_is_interpreted](svg/courses/languages/python/python-programming/01_introduction_to_python/python_is_interpreted.svg)
 
 ---
+
 ## Dynamic Typing
 - Variables do not have a fixed type
 - Types are checked at runtime, not compile time
@@ -148,6 +168,7 @@ x = [1, 2, 3] # now x is a list
 ```
 
 ---
+
 ## Dynamic Typing - Implications
 - More flexible code
 - Faster prototyping
@@ -160,6 +181,7 @@ def greet(name: str) -> str:
 ```
 
 ---
+
 ## Python is Strongly Typed
 - Python is dynamically typed but strongly typed
 - You cannot mix types implicitly
@@ -170,6 +192,7 @@ def greet(name: str) -> str:
 ```
 
 ---
+
 ## Indentation Matters
 - Python uses indentation to define code blocks
 - No curly braces `{}` like C/Java
@@ -183,6 +206,7 @@ if True:
 ```
 
 ---
+
 ## Everything is an Object
 - In Python, everything is an object
 - Integers, strings, functions, classes, modules
@@ -196,6 +220,7 @@ print(x.__add__)   # even int has methods
 ```
 
 ---
+
 ## Python Implementations
 - **CPython**: The reference implementation (written in C)
 - **PyPy**: JIT-compiled, faster for long-running programs
@@ -205,6 +230,7 @@ print(x.__add__)   # even int has methods
 - **GraalPy**: On GraalVM
 
 ---
+
 ## The Python Community
 - Python Enhancement Proposals (PEPs)
 - PEP 8: Style guide for Python code
@@ -213,6 +239,7 @@ print(x.__add__)   # even int has methods
 - Annual PyCon conferences worldwide
 
 ---
+
 ## Python Versioning
 - Current stable: Python 3.13 (3.14 released Oct 2025)
 - New minor version every year (October)
@@ -226,6 +253,7 @@ print(sys.version)
 ```
 
 ---
+
 ## The GIL (Global Interpreter Lock)
 - CPython has a Global Interpreter Lock
 - Only one thread executes Python bytecode at a time
@@ -235,6 +263,7 @@ print(sys.version)
 - Python 3.13+ has experimental free-threaded mode
 
 ---
+
 ## Python's Philosophy
 - "There should be one-- and preferably only one --obvious way to do it"
 - Favor readability over cleverness
@@ -243,6 +272,7 @@ print(sys.version)
 - Errors should never pass silently
 
 ---
+
 ## REPL - Read Eval Print Loop
 - Python has an interactive interpreter
 - Great for experimentation and learning
@@ -257,6 +287,7 @@ Hello
 ```
 
 ---
+
 ## Python in the Real World
 - Most popular language on GitHub (2024)
 - #1 on TIOBE index
@@ -265,6 +296,7 @@ Hello
 - Used in education as first programming language
 
 ---
+
 ## Summary
 - Python is a high-level, interpreted, dynamically typed language
 - Created in 1991 by Guido van Rossum

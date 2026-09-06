@@ -11,6 +11,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Azure Management and Cost Optimization
 
 ---

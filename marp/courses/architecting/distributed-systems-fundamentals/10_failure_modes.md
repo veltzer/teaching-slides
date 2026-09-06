@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Failure Modes
 
 ---
+
 ## What This Chapter Covers
 
 - Common distributed-system failures
@@ -22,11 +24,13 @@ audience:
 - Chaos engineering
 
 ---
+
 ## Failure Catalogue
 
 ![failure_catalogue](svg/courses/architecting/distributed-systems-fundamentals/10_failure_modes/failure_catalogue.svg)
 
 ---
+
 ## Catalogue of Failures
 
 - Node crashes
@@ -39,11 +43,13 @@ audience:
 - All happen; design for each
 
 ---
+
 ## Failure Modes
 
 ![failure_modes](svg/courses/architecting/distributed-systems-fundamentals/10_failure_modes/failure_modes.svg)
 
 ---
+
 ## Network Failures
 
 - Packet loss: TCP retransmits; latency spikes
@@ -53,6 +59,7 @@ audience:
 - The most common failure
 
 ---
+
 ## Node Failures
 
 - Hardware: disk, RAM, CPU, power
@@ -62,6 +69,7 @@ audience:
 - Frequency: anything mechanical eventually fails
 
 ---
+
 ## Slow Nodes
 
 - Alive but very slow
@@ -71,6 +79,7 @@ audience:
 - Mitigation: hedged requests, load shedding
 
 ---
+
 ## The Slow Node Problem
 
 - A timeout-based system can't tell a slow node from a dead one
@@ -80,6 +89,7 @@ audience:
 - Practical solution: hedged requests + circuit breakers
 
 ---
+
 ## Cascading Failures
 
 - One node fails &#8594; load shifts to others &#8594; they fail too
@@ -89,6 +99,7 @@ audience:
 - The way most outages happen
 
 ---
+
 ## Bulkheads
 
 - Isolate resources by type / consumer
@@ -98,6 +109,7 @@ audience:
 - Inspired by ship design: a hole in one section doesn't sink the ship
 
 ---
+
 ## Circuit Breakers
 
 - Track recent failures
@@ -107,6 +119,7 @@ audience:
 - Prevents pile-up on a failing dependency
 
 ---
+
 ## Retries
 
 - Almost always: try again
@@ -116,6 +129,7 @@ audience:
 - Don't retry non-idempotent operations without an idempotency key
 
 ---
+
 ## Load Shedding
 
 - When overwhelmed: refuse some requests
@@ -125,6 +139,7 @@ audience:
 - The tail of resilient systems
 
 ---
+
 ## Timeouts
 
 - *Always* set timeouts
@@ -134,6 +149,7 @@ audience:
 - The most common cause of cascading failure: missing timeouts
 
 ---
+
 ## Idempotency For Retries
 
 - Retried operations must be safe
@@ -143,6 +159,7 @@ audience:
 - Built into your APIs from day one
 
 ---
+
 ## Fault Injection
 
 - Deliberately introduce failures in test
@@ -152,6 +169,7 @@ audience:
 - Standard practice at high-availability shops
 
 ---
+
 ## Chaos Engineering
 
 - Run fault injection in *production*
@@ -161,6 +179,7 @@ audience:
 - Build the muscle; don't wait for real outage
 
 ---
+
 ## The "Game Day"
 
 - Plan a failure exercise: "switch fails at 2pm"
@@ -170,6 +189,7 @@ audience:
 - Sports teams practice; engineering teams should too
 
 ---
+
 ## Detection
 
 - Health checks: liveness + readiness
@@ -179,6 +199,7 @@ audience:
 - Multiple signals: one alone misleads
 
 ---
+
 ## Common Failure-Mode Mistakes
 
 - No timeouts (cascading failures)
@@ -188,6 +209,7 @@ audience:
 - "It worked in test" — and prod has different failure modes
 
 ---
+
 ## Course Wrap-Up
 
 - Distributed systems are *systems of failure modes*

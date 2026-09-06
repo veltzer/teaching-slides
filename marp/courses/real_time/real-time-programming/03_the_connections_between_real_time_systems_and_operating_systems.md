@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Real-Time Systems and Operating Systems
 
 ---
+
 ## What This Chapter Covers
 
 - Traditional real-time operating systems
@@ -22,6 +24,7 @@ audience:
 - Picking the right OS for your problem
 
 ---
+
 ## What an RTOS Is
 
 - An operating system designed for *predictable* response, not throughput
@@ -32,11 +35,13 @@ audience:
 - Sells the desktop conveniences for predictability
 
 ---
+
 ## RTOS Features
 
 ![rtos_features](svg/courses/real_time/real-time-programming/03_the_connections_between_real_time_systems_and_operating_systems/rtos_features.svg)
 
 ---
+
 ## Common RTOSes
 
 - **FreeRTOS**: dominant in microcontrollers; open source; small footprint
@@ -47,6 +52,7 @@ audience:
 - **RTEMS**: open source; aerospace heritage
 
 ---
+
 ## Linux as RT?
 
 - Stock Linux is *not* hard real-time
@@ -56,6 +62,7 @@ audience:
 - Acceptable for soft RT; unacceptable for hard RT
 
 ---
+
 ## PREEMPT_RT
 
 - A patch set making the Linux kernel fully preemptible
@@ -65,6 +72,7 @@ audience:
 - Available as a patch; large parts merged into mainline (5.x onward)
 
 ---
+
 ## Linux + PREEMPT_RT in Practice
 
 - Now a serious soft-RT and even some hard-RT platform
@@ -74,6 +82,7 @@ audience:
 - For most "we need real-time" needs, this is the answer
 
 ---
+
 ## Real-Time Linux Toolkit
 
 - `cyclictest`: measures wake-up latency (the canonical RT benchmark)
@@ -83,6 +92,7 @@ audience:
 - `tracecmd` / `kernelshark`: trace what's happening in the kernel
 
 ---
+
 ## Where RTOSes Beat Linux
 
 - Memory footprint: 10s of KB vs 100s of MB
@@ -92,6 +102,7 @@ audience:
 - Simplicity: smaller attack surface, smaller code base
 
 ---
+
 ## Where Linux Beats RTOSes
 
 - Hardware support: drivers for everything
@@ -101,6 +112,7 @@ audience:
 - Developer experience: way easier
 
 ---
+
 ## Mixed-Criticality with Hypervisors
 
 - Run an RTOS for the safety-critical workload
@@ -110,6 +122,7 @@ audience:
 - Bare-metal hypervisors avoid the overhead of full virtualisation
 
 ---
+
 ## Deficiencies in Traditional RTOSes
 
 - Older RTOSes: no memory protection between tasks
@@ -120,6 +133,7 @@ audience:
 - Lock-in: switching RTOSes is a major project
 
 ---
+
 ## Choosing for a New Project
 
 - Hard RT, certified, safety-critical &#8594; commercial RTOS
@@ -129,6 +143,7 @@ audience:
 - Mixed criticality &#8594; hypervisor + RTOS + Linux
 
 ---
+
 ## Cost Considerations
 
 - FreeRTOS: free
@@ -138,6 +153,7 @@ audience:
 - Pre-certified versions cost more again (DO-178, ISO 26262)
 
 ---
+
 ## A Decision Tree
 
 - Need DO-178 / ISO 26262 / IEC 62304? &#8594; commercial certified RTOS
@@ -147,6 +163,7 @@ audience:
 - "Just fast"? &#8594; tuned Linux
 
 ---
+
 ## Tuning Linux for RT (Quick Tour)
 
 - Apply `PREEMPT_RT` patch (or use mainline RT enabled)
@@ -156,6 +173,7 @@ audience:
 - Lock memory with `mlockall` to avoid page faults
 
 ---
+
 ## Common Mistakes
 
 - Picking VxWorks for a hobby project; paying enormous fees for nothing

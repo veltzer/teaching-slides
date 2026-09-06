@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Factor XII: Admin Processes
 
 ---
+
 ## The Rule
 
 - Run admin and management tasks as one-off processes
@@ -19,6 +21,7 @@ audience:
 - Triggered manually or by automation, not embedded in the running app
 
 ---
+
 ## What Counts as Admin
 
 - Database migrations
@@ -29,6 +32,7 @@ audience:
 - Diagnostic tasks (cleanup, integrity checks)
 
 ---
+
 ## Same Codebase, Same Release
 
 - Admin scripts live in the app's repo
@@ -37,6 +41,7 @@ audience:
 - "I ran my fix against last week's code" → bugs
 
 ---
+
 ## Same Environment
 
 - Admin scripts read the same config (env vars)
@@ -45,6 +50,7 @@ audience:
 - The only thing different: the entry point
 
 ---
+
 ## Examples
 
 - `python manage.py migrate` (Django)
@@ -53,11 +59,13 @@ audience:
 - A Kubernetes Job that runs the same image with a different command
 
 ---
+
 ## Admin Done Right
 
 ![admin_done_right](svg/courses/architecting/twelve-factor-app/13_admin_processes/admin_done_right.svg)
 
 ---
+
 ## Why It Matters
 
 - Production fixes that diverge from production code are how outages happen
@@ -66,6 +74,7 @@ audience:
 - Automation can rerun them; ad-hoc scripts can't
 
 ---
+
 ## Migrations as Admin Processes
 
 - Migrations are the canonical example
@@ -74,6 +83,7 @@ audience:
 - The app's startup might wait until migrations have completed
 
 ---
+
 ## REPLs
 
 - An interactive shell with the app's code loaded
@@ -82,6 +92,7 @@ audience:
 - Same codebase, same env — just an interactive entry point
 
 ---
+
 ## Anti-Patterns
 
 - Admin script copy-pasted from a notebook, never reviewed
@@ -90,6 +101,7 @@ audience:
 - Running ad-hoc SQL through a database GUI when the app has a domain function
 
 ---
+
 ## Automation
 
 - Common admin tasks should be automatable
@@ -97,6 +109,7 @@ audience:
 - "What did I run last time we had this incident?" should be answerable from git log
 
 ---
+
 ## Summary
 
 - Admin tasks are one-off processes

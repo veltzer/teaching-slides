@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Design by Contract
 
 ---
+
 ## What This Chapter Covers
 
 - The idea: methods as contracts
@@ -20,6 +22,7 @@ audience:
 - Where DbC fits in modern languages
 
 ---
+
 ## The Contract Metaphor
 
 - A method has obligations and promises, like a legal contract
@@ -29,11 +32,13 @@ audience:
 - Coined by Bertrand Meyer for the Eiffel language (1980s)
 
 ---
+
 ## Three Clauses
 
 ![contract_clauses](svg/courses/principles/object-oriented-programming/09_design_by_contract/contract_clauses.svg)
 
 ---
+
 ## Preconditions
 
 - What must be true *before* a method runs
@@ -43,6 +48,7 @@ audience:
 - Document them clearly; modern langs use type hints, asserts, or annotations
 
 ---
+
 ## Postconditions
 
 - What the method *guarantees* after returning
@@ -52,6 +58,7 @@ audience:
 - Tests should cover the contract, not the implementation
 
 ---
+
 ## Invariants
 
 - Conditions that must hold at *every visible state* of the object
@@ -61,6 +68,7 @@ audience:
 - Construction must establish it; destruction can leave it in any state
 
 ---
+
 ## A Worked Example
 
 ```python
@@ -78,6 +86,7 @@ class BoundedQueue:
 ```
 
 ---
+
 ## Defensive Programming
 
 - Every method validates *all* its inputs and protects against bad data
@@ -87,6 +96,7 @@ class BoundedQueue:
 - The "everyone is suspicious of everyone" model
 
 ---
+
 ## Contract-Based Programming
 
 - Each method states what it requires and what it delivers
@@ -96,6 +106,7 @@ class BoundedQueue:
 - The "trust within the system, validate at the edge" model
 
 ---
+
 ## Assertions vs Validation
 
 - **Assertions**: checks for *programmer errors* (something we believed was true wasn't)
@@ -105,6 +116,7 @@ class BoundedQueue:
 - Don't confuse the two — they have different audiences
 
 ---
+
 ## Where to Validate
 
 - At the boundaries: API endpoints, message receivers, file readers
@@ -114,6 +126,7 @@ class BoundedQueue:
 - This dramatically simplifies internal code
 
 ---
+
 ## Failing Loudly
 
 - A failed precondition is a bug in the caller
@@ -123,6 +136,7 @@ class BoundedQueue:
 - Modern languages: throw, raise, panic — don't silently continue
 
 ---
+
 ## DbC in Mainstream Languages
 
 - Eiffel: native syntax for `require`, `ensure`, `invariant`
@@ -132,6 +146,7 @@ class BoundedQueue:
 - Most teams encode contracts in *tests* and naming
 
 ---
+
 ## DbC and Inheritance
 
 - Subclasses can *weaken* preconditions (accept more)
@@ -141,6 +156,7 @@ class BoundedQueue:
 - This is exactly the Liskov Substitution Principle
 
 ---
+
 ## Practical Patterns
 
 - Document contracts in docstrings or method comments
@@ -150,6 +166,7 @@ class BoundedQueue:
 - Pair contract-style code with property-based testing
 
 ---
+
 ## Common Mistakes
 
 - Defensive code at every layer — repeats checks pointlessly

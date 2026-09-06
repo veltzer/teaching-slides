@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Operationalizing Chaos
 
 ---
+
 ## What This Chapter Covers
 
 - Continuous chaos
@@ -21,6 +23,7 @@ audience:
 - Mistakes to avoid
 
 ---
+
 ## Continuous Chaos
 
 - Scheduled experiments
@@ -29,6 +32,7 @@ audience:
 - Always observed
 
 ---
+
 ## Chaos In CI
 
 - Per-service chaos suites
@@ -37,11 +41,13 @@ audience:
 - Catch issues before deploy
 
 ---
+
 ## CI Pipeline
 
 ![ci_chaos](svg/courses/testing/chaos-engineering/05_operationalizing/ci_chaos.svg)
 
 ---
+
 ## Why It Pays Off
 
 - Bugs found in working hours
@@ -50,6 +56,7 @@ audience:
 - Confidence grows
 
 ---
+
 ## Culture Shift
 
 - Failure is normal
@@ -58,6 +65,7 @@ audience:
 - Leadership sponsorship
 
 ---
+
 ## Metrics
 
 - Experiments per quarter
@@ -66,6 +74,7 @@ audience:
 - Customer-impact incidents avoided
 
 ---
+
 ## Tooling
 
 - Pick a platform
@@ -74,6 +83,7 @@ audience:
 - Integrate with deploy tooling
 
 ---
+
 ## Safety Rails
 
 - Per-experiment quotas
@@ -82,6 +92,7 @@ audience:
 - Auto-stop on customer impact
 
 ---
+
 ## Onboarding New Services
 
 - Resilience checklist
@@ -90,6 +101,7 @@ audience:
 - Re-run on architecture changes
 
 ---
+
 ## Multi-Tenant Concerns
 
 - Avoid impacting one tenant for another
@@ -98,6 +110,7 @@ audience:
 - Document the boundaries
 
 ---
+
 ## Compliance
 
 - Some regulators require it
@@ -106,6 +119,7 @@ audience:
 - Tie to business risk register
 
 ---
+
 ## Vendor And Provider Failures
 
 - Inject mocked vendor outages
@@ -114,6 +128,7 @@ audience:
 - Practice annually minimum
 
 ---
+
 ## When Not To Do Chaos
 
 - During launches
@@ -122,6 +137,7 @@ audience:
 - Without monitoring
 
 ---
+
 ## Scaling Up
 
 - Start with one service
@@ -130,6 +146,7 @@ audience:
 - Eventually default for all
 
 ---
+
 ## Common Operational Mistakes
 
 - One time, one team

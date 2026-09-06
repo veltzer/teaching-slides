@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Deployment options
@@ -19,6 +21,7 @@ audience:
 - Performance
 
 ---
+
 ## Deployment Options
 
 - Self-hosted single node
@@ -27,6 +30,7 @@ audience:
 - Embedded vendor product
 
 ---
+
 ## High Availability
 
 - Multiple frontends
@@ -35,11 +39,13 @@ audience:
 - Health checks at the load balancer
 
 ---
+
 ## HA Topology
 
 ![ha_topology](svg/courses/observability_and_monitoring/grafana-basics/05_operations/ha_topology.svg)
 
 ---
+
 ## Backend Database
 
 - SQLite for small setups
@@ -48,6 +54,7 @@ audience:
 - Tested restore matters
 
 ---
+
 ## Authentication
 
 - Local accounts for small teams
@@ -56,6 +63,7 @@ audience:
 - Pick by org-wide identity
 
 ---
+
 ## Authorization
 
 - Organizations and teams
@@ -64,6 +72,7 @@ audience:
 - Avoid per-dashboard sprawl
 
 ---
+
 ## Provisioning
 
 - Sources, dashboards, alerts as code
@@ -72,6 +81,7 @@ audience:
 - Avoid drift between environments
 
 ---
+
 ## Backups
 
 - Database snapshot
@@ -80,6 +90,7 @@ audience:
 - Practice restores
 
 ---
+
 ## Performance
 
 - Dashboard render speed
@@ -88,6 +99,7 @@ audience:
 - Profile slow ones
 
 ---
+
 ## Reducing Backend Load
 
 - Cache where supported
@@ -96,6 +108,7 @@ audience:
 - Limit concurrent queries
 
 ---
+
 ## Audit Logs
 
 - User actions
@@ -104,6 +117,7 @@ audience:
 - Forwarded to central store
 
 ---
+
 ## Plugins
 
 - Data source and panel plugins
@@ -112,6 +126,7 @@ audience:
 - Test in lower env first
 
 ---
+
 ## Upgrades
 
 - Read release notes
@@ -120,6 +135,7 @@ audience:
 - Backup before upgrade
 
 ---
+
 ## Cost Awareness
 
 - Hosted: per active user
@@ -128,6 +144,7 @@ audience:
 - Track who uses dashboards
 
 ---
+
 ## Common Operational Mistakes
 
 - SQLite in production HA

@@ -11,6 +11,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Introduction to Git
 
 ---
@@ -40,6 +41,7 @@ audience:
 ![the_linux_kernel_problem](svg/courses/git/git/01_introduction/the_linux_kernel_problem.svg)
 
 ---
+
 ## The Birth of Git (2005)
 
 ![bg left](jpg/courses/git/git/linus_torvalds.jpg)
@@ -163,21 +165,25 @@ According to Stack Overflow Developer Survey:
 ![the_git_data_model](svg/courses/git/git/01_introduction/the_git_data_model.svg)
 
 ---
+
 ## Snapshots, Not Differences: Overview
 
 **SVN/CVS** - Stores differences (deltas)
 
 ---
+
 ## Snapshots, Not Differences
 
 ![snapshots_not_differences_1](svg/courses/git/git/01_introduction/snapshots_not_differences_1.svg)
 
 ---
+
 ## Snapshots, Not Differences: Overview (2)
 
 **Git** - Stores snapshots
 
 ---
+
 ## Snapshots, Not Differences
 
 ![snapshots_not_differences_2](svg/courses/git/git/01_introduction/snapshots_not_differences_2.svg)

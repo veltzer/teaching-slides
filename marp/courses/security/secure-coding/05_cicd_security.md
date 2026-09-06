@@ -10,6 +10,7 @@ audience:
   - audiences:developers
   - audiences:security-professionals
 ---
+
 # CI/CD Security
 
 ---
@@ -96,7 +97,7 @@ audience:
 - **Integrity** — the artifact you deploy is byte-for-byte what the pipeline built (hashes, signatures)
 - **Provenance** — a signed statement of *how* it was built: which source commit, which builder, which steps
 - **SLSA** (Supply-chain Levels for Software Artifacts) — a maturity ladder for build integrity
-    - L1: provenance exists  →  L2: signed by the build service  →  L3: hardened, isolated builds
+    - L1: provenance exists → L2: signed by the build service → L3: hardened, isolated builds
 - Store artifacts in a registry with immutability and access control; never overwrite a published version
 - Generate the `SBOM` here too, and attach it as an attestation alongside the artifact
 - Verify provenance at deploy — an unverified attestation proves nothing

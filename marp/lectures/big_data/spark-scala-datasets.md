@@ -10,6 +10,7 @@ audience:
 - audiences:data-engineers
 
 ---
+
 # Spark Datasets and DataFrames in Scala
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
@@ -30,6 +31,7 @@ audience:
 1. Performance considerations
 
 ---
+
 ## Dataset Definition
 ```scala
 case class Person(name: String, age: Int)
@@ -39,6 +41,7 @@ val ds: Dataset[Person] = spark.read
 ```
 
 ---
+
 ## DataFrame Definition
 ```scala
 val df: DataFrame = spark.read
@@ -46,10 +49,12 @@ val df: DataFrame = spark.read
 ```
 
 ---
+
 ## Type Safety
 ![type_safety](svg/lectures/big_data/spark-scala-datasets/type_safety.svg)
 
 ---
+
 ## Basic Transformations
 ```scala
 // Dataset
@@ -60,6 +65,7 @@ personDF.filter($"age" > 21)
 ```
 
 ---
+
 ## Schema Definition
 ```scala
 // Dataset implicit schema from case class
@@ -73,6 +79,7 @@ val schema = StructType(Array(
 ```
 
 ---
+
 ## Dataset Type Safety Example
 ```scala
 case class Person(name: String, age: Int)
@@ -83,6 +90,7 @@ ds.map(p => p.age.substring(1))
 ```
 
 ---
+
 ## DataFrame Runtime Checks
 ```scala
 val df = spark.read.json("people.json")
@@ -92,10 +100,12 @@ df.select($"age".cast("string").substring(1))
 ```
 
 ---
+
 ## Performance Characteristics
 ![performance_characteristics](svg/lectures/big_data/spark-scala-datasets/performance_characteristics.svg)
 
 ---
+
 ## Memory Usage
 1. Datasets: Object creation overhead
 1. DataFrames: Optimized internal format
@@ -103,6 +113,7 @@ df.select($"age".cast("string").substring(1))
 1. Garbage collection impact
 
 ---
+
 ## Converting Between Types
 ```scala
 // DataFrame to Dataset
@@ -114,6 +125,7 @@ val df = ds.toDF()
 ```
 
 ---
+
 ## SQL Operations
 ```scala
 // Register temporary view
@@ -124,10 +136,12 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 ```
 
 ---
+
 ## Catalyst Optimizer
 ![catalyst_optimizer](svg/lectures/big_data/spark-scala-datasets/catalyst_optimizer.svg)
 
 ---
+
 ## Encoder Operations
 1. Serialization
 1. Deserialization
@@ -135,6 +149,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 1. Code generation
 
 ---
+
 ## Dataset Advantages
 1. Type safety
 1. Object-oriented interface
@@ -142,6 +157,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 1. Compile-time errors
 
 ---
+
 ## DataFrame Advantages
 1. Better performance
 1. Dynamic typing
@@ -149,6 +165,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 1. Simpler API
 
 ---
+
 ## When to Use Datasets
 1. Complex domain objects
 1. Type safety requirement
@@ -156,6 +173,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 1. Compile-time verification
 
 ---
+
 ## When to Use DataFrames
 1. Simple operations
 1. Best performance needed
@@ -163,6 +181,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 1. SQL-like operations
 
 ---
+
 ## Common Operations
 ```scala
 // Dataset
@@ -179,6 +198,7 @@ df.filter($"age" > 21)
 ```
 
 ---
+
 ## Aggregations
 ```scala
 // Dataset
@@ -191,6 +211,7 @@ df.groupBy($"age")
 ```
 
 ---
+
 ## Join Operations
 ```scala
 case class Order(id: Int, personId: Int)
@@ -201,6 +222,7 @@ persons.joinWith(orders,
 ```
 
 ---
+
 ## Performance Tuning
 1. Caching strategies
 1. Partition management
@@ -208,6 +230,7 @@ persons.joinWith(orders,
 1. Execution plans
 
 ---
+
 ## Debugging Tools
 ```scala
 // View execution plan
@@ -218,6 +241,7 @@ ds.explain(true)
 ```
 
 ---
+
 ## Error Handling
 ```scala
 // Dataset - compile-time error
@@ -228,6 +252,7 @@ df.select($"nonexistentField") // Runtime error
 ```
 
 ---
+
 ## Schema Evolution
 1. Adding columns
 1. Removing columns
@@ -235,6 +260,7 @@ df.select($"nonexistentField") // Runtime error
 1. Compatibility checks
 
 ---
+
 ## Data Sources
 ```scala
 // Read parquet
@@ -245,6 +271,7 @@ ds.write.parquet("output.parquet")
 ```
 
 ---
+
 ## Custom Encoders
 ```scala
 // Custom encoder for complex type
@@ -253,10 +280,12 @@ val ds: Dataset[CustomType] = ...
 ```
 
 ---
+
 ## Serialization
 ![serialization](svg/lectures/big_data/spark-scala-datasets/serialization.svg)
 
 ---
+
 ## Best Practices
 1. Use appropriate types
 1. Consider performance impact
@@ -264,6 +293,7 @@ val ds: Dataset[CustomType] = ...
 1. Implement proper error handling
 
 ---
+
 ## Dataset APIs
 1. Transformation operations
 1. Action operations
@@ -271,6 +301,7 @@ val ds: Dataset[CustomType] = ...
 1. Window functions
 
 ---
+
 ## DataFrame APIs
 1. Column operations
 1. SQL functions
@@ -278,6 +309,7 @@ val ds: Dataset[CustomType] = ...
 1. UDFs
 
 ---
+
 ## Real-world Usage
 ```scala
 case class SalesRecord(
@@ -292,6 +324,7 @@ sales.groupByKey(_.date)
 ```
 
 ---
+
 ## Performance Monitoring
 1. Spark UI metrics
 1. Memory usage
@@ -299,6 +332,7 @@ sales.groupByKey(_.date)
 1. Resource utilization
 
 ---
+
 ## Common Pitfalls
 1. Excessive object creation
 1. Inefficient serialization
@@ -306,6 +340,7 @@ sales.groupByKey(_.date)
 1. Poor partitioning
 
 ---
+
 ## Future Considerations
 1. Scala 3 support
 1. Performance improvements

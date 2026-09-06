@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Measuring Time
 
 ---
+
 ## What This Chapter Covers
 
 - Hardware time sources: TSC, HPET, ARM Generic Timer
@@ -22,6 +24,7 @@ audience:
 - Avoiding measurement bias
 
 ---
+
 ## Why Measuring Time Is Hard
 
 - Multiple time sources, each with their own quirks
@@ -31,16 +34,19 @@ audience:
 - Knowing which to use is the first skill
 
 ---
+
 ## Time APIs
 
 ![clock_apis](svg/courses/real_time/real-time-programming/05_measuring_time/clock_apis.svg)
 
 ---
+
 ## Timestamp Methods
 
 ![timestamp_methods](svg/courses/real_time/real-time-programming/05_measuring_time/timestamp_methods.svg)
 
 ---
+
 ## Hardware Time Sources (x86)
 
 - **TSC (Time Stamp Counter)**: a 64-bit counter that ticks at CPU clock rate
@@ -50,6 +56,7 @@ audience:
 - The default high-res clock on Linux x86
 
 ---
+
 ## Hardware Time Sources (ARM)
 
 - ARM Generic Timer: a system-level counter, accessible from any privilege level
@@ -59,6 +66,7 @@ audience:
 - What CLOCK_MONOTONIC reads on aarch64 Linux
 
 ---
+
 ## Other Sources
 
 - **HPET (High Precision Event Timer)**: x86 platform timer, ~10 MHz
@@ -68,6 +76,7 @@ audience:
 - The kernel picks the best available
 
 ---
+
 ## Wall-Clock Time
 
 - "What time is it in the world?"
@@ -77,6 +86,7 @@ audience:
 - Use for: timestamps, scheduled events tied to wall time
 
 ---
+
 ## Monotonic Time
 
 - Counts time since some arbitrary point (boot, often)
@@ -86,6 +96,7 @@ audience:
 - Use for: measuring durations between events
 
 ---
+
 ## CLOCK_MONOTONIC_RAW
 
 - Like CLOCK_MONOTONIC but unaffected by NTP slewing
@@ -95,6 +106,7 @@ audience:
 - Use when you want raw CPU-rate ticks
 
 ---
+
 ## CLOCK_PROCESS_CPUTIME_ID
 
 - Time the *current process* spent on CPU
@@ -104,6 +116,7 @@ audience:
 - Powerful for performance work
 
 ---
+
 ## Resolution vs Accuracy vs Precision
 
 - **Resolution**: smallest distinguishable time unit (1 ns? 1 us?)
@@ -113,6 +126,7 @@ audience:
 - A 1 ns resolution on a clock that drifts 1 ms/hour is misleading
 
 ---
+
 ## POSIX Timing API
 
 ```c
@@ -129,6 +143,7 @@ clock_gettime(CLOCK_MONOTONIC, &ts);
 - Available on Linux, macOS, BSDs
 
 ---
+
 ## Measuring a Code Path
 
 ```c
@@ -146,6 +161,7 @@ long ns = (t1.tv_sec - t0.tv_sec) * 1000000000L
 - Run many times for distribution, not single sample
 
 ---
+
 ## Histograms, Not Means
 
 - A single mean hides the worst case
@@ -155,6 +171,7 @@ long ns = (t1.tv_sec - t0.tv_sec) * 1000000000L
 - This view tells the truth that means hide
 
 ---
+
 ## Beware of Optimisations
 
 - The compiler may reorder around your timing reads
@@ -164,6 +181,7 @@ long ns = (t1.tv_sec - t0.tv_sec) * 1000000000L
 - Compiler intrinsics may also matter on the CPU side
 
 ---
+
 ## Measurement Overhead
 
 - `clock_gettime` itself takes nanoseconds
@@ -173,6 +191,7 @@ long ns = (t1.tv_sec - t0.tv_sec) * 1000000000L
 - On older systems or unusual configs, expect microseconds
 
 ---
+
 ## Measuring Distributions
 
 - Run the operation 10000+ times
@@ -182,6 +201,7 @@ long ns = (t1.tv_sec - t0.tv_sec) * 1000000000L
 - Aim for: tight distribution, low p99.9, low max
 
 ---
+
 ## Common Mistakes
 
 - Using `time()` (1-second resolution) for sub-second work

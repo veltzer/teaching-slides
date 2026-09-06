@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Sources and Seeds
 
 ---
+
 ## What This Chapter Covers
 
 - Sources: raw data definitions
@@ -19,6 +21,7 @@ audience:
 - Patterns
 
 ---
+
 ## Sources
 
 - Declared raw tables
@@ -27,11 +30,13 @@ audience:
 - Documentation lives here
 
 ---
+
 ## Sources vs Seeds
 
 ![sources_and_seeds](svg/courses/data_engineering/dbt/06_sources_and_seeds/sources_and_seeds.svg)
 
 ---
+
 ## Defining Sources
 
 ```yaml
@@ -45,6 +50,7 @@ sources:
 ```
 
 ---
+
 ## Source Freshness
 
 ```yaml
@@ -62,6 +68,7 @@ sources:
 - Catches upstream pipeline failures
 
 ---
+
 ## Running Freshness Checks
 
 ```bash
@@ -72,6 +79,7 @@ dbt source freshness
 - Alert on failures
 
 ---
+
 ## Seeds
 
 - CSV files committed to repo
@@ -79,6 +87,7 @@ dbt source freshness
 - For: small reference data, mappings
 
 ---
+
 ## Sample Seed
 
 ```csv
@@ -97,6 +106,7 @@ dbt seed
 - Reference: `{{ ref('country_mapping') }}`
 
 ---
+
 ## When To Use Seeds
 
 - Mapping tables (small)
@@ -105,6 +115,7 @@ dbt seed
 - "Static" reference data
 
 ---
+
 ## When Not To
 
 - Large datasets (use sources instead)
@@ -112,6 +123,7 @@ dbt seed
 - Sensitive data (don't put in git)
 
 ---
+
 ## Seed Configuration
 
 ```yaml
@@ -126,6 +138,7 @@ seeds:
 - Per-seed config
 
 ---
+
 ## External Tables
 
 - Sources can be external tables (S3, GCS)
@@ -133,6 +146,7 @@ seeds:
 - Useful for: data lakes, infrequent access
 
 ---
+
 ## Source Patterns
 
 - One source group per upstream system
@@ -141,6 +155,7 @@ seeds:
 - Test freshness on critical ones
 
 ---
+
 ## Layered Approach
 
 - Sources &#8594; staging models (clean) &#8594; intermediate &#8594; marts
@@ -148,6 +163,7 @@ seeds:
 - Standard dbt pattern
 
 ---
+
 ## Common Source/Seed Mistakes
 
 - No source documentation
@@ -157,6 +173,7 @@ seeds:
 - Hardcoded source paths in models (use source())
 
 ---
+
 ## When to Use Seeds
 
 ![seeds_uses](svg/courses/data_engineering/dbt/06_sources_and_seeds/seeds_uses.svg)

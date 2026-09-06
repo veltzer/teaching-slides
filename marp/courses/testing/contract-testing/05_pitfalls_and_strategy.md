@@ -8,9 +8,11 @@ audience:
   - audiences:testers
 
 ---
+
 # Pitfalls and Strategy
 
 ---
+
 ## What This Chapter Covers
 
 - Common pitfalls
@@ -20,6 +22,7 @@ audience:
 - Adoption strategy
 
 ---
+
 ## Brittle Contracts
 
 - Match exact values that change
@@ -28,6 +31,7 @@ audience:
 - Test only what you depend on
 
 ---
+
 ## Over-Specification
 
 - Listing every field
@@ -36,6 +40,7 @@ audience:
 - Specify only what you read
 
 ---
+
 ## Under-Specification
 
 - Skipping fields you depend on
@@ -44,6 +49,7 @@ audience:
 - Cover error responses too
 
 ---
+
 ## When Not To Use
 
 - Single-team monolith
@@ -52,6 +58,7 @@ audience:
 - Tests do not pay back the effort
 
 ---
+
 ## End-To-End Still Matters
 
 - Smoke tests for critical journeys
@@ -60,6 +67,7 @@ audience:
 - Run sparingly
 
 ---
+
 ## Mixing With Schema Validation
 
 - Schemas catch shape drift
@@ -68,6 +76,7 @@ audience:
 - Tools support both
 
 ---
+
 ## Async Messaging
 
 - Topics and queues
@@ -76,6 +85,7 @@ audience:
 - Message tools have contract support
 
 ---
+
 ## Event Schemas
 
 - Backward compatibility rules
@@ -84,6 +94,7 @@ audience:
 - Same disciplines as HTTP
 
 ---
+
 ## Documentation Bonus
 
 - Contracts double as examples
@@ -92,6 +103,7 @@ audience:
 - Free side benefit
 
 ---
+
 ## Adoption Strategy
 
 - Pilot one boundary
@@ -100,11 +112,13 @@ audience:
 - Standardize tooling
 
 ---
+
 ## Adoption Path
 
 ![adoption_path](svg/courses/testing/contract-testing/05_pitfalls_and_strategy/adoption_path.svg)
 
 ---
+
 ## Team Buy-In
 
 - Provider teams must verify
@@ -113,6 +127,7 @@ audience:
 - Leadership backs the discipline
 
 ---
+
 ## Maintenance
 
 - Stale contracts removed
@@ -121,6 +136,7 @@ audience:
 - Document the process
 
 ---
+
 ## Metrics That Matter
 
 - Verification pass rate
@@ -129,6 +145,7 @@ audience:
 - Deploys gated by can-i-deploy
 
 ---
+
 ## Common Strategy Mistakes
 
 - Tooling without discipline

@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Factor IV: Backing Services
 
 ---
+
 ## The Rule
 
 - Treat backing services as attached resources
@@ -19,11 +21,13 @@ audience:
 - Swappable without code changes — only config changes
 
 ---
+
 ## Attached Resources
 
 ![attached_resources](svg/courses/architecting/twelve-factor-app/05_backing_services/attached_resources.svg)
 
 ---
+
 ## What Counts as a Backing Service
 
 - Databases (Postgres, MySQL, MongoDB)
@@ -35,6 +39,7 @@ audience:
 - Internal services (other microservices)
 
 ---
+
 ## What "Attached Resource" Means
 
 - The app addresses the resource by URL or DNS, not by class instance
@@ -42,6 +47,7 @@ audience:
 - "Local Postgres in dev, RDS in prod, with no code change" is the goal
 
 ---
+
 ## Local vs Third-Party Resources
 
 - A locally-managed Postgres and a third-party-managed Postgres are interchangeable
@@ -50,6 +56,7 @@ audience:
 - This is the freedom factor IV gives you
 
 ---
+
 ## Anti-Patterns
 
 - Hardcoded service hostnames
@@ -58,6 +65,7 @@ audience:
 - "We can't switch from Stripe because the integration is everywhere"
 
 ---
+
 ## The Adapter Pattern Helps
 
 - Wrap each backing service behind a small interface
@@ -66,6 +74,7 @@ audience:
 - Swapping providers becomes implementing a new adapter
 
 ---
+
 ## Service Discovery
 
 - Static config (env vars) works for most cases
@@ -74,6 +83,7 @@ audience:
 - Whatever the mechanism, the app sees a URL/hostname
 
 ---
+
 ## Resource Replacement at Runtime
 
 - A backing service can be replaced without restarting the app
@@ -82,6 +92,7 @@ audience:
 - Not a magic property; it's an explicit capability the app builds
 
 ---
+
 ## Reasonable Compliance Test
 
 - Can you point the app at a different Postgres instance with one env var change?
@@ -90,6 +101,7 @@ audience:
 - If yes, factor IV is satisfied
 
 ---
+
 ## Summary
 
 - Backing services are addressed by URL/hostname through config

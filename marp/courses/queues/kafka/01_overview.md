@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Overview
 
 ---
+
 ## What This Chapter Covers
 
 - What Kafka is and why it exists
@@ -21,11 +23,13 @@ audience:
 - Vocabulary you'll need
 
 ---
+
 ## Topics, Partitions, Offsets
 
 ![topic_partitions](svg/courses/queues/kafka/01_overview/topic_partitions.svg)
 
 ---
+
 ## What Kafka Is
 
 - A distributed, partitioned, replicated commit log
@@ -35,11 +39,13 @@ audience:
 - Originally built at LinkedIn (2010); now Apache top-level
 
 ---
+
 ## Cluster Topology
 
 ![kafka_topology](svg/courses/queues/kafka/01_overview/kafka_topology.svg)
 
 ---
+
 ## What "Commit Log" Means
 
 - An append-only sequence of records
@@ -49,6 +55,7 @@ audience:
 - Same log can be read by many consumers, at their own pace
 
 ---
+
 ## Distributed and Replicated
 
 - Topics are split into *partitions*
@@ -58,6 +65,7 @@ audience:
 - Survives broker failures within the replication factor
 
 ---
+
 ## Why Kafka, Not RabbitMQ?
 
 - Kafka: high-throughput, append-only log
@@ -67,6 +75,7 @@ audience:
 - Different tools for different problems; sometimes both
 
 ---
+
 ## Why Kafka, Not Pulsar?
 
 - Pulsar: similar features, different architecture
@@ -76,6 +85,7 @@ audience:
 - Both are good; pick by ecosystem fit
 
 ---
+
 ## Use Cases
 
 - **Messaging**: like RabbitMQ but with persistence and replay
@@ -85,6 +95,7 @@ audience:
 - **Change data capture**: stream database changes downstream
 
 ---
+
 ## The Kafka Ecosystem
 
 - **Kafka Core**: producers, consumers, brokers
@@ -95,6 +106,7 @@ audience:
 - **MirrorMaker**: cross-datacenter replication
 
 ---
+
 ## Vocabulary: Topic
 
 - A named stream of records
@@ -104,6 +116,7 @@ audience:
 - Common: `orders`, `users`, `payments`, `clickstream`
 
 ---
+
 ## Vocabulary: Partition
 
 - One ordered, append-only sequence within a topic
@@ -113,6 +126,7 @@ audience:
 - Partition count is hard to change later — pick carefully
 
 ---
+
 ## Vocabulary: Offset
 
 - The position of a record within a partition
@@ -122,6 +136,7 @@ audience:
 - Offsets are per partition; not global
 
 ---
+
 ## Vocabulary: Producer / Consumer
 
 - **Producer**: writes records to topics
@@ -131,6 +146,7 @@ audience:
 - Decoupling is the whole point
 
 ---
+
 ## Vocabulary: Broker / Cluster
 
 - **Broker**: a Kafka server (one process)
@@ -140,6 +156,7 @@ audience:
 - Replication spans brokers within the cluster
 
 ---
+
 ## Vocabulary: Consumer Group
 
 - A logical group of consumers sharing the work
@@ -149,6 +166,7 @@ audience:
 - The basis of Kafka's pub-sub model
 
 ---
+
 ## A Short History
 
 - 2010: built at LinkedIn for activity stream tracking
@@ -159,6 +177,7 @@ audience:
 - Today: industry standard for event streaming
 
 ---
+
 ## Confluent vs Apache Kafka
 
 - Apache Kafka: open source, free
@@ -168,6 +187,7 @@ audience:
 - Many production deployments use Confluent for the management
 
 ---
+
 ## What's Next
 
 - Producer API: how to write records

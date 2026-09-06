@@ -15,6 +15,7 @@ audience:
 # Cross-Site Request Forgery (CSRF)
 
 ---
+
 ## What is CSRF?
 
 - CSRF stands for Cross-Site Request Forgery
@@ -23,6 +24,7 @@ audience:
 - Allows an attacker to induce users to perform actions they do not intend to do
 
 ---
+
 ## How CSRF Works
 
 1. Attacker creates a malicious website or email
@@ -32,6 +34,7 @@ audience:
 1. Action is performed with the victim's privileges
 
 ---
+
 ## CSRF Attack Example
 
 ```html
@@ -43,6 +46,7 @@ audience:
 - Uses the victim's active session on bank.com
 
 ---
+
 ## Why CSRF is Dangerous
 
 - Exploits the trust a website has in a user's browser
@@ -54,6 +58,7 @@ audience:
     - Account compromise
 
 ---
+
 ## Defending Against CSRF
 
 1. CSRF Tokens
@@ -63,6 +68,7 @@ audience:
 1. User Interaction demands
 
 ---
+
 ## CSRF Tokens
 
 - Unique, unpredictable token for each session
@@ -80,6 +86,7 @@ Example:
 ```
 
 ---
+
 ## Same-Site Cookies
 - Set the `SameSite` attribute on cookies
 - Prevents the browser from sending cookies in cross-site requests
@@ -94,6 +101,7 @@ Set-Cookie: session=abc123; SameSite=Strict; Secure
 ```
 
 ---
+
 ## Custom Request Headers
 - Leverage the Same-Origin Policy for custom headers
 - Add a custom header to AJAX requests
@@ -110,6 +118,7 @@ fetch('/api/data', {
 ```
 
 ---
+
 ## Double Submit Cookies
 1. Set a random token as a cookie
 1. Include the same token as a hidden field in forms
@@ -125,6 +134,7 @@ Set-Cookie: csrf_token=abc123; SameSite=Strict
 ```
 
 ---
+
 ## User Interaction Requirements
 
 - Require user interaction for sensitive actions
@@ -132,7 +142,6 @@ Set-Cookie: csrf_token=abc123; SameSite=Strict
     - Re-authentication
     - CAPTCHA
     - Confirmation dialogs
-
 - Makes it harder for attackers to automate CSRF attacks
 
 ---

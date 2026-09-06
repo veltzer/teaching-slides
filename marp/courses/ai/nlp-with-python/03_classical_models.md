@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Classical NLP Models
 
 ---
+
 ## What This Chapter Covers
 
 - Bag of words
@@ -20,6 +22,7 @@ audience:
 - Why classical still matters
 
 ---
+
 ## Bag of Words
 
 - Count of each word
@@ -28,6 +31,7 @@ audience:
 - Easy to interpret
 
 ---
+
 ## TF-IDF
 
 - Term frequency times inverse document frequency
@@ -36,6 +40,7 @@ audience:
 - Strong baseline for classification
 
 ---
+
 ## Vocabulary Decisions
 
 - Min and max document frequency
@@ -44,6 +49,7 @@ audience:
 - Hashing trick avoids vocab altogether
 
 ---
+
 ## Naive Bayes
 
 - Assumes feature independence
@@ -52,11 +58,13 @@ audience:
 - Multinomial variant for counts
 
 ---
+
 ## Classifier Choices
 
 ![classifier_choices](svg/courses/ai/nlp-with-python/03_classical_models/classifier_choices.svg)
 
 ---
+
 ## Logistic Regression
 
 - Linear model with sigmoid
@@ -65,11 +73,13 @@ audience:
 - Coefficient inspection is interpretable
 
 ---
+
 ## TF-IDF Plus Logistic Regression
 
 ![pipeline](svg/courses/ai/nlp-with-python/03_classical_models/tfidf_to_lr.svg)
 
 ---
+
 ## SVM
 
 - Margin maximization
@@ -78,6 +88,7 @@ audience:
 - Strong on small data
 
 ---
+
 ## Random Forests
 
 - Tree ensembles
@@ -86,6 +97,7 @@ audience:
 - Useful when features mix text and numerics
 
 ---
+
 ## Sequence Models: HMM
 
 - Hidden Markov models
@@ -94,6 +106,7 @@ audience:
 - NER baseline
 
 ---
+
 ## CRF
 
 - Conditional random fields
@@ -102,6 +115,7 @@ audience:
 - Trains well on labeled data
 
 ---
+
 ## When Classical Wins
 
 - Small data
@@ -110,6 +124,7 @@ audience:
 - Tabular plus text mix
 
 ---
+
 ## Baseline Discipline
 
 - Always start with TF-IDF logistic regression
@@ -118,6 +133,7 @@ audience:
 - Hard for transformers to justify cost when it works
 
 ---
+
 ## Common Classical Mistakes
 
 - Over-tuning on validation

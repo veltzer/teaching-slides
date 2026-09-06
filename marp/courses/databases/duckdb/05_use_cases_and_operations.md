@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Use Cases and Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Notebook analytics
@@ -20,6 +22,7 @@ audience:
 - Operational notes
 
 ---
+
 ## Notebook Analytics
 
 - Replace heavy DataFrame work
@@ -28,11 +31,13 @@ audience:
 - Faster than loading into memory
 
 ---
+
 ## Integration Patterns
 
 ![integration_patterns](svg/courses/databases/duckdb/05_use_cases_and_operations/integration_patterns.svg)
 
 ---
+
 ## Embedded Reporting
 
 - Ship DuckDB in your application
@@ -41,6 +46,7 @@ audience:
 - Useful for desktop and CLI tools
 
 ---
+
 ## ETL On A Laptop
 
 - Read CSV or JSON
@@ -49,6 +55,7 @@ audience:
 - Many real workflows fit in one process
 
 ---
+
 ## Tests
 
 - Replace Postgres in unit tests
@@ -57,6 +64,7 @@ audience:
 - Use Postgres for integration where flavor matters
 
 ---
+
 ## Lakehouse Querying
 
 - Read open table formats
@@ -65,6 +73,7 @@ audience:
 - Combine with Python tooling
 
 ---
+
 ## Concurrent Access
 
 - One writer at a time
@@ -73,6 +82,7 @@ audience:
 - Not a multi-user server
 
 ---
+
 ## Backups
 
 - Copy the database file
@@ -81,6 +91,7 @@ audience:
 - Or rely on Parquet snapshots
 
 ---
+
 ## Versioning
 
 - Pin DuckDB version in dependencies
@@ -89,6 +100,7 @@ audience:
 - Read release notes
 
 ---
+
 ## Extensions
 
 - Loaded per-session
@@ -97,6 +109,7 @@ audience:
 - Watch for network access in extensions
 
 ---
+
 ## Security
 
 - Library inside your process
@@ -105,6 +118,7 @@ audience:
 - Manage credentials cleanly
 
 ---
+
 ## Limits
 
 - Single host scale
@@ -113,6 +127,7 @@ audience:
 - No multi-tenant isolation
 
 ---
+
 ## Mixing With Bigger Systems
 
 - Pull subsets from a warehouse
@@ -121,6 +136,7 @@ audience:
 - Saves cost
 
 ---
+
 ## Embedding Tips
 
 - Reuse connections
@@ -129,6 +145,7 @@ audience:
 - Catch errors per query
 
 ---
+
 ## Common Use-Case Mistakes
 
 - Treating it as a server

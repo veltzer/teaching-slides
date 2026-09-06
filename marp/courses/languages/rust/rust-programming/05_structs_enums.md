@@ -8,15 +8,18 @@ audience:
   - audiences:developers
 
 ---
+
 # Structs and Enums
 ## Chapter 4: Custom Data Types in Rust
 
 ---
+
 ## What are Structs?
 
 ![what_are_structs](svg/courses/languages/rust/rust-programming/05_structs_enums/what_are_structs.svg)
 
 ---
+
 ## Defining a Struct
 
 ```rust
@@ -167,6 +170,7 @@ impl Rectangle {
 ```
 
 ---
+
 ## What are Enums
 
 ![what_are_enums](svg/courses/languages/rust/rust-programming/05_structs_enums/what_are_enums.svg)

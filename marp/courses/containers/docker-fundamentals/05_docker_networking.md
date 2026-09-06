@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Docker Networking
 
 ---
+
 ## What This Chapter Covers
 
 - The network drivers Docker ships with
@@ -22,6 +24,7 @@ audience:
 - DNS inside Docker networks
 
 ---
+
 ## Network Drivers
 
 - **bridge**: default; an isolated virtual network on the host
@@ -31,6 +34,7 @@ audience:
 - **macvlan**: container gets its own MAC and IP on the physical network
 
 ---
+
 ## The Default Bridge
 
 - Created automatically (`docker0`)
@@ -40,6 +44,7 @@ audience:
 - For real work: use a user-defined bridge instead
 
 ---
+
 ## User-Defined Bridges
 
 ```bash
@@ -53,6 +58,7 @@ docker run -d --name api --network app-net myapi
 - Recommended pattern for multi-container apps
 
 ---
+
 ## Listing Networks
 
 ```bash
@@ -66,6 +72,7 @@ docker network rm app-net
 - Can't remove a network with attached containers
 
 ---
+
 ## Publishing Ports
 
 ```bash
@@ -80,6 +87,7 @@ docker run -d -P nginx                      # publish all EXPOSEd ports
 - Bind to a specific host IP for security
 
 ---
+
 ## Inside vs Outside
 
 - **Container-to-container** (same network): use the container *name* and its *internal* port
@@ -88,11 +96,13 @@ docker run -d -P nginx                      # publish all EXPOSEd ports
 - Common confusion: thinking the published port is the "real" port — it's a forwarding rule
 
 ---
+
 ## Network Topology
 
 ![networks](svg/courses/containers/docker-fundamentals/05_docker_networking/networks.svg)
 
 ---
+
 ## DNS Resolution
 
 - Docker runs an embedded DNS server (`127.0.0.11`) for user-defined networks
@@ -102,6 +112,7 @@ docker run -d -P nginx                      # publish all EXPOSEd ports
 - For multi-host setups, use Kubernetes/Consul/Nomad service discovery
 
 ---
+
 ## Host Network Mode
 
 ```bash
@@ -115,6 +126,7 @@ docker run -d --network=host nginx
 - Linux only; Docker Desktop on Mac/Win simulates differently
 
 ---
+
 ## None Network Mode
 
 ```bash
@@ -126,6 +138,7 @@ docker run --network=none alpine sh
 - Surprisingly handy for security-sensitive computation
 
 ---
+
 ## Connecting Existing Containers
 
 ```bash
@@ -138,6 +151,7 @@ docker network disconnect app-net api
 - Connect / disconnect at runtime
 
 ---
+
 ## Inspecting Container Networking
 
 ```bash
@@ -151,6 +165,7 @@ docker exec api getent hosts db
 - `getent hosts` confirms DNS resolution works
 
 ---
+
 ## A Common Pitfall: Localhost Inside a Container
 
 - `localhost` inside a container = the *container itself*, not the host
@@ -159,6 +174,7 @@ docker exec api getent hosts db
 - This trips up newcomers nearly every time
 
 ---
+
 ## Network Performance
 
 - Bridge mode: NAT'd; small overhead per packet
@@ -168,6 +184,7 @@ docker exec api getent hosts db
 - Most apps notice nothing
 
 ---
+
 ## Common Mistakes
 
 - Two containers on different user networks expecting to talk &#8594; they can't, by design
@@ -177,6 +194,7 @@ docker exec api getent hosts db
 - Reusing the default bridge for new projects &#8594; lose DNS, lose isolation
 
 ---
+
 ## Docker Network Drivers
 
 ![network_drivers](svg/courses/containers/docker-fundamentals/05_docker_networking/network_drivers.svg)

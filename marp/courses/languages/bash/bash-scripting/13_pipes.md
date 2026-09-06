@@ -12,9 +12,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Pipes
 
 ---
+
 ## What is a Pipe?
 - Connects stdout of one command to stdin of another
 - Data flows left to right
@@ -30,6 +32,7 @@ ls -la | grep ".txt"
 ```
 
 ---
+
 ## Pipe Syntax
 
 ```bash
@@ -44,11 +47,13 @@ du -sh /var/log/* 2>/dev/null | sort -rh | head -10
 ```
 
 ---
+
 ## How Pipes Work Internally
 
 ![how_pipes_work_internally](svg/courses/languages/bash/bash-scripting/13_pipes/how_pipes_work_internally.svg)
 
 ---
+
 ## Pipes Run Concurrently
 
 ```bash
@@ -68,6 +73,7 @@ du -sh /var/log/* 2>/dev/null | sort -rh | head -10
 ```
 
 ---
+
 ## Pipe Buffer and Blocking
 
 ```bash
@@ -85,6 +91,7 @@ cat /proc/sys/fs/pipe-max-size
 ```
 
 ---
+
 ## Common Pipeline Patterns
 
 ```bash
@@ -107,6 +114,7 @@ grep "error" logfile.txt | wc -l
 ```
 
 ---
+
 ## Pipeline Building Blocks
 
 ```bash
@@ -123,6 +131,7 @@ last | awk '{print $1}' | sort | uniq -c | sort -rn | head -5
 ```
 
 ---
+
 ## The "Useless Use of `cat`" Anti-Pattern
 
 ```bash
@@ -142,6 +151,7 @@ cat -n file.txt                    # adding line numbers
 ```
 
 ---
+
 ## Pipes and Return Codes
 
 ```bash
@@ -160,6 +170,7 @@ echo "${PIPESTATUS[@]}"    # 1 0 1
 ```
 
 ---
+
 ## Pipes and Subshells: The Trap
 
 ```bash
@@ -187,6 +198,7 @@ echo "count=$count"    # 3
 ```
 
 ---
+
 ## Named Pipes (FIFOs)
 
 ```bash
@@ -208,6 +220,7 @@ rm /tmp/mypipe
 ```
 
 ---
+
 ## Pipe to `xargs`
 
 ```bash
@@ -228,6 +241,7 @@ cat hosts.txt | xargs -n 1 -P 4 ping -c 1
 ```
 
 ---
+
 ## Pipeline Performance
 
 ```bash

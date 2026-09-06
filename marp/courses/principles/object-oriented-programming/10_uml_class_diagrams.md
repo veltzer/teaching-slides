@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # UML Class Diagrams
 
 ---
+
 ## What This Chapter Covers
 
 - Why UML is useful (and where it's not)
@@ -21,6 +23,7 @@ audience:
 - Reading and creating diagrams
 
 ---
+
 ## Why UML
 
 - A *visual* notation for OO designs
@@ -30,11 +33,13 @@ audience:
 - Less useful as exhaustive code-mirroring documentation (those go stale)
 
 ---
+
 ## A UML Class
 
 ![uml_class](svg/courses/principles/object-oriented-programming/10_uml_class_diagrams/uml_class.svg)
 
 ---
+
 ## Class Box Layout
 
 - Top compartment: class name (italic if abstract)
@@ -44,6 +49,7 @@ audience:
 - Underline a member to mark it `static`
 
 ---
+
 ## Attribute Notation
 
 - `+ name : type = default`
@@ -52,6 +58,7 @@ audience:
 - Stereotypes in `<<...>>` for special meanings (rare in practice)
 
 ---
+
 ## Method Notation
 
 - `+ methodName(param: Type, ...) : ReturnType`
@@ -60,6 +67,7 @@ audience:
 - Abstract methods in italic; underline for static
 
 ---
+
 ## Associations
 
 - A line between two classes means they reference each other
@@ -69,6 +77,7 @@ audience:
 - A bare line implies bidirectional knowledge
 
 ---
+
 ## Aggregation vs Composition
 
 - **Aggregation** (open diamond): "has-a", but the part can outlive the whole
@@ -78,6 +87,7 @@ audience:
 - Distinction matters in the design; less in the code
 
 ---
+
 ## Inheritance Notation
 
 - A line with a hollow triangle pointing to the *base* class
@@ -86,6 +96,7 @@ audience:
 - Abstract base classes: italicise the class name
 
 ---
+
 ## Interface Implementation
 
 - Dashed line with a hollow triangle pointing to the interface
@@ -93,6 +104,7 @@ audience:
 - A class can implement many interfaces
 
 ---
+
 ## Dependencies
 
 - Dashed arrow from "uses" to "is used by"
@@ -101,6 +113,7 @@ audience:
 - Distinguishes "has a field of" from "calls a method on, occasionally"
 
 ---
+
 ## A Small Diagram, In Words
 
 - `Customer 1 ---- 0..* Order` (composition: orders die with the customer)
@@ -110,6 +123,7 @@ audience:
 - That's a small e-commerce model in five lines
 
 ---
+
 ## Tools for UML
 
 - **PlantUML**: text-based, generates diagrams from a DSL — version-controllable
@@ -119,6 +133,7 @@ audience:
 - For team collaboration, text-based tools win — diffs make sense
 
 ---
+
 ## When to Use UML
 
 - Whiteboard discussions about a new design
@@ -128,6 +143,7 @@ audience:
 - Avoiding it: trying to capture *every* class in the system in one giant diagram
 
 ---
+
 ## When Not to Use UML
 
 - As exhaustive documentation that mirrors every class — code is the spec
@@ -137,6 +153,7 @@ audience:
 - Never — UML *is* the deliverable you're building (Big Up Front Design)
 
 ---
+
 ## A Few Pragmatic Tips
 
 - Diagram the *interesting* parts; skip the boilerplate
@@ -146,6 +163,7 @@ audience:
 - A diagram with five well-chosen classes beats one with thirty
 
 ---
+
 ## Common Mistakes
 
 - Drawing *every* class &#8594; unreadable wall of boxes

@@ -10,6 +10,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # UNIX Basics
 ## Getting Started with the Command Line
 
@@ -74,6 +75,7 @@ find /home -name "*.txt"
 ![filesystem_navigation](svg/courses/operating_systems/linux-fundamentals/02_basics/filesystem_navigation.svg)
 
 ---
+
 ## Simple Commands
 
 Common basic commands:
@@ -128,6 +130,7 @@ type ls
 ## Control Characters: Comparison
 
 Common control characters:
+
 | Key      | Function          |
 |----------|-------------------|
 | Ctrl+C   | Interrupt        |
@@ -156,6 +159,7 @@ Alt+F   # Move forward one word
 ```
 
 ---
+
 ## Command Examples in Practice
 
 Let's combine what we've learned:
@@ -200,6 +204,7 @@ pwd
 ```
 
 ---
+
 ## Practice Exercise
 
 Try these commands:

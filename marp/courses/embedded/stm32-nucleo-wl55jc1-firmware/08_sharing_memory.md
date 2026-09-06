@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Sharing Memory Between The Cores
 
 ---

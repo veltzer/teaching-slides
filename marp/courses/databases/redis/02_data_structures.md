@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Redis Data Structures
 
 ---
@@ -26,6 +27,7 @@ audience:
     - `Z...` for Sorted Sets
 
 ---
+
 ## String Operations Recap: Overview
 
 Strings are the most basic Redis data type:
@@ -111,6 +113,7 @@ Use cases:
 - Real-time analytics
 
 ---
+
 ## List Operations Recap: Overview
 
 Lists are linked lists of string values:
@@ -176,6 +179,7 @@ BRPOPLPUSH source destination timeout # Pop from one list, push to another
 ![implementing_a_task_queue_with_redis_lists](svg/courses/databases/redis/02_data_structures/implementing_a_task_queue_with_redis_lists.svg)
 
 ---
+
 ## Set Operations Recap: Overview
 
 Sets are unordered collections of unique strings:
@@ -250,6 +254,7 @@ SRANDMEMBER key [count]        # Get random members
 ![implementing_tag_filtering_with_redis_sets](svg/courses/databases/redis/02_data_structures/implementing_tag_filtering_with_redis_sets.svg)
 
 ---
+
 ## Sorted Set Operations Recap: Overview
 
 Sorted sets are sets with scores (ordering values):
@@ -321,6 +326,7 @@ ZPOPMAX key [count]              # Remove and return members with highest scores
 ![implementing_a_leaderboard_with_redis_sorted_sets](svg/courses/databases/redis/02_data_structures/implementing_a_leaderboard_with_redis_sorted_sets.svg)
 
 ---
+
 ## Hash Operations Recap: Overview
 
 Hashes are maps of field-value pairs:
@@ -443,6 +449,7 @@ GEOSEARCH key [FROMMEMBER member | FROMLONLAT longitude latitude] [BYRADIUS radi
 ```
 
 ---
+
 ## Bitmaps Introduction: Example
 
 Bitmaps (implemented using strings):
@@ -494,6 +501,7 @@ Data structure efficiency (for 1 million items):
 1. **Key design**: Shorter keys save memory
 
 ---
+
 ## Data Structure Patterns: Composite Keys: Overview
 
 Using multiple data structures together:

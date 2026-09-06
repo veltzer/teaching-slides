@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Factor II: Dependencies
 
 ---
+
 ## Declared and Isolated
 
 ![declared_isolated](svg/courses/architecting/twelve-factor-app/03_dependencies/declared_isolated.svg)
 
 ---
+
 ## The Rule
 
 - Explicitly declare and isolate dependencies
@@ -23,6 +26,7 @@ audience:
 - The dependency manifest is part of the codebase
 
 ---
+
 ## Explicit Declaration
 
 - Every dependency the app needs is named in a manifest
@@ -31,6 +35,7 @@ audience:
 - Implicit "the OS has it" dependencies are forbidden
 
 ---
+
 ## Lock Files
 
 - A manifest specifies what; a lock file specifies which exact version
@@ -39,6 +44,7 @@ audience:
 - Reproducible installs across time and machines
 
 ---
+
 ## Isolation
 
 - The app's dependencies do not leak into the system or each other
@@ -47,6 +53,7 @@ audience:
 - Containers enforce this naturally
 
 ---
+
 ## Why Isolation Matters
 
 - Prevents "works on my laptop" caused by global packages
@@ -55,6 +62,7 @@ audience:
 - The container model assumes this isolation; it builds on it
 
 ---
+
 ## Vendoring vs Package Managers
 
 - **Package manager**: declares what's needed; resolves at install time
@@ -63,6 +71,7 @@ audience:
 - Most projects use a package manager + lock file; vendoring is for special cases
 
 ---
+
 ## When to Vendor
 
 - Air-gapped or restricted environments without registry access
@@ -71,6 +80,7 @@ audience:
 - Dependencies on packages with unstable upstream
 
 ---
+
 ## Anti-Patterns
 
 - "It just works because Python 3.10 is on the system" — relies on global state
@@ -79,6 +89,7 @@ audience:
 - `apt-get install` in the README, no Dockerfile — leaks into the OS
 
 ---
+
 ## Container as Isolation
 
 - A Dockerfile is a manifest at the OS level
@@ -87,6 +98,7 @@ audience:
 - Containerized apps that violate factor II are rare; containers enforce it
 
 ---
+
 ## Verifying Compliance
 
 - Can a developer clone the repo and `make install` (or equivalent) without manual steps?
@@ -95,6 +107,7 @@ audience:
 - Are dependency upgrades a single PR with a diff in manifest + lock?
 
 ---
+
 ## Summary
 
 - Declare every dependency in a manifest

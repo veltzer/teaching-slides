@@ -9,6 +9,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Containerization (Optional)
 ## Docker, Podman, and Container Management
 
@@ -27,6 +28,7 @@ audience:
 - Image-based: immutable layers
 
 ---
+
 ## Containers vs Virtual Machines
 
 | Feature | Containers | Virtual Machines |
@@ -43,6 +45,7 @@ Use containers for: microservices, CI/CD, development.
 Use VMs for: strong isolation, different OS kernels.
 
 ---
+
 ## Linux Kernel Features Behind Containers
 
 **Namespaces** - isolation:
@@ -65,6 +68,7 @@ cat /proc/<PID>/cgroup
 ```
 
 ---
+
 ## Docker Basics
 
 ```bash
@@ -91,6 +95,7 @@ docker exec -it web bash
 ```
 
 ---
+
 ## Docker Run Options
 
 ```bash
@@ -118,6 +123,7 @@ docker run -d --dns 8.8.8.8 nginx
 ```
 
 ---
+
 ## Docker Images
 
 ```bash
@@ -142,6 +148,7 @@ docker load < nginx.tar
 ```
 
 ---
+
 ## Docker Image Layers
 
 ```bash
@@ -172,6 +179,7 @@ Layer best practices:
 - Use `.dockerignore` to exclude files
 
 ---
+
 ## Docker Volumes and Networks
 
 ```bash
@@ -201,6 +209,7 @@ docker run -d --network mynet --name web nginx
 ```
 
 ---
+
 ## Docker Network Types
 
 ```bash
@@ -225,6 +234,7 @@ docker network inspect mynet
 ```
 
 ---
+
 ## Writing Dockerfiles
 
 ```dockerfile
@@ -253,6 +263,7 @@ docker build -t myapp:1.0 .
 ```
 
 ---
+
 ## Dockerfile Best Practices
 
 ```dockerfile
@@ -284,6 +295,7 @@ CMD ["python3", "app.py"]
 ```
 
 ---
+
 ## Podman: Rootless Containers
 
 ```bash
@@ -311,6 +323,7 @@ systemctl --user enable --now web
 ```
 
 ---
+
 ## Podman Pods
 
 ```bash
@@ -336,6 +349,7 @@ podman generate kube mypod > mypod.yaml
 ```
 
 ---
+
 ## Container Management and Lifecycle
 
 ```bash
@@ -359,6 +373,7 @@ docker import web.tar myimage:latest
 ```
 
 ---
+
 ## Container Security Best Practices
 
 1. Use official/verified base images
@@ -385,6 +400,7 @@ trivy image myapp:1.0
 ```
 
 ---
+
 ## Docker Compose
 
 Define multi-container applications in a single file:
@@ -427,6 +443,7 @@ docker compose down
 ```
 
 ---
+
 ## Docker Compose Operations
 
 ```bash
@@ -457,6 +474,7 @@ docker compose -f docker-compose.yml \
 ```
 
 ---
+
 ## Container Logging
 
 ```bash
@@ -487,6 +505,7 @@ Configure default logging in `/etc/docker/daemon.json`:
 ```
 
 ---
+
 ## Container Health Checks
 
 ```bash
@@ -514,6 +533,7 @@ Use health checks for:
 - `Docker Compose` `depends_on` with `condition: service_healthy`
 
 ---
+
 ## Container Debugging
 
 ```bash
@@ -542,6 +562,7 @@ docker commit web debug-snapshot:latest
 ```
 
 ---
+
 ## Image Scanning and Security
 
 ```bash
@@ -570,6 +591,7 @@ Best practices:
 - Pin base image digests for reproducibility
 
 ---
+
 ## Multi-Architecture Builds
 
 ```bash
@@ -598,6 +620,7 @@ Use cases:
 - Support `Apple Silicon` development alongside production `AMD64`
 
 ---
+
 ## Container Orchestration Overview: Overview
 
 Choose based on complexity: `Compose` for dev, `Swarm` for simple production, `Kubernetes` for large-scale.
@@ -609,6 +632,7 @@ Choose based on complexity: `Compose` for dev, `Swarm` for simple production, `K
 ![container_orchestration_overview](svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_orchestration_overview.svg)
 
 ---
+
 ## systemd-nspawn Containers
 
 `systemd-nspawn` is a lightweight container tool built into `systemd`:
@@ -638,6 +662,7 @@ Advantages over `Docker`:
 - Built into every `systemd` distribution
 
 ---
+
 ## Container Resource Monitoring
 
 ```bash
@@ -669,6 +694,7 @@ Monitor for:
 - Disk usage growth in volumes
 
 ---
+
 ## Container Networking Deep Dive
 
 ```bash
@@ -702,6 +728,7 @@ docker run --rm --net container:web \
 ```
 
 ---
+
 ## Overlay Storage Drivers
 
 Storage drivers manage how image layers and container filesystems are stored:
@@ -742,6 +769,7 @@ mount | grep overlay
 ```
 
 ---
+
 ## Private Docker Registry
 
 Run a self-hosted registry for internal image distribution:
@@ -786,6 +814,7 @@ curl -s https://registry.local:5000/v2/_catalog
 ```
 
 ---
+
 ## Container Backup Strategies
 
 ```bash
@@ -826,6 +855,7 @@ done
 ```
 
 ---
+
 ## Exercise: Multi-Service Container Deployment
 
 Deploy a complete application stack with networking and persistence:

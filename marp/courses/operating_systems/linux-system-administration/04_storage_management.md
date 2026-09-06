@@ -9,10 +9,12 @@ audience:
   - audiences:devops
 
 ---
+
 # Storage Management and File Systems
 ## Devices, Partitions, Quotas, and Backups
 
 ---
+
 ## Storage Device Management
 
 ```bash
@@ -33,6 +35,7 @@ iostat -x 1
 ```
 
 ---
+
 ## Understanding Block Devices
 
 ```bash
@@ -51,6 +54,7 @@ Device naming:
 - `/dev/dm-0` - device mapper (LVM)
 
 ---
+
 ## SMART Disk Monitoring
 
 ```bash
@@ -81,6 +85,7 @@ smartctl -l selftest /dev/sda
 ```
 
 ---
+
 ## Partitioning with fdisk and parted
 
 ```bash
@@ -102,6 +107,7 @@ parted -s /dev/sdb mkpart primary ext4 0% 100%
 - GPT: up to 128 partitions, 9.4ZB max
 
 ---
+
 ## Partition Alignment and Best Practices
 
 ```bash
@@ -127,6 +133,7 @@ Best practices:
 - Keep partition table backups
 
 ---
+
 ## Filesystem Types Comparison
 
 | Filesystem | Max Size | Journal | Features |
@@ -139,6 +146,7 @@ Best practices:
 | `swap` | - | No | Virtual memory |
 
 ---
+
 ## Filesystem Creation
 
 ```bash
@@ -157,6 +165,7 @@ xfs_info /dev/sdb2      # xfs
 ```
 
 ---
+
 ## ext4 Tuning Options
 
 ```bash
@@ -181,6 +190,7 @@ dumpe2fs /dev/sdb1 | head -40
 ```
 
 ---
+
 ## Mounting Filesystems
 
 ```bash
@@ -207,6 +217,7 @@ mount -a
 ```
 
 ---
+
 ## Advanced Mount Options
 
 | Option | Purpose |
@@ -225,6 +236,7 @@ mount --bind /var/www /home/chroot/www
 ```
 
 ---
+
 ## Mount Troubleshooting
 
 ```bash
@@ -250,6 +262,7 @@ systemctl list-units --type=mount
 ```
 
 ---
+
 ## Swap Space Management
 
 ```bash
@@ -275,6 +288,7 @@ sysctl vm.swappiness=10
 ```
 
 ---
+
 ## Filesystem Quotas
 
 ```bash
@@ -298,6 +312,7 @@ quota -u alice
 ```
 
 ---
+
 ## Quota Configuration Details
 
 ```bash
@@ -321,6 +336,7 @@ xfs_quota -x -c 'report' /home
 ```
 
 ---
+
 ## Disk Monitoring and Maintenance
 
 ```bash
@@ -341,6 +357,7 @@ iostat -xz 1            # device I/O stats
 ```
 
 ---
+
 ## Finding Disk Space Hogs
 
 ```bash
@@ -381,6 +398,7 @@ filefrag /path/to/file       # ext4 fragmentation
 - **Snapshot**: filesystem-level point-in-time copy
 
 ---
+
 ## Backup with rsync
 
 ```bash
@@ -400,6 +418,7 @@ rsync -av --exclude='*.log' \
 ```
 
 ---
+
 ## rsync Advanced Options
 
 ```bash
@@ -423,6 +442,7 @@ rsync -avc /data/ /backup/data/
 ```
 
 ---
+
 ## Backup with tar
 
 ```bash
@@ -444,6 +464,7 @@ tar czf /backup/incr.tar.gz -g /backup/snapshot /data/
 ```
 
 ---
+
 ## Backup with borgbackup
 
 ```bash
@@ -467,6 +488,7 @@ borg prune --keep-daily=7 --keep-weekly=4 \
 Key features: deduplication, compression, encryption.
 
 ---
+
 ## borgbackup Advanced Usage
 
 ```bash
@@ -490,6 +512,7 @@ borg key export /backup/borg-repo keyfile.txt
 ```
 
 ---
+
 ## Automated Backup Script
 
 ```bash
@@ -515,6 +538,7 @@ borg check "$REPO" --last 3
 Trigger via `systemd` timer or `cron`.
 
 ---
+
 ## NFS Shared Filesystems
 
 ```bash
@@ -538,6 +562,7 @@ mount -t nfs server:/shared /mnt/nfs
 ```
 
 ---
+
 ## NFS Advanced Configuration
 
 ```bash
@@ -564,6 +589,7 @@ nfsstat -c    # client stats
 ```
 
 ---
+
 ## Samba Shared Filesystems
 
 ```bash
@@ -591,6 +617,7 @@ testparm
 ```
 
 ---
+
 ## Samba Client and Advanced Options
 
 ```bash
@@ -611,6 +638,7 @@ mount -t cifs //server/shared /mnt/samba \
 ```
 
 ---
+
 ## Filesystem Integrity and Recovery
 
 ```bash
@@ -631,6 +659,7 @@ inotifywait -m -r /data/
 ```
 
 ---
+
 ## Filesystem Recovery Deep Dive
 
 ```bash
@@ -657,6 +686,7 @@ ddrescue /dev/sda /dev/sdc rescue.log
 ```
 
 ---
+
 ## `Btrfs` Filesystem
 
 `Btrfs` is a copy-on-write filesystem with built-in snapshots, compression, and subvolumes.
@@ -680,6 +710,7 @@ mount -o subvol=@home /dev/sdb1 /home
 ```
 
 ---
+
 ## `Btrfs` Snapshots and Maintenance
 
 ```bash
@@ -706,6 +737,7 @@ btrfs balance start /mnt/data
 ```
 
 ---
+
 ## Disk Encryption with `LUKS`
 
 `LUKS` provides full-disk encryption using `dm-crypt`.
@@ -732,6 +764,7 @@ cryptsetup luksClose secure_data
 ```
 
 ---
+
 ## `LUKS` Persistent Configuration
 
 ```bash
@@ -764,6 +797,7 @@ cryptsetup luksHeaderBackup /dev/sdb1 \
 ```
 
 ---
+
 ## Automounting with `autofs`
 
 `autofs` mounts filesystems on demand and unmounts after idle timeout.
@@ -799,6 +833,7 @@ journalctl -u autofs
 ```
 
 ---
+
 ## Loop Devices
 
 Loop devices allow you to mount regular files as block devices.
@@ -834,6 +869,7 @@ ls /dev/loop0p*    # partitions appear automatically
 ```
 
 ---
+
 ## Disk I/O Scheduling Deep Dive
 
 The I/O scheduler determines how read/write requests are ordered and merged.
@@ -867,6 +903,7 @@ echo 100 > /sys/block/sda/queue/iosched/read_expire
 ```
 
 ---
+
 ## `fstrim` for SSD Maintenance
 
 SSDs need periodic `TRIM` commands to maintain write performance and longevity.
@@ -931,6 +968,7 @@ multipath -v2
 ```
 
 ---
+
 ## Storage Planning for Production
 
 Key considerations when planning storage for production servers:
@@ -956,6 +994,7 @@ du -sh /var/log/ /var/cache/ /var/lib/
 ```
 
 ---
+
 ## `iSCSI` Overview
 
 `iSCSI` provides block-level storage over TCP/IP networks, acting as a cheaper SAN alternative.
@@ -991,6 +1030,7 @@ iscsiadm -m session -P 3
 ```
 
 ---
+
 ## Disk Cloning with `dd`
 
 `dd` performs low-level byte-for-byte copies of block devices.
@@ -1027,6 +1067,7 @@ gunzip -c /backup/sda.img.gz | \
 ```
 
 ---
+
 ## Exercise: Storage Management Tasks
 
 1. Create a 500 MB file-backed loop device, format it with `ext4`, and mount it to `/mnt/exercise`
@@ -1052,6 +1093,7 @@ cat /sys/block/sda/queue/scheduler
 ```
 
 ---
+
 ## Disk Performance Benchmarking
 
 ```bash
@@ -1081,6 +1123,7 @@ hdparm -Tt /dev/sda
 Interpreting results: compare IOPS for random workloads, throughput (MB/s) for sequential. Always test with a workload that matches your production use case.
 
 ---
+
 ## ZFS on Linux Overview
 
 `ZFS` combines volume management and filesystem into one, with built-in integrity checking.
@@ -1119,6 +1162,7 @@ zfs send -i @snap1 tank/data@snap2 | \
 ```
 
 ---
+
 ## Storage Monitoring Scripts
 
 ```bash
@@ -1154,6 +1198,7 @@ done
 Integrate these scripts with `cron` or `systemd` timers and send alerts via email or monitoring systems.
 
 ---
+
 ## Logical vs Physical Sector Size
 
 Modern disks may have different logical and physical sector sizes.

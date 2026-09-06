@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Tool Use and Agents
 
 ---
+
 ## What This Chapter Covers
 
 - Tool use overview
@@ -20,6 +22,7 @@ audience:
 - Limits
 
 ---
+
 ## What Tool Use Is
 
 - LLM calls external functions
@@ -28,6 +31,7 @@ audience:
 - Foundation of agents
 
 ---
+
 ## Sample Flow
 
 - User asks question
@@ -36,6 +40,7 @@ audience:
 - Model uses results to answer
 
 ---
+
 ## Function Calling
 
 - Define tools with schemas
@@ -44,6 +49,7 @@ audience:
 - Loop until done
 
 ---
+
 ## ReAct
 
 - Reason then Act
@@ -52,6 +58,7 @@ audience:
 - Iterate
 
 ---
+
 ## Agent Loop
 
 - 1. Read state and goal
@@ -61,11 +68,13 @@ audience:
 - 1. Repeat until done
 
 ---
+
 ## Loop Visualised
 
 ![agent_loop](svg/courses/ai/prompt-engineering/05_tool_use_and_agents/agent_loop.svg)
 
 ---
+
 ## Tools to Provide
 
 - Search: Google, internal docs
@@ -74,6 +83,7 @@ audience:
 - API calls: weather, stocks, services
 
 ---
+
 ## System Prompts for Agents
 
 - Describe tools and when to use
@@ -82,6 +92,7 @@ audience:
 - Error handling expectations
 
 ---
+
 ## Multi-Step Tasks
 
 - Plan first; act in steps
@@ -90,6 +101,7 @@ audience:
 - Stop when done
 
 ---
+
 ## Limits
 
 - Context fills up over many steps
@@ -98,6 +110,7 @@ audience:
 - Cost adds up
 
 ---
+
 ## Memory
 
 - Conversation history is implicit memory
@@ -106,6 +119,7 @@ audience:
 - Replay relevant memory each turn
 
 ---
+
 ## Safety
 
 - Sandboxing tool execution
@@ -114,6 +128,7 @@ audience:
 - Human in the loop where needed
 
 ---
+
 ## Common Tool-Use Mistakes
 
 - No safety bounds on agents

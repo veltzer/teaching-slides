@@ -9,6 +9,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Review Metrics
 
 ---
@@ -18,6 +19,7 @@ audience:
 ![useful_metrics](svg/courses/development_methodologies/code-review-best-practices/11_review_metrics/useful_metrics.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why measure review work
@@ -28,6 +30,7 @@ audience:
 - The risk of misuse
 
 ---
+
 ## Why Measure
 
 - Spot bottlenecks
@@ -37,11 +40,13 @@ audience:
 - *Not*: ranking individuals
 
 ---
+
 ## Healthy Metrics
 
 ![healthy_metrics](svg/courses/development_methodologies/code-review-best-practices/11_review_metrics/healthy_metrics.svg)
 
 ---
+
 ## Time to First Review
 
 - Hours from PR opened to first comment / approval
@@ -51,6 +56,7 @@ audience:
 - The metric most predictive of team velocity
 
 ---
+
 ## Time to Merge
 
 - From PR opened to merged
@@ -60,6 +66,7 @@ audience:
 - Long-tail PRs are often stuck on disagreement
 
 ---
+
 ## Throughput
 
 - Number of PRs merged per week (per team)
@@ -69,6 +76,7 @@ audience:
 - Don't optimise this number directly
 
 ---
+
 ## PR Size Distribution
 
 - Histogram of lines changed
@@ -78,6 +86,7 @@ audience:
 - Visible to the team often nudges behaviour
 
 ---
+
 ## Comment Density
 
 - Comments per 100 lines of changed code
@@ -87,6 +96,7 @@ audience:
 - Don't target a number — observe and ask why
 
 ---
+
 ## Review Participation
 
 - Per-developer: how many PRs reviewed vs authored
@@ -96,6 +106,7 @@ audience:
 - Periodic check-ins help
 
 ---
+
 ## Re-Open Rate
 
 - PRs reopened after merge (something broke)
@@ -105,6 +116,7 @@ audience:
 - A leading indicator of quality
 
 ---
+
 ## Coverage Metrics In Review
 
 - Did test coverage drop?
@@ -114,6 +126,7 @@ audience:
 - Use it to prompt conversation, not as a hard gate
 
 ---
+
 ## DORA Metrics for Reviews
 
 - The DORA framework includes "lead time for changes"
@@ -123,6 +136,7 @@ audience:
 - Useful in management conversations
 
 ---
+
 ## Misusing Metrics
 
 - "You reviewed 12 PRs this week, you should do 20" — disaster
@@ -132,6 +146,7 @@ audience:
 - Use metrics for *team*-level diagnosis, not individual evaluation
 
 ---
+
 ## What To Show The Team
 
 - Aggregate trends, not individual scoreboards
@@ -142,6 +157,7 @@ audience:
 - Surface, discuss, improve
 
 ---
+
 ## What To Avoid Showing
 
 - Per-person review counts
@@ -151,6 +167,7 @@ audience:
 - Healthy reviews are slow when they need to be
 
 ---
+
 ## Process Improvements
 
 - Long times to first review &#8594; better routing, more reviewers
@@ -160,6 +177,7 @@ audience:
 - Iterate on the process; don't blame the people
 
 ---
+
 ## Common Mistakes
 
 - Tracking metrics nobody acts on

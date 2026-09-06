@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to RabbitMQ and AMQP
 
 ---
+
 ## What This Chapter Covers
 
 - Message broker concepts
@@ -21,6 +23,7 @@ audience:
 - Where RabbitMQ fits
 
 ---
+
 ## What a Message Broker Is
 
 - A server that mediates messages between producers and consumers
@@ -30,16 +33,19 @@ audience:
 - Decouples sender and receiver in time and space
 
 ---
+
 ## AMQP Model
 
 ![amqp_model](svg/courses/queues/rabbitmq/01_introduction_to_rabbitmq_and_amqp/amqp_model.svg)
 
 ---
+
 ## Connection Lifecycle
 
 ![connection_lifecycle](svg/courses/queues/rabbitmq/01_introduction_to_rabbitmq_and_amqp/connection_lifecycle.svg)
 
 ---
+
 ## Why Use a Broker
 
 - Asynchronous processing (web request returns fast; work happens later)
@@ -49,6 +55,7 @@ audience:
 - Reliability via persistence and acks
 
 ---
+
 ## What AMQP Is
 
 - Advanced Message Queuing Protocol
@@ -58,6 +65,7 @@ audience:
 - AMQP 1.0 exists but is a different protocol entirely (RabbitMQ supports it via plugin)
 
 ---
+
 ## RabbitMQ vs Kafka
 
 - RabbitMQ: rich routing, per-message ack, RPC, smaller messages
@@ -67,6 +75,7 @@ audience:
 - Both can do many things; pick by primary need
 
 ---
+
 ## RabbitMQ Architecture
 
 - **Broker**: the server (or cluster of servers)
@@ -77,6 +86,7 @@ audience:
 - **Binding**: rule connecting exchange to queue
 
 ---
+
 ## Connections vs Channels
 
 - One Connection per process (TCP is expensive)
@@ -86,6 +96,7 @@ audience:
 - A common beginner mistake: too many Connections
 
 ---
+
 ## Installation
 
 ```bash
@@ -100,6 +111,7 @@ docker run -d --name rabbit \
 - Production: install via package or use a managed service
 
 ---
+
 ## The Management UI
 
 - Web UI at http://host:15672 (default user: guest/guest, localhost only)
@@ -109,6 +121,7 @@ docker run -d --name rabbit \
 - Indispensable for development and ops
 
 ---
+
 ## A First Message Flow
 
 ```python
@@ -125,6 +138,7 @@ conn.close()
 - `routing_key='hello'` routes to queue named 'hello'
 
 ---
+
 ## Consuming The Message
 
 ```python
@@ -144,6 +158,7 @@ ch.start_consuming()
 - For real apps: manual ack after processing
 
 ---
+
 ## Default Exchange
 
 - Every queue is automatically bound to the default exchange
@@ -152,6 +167,7 @@ ch.start_consuming()
 - Custom exchanges give you routing flexibility
 
 ---
+
 ## What's Stored
 
 - Messages in queues, until consumed (or expired, or queue purged)
@@ -161,6 +177,7 @@ ch.start_consuming()
 - Persistence is per-message and per-queue
 
 ---
+
 ## Where RabbitMQ Wins
 
 - Complex routing rules
@@ -170,6 +187,7 @@ ch.start_consuming()
 - A wide language ecosystem (every major language has a client)
 
 ---
+
 ## Where Other Tools Win
 
 - Kafka: high-throughput streaming, replay
@@ -179,6 +197,7 @@ ch.start_consuming()
 - Pick by: throughput, ops complexity, vendor preference
 
 ---
+
 ## Common Mistakes
 
 - One Connection per message (TCP overhead)

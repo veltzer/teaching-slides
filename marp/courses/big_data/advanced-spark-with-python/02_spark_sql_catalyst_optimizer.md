@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Spark SQL and Catalyst Optimizer
 
 ---
+
 ## Chapter Overview
 * Query optimization techniques
 * Catalyst optimizer internals
@@ -22,10 +24,12 @@ audience:
 * Performance tuning
 
 ---
+
 ## Why Spark SQL?
 ![why_spark_sql](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/why_spark_sql.svg)
 
 ---
+
 ## Spark SQL Architecture
 1. SQL Parser
 1. Analyzer
@@ -33,6 +37,7 @@ audience:
 1. Physical planning
 
 ---
+
 ## DataFrame vs SQL
 
 ```python
@@ -44,10 +49,12 @@ spark.sql("SELECT name FROM table WHERE age > 25")
 ```
 
 ---
+
 ## Catalyst Optimizer Phases
 ![catalyst_optimizer_phases](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/catalyst_optimizer_phases.svg)
 
 ---
+
 ## Logical Plan Analysis
 ```python
 df.explain(mode="extended")
@@ -55,6 +62,7 @@ df.explain(mode="extended")
 ```
 
 ---
+
 ## Query Planning
 1. Parse SQL/DataFrame
 1. Resolve references
@@ -62,6 +70,7 @@ df.explain(mode="extended")
 1. Generate physical plan
 
 ---
+
 ## Understanding Query Plans
 ```python
 # View the execution plan
@@ -69,6 +78,7 @@ df.select("name", "age").groupBy("age").count().explain(True)
 ```
 
 ---
+
 ## Plan Optimization Rules
 1. Constant folding
 1. Predicate pushdown
@@ -76,10 +86,12 @@ df.select("name", "age").groupBy("age").count().explain(True)
 1. Join reordering
 
 ---
+
 ## Predicate Pushdown
 ![predicate_pushdown](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/predicate_pushdown.svg)
 
 ---
+
 ## Join Optimization
 ```python
 # Join with broadcast hint
@@ -88,6 +100,7 @@ df1.join(broadcast(df2), "key")
 ```
 
 ---
+
 ## Column Pruning Example
 ```python
 # Before: SELECT * FROM table
@@ -96,10 +109,12 @@ df.select("id", "name").filter("age > 25")
 ```
 
 ---
+
 ## Cost-Based Optimization
 ![cost_based_optimization](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/cost_based_optimization.svg)
 
 ---
+
 ## Statistics Collection
 ```python
 # Analyze table to collect statistics
@@ -107,6 +122,7 @@ spark.sql("ANALYZE TABLE my_table COMPUTE STATISTICS")
 ```
 
 ---
+
 ## Column Statistics
 ```python
 # Collect column-level statistics
@@ -114,6 +130,7 @@ spark.sql("ANALYZE TABLE my_table COMPUTE STATISTICS FOR COLUMNS id, name")
 ```
 
 ---
+
 ## User-Defined Functions
 ```python
 from pyspark.sql.functions import udf
@@ -125,6 +142,7 @@ def upper_custom(s):
 ```
 
 ---
+
 ## UDF Performance
 1. Serialization overhead
 1. Type conversion costs
@@ -132,6 +150,7 @@ def upper_custom(s):
 1. JVM boundary crossing
 
 ---
+
 ## Vectorized UDFs
 ```python
 from pyspark.sql.functions import pandas_udf
@@ -143,10 +162,12 @@ def upper_vectorized(s):
 ```
 
 ---
+
 ## UDF Best Practices
 ![udf_best_practices](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/udf_best_practices.svg)
 
 ---
+
 ## Data Sources API
 ```python
 # Read from external source
@@ -157,6 +178,7 @@ df = spark.read.format("jdbc")
 ```
 
 ---
+
 ## Custom Data Sources
 1. Implement BaseRelation
 1. Define schema
@@ -164,6 +186,7 @@ df = spark.read.format("jdbc")
 1. Handle pushdown
 
 ---
+
 ## Data Source Options
 ```python
 # Parquet with specific options
@@ -174,10 +197,12 @@ df.write.format("parquet")
 ```
 
 ---
+
 ## File Format Optimization
 ![file_format_optimization](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/file_format_optimization.svg)
 
 ---
+
 ## Parquet Optimization
 1. Predicate pushdown
 1. Column pruning
@@ -185,6 +210,7 @@ df.write.format("parquet")
 1. Run-length encoding
 
 ---
+
 ## Query Performance
 ```python
 # Cache frequently accessed data
@@ -194,10 +220,12 @@ spark.sql.shuffle.partitions=200
 ```
 
 ---
+
 ## Memory Management
 ![memory_management](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/memory_management.svg)
 
 ---
+
 ## External Data Sources
 1. JDBC connections
 1. Cloud storage
@@ -205,6 +233,7 @@ spark.sql.shuffle.partitions=200
 1. Streaming sources
 
 ---
+
 ## JDBC Optimization
 ```python
 # Parallel read configuration
@@ -217,6 +246,7 @@ properties = {
 ```
 
 ---
+
 ## Schema Handling
 ```python
 # Define explicit schema
@@ -228,6 +258,7 @@ schema = StructType([
 ```
 
 ---
+
 ## Schema Evolution
 1. Add columns
 1. Remove columns
@@ -235,6 +266,7 @@ schema = StructType([
 1. Handle nullability
 
 ---
+
 ## Query Plan Caching
 ```python
 # Enable query plan caching
@@ -242,10 +274,12 @@ spark.catalog.cacheTable("frequently_used")
 ```
 
 ---
+
 ## Dynamic Partition Pruning
 ![dynamic_partition_pruning](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/dynamic_partition_pruning.svg)
 
 ---
+
 ## Cost Model Tuning
 ```python
 spark.conf.set("spark.sql.cbo.enabled", "true")
@@ -253,6 +287,7 @@ spark.conf.set("spark.sql.cbo.joinReorder.enabled", "true")
 ```
 
 ---
+
 ## Query Plan Analysis
 1. Logical plan inspection
 1. Physical plan review
@@ -260,6 +295,7 @@ spark.conf.set("spark.sql.cbo.joinReorder.enabled", "true")
 1. Bottleneck identification
 
 ---
+
 ## Adaptive Query Execution
 ```python
 # Enable adaptive query execution
@@ -267,10 +303,12 @@ spark.conf.set("spark.sql.adaptive.enabled", "true")
 ```
 
 ---
+
 ## Runtime Statistics
 ![runtime_statistics](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/runtime_statistics.svg)
 
 ---
+
 ## Join Strategies
 1. Broadcast hash join
 1. Sort merge join
@@ -278,6 +316,7 @@ spark.conf.set("spark.sql.adaptive.enabled", "true")
 1. Cartesian join
 
 ---
+
 ## Window Function Optimization
 ```python
 # Efficient window function
@@ -286,6 +325,7 @@ df.withColumn("rank", rank().over(windowSpec))
 ```
 
 ---
+
 ## Subquery Handling
 ```python
 # Correlated subquery optimization
@@ -293,10 +333,12 @@ df1.join(df2, df1.id == df2.id).where(df2.value > df1.value)
 ```
 
 ---
+
 ## Data Skew Handling
 ![data_skew_handling](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/data_skew_handling.svg)
 
 ---
+
 ## Configuration Tuning
 1. Memory settings
 1. Shuffle parameters
@@ -304,6 +346,7 @@ df1.join(df2, df1.id == df2.id).where(df2.value > df1.value)
 1. Executor settings
 
 ---
+
 ## Error Handling
 ```python
 # Handle corrupt records
@@ -313,10 +356,12 @@ df = spark.read.option("mode", "PERMISSIVE")
 ```
 
 ---
+
 ## Monitoring and Debugging
 ![monitoring_and_debugging](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/monitoring_and_debugging.svg)
 
 ---
+
 ## Performance Metrics
 1. Query execution time
 1. Memory usage
@@ -324,6 +369,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 1. Task duration
 
 ---
+
 ## Best Practices Summary
 1. Use appropriate data formats
 1. Optimize join operations
@@ -331,6 +377,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 1. Monitor performance
 
 ---
+
 ## Common Pitfalls
 1. Inefficient joins
 1. Poor partitioning
@@ -338,6 +385,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 1. Suboptimal UDFs
 
 ---
+
 ## Advanced Topics
 1. Custom optimizers
 1. Extension points
@@ -345,10 +393,12 @@ df = spark.read.option("mode", "PERMISSIVE")
 1. Cost model tuning
 
 ---
+
 ## Optimization Checklist
 ![optimization_checklist](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/optimization_checklist.svg)
 
 ---
+
 ## Production Deployment
 1. Resource allocation
 1. Monitoring setup
@@ -356,6 +406,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 1. Performance tuning
 
 ---
+
 ## Future Directions
 1. Enhanced optimization
 1. Better statistics
@@ -363,6 +414,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 1. New features
 
 ---
+
 ## Additional Resources
 * Official documentation
 * Research papers
@@ -469,6 +521,7 @@ query.explain(mode="cost")
 ```
 
 ---
+
 ## Predicate Pushdown: Before vs After: Example
 
 ```python
@@ -489,6 +542,7 @@ result = (
 ```
 
 ---
+
 ## Predicate Pushdown: Before vs After
 
 ![scan_customers](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/scan_customers.svg)

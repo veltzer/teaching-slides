@@ -9,14 +9,17 @@ audience:
   - audiences:developers
 
 ---
+
 # The Distributed Transactions Problem
 
 ---
+
 ## Why Two-Phase Commit Breaks Down
 
 ![two_phase_commit](svg/courses/architecting/saga-pattern/01_distributed_transactions_problem/two_phase_commit.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - ACID transactions and where they break
@@ -26,6 +29,7 @@ audience:
 - Why we need a different pattern for cross-service workflows
 
 ---
+
 ## ACID Transactions: The Comfort Zone
 
 - **A**tomicity: all or nothing
@@ -35,6 +39,7 @@ audience:
 - A single-node relational database gives you all four
 
 ---
+
 ## ACID Across Service Boundaries
 
 - Each service has its own database
@@ -44,6 +49,7 @@ audience:
 - Service A may commit and service B may fail
 
 ---
+
 ## A Concrete Failure
 
 - "Place order" touches Inventory, Payments, Shipping
@@ -54,6 +60,7 @@ audience:
 - Without coordination, we have an inconsistent system state
 
 ---
+
 ## Two-Phase Commit (2PC)
 
 - A coordinator asks every participant: "Can you commit?"
@@ -63,6 +70,7 @@ audience:
 - Single-decision atomicity across multiple participants
 
 ---
+
 ## Why 2PC Breaks Down
 
 - **Blocking**: participants hold locks during prepare; high latency
@@ -72,11 +80,13 @@ audience:
 - **Vendor coupling**: requires participants that speak XA or similar
 
 ---
+
 ## Two-Phase Commit Pain
 
 ![two_pc_pain](svg/courses/architecting/saga-pattern/01_distributed_transactions_problem/two_pc_pain.svg)
 
 ---
+
 ## The 2PC Tradeoff
 
 - 2PC trades availability for consistency
@@ -85,6 +95,7 @@ audience:
 - 2PC and microservices are an architectural mismatch
 
 ---
+
 ## CAP Theorem: A Reminder
 
 - In the presence of a network partition, a system can guarantee at most two of:
@@ -95,6 +106,7 @@ audience:
 - Real choice: C or A under partition
 
 ---
+
 ## CAP in Microservices
 
 - Cross-service communication is a network call
@@ -104,6 +116,7 @@ audience:
 - Most microservice systems pick A — and live with eventual consistency
 
 ---
+
 ## Eventual Consistency: The Contract
 
 - After a finite time, all replicas/services converge to the same state
@@ -112,6 +125,7 @@ audience:
 - It is not "eventual maybe" — it is a real guarantee
 
 ---
+
 ## Eventual Consistency vs No Consistency
 
 - Eventual consistency is a guarantee with a deadline
@@ -120,6 +134,7 @@ audience:
 - Sagas are the design pattern that makes eventual consistency tractable
 
 ---
+
 ## Long-Running Business Processes
 
 - "Place order" is not a single click — it's a multi-step process
@@ -129,6 +144,7 @@ audience:
 - The process needs its own state machine, separate from any single database
 
 ---
+
 ## What a Long-Running Process Needs
 
 - A way to record progress through the steps
@@ -138,6 +154,7 @@ audience:
 - A way to expose status to humans
 
 ---
+
 ## Cross-Bounded-Context Workflows
 
 - A business process often spans multiple bounded contexts
@@ -147,6 +164,7 @@ audience:
 - The workflow itself is a domain concept worth naming
 
 ---
+
 ## The Saga Pattern: Brief Definition
 
 - A saga is a sequence of local transactions, one per service
@@ -155,11 +173,13 @@ audience:
 - Eventual consistency is built in by design
 
 ---
+
 ## Saga Visualized at a High Level
 
 ![distributed_transaction_problem](svg/courses/architecting/saga-pattern/01_distributed_transactions_problem/distributed_transaction_problem.svg)
 
 ---
+
 ## Why Sagas Fit Microservices
 
 - Each step is local to a service — no cross-service locks
@@ -169,6 +189,7 @@ audience:
 - Aligns with how brokers, queues, and event stores work in practice
 
 ---
+
 ## What Sagas Don't Solve
 
 - They don't make distributed transactions "feel atomic" — they make them **eventually correct**
@@ -177,6 +198,7 @@ audience:
 - They don't eliminate the need for retries, idempotency, or monitoring
 
 ---
+
 ## Anti-Pattern: Pretending 2PC Works
 
 - "Let's just call all the services in sequence and roll back if anything fails"
@@ -185,6 +207,7 @@ audience:
 - This is the failure mode this course exists to prevent
 
 ---
+
 ## When You Don't Need a Saga
 
 - The business process touches one service only — local transaction is enough
@@ -193,6 +216,7 @@ audience:
 - Sagas have real cost; only use them when the cost is justified
 
 ---
+
 ## Course Roadmap
 
 - This chapter: the problem
@@ -203,6 +227,7 @@ audience:
 - Chapter 6: testing, debugging, and operating sagas
 
 ---
+
 ## Summary
 
 - ACID across services is impossible without 2PC, and 2PC is impractical for microservices

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Document Model and Schema Design
 
 ---
+
 ## What This Chapter Covers
 
 - Embed vs reference
@@ -21,6 +23,7 @@ audience:
 - Practical guidance
 
 ---
+
 ## Embed vs Reference
 
 - Embed: nested document
@@ -29,11 +32,13 @@ audience:
 - Reference: avoid duplication
 
 ---
+
 ## Schema Patterns
 
 ![schema_patterns](svg/courses/databases/mongodb-for-developers/03_document_model_and_schema_design/schema_patterns.svg)
 
 ---
+
 ## When To Embed
 
 - One-to-few (3-100)
@@ -42,6 +47,7 @@ audience:
 - Bounded growth
 
 ---
+
 ## When To Reference
 
 - One-to-many (thousands+)
@@ -50,16 +56,19 @@ audience:
 - Avoid: 16MB document limit
 
 ---
+
 ## Embed vs Reference
 
 ![embed_vs_reference](svg/courses/databases/mongodb-for-developers/03_document_model_and_schema_design/embed_vs_reference.svg)
 
 ---
+
 ## Schema Design Decisions
 
 ![schema_decisions](svg/courses/databases/mongodb-for-developers/03_document_model_and_schema_design/schema_decisions.svg)
 
 ---
+
 ## Document Size
 
 - Max: 16MB per document
@@ -68,6 +77,7 @@ audience:
 - Watch unbounded arrays
 
 ---
+
 ## Common Patterns
 
 - **Embedded subdocs**: addresses inside user
@@ -77,6 +87,7 @@ audience:
 - **Outlier**: separate large entries
 
 ---
+
 ## Schema Versioning
 
 - Add `schema_version` field
@@ -85,6 +96,7 @@ audience:
 - Avoid: "all-or-nothing" migrations on huge collections
 
 ---
+
 ## Schema Validation
 
 ```javascript
@@ -105,6 +117,7 @@ db.createCollection("users", {
 - Catches: bad inserts; not catches all bugs
 
 ---
+
 ## Anti-Patterns
 
 - Massive embedded arrays (unbounded)
@@ -114,6 +127,7 @@ db.createCollection("users", {
 - Schema-on-read with no app-side checks
 
 ---
+
 ## Polymorphic Collections
 
 - Different shapes in one collection
@@ -122,6 +136,7 @@ db.createCollection("users", {
 - Schema validation harder; deal with it
 
 ---
+
 ## Time-Series Pattern
 
 - Bucket by time period
@@ -130,6 +145,7 @@ db.createCollection("users", {
 - MongoDB 5+: native time-series collections
 
 ---
+
 ## Polymorphic Documents
 
 - One collection; many shapes
@@ -138,6 +154,7 @@ db.createCollection("users", {
 - Common in: events, analytics
 
 ---
+
 ## Practical Guidance
 
 - Start with embedded; reference when needed
@@ -147,6 +164,7 @@ db.createCollection("users", {
 - Profile query patterns; design for them
 
 ---
+
 ## Common Schema Mistakes
 
 - Modeling like SQL (separate collections everywhere)

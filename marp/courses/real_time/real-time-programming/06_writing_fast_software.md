@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Writing Fast Software
 
 ---
+
 ## What This Chapter Covers
 
 - Knowing the system APIs (memcpy, etc.)
@@ -24,16 +26,19 @@ audience:
 - RCU and copy-on-write
 
 ---
+
 ## Techniques
 
 ![fast_techniques](svg/courses/real_time/real-time-programming/06_writing_fast_software/fast_techniques.svg)
 
 ---
+
 ## Cache Friendly Patterns
 
 ![cache_patterns](svg/courses/real_time/real-time-programming/06_writing_fast_software/cache_patterns.svg)
 
 ---
+
 ## Know Your Standard Library
 
 - `memcpy` is heavily optimised; do not write your own
@@ -43,6 +48,7 @@ audience:
 - Profile first; the standard library is rarely the bottleneck
 
 ---
+
 ## CPU-Vendor Libraries
 
 - Intel MKL: linear algebra, FFTs, statistics — vectorised
@@ -52,6 +58,7 @@ audience:
 - Use them when applicable; reinventing is rarely worth it
 
 ---
+
 ## When to Write Assembly
 
 - Almost never
@@ -61,6 +68,7 @@ audience:
 - Profile first; you may not need to
 
 ---
+
 ## SIMD Intrinsics
 
 ```c
@@ -75,6 +83,7 @@ __m256i sum = _mm256_add_epi32(a, b);
 - Manual intrinsics for cases where the compiler doesn't get it
 
 ---
+
 ## DMA (Direct Memory Access)
 
 - The CPU offloads data movement to a dedicated controller
@@ -84,6 +93,7 @@ __m256i sum = _mm256_add_epi32(a, b);
 - For embedded RT: explicit DMA programming is a major optimisation
 
 ---
+
 ## Memory Mappings
 
 - `mmap` maps a file or device directly into the process's address space
@@ -93,6 +103,7 @@ __m256i sum = _mm256_add_epi32(a, b);
 - Avoid `mmap` of disk files in RT hot paths — page faults hurt
 
 ---
+
 ## Huge Pages
 
 - Default page size: 4 KB
@@ -102,6 +113,7 @@ __m256i sum = _mm256_add_epi32(a, b);
 - Allocate with `mmap(MAP_HUGETLB)` or via `transparent_hugepage` (THP)
 
 ---
+
 ## Atomic Variables
 
 ```c
@@ -117,6 +129,7 @@ atomic_fetch_add(&counter, 1);
 - C11, C++11 standardised
 
 ---
+
 ## Memory Ordering
 
 - CPUs and compilers reorder operations for performance
@@ -126,6 +139,7 @@ atomic_fetch_add(&counter, 1);
 - Picking the right ordering is half the skill of lock-free programming
 
 ---
+
 ## Mutexes
 
 - The basic mutual-exclusion primitive
@@ -135,6 +149,7 @@ atomic_fetch_add(&counter, 1);
 - Keep critical sections short
 
 ---
+
 ## Reader-Writer Locks
 
 - Many readers OR one writer
@@ -144,6 +159,7 @@ atomic_fetch_add(&counter, 1);
 - Carefully consider before using; benchmarks may surprise
 
 ---
+
 ## RCU (Read-Copy Update)
 
 - Readers never block; writers create new versions
@@ -154,6 +170,7 @@ atomic_fetch_add(&counter, 1);
 - Library: liburcu in user space
 
 ---
+
 ## Copy-on-Write (COW)
 
 - Don't copy data until something needs to change it
@@ -163,6 +180,7 @@ atomic_fetch_add(&counter, 1);
 - Pattern: snapshot data structures, deferred mutation
 
 ---
+
 ## Lock-Free Data Structures
 
 - Queues (Michael-Scott), stacks (Treiber), hash maps
@@ -172,6 +190,7 @@ atomic_fetch_add(&counter, 1);
 - Use existing libraries (folly, concurrent-toolkit) before rolling your own
 
 ---
+
 ## Cache-Friendly Code
 
 - Access memory sequentially
@@ -181,6 +200,7 @@ atomic_fetch_add(&counter, 1);
 - Profile cache misses with `perf stat -e cache-misses`
 
 ---
+
 ## False Sharing
 
 - Two threads writing to *different* variables that happen to share a cache line
@@ -190,6 +210,7 @@ atomic_fetch_add(&counter, 1);
 - `alignas(64)` in C11/C++11
 
 ---
+
 ## Branch-Free Code
 
 - Replace conditional branches with arithmetic when possible
@@ -199,6 +220,7 @@ atomic_fetch_add(&counter, 1);
 - Don't hand-optimise without profiling first
 
 ---
+
 ## Common Mistakes
 
 - Optimising before profiling

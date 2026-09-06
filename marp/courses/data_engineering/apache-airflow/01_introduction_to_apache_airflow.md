@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Introduction to Apache Airflow
 
 ---
+
 ## What This Chapter Covers
 
 - What Airflow is
@@ -19,6 +21,7 @@ audience:
 - Why workflow orchestration
 
 ---
+
 ## What Airflow Is
 
 - Workflow orchestration for batch data pipelines
@@ -28,11 +31,13 @@ audience:
 - Apache top-level since 2019
 
 ---
+
 ## Architecture
 
 ![airflow_arch](svg/courses/data_engineering/apache-airflow/01_introduction_to_apache_airflow/airflow_arch.svg)
 
 ---
+
 ## Use Cases
 
 - ETL / ELT pipelines
@@ -42,6 +47,7 @@ audience:
 - Backfilling historical data
 
 ---
+
 ## Architecture
 
 - Webserver: UI
@@ -51,6 +57,7 @@ audience:
 - Components scale independently
 
 ---
+
 ## Executors
 
 - Sequential: dev only
@@ -60,6 +67,7 @@ audience:
 - Pick by scale
 
 ---
+
 ## DAGs
 
 - Directed Acyclic Graph
@@ -68,6 +76,7 @@ audience:
 - Define in Python
 
 ---
+
 ## Why Airflow
 
 - Code as workflow (versioned, reviewed)
@@ -76,6 +85,7 @@ audience:
 - Huge ecosystem of providers
 
 ---
+
 ## Alternatives
 
 - Prefect: more modern API
@@ -85,6 +95,7 @@ audience:
 - Pick by team / stack
 
 ---
+
 ## A Simple DAG
 
 ```python
@@ -100,6 +111,7 @@ with DAG('my_dag', start_date=datetime(2026, 1, 1), schedule='@daily') as dag:
 ```
 
 ---
+
 ## Web UI
 
 - View DAGs, runs, logs
@@ -108,6 +120,7 @@ with DAG('my_dag', start_date=datetime(2026, 1, 1), schedule='@daily') as dag:
 - Visualise dependencies
 
 ---
+
 ## When To Use
 
 - Many interdependent batch jobs
@@ -116,6 +129,7 @@ with DAG('my_dag', start_date=datetime(2026, 1, 1), schedule='@daily') as dag:
 - Most ETL / data pipeline work
 
 ---
+
 ## When Not To
 
 - Simple cron jobs
@@ -123,6 +137,7 @@ with DAG('my_dag', start_date=datetime(2026, 1, 1), schedule='@daily') as dag:
 - Lightweight glue (just write a script)
 
 ---
+
 ## Common Misconceptions
 
 - "Airflow is for streaming" — no, batch
@@ -130,6 +145,7 @@ with DAG('my_dag', start_date=datetime(2026, 1, 1), schedule='@daily') as dag:
 - "DAG file = the work" — DAG defines orchestration; tasks delegate
 
 ---
+
 ## What's Next
 
 - DAGs and dependencies
@@ -141,6 +157,7 @@ with DAG('my_dag', start_date=datetime(2026, 1, 1), schedule='@daily') as dag:
 - Production patterns
 
 ---
+
 ## Where Airflow Fits
 
 ![airflow_use_cases](svg/courses/data_engineering/apache-airflow/01_introduction_to_apache_airflow/airflow_use_cases.svg)

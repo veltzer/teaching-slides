@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Application Development Patterns
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![dev_patterns](svg/courses/databases/elasticsearch-for-developers/13_application_development_patterns/dev_patterns.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - ES as primary store?
@@ -26,11 +28,13 @@ audience:
 - Write-heavy patterns
 
 ---
+
 ## Patterns
 
 ![app_patterns](svg/courses/databases/elasticsearch-for-developers/13_application_development_patterns/app_patterns.svg)
 
 ---
+
 ## ES As Primary Store
 
 - Risky: no transactions, no joins
@@ -39,6 +43,7 @@ audience:
 - Most teams: don't
 
 ---
+
 ## ES As Search Index
 
 - Authoritative data in primary DB (Postgres / MongoDB)
@@ -47,6 +52,7 @@ audience:
 - The standard pattern
 
 ---
+
 ## CDC Sync
 
 - Debezium, MongoDB change streams
@@ -55,6 +61,7 @@ audience:
 - Eventually consistent; near-real-time
 
 ---
+
 ## Application-Level Sync
 
 - Write to DB; on success, write to ES
@@ -63,6 +70,7 @@ audience:
 - Idempotent indexing handles retries
 
 ---
+
 ## Outbox Pattern
 
 - Write to outbox table in same DB transaction
@@ -71,6 +79,7 @@ audience:
 - Eventually pushed to ES
 
 ---
+
 ## Read-Heavy
 
 - Many readers, fewer writers
@@ -79,6 +88,7 @@ audience:
 - ES scales naturally
 
 ---
+
 ## Write-Heavy
 
 - Bulk index from queue
@@ -87,6 +97,7 @@ audience:
 - ILM for old data
 
 ---
+
 ## Multi-Tenant
 
 - Per-tenant index: small tenants share; big ones get own index
@@ -94,6 +105,7 @@ audience:
 - Index-per-tenant is common at scale
 
 ---
+
 ## Per-User Filtering
 
 - Always filter by user_id in queries
@@ -101,6 +113,7 @@ audience:
 - Or: app-level enforcement
 
 ---
+
 ## Reindexing
 
 - Mappings change &#8594; reindex
@@ -109,6 +122,7 @@ audience:
 - Plan for it; routine operation
 
 ---
+
 ## Aliases
 
 - An alias points to one or more indexes
@@ -117,6 +131,7 @@ audience:
 - Standard for blue/green deploys of indexes
 
 ---
+
 ## ILM Strategy
 
 - Hot: actively written
@@ -127,6 +142,7 @@ audience:
 - Move automatically based on age
 
 ---
+
 ## Common Pattern Mistakes
 
 - ES as primary; data lost

@@ -12,6 +12,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Writing Your First Script
 
 ---
@@ -21,6 +22,7 @@ audience:
 ![Bash Script Structure](svg/courses/languages/bash/bash-scripting/10_first_script/script_structure.svg)
 
 ---
+
 ## Day 2: Scripts, Syntax & I/O
 - Writing and running scripts
 - Control flow: conditionals, loops
@@ -30,6 +32,7 @@ audience:
 - Multi processing
 
 ---
+
 ## What is a Script?
 - A text file containing shell commands
 - Executed top to bottom (like a program)
@@ -42,7 +45,9 @@ echo "Hello, World!"
 ```
 
 ---
+
 ## Choosing an Editor
+
 | Editor | Type | Learning Curve | Power |
 |--------|------|---------------|-------|
 | `nano` | Terminal | Easy | Low |
@@ -55,6 +60,7 @@ echo "Hello, World!"
 - For development: `VS Code` with `bash` extensions
 
 ---
+
 ## The Shebang Line
 
 ```bash
@@ -74,6 +80,7 @@ echo "Hello, World!"
 ```
 
 ---
+
 ## Why `#!/usr/bin/env bash`?
 
 ```bash
@@ -93,6 +100,7 @@ echo "Hello, World!"
 ```
 
 ---
+
 ## Making a Script Executable
 
 ```bash
@@ -113,6 +121,7 @@ bash myscript.sh
 ```
 
 ---
+
 ## File Extensions
 
 ```bash
@@ -131,6 +140,7 @@ ls /usr/bin/ | head -20
 ```
 
 ---
+
 ## Script Arguments
 
 ```bash
@@ -155,6 +165,7 @@ echo "Num of args: $#"
 ```
 
 ---
+
 ## `$@` vs `$*`
 
 ```bash
@@ -179,6 +190,7 @@ done
 ```
 
 ---
+
 ## The `shift` Command
 
 ```bash
@@ -202,6 +214,7 @@ done
 ```
 
 ---
+
 ## Failure Handling: The Strict Mode
 
 ```bash
@@ -218,6 +231,7 @@ IFS=$'\n\t'     # safer word splitting
 ```
 
 ---
+
 ## Debugging Scripts
 
 ```bash
@@ -238,6 +252,7 @@ set -x
 ```
 
 ---
+
 ## More Debugging Techniques
 
 ```bash
@@ -261,6 +276,7 @@ echo "normal"
 ```
 
 ---
+
 ## Using `shellcheck`
 
 ```bash
@@ -282,6 +298,7 @@ echo $foo
 ```
 
 ---
+
 ## Template: Basic Script
 
 ```bash
@@ -322,6 +339,7 @@ main "$@"
 ```
 
 ---
+
 ## The `source` Command (`.`)
 
 ```bash

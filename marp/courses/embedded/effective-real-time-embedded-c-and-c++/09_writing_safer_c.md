@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Writing Safer C
 
 ---

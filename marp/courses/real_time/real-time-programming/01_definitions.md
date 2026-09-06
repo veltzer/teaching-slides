@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Definitions
 
 ---
+
 ## What This Chapter Covers
 
 - What "real-time" actually means
@@ -20,6 +22,7 @@ audience:
 - Why naive code rarely qualifies
 
 ---
+
 ## What "Real Time" Means
 
 - A system whose correctness depends on *when* a result is delivered, not just *what* is delivered
@@ -29,16 +32,19 @@ audience:
 - A 100 MHz processor that always responds within 10us may be fit
 
 ---
+
 ## Real-Time Spectrum
 
 ![realtime_spectrum](svg/courses/real_time/real-time-programming/01_definitions/realtime_spectrum.svg)
 
 ---
+
 ## Timing Vocabulary
 
 ![timing_terms](svg/courses/real_time/real-time-programming/01_definitions/timing_terms.svg)
 
 ---
+
 ## Latency
 
 - Time between an *event* and a *response*
@@ -48,6 +54,7 @@ audience:
 - Always look at the *worst case*, not the average
 
 ---
+
 ## Jitter
 
 - The *variation* in latency
@@ -57,6 +64,7 @@ audience:
 - Reducing jitter is the central engineering challenge of RT
 
 ---
+
 ## Determinism
 
 - Same input, same conditions &#8594; same response time, every time
@@ -66,6 +74,7 @@ audience:
 - Real-time OSes (RTOS) are deterministic by design (favour predictability)
 
 ---
+
 ## Worst-Case Execution Time (WCET)
 
 - The maximum time a piece of code can take, under all valid inputs
@@ -75,6 +84,7 @@ audience:
 - "It usually finishes in 1ms" is *not* a WCET
 
 ---
+
 ## Real-Time Is Not Speed
 
 - A system delivering 10ms responses is real-time *if* it always does
@@ -84,6 +94,7 @@ audience:
 - Pacemakers, anti-lock brakes, audio synthesis are real-time
 
 ---
+
 ## Real-Time Examples
 
 - Aircraft flight control
@@ -95,6 +106,7 @@ audience:
 - Each has a *deadline* the system must meet
 
 ---
+
 ## Hard, Soft, Near
 
 - **Hard**: missing a deadline = system failure (medical, automotive)
@@ -104,6 +116,7 @@ audience:
 - Most real-world systems are mixed
 
 ---
+
 ## What Naive Code Lacks
 
 - Bounded execution time
@@ -114,6 +127,7 @@ audience:
 - All this needs to be *designed in*, not discovered
 
 ---
+
 ## Vocabulary
 
 - **Deadline**: when a response must be delivered
@@ -123,6 +137,7 @@ audience:
 - These terms appear constantly in RT literature
 
 ---
+
 ## What This Course Will Do
 
 - Define types of RT systems precisely
@@ -133,6 +148,7 @@ audience:
 - Aim: build the intuition to design a system that meets a deadline reliably
 
 ---
+
 ## Common Misuses of the Term
 
 - "Real-time analytics" usually means "fresh", not RT
@@ -142,6 +158,7 @@ audience:
 - In this course, we mean it literally
 
 ---
+
 ## A Litmus Test
 
 - Can you state the deadline?
@@ -151,6 +168,7 @@ audience:
 - Otherwise: it's just fast
 
 ---
+
 ## Common Mistakes
 
 - Confusing average latency with worst-case

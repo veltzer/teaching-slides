@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # DAGs and Task Dependencies
 
 ---
+
 ## What This Chapter Covers
 
 - DAG structure
@@ -20,11 +22,13 @@ audience:
 - TaskFlow API
 
 ---
+
 ## Example DAG
 
 ![dag_example](svg/courses/data_engineering/apache-airflow/02_dags_and_task_dependencies/dag_example.svg)
 
 ---
+
 ## DAG Structure
 
 - DAG: container of tasks + dependencies
@@ -32,6 +36,7 @@ audience:
 - Tasks defined as operators
 
 ---
+
 ## Task Dependencies
 
 ```python
@@ -43,6 +48,7 @@ task_a >> [task_b, task_c]
 - Or: set_upstream / set_downstream
 
 ---
+
 ## Task Groups
 
 ```python
@@ -62,6 +68,7 @@ extract >> transform
 - Reuse common pipelines
 
 ---
+
 ## Branching
 
 ```python
@@ -77,6 +84,7 @@ branch = BranchPythonOperator(task_id='branch', python_callable=choose_branch)
 - Skip non-chosen tasks
 
 ---
+
 ## Trigger Rules
 
 - all_success (default)
@@ -88,6 +96,7 @@ branch = BranchPythonOperator(task_id='branch', python_callable=choose_branch)
 - Configure per task
 
 ---
+
 ## TaskFlow API
 
 ```python
@@ -117,6 +126,7 @@ dag = my_pipeline()
 - Auto-handles XComs
 
 ---
+
 ## Dynamic Task Mapping
 
 ```python
@@ -130,6 +140,7 @@ double.expand(n=[1, 2, 3, 4, 5])
 - Like map / parallel for-each
 
 ---
+
 ## SubDAGs
 
 - Older nesting mechanism
@@ -138,6 +149,7 @@ double.expand(n=[1, 2, 3, 4, 5])
 - Don't use new ones
 
 ---
+
 ## DAG Versioning
 
 - DAG ID: stays the same; treat as immutable
@@ -145,6 +157,7 @@ double.expand(n=[1, 2, 3, 4, 5])
 - Or: version the DAG file (modern feature)
 
 ---
+
 ## SLA
 
 - Time budget per task
@@ -152,6 +165,7 @@ double.expand(n=[1, 2, 3, 4, 5])
 - For: SLA monitoring
 
 ---
+
 ## Default Args
 
 ```python
@@ -165,6 +179,7 @@ default_args = {
 - Apply to all tasks unless overridden
 
 ---
+
 ## Common DAG Mistakes
 
 - Top-level code that runs every DAG parse (Airflow parses every minute)
@@ -174,6 +189,7 @@ default_args = {
 - No retries on flaky tasks
 
 ---
+
 ## Task Dependency Patterns
 
 ![dependency_patterns](svg/courses/data_engineering/apache-airflow/02_dags_and_task_dependencies/dependency_patterns.svg)

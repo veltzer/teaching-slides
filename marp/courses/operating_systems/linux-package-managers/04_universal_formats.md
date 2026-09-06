@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Universal and Sandboxed Package Formats
 
 ---
+
 ## Why Universal Formats Exist
 
 Distribution packages have real limitations:
@@ -28,16 +30,19 @@ Universal formats answer:
 - Run the app in a sandbox so it can't read your whole `$HOME`.
 
 ---
+
 ## Side by Side
 
 ![universal_compare](svg/courses/operating_systems/linux-package-managers/04_universal_formats/universal_compare.svg)
 
 ---
+
 ## Containment Models
 
 ![containment_models](svg/courses/operating_systems/linux-package-managers/04_universal_formats/containment_models.svg)
 
 ---
+
 ## The Three Big Universal Formats
 
 | | `flatpak` | `snap` | `appimage` |
@@ -53,6 +58,7 @@ Universal formats answer:
 Not competing on quite the same axes — pick by your priorities.
 
 ---
+
 ## `flatpak`
 
 ```bash
@@ -80,6 +86,7 @@ flatpak uninstall --unused
 ```
 
 ---
+
 ## `flatpak` Concepts: Runtimes and Sandboxing
 
 A `flatpak` app does *not* depend on your distro's libraries. It depends on a **runtime**.
@@ -104,6 +111,7 @@ The sandbox uses `bubblewrap`. By default the app cannot:
 You grant access explicitly with portals or with `flatpak override`.
 
 ---
+
 ## `flatpak` Permissions
 
 ```bash
@@ -128,6 +136,7 @@ $ ls /app           # the app's bundled tree
 This is the security advantage: a malicious or compromised flatpak app sees a small, well-defined slice of your machine.
 
 ---
+
 ## `snap`
 
 `snap` is `Canonical`'s answer. Default on `Ubuntu`, available on most distros.
@@ -157,6 +166,7 @@ sudo snap remove firefox
 ```
 
 ---
+
 ## `snap` Channels
 
 A snap publisher offers up to four parallel streams of the same app.
@@ -183,6 +193,7 @@ sudo snap refresh --hold
 By default snaps update automatically in the background. This is convenient and infuriating.
 
 ---
+
 ## `snap` Confinement
 
 ```bash
@@ -207,6 +218,7 @@ sudo snap disconnect firefox:home
 A "classic" snap is essentially a tarball with auto-update. Don't be misled by the word *snap*: classic snaps have no sandbox.
 
 ---
+
 ## `appimage`
 
 The simplest of the three: one file, no install, no daemon, no store.
@@ -234,6 +246,7 @@ ls squashfs-root/
 There is no auto-update, no central registry, no sandbox. You are the package manager.
 
 ---
+
 ## `appimagelauncher`: Optional Polish
 
 Most distros don't integrate `AppImages` with the desktop by default. `appimagelauncher` does.
@@ -248,6 +261,7 @@ Most distros don't integrate `AppImages` with the desktop by default. `appimagel
 Without it: you end up with `~/Downloads/foo.AppImage` and a desktop entry you wrote by hand. With it: it feels more like a real application.
 
 ---
+
 ## `nix`: A Different Philosophy
 
 `nix` is not just a package manager — it's a *functional* package manager.
@@ -277,6 +291,7 @@ nix shell nixpkgs#cowsay nixpkgs#fortune
 ```
 
 ---
+
 ## `nix` Strengths and Costs
 
 Strengths:
@@ -296,6 +311,7 @@ Costs:
 `nix` is loved by reproducibility-obsessed teams (and CI/CD pipelines) and ignored by everyone else. Worth knowing about.
 
 ---
+
 ## `guix`: The GNU Cousin
 
 `guix` is `GNU`'s functional package manager, similar in design to `nix` but configured in `Guile Scheme` instead of the Nix language.
@@ -311,6 +327,7 @@ guix system reconfigure /etc/config.scm   # on Guix System
 You won't run into `guix` in the wild as often as `nix`, but it's the same idea: declarative, reproducible, hash-keyed package store.
 
 ---
+
 ## When to Use Which
 
 Rough guide:
@@ -324,6 +341,7 @@ Rough guide:
 In practice: distro packages for the system, one universal format for the desktop apps, language tools for development.
 
 ---
+
 ## Mixing Universal Formats with Distro Packages
 
 You can absolutely have all of these on one machine — and you usually do.

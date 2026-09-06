@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Common Pitfalls and How to Avoid Them
 
 ---
+
 ## What This Chapter Covers
 
 - p-hacking and the garden of forking paths
@@ -21,11 +23,13 @@ audience:
 - Goodhart's law and a short defensive checklist
 
 ---
+
 ## Simpson's Paradox
 
 ![simpsons_paradox](svg/courses/math/statistics-applied/15_common_pitfalls/simpsons_paradox.svg)
 
 ---
+
 ## Why A Whole Chapter On Mistakes
 
 - Most bad analyses aren't from bad arithmetic — the formulas were fine
@@ -35,6 +39,7 @@ audience:
 - The other half is a few habits, listed at the end
 
 ---
+
 ## p-Hacking And Forking Paths
 
 - Test 20 things at &alpha; = 0.05 and ~1 comes up "significant" by pure chance
@@ -44,6 +49,7 @@ audience:
 - "We found something interesting after slicing it 12 ways" is a hypothesis, not a result
 
 ---
+
 ## Multiple Comparisons
 
 - Every extra test is another lottery ticket for a false positive
@@ -53,6 +59,7 @@ audience:
 - Reporting the smallest p out of many without saying how many you ran is misleading
 
 ---
+
 ## Simpson's Paradox
 
 - A trend that holds in every subgroup can *reverse* when the groups are pooled — and vice versa
@@ -62,6 +69,7 @@ audience:
 - Slice by the confounder, or use a model that adjusts for it
 
 ---
+
 ## Survivorship And Selection Bias
 
 - **Survivorship bias**: you only see the units that made it — surviving funds, returned WWII bombers, companies still in business
@@ -71,6 +79,7 @@ audience:
 - Ask "who or what is *missing* from this dataset, and why?" before drawing conclusions
 
 ---
+
 ## Regression To The Mean
 
 - Extreme measurements tend to be followed by less extreme ones — partly real, partly luck running out
@@ -80,6 +89,7 @@ audience:
 - Any "we targeted the worst and they got better" claim should set off alarms
 
 ---
+
 ## Goodhart's Law
 
 - "When a measure becomes a target, it ceases to be a good measure"
@@ -89,11 +99,13 @@ audience:
 - A KPI is a thermometer; don't warm it with a lighter and call yourself healthy
 
 ---
+
 ## Five Named Traps
 
 ![pitfalls_checklist](svg/courses/math/statistics-applied/15_common_pitfalls/pitfalls_checklist.svg)
 
 ---
+
 ## A Defensive Checklist
 
 - Plot the raw data before you summarize or test it
@@ -103,6 +115,7 @@ audience:
 - Report effect sizes and intervals, not bare p-values — and when you're unsure, say so
 
 ---
+
 ## Common Mistakes
 
 - Hunting through subgroups and reporting only the "significant" one

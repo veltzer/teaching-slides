@@ -10,9 +10,11 @@ audience:
   - audiences:senior-developers
 
 ---
+
 # Agents and Sub-Agents
 
 ---
+
 ## What This Chapter Covers
 
 - Why sub-agents exist
@@ -22,6 +24,7 @@ audience:
 - Trust but verify
 
 ---
+
 ## What A Sub-Agent Is
 
 - A second Claude in its own session
@@ -30,6 +33,7 @@ audience:
 - The main session orchestrates
 
 ---
+
 ## Why Sub-Agents Exist
 
 - Protect the main context window
@@ -38,11 +42,13 @@ audience:
 - Specialize behavior
 
 ---
+
 ## Context Isolation
 
 ![subagent_isolation](svg/courses/ai/claude-workshop/05_agents/subagent_isolation.svg)
 
 ---
+
 ## Protecting The Main Context
 
 - A big search would crowd the main window
@@ -51,6 +57,7 @@ audience:
 - The agent eats the noise
 
 ---
+
 ## Parallelizing Work
 
 - Three independent searches can run together
@@ -59,6 +66,7 @@ audience:
 - Tokens still cost
 
 ---
+
 ## A Narrow Tool Set
 
 - An agent need not have all tools
@@ -67,6 +75,7 @@ audience:
 - Trust scales down
 
 ---
+
 ## The Agent Catalog
 
 - General-purpose for anything
@@ -75,6 +84,7 @@ audience:
 - Code review for diffs
 
 ---
+
 ## General-Purpose
 
 - The default
@@ -83,6 +93,7 @@ audience:
 - A safe fallback
 
 ---
+
 ## Explore
 
 - Read-only by design
@@ -91,6 +102,7 @@ audience:
 - Cheap and parallel-friendly
 
 ---
+
 ## Plan
 
 - For laying out an approach
@@ -99,11 +111,13 @@ audience:
 - Good before a big change
 
 ---
+
 ## The Catalog
 
 ![agent_catalog](svg/courses/ai/claude-workshop/05_agents/agent_catalog.svg)
 
 ---
+
 ## Briefing An Agent Well
 
 - The agent starts cold
@@ -112,6 +126,7 @@ audience:
 - Tell it the expected report shape
 
 ---
+
 ## The "Smart Colleague" Framing
 
 - They just walked in the room
@@ -120,6 +135,7 @@ audience:
 - Write the brief accordingly
 
 ---
+
 ## What Context To Hand Over
 
 - The goal in one sentence
@@ -128,6 +144,7 @@ audience:
 - What the answer should look like
 
 ---
+
 ## What To Leave Out
 
 - The full chat history
@@ -136,6 +153,7 @@ audience:
 - Generic "be thorough" lines
 
 ---
+
 ## Asking For A Short Report
 
 - "Under 200 words" works
@@ -144,6 +162,7 @@ audience:
 - Save the prose for prose tasks
 
 ---
+
 ## Foreground Vs Background
 
 - Foreground blocks the main session
@@ -152,6 +171,7 @@ audience:
 - Background needs a way to be notified
 
 ---
+
 ## When To Block
 
 - Next step depends on the result
@@ -160,6 +180,7 @@ audience:
 - Default to foreground when in doubt
 
 ---
+
 ## When To Fire And Forget
 
 - Long task, independent of next steps
@@ -168,6 +189,7 @@ audience:
 - Notifications close the loop
 
 ---
+
 ## Continuing An Agent
 
 - Send a follow-up to an existing agent
@@ -176,6 +198,7 @@ audience:
 - Best for related follow-up work
 
 ---
+
 ## Trust But Verify
 
 - The agent reports what it meant to do
@@ -184,6 +207,7 @@ audience:
 - Run the tests
 
 ---
+
 ## Common Failure Modes
 
 - Confident wrong answers
@@ -192,6 +216,7 @@ audience:
 - Hallucinated paths or APIs
 
 ---
+
 ## Worktree Isolation
 
 - Run an agent on a throwaway copy
@@ -200,11 +225,13 @@ audience:
 - Merge or discard at will
 
 ---
+
 ## Worktree Flow
 
 ![worktree_flow](svg/courses/ai/claude-workshop/05_agents/worktree_flow.svg)
 
 ---
+
 ## Reviewing And Merging
 
 - Diff the worktree
@@ -213,6 +240,7 @@ audience:
 - Worktree is cleaned up on success
 
 ---
+
 ## Hands-On Exercise
 
 - Send an Explore agent to map a feature

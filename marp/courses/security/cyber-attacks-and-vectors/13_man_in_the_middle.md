@@ -15,12 +15,14 @@ audience:
 # Man-in-the-Middle Attacks: Intercepting Communications
 
 ---
+
 ## What is a Man-in-the-Middle (MITM) Attack
 - A type of cyber attack where an attacker intercepts and potentially alters the communication between two parties.
 - The attacker secretly relays and modifies the traffic, posing as both parties to the communication.
 - Allows the attacker to eavesdrop, steal data, or inject malicious content.
 
 ---
+
 ## Common MITM Attack Scenarios
 - Public Wi-Fi networks (coffee shops, airports, etc.)
 - Unsecured websites (HTTP instead of HTTPS)
@@ -29,6 +31,7 @@ audience:
 - Compromised network devices (routers, switches)
 
 ---
+
 ## Stages of a MITM Attack
 1. **Interception**: Attacker intercepts communication between two parties.
 1. **Decryption**: If communication is encrypted, attacker attempts to decrypt it.
@@ -37,6 +40,7 @@ audience:
 1. **Forwarding**: Attacker forwards the modified data to the intended recipient.
 
 ---
+
 ## Defending Against MITM Attacks
 - Implement robust encryption and authentication mechanisms
 - Use virtual private networks (VPNs) when connecting to public networks
@@ -46,6 +50,7 @@ audience:
 - Regularly audit and update network devices and infrastructure
 
 ---
+
 ## Encryption and Authentication
 - Use secure protocols like HTTPS, SSH, and VPNs for communication.
 - Implement strong encryption algorithms and key exchange methods.
@@ -53,6 +58,7 @@ audience:
 - Regularly update and replace encryption keys and certificates.
 
 ---
+
 ## Virtual Private Networks (VPNs)
 - VPNs establish an encrypted tunnel between devices and a secure network.
 - Protect against MITM attacks on public networks by encrypting all traffic.
@@ -60,6 +66,7 @@ audience:
 - Implement split-tunneling or always-on VPN policies as needed.
 
 ---
+
 ## Certificate Validation and Pinning
 - Verify the digital certificates of servers and websites to ensure authenticity.
 - Check for certificate revocation lists (CRLs) or use OCSP stapling.
@@ -67,6 +74,7 @@ audience:
 - Use trusted certificate authorities (CAs) and update certificates regularly.
 
 ---
+
 ## Multi-Factor Authentication (MFA)
 - Implement MFA for critical systems and privileged accounts.
 - Use a combination of factors like passwords, biometrics, and hardware tokens.
@@ -74,6 +82,7 @@ audience:
 - Regularly review and update MFA policies and mechanisms.
 
 ---
+
 ## Network Monitoring and Analysis
 - Deploy intrusion detection and prevention systems (IDS/IPS) to monitor network traffic.
 - Analyze network traffic for anomalies and suspicious patterns.
@@ -81,6 +90,7 @@ audience:
 - Regularly audit and update network devices, software, and configurations.
 
 ---
+
 ## Securing Network Infrastructure
 - Deploy secure network devices and regularly update firmware.
 - Implement network segmentation and access controls.
@@ -89,6 +99,7 @@ audience:
 - Implement secure wireless network configurations and protocols (e.g., WPA2 Enterprise).
 
 ---
+
 ## User Awareness and Training
 - Educate users about the risks of MITM attacks and security best practices.
 - Promote the use of secure protocols, VPNs, and certificate validation.
@@ -96,6 +107,7 @@ audience:
 - Implement regular security awareness training and phishing simulations.
 
 ---
+
 ## Continuous Monitoring and Improvement
 - Regularly review and update security policies and procedures.
 - Conduct penetration testing and vulnerability assessments.
@@ -103,6 +115,7 @@ audience:
 - Continuously monitor and improve your organization's security posture.
 
 ---
+
 ## Interesting command lines that have to do with libssl
 
 ```bash

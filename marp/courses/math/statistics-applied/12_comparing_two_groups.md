@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Comparing Two Groups
 
 ---
+
 ## What This Chapter Covers
 
 - The two-sample t-test
@@ -21,11 +23,13 @@ audience:
 - When to reach for a non-parametric test instead
 
 ---
+
 ## Paired vs Independent Samples
 
 ![paired_vs_independent](svg/courses/math/statistics-applied/12_comparing_two_groups/paired_vs_independent.svg)
 
 ---
+
 ## The Most Common Question In Practice
 
 - "Group A vs group B — is the difference real?"
@@ -35,6 +39,7 @@ audience:
 - And always look at the *size* of the difference, not just whether it's "significant"
 
 ---
+
 ## The Two-Sample t-Test
 
 - H&#8320;: the two population means are equal; H&#8321;: they differ
@@ -44,6 +49,7 @@ audience:
 - The default for comparing the average of a numeric metric between two groups
 
 ---
+
 ## Paired vs Independent
 
 - **Independent samples**: two separate groups — users in A vs users in B
@@ -53,6 +59,7 @@ audience:
 - Ask: "is each value in group 1 naturally matched to one in group 2?" If yes, pair them
 
 ---
+
 ## Equal Variance Or Not
 
 - The classic ("Student's") t-test assumes the two groups have equal variance
@@ -62,6 +69,7 @@ audience:
 - Don't run a preliminary variance test to "decide" — just use Welch
 
 ---
+
 ## Comparing Two Proportions
 
 - Conversion rate in A vs B, defect rate this batch vs last
@@ -71,6 +79,7 @@ audience:
 - Report the **difference** (and its CI), or the relative lift — not just "significant"
 
 ---
+
 ## Effect Size For A Difference
 
 - p tells you "is there a difference"; effect size tells you "how big"
@@ -80,6 +89,7 @@ audience:
 - A "significant" d of 0.02 is real and useless; say so
 
 ---
+
 ## When To Go Non-Parametric
 
 - Small samples *and* clearly non-normal, heavily skewed, or outlier-ridden data
@@ -89,6 +99,7 @@ audience:
 - Slightly less power when normality *does* hold — but much safer when it doesn't
 
 ---
+
 ## Two-Group Comparisons In Python
 
 ```python
@@ -106,11 +117,13 @@ print(stats.chi2_contingency([[84, 2000-84], [110, 2050-110]])[1])
 ```
 
 ---
+
 ## Effect Size: How Big is the Shift?
 
 ![effect_size](svg/courses/math/statistics-applied/12_comparing_two_groups/effect_size.svg)
 
 ---
+
 ## Common Mistakes
 
 - Using an independent-samples test on paired data (or vice versa)

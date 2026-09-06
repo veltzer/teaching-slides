@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Performance Tuning
 
 ## Topics Covered
@@ -61,6 +62,7 @@ callback_whitelist = timer, profile_tasks, profile_roles
 ```
 
 ---
+
 ## Forks: Parallelism Control: Example
 
 ```ini
@@ -79,6 +81,7 @@ ansible-playbook site.yml -f 50
 ```
 
 ---
+
 ## Forks: Parallelism Control
 
 ![100mb_per_fork_varies_with_modules](svg/courses/devops/ansible/14_performance_tuning/100mb_per_fork_varies_with_modules.svg)

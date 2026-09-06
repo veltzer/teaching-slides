@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # AI-Enhanced Coding Practices
 
 ---
@@ -853,9 +854,9 @@ This microservices architecture handles e-commerce operations...
 - **Purpose**: Single entry point for all client requests
 - **Technology**: Kong/Express Gateway
 - **Responsibilities**:
-  - Request routing
-  - Authentication
-  - Rate limiting
+    - Request routing
+    - Authentication
+    - Rate limiting
 
 ### User Service
 - **Database**: PostgreSQL

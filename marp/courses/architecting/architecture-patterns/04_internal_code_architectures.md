@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Internal Code Architectures
 
 ---
+
 ## A Note on DDD
 
 - Domain-Driven Design is not a code-organization pattern like Hexagonal or Onion
@@ -23,6 +25,7 @@ audience:
 - This chapter focuses on patterns for organizing the code that implements your domain
 
 ---
+
 ## CQRS Overview
 
 - Separates the read and write operations of an application into separate models
@@ -32,6 +35,7 @@ audience:
 - Often used in combination with Event Sourcing for maintaining the write model
 
 ---
+
 ## CQRS Key Concepts
 
 - Command
@@ -56,11 +60,13 @@ audience:
     - Allows reconstructing the current state by replaying the events
 
 ---
+
 ## CQRS Architecture Diagram
 
 ![cqrs_architecture_diagram](svg/courses/architecting/architecture-patterns/04_internal_code_architectures/cqrs_architecture_diagram.svg)
 
 ---
+
 ## CQRS Pros and Cons
 
 Pros:
@@ -78,6 +84,7 @@ Cons:
 - Can be overkill for simple CRUD-based applications
 
 ---
+
 ## CQRS When to Use
 
 - When the application has different scalability and performance requirements for reads and writes
@@ -87,6 +94,7 @@ Cons:
 - When using Event Sourcing to maintain the write model and reconstruct the state
 
 ---
+
 ## Event Sourcing Overview
 
 - Persists the state of a system as a sequence of events
@@ -96,6 +104,7 @@ Cons:
 - Often used in combination with CQRS for separating read and write models
 
 ---
+
 ## Event Sourcing Key Concepts
 
 - Event
@@ -116,11 +125,13 @@ Cons:
     - Can be optimized for querying and presentation purposes
 
 ---
+
 ## Event Sourcing Architecture Diagram
 
 ![event_sourcing_architecture_diagram](svg/courses/architecting/architecture-patterns/04_internal_code_architectures/event_sourcing_architecture_diagram.svg)
 
 ---
+
 ## Event Sourcing Pros and Cons
 
 Pros:
@@ -138,6 +149,7 @@ Cons:
 - Can be challenging to implement queries that span multiple aggregates
 
 ---
+
 ## Event Sourcing When to Use
 
 - When a complete audit trail and history of changes are required
@@ -148,6 +160,7 @@ Cons:
 - When the domain involves complex business rules and state transitions
 
 ---
+
 ## Hexagonal Overview
 
 - Also known as the Ports and Adapters pattern
@@ -158,6 +171,7 @@ Cons:
 - Promotes testability, maintainability, and flexibility
 
 ---
+
 ## Hexagonal Key Concepts
 
 - Domain
@@ -178,11 +192,13 @@ Cons:
     - Allows the domain to remain independent and decoupled from external dependencies
 
 ---
+
 ## Hexagonal Architecture Diagram
 
 ![hexagonal_architecture_diagram](svg/courses/architecting/architecture-patterns/04_internal_code_architectures/hexagonal_architecture_diagram.svg)
 
 ---
+
 ## Hexagonal Pros and Cons
 
 Pros:
@@ -200,6 +216,7 @@ Cons:
 - Requires discipline and consistency in following the pattern
 
 ---
+
 ## Hexagonal When to Use
 
 - When building complex applications with multiple external dependencies
@@ -210,6 +227,7 @@ Cons:
 - When a modular and loosely coupled architecture is desired
 
 ---
+
 ## Clean Architecture Overview
 
 - Promotes separation of concerns and dependency inversion
@@ -220,6 +238,7 @@ Cons:
 - Emphasizes maintainability, testability, and flexibility
 
 ---
+
 ## Clean Architecture Key Concepts
 
 - Entities
@@ -240,11 +259,13 @@ Cons:
     - Should be easily replaceable without affecting the inner layers
 
 ---
+
 ## Clean Architecture Diagram
 
 ![architecture_diagram](svg/courses/architecting/architecture-patterns/04_internal_code_architectures/architecture_diagram.svg)
 
 ---
+
 ## Clean Architecture Pros and Cons
 
 Pros:
@@ -262,6 +283,7 @@ Cons:
 - Requires a good understanding of the principles and patterns involved
 
 ---
+
 ## Clean Architecture When to Use
 
 - When building large and complex applications with multiple external dependencies
@@ -272,6 +294,7 @@ Cons:
 - When a clear separation of responsibilities and concerns is desired
 
 ---
+
 ## Onion Overview
 
 - Organizes the application into concentric layers
@@ -281,6 +304,7 @@ Cons:
 - Aims to make the application more maintainable, testable, and adaptable
 
 ---
+
 ## Onion Key Concepts
 
 - Domain Model
@@ -300,11 +324,13 @@ Cons:
     - Depends on the application services and adapts to their interfaces
 
 ---
+
 ## Onion Architecture Diagram
 
 ![onion_architecture_diagram](svg/courses/architecting/architecture-patterns/04_internal_code_architectures/onion_architecture_diagram.svg)
 
 ---
+
 ## Onion Pros and Cons
 
 Pros:
@@ -322,6 +348,7 @@ Cons:
 - Requires discipline and consistency in following the architecture guidelines
 
 ---
+
 ## Onion When to Use
 
 - When building applications with complex business logic and domain rules
@@ -332,6 +359,7 @@ Cons:
 - When the application is expected to grow and evolve over time
 
 ---
+
 ## Microkernel Overview
 
 - Separates the core system functionality (microkernel) from extended functionality (plugins)
@@ -341,6 +369,7 @@ Cons:
 - Promotes extensibility, flexibility, and modularity
 
 ---
+
 ## Microkernel Key Concepts
 
 - Microkernel
@@ -359,11 +388,13 @@ Cons:
     - Ensure the compatibility and interoperability of plugins with the microkernel
 
 ---
+
 ## Microkernel Architecture Diagram
 
 ![microkernel_architecture_diagram](svg/courses/architecting/architecture-patterns/04_internal_code_architectures/microkernel_architecture_diagram.svg)
 
 ---
+
 ## Microkernel Pros and Cons
 
 Pros:
@@ -381,6 +412,7 @@ Cons:
 - Requires effective management and coordination of plugins and their dependencies
 
 ---
+
 ## Microkernel When to Use
 
 - When the system needs to be highly extensible and customizable
@@ -391,6 +423,7 @@ Cons:
 - When the system benefits from the reuse and sharing of plugins across multiple instances
 
 ---
+
 ## Summary
 
 - CQRS splits read and write models when their requirements diverge

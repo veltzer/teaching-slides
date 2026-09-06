@@ -8,9 +8,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Practical Use
 
 ---
+
 ## What This Chapter Covers
 
 - Migration paths
@@ -20,6 +22,7 @@ audience:
 - Wrap-up
 
 ---
+
 ## Migration From Vendor SDK
 
 - Add OTel SDK alongside
@@ -28,6 +31,7 @@ audience:
 - One-by-one per service
 
 ---
+
 ## Migration From Prometheus
 
 - Keep Prometheus
@@ -36,11 +40,13 @@ audience:
 - Coexist forever or migrate
 
 ---
+
 ## Common Migration Paths
 
 ![migration_paths](svg/courses/observability_and_monitoring/opentelemetry/10_practical_use/migration_paths.svg)
 
 ---
+
 ## Common Architectures
 
 - App SDK to local collector (sidecar)
@@ -49,6 +55,7 @@ audience:
 - Standard pattern
 
 ---
+
 ## Kubernetes Setup
 
 - OpenTelemetry Operator
@@ -57,6 +64,7 @@ audience:
 - StatefulSet for gateway
 
 ---
+
 ## Auto vs Manual
 
 - Auto for breadth
@@ -64,6 +72,7 @@ audience:
 - Combine
 
 ---
+
 ## Debugging Workflow
 
 - Alert fires (high latency)
@@ -73,6 +82,7 @@ audience:
 - Read logs at that span
 
 ---
+
 ## Observability-Driven Development
 
 - Add spans as you write code
@@ -80,6 +90,7 @@ audience:
 - Review in PRs
 
 ---
+
 ## Naming Discipline
 
 - Follow semantic conventions
@@ -87,6 +98,7 @@ audience:
 - Attribute names lowercase, dot.separated
 
 ---
+
 ## Onboarding New Services
 
 - Instrumentation as part of service template
@@ -95,6 +107,7 @@ audience:
 - Documented checklist
 
 ---
+
 ## Reviewing Telemetry
 
 - Periodic audit
@@ -103,6 +116,7 @@ audience:
 - Keep cost in check
 
 ---
+
 ## Incident Postmortems
 
 - Use traces and logs
@@ -111,6 +125,7 @@ audience:
 - Feed back into tooling
 
 ---
+
 ## When OTel Is Wrong
 
 - Tiny app, single process: maybe overkill
@@ -118,6 +133,7 @@ audience:
 - Most teams: it is right
 
 ---
+
 ## Course Wrap-Up
 
 - OTel: standard for telemetry
@@ -128,6 +144,7 @@ audience:
 - Adoption: per-service migration
 
 ---
+
 ## Common Practical Mistakes
 
 - Treating it as a side project

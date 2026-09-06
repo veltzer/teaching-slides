@@ -11,6 +11,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Controllers and Operators
 
 Advanced Kubernetes Course - Day 1, Module 4
@@ -27,16 +28,19 @@ Advanced Kubernetes Course - Day 1, Module 4
 - Real-world operator examples
 
 ---
+
 ## The Controller Pattern: Overview
 
 Every controller follows the same reconciliation loop:
 
 ---
+
 ## The Controller Pattern
 
 ![the_controller_pattern](svg/courses/devops/advanced-kubernetes/04_controllers_operators/the_controller_pattern.svg)
 
 ---
+
 ## The Controller Pattern: Overview (2)
 
 **Level-triggered**, not edge-triggered: Acts on current state, not events.

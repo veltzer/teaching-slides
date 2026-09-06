@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Introduction to Neo4j
 
 ---
+
 ## What This Chapter Covers
 
 - What a graph database is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What A Graph Database Is
 
 - Nodes for entities
@@ -28,6 +31,7 @@ audience:
 - Queries traverse edges
 
 ---
+
 ## Why Graph
 
 - Relationships are first-class
@@ -36,6 +40,7 @@ audience:
 - Patterns easier to express
 
 ---
+
 ## When Graph Wins
 
 - Social networks
@@ -45,11 +50,13 @@ audience:
 - Hierarchies and dependencies
 
 ---
+
 ## Fit At A Glance
 
 ![when_graph](svg/courses/databases/neo4j/01_introduction/when_graph.svg)
 
 ---
+
 ## When Graph Loses
 
 - Aggregations over rows
@@ -58,6 +65,7 @@ audience:
 - Pure key-value lookup
 
 ---
+
 ## Property Graph Model
 
 - Nodes have labels
@@ -66,11 +74,13 @@ audience:
 - No fixed schema
 
 ---
+
 ## Property Graph Visualized
 
 ![property_graph](svg/courses/databases/neo4j/01_introduction/property_graph.svg)
 
 ---
+
 ## Cypher
 
 - Declarative query language
@@ -79,6 +89,7 @@ audience:
 - Standard across multiple graph DBs
 
 ---
+
 ## Sample Pattern
 
 - (a:Person)-[:FRIEND]->(b:Person)
@@ -87,6 +98,7 @@ audience:
 - Return what you want
 
 ---
+
 ## Storage
 
 - Native graph storage
@@ -95,6 +107,7 @@ audience:
 - Constant time traversal
 
 ---
+
 ## ACID
 
 - Real transactions
@@ -103,6 +116,7 @@ audience:
 - Differentiator from many graph stores
 
 ---
+
 ## Versions
 
 - Community: free
@@ -111,6 +125,7 @@ audience:
 - Pick by needs
 
 ---
+
 ## Hardware Profile
 
 - RAM matters most
@@ -119,6 +134,7 @@ audience:
 - Heap and page cache tuned together
 
 ---
+
 ## Course Outline
 
 - Cypher basics
@@ -128,6 +144,7 @@ audience:
 - Graph algorithms
 
 ---
+
 ## Common Beginner Mistakes
 
 - Modeling like SQL

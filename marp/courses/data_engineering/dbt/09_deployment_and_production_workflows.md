@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Deployment and Production Workflows
 
 ---
+
 ## What This Chapter Covers
 
 - dbt Cloud vs self-managed
@@ -21,11 +23,13 @@ audience:
 - Monitoring
 
 ---
+
 ## Environments and Schedules
 
 ![dbt_envs](svg/courses/data_engineering/dbt/09_deployment_and_production_workflows/dbt_envs.svg)
 
 ---
+
 ## dbt Cloud
 
 - Hosted IDE + scheduler
@@ -34,6 +38,7 @@ audience:
 - Commercial; per-user pricing
 
 ---
+
 ## Self-Managed
 
 - Use dbt Core CLI
@@ -42,6 +47,7 @@ audience:
 - Common in data platform teams
 
 ---
+
 ## Airflow + dbt
 
 - Most common pattern
@@ -50,6 +56,7 @@ audience:
 - Depends-on for ordering
 
 ---
+
 ## Environments
 
 - target: dev, staging, prod
@@ -57,6 +64,7 @@ audience:
 - Configured in profiles.yml
 
 ---
+
 ## profiles.yml
 
 ```yaml
@@ -72,6 +80,7 @@ my_project:
 ```
 
 ---
+
 ## Selecting Models
 
 - `dbt run --select model_name`
@@ -81,6 +90,7 @@ my_project:
 - For incremental runs
 
 ---
+
 ## Slim CI
 
 - On PR: only run / test changed models
@@ -89,6 +99,7 @@ my_project:
 - Standard for production projects
 
 ---
+
 ## CI Pipeline
 
 - PR opened: spin up CI environment
@@ -98,6 +109,7 @@ my_project:
 - Block merge if tests fail
 
 ---
+
 ## CD Pipeline
 
 - Merge to main: deploy to prod
@@ -106,6 +118,7 @@ my_project:
 - Promote dev artifacts to prod
 
 ---
+
 ## Source Control
 
 - All dbt code in git
@@ -114,6 +127,7 @@ my_project:
 - Standard software practice
 
 ---
+
 ## Monitoring
 
 - dbt Cloud: built-in
@@ -122,6 +136,7 @@ my_project:
 - Alert on regressions
 
 ---
+
 ## Documentation Hosting
 
 - `dbt docs generate` produces HTML
@@ -130,6 +145,7 @@ my_project:
 - Re-generate after each prod run
 
 ---
+
 ## Best Practices
 
 - Tests as merge-gate
@@ -138,6 +154,7 @@ my_project:
 - Prod runs on schedule (not ad-hoc)
 
 ---
+
 ## Snapshots Scheduling
 
 - Run with regular dbt run
@@ -145,6 +162,7 @@ my_project:
 - Critical: don't miss snapshots; data history breaks
 
 ---
+
 ## Common Production Mistakes
 
 - Manual prod runs (drift from CI)
@@ -154,6 +172,7 @@ my_project:
 - No alerting on failed runs
 
 ---
+
 ## Course Wrap-Up
 
 - dbt: SQL transformations, version-controlled
@@ -164,6 +183,7 @@ my_project:
 - Production: CI / CD / scheduling / alerting
 
 ---
+
 ## CI/CD Pipeline Steps
 
 ![cicd_steps](svg/courses/data_engineering/dbt/09_deployment_and_production_workflows/cicd_steps.svg)

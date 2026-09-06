@@ -11,11 +11,13 @@ audience:
   - audiences:developers
 
 ---
+
 # Service Mesh & Network Policies
 
 Advanced Kubernetes Course - Day 2, Module 3
 
 ---
+
 ## Sidecar Pattern
 
 ![service_mesh](svg/courses/devops/advanced-kubernetes/08_service_mesh/service_mesh.svg)
@@ -136,11 +138,13 @@ spec:
 ```
 
 ---
+
 ## Traffic Shifting - Canary Release
 
 ![traffic_shifting_canary_release](svg/courses/devops/advanced-kubernetes/08_service_mesh/traffic_shifting_canary_release.svg)
 
 ---
+
 ## Traffic Shifting - Canary Release: Example
 
 ```bash

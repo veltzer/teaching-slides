@@ -8,9 +8,11 @@ audience:
   - audiences:data-analysts
 
 ---
+
 # Pivot Tables
 
 ---
+
 ## What This Chapter Covers
 
 - What a pivot table is
@@ -22,6 +24,7 @@ audience:
 - When pivot tables are the right tool (and when they aren't)
 
 ---
+
 ## What a Pivot Table Is
 
 - A *cross-tabulation* of one or more rows by one or more columns
@@ -31,11 +34,13 @@ audience:
 - The most-used spreadsheet feature for analysis
 
 ---
+
 ## Anatomy
 
 ![pivot_anatomy](svg/courses/data_science/data-analyst-fundamentals/10_pivot_tables/pivot_anatomy.svg)
 
 ---
+
 ## A Concrete Example
 
 - Source: orders table with `country`, `month`, `amount`
@@ -45,6 +50,7 @@ audience:
 - One source, many views, no data duplication
 
 ---
+
 ## Building One in Excel
 
 - Select your data
@@ -56,6 +62,7 @@ audience:
     - **Filters**: dimensions you want to filter on
 
 ---
+
 ## Building One in Google Sheets
 
 - Data &#8594; Pivot table
@@ -64,6 +71,7 @@ audience:
 - Free, collaborative, lower performance than Excel on big data
 
 ---
+
 ## Aggregation Functions
 
 - Sum (default for numeric)
@@ -75,6 +83,7 @@ audience:
 - Click the field in Values &#8594; Value Field Settings &#8594; Summarize by
 
 ---
+
 ## Showing Values As
 
 - Raw value: the aggregate
@@ -85,6 +94,7 @@ audience:
 - Right-click a value &#8594; Show Values As
 
 ---
+
 ## Sorting and Filtering
 
 - Sort rows by a value column (descending revenue per country)
@@ -94,6 +104,7 @@ audience:
 - Especially powerful in Excel Online and Power BI
 
 ---
+
 ## Calculated Fields
 
 - Compute a new metric in the pivot, not the source
@@ -103,6 +114,7 @@ audience:
 - Centralises logic; multiple pivots can reuse
 
 ---
+
 ## Calculated Items
 
 - Combine pivot row/column values
@@ -111,6 +123,7 @@ audience:
 - Can confuse downstream consumers — use sparingly
 
 ---
+
 ## Pivot Charts
 
 - Insert a chart linked to the pivot
@@ -120,6 +133,7 @@ audience:
 - Pie charts: same warnings as elsewhere
 
 ---
+
 ## Cross-Tabulation
 
 - Two categorical dimensions vs each other
@@ -129,6 +143,7 @@ audience:
 - Shows up in surveys, demographics, support analysis
 
 ---
+
 ## Drill-Down
 
 - Double-click a pivot value
@@ -138,6 +153,7 @@ audience:
 - Audit trail in one click
 
 ---
+
 ## Refreshing Pivot Data
 
 - Source data changes &#8594; right-click pivot &#8594; Refresh
@@ -146,6 +162,7 @@ audience:
 - A pivot that doesn't reflect current data is worse than no pivot
 
 ---
+
 ## When To Use Pivot Tables
 
 - Quick exploration with non-technical stakeholders
@@ -155,6 +172,7 @@ audience:
 - Any time someone asks "can you slice this by X?"
 
 ---
+
 ## When NOT to Use Them
 
 - Datasets over a few hundred thousand rows (gets slow)
@@ -164,6 +182,7 @@ audience:
 - Pivot tables don't replace SQL or pandas — they complement
 
 ---
+
 ## Common Mistakes
 
 - Building elaborate pivots on data that won't be refreshed

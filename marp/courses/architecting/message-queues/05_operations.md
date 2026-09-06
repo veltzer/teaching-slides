@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Monitoring
@@ -21,6 +23,7 @@ audience:
 - Multi-tenant
 
 ---
+
 ## Key Metrics
 
 - Queue depth
@@ -29,6 +32,7 @@ audience:
 - Lag
 
 ---
+
 ## Lag
 
 - Difference between produced and consumed
@@ -37,11 +41,13 @@ audience:
 - Alert thresholds by topic
 
 ---
+
 ## Lag Visualized
 
 ![lag_metrics](svg/courses/architecting/message-queues/05_operations/lag_metrics.svg)
 
 ---
+
 ## Latency
 
 - End-to-end time
@@ -50,6 +56,7 @@ audience:
 - Track p95 and p99
 
 ---
+
 ## Error Rate
 
 - Failed deliveries
@@ -58,6 +65,7 @@ audience:
 - Per-topic dashboards
 
 ---
+
 ## Alerts
 
 - Lag exceeds threshold
@@ -66,6 +74,7 @@ audience:
 - Dead-letter queue grew
 
 ---
+
 ## Capacity Planning
 
 - Peak vs steady rates
@@ -74,6 +83,7 @@ audience:
 - Headroom for spikes
 
 ---
+
 ## Retention
 
 - Time-based or size-based
@@ -82,6 +92,7 @@ audience:
 - Tiered storage in modern brokers
 
 ---
+
 ## Upgrades
 
 - Rolling restart
@@ -90,6 +101,7 @@ audience:
 - Have a rollback plan
 
 ---
+
 ## Broker Failover
 
 - Replicas elect new leader
@@ -98,6 +110,7 @@ audience:
 - Test it
 
 ---
+
 ## Multi-Tenant
 
 - Per-tenant quotas
@@ -106,6 +119,7 @@ audience:
 - Audit access
 
 ---
+
 ## Authentication
 
 - Mutual TLS or username/password
@@ -114,6 +128,7 @@ audience:
 - Limit scope
 
 ---
+
 ## Authorization
 
 - Per-topic ACLs
@@ -122,6 +137,7 @@ audience:
 - Audit periodically
 
 ---
+
 ## Common Operational Mistakes
 
 - No lag alert

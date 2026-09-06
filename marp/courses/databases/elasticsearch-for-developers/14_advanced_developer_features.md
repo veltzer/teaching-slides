@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced Developer Features
 
 ---
+
 ## What This Chapter Covers
 
 - Scripted fields
@@ -20,6 +22,7 @@ audience:
 - Cross-cluster search
 
 ---
+
 ## Scripted Fields
 
 - Computed at search time
@@ -28,6 +31,7 @@ audience:
 - For: rare or one-off computations
 
 ---
+
 ## Painless Scripting
 
 - Elasticsearch's scripting language
@@ -36,6 +40,7 @@ audience:
 - Default; safe by design
 
 ---
+
 ## Painless Example
 
 ```json
@@ -48,6 +53,7 @@ audience:
 ```
 
 ---
+
 ## Update By Query
 
 - Update many documents matching a query
@@ -56,6 +62,7 @@ audience:
 - Beware: long-running
 
 ---
+
 ## Reindex API
 
 ```http
@@ -71,6 +78,7 @@ POST _reindex
 - Async; check status
 
 ---
+
 ## Snapshot And Restore
 
 - Backup to S3 / GCS / local
@@ -79,6 +87,7 @@ POST _reindex
 - Standard for ops
 
 ---
+
 ## Snapshot Schedule
 
 - ILM can trigger snapshots
@@ -86,6 +95,7 @@ POST _reindex
 - Test restore periodically
 
 ---
+
 ## Cross-Cluster Search
 
 - Query multiple clusters from one
@@ -94,6 +104,7 @@ POST _reindex
 - For: federation, multi-region
 
 ---
+
 ## Cross-Cluster Replication
 
 - Active-passive replication
@@ -102,6 +113,7 @@ POST _reindex
 - Commercial feature
 
 ---
+
 ## Field Capabilities API
 
 - Discover fields available
@@ -109,6 +121,7 @@ POST _reindex
 - For: dynamic UI, query builders
 
 ---
+
 ## Multi-Search
 
 ```http
@@ -123,6 +136,7 @@ POST /_msearch
 - Saves round trips
 
 ---
+
 ## Async Search
 
 - Long-running queries
@@ -130,6 +144,7 @@ POST /_msearch
 - For: large analytics, time-out-prone queries
 
 ---
+
 ## Watcher / Alerting
 
 - Run a query on schedule
@@ -138,6 +153,7 @@ POST /_msearch
 - Commercial feature; OpenSearch has alternative
 
 ---
+
 ## Common Advanced Mistakes
 
 - Scripted fields in hot search paths (slow)

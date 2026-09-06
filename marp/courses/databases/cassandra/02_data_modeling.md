@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Data Modeling
 
 ---
+
 ## What This Chapter Covers
 
 - Query-first design
@@ -20,6 +22,7 @@ audience:
 - Common patterns
 
 ---
+
 ## Query-First Design
 
 - Start with the queries
@@ -28,11 +31,13 @@ audience:
 - Multiple tables per entity is normal
 
 ---
+
 ## SQL vs Cassandra Mindset
 
 ![query_first_design](svg/courses/databases/cassandra/02_data_modeling/query_first_design.svg)
 
 ---
+
 ## Partition Key
 
 - Determines node placement
@@ -41,11 +46,13 @@ audience:
 - High cardinality required
 
 ---
+
 ## Modelling Building Blocks
 
 ![partitions_clustering](svg/courses/databases/cassandra/02_data_modeling/partitions_clustering.svg)
 
 ---
+
 ## Composite Partition Keys
 
 - Multiple columns combine into one key
@@ -54,6 +61,7 @@ audience:
 - Common for time-series
 
 ---
+
 ## Clustering Columns
 
 - Within a partition
@@ -62,6 +70,7 @@ audience:
 - Multiple columns supported
 
 ---
+
 ## Why Range Within Partition
 
 - Reads are partition-local
@@ -70,6 +79,7 @@ audience:
 - Plan accordingly
 
 ---
+
 ## Denormalization
 
 - Same data in multiple tables
@@ -78,6 +88,7 @@ audience:
 - Reads stay fast
 
 ---
+
 ## Materialized Views
 
 - Server-maintained denormalized copies
@@ -86,6 +97,7 @@ audience:
 - Trade write cost
 
 ---
+
 ## Counters
 
 - Special distributed counter type
@@ -94,6 +106,7 @@ audience:
 - Use carefully
 
 ---
+
 ## Time-Series Pattern
 
 - Bucket by time period
@@ -102,6 +115,7 @@ audience:
 - Trim old buckets via TTL
 
 ---
+
 ## TTL
 
 - Per-row or per-column
@@ -110,6 +124,7 @@ audience:
 - Cleaned up by compaction
 
 ---
+
 ## Tombstones
 
 - Markers for deletes
@@ -118,6 +133,7 @@ audience:
 - Tune compaction to clean fast
 
 ---
+
 ## Anti-Patterns
 
 - Unbounded partitions
@@ -126,6 +142,7 @@ audience:
 - Range over many partitions
 
 ---
+
 ## Common Modeling Mistakes
 
 - Modeling like SQL

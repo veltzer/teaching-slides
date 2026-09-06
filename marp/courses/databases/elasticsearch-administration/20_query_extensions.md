@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Query Extensions
 
 ---
+
 ## What This Chapter Covers
 
 - SQL access to Elasticsearch via the `_sql` API
@@ -21,6 +23,7 @@ audience:
 - Practical SQL and JSON examples for each
 
 ---
+
 ## Why Query Extensions Matter
 
 - Not every consumer wants to write Query DSL
@@ -31,6 +34,7 @@ audience:
 - These extensions widen access while keeping one data store
 
 ---
+
 ## SQL Access: The _sql API
 
 - Query indices with familiar SQL through the `_sql` endpoint
@@ -49,6 +53,7 @@ POST /_sql?format=txt
 - SQL covers SELECT, WHERE, GROUP BY, and many functions
 
 ---
+
 ## SQL Cursors and Pagination
 
 - Large results return a `cursor` to fetch the next page
@@ -66,6 +71,7 @@ POST /_sql/close
 - Long-lived open cursors waste resources on the cluster
 
 ---
+
 ## JDBC and ODBC
 
 - Elasticsearch ships JDBC and ODBC drivers for SQL clients
@@ -81,6 +87,7 @@ jdbc:elasticsearch://localhost:9200
 - Pushdown sends filtering and aggregation to the cluster, not the client
 
 ---
+
 ## Translating SQL to DSL
 
 - `_sql/translate` converts SQL into the equivalent Query DSL
@@ -96,6 +103,7 @@ POST /_sql/translate
 - Lets you start in SQL and graduate to hand-tuned DSL
 
 ---
+
 ## Runtime Fields: Schema-on-Read
 
 - Runtime fields are evaluated at query time, not stored on disk
@@ -106,6 +114,7 @@ POST /_sql/translate
 - Define them in the mapping or inline per search
 
 ---
+
 ## Runtime Mappings in the Mapping
 
 - Declare a runtime field with a Painless script
@@ -130,6 +139,7 @@ PUT /logs
 - The field behaves like a normal field in queries and aggregations
 
 ---
+
 ## Inline Runtime Fields per Search
 
 - Define a runtime field just for one search request
@@ -152,6 +162,7 @@ POST /logs/_search
 - Use this to prototype before committing to a mapping change
 
 ---
+
 ## Enrich Processors: The Policy
 
 - Enrich adds reference data to documents during ingest
@@ -177,6 +188,7 @@ POST /_enrich/policy/geo_ip_policy/_execute
 - Re-execute the policy whenever the source lookup data changes
 
 ---
+
 ## Enrich in an Ingest Pipeline
 
 - An `enrich` processor matches incoming docs against the policy
@@ -201,6 +213,7 @@ PUT /_ingest/pipeline/add_geo
 - Keep lookup indices modest in size to keep enrich fast
 
 ---
+
 ## Geospatial Field Types
 
 - `geo_point` stores latitude and longitude points
@@ -222,6 +235,7 @@ PUT /stores
 - Points support fast distance and bounding-box queries
 
 ---
+
 ## Geo Bounding Box and Distance
 
 - `geo_bounding_box` filters points inside a rectangle
@@ -243,6 +257,7 @@ POST /stores/_search
 - Combine with `sort` by distance to rank nearest results first
 
 ---
+
 ## Geo Shape Queries
 
 - Query `geo_shape` fields by spatial relation to a shape
@@ -266,6 +281,7 @@ POST /stores/_search
 - Index complex shapes carefully; they cost more than points
 
 ---
+
 ## Query Extensions Checklist
 
 - Use `_sql` and the drivers to serve analysts and BI tools

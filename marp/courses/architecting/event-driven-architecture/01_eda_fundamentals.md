@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # EDA Fundamentals
 
 ---
+
 ## What This Chapter Covers
 
 - What an event is — and isn't
@@ -21,6 +23,7 @@ audience:
 - Trade-offs versus request-driven systems
 
 ---
+
 ## What Is an Event?
 
 - A statement of fact: "something happened"
@@ -30,6 +33,7 @@ audience:
 - Carries enough context to act on without callbacks
 
 ---
+
 ## What Is Event-Driven Architecture?
 
 - Components communicate by emitting and reacting to events
@@ -39,16 +43,19 @@ audience:
 - Async is the default
 
 ---
+
 ## EDA Visualized
 
 ![eda_overview](svg/courses/architecting/event-driven-architecture/01_eda_fundamentals/eda_overview.svg)
 
 ---
+
 ## Kinds Of Events
 
 ![event_types](svg/courses/architecting/event-driven-architecture/01_eda_fundamentals/event_types.svg)
 
 ---
+
 ## Events vs Commands
 
 - Event: "OrderPlaced" — a fact, possibly with many listeners
@@ -58,6 +65,7 @@ audience:
 - Different mechanics, different guarantees
 
 ---
+
 ## Events vs Queries
 
 - Event: a fact has occurred — push, async
@@ -67,6 +75,7 @@ audience:
 - Don't try to query through an event bus — use a query API
 
 ---
+
 ## Three Event Types
 
 - Domain events — within a bounded context, reflecting business meaning
@@ -76,6 +85,7 @@ audience:
 - Don't model all three the same way
 
 ---
+
 ## Domain Events
 
 - Internal to one service or bounded context
@@ -85,6 +95,7 @@ audience:
 - The unit of internal communication in DDD
 
 ---
+
 ## Integration Events
 
 - Cross-service, the API of an event-driven system
@@ -94,6 +105,7 @@ audience:
 - The most expensive to change once published
 
 ---
+
 ## Notification Events
 
 - Minimal payload: an ID and the event type
@@ -103,6 +115,7 @@ audience:
 - Useful when payload is large or sensitive
 
 ---
+
 ## Producers and Consumers
 
 - Producer: emits events, doesn't know who reads
@@ -112,6 +125,7 @@ audience:
 - Both are first-class participants
 
 ---
+
 ## Pub-Sub vs Point-to-Point
 
 - Pub-sub: one event, many independent consumers — broadcasts
@@ -121,6 +135,7 @@ audience:
 - Mix them within one system as needed
 
 ---
+
 ## Coupling and Cohesion
 
 - Loose temporal coupling — producer and consumer don't run at the same time
@@ -130,6 +145,7 @@ audience:
 - The schema is the API
 
 ---
+
 ## EDA Trade-Offs: Wins
 
 - Independent scaling per service
@@ -139,6 +155,7 @@ audience:
 - Easier to add new consumers without changing producer
 
 ---
+
 ## EDA Trade-Offs: Costs
 
 - Eventual consistency is hard to reason about
@@ -148,6 +165,7 @@ audience:
 - Test infrastructure must include async paths
 
 ---
+
 ## When EDA Fits
 
 - Cross-service workflows that aren't request-response
@@ -157,6 +175,7 @@ audience:
 - Systems that benefit from reactive UX
 
 ---
+
 ## When Not To Use EDA
 
 - Simple CRUD with one consumer — REST is fine
@@ -166,6 +185,7 @@ audience:
 - Cases where the broker becomes a single point of failure with no plan
 
 ---
+
 ## EDA in the System Landscape
 
 - Often coexists with REST/GraphQL APIs
@@ -175,6 +195,7 @@ audience:
 - Pick the mode per use case, not for the whole system
 
 ---
+
 ## Event Granularity
 
 - Too fine: chatty, expensive, hides intent
@@ -184,6 +205,7 @@ audience:
 - Refine over time — granularity isn't fixed in stone
 
 ---
+
 ## Common Anti-Patterns
 
 - Using events as RPC (request event followed by response event)
@@ -193,6 +215,7 @@ audience:
 - Producers expecting consumers to behave in a specific way
 
 ---
+
 ## Course Roadmap
 
 - Chapter 2: brokers and streaming platforms
@@ -203,6 +226,7 @@ audience:
 - Chapter 7: microservices in practice
 
 ---
+
 ## Summary
 
 - Events are immutable facts; commands are instructions

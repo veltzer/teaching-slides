@@ -9,14 +9,17 @@ audience:
   - audiences:team-leads
 
 ---
+
 # Standups (Daily Scrum)
 
 ---
+
 ## Standup Formats
 
 ![standup_formats](svg/courses/practices/agile-and-scrum/04_standups/standup_formats.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What the Daily Scrum is for
@@ -27,6 +30,7 @@ audience:
 - Remote and distributed standups
 
 ---
+
 ## What the Daily Scrum Is
 
 - A 15-minute event for the Developers, every working day
@@ -36,11 +40,13 @@ audience:
 - *Not* a problem-solving meeting
 
 ---
+
 ## Pitfalls and Patterns
 
 ![standup_pitfalls](svg/courses/practices/agile-and-scrum/04_standups/standup_pitfalls.svg)
 
 ---
+
 ## Why It Exists
 
 - Developers coordinate: what one person did affects what another does
@@ -50,6 +56,7 @@ audience:
 - Replace "who's doing what?" emails with a 15-minute conversation
 
 ---
+
 ## The Classic Three Questions
 
 - What did I do yesterday?
@@ -59,6 +66,7 @@ audience:
 - Time-box: usually a minute or two each
 
 ---
+
 ## Why the Three Questions Often Fail
 
 - Developers report status to nobody in particular
@@ -68,6 +76,7 @@ audience:
 - The team reaches the end having coordinated nothing
 
 ---
+
 ## A Better Format: Walk the Board
 
 - Open the Sprint Backlog on a screen or whiteboard
@@ -77,6 +86,7 @@ audience:
 - The conversation centres on the *work*, not on individuals
 
 ---
+
 ## Another Format: Focus on Blockers
 
 - Skip the "yesterday" / "today" theatre
@@ -86,6 +96,7 @@ audience:
 - Works well for mature teams with high trust
 
 ---
+
 ## Time-Boxing
 
 - 15 minutes total — *for the meeting*, not per person
@@ -95,6 +106,7 @@ audience:
 - Discussions that need to happen will continue *after* the standup with the right people
 
 ---
+
 ## Common Anti-Patterns
 
 - Manager runs the standup and asks pointed questions
@@ -104,6 +116,7 @@ audience:
 - The whole team standing while one developer types updates into a tool
 
 ---
+
 ## Manager Attendance
 
 - Managers can attend but not run, ask, or interrupt
@@ -113,6 +126,7 @@ audience:
 - Trust is the variable; adjust accordingly
 
 ---
+
 ## When To Skip a Standup
 
 - The day before a holiday and there's nothing new
@@ -122,6 +136,7 @@ audience:
 - The honest answer is usually "we don't get value from it" — fix the format
 
 ---
+
 ## Remote and Distributed Standups
 
 - Same rules apply: 15 minutes, focused on the work, blockers surfaced
@@ -131,6 +146,7 @@ audience:
 - Time zones: pick the slot that minimises misery, rotate if necessary
 
 ---
+
 ## Asynchronous Standups
 
 - Each developer posts in a channel by a deadline
@@ -140,6 +156,7 @@ audience:
 - Hybrid: async post + a 15-minute sync only if anyone has a topic to discuss
 
 ---
+
 ## Standup Health Check
 
 - Are blockers surfacing within a day of appearing?

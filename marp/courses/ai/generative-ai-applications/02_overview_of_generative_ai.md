@@ -11,6 +11,7 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # An Overview of Generative AI
 
 ---
@@ -116,11 +117,13 @@ def self_attention(Q, K, V):
 Instead of one attention function, use multiple "heads" in parallel:
 
 ---
+
 ## Multi-Head Attention
 
 ![multi_head_attention](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/multi_head_attention.svg)
 
 ---
+
 ## Multi-Head Attention: Details
 
 Each head can learn different relationship patterns:
@@ -194,6 +197,7 @@ for t in tokens:
 | `Tiktoken` | Fast BPE implementation | `GPT-3.5/4` |
 
 ---
+
 ## Tokenization Methods
 
 ![tokenization_methods](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/tokenization_methods.svg)
@@ -302,11 +306,13 @@ def temperature_sample(logits, temperature=1.0):
 Some abilities only appear when models reach sufficient size:
 
 ---
+
 ## Emergence — Surprising Capabilities at Scale
 
 ![emergence_surprising_capabilities_at_scale](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/emergence_surprising_capabilities_at_scale.svg)
 
 ---
+
 ## Emergence — Surprising Capabilities at Scale: Overview (2)
 
 This is called **emergent behavior** — capabilities that cannot be predicted by extrapolating from smaller models.
@@ -318,11 +324,13 @@ This is called **emergent behavior** — capabilities that cannot be predicted b
 Research shows predictable relationships between model size and performance:
 
 ---
+
 ## Scaling Laws
 
 ![scaling_laws](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/scaling_laws.svg)
 
 ---
+
 ## Scaling Laws: Overview (2)
 
 **Chinchilla law:** Optimal training uses ~20 tokens per parameter.
@@ -382,6 +390,7 @@ prompt = "Who won the 2026 Nobel Prize in Physics?"
 | `Gemini 1.5` | 1M tokens | ~750 pages |
 
 ---
+
 ## Context Windows — How Much Can a Model "See"?
 
 ![context_windows_how_much_can_a_model_see](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/context_windows_how_much_can_a_model_see.svg)

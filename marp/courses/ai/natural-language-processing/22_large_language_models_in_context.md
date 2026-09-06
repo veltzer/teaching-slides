@@ -10,9 +10,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Large Language Models in Context
 
 ---
+
 ## What This Chapter Covers
 
 - The shape of modern `LLMs` and how they differ from earlier transformers
@@ -23,6 +25,7 @@ audience:
 - Practical engineering: cost, latency, evaluation, safety
 
 ---
+
 ## Why a Separate Chapter
 
 - `LLMs` reuse the transformer architecture but at a scale where new behaviors emerge
@@ -32,6 +35,7 @@ audience:
 - The chapter that ties everything earlier into modern practice
 
 ---
+
 ## What Makes a Model Large
 
 - Parameter count of billions to trillions
@@ -41,6 +45,7 @@ audience:
 - Engineering intensity that requires entire infrastructure teams
 
 ---
+
 ## Scale and Emergence
 
 - Some capabilities appear discontinuously above certain model sizes
@@ -50,6 +55,7 @@ audience:
 - Understanding what scales and what does not is part of model selection
 
 ---
+
 ## Pretraining Objectives
 
 - Most modern `LLMs` are causal: predict the next token
@@ -59,6 +65,7 @@ audience:
 - Objective choices matter at training but rarely affect downstream prompting
 
 ---
+
 ## Pretraining Data
 
 - Web crawls (`CommonCrawl`, `C4`), books, code, scientific papers
@@ -68,6 +75,7 @@ audience:
 - Where the data came from is increasingly a legal and ethical question
 
 ---
+
 ## Instruction Tuning
 
 - Fine-tune on (instruction, response) pairs
@@ -77,6 +85,7 @@ audience:
 - Where most "open" model variants pour effort
 
 ---
+
 ## RLHF and Preference Optimization
 
 - Train a reward model on human preference comparisons
@@ -86,11 +95,13 @@ audience:
 - The step that turns a competent base model into a useful product
 
 ---
+
 ## The Alignment Pipeline
 
 ![alignment_pipeline](svg/courses/ai/natural-language-processing/22_large_language_models_in_context/alignment_pipeline.svg)
 
 ---
+
 ## Prompting as Programming
 
 - The prompt is the program, the model is the interpreter
@@ -100,6 +111,7 @@ audience:
 - Treat prompts as versioned artifacts with tests
 
 ---
+
 ## Zero-Shot Prompting
 
 - State the task and ask for the answer
@@ -109,6 +121,7 @@ audience:
 - The starting point before adding examples or chains
 
 ---
+
 ## Few-Shot Prompting
 
 - Include a handful of input-output examples in the prompt
@@ -118,6 +131,7 @@ audience:
 - Cost: tokens spent on examples instead of user content
 
 ---
+
 ## Chain-of-Thought
 
 - Ask the model to reason step by step before answering
@@ -127,11 +141,13 @@ audience:
 - Increases cost and latency; pick when accuracy matters more
 
 ---
+
 ## Chain-of-Thought Patterns
 
 ![cot_patterns](svg/courses/ai/natural-language-processing/22_large_language_models_in_context/cot_patterns.svg)
 
 ---
+
 ## Self-Consistency
 
 - Sample multiple reasoning chains with non-zero temperature
@@ -141,6 +157,7 @@ audience:
 - Default for high-stakes reasoning tasks
 
 ---
+
 ## Tool Use
 
 - Let the model call external tools when it needs them
@@ -150,6 +167,7 @@ audience:
 - The bridge from a closed-world chatbot to an open-world agent
 
 ---
+
 ## Function Calling Interfaces
 
 - Structured tool descriptions in `JSON` schema
@@ -159,6 +177,7 @@ audience:
 - Cleanly separates model output from system actions
 
 ---
+
 ## A Function-Calling Trace
 
 ```misc
@@ -173,6 +192,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - The orchestrator validates inputs, runs the tool, and feeds results back
 
 ---
+
 ## Agents
 
 - A loop where the model decides actions until a goal is achieved
@@ -182,11 +202,13 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - The frontier of practical `LLM` deployment
 
 ---
+
 ## Agent Architectures
 
 ![agent_architecture](svg/courses/ai/natural-language-processing/22_large_language_models_in_context/agent_architecture.svg)
 
 ---
+
 ## Memory Systems
 
 - Short-term: the conversation window the model sees
@@ -196,6 +218,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - Memory architecture is product-specific, not model-specific
 
 ---
+
 ## Context Window Engineering
 
 - Where a piece of information lives in the prompt affects how the model uses it
@@ -205,6 +228,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - Test the layout, do not assume the model attends uniformly
 
 ---
+
 ## In-Context Learning Limits
 
 - The model does not actually learn from examples; it pattern-matches
@@ -214,6 +238,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - For many production tasks, fine-tuning still wins
 
 ---
+
 ## Fine-Tuning vs Prompting
 
 - Prompting wins on speed of iteration and zero training data
@@ -223,6 +248,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - The decision is task-dependent, not a one-time global choice
 
 ---
+
 ## Cost and Latency
 
 - Token-based pricing rewards prompt compression and structured outputs
@@ -232,6 +258,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - Cost is the constraint that defines what is shippable
 
 ---
+
 ## Safety and Guardrails
 
 - Red-teaming surfaces unsafe outputs before users do
@@ -241,6 +268,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - Layered safety beats any single filter
 
 ---
+
 ## Prompt Injection
 
 - Adversarial input embedded in retrieved documents or user content
@@ -250,6 +278,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - Treat retrieved content as untrusted user input
 
 ---
+
 ## Evaluation at Scale
 
 - Human preference rating remains the gold standard for chat quality
@@ -259,6 +288,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - No single benchmark captures real-world fitness
 
 ---
+
 ## When to Use What
 
 - Closed task with stable schema: fine-tuned smaller model
@@ -268,6 +298,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - Cost-bound batch processing: fine-tuned mid-size model
 
 ---
+
 ## Common Production Pitfalls
 
 - Treating prompts as throwaway code rather than versioned artifacts
@@ -277,6 +308,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - Testing on benchmarks that no longer reflect the deployed task
 
 ---
+
 ## Anti-Patterns
 
 - Believing prompts that work today will work after the next model release
@@ -286,6 +318,7 @@ assistant -> user: Tomorrow in Paris should be 9-17 C with a 60% chance of rain.
 - Promising capabilities the model cannot actually deliver
 
 ---
+
 ## Summary
 
 - Modern `LLMs` are transformers at a scale where the interface changed

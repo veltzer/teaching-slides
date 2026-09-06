@@ -8,9 +8,11 @@ audience:
   - audiences:security
 
 ---
+
 # Perimeter and Segmentation
 
 ---
+
 ## What This Chapter Covers
 
 - Firewalls
@@ -20,6 +22,7 @@ audience:
 - Micro-segmentation
 
 ---
+
 ## Firewalls
 
 - Allow-listed traffic only
@@ -28,11 +31,13 @@ audience:
 - Logged on every drop
 
 ---
+
 ## Firewall Kinds
 
 ![firewall_kinds](svg/courses/networking/network-security/02_perimeter_and_segmentation/firewall_kinds.svg)
 
 ---
+
 ## Stateful vs Stateless
 
 - Stateful tracks connections
@@ -41,6 +46,7 @@ audience:
 - Stateless still useful at edge
 
 ---
+
 ## Web Application Firewall
 
 - Application-layer filter
@@ -49,6 +55,7 @@ audience:
 - Not a substitute for secure code
 
 ---
+
 ## Proxies
 
 - Forward proxies for outbound
@@ -57,6 +64,7 @@ audience:
 - Add caching and rate limiting
 
 ---
+
 ## TLS Termination
 
 - Decrypt at trusted point
@@ -65,6 +73,7 @@ audience:
 - Manage certificates carefully
 
 ---
+
 ## VPNs
 
 - Encrypted tunnel between sites or users
@@ -73,6 +82,7 @@ audience:
 - Slowly being replaced by zero-trust access
 
 ---
+
 ## Bastion Hosts
 
 - Single entry point to internal systems
@@ -81,6 +91,7 @@ audience:
 - Logs every session
 
 ---
+
 ## Segmentation
 
 - Split network by trust zones
@@ -89,11 +100,13 @@ audience:
 - Default for any non-trivial network
 
 ---
+
 ## Trust Zones
 
 ![segmentation_zones](svg/courses/networking/network-security/02_perimeter_and_segmentation/segmentation_zones.svg)
 
 ---
+
 ## VLANs
 
 - Logical separation on shared hardware
@@ -102,6 +115,7 @@ audience:
 - Pair with proper firewalling
 
 ---
+
 ## Micro-Segmentation
 
 - Per-workload rules
@@ -110,6 +124,7 @@ audience:
 - Tooling has matured
 
 ---
+
 ## DMZ
 
 - Public-facing systems isolated
@@ -118,6 +133,7 @@ audience:
 - Cloud services replace some uses
 
 ---
+
 ## NAT
 
 - Translates internal addresses
@@ -126,6 +142,7 @@ audience:
 - Often combined with firewall
 
 ---
+
 ## Common Perimeter Mistakes
 
 - Wide allow rules

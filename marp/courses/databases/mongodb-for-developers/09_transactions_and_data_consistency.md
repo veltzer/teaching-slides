@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Transactions and Data Consistency
 
 ---
+
 ## What This Chapter Covers
 
 - Single-document atomicity
@@ -21,6 +23,7 @@ audience:
 - When to use; when not
 
 ---
+
 ## Single-Document Atomicity
 
 - All MongoDB writes are atomic at the document level
@@ -29,11 +32,13 @@ audience:
 - Design schema to fit (embed related data)
 
 ---
+
 ## Transaction Scope
 
 ![transactions_scope](svg/courses/databases/mongodb-for-developers/09_transactions_and_data_consistency/transactions_scope.svg)
 
 ---
+
 ## Multi-Document Transactions
 
 - Available since MongoDB 4.0 (replica sets) and 4.2 (sharded)
@@ -42,6 +47,7 @@ audience:
 - Performance cost: higher than single-doc
 
 ---
+
 ## Transaction Example
 
 ```python
@@ -54,6 +60,7 @@ with client.start_session() as session:
 - Both succeed or both fail
 
 ---
+
 ## When To Use Transactions
 
 - True multi-document atomicity required
@@ -62,6 +69,7 @@ with client.start_session() as session:
 - Multi-collection invariants
 
 ---
+
 ## When NOT To
 
 - Single-document operations
@@ -70,11 +78,13 @@ with client.start_session() as session:
 - "Convenient" but unnecessary
 
 ---
+
 ## Consistency Choices
 
 ![consistency_choices](svg/courses/databases/mongodb-for-developers/09_transactions_and_data_consistency/consistency_choices.svg)
 
 ---
+
 ## Read Concerns
 
 - `local`: latest data on this server (default)
@@ -83,6 +93,7 @@ with client.start_session() as session:
 - Match to consistency need
 
 ---
+
 ## Write Concerns
 
 - `w: 1`: primary acks
@@ -91,6 +102,7 @@ with client.start_session() as session:
 - `journaled: true`: written to disk
 
 ---
+
 ## Causal Consistency
 
 - "Read your writes" guarantee
@@ -99,6 +111,7 @@ with client.start_session() as session:
 - Without: a write may not be visible on the next read from a secondary
 
 ---
+
 ## Sessions
 
 ```python
@@ -112,6 +125,7 @@ with client.start_session() as session:
 - Provides causal consistency
 
 ---
+
 ## Idempotency
 
 - Network blip: client may retry
@@ -120,6 +134,7 @@ with client.start_session() as session:
 - Same as any distributed system
 
 ---
+
 ## Optimistic Concurrency
 
 - "Read; modify; write with version check"
@@ -128,6 +143,7 @@ with client.start_session() as session:
 - A common alternative to transactions
 
 ---
+
 ## Watching For Conflicts
 
 - Transactions can fail with TransientTransactionError
@@ -135,6 +151,7 @@ with client.start_session() as session:
 - Driver helpers automate
 
 ---
+
 ## Performance Considerations
 
 - Transactions: 100ms+ overhead easily
@@ -143,6 +160,7 @@ with client.start_session() as session:
 - Keep them short
 
 ---
+
 ## Common Transaction Mistakes
 
 - Using transactions for single-doc ops

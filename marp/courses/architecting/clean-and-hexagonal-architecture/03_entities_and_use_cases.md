@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Entities and Use Cases
 
 ---
+
 ## Two Inner Layers
 
 ![entities_use_cases](svg/courses/architecting/clean-and-hexagonal-architecture/03_entities_and_use_cases/entities_use_cases.svg)
 
 ---
+
 ## Ports Overview
 
 ![ports_overview](svg/courses/architecting/clean-and-hexagonal-architecture/03_entities_and_use_cases/ports_overview.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What an entity is
@@ -31,6 +35,7 @@ audience:
 - A worked example
 
 ---
+
 ## What An Entity Is
 
 - A business object with identity
@@ -40,6 +45,7 @@ audience:
 - Pure code; no framework
 
 ---
+
 ## Entity Example
 
 ```python
@@ -59,6 +65,7 @@ class Order:
 ```
 
 ---
+
 ## What A Use Case Is
 
 - Application-specific operation
@@ -68,6 +75,7 @@ class Order:
 - Each one is a separate class / function
 
 ---
+
 ## Use Case Example
 
 ```python
@@ -88,6 +96,7 @@ class PlaceOrderUseCase:
 ```
 
 ---
+
 ## Input Ports
 
 - The use case's method signatures
@@ -96,6 +105,7 @@ class PlaceOrderUseCase:
 - Other layers depend on these
 
 ---
+
 ## Output Ports
 
 - Interfaces the use case calls
@@ -104,6 +114,7 @@ class PlaceOrderUseCase:
 - Implemented in the adapter layer
 
 ---
+
 ## Use Case Granularity
 
 - One use case per business operation
@@ -112,6 +123,7 @@ class PlaceOrderUseCase:
 - "ServiceClass" with 30 methods is a smell
 
 ---
+
 ## Use Case Composition
 
 - Complex operations = orchestrate multiple use cases
@@ -120,6 +132,7 @@ class PlaceOrderUseCase:
 - The orchestration belongs in another use case, not the controller
 
 ---
+
 ## Pure Functions vs Classes
 
 - Use case can be a function
@@ -129,6 +142,7 @@ class PlaceOrderUseCase:
 - Both fit clean architecture
 
 ---
+
 ## Domain Events
 
 - Use case publishes events: "OrderPlaced"
@@ -137,6 +151,7 @@ class PlaceOrderUseCase:
 - Often combined with event sourcing
 
 ---
+
 ## A Test For A Use Case
 
 - No HTTP / DB / framework in test
@@ -146,6 +161,7 @@ class PlaceOrderUseCase:
 - The TDD-friendly way to build domains
 
 ---
+
 ## Common Mistakes
 
 - Use cases that take HTTP request objects as input

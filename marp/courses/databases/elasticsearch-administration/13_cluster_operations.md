@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Cluster Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Performing safe rolling upgrades node by node
@@ -21,6 +23,7 @@ audience:
 - License management with the `_license` API
 
 ---
+
 ## Day-Two Operations Overview
 
 - Production clusters need routine, low-risk change procedures
@@ -35,6 +38,7 @@ GET _cluster/health?pretty
 ```
 
 ---
+
 ## Version Compatibility Rules
 
 - Rolling upgrades supported between adjacent major versions
@@ -45,6 +49,7 @@ GET _cluster/health?pretty
 - Check the official upgrade matrix before starting
 
 ---
+
 ## Rolling Upgrade: Preparation
 
 - Verify cluster health is green before you begin
@@ -59,6 +64,7 @@ POST _snapshot/my_repo/pre_upgrade_snap?wait_for_completion=false
 ```
 
 ---
+
 ## Rolling Upgrade: Disable Allocation
 
 - Stop the cluster from rebalancing shards while a node is down
@@ -76,6 +82,7 @@ PUT _cluster/settings
 ```
 
 ---
+
 ## Rolling Upgrade: Stop and Upgrade a Node
 
 - Optionally perform a synced or normal flush to speed recovery
@@ -92,6 +99,7 @@ sudo systemctl start elasticsearch
 ```
 
 ---
+
 ## Rolling Upgrade: Re-enable Allocation
 
 - After the node rejoins, allow shards to allocate again
@@ -110,6 +118,7 @@ GET _cat/recovery?active_only=true&v
 ```
 
 ---
+
 ## Rolling Upgrade: Verify Each Node
 
 - Confirm the upgraded node reports the new version
@@ -123,6 +132,7 @@ GET _cluster/health?wait_for_status=green&timeout=300s
 ```
 
 ---
+
 ## Full Cluster Restart
 
 - Used for major changes that cannot be done node by node
@@ -137,6 +147,7 @@ PUT _cluster/settings
 ```
 
 ---
+
 ## Node Decommissioning: Exclude Allocation
 
 - Gracefully move all shards off a node before removal
@@ -154,6 +165,7 @@ PUT _cluster/settings
 ```
 
 ---
+
 ## Node Decommissioning: Confirm the Drain
 
 - Watch the node until it holds zero shards
@@ -167,6 +179,7 @@ GET _cat/allocation?v
 ```
 
 ---
+
 ## Cluster Reroute API
 
 - Manually move, cancel, or allocate individual shards
@@ -186,6 +199,7 @@ POST _cluster/reroute
 ```
 
 ---
+
 ## Retry Failed Allocations
 
 - Shards that fail allocation too many times are abandoned
@@ -198,6 +212,7 @@ POST _cluster/reroute?retry_failed=true
 ```
 
 ---
+
 ## Allocation Explain API
 
 - Explains why a shard is or is not allocated
@@ -215,6 +230,7 @@ GET _cluster/allocation/explain
 ```
 
 ---
+
 ## Reading Allocation Decisions
 
 - The response lists each node and its allocation decision
@@ -224,6 +240,7 @@ GET _cluster/allocation/explain
 - Fix the underlying decider, then retry failed allocations
 
 ---
+
 ## Task Management API
 
 - Every long-running operation runs as a cancellable task
@@ -237,6 +254,7 @@ GET _tasks?actions=*search&detailed
 ```
 
 ---
+
 ## Cancelling Tasks
 
 - Cancel a task that is overloading the cluster
@@ -250,6 +268,7 @@ POST _tasks/_cancel?actions=*reindex
 ```
 
 ---
+
 ## Maintenance Mode
 
 - Before risky maintenance, freeze cluster movement
@@ -265,6 +284,7 @@ POST _flush
 ```
 
 ---
+
 ## License Management
 
 - View the current license type, status, and expiry date
@@ -280,6 +300,7 @@ PUT _license
 ```
 
 ---
+
 ## Operations Checklist
 
 - Always confirm health green before and after changes

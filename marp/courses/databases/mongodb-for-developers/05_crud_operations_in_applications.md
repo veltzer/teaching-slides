@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # CRUD Operations in Applications
 
 ---
+
 ## What This Chapter Covers
 
 - Insert, find, update, delete
@@ -20,16 +22,19 @@ audience:
 - Errors
 
 ---
+
 ## CRUD at a Glance
 
 ![crud_methods](svg/courses/databases/mongodb-for-developers/05_crud_operations_in_applications/crud_methods.svg)
 
 ---
+
 ## CRUD Choosing The Right Call
 
 ![crud_decision](svg/courses/databases/mongodb-for-developers/05_crud_operations_in_applications/crud_decision.svg)
 
 ---
+
 ## Insert
 
 ```python
@@ -41,6 +46,7 @@ db.users.insert_many([{"name": "Bob"}, {"name": "Carol"}])
 - Returns the inserted IDs
 
 ---
+
 ## Find
 
 ```python
@@ -52,6 +58,7 @@ all = db.users.find({"status": "active"}).limit(10)
 - Cursor: `find` (iterate)
 
 ---
+
 ## Query Operators
 
 - `$eq`, `$ne`, `$gt`, `$gte`, `$lt`, `$lte`
@@ -61,6 +68,7 @@ all = db.users.find({"status": "active"}).limit(10)
 - `$regex` for pattern match
 
 ---
+
 ## Examples
 
 ```python
@@ -70,6 +78,7 @@ db.users.find({"email": {"$regex": "^alice"}})
 ```
 
 ---
+
 ## Update Operators
 
 - `$set`: set field
@@ -79,6 +88,7 @@ db.users.find({"email": {"$regex": "^alice"}})
 - `$rename`: rename field
 
 ---
+
 ## Update Examples
 
 ```python
@@ -88,6 +98,7 @@ db.users.update_one({"_id": 1}, {"$push": {"tags": "vip"}})
 ```
 
 ---
+
 ## Upsert
 
 ```python
@@ -102,6 +113,7 @@ db.users.update_one(
 - Atomic
 
 ---
+
 ## Delete
 
 ```python
@@ -113,6 +125,7 @@ db.orders.delete_many({"status": "cancelled"})
 - Returns deleted count
 
 ---
+
 ## findOneAndUpdate
 
 ```python
@@ -127,6 +140,7 @@ result = db.users.find_one_and_update(
 - Useful for counters, locks
 
 ---
+
 ## Bulk Operations
 
 ```python
@@ -142,11 +156,13 @@ db.users.bulk_write([
 - Error handling per op
 
 ---
+
 ## Bulk Write Strategy
 
 ![bulk_write_strategy](svg/courses/databases/mongodb-for-developers/05_crud_operations_in_applications/bulk_write_strategy.svg)
 
 ---
+
 ## Cursors
 
 - `find()` returns a cursor
@@ -155,6 +171,7 @@ db.users.bulk_write([
 - Watch: huge result sets in memory
 
 ---
+
 ## Projection
 
 ```python
@@ -166,6 +183,7 @@ db.users.find({}, {"name": 1, "email": 1, "_id": 0})
 - Required for big documents
 
 ---
+
 ## Errors
 
 - Duplicate key: 11000
@@ -174,6 +192,7 @@ db.users.find({}, {"name": 1, "email": 1, "_id": 0})
 - Most: catch, decide, retry or fail
 
 ---
+
 ## Common CRUD Mistakes
 
 - Update without `$set` (replaces the whole document)

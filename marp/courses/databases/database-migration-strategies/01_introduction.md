@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Introduction to Database Migrations
 
 ---
+
 ## What This Chapter Covers
 
 - What database migration is
@@ -21,6 +23,7 @@ audience:
 - Course outline
 
 ---
+
 ## What Migration Means
 
 - Changing schema
@@ -29,11 +32,13 @@ audience:
 - Often all three at once
 
 ---
+
 ## Migration Kinds
 
 ![migration_kinds](svg/courses/databases/database-migration-strategies/01_introduction/migration_kinds.svg)
 
 ---
+
 ## Schema Migration
 
 - Adding, removing, altering columns
@@ -42,6 +47,7 @@ audience:
 - Online or offline
 
 ---
+
 ## Data Migration
 
 - Moving rows from old to new
@@ -50,6 +56,7 @@ audience:
 - Across engines too
 
 ---
+
 ## Engine Migration
 
 - Switching database product
@@ -58,6 +65,7 @@ audience:
 - Hardest of the three
 
 ---
+
 ## Why It Is Risky
 
 - Data is the canonical source
@@ -66,6 +74,7 @@ audience:
 - Harder than re-deploying code
 
 ---
+
 ## Categories of Pain
 
 - Type changes
@@ -74,6 +83,7 @@ audience:
 - Compatibility breaks
 
 ---
+
 ## Strategy Spectrum
 
 - Big bang
@@ -82,11 +92,13 @@ audience:
 - Replication-based
 
 ---
+
 ## Strategy Spectrum Visualized
 
 ![migration_spectrum](svg/courses/databases/database-migration-strategies/01_introduction/migration_spectrum.svg)
 
 ---
+
 ## Big Bang
 
 - Stop, change, start
@@ -95,6 +107,7 @@ audience:
 - Bad for tier-1
 
 ---
+
 ## Online Migrations
 
 - Application keeps running
@@ -103,6 +116,7 @@ audience:
 - Default for production
 
 ---
+
 ## Dual Writes
 
 - Application writes both
@@ -111,6 +125,7 @@ audience:
 - For engine changes mainly
 
 ---
+
 ## Tools
 
 - Rails-style migrations
@@ -119,6 +134,7 @@ audience:
 - Native online DDL in modern engines
 
 ---
+
 ## Course Outline
 
 - Schema migrations
@@ -128,6 +144,7 @@ audience:
 - Verification
 
 ---
+
 ## Common Misconceptions
 
 - "It is just a column add"

@@ -9,10 +9,12 @@ audience:
   - audiences:devops
 
 ---
+
 # Linux System Administration
 ## Course Overview
 
 ---
+
 ## What This Course Covers
 
 - Managing `Linux` systems in production environments
@@ -21,6 +23,7 @@ audience:
 - 5-day intensive course
 
 ---
+
 ## Target Audience
 
 - System administrators managing `Linux` in production
@@ -28,6 +31,7 @@ audience:
 - IT professionals transitioning to `Linux`-based infrastructure
 
 ---
+
 ## Prerequisites
 
 - Basic `Linux` command line experience
@@ -35,6 +39,7 @@ audience:
 - Understanding of basic networking concepts
 
 ---
+
 ## Course Objectives
 
 1. Manage system architecture, boot process, and packages
@@ -44,11 +49,13 @@ audience:
 1. Monitor performance and plan disaster recovery
 
 ---
+
 ## Course Structure
 
 ![course_structure](svg/courses/operating_systems/linux-system-administration/01_introduction/course_structure.svg)
 
 ---
+
 ## Day-by-Day Schedule
 
 | Day | Topics |
@@ -60,6 +67,7 @@ audience:
 | Day 5 | Monitoring, Maintenance, Automation |
 
 ---
+
 ## Optional Modules
 
 Depending on time and audience needs:
@@ -71,6 +79,7 @@ Depending on time and audience needs:
 - Air-Gapped Environment Management
 
 ---
+
 ## Lab Environment
 
 - `Ubuntu` 24.04 LTS (real or virtual machines)
@@ -79,6 +88,7 @@ Depending on time and audience needs:
 - Recommended: at least 2 VMs per student
 
 ---
+
 ## Lab Setup Verification
 
 ```bash
@@ -100,6 +110,7 @@ curl -s https://archive.ubuntu.com > /dev/null && \
 ```
 
 ---
+
 ## Key Resources
 
 - Man pages: `man <command>`, `man 5 <config-file>`
@@ -109,6 +120,7 @@ curl -s https://archive.ubuntu.com > /dev/null && \
 - Online: `Linux` kernel docs, distribution wikis
 
 ---
+
 ## Conventions Used in This Course
 
 - `#` prompt means run as `root`
@@ -118,6 +130,7 @@ curl -s https://archive.ubuntu.com > /dev/null && \
 - All exercises assume `Ubuntu` 24.04 unless stated otherwise
 
 ---
+
 ## Linux Distributions Landscape: Overview
 
 This course focuses on `Ubuntu`/`Debian` with `RHEL`/`Fedora` equivalents noted.
@@ -129,6 +142,7 @@ This course focuses on `Ubuntu`/`Debian` with `RHEL`/`Fedora` equivalents noted.
 ![linux_distributions_landscape](svg/courses/operating_systems/linux-system-administration/01_introduction/linux_distributions_landscape.svg)
 
 ---
+
 ## Exercise: Verify Your Lab Environment
 
 Complete the following checklist on your lab VMs:
@@ -151,6 +165,7 @@ echo "=== PID 1 ===" && ps -p 1 -o comm=
 ```
 
 ---
+
 ## Exercise: Explore the System
 
 Try these tasks and record your findings:
@@ -167,6 +182,7 @@ Discuss with your partner:
 - What block devices are available? (`lsblk`)
 
 ---
+
 ## Linux Release Cycle and Support
 
 LTS (Long-Term Support) vs regular releases:
@@ -195,6 +211,7 @@ apt install linux-generic-hwe-24.04
 Plan upgrades before EOL (End of Life) to maintain security patches.
 
 ---
+
 ## Getting Help: Man Pages In Depth
 
 Man pages are organized into numbered sections:
@@ -226,6 +243,7 @@ whatis rsync
 ```
 
 ---
+
 ## Getting Help: Online Resources
 
 When man pages are not enough, use these trusted sources:

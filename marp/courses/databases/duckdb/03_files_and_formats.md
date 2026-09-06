@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Files and Formats
 
 ---
+
 ## What This Chapter Covers
 
 - Reading Parquet
@@ -20,6 +22,7 @@ audience:
 - Remote files
 
 ---
+
 ## Why Files
 
 - Most analytics data lives as files
@@ -28,11 +31,13 @@ audience:
 - No import step needed
 
 ---
+
 ## File Sources
 
 ![file_sources](svg/courses/databases/duckdb/03_files_and_formats/file_sources.svg)
 
 ---
+
 ## Reading Parquet
 
 - read_parquet('file.parquet')
@@ -41,11 +46,13 @@ audience:
 - Column pruning supported
 
 ---
+
 ## Query Path
 
 ![reading_parquet](svg/courses/databases/duckdb/03_files_and_formats/reading_parquet.svg)
 
 ---
+
 ## Globs
 
 - read_parquet('data/*.parquet')
@@ -54,6 +61,7 @@ audience:
 - Order is not guaranteed
 
 ---
+
 ## Partitioned Datasets
 
 - Folder structure encodes partitions
@@ -62,6 +70,7 @@ audience:
 - Hive-style is common
 
 ---
+
 ## Reading CSV
 
 - read_csv with options
@@ -70,6 +79,7 @@ audience:
 - Watch out for ambiguous types
 
 ---
+
 ## Reading JSON
 
 - read_json
@@ -78,6 +88,7 @@ audience:
 - Slower than columnar formats
 
 ---
+
 ## Writing Files
 
 - COPY ... TO 'file.parquet'
@@ -86,6 +97,7 @@ audience:
 - Compression options
 
 ---
+
 ## Remote Files
 
 - HTTPS and S3 supported
@@ -94,6 +106,7 @@ audience:
 - Practical for cloud data lakes
 
 ---
+
 ## Iceberg And Delta
 
 - Extensions read open table formats
@@ -102,6 +115,7 @@ audience:
 - Query without materializing
 
 ---
+
 ## Arrow Integration
 
 - Zero-copy with Arrow buffers
@@ -110,6 +124,7 @@ audience:
 - Mix and match per workflow
 
 ---
+
 ## Streaming Through DuckDB
 
 - Read from file, write to file
@@ -118,6 +133,7 @@ audience:
 - Cheap ETL for one machine
 
 ---
+
 ## Caching
 
 - Persistent file caches some metadata
@@ -126,6 +142,7 @@ audience:
 - Repeat queries are fast
 
 ---
+
 ## Common File Mistakes
 
 - Auto type detect in production

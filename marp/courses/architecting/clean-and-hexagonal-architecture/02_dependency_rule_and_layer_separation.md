@@ -7,19 +7,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Dependency Rule and Layer Separation
 
 ---
+
 ## Dependency Rule
 
 ![dependency_rule](svg/courses/architecting/clean-and-hexagonal-architecture/02_dependency_rule_and_layer_separation/dependency_rule.svg)
 
 ---
+
 ## Four Layers
 
 ![four_layers](svg/courses/architecting/clean-and-hexagonal-architecture/02_dependency_rule_and_layer_separation/four_layers.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The dependency rule, precisely
@@ -29,6 +33,7 @@ audience:
 - Compile-time vs runtime dependencies
 
 ---
+
 ## The Rule, Stated
 
 - Outer layers depend on inner; never the reverse
@@ -37,6 +42,7 @@ audience:
 - Dependencies point inward
 
 ---
+
 ## Four Layers
 
 - **Entities**: enterprise-wide business rules
@@ -45,6 +51,7 @@ audience:
 - **Frameworks & Drivers**: web, DB, UI
 
 ---
+
 ## Entities
 
 - Pure business objects
@@ -54,6 +61,7 @@ audience:
 - Reusable across applications
 
 ---
+
 ## Use Cases
 
 - Application-specific behaviours
@@ -63,6 +71,7 @@ audience:
 - "PlaceOrderUseCase, RegisterUserUseCase"
 
 ---
+
 ## Interface Adapters
 
 - Transform between use case and outer layer
@@ -72,6 +81,7 @@ audience:
 - Glue code
 
 ---
+
 ## Frameworks And Drivers
 
 - Spring, Express, Django
@@ -80,6 +90,7 @@ audience:
 - The replaceable parts
 
 ---
+
 ## Inversion Of Control
 
 - Inner layer defines an interface
@@ -88,6 +99,7 @@ audience:
 - The dependency arrow inverts at the abstraction boundary
 
 ---
+
 ## Compile-Time vs Runtime
 
 - Compile-time: imports, types
@@ -96,6 +108,7 @@ audience:
 - DI wires them at startup
 
 ---
+
 ## A Concrete Example
 
 - Use case: `PlaceOrder` calls `OrderRepository.save(order)`
@@ -104,6 +117,7 @@ audience:
 - DI container wires them
 
 ---
+
 ## What Crosses The Boundary
 
 - Inputs / outputs as plain data structures
@@ -112,6 +126,7 @@ audience:
 - Don't return ORM entities from use cases
 
 ---
+
 ## Layer Boundaries In Code
 
 - Folder structure: `domain/`, `usecases/`, `adapters/`, `infrastructure/`
@@ -120,6 +135,7 @@ audience:
 - Linters can enforce
 
 ---
+
 ## Tools To Enforce
 
 - ArchUnit (Java): test layer rules
@@ -128,6 +144,7 @@ audience:
 - Documentation in the team's style guide
 
 ---
+
 ## Common Mistakes
 
 - Spring annotations on entities (couples to Spring)

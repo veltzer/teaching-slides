@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced Relationship Patterns
 
 ---
+
 ## What This Chapter Covers
 
 - Self-referencing relationships
@@ -21,6 +23,7 @@ audience:
 - Audit trails
 
 ---
+
 ## Self-Referencing
 
 - Table references itself
@@ -28,6 +31,7 @@ audience:
 - Org charts, comment threads, parent-child
 
 ---
+
 ## Tree Structures
 
 - Parent ID per row
@@ -37,6 +41,7 @@ audience:
 - Pick by query needs
 
 ---
+
 ## Polymorphic Associations
 
 - "Comment can be on Post OR Photo OR Video"
@@ -45,6 +50,7 @@ audience:
 - Often a smell; consider per-target tables
 
 ---
+
 ## Better Polymorphism
 
 - Separate join tables: comment_post, comment_photo
@@ -53,11 +59,13 @@ audience:
 - Better integrity
 
 ---
+
 ## Inheritance Mapping Patterns
 
 ![inheritance_patterns](svg/courses/databases/database-design/06_advanced_relationship_patterns/inheritance_patterns.svg)
 
 ---
+
 ## M:N With Metadata
 
 - Junction table has its own columns
@@ -65,11 +73,13 @@ audience:
 - Now it's a first-class entity, not just a join
 
 ---
+
 ## Beyond Plain Junctions
 
 ![junction_extras](svg/courses/databases/database-design/06_advanced_relationship_patterns/junction_extras.svg)
 
 ---
+
 ## Soft Deletes
 
 - deleted_at column instead of DELETE
@@ -78,6 +88,7 @@ audience:
 - Adds complexity; not always worth it
 
 ---
+
 ## Audit Trails
 
 - Track who changed what, when
@@ -85,6 +96,7 @@ audience:
 - Or: temporal tables (Postgres, SQL Server)
 
 ---
+
 ## Versioning
 
 - Multiple versions of a row
@@ -93,6 +105,7 @@ audience:
 - Complex; use only when required
 
 ---
+
 ## Hierarchies (Adjacency List)
 
 - parent_id per row
@@ -100,6 +113,7 @@ audience:
 - Slow for deep trees
 
 ---
+
 ## Hierarchies (Closure Table)
 
 - Separate table: ancestor_id, descendant_id, depth
@@ -108,6 +122,7 @@ audience:
 - Useful for read-heavy hierarchies
 
 ---
+
 ## Common Pattern Mistakes
 
 - Polymorphic associations without need

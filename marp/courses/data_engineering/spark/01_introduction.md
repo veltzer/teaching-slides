@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Introduction to Spark
 
 ---
+
 ## What This Chapter Covers
 
 - What Spark is
@@ -19,6 +21,7 @@ audience:
 - Course outline
 
 ---
+
 ## What Spark Is
 
 - Distributed compute engine
@@ -27,6 +30,7 @@ audience:
 - Multi-language SDK
 
 ---
+
 ## Why Spark
 
 - Replaced MapReduce
@@ -35,6 +39,7 @@ audience:
 - Strong ecosystem
 
 ---
+
 ## Architecture
 
 - Driver coordinates
@@ -43,16 +48,19 @@ audience:
 - Storage external
 
 ---
+
 ## Components
 
 ![spark_pieces](svg/courses/data_engineering/spark/01_introduction/spark_pieces.svg)
 
 ---
+
 ## Cluster Architecture
 
 ![spark_cluster](svg/courses/data_engineering/spark/01_introduction/spark_cluster.svg)
 
 ---
+
 ## Driver
 
 - Plans the job
@@ -61,6 +69,7 @@ audience:
 - Single point of failure for job
 
 ---
+
 ## Executors
 
 - Run tasks
@@ -69,6 +78,7 @@ audience:
 - One per worker per app
 
 ---
+
 ## Cluster Managers
 
 - Standalone
@@ -77,6 +87,7 @@ audience:
 - Mesos (declining)
 
 ---
+
 ## APIs
 
 - RDD: low-level, rarely used today
@@ -85,6 +96,7 @@ audience:
 - Streaming and SQL on same engine
 
 ---
+
 ## Lazy Evaluation
 
 - Transformations build a plan
@@ -93,6 +105,7 @@ audience:
 - Saves work
 
 ---
+
 ## Storage Sources
 
 - Local files
@@ -101,6 +114,7 @@ audience:
 - Databases via JDBC
 
 ---
+
 ## When Spark Wins
 
 - Multi-TB data
@@ -109,6 +123,7 @@ audience:
 - ETL into warehouses
 
 ---
+
 ## When It Loses
 
 - Small data: overhead too big
@@ -117,6 +132,7 @@ audience:
 - Streaming with strict latency: dedicated engines
 
 ---
+
 ## Course Outline
 
 - DataFrames
@@ -126,6 +142,7 @@ audience:
 - Operations
 
 ---
+
 ## Common Beginner Mistakes
 
 - collect() on big data

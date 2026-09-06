@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Graph Processing with GraphX
 
 ---
+
 ## Introduction to Graph Computation
 
 1. Vertices and Edges

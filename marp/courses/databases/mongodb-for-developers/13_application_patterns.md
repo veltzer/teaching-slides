@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Application Patterns
 
 ---
+
 ## What This Chapter Covers
 
 - Embed vs reference revisited
@@ -21,11 +23,13 @@ audience:
 - Schema versioning
 
 ---
+
 ## Common Patterns
 
 ![app_patterns](svg/courses/databases/mongodb-for-developers/13_application_patterns/app_patterns.svg)
 
 ---
+
 ## Embed Pattern
 
 - Related data inside parent document
@@ -34,6 +38,7 @@ audience:
 - "User and addresses"
 
 ---
+
 ## Reference Pattern
 
 - ID pointer to another document
@@ -41,6 +46,7 @@ audience:
 - "Order references Product by id"
 
 ---
+
 ## Outlier Pattern
 
 - Most documents fit one shape
@@ -49,6 +55,7 @@ audience:
 - Avoid: fitting one big schema for the worst case
 
 ---
+
 ## Bucket Pattern
 
 - Time-series; group readings into buckets
@@ -57,6 +64,7 @@ audience:
 - Faster queries on time ranges
 
 ---
+
 ## Computed Pattern
 
 - Pre-compute expensive aggregates
@@ -65,6 +73,7 @@ audience:
 - Trade write complexity for read speed
 
 ---
+
 ## Subset Pattern
 
 - Most docs need a subset of related data
@@ -73,6 +82,7 @@ audience:
 - "User has top 3 reviews embedded; full reviews elsewhere"
 
 ---
+
 ## Extended Reference
 
 - Reference + duplicate frequently-needed fields
@@ -81,6 +91,7 @@ audience:
 - Sync challenges if name changes
 
 ---
+
 ## Schema Versioning
 
 - `schema_version` field
@@ -89,6 +100,7 @@ audience:
 - Avoids: massive rewrite migrations
 
 ---
+
 ## Polymorphic Schema
 
 - One collection; multiple shapes
@@ -97,6 +109,7 @@ audience:
 - Common in events, messages
 
 ---
+
 ## Tree Patterns
 
 - Parent reference: `parent_id`
@@ -105,6 +118,7 @@ audience:
 - Each: trade-offs in query / update
 
 ---
+
 ## Approximate Pattern
 
 - Counter approximations
@@ -113,6 +127,7 @@ audience:
 - Trade precision for write throughput
 
 ---
+
 ## Tree Of Categories
 
 - Often: materialised path for fast ancestor queries
@@ -121,6 +136,7 @@ audience:
 - Read-heavy &#8594; simpler patterns work
 
 ---
+
 ## Multi-Tenant
 
 - Per-tenant database vs per-tenant field
@@ -129,6 +145,7 @@ audience:
 - Pick based on isolation requirements
 
 ---
+
 ## Common Pattern Mistakes
 
 - One pattern for everything

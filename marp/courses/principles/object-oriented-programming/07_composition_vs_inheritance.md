@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Composition vs Inheritance
 
 ---
+
 ## What This Chapter Covers
 
 - "Has-a" vs "is-a" relationships
@@ -22,6 +24,7 @@ audience:
 - A practical decision guide
 
 ---
+
 ## Has-A vs Is-A
 
 - **Is-a**: a Dog *is an* Animal &#8594; inheritance candidate
@@ -31,16 +34,19 @@ audience:
 - When in doubt: it's probably has-a
 
 ---
+
 ## Side by Side
 
 ![composition_over_inheritance](svg/courses/principles/object-oriented-programming/07_composition_vs_inheritance/composition_over_inheritance.svg)
 
 ---
+
 ## Delegation Pattern
 
 ![delegation_pattern](svg/courses/principles/object-oriented-programming/07_composition_vs_inheritance/delegation_pattern.svg)
 
 ---
+
 ## Composition: A First Example
 
 ```python
@@ -60,6 +66,7 @@ class Car:
 - Easy to test: pass a fake Engine
 
 ---
+
 ## The Same Idea With Inheritance (Don't)
 
 ```python
@@ -73,6 +80,7 @@ class Car(Engine):
 - Probably a chain of inheritance hacks ahead
 
 ---
+
 ## Delegation
 
 - An object holds another object and *delegates* method calls to it
@@ -82,6 +90,7 @@ class Car(Engine):
 - The verbose-but-explicit option
 
 ---
+
 ## "Favour Composition Over Inheritance"
 
 - A guideline from *Design Patterns* (Gang of Four, 1994)
@@ -91,6 +100,7 @@ class Car(Engine):
 - Not a hard rule — inheritance has uses — but the right default
 
 ---
+
 ## Mixins
 
 - Small classes that add a *capability*, not an identity
@@ -100,6 +110,7 @@ class Car(Engine):
 - Used carefully, mixins are composition with inheritance syntax
 
 ---
+
 ## A Mixin in Python
 
 ```python
@@ -118,6 +129,7 @@ class Article(TimestampMixin):
 - Order of base classes matters — uses Python's MRO
 
 ---
+
 ## Refactoring Inheritance to Composition
 
 - Find the inherited methods you actually use
@@ -127,6 +139,7 @@ class Article(TimestampMixin):
 - Remove the inheritance link
 
 ---
+
 ## A Refactoring Example
 
 Before:
@@ -150,6 +163,7 @@ class FileWriter:
 - Formatter is now swappable
 
 ---
+
 ## When Inheritance Is the Right Choice
 
 - The relationship really is "is-a" in the domain
@@ -159,6 +173,7 @@ class FileWriter:
 - You're using a framework that requires extending a base class
 
 ---
+
 ## When Composition Is the Right Choice
 
 - You want code reuse without identity
@@ -168,6 +183,7 @@ class FileWriter:
 - You're not sure (most cases) — start here
 
 ---
+
 ## Quick Decision Guide
 
 - "Is this thing a *kind of* the other?" &#8594; consider inheritance
@@ -177,6 +193,7 @@ class FileWriter:
 - "Does the relationship feel forced?" &#8594; composition
 
 ---
+
 ## A Practical Pattern: Strategy
 
 ```python
@@ -197,6 +214,7 @@ class Catalog:
 - Pure composition, zero inheritance
 
 ---
+
 ## Common Mistakes
 
 - Reaching for inheritance because two classes share a method name

@@ -12,6 +12,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Bash Scripting Course
 
 ---
@@ -21,6 +22,7 @@ audience:
 ![Shell Scripting Architecture](svg/courses/languages/bash/bash-scripting/01_theory/shell_vs_scripting.svg)
 
 ---
+
 ## Course Overview
 - Duration: 3 days (~24 hours)
 - Focus: deep understanding of `bash` scripting
@@ -28,6 +30,7 @@ audience:
 - Hands-on: lots of code examples and exercises
 
 ---
+
 ## Who Should Take This Course?
 - System administrators automating tasks
 - DevOps engineers writing deployment scripts
@@ -35,18 +38,21 @@ audience:
 - Anyone who wants to master the command line
 
 ---
+
 ## Prerequisites
 - Basic familiarity with `Linux` or `macOS`
 - Ability to open a terminal and type commands
 - No prior scripting experience required
 
 ---
+
 ## What You Will Learn
 - Day 1: Shell theory, variables, redirection, globbing
 - Day 2: Writing scripts, syntax, pipes, I/O, multiprocessing
 - Day 3: Functions, arrays, arithmetic, advanced topics
 
 ---
+
 ## Course Materials
 - All examples tested on `bash` 5.x
 - Compatible with most `Linux` distributions
@@ -54,6 +60,7 @@ audience:
 - All code available for download after the course
 
 ---
+
 ## What is a Shell?
 - A program that interprets commands
 - The interface between the user and the operating system kernel
@@ -65,6 +72,7 @@ User --> Shell --> Kernel --> Hardware
 ```
 
 ---
+
 ## Why Do We Need a Shell?
 - The kernel does not have a user interface
 - Somebody must translate human intent into system calls
@@ -72,7 +80,9 @@ User --> Shell --> Kernel --> Hardware
 - Without a shell, you would need to write C programs for every task
 
 ---
+
 ## Shell vs GUI
+
 | Feature | Shell (CLI) | GUI |
 |---------|------------|-----|
 | Speed | Fast for experts | Slower, more clicks |
@@ -83,6 +93,7 @@ User --> Shell --> Kernel --> Hardware
 | Reproducibility | Exact | Approximate |
 
 ---
+
 ## When to Use a Shell
 - Automating repetitive tasks
 - Managing remote servers via `SSH`
@@ -92,6 +103,7 @@ User --> Shell --> Kernel --> Hardware
 - Any task that needs to be reproducible
 
 ---
+
 ## When a GUI Wins
 - Image and video editing
 - Web browsing
@@ -100,6 +112,7 @@ User --> Shell --> Kernel --> Hardware
 - Tasks where visual feedback is essential
 
 ---
+
 ## Shell Families
 
 ```tree
@@ -119,6 +132,7 @@ User --> Shell --> Kernel --> Hardware
 ```
 
 ---
+
 ## The Bourne Shell (`sh`)
 - Written by Stephen Bourne at Bell Labs in 1977
 - Shipped with Unix Version 7
@@ -127,6 +141,7 @@ User --> Shell --> Kernel --> Hardware
 - `/bin/sh` is often a symlink to another shell today
 
 ---
+
 ## The Korn Shell (`ksh`)
 - Written by David Korn at Bell Labs in 1983
 - Backward compatible with `sh`
@@ -135,6 +150,7 @@ User --> Shell --> Kernel --> Hardware
 - Two major versions: `ksh88` and `ksh93`
 
 ---
+
 ## The Birth of `bash`
 - "Bourne Again Shell" - a pun on "born again"
 - Written by Brian Fox for the GNU project in 1989
@@ -143,7 +159,9 @@ User --> Shell --> Kernel --> Hardware
 - Default shell on most `Linux` distributions
 
 ---
+
 ## `bash` Version History
+
 | Version | Year | Key Features |
 |---------|------|-------------|
 | 1.0 | 1989 | Initial release |
@@ -155,6 +173,7 @@ User --> Shell --> Kernel --> Hardware
 | 5.3 | 2025 | Latest stable release |
 
 ---
+
 ## Check Your `bash` Version
 
 ```bash
@@ -169,6 +188,7 @@ echo "${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}"
 ```
 
 ---
+
 ## Why `bash`?
 - Installed everywhere (every `Linux`, `macOS`, `WSL`)
 - POSIX compatible (mostly)
@@ -177,7 +197,9 @@ echo "${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}"
 - The "lingua franca" of shell scripting
 
 ---
+
 ## `bash` vs `zsh` vs `fish`
+
 | Feature | `bash` | `zsh` | `fish` |
 |---------|--------|-------|--------|
 | Default on `Linux` | Yes | No | No |
@@ -187,6 +209,7 @@ echo "${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}"
 | Interactive features | Basic | Excellent | Excellent |
 
 ---
+
 ## The Takeaway
 - Write scripts in `bash` for portability
 - Use `zsh` or `fish` interactively if you prefer

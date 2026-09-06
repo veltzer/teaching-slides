@@ -7,14 +7,17 @@ audience:
   - audiences:architects
 
 ---
+
 # Ports and Adapters (Hexagonal)
 
 ---
+
 ## Driving vs Driven
 
 ![driving_vs_driven](svg/courses/architecting/clean-and-hexagonal-architecture/05_ports_and_adapters_hexagonal_architecture/driving_vs_driven.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Hexagonal architecture origins
@@ -24,11 +27,13 @@ audience:
 - A worked example
 
 ---
+
 ## Hexagon
 
 ![hexagon](svg/courses/architecting/clean-and-hexagonal-architecture/05_ports_and_adapters_hexagonal_architecture/hexagon.svg)
 
 ---
+
 ## Origins
 
 - Coined by Alistair Cockburn (2005)
@@ -38,6 +43,7 @@ audience:
 - Both push for: domain isolation
 
 ---
+
 ## Ports
 
 - Interfaces defined by the application
@@ -45,6 +51,7 @@ audience:
 - Two kinds: driving (in) and driven (out)
 
 ---
+
 ## Adapters
 
 - Implementations of ports
@@ -52,6 +59,7 @@ audience:
 - Many adapters per port possible
 
 ---
+
 ## Driving (Primary) Ports
 
 - Triggers an action
@@ -60,6 +68,7 @@ audience:
 - Calls the application
 
 ---
+
 ## Driven (Secondary) Ports
 
 - Application calls out
@@ -68,6 +77,7 @@ audience:
 - Application defines; adapter implements
 
 ---
+
 ## The Hexagon
 
 - Application at the centre
@@ -76,6 +86,7 @@ audience:
 - Hexagon shape: arbitrary; emphasises symmetry
 
 ---
+
 ## Hexagonal vs Clean
 
 - Clean: layered (rings)
@@ -85,6 +96,7 @@ audience:
 - Mostly: visual / vocabulary differences
 
 ---
+
 ## Worked Example
 
 ```python
@@ -110,6 +122,7 @@ class HttpOrderController:
 ```
 
 ---
+
 ## Multiple Driving Adapters
 
 - HTTP, gRPC, CLI, scheduled job
@@ -118,6 +131,7 @@ class HttpOrderController:
 - Pure refactoring exercise to add a new caller
 
 ---
+
 ## Multiple Driven Adapters
 
 - Postgres in prod, in-memory in test, snapshot for migration
@@ -125,6 +139,7 @@ class HttpOrderController:
 - Easy to swap implementations
 
 ---
+
 ## Trade-Offs
 
 - More files, more abstraction
@@ -132,6 +147,7 @@ class HttpOrderController:
 - Overkill for: simple CRUD
 
 ---
+
 ## Common Hexagonal Mistakes
 
 - Ports defined outside the application (lose ownership)
@@ -140,6 +156,7 @@ class HttpOrderController:
 - Skipping the abstraction; "we'll add it later"
 
 ---
+
 ## When To Adopt
 
 - Domain logic with longevity
@@ -148,6 +165,7 @@ class HttpOrderController:
 - Clear domain to model
 
 ---
+
 ## When To Skip
 
 - One-shot scripts

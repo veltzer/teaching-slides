@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Practical Use
 
 ---
+
 ## What This Chapter Covers
 
 - When to use GraphQL
@@ -20,6 +22,7 @@ audience:
 - Wrap-up
 
 ---
+
 ## When To Use
 
 - Many clients with different needs
@@ -28,11 +31,13 @@ audience:
 - Frontend-driven shapes
 
 ---
+
 ## Adoption Path
 
 ![adoption_path](svg/courses/networking/graphql/12_practical_use/adoption_path.svg)
 
 ---
+
 ## When Not To
 
 - Public read-only API: REST + CDN simpler
@@ -41,6 +46,7 @@ audience:
 - Heavy file uploads / streaming
 
 ---
+
 ## REST + GraphQL
 
 - Use both
@@ -49,6 +55,7 @@ audience:
 - Common in practice
 
 ---
+
 ## Migration From REST
 
 - Wrap existing REST in GraphQL gateway
@@ -57,6 +64,7 @@ audience:
 - Or: keep both indefinitely
 
 ---
+
 ## Schema Ownership
 
 - Designate owners
@@ -65,6 +73,7 @@ audience:
 - Avoid free-for-all
 
 ---
+
 ## Naming Conventions
 
 - Types: PascalCase
@@ -73,6 +82,7 @@ audience:
 - Pick early; document
 
 ---
+
 ## Errors
 
 - Domain errors in payloads
@@ -81,6 +91,7 @@ audience:
 - Predictable for clients
 
 ---
+
 ## Pagination Conventions
 
 - Relay-style cursor connections
@@ -88,6 +99,7 @@ audience:
 - Standard
 
 ---
+
 ## Tooling
 
 - GraphiQL / Apollo Sandbox: explorer
@@ -96,6 +108,7 @@ audience:
 - Tracing: per-resolver
 
 ---
+
 ## Testing
 
 - Schema snapshot tests
@@ -104,6 +117,7 @@ audience:
 - Persisted query allow-list tests
 
 ---
+
 ## Documentation
 
 - Schema is doc; descriptions on every type
@@ -111,6 +125,7 @@ audience:
 - Tutorials for common flows
 
 ---
+
 ## Operational
 
 - Query complexity limits
@@ -120,6 +135,7 @@ audience:
 - All non-negotiable for production
 
 ---
+
 ## When To Reconsider
 
 - One client, simple needs
@@ -127,6 +143,7 @@ audience:
 - Team without GraphQL experience and short timeline
 
 ---
+
 ## Course Wrap-Up
 
 - GraphQL: query language, schema-first
@@ -137,6 +154,7 @@ audience:
 - Pick deliberately
 
 ---
+
 ## Common Practical Mistakes
 
 - Adopting GraphQL because it is trendy

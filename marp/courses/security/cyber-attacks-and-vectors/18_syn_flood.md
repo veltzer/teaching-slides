@@ -47,6 +47,7 @@ audience:
 - The server allocates resources at step 2, BEFORE the handshake completes
 
 ---
+
 ## SYN Flood Mechanism
 
 ```asm
@@ -76,6 +77,7 @@ audience:
 ```
 
 ---
+
 ## Half-Open Connection Queue
 
 ```asm
@@ -101,6 +103,7 @@ audience:
 ```
 
 ---
+
 ## SYN Flood with IP Spoofing
 
 - Attackers typically spoof the source IP address in SYN packets
@@ -116,6 +119,7 @@ audience:
 | No spoofing         | Real attacker IP (easy to block)           | Low           |
 
 ---
+
 ## SYN Cookies: The Primary Defense
 
 ```asm
@@ -149,6 +153,7 @@ audience:
 - Trade-off: some TCP options (window scaling) may be lost
 
 ---
+
 ## Enabling SYN Cookies on Linux
 
 ```bash
@@ -168,6 +173,7 @@ sudo sysctl -p /etc/sysctl.d/99-syn-flood.conf
 ```
 
 ---
+
 ## Kernel Tuning Parameters
 
 ```bash
@@ -212,6 +218,7 @@ sysctl net.core.somaxconn
 ```
 
 ---
+
 ## Monitoring SYN Flood Attacks
 
 ```bash
@@ -242,6 +249,7 @@ cat /proc/net/snmp | grep -A1 "Tcp:"
 ```
 
 ---
+
 ## iptables Rate Limiting
 
 ```bash
@@ -273,6 +281,7 @@ iptables -A INPUT -p tcp --syn \
 ```
 
 ---
+
 ## nftables Equivalent
 
 ```bash
@@ -297,6 +306,7 @@ nft add rule inet filter input tcp dport 80 tcp flags syn \
 ```
 
 ---
+
 ## Testing with hping3
 
 ```bash
@@ -339,6 +349,7 @@ for i in range(1000):
 > WARNING: SYN flood testing can disrupt network services. Only test in controlled lab environments or with explicit authorization.
 
 ---
+
 ## SYN Flood vs Other TCP Attacks
 
 | Attack         | Mechanism                            | Layer   | Defense               |
@@ -357,6 +368,7 @@ for i in range(1000):
 ![syn_flood_defense_layers](svg/courses/security/cyber-attacks-and-vectors/18_syn_flood/syn_flood_defense_layers.svg)
 
 ---
+
 ## Hardware and Cloud Defenses
 
 ```bash
@@ -403,6 +415,7 @@ for i in range(1000):
 - Flood traffic never reaches the backend server
 
 ---
+
 ## Complete Defense Configuration Example
 
 ```bash
@@ -444,6 +457,7 @@ echo "[+] SYN flood defenses configured"
 ```
 
 ---
+
 ## Key Takeaways
 
 - SYN floods exploit the TCP handshake by filling the server's half-open connection queue

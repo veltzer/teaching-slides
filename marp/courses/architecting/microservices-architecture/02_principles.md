@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Microservices Principles
 
 ---
+
 ## Single Responsibility
 
 - A service does one thing well
@@ -19,11 +21,13 @@ audience:
 - A service description fits in one sentence
 
 ---
+
 ## Four Service Principles
 
 ![service_principles](svg/courses/architecting/microservices-architecture/02_principles/service_principles.svg)
 
 ---
+
 ## Independent Deployability
 
 - A service can be deployed without coordinating with other services
@@ -32,6 +36,7 @@ audience:
 - Without it, you have a distributed monolith
 
 ---
+
 ## Owning Your Data
 
 - Each service has its own database
@@ -40,6 +45,7 @@ audience:
 - Database-per-service is the line you don't cross
 
 ---
+
 ## Decentralized Data
 
 - Different services may use different database technologies
@@ -48,6 +54,7 @@ audience:
 - The cost: data consistency is now a distributed-systems problem
 
 ---
+
 ## API Contracts
 
 - A service exposes a clear, versioned API
@@ -56,6 +63,7 @@ audience:
 - The API is what changes the most carefully
 
 ---
+
 ## Smart Endpoints, Dumb Pipes
 
 - Logic lives in services, not in middleware
@@ -64,6 +72,7 @@ audience:
 - The boundary between services is the API; nothing else gets between
 
 ---
+
 ## Design for Failure
 
 - Networks fail; services restart; nodes die
@@ -72,6 +81,7 @@ audience:
 - This is a discipline; "happy path only" code dies fast in microservices
 
 ---
+
 ## Domain-Driven Boundaries
 
 - Service boundaries follow the domain, not the org chart
@@ -79,6 +89,7 @@ audience:
 - Conway's Law: the system structure mirrors the team structure — be intentional about it
 
 ---
+
 ## Conway's Law in Practice
 
 - "Organizations design systems that mirror their communication structure"
@@ -87,11 +98,13 @@ audience:
 - Inverse Conway's: design the team structure to fit the desired system structure
 
 ---
+
 ## Conway's Law Visualised
 
 ![conway_law](svg/courses/architecting/microservices-architecture/02_principles/conways_law.svg)
 
 ---
+
 ## Observability First
 
 - A monolith is debuggable with logs and a debugger
@@ -100,6 +113,7 @@ audience:
 - Build the observability stack before you build the second service
 
 ---
+
 ## Automation Required
 
 - Manual deploy of 1 service: tolerable
@@ -108,6 +122,7 @@ audience:
 - Service templates and platform tooling save lives
 
 ---
+
 ## The Twelve-Factor Connection
 
 - Each microservice should be a twelve-factor app
@@ -116,6 +131,7 @@ audience:
 - Violating twelve-factor in microservices is doubly painful
 
 ---
+
 ## What "Micro" Doesn't Mean
 
 - Not "lines of code" — services can be large or small
@@ -124,6 +140,7 @@ audience:
 - "Micro" describes the boundary discipline, not the size
 
 ---
+
 ## Anti-Patterns
 
 - Shared databases between services
@@ -133,6 +150,7 @@ audience:
 - Every service has its own platform tooling
 
 ---
+
 ## Summary
 
 - Single responsibility per service, owned by a single team

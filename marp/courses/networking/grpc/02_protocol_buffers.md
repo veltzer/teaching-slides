@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Protocol Buffers
 
 ---
+
 ## What This Chapter Covers
 
 - proto3 syntax overview
@@ -20,6 +22,7 @@ audience:
 - Reserved fields and backward compatibility
 
 ---
+
 ## Why Protocol Buffers?
 
 - Compact binary on the wire
@@ -29,11 +32,13 @@ audience:
 - Independent of gRPC — usable on its own too
 
 ---
+
 ## End-to-End Workflow
 
 ![proto_workflow](svg/courses/networking/grpc/02_protocol_buffers/proto_workflow.svg)
 
 ---
+
 ## proto3 vs proto2
 
 - proto3 is the current default
@@ -43,6 +48,7 @@ audience:
 - Use proto3 unless legacy reasons demand proto2
 
 ---
+
 ## Basic File Structure
 
 ```protobuf
@@ -63,6 +69,7 @@ message HelloRequest {
 - Messages and services follow
 
 ---
+
 ## Scalar Types
 
 - `int32`, `int64`, `uint32`, `uint64`
@@ -73,6 +80,7 @@ message HelloRequest {
 - Choose width based on actual range
 
 ---
+
 ## Field Numbers
 
 - Each field has a unique number, used on the wire
@@ -82,6 +90,7 @@ message HelloRequest {
 - Numbers go up to 2^29-1, plenty of room
 
 ---
+
 ## Messages and Nesting
 
 ```protobuf
@@ -103,6 +112,7 @@ message User {
 - Common pattern for composite data
 
 ---
+
 ## Repeated Fields
 
 - `repeated string emails = 1;` — a list
@@ -112,6 +122,7 @@ message User {
 - The standard way to model lists
 
 ---
+
 ## Maps
 
 ```protobuf
@@ -127,6 +138,7 @@ message Config {
 - Implemented as a list of entries on the wire
 
 ---
+
 ## Enums
 
 ```protobuf
@@ -144,6 +156,7 @@ enum Status {
 - Add values at the end; don't reorder
 
 ---
+
 ## oneof
 
 ```protobuf
@@ -162,21 +175,25 @@ message Notification {
 - Cannot mix `repeated` inside oneof
 
 ---
+
 ## Field Visualization
 
 ![protobuf_anatomy](svg/courses/networking/grpc/02_protocol_buffers/protobuf_anatomy.svg)
 
 ---
+
 ## Wire Format
 
 ![wire_format](svg/courses/networking/grpc/02_protocol_buffers/wire_format.svg)
 
 ---
+
 ## Schema Evolution Rules
 
 ![proto_evolution](svg/courses/networking/grpc/02_protocol_buffers/proto_evolution.svg)
 
 ---
+
 ## Well-Known Types
 
 - `google.protobuf.Timestamp` — UTC time, second + nanos
@@ -186,6 +203,7 @@ message Notification {
 - `google.protobuf.FieldMask` — partial updates
 
 ---
+
 ## Timestamps Done Right
 
 - Always use UTC
@@ -195,6 +213,7 @@ message Notification {
 - Date-only? Use `google.type.Date` from google/type
 
 ---
+
 ## Importing Files
 
 ```protobuf
@@ -213,6 +232,7 @@ message Event {
 - Avoid circular imports
 
 ---
+
 ## Packages and Names
 
 - Package becomes the namespace in generated code
@@ -222,6 +242,7 @@ message Event {
 - Each language has its own mapping rules
 
 ---
+
 ## Reserved Fields
 
 ```protobuf
@@ -240,6 +261,7 @@ message User {
 - Critical for long-term schema stability
 
 ---
+
 ## Compatibility Rules: Adding Fields
 
 - New optional field — safe both directions
@@ -249,6 +271,7 @@ message User {
 - These rules echo Avro and JSON Schema
 
 ---
+
 ## Compatibility Rules: Removing
 
 - Mark the field reserved
@@ -258,6 +281,7 @@ message User {
 - Reservation costs nothing; reuse is dangerous
 
 ---
+
 ## Default Values
 
 - proto3 fields have implicit defaults
@@ -268,6 +292,7 @@ message User {
 - Cannot distinguish "set to default" from "unset" in proto3 (without wrappers)
 
 ---
+
 ## Wrapper Types for Nullable
 
 - `google.protobuf.StringValue` — nullable string
@@ -277,6 +302,7 @@ message User {
 - Useful in patch/update payloads
 
 ---
+
 ## proto3 Optional (Recent)
 
 - Newer proto3 supports `optional` keyword
@@ -286,6 +312,7 @@ message User {
 - Available in protoc 3.15+
 
 ---
+
 ## Schema Files in Practice
 
 - One service per .proto when possible
@@ -295,6 +322,7 @@ message User {
 - Treat .proto changes like API changes — review carefully
 
 ---
+
 ## Tooling: protoc
 
 - The official compiler
@@ -304,6 +332,7 @@ message User {
 - Most projects wrap it in build scripts
 
 ---
+
 ## Tooling: Buf
 
 - Modern UX for protobuf
@@ -313,6 +342,7 @@ message User {
 - Recommended for serious projects
 
 ---
+
 ## Common Pitfalls
 
 - Reusing field numbers after removal
@@ -322,6 +352,7 @@ message User {
 - Wrong scalar width — `int32` for a Unix timestamp overflows in 2038
 
 ---
+
 ## Summary
 
 - Protocol Buffers — the schema language for gRPC

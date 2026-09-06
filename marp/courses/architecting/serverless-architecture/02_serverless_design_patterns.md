@@ -7,14 +7,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Serverless Design Patterns
 
 ---
+
 ## Pattern Overview
 
 ![event_patterns](svg/courses/architecting/serverless-architecture/02_serverless_design_patterns/event_patterns.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Common serverless patterns
@@ -26,6 +29,7 @@ audience:
 - Anti-patterns
 
 ---
+
 ## API + Lambda + DB
 
 - API Gateway routes HTTP requests
@@ -35,6 +39,7 @@ audience:
 - Scales to zero; pay per request
 
 ---
+
 ## Event-Driven Processing
 
 - Event source (S3, SQS, Kinesis) &#8594; Lambda
@@ -44,11 +49,13 @@ audience:
 - The most natural fit
 
 ---
+
 ## Queue-Decoupled Worker
 
 ![queue_decoupled_worker](svg/courses/architecting/serverless-architecture/02_serverless_design_patterns/queue_decoupled_worker.svg)
 
 ---
+
 ## Fan-Out
 
 - One event triggers many parallel Lambdas
@@ -58,6 +65,7 @@ audience:
 - Scale: linear with subscribers
 
 ---
+
 ## Fan-In
 
 - Many sources collect into one place
@@ -67,11 +75,13 @@ audience:
 - Backpressure built in (queue depth)
 
 ---
+
 ## Topology Compared
 
 ![fan_out_fan_in](svg/courses/architecting/serverless-architecture/02_serverless_design_patterns/fanout_fanin.svg)
 
 ---
+
 ## Step Functions
 
 - AWS's orchestration service
@@ -81,6 +91,7 @@ audience:
 - Replaces hand-coded orchestration
 
 ---
+
 ## Step Functions Example
 
 - "When order arrives:
@@ -92,6 +103,7 @@ audience:
 - Long-running (up to 1 year)
 
 ---
+
 ## Saga Pattern (Serverless)
 
 - Distributed transaction across many services
@@ -101,6 +113,7 @@ audience:
 - Critical for cross-service workflows
 
 ---
+
 ## API Composition
 
 - One Lambda fronts multiple downstream calls
@@ -110,6 +123,7 @@ audience:
 - Watch: increases function execution time
 
 ---
+
 ## CQRS With Lambda
 
 - Command: writes to DynamoDB &#8594; stream &#8594; Lambda
@@ -118,6 +132,7 @@ audience:
 - Fits naturally with serverless events
 
 ---
+
 ## Scheduled Lambda
 
 - CloudWatch / EventBridge schedules trigger Lambda
@@ -127,6 +142,7 @@ audience:
 - Replacement for many cron jobs
 
 ---
+
 ## Anti-Pattern: Lambda As A Server
 
 - Long-running listener-style code
@@ -135,6 +151,7 @@ audience:
 - Serverless is for *event-driven* work
 
 ---
+
 ## Anti-Pattern: Synchronous Chains
 
 - Lambda A calls Lambda B calls Lambda C
@@ -143,6 +160,7 @@ audience:
 - Async better than sync for serverless
 
 ---
+
 ## Anti-Pattern: Hot Lambda
 
 - One function does many things
@@ -151,6 +169,7 @@ audience:
 - Step Functions to orchestrate
 
 ---
+
 ## Common Pattern Mistakes
 
 - Lambdas calling Lambdas synchronously

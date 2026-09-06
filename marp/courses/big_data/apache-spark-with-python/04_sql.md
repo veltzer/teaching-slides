@@ -11,14 +11,17 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Spark SQL & DataFrames
 
 ---
+
 ## RDD vs DataFrame
 
 ![dataframe_api](svg/courses/big_data/apache-spark-with-python/04_sql/dataframe_api.svg)
 
 ---
+
 ## Spark SQL Overview
 - High-level API for structured data processing
 - Seamless integration with SQL and DataFrame operations
@@ -26,10 +29,12 @@ audience:
 - Schema inference and type safety
 
 ---
+
 ## Architecture
 ![architecture](svg/courses/big_data/apache-spark-with-python/04_sql/architecture.svg)
 
 ---
+
 ## Key Components
 1. DataFrame API
 1. Dataset API
@@ -37,6 +42,7 @@ audience:
 1. Tungsten Execution Engine
 
 ---
+
 ## Creating DataFrames
 
 ```python
@@ -59,6 +65,7 @@ df = spark.read.parquet("people.parquet")
 ```
 
 ---
+
 ## Basic Operations
 
 ```python
@@ -81,6 +88,7 @@ df.drop("age")
 ```
 
 ---
+
 ## Aggregations and Grouping
 
 ```python
@@ -100,6 +108,7 @@ df.withColumn("rank", rank().over(window_spec))
 ```
 
 ---
+
 ## Running SQL Queries
 
 ```python
@@ -118,6 +127,7 @@ result = spark.sql("""
 ```
 
 ---
+
 ## Complex SQL Operations: Joins and Nested Queries
 
 ```python
@@ -135,6 +145,7 @@ result = spark.sql("""
 ```
 
 ---
+
 ## Complex SQL Operations: Window Functions
 
 ```python
@@ -149,6 +160,7 @@ result = spark.sql("""
 ```
 
 ---
+
 ## Supported Data Formats
 
 ```python
@@ -166,6 +178,7 @@ df.write.csv("output.csv")
 ```
 
 ---
+
 ## JDBC Connections
 
 ```python
@@ -188,6 +201,7 @@ df.write \
 ```
 
 ---
+
 ## Hive Configuration
 
 ```python
@@ -202,6 +216,7 @@ spark.sql("SET hive.metastore.warehouse.dir=/path/to/warehouse")
 ```
 
 ---
+
 ## Hive Operations
 
 ```python
@@ -223,10 +238,12 @@ result = spark.sql("SELECT * FROM hive_table")
 ```
 
 ---
+
 ## Catalyst Optimizer
 ![catalyst_optimizer](svg/courses/big_data/apache-spark-with-python/04_sql/catalyst_optimizer.svg)
 
 ---
+
 ## Caching Strategies
 
 ```python
@@ -242,6 +259,7 @@ df.unpersist()
 ```
 
 ---
+
 ## Query Optimization Tips
 1. Predicate Pushdown
 
@@ -264,6 +282,7 @@ spark.sql("SELECT * FROM events WHERE date = '2024-01-01'")
 ```
 
 ---
+
 ## User-Defined Functions (UDFs)
 
 ```python
@@ -280,6 +299,7 @@ df.select(upper_case("name").alias("upper_name"))
 ```
 
 ---
+
 ## Custom Aggregations
 
 ```python
@@ -296,6 +316,7 @@ df.groupBy("key").agg(custom_average("value").alias("avg_val"))
 ```
 
 ---
+
 ## Structured Streaming
 
 ```python
@@ -314,6 +335,7 @@ query = streaming_df.writeStream \
 ```
 
 ---
+
 ## Schema Management Best Practices
 
 ```python
@@ -330,6 +352,7 @@ df = spark.read.schema(schema).csv("data.csv")
 ```
 
 ---
+
 ## Memory Management
 1. Broadcast joins for small tables
 
@@ -349,6 +372,7 @@ df = df.repartition(10)
 ```
 
 ---
+
 ## Summary
 - Spark SQL provides unified data access
 - DataFrames offer type-safe, structured operations

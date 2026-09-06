@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Current Trends in DevOps
 Modern approaches and emerging patterns
 

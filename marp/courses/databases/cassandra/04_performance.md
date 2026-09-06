@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Performance
 
 ---
+
 ## What This Chapter Covers
 
 - Storage internals
@@ -20,6 +22,7 @@ audience:
 - Tuning
 
 ---
+
 ## SSTables
 
 - Sorted on-disk files
@@ -28,11 +31,13 @@ audience:
 - Compaction merges them later
 
 ---
+
 ## Storage Layers
 
 ![storage_layers](svg/courses/databases/cassandra/04_performance/storage_layers.svg)
 
 ---
+
 ## Memtable
 
 - In-memory write buffer
@@ -41,6 +46,7 @@ audience:
 - Big means fewer flushes
 
 ---
+
 ## Commit Log
 
 - Append-only durability log
@@ -49,6 +55,7 @@ audience:
 - Replayed on startup
 
 ---
+
 ## Write Path
 
 - Commit log append
@@ -57,6 +64,7 @@ audience:
 - Async flush to SSTable
 
 ---
+
 ## Read Path
 
 - Bloom filter check
@@ -65,11 +73,13 @@ audience:
 - Merge results
 
 ---
+
 ## Both Paths Visualized
 
 ![write_read_paths](svg/courses/databases/cassandra/04_performance/write_read_paths.svg)
 
 ---
+
 ## Bloom Filters
 
 - Quickly reject misses
@@ -78,6 +88,7 @@ audience:
 - Memory cost
 
 ---
+
 ## Key Cache
 
 - Hot row positions in SSTables
@@ -86,6 +97,7 @@ audience:
 - Free heap saves cost
 
 ---
+
 ## Row Cache
 
 - Full rows in memory
@@ -94,6 +106,7 @@ audience:
 - Off by default
 
 ---
+
 ## Compaction Strategies
 
 - Size-tiered: write-heavy
@@ -102,6 +115,7 @@ audience:
 - Pick per table
 
 ---
+
 ## Tombstone Cleanup
 
 - Compaction removes tombstones
@@ -110,6 +124,7 @@ audience:
 - Default 10 days
 
 ---
+
 ## Hot Partitions
 
 - One key takes all traffic
@@ -118,6 +133,7 @@ audience:
 - Monitor partition size
 
 ---
+
 ## Driver-Side Tips
 
 - Token-aware policies
@@ -126,6 +142,7 @@ audience:
 - Idempotent retries
 
 ---
+
 ## Common Performance Mistakes
 
 - Wrong compaction strategy

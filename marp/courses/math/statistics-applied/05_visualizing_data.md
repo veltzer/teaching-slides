@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Visualizing Data
 
 ---
+
 ## What This Chapter Covers
 
 - Why a picture beats a summary statistic
@@ -21,11 +23,13 @@ audience:
 - A few honesty rules for axes
 
 ---
+
 ## Anscombe's Quartet
 
 ![anscombe](svg/courses/math/statistics-applied/05_visualizing_data/anscombe.svg)
 
 ---
+
 ## Anscombe's Lesson
 
 - Four datasets, identical means, variances, correlations, and regression lines
@@ -35,6 +39,7 @@ audience:
 - "Plot the data" is the cheapest, highest-value habit in statistics
 
 ---
+
 ## Histograms
 
 - Bins the data and draws a bar per bin — the workhorse for one numeric variable
@@ -44,6 +49,7 @@ audience:
 - Always check your data with a histogram before testing anything
 
 ---
+
 ## Box And Violin Plots
 
 - **Box plot**: the five-number summary as a box with whiskers and outlier dots
@@ -53,6 +59,7 @@ audience:
 - Use box plots to compare, violin plots when shape matters
 
 ---
+
 ## Scatter Plots
 
 - Two numeric variables, one dot per observation
@@ -62,6 +69,7 @@ audience:
 - Overplotting? Use transparency or hexbin so density is visible
 
 ---
+
 ## Bar Charts And Their Misuse
 
 - Bar charts compare a numeric value *across categories* — sales by region
@@ -71,11 +79,13 @@ audience:
 - Sort bars by value unless the category has a natural order
 
 ---
+
 ## Truncated vs Honest Axes
 
 ![axis_honesty](svg/courses/math/statistics-applied/05_visualizing_data/axis_honesty.svg)
 
 ---
+
 ## A Minimal matplotlib Example
 
 ```python
@@ -91,6 +101,7 @@ fig.tight_layout()
 ```
 
 ---
+
 ## Honesty Rules For Charts
 
 - Bar and area charts: y-axis starts at zero, no exceptions
@@ -100,6 +111,7 @@ fig.tight_layout()
 - One message per chart — if you need a legend with eight entries, split it
 
 ---
+
 ## Common Mistakes
 
 - Reporting summary statistics without ever plotting the data

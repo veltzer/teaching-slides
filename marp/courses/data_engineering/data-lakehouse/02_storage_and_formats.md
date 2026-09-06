@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Storage and File Formats
 
 ---
+
 ## What This Chapter Covers
 
 - Object storage basics
@@ -20,6 +22,7 @@ audience:
 - Layout
 
 ---
+
 ## Object Storage Model
 
 - Buckets and objects
@@ -28,6 +31,7 @@ audience:
 - Strong durability, eventual list
 
 ---
+
 ## Why It Wins
 
 - Cheap per byte
@@ -36,6 +40,7 @@ audience:
 - Decoupled from compute
 
 ---
+
 ## Row vs Column
 
 - Row: write-friendly
@@ -44,11 +49,13 @@ audience:
 - Queries scan only needed columns
 
 ---
+
 ## Layout Compared
 
 ![columnar_layout](svg/courses/data_engineering/data-lakehouse/02_storage_and_formats/columnar_layout.svg)
 
 ---
+
 ## Columnar Formats
 
 - Parquet
@@ -57,6 +64,7 @@ audience:
 - Both widely supported
 
 ---
+
 ## Parquet
 
 - Default in lakehouse
@@ -65,6 +73,7 @@ audience:
 - Page-level compression
 
 ---
+
 ## ORC
 
 - Origin in Hive ecosystem
@@ -73,6 +82,7 @@ audience:
 - Still in use
 
 ---
+
 ## Avro
 
 - Row-oriented
@@ -81,6 +91,7 @@ audience:
 - Used at the edge
 
 ---
+
 ## Compression
 
 - Snappy: fast, average ratio
@@ -89,11 +100,13 @@ audience:
 - Lz4: fastest
 
 ---
+
 ## Format Choices
 
 ![format_choices](svg/courses/data_engineering/data-lakehouse/02_storage_and_formats/format_choices.svg)
 
 ---
+
 ## File Size
 
 - Small files are an anti-pattern
@@ -102,6 +115,7 @@ audience:
 - Compaction is a maintenance task
 
 ---
+
 ## Partitioning
 
 - Folder-based by date or region
@@ -110,6 +124,7 @@ audience:
 - Tune to query patterns
 
 ---
+
 ## Clustering and Sort
 
 - Co-locate values within files
@@ -118,6 +133,7 @@ audience:
 - Modern table formats handle it
 
 ---
+
 ## Schema Encoding
 
 - Field types
@@ -126,6 +142,7 @@ audience:
 - Match producer language types
 
 ---
+
 ## Common Format Mistakes
 
 - Many small files

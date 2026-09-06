@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Authentication and Authorisation
 
 ---
+
 ## Auth at the Gateway
 
 ![jwt_flow](svg/courses/architecting/api-gateway-patterns/07_authentication_and_authorization/jwt_flow.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Auth at the gateway: why
@@ -27,6 +30,7 @@ audience:
 - Pitfalls
 
 ---
+
 ## Why At The Gateway
 
 - One place to enforce auth, not N services
@@ -36,6 +40,7 @@ audience:
 - Failure mode: gateway misconfig &#8594; widespread impact
 
 ---
+
 ## API Keys
 
 - Simple shared secret
@@ -45,11 +50,13 @@ audience:
 - Pair with rate limiting per key
 
 ---
+
 ## Auth Schemes Compared
 
 ![auth_models](svg/courses/architecting/api-gateway-patterns/07_authentication_and_authorization/auth_models.svg)
 
 ---
+
 ## JWT (JSON Web Tokens)
 
 - Self-contained; signed
@@ -59,6 +66,7 @@ audience:
 - Most modern API standard
 
 ---
+
 ## JWT Verification
 
 - Gateway has the public key (or JWKS endpoint)
@@ -68,6 +76,7 @@ audience:
 - Fast; per-request
 
 ---
+
 ## OAuth 2.0
 
 - A framework for delegated authorisation
@@ -77,6 +86,7 @@ audience:
 - Industry standard
 
 ---
+
 ## OAuth 2.0 Flows
 
 - **Authorisation Code**: web apps; user redirected to authorise
@@ -86,6 +96,7 @@ audience:
 - **PKCE**: hardened code flow for SPAs and mobile
 
 ---
+
 ## OAuth Token Types
 
 - **Access token**: short-lived; the actual auth
@@ -94,6 +105,7 @@ audience:
 - Each has its purpose
 
 ---
+
 ## Token Introspection
 
 - Send the token to the auth server: "is this valid?"
@@ -103,6 +115,7 @@ audience:
 - Required when token isn't a self-contained JWT
 
 ---
+
 ## OpenID Connect
 
 - Identity layer on top of OAuth
@@ -112,6 +125,7 @@ audience:
 - Most enterprise auth uses OIDC
 
 ---
+
 ## mTLS (Mutual TLS)
 
 - Both client and server authenticate with certificates
@@ -121,6 +135,7 @@ audience:
 - Less suitable for browser clients
 
 ---
+
 ## RBAC: Role-Based Access Control
 
 - Users have roles; roles have permissions
@@ -130,6 +145,7 @@ audience:
 - The standard model
 
 ---
+
 ## ABAC: Attribute-Based Access Control
 
 - Access depends on attributes: user, resource, action, context
@@ -139,6 +155,7 @@ audience:
 - Tools: OPA (Open Policy Agent)
 
 ---
+
 ## Caching Auth Decisions
 
 - Token introspection is expensive
@@ -148,6 +165,7 @@ audience:
 - Trade-off: latency vs revocation freshness
 
 ---
+
 ## Common Auth Mistakes
 
 - API keys in URLs (logged everywhere)

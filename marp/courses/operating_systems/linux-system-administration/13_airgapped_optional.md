@@ -9,10 +9,12 @@ audience:
   - audiences:devops
 
 ---
+
 # Maintaining Linux in Air-Gapped Environments (Optional)
 ## Offline Package Management, Security, and Updates
 
 ---
+
 ## What is an Air-Gapped Environment?
 
 - Systems physically isolated from the internet
@@ -24,6 +26,7 @@ audience:
     - Increased documentation burden
 
 ---
+
 ## Air-Gap Architecture: Overview
 
 Red lines represent the air gap - no network connection crosses this boundary.
@@ -35,6 +38,7 @@ Red lines represent the air gap - no network connection crosses this boundary.
 ![air_gap_architecture](svg/courses/operating_systems/linux-system-administration/13_airgapped_optional/air_gap_architecture.svg)
 
 ---
+
 ## Local Repository Management
 
 ```bash
@@ -56,6 +60,7 @@ dpkg-scanpackages /media/usb/packages \
 ```
 
 ---
+
 ## Building a Complete Local Mirror
 
 ```bash
@@ -85,6 +90,7 @@ apt update
 ```
 
 ---
+
 ## Package Transport Mechanisms
 
 Transfer methods for air-gapped systems:
@@ -106,6 +112,7 @@ dpkg -i /media/transfer/*.deb
 ```
 
 ---
+
 ## Dependency Resolution for Offline Install
 
 ```bash
@@ -131,6 +138,7 @@ apt install nginx
 ```
 
 ---
+
 ## Security Patch Evaluation
 
 Process for evaluating patches in isolated environments:
@@ -151,6 +159,7 @@ apt-get changelog <package>
 ```
 
 ---
+
 ## CVE Monitoring for Air-Gapped Systems
 
 ```bash
@@ -174,6 +183,7 @@ dpkg -l > installed_packages_$(date +%F).txt
 ```
 
 ---
+
 ## Update Verification Procedures
 
 ```bash
@@ -193,6 +203,7 @@ lvcreate -L 5G -s -n pre-update-snap \
 ```
 
 ---
+
 ## System Update Protocols
 
 1. **Pre-update**: snapshot, backup, document current state
@@ -210,6 +221,7 @@ systemctl list-units --state=running > \
 ```
 
 ---
+
 ## Update Rollback Procedures
 
 ```bash
@@ -232,6 +244,7 @@ diff package-list-before.txt package-list-after.txt
 ```
 
 ---
+
 ## Vulnerability Management
 
 - Maintain an offline CVE database
@@ -252,6 +265,7 @@ oscap xccdf generate report results.xml > report.html
 ```
 
 ---
+
 ## Compliance Scanning Deep Dive
 
 ```bash
@@ -277,6 +291,7 @@ lynis audit system
 ```
 
 ---
+
 ## Documentation and Emergency Procedures
 
 Required documentation:
@@ -294,6 +309,7 @@ Emergency procedures:
 - Offline diagnostic tools and manuals
 
 ---
+
 ## Configuration Management in Air-Gapped Environments
 
 ```bash
@@ -318,6 +334,7 @@ git diff HEAD~1
 ```
 
 ---
+
 ## Media Transfer Security
 
 ```bash
@@ -340,6 +357,7 @@ gpg --encrypt --recipient admin@example.com \
 ```
 
 ---
+
 ## Best Practices for Isolated Systems
 
 1. Maintain a complete software baseline document
@@ -354,11 +372,13 @@ gpg --encrypt --recipient admin@example.com \
 1. Regular security assessments with offline tools
 
 ---
+
 ## Air-Gap Network Architecture
 
 ![air_gap_network_architecture](svg/courses/operating_systems/linux-system-administration/13_airgapped_optional/air_gap_network_architecture.svg)
 
 ---
+
 ## Offline Container Registry
 
 Run a private container registry inside the air-gapped network:
@@ -393,6 +413,7 @@ docker push localhost:5000/nginx:1.25
 ```
 
 ---
+
 ## Offline Ansible Management
 
 ```bash
@@ -421,6 +442,7 @@ ansible-pull -U file:///opt/ansible-repo.git \
 ```
 
 ---
+
 ## Hardware Security Modules in Air-Gapped Systems
 
 `HSM` devices provide tamper-proof key storage:
@@ -450,6 +472,7 @@ Use cases in air-gapped environments:
 - Secure boot key storage
 
 ---
+
 ## Audit Trail and Chain of Custody
 
 ```bash
@@ -481,6 +504,7 @@ Maintain a transfer log for every media crossing the air gap:
 | Approved by | bob (ticket #1234) |
 
 ---
+
 ## USB Device Policy Enforcement
 
 Control which USB devices are allowed in the air-gapped environment:
@@ -519,6 +543,7 @@ usbguard allow-device 12
 ```
 
 ---
+
 ## Network Diode Configuration
 
 A data diode enforces one-way data flow at the hardware level:
@@ -551,6 +576,7 @@ iptables -L FORWARD -n -v
 Data diodes are required in many compliance frameworks (`NIST`, `IEC 62443`).
 
 ---
+
 ## Offline Monitoring Tools
 
 Monitor air-gapped systems without external connectivity:
@@ -594,6 +620,7 @@ aide --check
 ```
 
 ---
+
 ## Exercise: Air-Gapped Package Update Pipeline
 
 Build a complete offline update workflow:

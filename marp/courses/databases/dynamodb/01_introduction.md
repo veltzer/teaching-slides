@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to DynamoDB
 
 ---
+
 ## What This Chapter Covers
 
 - What DynamoDB is
@@ -19,6 +21,7 @@ audience:
 - Course outline
 
 ---
+
 ## What DynamoDB Is
 
 - Hosted key-value and document store
@@ -27,6 +30,7 @@ audience:
 - Multi-region option
 
 ---
+
 ## Why Hosted
 
 - No servers to manage
@@ -35,6 +39,7 @@ audience:
 - Pay per request or provisioned
 
 ---
+
 ## When To Use
 
 - High-throughput key-value
@@ -43,11 +48,13 @@ audience:
 - Multi-region active-active
 
 ---
+
 ## Fit Visualised
 
 ![dynamo_fit](svg/courses/databases/dynamodb/01_introduction/dynamo_fit.svg)
 
 ---
+
 ## When Not To Use
 
 - Ad-hoc analytics
@@ -56,6 +63,7 @@ audience:
 - Cost-sensitive read-heavy traffic
 
 ---
+
 ## Architecture
 
 - Tables of items
@@ -64,6 +72,7 @@ audience:
 - Storage and compute managed
 
 ---
+
 ## Primary Keys
 
 - Partition key alone
@@ -72,11 +81,13 @@ audience:
 - Most important design choice
 
 ---
+
 ## Partition Routing
 
 ![partition_routing](svg/courses/databases/dynamodb/01_introduction/partition_routing.svg)
 
 ---
+
 ## Capacity Modes
 
 - On-demand: pay per request
@@ -85,6 +96,7 @@ audience:
 - Switch as workloads stabilize
 
 ---
+
 ## Consistency
 
 - Eventual by default
@@ -93,6 +105,7 @@ audience:
 - Local to region
 
 ---
+
 ## Global Tables
 
 - Multi-region replication
@@ -101,6 +114,7 @@ audience:
 - Latency local to user
 
 ---
+
 ## Streams
 
 - Change feed of table writes
@@ -109,6 +123,7 @@ audience:
 - 24-hour retention
 
 ---
+
 ## Time To Live
 
 - Per-item expiration
@@ -117,6 +132,7 @@ audience:
 - Useful for sessions and caches
 
 ---
+
 ## Course Outline
 
 - Data modeling
@@ -126,6 +142,7 @@ audience:
 - Operations
 
 ---
+
 ## Common Beginner Mistakes
 
 - Using it like a relational store

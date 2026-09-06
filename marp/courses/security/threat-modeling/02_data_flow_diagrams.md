@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Data Flow Diagrams
 
 ---
+
 ## What This Chapter Covers
 
 - The five DFD elements
@@ -21,6 +23,7 @@ audience:
 - DFDs for distributed systems
 
 ---
+
 ## Why DFDs?
 
 - Threats are about how data moves and changes hands
@@ -30,6 +33,7 @@ audience:
 - The starting point of nearly every threat methodology
 
 ---
+
 ## The Five DFD Elements
 
 - External entity (a square) — actors outside your system
@@ -39,11 +43,13 @@ audience:
 - Trust boundary (dashed line) — where trust changes
 
 ---
+
 ## DFD Elements Visualized
 
 ![dfd_elements](svg/courses/security/threat-modeling/02_data_flow_diagrams/dfd_elements.svg)
 
 ---
+
 ## External Entity
 
 - Anything outside your system that interacts with it
@@ -53,6 +59,7 @@ audience:
 - Label them concretely: "Customer browser", "Stripe API"
 
 ---
+
 ## Process
 
 - A unit of work that transforms or routes data
@@ -62,6 +69,7 @@ audience:
 - Granularity matters — too coarse hides threats, too fine is noisy
 
 ---
+
 ## Data Store
 
 - Where data lives at rest: databases, caches, queues, file systems
@@ -71,6 +79,7 @@ audience:
 - Note encryption, retention, access controls per store
 
 ---
+
 ## Data Flow
 
 - An arrow showing data moving from A to B
@@ -80,6 +89,7 @@ audience:
 - Encryption status of the flow itself is a threat-relevant property
 
 ---
+
 ## Trust Boundary
 
 - A dashed line where trust changes
@@ -89,6 +99,7 @@ audience:
 - Where threats live — almost every threat crosses a boundary
 
 ---
+
 ## Levels of Detail
 
 - Level 0 (context) — system as a single bubble, external entities around it
@@ -98,6 +109,7 @@ audience:
 - Match the level to the threat-modeling task at hand
 
 ---
+
 ## Drawing Order Matters
 
 - Start with external entities — who/what is on the outside?
@@ -107,6 +119,7 @@ audience:
 - Draw trust boundaries last — they emerge from the structure
 
 ---
+
 ## A Practical Walkthrough
 
 - E-commerce checkout: user, web app, payment service, order DB
@@ -116,6 +129,7 @@ audience:
 - Trust boundaries: between user and web app, between web app and payment service
 
 ---
+
 ## Anti-Patterns to Avoid
 
 - Drawing UML class diagrams — wrong tool, no data flows
@@ -125,6 +139,7 @@ audience:
 - Inconsistent levels of detail across the same diagram
 
 ---
+
 ## DFDs for Distributed Systems
 
 - Each microservice is a process — and a trust boundary if owned by another team
@@ -134,6 +149,7 @@ audience:
 - Be explicit: which network call is mTLS, which is plaintext?
 
 ---
+
 ## DFDs and Cloud
 
 - Managed services are external entities you partly trust
@@ -143,6 +159,7 @@ audience:
 - Capture cloud-specific assumptions explicitly
 
 ---
+
 ## DFDs and APIs
 
 - Each endpoint is a data flow with input and output
@@ -152,6 +169,7 @@ audience:
 - An API gateway sits at a major trust boundary
 
 ---
+
 ## Tools for DFDs
 
 - Pen and whiteboard — fastest first pass
@@ -161,6 +179,7 @@ audience:
 - OWASP Threat Dragon — open-source, threat-aware
 
 ---
+
 ## Diagrams as Code
 
 - PlantUML, Mermaid, Structurizr — text-based diagrams
@@ -170,6 +189,7 @@ audience:
 - Recommended for teams that produce many threat models
 
 ---
+
 ## Keeping DFDs Current
 
 - A DFD that doesn't match the system is worse than no DFD
@@ -179,6 +199,7 @@ audience:
 - Aim for usable, not exhaustive
 
 ---
+
 ## Quality Checklist
 
 - Every external entity reaches a process via a data flow
@@ -188,6 +209,7 @@ audience:
 - The diagram fits on one screen at the chosen level
 
 ---
+
 ## Summary
 
 - DFDs are the foundation of threat modeling

@@ -10,9 +10,11 @@ audience:
   - audiences:senior-developers
 
 ---
+
 # RAG: Grounding Claude in Your Data
 
 ---
+
 ## What This Chapter Covers
 
 - The problem RAG solves
@@ -23,6 +25,7 @@ audience:
 - RAG vs long context vs fine-tuning
 
 ---
+
 ## The Problem
 
 - Claude does not know your private data
@@ -31,6 +34,7 @@ audience:
 - The model is blind to your corpus
 
 ---
+
 ## Why "Just Paste It In" Stops Working
 
 - Your corpus is bigger than the window
@@ -39,6 +43,7 @@ audience:
 - Latency grows with input
 
 ---
+
 ## Why Fine-Tuning Is Usually Wrong
 
 - Slow and expensive to update
@@ -47,6 +52,7 @@ audience:
 - Most teams do not need it
 
 ---
+
 ## RAG In One Sentence
 
 - Retrieve relevant text, then generate
@@ -55,6 +61,7 @@ audience:
 - Sources can be cited
 
 ---
+
 ## Anatomy Of A RAG Pipeline
 
 - Ingestion
@@ -65,11 +72,13 @@ audience:
 - Generation
 
 ---
+
 ## The Pipeline Visualized
 
 ![rag_pipeline](svg/courses/ai/claude-workshop/07_rag/rag_pipeline.svg)
 
 ---
+
 ## Ingestion
 
 - Crawl or pull source documents
@@ -78,6 +87,7 @@ audience:
 - Track provenance
 
 ---
+
 ## Chunking
 
 - Break docs into retrievable pieces
@@ -86,11 +96,13 @@ audience:
 - Boundaries should not destroy meaning
 
 ---
+
 ## Chunking With Overlap
 
 ![chunking](svg/courses/ai/claude-workshop/07_rag/chunking.svg)
 
 ---
+
 ## Embeddings
 
 - Turn text into a vector
@@ -99,6 +111,7 @@ audience:
 - Cost per token applies
 
 ---
+
 ## The Vector Store
 
 - A database that does vector search
@@ -107,6 +120,7 @@ audience:
 - Often supports hybrid search
 
 ---
+
 ## Retrieval At Query Time
 
 - Embed the user query
@@ -115,6 +129,7 @@ audience:
 - Pass to the model
 
 ---
+
 ## Composing The Final Prompt
 
 - A system prompt with rules
@@ -123,6 +138,7 @@ audience:
 - Maybe a few-shot example
 
 ---
+
 ## Choosing The Embedding Model
 
 - Quality varies dramatically
@@ -131,6 +147,7 @@ audience:
 - Re-embedding is expensive
 
 ---
+
 ## Choosing The Vector Store
 
 - Postgres + pgvector for small scale
@@ -139,6 +156,7 @@ audience:
 - Filter support matters
 
 ---
+
 ## Chunk Size And Overlap
 
 - Too small: lose context
@@ -147,6 +165,7 @@ audience:
 - Tune on real queries
 
 ---
+
 ## Retrieval Quality
 
 - The whole pipeline rides on this
@@ -155,6 +174,7 @@ audience:
 - Iterate before going further
 
 ---
+
 ## Why Naive Cosine Disappoints
 
 - Embeddings encode similarity, not relevance
@@ -163,6 +183,7 @@ audience:
 - Hybrid helps
 
 ---
+
 ## Hybrid Search With BM25
 
 - BM25 catches keyword matches
@@ -171,6 +192,7 @@ audience:
 - Hybrid beats either alone
 
 ---
+
 ## Reranking
 
 - A second pass over top-k
@@ -179,6 +201,7 @@ audience:
 - Use on top-50 to pick top-5
 
 ---
+
 ## Evaluating Retrieval
 
 - Build a labeled set of queries
@@ -187,6 +210,7 @@ audience:
 - Fix retrieval before fixing prompts
 
 ---
+
 ## Wiring RAG Into Claude
 
 - Expose retrieval as an MCP tool
@@ -195,6 +219,7 @@ audience:
 - The model cites the source
 
 ---
+
 ## Letting Claude Decide When To Retrieve
 
 - Describe the tool clearly
@@ -203,6 +228,7 @@ audience:
 - Sometimes force it via instructions
 
 ---
+
 ## Citing Sources
 
 - Each chunk has an ID and a URL
@@ -211,6 +237,7 @@ audience:
 - Hallucinations get caught
 
 ---
+
 ## RAG Vs Long Context
 
 - Long context: stuff it all in
@@ -219,6 +246,7 @@ audience:
 - RAG: complex, scales further
 
 ---
+
 ## RAG Vs Fine-Tuning
 
 - Fine-tune for style and behavior
@@ -227,11 +255,13 @@ audience:
 - Most teams need RAG before tuning
 
 ---
+
 ## Three Approaches Compared
 
 ![rag_vs_alternatives](svg/courses/ai/claude-workshop/07_rag/rag_vs_alternatives.svg)
 
 ---
+
 ## Combining Sensibly
 
 - Tune a small model for tone
@@ -240,6 +270,7 @@ audience:
 - Measure end-to-end
 
 ---
+
 ## Common Failure Modes
 
 - Stale indexes
@@ -248,6 +279,7 @@ audience:
 - No evaluation at all
 
 ---
+
 ## Hands-On Exercise
 
 - Build a minimal RAG pipeline

@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Sequence Labeling
 
 ---
+
 ## What This Chapter Covers
 
 - Sequence labeling as a unifying frame for many `NLP` tasks
@@ -22,6 +24,7 @@ audience:
 - Neural taggers: BiLSTM-CRF, transformer-based, and span-based approaches
 
 ---
+
 ## Sequence Labeling As A Unifying Task
 
 - Many problems reduce to assigning a label to every token in a sequence
@@ -30,6 +33,7 @@ audience:
 - A model that ignores label structure leaves accuracy on the table
 
 ---
+
 ## Why Per-Token Labels Need Structure
 
 - A label sequence must be consistent — `I-PER` cannot follow `B-LOC`
@@ -38,6 +42,7 @@ audience:
 - The decoder must search the space of valid label sequences, not single-position argmax
 
 ---
+
 ## The IOB Tagging Scheme
 
 - `B-X` marks the beginning of a span of type `X`
@@ -46,6 +51,7 @@ audience:
 - The classical scheme, simple and widely supported
 
 ---
+
 ## IOB Edge Cases
 
 - Two adjacent spans of the same type need a `B-X` to mark the second beginning
@@ -54,6 +60,7 @@ audience:
 - "IOB" without qualification today usually means `IOB2`
 
 ---
+
 ## BIOES And BILOU
 
 - `BIOES` adds `E-X` for end-of-span and `S-X` for single-token spans
@@ -62,11 +69,13 @@ audience:
 - They also make the label space larger and the data slightly sparser per label
 
 ---
+
 ## Tagging Schemes Compared
 
 ![tagging_schemes](svg/courses/ai/natural-language-processing/11_sequence_labeling/tagging_schemes.svg)
 
 ---
+
 ## Choosing A Scheme
 
 - `BIOES` and `BILOU` consistently match or beat `IOB2` on entity recognition
@@ -75,6 +84,7 @@ audience:
 - Whichever scheme — apply it consistently to training, evaluation, and post-processing
 
 ---
+
 ## Hidden Markov Models
 
 - A generative model of `(tokens, labels)` jointly
@@ -83,6 +93,7 @@ audience:
 - Joint probability factorizes over the chain
 
 ---
+
 ## HMM Joint Probability
 
 - `P(x, y) = P(y_1) * prod_t P(y_t | y_{t-1}) * P(x_t | y_t)`
@@ -91,6 +102,7 @@ audience:
 - Inference is finding the most probable label sequence given the tokens
 
 ---
+
 ## Viterbi Decoding
 
 - Dynamic programming over the trellis of label states across time
@@ -99,11 +111,13 @@ audience:
 - Linear in sequence length, quadratic in label set size
 
 ---
+
 ## Viterbi Trellis
 
 ![viterbi_trellis](svg/courses/ai/natural-language-processing/11_sequence_labeling/viterbi_trellis.svg)
 
 ---
+
 ## A Minimal Viterbi In Code
 
 ```python
@@ -124,6 +138,7 @@ def viterbi(obs, init, trans, emit):
 - Use log-probabilities in practice to avoid underflow
 
 ---
+
 ## Forward And Backward Probabilities
 
 - Forward `alpha_t(j)` — total probability of all paths ending in state `j` at time `t`
@@ -132,6 +147,7 @@ def viterbi(obs, init, trans, emit):
 - The same recurrences as Viterbi but with sum instead of max
 
 ---
+
 ## Baum-Welch Training
 
 - The `EM` algorithm for `HMMs` — used when labels are unobserved
@@ -140,6 +156,7 @@ def viterbi(obs, init, trans, emit):
 - Converges to a local optimum; sensitive to initialization
 
 ---
+
 ## When HMMs Make Sense
 
 - Small labeled corpora — closed-form training is data-efficient
@@ -148,6 +165,7 @@ def viterbi(obs, init, trans, emit):
 - Pedagogically essential — every later model is a discriminative or neural relaxation
 
 ---
+
 ## HMM Limitations
 
 - Generative — must model `P(x | y)`, which is wasteful when we only need `P(y | x)`
@@ -156,6 +174,7 @@ def viterbi(obs, init, trans, emit):
 - These limits motivate the discriminative models that follow
 
 ---
+
 ## Maximum Entropy Markov Models
 
 - Discriminative — model `P(y_t | y_{t-1}, x)` directly
@@ -164,6 +183,7 @@ def viterbi(obs, init, trans, emit):
 - Allows arbitrary input features without modeling the input distribution
 
 ---
+
 ## MEMM Features
 
 - Word identity, prefixes, suffixes, capitalization, shape
@@ -172,6 +192,7 @@ def viterbi(obs, init, trans, emit):
 - Previous label is just another feature — no need for a generative emission model
 
 ---
+
 ## The Label Bias Problem
 
 - Each step's distribution is locally normalized — sums to one over next labels
@@ -180,11 +201,13 @@ def viterbi(obs, init, trans, emit):
 - The model can ignore observations that contradict a confident path
 
 ---
+
 ## Label Bias Illustrated
 
 ![label_bias](svg/courses/ai/natural-language-processing/11_sequence_labeling/label_bias.svg)
 
 ---
+
 ## Conditional Random Fields
 
 - Discriminative like `MEMM` but globally normalized
@@ -193,6 +216,7 @@ def viterbi(obs, init, trans, emit):
 - The partition function `Z(x)` sums over all label sequences
 
 ---
+
 ## Linear-Chain CRF
 
 - Most common form — features couple adjacent labels and the input
@@ -201,6 +225,7 @@ def viterbi(obs, init, trans, emit):
 - Training maximizes conditional log-likelihood with gradient descent
 
 ---
+
 ## Why CRFs Solve Label Bias
 
 - Global normalization compares whole sequences, not local steps
@@ -209,6 +234,7 @@ def viterbi(obs, init, trans, emit):
 - No state is forced to push probability forward — it can simply receive less mass overall
 
 ---
+
 ## CRF Training
 
 - Compute the gradient of conditional log-likelihood
@@ -217,6 +243,7 @@ def viterbi(obs, init, trans, emit):
 - L-BFGS, SGD, or Adam — any convex optimizer works since the objective is concave in features
 
 ---
+
 ## CRF Inference
 
 - Viterbi for the most likely label sequence
@@ -225,6 +252,7 @@ def viterbi(obs, init, trans, emit):
 - All linear in sequence length, quadratic in label count
 
 ---
+
 ## Neural Sequence Labelers
 
 - Replace hand-crafted features with learned representations
@@ -233,11 +261,13 @@ def viterbi(obs, init, trans, emit):
 - Pair with a `CRF` layer to enforce label structure at decode time
 
 ---
+
 ## BiLSTM-CRF
 
 ![bilstm_crf](svg/courses/ai/natural-language-processing/11_sequence_labeling/bilstm_crf.svg)
 
 ---
+
 ## BiLSTM-CRF In Practice
 
 ```python
@@ -257,6 +287,7 @@ class BilstmCrf(nn.Module):
 - Emission scores from the network; transition scores learned by the `CRF`
 
 ---
+
 ## Transformer-Based Labelers
 
 - Fine-tune a pretrained encoder (`BERT`, `RoBERTa`, `DeBERTa`) with a token classification head
@@ -265,6 +296,7 @@ class BilstmCrf(nn.Module):
 - The dominant approach for production sequence labeling today
 
 ---
+
 ## Subword Alignment
 
 - Pretrained tokenizers split words into subwords; gold labels are word-level
@@ -273,6 +305,7 @@ class BilstmCrf(nn.Module):
 - At inference, aggregate subword predictions back to word level
 
 ---
+
 ## Span-Based Approaches
 
 - Predict spans directly instead of token-by-token labels
@@ -281,6 +314,7 @@ class BilstmCrf(nn.Module):
 - Used in modern entity recognition and event extraction systems
 
 ---
+
 ## Span vs Token Labeling
 
 - Token labeling — fast, well-understood, struggles with nested entities
@@ -289,6 +323,7 @@ class BilstmCrf(nn.Module):
 - Choice depends on the dataset's annotation guidelines
 
 ---
+
 ## Evaluating Sequence Labelers
 
 - Token-level accuracy is misleading — `O` dominates the label distribution
@@ -297,6 +332,7 @@ class BilstmCrf(nn.Module):
 - Report per-type breakdown — average `F1` can hide collapsed performance on rare types
 
 ---
+
 ## Common Anti-Patterns
 
 - Reporting token accuracy instead of span `F1`
@@ -305,6 +341,7 @@ class BilstmCrf(nn.Module):
 - Ignoring subword alignment — the model trains on a different label structure than expected
 
 ---
+
 ## When To Use Which Model
 
 - Tiny dataset, fast deployment — `HMM` or `CRF` with hand-crafted features
@@ -313,6 +350,7 @@ class BilstmCrf(nn.Module):
 - Nested or overlapping entities — span-based model on top of a transformer
 
 ---
+
 ## Summary
 
 - Sequence labeling unifies tagging, chunking, and entity recognition under one frame

@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Performance Tuning
 
 ---
+
 ## What This Chapter Covers
 
 - Hardware considerations: storage, RAM, filesystem cache, CPU
@@ -22,6 +24,7 @@ audience:
 - Hot-warm-cold tiered architecture
 
 ---
+
 ## Hardware: Storage
 
 - Use local SSDs (NVMe preferred) for hot indexing and search workloads
@@ -31,6 +34,7 @@ audience:
 - DBA rule: storage latency is usually the first bottleneck under search load
 
 ---
+
 ## Hardware: RAM and Filesystem Cache
 
 - Split RAM between the JVM heap and the OS filesystem cache
@@ -47,6 +51,7 @@ audience:
 - Lucene relies on the filesystem cache, so leaving RAM free is not waste
 
 ---
+
 ## Hardware: CPU
 
 - More cores help concurrent search and aggregation throughput
@@ -60,6 +65,7 @@ bootstrap.memory_lock: true
 ```
 
 ---
+
 ## Index Optimization for Bulk Load
 
 - Use the `_bulk` API and parallel client threads to saturate ingest
@@ -82,6 +88,7 @@ PUT /bulk-target/_settings
 ```
 
 ---
+
 ## More Index-Time Tuning
 
 - Let Elasticsearch auto-generate IDs when possible; explicit IDs force an existence check
@@ -91,6 +98,7 @@ PUT /bulk-target/_settings
 - Increase `index.translog.flush_threshold_size` for very heavy ingest bursts
 
 ---
+
 ## Query Optimization
 
 - Prefer filter context for non-scoring conditions to enable caching
@@ -101,6 +109,7 @@ PUT /bulk-target/_settings
 - Pre-aggregate or use rollups for repetitive dashboard queries over old data
 
 ---
+
 ## Node Query Cache
 
 - Caches results of filter-context clauses per segment
@@ -119,6 +128,7 @@ GET /_nodes/stats/indices/query_cache?human
 ```
 
 ---
+
 ## Shard Request Cache
 
 - Caches the full response of search requests where `size: 0` (aggregations only)
@@ -136,6 +146,7 @@ GET /metrics/_search?request_cache=true
 - The cache is invalidated on refresh, so it favors read-mostly indices
 
 ---
+
 ## Fielddata Cache
 
 - `fielddata` is the in-memory store for sorting and aggregating on `text` fields
@@ -151,6 +162,7 @@ PUT /_cluster/settings
 - DBA rule: uncontrolled fielddata is a leading cause of heap exhaustion
 
 ---
+
 ## Thread Pool Tuning
 
 - Elasticsearch maintains separate thread pools for `search`, `write`, and others
@@ -166,6 +178,7 @@ GET /_cat/thread_pool/search,write?v&h=node_name,name,active,queue,rejected
 - Prefer fixing the workload over inflating pool sizes
 
 ---
+
 ## Circuit Breakers
 
 - Circuit breakers abort operations that would exceed memory limits, preventing OOM
@@ -181,6 +194,7 @@ GET /_nodes/stats/breakers?human
 - A tripped breaker raises `circuit_breaking_exception` — investigate the query, do not just raise the limit
 
 ---
+
 ## Index Slow Log
 
 - Logs indexing operations slower than configured thresholds, per shard
@@ -197,6 +211,7 @@ PUT /products/_settings
 - Use it to find pathological documents or overly heavy analysis chains
 
 ---
+
 ## Search Slow Log
 
 - Logs queries slower than thresholds, separately for the query and fetch phases
@@ -215,6 +230,7 @@ PUT /products/_settings
 - Feed slow log output into `_profile` to find the offending clauses
 
 ---
+
 ## Hot-Warm-Cold Architecture
 
 - Tier nodes by hardware and assign indices by age and access frequency
@@ -230,6 +246,7 @@ PUT /_cluster/settings
 ```
 
 ---
+
 ## Index Lifecycle Management
 
 - ILM automates rollover, tier migration, force-merge, shrink, and deletion
@@ -248,6 +265,7 @@ PUT /_ilm/policy/logs-policy
 - Rollover by size keeps shards near the 50 GB target automatically
 
 ---
+
 ## Operational Summary
 
 - Leave half of RAM for the filesystem cache; cap heap near 31 GB and lock memory

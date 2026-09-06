@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Text Classification and Sentiment Analysis
 
 ---
+
 ## What This Chapter Covers
 
 - Classification fundamentals and class imbalance realities
@@ -21,6 +23,7 @@ audience:
 - Evaluation that survives skewed labels and adversarial reviewers
 
 ---
+
 ## Why Text Classification Still Matters
 
 - Most production NLP is classification under the hood
@@ -29,6 +32,7 @@ audience:
 - A simple model that ships beats a transformer that does not generalize
 
 ---
+
 ## Binary, Multi-Class, Multi-Label
 
 - Binary: one of two labels — `spam` or `not spam`
@@ -37,11 +41,13 @@ audience:
 - The loss function and metric must match the regime; mismatching them silently rewards the wrong thing
 
 ---
+
 ## Classification Regimes
 
 ![classification_regimes](svg/courses/ai/natural-language-processing/10_text_classification_and_sentiment/classification_regimes.svg)
 
 ---
+
 ## Class Imbalance
 
 - Real-world labels are rarely balanced — fraud is 0.1%, abuse is 2%, sentiment is 70/20/10
@@ -50,6 +56,7 @@ audience:
 - Treat imbalance as a first-class design constraint, not a postprocessing knob
 
 ---
+
 ## Sampling Strategies
 
 - Random oversampling of the minority class — risk of overfit on duplicates
@@ -58,6 +65,7 @@ audience:
 - Class weights in the loss avoid touching the data at all
 
 ---
+
 ## Threshold and Operating Points
 
 - A binary classifier outputs a probability; the threshold turns it into a decision
@@ -66,6 +74,7 @@ audience:
 - Pick a different threshold per deployment context, not globally
 
 ---
+
 ## Naive Bayes for Text
 
 - Assume features (words) are independent given the class — wrong but useful
@@ -74,6 +83,7 @@ audience:
 - Still the right baseline for a quick spam filter or topic classifier
 
 ---
+
 ## Logistic Regression with N-Grams
 
 - Linear model on bag-of-n-grams features — interpretable and fast
@@ -82,6 +92,7 @@ audience:
 - Often within a few points of much larger neural models on standard benchmarks
 
 ---
+
 ## SVMs for Text
 
 - Maximum-margin separator in a high-dimensional sparse space
@@ -90,11 +101,13 @@ audience:
 - Kernels rarely help on text; the linear case is usually enough
 
 ---
+
 ## Classical Classifiers Compared
 
 ![classical_classifiers](svg/courses/ai/natural-language-processing/10_text_classification_and_sentiment/classical_classifiers.svg)
 
 ---
+
 ## Feature Engineering vs Feature Learning
 
 - Classical pipelines: hand-crafted features, lexicons, length, punctuation counts
@@ -103,6 +116,7 @@ audience:
 - The right question is not "which" but "how much labeled data do I have"
 
 ---
+
 ## CNNs for Text
 
 - 1D convolutions over word embeddings — each filter learns a phrase pattern
@@ -111,6 +125,7 @@ audience:
 - Fast, parallel, and competitive with recurrent models on classification
 
 ---
+
 ## LSTMs and BiLSTMs
 
 - `LSTM` reads left-to-right and accumulates context in a hidden state
@@ -119,6 +134,7 @@ audience:
 - Largely superseded by transformers but still useful for small models and edge devices
 
 ---
+
 ## Transformer-Based Classifiers
 
 - Take a pretrained encoder like `BERT` or `RoBERTa`, add a classification head
@@ -127,6 +143,7 @@ audience:
 - The default modern choice when labeled data is in the thousands and up
 
 ---
+
 ## Sentiment Analysis Dimensions
 
 - Polarity: positive, negative, neutral — the textbook task
@@ -135,11 +152,13 @@ audience:
 - Treating sentiment as binary throws away most of the signal a real review carries
 
 ---
+
 ## Sentiment Beyond Polarity
 
 ![sentiment_dimensions](svg/courses/ai/natural-language-processing/10_text_classification_and_sentiment/sentiment_dimensions.svg)
 
 ---
+
 ## Aspect-Based Sentiment
 
 - A review is rarely uniformly positive or negative
@@ -148,6 +167,7 @@ audience:
 - Useful for product analytics, support triage, and competitive intelligence
 
 ---
+
 ## Emotion Detection
 
 - Polarity collapses anger, sadness, and fear into a single negative score
@@ -156,6 +176,7 @@ audience:
 - Annotation is harder; agreement between annotators is lower
 
 ---
+
 ## Lexicon-Based Sentiment
 
 - Hand-built lists assign a polarity score to each word — `VADER`, `SentiWordNet`, `LIWC`
@@ -164,6 +185,7 @@ audience:
 - Brittle on sarcasm, domain-specific vocabulary, and code-switched text
 
 ---
+
 ## Learned vs Lexicon-Based
 
 - Lexicons capture surface vocabulary; learned models capture context
@@ -172,6 +194,7 @@ audience:
 - The hybrid usually beats either alone
 
 ---
+
 ## Domain Adaptation: The Problem
 
 - Training on movie reviews, deploying on product reviews — out-of-distribution drift
@@ -180,6 +203,7 @@ audience:
 - Always evaluate on the target domain, even if labels are scarce
 
 ---
+
 ## Out-of-Domain Generalization
 
 - Models that look identical in-domain can differ wildly out-of-domain
@@ -188,6 +212,7 @@ audience:
 - The right baseline is the worst-case domain, not the average
 
 ---
+
 ## Transfer Learning for Classifiers
 
 - Pretrain a large model on unlabeled text; fine-tune on a small labeled set
@@ -196,6 +221,7 @@ audience:
 - Has effectively replaced training from scratch for most production tasks
 
 ---
+
 ## Continued Pretraining on Domain Text
 
 - When the target domain differs sharply (legal, biomedical, code)
@@ -204,11 +230,13 @@ audience:
 - Cheap relative to from-scratch pretraining; expensive relative to plain fine-tuning
 
 ---
+
 ## Domain Adaptation Strategies
 
 ![domain_adaptation](svg/courses/ai/natural-language-processing/10_text_classification_and_sentiment/domain_adaptation.svg)
 
 ---
+
 ## Accuracy Is Not Enough
 
 - Accuracy is the headline metric and the most misleading one under imbalance
@@ -217,6 +245,7 @@ audience:
 - `F1`: harmonic mean of precision and recall — penalizes imbalance between them
 
 ---
+
 ## Confusion Matrices for Multi-Class
 
 - Rows are true labels; columns are predictions; diagonal is correct
@@ -225,6 +254,7 @@ audience:
 - Often the most useful single artifact for debugging a classifier
 
 ---
+
 ## Confusion Matrix Example
 
 ```diagram
@@ -239,6 +269,7 @@ true   pos    [180    15     5]
 - `neutral` leaks into both `pos` and `neg` — a known weak spot
 
 ---
+
 ## ROC and PR Curves
 
 - `ROC`: true positive rate against false positive rate as the threshold moves
@@ -247,6 +278,7 @@ true   pos    [180    15     5]
 - Pick PR over ROC when positives are rare; ROC can look great while PR is dismal
 
 ---
+
 ## Stratified Cross-Validation
 
 - Random folds can put all the rare class into one fold by accident
@@ -255,6 +287,7 @@ true   pos    [180    15     5]
 - Combine with repeated runs for tight confidence intervals on small test sets
 
 ---
+
 ## A Minimal Classification Pipeline
 
 ```python
@@ -273,6 +306,7 @@ preds = pipe.predict(test_texts)
 - A solid baseline in a dozen lines — beat this before reaching for transformers
 
 ---
+
 ## Anti-Patterns
 
 - Reporting accuracy on imbalanced data without a baseline
@@ -282,6 +316,7 @@ preds = pipe.predict(test_texts)
 - Ignoring domain shift until the model meets production traffic
 
 ---
+
 ## When To Use Which Classifier
 
 - Tens of examples: prompt a strong pretrained model, no fine-tuning
@@ -290,6 +325,7 @@ preds = pipe.predict(test_texts)
 - Millions: train a domain-specific encoder from scratch may pay off
 
 ---
+
 ## Summary
 
 - Match the model to the data scale, not to the conference paper of the year

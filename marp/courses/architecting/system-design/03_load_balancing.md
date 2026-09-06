@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Load Balancing
 
 ---
+
 ## What This Chapter Covers
 
 - What load balancing is
@@ -22,6 +24,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## What Load Balancing Is
 
 - Distribute traffic across multiple servers
@@ -31,16 +34,19 @@ audience:
 - Foundation of scalable systems
 
 ---
+
 ## Strategies Overview
 
 ![lb_strategies](svg/courses/architecting/system-design/03_load_balancing/lb_strategies.svg)
 
 ---
+
 ## Algorithms
 
 ![lb_algorithms](svg/courses/architecting/system-design/03_load_balancing/lb_algorithms.svg)
 
 ---
+
 ## Layer 4 (Transport)
 
 - Operates on TCP / UDP
@@ -50,6 +56,7 @@ audience:
 - Use for: non-HTTP, performance-critical
 
 ---
+
 ## Layer 7 (Application)
 
 - Understands HTTP, gRPC
@@ -59,6 +66,7 @@ audience:
 - Examples: nginx, AWS ALB, Envoy
 
 ---
+
 ## Algorithms: Round Robin
 
 - Each request goes to the next backend in turn
@@ -67,6 +75,7 @@ audience:
 - Default in many tools
 
 ---
+
 ## Algorithms: Least Connections
 
 - Pick the backend with the fewest active connections
@@ -75,6 +84,7 @@ audience:
 - Common default in modern LBs
 
 ---
+
 ## Algorithms: Weighted
 
 - Each backend has a weight; gets proportional traffic
@@ -83,6 +93,7 @@ audience:
 - Mostly: prefer uniform fleets
 
 ---
+
 ## Algorithms: Hash-Based
 
 - Hash a key (e.g., client IP); always route to same backend
@@ -91,6 +102,7 @@ audience:
 - Drawback: rebalances when fleet changes
 
 ---
+
 ## Health Checks
 
 - LB pings each backend periodically
@@ -99,6 +111,7 @@ audience:
 - Tune frequency: too often = chatty; too rare = slow recovery
 
 ---
+
 ## Sticky Sessions
 
 - Same client always hits same backend
@@ -107,6 +120,7 @@ audience:
 - Better: stateless servers, cookie-based session in DB
 
 ---
+
 ## Tools: nginx
 
 - Versatile L7 LB
@@ -116,6 +130,7 @@ audience:
 - The default for many setups
 
 ---
+
 ## Tools: HAProxy
 
 - Strong L4 + L7 LB
@@ -124,6 +139,7 @@ audience:
 - Used at scale (Stripe, GitHub)
 
 ---
+
 ## Tools: Cloud LBs
 
 - AWS ALB, NLB, Classic LB
@@ -133,6 +149,7 @@ audience:
 - Pay per request + per hour
 
 ---
+
 ## DNS Load Balancing
 
 - Multiple A records for one domain
@@ -142,6 +159,7 @@ audience:
 - Often: DNS at the global tier; LB at the regional tier
 
 ---
+
 ## Common LB Mistakes
 
 - One LB, single point of failure

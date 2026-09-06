@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Dual-Core: Booting CPU2 And IPCC
 
 ---

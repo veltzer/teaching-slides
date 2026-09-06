@@ -7,19 +7,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Mutations
 
 ---
+
 ## Inputs and Payloads
 
 ![mutation_pattern](svg/courses/networking/graphql/04_mutations/mutation_pattern.svg)
 
 ---
+
 ## Validating Inputs
 
 ![input_validation](svg/courses/networking/graphql/04_mutations/input_validation.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Mutation basics
@@ -29,6 +33,7 @@ audience:
 - Optimistic updates
 
 ---
+
 ## Basic Mutation
 
 ```graphql
@@ -44,6 +49,7 @@ mutation {
 - Returns just-created or just-updated state
 
 ---
+
 ## Input Type
 
 ```graphql
@@ -58,6 +64,7 @@ input CreateUserInput {
 - Versionable
 
 ---
+
 ## Payload Type
 
 ```graphql
@@ -72,6 +79,7 @@ type CreateUserPayload {
 - Mutation-specific shape
 
 ---
+
 ## Mutation Naming
 
 - Verb + Noun: createUser, updatePost, deleteComment
@@ -79,6 +87,7 @@ type CreateUserPayload {
 - Pair with input/payload type names
 
 ---
+
 ## Atomicity
 
 - Single mutation: one transaction
@@ -86,6 +95,7 @@ type CreateUserPayload {
 - Each runs serially server-side
 
 ---
+
 ## Multiple Mutations
 
 ```graphql
@@ -100,6 +110,7 @@ mutation {
 - Not transactional across them
 
 ---
+
 ## Errors
 
 - Top-level errors array (transport)
@@ -107,6 +118,7 @@ mutation {
 - Distinguish: validation vs system errors
 
 ---
+
 ## Domain Errors Pattern
 
 - Mutation always succeeds at transport layer
@@ -115,6 +127,7 @@ mutation {
 - Fewer try/catches
 
 ---
+
 ## Idempotency
 
 - Client-supplied key in input
@@ -122,6 +135,7 @@ mutation {
 - Critical for retries on flaky networks
 
 ---
+
 ## Optimistic Updates
 
 - Client updates UI before server confirms
@@ -130,6 +144,7 @@ mutation {
 - Better UX
 
 ---
+
 ## File Uploads
 
 - GraphQL multipart spec
@@ -137,6 +152,7 @@ mutation {
 - Apollo Server, others support
 
 ---
+
 ## Subscriptions for Side Effects
 
 - Mutate; subscribe to changes
@@ -144,6 +160,7 @@ mutation {
 - Real-time apps
 
 ---
+
 ## Common Mutation Mistakes
 
 - Returning bare scalars (Boolean) instead of payload

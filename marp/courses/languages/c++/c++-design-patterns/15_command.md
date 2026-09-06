@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Command Pattern
 
 ---

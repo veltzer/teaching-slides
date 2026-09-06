@@ -9,9 +9,11 @@ audience:
   - audiences:security-professionals
 
 ---
+
 # Kubernetes Threat Landscape
 
 ---
+
 ## What This Chapter Covers
 
 - Why Kubernetes security is its own discipline
@@ -21,6 +23,7 @@ audience:
 - Defense in depth strategy
 
 ---
+
 ## Why Kubernetes Security Matters
 
 - Kubernetes runs production for most modern companies
@@ -30,6 +33,7 @@ audience:
 - Multiple layers — each needs hardening
 
 ---
+
 ## The 4Cs of Cloud-Native Security
 
 - Cloud — provider account, IAM, networking
@@ -39,16 +43,19 @@ audience:
 - Each is necessary; none is sufficient
 
 ---
+
 ## 4Cs Visualized
 
 ![4cs](svg/courses/security/kubernetes-security/01_threat_landscape/4cs.svg)
 
 ---
+
 ## Common Attack Surfaces
 
 ![attack_surfaces](svg/courses/security/kubernetes-security/01_threat_landscape/attack_surfaces.svg)
 
 ---
+
 ## Cloud Layer
 
 - Identity and access management
@@ -58,6 +65,7 @@ audience:
 - Most cloud breaches are misconfiguration
 
 ---
+
 ## Cluster Layer
 
 - API server authentication and authorization
@@ -67,6 +75,7 @@ audience:
 - Control plane upgrade hygiene
 
 ---
+
 ## Container Layer
 
 - Image provenance and scanning
@@ -76,6 +85,7 @@ audience:
 - Non-root users
 
 ---
+
 ## Code Layer
 
 - Application vulnerabilities (OWASP-style)
@@ -84,6 +94,7 @@ audience:
 - Out of scope for this course; not out of scope for security
 
 ---
+
 ## Threat Actors
 
 - Opportunistic scanners — automated discovery of misconfigs
@@ -93,11 +104,13 @@ audience:
 - Each warrants different defenses
 
 ---
+
 ## Actor Profiles
 
 ![threat_actors](svg/courses/security/kubernetes-security/01_threat_landscape/threat_actors.svg)
 
 ---
+
 ## Common Attack Paths
 
 - Exposed dashboard or API server
@@ -107,6 +120,7 @@ audience:
 - Compromised CI/CD pipeline pushing malicious images
 
 ---
+
 ## The Most Common Misconfigs
 
 - Containers running as root
@@ -116,6 +130,7 @@ audience:
 - Weak RBAC: cluster-admin everywhere
 
 ---
+
 ## Pod Escape Scenarios
 
 - Privileged container → host root
@@ -125,6 +140,7 @@ audience:
 - Each is a designed-in danger; restrict via Pod Security Standards
 
 ---
+
 ## RBAC Pitfalls
 
 - ClusterRole/ClusterRoleBinding sprawl
@@ -134,6 +150,7 @@ audience:
 - Lack of audit on what was granted
 
 ---
+
 ## Network Threats
 
 - East-west traffic without policies
@@ -143,6 +160,7 @@ audience:
 - Default-deny network policies fix most of this
 
 ---
+
 ## Supply Chain Threats
 
 - Compromised base images
@@ -152,6 +170,7 @@ audience:
 - Always verify provenance; sign and verify
 
 ---
+
 ## Etcd Compromise
 
 - Etcd holds all cluster state, including secrets
@@ -161,6 +180,7 @@ audience:
 - Etcd network exposure is critical
 
 ---
+
 ## Kubelet Compromise
 
 - Kubelet runs on every node
@@ -170,6 +190,7 @@ audience:
 - Compromise = node compromise
 
 ---
+
 ## API Server Exposure
 
 - The brain of the cluster
@@ -179,6 +200,7 @@ audience:
 - Audit log every request
 
 ---
+
 ## Defense in Depth
 
 - No single control suffices
@@ -189,6 +211,7 @@ audience:
 - Layer them all
 
 ---
+
 ## Compliance Frameworks
 
 - CIS Kubernetes Benchmark — most-used baseline
@@ -198,6 +221,7 @@ audience:
 - Each maps to specific Kubernetes controls
 
 ---
+
 ## CIS Benchmark
 
 - Hundreds of recommendations
@@ -207,6 +231,7 @@ audience:
 - Starting point for every serious cluster
 
 ---
+
 ## Course Roadmap
 
 - Chapter 2: Pod Security Standards
@@ -216,6 +241,7 @@ audience:
 - Chapter 6: Runtime Security and Hardening
 
 ---
+
 ## Common Misconceptions
 
 - "Cloud provider handles security" — only the cluster floor; you secure your workloads
@@ -225,6 +251,7 @@ audience:
 - "RBAC is just RBAC" — it's a complex skill in itself
 
 ---
+
 ## What Tools Exist
 
 - kube-bench — CIS benchmark scanner
@@ -235,6 +262,7 @@ audience:
 - Each fits a different layer
 
 ---
+
 ## Summary
 
 - The 4Cs frame Kubernetes security: Cloud, Cluster, Container, Code

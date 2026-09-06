@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Point Estimation Theory
 
 ---
+
 ## What This Chapter Covers
 
 - Risk, loss, and how we rank estimators
@@ -21,11 +23,13 @@ audience:
 - Admissibility, minimaxity, and Stein's surprise
 
 ---
+
 ## Bias, Variance, And MSE
 
 ![bias variance mse](svg/courses/math/statistics-theory/10_point_estimation_theory/bias_variance_mse.svg)
 
 ---
+
 ## Loss, Risk, And How To Rank Estimators
 
 - Fix a parameter &psi;(&theta;) and an estimator &delta;(X). A **loss function** L(&theta;, a) &geq; 0 prices the error of guessing a; the **risk** is the expected loss R(&theta;, &delta;) = E&#952;[ L(&theta;, &delta;(X)) ]
@@ -35,6 +39,7 @@ audience:
 - &delta; is **inadmissible** if some other estimator has risk &leq; R(&theta;, &delta;) for all &theta; and strictly smaller somewhere — a baseline sanity check, not a guarantee of being good
 
 ---
+
 ## The Bias&ndash;Variance Decomposition
 
 - For squared-error loss, **MSE&#952;(&delta;) = Var&#952;(&delta;) + ( bias&#952;(&delta;) )&sup2;**, where bias&#952;(&delta;) = E&#952;[&delta;] &minus; &psi;(&theta;)
@@ -44,6 +49,7 @@ audience:
 - Practical upshot: compare estimators by **risk (MSE)**, not by unbiasedness alone
 
 ---
+
 ## Fisher Information
 
 - For a model with density f(x | &theta;) (regularity conditions: support free of &theta;, smooth, can differentiate under the integral), the **score** is U(&theta;) = &part;/&part;&theta; log f(X | &theta;); it has mean zero, E&#952;[U(&theta;)] = 0
@@ -53,6 +59,7 @@ audience:
 - Multivariate &theta;: I(&theta;) is the **information matrix** E&#952;[ U U&#7488; ] = &minus;E&#952;[ Hessian of log f ], positive semidefinite; it reparametrizes by the Jacobian rule
 
 ---
+
 ## The Cramér&ndash;Rao Lower Bound
 
 - Under the regularity conditions, **any unbiased estimator** &delta; of &psi;(&theta;) satisfies **Var&#952;(&delta;) &geq; ( &psi;'(&theta;) )&sup2; / I_n(&theta;)** — a floor on precision no unbiased procedure can beat
@@ -62,6 +69,7 @@ audience:
 - Biased estimators *can* have variance below the unbiased CRLB (no contradiction — different target); there are CRLB-type bounds for the biased case too, with a (1 + bias')&sup2; numerator
 
 ---
+
 ## Efficiency And UMVU Estimators
 
 - An unbiased estimator is **efficient** if it attains the Cramér&ndash;Rao bound; its **efficiency** is the ratio (CRLB) / Var&#952;(&delta;) &isin; (0, 1] — how close to the floor it sits
@@ -71,6 +79,7 @@ audience:
 - Asymptotically, the MLE is efficient (it attains the CRLB in the limit) — the finite-sample story is what this slide is about
 
 ---
+
 ## Rao&ndash;Blackwell And Lehmann&ndash;Scheffé
 
 - **Rao&ndash;Blackwell theorem**: take *any* unbiased estimator &delta;(X) and a sufficient statistic T; define &delta;*(T) = E[ &delta;(X) | T ]. Then &delta;* is unbiased for the same &psi;(&theta;) and **Var&#952;(&delta;*) &leq; Var&#952;(&delta;)** for all &theta; — conditioning on a sufficient statistic *never hurts and usually helps* ("Rao&ndash;Blackwellization")
@@ -80,6 +89,7 @@ audience:
 - Construction recipe, in practice: (1) find a complete sufficient T (full-rank exponential family &#8658; the natural statistic); (2) write down *any* simple unbiased estimator; (3) take its conditional expectation given T — or, often easier, directly find the function of T that is unbiased
 
 ---
+
 ## Beyond Unbiasedness: Admissibility, Minimax, Stein
 
 - Dropping the unbiasedness straitjacket, the relevant optimality notions are **admissibility** (not uniformly dominated) and **minimaxity** (smallest worst-case risk, min over &delta; of max over &theta; of R)
@@ -89,6 +99,7 @@ audience:
 - So: UMVUE is the right target *if you've decided to be unbiased*; once you care about risk per se, shrinkage is often strictly better
 
 ---
+
 ## Estimation Theory In Code
 
 ```python
@@ -109,6 +120,7 @@ print(f"E ~ {theta**2}: naive {naive.mean():.2f} (var {naive.var():.1f})  vs RB 
 ```
 
 ---
+
 ## Common Mistakes
 
 - Hunting for a "uniformly best" estimator — risk curves cross; you must restrict the class or summarize the risk

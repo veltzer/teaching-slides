@@ -10,9 +10,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Practical Application With Containers and Kubernetes
 
 ---
+
 ## Why This Chapter
 
 - Kubernetes wasn't around when twelve-factor was written
@@ -21,11 +23,13 @@ audience:
 - And makes Kubernetes deployment straightforward
 
 ---
+
 ## Mapping to K8s
 
 ![twelve_factor_in_k8s](svg/courses/architecting/twelve-factor-app/15_kubernetes_application/twelve_factor_in_k8s.svg)
 
 ---
+
 ## Factor I: Codebase
 
 - One codebase → one container image
@@ -34,6 +38,7 @@ audience:
 - Helm chart or Kustomize tracks the deployment configuration
 
 ---
+
 ## Factor II: Dependencies
 
 - The Dockerfile declares OS and runtime dependencies
@@ -42,6 +47,7 @@ audience:
 - Multi-stage builds keep the image small and explicit
 
 ---
+
 ## Factor III: Config
 
 - ConfigMap for non-sensitive config
@@ -50,6 +56,7 @@ audience:
 - Per-environment ConfigMap/Secret = per-environment deploy
 
 ---
+
 ## Factor IV: Backing Services
 
 - Service objects abstract internal services (DNS-based)
@@ -58,6 +65,7 @@ audience:
 - The pod doesn't know if Postgres is in-cluster or in RDS
 
 ---
+
 ## Factor V: Build, Release, Run
 
 - Build: CI builds the image, pushes to a registry
@@ -66,6 +74,7 @@ audience:
 - Rollback: change the image tag, apply again
 
 ---
+
 ## Factor VI: Processes
 
 - Each pod is a stateless process
@@ -74,6 +83,7 @@ audience:
 - A pod dying is not a problem; the Deployment replaces it
 
 ---
+
 ## Factor VII: Port Binding
 
 - The container listens on a port (declared in the Dockerfile)
@@ -82,6 +92,7 @@ audience:
 - The app reads `$PORT` from the container's env
 
 ---
+
 ## Factor VIII: Concurrency
 
 - A Deployment has a `replicas` field — that's the process count
@@ -90,6 +101,7 @@ audience:
 - Each Deployment scales independently
 
 ---
+
 ## Factor IX: Disposability
 
 - Liveness probe: is the pod still alive? (restart if not)
@@ -98,6 +110,7 @@ audience:
 - preStop hook: cleanup actions before SIGTERM
 
 ---
+
 ## Probe Configuration Sketch
 
 ```yaml
@@ -115,6 +128,7 @@ terminationGracePeriodSeconds: 30
 - Operators see "not ready" pods removed from the load balancer
 
 ---
+
 ## Factor X: Dev/Prod Parity
 
 - Same image in dev, staging, prod
@@ -123,6 +137,7 @@ terminationGracePeriodSeconds: 30
 - Helm value files differ per environment, not the image
 
 ---
+
 ## Factor XI: Logs
 
 - The app writes to stdout
@@ -131,6 +146,7 @@ terminationGracePeriodSeconds: 30
 - The app does nothing log-management-related
 
 ---
+
 ## Factor XII: Admin Processes
 
 - Kubernetes Job runs a one-off task
@@ -139,6 +155,7 @@ terminationGracePeriodSeconds: 30
 - Cron tasks: CronJob (also a one-off, on a schedule)
 
 ---
+
 ## A Migration Job Sketch
 
 ```yaml
@@ -161,6 +178,7 @@ spec:
 - Same image, same config, different command — that's factor XII
 
 ---
+
 ## Putting It Together: A Twelve-Factor App in Kubernetes
 
 - A Deployment for `web`, with HPA, probes, and a Service
@@ -171,6 +189,7 @@ spec:
 - All built from one image; deployed by a Helm chart or Kustomize overlay
 
 ---
+
 ## What This Chapter Doesn't Cover
 
 - Service mesh, mTLS, network policies — security extensions
@@ -179,6 +198,7 @@ spec:
 - These build **on** twelve-factor, not against it
 
 ---
+
 ## Course Recap
 
 - Each factor: a small commitment with a large payoff
@@ -187,6 +207,7 @@ spec:
 - Modern extensions (telemetry, security, API-first) build on the foundation
 
 ---
+
 ## Where to Apply This Tomorrow
 
 - Audit one service against the twelve factors
@@ -196,6 +217,7 @@ spec:
 - A team that internalizes the factors ships faster and operates with less drama
 
 ---
+
 ## Summary
 
 - Every factor maps to Kubernetes primitives cleanly

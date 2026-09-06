@@ -12,11 +12,13 @@ audience:
   - audiences:managers
 
 ---
+
 # Core Principles of DevOps
 
 Understanding the fundamental principles that drive DevOps practices
 
 ---
+
 ## CALMS
 
 ![calms](svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/calms.svg)

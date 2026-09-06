@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Branches
 
 ---
@@ -547,11 +548,13 @@ git branch backup-$(date +%Y%m%d-%H%M%S)
 ![branch_protection_strategies](svg/courses/git/git/06_branches/branch_protection_strategies.svg)
 
 ---
+
 ## Gitflow Workflow
 
 ![gitflow_workflow](svg/courses/git/git/06_branches/gitflow_workflow.svg)
 
 ---
+
 ## GitHub Flow
 
 ![github_flow](svg/courses/git/git/06_branches/github_flow.svg)

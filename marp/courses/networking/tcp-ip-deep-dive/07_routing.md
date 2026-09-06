@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Routing
 
 ---
+
 ## What This Chapter Covers
 
 - Routing fundamentals
@@ -21,6 +23,7 @@ audience:
 - Cloud-era routing realities
 
 ---
+
 ## What Is Routing?
 
 - Deciding where to forward a packet
@@ -30,6 +33,7 @@ audience:
 - The internet works hop by hop
 
 ---
+
 ## Routing Table
 
 - Destination prefix → next hop, interface
@@ -39,11 +43,13 @@ audience:
 - View: `ip route show` (Linux)
 
 ---
+
 ## Routing Decision Visualized
 
 ![routing](svg/courses/networking/tcp-ip-deep-dive/07_routing/routing.svg)
 
 ---
+
 ## Static Routing
 
 - Manually configured routes
@@ -53,6 +59,7 @@ audience:
 - Dangerous at scale (operational burden)
 
 ---
+
 ## Dynamic Routing
 
 - Routers exchange topology information
@@ -62,11 +69,13 @@ audience:
 - The default for any non-trivial network
 
 ---
+
 ## Protocol Families
 
 ![routing_protocols](svg/courses/networking/tcp-ip-deep-dive/07_routing/routing_protocols.svg)
 
 ---
+
 ## Distance-Vector
 
 - Each router knows distance + next hop per destination
@@ -76,6 +85,7 @@ audience:
 - Slow convergence on big topologies
 
 ---
+
 ## Link-State
 
 - Each router knows the full topology
@@ -85,6 +95,7 @@ audience:
 - Faster convergence, more memory
 
 ---
+
 ## Open Shortest Path First
 
 - Open Shortest Path First
@@ -94,6 +105,7 @@ audience:
 - Standard in enterprise
 
 ---
+
 ## Areas
 
 - Area 0 (backbone)
@@ -103,6 +115,7 @@ audience:
 - Key for scalability
 
 ---
+
 ## BGP
 
 - Border Gateway Protocol
@@ -112,11 +125,13 @@ audience:
 - Carries hundreds of thousands of routes
 
 ---
+
 ## BGP Visualized
 
 ![bgp_path](svg/courses/networking/tcp-ip-deep-dive/07_routing/bgp_path.svg)
 
 ---
+
 ## External vs Internal BGP
 
 - External BGP: between different autonomous systems
@@ -126,6 +141,7 @@ audience:
 - Route reflectors scale internal BGP
 
 ---
+
 ## BGP Path Selection
 
 - Highest local preference
@@ -137,6 +153,7 @@ audience:
 - Policy reigns
 
 ---
+
 ## BGP Communities
 
 - Tags attached to routes
@@ -146,6 +163,7 @@ audience:
 - Provider-specific tags too
 
 ---
+
 ## Route Filtering
 
 - Don't accept anything you don't expect
@@ -155,6 +173,7 @@ audience:
 - Defenses against route hijacks
 
 ---
+
 ## Anycast
 
 - Same IP advertised from many locations
@@ -164,6 +183,7 @@ audience:
 - Foundation of geographic load balancing
 
 ---
+
 ## Equal-Cost Multi-Path
 
 - Equal-Cost Multi-Path
@@ -173,6 +193,7 @@ audience:
 - Used in data centers heavily
 
 ---
+
 ## Cloud Routing Reality
 
 - Cloud providers manage most routing
@@ -182,6 +203,7 @@ audience:
 - More routing policy, less protocol
 
 ---
+
 ## Software-Defined Networking
 
 - Centralized control plane
@@ -191,6 +213,7 @@ audience:
 - Traditional routing protocols still important
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting default route
@@ -200,6 +223,7 @@ audience:
 - Convergence storms after a major outage
 
 ---
+
 ## Routing Tools
 
 - `ip route` (Linux), `route print` (Windows)
@@ -209,6 +233,7 @@ audience:
 - `bgpq3` for prefix lists from internet registries
 
 ---
+
 ## Asymmetric Routing
 
 - Outbound and inbound paths differ
@@ -218,6 +243,7 @@ audience:
 - Common cause of "works one way" issues
 
 ---
+
 ## Public-Key Route Authorization
 
 - Resource Public Key Infrastructure
@@ -227,6 +253,7 @@ audience:
 - Adoption growing; required by some peers
 
 ---
+
 ## Multi-Cloud Routing
 
 - Pre-arranged peering or transit
@@ -236,6 +263,7 @@ audience:
 - Latency, cost, complexity all factor
 
 ---
+
 ## Common Operational Patterns
 
 - Route aggregation reduces table size
@@ -245,6 +273,7 @@ audience:
 - ASN reservation per organization
 
 ---
+
 ## Summary
 
 - Routing: each hop decides next hop based on prefix match

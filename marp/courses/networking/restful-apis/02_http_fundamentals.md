@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # HTTP Fundamentals
 
 ---
+
 ## Request &amp; Response
 
 ![http_request](svg/courses/networking/restful-apis/02_http_fundamentals/http_request.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - HTTP request and response
@@ -26,6 +29,7 @@ audience:
 - HTTP versions
 
 ---
+
 ## HTTP Request Anatomy
 
 - Method (GET, POST, ...)
@@ -34,6 +38,7 @@ audience:
 - Optional body
 
 ---
+
 ## HTTP Response Anatomy
 
 - Status code (200, 404, ...)
@@ -42,6 +47,7 @@ audience:
 - Same model as request
 
 ---
+
 ## Methods
 
 - GET: read
@@ -52,6 +58,7 @@ audience:
 - HEAD, OPTIONS: meta
 
 ---
+
 ## Method Properties
 
 - Safe: no side effects (GET, HEAD)
@@ -59,6 +66,7 @@ audience:
 - POST: typically neither
 
 ---
+
 ## Status Code Classes
 
 - 1xx: informational
@@ -68,6 +76,7 @@ audience:
 - 5xx: server error
 
 ---
+
 ## Common 2xx
 
 - 200 OK
@@ -76,6 +85,7 @@ audience:
 - 204 No Content
 
 ---
+
 ## Common 4xx
 
 - 400 Bad Request
@@ -86,6 +96,7 @@ audience:
 - 422 Unprocessable
 
 ---
+
 ## Common 5xx
 
 - 500 Internal Server Error
@@ -94,6 +105,7 @@ audience:
 - 504 Gateway Timeout
 
 ---
+
 ## Headers
 
 - Metadata for request and response
@@ -103,6 +115,7 @@ audience:
 - CORS: Access-Control-*
 
 ---
+
 ## Content Types
 
 - application/json: most common
@@ -111,6 +124,7 @@ audience:
 - text/html: web pages
 
 ---
+
 ## HTTP / 1.1 vs 2 vs 3
 
 - 1.1: text protocol, head-of-line blocking
@@ -119,6 +133,7 @@ audience:
 - API consumers usually unaware
 
 ---
+
 ## TLS
 
 - HTTPS: HTTP over TLS
@@ -127,6 +142,7 @@ audience:
 - Free certs via Let's Encrypt
 
 ---
+
 ## Common HTTP Mistakes
 
 - Returning 200 with error in body
@@ -136,6 +152,7 @@ audience:
 - Logging sensitive headers (Authorization)
 
 ---
+
 ## HTTP Method Semantics
 
 ![http_methods](svg/courses/networking/restful-apis/02_http_fundamentals/http_methods.svg)

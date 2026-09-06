@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Hypothesis Testing
 
 ---
+
 ## What This Chapter Covers
 
 - The null and alternative hypotheses
@@ -21,11 +23,13 @@ audience:
 - The relationship between tests and confidence intervals
 
 ---
+
 ## Null Distribution and Rejection Regions
 
 ![null_and_rejection](svg/courses/math/statistics-applied/11_hypothesis_testing/null_and_rejection.svg)
 
 ---
+
 ## The Core Idea
 
 - You have a claim ("the new design changed conversion") and noisy data
@@ -35,6 +39,7 @@ audience:
 - It never *proves* anything; it controls how often you cry wolf
 
 ---
+
 ## Null And Alternative
 
 - **Null hypothesis (H&#8320;)**: the boring default — no effect, no difference
@@ -44,6 +49,7 @@ audience:
 - The asymmetry is deliberate: the burden of proof is on the effect
 
 ---
+
 ## Test Statistic And p-Value
 
 - A **test statistic** condenses the data into one number measuring "distance from H&#8320;" (a t, z, F, or &chi;&sup2; value)
@@ -53,6 +59,7 @@ audience:
 - p &lt; 0.05 is the customary threshold (&alpha;) — convention, not magic
 
 ---
+
 ## What Significance Does Not Mean
 
 - "Statistically significant" &#8800; "large", "important", or "real-world meaningful"
@@ -62,6 +69,7 @@ audience:
 - Always report the **effect size** alongside the p-value — the size is the point
 
 ---
+
 ## Two Kinds Of Error
 
 - **Type I error** (false positive): reject H&#8320; when it's true — probability &alpha;, you set it (usually 0.05)
@@ -71,11 +79,13 @@ audience:
 - Underpowered studies waste effort and litter the literature with false negatives
 
 ---
+
 ## Type I and Type II Errors
 
 ![error_types](svg/courses/math/statistics-applied/11_hypothesis_testing/error_types.svg)
 
 ---
+
 ## One-Sided vs Two-Sided
 
 - **Two-sided**: "is it different?" — splits &alpha; across both tails (the safe default)
@@ -85,6 +95,7 @@ audience:
 - When unsure, use two-sided
 
 ---
+
 ## Tests And Confidence Intervals Agree
 
 - A two-sided test at level &alpha; rejects H&#8320;: "mean = m&#8320;" exactly when m&#8320; falls outside the (1&minus;&alpha;) confidence interval
@@ -94,6 +105,7 @@ audience:
 - This is why many statisticians push CIs over bare p-values
 
 ---
+
 ## A Hypothesis Test In Python
 
 ```python
@@ -109,6 +121,7 @@ print(f"95% CI for the mean: [{lo:.1f}, {hi:.1f}]")
 ```
 
 ---
+
 ## Common Mistakes
 
 - Reading "p &lt; 0.05" as proof, or as "95% sure there's an effect"

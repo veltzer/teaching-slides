@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Key DevOps Practices
 Essential practices for successful DevOps implementation
 

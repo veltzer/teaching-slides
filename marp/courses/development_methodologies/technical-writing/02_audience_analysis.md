@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Audience Analysis
 
 ---
+
 ## Audience Quadrants
 
 ![audience_quadrants](svg/courses/development_methodologies/technical-writing/02_audience_analysis/audience_quadrants.svg)
@@ -21,6 +23,7 @@ audience:
 ![reader_personas](svg/courses/development_methodologies/technical-writing/02_audience_analysis/reader_personas.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why audience matters
@@ -31,6 +34,7 @@ audience:
 - Common audience mistakes
 
 ---
+
 ## Why Audience Matters
 
 - The same content, written for different audiences, becomes different documents
@@ -40,6 +44,7 @@ audience:
 - Knowing your audience is half the job
 
 ---
+
 ## Identifying Your Audience
 
 - Who reads this? (specifically)
@@ -49,6 +54,7 @@ audience:
 - What's their motivation?
 
 ---
+
 ## Common Engineering Audiences
 
 - Developers using your library
@@ -59,6 +65,7 @@ audience:
 - Future you, six months from now
 
 ---
+
 ## Tone Per Audience
 
 - Customer-facing: friendly, encouraging, supportive
@@ -68,6 +75,7 @@ audience:
 - Same content, very different prose
 
 ---
+
 ## Complexity Calibration
 
 - Beginner: define every term, explain every concept
@@ -77,6 +85,7 @@ audience:
 - A "Hello World" tutorial that drops into category theory has lost the audience
 
 ---
+
 ## User Personas
 
 - Documented profiles of typical readers
@@ -86,6 +95,7 @@ audience:
 - 2-3 personas; not a dozen
 
 ---
+
 ## Empathy
 
 - Imagine the reader: tired, frustrated, on a deadline
@@ -95,6 +105,7 @@ audience:
 - Writing with empathy is the difference between great docs and adequate ones
 
 ---
+
 ## "What Would I Have Wanted To Know?"
 
 - Think back to when you didn't know this thing
@@ -104,6 +115,7 @@ audience:
 - "I wish someone had told me X" — write that down
 
 ---
+
 ## Adjusting for International Audiences
 
 - Plain language: shorter sentences, common words
@@ -113,6 +125,7 @@ audience:
 - Cultural references: avoid
 
 ---
+
 ## Multi-Audience Documents
 
 - Some docs serve multiple audiences (READMEs, especially)
@@ -122,6 +135,7 @@ audience:
 - Most one-stop docs end up half-good for everyone
 
 ---
+
 ## When You Don't Know Your Audience
 
 - Ask
@@ -131,6 +145,7 @@ audience:
 - Better to write narrowly for a known audience than broadly for an imagined one
 
 ---
+
 ## Customer vs Internal Tone Examples
 
 - Customer: "If you encounter an issue, please reach out to our support team."
@@ -139,6 +154,7 @@ audience:
 - Match the tone to where the doc lives
 
 ---
+
 ## Empathy Anti-Patterns
 
 - "It's obvious that..."
@@ -148,6 +164,7 @@ audience:
 - Each one tells the reader they don't belong
 
 ---
+
 ## Common Audience Mistakes
 
 - Writing for the audience *you wish* you had instead of the one you have

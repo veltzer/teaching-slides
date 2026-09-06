@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Spark Core
 
 ---
+
 ## What is Spark Core?
 
 1. Foundation of Spark ecosystem

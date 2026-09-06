@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Cluster Management with YARN
 
 ---
+
 ## YARN Architecture Overview
 - Yet Another Resource Negotiator (YARN)
 - Second generation Hadoop compute platform
@@ -21,10 +23,12 @@ audience:
 - Enables multiple applications to share cluster resources
 
 ---
+
 ## Core Components
 ![core_components](svg/courses/big_data/apache-spark-with-python/06_yarn/core_components.svg)
 
 ---
+
 ## Key Components Explained
 1. Resource Manager (RM)
     - Global resource scheduler
@@ -51,11 +55,13 @@ audience:
     - Managed by Node Manager
 
 ---
+
 ## YARN Client Mode
 
 ![client_mode](svg/courses/big_data/apache-spark-with-python/06_yarn/client_mode.svg)
 
 ---
+
 ## YARN Client Mode Characteristics
 - Driver runs on client machine
 - Better for interactive applications
@@ -63,11 +69,13 @@ audience:
 - Good for development and debugging
 
 ---
+
 ## YARN Cluster Mode
 
 ![cluster_mode](svg/courses/big_data/apache-spark-with-python/06_yarn/cluster_mode.svg)
 
 ---
+
 ## YARN Cluster Mode Characteristics
 - Driver runs on cluster
 - Better for production
@@ -75,6 +83,7 @@ audience:
 - More reliable and scalable
 
 ---
+
 ## Configuration Examples
 
 ```yaml
@@ -96,6 +105,7 @@ spark-submit \
 ```
 
 ---
+
 ## Resource Allocation
 
 ```yaml
@@ -111,6 +121,7 @@ spark.driver.memory: 10g
 ```
 
 ---
+
 ## Memory Settings
 
 ```python
@@ -123,6 +134,7 @@ spark.conf.set("spark.yarn.executor.memoryOverhead", "4g")
 ```
 
 ---
+
 ## CPU Settings
 
 ```yaml
@@ -133,6 +145,7 @@ spark.task.cpus: 1
 ```
 
 ---
+
 ## Dynamic Allocation
 
 ```yaml
@@ -145,6 +158,7 @@ spark.dynamicAllocation.schedulerBacklogTimeout: 1s
 ```
 
 ---
+
 ## YARN Web UI
 - Resource Manager UI (port 8088)
     - Cluster overview
@@ -157,6 +171,7 @@ spark.dynamicAllocation.schedulerBacklogTimeout: 1s
     - Log access
 
 ---
+
 ## Logging Configuration
 
 ```yaml
@@ -171,6 +186,7 @@ spark.eventLog.dir: hdfs://namenode:8021/spark-logs
 ```
 
 ---
+
 ## Metrics Collection
 
 ```python
@@ -182,6 +198,7 @@ spark.conf.set("spark.metrics.conf.*.sink.graphite.port", "2003")
 ```
 
 ---
+
 ## Resource Issues
 1. Container Launch Failure
 
@@ -198,6 +215,7 @@ yarn logs -applicationId application_1234567890_0001
 ```
 
 ---
+
 ## Performance Issues
 1. Data Skew
 
@@ -215,6 +233,7 @@ spark.memory.storageFraction: 0.3
 ```
 
 ---
+
 ## Log Analysis
 ```bash
 # Aggregate logs
@@ -224,11 +243,13 @@ grep "ERROR" application_logs.txt
 ```
 
 ---
+
 ## Metrics Visualization
 
 ![metrics_visualization](svg/courses/big_data/apache-spark-with-python/06_yarn/metrics_visualization.svg)
 
 ---
+
 ## Resource Planning
 1. Calculate Resources
 
@@ -247,6 +268,7 @@ spark.executor.cores: 4
 ```
 
 ---
+
 ## Production Deployment
 
 ```yaml
@@ -260,6 +282,7 @@ yarn.resourcemanager.cluster-id: cluster1
 ```
 
 ---
+
 ## Monitoring Strategy
 1. Set up alerts
 1. Monitor key metrics
@@ -269,6 +292,7 @@ yarn.resourcemanager.cluster-id: cluster1
     - Latency
 
 ---
+
 ## Summary
 - YARN provides robust cluster management
 - Multiple deployment modes for different uses

@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Boot Sequence in Linux Systems
 
 ---

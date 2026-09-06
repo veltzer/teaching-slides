@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Instrumentation
 
 ---
+
 ## What This Chapter Covers
 
 - Auto-instrumentation
@@ -20,6 +22,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## Auto-Instrumentation
 
 - Library hooks into HTTP, DB, queues
@@ -28,11 +31,13 @@ audience:
 - Good baseline
 
 ---
+
 ## Instrumentation Levels
 
 ![instrumentation_levels](svg/courses/observability_and_monitoring/jaeger/02_instrumentation/instrumentation_levels.svg)
 
 ---
+
 ## Manual Spans
 
 - Wrap units of work
@@ -41,6 +46,7 @@ audience:
 - Add value beyond auto
 
 ---
+
 ## Span Lifecycle
 
 - Start
@@ -49,6 +55,7 @@ audience:
 - Sent asynchronously to collector
 
 ---
+
 ## Context Propagation
 
 - Trace ID flows across calls
@@ -57,11 +64,13 @@ audience:
 - Required for stitching
 
 ---
+
 ## Propagation Visualized
 
 ![context_propagation](svg/courses/observability_and_monitoring/jaeger/02_instrumentation/context_propagation.svg)
 
 ---
+
 ## Standard Headers
 
 - W3C Trace Context preferred
@@ -70,6 +79,7 @@ audience:
 - Test cross-service flows
 
 ---
+
 ## Service Names
 
 - Stable naming convention
@@ -78,6 +88,7 @@ audience:
 - Avoid renaming
 
 ---
+
 ## Span Names
 
 - Operation, not URL
@@ -86,6 +97,7 @@ audience:
 - Stable across requests
 
 ---
+
 ## Tags
 
 - Stable, low-cardinality keys
@@ -94,6 +106,7 @@ audience:
 - Avoid raw payloads
 
 ---
+
 ## Sensitive Data
 
 - No PII in tags
@@ -102,6 +115,7 @@ audience:
 - Compliance dictates
 
 ---
+
 ## Errors
 
 - Set error tag
@@ -110,6 +124,7 @@ audience:
 - Distinguish from successes
 
 ---
+
 ## Sampling
 
 - Head-based: decide at root
@@ -118,6 +133,7 @@ audience:
 - Force-sample interesting requests
 
 ---
+
 ## Async Work
 
 - Background workers create new spans
@@ -126,6 +142,7 @@ audience:
 - Document the choice
 
 ---
+
 ## Common Instrumentation Mistakes
 
 - High-cardinality span names

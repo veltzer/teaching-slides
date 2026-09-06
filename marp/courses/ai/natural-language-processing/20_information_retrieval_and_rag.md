@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Information Retrieval and RAG
 
 ---
+
 ## What This Chapter Covers
 
 - Classical information retrieval and the metrics that anchor it
@@ -22,6 +24,7 @@ audience:
 - Production realities: chunking, freshness, evaluation, and cost
 
 ---
+
 ## Why Information Retrieval Still Matters
 
 - The world has more text than any model can memorize
@@ -31,6 +34,7 @@ audience:
 - The piece of `LLM` infrastructure that runs at the largest scale
 
 ---
+
 ## The IR Setup
 
 - A query, a corpus of documents, and a need to rank documents by relevance
@@ -40,6 +44,7 @@ audience:
 - Domain shifts the relevance signal, not the architecture
 
 ---
+
 ## Classical IR: Boolean Retrieval
 
 - Documents are sets of terms; queries combine terms with `AND`, `OR`, `NOT`
@@ -49,6 +54,7 @@ audience:
 - The foundation that all later systems sit on
 
 ---
+
 ## TF-IDF Retrieval
 
 - Score documents by term frequency weighted by inverse document frequency
@@ -58,6 +64,7 @@ audience:
 - The strong baseline that survived for decades before neural retrievers
 
 ---
+
 ## BM25
 
 - A probabilistic refinement of `TF-IDF` from the 1990s
@@ -67,6 +74,7 @@ audience:
 - Often beats neural retrievers in the cold-start, out-of-domain regime
 
 ---
+
 ## BM25 Formula at a Glance
 
 - score(D, Q) = sum over terms in Q of `idf` × normalized term frequency
@@ -76,11 +84,13 @@ audience:
 - Implementations: `Lucene`, `Elasticsearch`, `Tantivy`, `Pyserini`
 
 ---
+
 ## Inverted Index Internals
 
 ![inverted_index](svg/courses/ai/natural-language-processing/20_information_retrieval_and_rag/inverted_index.svg)
 
 ---
+
 ## Dense Retrieval
 
 - Encode queries and documents into the same vector space
@@ -90,6 +100,7 @@ audience:
 - Captures semantic similarity that lexical methods miss
 
 ---
+
 ## Bi-Encoders
 
 - Two transformer encoders, one for queries and one for documents
@@ -99,6 +110,7 @@ audience:
 - Trade-off: less expressive than cross-encoders, much faster
 
 ---
+
 ## Sentence-Transformers
 
 ```python
@@ -119,6 +131,7 @@ print(docs[scores.argmax()])
 - Drop in a stronger model when quality matters more than latency
 
 ---
+
 ## Approximate Nearest Neighbor Search
 
 - Exact search over millions of vectors is too slow at query time
@@ -128,11 +141,13 @@ print(docs[scores.argmax()])
 - Recall and latency tuning is part of every retrieval system
 
 ---
+
 ## Sparse vs Dense Retrieval
 
 ![sparse_vs_dense](svg/courses/ai/natural-language-processing/20_information_retrieval_and_rag/sparse_vs_dense.svg)
 
 ---
+
 ## Hybrid Retrieval
 
 - Combine `BM25` and dense retrieval scores
@@ -142,6 +157,7 @@ print(docs[scores.argmax()])
 - Worth the small extra infrastructure cost
 
 ---
+
 ## Reranking
 
 - Take the top-100 results from retrieval and reorder them
@@ -151,6 +167,7 @@ print(docs[scores.argmax()])
 - Standard pattern in modern search and `RAG` pipelines
 
 ---
+
 ## Cross-Encoders
 
 - One transformer takes (query, document) as input and outputs a score
@@ -160,6 +177,7 @@ print(docs[scores.argmax()])
 - The accuracy ceiling for current retrieval systems
 
 ---
+
 ## Retrieval Evaluation Metrics
 
 - `Recall@K` — fraction of queries with the right document in the top K
@@ -169,6 +187,7 @@ print(docs[scores.argmax()])
 - Pick the metric that matches your downstream consumer
 
 ---
+
 ## Where RAG Fits
 
 - Use retrieval to pull relevant text into the prompt
@@ -178,11 +197,13 @@ print(docs[scores.argmax()])
 - The dominant pattern for grounded `LLM` applications
 
 ---
+
 ## RAG Architecture
 
 ![rag_architecture](svg/courses/ai/natural-language-processing/20_information_retrieval_and_rag/rag_architecture.svg)
 
 ---
+
 ## Document Chunking
 
 - Documents are split into passages of a few hundred tokens
@@ -192,6 +213,7 @@ print(docs[scores.argmax()])
 - Bad chunking is the hidden cause of most underperforming `RAG` systems
 
 ---
+
 ## Embedding Models for RAG
 
 - Choice of embedding model dominates retrieval quality
@@ -201,6 +223,7 @@ print(docs[scores.argmax()])
 - Watch out for embedding model drift between runs
 
 ---
+
 ## Query Rewriting
 
 - Raw user queries are often noisy or under-specified
@@ -210,6 +233,7 @@ print(docs[scores.argmax()])
 - Especially useful for conversational `RAG`
 
 ---
+
 ## Retrieval-Augmented Generation in Practice
 
 ```python
@@ -230,6 +254,7 @@ Answer:"""
 - Variations: rerank after retrieve, multi-hop, citation requirements
 
 ---
+
 ## Citations and Grounding
 
 - Make the model cite the chunk it relied on
@@ -239,6 +264,7 @@ Answer:"""
 - A trustworthy `RAG` system shows its sources
 
 ---
+
 ## RAG Failure Modes
 
 - Retrieval misses — the right chunk is not in the top-K
@@ -248,6 +274,7 @@ Answer:"""
 - Long context windows do not always cure these — they sometimes hide them
 
 ---
+
 ## Long Context vs RAG
 
 - Modern `LLMs` accept hundreds of thousands of tokens
@@ -257,6 +284,7 @@ Answer:"""
 - Reality: hybrid is the answer for almost every production system
 
 ---
+
 ## Caching and Cost
 
 - Cache embeddings — they are expensive to compute and rarely change
@@ -266,6 +294,7 @@ Answer:"""
 - Cost dominates `RAG` infrastructure planning
 
 ---
+
 ## RAG Evaluation
 
 - Retrieval metrics measure whether the right context was found
@@ -275,6 +304,7 @@ Answer:"""
 - Evaluate on real user questions, not curated benchmarks
 
 ---
+
 ## Common Production Pitfalls
 
 - Treating embeddings as a black box and never re-evaluating them
@@ -284,6 +314,7 @@ Answer:"""
 - Skipping incremental updates and rebuilding the index on every change
 
 ---
+
 ## Anti-Patterns
 
 - Embedding the entire web because storage is cheap
@@ -293,6 +324,7 @@ Answer:"""
 - Reporting `NDCG` from one corpus and inferring user satisfaction
 
 ---
+
 ## Summary
 
 - Information retrieval underpins both search and `RAG`

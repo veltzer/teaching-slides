@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Event Store Implementations
 
 ---
+
 ## What This Chapter Covers
 
 - What an event store must guarantee
@@ -23,6 +25,7 @@ audience:
 - Partitioning and scaling
 
 ---
+
 ## Requirements of an Event Store
 
 - **Append-only**: events are added, never updated or deleted
@@ -33,11 +36,13 @@ audience:
 - **Durability**: a successful append survives crashes
 
 ---
+
 ## Append-Only Log: The Core Idea
 
 ![append_only_log](svg/courses/architecting/cqrs-and-event-sourcing/05_event_store_implementations/append_only_log.svg)
 
 ---
+
 ## Two Levels of Stream
 
 - **Per-aggregate stream**: `order-42` — strict order, one writer
@@ -47,11 +52,13 @@ audience:
 - An event has a position in both
 
 ---
+
 ## Stream Layout
 
 ![stream_layout](svg/courses/architecting/cqrs-and-event-sourcing/05_event_store_implementations/stream_layout.svg)
 
 ---
+
 ## Optimistic Concurrency Control
 
 - Append takes `expected_version` — the version the writer thinks the stream is at
@@ -60,6 +67,7 @@ audience:
 - Cheap to implement; scales well; the write path stays single-writer per aggregate
 
 ---
+
 ## Optimistic Concurrency in SQL
 
 ```sql
@@ -75,6 +83,7 @@ VALUES ($1, $2, $3, $4);
 - Many production systems run on exactly this pattern
 
 ---
+
 ## EventStoreDB: Purpose-Built
 
 - Streams are first-class entities, not derived from tables
@@ -85,6 +94,7 @@ VALUES ($1, $2, $3, $4);
 - Open-source core, commercial cluster
 
 ---
+
 ## EventStoreDB Append
 
 ```python
@@ -106,6 +116,7 @@ client.append_to_stream(
 - Metadata is a separate, structured field
 
 ---
+
 ## EventStoreDB Subscription
 
 ```python
@@ -120,6 +131,7 @@ async for event in client.subscribe_to_all(from_position=last_position):
 - Restart resumes from the saved checkpoint
 
 ---
+
 ## Postgres as an Event Store
 
 - One table; an `events` table with columns:
@@ -131,6 +143,7 @@ async for event in client.subscribe_to_all(from_position=last_position):
 - Trustworthy, well-understood, easy to operate
 
 ---
+
 ## A Postgres Schema Sketch
 
 ```sql
@@ -149,6 +162,7 @@ CREATE INDEX events_stream_idx ON events (stream_id, version);
 ```
 
 ---
+
 ## Reading a Stream From Postgres
 
 ```sql
@@ -163,6 +177,7 @@ ORDER BY version ASC;
 - Pair with a snapshot table to short-circuit long streams (chapter 7)
 
 ---
+
 ## Postgres: The Projection Subscription
 
 - Polling: `SELECT ... WHERE global_position > $last`
@@ -171,6 +186,7 @@ ORDER BY version ASC;
 - All three work; choose based on latency and operational comfort
 
 ---
+
 ## Apache Kafka as an Event Log
 
 - Topic per aggregate type (`orders`, `payments`)
@@ -179,6 +195,7 @@ ORDER BY version ASC;
 - Across partitions, order is not — but that's fine because aggregates don't share partitions
 
 ---
+
 ## Kafka Append Semantics
 
 - Out of the box, Kafka does **not** support optimistic concurrency
@@ -187,16 +204,19 @@ ORDER BY version ASC;
 - Others use Kafka as the **integration log** and another store as the **system of record**
 
 ---
+
 ## Kafka as Event Log: Diagram
 
 ![kafka_as_event_log](svg/courses/architecting/cqrs-and-event-sourcing/05_event_store_implementations/kafka_as_event_log.svg)
 
 ---
+
 ## Comparing the Three
 
 ![event_store_comparison](svg/courses/architecting/cqrs-and-event-sourcing/05_event_store_implementations/event_store_comparison.svg)
 
 ---
+
 ## Event Metadata
 
 - **event_id**: stable per-event UUID (idempotent appends)
@@ -207,6 +227,7 @@ ORDER BY version ASC;
 - **actor**: who issued the originating command
 
 ---
+
 ## Why Correlation and Causation Matter
 
 - **Correlation** — debugging: "show me everything that happened in this checkout"
@@ -215,11 +236,13 @@ ORDER BY version ASC;
 - Free to add, expensive to bolt on later
 
 ---
+
 ## Causation Chain
 
 ![causation_chain](svg/courses/architecting/cqrs-and-event-sourcing/05_event_store_implementations/causation_chain.svg)
 
 ---
+
 ## Partitioning Strategies
 
 - **By aggregate id**: each aggregate's events land together (the default)
@@ -228,6 +251,7 @@ ORDER BY version ASC;
 - The partition key affects both write throughput and projection ordering
 
 ---
+
 ## Hot Partition Anti-Pattern
 
 - A few aggregates produce most of the events
@@ -238,6 +262,7 @@ ORDER BY version ASC;
     - Accept the bottleneck if the aggregate is naturally hot (a daily summary aggregate)
 
 ---
+
 ## Scaling: Reads vs Writes
 
 - **Writes**: bounded by the slowest single-aggregate stream's append latency
@@ -246,6 +271,7 @@ ORDER BY version ASC;
 - **Writes scale by aggregate cardinality** — split aggregates into smaller ones if needed
 
 ---
+
 ## Snapshotting Is Coming
 
 - We will cover snapshots in chapter 7
@@ -254,6 +280,7 @@ ORDER BY version ASC;
 - Necessary when streams grow into thousands of events
 
 ---
+
 ## Operational Concerns
 
 - **Backups**: the event store is a high-value target for backup; frequent and tested
@@ -263,6 +290,7 @@ ORDER BY version ASC;
 - **Replay storms**: a full rebuild of all read models hammers the store; rate-limit
 
 ---
+
 ## A Practical Recommendation
 
 - Start with **Postgres** unless you already have something better
@@ -272,6 +300,7 @@ ORDER BY version ASC;
 - Re-evaluate as the system grows; the write path is small enough to migrate
 
 ---
+
 ## Common Mistakes
 
 - **Hot global stream**: every event going through one partition; rebuilds choke
@@ -281,6 +310,7 @@ ORDER BY version ASC;
 - **Schema-less events**: no contract; readers fail in silence
 
 ---
+
 ## Summary
 
 - The event store guarantees append-only writes, per-stream ordering, optimistic concurrency, and efficient subscriptions

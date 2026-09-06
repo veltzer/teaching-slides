@@ -9,6 +9,7 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Python Crash Course for Spark
 
 ---
@@ -18,12 +19,14 @@ audience:
 ![Python Fundamentals for Spark](svg/courses/big_data/apache-spark-with-python/01_python_crash_course/python_for_spark.svg)
 
 ---
+
 ## Course Introduction
 - Welcome to the Python fundamentals section
 - This crash course is designed for those familiar with programming but new to Python
 - We'll cover essential concepts needed for Spark development
 
 ---
+
 ## Variables and Data Types
 
 ```python
@@ -42,6 +45,7 @@ print(type(age))   # <class 'int'>
 ```
 
 ---
+
 ## Basic Operations
 
 ```python
@@ -62,6 +66,7 @@ repeated = "Hi " * 3
 ```
 
 ---
+
 ## Tuples
 
 ```python
@@ -75,6 +80,7 @@ nested = ((1, 2), (3, 4))
 ```
 
 ---
+
 ## Lists
 
 ```python
@@ -90,6 +96,7 @@ last = numbers.pop()
 ```
 
 ---
+
 ## List Comprehensions
 
 ```python
@@ -106,6 +113,7 @@ even_squares = [i**2 for i in range(10) if i % 2 == 0]
 ```
 
 ---
+
 ## Dictionaries
 
 ```python
@@ -124,6 +132,7 @@ values = person.values()
 ```
 
 ---
+
 ## Lambda Functions
 
 ```python
@@ -139,6 +148,7 @@ add = lambda x, y: x + y
 ```
 
 ---
+
 ## Common Use Cases
 
 ```python
@@ -155,6 +165,7 @@ sorted_pairs = sorted(pairs, key=lambda x: x[1])
 ```
 
 ---
+
 ## Python Best Practices for Spark
 - Use meaningful variable names
 - Follow PEP 8 guidelines
@@ -162,6 +173,7 @@ sorted_pairs = sorted(pairs, key=lambda x: x[1])
 - Use type hints when possible
 
 ---
+
 ## Memory Considerations
 
 ```python
@@ -173,6 +185,7 @@ data = (i**2 for i in range(1000000))
 ```
 
 ---
+
 ## Exercise: Basic Operations
 
 ```python
@@ -182,6 +195,7 @@ def convert_temp(celsius):
 ```
 
 ---
+
 ## Data Structure Manipulation
 
 ```python
@@ -196,6 +210,7 @@ total = sum(t["amount"] for t in transactions)
 ```
 
 ---
+
 ## Summary
 - Python's syntax is clean and readable
 - Key data structures: tuples, lists, dictionaries

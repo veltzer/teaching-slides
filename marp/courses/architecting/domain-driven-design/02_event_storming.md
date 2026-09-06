@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Event Storming and Domain Discovery
 
 ---
+
 ## What Event Storming Is
 
 - A workshop technique for exploring complex business domains
@@ -20,6 +22,7 @@ audience:
 - Output: a shared understanding of how the domain works
 
 ---
+
 ## Why Event Storming
 
 - Domain experts and developers often talk past each other
@@ -28,6 +31,7 @@ audience:
 - Every participant leaves with the same picture
 
 ---
+
 ## What You Need
 
 - A long wall (physical or virtual)
@@ -37,6 +41,7 @@ audience:
 - A facilitator
 
 ---
+
 ## Sticky Note Colors (Conventional)
 
 - **Orange**: domain events (past tense: "OrderPlaced")
@@ -46,16 +51,19 @@ audience:
 - **Purple**: policies and process managers
 
 ---
+
 ## Sticky Colors at a Glance
 
 ![sticky_colors](svg/courses/architecting/domain-driven-design/02_event_storming/sticky_colors.svg)
 
 ---
+
 ## Sticky Palette
 
 ![sticky_palette](svg/courses/architecting/domain-driven-design/02_event_storming/sticky_palette.svg)
 
 ---
+
 ## Three Levels of Event Storming
 
 - **Big Picture**: explore the whole domain; broad strokes
@@ -64,11 +72,13 @@ audience:
 - Each level builds on the previous
 
 ---
+
 ## Levels Compared
 
 ![storming_levels](svg/courses/architecting/domain-driven-design/02_event_storming/storming_levels.svg)
 
 ---
+
 ## Big Picture Storming
 
 - Goal: understand the domain end-to-end
@@ -78,6 +88,7 @@ audience:
 - Identify pain points, unknowns, hot spots
 
 ---
+
 ## Process Modeling Storming
 
 - Pick one process from the big picture
@@ -87,6 +98,7 @@ audience:
 - The flow becomes visible
 
 ---
+
 ## Software Design Storming
 
 - Closest to implementation
@@ -95,6 +107,7 @@ audience:
 - Output: a starting point for code
 
 ---
+
 ## Running an Event Storming
 
 - 2-4 hours per session
@@ -104,6 +117,7 @@ audience:
 - Frequent stand-back-and-discuss moments
 
 ---
+
 ## Hot Spots
 
 - Areas of the timeline where the team disagrees or is confused
@@ -112,6 +126,7 @@ audience:
 - Often: the most valuable parts of the workshop
 
 ---
+
 ## Pivotal Events
 
 - Events that mark major transitions in the domain
@@ -120,6 +135,7 @@ audience:
 - Often a clue to good service decomposition
 
 ---
+
 ## Outcomes of Event Storming
 
 - A shared model in everyone's head
@@ -129,6 +145,7 @@ audience:
 - A photo or digital archive of the workshop board
 
 ---
+
 ## When to Run an Event Storming
 
 - Starting a new project
@@ -138,6 +155,7 @@ audience:
 - Periodic alignment as understanding evolves
 
 ---
+
 ## Common Mistakes
 
 - Letting one expert dominate the workshop
@@ -146,6 +164,7 @@ audience:
 - Treating the output as final rather than a snapshot
 
 ---
+
 ## After the Workshop
 
 - Capture the board (photo or digital tool)
@@ -154,6 +173,7 @@ audience:
 - Schedule another session if hot spots are unresolved
 
 ---
+
 ## Tools
 
 - Physical: real walls, paper, stickies
@@ -162,6 +182,7 @@ audience:
 - The output matters more than the medium
 
 ---
+
 ## Domain Storytelling: A Cousin
 
 - Similar workshop technique
@@ -170,6 +191,7 @@ audience:
 - Use both in different contexts
 
 ---
+
 ## Anti-Patterns
 
 - Workshop without a domain expert
@@ -178,6 +200,7 @@ audience:
 - No follow-through into code
 
 ---
+
 ## Summary
 
 - Event storming is a fast, collaborative way to explore a domain

@@ -11,9 +11,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Putting It All Together
 
 ---
+
 ## What This Chapter Covers
 
 - Review of what we built
@@ -22,6 +24,7 @@ audience:
 - Where to go next
 
 ---
+
 ## What We Configured Today
 
 - A user-level settings.json
@@ -30,6 +33,7 @@ audience:
 - Allowlists and hooks
 
 ---
+
 ## What We Extended
 
 - One or more skills
@@ -38,6 +42,7 @@ audience:
 - A minimal RAG pipeline
 
 ---
+
 ## What We Practiced
 
 - Reading the token budget
@@ -46,6 +51,7 @@ audience:
 - Reading the diff before merging
 
 ---
+
 ## A Team Adoption Checklist
 
 - Pick a default model per project
@@ -54,11 +60,13 @@ audience:
 - Add hooks for lint and format
 
 ---
+
 ## The Checklist Visualized
 
 ![adoption_checklist](svg/courses/ai/claude-workshop/08_wrap_up/adoption_checklist.svg)
 
 ---
+
 ## Skills As Team Workflows
 
 - Identify three repeated workflows
@@ -67,6 +75,7 @@ audience:
 - Iterate on descriptions until they trigger
 
 ---
+
 ## Agents As An Org Habit
 
 - Use Explore for "where is X"
@@ -75,6 +84,7 @@ audience:
 - Read the diff every time
 
 ---
+
 ## MCP As Glue
 
 - Wrap one or two internal tools
@@ -83,6 +93,7 @@ audience:
 - Audit before installing
 
 ---
+
 ## RAG Where It Earns Its Keep
 
 - Internal knowledge bases
@@ -91,6 +102,7 @@ audience:
 - Compliance and legal lookup
 
 ---
+
 ## Pitfalls To Watch For
 
 - Treating the agent as omniscient
@@ -99,6 +111,7 @@ audience:
 - Ignoring the cost meter
 
 ---
+
 ## Cultural Pitfalls
 
 - "AI did it" as an excuse
@@ -107,6 +120,7 @@ audience:
 - Hoarding workflows on personal laptops
 
 ---
+
 ## Cost And Quality Levers
 
 - Pick the smallest model that works
@@ -115,6 +129,7 @@ audience:
 - Delegate to keep main context lean
 
 ---
+
 ## Security Levers
 
 - Allowlist narrowly
@@ -123,6 +138,7 @@ audience:
 - Never commit secrets
 
 ---
+
 ## Measuring Adoption
 
 - Time to first commit on a new feature
@@ -131,6 +147,7 @@ audience:
 - Developer satisfaction surveys
 
 ---
+
 ## Where To Go Next
 
 - Deeper dive into prompt engineering
@@ -139,6 +156,7 @@ audience:
 - Evaluating LLM systems
 
 ---
+
 ## Recommended Follow-Ups
 
 - A prompt engineering course
@@ -147,6 +165,7 @@ audience:
 - A team adoption workshop
 
 ---
+
 ## Final Thoughts
 
 - The tools shift fast, fundamentals do not
@@ -155,6 +174,7 @@ audience:
 - Have fun with it
 
 ---
+
 ## Thank You
 
 - Questions and discussion

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Jaeger
 
 ---
+
 ## What This Chapter Covers
 
 - What distributed tracing is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What Distributed Tracing Is
 
 - Track a request across services
@@ -28,6 +31,7 @@ audience:
 - Debug distributed systems
 
 ---
+
 ## Why Tracing
 
 - Logs are local
@@ -36,6 +40,7 @@ audience:
 - Bridge gap between local and global
 
 ---
+
 ## Why Jaeger
 
 - Open source
@@ -44,6 +49,7 @@ audience:
 - Wide language support
 
 ---
+
 ## Origins
 
 - Born at Uber
@@ -52,6 +58,7 @@ audience:
 - Strong ecosystem now
 
 ---
+
 ## Trace
 
 - One request from start to end
@@ -60,11 +67,13 @@ audience:
 - Stitched from many spans
 
 ---
+
 ## Vocabulary
 
 ![spans_terms](svg/courses/observability_and_monitoring/jaeger/01_introduction/spans_terms.svg)
 
 ---
+
 ## Span
 
 - Named operation in a trace
@@ -73,11 +82,13 @@ audience:
 - Has tags and logs
 
 ---
+
 ## Trace Tree
 
 ![trace_tree](svg/courses/observability_and_monitoring/jaeger/01_introduction/trace_tree.svg)
 
 ---
+
 ## Tags
 
 - Key-value metadata
@@ -86,6 +97,7 @@ audience:
 - Indexed on storage
 
 ---
+
 ## Logs Within Spans
 
 - Time-stamped events
@@ -94,6 +106,7 @@ audience:
 - Smaller than full logs
 
 ---
+
 ## Sampling
 
 - Most traces dropped to save cost
@@ -102,6 +115,7 @@ audience:
 - Tune to budget
 
 ---
+
 ## Architecture
 
 - Agents collect spans
@@ -110,6 +124,7 @@ audience:
 - Query and UI
 
 ---
+
 ## Storage Backends
 
 - Cassandra
@@ -118,6 +133,7 @@ audience:
 - Cloud-managed services
 
 ---
+
 ## OpenTelemetry Compatibility
 
 - Receive standard protocol
@@ -126,6 +142,7 @@ audience:
 - Industry default
 
 ---
+
 ## Course Outline
 
 - Instrumentation
@@ -135,6 +152,7 @@ audience:
 - Pitfalls
 
 ---
+
 ## Common Beginner Mistakes
 
 - Trace everything at 100%

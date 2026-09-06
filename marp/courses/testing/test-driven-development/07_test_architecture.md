@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Test Architecture
 
 ---
+
 ## AAA Pattern
 
 ![test_architecture](svg/courses/testing/test-driven-development/07_test_architecture/test_architecture.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The testing pyramid
@@ -27,6 +30,7 @@ audience:
 - Coverage metrics
 
 ---
+
 ## The Testing Pyramid
 
 - **Unit**: many; fast; isolated; the base
@@ -36,11 +40,13 @@ audience:
 - Inverted pyramid (mostly E2E) is a smell
 
 ---
+
 ## Pyramid Visualised
 
 ![test_pyramid](svg/courses/testing/test-driven-development/07_test_architecture/test_pyramid.svg)
 
 ---
+
 ## Why Pyramid Shape
 
 - Unit tests are fast and pinpoint failures
@@ -50,6 +56,7 @@ audience:
 - Cost / value ratio favours the bottom
 
 ---
+
 ## Unit Test Layer
 
 - One test, one unit (function or class)
@@ -59,6 +66,7 @@ audience:
 - The bedrock of fast feedback
 
 ---
+
 ## Integration Test Layer
 
 - Multiple components together
@@ -68,6 +76,7 @@ audience:
 - Run on every PR, not every save
 
 ---
+
 ## End-to-End Test Layer
 
 - The whole system, browser to database
@@ -77,6 +86,7 @@ audience:
 - Run nightly or pre-deploy
 
 ---
+
 ## Organising Test Suites
 
 - Mirror the production code structure
@@ -86,6 +96,7 @@ audience:
 - Whatever fits, use consistently
 
 ---
+
 ## Test Fixtures
 
 - Reusable setup code
@@ -95,6 +106,7 @@ audience:
 - Build once, share across tests
 
 ---
+
 ## pytest Fixtures
 
 ```python
@@ -119,6 +131,7 @@ def test_login(user):
 - Cleanup runs even on failure
 
 ---
+
 ## Test Data Management
 
 - **Inline**: each test creates its own data
@@ -128,6 +141,7 @@ def test_login(user):
 - Pick one; consistency aids debugging
 
 ---
+
 ## Factories
 
 ```python
@@ -149,6 +163,7 @@ user = UserFactory.create(role='admin')
 - Reduces "magic" data in tests
 
 ---
+
 ## Test Configuration
 
 - Different config per environment (test, integration, staging)
@@ -158,6 +173,7 @@ user = UserFactory.create(role='admin')
 - Special suites with markers (`@pytest.mark.slow`)
 
 ---
+
 ## Environment Setup
 
 - Test against a clean state
@@ -167,6 +183,7 @@ user = UserFactory.create(role='admin')
 - Order-independent
 
 ---
+
 ## Parallel Execution
 
 - Run tests in parallel across cores
@@ -176,6 +193,7 @@ user = UserFactory.create(role='admin')
 - Worth the upfront cleanup work
 
 ---
+
 ## What Breaks With Parallelism
 
 - Shared mutable state
@@ -185,6 +203,7 @@ user = UserFactory.create(role='admin')
 - Identify and fix; you'll be glad later
 
 ---
+
 ## Test Coverage
 
 - Percentage of code lines (or branches) executed by tests
@@ -194,6 +213,7 @@ user = UserFactory.create(role='admin')
 - 100% coverage doesn't mean bug-free
 
 ---
+
 ## Coverage Metrics
 
 - **Line**: did each line run?
@@ -203,6 +223,7 @@ user = UserFactory.create(role='admin')
 - Don't game the metric
 
 ---
+
 ## Coverage Gates
 
 - Fail PRs that drop coverage below a threshold
@@ -212,6 +233,7 @@ user = UserFactory.create(role='admin')
 - Either: gradual or hard threshold
 
 ---
+
 ## Common Architecture Mistakes
 
 - Inverted pyramid (mostly E2E)

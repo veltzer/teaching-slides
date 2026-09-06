@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Link Layer: Ethernet and MAC
 
 ---
+
 ## What This Chapter Covers
 
 - Ethernet framing
@@ -20,6 +22,7 @@ audience:
 - VLANs
 
 ---
+
 ## Ethernet History
 
 - Invented at Xerox in 1973
@@ -29,6 +32,7 @@ audience:
 - Most-used Layer 2 protocol on Earth
 
 ---
+
 ## Ethernet Frame Structure
 
 ```output
@@ -43,11 +47,13 @@ audience:
 - The frame-check field is a CRC-32 for integrity
 
 ---
+
 ## Frame Visualized
 
 ![frame](svg/courses/networking/tcp-ip-deep-dive/02_link_layer/frame.svg)
 
 ---
+
 ## Type Field
 
 - 0x0800 — IPv4
@@ -57,6 +63,7 @@ audience:
 - Tells receiver how to interpret payload
 
 ---
+
 ## MAC Addresses
 
 - 48 bits, 6 bytes
@@ -66,6 +73,7 @@ audience:
 - Globally unique by convention
 
 ---
+
 ## MAC Address Types
 
 - Unicast — single recipient
@@ -75,6 +83,7 @@ audience:
 - Bit 0 of first byte: I/G (individual/group)
 
 ---
+
 ## How Switches Work
 
 - Receive frame on a port
@@ -84,6 +93,7 @@ audience:
 - If unknown, flood to all ports (except input)
 
 ---
+
 ## MAC Learning Table
 
 - Switch maintains a per-port table
@@ -93,6 +103,7 @@ audience:
 - Visible via `show mac address-table` on enterprise gear
 
 ---
+
 ## Broadcast Domain
 
 - The set of devices a broadcast reaches
@@ -102,6 +113,7 @@ audience:
 - VLANs split a switch into many domains
 
 ---
+
 ## Collision Domain (Historical)
 
 - Hubs broadcast everything to all ports
@@ -111,6 +123,7 @@ audience:
 - Mostly historical interest now
 
 ---
+
 ## VLANs
 
 - 802.1Q tag in the frame header
@@ -120,6 +133,7 @@ audience:
 - Scales L2 segregation
 
 ---
+
 ## VLAN Tagging
 
 - Frames on trunk ports carry VLAN ID
@@ -129,11 +143,13 @@ audience:
 - Used heavily in enterprise networks
 
 ---
+
 ## VLAN Mechanics
 
 ![vlan_tagging](svg/courses/networking/tcp-ip-deep-dive/02_link_layer/vlan_tagging.svg)
 
 ---
+
 ## Spanning Tree Protocol
 
 - Prevents loops in switched networks
@@ -143,6 +159,7 @@ audience:
 - Modern variants of Spanning Tree exist for faster convergence and per-VLAN trees
 
 ---
+
 ## Wi-Fi as Link Layer
 
 - 802.11 standard
@@ -152,6 +169,7 @@ audience:
 - Bridges to Ethernet via access points
 
 ---
+
 ## MTU
 
 - Maximum Transmission Unit
@@ -161,6 +179,7 @@ audience:
 - Path MTU Discovery finds the smallest
 
 ---
+
 ## Mismatched MTU Problems
 
 - Tunnels (VPN, GRE) reduce effective MTU
@@ -170,6 +189,7 @@ audience:
 - Fix: lower MTU on tunnel interface
 
 ---
+
 ## Common Misconceptions
 
 - "Switches are routers" — they're not; different layers
@@ -179,6 +199,7 @@ audience:
 - "MTU never matters" — until it does, badly
 
 ---
+
 ## Tools for Link Layer
 
 - `ip link show` — interfaces and state
@@ -188,6 +209,7 @@ audience:
 - Switch CLI — for managed switches
 
 ---
+
 ## Performance Considerations
 
 - Hardware offloads: TSO, GRO, checksum
@@ -197,6 +219,7 @@ audience:
 - Each is a knob; defaults are sensible
 
 ---
+
 ## Common Pitfalls
 
 - VLAN misconfiguration cuts off subnets
@@ -206,6 +229,7 @@ audience:
 - Layer 2 issues hidden behind Layer 3 symptoms
 
 ---
+
 ## Summary
 
 - Ethernet frames: src + dst MAC + type + payload + check

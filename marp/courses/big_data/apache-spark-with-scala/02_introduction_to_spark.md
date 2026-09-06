@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Apache Spark
 
 ---
+
 ## What is Big Data?
 
 1. Data that exceeds traditional processing capabilities

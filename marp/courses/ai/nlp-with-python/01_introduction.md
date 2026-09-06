@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Introduction to NLP
 
 ---
+
 ## What This Chapter Covers
 
 - What NLP is
@@ -19,6 +21,7 @@ audience:
 - Course outline
 
 ---
+
 ## What NLP Is
 
 - Computers processing human language
@@ -27,6 +30,7 @@ audience:
 - A field, not a single technique
 
 ---
+
 ## Why Python
 
 - Mature libraries
@@ -35,6 +39,7 @@ audience:
 - De facto standard
 
 ---
+
 ## Core Tasks
 
 - Classification
@@ -44,6 +49,7 @@ audience:
 - Question answering
 
 ---
+
 ## Classical Pipeline
 
 - Tokenize
@@ -53,6 +59,7 @@ audience:
 - Evaluate
 
 ---
+
 ## Modern Pipeline
 
 - Tokenize
@@ -61,11 +68,13 @@ audience:
 - Evaluate
 
 ---
+
 ## Pipelines Compared
 
 ![nlp_pipelines](svg/courses/ai/nlp-with-python/01_introduction/nlp_pipelines.svg)
 
 ---
+
 ## Key Libraries
 
 - spaCy: production NLP
@@ -74,6 +83,7 @@ audience:
 - scikit-learn: classifiers
 
 ---
+
 ## Datasets
 
 - IMDB, AG News for classification
@@ -82,6 +92,7 @@ audience:
 - WMT for translation
 
 ---
+
 ## Evaluation Basics
 
 - Accuracy is rarely enough
@@ -90,6 +101,7 @@ audience:
 - ROUGE for summarization
 
 ---
+
 ## Languages and Scripts
 
 - English is privileged
@@ -98,6 +110,7 @@ audience:
 - Watch for encoding bugs
 
 ---
+
 ## Hardware
 
 - Classical: CPU is fine
@@ -106,6 +119,7 @@ audience:
 - Quantize for inference
 
 ---
+
 ## Course Outline
 
 - Text preprocessing
@@ -115,6 +129,7 @@ audience:
 - Production deployment
 
 ---
+
 ## Common Beginner Mistakes
 
 - Skipping data inspection

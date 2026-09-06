@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # When ML Fails
 
 ---
+
 ## What This Chapter Covers
 
 - Why some problems are not ML problems
@@ -22,6 +24,7 @@ audience:
 - Ethics and law
 
 ---
+
 ## ML Is Not Magic
 
 - Pattern matcher, not oracle
@@ -30,6 +33,7 @@ audience:
 - Bad fits exist
 
 ---
+
 ## The Big Question
 
 - Can this problem be learned at all
@@ -38,6 +42,7 @@ audience:
 - Is the deployed system safe
 
 ---
+
 ## When To Walk Away
 
 - You can solve it with rules
@@ -46,6 +51,7 @@ audience:
 - The world the model sees changes constantly
 
 ---
+
 ## No Signal In The Data
 
 - Predict tomorrow's lottery numbers
@@ -54,6 +60,7 @@ audience:
 - Stop trying
 
 ---
+
 ## Too Few Examples
 
 - Predict rare cancers from few cases
@@ -62,6 +69,7 @@ audience:
 - Augment with priors or stop
 
 ---
+
 ## Long Tail
 
 - Most cases handled, rare ones missed
@@ -70,6 +78,7 @@ audience:
 - Hybrid system with rules
 
 ---
+
 ## The Quality Of Labels
 
 - Supervised needs labels
@@ -78,6 +87,7 @@ audience:
 - Improve labels before model
 
 ---
+
 ## Subjective Labels
 
 - "Is this art good"
@@ -86,6 +96,7 @@ audience:
 - Build a critic, not a truth machine
 
 ---
+
 ## The Right Target
 
 - Are we predicting what matters
@@ -94,6 +105,7 @@ audience:
 - Misalignment causes harm
 
 ---
+
 ## Goodhart's Law
 
 - "When a measure becomes a target, it ceases to be a good measure"
@@ -102,6 +114,7 @@ audience:
 - Beware your loss function
 
 ---
+
 ## Causality vs Correlation
 
 - ML learns correlations
@@ -110,6 +123,7 @@ audience:
 - Counterfactuals matter
 
 ---
+
 ## Ice Cream And Drowning
 
 - Both go up in summer
@@ -118,6 +132,7 @@ audience:
 - Model would see correlation, recommend nothing
 
 ---
+
 ## Spurious Patterns
 
 - Anything is correlated with enough data
@@ -126,6 +141,7 @@ audience:
 - Don't believe your first model
 
 ---
+
 ## Interventions
 
 - Predicting and acting are different
@@ -134,6 +150,7 @@ audience:
 - Uplift modelling exists for this
 
 ---
+
 ## Distribution Shift
 
 - World changes, model doesn't
@@ -142,6 +159,7 @@ audience:
 - Sometimes problem isn't learnable in production
 
 ---
+
 ## Covariate Shift
 
 - Input distribution changes
@@ -149,6 +167,7 @@ audience:
 - Recalibrate or retrain
 
 ---
+
 ## Concept Drift
 
 - Relationship between input and output changes
@@ -157,6 +176,7 @@ audience:
 - Sometimes signals abandon ML
 
 ---
+
 ## Selection Bias
 
 - Training data not representative
@@ -165,6 +185,7 @@ audience:
 - Model perpetuates the bias
 
 ---
+
 ## Survivorship Bias
 
 - Only successes are visible
@@ -173,6 +194,7 @@ audience:
 - WW2 plane armour example
 
 ---
+
 ## Bias In Labels
 
 - Annotators bring their views
@@ -181,6 +203,7 @@ audience:
 - Audit before training
 
 ---
+
 ## Demographic Bias
 
 - Underrepresented groups perform worse
@@ -189,6 +212,7 @@ audience:
 - Address before deploying
 
 ---
+
 ## Fairness Definitions
 
 - Demographic parity
@@ -197,6 +221,7 @@ audience:
 - Multiple definitions, often incompatible
 
 ---
+
 ## Fairness vs Accuracy
 
 - Often a tradeoff
@@ -205,6 +230,7 @@ audience:
 - Not a technical fix alone
 
 ---
+
 ## Self-Fulfilling Predictions
 
 - Predict crime hotspot, send police, find more crime
@@ -213,6 +239,7 @@ audience:
 - Need to break the loop
 
 ---
+
 ## Adversaries
 
 - People game the system
@@ -221,6 +248,7 @@ audience:
 - Robustness and updates required
 
 ---
+
 ## Adversarial Examples
 
 - Tiny pixel changes flip predictions
@@ -229,6 +257,7 @@ audience:
 - Active research
 
 ---
+
 ## Privacy Limits
 
 - Some data can't be used
@@ -237,6 +266,7 @@ audience:
 - Sometimes ML is illegal
 
 ---
+
 ## Right To Explanation
 
 - EU GDPR
@@ -245,6 +275,7 @@ audience:
 - Sometimes simpler is mandated
 
 ---
+
 ## Interpretability Required
 
 - Medical decisions
@@ -253,6 +284,7 @@ audience:
 - Pick interpretable algorithms
 
 ---
+
 ## Interpretable Models
 
 - Linear regression
@@ -261,6 +293,7 @@ audience:
 - Rule lists
 
 ---
+
 ## Post-Hoc Explanations
 
 - SHAP, LIME
@@ -269,6 +302,7 @@ audience:
 - Better than nothing, less than transparent
 
 ---
+
 ## Safety-Critical Systems
 
 - Self-driving, medical devices, aviation
@@ -277,6 +311,7 @@ audience:
 - ML alone insufficient
 
 ---
+
 ## The Long Tail Problem
 
 - 90% of cases are easy
@@ -285,6 +320,7 @@ audience:
 - Models often fail on the 1%
 
 ---
+
 ## Lack Of Generalisation
 
 - Models trained on one domain fail elsewhere
@@ -293,6 +329,7 @@ audience:
 - Test in target environment
 
 ---
+
 ## Scale Of Errors
 
 - Some errors are local
@@ -301,6 +338,7 @@ audience:
 - Medical mistake = harm
 
 ---
+
 ## Cost Asymmetry
 
 - False positive vs false negative
@@ -309,6 +347,7 @@ audience:
 - One number won't capture it
 
 ---
+
 ## Trust And Adoption
 
 - Users may not trust the model
@@ -317,6 +356,7 @@ audience:
 - Tech is the easy part
 
 ---
+
 ## Bad Process Wrapping
 
 - ML on top of broken process
@@ -325,6 +365,7 @@ audience:
 - Sometimes ML hides the rot
 
 ---
+
 ## Ethics
 
 - Just because we can, should we
@@ -333,6 +374,7 @@ audience:
 - Build with intent
 
 ---
+
 ## Dual Use
 
 - Same model, different uses
@@ -341,6 +383,7 @@ audience:
 - Limit by access and context
 
 ---
+
 ## Environmental Cost
 
 - Training big models is energy intensive
@@ -349,6 +392,7 @@ audience:
 - Smaller models often suffice
 
 ---
+
 ## When ML Is Wrong Tool
 
 - Stable problem with known logic → rules
@@ -357,6 +401,7 @@ audience:
 - Causal action → causal methods
 
 ---
+
 ## Hybrid Systems
 
 - ML scores, humans decide
@@ -365,6 +410,7 @@ audience:
 - Often the right answer
 
 ---
+
 ## Failure Modes Checklist
 
 - Wrong target
@@ -374,6 +420,7 @@ audience:
 - Wrong cost function
 
 ---
+
 ## Red Flags
 
 - "We'll just add more data"
@@ -382,6 +429,7 @@ audience:
 - "We'll fix bias in v2"
 
 ---
+
 ## When To Stop
 
 - Repeated failures with more data
@@ -390,6 +438,7 @@ audience:
 - Doesn't ship safely
 
 ---
+
 ## Recovering From Bad ML
 
 - Fall back to rules
@@ -398,6 +447,7 @@ audience:
 - Sometimes withdraw the system
 
 ---
+
 ## Better Questions
 
 - What are we trying to do
@@ -406,6 +456,7 @@ audience:
 - Is there a simpler way
 
 ---
+
 ## Common Mistakes
 
 - Treating ML as default
@@ -414,41 +465,49 @@ audience:
 - Black-box in regulated setting
 
 ---
+
 ## Goodhart's Law
 
 ![goodharts_law](svg/courses/machine_learning/machine-learning/11_when_ml_fails/goodharts_law.svg)
 
 ---
+
 ## Distribution Shift
 
 ![distribution_shift](svg/courses/machine_learning/machine-learning/11_when_ml_fails/distribution_shift.svg)
 
 ---
+
 ## Causal vs Predictive
 
 ![causal_vs_predictive](svg/courses/machine_learning/machine-learning/11_when_ml_fails/causal_vs_predictive.svg)
 
 ---
+
 ## Long Tail
 
 ![long_tail](svg/courses/machine_learning/machine-learning/11_when_ml_fails/long_tail.svg)
 
 ---
+
 ## Fairness Tradeoff
 
 ![fairness_tradeoff](svg/courses/machine_learning/machine-learning/11_when_ml_fails/fairness_tradeoff.svg)
 
 ---
+
 ## Survivorship Bias
 
 ![survivorship_bias](svg/courses/machine_learning/machine-learning/11_when_ml_fails/survivorship_bias.svg)
 
 ---
+
 ## Adversarial Example
 
 ![adversarial_example](svg/courses/machine_learning/machine-learning/11_when_ml_fails/adversarial_example.svg)
 
 ---
+
 ## Summary
 
 - ML is a tool, not the answer

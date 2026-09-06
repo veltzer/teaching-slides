@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Service Boundaries and Bounded Contexts
 
 ---
+
 ## Bounded Context
 
 - A boundary within which a particular domain model applies
@@ -19,6 +21,7 @@ audience:
 - The unit of "this is one service's responsibility"
 
 ---
+
 ## Why Bounded Contexts
 
 - Without them, every concept ends up "global" — `User` means everything to everyone
@@ -27,11 +30,13 @@ audience:
 - Translation happens at the boundary (anti-corruption layer)
 
 ---
+
 ## Drawing Boundaries
 
 ![boundary_choices](svg/courses/architecting/microservices-architecture/04_boundaries/boundary_choices.svg)
 
 ---
+
 ## A Concrete Example
 
 - In Sales context: `Customer` has order history, lifetime value
@@ -40,6 +45,7 @@ audience:
 - Three different `Customer`s; three different services
 
 ---
+
 ## Ubiquitous Language
 
 - Each bounded context has its own vocabulary
@@ -48,6 +54,7 @@ audience:
 - Code, conversations, documentation all use the context's language
 
 ---
+
 ## Context Mapping
 
 - Document how bounded contexts relate
@@ -57,6 +64,7 @@ audience:
 - Shared Kernel: two contexts share a small common model
 
 ---
+
 ## Identifying Boundaries
 
 - Talk to domain experts; they often have the boundaries in their language
@@ -65,6 +73,7 @@ audience:
 - Boundaries follow conceptual clarity, not technical preference
 
 ---
+
 ## Strategic vs Tactical Design
 
 - Strategic: identify bounded contexts, their relationships, the big picture
@@ -73,6 +82,7 @@ audience:
 - Tactical is where most engineers start; strategic is what architects own
 
 ---
+
 ## Bounded Context = Service?
 
 - Often yes — a bounded context becomes a microservice
@@ -81,6 +91,7 @@ audience:
 - Use the bounded context as the default service boundary
 
 ---
+
 ## Anti-Corruption Layer
 
 - A translator at the boundary between bounded contexts
@@ -89,6 +100,7 @@ audience:
 - Often a thin module per integration
 
 ---
+
 ## Aggregates
 
 - Within a service, group entities that must stay consistent
@@ -97,6 +109,7 @@ audience:
 - Each aggregate is a small consistency boundary
 
 ---
+
 ## Aggregates and Service Boundaries
 
 - An aggregate lives entirely within one service
@@ -105,6 +118,7 @@ audience:
 - Cross-service workflows are coordinated, not transactional
 
 ---
+
 ## Domain Events
 
 - A meaningful business fact, in the past tense
@@ -113,6 +127,7 @@ audience:
 - Other services can subscribe and react
 
 ---
+
 ## Integration Events vs Domain Events
 
 - Domain event: internal to a bounded context — fine-grained
@@ -121,11 +136,13 @@ audience:
 - Usually a small subset of domain events become integration events
 
 ---
+
 ## Boundary Smells Visualised
 
 ![boundary_smells](svg/courses/architecting/microservices-architecture/04_boundaries/boundary_smells.svg)
 
 ---
+
 ## When Boundaries Are Wrong
 
 - Lots of cross-service synchronous calls
@@ -134,6 +151,7 @@ audience:
 - These all suggest the boundary is in the wrong place
 
 ---
+
 ## Refactoring Boundaries
 
 - Hard but possible
@@ -142,6 +160,7 @@ audience:
 - Plan for this; the first cut is rarely final
 
 ---
+
 ## Summary
 
 - Bounded contexts are the conceptual unit

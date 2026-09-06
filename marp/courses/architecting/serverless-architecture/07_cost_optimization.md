@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Cost Optimisation
 
 ---
+
 ## What This Chapter Covers
 
 - Pay-per-use vs always-on
@@ -22,6 +24,7 @@ audience:
 - Monitoring spend
 
 ---
+
 ## The Pricing Model
 
 - Lambda: $0.20 per million requests + per-GB-second of execution
@@ -31,11 +34,13 @@ audience:
 - Add up across services
 
 ---
+
 ## Cost Levers
 
 ![cost_levers](svg/courses/architecting/serverless-architecture/07_cost_optimization/cost_levers.svg)
 
 ---
+
 ## When Serverless Is Cheap
 
 - Sporadic workloads (idle most of the time)
@@ -45,6 +50,7 @@ audience:
 - Most prototypes / startups
 
 ---
+
 ## When Serverless Is Expensive
 
 - Sustained high volume (a VM runs 24/7 for fixed cost)
@@ -54,11 +60,13 @@ audience:
 - The cross-over point depends; do the math
 
 ---
+
 ## Cost Profiles
 
 ![cheap_vs_expensive](svg/courses/architecting/serverless-architecture/07_cost_optimization/cheap_vs_expensive.svg)
 
 ---
+
 ## Lambda Memory and Cost
 
 - Memory tier sets CPU as well
@@ -68,6 +76,7 @@ audience:
 - Tools: AWS Lambda Power Tuning
 
 ---
+
 ## AWS Lambda Power Tuning
 
 - Open-source tool
@@ -77,6 +86,7 @@ audience:
 - Run after major code changes
 
 ---
+
 ## Reducing Invocations
 
 - Batch where possible (SQS batches, EventBridge batching)
@@ -86,6 +96,7 @@ audience:
 - Each invocation has fixed overhead
 
 ---
+
 ## API Gateway Costs
 
 - HTTP API: ~$1 / million
@@ -95,6 +106,7 @@ audience:
 - Often the biggest savings
 
 ---
+
 ## Data Transfer Costs
 
 - Between regions: $0.01-$0.02 / GB
@@ -104,6 +116,7 @@ audience:
 - Compress; cache at the edge
 
 ---
+
 ## DynamoDB Cost
 
 - On-demand: pay per request
@@ -113,6 +126,7 @@ audience:
 - Reserved capacity: 40-50% discount for 1-3 years
 
 ---
+
 ## ElastiCache / Redis
 
 - 24/7 cost; not pay-per-use
@@ -122,6 +136,7 @@ audience:
 - Easy place to overspend
 
 ---
+
 ## CloudWatch Logs
 
 - Default: every Lambda log goes to CloudWatch
@@ -131,6 +146,7 @@ audience:
 - Filter at source; only log what you need
 
 ---
+
 ## Free Tier
 
 - AWS Lambda: 1M requests + 400K GB-seconds free monthly
@@ -140,6 +156,7 @@ audience:
 - Great for learning; doesn't scale
 
 ---
+
 ## Monitoring Spend
 
 - AWS Cost Explorer: per-service breakdown
@@ -149,6 +166,7 @@ audience:
 - Surprises happen; alert before they bite
 
 ---
+
 ## When To Switch Off Serverless
 
 - Sustained 1M+ requests / hour at high CPU
@@ -158,6 +176,7 @@ audience:
 - Often: hybrid; serverless for spike, VMs for baseline
 
 ---
+
 ## Common Cost Mistakes
 
 - REST API when HTTP API would do (3x cost)
@@ -167,6 +186,7 @@ audience:
 - No tagging &#8594; can't attribute costs
 
 ---
+
 ## Practical Tips
 
 - Tag everything

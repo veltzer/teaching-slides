@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Markdown and Documentation Tools
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![markdown_features](svg/courses/development_methodologies/technical-writing/06_markdown_and_documentation_tools/markdown_features.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Markdown syntax basics and extensions
@@ -27,6 +29,7 @@ audience:
 - Setting up a docs pipeline
 
 ---
+
 ## Why Markdown Won
 
 - Plain text, readable as written
@@ -36,11 +39,13 @@ audience:
 - Low barrier to contribution
 
 ---
+
 ## Tooling Layers
 
 ![doc_tools](svg/courses/development_methodologies/technical-writing/06_markdown_and_documentation_tools/doc_tools.svg)
 
 ---
+
 ## Markdown Basics
 
 ```markdown
@@ -63,6 +68,7 @@ bold, italic, code (use single backticks for inline)
 - Renders the same in GitHub, GitLab, Bitbucket, most static sites
 
 ---
+
 ## Code Blocks
 
 ````markdown
@@ -78,6 +84,7 @@ def hello():
 - For inline code: single backticks
 
 ---
+
 ## Tables
 
 ```markdown
@@ -93,6 +100,7 @@ def hello():
 - Long tables: don't try in markdown; use CSV with a renderer
 
 ---
+
 ## Markdown Flavours
 
 - **CommonMark**: the standard
@@ -102,6 +110,7 @@ def hello():
 - Stick with GFM unless you have a specific need
 
 ---
+
 ## Static Site Generators
 
 - Convert markdown into a website
@@ -113,6 +122,7 @@ def hello():
     - **Jekyll** (Ruby; older but stable)
 
 ---
+
 ## MkDocs
 
 - Python; pip install
@@ -122,6 +132,7 @@ def hello():
 - The fastest setup for a small project
 
 ---
+
 ## Docusaurus
 
 - React-based
@@ -131,6 +142,7 @@ def hello():
 - Used by Jest, Babel, React Native
 
 ---
+
 ## Sphinx
 
 - Originally for Python; works for any language
@@ -140,6 +152,7 @@ def hello():
 - The Python community standard
 
 ---
+
 ## Hosting Platforms
 
 - **Read the Docs**: free for open-source, paid for private
@@ -149,6 +162,7 @@ def hello():
 - **Internal**: many companies host on private S3 + CloudFront
 
 ---
+
 ## CI for Docs
 
 - Build on every PR
@@ -158,6 +172,7 @@ def hello():
 - Treat docs like code in CI
 
 ---
+
 ## AsciiDoc
 
 - Alternative to markdown
@@ -167,6 +182,7 @@ def hello():
 - Worth knowing exists; not the default
 
 ---
+
 ## Documentation Linters
 
 - **Vale**: prose linter; configurable rules
@@ -176,6 +192,7 @@ def hello():
 - Run in CI; gradually adopt
 
 ---
+
 ## Choosing a Tool
 
 - Project size: small &#8594; MkDocs; large &#8594; Sphinx or Docusaurus
@@ -185,6 +202,7 @@ def hello():
 - Don't over-tool early
 
 ---
+
 ## A Minimal Setup
 
 ```bash
@@ -199,6 +217,7 @@ mkdocs gh-deploy  # publish to GitHub Pages
 - Works for many small-to-medium projects
 
 ---
+
 ## When to Outgrow
 
 - Need versioning &#8594; Docusaurus, Sphinx
@@ -208,6 +227,7 @@ mkdocs gh-deploy  # publish to GitHub Pages
 - Don't switch too eagerly; switching costs are real
 
 ---
+
 ## Common Tooling Mistakes
 
 - Picking the most powerful tool for a small project

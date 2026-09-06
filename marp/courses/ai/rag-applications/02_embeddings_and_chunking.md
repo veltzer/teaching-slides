@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Embeddings and Chunking
 
 ---
+
 ## What This Chapter Covers
 
 - What embeddings are
@@ -20,6 +22,7 @@ audience:
 - Pitfalls
 
 ---
+
 ## What an Embedding Is
 
 - Vector representation of text
@@ -28,6 +31,7 @@ audience:
 - Numerical, fixed length
 
 ---
+
 ## Choosing an Embedding Model
 
 - General purpose vs domain
@@ -36,11 +40,13 @@ audience:
 - Latency to embed
 
 ---
+
 ## Embedding Choices
 
 ![embedding_choices](svg/courses/ai/rag-applications/02_embeddings_and_chunking/embedding_choices.svg)
 
 ---
+
 ## Popular Models
 
 - Hosted embedding APIs
@@ -48,6 +54,7 @@ audience:
 - Domain models for code or medical text
 
 ---
+
 ## Embedding Quality
 
 - Test on your queries
@@ -56,6 +63,7 @@ audience:
 - Re-test when models update
 
 ---
+
 ## Chunking Why
 
 - Documents are too long for context
@@ -64,6 +72,7 @@ audience:
 - Wrong chunks ruin retrieval
 
 ---
+
 ## Chunk Sizes
 
 - 200 to 1000 tokens typical
@@ -72,6 +81,7 @@ audience:
 - Always evaluate
 
 ---
+
 ## Chunking Strategies
 
 - Fixed window
@@ -80,11 +90,13 @@ audience:
 - Semantic boundaries
 
 ---
+
 ## Strategies Compared
 
 ![chunking_strategies](svg/courses/ai/rag-applications/02_embeddings_and_chunking/chunking_strategies.svg)
 
 ---
+
 ## Structure-Aware Chunking
 
 - Use headings
@@ -93,6 +105,7 @@ audience:
 - Preserve titles in each chunk
 
 ---
+
 ## Metadata
 
 - Source URL
@@ -102,6 +115,7 @@ audience:
 - Use for filtering and citation
 
 ---
+
 ## Updates
 
 - Re-embed when model changes
@@ -110,6 +124,7 @@ audience:
 - Treat the index as a build artifact
 
 ---
+
 ## Multilingual
 
 - Some embeddings are multilingual
@@ -118,6 +133,7 @@ audience:
 - Consider per-language indexes
 
 ---
+
 ## Common Embedding Mistakes
 
 - One chunk size for all docs

@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Python Multi-Threading and Multi-Processing
 
 ---
+
 ## Introduction to Python Concurrency
 
 - Python offers multiple approaches to concurrent programming
@@ -19,6 +21,7 @@ audience:
 - Enables better resource utilization in Python applications
 
 ---
+
 ## Concurrency vs. Parallelism in Python: Details
 
 - Concurrency: dealing with multiple tasks at once
@@ -27,11 +30,13 @@ audience:
 - Understanding the difference guides tool selection
 
 ---
+
 ## Concurrency vs. Parallelism in Python
 
 ![concurrency_vs_parallelism_in_python](svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/concurrency_vs_parallelism_in_python.svg)
 
 ---
+
 ## Python's Global Interpreter Lock (GIL)
 
 - A mutex that protects access to Python objects
@@ -42,6 +47,7 @@ audience:
 - Key consideration when choosing concurrency approach
 
 ---
+
 ## Python Concurrency Models: Details
 
 - Threading: lightweight, shares memory, affected by GIL
@@ -51,11 +57,13 @@ audience:
 - Third-party libraries (Dask, Joblib, etc.)
 
 ---
+
 ## Python Concurrency Models
 
 ![python_concurrency_models](svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/python_concurrency_models.svg)
 
 ---
+
 ## When to Use Each Concurrency Model
 
 - Threading:
@@ -72,6 +80,7 @@ audience:
   1. When cooperative multitasking fits the problem
 
 ---
+
 ## Python's threading Module
 
 - Standard library module for thread-based parallelism
@@ -102,6 +111,7 @@ for t in threads:
 ```
 
 ---
+
 ## Thread Class Constructor
 
 - `threading.Thread` constructor parameters:
@@ -123,6 +133,7 @@ thread = threading.Thread(
 ```
 
 ---
+
 ## Thread Subclassing
 
 - Custom thread behavior by subclassing `threading.Thread`
@@ -150,6 +161,7 @@ for t in threads:
 ```
 
 ---
+
 ## Thread Lifecycle in Python: Details
 
 - New: thread object created
@@ -159,11 +171,13 @@ for t in threads:
 - Terminated: thread execution completed
 
 ---
+
 ## Thread Lifecycle in Python
 
 ![thread_lifecycle_in_python](svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/thread_lifecycle_in_python.svg)
 
 ---
+
 ## Daemon Threads
 
 - Background threads that don't block program exit
@@ -194,6 +208,7 @@ print("Main thread exiting")
 ```
 
 ---
+
 ## Race Conditions in Python
 
 - Multiple threads accessing shared data concurrently
@@ -226,6 +241,7 @@ print(f"Final counter value: {counter}")
 ```
 
 ---
+
 ## Thread Synchronization in Python
 
 - Lock (mutex): basic mutual exclusion
@@ -237,6 +253,7 @@ print(f"Final counter value: {counter}")
 - Barrier: synchronization point for multiple threads
 
 ---
+
 ## Locks (Mutexes)
 
 - Basic synchronization primitive
@@ -269,6 +286,7 @@ for t in threads:
 ```
 
 ---
+
 ## RLock (Reentrant Lock)
 
 - Can be acquired multiple times by same thread
@@ -296,6 +314,7 @@ class SharedResource:
 ```
 
 ---
+
 ## Semaphores
 
 - Counter-based synchronization primitive
@@ -326,6 +345,7 @@ for i in range(10):
 ```
 
 ---
+
 ## Events
 
 - Simple communication between threads
@@ -359,6 +379,7 @@ start_event.set()  # Signal all threads to proceed
 ```
 
 ---
+
 ## Condition Variables
 
 - Allow threads to wait for a specific condition
@@ -387,6 +408,7 @@ class BoundedQueue:
 ```
 
 ---
+
 ## Barriers
 
 - Synchronization point for a group of threads
@@ -412,6 +434,7 @@ def worker(name):
 ```
 
 ---
+
 ## Deadlocks in Python
 
 - Circular waiting for resources
@@ -443,6 +466,7 @@ def thread_2():
 ```
 
 ---
+
 ## Avoiding Deadlocks
 
 - Acquire locks in a consistent order
@@ -473,6 +497,7 @@ def thread_2_safe():
 ```
 
 ---
+
 ## Thread-Local Storage
 
 - Data private to each thread
@@ -499,6 +524,7 @@ def process_data():
 ```
 
 ---
+
 ## Thread Pools with concurrent.futures
 
 - High-level interface for asynchronous execution
@@ -528,6 +554,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
 ```
 
 ---
+
 ## Python's multiprocessing Module
 
 - Process-based parallelism
@@ -538,6 +565,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
 - Process pools for task execution
 
 ---
+
 ## Process Creation
 
 - `Process` class similar to `Thread`
@@ -570,6 +598,7 @@ if __name__ == "__main__":  # Required for Windows
 ```
 
 ---
+
 ## Process vs Thread Memory Model: Details
 
 - Processes have separate memory spaces
@@ -578,11 +607,13 @@ if __name__ == "__main__":  # Required for Windows
 - Explicit sharing mechanisms needed for processes
 
 ---
+
 ## Process vs Thread Memory Model
 
 ![process_vs_thread_memory_model](svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/process_vs_thread_memory_model.svg)
 
 ---
+
 ## Inter-Process Communication (IPC)
 
 - Share data between Python processes
@@ -594,6 +625,7 @@ if __name__ == "__main__":  # Required for Windows
   1. RLock, Event, Condition, Semaphore (like threading)
 
 ---
+
 ## Using Queue for IPC
 
 - Thread and process safe FIFO queue
@@ -624,6 +656,7 @@ def consumer(queue):
 ```
 
 ---
+
 ## Pipes for IPC
 
 - Bidirectional communication channel
@@ -654,6 +687,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Shared Memory with Value and Array
 
 - Direct memory sharing between processes
@@ -688,6 +722,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Process Pools
 
 - Manage a pool of worker processes
@@ -714,6 +749,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## ProcessPoolExecutor (concurrent.futures)
 
 - Simpler interface for process pools
@@ -740,6 +776,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Choosing Between Process Pool and Thread Pool
 
 ```python
@@ -773,6 +810,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Python's asyncio Module
 
 - Event loop-based concurrency
@@ -804,6 +842,7 @@ asyncio.run(main())
 ```
 
 ---
+
 ## Combining Threading and Multiprocessing
 
 - Use processes for CPU-bound tasks
@@ -813,6 +852,7 @@ asyncio.run(main())
 - Best of both worlds approach
 
 ---
+
 ## Worker Pool Pattern
 
 - Pool of workers process tasks from a queue
@@ -845,6 +885,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Producer-Consumer Pattern
 
 - Producer generates data or tasks
@@ -874,6 +915,7 @@ def consumer(queue, id):
 ```
 
 ---
+
 ## Pipeline Pattern
 
 - Chain of stages connected by queues
@@ -902,6 +944,7 @@ def stage2(input_queue, output_queue):
 ```
 
 ---
+
 ## Performance Considerations in Python
 
 - GIL impact on threaded performance
@@ -913,6 +956,7 @@ def stage2(input_queue, output_queue):
 - Thread/process pool sizing
 
 ---
+
 ## Debugging Concurrent Python Programs
 
 - Use logging with process/thread IDs
@@ -924,6 +968,7 @@ def stage2(input_queue, output_queue):
 - Simplified test scenarios
 
 ---
+
 ## Testing Concurrent Code
 
 - Create deterministic tests
@@ -935,6 +980,7 @@ def stage2(input_queue, output_queue):
 - Consider stress testing with many iterations
 
 ---
+
 ## Python-Specific Concurrency Tips
 
 - Understand the GIL and its impact
@@ -947,6 +993,7 @@ def stage2(input_queue, output_queue):
 - Profile before parallelizing
 
 ---
+
 ## Real-World Applications
 
 - Web scraping and crawling
@@ -959,6 +1006,7 @@ def stage2(input_queue, output_queue):
 - Task scheduling systems
 
 ---
+
 ## Summary
 
 - Python offers multiple concurrency models

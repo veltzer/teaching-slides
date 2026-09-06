@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Question Answering
 
 ---
+
 ## What This Chapter Covers
 
 - The QA landscape from extractive spans to open-domain generation
@@ -22,6 +24,7 @@ audience:
 - Evaluation that survives different answer formats
 
 ---
+
 ## Why QA Matters
 
 - The most natural way humans extract information from text
@@ -31,11 +34,13 @@ audience:
 - A clean evaluation target where correctness is usually well-defined
 
 ---
+
 ## QA Task Families
 
 ![qa_taxonomy](svg/courses/ai/natural-language-processing/18_question_answering/qa_taxonomy.svg)
 
 ---
+
 ## Reading Comprehension
 
 - Given a passage and a question, return an answer span from the passage
@@ -45,6 +50,7 @@ audience:
 - The simplest variant of QA and a foundational building block
 
 ---
+
 ## SQuAD-Style Models
 
 - Encode question and passage jointly with a transformer
@@ -54,6 +60,7 @@ audience:
 - Pretrained `BERT` and `RoBERTa` are the default backbones
 
 ---
+
 ## A Span Predictor
 
 ```python
@@ -72,6 +79,7 @@ print(answer)
 - For closed domains a fine-tune on 1k examples often pushes accuracy further
 
 ---
+
 ## SQuAD 2.0 and Unanswerable Questions
 
 - The original `SQuAD` assumed every question had an answer in the passage
@@ -81,6 +89,7 @@ print(answer)
 - A more realistic evaluation for production systems
 
 ---
+
 ## Beyond Extractive: Generative QA
 
 - Some questions need rephrasing or composition across multiple spans
@@ -90,6 +99,7 @@ print(answer)
 - Evaluation gets harder when many surface forms are correct
 
 ---
+
 ## Open-Domain QA
 
 - The corpus is too large to fit into one model context
@@ -99,6 +109,7 @@ print(answer)
 - Wikipedia is the default corpus for benchmark evaluation
 
 ---
+
 ## DrQA and Classical Pipelines
 
 - Sparse `BM25` or `TF-IDF` retrieval over passages
@@ -108,6 +119,7 @@ print(answer)
 - Easy to debug because each stage has interpretable outputs
 
 ---
+
 ## Dense Passage Retrieval
 
 - Encode questions and passages into the same vector space
@@ -117,11 +129,13 @@ print(answer)
 - Modern hybrid retrievers combine sparse and dense signals
 
 ---
+
 ## Open-Domain QA Pipeline
 
 ![open_domain_qa](svg/courses/ai/natural-language-processing/18_question_answering/open_domain_qa.svg)
 
 ---
+
 ## End-to-End Models
 
 - `Fusion-in-Decoder` and `RAG` train retriever and reader jointly
@@ -131,6 +145,7 @@ print(answer)
 - Architecture matters less when the model is large enough
 
 ---
+
 ## Knowledge-Base QA
 
 - Answer questions against a structured graph like `Wikidata`
@@ -140,6 +155,7 @@ print(answer)
 - Weak when the question requires reading paragraphs of text
 
 ---
+
 ## Semantic Parsing for KBQA
 
 - Treat question-to-query as a sequence-to-sequence task
@@ -149,6 +165,7 @@ print(answer)
 - A controlled, auditable answer path when accuracy matters
 
 ---
+
 ## Multi-Hop QA
 
 - Answer requires combining facts from multiple passages
@@ -158,6 +175,7 @@ print(answer)
 - A natural fit for agentic frameworks today
 
 ---
+
 ## Conversational QA
 
 - Questions arrive in turns and depend on prior context
@@ -167,11 +185,13 @@ print(answer)
 - Long-context models simplify this versus pre-2020 architectures
 
 ---
+
 ## Conversational QA Architecture
 
 ![conversational_qa](svg/courses/ai/natural-language-processing/18_question_answering/conversational_qa.svg)
 
 ---
+
 ## Long-Form QA
 
 - Answers are full paragraphs, not extracted spans
@@ -181,6 +201,7 @@ print(answer)
 - The closest classical task to what `LLMs` now do conversationally
 
 ---
+
 ## QA Decoding Strategies
 
 - Span QA: argmax over (start, end) products of probabilities
@@ -190,6 +211,7 @@ print(answer)
 - Tool-augmented decoding can call retrievers mid-generation
 
 ---
+
 ## Evaluation: Exact Match and F1
 
 - `Exact Match`: the predicted answer matches a reference exactly
@@ -199,6 +221,7 @@ print(answer)
 - Less useful for generative answers with many valid forms
 
 ---
+
 ## Evaluation: Beyond EM and F1
 
 - `BERTScore` for paraphrase-aware comparison
@@ -208,6 +231,7 @@ print(answer)
 - Multiple metrics give a more honest view of system quality
 
 ---
+
 ## Hallucination in QA
 
 - A confident wrong answer is worse than no answer
@@ -217,6 +241,7 @@ print(answer)
 - "I don't know" is a feature, not a regression
 
 ---
+
 ## QA Production Patterns
 
 - Always retrieve when the answer might not be in the parametric model
@@ -226,6 +251,7 @@ print(answer)
 - Monitor drift as the underlying corpus changes
 
 ---
+
 ## QA with Tool Use
 
 - The model decides when to call a search tool, calculator, or database
@@ -235,6 +261,7 @@ print(answer)
 - Evaluation must include the tool-use trajectory, not just the final answer
 
 ---
+
 ## Common Production Pitfalls
 
 - Treating retrieval failures as model failures
@@ -244,6 +271,7 @@ print(answer)
 - Forgetting that conversational context changes the question
 
 ---
+
 ## Anti-Patterns
 
 - Evaluating extractive systems on generative benchmarks and vice versa
@@ -253,6 +281,7 @@ print(answer)
 - Treating "I don't know" as failure when the alternative is a wrong answer
 
 ---
+
 ## Summary
 
 - QA spans extractive, generative, open-domain, and conversational settings

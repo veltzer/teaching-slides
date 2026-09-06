@@ -7,14 +7,17 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Sensors
 
 ---
+
 ## Sensor Modes
 
 ![sensor_modes](svg/courses/data_engineering/apache-airflow/04_sensors/sensor_modes.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What sensors are
@@ -24,6 +27,7 @@ audience:
 - Timeouts
 
 ---
+
 ## What A Sensor Is
 
 - Wait for a condition
@@ -32,6 +36,7 @@ audience:
 - Poll until condition met
 
 ---
+
 ## Common Sensors
 
 - S3KeySensor: file in S3
@@ -41,6 +46,7 @@ audience:
 - TimeDeltaSensor: wait N seconds
 
 ---
+
 ## S3KeySensor
 
 ```python
@@ -54,6 +60,7 @@ S3KeySensor(
 ```
 
 ---
+
 ## Modes: Poke
 
 - Default
@@ -62,6 +69,7 @@ S3KeySensor(
 - For: short waits
 
 ---
+
 ## Modes: Reschedule
 
 ```python
@@ -73,6 +81,7 @@ S3KeySensor(..., mode='reschedule')
 - Better for long waits
 
 ---
+
 ## Deferrable Operators
 
 - Newer alternative
@@ -81,6 +90,7 @@ S3KeySensor(..., mode='reschedule')
 - Best for: production at scale
 
 ---
+
 ## Timeouts
 
 - Sensor times out: task fails
@@ -89,6 +99,7 @@ S3KeySensor(..., mode='reschedule')
 - Without: sensor can hang forever
 
 ---
+
 ## ExternalTaskSensor
 
 - Wait for another DAG's task to complete
@@ -96,6 +107,7 @@ S3KeySensor(..., mode='reschedule')
 - Brittle; consider events instead
 
 ---
+
 ## Dataset Triggers
 
 - Modern alternative to sensors for cross-DAG
@@ -103,6 +115,7 @@ S3KeySensor(..., mode='reschedule')
 - More robust than ExternalTaskSensor
 
 ---
+
 ## SQL Sensor
 
 - Wait for query to return rows
@@ -110,6 +123,7 @@ S3KeySensor(..., mode='reschedule')
 - Poll interval set carefully
 
 ---
+
 ## When To Use Sensors
 
 - Wait for external file / data
@@ -117,6 +131,7 @@ S3KeySensor(..., mode='reschedule')
 - Wait until time-based event
 
 ---
+
 ## When Not To
 
 - Long-running waits without reschedule mode
@@ -124,6 +139,7 @@ S3KeySensor(..., mode='reschedule')
 - For event-driven, use Datasets
 
 ---
+
 ## Common Sensor Mistakes
 
 - Default poke mode for hours-long waits (resource hog)
@@ -133,6 +149,7 @@ S3KeySensor(..., mode='reschedule')
 - Sensors that should be event listeners
 
 ---
+
 ## Common Sensor Use Cases
 
 ![sensor_use_cases](svg/courses/data_engineering/apache-airflow/04_sensors/sensor_use_cases.svg)

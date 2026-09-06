@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Prompting and Evaluation
 
 ---
+
 ## What This Chapter Covers
 
 - Prompt structure
@@ -20,6 +22,7 @@ audience:
 - Metrics
 
 ---
+
 ## Prompt Structure
 
 - System: role and rules
@@ -28,11 +31,13 @@ audience:
 - Format: how to answer
 
 ---
+
 ## Layout Example
 
 ![prompt_layout](svg/courses/ai/rag-applications/04_prompting_and_evaluation/prompt_layout.svg)
 
 ---
+
 ## Quoting Sources
 
 - Number each chunk
@@ -41,6 +46,7 @@ audience:
 - Render citations in UI
 
 ---
+
 ## Refusing Gracefully
 
 - "Say I do not know if context lacks the answer"
@@ -49,6 +55,7 @@ audience:
 - Test refusal cases
 
 ---
+
 ## Format Constraints
 
 - JSON for downstream code
@@ -57,6 +64,7 @@ audience:
 - Validate after model output
 
 ---
+
 ## Context Order
 
 - Most relevant first
@@ -65,6 +73,7 @@ audience:
 - Vary by length
 
 ---
+
 ## Context Window Budget
 
 - Reserve room for answer
@@ -73,6 +82,7 @@ audience:
 - Smaller model means tighter budget
 
 ---
+
 ## Evaluation Sets
 
 - Curate question, ground truth pairs
@@ -81,6 +91,7 @@ audience:
 - Tag by category
 
 ---
+
 ## Retrieval Metrics
 
 - Recall at K
@@ -89,11 +100,13 @@ audience:
 - Are right chunks in top K
 
 ---
+
 ## Eval Metrics Overview
 
 ![eval_metrics](svg/courses/ai/rag-applications/04_prompting_and_evaluation/eval_metrics.svg)
 
 ---
+
 ## Generation Metrics
 
 - Faithfulness: matches sources
@@ -102,6 +115,7 @@ audience:
 - Use LLM-as-judge
 
 ---
+
 ## End-to-End Metrics
 
 - Task success
@@ -110,6 +124,7 @@ audience:
 - User feedback
 
 ---
+
 ## A/B Testing
 
 - Compare retrievers
@@ -118,6 +133,7 @@ audience:
 - Measure on real traffic
 
 ---
+
 ## Online Feedback
 
 - Thumbs up or down
@@ -126,6 +142,7 @@ audience:
 - Watch for selection bias
 
 ---
+
 ## Common Prompting Mistakes
 
 - No citation

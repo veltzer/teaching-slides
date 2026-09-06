@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Liskov Substitution Principle (LSP)
 
 ---
+
 ## With vs Without LSP
 
 ![lsp](svg/courses/principles/solid-clean-code/04_liskov_substitution_principle/lsp.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Barbara Liskov's original formulation
@@ -25,6 +28,7 @@ audience:
 - Designing inheritance hierarchies that satisfy LSP
 
 ---
+
 ## The Principle, Stated Carefully
 
 - "Subtypes must be substitutable for their base types"
@@ -34,6 +38,7 @@ audience:
 - Reformulated by Robert Martin into the SOLID L
 
 ---
+
 ## What "Substitutable" Means
 
 - Caller has a `Base` reference
@@ -43,6 +48,7 @@ audience:
 - If it does care, the hierarchy is wrong
 
 ---
+
 ## The Classic Violation
 
 ```python
@@ -61,6 +67,7 @@ class Square(Rectangle):
 ```
 
 ---
+
 ## Why Square/Rectangle Breaks LSP
 
 ```python
@@ -76,6 +83,7 @@ def test_resize(r: Rectangle):
 - "Square is a kind of Rectangle" works in geometry, not in mutable OOP
 
 ---
+
 ## Fixing It
 
 - Don't subclass: `Square` and `Rectangle` are sibling shapes
@@ -85,6 +93,7 @@ def test_resize(r: Rectangle):
 - Most violations get fixed by removing inheritance
 
 ---
+
 ## Other Common Violations
 
 - **Throwing on inherited methods**: subclass refuses to do what base allowed
@@ -94,11 +103,13 @@ def test_resize(r: Rectangle):
 - **Type narrowing** — subclass returns a more specific type but the consumer relied on the base type's interface
 
 ---
+
 ## Violations At A Glance
 
 ![lsp_violations](svg/courses/principles/solid-clean-code/04_liskov_substitution_principle/lsp_violations.svg)
 
 ---
+
 ## Throwing on Inherited Methods
 
 ```python
@@ -112,6 +123,7 @@ class ReadOnlyList(List):
 - Fix: separate `ReadableList` and `MutableList` interfaces
 
 ---
+
 ## Strengthened Preconditions
 
 ```python
@@ -131,6 +143,7 @@ class TLSConnection(Connection):
 - Fix: do the handshake in the constructor, or expose a different type
 
 ---
+
 ## Behavioural Contracts
 
 - A subtype must *honour* the base type's contract — not just match its signatures
@@ -140,6 +153,7 @@ class TLSConnection(Connection):
 - Tests that exercise the base's contract on a subtype catch this
 
 ---
+
 ## Practical Tests
 
 - Write tests against the *base type*
@@ -149,6 +163,7 @@ class TLSConnection(Connection):
 - This is a low-cost discipline that prevents whole categories of bugs
 
 ---
+
 ## When LSP Is Hard
 
 - Frameworks force you to extend a base class with awkward methods
@@ -157,6 +172,7 @@ class TLSConnection(Connection):
 - Wrapping (composition) gives you a fresh contract you control
 
 ---
+
 ## LSP Without Inheritance
 
 - Same problem appears with interfaces and structural types
@@ -166,6 +182,7 @@ class TLSConnection(Connection):
 - Apply the same thinking everywhere subtyping happens
 
 ---
+
 ## A Useful Heuristic
 
 - If you find yourself overriding a method to do nothing, throw, or return null — your subtype probably violates LSP
@@ -174,6 +191,7 @@ class TLSConnection(Connection):
 - Subtypes should *strengthen* postconditions and *weaken* preconditions
 
 ---
+
 ## LSP and Other Principles
 
 - OCP requires substitutable subtypes — without LSP, OCP breaks at runtime
@@ -182,6 +200,7 @@ class TLSConnection(Connection):
 - LSP without DbC is wishful thinking — write down the contracts
 
 ---
+
 ## Common Mistakes
 
 - Inheriting "to reuse code" when there's no real "is-a" relationship

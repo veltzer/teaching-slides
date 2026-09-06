@@ -12,6 +12,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Test Harnesses
 
 ---
@@ -21,6 +22,7 @@ audience:
 ![Bash Test Harness Structure](svg/courses/languages/bash/bash-scripting/24_test_harnesses/test_harness_structure.svg)
 
 ---
+
 ## Why Test Bash Scripts?
 - Scripts grow complex over time
 - Manual testing misses edge cases
@@ -43,6 +45,7 @@ is_valid_ip() {
 ```
 
 ---
+
 ## Simple Test Framework
 
 ```bash
@@ -81,6 +84,7 @@ assert_true() {
 ```
 
 ---
+
 ## Simple Test Framework: Summary
 
 ```bash
@@ -97,6 +101,7 @@ test_summary() {
 ```
 
 ---
+
 ## Using the Test Framework
 
 ```bash
@@ -120,6 +125,7 @@ test_summary
 ```
 
 ---
+
 ## Test Patterns
 
 ```bash
@@ -153,6 +159,7 @@ run_test test_file_processing
 ```
 
 ---
+
 ## Testing stdout and stderr
 
 ```bash
@@ -184,6 +191,7 @@ capture() {
 ```
 
 ---
+
 ## Existing Test Frameworks
 
 ```bash
@@ -210,6 +218,7 @@ capture() {
 ```
 
 ---
+
 ## BATS Helpers
 
 ```bash
@@ -241,6 +250,7 @@ load 'test_helper/bats-assert/load'
 ```
 
 ---
+
 ## Testing Best Practices
 ```misc
 1. Test the interface, not the implementation
@@ -256,6 +266,7 @@ load 'test_helper/bats-assert/load'
 ```
 
 ---
+
 ## Mocking Commands
 
 ```bash
@@ -285,6 +296,7 @@ unset -f curl
 ```
 
 ---
+
 ## Integration Testing
 
 ```bash

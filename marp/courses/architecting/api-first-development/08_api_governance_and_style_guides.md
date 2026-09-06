@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # API Governance and Style Guides
 
 ---
+
 ## What This Chapter Covers
 
 - What API governance is
@@ -22,6 +24,7 @@ audience:
 - The trade-off between freedom and consistency
 
 ---
+
 ## Why Governance
 
 - One company; many teams; many APIs
@@ -31,11 +34,13 @@ audience:
 - Without it: a fragmented API surface
 
 ---
+
 ## Three Layers of Enforcement
 
 ![style_governance](svg/courses/architecting/api-first-development/08_api_governance_and_style_guides/style_governance.svg)
 
 ---
+
 ## What To Standardise
 
 - Naming: paths, fields, query params
@@ -46,6 +51,7 @@ audience:
 - Documentation: what's required (description, examples)
 
 ---
+
 ## What NOT To Standardise
 
 - Business logic
@@ -55,6 +61,7 @@ audience:
 - Leave teams free where they don't
 
 ---
+
 ## A Style Guide
 
 - A short document: "how we design APIs at $COMPANY"
@@ -64,6 +71,7 @@ audience:
 - One source of truth
 
 ---
+
 ## Spectral For Enforcement
 
 - OpenAPI linter
@@ -73,6 +81,7 @@ audience:
 - Automation beats meetings
 
 ---
+
 ## Sample Spectral Rules
 
 ```yaml
@@ -95,6 +104,7 @@ rules:
 - Fails the build with a clear error
 
 ---
+
 ## Review Processes
 
 - New APIs: design review before implementation
@@ -104,6 +114,7 @@ rules:
 - Lightweight is fine; rituals breed cynicism
 
 ---
+
 ## API Design Reviews
 
 - 30-60 minute meeting
@@ -113,6 +124,7 @@ rules:
 - Async first; sync only when needed
 
 ---
+
 ## API Catalogues
 
 - Internal directory of all APIs
@@ -122,6 +134,7 @@ rules:
 - Especially valuable at companies with many teams
 
 ---
+
 ## Producer-Consumer Relationships
 
 - Document who consumes each API
@@ -131,6 +144,7 @@ rules:
 - Critical for safe deprecations
 
 ---
+
 ## Versioning Policy
 
 - Maximum supported versions (often 2: current + previous)
@@ -140,6 +154,7 @@ rules:
 - Set policy; enforce; don't surprise consumers
 
 ---
+
 ## Security Standards
 
 - Authentication: which mechanisms allowed
@@ -149,6 +164,7 @@ rules:
 - Standard 401/403 responses
 
 ---
+
 ## Performance Standards
 
 - Latency targets (p50, p99)
@@ -158,6 +174,7 @@ rules:
 - Performance is part of the contract
 
 ---
+
 ## Centralised Tooling
 
 - One blessed Spectral config
@@ -167,6 +184,7 @@ rules:
 - Reduces variance; standardises onboarding
 
 ---
+
 ## Common Governance Mistakes
 
 - Heavyweight process; nothing ships
@@ -176,6 +194,7 @@ rules:
 - Governance as bureaucracy instead of enablement
 
 ---
+
 ## Course Wrap-Up
 
 - API-first means design before implementation
@@ -187,6 +206,7 @@ rules:
 - Done well: APIs become a competitive advantage
 
 ---
+
 ## Governance Coverage Areas
 
 ![governance_areas](svg/courses/architecting/api-first-development/08_api_governance_and_style_guides/governance_areas.svg)

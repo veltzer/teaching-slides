@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # ML Workflows and Governance
 
 ---
+
 ## What This Chapter Covers
 
 - ML on Databricks
@@ -19,6 +21,7 @@ audience:
 - Cost and security
 
 ---
+
 ## ML Runtime
 
 - Pre-installed frameworks
@@ -27,6 +30,7 @@ audience:
 - Pinned to runtime version
 
 ---
+
 ## Notebooks for ML
 
 - Iterate on data
@@ -35,6 +39,7 @@ audience:
 - Promote to jobs
 
 ---
+
 ## Tracking
 
 - Built-in experiment tracking
@@ -43,6 +48,7 @@ audience:
 - Compare runs side by side
 
 ---
+
 ## Feature Store
 
 - Centralize feature definitions
@@ -51,6 +57,7 @@ audience:
 - Lineage to source data
 
 ---
+
 ## Model Registry
 
 - Versioned models
@@ -59,6 +66,7 @@ audience:
 - Source of truth for production models
 
 ---
+
 ## Serving
 
 - Hosted endpoints
@@ -67,6 +75,7 @@ audience:
 - Latency monitoring
 
 ---
+
 ## Unity Catalog
 
 - Centralized governance
@@ -75,11 +84,13 @@ audience:
 - Cross-workspace sharing
 
 ---
+
 ## Three-Level Namespace
 
 ![unity_catalog_levels](svg/courses/data_engineering/databricks/05_ml_and_governance/unity_catalog_levels.svg)
 
 ---
+
 ## Lineage
 
 - Automatic capture
@@ -88,6 +99,7 @@ audience:
 - Powers impact analysis
 
 ---
+
 ## Access Control
 
 - Group-based
@@ -96,6 +108,7 @@ audience:
 - Row filters
 
 ---
+
 ## Audit Logs
 
 - Every action recorded
@@ -104,6 +117,7 @@ audience:
 - Watch for failed access
 
 ---
+
 ## Cost Controls
 
 - Tags per workspace, job, cluster
@@ -112,6 +126,7 @@ audience:
 - Spot instances for fault-tolerant work
 
 ---
+
 ## Disaster Recovery
 
 - Catalog backups
@@ -120,6 +135,7 @@ audience:
 - Test restores
 
 ---
+
 ## Common Governance Mistakes
 
 - No catalog at all

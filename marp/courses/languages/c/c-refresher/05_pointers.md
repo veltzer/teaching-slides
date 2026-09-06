@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Pointers in C: A Refresher
 
 ## C Programming Refresher Course

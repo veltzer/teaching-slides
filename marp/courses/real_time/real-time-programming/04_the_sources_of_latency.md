@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # The Sources of Latency
 
 ---
+
 ## What This Chapter Covers
 
 - A budget approach to latency
@@ -23,6 +25,7 @@ audience:
 - How to measure each
 
 ---
+
 ## Latency Is Cumulative
 
 - An end-to-end deadline includes hardware + OS + your code + output
@@ -32,21 +35,25 @@ audience:
 - A "1ms deadline" must be split: 100us interrupt + 200us OS + 600us code + 100us output
 
 ---
+
 ## Latency Source Map
 
 ![latency_sources](svg/courses/real_time/real-time-programming/04_the_sources_of_latency/latency_sources.svg)
 
 ---
+
 ## Latency by Layer
 
 ![latency_layers](svg/courses/real_time/real-time-programming/04_the_sources_of_latency/latency_layers.svg)
 
 ---
+
 ## Latency Budget
 
 ![latency_budget](svg/courses/real_time/real-time-programming/04_the_sources_of_latency/latency_budget.svg)
 
 ---
+
 ## Interrupt Latency
 
 - Time between hardware event and the start of the ISR
@@ -56,6 +63,7 @@ audience:
 - Bound it by: minimising critical sections; high interrupt priority
 
 ---
+
 ## OS Scheduling Latency
 
 - Time between an event being ready and the OS scheduling its handler
@@ -65,6 +73,7 @@ audience:
 - Use `cyclictest` to measure your kernel's behaviour
 
 ---
+
 ## Context Switch Latency
 
 - Time to swap one running thread for another
@@ -74,6 +83,7 @@ audience:
 - Reduce switches by reducing the number of runnable threads
 
 ---
+
 ## Software Latency
 
 - Your code's own contribution
@@ -83,6 +93,7 @@ audience:
 - For long paths, the dominant factor
 
 ---
+
 ## Cache Effects
 
 - L1 cache: ~1 ns access
@@ -93,6 +104,7 @@ audience:
 - A cold cache after a context switch is a real cost
 
 ---
+
 ## TLB (Translation Lookaside Buffer)
 
 - Caches virtual-to-physical address translations
@@ -102,6 +114,7 @@ audience:
 - Worth understanding for memory-heavy RT code
 
 ---
+
 ## Branch Prediction
 
 - Modern CPUs predict branches; mispredict costs ~10-20 cycles
@@ -111,6 +124,7 @@ audience:
 - Profile-guided optimisation can help
 
 ---
+
 ## Memory Allocation
 
 - `malloc()` / `new` are non-deterministic
@@ -120,6 +134,7 @@ audience:
 - Lock-free allocators exist for hard cases
 
 ---
+
 ## Page Faults
 
 - Accessing a virtual page not backed by physical memory
@@ -129,6 +144,7 @@ audience:
 - A single page fault can blow a 1ms budget
 
 ---
+
 ## Disk and Filesystem
 
 - Spinning disks: 5-10ms seek time (catastrophic for RT)
@@ -138,6 +154,7 @@ audience:
 - Configuration: load once at startup
 
 ---
+
 ## Network Latency
 
 - Even on a local LAN: variable, jitter-prone
@@ -147,6 +164,7 @@ audience:
 - Avoid the network in the hot path if you can
 
 ---
+
 ## Lock Contention
 
 - Waiting for a lock = waiting for an arbitrary amount of time
@@ -156,6 +174,7 @@ audience:
 - A locked thread is an unscheduled thread
 
 ---
+
 ## Garbage Collection
 
 - Languages with GC (Java, Go, C#): unpredictable pauses
@@ -165,6 +184,7 @@ audience:
 - For C# RT: rare; Rust or C is the typical pick
 
 ---
+
 ## Measuring Latency
 
 - `cyclictest`: kernel wake-up latency (Linux)
@@ -174,6 +194,7 @@ audience:
 - Always measure under realistic load, not idle
 
 ---
+
 ## Common Mistakes
 
 - Optimising the average case; ignoring the worst

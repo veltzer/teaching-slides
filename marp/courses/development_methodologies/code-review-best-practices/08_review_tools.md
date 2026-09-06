@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Review Tools
 
 ---
@@ -18,6 +19,7 @@ audience:
 ![tool_categories](svg/courses/development_methodologies/code-review-best-practices/08_review_tools/tool_categories.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - GitHub pull requests
@@ -28,6 +30,7 @@ audience:
 - Tool-agnostic features that matter
 
 ---
+
 ## What a Review Tool Provides
 
 - A way to see the diff
@@ -39,6 +42,7 @@ audience:
 - All major tools have these
 
 ---
+
 ## GitHub Pull Requests
 
 - The dominant tool for open source and many companies
@@ -48,6 +52,7 @@ audience:
 - Easy to use; not the most powerful
 
 ---
+
 ## GitHub Suggestions
 
 - Inline code suggestions reviewers can apply
@@ -57,6 +62,7 @@ audience:
 - Speeds up small changes dramatically
 
 ---
+
 ## GitHub Code Review Features
 
 - Required reviewers (via CODEOWNERS)
@@ -66,6 +72,7 @@ audience:
 - Draft PRs for in-progress work
 
 ---
+
 ## GitLab Merge Requests
 
 - Equivalent to PRs; richer features in some areas
@@ -75,6 +82,7 @@ audience:
 - Threaded discussions; resolve markers
 
 ---
+
 ## Gerrit
 
 - Older, used at Google, OpenStack, Android
@@ -84,6 +92,7 @@ audience:
 - Different model; takes adjustment
 
 ---
+
 ## Phabricator / Phorge
 
 - Used at Facebook (then deprecated; community fork is Phorge)
@@ -92,6 +101,7 @@ audience:
 - Less common today; mentioned for completeness
 
 ---
+
 ## Inline Comments
 
 - The standard mechanism for line-specific feedback
@@ -101,6 +111,7 @@ audience:
 - The unit of review communication
 
 ---
+
 ## Code Suggestions
 
 - "Suggest" a code change inline
@@ -110,6 +121,7 @@ audience:
 - Don't suggest for big design changes — discuss first
 
 ---
+
 ## CODEOWNERS
 
 ```misc
@@ -125,6 +137,7 @@ audience:
 - Standard in larger codebases
 
 ---
+
 ## Review Assignment
 
 - Round-robin: spread reviews across the team
@@ -134,6 +147,7 @@ audience:
 - Pick what your team can sustain
 
 ---
+
 ## Notifications
 
 - Email per comment? Drowns the inbox
@@ -143,6 +157,7 @@ audience:
 - Configure notifications so reviews are visible without overwhelming
 
 ---
+
 ## Linters and Formatters in Reviews
 
 - Run linters in CI; fail builds on issues
@@ -152,6 +167,7 @@ audience:
 - Don't review what a robot can review
 
 ---
+
 ## Review Bots
 
 - Auto-comment on PRs: stale notifications, large PR warnings, security scans
@@ -161,6 +177,7 @@ audience:
 - Bots don't replace humans
 
 ---
+
 ## CI Integration
 
 - Status checks visible on the PR
@@ -170,6 +187,7 @@ audience:
 - The first review is by the CI
 
 ---
+
 ## Common Tool Mistakes
 
 - Disabling required reviewers "just for this"

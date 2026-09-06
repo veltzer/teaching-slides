@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Modeling
 
 ---
+
 ## What This Chapter Covers
 
 - Node vs property
@@ -20,6 +22,7 @@ audience:
 - Indexing
 
 ---
+
 ## When To Make A Node
 
 - Has its own identity
@@ -28,11 +31,13 @@ audience:
 - Likely to be queried directly
 
 ---
+
 ## Node vs Property
 
 ![node_vs_property](svg/courses/databases/neo4j/03_modeling/node_vs_property.svg)
 
 ---
+
 ## When To Make A Property
 
 - Adjective of a node
@@ -41,11 +46,13 @@ audience:
 - Tied to one node
 
 ---
+
 ## Modelling Choices
 
 ![modelling_choices](svg/courses/databases/neo4j/03_modeling/modelling_choices.svg)
 
 ---
+
 ## Relationship Types
 
 - Use specific types not generic
@@ -54,6 +61,7 @@ audience:
 - Avoid one type for all edges
 
 ---
+
 ## Direction
 
 - Most relationships have a natural direction
@@ -62,6 +70,7 @@ audience:
 - Pick a convention and document
 
 ---
+
 ## Hyper-Edges
 
 - Relationships connecting more than two
@@ -70,6 +79,7 @@ audience:
 - Not as elegant but works
 
 ---
+
 ## Time And Versions
 
 - Add a node for the event
@@ -78,6 +88,7 @@ audience:
 - Powerful for histories
 
 ---
+
 ## Indexes
 
 - B-tree indexes on properties
@@ -86,6 +97,7 @@ audience:
 - Run usage stats
 
 ---
+
 ## Constraints
 
 - Uniqueness
@@ -94,6 +106,7 @@ audience:
 - Drive MERGE correctness
 
 ---
+
 ## Avoid Property Explosion
 
 - Hundreds of properties on a node hurts
@@ -102,6 +115,7 @@ audience:
 - Profile before optimizing
 
 ---
+
 ## Labels
 
 - Multi-label allowed
@@ -110,6 +124,7 @@ audience:
 - Consistent naming convention
 
 ---
+
 ## Naming Conventions
 
 - Labels CamelCase
@@ -118,6 +133,7 @@ audience:
 - Apply across the codebase
 
 ---
+
 ## Polymorphic Patterns
 
 - Inheritance via labels
@@ -126,6 +142,7 @@ audience:
 - Test with realistic data
 
 ---
+
 ## Common Modeling Mistakes
 
 - Generic relationship type

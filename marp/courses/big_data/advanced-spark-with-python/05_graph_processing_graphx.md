@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Graph Processing with GraphX
 
 ---
+
 ## Introduction to GraphX
 * Graph computation model
 * Vertices and edges
@@ -21,10 +23,12 @@ audience:
 * Graph operators
 
 ---
+
 ## Graph Abstractions
 ![graph_abstractions](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_abstractions.svg)
 
 ---
+
 ## Basic Components
 1. Vertex RDD
 1. Edge RDD
@@ -32,6 +36,7 @@ audience:
 1. Triplets
 
 ---
+
 ## Creating Graphs
 ```python
 # Create vertices and edges as DataFrames
@@ -45,10 +50,12 @@ graph = GraphFrame(v, e)
 ```
 
 ---
+
 ## Graph Construction
 ![graph_construction](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_construction.svg)
 
 ---
+
 ## Property Graphs
 1. Vertex properties
 1. Edge properties
@@ -56,6 +63,7 @@ graph = GraphFrame(v, e)
 1. Property operations
 
 ---
+
 ## Graph Properties
 ```python
 # Add properties to vertices
@@ -65,10 +73,12 @@ vertices_with_props = vertices.map(add_property)
 ```
 
 ---
+
 ## Basic Operations
 ![basic_operations](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/basic_operations.svg)
 
 ---
+
 ## Graph Transformations
 1. Map vertices
 1. Map edges
@@ -76,6 +86,7 @@ vertices_with_props = vertices.map(add_property)
 1. Filter operations
 
 ---
+
 ## Vertex Programs
 ```python
 # Vertex-centric computation
@@ -84,10 +95,12 @@ def update_vertex(id, attr, message):
 ```
 
 ---
+
 ## Edge Operations
 ![edge_operations](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/edge_operations.svg)
 
 ---
+
 ## Triplet Views
 ```python
 # Process triplets
@@ -96,6 +109,7 @@ def process_triplet(triplet):
 ```
 
 ---
+
 ## Graph Algorithms
 1. PageRank
 1. Connected components
@@ -103,6 +117,7 @@ def process_triplet(triplet):
 1. Triangle counting
 
 ---
+
 ## PageRank Implementation
 ```python
 # Run PageRank
@@ -113,10 +128,12 @@ results = g.pageRank(
 ```
 
 ---
+
 ## Connected Components
 ![connected_components](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/connected_components.svg)
 
 ---
+
 ## Shortest Paths
 ```python
 # Compute shortest paths
@@ -126,10 +143,12 @@ paths = g.shortestPaths(
 ```
 
 ---
+
 ## Triangle Counting
 ![triangle_counting](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/triangle_counting.svg)
 
 ---
+
 ## Graph Algorithms API
 1. Built-in algorithms
 1. Custom algorithms
@@ -137,6 +156,7 @@ paths = g.shortestPaths(
 1. Result handling
 
 ---
+
 ## Custom Algorithms
 ```python
 def custom_graph_algo(graph):
@@ -145,10 +165,12 @@ def custom_graph_algo(graph):
 ```
 
 ---
+
 ## Pregel API
 ![pregel_api](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/pregel_api.svg)
 
 ---
+
 ## Message Passing
 1. Send messages
 1. Receive messages
@@ -156,6 +178,7 @@ def custom_graph_algo(graph):
 1. Converge
 
 ---
+
 ## Iterative Computation
 ```python
 # Iterative process
@@ -165,10 +188,12 @@ for i in range(max_iterations):
 ```
 
 ---
+
 ## Graph Partitioning
 ![graph_partitioning](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_partitioning.svg)
 
 ---
+
 ## Partition Strategies
 1. Random partitioning
 1. Edge partitioning
@@ -176,6 +201,7 @@ for i in range(max_iterations):
 1. Custom strategies
 
 ---
+
 ## Performance Tuning
 ```python
 # Configure partitioning
@@ -186,10 +212,12 @@ graph = graph.partitionBy(
 ```
 
 ---
+
 ## Memory Management
 ![memory_management](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/memory_management.svg)
 
 ---
+
 ## Caching Strategies
 1. Cache vertices
 1. Cache edges
@@ -197,6 +225,7 @@ graph = graph.partitionBy(
 1. Persistence levels
 
 ---
+
 ## Graph Views
 ```python
 # Create subgraph
@@ -206,10 +235,12 @@ subgraph = graph.filter(
 ```
 
 ---
+
 ## Graph Metrics
 ![graph_metrics](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_metrics.svg)
 
 ---
+
 ## Graph Analytics
 1. Degree distribution
 1. Centrality measures
@@ -217,6 +248,7 @@ subgraph = graph.filter(
 1. Path analysis
 
 ---
+
 ## Visualization
 ```python
 # Export for visualization
@@ -225,10 +257,12 @@ def export_graph(graph, path):
 ```
 
 ---
+
 ## Graph Formats
 ![graph_formats](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_formats.svg)
 
 ---
+
 ## Data Integration
 1. Load from files
 1. Database integration
@@ -236,6 +270,7 @@ def export_graph(graph, path):
 1. External sources
 
 ---
+
 ## Graph ETL
 ```python
 # Transform graph data
@@ -246,10 +281,12 @@ def transform_graph(data):
 ```
 
 ---
+
 ## Security Considerations
 ![security_considerations](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/security_considerations.svg)
 
 ---
+
 ## Production Deployment
 1. Resource allocation
 1. Monitoring setup
@@ -257,6 +294,7 @@ def transform_graph(data):
 1. Recovery strategies
 
 ---
+
 ## Monitoring
 ```python
 # Monitor metrics
@@ -267,10 +305,12 @@ def track_metrics(graph):
 ```
 
 ---
+
 ## Error Handling
 ![error_handling](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/error_handling.svg)
 
 ---
+
 ## Best Practices
 1. Efficient partitioning
 1. Memory management
@@ -278,6 +318,7 @@ def track_metrics(graph):
 1. Data structure choice
 
 ---
+
 ## Common Patterns
 ```python
 # Common graph pattern
@@ -287,10 +328,12 @@ def process_graph_pattern(graph):
 ```
 
 ---
+
 ## Advanced Features
 ![advanced_features](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/advanced_features.svg)
 
 ---
+
 ## Integration Patterns
 1. ML pipelines
 1. Streaming systems
@@ -298,6 +341,7 @@ def process_graph_pattern(graph):
 1. Analysis tools
 
 ---
+
 ## Performance Analysis
 ```python
 # Analyze performance
@@ -307,10 +351,12 @@ def analyze_performance(graph):
 ```
 
 ---
+
 ## Optimization Techniques
 ![optimization_techniques](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/optimization_techniques.svg)
 
 ---
+
 ## Future Developments
 1. Enhanced algorithms
 1. Better performance
@@ -318,6 +364,7 @@ def analyze_performance(graph):
 1. Tool integration
 
 ---
+
 ## Case Studies
 ```python
 # Real-world example
@@ -328,10 +375,12 @@ def social_network_analysis(graph):
 ```
 
 ---
+
 ## Production Checklist
 ![production_checklist](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/production_checklist.svg)
 
 ---
+
 ## Additional Resources
 * Official documentation
 * Research papers

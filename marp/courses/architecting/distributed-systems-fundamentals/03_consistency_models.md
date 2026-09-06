@@ -8,19 +8,23 @@ audience:
   - audiences:architects
 
 ---
+
 # Consistency Models
 
 ---
+
 ## Spectrum
 
 ![consistency_spectrum](svg/courses/architecting/distributed-systems-fundamentals/03_consistency_models/consistency_spectrum.svg)
 
 ---
+
 ## Linearisable Compared
 
 ![linearisable_example](svg/courses/architecting/distributed-systems-fundamentals/03_consistency_models/linearisable_example.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - A spectrum of consistency
@@ -32,6 +36,7 @@ audience:
 - Picking a model
 
 ---
+
 ## Why Consistency Models
 
 - "Consistent" alone is too vague
@@ -41,6 +46,7 @@ audience:
 - Stronger costs more
 
 ---
+
 ## Linearisability
 
 - The strongest single-object model
@@ -50,6 +56,7 @@ audience:
 - Required for: locks, leader election, counters
 
 ---
+
 ## Sequential Consistency
 
 - All clients see operations in the same order
@@ -59,6 +66,7 @@ audience:
 - Often confused with linearisability
 
 ---
+
 ## Causal Consistency
 
 - If A happened-before B, all clients see A before B
@@ -68,6 +76,7 @@ audience:
 - A sweet spot between strong and eventual
 
 ---
+
 ## Eventual Consistency
 
 - Replicas eventually converge if no new writes
@@ -77,6 +86,7 @@ audience:
 - Standard for AP systems
 
 ---
+
 ## Strong Eventual Consistency
 
 - Eventual consistency + same end state regardless of operation order
@@ -85,6 +95,7 @@ audience:
 - Best of both, where applicable
 
 ---
+
 ## Read-Your-Writes
 
 - Client always sees its own writes
@@ -93,6 +104,7 @@ audience:
 - Subset of consistency; client-centric
 
 ---
+
 ## Monotonic Reads
 
 - A client doesn't see *older* data than it has seen before
@@ -101,6 +113,7 @@ audience:
 - Easy to violate without thought
 
 ---
+
 ## Bounded Staleness
 
 - Reads see data at most N seconds old
@@ -109,6 +122,7 @@ audience:
 - Easier to reason about than pure eventual
 
 ---
+
 ## Snapshot Isolation
 
 - Each transaction sees a consistent snapshot
@@ -118,6 +132,7 @@ audience:
 - Different from serialisability
 
 ---
+
 ## Serialisability
 
 - Concurrent transactions equivalent to *some* serial order
@@ -127,6 +142,7 @@ audience:
 - Required for some financial workflows
 
 ---
+
 ## A Spectrum
 
 - Strict / Linearisable
@@ -138,6 +154,7 @@ audience:
 - Pick the weakest that works
 
 ---
+
 ## Mixing Models
 
 - Different operations, different models
@@ -146,6 +163,7 @@ audience:
 - Document which is which
 
 ---
+
 ## Common Consistency Mistakes
 
 - Assuming strong consistency without checking

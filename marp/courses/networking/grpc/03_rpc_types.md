@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # The Four RPC Types
 
 ---
+
 ## What This Chapter Covers
 
 - Unary RPC — request/response
@@ -20,6 +22,7 @@ audience:
 - Use cases and patterns for each
 
 ---
+
 ## The Four Types
 
 - Unary: one request, one response
@@ -29,6 +32,7 @@ audience:
 - Each maps to a method shape in the .proto
 
 ---
+
 ## .proto Syntax for Each
 
 ```protobuf
@@ -48,16 +52,19 @@ service Chat {
 ```
 
 ---
+
 ## Four Types Visualized
 
 ![rpc_types](svg/courses/networking/grpc/03_rpc_types/rpc_types.svg)
 
 ---
+
 ## Streaming Modes Compared
 
 ![streaming_modes](svg/courses/networking/grpc/03_rpc_types/streaming_modes.svg)
 
 ---
+
 ## Unary RPC
 
 - The simplest pattern — like a function call
@@ -67,6 +74,7 @@ service Chat {
 - Deadlines and cancellation work naturally
 
 ---
+
 ## When to Use Unary
 
 - CRUD operations
@@ -76,6 +84,7 @@ service Chat {
 - Default choice unless streaming adds value
 
 ---
+
 ## Server Streaming
 
 - Client sends one request
@@ -85,6 +94,7 @@ service Chat {
 - No further input from client during the stream
 
 ---
+
 ## When to Use Server Streaming
 
 - Real-time feeds: stock prices, sports scores
@@ -94,6 +104,7 @@ service Chat {
 - Server pushes data; client just listens
 
 ---
+
 ## Client Streaming
 
 - Client sends a stream of requests
@@ -103,6 +114,7 @@ service Chat {
 - Server can't reply until client finishes
 
 ---
+
 ## When to Use Client Streaming
 
 - File upload in chunks
@@ -112,6 +124,7 @@ service Chat {
 - Saves on connection overhead vs many unary calls
 
 ---
+
 ## Bidirectional Streaming
 
 - Both sides send streams independently
@@ -121,6 +134,7 @@ service Chat {
 - The most flexible (and complex) pattern
 
 ---
+
 ## When to Use Bidirectional
 
 - Chat applications
@@ -130,6 +144,7 @@ service Chat {
 - When neither side dictates the rhythm
 
 ---
+
 ## Implementing Unary (Server, Go)
 
 ```go
@@ -147,6 +162,7 @@ func (s *server) GetUser(ctx context.Context, req *pb.GetUserRequest) (*pb.User,
 - Return response or error
 
 ---
+
 ## Implementing Unary (Client, Go)
 
 ```go
@@ -165,6 +181,7 @@ fmt.Println(resp.GetEmail())
 - Handle errors as values
 
 ---
+
 ## Implementing Server Streaming
 
 ```go
@@ -183,6 +200,7 @@ func (s *server) Subscribe(req *pb.SubscribeRequest, stream pb.Chat_SubscribeSer
 - Errors abort the stream
 
 ---
+
 ## Implementing Client Streaming
 
 ```go
@@ -204,6 +222,7 @@ func (s *server) Upload(stream pb.Storage_UploadServer) error {
 - `SendAndClose` sends the final response
 
 ---
+
 ## Implementing Bidi Streaming
 
 ```go
@@ -222,6 +241,7 @@ func (s *server) Chat(stream pb.Chat_ChatServer) error {
 - Most flexible; most care needed
 
 ---
+
 ## Flow Control and Backpressure
 
 - HTTP/2 manages flow control
@@ -231,6 +251,7 @@ func (s *server) Chat(stream pb.Chat_ChatServer) error {
 - Honor cancellation and deadlines explicitly
 
 ---
+
 ## Stream Lifecycle
 
 - Open: client initiates the call
@@ -240,6 +261,7 @@ func (s *server) Chat(stream pb.Chat_ChatServer) error {
 - Status code (OK or error) ends every call
 
 ---
+
 ## Error Handling in Streams
 
 - Errors abort the stream immediately
@@ -249,6 +271,7 @@ func (s *server) Chat(stream pb.Chat_ChatServer) error {
 - Logging the error per stream is essential
 
 ---
+
 ## Choosing the Right Type
 
 - Default: unary
@@ -258,6 +281,7 @@ func (s *server) Chat(stream pb.Chat_ChatServer) error {
 - Don't use streaming for simple request/response
 
 ---
+
 ## Common Pitfalls
 
 - Bidirectional when you needed two unary RPCs
@@ -267,6 +291,7 @@ func (s *server) Chat(stream pb.Chat_ChatServer) error {
 - Treating streaming as "free" — it has overhead
 
 ---
+
 ## Summary
 
 - Four RPC types: unary, server stream, client stream, bidi

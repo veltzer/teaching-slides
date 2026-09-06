@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Unity
 
 ---
+
 ## Why Choose Unity
 
 ![why_unity](svg/courses/unity/introduction-to-game-development-with-unity/01_introduction_to_unity/why_unity.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What Unity is, and what kinds of games people make in it
@@ -26,6 +29,7 @@ audience:
 - Manipulating GameObjects with the gizmos
 
 ---
+
 ## What Unity Is
 
 - A cross-platform game engine and editor
@@ -35,6 +39,7 @@ audience:
 - Scripting language: C# on .NET
 
 ---
+
 ## Why People Choose Unity
 
 - Easy ramp from "I have an idea" to "something visual is running"
@@ -44,6 +49,7 @@ audience:
 - Trade-offs exist (Unity is opinionated and changes often) — covered later
 
 ---
+
 ## Installing Unity
 
 - Download Unity Hub from unity.com
@@ -53,6 +59,7 @@ audience:
 - A fresh install is multi-GB; budget time and disk space
 
 ---
+
 ## Unity Hub Layout
 
 - **Projects**: list of every project you have on disk
@@ -62,6 +69,7 @@ audience:
 - The Hub never opens a project itself — it launches the editor for you
 
 ---
+
 ## Creating a New Project
 
 - Click "New Project" in the Hub
@@ -71,11 +79,13 @@ audience:
 - First load can take a few minutes — Unity is importing all built-in assets
 
 ---
+
 ## The Editor at First Glance
 
 ![editor_layout](svg/courses/unity/introduction-to-game-development-with-unity/01_introduction_to_unity/editor_layout.svg)
 
 ---
+
 ## Scene View
 
 - The 3D viewport where you arrange your level
@@ -85,6 +95,7 @@ audience:
 - This is *editing*, not playing — what you see here is the design state
 
 ---
+
 ## Game View
 
 - Shows what the player sees when the game runs
@@ -94,6 +105,7 @@ audience:
 - The Scene view and Game view almost always show different things
 
 ---
+
 ## Hierarchy Window
 
 - A list of every GameObject in the current scene, in a tree
@@ -103,6 +115,7 @@ audience:
 - Selecting here highlights in the Scene view, and vice-versa
 
 ---
+
 ## Inspector Window
 
 - Shows the *components* of the selected object
@@ -112,6 +125,7 @@ audience:
 - This is where 80% of editor work happens
 
 ---
+
 ## Project Window
 
 - A view of your project's `Assets` folder
@@ -121,6 +135,7 @@ audience:
 - Right-click to create new C# scripts, materials, prefabs
 
 ---
+
 ## Console Window
 
 - Where Unity prints messages, warnings, and errors
@@ -130,6 +145,7 @@ audience:
 - Always check the console when something doesn't work
 
 ---
+
 ## GameObjects and Components
 
 - A GameObject is a thing in the scene — a player, a tree, a camera
@@ -139,6 +155,7 @@ audience:
 - The Transform component (position / rotation / scale) is always present
 
 ---
+
 ## Manipulating Objects
 
 - Move, Rotate, Scale: keys W, E, R; Q is the hand pan tool
@@ -148,6 +165,7 @@ audience:
 - Coordinates: red = X, green = Y (up), blue = Z (forward)
 
 ---
+
 ## Saving Your Work
 
 - Save the scene: File &#8594; Save (Ctrl+S)
@@ -157,6 +175,7 @@ audience:
 - Commit early, commit often — Unity projects benefit from version control
 
 ---
+
 ## Project Layout on Disk
 
 - `Assets/` — everything you create or import (commit this)
@@ -166,6 +185,7 @@ audience:
 - A `.gitignore` template for Unity is one search away
 
 ---
+
 ## What's Next
 
 - Next chapter: 3D modeling concepts and bringing models into Unity

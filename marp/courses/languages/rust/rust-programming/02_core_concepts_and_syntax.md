@@ -8,10 +8,12 @@ audience:
   - audiences:developers
 
 ---
+
 # Rust Fundamentals
 ## Chapter 2: Core Concepts and Basic Syntax
 
 ---
+
 ## Ownership and Borrowing
 
 ![ownership_and_borrowing](svg/courses/languages/rust/rust-programming/02_core_concepts_and_syntax/ownership_and_borrowing.svg)
@@ -34,6 +36,7 @@ let x = x + 1; // New variable, shadows previous x
 ```
 
 ---
+
 ## Constants
 
 ```rust

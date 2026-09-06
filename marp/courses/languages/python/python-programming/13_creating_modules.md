@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Creating Modules
 
 ---
+
 ## What Makes a Python Package?
 - A directory with Python files
 - An `__init__.py` file (can be empty)
@@ -25,6 +27,7 @@ my_package/
 ```
 
 ---
+
 ## Simple Module Example
 
 ```python
@@ -45,6 +48,7 @@ def multiply(a, b):
 ```
 
 ---
+
 ## Using Your Module
 
 ```python
@@ -61,6 +65,7 @@ print(multiply(4, 5))   # 20
 ```
 
 ---
+
 ## Package Directory Structure
 
 ```tree
@@ -82,6 +87,7 @@ my_project/
 ```
 
 ---
+
 ## The `__init__.py` File
 - Makes a directory a Python package
 - Can be empty or contain initialization code
@@ -99,6 +105,7 @@ __all__ = ["main_function", "helper_function"]
 ```
 
 ---
+
 ## Relative Imports
 
 ```python
@@ -116,6 +123,7 @@ from ..other_package import something  # Parent package
 - Only work inside packages
 
 ---
+
 ## Absolute vs Relative Imports
 
 ```python
@@ -131,6 +139,7 @@ from . import utils
 - Relative imports are fine within a package
 
 ---
+
 ## The `__all__` Variable
 - Controls what `from module import *` exports
 
@@ -152,6 +161,7 @@ class _InternalClass:
 ```
 
 ---
+
 ## Module-Level Variables
 
 ```python
@@ -168,6 +178,7 @@ BASE_URL = "https://api.example.com"
 ```
 
 ---
+
 ## Documenting with Docstrings
 - Every module, class, and function should have a docstring
 - Follow Google, NumPy, or Sphinx style
@@ -191,6 +202,7 @@ def fetch_data(url, timeout=30):
 ```
 
 ---
+
 ## Google Style Docstrings
 
 ```python
@@ -213,6 +225,7 @@ def calculate(numbers, operation="sum"):
 ```
 
 ---
+
 ## NumPy Style Docstrings
 
 ```python
@@ -235,6 +248,7 @@ def calculate(numbers, operation="sum"):
 ```
 
 ---
+
 ## Testing with `pytest`
 
 ```python
@@ -256,6 +270,7 @@ def test_multiply():
 ```
 
 ---
+
 ## Running `pytest`
 
 ```bash
@@ -279,6 +294,7 @@ pytest -s
 ```
 
 ---
+
 ## `pytest` - Fixtures
 
 ```python
@@ -300,6 +316,7 @@ def test_empty(empty_list):
 ```
 
 ---
+
 ## `pytest` - Parametrize
 
 ```python
@@ -318,6 +335,7 @@ def test_add(a, b, expected):
 ```
 
 ---
+
 ## `pytest` - Testing Exceptions
 
 ```python
@@ -338,6 +356,7 @@ def test_divide_by_zero_message():
 ```
 
 ---
+
 ## `pytest` - Markers
 
 ```python
@@ -362,6 +381,7 @@ def test_unix_feature():
 ```
 
 ---
+
 ## `pytest` - Configuration (`pytest.ini`)
 
 ```ini
@@ -376,6 +396,7 @@ addopts = -v --tb=short
 ```
 
 ---
+
 ## `pytest` - Coverage
 
 ```bash
@@ -401,6 +422,7 @@ TOTAL                     43      5    88%
 ```
 
 ---
+
 ## `pyproject.toml` - Modern Configuration
 
 ```toml
@@ -426,6 +448,7 @@ dev = ["pytest>=7.0", "black", "mypy"]
 ```
 
 ---
+
 ## Entry Points (CLI Tools)
 
 ```toml
@@ -450,6 +473,7 @@ my-tool Alice  # Hello, Alice!
 ```
 
 ---
+
 ## Development Installation
 
 ```bash
@@ -465,6 +489,7 @@ pip install -e ".[dev]"
 - No need to reinstall after every change
 
 ---
+
 ## Building and Distributing
 
 ```bash
@@ -486,6 +511,7 @@ twine upload --repository testpypi dist/*
 ```
 
 ---
+
 ## Project Layout - `src` Layout
 
 ```tree
@@ -506,6 +532,7 @@ my-project/
 - Recommended for distributable packages
 
 ---
+
 ## `.gitignore` for Python Projects
 
 ```config
@@ -524,6 +551,7 @@ htmlcov/
 ```
 
 ---
+
 ## Type Checking Your Package
 
 ```python
@@ -543,6 +571,7 @@ mypy src/my_package/
 ```
 
 ---
+
 ## Summary
 - Packages are directories with `__init__.py`
 - Use relative imports within packages

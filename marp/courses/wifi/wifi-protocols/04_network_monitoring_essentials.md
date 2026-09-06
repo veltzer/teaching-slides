@@ -9,9 +9,11 @@ audience:
   - audiences:embedded-engineers
 
 ---
+
 # Network Monitoring Essentials
 
 ---
+
 ## What This Chapter Covers
 
 - Monitor mode and why it matters
@@ -21,6 +23,7 @@ audience:
 - Decoding protected traffic, when you have the keys
 
 ---
+
 ## Monitor Mode vs Managed Mode
 
 - *Managed* mode: the radio talks to one AP, ignores everything else
@@ -30,6 +33,7 @@ audience:
 - Monitor mode is per-channel; you only see what's on the tuned channel
 
 ---
+
 ## The First Four Metrics
 
 - **RSSI** of each client at the AP — coverage
@@ -39,6 +43,7 @@ audience:
 - Get these four, in that order, before changing anything
 
 ---
+
 ## RSSI in Practice
 
 - Reported in dBm; numbers are negative
@@ -48,6 +53,7 @@ audience:
 - &lt; -85 dBm: hardly usable for most modern apps
 
 ---
+
 ## Retry Rate
 
 - The fraction of frames that needed at least one retransmission
@@ -57,6 +63,7 @@ audience:
 - Available in the AP dashboard *and* per-frame in a Wireshark capture
 
 ---
+
 ## Channel Utilisation
 
 - Percent of airtime the channel is busy
@@ -66,6 +73,7 @@ audience:
 - Many APs split utilisation into self / others / noise — read all three
 
 ---
+
 ## iw: The Linux Swiss Army Knife
 
 - `iw dev` — list interfaces
@@ -75,11 +83,13 @@ audience:
 - `iw phy phy0 info` — what the radio supports
 
 ---
+
 ## Spectrum and Capture Tools
 
 ![spectrum_view](svg/courses/wifi/wifi-protocols/04_network_monitoring_essentials/spectrum_view.svg)
 
 ---
+
 ## Putting wlan0 in Monitor Mode
 
 ```bash
@@ -94,6 +104,7 @@ sudo iw dev wlan0 set channel 36
 - Many cards drop other functionality while in monitor mode — your laptop loses Wi-Fi
 
 ---
+
 ## tcpdump on Monitor Mode
 
 ```bash
@@ -107,6 +118,7 @@ sudo tcpdump -i wlan0 -s 0 -w cap.pcap \
 - For data frames, drop the filter (file fills up fast on a busy channel)
 
 ---
+
 ## Wireshark Display Filters
 
 - `wlan.fc.type == 0` — management frames
@@ -116,6 +128,7 @@ sudo tcpdump -i wlan0 -s 0 -w cap.pcap \
 - `wlan.addr == aa:bb:cc:dd:ee:ff` — frames involving one MAC
 
 ---
+
 ## Where to Tap
 
 - On a laptop in the same room as the user — sees what they see
@@ -125,6 +138,7 @@ sudo tcpdump -i wlan0 -s 0 -w cap.pcap \
 - Capture *both ends* for the worst problems
 
 ---
+
 ## Decoding WPA2 Captures
 
 - 802.11 traffic is encrypted per-association via the 4-way handshake
@@ -134,6 +148,7 @@ sudo tcpdump -i wlan0 -s 0 -w cap.pcap \
 - Without keys you still see *headers* (addresses, types, sizes) but not payload
 
 ---
+
 ## Beacon Frames
 
 - The AP advertises itself ~10 times per second by default
@@ -143,6 +158,7 @@ sudo tcpdump -i wlan0 -s 0 -w cap.pcap \
 - Vendor IEs leak product info — useful for fingerprinting
 
 ---
+
 ## Probe Requests and Responses
 
 - Clients shout "any AP for SSID X?" via probe requests
@@ -152,6 +168,7 @@ sudo tcpdump -i wlan0 -s 0 -w cap.pcap \
 - Watch probes to discover which devices are around without associating
 
 ---
+
 ## Capture Hygiene
 
 - Capture sessions get big fast — start with rotation: `tcpdump -W 10 -G 60`
@@ -161,6 +178,7 @@ sudo tcpdump -i wlan0 -s 0 -w cap.pcap \
 - Anonymise before sharing if needed
 
 ---
+
 ## Tooling Map
 
 ![tooling_map](svg/courses/wifi/wifi-protocols/04_network_monitoring_essentials/tooling_map.svg)

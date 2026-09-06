@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Behavioural Design Patterns
 
 ---
+
 ## What This Chapter Covers
 
 - Eleven patterns about *how objects share work*
@@ -20,16 +22,19 @@ audience:
 - For each: intent, structure, code sketch, when to use
 
 ---
+
 ## The Headline Four
 
 ![behavioral_patterns](svg/courses/design_patterns/design-patterns/04_behavioral_design_patterns/behavioral_patterns.svg)
 
 ---
+
 ## Compared
 
 ![behavioural_compared](svg/courses/design_patterns/design-patterns/04_behavioral_design_patterns/behavioural_compared.svg)
 
 ---
+
 ## Strategy
 
 - *Intent*: encapsulate algorithms behind a common interface, switch them at runtime
@@ -39,6 +44,7 @@ audience:
 - Pairs with Open/Closed: new strategies don't change consumers
 
 ---
+
 ## Strategy in Code
 
 ```python
@@ -59,6 +65,7 @@ def process(items, strategy):
 - Add new strategies without touching `process`
 
 ---
+
 ## Observer
 
 - *Intent*: when one object changes state, notify many dependents
@@ -68,6 +75,7 @@ def process(items, strategy):
 - Easy to misuse: cyclic dependencies, surprise updates
 
 ---
+
 ## Observer in Code
 
 ```python
@@ -87,6 +95,7 @@ class LoggingObserver:
 - Subject knows nothing about specific observer types
 
 ---
+
 ## Iterator
 
 - *Intent*: traverse a collection without exposing its internals
@@ -96,6 +105,7 @@ class LoggingObserver:
 - Knowing it explains *why* `for x in collection:` works
 
 ---
+
 ## Template Method
 
 - *Intent*: define the skeleton of an algorithm in a base class, let subclasses fill in steps
@@ -105,6 +115,7 @@ class LoggingObserver:
 - Common in framework code where a base class drives the workflow
 
 ---
+
 ## Template Method in Code
 
 ```python
@@ -129,6 +140,7 @@ class Game(ABC):
 - Subclasses fill in the steps — Chess, Monopoly, Checkers
 
 ---
+
 ## Command
 
 - *Intent*: encapsulate a request as an object
@@ -138,6 +150,7 @@ class Game(ABC):
 - In functional languages: a function or a closure
 
 ---
+
 ## Command in Code
 
 ```python
@@ -157,6 +170,7 @@ class TypeText(Command):
 ```
 
 ---
+
 ## Chain of Responsibility
 
 - *Intent*: pass a request along a chain of handlers until one handles it
@@ -166,6 +180,7 @@ class TypeText(Command):
 - Risk: requests fall off the end with no handler
 
 ---
+
 ## State
 
 - *Intent*: an object behaves differently depending on its internal state
@@ -175,6 +190,7 @@ class TypeText(Command):
 - Cleaner than a switch, costs an extra class per state
 
 ---
+
 ## State in Code
 
 ```python
@@ -199,6 +215,7 @@ class Machine:
 ```
 
 ---
+
 ## Visitor
 
 - *Intent*: separate an algorithm from the object structure it operates on
@@ -208,6 +225,7 @@ class Machine:
 - Often replaced by sum types + pattern matching in modern languages
 
 ---
+
 ## Mediator
 
 - *Intent*: encapsulate how a set of objects interact, so they don't refer to each other directly
@@ -217,6 +235,7 @@ class Machine:
 - Risk: mediator becomes a god object
 
 ---
+
 ## Memento
 
 - *Intent*: capture and externalise an object's internal state so it can be restored later
@@ -226,6 +245,7 @@ class Machine:
 - Modern equivalent: serialise to JSON, restore later
 
 ---
+
 ## Interpreter
 
 - *Intent*: define a representation for a grammar plus an interpreter for it
@@ -235,6 +255,7 @@ class Machine:
 - For complex grammars, reach for a parser generator (ANTLR, Lark)
 
 ---
+
 ## Choosing Among Behavioural Patterns
 
 - Vary an algorithm at runtime &#8594; Strategy
@@ -246,6 +267,7 @@ class Machine:
 - New operations on a fixed type hierarchy &#8594; Visitor
 
 ---
+
 ## Course Wrap-Up
 
 - 23 patterns is a *vocabulary*, not a checklist

@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # ARP and ICMP
 
 ---
+
 ## What This Chapter Covers
 
 - ARP — Address Resolution Protocol
@@ -21,6 +23,7 @@ audience:
 - Security considerations
 
 ---
+
 ## What ARP Does
 
 - Maps IP addresses to MAC addresses on a LAN
@@ -30,6 +33,7 @@ audience:
 - Without ARP, no LAN traffic flows
 
 ---
+
 ## ARP Request and Reply
 
 - Request: broadcast (ff:ff:ff:ff:ff:ff)
@@ -39,11 +43,13 @@ audience:
 - Ages out and re-resolves
 
 ---
+
 ## ARP Visualized
 
 ![arp_flow](svg/courses/networking/tcp-ip-deep-dive/04_arp_icmp/arp_flow.svg)
 
 ---
+
 ## Viewing the ARP Table
 
 - Linux: `ip neigh show` or `arp -a`
@@ -53,6 +59,7 @@ audience:
 - Stale entries trigger a fresh ARP
 
 ---
+
 ## Gratuitous ARP
 
 - A host announces its own mapping
@@ -62,6 +69,7 @@ audience:
 - Used by failover protocols and keepalived
 
 ---
+
 ## ARP Spoofing
 
 - Attacker sends fake ARP replies
@@ -71,6 +79,7 @@ audience:
 - Defense: ARP inspection, static entries, encryption
 
 ---
+
 ## IPv6: NDP Replaces ARP
 
 - Neighbor Discovery Protocol
@@ -80,6 +89,7 @@ audience:
 - Same purpose, modern protocol
 
 ---
+
 ## What ICMP Does
 
 - Network diagnostics and error reporting
@@ -89,6 +99,7 @@ audience:
 - Often filtered (poorly) by firewalls
 
 ---
+
 ## ICMP Message Types
 
 - Echo Request (8) / Echo Reply (0) — ping
@@ -98,11 +109,13 @@ audience:
 - Many more
 
 ---
+
 ## ICMP Categories
 
 ![icmp_kinds](svg/courses/networking/tcp-ip-deep-dive/04_arp_icmp/icmp_kinds.svg)
 
 ---
+
 ## Ping
 
 - Sends Echo Request, expects Echo Reply
@@ -112,6 +125,7 @@ audience:
 - First diagnostic tool when something breaks
 
 ---
+
 ## Reading Ping Output
 
 ```output
@@ -125,6 +139,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - icmp_seq lets you spot drops
 
 ---
+
 ## Traceroute
 
 - Shows the path packets take
@@ -134,6 +149,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - Different tools use UDP, TCP, or ICMP
 
 ---
+
 ## Traceroute Variants
 
 - `traceroute` (Linux) — UDP by default
@@ -143,6 +159,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - `mtr` — continuous traceroute with stats
 
 ---
+
 ## ICMP Filtering
 
 - Many firewalls block ICMP for "security"
@@ -152,6 +169,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - Total ICMP block creates mysterious failures
 
 ---
+
 ## Path MTU Discovery
 
 - Sender sets "don't fragment" bit
@@ -161,6 +179,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - Blocked ICMP → black-hole connections
 
 ---
+
 ## Destination Unreachable Codes
 
 - 0 — Net unreachable
@@ -171,6 +190,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - Each tells you something different
 
 ---
+
 ## Common Diagnostic Workflow
 
 - Can I reach the destination? → ping
@@ -180,6 +200,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - Layer up: HTTP/TLS once L3/L4 works
 
 ---
+
 ## Real-World Failure Examples
 
 - Ping works but app doesn't → firewall blocks the port
@@ -189,6 +210,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - DNS works, IP doesn't → routing or NAT problem
 
 ---
+
 ## ICMP Tools
 
 - `ping` — basic reachability
@@ -198,6 +220,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - `iputils` package on Linux
 
 ---
+
 ## ARP Tools
 
 - `arp` (legacy) / `ip neigh` (modern) — view cache
@@ -207,6 +230,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - Helpful for LAN diagnostics
 
 ---
+
 ## Common Pitfalls
 
 - Blocking all ICMP — breaks Path MTU and traceroute
@@ -216,6 +240,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - Ignoring intermittent ARP issues
 
 ---
+
 ## Best Practices
 
 - Allow Echo + Frag-Needed + Time Exceeded ICMP
@@ -225,6 +250,7 @@ PING example.com (93.184.216.34): 56 data bytes
 - Don't filter ICMP without understanding the cost
 
 ---
+
 ## Summary
 
 - ARP: IP → MAC on a LAN; cache and timeout

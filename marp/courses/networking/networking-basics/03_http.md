@@ -9,11 +9,13 @@ audience:
   - audiences:devops
 
 ---
+
 # HTTP Protocol: Evolution and Versions
 
 ## From 1.0 to 3.0
 
 ---
+
 ## Methods Overview
 
 ![http_methods](svg/courses/networking/networking-basics/03_http/http_methods.svg)
@@ -201,6 +203,7 @@ $ curl -v http://example.com/
 ---
 
 ## Version Comparison
+
 | Feature           | HTTP/1.0 | HTTP/1.1 | HTTP/2   | HTTP/3   |
 |-------------------|----------|----------|----------|----------|
 | Connections       | One-off  | Persistent | Multiplexed | Multiplexed |
@@ -211,6 +214,7 @@ $ curl -v http://example.com/
 | Transport Protocol| TCP      | TCP      | TCP      | UDP (QUIC) |
 
 ---
+
 ## Key Takeaways
 
 1. HTTP has evolved to meet increasing web demands

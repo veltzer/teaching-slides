@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # ML Pipelines
 
 ---
+
 ## What This Chapter Covers
 
 - Why pipelines
@@ -21,6 +23,7 @@ audience:
 - Training pipelines
 
 ---
+
 ## Why Pipelines
 
 - Reproducible runs
@@ -29,6 +32,7 @@ audience:
 - Schedulable
 
 ---
+
 ## Pipeline Anatomy
 
 - Sources
@@ -38,11 +42,13 @@ audience:
 - Sinks
 
 ---
+
 ## Pipeline Layers
 
 ![pipeline_layers](svg/courses/ai/mlops/02_pipelines/pipeline_layers.svg)
 
 ---
+
 ## DAG Model
 
 - Tasks form a graph
@@ -51,11 +57,13 @@ audience:
 - Failures stop downstream
 
 ---
+
 ## DAG Visualized
 
 ![pipeline_dag](svg/courses/ai/mlops/02_pipelines/pipeline_dag.svg)
 
 ---
+
 ## Orchestrators
 
 - Airflow: mature, Python, broad
@@ -64,6 +72,7 @@ audience:
 - Dagster: typed assets
 
 ---
+
 ## Data Pipelines
 
 - Ingest from source systems
@@ -72,6 +81,7 @@ audience:
 - Land in warehouse or lake
 
 ---
+
 ## Feature Pipelines
 
 - Transform raw data into features
@@ -80,6 +90,7 @@ audience:
 - Stream fresh ones online
 
 ---
+
 ## Training Pipelines
 
 - Pull frozen feature snapshot
@@ -88,6 +99,7 @@ audience:
 - Register if metrics pass
 
 ---
+
 ## Inference Pipelines
 
 - Online: low latency, single record
@@ -96,6 +108,7 @@ audience:
 - Same preprocessing required
 
 ---
+
 ## Caching and Idempotency
 
 - Re-run safe
@@ -104,6 +117,7 @@ audience:
 - Saves time and cost
 
 ---
+
 ## Backfills
 
 - Old data, new pipeline
@@ -112,6 +126,7 @@ audience:
 - Validate before promoting
 
 ---
+
 ## Failure Handling
 
 - Retries with backoff
@@ -120,6 +135,7 @@ audience:
 - Automate the safe recovery
 
 ---
+
 ## Common Pipeline Mistakes
 
 - Long monolithic tasks

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Types of Data
 
 ---
+
 ## What This Chapter Covers
 
 - Categorical vs numerical data
@@ -21,11 +23,13 @@ audience:
 - Structured vs messy reality
 
 ---
+
 ## Taxonomy of Data Types
 
 ![taxonomy](svg/courses/math/statistics-applied/02_types_of_data/taxonomy.svg)
 
 ---
+
 ## The First Question
 
 - Before any analysis: *what kind of data is this?*
@@ -35,6 +39,7 @@ audience:
 - Five seconds of thought saves an hour of confusion
 
 ---
+
 ## Categorical vs Numerical
 
 - **Categorical**: labels — color, country, plan tier, yes/no
@@ -44,6 +49,7 @@ audience:
 - "Number of categories" (3 plans) is numerical *about* categorical data
 
 ---
+
 ## The Four Levels Of Measurement
 
 - **Nominal**: categories with no order — eye color, browser
@@ -53,11 +59,13 @@ audience:
 - Each level unlocks more operations than the one before
 
 ---
+
 ## What's Legal at Each Level
 
 ![legal_operations](svg/courses/math/statistics-applied/02_types_of_data/legal_operations.svg)
 
 ---
+
 ## Why The Level Matters
 
 - Nominal: only mode and frequencies
@@ -67,6 +75,7 @@ audience:
 - Treating ordinal as ratio (averaging 1-5 stars) is common and slightly wrong
 
 ---
+
 ## Discrete vs Continuous
 
 - **Discrete**: countable values — number of orders, clicks, defects
@@ -76,6 +85,7 @@ audience:
 - In practice everything is discrete (finite precision), but the model can be continuous
 
 ---
+
 ## Inspecting Types In Practice
 
 ```python
@@ -91,6 +101,7 @@ print(df["logins"].mean())          # ratio -> mean is fine
 ```
 
 ---
+
 ## Other Useful Distinctions
 
 - **Cross-sectional**: many units at one point in time (today's users)
@@ -100,6 +111,7 @@ print(df["logins"].mean())          # ratio -> mean is fine
 - Don't apply plain hypothesis tests to autocorrelated time series
 
 ---
+
 ## Common Mistakes
 
 - Averaging nominal codes (ZIP codes, category IDs)

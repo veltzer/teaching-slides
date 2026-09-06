@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Classes
 
 ---
+
 ## What is a Class?
 - A blueprint for creating objects
 - Bundles data (attributes) and behavior (methods)
@@ -28,6 +30,7 @@ print(rex.bark())  # Rex says Woof!
 ```
 
 ---
+
 ## Class vs Instance
 - **Class**: The blueprint (template)
 - **Instance**: A specific object created from the class
@@ -45,6 +48,7 @@ print(dog2.name)      # Buddy
 ```
 
 ---
+
 ## The `__init__` Method
 - Called automatically when creating an instance
 - Initializes instance attributes
@@ -61,6 +65,7 @@ print(p.x, p.y)  # 3 4
 ```
 
 ---
+
 ## The `self` Parameter
 - First parameter of every instance method
 - Refers to the current instance
@@ -79,6 +84,7 @@ class Circle:
 ```
 
 ---
+
 ## Instance Attributes vs Class Attributes
 
 ```python
@@ -98,6 +104,7 @@ print(dog2.name)     # Buddy (per instance)
 ```
 
 ---
+
 ## Class Attribute Gotcha
 
 ```python
@@ -116,6 +123,7 @@ class MyClass:
 ```
 
 ---
+
 ## Methods
 
 ```python
@@ -136,6 +144,7 @@ class BankAccount:
 ```
 
 ---
+
 ## Using the BankAccount Class
 
 ```python
@@ -147,6 +156,7 @@ print(account.owner)           # Alice
 ```
 
 ---
+
 ## Class Methods
 
 ```python
@@ -169,6 +179,7 @@ print(d.year)  # 2026
 - Often used as alternative constructors
 
 ---
+
 ## Static Methods
 
 ```python
@@ -192,6 +203,7 @@ print(MathUtils.factorial(5))  # 120
 - Just a function that lives in the class namespace
 
 ---
+
 ## `__str__` and `__repr__`
 
 ```python
@@ -213,6 +225,7 @@ print([p])      # [Point(3, 4)] - uses __repr__
 ```
 
 ---
+
 ## `__str__` vs `__repr__`
 - `__str__`: Human-readable representation
     - Used by `print()` and `str()`
@@ -222,6 +235,7 @@ print([p])      # [Point(3, 4)] - uses __repr__
 - If only one is defined, implement `__repr__`
 
 ---
+
 ## Comparison Methods
 
 ```python
@@ -244,6 +258,7 @@ print(p1 < p3)   # True
 ```
 
 ---
+
 ## Using `@functools.total_ordering`
 
 ```python
@@ -265,6 +280,7 @@ class Point:
 ```
 
 ---
+
 ## Arithmetic Operator Overloading
 
 ```python
@@ -289,7 +305,9 @@ print(v1 * 3)     # Vector(3, 6)
 ```
 
 ---
+
 ## Operator Overloading Methods
+
 | Operator | Method |
 |----------|--------|
 | `+` | `__add__` |
@@ -305,6 +323,7 @@ print(v1 * 3)     # Vector(3, 6)
 | `[]` | `__getitem__` |
 
 ---
+
 ## The `__len__` and `__getitem__` Methods
 
 ```python
@@ -327,6 +346,7 @@ for song in p:    # Iteration works too
 ```
 
 ---
+
 ## The `__contains__` Method
 
 ```python
@@ -343,6 +363,7 @@ print("Song C" in p)  # False
 ```
 
 ---
+
 ## The `__bool__` Method
 
 ```python
@@ -366,6 +387,7 @@ if full:
 ```
 
 ---
+
 ## The `__hash__` Method
 
 ```python
@@ -386,6 +408,7 @@ cache = {Point(0, 0): "origin"}
 ```
 
 ---
+
 ## Inheritance - Basic
 
 ```python
@@ -411,6 +434,7 @@ print(cat.speak())  # Whiskers says Meow!
 ```
 
 ---
+
 ## Inheritance - `super()`
 
 ```python
@@ -431,6 +455,7 @@ print(dog.breed)  # Labrador
 ```
 
 ---
+
 ## Checking Inheritance
 
 ```python
@@ -448,6 +473,7 @@ print(issubclass(Animal, Dog))  # False
 ```
 
 ---
+
 ## Multiple Inheritance
 
 ```python
@@ -470,6 +496,7 @@ print(duck.quack())  # Quack!
 ```
 
 ---
+
 ## Method Resolution Order (MRO)
 
 ```python
@@ -495,11 +522,13 @@ print(D.__mro__)
 ```
 
 ---
+
 ## MRO - C3 Linearization
 
 ![mro_c3_linearization](svg/courses/languages/python/python-programming/08_classes/mro_c3_linearization.svg)
 
 ---
+
 ## MRO - C3 Linearization: Details
 
 - Python uses C3 linearization algorithm
@@ -508,6 +537,7 @@ print(D.__mro__)
 - Use `ClassName.__mro__` or `ClassName.mro()` to inspect
 
 ---
+
 ## Mixins
 - A class designed to add specific behavior
 - Not meant to be instantiated on its own
@@ -528,6 +558,7 @@ print(p.to_json())  # {"name": "Alice", "age": 30}
 ```
 
 ---
+
 ## Abstract Base Classes
 
 ```python
@@ -556,6 +587,7 @@ class Circle(Shape):
 ```
 
 ---
+
 ## Properties - The Problem
 
 ```python
@@ -569,6 +601,7 @@ print(p.age)  # -5
 ```
 
 ---
+
 ## Properties - The Solution
 
 ```python
@@ -592,6 +625,7 @@ print(p.age)  # 30
 ```
 
 ---
+
 ## Read-Only Properties
 
 ```python
@@ -614,6 +648,7 @@ print(c.area)    # 78.53975
 ```
 
 ---
+
 ## Property Deleter
 
 ```python
@@ -639,6 +674,7 @@ del p.name  # Prints: Deleting Alice
 ```
 
 ---
+
 ## Class Decorators
 
 ```python
@@ -662,6 +698,7 @@ print(Point(3, 4))  # Point(x=3, y=4)
 ```
 
 ---
+
 ## `dataclasses` (Python 3.7+)
 
 ```python
@@ -681,6 +718,7 @@ print(p == Point(3, 4))  # True
 - Auto-generates `__init__`, `__repr__`, `__eq__`
 
 ---
+
 ## `dataclasses` - Options
 
 ```python
@@ -704,6 +742,7 @@ print(s)  # Student(name='Alice', age=20, grades=[95])
 ```
 
 ---
+
 ## `__slots__`
 - Restricts attributes to a fixed set
 - Saves memory, slightly faster attribute access
@@ -722,6 +761,7 @@ print(p.x)     # 3
 ```
 
 ---
+
 ## Private and Protected Naming
 - Python has no true private attributes
 - Convention only:
@@ -742,6 +782,7 @@ print(obj._MyClass__private)  # 3 (name-mangled)
 ```
 
 ---
+
 ## The `__dict__` Attribute
 - Every instance stores its attributes in `__dict__`
 
@@ -761,6 +802,7 @@ print(p.email)  # alice@example.com
 ```
 
 ---
+
 ## Context Managers with Classes
 
 ```python
@@ -782,6 +824,7 @@ with FileManager("test.txt", "w") as f:
 ```
 
 ---
+
 ## The `__call__` Method
 
 ```python
@@ -803,6 +846,7 @@ print(f(2))   # 17
 ```
 
 ---
+
 ## Descriptors
 
 ```python
@@ -828,6 +872,7 @@ p.price = 10     # OK
 ```
 
 ---
+
 ## Composition vs Inheritance
 - Inheritance: "is-a" relationship
 - Composition: "has-a" relationship
@@ -850,6 +895,7 @@ print(car.start())  # Engine started
 ```
 
 ---
+
 ## Summary
 - Classes bundle data and behavior into objects
 - `__init__` initializes instances; `self` refers to the instance

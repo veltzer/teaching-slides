@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Introduction to DuckDB
 
 ---
+
 ## What This Chapter Covers
 
 - What DuckDB is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What DuckDB Is
 
 - Embedded analytical database
@@ -28,6 +31,7 @@ audience:
 - Free and open
 
 ---
+
 ## Tagline
 
 - "SQLite for analytics"
@@ -36,11 +40,13 @@ audience:
 - Just a library
 
 ---
+
 ## Embedded vs Server
 
 ![duckdb_embedded](svg/courses/databases/duckdb/01_introduction/duckdb_embedded.svg)
 
 ---
+
 ## Why It Exists
 
 - Notebook analytics need fast SQL
@@ -49,6 +55,7 @@ audience:
 - DuckDB sits in the middle
 
 ---
+
 ## When To Use
 
 - Notebooks and CLIs
@@ -57,11 +64,13 @@ audience:
 - Tests and dev environments
 
 ---
+
 ## Fit At A Glance
 
 ![when_to_use](svg/courses/databases/duckdb/01_introduction/when_to_use.svg)
 
 ---
+
 ## When Not To Use
 
 - Multi-user transactional service
@@ -70,6 +79,7 @@ audience:
 - Replication required
 
 ---
+
 ## Architecture
 
 - One process holds the data
@@ -78,6 +88,7 @@ audience:
 - Parallel execution per query
 
 ---
+
 ## Storage Formats
 
 - Native single-file database
@@ -86,6 +97,7 @@ audience:
 - Even Arrow buffers in-memory
 
 ---
+
 ## SQL Support
 
 - Mostly Postgres-flavored
@@ -94,6 +106,7 @@ audience:
 - Many extensions
 
 ---
+
 ## Extensions
 
 - HTTP and S3
@@ -102,6 +115,7 @@ audience:
 - Loaded on demand
 
 ---
+
 ## Language Bindings
 
 - Python, R, Java, Node, Go, Rust
@@ -110,6 +124,7 @@ audience:
 - No driver-server boundary
 
 ---
+
 ## Pandas And Friends
 
 - Zero-copy via Arrow
@@ -118,6 +133,7 @@ audience:
 - Speeds many workflows
 
 ---
+
 ## Course Outline
 
 - Basics
@@ -127,6 +143,7 @@ audience:
 - Operations
 
 ---
+
 ## Common Beginner Mistakes
 
 - Treating it like a server

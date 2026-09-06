@@ -11,6 +11,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Cluster Provisioning
 
 Advanced Kubernetes Course - Day 2, Module 1
@@ -121,6 +122,7 @@ worker-2   Ready    <none>          1m    v1.29.0
 ```
 
 ---
+
 ## Adding Control Plane Nodes (HA): Example
 
 ```bash
@@ -135,6 +137,7 @@ sudo kubeadm join k8s-api.example.com:6443 \
 ```
 
 ---
+
 ## Adding Control Plane Nodes (HA)
 
 ![join_additional_control_plane_nodes](svg/courses/devops/advanced-kubernetes/06_cluster_provisioning/join_additional_control_plane_nodes.svg)

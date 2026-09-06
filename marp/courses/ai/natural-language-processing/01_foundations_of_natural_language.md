@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Foundations of Natural Language
 
 ---
+
 ## What This Chapter Covers
 
 - Why human language is hard for computers
@@ -21,6 +23,7 @@ audience:
 - A vocabulary the rest of the course will assume
 
 ---
+
 ## Why Language Is Hard
 
 - Computers handle structured data well; language is the opposite of structured
@@ -29,6 +32,7 @@ audience:
 - A system that processes language without modeling that negotiation will misread it
 
 ---
+
 ## Ambiguity at Every Level
 
 - Lexical: a word can mean many things — `bank` is a financial institution or a riverside
@@ -37,11 +41,13 @@ audience:
 - Pragmatic: an utterance can do many things — "Can you pass the salt?" is a request
 
 ---
+
 ## The Levels of Ambiguity
 
 ![ambiguity_levels](svg/courses/ai/natural-language-processing/01_foundations_of_natural_language/ambiguity_levels.svg)
 
 ---
+
 ## Productivity and the Long Tail
 
 - Speakers constantly invent expressions that no corpus has seen before
@@ -50,6 +56,7 @@ audience:
 - Any model has to generalize past the training data, not memorize it
 
 ---
+
 ## Context Dependence
 
 - "It's freezing in here" can be a complaint, a request to close a window, or a joke
@@ -58,6 +65,7 @@ audience:
 - A system that ignores context will produce confidently wrong answers
 
 ---
+
 ## Variation Across Languages
 
 - Word order varies wildly: English is SVO, Japanese is SOV, Welsh is VSO
@@ -66,6 +74,7 @@ audience:
 - A pipeline tuned for English may not survive contact with other languages
 
 ---
+
 ## Variation Within a Language
 
 - Dialects: American vs British vs Indian English — same name, different vocabulary
@@ -74,6 +83,7 @@ audience:
 - Code-switching: real users mix languages in a single sentence
 
 ---
+
 ## The Levels of Linguistic Analysis
 
 - **Phonology**: sounds and how they combine
@@ -84,11 +94,13 @@ audience:
 - **Discourse**: structure beyond a single sentence — coherence, reference
 
 ---
+
 ## The Levels in a Pipeline
 
 ![linguistic_levels](svg/courses/ai/natural-language-processing/01_foundations_of_natural_language/linguistic_levels.svg)
 
 ---
+
 ## Why The Classical Levels Still Matter
 
 - Modern systems compress most of these levels into one neural network
@@ -97,6 +109,7 @@ audience:
 - Knowing the levels lets you talk precisely about failure modes
 
 ---
+
 ## How Modern Systems Compress the Levels
 
 - A transformer does not have a "syntax module" — syntax emerges from training
@@ -105,6 +118,7 @@ audience:
 - The vocabulary remains useful even when the implementation hides it
 
 ---
+
 ## A Brief History of NLP
 
 - 1950s-1980s: symbolic and rule-based systems
@@ -114,6 +128,7 @@ audience:
 - 2020-present: large language models redefine what is possible
 
 ---
+
 ## The Symbolic Era
 
 - Hand-written grammars and lexicons encoded linguistic knowledge directly
@@ -122,6 +137,7 @@ audience:
 - Knowledge engineering bottleneck: every new domain needed expert authoring
 
 ---
+
 ## The Statistical Revolution
 
 - Corpora became large enough to estimate distributions
@@ -130,6 +146,7 @@ audience:
 - Performance improved without hand-coded grammars — but feature engineering was still heavy
 
 ---
+
 ## The Deep Learning Era
 
 - Word embeddings (`Word2Vec`, `GloVe`) gave words dense, learnable representations
@@ -138,6 +155,7 @@ audience:
 - Hand-engineered features started to disappear
 
 ---
+
 ## The Pre-Trained Model Era
 
 - `BERT`, `GPT`, `T5` introduced large models trained on raw text
@@ -146,6 +164,7 @@ audience:
 - The standard NLP workflow shifted from "build a model" to "adapt a pretrained one"
 
 ---
+
 ## The Large Language Model Era
 
 - Models grew from millions to billions of parameters
@@ -154,11 +173,13 @@ audience:
 - Many traditional NLP tasks became one prompt away
 
 ---
+
 ## A Timeline at a Glance
 
 ![nlp_timeline](svg/courses/ai/natural-language-processing/01_foundations_of_natural_language/nlp_timeline.svg)
 
 ---
+
 ## Each Era Did Not Erase the Last
 
 - Production systems still use stemming, tokenization, and rule-based normalization
@@ -167,6 +188,7 @@ audience:
 - Treat each era as a layer of tools, not a generation to be replaced
 
 ---
+
 ## NLP Tasks at a Glance
 
 - **Classification**: assign a label to a piece of text
@@ -176,11 +198,13 @@ audience:
 - **Retrieval**: find relevant text in a large collection
 
 ---
+
 ## The Five Task Families
 
 ![task_families](svg/courses/ai/natural-language-processing/01_foundations_of_natural_language/task_families.svg)
 
 ---
+
 ## Where Classification Shows Up
 
 - Sentiment analysis: positive vs negative reviews
@@ -190,6 +214,7 @@ audience:
 - The same machinery underneath; the data and labels differ
 
 ---
+
 ## Where Tagging Shows Up
 
 - Part-of-speech tagging: noun, verb, adjective per token
@@ -198,6 +223,7 @@ audience:
 - Anything where the answer is "label every token"
 
 ---
+
 ## Where Parsing Shows Up
 
 - Dependency parsing: subject-verb-object extraction
@@ -206,6 +232,7 @@ audience:
 - Less central in modern NLP — large models often skip explicit parsing
 
 ---
+
 ## Where Generation Shows Up
 
 - Machine translation
@@ -216,6 +243,7 @@ audience:
 - Anything where the output is text the model invents
 
 ---
+
 ## Where Retrieval Shows Up
 
 - Search engines
@@ -225,6 +253,7 @@ audience:
 - Often paired with generation: retrieve facts, then write an answer
 
 ---
+
 ## What This Course Will and Will Not Cover
 
 - Will: the linguistic foundations, classical methods, deep learning, modern transformers, evaluation, deployment
@@ -233,6 +262,7 @@ audience:
 - Will not: an exhaustive survey of every paper
 
 ---
+
 ## What To Hold Onto
 
 - Language is structured but the structure is fuzzy and contextual
@@ -242,6 +272,7 @@ audience:
 - The five task families cover most of what NLP systems do
 
 ---
+
 ## Anti-Patterns
 
 - Treating English as if it were the only language
@@ -250,6 +281,7 @@ audience:
 - Confusing scale with understanding — a bigger model is not always smarter
 
 ---
+
 ## Summary
 
 - NLP exists because human language resists structured processing

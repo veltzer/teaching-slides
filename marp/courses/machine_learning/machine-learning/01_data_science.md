@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Data Science
 
 ---
+
 ## What This Chapter Covers
 
 - What is data science
@@ -20,6 +22,7 @@ audience:
 - Data quality and bias
 
 ---
+
 ## What Data Science Is
 
 - Extracting insight from data
@@ -27,6 +30,7 @@ audience:
 - Outcome: decisions, predictions, products
 
 ---
+
 ## Why Now
 
 - Storage is cheap
@@ -35,6 +39,7 @@ audience:
 - Open-source toolchain matured
 
 ---
+
 ## Data Science vs ML vs Stats
 
 - Stats: estimation, inference, uncertainty
@@ -43,6 +48,7 @@ audience:
 - Overlap is large
 
 ---
+
 ## Data Science Roles
 
 - Data analyst: descriptive, dashboards
@@ -51,6 +57,7 @@ audience:
 - Data engineer: pipelines, infrastructure
 
 ---
+
 ## Who Does What
 
 - Analyst: SQL, BI tools
@@ -59,6 +66,7 @@ audience:
 - Data eng: ETL, warehouses
 
 ---
+
 ## The Pipeline
 
 - Acquire
@@ -68,11 +76,13 @@ audience:
 - Communicate
 
 ---
+
 ## Pipeline at a Glance
 
 ![ml_pipeline](svg/courses/machine_learning/machine-learning/01_data_science/ml_pipeline.svg)
 
 ---
+
 ## Acquire
 
 - Databases, APIs, files
@@ -81,6 +91,7 @@ audience:
 - Third-party providers
 
 ---
+
 ## Clean
 
 - Missing values
@@ -90,6 +101,7 @@ audience:
 - Often 70% of the work
 
 ---
+
 ## Explore
 
 - Distributions
@@ -98,6 +110,7 @@ audience:
 - Hypotheses to test
 
 ---
+
 ## Model
 
 - Pick algorithm
@@ -105,6 +118,7 @@ audience:
 - Compare candidates
 
 ---
+
 ## Communicate
 
 - Stakeholders matter
@@ -113,6 +127,7 @@ audience:
 - Recommend an action
 
 ---
+
 ## Tools
 
 - Python: pandas, scikit-learn, matplotlib
@@ -121,6 +136,7 @@ audience:
 - Notebooks: Jupyter, Colab
 
 ---
+
 ## Why Python
 
 - Huge ecosystem
@@ -129,6 +145,7 @@ audience:
 - Community
 
 ---
+
 ## Statistics Primer
 
 - Mean, median, mode
@@ -137,6 +154,7 @@ audience:
 - Hypothesis testing, p-values
 
 ---
+
 ## Mean vs Median
 
 - Mean: sum/n, sensitive to outliers
@@ -145,6 +163,7 @@ audience:
 - Skewed data: prefer median
 
 ---
+
 ## Variance and Std
 
 - Variance: average squared deviation
@@ -153,6 +172,7 @@ audience:
 - Heavy-tailed needs care
 
 ---
+
 ## The Normal Distribution
 
 - Bell curve
@@ -161,6 +181,7 @@ audience:
 - Central Limit Theorem behind it
 
 ---
+
 ## Other Distributions
 
 - Binomial: yes/no trials
@@ -169,6 +190,7 @@ audience:
 - Power-law: web, social
 
 ---
+
 ## Hypothesis Testing
 
 - Null and alternative
@@ -177,6 +199,7 @@ audience:
 - Reject when p < threshold
 
 ---
+
 ## p-Values Are Tricky
 
 - Not "probability hypothesis is true"
@@ -185,6 +208,7 @@ audience:
 - Effect size matters more
 
 ---
+
 ## Confidence Intervals
 
 - Range plausible for the parameter
@@ -193,6 +217,7 @@ audience:
 - Communicate uncertainty
 
 ---
+
 ## Correlation vs Causation
 
 - Correlation: variables move together
@@ -201,11 +226,13 @@ audience:
 - Causal inference is hard
 
 ---
+
 ## Compared
 
 ![correlation_causation](svg/courses/machine_learning/machine-learning/01_data_science/correlation_causation.svg)
 
 ---
+
 ## Probability Basics
 
 - Conditional: P(A|B)
@@ -214,6 +241,7 @@ audience:
 - Foundation of ML
 
 ---
+
 ## Bayes' Theorem
 
 - P(A|B) = P(B|A) P(A) / P(B)
@@ -222,6 +250,7 @@ audience:
 - Behind probabilistic ML
 
 ---
+
 ## Visualisation
 
 - Histogram: distribution
@@ -230,6 +259,7 @@ audience:
 - Line: time series
 
 ---
+
 ## More Plot Types
 
 - Bar: categorical comparison
@@ -238,6 +268,7 @@ audience:
 - Pair plot: many variables at once
 
 ---
+
 ## Plotting Pitfalls
 
 - Truncated y-axis
@@ -246,6 +277,7 @@ audience:
 - Colour for ordered data
 
 ---
+
 ## Exploratory Data Analysis
 
 - Look before modelling
@@ -254,6 +286,7 @@ audience:
 - Check assumptions
 
 ---
+
 ## EDA Checklist
 
 - Shape and column types
@@ -262,6 +295,7 @@ audience:
 - Pairwise correlations
 
 ---
+
 ## Data Quality
 
 - Accuracy: are values right
@@ -270,6 +304,7 @@ audience:
 - Timeliness: how stale
 
 ---
+
 ## Bias Sources
 
 - Selection bias: who is in the sample
@@ -278,6 +313,7 @@ audience:
 - Confirmation bias: looking for the answer
 
 ---
+
 ## Outliers
 
 - Real or error
@@ -286,6 +322,7 @@ audience:
 - Removing changes conclusions
 
 ---
+
 ## Sampling
 
 - Random samples generalise
@@ -294,6 +331,7 @@ audience:
 - Bad sampling beats any model
 
 ---
+
 ## Communicating Results
 
 - Audience matters
@@ -302,6 +340,7 @@ audience:
 - Visualisation > tables
 
 ---
+
 ## Reproducibility
 
 - Pin versions
@@ -310,6 +349,7 @@ audience:
 - Notebooks plus scripts
 
 ---
+
 ## Common Data Science Mistakes
 
 - Skipping EDA; modelling blindly
@@ -319,31 +359,37 @@ audience:
 - Not communicating uncertainty
 
 ---
+
 ## Mean vs Median Visualised
 
 ![mean_median](svg/courses/machine_learning/machine-learning/01_data_science/mean_median.svg)
 
 ---
+
 ## Variance and Std Visualised
 
 ![variance_std](svg/courses/machine_learning/machine-learning/01_data_science/variance_std.svg)
 
 ---
+
 ## Normal Distribution Visualised
 
 ![normal_distribution](svg/courses/machine_learning/machine-learning/01_data_science/normal_distribution.svg)
 
 ---
+
 ## Hypothesis Test Visualised
 
 ![hypothesis_test](svg/courses/machine_learning/machine-learning/01_data_science/hypothesis_test.svg)
 
 ---
+
 ## Bayes' Theorem Visualised
 
 ![bayes_theorem](svg/courses/machine_learning/machine-learning/01_data_science/bayes_theorem.svg)
 
 ---
+
 ## Summary
 
 - Data science combines stats, code, domain

@@ -10,10 +10,12 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # UNIX File System
 ## Understanding Structure and Navigation
 
 ---
+
 ## Hierarchy
 
 ![fs_hierarchy](svg/courses/operating_systems/linux-fundamentals/03_filesystem/fs_hierarchy.svg)

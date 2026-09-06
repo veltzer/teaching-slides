@@ -12,14 +12,17 @@ audience:
   - audiences:devops
 
 ---
+
 # Syntax: Loops
 
 ---
+
 ## Loop Types Overview
 
 ![loop_types_overview](svg/courses/languages/bash/bash-scripting/12_syntax_loops/loop_types_overview.svg)
 
 ---
+
 ## `while` Loops
 
 ```bash
@@ -38,6 +41,7 @@ done
 ```
 
 ---
+
 ## `while` with a Command
 
 ```bash
@@ -58,6 +62,7 @@ echo "Ready!"
 ```
 
 ---
+
 ## Reading Lines with `while`
 
 ```bash
@@ -85,6 +90,7 @@ echo "$count"    # correct count
 ```
 
 ---
+
 ## `until` Loops
 
 ```bash
@@ -106,6 +112,7 @@ echo "Service is ready!"
 ```
 
 ---
+
 ## Infinite Loops
 
 ```bash
@@ -135,6 +142,7 @@ done
 ```
 
 ---
+
 ## `for` Loops: Word List
 
 ```bash
@@ -161,6 +169,7 @@ done
 ```
 
 ---
+
 ## `for` Loops: C-Style
 
 ```bash
@@ -182,6 +191,7 @@ done
 ```
 
 ---
+
 ## `for` with Sequences
 
 ```bash
@@ -207,6 +217,7 @@ done
 ```
 
 ---
+
 ## `break` and `continue`
 
 ```bash
@@ -234,6 +245,7 @@ done
 ```
 
 ---
+
 ## Loop Over Arguments
 
 ```bash
@@ -260,6 +272,7 @@ done
 ```
 
 ---
+
 ## Looping Over Lines (Safely)
 
 ```bash
@@ -282,6 +295,7 @@ done
 ```
 
 ---
+
 ## `select` Loop (Menus)
 
 ```bash
@@ -308,6 +322,7 @@ done
 ```
 
 ---
+
 ## Loop Patterns: Find and Process Files
 
 ```bash

@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Pair Programming as an Alternative
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![pair_styles](svg/courses/development_methodologies/code-review-best-practices/14_pair_programming_as_an_alternative/pair_styles.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What pair programming is
@@ -27,6 +29,7 @@ audience:
 - A practical adoption strategy
 
 ---
+
 ## What Pairing Is
 
 - Two developers, one keyboard, one screen
@@ -36,6 +39,7 @@ audience:
 - Active collaboration, not just sitting together
 
 ---
+
 ## How It Replaces Review
 
 - The "second pair of eyes" happens in real time
@@ -45,6 +49,7 @@ audience:
 - Faster integration; lower defect rate
 
 ---
+
 ## When Pairing Wins
 
 - Hard problems
@@ -54,6 +59,7 @@ audience:
 - Code in unfamiliar areas of the codebase
 
 ---
+
 ## When Pairing Loses
 
 - Simple, well-understood work
@@ -63,6 +69,7 @@ audience:
 - When personalities clash
 
 ---
+
 ## Pairing + Review
 
 - Pair on the change
@@ -72,6 +79,7 @@ audience:
 - Best of both worlds; higher cost
 
 ---
+
 ## Trade-Offs
 
 - Pro: fewer bugs, better designs, knowledge sharing
@@ -81,6 +89,7 @@ audience:
 - Con: cultural fit varies
 
 ---
+
 ## Throughput Math
 
 - 2 devs pairing produce *less* than 2 devs working separately on simple tasks
@@ -89,6 +98,7 @@ audience:
 - Many studies; results vary; teams must experiment
 
 ---
+
 ## Mob Programming
 
 - The whole team works on one thing, on one screen
@@ -98,6 +108,7 @@ audience:
 - Pair programming taken to its limit
 
 ---
+
 ## When Mobbing Wins
 
 - Designing a critical new system
@@ -107,6 +118,7 @@ audience:
 - Team-wide pattern adoption
 
 ---
+
 ## Remote Pairing
 
 - VS Code Live Share, JetBrains Code With Me, GitHub Codespaces
@@ -116,6 +128,7 @@ audience:
 - Async pairing exists but loses much of the benefit
 
 ---
+
 ## Pairing Etiquette
 
 - Switch driver/navigator regularly
@@ -125,6 +138,7 @@ audience:
 - Don't dominate the keyboard
 
 ---
+
 ## Pair-Programming Anti-Patterns
 
 - "Backseat driver" who takes over the keyboard
@@ -134,6 +148,7 @@ audience:
 - Pair on simple tasks "for the value" — none gained
 
 ---
+
 ## Adoption Strategy
 
 - Try pairing for one task per week
@@ -143,6 +158,7 @@ audience:
 - Adopt what your team likes; drop what they don't
 
 ---
+
 ## When Reviews Are Better
 
 - Async work across time zones
@@ -152,6 +168,7 @@ audience:
 - Not every team enjoys pairing
 
 ---
+
 ## Combining Reviews and Pairing
 
 - Pair on the *design* and the *risky parts*
@@ -161,6 +178,7 @@ audience:
 - Most healthy teams blend the two
 
 ---
+
 ## Common Mistakes
 
 - Pairing on everything (exhausting; diminishing returns)

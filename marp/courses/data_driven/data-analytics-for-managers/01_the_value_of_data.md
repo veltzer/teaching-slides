@@ -7,9 +7,11 @@ audience:
   - audiences:managers
 
 ---
+
 # The Value of Data
 
 ---
+
 ## What This Chapter Covers
 
 - Why data became a strategic asset
@@ -20,6 +22,7 @@ audience:
 - A frame for the rest of the course
 
 ---
+
 ## A Sobering Statistic
 
 - Gartner estimates organisations use ~0.5% of the data they collect
@@ -29,11 +32,13 @@ audience:
 - The gap between them is where this course lives
 
 ---
+
 ## Where Data Creates Value
 
 ![data_value](svg/courses/data_driven/data-analytics-for-managers/01_the_value_of_data/data_value.svg)
 
 ---
+
 ## What "Data Value" Means
 
 - Data has value when it changes a decision
@@ -43,6 +48,7 @@ audience:
 - Managers should ask: "what would we do differently if we knew this?"
 
 ---
+
 ## Categories of Value
 
 - **Operational**: detect failures, route around outages
@@ -52,6 +58,7 @@ audience:
 - **Financial**: margins, attribution, forecasting
 
 ---
+
 ## Where Data Lives
 
 - Application databases (transactional, current state)
@@ -61,6 +68,7 @@ audience:
 - Files (uploads, exports, spreadsheets nobody owns)
 
 ---
+
 ## Storage Reality
 
 - Most organisations have *all* of these
@@ -70,6 +78,7 @@ audience:
 - The first job is often *connection*, not analysis
 
 ---
+
 ## Case Study 1: Netflix Recommendations
 
 - Watching history + ratings &#8594; what to recommend
@@ -79,6 +88,7 @@ audience:
 - The data isn't the asset — what they *do* with it is
 
 ---
+
 ## Case Study 2: Bank Fraud Detection
 
 - Every transaction is scored in real time against millions of patterns
@@ -88,6 +98,7 @@ audience:
 - Same data was sitting in the same DBs 20 years ago, unused
 
 ---
+
 ## Case Study 3: A Failed Data Initiative
 
 - A retailer spends $50M building a "data lake"
@@ -97,6 +108,7 @@ audience:
 - This is the *most common* outcome of data initiatives
 
 ---
+
 ## Why Initiatives Fail
 
 - No clear question being answered
@@ -106,6 +118,7 @@ audience:
 - The technical project succeeds; the business outcome doesn't
 
 ---
+
 ## Data Maturity Levels
 
 - **Reactive**: data is in databases; queries when something breaks
@@ -115,6 +128,7 @@ audience:
 - **Prescriptive**: data drives automated decisions
 
 ---
+
 ## Where Most Companies Are
 
 - Most are at "reporting" — dashboards exist
@@ -124,11 +138,13 @@ audience:
 - Skipping levels rarely works
 
 ---
+
 ## Maturity Climb
 
 ![data_maturity_levels](svg/courses/data_driven/data-analytics-for-managers/01_the_value_of_data/maturity_levels.svg)
 
 ---
+
 ## Who Owns the Decision?
 
 - Data without a decision-maker is shelfware
@@ -138,6 +154,7 @@ audience:
 - Manager-led initiatives outperform tool-led ones
 
 ---
+
 ## The Cost Side
 
 - Storage isn't free; analytics tools aren't free; data engineers aren't free
@@ -147,6 +164,7 @@ audience:
 - Treat data investments like any other investment
 
 ---
+
 ## What This Course Will Do
 
 - Day 1: how to *collect* data and make it usable

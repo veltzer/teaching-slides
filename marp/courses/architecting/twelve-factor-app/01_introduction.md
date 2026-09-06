@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Introduction to the Twelve-Factor Methodology
 
 ---
+
 ## Origins
 
 - Published in 2011 by engineers at Heroku
@@ -21,6 +23,7 @@ audience:
 - Now a baseline for cloud-native software in general
 
 ---
+
 ## The Problem It Solves
 
 - Apps depended on details of the machine where they ran
@@ -30,6 +33,7 @@ audience:
 - Scaling out required redesign
 
 ---
+
 ## The Twelve Factors at a Glance
 
 1. Codebase — one codebase, many deploys
@@ -46,16 +50,19 @@ audience:
 1. Admin processes — run as one-off tasks
 
 ---
+
 ## Grouped View
 
 ![twelve_factors](svg/courses/architecting/twelve-factor-app/01_introduction/twelve_factors.svg)
 
 ---
+
 ## Factors Grouped By Concern
 
 ![factor_groupings](svg/courses/architecting/twelve-factor-app/01_introduction/factor_groupings.svg)
 
 ---
+
 ## Twelve-Factor and Cloud-Native
 
 - "Cloud-native" was coined later but builds on the twelve factors
@@ -64,6 +71,7 @@ audience:
 - The factors are the contract between developer and platform
 
 ---
+
 ## Twelve-Factor and Microservices
 
 - Each microservice should follow the twelve factors independently
@@ -72,6 +80,7 @@ audience:
 - They don't tell you how to split a system into services — that's a separate concern
 
 ---
+
 ## What This Course Covers
 
 - One chapter per factor, with rationale, examples, and anti-patterns
@@ -80,6 +89,7 @@ audience:
 - The goal: be able to recognize and fix violations in real codebases
 
 ---
+
 ## How to Read the Factors
 
 - Each factor is a constraint that pays back later
@@ -88,6 +98,7 @@ audience:
 - A "twelve-factor app" is shorthand for a system that takes them all seriously
 
 ---
+
 ## A Common Misconception
 
 - Twelve-factor is **not** about a specific technology
@@ -96,6 +107,7 @@ audience:
 - The discipline is in the design, not the toolset
 
 ---
+
 ## Summary
 
 - Twelve factors emerged from running real apps at scale

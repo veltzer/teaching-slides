@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Prompt Patterns
 
 ---
+
 ## What This Chapter Covers
 
 - Zero-shot
@@ -20,11 +22,13 @@ audience:
 - Templates
 
 ---
+
 ## Chain-of-Thought
 
 ![cot_pattern](svg/courses/ai/prompt-engineering/02_prompt_patterns/cot_pattern.svg)
 
 ---
+
 ## Zero-Shot
 
 - Just ask
@@ -33,6 +37,7 @@ audience:
 - Baseline approach
 
 ---
+
 ## Few-Shot
 
 - Provide examples in the prompt
@@ -41,6 +46,7 @@ audience:
 - Demonstrate the format
 
 ---
+
 ## Sample Few-Shot
 
 - Q: 2+2 A: 4
@@ -49,6 +55,7 @@ audience:
 - Model: 8
 
 ---
+
 ## Role Prompting
 
 - "You are an expert Rust developer"
@@ -57,11 +64,13 @@ audience:
 - Useful but not magical
 
 ---
+
 ## Common Patterns
 
 ![persona_template](svg/courses/ai/prompt-engineering/02_prompt_patterns/persona_template.svg)
 
 ---
+
 ## Instructions
 
 - Be specific and explicit
@@ -70,6 +79,7 @@ audience:
 - State the audience
 
 ---
+
 ## Format Constraints
 
 - "Return JSON with keys: name, age, city"
@@ -78,6 +88,7 @@ audience:
 - Validate output
 
 ---
+
 ## Delimiters
 
 - ```triple backticks```
@@ -86,6 +97,7 @@ audience:
 - Reduces ambiguity
 
 ---
+
 ## Prompt Templates
 
 - Reusable shape with placeholders
@@ -94,6 +106,7 @@ audience:
 - Versionable
 
 ---
+
 ## Chain of Thought
 
 - "Let's think step by step"
@@ -102,6 +115,7 @@ audience:
 - Costs more tokens
 
 ---
+
 ## Self-Consistency
 
 - Sample multiple completions
@@ -110,6 +124,7 @@ audience:
 - For: critical reasoning
 
 ---
+
 ## Generated Knowledge
 
 - Ask model for facts first
@@ -118,6 +133,7 @@ audience:
 - Costlier, sometimes better
 
 ---
+
 ## Common Pattern Mistakes
 
 - Vague instructions

@@ -8,10 +8,12 @@ audience:
   - audiences:developers
 
 ---
+
 # Generic Types and Traits
 ## Chapter 6: Abstraction and Code Reuse
 
 ---
+
 ## What are Generics
 
 ![what_are_generics](svg/courses/languages/rust/rust-programming/07_generics_traits/what_are_generics.svg)
@@ -395,6 +397,7 @@ fn process_string(x: String) {
 ![best_practices](svg/courses/languages/rust/rust-programming/07_generics_traits/best_practices.svg)
 
 ---
+
 ## Common Pitfalls
 1. Overly generic code
 1. Unnecessary trait bounds
@@ -403,6 +406,7 @@ fn process_string(x: String) {
 1. Performance implications
 
 ---
+
 ## Summary
 - Generic types
 - Traits and bounds

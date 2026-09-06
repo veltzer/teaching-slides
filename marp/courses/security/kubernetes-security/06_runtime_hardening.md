@@ -8,9 +8,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Runtime Security and Hardening
 
 ---
+
 ## What This Chapter Covers
 
 - Runtime threat detection (Falco, Tracee)
@@ -20,6 +22,7 @@ audience:
 - Incident response basics
 
 ---
+
 ## Why Runtime Matters
 
 - Image scans find known CVEs at build time
@@ -29,11 +32,13 @@ audience:
 - Image scanning + runtime detection = full coverage
 
 ---
+
 ## Hardening Layers
 
 ![hardening_layers](svg/courses/security/kubernetes-security/06_runtime_hardening/hardening_layers.svg)
 
 ---
+
 ## Falco
 
 - Open-source runtime security tool
@@ -43,6 +48,7 @@ audience:
 - The most-used tool in this space
 
 ---
+
 ## Falco Rule Example
 
 ```output
@@ -58,6 +64,7 @@ audience:
 - Catches the moment an attacker drops a shell
 
 ---
+
 ## What Falco Detects
 
 - Shells in containers
@@ -67,6 +74,7 @@ audience:
 - Unexpected process executions
 
 ---
+
 ## Tracee
 
 - Aqua's runtime security tool
@@ -76,11 +84,13 @@ audience:
 - Some teams run both for coverage
 
 ---
+
 ## Runtime Tool Architecture
 
 ![runtime_arch](svg/courses/security/kubernetes-security/06_runtime_hardening/runtime_arch.svg)
 
 ---
+
 ## kube-bench
 
 - Automated CIS Benchmark scanner
@@ -90,6 +100,7 @@ audience:
 - The starting point for hardening
 
 ---
+
 ## CIS Benchmark Checks
 
 - API server flags (--anonymous-auth=false, etc)
@@ -99,11 +110,13 @@ audience:
 - Audit logging enabled
 
 ---
+
 ## Hardening Targets
 
 ![cis_focus](svg/courses/security/kubernetes-security/06_runtime_hardening/cis_focus.svg)
 
 ---
+
 ## API Server Hardening
 
 - Disable anonymous auth (--anonymous-auth=false)
@@ -113,6 +126,7 @@ audience:
 - Request rate limits configured
 
 ---
+
 ## Kubelet Hardening
 
 - Disable read-only port (--read-only-port=0)
@@ -122,6 +136,7 @@ audience:
 - Rotate certificates automatically
 
 ---
+
 ## etcd Hardening
 
 - TLS for client and peer connections
@@ -131,6 +146,7 @@ audience:
 - Backup regularly to a separate trust domain
 
 ---
+
 ## Network Hardening
 
 - Restrict API server CIDR allowlist
@@ -140,6 +156,7 @@ audience:
 - Cloud security groups locked down
 
 ---
+
 ## Audit Logging
 
 - Records every API request
@@ -149,6 +166,7 @@ audience:
 - Review periodically
 
 ---
+
 ## Audit Policy Example
 
 ```yaml
@@ -167,6 +185,7 @@ rules:
 - Everything else at Metadata
 
 ---
+
 ## What to Alert On
 
 - Failed authentication attempts
@@ -176,6 +195,7 @@ rules:
 - Exec into running pods
 
 ---
+
 ## Cloud Security Posture
 
 - Cloud Security Posture Management (CSPM) tools
@@ -185,6 +205,7 @@ rules:
 - Worth the cost for serious clusters
 
 ---
+
 ## Penetration Testing
 
 - kube-hunter for Kubernetes-specific tests
@@ -194,6 +215,7 @@ rules:
 - Results drive concrete improvements
 
 ---
+
 ## Incident Response
 
 - Detect — runtime alerts, anomalous metrics
@@ -203,11 +225,13 @@ rules:
 - Learn — postmortem, fix root cause
 
 ---
+
 ## Response Loop
 
 ![incident_response_loop](svg/courses/security/kubernetes-security/06_runtime_hardening/incident_response_loop.svg)
 
 ---
+
 ## Containment Tactics
 
 - Apply restrictive NetworkPolicy to suspect pod
@@ -217,6 +241,7 @@ rules:
 - Preserve logs and audit trail
 
 ---
+
 ## Forensics in Kubernetes
 
 - Pod logs (ephemeral; capture early)
@@ -226,6 +251,7 @@ rules:
 - Image scan reports for that exact image
 
 ---
+
 ## Backup and Recovery
 
 - etcd backups: daily minimum
@@ -235,6 +261,7 @@ rules:
 - Disaster recovery plan exercised
 
 ---
+
 ## Upgrade Hygiene
 
 - Stay on supported versions
@@ -244,6 +271,7 @@ rules:
 - Out-of-support versions = unpatched CVEs
 
 ---
+
 ## Common Pitfalls
 
 - Runtime tools deployed but no one watches alerts
@@ -253,6 +281,7 @@ rules:
 - Backups exist but never restored
 
 ---
+
 ## Best Practices
 
 - Run kube-bench regularly; track remediation
@@ -262,6 +291,7 @@ rules:
 - Keep upgrade cadence tight
 
 ---
+
 ## Course Recap
 
 - Threat landscape: 4Cs framework
@@ -272,6 +302,7 @@ rules:
 - Runtime detection and hardening
 
 ---
+
 ## Final Thoughts
 
 - Kubernetes security is layered; no single tool wins
@@ -281,6 +312,7 @@ rules:
 - Stay current — the platform and threats both evolve
 
 ---
+
 ## Summary
 
 - Runtime detection (Falco, Tracee) catches active exploits

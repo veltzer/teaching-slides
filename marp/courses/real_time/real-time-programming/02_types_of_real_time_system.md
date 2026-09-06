@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Types of Real-Time System
 
 ---
+
 ## What This Chapter Covers
 
 - Near real-time
@@ -21,6 +23,7 @@ audience:
 - How to choose the right level for your system
 
 ---
+
 ## The Three Categories
 
 - **Near real-time**: deadlines aspirational; misses tolerated
@@ -30,16 +33,19 @@ audience:
 - Don't pay for hard RT when soft will do
 
 ---
+
 ## Examples by Category
 
 ![system_examples](svg/courses/real_time/real-time-programming/02_types_of_real_time_system/system_examples.svg)
 
 ---
+
 ## Hard, Firm, Soft
 
 ![hard_soft_firm](svg/courses/real_time/real-time-programming/02_types_of_real_time_system/hard_soft_firm.svg)
 
 ---
+
 ## Near Real-Time
 
 - "As fast as we can manage"
@@ -49,6 +55,7 @@ audience:
 - Engineering effort: minimal beyond normal performance work
 
 ---
+
 ## Soft Real-Time
 
 - A defined deadline; missing it degrades but doesn't break
@@ -58,6 +65,7 @@ audience:
 - Most multimedia and interactive software lives here
 
 ---
+
 ## Soft Real-Time Examples
 
 - A 60 fps video means a 16.7ms budget per frame
@@ -67,6 +75,7 @@ audience:
 - Acceptable miss rate: low single-digit percent
 
 ---
+
 ## Hard Real-Time
 
 - A defined deadline; missing it is a failure
@@ -76,6 +85,7 @@ audience:
 - A different mindset entirely
 
 ---
+
 ## Hard Real-Time Examples
 
 - Pacemaker: pulse delivery on a strict cycle
@@ -85,6 +95,7 @@ audience:
 - All have *certifications* (DO-178C, IEC 62304, ISO 26262)
 
 ---
+
 ## Firm Real-Time
 
 - Sometimes called "near hard"
@@ -94,6 +105,7 @@ audience:
 - Less stringent than hard, more stringent than soft
 
 ---
+
 ## Mixed-Criticality
 
 - Many real systems mix hard, soft, and best-effort tasks
@@ -103,6 +115,7 @@ audience:
 - ARINC 653, Hypervisor partitioning, eBPF sandboxes
 
 ---
+
 ## Cost Comparison
 
 - Near RT: ~normal SW project cost
@@ -112,6 +125,7 @@ audience:
 - Get the requirements right before picking the category
 
 ---
+
 ## Choosing a Category
 
 - What are the *consequences* of a missed deadline?
@@ -121,6 +135,7 @@ audience:
 - Be honest — many "we need real-time" requests are actually "we want low average latency"
 
 ---
+
 ## Hardware Implications
 
 - Hard RT often needs predictable hardware: deterministic memory access, no out-of-order execution surprises, no SMM
@@ -130,6 +145,7 @@ audience:
 - Picking hardware affects everything downstream
 
 ---
+
 ## Software Implications
 
 - Hard RT: typically an RTOS (FreeRTOS, VxWorks, INTEGRITY, RTEMS)
@@ -139,6 +155,7 @@ audience:
 - The further down the stack you go, the less choice you have
 
 ---
+
 ## A Spectrum, Not Buckets
 
 - Real systems often span the spectrum
@@ -148,6 +165,7 @@ audience:
 - It's why airline avionics is structured the way it is
 
 ---
+
 ## Common Mistakes
 
 - Calling soft RT "hard" because it sounds important

@@ -9,11 +9,13 @@ audience:
   - audiences:developers
 
 ---
+
 # Performance
 
 Zero-Cost Abstractions, Profiling, Benchmarking, and Optimization
 
 ---
+
 ## Overview
 
 - Zero-cost abstractions deep dive
@@ -29,16 +31,19 @@ Zero-Cost Abstractions, Profiling, Benchmarking, and Optimization
 - `#[inline]` guidance
 
 ---
+
 ## Zero-Cost Abstractions
 
 You don't pay for what you don't use
 
 ---
+
 ## What Zero-Cost Means
 
 ![what_zero_cost_means](svg/courses/languages/rust/advanced-rust/09_performance/what_zero_cost_means.svg)
 
 ---
+
 ## Iterator vs Hand-Written Loop
 
 ```rust
@@ -74,6 +79,7 @@ fn main() {
 Use `cargo asm` or Compiler Explorer (godbolt.org) to verify.
 
 ---
+
 ## Monomorphization
 
 ```rust
@@ -102,6 +108,7 @@ fn main() {
 ```
 
 ---
+
 ## Null Pointer Optimization
 
 ```rust
@@ -130,16 +137,19 @@ fn main() {
 ```
 
 ---
+
 ## LLVM Optimization Passes
 
 What the compiler does for you
 
 ---
+
 ## LLVM Optimization Pipeline
 
 ![llvm_optimization_pipeline](svg/courses/languages/rust/advanced-rust/09_performance/llvm_optimization_pipeline.svg)
 
 ---
+
 ## Optimization Levels
 
 ```bash
@@ -170,6 +180,7 @@ What the compiler does for you
 | "z"   | Good  | Slower      | Smallest    | Minimal    |
 
 ---
+
 ## Viewing LLVM IR and Assembly
 
 ```bash
@@ -191,11 +202,13 @@ cargo asm --lib my_crate::sum_squares_iterator
 ```
 
 ---
+
 ## Profiling
 
 Finding bottlenecks
 
 ---
+
 ## Profiling with perf
 
 ```bash
@@ -223,6 +236,7 @@ perf stat ./target/release/my_app
 ```
 
 ---
+
 ## Flamegraphs: Example
 
 ```bash
@@ -238,11 +252,13 @@ cargo flamegraph --bin my_app
 ```
 
 ---
+
 ## Flamegraphs
 
 ![stack_depth_call_chain](svg/courses/languages/rust/advanced-rust/09_performance/stack_depth_call_chain.svg)
 
 ---
+
 ## Flamegraphs: Example (2)
 
 ```bash
@@ -254,11 +270,13 @@ cargo flamegraph --flamechart  # Time-ordered view
 ```
 
 ---
+
 ## Benchmarking with Criterion
 
 Statistical benchmarking
 
 ---
+
 ## Setting Up Criterion
 
 ```toml
@@ -272,6 +290,7 @@ harness = false
 ```
 
 ---
+
 ## Criterion Benchmark File
 
 ```rust
@@ -298,6 +317,7 @@ fn fibonacci_iterative(n: u64) -> u64 {
 ```
 
 ---
+
 ## Criterion: Benchmark Function
 
 ```rust
@@ -321,6 +341,7 @@ cargo bench
 ```
 
 ---
+
 ## Criterion: Comparing Implementations
 
 ```rust
@@ -346,6 +367,7 @@ fn sum_chunks(data: &[i32]) -> i64 {
 ```
 
 ---
+
 ## Criterion: Parametrized Benchmark Group
 
 ```rust
@@ -380,6 +402,7 @@ criterion_main!(benches);
 ```
 
 ---
+
 ## Criterion: black_box and Throughput
 
 ```rust
@@ -414,11 +437,13 @@ criterion_main!(benches);
 ```
 
 ---
+
 ## Memory Allocators
 
 Custom allocators for performance
 
 ---
+
 ## Global Allocator Trait
 
 ```rust
@@ -448,6 +473,7 @@ unsafe impl GlobalAlloc for CountingAllocator {
 ```
 
 ---
+
 ## Global Allocator: Registration and Usage
 
 ```rust
@@ -473,6 +499,7 @@ fn main() {
 ```
 
 ---
+
 ## Using jemalloc
 
 ```toml
@@ -505,6 +532,7 @@ fn main() {
 ```
 
 ---
+
 ## Using mimalloc: Example
 
 ```toml
@@ -534,21 +562,25 @@ fn main() {
 ```
 
 ---
+
 ## Using mimalloc
 
 ![cargo_toml](svg/courses/languages/rust/advanced-rust/09_performance/cargo_toml.svg)
 
 ---
+
 ## SIMD
 
 Single Instruction, Multiple Data
 
 ---
+
 ## SIMD Concepts
 
 ![simd_concepts](svg/courses/languages/rust/advanced-rust/09_performance/simd_concepts.svg)
 
 ---
+
 ## Portable SIMD (std::simd, nightly)
 
 ```rust
@@ -584,6 +616,7 @@ fn dot_product_scalar(a: &[f32], b: &[f32]) -> f32 {
 ```
 
 ---
+
 ## Portable SIMD: Driver
 
 ```rust
@@ -601,6 +634,7 @@ fn main() {
 ```
 
 ---
+
 ## Auto-Vectorization
 
 ```rust
@@ -632,6 +666,7 @@ unsafe fn add_arrays_avx2(a: &[f32], b: &[f32], out: &mut [f32]) {
 ```
 
 ---
+
 ## Auto-Vectorization: Runtime Dispatch
 
 ```rust
@@ -653,11 +688,13 @@ fn main() {
 ```
 
 ---
+
 ## Cache-Friendly Data Structures
 
 AoS vs SoA
 
 ---
+
 ## Array of Structs vs Struct of Arrays
 
 ```rust
@@ -697,6 +734,7 @@ struct ParticlesSoA {
 ```
 
 ---
+
 ## AoS vs SoA Benchmark
 
 ```rust
@@ -727,6 +765,7 @@ fn distance_sum_soa(points: &PointsSoA) -> f32 {
 ```
 
 ---
+
 ## AoS vs SoA Benchmark: Driver
 
 ```rust
@@ -753,6 +792,7 @@ fn main() {
 ```
 
 ---
+
 ## Cache Optimization Guidelines
 
 1. 1. **Sequential access beats random access**
@@ -772,6 +812,7 @@ fn main() {
 *Cache line = 64 bytes on x86. L1 ~1 ns, L2 ~5 ns, L3 ~20 ns, DRAM ~100 ns.*
 
 ---
+
 ## Arena Allocation for Cache Locality
 
 ```rust
@@ -811,6 +852,7 @@ impl Arena<TreeNode> {
 ```
 
 ---
+
 ## Arena Allocation: Usage
 
 ```rust
@@ -827,11 +869,13 @@ fn main() {
 ```
 
 ---
+
 ## Compile-Time Computation
 
 const fn and const generics
 
 ---
+
 ## const fn
 
 ```rust
@@ -862,6 +906,7 @@ const FIB_20: u64 = fibonacci(20);
 ```
 
 ---
+
 ## const fn: Lookup Tables and Usage
 
 ```rust
@@ -889,6 +934,7 @@ fn main() {
 ```
 
 ---
+
 ## Const Generics
 
 ```rust
@@ -917,6 +963,7 @@ impl<const ROWS: usize, const COLS: usize> Matrix<ROWS, COLS> {
 ```
 
 ---
+
 ## Const Generics: Matrix Multiply
 
 ```rust
@@ -943,6 +990,7 @@ impl<const ROWS: usize, const COLS: usize> Matrix<ROWS, COLS> {
 ```
 
 ---
+
 ## Const Generics: Usage
 
 ```rust
@@ -967,6 +1015,7 @@ fn main() {
 ```
 
 ---
+
 ## Compile-Time Type-Level Assertions
 
 ```rust
@@ -997,11 +1046,13 @@ fn main() {
 ```
 
 ---
+
 ## Link-Time Optimization (LTO)
 
 Cross-crate optimization
 
 ---
+
 ## Configuring LTO: Example
 
 ```toml
@@ -1017,26 +1068,31 @@ codegen-units = 1   # Single codegen unit: enables more inlining
 ```
 
 ---
+
 ## Configuring LTO
 
 ![lto_false_default_no_cross_crate_optimization](svg/courses/languages/rust/advanced-rust/09_performance/lto_false_default_no_cross_crate_optimization.svg)
 
 ---
+
 ## LTO Trade-offs
 
 ![lto_trade_offs](svg/courses/languages/rust/advanced-rust/09_performance/lto_trade_offs.svg)
 
 ---
+
 ## Profile-Guided Optimization (PGO)
 
 Optimize based on real workload data
 
 ---
+
 ## PGO Workflow
 
 ![pgo_workflow](svg/courses/languages/rust/advanced-rust/09_performance/pgo_workflow.svg)
 
 ---
+
 ## PGO Commands
 
 ```bash
@@ -1062,11 +1118,13 @@ RUSTFLAGS="-Cprofile-use=/tmp/pgo-data/merged.profdata -Cllvm-args=-pgo-warn-mis
 ```
 
 ---
+
 ## Inline Guidance
 
 Helping the compiler make inlining decisions
 
 ---
+
 ## #[inline] Attributes
 
 ```rust
@@ -1111,11 +1169,13 @@ fn main() {
 ```
 
 ---
+
 ## When to Use #[inline]
 
 ![when_to_use_inline](svg/courses/languages/rust/advanced-rust/09_performance/when_to_use_inline.svg)
 
 ---
+
 ## Complete Performance Checklist
 
 ```rust
@@ -1147,6 +1207,7 @@ struct Particles {
 ```
 
 ---
+
 ## Performance Checklist: Const and Inline Hints
 
 ```rust
@@ -1175,6 +1236,7 @@ fn slow_error_path(msg: &str) {
 ```
 
 ---
+
 ## Performance Checklist: Putting It Together
 
 ```rust
@@ -1197,11 +1259,13 @@ fn main() {
 ```
 
 ---
+
 ## Summary
 
 ![summary](svg/courses/languages/rust/advanced-rust/09_performance/summary.svg)
 
 ---
+
 ## Exercises
 
 1. Use `cargo asm` or Compiler Explorer to compare the assembly of an iterator chain vs a hand-written loop. Are they identical?

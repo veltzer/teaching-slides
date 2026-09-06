@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Code Review Goals
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![goal_dimensions](svg/courses/development_methodologies/code-review-best-practices/02_code_review_goals/goal_dimensions.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The goals of a code review
@@ -26,6 +28,7 @@ audience:
 - When goals conflict
 
 ---
+
 ## A Code Review Has Goals
 
 - Without goals, reviews drift to bikeshedding
@@ -35,11 +38,13 @@ audience:
 - "Why are we doing this?" should always have an answer
 
 ---
+
 ## Goals at a Glance
 
 ![review_goals](svg/courses/development_methodologies/code-review-best-practices/02_code_review_goals/review_goals.svg)
 
 ---
+
 ## Goal: Correctness
 
 - Does the code do what it says?
@@ -49,6 +54,7 @@ audience:
 - The most important goal — but not always sufficient
 
 ---
+
 ## Goal: Readability
 
 - Will another developer understand this in 6 months?
@@ -58,6 +64,7 @@ audience:
 - Code is read 10x more than written; readability compounds
 
 ---
+
 ## Goal: Maintainability
 
 - Can this change be safely modified later?
@@ -67,6 +74,7 @@ audience:
 - Trade-off: heavy abstractions vs simple code
 
 ---
+
 ## Goal: Knowledge Sharing
 
 - Does the reviewer learn something?
@@ -76,6 +84,7 @@ audience:
 - A side benefit; should not be the *only* benefit
 
 ---
+
 ## Goal: Style and Consistency
 
 - Does it follow the project's conventions?
@@ -85,6 +94,7 @@ audience:
 - Comment "nit:" prefix for style nitpicks
 
 ---
+
 ## Goal: Security
 
 - Does it introduce vulnerabilities?
@@ -94,6 +104,7 @@ audience:
 - Reviews catch some of this; specialists catch the rest
 
 ---
+
 ## Goal: Performance
 
 - Will this scale?
@@ -103,6 +114,7 @@ audience:
 - Block on performance only when it's clear and measurable
 
 ---
+
 ## Thoroughness vs Speed
 
 - Thorough review catches more, costs more time
@@ -112,6 +124,7 @@ audience:
 - Reviews waiting for days are themselves a cost
 
 ---
+
 ## When Goals Conflict
 
 - Readable code may be less performant
@@ -121,6 +134,7 @@ audience:
 - Authors and reviewers negotiate; team norms guide
 
 ---
+
 ## Setting Goals Per PR
 
 - A bug fix: correctness first; small change; quick review
@@ -130,6 +144,7 @@ audience:
 - A perf change: numbers, not vibes
 
 ---
+
 ## Documenting Team Goals
 
 - A short doc: "what we look for in PRs"
@@ -139,6 +154,7 @@ audience:
 - Onboarding new developers faster
 
 ---
+
 ## Goals by Maturity
 
 - Junior dev's PR: focus on learning + correctness
@@ -148,6 +164,7 @@ audience:
 - Reviews aren't one-size-fits-all
 
 ---
+
 ## Common Mistakes
 
 - No stated goals &#8594; bikeshedding

@@ -11,6 +11,7 @@ audience:
   - audiences:devops
 
 ---
+
 # TCP/IP Essentials
 ## Chapter 1: Introduction to Computer Networks
 
@@ -250,6 +251,7 @@ audience:
     - Most common type
 
 ---
+
 ## Domain Name System (DNS)
 
 **Purpose:**
@@ -264,11 +266,13 @@ audience:
 - DNS zones
 
 ---
+
 ## DNS Resolution Process
 
 ![dns_resolution_process](svg/courses/networking/linux-networking-overview/01_tcpip_essentials/dns_resolution_process.svg)
 
 ---
+
 ## DNS Record Types
 
 | Type | Purpose | Example |
@@ -280,11 +284,13 @@ audience:
 | NS | Name server | example.com → ns1.example.com |
 
 ---
+
 ## Client-Server Architecture
 
 ![client_server_architecture](svg/courses/networking/linux-networking-overview/01_tcpip_essentials/client_server_architecture.svg)
 
 ---
+
 ## Server Types
 
 **Common Servers:**
@@ -295,6 +301,7 @@ audience:
 - Application servers (Tomcat, Node.js)
 
 ---
+
 ## Client Applications
 
 **Types:**
@@ -311,6 +318,7 @@ audience:
 - SSH
 
 ---
+
 ## Network Security Fundamentals
 
 **Key Areas:**

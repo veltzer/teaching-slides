@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # SQL Syntax
 
 ---
+
 ## What This Chapter Covers
 
 - SELECT, FROM, WHERE
@@ -20,11 +22,13 @@ audience:
 - Subqueries
 
 ---
+
 ## Statement Categories
 
 ![sql_categories](svg/courses/databases/introduction-to-databases/05_sql_syntax/sql_categories.svg)
 
 ---
+
 ## SELECT
 
 ```sql
@@ -35,6 +39,7 @@ SELECT * FROM orders WHERE total > 100;
 - Pick columns; from where; with conditions
 
 ---
+
 ## WHERE Clauses
 
 - `=`, `!=`, `<`, `>`, `<=`, `>=`
@@ -44,6 +49,7 @@ SELECT * FROM orders WHERE total > 100;
 - Combine with AND, OR, NOT
 
 ---
+
 ## ORDER BY, LIMIT
 
 ```sql
@@ -53,6 +59,7 @@ SELECT * FROM orders ORDER BY total DESC LIMIT 10;
 - Sort; cap rows
 
 ---
+
 ## INSERT
 
 ```sql
@@ -61,6 +68,7 @@ INSERT INTO users (email, name) VALUES ('a@b.com', 'A'), ('b@c.com', 'B');
 ```
 
 ---
+
 ## UPDATE
 
 ```sql
@@ -71,6 +79,7 @@ UPDATE users SET name = 'Alice Smith' WHERE id = 1;
 - Without it: all rows updated
 
 ---
+
 ## DELETE
 
 ```sql
@@ -81,6 +90,7 @@ DELETE FROM users WHERE id = 1;
 - Without it: all rows deleted
 
 ---
+
 ## INNER JOIN
 
 ```sql
@@ -92,6 +102,7 @@ INNER JOIN orders o ON u.id = o.user_id;
 - Only matching rows from both
 
 ---
+
 ## LEFT JOIN
 
 ```sql
@@ -103,11 +114,13 @@ LEFT JOIN orders o ON u.id = o.user_id;
 - All users; orders if any (NULL if not)
 
 ---
+
 ## Join Variants Compared
 
 ![join_kinds](svg/courses/databases/introduction-to-databases/05_sql_syntax/join_kinds.svg)
 
 ---
+
 ## GROUP BY
 
 ```sql
@@ -120,6 +133,7 @@ ORDER BY users DESC;
 - Aggregate per group
 
 ---
+
 ## HAVING
 
 ```sql
@@ -132,6 +146,7 @@ HAVING COUNT(*) > 100;
 - Filter on aggregate; after grouping
 
 ---
+
 ## Subqueries
 
 ```sql
@@ -142,6 +157,7 @@ WHERE id IN (SELECT user_id FROM orders WHERE total > 1000);
 - Query inside a query
 
 ---
+
 ## Aliases
 
 - AS for columns and tables
@@ -149,6 +165,7 @@ WHERE id IN (SELECT user_id FROM orders WHERE total > 1000);
 - Required for derived tables
 
 ---
+
 ## DISTINCT
 
 ```sql
@@ -158,6 +175,7 @@ SELECT DISTINCT country FROM users;
 - Unique values
 
 ---
+
 ## Common SQL Mistakes
 
 - `WHERE col = NULL` (always false; use `IS NULL`)

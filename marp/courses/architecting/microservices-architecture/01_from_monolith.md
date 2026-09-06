@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # From Monolith to Microservices
 
 ---
+
 ## What This Course Is About
 
 - Microservices: an application split into small, independently deployable services
@@ -19,11 +21,13 @@ audience:
 - This course covers the design choices and trade-offs
 
 ---
+
 ## Monolith vs Microservices
 
 ![monolith_to_services](svg/courses/architecting/microservices-architecture/01_from_monolith/monolith_to_services.svg)
 
 ---
+
 ## A Monolith
 
 - One codebase, one deployment
@@ -32,6 +36,7 @@ audience:
 - Simple to start; everything in one place
 
 ---
+
 ## When the Monolith Hurts
 
 - Multiple teams stepping on each other's commits
@@ -41,6 +46,7 @@ audience:
 - The codebase exceeds anyone's mental capacity
 
 ---
+
 ## What Microservices Promise
 
 - Independent deployment per service
@@ -50,6 +56,7 @@ audience:
 - Fault isolation: one service's bug doesn't take down the rest
 
 ---
+
 ## What Microservices Cost
 
 - Distributed system complexity (network, partial failure)
@@ -59,6 +66,7 @@ audience:
 - Testing across service boundaries is non-trivial
 
 ---
+
 ## When Microservices Are Right
 
 - Multiple teams that need to work independently
@@ -67,6 +75,7 @@ audience:
 - Operational maturity to handle distributed systems
 
 ---
+
 ## When Microservices Are Wrong
 
 - Small team, small domain
@@ -75,6 +84,7 @@ audience:
 - Premature optimization for scale you don't have
 
 ---
+
 ## A Realistic Trade-Off
 
 - Monolith: simple to build, hard to scale organizationally
@@ -83,6 +93,7 @@ audience:
 - "Modular monolith" is a real and useful intermediate
 
 ---
+
 ## The Modular Monolith
 
 - One deployable, but internally split into modules with clear boundaries
@@ -91,6 +102,7 @@ audience:
 - Many teams stop here intentionally
 
 ---
+
 ## Migration Patterns
 
 - **Big bang**: rewrite as microservices — almost always wrong
@@ -99,6 +111,7 @@ audience:
 - The strangler fig is the safe, common path
 
 ---
+
 ## Strangler Fig in One Slide
 
 - Identify a capability to extract
@@ -108,16 +121,19 @@ audience:
 - Remove the capability from the monolith
 
 ---
+
 ## Strangler Fig Visualised
 
 ![strangler_fig](svg/courses/architecting/microservices-architecture/01_from_monolith/strangler_fig.svg)
 
 ---
+
 ## Migration Anti Patterns
 
 ![migration_anti_patterns](svg/courses/architecting/microservices-architecture/01_from_monolith/migration_anti_patterns.svg)
 
 ---
+
 ## Anti-Patterns
 
 - **Distributed monolith**: services exist but are tightly coupled
@@ -126,6 +142,7 @@ audience:
 - **Microservices because Netflix**: the architecture has to fit your team and domain
 
 ---
+
 ## Course Roadmap
 
 - Chapter 2: principles and what makes a service "micro"
@@ -137,6 +154,7 @@ audience:
 - Chapter 13-14: composition and scaling
 
 ---
+
 ## Summary
 
 - Microservices solve specific problems and create new ones

@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Exceptions
 
 ---
+
 ## What are Exceptions?
 - Exceptions are errors that occur during program execution
 - They interrupt the normal flow of the program
@@ -24,6 +26,7 @@ print(int("hello"))
 ```
 
 ---
+
 ## EAFP vs LBYL
 - **EAFP**: Easier to Ask Forgiveness than Permission
 - **LBYL**: Look Before You Leap
@@ -41,7 +44,9 @@ except KeyError:
 ```
 
 ---
+
 ## Common Built-in Exceptions
+
 | Exception | Cause |
 |-----------|-------|
 | `TypeError` | Wrong type |
@@ -55,6 +60,7 @@ except KeyError:
 | `NameError` | Undefined variable |
 
 ---
+
 ## The `try`/`except` Statement
 
 ```python
@@ -68,6 +74,7 @@ print(result)  # 0
 ```
 
 ---
+
 ## Catching the Exception Object
 
 ```python
@@ -81,6 +88,7 @@ except ValueError as e:
 ```
 
 ---
+
 ## Catching Multiple Exceptions
 
 ```python
@@ -96,6 +104,7 @@ except (TypeError, AttributeError) as e:
 ```
 
 ---
+
 ## Catching All Exceptions
 
 ```python
@@ -111,6 +120,7 @@ except Exception as e:
 - Catching too broadly hides bugs
 
 ---
+
 ## The `else` Clause
 
 ```python
@@ -128,6 +138,7 @@ else:
 - Keeps the `try` block minimal
 
 ---
+
 ## The `finally` Clause
 
 ```python
@@ -145,6 +156,7 @@ finally:
 - Used for cleanup (closing files, connections, etc.)
 
 ---
+
 ## `try`/`except`/`else`/`finally`
 
 ```python
@@ -164,6 +176,7 @@ Done!
 ```
 
 ---
+
 ## Raising Exceptions
 
 ```python
@@ -181,6 +194,7 @@ except ValueError as e:
 ```
 
 ---
+
 ## Re-raising Exceptions
 
 ```python
@@ -198,6 +212,7 @@ def process_data(data):
 - Preserves the original traceback
 
 ---
+
 ## Exception Chaining
 
 ```python
@@ -219,6 +234,7 @@ except RuntimeError as e:
 - Original exception is preserved as `__cause__`
 
 ---
+
 ## Custom Exceptions
 
 ```python
@@ -241,6 +257,7 @@ except AppError as e:
 ```
 
 ---
+
 ## Custom Exceptions with Data
 
 ```python
@@ -259,6 +276,7 @@ except HttpError as e:
 ```
 
 ---
+
 ## Exception Hierarchy
 
 ![exception_hierarchy](svg/courses/languages/python/python-programming/09_exceptions/exception_hierarchy.svg)
@@ -287,6 +305,7 @@ BaseException
 ```
 
 ---
+
 ## `BaseException` vs `Exception`
 - `BaseException`: Root of all exceptions
 - `Exception`: Base for most user-catchable exceptions
@@ -305,6 +324,7 @@ except KeyboardInterrupt:
 ```
 
 ---
+
 ## Exception Groups (Python 3.11+)
 
 ```python
@@ -326,6 +346,7 @@ except* ValueError as eg:
 ```
 
 ---
+
 ## Context Managers and Exceptions
 
 ```python
@@ -343,6 +364,7 @@ finally:
 ```
 
 ---
+
 ## Suppressing Exceptions
 
 ```python
@@ -360,6 +382,7 @@ with suppress(FileNotFoundError):
 ```
 
 ---
+
 ## Traceback Information
 
 ```python
@@ -376,6 +399,7 @@ except ZeroDivisionError:
 ```
 
 ---
+
 ## Accessing Traceback Programmatically
 
 ```python
@@ -391,6 +415,7 @@ except ZeroDivisionError:
 ```
 
 ---
+
 ## Warnings vs Exceptions
 
 ```python
@@ -409,6 +434,7 @@ result = deprecated_function()
 ```
 
 ---
+
 ## Best Practices - Be Specific
 
 ```python
@@ -426,6 +452,7 @@ except KeyError:
 ```
 
 ---
+
 ## Best Practices - Keep `try` Blocks Small
 
 ```python
@@ -450,6 +477,7 @@ else:
 ```
 
 ---
+
 ## Best Practices - Don't Silence Exceptions
 
 ```python
@@ -467,6 +495,7 @@ except Exception as e:
 ```
 
 ---
+
 ## Best Practices - Use Custom Exceptions
 
 ```python
@@ -485,6 +514,7 @@ def validate(data):
 ```
 
 ---
+
 ## Common Patterns - Retry Logic
 
 ```python
@@ -502,6 +532,7 @@ def retry(func, max_attempts=3, delay=1):
 ```
 
 ---
+
 ## Common Patterns - Default Values
 
 ```python
@@ -523,6 +554,7 @@ print(safe_int(None, -1))   # -1
 ```
 
 ---
+
 ## `assert` Statement
 
 ```python
@@ -542,6 +574,7 @@ print(calculate_average([1, 2, 3]))  # 2.0
 - Never use for input validation
 
 ---
+
 ## Summary
 - Exceptions interrupt normal flow; `try`/`except` handles them
 - Catch specific exceptions, not broad ones

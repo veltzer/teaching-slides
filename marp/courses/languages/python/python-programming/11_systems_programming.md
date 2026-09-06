@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Systems Programming
 
 ---
+
 ## Overview
 - File I/O and text processing
 - Formatted output
@@ -19,6 +21,7 @@ audience:
 - Environment and system interaction
 
 ---
+
 ## Standard I/O Streams
 
 ```python
@@ -38,6 +41,7 @@ line = sys.stdin.readline()
 - Use `sys.stderr` for error messages
 
 ---
+
 ## Reading Input
 
 ```python
@@ -56,6 +60,7 @@ cat data.txt | python3 script.py
 ```
 
 ---
+
 ## Formatted Printing - f-strings Review
 
 ```python
@@ -80,6 +85,7 @@ Banana               $0.75
 ```
 
 ---
+
 ## Formatting Tables
 
 ```python
@@ -105,6 +111,7 @@ Charlie         35 Manager
 ```
 
 ---
+
 ## Opening Files
 
 ```python
@@ -125,7 +132,9 @@ f.close()
 ```
 
 ---
+
 ## File Modes
+
 | Mode | Description |
 |------|-------------|
 | `"r"` | Read (default) |
@@ -137,6 +146,7 @@ f.close()
 | `"+"` | Read and write |
 
 ---
+
 ## The `with` Statement (Context Manager)
 
 ```python
@@ -152,6 +162,7 @@ with open("input.txt") as fin, open("output.txt", "w") as fout:
 ```
 
 ---
+
 ## Reading Files
 
 ```python
@@ -174,6 +185,7 @@ with open("data.txt") as f:
 ```
 
 ---
+
 ## Reading Large Files Efficiently
 
 ```python
@@ -193,6 +205,7 @@ with open("huge.bin", "rb") as f:
 ```
 
 ---
+
 ## Writing Files
 
 ```python
@@ -212,6 +225,7 @@ with open("output.txt", "w") as f:
 ```
 
 ---
+
 ## File Encoding
 
 ```python
@@ -229,6 +243,7 @@ with open("data.txt", "r", encoding="utf-8", errors="replace") as f:
 ```
 
 ---
+
 ## Binary Files
 
 ```python
@@ -245,6 +260,7 @@ with open("output.bin", "wb") as f:
 ```
 
 ---
+
 ## `pathlib` for File Operations
 
 ```python
@@ -264,6 +280,7 @@ if p.exists():
 ```
 
 ---
+
 ## File System Operations with `pathlib`
 
 ```python
@@ -285,6 +302,7 @@ Path("temp.txt").unlink(missing_ok=True)
 ```
 
 ---
+
 ## File System Operations with `shutil`
 
 ```python
@@ -309,6 +327,7 @@ print(f"Free: {usage.free / 1e9:.1f} GB")
 ```
 
 ---
+
 ## Temporary Files
 
 ```python
@@ -327,6 +346,7 @@ with tempfile.TemporaryDirectory() as tmpdir:
 ```
 
 ---
+
 ## JSON - Reading and Writing
 
 ```python
@@ -351,7 +371,9 @@ with open("data.json") as f:
 ```
 
 ---
+
 ## JSON - Type Mapping
+
 | Python | JSON |
 |--------|------|
 | `dict` | object |
@@ -363,6 +385,7 @@ with open("data.json") as f:
 | `None` | `null` |
 
 ---
+
 ## JSON - Custom Serialization
 
 ```python
@@ -381,6 +404,7 @@ print(json_str)
 ```
 
 ---
+
 ## YAML with PyYAML
 
 ```python
@@ -403,6 +427,7 @@ pip install pyyaml
 ```
 
 ---
+
 ## CSV Files
 
 ```python
@@ -423,6 +448,7 @@ with open("data.csv") as f:
 ```
 
 ---
+
 ## CSV - Writing
 
 ```python
@@ -447,6 +473,7 @@ with open("output.csv", "w", newline="") as f:
 ```
 
 ---
+
 ## Environment Variables
 
 ```python
@@ -465,6 +492,7 @@ for key, value in os.environ.items():
 ```
 
 ---
+
 ## Running External Commands - `subprocess`
 
 ```python
@@ -477,6 +505,7 @@ print(result.returncode)  # 0 = success
 ```
 
 ---
+
 ## `subprocess.run()` Options
 
 ```python
@@ -503,6 +532,7 @@ result = subprocess.run(
 ```
 
 ---
+
 ## `subprocess` - Piping
 
 ```python
@@ -525,6 +555,7 @@ print(output)
 ```
 
 ---
+
 ## `subprocess` - Shell Commands
 
 ```python
@@ -544,6 +575,7 @@ print(result.stdout.strip())
 - Prefer passing command as a list without `shell=True`
 
 ---
+
 ## `subprocess` - Input
 
 ```python
@@ -559,6 +591,7 @@ print(result.stdout)  # Hello Alice
 ```
 
 ---
+
 ## Multiprocessing - Basics
 
 ```python
@@ -580,6 +613,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Multiprocessing - Pool
 
 ```python
@@ -596,6 +630,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Multiprocessing - Pool Methods
 
 ```python
@@ -619,6 +654,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Multiprocessing - Shared State
 
 ```python
@@ -643,6 +679,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Threading - Basics
 
 ```python
@@ -664,6 +701,7 @@ for t in threads:
 ```
 
 ---
+
 ## Threading - The GIL: Details
 
 - CPython has the Global Interpreter Lock (GIL)
@@ -672,11 +710,13 @@ for t in threads:
 - For CPU-bound tasks, use `multiprocessing`
 
 ---
+
 ## Threading - The GIL
 
 ![threading_the_gil](svg/courses/languages/python/python-programming/11_systems_programming/threading_the_gil.svg)
 
 ---
+
 ## Threading - Thread Pool
 
 ```python
@@ -700,6 +740,7 @@ with ThreadPoolExecutor(max_workers=3) as executor:
 ```
 
 ---
+
 ## `concurrent.futures` - ProcessPoolExecutor
 
 ```python
@@ -719,6 +760,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## `concurrent.futures` - `as_completed`
 
 ```python
@@ -744,6 +786,7 @@ Task 3 done
 ```
 
 ---
+
 ## Threading - Locks
 
 ```python
@@ -770,6 +813,7 @@ print(counter)  # 400000
 ```
 
 ---
+
 ## Signal Handling
 
 ```python
@@ -789,6 +833,7 @@ while True:
 ```
 
 ---
+
 ## Summary
 - Use `open()` with `with` statement for file I/O
 - `pathlib` for modern file system operations

@@ -12,9 +12,11 @@ audience:
   - audiences:devops
 
 ---
+
 # How the Shell Runs Things
 
 ---
+
 ## What Happens When You Type a Command?
 - You type `ls -la /tmp` and press Enter
 - The shell must figure out:
@@ -24,11 +26,13 @@ audience:
     1. What to do with the result
 
 ---
+
 ## Command Line Parsing: Step by Step
 
 ![command_line_parsing_step_by_step](svg/courses/languages/bash/bash-scripting/02_how_shell_runs_things/command_line_parsing_step_by_step.svg)
 
 ---
+
 ## The Full Parsing Order
 1. Brace expansion: `{a,b,c}`
 1. Tilde expansion: `~`
@@ -40,6 +44,7 @@ audience:
 1. Quote removal
 
 ---
+
 ## Why the Order Matters
 
 ```bash
@@ -56,6 +61,7 @@ echo "*.txt"
 ```
 
 ---
+
 ## Finding Commands: Three Types
 
 | Built-in Commands | Function Definitions | External Programs |
@@ -64,6 +70,7 @@ echo "*.txt"
 | No fork needed | No fork needed | Fork + exec |
 
 ---
+
 ## The `type` Command
 
 ```bash
@@ -84,6 +91,7 @@ type -a echo
 ```
 
 ---
+
 ## Built-in Commands
 - Executed inside the shell process itself
 - No new process is created
@@ -98,6 +106,7 @@ cd /tmp  # changes THIS shell's directory
 ```
 
 ---
+
 ## Why `cd` Cannot Be External
 
 ```bash
@@ -113,6 +122,7 @@ cd /tmp  # changes THIS shell's directory
 ```
 
 ---
+
 ## External Commands and `PATH`
 - External commands are programs on disk
 - The shell must find them before executing
@@ -127,6 +137,7 @@ echo "$PATH"
 ```
 
 ---
+
 ## How `PATH` Search Works
 
 ```bash
@@ -143,6 +154,7 @@ python3000
 ```
 
 ---
+
 ## Viewing and Modifying `PATH`
 
 ```bash
@@ -160,6 +172,7 @@ export PATH="/only/this"  # DANGEROUS! Most commands vanish
 ```
 
 ---
+
 ## The `which` and `command -v` Commands
 
 ```bash
@@ -178,11 +191,13 @@ command -v ls  # /usr/bin/ls
 ```
 
 ---
+
 ## `fork` and `exec`: How External Commands Run
 
 ![fork_and_exec_how_external_commands_run](svg/courses/languages/bash/bash-scripting/02_how_shell_runs_things/fork_and_exec_how_external_commands_run.svg)
 
 ---
+
 ## Watching `fork`/`exec` in Action
 
 ```bash
@@ -196,6 +211,7 @@ strace -f -e trace=clone,execve bash -c 'ls /tmp' 2>&1 | head -20
 ```
 
 ---
+
 ## The Search Order
 When you type a command name, `bash` searches in this order:
 
@@ -213,6 +229,7 @@ hash
 ```
 
 ---
+
 ## Bypassing the Search Order
 
 ```bash

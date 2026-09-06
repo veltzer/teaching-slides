@@ -10,6 +10,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # UNIX Shells
 ## Understanding Shell Types and Usage
 
@@ -158,6 +159,7 @@ command > output.txt 2> error.log
 ```
 
 ---
+
 ## Aliases
 
 ## Bourne aliases

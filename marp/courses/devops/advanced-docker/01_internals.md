@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Docker Internals and Architecture
 
 Understanding what happens beneath the `docker` CLI
@@ -290,11 +291,13 @@ ip addr show
 ```
 
 ---
+
 ## Network Namespace - veth Pairs
 
 ![network_namespace_veth_pairs](svg/courses/devops/advanced-docker/01_internals/network_namespace_veth_pairs.svg)
 
 ---
+
 ## Network Namespace - veth Pairs: Example
 
 ```bash
@@ -547,11 +550,13 @@ cat /proc/$PID/environ | tr '\0' '\n'
 ```
 
 ---
+
 ## Container Filesystem - OverlayFS
 
 ![container_filesystem_overlayfs](svg/courses/devops/advanced-docker/01_internals/container_filesystem_overlayfs.svg)
 
 ---
+
 ## Container Filesystem - OverlayFS: Example
 
 ```bash

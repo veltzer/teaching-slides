@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Introduction to CockroachDB
 
 ---
+
 ## What This Chapter Covers
 
 - What CockroachDB is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What CockroachDB Is
 
 - Distributed SQL database
@@ -28,6 +31,7 @@ audience:
 - Survives node, zone, region loss
 
 ---
+
 ## Why Distributed SQL
 
 - Single-node Postgres caps out
@@ -36,6 +40,7 @@ audience:
 - Want survivability
 
 ---
+
 ## How It Differs From Cassandra
 
 - Strong consistency
@@ -44,11 +49,13 @@ audience:
 - Easier app porting
 
 ---
+
 ## In Context
 
 ![cockroach_compare](svg/courses/databases/cockroachdb/01_introduction/cockroach_compare.svg)
 
 ---
+
 ## How It Differs From Postgres
 
 - No single primary
@@ -57,6 +64,7 @@ audience:
 - Different tuning approach
 
 ---
+
 ## Architecture
 
 - Each node serves SQL and storage
@@ -65,6 +73,7 @@ audience:
 - Ranges split as data grows
 
 ---
+
 ## Ranges
 
 - Roughly 512MB chunks
@@ -73,11 +82,13 @@ audience:
 - Split and rebalance automatically
 
 ---
+
 ## Ranges Visualized
 
 ![cockroach_ranges](svg/courses/databases/cockroachdb/01_introduction/cockroach_ranges.svg)
 
 ---
+
 ## Raft
 
 - Consensus per range
@@ -86,6 +97,7 @@ audience:
 - Tolerates minority loss
 
 ---
+
 ## Survival Goals
 
 - Zone survivability
@@ -94,6 +106,7 @@ audience:
 - Drives replica placement
 
 ---
+
 ## Multi-Region
 
 - Place replicas across regions
@@ -102,6 +115,7 @@ audience:
 - Native primitives
 
 ---
+
 ## Compatibility
 
 - PostgreSQL wire and SQL
@@ -110,6 +124,7 @@ audience:
 - Test for drift before porting
 
 ---
+
 ## Hardware Profile
 
 - Three or more nodes minimum
@@ -118,6 +133,7 @@ audience:
 - Time-synced clocks essential
 
 ---
+
 ## Course Outline
 
 - Schema design
@@ -127,6 +143,7 @@ audience:
 - Operations
 
 ---
+
 ## Common Beginner Mistakes
 
 - One-node deployments in production

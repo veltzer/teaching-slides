@@ -7,9 +7,11 @@ audience:
   - audiences:data-analysts
 
 ---
+
 # Dashboards
 
 ---
+
 ## What This Chapter Covers
 
 - Dashboard design principles
@@ -20,6 +22,7 @@ audience:
 - Maintenance and refresh
 
 ---
+
 ## What a Dashboard Is
 
 - A *single view* of the most important metrics for a purpose
@@ -29,11 +32,13 @@ audience:
 - Not a report, not a one-off chart
 
 ---
+
 ## Design Pattern
 
 ![dashboard_design](svg/courses/data_science/data-analyst-fundamentals/11_dashboards/dashboard_design.svg)
 
 ---
+
 ## Why Dashboards Often Fail
 
 - Built without a clear consumer in mind
@@ -44,6 +49,7 @@ audience:
 - Many companies have hundreds; few have value-generating ones
 
 ---
+
 ## Start From the Decision
 
 - What decision will this dashboard support?
@@ -53,6 +59,7 @@ audience:
 - The decision dictates the metrics, the metrics dictate the layout
 
 ---
+
 ## Choosing KPIs
 
 - Few, important, actionable
@@ -62,6 +69,7 @@ audience:
 - "If this metric were red, what would we do?" — every metric should have an answer
 
 ---
+
 ## Lagging vs Leading
 
 - **Lagging**: revenue, churn, NPS — outcomes
@@ -71,6 +79,7 @@ audience:
 - Don't track only what already happened
 
 ---
+
 ## Layout Principles
 
 - Most-important top-left (eye lands here first)
@@ -80,11 +89,13 @@ audience:
 - Mobile preview if relevant
 
 ---
+
 ## Information Layers
 
 ![dashboard_layers](svg/courses/data_science/data-analyst-fundamentals/11_dashboards/dashboard_layers.svg)
 
 ---
+
 ## Visual Hierarchy
 
 - Big numbers for headline metrics
@@ -94,6 +105,7 @@ audience:
 - Most data should be muted; the exceptional should stand out
 
 ---
+
 ## Interactive Elements
 
 - **Filters**: date range, segment, region — global to the dashboard
@@ -103,6 +115,7 @@ audience:
 - Make interactive only what users will *actually* use
 
 ---
+
 ## Dashboards in Tableau
 
 - Build worksheets first; combine on a dashboard
@@ -112,6 +125,7 @@ audience:
 - Publish to server; subscribe stakeholders
 
 ---
+
 ## Dashboards in Excel
 
 - Pivot tables + slicers + pivot charts on a separate sheet
@@ -121,6 +135,7 @@ audience:
 - Lower polish than Tableau but free if you have Office
 
 ---
+
 ## Dashboards in Power BI
 
 - Similar to Tableau in capability
@@ -130,6 +145,7 @@ audience:
 - Common in Microsoft-shops
 
 ---
+
 ## Real-Time vs Refresh
 
 - Real-time: streaming updates as data changes
@@ -139,6 +155,7 @@ audience:
 - Daily decisions don't need second-by-second updates
 
 ---
+
 ## Maintaining Dashboards
 
 - Source data changes &#8594; dashboards break
@@ -148,6 +165,7 @@ audience:
 - Without maintenance, dashboards rot
 
 ---
+
 ## Killing Dashboards
 
 - Most dashboards aren't viewed after week 2
@@ -157,6 +175,7 @@ audience:
 - Track this; report it; act on it
 
 ---
+
 ## Sharing Permissions
 
 - Public, internal, restricted
@@ -166,6 +185,7 @@ audience:
 - Audit access periodically
 
 ---
+
 ## Common Mistakes
 
 - Pretty dashboards with no consumer

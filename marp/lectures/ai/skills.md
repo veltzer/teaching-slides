@@ -9,6 +9,7 @@ audience:
 - audiences:developers
 
 ---
+
 # Skills in AI
 ## Packaging Reusable Expertise for LLM Agents
 ## Mark Veltzer

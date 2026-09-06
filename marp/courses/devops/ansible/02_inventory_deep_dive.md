@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Inventory Deep Dive
 
 ## Topics Covered

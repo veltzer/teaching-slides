@@ -14,6 +14,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Tool Use and Function Calling
 
 ## Overview

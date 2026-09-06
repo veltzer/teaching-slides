@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Ingestion and Querying
 
 ---
+
 ## What This Chapter Covers
 
 - Batch ingestion
@@ -20,6 +22,7 @@ audience:
 - Optimization
 
 ---
+
 ## Batch Ingestion
 
 - Periodic copy from source
@@ -28,6 +31,7 @@ audience:
 - Latency in hours
 
 ---
+
 ## Streaming Ingestion
 
 - Continuous from source
@@ -36,6 +40,7 @@ audience:
 - Requires idempotent writers
 
 ---
+
 ## Change Data Capture
 
 - Source database emits changes
@@ -44,6 +49,7 @@ audience:
 - Mirrors source within seconds
 
 ---
+
 ## Bronze, Silver, Gold
 
 - Bronze: raw landing
@@ -52,11 +58,13 @@ audience:
 - Each with own SLA
 
 ---
+
 ## Medallion Layers
 
 ![bronze_silver_gold](svg/courses/data_engineering/data-lakehouse/04_ingestion_and_querying/bronze_silver_gold.svg)
 
 ---
+
 ## Bronze Properties
 
 - Append-only
@@ -65,6 +73,7 @@ audience:
 - Immutable history
 
 ---
+
 ## Silver Properties
 
 - Schema enforced
@@ -73,6 +82,7 @@ audience:
 - Consumer-friendly
 
 ---
+
 ## Gold Properties
 
 - Aggregated for BI
@@ -81,6 +91,7 @@ audience:
 - Often materialized
 
 ---
+
 ## Query Engines
 
 - Spark
@@ -89,11 +100,13 @@ audience:
 - Choose by workload
 
 ---
+
 ## Engine Choices
 
 ![query_engines](svg/courses/data_engineering/data-lakehouse/04_ingestion_and_querying/query_engines.svg)
 
 ---
+
 ## SQL on Files
 
 - Engines push predicates to storage
@@ -102,6 +115,7 @@ audience:
 - Statistics drive plans
 
 ---
+
 ## Optimization
 
 - Compaction
@@ -110,6 +124,7 @@ audience:
 - Cache hot scans
 
 ---
+
 ## Cost Awareness
 
 - Compute is metered
@@ -118,6 +133,7 @@ audience:
 - Tag and chargeback
 
 ---
+
 ## Federated Queries
 
 - Join lakehouse with external sources
@@ -126,6 +142,7 @@ audience:
 - Push compute down
 
 ---
+
 ## Common Ingestion Mistakes
 
 - No backfill plan

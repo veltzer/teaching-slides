@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Data Migrations
 
 ---
+
 ## What This Chapter Covers
 
 - Backfills
@@ -21,6 +23,7 @@ audience:
 - Late-arriving data
 
 ---
+
 ## Backfill
 
 - Populate new structure with old data
@@ -29,6 +32,7 @@ audience:
 - Idempotent
 
 ---
+
 ## Backfill Strategy
 
 - Small batches
@@ -37,11 +41,13 @@ audience:
 - Pause on errors
 
 ---
+
 ## Backfill Modes
 
 ![backfill_modes](svg/courses/databases/database-migration-strategies/03_data_migrations/backfill_modes.svg)
 
 ---
+
 ## Live Transformation
 
 - Application writes new format
@@ -50,6 +56,7 @@ audience:
 - Pick by safety needs
 
 ---
+
 ## Triggers For Parity
 
 - Database trigger updates new column
@@ -58,6 +65,7 @@ audience:
 - Triggers cost performance
 
 ---
+
 ## Dual Writes
 
 - App writes both old and new
@@ -66,6 +74,7 @@ audience:
 - Common for engine moves
 
 ---
+
 ## Reconciliation
 
 - Compare old and new
@@ -74,11 +83,13 @@ audience:
 - By sample
 
 ---
+
 ## Backfill and Reconciliation
 
 ![backfill_recon](svg/courses/databases/database-migration-strategies/03_data_migrations/backfill_recon.svg)
 
 ---
+
 ## Inconsistencies
 
 - Find differences
@@ -87,6 +98,7 @@ audience:
 - Repeat until clean
 
 ---
+
 ## Late-Arriving Data
 
 - Old code paths still write old format
@@ -95,6 +107,7 @@ audience:
 - Cut over only when caught up
 
 ---
+
 ## Partition-By-Time Backfill
 
 - Process oldest first
@@ -103,6 +116,7 @@ audience:
 - Easy to resume
 
 ---
+
 ## Throughput Control
 
 - Rows per second cap
@@ -111,6 +125,7 @@ audience:
 - Auto-throttle on errors
 
 ---
+
 ## Failure Recovery
 
 - Treat backfill as a job
@@ -119,6 +134,7 @@ audience:
 - Resume from last checkpoint
 
 ---
+
 ## Verification Before Cutover
 
 - Reconciliation must pass
@@ -127,6 +143,7 @@ audience:
 - Rollback documented
 
 ---
+
 ## Common Data Migration Mistakes
 
 - One huge batch

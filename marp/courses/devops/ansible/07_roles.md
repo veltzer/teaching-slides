@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Roles: Structure, Creation, and Galaxy
 
 ## Topics Covered

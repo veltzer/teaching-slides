@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to MongoDB for Developers
 
 ---
+
 ## What This Chapter Covers
 
 - What MongoDB is
@@ -19,6 +21,7 @@ audience:
 - A short history
 
 ---
+
 ## What MongoDB Is
 
 - A document-oriented NoSQL database
@@ -28,11 +31,13 @@ audience:
 - Most-deployed document DB
 
 ---
+
 ## When MongoDB Shines
 
 ![mongo_strengths](svg/courses/databases/mongodb-for-developers/01_introduction_to_mongodb_for_developers/mongo_strengths.svg)
 
 ---
+
 ## Document Model
 
 - A document = JSON-ish object
@@ -41,6 +46,7 @@ audience:
 - No fixed schema per collection
 
 ---
+
 ## When MongoDB Wins
 
 - Hierarchical / nested data
@@ -50,6 +56,7 @@ audience:
 - Quick prototyping with evolving schema
 
 ---
+
 ## When MongoDB Loses
 
 - Heavy transactional workload (ACID across collections)
@@ -58,6 +65,7 @@ audience:
 - When you actually want a schema
 
 ---
+
 ## The Ecosystem
 
 - MongoDB Atlas: hosted
@@ -67,6 +75,7 @@ audience:
 - Drivers for every major language
 
 ---
+
 ## Versions
 
 - 6.x and 7.x are current LTS branches
@@ -75,6 +84,7 @@ audience:
 - Run a recent version
 
 ---
+
 ## A Sample Document
 
 ```json
@@ -93,6 +103,7 @@ audience:
 - No SQL joins to compose
 
 ---
+
 ## Key Concepts
 
 - Database &#8594; Collection &#8594; Document
@@ -101,11 +112,13 @@ audience:
 - ObjectId: the default _id type
 
 ---
+
 ## Document Versus Relational
 
 ![document_vs_relational](svg/courses/databases/mongodb-for-developers/01_introduction_to_mongodb_for_developers/document_vs_relational.svg)
 
 ---
+
 ## SQL Comparison
 
 - Database = Database
@@ -115,6 +128,7 @@ audience:
 - JOIN = $lookup (or denormalise)
 
 ---
+
 ## Common Misconceptions
 
 - "Schemaless = no schema" — your app has one; just unenforced
@@ -123,6 +137,7 @@ audience:
 - "No transactions" — wrong since 4.0; ACID across collections
 
 ---
+
 ## What's Next
 
 - Tools and dev environment

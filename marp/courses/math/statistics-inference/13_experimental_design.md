@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Experimental Design
 
 ---
+
 ## What This Chapter Covers
 
 - Why design beats analysis
@@ -21,11 +23,13 @@ audience:
 - Power analysis and choosing the sample size up front
 
 ---
+
 ## Fisher's Three Pillars
 
 ![three_pillars](svg/courses/math/statistics-inference/13_experimental_design/three_pillars.svg)
 
 ---
+
 ## You Can't Fix A Bad Design Afterward
 
 - "We'll figure out the statistics later" is how studies die — no analysis rescues a confounded or underpowered experiment
@@ -35,6 +39,7 @@ audience:
 - A clean design with a simple test beats a messy one with a fancy test, every time
 
 ---
+
 ## Randomization
 
 - Randomly assign units to treatments — the single most important step
@@ -44,6 +49,7 @@ audience:
 - Without randomization you have an *observational* study; causal claims then need much heavier machinery
 
 ---
+
 ## Replication And Control
 
 - **Replication**: multiple independent units per treatment — gives you an estimate of noise, hence standard errors and power. (Measuring the *same* unit repeatedly is *pseudo-replication* — it doesn't count.)
@@ -53,6 +59,7 @@ audience:
 - "Before vs after, no control" is one of the most common — and most misleading — designs
 
 ---
+
 ## Blocking And Stratification
 
 - A **nuisance variable** affects the outcome but isn't of interest — day of week, machine, lab, batch, site
@@ -62,6 +69,7 @@ audience:
 - Stratification in surveys plays the same role — ensure coverage, reduce variance
 
 ---
+
 ## Factorial Designs
 
 - Vary several factors **simultaneously**, crossing all their levels — 2 factors &times; 2 levels = 4 treatment combinations
@@ -71,6 +79,7 @@ audience:
 - This is the backbone of industrial experimentation (DOE) and well-run A/B/n testing
 
 ---
+
 ## Confounding And How To Neutralize It
 
 - A **confounder** is associated with both the treatment assignment and the outcome — it makes the treatment effect inseparable from its effect
@@ -80,6 +89,7 @@ audience:
 - Before running anything, list the plausible confounders and write down how each is handled
 
 ---
+
 ## Power Analysis — Plan The Sample Size
 
 - Decide *before* collecting data how many units you need, from four quantities: the **effect size** worth detecting, the **significance level** &alpha; (usually 0.05), the desired **power** 1&minus;&beta; (usually 0.80 or 0.90), and the data's variability
@@ -89,11 +99,13 @@ audience:
 - Pre-register the design, the primary outcome, the sample size, and the analysis — it's the cheapest insurance against fooling yourself
 
 ---
+
 ## Sample Size vs Detectable Effect
 
 ![power_curve](svg/courses/math/statistics-inference/13_experimental_design/power_curve.svg)
 
 ---
+
 ## Design And Power In Python
 
 ```python
@@ -112,6 +124,7 @@ for day in range(4):
 ```
 
 ---
+
 ## Common Mistakes
 
 - "We'll sort out the analysis later" — the design already limited what you can conclude

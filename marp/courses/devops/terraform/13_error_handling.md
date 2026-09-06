@@ -13,9 +13,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Error Handling and Debugging
 
 ---
+
 ## Error Handling and Debugging
 
 ![common_error_categories](svg/courses/devops/terraform/13_error_handling/common_error_categories.svg)

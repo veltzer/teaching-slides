@@ -11,9 +11,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Event Streaming and Data Pipelines
 
 ---
+
 ## Why Event Streaming Is Architectural
 
 - Events decouple services in time and in knowledge
@@ -22,6 +24,7 @@ audience:
 - Architecture decisions about the stream reach every team that touches data
 
 ---
+
 ## Messages vs Events vs Streams
 
 - **Message** — a unit of communication; request/response or fire-and-forget
@@ -30,6 +33,7 @@ audience:
 - Queue semantics delete on consumption; stream semantics retain for all consumers
 
 ---
+
 ## Why Kafka Won
 
 - Append-only log with per-partition ordering
@@ -39,6 +43,7 @@ audience:
 - Ecosystem: Connect, Streams, Schema Registry, ksqlDB
 
 ---
+
 ## Kafka Concepts
 
 - **Topic** — a named stream of events
@@ -49,6 +54,7 @@ audience:
 - **Consumer group** — a set of consumers sharing partitions for parallelism
 
 ---
+
 ## Topic Design
 
 - One topic per event type, not per service
@@ -57,6 +63,7 @@ audience:
 - Changing partition counts later breaks key-based ordering — choose carefully
 
 ---
+
 ## Retention Strategies
 
 - **Time-based** — retain events for N days (7, 30, 365 common)
@@ -67,6 +74,7 @@ audience:
 Compacted topics act like a key-value store backed by a log.
 
 ---
+
 ## Producers: Delivery Semantics
 
 - **At-most-once** — fire and forget; data loss possible
@@ -75,6 +83,7 @@ Compacted topics act like a key-value store backed by a log.
 - Exactly-once is real in Kafka but constrains throughput and requires careful design
 
 ---
+
 ## Consumers: Position and Replay
 
 - Each consumer group tracks its own offsets
@@ -83,6 +92,7 @@ Compacted topics act like a key-value store backed by a log.
 - Retention must be long enough to recover from the slowest consumer's outage
 
 ---
+
 ## Event Schema Evolution
 
 - Events outlive the code that produced them — schema must evolve backward-compatibly
@@ -92,6 +102,7 @@ Compacted topics act like a key-value store backed by a log.
 - Rule: add optional fields; never remove or rename in place
 
 ---
+
 ## The Outbox Pattern
 
 The dual-write problem: updating the database and publishing an event are not atomic.
@@ -104,6 +115,7 @@ Outbox fixes it:
 - Guarantees at-least-once delivery without 2PC
 
 ---
+
 ## Change Data Capture (CDC)
 
 - Tail the database's write-ahead log and publish each change as an event
@@ -112,6 +124,7 @@ Outbox fixes it:
 - Great for legacy systems that cannot be refactored to emit events
 
 ---
+
 ## CDC Trade-Offs
 
 - **Pros**: zero code changes, every change captured, naturally ordered
@@ -120,6 +133,7 @@ Outbox fixes it:
 - Pair with a transformation layer to map rows to domain events
 
 ---
+
 ## Event Sourcing Revisited
 
 - Store every state change as an immutable event; derive current state by replay
@@ -128,6 +142,7 @@ Outbox fixes it:
 - Snapshotting every N events keeps replay tractable for long-lived aggregates
 
 ---
+
 ## Event Sourcing Considerations
 
 - Schema evolution is harder — old events must still be replayable
@@ -136,6 +151,7 @@ Outbox fixes it:
 - Strong fit: audit-heavy domains (finance, healthcare); weak fit: simple CRUD
 
 ---
+
 ## Stream Processing
 
 - Transform streams into new streams or materialized views in real time
@@ -144,6 +160,7 @@ Outbox fixes it:
 - Tools: `Kafka Streams`, `Apache Flink`, `Spark Streaming`, `ksqlDB`
 
 ---
+
 ## Stream Processing Use Cases
 
 - Real-time analytics — windowed aggregations over clickstreams
@@ -153,6 +170,7 @@ Outbox fixes it:
 - Alerting — thresholds evaluated on live data
 
 ---
+
 ## Windowing
 
 - **Tumbling** — non-overlapping fixed-size windows (every 5 minutes)
@@ -161,6 +179,7 @@ Outbox fixes it:
 - **Event-time vs processing-time** — correct handling of out-of-order and late events
 
 ---
+
 ## Watermarks and Late Data
 
 - Processing-time is the clock the system sees
@@ -170,6 +189,7 @@ Outbox fixes it:
 - Handle late data with allowed lateness + side outputs
 
 ---
+
 ## Exactly-Once Processing
 
 - Consume + process + produce must be atomic with offset commit
@@ -178,6 +198,7 @@ Outbox fixes it:
 - Every external sink must cooperate (idempotent or transactional)
 
 ---
+
 ## Kafka Connect
 
 - Framework for moving data in and out of Kafka without custom code
@@ -186,6 +207,7 @@ Outbox fixes it:
 - Offsets managed by Connect — resumable, fault-tolerant
 
 ---
+
 ## Data Pipeline Architecture
 
 - **Ingestion** — raw events land in Kafka (or equivalent)
@@ -195,6 +217,7 @@ Outbox fixes it:
 - **Governance** — schemas, lineage, quality checks at every stage
 
 ---
+
 ## Lambda vs Kappa Architecture
 
 - **Lambda** — batch pipeline for accuracy + streaming pipeline for freshness
@@ -207,6 +230,7 @@ Outbox fixes it:
 Most modern systems target Kappa with Lambda-as-fallback.
 
 ---
+
 ## Data Lakehouse
 
 - Combines data-lake economics (object storage, open formats) with warehouse features (ACID, schema)
@@ -215,6 +239,7 @@ Most modern systems target Kappa with Lambda-as-fallback.
 - Same table queryable by Spark, Trino, Flink, and warehouse engines
 
 ---
+
 ## Kafka Alternatives
 
 - **Pulsar** — similar capabilities, separated storage/compute
@@ -224,6 +249,7 @@ Most modern systems target Kappa with Lambda-as-fallback.
 - Pick based on ecosystem fit and operational comfort, not raw benchmarks
 
 ---
+
 ## Operational Concerns
 
 - Partition count vs broker count — too many partitions stress the cluster
@@ -233,6 +259,7 @@ Most modern systems target Kappa with Lambda-as-fallback.
 - Topic sprawl — treat topics as first-class resources with owners and docs
 
 ---
+
 ## Common Mistakes
 
 - **Topic-per-service** instead of topic-per-event-type — couples consumers to service topology
@@ -242,6 +269,7 @@ Most modern systems target Kappa with Lambda-as-fallback.
 - **Under-retention** — the first consumer outage becomes a data loss incident
 
 ---
+
 ## Summary
 
 - Events are facts; streams are retained sequences of facts

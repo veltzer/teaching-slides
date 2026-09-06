@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Design Points
 
 ---
+
 ## What This Chapter Covers
 
 - Kafka's persistence model
@@ -23,6 +25,7 @@ audience:
 - Why Kafka is fast
 
 ---
+
 ## Persistence: Append-Only Log
 
 - Each partition is a sequence of segment files on disk
@@ -32,11 +35,13 @@ audience:
 - Sequential disk I/O is fast even on spinning disks
 
 ---
+
 ## Durability Levers
 
 ![durability_levers](svg/courses/queues/kafka/05_design_points/durability_levers.svg)
 
 ---
+
 ## Why It's Fast
 
 - Sequential I/O (not random)
@@ -46,6 +51,7 @@ audience:
 - Modern Kafka clusters push GB/s per broker
 
 ---
+
 ## Producer Guarantees
 
 - With `acks=all` + `enable.idempotence`: at-least-once with no duplicates from retries
@@ -55,6 +61,7 @@ audience:
 - Always state your durability needs explicitly
 
 ---
+
 ## Consumer Guarantees
 
 - Out of the box: at-least-once
@@ -64,6 +71,7 @@ audience:
 - Most production systems work fine with at-least-once + idempotency
 
 ---
+
 ## Message Delivery Semantics
 
 - **At-most-once**: messages may be lost; never duplicated
@@ -73,6 +81,7 @@ audience:
 - Exactly-once is hard; Kafka can do it with care
 
 ---
+
 ## Replication
 
 - Each partition has N replicas (one leader, N-1 followers)
@@ -82,6 +91,7 @@ audience:
 - Configurable: `replica.lag.time.max.ms`
 
 ---
+
 ## Leader Election
 
 - When a leader fails, one in-sync replica becomes leader
@@ -91,6 +101,7 @@ audience:
 - `min.insync.replicas` prevents writing during partial failure
 
 ---
+
 ## Unclean Leader Election
 
 - If no in-sync replica is available, an out-of-sync one can take over
@@ -100,6 +111,7 @@ audience:
 - Most production setups: false
 
 ---
+
 ## Log Compaction
 
 - Alternative to time-based deletion
@@ -109,6 +121,7 @@ audience:
 - Used internally for `__consumer_offsets`
 
 ---
+
 ## When To Use Compaction
 
 - Topic represents *current state* per key (e.g., user profiles)
@@ -118,6 +131,7 @@ audience:
 - A powerful pattern for event-sourced systems
 
 ---
+
 ## Tombstones
 
 - A record with a key and `null` value
@@ -127,6 +141,7 @@ audience:
 - The mechanism for log-compacted deletion
 
 ---
+
 ## In-Sync Replicas (ISR)
 
 - The set of replicas caught up to the leader
@@ -136,6 +151,7 @@ audience:
 - `under-replicated-partitions` metric: ISR shrunk; investigate
 
 ---
+
 ## Producer-Broker Communication
 
 - One TCP connection per broker
@@ -145,6 +161,7 @@ audience:
 - Connection pooling handled by the client
 
 ---
+
 ## Why Kafka Beats Polling Databases
 
 - Polling: wasted queries when nothing changed
@@ -154,6 +171,7 @@ audience:
 - Kafka: backpressure via consumer groups
 
 ---
+
 ## When NOT to Use Kafka
 
 - Low-volume messaging (RabbitMQ may be simpler)
@@ -163,6 +181,7 @@ audience:
 - Total ops cost too high for the value
 
 ---
+
 ## Operational Concerns
 
 - ZooKeeper or KRaft: cluster coordination
@@ -172,6 +191,7 @@ audience:
 - Patching: rolling upgrades require careful planning
 
 ---
+
 ## Common Design Mistakes
 
 - One topic with too many partitions (overhead per partition)
@@ -182,6 +202,7 @@ audience:
 - Underestimating the operational complexity
 
 ---
+
 ## Course Wrap-Up
 
 - Kafka is a distributed commit log

@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Point Estimation
 
 ---
+
 ## What This Chapter Covers
 
 - Estimators as recipes, estimates as numbers
@@ -21,11 +23,13 @@ audience:
 - Standard errors of estimators
 
 ---
+
 ## Bias / Variance Tradeoff
 
 ![bias_variance](svg/courses/math/statistics-inference/02_point_estimation/bias_variance.svg)
 
 ---
+
 ## Estimator vs Estimate
 
 - An **estimator** is a rule — a function of the sample — like "take the sample mean"
@@ -35,6 +39,7 @@ audience:
 - "x&#772; is an estimator of &mu;" — and a good one, as we'll see
 
 ---
+
 ## Bias
 
 - The **bias** of an estimator is E[estimator] &minus; (true parameter): on average, does it hit the target?
@@ -44,6 +49,7 @@ audience:
 - "Unbiased" is a statement about the long-run average, not about your one estimate
 
 ---
+
 ## Variance And Mean Squared Error
 
 - The **variance** of an estimator measures how much it bounces around from sample to sample
@@ -53,6 +59,7 @@ audience:
 - Prefer the estimator with the smaller MSE for *your* sample size
 
 ---
+
 ## Consistency
 
 - An estimator is **consistent** if it converges to the true parameter as n &#8594; &infin;
@@ -62,6 +69,7 @@ audience:
 - Consistency is a minimum bar — an inconsistent estimator is broken; "consistent" alone doesn't make one good at small n
 
 ---
+
 ## The Method Of Moments
 
 - Idea: set sample moments equal to theoretical moments, solve for the parameters
@@ -71,6 +79,7 @@ audience:
 - A solid fallback when the likelihood is awkward, and a good starting point for iterative methods
 
 ---
+
 ## Maximum Likelihood Estimation
 
 - The **likelihood** is the probability of the observed data, viewed as a function of the parameters
@@ -80,6 +89,7 @@ audience:
 - The default estimation principle behind logistic regression, GLMs, and much of modern statistics
 
 ---
+
 ## Standard Errors
 
 - An estimate without a standard error is half a result
@@ -89,11 +99,13 @@ audience:
 - Report estimate &plusmn; (a multiple of) the standard error, or the matching interval
 
 ---
+
 ## The Cramér-Rao Bound
 
 ![cramer_rao](svg/courses/math/statistics-inference/02_point_estimation/cramer_rao.svg)
 
 ---
+
 ## Estimation In Python
 
 ```python
@@ -112,6 +124,7 @@ print("SE of shape (bootstrap):", np.std(boot, ddof=1))
 ```
 
 ---
+
 ## Common Mistakes
 
 - Confusing the estimator (a procedure) with the estimate (a number)

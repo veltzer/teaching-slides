@@ -9,14 +9,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Testing and Debugging Sagas
 
 ---
+
 ## Saga Testing Layers
 
 ![saga_testing_layers](svg/courses/architecting/saga-pattern/06_testing_and_debugging_sagas/saga_testing_layers.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Unit-testing orchestrators and choreography handlers
@@ -29,6 +32,7 @@ audience:
 - Production debugging
 
 ---
+
 ## Why Sagas Need Special Test Discipline
 
 - Failure paths are easy to forget — they only run when something breaks
@@ -37,6 +41,7 @@ audience:
 - Test rigor up front saves on-call pages later
 
 ---
+
 ## Unit Testing the Orchestrator
 
 - The orchestrator is a pure state machine — perfect for unit tests
@@ -45,6 +50,7 @@ audience:
 - Fast, deterministic, comprehensive
 
 ---
+
 ## Orchestrator Test Pattern
 
 ```python
@@ -63,6 +69,7 @@ def test_payment_failed_triggers_compensation():
 - Then: state transition and emitted command(s)
 
 ---
+
 ## Simulating Failure Scenarios
 
 - Test every step's failure
@@ -72,6 +79,7 @@ def test_payment_failed_triggers_compensation():
 - Test halted-saga path
 
 ---
+
 ## Failure Test Coverage Matrix
 
 | Step | Success | Transient fail | Permanent fail | Timeout |
@@ -85,6 +93,7 @@ def test_payment_failed_triggers_compensation():
 - Comprehensive but not heroic — most are 5-line assertions
 
 ---
+
 ## Choreography Unit Tests
 
 - Each participant is its own unit
@@ -93,6 +102,7 @@ def test_payment_failed_triggers_compensation():
 - Test both forward and reactive-compensation handlers
 
 ---
+
 ## Choreography Handler Test
 
 ```python
@@ -107,6 +117,7 @@ def test_inventory_reacts_to_OrderCancelled():
 ```
 
 ---
+
 ## Integration Tests
 
 - Spin up a real broker (Kafka, NATS, RabbitMQ) in a container
@@ -115,6 +126,7 @@ def test_inventory_reacts_to_OrderCancelled():
 - Assert the final state across services
 
 ---
+
 ## Integration Test Anatomy
 
 ```python
@@ -132,6 +144,7 @@ def test_order_saga_end_to_end(broker, services):
 - Run on every CI build, not on every commit
 
 ---
+
 ## Contract Testing Between Participants
 
 - Each participant publishes events; others consume them
@@ -140,6 +153,7 @@ def test_order_saga_end_to_end(broker, services):
 - Schema registries enforce compatibility at deploy time
 
 ---
+
 ## A Producer Contract Test
 
 ```python
@@ -154,6 +168,7 @@ def test_OrderPlaced_contract():
 - Run on producer's CI; fails if a consumer's contract is broken
 
 ---
+
 ## Distributed Tracing
 
 - Every saga step crosses a service boundary
@@ -162,11 +177,13 @@ def test_OrderPlaced_contract():
 - Backends: Jaeger, Tempo, Zipkin
 
 ---
+
 ## Saga Visibility Stack
 
 ![saga_visibility](svg/courses/architecting/saga-pattern/06_testing_and_debugging_sagas/saga_visibility.svg)
 
 ---
+
 ## Trace Propagation
 
 - Each event carries a trace id and span id
@@ -175,6 +192,7 @@ def test_OrderPlaced_contract():
 - The full saga is one trace tree
 
 ---
+
 ## Useful Trace Annotations
 
 - `saga_id` (= correlation id)
@@ -185,6 +203,7 @@ def test_OrderPlaced_contract():
 - A search by `saga_id` returns the entire flow
 
 ---
+
 ## Saga Monitoring Dashboards
 
 - Number of in-flight sagas, by status
@@ -194,6 +213,7 @@ def test_OrderPlaced_contract():
 - Per-step failure rate
 
 ---
+
 ## Alerts to Set Up
 
 - Halted sagas exist (operator action required)
@@ -203,6 +223,7 @@ def test_OrderPlaced_contract():
 - Stuck saga: no progress for N minutes
 
 ---
+
 ## A Sample Alert
 
 ```yaml
@@ -220,6 +241,7 @@ def test_OrderPlaced_contract():
 - Halted sagas are a real condition; pages are appropriate
 
 ---
+
 ## Anti-Patterns That Hurt at Test Time
 
 - **Long sagas**: a 30-step saga is hard to test exhaustively — split it
@@ -229,6 +251,7 @@ def test_OrderPlaced_contract():
 - **Hidden side effects**: compensations that touch unrelated systems
 
 ---
+
 ## Production Debugging: First Steps
 
 - Find the saga id (correlation id) from the trigger
@@ -238,6 +261,7 @@ def test_OrderPlaced_contract():
 - Decide: retry, manual completion, or compensation
 
 ---
+
 ## Replaying Events
 
 - For event-sourced orchestrators: replay events to reconstruct the saga
@@ -246,6 +270,7 @@ def test_OrderPlaced_contract():
 - Useful for "why did this saga go this way?" forensic work
 
 ---
+
 ## Manual Saga Intervention
 
 - Some halted sagas need a human in the loop
@@ -254,6 +279,7 @@ def test_OrderPlaced_contract():
 - Operations should be auditable: who did what, when, why
 
 ---
+
 ## Admin Operations
 
 - `RetryStep`: try the failing step again
@@ -263,6 +289,7 @@ def test_OrderPlaced_contract():
 - All require justification stored in the audit log
 
 ---
+
 ## Common Anti-Patterns Recap
 
 - **Sagas as cargo-cult**: using a saga where a local transaction would do
@@ -273,6 +300,7 @@ def test_OrderPlaced_contract():
 - **No timeouts**: silent saga death
 
 ---
+
 ## A Reasonable Production Setup
 
 - Event store / message broker with durable subscriptions
@@ -283,6 +311,7 @@ def test_OrderPlaced_contract():
 - Runbook for halted sagas; on-call rotation for halts
 
 ---
+
 ## Where to Go From Here
 
 - Pick one cross-service workflow in your system
@@ -292,6 +321,7 @@ def test_OrderPlaced_contract():
 - Build the dashboard before the saga goes live
 
 ---
+
 ## Course Recap
 
 - Chapter 1: distributed transactions, why 2PC fails, eventual consistency contract
@@ -302,6 +332,7 @@ def test_OrderPlaced_contract():
 - Chapter 6: testing, debugging, monitoring
 
 ---
+
 ## Summary
 
 - Unit-test orchestrators as state machines; choreography handlers as event functions

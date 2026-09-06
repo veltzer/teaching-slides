@@ -9,14 +9,17 @@ audience:
   - audiences:devops
 
 ---
+
 # Factor V: Build, Release, Run
 
 ---
+
 ## Three Stages
 
 ![three_stages](svg/courses/architecting/twelve-factor-app/06_build_release_run/three_stages.svg)
 
 ---
+
 ## The Rule
 
 - Strictly separate build, release, and run stages
@@ -24,6 +27,7 @@ audience:
 - A release is immutable; the run stage cannot modify it
 
 ---
+
 ## The Three Stages
 
 - **Build**: convert source code into an executable bundle (binary, image, jar)
@@ -31,6 +35,7 @@ audience:
 - **Run**: execute a release in the target environment
 
 ---
+
 ## Why Separate Them
 
 - Builds happen in a controlled environment (CI), not on the production host
@@ -39,6 +44,7 @@ audience:
 - Each stage has different dependencies and different security needs
 
 ---
+
 ## Stage Boundaries
 
 - Output of build: an immutable artifact (e.g., a Docker image)
@@ -47,6 +53,7 @@ audience:
 - Each handoff is explicit; nothing skipped
 
 ---
+
 ## Immutable Releases
 
 - A release is a versioned, auditable, frozen combination of code and config
@@ -55,11 +62,13 @@ audience:
 - Easy rollback: deploy an older release tag
 
 ---
+
 ## Release Immutability Visualised
 
 ![release_immutability](svg/courses/architecting/twelve-factor-app/06_build_release_run/release_immutability.svg)
 
 ---
+
 ## Release Versioning
 
 - Monotonically increasing release id (`v123`, `v124`)
@@ -68,6 +77,7 @@ audience:
 - Audit trail: which release ran where, when
 
 ---
+
 ## CI/CD Pipeline Alignment
 
 - CI handles the build stage: tests, compile, image build
@@ -76,6 +86,7 @@ audience:
 - A failed run does not affect the release — it triggers a rollback to the previous release
 
 ---
+
 ## Anti-Patterns
 
 - "SSH into prod and patch the code" — modifies the run, not the codebase
@@ -84,6 +95,7 @@ audience:
 - "Same artifact, different config files baked in" — release stage is missing
 
 ---
+
 ## Rollback
 
 - A working release plus the previous release id is enough to roll back
@@ -92,6 +104,7 @@ audience:
 - If rollback is hard, factor V is being violated somewhere
 
 ---
+
 ## Container Alignment
 
 - A Docker image is a build artifact
@@ -100,6 +113,7 @@ audience:
 - The boundaries map cleanly onto containers
 
 ---
+
 ## Summary
 
 - Three stages with strict boundaries: build, release, run

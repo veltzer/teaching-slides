@@ -11,6 +11,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Tagging Strategies and Cost Allocation
 
 ---

@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Planning and Reasoning
 
 ---
+
 ## What This Chapter Covers
 
 - Planning approaches
@@ -19,6 +21,7 @@ audience:
 - Trade-offs
 
 ---
+
 ## Why Planning
 
 - Multi-step goals
@@ -27,6 +30,7 @@ audience:
 - Cheaper than brute-force loops
 
 ---
+
 ## ReAct
 
 - Thought, action, observation
@@ -35,11 +39,13 @@ audience:
 - Simple to implement
 
 ---
+
 ## ReAct Loop
 
 ![react_loop](svg/courses/ai/ai-agents-development/03_planning_and_reasoning/react_loop.svg)
 
 ---
+
 ## ReAct Trade-offs
 
 - Easy to start with
@@ -48,6 +54,7 @@ audience:
 - Harder to debug
 
 ---
+
 ## Plan-and-Execute
 
 - LLM emits a plan first
@@ -56,6 +63,7 @@ audience:
 - Re-plans on failure
 
 ---
+
 ## Reflection
 
 - After acting, model critiques
@@ -64,6 +72,7 @@ audience:
 - Adds tokens but reduces errors
 
 ---
+
 ## Tree of Thoughts
 
 - Explore multiple branches
@@ -72,6 +81,7 @@ audience:
 - Expensive but powerful
 
 ---
+
 ## Self-Consistency
 
 - Sample multiple traces
@@ -80,6 +90,7 @@ audience:
 - More tokens, more confidence
 
 ---
+
 ## When to Use Which
 
 - Simple goals: ReAct
@@ -88,11 +99,13 @@ audience:
 - Hard problems: tree of thoughts
 
 ---
+
 ## Approaches Compared
 
 ![planning_approaches](svg/courses/ai/ai-agents-development/03_planning_and_reasoning/planning_approaches.svg)
 
 ---
+
 ## Stopping Conditions
 
 - Goal met by tool result
@@ -101,6 +114,7 @@ audience:
 - User cancels
 
 ---
+
 ## Long-Horizon Tasks
 
 - Break into sub-goals
@@ -109,6 +123,7 @@ audience:
 - Avoid context bloat
 
 ---
+
 ## Debugging Plans
 
 - Log every thought
@@ -117,6 +132,7 @@ audience:
 - Add asserts mid-loop
 
 ---
+
 ## Common Planning Mistakes
 
 - No iteration cap

@@ -8,9 +8,11 @@ audience:
   - audiences:managers
 
 ---
+
 # Collecting Data
 
 ---
+
 ## What This Chapter Covers
 
 - Mapping organisational data sources
@@ -21,6 +23,7 @@ audience:
 - The tradeoffs of "collect everything"
 
 ---
+
 ## Mapping Your Sources
 
 - Inventory before you build: where does data already live?
@@ -30,6 +33,7 @@ audience:
 - This map is more valuable than most analytics dashboards
 
 ---
+
 ## Joining Data Across Sources
 
 - Most useful questions span multiple systems
@@ -39,6 +43,7 @@ audience:
 - Establish a "golden ID" early; force every system to use it
 
 ---
+
 ## The Identity Problem
 
 - One human user can be five different IDs (web session, login, billing, support, marketing)
@@ -48,11 +53,13 @@ audience:
 - After the fact, it's an ongoing tax
 
 ---
+
 ## Identity States
 
 ![identity_resolution](svg/courses/data_driven/data-analytics-for-managers/02_collecting_data/identity_resolution.svg)
 
 ---
+
 ## Outliers
 
 - Data has anomalies: bots, test accounts, system glitches
@@ -62,6 +69,7 @@ audience:
 - Recurring outliers point to data-quality root causes worth fixing
 
 ---
+
 ## Missing Data
 
 - Some fields are empty; some are wrong but look full
@@ -71,6 +79,7 @@ audience:
 - Document treatment in every report
 
 ---
+
 ## Test, Internal, and Bot Traffic
 
 - Your QA team's accounts inflate every metric
@@ -80,6 +89,7 @@ audience:
 - Reports without these filters tell a flattering, false story
 
 ---
+
 ## Generating Fake Data
 
 - Sometimes you need data the production system can't share (PII, compliance)
@@ -89,6 +99,7 @@ audience:
 - Use for *development*; don't use for analysis
 
 ---
+
 ## Choosing Where to Store
 
 - Operational DBs (Postgres, MySQL): for app state, fast, expensive at scale
@@ -98,6 +109,7 @@ audience:
 - Pick based on access patterns, not vendor enthusiasm
 
 ---
+
 ## The Cost of "Collect Everything"
 
 - Storage is cheap; processing is not
@@ -107,6 +119,7 @@ audience:
 - Collect intentionally; document what you collect *and why*
 
 ---
+
 ## Privacy and Compliance
 
 - GDPR (EU), CCPA (California), HIPAA (US health), and many more
@@ -116,6 +129,7 @@ audience:
 - Compliance failures are expensive and reputation-shredding
 
 ---
+
 ## Quality Over Quantity
 
 - A clean 10K-row dataset beats a dirty 10M-row one
@@ -125,6 +139,7 @@ audience:
 - "Garbage in, dashboard out" is the most expensive form of garbage
 
 ---
+
 ## A Practical Workflow
 
 - Define the question
@@ -135,6 +150,7 @@ audience:
 - Iterate before building anything automated
 
 ---
+
 ## Common Mistakes
 
 - Building pipelines before knowing the question

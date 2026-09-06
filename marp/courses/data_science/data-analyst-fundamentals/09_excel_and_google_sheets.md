@@ -8,9 +8,11 @@ audience:
   - audiences:data-analysts
 
 ---
+
 # Excel and Google Sheets
 
 ---
+
 ## What This Chapter Covers
 
 - Why analysts can't escape spreadsheets
@@ -21,6 +23,7 @@ audience:
 - Power Query for data transformation
 
 ---
+
 ## The Spreadsheet Reality
 
 - Every analyst uses spreadsheets, every day
@@ -30,11 +33,13 @@ audience:
 - Master a few patterns; they cover 90% of work
 
 ---
+
 ## Power Features
 
 ![sheets_features](svg/courses/data_science/data-analyst-fundamentals/09_excel_and_google_sheets/sheets_features.svg)
 
 ---
+
 ## When to Use a Spreadsheet
 
 - Small datasets (under ~100K rows)
@@ -44,6 +49,7 @@ audience:
 - *Not* for: production pipelines, version-controlled work, anything reproducible
 
 ---
+
 ## When NOT to Use a Spreadsheet
 
 - Datasets over 1M rows (Excel can't handle them)
@@ -53,6 +59,7 @@ audience:
 - That's where SQL + Python come in
 
 ---
+
 ## Essential Functions
 
 - `SUM`, `AVERAGE`, `COUNT`, `MIN`, `MAX`
@@ -62,6 +69,7 @@ audience:
 - `DATE`, `YEAR`, `MONTH`, `DAY`, `EDATE`, `EOMONTH`
 
 ---
+
 ## VLOOKUP
 
 ```misc
@@ -75,6 +83,7 @@ audience:
 - Slow on large datasets
 
 ---
+
 ## INDEX + MATCH
 
 ```misc
@@ -87,6 +96,7 @@ audience:
 - The pre-2019 Excel power user's preference
 
 ---
+
 ## XLOOKUP (Modern)
 
 ```misc
@@ -100,6 +110,7 @@ audience:
 - The new standard — use it where available
 
 ---
+
 ## Conditional Logic
 
 ```misc
@@ -114,6 +125,7 @@ audience:
 - Don't nest IFs more than 3 deep — use a lookup table instead
 
 ---
+
 ## Conditional Formatting
 
 - Highlight cells based on rules
@@ -123,6 +135,7 @@ audience:
 - Don't overuse — too much colour distracts
 
 ---
+
 ## Data Validation
 
 - Restrict what users can enter in a cell
@@ -132,6 +145,7 @@ audience:
 - Prevents bad data at entry; cheaper than fixing later
 
 ---
+
 ## Charts
 
 - Insert &#8594; Chart, pick type
@@ -140,6 +154,7 @@ audience:
 - For dashboards: link chart data to a model sheet, output to a clean sheet
 
 ---
+
 ## Sparklines
 
 - Tiny chart inside a single cell
@@ -149,6 +164,7 @@ audience:
 - Variants: line, column, win/loss
 
 ---
+
 ## Pivot Tables
 
 ```misc
@@ -163,6 +179,7 @@ Drag fields to Rows, Columns, Values, Filters
 - Earns its own chapter, next
 
 ---
+
 ## Power Query (Excel) / Sheets Importrange
 
 - Excel's Power Query: ETL inside Excel
@@ -172,6 +189,7 @@ Drag fields to Rows, Columns, Values, Filters
 - For Google Sheets: `IMPORTRANGE`, `QUERY` functions provide some of the same
 
 ---
+
 ## Common Spreadsheet Anti-Patterns
 
 - Magic numbers hardcoded in formulas
@@ -181,6 +199,7 @@ Drag fields to Rows, Columns, Values, Filters
 - Spreadsheets as production data stores
 
 ---
+
 ## Common Mistakes
 
 - Using Excel where SQL would be faster and reproducible

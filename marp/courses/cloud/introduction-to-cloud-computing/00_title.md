@@ -11,6 +11,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Introduction To Cloud Computing
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

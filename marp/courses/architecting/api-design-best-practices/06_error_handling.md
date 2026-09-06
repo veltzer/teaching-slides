@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Error Handling
 
 ---
+
 ## Structured Errors
 
 ![error_response](svg/courses/architecting/api-design-best-practices/06_error_handling/error_response.svg)
 
 ---
+
 ## Why Error Design Matters
 
 - Errors are part of the API contract
@@ -24,6 +27,7 @@ audience:
 - Good error responses make integrations debuggable
 
 ---
+
 ## What an Error Response Should Have
 
 - An HTTP status code that matches the failure category
@@ -33,11 +37,13 @@ audience:
 - Optional: a link to documentation, a request id for support
 
 ---
+
 ## Error Response Anatomy
 
 ![error_envelope](svg/courses/architecting/api-design-best-practices/06_error_handling/error_envelope.svg)
 
 ---
+
 ## RFC 7807: Problem Details
 
 - Standard format for error responses
@@ -46,6 +52,7 @@ audience:
 - Extensible with custom fields
 
 ---
+
 ## RFC 7807 Example
 
 ```json
@@ -61,6 +68,7 @@ audience:
 ```
 
 ---
+
 ## Use Status Codes Correctly
 
 - 400 Bad Request: malformed request
@@ -72,6 +80,7 @@ audience:
 - 429 Too Many Requests: rate limited
 
 ---
+
 ## Error Codes vs Messages
 
 - HTTP status: broad category
@@ -89,6 +98,7 @@ audience:
 - Status for category, code for specifics, message for humans
 
 ---
+
 ## Validation Errors
 
 - One field has multiple problems → return all at once, not one at a time
@@ -105,6 +115,7 @@ audience:
 ```
 
 ---
+
 ## Error Catalogs
 
 - Maintain a list of all error codes the API can produce
@@ -113,6 +124,7 @@ audience:
 - Helps consumers handle errors systematically
 
 ---
+
 ## Consistent Error Format
 
 - Every error response has the same shape
@@ -121,6 +133,7 @@ audience:
 - Consumers can write a single error handler
 
 ---
+
 ## Don't Leak Internals
 
 - Stack traces in production responses → security risk
@@ -129,6 +142,7 @@ audience:
 - Log details server-side; return a generic-but-helpful message
 
 ---
+
 ## Generic Server Errors
 
 - 500 Internal Server Error: something we didn't expect
@@ -144,6 +158,7 @@ audience:
 ```
 
 ---
+
 ## Localization
 
 - Error messages may need to be localized
@@ -153,6 +168,7 @@ audience:
 - Client-side gives the consumer control; server-side is simpler
 
 ---
+
 ## Anti-Patterns
 
 - 200 OK with `{"success": false}` — defeats HTTP semantics
@@ -162,6 +178,7 @@ audience:
 - Codes that are just human strings: `"User Not Found"` vs `"USER_NOT_FOUND"`
 
 ---
+
 ## Idempotency and Errors
 
 - A retried operation should produce the same result on success
@@ -170,6 +187,7 @@ audience:
 - We cover idempotency in chapter 7
 
 ---
+
 ## Summary
 
 - Errors are part of the API contract — design them

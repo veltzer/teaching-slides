@@ -9,14 +9,17 @@ audience:
   - audiences:team-leads
 
 ---
+
 # Agile Engineering Practices
 
 ---
+
 ## Engineering Practices
 
 ![engineering_practices](svg/courses/practices/agile-and-scrum/08_agile_engineering_practices/engineering_practices.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The engineering practices that make Agile actually work
@@ -28,6 +31,7 @@ audience:
 - The role of automation
 
 ---
+
 ## Why Engineering Matters Here
 
 - Scrum is silent on *how* you build the software
@@ -37,6 +41,7 @@ audience:
 - This chapter is what closes the loop
 
 ---
+
 ## Continuous Integration
 
 - Every code change is integrated and tested *automatically* on every push
@@ -46,6 +51,7 @@ audience:
 - Without CI, "we're agile" means "we batch up problems for sprint end"
 
 ---
+
 ## Continuous Delivery
 
 - Every change that passes CI is *deployable*
@@ -55,6 +61,7 @@ audience:
 - Removes the "release weekend" and the heroics that come with it
 
 ---
+
 ## Continuous Deployment
 
 - Every change that passes CI is *automatically deployed*
@@ -64,6 +71,7 @@ audience:
 - Top-tier teams ship 100+ times per day this way
 
 ---
+
 ## Test-Driven Development
 
 - Write a failing test first
@@ -73,6 +81,7 @@ audience:
 - Forces design pressure — code that's hard to test is hard to use
 
 ---
+
 ## TDD Doesn't Just Mean "Tests"
 
 - Tests-after produce coverage, not design
@@ -82,6 +91,7 @@ audience:
 - That said, tests-after is still better than no tests
 
 ---
+
 ## Pair Programming
 
 - Two developers, one keyboard, one screen
@@ -91,6 +101,7 @@ audience:
 - Knowledge spreads naturally — bus factor improves immediately
 
 ---
+
 ## Pair Programming Trade-offs
 
 - Slower in pure throughput on simple tasks
@@ -100,6 +111,7 @@ audience:
 - Cultural fit varies — try it, see if your team likes it
 
 ---
+
 ## Mob Programming
 
 - The whole team works on one thing, on one screen, together
@@ -109,6 +121,7 @@ audience:
 - Some teams mob full-time; most reach for it as a tool when stuck
 
 ---
+
 ## Refactoring
 
 - Improve the design of existing code without changing its behaviour
@@ -118,6 +131,7 @@ audience:
 - "We don't have time to refactor" is the path to a codebase no one wants to touch
 
 ---
+
 ## Technical Debt
 
 - Shortcuts taken now that will cost more later
@@ -127,6 +141,7 @@ audience:
 - A team that says "we'll clean it up later" rarely does
 
 ---
+
 ## Trunk-Based Development
 
 - Everyone works off a single shared branch ("trunk" or "main")
@@ -136,6 +151,7 @@ audience:
 - Forces small, incremental change — pairs naturally with CI
 
 ---
+
 ## Feature Flags
 
 - Toggle features on/off at runtime without redeploying
@@ -145,6 +161,7 @@ audience:
 - Pair with trunk-based development to ship safely all day
 
 ---
+
 ## Automation Is the Glue
 
 - Tests, builds, deployments, infrastructure, monitoring — all in code
@@ -154,6 +171,7 @@ audience:
 - A team without automation is using Agile theatre
 
 ---
+
 ## A Short Maturity Ladder
 
 - Manual builds, manual tests, manual deploys: pre-Agile
@@ -163,6 +181,7 @@ audience:
 - Pick a step up from where you are; don't try to leap
 
 ---
+
 ## Course Wrap-Up
 
 - Agile is a values document, not a process recipe

@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Monorepo Strategies
 
 ---
+
 ## What This Chapter Covers
 
 - Monorepo vs multi-repo: trade-offs, not religion
@@ -21,6 +23,7 @@ audience:
 - Operational realities at very large scale
 
 ---
+
 ## What Is a Monorepo?
 
 - One Git repository for many projects
@@ -30,6 +33,7 @@ audience:
 - Famous practitioners: Google, Facebook, Microsoft (parts), Twitter
 
 ---
+
 ## Multi-Repo: The Common Default
 
 - One repo per service or library
@@ -39,11 +43,13 @@ audience:
 - The path of least resistance for most organizations
 
 ---
+
 ## Trade Off Summary
 
 ![monorepo_tradeoffs](svg/courses/git/advanced-git/06_monorepo_strategies/monorepo_tradeoffs.svg)
 
 ---
+
 ## Why Choose Monorepo?
 
 - One change, one PR, even when it spans services
@@ -53,6 +59,7 @@ audience:
 - Cultural: one team, one tree
 
 ---
+
 ## Why Avoid Monorepo?
 
 - Git wasn't designed for repos with millions of files
@@ -62,11 +69,13 @@ audience:
 - Off-the-shelf workflows assume per-repo
 
 ---
+
 ## Monorepo Structure Visualized
 
 ![monorepo_structure](svg/courses/git/advanced-git/06_monorepo_strategies/monorepo_structure.svg)
 
 ---
+
 ## The Scaling Walls
 
 - Repo size — clone time and disk usage
@@ -76,6 +85,7 @@ audience:
 - Each wall has a Git feature designed to climb it
 
 ---
+
 ## Partial Clone
 
 ```bash
@@ -89,6 +99,7 @@ git clone --filter=blob:none https://example/repo
 - Best for CI, dev machines with reliable network
 
 ---
+
 ## Shallow Clone
 
 ```bash
@@ -102,6 +113,7 @@ git clone --depth=1 https://example/repo
 - Can be deepened later with `git fetch --deepen=N`
 
 ---
+
 ## Sparse Checkout
 
 ```bash
@@ -116,6 +128,7 @@ git sparse-checkout set frontend/ shared/
 - Combine with partial clone for maximum speedup
 
 ---
+
 ## Sparse Checkout in Practice
 
 - `git sparse-checkout add path/` — include a path
@@ -125,6 +138,7 @@ git sparse-checkout set frontend/ shared/
 - Builds in monorepos are designed for partial trees
 
 ---
+
 ## Build Systems for Monorepos
 
 - Bazel, Buck2, Pants — build only what changed
@@ -134,6 +148,7 @@ git sparse-checkout set frontend/ shared/
 - Without a smart build, monorepo CI grinds to a halt
 
 ---
+
 ## CI for Monorepos
 
 - Don't run every test on every PR — too slow, too expensive
@@ -143,6 +158,7 @@ git sparse-checkout set frontend/ shared/
 - Build cache hits on unchanged code save hours
 
 ---
+
 ## Code Ownership: CODEOWNERS
 
 ```output
@@ -158,6 +174,7 @@ git sparse-checkout set frontend/ shared/
 - Critical for monorepos — otherwise nothing is anyone's problem
 
 ---
+
 ## Branching in Monorepos
 
 - Trunk-based development is the dominant pattern
@@ -167,6 +184,7 @@ git sparse-checkout set frontend/ shared/
 - The cost of a long branch grows with monorepo size
 
 ---
+
 ## Atomic Cross-Cutting Changes
 
 - Rename a function used by 200 services in one PR
@@ -176,6 +194,7 @@ git sparse-checkout set frontend/ shared/
 - Requires good test coverage to be safe
 
 ---
+
 ## Refactor Tools for Monorepos
 
 - Code-mod tools: rewrite syntax across millions of files
@@ -185,6 +204,7 @@ git sparse-checkout set frontend/ shared/
 - Tooling investment is part of the monorepo cost
 
 ---
+
 ## Hooks at Monorepo Scale
 
 - Pre-commit hooks must be incremental — only check changed files
@@ -194,6 +214,7 @@ git sparse-checkout set frontend/ shared/
 - Performance budgets are real engineering constraints
 
 ---
+
 ## Special Git Features for Scale
 
 - File system monitor (FSMonitor) — speeds `git status` by trusting watchers
@@ -203,6 +224,7 @@ git sparse-checkout set frontend/ shared/
 - Enable in `git config feature.manyFiles=true`
 
 ---
+
 ## Search at Scale
 
 - `git grep` works but slows on huge trees
@@ -212,6 +234,7 @@ git sparse-checkout set frontend/ shared/
 - Search infrastructure is a first-class monorepo investment
 
 ---
+
 ## Multi-Repo With Monorepo Workflows
 
 - Some teams approximate monorepo via super-projects with submodules
@@ -221,6 +244,7 @@ git sparse-checkout set frontend/ shared/
 - Pick monorepo when you need its atomicity, not because it's fashionable
 
 ---
+
 ## Common Mistakes
 
 - Going monorepo without investing in build/test tooling
@@ -230,6 +254,7 @@ git sparse-checkout set frontend/ shared/
 - Hoping `git` features alone will scale infinite repo growth
 
 ---
+
 ## When Monorepo Goes Wrong
 
 - 30-minute clones, 5-minute `git status`
@@ -239,6 +264,7 @@ git sparse-checkout set frontend/ shared/
 - These symptoms mean the *tooling* didn't scale, not git itself
 
 ---
+
 ## Best Practices
 
 - Adopt monorepo with the tooling investment up front
@@ -248,6 +274,7 @@ git sparse-checkout set frontend/ shared/
 - Strong CI with caching, sharding, and target-based test selection
 
 ---
+
 ## Summary
 
 - Monorepo trades coordination for tooling complexity

@@ -15,6 +15,7 @@ audience:
 # Cloud Security Attacks: Exploiting Misconfigured Cloud Environments
 
 ---
+
 ## Why Cloud Security Matters
 
 - Over 94% of enterprises use cloud services (Flexera 2024)
@@ -24,11 +25,13 @@ audience:
 - "The cloud is secure. Your configuration is not."
 
 ---
+
 ## Shared Responsibility Model
 
 ![shared_responsibility_model](svg/courses/security/cyber-attacks-and-vectors/28_cloud_security_attacks/shared_responsibility_model.svg)
 
 ---
+
 ## Misconfigured S3 Buckets
 
 ```bash
@@ -66,6 +69,7 @@ python3 cloud_enum.py -k companyname -l results.txt
 ```
 
 ---
+
 ## Notable S3 Bucket Breaches
 
 | Company         | Year | Records Exposed        | Data Type                      |
@@ -79,6 +83,7 @@ python3 cloud_enum.py -k companyname -l results.txt
 | Microsoft       | 2023 | 38 TB                  | Employee data, passwords       |
 
 ---
+
 ## Securing S3 Buckets
 
 ```json
@@ -139,6 +144,7 @@ aws s3api put-bucket-logging --bucket my-bucket \
 ```
 
 ---
+
 ## GCS Bucket Misconfigurations
 
 ```bash
@@ -166,6 +172,7 @@ gsutil uniformbucketlevelaccess set on gs://my-bucket
 ```
 
 ---
+
 ## IAM Privilege Escalation
 
 ```python
@@ -219,6 +226,7 @@ pacu
 ```
 
 ---
+
 ## IAM Best Practices
 
 ```json
@@ -264,6 +272,7 @@ pacu
 ```
 
 ---
+
 ## IMDS Attacks (169.254.169.254)
 
 ```bash
@@ -309,6 +318,7 @@ curl http://169.254.169.254/latest/user-data/
 ```
 
 ---
+
 ## IMDS v2: The Defense
 
 ```bash
@@ -345,6 +355,7 @@ curl -H "Metadata: true" \
 ```
 
 ---
+
 ## IMDS Across Cloud Providers
 
 | Provider | URL                          | Authentication                    | Version |
@@ -356,6 +367,7 @@ curl -H "Metadata: true" \
 | Oracle   | 169.254.169.254              | Authorization header optional     | v2      |
 
 ---
+
 ## Serverless Injection
 
 ```bash
@@ -427,6 +439,7 @@ def handler(event, context):
 ```
 
 ---
+
 ## Serverless Security Best Practices
 
 ```bash
@@ -449,6 +462,7 @@ def handler(event, context):
 ```
 
 ---
+
 ## Cross-Tenant Vulnerabilities
 
 ```bash
@@ -509,6 +523,7 @@ def handler(event, context):
 ```
 
 ---
+
 ## Cloud Security Scanning Tools
 
 | Tool           | Type          | Cloud Support       | License      |
@@ -521,6 +536,7 @@ def handler(event, context):
 | CSPM tools     | Platform      | Varies              | Commercial   |
 
 ---
+
 ## ScoutSuite: Multi-Cloud Auditing
 
 ```bash
@@ -549,6 +565,7 @@ scout azure --cli
 ```
 
 ---
+
 ## Prowler: AWS Security Assessment
 
 ```bash
@@ -581,6 +598,7 @@ prowler aws -M json -o /tmp/prowler-results/
 ```
 
 ---
+
 ## Infrastructure as Code (IaC) Security
 
 ```bash
@@ -649,6 +667,7 @@ resource "aws_s3_bucket_logging" "secure_bucket" {
 ```
 
 ---
+
 ## Cloud Attack Detection
 
 ```python
@@ -693,6 +712,7 @@ aws guardduty create-detector --enable
 ```
 
 ---
+
 ## Cloud Security Checklist
 
 ```bash
@@ -733,6 +753,7 @@ aws guardduty create-detector --enable
 ```
 
 ---
+
 ## Key Takeaways
 
 - Cloud misconfigurations are the leading cause of cloud breaches -- not provider vulnerabilities

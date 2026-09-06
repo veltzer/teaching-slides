@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Loading Data
 
 ---
+
 ## What This Chapter Covers
 
 - Insert patterns
@@ -20,6 +22,7 @@ audience:
 - Streaming ingest
 
 ---
+
 ## Insert Basics
 
 - INSERT INTO ... VALUES or SELECT
@@ -28,6 +31,7 @@ audience:
 - Avoid one-row inserts
 
 ---
+
 ## Why Batch
 
 - Each insert creates a part
@@ -36,16 +40,19 @@ audience:
 - Or aggregate at the edge
 
 ---
+
 ## Insert Patterns
 
 ![insert_anti_patterns](svg/courses/databases/clickhouse/03_loading_data/insert_anti_patterns.svg)
 
 ---
+
 ## Pattern Compared
 
 ![batch_insert_pattern](svg/courses/databases/clickhouse/03_loading_data/batch_insert_pattern.svg)
 
 ---
+
 ## Async Inserts
 
 - Server-side batching
@@ -54,6 +61,7 @@ audience:
 - Per-table setting
 
 ---
+
 ## Buffer Engine
 
 - In-memory write buffer
@@ -62,6 +70,7 @@ audience:
 - Useful for spiky writes
 
 ---
+
 ## Bulk Loading
 
 - INSERT INTO FROM file or URL
@@ -70,6 +79,7 @@ audience:
 - Parallel inserts across nodes
 
 ---
+
 ## File Formats
 
 - Tab-separated, CSV, JSON
@@ -78,6 +88,7 @@ audience:
 - Compress on the wire
 
 ---
+
 ## Compression on the Wire
 
 - LZ4 default
@@ -86,6 +97,7 @@ audience:
 - Pick by load
 
 ---
+
 ## Streaming Ingest
 
 - Kafka engine reads topics
@@ -94,6 +106,7 @@ audience:
 - Watch consumer lag
 
 ---
+
 ## RabbitMQ and More
 
 - Similar pattern
@@ -102,6 +115,7 @@ audience:
 - HTTP for everything else
 
 ---
+
 ## CDC From Source DB
 
 - Source emits change feed
@@ -110,6 +124,7 @@ audience:
 - Use replacing variant for current state
 
 ---
+
 ## Schema On Write
 
 - Plan columns up front
@@ -118,6 +133,7 @@ audience:
 - Test with sample loads
 
 ---
+
 ## Errors and Retries
 
 - Idempotent insert via unique key
@@ -126,6 +142,7 @@ audience:
 - Avoid duplicate rows
 
 ---
+
 ## Common Loading Mistakes
 
 - Tiny inserts in production

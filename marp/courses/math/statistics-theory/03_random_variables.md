@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Random Variables and Distributions
 
 ---
+
 ## What This Chapter Covers
 
 - Random variables as measurable functions
@@ -21,11 +23,13 @@ audience:
 - Functions of a random variable
 
 ---
+
 ## Distribution Functions: CDF, PMF, PDF
 
 ![cdf pmf pdf](svg/courses/math/statistics-theory/03_random_variables/cdf_pmf_pdf.svg)
 
 ---
+
 ## A Random Variable Is A Function
 
 - Given (&Omega;, F, P), a **random variable** X is a function X : &Omega; &#8594; &#8477; that is **measurable**: for every Borel set B, X&#8315;&sup1;(B) = {&omega; : X(&omega;) &isin; B} &isin; F
@@ -35,6 +39,7 @@ audience:
 - A **random vector** is a measurable map into &#8477;&#8319;; same definition, Borel sets of &#8477;&#8319;
 
 ---
+
 ## The Distribution Of X
 
 - X pushes the measure P forward to a measure **P_X on (&#8477;, B)** defined by P_X(B) = P(X &isin; B) — the **distribution** or **law** of X
@@ -44,6 +49,7 @@ audience:
 - Every statement about X's probabilities is really a statement about P_X
 
 ---
+
 ## The Cumulative Distribution Function
 
 - The **CDF** F_X(x) = P(X &leq; x) = P_X((&minus;&infin;, x]) — a single function of a real variable that *encodes the entire law*
@@ -53,6 +59,7 @@ audience:
 - The CDF always exists, even when there's no density and no mass function — it's the universal description
 
 ---
+
 ## Three Kinds Of Distribution
 
 - **Discrete**: X takes values in a countable set; described by a **probability mass function** p(x) = P(X = x) with &Sigma; p(x) = 1; the CDF is a step function
@@ -62,6 +69,7 @@ audience:
 - Densities are derivatives (Radon&ndash;Nikodym) of P_X with respect to Lebesgue measure; mass functions are derivatives with respect to counting measure — same idea, different reference measure
 
 ---
+
 ## The Probability Integral Transform
 
 - If X is continuous with CDF F, then **U = F(X) ~ Uniform(0, 1)** — the "PIT"
@@ -71,6 +79,7 @@ audience:
 - One-line slogan: the quantile function turns "uniform randomness" into "any randomness you want"
 
 ---
+
 ## Functions Of A Random Variable
 
 - If X is a random variable and g : &#8477; &#8594; &#8477; is measurable (e.g. continuous), then Y = g(X) is again a random variable; its law is the pushforward of P_X by g
@@ -80,6 +89,7 @@ audience:
 - Non-invertible or discrete/continuous-mixing g: fall back to the CDF method — it never fails, the formulas are just shortcuts
 
 ---
+
 ## Distributions In Code
 
 ```python
@@ -99,6 +109,7 @@ print("PIT mean ~ 0.5:", u2.mean().round(3), " KS-vs-uniform p:", stats.kstest(u
 ```
 
 ---
+
 ## Common Mistakes
 
 - Forgetting the measurability requirement — without it "P(X &isin; B)" need not even be defined

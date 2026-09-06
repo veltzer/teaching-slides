@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Requirements Analysis and Estimation
 
 ---
+
 ## What This Chapter Covers
 
 - Functional vs non-functional requirements
@@ -19,16 +21,19 @@ audience:
 - Common estimation traps
 
 ---
+
 ## Back-of-Envelope
 
 ![back_of_envelope](svg/courses/architecting/system-design/01_requirements_analysis_and_estimation/back_of_envelope.svg)
 
 ---
+
 ## Capacity Estimation
 
 ![capacity_estimation](svg/courses/architecting/system-design/01_requirements_analysis_and_estimation/capacity_estimation.svg)
 
 ---
+
 ## Functional Requirements
 
 - What the system *does*
@@ -38,6 +43,7 @@ audience:
 - Often well-known up-front
 
 ---
+
 ## Non-Functional Requirements
 
 - How well it does it
@@ -47,6 +53,7 @@ audience:
 - Drives architecture decisions
 
 ---
+
 ## Capacity Estimation
 
 - "How big does this need to be?"
@@ -56,6 +63,7 @@ audience:
 - Estimate before designing
 
 ---
+
 ## Back-of-the-Envelope
 
 - 1ns: CPU cycle
@@ -66,6 +74,7 @@ audience:
 - Memorise; use to estimate latency
 
 ---
+
 ## Bytes and Powers of Ten
 
 - KB: 10^3, MB: 10^6, GB: 10^9, TB: 10^12, PB: 10^15
@@ -75,6 +84,7 @@ audience:
 - 1 day's tweets: ~5 GB
 
 ---
+
 ## Throughput Math
 
 - 1B users * 10 actions/day = 10B actions/day
@@ -84,6 +94,7 @@ audience:
 - Actual capacity: ~500K/sec
 
 ---
+
 ## Latency Targets
 
 - User-facing API: 100-200ms p95
@@ -93,6 +104,7 @@ audience:
 - Each layer has a budget
 
 ---
+
 ## Storage Estimation
 
 - Users x data per user x retention
@@ -103,6 +115,7 @@ audience:
 - Real total: 5-6PB
 
 ---
+
 ## Read vs Write Ratios
 
 - Twitter: 100:1 reads to writes
@@ -112,6 +125,7 @@ audience:
 - Different optimisation paths
 
 ---
+
 ## SLAs
 
 - 99.9% = 8.7 hours down/year
@@ -121,6 +135,7 @@ audience:
 - Don't promise more than you can deliver
 
 ---
+
 ## Common Estimation Mistakes
 
 - Forgetting peak vs average
@@ -130,6 +145,7 @@ audience:
 - "Round numbers" that hide order of magnitude
 
 ---
+
 ## A Practical Approach
 
 - State the requirements out loud

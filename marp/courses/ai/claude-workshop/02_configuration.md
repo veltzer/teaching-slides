@@ -11,9 +11,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Configuring Claude
 
 ---
+
 ## What This Chapter Covers
 
 - Two layers of configuration
@@ -23,6 +25,7 @@ audience:
 - Permissions, hooks and safety
 
 ---
+
 ## Two Layers Of Configuration
 
 - User level: your machine, all projects
@@ -31,6 +34,7 @@ audience:
 - Order of precedence matters
 
 ---
+
 ## Where Claude Looks
 
 - User: `~/.claude/settings.json`
@@ -39,6 +43,7 @@ audience:
 - Environment variables on top
 
 ---
+
 ## What Belongs In Each Layer
 
 - User: personal taste, theme, keys
@@ -47,11 +52,13 @@ audience:
 - Never commit secrets
 
 ---
+
 ## Configuration Layers
 
 ![config_layers](svg/courses/ai/claude-workshop/02_configuration/config_layers.svg)
 
 ---
+
 ## The User settings.json
 
 - Default model selection
@@ -60,6 +67,7 @@ audience:
 - Personal allowlists
 
 ---
+
 ## Default Model Selection
 
 - Pick Sonnet for daily driving
@@ -68,6 +76,7 @@ audience:
 - Match cost to task
 
 ---
+
 ## Theme And Status Line
 
 - Light, dark and high contrast themes
@@ -76,6 +85,7 @@ audience:
 - Use `/statusline` to configure
 
 ---
+
 ## Editor Integration
 
 - VS Code and JetBrains extensions
@@ -84,6 +94,7 @@ audience:
 - Diagnostics integration
 
 ---
+
 ## The Project settings.json
 
 - Checked into git
@@ -92,6 +103,7 @@ audience:
 - The team agrees on this file
 
 ---
+
 ## settings.local.json
 
 - Not checked in
@@ -100,6 +112,7 @@ audience:
 - Add it to `.gitignore`
 
 ---
+
 ## Project Environment Variables
 
 - Set in `.claude/settings.json`
@@ -108,6 +121,7 @@ audience:
 - Use OS env vars for secrets
 
 ---
+
 ## Sharing Configuration
 
 - Commit the project settings
@@ -116,6 +130,7 @@ audience:
 - Treat config as code
 
 ---
+
 ## CLAUDE.md
 
 - Plain markdown, lives in repo
@@ -124,6 +139,7 @@ audience:
 - Keep it short and high signal
 
 ---
+
 ## What To Put In CLAUDE.md
 
 - Coding style and conventions
@@ -132,6 +148,7 @@ audience:
 - Important file locations
 
 ---
+
 ## What Not To Put In CLAUDE.md
 
 - Long histories or war stories
@@ -140,6 +157,7 @@ audience:
 - Anything you would not want every prompt to see
 
 ---
+
 ## Per Directory CLAUDE.md
 
 - Subdirectory CLAUDE.md is also loaded
@@ -148,11 +166,13 @@ audience:
 - Avoid duplication with the root
 
 ---
+
 ## CLAUDE.md At A Glance
 
 ![claude_md](svg/courses/ai/claude-workshop/02_configuration/claude_md.svg)
 
 ---
+
 ## Permissions And Safety
 
 - Every tool can be approved or denied
@@ -161,6 +181,7 @@ audience:
 - Read-only tools rarely need prompts
 
 ---
+
 ## Approving And Denying Tools
 
 - Inline prompt when needed
@@ -169,6 +190,7 @@ audience:
 - Revisit allowlists periodically
 
 ---
+
 ## Allowlisting Commands
 
 - Cut down on prompts for routine commands
@@ -177,11 +199,13 @@ audience:
 - Review the list in code review
 
 ---
+
 ## Permission Flow
 
 ![permissions_flow](svg/courses/ai/claude-workshop/02_configuration/permissions_flow.svg)
 
 ---
+
 ## Hooks
 
 - Shell commands the harness runs
@@ -190,6 +214,7 @@ audience:
 - Cannot be enforced from memory alone
 
 ---
+
 ## What Hooks Can And Cannot Do
 
 - Can: lint, format, notify, block
@@ -198,11 +223,13 @@ audience:
 - Failing hook blocks the action
 
 ---
+
 ## Hooks In The Session Lifecycle
 
 ![hooks_lifecycle](svg/courses/ai/claude-workshop/02_configuration/hooks_lifecycle.svg)
 
 ---
+
 ## Working With Many Repos
 
 - Each repo has its own CLAUDE.md
@@ -211,6 +238,7 @@ audience:
 - Different model per project is fine
 
 ---
+
 ## Verifying Configuration
 
 - `/config` shows current settings
@@ -219,6 +247,7 @@ audience:
 - Test a small command after changes
 
 ---
+
 ## Hands-On Exercise
 
 - Add a CLAUDE.md to your repo

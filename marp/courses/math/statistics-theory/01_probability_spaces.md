@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Probability Spaces and Axioms
 
 ---
+
 ## What This Chapter Covers
 
 - Why we need a careful foundation at all
@@ -21,6 +23,7 @@ audience:
 - Why "probability of every subset" fails on the line
 
 ---
+
 ## Why Be Rigorous
 
 - Naive probability ("favorable over total") collapses on continuous spaces — every single point has probability 0, yet intervals don't
@@ -30,11 +33,13 @@ audience:
 - Everything later — random variables, expectation, the CLT — is defined on top of this scaffold
 
 ---
+
 ## The Probability Triple
 
 ![probability triple](svg/courses/math/statistics-theory/01_probability_spaces/probability_triple.svg)
 
 ---
+
 ## Sample Space And Events
 
 - The **sample space** &Omega; is the set of all possible outcomes &omega; of the experiment
@@ -44,6 +49,7 @@ audience:
 - The triple to keep in mind is (&Omega;, F, P) — outcomes, allowed events, the probability of each
 
 ---
+
 ## &sigma;-Algebras
 
 - A **&sigma;-algebra** F on &Omega; is a collection of subsets that is: (i) contains &Omega;; (ii) closed under complement; (iii) closed under **countable** unions
@@ -53,6 +59,7 @@ audience:
 - The **Borel &sigma;-algebra** B(&#8477;) = &sigma;(open intervals): the standard event collection on the real line — big enough for everything you'll meet, small enough to avoid pathologies
 
 ---
+
 ## The Kolmogorov Axioms
 
 - A **probability measure** P : F &#8594; [0, 1] satisfies:
@@ -62,6 +69,7 @@ audience:
 - That's the entire definition — three lines. Everything else about probability is a *theorem*, derived from these
 
 ---
+
 ## Properties That Follow
 
 - P(&empty;) = 0, and P(A&#7580;) = 1 &minus; P(A) (complement rule)
@@ -71,6 +79,7 @@ audience:
 - None of these are assumed; each is proved from (A1)&ndash;(A3)
 
 ---
+
 ## Continuity Of Measure
 
 - For an increasing sequence A&#8321; &sube; A&#8322; &sube; ... : P(&#8899; A&#8345;) = lim P(A&#8345;) ("continuity from below")
@@ -80,11 +89,13 @@ audience:
 - **Borel&ndash;Cantelli, part 2**: if the A&#8345; are independent and &Sigma; P(A&#8345;) = &infin;, then P(A&#8345; infinitely often) = 1 — together, a sharp 0&ndash;1 dichotomy
 
 ---
+
 ## Borel&ndash;Cantelli Visualized
 
 ![borel cantelli](svg/courses/math/statistics-theory/01_probability_spaces/borel_cantelli.svg)
 
 ---
+
 ## Why Not All Subsets Of &#8477;?
 
 - Suppose a translation-invariant probability (a "uniform distribution") existed on *every* subset of [0, 1)
@@ -94,6 +105,7 @@ audience:
 - This is the whole reason F is part of the definition, not an afterthought
 
 ---
+
 ## A Quick Computational Illustration
 
 ```python
@@ -110,6 +122,7 @@ print(f"empirical P(union) = {emp:.5f}  <=  bound {m*p}")
 ```
 
 ---
+
 ## Common Mistakes
 
 - Assuming every subset of an uncountable &Omega; can be assigned a probability

@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Event Sourcing Fundamentals
 
 ---
+
 ## What Is Event Sourcing?
 
 - Persist application state as an ordered sequence of immutable events
@@ -20,6 +22,7 @@ audience:
 - The events are the source of truth — not a row in a table
 
 ---
+
 ## State-Based Persistence (The Default)
 
 - Save the current value of each field
@@ -28,6 +31,7 @@ audience:
 - Auditability requires a separate log that the application has to remember to write
 
 ---
+
 ## Event-Sourced Persistence
 
 - Save what happened, not the resulting field values
@@ -36,11 +40,13 @@ audience:
 - The log is the truth; current state is a derived view
 
 ---
+
 ## State vs Events Side by Side
 
 ![state_vs_events](svg/courses/architecting/cqrs-and-event-sourcing/02_event_sourcing_fundamentals/state_vs_events.svg)
 
 ---
+
 ## A Concrete Example
 
 - Order with `total` field
@@ -53,6 +59,7 @@ audience:
 - The state-based row tells you *what*; the event stream tells you *why*
 
 ---
+
 ## Domain Events: Definition
 
 - A statement of fact about something that occurred in the domain
@@ -61,6 +68,7 @@ audience:
 - Carries the data needed to understand the change, not the resulting state
 
 ---
+
 ## Event Naming Conventions
 
 - Past tense, business vocabulary
@@ -71,6 +79,7 @@ audience:
     - `CustomerSubscribed`, not `RowInserted`
 
 ---
+
 ## Event Structure
 
 ```python
@@ -90,6 +99,7 @@ class OrderPlaced:
 - Payload carries the domain facts
 
 ---
+
 ## Events Are Immutable
 
 - Once written, an event is never modified or deleted
@@ -98,6 +108,7 @@ class OrderPlaced:
 - Treat the event store like a journal, not a notebook
 
 ---
+
 ## Replaying Events
 
 ```python
@@ -114,11 +125,13 @@ def replay(events: list[Event]) -> Order:
 - The same code runs whether you replay 5 events or 50,000
 
 ---
+
 ## Replay Visualized
 
 ![replay_flow](svg/courses/architecting/cqrs-and-event-sourcing/02_event_sourcing_fundamentals/replay_flow.svg)
 
 ---
+
 ## The `apply` Method Pattern
 
 ```python
@@ -140,6 +153,7 @@ class Order:
 - Idempotent: applying the same events to a fresh aggregate yields the same state
 
 ---
+
 ## Two Phases: Decision and Application
 
 - **Decision phase**: a command produces zero or more events; invariants are checked here
@@ -148,11 +162,13 @@ class Order:
 - This separation makes `apply` safe to run anywhere — including projection code
 
 ---
+
 ## Decision and Application
 
 ![decision_and_application](svg/courses/architecting/cqrs-and-event-sourcing/02_event_sourcing_fundamentals/decision_and_application.svg)
 
 ---
+
 ## Schema Evolution: The Hard Problem
 
 - Events written today may be replayed in five years
@@ -161,6 +177,7 @@ class Order:
 - The event log is forever; the code is not
 
 ---
+
 ## Strategies for Schema Evolution
 
 - **Weak schema**: tolerant readers ignore unknown fields, default missing ones
@@ -169,6 +186,7 @@ class Order:
 - **Copy-and-transform migration**: rewrite the stream into a new one (last resort)
 
 ---
+
 ## Versioning in Practice
 
 ```python
@@ -190,6 +208,7 @@ def upcast(raw: dict) -> Event:
 - The aggregate only sees the latest shape
 
 ---
+
 ## Benefits: Audit Log for Free
 
 - Every state change is recorded with timestamp and identity
@@ -198,6 +217,7 @@ def upcast(raw: dict) -> Event:
 - Better than a manual audit table because it cannot be skipped
 
 ---
+
 ## Benefits: Temporal Queries
 
 - "What did this order look like on March 5th?"
@@ -206,6 +226,7 @@ def upcast(raw: dict) -> Event:
 - Useful for legal disputes, analytics, and debugging production incidents
 
 ---
+
 ## Benefits: Debugging Production Bugs
 
 - "How did this aggregate get into this impossible state?"
@@ -214,6 +235,7 @@ def upcast(raw: dict) -> Event:
 - Bugs become reproducible by replaying the same stream in a test
 
 ---
+
 ## Benefits: New Read Models For Free
 
 - A new dashboard? Project the same events into a new shape
@@ -222,11 +244,13 @@ def upcast(raw: dict) -> Event:
 - Multiple read models can be built and rebuilt independently
 
 ---
+
 ## Benefits Recap
 
 ![benefits_of_event_sourcing](svg/courses/architecting/cqrs-and-event-sourcing/02_event_sourcing_fundamentals/benefits_of_event_sourcing.svg)
 
 ---
+
 ## Common Misconceptions
 
 - "Event Sourcing means using Kafka" — Kafka is one option; not a requirement
@@ -235,6 +259,7 @@ def upcast(raw: dict) -> Event:
 - "Replay is slow" — bounded by the number of events; snapshots address long streams
 
 ---
+
 ## Common Pitfalls
 
 - **CRUDDy events**: `OrderUpdated(field="status", value="shipped")` — avoid
@@ -244,6 +269,7 @@ def upcast(raw: dict) -> Event:
 - **Mutating events**: this defeats the entire pattern
 
 ---
+
 ## CRUD Events Are an Anti-Pattern
 
 - `OrderUpdated(field="address", value="...")` is not a domain event
@@ -252,6 +278,7 @@ def upcast(raw: dict) -> Event:
 - Prefer `ShippingAddressChanged(reason="customer-request", new=...)`
 
 ---
+
 ## Comparison: Event Sourcing vs Change Data Capture
 
 - **CDC**: a tool reads the database WAL and emits change records
@@ -260,6 +287,7 @@ def upcast(raw: dict) -> Event:
 - Event Sourcing emits events at the domain level — the events have business meaning
 
 ---
+
 ## Comparison: Event Sourcing vs the Outbox Pattern
 
 - **Outbox**: write the new state and an integration event in the same transaction
@@ -268,11 +296,13 @@ def upcast(raw: dict) -> Event:
 - Event Sourcing inverts this: the events are the truth, the row is derived
 
 ---
+
 ## ES vs CDC vs Outbox
 
 ![es_vs_cdc_vs_outbox](svg/courses/architecting/cqrs-and-event-sourcing/02_event_sourcing_fundamentals/es_vs_cdc_vs_outbox.svg)
 
 ---
+
 ## Storage Requirements
 
 - Append-only writes
@@ -282,6 +312,7 @@ def upcast(raw: dict) -> Event:
 - Efficient subscription to all events globally
 
 ---
+
 ## Common Storage Choices
 
 - **EventStoreDB**: purpose-built; first-class streams, projections, subscriptions
@@ -291,6 +322,7 @@ def upcast(raw: dict) -> Event:
 - The pattern matters more than the technology
 
 ---
+
 ## When Event Sourcing Pays Off
 
 - Audit and compliance are first-class requirements
@@ -300,6 +332,7 @@ def upcast(raw: dict) -> Event:
 - The team has the appetite for the operational overhead
 
 ---
+
 ## When Event Sourcing Does Not Pay Off
 
 - Simple CRUD with no audit requirements
@@ -309,6 +342,7 @@ def upcast(raw: dict) -> Event:
 - A traditional database with audit triggers would be enough
 
 ---
+
 ## Event Sourcing Without CQRS
 
 - The aggregate is event-sourced, but reads still go through the same aggregate
@@ -317,6 +351,7 @@ def upcast(raw: dict) -> Event:
 - A reasonable starting point that grows into CQRS naturally
 
 ---
+
 ## CQRS Without Event Sourcing
 
 - The two patterns are independent (we covered this in chapter 1)
@@ -324,6 +359,7 @@ def upcast(raw: dict) -> Event:
 - Many production systems use one without the other
 
 ---
+
 ## A Mental Model for Events
 
 - Events are like ledger entries in accounting
@@ -332,6 +368,7 @@ def upcast(raw: dict) -> Event:
 - Audit and reproducibility come from the ledger, not from a snapshot
 
 ---
+
 ## A Mental Model: Git for Aggregates
 
 - Each event is a commit
@@ -341,6 +378,7 @@ def upcast(raw: dict) -> Event:
 - The analogy is imperfect but useful
 
 ---
+
 ## Summary
 
 - Event Sourcing persists state as an ordered, immutable log of events

@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Search Analytics and Monitoring
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![observability](svg/courses/databases/elasticsearch-for-developers/15_search_analytics_and_monitoring/observability.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Search logs
@@ -27,6 +29,7 @@ audience:
 - Tools
 
 ---
+
 ## Search Logs
 
 - Log every search (or sample)
@@ -35,11 +38,13 @@ audience:
 - Drives UX improvements
 
 ---
+
 ## Analytics Dimensions
 
 ![search_analytics](svg/courses/databases/elasticsearch-for-developers/15_search_analytics_and_monitoring/search_analytics.svg)
 
 ---
+
 ## Zero-Result Queries
 
 - Surface gaps: missing inventory, typos
@@ -47,6 +52,7 @@ audience:
 - Fix: add synonyms, content, redirects
 
 ---
+
 ## Click-Through Rate
 
 - Did users click any result?
@@ -55,6 +61,7 @@ audience:
 - Improve: tune relevance
 
 ---
+
 ## Search A/B Testing
 
 - Two ranking functions
@@ -63,6 +70,7 @@ audience:
 - Roll out winner
 
 ---
+
 ## Cluster Health
 
 - GET _cluster/health
@@ -71,6 +79,7 @@ audience:
 - Monitor; alert on yellow / red
 
 ---
+
 ## Cat APIs
 
 - Compact, table-formatted output
@@ -79,6 +88,7 @@ audience:
 - Less verbose than JSON
 
 ---
+
 ## Node Stats
 
 - `GET _nodes/stats`
@@ -87,6 +97,7 @@ audience:
 - Detailed; lots of metrics
 
 ---
+
 ## Index Stats
 
 - GET /index/_stats
@@ -95,6 +106,7 @@ audience:
 - For: capacity planning
 
 ---
+
 ## Hot Threads
 
 - `GET _nodes/hot_threads`
@@ -103,6 +115,7 @@ audience:
 - Operational diagnosis tool
 
 ---
+
 ## Slow Logs
 
 - Log queries / indexing slower than threshold
@@ -110,6 +123,7 @@ audience:
 - Find unintended slow operations
 
 ---
+
 ## Kibana Stack Monitoring
 
 - Built-in cluster monitoring
@@ -118,6 +132,7 @@ audience:
 - Free in basic license
 
 ---
+
 ## Prometheus Exporter
 
 - elasticsearch_exporter
@@ -126,6 +141,7 @@ audience:
 - For non-Kibana stacks
 
 ---
+
 ## Alerting
 
 - Alert on: cluster red, high latency, low disk
@@ -133,6 +149,7 @@ audience:
 - Or: external (Prometheus, Datadog)
 
 ---
+
 ## Common Monitoring Mistakes
 
 - No slow log

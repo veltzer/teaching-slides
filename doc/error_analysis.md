@@ -6,7 +6,7 @@ Running `rsconstruct build -j 20` launches up to 20 concurrent Marp processes,
 each spawning a headless Chromium instance via Puppeteer. This causes resource
 exhaustion (memory/CPU), leading to non-deterministic Chromium crashes:
 
-```
+```text
 TargetCloseError: Protocol error (Target.setDiscoverTargets): Target closed
 ```
 

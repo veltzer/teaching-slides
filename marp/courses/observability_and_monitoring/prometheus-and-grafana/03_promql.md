@@ -7,14 +7,17 @@ audience:
   - audiences:devops
 
 ---
+
 # PromQL
 
 ---
+
 ## PromQL Building Blocks
 
 ![promql_examples](svg/courses/observability_and_monitoring/prometheus-and-grafana/03_promql/promql_examples.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Selectors
@@ -24,6 +27,7 @@ audience:
 - Common patterns
 
 ---
+
 ## Instant vs Range Vectors
 
 - Instant: one value per series at a moment
@@ -31,6 +35,7 @@ audience:
 - Functions need one or the other
 
 ---
+
 ## Selectors
 
 ```promql
@@ -44,6 +49,7 @@ http_requests_total{path=~"/api/.*"}
 - Filter by labels
 
 ---
+
 ## Range Vector
 
 ```promql
@@ -54,6 +60,7 @@ http_requests_total[5m]
 - Input to rate, increase, etc.
 
 ---
+
 ## rate()
 
 ```promql
@@ -65,6 +72,7 @@ rate(http_requests_total[5m])
 - Range vector input; instant output
 
 ---
+
 ## increase()
 
 - Total increase over range
@@ -72,11 +80,13 @@ rate(http_requests_total[5m])
 - Watch for resets
 
 ---
+
 ## PromQL Function Families
 
 ![promql_functions](svg/courses/observability_and_monitoring/prometheus-and-grafana/03_promql/promql_functions.svg)
 
 ---
+
 ## Aggregations
 
 ```promql
@@ -88,6 +98,7 @@ sum by (status) (rate(http_requests_total[5m]))
 - Group by labels with `by`
 
 ---
+
 ## Histograms and Quantiles
 
 ```promql
@@ -99,6 +110,7 @@ histogram_quantile(0.95,
 - Common for SLOs
 
 ---
+
 ## Math Operators
 
 ```promql
@@ -109,6 +121,7 @@ node_memory_used_bytes / node_memory_total_bytes
 - Useful for ratios
 
 ---
+
 ## Comparison
 
 ```promql
@@ -119,6 +132,7 @@ node_cpu_seconds_total > 100
 - Used in alerts
 
 ---
+
 ## offset
 
 ```promql
@@ -129,6 +143,7 @@ http_requests_total offset 1h
 - Compare now vs an hour ago
 
 ---
+
 ## Recording Rules
 
 - Pre-compute expensive queries
@@ -136,6 +151,7 @@ http_requests_total offset 1h
 - Reduce dashboard load
 
 ---
+
 ## Sample Recording Rule
 
 ```yaml
@@ -150,6 +166,7 @@ groups:
 - Loaded by Prometheus
 
 ---
+
 ## Common PromQL Mistakes
 
 - avg() on counters without rate first

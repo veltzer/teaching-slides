@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Arrays in C Refresher
 
 ---

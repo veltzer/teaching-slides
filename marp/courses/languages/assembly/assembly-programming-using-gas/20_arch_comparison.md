@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Comparison with Other Architectures
 
 ---
@@ -192,6 +193,7 @@ message:
 ---
 
 ## Instruction Set Comparison
+
 | Architecture | Add           | Load                | Branch        |
 |--------------|---------------|---------------------|---------------|
 | x86          | add eax, ebx  | mov eax, [ebx]      | jne label     |

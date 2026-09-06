@@ -7,10 +7,13 @@ audience:
   - audiences:developers
 
 ---
+
 # Basic Data Structures
 
 ---
+
 ## Python's Built-in Data Structures
+
 | Type | Ordered | Mutable | Duplicates | Syntax |
 |------|---------|---------|------------|--------|
 | `list` | Yes | Yes | Yes | `[1, 2, 3]` |
@@ -21,6 +24,7 @@ audience:
 Insertion-ordered since `Python` 3.7
 
 ---
+
 ## Lists - Creating
 
 ```python
@@ -32,6 +36,7 @@ from_range = list(range(5))  # [0, 1, 2, 3, 4]
 ```
 
 ---
+
 ## Lists - Indexing and Slicing
 
 ```python
@@ -46,6 +51,7 @@ print(fruits[::-1])  # reversed list
 ```
 
 ---
+
 ## Lists - Modifying Elements
 
 ```python
@@ -61,6 +67,7 @@ print(fruits)  # ['avocado', 'blackberry', 'cherry']
 ```
 
 ---
+
 ## Lists - Adding Elements
 
 ```python
@@ -80,6 +87,7 @@ fruits.extend(["date", "elderberry"])
 ```
 
 ---
+
 ## Lists - Removing Elements
 
 ```python
@@ -99,6 +107,7 @@ first = fruits.pop(0)    # 'cherry'
 ```
 
 ---
+
 ## Lists - Searching
 
 ```python
@@ -111,6 +120,7 @@ print(numbers.count(20))    # 2
 ```
 
 ---
+
 ## Lists - Sorting
 
 ```python
@@ -132,6 +142,7 @@ print(new)       # [1, 2, 3]
 ```
 
 ---
+
 ## Lists - Sorting with Key
 
 ```python
@@ -147,6 +158,7 @@ print(words)  # ['Apple', 'banana', 'cherry', 'date']
 ```
 
 ---
+
 ## Lists - Other Methods
 
 ```python
@@ -165,6 +177,7 @@ print(numbers)  # []
 ```
 
 ---
+
 ## Lists - Concatenation and Repetition
 
 ```python
@@ -182,6 +195,7 @@ print(len(a))   # 3
 ```
 
 ---
+
 ## Lists - Unpacking
 
 ```python
@@ -200,6 +214,7 @@ print(last)   # 5
 ```
 
 ---
+
 ## Shallow vs Deep Copy
 
 ```python
@@ -220,6 +235,7 @@ print(original[0][0])  # 1 (unchanged)
 ```
 
 ---
+
 ## Tuples - Creating
 
 ```python
@@ -232,6 +248,7 @@ from_list = tuple([1, 2, 3])
 ```
 
 ---
+
 ## Tuples are Immutable
 
 ```python
@@ -248,6 +265,7 @@ print(t[1:])    # (2, 3)
 ```
 
 ---
+
 ## Why Use Tuples?
 - Immutable: safe to use as dictionary keys
 - Slightly faster than lists
@@ -265,6 +283,7 @@ print(quotient, remainder)  # 3 2
 ```
 
 ---
+
 ## Tuple Methods
 
 ```python
@@ -278,6 +297,7 @@ print(t.index(3))   # 2
 - Tuples have very few methods because they are immutable
 
 ---
+
 ## Named Tuples
 
 ```python
@@ -292,6 +312,7 @@ print(p)        # Point(x=3, y=4)
 ```
 
 ---
+
 ## Dictionaries - Creating
 
 ```python
@@ -304,6 +325,7 @@ from_keys = dict.fromkeys(["a", "b", "c"], 0)
 ```
 
 ---
+
 ## Dictionaries - Accessing Values
 
 ```python
@@ -320,6 +342,7 @@ print(person.get("email", "N/A"))  # 'N/A'
 ```
 
 ---
+
 ## Dictionaries - Modifying
 
 ```python
@@ -338,6 +361,7 @@ person.setdefault("phone", "555")   # '555' (added)
 ```
 
 ---
+
 ## Dictionaries - Removing
 
 ```python
@@ -358,6 +382,7 @@ person.clear()
 ```
 
 ---
+
 ## Dictionaries - Checking Keys
 
 ```python
@@ -373,6 +398,7 @@ print("Alice" in person.values())  # True
 ```
 
 ---
+
 ## Dictionaries - Views
 
 ```python
@@ -388,6 +414,7 @@ for key, value in person.items():
 ```
 
 ---
+
 ## Dictionaries - Merge Operator (Python 3.9+)
 
 ```python
@@ -404,6 +431,7 @@ defaults |= custom
 ```
 
 ---
+
 ## Dictionary Ordering
 - Since Python 3.7, dictionaries maintain insertion order
 - Before 3.7, use `collections.OrderedDict`
@@ -417,6 +445,7 @@ print(list(d.keys()))  # ['c', 'a', 'b']
 ```
 
 ---
+
 ## Sets - Creating
 
 ```python
@@ -432,6 +461,7 @@ print(unique)  # [1, 2, 3]
 ```
 
 ---
+
 ## Sets - Adding and Removing
 
 ```python
@@ -455,6 +485,7 @@ s.clear()
 ```
 
 ---
+
 ## Sets - Operations
 
 ```python
@@ -468,11 +499,13 @@ print(a ^ b)   # Symmetric diff: {1, 2, 5, 6}
 ```
 
 ---
+
 ## Sets - Operations Diagram
 
 ![sets_operations_diagram](svg/courses/languages/python/python-programming/04_basic_data_structures/sets_operations_diagram.svg)
 
 ---
+
 ## Sets - Subset and Superset
 
 ```python
@@ -487,6 +520,7 @@ print(a.isdisjoint({4, 5}))  # True (no common elements)
 ```
 
 ---
+
 ## Frozen Sets
 - Immutable version of a set
 - Can be used as dictionary keys or set elements
@@ -503,6 +537,7 @@ s = {frozenset([1, 2]), frozenset([3, 4])}
 ```
 
 ---
+
 ## The `enumerate()` Function
 - Pairs each element with its index
 
@@ -520,6 +555,7 @@ for i, fruit in enumerate(fruits):
 ```
 
 ---
+
 ## `enumerate()` with Start Index
 
 ```python
@@ -536,6 +572,7 @@ for i, fruit in enumerate(fruits, start=1):
 ```
 
 ---
+
 ## The `zip()` Function
 - Combines iterables element by element
 
@@ -554,6 +591,7 @@ Charlie is 35
 ```
 
 ---
+
 ## `zip()` - Creating Dictionaries
 
 ```python
@@ -566,6 +604,7 @@ print(person)
 ```
 
 ---
+
 ## `zip()` - Unequal Lengths
 
 ```python
@@ -583,7 +622,9 @@ print(list(zip_longest(a, b, fillvalue=0)))
 ```
 
 ---
+
 ## Performance - Time Complexity
+
 | Operation | List | Dict | Set |
 |-----------|------|------|-----|
 | Access by index | O(1) | - | - |
@@ -594,6 +635,7 @@ print(list(zip_longest(a, b, fillvalue=0)))
 | Iteration | O(n) | O(n) | O(n) |
 
 ---
+
 ## When to Use What?
 - **List**: Ordered collection, need index access, allow duplicates
 - **Tuple**: Immutable sequence, function return values, dict keys
@@ -601,6 +643,7 @@ print(list(zip_longest(a, b, fillvalue=0)))
 - **Set**: Unique elements, membership testing, set operations
 
 ---
+
 ## Performance Example - Membership Testing
 
 ```python
@@ -621,6 +664,7 @@ print(f"Set: {time.time() - start:.6f}s")
 ```
 
 ---
+
 ## Nested Data Structures
 
 ```python
@@ -639,6 +683,7 @@ students.sort(key=lambda s: s["grade"], reverse=True)
 ```
 
 ---
+
 ## Dictionary of Lists
 
 ```python
@@ -655,6 +700,7 @@ for subject, scores in grades.items():
 ```
 
 ---
+
 ## The `collections` Module
 - `Counter`: Count occurrences
 - `defaultdict`: Dict with default factory
@@ -674,6 +720,7 @@ print(count.most_common(2))
 ```
 
 ---
+
 ## `defaultdict`
 
 ```python
@@ -691,6 +738,7 @@ print(dict(grouped))
 ```
 
 ---
+
 ## `deque` - Double-ended Queue
 
 ```python
@@ -707,6 +755,7 @@ print(d)           # deque([1, 2, 3])
 ```
 
 ---
+
 ## Summary
 - **Lists**: Mutable, ordered, `[]`, most versatile
 - **Tuples**: Immutable, ordered, `()`, safe and fast

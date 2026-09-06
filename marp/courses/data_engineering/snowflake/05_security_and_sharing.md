@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Security, Sharing, and Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Access control
@@ -19,6 +21,7 @@ audience:
 - Disaster recovery
 
 ---
+
 ## Roles and Privileges
 
 - Privileges granted to roles
@@ -27,11 +30,13 @@ audience:
 - Least privilege by default
 
 ---
+
 ## Role Inheritance
 
 ![role_hierarchy](svg/courses/data_engineering/snowflake/05_security_and_sharing/role_hierarchy.svg)
 
 ---
+
 ## Custom Roles
 
 - Per-team or per-project
@@ -40,6 +45,7 @@ audience:
 - Avoid raw user grants
 
 ---
+
 ## Network Policies
 
 - Allow IP ranges
@@ -48,6 +54,7 @@ audience:
 - Helpful for compliance
 
 ---
+
 ## Authentication
 
 - Username and password
@@ -56,6 +63,7 @@ audience:
 - MFA for humans
 
 ---
+
 ## Dynamic Data Masking
 
 - Function on column at read time
@@ -64,6 +72,7 @@ audience:
 - Audit access carefully
 
 ---
+
 ## Row Access Policies
 
 - Filter rows per role
@@ -72,6 +81,7 @@ audience:
 - Test thoroughly
 
 ---
+
 ## Tags and Classifications
 
 - Annotate columns
@@ -80,6 +90,7 @@ audience:
 - Required for compliance
 
 ---
+
 ## Data Sharing
 
 - Share live tables across accounts
@@ -88,6 +99,7 @@ audience:
 - Consumer queries directly
 
 ---
+
 ## Marketplace
 
 - Discover external datasets
@@ -96,6 +108,7 @@ audience:
 - New data without ingest
 
 ---
+
 ## Resource Monitors
 
 - Quotas per warehouse
@@ -104,6 +117,7 @@ audience:
 - Prevent runaway spend
 
 ---
+
 ## Time Travel as Recovery
 
 - Recover dropped tables and schemas
@@ -112,6 +126,7 @@ audience:
 - Bound by retention
 
 ---
+
 ## Replication
 
 - Cross-region account replication
@@ -120,6 +135,7 @@ audience:
 - Test failover periodically
 
 ---
+
 ## Common Security Mistakes
 
 - Account admin role for daily use

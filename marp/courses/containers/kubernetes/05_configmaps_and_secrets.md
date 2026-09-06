@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # ConfigMaps and Secrets
 
 ---
+
 ## What This Chapter Covers
 
 - ConfigMap
@@ -20,11 +22,13 @@ audience:
 - Best practices
 
 ---
+
 ## Compare and Contrast
 
 ![config_secret](svg/courses/containers/kubernetes/05_configmaps_and_secrets/config_secret.svg)
 
 ---
+
 ## ConfigMap
 
 - Key-value pairs
@@ -33,6 +37,7 @@ audience:
 - Mountable as env vars or files
 
 ---
+
 ## Sample ConfigMap
 
 ```yaml
@@ -46,6 +51,7 @@ data:
 ```
 
 ---
+
 ## Mount As Env
 
 ```yaml
@@ -66,6 +72,7 @@ env:
 ```
 
 ---
+
 ## Mount As File
 
 ```yaml
@@ -81,6 +88,7 @@ volumeMounts:
 - Each key becomes a file
 
 ---
+
 ## Secret
 
 - Like ConfigMap, but base64-encoded
@@ -89,11 +97,13 @@ volumeMounts:
 - Combine with: encryption at rest, RBAC
 
 ---
+
 ## Two Object Types
 
 ![configmap_vs_secret](svg/courses/containers/kubernetes/05_configmaps_and_secrets/configmap_vs_secret.svg)
 
 ---
+
 ## Sample Secret
 
 ```yaml
@@ -107,6 +117,7 @@ data:
 ```
 
 ---
+
 ## Mounting Secrets
 
 - Same as ConfigMap (env or file)
@@ -114,6 +125,7 @@ data:
 - Don't print secret env vars in logs
 
 ---
+
 ## Updates
 
 - Edit and apply: pods don't restart automatically
@@ -122,6 +134,7 @@ data:
 - Use a tool like Reloader to auto-restart on change
 
 ---
+
 ## Encryption At Rest
 
 - Default: secrets in etcd in plaintext
@@ -129,6 +142,7 @@ data:
 - Cloud (EKS, GKE, AKS): can use cloud KMS
 
 ---
+
 ## External Secrets
 
 - Don't store secrets in K8s; reference them
@@ -137,6 +151,7 @@ data:
 - Standard for production
 
 ---
+
 ## Sealed Secrets
 
 - Encrypt secrets in YAML; safe to commit
@@ -145,6 +160,7 @@ data:
 - GitOps-friendly
 
 ---
+
 ## Best Practices
 
 - Per-environment configs (dev, staging, prod)
@@ -154,6 +170,7 @@ data:
 - Rotate periodically
 
 ---
+
 ## Common ConfigMap / Secret Mistakes
 
 - Putting secrets in ConfigMaps

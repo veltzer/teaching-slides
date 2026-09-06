@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # API Design
 
 ---
+
 ## Why API Design Is Architectural
 
 - APIs are the externally visible contracts of every service
@@ -21,6 +23,7 @@ audience:
 - Service boundaries are defined by APIs, not by code directories
 
 ---
+
 ## API-First Development
 
 - Design the API before writing the implementation
@@ -29,6 +32,7 @@ audience:
 - Implementation follows a frozen contract, not the other way around
 
 ---
+
 ## API-First Benefits
 
 - Parallel work — frontend and backend teams start simultaneously
@@ -37,6 +41,7 @@ audience:
 - Versionable — the spec itself is versioned in Git
 
 ---
+
 ## Contract-First for Synchronous APIs
 
 - **OpenAPI** (formerly Swagger) — the de facto standard for REST APIs
@@ -45,6 +50,7 @@ audience:
 - Validate every implementation against the spec in CI
 
 ---
+
 ## OpenAPI Example
 
 ```yaml
@@ -67,6 +73,7 @@ paths:
 ```
 
 ---
+
 ## Contract-First for Async APIs
 
 - **AsyncAPI** — the OpenAPI analog for event-driven and message-based APIs
@@ -75,6 +82,7 @@ paths:
 - Same benefits: generated SDKs, validation, testable contracts
 
 ---
+
 ## AsyncAPI Example
 
 ```yaml
@@ -93,6 +101,7 @@ channels:
 ```
 
 ---
+
 ## Versioning: The Three Common Strategies
 
 - **URI path** — `/v1/orders`, `/v2/orders`
@@ -105,6 +114,7 @@ channels:
 Pick one convention organization-wide.
 
 ---
+
 ## Breaking vs Non-Breaking Changes
 
 - **Safe (non-breaking)** — adding optional fields, new endpoints, new enum values *if consumers handle unknowns*
@@ -112,6 +122,7 @@ Pick one convention organization-wide.
 - Most fights about versioning are really fights about whether a change is breaking
 
 ---
+
 ## Evolving an API Without Breaking
 
 - **Expand-then-contract** — add the new form alongside the old; migrate consumers; remove the old
@@ -120,6 +131,7 @@ Pick one convention organization-wide.
 - **Version aliases** — serve `/v1` as a translation layer over the `/v2` implementation
 
 ---
+
 ## Deprecation Process
 
 - Announce deprecation with a sunset date at least 6 months out
@@ -128,6 +140,7 @@ Pick one convention organization-wide.
 - Remove the old API after confirmed zero usage — not on schedule alone
 
 ---
+
 ## REST Revisited
 
 - Still the right default for resource-oriented CRUD
@@ -136,6 +149,7 @@ Pick one convention organization-wide.
 - Pagination: use opaque cursors, not integer offsets, for mutable collections
 
 ---
+
 ## When REST Is Not the Answer
 
 - High-throughput internal RPC — prefer gRPC with Protocol Buffers
@@ -145,6 +159,7 @@ Pick one convention organization-wide.
 - Files and large blobs — direct object-storage URLs (S3 presigned)
 
 ---
+
 ## GraphQL
 
 - Single endpoint; clients specify exactly the fields they need
@@ -153,6 +168,7 @@ Pick one convention organization-wide.
 - Tooling is excellent: codegen, IDE integration, schema registries
 
 ---
+
 ## GraphQL Trade-Offs
 
 - **Pros**: flexible queries, strong typing, single round trip for nested data
@@ -160,6 +176,7 @@ Pick one convention organization-wide.
 - **Federation** — stitch multiple GraphQL services behind one gateway; powerful but operationally heavy
 
 ---
+
 ## gRPC in Context
 
 - Binary protocol over HTTP/2
@@ -168,6 +185,7 @@ Pick one convention organization-wide.
 - Forces contract-first by construction — schema is the source of truth
 
 ---
+
 ## Consumer-Driven Contract Testing
 
 - Each consumer declares the contract it expects from the provider
@@ -176,6 +194,7 @@ Pick one convention organization-wide.
 - Tools: `Pact`, `Spring Cloud Contract`
 
 ---
+
 ## Contract Test Flow
 
 - Consumer writes test: "I expect GET /orders/42 to return `{ id, total }`"
@@ -184,6 +203,7 @@ Pick one convention organization-wide.
 - Breaking changes fail the provider's build before deploy
 
 ---
+
 ## Pagination Patterns
 
 | Pattern | Good for | Avoid when |
@@ -196,6 +216,7 @@ Pick one convention organization-wide.
 Opaque cursor is the safe default.
 
 ---
+
 ## Idempotency and Safe Retries
 
 - Make mutations idempotent — accept an `Idempotency-Key` header on POSTs
@@ -204,6 +225,7 @@ Opaque cursor is the safe default.
 - Stripe popularized the pattern; now a standard expectation for commerce APIs
 
 ---
+
 ## Rate Limiting Conventions
 
 - Return `429 Too Many Requests` on limit exceeded
@@ -215,6 +237,7 @@ Opaque cursor is the safe default.
 - Document limits per endpoint class; do not hide them
 
 ---
+
 ## Error Response Design
 
 - Use the **Problem Details for HTTP APIs** format (RFC 9457)
@@ -232,6 +255,7 @@ Opaque cursor is the safe default.
 - Stable `type` URIs let clients branch on errors without parsing prose
 
 ---
+
 ## API Discoverability
 
 - Publish specs to a developer portal (SwaggerHub, Readme, Backstage)
@@ -240,6 +264,7 @@ Opaque cursor is the safe default.
 - Link every error response `type` to a live docs page
 
 ---
+
 ## API Governance
 
 - Design review before implementation for every new API
@@ -248,6 +273,7 @@ Opaque cursor is the safe default.
 - Deprecation policy enforced by tooling, not by memory
 
 ---
+
 ## Common Anti-Patterns
 
 - **Verbs in URIs** — `/getOrder`, `/updateUser`; use HTTP methods
@@ -257,6 +283,7 @@ Opaque cursor is the safe default.
 - **No versioning plan** — the first breaking change turns into a migration project
 
 ---
+
 ## Summary
 
 - APIs are architectural contracts — design them first, implement second

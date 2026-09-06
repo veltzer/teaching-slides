@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Searching by Content
 
 ---
@@ -170,6 +171,7 @@ git grep "config" $(git rev-list --since="1 month ago" --all)
 - Commit ranges
 
 ---
+
 ## Git Grep with Rev-List: Example
 
 Powerful combination for historical searches:
@@ -195,6 +197,7 @@ git log -G"regex_pattern" --oneline
 - Combined searches for precision
 
 ---
+
 ## Git Grep with Rev-List
 
 ![find_commits_that_changed_specific_text](svg/courses/git/git/15_searching_content/find_commits_that_changed_specific_text.svg)

@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Real-World Patterns
 
 ---
+
 ## Chapter Overview
 * ETL pipeline design patterns
 * Slowly Changing Dimensions (SCD Type 1/2/3)
@@ -24,6 +26,7 @@ audience:
 * Monitoring, alerting, and cost optimization
 
 ---
+
 ## Learning Objectives
 * Design robust ETL pipelines with clear separation of concerns
 * Implement SCD Type 1, 2, and 3 with Delta Lake MERGE
@@ -34,11 +37,13 @@ audience:
 * Monitor Spark jobs and optimize cloud costs
 
 ---
+
 ## ETL Pipeline Architecture
 
 ![etl_pipeline_architecture](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/etl_pipeline_architecture.svg)
 
 ---
+
 ## ETL Pipeline Design Pattern
 
 ```python
@@ -83,6 +88,7 @@ class PipelineStep(ABC):
 ```
 
 ---
+
 ## ETL Pipeline: Extract
 
 ```python
@@ -153,11 +159,13 @@ pipeline.run()
 ```
 
 ---
+
 ## Slowly Changing Dimensions: Overview
 
 ![slowly_changing_dimensions_overview](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/slowly_changing_dimensions_overview.svg)
 
 ---
+
 ## SCD Type 1: Overwrite with MERGE
 
 ```python
@@ -202,6 +210,7 @@ target.alias("t").merge(
 ```
 
 ---
+
 ## SCD Type 2: Setup and Identify Changes
 
 ```python
@@ -284,6 +293,7 @@ target.alias("t").merge(
 ```
 
 ---
+
 ## SCD Type 3: Setup and Merge
 
 ```python
@@ -349,6 +359,7 @@ moved.show()
 ```
 
 ---
+
 ## SCD Type Comparison
 
 | Feature | Type 1 | Type 2 | Type 3 |
@@ -362,6 +373,7 @@ moved.show()
 | Implementation complexity | Low | High | Medium |
 
 ---
+
 ## Data Quality: Validation Types
 
 ```python
@@ -435,6 +447,7 @@ def check_referential_integrity(
 ```
 
 ---
+
 ## Data Quality: Running Checks
 
 ```python
@@ -491,6 +504,7 @@ if critical_failures:
 ```
 
 ---
+
 ## Great Expectations: Context Setup
 
 ```python
@@ -567,6 +581,7 @@ if not result.success:
 ```
 
 ---
+
 ## Idempotent Writes: Dynamic Overwrite
 
 ```python
@@ -612,11 +627,13 @@ df.write.format("delta") \
 ```
 
 ---
+
 ## Idempotent Write Comparison
 
 ![idempotent_write_comparison](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/idempotent_write_comparison.svg)
 
 ---
+
 ## Exactly-Once: Read and Parse
 
 ```python
@@ -671,16 +688,19 @@ query = (
 ```
 
 ---
+
 ## Checkpointing Architecture
 
 ![checkpointing_architecture](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/checkpointing_architecture.svg)
 
 ---
+
 ## Change Data Capture (CDC) with Debezium
 
 ![change_data_capture_cdc_with_debezium](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/change_data_capture_cdc_with_debezium.svg)
 
 ---
+
 ## CDC: Read Kafka and Parse
 
 ```python
@@ -777,6 +797,7 @@ query = (
 ```
 
 ---
+
 ## Schema Evolution: mergeSchema
 
 ```python
@@ -822,11 +843,13 @@ spark.read.format("delta") \
 ```
 
 ---
+
 ## Schema Evolution Strategy
 
 ![schema_evolution_strategy](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/schema_evolution_strategy.svg)
 
 ---
+
 ## Monitoring: Metrics Listener
 
 ```python
@@ -882,6 +905,7 @@ for job_id in status_store.getJobIdsForGroup():
 ```
 
 ---
+
 ## Monitoring: `PipelineMonitor` Class
 
 ```python
@@ -991,16 +1015,19 @@ print(json.dumps(metrics, indent=2, default=str))
 ```
 
 ---
+
 ## Prometheus Metrics Configuration
 
 ![prometheus_metrics_configuration](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/prometheus_metrics_configuration.svg)
 
 ---
+
 ## Cost Optimization Strategies
 
 ![cost_optimization_strategies](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/cost_optimization_strategies.svg)
 
 ---
+
 ## Cost Optimization: Dynamic Allocation
 
 ```python
@@ -1039,6 +1066,7 @@ spark = SparkSession.builder \
 ```
 
 ---
+
 ## Full Program: Session and Bronze Ingest
 
 ```python
@@ -1240,6 +1268,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Summary: Real-World Patterns
 
 **Pipeline Design:**

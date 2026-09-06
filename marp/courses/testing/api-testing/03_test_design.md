@@ -8,9 +8,11 @@ audience:
   - audiences:qa
 
 ---
+
 # Test Design
 
 ---
+
 ## What This Chapter Covers
 
 - Test cases
@@ -21,11 +23,13 @@ audience:
 - Negative tests
 
 ---
+
 ## Test Pyramid
 
 ![test_pyramid](svg/courses/testing/api-testing/03_test_design/test_pyramid.svg)
 
 ---
+
 ## A Good Test
 
 - Clear name
@@ -35,6 +39,7 @@ audience:
 - Deterministic
 
 ---
+
 ## Arrange-Act-Assert
 
 - Arrange: setup data and state
@@ -42,6 +47,7 @@ audience:
 - Assert: verify response and side effects
 
 ---
+
 ## Sample Test (Pseudo)
 
 - Arrange: create user
@@ -49,6 +55,7 @@ audience:
 - Assert: 200 + correct body
 
 ---
+
 ## What to Assert
 
 - Status code
@@ -57,6 +64,7 @@ audience:
 - Side effects (DB row created, event published)
 
 ---
+
 ## Schema Assertions
 
 - Validate against JSON Schema or OpenAPI
@@ -64,11 +72,13 @@ audience:
 - Stronger than ad-hoc assertions
 
 ---
+
 ## Assertion Layers
 
 ![assertion_layers](svg/courses/testing/api-testing/03_test_design/assertion_layers.svg)
 
 ---
+
 ## Test Data
 
 - Fixed: known test users
@@ -76,11 +86,13 @@ audience:
 - Reset between runs (transactions, cleanup)
 
 ---
+
 ## Test Data Strategy
 
 ![test_data_strategy](svg/courses/testing/api-testing/03_test_design/test_data_strategy.svg)
 
 ---
+
 ## Independence
 
 - Tests don't depend on each other
@@ -88,6 +100,7 @@ audience:
 - Parallelisable
 
 ---
+
 ## Setup and Teardown
 
 - Per-test or per-suite
@@ -95,6 +108,7 @@ audience:
 - Idempotent
 
 ---
+
 ## Negative Tests
 
 - 400 on bad input
@@ -104,6 +118,7 @@ audience:
 - 409 on duplicate
 
 ---
+
 ## Edge Cases
 
 - Empty arrays / objects
@@ -113,12 +128,14 @@ audience:
 - Timezone boundaries
 
 ---
+
 ## Boundary Values
 
 - Just below, at, and just above limits
 - e.g., page size 0, 1, max-1, max, max+1
 
 ---
+
 ## Idempotency Tests
 
 - Repeat same call: same result
@@ -126,6 +143,7 @@ audience:
 - POST with idempotency key
 
 ---
+
 ## Concurrency
 
 - Two clients hit same endpoint
@@ -133,6 +151,7 @@ audience:
 - Hard but valuable
 
 ---
+
 ## Common Test Design Mistakes
 
 - Testing implementation (DB rows) instead of behaviour

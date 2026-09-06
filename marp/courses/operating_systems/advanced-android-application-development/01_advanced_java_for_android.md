@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced Java for Android
 ## Advanced Features and Modern Patterns
 

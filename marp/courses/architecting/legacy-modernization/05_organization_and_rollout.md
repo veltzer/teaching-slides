@@ -7,9 +7,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Organization and Rollout
 
 ---
+
 ## What This Chapter Covers
 
 - People side of modernization
@@ -19,6 +21,7 @@ audience:
 - Sustaining change
 
 ---
+
 ## Conway's Law
 
 - Systems mirror communications
@@ -27,6 +30,7 @@ audience:
 - Plan both together
 
 ---
+
 ## Two-Speed Teams
 
 - Old system needs caretakers
@@ -35,11 +39,13 @@ audience:
 - Dedicated teams help
 
 ---
+
 ## Two Teams Visualized
 
 ![two_speed_teams](svg/courses/architecting/legacy-modernization/05_organization_and_rollout/two_speed_teams.svg)
 
 ---
+
 ## Rotation
 
 - Avoid permanent old-system jail
@@ -48,6 +54,7 @@ audience:
 - Cross-pollination
 
 ---
+
 ## Funding
 
 - Multi-year budget
@@ -56,6 +63,7 @@ audience:
 - Shielded from quarter-cuts
 
 ---
+
 ## Metrics
 
 - Slices retired
@@ -64,6 +72,7 @@ audience:
 - Cost per request
 
 ---
+
 ## Communication
 
 - Roadmap visible to all
@@ -72,6 +81,7 @@ audience:
 - No surprises to leadership
 
 ---
+
 ## Risk Management
 
 - List the top ten risks
@@ -80,6 +90,7 @@ audience:
 - Reviewed monthly
 
 ---
+
 ## Rollout Patterns
 
 - Internal first
@@ -88,11 +99,13 @@ audience:
 - Per-tenant
 
 ---
+
 ## Pattern Catalog
 
 ![rollout_patterns](svg/courses/architecting/legacy-modernization/05_organization_and_rollout/rollout_patterns.svg)
 
 ---
+
 ## Feature Flags
 
 - Decouple deploy from release
@@ -101,6 +114,7 @@ audience:
 - Clean up retired flags
 
 ---
+
 ## Incident Response
 
 - Old system, new system, hybrid each fail differently
@@ -109,6 +123,7 @@ audience:
 - Drill regularly
 
 ---
+
 ## Sustaining Change
 
 - Modernization is years not months
@@ -117,6 +132,7 @@ audience:
 - Onboard new leaders fast
 
 ---
+
 ## Sunset Planning
 
 - Decommission is the end goal
@@ -125,6 +141,7 @@ audience:
 - Celebrate the shutdown
 
 ---
+
 ## Common Organizational Mistakes
 
 - No executive sponsor

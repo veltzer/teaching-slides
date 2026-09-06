@@ -9,6 +9,7 @@ audience:
   - audiences:devops
 
 ---
+
 # SELinux and AppArmor (Optional)
 ## Mandatory Access Control
 
@@ -19,6 +20,7 @@ audience:
 ![MAC: SELinux vs AppArmor](svg/courses/operating_systems/linux-system-administration/10_selinux_apparmor_optional/mac_vs_dac.svg)
 
 ---
+
 ## Mandatory Access Control (MAC) Concepts
 
 - Standard `Linux` uses DAC (Discretionary Access Control)
@@ -30,6 +32,7 @@ audience:
     - `AppArmor` - used by Ubuntu, SUSE
 
 ---
+
 ## DAC vs MAC Comparison
 
 | Feature | DAC | MAC |
@@ -46,6 +49,7 @@ MAC is essential when:
 - Defense-in-depth is required
 
 ---
+
 ## SELinux Modes
 
 | Mode | Description |
@@ -68,6 +72,7 @@ setenforce 1        # enforcing
 ```
 
 ---
+
 ## SELinux Contexts
 
 Every file, process, and port has a security context: `user:role:type:level`
@@ -87,6 +92,7 @@ restorecon -Rv /var/www/html/
 ```
 
 ---
+
 ## SELinux Context Deep Dive
 
 ```bash
@@ -111,6 +117,7 @@ restorecon -Rv /srv/www/
 ```
 
 ---
+
 ## SELinux Booleans and Policies
 
 ```bash
@@ -132,6 +139,7 @@ semodule -i mypolicy.pp
 ```
 
 ---
+
 ## Common SELinux Booleans
 
 | Boolean | Purpose |
@@ -150,6 +158,7 @@ semanage boolean -l | grep httpd
 ```
 
 ---
+
 ## Troubleshooting SELinux Denials
 
 ```bash
@@ -173,6 +182,7 @@ audit2allow -a -M custom_policy
 ```
 
 ---
+
 ## SELinux Troubleshooting Workflow
 
 - Check if SELinux is the problem:
@@ -198,6 +208,7 @@ ausearch -m AVC -ts recent | audit2why
     - `audit2allow` - create custom policy (last resort)
 
 ---
+
 ## AppArmor Modes
 
 | Mode | Description |
@@ -223,6 +234,7 @@ apparmor_parser -R /etc/apparmor.d/usr.sbin.nginx
 ```
 
 ---
+
 ## AppArmor Profile Structure
 
 ```config
@@ -258,6 +270,7 @@ apparmor_parser -R /etc/apparmor.d/usr.sbin.nginx
 ```
 
 ---
+
 ## AppArmor Permission Flags
 
 | Flag | Permission |
@@ -274,6 +287,7 @@ apparmor_parser -R /etc/apparmor.d/usr.sbin.nginx
 | `Ux` | Unconfined, scrub environment |
 
 ---
+
 ## Writing AppArmor Profiles
 
 ```config
@@ -303,6 +317,7 @@ aa-logprof
 ```
 
 ---
+
 ## AppArmor Troubleshooting
 
 ```bash
@@ -328,6 +343,7 @@ systemctl reload apparmor
 ```
 
 ---
+
 ## SELinux File Context Management
 
 ```bash
@@ -355,6 +371,7 @@ semanage import < selinux-local.txt
 ```
 
 ---
+
 ## Building Custom SELinux Policy Modules
 
 ```bash
@@ -393,6 +410,7 @@ semodule -l | grep myapp_custom
 ```
 
 ---
+
 ## AppArmor Abstractions
 
 ```misc
@@ -426,6 +444,7 @@ semodule -l | grep myapp_custom
 Create custom abstractions for shared rules across profiles.
 
 ---
+
 ## SELinux vs AppArmor Comparison
 
 | Feature | SELinux | AppArmor |
@@ -447,6 +466,7 @@ Choose based on:
 - Compliance requirements (some mandate `SELinux`)
 
 ---
+
 ## Exercise: Confining a Web Application
 
 Scenario: confine `/usr/local/bin/webapp` that needs:
@@ -478,6 +498,7 @@ systemctl restart webapp
 ```
 
 ---
+
 ## SELinux Port Labeling
 
 `SELinux` controls which ports services can bind to:
@@ -513,6 +534,7 @@ semanage port -d -t http_port_t -p tcp 9090
 ```
 
 ---
+
 ## AppArmor Network Rules
 
 Control network access per application with `AppArmor`:
@@ -549,6 +571,7 @@ Network rule syntax:
 - Use `deny` for explicit blocks (logged when in `complain` mode)
 
 ---
+
 ## MAC in Container Environments
 
 Containers benefit from MAC for defense-in-depth:
@@ -585,6 +608,7 @@ Key points:
 - `SELinux` prevents container escapes via `svirt` separation
 
 ---
+
 ## Exercise: MAC Policy for a Database Server
 
 Scenario: confine `PostgreSQL` running on a non-standard port `5433`:

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Performance and Best Practices
 
 ---
+
 ## What This Chapter Covers
 
 - Caching
@@ -21,11 +23,13 @@ audience:
 - Putting it together
 
 ---
+
 ## Performance Levers
 
 ![perf_levers](svg/courses/networking/restful-apis/09_performance_and_best_practices/perf_levers.svg)
 
 ---
+
 ## Caching
 
 - HTTP caching: built-in
@@ -34,6 +38,7 @@ audience:
 - Last-Modified: alternative
 
 ---
+
 ## ETag Flow
 
 - Server sends ETag
@@ -42,6 +47,7 @@ audience:
 - Saves bandwidth
 
 ---
+
 ## Pagination
 
 - Don't return huge lists
@@ -50,6 +56,7 @@ audience:
 - Document limits
 
 ---
+
 ## N+1 Problem
 
 - One request per item
@@ -57,6 +64,7 @@ audience:
 - Common API anti-pattern
 
 ---
+
 ## Compression
 
 - gzip, brotli
@@ -64,6 +72,7 @@ audience:
 - Negotiate via Accept-Encoding
 
 ---
+
 ## Connection Reuse
 
 - HTTP keep-alive
@@ -71,6 +80,7 @@ audience:
 - Connection pools client-side
 
 ---
+
 ## Async Endpoints
 
 - Long jobs: 202 Accepted, return job URL
@@ -78,6 +88,7 @@ audience:
 - Don't block clients
 
 ---
+
 ## Idempotency
 
 - Safe to retry
@@ -86,6 +97,7 @@ audience:
 - Used by Stripe, others
 
 ---
+
 ## Rate Limiting
 
 - Protect server
@@ -94,6 +106,7 @@ audience:
 - Tiered by plan
 
 ---
+
 ## Monitoring
 
 - Latency: p50, p95, p99
@@ -102,6 +115,7 @@ audience:
 - Alert on regressions
 
 ---
+
 ## Logging
 
 - Request, status, latency
@@ -110,6 +124,7 @@ audience:
 - Sample at high traffic
 
 ---
+
 ## Tracing
 
 - Distributed tracing
@@ -118,6 +133,7 @@ audience:
 - Find bottlenecks across services
 
 ---
+
 ## Testing
 
 - Contract tests vs OpenAPI
@@ -126,6 +142,7 @@ audience:
 - Mock external dependencies
 
 ---
+
 ## REST Best Practices Recap
 
 - Resources, not actions
@@ -136,6 +153,7 @@ audience:
 - Cached, paginated, monitored
 
 ---
+
 ## Common Performance Mistakes
 
 - No caching headers
@@ -145,6 +163,7 @@ audience:
 - No latency monitoring
 
 ---
+
 ## HTTP Caching Layers
 
 ![cache_layers](svg/courses/networking/restful-apis/09_performance_and_best_practices/cache_layers.svg)

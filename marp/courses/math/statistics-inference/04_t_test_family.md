@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # The t-Test Family
 
 ---
+
 ## What This Chapter Covers
 
 - Where the t-distribution comes from
@@ -21,11 +23,13 @@ audience:
 - Effect sizes and the test&ndash;interval connection
 
 ---
+
 ## t Distribution vs Normal
 
 ![t_vs_normal](svg/courses/math/statistics-inference/04_t_test_family/t_vs_normal.svg)
 
 ---
+
 ## Why "t" And Not "z"
 
 - Standardizing a mean needs &sigma;, which we don't know — we plug in s, the sample SD
@@ -35,6 +39,7 @@ audience:
 - "Degrees of freedom" &asymp; how many independent pieces of information are left after estimating the mean
 
 ---
+
 ## One-Sample t-Test
 
 - Question: is the population mean equal to some reference value &mu;&#8320;?
@@ -44,6 +49,7 @@ audience:
 - One-sided variant when only one direction is of interest — decide before looking
 
 ---
+
 ## Paired t-Test
 
 - Two measurements on the *same* units: before/after, left/right, matched pairs
@@ -53,6 +59,7 @@ audience:
 - Test: "is each value in group 1 naturally matched to exactly one in group 2?" — if yes, pair
 
 ---
+
 ## Independent Two-Sample: Student vs Welch
 
 - Question: do two *separate* groups have the same mean?
@@ -62,6 +69,7 @@ audience:
 - `scipy.stats.ttest_ind(a, b, equal_var=False)` — and many argue it should be the default
 
 ---
+
 ## Assumptions, And Robustness
 
 - **Independence** within and between groups — the non-negotiable one; clustered or repeated data needs other models
@@ -71,6 +79,7 @@ audience:
 - Tiny, heavily skewed samples: use a permutation test or a rank test instead (later chapters)
 
 ---
+
 ## Effect Size
 
 - p answers "is there a difference"; **Cohen's d** answers "how big" — d = (difference in means)/(pooled SD)
@@ -80,11 +89,13 @@ audience:
 - Pair every t-test with d (or the raw difference) and its confidence interval
 
 ---
+
 ## Choosing the Right t-Test
 
 ![test_decision_tree](svg/courses/math/statistics-inference/04_t_test_family/test_decision_tree.svg)
 
 ---
+
 ## Tests And Intervals, Again
 
 - A two-sided t-test at level &alpha; rejects H&#8320;: "&mu; = &mu;&#8320;" exactly when &mu;&#8320; is outside the (1&minus;&alpha;) t-interval
@@ -94,6 +105,7 @@ audience:
 - This generalizes: most parametric tests have a matching interval
 
 ---
+
 ## The t-Test Family In Python
 
 ```python
@@ -110,6 +122,7 @@ print("Cohen d  :", round(d, 2))
 ```
 
 ---
+
 ## Common Mistakes
 
 - Treating paired data as independent (or vice versa)

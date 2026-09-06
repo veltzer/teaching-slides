@@ -7,9 +7,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Introduction to Legacy Modernization
 
 ---
+
 ## What This Chapter Covers
 
 - What legacy means
@@ -19,6 +21,7 @@ audience:
 - Course outline
 
 ---
+
 ## What Legacy Means
 
 - Code that still earns money
@@ -27,6 +30,7 @@ audience:
 - Often older than the team
 
 ---
+
 ## Why Modernize
 
 - Risk reduction
@@ -35,6 +39,7 @@ audience:
 - Cost of change rising
 
 ---
+
 ## When Not to Modernize
 
 - Product nearing retirement
@@ -43,6 +48,7 @@ audience:
 - Risk outweighs reward
 
 ---
+
 ## Signs of a Legacy System
 
 - Single deploy expert
@@ -52,11 +58,13 @@ audience:
 - Vendor lock-in
 
 ---
+
 ## Common Signs
 
 ![legacy_signs](svg/courses/architecting/legacy-modernization/01_introduction/legacy_signs.svg)
 
 ---
+
 ## Hidden Risks
 
 - Compliance debt
@@ -65,6 +73,7 @@ audience:
 - Operational debt
 
 ---
+
 ## Why It Got This Way
 
 - Short-term wins
@@ -73,6 +82,7 @@ audience:
 - Quiet maturity
 
 ---
+
 ## Stakeholders
 
 - Engineering
@@ -82,6 +92,7 @@ audience:
 - Customers
 
 ---
+
 ## Modernization Strategies
 
 - Encapsulate
@@ -92,11 +103,13 @@ audience:
 - Replace
 
 ---
+
 ## The Six R's Visualized
 
 ![six_rs](svg/courses/architecting/legacy-modernization/01_introduction/six_rs.svg)
 
 ---
+
 ## The Six R's
 
 - Each R has cost
@@ -105,6 +118,7 @@ audience:
 - Pick per component
 
 ---
+
 ## Risk vs Reward
 
 - Bigger change, bigger payoff
@@ -113,6 +127,7 @@ audience:
 - Move in measurable steps
 
 ---
+
 ## Course Outline
 
 - Strategies
@@ -122,6 +137,7 @@ audience:
 - Organizational change
 
 ---
+
 ## Common Misconceptions
 
 - "Big bang rewrite will fix it"

@@ -8,9 +8,11 @@ audience:
   - audiences:testers
 
 ---
+
 # Provider Verification
 
 ---
+
 ## What This Chapter Covers
 
 - Verification flow
@@ -20,6 +22,7 @@ audience:
 - CI integration
 
 ---
+
 ## What Verification Does
 
 - Replay each consumer interaction
@@ -28,16 +31,19 @@ audience:
 - Pass or fail per interaction
 
 ---
+
 ## Verification Anatomy
 
 ![verification_anatomy](svg/courses/testing/contract-testing/03_provider_verification/verification_anatomy.svg)
 
 ---
+
 ## Verification Run
 
 ![verification_run](svg/courses/testing/contract-testing/03_provider_verification/verification_run.svg)
 
 ---
+
 ## Where It Runs
 
 - In provider CI
@@ -46,6 +52,7 @@ audience:
 - Block merges on failure
 
 ---
+
 ## Real Provider
 
 - Actual code paths
@@ -54,6 +61,7 @@ audience:
 - Otherwise it is integration testing
 
 ---
+
 ## Provider States
 
 - Translate named state to setup steps
@@ -62,6 +70,7 @@ audience:
 - Repeatable
 
 ---
+
 ## Setup And Teardown
 
 - Database fixtures
@@ -70,6 +79,7 @@ audience:
 - Reset between runs
 
 ---
+
 ## Mocking Downstreams
 
 - Provider tests should not call other services
@@ -78,6 +88,7 @@ audience:
 - Keeps tests fast
 
 ---
+
 ## Pulling Contracts
 
 - From broker
@@ -86,6 +97,7 @@ audience:
 - Document the source
 
 ---
+
 ## Versioning
 
 - Contracts versioned by consumer
@@ -94,6 +106,7 @@ audience:
 - Useful for compatibility matrix
 
 ---
+
 ## Failure Modes
 
 - Field missing
@@ -102,6 +115,7 @@ audience:
 - Wrong header
 
 ---
+
 ## Fixing Failures
 
 - Producer change broke contract
@@ -110,6 +124,7 @@ audience:
 - Coordinate
 
 ---
+
 ## Coordinated Releases
 
 - Provider deploys ahead of consumer
@@ -118,6 +133,7 @@ audience:
 - Avoid coupled deploys when possible
 
 ---
+
 ## Backward Compatibility
 
 - Avoid breaking changes
@@ -126,6 +142,7 @@ audience:
 - Document support windows
 
 ---
+
 ## CI Integration
 
 - Run on every PR
@@ -134,6 +151,7 @@ audience:
 - Tag verifications with branch
 
 ---
+
 ## Common Provider Mistakes
 
 - Calling real downstreams

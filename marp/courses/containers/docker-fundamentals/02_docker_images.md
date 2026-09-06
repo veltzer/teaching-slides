@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Docker Images
 
 ---
+
 ## What This Chapter Covers
 
 - What an image is, mechanically
@@ -21,6 +23,7 @@ audience:
 - Public and private registries
 
 ---
+
 ## What an Image Is
 
 - A read-only snapshot of a filesystem plus metadata
@@ -30,6 +33,7 @@ audience:
 - Multiple containers can run from the same image
 
 ---
+
 ## Image Layers
 
 - An image is *not* one big blob
@@ -39,11 +43,13 @@ audience:
 - Pulling a new image often only downloads the layers you don't have
 
 ---
+
 ## Layers Visualised
 
 ![image_layers](svg/courses/containers/docker-fundamentals/02_docker_images/image_layers.svg)
 
 ---
+
 ## The Union Filesystem
 
 - Multiple layers presented as one merged filesystem
@@ -53,6 +59,7 @@ audience:
 - That writable layer disappears when the container is removed
 
 ---
+
 ## Pulling an Image
 
 ```bash
@@ -66,6 +73,7 @@ docker pull ubuntu@sha256:abcdef...
 - Other registries: prefix the image name (`gcr.io/google-containers/...`)
 
 ---
+
 ## Listing Local Images
 
 ```bash
@@ -79,6 +87,7 @@ docker images --format '{{.Repository}}:{{.Tag}}\t{{.Size}}'
 - `--filter` to narrow down (`-f reference=nginx*`)
 
 ---
+
 ## Inspecting an Image
 
 ```bash
@@ -91,6 +100,7 @@ docker history nginx:latest
 - Useful for debugging "why is this image 3 GB?"
 
 ---
+
 ## Removing Images
 
 ```bash
@@ -105,6 +115,7 @@ docker system prune -a      # remove unused images, containers, networks
 - A locked image (used by a container) won't be removed
 
 ---
+
 ## Image Tags
 
 - A tag is a *human-readable label* for a digest
@@ -114,6 +125,7 @@ docker system prune -a      # remove unused images, containers, networks
 - Convention: `image:major.minor[-variant]`
 
 ---
+
 ## Tagging Strategies
 
 - **Latest moving tag**: `:latest`, `:stable` — convenient but unreliable
@@ -123,6 +135,7 @@ docker system prune -a      # remove unused images, containers, networks
 - Most teams use specific versions for prod, `:latest` for local dev
 
 ---
+
 ## Tagging Your Own Images
 
 ```bash
@@ -136,6 +149,7 @@ docker push registry.example.com/myapp:v1.2.3
 - `push` requires authentication for private registries
 
 ---
+
 ## Docker Hub
 
 - The default public registry: hub.docker.com
@@ -145,6 +159,7 @@ docker push registry.example.com/myapp:v1.2.3
 - Anyone else: community images — vet before using
 
 ---
+
 ## Other Registries
 
 - **AWS ECR**: tied to AWS accounts and IAM
@@ -154,6 +169,7 @@ docker push registry.example.com/myapp:v1.2.3
 - **Self-hosted**: Harbor, Nexus, JFrog Artifactory, plain `registry`
 
 ---
+
 ## Working With Private Registries
 
 ```bash
@@ -167,6 +183,7 @@ docker push registry.example.com/team/myapp:v1.1
 - Most registries support OAuth/OIDC tokens
 
 ---
+
 ## Image Size
 
 - Smaller images = faster pulls, smaller attack surface
@@ -176,6 +193,7 @@ docker push registry.example.com/team/myapp:v1.1
 - A 1.5 GB image is rarely necessary; aim for under 200 MB
 
 ---
+
 ## Common Mistakes
 
 - Trusting `:latest` in production
@@ -185,6 +203,7 @@ docker push registry.example.com/team/myapp:v1.1
 - Pushing secrets baked into image layers (they stay forever, even if "deleted")
 
 ---
+
 ## Image Registry Lifecycle
 
 ![registry_workflow](svg/courses/containers/docker-fundamentals/02_docker_images/registry_workflow.svg)

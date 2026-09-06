@@ -10,6 +10,7 @@ audience:
   - audiences:architects
 
 ---
+
 # Database Architecture and Design
 
 ---

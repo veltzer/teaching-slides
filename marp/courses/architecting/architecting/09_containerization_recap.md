@@ -11,9 +11,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Containerization Recap
 
 ---
+
 ## What Is a Container?
 
 - A lightweight, standalone, executable package of software
@@ -22,11 +24,13 @@ audience:
 - Provides consistent behavior across environments
 
 ---
+
 ## Containers vs Virtual Machines
 
 ![containers_vs_virtual_machines](svg/courses/architecting/architecting/09_containerization_recap/containers_vs_virtual_machines.svg)
 
 ---
+
 ## Container Advantages
 
 - Start in seconds compared to minutes for VMs
@@ -36,6 +40,7 @@ audience:
 - Immutable: same image in dev, staging, and production
 
 ---
+
 ## The Docker Ecosystem
 
 - `Docker Engine` - the runtime that builds and runs containers
@@ -45,11 +50,13 @@ audience:
 - `Docker Desktop` - development environment for local machines
 
 ---
+
 ## Docker Architecture
 
 ![docker_architecture](svg/courses/architecting/architecting/09_containerization_recap/docker_architecture.svg)
 
 ---
+
 ## Docker Images
 
 - A read-only template used to create containers
@@ -58,11 +65,13 @@ audience:
 - Layers are cached and shared across images to save space
 
 ---
+
 ## Image Layers Visualization
 
 ![image_layers_visualization](svg/courses/architecting/architecting/09_containerization_recap/image_layers_visualization.svg)
 
 ---
+
 ## Basic Dockerfile
 
 ```dockerfile
@@ -77,6 +86,7 @@ CMD ["python", "app.py"]
 ```
 
 ---
+
 ## Essential Docker Commands
 
 ```bash
@@ -97,6 +107,7 @@ docker stop <container-id>
 ```
 
 ---
+
 ## Docker Compose
 
 - Define and run multi-container applications with a single file
@@ -105,6 +116,7 @@ docker stop <container-id>
 - Ideal for local development environments
 
 ---
+
 ## Docker Compose Example
 
 ```yaml
@@ -128,6 +140,7 @@ volumes:
 ```
 
 ---
+
 ## Optimizing Images: Why It Matters
 
 - Smaller images build faster and transfer faster
@@ -136,6 +149,7 @@ volumes:
 - Optimized images reduce storage costs in registries
 
 ---
+
 ## Use Minimal Base Images
 
 - `alpine` - around 5 MB, musl-based Linux
@@ -144,6 +158,7 @@ volumes:
 - Avoid full OS images like `ubuntu` or `debian` unless necessary
 
 ---
+
 ## Base Image Comparison
 
 | Base Image | Size | Use Case |
@@ -155,6 +170,7 @@ volumes:
 | `gcr.io/distroless/python3` | ~50 MB | Production Python |
 
 ---
+
 ## Multi-Stage Builds
 
 - Use multiple `FROM` statements in a single Dockerfile
@@ -163,6 +179,7 @@ volumes:
 - Dramatically reduces the final image size
 
 ---
+
 ## Multi-Stage Build Example
 
 ```dockerfile
@@ -182,6 +199,7 @@ CMD ["/server"]
 ```
 
 ---
+
 ## Layer Caching Best Practices
 
 - Order instructions from least to most frequently changing
@@ -190,6 +208,7 @@ CMD ["/server"]
 - Combine related `RUN` commands to reduce layers
 
 ---
+
 ## Layer Caching Example
 
 ```dockerfile
@@ -205,6 +224,7 @@ CMD ["node", "server.js"]
 - If only source code changes, `npm ci` layer is cached
 
 ---
+
 ## The .dockerignore File
 
 ```gitignore
@@ -224,6 +244,7 @@ tests/
 - Reduces build context size and prevents sensitive files from entering images
 
 ---
+
 ## Security Best Practices
 
 - Run containers as a non-root user
@@ -233,6 +254,7 @@ tests/
 - Use read-only filesystems where possible
 
 ---
+
 ## Non-Root User Example
 
 ```dockerfile
@@ -248,6 +270,7 @@ CMD ["node", "server.js"]
 ```
 
 ---
+
 ## Health Checks in Dockerfiles
 
 ```dockerfile
@@ -265,6 +288,7 @@ CMD ["python", "app.py"]
 ```
 
 ---
+
 ## Container Networking
 
 - Bridge network: default, containers on the same host communicate
@@ -273,11 +297,13 @@ CMD ["python", "app.py"]
 - None: no networking, fully isolated container
 
 ---
+
 ## Container Networking Diagram
 
 ![container_networking_diagram](svg/courses/architecting/architecting/09_containerization_recap/container_networking_diagram.svg)
 
 ---
+
 ## Volumes and Persistent Storage
 
 - Containers are ephemeral; data is lost when they stop
@@ -286,6 +312,7 @@ CMD ["python", "app.py"]
 - Named volumes are managed by Docker and are portable
 
 ---
+
 ## Volume Types
 
 ```bash
@@ -300,6 +327,7 @@ docker run --tmpfs /app/tmp myapp
 ```
 
 ---
+
 ## Container Image Tagging Strategy
 
 - Use semantic versioning: `myapp:1.2.3`
@@ -309,6 +337,7 @@ docker run --tmpfs /app/tmp myapp
 - Immutable tags prevent accidental overwrites
 
 ---
+
 ## Private Container Registries
 
 - `Docker Hub` - public and private repositories
@@ -318,11 +347,13 @@ docker run --tmpfs /app/tmp myapp
 - `Harbor` - open-source self-hosted registry
 
 ---
+
 ## CI/CD Integration
 
 ![ci_cd_integration](svg/courses/architecting/architecting/09_containerization_recap/ci_cd_integration.svg)
 
 ---
+
 ## Production Deployment Checklist
 
 - Use multi-stage builds to minimize image size
@@ -335,6 +366,7 @@ docker run --tmpfs /app/tmp myapp
 - Log to `stdout` and `stderr`
 
 ---
+
 ## Container Resource Limits
 
 ```bash
@@ -350,6 +382,7 @@ docker run \
 - Essential for multi-tenant environments
 
 ---
+
 ## Container Logging Best Practices
 
 - Write all logs to `stdout` and `stderr`
@@ -359,6 +392,7 @@ docker run \
 - Never write logs to files inside the container
 
 ---
+
 ## Summary
 
 - Containers provide lightweight, portable, and consistent environments

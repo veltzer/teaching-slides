@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Transactions
 
 ---
+
 ## What This Chapter Covers
 
 - Isolation level
@@ -20,6 +22,7 @@ audience:
 - Best practices
 
 ---
+
 ## Default Isolation
 
 - Serializable
@@ -28,11 +31,13 @@ audience:
 - Costs more than weaker levels
 
 ---
+
 ## Serializable and Retries
 
 ![serializable_retries](svg/courses/databases/cockroachdb/03_transactions/serializable_retries.svg)
 
 ---
+
 ## Why Serializable
 
 - App developers reason simply
@@ -41,6 +46,7 @@ audience:
 - Trade against latency
 
 ---
+
 ## Optimistic Concurrency
 
 - Reads do not block writers
@@ -49,6 +55,7 @@ audience:
 - Driver retry helpers exist
 
 ---
+
 ## Retries
 
 - Transactional save points
@@ -57,11 +64,13 @@ audience:
 - Cap retries to avoid loops
 
 ---
+
 ## Surviving Serializable
 
 ![isolation_recipe](svg/courses/databases/cockroachdb/03_transactions/isolation_recipe.svg)
 
 ---
+
 ## Hot Rows
 
 - Same row written constantly
@@ -70,6 +79,7 @@ audience:
 - Or shard the row
 
 ---
+
 ## Locks
 
 - Row-level
@@ -78,6 +88,7 @@ audience:
 - Helps reduce retries
 
 ---
+
 ## Lock Wait
 
 - Default short timeout
@@ -86,6 +97,7 @@ audience:
 - Tune transaction size
 
 ---
+
 ## Transaction Size
 
 - Smaller is better
@@ -94,6 +106,7 @@ audience:
 - Break into idempotent steps
 
 ---
+
 ## Time and Hybrid Clocks
 
 - Hybrid logical clocks
@@ -102,6 +115,7 @@ audience:
 - Bounded skew default 500ms
 
 ---
+
 ## Read Latency
 
 - Local reads possible with leaseholders
@@ -110,6 +124,7 @@ audience:
 - Pick by need
 
 ---
+
 ## Bounded Staleness
 
 - AS OF SYSTEM TIME
@@ -118,6 +133,7 @@ audience:
 - App must tolerate
 
 ---
+
 ## Causal Consistency
 
 - Across sessions
@@ -126,6 +142,7 @@ audience:
 - Inspect when sharing connections
 
 ---
+
 ## Common Transaction Mistakes
 
 - Long-running transactions

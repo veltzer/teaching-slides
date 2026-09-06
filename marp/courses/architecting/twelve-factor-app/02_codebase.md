@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Factor I: Codebase
 
 ---
+
 ## The Rule
 
 - One codebase tracked in revision control
@@ -19,11 +21,13 @@ audience:
 - The same codebase produces every environment's deploy
 
 ---
+
 ## Mental Model
 
 ![one_repo_many_deploys](svg/courses/architecting/twelve-factor-app/02_codebase/one_repo_many_deploys.svg)
 
 ---
+
 ## What "One Codebase" Means
 
 - A single git repository (or equivalent) per app
@@ -32,6 +36,7 @@ audience:
 - No "production branch" diverging from "the code" — only deploys differ
 
 ---
+
 ## What "Many Deploys" Means
 
 - Production, staging, dev, per-developer, per-CI-job — all are deploys
@@ -39,6 +44,7 @@ audience:
 - Deploys differ in config and possibly version, never in source
 
 ---
+
 ## Codebase, App, Deploy
 
 - **Codebase**: the source code in version control
@@ -47,6 +53,7 @@ audience:
 - One codebase → one app → many deploys
 
 ---
+
 ## Multiple Apps Sharing Code
 
 - Sharing code via a shared codebase across apps violates the factor
@@ -54,11 +61,13 @@ audience:
 - Each app has its own codebase
 
 ---
+
 ## Repository Topologies
 
 ![repo_topologies](svg/courses/architecting/twelve-factor-app/02_codebase/repo_topologies.svg)
 
 ---
+
 ## Monorepo Considerations
 
 - A monorepo can hold multiple codebases — that's fine
@@ -67,6 +76,7 @@ audience:
 - Monorepo is an organizational choice, not a violation
 
 ---
+
 ## Multi-Repo Considerations
 
 - One repo per app is the canonical interpretation
@@ -74,6 +84,7 @@ audience:
 - Either approach works; pick one and be consistent
 
 ---
+
 ## Anti-Patterns
 
 - "Production has special files" — versioning skew between environments
@@ -82,6 +93,7 @@ audience:
 - "Code shared between apps via copy-paste" — bug fixes don't propagate
 
 ---
+
 ## Verifying Compliance
 
 - Can you redeploy any environment from the codebase plus its config?
@@ -90,6 +102,7 @@ audience:
 - If yes to all three, you're compliant with factor I
 
 ---
+
 ## Summary
 
 - One codebase per app, in version control

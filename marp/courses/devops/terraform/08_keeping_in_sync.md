@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Keeping Terraform in Sync
 
 ## What is Configuration Drift?

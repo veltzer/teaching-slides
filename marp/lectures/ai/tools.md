@@ -10,6 +10,7 @@ audience:
 - audiences:developers
 
 ---
+
 # Tools in AI
 ## Giving LLM Agents Hands to Act on the World
 ## Mark Veltzer

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Structure and Organization
 
 ---
+
 ## Inverted Pyramid
 
 ![inverted_pyramid](svg/courses/development_methodologies/technical-writing/05_structure_and_organization/inverted_pyramid.svg)
@@ -22,6 +24,7 @@ audience:
 ![structure_patterns](svg/courses/development_methodologies/technical-writing/05_structure_and_organization/structure_patterns.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Information architecture
@@ -32,6 +35,7 @@ audience:
 - Patterns that work across docs
 
 ---
+
 ## Why Structure Matters
 
 - Readers scan first, then read
@@ -41,6 +45,7 @@ audience:
 - Structure is the cheapest way to improve docs
 
 ---
+
 ## Information Architecture
 
 - The shape of your information
@@ -50,6 +55,7 @@ audience:
 - For most teams: think about it before you start typing
 
 ---
+
 ## Headings and Hierarchy
 
 - H1: document title (one per page)
@@ -60,6 +66,7 @@ audience:
 - Headings are how scanners find things
 
 ---
+
 ## Heading Names
 
 - Specific, not vague
@@ -69,6 +76,7 @@ audience:
 - Try to describe content, not just label
 
 ---
+
 ## Tables of Contents
 
 - Auto-generated from headings in most tools
@@ -78,6 +86,7 @@ audience:
 - Keep heading names short to fit the TOC
 
 ---
+
 ## Navigation Within Pages
 
 - "Skip to..." links for long pages
@@ -87,6 +96,7 @@ audience:
 - Mobile-friendly navigation if applicable
 
 ---
+
 ## Progressive Disclosure
 
 - Don't dump everything on the reader at once
@@ -96,6 +106,7 @@ audience:
 - Lets beginners and experts read the same doc
 
 ---
+
 ## The Inverted Pyramid
 
 - Most-important first
@@ -105,6 +116,7 @@ audience:
 - Works because readers stop reading partway through
 
 ---
+
 ## Cross-Referencing
 
 - Link to other docs that cover related topics
@@ -114,6 +126,7 @@ audience:
 - Stale links are worse than no links — audit periodically
 
 ---
+
 ## Glossaries
 
 - Define each term once; link from every use
@@ -123,6 +136,7 @@ audience:
 - Living document; add as terms emerge
 
 ---
+
 ## Indexing
 
 - Reference docs benefit from indexes
@@ -132,6 +146,7 @@ audience:
 - For static PDFs: indexes still matter
 
 ---
+
 ## Search
 
 - For doc sites larger than ~20 pages
@@ -141,6 +156,7 @@ audience:
 - Bad search makes the docs feel broken even if the content is good
 
 ---
+
 ## Consistent Section Patterns
 
 - Every API doc page has: Description, Parameters, Returns, Examples, Errors
@@ -150,6 +166,7 @@ audience:
 - Readers learn the pattern; subsequent reading is faster
 
 ---
+
 ## When Long Is Right
 
 - Reference: comprehensive coverage trumps brevity
@@ -158,6 +175,7 @@ audience:
 - Don't artificially shorten where length serves the reader
 
 ---
+
 ## When Short Is Right
 
 - READMEs: get them started fast
@@ -166,6 +184,7 @@ audience:
 - "Brief because the topic is brief" is the goal
 
 ---
+
 ## Common Structure Mistakes
 
 - One enormous wall of text

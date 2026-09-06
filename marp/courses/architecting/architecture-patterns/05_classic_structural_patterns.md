@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Classic Structural Patterns
 
 ---
+
 ## Layered Overview
 
 - Partitions the system into layers, each with a specific role and responsibility
@@ -19,6 +21,7 @@ audience:
 - Adjacent layers communicate via well-defined interfaces
 
 ---
+
 ## Layer Responsibilities
 
 - Presentation Layer
@@ -36,11 +39,13 @@ audience:
     - Abstracts the actual database or external services
 
 ---
+
 ## Layered Diagram
 
 ![layer_diagram](svg/courses/architecting/architecture-patterns/05_classic_structural_patterns/layer_diagram.svg)
 
 ---
+
 ## Layered Pros and Cons
 
 Pros:
@@ -56,6 +61,7 @@ Cons:
 - Can lead to monolithic applications over time
 
 ---
+
 ## Layered When to Use
 
 - Business logic can be cleanly separated from presentation and data
@@ -64,6 +70,7 @@ Cons:
 - Different teams will work on different layers
 
 ---
+
 ## Master-Slave Overview
 
 - One component (the master) controls one or more other components (the slaves)
@@ -73,6 +80,7 @@ Cons:
 - Modern equivalents in the field: Leader-Worker (compute), Primary-Replica (databases)
 
 ---
+
 ## Master-Slave Component Roles
 
 - Master
@@ -87,11 +95,13 @@ Cons:
     - May be identical to each other
 
 ---
+
 ## Master-Slave Interaction Diagram
 
 ![interaction_diagram](svg/courses/architecting/architecture-patterns/05_classic_structural_patterns/interaction_diagram.svg)
 
 ---
+
 ## Master-Slave Pros and Cons
 
 Pros:
@@ -107,6 +117,7 @@ Cons:
 - Slaves are not autonomous and rely on master
 
 ---
+
 ## Master-Slave When to Use
 
 - Task can be decomposed into independent subtasks
@@ -116,6 +127,7 @@ Cons:
 - Slaves do not need to communicate with each other
 
 ---
+
 ## Pipe-Filter Overview
 
 - Decomposes a task into a series of sequential steps (filters)
@@ -124,6 +136,7 @@ Cons:
 - Filters can be added, removed, or reordered as needed
 
 ---
+
 ## Pipe-Filter Component Roles
 
 - Filter
@@ -139,11 +152,13 @@ Cons:
     - Can be a stream of bytes, objects, or messages
 
 ---
+
 ## Pipe-Filter Diagram
 
 ![pipe_filter_diagram](svg/courses/architecting/architecture-patterns/05_classic_structural_patterns/pipe_filter_diagram.svg)
 
 ---
+
 ## Pipe-Filter Pros and Cons
 
 Pros:
@@ -159,6 +174,7 @@ Cons:
 - Overall pipeline can be harder to understand and debug
 
 ---
+
 ## Pipe-Filter When to Use
 
 - Processing can be divided into a sequence of independent steps
@@ -168,6 +184,7 @@ Cons:
 - Little or no user interaction is required during processing
 
 ---
+
 ## Blackboard Overview
 
 - Coordinates a group of loosely coupled, independent Knowledge Sources (KSs)
@@ -176,6 +193,7 @@ Cons:
 - Control component manages the activation and scheduling of KSs
 
 ---
+
 ## Blackboard Component Roles
 
 - Blackboard
@@ -192,11 +210,13 @@ Cons:
     - Can implement different strategies for KS activation and conflict resolution
 
 ---
+
 ## Blackboard Interaction Diagram
 
 ![blackboard_interaction_diagram](svg/courses/architecting/architecture-patterns/05_classic_structural_patterns/blackboard_interaction_diagram.svg)
 
 ---
+
 ## Blackboard Pros and Cons
 
 Pros:
@@ -212,6 +232,7 @@ Cons:
 - May require careful design and partitioning of the problem space and knowledge
 
 ---
+
 ## Blackboard When to Use
 
 - Problem can be decomposed into loosely coupled subproblems
@@ -221,6 +242,7 @@ Cons:
 - Complex control strategies and conflict resolution mechanisms are needed
 
 ---
+
 ## Summary
 
 - Layered organizes a single application into stacked horizontal slices

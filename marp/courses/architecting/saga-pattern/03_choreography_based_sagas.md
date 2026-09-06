@@ -9,14 +9,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Choreography-Based Sagas
 
 ---
+
 ## Event Design
 
 ![event_design](svg/courses/architecting/saga-pattern/03_choreography_based_sagas/event_design.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - How choreography works at the message level
@@ -29,6 +32,7 @@ audience:
 - Worked example: order fulfillment
 
 ---
+
 ## How Choreography Works
 
 - Each service publishes events when its work completes
@@ -38,6 +42,7 @@ audience:
 - The saga emerges from the event topology
 
 ---
+
 ## A Worked Example: Order Fulfillment
 
 ```diagram
@@ -53,6 +58,7 @@ Email       → reacts; sends confirmation
 - The whole flow happens with no central code
 
 ---
+
 ## Event Contracts
 
 - Every event published is a public contract for downstream services
@@ -61,6 +67,7 @@ Email       → reacts; sends confirmation
 - Use a schema registry to enforce compatibility
 
 ---
+
 ## Designing the Event Flow
 
 - Start from the business steps; map each to an event
@@ -70,6 +77,7 @@ Email       → reacts; sends confirmation
 - Validate that every step's outcome (success or failure) is observable
 
 ---
+
 ## Reactive Compensation
 
 - A failure event is itself an event
@@ -79,6 +87,7 @@ Email       → reacts; sends confirmation
 - Compensation is just more events
 
 ---
+
 ## Compensation Flow Example
 
 ```diagram
@@ -94,11 +103,13 @@ Inventory → reacts to OrderCancelled; releases reservation
 - Same machinery; different intent
 
 ---
+
 ## Reactive Compensation Diagram
 
 ![reactive_compensation](svg/courses/architecting/saga-pattern/03_choreography_based_sagas/reactive_compensation.svg)
 
 ---
+
 ## Avoiding Cyclic Dependencies
 
 - A reacts to B's event; B reacts to A's event → potential infinite loop
@@ -107,6 +118,7 @@ Inventory → reacts to OrderCancelled; releases reservation
 - Service ownership review catches these before deployment
 
 ---
+
 ## Avoiding Event Spaghetti
 
 - "Every service subscribes to every event" → fragile, hard to reason about
@@ -115,6 +127,7 @@ Inventory → reacts to OrderCancelled; releases reservation
 - Publish coarse-grained integration events, not fine-grained internal ones
 
 ---
+
 ## Tracking Saga Progress
 
 - No central state — but operators still need to ask "where is order 42?"
@@ -123,6 +136,7 @@ Inventory → reacts to OrderCancelled; releases reservation
 - A reporting projection can build a per-saga timeline
 
 ---
+
 ## Correlation IDs in Practice
 
 ```python
@@ -140,6 +154,7 @@ event = OrderPlaced(
 - Together they provide a debug trail
 
 ---
+
 ## Causation vs Correlation
 
 - **Correlation**: "what saga am I part of?" — same value across the whole flow
@@ -147,6 +162,7 @@ event = OrderPlaced(
 - Both are useful; both are cheap to add; both are painful to retrofit
 
 ---
+
 ## Building a Saga View
 
 - A read model that aggregates events by correlation id
@@ -155,6 +171,7 @@ event = OrderPlaced(
 - Status is derived from the latest event type
 
 ---
+
 ## Saga View Schema
 
 ```sql
@@ -173,6 +190,7 @@ CREATE TABLE saga_timeline (
 - Operators see the full story; alerts can fire on stuck sagas
 
 ---
+
 ## Debugging a Stuck Saga
 
 - Query saga_timeline for the correlation id
@@ -182,6 +200,7 @@ CREATE TABLE saga_timeline (
 - The problem is usually a missing subscription, a broken handler, or a poison message
 
 ---
+
 ## Failure Modes Specific to Choreography
 
 - **Missed event**: a subscriber wasn't running when the event was published
@@ -190,6 +209,7 @@ CREATE TABLE saga_timeline (
 - **Partial deployment**: a new event type is published before all consumers can handle it
 
 ---
+
 ## Strategies Against These Failures
 
 - Durable subscriptions on a log (Kafka, EventStoreDB) — no missed events
@@ -199,6 +219,7 @@ CREATE TABLE saga_timeline (
 - Versioned events: emit V1 and V2 in parallel during migration
 
 ---
+
 ## When Choreography Excels
 
 - Steps are loosely connected — each service has a clean, narrow trigger
@@ -207,6 +228,7 @@ CREATE TABLE saga_timeline (
 - The team has invested in good event infrastructure already
 
 ---
+
 ## When Choreography Falls Short
 
 - Many steps with strict ordering — debugging "where are we?" becomes painful
@@ -215,6 +237,7 @@ CREATE TABLE saga_timeline (
 - New team members can't find the workflow because there is no workflow code
 
 ---
+
 ## A Concrete Trade-Off
 
 - Choreography reduces coupling but distributes the workflow
@@ -223,6 +246,7 @@ CREATE TABLE saga_timeline (
 - It hurts when the graph is volatile or large
 
 ---
+
 ## Hybrid: Choreography Inside, Orchestration Across
 
 - Choreography for tightly-related steps within a bounded context
@@ -231,11 +255,13 @@ CREATE TABLE saga_timeline (
 - Don't pick one religion for the whole system
 
 ---
+
 ## Worked Example: Order Fulfillment Saga
 
 ![choreography_order_saga](svg/courses/architecting/saga-pattern/03_choreography_based_sagas/choreography_order_saga.svg)
 
 ---
+
 ## Order Saga: Forward Path
 
 - Sales: `OrderPlaced` (correlation = order id)
@@ -245,6 +271,7 @@ CREATE TABLE saga_timeline (
 - Email: sends confirmation
 
 ---
+
 ## Order Saga: Compensation Path
 
 - Suppose Payment fails: `PaymentFailed`
@@ -254,6 +281,7 @@ CREATE TABLE saga_timeline (
 - The saga ends in a coherent failed state
 
 ---
+
 ## Implementation Notes
 
 - Use a durable broker (Kafka, NATS JetStream, EventStoreDB) — not in-memory
@@ -262,6 +290,7 @@ CREATE TABLE saga_timeline (
 - Test compensation paths in CI; they're easy to forget
 
 ---
+
 ## Anti-Patterns to Avoid
 
 - Hidden orchestration: a "side project" that subscribes to all events and dispatches commands — that's just orchestration in disguise; if you need it, make it explicit
@@ -269,6 +298,7 @@ CREATE TABLE saga_timeline (
 - Compensations that fail silently: every compensation needs monitoring like any other step
 
 ---
+
 ## Summary
 
 - Choreography: each service reacts to events; no central coordinator

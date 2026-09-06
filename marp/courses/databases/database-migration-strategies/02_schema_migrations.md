@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Schema Migrations
 
 ---
+
 ## What This Chapter Covers
 
 - Online vs offline
@@ -21,6 +23,7 @@ audience:
 - Tools
 
 ---
+
 ## Online vs Offline
 
 - Online: traffic continues
@@ -29,11 +32,13 @@ audience:
 - Some operations still lock heavily
 
 ---
+
 ## Online Phases
 
 ![online_phases](svg/courses/databases/database-migration-strategies/02_schema_migrations/online_phases.svg)
 
 ---
+
 ## Locking Levels
 
 - Exclusive: blocks reads and writes
@@ -42,11 +47,13 @@ audience:
 - Inspect before running
 
 ---
+
 ## Change Safety
 
 ![safe_changes](svg/courses/databases/database-migration-strategies/02_schema_migrations/safe_changes.svg)
 
 ---
+
 ## Adding a Column
 
 - Default null is fast
@@ -55,6 +62,7 @@ audience:
 - Always test on a clone
 
 ---
+
 ## Removing a Column
 
 - Two-step approach safer
@@ -63,6 +71,7 @@ audience:
 - Track who reads what
 
 ---
+
 ## Renaming a Column
 
 - Atomic in some engines, not others
@@ -71,6 +80,7 @@ audience:
 - Avoid renames if you can
 
 ---
+
 ## Type Changes
 
 - Often rewrite the table
@@ -79,6 +89,7 @@ audience:
 - Then drop old
 
 ---
+
 ## Index Creation
 
 - Online builders in modern engines
@@ -87,6 +98,7 @@ audience:
 - Plan during low traffic
 
 ---
+
 ## Long-Running Migrations
 
 - Track progress
@@ -95,6 +107,7 @@ audience:
 - Cancel safely if needed
 
 ---
+
 ## Tooling
 
 - Rails migrations
@@ -103,6 +116,7 @@ audience:
 - Native commands where adequate
 
 ---
+
 ## Idempotency
 
 - IF NOT EXISTS guards
@@ -111,6 +125,7 @@ audience:
 - Skip if already there
 
 ---
+
 ## Reviewing Migrations
 
 - DBA review for risky ones
@@ -119,6 +134,7 @@ audience:
 - Time the operation
 
 ---
+
 ## CI Pipelines
 
 - Run migrations on test DB
@@ -127,6 +143,7 @@ audience:
 - Provide a dry-run
 
 ---
+
 ## Common Schema Mistakes
 
 - ADD COLUMN with default on huge table

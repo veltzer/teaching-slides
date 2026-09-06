@@ -21,6 +21,7 @@ audience:
   - audiences:devops
   - audiences:security-professionals
 ---
+
 # Secure Coding
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

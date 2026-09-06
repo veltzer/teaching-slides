@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Stashing
 
 ---
@@ -53,6 +54,7 @@ git stash pop                # Restore saved work
 ```
 
 ---
+
 ## Understanding the Stash: Details
 
 Git stash is a stack-based temporary storage:
@@ -64,6 +66,7 @@ Git stash is a stack-based temporary storage:
 - **Branch independent:** Can apply stash to any branch
 
 ---
+
 ## Understanding the Stash
 
 ![understanding_the_stash](svg/courses/git/git/17_stashing/understanding_the_stash.svg)

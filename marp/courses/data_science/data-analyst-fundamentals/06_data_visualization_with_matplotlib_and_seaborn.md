@@ -8,9 +8,11 @@ audience:
   - audiences:data-analysts
 
 ---
+
 # Data Visualization with Matplotlib and Seaborn
 
 ---
+
 ## What This Chapter Covers
 
 - Visualisation principles
@@ -21,6 +23,7 @@ audience:
 - Choosing the right chart
 
 ---
+
 ## Visualisation Principles
 
 - A chart is for *communication*, not decoration
@@ -30,16 +33,19 @@ audience:
 - Read Tufte; the principles outlast any tool
 
 ---
+
 ## Pick the Chart
 
 ![chart_choices](svg/courses/data_science/data-analyst-fundamentals/06_data_visualization_with_matplotlib_and_seaborn/chart_choices.svg)
 
 ---
+
 ## Chart Decision Guide
 
 ![chart_decisions](svg/courses/data_science/data-analyst-fundamentals/06_data_visualization_with_matplotlib_and_seaborn/chart_decisions.svg)
 
 ---
+
 ## Common Chart Types
 
 - **Bar / column**: compare categories
@@ -50,6 +56,7 @@ audience:
 - **Heatmap**: relationships across many pairs
 
 ---
+
 ## Matplotlib Basics
 
 ```python
@@ -69,6 +76,7 @@ plt.show()
 - Total control; sometimes too much
 
 ---
+
 ## Bar Charts
 
 ```python
@@ -83,6 +91,7 @@ plt.title("Orders by country")
 - Avoid 3D bars — they distort perception
 
 ---
+
 ## Line Charts
 
 ```python
@@ -96,6 +105,7 @@ plt.title("Daily users over time")
 - Smooth heavy noise with a rolling average
 
 ---
+
 ## Scatter Plots
 
 ```python
@@ -108,6 +118,7 @@ df.plot.scatter(x='age', y='spend', alpha=0.3)
 - Add a regression line for trend (`sns.regplot`)
 
 ---
+
 ## Histograms
 
 ```python
@@ -120,6 +131,7 @@ df['age'].plot.hist(bins=30)
 - For categorical, use bar chart instead
 
 ---
+
 ## Customising Plots
 
 ```python
@@ -138,6 +150,7 @@ plt.savefig('out.png', dpi=150)
 - Save as PNG (raster) or SVG (vector) depending on use
 
 ---
+
 ## Seaborn
 
 ```python
@@ -155,6 +168,7 @@ sns.histplot(data=df, x='age', kde=True)
 - The default for most analyst plotting in Python
 
 ---
+
 ## Heatmaps
 
 ```python
@@ -167,6 +181,7 @@ sns.heatmap(df.corr(), annot=True, cmap='coolwarm', center=0)
 - `center=0` for diverging color scales
 
 ---
+
 ## Pair Plots
 
 ```python
@@ -179,6 +194,7 @@ sns.pairplot(df[['age', 'income', 'spend', 'churn']], hue='churn')
 - Quickly spot relationships in a small dataset
 
 ---
+
 ## Categorical Plots
 
 ```python
@@ -193,6 +209,7 @@ sns.violinplot(data=df, x='dept', y='salary')
 - Strip / swarm: every data point shown
 
 ---
+
 ## Color Choices
 
 - Default palettes: `viridis`, `plasma` for sequential
@@ -202,6 +219,7 @@ sns.violinplot(data=df, x='dept', y='salary')
 - Stick to one palette per report
 
 ---
+
 ## Choosing the Right Chart
 
 - Comparing categories &#8594; bar
@@ -212,6 +230,7 @@ sns.violinplot(data=df, x='dept', y='salary')
 - Many pairwise relationships &#8594; heatmap or pair plot
 
 ---
+
 ## When NOT to Use a Pie Chart
 
 - More than 5 slices: unreadable
@@ -221,6 +240,7 @@ sns.violinplot(data=df, x='dept', y='salary')
 - 3D pie charts: never
 
 ---
+
 ## Common Mistakes
 
 - Decorative chart junk that hides the data

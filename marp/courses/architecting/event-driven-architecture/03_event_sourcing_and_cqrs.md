@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Event Sourcing and CQRS
 
 ---
+
 ## What This Chapter Covers
 
 - Event sourcing: state as a sequence of events
@@ -21,6 +23,7 @@ audience:
 - Eventual consistency in user-facing systems
 
 ---
+
 ## What Is Event Sourcing?
 
 - Don't store current state; store the events that produced it
@@ -30,6 +33,7 @@ audience:
 - Different mental model than traditional CRUD
 
 ---
+
 ## A Concrete Example
 
 - Bank account: balance is current state
@@ -39,21 +43,25 @@ audience:
 - The events are the source of truth
 
 ---
+
 ## Event Sourcing Visualized
 
 ![event_sourcing](svg/courses/architecting/event-driven-architecture/03_event_sourcing_and_cqrs/event_sourcing.svg)
 
 ---
+
 ## Snapshotting
 
 ![snapshotting](svg/courses/architecting/event-driven-architecture/03_event_sourcing_and_cqrs/snapshotting.svg)
 
 ---
+
 ## Projection Lifecycle
 
 ![projection_lifecycle](svg/courses/architecting/event-driven-architecture/03_event_sourcing_and_cqrs/projection_lifecycle.svg)
 
 ---
+
 ## Why Event Sourcing?
 
 - Audit trail is automatic and complete
@@ -63,6 +71,7 @@ audience:
 - Enables temporal queries impossible in CRUD
 
 ---
+
 ## Why Not Event Sourcing?
 
 - Complex to implement correctly
@@ -72,6 +81,7 @@ audience:
 - Many systems don't need it
 
 ---
+
 ## Event Store Basics
 
 - An append-only log per aggregate
@@ -81,6 +91,7 @@ audience:
 - The schema of the log is part of your domain
 
 ---
+
 ## Aggregate as Event Stream
 
 - An aggregate (DDD concept) becomes a stream of events
@@ -90,6 +101,7 @@ audience:
 - One stream per aggregate keeps concurrency local
 
 ---
+
 ## Snapshots for Performance
 
 - Replaying thousands of events on every load is slow
@@ -99,6 +111,7 @@ audience:
 - Snapshots are derived data — can be rebuilt
 
 ---
+
 ## Rebuilding Projections
 
 - A read model is a derived view of events
@@ -108,6 +121,7 @@ audience:
 - Projection logic is just a function from events to state
 
 ---
+
 ## CQRS: The Big Idea
 
 - Command Query Responsibility Segregation
@@ -117,11 +131,13 @@ audience:
 - Each model is optimized for its purpose
 
 ---
+
 ## CQRS Visualized
 
 ![cqrs_flow](svg/courses/architecting/event-driven-architecture/03_event_sourcing_and_cqrs/cqrs_flow.svg)
 
 ---
+
 ## Why CQRS?
 
 - Read and write workloads have different shapes
@@ -131,6 +147,7 @@ audience:
 - The price: eventual consistency between sides
 
 ---
+
 ## Why Not CQRS?
 
 - Two models double the complexity
@@ -140,6 +157,7 @@ audience:
 - Don't adopt CQRS for fashion
 
 ---
+
 ## CQRS Without Event Sourcing
 
 - The two patterns are independent
@@ -149,6 +167,7 @@ audience:
 - They are *not* the same pattern
 
 ---
+
 ## Building Read Models
 
 - Subscribe to the event stream
@@ -158,6 +177,7 @@ audience:
 - A read model can be wiped and rebuilt safely
 
 ---
+
 ## Eventual Consistency: User Experience
 
 - "I made a change but it's not visible yet"
@@ -167,6 +187,7 @@ audience:
 - Don't pretend it's strongly consistent — that's worse
 
 ---
+
 ## Read-Your-Writes Patterns
 
 - Optimistic UI: show the write immediately, reconcile on response
@@ -176,6 +197,7 @@ audience:
 - Pick what fits the user's expectation
 
 ---
+
 ## Event Sourcing Pitfalls
 
 - Schema evolution: events are immutable, so old events keep their old shape
@@ -185,6 +207,7 @@ audience:
 - Concurrency: optimistic locking required
 
 ---
+
 ## Sensitive Data in Event Stores
 
 - Right to be forgotten conflicts with immutable logs
@@ -194,6 +217,7 @@ audience:
 - Plan this from day one — retrofit is painful
 
 ---
+
 ## Replays and Integration
 
 - Rebuilding a read model triggers events again
@@ -203,6 +227,7 @@ audience:
 - Test replay paths separately from real-time paths
 
 ---
+
 ## When CQRS Without ES Helps
 
 - Read-heavy systems with complex queries
@@ -212,6 +237,7 @@ audience:
 - All without committing to event sourcing
 
 ---
+
 ## When ES Without CQRS Helps
 
 - Audit-heavy domains: finance, healthcare, legal
@@ -221,6 +247,7 @@ audience:
 - Single read path is enough; just need the audit trail
 
 ---
+
 ## Common Anti-Patterns
 
 - "Event-sourcing CRUD" — events that are just SET FIELD events
@@ -230,6 +257,7 @@ audience:
 - Trying to retrofit ES onto a working CRUD app without redesign
 
 ---
+
 ## Summary
 
 - Event sourcing: state derived from events, not stored

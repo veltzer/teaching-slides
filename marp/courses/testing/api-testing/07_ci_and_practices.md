@@ -9,14 +9,17 @@ audience:
   - audiences:developers
 
 ---
+
 # CI and Practices
 
 ---
+
 ## API Test CI Pipeline
 
 ![ci_pipeline](svg/courses/testing/api-testing/07_ci_and_practices/ci_pipeline.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - CI integration
@@ -27,6 +30,7 @@ audience:
 - Wrap-up
 
 ---
+
 ## CI Integration
 
 - Tests run on every PR
@@ -34,6 +38,7 @@ audience:
 - Fast tests in PR; long tests nightly
 
 ---
+
 ## Test Tiers
 
 - Unit: every commit, seconds
@@ -42,6 +47,7 @@ audience:
 - Performance: scheduled
 
 ---
+
 ## Test Environments
 
 - Ephemeral per PR (preview env)
@@ -49,11 +55,13 @@ audience:
 - Production: smoke tests post-deploy
 
 ---
+
 ## Test Environment Tiers
 
 ![test_environments](svg/courses/testing/api-testing/07_ci_and_practices/test_environments.svg)
 
 ---
+
 ## Ephemeral Environments
 
 - Spin up on PR open
@@ -62,6 +70,7 @@ audience:
 - Preview-deploy services
 
 ---
+
 ## Flakiness
 
 - Tests fail intermittently
@@ -70,6 +79,7 @@ audience:
 - Don't ignore
 
 ---
+
 ## Causes of Flakiness
 
 - Shared state
@@ -78,6 +88,7 @@ audience:
 - Random data with bugs
 
 ---
+
 ## Reducing Flakiness
 
 - Test isolation
@@ -86,6 +97,7 @@ audience:
 - Stable test data
 
 ---
+
 ## Reporting
 
 - JUnit XML standard
@@ -94,6 +106,7 @@ audience:
 - Failure categorisation
 
 ---
+
 ## Test Owners
 
 - Each test has a team owner
@@ -101,6 +114,7 @@ audience:
 - Stale tests removed
 
 ---
+
 ## Code Review for Tests
 
 - Tests reviewed like code
@@ -108,6 +122,7 @@ audience:
 - Catch flakiness before merge
 
 ---
+
 ## Documentation
 
 - README per test suite
@@ -116,6 +131,7 @@ audience:
 - Critical for adoption
 
 ---
+
 ## Test Data Management
 
 - Versioned fixtures
@@ -124,6 +140,7 @@ audience:
 - Avoid hardcoded data
 
 ---
+
 ## Smoke Tests in Production
 
 - Tiny set of critical paths
@@ -132,6 +149,7 @@ audience:
 - Fast feedback on bad releases
 
 ---
+
 ## Wrap-Up
 
 - API testing: integration sweet spot
@@ -142,6 +160,7 @@ audience:
 - CI integration: non-negotiable
 
 ---
+
 ## Common CI Mistakes
 
 - Tests in CI but not blocking

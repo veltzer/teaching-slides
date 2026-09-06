@@ -7,14 +7,17 @@ audience:
   - audiences:developers
 
 ---
+
 # OpenAPI 3.x Specification
 
 ---
+
 ## Document Structure
 
 ![openapi_structure](svg/courses/architecting/api-first-development/02_openapi_3x_specification/openapi_structure.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The OpenAPI document structure
@@ -26,6 +29,7 @@ audience:
 - Tooling
 
 ---
+
 ## Document Structure
 
 ```yaml
@@ -48,6 +52,7 @@ components:
 - `components`: reusable definitions
 
 ---
+
 ## Paths and Operations
 
 ```yaml
@@ -70,6 +75,7 @@ paths:
 - One operation per HTTP method (get, post, put, patch, delete)
 
 ---
+
 ## Parameters
 
 - **path**: in the URL (`/users/{id}`)
@@ -79,6 +85,7 @@ paths:
 - Each typed; documented; required-or-not
 
 ---
+
 ## Request Bodies
 
 ```yaml
@@ -103,6 +110,7 @@ post:
 - File uploads via `multipart/form-data`
 
 ---
+
 ## Response Definitions
 
 ```yaml
@@ -124,6 +132,7 @@ responses:
 - Errors deserve documentation as much as success
 
 ---
+
 ## Reusable Components
 
 ```yaml
@@ -143,6 +152,7 @@ components:
 - Keeps the spec DRY
 
 ---
+
 ## JSON Schema for Validation
 
 - OpenAPI uses (a subset of) JSON Schema
@@ -152,6 +162,7 @@ components:
 - Enums: `enum: [active, inactive, banned]`
 
 ---
+
 ## Schemas Example
 
 ```yaml
@@ -171,6 +182,7 @@ schemas:
 ```
 
 ---
+
 ## Authentication
 
 ```yaml
@@ -194,6 +206,7 @@ security:
 - OAuth2 / OpenID Connect supported
 
 ---
+
 ## Links and Callbacks
 
 - **Links**: navigate from one operation to another (HATEOAS-like)
@@ -203,6 +216,7 @@ security:
 - Most teams skip these; they're powerful when applied
 
 ---
+
 ## Documentation Fields
 
 - `summary`: one-liner for the operation
@@ -212,6 +226,7 @@ security:
 - Take the time to write these well; users see them
 
 ---
+
 ## Examples In Specs
 
 ```yaml
@@ -232,6 +247,7 @@ schemas:
 - Renderers (Swagger UI) show these in the docs
 
 ---
+
 ## Tooling
 
 - **Swagger Editor**: web-based editor with live validation
@@ -241,6 +257,7 @@ schemas:
 - **Swagger UI / Redoc**: render to a doc site
 
 ---
+
 ## Common Spec Mistakes
 
 - Required fields not marked required
@@ -250,6 +267,7 @@ schemas:
 - Validating only manually; should run in CI
 
 ---
+
 ## components Section Layout
 
 ![components_section](svg/courses/architecting/api-first-development/02_openapi_3x_specification/components_section.svg)

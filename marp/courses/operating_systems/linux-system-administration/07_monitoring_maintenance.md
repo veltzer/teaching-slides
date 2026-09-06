@@ -9,10 +9,12 @@ audience:
   - audiences:devops
 
 ---
+
 # System Monitoring and Maintenance
 ## Performance, Logs, Automation, and Disaster Recovery
 
 ---
+
 ## Performance Monitoring: top and htop
 
 ```bash
@@ -31,6 +33,7 @@ htop
 ```
 
 ---
+
 ## Understanding top Output
 
 ```console
@@ -49,6 +52,7 @@ Key metrics:
 - Swap usage increasing = memory pressure
 
 ---
+
 ## Performance Monitoring: vmstat, iostat, sar
 
 ```bash
@@ -69,6 +73,7 @@ sar -q 1 5          # load average
 ```
 
 ---
+
 ## sar Historical Data
 
 ```bash
@@ -92,6 +97,7 @@ sar -A -f /var/log/sysstat/sa15 > report.txt
 Historical `sar` data is invaluable for capacity planning and post-incident analysis.
 
 ---
+
 ## Performance Monitoring: dstat
 
 `dstat` combines `vmstat`, `iostat`, `netstat`, and `ifstat` into one tool.
@@ -120,6 +126,7 @@ dstat -cdnm --output stats.csv 5
 ```
 
 ---
+
 ## dstat Plugins and Advanced Usage
 
 ```bash
@@ -146,6 +153,7 @@ dstat -c -d --disk-util 1
 Note: on newer systems, `dstat` may be replaced by `pcp-dstat` (Performance Co-Pilot).
 
 ---
+
 ## Memory Analysis in Depth
 
 ```bash
@@ -173,6 +181,7 @@ sync; echo 3 > /proc/sys/vm/drop_caches
 ```
 
 ---
+
 ## CPU Analysis Tools
 
 ```bash
@@ -200,6 +209,7 @@ perf report                 # view recorded data
 ```
 
 ---
+
 ## Troubleshooting: strace
 
 ```bash
@@ -223,6 +233,7 @@ strace -o trace.log ls /tmp
 ```
 
 ---
+
 ## strace Practical Examples
 
 ```bash
@@ -246,6 +257,7 @@ strace -tt -o trace.log myapp
 ```
 
 ---
+
 ## Troubleshooting: lsof and dmesg
 
 ```bash
@@ -267,6 +279,7 @@ dmesg | grep -i usb      # filter for USB events
 ```
 
 ---
+
 ## Troubleshooting: Additional Tools
 
 ```bash
@@ -289,6 +302,7 @@ systemd-analyze plot > boot.svg
 ```
 
 ---
+
 ## Log Management: logrotate
 
 ```bash
@@ -321,6 +335,7 @@ logrotate -f /etc/logrotate.d/myapp
 ```
 
 ---
+
 ## logrotate Options Reference
 
 | Option | Purpose |
@@ -338,6 +353,7 @@ logrotate -f /etc/logrotate.d/myapp
 | `dateext` | Use date in rotated filename |
 
 ---
+
 ## Log Management: rsyslog
 
 ```bash
@@ -359,6 +375,7 @@ auth,authpriv.*   /var/log/auth.log
 ```
 
 ---
+
 ## Centralized Logging with rsyslog
 
 ```config
@@ -401,6 +418,7 @@ systemctl restart rsyslog
 - `node_exporter` exposes system metrics
 
 ---
+
 ## Prometheus Configuration
 
 ```yaml
@@ -427,6 +445,7 @@ scrape_configs:
 ```
 
 ---
+
 ## Prometheus Alert Rules
 
 ```yaml
@@ -453,6 +472,7 @@ groups:
 ```
 
 ---
+
 ## Monitoring with Nagios/Zabbix
 
 - `Nagios` - traditional, plugin-based monitoring
@@ -469,6 +489,7 @@ Both support:
 - Distributed monitoring
 
 ---
+
 ## Scheduled Tasks: crontab
 
 ```bash
@@ -493,6 +514,7 @@ crontab -l
 ```
 
 ---
+
 ## crontab Advanced Usage
 
 ```bash
@@ -517,6 +539,7 @@ ls /etc/cron.monthly/
 ```
 
 ---
+
 ## Scheduled Tasks: at and systemd Timers
 
 ```bash
@@ -539,6 +562,7 @@ atrm 5
 - Persistent: runs missed jobs after reboot
 
 ---
+
 ## Disaster Recovery Planning
 
 Key components:
@@ -554,6 +578,7 @@ Checklist:
 1. Contact escalation procedures
 
 ---
+
 ## Disaster Recovery: Practical Steps
 
 ```bash
@@ -581,6 +606,7 @@ borg extract /backup/repo::latest
 ```
 
 ---
+
 ## System Updates and Patches
 
 ```bash
@@ -604,6 +630,7 @@ cat /var/log/apt/history.log
 ```
 
 ---
+
 ## Unattended Upgrades Configuration
 
 ```config
@@ -625,6 +652,7 @@ Unattended-Upgrade::Automatic-Reboot "false";
 ```
 
 ---
+
 ## Automation with Ansible
 
 ```yaml
@@ -655,6 +683,7 @@ ansible-playbook -i inventory.ini playbook.yml
 ```
 
 ---
+
 ## Ansible Advanced Usage
 
 ```yaml
@@ -690,6 +719,7 @@ ansible-playbook -i inventory.ini playbook.yml
 ```
 
 ---
+
 ## Ansible Ad-Hoc Commands
 
 ```bash
@@ -713,6 +743,7 @@ ansible all -m setup -a "filter=ansible_os_family"
 ```
 
 ---
+
 ## Best Practices for Production
 
 1. **Change management** - no ad-hoc changes, use IaC
@@ -725,6 +756,7 @@ ansible all -m setup -a "filter=ansible_os_family"
 1. **Capacity planning** - trend analysis, proactive scaling
 
 ---
+
 ## Production Runbook Template
 
 Every critical service should have a runbook:
@@ -745,6 +777,7 @@ git init /opt/runbooks
 ```
 
 ---
+
 ## Process Accounting
 
 Track resource usage per process and per user with `psacct`/`acct`.
@@ -770,6 +803,7 @@ ac -dp                 # daily connect time per user
 ```
 
 ---
+
 ## /proc/meminfo Deep Dive
 
 ```bash
@@ -798,6 +832,7 @@ watch -n 1 'grep -E "Dirty|Writeback" /proc/meminfo'
 ```
 
 ---
+
 ## BPF and bpftrace
 
 `BPF` (Berkeley Packet Filter) enables safe kernel-level tracing without recompilation.
@@ -824,6 +859,7 @@ bpftrace -e 'kprobe:tcp_connect {
 ```
 
 ---
+
 ## BPF Tools (bcc)
 
 ```bash
@@ -852,6 +888,7 @@ offcputime-bpfcc -p <PID> 5
 These tools run in production with minimal overhead due to `BPF` safety guarantees.
 
 ---
+
 ## Grafana Dashboards
 
 ```bash
@@ -880,6 +917,7 @@ Key dashboard components:
 ```
 
 ---
+
 ## Incident Response Checklist
 
 When a production incident occurs:
@@ -905,6 +943,7 @@ journalctl --since "1 hour ago" >> /tmp/incident-*.log
 1. **Postmortem** - blameless review, document lessons learned
 
 ---
+
 ## Capacity Planning
 
 ```bash
@@ -922,6 +961,7 @@ df -i /
 ```
 
 Key metrics to track for capacity planning:
+
 | Resource | Warning | Critical |
 |----------|---------|----------|
 | CPU | Sustained > 70% | Sustained > 90% |
@@ -931,6 +971,7 @@ Key metrics to track for capacity planning:
 | Network | > 70% bandwidth | > 90% bandwidth |
 
 ---
+
 ## collectd Metrics Collection
 
 `collectd` is a lightweight daemon that collects system metrics and writes them to various backends.
@@ -969,6 +1010,7 @@ collectdctl listval
 ```
 
 ---
+
 ## /proc/diskstats Explained
 
 `/proc/diskstats` provides raw I/O statistics per block device.
@@ -999,6 +1041,7 @@ iostat -xz 1
 ```
 
 ---
+
 ## Network Monitoring with Netdata
 
 `Netdata` provides real-time, per-second monitoring with a built-in web dashboard.
@@ -1031,6 +1074,7 @@ curl -s localhost:19999/api/v1/alarms | python3 -m json.tool
 ```
 
 ---
+
 ## systemd Service Watchdogs
 
 `systemd` can automatically restart services that stop responding using the watchdog mechanism.
@@ -1066,6 +1110,7 @@ journalctl -u myapp.service | grep watchdog
 ```
 
 ---
+
 ## Kernel Live Patching
 
 Apply critical kernel patches without rebooting using `livepatch` or `kpatch`.
@@ -1101,6 +1146,7 @@ Benefits:
 - Patches are verified for safety before application
 
 ---
+
 ## Configuration Drift Detection
 
 Detect unauthorized or accidental changes to system configuration.
@@ -1146,6 +1192,7 @@ Key principles:
 1. Change window agreed upon with stakeholders
 
 ---
+
 ## Exercise: Set Up Monitoring Stack
 
 Deploy a basic monitoring stack with `Prometheus` and `node_exporter`:

@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Conditional Probability and Independence
 
 ---
+
 ## What This Chapter Covers
 
 - Conditional probability as a new measure
@@ -21,11 +23,13 @@ audience:
 - A glimpse of conditioning on &sigma;-algebras
 
 ---
+
 ## Bayes' Theorem
 
 ![bayes rule](svg/courses/math/statistics-theory/02_conditional_probability/bayes_rule.svg)
 
 ---
+
 ## Conditioning Restricts The World
 
 - Given an event B with P(B) &gt; 0, define **P(A | B) = P(A &cap; B) / P(B)**
@@ -35,6 +39,7 @@ audience:
 - When P(B) = 0 the elementary definition fails; we'll need conditional expectation (last slide) to handle it
 
 ---
+
 ## The Chain Rule
 
 - Rearranging the definition: P(A &cap; B) = P(A | B) P(B)
@@ -44,6 +49,7 @@ audience:
 - The order of the chain is arbitrary; choose whichever ordering makes the conditionals easy
 
 ---
+
 ## The Law Of Total Probability
 
 - Let {B&#8345;} be a **partition** of &Omega; (disjoint, exhaustive, each with positive probability)
@@ -53,6 +59,7 @@ audience:
 - The continuous analog replaces the sum by an integral against the conditioning density
 
 ---
+
 ## Bayes' Theorem, General Form
 
 - Combine the chain rule with total probability: for a partition {B&#8345;},
@@ -62,6 +69,7 @@ audience:
 - The classic trap is ignoring the prior P(B&#8459;): a rare condition + an imperfect test &#8594; a "positive" is still probably a false alarm
 
 ---
+
 ## Independence Of Events
 
 - Events A and B are **independent** iff P(A &cap; B) = P(A) P(B) — equivalently (when defined) P(A | B) = P(A): B carries no information about A
@@ -71,6 +79,7 @@ audience:
 - Always check whether independence is a modeling *assumption* or a derived fact — most wrong analyses assume it for free
 
 ---
+
 ## Conditional Independence
 
 - A and B are **conditionally independent given C** iff P(A &cap; B | C) = P(A | C) P(B | C) — they're independent *inside the world where C is known*
@@ -80,6 +89,7 @@ audience:
 - Spurious correlations often vanish under the right conditioning — and genuine ones can appear — so the conditioning set matters enormously
 
 ---
+
 ## Conditioning On A &sigma;-Algebra
 
 - When P(B) = 0 (e.g. conditioning a continuous variable on "X = x"), P(A | B) = P(A&cap;B)/P(B) is the indeterminate 0/0 — the elementary definition simply doesn't apply
@@ -89,6 +99,7 @@ audience:
 - We'll develop conditional expectation properly when we have integration in hand; for now, just know the elementary formula is a special case, not the whole story
 
 ---
+
 ## Bayes In Code
 
 ```python
@@ -107,6 +118,7 @@ print("P(+) empirical:", pos.mean(), " formula:", evidence)
 ```
 
 ---
+
 ## Common Mistakes
 
 - Forgetting the prior in Bayes' theorem (the base-rate fallacy)

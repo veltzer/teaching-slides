@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # URL Structure and Naming
 
 ---
+
 ## URL as User Interface
 
 - URLs are read by developers, not just machines
@@ -18,11 +20,13 @@ audience:
 - Spend effort getting URLs right; they outlast almost everything else
 
 ---
+
 ## URL Anatomy
 
 ![url_anatomy](svg/courses/architecting/api-design-best-practices/03_url_structure_and_naming/url_anatomy.svg)
 
 ---
+
 ## Resource Naming
 
 - Use nouns, not verbs: `/orders`, not `/getOrders`
@@ -32,6 +36,7 @@ audience:
 - Be consistent across the whole API
 
 ---
+
 ## Hierarchical Resources
 
 - Express ownership and containment with nesting
@@ -40,6 +45,7 @@ audience:
 - Deep nesting (>2 levels) gets unreadable; flatten when it does
 
 ---
+
 ## When to Nest
 
 - Nest when the child resource only makes sense in the parent's context
@@ -47,6 +53,7 @@ audience:
 - A user's address might also stand alone — keep it as `/addresses/N` and reference
 
 ---
+
 ## When Not to Nest
 
 - "User has many orders, order has many items" → don't write `/users/42/orders/123/items/9`
@@ -54,6 +61,7 @@ audience:
 - `/items/9` with `order_id` field beats deep nesting
 
 ---
+
 ## Collection vs Singleton Resources
 
 - `/orders` is a collection — multiple orders
@@ -62,6 +70,7 @@ audience:
 - Use `/me` or `/current` for "the actor making the request"
 
 ---
+
 ## Path vs Query Parameters
 
 - **Path**: identifies a resource — `/users/42`
@@ -69,6 +78,7 @@ audience:
 - Path = which resource; query = how to view it
 
 ---
+
 ## Path Parameter Examples
 
 - `/users/{user_id}` — specific user
@@ -76,6 +86,7 @@ audience:
 - The path identifies; nothing more
 
 ---
+
 ## Query Parameter Examples
 
 - `?status=pending` — filter
@@ -84,6 +95,7 @@ audience:
 - `?fields=id,total` — sparse fieldsets
 
 ---
+
 ## Action Endpoints
 
 - Sometimes the operation isn't a CRUD verb
@@ -94,6 +106,7 @@ audience:
 - Either is fine; pick one and apply consistently
 
 ---
+
 ## Naming Patterns to Avoid
 
 - `/api/v1/getUserOrdersByCustomerId` — verb soup
@@ -102,6 +115,7 @@ audience:
 - Inconsistent plurals: `/orders` and `/customer`
 
 ---
+
 ## Pluralization
 
 - Almost everything should be plural: `/orders`, `/users`, `/products`
@@ -110,6 +124,7 @@ audience:
 - Pick a rule, document it, follow it
 
 ---
+
 ## Trailing Slashes
 
 - Pick a rule: with or without trailing slash
@@ -117,6 +132,7 @@ audience:
 - Consistency reduces 404s from copy-pasted URLs
 
 ---
+
 ## Casing Recap
 
 - URLs: lowercase, hyphen-separated
@@ -125,6 +141,7 @@ audience:
 - Header names: case-insensitive, but conventionally `Pascal-Kebab-Case`
 
 ---
+
 ## A Concrete Style Guide Excerpt
 
 - Plural nouns for collections
@@ -135,6 +152,7 @@ audience:
 - Cursor-based pagination
 
 ---
+
 ## Summary
 
 - URLs are part of the user interface

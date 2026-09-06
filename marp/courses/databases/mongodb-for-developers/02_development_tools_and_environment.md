@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Development Tools and Environment
 
 ---
+
 ## What This Chapter Covers
 
 - Local vs cloud (Atlas)
@@ -20,6 +22,7 @@ audience:
 - Connection strings
 
 ---
+
 ## Local Install
 
 - macOS: `brew install mongodb-community`
@@ -28,6 +31,7 @@ audience:
 - Service auto-starts
 
 ---
+
 ## Atlas
 
 - MongoDB's hosted cloud
@@ -37,6 +41,7 @@ audience:
 - Default for new projects
 
 ---
+
 ## Docker
 
 ```bash
@@ -48,11 +53,13 @@ docker run -d -p 27017:27017 -v mongo-data:/data/db mongo:7
 - Fine for development
 
 ---
+
 ## Tooling Landscape
 
 ![tooling_landscape](svg/courses/databases/mongodb-for-developers/02_development_tools_and_environment/tooling_landscape.svg)
 
 ---
+
 ## mongosh
 
 - Modern shell (replaces legacy `mongo`)
@@ -61,6 +68,7 @@ docker run -d -p 27017:27017 -v mongo-data:/data/db mongo:7
 - Run scripts inline or from file
 
 ---
+
 ## Compass
 
 - GUI from MongoDB
@@ -69,6 +77,7 @@ docker run -d -p 27017:27017 -v mongo-data:/data/db mongo:7
 - Schema analyzer: infer document shapes
 
 ---
+
 ## IDE Plugins
 
 - VS Code: MongoDB for VS Code
@@ -77,6 +86,7 @@ docker run -d -p 27017:27017 -v mongo-data:/data/db mongo:7
 - Inline within code
 
 ---
+
 ## Connection Strings
 
 ```misc
@@ -88,11 +98,13 @@ mongodb+srv://user:pass@cluster.mongodb.net/dbname
 - Options: timeouts, replicas, auth
 
 ---
+
 ## Connection String Anatomy
 
 ![connection_string](svg/courses/databases/mongodb-for-developers/02_development_tools_and_environment/connection_string.svg)
 
 ---
+
 ## Database Users
 
 - Atlas: web UI
@@ -101,6 +113,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/dbname
 - Don't use root in apps
 
 ---
+
 ## SSL/TLS
 
 - Required for Atlas
@@ -109,6 +122,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/dbname
 - Add `?tls=true` to connection string
 
 ---
+
 ## Multiple Environments
 
 - Dev / staging / prod: separate clusters
@@ -117,6 +131,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/dbname
 - Common pattern: env var `MONGO_URI`
 
 ---
+
 ## Connection Pooling
 
 - Driver maintains a pool
@@ -125,6 +140,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/dbname
 - Connection limits on Atlas tier
 
 ---
+
 ## Common Setup Mistakes
 
 - App connecting as root

@@ -8,10 +8,12 @@ audience:
   - audiences:developers
 
 ---
+
 # Socket Programming
 ## Building Networked Applications
 
 ---
+
 ## What is a Socket?: Details
 - A socket is an endpoint for network communication
 - Provides a file-descriptor-like interface for sending/receiving data
@@ -48,6 +50,7 @@ audience:
 ![udp_communication_no_connection](svg/courses/networking/networking-basics/06_socket_programming/udp_communication_no_connection.svg)
 
 ---
+
 ## Socket API: System Call Flow
 ### TCP Connection Lifecycle
 ### UDP Communication (no connection)
@@ -440,7 +443,9 @@ while inputs:
 ```
 
 ---
+
 ## select vs poll vs epoll: Comparison
+
 | Feature | select | poll | epoll |
 |---------|--------|------|-------|
 | Max FDs | 1024 (FD_SETSIZE) | Unlimited | Unlimited |
@@ -1078,6 +1083,7 @@ def robust_connect(host, port, timeout=10):
 ## Common Socket Errors
 
 **Common socket errors:**
+
 | Error | Meaning |
 |-------|---------|
 | ECONNREFUSED | No process listening on port |

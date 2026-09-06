@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Elasticsearch Fundamentals
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![cluster_anatomy](svg/courses/databases/elasticsearch-for-developers/02_elasticsearch_fundamentals/cluster_anatomy.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Cluster, node, index, shard
@@ -25,6 +27,7 @@ audience:
 - Health states
 
 ---
+
 ## Cluster
 
 - A group of nodes that share data
@@ -32,6 +35,7 @@ audience:
 - One master node coordinates metadata
 
 ---
+
 ## Node
 
 - A single Elasticsearch instance
@@ -39,6 +43,7 @@ audience:
 - Most production: dedicated master + data nodes
 
 ---
+
 ## Index
 
 - A namespace for documents
@@ -47,11 +52,13 @@ audience:
 - One mapping (schema)
 
 ---
+
 ## Index, Shard, Replica
 
 ![index_anatomy](svg/courses/databases/elasticsearch-for-developers/02_elasticsearch_fundamentals/index_anatomy.svg)
 
 ---
+
 ## Shard
 
 - A subset of an index's data
@@ -60,6 +67,7 @@ audience:
 - Distributes load and storage
 
 ---
+
 ## Primary And Replica Shards
 
 - Each shard: 1 primary + N replicas
@@ -68,11 +76,13 @@ audience:
 - Replicas survive node failure
 
 ---
+
 ## Cluster Topology
 
 ![cluster_nodes_shards](svg/courses/databases/elasticsearch-for-developers/02_elasticsearch_fundamentals/cluster_nodes_shards.svg)
 
 ---
+
 ## Documents
 
 - JSON objects
@@ -81,6 +91,7 @@ audience:
 - Versioned for optimistic concurrency
 
 ---
+
 ## A Simple Example
 
 ```bash
@@ -93,6 +104,7 @@ GET /products/_search?q=phone
 ```
 
 ---
+
 ## Health States
 
 - **green**: all primaries and replicas allocated
@@ -101,6 +113,7 @@ GET /products/_search?q=phone
 - Yellow is OK in dev; not in prod
 
 ---
+
 ## Types (Deprecated)
 
 - Older versions: types within an index (like sub-tables)
@@ -109,6 +122,7 @@ GET /products/_search?q=phone
 - Often: one logical "thing" per index
 
 ---
+
 ## Mapping
 
 - The schema for an index
@@ -117,6 +131,7 @@ GET /products/_search?q=phone
 - Better: define explicitly
 
 ---
+
 ## Refresh
 
 - New / changed documents not searchable until refreshed
@@ -125,6 +140,7 @@ GET /products/_search?q=phone
 - Manual refresh for tests
 
 ---
+
 ## CRUD APIs
 
 - PUT /index/_doc/id (insert / replace)
@@ -134,6 +150,7 @@ GET /products/_search?q=phone
 - GET /index/_doc/id
 
 ---
+
 ## Common Fundamental Mistakes
 
 - Letting auto-mapping run; weird inferred types

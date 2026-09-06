@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Data Types and Data Movement
 
 ---

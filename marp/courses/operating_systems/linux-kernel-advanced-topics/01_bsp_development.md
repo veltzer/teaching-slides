@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Board Support Package (BSP) Development
 
 ---
+
 ## What is a BSP?: Details
 1. Software layer between hardware and OS kernel
 1. Hardware-specific code and configurations

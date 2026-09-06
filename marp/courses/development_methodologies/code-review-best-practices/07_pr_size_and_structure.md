@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # PR Size and Structure
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![pr_sizing](svg/courses/development_methodologies/code-review-best-practices/07_pr_size_and_structure/pr_sizing.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why smaller PRs are better
@@ -26,6 +28,7 @@ audience:
 - Splitting big work
 
 ---
+
 ## Why Small PRs
 
 - Easier to review thoroughly
@@ -35,11 +38,13 @@ audience:
 - Keep momentum on the team
 
 ---
+
 ## Defect Detection vs PR Size
 
 ![pr_size_curve](svg/courses/development_methodologies/code-review-best-practices/07_pr_size_and_structure/pr_size_curve.svg)
 
 ---
+
 ## How Small Is Small
 
 - Industry research: ~100-200 lines is the sweet spot
@@ -49,6 +54,7 @@ audience:
 - "Small" relative to complexity, not just line count
 
 ---
+
 ## Splitting a Big Change
 
 - Refactor first, in its own PR
@@ -58,6 +64,7 @@ audience:
 - Reviews go faster; risk lower at each step
 
 ---
+
 ## Stacked PRs
 
 - A series of PRs each based on the previous
@@ -67,6 +74,7 @@ audience:
 - The pattern at companies that do trunk-based development
 
 ---
+
 ## PR Titles
 
 - Should be informative on its own
@@ -76,6 +84,7 @@ audience:
 - Will appear in the merge commit, in release notes, in git log
 
 ---
+
 ## PR Descriptions
 
 - What changed and why
@@ -86,6 +95,7 @@ audience:
 - A good description halves review time
 
 ---
+
 ## A PR Description Template
 
 ```misc
@@ -109,6 +119,7 @@ What could break; rollback plan.
 - Saves authors from inventing the structure each time
 
 ---
+
 ## Linking to Issues
 
 - "Fixes #123" auto-closes the issue when merged (GitHub, GitLab)
@@ -118,6 +129,7 @@ What could break; rollback plan.
 - Audit trails for compliance
 
 ---
+
 ## Draft PRs
 
 - "I want feedback but it's not done"
@@ -127,6 +139,7 @@ What could break; rollback plan.
 - Convert to "Ready for Review" when done
 
 ---
+
 ## When To Open Draft
 
 - After enough work to show direction
@@ -136,6 +149,7 @@ What could break; rollback plan.
 - Cheaper to redirect than to redo
 
 ---
+
 ## Atomic Commits
 
 - Each commit does one thing
@@ -145,6 +159,7 @@ What could break; rollback plan.
 - Style varies by team; pick one and stick
 
 ---
+
 ## Cleaning Up Before Review
 
 - Squash WIP commits
@@ -155,6 +170,7 @@ What could break; rollback plan.
 - Submitting messy is disrespectful of reviewer time
 
 ---
+
 ## Big PRs That Can't Be Split
 
 - Massive renames
@@ -165,6 +181,7 @@ What could break; rollback plan.
 - Pair with manual smoke testing
 
 ---
+
 ## The Cost of Large PRs
 
 - Stalled in review for days
@@ -175,6 +192,7 @@ What could break; rollback plan.
 - Smaller PRs are kinder to your future self
 
 ---
+
 ## Common Mistakes
 
 - One huge PR for a feature — sits in review for a week

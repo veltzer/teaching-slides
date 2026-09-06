@@ -9,10 +9,12 @@ audience:
   - audiences:devops
 
 ---
+
 # User Management and System Security
 ## Users, ACLs, PAM, SSH, and Hardening
 
 ---
+
 ## User and Group Management
 
 ```bash
@@ -34,6 +36,7 @@ groupdel devs
 ```
 
 ---
+
 ## Important User Files
 
 | File | Purpose |
@@ -52,6 +55,7 @@ chage -M 90 -W 7 alice     # max 90 days, warn 7
 ```
 
 ---
+
 ## Understanding /etc/passwd and /etc/shadow
 
 ```bash
@@ -75,6 +79,7 @@ pwunconv      # merge shadow back to passwd
 ```
 
 ---
+
 ## Password Policies
 
 ```bash
@@ -99,6 +104,7 @@ maxrepeat = 3     # max consecutive identical chars
 ```
 
 ---
+
 ## Special User Accounts
 
 ```bash
@@ -123,6 +129,7 @@ awk -F: '$3 == 0 {print $1}' /etc/passwd
 ```
 
 ---
+
 ## Linux File Permissions
 
 ![linux_permissions](svg/courses/operating_systems/linux-system-administration/05_user_management_security/linux_permissions.svg)
@@ -150,6 +157,7 @@ chmod 1777 /tmp          # sticky
 ```
 
 ---
+
 ## Default Permissions: umask
 
 ```bash
@@ -171,6 +179,7 @@ umask 077       # files: 600, dirs: 700
 ```
 
 ---
+
 ## Access Control Lists (ACLs)
 
 Standard permissions (`rwx`) are limited to owner, group, other. ACLs provide fine-grained control.
@@ -196,6 +205,7 @@ setfacl -b /data/shared
 ```
 
 ---
+
 ## ACL Advanced Usage
 
 ```bash
@@ -230,6 +240,7 @@ PAM module types: `auth`, `account`, `password`, `session`.
 Configuration files in `/etc/pam.d/`.
 
 ---
+
 ## PAM Configuration Example
 
 ```config
@@ -247,6 +258,7 @@ Control flags:
 - `optional` - result ignored unless only module
 
 ---
+
 ## Common PAM Modules
 
 | Module | Purpose |
@@ -267,6 +279,7 @@ Control flags:
 ```
 
 ---
+
 ## PAM Practical: Login Restrictions
 
 ```config
@@ -290,6 +303,7 @@ account required pam_access.so
 ```
 
 ---
+
 ## sudo Configuration
 
 ```bash
@@ -320,6 +334,7 @@ echo "alice ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/alice
 ```
 
 ---
+
 ## sudo Advanced Configuration
 
 ```bash
@@ -347,6 +362,7 @@ Defaults  iolog_dir="/var/log/sudo-io/%{user}"
 ```
 
 ---
+
 ## SSH In Depth
 
 ```bash
@@ -365,6 +381,7 @@ ssh-add -l
 ```
 
 ---
+
 ## SSH Key Types and Best Practices
 
 | Key Type | Recommended | Notes |
@@ -390,6 +407,7 @@ ssh-keygen -e -f key.pub -m RFC4716 > key.rfc
 ```
 
 ---
+
 ## SSH Config File
 
 ```config
@@ -416,6 +434,7 @@ ssh internal-db
 ```
 
 ---
+
 ## SSH Config Advanced Options
 
 ```config
@@ -444,6 +463,7 @@ mkdir -p ~/.ssh/sockets
 ```
 
 ---
+
 ## SSH Tunneling and Jump Hosts
 
 ```bash
@@ -464,6 +484,7 @@ scp -o ProxyJump=bastion file user@target:/path/
 ```
 
 ---
+
 ## SSH Tunneling Practical Examples
 
 ```bash
@@ -488,6 +509,7 @@ ssh -D 1080 -N -f user@server
 ```
 
 ---
+
 ## SSH Hardening
 
 ```config
@@ -509,6 +531,7 @@ systemctl restart sshd
 ```
 
 ---
+
 ## SSH Hardening: Advanced Options
 
 ```config
@@ -533,6 +556,7 @@ Banner /etc/ssh/banner.txt
 ```
 
 ---
+
 ## fail2ban
 
 ```bash
@@ -561,6 +585,7 @@ fail2ban-client status sshd
 ```
 
 ---
+
 ## fail2ban Advanced Configuration
 
 ```ini
@@ -593,6 +618,7 @@ fail2ban-regex /var/log/auth.log /etc/fail2ban/filter.d/sshd.conf
 ```
 
 ---
+
 ## File Integrity Monitoring
 
 ```bash
@@ -617,6 +643,7 @@ tripwire --check
 ```
 
 ---
+
 ## AIDE Configuration
 
 ```config
@@ -644,6 +671,7 @@ Attributes: `p`=permissions, `i`=inode, `u`=user, `g`=group, `s`=size, `sha256`=
 ```
 
 ---
+
 ## Security Auditing with auditd
 
 ```bash
@@ -665,6 +693,7 @@ aureport --login --failed
 ```
 
 ---
+
 ## auditd Persistent Rules
 
 ```bash
@@ -693,6 +722,7 @@ aureport --login --failed
 ```
 
 ---
+
 ## Certificate Management
 
 ```bash
@@ -714,6 +744,7 @@ openssl verify -CAfile ca.crt server.crt
 ```
 
 ---
+
 ## Let's Encrypt with certbot
 
 ```bash
@@ -740,6 +771,7 @@ Certificate files:
 - `/etc/letsencrypt/live/example.com/privkey.pem`
 
 ---
+
 ## System Logging and Security Monitoring
 
 ```bash
@@ -761,6 +793,7 @@ journalctl -f -u sshd
 ```
 
 ---
+
 ## Security Monitoring Checklist
 
 Regular checks for system administrators:
@@ -805,6 +838,7 @@ shadow: files ldap
 ```
 
 ---
+
 ## Configuring LDAP Client (sssd)
 
 ```bash
@@ -833,6 +867,7 @@ systemctl enable --now sssd
 ```
 
 ---
+
 ## Two-Factor Authentication with PAM
 
 ```bash
@@ -861,6 +896,7 @@ systemctl restart sshd
 ```
 
 ---
+
 ## SSH Certificates
 
 SSH certificates are signed keys - no need to distribute `authorized_keys` to every server.
@@ -889,6 +925,7 @@ TrustedUserCAKeys /etc/ssh/ca_key.pub
 ```
 
 ---
+
 ## CIS Benchmarks Overview
 
 CIS (Center for Internet Security) benchmarks provide hardening checklists.
@@ -911,6 +948,7 @@ echo "install squashfs /bin/true" > /etc/modprobe.d/squashfs.conf
 ```
 
 ---
+
 ## Security Scanning with Lynis
 
 ```bash
@@ -939,6 +977,7 @@ grep "suggestion\[\]" /var/log/lynis-report.dat
 ```
 
 ---
+
 ## Chroot Jails
 
 A `chroot` changes the apparent root directory for a process, isolating it from the rest of the filesystem.
@@ -965,6 +1004,7 @@ chroot /srv/jail /bin/bash
 ```
 
 ---
+
 ## Linux File Capabilities
 
 File capabilities provide fine-grained alternatives to `SUID` root.
@@ -986,6 +1026,7 @@ getcap -r / 2>/dev/null
 ```
 
 Common capabilities:
+
 | Capability | Purpose |
 |-----------|---------|
 | `CAP_NET_BIND_SERVICE` | Bind to ports below 1024 |
@@ -995,6 +1036,7 @@ Common capabilities:
 | `CAP_CHOWN` | Change file ownership |
 
 ---
+
 ## Exercise: Security Audit Walkthrough
 
 Perform a mini security audit on a test system:
@@ -1024,6 +1066,7 @@ lynis audit system --quick
 ```
 
 ---
+
 ## Troubleshooting: Locked Out Users
 
 Common lockout scenarios and fixes:
@@ -1052,6 +1095,7 @@ aa-status                          # AppArmor
 ```
 
 ---
+
 ## SELinux Quick Overview for Ubuntu
 
 `SELinux` enforces mandatory access control via labels on files, processes, and ports.
@@ -1081,6 +1125,7 @@ ausearch -m avc -ts recent
 ```
 
 ---
+
 ## Password Hash Algorithms
 
 The hash prefix in `/etc/shadow` identifies the algorithm used.
@@ -1106,6 +1151,7 @@ passwd alice
 ```
 
 ---
+
 ## nscd Name Service Cache
 
 `nscd` caches results from `NSS` lookups (users, groups, hosts) to reduce LDAP/DNS load.
@@ -1136,6 +1182,7 @@ nscd -i hosts
 Note: on systems with `sssd`, prefer `sssd` caching over `nscd` to avoid conflicts.
 
 ---
+
 ## Restricted Shells
 
 A restricted shell (`rbash`) prevents users from changing directories, modifying `PATH`, or running commands with `/`.
@@ -1165,6 +1212,7 @@ Restrictions enforced by `rbash`:
 - Cannot redirect output with `>` or `>>`
 
 ---
+
 ## ulimits Deep Dive
 
 Resource limits are enforced per-process via `pam_limits` and the `ulimit` built-in.
@@ -1198,6 +1246,7 @@ alice        hard    as       4194304
 ```
 
 ---
+
 ## /etc/securetty and Console Access
 
 `/etc/securetty` lists terminals where `root` can log in directly (used by `pam_securetty`).
@@ -1233,6 +1282,7 @@ passwd root
 ```
 
 ---
+
 ## Security Incident Response: Compromised Account
 
 When a user account is suspected to be compromised, act immediately.
@@ -1263,6 +1313,7 @@ find /tmp /var/tmp -user compromised_user
 ```
 
 ---
+
 ## Exercise: Harden a Fresh Server
 
 Apply these hardening steps to a new Ubuntu server:
@@ -1300,6 +1351,7 @@ lynis audit system
 ```
 
 ---
+
 ## Kernel Hardening: sysctl Security
 
 ```bash
@@ -1335,6 +1387,7 @@ sysctl kernel.dmesg_restrict
 ```
 
 ---
+
 ## Immutable and Append-Only Files
 
 `chattr` sets extended file attributes that even `root` must explicitly remove.
@@ -1363,6 +1416,7 @@ Use cases:
 - Protect `/etc/passwd` and `/etc/shadow` during maintenance
 
 ---
+
 ## systemd Service Security Features
 
 Harden services using `systemd` built-in sandboxing directives:
@@ -1398,6 +1452,7 @@ systemd-analyze security nginx.service
 ```
 
 ---
+
 ## Security Compliance Frameworks
 
 Overview of major compliance frameworks relevant to `Linux` administrators:

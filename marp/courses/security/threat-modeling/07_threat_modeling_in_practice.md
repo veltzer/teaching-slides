@@ -11,9 +11,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Threat Modeling in Practice
 
 ---
+
 ## What This Chapter Covers
 
 - Microservices: service-to-service threats
@@ -23,6 +25,7 @@ audience:
 - MITRE ATT&CK mapping
 
 ---
+
 ## Microservices Are a Threat Model Multiplier
 
 - More services means more network calls
@@ -32,6 +35,7 @@ audience:
 - More attack surface, more defense in depth needed
 
 ---
+
 ## Service-to-Service Threats
 
 - Spoofing — service A pretends to be service B
@@ -41,11 +45,13 @@ audience:
 - All resolved with: mutual TLS, signed tokens, request signing
 
 ---
+
 ## Microservices Threat Map
 
 ![microservices_threats](svg/courses/security/threat-modeling/07_threat_modeling_in_practice/microservices_threats.svg)
 
 ---
+
 ## API Gateway as Trust Boundary
 
 - The major boundary between external and internal
@@ -55,6 +61,7 @@ audience:
 - Defense: gateway enforces, services still verify
 
 ---
+
 ## Service Mesh Considerations
 
 - Mesh handles mTLS, retries, observability
@@ -64,6 +71,7 @@ audience:
 - Don't trust the mesh blindly — model what it actually enforces
 
 ---
+
 ## Container and Orchestration Threats
 
 - Container escape to host
@@ -73,6 +81,7 @@ audience:
 - Mitigations: pod security, image signing, network policies, runtime detection
 
 ---
+
 ## Distributed Authentication
 
 - OAuth2, OIDC, JWT — standard but complex
@@ -82,6 +91,7 @@ audience:
 - Threat: long-lived tokens that cannot be revoked quickly
 
 ---
+
 ## Distributed Authorization
 
 - "Who can do what" across many services
@@ -91,6 +101,7 @@ audience:
 - Pattern: zero-trust within the cluster
 
 ---
+
 ## Cloud Shared Responsibility
 
 - Provider secures the infrastructure
@@ -100,6 +111,7 @@ audience:
 - Lock down by default; explicitly grant access
 
 ---
+
 ## Cloud-Specific Threats
 
 - Public buckets — the most famous breach class
@@ -109,6 +121,7 @@ audience:
 - Each cloud has a security best-practices checklist — start there
 
 ---
+
 ## IAM Threat Modeling
 
 - Each role and policy is a potential privilege escalation path
@@ -118,6 +131,7 @@ audience:
 - Audit IAM as part of every threat model
 
 ---
+
 ## Storage and Data Access Threats
 
 - Bucket / blob policies — can be public unintentionally
@@ -127,6 +141,7 @@ audience:
 - Encryption keys — KMS access is access to data
 
 ---
+
 ## Network Threats in Cloud
 
 - Security groups too permissive
@@ -136,6 +151,7 @@ audience:
 - Internal services exposed when they shouldn't be
 
 ---
+
 ## Serverless Threats
 
 - Shorter-lived contexts — limited ability to detect persistent threats
@@ -145,11 +161,13 @@ audience:
 - Dependency confusion in package supply chain
 
 ---
+
 ## Web Application Threat Surface
 
 ![web_app_threats](svg/courses/security/threat-modeling/07_threat_modeling_in_practice/web_app_threats.svg)
 
 ---
+
 ## REST API Threat Surface
 
 - Authentication on every endpoint, not just login
@@ -159,6 +177,7 @@ audience:
 - Rate limiting per user and per endpoint
 
 ---
+
 ## GraphQL Considerations
 
 - Single endpoint changes the rate-limit model
@@ -168,6 +187,7 @@ audience:
 - Persistent queries to limit attack surface
 
 ---
+
 ## API Authentication Threats
 
 - API keys leaked in client code or logs
@@ -177,6 +197,7 @@ audience:
 - Token in URL — appears in logs, browser history, referer
 
 ---
+
 ## Input Validation Threats
 
 - Injection: SQL, NoSQL, command, LDAP, XPath
@@ -186,6 +207,7 @@ audience:
 - Validate at boundaries; sanitize where output is rendered
 
 ---
+
 ## Rate Limiting and Abuse
 
 - Brute force — slow it down
@@ -195,6 +217,7 @@ audience:
 - Abuse-pattern detection at the application layer
 
 ---
+
 ## Threat Libraries
 
 - Reusable lists of threats per system pattern
@@ -204,6 +227,7 @@ audience:
 - Build your own organizational library — recurring threats become recurring defenses
 
 ---
+
 ## Building Your Threat Library
 
 - Start with threats found in real reviews
@@ -213,6 +237,7 @@ audience:
 - Audit annually; threats become obsolete or evolve
 
 ---
+
 ## MITRE ATT&CK Framework
 
 - Catalog of adversary tactics and techniques
@@ -222,6 +247,7 @@ audience:
 - Map your threats to ATT&CK for shared vocabulary with defenders
 
 ---
+
 ## ATT&CK in Threat Modeling
 
 - For each identified threat, find the matching ATT&CK technique
@@ -231,6 +257,7 @@ audience:
 - Increasingly common in security-mature teams
 
 ---
+
 ## Common Industry Patterns
 
 - E-commerce — fraud, account takeover, payment threats
@@ -240,6 +267,7 @@ audience:
 - Each industry has known threat patterns — start with them
 
 ---
+
 ## Threat Modeling for ML Systems
 
 - Training data poisoning
@@ -249,6 +277,7 @@ audience:
 - Specialized methodology emerging — early days
 
 ---
+
 ## Anti-Patterns at Scale
 
 - One person owns all threat models — bus-factor of one
@@ -258,6 +287,7 @@ audience:
 - Compliance-only modeling that ignores real attackers
 
 ---
+
 ## Summary
 
 - Microservices increase trust boundaries — model each

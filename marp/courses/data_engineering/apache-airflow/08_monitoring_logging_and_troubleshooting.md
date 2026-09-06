@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Monitoring, Logging, and Troubleshooting
 
 ---
+
 ## What This Chapter Covers
 
 - Task logs
@@ -21,6 +23,7 @@ audience:
 - Debugging
 
 ---
+
 ## Task Logs
 
 - Each task instance logs to a file
@@ -29,11 +32,13 @@ audience:
 - Or: ELK / Loki stack
 
 ---
+
 ## Logs and Monitoring
 
 ![log_pipeline](svg/courses/data_engineering/apache-airflow/08_monitoring_logging_and_troubleshooting/log_pipeline.svg)
 
 ---
+
 ## Log Backend Configuration
 
 ```ini
@@ -47,6 +52,7 @@ remote_log_conn_id = s3_default
 - Centralised access
 
 ---
+
 ## Web UI
 
 - DAG view: all DAGs, status
@@ -55,6 +61,7 @@ remote_log_conn_id = s3_default
 - Gantt: timing per task
 
 ---
+
 ## Metrics: StatsD
 
 - Built-in StatsD support
@@ -63,6 +70,7 @@ remote_log_conn_id = s3_default
 - Track: task duration, queue depth, success rate
 
 ---
+
 ## OpenTelemetry
 
 - Modern alternative
@@ -71,6 +79,7 @@ remote_log_conn_id = s3_default
 - The future direction
 
 ---
+
 ## Alerting
 
 - email_on_failure: simple
@@ -79,6 +88,7 @@ remote_log_conn_id = s3_default
 - Forward to PagerDuty / Slack
 
 ---
+
 ## Common Failures
 
 - DAG parse error: see scheduler log
@@ -87,6 +97,7 @@ remote_log_conn_id = s3_default
 - Out-of-memory: increase worker resources
 
 ---
+
 ## Debugging
 
 - View task logs in UI
@@ -95,6 +106,7 @@ remote_log_conn_id = s3_default
 - Use `airflow tasks test` for ad-hoc
 
 ---
+
 ## airflow tasks test
 
 ```bash
@@ -106,6 +118,7 @@ airflow tasks test my_dag my_task 2026-05-01
 - No DAG run created
 
 ---
+
 ## Scheduler Health
 
 - Heartbeat: scheduler must report regularly
@@ -114,6 +127,7 @@ airflow tasks test my_dag my_task 2026-05-01
 - Monitor scheduler latency
 
 ---
+
 ## Worker Health
 
 - Workers must reach metadata DB
@@ -122,6 +136,7 @@ airflow tasks test my_dag my_task 2026-05-01
 - Auto-scale workers if needed
 
 ---
+
 ## Metadata DB
 
 - Performance critical
@@ -130,6 +145,7 @@ airflow tasks test my_dag my_task 2026-05-01
 - Postgres common
 
 ---
+
 ## Cleaning Up
 
 - Old DAG runs: cleanup task
@@ -138,6 +154,7 @@ airflow tasks test my_dag my_task 2026-05-01
 - Otherwise: DB grows unbounded
 
 ---
+
 ## Common Monitoring Mistakes
 
 - No alerts on DAG failure

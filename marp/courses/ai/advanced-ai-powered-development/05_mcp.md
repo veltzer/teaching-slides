@@ -14,6 +14,7 @@ audience:
   - audiences:developers
 
 ---
+
 # MCP (Model Context Protocol)
 
 ## Overview

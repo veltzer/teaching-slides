@@ -17,6 +17,7 @@ audience:
 ## Understanding the Modern Threat Landscape
 
 ---
+
 ## OWASP Top 10
 
 ![owasp_top_10](svg/courses/security/web-application-hacking/01_web_insecurity/owasp_top_10.svg)

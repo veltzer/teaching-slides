@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Spark Core Training
 
 ---
+
 ## RDD Lineage &amp; DAG
 
 ![rdd_dag](svg/courses/big_data/apache-spark-with-python/02_core/rdd_dag.svg)

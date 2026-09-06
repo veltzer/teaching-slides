@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # API Design
 
 ---
+
 ## What This Chapter Covers
 
 - API styles
@@ -22,6 +24,7 @@ audience:
 - Choosing the right style
 
 ---
+
 ## API Styles
 
 - REST: resource-oriented, HTTP
@@ -31,16 +34,19 @@ audience:
 - Each fits different needs
 
 ---
+
 ## Style Choices
 
 ![api_design_choices](svg/courses/architecting/system-design/02_api_design/api_design_choices.svg)
 
 ---
+
 ## Methods And Idempotency
 
 ![rest_idempotency](svg/courses/architecting/system-design/02_api_design/rest_idempotency.svg)
 
 ---
+
 ## REST
 
 - Resources are nouns: `/users`, `/orders`
@@ -50,6 +56,7 @@ audience:
 - Industry default
 
 ---
+
 ## gRPC
 
 - Protocol buffers; binary; fast
@@ -59,6 +66,7 @@ audience:
 - Less browser-friendly
 
 ---
+
 ## GraphQL
 
 - Single endpoint; client specifies fields
@@ -68,6 +76,7 @@ audience:
 - Apollo, Hasura ecosystems
 
 ---
+
 ## When To Use Each
 
 - Public API for diverse clients: REST
@@ -77,6 +86,7 @@ audience:
 - Don't pick by hype
 
 ---
+
 ## Designing Endpoints
 
 - Nouns, not verbs
@@ -86,6 +96,7 @@ audience:
 - Consistency is more important than purity
 
 ---
+
 ## Versioning
 
 - URL: `/v1/users` (most common)
@@ -94,6 +105,7 @@ audience:
 - Deprecate before removing
 
 ---
+
 ## Authentication
 
 - API keys: server-to-server
@@ -103,6 +115,7 @@ audience:
 - Document: how to auth, on every endpoint
 
 ---
+
 ## Pagination
 
 - Always paginate list endpoints
@@ -111,6 +124,7 @@ audience:
 - Include total count when cheap
 
 ---
+
 ## Errors
 
 - HTTP status codes for category
@@ -119,6 +133,7 @@ audience:
 - Document each error type
 
 ---
+
 ## Documentation
 
 - OpenAPI spec for REST
@@ -128,6 +143,7 @@ audience:
 - Stale docs are worse than no docs
 
 ---
+
 ## Backward Compatibility
 
 - Add fields freely
@@ -137,6 +153,7 @@ audience:
 - Most changes can be additive
 
 ---
+
 ## Common API Mistakes
 
 - Verbs in URLs

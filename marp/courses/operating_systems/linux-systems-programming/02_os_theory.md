@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Protected Operating System Theory
 
 ---

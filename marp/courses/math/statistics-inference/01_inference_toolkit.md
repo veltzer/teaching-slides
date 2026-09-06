@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # The Inference Toolkit
 
 ---
+
 ## What This Chapter Covers
 
 - What inference adds on top of descriptive statistics
@@ -21,11 +23,13 @@ audience:
 - A map of the rest of the course
 
 ---
+
 ## The Three Jobs of Inference
 
 ![three_jobs](svg/courses/math/statistics-inference/01_inference_toolkit/three_jobs.svg)
 
 ---
+
 ## What Inference Is For
 
 - You have a sample; you want a statement about the population (or the data-generating process)
@@ -35,6 +39,7 @@ audience:
 - Everything in this course is a special case of one of those three
 
 ---
+
 ## The Three Jobs
 
 - **Estimation**: best guess for a parameter, plus a confidence/credible interval — "the mean is 4.2 [3.9, 4.5]"
@@ -44,6 +49,7 @@ audience:
 - Know which job you're doing before picking a method
 
 ---
+
 ## What A Statistical Model Is
 
 - A model is an assumed *family* of data-generating mechanisms, with unknown parameters
@@ -53,6 +59,7 @@ audience:
 - Every p-value, interval, and prediction is *conditional on the model being roughly right*
 
 ---
+
 ## Assumptions, And What They Buy You
 
 - Common assumptions: independence, identical distribution, a particular shape (often normality), constant variance, correct functional form
@@ -62,6 +69,7 @@ audience:
 - Always state your assumptions and check the ones that matter
 
 ---
+
 ## When Assumptions Fail
 
 - Non-independence (time series, clustered data, repeated measures): use models built for it (mixed models, time-series methods), not plain tests
@@ -71,6 +79,7 @@ audience:
 - "The test still ran" is not evidence the assumptions held
 
 ---
+
 ## Three Families Of Methods
 
 - **Parametric**: assume a distribution family, estimate its parameters — t-tests, ANOVA, linear/logistic regression. Powerful when the assumptions hold
@@ -80,11 +89,13 @@ audience:
 - This course covers all three
 
 ---
+
 ## Three Method Families
 
 ![three_method_families](svg/courses/math/statistics-inference/01_inference_toolkit/three_method_families.svg)
 
 ---
+
 ## A Tiny End-To-End Example
 
 ```python
@@ -100,6 +111,7 @@ print("bootstrap CI:", np.percentile(boot, [2.5, 97.5]))   # cross-check
 ```
 
 ---
+
 ## The Rest Of This Course
 
 - Estimation theory; better interval estimates
@@ -109,6 +121,7 @@ print("bootstrap CI:", np.percentile(boot, [2.5, 97.5]))   # cross-check
 - Experimental design; Bayesian inference; resampling and simulation
 
 ---
+
 ## Common Mistakes
 
 - Running a method without knowing which of the three jobs it's for

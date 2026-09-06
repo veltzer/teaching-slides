@@ -11,6 +11,7 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Working with Open Source Models
 
 ---
@@ -381,6 +382,7 @@ async def chat(request: ChatRequest):
 ![model_merging_combining_expertise](svg/courses/ai/generative-ai-applications/13_open_source_models/model_merging_combining_expertise.svg)
 
 ---
+
 ## Model Merging — Combining Expertise: Example
 
 ```python

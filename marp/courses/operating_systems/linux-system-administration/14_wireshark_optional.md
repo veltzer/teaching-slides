@@ -9,6 +9,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Wireshark Network Analysis (Optional)
 ## Packet Capture, Filtering, and Protocol Analysis
 
@@ -19,6 +20,7 @@ audience:
 ![Packet Capture Workflow](svg/courses/operating_systems/linux-system-administration/14_wireshark_optional/packet_capture_workflow.svg)
 
 ---
+
 ## What is Wireshark?
 
 - Graphical network protocol analyzer
@@ -37,6 +39,7 @@ usermod -aG wireshark alice
 ```
 
 ---
+
 ## Wireshark vs tcpdump
 
 | Feature | `Wireshark` | `tcpdump` |
@@ -51,6 +54,7 @@ usermod -aG wireshark alice
 Common workflow: capture with `tcpdump` on server, analyze with `Wireshark` on workstation.
 
 ---
+
 ## Capturing Packets
 
 ```bash
@@ -75,6 +79,7 @@ tshark -i eth0 -b filesize:10000 -b files:5 \
 ```
 
 ---
+
 ## Capture Filters (BPF Syntax)
 
 Capture filters use Berkeley Packet Filter syntax (same as `tcpdump`):
@@ -102,6 +107,7 @@ tcp and (port 80 or port 443)
 ```
 
 ---
+
 ## Display Filters
 
 Display filters are applied after capture for analysis. More powerful than capture filters:
@@ -130,6 +136,7 @@ http.host contains "example.com"
 ```
 
 ---
+
 ## Advanced Display Filters
 
 ```misc
@@ -157,6 +164,7 @@ tcp.port == 80 && !tcp.flags.syn
 ```
 
 ---
+
 ## tshark: Command-Line Wireshark
 
 ```bash
@@ -185,6 +193,7 @@ tshark -r capture.pcap -q -z endpoints,ip
 ```
 
 ---
+
 ## Following TCP Streams
 
 One of `Wireshark`'s most powerful features:
@@ -210,6 +219,7 @@ In the GUI:
 1. Use stream index to navigate between conversations
 
 ---
+
 ## Wireshark Statistics and Analysis
 
 ```bash
@@ -234,6 +244,7 @@ tshark -r capture.pcap -q \
 ```
 
 ---
+
 ## Analyzing Common Issues
 
 **Slow connections:**
@@ -270,6 +281,7 @@ tls.handshake.certificate
 ```
 
 ---
+
 ## Remote Capture Workflows
 
 ```bash
@@ -293,6 +305,7 @@ wireshark cap.pcap
 ```
 
 ---
+
 ## Wireshark Security Considerations
 
 - Running `Wireshark` as `root` is a security risk
@@ -313,6 +326,7 @@ tshark -r capture.pcap -w headers.pcap \
 ```
 
 ---
+
 ## Wireshark Best Practices
 
 1. Use capture filters to limit volume
@@ -335,6 +349,7 @@ tshark -i eth0 -f "host problem-server" -w issue.pcap
 ```
 
 ---
+
 ## Wireshark Coloring Rules
 
 Coloring rules highlight packets visually for faster analysis:
@@ -366,6 +381,7 @@ Coloring rules are evaluated top-to-bottom. First match wins.
 Save custom rules to share across team members.
 
 ---
+
 ## IO Graphs
 
 IO Graphs visualize traffic patterns over time:
@@ -394,6 +410,7 @@ In the GUI: Statistics -> IO Graphs
 - Identify traffic spikes and anomalies
 
 ---
+
 ## Expert Information
 
 `Wireshark` Expert Information flags potential problems automatically:
@@ -412,6 +429,7 @@ expert.severity == note
 ```
 
 Common expert info messages:
+
 | Severity | Message | Meaning |
 |----------|---------|---------|
 | Error | `Malformed Packet` | Protocol parsing failed |
@@ -423,6 +441,7 @@ Common expert info messages:
 In the GUI: Analyze -> Expert Information
 
 ---
+
 ## Decrypting TLS with Pre-Master Secret
 
 Decrypt `HTTPS` traffic by logging the `TLS` session keys:
@@ -455,6 +474,7 @@ Important notes:
 - Does not require the server private key
 
 ---
+
 ## Wireshark Profiles
 
 Profiles store display settings, filters, and coloring rules:
@@ -489,6 +509,7 @@ Recommended profiles:
 - **TCP Troubleshooting**: coloring for retransmissions, resets, zero windows
 
 ---
+
 ## Packet Injection Detection
 
 Detect suspicious or injected packets on the network:
@@ -526,6 +547,7 @@ tshark -i eth0 -Y "tcp.flags.rst==1" \
 ```
 
 ---
+
 ## Wireshark Command-Line One-Liners
 
 Useful `tshark` one-liners for quick analysis:
@@ -558,6 +580,7 @@ tshark -r capture.pcap --export-objects http,/tmp/extracted/
 ```
 
 ---
+
 ## `mergecap` and `editcap` Utilities
 
 Manipulate capture files from the command line:
@@ -592,6 +615,7 @@ editcap -s 64 capture.pcap headers-only.pcap
 ```
 
 ---
+
 ## Wireless Packet Capture
 
 Capture Wi-Fi traffic including management and control frames:
@@ -635,6 +659,7 @@ ip link set wlan0 up
 ```
 
 ---
+
 ## Exercise: Network Troubleshooting with Wireshark
 
 Diagnose a simulated application performance problem:

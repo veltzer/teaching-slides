@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Async Patterns and Observability
 
 ---
+
 ## What This Chapter Covers
 
 - Why async
@@ -20,6 +22,7 @@ audience:
 - Capacity tests
 
 ---
+
 ## Why Go Async
 
 - Decouple slow work
@@ -28,6 +31,7 @@ audience:
 - Better user experience
 
 ---
+
 ## Sync to Async Boundaries
 
 - Save user-facing latency
@@ -36,6 +40,7 @@ audience:
 - Polling or webhooks for completion
 
 ---
+
 ## Background Workers
 
 - Read from queue
@@ -44,6 +49,7 @@ audience:
 - Independent failure domain
 
 ---
+
 ## Job Scheduling
 
 - Cron-style for fixed times
@@ -52,6 +58,7 @@ audience:
 - Track success and failure
 
 ---
+
 ## Idempotency in Web Calls
 
 - Idempotency keys
@@ -60,6 +67,7 @@ audience:
 - Standard for payments
 
 ---
+
 ## Retries and Backoff
 
 - Network errors retry
@@ -68,6 +76,7 @@ audience:
 - Cap to avoid death spirals
 
 ---
+
 ## Circuit Breakers
 
 - Trip on consecutive failures
@@ -76,11 +85,13 @@ audience:
 - Restores under load gracefully
 
 ---
+
 ## State Machine
 
 ![circuit_breaker](svg/courses/architecting/web-architecture-and-scaling/05_async_and_observability/circuit_breaker.svg)
 
 ---
+
 ## Observability Layers
 
 - Metrics
@@ -89,11 +100,13 @@ audience:
 - Profiles
 
 ---
+
 ## Observability Pillars
 
 ![observability_pillars](svg/courses/architecting/web-architecture-and-scaling/05_async_and_observability/observability_pillars.svg)
 
 ---
+
 ## Metrics That Matter
 
 - Request rate
@@ -102,6 +115,7 @@ audience:
 - Saturation (queue depth, CPU)
 
 ---
+
 ## Tracing
 
 - Request ID across hops
@@ -110,6 +124,7 @@ audience:
 - Required for distributed systems
 
 ---
+
 ## Logging Discipline
 
 - Structured logs
@@ -118,6 +133,7 @@ audience:
 - Retention by sensitivity
 
 ---
+
 ## Load Testing
 
 - Reproduce production traffic
@@ -126,6 +142,7 @@ audience:
 - Profile during tests
 
 ---
+
 ## Capacity Reviews
 
 - Compare load to capacity
@@ -134,6 +151,7 @@ audience:
 - Document the model
 
 ---
+
 ## Common Async and Observability Mistakes
 
 - Hidden retries amplifying load

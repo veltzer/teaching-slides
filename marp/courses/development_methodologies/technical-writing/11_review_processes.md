@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Review Processes
 
 ---
+
 ## Reviewing Docs
 
 ![review_for_docs](svg/courses/development_methodologies/technical-writing/11_review_processes/review_for_docs.svg)
@@ -22,6 +24,7 @@ audience:
 ![review_stages](svg/courses/development_methodologies/technical-writing/11_review_processes/review_stages.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Peer review for documentation
@@ -32,6 +35,7 @@ audience:
 - Building review into the team's rhythm
 
 ---
+
 ## Why Review Docs
 
 - Two pairs of eyes catch what one misses
@@ -41,6 +45,7 @@ audience:
 - Review is where docs get good
 
 ---
+
 ## Doc Reviews vs Code Reviews
 
 - Same PR, same tools
@@ -50,6 +55,7 @@ audience:
 - Skim of preview deploy, then close read
 
 ---
+
 ## Who Should Review
 
 - Domain expert: catches accuracy issues
@@ -59,6 +65,7 @@ audience:
 - For small teams: rotate roles
 
 ---
+
 ## Editorial Checklists
 
 - Style consistency (per the team style guide)
@@ -69,6 +76,7 @@ audience:
 - A short checklist; not a 50-item form
 
 ---
+
 ## A Sample Editorial Checklist
 
 - [ ] Title and headings clear
@@ -80,6 +88,7 @@ audience:
 - [ ] Images have alt text
 
 ---
+
 ## Feedback Loops With Users
 
 - Track which docs are read (page analytics)
@@ -89,6 +98,7 @@ audience:
 - Acted-on feedback closes the loop
 
 ---
+
 ## Page Analytics
 
 - Time on page, exit rate, search queries
@@ -98,6 +108,7 @@ audience:
 - Use as signal, not gospel
 
 ---
+
 ## Support Ticket Mining
 
 - Common questions in tickets &#8594; missing docs
@@ -107,6 +118,7 @@ audience:
 - Closes the loop between docs and reality
 
 ---
+
 ## "Was This Helpful?" Widgets
 
 - Single thumb-up / thumb-down per page
@@ -116,6 +128,7 @@ audience:
 - Pay attention to the negatives
 
 ---
+
 ## Reviewing Changed Pages
 
 - A doc change PR should have someone outside the author review
@@ -125,6 +138,7 @@ audience:
 - Don't merge unreviewed user-facing docs
 
 ---
+
 ## Reviewing Existing Docs
 
 - Quarterly: check pages by traffic
@@ -134,6 +148,7 @@ audience:
 - Continuous maintenance beats periodic overhaul
 
 ---
+
 ## Doc Review Roles
 
 - **Author**: writes the change
@@ -143,6 +158,7 @@ audience:
 - Smaller teams: one person plays multiple roles
 
 ---
+
 ## Onboarding a Doc Reviewer
 
 - Read the style guide
@@ -152,6 +168,7 @@ audience:
 - Same approach as code review onboarding
 
 ---
+
 ## When To Reject
 
 - Inaccurate (factually wrong)
@@ -161,6 +178,7 @@ audience:
 - Suggest improvements; don't just say no
 
 ---
+
 ## When To Approve
 
 - Accurate
@@ -170,6 +188,7 @@ audience:
 - "Better than what was there" is enough; perfect is the enemy of good
 
 ---
+
 ## Common Doc Review Mistakes
 
 - Approving a doc the reviewer doesn't actually understand

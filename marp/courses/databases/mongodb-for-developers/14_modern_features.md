@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Modern Features
 
 ---
+
 ## What This Chapter Covers
 
 - Time-series collections
@@ -21,6 +23,7 @@ audience:
 - The roadmap
 
 ---
+
 ## Time-Series Collections
 
 - MongoDB 5+
@@ -29,11 +32,13 @@ audience:
 - Native support for: granularity, expireAfter
 
 ---
+
 ## Recent Features
 
 ![recent_features](svg/courses/databases/mongodb-for-developers/14_modern_features/recent_features.svg)
 
 ---
+
 ## Time-Series Example
 
 ```javascript
@@ -50,6 +55,7 @@ db.createCollection("metrics", {
 - 30-day retention; minute-granularity buckets
 
 ---
+
 ## Atlas Search
 
 - Full-text search built into Atlas
@@ -59,6 +65,7 @@ db.createCollection("metrics", {
 - "Mongo + Elasticsearch" in one
 
 ---
+
 ## Atlas Search Indexes
 
 - Define field mappings
@@ -67,6 +74,7 @@ db.createCollection("metrics", {
 - Updated near-real-time
 
 ---
+
 ## Vector Search
 
 - Embed documents into vectors
@@ -75,6 +83,7 @@ db.createCollection("metrics", {
 - Atlas + MongoDB 6.0.4+
 
 ---
+
 ## Vector Search Example
 
 ```javascript
@@ -90,6 +99,7 @@ db.docs.aggregate([{
 ```
 
 ---
+
 ## Queryable Encryption
 
 - Equality queries on encrypted fields
@@ -98,6 +108,7 @@ db.docs.aggregate([{
 - Slight performance cost
 
 ---
+
 ## Atlas Triggers
 
 - Serverless functions on data changes
@@ -106,6 +117,7 @@ db.docs.aggregate([{
 - Use: webhook on insert, sync to other systems
 
 ---
+
 ## Atlas Functions
 
 - Serverless backend in Atlas
@@ -114,6 +126,7 @@ db.docs.aggregate([{
 - For: small APIs, prototypes
 
 ---
+
 ## Atlas Charts
 
 - Visualisation built into Atlas
@@ -122,6 +135,7 @@ db.docs.aggregate([{
 - For: simple internal dashboards
 
 ---
+
 ## Atlas Data API
 
 - HTTP API on top of MongoDB
@@ -130,6 +144,7 @@ db.docs.aggregate([{
 - Auth via API keys
 
 ---
+
 ## Atlas SQL Interface
 
 - Query MongoDB with SQL
@@ -138,6 +153,7 @@ db.docs.aggregate([{
 - Backed by Atlas Data Federation
 
 ---
+
 ## Federation
 
 - Query across collections, S3, other clusters
@@ -145,6 +161,7 @@ db.docs.aggregate([{
 - Useful for: archived data, cross-cluster
 
 ---
+
 ## What's Coming
 
 - Continued search / vector enhancements
@@ -153,6 +170,7 @@ db.docs.aggregate([{
 - More serverless capabilities
 
 ---
+
 ## Common Feature Mistakes
 
 - Using time-series collection for non-time-series data

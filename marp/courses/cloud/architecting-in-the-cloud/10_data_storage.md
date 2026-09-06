@@ -11,6 +11,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Data Storage in the Cloud
 
 ---

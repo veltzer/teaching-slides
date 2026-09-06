@@ -11,6 +11,7 @@ audience:
 - audiences:data-engineers
 
 ---
+
 # Understanding the Spark UI
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
@@ -31,10 +32,12 @@ audience:
 1. Performance monitoring tool
 
 ---
+
 ## Accessing the UI
 ![accessing_the_ui](svg/lectures/big_data/spark-ui/accessing_the_ui.svg)
 
 ---
+
 ## Core Components
 1. Jobs tab
 1. Stages tab
@@ -44,10 +47,12 @@ audience:
 1. SQL tab
 
 ---
+
 ## Jobs Tab Overview
 ![jobs_tab_overview](svg/lectures/big_data/spark-ui/jobs_tab_overview.svg)
 
 ---
+
 ## Job Details
 1. Job ID and description
 1. Submission time
@@ -55,6 +60,7 @@ audience:
 1. Associated stages
 
 ---
+
 ## Stage Information
 ```scala
 // Example operation showing multiple stages
@@ -64,6 +70,7 @@ df.groupBy("column")
 ```
 
 ---
+
 ## Understanding Stages
 1. DAG visualization
 1. Task distribution
@@ -71,10 +78,12 @@ df.groupBy("column")
 1. Performance metrics
 
 ---
+
 ## Storage Tab
 ![storage_tab](svg/lectures/big_data/spark-ui/storage_tab.svg)
 
 ---
+
 ## Caching Metrics
 1. Memory usage
 1. Disk usage
@@ -82,6 +91,7 @@ df.groupBy("column")
 1. Eviction count
 
 ---
+
 ## Executor Details
 ```scala
 // Configuration affecting executors
@@ -91,6 +101,7 @@ spark.executor.instances
 ```
 
 ---
+
 ## Executor Metrics
 1. Task completion time
 1. Memory consumption
@@ -98,6 +109,7 @@ spark.executor.instances
 1. Shuffle metrics
 
 ---
+
 ## SQL Tab Features
 1. Query execution plans
 1. Query metrics
@@ -105,6 +117,7 @@ spark.executor.instances
 1. Resource usage
 
 ---
+
 ## Environment Information
 1. Spark configuration
 1. JVM information
@@ -112,6 +125,7 @@ spark.executor.instances
 1. Hadoop configuration
 
 ---
+
 ## Port Management
 ```bash
 # Default ports
@@ -121,12 +135,14 @@ spark.executor.instances
 ```
 
 ---
+
 ## Accessing Remote UI
 ```bash
 ssh -L 4040:localhost:4040 user@cluster
 ```
 
 ---
+
 ## Configuration Options
 ```scala
 spark.conf.set("spark.ui.port", "4050")
@@ -134,6 +150,7 @@ spark.conf.set("spark.ui.enabled", true)
 ```
 
 ---
+
 ## Monitoring Performance
 1. Task duration
 1. Shuffle read/write
@@ -141,10 +158,12 @@ spark.conf.set("spark.ui.enabled", true)
 1. GC impact
 
 ---
+
 ## Memory Management
 ![memory_management](svg/lectures/big_data/spark-ui/memory_management.svg)
 
 ---
+
 ## Data Locality
 1. PROCESS_LOCAL
 1. NODE_LOCAL
@@ -152,6 +171,7 @@ spark.conf.set("spark.ui.enabled", true)
 1. ANY
 
 ---
+
 ## Task Metrics
 ```scala
 // Operations generating tasks
@@ -161,6 +181,7 @@ df.repartition(10)
 ```
 
 ---
+
 ## Understanding DAGs
 1. Stage boundaries
 1. Shuffle operations
@@ -168,10 +189,12 @@ df.repartition(10)
 1. Data flow
 
 ---
+
 ## Shuffle Analysis
 ![shuffle_analysis](svg/lectures/big_data/spark-ui/shuffle_analysis.svg)
 
 ---
+
 ## Resource Utilization
 1. CPU usage
 1. Memory consumption
@@ -179,6 +202,7 @@ df.repartition(10)
 1. Network transfer
 
 ---
+
 ## Debugging Tools
 1. Stage details
 1. Task logs
@@ -186,6 +210,7 @@ df.repartition(10)
 1. Metrics history
 
 ---
+
 ## Performance Tuning
 1. Identify bottlenecks
 1. Monitor resources
@@ -193,12 +218,14 @@ df.repartition(10)
 1. Adjust partitioning
 
 ---
+
 ## History Server
 ```bash
 ./sbin/start-history-server.sh
 ```
 
 ---
+
 ## History Server Features
 1. Completed applications
 1. Event logs
@@ -206,10 +233,12 @@ df.repartition(10)
 1. Long-term analysis
 
 ---
+
 ## Common Issues
 ![common_issues](svg/lectures/big_data/spark-ui/common_issues.svg)
 
 ---
+
 ## Troubleshooting
 1. Check port availability
 1. Monitor memory usage
@@ -217,6 +246,7 @@ df.repartition(10)
 1. Analyze metrics
 
 ---
+
 ## UI Security
 1. Authentication setup
 1. SSL configuration
@@ -224,6 +254,7 @@ df.repartition(10)
 1. Port restrictions
 
 ---
+
 ## Best Practices
 1. Regular monitoring
 1. Performance baselines
@@ -231,6 +262,7 @@ df.repartition(10)
 1. Log management
 
 ---
+
 ## Advanced Features
 1. Custom metrics
 1. REST API access
@@ -238,10 +270,12 @@ df.repartition(10)
 1. Integration options
 
 ---
+
 ## Cluster Monitoring
 ![cluster_monitoring](svg/lectures/big_data/spark-ui/cluster_monitoring.svg)
 
 ---
+
 ## Real-time Analysis
 1. Active task tracking
 1. Resource monitoring
@@ -249,6 +283,7 @@ df.repartition(10)
 1. Health checks
 
 ---
+
 ## Integration Options
 1. Monitoring systems
 1. Log aggregators
@@ -256,6 +291,7 @@ df.repartition(10)
 1. Alert systems
 
 ---
+
 ## Future Developments
 1. Enhanced visualizations
 1. Better metrics
@@ -263,6 +299,7 @@ df.repartition(10)
 1. Improved debugging
 
 ---
+
 ## Practical Tips
 1. Bookmark important pages
 1. Monitor key metrics

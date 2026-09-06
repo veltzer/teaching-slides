@@ -8,9 +8,11 @@ audience:
   - audiences:testers
 
 ---
+
 # Consumer Tests
 
 ---
+
 ## What This Chapter Covers
 
 - Anatomy
@@ -20,6 +22,7 @@ audience:
 - Pitfalls
 
 ---
+
 ## Anatomy
 
 - Pre-conditions on the provider
@@ -28,11 +31,13 @@ audience:
 - All in test code
 
 ---
+
 ## Interaction Anatomy
 
 ![interaction_anatomy](svg/courses/testing/contract-testing/02_consumer_tests/interaction_anatomy.svg)
 
 ---
+
 ## Mock Provider
 
 - Library spins up local mock
@@ -41,11 +46,13 @@ audience:
 - Returns canned response
 
 ---
+
 ## Mock Provider Visualized
 
 ![mock_provider](svg/courses/testing/contract-testing/02_consumer_tests/mock_provider.svg)
 
 ---
+
 ## Pre-Conditions
 
 - Set up provider state
@@ -54,6 +61,7 @@ audience:
 - Provider verifies these later
 
 ---
+
 ## Defining Interactions
 
 - One per scenario
@@ -62,6 +70,7 @@ audience:
 - Edge cases
 
 ---
+
 ## Choosing What To Verify
 
 - Fields you read
@@ -70,6 +79,7 @@ audience:
 - Skip fields you do not use
 
 ---
+
 ## Loose Matching
 
 - Match by type, not exact value
@@ -78,6 +88,7 @@ audience:
 - More resilient contracts
 
 ---
+
 ## Strict Matching
 
 - Exact string equality
@@ -86,6 +97,7 @@ audience:
 - Brittle otherwise
 
 ---
+
 ## Provider States
 
 - Named states
@@ -94,6 +106,7 @@ audience:
 - Linked back to test fixtures
 
 ---
+
 ## Generating The Contract
 
 - Tool emits a JSON file
@@ -102,6 +115,7 @@ audience:
 - Versioned with consumer code
 
 ---
+
 ## Running The Tests
 
 - Like normal unit tests
@@ -110,6 +124,7 @@ audience:
 - Block PRs on failure
 
 ---
+
 ## Updating Tests
 
 - New interaction
@@ -118,6 +133,7 @@ audience:
 - Communicate to provider before merge
 
 ---
+
 ## Examples Beyond Happy Path
 
 - 4xx responses
@@ -126,6 +142,7 @@ audience:
 - Pagination
 
 ---
+
 ## Coverage
 
 - Cover all calls your code makes
@@ -134,6 +151,7 @@ audience:
 - Refresh as code evolves
 
 ---
+
 ## Common Consumer Mistakes
 
 - Over-specifying response fields

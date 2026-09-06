@@ -10,6 +10,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Introduction to Embedded Linux with Yocto
 
 ---

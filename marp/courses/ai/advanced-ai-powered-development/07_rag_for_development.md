@@ -14,6 +14,7 @@ audience:
   - audiences:developers
 
 ---
+
 # RAG (Retrieval-Augmented Generation) for Development
 
 ## Grounding AI in Your Codebase

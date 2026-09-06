@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Structured Output
 
 ---
+
 ## What This Chapter Covers
 
 - Why structured output
@@ -20,6 +22,7 @@ audience:
 - Failure handling
 
 ---
+
 ## Why Structured Output
 
 - Software needs to consume model output
@@ -28,16 +31,19 @@ audience:
 - Bridge between LLM and code
 
 ---
+
 ## Three Modes
 
 ![structured_modes](svg/courses/ai/prompt-engineering/04_structured_output/structured_modes.svg)
 
 ---
+
 ## Format Choices
 
 ![format_choices](svg/courses/ai/prompt-engineering/04_structured_output/format_choices.svg)
 
 ---
+
 ## JSON Mode
 
 - Model outputs valid JSON
@@ -46,6 +52,7 @@ audience:
 - Validate after
 
 ---
+
 ## Sample JSON Prompt
 
 - "Extract: name, email, age. Return JSON."
@@ -53,6 +60,7 @@ audience:
 - Reliable on modern models
 
 ---
+
 ## Function Calling
 
 - Define functions with schemas
@@ -61,6 +69,7 @@ audience:
 - Better than free-text JSON
 
 ---
+
 ## Sample Function Schema
 
 - name: get_weather
@@ -69,6 +78,7 @@ audience:
 - Model emits: name + args
 
 ---
+
 ## JSON Schema
 
 - Standard schema language
@@ -77,6 +87,7 @@ audience:
 - Best practice today
 
 ---
+
 ## Strict Mode
 
 - Some APIs guarantee schema conformance
@@ -84,6 +95,7 @@ audience:
 - Use when available
 
 ---
+
 ## Validation
 
 - Always validate output server-side
@@ -92,6 +104,7 @@ audience:
 - Don't trust the API alone
 
 ---
+
 ## Parsing
 
 - Most standard libraries handle JSON fine
@@ -99,6 +112,7 @@ audience:
 - Reuse for type safety
 
 ---
+
 ## Failure Modes
 
 - Truncated JSON (context limit)
@@ -107,6 +121,7 @@ audience:
 - Hallucinated fields
 
 ---
+
 ## Recovering
 
 - Detect parse errors
@@ -115,6 +130,7 @@ audience:
 - Eventually fall back to error
 
 ---
+
 ## Streaming Structured Output
 
 - Partial JSON arrives over time
@@ -123,6 +139,7 @@ audience:
 - Library support varies
 
 ---
+
 ## Common Structured-Output Mistakes
 
 - Free-text + regex parsing

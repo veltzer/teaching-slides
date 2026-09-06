@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Object-Oriented Thinking
 
 ---
+
 ## What This Chapter Covers
 
 - The procedural model and where it breaks down
@@ -19,16 +21,19 @@ audience:
 - A short tour of OOP's history
 
 ---
+
 ## The Four Pillars
 
 ![object_pillars](svg/courses/principles/object-oriented-programming/01_introduction_to_object_oriented_thinking/object_pillars.svg)
 
 ---
+
 ## OOP Versus Other Paradigms
 
 ![oop_paradigm](svg/courses/principles/object-oriented-programming/01_introduction_to_object_oriented_thinking/oop_paradigm.svg)
 
 ---
+
 ## The Procedural Model
 
 - Code is organised as functions that operate on data
@@ -38,6 +43,7 @@ audience:
 - Breaks down at scale: which function modifies which data?
 
 ---
+
 ## The Object Model
 
 - An object bundles *state* (data) with *behaviour* (functions that operate on it)
@@ -47,6 +53,7 @@ audience:
 - Easier to reason about *who can change what*
 
 ---
+
 ## Two Senses of "Object"
 
 - The word "object" gets reused; pin it down:
@@ -56,6 +63,7 @@ audience:
 - All objects of one class share the same methods, but each has its own state
 
 ---
+
 ## Objects and Messages
 
 - Calling a method is sometimes called "sending a message"
@@ -65,6 +73,7 @@ audience:
 - The mental model is the same; the syntax differs
 
 ---
+
 ## Modelling the World
 
 - A logging system has Loggers, Formatters, Appenders
@@ -74,6 +83,7 @@ audience:
 - A "Customer" object isn't a person; it's the parts of a person the system cares about
 
 ---
+
 ## Why OOP Won
 
 - Bigger codebases became common in the 1990s
@@ -83,6 +93,7 @@ audience:
 - Languages with first-class OOP (Java, C#) shipped at the right moment
 
 ---
+
 ## A Brief History
 
 - 1967: Simula 67 introduced classes and objects
@@ -92,6 +103,7 @@ audience:
 - 2000s: C#, Python, Ruby — each with their own flavour of OOP
 
 ---
+
 ## The OOP Pillars
 
 - **Encapsulation**: hide data behind methods
@@ -101,6 +113,7 @@ audience:
 - These four concepts structure the rest of this course
 
 ---
+
 ## OOP Is Not the Only Way
 
 - Functional programming (Haskell, Clojure): values + functions, no mutable objects
@@ -110,6 +123,7 @@ audience:
 - OOP is *a* tool; not the only tool
 
 ---
+
 ## When OOP Helps
 
 - Domain has clear "things" with state and behaviour
@@ -119,6 +133,7 @@ audience:
 - A team is large enough that encapsulation matters
 
 ---
+
 ## When OOP Hurts
 
 - Pure data transformation (use pipelines)
@@ -128,6 +143,7 @@ audience:
 - Teams that misuse inheritance — the topic of a later chapter
 
 ---
+
 ## What's Next
 
 - Classes and objects in concrete code

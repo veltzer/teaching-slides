@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Why Code Review Matters
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![review_benefits](svg/courses/development_methodologies/code-review-best-practices/01_why_code_review_matters/review_benefits.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The benefits of code review
@@ -26,6 +28,7 @@ audience:
 - The cultural payoff
 
 ---
+
 ## What Code Review Is
 
 - Another developer reads your code before it lands
@@ -35,11 +38,13 @@ audience:
 - A practice, not a tool
 
 ---
+
 ## Why It Earns Its Time
 
 ![review_value](svg/courses/development_methodologies/code-review-best-practices/01_why_code_review_matters/review_value.svg)
 
 ---
+
 ## The Direct Benefits
 
 - **Catches bugs early**: cheaper to fix before merge
@@ -49,6 +54,7 @@ audience:
 - **Documents decisions**: PR comments are searchable history
 
 ---
+
 ## Knowledge Sharing
 
 - Without reviews, only the author knows the code
@@ -58,6 +64,7 @@ audience:
 - Major risk reduction at no extra cost
 
 ---
+
 ## Mentoring
 
 - Reviews are where junior developers learn
@@ -67,6 +74,7 @@ audience:
 - The most underrated benefit
 
 ---
+
 ## Code Review as Documentation
 
 - A merged PR contains: the change, the discussion, the decisions
@@ -76,6 +84,7 @@ audience:
 - Searchable forever in your git history
 
 ---
+
 ## What Reviews Don't Do
 
 - They don't catch every bug — tests still matter
@@ -85,6 +94,7 @@ audience:
 - Use the right tool for the right purpose
 
 ---
+
 ## The Cost of Skipping
 
 - More bugs in production
@@ -94,6 +104,7 @@ audience:
 - Slower in the long run, faster in the short
 
 ---
+
 ## Evidence
 
 - SmartBear and others have studied code review extensively
@@ -103,6 +114,7 @@ audience:
 - Speed and quality both benefit, despite intuition
 
 ---
+
 ## The Cultural Payoff
 
 - Trust builds when feedback is constructive
@@ -112,6 +124,7 @@ audience:
 - A team with healthy reviews is a team with low ego
 
 ---
+
 ## When Reviews Become Theatre
 
 - "LGTM" with no actual reading
@@ -121,6 +134,7 @@ audience:
 - This is worse than no reviews — false confidence
 
 ---
+
 ## Indicators of Healthy Reviews
 
 - Authors thank reviewers genuinely
@@ -130,6 +144,7 @@ audience:
 - The codebase has a recognisable style
 
 ---
+
 ## Setting Expectations
 
 - Every change goes through review
@@ -139,6 +154,7 @@ audience:
 - Authors are accountable for what they wrote
 
 ---
+
 ## What's Next
 
 - Goals of code review

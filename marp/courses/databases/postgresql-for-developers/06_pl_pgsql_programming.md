@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # PL/pgSQL Programming
 
 ---
+
 ## PL/pgSQL Features
 
 ![plpgsql_features](svg/courses/databases/postgresql-for-developers/06_pl_pgsql_programming/plpgsql_features.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What PL/pgSQL is
@@ -26,6 +29,7 @@ audience:
 - When to use; when not
 
 ---
+
 ## What PL/pgSQL Is
 
 - Postgres's procedural language
@@ -35,11 +39,13 @@ audience:
 - "Server-side scripting"
 
 ---
+
 ## When to Use PL/pgSQL
 
 ![plpgsql_uses](svg/courses/databases/postgresql-for-developers/06_pl_pgsql_programming/plpgsql_uses.svg)
 
 ---
+
 ## A Simple Function
 
 ```sql
@@ -54,6 +60,7 @@ SELECT add_one(42); -- 43
 ```
 
 ---
+
 ## Variables
 
 ```sql
@@ -70,6 +77,7 @@ $$ LANGUAGE plpgsql;
 ```
 
 ---
+
 ## Control Flow
 
 - IF / THEN / ELSE
@@ -78,6 +86,7 @@ $$ LANGUAGE plpgsql;
 - RAISE EXCEPTION
 
 ---
+
 ## Procedures
 
 - Postgres 11+
@@ -86,6 +95,7 @@ $$ LANGUAGE plpgsql;
 - For multi-statement transactions inside
 
 ---
+
 ## Triggers
 
 ```sql
@@ -105,6 +115,7 @@ FOR EACH ROW EXECUTE FUNCTION update_modified();
 - Automatic: on INSERT, UPDATE, DELETE
 
 ---
+
 ## When To Use Functions
 
 - Complex queries that benefit from procedural logic
@@ -113,6 +124,7 @@ FOR EACH ROW EXECUTE FUNCTION update_modified();
 - Audit triggers
 
 ---
+
 ## When NOT To
 
 - Business logic better in app code
@@ -121,6 +133,7 @@ FOR EACH ROW EXECUTE FUNCTION update_modified();
 - Hard to debug
 
 ---
+
 ## Performance
 
 - Functions cached (parsed plan)
@@ -129,6 +142,7 @@ FOR EACH ROW EXECUTE FUNCTION update_modified();
 - INTO for single-value SELECT
 
 ---
+
 ## Error Handling
 
 ```sql
@@ -146,6 +160,7 @@ END;
 - Or all (OTHERS)
 
 ---
+
 ## Returning Sets
 
 ```sql
@@ -162,6 +177,7 @@ $$ LANGUAGE plpgsql;
 - Reuse in queries
 
 ---
+
 ## Other PL Languages
 
 - PL/Python: Python in DB
@@ -171,6 +187,7 @@ $$ LANGUAGE plpgsql;
 - Similar shape
 
 ---
+
 ## Common PL/pgSQL Mistakes
 
 - Heavy business logic in DB

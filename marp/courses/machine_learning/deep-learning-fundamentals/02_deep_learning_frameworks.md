@@ -10,9 +10,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Deep Learning Frameworks
 
 ---
+
 ## What This Chapter Covers
 
 - TensorFlow and Keras
@@ -23,6 +25,7 @@ audience:
 - GPU acceleration
 
 ---
+
 ## Why Use a Framework
 
 - Hand-coding backprop is painful
@@ -31,6 +34,7 @@ audience:
 - Huge ecosystem of pretrained models
 
 ---
+
 ## The Landscape
 
 - TensorFlow: Google, production-heavy
@@ -39,11 +43,13 @@ audience:
 - Keras: high-level API, now multi-backend
 
 ---
+
 ## Frameworks Compared
 
 ![frameworks_overview](svg/courses/machine_learning/deep-learning-fundamentals/02_deep_learning_frameworks/frameworks_overview.svg)
 
 ---
+
 ## Convergence
 
 - APIs increasingly similar
@@ -52,11 +58,13 @@ audience:
 - Choice often comes down to ecosystem
 
 ---
+
 ## The Framework Stack
 
 ![framework stack](svg/courses/machine_learning/deep-learning-fundamentals/02_deep_learning_frameworks/framework_stack.svg)
 
 ---
+
 ## TensorFlow
 
 - Released 2015 by Google
@@ -65,6 +73,7 @@ audience:
 - Strong production tooling
 
 ---
+
 ## Keras
 
 - High-level neural network API
@@ -73,6 +82,7 @@ audience:
 - Beginner-friendly and concise
 
 ---
+
 ## A Keras Sequential Model
 
 ```python
@@ -87,6 +97,7 @@ model = keras.Sequential([
 ```
 
 ---
+
 ## Compile and Fit
 
 ```python
@@ -99,6 +110,7 @@ model.fit(x_train, y_train, epochs=5, batch_size=32)
 ```
 
 ---
+
 ## The Functional API
 
 - Build a graph of layers as functions
@@ -107,6 +119,7 @@ model.fit(x_train, y_train, epochs=5, batch_size=32)
 - More flexible than Sequential
 
 ---
+
 ## Functional API Example
 
 ```python
@@ -118,6 +131,7 @@ model = keras.Model(inputs, outputs)
 ```
 
 ---
+
 ## Model Subclassing
 
 - Inherit from keras.Model
@@ -126,6 +140,7 @@ model = keras.Model(inputs, outputs)
 - Pythonic and flexible
 
 ---
+
 ## PyTorch
 
 - Released 2016 by Meta
@@ -134,6 +149,7 @@ model = keras.Model(inputs, outputs)
 - Dominant in research
 
 ---
+
 ## Tensors
 
 - N-dimensional arrays
@@ -142,6 +158,7 @@ model = keras.Model(inputs, outputs)
 - Foundation of every framework
 
 ---
+
 ## Creating Tensors
 
 ```python
@@ -154,6 +171,7 @@ d = torch.arange(10).reshape(2, 5)
 ```
 
 ---
+
 ## Tensor Operations
 
 ```python
@@ -165,6 +183,7 @@ r = x.relu()           # elementwise
 ```
 
 ---
+
 ## Broadcasting
 
 - Operate on tensors of different shapes
@@ -173,6 +192,7 @@ r = x.relu()           # elementwise
 - Avoids explicit loops
 
 ---
+
 ## Automatic Differentiation
 
 - Frameworks record operations on tensors
@@ -181,6 +201,7 @@ r = x.relu()           # elementwise
 - No manual chain rule
 
 ---
+
 ## Autograd in PyTorch
 
 ```python
@@ -191,11 +212,13 @@ print(x.grad)   # 3*x^2 + 2 = 14
 ```
 
 ---
+
 ## Computation Graph
 
 ![computation_graph](svg/courses/machine_learning/deep-learning-fundamentals/02_deep_learning_frameworks/computation_graph.svg)
 
 ---
+
 ## Building a Module in PyTorch
 
 ```python
@@ -214,6 +237,7 @@ class MLP(nn.Module):
 ```
 
 ---
+
 ## A PyTorch Training Loop
 
 ```python
@@ -231,11 +255,13 @@ for x, y in loader:
 ```
 
 ---
+
 ## Training Loop Anatomy
 
 ![training_loop](svg/courses/machine_learning/deep-learning-fundamentals/02_deep_learning_frameworks/training_loop.svg)
 
 ---
+
 ## Why Zero the Gradients
 
 - PyTorch accumulates gradients by default
@@ -244,6 +270,7 @@ for x, y in loader:
 - Keras hides this in fit
 
 ---
+
 ## Eval Mode
 
 - Disable dropout and batchnorm updates
@@ -252,6 +279,7 @@ for x, y in loader:
 - Saves memory and speeds inference
 
 ---
+
 ## Datasets and Loaders
 
 - Dataset: knows how to fetch one sample
@@ -260,6 +288,7 @@ for x, y in loader:
 - Backbone of any training pipeline
 
 ---
+
 ## A PyTorch Dataset
 
 ```python
@@ -277,6 +306,7 @@ loader = DataLoader(MyData(x, y), batch_size=64, shuffle=True)
 ```
 
 ---
+
 ## Callbacks in Keras
 
 - Hook into training events
@@ -285,6 +315,7 @@ loader = DataLoader(MyData(x, y), batch_size=64, shuffle=True)
 - Pass via callbacks argument to fit
 
 ---
+
 ## Callback Example
 
 ```python
@@ -297,6 +328,7 @@ model.fit(..., callbacks=callbacks)
 ```
 
 ---
+
 ## PyTorch Lightning
 
 - High-level wrapper for PyTorch
@@ -305,6 +337,7 @@ model.fit(..., callbacks=callbacks)
 - Closer to the Keras experience
 
 ---
+
 ## GPU Acceleration
 
 - Neural networks are mostly matmuls
@@ -313,11 +346,13 @@ model.fit(..., callbacks=callbacks)
 - Speedups of 10x to 100x
 
 ---
+
 ## CPU vs GPU
 
 ![cpu_vs_gpu](svg/courses/machine_learning/deep-learning-fundamentals/02_deep_learning_frameworks/cpu_vs_gpu.svg)
 
 ---
+
 ## Moving to GPU
 
 ```python
@@ -330,6 +365,7 @@ x = x.to(device)
 - Forgetting this gives a confusing error
 
 ---
+
 ## Mixed Precision
 
 - Use float16 for forward and backward
@@ -338,6 +374,7 @@ x = x.to(device)
 - torch.cuda.amp, tf.keras mixed_precision
 
 ---
+
 ## Multi-GPU Training
 
 - Data parallel: split the batch
@@ -346,6 +383,7 @@ x = x.to(device)
 - MirroredStrategy in TensorFlow
 
 ---
+
 ## Saving and Loading Models
 
 - Save weights, not just code
@@ -354,6 +392,7 @@ x = x.to(device)
 - Version your checkpoints
 
 ---
+
 ## Reproducibility
 
 - Seed Python, NumPy, framework
@@ -362,6 +401,7 @@ x = x.to(device)
 - GPU nondeterminism is hard to fully kill
 
 ---
+
 ## TensorBoard
 
 - Visualize loss, metrics, weights
@@ -370,6 +410,7 @@ x = x.to(device)
 - Works with both frameworks
 
 ---
+
 ## Debugging Tips
 
 - Print shapes at every layer
@@ -378,6 +419,7 @@ x = x.to(device)
 - Watch the gradient norms
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting model.eval at inference
@@ -386,6 +428,7 @@ x = x.to(device)
 - Targets in the wrong shape
 
 ---
+
 ## Picking a Framework
 
 - PyTorch: research, custom models
@@ -394,6 +437,7 @@ x = x.to(device)
 - Many teams use both
 
 ---
+
 ## Summary
 
 - Frameworks handle tensors, autograd, and GPUs

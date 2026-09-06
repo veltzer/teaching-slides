@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # What Statistics Is
 
 ---
+
 ## What This Chapter Covers
 
 - What statistics actually does for you
@@ -21,11 +23,13 @@ audience:
 - Where statistics shows up in real work
 
 ---
+
 ## Population vs Sample
 
 ![population_vs_sample](svg/courses/math/statistics-applied/01_what_statistics_is/population_vs_sample.svg)
 
 ---
+
 ## The One-Sentence Definition
 
 - Statistics is the science of learning from data *in the presence of uncertainty*
@@ -35,6 +39,7 @@ audience:
 - Everything else is technique in service of that
 
 ---
+
 ## Population vs Sample
 
 - **Population**: every unit you care about — all users, all transactions, all widgets ever made
@@ -44,6 +49,7 @@ audience:
 - A good sample *represents* the population; a bad one misleads confidently
 
 ---
+
 ## Descriptive vs Inferential
 
 - **Descriptive statistics**: summarize the data you have — mean, median, charts
@@ -53,6 +59,7 @@ audience:
 - This course does both; the second is where the care is needed
 
 ---
+
 ## Parameters vs Statistics
 
 - A **parameter** describes a population — true mean &mu;, true proportion p
@@ -62,6 +69,7 @@ audience:
 - Greek letters = population; Latin letters = sample (rough convention)
 
 ---
+
 ## Why Uncertainty Is The Point
 
 - "Revenue went up 3%" — real change, or noise?
@@ -71,6 +79,7 @@ audience:
 - "The number, plus or minus what" is the actual deliverable
 
 ---
+
 ## A First Look At Variability
 
 ```python
@@ -86,11 +95,13 @@ for _ in range(5):
 - This wobble is *sampling variability* — the central concern of inference
 
 ---
+
 ## Sampling Variability
 
 ![sampling_variability](svg/courses/math/statistics-applied/01_what_statistics_is/sampling_variability.svg)
 
 ---
+
 ## Where You Will Meet Statistics
 
 - A/B tests: did the new button actually help?
@@ -100,6 +111,7 @@ for _ in range(5):
 - Anywhere a decision rests on incomplete data
 
 ---
+
 ## Common Mistakes
 
 - Treating the sample as if it were the population

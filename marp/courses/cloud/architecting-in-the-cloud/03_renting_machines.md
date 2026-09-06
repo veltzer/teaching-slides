@@ -11,6 +11,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Renting Machines
 
 ---

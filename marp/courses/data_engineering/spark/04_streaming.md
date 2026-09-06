@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Streaming
 
 ---
+
 ## What This Chapter Covers
 
 - Structured Streaming basics
@@ -19,6 +21,7 @@ audience:
 - Reliability
 
 ---
+
 ## Structured Streaming
 
 - DataFrame API for streams
@@ -27,6 +30,7 @@ audience:
 - Strong fault tolerance
 
 ---
+
 ## Trigger Modes
 
 - Default micro-batch
@@ -35,6 +39,7 @@ audience:
 - Pick by latency target
 
 ---
+
 ## Sources
 
 - Kafka and friends
@@ -43,6 +48,7 @@ audience:
 - Delta tables as a source
 
 ---
+
 ## Sinks
 
 - Console for testing
@@ -51,6 +57,7 @@ audience:
 - foreachBatch for custom
 
 ---
+
 ## Output Modes
 
 - Append: only new rows
@@ -59,11 +66,13 @@ audience:
 - Pick by query type
 
 ---
+
 ## Streaming Modes
 
 ![streaming_modes](svg/courses/data_engineering/spark/04_streaming/streaming_modes.svg)
 
 ---
+
 ## Stateful Operations
 
 - Aggregations need state
@@ -72,6 +81,7 @@ audience:
 - Tune state retention
 
 ---
+
 ## Watermarks
 
 - Allow late data window
@@ -80,11 +90,13 @@ audience:
 - Tune to source lateness
 
 ---
+
 ## Watermark Visualized
 
 ![watermark](svg/courses/data_engineering/spark/04_streaming/watermark.svg)
 
 ---
+
 ## Joins
 
 - Stream to static
@@ -93,6 +105,7 @@ audience:
 - Test with bursty data
 
 ---
+
 ## Checkpointing
 
 - Required for fault tolerance
@@ -101,6 +114,7 @@ audience:
 - Not interchangeable across queries
 
 ---
+
 ## Exactly-Once Sinks
 
 - Some sinks support
@@ -109,6 +123,7 @@ audience:
 - Verify per sink
 
 ---
+
 ## Backpressure
 
 - Slow downstream
@@ -117,6 +132,7 @@ audience:
 - Monitor lag
 
 ---
+
 ## Monitoring
 
 - Input rows per second
@@ -125,6 +141,7 @@ audience:
 - State size
 
 ---
+
 ## Common Streaming Mistakes
 
 - No watermark on stateful query

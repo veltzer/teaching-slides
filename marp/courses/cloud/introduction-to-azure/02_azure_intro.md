@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to Microsoft Azure
 
 ## What is Azure?

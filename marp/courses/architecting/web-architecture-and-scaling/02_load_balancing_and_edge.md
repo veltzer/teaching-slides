@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Load Balancing and Edge
 
 ---
+
 ## What This Chapter Covers
 
 - Load balancing layers
@@ -20,6 +22,7 @@ audience:
 - TLS termination
 
 ---
+
 ## Why Load Balance
 
 - Spread requests across replicas
@@ -28,6 +31,7 @@ audience:
 - Required for horizontal scale
 
 ---
+
 ## L4 vs L7
 
 - L4: TCP, fast, opaque
@@ -36,11 +40,13 @@ audience:
 - Modern load balancers do both
 
 ---
+
 ## L4 vs L7 Visualized
 
 ![l4_l7_balancing](svg/courses/architecting/web-architecture-and-scaling/02_load_balancing_and_edge/l4_l7_balancing.svg)
 
 ---
+
 ## Algorithms
 
 - Round robin
@@ -49,6 +55,7 @@ audience:
 - Hash-based for stickiness
 
 ---
+
 ## Health Checks
 
 - Active probes
@@ -57,6 +64,7 @@ audience:
 - Drain before removal
 
 ---
+
 ## Sticky Sessions
 
 - Same client to same node
@@ -65,6 +73,7 @@ audience:
 - Prefer external session state
 
 ---
+
 ## Connection Reuse
 
 - Keep-alive saves handshake cost
@@ -73,6 +82,7 @@ audience:
 - Watch for idle timeouts
 
 ---
+
 ## TLS Termination
 
 - Often at the edge
@@ -81,6 +91,7 @@ audience:
 - Rotate before expiry
 
 ---
+
 ## CDN Basics
 
 - Cache at the edge
@@ -89,11 +100,13 @@ audience:
 - Dynamic responses with care
 
 ---
+
 ## Edge Layers
 
 ![edge_layers](svg/courses/architecting/web-architecture-and-scaling/02_load_balancing_and_edge/edge_layers.svg)
 
 ---
+
 ## Cache Keys
 
 - URL plus headers
@@ -102,6 +115,7 @@ audience:
 - Beware cookie pollution
 
 ---
+
 ## Edge Compute
 
 - Run code at the edge
@@ -110,6 +124,7 @@ audience:
 - Watch cold starts
 
 ---
+
 ## DNS as a Balancer
 
 - GeoDNS to nearest region
@@ -118,6 +133,7 @@ audience:
 - Pair with regional load balancers
 
 ---
+
 ## Anycast
 
 - Same IP from many locations
@@ -126,6 +142,7 @@ audience:
 - Common for DNS and CDN
 
 ---
+
 ## Common Load-Balancing Mistakes
 
 - Sticky sessions everywhere

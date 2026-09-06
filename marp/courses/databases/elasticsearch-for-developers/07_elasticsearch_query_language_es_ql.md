@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Elasticsearch Query Language (ES|QL)
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![esql_capabilities](svg/courses/databases/elasticsearch-for-developers/07_elasticsearch_query_language_es_ql/esql_capabilities.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What ES|QL is
@@ -27,6 +29,7 @@ audience:
 - When to use it
 
 ---
+
 ## What ES|QL Is
 
 - A new query language for Elasticsearch
@@ -36,6 +39,7 @@ audience:
 - Complements (doesn't replace) Query DSL
 
 ---
+
 ## Pipe Syntax
 
 ```misc
@@ -51,12 +55,14 @@ FROM logs
 - Like Unix pipes
 
 ---
+
 ## FROM
 
 - Source index or pattern
 - `FROM logs-*` for date-based indexes
 
 ---
+
 ## WHERE
 
 - Filter rows
@@ -64,6 +70,7 @@ FROM logs
 - `WHERE timestamp > NOW() - 1h`
 
 ---
+
 ## STATS
 
 - Aggregations
@@ -72,18 +79,21 @@ FROM logs
 - Multiple aggregations possible
 
 ---
+
 ## EVAL
 
 - Add computed fields
 - `EVAL duration_seconds = duration / 1000`
 
 ---
+
 ## SORT, LIMIT
 
 - Like SQL
 - After STATS or alone
 
 ---
+
 ## DROP, KEEP
 
 - Project columns
@@ -91,6 +101,7 @@ FROM logs
 - `DROP internal_field`
 
 ---
+
 ## ENRICH
 
 - Join with another dataset
@@ -98,6 +109,7 @@ FROM logs
 - Useful for: geoip, user-agent parsing
 
 ---
+
 ## Comparison With Query DSL
 
 - DSL: full-text relevance, scoring, complex bool logic
@@ -106,6 +118,7 @@ FROM logs
 - Use both for different needs
 
 ---
+
 ## When To Use ES|QL
 
 - Log analysis
@@ -115,6 +128,7 @@ FROM logs
 - Quick ad-hoc queries
 
 ---
+
 ## When To Stick With DSL
 
 - Full-text search with relevance
@@ -122,6 +136,7 @@ FROM logs
 - Standard search-engine workloads
 
 ---
+
 ## Limitations
 
 - Newer; some operations missing
@@ -130,6 +145,7 @@ FROM logs
 - Maturing rapidly
 
 ---
+
 ## Common ES|QL Mistakes
 
 - Using for full-text where DSL is better

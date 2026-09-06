@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # MongoDB Drivers and Connections
 
 ---
+
 ## What This Chapter Covers
 
 - Official drivers
@@ -20,11 +22,13 @@ audience:
 - Read preferences
 
 ---
+
 ## Connection Anatomy
 
 ![connection_pooling](svg/courses/databases/mongodb-for-developers/04_mongodb_drivers_and_connections/connection_pooling.svg)
 
 ---
+
 ## Official Drivers
 
 - Python (pymongo / motor for async)
@@ -35,6 +39,7 @@ audience:
 - Each maintained by MongoDB Inc.
 
 ---
+
 ## Connection String
 
 ```misc
@@ -46,6 +51,7 @@ mongodb://user:pass@host1,host2,host3/db?replicaSet=rs0
 - TLS, auth, timeouts as params
 
 ---
+
 ## srv-Style URL
 
 ```misc
@@ -57,11 +63,13 @@ mongodb+srv://user:pass@cluster.mongodb.net/db
 - Easier to maintain across cluster changes
 
 ---
+
 ## Driver Connection Lifecycle
 
 ![driver_lifecycle](svg/courses/databases/mongodb-for-developers/04_mongodb_drivers_and_connections/driver_lifecycle.svg)
 
 ---
+
 ## Connection Pool
 
 - Driver maintains a pool of TCP connections
@@ -70,6 +78,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/db
 - Tune for high concurrency
 
 ---
+
 ## Replica Set Awareness
 
 - Driver knows: primary, secondaries, arbiter
@@ -78,6 +87,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/db
 - Detects failover; reconnects
 
 ---
+
 ## Read Preferences
 
 - `primary`: default; strongest consistency
@@ -87,6 +97,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/db
 - `nearest`: lowest network latency
 
 ---
+
 ## Write Concern
 
 - `w: 1`: primary acks (default)
@@ -96,6 +107,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/db
 - Match to data importance
 
 ---
+
 ## Retries
 
 - Modern drivers: retryable writes by default
@@ -104,6 +116,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/db
 - Set `retryWrites=true` (default in modern drivers)
 
 ---
+
 ## Timeouts
 
 - `socketTimeout`: TCP-level
@@ -112,6 +125,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/db
 - Tune to your environment
 
 ---
+
 ## Bulk Operations
 
 - Batch many ops in one call
@@ -120,6 +134,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/db
 - Massively faster for large batches
 
 ---
+
 ## Async Drivers
 
 - motor (Python), mongodb (Node), reactive streams (Java)
@@ -128,6 +143,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/db
 - Match your app's concurrency model
 
 ---
+
 ## Connection Per Process
 
 - One MongoClient per process
@@ -136,6 +152,7 @@ mongodb+srv://user:pass@cluster.mongodb.net/db
 - Pool handles concurrency
 
 ---
+
 ## Common Driver Mistakes
 
 - New connection per request

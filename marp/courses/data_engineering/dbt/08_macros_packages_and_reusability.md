@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Macros, Packages, and Reusability
 
 ---
+
 ## What This Chapter Covers
 
 - Macros
@@ -19,11 +21,13 @@ audience:
 - Custom packages
 
 ---
+
 ## Package Ecosystem
 
 ![package_ecosystem](svg/courses/data_engineering/dbt/08_macros_packages_and_reusability/package_ecosystem.svg)
 
 ---
+
 ## Macros
 
 - Reusable Jinja code
@@ -31,6 +35,7 @@ audience:
 - Live in macros/
 
 ---
+
 ## Sample Macro
 
 ```jinja
@@ -43,6 +48,7 @@ audience:
 - Use in models: `SELECT {{ clean_email('email') }}`
 
 ---
+
 ## Macros Generating SQL
 
 ```jinja
@@ -58,6 +64,7 @@ audience:
 - DRY across models
 
 ---
+
 ## Materialisation Macros
 
 - Custom materialisations
@@ -65,6 +72,7 @@ audience:
 - Rarely needed
 
 ---
+
 ## Packages
 
 - Reusable dbt code (macros + models)
@@ -72,6 +80,7 @@ audience:
 - `dbt deps` installs
 
 ---
+
 ## Sample packages.yml
 
 ```yaml
@@ -83,6 +92,7 @@ packages:
 ```
 
 ---
+
 ## dbt_utils
 
 - Most popular package
@@ -91,6 +101,7 @@ packages:
 - Standard
 
 ---
+
 ## dbt_expectations
 
 - Inspired by Great Expectations
@@ -99,6 +110,7 @@ packages:
 - Good for: data quality
 
 ---
+
 ## fivetran utils
 
 - Helpers for Fivetran-loaded data
@@ -106,6 +118,7 @@ packages:
 - Saves boilerplate
 
 ---
+
 ## Internal Packages
 
 - Your own reusable code
@@ -114,6 +127,7 @@ packages:
 - For: monorepos with many projects
 
 ---
+
 ## Standardising Across Teams
 
 - Shared macros for common transformations
@@ -121,6 +135,7 @@ packages:
 - Update once; benefit everywhere
 
 ---
+
 ## adapter Dispatch
 
 ```jinja
@@ -141,6 +156,7 @@ packages:
 - Code portable across DBs
 
 ---
+
 ## When To Macro
 
 - Same SQL pattern in 3+ models
@@ -148,6 +164,7 @@ packages:
 - Cross-team reusability
 
 ---
+
 ## When Not To
 
 - One-off code
@@ -155,6 +172,7 @@ packages:
 - Macros that obscure simple SQL
 
 ---
+
 ## Common Macro Mistakes
 
 - Over-abstraction (macro hides simple SQL)
@@ -164,6 +182,7 @@ packages:
 - Not version-pinning packages
 
 ---
+
 ## Macro Patterns
 
 ![macro_examples](svg/courses/data_engineering/dbt/08_macros_packages_and_reusability/macro_examples.svg)

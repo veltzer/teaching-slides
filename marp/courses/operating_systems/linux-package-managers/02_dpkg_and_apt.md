@@ -9,24 +9,29 @@ audience:
   - audiences:devops
 
 ---
+
 # The Debian Family: dpkg and apt
 
 ---
+
 ## apt &amp; dpkg Workflow
 
 ![apt_workflow](svg/courses/operating_systems/linux-package-managers/02_dpkg_and_apt/apt_workflow.svg)
 
 ---
+
 ## apt Daily Lifecycle
 
 ![apt_lifecycle](svg/courses/operating_systems/linux-package-managers/02_dpkg_and_apt/apt_lifecycle.svg)
 
 ---
+
 ## APT Repository Layout
 
 ![apt_repo_layout](svg/courses/operating_systems/linux-package-managers/02_dpkg_and_apt/apt_repo_layout.svg)
 
 ---
+
 ## What Is a `.deb` File?
 
 A `.deb` is the package format used by `Debian`, `Ubuntu`, `Mint`, `Raspbian`, `Kali`, and many derivatives.
@@ -46,6 +51,7 @@ ar t nginx_1.24.0-1_amd64.deb
 You can take a `.deb` apart with standard tools and no `dpkg` at all.
 
 ---
+
 ## Inspecting a `.deb` Without Installing It
 
 ```bash
@@ -67,6 +73,7 @@ ls /tmp/nginx-control/
 This is the right way to audit a `.deb` you got from a stranger.
 
 ---
+
 ## `dpkg`: The Low-Level Tool
 
 ```bash
@@ -93,6 +100,7 @@ dpkg -S /usr/sbin/nginx
 `dpkg` does *not* fetch from the internet and does *not* resolve dependencies. It works on the file in front of it.
 
 ---
+
 ## `dpkg` Package States
 
 ```output
@@ -117,6 +125,7 @@ dpkg -S /usr/sbin/nginx
 The single most common surprise: `rc` packages still take up `/etc` space until you `purge`.
 
 ---
+
 ## `apt`: The High-Level Tool
 
 ```bash
@@ -145,6 +154,7 @@ apt list --installed
 `apt` is the friendly front-end. It downloads, resolves dependencies, and calls `dpkg` for you.
 
 ---
+
 ## `apt` Install Options Worth Knowing
 
 ```bash
@@ -170,6 +180,7 @@ apt install ./package.deb
 `-s` (simulate) is your safety net. Use it before any production change.
 
 ---
+
 ## Upgrades and Maintenance
 
 ```bash
@@ -193,6 +204,7 @@ apt list --upgradable
 `upgrade` is conservative, `full-upgrade` is aggressive. Read the prompt carefully — `full-upgrade` will quietly remove packages.
 
 ---
+
 ## `apt-mark`: Holding Packages
 
 ```bash
@@ -219,6 +231,7 @@ apt-mark showauto
 In production, `hold` what matters and `apt upgrade` will leave it alone.
 
 ---
+
 ## `apt-cache` and `apt-file`: Querying
 
 ```bash
@@ -249,6 +262,7 @@ apt-file search libssl.so
 `apt-file` is the answer to "command not found, what do I install?".
 
 ---
+
 ## Repositories: `sources.list.d`
 
 ```bash
@@ -275,6 +289,7 @@ deb http://archive.ubuntu.com/ubuntu noble main restricted
 Components on Ubuntu: `main` (supported free), `restricted` (proprietary drivers), `universe` (community), `multiverse` (non-free).
 
 ---
+
 ## Adding a Third-Party Repository the Right Way
 
 The deprecated `apt-key` is gone. Today you keep the key in its own file and reference it from the repo definition.
@@ -297,6 +312,7 @@ sudo apt install example-package
 `signed-by` scopes the trust: that key only validates *that* repository.
 
 ---
+
 ## Pinning and Priorities
 
 Pinning controls which version of a package wins when multiple repos offer it.
@@ -322,6 +338,7 @@ Pin-Priority: -1
 | ≥ 1000 | Force, even downgrade |
 
 ---
+
 ## Building a `.deb` By Hand
 
 ```bash
@@ -351,6 +368,7 @@ dpkg-deb --build myapp-1.0
 This is the simplest possible `.deb`. Real packages add `postinst`/`prerm` scripts and a `changelog`.
 
 ---
+
 ## Maintainer Scripts
 
 A package can run code at four points in its lifecycle.
@@ -378,6 +396,7 @@ esac
 These scripts run as `root` during install. They are powerful — and a frequent source of bugs.
 
 ---
+
 ## Troubleshooting `apt`/`dpkg`
 
 ```bash
@@ -402,6 +421,7 @@ sudo dpkg-reconfigure tzdata
 When in doubt: `dpkg --configure -a` then `apt --fix-broken install`. That fixes most messes.
 
 ---
+
 ## `apt` History and Audit Trail
 
 ```bash
@@ -424,6 +444,7 @@ sudo debsums -c   # only show changed files
 For audit and incident response, `dpkg.log` and `debsums` are gold.
 
 ---
+
 ## Non-Interactive `apt` for Scripts and CI
 
 ```bash

@@ -12,14 +12,17 @@ audience:
   - audiences:devops
 
 ---
+
 # Aliases
 
 ---
+
 ## Alias Expansion Flow
 
 ![alias_expansion](svg/courses/languages/bash/bash-scripting/25_aliases/alias_expansion.svg)
 
 ---
+
 ## What is an Alias?
 - A shortcut for a command or command sequence
 - Text substitution before the shell parses the line
@@ -38,6 +41,7 @@ ll
 ```
 
 ---
+
 ## Creating Aliases
 
 ```bash
@@ -60,6 +64,7 @@ alias topmem='ps aux --sort=-%mem | head -10'
 ```
 
 ---
+
 ## Viewing and Removing Aliases
 
 ```bash
@@ -83,6 +88,7 @@ command ls  # also bypasses the alias
 ```
 
 ---
+
 ## Aliases vs Functions
 
 ```bash
@@ -107,6 +113,7 @@ backup myfile.txt    # copies myfile.txt to myfile.txt.bak
 ```
 
 ---
+
 ## Aliases in Scripts
 
 ```bash
@@ -126,6 +133,7 @@ ll    # now works
 ```
 
 ---
+
 ## Common Useful Aliases
 
 ```bash
@@ -149,6 +157,7 @@ alias chown='chown --preserve-root'
 ```
 
 ---
+
 ## Making Aliases Permanent
 
 ```bash
@@ -170,6 +179,7 @@ source ~/.bashrc
 ```
 
 ---
+
 ## Day 3 & Course Summary
 - Functions: use `local`, return codes vs stdout, namerefs
 - Variable types: strings (default), integers, arrays, assoc. arrays
@@ -182,6 +192,7 @@ source ~/.bashrc
 - Aliases: interactive shortcuts, use functions in scripts
 
 ---
+
 ## Best Practices: Final Checklist
 ```misc
 Scripts:
@@ -203,6 +214,7 @@ Code Quality:
 ```
 
 ---
+
 ## Recommended Reading
 - `man bash` — the definitive reference
 - "Advanced Bash-Scripting Guide" (tldp.org)
@@ -212,6 +224,7 @@ Code Quality:
 - Google Shell Style Guide — industry conventions
 
 ---
+
 ## Thank You!
 - Practice daily: automate one task per week
 - Read other people's scripts (in `/etc/init.d/`, GitHub)

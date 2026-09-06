@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Contract Testing
 
 ---
+
 ## Pact Flow
 
 ![pact_flow](svg/courses/testing/api-testing/04_contract_testing/pact_flow.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Contracts and consumers
@@ -25,6 +28,7 @@ audience:
 - CI integration
 
 ---
+
 ## What a Contract Is
 
 - Agreement on request and response shape
@@ -32,6 +36,7 @@ audience:
 - Enforced via tests
 
 ---
+
 ## Why Contract Tests
 
 - Provider changes break consumers silently
@@ -39,6 +44,7 @@ audience:
 - Contract tests fast and targeted
 
 ---
+
 ## Pact
 
 - Consumer-driven contract testing
@@ -47,6 +53,7 @@ audience:
 - Ruby origin; many language clients
 
 ---
+
 ## Pact Flow
 
 - Consumer test runs against mock
@@ -55,6 +62,7 @@ audience:
 - Provider verifies pact
 
 ---
+
 ## Sample Consumer (Pseudo)
 
 - Set up Pact mock
@@ -63,6 +71,7 @@ audience:
 - Pact file written
 
 ---
+
 ## Sample Provider (Pseudo)
 
 - Load pact file
@@ -70,6 +79,7 @@ audience:
 - Assert real responses match
 
 ---
+
 ## Pact Broker
 
 - Central store of pacts
@@ -78,6 +88,7 @@ audience:
 - CI integration
 
 ---
+
 ## Spec-Based Contract
 
 - OpenAPI as the contract
@@ -86,11 +97,13 @@ audience:
 - No separate pact file
 
 ---
+
 ## Contract Testing Styles
 
 ![contract_styles](svg/courses/testing/api-testing/04_contract_testing/contract_styles.svg)
 
 ---
+
 ## Schemathesis
 
 - From OpenAPI spec
@@ -99,6 +112,7 @@ audience:
 - Finds drift quickly
 
 ---
+
 ## Provider Verification
 
 - Real provider receives recorded requests
@@ -106,6 +120,7 @@ audience:
 - Run in CI
 
 ---
+
 ## Versioning Contracts
 
 - Tag pact with consumer version
@@ -113,6 +128,7 @@ audience:
 - Supports gradual rollout
 
 ---
+
 ## Coverage
 
 - Contract tests cover shape, not full logic
@@ -120,6 +136,7 @@ audience:
 - Together: confidence
 
 ---
+
 ## Cross-Team Workflow
 
 - Producer and consumer different teams
@@ -127,6 +144,7 @@ audience:
 - Block deploys on broken contract
 
 ---
+
 ## Common Contract-Testing Mistakes
 
 - Replacing all tests with contracts

@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Cluster setup
@@ -20,6 +22,7 @@ audience:
 - Upgrades
 
 ---
+
 ## Cluster Topology
 
 - Shards spread data
@@ -28,11 +31,13 @@ audience:
 - Distributed table fans out reads
 
 ---
+
 ## Topology Visualized
 
 ![clickhouse_topology](svg/courses/databases/clickhouse/05_operations/clickhouse_topology.svg)
 
 ---
+
 ## Coordination
 
 - ZooKeeper or Keeper
@@ -41,6 +46,7 @@ audience:
 - Run dedicated nodes
 
 ---
+
 ## Replicated Tables
 
 - Use the replicated merge-tree variant
@@ -49,6 +55,7 @@ audience:
 - Recover from local crash
 
 ---
+
 ## Sharding Key
 
 - Decide before inserts
@@ -57,6 +64,7 @@ audience:
 - Resharding is painful
 
 ---
+
 ## Backups
 
 - BACKUP command in modern versions
@@ -65,6 +73,7 @@ audience:
 - Test restores
 
 ---
+
 ## TTL Management
 
 - Drop old data automatically
@@ -73,6 +82,7 @@ audience:
 - Saves disk over time
 
 ---
+
 ## Monitoring Metrics
 
 - system.parts for part counts
@@ -81,6 +91,7 @@ audience:
 - Replication lag
 
 ---
+
 ## Alerts
 
 - Pending merges high
@@ -89,6 +100,7 @@ audience:
 - Disk pressure
 
 ---
+
 ## Upgrades
 
 - Rolling per replica
@@ -97,6 +109,7 @@ audience:
 - Have rollback plan
 
 ---
+
 ## Capacity Planning
 
 - Project rows per second
@@ -105,6 +118,7 @@ audience:
 - Network for distributed reads
 
 ---
+
 ## Multi-Tenant
 
 - Quota per user
@@ -113,6 +127,7 @@ audience:
 - Audit query log
 
 ---
+
 ## Security
 
 - TLS in transit
@@ -121,6 +136,7 @@ audience:
 - Per-table grants
 
 ---
+
 ## Common Operational Mistakes
 
 - ZooKeeper undersized

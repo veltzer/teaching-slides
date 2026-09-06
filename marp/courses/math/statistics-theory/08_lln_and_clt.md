@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Laws of Large Numbers and the Central Limit Theorem
 
 ---
+
 ## What This Chapter Covers
 
 - The weak law and a Chebyshev proof
@@ -21,11 +23,13 @@ audience:
 - When the LLN/CLT fail, and what replaces them
 
 ---
+
 ## LLN And CLT, Side By Side
 
 ![lln clt](svg/courses/math/statistics-theory/08_lln_and_clt/lln_clt.svg)
 
 ---
+
 ## The Weak Law Of Large Numbers
 
 - Let X&#8321;, X&#8322;, ... be i.i.d. with mean &mu; (and, for the easy proof, finite variance &sigma;&sup2;). Let X&#772;&#8345; = (1/n)&Sigma;X&#8345;
@@ -35,6 +39,7 @@ audience:
 - Foundational reading: averages stabilize; it's what makes "estimate &mu; by the sample mean" legitimate and what justifies Monte Carlo
 
 ---
+
 ## The Strong Law Of Large Numbers
 
 - **SLLN (Kolmogorov)**: if X&#8345; are i.i.d. with E|X&#8321;| &lt; &infin;, then X&#772;&#8345; &#8594; &mu; **almost surely** — *every* sample path converges (off a null set)
@@ -44,6 +49,7 @@ audience:
 - This is *the* theorem behind "long-run frequencies converge to probabilities" — the frequentist interpretation made rigorous
 
 ---
+
 ## The Classical Central Limit Theorem
 
 - X&#8345; i.i.d., mean &mu;, **finite variance** &sigma;&sup2; &isin; (0, &infin;). Then **&radic;n (X&#772;&#8345; &minus; &mu;) / &sigma; &#8658; N(0, 1)** (convergence in distribution)
@@ -53,6 +59,7 @@ audience:
 - Caveat: it's a statement about the **average / sum**, not about individual observations, and the rate of approach depends on the distribution (slide on Berry&ndash;Esseen)
 
 ---
+
 ## CLT Variants
 
 - **Lindeberg CLT**: independent but *not* identically distributed X&#8345;; under the **Lindeberg condition** (no single term dominates the variance in the limit), the standardized sum still &#8658; N(0,1) — the modern, definitive form
@@ -62,11 +69,13 @@ audience:
 - Dependent data: there are CLTs under mixing / martingale-difference conditions (the **martingale CLT**), but the *long-run variance* replaces &sigma;&sup2; — naive variance estimates are then wrong (need HAC/Newey&ndash;West-type corrections)
 
 ---
+
 ## CLT In Action
 
 ![clt in action](svg/courses/math/statistics-theory/08_lln_and_clt/clt_in_action.svg)
 
 ---
+
 ## How Fast: Berry&ndash;Esseen
 
 - The CLT is a *limit*; for finite n the normal approximation has error. **Berry&ndash;Esseen**: if &rho; = E|X&#8321; &minus; &mu;|&sup3; &lt; &infin;, then sup_x | F&#8345;(x) &minus; &Phi;(x) | &leq; C &rho; / (&sigma;&sup3; &radic;n), with C an absolute constant (&lt; 0.5)
@@ -76,6 +85,7 @@ audience:
 - Practical advice: when n is moderate and the data is skewed, prefer a bootstrap or an exact/permutation method over the normal approximation
 
 ---
+
 ## When The Classical Results Break
 
 - **Infinite mean** (Cauchy, Pareto &alpha; &leq; 1): the SLLN fails outright — X&#772;&#8345; does not settle down; it's as variable as a single observation
@@ -85,6 +95,7 @@ audience:
 - Diagnostic instinct: if the data plausibly has a power-law tail or persistent autocorrelation, don't reach for &radic;n-CLT inference — check the tail index, model the dependence, or resample with blocks
 
 ---
+
 ## LLN And CLT In Code
 
 ```python
@@ -102,6 +113,7 @@ for n in (5, 30, 200):
 ```
 
 ---
+
 ## Common Mistakes
 
 - Applying the CLT to *individual* observations instead of to the sample mean / sum

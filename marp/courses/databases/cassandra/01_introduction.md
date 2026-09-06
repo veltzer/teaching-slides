@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Introduction to Cassandra
 
 ---
+
 ## What This Chapter Covers
 
 - What Cassandra is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What Cassandra Is
 
 - Distributed wide-column store
@@ -28,6 +31,7 @@ audience:
 - No master node
 
 ---
+
 ## History
 
 - Born at Facebook
@@ -36,6 +40,7 @@ audience:
 - Powers very large workloads
 
 ---
+
 ## When To Use
 
 - Massive write throughput
@@ -44,11 +49,13 @@ audience:
 - Always-on requirement
 
 ---
+
 ## Strengths Visualised
 
 ![cassandra_strengths](svg/courses/databases/cassandra/01_introduction/cassandra_strengths.svg)
 
 ---
+
 ## When Not To Use
 
 - Complex joins
@@ -57,6 +64,7 @@ audience:
 - Small data with relational shape
 
 ---
+
 ## Architecture Highlights
 
 - Ring of nodes
@@ -65,6 +73,7 @@ audience:
 - Tunable consistency
 
 ---
+
 ## No Master
 
 - Every node is equal
@@ -73,11 +82,13 @@ audience:
 - Simplifies operations
 
 ---
+
 ## Architecture Overview
 
 ![ring_overview](svg/courses/databases/cassandra/01_introduction/ring_overview.svg)
 
 ---
+
 ## Replication Factor
 
 - Number of copies per row
@@ -86,6 +97,7 @@ audience:
 - Cross-data-center common
 
 ---
+
 ## Consistency Levels
 
 - ONE, QUORUM, ALL
@@ -94,6 +106,7 @@ audience:
 - R + W > N for strong reads
 
 ---
+
 ## Data Model
 
 - Keyspaces hold tables
@@ -102,6 +115,7 @@ audience:
 - No joins, no constraints
 
 ---
+
 ## Query Language
 
 - CQL looks like SQL
@@ -110,6 +124,7 @@ audience:
 - No subqueries or joins
 
 ---
+
 ## Hardware Profile
 
 - Many commodity nodes
@@ -118,6 +133,7 @@ audience:
 - Network is critical
 
 ---
+
 ## Cassandra vs Cousins
 
 - ScyllaDB: C++ rewrite, faster
@@ -126,6 +142,7 @@ audience:
 - Each tunes the trade-offs
 
 ---
+
 ## Course Outline
 
 - Data modeling
@@ -135,6 +152,7 @@ audience:
 - Failure modes
 
 ---
+
 ## Common Beginner Mistakes
 
 - Treating it like a relational store

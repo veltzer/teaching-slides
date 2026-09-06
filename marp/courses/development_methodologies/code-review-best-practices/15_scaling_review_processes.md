@@ -9,9 +9,11 @@ audience:
   - audiences:managers
 
 ---
+
 # Scaling Review Processes
 
 ---
+
 ## What This Chapter Covers
 
 - Reviews in large teams
@@ -22,6 +24,7 @@ audience:
 - The shift from "everyone knows everything" to "specialists own areas"
 
 ---
+
 ## Why Scale Matters
 
 - 5-person team: everyone reviews everything; works fine
@@ -31,11 +34,13 @@ audience:
 - The patterns differ at each size
 
 ---
+
 ## Levers for Scale
 
 ![scale_review](svg/courses/development_methodologies/code-review-best-practices/15_scaling_review_processes/scale_review.svg)
 
 ---
+
 ## Small Teams (under 10)
 
 - Ad-hoc routing: pick anyone available
@@ -45,6 +50,7 @@ audience:
 - This works; don't add overhead before you need it
 
 ---
+
 ## Medium Teams (10-50)
 
 - CODEOWNERS to route by area
@@ -54,6 +60,7 @@ audience:
 - Process visible but not heavy
 
 ---
+
 ## Large Teams (50+)
 
 - CODEOWNERS strict; specialists own areas
@@ -63,6 +70,7 @@ audience:
 - Process is part of the team culture, not improvised
 
 ---
+
 ## Cross-Team Reviews
 
 - A change touches multiple teams' code
@@ -72,6 +80,7 @@ audience:
 - Bad when: every change becomes a multi-team negotiation
 
 ---
+
 ## Review Load Balancing
 
 - Without management, reviews concentrate on the same people
@@ -81,6 +90,7 @@ audience:
 - Match capacity to demand; track over time
 
 ---
+
 ## Specialist Reviews
 
 - Security team for sensitive changes
@@ -90,6 +100,7 @@ audience:
 - Specialists are scarce; protect their time
 
 ---
+
 ## Documentation at Scale
 
 - "How we review" doc, kept current
@@ -99,6 +110,7 @@ audience:
 - Culture doesn't transmit by osmosis at 100+ people
 
 ---
+
 ## Tooling at Scale
 
 - Self-hosted GitHub Enterprise, GitLab, or similar
@@ -108,6 +120,7 @@ audience:
 - Investments compound; pay them down once
 
 ---
+
 ## Trunk-Based Development
 
 - Common at scale: one branch (`main`), small frequent merges
@@ -117,6 +130,7 @@ audience:
 - Industry-standard for high-velocity teams
 
 ---
+
 ## Stacked PRs
 
 - Series of PRs, each based on the previous
@@ -126,6 +140,7 @@ audience:
 - A practice; not strictly necessary
 
 ---
+
 ## Review Office Hours
 
 - A scheduled hour for review pairing
@@ -135,6 +150,7 @@ audience:
 - Useful for crossing team boundaries
 
 ---
+
 ## Asynchronous Reviews
 
 - Distributed teams across time zones
@@ -144,6 +160,7 @@ audience:
 - Faster end-to-end than waiting for one zone
 
 ---
+
 ## When Reviews Are A Liability
 
 - A 50-person team where the same 5 people approve everything
@@ -153,6 +170,7 @@ audience:
 - Restructure: more owners, smaller PRs, better tools
 
 ---
+
 ## Continuous Process Improvement
 
 - Quarterly review-of-reviews
@@ -162,6 +180,7 @@ audience:
 - Static processes age badly
 
 ---
+
 ## Common Scaling Mistakes
 
 - Heavyweight process applied to a small team
@@ -171,6 +190,7 @@ audience:
 - Letting review queues become someone's daily nightmare
 
 ---
+
 ## Course Wrap-Up
 
 - Reviews are a powerful practice when done well

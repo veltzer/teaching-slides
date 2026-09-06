@@ -10,6 +10,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Choosing a Cloud Provider
 
 ---

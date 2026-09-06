@@ -12,9 +12,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Pre-trained Language Models
 
 ---
+
 ## What This Chapter Covers
 
 - Encoder, decoder, and encoder-decoder transformer families
@@ -24,6 +26,7 @@ audience:
 - Few-shot, zero-shot, and the boundary between prompting and training
 
 ---
+
 ## Why Pre-training Changed Everything
 
 - A single model trained once, adapted many times
@@ -32,11 +35,13 @@ audience:
 - Quality on small datasets often exceeds older fully-supervised systems
 
 ---
+
 ## The Three Architectural Families
 
 ![architecture_families](svg/courses/ai/natural-language-processing/09_pretrained_language_models/architecture_families.svg)
 
 ---
+
 ## Encoder Models: BERT
 
 - Bidirectional transformer — every token attends to every other token
@@ -45,6 +50,7 @@ audience:
 - Strongest on classification, tagging, and span-extraction tasks
 
 ---
+
 ## BERT Pre-training Objectives
 
 - `MLM`: 15% of input tokens are corrupted; the model predicts the original
@@ -55,6 +61,7 @@ audience:
 - The `[CLS]` token aggregates a sequence-level representation
 
 ---
+
 ## RoBERTa
 
 - Same architecture as `BERT`, retrained with better recipe
@@ -63,6 +70,7 @@ audience:
 - Demonstrated that `BERT` was undertrained, not underdesigned
 
 ---
+
 ## ALBERT
 
 - Cross-layer parameter sharing — one transformer block reused at every depth
@@ -71,6 +79,7 @@ audience:
 - Smaller parameter count, similar quality, slower inference per step
 
 ---
+
 ## DistilBERT
 
 - A student model trained to match a `BERT` teacher
@@ -79,6 +88,7 @@ audience:
 - A common production baseline when latency matters
 
 ---
+
 ## ELECTRA
 
 - Replaces `MLM` with replaced-token detection
@@ -87,11 +97,13 @@ audience:
 - Better sample efficiency than `BERT` at the same compute budget
 
 ---
+
 ## ELECTRA Versus MLM
 
 ![electra_vs_mlm](svg/courses/ai/natural-language-processing/09_pretrained_language_models/electra_vs_mlm.svg)
 
 ---
+
 ## Decoder Models: GPT Family
 
 - Causal (left-to-right) transformer — each position attends only to past positions
@@ -100,6 +112,7 @@ audience:
 - Scales smoothly with parameters, data, and compute
 
 ---
+
 ## Causal Language Modeling at Scale
 
 - Single objective, single architecture, vast quantities of data
@@ -108,6 +121,7 @@ audience:
 - In-context learning emerges around the multi-billion parameter range
 
 ---
+
 ## The GPT Lineage
 
 - `GPT-1`: proof of concept that generative pre-training transfers
@@ -116,6 +130,7 @@ audience:
 - Subsequent generations add instruction tuning, alignment, and tool use
 
 ---
+
 ## Encoder-Decoder Models: T5
 
 - Reframes every task as text-to-text
@@ -124,6 +139,7 @@ audience:
 - One unified architecture and loss for classification, generation, and translation
 
 ---
+
 ## T5 Span Corruption
 
 - Pick spans of consecutive tokens at random
@@ -132,6 +148,7 @@ audience:
 - Forces the model to predict structured chunks rather than isolated tokens
 
 ---
+
 ## BART and mBART
 
 - Encoder-decoder with denoising auto-encoder pre-training
@@ -140,6 +157,7 @@ audience:
 - `mBART` extends the recipe to many languages with a shared vocabulary
 
 ---
+
 ## Multilingual Variants
 
 - `mBERT`, `XLM-R`, `mT5`, `mBART` — one model across many languages
@@ -148,6 +166,7 @@ audience:
 - Performance varies sharply with how well a language was represented in pre-training
 
 ---
+
 ## Tokenizers Recap
 
 - `WordPiece` — `BERT` and descendants; `##` continuation marks
@@ -156,6 +175,7 @@ audience:
 - The tokenizer is part of the weights — never swap it out
 
 ---
+
 ## Pre-training Corpora
 
 - Web crawl: `Common Crawl` cleaned into corpora like `C4`, `OSCAR`, `RefinedWeb`
@@ -164,6 +184,7 @@ audience:
 - Composition decisions silently shape the resulting model's voice and knowledge
 
 ---
+
 ## Data Filtering and Quality
 
 - Deduplication: near-duplicate documents inflate memorization without adding signal
@@ -172,6 +193,7 @@ audience:
 - Heuristic filters: line length, language detection, perplexity-based outlier removal
 
 ---
+
 ## Data Quality Effects Downstream
 
 - Garbage at scale is still garbage — bigger does not fix dirty data
@@ -180,6 +202,7 @@ audience:
 - Subtle filtering choices propagate as biases into every downstream task
 
 ---
+
 ## Fine-tuning: The Classical Recipe
 
 - Replace the pre-training head with a task-specific head
@@ -188,6 +211,7 @@ audience:
 - Often a few epochs over a few thousand examples is enough
 
 ---
+
 ## Task-Specific Heads
 
 - Classification: linear layer on top of `[CLS]` or pooled output
@@ -196,6 +220,7 @@ audience:
 - Generation: reuse the pre-training language modeling head with new prompts
 
 ---
+
 ## Learning Rate and Warmup
 
 - Pre-trained weights are fragile — large updates erase what was learned
@@ -204,6 +229,7 @@ audience:
 - A linear or cosine decay over the remaining steps anneals to convergence
 
 ---
+
 ## Catastrophic Forgetting
 
 - Aggressive fine-tuning overwrites general competence with task-specific patterns
@@ -212,11 +238,13 @@ audience:
 - Parameter-efficient methods sidestep the problem by leaving most weights untouched
 
 ---
+
 ## Parameter-Efficient Fine-tuning
 
 ![peft_methods](svg/courses/ai/natural-language-processing/09_pretrained_language_models/peft_methods.svg)
 
 ---
+
 ## LoRA
 
 - Low-rank adaptation — freeze the base weights, add small trainable matrices
@@ -225,6 +253,7 @@ audience:
 - Adapters merge back into the base weights at inference — zero added latency
 
 ---
+
 ## Adapters
 
 - Insert small bottleneck modules between transformer layers
@@ -233,6 +262,7 @@ audience:
 - Slight inference overhead from the extra layer per block
 
 ---
+
 ## Prefix and Prompt Tuning
 
 - Prepend trainable continuous vectors to the key and value sequences
@@ -241,6 +271,7 @@ audience:
 - A natural bridge between fine-tuning and prompting
 
 ---
+
 ## Code Example: LoRA With PEFT
 
 ```python
@@ -257,6 +288,7 @@ model.print_trainable_parameters()
 - Same training loop as full fine-tuning, much smaller checkpoints
 
 ---
+
 ## Zero-Shot Learning
 
 - Ask a pre-trained model to perform a task it was never explicitly trained on
@@ -265,6 +297,7 @@ model.print_trainable_parameters()
 - Quality scales sharply with model size
 
 ---
+
 ## Few-Shot In-Context Learning
 
 - Place a handful of input-output examples inside the prompt
@@ -273,6 +306,7 @@ model.print_trainable_parameters()
 - Sensitive to example order, formatting, and choice
 
 ---
+
 ## Prompt Design as an Alternative to Fine-tuning
 
 - For many tasks, a careful prompt rivals or beats fine-tuned smaller models
@@ -281,6 +315,7 @@ model.print_trainable_parameters()
 - Reproducibility is harder; small prompt edits can move the model
 
 ---
+
 ## Limits of Zero-Shot Generalization
 
 - Tasks far outside the training distribution still need supervised signal
@@ -289,6 +324,7 @@ model.print_trainable_parameters()
 - Specialist domains (medical, legal, low-resource languages) benefit from fine-tuning
 
 ---
+
 ## Choosing Between Fine-tuning and Prompting
 
 - Few labeled examples and frequent prompt changes — prompt
@@ -297,11 +333,13 @@ model.print_trainable_parameters()
 - Hybrid: use prompting to bootstrap labels, then distill into a smaller model
 
 ---
+
 ## Adaptation Decision Map
 
 ![adaptation_decision](svg/courses/ai/natural-language-processing/09_pretrained_language_models/adaptation_decision.svg)
 
 ---
+
 ## Anti-Patterns
 
 - Mixing tokenizers between training and inference
@@ -310,6 +348,7 @@ model.print_trainable_parameters()
 - Trusting a zero-shot answer without verification on a held-out set
 
 ---
+
 ## Summary
 
 - Encoder, decoder, and encoder-decoder serve different downstream shapes

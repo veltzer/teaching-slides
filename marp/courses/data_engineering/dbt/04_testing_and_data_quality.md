@@ -8,14 +8,17 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Testing and Data Quality
 
 ---
+
 ## Test Types
 
 ![test_types](svg/courses/data_engineering/dbt/04_testing_and_data_quality/test_types.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - dbt tests
@@ -26,6 +29,7 @@ audience:
 - Production testing
 
 ---
+
 ## Why Test
 
 - Data is wrong silently
@@ -34,12 +38,14 @@ audience:
 - Standard part of dbt
 
 ---
+
 ## Generic Tests
 
 - Built-in: not_null, unique, accepted_values, relationships
 - Configured in YAML
 
 ---
+
 ## Sample Tests
 
 ```yaml
@@ -57,6 +63,7 @@ models:
 ```
 
 ---
+
 ## Relationships
 
 ```yaml
@@ -71,6 +78,7 @@ models:
 - Catches orphan rows
 
 ---
+
 ## Singular Tests
 
 - A custom SELECT in tests/ folder
@@ -78,6 +86,7 @@ models:
 - More flexible than generic
 
 ---
+
 ## Singular Test Example
 
 ```sql
@@ -89,6 +98,7 @@ SELECT * FROM {{ ref('orders') }} WHERE total < 0
 - Test fails if rows returned
 
 ---
+
 ## Custom Generic Tests
 
 - Write reusable tests as macros
@@ -96,6 +106,7 @@ SELECT * FROM {{ ref('orders') }} WHERE total < 0
 - Test = macro returning a SELECT
 
 ---
+
 ## Test Severity
 
 - error (default): fails the run
@@ -104,6 +115,7 @@ SELECT * FROM {{ ref('orders') }} WHERE total < 0
 - Useful: warn for new tests, error after stable
 
 ---
+
 ## Running Tests
 
 - `dbt test`: all tests
@@ -112,6 +124,7 @@ SELECT * FROM {{ ref('orders') }} WHERE total < 0
 - Standard CI step
 
 ---
+
 ## Schema Yml
 
 - Tests live in YAML files alongside models
@@ -119,6 +132,7 @@ SELECT * FROM {{ ref('orders') }} WHERE total < 0
 - Co-located with model
 
 ---
+
 ## dbt Source Tests
 
 - Test source data freshness
@@ -126,6 +140,7 @@ SELECT * FROM {{ ref('orders') }} WHERE total < 0
 - Catches upstream pipeline issues
 
 ---
+
 ## Data Quality Patterns
 
 - not_null on all primary keys
@@ -135,6 +150,7 @@ SELECT * FROM {{ ref('orders') }} WHERE total < 0
 - Custom: business rules
 
 ---
+
 ## Custom Quality Tests
 
 - Volume: row count within expected range
@@ -143,6 +159,7 @@ SELECT * FROM {{ ref('orders') }} WHERE total < 0
 - Tools: dbt-expectations package
 
 ---
+
 ## Production Testing
 
 - Run tests after every dbt run
@@ -151,6 +168,7 @@ SELECT * FROM {{ ref('orders') }} WHERE total < 0
 - Trust without tests is misplaced
 
 ---
+
 ## Common Testing Mistakes
 
 - Tests as warnings only (never act)
@@ -160,6 +178,7 @@ SELECT * FROM {{ ref('orders') }} WHERE total < 0
 - Adding tests after data has been wrong for months
 
 ---
+
 ## Test Severity and Configuration
 
 ![test_severity](svg/courses/data_engineering/dbt/04_testing_and_data_quality/test_severity.svg)

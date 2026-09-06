@@ -7,19 +7,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Subscriptions
 
 ---
+
 ## Over WebSocket
 
 ![subscriptions](svg/courses/networking/graphql/05_subscriptions/subscriptions.svg)
 
 ---
+
 ## Transport Choices
 
 ![transport_choices](svg/courses/networking/graphql/05_subscriptions/transport_choices.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What subscriptions are
@@ -30,6 +34,7 @@ audience:
 - Tradeoffs
 
 ---
+
 ## What Subscriptions Are
 
 - Streaming GraphQL operations
@@ -38,6 +43,7 @@ audience:
 - Long-lived connection
 
 ---
+
 ## Sample Subscription
 
 ```graphql
@@ -54,6 +60,7 @@ subscription OnNewMessage($room: ID!) {
 - Stream of events
 
 ---
+
 ## Transport
 
 - WebSocket: classic, bidirectional
@@ -62,6 +69,7 @@ subscription OnNewMessage($room: ID!) {
 - HTTP: not native
 
 ---
+
 ## Use Cases
 
 - Chat / messaging
@@ -70,6 +78,7 @@ subscription OnNewMessage($room: ID!) {
 - Collaborative editing
 
 ---
+
 ## Server Side
 
 - Resolver returns async iterator
@@ -77,6 +86,7 @@ subscription OnNewMessage($room: ID!) {
 - Filter events by subscription args
 
 ---
+
 ## Pub / Sub Backend
 
 - Redis, Kafka, etc.
@@ -85,6 +95,7 @@ subscription OnNewMessage($room: ID!) {
 - Decouples publisher and subscriber
 
 ---
+
 ## Sample Resolver
 
 - Subscribe: listen on channel
@@ -92,6 +103,7 @@ subscription OnNewMessage($room: ID!) {
 - On disconnect: unsubscribe
 
 ---
+
 ## Authentication
 
 - Auth at connection time
@@ -99,6 +111,7 @@ subscription OnNewMessage($room: ID!) {
 - Refresh handling tricky on long connections
 
 ---
+
 ## Scaling
 
 - WebSockets: stateful
@@ -107,6 +120,7 @@ subscription OnNewMessage($room: ID!) {
 - Limit connections per user
 
 ---
+
 ## Versus Polling
 
 - Polling: pull, simple, more load
@@ -114,6 +128,7 @@ subscription OnNewMessage($room: ID!) {
 - Pick by frequency and latency needs
 
 ---
+
 ## Versus Webhooks
 
 - Webhooks: server-to-server
@@ -121,6 +136,7 @@ subscription OnNewMessage($room: ID!) {
 - Different trust models
 
 ---
+
 ## Tradeoffs
 
 - Live UX is great
@@ -129,6 +145,7 @@ subscription OnNewMessage($room: ID!) {
 - Use only when needed
 
 ---
+
 ## Common Subscription Mistakes
 
 - Subscribing to everything; UI floods

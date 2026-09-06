@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Secrets and Image Security
 
 ---
+
 ## What This Chapter Covers
 
 - Kubernetes Secrets: what they are and aren't
@@ -21,6 +23,7 @@ audience:
 - Image signing and provenance
 
 ---
+
 ## Kubernetes Secrets Basics
 
 - `kind: Secret` — base64-encoded values
@@ -30,6 +33,7 @@ audience:
 - "Secret" in name only by default
 
 ---
+
 ## The Encryption Gap
 
 - Secrets are base64, not encrypted
@@ -39,6 +43,7 @@ audience:
 - A baseline expectation in 2026
 
 ---
+
 ## Encryption at Rest
 
 ```yaml
@@ -58,6 +63,7 @@ resources:
 - KMS provider for HSM-backed keys
 
 ---
+
 ## KMS-Backed Encryption
 
 - Uses cloud KMS (AWS KMS, GCP KMS, Azure Key Vault)
@@ -67,6 +73,7 @@ resources:
 - Strongest at-rest protection
 
 ---
+
 ## RBAC for Secrets
 
 - Restrict who can read Secrets
@@ -76,6 +83,7 @@ resources:
 - Audit annually
 
 ---
+
 ## External Secret Stores
 
 - HashiCorp Vault
@@ -85,11 +93,13 @@ resources:
 - Single source of truth outside the cluster
 
 ---
+
 ## Storage Choices
 
 ![secret_storage_options](svg/courses/security/kubernetes-security/05_secrets_images/secret_storage_options.svg)
 
 ---
+
 ## External Secrets Operator
 
 - Sync from external store to Kubernetes Secrets
@@ -99,6 +109,7 @@ resources:
 - Cluster never owns the master copy
 
 ---
+
 ## ExternalSecret Example
 
 ```yaml
@@ -120,6 +131,7 @@ spec:
 ```
 
 ---
+
 ## Sealed Secrets
 
 - Encrypt Secrets to commit them to git
@@ -129,6 +141,7 @@ spec:
 - GitOps-friendly
 
 ---
+
 ## SOPS
 
 - Mozilla SOPS — encrypts YAML/JSON files
@@ -138,11 +151,13 @@ spec:
 - Strong alternative to Sealed Secrets
 
 ---
+
 ## Secret Sources Visualized
 
 ![secrets_flow](svg/courses/security/kubernetes-security/05_secrets_images/secrets_flow.svg)
 
 ---
+
 ## Image Scanning
 
 - Scan images for known vulnerabilities (CVEs)
@@ -152,11 +167,13 @@ spec:
 - Keep vulnerability DB current
 
 ---
+
 ## Supply-Chain Stages
 
 ![image_supply_chain](svg/courses/security/kubernetes-security/05_secrets_images/image_supply_chain.svg)
 
 ---
+
 ## Trivy in CI
 
 ```bash
@@ -170,6 +187,7 @@ trivy image myapp:1.0.0 \
 - Defacto standard in many pipelines
 
 ---
+
 ## Base Image Hygiene
 
 - Distroless or Alpine for minimal attack surface
@@ -179,6 +197,7 @@ trivy image myapp:1.0.0 \
 - Multi-stage builds drop build tools
 
 ---
+
 ## Image Pull Policy
 
 - IfNotPresent — use cached image (default)
@@ -188,6 +207,7 @@ trivy image myapp:1.0.0 \
 - Verify signature if signing is configured
 
 ---
+
 ## Image Signing
 
 - Sigstore / Cosign — modern, free
@@ -197,6 +217,7 @@ trivy image myapp:1.0.0 \
 - Increasingly required for supply-chain assurance
 
 ---
+
 ## Cosign Workflow
 
 ```bash
@@ -211,6 +232,7 @@ cosign verify --key cosign.pub registry/app:1.0.0
 - Fits naturally into CI/CD
 
 ---
+
 ## Verification at Admission
 
 - Kyverno or Cosign Gatekeeper policies
@@ -220,6 +242,7 @@ cosign verify --key cosign.pub registry/app:1.0.0
 - Production-ready in 2026
 
 ---
+
 ## Image Policy Example (Kyverno)
 
 ```yaml
@@ -248,6 +271,7 @@ spec:
 ```
 
 ---
+
 ## Restricting Registries
 
 - Allow only your private registry
@@ -257,6 +281,7 @@ spec:
 - Critical for supply-chain integrity
 
 ---
+
 ## SBOM Generation
 
 - Software Bill of Materials
@@ -266,6 +291,7 @@ spec:
 - Useful for vulnerability tracking
 
 ---
+
 ## Continuous Scanning
 
 - Images scanned at build (CI)
@@ -275,6 +301,7 @@ spec:
 - Drive remediation — patch and redeploy
 
 ---
+
 ## Patch Cadence
 
 - Security CVEs: patch within days
@@ -284,6 +311,7 @@ spec:
 - Automation reduces toil
 
 ---
+
 ## Common Pitfalls
 
 - Encryption at rest left disabled
@@ -293,6 +321,7 @@ spec:
 - Image scanning warns but never blocks
 
 ---
+
 ## Best Practices
 
 - Encrypt Secrets at rest with KMS
@@ -302,6 +331,7 @@ spec:
 - Verify image signatures at admission
 
 ---
+
 ## Summary
 
 - Default Secrets are base64, not encrypted — fix this first

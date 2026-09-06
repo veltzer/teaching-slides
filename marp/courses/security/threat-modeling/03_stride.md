@@ -9,9 +9,11 @@ audience:
   - audiences:security-professionals
 
 ---
+
 # STRIDE Methodology
 
 ---
+
 ## What This Chapter Covers
 
 - The STRIDE acronym and its origin
@@ -21,6 +23,7 @@ audience:
 - Strengths, weaknesses, and traps
 
 ---
+
 ## Origin and Use
 
 - Developed at Microsoft in the late 1990s
@@ -30,6 +33,7 @@ audience:
 - Excellent training tool — concrete and exhaustive
 
 ---
+
 ## The STRIDE Categories
 
 - **S**poofing — pretending to be someone else
@@ -40,11 +44,13 @@ audience:
 - **E**levation of privilege — gaining unauthorized capabilities
 
 ---
+
 ## STRIDE Visualized
 
 ![stride_overview](svg/courses/security/threat-modeling/03_stride/stride_overview.svg)
 
 ---
+
 ## Spoofing
 
 - Threat: an attacker impersonates a user or service
@@ -54,6 +60,7 @@ audience:
 - Verify identity before granting access — every time
 
 ---
+
 ## Tampering
 
 - Threat: data is modified without authorization
@@ -63,6 +70,7 @@ audience:
 - "Trust but verify" — every input, every storage layer
 
 ---
+
 ## Repudiation
 
 - Threat: a user denies an action they took
@@ -72,6 +80,7 @@ audience:
 - Critical for finance, compliance, contractual systems
 
 ---
+
 ## Information Disclosure
 
 - Threat: data leaks to unauthorized parties
@@ -81,6 +90,7 @@ audience:
 - Defaults matter — assume "expose" is the default and lock it down
 
 ---
+
 ## Denial of Service
 
 - Threat: legitimate users cannot use the system
@@ -90,6 +100,7 @@ audience:
 - Increasingly economic: denial via cloud bill explosion
 
 ---
+
 ## Elevation of Privilege
 
 - Threat: an attacker gains capabilities they shouldn't have
@@ -99,16 +110,19 @@ audience:
 - The crown-jewel threat — once achieved, everything else follows
 
 ---
+
 ## STRIDE With Examples
 
 ![stride_examples](svg/courses/security/threat-modeling/03_stride/stride_examples.svg)
 
 ---
+
 ## STRIDE Per Element Visualised
 
 ![stride_per_element](svg/courses/security/threat-modeling/03_stride/stride_per_element.svg)
 
 ---
+
 ## STRIDE Per Element
 
 - For each DFD element, ask: which of the STRIDE threats apply?
@@ -119,6 +133,7 @@ audience:
 - A simple table per element ensures coverage
 
 ---
+
 ## STRIDE Per Interaction
 
 - Look at each pair of elements connected by a flow
@@ -128,6 +143,7 @@ audience:
 - Heavier — use when stakes warrant the depth
 
 ---
+
 ## Driving STRIDE From a DFD
 
 - Walk the DFD element by element
@@ -137,6 +153,7 @@ audience:
 - The output is a structured threat list
 
 ---
+
 ## Worked Example
 
 - Element: web app process accepting login
@@ -148,6 +165,7 @@ audience:
 - EoP: bypass of MFA via downgrade
 
 ---
+
 ## STRIDE Strengths
 
 - Comprehensive — covers the major threat categories
@@ -157,6 +175,7 @@ audience:
 - Outputs a structured backlog of mitigations
 
 ---
+
 ## STRIDE Weaknesses
 
 - Generates many threats — prioritization needed (DREAD, etc)
@@ -166,6 +185,7 @@ audience:
 - Requires judgment to know when "doesn't apply" is correct
 
 ---
+
 ## STRIDE Pitfalls
 
 - Treating it as a checklist with no thought
@@ -175,6 +195,7 @@ audience:
 - Letting "we have a firewall" close every threat
 
 ---
+
 ## STRIDE and Existing Mitigations
 
 - Distinguish: identified threat vs threat with mitigation in place
@@ -184,6 +205,7 @@ audience:
 - Re-validate when the system changes
 
 ---
+
 ## STRIDE in Agile Teams
 
 - Run STRIDE on the diagram for each significant story
@@ -193,6 +215,7 @@ audience:
 - Don't let "no time" become "no security"
 
 ---
+
 ## Variants and Extensions
 
 - STRIDE-LM — adds Lateral Movement and Manipulation
@@ -202,6 +225,7 @@ audience:
 - Pick variants for specific industry needs
 
 ---
+
 ## When STRIDE Is Not Enough
 
 - Pair with LINDDUN for privacy threats
@@ -211,6 +235,7 @@ audience:
 - STRIDE finds technical threats; not the only threats that exist
 
 ---
+
 ## Summary
 
 - STRIDE: spoofing, tampering, repudiation, disclosure, DoS, elevation

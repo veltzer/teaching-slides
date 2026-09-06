@@ -11,6 +11,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Observability in `Kubernetes`
 
 Advanced Kubernetes Course - Day 2, Module 2
@@ -442,11 +443,13 @@ histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[5m]))
 ```
 
 ---
+
 ## SLOs and Error Budgets
 
 ![slos_and_error_budgets](svg/courses/devops/advanced-kubernetes/07_observability/slos_and_error_budgets.svg)
 
 ---
+
 ## SLOs and Error Budgets: Example
 
 ```promql

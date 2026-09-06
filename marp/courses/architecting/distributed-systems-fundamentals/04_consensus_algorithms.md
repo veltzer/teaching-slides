@@ -8,19 +8,23 @@ audience:
   - audiences:architects
 
 ---
+
 # Consensus Algorithms
 
 ---
+
 ## Raft States
 
 ![raft_phases](svg/courses/architecting/distributed-systems-fundamentals/04_consensus_algorithms/raft_phases.svg)
 
 ---
+
 ## Quorum Basics
 
 ![quorum_basics](svg/courses/architecting/distributed-systems-fundamentals/04_consensus_algorithms/quorum_basics.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why consensus
@@ -32,6 +36,7 @@ audience:
 - Limits
 
 ---
+
 ## Why Consensus
 
 - A group of nodes must agree on a value
@@ -41,6 +46,7 @@ audience:
 - Foundation for many other guarantees
 
 ---
+
 ## Two Generals Problem
 
 - Two armies, separated by a valley
@@ -50,6 +56,7 @@ audience:
 - The intuition: there's no way to be *certain* the other side received the message
 
 ---
+
 ## What Consensus Solves
 
 - Many participants; want to agree on one value
@@ -59,6 +66,7 @@ audience:
 - The basis of distributed databases, locks, leader election
 
 ---
+
 ## FLP Impossibility
 
 - Fischer, Lynch, Paterson (1985)
@@ -68,6 +76,7 @@ audience:
 - All real consensus algorithms work around FLP
 
 ---
+
 ## Paxos
 
 - Leslie Lamport, 1989 (published 1998)
@@ -77,6 +86,7 @@ audience:
 - Used in: Google Chubby, Spanner
 
 ---
+
 ## How Paxos Works (Sketch)
 
 - **Prepare**: a proposer asks acceptors to promise to ignore older proposals
@@ -86,6 +96,7 @@ audience:
 - Quorum: majority
 
 ---
+
 ## Why Paxos Is Hard
 
 - Many roles (proposer, acceptor, learner)
@@ -95,6 +106,7 @@ audience:
 - Prefer Raft for new work
 
 ---
+
 ## Raft
 
 - Stanford, 2014
@@ -104,6 +116,7 @@ audience:
 - Adopted in: etcd, Consul, CockroachDB, RethinkDB
 
 ---
+
 ## Raft Leader Election
 
 - Each follower has a random election timeout (150-300ms)
@@ -113,6 +126,7 @@ audience:
 - Simple, robust
 
 ---
+
 ## Raft Log Replication
 
 - Clients send commands to leader
@@ -122,6 +136,7 @@ audience:
 - Each entry has a term number; monotonically increasing
 
 ---
+
 ## Quorum
 
 - Majority: more than half
@@ -131,6 +146,7 @@ audience:
 - Odd numbers preferred
 
 ---
+
 ## Byzantine Fault Tolerance
 
 - Tolerates *malicious* participants
@@ -140,6 +156,7 @@ audience:
 - BFT-Paxos, PBFT, Tendermint
 
 ---
+
 ## Practical Consensus Systems
 
 - **etcd**: Raft; used by Kubernetes
@@ -149,6 +166,7 @@ audience:
 - All implement consensus for the control plane
 
 ---
+
 ## Limits Of Consensus
 
 - Latency: requires multiple round trips
@@ -158,6 +176,7 @@ audience:
 - Most data should not go through consensus
 
 ---
+
 ## Common Consensus Mistakes
 
 - Putting too much through consensus (slow)
@@ -167,6 +186,7 @@ audience:
 - Even number of nodes (no clear majority)
 
 ---
+
 ## When To Reach For Consensus
 
 - Configuration that must be the same everywhere
@@ -176,6 +196,7 @@ audience:
 - Transaction commit (when truly needed)
 
 ---
+
 ## When NOT To
 
 - High-volume data writes

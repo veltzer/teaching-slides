@@ -9,9 +9,11 @@ audience:
   - audiences:security
 
 ---
+
 # Authentication and Security Testing
 
 ---
+
 ## What This Chapter Covers
 
 - Auth in tests
@@ -21,6 +23,7 @@ audience:
 - Fuzzing
 
 ---
+
 ## Auth In Tests
 
 - Real auth flow once: get token
@@ -29,11 +32,13 @@ audience:
 - Or: shortcut for test envs
 
 ---
+
 ## Security Test Categories
 
 ![security_tests](svg/courses/testing/api-testing/05_authentication_and_security_testing/security_tests.svg)
 
 ---
+
 ## Test Users
 
 - Dedicated test accounts
@@ -41,6 +46,7 @@ audience:
 - Don't use real user data
 
 ---
+
 ## Token Management
 
 - Cache tokens per role
@@ -48,11 +54,13 @@ audience:
 - Don't commit secrets
 
 ---
+
 ## Auth Flows in Tests
 
 ![auth_flows](svg/courses/testing/api-testing/05_authentication_and_security_testing/auth_flows.svg)
 
 ---
+
 ## Authorisation Tests
 
 - Same endpoint, different roles
@@ -61,6 +69,7 @@ audience:
 - Critical for multi-tenant
 
 ---
+
 ## Tenant Isolation
 
 - User from tenant A: cannot access tenant B
@@ -68,6 +77,7 @@ audience:
 - Common bug class
 
 ---
+
 ## OWASP API Top 10
 
 - Broken Object Level Auth
@@ -82,6 +92,7 @@ audience:
 - Insufficient Logging
 
 ---
+
 ## Object Level Auth Tests
 
 - Most common API vuln
@@ -90,6 +101,7 @@ audience:
 - Should be 403 or 404
 
 ---
+
 ## Rate Limit Tests
 
 - Send burst above limit
@@ -97,6 +109,7 @@ audience:
 - Verify backoff applied
 
 ---
+
 ## Injection
 
 - SQL, NoSQL, command, header injection
@@ -104,12 +117,14 @@ audience:
 - Should fail validation, not crash
 
 ---
+
 ## Mass Assignment
 
 - Send extra fields server should ignore
 - Verify they don't update protected attrs (e.g., is_admin)
 
 ---
+
 ## Excessive Data Exposure
 
 - Response includes internal fields
@@ -117,6 +132,7 @@ audience:
 - Fix: explicit DTOs
 
 ---
+
 ## Fuzzing
 
 - Random / property-based inputs
@@ -124,6 +140,7 @@ audience:
 - Tools: Schemathesis, Restler
 
 ---
+
 ## Penetration Testing
 
 - Goes beyond automated tests
@@ -131,6 +148,7 @@ audience:
 - Periodic, by trained testers
 
 ---
+
 ## Common Security-Testing Mistakes
 
 - Testing only happy path; auth-bypass slips through

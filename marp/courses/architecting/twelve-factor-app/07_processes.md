@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Factor VI: Processes
 
 ---
+
 ## The Rule
 
 - Execute the app as one or more stateless processes
@@ -19,6 +21,7 @@ audience:
 - Persistent data lives in backing services, not in the process
 
 ---
+
 ## What "Stateless" Means
 
 - The process holds no data across requests that another process couldn't reproduce
@@ -27,6 +30,7 @@ audience:
 - A process can be killed and replaced without data loss
 
 ---
+
 ## Why Stateless Processes
 
 - Horizontal scaling by adding more processes works without coordination
@@ -35,6 +39,7 @@ audience:
 - Operations like "drain a node" are safe by default
 
 ---
+
 ## Sticky Sessions Are an Anti-Pattern
 
 - Sticky sessions = a load balancer routes a user always to the same process
@@ -43,6 +48,7 @@ audience:
 - Sticky sessions exist because the app violated factor VI
 
 ---
+
 ## Where State Goes
 
 - **User session**: in a session store (Redis, database, encrypted cookie)
@@ -52,11 +58,13 @@ audience:
 - The process is a transient computer
 
 ---
+
 ## A Stateless Process Diagram
 
 ![stateless_process](svg/courses/architecting/twelve-factor-app/07_processes/stateless_process.svg)
 
 ---
+
 ## In-Memory Caches
 
 - Local in-memory caches are fine if invalidation is correct
@@ -65,6 +73,7 @@ audience:
 - A cold cache after restart is a slowdown, not a bug
 
 ---
+
 ## Disk Should Be Treated as Ephemeral
 
 - The local filesystem outlives the process slightly, but not reliably
@@ -73,6 +82,7 @@ audience:
 - Persistent state goes to a backing service, not local disk
 
 ---
+
 ## Anti-Patterns
 
 - Storing user uploads in `/var/www/uploads/`
@@ -81,6 +91,7 @@ audience:
 - Singleton state that requires only one process to exist
 
 ---
+
 ## When the App Has State
 
 - Some apps are inherently stateful (databases, message brokers)
@@ -89,6 +100,7 @@ audience:
 - The line: most application code can be stateless; storage is a separate problem
 
 ---
+
 ## Summary
 
 - Process = one or more stateless workers

@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Evaluation
 
 ---
+
 ## What This Chapter Covers
 
 - Classification metrics
@@ -20,6 +22,7 @@ audience:
 - Leakage avoidance
 
 ---
+
 ## Why Evaluation Matters
 
 - Models are only useful if measured
@@ -28,6 +31,7 @@ audience:
 - Slice the results
 
 ---
+
 ## Pick The Right Metric
 
 - Classification: accuracy is rarely it
@@ -36,6 +40,7 @@ audience:
 - Match cost of each error
 
 ---
+
 ## Accuracy
 
 - (TP + TN) / total
@@ -44,6 +49,7 @@ audience:
 - Always report alongside others
 
 ---
+
 ## Confusion Matrix
 
 - Rows: true labels
@@ -52,11 +58,13 @@ audience:
 - Foundation of classification metrics
 
 ---
+
 ## Confusion Matrix Diagram
 
 ![confusion_matrix](svg/courses/machine_learning/machine-learning/06_evaluation/confusion_matrix.svg)
 
 ---
+
 ## TP, TN, FP, FN
 
 - TP: correctly predicted positive
@@ -65,6 +73,7 @@ audience:
 - FN: miss
 
 ---
+
 ## Precision
 
 - Of predicted positives, how many real
@@ -73,6 +82,7 @@ audience:
 - Care when FPs are costly
 
 ---
+
 ## Recall
 
 - Of actual positives, how many caught
@@ -81,6 +91,7 @@ audience:
 - Care when FNs are costly
 
 ---
+
 ## Precision vs Recall Tradeoff
 
 - Lower threshold: more recall, less precision
@@ -88,6 +99,7 @@ audience:
 - Application decides which matters
 
 ---
+
 ## F1 Score
 
 - Harmonic mean of precision and recall
@@ -96,6 +108,7 @@ audience:
 - Useful default for imbalanced
 
 ---
+
 ## Specificity
 
 - Of actual negatives, how many predicted negative
@@ -104,6 +117,7 @@ audience:
 - The "negative recall"
 
 ---
+
 ## ROC Curve
 
 - True positive rate vs false positive rate
@@ -112,11 +126,13 @@ audience:
 - Upper left = perfect
 
 ---
+
 ## ROC Diagram
 
 ![roc_curve](svg/courses/machine_learning/machine-learning/06_evaluation/roc_curve.svg)
 
 ---
+
 ## AUC-ROC
 
 - Area under ROC curve
@@ -125,6 +141,7 @@ audience:
 - Misleading on heavy imbalance
 
 ---
+
 ## PR Curve
 
 - Precision vs recall, all thresholds
@@ -133,6 +150,7 @@ audience:
 - AUC-PR
 
 ---
+
 ## When To Use Which
 
 - Balanced: ROC fine
@@ -141,6 +159,7 @@ audience:
 - Pair with confusion matrix
 
 ---
+
 ## Multi-Class Metrics
 
 - Confusion matrix is bigger
@@ -149,6 +168,7 @@ audience:
 - Accuracy is still valid
 
 ---
+
 ## Macro vs Micro
 
 - Macro: average of per-class scores
@@ -157,6 +177,7 @@ audience:
 - Micro favours frequent classes
 
 ---
+
 ## Multi-Label Metrics
 
 - Hamming loss
@@ -165,6 +186,7 @@ audience:
 - Harder to summarise
 
 ---
+
 ## Calibration
 
 - Predicted probabilities vs observed rates
@@ -173,6 +195,7 @@ audience:
 - Important when probabilities used downstream
 
 ---
+
 ## Calibration Methods
 
 - Platt scaling: logistic on outputs
@@ -181,6 +204,7 @@ audience:
 - Don't recalibrate on training
 
 ---
+
 ## Regression Metrics
 
 - MAE: mean absolute error
@@ -189,6 +213,7 @@ audience:
 - R squared: variance explained
 
 ---
+
 ## MAE vs MSE
 
 - MAE: equal weight to all errors
@@ -197,6 +222,7 @@ audience:
 - Pick by what you fear
 
 ---
+
 ## R Squared
 
 - 1 - (SS_residual / SS_total)
@@ -205,6 +231,7 @@ audience:
 - Misleading on tiny variance
 
 ---
+
 ## MAPE
 
 - Mean absolute percentage error
@@ -213,6 +240,7 @@ audience:
 - Use cautiously
 
 ---
+
 ## Quantile Loss
 
 - Pinball loss
@@ -221,6 +249,7 @@ audience:
 - Robust to outliers
 
 ---
+
 ## Train / Validation / Test
 
 - Train: fit
@@ -229,6 +258,7 @@ audience:
 - Three roles, three sets
 
 ---
+
 ## Holdout Method
 
 - Single split
@@ -237,6 +267,7 @@ audience:
 - Use only with lots of data
 
 ---
+
 ## k-Fold Cross-Validation
 
 - Split into k parts
@@ -245,11 +276,13 @@ audience:
 - Robust estimate
 
 ---
+
 ## CV Diagram
 
 ![kfold](svg/courses/machine_learning/machine-learning/06_evaluation/kfold.svg)
 
 ---
+
 ## Stratified k-Fold
 
 - Preserve class ratios in each fold
@@ -257,6 +290,7 @@ audience:
 - sklearn's default for classifiers
 
 ---
+
 ## Time Series CV
 
 - No future leak into past
@@ -265,6 +299,7 @@ audience:
 - Respect temporal order
 
 ---
+
 ## Group k-Fold
 
 - Same group always in same fold
@@ -272,6 +307,7 @@ audience:
 - Avoid leakage across related rows
 
 ---
+
 ## Leave-One-Out
 
 - k = n
@@ -280,6 +316,7 @@ audience:
 - Tiny datasets only
 
 ---
+
 ## Repeated CV
 
 - k-fold many times with different splits
@@ -288,6 +325,7 @@ audience:
 - Useful for noisy metrics
 
 ---
+
 ## Nested CV
 
 - Outer: estimate generalisation
@@ -296,6 +334,7 @@ audience:
 - Expensive but defensible
 
 ---
+
 ## Common Leakage
 
 - Scaling on full data
@@ -304,6 +343,7 @@ audience:
 - Test info in features
 
 ---
+
 ## Avoiding Leakage
 
 - Fit transformers on train only
@@ -312,6 +352,7 @@ audience:
 - Audit features
 
 ---
+
 ## Statistical Significance
 
 - Difference between models real
@@ -320,6 +361,7 @@ audience:
 - Beware multiple comparisons
 
 ---
+
 ## Subgroup Analysis
 
 - Slice by demographic, geography, time
@@ -328,6 +370,7 @@ audience:
 - Always slice
 
 ---
+
 ## Reporting Results
 
 - Mean and standard deviation across folds
@@ -336,6 +379,7 @@ audience:
 - A few example errors
 
 ---
+
 ## sklearn Metrics
 
 ```python
@@ -347,6 +391,7 @@ from sklearn.metrics import (
 ```
 
 ---
+
 ## Common Evaluation Mistakes
 
 - Reporting accuracy on imbalanced
@@ -355,41 +400,49 @@ from sklearn.metrics import (
 - Ignoring subgroup performance
 
 ---
+
 ## Precision-Recall Curve
 
 ![pr_curve](svg/courses/machine_learning/machine-learning/06_evaluation/pr_curve.svg)
 
 ---
+
 ## Calibration
 
 ![calibration](svg/courses/machine_learning/machine-learning/06_evaluation/calibration.svg)
 
 ---
+
 ## Multi-Class Confusion
 
 ![multiclass_confusion](svg/courses/machine_learning/machine-learning/06_evaluation/multiclass_confusion.svg)
 
 ---
+
 ## Train / Validate / Test
 
 ![train_val_test_split](svg/courses/machine_learning/machine-learning/06_evaluation/train_val_test_split.svg)
 
 ---
+
 ## Precision-Recall Tradeoff
 
 ![precision_recall_tradeoff](svg/courses/machine_learning/machine-learning/06_evaluation/precision_recall_tradeoff.svg)
 
 ---
+
 ## Time Series CV
 
 ![time_series_cv](svg/courses/machine_learning/machine-learning/06_evaluation/time_series_cv.svg)
 
 ---
+
 ## Leakage in Pipelines
 
 ![leakage_pipeline](svg/courses/machine_learning/machine-learning/06_evaluation/leakage_pipeline.svg)
 
 ---
+
 ## Summary
 
 - Match metric to business cost

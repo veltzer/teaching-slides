@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Transformers
 
 ---
+
 ## What This Chapter Covers
 
 - Why transformers
@@ -20,6 +22,7 @@ audience:
 - Practical sizing
 
 ---
+
 ## Why Transformers
 
 - State of the art on most tasks
@@ -28,6 +31,7 @@ audience:
 - Open weights and ecosystems
 
 ---
+
 ## Attention in 60 Seconds
 
 - Each token attends to others
@@ -36,11 +40,13 @@ audience:
 - No recurrence required
 
 ---
+
 ## Attention Visualized
 
 ![attention](svg/courses/ai/nlp-with-python/04_transformers/attention.svg)
 
 ---
+
 ## BERT, RoBERTa
 
 - Encoder-only
@@ -49,6 +55,7 @@ audience:
 - Fine-tune on labeled data
 
 ---
+
 ## GPT Family
 
 - Decoder-only
@@ -57,6 +64,7 @@ audience:
 - Foundation for most chat models
 
 ---
+
 ## Encoder-Decoder
 
 - T5, BART
@@ -65,6 +73,7 @@ audience:
 - Cleaner for seq2seq
 
 ---
+
 ## Hugging Face Transformers
 
 - Unified API across models
@@ -73,6 +82,7 @@ audience:
 - Hub for pretrained weights
 
 ---
+
 ## Tokenizers
 
 - Subword units
@@ -81,6 +91,7 @@ audience:
 - Match the model exactly
 
 ---
+
 ## Fine-Tuning
 
 - Take pretrained model
@@ -89,6 +100,7 @@ audience:
 - Few epochs usually enough
 
 ---
+
 ## Parameter-Efficient Tuning
 
 - LoRA, adapters
@@ -97,6 +109,7 @@ audience:
 - Cheaper, easier to ship
 
 ---
+
 ## Inference Sizing
 
 - Quantize to int8 or 4-bit
@@ -105,6 +118,7 @@ audience:
 - GPU vs CPU based on QPS
 
 ---
+
 ## Limits
 
 - Hallucination
@@ -113,6 +127,7 @@ audience:
 - Latency
 
 ---
+
 ## Common Transformer Mistakes
 
 - Fine-tuning when zero-shot suffices

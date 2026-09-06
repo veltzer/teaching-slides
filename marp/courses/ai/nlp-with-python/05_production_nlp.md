@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Production NLP
 
 ---
+
 ## What This Chapter Covers
 
 - Serving
@@ -20,6 +22,7 @@ audience:
 - Multilingual reality
 
 ---
+
 ## Serving Patterns
 
 - Batch nightly job
@@ -28,6 +31,7 @@ audience:
 - Edge deployment
 
 ---
+
 ## Latency Budget
 
 - Budget end-to-end
@@ -36,11 +40,13 @@ audience:
 - Network round trip
 
 ---
+
 ## Request Path
 
 ![serving_path](svg/courses/ai/nlp-with-python/05_production_nlp/serving_path.svg)
 
 ---
+
 ## Throughput
 
 - Dynamic batching
@@ -49,6 +55,7 @@ audience:
 - Vertical or horizontal scaling
 
 ---
+
 ## Cost Levers
 
 - Smaller model
@@ -58,6 +65,7 @@ audience:
 - Cache repeats
 
 ---
+
 ## Caching
 
 - Hash inputs
@@ -66,6 +74,7 @@ audience:
 - Salt cache by model version
 
 ---
+
 ## Monitoring Signals
 
 - p95 latency
@@ -74,6 +83,7 @@ audience:
 - Input length distribution
 
 ---
+
 ## Drift in NLP
 
 - Vocabulary changes (slang, brand names)
@@ -82,11 +92,13 @@ audience:
 - Retrain or re-evaluate
 
 ---
+
 ## Drift Signals
 
 ![drift_signals](svg/courses/ai/nlp-with-python/05_production_nlp/drift_signals.svg)
 
 ---
+
 ## Multilingual
 
 - Detect language first
@@ -95,6 +107,7 @@ audience:
 - Test on each language
 
 ---
+
 ## Privacy
 
 - Strip PII pre-inference
@@ -103,6 +116,7 @@ audience:
 - Encrypt at rest
 
 ---
+
 ## Safety Filters
 
 - Toxicity classifiers
@@ -111,6 +125,7 @@ audience:
 - Layer at input and output
 
 ---
+
 ## Versioning
 
 - Pin model and tokenizer together
@@ -119,6 +134,7 @@ audience:
 - One-line rollback
 
 ---
+
 ## Common Production Mistakes
 
 - Different tokenizer in prod

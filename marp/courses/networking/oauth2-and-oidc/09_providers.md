@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Real Providers and Integration
 
 ---
+
 ## What This Chapter Covers
 
 - Major identity providers
@@ -21,6 +23,7 @@ audience:
 - AWS Cognito and others
 
 ---
+
 ## Choosing a Provider
 
 - Self-host vs managed
@@ -30,16 +33,19 @@ audience:
 - Compliance certifications
 
 ---
+
 ## Provider Landscape Visualized
 
 ![providers](svg/courses/networking/oauth2-and-oidc/09_providers/providers.svg)
 
 ---
+
 ## Provider Picker
 
 ![provider_picker](svg/courses/networking/oauth2-and-oidc/09_providers/provider_picker.svg)
 
 ---
+
 ## Keycloak
 
 - Open source, run by Red Hat
@@ -49,6 +55,7 @@ audience:
 - Free and powerful; operational burden
 
 ---
+
 ## When to Use Keycloak
 
 - Strict data residency requirements
@@ -58,6 +65,7 @@ audience:
 - Don't mind running infrastructure
 
 ---
+
 ## Auth0
 
 - Managed service (now part of Okta)
@@ -67,6 +75,7 @@ audience:
 - Great for B2C and B2B
 
 ---
+
 ## When to Use Auth0
 
 - Want it running quickly with minimal ops
@@ -76,6 +85,7 @@ audience:
 - Budget allows per-user pricing
 
 ---
+
 ## Okta
 
 - Enterprise-focused identity platform
@@ -85,6 +95,7 @@ audience:
 - Common in large organizations
 
 ---
+
 ## AWS Cognito
 
 - Managed by AWS
@@ -94,6 +105,7 @@ audience:
 - Less polished developer experience
 
 ---
+
 ## Azure AD / Entra ID
 
 - Microsoft's identity platform
@@ -103,6 +115,7 @@ audience:
 - Tight integration with Azure
 
 ---
+
 ## Google Identity
 
 - Google as IdP for users with Google accounts
@@ -112,6 +125,7 @@ audience:
 - Common social login
 
 ---
+
 ## GitHub Apps
 
 - For developer-focused integrations
@@ -121,6 +135,7 @@ audience:
 - Niche but useful
 
 ---
+
 ## Setting Up: Keycloak Quick Start
 
 ```bash
@@ -136,6 +151,7 @@ docker run -p 8080:8080 \
 - Production needs more: TLS, DB, HA
 
 ---
+
 ## Setting Up: Auth0 Quick Start
 
 - Sign up at auth0.com
@@ -145,6 +161,7 @@ docker run -p 8080:8080 \
 - Drop their SDK into your app
 
 ---
+
 ## Common Integration Steps
 
 - Register the client at the provider
@@ -154,6 +171,7 @@ docker run -p 8080:8080 \
 - Add to your app's config
 
 ---
+
 ## Library Selection
 
 - Use battle-tested OAuth2/OIDC libraries
@@ -163,6 +181,7 @@ docker run -p 8080:8080 \
 - Audit your dependency tree
 
 ---
+
 ## Common Library Pitfalls
 
 - Skipping signature verification because "library handles it"
@@ -172,11 +191,13 @@ docker run -p 8080:8080 \
 - Custom middleware that bypasses validation
 
 ---
+
 ## Integration Patterns
 
 ![integration_patterns](svg/courses/networking/oauth2-and-oidc/09_providers/integration_patterns.svg)
 
 ---
+
 ## Federation
 
 - Provider A federates to Provider B
@@ -186,6 +207,7 @@ docker run -p 8080:8080 \
 - Each step adds attack surface
 
 ---
+
 ## Social Login
 
 - Auth via Google, Facebook, GitHub, Apple
@@ -195,6 +217,7 @@ docker run -p 8080:8080 \
 - Plan for users disconnecting their social account
 
 ---
+
 ## Account Linking
 
 - Same user, multiple identity sources
@@ -204,6 +227,7 @@ docker run -p 8080:8080 \
 - Verify both sides before linking
 
 ---
+
 ## Multi-Factor Authentication
 
 - TOTP (Google Authenticator)
@@ -213,6 +237,7 @@ docker run -p 8080:8080 \
 - Provider supports a mix
 
 ---
+
 ## Step-Up Authentication
 
 - Some operations need stronger auth
@@ -222,6 +247,7 @@ docker run -p 8080:8080 \
 - Increasingly used in finance and admin
 
 ---
+
 ## Migrating Between Providers
 
 - Plan: dual-run providers, gradually move users
@@ -231,6 +257,7 @@ docker run -p 8080:8080 \
 - Document the cutover
 
 ---
+
 ## Cost Considerations
 
 - Auth0/Okta: per active user
@@ -240,6 +267,7 @@ docker run -p 8080:8080 \
 - Start managed; consider self-hosting later
 
 ---
+
 ## Operational Concerns
 
 - Provider outages = your auth outages
@@ -249,6 +277,7 @@ docker run -p 8080:8080 \
 - Multi-provider setups for high availability
 
 ---
+
 ## Common Pitfalls
 
 - Trusting providers blindly without security review
@@ -258,6 +287,7 @@ docker run -p 8080:8080 \
 - Not setting up monitoring and alerts on auth events
 
 ---
+
 ## Course Recap
 
 - Authentication vs authorization fundamentals
@@ -271,6 +301,7 @@ docker run -p 8080:8080 \
 - Real providers
 
 ---
+
 ## Final Thoughts
 
 - OAuth2/OIDC is the backbone of modern auth
@@ -280,6 +311,7 @@ docker run -p 8080:8080 \
 - Stay current with the BCP — the field evolves
 
 ---
+
 ## Summary
 
 - Keycloak self-hosted; Auth0/Okta managed; Cognito for AWS

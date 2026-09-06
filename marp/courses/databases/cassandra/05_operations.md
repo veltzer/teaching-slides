@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Cluster topology
@@ -20,6 +22,7 @@ audience:
 - Upgrades
 
 ---
+
 ## Cluster Topology
 
 - Ring of nodes
@@ -28,11 +31,13 @@ audience:
 - Rack and DC awareness
 
 ---
+
 ## Topology Layout
 
 ![topology_seeds](svg/courses/databases/cassandra/05_operations/topology_seeds.svg)
 
 ---
+
 ## Seed Nodes
 
 - Bootstrap contacts
@@ -41,6 +46,7 @@ audience:
 - Avoid making all nodes seeds
 
 ---
+
 ## Adding a Node
 
 - Bootstraps from neighbors
@@ -49,6 +55,7 @@ audience:
 - Plan during low traffic
 
 ---
+
 ## Removing a Node
 
 - Decommission cleanly
@@ -57,6 +64,7 @@ audience:
 - Always run repair after
 
 ---
+
 ## Backups
 
 - Snapshots are hard links
@@ -65,6 +73,7 @@ audience:
 - Practice restores
 
 ---
+
 ## Incremental Backups
 
 - Hard-link new SSTables as written
@@ -73,6 +82,7 @@ audience:
 - Test restore time
 
 ---
+
 ## Repair
 
 - Anti-entropy across replicas
@@ -81,6 +91,7 @@ audience:
 - Required to bound staleness
 
 ---
+
 ## Monitoring Metrics
 
 - Read and write latency
@@ -90,6 +101,7 @@ audience:
 - Tombstone counts
 
 ---
+
 ## Alerts
 
 - High pending compactions
@@ -98,6 +110,7 @@ audience:
 - Hints accumulating
 
 ---
+
 ## Upgrades
 
 - Rolling node by node
@@ -106,6 +119,7 @@ audience:
 - Have a rollback plan
 
 ---
+
 ## Capacity Planning
 
 - Per-node disk and CPU limits
@@ -114,6 +128,7 @@ audience:
 - Add nodes early
 
 ---
+
 ## Disaster Recovery
 
 - Multi-DC replication is the primary tool
@@ -122,6 +137,7 @@ audience:
 - Document the runbook
 
 ---
+
 ## Common Operational Mistakes
 
 - No repair schedule

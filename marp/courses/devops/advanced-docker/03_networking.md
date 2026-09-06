@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Docker Networking in Depth
 
 Mastering container connectivity
@@ -168,6 +169,7 @@ docker run -d -p 8000-8010:8000-8010 myapp
 ```
 
 ---
+
 ## Host Network Mode: Example
 
 ```bash
@@ -181,6 +183,7 @@ curl localhost:80  # Works directly
 ```
 
 ---
+
 ## Host Network Mode
 
 ![use_case_high_performance_networking_many_ports](svg/courses/devops/advanced-docker/03_networking/use_case_high_performance_networking_many_ports.svg)
@@ -408,6 +411,7 @@ done
 ```
 
 ---
+
 ## Swarm Service Discovery - VIP Mode: Example
 
 ```bash
@@ -423,6 +427,7 @@ docker service inspect web \
 ```
 
 ---
+
 ## Swarm Service Discovery - VIP Mode
 
 ![uses_ipvs_linux_virtual_server_in_the_kernel](svg/courses/devops/advanced-docker/03_networking/uses_ipvs_linux_virtual_server_in_the_kernel.svg)

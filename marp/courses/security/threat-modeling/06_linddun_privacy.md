@@ -10,9 +10,11 @@ audience:
   - audiences:security-professionals
 
 ---
+
 # LINDDUN: Privacy Threats
 
 ---
+
 ## What This Chapter Covers
 
 - Why privacy needs a separate methodology
@@ -22,6 +24,7 @@ audience:
 - Mitigation patterns for privacy threats
 
 ---
+
 ## Why Privacy Is Not Just Security
 
 - Security threats: confidentiality of data
@@ -31,6 +34,7 @@ audience:
 - LINDDUN was designed to fill this gap
 
 ---
+
 ## LINDDUN Categories
 
 - **L**inkability
@@ -42,16 +46,19 @@ audience:
 - **N**on-compliance
 
 ---
+
 ## LINDDUN Visualized
 
 ![linddun_overview](svg/courses/security/threat-modeling/06_linddun_privacy/linddun_overview.svg)
 
 ---
+
 ## Categories Detailed
 
 ![linddun_categories](svg/courses/security/threat-modeling/06_linddun_privacy/linddun_categories.svg)
 
 ---
+
 ## Linkability
 
 - Threat: separate items can be tied to the same subject
@@ -61,6 +68,7 @@ audience:
 - Tension with personalization — make the trade-off explicit
 
 ---
+
 ## Identifiability
 
 - Threat: a subject can be uniquely identified
@@ -70,6 +78,7 @@ audience:
 - A particular concern when sharing data sets externally
 
 ---
+
 ## Non-Repudiation (Unwanted)
 
 - For privacy: subject cannot deny an action when they should be able to
@@ -79,6 +88,7 @@ audience:
 - Affects sensitive systems: healthcare, dissident, journalism
 
 ---
+
 ## Detectability
 
 - Threat: an outsider can tell that an item exists, even without seeing it
@@ -88,6 +98,7 @@ audience:
 - Hard to mitigate fully — a useful threat to surface in design
 
 ---
+
 ## Disclosure of Information
 
 - Threat: information leaks to unauthorized parties
@@ -97,6 +108,7 @@ audience:
 - Especially important for special-category data (health, race, religion)
 
 ---
+
 ## Unawareness
 
 - Threat: subject is unaware of how their data is collected or used
@@ -106,6 +118,7 @@ audience:
 - Often the legal team's primary concern
 
 ---
+
 ## Non-Compliance
 
 - Threat: the system violates laws or contractual obligations
@@ -115,6 +128,7 @@ audience:
 - The "thing the lawyers worry about"
 
 ---
+
 ## Per-Element Analysis
 
 - Like STRIDE, LINDDUN can be applied per DFD element
@@ -124,6 +138,7 @@ audience:
 - Processes: detectability, unawareness
 
 ---
+
 ## LINDDUN and GDPR
 
 - GDPR's principles map to LINDDUN categories
@@ -134,6 +149,7 @@ audience:
 - LINDDUN is a structured way to threat-model GDPR exposure
 
 ---
+
 ## LINDDUN and CCPA / Other Regs
 
 - CCPA — opt-out, deletion, data sale notification
@@ -143,6 +159,7 @@ audience:
 - The threats, then mitigations, then map to specific obligations
 
 ---
+
 ## Worked Example: Analytics Pipeline
 
 - Element: telemetry events from mobile app
@@ -154,6 +171,7 @@ audience:
 - Non-compliance: cross-border transfer to a region without adequacy
 
 ---
+
 ## Privacy Mitigation Patterns
 
 - Pseudonymization — separate identifiers from PII
@@ -163,6 +181,7 @@ audience:
 - Differential privacy — add noise to aggregate queries
 
 ---
+
 ## Privacy by Design
 
 - Privacy considered from the start, not bolted on
@@ -172,6 +191,7 @@ audience:
 - LINDDUN structures this into actionable threats
 
 ---
+
 ## Privacy Engineering vs Privacy Policy
 
 - Policy says what you do; engineering enforces it
@@ -181,6 +201,7 @@ audience:
 - Threat modeling exposes the gap
 
 ---
+
 ## Tools for LINDDUN
 
 - LINDDUN GO — a card-based facilitated workshop
@@ -190,6 +211,7 @@ audience:
 - Tooling matters less than discipline
 
 ---
+
 ## Common Pitfalls
 
 - Treating privacy as a legal-only concern
@@ -199,6 +221,7 @@ audience:
 - Updating the threat model only when regulations change
 
 ---
+
 ## Privacy Threat Categories That Surprise
 
 - Voice and video — biometric data, often regulated
@@ -208,6 +231,7 @@ audience:
 - Server access logs containing identifiers
 
 ---
+
 ## When to Apply LINDDUN
 
 - Any system handling personal data
@@ -217,6 +241,7 @@ audience:
 - After privacy incidents or regulatory changes
 
 ---
+
 ## Integrating LINDDUN With STRIDE
 
 - STRIDE for security threats
@@ -226,6 +251,7 @@ audience:
 - Mitigations may overlap; track each lineage
 
 ---
+
 ## Summary
 
 - LINDDUN — seven categories of privacy threats

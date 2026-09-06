@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Distributed Clocks
 
 ---
+
 ## What This Chapter Covers
 
 - Why clocks are hard in distributed systems
@@ -21,6 +23,7 @@ audience:
 - Practical guidance
 
 ---
+
 ## Why Clocks Matter
 
 - "Did A happen before B?"
@@ -30,16 +33,19 @@ audience:
 - A perennial source of distributed-system pain
 
 ---
+
 ## Clock Kinds
 
 ![clock_kinds](svg/courses/architecting/distributed-systems-fundamentals/05_distributed_clocks/clock_kinds.svg)
 
 ---
+
 ## Lamport And Vector Clocks
 
 ![lamport_clocks](svg/courses/architecting/distributed-systems-fundamentals/05_distributed_clocks/lamport_clocks.svg)
 
 ---
+
 ## Wall Clocks
 
 - Each machine has its own clock
@@ -49,6 +55,7 @@ audience:
 - Don't compare wall-clock times across machines
 
 ---
+
 ## NTP
 
 - Network Time Protocol; synchronises clocks
@@ -58,6 +65,7 @@ audience:
 - Doesn't make clocks identical, just close
 
 ---
+
 ## Clock Skew
 
 - The difference between two clocks at the same instant
@@ -67,6 +75,7 @@ audience:
 - Worst case: leap seconds, NTP outages
 
 ---
+
 ## Monotonic Clocks
 
 - Don't go backwards
@@ -76,6 +85,7 @@ audience:
 - Use these for timeouts, latency
 
 ---
+
 ## Logical Clocks (Lamport)
 
 - A counter incremented on each event
@@ -85,6 +95,7 @@ audience:
 - Lamport's foundational work (1978)
 
 ---
+
 ## Lamport Clocks Limitation
 
 - A < B in Lamport time may not mean A happened before B
@@ -93,6 +104,7 @@ audience:
 - Useful for ordering; insufficient for causality detection
 
 ---
+
 ## Vector Clocks
 
 - Each node has a vector of counters (one per node)
@@ -102,6 +114,7 @@ audience:
 - Captures causality fully
 
 ---
+
 ## Vector Clock Comparison
 
 - Two vectors V, W are *concurrent* if neither V &le; W nor W &le; V
@@ -110,6 +123,7 @@ audience:
 - Used in: Dynamo, Riak, version vectors
 
 ---
+
 ## Vector Clock Cost
 
 - Size grows with number of nodes
@@ -118,6 +132,7 @@ audience:
 - Practical for fixed-size clusters
 
 ---
+
 ## Hybrid Logical Clocks
 
 - Combine wall clock + counter
@@ -127,6 +142,7 @@ audience:
 - Sweet spot for some systems
 
 ---
+
 ## TrueTime (Google Spanner)
 
 - Spanner has dedicated GPS / atomic clocks in every datacenter
@@ -136,6 +152,7 @@ audience:
 - Hardware investment most companies don't make
 
 ---
+
 ## Practical Guidance
 
 - Don't compare wall clocks across machines for correctness
@@ -145,6 +162,7 @@ audience:
 - Use vector clocks when you need to detect concurrency
 
 ---
+
 ## Common Clock Mistakes
 
 - "We're using NTP, so clocks are fine" — wrong by 10s of ms easily
@@ -154,6 +172,7 @@ audience:
 - Trusting JVM clocks across containers (subtler than you'd think)
 
 ---
+
 ## What To Do
 
 - For ordering: logical or vector clocks

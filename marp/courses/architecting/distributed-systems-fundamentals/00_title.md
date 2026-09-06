@@ -10,6 +10,7 @@ audience:
   - audiences:architects
 
 ---
+
 # Distributed Systems Fundamentals
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

@@ -11,9 +11,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Release Strategies
 
 ---
+
 ## Why Release Strategy Matters
 
 - Deploying software is the riskiest moment in its lifecycle
@@ -22,6 +24,7 @@ audience:
 - Architecture determines which strategies are even available to you
 
 ---
+
 ## Release Goals
 
 - Zero or near-zero downtime during deployment
@@ -31,11 +34,13 @@ audience:
 - Confidence that today's deploy will not surprise next week
 
 ---
+
 ## Deployment Strategies Overview
 
 ![deployment_strategies_overview](svg/courses/architecting/architecting/12_release_strategies/deployment_strategies_overview.svg)
 
 ---
+
 ## Rolling Update
 
 - Gradually replace old instances with new ones over a rollout window
@@ -44,11 +49,13 @@ audience:
 - Default strategy in Kubernetes Deployments
 
 ---
+
 ## Rolling Update Visualization
 
 ![rolling_update_visualization](svg/courses/architecting/architecting/12_release_strategies/rolling_update_visualization.svg)
 
 ---
+
 ## Rolling Update Trade-Offs
 
 - **Pros**: no duplicate infra, zero-downtime, simple defaults
@@ -57,6 +64,7 @@ audience:
 - Works poorly when old and new cannot coexist (breaking protocol changes)
 
 ---
+
 ## Blue/Green Deployment
 
 - Maintain two identical production environments: Blue and Green
@@ -65,11 +73,13 @@ audience:
 - Keep Blue warm for instant rollback
 
 ---
+
 ## Blue/Green Architecture
 
 ![blue_green_architecture](svg/courses/architecting/architecting/12_release_strategies/blue_green_architecture.svg)
 
 ---
+
 ## Blue/Green Trade-Offs
 
 - **Pros**: instant rollback, full pre-prod testing on real infra, simple cutover
@@ -78,6 +88,7 @@ audience:
 - Long-lived connections (WebSockets, gRPC streams) may need to drain before cutover
 
 ---
+
 ## Canary Deployment
 
 - Roll out the new version to a small subset of users first (1–5%)
@@ -86,11 +97,13 @@ audience:
 - Roll back instantly if any signal degrades
 
 ---
+
 ## Canary Deployment Flow
 
 ![canary_deployment_flow](svg/courses/architecting/architecting/12_release_strategies/canary_deployment_flow.svg)
 
 ---
+
 ## Canary Metrics to Watch
 
 - Error rate compared to the stable version
@@ -100,6 +113,7 @@ audience:
 - Automated analysis tools compare canary vs baseline and abort on regression
 
 ---
+
 ## Canary Routing Options
 
 - **Percentage-based** — route N% of all requests to the canary
@@ -108,6 +122,7 @@ audience:
 - **Shadow traffic** — mirror requests to the canary but discard responses; great for read-only comparison
 
 ---
+
 ## Progressive Delivery
 
 - An umbrella term for canary with automated analysis
@@ -116,6 +131,7 @@ audience:
 - Tools: `Flagger`, `Argo Rollouts`, `Spinnaker`
 
 ---
+
 ## Progressive Delivery Pipeline
 
 - Deploy canary at 5%
@@ -125,6 +141,7 @@ audience:
 - Any failing check pauses or aborts the rollout
 
 ---
+
 ## Feature Flags
 
 - Decouple *deployment* (the code reaches production) from *release* (the user sees the feature)
@@ -133,11 +150,13 @@ audience:
 - Enables dark launches, A/B tests, and per-user targeting
 
 ---
+
 ## Feature Flag Architecture
 
 ![feature_flag_architecture](svg/courses/architecting/architecting/12_release_strategies/feature_flag_architecture.svg)
 
 ---
+
 ## Feature Flag Patterns
 
 - **Release flags** — short-lived, turned on once the feature is stable, then removed
@@ -148,6 +167,7 @@ audience:
 Each type has different lifetime expectations. Confusing them creates tech debt.
 
 ---
+
 ## Feature Flag Tools
 
 - `LaunchDarkly` - commercial feature management platform
@@ -158,6 +178,7 @@ Each type has different lifetime expectations. Confusing them creates tech debt.
 - Simple config-based flags for small teams
 
 ---
+
 ## Flag Hygiene
 
 - Every flag is tech debt if it outlives its purpose
@@ -166,6 +187,7 @@ Each type has different lifetime expectations. Confusing them creates tech debt.
 - Unused flag code paths become untested code paths — delete both sides promptly
 
 ---
+
 ## Dark Launches
 
 - Deploy the new code and exercise it with real traffic, but do not show users
@@ -174,6 +196,7 @@ Each type has different lifetime expectations. Confusing them creates tech debt.
 - Extends the canary concept to features, not just versions
 
 ---
+
 ## Shadow Traffic
 
 - Mirror real production requests to the new version
@@ -182,6 +205,7 @@ Each type has different lifetime expectations. Confusing them creates tech debt.
 - Perfect for refactors and rewrites where behavior must match exactly
 
 ---
+
 ## Choosing a Strategy
 
 | Change type | Best strategy |
@@ -194,6 +218,7 @@ Each type has different lifetime expectations. Confusing them creates tech debt.
 | Database migration | Expand/contract, decoupled from app deploy |
 
 ---
+
 ## Rollback as a First-Class Concern
 
 - Every deploy plan needs a rollback plan
@@ -202,6 +227,7 @@ Each type has different lifetime expectations. Confusing them creates tech debt.
 - Practice rollback in non-production at least as often as you practice deploys
 
 ---
+
 ## Common Pitfalls
 
 - **Rolling update with incompatible versions** — the overlap window breaks
@@ -211,6 +237,7 @@ Each type has different lifetime expectations. Confusing them creates tech debt.
 - **No rollback drill** — the first real rollback fails because nobody tested the path
 
 ---
+
 ## Summary
 
 - Rolling updates are the default; simple and cheap but slow to roll back

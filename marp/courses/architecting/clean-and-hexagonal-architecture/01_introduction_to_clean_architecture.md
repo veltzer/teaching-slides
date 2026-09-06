@@ -7,14 +7,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Clean Architecture
 
 ---
+
 ## Goals of Clean Architecture
 
 ![clean_goals](svg/courses/architecting/clean-and-hexagonal-architecture/01_introduction/clean_goals.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What clean architecture is
@@ -24,6 +27,7 @@ audience:
 - Trade-offs
 
 ---
+
 ## What Clean Architecture Is
 
 - An organising principle for code
@@ -33,6 +37,7 @@ audience:
 - Outer layers can change without affecting the core
 
 ---
+
 ## The Goals
 
 - Independent of frameworks
@@ -42,6 +47,7 @@ audience:
 - Independent of any external agency
 
 ---
+
 ## The Dependency Rule
 
 - Source code dependencies always point inward
@@ -51,6 +57,7 @@ audience:
 - The crux of clean architecture
 
 ---
+
 ## The Onion Layers
 
 - Entities (innermost)
@@ -60,6 +67,7 @@ audience:
 - Each depends only on inner
 
 ---
+
 ## Why It Matters
 
 - Testability: domain testable in isolation
@@ -68,6 +76,7 @@ audience:
 - Onboarding: clear separation of concerns
 
 ---
+
 ## Comparison To Traditional MVC
 
 - MVC: model knows DB, controller knows view
@@ -76,6 +85,7 @@ audience:
 - Higher discipline; longer-lived code
 
 ---
+
 ## When To Use
 
 - Long-lived applications
@@ -85,6 +95,7 @@ audience:
 - Team with discipline to maintain layers
 
 ---
+
 ## When NOT To Use
 
 - Simple CRUD apps
@@ -93,6 +104,7 @@ audience:
 - Cost > benefit for short-lived code
 
 ---
+
 ## Common Misconceptions
 
 - "Clean = many files" — yes, but well-organised
@@ -101,6 +113,7 @@ audience:
 - Adapt to context
 
 ---
+
 ## Trade-Offs
 
 - Pro: testability, longevity, replaceability
@@ -109,6 +122,7 @@ audience:
 - Worth it past a threshold of complexity
 
 ---
+
 ## What's Next
 
 - The dependency rule in detail

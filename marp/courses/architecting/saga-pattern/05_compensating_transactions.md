@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Compensating Transactions
 
 ---
+
 ## Designing Compensations
 
 ![compensation_design](svg/courses/architecting/saga-pattern/05_compensating_transactions/compensation_design.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Compensation vs rollback
@@ -27,6 +30,7 @@ audience:
 - Testing compensations
 
 ---
+
 ## Compensation Is Not Rollback
 
 - A database rollback erases the transaction; the change never happened
@@ -35,6 +39,7 @@ audience:
 - "We charged you, and then we refunded you" — both events visible in history
 
 ---
+
 ## Compensation in Practice
 
 - Original: `Charge $100 from card 4242`
@@ -43,6 +48,7 @@ audience:
 - The audit, the dispute resolution, and the customer support flow all rely on this
 
 ---
+
 ## Semantic Correctness
 
 - A compensation must reverse the **business effect**, not just the technical operation
@@ -51,6 +57,7 @@ audience:
 - Some effects can't be undone; we'll handle those next
 
 ---
+
 ## Designing a Compensation
 
 - For each step, ask: "If everything after this fails, what restores business state?"
@@ -59,6 +66,7 @@ audience:
 - The compensation is a first-class business operation, not an afterthought
 
 ---
+
 ## Compensation Examples
 
 | Forward step | Compensation |
@@ -73,6 +81,7 @@ audience:
 - The last row is the problem we tackle next
 
 ---
+
 ## Non-Compensatable Steps
 
 - Some operations cannot be reversed — you can't un-send a physical mailing
@@ -81,6 +90,7 @@ audience:
 - Two patterns: pivot transactions and forward-only steps
 
 ---
+
 ## Pivot Transactions
 
 - A point in the saga past which the saga can no longer be compensated
@@ -89,11 +99,13 @@ audience:
 - Place the pivot at the last reversible step
 
 ---
+
 ## Pivot Transaction Diagram
 
 ![pivot_transaction](svg/courses/architecting/saga-pattern/05_compensating_transactions/pivot_transaction.svg)
 
 ---
+
 ## Forward-Only Beyond the Pivot
 
 - After the pivot, every remaining step is treated as forward recovery
@@ -102,6 +114,7 @@ audience:
 - Communicate clearly: the user has committed; the system will deliver
 
 ---
+
 ## Designing the Pivot
 
 - Look at the business — when does the system make a commitment that can't be undone?
@@ -110,6 +123,7 @@ audience:
 - Everything before the pivot has compensations; everything after is forward-only
 
 ---
+
 ## Partial Compensation
 
 - A step might do multiple things; only some need compensating
@@ -118,6 +132,7 @@ audience:
 - Decide per business rule; don't assume symmetry
 
 ---
+
 ## Idempotent Compensations
 
 - Like forward steps, compensations may be retried
@@ -126,6 +141,7 @@ audience:
 - Refunding an already-refunded payment should be detected and ignored
 
 ---
+
 ## Idempotent Compensation Pattern
 
 ```python
@@ -144,6 +160,7 @@ def release_inventory(reservation_id):
 - Return success either way
 
 ---
+
 ## Compensation Order
 
 - Compensations run in **reverse** order from the forward steps
@@ -152,6 +169,7 @@ def release_inventory(reservation_id):
 - Last step that succeeded is the first to be undone
 
 ---
+
 ## What If a Compensation Fails?
 
 - Network glitches, services down — compensations can fail too
@@ -161,6 +179,7 @@ def release_inventory(reservation_id):
 - Never silently give up on a compensation
 
 ---
+
 ## Nested Failure Handling
 
 - Compensation N retries; eventually succeeds; saga moves to compensation N-1
@@ -169,6 +188,7 @@ def release_inventory(reservation_id):
 - Halted sagas need monitoring and runbooks
 
 ---
+
 ## Halted Saga Process
 
 - Saga reaches max compensation retries
@@ -178,6 +198,7 @@ def release_inventory(reservation_id):
 - Operator updates the saga state to closed; saga store reflects the resolution
 
 ---
+
 ## Communicating to End Users
 
 - During the saga: "Your order is processing"
@@ -186,6 +207,7 @@ def release_inventory(reservation_id):
 - On halted saga: "We had a problem; our support team will contact you within 24 hours"
 
 ---
+
 ## UX Patterns for Compensations
 
 - Don't say "rolled back" to a user — they don't think in those terms
@@ -194,6 +216,7 @@ def release_inventory(reservation_id):
 - Surface estimated resolution time when known
 
 ---
+
 ## Compensations and Audit
 
 - Every compensation is auditable
@@ -202,6 +225,7 @@ def release_inventory(reservation_id):
 - Don't lose the compensation reason — it explains the audit trail
 
 ---
+
 ## Testing Compensations
 
 - Compensations are easy to forget — they only run in failure paths
@@ -210,6 +234,7 @@ def release_inventory(reservation_id):
 - Specifically test: idempotent compensations, compensation order, halted-saga path
 
 ---
+
 ## A Compensation Test
 
 ```python
@@ -231,6 +256,7 @@ def test_payment_failure_compensates_inventory():
 - Pure test; no real services needed
 
 ---
+
 ## Anti-Patterns
 
 - **No compensation for some step**: defeats the saga; either add one or place a pivot
@@ -239,6 +265,7 @@ def test_payment_failure_compensates_inventory():
 - **Compensation that has its own non-trivial side effects**: hard to test, hard to reason about
 
 ---
+
 ## Real-World Examples
 
 - **Stripe**: charge → refund (compensation is `refund` API call)
@@ -247,6 +274,7 @@ def test_payment_failure_compensates_inventory():
 - **SaaS provisioning**: account created → account suspended (rare; often forward-only beyond pivot)
 
 ---
+
 ## Summary
 
 - Compensations are new transactions that undo previous ones — not database rollbacks

@@ -12,6 +12,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Handling Errors
 
 ---
@@ -21,6 +22,7 @@ audience:
 ![Bash Error Handling Strategies](svg/courses/languages/bash/bash-scripting/07_handling_errors/error_handling_strategies.svg)
 
 ---
+
 ## Why Error Handling Matters
 
 ```bash
@@ -33,6 +35,7 @@ rm -rf *    # This runs in the WRONG directory!
 ```
 
 ---
+
 ## The `&&` Approach
 
 ```bash
@@ -51,6 +54,7 @@ mkdir -p /tmp/build && \
 ```
 
 ---
+
 ## The `||` Approach
 
 ```bash
@@ -69,6 +73,7 @@ source "$config_file" || {
 ```
 
 ---
+
 ## `set -e` (errexit)
 
 ```bash
@@ -82,6 +87,7 @@ echo "Step 2"   # never reached
 ```
 
 ---
+
 ## `set -e` Gotchas
 
 ```bash
@@ -102,6 +108,7 @@ x=$(false)           # triggers errexit in bash 4.4+
 ```
 
 ---
+
 ## `set -e` in Practice
 
 ```bash
@@ -124,6 +131,7 @@ fi
 ```
 
 ---
+
 ## `set -u` (nounset)
 
 ```bash
@@ -143,6 +151,7 @@ echo "${optional_var:-default}"   # OK with set -u
 ```
 
 ---
+
 ## `set -o pipefail`
 
 ```bash
@@ -164,6 +173,7 @@ curl -s "$url" | jq '.data'
 ```
 
 ---
+
 ## The Strict Mode
 
 ```bash
@@ -181,6 +191,7 @@ IFS=$'\n\t'
 ```
 
 ---
+
 ## Trapping Errors
 
 ```bash
@@ -196,6 +207,7 @@ echo "Step 2"   # never reached
 ```
 
 ---
+
 ## Cleanup with `trap`
 
 ```bash
@@ -217,6 +229,7 @@ process "$tmpfile"
 ```
 
 ---
+
 ## Comprehensive Error Handling Pattern
 
 ```bash
@@ -244,6 +257,7 @@ log "Starting..."
 ```
 
 ---
+
 ## Retry Pattern
 
 ```bash
@@ -270,6 +284,7 @@ retry 3 curl -s -o /dev/null "https://example.com"
 ```
 
 ---
+
 ## Error Handling: Common Mistakes
 
 ```bash

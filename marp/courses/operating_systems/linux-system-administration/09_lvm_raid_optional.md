@@ -9,6 +9,7 @@ audience:
   - audiences:devops
 
 ---
+
 # LVM and RAID (Optional)
 ## Logical Volume Management and RAID Configuration
 
@@ -27,6 +28,7 @@ Three layers:
 - **LV** (Logical Volumes) - usable volumes from VG
 
 ---
+
 ## Why Use LVM?
 
 Advantages over raw partitions:
@@ -44,6 +46,7 @@ When NOT to use LVM:
 - Boot partitions (use regular partitions)
 
 ---
+
 ## Creating LVM Volumes
 
 ```bash
@@ -68,6 +71,7 @@ lvdisplay
 ```
 
 ---
+
 ## LVM Display Commands
 
 ```bash
@@ -93,6 +97,7 @@ pvdisplay --maps /dev/sdb1
 ```
 
 ---
+
 ## Extending and Reducing LVM
 
 ```bash
@@ -118,6 +123,7 @@ mount /home
 ```
 
 ---
+
 ## LVM: Moving Data Between Disks
 
 ```bash
@@ -141,6 +147,7 @@ lvrename data-vg home-lv home-data-lv
 This allows online disk replacement without downtime.
 
 ---
+
 ## LVM Snapshots
 
 ```bash
@@ -164,6 +171,7 @@ Use cases:
 - Testing changes safely
 
 ---
+
 ## LVM Thin Provisioning
 
 ```bash
@@ -186,6 +194,7 @@ lvextend -L +50G data-vg/thin-pool
 Thin provisioning is ideal for VM storage and test environments.
 
 ---
+
 ## LVM Striping and Mirroring
 
 ```bash
@@ -206,6 +215,7 @@ lvs -a -o +devices /dev/data-vg/mirror-lv
 ```
 
 ---
+
 ## RAID Levels Overview
 
 | Level | Min Disks | Redundancy | Performance | Capacity |
@@ -217,11 +227,13 @@ lvs -a -o +devices /dev/data-vg/mirror-lv
 | RAID 10 | 4 | Mirror+Stripe | Best | 50% |
 
 ---
+
 ## RAID Level Selection Guide
 
 ![raid_level_selection_guide](svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/raid_level_selection_guide.svg)
 
 ---
+
 ## Creating RAID Arrays with mdadm
 
 ```bash
@@ -244,6 +256,7 @@ mkfs.ext4 /dev/md0
 ```
 
 ---
+
 ## RAID with Spare Disks
 
 ```bash
@@ -264,6 +277,7 @@ mdadm --grow /dev/md0 --level=5 --raid-devices=3 \
 ```
 
 ---
+
 ## Monitoring and Recovering RAID
 
 ```bash
@@ -288,6 +302,7 @@ watch cat /proc/mdstat
 ```
 
 ---
+
 ## LVM Cache (dm-cache)
 
 ```bash
@@ -336,6 +351,7 @@ lvcreate -L 50G -n home-lv hybrid-vg
 ```
 
 ---
+
 ## RAID Performance Tuning
 
 ```bash
@@ -362,6 +378,7 @@ mdadm --create /dev/md0 --level=5 \
 ```
 
 ---
+
 ## RAID Disk Replacement Walkthrough
 
 ```bash
@@ -395,6 +412,7 @@ update-initramfs -u
 ```
 
 ---
+
 ## LVM Troubleshooting
 
 ```bash
@@ -431,6 +449,7 @@ Common issues:
 - **Thin pool full**: extend with `lvextend`
 
 ---
+
 ## LVM Best Practices for Virtual Machines
 
 ```bash
@@ -455,6 +474,7 @@ Best practices for VM storage:
 - Set `issue_discards = 1` in `/etc/lvm/lvm.conf` for SSD backing
 
 ---
+
 ## RAID Monitoring with Email Alerts
 
 ```bash
@@ -491,6 +511,7 @@ chmod +x /usr/local/bin/raid-check.sh
 ```
 
 ---
+
 ## Understanding `mdadm.conf`
 
 ```bash
@@ -527,6 +548,7 @@ mdadm --assemble --scan --verbose
 Key fields: `UUID` uniquely identifies each array regardless of device names.
 
 ---
+
 ## Exercise: LVM Snapshot and RAID Recovery
 
 Practice LVM and RAID operations in a test environment:

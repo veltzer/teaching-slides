@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Interface Adapters
 
 ---
+
 ## Adapter Roles
 
 ![adapter_roles](svg/courses/architecting/clean-and-hexagonal-architecture/04_interface_adapters/adapter_roles.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The role of adapters
@@ -26,6 +29,7 @@ audience:
 - DTOs
 
 ---
+
 ## What An Adapter Is
 
 - Translates between layers
@@ -35,11 +39,13 @@ audience:
 - Replaceable
 
 ---
+
 ## Adapter Roles
 
 ![adapter_pattern](svg/courses/architecting/clean-and-hexagonal-architecture/04_interface_adapters/adapter_pattern.svg)
 
 ---
+
 ## Controllers
 
 - Receive HTTP request
@@ -50,6 +56,7 @@ audience:
 - Thin
 
 ---
+
 ## Controller Example
 
 ```python
@@ -63,6 +70,7 @@ def place_order(request):
 ```
 
 ---
+
 ## Presenters
 
 - Format use case output for the view
@@ -71,6 +79,7 @@ def place_order(request):
 - Controller depends on presenter; presenter depends on use case
 
 ---
+
 ## Gateways
 
 - Implement output ports
@@ -79,6 +88,7 @@ def place_order(request):
 - Plug-in for the use case
 
 ---
+
 ## Repository Example
 
 ```python
@@ -96,6 +106,7 @@ class PostgresOrderRepository(OrderRepository):
 - Implements the interface in the use case layer
 
 ---
+
 ## DTOs
 
 - Data Transfer Objects
@@ -105,6 +116,7 @@ class PostgresOrderRepository(OrderRepository):
 - Define per-direction (input DTO, output DTO)
 
 ---
+
 ## When To Use DTOs
 
 - Use cases input / output: DTOs
@@ -114,6 +126,7 @@ class PostgresOrderRepository(OrderRepository):
 - Pragmatically: minimise
 
 ---
+
 ## View Models
 
 - For UI rendering
@@ -123,6 +136,7 @@ class PostgresOrderRepository(OrderRepository):
 - Built by presenters
 
 ---
+
 ## Avoiding Anaemic Layers
 
 - Each layer has a real role
@@ -132,6 +146,7 @@ class PostgresOrderRepository(OrderRepository):
 - If a layer is pure pass-through, consider merging
 
 ---
+
 ## Adapter Naming
 
 - Suffix with the technology: `PostgresOrderRepository`
@@ -140,6 +155,7 @@ class PostgresOrderRepository(OrderRepository):
 - Names reveal layer membership
 
 ---
+
 ## Multi-Adapter Setups
 
 - One use case; many adapters
@@ -148,6 +164,7 @@ class PostgresOrderRepository(OrderRepository):
 - Same use case; different deployment
 
 ---
+
 ## Adapters For Cross-Cutting
 
 - Logging, metrics, tracing: adapters or middleware
@@ -156,6 +173,7 @@ class PostgresOrderRepository(OrderRepository):
 - Or: aspect-oriented (Spring) where appropriate
 
 ---
+
 ## Common Mistakes
 
 - Controllers with business logic

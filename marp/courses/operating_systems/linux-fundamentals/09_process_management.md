@@ -10,10 +10,12 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Process Management
 ## Understanding and Controlling UNIX Processes
 
 ---
+
 ## Process &amp; Job Control
 
 ![job_control](svg/courses/operating_systems/linux-fundamentals/09_process_management/job_control.svg)

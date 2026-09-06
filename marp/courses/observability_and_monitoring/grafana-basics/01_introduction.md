@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to Grafana
 
 ---
+
 ## What This Chapter Covers
 
 - What Grafana is
@@ -19,6 +21,7 @@ audience:
 - Course outline
 
 ---
+
 ## What Grafana Is
 
 - Open-source dashboard tool
@@ -27,11 +30,13 @@ audience:
 - Self-hosted or hosted
 
 ---
+
 ## What It Is And Is Not
 
 ![grafana_pieces](svg/courses/observability_and_monitoring/grafana-basics/01_introduction/grafana_pieces.svg)
 
 ---
+
 ## Why Use It
 
 - Single UI across many backends
@@ -40,6 +45,7 @@ audience:
 - Active community
 
 ---
+
 ## Core Concepts
 
 - Data source
@@ -49,6 +55,7 @@ audience:
 - Alert
 
 ---
+
 ## Data Source
 
 - Connection to a backend
@@ -57,6 +64,7 @@ audience:
 - Reused across dashboards
 
 ---
+
 ## Dashboard
 
 - Collection of panels
@@ -65,6 +73,7 @@ audience:
 - Versioned over time
 
 ---
+
 ## Panel
 
 - One visualization
@@ -73,6 +82,7 @@ audience:
 - Configured per visualization
 
 ---
+
 ## Query
 
 - Asks the data source for data
@@ -81,6 +91,7 @@ audience:
 - Templated for reuse
 
 ---
+
 ## Alerts
 
 - Watch a query
@@ -89,6 +100,7 @@ audience:
 - Track history
 
 ---
+
 ## Variables
 
 - Dropdowns at top of dashboard
@@ -97,6 +109,7 @@ audience:
 - Improves reusability
 
 ---
+
 ## Architecture
 
 - Server backend
@@ -105,11 +118,13 @@ audience:
 - Database for state
 
 ---
+
 ## Sources to Dashboards
 
 ![grafana_arch](svg/courses/observability_and_monitoring/grafana-basics/01_introduction/grafana_arch.svg)
 
 ---
+
 ## Hosting Options
 
 - Self-hosted Grafana
@@ -118,6 +133,7 @@ audience:
 - Pick by team and budget
 
 ---
+
 ## Course Outline
 
 - Data sources
@@ -127,6 +143,7 @@ audience:
 - Operations
 
 ---
+
 ## Common Beginner Mistakes
 
 - Too many panels per dashboard

@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Cloud-Native Principles
 
 ---
+
 ## What Does Cloud-Native Mean?
 
 - An approach to building and running applications that fully exploit cloud computing
@@ -21,6 +23,7 @@ audience:
 - Defined by the `Cloud Native Computing Foundation` (`CNCF`)
 
 ---
+
 ## Cloud-Native vs Cloud-Hosted
 
 | Aspect | Cloud-Hosted | Cloud-Native |
@@ -32,6 +35,7 @@ audience:
 | Resilience | Redundant hardware | Software-level fault tolerance |
 
 ---
+
 ## The 12-Factor App Methodology
 
 - A set of best practices for building modern, portable, scalable applications
@@ -40,11 +44,13 @@ audience:
 - Each factor addresses a specific aspect of application design
 
 ---
+
 ## Twelve Factor App
 
 ![twelve_factor_app](svg/courses/architecting/architecting/08_cloud_native_principles/twelve_factor_app.svg)
 
 ---
+
 ## Factors 1–3: Code, Dependencies, Config
 
 - **Codebase** — one repo per app, many deploys; same code to every environment
@@ -59,6 +65,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ```
 
 ---
+
 ## Factors 4–6: Backing Services, Build/Release/Run, Processes
 
 - **Backing services** — databases, caches, queues are attached resources swapped by config alone
@@ -66,11 +73,13 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - **Processes** — stateless; any persistent data lives in a backing service
 
 ---
+
 ## Build, Release, Run Pipeline
 
 ![build_release_run_pipeline](svg/courses/architecting/architecting/08_cloud_native_principles/build_release_run_pipeline.svg)
 
 ---
+
 ## Factors 7–9: Port Binding, Concurrency, Disposability
 
 - **Port binding** — the app binds its own port; no external web server needed
@@ -78,11 +87,13 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - **Disposability** — fast startup, graceful shutdown; any instance can be killed at any time
 
 ---
+
 ## Concurrency Model
 
 ![concurrency_model](svg/courses/architecting/architecting/08_cloud_native_principles/concurrency_model.svg)
 
 ---
+
 ## Factors 10–12: Parity, Logs, Admin Processes
 
 - **Dev/prod parity** — same backing services, same code, minimal time gap between commit and deploy
@@ -90,6 +101,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - **Admin processes** — one-off tasks (migrations, console, cleanup) run in the same environment and release
 
 ---
+
 ## Beyond 12 Factors
 
 - The original 12 factors were published in 2011
@@ -100,6 +112,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
     - Feature Flags: decouple deployment from release
 
 ---
+
 ## Stateless Services
 
 - Do not store any client session data locally
@@ -108,11 +121,13 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - Any instance can handle any request from any client
 
 ---
+
 ## Stateless Service Architecture
 
 ![stateless_service_architecture](svg/courses/architecting/architecting/08_cloud_native_principles/stateless_service_architecture.svg)
 
 ---
+
 ## Benefits of Statelessness
 
 - Horizontal scaling: add or remove instances freely
@@ -121,6 +136,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - Portability: instances can run on any host
 
 ---
+
 ## Stateful Services
 
 - Maintain state that must persist across requests
@@ -129,6 +145,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - Use persistent volumes and replication strategies
 
 ---
+
 ## Managing Stateful Services in the Cloud
 
 - Use managed services when possible (`RDS`, `ElastiCache`, `Cloud SQL`)
@@ -137,6 +154,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - Plan for backup, restore, and disaster recovery
 
 ---
+
 ## Stateful vs Stateless Summary
 
 | Aspect | Stateless | Stateful |
@@ -147,6 +165,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 | Examples | API servers, web apps | Databases, caches |
 
 ---
+
 ## Designing for Elasticity
 
 - Elasticity is the ability to automatically scale resources based on demand
@@ -155,6 +174,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - Minimize cost by matching capacity to actual demand
 
 ---
+
 ## Auto-Scaling Strategies
 
 - Reactive: scale based on current metrics (CPU, memory, request count)
@@ -163,11 +183,13 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - Custom metrics: scale on business-specific indicators (queue depth)
 
 ---
+
 ## Auto-Scaling Architecture
 
 ![auto_scaling_architecture](svg/courses/architecting/architecting/08_cloud_native_principles/auto_scaling_architecture.svg)
 
 ---
+
 ## Designing for Scalability
 
 - Identify bottlenecks before they become problems
@@ -176,11 +198,13 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - Design APIs with pagination and rate limiting built in
 
 ---
+
 ## Horizontal vs Vertical Scaling
 
 ![horizontal_vs_vertical_scaling](svg/courses/architecting/architecting/08_cloud_native_principles/horizontal_vs_vertical_scaling.svg)
 
 ---
+
 ## Caching Strategies
 
 - Client-side caching: browser cache, CDN edge caches
@@ -189,11 +213,13 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - Cache-aside pattern: application checks cache first, loads from DB on miss
 
 ---
+
 ## Cache-Aside Pattern
 
 ![cache_aside_pattern](svg/courses/architecting/architecting/08_cloud_native_principles/cache_aside_pattern.svg)
 
 ---
+
 ## Data Partitioning
 
 - Horizontal partitioning (sharding): split rows across databases
@@ -202,6 +228,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - Choose a partition key that distributes load evenly
 
 ---
+
 ## Cloud-Native Design Checklist
 
 - Services are stateless and externalize state
@@ -213,6 +240,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 - Horizontal scaling is tested and automated
 
 ---
+
 ## Summary
 
 - Cloud-native applications are designed for the dynamic nature of the cloud

@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Caching Strategies
 
 ---
+
 ## Strategy Overview
 
 ![cache_strategies](svg/courses/architecting/system-design/04_caching_strategies/cache_strategies.svg)
 
 ---
+
 ## Cache Invalidation
 
 ![cache_invalidation](svg/courses/architecting/system-design/04_caching_strategies/cache_invalidation.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Where to cache
@@ -32,6 +36,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## Why Cache
 
 - Reduce load on the origin
@@ -41,6 +46,7 @@ audience:
 - "Cache invalidation" is famously one of the hard things
 
 ---
+
 ## Where To Cache
 
 - Browser: HTTP cache, service workers
@@ -51,6 +57,7 @@ audience:
 - DB: query result cache
 
 ---
+
 ## Cache-Aside
 
 - App reads from cache; on miss, reads DB; writes to cache
@@ -60,6 +67,7 @@ audience:
 - Easy to reason about
 
 ---
+
 ## Read-Through
 
 - App reads from cache; cache reads DB on miss
@@ -68,6 +76,7 @@ audience:
 - Common in: Redis with custom logic, ORM caches
 
 ---
+
 ## Write-Through
 
 - App writes to cache; cache writes to DB synchronously
@@ -76,6 +85,7 @@ audience:
 - Used when reads dominate; consistency matters
 
 ---
+
 ## Write-Back
 
 - App writes to cache; cache writes to DB asynchronously
@@ -84,6 +94,7 @@ audience:
 - Application must tolerate brief data-loss windows
 
 ---
+
 ## Invalidation Strategies
 
 - TTL: expire after N seconds
@@ -93,6 +104,7 @@ audience:
 - Each has trade-offs
 
 ---
+
 ## Eviction Policies
 
 - LRU: least-recently-used; popular
@@ -102,6 +114,7 @@ audience:
 - TTL: not exactly eviction; expiration
 
 ---
+
 ## TTL Choice
 
 - Too short: cache barely helps
@@ -111,6 +124,7 @@ audience:
 - Refresh-ahead pattern: re-fetch before expiry
 
 ---
+
 ## Distributed Caching
 
 - Multiple cache nodes; data sharded across
@@ -120,6 +134,7 @@ audience:
 - The standard at scale
 
 ---
+
 ## Cache Stampede
 
 - Cache expires; many clients request same key
@@ -128,6 +143,7 @@ audience:
 - Most CDNs handle natively
 
 ---
+
 ## Cache Poisoning
 
 - Wrong data cached; persists for TTL
@@ -136,6 +152,7 @@ audience:
 - Detection: monitor cache hit rates and downstream errors
 
 ---
+
 ## What NOT To Cache
 
 - Per-user data without per-user keys (privacy leak)
@@ -144,6 +161,7 @@ audience:
 - Cache: high-cost, slow-changing things
 
 ---
+
 ## Common Caching Mistakes
 
 - Forgetting to invalidate on write

@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Data Modeling Fundamentals
 
 ---
+
 ## Three Levels
 
 ![conceptual_logical_physical](svg/courses/databases/database-design/03_data_modeling_fundamentals/conceptual_logical_physical.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Data types
@@ -26,6 +29,7 @@ audience:
 - Defaults
 
 ---
+
 ## Choosing Data Types
 
 - Integer types: SMALLINT, INTEGER, BIGINT
@@ -35,6 +39,7 @@ audience:
 - Pick the smallest that fits
 
 ---
+
 ## Primary Keys
 
 - Uniquely identify a row
@@ -43,6 +48,7 @@ audience:
 - Composite keys: rare; junction tables
 
 ---
+
 ## UUID vs Auto-Increment
 
 - UUID: distributed-friendly; larger
@@ -51,6 +57,7 @@ audience:
 - Pick by needs
 
 ---
+
 ## Foreign Keys
 
 - Reference another table's primary key
@@ -59,6 +66,7 @@ audience:
 - ON UPDATE: similar
 
 ---
+
 ## Constraints
 
 - NOT NULL: required
@@ -67,6 +75,7 @@ audience:
 - Use them; the database is your validator
 
 ---
+
 ## Defaults
 
 - DEFAULT clause for columns
@@ -75,6 +84,7 @@ audience:
 - Same default everywhere
 
 ---
+
 ## Nullability
 
 - NULL means "unknown" or "not applicable"
@@ -83,6 +93,7 @@ audience:
 - Default to NOT NULL; opt-in to NULL
 
 ---
+
 ## Generated Columns
 
 - Computed from other columns
@@ -91,6 +102,7 @@ audience:
 - Postgres, MySQL support
 
 ---
+
 ## Sequences
 
 - Postgres: explicit sequences for auto-increment
@@ -99,6 +111,7 @@ audience:
 - Auto-increment in MySQL is similar idea
 
 ---
+
 ## Naming Conventions
 
 - snake_case for table and column names
@@ -107,6 +120,7 @@ audience:
 - Document the convention
 
 ---
+
 ## Common Modeling Mistakes
 
 - Strings for dates

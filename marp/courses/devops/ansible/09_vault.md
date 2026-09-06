@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Ansible Vault for Secrets Management
 
 ## Topics Covered

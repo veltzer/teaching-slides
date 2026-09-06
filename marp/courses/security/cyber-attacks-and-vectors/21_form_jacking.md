@@ -15,6 +15,7 @@ audience:
 # Formjacking
 
 ---
+
 ## What is Formjacking?
 
 - Formjacking, also known as Web Form Skimming or Digital Skimming, is a type of cyber attack where malicious code is injected into the payment forms of legitimate websites to steal sensitive information
@@ -24,11 +25,13 @@ audience:
 - Symantec blocked over 3.7 million formjacking attempts in a single year (2018)
 
 ---
+
 ## How Does Formjacking Work
 
 ![how_does_formjacking_work](svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/how_does_formjacking_work.svg)
 
 ---
+
 ## Attack Vectors
 
 | Vector                        | Description                                    | Prevalence |
@@ -41,6 +44,7 @@ audience:
 | CDN/hosting compromise        | Modify scripts served from CDN                 | Rare       |
 
 ---
+
 ## Magecart Groups
 
 - "Magecart" is an umbrella term for cybercriminal groups specializing in formjacking
@@ -57,11 +61,13 @@ audience:
 | Magecart 12 | OpenCart, Magento stores                 | Google Analytics mimicry     |
 
 ---
+
 ## British Airways Attack (2018)
 
 ![british_airways_attack_2018](svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/british_airways_attack_2018.svg)
 
 ---
+
 ## JavaScript Skimmer Code Analysis
 
 ### Simple Skimmer Example (Educational)
@@ -92,6 +98,7 @@ document.addEventListener('submit', function(event) {
 ```
 
 ---
+
 ## Advanced Skimmer Techniques
 
 ```c
@@ -165,6 +172,7 @@ Content-Security-Policy:
 ```
 
 ### Key CSP Directives for Formjacking Defense
+
 | Directive      | Purpose                                      | Example Value              |
 |----------------|----------------------------------------------|----------------------------|
 | `script-src`   | Allowed JavaScript sources                   | `'self' https://cdn.com`   |
@@ -174,6 +182,7 @@ Content-Security-Policy:
 | `report-uri`   | Where to send CSP violation reports          | `/csp-violations`          |
 
 ---
+
 ## Implementing CSP
 
 ```python
@@ -209,6 +218,7 @@ def csp_report():
 ```
 
 ---
+
 ## Subresource Integrity (SRI)
 
 ```html
@@ -253,6 +263,7 @@ cat jquery.min.js | openssl dgst -sha384 -binary | openssl base64 -A
 ```
 
 ---
+
 ## Detection Methods
 
 ### Client-Side Detection
@@ -291,6 +302,7 @@ diff known_good_hashes.txt current.txt
 ```
 
 ---
+
 ## Detection Tools and Services
 
 | Tool / Service        | Type             | Capability                          |
@@ -304,11 +316,13 @@ diff known_good_hashes.txt current.txt
 | Report URI            | SaaS             | CSP violation monitoring            |
 
 ---
+
 ## PCI DSS Requirements for Formjacking
 
 ![pci_dss_requirements_for_formjacking](svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/pci_dss_requirements_for_formjacking.svg)
 
 ---
+
 ## Defense in Depth Strategy
 
 ```bash
@@ -340,6 +354,7 @@ diff known_good_hashes.txt current.txt
 ```
 
 ---
+
 ## Best Practice: Tokenized Payment Forms
 
 ```html
@@ -373,6 +388,7 @@ diff known_good_hashes.txt current.txt
 - PCI DSS scope is dramatically reduced
 
 ---
+
 ## Key Takeaways
 
 - Formjacking is one of the most profitable and stealthy web attacks

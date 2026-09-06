@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Grafana and Dashboards
 
 ---
+
 ## What This Chapter Covers
 
 - Grafana basics
@@ -20,6 +22,7 @@ audience:
 - Best practices
 
 ---
+
 ## What Grafana Is
 
 - Open-source visualisation
@@ -28,16 +31,19 @@ audience:
 - Most-used UI for Prometheus
 
 ---
+
 ## Dashboard Anatomy
 
 ![dashboard_anatomy](svg/courses/observability_and_monitoring/prometheus-and-grafana/05_grafana_and_dashboards/dashboard_anatomy.svg)
 
 ---
+
 ## Design Principles
 
 ![dashboard_principles](svg/courses/observability_and_monitoring/prometheus-and-grafana/05_grafana_and_dashboards/dashboard_principles.svg)
 
 ---
+
 ## Data Sources
 
 - Prometheus: most common
@@ -47,6 +53,7 @@ audience:
 - Configure once, use everywhere
 
 ---
+
 ## Panels
 
 - One visualisation
@@ -55,6 +62,7 @@ audience:
 - Many types
 
 ---
+
 ## Time Series Panel
 
 - The classic
@@ -63,6 +71,7 @@ audience:
 - Most dashboards built around this
 
 ---
+
 ## Sample Panel Query
 
 ```promql
@@ -73,6 +82,7 @@ sum by (status) (rate(http_requests_total[5m]))
 - Per-status breakdown
 
 ---
+
 ## Variables
 
 - Template dashboards
@@ -81,6 +91,7 @@ sum by (status) (rate(http_requests_total[5m]))
 - One dashboard for many services
 
 ---
+
 ## Defining a Variable
 
 - Type: query, custom, interval
@@ -88,6 +99,7 @@ sum by (status) (rate(http_requests_total[5m]))
 - Refresh on dashboard load or interval
 
 ---
+
 ## Annotations
 
 - Mark events on graphs
@@ -95,6 +107,7 @@ sum by (status) (rate(http_requests_total[5m]))
 - From query or manual
 
 ---
+
 ## Linking Panels
 
 - Drill-down across dashboards
@@ -102,6 +115,7 @@ sum by (status) (rate(http_requests_total[5m]))
 - Pass variables across
 
 ---
+
 ## Dashboards as Code
 
 - JSON definition
@@ -110,6 +124,7 @@ sum by (status) (rate(http_requests_total[5m]))
 - Reproducible
 
 ---
+
 ## Provisioning
 
 - Files describe data sources, dashboards
@@ -117,6 +132,7 @@ sum by (status) (rate(http_requests_total[5m]))
 - No clicking around for setup
 
 ---
+
 ## Sharing
 
 - Public / private snapshots
@@ -124,6 +140,7 @@ sum by (status) (rate(http_requests_total[5m]))
 - Export JSON
 
 ---
+
 ## Best Practices
 
 - Start with the four golden signals
@@ -132,6 +149,7 @@ sum by (status) (rate(http_requests_total[5m]))
 - Use variables for reuse
 
 ---
+
 ## Common Dashboard Mistakes
 
 - Too many panels; nobody scrolls

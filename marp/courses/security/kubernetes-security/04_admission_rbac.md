@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Admission Controllers and RBAC
 
 ---
+
 ## What This Chapter Covers
 
 - The Kubernetes API request flow
@@ -21,6 +23,7 @@ audience:
 - Common patterns and pitfalls
 
 ---
+
 ## API Request Flow
 
 - Authentication — who is calling?
@@ -31,11 +34,13 @@ audience:
 - Each step can reject the request
 
 ---
+
 ## Request Flow Visualized
 
 ![api_flow](svg/courses/security/kubernetes-security/04_admission_rbac/api_flow.svg)
 
 ---
+
 ## RBAC Basics
 
 - Role-Based Access Control
@@ -45,6 +50,7 @@ audience:
 - Actions: verbs on resources
 
 ---
+
 ## Roles
 
 ```yaml
@@ -60,6 +66,7 @@ rules:
 ```
 
 ---
+
 ## RoleBindings
 
 ```yaml
@@ -79,6 +86,7 @@ roleRef:
 ```
 
 ---
+
 ## ClusterRole and ClusterRoleBinding
 
 - ClusterRole: cluster-wide permissions
@@ -87,6 +95,7 @@ roleRef:
 - Useful for reusable roles
 
 ---
+
 ## Service Accounts
 
 - Identities for pods
@@ -96,6 +105,7 @@ roleRef:
 - The principal for pod-initiated API calls
 
 ---
+
 ## Default Service Account Risks
 
 - Default SA has no permissions out of the box (good)
@@ -105,6 +115,7 @@ roleRef:
 - Set explicitly per pod when API access is needed
 
 ---
+
 ## Least Privilege Principle
 
 - Grant only what each subject actually needs
@@ -114,11 +125,13 @@ roleRef:
 - Reduces blast radius of compromise
 
 ---
+
 ## Verb Resource Scope
 
 ![least_privilege_rbac](svg/courses/security/kubernetes-security/04_admission_rbac/least_privilege_rbac.svg)
 
 ---
+
 ## RBAC Anti-Patterns
 
 - Wildcard verbs (`*`)
@@ -128,6 +141,7 @@ roleRef:
 - Granting cluster-admin "for convenience"
 
 ---
+
 ## Auditing RBAC
 
 - `kubectl auth can-i` — check permissions
@@ -137,6 +151,7 @@ roleRef:
 - Run periodically; document findings
 
 ---
+
 ## Admission Controllers
 
 - Plugins that run after authn/authz
@@ -146,6 +161,7 @@ roleRef:
 - Where most policy enforcement happens today
 
 ---
+
 ## Built-in Admission Controllers
 
 - NodeRestriction — kubelets can only modify their own node/pods
@@ -155,11 +171,13 @@ roleRef:
 - Many more; some defaulted on per cluster
 
 ---
+
 ## Admission Controller Kinds
 
 ![admission_kinds](svg/courses/security/kubernetes-security/04_admission_rbac/admission_kinds.svg)
 
 ---
+
 ## Validating Admission Webhooks
 
 - Custom logic via HTTPS endpoint
@@ -169,6 +187,7 @@ roleRef:
 - The basis for OPA Gatekeeper, Kyverno, etc
 
 ---
+
 ## Mutating Admission Webhooks
 
 - Can modify resources before persisting
@@ -178,6 +197,7 @@ roleRef:
 - Powerful but risky
 
 ---
+
 ## OPA Gatekeeper
 
 - Open Policy Agent integration with Kubernetes
@@ -187,6 +207,7 @@ roleRef:
 - Strong fit for compliance automation
 
 ---
+
 ## Gatekeeper Example
 
 ```yaml
@@ -204,6 +225,7 @@ spec:
 ```
 
 ---
+
 ## Kyverno
 
 - Kubernetes-native policy engine
@@ -213,6 +235,7 @@ spec:
 - Increasingly popular
 
 ---
+
 ## Kyverno Example
 
 ```yaml
@@ -237,6 +260,7 @@ spec:
 ```
 
 ---
+
 ## OPA vs Kyverno
 
 - Gatekeeper — Rego, complex but powerful
@@ -246,6 +270,7 @@ spec:
 - Some teams use both for different policies
 
 ---
+
 ## Common Policies
 
 - Disallow privileged containers
@@ -256,6 +281,7 @@ spec:
 - Each is a one-policy lift
 
 ---
+
 ## Policy Coverage Strategy
 
 - Start with PSS at namespace level
@@ -265,6 +291,7 @@ spec:
 - Iterate based on real workloads
 
 ---
+
 ## RBAC + Admission Together
 
 - RBAC controls *who* can do what
@@ -274,6 +301,7 @@ spec:
 - Defense in depth
 
 ---
+
 ## Kubectl Plugins for Audit
 
 - kubectl-who-can — find who can do an action
@@ -283,6 +311,7 @@ spec:
 - Build into onboarding for new admins
 
 ---
+
 ## Token Best Practices
 
 - Short-lived tokens (use BoundServiceAccountTokenVolume)
@@ -292,6 +321,7 @@ spec:
 - Audit log every token issuance
 
 ---
+
 ## Common Pitfalls
 
 - Granting cluster-admin to "make it work"
@@ -301,6 +331,7 @@ spec:
 - Untested policies that break workloads
 
 ---
+
 ## Best Practices
 
 - Least-privilege RBAC; audit periodically
@@ -310,6 +341,7 @@ spec:
 - Monitor admission webhook failures
 
 ---
+
 ## Summary
 
 - RBAC: who can call the API and do what

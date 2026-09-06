@@ -11,9 +11,11 @@ audience:
   - audiences:devops
 
 ---
+
 # DevOps and CI/CD for Architects
 
 ---
+
 ## What Is DevOps?
 
 - A set of practices that combines software development and IT operations
@@ -22,6 +24,7 @@ audience:
 - Not a tool or a team, but a culture and set of principles
 
 ---
+
 ## DevOps Principles
 
 - Automate everything that can be automated
@@ -31,11 +34,13 @@ audience:
 - Deliver small, frequent changes rather than large, infrequent releases
 
 ---
+
 ## The DevOps Lifecycle
 
 ![the_devops_lifecycle](svg/courses/architecting/architecting/14_devops_and_cicd_for_architects/the_devops_lifecycle.svg)
 
 ---
+
 ## Why Architects Care About DevOps
 
 - Architecture decisions directly impact deployment frequency and reliability
@@ -44,6 +49,7 @@ audience:
 - Architects must design systems that are easy to build, test, and deploy
 
 ---
+
 ## Continuous Integration (CI)
 
 - Developers merge code changes to a shared repository frequently
@@ -52,11 +58,13 @@ audience:
 - Provides fast feedback to developers on code quality
 
 ---
+
 ## CI/CD Pipeline
 
 ![ci_cd_pipeline](svg/courses/architecting/architecting/14_devops_and_cicd_for_architects/cicd_pipeline.svg)
 
 ---
+
 ## CI Best Practices
 
 - Keep the build fast (under 10 minutes)
@@ -66,6 +74,7 @@ audience:
 - Automate code quality checks (linting, formatting, static analysis)
 
 ---
+
 ## Continuous Delivery (CD)
 
 - Every code change that passes the pipeline is ready for production deployment
@@ -74,6 +83,7 @@ audience:
 - Reduces risk by making releases smaller and more frequent
 
 ---
+
 ## Continuous Deployment
 
 - Every change that passes the pipeline is automatically deployed to production
@@ -82,11 +92,13 @@ audience:
 - Enables multiple deployments per day
 
 ---
+
 ## CD vs Continuous Deployment
 
 ![cd_vs_continuous_deployment](svg/courses/architecting/architecting/14_devops_and_cicd_for_architects/cd_vs_continuous_deployment.svg)
 
 ---
+
 ## Infrastructure as Code (IaC)
 
 - Managing and provisioning infrastructure through machine-readable definition files
@@ -95,6 +107,7 @@ audience:
 - Eliminates manual configuration and reduces drift between environments
 
 ---
+
 ## IaC Benefits
 
 - Reproducibility: create identical environments on demand
@@ -104,11 +117,13 @@ audience:
 - Collaboration: team members review infrastructure changes via pull requests
 
 ---
+
 ## IaC Tool Categories
 
 ![iac_tool_categories](svg/courses/architecting/architecting/14_devops_and_cicd_for_architects/iac_tool_categories.svg)
 
 ---
+
 ## Terraform Example
 
 ```hcl
@@ -132,6 +147,7 @@ resource "aws_security_group" "web_sg" {
 ```
 
 ---
+
 ## IaC Best Practices
 
 - Store all infrastructure code in version control
@@ -142,6 +158,7 @@ resource "aws_security_group" "web_sg" {
 - Never make manual changes to infrastructure managed by IaC
 
 ---
+
 ## GitOps
 
 - An operational framework that uses `Git` as the single source of truth
@@ -150,11 +167,13 @@ resource "aws_security_group" "web_sg" {
 - Changes are made through pull requests, providing audit trails
 
 ---
+
 ## GitOps Workflow
 
 ![gitops_workflow](svg/courses/architecting/architecting/14_devops_and_cicd_for_architects/gitops_workflow.svg)
 
 ---
+
 ## GitOps Tools
 
 - `ArgoCD` - declarative GitOps for Kubernetes
@@ -163,6 +182,7 @@ resource "aws_security_group" "web_sg" {
 - Support rollback by reverting Git commits
 
 ---
+
 ## The Architect's Role in DevOps
 
 - Design systems that support independent, fast deployments
@@ -172,6 +192,7 @@ resource "aws_security_group" "web_sg" {
 - Balance velocity with reliability through architectural guardrails
 
 ---
+
 ## Architectural Guardrails
 
 - Automated fitness functions that run in the CI pipeline
@@ -181,11 +202,13 @@ resource "aws_security_group" "web_sg" {
 - API compatibility checks: prevent breaking changes
 
 ---
+
 ## Pipeline Architecture for Microservices
 
 ![pipeline_architecture_for_microservices](svg/courses/architecting/architecting/14_devops_and_cicd_for_architects/pipeline_architecture_for_microservices.svg)
 
 ---
+
 ## Environment Promotion Strategy
 
 - Each service has its own CI pipeline that produces an artifact
@@ -194,6 +217,7 @@ resource "aws_security_group" "web_sg" {
 - Promotion gates: automated tests, security scans, manual approval
 
 ---
+
 ## Immutable Infrastructure
 
 - Never modify running infrastructure; replace it instead
@@ -202,6 +226,7 @@ resource "aws_security_group" "web_sg" {
 - Enables reliable rollbacks by deploying the previous image
 
 ---
+
 ## Database Migration Strategies
 
 - Schema changes are one of the hardest parts of deployment
@@ -211,17 +236,20 @@ resource "aws_security_group" "web_sg" {
 - Separate database migration from application deployment
 
 ---
+
 ## Expand and Contract Pattern
 
 ![expand_and_contract_pattern](svg/courses/architecting/architecting/14_devops_and_cicd_for_architects/expand_and_contract_pattern.svg)
 
 ---
+
 ## Expand and Contract Benefits
 
 - Allows zero-downtime schema changes
 - Each step is a separate deployment
 
 ---
+
 ## Secrets Management in CI/CD
 
 - Never store secrets in source code or CI configuration files
@@ -230,6 +258,7 @@ resource "aws_security_group" "web_sg" {
 - Rotate secrets automatically and audit access
 
 ---
+
 ## CI/CD Security Practices
 
 - Sign container images and verify signatures before deployment
@@ -239,6 +268,7 @@ resource "aws_security_group" "web_sg" {
 - Implement branch protection rules for production branches
 
 ---
+
 ## Summary
 
 - DevOps culture enables fast, reliable software delivery

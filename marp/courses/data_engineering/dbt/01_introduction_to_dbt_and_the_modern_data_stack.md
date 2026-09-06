@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Introduction to dbt and the Modern Data Stack
 
 ---
+
 ## What This Chapter Covers
 
 - What dbt is
@@ -19,6 +21,7 @@ audience:
 - Use cases
 
 ---
+
 ## What dbt Is
 
 - "Data Build Tool"
@@ -28,11 +31,13 @@ audience:
 - Open source + dbt Cloud
 
 ---
+
 ## ELT Position
 
 ![elt_position](svg/courses/data_engineering/dbt/01_introduction_to_dbt_and_the_modern_data_stack/elt_position.svg)
 
 ---
+
 ## Modern Data Stack
 
 - Source &#8594; Loader (Fivetran, Airbyte) &#8594; Warehouse (Snowflake, BigQuery)
@@ -41,6 +46,7 @@ audience:
 - Replaced monolithic ETL
 
 ---
+
 ## ELT vs ETL
 
 - ETL: transform before load (legacy)
@@ -49,6 +55,7 @@ audience:
 - dbt is the T in ELT
 
 ---
+
 ## Core Features
 
 - Models: SQL transformations
@@ -58,6 +65,7 @@ audience:
 - Reusable macros
 
 ---
+
 ## Why dbt
 
 - SQL-first; analysts can use it
@@ -67,6 +75,7 @@ audience:
 - Standard in modern stacks
 
 ---
+
 ## dbt Core vs dbt Cloud
 
 - Core: open-source CLI
@@ -75,6 +84,7 @@ audience:
 - Cloud: easier; pricier
 
 ---
+
 ## Supported Warehouses
 
 - Snowflake, BigQuery, Redshift
@@ -83,6 +93,7 @@ audience:
 - Same dbt code; different SQL backends
 
 ---
+
 ## A Sample Model
 
 ```sql
@@ -97,6 +108,7 @@ WHERE total > 0
 ```
 
 ---
+
 ## ref() and source()
 
 - `{{ source(...) }}`: raw data table
@@ -105,6 +117,7 @@ WHERE total > 0
 - Build order automatic
 
 ---
+
 ## Materialisations
 
 - view (default for staging)
@@ -114,6 +127,7 @@ WHERE total > 0
 - Pick by use case
 
 ---
+
 ## When To Use dbt
 
 - Anywhere you transform data in a warehouse
@@ -121,6 +135,7 @@ WHERE total > 0
 - Standard for analytics engineering teams
 
 ---
+
 ## When Not To
 
 - Streaming transformations
@@ -128,6 +143,7 @@ WHERE total > 0
 - One-off ad-hoc queries
 
 ---
+
 ## Common Misconceptions
 
 - "dbt loads data" — no, it transforms
@@ -136,6 +152,7 @@ WHERE total > 0
 - "dbt replaces Airflow" — they complement (Airflow runs dbt)
 
 ---
+
 ## What's Next
 
 - Models, materialisations
@@ -146,6 +163,7 @@ WHERE total > 0
 - Production deployment
 
 ---
+
 ## dbt Development Workflow
 
 ![dbt_workflow](svg/courses/data_engineering/dbt/01_introduction_to_dbt_and_the_modern_data_stack/dbt_workflow.svg)

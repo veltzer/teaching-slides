@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Dynamic Inventory
 
 ## Topics Covered

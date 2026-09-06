@@ -8,6 +8,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Review Process Design
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![process_options](svg/courses/development_methodologies/code-review-best-practices/03_review_process_design/process_options.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - When to request a review
@@ -27,6 +29,7 @@ audience:
 - A practical process per team size
 
 ---
+
 ## When to Request
 
 - After local testing passes
@@ -36,11 +39,13 @@ audience:
 - *Not*: as soon as you finish typing
 
 ---
+
 ## Process Choices
 
 ![process_choices](svg/courses/development_methodologies/code-review-best-practices/03_review_process_design/process_choices.svg)
 
 ---
+
 ## Choosing Reviewers
 
 - One reviewer is the minimum
@@ -50,6 +55,7 @@ audience:
 - CODEOWNERS files automate routing
 
 ---
+
 ## CODEOWNERS
 
 ```misc
@@ -65,6 +71,7 @@ audience:
 - Update when team membership changes
 
 ---
+
 ## Required vs Optional Reviewers
 
 - **Required**: must approve before merge
@@ -74,6 +81,7 @@ audience:
 - Too many required = bottleneck
 
 ---
+
 ## Turnaround Time
 
 - Aim: review within one business day
@@ -83,6 +91,7 @@ audience:
 - Stale PRs rot quickly — pick them up or release them
 
 ---
+
 ## Reviewing Promptly
 
 - Schedule review time daily, not "when I have a moment"
@@ -92,6 +101,7 @@ audience:
 - A team where reviews are prioritised ships faster
 
 ---
+
 ## Approval Workflows
 
 - Single approval: one reviewer says yes &#8594; merge
@@ -101,6 +111,7 @@ audience:
 - Many platforms support combinations
 
 ---
+
 ## Branch Protection Rules
 
 - Require PR before merge
@@ -111,6 +122,7 @@ audience:
 - Most projects need at least these five
 
 ---
+
 ## Merge Strategies
 
 - **Merge commit**: preserves PR structure
@@ -120,6 +132,7 @@ audience:
 - "Squash and merge" is the common modern default
 
 ---
+
 ## Self-Review First
 
 - Open the PR, read your own diff
@@ -129,6 +142,7 @@ audience:
 - Do this before requesting reviewers' time
 
 ---
+
 ## PR Description
 
 - Explain *what* changed and *why*
@@ -138,6 +152,7 @@ audience:
 - A good description halves review time
 
 ---
+
 ## A PR Description Template
 
 ```misc
@@ -161,6 +176,7 @@ What could break; rollback plan if needed.
 - Slightly different per project; a template helps consistency
 
 ---
+
 ## Process Per Team Size
 
 - Solo: pair-program with someone or skip review (with risk)
@@ -170,6 +186,7 @@ What could break; rollback plan if needed.
 - Process should grow with the team, not ahead of it
 
 ---
+
 ## Common Process Mistakes
 
 - Process so heavy nothing ships

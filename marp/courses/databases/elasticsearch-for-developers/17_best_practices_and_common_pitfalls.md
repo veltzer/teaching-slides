@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Best Practices and Common Pitfalls
 
 ---
+
 ## What This Chapter Covers
 
 - Mapping pitfalls
@@ -20,11 +22,13 @@ audience:
 - A checklist
 
 ---
+
 ## Common Pitfalls
 
 ![pitfalls](svg/courses/databases/elasticsearch-for-developers/17_best_practices_and_common_pitfalls/pitfalls.svg)
 
 ---
+
 ## Mapping Pitfalls
 
 - Letting auto-mapping run uncritically
@@ -33,6 +37,7 @@ audience:
 - Reindex headaches later
 
 ---
+
 ## Best: Explicit Mappings
 
 - Define every field
@@ -41,6 +46,7 @@ audience:
 - Strict dynamic mapping for new fields
 
 ---
+
 ## Query Pitfalls
 
 - Term query on text fields
@@ -49,6 +55,7 @@ audience:
 - Deep `from` paging
 
 ---
+
 ## Best: Match Type To Query
 
 - Exact: term on keyword
@@ -57,6 +64,7 @@ audience:
 - Geo: geo_distance / geo_bounding_box
 
 ---
+
 ## Bulk Pitfalls
 
 - Bulk too large (memory)
@@ -65,6 +73,7 @@ audience:
 - Synchronous bulk in hot path
 
 ---
+
 ## Best: Bulk Operations
 
 - 5-15MB per request
@@ -73,6 +82,7 @@ audience:
 - Disable refresh during big loads
 
 ---
+
 ## Operational Pitfalls
 
 - One node clusters in production
@@ -81,6 +91,7 @@ audience:
 - Stack monitoring not configured
 
 ---
+
 ## Best: Operations
 
 - 3+ master-eligible nodes
@@ -89,6 +100,7 @@ audience:
 - ILM for time-based data
 
 ---
+
 ## Capacity Pitfalls
 
 - Working set exceeds RAM (cold queries)
@@ -97,6 +109,7 @@ audience:
 - Hot shards (uneven write distribution)
 
 ---
+
 ## Best: Capacity
 
 - Heap = 50% of RAM, max 30GB
@@ -105,6 +118,7 @@ audience:
 - Plan capacity quarterly
 
 ---
+
 ## Anti-Pattern: ES As Database
 
 - No transactions
@@ -113,6 +127,7 @@ audience:
 - Use a real DB; ES for search
 
 ---
+
 ## Anti-Pattern: Too Many Shards
 
 - Each shard has fixed cost
@@ -121,6 +136,7 @@ audience:
 - Reduce by reindexing if too many
 
 ---
+
 ## Anti-Pattern: Sync Search In Hot Path
 
 - ES query latency: 10-100ms typical
@@ -129,6 +145,7 @@ audience:
 - Not a database; not for every request
 
 ---
+
 ## A Checklist
 
 - [ ] Explicit mappings defined
@@ -143,6 +160,7 @@ audience:
 - [ ] Alerts on cluster health
 
 ---
+
 ## Course Wrap-Up
 
 - Elasticsearch: powerful search and analytics

@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Under the Hood
 
 ---
@@ -51,6 +52,7 @@ commit a1b2c3d4e5f67890123456789012345678901234567890123456789012345678
 ```
 
 ---
+
 ## Core Git Ideas: Details
 
 **Three fundamental concepts:**
@@ -71,6 +73,7 @@ commit a1b2c3d4e5f67890123456789012345678901234567890123456789012345678
     - Natural deduplication
 
 ---
+
 ## Core Git Ideas
 
 ![core_git_ideas](svg/courses/git/git/11_under_the_hood/core_git_ideas.svg)
@@ -186,6 +189,7 @@ and session management.
 - Commit message
 
 ---
+
 ## Object Relationships: Overview
 
 How the three structures connect:
@@ -530,6 +534,7 @@ size-pack 856      # KB in pack files
 ```
 
 ---
+
 ## Delta Compression: Details
 
 How `Git` stores similar objects efficiently:
@@ -541,6 +546,7 @@ How `Git` stores similar objects efficiently:
 - Automatic during packing operations
 
 ---
+
 ## Delta Compression
 
 ![delta_compression](svg/courses/git/git/11_under_the_hood/delta_compression.svg)
@@ -718,6 +724,7 @@ git cat-file -p 557db03
 - `update-ref`: Update references
 
 ---
+
 ## Understanding Merge Mechanics: Details
 
 What happens during a three-way merge:
@@ -732,6 +739,7 @@ What happens during a three-way merge:
 1. **Create merge commit:** With two parents
 
 ---
+
 ## Understanding Merge Mechanics
 
 ![understanding_merge_mechanics](svg/courses/git/git/11_under_the_hood/understanding_merge_mechanics.svg)

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Monitoring and Observability
 
 ---
+
 ## What This Chapter Covers
 
 - Why observability matters at the gateway
@@ -22,6 +24,7 @@ audience:
 - A solid baseline
 
 ---
+
 ## Why At The Gateway
 
 - The gateway sees every request
@@ -31,11 +34,13 @@ audience:
 - The most-leveraged observability point
 
 ---
+
 ## Gateway Metrics
 
 ![gateway_metrics](svg/courses/architecting/api-gateway-patterns/10_monitoring_and_observability/gateway_metrics.svg)
 
 ---
+
 ## What To Log
 
 - Request: method, path, query params, headers (selectively)
@@ -45,6 +50,7 @@ audience:
 - Don't log: bodies, secrets, PII
 
 ---
+
 ## Structured Logging
 
 - JSON, not free text
@@ -54,6 +60,7 @@ audience:
 - The modern default
 
 ---
+
 ## Sampling
 
 - High-traffic APIs generate too much log
@@ -63,6 +70,7 @@ audience:
 - Most gateways support this
 
 ---
+
 ## Metrics
 
 - Request rate (per route, per consumer)
@@ -73,6 +81,7 @@ audience:
 - All emitted by the gateway
 
 ---
+
 ## RED Method
 
 - **Rate**: requests per second
@@ -82,6 +91,7 @@ audience:
 - Per route, per consumer
 
 ---
+
 ## USE Method
 
 - **Utilisation**: how busy is each resource
@@ -91,6 +101,7 @@ audience:
 - RED for the API; USE for the host
 
 ---
+
 ## Distributed Tracing
 
 - One request &#8594; many service calls
@@ -100,6 +111,7 @@ audience:
 - Tools: Jaeger, Tempo, Honeycomb, AWS X-Ray
 
 ---
+
 ## OpenTelemetry
 
 - Industry-standard tracing / metrics SDK
@@ -109,6 +121,7 @@ audience:
 - The strategic bet for observability
 
 ---
+
 ## Trace Context Propagation
 
 - Gateway adds trace ID if missing; passes along
@@ -117,6 +130,7 @@ audience:
 - "What happened in this single request" — visible at a glance
 
 ---
+
 ## Alerts
 
 - Error rate > X% for 5 minutes
@@ -126,6 +140,7 @@ audience:
 - Tune thresholds over time
 
 ---
+
 ## Dashboards
 
 - Standard: requests, errors, latency over time
@@ -135,6 +150,7 @@ audience:
 - Internal: detailed for ops
 
 ---
+
 ## Tools
 
 - **Prometheus + Grafana**: open-source standard
@@ -144,6 +160,7 @@ audience:
 - **Cloud-native**: CloudWatch, Stackdriver, Azure Monitor
 
 ---
+
 ## Common Observability Mistakes
 
 - Logging request bodies (storage cost; PII risk)
@@ -153,6 +170,7 @@ audience:
 - Sampling without preserving errors
 
 ---
+
 ## Course Wrap-Up
 
 - API gateways centralise cross-cutting concerns

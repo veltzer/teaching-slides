@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Factor IX: Disposability
 
 ---
+
 ## The Rule
 
 - Maximize robustness with fast startup and graceful shutdown
@@ -18,11 +20,13 @@ audience:
 - Sudden termination is normal, not exceptional
 
 ---
+
 ## Process Lifecycle
 
 ![process_lifecycle](svg/courses/architecting/twelve-factor-app/10_disposability/process_lifecycle.svg)
 
 ---
+
 ## Fast Startup
 
 - The process should be ready to serve in seconds, not minutes
@@ -31,6 +35,7 @@ audience:
 - Aim for under 30 seconds; 5 seconds is excellent
 
 ---
+
 ## Why Fast Startup Matters
 
 - Autoscaling fires when load spikes; new processes need to absorb load **now**
@@ -39,6 +44,7 @@ audience:
 - Local development: developers restart constantly
 
 ---
+
 ## Graceful Shutdown
 
 - Receive a signal (typically SIGTERM)
@@ -48,6 +54,7 @@ audience:
 - Exit cleanly
 
 ---
+
 ## Signal Handling
 
 ```python
@@ -67,6 +74,7 @@ signal.signal(signal.SIGTERM, shutdown)
 - Don't ignore it; default exit on SIGTERM might leave work undone
 
 ---
+
 ## Drain Period
 
 - The platform sends SIGTERM and waits a grace period (e.g., 30 seconds)
@@ -75,6 +83,7 @@ signal.signal(signal.SIGTERM, shutdown)
 - Design work to fit in the drain window
 
 ---
+
 ## Crash-Only Design
 
 - The process should behave correctly even if it dies abruptly
@@ -83,6 +92,7 @@ signal.signal(signal.SIGTERM, shutdown)
 - "Did the process exit cleanly?" should not affect correctness
 
 ---
+
 ## Implications for Long-Running Work
 
 - Long jobs must checkpoint progress
@@ -90,6 +100,7 @@ signal.signal(signal.SIGTERM, shutdown)
 - Without this, every deploy or scale-down loses partial work
 
 ---
+
 ## Implications for Connections
 
 - Connection pools should detect closed connections and reconnect
@@ -97,6 +108,7 @@ signal.signal(signal.SIGTERM, shutdown)
 - Don't hold locks longer than necessary; a sudden death will release them only after a timeout
 
 ---
+
 ## Anti-Patterns
 
 - 5-minute startup because a cache must warm before serving
@@ -106,6 +118,7 @@ signal.signal(signal.SIGTERM, shutdown)
 - Holding locks across sleep cycles
 
 ---
+
 ## Container Implications
 
 - Containers are killed regularly: rolling deploys, autoscaling, node failures
@@ -113,6 +126,7 @@ signal.signal(signal.SIGTERM, shutdown)
 - A container that takes 60 seconds to start fights against every container orchestration platform
 
 ---
+
 ## Summary
 
 - Start fast, stop cleanly, survive sudden death

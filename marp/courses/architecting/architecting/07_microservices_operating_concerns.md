@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Microservices Operating Concerns
 
 ---
+
 ## Scope of This Chapter
 
 - This chapter assumes you know the named patterns from the Architecture Patterns course
@@ -22,11 +24,13 @@ audience:
 - CQRS and Event Sourcing definitions live in the Architecture Patterns course (ch 04); their event-streaming operating concerns are covered in ch 19 of this course
 
 ---
+
 ## Pattern Categories
 
 ![pattern_categories](svg/courses/architecting/architecting/07_microservices_operating_concerns/pattern_categories.svg)
 
 ---
+
 ## API Gateway in Practice
 
 - Routing rules that survive service refactoring
@@ -35,6 +39,7 @@ audience:
 - The gateway becomes a critical operational component
 
 ---
+
 ## API Gateway Responsibilities
 
 - Request routing and load balancing
@@ -45,6 +50,7 @@ audience:
 - SSL termination
 
 ---
+
 ## Popular API Gateway Tools
 
 - `Kong` - open source gateway built on `Nginx`
@@ -53,6 +59,7 @@ audience:
 - `Traefik` - dynamic gateway with native `Kubernetes` support
 
 ---
+
 ## BFF vs Single API Gateway
 
 | Aspect | Single Gateway | BFF |
@@ -64,6 +71,7 @@ audience:
 | Coupling | Clients adapt to API | API adapts to clients |
 
 ---
+
 ## Service Discovery
 
 - The mechanism by which services find each other's network locations
@@ -72,11 +80,13 @@ audience:
 - Without discovery, services would need hardcoded addresses
 
 ---
+
 ## Client-Side Service Discovery
 
 ![client_side_service_discovery](svg/courses/architecting/architecting/07_microservices_operating_concerns/client_side_service_discovery.svg)
 
 ---
+
 ## Client-Side Discovery Details
 
 - Client queries the service registry directly
@@ -85,11 +95,13 @@ audience:
 - Trade-off: more logic in every client; one fewer hop on the data path
 
 ---
+
 ## Server-Side Service Discovery
 
 ![server_side_service_discovery](svg/courses/architecting/architecting/07_microservices_operating_concerns/server_side_service_discovery.svg)
 
 ---
+
 ## Server-Side Discovery Details
 
 - Load balancer queries the registry
@@ -98,6 +110,7 @@ audience:
 - Trade-off: extra network hop; clients stay simple
 
 ---
+
 ## Service Registry Tools
 
 - `Consul` - service discovery with health checking and KV store
@@ -106,6 +119,7 @@ audience:
 - `Kubernetes DNS` - built-in service discovery via DNS names
 
 ---
+
 ## Load Balancing Strategies
 
 - Round Robin: distribute requests evenly across instances
@@ -115,6 +129,7 @@ audience:
 - Random: simple random selection among healthy instances
 
 ---
+
 ## Database per Service in Practice
 
 - Each microservice owns its private database
@@ -123,6 +138,7 @@ audience:
 - Enables independent schema evolution and technology choices
 
 ---
+
 ## Database per Service Trade-Offs
 
 - Pros:
@@ -136,6 +152,7 @@ audience:
     - More databases to operate and monitor
 
 ---
+
 ## Shared Database Anti-Pattern
 
 - Multiple services access the same database
@@ -144,6 +161,7 @@ audience:
 - Acceptable only as a transitional step during migration from monolith
 
 ---
+
 ## Distributed Transactions Problem
 
 - A single business operation may span multiple services
@@ -152,6 +170,7 @@ audience:
 - The Saga pattern provides an alternative approach
 
 ---
+
 ## Saga in Practice
 
 - A sequence of local transactions across multiple services
@@ -160,16 +179,19 @@ audience:
 - Two coordination approaches: choreography and orchestration
 
 ---
+
 ## Saga: Choreography
 
 ![saga_choreography](svg/courses/architecting/architecting/07_microservices_operating_concerns/saga_choreography.svg)
 
 ---
+
 ## Saga: Orchestration
 
 ![saga_orchestration](svg/courses/architecting/architecting/07_microservices_operating_concerns/saga_orchestration.svg)
 
 ---
+
 ## Choreography vs Orchestration
 
 | Aspect | Choreography | Orchestration |
@@ -181,6 +203,7 @@ audience:
 | Use case | Simple workflows | Complex business processes |
 
 ---
+
 ## Compensating Transactions
 
 - The "undo" mechanism for saga steps that succeeded before a failure
@@ -189,11 +212,13 @@ audience:
 - Not all actions can be perfectly undone (e.g., sending an email)
 
 ---
+
 ## Compensation Example
 
 ![compensation_example](svg/courses/architecting/architecting/07_microservices_operating_concerns/compensation_example.svg)
 
 ---
+
 ## Strangler Fig in Practice
 
 - A migration strategy for incrementally replacing a monolith
@@ -202,11 +227,13 @@ audience:
 - The monolith shrinks over time until it can be decommissioned
 
 ---
+
 ## Strangler Fig Diagram
 
 ![strangler_fig_diagram](svg/courses/architecting/architecting/07_microservices_operating_concerns/strangler_fig_diagram.svg)
 
 ---
+
 ## Summary
 
 - API Gateway and BFF concentrate cross-cutting concerns where they belong

@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Snapshotting
 
 ---
+
 ## What This Chapter Covers
 
 - Why long event streams are a performance problem
@@ -23,6 +25,7 @@ audience:
 - Trade-offs
 
 ---
+
 ## The Problem: Long Streams
 
 - An aggregate with 50,000 events takes 50,000 apply calls to load
@@ -32,6 +35,7 @@ audience:
 - This is the cost of having a perfect history
 
 ---
+
 ## What Is a Snapshot?
 
 - A saved aggregate state at a known stream version
@@ -40,11 +44,13 @@ audience:
 - Loaded as a starting point so replay can skip events ≤ N
 
 ---
+
 ## Snapshot Visualized
 
 ![snapshot_overview](svg/courses/architecting/cqrs-and-event-sourcing/07_snapshotting/snapshot_overview.svg)
 
 ---
+
 ## Loading With a Snapshot
 
 ```python
@@ -67,6 +73,7 @@ def load_order(order_id):
 - Falls back to full replay if no snapshot exists
 
 ---
+
 ## When to Take a Snapshot
 
 - Periodic by event count: every N events (e.g., every 100)
@@ -76,6 +83,7 @@ def load_order(order_id):
 - Most teams use a simple "every N events" rule
 
 ---
+
 ## Where to Take a Snapshot
 
 - Asynchronously, after the write commits
@@ -85,6 +93,7 @@ def load_order(order_id):
 - Never in the critical write path — the append is already fast
 
 ---
+
 ## Snapshot Storage
 
 - A separate table or store keyed by `(stream_id, version)`
@@ -93,6 +102,7 @@ def load_order(order_id):
 - A small store; fast lookup; usually just the latest is needed
 
 ---
+
 ## A Postgres Snapshot Table
 
 ```sql
@@ -111,6 +121,7 @@ CREATE TABLE snapshots (
 - `schema_ver` is for snapshot format migrations (covered below)
 
 ---
+
 ## Snapshot Frequency Trade-Off
 
 - More frequent snapshots → faster loads, more storage and CPU
@@ -119,6 +130,7 @@ CREATE TABLE snapshots (
 - Start simple, measure, adjust
 
 ---
+
 ## A Reasonable Default
 
 - Take a snapshot every 100 events
@@ -127,6 +139,7 @@ CREATE TABLE snapshots (
 - Monitor the load latency distribution; tune if it drifts
 
 ---
+
 ## Snapshot Versioning
 
 - The aggregate's class evolves; the snapshot format must too
@@ -135,6 +148,7 @@ CREATE TABLE snapshots (
 - Loading code knows how to handle each version it understands
 
 ---
+
 ## Strategy: Discard on Mismatch
 
 - Loading code sees an older `schema_ver` than it can handle
@@ -143,6 +157,7 @@ CREATE TABLE snapshots (
 - Simple; correct; pays the cost of one slow load per aggregate
 
 ---
+
 ## Strategy: Upcast Old Snapshots
 
 ```python
@@ -159,11 +174,13 @@ def from_snapshot(raw):
 - Trade complexity for not paying the discard cost
 
 ---
+
 ## Loading With Snapshot Versioning
 
 ![snapshot_load_flow](svg/courses/architecting/cqrs-and-event-sourcing/07_snapshotting/snapshot_load_flow.svg)
 
 ---
+
 ## Snapshots Are Optional
 
 - The system runs correctly without snapshots — they are an optimization
@@ -172,6 +189,7 @@ def from_snapshot(raw):
 - They never affect the source of truth, only the latency of accessing it
 
 ---
+
 ## What Snapshots Don't Solve
 
 - A bad event in the stream still has to be dealt with
@@ -180,6 +198,7 @@ def from_snapshot(raw):
 - Snapshotting only addresses one specific cost: aggregate load latency
 
 ---
+
 ## When You Don't Need Snapshots
 
 - Aggregates with naturally short streams (< 50 events typical)
@@ -188,6 +207,7 @@ def from_snapshot(raw):
 - Many systems run for years without ever snapshotting
 
 ---
+
 ## When You Definitely Need Snapshots
 
 - Aggregates that accumulate hundreds or thousands of events over their lifetime
@@ -196,6 +216,7 @@ def from_snapshot(raw):
 - Any aggregate where loading takes long enough to feel in user latency
 
 ---
+
 ## Practical Snapshot Cadence
 
 | Aggregate type | Typical event count | Snapshot every |
@@ -208,6 +229,7 @@ def from_snapshot(raw):
 - Start without; add when you measure pain
 
 ---
+
 ## Common Mistakes
 
 - **Snapshotting in the write path**: makes commands slower for no read-side benefit
@@ -217,6 +239,7 @@ def from_snapshot(raw):
 - **No fall-back to full replay**: makes the system fragile to snapshot store failures
 
 ---
+
 ## Operational Notes
 
 - Monitor snapshot age: an aggregate with many new events but no recent snapshot is slow to load
@@ -225,6 +248,7 @@ def from_snapshot(raw):
 - Test the "no snapshot" path regularly — verify it still works
 
 ---
+
 ## Summary
 
 - Snapshots cache aggregate state at a known version, speeding up loading

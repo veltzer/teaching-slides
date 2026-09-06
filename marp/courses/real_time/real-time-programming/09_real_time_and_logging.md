@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Real-Time and Logging
 
 ---
+
 ## What This Chapter Covers
 
 - Why naive logging breaks RT
@@ -22,6 +24,7 @@ audience:
 - Practical patterns
 
 ---
+
 ## Why Logging Is Dangerous
 
 - A `printf` looks innocent
@@ -31,16 +34,19 @@ audience:
 - A debug log added "just to investigate" can break the system
 
 ---
+
 ## Patterns
 
 ![rt_logging](svg/courses/real_time/real-time-programming/09_real_time_and_logging/rt_logging.svg)
 
 ---
+
 ## Log Pipelines
 
 ![log_pipelines](svg/courses/real_time/real-time-programming/09_real_time_and_logging/log_pipelines.svg)
 
 ---
+
 ## What printf Does
 
 - Parses the format string
@@ -51,6 +57,7 @@ audience:
 - Each step has unbounded worst case
 
 ---
+
 ## Cost of File Writes
 
 - Filesystem journals (ext4, xfs): write may trigger journal commit
@@ -60,6 +67,7 @@ audience:
 - Logs to slow storage (SD card): tens of milliseconds typical
 
 ---
+
 ## The Naive Solution: Just Don't Log
 
 - Tempting; usually wrong
@@ -69,6 +77,7 @@ audience:
 - Answer: defer the I/O
 
 ---
+
 ## Async Logging
 
 - Log call: write to a buffer; *don't* do I/O
@@ -78,6 +87,7 @@ audience:
 - Pattern used by every serious RT logging library
 
 ---
+
 ## Async Logging in Code
 
 ```c
@@ -95,6 +105,7 @@ log_event(LOG_INFO, "event %d at %lld", id, ts);
 ```
 
 ---
+
 ## The Ring Buffer
 
 - Pre-allocated, fixed size
@@ -104,6 +115,7 @@ log_event(LOG_INFO, "event %d at %lld", id, ts);
 - The producer never blocks
 
 ---
+
 ## What If The Buffer Fills
 
 - Two strategies:
@@ -114,6 +126,7 @@ log_event(LOG_INFO, "event %d at %lld", id, ts);
 - Either way: instrument the drop count
 
 ---
+
 ## Shared-Memory Logging
 
 - Producer writes to a memory region shared with another process
@@ -123,6 +136,7 @@ log_event(LOG_INFO, "event %d at %lld", id, ts);
 - Common in flight-control and industrial systems
 
 ---
+
 ## What's Logged Inside the Hot Path
 
 - Numeric event codes (not strings)
@@ -132,6 +146,7 @@ log_event(LOG_INFO, "event %d at %lld", id, ts);
 - Defer formatting (sprintf, etc.) to the consumer
 
 ---
+
 ## Symbol Tables for Compactness
 
 - "OrderPlaced(id=42, amount=199)" &#8594; "EVT_OP id=42 amount=199" &#8594; binary record
@@ -141,6 +156,7 @@ log_event(LOG_INFO, "event %d at %lld", id, ts);
 - LTTng, eBPF, kernel tracepoints all work this way
 
 ---
+
 ## Don't Log These in the Hot Path
 
 - Strings constructed at runtime (sprintf)
@@ -150,6 +166,7 @@ log_event(LOG_INFO, "event %d at %lld", id, ts);
 - File operations of any kind
 
 ---
+
 ## Sample Buffer Sizes
 
 - Hot-path ring buffer: 64 KB to 1 MB typical
@@ -159,6 +176,7 @@ log_event(LOG_INFO, "event %d at %lld", id, ts);
 - Tune based on expected event rate
 
 ---
+
 ## Logging in Linux Kernel
 
 - printk: lock-free ring buffer
@@ -167,6 +185,7 @@ log_event(LOG_INFO, "event %d at %lld", id, ts);
 - A model worth studying for user-space RT systems
 
 ---
+
 ## A Practical Pattern
 
 - One ring buffer per CPU (no contention)
@@ -176,6 +195,7 @@ log_event(LOG_INFO, "event %d at %lld", id, ts);
 - Tested under production-like load before deployment
 
 ---
+
 ## Common Mistakes
 
 - Calling printf in an RT thread "just for debugging"
@@ -185,6 +205,7 @@ log_event(LOG_INFO, "event %d at %lld", id, ts);
 - Treating dropped logs as silent failures (they should be metrics)
 
 ---
+
 ## What to Take Away
 
 - Logging in RT is a *systems* problem, not a library config

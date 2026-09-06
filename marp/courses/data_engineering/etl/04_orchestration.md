@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Orchestration
 
 ---
+
 ## What This Chapter Covers
 
 - Why orchestration
@@ -19,6 +21,7 @@ audience:
 - Lineage
 
 ---
+
 ## Why Orchestration
 
 - Coordinate extract, load, transform
@@ -27,6 +30,7 @@ audience:
 - Auditable runs
 
 ---
+
 ## DAGs
 
 - Tasks form a graph
@@ -35,11 +39,13 @@ audience:
 - Failure stops downstream
 
 ---
+
 ## DAG Visualized
 
 ![dag_dependencies](svg/courses/data_engineering/etl/04_orchestration/dag_dependencies.svg)
 
 ---
+
 ## Static vs Dynamic DAGs
 
 - Static: shape known up front
@@ -48,6 +54,7 @@ audience:
 - Static covers most cases
 
 ---
+
 ## Scheduling
 
 - Cron for fixed times
@@ -56,11 +63,13 @@ audience:
 - Beware sensor backlogs
 
 ---
+
 ## Orchestrator Choices
 
 ![scheduler_choices](svg/courses/data_engineering/etl/04_orchestration/scheduler_choices.svg)
 
 ---
+
 ## SLAs
 
 - Latest acceptable arrival
@@ -69,6 +78,7 @@ audience:
 - Drive engineering priorities
 
 ---
+
 ## Retries
 
 - Per-task setting
@@ -77,6 +87,7 @@ audience:
 - Idempotency required
 
 ---
+
 ## Recovery
 
 - Restart from failed task
@@ -85,6 +96,7 @@ audience:
 - Or rerun from scratch
 
 ---
+
 ## Backfills
 
 - Run for past partitions
@@ -93,6 +105,7 @@ audience:
 - Track progress
 
 ---
+
 ## Parameterization
 
 - Date partitions
@@ -101,6 +114,7 @@ audience:
 - Avoid hardcoded values
 
 ---
+
 ## Lineage in Orchestrators
 
 - Capture task to dataset
@@ -109,6 +123,7 @@ audience:
 - Required for governance
 
 ---
+
 ## Cost Visibility
 
 - Tag jobs by team or dataset
@@ -117,6 +132,7 @@ audience:
 - Drive optimization
 
 ---
+
 ## Tooling Options
 
 - Workflow engines: Airflow, Prefect, Dagster
@@ -125,6 +141,7 @@ audience:
 - Pick by team and stack
 
 ---
+
 ## Common Orchestration Mistakes
 
 - Long monolithic tasks

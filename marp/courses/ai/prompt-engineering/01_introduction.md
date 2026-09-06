@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Prompt Engineering
 
 ---
+
 ## What This Chapter Covers
 
 - What prompt engineering is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What Prompt Engineering Is
 
 - Designing inputs that produce desired outputs
@@ -28,11 +31,13 @@ audience:
 - Empirical, iterative
 
 ---
+
 ## What Goes In a Prompt
 
 ![prompt_basics](svg/courses/ai/prompt-engineering/01_introduction/prompt_basics.svg)
 
 ---
+
 ## Why It Matters
 
 - Same model, different prompts: vastly different results
@@ -41,6 +46,7 @@ audience:
 - Faster than retraining
 
 ---
+
 ## LLMs in 60 Seconds
 
 - Trained on massive text
@@ -49,6 +55,7 @@ audience:
 - Stochastic: same prompt, different output
 
 ---
+
 ## Tokens
 
 - Smaller than words
@@ -57,6 +64,7 @@ audience:
 - Different tokeniser per model
 
 ---
+
 ## Context Window
 
 - Hard limit on input + output
@@ -65,6 +73,7 @@ audience:
 - Use wisely
 
 ---
+
 ## System, User, Assistant
 
 - system: behaviour and role
@@ -73,6 +82,7 @@ audience:
 - Standard chat format
 
 ---
+
 ## Sample Conversation
 
 - System: "You are a helpful coding assistant"
@@ -80,6 +90,7 @@ audience:
 - Assistant: code response
 
 ---
+
 ## Determinism
 
 - Temperature 0: most likely token
@@ -88,6 +99,7 @@ audience:
 - Creative: high temperature
 
 ---
+
 ## Output Variability
 
 - Same prompt may give different results
@@ -96,6 +108,7 @@ audience:
 - Beware of API drift
 
 ---
+
 ## Course Outline
 
 - Prompt patterns
@@ -106,6 +119,7 @@ audience:
 - Production patterns
 
 ---
+
 ## Common Introduction Mistakes
 
 - Treating LLMs as deterministic

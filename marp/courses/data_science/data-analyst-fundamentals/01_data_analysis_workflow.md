@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Data Analysis Workflow
 
 ---
+
 ## What This Chapter Covers
 
 - What data analysis actually is
@@ -21,16 +23,19 @@ audience:
 - Turning raw data into actionable insight
 
 ---
+
 ## Workflow
 
 ![workflow](svg/courses/data_science/data-analyst-fundamentals/01_data_analysis_workflow/workflow.svg)
 
 ---
+
 ## Core Analyst Skills
 
 ![analyst_skills](svg/courses/data_science/data-analyst-fundamentals/01_data_analysis_workflow/analyst_skills.svg)
 
 ---
+
 ## What Data Analysis Is
 
 - Looking at data to *answer a question* or *make a decision*
@@ -40,6 +45,7 @@ audience:
 - Tools matter; thinking matters more
 
 ---
+
 ## The Lifecycle
 
 - **Ask**: define the question
@@ -51,6 +57,7 @@ audience:
 - **Act**: trigger a decision
 
 ---
+
 ## Where Time Actually Goes
 
 - Cleaning: 60-70% (industry estimates)
@@ -60,6 +67,7 @@ audience:
 - "Do data analysis" sounds like analysing; it's mostly cleaning
 
 ---
+
 ## Four Kinds of Analysis
 
 - **Descriptive**: what happened? (sales last quarter)
@@ -69,6 +77,7 @@ audience:
 - Most work is descriptive and diagnostic
 
 ---
+
 ## Defining Questions
 
 - Vague: "how is the product doing?"
@@ -78,6 +87,7 @@ audience:
 - Bad questions waste days of work
 
 ---
+
 ## Framing Problems
 
 - Start with the *decision* the answer will support
@@ -87,6 +97,7 @@ audience:
 - Push back on requestors who can't articulate the decision
 
 ---
+
 ## Data Sources
 
 - **Operational databases**: live state, transactional
@@ -97,6 +108,7 @@ audience:
 - Most analysts touch all of these in a year
 
 ---
+
 ## Data Acquisition
 
 - Get the right grain: per-user, per-event, per-day
@@ -106,6 +118,7 @@ audience:
 - Cleanups overwrite history; raw is your safety net
 
 ---
+
 ## Raw to Insight: A Worked Example
 
 - Question: "Has feature X driven retention?"
@@ -117,6 +130,7 @@ audience:
 - Act: greenlight feature X investment, or not
 
 ---
+
 ## Reproducibility
 
 - Every analysis should be re-runnable
@@ -126,6 +140,7 @@ audience:
 - "I ran it last month and got a different number" = no reproducibility
 
 ---
+
 ## Documenting Analyses
 
 - A short README per analysis: question, sources, methods, findings
@@ -135,6 +150,7 @@ audience:
 - Documentation is not optional in data work
 
 ---
+
 ## Tools at a Glance
 
 - **SQL**: where the data lives; learn it well
@@ -145,6 +161,7 @@ audience:
 - **Git**: version control for queries and notebooks
 
 ---
+
 ## Career Path
 
 - Junior analyst: write queries, build dashboards, answer questions
@@ -154,6 +171,7 @@ audience:
 - All paths start with these fundamentals
 
 ---
+
 ## Common Mistakes
 
 - Analysing without a clear question

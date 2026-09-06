@@ -11,6 +11,7 @@ Key benefits:
 - **Maintainability** - easier to test and debug isolated components
 
 ---
+
 ## Delegation Principles
 
 Core principles that guide effective delegation:
@@ -21,6 +22,7 @@ Core principles that guide effective delegation:
 1. **Favor Composition over Inheritance** - build complex behavior by combining simpler components
 
 ---
+
 ## Types of Delegation
 
 C++ provides several mechanisms for delegation:
@@ -40,6 +42,7 @@ class Car : public Vehicle {  // Car is a Vehicle
 ```
 
 ---
+
 ## Composition
 
 Composition represents a "has-a" relationship where objects contain other objects
@@ -66,6 +69,7 @@ public:
 ```
 
 ---
+
 ## Advantages of Composition
 
 Composition offers several key advantages:
@@ -95,6 +99,7 @@ public:
 ```
 
 ---
+
 ## Composition Example: Graphics System
 
 ```cpp
@@ -128,6 +133,7 @@ public:
 ```
 
 ---
+
 ## Adapter Pattern
 
 The Adapter pattern allows incompatible interfaces to work together
@@ -162,6 +168,7 @@ public:
 ```
 
 ---
+
 ## Object Adapter vs Class Adapter
 
 **Object Adapter** (preferred in C++):
@@ -188,6 +195,7 @@ public:
 ```
 
 ---
+
 ## Adapter Pattern Example: File System
 
 ```cpp
@@ -222,6 +230,7 @@ public:
 ```
 
 ---
+
 ## Inheritance Basics
 
 Inheritance models "is-a" relationships:
@@ -255,6 +264,7 @@ public:
 ```
 
 ---
+
 ## Public vs Protected vs Private Inheritance
 
 ```cpp
@@ -287,6 +297,7 @@ class PrivateDerived : private Base {
 ```
 
 ---
+
 ## When to Use Each Inheritance Type
 
 **Public Inheritance** - "is-a" relationship:
@@ -313,6 +324,7 @@ public:
 ```
 
 ---
+
 ## Multiple Inheritance
 
 C++ allows a class to inherit from multiple base classes:
@@ -341,6 +353,7 @@ public:
 ```
 
 ---
+
 ## Multiple Inheritance Benefits
 
 Multiple inheritance can be powerful when used correctly:
@@ -374,16 +387,19 @@ public:
 ```
 
 ---
+
 ## The Diamond Problem: Overview
 
 Multiple inheritance can lead to ambiguity.
 
 ---
+
 ## The Diamond Problem
 
 ![the_diamond_problem](svg/courses/languages/c++/modern-c++-for-c-programmers/10_delegation/the_diamond_problem.svg)
 
 ---
+
 ## The Diamond Problem (cont.)
 
 ```cpp
@@ -402,6 +418,7 @@ class Derived : public Left, public Right {
 ```
 
 ---
+
 ## Resolving Diamond Problem
 
 Use scope resolution or virtual inheritance:
@@ -428,6 +445,7 @@ public:
 ```
 
 ---
+
 ## Virtual Inheritance
 
 Virtual inheritance ensures only one instance of base class:
@@ -458,6 +476,7 @@ public:
 ```
 
 ---
+
 ## Virtual Inheritance Constructor Rules
 
 With virtual inheritance, most derived class calls virtual base constructor:
@@ -486,6 +505,7 @@ public:
 ```
 
 ---
+
 ## Name Hiding in Inheritance
 
 Derived class names hide base class names:
@@ -512,6 +532,7 @@ void test() {
 ```
 
 ---
+
 ## Bringing Base Names into Scope
 
 Use `using` declarations to bring hidden names back:
@@ -541,6 +562,7 @@ void test() {
 ```
 
 ---
+
 ## Interface Classes
 
 Pure abstract classes define contracts:
@@ -566,6 +588,7 @@ class Shape : public IDrawable, public ISerializable {
 ```
 
 ---
+
 ## Interface Segregation Principle
 
 Keep interfaces small and focused:
@@ -605,6 +628,7 @@ class Robot : public IWorkable {
 ```
 
 ---
+
 ## Nested Classes
 
 Classes can be defined inside other classes:
@@ -635,6 +659,7 @@ public:
 ```
 
 ---
+
 ## Nested Class Access Rules
 
 Nested classes have special access privileges:
@@ -667,6 +692,7 @@ public:
 ```
 
 ---
+
 ## Pimpl Idiom with Nested Classes
 
 Use nested classes for implementation hiding:
@@ -704,6 +730,7 @@ void Widget::doSomething() { pImpl->doSomething(); }
 ```
 
 ---
+
 ## Friend Classes and Functions
 
 Friends can access private members:
@@ -736,6 +763,7 @@ void auditAccount(const BankAccount& account) {
 ```
 
 ---
+
 ## Policy-Based Design
 
 Use templates for compile-time delegation:
@@ -771,6 +799,7 @@ using ArrayPtr = SmartPointer<ArrayStorage>;
 ```
 
 ---
+
 ## Delegation vs Inheritance Guidelines
 
 **Use Composition When:**
@@ -786,6 +815,7 @@ using ArrayPtr = SmartPointer<ArrayStorage>;
 - You're extending existing functionality
 
 ---
+
 ## Mixin Pattern
 
 Mixins provide reusable functionality:
@@ -814,6 +844,7 @@ public:
 ```
 
 ---
+
 ## Mixin Pattern: Usage Example
 
 ```cpp
@@ -837,6 +868,7 @@ public:
 ```
 
 ---
+
 ## CRTP (Curiously Recurring Template Pattern)
 
 Static polymorphism through templates:
@@ -876,6 +908,7 @@ void useBase(Base<T>& obj) {
 ```
 
 ---
+
 ## Delegation Best Practices
 
 1. **Prefer composition over inheritance** for flexibility
@@ -887,6 +920,7 @@ void useBase(Base<T>& obj) {
 1. **Use RAII** for resource management in delegated objects
 
 ---
+
 ## Common Delegation Patterns Summary
 
 **Composition**: Object contains other objects
@@ -900,6 +934,7 @@ void useBase(Base<T>& obj) {
 **Mixins/CRTP**: Add functionality through inheritance
 
 ---
+
 ## Practical Example: Event System
 
 ```cpp
@@ -941,6 +976,7 @@ public:
 ```
 
 ---
+
 ## Performance Considerations
 
 **Virtual Function Calls:**
@@ -959,6 +995,7 @@ public:
 - Consider inlining for small, frequently called functions
 
 ---
+
 ## Testing Delegated Designs
 
 Delegation makes testing easier:

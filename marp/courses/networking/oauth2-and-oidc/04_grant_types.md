@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # OAuth2 Grant Types
 
 ---
+
 ## What This Chapter Covers
 
 - The full grant-type catalog
@@ -20,6 +22,7 @@ audience:
 - Choosing the right grant
 
 ---
+
 ## Grant Types Overview
 
 - Authorization Code (with PKCE) — the default
@@ -30,26 +33,31 @@ audience:
 - Resource Owner Password Credentials — deprecated
 
 ---
+
 ## Grant Selection Visualized
 
 ![grant_picker](svg/courses/networking/oauth2-and-oidc/04_grant_types/grant_picker.svg)
 
 ---
+
 ## Grants Overview
 
 ![grant_overview](svg/courses/networking/oauth2-and-oidc/04_grant_types/grant_overview.svg)
 
 ---
+
 ## Use Cases per Grant
 
 ![grant_use_cases](svg/courses/networking/oauth2-and-oidc/04_grant_types/grant_use_cases.svg)
 
 ---
+
 ## Grant Decision Tree
 
 ![grant_decision](svg/courses/networking/oauth2-and-oidc/04_grant_types/grant_decision.svg)
 
 ---
+
 ## Client Credentials Grant
 
 - For machine-to-machine (no user)
@@ -59,6 +67,7 @@ audience:
 - The right tool for backend service auth
 
 ---
+
 ## Client Credentials Request
 
 ```output
@@ -74,6 +83,7 @@ grant_type=client_credentials
 - Use for cron jobs, internal API calls, server-to-server
 
 ---
+
 ## When to Use Client Credentials
 
 - Service-to-service inside your platform
@@ -83,6 +93,7 @@ grant_type=client_credentials
 - Pair with mTLS at the network layer for defense in depth
 
 ---
+
 ## Device Authorization Grant
 
 - For devices without a browser or with limited input
@@ -92,6 +103,7 @@ grant_type=client_credentials
 - RFC 8628
 
 ---
+
 ## Device Flow Steps
 
 - Device requests a device code
@@ -101,6 +113,7 @@ grant_type=client_credentials
 - Device polls and eventually gets a token
 
 ---
+
 ## Device Flow Example
 
 ```output
@@ -116,6 +129,7 @@ verification_uri: https://example.com/device
 ```
 
 ---
+
 ## Refresh Token Grant
 
 - Exchange a refresh token for a new access token
@@ -125,6 +139,7 @@ verification_uri: https://example.com/device
 - Sometimes alongside Client Credentials
 
 ---
+
 ## Refresh Token Request
 
 ```output
@@ -139,6 +154,7 @@ grant_type=refresh_token
 - Old refresh token invalidated if rotation enabled
 
 ---
+
 ## Refresh Token Rotation
 
 - Each use of a refresh token returns a new one
@@ -148,6 +164,7 @@ grant_type=refresh_token
 - Especially valuable for SPAs and mobile
 
 ---
+
 ## Implicit Grant: Why Deprecated
 
 - Token returned directly in the redirect URL
@@ -157,6 +174,7 @@ grant_type=refresh_token
 - Replaced by Authorization Code + PKCE
 
 ---
+
 ## Implicit Grant Status
 
 - Removed from OAuth 2.1 draft
@@ -166,6 +184,7 @@ grant_type=refresh_token
 - Don't add it to new projects in 2026
 
 ---
+
 ## Resource-Owner-Password: Why Deprecated
 
 - Resource Owner Password Credentials
@@ -175,6 +194,7 @@ grant_type=refresh_token
 - Should not exist in modern systems
 
 ---
+
 ## When Resource-Owner-Password Was Acceptable
 
 - Migration from legacy systems
@@ -184,6 +204,7 @@ grant_type=refresh_token
 - OAuth 2.1 removes it
 
 ---
+
 ## SAML Bearer Assertion Grant
 
 - For migrating from SAML to OAuth2
@@ -193,6 +214,7 @@ grant_type=refresh_token
 - Niche but useful in enterprise
 
 ---
+
 ## JWT Bearer Assertion Grant
 
 - Trade a signed JWT for an OAuth2 token
@@ -202,6 +224,7 @@ grant_type=refresh_token
 - Strong cryptographic identity, no shared secrets
 
 ---
+
 ## Token Exchange Grant
 
 - RFC 8693
@@ -211,6 +234,7 @@ grant_type=refresh_token
 - Building block for advanced architectures
 
 ---
+
 ## Choosing a Grant
 
 - User logs in via browser → Authorization Code + PKCE
@@ -220,6 +244,7 @@ grant_type=refresh_token
 - Token refresh → Refresh Token
 
 ---
+
 ## Grant Type Decision Tree
 
 - Is there a user involved? No → Client Credentials
@@ -229,6 +254,7 @@ grant_type=refresh_token
 - Anything else: review carefully
 
 ---
+
 ## Anti-Patterns to Avoid
 
 - Using Resource-Owner-Password for "convenience"
@@ -238,6 +264,7 @@ grant_type=refresh_token
 - Skipping PKCE because the client is "confidential enough"
 
 ---
+
 ## Migration Path
 
 - Deprecate Implicit/Resource-Owner-Password by date
@@ -247,6 +274,7 @@ grant_type=refresh_token
 - Some flows may need re-architecting (BFF pattern)
 
 ---
+
 ## Multiple Grants Per Client
 
 - A client can have several grant types enabled
@@ -256,6 +284,7 @@ grant_type=refresh_token
 - Reduce attack surface
 
 ---
+
 ## Operational Concerns
 
 - Monitor failed token requests per grant
@@ -265,6 +294,7 @@ grant_type=refresh_token
 - Set tight rate limits on the token endpoint
 
 ---
+
 ## Summary
 
 - Authorization Code + PKCE: the modern default

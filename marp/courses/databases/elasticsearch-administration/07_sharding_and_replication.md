@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Sharding and Replication
 
 ---
+
 ## What This Chapter Covers
 
 - Shard allocation and cluster balancing
@@ -22,6 +24,7 @@ audience:
 - Shard sizing best practices
 
 ---
+
 ## Shards: The Unit of Distribution
 
 - An index is split into primary shards, each a self-contained Lucene index
@@ -38,6 +41,7 @@ PUT /metrics
 ```
 
 ---
+
 ## Shard Allocation and Balancing
 
 - The allocator decides which node holds each shard, primary and replica
@@ -56,6 +60,7 @@ PUT /_cluster/settings
 - Set `none` temporarily during a rolling restart to avoid needless rebalancing
 
 ---
+
 ## Disk-Based Allocation Watermarks
 
 - The allocator stops placing shards on nodes that are running low on disk
@@ -75,6 +80,7 @@ PUT /_cluster/settings
 - DBA note: monitor disk headroom; flood-stage read-only blocks indexing
 
 ---
+
 ## Replica Configuration
 
 - Replicas provide redundancy and serve read traffic in parallel with primaries
@@ -91,6 +97,7 @@ PUT /metrics/_settings
 - You can drop replicas to 0 during bulk load, then restore them
 
 ---
+
 ## Shard Allocation Filtering
 
 - Filter which nodes an index's shards may live on, using node attributes
@@ -107,6 +114,7 @@ PUT /logs-2026/_settings
 - Use `exclude._name` or `exclude._ip` to drain a node before decommissioning
 
 ---
+
 ## Draining a Node for Maintenance
 
 - Exclude a node so the allocator relocates its shards elsewhere
@@ -123,6 +131,7 @@ PUT /_cluster/settings
 - This avoids a red cluster compared to simply killing the node
 
 ---
+
 ## Forced Awareness
 
 - Allocation awareness spreads replicas across failure domains like racks or zones
@@ -147,6 +156,7 @@ PUT /_cluster/settings
 - This prevents one zone from holding both copies of a shard
 
 ---
+
 ## Shard Sizing Best Practices
 
 - Target roughly 10-50 GB per shard for most workloads
@@ -157,6 +167,7 @@ PUT /_cluster/settings
 - DBA rule: plan shard count up front — primaries cannot be changed in place
 
 ---
+
 ## Shrinking an Index
 
 - `_shrink` reduces primary shard count by merging shards into fewer, larger ones
@@ -177,6 +188,7 @@ POST /logs/_shrink/logs-small
 - Good for shrinking old, oversharded indices before moving them to cold storage
 
 ---
+
 ## Splitting an Index
 
 - `_split` increases primary shard count for an index that grew larger than planned
@@ -195,6 +207,7 @@ POST /logs/_split/logs-big
 - Use it when shards have grown well past the 50 GB guideline
 
 ---
+
 ## Reindex
 
 - `_reindex` copies documents from a source index to a destination index
@@ -213,6 +226,7 @@ POST /_reindex
 - Tune with `slices=auto` for parallelism and `requests_per_second` to throttle
 
 ---
+
 ## Remote Reindex
 
 - `_reindex` can pull from a remote cluster, useful for migrations and upgrades
@@ -233,6 +247,7 @@ POST /_reindex
 - Throttle remote reindex; it competes with the source cluster's resources
 
 ---
+
 ## Cross-Cluster Replication
 
 - CCR replicates indices from a leader cluster to follower clusters
@@ -242,6 +257,7 @@ POST /_reindex
 - CCR requires the appropriate license tier
 
 ---
+
 ## Configuring a Follower Index
 
 - Register the remote (leader) cluster, then create a follower index
@@ -264,6 +280,7 @@ POST /products-follower/_ccr/pause_follow
 ```
 
 ---
+
 ## Operational Summary
 
 - Choose primary shard count carefully; it is fixed for the life of the index

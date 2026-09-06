@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Federation
 
 ---
+
 ## What This Chapter Covers
 
 - Why federation
@@ -19,6 +21,7 @@ audience:
 - Migration paths
 
 ---
+
 ## Why Federation
 
 - Single GraphQL API across services
@@ -27,11 +30,13 @@ audience:
 - Avoid monolith
 
 ---
+
 ## Federation Topology
 
 ![federation_topology](svg/courses/networking/graphql/11_federation/federation_topology.svg)
 
 ---
+
 ## Subgraphs
 
 - Each service: a subgraph
@@ -39,6 +44,7 @@ audience:
 - Independent deploys
 
 ---
+
 ## Gateway
 
 - Composes subgraphs into one schema
@@ -46,6 +52,7 @@ audience:
 - Single endpoint to clients
 
 ---
+
 ## Entities
 
 - Types shared across subgraphs
@@ -53,6 +60,7 @@ audience:
 - Each subgraph extends with more fields
 
 ---
+
 ## Sample Subgraph A
 
 ```graphql
@@ -63,6 +71,7 @@ type User @key(fields: "id") {
 ```
 
 ---
+
 ## Sample Subgraph B
 
 ```graphql
@@ -76,6 +85,7 @@ extend type User @key(fields: "id") {
 - Resolved from B's data
 
 ---
+
 ## How Composition Works
 
 - Gateway plans query across subgraphs
@@ -83,6 +93,7 @@ extend type User @key(fields: "id") {
 - Stitches results
 
 ---
+
 ## Apollo Federation 2
 
 - Improved over v1
@@ -91,6 +102,7 @@ extend type User @key(fields: "id") {
 - Most production setups use it
 
 ---
+
 ## Federation vs Stitching
 
 - Stitching: ad-hoc, gateway maintained
@@ -98,6 +110,7 @@ extend type User @key(fields: "id") {
 - Federation is the modern approach
 
 ---
+
 ## Migration Paths
 
 - Start: single schema
@@ -106,6 +119,7 @@ extend type User @key(fields: "id") {
 - Iterate
 
 ---
+
 ## Operational Concerns
 
 - Schema registry: versioned, validated
@@ -113,6 +127,7 @@ extend type User @key(fields: "id") {
 - Deploy subgraphs independently
 
 ---
+
 ## Distributed Tracing
 
 - Track query across subgraphs
@@ -120,6 +135,7 @@ extend type User @key(fields: "id") {
 - Find which subgraph is slow
 
 ---
+
 ## Versioning
 
 - Subgraphs deploy independently
@@ -127,6 +143,7 @@ extend type User @key(fields: "id") {
 - Breaking changes blocked at registry
 
 ---
+
 ## When Federation Is Wrong
 
 - Small team, small schema
@@ -135,6 +152,7 @@ extend type User @key(fields: "id") {
 - Start monolithic, federate later
 
 ---
+
 ## Common Federation Mistakes
 
 - Federating too early

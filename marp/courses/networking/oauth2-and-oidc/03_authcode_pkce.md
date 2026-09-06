@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Authorization Code Flow with PKCE
 
 ---
+
 ## What This Chapter Covers
 
 - The Authorization Code flow step-by-step
@@ -20,6 +22,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## Why Authorization Code?
 
 - The most secure OAuth2 flow
@@ -29,11 +32,13 @@ audience:
 - The recommended default for almost all clients
 
 ---
+
 ## Authorization Code Flow Visualized
 
 ![flow](svg/courses/networking/oauth2-and-oidc/03_authcode_pkce/authcode_flow.svg)
 
 ---
+
 ## Step 1: Authorization Request
 
 ```output
@@ -51,6 +56,7 @@ GET /authorize
 - All parameters carried in the URL
 
 ---
+
 ## Step 2: User Consent
 
 - Auth server authenticates the user (login form, MFA)
@@ -59,6 +65,7 @@ GET /authorize
 - Decision is recorded; the user is sent back
 
 ---
+
 ## Step 3: Code Returned
 
 - Auth server redirects back to the client's `redirect_uri`
@@ -68,6 +75,7 @@ GET /authorize
 - The state is verified by the client
 
 ---
+
 ## Step 4: Token Exchange
 
 ```output
@@ -84,6 +92,7 @@ grant_type=authorization_code
 - Authenticated with client credentials and PKCE verifier
 
 ---
+
 ## Step 5: Tokens Received
 
 ```output
@@ -100,6 +109,7 @@ grant_type=authorization_code
 - The code is consumed and cannot be reused
 
 ---
+
 ## Step 6: Using the Access Token
 
 ```output
@@ -112,6 +122,7 @@ Authorization: Bearer eyJhbGciOi...
 - Token expires; client refreshes when needed
 
 ---
+
 ## Why Not Just Tokens in the Redirect?
 
 - The deprecated Implicit flow did this
@@ -121,6 +132,7 @@ Authorization: Bearer eyJhbGciOi...
 - Authorization Code with PKCE replaces Implicit entirely
 
 ---
+
 ## What Is PKCE?
 
 - Proof Key for Code Exchange
@@ -130,6 +142,7 @@ Authorization: Bearer eyJhbGciOi...
 - Designed for public clients but recommended for all
 
 ---
+
 ## Why PKCE?
 
 - Public clients (SPA, mobile) can't keep a secret
@@ -139,6 +152,7 @@ Authorization: Bearer eyJhbGciOi...
 - Cheap to implement; high security value
 
 ---
+
 ## How PKCE Works
 
 - Client generates a random `code_verifier`
@@ -148,11 +162,13 @@ Authorization: Bearer eyJhbGciOi...
 - Server hashes verifier and compares — must match
 
 ---
+
 ## PKCE Visualized
 
 ![pkce_flow](svg/courses/networking/oauth2-and-oidc/03_authcode_pkce/pkce_flow.svg)
 
 ---
+
 ## code_verifier Properties
 
 - Random string, 43-128 chars
@@ -162,6 +178,7 @@ Authorization: Bearer eyJhbGciOi...
 - Forgotten after use
 
 ---
+
 ## code_challenge_method
 
 - `S256` — SHA-256 hash, base64url-encoded (recommended)
@@ -170,6 +187,7 @@ Authorization: Bearer eyJhbGciOi...
 - Servers should reject plain unless legacy clients exist
 
 ---
+
 ## Implementing PKCE (Pseudocode)
 
 ```python
@@ -187,6 +205,7 @@ token = exchange_code(code, verifier)
 ```
 
 ---
+
 ## Storing the Verifier
 
 - Browser session: `sessionStorage`
@@ -196,6 +215,7 @@ token = exchange_code(code, verifier)
 - Don't log it
 
 ---
+
 ## State Parameter Reminder
 
 - PKCE doesn't replace `state`
@@ -205,6 +225,7 @@ token = exchange_code(code, verifier)
 - Yes, both — they protect against different attacks
 
 ---
+
 ## When to Use This Flow
 
 - Web apps with a backend (confidential client)
@@ -214,6 +235,7 @@ token = exchange_code(code, verifier)
 - Default for almost everything modern
 
 ---
+
 ## Refresh Tokens
 
 - Long-lived; used to get new access tokens
@@ -223,6 +245,7 @@ token = exchange_code(code, verifier)
 - Bind to client; refuse cross-client reuse
 
 ---
+
 ## Common Pitfalls
 
 - Using Implicit flow in 2026 (deprecated)
@@ -232,6 +255,7 @@ token = exchange_code(code, verifier)
 - Forgetting to validate state
 
 ---
+
 ## Browser-Only Considerations
 
 - SPAs should use the BFF (Backend For Frontend) pattern when possible
@@ -241,6 +265,7 @@ token = exchange_code(code, verifier)
 - Don't put tokens in localStorage casually
 
 ---
+
 ## Mobile-Specific
 
 - Use system browser, not embedded web view
@@ -250,6 +275,7 @@ token = exchange_code(code, verifier)
 - PKCE is mandatory
 
 ---
+
 ## Testing the Flow
 
 - Browser dev tools to inspect the redirect chain
@@ -259,6 +285,7 @@ token = exchange_code(code, verifier)
 - Confirm scopes match what was requested
 
 ---
+
 ## Summary
 
 - Authorization Code is the recommended flow

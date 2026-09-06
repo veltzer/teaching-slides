@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Neural Network Foundations
 
 ---
+
 ## What This Chapter Covers
 
 - Biological inspiration and the perceptron
@@ -21,6 +23,7 @@ audience:
 - Regularization techniques
 
 ---
+
 ## Why Neural Networks
 
 - Universal function approximators
@@ -29,6 +32,7 @@ audience:
 - State of the art in vision, speech, language
 
 ---
+
 ## Biological Inspiration
 
 - Brain has billions of neurons
@@ -37,6 +41,7 @@ audience:
 - Loose metaphor, not a literal model
 
 ---
+
 ## The Biological Neuron
 
 - Dendrites: receive signals
@@ -45,6 +50,7 @@ audience:
 - Synapse: weight on a connection
 
 ---
+
 ## The Artificial Neuron
 
 - Inputs x1, x2, ..., xn
@@ -53,6 +59,7 @@ audience:
 - Output: f(w.x + b)
 
 ---
+
 ## The Perceptron
 
 - Rosenblatt, 1958
@@ -61,6 +68,7 @@ audience:
 - Learns by adjusting weights on errors
 
 ---
+
 ## Perceptron Update Rule
 
 - Predict y_hat
@@ -69,6 +77,7 @@ audience:
 - Converges if data is linearly separable
 
 ---
+
 ## Limits of a Single Perceptron
 
 - Cannot solve XOR
@@ -77,6 +86,7 @@ audience:
 - Sparked the first AI winter
 
 ---
+
 ## Multi-Layer Networks Fix This
 
 - Stack neurons in layers
@@ -85,6 +95,7 @@ audience:
 - Backed by the universal approximation theorem
 
 ---
+
 ## Activation Functions
 
 - Inject non-linearity
@@ -93,6 +104,7 @@ audience:
 - Modern default: ReLU and variants
 
 ---
+
 ## Sigmoid
 
 - Squashes to (0, 1)
@@ -101,6 +113,7 @@ audience:
 - Used in output layers for probabilities
 
 ---
+
 ## Tanh
 
 - Squashes to (-1, 1)
@@ -109,6 +122,7 @@ audience:
 - Common in older RNNs
 
 ---
+
 ## ReLU
 
 - f(x) = max(0, x)
@@ -117,6 +131,7 @@ audience:
 - Default choice for hidden layers
 
 ---
+
 ## ReLU Pitfalls
 
 - Dying ReLU: neuron stuck at zero
@@ -125,6 +140,7 @@ audience:
 - Fix with variants
 
 ---
+
 ## Leaky ReLU and Friends
 
 - Leaky ReLU: small slope for negatives
@@ -133,6 +149,7 @@ audience:
 - GELU: Gaussian-weighted, used in transformers
 
 ---
+
 ## Softmax
 
 - Turns logits into probabilities
@@ -141,6 +158,7 @@ audience:
 - Pairs with cross-entropy loss
 
 ---
+
 ## Feedforward Network
 
 - Input layer
@@ -149,11 +167,13 @@ audience:
 - Information flows forward only
 
 ---
+
 ## Feedforward Network Diagram
 
 ![feedforward_network](svg/courses/machine_learning/deep-learning-fundamentals/01_neural_network_foundations/feedforward_network.svg)
 
 ---
+
 ## Depth vs Width
 
 - Depth: number of layers
@@ -162,6 +182,7 @@ audience:
 - Wider nets memorize more
 
 ---
+
 ## What Hidden Layers Learn
 
 - Early layers: simple patterns
@@ -170,6 +191,7 @@ audience:
 - Hierarchy emerges from the data
 
 ---
+
 ## Loss Functions
 
 - Measure prediction error
@@ -178,6 +200,7 @@ audience:
 - Same network, different loss, different behavior
 
 ---
+
 ## Mean Squared Error
 
 - For regression
@@ -186,6 +209,7 @@ audience:
 - Sensitive to outliers
 
 ---
+
 ## Mean Absolute Error
 
 - Average of absolute differences
@@ -194,6 +218,7 @@ audience:
 - Slower convergence sometimes
 
 ---
+
 ## Cross-Entropy
 
 - For classification
@@ -202,6 +227,7 @@ audience:
 - Heavy penalty for confident wrong answers
 
 ---
+
 ## Binary Cross-Entropy
 
 - For two-class problems
@@ -210,6 +236,7 @@ audience:
 - Special case for one logit
 
 ---
+
 ## Gradient Descent
 
 - Compute loss
@@ -218,11 +245,13 @@ audience:
 - Repeat until loss stops dropping
 
 ---
+
 ## Gradient Descent Visualized
 
 ![gradient_descent](svg/courses/machine_learning/deep-learning-fundamentals/01_neural_network_foundations/gradient_descent.svg)
 
 ---
+
 ## Learning Rate
 
 - Step size for each update
@@ -231,6 +260,7 @@ audience:
 - One of the most important hyperparameters
 
 ---
+
 ## Batch, Mini-Batch, Stochastic
 
 - Batch: full dataset per step
@@ -239,6 +269,7 @@ audience:
 - Mini-batch balances speed and stability
 
 ---
+
 ## Backpropagation
 
 - Chain rule applied layer by layer
@@ -247,11 +278,13 @@ audience:
 - Update weights with gradients
 
 ---
+
 ## Backpropagation Diagram
 
 ![backpropagation](svg/courses/machine_learning/deep-learning-fundamentals/01_neural_network_foundations/backpropagation.svg)
 
 ---
+
 ## Computing Gradients
 
 - For each weight, partial derivative of loss
@@ -260,6 +293,7 @@ audience:
 - Made deep learning practical
 
 ---
+
 ## Vanishing Gradients
 
 - Gradients shrink through many layers
@@ -268,6 +302,7 @@ audience:
 - ReLU and residuals help
 
 ---
+
 ## Exploding Gradients
 
 - Gradients grow without bound
@@ -276,6 +311,7 @@ audience:
 - Fix with clipping
 
 ---
+
 ## Optimizers
 
 - Plain SGD: simple, often enough
@@ -284,6 +320,7 @@ audience:
 - AdamW: Adam with proper weight decay
 
 ---
+
 ## Momentum
 
 - Adds a running average of past gradients
@@ -292,6 +329,7 @@ audience:
 - Typical value: 0.9
 
 ---
+
 ## Adam
 
 - Per-parameter adaptive learning rates
@@ -300,6 +338,7 @@ audience:
 - Beware: may generalize worse than SGD
 
 ---
+
 ## Weight Initialization
 
 - Random, not zero
@@ -308,6 +347,7 @@ audience:
 - He: for ReLU
 
 ---
+
 ## Overfitting
 
 - Train loss drops, test loss climbs
@@ -316,6 +356,7 @@ audience:
 - Fight with regularization
 
 ---
+
 ## Regularization Goals
 
 - Reduce gap between train and test
@@ -324,6 +365,7 @@ audience:
 - Often costs a bit of train accuracy
 
 ---
+
 ## L1 and L2 Regularization
 
 - Add a weight penalty to the loss
@@ -332,6 +374,7 @@ audience:
 - Tuned by a coefficient
 
 ---
+
 ## Dropout
 
 - Randomly zero out activations during training
@@ -340,11 +383,13 @@ audience:
 - Disabled at inference
 
 ---
+
 ## Dropout Visualized
 
 ![dropout](svg/courses/machine_learning/deep-learning-fundamentals/01_neural_network_foundations/dropout.svg)
 
 ---
+
 ## Batch Normalization
 
 - Normalize activations per batch
@@ -353,6 +398,7 @@ audience:
 - Acts as a mild regularizer
 
 ---
+
 ## Layer Normalization
 
 - Normalize across features, not batch
@@ -361,6 +407,7 @@ audience:
 - Common in modern architectures
 
 ---
+
 ## Early Stopping
 
 - Track validation loss
@@ -369,6 +416,7 @@ audience:
 - Save the best checkpoint
 
 ---
+
 ## Data Augmentation
 
 - Generate variants of training samples
@@ -377,6 +425,7 @@ audience:
 - A regularizer in disguise
 
 ---
+
 ## Bias and Variance
 
 - High bias: underfits
@@ -385,11 +434,13 @@ audience:
 - Deep nets favor high capacity plus regularization
 
 ---
+
 ## The Training Loop
 
 ![training loop](svg/courses/machine_learning/deep-learning-fundamentals/01_neural_network_foundations/training_loop.svg)
 
 ---
+
 ## A Training Recipe
 
 - Start with a known architecture
@@ -398,6 +449,7 @@ audience:
 - Tune learning rate first
 
 ---
+
 ## Diagnosing Training
 
 - Loss not decreasing: check learning rate
@@ -406,6 +458,7 @@ audience:
 - Loss diverging: clip or lower lr
 
 ---
+
 ## Summary
 
 - Neurons combine inputs with weights and an activation

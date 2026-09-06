@@ -11,6 +11,7 @@ audience:
   - audiences:developers
 
 ---
+
 # `Kubernetes` Schedulers
 
 Advanced Kubernetes Course - Day 1, Module 3
@@ -144,6 +145,7 @@ matchExpressions:
 ```
 
 ---
+
 ## Pod Affinity - Co-locate Pods: Example
 
 Place pods near related pods:
@@ -162,11 +164,13 @@ spec:
 ```
 
 ---
+
 ## Pod Affinity - Co-locate Pods
 
 ![pod_affinity_co_locate_pods](svg/courses/devops/advanced-kubernetes/03_schedulers/pod_affinity_co_locate_pods.svg)
 
 ---
+
 ## Pod Anti-Affinity - Spread Pods: Example
 
 Keep pods away from each other:
@@ -185,6 +189,7 @@ spec:
 ```
 
 ---
+
 ## Pod Anti-Affinity - Spread Pods
 
 ![pod_anti_affinity_spread_pods](svg/courses/devops/advanced-kubernetes/03_schedulers/pod_anti_affinity_spread_pods.svg)

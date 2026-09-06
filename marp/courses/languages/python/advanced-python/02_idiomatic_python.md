@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Idiomatic Python
 
 ## Overview

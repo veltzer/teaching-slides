@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # DataFrames and SQL
 
 ---
+
 ## What This Chapter Covers
 
 - DataFrames basics
@@ -19,6 +21,7 @@ audience:
 - Window functions
 
 ---
+
 ## What a DataFrame Is
 
 - Distributed table abstraction
@@ -27,11 +30,13 @@ audience:
 - Same API across languages
 
 ---
+
 ## Transform vs Action
 
 ![transform_action](svg/courses/data_engineering/spark/02_dataframes_and_sql/transform_action.svg)
 
 ---
+
 ## Reading Data
 
 - CSV, JSON, Parquet, Delta
@@ -40,6 +45,7 @@ audience:
 - Handle bad records explicitly
 
 ---
+
 ## Writing Data
 
 - Modes: append, overwrite, error
@@ -48,6 +54,7 @@ audience:
 - Compression chosen at write
 
 ---
+
 ## Selecting and Filtering
 
 - select, filter, where
@@ -56,6 +63,7 @@ audience:
 - Avoid Python-side logic in hot paths
 
 ---
+
 ## Joins
 
 - Inner, left, right, outer
@@ -64,11 +72,13 @@ audience:
 - Pick by data size
 
 ---
+
 ## Join Strategies
 
 ![join_strategies](svg/courses/data_engineering/spark/02_dataframes_and_sql/join_strategies.svg)
 
 ---
+
 ## Broadcast Join
 
 - Send small table to all executors
@@ -77,6 +87,7 @@ audience:
 - Watch driver memory
 
 ---
+
 ## Aggregations
 
 - groupBy
@@ -85,6 +96,7 @@ audience:
 - Watch shuffle cost
 
 ---
+
 ## Window Functions
 
 - Compute over related rows
@@ -93,6 +105,7 @@ audience:
 - Replace many self-joins
 
 ---
+
 ## SQL on Spark
 
 - Register DataFrame as temp view
@@ -101,6 +114,7 @@ audience:
 - Same Catalyst engine
 
 ---
+
 ## UDFs
 
 - Custom Python or Scala functions
@@ -109,6 +123,7 @@ audience:
 - Prefer built-ins when possible
 
 ---
+
 ## Catalyst Optimizer
 
 - Logical plan
@@ -117,6 +132,7 @@ audience:
 - Picks cheapest
 
 ---
+
 ## Adaptive Query Execution
 
 - Re-plans at runtime
@@ -125,6 +141,7 @@ audience:
 - On by default in modern Spark
 
 ---
+
 ## Common DataFrame Mistakes
 
 - Schema inference in production

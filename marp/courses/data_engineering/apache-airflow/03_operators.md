@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Operators
 
 ---
+
 ## What This Chapter Covers
 
 - What operators are
@@ -20,6 +22,7 @@ audience:
 - Hooks vs operators
 
 ---
+
 ## What An Operator Is
 
 - A class representing a task
@@ -27,11 +30,13 @@ audience:
 - Each operator is one task type
 
 ---
+
 ## Operator Kinds
 
 ![operator_kinds](svg/courses/data_engineering/apache-airflow/03_operators/operator_kinds.svg)
 
 ---
+
 ## PythonOperator
 
 ```python
@@ -46,6 +51,7 @@ PythonOperator(
 - Most common for custom logic
 
 ---
+
 ## BashOperator
 
 ```python
@@ -59,6 +65,7 @@ BashOperator(
 - Ad-hoc operations
 
 ---
+
 ## Database Operators
 
 - PostgresOperator: run Postgres SQL
@@ -68,6 +75,7 @@ BashOperator(
 - Cleaner than custom Python
 
 ---
+
 ## File Transfer Operators
 
 - S3CopyObjectOperator
@@ -76,6 +84,7 @@ BashOperator(
 - Common ETL patterns
 
 ---
+
 ## Provider Packages
 
 - Apache Airflow Providers: per-service packages
@@ -84,6 +93,7 @@ BashOperator(
 - Hundreds available
 
 ---
+
 ## Hooks
 
 - Lower-level: connect to a service
@@ -92,6 +102,7 @@ BashOperator(
 - PostgresHook, S3Hook, etc.
 
 ---
+
 ## Custom Operators
 
 ```python
@@ -106,6 +117,7 @@ class MyOperator(BaseOperator):
 - For repeated patterns
 
 ---
+
 ## Custom Hooks
 
 - Subclass BaseHook
@@ -113,6 +125,7 @@ class MyOperator(BaseOperator):
 - Use in operators
 
 ---
+
 ## Operator Templating
 
 - Many parameters Jinja-templated
@@ -120,6 +133,7 @@ class MyOperator(BaseOperator):
 - Templates rendered at run time
 
 ---
+
 ## Templated Fields
 
 - Operators declare which fields are templated
@@ -127,6 +141,7 @@ class MyOperator(BaseOperator):
 - Custom operators: declare your own
 
 ---
+
 ## TaskFlow Decorators
 
 - `@task` works with most operators
@@ -135,6 +150,7 @@ class MyOperator(BaseOperator):
 - More Pythonic than constructing operators
 
 ---
+
 ## Common Operator Mistakes
 
 - Building shell pipelines in BashOperator (use Python)
@@ -144,6 +160,7 @@ class MyOperator(BaseOperator):
 - Not checking provider docs for existing operators
 
 ---
+
 ## Common Operator Examples
 
 ![operator_examples](svg/courses/data_engineering/apache-airflow/03_operators/operator_examples.svg)

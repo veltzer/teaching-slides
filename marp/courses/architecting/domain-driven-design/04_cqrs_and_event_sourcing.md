@@ -10,19 +10,23 @@ audience:
   - audiences:developers
 
 ---
+
 # CQRS and Event Sourcing
 
 ---
+
 ## CQRS
 
 ![cqrs](svg/courses/architecting/domain-driven-design/04_cqrs_and_event_sourcing/cqrs.svg)
 
 ---
+
 ## CQRS + Event Sourcing
 
 ![cqrs_es](svg/courses/architecting/domain-driven-design/04_cqrs_and_event_sourcing/cqrs_es.svg)
 
 ---
+
 ## Why DDD Pairs Well With CQRS and ES
 
 - DDD aggregates emit domain events naturally
@@ -31,6 +35,7 @@ audience:
 - Together: the write side preserves rich domain logic; the read side serves queries efficiently
 
 ---
+
 ## CQRS in One Slide
 
 - Command Query Responsibility Segregation
@@ -39,6 +44,7 @@ audience:
 - The two models share a domain but not a structure
 
 ---
+
 ## Event Sourcing in One Slide
 
 - Aggregate state is persisted as a sequence of immutable events
@@ -47,11 +53,13 @@ audience:
 - Events are the source of truth
 
 ---
+
 ## ES End to End
 
 ![event_sourcing_flow](svg/courses/architecting/domain-driven-design/04_cqrs_and_event_sourcing/event_sourcing_flow.svg)
 
 ---
+
 ## CQRS Without ES
 
 - Possible: write model in a normal database, read models updated separately
@@ -59,6 +67,7 @@ audience:
 - Many production systems use this combination
 
 ---
+
 ## ES Without CQRS
 
 - Possible: aggregates are event-sourced; reads also go through aggregates
@@ -66,6 +75,7 @@ audience:
 - Usually ES leads naturally to CQRS
 
 ---
+
 ## Both Together
 
 - The natural pairing
@@ -74,6 +84,7 @@ audience:
 - Most modern DDD implementations use this combination
 
 ---
+
 ## Aggregate Implementation With ES
 
 ```python
@@ -95,6 +106,7 @@ class Order:
 ```
 
 ---
+
 ## Replay Pattern
 
 - Load events from the store
@@ -103,6 +115,7 @@ class Order:
 - Same code as forward execution; no special "load" logic
 
 ---
+
 ## Read Models From Events
 
 - A subscriber tails the event log
@@ -111,6 +124,7 @@ class Order:
 - The same event can feed many read models
 
 ---
+
 ## Read Model Examples
 
 - `order_summary`: id, total, status, last_updated — for the order screen
@@ -119,6 +133,7 @@ class Order:
 - All built from the same `Order` events
 
 ---
+
 ## Eventual Consistency
 
 - The read model lags the write model by milliseconds-seconds
@@ -127,6 +142,7 @@ class Order:
 - Communicate this to users in the UX
 
 ---
+
 ## DDD Aggregates as ES Aggregates
 
 - Same concept, different persistence strategy
@@ -135,6 +151,7 @@ class Order:
 - Replay = many apply calls; no decide calls
 
 ---
+
 ## Domain Events as the Source of Truth
 
 - The events are auditable, replayable, durable
@@ -143,6 +160,7 @@ class Order:
 - Trade complexity for power
 
 ---
+
 ## Snapshot Optimization
 
 - Long event streams → slow loads
@@ -151,6 +169,7 @@ class Order:
 - See the dedicated CQRS / Event Sourcing course
 
 ---
+
 ## When to Use Together
 
 - Audit and history are first-class requirements
@@ -159,6 +178,7 @@ class Order:
 - The team has the appetite for the operational cost
 
 ---
+
 ## When Not to Use Together
 
 - Simple CRUD without audit needs
@@ -167,6 +187,7 @@ class Order:
 - "Because Netflix uses it" — not a reason
 
 ---
+
 ## Where to Go Deeper
 
 - The dedicated **CQRS and Event Sourcing** course covers:
@@ -176,6 +197,7 @@ class Order:
     - Testing and operating event-sourced systems
 
 ---
+
 ## Common Pitfalls
 
 - Treating aggregate state as the source of truth instead of events
@@ -184,6 +206,7 @@ class Order:
 - Over-using events: not every change needs an event
 
 ---
+
 ## Summary
 
 - CQRS and ES are independent; together they're powerful

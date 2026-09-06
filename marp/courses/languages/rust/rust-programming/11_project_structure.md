@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Project Structure and Tools
 
 ## Chapter 10: Organizing and Managing Rust Projects
@@ -299,6 +300,7 @@ ar = "x86_64-w64-mingw32-ar"
 ```
 
 ---
+
 ## Project Automation
 
 ```bash
@@ -342,6 +344,7 @@ criterion_main!(benches);
 ```
 
 ---
+
 ## Profiling Tools
 
 ```bash

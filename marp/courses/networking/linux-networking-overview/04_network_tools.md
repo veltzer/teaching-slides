@@ -11,6 +11,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Linux Network Command Line Tools
 ## Chapter 4: System Administration and Monitoring
 
@@ -102,6 +103,7 @@ ss -p          # Show processes
 ```
 
 ---
+
 ## Low-level Tools
 
 <div class="columns">
@@ -344,6 +346,7 @@ tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 \
 </div>
 
 ---
+
 ## Debugging Tools
 
 ![debugging_tools](svg/courses/networking/linux-networking-overview/04_network_tools/debugging_tools.svg)

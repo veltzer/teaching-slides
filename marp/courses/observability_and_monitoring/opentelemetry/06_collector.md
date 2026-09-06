@@ -7,14 +7,17 @@ audience:
   - audiences:devops
 
 ---
+
 # Collector
 
 ---
+
 ## Pipeline
 
 ![collector_pipeline](svg/courses/observability_and_monitoring/opentelemetry/06_collector/collector_pipeline.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What the collector is
@@ -24,6 +27,7 @@ audience:
 - Configuration
 
 ---
+
 ## What the Collector Is
 
 - Vendor-agnostic agent and gateway
@@ -32,6 +36,7 @@ audience:
 - Written in Go
 
 ---
+
 ## Why Use It
 
 - Apps export OTLP locally
@@ -40,6 +45,7 @@ audience:
 - Add processing centrally
 
 ---
+
 ## Components
 
 - Receivers: ingest
@@ -48,11 +54,13 @@ audience:
 - Combined into pipelines
 
 ---
+
 ## Component Roles
 
 ![collector_components](svg/courses/observability_and_monitoring/opentelemetry/06_collector/collector_components.svg)
 
 ---
+
 ## Receivers
 
 - otlp: native protocol
@@ -62,6 +70,7 @@ audience:
 - many more
 
 ---
+
 ## Processors
 
 - batch: efficient export
@@ -71,6 +80,7 @@ audience:
 - transform: rewrite
 
 ---
+
 ## Exporters
 
 - otlp: forward to another collector
@@ -79,6 +89,7 @@ audience:
 - Multiple in parallel
 
 ---
+
 ## Pipelines
 
 ```yaml
@@ -94,6 +105,7 @@ service:
 - Compose receivers, processors, exporters
 
 ---
+
 ## Agent Pattern
 
 - Collector per host or pod sidecar
@@ -101,6 +113,7 @@ service:
 - Cheap, low-latency
 
 ---
+
 ## Gateway Pattern
 
 - Central collector cluster
@@ -109,6 +122,7 @@ service:
 - Standard production setup
 
 ---
+
 ## Both Together
 
 - Agent for collection
@@ -116,6 +130,7 @@ service:
 - Most production deployments
 
 ---
+
 ## Sample Configuration
 
 - receivers.otlp: receive on default port
@@ -124,6 +139,7 @@ service:
 - service.pipelines: stitch together
 
 ---
+
 ## Scaling
 
 - Horizontal: multiple gateways behind LB
@@ -131,6 +147,7 @@ service:
 - Some processors need single instance
 
 ---
+
 ## Resource Limits
 
 - memory_limiter processor
@@ -138,6 +155,7 @@ service:
 - Protects from death spirals
 
 ---
+
 ## Hot Reload
 
 - SIGHUP to reload config
@@ -145,6 +163,7 @@ service:
 - Avoid restarts in production
 
 ---
+
 ## Common Collector Mistakes
 
 - No memory_limiter; OOM under load

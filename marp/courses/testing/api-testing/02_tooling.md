@@ -7,9 +7,11 @@ audience:
   - audiences:qa
 
 ---
+
 # Tooling
 
 ---
+
 ## What This Chapter Covers
 
 - Postman ecosystem
@@ -19,11 +21,13 @@ audience:
 - Choosing tools
 
 ---
+
 ## Tool Landscape
 
 ![tool_landscape](svg/courses/testing/api-testing/02_tooling/tool_landscape.svg)
 
 ---
+
 ## Postman
 
 - GUI client + scripting
@@ -33,6 +37,7 @@ audience:
 - Standard for manual + light automation
 
 ---
+
 ## Postman Collections
 
 - Group of related requests
@@ -41,6 +46,7 @@ audience:
 - Shareable
 
 ---
+
 ## Newman
 
 - CLI runner for Postman collections
@@ -48,11 +54,13 @@ audience:
 - HTML / JUnit reports
 
 ---
+
 ## From Manual to Automated
 
 ![tool_workflow](svg/courses/testing/api-testing/02_tooling/tool_workflow.svg)
 
 ---
+
 ## Insomnia
 
 - Postman alternative
@@ -60,6 +68,7 @@ audience:
 - Built-in plugin model
 
 ---
+
 ## Code-First: REST-assured
 
 - Java DSL for HTTP tests
@@ -67,6 +76,7 @@ audience:
 - Use existing test runner (JUnit)
 
 ---
+
 ## Code-First: supertest
 
 - Node.js
@@ -74,6 +84,7 @@ audience:
 - Pairs with Mocha / Jest
 
 ---
+
 ## Code-First: requests + pytest
 
 - Python ecosystem
@@ -81,6 +92,7 @@ audience:
 - Test infra reuses stdlib
 
 ---
+
 ## Spec-Driven: Schemathesis
 
 - Generates tests from OpenAPI
@@ -88,6 +100,7 @@ audience:
 - Finds: schema violations, panics, edge cases
 
 ---
+
 ## Spec-Driven: Dredd
 
 - Tests API against spec
@@ -95,6 +108,7 @@ audience:
 - Quick contract check
 
 ---
+
 ## Karate
 
 - Single-language DSL across HTTP, gRPC, web
@@ -102,6 +116,7 @@ audience:
 - Strong for QA teams
 
 ---
+
 ## Mocking
 
 - WireMock: programmable HTTP mocks
@@ -109,6 +124,7 @@ audience:
 - Prism: from OpenAPI
 
 ---
+
 ## Service Virtualisation
 
 - Stand in for unavailable services
@@ -116,6 +132,7 @@ audience:
 - Useful when real backend is slow / costly
 
 ---
+
 ## Performance Tools
 
 - k6: scripts, modern
@@ -123,6 +140,7 @@ audience:
 - Locust: Python-based, distributed
 
 ---
+
 ## Choosing
 
 - Manual + dev: Postman / Insomnia
@@ -131,6 +149,7 @@ audience:
 - One tool can do it all; usually a mix
 
 ---
+
 ## Common Tooling Mistakes
 
 - Postman without source-controlled collections

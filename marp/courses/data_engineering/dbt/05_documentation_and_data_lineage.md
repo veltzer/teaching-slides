@@ -8,14 +8,17 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Documentation and Data Lineage
 
 ---
+
 ## Lineage Graph
 
 ![lineage_graph](svg/courses/data_engineering/dbt/05_documentation_and_data_lineage/lineage_graph.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Model and column descriptions
@@ -26,6 +29,7 @@ audience:
 - Sharing with stakeholders
 
 ---
+
 ## Why Document
 
 - Analysts need to know what columns mean
@@ -34,11 +38,13 @@ audience:
 - Documentation drift = trust loss
 
 ---
+
 ## Documentation Artifacts
 
 ![doc_artifacts](svg/courses/data_engineering/dbt/05_documentation_and_data_lineage/doc_artifacts.svg)
 
 ---
+
 ## Model Descriptions
 
 ```yaml
@@ -53,6 +59,7 @@ models:
 - YAML alongside model file
 
 ---
+
 ## Doc Blocks
 
 ```jinja
@@ -71,6 +78,7 @@ Status of the order. Possible values:
 - For long descriptions
 
 ---
+
 ## Referencing Doc Blocks
 
 ```yaml
@@ -81,6 +89,7 @@ Status of the order. Possible values:
 - Multiple models can reference
 
 ---
+
 ## dbt docs
 
 ```bash
@@ -93,6 +102,7 @@ dbt docs serve
 - Host at /docs URL
 
 ---
+
 ## Lineage Graph
 
 - Visualises model dependencies
@@ -101,6 +111,7 @@ dbt docs serve
 - Built-in to dbt docs
 
 ---
+
 ## Exposures
 
 ```yaml
@@ -119,6 +130,7 @@ exposures:
 - "Where does this data go?"
 
 ---
+
 ## Sources
 
 ```yaml
@@ -137,6 +149,7 @@ sources:
 - The whole graph is documented
 
 ---
+
 ## Sharing With Stakeholders
 
 - Host dbt docs
@@ -145,6 +158,7 @@ sources:
 - Documentation answers both
 
 ---
+
 ## Catalogue Tools
 
 - Atlan, Alation, DataHub
@@ -153,6 +167,7 @@ sources:
 - For: many teams, many sources
 
 ---
+
 ## Documentation As Code
 
 - All docs in YAML / Markdown
@@ -161,6 +176,7 @@ sources:
 - No drift
 
 ---
+
 ## Search
 
 - dbt docs has basic search
@@ -168,6 +184,7 @@ sources:
 - Find: "where is revenue calculated?"
 
 ---
+
 ## Common Documentation Mistakes
 
 - Empty descriptions (auto-generated stubs)

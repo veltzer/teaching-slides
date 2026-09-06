@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # API Design Best Practices
 
 ---
+
 ## What This Chapter Covers
 
 - Resource modelling
@@ -23,11 +25,13 @@ audience:
 - HATEOAS
 
 ---
+
 ## Four Design Principles
 
 ![design_principles](svg/courses/architecting/api-first-development/03_api_design_best_practices/design_principles.svg)
 
 ---
+
 ## Resource Modelling
 
 - Nouns, not verbs: `/users`, `/orders`, not `/getUsers`
@@ -37,6 +41,7 @@ audience:
 - Consistent across the API
 
 ---
+
 ## HTTP Method Semantics
 
 - **GET**: read, idempotent, safe
@@ -47,6 +52,7 @@ audience:
 - Match semantics, not just verbs
 
 ---
+
 ## Naming Conventions
 
 - Plural nouns for collections: `/users`, `/orders`
@@ -56,6 +62,7 @@ audience:
 - Avoid: trailing slashes inconsistently
 
 ---
+
 ## Status Codes
 
 - 2xx: success (200 OK, 201 Created, 204 No Content)
@@ -65,6 +72,7 @@ audience:
 - Pick the right one; don't return 200 with `{success: false}`
 
 ---
+
 ## Error Response Format (RFC 7807)
 
 ```json
@@ -83,6 +91,7 @@ audience:
 - Detail is human-readable; type is machine-readable
 
 ---
+
 ## Pagination: Offset
 
 ```http
@@ -95,6 +104,7 @@ GET /orders?offset=20&limit=10
 - Fine for small data sets; bad for large
 
 ---
+
 ## Pagination: Cursor
 
 ```http
@@ -108,6 +118,7 @@ GET /orders?cursor=eyJpZCI6MTIz&limit=10
 - Slightly more complex client code
 
 ---
+
 ## Pagination: Keyset
 
 ```http
@@ -120,6 +131,7 @@ GET /orders?after_id=123&limit=10
 - Best when results are stable and ordered
 
 ---
+
 ## Filtering, Sorting, Field Selection
 
 - Filtering: `GET /users?status=active&role=admin`
@@ -129,6 +141,7 @@ GET /orders?after_id=123&limit=10
 - Don't auto-allow arbitrary filters (DB injection risk)
 
 ---
+
 ## Idempotency
 
 - The same call produces the same result
@@ -138,6 +151,7 @@ GET /orders?after_id=123&limit=10
 - Server dedupes by the key
 
 ---
+
 ## Idempotency Keys In Practice
 
 ```http
@@ -154,6 +168,7 @@ Content-Type: application/json
 - Critical for: payments, order creation, anything with side effects
 
 ---
+
 ## HATEOAS
 
 - "Hypermedia As The Engine Of Application State"
@@ -163,6 +178,7 @@ Content-Type: application/json
 - Add when consumers genuinely benefit; skip when they don't
 
 ---
+
 ## HATEOAS Example
 
 ```json
@@ -183,6 +199,7 @@ Content-Type: application/json
 - Levin Richardson Maturity Model level 3
 
 ---
+
 ## Versioning In Brief
 
 - `/v1/users`, `/v2/users`: URL versioning (most common)
@@ -192,6 +209,7 @@ Content-Type: application/json
 - Covered in detail later
 
 ---
+
 ## Common Design Mistakes
 
 - Verbs in URLs (`/getUsers`, `/createOrder`)
@@ -201,6 +219,7 @@ Content-Type: application/json
 - "Login" as a POST without idempotency considerations
 
 ---
+
 ## Error Strategy
 
 ![error_strategy](svg/courses/architecting/api-first-development/03_api_design_best_practices/error_strategy.svg)

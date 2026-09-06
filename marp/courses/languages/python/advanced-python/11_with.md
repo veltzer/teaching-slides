@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Python's `with` Statement
 
 ## Overview

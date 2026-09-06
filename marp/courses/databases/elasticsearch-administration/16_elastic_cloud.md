@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Elastic Cloud
 
 ---
+
 ## What This Chapter Covers
 
 - Cloud deployment options: hosted, ECE, and ECK
@@ -22,6 +24,7 @@ audience:
 - Managed vs self-managed responsibilities
 
 ---
+
 ## Why Managed Elasticsearch
 
 - Offloads provisioning, patching, and upgrades to Elastic
@@ -32,6 +35,7 @@ audience:
 - Still your job: data modeling, queries, and capacity planning
 
 ---
+
 ## Deployment Option: Elastic Cloud Hosted
 
 - Fully managed service run by Elastic on AWS, GCP, or Azure
@@ -41,6 +45,7 @@ audience:
 - Lowest operational burden of the three options
 
 ---
+
 ## Deployment Option: ECE
 
 - Elastic Cloud Enterprise runs the platform on your own hardware
@@ -50,6 +55,7 @@ audience:
 - More control than hosted, more effort than hosted
 
 ---
+
 ## Deployment Option: ECK
 
 - Elastic Cloud on Kubernetes is an operator for K8s clusters
@@ -71,6 +77,7 @@ spec:
 ```
 
 ---
+
 ## Deployment Templates
 
 - Templates predefine a topology for a workload type
@@ -80,6 +87,7 @@ spec:
 - Reduce guesswork when standing up a new deployment
 
 ---
+
 ## Hardware Profiles
 
 - Hardware profiles map nodes to optimized instance types
@@ -89,6 +97,7 @@ spec:
 - Choose per data tier to match the access pattern
 
 ---
+
 ## Data Tiers in the Cloud
 
 - Hot tier: fast storage for recent, frequently queried data
@@ -102,6 +111,7 @@ GET _cat/nodes?v&h=name,node.role,disk.total
 ```
 
 ---
+
 ## Scaling Deployments
 
 - Resize tiers by changing the RAM and storage per zone
@@ -111,6 +121,7 @@ GET _cat/nodes?v&h=name,node.role,disk.total
 - Plan capacity from indexing rate and retention requirements
 
 ---
+
 ## Autoscaling
 
 - Deployments can grow automatically as data grows
@@ -128,6 +139,7 @@ PUT _autoscaling/policy/my_policy
 ```
 
 ---
+
 ## Cloud Monitoring
 
 - Send monitoring data to a separate monitoring deployment
@@ -137,6 +149,7 @@ PUT _autoscaling/policy/my_policy
 - Configure alerting on health and resource thresholds
 
 ---
+
 ## Cloud Security: Built-In TLS
 
 - TLS is enabled by default for transport and HTTP layers
@@ -146,6 +159,7 @@ PUT _autoscaling/policy/my_policy
 - Security is on by default, not an afterthought
 
 ---
+
 ## Cloud Security: Traffic Filters
 
 - Restrict which networks can reach your deployment
@@ -155,6 +169,7 @@ PUT _autoscaling/policy/my_policy
 - Combine with authentication for defense in depth
 
 ---
+
 ## Cloud Security: SSO
 
 - Integrate with corporate identity via SAML or OIDC
@@ -170,6 +185,7 @@ xpack.security.authc.realms.saml.corp:
 ```
 
 ---
+
 ## Snapshot Management: Managed Repos
 
 - Hosted deployments include a managed snapshot repository
@@ -184,6 +200,7 @@ GET _snapshot/found-snapshots/_all
 ```
 
 ---
+
 ## Migration: Snapshot and Restore
 
 - Snapshot the source cluster to a shared repository
@@ -199,6 +216,7 @@ POST _snapshot/my_repo/migrate_snap/_restore
 ```
 
 ---
+
 ## Migration: Remote Reindex
 
 - Reindex directly from the source cluster over HTTP
@@ -219,6 +237,7 @@ POST _reindex
 ```
 
 ---
+
 ## Migration: Cross-Cluster Replication
 
 - CCR replicates indices from source to the cloud cluster
@@ -233,6 +252,7 @@ PUT logs-2026/_ccr/follow
 ```
 
 ---
+
 ## Managed vs Self-Managed Responsibilities
 
 - Managed: Elastic owns infra, patching, TLS, and snapshots
@@ -243,6 +263,7 @@ PUT logs-2026/_ccr/follow
 - Choose based on team size, control needs, and compliance
 
 ---
+
 ## Elastic Cloud Checklist
 
 - Pick the deployment model that matches your control needs

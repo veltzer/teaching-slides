@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Scala Refresher for Apache Spark
 
 ---
+
 ## Course Overview
 
 1. Basic Scala Syntax

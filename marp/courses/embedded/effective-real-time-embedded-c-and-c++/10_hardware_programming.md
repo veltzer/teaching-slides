@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Hardware Programming Model
 
 ---

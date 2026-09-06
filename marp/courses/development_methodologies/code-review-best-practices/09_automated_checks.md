@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Automated Checks
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![automation_layers](svg/courses/development_methodologies/code-review-best-practices/09_automated_checks/automation_layers.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Linters and formatters
@@ -27,6 +29,7 @@ audience:
 - The right division of labour: bots and humans
 
 ---
+
 ## Why Automate
 
 - Robots catch rote issues fast
@@ -36,11 +39,13 @@ audience:
 - Free up your senior engineers
 
 ---
+
 ## CI Checks
 
 ![ci_checks](svg/courses/development_methodologies/code-review-best-practices/09_automated_checks/ci_checks.svg)
 
 ---
+
 ## Linters
 
 - Tools that flag suspicious patterns
@@ -50,6 +55,7 @@ audience:
 - Configurable to your team's standards
 
 ---
+
 ## Formatters
 
 - Auto-format code to a standard
@@ -59,6 +65,7 @@ audience:
 - "Done" if formatter is clean; no human review needed for style
 
 ---
+
 ## Pre-Commit Hooks
 
 ```yaml
@@ -78,6 +85,7 @@ repos:
 - Faster feedback loop
 
 ---
+
 ## Static Analysis
 
 - Deeper than linting; analyses code paths and types
@@ -87,6 +95,7 @@ repos:
 - Good for catching issues that lint doesn't see
 
 ---
+
 ## Type Checkers
 
 - mypy, pyright (Python); TypeScript; Flow (JS); Sorbet (Ruby)
@@ -96,6 +105,7 @@ repos:
 - Modern teams treat type errors like compile errors
 
 ---
+
 ## Security Scanning
 
 - **SAST** (Static): scans source code for vulnerabilities
@@ -105,6 +115,7 @@ repos:
 - All can run in CI
 
 ---
+
 ## Common Security Tools
 
 - Snyk: deps + container scanning
@@ -114,6 +125,7 @@ repos:
 - TruffleHog: secret scanning
 
 ---
+
 ## CI Pipelines
 
 - Build, test, lint, scan
@@ -123,6 +135,7 @@ repos:
 - Slow pipelines lead to "merge anyway" pressure
 
 ---
+
 ## What CI Should Block
 
 - Failing tests
@@ -133,6 +146,7 @@ repos:
 - Build failures (obviously)
 
 ---
+
 ## What CI Should Warn
 
 - New low-severity findings
@@ -142,6 +156,7 @@ repos:
 - Warnings keep visibility without blocking
 
 ---
+
 ## Review Bots
 
 - Comment on PRs automatically
@@ -151,6 +166,7 @@ repos:
 - Pull-request-bot review systems (CodeRabbit, Greptile) exist
 
 ---
+
 ## Bot Configuration
 
 - Severity thresholds (only comment on important issues)
@@ -160,6 +176,7 @@ repos:
 - Bots well-tuned save hours; bots ignored waste them
 
 ---
+
 ## Auto-Merge
 
 - PRs merge automatically when conditions met
@@ -169,6 +186,7 @@ repos:
 - Configure carefully; auto-merging the wrong thing is bad
 
 ---
+
 ## The Limits of Automation
 
 - Bots don't catch design issues
@@ -178,6 +196,7 @@ repos:
 - Use them for what they're good at; humans for the rest
 
 ---
+
 ## Common Mistakes
 
 - Disabling failing checks instead of fixing the issues

@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # C# Scripting Fundamentals
 
 ---
+
 ## C# Building Blocks
 
 ![csharp_basics](svg/courses/unity/introduction-to-game-development-with-unity/03_csharp_scripting_fundamentals/csharp_basics.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why Unity uses C#
@@ -25,6 +28,7 @@ audience:
 - Classes and how Unity scripts fit into the type system
 
 ---
+
 ## Why C# Specifically
 
 - Strongly typed, garbage collected, mature ecosystem
@@ -34,6 +38,7 @@ audience:
 - Modern C# features: properties, async/await, pattern matching, LINQ
 
 ---
+
 ## A First Script
 
 ```csharp
@@ -55,6 +60,7 @@ public class HelloWorld : MonoBehaviour
 - Output appears in the Console window when you press Play
 
 ---
+
 ## Variables and Types
 
 ```csharp
@@ -71,6 +77,7 @@ Vector3 position = new Vector3(0, 1, 0);
 - Floats need the `f` suffix; without it the compiler treats `1.0` as `double`
 
 ---
+
 ## Operators
 
 ```csharp
@@ -87,6 +94,7 @@ a += 1;               // compound assignment
 - Increment / decrement: `++ --`
 
 ---
+
 ## If / Else
 
 ```csharp
@@ -104,6 +112,7 @@ if (health <= 0) {
 - `else if` chains are common; consider `switch` past 3 branches
 
 ---
+
 ## Switch
 
 ```csharp
@@ -125,6 +134,7 @@ switch (state) {
 - Forgetting `break` is a compile error in C# (unlike C/C++)
 
 ---
+
 ## Loops
 
 ```csharp
@@ -147,6 +157,7 @@ while (timeLeft > 0) {
 - `do { ... } while (...)`: runs the body at least once
 
 ---
+
 ## Functions / Methods
 
 ```csharp
@@ -164,6 +175,7 @@ void DoNothing() { }
 - Methods inside a class are sometimes called "functions" — same thing here
 
 ---
+
 ## Method Overloading
 
 ```csharp
@@ -177,6 +189,7 @@ public void Take(DamageInfo info) { ... }
 - Used heavily in Unity APIs (e.g., `Instantiate` has many overloads)
 
 ---
+
 ## Classes
 
 ```csharp
@@ -198,6 +211,7 @@ public class Enemy
 - Properties (`public int Health { get; set; }`) are common too
 
 ---
+
 ## Instances
 
 ```csharp
@@ -213,6 +227,7 @@ GetComponent<Enemy>().TakeDamage(3);
 - Reference vs value semantics matter: classes are references, structs are values
 
 ---
+
 ## Namespaces
 
 ```csharp
@@ -231,6 +246,7 @@ namespace MyGame
 - `using` brings types into scope for a file
 
 ---
+
 ## Common C# Pitfalls in Unity
 
 - Comparing floats with `==` — they rarely match exactly; use `Mathf.Approximately`
@@ -240,6 +256,7 @@ namespace MyGame
 - `null` reference exceptions on uninitialized `[SerializeField]` references
 
 ---
+
 ## C# Scripting Lifecycle
 
 ![script_lifecycle](svg/courses/unity/introduction-to-game-development-with-unity/03_csharp_scripting_fundamentals/script_lifecycle.svg)

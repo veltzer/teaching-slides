@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Cloud-Native DevOps
 Modern cloud architecture and practices
 

@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Partitioning (Sharding)
 
 ---
+
 ## What This Chapter Covers
 
 - What partitioning is
@@ -22,6 +24,7 @@ audience:
 - Practical guidance
 
 ---
+
 ## What Partitioning Is
 
 - Split data across multiple nodes
@@ -31,16 +34,19 @@ audience:
 - Also called *sharding*
 
 ---
+
 ## Strategies
 
 ![partitioning_strategies](svg/courses/architecting/distributed-systems-fundamentals/08_partitioning/partitioning_strategies.svg)
 
 ---
+
 ## Rebalancing
 
 ![rebalancing](svg/courses/architecting/distributed-systems-fundamentals/08_partitioning/rebalancing.svg)
 
 ---
+
 ## Why Partition
 
 - Scale beyond one machine's capacity
@@ -50,6 +56,7 @@ audience:
 - Foundation for many big-data systems
 
 ---
+
 ## Hash Partitioning
 
 - Hash the key; modulo by N partitions
@@ -59,6 +66,7 @@ audience:
 - Mitigated by consistent hashing
 
 ---
+
 ## Range Partitioning
 
 - Each partition handles a contiguous range
@@ -68,6 +76,7 @@ audience:
 - BigTable, HBase use this
 
 ---
+
 ## Consistent Hashing
 
 - Hash space arranged in a ring
@@ -77,6 +86,7 @@ audience:
 - Used in: DynamoDB, Cassandra, memcached
 
 ---
+
 ## Virtual Nodes
 
 - Each physical node owns many virtual nodes
@@ -86,6 +96,7 @@ audience:
 - Standard practice
 
 ---
+
 ## Rebalancing
 
 - Adding / removing nodes triggers data movement
@@ -95,6 +106,7 @@ audience:
 - Plan during low-traffic windows
 
 ---
+
 ## Hot Partitions
 
 - One partition gets disproportionate traffic
@@ -104,6 +116,7 @@ audience:
 - Watch: per-partition metrics
 
 ---
+
 ## Salting
 
 - Add a random prefix to keys
@@ -113,6 +126,7 @@ audience:
 - Use when one entity is unusually hot
 
 ---
+
 ## Composite Keys
 
 - Partition by `(user_id, date)`, not `(user_id)`
@@ -121,6 +135,7 @@ audience:
 - More complex but solves hot-partition problem
 
 ---
+
 ## Cross-Partition Operations
 
 - Joins across partitions: expensive
@@ -129,6 +144,7 @@ audience:
 - Hard: requires careful key design upfront
 
 ---
+
 ## Partition Awareness
 
 - Clients knowing which partition a key lives on
@@ -138,6 +154,7 @@ audience:
 - Reduces latency
 
 ---
+
 ## Resharding
 
 - The original number of partitions was wrong
@@ -147,6 +164,7 @@ audience:
 - Plan capacity well; don't reshard often
 
 ---
+
 ## Common Partitioning Mistakes
 
 - Using user_id as the partition key when one user dominates
@@ -156,6 +174,7 @@ audience:
 - Resharding under-tested in production
 
 ---
+
 ## Practical Tips
 
 - Partition by something that distributes evenly

@@ -144,11 +144,11 @@ scripts enforce these (shadows, gradients, fonts, markers, etc.).
 
 - **Corner radius:** always `rx="6"`. No sharp boxes, no extra-round boxes.
 - **Family-filled box** (fill is `var(--{family}-fill)`):
-  - `stroke="var(--{family}-border)"` — matches family
-  - `stroke-width="2"`
+    - `stroke="var(--{family}-border)"` — matches family
+    - `stroke-width="2"`
 - **Neutral box** (fill is `var(--surface)`, `var(--bg)`, `none`, or missing):
-  - `stroke="var(--border)"` — standard neutral divider
-  - `stroke-width="1"`
+    - `stroke="var(--border)"` — standard neutral divider
+    - `stroke-width="1"`
 - Never use gradient fills. `url(#grad-primary)` etc. are flattened to
   `var(--primary-fill)` by the normalizer.
 
@@ -263,7 +263,7 @@ or
 
 Find all placeholders in the repo:
 
-```
+```text
 grep -rl PLACEHOLDERSVG svg/
 ```
 

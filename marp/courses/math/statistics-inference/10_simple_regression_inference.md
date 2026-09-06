@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Simple Linear Regression: Inference
 
 ---
+
 ## What This Chapter Covers
 
 - The regression model and its assumptions
@@ -21,11 +23,13 @@ audience:
 - Transformations and the limits of a straight line
 
 ---
+
 ## Confidence vs Prediction Interval
 
 ![ci_vs_pi](svg/courses/math/statistics-inference/10_simple_regression_inference/ci_vs_pi.svg)
 
 ---
+
 ## The Model
 
 - y = &beta;&#8320; + &beta;&#8321;x + &epsilon; — a true line plus random noise &epsilon;
@@ -35,6 +39,7 @@ audience:
 - "Simple" = one predictor; the next chapter does many
 
 ---
+
 ## Least Squares
 
 - The fitted line minimizes the sum of **squared vertical residuals** &Sigma;(y&#7522; &minus; y&#770;&#7522;)&sup2;
@@ -44,6 +49,7 @@ audience:
 - Squared residuals make the math clean — but also make the fit sensitive to outliers
 
 ---
+
 ## Inference On The Slope
 
 - Each coefficient has a **standard error** — how much it would vary across repeated samples
@@ -53,6 +59,7 @@ audience:
 - Report the slope and its CI as the headline; "slope = 3.2 [2.1, 4.3]" beats "p &lt; 0.001"
 
 ---
+
 ## The Regression F-Test And R&sup2;
 
 - For simple regression the model F-test is just the square of the slope's t-test — same p-value
@@ -62,6 +69,7 @@ audience:
 - Look at R&sup2;, the slope's CI, *and* the residual plots — no single number suffices
 
 ---
+
 ## Confidence Interval vs Prediction Interval
 
 - **Confidence interval for the mean response** at x&#8320;: where the *average* y sits for that x — narrow, shrinks as n grows
@@ -71,6 +79,7 @@ audience:
 - Never report a fitted value without one of these intervals attached
 
 ---
+
 ## Residual Diagnostics
 
 - The residuals are where the model's sins show up — always plot them
@@ -80,11 +89,13 @@ audience:
 - **Leverage and Cook's distance**: flag points that single-handedly steer the fit — investigate, don't auto-delete
 
 ---
+
 ## Four Residual Patterns
 
 ![residual_diagnostics](svg/courses/math/statistics-inference/10_simple_regression_inference/residual_diagnostics.svg)
 
 ---
+
 ## Transformations And The Line's Limits
 
 - Curved relationship? Try a **log transform** of y, of x, or both — `log(y) ~ log(x)` fits a power law as a line
@@ -94,6 +105,7 @@ audience:
 - **Never extrapolate** far beyond the observed range of x; the line is a local approximation, not a law of nature
 
 ---
+
 ## Regression Inference In Python
 
 ```python
@@ -110,6 +122,7 @@ print("pred PI :", pred.conf_int(obs=True))     # prediction interval, wider
 ```
 
 ---
+
 ## Common Mistakes
 
 - Reporting only a p-value when the slope and its confidence interval are the real result

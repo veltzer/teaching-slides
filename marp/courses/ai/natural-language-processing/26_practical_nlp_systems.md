@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Practical NLP Systems
 
 ---
+
 ## What This Chapter Covers
 
 - The lifecycle of an `NLP` system from problem definition to retirement
@@ -23,6 +25,7 @@ audience:
 - The skills that turn a notebook into a system that runs without you
 
 ---
+
 ## From Notebook to System
 
 - A working notebook is the start, not the finish
@@ -32,11 +35,13 @@ audience:
 - Few of these lessons make it into research papers
 
 ---
+
 ## NLP System Lifecycle
 
 ![nlp_lifecycle](svg/courses/ai/natural-language-processing/26_practical_nlp_systems/nlp_lifecycle.svg)
 
 ---
+
 ## Defining the Problem
 
 - Start with the user-visible behavior, not the model
@@ -46,6 +51,7 @@ audience:
 - The most expensive bug to fix is a misframed problem
 
 ---
+
 ## Choosing the Approach
 
 - Rule-based when the rules are stable and small
@@ -55,6 +61,7 @@ audience:
 - The right answer changes as the system matures
 
 ---
+
 ## Data Collection
 
 - The single biggest determinant of system quality
@@ -64,6 +71,7 @@ audience:
 - Allocate engineering effort here, not just labeling budget
 
 ---
+
 ## Annotation Pipelines
 
 - Define the schema before annotating a single example
@@ -73,6 +81,7 @@ audience:
 - Label dataset versioning is as important as code versioning
 
 ---
+
 ## Annotation Quality Control
 
 - Gold questions seeded among real questions
@@ -82,6 +91,7 @@ audience:
 - A messy label set produces a messy model — debt compounds
 
 ---
+
 ## Data Versioning
 
 - Datasets evolve; freeze versions for reproducibility
@@ -91,6 +101,7 @@ audience:
 - Treat data as a first-class artifact, not a side effect
 
 ---
+
 ## Training Pipelines
 
 - Reproducible from a single command, ideally with `Make` or a workflow tool
@@ -100,6 +111,7 @@ audience:
 - A pipeline that lives in someone's notebook is a future incident
 
 ---
+
 ## Model Registry
 
 - Central catalog of trained models with metadata
@@ -109,11 +121,13 @@ audience:
 - The model registry is what makes "ship a model" a routine operation
 
 ---
+
 ## Serving Architecture
 
 ![serving_architecture](svg/courses/ai/natural-language-processing/26_practical_nlp_systems/serving_architecture.svg)
 
 ---
+
 ## Inference Optimization
 
 - Quantization (`INT8`, `INT4`) shrinks models without retraining
@@ -123,6 +137,7 @@ audience:
 - Inference cost dominates training cost for any product that ships
 
 ---
+
 ## Quantization
 
 - Reduce parameter precision to `INT8`, `INT4`, or lower
@@ -132,6 +147,7 @@ audience:
 - The cheapest first step in inference cost reduction
 
 ---
+
 ## Distillation
 
 - Train a small student to mimic a large teacher
@@ -141,6 +157,7 @@ audience:
 - Especially valuable for latency-sensitive serving
 
 ---
+
 ## Caching Strategies
 
 - Embedding cache for documents that never change
@@ -150,6 +167,7 @@ audience:
 - Caching is the single biggest cost lever after model size
 
 ---
+
 ## Latency Engineering
 
 - Latency-to-first-token matters more than total time on chat
@@ -159,6 +177,7 @@ audience:
 - Tail latency at p99 matters more than average
 
 ---
+
 ## Observability
 
 - Log every prediction with input, output, and metadata
@@ -168,6 +187,7 @@ audience:
 - An `NLP` system without observability is a black box
 
 ---
+
 ## Drift Detection
 
 - Input drift: user queries change over time
@@ -177,11 +197,13 @@ audience:
 - Drift dashboards belong on the same screen as health checks
 
 ---
+
 ## Drift in Production
 
 ![drift_detection](svg/courses/ai/natural-language-processing/26_practical_nlp_systems/drift_detection.svg)
 
 ---
+
 ## A/B Testing
 
 - Compare candidate model against the current production model
@@ -191,6 +213,7 @@ audience:
 - Trust the test, not your intuition
 
 ---
+
 ## Shadow Deployment
 
 - Run a candidate model on real traffic without exposing outputs to users
@@ -200,6 +223,7 @@ audience:
 - Cost: doubles inference compute for the shadow window
 
 ---
+
 ## Feedback Loops
 
 - Capture user signals: thumbs, edits, dwell time, conversion
@@ -209,6 +233,7 @@ audience:
 - A working feedback loop is the durable advantage of mature systems
 
 ---
+
 ## Incident Response
 
 - A clear on-call rotation for the team that owns the model
@@ -218,6 +243,7 @@ audience:
 - `NLP` incidents differ from outages — model misbehavior may not look like a "down" event
 
 ---
+
 ## Cost Engineering
 
 - Track cost per query as a first-class metric
@@ -227,6 +253,7 @@ audience:
 - The most accurate model that bankrupts the team is not the right one
 
 ---
+
 ## Mixed-Model Routing
 
 - A small classifier decides which model serves a given query
@@ -236,6 +263,7 @@ audience:
 - A standard production pattern at scale
 
 ---
+
 ## Compliance and Auditing
 
 - Log retention policies for personally identifiable content
@@ -245,6 +273,7 @@ audience:
 - Document the system enough that an auditor can verify it
 
 ---
+
 ## Team Skills
 
 - `NLP` engineers + ML engineers + product + data + infra + linguists + annotators
@@ -254,6 +283,7 @@ audience:
 - Career growth comes from owning a feature end to end
 
 ---
+
 ## Documentation
 
 - Model cards for every deployed model
@@ -263,6 +293,7 @@ audience:
 - An `NLP` system you cannot explain is one you cannot maintain
 
 ---
+
 ## Retirement
 
 - Models eventually outlive their usefulness
@@ -272,6 +303,7 @@ audience:
 - A clean retirement is part of system hygiene
 
 ---
+
 ## Common Production Pitfalls
 
 - Treating evaluation as a one-time gate instead of a continuous practice
@@ -281,6 +313,7 @@ audience:
 - Coupling model and serving code so tightly that updating either breaks both
 
 ---
+
 ## Anti-Patterns
 
 - The "we'll instrument it next sprint" production system
@@ -290,6 +323,7 @@ audience:
 - Models retired by deletion rather than archive
 
 ---
+
 ## What Good Looks Like
 
 - A system that passes regression tests on every change
@@ -299,6 +333,7 @@ audience:
 - A team that can ship the next version without the original author
 
 ---
+
 ## Summary
 
 - `NLP` systems live or die in production, not in notebooks

@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Docker Volumes and Storage
 
 ---
+
 ## What This Chapter Covers
 
 - Why containers need help with persistence
@@ -21,6 +23,7 @@ audience:
 - Backup and restore strategies
 
 ---
+
 ## The Problem
 
 - A container's filesystem is *ephemeral*
@@ -30,6 +33,7 @@ audience:
 - The container exits, the data lives on
 
 ---
+
 ## Three Storage Types
 
 - **Volume**: managed by Docker, lives in `/var/lib/docker/volumes/`
@@ -37,6 +41,7 @@ audience:
 - **tmpfs**: memory-only, never written to disk
 
 ---
+
 ## When to Use Which
 
 - **Volume**: production data, databases — Docker manages it
@@ -44,11 +49,13 @@ audience:
 - **tmpfs**: secrets, session data — never touches disk
 
 ---
+
 ## Storage Diagram
 
 ![storage_types](svg/courses/containers/docker-fundamentals/06_docker_volumes_and_storage/storage_types.svg)
 
 ---
+
 ## Named Volumes
 
 ```bash
@@ -64,6 +71,7 @@ docker run -d --name db \
 - Backed by `/var/lib/docker/volumes/pg-data/_data` on the host
 
 ---
+
 ## Anonymous Volumes
 
 ```bash
@@ -75,6 +83,7 @@ docker run -d -v /var/lib/postgresql/data postgres
 - Use named volumes instead — almost always better
 
 ---
+
 ## Bind Mounts
 
 ```bash
@@ -87,6 +96,7 @@ docker run -d -v "$(pwd)":/app -w /app node:20 npm test
 - The container can write to the host filesystem — careful with permissions
 
 ---
+
 ## tmpfs Mounts
 
 ```bash
@@ -99,6 +109,7 @@ docker run --tmpfs /run/secrets:size=64m alpine
 - Lost when the container stops
 
 ---
+
 ## Listing and Inspecting Volumes
 
 ```bash
@@ -112,6 +123,7 @@ docker volume prune                # remove unused volumes
 - `prune` is convenient and dangerous — it deletes volumes not in use by any container
 
 ---
+
 ## Sharing Between Containers
 
 ```bash
@@ -124,6 +136,7 @@ docker run -d --name consumer -v shared:/data alpine
 - The shared volume can outlive both containers
 
 ---
+
 ## Read-Only Mounts
 
 ```bash
@@ -137,6 +150,7 @@ docker run -v "$(pwd)/conf":/etc/app:ro myapp
 - Reduces blast radius of a compromised container
 
 ---
+
 ## Backup Strategies
 
 ```bash
@@ -152,6 +166,7 @@ docker run --rm \
 - For databases: prefer the database's own backup tool (`pg_dump`, etc.)
 
 ---
+
 ## Restore From Backup
 
 ```bash
@@ -167,6 +182,7 @@ docker run --rm \
 - Start the real DB container against the new volume
 
 ---
+
 ## Volume Drivers
 
 - Default driver: `local`
@@ -176,6 +192,7 @@ docker run --rm \
 - Configured at `docker volume create --driver`
 
 ---
+
 ## Storage Performance
 
 - Bind mounts: native filesystem performance on Linux; *slow* on Mac/Windows (Docker Desktop)
@@ -185,6 +202,7 @@ docker run --rm \
 - For production: it's all Linux, all fast
 
 ---
+
 ## Permissions Gotchas
 
 - Bind-mounted host file owned by UID 1000 on the host
@@ -194,6 +212,7 @@ docker run --rm \
 - Most beginner storage problems are permission problems
 
 ---
+
 ## Common Mistakes
 
 - Forgetting to mount a volume &#8594; data lost on container removal
@@ -203,6 +222,7 @@ docker run --rm \
 - Trusting bind mount performance on Mac/Windows for hot loops
 
 ---
+
 ## Choosing the Right Storage Type
 
 ![volume_use_cases](svg/courses/containers/docker-fundamentals/06_docker_volumes_and_storage/volume_use_cases.svg)

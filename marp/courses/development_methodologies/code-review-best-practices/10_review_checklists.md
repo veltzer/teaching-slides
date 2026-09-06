@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Review Checklists
 
 ---
+
 ## Reviewer's Checklist
 
 ![review_checklist](svg/courses/development_methodologies/code-review-best-practices/10_review_checklists/review_checklist.svg)
@@ -21,6 +23,7 @@ audience:
 ![checklist_topics](svg/courses/development_methodologies/code-review-best-practices/10_review_checklists/checklist_topics.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why use checklists
@@ -31,6 +34,7 @@ audience:
 - Sample checklists
 
 ---
+
 ## Why Checklists Help
 
 - Tired reviewers miss things
@@ -40,6 +44,7 @@ audience:
 - Famous in medicine, aviation; works for code too
 
 ---
+
 ## When Checklists Fail
 
 - Too long &#8594; nobody reads
@@ -49,6 +54,7 @@ audience:
 - A wrong checklist is worse than none
 
 ---
+
 ## A Generic Starting Point
 
 - [ ] PR description explains what and why
@@ -58,6 +64,7 @@ audience:
 - [ ] CI passes
 
 ---
+
 ## A Bug-Fix Checklist
 
 - [ ] Root cause identified, not symptom
@@ -67,6 +74,7 @@ audience:
 - [ ] Issue or ticket linked
 
 ---
+
 ## A New-Feature Checklist
 
 - [ ] Design discussed before coding
@@ -77,6 +85,7 @@ audience:
 - [ ] Migration / rollout plan if needed
 
 ---
+
 ## A Security-Sensitive Checklist
 
 - [ ] Untrusted input validated
@@ -87,6 +96,7 @@ audience:
 - [ ] Crypto uses proven libraries
 
 ---
+
 ## A Performance-Sensitive Checklist
 
 - [ ] N+1 queries checked
@@ -96,6 +106,7 @@ audience:
 - [ ] Profiled before claiming "fast"
 
 ---
+
 ## A Refactoring Checklist
 
 - [ ] Behaviour preserved (tests still pass without changes)
@@ -105,6 +116,7 @@ audience:
 - [ ] Easier to read after than before
 
 ---
+
 ## A Database-Migration Checklist
 
 - [ ] Backward-compatible (deploys old + new code together)
@@ -114,6 +126,7 @@ audience:
 - [ ] Rollback plan documented
 
 ---
+
 ## Per-Team Checklists
 
 - Build your own based on incidents you've had
@@ -123,6 +136,7 @@ audience:
 - Drop items that never trigger
 
 ---
+
 ## Lightweight Checklists
 
 - 3-5 items max for general use
@@ -132,6 +146,7 @@ audience:
 - A 30-second mental scan, not a 30-minute exercise
 
 ---
+
 ## When To Use a Checklist
 
 - Reviewing in a domain you don't know well
@@ -141,6 +156,7 @@ audience:
 - After a recent bug pattern surfaced
 
 ---
+
 ## When Not To Use One
 
 - Trivial PRs
@@ -150,6 +166,7 @@ audience:
 - Match effort to risk
 
 ---
+
 ## Avoiding Checklist Fatigue
 
 - Keep them short
@@ -159,6 +176,7 @@ audience:
 - Check the items genuinely, not as a ritual
 
 ---
+
 ## Common Mistakes
 
 - 30-item checklist nobody completes

@@ -11,6 +11,7 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Generative AI Applications — Course Overview
 
 ---
@@ -75,11 +76,13 @@ pip install diffusers accelerate
 **Generative AI** = AI systems that create new content
 
 ---
+
 ## What is Generative AI?
 
 ![what_is_generative_ai](svg/courses/ai/generative-ai-applications/01_overview/what_is_generative_ai.svg)
 
 ---
+
 ## What is Generative AI?: Overview (2)
 
 Unlike **discriminative** models (classify existing data), generative models **produce** new data.
@@ -106,6 +109,7 @@ Three converging factors enabled the current explosion:
 1. **Architectural breakthroughs** — The Transformer (2017)
 
 ---
+
 ## Why Generative AI Matters Now
 
 ![why_generative_ai_matters_now](svg/courses/ai/generative-ai-applications/01_overview/why_generative_ai_matters_now.svg)

@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Eventual Consistency and Projections
 
 ---
+
 ## What This Chapter Covers
 
 - What eventual consistency means in CQRS systems
@@ -24,6 +26,7 @@ audience:
 - Monitoring projection lag
 
 ---
+
 ## What Eventual Consistency Means Here
 
 - The write side commits an event
@@ -33,6 +36,7 @@ audience:
 - "Eventual" is a guarantee, not a hope
 
 ---
+
 ## The Window Has a Name: Projection Lag
 
 - Time between event append and read model update
@@ -41,6 +45,7 @@ audience:
 - A first-class operational metric, with alerts
 
 ---
+
 ## Why Eventual Consistency Is Acceptable
 
 - Most user actions tolerate a tiny window
@@ -49,11 +54,13 @@ audience:
 - The window is closable for the queries that need it (read-your-own-write, ch 4)
 
 ---
+
 ## Three Projection Modes
 
 ![projection_modes](svg/courses/architecting/cqrs-and-event-sourcing/06_eventual_consistency_and_projections/projection_modes.svg)
 
 ---
+
 ## Inline Projections
 
 - Update the read model in the same transaction as the event append
@@ -63,6 +70,7 @@ audience:
 - Useful for the one read model that absolutely must agree
 
 ---
+
 ## Asynchronous Projections
 
 - A subscriber tails the event log
@@ -72,6 +80,7 @@ audience:
 - Lag is the price; flexibility is the payoff
 
 ---
+
 ## Catch-Up Projections
 
 - A new projection starts at position 0 and processes the entire history
@@ -80,6 +89,7 @@ audience:
 - The same code runs both modes — the difference is just where it starts
 
 ---
+
 ## Catch-Up vs Live Mode
 
 - Catch-up: reading events from the past; the projection is behind the head of the log
@@ -88,6 +98,7 @@ audience:
 - Some stores expose a "now caught up" signal so projections can switch from batch reads to push notifications
 
 ---
+
 ## Building a Projection
 
 ```python
@@ -108,6 +119,7 @@ class OrderSummaryProjection:
 - Save the position after each successful handler
 
 ---
+
 ## Idempotent Handlers
 
 - The same event may be delivered more than once (at-least-once semantics)
@@ -116,6 +128,7 @@ class OrderSummaryProjection:
 - For Redis: use `SETNX` keyed by event id, or version-checked updates
 
 ---
+
 ## Idempotent Insert Example
 
 ```sql
@@ -132,6 +145,7 @@ SET total = EXCLUDED.total,
 - Pair with event ordering to make "last" deterministic
 
 ---
+
 ## Out-of-Order Events
 
 - Within a stream, events arrive in order
@@ -140,6 +154,7 @@ SET total = EXCLUDED.total,
 - Projections that span streams must handle this
 
 ---
+
 ## Strategies for Out-of-Order
 
 - **Idempotent + commutative**: order doesn't matter (counters, sets)
@@ -148,11 +163,13 @@ SET total = EXCLUDED.total,
 - **Stream-key projection**: only project from one stream per partition; order is preserved
 
 ---
+
 ## Out-of-Order Visualized
 
 ![out_of_order](svg/courses/architecting/cqrs-and-event-sourcing/06_eventual_consistency_and_projections/out_of_order.svg)
 
 ---
+
 ## Checkpointing
 
 - The projection's "I am here" marker on the global stream
@@ -161,6 +178,7 @@ SET total = EXCLUDED.total,
 - Trade-off: checkpoint per event = safe but slow; per batch = fast but more replay on crash
 
 ---
+
 ## Checkpoint Storage
 
 - A small table or key per projection: `(projection_name, position, updated_at)`
@@ -169,6 +187,7 @@ SET total = EXCLUDED.total,
 - The projection must always be idempotent regardless
 
 ---
+
 ## Atomic Projection + Checkpoint
 
 ```sql
@@ -189,6 +208,7 @@ COMMIT;
 - Idempotency keeps replay safe
 
 ---
+
 ## Projection Rebuilds
 
 - Drop the read model
@@ -198,6 +218,7 @@ COMMIT;
 - Duration: depends on event count and per-event handler cost
 
 ---
+
 ## When to Rebuild
 
 - Schema change to the read model
@@ -207,11 +228,13 @@ COMMIT;
 - Treat rebuilds as routine, not exotic
 
 ---
+
 ## Rebuilding Lifecycle
 
 ![rebuild_lifecycle](svg/courses/architecting/cqrs-and-event-sourcing/06_eventual_consistency_and_projections/rebuild_lifecycle.svg)
 
 ---
+
 ## Blue-Green Projections
 
 - Don't drop the live read model — build a new one alongside
@@ -221,11 +244,13 @@ COMMIT;
 - Standard zero-downtime migration pattern
 
 ---
+
 ## Blue-Green Diagram
 
 ![blue_green_projection](svg/courses/architecting/cqrs-and-event-sourcing/06_eventual_consistency_and_projections/blue_green_projection.svg)
 
 ---
+
 ## Failure Modes
 
 - **Projection lag**: subscriber falls behind; reads grow stale
@@ -235,6 +260,7 @@ COMMIT;
 - **Handler bug**: event was applied incorrectly; rebuild required to fix
 
 ---
+
 ## Poison Events
 
 - An event the handler can't process — bad data, missing field, schema break
@@ -246,6 +272,7 @@ COMMIT;
 - Choose by criticality
 
 ---
+
 ## Communicating Eventual Consistency to Users
 
 - The UI is the place where users encounter the lag
@@ -256,6 +283,7 @@ COMMIT;
 - Honesty is cheap; pretending to be strongly consistent is expensive
 
 ---
+
 ## Read-Your-Own-Write Pattern (Recap)
 
 ```python
@@ -275,6 +303,7 @@ def confirm_order(order_id, expected_version):
 - Fall back to a pending page if the projection is stuck
 
 ---
+
 ## Monitoring Projection Lag
 
 - **Position lag**: latest_global_position − projection_position
@@ -284,6 +313,7 @@ def confirm_order(order_id, expected_version):
 - Trends matter: a slowly growing lag is a leak
 
 ---
+
 ## What to Alert On
 
 - Lag exceeds a threshold (e.g., 30 seconds) for over 5 minutes
@@ -293,6 +323,7 @@ def confirm_order(order_id, expected_version):
 - Each alert is paired with a runbook
 
 ---
+
 ## Common Mistakes
 
 - **Forgetting idempotency**: at-least-once delivery breaks the read model on retry
@@ -302,6 +333,7 @@ def confirm_order(order_id, expected_version):
 - **Strong consistency expectations**: building a UI that assumes immediate visibility
 
 ---
+
 ## A Reasonable Starting Configuration
 
 - Asynchronous projections by default
@@ -311,6 +343,7 @@ def confirm_order(order_id, expected_version):
 - Rebuild tooling exercised regularly (don't wait for the emergency)
 
 ---
+
 ## Summary
 
 - Eventual consistency is a contract, not a flaw — bounded, observable, livable

@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Introduction to ClickHouse
 
 ---
+
 ## What This Chapter Covers
 
 - What ClickHouse is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What ClickHouse Is
 
 - Columnar OLAP database
@@ -28,11 +31,13 @@ audience:
 - Fast scans on huge tables
 
 ---
+
 ## Vectorized Execution
 
 ![vectorized_engine](svg/courses/databases/clickhouse/01_introduction/vectorized_engine.svg)
 
 ---
+
 ## Why It Wins
 
 - Bytes scanned per second is huge
@@ -41,6 +46,7 @@ audience:
 - Open source
 
 ---
+
 ## When To Use
 
 - Time-series and event data
@@ -49,11 +55,13 @@ audience:
 - High-cardinality counts
 
 ---
+
 ## Strengths Overview
 
 ![clickhouse_strengths](svg/courses/databases/clickhouse/01_introduction/clickhouse_strengths.svg)
 
 ---
+
 ## When Not To Use
 
 - Transactional workloads
@@ -62,6 +70,7 @@ audience:
 - Strong consistency needs
 
 ---
+
 ## Architecture
 
 - Tables on disk in column files
@@ -70,6 +79,7 @@ audience:
 - Replicated for safety
 
 ---
+
 ## Merge Tree Family
 
 - Default engines
@@ -78,6 +88,7 @@ audience:
 - Pick by data and query
 
 ---
+
 ## Sharding and Replication
 
 - Shard for capacity
@@ -86,6 +97,7 @@ audience:
 - ZooKeeper or Keeper coordinates
 
 ---
+
 ## Data Types
 
 - Integers and floats sized like C
@@ -94,6 +106,7 @@ audience:
 - Date and timestamp types built-in
 
 ---
+
 ## Indexing Model
 
 - No traditional B-tree
@@ -102,6 +115,7 @@ audience:
 - Min-max stats per granule
 
 ---
+
 ## Query Path
 
 - Parse and plan
@@ -110,6 +124,7 @@ audience:
 - Stream results
 
 ---
+
 ## Hardware Profile
 
 - Many cores help
@@ -118,6 +133,7 @@ audience:
 - Network for distributed reads
 
 ---
+
 ## Course Outline
 
 - Tables and engines
@@ -127,6 +143,7 @@ audience:
 - Performance
 
 ---
+
 ## Common Beginner Mistakes
 
 - Updating like a relational store

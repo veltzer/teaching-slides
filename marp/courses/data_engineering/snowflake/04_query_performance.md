@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Query Performance
 
 ---
+
 ## What This Chapter Covers
 
 - Warehouse sizing
@@ -19,6 +21,7 @@ audience:
 - Plan inspection
 
 ---
+
 ## Warehouse Sizing
 
 - Bigger means more memory and compute
@@ -27,11 +30,13 @@ audience:
 - Resize without downtime
 
 ---
+
 ## Performance Levers
 
 ![perf_levers](svg/courses/data_engineering/snowflake/04_query_performance/perf_levers.svg)
 
 ---
+
 ## Auto-Suspend
 
 - Keep small for ad-hoc
@@ -40,6 +45,7 @@ audience:
 - Suspend pause is free
 
 ---
+
 ## Result Cache
 
 - Same query, same result
@@ -48,11 +54,13 @@ audience:
 - Watch for stale-looking expectations
 
 ---
+
 ## Cache Layers
 
 ![caching_layers](svg/courses/data_engineering/snowflake/04_query_performance/caching_layers.svg)
 
 ---
+
 ## Local Disk Cache
 
 - Per-warehouse cache of micro-partitions
@@ -61,6 +69,7 @@ audience:
 - Larger warehouses cache more
 
 ---
+
 ## Pruning Quality
 
 - Filter on clustered or natural-ordered columns
@@ -69,6 +78,7 @@ audience:
 - Avoid functions on filter columns
 
 ---
+
 ## Joins
 
 - Hash joins for most
@@ -77,6 +87,7 @@ audience:
 - Distribute on join keys when ingesting
 
 ---
+
 ## Plan Inspection
 
 - EXPLAIN
@@ -85,6 +96,7 @@ audience:
 - Spend time on the longest operator first
 
 ---
+
 ## Materialized Views
 
 - Pre-computed query result
@@ -93,6 +105,7 @@ audience:
 - Best for hot, narrow queries
 
 ---
+
 ## Search Optimization Service
 
 - Accelerates point lookups
@@ -101,6 +114,7 @@ audience:
 - Not for big scans
 
 ---
+
 ## Clustering Keys
 
 - Auto-clustering keeps data sorted
@@ -109,6 +123,7 @@ audience:
 - Drop if not paying off
 
 ---
+
 ## Spill
 
 - When working set exceeds memory
@@ -117,6 +132,7 @@ audience:
 - Watch for it in profile
 
 ---
+
 ## Concurrency
 
 - Multiple warehouses isolate workloads
@@ -125,6 +141,7 @@ audience:
 - Predictable performance
 
 ---
+
 ## Common Performance Mistakes
 
 - Too-small warehouse for batch

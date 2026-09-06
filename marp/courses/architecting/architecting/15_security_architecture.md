@@ -11,9 +11,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Security Architecture
 
 ---
+
 ## Why Security Is Architectural
 
 - Security bolted on after delivery is slow, expensive, and often wrong
@@ -22,6 +24,7 @@ audience:
 - A single insecure integration can compromise an entire distributed system
 
 ---
+
 ## The Three Core Concerns
 
 - **Confidentiality** — only authorized parties can read data
@@ -30,6 +33,7 @@ audience:
 - Every design choice trades these three in different ways
 
 ---
+
 ## Authentication vs Authorization
 
 - **Authentication (AuthN)** — *who* is making this request?
@@ -38,6 +42,7 @@ audience:
 - A common architectural mistake: binding authorization to the transport layer (IP allow-lists) instead of identity
 
 ---
+
 ## OAuth 2.0
 
 - Delegated authorization framework — not authentication on its own
@@ -46,6 +51,7 @@ audience:
 - Does not say who the user is — that is OIDC's job
 
 ---
+
 ## OAuth 2.0 Flow
 
 - **Authorization Code** (with PKCE) — for interactive users in web/mobile apps
@@ -56,6 +62,7 @@ audience:
 Avoid the implicit and password grants — both are deprecated for security reasons.
 
 ---
+
 ## OpenID Connect (OIDC)
 
 - A thin identity layer on top of OAuth 2.0
@@ -64,6 +71,7 @@ Avoid the implicit and password grants — both are deprecated for security reas
 - Standardized claims: `sub`, `email`, `name`, `iat`, `exp`
 
 ---
+
 ## JWT Anatomy
 
 ```misc
@@ -76,6 +84,7 @@ header.payload.signature
 - Verified by checking the signature and the `exp` claim
 
 ---
+
 ## JWT Pitfalls
 
 - **Stateless revocation is hard** — a leaked token is usable until it expires
@@ -85,6 +94,7 @@ header.payload.signature
 - Prefer short-lived access tokens (5–15 min) with refresh tokens
 
 ---
+
 ## mTLS (Mutual TLS)
 
 - Both client and server present X.509 certificates
@@ -93,6 +103,7 @@ header.payload.signature
 - The backbone of service mesh security and zero-trust networking
 
 ---
+
 ## mTLS vs Token Auth
 
 | Aspect | mTLS | Bearer token |
@@ -106,6 +117,7 @@ header.payload.signature
 Real systems use both — mTLS under the hood, tokens for user context.
 
 ---
+
 ## RBAC: Role-Based Access Control
 
 - Principals have **roles**; roles have **permissions**; permissions gate actions
@@ -114,6 +126,7 @@ Real systems use both — mTLS under the hood, tokens for user context.
 - Kubernetes RBAC is the canonical example
 
 ---
+
 ## ABAC: Attribute-Based Access Control
 
 - Decisions use arbitrary attributes of the subject, resource, action, and environment
@@ -122,6 +135,7 @@ Real systems use both — mTLS under the hood, tokens for user context.
 - Policy languages: Rego (OPA), Cedar, XACML
 
 ---
+
 ## Choosing RBAC vs ABAC
 
 - Start with RBAC; add targeted ABAC rules when roles can't express a constraint
@@ -130,6 +144,7 @@ Real systems use both — mTLS under the hood, tokens for user context.
 - OPA is a good fit for policy-as-code in Kubernetes-heavy stacks
 
 ---
+
 ## Zero-Trust Networking
 
 - Never trust by network location — the corporate LAN is not trusted
@@ -139,6 +154,7 @@ Real systems use both — mTLS under the hood, tokens for user context.
 - Based on NIST SP 800-207 and Google's BeyondCorp paper
 
 ---
+
 ## Zero-Trust Principles
 
 - Assume breach — design as if an attacker is already inside
@@ -148,6 +164,7 @@ Real systems use both — mTLS under the hood, tokens for user context.
 - Continuously monitor — revoke trust when signals change
 
 ---
+
 ## Secrets Management
 
 - Secrets never live in source code, config files, or container images
@@ -156,6 +173,7 @@ Real systems use both — mTLS under the hood, tokens for user context.
 - Tools: `HashiCorp Vault`, `AWS Secrets Manager`, `GCP Secret Manager`, `Azure Key Vault`
 
 ---
+
 ## Secret Rotation
 
 - Short rotation window limits blast radius of a leak
@@ -164,6 +182,7 @@ Real systems use both — mTLS under the hood, tokens for user context.
 - Applications must handle rotation gracefully (no hardcoded credentials in memory forever)
 
 ---
+
 ## Threat Modeling with STRIDE
 
 - **Spoofing** — impersonating another principal
@@ -176,6 +195,7 @@ Real systems use both — mTLS under the hood, tokens for user context.
 Walk every service through STRIDE during architecture review.
 
 ---
+
 ## The OWASP Top 10 at the Architecture Layer
 
 Most of OWASP is a code-level checklist, but four items are architectural:
@@ -188,6 +208,7 @@ Most of OWASP is a code-level checklist, but four items are architectural:
 Fix them once at the architecture level instead of in every service.
 
 ---
+
 ## Defense in Depth
 
 - No single layer is fully trusted
@@ -196,6 +217,7 @@ Fix them once at the architecture level instead of in every service.
 - Adds latency and complexity — budget for both
 
 ---
+
 ## Encryption at Rest
 
 - Disk-level encryption (LUKS, EBS encryption, Cloud KMS-managed)
@@ -204,6 +226,7 @@ Fix them once at the architecture level instead of in every service.
 - Key management is the hard part — rotate keys, audit access, never export
 
 ---
+
 ## Encryption in Transit
 
 - TLS 1.2+ everywhere; prefer TLS 1.3
@@ -212,6 +235,7 @@ Fix them once at the architecture level instead of in every service.
 - Deprecate old TLS and cipher suites on a schedule
 
 ---
+
 ## Supply Chain Security
 
 - Every dependency is a potential attacker
@@ -221,6 +245,7 @@ Fix them once at the architecture level instead of in every service.
 - SLSA framework classifies build-pipeline integrity
 
 ---
+
 ## Common Architectural Mistakes
 
 - **Auth at the gateway only** — services trust any inbound request, so a breach of one service compromises all
@@ -230,6 +255,7 @@ Fix them once at the architecture level instead of in every service.
 - **Secrets in environment variables logged by mistake** — rotate immediately
 
 ---
+
 ## The Architect's Security Checklist
 
 - Every service authenticates its callers
@@ -241,6 +267,7 @@ Fix them once at the architecture level instead of in every service.
 - Incident response playbook is tested, not just written
 
 ---
+
 ## Summary
 
 - Security is architectural, not a feature you can add at the end

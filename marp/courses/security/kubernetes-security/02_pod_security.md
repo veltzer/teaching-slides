@@ -8,9 +8,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Pod Security Standards
 
 ---
+
 ## What This Chapter Covers
 
 - The three Pod Security Standards
@@ -20,6 +22,7 @@ audience:
 - PSS versus the deprecated PSP
 
 ---
+
 ## What Are Pod Security Standards?
 
 - Built-in policy levels for pod security
@@ -29,16 +32,19 @@ audience:
 - Enforced by the Pod Security Admission controller
 
 ---
+
 ## Three Levels Visualized
 
 ![pss_levels](svg/courses/security/kubernetes-security/02_pod_security/pss_levels.svg)
 
 ---
+
 ## Capabilities and Hardening
 
 ![capabilities_overview](svg/courses/security/kubernetes-security/02_pod_security/capabilities_overview.svg)
 
 ---
+
 ## Privileged
 
 - Anything goes
@@ -48,6 +54,7 @@ audience:
 - Reserve for trusted infrastructure
 
 ---
+
 ## Baseline
 
 - Prevents the worst-case privileges
@@ -57,6 +64,7 @@ audience:
 - Reasonable default for most workloads
 
 ---
+
 ## Restricted
 
 - The strictest tier
@@ -67,6 +75,7 @@ audience:
 - Production target
 
 ---
+
 ## Enforcing PSS
 
 ```yaml
@@ -84,6 +93,7 @@ metadata:
 - Mix levels for graceful migration
 
 ---
+
 ## Modes Explained
 
 - enforce — block non-compliant pods
@@ -93,6 +103,7 @@ metadata:
 - Migrate gradually, namespace by namespace
 
 ---
+
 ## securityContext Basics
 
 ```yaml
@@ -109,6 +120,7 @@ spec:
 ```
 
 ---
+
 ## Pod-Level vs Container-Level
 
 - Pod-level: applies to all containers
@@ -118,11 +130,13 @@ spec:
 - Easier to audit consistent policies
 
 ---
+
 ## Key Fields
 
 ![security_context_fields](svg/courses/security/kubernetes-security/02_pod_security/security_context_fields.svg)
 
 ---
+
 ## Running as Non-Root
 
 - runAsNonRoot: true rejects images that try to run as root
@@ -132,6 +146,7 @@ spec:
 - Required by Restricted level
 
 ---
+
 ## Read-Only Root Filesystem
 
 - readOnlyRootFilesystem: true
@@ -141,6 +156,7 @@ spec:
 - Strong defense for stateless apps
 
 ---
+
 ## Privilege Escalation
 
 - allowPrivilegeEscalation: false
@@ -150,6 +166,7 @@ spec:
 - Cheap to set; high security value
 
 ---
+
 ## Capabilities
 
 - Linux capabilities split root's powers into pieces
@@ -159,6 +176,7 @@ spec:
 - Many apps need none
 
 ---
+
 ## Capabilities Example
 
 ```yaml
@@ -174,6 +192,7 @@ securityContext:
 - Audit your image for what it actually uses
 
 ---
+
 ## Seccomp
 
 - Filters which syscalls a container can make
@@ -183,6 +202,7 @@ securityContext:
 - Required by Restricted
 
 ---
+
 ## Seccomp Example
 
 ```yaml
@@ -196,6 +216,7 @@ securityContext:
 - Tools like falco or strace help craft profiles
 
 ---
+
 ## AppArmor
 
 - Mandatory access control via Linux LSM
@@ -205,6 +226,7 @@ securityContext:
 - Less common than seccomp; powerful when used
 
 ---
+
 ## SELinux
 
 - Alternative to AppArmor on RHEL-family systems
@@ -214,6 +236,7 @@ securityContext:
 - Mutually exclusive with AppArmor on the same host
 
 ---
+
 ## Privileged Containers
 
 - privileged: true → host-level access
@@ -223,6 +246,7 @@ securityContext:
 - Audit cluster for any privileged: true
 
 ---
+
 ## hostPID, hostIPC, hostNetwork
 
 - hostPID: see all processes on the node
@@ -232,6 +256,7 @@ securityContext:
 - Only for system pods; never for apps
 
 ---
+
 ## hostPath Mounts
 
 - Mount any directory from the node
@@ -241,6 +266,7 @@ securityContext:
 - Use PVCs or specific volume types instead
 
 ---
+
 ## Resource Limits
 
 - Not strictly security, but related
@@ -250,6 +276,7 @@ securityContext:
 - Prevent fork bombs and resource exhaustion
 
 ---
+
 ## Migrating from PSP
 
 - PSP removed in Kubernetes 1.25
@@ -259,6 +286,7 @@ securityContext:
 - Tools: psp-migration-helper
 
 ---
+
 ## Auditing PSS Violations
 
 - audit mode logs violations to audit log
@@ -268,6 +296,7 @@ securityContext:
 - Dashboard the trend
 
 ---
+
 ## Common Pitfalls
 
 - Setting Restricted on existing namespaces — breaks workloads
@@ -277,6 +306,7 @@ securityContext:
 - Not auditing before enforcing
 
 ---
+
 ## Best Practices
 
 - Default to Restricted in new namespaces
@@ -286,6 +316,7 @@ securityContext:
 - Use kube-bench to validate
 
 ---
+
 ## Summary
 
 - Pod Security Standards: Privileged, Baseline, Restricted

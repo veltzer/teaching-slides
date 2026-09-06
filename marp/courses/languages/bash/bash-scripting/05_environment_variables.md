@@ -12,13 +12,16 @@ audience:
   - audiences:devops
 
 ---
+
 # Environment and Shell Variables
 
 ---
+
 ## Two Kinds of Variables
 ![two_kinds_of_variables](svg/courses/languages/bash/bash-scripting/05_environment_variables/two_kinds_of_variables.svg)
 
 ---
+
 ## Shell Variables
 
 ```bash
@@ -34,6 +37,7 @@ bash -c 'echo "child sees: $greeting"'
 ```
 
 ---
+
 ## Environment Variables
 
 ```bash
@@ -50,6 +54,7 @@ bash -c 'echo "child sees: $greeting"'
 ```
 
 ---
+
 ## Viewing All Variables
 
 ```bash
@@ -71,7 +76,9 @@ declare -p PATH
 ```
 
 ---
+
 ## Common Environment Variables
+
 | Variable | Purpose |
 |----------|---------|
 | `PATH` | Command search path |
@@ -85,6 +92,7 @@ declare -p PATH
 | `EDITOR` | Default text editor |
 
 ---
+
 ## Defining Variables: The Rules
 
 ```bash
@@ -102,6 +110,7 @@ my var=bad      # contains space
 ```
 
 ---
+
 ## Temporary Environment for One Command
 
 ```bash
@@ -120,6 +129,7 @@ TZ=UTC date
 ```
 
 ---
+
 ## Deleting Variables
 
 ```bash
@@ -141,6 +151,7 @@ echo "${z-default}"    # default (z is NOT set)
 ```
 
 ---
+
 ## Demoting Environment Variables
 
 ```bash
@@ -158,6 +169,7 @@ echo "$x"              # 5 (still exists locally)
 ```
 
 ---
+
 ## Checking If a Variable Exists
 
 ```bash
@@ -181,6 +193,7 @@ fi
 ```
 
 ---
+
 ## Distinguishing Empty from Unset
 
 ```bash
@@ -197,6 +210,7 @@ echo "${x:+SET}"    # (empty, x does not exist)
 ```
 
 ---
+
 ## Read-Only Variables
 
 ```bash
@@ -216,10 +230,12 @@ unset PI
 ```
 
 ---
+
 ## Variable Scope: Summary
 ![variable_scope_summary](svg/courses/languages/bash/bash-scripting/05_environment_variables/variable_scope_summary.svg)
 
 ---
+
 ## `declare` Command
 
 ```bash

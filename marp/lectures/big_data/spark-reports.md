@@ -10,6 +10,7 @@ audience:
 - audiences:data-engineers
 
 ---
+
 # Spark Reports Guide
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
@@ -30,11 +31,13 @@ audience:
 1. Business insights
 
 ---
+
 ## Core Components
 
 ![core_components](svg/lectures/big_data/spark-reports/core_components.svg)
 
 ---
+
 ## Data Source Integration
 1. Structured databases
 1. File systems
@@ -42,11 +45,13 @@ audience:
 1. External APIs
 
 ---
+
 ## Processing Capabilities
 
 ![processing_capabilities](svg/lectures/big_data/spark-reports/processing_capabilities.svg)
 
 ---
+
 ## Report Types
 1. Batch reports
 1. Streaming reports
@@ -54,11 +59,13 @@ audience:
 1. Automated alerts
 
 ---
+
 ## Architecture Overview
 
 ![architecture_overview](svg/lectures/big_data/spark-reports/architecture_overview.svg)
 
 ---
+
 ## Data Flow Patterns
 1. ETL processes
 1. Real-time streaming
@@ -66,11 +73,13 @@ audience:
 1. Batch processing
 
 ---
+
 ## Performance Optimization
 
 ![performance_optimization](svg/lectures/big_data/spark-reports/performance_optimization.svg)
 
 ---
+
 ## Memory Management
 1. Cache settings
 1. Heap configuration
@@ -78,6 +87,7 @@ audience:
 1. Memory fractions
 
 ---
+
 ## Resource Allocation
 1. CPU cores
 1. Memory limits
@@ -85,11 +95,13 @@ audience:
 1. Network bandwidth
 
 ---
+
 ## Execution Models
 
 ![execution_models](svg/lectures/big_data/spark-reports/execution_models.svg)
 
 ---
+
 ## Data Formats
 1. CSV files
 1. Parquet files
@@ -97,11 +109,13 @@ audience:
 1. Avro records
 
 ---
+
 ## Processing Modes
 
 ![processing_modes](svg/lectures/big_data/spark-reports/processing_modes.svg)
 
 ---
+
 ## Output Generation
 1. PDF reports
 1. Excel sheets
@@ -109,6 +123,7 @@ audience:
 1. API responses
 
 ---
+
 ## Security Features
 1. Authentication
 1. Authorization
@@ -116,11 +131,13 @@ audience:
 1. Audit logging
 
 ---
+
 ## Monitoring System
 
 ![monitoring_system](svg/lectures/big_data/spark-reports/monitoring_system.svg)
 
 ---
+
 ## Error Handling
 1. Retry logic
 1. Fallback options
@@ -128,11 +145,13 @@ audience:
 1. Alert systems
 
 ---
+
 ## Data Quality
 
 ![data_quality](svg/lectures/big_data/spark-reports/data_quality.svg)
 
 ---
+
 ## Scheduling Options
 1. Cron-based
 1. Event-driven
@@ -140,6 +159,7 @@ audience:
 1. Continuous
 
 ---
+
 ## Performance Metrics
 1. Execution time
 1. Resource usage
@@ -147,11 +167,13 @@ audience:
 1. Latency
 
 ---
+
 ## Integration Points
 
 ![integration_points](svg/lectures/big_data/spark-reports/integration_points.svg)
 
 ---
+
 ## Optimization Techniques
 1. Partition tuning
 1. Query optimization
@@ -159,11 +181,13 @@ audience:
 1. Resource management
 
 ---
+
 ## Deployment Models
 
 ![deployment_models](svg/lectures/big_data/spark-reports/deployment_models.svg)
 
 ---
+
 ## Configuration Management
 1. Environment settings
 1. Resource allocation
@@ -171,6 +195,7 @@ audience:
 1. Performance tuning
 
 ---
+
 ## Testing Approaches
 1. Unit tests
 1. Integration tests
@@ -178,11 +203,13 @@ audience:
 1. Load tests
 
 ---
+
 ## Monitoring Tools
 
 ![monitoring_tools](svg/lectures/big_data/spark-reports/monitoring_tools.svg)
 
 ---
+
 ## Maintenance Tasks
 1. Version updates
 1. Configuration changes
@@ -190,6 +217,7 @@ audience:
 1. Security patches
 
 ---
+
 ## Report Templates
 1. Standard layouts
 1. Custom designs
@@ -197,11 +225,13 @@ audience:
 1. Interactive components
 
 ---
+
 ## Data Governance
 
 ![data_governance](svg/lectures/big_data/spark-reports/data_governance.svg)
 
 ---
+
 ## Best Practices
 1. Code organization
 1. Error handling
@@ -209,11 +239,13 @@ audience:
 1. Security measures
 
 ---
+
 ## Development Workflow
 
 ![development_workflow](svg/lectures/big_data/spark-reports/development_workflow.svg)
 
 ---
+
 ## Scalability Features
 1. Horizontal scaling
 1. Vertical scaling
@@ -221,11 +253,13 @@ audience:
 1. Resource elasticity
 
 ---
+
 ## Data Pipeline Design
 
 ![data_pipeline_design](svg/lectures/big_data/spark-reports/data_pipeline_design.svg)
 
 ---
+
 ## Version Control
 1. Code versioning
 1. Configuration management
@@ -233,6 +267,7 @@ audience:
 1. Rollback procedures
 
 ---
+
 ## Documentation Requirements
 1. Architecture docs
 1. API specifications
@@ -240,11 +275,13 @@ audience:
 1. Operation manuals
 
 ---
+
 ## Troubleshooting Guide
 
 ![troubleshooting_guide](svg/lectures/big_data/spark-reports/troubleshooting_guide.svg)
 
 ---
+
 ## Performance Tuning
 1. Query optimization
 1. Resource allocation
@@ -252,11 +289,13 @@ audience:
 1. Execution planning
 
 ---
+
 ## Deployment Options
 
 ![deployment_options](svg/lectures/big_data/spark-reports/deployment_options.svg)
 
 ---
+
 ## Security Measures
 1. Access control
 1. Data encryption
@@ -264,11 +303,13 @@ audience:
 1. Compliance checks
 
 ---
+
 ## Testing Strategy
 
 ![testing_strategy](svg/lectures/big_data/spark-reports/testing_strategy.svg)
 
 ---
+
 ## Monitoring Setup
 1. Metrics collection
 1. Log aggregation
@@ -276,11 +317,13 @@ audience:
 1. Dashboard setup
 
 ---
+
 ## Resource Management
 
 ![resource_management](svg/lectures/big_data/spark-reports/resource_management.svg)
 
 ---
+
 ## Data Lifecycle
 1. Ingestion
 1. Processing
@@ -288,11 +331,13 @@ audience:
 1. Archival
 
 ---
+
 ## Quality Assurance
 
 ![quality_assurance](svg/lectures/big_data/spark-reports/quality_assurance.svg)
 
 ---
+
 ## Performance Metrics
 1. Response time
 1. Throughput
@@ -300,11 +345,13 @@ audience:
 1. Error rates
 
 ---
+
 ## Maintenance Procedures
 
 ![maintenance_procedures](svg/lectures/big_data/spark-reports/maintenance_procedures.svg)
 
 ---
+
 ## Future Considerations
 1. Scalability needs
 1. Technology updates

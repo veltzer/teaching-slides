@@ -8,9 +8,11 @@ audience:
   - audiences:testers
 
 ---
+
 # Introduction to Performance Testing
 
 ---
+
 ## What This Chapter Covers
 
 - What performance testing is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What It Is
 
 - Measuring system behavior under load
@@ -28,6 +31,7 @@ audience:
 - Repeatable
 
 ---
+
 ## Why It Matters
 
 - Slow systems lose users
@@ -36,6 +40,7 @@ audience:
 - SLAs need evidence
 
 ---
+
 ## Test Types
 
 - Load test
@@ -45,16 +50,19 @@ audience:
 - Capacity test
 
 ---
+
 ## Test Types Visualized
 
 ![perf_test_types](svg/courses/testing/performance-testing/01_introduction/perf_test_types.svg)
 
 ---
+
 ## Test Purposes
 
 ![test_purposes](svg/courses/testing/performance-testing/01_introduction/test_purposes.svg)
 
 ---
+
 ## Load Test
 
 - Expected production traffic
@@ -63,6 +71,7 @@ audience:
 - Baseline for comparisons
 
 ---
+
 ## Stress Test
 
 - Push beyond expected
@@ -71,6 +80,7 @@ audience:
 - Inform autoscaling
 
 ---
+
 ## Spike Test
 
 - Sudden traffic burst
@@ -79,6 +89,7 @@ audience:
 - Verify nothing collapses
 
 ---
+
 ## Soak Test
 
 - Sustained moderate load for hours
@@ -87,6 +98,7 @@ audience:
 - Often run nightly
 
 ---
+
 ## Capacity Test
 
 - Increase load until SLA breaks
@@ -95,6 +107,7 @@ audience:
 - Run on each major release
 
 ---
+
 ## Key Metrics
 
 - Throughput
@@ -103,6 +116,7 @@ audience:
 - Resource use
 
 ---
+
 ## Latency Distributions
 
 - Mean is misleading
@@ -111,6 +125,7 @@ audience:
 - Plot the histogram
 
 ---
+
 ## SLOs And SLAs
 
 - SLO: internal target
@@ -119,6 +134,7 @@ audience:
 - Document and align
 
 ---
+
 ## When To Run
 
 - Before launch
@@ -127,6 +143,7 @@ audience:
 - On a schedule
 
 ---
+
 ## Course Outline
 
 - Tools
@@ -136,6 +153,7 @@ audience:
 - Continuous performance
 
 ---
+
 ## Common Beginner Mistakes
 
 - One run is enough

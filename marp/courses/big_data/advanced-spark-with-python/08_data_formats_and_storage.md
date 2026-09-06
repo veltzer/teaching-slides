@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Data Formats and Storage
 
 ---
+
 ## Chapter Overview
 * Parquet deep dive: row groups, column chunks, page-level statistics
 * Predicate pushdown and projection pushdown
@@ -23,6 +25,7 @@ audience:
 * Partitioning strategies, bucketing, and file compaction
 
 ---
+
 ## Learning Objectives
 * Understand Parquet internal structure and optimization mechanisms
 * Compare columnar vs row-based formats for different workloads
@@ -32,21 +35,25 @@ audience:
 * Choose the right storage format for each use case
 
 ---
+
 ## Parquet File Format Overview
 
 ![parquet_file_format_overview](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/parquet_file_format_overview.svg)
 
 ---
+
 ## Row Groups and Column Chunks
 
 ![row_groups_and_column_chunks](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/row_groups_and_column_chunks.svg)
 
 ---
+
 ## Page-Level Statistics and Column Index
 
 ![page_level_statistics_and_column_index](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/page_level_statistics_and_column_index.svg)
 
 ---
+
 ## Predicate Pushdown
 
 ```python
@@ -91,6 +98,7 @@ spark.conf.set(
 ```
 
 ---
+
 ## Projection Pushdown
 
 ```python
@@ -124,11 +132,13 @@ df.select("user_id", "address.city").explain()
 ```
 
 ---
+
 ## Projection Pushdown Savings
 
 ![projection_pushdown_savings](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/projection_pushdown_savings.svg)
 
 ---
+
 ## Writing Parquet with PySpark
 
 ```python
@@ -181,6 +191,7 @@ spark.conf.set(
 ```
 
 ---
+
 ## Compression Comparison
 
 | Codec | Ratio | Write Speed | Read Speed | Splittable | Use Case |
@@ -192,11 +203,13 @@ spark.conf.set(
 | Uncompressed | 1x | Fastest | Fastest | Yes | Debug/testing |
 
 ---
+
 ## ORC Format Comparison
 
 ![orc_format_comparison](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/orc_format_comparison.svg)
 
 ---
+
 ## Parquet vs ORC Comparison
 
 | Feature | Parquet | ORC |
@@ -214,6 +227,7 @@ spark.conf.set(
 | Recommendation | Use with Spark | Use with Hive-heavy stacks |
 
 ---
+
 ## Reading and Writing ORC with PySpark
 
 ```python
@@ -255,6 +269,7 @@ result.show()
 ```
 
 ---
+
 ## Avro for Streaming
 
 ```python
@@ -318,16 +333,19 @@ query = (
 ```
 
 ---
+
 ## Format Selection Guide
 
 ![format_selection_guide](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/format_selection_guide.svg)
 
 ---
+
 ## Delta Lake Overview
 
 ![delta_lake_overview](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/delta_lake_overview.svg)
 
 ---
+
 ## Delta Lake: Basic Operations
 
 ```python
@@ -381,6 +399,7 @@ spark.sql("""
 ```
 
 ---
+
 ## Delta Lake: MERGE INTO
 
 ```python
@@ -442,6 +461,7 @@ target.alias("t").merge(
 ```
 
 ---
+
 ## Delta Lake: MERGE with SQL
 
 ```python
@@ -479,6 +499,7 @@ history.select(
 ```
 
 ---
+
 ## Delta Lake: Time Travel
 
 ```python
@@ -536,6 +557,7 @@ history.select(
 ```
 
 ---
+
 ## Delta Lake: VACUUM and Maintenance
 
 ```python
@@ -591,16 +613,19 @@ delta_table.restoreToTimestamp("2024-06-01")
 ```
 
 ---
+
 ## Z-Ordering Visualization
 
 ![z_ordering_visualization](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/z_ordering_visualization.svg)
 
 ---
+
 ## Apache Iceberg Overview
 
 ![apache_iceberg_overview](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/apache_iceberg_overview.svg)
 
 ---
+
 ## Iceberg vs Delta Lake
 
 | Feature | Delta Lake | Apache Iceberg |
@@ -620,6 +645,7 @@ delta_table.restoreToTimestamp("2024-06-01")
 | Vendor lock-in | Low-medium | Low |
 
 ---
+
 ## Iceberg with PySpark
 
 ```python
@@ -679,11 +705,13 @@ spark.sql("""
 ```
 
 ---
+
 ## Partitioning Strategies
 
 ![partitioning_strategies](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/partitioning_strategies.svg)
 
 ---
+
 ## Partitioning Implementation
 
 ```python
@@ -735,16 +763,19 @@ df.write \
 ```
 
 ---
+
 ## Partitioning Best Practices
 
 ![partitioning_best_practices](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/partitioning_best_practices.svg)
 
 ---
+
 ## Bucketing vs Partitioning
 
 ![bucketing_vs_partitioning](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/bucketing_vs_partitioning.svg)
 
 ---
+
 ## Bucketing Implementation
 
 ```python
@@ -799,6 +830,7 @@ orders.write \
 ```
 
 ---
+
 ## The Small File Problem
 
 **Cause**: streaming or frequent appends create many tiny files
@@ -821,6 +853,7 @@ orders.write \
 * Poor predicate pushdown (stats per file)
 
 ---
+
 ## Solving the Small File Problem
 
 ```python
@@ -887,11 +920,13 @@ compact_partition("/data/events", "event_date", "2024-06-14")
 ```
 
 ---
+
 ## File Compaction Strategy
 
 ![file_compaction_strategy](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/file_compaction_strategy.svg)
 
 ---
+
 ## Full Program: Data Format Pipeline
 
 ```python
@@ -987,6 +1022,7 @@ history.select(
 ```
 
 ---
+
 ## Summary: Data Formats and Storage
 
 **Formats:**

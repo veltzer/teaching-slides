@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Inter-Service Communication
 
 ---
+
 ## Two Fundamental Styles
 
 - **Synchronous request/response**: A calls B and waits for an answer
@@ -20,11 +22,13 @@ audience:
 - Choosing per case is the design skill
 
 ---
+
 ## Sync vs Async
 
 ![sync_vs_async](svg/courses/architecting/microservices-architecture/05_communication/sync_vs_async.svg)
 
 ---
+
 ## Synchronous: Examples
 
 - HTTP/REST: most common
@@ -33,6 +37,7 @@ audience:
 - All are blocking calls; the caller waits
 
 ---
+
 ## Synchronous: Pros
 
 - Simple mental model: like a function call
@@ -41,6 +46,7 @@ audience:
 - Tooling and debugging are mature
 
 ---
+
 ## Synchronous: Cons
 
 - Tight runtime coupling: if B is down, A is affected
@@ -49,6 +55,7 @@ audience:
 - Reduces availability (B's downtime = A's degraded mode)
 
 ---
+
 ## Asynchronous: Examples
 
 - Message brokers: Kafka, RabbitMQ, NATS, AWS SQS
@@ -57,6 +64,7 @@ audience:
 - All are non-blocking from the producer's perspective
 
 ---
+
 ## Asynchronous: Pros
 
 - Loose runtime coupling: A doesn't need B to be up right now
@@ -65,6 +73,7 @@ audience:
 - Multiple consumers easily
 
 ---
+
 ## Asynchronous: Cons
 
 - Harder to reason about: ordering, timing, idempotency
@@ -73,6 +82,7 @@ audience:
 - More moving parts to operate
 
 ---
+
 ## When Synchronous Wins
 
 - The caller genuinely needs the result before continuing
@@ -81,6 +91,7 @@ audience:
 - Simple internal RPC where availability is high
 
 ---
+
 ## When Asynchronous Wins
 
 - Side effects that don't block the caller (notifications, indexing)
@@ -89,6 +100,7 @@ audience:
 - High-throughput data pipelines
 
 ---
+
 ## A Rule of Thumb
 
 - Read = synchronous (usually)
@@ -97,6 +109,7 @@ audience:
 - Workflows = async
 
 ---
+
 ## REST vs gRPC
 
 - REST: HTTP+JSON; universally readable; loose schema
@@ -105,6 +118,7 @@ audience:
 - GraphQL is a third option for client-facing aggregation
 
 ---
+
 ## Schema for Async
 
 - Messages have schemas just like APIs
@@ -113,11 +127,13 @@ audience:
 - Schema registries enforce compatibility
 
 ---
+
 ## Async Messaging Patterns
 
 ![messaging_patterns](svg/courses/architecting/microservices-architecture/05_communication/messaging_patterns.svg)
 
 ---
+
 ## Choosing a Broker
 
 - Kafka: durable log; many consumers; high throughput; complex to operate
@@ -126,6 +142,7 @@ audience:
 - Cloud-managed (SQS, EventBridge, Pub/Sub): less operational burden, vendor lock-in
 
 ---
+
 ## Service Mesh
 
 - A layer that handles service-to-service communication uniformly
@@ -134,6 +151,7 @@ audience:
 - Adds complexity but centralizes the cross-cutting concerns
 
 ---
+
 ## Avoiding Sync Chains
 
 - A → B → C → D — every hop adds latency and failure modes
@@ -142,6 +160,7 @@ audience:
 - Long synchronous chains are brittle
 
 ---
+
 ## API Gateway in Front
 
 - A gateway translates external requests into internal calls
@@ -150,6 +169,7 @@ audience:
 - Covered in detail in the API Design course
 
 ---
+
 ## Idempotency Across Boundaries
 
 - Cross-service retries are inevitable
@@ -158,6 +178,7 @@ audience:
 - Without idempotency, retries cause duplicates
 
 ---
+
 ## Anti-Patterns
 
 - Synchronous chains across many services for one user request
@@ -166,6 +187,7 @@ audience:
 - One broker for all data — operational single point of failure
 
 ---
+
 ## Summary
 
 - Sync = simple but coupled; async = decoupled but complex

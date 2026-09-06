@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Implementing Queries and Read Models
 
 ---
+
 ## What This Chapter Covers
 
 - Query objects and query handlers
@@ -22,6 +24,7 @@ audience:
 - Caching, staleness, and the user experience
 
 ---
+
 ## A Query Is a Question
 
 - Imperative? No — declarative: `GetOrderSummary`, not `LoadOrder`
@@ -30,6 +33,7 @@ audience:
 - Has no side effects and is safe to retry indefinitely
 
 ---
+
 ## Query Object Anatomy
 
 ```python
@@ -49,6 +53,7 @@ class ListRecentOrders:
 - Pagination is built in (cursor or offset, never assume small results)
 
 ---
+
 ## The Result Type Belongs to the Read Side
 
 ```python
@@ -67,6 +72,7 @@ class OrderSummary:
 - This is **not** the aggregate; it is a view shaped for one screen
 
 ---
+
 ## Query Handler Shape
 
 ```python
@@ -87,6 +93,7 @@ class GetOrderSummaryHandler:
 - Fast and simple — that's the whole point
 
 ---
+
 ## Read Models Are Different From the Aggregate
 
 - The aggregate is shaped for invariant enforcement
@@ -95,6 +102,7 @@ class GetOrderSummaryHandler:
 - One change in the read model does not affect the write side
 
 ---
+
 ## Read Model Ownership
 
 - A read model is owned by **one consumer**: a screen, a report, a search index
@@ -103,11 +111,13 @@ class GetOrderSummaryHandler:
 - General purpose read models drift back into the same problem CQRS solves
 
 ---
+
 ## Multiple Read Models From One Stream
 
 ![multiple_read_models](svg/courses/architecting/cqrs-and-event-sourcing/04_implementing_queries_and_read_models/multiple_read_models.svg)
 
 ---
+
 ## Read Model Examples for an Order
 
 - **Order Summary** (mobile app): id, total, status, last_updated
@@ -117,6 +127,7 @@ class GetOrderSummaryHandler:
 - **Reporting Cube**: revenue by day, by region, by product category
 
 ---
+
 ## Building a Read Model From Events
 
 ```python
@@ -141,6 +152,7 @@ class OrderSummaryProjection:
 ```
 
 ---
+
 ## The Projection Pattern
 
 - One handler per event type the projection cares about
@@ -149,11 +161,13 @@ class OrderSummaryProjection:
 - New events arrive; the projection advances
 
 ---
+
 ## Projection Components
 
 ![projection_components](svg/courses/architecting/cqrs-and-event-sourcing/04_implementing_queries_and_read_models/projection_components.svg)
 
 ---
+
 ## Synchronizing Read Models With the Write Side
 
 - Three options:
@@ -163,11 +177,13 @@ class OrderSummaryProjection:
 - Most production systems use asynchronous; chapter 6 goes deep
 
 ---
+
 ## Sync vs Async vs On-Demand
 
 ![sync_async_ondemand](svg/courses/architecting/cqrs-and-event-sourcing/04_implementing_queries_and_read_models/sync_async_ondemand.svg)
 
 ---
+
 ## Picking Storage for the Read Side
 
 - The right answer depends on the query
@@ -175,6 +191,7 @@ class OrderSummaryProjection:
 - The cost of duplication is low; the benefit of fit is high
 
 ---
+
 ## Relational Stores for Read Models
 
 - Best when queries need joins, sorting, ranges, transactions across rows
@@ -184,6 +201,7 @@ class OrderSummaryProjection:
 - Examples: PostgreSQL, MySQL, SQL Server
 
 ---
+
 ## Document Stores for Read Models
 
 - Best when each query loads a self-contained document
@@ -192,6 +210,7 @@ class OrderSummaryProjection:
 - Examples: MongoDB, DynamoDB, Couchbase
 
 ---
+
 ## Search Engines for Read Models
 
 - Best for full-text, fuzzy match, faceted search
@@ -200,6 +219,7 @@ class OrderSummaryProjection:
 - Examples: Elasticsearch, OpenSearch, Meilisearch
 
 ---
+
 ## Caches as Read Models
 
 - A Redis hash or sorted set can be a read model in its own right
@@ -208,11 +228,13 @@ class OrderSummaryProjection:
 - Examples: Redis, Memcached, Hazelcast
 
 ---
+
 ## Picking Storage By Query Shape
 
 ![storage_by_query_shape](svg/courses/architecting/cqrs-and-event-sourcing/04_implementing_queries_and_read_models/storage_by_query_shape.svg)
 
 ---
+
 ## A Read Model Is Disposable
 
 - If the projection logic changes, drop the read model and rebuild
@@ -221,6 +243,7 @@ class OrderSummaryProjection:
 - Plan for read model rebuilds the way you plan for deploys
 
 ---
+
 ## Rebuild Capability Changes Everything
 
 - "Add a column" — replay the projection with the new column added
@@ -229,6 +252,7 @@ class OrderSummaryProjection:
 - This flexibility is one of the biggest payoffs of event sourcing
 
 ---
+
 ## Caching the Read Side
 
 - Two layers: the read model itself, and a cache in front of it
@@ -237,11 +261,13 @@ class OrderSummaryProjection:
 - A query may hit cache → read model → (rarely) replay
 
 ---
+
 ## A Cache Hierarchy
 
 ![read_side_cache_hierarchy](svg/courses/architecting/cqrs-and-event-sourcing/04_implementing_queries_and_read_models/read_side_cache_hierarchy.svg)
 
 ---
+
 ## Cache Invalidation Strategies (Quick Recap)
 
 - **TTL** — bounded staleness; cheap; lossy
@@ -250,6 +276,7 @@ class OrderSummaryProjection:
 - For depth, see Architecture Patterns ch 10
 
 ---
+
 ## Stale Reads Are Reality
 
 - The read model lags the write model by milliseconds, sometimes seconds
@@ -258,6 +285,7 @@ class OrderSummaryProjection:
 - Telling the user is cheaper than rebuilding the system to be strongly consistent
 
 ---
+
 ## UX Patterns for Eventual Consistency
 
 - **Optimistic update**: show the new state immediately, reconcile when the server confirms
@@ -266,6 +294,7 @@ class OrderSummaryProjection:
 - **Pending banner**: explicit "your order is being processed" UI
 
 ---
+
 ## Optimistic Update Example
 
 ```javascript
@@ -283,6 +312,7 @@ async function placeOrder(items) {
 ```
 
 ---
+
 ## When Strong Consistency Is Required
 
 - Some queries must reflect the write that just happened
@@ -293,6 +323,7 @@ async function placeOrder(items) {
     1. Render from the events themselves on this one query
 
 ---
+
 ## Read-Your-Own-Write Pattern
 
 ```python
@@ -311,6 +342,7 @@ def render_confirmation(order_id, expected_version):
 - Bounded wait — fall back to a "still processing" page if exceeded
 
 ---
+
 ## Pagination
 
 - Read models often serve large lists
@@ -319,6 +351,7 @@ def render_confirmation(order_id, expected_version):
 - The read model schema must include the cursor's sort key
 
 ---
+
 ## Cursor Pagination
 
 ```python
@@ -338,6 +371,7 @@ def list_orders(customer_id, limit, cursor):
 ```
 
 ---
+
 ## Authorization on the Read Side
 
 - Like commands, queries need permission checks
@@ -346,6 +380,7 @@ def list_orders(customer_id, limit, cursor):
 - Filter results to what the actor may see — not what exists
 
 ---
+
 ## Read Model Schema Migrations
 
 - Two strategies:
@@ -355,6 +390,7 @@ def list_orders(customer_id, limit, cursor):
 - In-place is faster for tiny changes (renaming a non-essential column)
 
 ---
+
 ## Common Smells
 
 - **Querying the aggregate**: that's the write model; reads should hit a read model
@@ -363,6 +399,7 @@ def list_orders(customer_id, limit, cursor):
 - **One read model per database table**: think per-screen, not per-table
 
 ---
+
 ## A Concrete Example: Order Domain Read Models
 
 - `orders_by_customer` — list view; cursor by created_at
@@ -372,6 +409,7 @@ def list_orders(customer_id, limit, cursor):
 - All built from the same event stream — independently rebuildable
 
 ---
+
 ## Summary
 
 - Queries are immutable, declarative, side-effect free

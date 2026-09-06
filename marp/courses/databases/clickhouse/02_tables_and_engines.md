@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Tables and Engines
 
 ---
+
 ## What This Chapter Covers
 
 - Engine families
@@ -20,6 +22,7 @@ audience:
 - External engines
 
 ---
+
 ## Engine Families
 
 - Merge-tree variants for storage
@@ -28,11 +31,13 @@ audience:
 - Integration engines for sources
 
 ---
+
 ## Engine Choices
 
 ![engine_choices](svg/courses/databases/clickhouse/02_tables_and_engines/engine_choices.svg)
 
 ---
+
 ## Merge Tree
 
 - Default workhorse
@@ -41,11 +46,13 @@ audience:
 - Indexed by primary key
 
 ---
+
 ## Compaction Over Time
 
 ![mergetree_compaction](svg/courses/databases/clickhouse/02_tables_and_engines/mergetree_compaction.svg)
 
 ---
+
 ## Sort Key
 
 - On-disk order
@@ -54,6 +61,7 @@ audience:
 - Pick by query filters
 
 ---
+
 ## Partition Key
 
 - Logical chunking
@@ -62,6 +70,7 @@ audience:
 - Often by month or day
 
 ---
+
 ## Primary Key
 
 - Subset of sort key
@@ -70,6 +79,7 @@ audience:
 - Skips data the query cannot need
 
 ---
+
 ## Replacing Variant
 
 - Same key replaced on merge
@@ -78,6 +88,7 @@ audience:
 - Good for upserts
 
 ---
+
 ## Summing Variant
 
 - Sums same-key rows on merge
@@ -86,6 +97,7 @@ audience:
 - Approximate until merged
 
 ---
+
 ## Aggregating Variant
 
 - Stores aggregate states
@@ -94,6 +106,7 @@ audience:
 - Power of pre-computation
 
 ---
+
 ## Collapsing Variant
 
 - Sign column flips delete
@@ -102,6 +115,7 @@ audience:
 - Tricky to use correctly
 
 ---
+
 ## Distributed Engine
 
 - Routes queries across shards
@@ -110,6 +124,7 @@ audience:
 - Pair with sharding key
 
 ---
+
 ## External Engines
 
 - Read object storage directly
@@ -118,6 +133,7 @@ audience:
 - Useful for ad-hoc joins
 
 ---
+
 ## Materialized Views
 
 - Insert trigger pipelines
@@ -126,6 +142,7 @@ audience:
 - Powers fast dashboards
 
 ---
+
 ## Common Engine Mistakes
 
 - Wrong sort key for the query

@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # GitHub Releases and Source Builds
 
 ---
+
 ## When the Distro Doesn't Have It
 
 The package manager covers most cases. The remaining ones:
@@ -30,6 +32,7 @@ For these you have two paths:
 Both work, both are common, both come with the same caveat: you, not the package manager, now own the lifecycle.
 
 ---
+
 ## `GitHub` Releases as a Distribution Channel
 
 `GitHub` lets each project attach binaries to a tagged release.
@@ -43,6 +46,7 @@ Both work, both are common, both come with the same caveat: you, not the package
 This is how a huge fraction of modern infrastructure tooling ships: `kubectl`, `helm`, `terraform`, `gh`, `k9s`, `lazygit`, ...
 
 ---
+
 ## Downloading a `GitHub` Release By Hand
 
 ```bash
@@ -69,6 +73,7 @@ gh --version
 `/usr/local/bin/` is the conventional place for locally-installed binaries. Distros leave it alone.
 
 ---
+
 ## Using the `gh` CLI to Fetch Releases
 
 If you have `gh` installed, fetching is much nicer.
@@ -93,6 +98,7 @@ gh release download --repo cli/cli --pattern '*linux_amd64.tar.gz'
 Convenient in scripts because you don't have to URL-build by hand.
 
 ---
+
 ## Verifying What You Downloaded
 
 The download is only as trustworthy as the verification step. The minimum is a checksum, ideally a signature.
@@ -118,6 +124,7 @@ cosign verify-blob \
 If a project offers signatures and you skip them, you've made the download untrusted on purpose.
 
 ---
+
 ## Where to Put the Binary
 
 `Linux` has informal conventions. Pick one and be consistent.
@@ -145,6 +152,7 @@ sudo ln -s /opt/myapp/bin/myapp /usr/local/bin/myapp
 Avoid `/usr/bin/` and `/bin/`. Those belong to the distro's package manager.
 
 ---
+
 ## The Real Problem: There Is No Lifecycle
 
 Once you `cp` a binary into `/usr/local/bin`, the system has no idea:
@@ -158,6 +166,7 @@ Once you `cp` a binary into `/usr/local/bin`, the system has no idea:
 `apt list --installed` won't show it. `dnf history` won't show it. `rpm -qf /usr/local/bin/foo` returns "not owned by any package". Three months from now, *you* are the package manager.
 
 ---
+
 ## Mitigating the Lifecycle Gap
 
 A few practical patterns to make this less painful.
@@ -187,11 +196,13 @@ sudo chmod +x /usr/local/bin/install-gh
 This isn't beautiful. It is, however, the difference between "I can recreate this server" and "I cannot."
 
 ---
+
 ## Source Install Flow
 
 ![source_install_flow](svg/courses/operating_systems/linux-package-managers/06_github_and_source/source_install_flow.svg)
 
 ---
+
 ## Building From Source: The Classic `autotools` Recipe
 
 ```bash
@@ -216,6 +227,7 @@ sudo make uninstall
 `./configure` checks for build dependencies and adapts to your system. If it fails, the message usually tells you which `-dev` package to install.
 
 ---
+
 ## Build Dependencies on Debian/Ubuntu
 
 ```bash
@@ -232,6 +244,7 @@ sudo apt install libssl-dev libxml2-dev zlib1g-dev pkg-config
 If a project's `./configure` says `error: cannot find libfoo`, the answer is almost always `apt install libfoo-dev`.
 
 ---
+
 ## Build Dependencies on RHEL/Fedora
 
 ```bash
@@ -250,6 +263,7 @@ sudo dnf install openssl-devel libxml2-devel zlib-devel
 Naming convention reminder: `Debian` uses `-dev`, `Red Hat` uses `-devel`. Otherwise it's the same idea.
 
 ---
+
 ## `cmake`, `meson`, `ninja`: The Modern Builds
 
 Many newer projects don't use `autotools`. The most common alternatives:
@@ -274,6 +288,7 @@ sudo make install PREFIX=/usr/local
 The shape is always the same: configure → build → install. The vocabulary changes per build system.
 
 ---
+
 ## `checkinstall`: Wrap a `make install` in a `.deb`
 
 `checkinstall` runs `make install`, watches what files appear, and packages them into a `.deb` (or `.rpm`).
@@ -303,6 +318,7 @@ sudo dpkg -r myapp
 Crude but effective. The `.deb` it produces is not great for redistribution, but it gives you a clean uninstall.
 
 ---
+
 ## `GNU stow`: A Directory Per Manual Install
 
 `stow` lets you install several manual builds without them stepping on each other.
@@ -326,6 +342,7 @@ sudo stow -D myapp-1.0
 `/usr/local/stow/myapp-1.0/` and `/usr/local/stow/myapp-1.1/` can coexist. Switch by `unstow` + `stow`.
 
 ---
+
 ## `apt source` and `dpkg-buildpackage`
 
 If a Debian package exists but you want a tweaked version, build it from the distro's source package.
@@ -354,6 +371,7 @@ sudo dpkg -i nginx_*.deb
 This is the *right* way to make a custom build of a distro package. You stay inside the package manager's ecosystem.
 
 ---
+
 ## The Hidden Cost: Security Updates
 
 This is the killer argument for using package managers.
@@ -372,6 +390,7 @@ But:
 Multiplied across dozens of manual installs on a server, this becomes the difference between "patched" and "vulnerable for six months because no one remembered."
 
 ---
+
 ## Source Build Checklist
 
 If you're going to build from source, make it survivable.

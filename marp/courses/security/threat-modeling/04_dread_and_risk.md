@@ -11,9 +11,11 @@ audience:
   - audiences:managers
 
 ---
+
 # DREAD and Risk Rating
 
 ---
+
 ## What This Chapter Covers
 
 - DREAD's five dimensions and how to score
@@ -23,6 +25,7 @@ audience:
 - Pragmatic risk rating for real teams
 
 ---
+
 ## Why Rate Threats?
 
 - STRIDE finds many threats — you cannot fix them all today
@@ -32,6 +35,7 @@ audience:
 - A bad rating is just a number with feelings
 
 ---
+
 ## DREAD Dimensions
 
 - **D**amage potential — how bad is exploitation?
@@ -41,11 +45,13 @@ audience:
 - **D**iscoverability — how easy is it to find?
 
 ---
+
 ## DREAD Visualized
 
 ![dread_dimensions](svg/courses/security/threat-modeling/04_dread_and_risk/dread_dimensions.svg)
 
 ---
+
 ## Damage Potential
 
 - 0 — no damage
@@ -55,6 +61,7 @@ audience:
 - Consider: regulatory and reputational damage
 
 ---
+
 ## Reproducibility
 
 - 0 — virtually impossible to reproduce
@@ -64,6 +71,7 @@ audience:
 - Race conditions and rare bugs may rate low here
 
 ---
+
 ## Exploitability
 
 - 0 — requires advanced custom tooling and access
@@ -73,6 +81,7 @@ audience:
 - Public exploits move this rating up dramatically
 
 ---
+
 ## Affected Users
 
 - 0 — none
@@ -82,6 +91,7 @@ audience:
 - Internal-only systems still have "users" worth considering
 
 ---
+
 ## Discoverability
 
 - 0 — virtually undiscoverable
@@ -91,6 +101,7 @@ audience:
 - Many practitioners drop this dimension; we'll discuss why
 
 ---
+
 ## Calculating a Score
 
 - Naive: average all five (DREAD / 5)
@@ -100,6 +111,7 @@ audience:
 - Use the score to bucket, then judge
 
 ---
+
 ## Worked Example
 
 - Threat: SQL injection in login endpoint
@@ -111,6 +123,7 @@ audience:
 - Average: 9.8 — critical, fix now
 
 ---
+
 ## DREAD Strengths
 
 - Simple — five dimensions, easy to teach
@@ -120,6 +133,7 @@ audience:
 - Useful entry-level rating system
 
 ---
+
 ## DREAD Weaknesses
 
 - Subjective — your "8" is my "6"
@@ -129,6 +143,7 @@ audience:
 - Risk of false precision — a number is not a justification
 
 ---
+
 ## The Discoverability Debate
 
 - "Discoverable threats are riskier" — true in some sense
@@ -138,6 +153,7 @@ audience:
 - Or: weight it last, use only as a tiebreaker
 
 ---
+
 ## Mitigating DREAD's Subjectivity
 
 - Calibrate as a team — what does an "8" mean for *this* threat?
@@ -147,6 +163,7 @@ audience:
 - Two raters, then reconcile, beats one rater alone
 
 ---
+
 ## CVSS as an Alternative
 
 - Common Vulnerability Scoring System
@@ -156,6 +173,7 @@ audience:
 - Worth using for known CVEs in dependencies
 
 ---
+
 ## Qualitative Matrices
 
 - 3x3 or 5x5 matrix: likelihood × impact
@@ -165,11 +183,13 @@ audience:
 - Often easier to defend in a meeting
 
 ---
+
 ## Likelihood × Impact Matrix
 
 ![risk_matrix](svg/courses/security/threat-modeling/04_dread_and_risk/risk_matrix.svg)
 
 ---
+
 ## Pragmatic Risk Rating
 
 - Pick a system you trust your team to apply consistently
@@ -179,6 +199,7 @@ audience:
 - Don't optimize the rating system — optimize the *response* to threats
 
 ---
+
 ## What to Do With a Rating
 
 - Critical — fix before release, escalate
@@ -188,6 +209,7 @@ audience:
 - Document the *decision* explicitly per threat
 
 ---
+
 ## Risk Acceptance
 
 - Sometimes the cost of fixing exceeds the cost of the threat
@@ -197,6 +219,7 @@ audience:
 - Re-review accepted risks annually
 
 ---
+
 ## Risk Transfer
 
 - Insurance, contractual liability, third-party services
@@ -206,6 +229,7 @@ audience:
 - Consider transfer for low-frequency, high-impact threats
 
 ---
+
 ## Common Pitfalls
 
 - Treating DREAD scores as objective truth
@@ -215,6 +239,7 @@ audience:
 - Stopping at the rating without making a decision
 
 ---
+
 ## Summary
 
 - DREAD: damage, reproducibility, exploitability, affected, discoverability

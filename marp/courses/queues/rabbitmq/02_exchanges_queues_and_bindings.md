@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Exchanges, Queues, and Bindings
 
 ---
+
 ## Binding Keys
 
 ![binding_keys](svg/courses/queues/rabbitmq/02_exchanges_queues_and_bindings/binding_keys.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Queue declaration and properties
@@ -26,16 +29,19 @@ audience:
 - A practical guide to choosing
 
 ---
+
 ## Exchange Types
 
 ![exchange_types](svg/courses/queues/rabbitmq/02_exchanges_queues_and_bindings/exchange_types.svg)
 
 ---
+
 ## Queue Properties
 
 ![queue_properties](svg/courses/queues/rabbitmq/02_exchanges_queues_and_bindings/queue_properties.svg)
 
 ---
+
 ## Queues
 
 - Hold messages until consumed
@@ -45,6 +51,7 @@ audience:
 - One queue, one *message destination* per delivery
 
 ---
+
 ## Queue Declaration
 
 ```python
@@ -61,6 +68,7 @@ ch.queue_declare(
 - Use durable=True for queues with messages you can't lose
 
 ---
+
 ## Queue Arguments
 
 - `x-message-ttl`: messages expire after N ms
@@ -70,6 +78,7 @@ ch.queue_declare(
 - `x-queue-mode`: lazy (page to disk aggressively) or default
 
 ---
+
 ## Exchanges
 
 - Producers publish to exchanges, not queues
@@ -79,6 +88,7 @@ ch.queue_declare(
 - A single exchange may bind to many queues
 
 ---
+
 ## Direct Exchange
 
 - Routes by exact match between routing key and binding key
@@ -87,6 +97,7 @@ ch.queue_declare(
 - Use for: point-to-point messaging
 
 ---
+
 ## Direct Example
 
 ```python
@@ -99,6 +110,7 @@ ch.basic_publish(exchange='direct.orders', routing_key='ship', body='...')
 ```
 
 ---
+
 ## Fanout Exchange
 
 - Ignores routing key
@@ -107,6 +119,7 @@ ch.basic_publish(exchange='direct.orders', routing_key='ship', body='...')
 - Use for: broadcast to all subscribers
 
 ---
+
 ## Fanout Example
 
 ```python
@@ -119,6 +132,7 @@ ch.basic_publish(exchange='events', routing_key='', body='user_signed_up')
 ```
 
 ---
+
 ## Topic Exchange
 
 - Routes by pattern matching on a dotted routing key
@@ -127,6 +141,7 @@ ch.basic_publish(exchange='events', routing_key='', body='user_signed_up')
 - Use for: hierarchical/categorised events
 
 ---
+
 ## Topic Example
 
 ```python
@@ -139,6 +154,7 @@ ch.basic_publish(exchange='log', routing_key='auth.error', body='login failed')
 ```
 
 ---
+
 ## Headers Exchange
 
 - Routes by message *headers*, not routing key
@@ -148,6 +164,7 @@ ch.basic_publish(exchange='log', routing_key='auth.error', body='login failed')
 - Use only when topic isn't expressive enough
 
 ---
+
 ## Bindings
 
 - The relationship between an exchange and a queue
@@ -156,6 +173,7 @@ ch.basic_publish(exchange='log', routing_key='auth.error', body='login failed')
 - Bindings are explicit; exchanges + queues + bindings are the routing rules
 
 ---
+
 ## The Default Exchange
 
 - Pre-declared, type direct, name `""` (empty)
@@ -165,6 +183,7 @@ ch.basic_publish(exchange='log', routing_key='auth.error', body='login failed')
 - Don't rely on it for production routing logic
 
 ---
+
 ## Naming Conventions
 
 - Exchanges: `exchange.<service>.<type>` or just `<service>.events`
@@ -174,11 +193,13 @@ ch.basic_publish(exchange='log', routing_key='auth.error', body='login failed')
 - Document the conventions for your project
 
 ---
+
 ## Exchange Choice Guide
 
 ![exchange_choice_guide](svg/courses/queues/rabbitmq/02_exchanges_queues_and_bindings/exchange_choice_guide.svg)
 
 ---
+
 ## Choosing An Exchange Type
 
 - One queue gets the message? &#8594; **direct**
@@ -188,6 +209,7 @@ ch.basic_publish(exchange='log', routing_key='auth.error', body='login failed')
 - Most use cases: direct or topic
 
 ---
+
 ## Multi-Exchange Setups
 
 - A producer publishes to one exchange
@@ -197,6 +219,7 @@ ch.basic_publish(exchange='log', routing_key='auth.error', body='login failed')
 - Powerful; can be confusing — diagram before building
 
 ---
+
 ## Common Mistakes
 
 - Publishing to queues directly (use exchanges instead)

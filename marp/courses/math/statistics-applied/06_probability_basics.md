@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Probability Basics
 
 ---
+
 ## What This Chapter Covers
 
 - What a probability is
@@ -21,11 +23,13 @@ audience:
 - Where intuition goes wrong
 
 ---
+
 ## Events, Unions, Intersections
 
 ![events_venn](svg/courses/math/statistics-applied/06_probability_basics/events_venn.svg)
 
 ---
+
 ## What A Probability Is
 
 - A number from 0 (impossible) to 1 (certain) attached to an event
@@ -35,6 +39,7 @@ audience:
 - Probabilities of all distinct outcomes sum to 1
 
 ---
+
 ## Events And Sample Spaces
 
 - **Sample space**: every possible outcome — {heads, tails} for a coin
@@ -44,6 +49,7 @@ audience:
 - Often the complement is far easier to compute — "at least one" problems especially
 
 ---
+
 ## Combining Events
 
 - **Addition rule**: P(A or B) = P(A) + P(B) &minus; P(A and B)
@@ -53,6 +59,7 @@ audience:
 - These two rules, plus the complement, handle most everyday problems
 
 ---
+
 ## Independence
 
 - A and B are **independent** if knowing one tells you nothing about the other
@@ -62,6 +69,7 @@ audience:
 - Many wrong analyses come from pretending dependent events are independent
 
 ---
+
 ## Conditional Probability
 
 - P(A | B) = P(A and B) / P(B) — "probability of A given B happened"
@@ -71,6 +79,7 @@ audience:
 - Conditioning is how evidence enters a probability calculation
 
 ---
+
 ## Bayes' Theorem
 
 - P(A | B) = P(B | A) &times; P(A) / P(B)
@@ -80,11 +89,13 @@ audience:
 - Always start from the base rate, then update
 
 ---
+
 ## Bayes and the Base Rate
 
 ![bayes_base_rate](svg/courses/math/statistics-applied/06_probability_basics/bayes_base_rate.svg)
 
 ---
+
 ## A Worked Bayes Example
 
 ```python
@@ -99,6 +110,7 @@ print(f"P(sick | positive) = {p_sick_given_pos:.2%}")  # ~16.7%
 - A "positive" still leaves >80% chance you're fine — base rate dominates
 
 ---
+
 ## Where Intuition Fails
 
 - Ignoring the base rate (the example above)
@@ -108,6 +120,7 @@ print(f"P(sick | positive) = {p_sick_given_pos:.2%}")  # ~16.7%
 - Treating correlated events as independent and multiplying anyway
 
 ---
+
 ## Common Mistakes
 
 - Adding probabilities without subtracting the overlap

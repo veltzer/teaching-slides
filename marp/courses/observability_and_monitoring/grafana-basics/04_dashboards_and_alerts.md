@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Dashboards and Alerts
 
 ---
+
 ## What This Chapter Covers
 
 - Dashboard layout
@@ -19,6 +21,7 @@ audience:
 - Notification channels
 
 ---
+
 ## Dashboard Layout
 
 - Top: KPIs at a glance
@@ -27,6 +30,7 @@ audience:
 - Reading order matches investigation flow
 
 ---
+
 ## Sizing Panels
 
 - Width by importance
@@ -35,6 +39,7 @@ audience:
 - Avoid horizontal scrolling
 
 ---
+
 ## Time Range
 
 - Default to last 1 hour
@@ -43,6 +48,7 @@ audience:
 - Snap to current time
 
 ---
+
 ## Variables
 
 - Drop-downs at top
@@ -51,11 +57,13 @@ audience:
 - Refresh policy chosen
 
 ---
+
 ## Variables Visualized
 
 ![variables](svg/courses/observability_and_monitoring/grafana-basics/04_dashboards_and_alerts/variables_drilldown.svg)
 
 ---
+
 ## Templating
 
 - One dashboard, many environments
@@ -64,6 +72,7 @@ audience:
 - Encourages consistency
 
 ---
+
 ## Linking
 
 - Click panel to drill down
@@ -72,6 +81,7 @@ audience:
 - Keeps investigation flow
 
 ---
+
 ## Versioning
 
 - Dashboards as code
@@ -80,6 +90,7 @@ audience:
 - Provisioned to Grafana
 
 ---
+
 ## Alert Rules
 
 - Tied to a query
@@ -88,11 +99,13 @@ audience:
 - Severity levels matter
 
 ---
+
 ## Alerting Pipeline
 
 ![alerting_pipeline](svg/courses/observability_and_monitoring/grafana-basics/04_dashboards_and_alerts/alerting_pipeline.svg)
 
 ---
+
 ## Alert Routing
 
 - Send by labels
@@ -101,6 +114,7 @@ audience:
 - Document each rule
 
 ---
+
 ## Notification Channels
 
 - Email
@@ -109,6 +123,7 @@ audience:
 - Webhooks
 
 ---
+
 ## Pager Hygiene
 
 - Each page should require action
@@ -117,6 +132,7 @@ audience:
 - Otherwise it gets ignored
 
 ---
+
 ## Silences
 
 - Pause noisy alerts during deploys
@@ -125,6 +141,7 @@ audience:
 - Audit silences
 
 ---
+
 ## Inhibition
 
 - Suppress less important alerts
@@ -133,6 +150,7 @@ audience:
 - Configure per environment
 
 ---
+
 ## Common Dashboard Mistakes
 
 - One huge dashboard

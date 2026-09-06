@@ -9,9 +9,11 @@ audience:
   - audiences:security-professionals
 
 ---
+
 # Threat Modeling Fundamentals
 
 ---
+
 ## What This Chapter Covers
 
 - What threat modeling is and what it is not
@@ -21,6 +23,7 @@ audience:
 - Iteration: threat models that stay alive
 
 ---
+
 ## What Is Threat Modeling?
 
 - A structured analysis of a system's security
@@ -30,6 +33,7 @@ audience:
 - Inputs: system design, attacker profile, security goals
 
 ---
+
 ## Four Questions, Always
 
 - What are we building?
@@ -39,16 +43,19 @@ audience:
 - These four frame every methodology — STRIDE, PASTA, etc
 
 ---
+
 ## The Four Questions Visualized
 
 ![threat_questions](svg/courses/security/threat-modeling/01_fundamentals/threat_questions.svg)
 
 ---
+
 ## Four Questions Visualised
 
 ![four_questions](svg/courses/security/threat-modeling/01_fundamentals/four_questions.svg)
 
 ---
+
 ## Why It Matters
 
 - Security bugs found in design are 10x cheaper than in code
@@ -58,6 +65,7 @@ audience:
 - Compliance increasingly demands documented threat analysis
 
 ---
+
 ## What Threat Modeling Is Not
 
 - Not a checklist exercise
@@ -67,6 +75,7 @@ audience:
 - Not something to do "if there is time"
 
 ---
+
 ## When to Threat Model
 
 - Early in design — sketch the system, sketch the threats
@@ -76,11 +85,13 @@ audience:
 - After incidents — your model missed something
 
 ---
+
 ## Threat Modeling in the SDLC
 
 ![sdlc_placement](svg/courses/security/threat-modeling/01_fundamentals/sdlc_placement.svg)
 
 ---
+
 ## Who Participates?
 
 - Architects and senior developers (system knowledge)
@@ -90,6 +101,7 @@ audience:
 - A mix beats a security-only review every time
 
 ---
+
 ## Attacker Profiles
 
 - Script kiddie — opportunistic, automated tools
@@ -99,11 +111,13 @@ audience:
 - Different profiles target different assets
 
 ---
+
 ## Attacker Profile Comparison
 
 ![attacker_profiles](svg/courses/security/threat-modeling/01_fundamentals/attacker_profiles.svg)
 
 ---
+
 ## Threat Actor Considerations
 
 - Capability — what skills and tools they have
@@ -113,6 +127,7 @@ audience:
 - Right model: think about the actors *most likely* for your system
 
 ---
+
 ## Defining Scope
 
 - Pick a subsystem, not the whole world
@@ -122,6 +137,7 @@ audience:
 - Document the scope explicitly to prevent drift
 
 ---
+
 ## Security Assumptions
 
 - "We trust the database server" — write it down
@@ -131,6 +147,7 @@ audience:
 - An untrue assumption is a hidden threat
 
 ---
+
 ## Constraints and Trade-Offs
 
 - Performance, cost, time-to-market all push back on security
@@ -140,6 +157,7 @@ audience:
 - Future engineers need to know why something is or isn't done
 
 ---
+
 ## Iterative Threat Modeling
 
 - Do not aim for perfect — aim for current and useful
@@ -149,6 +167,7 @@ audience:
 - Treat the model as living documentation
 
 ---
+
 ## Output Artifacts
 
 - A data flow diagram (or equivalent)
@@ -158,6 +177,7 @@ audience:
 - A history of decisions for future reviewers
 
 ---
+
 ## Common Misconceptions
 
 - "We're agile, we don't have time" — agile teams need *lighter* threat models
@@ -167,6 +187,7 @@ audience:
 - "Compliance covers it" — compliance is the floor, not the ceiling
 
 ---
+
 ## Lightweight Threat Modeling
 
 - Whiteboard a diagram in 30 minutes
@@ -176,6 +197,7 @@ audience:
 - Not a 200-page document — a living artifact
 
 ---
+
 ## Maturity Stages
 
 - Stage 0 — none, hope-driven security
@@ -185,6 +207,7 @@ audience:
 - Stage 4 — automated where possible, integrated with CI
 
 ---
+
 ## Tools or Pen and Paper?
 
 - Pen and paper for the first pass — speed matters
@@ -194,6 +217,7 @@ audience:
 - The right tool depends on your stage and team
 
 ---
+
 ## Course Roadmap
 
 - Chapter 2 — Data flow diagrams: the foundation
@@ -205,6 +229,7 @@ audience:
 - Chapter 8 — Integrating threat modeling and tracking remediation
 
 ---
+
 ## Summary
 
 - Threat modeling answers "what can go wrong?" early

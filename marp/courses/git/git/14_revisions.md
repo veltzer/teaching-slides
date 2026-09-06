@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Understanding Revisions (gitrevisions)
 
 ---
@@ -78,6 +79,7 @@ Understanding what different revision expressions refer to:
 - Content-addressable by hash
 
 ---
+
 ## Branch References: Example
 
 Branch names are the most common revision type:
@@ -102,6 +104,7 @@ git show -- -feature-branch
 - Stored in `.git/refs/heads/`
 
 ---
+
 ## Branch References
 
 ![branch_starting_with_dash_use_double_dash](svg/courses/git/git/14_revisions/branch_starting_with_dash_use_double_dash.svg)
@@ -206,6 +209,7 @@ git show v1.0.0~1         # 1 commit before tag v1.0.0
 - Most common relative reference
 
 ---
+
 ## Relative References with Caret (^): Example
 
 Navigate merge commit parents with caret notation:
@@ -230,6 +234,7 @@ git show HEAD^2~3          # 3rd ancestor of 2nd parent
 - Important for merge commits with multiple parents
 
 ---
+
 ## Relative References with Caret (^)
 
 ![combining_caret_and_tilde](svg/courses/git/git/14_revisions/combining_caret_and_tilde.svg)
@@ -385,6 +390,7 @@ git log HEAD~5..HEAD -- *.py
 - Works with relative and absolute paths
 
 ---
+
 ## Range Specifications: Example
 
 Specify ranges of commits:
@@ -411,6 +417,7 @@ git log B C --not A       # Same as above
 - Review pending changes
 
 ---
+
 ## Range Specifications
 
 ![multiple_references](svg/courses/git/git/14_revisions/multiple_references.svg)

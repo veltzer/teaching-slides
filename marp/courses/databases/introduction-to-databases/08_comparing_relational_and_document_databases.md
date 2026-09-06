@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Comparing Relational and Document Databases
 
 ---
+
 ## What This Chapter Covers
 
 - Modeling differences
@@ -20,6 +22,7 @@ audience:
 - A practical comparison
 
 ---
+
 ## Modeling
 
 - Relational: separate tables; foreign keys
@@ -28,11 +31,13 @@ audience:
 - "Customer with orders" looks very different
 
 ---
+
 ## Side by Side
 
 ![rel_vs_doc](svg/courses/databases/introduction-to-databases/08_comparing_relational_and_document_databases/rel_vs_doc.svg)
 
 ---
+
 ## Relational Example
 
 ```sql
@@ -43,6 +48,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - Two tables; join when needed
 
 ---
+
 ## Document Example
 
 ```json
@@ -59,6 +65,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - One document; orders embedded
 
 ---
+
 ## Querying
 
 - Relational: SQL JOINs
@@ -67,6 +74,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - For "fetch one entity with all data": document simpler
 
 ---
+
 ## Schema
 
 - Relational: schema-on-write; rigid
@@ -74,6 +82,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - Trade-off: integrity vs evolution
 
 ---
+
 ## Performance
 
 - Read one entity: document wins (no join)
@@ -82,6 +91,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - Profile your workload
 
 ---
+
 ## Transactions
 
 - Relational: full ACID
@@ -89,6 +99,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - Heavy multi-entity transactions: relational
 
 ---
+
 ## Scaling
 
 - Relational: vertical mostly; sharding hard
@@ -96,6 +107,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - For massive scale: document often easier
 
 ---
+
 ## Tooling
 
 - Relational: BI tools, ORMs everywhere
@@ -103,6 +115,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - Reporting: relational has more options
 
 ---
+
 ## Operations
 
 - Relational: well-understood; many DBAs
@@ -110,6 +123,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - Backup, monitoring: both have tools
 
 ---
+
 ## When Relational Wins
 
 - Complex relations
@@ -118,6 +132,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - Most apps fit here
 
 ---
+
 ## When Document Wins
 
 - Hierarchical data
@@ -126,6 +141,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - Per-record schema variation
 
 ---
+
 ## Hybrid Approach
 
 - Many companies use both
@@ -134,6 +150,7 @@ CREATE TABLE orders (id INT, customer_id INT, total NUMERIC);
 - Polyglot persistence
 
 ---
+
 ## Common Comparison Mistakes
 
 - "MongoDB is web-scale" without measuring

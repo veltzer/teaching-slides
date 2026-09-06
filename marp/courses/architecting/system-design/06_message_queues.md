@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Message Queues
 
 ---
+
 ## What This Chapter Covers
 
 - Why queues
@@ -22,6 +24,7 @@ audience:
 - Common patterns
 
 ---
+
 ## Why Queues
 
 - Decouple producer and consumer
@@ -31,21 +34,25 @@ audience:
 - Scale consumers independently
 
 ---
+
 ## Use Cases at a Glance
 
 ![queue_use_cases](svg/courses/architecting/system-design/06_message_queues/queue_use_cases.svg)
 
 ---
+
 ## When to Reach for One
 
 ![queue_uses](svg/courses/architecting/system-design/06_message_queues/queue_uses.svg)
 
 ---
+
 ## Queue Versus Log
 
 ![queue_vs_log](svg/courses/architecting/system-design/06_message_queues/queue_vs_log.svg)
 
 ---
+
 ## Kafka
 
 - Distributed log
@@ -55,6 +62,7 @@ audience:
 - Best for: events, analytics
 
 ---
+
 ## RabbitMQ
 
 - Traditional message broker
@@ -63,6 +71,7 @@ audience:
 - Best for: workflow, RPC
 
 ---
+
 ## SQS
 
 - AWS managed queue
@@ -71,6 +80,7 @@ audience:
 - Best for: AWS-native event-driven
 
 ---
+
 ## Producer-Consumer
 
 - Producer puts messages on queue
@@ -79,6 +89,7 @@ audience:
 - Failed: retry or dead-letter
 
 ---
+
 ## At-Least-Once
 
 - Default in most queues
@@ -87,6 +98,7 @@ audience:
 - Consumer must be idempotent
 
 ---
+
 ## Exactly-Once
 
 - Hard; usually approximated
@@ -95,6 +107,7 @@ audience:
 - Don't over-engineer for it
 
 ---
+
 ## Dead Letter Queues
 
 - For messages that repeatedly fail
@@ -103,6 +116,7 @@ audience:
 - Standard pattern
 
 ---
+
 ## Backpressure
 
 - Producer faster than consumer
@@ -111,6 +125,7 @@ audience:
 - Detect: queue depth metrics
 
 ---
+
 ## Patterns: Fan-Out
 
 - One message; many consumers
@@ -119,6 +134,7 @@ audience:
 - Clean decoupling
 
 ---
+
 ## Patterns: Work Queues
 
 - Many messages; multiple workers
@@ -127,6 +143,7 @@ audience:
 - The classic batch processing pattern
 
 ---
+
 ## Patterns: Request-Reply
 
 - Producer sends; expects reply
@@ -135,6 +152,7 @@ audience:
 - Used: RPC over queues
 
 ---
+
 ## Choosing A Queue
 
 - Streaming, replay, high throughput: Kafka
@@ -143,6 +161,7 @@ audience:
 - Match to your use case
 
 ---
+
 ## Common Queue Mistakes
 
 - Treating Kafka as RabbitMQ (or vice versa)

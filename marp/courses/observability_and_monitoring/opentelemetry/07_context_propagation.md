@@ -7,14 +7,17 @@ audience:
   - audiences:devops
 
 ---
+
 # Context Propagation
 
 ---
+
 ## traceparent header
 
 ![w3c_traceparent](svg/courses/observability_and_monitoring/opentelemetry/07_context_propagation/w3c_traceparent.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why context matters
@@ -25,6 +28,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## Why Context Matters
 
 - Trace must span services
@@ -32,6 +36,7 @@ audience:
 - Without it: each service is its own island
 
 ---
+
 ## W3C Trace Context
 
 - traceparent header: trace_id, span_id, flags
@@ -39,6 +44,7 @@ audience:
 - Standard across libraries and vendors
 
 ---
+
 ## traceparent Format
 
 - Version-traceID-spanID-flags
@@ -46,6 +52,7 @@ audience:
 - Server reads incoming; outgoing requests use child span
 
 ---
+
 ## Baggage
 
 - Key-value data alongside trace context
@@ -53,11 +60,13 @@ audience:
 - Use for: user id, tenant, feature flag
 
 ---
+
 ## Two Headers Compared
 
 ![baggage_vs_traceparent](svg/courses/observability_and_monitoring/opentelemetry/07_context_propagation/baggage.svg)
 
 ---
+
 ## Sample Baggage
 
 - "user.tenant=acme"
@@ -66,6 +75,7 @@ audience:
 - Don't put secrets
 
 ---
+
 ## HTTP Propagation
 
 - Auto by instrumented libraries
@@ -73,6 +83,7 @@ audience:
 - Writes outgoing for every HTTP call
 
 ---
+
 ## gRPC Propagation
 
 - Metadata carries headers
@@ -80,6 +91,7 @@ audience:
 - Same format as HTTP
 
 ---
+
 ## Messaging
 
 - Kafka: headers
@@ -88,6 +100,7 @@ audience:
 - Producer adds; consumer reads
 
 ---
+
 ## Async Workers
 
 - Job published with context
@@ -95,6 +108,7 @@ audience:
 - Trace spans the async boundary
 
 ---
+
 ## Goroutines / Threads
 
 - Context passes via parameter
@@ -102,6 +116,7 @@ audience:
 - Some SDKs need explicit handoff
 
 ---
+
 ## Cross-Language
 
 - Same standard headers
@@ -109,6 +124,7 @@ audience:
 - Standardisation is the win
 
 ---
+
 ## Common Propagation Mistakes
 
 - Reading body before context

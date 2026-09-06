@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Common Distribution Families
 
 ---
+
 ## What This Chapter Covers
 
 - The standard discrete families and how they connect
@@ -21,11 +23,13 @@ audience:
 - Heavy tails and where finite-moment intuition fails
 
 ---
+
 ## The Distribution Zoo
 
 ![distribution zoo](svg/courses/math/statistics-theory/06_distribution_families/distribution_zoo.svg)
 
 ---
+
 ## The Discrete Catalogue
 
 - **Bernoulli(p)**: one trial; mean p, variance p(1&minus;p) — the atom everything else is built from
@@ -35,6 +39,7 @@ audience:
 - **Hypergeometric** (sampling without replacement) and **Multinomial** (k-category counts) round out the basics — note hypergeometric &#8594; binomial as the population grows
 
 ---
+
 ## The Continuous Catalogue
 
 - **Uniform(a, b)**: maximum entropy on a bounded interval; the substrate of inverse-transform sampling
@@ -44,6 +49,7 @@ audience:
 - **Lognormal**, **Pareto**, **Weibull** cover skew and tails — lognormal = exp(Normal), Pareto = power-law tails, Weibull = the flexible reliability/extreme workhorse
 
 ---
+
 ## The Gaussian And Its Family
 
 - **Normal(&mu;, &sigma;&sup2;)**: the CLT limit; closed under affine maps and under convolution (means add, variances add); maximum entropy for fixed mean and variance; characterized by all cumulants above the 2nd vanishing
@@ -53,11 +59,13 @@ audience:
 - **Multivariate Normal** N(&mu;, &Sigma;): every affine image is Normal, marginals and conditionals are Normal, and *uncorrelated implies independent* — the uniquely tractable multivariate model
 
 ---
+
 ## The Exponential Family Form
 
 ![exponential family](svg/courses/math/statistics-theory/06_distribution_families/exponential_family.svg)
 
 ---
+
 ## The Exponential Family
 
 - A family has **exponential-family** form if its density/pmf is f(x | &theta;) = h(x) exp( &eta;(&theta;)&#7488; T(x) &minus; A(&theta;) ) — natural parameter &eta;, sufficient statistic T, log-partition / cumulant function A, carrier h
@@ -67,6 +75,7 @@ audience:
 - Heavy-tailed families (Cauchy, t, Pareto) are *not* exponential-family — which is exactly why they're harder
 
 ---
+
 ## Location&ndash;Scale Families
 
 - A **location&ndash;scale family** is {X = &mu; + &sigma;Z : &mu; &isin; &#8477;, &sigma; &gt; 0} for a fixed "standard" Z — so F(x | &mu;,&sigma;) = F&#8320;((x&minus;&mu;)/&sigma;) and f(x | &mu;,&sigma;) = (1/&sigma;) f&#8320;((x&minus;&mu;)/&sigma;)
@@ -76,6 +85,7 @@ audience:
 - Inference for &mu; given &sigma; (or vice versa) reduces to the single standard member Z
 
 ---
+
 ## Heavy Tails
 
 - A law is **heavy-tailed** when its tail decays slower than any exponential; **power-law / regularly-varying** tails P(X &gt; x) &sim; x&#8315;&#945; are the canonical case
@@ -85,6 +95,7 @@ audience:
 - Where you meet them: file sizes, city sizes, wealth, network degrees, insurance claims, financial returns, queueing delays — "web-scale" data is heavy-tailed by default
 
 ---
+
 ## Distribution Relationships In Code
 
 ```python
@@ -103,6 +114,7 @@ print("mean~n, var~2n:", q.mean().round(2), q.var(ddof=1).round(2))
 ```
 
 ---
+
 ## Common Mistakes
 
 - Forcing a Normal (or any finite-variance) model onto heavy-tailed data

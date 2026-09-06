@@ -10,6 +10,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Introduction to Cloud Computing and AWS
 
 ---

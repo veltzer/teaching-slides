@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Linear Models Theory
 
 ---
+
 ## What This Chapter Covers
 
 - The linear model in matrix form
@@ -21,11 +23,13 @@ audience:
 - Diagnostics, generalized least squares, and ridge/Stein shrinkage
 
 ---
+
 ## OLS As Orthogonal Projection
 
 ![linear model geometry](svg/courses/math/statistics-theory/15_linear_models_theory/linear_model_geometry.svg)
 
 ---
+
 ## The Linear Model In Matrix Form
 
 - **y = X&beta; + &epsilon;**: y &isin; &#8477;&#8319; the response, X the n&times;p **design matrix** (columns = predictors; usually a column of 1s for the intercept), &beta; &isin; &#8477;&#7510; the unknown coefficients, &epsilon; the random error
@@ -35,6 +39,7 @@ audience:
 - Everything below is geometry in &#8477;&#8319;: y is a point, the columns of X span a p-dimensional **model subspace** C(X), and estimation is "find the point of C(X) closest to y"
 
 ---
+
 ## Least Squares As Orthogonal Projection
 
 - The OLS estimator minimizes &#8214;y &minus; X&beta;&#8214;&sup2;; setting the gradient to zero gives the **normal equations** X&#7488;X&beta;&#770; = X&#7488;y, hence **&beta;&#770; = (X&#7488;X)&#8315;&sup1;X&#7488;y** (full rank); the **fitted values** are ŷ = X&beta;&#770; = **Hy**, where **H = X(X&#7488;X)&#8315;&sup1;X&#7488;** is the **hat matrix**
@@ -44,6 +49,7 @@ audience:
 - Rank-deficient or near-deficient X (collinearity): X&#7488;X is singular or ill-conditioned — &beta;&#770; is non-unique or wildly unstable (huge variances), though ŷ = Hy is still well-defined; remedies = drop/combine predictors, use the **pseudoinverse**, or regularize (last slide)
 
 ---
+
 ## The Gauss&ndash;Markov Theorem
 
 - **Theorem (BLUE)**: under the core assumptions ( E[&epsilon;] = 0, Cov(&epsilon;) = &sigma;&sup2;I, X full rank ) and **without any normality assumption**, the OLS estimator &beta;&#770; is the **Best Linear Unbiased Estimator** of &beta; — among all estimators that are *linear in y* and *unbiased*, it has the smallest variance (and more strongly, the smallest covariance matrix, in the Loewner order); the same holds for any **estimable linear combination** c&#7488;&beta;
@@ -53,6 +59,7 @@ audience:
 - Note what it does *not* claim: nothing about *which* parametrization, nothing about prediction beyond the data, and nothing requiring &epsilon; to be Normal — Gauss&ndash;Markov is a second-moment result
 
 ---
+
 ## Distribution Theory Under Normality
 
 - **Add** &epsilon; ~ N(0, &sigma;&sup2;I). Then, because linear maps of a Gaussian are Gaussian: **&beta;&#770; ~ N( &beta;, &sigma;&sup2;(X&#7488;X)&#8315;&sup1; )** exactly, in *every* sample size
@@ -62,6 +69,7 @@ audience:
 - Large n without normality: by the CLT &beta;&#770; is *approximately* Normal anyway (under regularity), so the t-intervals are asymptotically valid — normality buys you *exactness in small samples*, the CLT covers the rest
 
 ---
+
 ## F-Tests And The Geometry Of ANOVA
 
 - **General linear hypothesis** H&#8320;: **R&beta; = r** (R a q&times;p matrix of full row rank — encodes "these q linear restrictions on &beta;": a coefficient is zero, two are equal, a block of dummies all vanish, etc.). The test statistic is **F = [ (R&beta;&#770; &minus; r)&#7488; ( R(X&#7488;X)&#8315;&sup1;R&#7488; )&#8315;&sup1; (R&beta;&#770; &minus; r) / q ] / s&sup2;**, which under H&#8320; (and normality) is **exactly F_{q, n&minus;p}**
@@ -71,6 +79,7 @@ audience:
 - Power and non-null behavior: under the alternative the numerator follows a **non-central F** with non-centrality &lambda; = (R&beta; &minus; r)&#7488;(...)&#8315;&sup1;(R&beta; &minus; r)/&sigma;&sup2; — that's what drives sample-size / power calculations for ANOVA and regression tests
 
 ---
+
 ## Beyond OLS: Diagnostics, GLS, Shrinkage
 
 - **Leverage** = the diagonal h&#7522;&#7522; of the hat matrix H — "how much of its own fitted value point i pulls" (0 &leq; h&#7522;&#7522; &leq; 1, &Sigma;h&#7522;&#7522; = p, so the average is p/n; flag h&#7522;&#7522; &gt; 2p/n or 3p/n). High leverage is a property of the **x**'s alone; combine it with a large residual and you get **influence** — quantified by **Cook's distance** D&#7522; (effect of deleting i on the whole &beta;&#770;) and **DFBETAS** (effect on each coefficient). Always plot residuals vs fitted (linearity, equal variance), a Q&ndash;Q plot of residuals (normality), residuals vs order (independence), and check **VIFs = 1/(1&minus;R&sup2;&#7522;)** for collinearity — *investigate* influential points, don't reflexively delete them
@@ -80,6 +89,7 @@ audience:
 - The throughline: OLS is the **orthogonal projection** answer, optimal under the spherical-Gaussian-error story; change the error geometry &#8658; project in a different inner product (GLS); allow bias &#8658; shrink the projection (ridge/Stein); change the response type &#8658; project iteratively on a transformed scale (GLMs) — one geometric idea, many statistical models
 
 ---
+
 ## Linear Model Theory In Code
 
 ```python
@@ -120,6 +130,7 @@ print("MSE OLS  :", mse_ols.round(4), "\nMSE ridge:", mse_ridge.round(4))
 ```
 
 ---
+
 ## Common Mistakes
 
 - Forgetting that Gauss&ndash;Markov is only "best among *linear unbiased*" estimators — under heteroscedasticity/correlation GLS wins, and allowing bias (ridge/Stein) can beat OLS in MSE

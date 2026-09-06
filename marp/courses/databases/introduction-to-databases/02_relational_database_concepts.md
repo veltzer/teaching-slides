@@ -7,14 +7,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Relational Database Concepts
 
 ---
+
 ## Tables &amp; Foreign Keys
 
 ![relational_concepts](svg/courses/databases/introduction-to-databases/02_relational_database_concepts/relational_concepts.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Tables, rows, columns
@@ -25,6 +28,7 @@ audience:
 - Constraints
 
 ---
+
 ## Tables, Rows, Columns
 
 - Table: like a spreadsheet
@@ -33,6 +37,7 @@ audience:
 - Each cell: one value (atomic)
 
 ---
+
 ## Primary Key
 
 - Uniquely identifies a row
@@ -41,6 +46,7 @@ audience:
 - Indexed automatically
 
 ---
+
 ## Foreign Key
 
 - References another table's primary key
@@ -49,6 +55,7 @@ audience:
 - "Order.customer_id REFERENCES Customer.id"
 
 ---
+
 ## Relationships
 
 - 1:1: one row in A relates to one in B
@@ -56,6 +63,7 @@ audience:
 - M:N: many A relate to many B; needs junction table
 
 ---
+
 ## Junction Tables
 
 - For M:N relationships
@@ -63,6 +71,7 @@ audience:
 - Composite primary key
 
 ---
+
 ## Normalisation
 
 - Reduce redundancy
@@ -71,11 +80,13 @@ audience:
 - Most apps: 3NF is fine
 
 ---
+
 ## Normal Forms
 
 ![normal_forms](svg/courses/databases/introduction-to-databases/02_relational_database_concepts/normal_forms.svg)
 
 ---
+
 ## Data Types
 
 - Integer: TINYINT, INT, BIGINT
@@ -85,6 +96,7 @@ audience:
 - Date: DATE, TIMESTAMP
 
 ---
+
 ## Constraints
 
 - NOT NULL: required
@@ -94,6 +106,7 @@ audience:
 - Database enforces
 
 ---
+
 ## Indexes
 
 - Speed up queries
@@ -102,6 +115,7 @@ audience:
 - Per-table: 3-10 typical
 
 ---
+
 ## Transactions
 
 - Group of operations
@@ -109,6 +123,7 @@ audience:
 - BEGIN, COMMIT, ROLLBACK
 
 ---
+
 ## Joins
 
 - Combine rows from multiple tables
@@ -118,6 +133,7 @@ audience:
 - FULL OUTER JOIN: all from both
 
 ---
+
 ## Views
 
 - Saved query that looks like a table
@@ -125,6 +141,7 @@ audience:
 - Can be materialised for performance
 
 ---
+
 ## Common Relational Mistakes
 
 - Storing arrays / lists in one column

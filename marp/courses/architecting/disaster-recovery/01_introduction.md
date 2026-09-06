@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to Disaster Recovery
 
 ---
+
 ## What This Chapter Covers
 
 - What DR is
@@ -21,6 +23,7 @@ audience:
 - Course outline
 
 ---
+
 ## What DR Is
 
 - Resuming service after a disaster
@@ -29,6 +32,7 @@ audience:
 - A discipline, not a product
 
 ---
+
 ## DR vs Backup
 
 - Backup: data copies
@@ -37,6 +41,7 @@ audience:
 - DR includes process, runbooks, people
 
 ---
+
 ## DR vs HA
 
 - HA: survive component failure
@@ -45,6 +50,7 @@ audience:
 - They overlap, not the same
 
 ---
+
 ## RPO
 
 - Recovery Point Objective
@@ -53,6 +59,7 @@ audience:
 - Drives backup frequency
 
 ---
+
 ## RTO
 
 - Recovery Time Objective
@@ -61,11 +68,13 @@ audience:
 - Drives architecture cost
 
 ---
+
 ## RPO and RTO Visualized
 
 ![rpo_rto](svg/courses/architecting/disaster-recovery/01_introduction/rpo_rto_axes.svg)
 
 ---
+
 ## Cost Curve
 
 - Lower RPO and RTO cost more
@@ -74,6 +83,7 @@ audience:
 - Document the trade-off
 
 ---
+
 ## Disaster Categories
 
 - Hardware failure
@@ -83,11 +93,13 @@ audience:
 - Natural events
 
 ---
+
 ## Categories Overview
 
 ![disaster_categories](svg/courses/architecting/disaster-recovery/01_introduction/disaster_categories.svg)
 
 ---
+
 ## DR Strategies Spectrum
 
 - Backup and restore
@@ -96,6 +108,7 @@ audience:
 - Active-active
 
 ---
+
 ## Compliance Drivers
 
 - Regulators define minimums
@@ -104,6 +117,7 @@ audience:
 - Document everything
 
 ---
+
 ## Stakeholders
 
 - Engineering
@@ -113,6 +127,7 @@ audience:
 - Legal
 
 ---
+
 ## Course Outline
 
 - Strategies in depth
@@ -122,6 +137,7 @@ audience:
 - Runbooks
 
 ---
+
 ## Common DR Mistakes
 
 - Treating backup as DR

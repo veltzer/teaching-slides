@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Communication Patterns
 
 ---
+
 ## Client-Server Overview
 
 - Separates the system into two applications:
@@ -21,6 +23,7 @@ audience:
 - Client and server have different lifecycles but communicate via requests/responses
 
 ---
+
 ## Client-Server Component Roles
 
 - Client
@@ -34,6 +37,7 @@ audience:
     - Often manages shared resources
 
 ---
+
 ## Client-Server Diagram
 
 ![communication_diagram](svg/courses/architecting/architecture-patterns/02_communication_patterns/communication_diagram.svg)
@@ -65,6 +69,7 @@ Cons:
 - Processing can be offloaded from clients to server
 
 ---
+
 ## Broker Overview
 
 - A broker component coordinates communication between clients and servers
@@ -95,6 +100,7 @@ Cons:
 ![broker_interaction_diagram](svg/courses/architecting/architecture-patterns/02_communication_patterns/broker_interaction_diagram.svg)
 
 ---
+
 ## Broker Pros and Cons
 
 Pros:
@@ -120,6 +126,7 @@ Cons:
 - Platform and language independence between clients and servers is desired
 
 ---
+
 ## P2P Overview
 
 - Distributes tasks or workloads between equally privileged participants (peers)
@@ -128,6 +135,7 @@ Cons:
 - Decentralized model without the need for central coordination
 
 ---
+
 ## Peer-to-Peer Roles
 
 - Peer
@@ -147,6 +155,7 @@ Cons:
 ![peer_to_peer_diagram](svg/courses/architecting/architecture-patterns/02_communication_patterns/peer_to_peer_diagram.svg)
 
 ---
+
 ## Peer-to-Peer Pros and Cons
 
 Pros:
@@ -172,6 +181,7 @@ Cons:
 - Participants are willing to contribute resources as well as consume them
 
 ---
+
 ## Event Bus Overview
 
 - An in-process dispatcher that wires components together inside a single application
@@ -181,6 +191,7 @@ Cons:
 - Examples: Guava EventBus, Spring ApplicationEventPublisher, .NET MediatR, browser EventTarget
 
 ---
+
 ## Event Bus Roles
 
 - Event Bus
@@ -228,6 +239,7 @@ Cons:
 - Not appropriate when publisher and subscriber live in different services — use pub-sub for that
 
 ---
+
 ## Pub-Sub Overview
 
 - A messaging pattern that runs over a message broker shared by many processes or services
@@ -292,6 +304,7 @@ Cons:
 - Cross-language, cross-platform, or cross-team integration where shared code is not an option
 
 ---
+
 ## Event Bus vs Publish-Subscribe
 
 | | Event Bus | Publish-Subscribe |
@@ -306,6 +319,7 @@ Cons:
 | Failure isolation | Handler exception can hit publisher | Broker isolates publisher from subscribers |
 
 ---
+
 ## Summary
 
 - Client-Server centralizes resources behind one server contract

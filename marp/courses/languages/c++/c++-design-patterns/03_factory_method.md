@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Factory Method Pattern
 
 ---

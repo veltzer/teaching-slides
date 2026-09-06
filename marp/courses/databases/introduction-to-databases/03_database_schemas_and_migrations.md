@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Database Schemas and Migrations
 
 ---
+
 ## Migration Workflow
 
 ![migration_workflow](svg/courses/databases/introduction-to-databases/03_database_schemas_and_migrations/migration_workflow.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Schema definition
@@ -26,6 +29,7 @@ audience:
 - Best practices
 
 ---
+
 ## Schema Definition
 
 - DDL: CREATE TABLE, ALTER TABLE, DROP TABLE
@@ -33,6 +37,7 @@ audience:
 - Database stores it as metadata
 
 ---
+
 ## DDL vs DML
 
 - **DDL**: structure (CREATE, ALTER, DROP)
@@ -40,6 +45,7 @@ audience:
 - Different permissions, different concerns
 
 ---
+
 ## Schema Migrations
 
 - Versioned changes to the schema
@@ -48,6 +54,7 @@ audience:
 - Standard for app deployment
 
 ---
+
 ## A Migration Tool
 
 - Flyway (Java), Liquibase (multi-language)
@@ -56,6 +63,7 @@ audience:
 - Each: similar shape
 
 ---
+
 ## A Sample Migration
 
 ```sql
@@ -71,6 +79,7 @@ DROP TABLE users;
 ```
 
 ---
+
 ## Migration Order
 
 - Each migration has a unique ID / timestamp
@@ -79,6 +88,7 @@ DROP TABLE users;
 - Idempotent: re-running is safe
 
 ---
+
 ## Schema Evolution
 
 - Add column: usually safe (with default)
@@ -87,6 +97,7 @@ DROP TABLE users;
 - Type change: case-by-case
 
 ---
+
 ## Two-Phase Deploy For Removal
 
 - Phase 1: deploy code that doesn't use the column
@@ -94,6 +105,7 @@ DROP TABLE users;
 - Avoids: app breaks because column gone
 
 ---
+
 ## Online Migrations
 
 - Big tables: ALTER TABLE blocks
@@ -102,11 +114,13 @@ DROP TABLE users;
 - Critical for prod systems
 
 ---
+
 ## Expand-Backfill-Switch-Contract
 
 ![online_migration_steps](svg/courses/databases/introduction-to-databases/03_database_schemas_and_migrations/online_migration.svg)
 
 ---
+
 ## CI / CD
 
 - Migrations run on deploy
@@ -115,6 +129,7 @@ DROP TABLE users;
 - Rollback strategy: forward fix usually beats down migration
 
 ---
+
 ## Schema In Code
 
 - Migrations live in source repo
@@ -123,6 +138,7 @@ DROP TABLE users;
 - Source of truth for schema
 
 ---
+
 ## Versioning
 
 - Each migration: numbered or timestamped
@@ -130,6 +146,7 @@ DROP TABLE users;
 - "schema_migrations": table with applied IDs
 
 ---
+
 ## Common Migration Mistakes
 
 - Manual changes in production (drift)

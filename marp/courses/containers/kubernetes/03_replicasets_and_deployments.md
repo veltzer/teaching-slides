@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # ReplicaSets and Deployments
 
 ---
+
 ## What This Chapter Covers
 
 - ReplicaSet
@@ -20,11 +22,13 @@ audience:
 - StatefulSet briefly
 
 ---
+
 ## Deployment Hierarchy
 
 ![deployment_hierarchy](svg/courses/containers/kubernetes/03_replicasets_and_deployments/deployment_hierarchy.svg)
 
 ---
+
 ## ReplicaSet
 
 - Ensures N pod replicas running
@@ -33,6 +37,7 @@ audience:
 - Behind the scenes of Deployment
 
 ---
+
 ## Deployment
 
 - Manages a ReplicaSet
@@ -41,6 +46,7 @@ audience:
 - The default way to run stateless apps
 
 ---
+
 ## Sample Deployment
 
 ```yaml
@@ -64,6 +70,7 @@ spec:
 ```
 
 ---
+
 ## Rolling Update
 
 - Default strategy
@@ -72,6 +79,7 @@ spec:
 - Zero-downtime deploys (mostly)
 
 ---
+
 ## maxSurge / maxUnavailable
 
 - maxSurge: extra pods during update (default 25%)
@@ -79,6 +87,7 @@ spec:
 - Tune for your latency / capacity needs
 
 ---
+
 ## Recreate Strategy
 
 - Stop all old; start new
@@ -86,11 +95,13 @@ spec:
 - For apps that can't run two versions concurrently
 
 ---
+
 ## Strategy Compared
 
 ![rollout_strategies](svg/courses/containers/kubernetes/03_replicasets_and_deployments/rollout_strategies.svg)
 
 ---
+
 ## Rollback
 
 - `kubectl rollout undo deployment/web`
@@ -99,6 +110,7 @@ spec:
 - Standard practice
 
 ---
+
 ## Scaling
 
 ```bash
@@ -110,6 +122,7 @@ kubectl scale deployment/web --replicas=5
 - Based on CPU / memory / custom metrics
 
 ---
+
 ## HPA
 
 ```yaml
@@ -132,6 +145,7 @@ spec:
 ```
 
 ---
+
 ## VPA (Vertical Pod Autoscaler)
 
 - Adjusts resource requests / limits
@@ -140,6 +154,7 @@ spec:
 - Conflicts with HPA on same metric
 
 ---
+
 ## StatefulSet
 
 - For stateful apps (DBs, message queues)
@@ -149,6 +164,7 @@ spec:
 - Different from Deployment
 
 ---
+
 ## DaemonSet
 
 - One pod per node
@@ -156,6 +172,7 @@ spec:
 - Auto-deployed to new nodes
 
 ---
+
 ## Job / CronJob
 
 - Run-once or scheduled work
@@ -163,6 +180,7 @@ spec:
 - Different shape from long-running services
 
 ---
+
 ## Common Deployment Mistakes
 
 - No rolling update strategy specified

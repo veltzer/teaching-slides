@@ -10,6 +10,7 @@ audience:
   - audiences:architects
 
 ---
+
 # Architecting Systems for Big Data
 
 ---

@@ -11,6 +11,7 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Language Modeling with GPT and ChatGPT
 
 ---
@@ -151,11 +152,13 @@ loss = loss_fn(
 What GPT models are trained on:
 
 ---
+
 ## Pre-Training Data
 
 ![pre_training_data](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/pre_training_data.svg)
 
 ---
+
 ## Pre-Training Data: Details
 
 **Data quality matters enormously:**
@@ -383,6 +386,7 @@ response = client.chat.completions.create(
 ![temperature_vs_top_p_when_to_use_which](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/temperature_vs_top_p_when_to_use_which.svg)
 
 ---
+
 ## Temperature vs. Top-p — When to Use Which: Example
 
 ```python
@@ -434,11 +438,13 @@ The model uses **chain-of-thought at inference time**, trading compute for accur
 Smaller models can learn from larger ones:
 
 ---
+
 ## Model Distillation
 
 ![model_distillation](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/model_distillation.svg)
 
 ---
+
 ## Model Distillation: Overview (2)
 
 Examples: `GPT-4o-mini`, `Claude 3.5 Haiku`, `Phi-3`
@@ -569,6 +575,7 @@ class SwiGLU(nn.Module):
 ![kv_cache_speeding_up_inference](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/kv_cache_speeding_up_inference.svg)
 
 ---
+
 ## KV Cache — Speeding Up Inference: Example
 
 ```python

@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Unstructured Data Analytics
 
 ---
+
 ## What This Chapter Covers
 
 - What is unstructured data
@@ -21,6 +23,7 @@ audience:
 - Foundation models
 
 ---
+
 ## Unstructured Data
 
 - No fixed schema
@@ -29,11 +32,13 @@ audience:
 - Harder to model than tabular
 
 ---
+
 ## Data Kinds
 
 ![data_kinds](svg/courses/machine_learning/machine-learning/13_unstructured_data_analytics/data_kinds.svg)
 
 ---
+
 ## Why It Matters
 
 - Reviews, social media
@@ -42,6 +47,7 @@ audience:
 - Medical scans, sensors
 
 ---
+
 ## Sources
 
 - Public web
@@ -51,6 +57,7 @@ audience:
 - Scraping with consent and care
 
 ---
+
 ## Web Scraping
 
 - Fetch HTML, parse
@@ -59,6 +66,7 @@ audience:
 - Cache aggressively
 
 ---
+
 ## BeautifulSoup
 
 ```python
@@ -70,6 +78,7 @@ titles = [h2.text for h2 in soup.find_all("h2")]
 ```
 
 ---
+
 ## Selecting Elements
 
 - find / find_all
@@ -78,6 +87,7 @@ titles = [h2.text for h2 in soup.find_all("h2")]
 - Composable
 
 ---
+
 ## Headless Browsers
 
 - Playwright, Selenium
@@ -86,6 +96,7 @@ titles = [h2.text for h2 in soup.find_all("h2")]
 - Use only when needed
 
 ---
+
 ## Scraping Ethics
 
 - Robots.txt and Terms of Service
@@ -94,6 +105,7 @@ titles = [h2.text for h2 in soup.find_all("h2")]
 - Get explicit consent when possible
 
 ---
+
 ## Text Preprocessing
 
 - Tokenisation: words / subwords
@@ -102,6 +114,7 @@ titles = [h2.text for h2 in soup.find_all("h2")]
 - Stemming / lemmatisation
 
 ---
+
 ## Tokenisation
 
 - Word-level: split on whitespace and punctuation
@@ -110,6 +123,7 @@ titles = [h2.text for h2 in soup.find_all("h2")]
 - Match the model's tokeniser
 
 ---
+
 ## Stop Words
 
 - Common words: "the", "and", "is"
@@ -118,6 +132,7 @@ titles = [h2.text for h2 in soup.find_all("h2")]
 - Domain-specific lists
 
 ---
+
 ## Stemming vs Lemmatisation
 
 - Stemming: chop endings (running → run)
@@ -126,6 +141,7 @@ titles = [h2.text for h2 in soup.find_all("h2")]
 - Both reduce vocabulary
 
 ---
+
 ## Bag-of-Words
 
 - Vocabulary of words
@@ -134,6 +150,7 @@ titles = [h2.text for h2 in soup.find_all("h2")]
 - Order ignored
 
 ---
+
 ## TF-IDF
 
 - Term frequency: count in doc
@@ -142,6 +159,7 @@ titles = [h2.text for h2 in soup.find_all("h2")]
 - Sparse, fast, baseline
 
 ---
+
 ## n-Grams
 
 - Single words: unigrams
@@ -150,6 +168,7 @@ titles = [h2.text for h2 in soup.find_all("h2")]
 - Vocabulary explodes
 
 ---
+
 ## sklearn Text
 
 ```python
@@ -159,6 +178,7 @@ X = vec.fit_transform(documents)
 ```
 
 ---
+
 ## Word Embeddings
 
 - Dense vectors per word
@@ -167,6 +187,7 @@ X = vec.fit_transform(documents)
 - "king" - "man" + "woman" = "queen"
 
 ---
+
 ## Sentence Embeddings
 
 - One vector per sentence or document
@@ -175,6 +196,7 @@ X = vec.fit_transform(documents)
 - Use for semantic search
 
 ---
+
 ## Transformers
 
 - Attention mechanism
@@ -183,6 +205,7 @@ X = vec.fit_transform(documents)
 - State of the art for NLP
 
 ---
+
 ## Hugging Face
 
 - Models, datasets, tokenisers
@@ -191,6 +214,7 @@ X = vec.fit_transform(documents)
 - Fine-tuning APIs
 
 ---
+
 ## Hugging Face Pipeline
 
 ```python
@@ -200,6 +224,7 @@ clf("I love this product")
 ```
 
 ---
+
 ## NLP Tasks
 
 - Classification: sentiment, intent
@@ -209,6 +234,7 @@ clf("I love this product")
 - Question answering
 
 ---
+
 ## Sentiment Analysis
 
 - Positive, negative, neutral
@@ -217,6 +243,7 @@ clf("I love this product")
 - Fine-tune for your domain
 
 ---
+
 ## Named Entity Recognition
 
 - People, places, organisations
@@ -225,6 +252,7 @@ clf("I love this product")
 - Useful for extraction
 
 ---
+
 ## Topic Modelling
 
 - LDA: Latent Dirichlet Allocation
@@ -233,6 +261,7 @@ clf("I love this product")
 - Discover themes in a corpus
 
 ---
+
 ## Text Classification Pipeline
 
 ```python
@@ -245,6 +274,7 @@ pipe = Pipeline([
 ```
 
 ---
+
 ## Computer Vision Basics
 
 - Pixels, channels, resolution
@@ -253,6 +283,7 @@ pipe = Pipeline([
 - Stack into CNNs
 
 ---
+
 ## CNN Architectures
 
 - LeNet, AlexNet, VGG
@@ -261,6 +292,7 @@ pipe = Pipeline([
 - Vision Transformers (ViT)
 
 ---
+
 ## Vision Tasks
 
 - Classification: what is in the image
@@ -269,6 +301,7 @@ pipe = Pipeline([
 - Generation: create images
 
 ---
+
 ## Image Augmentation
 
 - Rotations, flips, crops
@@ -277,6 +310,7 @@ pipe = Pipeline([
 - Doubles dataset effectively
 
 ---
+
 ## Transfer Learning Vision
 
 - Pretrained backbone
@@ -285,6 +319,7 @@ pipe = Pipeline([
 - Saves orders of magnitude of data
 
 ---
+
 ## Audio
 
 - Spectrograms: time-frequency
@@ -293,6 +328,7 @@ pipe = Pipeline([
 - Speech synthesis: text to audio
 
 ---
+
 ## Audio Pipeline
 
 - Resample
@@ -301,6 +337,7 @@ pipe = Pipeline([
 - CNN or transformer
 
 ---
+
 ## Embeddings
 
 - Map any data to a vector
@@ -309,6 +346,7 @@ pipe = Pipeline([
 - Vector databases
 
 ---
+
 ## Vector Databases
 
 - FAISS, Pinecone, Weaviate, pgvector
@@ -317,6 +355,7 @@ pipe = Pipeline([
 - Power semantic search
 
 ---
+
 ## Foundation Models
 
 - Pre-trained on massive data
@@ -325,6 +364,7 @@ pipe = Pipeline([
 - Transfer learning at scale
 
 ---
+
 ## Fine-Tuning
 
 - Small data, big pretrained model
@@ -333,6 +373,7 @@ pipe = Pipeline([
 - Often best for accuracy
 
 ---
+
 ## Prompting
 
 - Use the model as-is
@@ -341,6 +382,7 @@ pipe = Pipeline([
 - Cheaper than fine-tuning
 
 ---
+
 ## Multimodal
 
 - Multiple input types
@@ -349,6 +391,7 @@ pipe = Pipeline([
 - Search image with text query
 
 ---
+
 ## RAG
 
 - Retrieval-Augmented Generation
@@ -357,6 +400,7 @@ pipe = Pipeline([
 - Standard pattern for LLM apps
 
 ---
+
 ## Practical Considerations
 
 - Compute cost is real
@@ -365,6 +409,7 @@ pipe = Pipeline([
 - Data labelling is expensive
 
 ---
+
 ## Common Unstructured Data Mistakes
 
 - Training from scratch when pre-trained exists
@@ -374,16 +419,19 @@ pipe = Pipeline([
 - Not measuring inference latency
 
 ---
+
 ## Spectrogram
 
 ![spectrogram](svg/courses/machine_learning/machine-learning/13_unstructured_data_analytics/spectrogram.svg)
 
 ---
+
 ## RAG Pipeline
 
 ![rag_pipeline](svg/courses/machine_learning/machine-learning/13_unstructured_data_analytics/rag_pipeline.svg)
 
 ---
+
 ## Summary
 
 - Unstructured data dominates the wild

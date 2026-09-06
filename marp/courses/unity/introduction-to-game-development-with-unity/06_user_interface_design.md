@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # User Interface Design
 
 ---
+
 ## What This Chapter Covers
 
 - The UI Canvas, the root of all UGUI elements
@@ -21,6 +23,7 @@ audience:
 - Building menus and HUDs
 
 ---
+
 ## Two UI Systems
 
 - **UGUI** (UnityEngine.UI): the original, GameObject-based, well-documented
@@ -30,6 +33,7 @@ audience:
 - Both systems coexist in modern Unity
 
 ---
+
 ## The Canvas
 
 - Every UI element lives under a Canvas GameObject
@@ -40,6 +44,7 @@ audience:
     - World Space (UI in 3D space, e.g., a sign on a wall)
 
 ---
+
 ## Adding Your First Button
 
 - GameObject &#8594; UI &#8594; Button
@@ -49,6 +54,7 @@ audience:
 - Press Play, click — the default visuals respond
 
 ---
+
 ## EventSystem
 
 - A separate GameObject Unity adds when you create UI
@@ -58,6 +64,7 @@ audience:
 - One per scene is enough
 
 ---
+
 ## Anchors and Pivots
 
 - Anchors define how a UI element scales and moves with its parent
@@ -67,11 +74,13 @@ audience:
 - Anchor to all four corners: element stretches to fill the parent
 
 ---
+
 ## Anchor Diagram
 
 ![anchor_diagram](svg/courses/unity/introduction-to-game-development-with-unity/06_user_interface_design/anchor_diagram.svg)
 
 ---
+
 ## Common UI Widgets
 
 - **Text** (or TextMeshPro Text): styled text
@@ -83,11 +92,13 @@ audience:
 - **Scroll View**: panel with vertical/horizontal scrolling
 
 ---
+
 ## Widgets Overview
 
 ![ui_widgets](svg/courses/unity/introduction-to-game-development-with-unity/06_user_interface_design/ui_widgets.svg)
 
 ---
+
 ## TextMeshPro Is the Default Text
 
 - Sharp text at any zoom (signed distance field)
@@ -97,6 +108,7 @@ audience:
 - The legacy Text component is still around but TMP is preferred
 
 ---
+
 ## Layout Groups
 
 - Manual placement is fragile across screen sizes
@@ -107,6 +119,7 @@ audience:
 - Use **Layout Element** on children to override sizing
 
 ---
+
 ## Wiring a Button to a Script
 
 - Select the Button in the Hierarchy
@@ -116,6 +129,7 @@ audience:
 - Press Play, click — your method runs
 
 ---
+
 ## Calling From Code Instead
 
 ```csharp
@@ -135,6 +149,7 @@ void OnStartClicked() {
 - Always add listeners in `Awake` or `OnEnable`, remove in `OnDisable`
 
 ---
+
 ## Building a HUD
 
 - Canvas at Screen Space - Overlay
@@ -144,6 +159,7 @@ void OnStartClicked() {
 - TextMeshPro for crisp text at any resolution
 
 ---
+
 ## Building a Menu
 
 - Separate Canvas for the menu (or a child panel that toggles active)
@@ -153,6 +169,7 @@ void OnStartClicked() {
 - Don't forget UI animations to make transitions feel intentional
 
 ---
+
 ## Multiple Resolution Strategy
 
 - Canvas Scaler component on the Canvas
@@ -162,6 +179,7 @@ void OnStartClicked() {
 - Do this once at project start — switching later is painful
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting to add an EventSystem &#8594; UI looks fine, doesn't react

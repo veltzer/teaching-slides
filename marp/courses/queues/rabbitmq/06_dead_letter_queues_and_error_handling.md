@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Dead Letter Queues and Error Handling
 
 ---
+
 ## DLQ Flow
 
 ![dlq_flow](svg/courses/queues/rabbitmq/06_dead_letter_queues_and_error_handling/dlq_flow.svg)
 
 ---
+
 ## Retry Strategy
 
 ![retry_strategy](svg/courses/queues/rabbitmq/06_dead_letter_queues_and_error_handling/retry_strategy.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Dead letter exchanges and queues
@@ -31,6 +35,7 @@ audience:
 - A complete error-handling pattern
 
 ---
+
 ## Why Errors Need Special Handling
 
 - A consumer may fail to process a message
@@ -40,6 +45,7 @@ audience:
 - Get this right; production reliability depends on it
 
 ---
+
 ## ack, nack, reject
 
 - `basic_ack`: success; remove from queue
@@ -49,6 +55,7 @@ audience:
 - Not acking forever &#8594; broker thinks you're slow; eventually redelivered
 
 ---
+
 ## Auto-Ack vs Manual Ack
 
 - `auto_ack=True`: ack on receive
@@ -58,6 +65,7 @@ audience:
 - Trade-off: complexity for reliability
 
 ---
+
 ## Dead Letter Exchanges (DLX)
 
 - A normal exchange that receives "dead" messages
@@ -68,6 +76,7 @@ audience:
 - Dead-lettered messages can be inspected, retried, or dropped
 
 ---
+
 ## Setting Up a DLX
 
 ```python
@@ -87,6 +96,7 @@ ch.queue_declare(
 - Failed messages from `my.queue` end up in `my.dlq`
 
 ---
+
 ## Retry Strategies
 
 - **Immediate retry**: nack with requeue=True
@@ -95,6 +105,7 @@ ch.queue_declare(
 - **No retry**: nack with requeue=False; straight to DLX
 
 ---
+
 ## Immediate Retry Risks
 
 - Same error reproduces immediately
@@ -104,6 +115,7 @@ ch.queue_declare(
 - Combine with retry counter to avoid infinite loops
 
 ---
+
 ## Delayed Retry With TTL
 
 - Set `x-message-ttl` on a "retry queue"
@@ -112,6 +124,7 @@ ch.queue_declare(
 - A common pattern for "try again in N seconds"
 
 ---
+
 ## Retry Count Headers
 
 - Worker increments a counter header on each retry
@@ -121,6 +134,7 @@ ch.queue_declare(
 - Without a count, retries can loop forever
 
 ---
+
 ## Poison Messages
 
 - Messages that cannot be processed by *any* consumer
@@ -130,6 +144,7 @@ ch.queue_declare(
 - Inspect periodically; fix the source
 
 ---
+
 ## DLX as Investigation Queue
 
 - Dead-letter messages: keep them; don't drop
@@ -139,6 +154,7 @@ ch.queue_declare(
 - Without DLX, you lose the failure mode
 
 ---
+
 ## A Production Pattern
 
 - Main queue with DLX configured
@@ -148,6 +164,7 @@ ch.queue_declare(
 - After 5 retries: lands in a poison-DLQ for manual handling
 
 ---
+
 ## Reject vs Nack vs Throw
 
 - nack with requeue=True: try again immediately
@@ -157,6 +174,7 @@ ch.queue_declare(
 - Document the team's pattern
 
 ---
+
 ## Logging Failures
 
 - Each failure should log: message ID, queue, error, retry count
@@ -166,6 +184,7 @@ ch.queue_declare(
 - Without logs, mysteries
 
 ---
+
 ## Monitoring DLQ Depth
 
 - DLQ should be near-empty in healthy operation
@@ -175,6 +194,7 @@ ch.queue_declare(
 - Don't let DLQs become permanent garbage dumps
 
 ---
+
 ## Common Error-Handling Mistakes
 
 - No DLX &#8594; broken messages hammer the queue forever

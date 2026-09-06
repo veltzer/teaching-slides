@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Performance and Tuning
 
 ---
+
 ## What This Chapter Covers
 
 - Partitions
@@ -19,6 +21,7 @@ audience:
 - Profiling
 
 ---
+
 ## Partitions
 
 - Unit of parallelism
@@ -27,6 +30,7 @@ audience:
 - Tune to data size
 
 ---
+
 ## Coalesce vs Repartition
 
 - coalesce: reduce, no shuffle
@@ -35,6 +39,7 @@ audience:
 - Repartition before wide ops
 
 ---
+
 ## Shuffle
 
 - Data crosses network
@@ -43,6 +48,7 @@ audience:
 - Minimize where possible
 
 ---
+
 ## Skew
 
 - One partition far bigger
@@ -51,16 +57,19 @@ audience:
 - Adaptive query execution mitigates
 
 ---
+
 ## Skew Solutions
 
 ![skew_solutions](svg/courses/data_engineering/spark/03_performance_and_tuning/skew_solutions.svg)
 
 ---
+
 ## Shuffle and Skew
 
 ![shuffle_skew](svg/courses/data_engineering/spark/03_performance_and_tuning/shuffle_skew.svg)
 
 ---
+
 ## Broadcast Joins
 
 - Avoid shuffle
@@ -69,6 +78,7 @@ audience:
 - Watch driver heap
 
 ---
+
 ## Caching
 
 - Cache reused DataFrames
@@ -77,6 +87,7 @@ audience:
 - Watch executor memory
 
 ---
+
 ## Persistence Levels
 
 - MEMORY_ONLY
@@ -85,6 +96,7 @@ audience:
 - Pick by data size and reuse
 
 ---
+
 ## File Sizes
 
 - Many small files cost listing time
@@ -93,6 +105,7 @@ audience:
 - Compaction is a maintenance task
 
 ---
+
 ## Predicate Pushdown
 
 - Filter pushed to data source
@@ -101,6 +114,7 @@ audience:
 - Inspect plan to verify
 
 ---
+
 ## Profiling
 
 - Spark UI
@@ -109,6 +123,7 @@ audience:
 - GC time
 
 ---
+
 ## GC Tuning
 
 - Long GCs hurt latency
@@ -117,6 +132,7 @@ audience:
 - Off-heap for big caches
 
 ---
+
 ## Driver Pitfalls
 
 - collect() to driver
@@ -125,6 +141,7 @@ audience:
 - Run heavy code in tasks
 
 ---
+
 ## Resource Allocation
 
 - Cores per executor
@@ -133,6 +150,7 @@ audience:
 - Match cluster manager limits
 
 ---
+
 ## Common Tuning Mistakes
 
 - Default partitions for huge data

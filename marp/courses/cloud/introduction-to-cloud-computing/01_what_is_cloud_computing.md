@@ -10,6 +10,7 @@ audience:
   - audiences:managers
 
 ---
+
 # What Is Cloud Computing
 
 ---

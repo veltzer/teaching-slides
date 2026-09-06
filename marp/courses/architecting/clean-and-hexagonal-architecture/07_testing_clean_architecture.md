@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Testing Clean Architecture
 
 ---
+
 ## What This Chapter Covers
 
 - Why clean architecture is testable
@@ -21,6 +23,7 @@ audience:
 - Common patterns
 
 ---
+
 ## Why Testable
 
 - Domain has no external dependencies
@@ -30,11 +33,13 @@ audience:
 - Refactor with confidence
 
 ---
+
 ## Tests by Layer
 
 ![test_layers](svg/courses/architecting/clean-and-hexagonal-architecture/07_testing_clean_architecture/test_layers.svg)
 
 ---
+
 ## Domain Tests
 
 - Pure entity tests
@@ -43,6 +48,7 @@ audience:
 - Fast and reliable
 
 ---
+
 ## Use Case Tests
 
 - Inject fake adapters
@@ -51,6 +57,7 @@ audience:
 - Fast (no DB, no HTTP)
 
 ---
+
 ## Use Case Test Example
 
 ```python
@@ -66,6 +73,7 @@ def test_place_order_persists_and_emails():
 ```
 
 ---
+
 ## Adapter Integration Tests
 
 - Test the real adapter against a real (test) backend
@@ -74,6 +82,7 @@ def test_place_order_persists_and_emails():
 - Slower than unit tests; runs less often
 
 ---
+
 ## End-To-End Tests
 
 - Real HTTP / browser / etc.
@@ -82,6 +91,7 @@ def test_place_order_persists_and_emails():
 - The slow but most-realistic tier
 
 ---
+
 ## Test Pyramid
 
 - Many: domain + use case (unit)
@@ -90,6 +100,7 @@ def test_place_order_persists_and_emails():
 - Match cost to value
 
 ---
+
 ## Fakes vs Mocks
 
 - Fakes: working implementations (in-memory repo)
@@ -98,6 +109,7 @@ def test_place_order_persists_and_emails():
 - Real behaviour, no expectations to maintain
 
 ---
+
 ## A Practical Fake
 
 ```python
@@ -113,6 +125,7 @@ class InMemoryOrderRepository(OrderRepository):
 - Simple; works for many tests; reusable
 
 ---
+
 ## Test Data Builders
 
 - Construct test entities easily
@@ -121,6 +134,7 @@ class InMemoryOrderRepository(OrderRepository):
 - Faker for realistic-looking data
 
 ---
+
 ## Property-Based Testing
 
 - Generate random valid inputs
@@ -129,6 +143,7 @@ class InMemoryOrderRepository(OrderRepository):
 - Excellent for domain logic
 
 ---
+
 ## TDD With Clean Architecture
 
 - Red: write failing test for use case
@@ -138,6 +153,7 @@ class InMemoryOrderRepository(OrderRepository):
 - Architecture supports the rhythm
 
 ---
+
 ## Common Testing Mistakes
 
 - Testing through HTTP when use case test would do

@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced Traits
 
 Trait Objects, Generics, Associated Types, and Dispatch

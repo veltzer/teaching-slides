@@ -8,9 +8,11 @@ audience:
   - audiences:security
 
 ---
+
 # Identity and Access
 
 ---
+
 ## What This Chapter Covers
 
 - Authentication
@@ -20,6 +22,7 @@ audience:
 - Zero trust
 
 ---
+
 ## Authentication
 
 - Proving who you are
@@ -28,11 +31,13 @@ audience:
 - Or certificates
 
 ---
+
 ## Identity Layers
 
 ![auth_layers](svg/courses/networking/network-security/04_identity_and_access/auth_layers.svg)
 
 ---
+
 ## MFA
 
 - Two factors: knowledge plus possession
@@ -41,6 +46,7 @@ audience:
 - SMS is no longer adequate
 
 ---
+
 ## Single Sign-On
 
 - One identity, many systems
@@ -49,6 +55,7 @@ audience:
 - Compromise is critical
 
 ---
+
 ## Authorization
 
 - What you may do once authenticated
@@ -57,6 +64,7 @@ audience:
 - Audit changes
 
 ---
+
 ## Service Identity
 
 - Servers and services authenticate too
@@ -65,6 +73,7 @@ audience:
 - No shared secrets
 
 ---
+
 ## API Keys
 
 - Long-lived tokens
@@ -73,6 +82,7 @@ audience:
 - Replace with short-lived where possible
 
 ---
+
 ## Short-Lived Tokens
 
 - Issued by an identity provider
@@ -81,6 +91,7 @@ audience:
 - Smaller blast radius on compromise
 
 ---
+
 ## Network Policies
 
 - Per-workload allow rules
@@ -89,6 +100,7 @@ audience:
 - Enforced at host or proxy
 
 ---
+
 ## Zero Trust
 
 - Identity is the new perimeter
@@ -97,11 +109,13 @@ audience:
 - No implicit trust by IP
 
 ---
+
 ## Request Path
 
 ![zero_trust_request](svg/courses/networking/network-security/04_identity_and_access/zero_trust_request.svg)
 
 ---
+
 ## Audit Logs
 
 - Every login, every access
@@ -110,6 +124,7 @@ audience:
 - Tamper-evident
 
 ---
+
 ## Privileged Access Management
 
 - Special workflow for high-privilege actions
@@ -118,6 +133,7 @@ audience:
 - Recorded
 
 ---
+
 ## Secrets Management
 
 - Vaults for secrets
@@ -126,6 +142,7 @@ audience:
 - Audited
 
 ---
+
 ## Common Identity Mistakes
 
 - Shared accounts

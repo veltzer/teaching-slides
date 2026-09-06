@@ -9,10 +9,12 @@ audience:
   - audiences:devops
 
 ---
+
 # Network Services and Configuration
 ## Interfaces, DNS, DHCP, Firewalls, and Monitoring
 
 ---
+
 ## Network Interface Configuration
 
 ```bash
@@ -35,6 +37,7 @@ ip route show
 ```
 
 ---
+
 ## The ip Command In Depth
 
 ```bash
@@ -63,6 +66,7 @@ ip rule add from 192.168.1.0/24 table 100
 ```
 
 ---
+
 ## Network Bonding and VLANs
 
 ```bash
@@ -97,6 +101,7 @@ ip link set eth0.100 up
 ```
 
 ---
+
 ## Netplan (Ubuntu)
 
 ```yaml
@@ -123,6 +128,7 @@ netplan apply
 ```
 
 ---
+
 ## Netplan Advanced Configuration
 
 ```yaml
@@ -153,6 +159,7 @@ netplan generate  # generate backend config
 ```
 
 ---
+
 ## Name Resolution
 
 ```bash
@@ -173,6 +180,7 @@ cat /etc/nsswitch.conf
 Resolution order is defined by `nsswitch.conf`: check `/etc/hosts` first, then `DNS`.
 
 ---
+
 ## systemd-resolved
 
 ```bash
@@ -199,6 +207,7 @@ resolvectl statistics
 Note: `/etc/resolv.conf` is often a symlink to `systemd-resolved`'s stub.
 
 ---
+
 ## DHCP Server Configuration
 
 ```bash
@@ -224,6 +233,7 @@ host printer {
 ```
 
 ---
+
 ## DHCP Advanced Options
 
 ```config
@@ -255,6 +265,7 @@ dhcpd -t -cf /etc/dhcp/dhcpd.conf
 ```
 
 ---
+
 ## Time Synchronization
 
 ```bash
@@ -275,6 +286,7 @@ timedatectl status
 ```
 
 ---
+
 ## chrony Advanced Configuration
 
 ```config
@@ -306,6 +318,7 @@ chronyc add server ntp.example.com iburst
 ```
 
 ---
+
 ## Firewall with nftables
 
 ```bash
@@ -331,6 +344,7 @@ nft add rule inet filter input \
 ```
 
 ---
+
 ## nftables Configuration File
 
 ```config
@@ -362,6 +376,7 @@ table inet filter {
 ```
 
 ---
+
 ## nftables: NAT and Port Forwarding
 
 ```bash
@@ -383,6 +398,7 @@ sysctl -w net.ipv4.ip_forward=1
 ```
 
 ---
+
 ## Firewall with iptables
 
 ```bash
@@ -409,6 +425,7 @@ iptables-save > /etc/iptables/rules.v4
 ```
 
 ---
+
 ## iptables Advanced Rules
 
 ```bash
@@ -434,6 +451,7 @@ apt install iptables-persistent
 ```
 
 ---
+
 ## Network Monitoring: ss and tcpdump
 
 ```bash
@@ -454,6 +472,7 @@ tcpdump -r capture.pcap          # read from file
 ```
 
 ---
+
 ## tcpdump Advanced Usage
 
 ```bash
@@ -478,6 +497,7 @@ tcpdump -i eth0 -w capture-%H%M.pcap \
 ```
 
 ---
+
 ## Network Monitoring: nmap
 
 ```bash
@@ -501,6 +521,7 @@ nmap -p 22,80,443 192.168.1.100
 ```
 
 ---
+
 ## Network Diagnostics
 
 ```bash
@@ -528,6 +549,7 @@ arp -a
 ```
 
 ---
+
 ## SSL/TLS Configuration
 
 ```bash
@@ -549,6 +571,7 @@ Best practices:
 - Use certificate automation (`certbot`/Let's Encrypt)
 
 ---
+
 ## SSL/TLS Testing and Debugging
 
 ```bash
@@ -572,6 +595,7 @@ openssl verify -CAfile /etc/ssl/certs/ca-certificates.crt \
 ```
 
 ---
+
 ## VPN Overview
 
 Common `VPN` solutions for `Linux`:
@@ -598,6 +622,7 @@ AllowedIPs = 10.0.0.2/32
 ```
 
 ---
+
 ## WireGuard Complete Setup
 
 ```bash
@@ -632,6 +657,7 @@ systemctl enable wg-quick@wg0
 ```
 
 ---
+
 ## IPv6 Configuration
 
 ```bash
@@ -664,6 +690,7 @@ network:
 ```
 
 ---
+
 ## IPv6 Essentials
 
 Key concepts:
@@ -686,6 +713,7 @@ nft add rule inet filter input \
 ```
 
 ---
+
 ## Network Namespaces
 
 Network namespaces provide isolated network stacks - the foundation of container networking.
@@ -731,6 +759,7 @@ ip netns del red
 ```
 
 ---
+
 ## Bridge Networking
 
 A `bridge` connects multiple interfaces at Layer 2, like a virtual switch.
@@ -791,6 +820,7 @@ tc qdisc del dev eth0 root
 ```
 
 ---
+
 ## Traffic Shaping: HTB Classes
 
 ```bash
@@ -815,6 +845,7 @@ tc filter add dev eth0 parent 1:0 protocol ip \
 ```
 
 ---
+
 ## Network Troubleshooting Methodology
 
 Follow a systematic bottom-up approach:
@@ -849,6 +880,7 @@ Follow a systematic bottom-up approach:
     ```
 
 ---
+
 ## Proxy Configuration
 
 ```bash
@@ -876,6 +908,7 @@ curl -x http://proxy.example.com:3128 https://example.com
 ```
 
 ---
+
 ## DNS Client Troubleshooting
 
 ```bash
@@ -907,6 +940,7 @@ resolvectl flush-caches
 ```
 
 ---
+
 ## iproute2 Advanced Usage
 
 ```bash
@@ -936,6 +970,7 @@ ip link set gre1 up
 ```
 
 ---
+
 ## NetworkManager vs systemd-networkd
 
 | Feature | `NetworkManager` | `systemd-networkd` |
@@ -988,6 +1023,7 @@ cp /usr/lib/syslinux/modules/bios/ldlinux.c32 /srv/tftp/
 ```
 
 ---
+
 ## Wake-on-LAN
 
 `WoL` sends a magic packet to power on remote machines over the network.
@@ -1016,6 +1052,7 @@ wakeonlan -i 192.168.1.255 AA:BB:CC:DD:EE:FF
 ```
 
 ---
+
 ## ethtool for NIC Diagnostics
 
 `ethtool` queries and configures network interface hardware settings.
@@ -1046,6 +1083,7 @@ ethtool --show-offload eth0   # list all offload settings
 ```
 
 ---
+
 ## Network Performance Testing with iperf3
 
 `iperf3` measures maximum achievable bandwidth between two endpoints.
@@ -1077,6 +1115,7 @@ iperf3 -c 192.168.1.10 -J > results.json
 ```
 
 ---
+
 ## VXLAN Overlay Networks
 
 `VXLAN` encapsulates Layer 2 frames in UDP packets, enabling overlay networks across Layer 3 boundaries.
@@ -1111,6 +1150,7 @@ ping 10.200.0.2
 VNI (VXLAN Network Identifier) allows up to 16 million isolated segments.
 
 ---
+
 ## keepalived for High Availability
 
 `keepalived` provides `VRRP`-based failover for IP addresses across multiple servers.
@@ -1149,6 +1189,7 @@ journalctl -u keepalived -f
 ```
 
 ---
+
 ## Network Configuration Backup and Restore
 
 ```bash
@@ -1181,6 +1222,7 @@ resolvectl query example.com
 ```
 
 ---
+
 ## /etc/network/interfaces (Legacy)
 
 The traditional Debian/Ubuntu network configuration method, now replaced by `netplan` on modern systems.
@@ -1213,6 +1255,7 @@ ifquery eth0        # show configured parameters
 ```
 
 ---
+
 ## Wireless Networking Basics
 
 ```bash
@@ -1244,6 +1287,7 @@ watch -n 1 'iw dev wlan0 station dump'
 ```
 
 ---
+
 ## Exercise: Configure Multi-Subnet Network
 
 Set up a router connecting two subnets on a single Linux host:
@@ -1280,6 +1324,7 @@ nft add rule inet filter forward \
 ```
 
 ---
+
 ## Network Interface Naming Schemes
 
 Modern `Linux` uses predictable network interface names based on hardware topology.
@@ -1313,6 +1358,7 @@ udevadm control --reload-rules && udevadm trigger
 ```
 
 ---
+
 ## ARP and Neighbor Discovery
 
 `ARP` (Address Resolution Protocol) maps IP addresses to MAC addresses on local networks.
@@ -1347,6 +1393,7 @@ sysctl net.ipv4.neigh.default.gc_thresh3
 ```
 
 ---
+
 ## Network Troubleshooting: Packet Loss
 
 Use a layered approach to identify where packet loss occurs.
@@ -1379,6 +1426,7 @@ ethtool -S eth0 | grep -i "error\|drop"
 ```
 
 ---
+
 ## Firewall Logging and Debugging
 
 Enable logging in firewall rules to diagnose connectivity issues.

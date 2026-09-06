@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Routing and Partitioning
 
 ---
+
 ## What This Chapter Covers
 
 - Partitioned queues
@@ -21,6 +23,7 @@ audience:
 - Schema management
 
 ---
+
 ## Partitions
 
 - Queue split into shards
@@ -29,6 +32,7 @@ audience:
 - Parallel consumers per shard
 
 ---
+
 ## Partition Keys
 
 - Function of message field
@@ -37,11 +41,13 @@ audience:
 - Distribution depends on key choice
 
 ---
+
 ## Partitioning Visualized
 
 ![partitions_keys](svg/courses/architecting/message-queues/04_routing_and_partitioning/partitions_keys.svg)
 
 ---
+
 ## Choosing a Key
 
 - High cardinality
@@ -50,6 +56,7 @@ audience:
 - Match the natural unit of order
 
 ---
+
 ## Hot Partitions
 
 - One key dominates
@@ -58,6 +65,7 @@ audience:
 - Solve with composite key or fan-out
 
 ---
+
 ## Re-Partitioning
 
 - Add shards on load growth
@@ -66,6 +74,7 @@ audience:
 - Or use consistent hashing
 
 ---
+
 ## Routing Keys
 
 - Topic plus pattern
@@ -74,11 +83,13 @@ audience:
 - Powerful but complex
 
 ---
+
 ## Routing Models
 
 ![routing_models](svg/courses/architecting/message-queues/04_routing_and_partitioning/routing_models.svg)
 
 ---
+
 ## Topic Hierarchy
 
 - "orders.placed", "orders.cancelled"
@@ -87,6 +98,7 @@ audience:
 - Pick a convention early
 
 ---
+
 ## Schemas
 
 - Producers and consumers must agree
@@ -95,6 +107,7 @@ audience:
 - Compatibility rules
 
 ---
+
 ## Compatibility
 
 - Backward: new consumer reads old data
@@ -103,6 +116,7 @@ audience:
 - None: only same-version
 
 ---
+
 ## Avro, Protobuf, JSON Schema
 
 - Binary formats save bytes
@@ -111,6 +125,7 @@ audience:
 - Stick to one per topic
 
 ---
+
 ## Versioning
 
 - Tag schema version on message
@@ -119,6 +134,7 @@ audience:
 - Deprecate, do not delete
 
 ---
+
 ## Cross-Region
 
 - Replicate selected topics
@@ -127,6 +143,7 @@ audience:
 - Consumer fail-over plan
 
 ---
+
 ## Common Routing Mistakes
 
 - Single-partition default forever

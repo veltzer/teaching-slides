@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Governance and Security
 
 ---
+
 ## What This Chapter Covers
 
 - Data governance
@@ -21,6 +23,7 @@ audience:
 - Compliance
 
 ---
+
 ## Data Governance
 
 - Catalog of datasets
@@ -29,6 +32,7 @@ audience:
 - Access controls
 
 ---
+
 ## PII Handling
 
 - Identify and tag PII
@@ -37,6 +41,7 @@ audience:
 - Limit who and what can read
 
 ---
+
 ## Model Cards
 
 - Intended use
@@ -45,6 +50,7 @@ audience:
 - Known limitations
 
 ---
+
 ## Datasheets for Datasets
 
 - Source and collection
@@ -53,6 +59,7 @@ audience:
 - License and consent
 
 ---
+
 ## Bias and Fairness
 
 - Slice metrics by sensitive group
@@ -61,16 +68,19 @@ audience:
 - Monitor in production
 
 ---
+
 ## Slice Metrics
 
 ![bias_slices](svg/courses/ai/mlops/05_governance_and_security/bias_slices.svg)
 
 ---
+
 ## Threats Overview
 
 ![threats](svg/courses/ai/mlops/05_governance_and_security/threats.svg)
 
 ---
+
 ## Threats: Data Poisoning
 
 - Attacker plants bad samples
@@ -79,6 +89,7 @@ audience:
 - Detect anomalies in distributions
 
 ---
+
 ## Threats: Adversarial Inputs
 
 - Crafted inputs flip predictions
@@ -87,6 +98,7 @@ audience:
 - Test with adversarial sets
 
 ---
+
 ## Threats: Model Theft
 
 - Predictions leak weights
@@ -95,6 +107,7 @@ audience:
 - Limit confidence scores
 
 ---
+
 ## Threats: Inversion
 
 - Reconstructing training data
@@ -103,6 +116,7 @@ audience:
 - Audit memorized strings
 
 ---
+
 ## Compliance
 
 - GDPR right to be forgotten
@@ -111,6 +125,7 @@ audience:
 - Sector-specific rules
 
 ---
+
 ## Audit Trail
 
 - Who deployed which model when
@@ -119,6 +134,7 @@ audience:
 - Retain by policy
 
 ---
+
 ## Access Control
 
 - Per-environment IAM
@@ -127,6 +143,7 @@ audience:
 - Rotate secrets
 
 ---
+
 ## Common Governance Mistakes
 
 - No data catalog

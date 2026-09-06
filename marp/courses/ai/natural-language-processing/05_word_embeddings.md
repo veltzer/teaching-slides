@@ -9,14 +9,17 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Word Embeddings
 
 ---
+
 ## Sparse vs Dense
 
 ![embeddings](svg/courses/ai/natural-language-processing/05_word_embeddings/embeddings.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - From sparse counts to dense vectors and why that shift mattered
@@ -27,6 +30,7 @@ audience:
 - Cross-lingual embeddings and shared semantic spaces
 
 ---
+
 ## Why Dense Vectors
 
 - Sparse one-hot or count vectors have no notion of similarity between words
@@ -35,6 +39,7 @@ audience:
 - A handful of dimensions captures syntactic and semantic regularities at once
 
 ---
+
 ## The Distributional Hypothesis
 
 - "You shall know a word by the company it keeps" — Firth, 1957
@@ -43,11 +48,13 @@ audience:
 - Context can be a window of nearby words, a sentence, or a document
 
 ---
+
 ## From Counts to Dense Vectors
 
 ![counts_to_dense](svg/courses/ai/natural-language-processing/05_word_embeddings/counts_to_dense.svg)
 
 ---
+
 ## Properties We Want From Embeddings
 
 - Similarity — semantically related words have small distance
@@ -57,6 +64,7 @@ audience:
 - Compactness — a few hundred dimensions suffice for most tasks
 
 ---
+
 ## Early Approaches
 
 - Latent Semantic Analysis used `SVD` on a term-document matrix
@@ -65,6 +73,7 @@ audience:
 - They were expensive on large corpora and slow to update with new data
 
 ---
+
 ## Word2Vec: The Big Idea
 
 - Train a shallow neural network whose hidden layer is the embedding
@@ -73,6 +82,7 @@ audience:
 - The result — embeddings that scale to billions of tokens on commodity hardware
 
 ---
+
 ## CBOW vs Skip-gram
 
 - `CBOW` — Continuous Bag of Words — predict the center word from context
@@ -81,11 +91,13 @@ audience:
 - Skip-gram works better on rare words and small corpora
 
 ---
+
 ## Word2Vec Architectures
 
 ![word2vec_architectures](svg/courses/ai/natural-language-processing/05_word_embeddings/word2vec_architectures.svg)
 
 ---
+
 ## Negative Sampling
 
 - The full softmax over the vocabulary is prohibitively expensive
@@ -94,6 +106,7 @@ audience:
 - Noise distribution is the unigram distribution raised to the 3/4 power
 
 ---
+
 ## Hierarchical Softmax
 
 - Build a binary tree over the vocabulary, often a Huffman tree
@@ -102,6 +115,7 @@ audience:
 - Faster than full softmax; negative sampling is usually preferred today
 
 ---
+
 ## Word2Vec Hyperparameters
 
 - Window size — how far the context extends from the center word
@@ -111,6 +125,7 @@ audience:
 - Minimum word count — drops rare words below a threshold
 
 ---
+
 ## Hyperparameter Effects
 
 - Larger window — more topical, less syntactic similarity
@@ -120,6 +135,7 @@ audience:
 - The defaults in `gensim` are sensible starting points
 
 ---
+
 ## GloVe Motivation
 
 - `Word2Vec` learns from local windows but never sees global statistics directly
@@ -128,6 +144,7 @@ audience:
 - Combines the speed of count methods with the geometry of neural methods
 
 ---
+
 ## The Co-occurrence Matrix
 
 - Entry `X_ij` is how often word `j` appears in the context of word `i`
@@ -136,6 +153,7 @@ audience:
 - Captures global statistics that windowed methods only see locally
 
 ---
+
 ## GloVe Loss
 
 ```python
@@ -151,6 +169,7 @@ J = sum(
 - Weighting `f(X_ij)` keeps frequent pairs from dominating the loss
 
 ---
+
 ## GloVe vs Word2Vec
 
 - `Word2Vec` — local context, online stochastic updates
@@ -159,6 +178,7 @@ J = sum(
 - In practice the gap is small; the choice often comes down to tooling
 
 ---
+
 ## FastText: Subword Embeddings
 
 - A word is represented as the sum of its character n-gram vectors
@@ -167,6 +187,7 @@ J = sum(
 - Morphologically rich languages benefit dramatically
 
 ---
+
 ## FastText and Out-of-Vocabulary
 
 - Truly novel words still have an embedding — sum of their n-grams
@@ -175,6 +196,7 @@ J = sum(
 - The classical `OOV` problem largely disappears
 
 ---
+
 ## FastText for Cross-lingual Use
 
 - Subword sharing extends to typologically related languages
@@ -183,11 +205,13 @@ J = sum(
 - Practical default for low-resource and code-switched text
 
 ---
+
 ## Embedding Properties
 
 ![embedding_properties](svg/courses/ai/natural-language-processing/05_word_embeddings/embedding_properties.svg)
 
 ---
+
 ## Similarity Benchmarks
 
 - `WordSim-353` — pairs rated for similarity by humans
@@ -196,6 +220,7 @@ J = sum(
 - Correlation with human ratings is the standard intrinsic metric
 
 ---
+
 ## Analogy Tasks
 
 - `king - man + woman` should land near `queen`
@@ -204,6 +229,7 @@ J = sum(
 - The Google analogy set covers semantic and syntactic relations
 
 ---
+
 ## Analogy Caveats
 
 - The arithmetic only works on average across many examples
@@ -212,6 +238,7 @@ J = sum(
 - Analogies are an intrinsic probe, not a downstream task
 
 ---
+
 ## Visualization with t-SNE and UMAP
 
 - `t-SNE` preserves local neighborhoods; clusters look meaningful
@@ -220,6 +247,7 @@ J = sum(
 - Both can show patterns that are not actually present — interpret with care
 
 ---
+
 ## Bias in Embeddings
 
 - Embeddings absorb the statistical biases of their training corpus
@@ -228,6 +256,7 @@ J = sum(
 - Debiasing methods reduce projections onto bias subspaces but rarely eliminate them
 
 ---
+
 ## Cross-lingual Embeddings
 
 - Goal — a shared vector space where translations are nearby
@@ -236,6 +265,7 @@ J = sum(
 - Quality varies enormously with typological distance between language pairs
 
 ---
+
 ## Mapping Monolingual Spaces
 
 - Train embeddings independently for each language
@@ -244,6 +274,7 @@ J = sum(
 - Surprisingly effective when languages share enough structure
 
 ---
+
 ## MUSE Adversarial Alignment
 
 - Learn the mapping without any bilingual dictionary
@@ -252,6 +283,7 @@ J = sum(
 - A refinement step uses the induced dictionary to polish the alignment
 
 ---
+
 ## Multilingual Joint Training
 
 - Train a single embedding model on a mix of languages
@@ -260,11 +292,13 @@ J = sum(
 - The basis for modern multilingual transformer models
 
 ---
+
 ## Cross-lingual Embedding Approaches
 
 ![crosslingual_approaches](svg/courses/ai/natural-language-processing/05_word_embeddings/crosslingual_approaches.svg)
 
 ---
+
 ## Embeddings in Practice
 
 - Pretrained vectors are a strong baseline for many tasks
@@ -273,6 +307,7 @@ J = sum(
 - Modern pipelines mostly use contextual embeddings — but static vectors still work
 
 ---
+
 ## When Static Embeddings Are Enough
 
 - Strict latency or memory budgets
@@ -281,6 +316,7 @@ J = sum(
 - Cross-lingual transfer for low-resource languages
 
 ---
+
 ## Anti-Patterns
 
 - Mixing tokenizations between embedding training and downstream use
@@ -289,6 +325,7 @@ J = sum(
 - Ignoring bias measurements until production complaints surface
 
 ---
+
 ## Summary
 
 - Dense vectors replaced sparse counts because geometry encodes meaning

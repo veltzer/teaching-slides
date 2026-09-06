@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # 3D Modeling and Asset Import
 
 ---
+
 ## Common Texture Maps
 
 ![texture_types](svg/courses/unity/introduction-to-game-development-with-unity/02_3d_modeling_and_asset_import/texture_types.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The vocabulary of 3D modeling — meshes, vertices, polygons, UVs
@@ -25,6 +28,7 @@ audience:
 - Keeping import settings sane for performance
 
 ---
+
 ## What a 3D Model Is, Roughly
 
 - A bag of points (vertices) in 3D space
@@ -34,6 +38,7 @@ audience:
 - *UV coordinates* tell the shader where to sample the texture
 
 ---
+
 ## Polygon Counts
 
 - Triangles per object is a real cost — both memory and per-frame work
@@ -43,6 +48,7 @@ audience:
 - Modern engines have LOD (level-of-detail) systems to swap in lower-poly versions at distance
 
 ---
+
 ## Materials and Shaders
 
 - A *shader* is the program that decides each pixel's colour
@@ -52,6 +58,7 @@ audience:
 - Built-in shaders: Standard, Unlit, Universal Render Pipeline shaders
 
 ---
+
 ## Textures
 
 - Image files (PNG, JPG, EXR, etc.) wrapped onto surfaces
@@ -61,11 +68,13 @@ audience:
 - Unity's import settings control compression per-platform
 
 ---
+
 ## Mesh Pipeline
 
 ![mesh_pipeline](svg/courses/unity/introduction-to-game-development-with-unity/02_3d_modeling_and_asset_import/mesh_pipeline.svg)
 
 ---
+
 ## Modeling Inside Unity
 
 - Unity is *not* a modeling tool — it has primitives but no polygon-edit mode
@@ -75,6 +84,7 @@ audience:
 - ProBuilder meshes can be exported to FBX for further work
 
 ---
+
 ## External Modeling Tools
 
 - **Blender**: free, open source, very capable
@@ -84,6 +94,7 @@ audience:
 - All export to FBX or OBJ, both of which Unity reads
 
 ---
+
 ## Importing a Model
 
 - Drop the FBX / OBJ file into your project's `Assets` folder
@@ -93,6 +104,7 @@ audience:
 - Hit Apply after changes — Unity re-imports
 
 ---
+
 ## Common Import Settings
 
 - **Scale Factor**: usually 1.0; some tools export at cm vs m and need 100x or 0.01x
@@ -102,6 +114,7 @@ audience:
 - **Materials**: Extract Materials creates editable material assets
 
 ---
+
 ## Texture Import Settings
 
 - **Type**: Default for normal textures, Normal Map for bumpy surface data
@@ -111,6 +124,7 @@ audience:
 - Wrong settings can destroy quality or balloon memory — review every texture
 
 ---
+
 ## Materials in Unity
 
 - Right-click in the Project window &#8594; Create &#8594; Material
@@ -120,6 +134,7 @@ audience:
 - One material can be shared across hundreds of GameObjects — keeps draw calls down
 
 ---
+
 ## The Asset Store
 
 - Marketplace inside Unity Hub
@@ -129,6 +144,7 @@ audience:
 - Always verify the licence terms; some assets restrict commercial use
 
 ---
+
 ## Optimising for Performance
 
 - Combine many small static meshes into batches (Static Batching)
@@ -138,6 +154,7 @@ audience:
 - Profile with Unity's Frame Debugger before optimising
 
 ---
+
 ## A Quick Sanity Pipeline
 
 - Always check the polygon count of imported models (Inspector preview)
@@ -147,6 +164,7 @@ audience:
 - Naming convention: `pf_PlayerCharacter`, `mat_GroundDirt`, `tex_GroundDirt_albedo`
 
 ---
+
 ## Common Beginner Mistakes
 
 - Importing a model at 100x scale and then scaling it down inside the editor (use import scale)

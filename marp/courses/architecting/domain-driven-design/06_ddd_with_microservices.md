@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # DDD With Microservices and Hexagonal Architecture
 
 ---
+
 ## DDD and Microservices
 
 - Bounded context = service is the natural mapping
@@ -20,11 +22,13 @@ audience:
 - DDD provides the boundaries; microservices are the deployment
 
 ---
+
 ## Context Per Service
 
 ![context_per_service](svg/courses/architecting/domain-driven-design/06_ddd_with_microservices/context_per_service.svg)
 
 ---
+
 ## Why The Match Works
 
 - Both emphasize boundaries
@@ -33,6 +37,7 @@ audience:
 - DDD without boundaries is fuzzy; microservices without DDD is arbitrary
 
 ---
+
 ## Bounded Context Per Service
 
 - Default: one service per bounded context
@@ -41,6 +46,7 @@ audience:
 - Use the bounded context as the starting point; adjust if needed
 
 ---
+
 ## Hexagonal Architecture
 
 - Ports-and-adapters architecture by Alistair Cockburn
@@ -49,6 +55,7 @@ audience:
 - Adapters implement the ports for specific technologies
 
 ---
+
 ## Why Hexagonal
 
 - Isolates the domain from infrastructure
@@ -57,6 +64,7 @@ audience:
 - Aligns with DDD's "domain layer" concept
 
 ---
+
 ## The Layers (or Hexagon)
 
 - **Domain**: aggregates, entities, value objects, domain events
@@ -65,11 +73,13 @@ audience:
 - The domain depends on nothing; everything depends on the domain
 
 ---
+
 ## Layers Side By Side
 
 ![hexagonal_architecture](svg/courses/architecting/domain-driven-design/06_ddd_with_microservices/hexagonal_architecture.svg)
 
 ---
+
 ## Ports
 
 - Interfaces declared in the domain or application layer
@@ -78,6 +88,7 @@ audience:
 - The ports are the contracts; the adapters fulfill them
 
 ---
+
 ## Adapters
 
 - Implementations of ports
@@ -86,6 +97,7 @@ audience:
 - Live in the infrastructure layer; can be swapped without touching the domain
 
 ---
+
 ## Adapter Examples
 
 - **Driving adapter**: HTTP controller that calls a command handler
@@ -94,6 +106,7 @@ audience:
 - Both are adapters; both fit the hexagon
 
 ---
+
 ## Onion Architecture
 
 - A close cousin of hexagonal
@@ -102,6 +115,7 @@ audience:
 - Different visualization, same principle
 
 ---
+
 ## Clean Architecture
 
 - Robert Martin's name for similar ideas
@@ -110,6 +124,7 @@ audience:
 - All three (hexagonal, onion, clean) are variations on a theme
 
 ---
+
 ## Why It Matters For Microservices
 
 - Each microservice has its own hexagon
@@ -118,6 +133,7 @@ audience:
 - Testing the domain doesn't need a full stack
 
 ---
+
 ## A Service Layout
 
 ```tree
@@ -133,6 +149,7 @@ audience:
 - Application uses domain and ports; doesn't know adapters
 
 ---
+
 ## Cross-Service Integration
 
 - Each service has its own ports for outgoing calls
@@ -141,6 +158,7 @@ audience:
 - The ACL is itself a port + adapter
 
 ---
+
 ## DDD Patterns That Don't Survive Service Boundaries
 
 - Aggregate references across services — use IDs only
@@ -149,6 +167,7 @@ audience:
 - Each service's hexagon is sealed
 
 ---
+
 ## Microservices Anti-Patterns That DDD Catches
 
 - Decompose by technical layer (data service, business service)
@@ -157,6 +176,7 @@ audience:
 - Services that mirror database tables 1:1
 
 ---
+
 ## When to Refactor Across Services
 
 - If two services constantly call each other for the same data, the boundary may be wrong
@@ -164,6 +184,7 @@ audience:
 - DDD's boundaries should match the actual coupling
 
 ---
+
 ## Bounded Contexts Within a Monolith
 
 - Hexagonal architecture applies inside a monolith too
@@ -172,6 +193,7 @@ audience:
 - Modular monolith is a valid endpoint
 
 ---
+
 ## When the Monolith Is Right
 
 - Small team, small domain
@@ -180,6 +202,7 @@ audience:
 - Apply DDD inside; postpone microservices until the team and system demand it
 
 ---
+
 ## Where to Go Deeper
 
 - The dedicated **Microservices Architecture** course covers:
@@ -189,6 +212,7 @@ audience:
     - Deployment, observability, scaling
 
 ---
+
 ## Summary
 
 - Bounded context = service is the natural microservices mapping

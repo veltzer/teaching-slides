@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Search and Query DSL
 
 ---
+
 ## What This Chapter Covers
 
 - Query context versus filter context
@@ -22,6 +24,7 @@ audience:
 - Deep pagination with scroll, search_after, and PIT
 
 ---
+
 ## The Search Request
 
 - Searches go to `_search` with a JSON Query DSL body
@@ -40,6 +43,7 @@ GET /products/_search
 - Each hit carries `_score`, `_id`, and `_source`
 
 ---
+
 ## Query Context vs Filter Context
 
 - Query context answers "how well does this match?" and computes a relevance `_score`
@@ -58,6 +62,7 @@ GET /logs/_search
 - DBA rule: put anything not needed for ranking in `filter` to gain caching and speed
 
 ---
+
 ## The Node Query Cache
 
 - Filter-context results are cached per segment in the node query cache
@@ -71,6 +76,7 @@ GET /_nodes/stats/indices/query_cache
 ```
 
 ---
+
 ## Full-Text Queries: match
 
 - `match` analyzes the input the same way the field was analyzed, then scores
@@ -88,6 +94,7 @@ GET /articles/_search
 - `match_phrase` requires terms adjacent and in order
 
 ---
+
 ## Full-Text Queries: multi_match
 
 - `multi_match` runs a match across several fields at once
@@ -106,6 +113,7 @@ GET /articles/_search
 - Choose the type to match how the data is structured
 
 ---
+
 ## Term-Level Queries
 
 - Term-level queries are not analyzed — they match exact terms
@@ -123,6 +131,7 @@ GET /products/_search
 - Match against the `.keyword` sub-field for exact matching of text
 
 ---
+
 ## Range Queries
 
 - `range` matches numeric, date, or IP values within bounds
@@ -139,6 +148,7 @@ GET /orders/_search
 - Range in filter context is cheap and cacheable; prefer it over scored ranges
 
 ---
+
 ## Compound Queries with bool
 
 - `bool` combines clauses into one query
@@ -158,6 +168,7 @@ GET /products/_search
 ```
 
 ---
+
 ## Aggregations Framework
 
 - Aggregations summarize data rather than returning documents
@@ -176,6 +187,7 @@ GET /orders/_search
 - Metric examples: `avg`, `sum`, `min`, `max`, `stats`, `cardinality`, `percentiles`
 
 ---
+
 ## Bucket Aggregations
 
 - `terms` groups by field value; `date_histogram` groups by time interval
@@ -195,6 +207,7 @@ GET /orders/_search
 - High-cardinality `terms` aggs are heavy — they load `doc_values` and use memory
 
 ---
+
 ## Search Performance Optimization
 
 - Move non-scoring conditions to `filter` context for caching
@@ -211,6 +224,7 @@ GET /products/_search
 - Avoid `script` queries and `wildcard`/leading-wildcard patterns on hot paths
 
 ---
+
 ## doc_values and fielddata
 
 - `doc_values` are an on-disk columnar store used for sorting and aggregations
@@ -225,6 +239,7 @@ GET /products/_search
 ```
 
 ---
+
 ## Search Profiling
 
 - `_profile` returns a detailed per-shard breakdown of query and collector time
@@ -245,6 +260,7 @@ GET /products/_validate/query?explain=true
 ```
 
 ---
+
 ## Deep Pagination Problem
 
 - `from + size` must gather and sort `from + size` hits on every shard
@@ -254,6 +270,7 @@ GET /products/_validate/query?explain=true
 - DBA guidance: never raise `max_result_window` to brute-force deep paging
 
 ---
+
 ## Scroll
 
 - Scroll snapshots the index and pages through a large result set sequentially
@@ -277,6 +294,7 @@ DELETE /_search/scroll
 - Scroll is for batch export, not for live user pagination
 
 ---
+
 ## search_after and Point In Time
 
 - `search_after` pages forward using the last hit's sort values — stateless and scalable

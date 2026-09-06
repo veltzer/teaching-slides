@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Syntactic Parsing
 
 ---
+
 ## What This Chapter Covers
 
 - Constituency parsing and phrase-structure grammars
@@ -22,6 +24,7 @@ audience:
 - Evaluation metrics that survive cross-corpus comparison
 
 ---
+
 ## Why Parse Syntax At All
 
 - Tokenization gives us words; tagging gives us labels; parsing gives us structure
@@ -30,6 +33,7 @@ audience:
 - Modern transformers learn syntax implicitly, but explicit parses remain useful for audit and control
 
 ---
+
 ## Two Views of Syntax
 
 - Constituency: sentences are nested phrases (NP inside VP inside S)
@@ -38,11 +42,13 @@ audience:
 - Modern pipelines lean toward dependency for its compactness and cross-lingual portability
 
 ---
+
 ## Two Views Compared
 
 ![constituency_vs_dependency](svg/courses/ai/natural-language-processing/14_syntactic_parsing/constituency_vs_dependency.svg)
 
 ---
+
 ## Phrase-Structure Grammars
 
 - A phrase-structure grammar rewrites a non-terminal into a sequence of symbols
@@ -51,6 +57,7 @@ audience:
 - A parse tree is a derivation that yields the input sentence
 
 ---
+
 ## Context-Free Grammars
 
 - A `CFG` is a tuple of non-terminals, terminals, productions, and a start symbol
@@ -59,6 +66,7 @@ audience:
 - Most parsing algorithms assume the grammar is in Chomsky Normal Form
 
 ---
+
 ## Chomsky Normal Form
 
 - Every production is either `A -> B C` or `A -> a`
@@ -67,6 +75,7 @@ audience:
 - `CNF` makes dynamic programming over spans clean to express
 
 ---
+
 ## The CKY Algorithm
 
 - Bottom-up parsing for grammars in Chomsky Normal Form
@@ -75,6 +84,7 @@ audience:
 - Time is cubic in sentence length, quadratic in grammar size
 
 ---
+
 ## CKY In Pseudocode
 
 ```python
@@ -95,6 +105,7 @@ def cky(words, grammar):
 ```
 
 ---
+
 ## Probabilistic CFGs
 
 - Each production carries a probability conditioned on its left-hand side
@@ -103,6 +114,7 @@ def cky(words, grammar):
 - Decode by scoring all trees and returning the most probable one
 
 ---
+
 ## PCFG Decoding With CKY
 
 - Replace set union with max over scored derivations
@@ -111,6 +123,7 @@ def cky(words, grammar):
 - Reconstruct the tree by following backpointers from the root span
 
 ---
+
 ## Limits of Vanilla PCFGs
 
 - Independence assumptions are too strong; lexical preferences are lost
@@ -119,6 +132,7 @@ def cky(words, grammar):
 - Even so, neural parsers eventually overtook all hand-engineered variants
 
 ---
+
 ## Dependency Parsing Basics
 
 - A dependency parse is a directed tree over the words of a sentence
@@ -127,6 +141,7 @@ def cky(words, grammar):
 - The tree captures who modifies what without intermediate phrase nodes
 
 ---
+
 ## Universal Dependencies
 
 - A cross-lingual annotation standard with a shared inventory of labels
@@ -135,6 +150,7 @@ def cky(words, grammar):
 - Treebanks are released yearly; the same parser code can train on any of them
 
 ---
+
 ## A UD Example
 
 ```diagram
@@ -151,6 +167,7 @@ jumps -obl-> dog
 ```
 
 ---
+
 ## Projective Versus Non-Projective
 
 - A parse is projective if dependency arcs do not cross when drawn above the sentence
@@ -159,11 +176,13 @@ jumps -obl-> dog
 - Non-projective parsers handle the general case at extra computational cost
 
 ---
+
 ## Crossing Arcs
 
 ![projective_vs_nonprojective](svg/courses/ai/natural-language-processing/14_syntactic_parsing/projective_vs_nonprojective.svg)
 
 ---
+
 ## Transition-Based Parsing
 
 - Build the parse incrementally with a buffer of remaining words and a stack
@@ -172,6 +191,7 @@ jumps -obl-> dog
 - Linear time in the sentence length; greedy or beam decoding
 
 ---
+
 ## Arc-Standard Transitions
 
 - `SHIFT`: move the front of the buffer onto the stack
@@ -180,6 +200,7 @@ jumps -obl-> dog
 - A correct sequence of transitions yields a projective parse
 
 ---
+
 ## Arc-Eager Transitions
 
 - Adds `REDUCE`, which pops the stack when its top has a head
@@ -188,6 +209,7 @@ jumps -obl-> dog
 - A common default for high-throughput dependency parsers
 
 ---
+
 ## Transition Parser Loop
 
 ```python
@@ -203,6 +225,7 @@ def parse(words, classifier):
 - Errors compound; a bad shift early on cannot be undone in greedy mode
 
 ---
+
 ## Graph-Based Parsing
 
 - Score every possible head-dependent edge in the sentence
@@ -211,6 +234,7 @@ def parse(words, classifier):
 - For non-projective parses, Chu-Liu-Edmonds finds the maximum spanning tree
 
 ---
+
 ## Maximum Spanning Tree Parsers
 
 - Build a complete directed graph over the words plus the root
@@ -219,6 +243,7 @@ def parse(words, classifier):
 - Naturally handles non-projective trees with no extra machinery
 
 ---
+
 ## Biaffine Attention Parsers
 
 - Two `MLP`s project each token into head and dependent representations
@@ -227,11 +252,13 @@ def parse(words, classifier):
 - Dozat and Manning showed this beats earlier transition-based parsers on `UD`
 
 ---
+
 ## Biaffine Scoring
 
 ![biaffine_parser](svg/courses/ai/natural-language-processing/14_syntactic_parsing/biaffine_parser.svg)
 
 ---
+
 ## Stack LSTM Parsers
 
 - An older neural transition-based parser that encodes the stack with an `LSTM`
@@ -240,6 +267,7 @@ def parse(words, classifier):
 - Elegant idea, but biaffine graph-based parsers won the accuracy race
 
 ---
+
 ## Transformer-Based Parsing
 
 - Replace the encoder of a biaffine parser with a pretrained transformer
@@ -248,6 +276,7 @@ def parse(words, classifier):
 - Current state-of-the-art parsers across most `UD` treebanks
 
 ---
+
 ## Subject-Verb-Object Extraction
 
 - Find the verb token whose head is `ROOT`
@@ -256,6 +285,7 @@ def parse(words, classifier):
 - A parse-driven `SVO` extractor is more robust than regex on real text
 
 ---
+
 ## Relation Extraction With Parse Paths
 
 - Connect two entities by the shortest path of dependency edges between them
@@ -264,6 +294,7 @@ def parse(words, classifier):
 - Especially useful when entities are far apart in the sentence
 
 ---
+
 ## Linguistic Queries Over Parsed Text
 
 - Tools like `Semgrex` and `grew-match` run patterns over dependency trees
@@ -272,6 +303,7 @@ def parse(words, classifier):
 - Faster than running a full relation extractor on every sentence
 
 ---
+
 ## Evaluation: Attachment Scores
 
 - Unlabeled attachment score (`UAS`): fraction of words assigned the correct head
@@ -280,6 +312,7 @@ def parse(words, classifier):
 - `LAS` is the headline metric for most modern dependency parsers
 
 ---
+
 ## Evaluation: Constituency Bracketing
 
 - Treat each non-terminal as a labeled bracket spanning a token range
@@ -288,6 +321,7 @@ def parse(words, classifier):
 - For `PCFG` and neural constituency parsers, F1 is the headline metric
 
 ---
+
 ## Cross-Corpus Consistency
 
 - Treebanks differ in tokenization, head-finding rules, and label inventories
@@ -296,11 +330,13 @@ def parse(words, classifier):
 - For deployment, retrain or fine-tune on a treebank that matches your text
 
 ---
+
 ## Choosing A Parser
 
 ![parser_decision](svg/courses/ai/natural-language-processing/14_syntactic_parsing/parser_decision.svg)
 
 ---
+
 ## Practical Tips
 
 - Use a pretrained `UD` parser unless you have annotated data for a custom scheme
@@ -309,6 +345,7 @@ def parse(words, classifier):
 - Evaluate end-to-end, not just on the syntactic metric
 
 ---
+
 ## Anti-Patterns
 
 - Hand-rolling a regex pipeline when a parse would be more robust
@@ -317,6 +354,7 @@ def parse(words, classifier):
 - Treating a parse tree as ground truth instead of a model output
 
 ---
+
 ## Summary
 
 - Constituency and dependency are two complementary views of syntactic structure

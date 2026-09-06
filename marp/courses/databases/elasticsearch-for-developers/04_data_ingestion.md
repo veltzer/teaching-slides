@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Data Ingestion
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![ingestion_methods](svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/ingestion_methods.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Single document ingestion
@@ -27,11 +29,13 @@ audience:
 - Throughput
 
 ---
+
 ## Ingestion Paths
 
 ![ingest_paths](svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/ingest_paths.svg)
 
 ---
+
 ## Single Document
 
 ```http
@@ -44,6 +48,7 @@ POST /products/_doc
 - Each is a round trip
 
 ---
+
 ## Bulk API
 
 ```http
@@ -59,6 +64,7 @@ POST /_bulk
 - Massive throughput improvement
 
 ---
+
 ## Bulk Sizing
 
 - 5-15MB per bulk request typical
@@ -67,6 +73,7 @@ POST /_bulk
 - Smaller: per-request overhead
 
 ---
+
 ## Logstash
 
 - ETL pipeline
@@ -76,6 +83,7 @@ POST /_bulk
 - Heavy; declining vs alternatives
 
 ---
+
 ## Beats
 
 - Lightweight shippers
@@ -84,6 +92,7 @@ POST /_bulk
 - Output to ES or Logstash
 
 ---
+
 ## Filebeat
 
 - Tail log files
@@ -92,6 +101,7 @@ POST /_bulk
 - Standard for log shipping
 
 ---
+
 ## Ingest Pipelines
 
 - Server-side processing on ingestion
@@ -100,6 +110,7 @@ POST /_bulk
 - Run on ingest nodes
 
 ---
+
 ## Pipeline Example
 
 ```json
@@ -113,6 +124,7 @@ PUT /_ingest/pipeline/parse_log
 ```
 
 ---
+
 ## Direct From Application
 
 - Application logs to a queue
@@ -121,6 +133,7 @@ PUT /_ingest/pipeline/parse_log
 - Standard for high-throughput apps
 
 ---
+
 ## Date-Based Indexes
 
 - One index per day / week / month
@@ -129,6 +142,7 @@ PUT /_ingest/pipeline/parse_log
 - ILM (Index Lifecycle Management) automates
 
 ---
+
 ## ILM
 
 - Hot &#8594; warm &#8594; cold &#8594; delete
@@ -137,6 +151,7 @@ PUT /_ingest/pipeline/parse_log
 - Standard for log clusters
 
 ---
+
 ## Common Ingestion Mistakes
 
 - Document-at-a-time ingestion (slow)

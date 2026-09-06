@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Clients
 
 ---
+
 ## What This Chapter Covers
 
 - Client landscape
@@ -20,6 +22,7 @@ audience:
 - Caching
 
 ---
+
 ## Client Landscape
 
 - Apollo Client: most popular
@@ -28,11 +31,13 @@ audience:
 - Many language-specific
 
 ---
+
 ## Client Choices
 
 ![client_choices](svg/courses/networking/graphql/07_clients/client_choices.svg)
 
 ---
+
 ## What Clients Provide
 
 - Query execution
@@ -42,6 +47,7 @@ audience:
 - React / framework integration
 
 ---
+
 ## Apollo Client
 
 - Mature, large ecosystem
@@ -50,6 +56,7 @@ audience:
 - DevTools
 
 ---
+
 ## Apollo Cache
 
 - Normalise by `__typename` + id
@@ -57,6 +64,7 @@ audience:
 - Powerful but tricky
 
 ---
+
 ## Relay
 
 - Designed with GraphQL servers
@@ -65,6 +73,7 @@ audience:
 - Optimised for big apps
 
 ---
+
 ## urql
 
 - Smaller, simpler
@@ -72,6 +81,7 @@ audience:
 - Easier learning curve
 
 ---
+
 ## Code Generation
 
 - Generate types from schema and queries
@@ -80,6 +90,7 @@ audience:
 - Less runtime error
 
 ---
+
 ## Sample Codegen Hook
 
 ```typescript
@@ -91,6 +102,7 @@ data?.user?.name; // typed
 - IDE autocomplete
 
 ---
+
 ## Cache Invalidation
 
 - Refetch query
@@ -98,6 +110,7 @@ data?.user?.name; // typed
 - Subscriptions to live-update
 
 ---
+
 ## Optimistic Updates
 
 - Apply mutation result before server confirms
@@ -105,6 +118,7 @@ data?.user?.name; // typed
 - Better perceived latency
 
 ---
+
 ## Local State
 
 - Client-side fields in schema
@@ -112,6 +126,7 @@ data?.user?.name; // typed
 - Less context spread
 
 ---
+
 ## Persisted Queries
 
 - Hash queries; send hash + variables
@@ -120,6 +135,7 @@ data?.user?.name; // typed
 - Shared by many clients
 
 ---
+
 ## Common Client Mistakes
 
 - Not using codegen; runtime errors

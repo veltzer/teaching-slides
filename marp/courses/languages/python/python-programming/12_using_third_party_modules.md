@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Using Third Party Modules
 
 ---
+
 ## What are Third Party Modules?
 - Packages not included in Python's standard library
 - Published on PyPI (Python Package Index)
@@ -18,6 +20,7 @@ audience:
 - Cover virtually every domain
 
 ---
+
 ## PyPI - Python Package Index
 - https://pypi.org
 - The official repository for Python packages
@@ -30,6 +33,7 @@ audience:
     - License information
 
 ---
+
 ## `pip` - The Package Installer
 
 ```bash
@@ -47,6 +51,7 @@ pip install -r requirements.txt
 ```
 
 ---
+
 ## `pip` - Common Commands
 
 ```bash
@@ -67,6 +72,7 @@ pip uninstall requests
 ```
 
 ---
+
 ## `pip freeze`
 
 ```bash
@@ -84,6 +90,7 @@ pip install -r requirements.txt
 - Use this to recreate environments
 
 ---
+
 ## `requirements.txt` Format
 
 ```config
@@ -101,6 +108,7 @@ pytest>=7.0
 - `>=,<` range of versions
 
 ---
+
 ## Virtual Environments - Why?: Details
 
 - Different projects may need different package versions
@@ -109,11 +117,13 @@ pytest>=7.0
 - Isolation prevents conflicts
 
 ---
+
 ## Virtual Environments - Why?
 
 ![virtual_environments_why](svg/courses/languages/python/python-programming/12_using_third_party_modules/virtual_environments_why.svg)
 
 ---
+
 ## Creating Virtual Environments
 
 ```bash
@@ -131,6 +141,7 @@ deactivate
 ```
 
 ---
+
 ## Virtual Environment Workflow
 
 ```bash
@@ -154,6 +165,7 @@ deactivate
 ```
 
 ---
+
 ## Virtual Environment Structure
 
 ```tree
@@ -171,6 +183,7 @@ deactivate
 ```
 
 ---
+
 ## `requests` - HTTP Library
 
 ```python
@@ -184,6 +197,7 @@ print(response.headers)      # Response headers
 ```
 
 ---
+
 ## `requests` - POST and Parameters
 
 ```python
@@ -204,6 +218,7 @@ response = requests.get(
 ```
 
 ---
+
 ## `requests` - Error Handling
 
 ```python
@@ -222,7 +237,9 @@ except requests.HTTPError as e:
 ```
 
 ---
+
 ## Popular Third Party Packages
+
 | Package | Purpose |
 |---------|---------|
 | `requests` | HTTP client |
@@ -237,6 +254,7 @@ except requests.HTTPError as e:
 | `click` | CLI framework |
 
 ---
+
 ## `numpy` - Quick Overview
 
 ```python
@@ -256,6 +274,7 @@ print(np.std(a))    # 1.414...
 ```
 
 ---
+
 ## `pandas` - Quick Overview
 
 ```python
@@ -275,6 +294,7 @@ print(df.sort_values("name"))  # Sort
 ```
 
 ---
+
 ## `click` - CLI Framework
 
 ```python
@@ -297,6 +317,7 @@ python3 hello.py --name Alice --count 3
 ```
 
 ---
+
 ## `rich` - Rich Text in Terminal
 
 ```python
@@ -317,6 +338,7 @@ console.print("[bold red]Error![/bold red] Something went wrong")
 ```
 
 ---
+
 ## `python-dotenv` - Environment Configuration
 
 ```python
@@ -339,6 +361,7 @@ pip install python-dotenv
 ```
 
 ---
+
 ## `tqdm` - Progress Bars
 
 ```python
@@ -361,6 +384,7 @@ with tqdm(total=100) as pbar:
 ```
 
 ---
+
 ## `pydantic` - Data Validation
 
 ```python
@@ -384,6 +408,7 @@ pip install pydantic[email]
 ```
 
 ---
+
 ## Checking Package Security
 
 ```bash
@@ -401,6 +426,7 @@ safety check
 - Prefer well-known, actively maintained packages
 
 ---
+
 ## Summary
 - PyPI hosts over 500,000 Python packages
 - Use `pip` to install and manage packages

@@ -9,14 +9,17 @@ audience:
   - audiences:architects
 
 ---
+
 # Data Management Patterns
 
 ---
+
 ## Database-per-Service
 
 ![database_per_service](svg/courses/architecting/microservices-architecture/07_data_management/database_per_service.svg)
 
 ---
+
 ## Database Per Service
 
 - Each service has its own database
@@ -25,6 +28,7 @@ audience:
 - This is the foundation of decoupling
 
 ---
+
 ## Why Database Per Service
 
 - Independent schema evolution
@@ -34,6 +38,7 @@ audience:
 - The service can change its model without breaking others
 
 ---
+
 ## The Cost: Distributed Data
 
 - No cross-service joins
@@ -42,6 +47,7 @@ audience:
 - Eventual consistency between services
 
 ---
+
 ## Cross-Service Joins
 
 - The need: report combining order data and customer data
@@ -50,6 +56,7 @@ audience:
 - Or: fetch from each service via API and join in code
 
 ---
+
 ## Cross-Service Transactions
 
 - ACID transactions don't span services
@@ -57,6 +64,7 @@ audience:
 - Don't use 2PC: it doesn't scale and breaks availability
 
 ---
+
 ## Data Duplication
 
 - A service may need data owned by another service
@@ -65,6 +73,7 @@ audience:
 - Subscribe to events: keep a local read model up to date (most flexible)
 
 ---
+
 ## Event-Driven Data Sync
 
 - Owning service publishes events when its data changes
@@ -73,6 +82,7 @@ audience:
 - The owning service stays the source of truth
 
 ---
+
 ## CQRS Across Services
 
 - Each service has its write model and its read models
@@ -81,11 +91,13 @@ audience:
 - Across services: each subscribes to the events it cares about
 
 ---
+
 ## Saga Coordination Patterns
 
 ![saga_patterns](svg/courses/architecting/microservices-architecture/07_data_management/saga_patterns.svg)
 
 ---
+
 ## Outbox Pattern
 
 - A service writes its state and an event in the same database transaction
@@ -94,6 +106,7 @@ audience:
 - Common solution to "I changed my row but the event didn't go out"
 
 ---
+
 ## Polyglot Persistence
 
 - Pick the database that fits the service's workload
@@ -104,6 +117,7 @@ audience:
 - Different services can use different stores for different reasons
 
 ---
+
 ## Reference Data
 
 - Some data is read-mostly and used by many services (countries, currencies)
@@ -112,6 +126,7 @@ audience:
 - "Reference" means "rarely changes"
 
 ---
+
 ## Reporting and Analytics
 
 - Reports often need data from many services
@@ -120,6 +135,7 @@ audience:
 - This is a read-only consumer of the system; it doesn't impose constraints back
 
 ---
+
 ## Anti-Patterns
 
 - Shared database across services
@@ -129,6 +145,7 @@ audience:
 - "Just one shared cache for all services"
 
 ---
+
 ## Summary
 
 - Database per service; no shared databases

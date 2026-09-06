@@ -9,6 +9,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Core System Architecture
 ## Filesystem, Boot Process, and systemd
 
@@ -18,6 +19,7 @@ audience:
 ![linux_filesystem_hierarchy_standard_fhs](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/linux_filesystem_hierarchy_standard_fhs.svg)
 
 ---
+
 ## Linux Filesystem Hierarchy Standard (FHS): Details
 - `/bin`, `/sbin` - essential binaries
 - `/etc` - system configuration
@@ -26,6 +28,7 @@ audience:
 - `/tmp` - temporary files
 
 ---
+
 ## Key FHS Directories
 
 | Directory | Purpose |
@@ -39,6 +42,7 @@ audience:
 | `/run` | Runtime data since last boot |
 
 ---
+
 ## The /usr Hierarchy
 
 Modern `Linux` merges `/bin` -> `/usr/bin` and `/sbin` -> `/usr/sbin`.
@@ -60,6 +64,7 @@ ls -la /sbin   # symlink to /usr/sbin
 ```
 
 ---
+
 ## The /var Hierarchy
 
 ```bash
@@ -76,6 +81,7 @@ ls -la /sbin   # symlink to /usr/sbin
 Important: `/var/log` and `/var/cache` can grow large. Consider separate partitions for production.
 
 ---
+
 ## Exploring the FHS
 
 ```bash
@@ -102,6 +108,7 @@ df -i
 ![the_boot_process_overview](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/the_boot_process_overview.svg)
 
 ---
+
 ## The Boot Process Overview: Details
 1. Firmware (BIOS/UEFI) performs POST and finds boot device
 1. Bootloader (`GRUB2`) loads kernel and `initramfs`
@@ -109,6 +116,7 @@ df -i
 1. `systemd` (PID 1) starts all services
 
 ---
+
 ## BIOS vs UEFI
 
 | Feature | BIOS | UEFI |
@@ -129,6 +137,7 @@ efibootmgr -v
 ```
 
 ---
+
 ## GRUB2 Bootloader
 
 ```bash
@@ -151,6 +160,7 @@ grub2-mkconfig -o /boot/grub2/grub.cfg  # RHEL
 ```
 
 ---
+
 ## initramfs
 
 Initial RAM filesystem loaded by the bootloader alongside the kernel.
@@ -175,6 +185,7 @@ Purpose:
 - Assemble RAID/LVM before root mount
 
 ---
+
 ## systemd Overview
 
 - Replacement for SysV `init`
@@ -197,6 +208,7 @@ systemd-analyze time
 ```
 
 ---
+
 ## systemd Unit Types
 
 | Unit Type | Extension | Purpose |
@@ -211,6 +223,7 @@ systemd-analyze time
 | Scope | `.scope` | External process groups |
 
 ---
+
 ## systemd Targets (Runlevels)
 
 Targets group units into meaningful states:
@@ -235,6 +248,7 @@ systemctl isolate rescue.target
 ```
 
 ---
+
 ## systemctl Usage
 
 ```bash
@@ -255,6 +269,7 @@ systemctl list-units --type=service --state=running
 ```
 
 ---
+
 ## systemctl Advanced Usage
 
 ```bash
@@ -279,6 +294,7 @@ systemctl show nginx.service -p MainPID
 ```
 
 ---
+
 ## Writing a systemd Unit File
 
 ```ini
@@ -302,6 +318,7 @@ WantedBy=multi-user.target
 Save to `/etc/systemd/system/myapp.service`, then `systemctl daemon-reload`.
 
 ---
+
 ## Unit File: Service Types
 
 | Type | Behavior |
@@ -322,6 +339,7 @@ ExecReload=/bin/kill -HUP $MAINPID
 ```
 
 ---
+
 ## Unit File: Advanced Directives
 
 ```ini
@@ -346,6 +364,7 @@ WatchdogSec=30
 ```
 
 ---
+
 ## systemd Timers
 
 Timers replace traditional `cron` jobs with better logging and dependency management.
@@ -369,6 +388,7 @@ systemctl list-timers --all
 ```
 
 ---
+
 ## systemd Timer: Calendar Expressions
 
 ```cron
@@ -391,6 +411,7 @@ systemd-analyze calendar "Mon..Fri *-*-* 09:00"
 ```
 
 ---
+
 ## systemd Timer vs Service Example
 
 ```ini
@@ -417,6 +438,7 @@ journalctl -u backup.service --since today
 ```
 
 ---
+
 ## journalctl and the Journal
 
 ```bash
@@ -440,6 +462,7 @@ journalctl -p err
 ```
 
 ---
+
 ## journalctl Advanced Usage
 
 ```bash
@@ -467,6 +490,7 @@ journalctl -u nginx -p err --since "1 hour ago"
 ```
 
 ---
+
 ## Journal Persistence Configuration
 
 ```bash
@@ -489,6 +513,7 @@ Compress=yes
 ```
 
 ---
+
 ## The /proc Filesystem
 
 Virtual filesystem exposing kernel and process information:
@@ -513,6 +538,7 @@ cat /proc/<PID>/fd/
 ```
 
 ---
+
 ## Useful /proc Entries
 
 ```bash
@@ -539,6 +565,7 @@ cat /proc/interrupts
 ```
 
 ---
+
 ## The /sys Filesystem
 
 Exposes kernel objects (devices, drivers, buses):
@@ -557,6 +584,7 @@ cat /sys/class/net/eth0/speed
 ```
 
 ---
+
 ## Practical /sys Usage
 
 ```bash
@@ -580,6 +608,7 @@ cat /sys/class/power_supply/BAT0/status
 ```
 
 ---
+
 ## Kernel Tuning with sysctl
 
 ```bash
@@ -603,6 +632,7 @@ Common tunable parameters:
 - `fs.file-max` - max open file descriptors
 
 ---
+
 ## Important sysctl Parameters
 
 ```bash
@@ -627,6 +657,7 @@ ls /etc/sysctl.d/
 ```
 
 ---
+
 ## Shared Libraries
 
 ```bash
@@ -648,6 +679,7 @@ ldconfig -p | grep libssl
 ```
 
 ---
+
 ## Shared Library Troubleshooting
 
 ```bash
@@ -673,6 +705,7 @@ nm -D /usr/lib/x86_64-linux-gnu/libssl.so
 ```
 
 ---
+
 ## Kernel Modules
 
 Loadable kernel modules extend the kernel at runtime without rebooting.
@@ -699,6 +732,7 @@ modinfo -p ext4
 ```
 
 ---
+
 ## Kernel Module Configuration
 
 ```bash
@@ -724,6 +758,7 @@ modprobe -n --first-time nouveau 2>&1
 ```
 
 ---
+
 ## Device Management with `udev`
 
 `udev` dynamically manages `/dev` entries when hardware is detected.
@@ -750,6 +785,7 @@ SUBSYSTEM=="block", ATTRS{serial}=="ABC123", \
 ```
 
 ---
+
 ## `udev` Rule Examples
 
 ```bash
@@ -775,6 +811,7 @@ udevadm test /sys/class/net/eth0
 ```
 
 ---
+
 ## `systemd` Socket Activation
 
 Socket activation starts services on-demand when a connection arrives.
@@ -809,6 +846,7 @@ systemctl list-sockets
 ![socket_activation_benefits](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/socket_activation_benefits.svg)
 
 ---
+
 ## Socket Activation Benefits: Details
 - Faster boot: services start only when needed
 - No port conflicts: `systemd` holds sockets during restarts
@@ -816,6 +854,7 @@ systemctl list-sockets
 - Reduced memory usage on idle systems
 
 ---
+
 ## Control Groups (`cgroups`)
 
 `cgroups` limit and account for resource usage per process group.
@@ -838,6 +877,7 @@ systemctl show nginx.service -p CPUQuota,MemoryMax
 ```
 
 ---
+
 ## `cgroups` in Unit Files
 
 ```ini
@@ -866,6 +906,7 @@ cat /sys/fs/cgroup/system.slice/nginx.service/memory.max
 ```
 
 ---
+
 ## Kernel Parameters for Production
 
 Recommended `sysctl` settings for production servers:
@@ -897,6 +938,7 @@ sysctl -a | grep vm.swappiness
 ```
 
 ---
+
 ## systemd Resource Control with `cgroups` v2
 
 `cgroups` v2 provides a unified hierarchy for resource management.
@@ -929,6 +971,7 @@ cat /sys/fs/cgroup/system.slice/nginx.service/cpu.max
 ```
 
 ---
+
 ## `systemd-tmpfiles`: Managing Temporary Files
 
 `systemd-tmpfiles` creates, cleans, and removes volatile and temporary files.
@@ -959,6 +1002,7 @@ systemd-tmpfiles --create --dry-run
 ```
 
 ---
+
 ## `systemd-sysusers`: Managing System Users
 
 `systemd-sysusers` declaratively creates system users and groups at boot or package install.
@@ -988,6 +1032,7 @@ Advantages over manual `useradd`:
 - Automatically assigns UIDs from the system range
 
 ---
+
 ## `systemd-networkd` Overview
 
 `systemd-networkd` is a built-in network manager for servers (alternative to `NetworkManager`).
@@ -1025,6 +1070,7 @@ networkctl status eth0
 ```
 
 ---
+
 ## Boot Troubleshooting: Rescue and Emergency Mode
 
 When a system fails to boot normally, use rescue or emergency mode.
@@ -1052,6 +1098,7 @@ systemctl reboot
 ```
 
 ---
+
 ## GRUB Recovery Procedures
 
 When GRUB itself is broken or the kernel fails to load:
@@ -1082,6 +1129,7 @@ grub rescue> normal
 ```
 
 ---
+
 ## Kernel Crash Dumps with `kdump`
 
 `kdump` captures kernel memory when a crash (panic) occurs for post-mortem analysis.
@@ -1129,6 +1177,7 @@ The device mapper (`dm`) is a kernel framework for mapping block devices. It und
 ![device_mapper_overview](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/device_mapper_overview.svg)
 
 ---
+
 ## Device Mapper Overview: Example
 The device mapper (`dm`) is a kernel framework for mapping block devices. It underpins `LVM`, `LUKS`, and `multipath`.
 ```bash
@@ -1140,6 +1189,7 @@ ls -l /dev/mapper/
 ```
 
 ---
+
 ## `/dev` Special Files
 
 Key special device files every admin should know:
@@ -1162,6 +1212,7 @@ head -c 32 /dev/urandom | base64  # generate random token
 ```
 
 ---
+
 ## Exercise: System Architecture Exploration
 
 Perform the following tasks on your lab system:
@@ -1183,6 +1234,7 @@ systemd-run --scope -p MemoryMax=256M stress --vm 1 --vm-bytes 512M
 ```
 
 ---
+
 ## Kernel Version Management
 
 ```bash
@@ -1216,6 +1268,7 @@ dnf remove kernel-5.14.0-362.el9
 ```
 
 ---
+
 ## Understanding Load Average
 
 Load average represents the average number of processes in a runnable or uninterruptible state.
@@ -1250,6 +1303,7 @@ iostat -x 1 3
 Rule of thumb: sustained load average above 2x `nproc` warrants investigation.
 
 ---
+
 ## File Descriptors and Limits
 
 ```bash
@@ -1282,6 +1336,7 @@ sysctl -w fs.file-max=2097152
 ```
 
 ---
+
 ## Locale and Timezone Configuration
 
 ```bash

@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Built-in Tools
 
 ---
@@ -848,9 +849,9 @@ echo "git:x:1001:1001:Git User:/home/git:/usr/bin/git-shell" >> /etc/passwd
 
 **Setup tasks:**
 1. **Repository server setup:**
-   - Configure git daemon for local network access
-   - Set up HTTP backend with authentication
-   - Create restricted git-shell users
+    - Configure git daemon for local network access
+    - Set up HTTP backend with authentication
+    - Create restricted git-shell users
 
 1. **Workflow tools:**
     - Use git bisect to find a bug

@@ -12,9 +12,11 @@ audience:
   - audiences:managers
 
 ---
+
 # Orchestration and Compute Choices
 
 ---
+
 ## Table of Contents
 
 1. Compute Models Overview
@@ -29,17 +31,20 @@ audience:
 1. Decision Framework
 
 ---
+
 ## The Compute Spectrum
 
 ![the_compute_spectrum](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/the_compute_spectrum.svg)
 
 ---
+
 ## The Compute Spectrum: Details
 
 - Moving right trades **control** for **convenience**
 - Each step reduces operational burden but increases abstraction
 
 ---
+
 ## Kubernetes Overview
 
 - Open-source container orchestration platform
@@ -52,6 +57,7 @@ audience:
 - De facto standard for container orchestration
 
 ---
+
 ## Managed Containers and Serverless Overview
 
 **Managed container services**:
@@ -66,11 +72,13 @@ audience:
 - Automatic scaling from zero to thousands of instances
 
 ---
+
 ## Kubernetes Architecture
 
 ![kubernetes_architecture](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/kubernetes_architecture.svg)
 
 ---
+
 ## Operational Complexity Comparison
 
 | Aspect | `Kubernetes` | Managed Containers | `Serverless` |
@@ -83,6 +91,7 @@ audience:
 | Learning curve | Steep | Moderate | Low |
 
 ---
+
 ## Team Capability Requirements
 
 - **`Kubernetes`** requires:
@@ -99,6 +108,7 @@ audience:
     - Understanding of provider limits
 
 ---
+
 ## When K8s Complexity Is Justified
 
 Justified:
@@ -114,6 +124,7 @@ NOT justified:
 - No dedicated ops/platform team
 
 ---
+
 ## Cost Models: Kubernetes
 
 - **Fixed costs**:
@@ -128,6 +139,7 @@ NOT justified:
     - Training, certification, and tooling licenses
 
 ---
+
 ## Cost Models: Managed Containers and Serverless
 
 **Managed containers** (`AWS Fargate` example):
@@ -143,11 +155,13 @@ NOT justified:
 - Best for sporadic workloads; worst for constant high-throughput
 
 ---
+
 ## Cost Comparison at Scale
 
 ![cost_comparison_at_scale](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cost_comparison_at_scale.svg)
 
 ---
+
 ## Scaling Characteristics
 
 - **`Kubernetes`**:
@@ -164,6 +178,7 @@ NOT justified:
     - Concurrency limits per function (default 1000)
 
 ---
+
 ## Portability vs Convenience Matrix
 
 | Factor | Self-Managed K8s | Managed K8s | Managed Containers | Serverless |
@@ -178,11 +193,13 @@ NOT justified:
 - `Serverless` has the deepest vendor lock-in
 
 ---
+
 ## Cluster Strategy: Cluster Per Team
 
 ![cluster_strategy_cluster_per_team](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cluster_strategy_cluster_per_team.svg)
 
 ---
+
 ## Cluster Strategy: Cluster Per Team: Details
 
 - Full blast radius isolation between teams
@@ -190,6 +207,7 @@ NOT justified:
 - Simpler `RBAC`; independent upgrade schedules
 
 ---
+
 ## Cluster Per Team: Pros and Cons
 
 **Pros**:
@@ -205,11 +223,13 @@ NOT justified:
 - Harder to enforce organization-wide policies
 
 ---
+
 ## Cluster Strategy: Shared Clusters
 
 ![cluster_strategy_shared_clusters](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cluster_strategy_shared_clusters.svg)
 
 ---
+
 ## Shared Clusters: Pros and Cons
 
 **Pros**:
@@ -225,6 +245,7 @@ NOT justified:
 - Namespace management overhead
 
 ---
+
 ## Namespace Strategies
 
 **By team**:
@@ -244,6 +265,7 @@ NOT justified:
 - Combines team ownership with environment separation
 
 ---
+
 ## Namespace Isolation: ResourceQuota
 
 ```yaml
@@ -267,6 +289,7 @@ spec:
 - `NetworkPolicy` controls pod-to-pod traffic
 
 ---
+
 ## Network Policies for Multi-Tenancy
 
 ```yaml
@@ -292,6 +315,7 @@ spec:
 - Explicitly allow only required communication paths
 
 ---
+
 ## Multi-Tenancy Models
 
 | Model | Isolation | Cost | Complexity |
@@ -306,6 +330,7 @@ spec:
 - Choose based on compliance requirements and trust boundaries
 
 ---
+
 ## Managed Kubernetes Services Comparison
 
 | Feature | `EKS` | `AKS` | `GKE` |
@@ -321,6 +346,7 @@ spec:
 - Worker nodes remain your responsibility (unless using `Autopilot`/`Fargate`)
 
 ---
+
 ## Managed K8s: What You Still Own
 
 Even with managed `Kubernetes`, you are responsible for:
@@ -336,6 +362,7 @@ Even with managed `Kubernetes`, you are responsible for:
 - Cost optimization (right-sizing nodes)
 
 ---
+
 ## Self-Managed Kubernetes
 
 When to consider:
@@ -352,27 +379,32 @@ Tools for self-management:
 - `Kubespray` - `Ansible`-based deployment
 
 ---
+
 ## Self-Managed vs Managed: Decision Tree
 
 ![self_managed_vs_managed_decision_tree](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/self_managed_vs_managed_decision_tree.svg)
 
 ---
+
 ## Serverless Architecture Flow
 
 ![serverless_architecture_flow](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/serverless_architecture_flow.svg)
 
 ---
+
 ## Cold Start: What Happens
 
 ![cold_start_what_happens](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cold_start_what_happens.svg)
 
 ---
+
 ## Cold Start: What Happens: Details
 
 - Cold starts happen when no idle instance exists
 - Frequency depends on traffic patterns and provider
 
 ---
+
 ## Cold Start Impact by Runtime
 
 | Runtime | Typical Cold Start | Notes |
@@ -390,6 +422,7 @@ Mitigation strategies:
 - Use compiled languages for latency-sensitive paths
 
 ---
+
 ## Cold Start Mitigation Techniques
 
 1. **Provisioned concurrency**
@@ -407,11 +440,13 @@ Mitigation strategies:
     - Reduces Java cold starts to ~200ms
 
 ---
+
 ## Vendor Lock-In Depth
 
 ![vendor_lock_in_depth](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/vendor_lock_in_depth.svg)
 
 ---
+
 ## Serverless Lock-In: Practical Examples
 
 **`AWS Lambda`** ties you to:
@@ -430,6 +465,7 @@ Mitigation strategies:
 The business logic is portable; everything around it is not.
 
 ---
+
 ## Reducing Serverless Lock-In
 
 - Use abstraction frameworks:
@@ -445,6 +481,7 @@ The business logic is portable; everything around it is not.
 - Accept some lock-in as a trade-off for velocity
 
 ---
+
 ## Event-Driven vs Request-Driven
 
 **Event-driven** (`serverless` natural fit):
@@ -465,11 +502,13 @@ The business logic is portable; everything around it is not.
 Event-driven workloads align best with serverless economics.
 
 ---
+
 ## Event-Driven Serverless Flow
 
 ![event_driven_serverless_flow](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/event_driven_serverless_flow.svg)
 
 ---
+
 ## Serverless Limits to Know
 
 | Limit | `AWS Lambda` | `Azure Functions` | `Cloud Functions` |
@@ -484,6 +523,7 @@ Event-driven workloads align best with serverless economics.
 - Limits can often be increased by request
 
 ---
+
 ## Hybrid Architectures
 
 Most real-world systems combine compute models:
@@ -502,11 +542,13 @@ Most real-world systems combine compute models:
     - Image/video processing triggers
 
 ---
+
 ## Hybrid Architecture Example
 
 ![hybrid_architecture_example](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/hybrid_architecture_example.svg)
 
 ---
+
 ## RBAC and Policy Enforcement
 
 ```yaml
@@ -531,6 +573,7 @@ rules:
 - Enforce required labels, approved registries, resource limits
 
 ---
+
 ## Cost Optimization Strategies
 
 **`Kubernetes`**:
@@ -551,6 +594,7 @@ kubectl top pods -n production
 ```
 
 ---
+
 ## Observability Across Compute Models
 
 | Aspect | `Kubernetes` | Managed Containers | `Serverless` |
@@ -565,6 +609,7 @@ kubectl top pods -n production
 - Consider `OpenTelemetry` as a vendor-neutral standard
 
 ---
+
 ## Security Considerations by Model
 
 **`Kubernetes`**:
@@ -585,6 +630,7 @@ kubectl top pods -n production
 - Focus shifts to application-level security
 
 ---
+
 ## CI/CD Patterns by Compute Model
 
 **`Kubernetes`**:
@@ -611,6 +657,7 @@ git push -> CI runs tests -> sam build
 - `GitOps` is the gold standard for `Kubernetes`
 
 ---
+
 ## Decision Framework
 
 Ask these questions in order:
@@ -630,11 +677,13 @@ Ask these questions in order:
     - 15+: Any model works
 
 ---
+
 ## Decision Matrix Summary
 
 ![decision_matrix_summary](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/decision_matrix_summary.svg)
 
 ---
+
 ## Anti-Patterns to Avoid
 
 1. **"Kubernetes all the things"**
@@ -653,6 +702,7 @@ Ask these questions in order:
     - Serverless can generate surprise bills
 
 ---
+
 ## Emerging Trends
 
 - **`WebAssembly` (`Wasm`) on the server**
@@ -670,6 +720,7 @@ Ask these questions in order:
     - Real-time cost attribution per team/service
 
 ---
+
 ## Key Takeaways
 
 - There is no universally correct compute model

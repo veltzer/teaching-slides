@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Overview
 
 ---
+
 ## What This Chapter Covers
 
 - What design patterns are
@@ -20,6 +22,7 @@ audience:
 - A short tour of how to read pattern descriptions
 
 ---
+
 ## What a Design Pattern Is
 
 - A *named* solution to a *recurring* design problem
@@ -29,6 +32,7 @@ audience:
 - Once a team shares the vocabulary, designs become discussable in shorthand
 
 ---
+
 ## A Brief History
 
 - Christopher Alexander used "patterns" for architecture in the 1970s
@@ -38,6 +42,7 @@ audience:
 - These 23 are still the canonical "design patterns" in conversation
 
 ---
+
 ## Patterns vs Principles
 
 - **Principles** (SOLID, DRY, KISS): general guidance, language-agnostic, "what to aim for"
@@ -47,11 +52,13 @@ audience:
 - A team needs both
 
 ---
+
 ## Principles vs Patterns
 
 ![principles_vs_patterns](svg/courses/design_patterns/design-patterns/01_overview/principles_vs_patterns.svg)
 
 ---
+
 ## What Patterns Are Not
 
 - A complete solution you drop in
@@ -61,6 +68,7 @@ audience:
 - A topic for showing off; choose patterns based on need
 
 ---
+
 ## Why Learn Them
 
 - Vocabulary: "let's use the Strategy here" beats a 10-minute explanation
@@ -70,16 +78,19 @@ audience:
 - Discipline: standard structure beats ad-hoc invention every time
 
 ---
+
 ## Pattern Categories
 
 ![categories](svg/courses/design_patterns/design-patterns/01_overview/categories.svg)
 
 ---
+
 ## All 23 GoF Patterns at a Glance
 
 ![patterns_map](svg/courses/design_patterns/design-patterns/01_overview/patterns_map.svg)
 
 ---
+
 ## Reading a Pattern Description
 
 - **Intent**: one sentence — what problem the pattern solves
@@ -90,11 +101,13 @@ audience:
 - **Implementation**: language-specific notes
 
 ---
+
 ## Pattern Anatomy
 
 ![pattern_anatomy](svg/courses/design_patterns/design-patterns/01_overview/pattern_anatomy.svg)
 
 ---
+
 ## Patterns and Language
 
 - The Gang of Four book uses C++ and Smalltalk
@@ -104,6 +117,7 @@ audience:
 - Read patterns as ideas, not as Java idioms
 
 ---
+
 ## Patterns vs Anti-Patterns
 
 - **Pattern**: a *recommended* solution to a recurring problem
@@ -113,6 +127,7 @@ audience:
 - Knowing both makes you a better reviewer
 
 ---
+
 ## A Common Misuse
 
 - Building a system *to* use patterns
@@ -122,6 +137,7 @@ audience:
 - "Pattern fever" — a phase most developers go through, then recover from
 
 ---
+
 ## Choosing the Right Pattern
 
 - Identify the *real* problem first
@@ -131,6 +147,7 @@ audience:
 - Refactor *into* the pattern when needed; don't guess up front
 
 ---
+
 ## Learning Strategy
 
 - Don't memorise all 23 at once
@@ -140,6 +157,7 @@ audience:
 - Re-read the descriptions every few years — your understanding deepens
 
 ---
+
 ## Patterns Beyond GoF
 
 - Architectural patterns: MVC, MVVM, Hexagonal, Clean
@@ -149,6 +167,7 @@ audience:
 - This course is the GoF foundation; the rest extend it
 
 ---
+
 ## What's Next
 
 - Five Creational patterns: making objects with intent

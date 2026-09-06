@@ -8,9 +8,11 @@ audience:
   - audiences:developers
   - audiences:security-professionals
 ---
+
 # Symmetric Encryption
 
 ---
+
 ## Modes
 
 ![symmetric_modes](svg/courses/security/cryptography-fundamentals/02_symmetric/symmetric_modes.svg)

@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Monitoring
 
 ---
+
 ## What Monitoring Means in This Course
 
 - This chapter is intentionally a stub
@@ -21,6 +23,7 @@ audience:
 - What follows is the minimum vocabulary every catalog reader should have
 
 ---
+
 ## What Is Observability?
 
 - The ability to understand the internal state of a system from its outputs
@@ -29,6 +32,7 @@ audience:
 - Critical for distributed systems where direct inspection is impossible
 
 ---
+
 ## The Three Pillars of Observability
 
 - Logs
@@ -39,6 +43,7 @@ audience:
     - The path of a request through a distributed system
 
 ---
+
 ## Logs vs Metrics vs Traces
 
 | Pillar | Use For | Storage Cost | Query Pattern |
@@ -48,6 +53,7 @@ audience:
 | Traces | Request flow analysis | Medium | Trace ID lookup |
 
 ---
+
 ## When the Three Pillars Are Not Enough
 
 - Logs tell you what happened, but not why
@@ -57,6 +63,7 @@ audience:
 - The goal is to be able to ask new questions without redeploying
 
 ---
+
 ## See Also
 
 - The Architecting Software Systems course covers monitoring as a full chapter

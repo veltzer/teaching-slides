@@ -9,14 +9,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Orchestration-Based Sagas
 
 ---
+
 ## Trade-offs
 
 ![orchestration_pros_cons](svg/courses/architecting/saga-pattern/04_orchestration_based_sagas/orchestration_pros_cons.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - How orchestration works
@@ -28,6 +31,7 @@ audience:
 - Worked example: order fulfillment via orchestration
 
 ---
+
 ## How Orchestration Works
 
 - A central orchestrator owns the saga
@@ -37,6 +41,7 @@ audience:
 - The orchestrator is itself a stateful aggregate
 
 ---
+
 ## The Orchestrator as a State Machine
 
 - States: `Started`, `InventoryReserved`, `PaymentCaptured`, `Completed`, `Failed`, `Compensating`, `CompensatedFailed`
@@ -45,11 +50,13 @@ audience:
 - The state machine **is** the saga, in code
 
 ---
+
 ## State Machine Visualized
 
 ![orchestrator_state_machine](svg/courses/architecting/saga-pattern/04_orchestration_based_sagas/orchestrator_state_machine.svg)
 
 ---
+
 ## A Minimal Orchestrator in Code
 
 ```python
@@ -72,6 +79,7 @@ class OrderSagaOrchestrator:
 ```
 
 ---
+
 ## Synchronous Commands
 
 - The orchestrator calls a participant via HTTP/gRPC and waits for the response
@@ -80,6 +88,7 @@ class OrderSagaOrchestrator:
 - Hard to scale; not the right choice for slow participants
 
 ---
+
 ## Asynchronous Command Events
 
 - The orchestrator emits a command event ("ReserveInventory")
@@ -89,11 +98,13 @@ class OrderSagaOrchestrator:
 - The standard model in production systems
 
 ---
+
 ## Sync vs Async Commands
 
 ![sync_vs_async_commands_orchestration](svg/courses/architecting/saga-pattern/04_orchestration_based_sagas/sync_vs_async_commands_orchestration.svg)
 
 ---
+
 ## Persisting Orchestrator State
 
 - The orchestrator must survive restarts and crashes
@@ -102,6 +113,7 @@ class OrderSagaOrchestrator:
 - Common approach: event-sourced orchestrator (chapter from CQRS course applies)
 
 ---
+
 ## Persistence Patterns
 
 - **Event-sourced**: store every state transition as an event; replay to reconstruct
@@ -110,6 +122,7 @@ class OrderSagaOrchestrator:
 - All three work; the choice affects observability and operational ergonomics
 
 ---
+
 ## Timeouts
 
 - Each step needs a timeout — what if the participant never responds?
@@ -118,6 +131,7 @@ class OrderSagaOrchestrator:
 - Without timeouts, sagas hang indefinitely
 
 ---
+
 ## Timer Patterns
 
 - A separate timer service that emits "TimeoutElapsed" events
@@ -126,6 +140,7 @@ class OrderSagaOrchestrator:
 - Whatever the mechanism, every step needs a deadline
 
 ---
+
 ## Retry Logic
 
 - Transient failures: retry the same step
@@ -135,6 +150,7 @@ class OrderSagaOrchestrator:
 - A maximum retry limit before giving up
 
 ---
+
 ## Retry Decision Tree
 
 - Step fails → check error type
@@ -144,6 +160,7 @@ class OrderSagaOrchestrator:
 - "Permanent" or "transient" classification belongs to the participant
 
 ---
+
 ## Centralized Visibility
 
 - The orchestrator's state is the single place to see "where is order 42?"
@@ -152,6 +169,7 @@ class OrderSagaOrchestrator:
 - This is the killer feature of orchestration
 
 ---
+
 ## Orchestrator Dashboard Wishlist
 
 - List all in-flight sagas with current state
@@ -161,6 +179,7 @@ class OrderSagaOrchestrator:
 - Operators love this; choreography needs custom tooling to provide it
 
 ---
+
 ## Workflow Engines
 
 - Tools that provide saga primitives out of the box
@@ -171,11 +190,13 @@ class OrderSagaOrchestrator:
 - **Apache Airflow**: scheduled DAGs (less suited to interactive sagas)
 
 ---
+
 ## Workflow Engine Comparison
 
 ![workflow_engines](svg/courses/architecting/saga-pattern/04_orchestration_based_sagas/workflow_engines.svg)
 
 ---
+
 ## When to Use a Workflow Engine
 
 - The team prefers an external tool over building orchestration in-house
@@ -184,6 +205,7 @@ class OrderSagaOrchestrator:
 - Multiple workflows need similar primitives — the engine is leverage
 
 ---
+
 ## When Not to Use a Workflow Engine
 
 - The flow is small and fits in 200 lines of orchestrator code
@@ -192,11 +214,13 @@ class OrderSagaOrchestrator:
 - The engine's deployment complexity exceeds the saga's complexity
 
 ---
+
 ## Worked Example: Order Saga via Orchestration
 
 ![orchestration_order_saga](svg/courses/architecting/saga-pattern/04_orchestration_based_sagas/orchestration_order_saga.svg)
 
 ---
+
 ## Order Saga Flow
 
 - Trigger: `PlaceOrder` command arrives
@@ -207,6 +231,7 @@ class OrderSagaOrchestrator:
 - Orchestrator: emits `ScheduleShipment`; on success → `Completed`
 
 ---
+
 ## Order Saga: Failure Path
 
 - Payment emits `PaymentFailed`
@@ -217,6 +242,7 @@ class OrderSagaOrchestrator:
 - Saga ends in `Failed` state with audit trail
 
 ---
+
 ## Anti-Patterns Specific to Orchestration
 
 - **God orchestrator**: one orchestrator that knows everything — hard to maintain
@@ -225,18 +251,21 @@ class OrderSagaOrchestrator:
 - **No timeout**: a participant outage hangs the orchestrator forever
 
 ---
+
 ## Choreography vs Orchestration: Operator's View
 
 - **Choreography**: "What's happening?" → query 5 services, build a timeline
 - **Orchestration**: "What's happening?" → query the orchestrator
 
 ---
+
 ## Choreography vs Orchestration: Developer's View
 
 - **Choreography**: change the flow → coordinate edits across multiple services
 - **Orchestration**: change the flow → edit the orchestrator's state machine
 
 ---
+
 ## A Common Hybrid
 
 - Use orchestration for the top-level workflow that crosses bounded contexts
@@ -245,6 +274,7 @@ class OrderSagaOrchestrator:
 - The choreography below it moves data without dragging the orchestrator into details
 
 ---
+
 ## Summary
 
 - Orchestration: a central orchestrator drives the saga as a state machine

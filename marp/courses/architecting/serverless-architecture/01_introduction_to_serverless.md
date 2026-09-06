@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Serverless
 
 ---
+
 ## What This Chapter Covers
 
 - What serverless means
@@ -20,11 +22,13 @@ audience:
 - The major providers
 
 ---
+
 ## Serverless Anatomy
 
 ![serverless_anatomy](svg/courses/architecting/serverless-architecture/01_introduction_to_serverless/serverless_anatomy.svg)
 
 ---
+
 ## What "Serverless" Means
 
 - You don't manage servers; the cloud does
@@ -34,6 +38,7 @@ audience:
 - Servers still exist; you just don't see them
 
 ---
+
 ## FaaS: Functions-as-a-Service
 
 - The classic serverless: write a function; deploy
@@ -43,6 +48,7 @@ audience:
 - Cold start on first invocation
 
 ---
+
 ## BaaS: Backend-as-a-Service
 
 - Hosted services that replace your custom code
@@ -52,6 +58,7 @@ audience:
 - Combine BaaS + FaaS to build apps without managing servers
 
 ---
+
 ## Pay-Per-Use
 
 - Bill by: invocations + execution time + memory
@@ -61,6 +68,7 @@ audience:
 - Match the model to your traffic
 
 ---
+
 ## Where Serverless Wins
 
 - Sporadic / unpredictable workloads
@@ -70,6 +78,7 @@ audience:
 - Rapid development
 
 ---
+
 ## Where Serverless Loses
 
 - Sustained high CPU
@@ -79,11 +88,13 @@ audience:
 - Performance-critical (cold starts hurt)
 
 ---
+
 ## Wins and Loses
 
 ![serverless_wins_loses](svg/courses/architecting/serverless-architecture/01_introduction_to_serverless/wins_loses.svg)
 
 ---
+
 ## Cold Starts
 
 - First invocation after idle: slow
@@ -93,6 +104,7 @@ audience:
 - Often-cited downside; often overstated
 
 ---
+
 ## The Major Providers
 
 - **AWS Lambda**: dominant; deepest ecosystem
@@ -102,6 +114,7 @@ audience:
 - **Vercel / Netlify**: web-focused; built on the above
 
 ---
+
 ## A Simple Example
 
 ```python
@@ -119,6 +132,7 @@ def lambda_handler(event, context):
 - Scale to zero when idle
 
 ---
+
 ## Vendor Lock-In
 
 - Lambda code differs from Azure Functions code (interfaces, idioms)
@@ -128,6 +142,7 @@ def lambda_handler(event, context):
 - Trade-off: vendor lock-in for less ops burden
 
 ---
+
 ## Edge Computing
 
 - Run functions at the network edge
@@ -137,6 +152,7 @@ def lambda_handler(event, context):
 - Where: latency-sensitive, lightweight transformations
 
 ---
+
 ## When Serverless Is The Wrong Choice
 
 - You need persistent connections (long polls, WebSockets)
@@ -146,6 +162,7 @@ def lambda_handler(event, context):
 - You're doing something CPU/RAM heavy 24/7
 
 ---
+
 ## What's Next
 
 - Design patterns specific to serverless

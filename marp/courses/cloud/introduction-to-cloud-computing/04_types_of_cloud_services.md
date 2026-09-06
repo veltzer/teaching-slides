@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Types of Cloud Services
 
 ---

@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Async Programming
 ## Chapter 9: Asynchronous Programming in Rust
 
@@ -216,6 +217,7 @@ async fn broadcast_example() {
 ```
 
 ---
+
 ## Stream Processing
 
 ```rust
@@ -232,6 +234,7 @@ async fn process_items() {
 ```
 
 ---
+
 ## Async Traits
 
 ```rust

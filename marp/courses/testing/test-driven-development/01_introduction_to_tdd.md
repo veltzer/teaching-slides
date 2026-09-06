@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to TDD
 
 ---
+
 ## What This Chapter Covers
 
 - What TDD is, in one sentence
@@ -20,16 +22,19 @@ audience:
 - When to use TDD; when not to
 
 ---
+
 ## The Cycle
 
 ![red_green_refactor](svg/courses/testing/test-driven-development/01_introduction_to_tdd/red_green_refactor.svg)
 
 ---
+
 ## TDD Benefits
 
 ![tdd_benefits](svg/courses/testing/test-driven-development/01_introduction_to_tdd/tdd_benefits.svg)
 
 ---
+
 ## What TDD Is
 
 - Write a failing test first
@@ -39,6 +44,7 @@ audience:
 - Each step is small; the rhythm is the point
 
 ---
+
 ## A Short History
 
 - Test-first ideas appeared in early software (NASA, defence)
@@ -48,6 +54,7 @@ audience:
 - Many teams "do TDD" sporadically; few do it continuously
 
 ---
+
 ## The Red-Green-Refactor Cycle
 
 - **Red**: write a failing test
@@ -57,6 +64,7 @@ audience:
 - Run the test suite hundreds of times a day
 
 ---
+
 ## Benefits
 
 - Built-in test coverage
@@ -66,6 +74,7 @@ audience:
 - Confidence to refactor
 
 ---
+
 ## Trade-Offs
 
 - Slower in the short term
@@ -75,6 +84,7 @@ audience:
 - Some types of code resist (algorithmically complex, throwaway scripts)
 
 ---
+
 ## TDD vs Test-After
 
 - Test-after: write code; then write tests
@@ -84,6 +94,7 @@ audience:
 - Both have a place; pick deliberately
 
 ---
+
 ## When TDD Wins
 
 - Small, focused units (functions, classes)
@@ -93,6 +104,7 @@ audience:
 - Bug fixes (write a failing test for the bug, then fix)
 
 ---
+
 ## When TDD Loses
 
 - Exploratory work where you don't yet know the design
@@ -102,11 +114,13 @@ audience:
 - One-off scripts you'll throw away
 
 ---
+
 ## Where TDD Pays Off
 
 ![when_tdd_wins](svg/courses/testing/test-driven-development/01_introduction_to_tdd/when_tdd_wins.svg)
 
 ---
+
 ## TDD Is Not Testing
 
 - Testing is verifying correctness; TDD is a *design* method
@@ -116,6 +130,7 @@ audience:
 - It's about the rhythm, not the artifact
 
 ---
+
 ## A Simple Example
 
 - Write a test: `assert add(2, 3) == 5`
@@ -126,6 +141,7 @@ audience:
 - Cycle complete in 30 seconds
 
 ---
+
 ## Triangulation
 
 - Sometimes you write the simplest code that passes the *first* test
@@ -135,6 +151,7 @@ audience:
 - Triangulation forces correctness
 
 ---
+
 ## Triangulation Example
 
 - Test 1: `add(2, 3) == 5`. Code: `return 5`. Passes.
@@ -143,11 +160,13 @@ audience:
 - Toy example; real problems benefit similarly
 
 ---
+
 ## Triangulation Strategy
 
 ![triangulation](svg/courses/testing/test-driven-development/01_introduction_to_tdd/triangulation.svg)
 
 ---
+
 ## TDD Doesn't Mean Tiny Steps
 
 - Beck's book emphasises baby steps
@@ -157,6 +176,7 @@ audience:
 - Calibrate over time
 
 ---
+
 ## Common Misconceptions
 
 - "TDD slows me down" — true short-term, false long-term
@@ -166,6 +186,7 @@ audience:
 - "TDD is dogma" — pragmatism still applies
 
 ---
+
 ## What's Next
 
 - The red-green-refactor cycle in depth

@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Confidence Sets and Duality
 
 ---
+
 ## What This Chapter Covers
 
 - The formal definition of a confidence set
@@ -21,11 +23,13 @@ audience:
 - Simultaneous confidence regions and multiplicity
 
 ---
+
 ## What "95% Confidence" Actually Means
 
 ![ci duality](svg/courses/math/statistics-theory/13_confidence_sets/ci_duality.svg)
 
 ---
+
 ## What A Confidence Set Is
 
 - A **confidence set** of level 1&minus;&alpha; for &psi;(&theta;) is a *data-dependent* set C(X) with **coverage** P&#952;( &psi;(&theta;) &isin; C(X) ) &geq; 1&minus;&alpha; for **every** &theta; — the guarantee is uniform over the parameter space, and it's a statement about the *procedure*
@@ -35,6 +39,7 @@ audience:
 - Three knobs you trade against each other: **coverage** (raise it &#8658; wider), **size/length** (precision), and which **direction(s)** you bound (one- vs two-sided)
 
 ---
+
 ## Construction Via Pivots
 
 - A **pivotal quantity** Q(X, &theta;) is a function of data *and* parameter whose distribution is **completely known** — it does not depend on &theta; (nor on any nuisance parameter)
@@ -44,6 +49,7 @@ audience:
 - When no pivot exists (most nuisance-parameter problems), you fall back to **inverting a test** — which always works
 
 ---
+
 ## Construction By Inverting Tests
 
 - **The universal recipe** (the duality of the previous chapter, run as a *construction*): for each candidate value &psi;&#8320;, take a level-&alpha; test of H&#8320;: &psi;(&theta;) = &psi;&#8320; with acceptance region A(&psi;&#8320;); then **C(X) = { &psi;&#8320; : X &isin; A(&psi;&#8320;) }** — the set of values *not rejected* — has coverage &geq; 1&minus;&alpha; for free
@@ -53,6 +59,7 @@ audience:
 - This is *the* method to reach for when the textbook formula fails — it can't, structurally, miscover
 
 ---
+
 ## Optimality: Most Accurate, Shortest
 
 - "Has correct coverage" is a *floor*, not a goal — a half-line, or [&minus;&infin;, &infin;] with probability 1&minus;&alpha; and &empty; otherwise, both "cover". Among correctly-covering sets we want the one that **excludes wrong values most often**
@@ -62,6 +69,7 @@ audience:
 - Practical translation: prefer **likelihood-ratio / score** intervals (which respect the model's geometry, transform correctly, and are near-shortest) over crude **Wald** intervals when they disagree
 
 ---
+
 ## Asymptotic Intervals: Wald, Score, Likelihood-Ratio
 
 - Three asymptotically-equivalent 1&minus;&alpha; intervals for a scalar &theta;, dual to the three tests of Chapter 11&ndash;12, each "centered" differently:
@@ -72,6 +80,7 @@ audience:
 - Multivariate version: an asymptotic **confidence ellipsoid** { &theta; : (&theta;&#770; &minus; &theta;)&#7488; I_n(&theta;&#770;) (&theta;&#770; &minus; &theta;) &leq; &chi;&sup2;&#7496;,&#8321;&#8331;&#945; } — Wald-flavored; the LR version uses the joint profile
 
 ---
+
 ## Simultaneous Confidence Regions
 
 - A *joint* 1&minus;&alpha; set for a **vector** &psi; = (&psi;&#8321;,...,&psi;&#8344;) must cover **all** components at once: P&#952;( &psi; &isin; C(X) ) &geq; 1&minus;&alpha; — not the same as p separate 1&minus;&alpha; intervals, which jointly cover only roughly (1&minus;&alpha;)&#7510; (much less than 1&minus;&alpha;)
@@ -81,6 +90,7 @@ audience:
 - Rule of thumb: decide *up front* whether you need pointwise or simultaneous coverage, and over how many quantities — then widen accordingly; reporting many "95%" intervals and acting on the most extreme one is multiplicity by the back door
 
 ---
+
 ## Confidence Sets In Code
 
 ```python
@@ -105,6 +115,7 @@ print(f"MLE rate {Lh:.3f}  ->  LR 95% CI [{lo:.3f}, {hi:.3f}]   (Wald: {Lh*(1-1.
 ```
 
 ---
+
 ## Common Mistakes
 
 - Saying "95% probability the parameter lies in *this* interval" — that's a credible set; a confidence set's guarantee is about the *procedure*, over repetitions

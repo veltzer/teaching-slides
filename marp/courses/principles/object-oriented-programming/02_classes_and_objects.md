@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Classes and Objects
 
 ---
+
 ## What This Chapter Covers
 
 - Defining classes
@@ -23,11 +25,13 @@ audience:
 - Same examples in Python and Java
 
 ---
+
 ## Anatomy Of A Class
 
 ![object_anatomy](svg/courses/principles/object-oriented-programming/02_classes_and_objects/object_anatomy.svg)
 
 ---
+
 ## A Class in Python
 
 ```python
@@ -46,6 +50,7 @@ class Dog:
 - Attributes are set on `self`
 
 ---
+
 ## The Same Class in Java
 
 ```java
@@ -70,6 +75,7 @@ public class Dog {
 - Java is verbose; the structure is the same
 
 ---
+
 ## Creating Instances
 
 ```python
@@ -90,6 +96,7 @@ lassie.bark();
 - Each object has its own state
 
 ---
+
 ## Attributes / Fields
 
 - Belong to a single instance
@@ -98,6 +105,7 @@ lassie.bark();
 - Two `Dog` objects share no attribute state — only the class definition
 
 ---
+
 ## Methods
 
 - Functions defined inside a class
@@ -106,6 +114,7 @@ lassie.bark();
 - Define what objects of the class can *do*
 
 ---
+
 ## Constructors
 
 - Run when the object is being created
@@ -115,6 +124,7 @@ lassie.bark();
 - Avoid heavy work in the constructor — separate concerns
 
 ---
+
 ## Instance Members vs Class Members
 
 ```python
@@ -131,6 +141,7 @@ class Dog:
 - Use class members for constants and counters
 
 ---
+
 ## Object Identity vs Equality
 
 - **Identity**: are these two references to the *same* object?
@@ -140,6 +151,7 @@ class Dog:
 - Default `==`/`.equals()` is identity unless you override
 
 ---
+
 ## Implementing Equality
 
 ```python
@@ -158,6 +170,7 @@ class Point:
 - Equality should be reflexive, symmetric, transitive
 
 ---
+
 ## Constructors with Defaults
 
 ```python
@@ -172,6 +185,7 @@ class Dog:
 - Don't use mutable defaults in Python — they're shared across calls
 
 ---
+
 ## Object Lifecycle
 
 - Created (constructor runs)
@@ -181,6 +195,7 @@ class Dog:
 - "Destructors" exist (`__del__`, `finalize`) but should not be used for cleanup
 
 ---
+
 ## Naming Conventions
 
 - Class names: `PascalCase` (Dog, OrderService, HttpClient)
@@ -190,6 +205,7 @@ class Dog:
 - Consistent naming within a project matters more than which style
 
 ---
+
 ## A First Mental Model
 
 - Class = a kind of thing
@@ -199,6 +215,7 @@ class Dog:
 - Identity = "is this the same one?"; equality = "is this an equivalent one?"
 
 ---
+
 ## Common Mistakes
 
 - Treating classes as namespaces for unrelated functions

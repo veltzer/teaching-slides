@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Python Environments
 
 ## Overview
@@ -17,6 +18,7 @@ audience:
 - Best practices for project organization
 
 ---
+
 ## Using pip: What is pip?
 
 - Python's official package installer
@@ -40,6 +42,7 @@ pip install -r requirements.txt
 ```
 
 ---
+
 ## Using pip: Common pip Commands
 
 - `pip install`: Install packages
@@ -64,6 +67,7 @@ pip install --upgrade pip
 ```
 
 ---
+
 ## Using pip: Installing from Different Sources
 
 - Install from PyPI (default)
@@ -89,6 +93,7 @@ pip install ./package-1.0.0-py3-none-any.whl
 ```
 
 ---
+
 ## Using pip: pip Configuration
 
 - Global configuration in pip.conf
@@ -111,6 +116,7 @@ timeout = 60
 ```
 
 ---
+
 ## Using pip: Security Considerations
 
 - Use trusted package sources
@@ -135,6 +141,7 @@ safety check
 ```
 
 ---
+
 ## Virtual Environments: What Are Virtual Environments?
 
 - Isolated Python environments
@@ -144,11 +151,13 @@ safety check
 - Critical for dependency management
 
 ---
+
 ## Virtual Environments
 
 ![what_are_virtual_environments](svg/courses/languages/python/advanced-python/07_environments/what_are_virtual_environments.svg)
 
 ---
+
 ## Virtual Environment Isolation
 
 ![virtual_environment_isolation](svg/courses/languages/python/advanced-python/07_environments/virtual_environment_isolation.svg)
@@ -165,6 +174,7 @@ safety check
 - Simplify deployment
 
 ---
+
 ## Virtual Environments: How Virtual Environments Work
 
 - Creates a copy of Python interpreter
@@ -188,6 +198,7 @@ venv/
 ```
 
 ---
+
 ## Virtual Environment Tools: Built-in venv
 
 - Included in Python standard library (3.3+)
@@ -211,6 +222,7 @@ deactivate
 ```
 
 ---
+
 ## Virtual Environment Tools: virtualenv
 
 - Original virtual environment tool
@@ -238,6 +250,7 @@ myproject_env\Scripts\activate  # Windows
 ```
 
 ---
+
 ## Dependency Management: Basic Dependency Management
 
 - Capturing dependencies with `pip freeze`
@@ -260,6 +273,7 @@ pip install -r requirements.txt
 ```
 
 ---
+
 ## Dependency Management: The Problem with Simple requirements.txt
 
 - Doesn't distinguish between direct and indirect dependencies
@@ -270,6 +284,7 @@ pip install -r requirements.txt
 - No automatic environment management
 
 ---
+
 ## Dependency Management: Development vs. Production Dependencies
 
 - Production: Required to run the application
@@ -295,6 +310,7 @@ PyYAML==5.4.1
 ```
 
 ---
+
 ## Dependency Management: Locking Dependencies
 
 - Pin every dependency (direct and transitive)
@@ -313,6 +329,7 @@ urllib3==1.26.6
 ```
 
 ---
+
 ## Dependency Management: Dividing Project Dependencies
 
 - By environment (dev, test, prod)
@@ -341,6 +358,7 @@ setup(
 ```
 
 ---
+
 ## Environment Management Tools: The OS Itself
 
 - Using system Python
@@ -366,6 +384,7 @@ export FLASK_ENV=development
 ```
 
 ---
+
 ## Environment Management Tools: venv
 
 - Python's built-in virtual environment module
@@ -390,6 +409,7 @@ deactivate
 ```
 
 ---
+
 ## Environment Management Tools: virtualenv
 
 - The original virtual environment tool
@@ -413,6 +433,7 @@ virtualenv --system-site-packages env
 ```
 
 ---
+
 ## Environment Management Tools: pipenv
 
 - Combines pip and virtualenv
@@ -442,6 +463,7 @@ pipenv lock -r > requirements.txt
 ```
 
 ---
+
 ## Environment Management Tools: Pipfile Example
 
 - Modern replacement for requirements.txt
@@ -471,6 +493,7 @@ python_version = "3.8"
 ```
 
 ---
+
 ## Environment Management Tools: poetry
 
 - Modern Python packaging and dependency management
@@ -504,6 +527,7 @@ poetry shell
 ```
 
 ---
+
 ## Environment Management Tools: pyproject.toml Example (Poetry)
 
 - Modern Python project configuration
@@ -534,6 +558,7 @@ build-backend = "poetry.core.masonry.api"
 ```
 
 ---
+
 ## Environment Management Tools: pip-tools
 
 - Lightweight dependency management
@@ -564,6 +589,7 @@ pip-compile requirements-dev.in
 ```
 
 ---
+
 ## Environment Management Tools: Hatch
 
 - Modern project management
@@ -594,6 +620,7 @@ hatch publish
 ```
 
 ---
+
 ## Environment Management Tools: conda
 
 - Cross-platform package manager
@@ -623,6 +650,7 @@ conda env export > environment.yml
 ```
 
 ---
+
 ## Environment Management Tools: Comparison of Tools
 
 - **venv**: Simple, built-in, minimal
@@ -634,6 +662,7 @@ conda env export > environment.yml
 - **Hatch**: Simplified project management
 
 ---
+
 ## Environment Management Tools: Choosing the Right Tool
 
 - **Project size and complexity**
@@ -644,11 +673,13 @@ conda env export > environment.yml
 - **Platform requirements**
 
 ---
+
 ## Environment Management Tools
 
 ![choosing_the_right_tool](svg/courses/languages/python/advanced-python/07_environments/choosing_the_right_tool.svg)
 
 ---
+
 ## Version Numbers: Semantic Versioning
 
 - Standard version numbering scheme
@@ -669,6 +700,7 @@ Examples:
 ```
 
 ---
+
 ## Version Numbers: Version Specifiers
 
 - `==`: Exact version
@@ -686,6 +718,7 @@ requests~=2.25.0      # Version 2.25.0 or higher, but less than 2.26.0
 ```
 
 ---
+
 ## Version Numbers: Version Constraints Best Practices
 
 - Pin versions in deployment requirements
@@ -713,6 +746,7 @@ install_requires=[
 ```
 
 ---
+
 ## Version Numbers: When to Set Version Numbers
 
 - Always in production code
@@ -722,6 +756,7 @@ install_requires=[
 - Consider policy for internal packages
 
 ---
+
 ## Version Numbers: Version Handling in Different Tools
 
 - **pip**: requirements.txt with == or constraints
@@ -742,6 +777,7 @@ requests = "~2.25.1"
 ```
 
 ---
+
 ## Practical Workflow: venv
 
 ## Step-by-Step Project Setup
@@ -774,6 +810,7 @@ echo "venv/" > .gitignore
 ```
 
 ---
+
 ## Practical Workflow: pipenv
 
 ## Step-by-Step Project Setup
@@ -809,6 +846,7 @@ git commit -m "Initialize project with dependencies"
 ```
 
 ---
+
 ## Practical Workflow: poetry
 
 ## Step-by-Step Project Setup
@@ -844,6 +882,7 @@ git commit -m "Initialize project with dependencies"
 ```
 
 ---
+
 ## Best Practices: Managing Development Environments
 
 - One environment per project
@@ -873,6 +912,7 @@ echo "Development environment ready!"
 ```
 
 ---
+
 ## Best Practices: Dependency Management Strategy
 
 - Lock all dependencies for applications
@@ -896,6 +936,7 @@ echo "Development environment ready!"
 ```
 
 ---
+
 ## Best Practices: Handling Conflicting Dependencies
 
 - Use newer versions of tools (better resolvers)
@@ -924,6 +965,7 @@ pip install main-package
 ```
 
 ---
+
 ## Best Practices: Reproducible Environments
 
 - Lock ALL dependencies (including transitive)
@@ -951,6 +993,7 @@ CMD ["python", "app.py"]
 ```
 
 ---
+
 ## Best Practices: CI/CD Integration
 
 - Test with exact same dependencies as production
@@ -984,6 +1027,7 @@ jobs:
 ```
 
 ---
+
 ## Best Practices: Private Package Repositories
 
 - Host internal packages
@@ -1009,6 +1053,7 @@ trusted-host = localhost
 ```
 
 ---
+
 ## Real-World Scenarios: Managing Multiple Python Versions
 
 - Tool: pyenv
@@ -1041,6 +1086,7 @@ pyenv virtualenv 3.8.12 myproject-env
 ```
 
 ---
+
 ## Real-World Scenarios: Handling Binary Dependencies
 
 - Some packages require compilation
@@ -1067,6 +1113,7 @@ FROM python:3.8-buster
 ```
 
 ---
+
 ## Real-World Scenarios: Enterprise Environments
 
 - Corporate proxies
@@ -1094,6 +1141,7 @@ pip install --no-index --find-links=./packages -r requirements.txt
 ```
 
 ---
+
 ## Real-World Scenarios: Monorepo Project Structure
 
 - Multiple related packages in one repo
@@ -1124,6 +1172,7 @@ monorepo/
 ```
 
 ---
+
 ## Summary
 
 ## Key Takeaways
@@ -1136,6 +1185,7 @@ monorepo/
 - Consider the full lifecycle of dependencies
 
 ---
+
 ## Resources
 
 ## Further Learning

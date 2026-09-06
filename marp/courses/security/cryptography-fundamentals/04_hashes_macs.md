@@ -8,6 +8,7 @@ audience:
   - audiences:developers
   - audiences:security-professionals
 ---
+
 # Hash Functions and MACs
 
 ---

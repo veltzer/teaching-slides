@@ -11,9 +11,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Container Orchestration in the Cloud
 
 ---
+
 ## Orchestration Choices
 
 ![orchestration](svg/courses/cloud/architecting-in-the-cloud/07_container_orchestration/orchestration.svg)

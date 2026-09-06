@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Chaos Engineering
 
 ---
+
 ## What This Chapter Covers
 
 - What chaos engineering is
@@ -21,6 +23,7 @@ audience:
 - Course outline
 
 ---
+
 ## What It Is
 
 - Inject controlled failure
@@ -29,6 +32,7 @@ audience:
 - Build confidence in resilience
 
 ---
+
 ## Why Now
 
 - Systems are distributed
@@ -37,6 +41,7 @@ audience:
 - Test there, carefully
 
 ---
+
 ## Origins
 
 - Born at Netflix
@@ -45,6 +50,7 @@ audience:
 - Now a recognized discipline
 
 ---
+
 ## Principles
 
 - Hypothesize about steady state
@@ -53,11 +59,13 @@ audience:
 - Minimize blast radius
 
 ---
+
 ## Principles Visualised
 
 ![principles](svg/courses/testing/chaos-engineering/01_introduction/principles.svg)
 
 ---
+
 ## Steady State
 
 - Define what healthy looks like
@@ -66,6 +74,7 @@ audience:
 - Measured before, during, after
 
 ---
+
 ## Hypothesis
 
 - "If we kill a node, latency stays under X"
@@ -74,6 +83,7 @@ audience:
 - Tied to a metric
 
 ---
+
 ## Blast Radius
 
 - Limit who is affected
@@ -82,6 +92,7 @@ audience:
 - Start small
 
 ---
+
 ## When To Stop
 
 - Hypothesis disproved
@@ -90,6 +101,7 @@ audience:
 - Have a kill switch
 
 ---
+
 ## Maturity Model
 
 - Manual game days
@@ -98,11 +110,13 @@ audience:
 - Automated chaos in CI
 
 ---
+
 ## Maturity Levels
 
 ![maturity_model](svg/courses/testing/chaos-engineering/01_introduction/maturity_model.svg)
 
 ---
+
 ## Tools Landscape
 
 - Open source frameworks
@@ -111,6 +125,7 @@ audience:
 - Custom in-house tools
 
 ---
+
 ## Where To Run
 
 - Lower environments first
@@ -119,6 +134,7 @@ audience:
 - Plan accordingly
 
 ---
+
 ## Course Outline
 
 - Designing experiments
@@ -128,6 +144,7 @@ audience:
 - Operationalizing
 
 ---
+
 ## Common Beginner Mistakes
 
 - No hypothesis

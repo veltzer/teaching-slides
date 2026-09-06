@@ -9,9 +9,11 @@ audience:
   - audiences:embedded-engineers
 
 ---
+
 # Wireless Security
 
 ---
+
 ## What This Chapter Covers
 
 - Why wireless is fundamentally a different security problem
@@ -23,6 +25,7 @@ audience:
 - Practical attacker behaviour and defender response
 
 ---
+
 ## What Makes Wireless Different
 
 - The medium is *broadcast* — anyone in radio range hears your frames
@@ -32,6 +35,7 @@ audience:
 - Authentication needs to be mutual — the AP can also be impersonated
 
 ---
+
 ## The Threats, Concretely
 
 - Eavesdropping: read other clients' traffic
@@ -41,6 +45,7 @@ audience:
 - Lateral movement: a compromised IoT device on the same SSID reaches your laptop
 
 ---
+
 ## WEP (Wired Equivalent Privacy)
 
 - The original 802.11 security, defined in 1997
@@ -50,6 +55,7 @@ audience:
 - Catastrophically broken — by 2007, real-world attacks recovered keys in minutes
 
 ---
+
 ## Why WEP Fell
 
 - Short IV space meant IV collisions on busy networks
@@ -59,6 +65,7 @@ audience:
 - Modern advice: do not enable WEP, ever; treat WEP networks as open
 
 ---
+
 ## WPA (Wi-Fi Protected Access)
 
 - Released in 2003 as a stop-gap on the way to 802.11i / WPA2
@@ -68,6 +75,7 @@ audience:
 - WPA-only networks should be treated like WEP — upgrade
 
 ---
+
 ## WPA2
 
 - Standardised in 2004 as IEEE 802.11i
@@ -77,11 +85,13 @@ audience:
 - Vulnerable to KRACK in 2017, patched in clients and APs
 
 ---
+
 ## WPA Evolution
 
 ![wpa_evolution](svg/courses/wifi/wifi-protocols/06_security/wpa_evolution.svg)
 
 ---
+
 ## The 4-Way Handshake
 
 - After association, AP and client run a 4-frame exchange to derive session keys
@@ -91,11 +101,13 @@ audience:
 - The handshake is in the clear — captureable by any monitor in range
 
 ---
+
 ## 4-Way Handshake Diagram
 
 ![handshake](svg/courses/wifi/wifi-protocols/06_security/handshake.svg)
 
 ---
+
 ## Why the Handshake Matters to Attackers
 
 - Capture the 4 EAPOL frames + the SSID + the MACs &#8594; can attempt offline brute force
@@ -105,6 +117,7 @@ audience:
 - WPA3 fundamentally changes this game (next slide)
 
 ---
+
 ## WPA3 Personal: SAE
 
 - Replaces the PSK handshake with SAE (Simultaneous Authentication of Equals)
@@ -114,6 +127,7 @@ audience:
 - Still the same UI: a SSID and a passphrase
 
 ---
+
 ## WPA3 Enterprise
 
 - 802.1X with stricter modern crypto requirements
@@ -123,6 +137,7 @@ audience:
 - Adoption is growing but still mixed; many devices still ship WPA2 only
 
 ---
+
 ## 802.1X / WPA-Enterprise Flow
 
 - Client &#8594; AP &#8594; RADIUS server
@@ -132,6 +147,7 @@ audience:
 - No shared password between users — each user has their own credential
 
 ---
+
 ## EAP Method Choice
 
 - EAP-TLS: client certificate + server certificate. The gold standard.
@@ -141,6 +157,7 @@ audience:
 - New deployments: EAP-TLS if you have a PKI, otherwise PEAP with very strong passwords
 
 ---
+
 ## Common Configuration Mistakes
 
 - Open guest networks with no isolation — guest devices attack each other
@@ -150,6 +167,7 @@ audience:
 - Trusting captive portals as authentication — they don't encrypt the link
 
 ---
+
 ## Rogue AP Detection
 
 - Attackers stand up an AP with the same SSID as yours
@@ -159,6 +177,7 @@ audience:
 - Shutting down a rogue requires physical pursuit — or just shutting your client off
 
 ---
+
 ## Deauthentication Attacks
 
 - Management frames in 802.11 were *unauthenticated* originally
@@ -168,6 +187,7 @@ audience:
 - Protected Management Frames (802.11w) authenticate these — enabled by default in WPA3
 
 ---
+
 ## Practical Defender Checklist
 
 - WPA3 if every client supports it; WPA2-AES-only otherwise
@@ -178,6 +198,7 @@ audience:
 - Enable Protected Management Frames (PMF / 802.11w)
 
 ---
+
 ## Course Wrap-Up
 
 - The physical layer (OFDM, MIMO, beamforming) is what the engineering depth is in

@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Feature Engineering
 
 ---
+
 ## What This Chapter Covers
 
 - Why features matter
@@ -21,6 +23,7 @@ audience:
 - Leakage avoidance
 
 ---
+
 ## Why Features Matter
 
 - Often more impact than algorithm choice
@@ -29,6 +32,7 @@ audience:
 - Cheap wins for the practitioner
 
 ---
+
 ## What A Feature Is
 
 - A column the model sees
@@ -37,6 +41,7 @@ audience:
 - Stable, reproducible
 
 ---
+
 ## Feature Pipeline
 
 - Raw data
@@ -47,6 +52,7 @@ audience:
 - Scale
 
 ---
+
 ## Numeric Cleaning
 
 - Missing values
@@ -55,6 +61,7 @@ audience:
 - Negatives where impossible
 
 ---
+
 ## Imputation
 
 - Mean, median, mode
@@ -63,6 +70,7 @@ audience:
 - Add was-missing indicator
 
 ---
+
 ## Scaling
 
 - Standardise: zero mean, unit variance
@@ -71,6 +79,7 @@ audience:
 - Log for skewed
 
 ---
+
 ## Log Transform
 
 - Compresses heavy tails
@@ -79,6 +88,7 @@ audience:
 - Reverse with expm1
 
 ---
+
 ## Power Transforms
 
 - Box-Cox: positive only
@@ -87,6 +97,7 @@ audience:
 - Helps linear models
 
 ---
+
 ## Binning
 
 - Discretise continuous
@@ -95,6 +106,7 @@ audience:
 - Linear models can benefit
 
 ---
+
 ## Polynomial Features
 
 - x squared, x times y
@@ -103,6 +115,7 @@ audience:
 - Use with regularisation
 
 ---
+
 ## Categorical Basics
 
 - Models need numbers
@@ -111,6 +124,7 @@ audience:
 - And on the model
 
 ---
+
 ## Label Encoding
 
 - Map categories to integers
@@ -119,6 +133,7 @@ audience:
 - OK for tree models with care
 
 ---
+
 ## One-Hot Encoding
 
 - Column per category
@@ -127,6 +142,7 @@ audience:
 - Explodes with high cardinality
 
 ---
+
 ## Ordinal Encoding
 
 - Integers reflect order
@@ -135,6 +151,7 @@ audience:
 - Good for tree models
 
 ---
+
 ## Target Encoding
 
 - Replace category with target mean
@@ -143,6 +160,7 @@ audience:
 - Use out-of-fold
 
 ---
+
 ## Frequency Encoding
 
 - Replace with category count
@@ -151,6 +169,7 @@ audience:
 - No leakage
 
 ---
+
 ## Hash Encoding
 
 - Hash to a fixed-size bucket
@@ -159,6 +178,7 @@ audience:
 - Used in big-feature spaces
 
 ---
+
 ## Embedding Encoding
 
 - Learned dense vector per category
@@ -167,6 +187,7 @@ audience:
 - Needs lots of data
 
 ---
+
 ## Time Features
 
 - Year, month, day, hour, minute
@@ -175,6 +196,7 @@ audience:
 - Is holiday
 
 ---
+
 ## Cyclical Encoding
 
 - Hour wraps 23 to 0
@@ -183,6 +205,7 @@ audience:
 - Smooth across boundary
 
 ---
+
 ## Date Differences
 
 - Days since signup
@@ -191,6 +214,7 @@ audience:
 - Often very predictive
 
 ---
+
 ## Lag Features
 
 - Previous value of a series
@@ -199,6 +223,7 @@ audience:
 - Beware leakage
 
 ---
+
 ## Rolling Features
 
 - Mean, std, min, max over window
@@ -207,6 +232,7 @@ audience:
 - Time-based, not row-based
 
 ---
+
 ## Text Features
 
 - Bag of words
@@ -215,6 +241,7 @@ audience:
 - Embeddings: word2vec, BERT
 
 ---
+
 ## TF-IDF
 
 - Term frequency × inverse document frequency
@@ -223,6 +250,7 @@ audience:
 - Strong baseline for text
 
 ---
+
 ## Image Features
 
 - Pretrained CNN as feature extractor
@@ -231,6 +259,7 @@ audience:
 - Transfer learning
 
 ---
+
 ## Cross Features
 
 - Combine two columns
@@ -239,6 +268,7 @@ audience:
 - Important for linear models
 
 ---
+
 ## Group Aggregations
 
 - Mean amount per customer
@@ -247,6 +277,7 @@ audience:
 - Beware leakage with target
 
 ---
+
 ## Feature Generation Tools
 
 - Featuretools
@@ -255,6 +286,7 @@ audience:
 - Validate before trusting
 
 ---
+
 ## Feature Selection
 
 - Drop irrelevant
@@ -263,6 +295,7 @@ audience:
 - Easier interpretation
 
 ---
+
 ## Filter Methods
 
 - Score each feature independently
@@ -271,6 +304,7 @@ audience:
 - Mutual information
 
 ---
+
 ## Wrapper Methods
 
 - Try subsets, evaluate model
@@ -279,6 +313,7 @@ audience:
 - Expensive
 
 ---
+
 ## Embedded Methods
 
 - Selection during training
@@ -287,6 +322,7 @@ audience:
 - Cheapest, often best
 
 ---
+
 ## Feature Importance
 
 - From tree-based models
@@ -295,6 +331,7 @@ audience:
 - Inspect, debug, communicate
 
 ---
+
 ## Leakage In Features
 
 - Future values
@@ -303,6 +340,7 @@ audience:
 - IDs that encode the target
 
 ---
+
 ## Avoiding Leakage
 
 - Fit transformers on train only
@@ -311,6 +349,7 @@ audience:
 - Audit every feature
 
 ---
+
 ## Pipelines
 
 - Encapsulate steps
@@ -319,6 +358,7 @@ audience:
 - Reproducible
 
 ---
+
 ## sklearn ColumnTransformer
 
 ```python
@@ -331,6 +371,7 @@ ct = ColumnTransformer([
 ```
 
 ---
+
 ## Common Mistakes
 
 - High-cardinality one-hot
@@ -339,51 +380,61 @@ ct = ColumnTransformer([
 - Fitting transformers on full data
 
 ---
+
 ## One-Hot vs Ordinal
 
 ![onehot_vs_ordinal](svg/courses/machine_learning/machine-learning/07_feature_engineering/onehot_vs_ordinal.svg)
 
 ---
+
 ## Scaling
 
 ![scaling](svg/courses/machine_learning/machine-learning/07_feature_engineering/scaling.svg)
 
 ---
+
 ## Cyclical Encoding
 
 ![cyclical_encoding](svg/courses/machine_learning/machine-learning/07_feature_engineering/cyclical_encoding.svg)
 
 ---
+
 ## Target Encoding
 
 ![target_encoding](svg/courses/machine_learning/machine-learning/07_feature_engineering/target_encoding.svg)
 
 ---
+
 ## Leakage
 
 ![leakage](svg/courses/machine_learning/machine-learning/07_feature_engineering/leakage.svg)
 
 ---
+
 ## Binning
 
 ![binning](svg/courses/machine_learning/machine-learning/07_feature_engineering/binning.svg)
 
 ---
+
 ## Log Transform
 
 ![log_transform](svg/courses/machine_learning/machine-learning/07_feature_engineering/log_transform.svg)
 
 ---
+
 ## Embedding Encoding
 
 ![embedding_encoding](svg/courses/machine_learning/machine-learning/07_feature_engineering/embedding_encoding.svg)
 
 ---
+
 ## Feature Pipeline
 
 ![feature_pipeline](svg/courses/machine_learning/machine-learning/07_feature_engineering/feature_pipeline.svg)
 
 ---
+
 ## Summary
 
 - Features beat algorithms

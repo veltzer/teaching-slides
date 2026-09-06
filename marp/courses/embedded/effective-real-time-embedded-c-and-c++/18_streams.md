@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Input/Output Using Stream Classes
 
 ---
+
 ## Common Background of I/O Streams: Details
 
 C++ provides a comprehensive I/O system based on streams
@@ -19,11 +21,13 @@ C++ provides a comprehensive I/O system based on streams
 - Consistent interface for files, strings, and console I/O
 
 ---
+
 ## Common Background of I/O Streams
 
 ![common_background_of_i_o_streams](svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/common_background_of_i_o_streams.svg)
 
 ---
+
 ## Stream Hierarchy Overview: Details
 
 All stream classes derive from common base classes
@@ -33,6 +37,7 @@ All stream classes derive from common base classes
 - Output streams derive from `ostream`
 
 ---
+
 ## Stream Hierarchy Overview
 
 ![stream_hierarchy_overview](svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/stream_hierarchy_overview.svg)
@@ -694,6 +699,7 @@ public:
 ```
 
 ---
+
 ## Stream Buffer Classes Overview: Details
 
 Stream buffers manage the actual I/O operations:
@@ -703,6 +709,7 @@ Stream buffers manage the actual I/O operations:
 - Custom buffer classes possible
 
 ---
+
 ## Stream Buffer Classes Overview
 
 ![stream_buffer_classes_overview](svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/stream_buffer_classes_overview.svg)

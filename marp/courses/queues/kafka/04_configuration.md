@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Configuration
 
 ---
+
 ## What This Chapter Covers
 
 - Broker configuration: the basics
@@ -21,6 +23,7 @@ audience:
 - The 80/20 of Kafka tuning
 
 ---
+
 ## Three Layers of Configuration
 
 - **Broker**: cluster-wide and per-broker settings
@@ -30,11 +33,13 @@ audience:
 - Most production tuning happens at client level
 
 ---
+
 ## Layers Visualized
 
 ![config_layers](svg/courses/queues/kafka/04_configuration/config_layers.svg)
 
 ---
+
 ## Broker Config: The Basics
 
 - `broker.id`: unique per broker
@@ -45,11 +50,13 @@ audience:
 - `auto.create.topics.enable`: usually false in prod
 
 ---
+
 ## Broker Settings That Matter
 
 ![broker_settings](svg/courses/queues/kafka/04_configuration/broker_settings.svg)
 
 ---
+
 ## Replication Settings
 
 - `replication.factor`: how many copies of each partition
@@ -59,6 +66,7 @@ audience:
 - These trade off carefully
 
 ---
+
 ## Topic Configuration
 
 - `partitions`: parallelism (hard to change later)
@@ -68,6 +76,7 @@ audience:
 - `cleanup.policy`: `delete` (time-based) or `compact` (key-based)
 
 ---
+
 ## Log Compaction
 
 - Special retention: keep only the *latest* value per key
@@ -77,6 +86,7 @@ audience:
 - `cleanup.policy=compact` enables it
 
 ---
+
 ## Retention Trade-offs
 
 - Longer retention = more disk; more replay possible
@@ -86,6 +96,7 @@ audience:
 - Compacted topics keep state forever (per key)
 
 ---
+
 ## Producer Config: The Important Ones
 
 - `bootstrap.servers`: comma-separated broker list
@@ -96,6 +107,7 @@ audience:
 - `max.in.flight.requests.per.connection`: 5 default
 
 ---
+
 ## Producer Config: Reliability
 
 - `retries`: how many retry attempts (default int max)
@@ -105,6 +117,7 @@ audience:
 - With idempotence on, retries are safe
 
 ---
+
 ## "New Producer" Note
 
 - Older Kafka had two producers: legacy and "new"
@@ -114,6 +127,7 @@ audience:
 - Mentioned because old docs and tutorials may distinguish
 
 ---
+
 ## Consumer Config: The Important Ones
 
 - `bootstrap.servers`
@@ -124,6 +138,7 @@ audience:
 - `max.poll.interval.ms`: max time between polls before kicked from group
 
 ---
+
 ## Consumer Config: Timing
 
 - `session.timeout.ms`: how long before broker considers consumer dead
@@ -133,6 +148,7 @@ audience:
 - Don't make these too tight; spurious rebalances follow
 
 ---
+
 ## Consumer Config: Performance
 
 - `fetch.min.bytes`: server waits for this much data before responding
@@ -142,6 +158,7 @@ audience:
 - Defaults are usually fine
 
 ---
+
 ## Production Config Files
 
 - Brokers: `server.properties`
@@ -151,6 +168,7 @@ audience:
 - Version-control everything
 
 ---
+
 ## A Sane Producer Profile
 
 ```properties
@@ -166,6 +184,7 @@ max.in.flight.requests.per.connection=5
 - Good starting point for most production use
 
 ---
+
 ## A Sane Consumer Profile
 
 ```properties
@@ -182,6 +201,7 @@ heartbeat.interval.ms=15000
 - Adjust per-service
 
 ---
+
 ## Topic Defaults vs Overrides
 
 - Set sane cluster defaults
@@ -191,6 +211,7 @@ heartbeat.interval.ms=15000
 - Document why each override exists
 
 ---
+
 ## Common Configuration Mistakes
 
 - `acks=0` in production

@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Rust Libraries and Advanced Exercises
 
 Error Handling, Utilities, HTTP, Web Programming, and Async
@@ -23,6 +24,7 @@ Error Handling, Utilities, HTTP, Web Programming, and Async
 - **Async Programming**: `tokio`
 
 ---
+
 ## Error Handling in Rust
 
 `anyhow` and `thiserror`
@@ -190,6 +192,7 @@ pub enum AppError {
 - Callers need to match on errors
 
 ---
+
 ## `serde_json` Overview
 
 ```toml
@@ -595,6 +598,7 @@ let app = Router::new()
 ```
 
 ---
+
 ## Async Programming
 
 `tokio`
@@ -719,6 +723,7 @@ async fn write_file(content: &str) -> std::io::Result<()> {
 ```
 
 ---
+
 ## Best Practices
 
 1. **Error Handling**: Use `anyhow` for apps, `thiserror` for libraries

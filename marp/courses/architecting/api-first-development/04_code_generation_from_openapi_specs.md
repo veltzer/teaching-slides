@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Code Generation From OpenAPI Specs
 
 ---
+
 ## What This Chapter Covers
 
 - Why code generation
@@ -22,6 +24,7 @@ audience:
 - Keeping spec and code in sync
 
 ---
+
 ## Why Generate Code
 
 - Reduces boilerplate
@@ -31,11 +34,13 @@ audience:
 - Saves hours per service
 
 ---
+
 ## Codegen Outputs
 
 ![codegen_flow](svg/courses/architecting/api-first-development/04_code_generation_from_openapi_specs/codegen_flow.svg)
 
 ---
+
 ## OpenAPI Generator
 
 - Open-source, java-based, supports many languages
@@ -45,6 +50,7 @@ audience:
 - The de facto standard
 
 ---
+
 ## swagger-codegen
 
 - The original tool; OpenAPI Generator is a fork with more activity
@@ -52,6 +58,7 @@ audience:
 - Both work; pick OpenAPI Generator for new projects
 
 ---
+
 ## Generating Server Stubs
 
 ```bash
@@ -67,6 +74,7 @@ openapi-generator-cli generate \
 - Pure routing scaffolding from the spec
 
 ---
+
 ## Server-Side Pattern
 
 - Route handlers are generated as interfaces / abstract classes
@@ -76,6 +84,7 @@ openapi-generator-cli generate \
 - Standard pattern across languages
 
 ---
+
 ## Generating Client SDKs
 
 ```bash
@@ -91,6 +100,7 @@ openapi-generator-cli generate \
 - Updates: regenerate on spec change
 
 ---
+
 ## Client SDK Example
 
 ```typescript
@@ -102,6 +112,7 @@ const user = await api.getUser({ id: 42 });
 ```
 
 ---
+
 ## Customising Templates
 
 - Default templates work; sometimes you want changes
@@ -111,6 +122,7 @@ const user = await api.getUser({ id: 42 });
 - Prefer customisation via *vendor extensions* (`x-*`) where possible
 
 ---
+
 ## CI Integration
 
 - Spec change in PR &#8594; CI generates code &#8594; checks compile
@@ -120,6 +132,7 @@ const user = await api.getUser({ id: 42 });
 - Drift between spec and code = bugs
 
 ---
+
 ## Should You Commit Generated Code?
 
 - **Pro commit**: build doesn't depend on having the generator; reviewers see the actual changes
@@ -128,6 +141,7 @@ const user = await api.getUser({ id: 42 });
 - Don't both commit *and* re-generate without verification
 
 ---
+
 ## Spec Validation In CI
 
 - Run `spectral lint api-spec.yaml`
@@ -136,6 +150,7 @@ const user = await api.getUser({ id: 42 });
 - Catches regressions automatically
 
 ---
+
 ## Spectral Rules
 
 ```yaml
@@ -151,6 +166,7 @@ rules:
 - Lives in the repo: everyone sees the same rules
 
 ---
+
 ## Keeping Spec And Implementation In Sync
 
 - Generated server stubs handle some of this
@@ -160,6 +176,7 @@ rules:
 - A real "the spec is enforced" mechanism
 
 ---
+
 ## Schemathesis
 
 ```bash
@@ -173,6 +190,7 @@ schemathesis run http://localhost:8000 \
 - Property-based testing for APIs
 
 ---
+
 ## Common Codegen Mistakes
 
 - Hand-editing generated code (overwritten on next gen)
@@ -182,6 +200,7 @@ schemathesis run http://localhost:8000 \
 - Treating the generator's output as final; it's a starting point
 
 ---
+
 ## Codegen Targets
 
 ![codegen_targets](svg/courses/architecting/api-first-development/04_code_generation_from_openapi_specs/codegen_targets.svg)

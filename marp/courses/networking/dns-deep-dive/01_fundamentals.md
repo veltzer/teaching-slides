@@ -9,9 +9,11 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # DNS Fundamentals and Resolution
 
 ---
+
 ## What This Chapter Covers
 
 - Purpose and namespace hierarchy
@@ -21,6 +23,7 @@ audience:
 - Wire format, TTL, caching
 
 ---
+
 ## What Is DNS?
 
 - The Domain Name System
@@ -30,6 +33,7 @@ audience:
 - Used billions of times per second worldwide
 
 ---
+
 ## Why DNS Matters
 
 - Without it: every website needs an IP address memorized
@@ -39,11 +43,13 @@ audience:
 - Often the actual cause of "internet is down"
 
 ---
+
 ## DNS Hierarchy and Roles
 
 ![dns_hierarchy](svg/courses/networking/dns-deep-dive/01_fundamentals/dns_hierarchy.svg)
 
 ---
+
 ## The Namespace Hierarchy
 
 - Root (`.`) at the top
@@ -53,21 +59,25 @@ audience:
 - Each level delegated to the next
 
 ---
+
 ## Hierarchy Visualized
 
 ![hierarchy](svg/courses/networking/dns-deep-dive/01_fundamentals/hierarchy.svg)
 
 ---
+
 ## DNS Actors
 
 ![dns_actors](svg/courses/networking/dns-deep-dive/01_fundamentals/dns_actors.svg)
 
 ---
+
 ## Message Format
 
 ![dns_message_format](svg/courses/networking/dns-deep-dive/01_fundamentals/dns_message_format.svg)
 
 ---
+
 ## Domain Name Anatomy
 
 - `mail.example.com.` (the trailing dot is the root)
@@ -77,6 +87,7 @@ audience:
 - Read right-to-left for hierarchy
 
 ---
+
 ## Fully Qualified Domain Name
 
 - FQDN ends with the (often-implicit) root dot
@@ -86,6 +97,7 @@ audience:
 - Always use FQDNs in configs to avoid ambiguity
 
 ---
+
 ## Resolution: The Big Picture
 
 - Client wants `www.example.com`
@@ -95,6 +107,7 @@ audience:
 - Caches it for next time
 
 ---
+
 ## Recursive vs Iterative
 
 - Recursive resolver: "find the answer for me"
@@ -104,6 +117,7 @@ audience:
 - Recursive resolvers do the iterative walking
 
 ---
+
 ## Resolution Walk
 
 - Stub asks recursive: `www.example.com?`
@@ -114,11 +128,13 @@ audience:
 - That server replies: `www.example.com is 1.2.3.4`
 
 ---
+
 ## Resolution Visualized
 
 ![resolution_flow](svg/courses/networking/dns-deep-dive/01_fundamentals/resolution_flow.svg)
 
 ---
+
 ## Root Servers
 
 - 13 logical root servers (a-m.root-servers.net)
@@ -128,6 +144,7 @@ audience:
 - Critical infrastructure; carefully maintained
 
 ---
+
 ## TLD Servers
 
 - Hold delegation records for each domain in the TLD
@@ -137,6 +154,7 @@ audience:
 - Anycast deployment everywhere
 
 ---
+
 ## Authoritative Nameservers
 
 - Hold the actual records for a zone
@@ -146,6 +164,7 @@ audience:
 - The source of truth for that domain
 
 ---
+
 ## Stub Resolvers
 
 - The DNS client on your laptop, phone, server
@@ -155,6 +174,7 @@ audience:
 - Tiny piece of code; large blast radius
 
 ---
+
 ## Recursive Resolvers
 
 - Do the work of walking the hierarchy
@@ -164,6 +184,7 @@ audience:
 - Enterprises run their own (often Unbound or BIND)
 
 ---
+
 ## DNS Wire Protocol
 
 - Default: UDP port 53
@@ -173,6 +194,7 @@ audience:
 - Simple binary format; not human-readable
 
 ---
+
 ## DNS Message Structure
 
 - Header: ID, flags, counts
@@ -182,6 +204,7 @@ audience:
 - Additional: helpful glue records
 
 ---
+
 ## TTL: Time To Live
 
 - Each record has a TTL — seconds to cache
@@ -191,6 +214,7 @@ audience:
 - Negative caching also uses TTL
 
 ---
+
 ## TTL Trade-Offs
 
 - Service migration: drop TTL to 60s a day before
@@ -200,6 +224,7 @@ audience:
 - Critical infrastructure often uses 5-15 minute TTLs
 
 ---
+
 ## Caching
 
 - Recursive resolvers cache aggressively
@@ -209,6 +234,7 @@ audience:
 - Cache invalidation is hard; thus TTL
 
 ---
+
 ## Negative Caching
 
 - "Domain doesn't exist" responses are cached too
@@ -218,6 +244,7 @@ audience:
 - Configurable per zone
 
 ---
+
 ## UDP vs TCP
 
 - UDP for most queries — small, fast, fire-and-forget
@@ -227,6 +254,7 @@ audience:
 - Modern resolvers use both seamlessly
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting the trailing dot in zone files
@@ -236,6 +264,7 @@ audience:
 - Ignoring NXDOMAIN caching during testing
 
 ---
+
 ## Tools You'll Use
 
 - `dig` — the standard query tool
@@ -245,6 +274,7 @@ audience:
 - Browser dev tools — for HTTP-level DNS effects
 
 ---
+
 ## Summary
 
 - DNS: distributed hierarchy from root through TLDs to domains

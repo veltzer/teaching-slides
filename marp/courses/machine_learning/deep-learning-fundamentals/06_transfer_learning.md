@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Transfer Learning
 
 ---
+
 ## What This Chapter Covers
 
 - Pretrained models and feature extraction
@@ -19,6 +21,7 @@ audience:
 - When and how to apply transfer learning
 
 ---
+
 ## What Is Transfer Learning
 
 - Start from a model trained on something else
@@ -27,6 +30,7 @@ audience:
 - Saves data, time, and compute
 
 ---
+
 ## Why It Works
 
 - Early features generalize across tasks
@@ -35,11 +39,13 @@ audience:
 - The hard part is already done
 
 ---
+
 ## The Pretrain-Finetune Pattern
 
 ![pretrain_finetune](svg/courses/machine_learning/deep-learning-fundamentals/06_transfer_learning/pretrain_finetune.svg)
 
 ---
+
 ## When to Use It
 
 - Small labeled dataset
@@ -48,6 +54,7 @@ audience:
 - Need a strong baseline fast
 
 ---
+
 ## When It Hurts
 
 - Very different domain (medical scans vs cats)
@@ -56,6 +63,7 @@ audience:
 - Sometimes from-scratch is fine
 
 ---
+
 ## Pretrained Vision Models
 
 - Trained on ImageNet (~1.3M images, 1000 classes)
@@ -64,6 +72,7 @@ audience:
 - One line to load
 
 ---
+
 ## Loading a Pretrained CNN
 
 ```python
@@ -78,6 +87,7 @@ base = keras.applications.ResNet50(
 - We add our own head
 
 ---
+
 ## Pretrained NLP Models
 
 - Trained on huge text corpora
@@ -86,6 +96,7 @@ base = keras.applications.ResNet50(
 - Hugging Face is the default hub
 
 ---
+
 ## Feature Extraction
 
 - Freeze the backbone
@@ -94,6 +105,7 @@ base = keras.applications.ResNet50(
 - Train a small classifier on top
 
 ---
+
 ## Feature Extraction Example
 
 ```python
@@ -106,6 +118,7 @@ model = keras.Model(inputs, outputs)
 ```
 
 ---
+
 ## When to Use Feature Extraction
 
 - Very small dataset
@@ -114,6 +127,7 @@ model = keras.Model(inputs, outputs)
 - Limited GPU memory
 
 ---
+
 ## Fine-Tuning
 
 - Unfreeze some or all of the backbone
@@ -122,16 +136,19 @@ model = keras.Model(inputs, outputs)
 - Higher accuracy at higher cost
 
 ---
+
 ## Feature Extraction vs Fine-Tuning
 
 ![fine_tuning](svg/courses/machine_learning/deep-learning-fundamentals/06_transfer_learning/fine_tuning.svg)
 
 ---
+
 ## Three Freezing Strategies
 
 ![freezing strategy](svg/courses/machine_learning/deep-learning-fundamentals/06_transfer_learning/freezing_strategy.svg)
 
 ---
+
 ## Picking What to Unfreeze
 
 - Last block often: most task-specific
@@ -140,6 +157,7 @@ model = keras.Model(inputs, outputs)
 - Start small, expand if needed
 
 ---
+
 ## Learning Rate for Fine-Tuning
 
 - Use a much smaller learning rate
@@ -148,6 +166,7 @@ model = keras.Model(inputs, outputs)
 - Often the single most important setting
 
 ---
+
 ## Discriminative Learning Rates
 
 - Different learning rates per layer
@@ -156,6 +175,7 @@ model = keras.Model(inputs, outputs)
 - ULMFiT popularized this for NLP
 
 ---
+
 ## A Fine-Tuning Recipe
 
 - Add a new head
@@ -164,6 +184,7 @@ model = keras.Model(inputs, outputs)
 - Continue training at a low lr
 
 ---
+
 ## Avoid Catastrophic Forgetting
 
 - Sudden large updates erase pretrained knowledge
@@ -172,6 +193,7 @@ model = keras.Model(inputs, outputs)
 - Watch validation metrics carefully
 
 ---
+
 ## Warmup
 
 - Start with very small learning rate
@@ -180,6 +202,7 @@ model = keras.Model(inputs, outputs)
 - Standard in transformer fine-tuning
 
 ---
+
 ## Parameter-Efficient Fine-Tuning
 
 - Update few parameters, freeze most
@@ -188,6 +211,7 @@ model = keras.Model(inputs, outputs)
 - Prefix and prompt tuning
 
 ---
+
 ## LoRA in One Sentence
 
 - Add low-rank deltas to weight matrices
@@ -196,6 +220,7 @@ model = keras.Model(inputs, outputs)
 - Now standard for large model fine-tuning
 
 ---
+
 ## When PEFT Wins
 
 - Huge base models you cannot fully fine-tune
@@ -204,6 +229,7 @@ model = keras.Model(inputs, outputs)
 - Faster training, smaller checkpoints
 
 ---
+
 ## Domain Adaptation
 
 - Source and target distributions differ
@@ -212,6 +238,7 @@ model = keras.Model(inputs, outputs)
 - Specialized techniques can help
 
 ---
+
 ## Domain Adaptation Techniques
 
 - Continued pretraining on target domain
@@ -220,6 +247,7 @@ model = keras.Model(inputs, outputs)
 - Match label space first, content second
 
 ---
+
 ## Continued Pretraining
 
 - Take a pretrained model
@@ -228,6 +256,7 @@ model = keras.Model(inputs, outputs)
 - Often the cheapest big win for niche NLP
 
 ---
+
 ## Few-Shot Transfer
 
 - Adapt with very few labeled examples
@@ -236,6 +265,7 @@ model = keras.Model(inputs, outputs)
 - Lower bound: zero-shot
 
 ---
+
 ## Zero-Shot Classification
 
 - Use a model's prior knowledge directly
@@ -244,6 +274,7 @@ model = keras.Model(inputs, outputs)
 - Baseline before you label data
 
 ---
+
 ## CLIP and Zero-Shot Vision
 
 - Learns image-text alignment
@@ -252,6 +283,7 @@ model = keras.Model(inputs, outputs)
 - Strong out-of-the-box performance
 
 ---
+
 ## Multi-Task Learning
 
 - Train one model on several tasks
@@ -260,6 +292,7 @@ model = keras.Model(inputs, outputs)
 - Watch for negative transfer
 
 ---
+
 ## Negative Transfer
 
 - Pretrained features hurt your task
@@ -268,6 +301,7 @@ model = keras.Model(inputs, outputs)
 - Don't assume pretrained is always better
 
 ---
+
 ## Choosing a Base Model
 
 - Pick something close to your task
@@ -276,6 +310,7 @@ model = keras.Model(inputs, outputs)
 - Open weights vs API access
 
 ---
+
 ## Evaluating Transfer
 
 - Compare to from-scratch baseline
@@ -284,6 +319,7 @@ model = keras.Model(inputs, outputs)
 - Beware of pretraining data leakage
 
 ---
+
 ## Pretraining Data Leakage
 
 - Public benchmarks may overlap pretraining data
@@ -292,6 +328,7 @@ model = keras.Model(inputs, outputs)
 - Especially with web-trained LLMs
 
 ---
+
 ## Practical Tips
 
 - Match input preprocessing exactly
@@ -300,6 +337,7 @@ model = keras.Model(inputs, outputs)
 - Tokenize text with the model's tokenizer
 
 ---
+
 ## Common Pitfalls
 
 - Different image normalization than pretraining
@@ -308,6 +346,7 @@ model = keras.Model(inputs, outputs)
 - Catastrophic forgetting from high lr
 
 ---
+
 ## Cost of Transfer Learning
 
 - Downloading large checkpoints
@@ -316,6 +355,7 @@ model = keras.Model(inputs, outputs)
 - License terms on weights
 
 ---
+
 ## Licensing Matters
 
 - Not all pretrained weights are commercially usable
@@ -324,6 +364,7 @@ model = keras.Model(inputs, outputs)
 - Some forbid certain uses
 
 ---
+
 ## Summary
 
 - Transfer learning reuses pretrained features

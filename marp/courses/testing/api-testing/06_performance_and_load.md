@@ -8,9 +8,11 @@ audience:
   - audiences:qa
 
 ---
+
 # Performance and Load Testing
 
 ---
+
 ## What This Chapter Covers
 
 - Load test types
@@ -21,6 +23,7 @@ audience:
 - Production-like environments
 
 ---
+
 ## Load Test Types
 
 - Smoke: baseline
@@ -30,11 +33,13 @@ audience:
 - Soak: sustained, long duration
 
 ---
+
 ## Load Test Shapes
 
 ![load_shapes](svg/courses/testing/api-testing/06_performance_and_load/load_shapes.svg)
 
 ---
+
 ## Tools
 
 - k6: modern, JS scripts
@@ -43,6 +48,7 @@ audience:
 - Gatling: Scala, code-first
 
 ---
+
 ## k6 Sample (Pseudo)
 
 - Define VUs and duration
@@ -51,6 +57,7 @@ audience:
 - Run in CI
 
 ---
+
 ## Scenarios
 
 - Single endpoint
@@ -59,6 +66,7 @@ audience:
 - Realistic traffic shapes
 
 ---
+
 ## Metrics To Watch
 
 - Latency: p50, p95, p99
@@ -67,6 +75,7 @@ audience:
 - Resource: CPU, memory, DB
 
 ---
+
 ## Defining Success
 
 - SLOs: e.g., 95% under 200ms at 1000 rps
@@ -74,6 +83,7 @@ audience:
 - Automate gates
 
 ---
+
 ## Test Environment
 
 - As prod-like as possible
@@ -81,6 +91,7 @@ audience:
 - Own infra (don't load test prod)
 
 ---
+
 ## Production Load Tests
 
 - Carefully, with feature flag and small fraction
@@ -88,6 +99,7 @@ audience:
 - Risk: real impact
 
 ---
+
 ## Data Volume
 
 - Empty DB: misleading fast
@@ -95,6 +107,7 @@ audience:
 - Seed before tests
 
 ---
+
 ## Caching Effects
 
 - First run: cold cache
@@ -102,6 +115,7 @@ audience:
 - Both interesting; report separately
 
 ---
+
 ## Distributed Generators
 
 - Single machine: limited rps
@@ -109,6 +123,7 @@ audience:
 - k6 cloud, JMeter slaves
 
 ---
+
 ## Continuous Performance Testing
 
 - Run on every release
@@ -116,6 +131,7 @@ audience:
 - Catch regressions early
 
 ---
+
 ## Profiling Bottlenecks
 
 - Slow endpoint identified
@@ -123,11 +139,13 @@ audience:
 - Fix and re-test
 
 ---
+
 ## Common Bottleneck Patterns
 
 ![bottleneck_patterns](svg/courses/testing/api-testing/06_performance_and_load/bottleneck_patterns.svg)
 
 ---
+
 ## Common Performance-Testing Mistakes
 
 - Test environment too small

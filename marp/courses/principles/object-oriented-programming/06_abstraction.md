@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Abstraction
 
 ---
+
 ## What This Chapter Covers
 
 - What abstraction is, distinct from encapsulation
@@ -21,6 +23,7 @@ audience:
 - Designing for abstraction
 
 ---
+
 ## Abstraction vs Encapsulation
 
 - **Encapsulation**: hide *internal state* behind methods
@@ -30,16 +33,19 @@ audience:
 - "I don't need to know whether this is a FileLogger or NetLogger" = abstraction
 
 ---
+
 ## Levels
 
 ![abstraction_levels](svg/courses/principles/object-oriented-programming/06_abstraction/abstraction_levels.svg)
 
 ---
+
 ## Interface Versus Abstract Class
 
 ![interface_versus_class](svg/courses/principles/object-oriented-programming/06_abstraction/interface_versus_class.svg)
 
 ---
+
 ## Abstract Classes
 
 - A class that *cannot* be instantiated directly
@@ -49,6 +55,7 @@ audience:
 - A subclass either implements the missing methods or is itself abstract
 
 ---
+
 ## Abstract Class in Python
 
 ```python
@@ -68,6 +75,7 @@ class Shape(ABC):
 - A common pattern for "template + customisation point"
 
 ---
+
 ## Abstract Class in Java
 
 ```java
@@ -85,6 +93,7 @@ public abstract class Shape {
 - Same pattern as the Python version
 
 ---
+
 ## Interfaces
 
 - Pure contract: method signatures, no implementation
@@ -94,6 +103,7 @@ public abstract class Shape {
 - Modern Java added default methods, blurring abstract class vs interface
 
 ---
+
 ## Java Interface Example
 
 ```java
@@ -110,6 +120,7 @@ public class Version implements Comparable<Version> {
 ```
 
 ---
+
 ## Python Protocols
 
 ```python
@@ -128,6 +139,7 @@ def render(item: Drawable) -> None:
 - Closely matches duck typing while giving type safety
 
 ---
+
 ## Abstract Method Default Behaviour
 
 - Calling an abstract method via the abstract class fails
@@ -137,6 +149,7 @@ def render(item: Drawable) -> None:
 - Forces the developer to think about the customisation points
 
 ---
+
 ## Designing for Abstraction
 
 - What does the *consumer* need? That's the interface
@@ -146,6 +159,7 @@ def render(item: Drawable) -> None:
 - A good interface predicts how it'll be used; a bad one mirrors one implementation
 
 ---
+
 ## The Right Number of Methods
 
 - One method: "Functional interface" — Strategy, Comparator, Runnable
@@ -154,6 +168,7 @@ def render(item: Drawable) -> None:
 - More than ten: probably too broad — it's likely two interfaces in disguise
 
 ---
+
 ## Layered Abstraction
 
 - High-level: business operations (`OrderService.placeOrder`)
@@ -163,6 +178,7 @@ def render(item: Drawable) -> None:
 - This is what makes the lower layers replaceable
 
 ---
+
 ## Abstraction and Testing
 
 - Replace expensive collaborators with fakes via the abstraction
@@ -171,6 +187,7 @@ def render(item: Drawable) -> None:
 - Excessive mocking is a smell — sometimes the abstraction is wrong
 
 ---
+
 ## Premature Abstraction
 
 - Adding a `Persistable` interface "in case we add another database"
@@ -180,6 +197,7 @@ def render(item: Drawable) -> None:
 - Better: refactor when the second implementation appears
 
 ---
+
 ## Common Mistakes
 
 - One interface per class with one implementation each — code "Hungarian"

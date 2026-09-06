@@ -12,14 +12,17 @@ audience:
   - audiences:devops
 
 ---
+
 # Variable Types
 
 ---
+
 ## Variable Types Overview
 
 ![variable_types_overview](svg/courses/languages/bash/bash-scripting/18_variable_types/variable_types_overview.svg)
 
 ---
+
 ## Everything is a String (by Default)
 
 ```bash
@@ -40,6 +43,7 @@ echo $((y + 5))    # 5
 ```
 
 ---
+
 ## Integer Variables
 
 ```bash
@@ -61,6 +65,7 @@ echo "$c"      # 8
 ```
 
 ---
+
 ## String Operations: Comprehensive
 
 ```bash
@@ -91,6 +96,7 @@ echo "${filename##*.}"            # gz
 ```
 
 ---
+
 ## Indexed Arrays
 
 ```bash
@@ -113,6 +119,7 @@ echo "${#fruits[0]}"    # 5 (length of "apple")
 ```
 
 ---
+
 ## Associative Arrays (`bash` 4.0+)
 
 ```bash
@@ -139,7 +146,9 @@ echo "${#user[@]}"       # 3
 ```
 
 ---
+
 ## When to Use Which Type
+
 | Type | Use Case |
 |------|----------|
 | Plain string | Single values, paths, messages |
@@ -148,6 +157,7 @@ echo "${#user[@]}"       # 3
 | Associative array | Key-value mappings, configs |
 
 ---
+
 ## Nameref Variables (`bash` 4.3+)
 
 ```bash
@@ -171,6 +181,7 @@ echo "$count"    # 2
 ```
 
 ---
+
 ## Variable Attributes Summary
 
 ```bash

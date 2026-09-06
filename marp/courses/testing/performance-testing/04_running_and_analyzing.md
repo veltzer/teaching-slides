@@ -8,9 +8,11 @@ audience:
   - audiences:testers
 
 ---
+
 # Running and Analyzing
 
 ---
+
 ## What This Chapter Covers
 
 - Pre-flight checks
@@ -20,6 +22,7 @@ audience:
 - Reporting
 
 ---
+
 ## Pre-Flight
 
 - Environment ready
@@ -28,11 +31,13 @@ audience:
 - Stakeholders informed
 
 ---
+
 ## Run Phases
 
 ![run_phases](svg/courses/testing/performance-testing/04_running_and_analyzing/run_phases.svg)
 
 ---
+
 ## Warm-Up
 
 - Run at low rate first
@@ -41,6 +46,7 @@ audience:
 - Discard early data
 
 ---
+
 ## Steady State
 
 - Hold target rate
@@ -49,6 +55,7 @@ audience:
 - Length matters
 
 ---
+
 ## During-Run Observation
 
 - Live latency
@@ -57,6 +64,7 @@ audience:
 - Do not just wait for results
 
 ---
+
 ## Aborting
 
 - Customer impact in shared env
@@ -65,6 +73,7 @@ audience:
 - Have a kill switch
 
 ---
+
 ## Result Capture
 
 - Generator metrics
@@ -73,6 +82,7 @@ audience:
 - Logs sampled
 
 ---
+
 ## Latency Distribution
 
 - Histogram, not just averages
@@ -81,6 +91,7 @@ audience:
 - Plot side by side
 
 ---
+
 ## Throughput
 
 - Requests per second by endpoint
@@ -89,6 +100,7 @@ audience:
 - Compare with capacity target
 
 ---
+
 ## Errors
 
 - Rate
@@ -97,6 +109,7 @@ audience:
 - Reproduce in lower environment
 
 ---
+
 ## Bottleneck Hunt
 
 - Highest-utilized component
@@ -105,11 +118,13 @@ audience:
 - Iterate
 
 ---
+
 ## Hunt Visualized
 
 ![bottleneck_hunt](svg/courses/testing/performance-testing/04_running_and_analyzing/bottleneck_hunt.svg)
 
 ---
+
 ## Bottleneck Categories
 
 - CPU
@@ -119,6 +134,7 @@ audience:
 - Downstream calls
 
 ---
+
 ## Reporting
 
 - Hypothesis
@@ -128,6 +144,7 @@ audience:
 - Action items
 
 ---
+
 ## Comparisons
 
 - Versus baseline
@@ -136,6 +153,7 @@ audience:
 - Trend over time
 
 ---
+
 ## Action Items
 
 - Owner per item
@@ -144,6 +162,7 @@ audience:
 - Track regressions
 
 ---
+
 ## Common Run Mistakes
 
 - No baseline

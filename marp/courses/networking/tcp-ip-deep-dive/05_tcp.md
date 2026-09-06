@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # TCP Deep Dive
 
 ---
+
 ## What This Chapter Covers
 
 - TCP design goals
@@ -20,6 +22,7 @@ audience:
 - Connection close and TIME-WAIT
 
 ---
+
 ## TCP Design Goals
 
 - Reliable: data arrives or you know it didn't
@@ -30,11 +33,13 @@ audience:
 - Congestion-controlled: respects network capacity
 
 ---
+
 ## TCP Feature Map
 
 ![tcp_features](svg/courses/networking/tcp-ip-deep-dive/05_tcp/tcp_features.svg)
 
 ---
+
 ## When to Use TCP
 
 - Web (HTTP)
@@ -44,6 +49,7 @@ audience:
 - Anything where lost bytes matter
 
 ---
+
 ## TCP Header
 
 ```output
@@ -63,6 +69,7 @@ audience:
 ```
 
 ---
+
 ## Three-Way Handshake
 
 - SYN: client sends sequence number
@@ -72,11 +79,13 @@ audience:
 - One round-trip-time (RTT) of delay before data
 
 ---
+
 ## Handshake Visualized
 
 ![tcp_handshake](svg/courses/networking/tcp-ip-deep-dive/05_tcp/tcp_handshake.svg)
 
 ---
+
 ## Sequence Numbers
 
 - 32-bit; counts bytes, not packets
@@ -86,6 +95,7 @@ audience:
 - Wraps around at 2^32
 
 ---
+
 ## Acknowledgment
 
 - "I have received everything up to and including byte N"
@@ -95,6 +105,7 @@ audience:
 - Sender retransmits if ACK doesn't arrive
 
 ---
+
 ## Window Size
 
 - "I can accept this many more bytes before you must wait"
@@ -104,6 +115,7 @@ audience:
 - Foundation of flow control
 
 ---
+
 ## Flow Control
 
 - Receiver-side rate limiting
@@ -113,6 +125,7 @@ audience:
 - Sender resumes
 
 ---
+
 ## Congestion Control
 
 - Network-side rate limiting
@@ -122,6 +135,7 @@ audience:
 - Critical to internet stability
 
 ---
+
 ## Slow Start
 
 - Begins with a small congestion window
@@ -131,11 +145,13 @@ audience:
 - Backs off on loss
 
 ---
+
 ## Congestion Avoidance Visualized
 
 ![congestion-window](svg/courses/networking/tcp-ip-deep-dive/05_tcp/cwnd.svg)
 
 ---
+
 ## Fast Retransmit
 
 - Three duplicate ACKs trigger retransmission
@@ -145,6 +161,7 @@ audience:
 - Built into the standard
 
 ---
+
 ## Classic Recovery
 
 - Classic algorithm
@@ -154,6 +171,7 @@ audience:
 - Default for decades; still common
 
 ---
+
 ## TCP Cubic
 
 - Default in Linux (and most modern OS)
@@ -163,6 +181,7 @@ audience:
 - The most common modern algorithm
 
 ---
+
 ## TCP BBR
 
 - Google's congestion control
@@ -172,11 +191,13 @@ audience:
 - Increasing adoption
 
 ---
+
 ## Algorithm Trade-Offs
 
 ![congestion_algorithms](svg/courses/networking/tcp-ip-deep-dive/05_tcp/congestion_algorithms.svg)
 
 ---
+
 ## Connection Close
 
 - FIN: "I'm done sending"
@@ -186,11 +207,13 @@ audience:
 - Connection state: ESTABLISHED → FIN-WAIT → TIME-WAIT → CLOSED
 
 ---
+
 ## Close Sequence Visualized
 
 ![tcp_close](svg/courses/networking/tcp-ip-deep-dive/05_tcp/tcp_close.svg)
 
 ---
+
 ## TIME-WAIT State
 
 - Sender holds the connection for 2*MSL (~60s) after close
@@ -200,6 +223,7 @@ audience:
 - socket reuse options mitigate
 
 ---
+
 ## RST: Reset
 
 - Abrupt connection termination
@@ -209,6 +233,7 @@ audience:
 - Useful for forced shutdown
 
 ---
+
 ## Keepalive
 
 - Optional periodic probes
@@ -218,6 +243,7 @@ audience:
 - Not a substitute for app-level health checks
 
 ---
+
 ## Nagle's Algorithm
 
 - Buffer small writes; send when window or RTT
@@ -227,6 +253,7 @@ audience:
 - Most network apps disable it
 
 ---
+
 ## Selective Acknowledgments
 
 - ACK ranges, not just cumulative
@@ -236,6 +263,7 @@ audience:
 - Modern networks negotiate it
 
 ---
+
 ## TCP Options
 
 - MSS: Maximum Segment Size
@@ -245,6 +273,7 @@ audience:
 - Negotiated in SYN/SYN-ACK
 
 ---
+
 ## Common TCP Issues
 
 - TCP retransmissions hurt latency
@@ -254,6 +283,7 @@ audience:
 - HTTP/2 mitigates some via multiplexing on one TCP
 
 ---
+
 ## Tuning TCP
 
 - Increase send/receive buffer sizes
@@ -263,6 +293,7 @@ audience:
 - Most defaults are good for typical traffic
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting graceful close — RST in production
@@ -272,6 +303,7 @@ audience:
 - Not understanding that delivery doesn't mean read
 
 ---
+
 ## Summary
 
 - TCP: reliable, ordered, connection-oriented byte stream

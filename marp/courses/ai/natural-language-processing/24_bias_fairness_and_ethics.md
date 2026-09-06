@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Bias, Fairness, and Ethics
 
 ---
+
 ## What This Chapter Covers
 
 - Where bias enters `NLP` systems and what it costs
@@ -22,6 +24,7 @@ audience:
 - The professional responsibility that comes with deploying language technology
 
 ---
+
 ## Why This Chapter Exists
 
 - `NLP` systems make decisions about people at scale
@@ -31,11 +34,13 @@ audience:
 - This is engineering practice, not philosophy
 
 ---
+
 ## Sources of Bias
 
 ![bias_sources](svg/courses/ai/natural-language-processing/24_bias_fairness_and_ethics/bias_sources.svg)
 
 ---
+
 ## Data Bias
 
 - Training data reflects who wrote it, who got recorded, and who got labeled
@@ -45,6 +50,7 @@ audience:
 - Anything not in the data effectively does not exist for the model
 
 ---
+
 ## Representational Harm
 
 - Models that misrepresent or stereotype groups in their outputs
@@ -54,6 +60,7 @@ audience:
 - Damaging even when no decision is being made
 
 ---
+
 ## Allocative Harm
 
 - Models that distribute resources unevenly across groups
@@ -63,11 +70,13 @@ audience:
 - Often discovered only after deployment
 
 ---
+
 ## Two Kinds of Harm
 
 ![harm_taxonomy](svg/courses/ai/natural-language-processing/24_bias_fairness_and_ethics/harm_taxonomy.svg)
 
 ---
+
 ## Measuring Embedding Bias
 
 - `WEAT` (Word Embedding Association Test) measures stereotypical associations
@@ -77,6 +86,7 @@ audience:
 - Imperfect but reproducible — a starting point, not the whole story
 
 ---
+
 ## Bias in Contextual Models
 
 - `BERT` and `GPT` show stereotypical completions of fill-in-the-blank tests
@@ -86,6 +96,7 @@ audience:
 - Measuring is the easy part; deciding what to do about it is hard
 
 ---
+
 ## Bias in Downstream Tasks
 
 - Sentiment analyzers rate identity-mentioning sentences differently
@@ -95,6 +106,7 @@ audience:
 - Each downstream task has its own measurement methodology
 
 ---
+
 ## Fairness Metrics
 
 - Demographic parity: equal positive rates across groups
@@ -104,6 +116,7 @@ audience:
 - Different metrics conflict — you cannot satisfy all of them at once
 
 ---
+
 ## The Impossibility Result
 
 - `Chouldechova` and `Kleinberg` showed core fairness criteria are mutually incompatible
@@ -113,6 +126,7 @@ audience:
 - Document the choice; be explicit about what was traded off
 
 ---
+
 ## Bias Mitigation: Pre-processing
 
 - Rebalance training data by group
@@ -122,6 +136,7 @@ audience:
 - Often the first lever an engineer reaches for
 
 ---
+
 ## Bias Mitigation: In-processing
 
 - Add a fairness regularizer to the training loss
@@ -131,6 +146,7 @@ audience:
 - Can degrade overall accuracy
 
 ---
+
 ## Bias Mitigation: Post-processing
 
 - Calibrate or threshold separately per group
@@ -140,11 +156,13 @@ audience:
 - Useful when retraining the model is not an option
 
 ---
+
 ## Mitigation Trade-offs
 
 ![mitigation_tradeoffs](svg/courses/ai/natural-language-processing/24_bias_fairness_and_ethics/mitigation_tradeoffs.svg)
 
 ---
+
 ## Privacy and Memorization
 
 - `LLMs` can memorize and regurgitate training data
@@ -154,6 +172,7 @@ audience:
 - Training on user data without consent is increasingly a legal risk
 
 ---
+
 ## Differential Privacy
 
 - A formal framework for bounding what one record can reveal about itself
@@ -163,6 +182,7 @@ audience:
 - The strongest privacy guarantee available, but rarely deployed at scale
 
 ---
+
 ## Federated and On-Device Learning
 
 - Train on user data without the data leaving the device
@@ -172,6 +192,7 @@ audience:
 - Used in production by major mobile keyboards and assistants
 
 ---
+
 ## Toxic Content and Safety
 
 - Pretrained models reproduce the toxic content they trained on
@@ -181,6 +202,7 @@ audience:
 - Layered defenses beat any single filter
 
 ---
+
 ## Misinformation Risks
 
 - Generative models produce plausible falsehoods at scale
@@ -190,6 +212,7 @@ audience:
 - Engineering controls can slow misuse, not stop it
 
 ---
+
 ## Consent and Data Provenance
 
 - Most pretraining data was scraped without explicit consent
@@ -199,6 +222,7 @@ audience:
 - The honor system is no longer enough
 
 ---
+
 ## Regulatory Landscape
 
 - `EU AI Act` classifies systems by risk and imposes obligations
@@ -208,6 +232,7 @@ audience:
 - Treat regulation as a moving target you must engineer for
 
 ---
+
 ## Documentation: Model Cards
 
 - A short document accompanying the model
@@ -217,6 +242,7 @@ audience:
 - Cheap to write, catches deployment mistakes early
 
 ---
+
 ## Documentation: Data Sheets
 
 - Companion document for datasets
@@ -226,6 +252,7 @@ audience:
 - Underused but growing in adoption
 
 ---
+
 ## Auditing in Practice
 
 - Internal: red-team, prompt-injection drills, fairness regression tests
@@ -235,6 +262,7 @@ audience:
 - Audits cost money but cost less than launch incidents
 
 ---
+
 ## Stakeholder Engagement
 
 - Affected communities should be involved before deployment
@@ -244,6 +272,7 @@ audience:
 - The systems that succeed have stakeholder input woven through them
 
 ---
+
 ## Engineer Responsibility
 
 - You build it, you own the consequences
@@ -253,6 +282,7 @@ audience:
 - Professional codes (`ACM`, `IEEE`) outline the duty of care
 
 ---
+
 ## Common Production Pitfalls
 
 - Treating fairness as a one-time checklist instead of a property to monitor
@@ -262,6 +292,7 @@ audience:
 - Crisis communication plans for bias incidents that do not exist
 
 ---
+
 ## Anti-Patterns
 
 - "We removed gendered terms, the model is now fair"
@@ -271,6 +302,7 @@ audience:
 - Deploying a model whose training data you cannot trace
 
 ---
+
 ## Summary
 
 - Bias in `NLP` is structural, not accidental — it lives in data and design

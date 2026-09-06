@@ -9,6 +9,7 @@ audience:
 - audiences:developers
 
 ---
+
 # Linux I/O Architecture
 ## Understanding Input/Output in Linux Systems
 ## Mark Veltzer
@@ -33,6 +34,7 @@ audience:
     - Pipes
 
 ---
+
 ## File Descriptors
 1. Integer handles to open files/resources
 1. Standard descriptors:
@@ -46,6 +48,7 @@ close(fd);
 ```
 
 ---
+
 ## I/O System Calls
 ### Core Operations
 1. `open()` - Open file/device
@@ -56,10 +59,12 @@ close(fd);
 1. `ioctl()` - Device-specific control
 
 ---
+
 ## Virtual File System (VFS)
 ![virtual_file_system_vfs](svg/lectures/operating_systems/linux-io/virtual_file_system_vfs.svg)
 
 ---
+
 ## Buffered vs Unbuffered I/O
 ### Unbuffered (System Calls)
 1. Direct kernel interaction
@@ -75,6 +80,7 @@ fread(buffer, 1, 1024, fp);
 ```
 
 ---
+
 ## I/O Models
 ![i_o_models](svg/lectures/operating_systems/linux-io/i_o_models.svg)
 

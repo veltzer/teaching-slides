@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # The Board And Its Dual-Core Architecture
 
 ---

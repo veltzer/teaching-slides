@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Spark MLlib
 
 ---
+
 ## Introduction to Machine Learning
 
 1. Supervised Learning

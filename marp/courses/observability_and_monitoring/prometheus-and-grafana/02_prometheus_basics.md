@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Prometheus Basics
 
 ---
+
 ## What This Chapter Covers
 
 - Architecture
@@ -20,11 +22,13 @@ audience:
 - Labels
 
 ---
+
 ## Architecture Overview
 
 ![architecture](svg/courses/observability_and_monitoring/prometheus-and-grafana/02_prometheus_basics/architecture.svg)
 
 ---
+
 ## Architecture
 
 - Prometheus server: scrapes targets, stores TSDB
@@ -34,11 +38,13 @@ audience:
 - Exporters: bridge non-native systems
 
 ---
+
 ## Pull, Not Push
 
 ![scrape_pull](svg/courses/observability_and_monitoring/prometheus-and-grafana/02_prometheus_basics/scrape_pull.svg)
 
 ---
+
 ## Pull Model
 
 - Prometheus scrapes targets on interval
@@ -47,6 +53,7 @@ audience:
 - Push model is the exception
 
 ---
+
 ## Why Pull
 
 - Service discovery
@@ -55,6 +62,7 @@ audience:
 - Centralised config
 
 ---
+
 ## Configuration
 
 ```yaml
@@ -69,6 +77,7 @@ scrape_configs:
 - Reload via SIGHUP
 
 ---
+
 ## Time Series
 
 - Series identified by name + labels
@@ -77,6 +86,7 @@ scrape_configs:
 - Retention configurable
 
 ---
+
 ## Sample Metric
 
 ```misc
@@ -88,6 +98,7 @@ http_requests_total{method="GET", status="200"} 1234
 - Value: 1234
 
 ---
+
 ## Metric Types
 
 - Counter: monotonic; only goes up
@@ -96,11 +107,13 @@ http_requests_total{method="GET", status="200"} 1234
 - Summary: percentiles client-side
 
 ---
+
 ## Types Compared
 
 ![metric_types](svg/courses/observability_and_monitoring/prometheus-and-grafana/02_prometheus_basics/metric_types.svg)
 
 ---
+
 ## Counter
 
 - Requests, errors, bytes sent
@@ -108,6 +121,7 @@ http_requests_total{method="GET", status="200"} 1234
 - Use rate() for "per second"
 
 ---
+
 ## Gauge
 
 - Memory, queue length, temperature
@@ -115,6 +129,7 @@ http_requests_total{method="GET", status="200"} 1234
 - Use directly
 
 ---
+
 ## Histogram
 
 - Buckets for value ranges
@@ -123,6 +138,7 @@ http_requests_total{method="GET", status="200"} 1234
 - Standard for latency
 
 ---
+
 ## Labels
 
 - Key-value tags
@@ -131,6 +147,7 @@ http_requests_total{method="GET", status="200"} 1234
 - One series per unique label combo
 
 ---
+
 ## Cardinality Pitfall
 
 - user_id as label: millions of series
@@ -139,6 +156,7 @@ http_requests_total{method="GET", status="200"} 1234
 - Use coarse labels (region, status)
 
 ---
+
 ## Common Prometheus Mistakes
 
 - High-cardinality labels (user id, request id)

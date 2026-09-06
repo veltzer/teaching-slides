@@ -10,11 +10,13 @@ audience:
   - audiences:developers
 
 ---
+
 # Prompt Engineering for Developers
 
 ## The Art and Science of AI Communication
 
 ---
+
 ## Prompt Anatomy
 
 ![prompt_anatomy](svg/courses/ai/developing-using-ai/04_prompt_engineering/prompt_anatomy.svg)

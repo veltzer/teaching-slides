@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced Merge Conflict Resolution
 
 ---
+
 ## What This Chapter Covers
 
 - The three-way merge: what Git is actually computing
@@ -21,6 +23,7 @@ audience:
 - Rerere — Git remembers your resolutions
 
 ---
+
 ## The Three-Way Merge
 
 - Two commits to combine: yours and theirs
@@ -30,6 +33,7 @@ audience:
 - A "conflict" is when both sides changed the same lines
 
 ---
+
 ## Why Three-Way Beats Two-Way
 
 - Two-way: "your file vs theirs" — no idea what changed
@@ -39,11 +43,13 @@ audience:
 - Choosing the right base is most of merge's intelligence
 
 ---
+
 ## Three-Way Merge Visualized
 
 ![three_way_merge](svg/courses/git/advanced-git/09_advanced_merge_conflict_resolution/three_way_merge.svg)
 
 ---
+
 ## Default Conflict Markers
 
 ```output
@@ -60,6 +66,7 @@ Their version of the line.
 - Save and `git add` to mark resolved
 
 ---
+
 ## diff3 Conflict Style
 
 ```bash
@@ -82,6 +89,7 @@ Their version
 - Strongly recommended: enable this globally
 
 ---
+
 ## Why diff3 Matters
 
 - Default markers don't show *intent* — just the two outcomes
@@ -91,6 +99,7 @@ Their version
 - Many "tricky" conflicts vanish with diff3
 
 ---
+
 ## Aborting and Restarting a Merge
 
 - `git merge --abort` — restore pre-merge state
@@ -100,11 +109,13 @@ Their version
 - Don't commit until all markers are gone
 
 ---
+
 ## Conflict Resolution Strategies
 
 ![conflict_strategies](svg/courses/git/advanced-git/09_advanced_merge_conflict_resolution/conflict_strategies.svg)
 
 ---
+
 ## Strategy Options: ours and theirs
 
 ```bash
@@ -118,6 +129,7 @@ git merge -X theirs feature
 - Use deliberately — silent loss of changes is the cost
 
 ---
+
 ## Strategy: ours (uppercase)
 
 ```bash
@@ -131,6 +143,7 @@ git merge -s ours feature
 - Common for stale branches you don't want to revisit
 
 ---
+
 ## Configuring a Merge Tool
 
 ```bash
@@ -145,6 +158,7 @@ git config merge.tool vimdiff
 - Save and exit — git verifies the conflict is resolved
 
 ---
+
 ## Using git mergetool
 
 - Run after a merge produces conflicts
@@ -154,6 +168,7 @@ git config merge.tool vimdiff
 - Faster than hand-editing for complex multi-region conflicts
 
 ---
+
 ## Conflicts in Rebases
 
 - Same machinery: three-way merge applied per replayed commit
@@ -163,6 +178,7 @@ git config merge.tool vimdiff
 - This is where rerere becomes valuable
 
 ---
+
 ## Conflicts in Cherry-Pick
 
 - Cherry-pick computes a three-way merge: source's parent, source's tree, your tree
@@ -172,6 +188,7 @@ git config merge.tool vimdiff
 - For repeated patterns, write a small script
 
 ---
+
 ## Rerere: Reuse Recorded Resolution
 
 ```bash
@@ -185,6 +202,7 @@ git config rerere.enabled true
 - Free undo: `git rerere clear` to forget
 
 ---
+
 ## Rerere in Action
 
 - First time: you resolve `<<<<<<< auth.py ... >>>>>>>` manually
@@ -194,6 +212,7 @@ git config rerere.enabled true
 - Critical for long-lived branches that rebase often
 
 ---
+
 ## When Rerere Misleads
 
 - Rerere applies based on conflict *text*, not on intent
@@ -203,6 +222,7 @@ git config rerere.enabled true
 - It's a pattern matcher, not a thinker
 
 ---
+
 ## Renames and Conflicts
 
 - Git tracks renames heuristically — same content, different path
@@ -212,6 +232,7 @@ git config rerere.enabled true
 - Rename conflicts are the trickiest — be deliberate
 
 ---
+
 ## Binary Conflicts
 
 - Git can't text-merge binaries (images, PDFs)
@@ -221,6 +242,7 @@ git config rerere.enabled true
 - Avoid binaries in source — store generated assets elsewhere
 
 ---
+
 ## Resolving Conflicts in Bulk
 
 - For trivial all-ours or all-theirs cases:
@@ -230,6 +252,7 @@ git config rerere.enabled true
 - Always verify before committing
 
 ---
+
 ## Tools That Help
 
 - `git diff --check` — find leftover conflict markers before commit
@@ -239,6 +262,7 @@ git config rerere.enabled true
 - These tools shrink resolution time
 
 ---
+
 ## Common Pitfalls
 
 - Committing with conflict markers still in the file
@@ -248,6 +272,7 @@ git config rerere.enabled true
 - Skipping the test run after resolution
 
 ---
+
 ## Best Practices
 
 - Enable diff3 globally — `git config --global merge.conflictstyle diff3`
@@ -257,6 +282,7 @@ git config rerere.enabled true
 - Keep merges small — the longer the divergence, the worse the conflict
 
 ---
+
 ## Summary
 
 - Three-way merge uses a common ancestor for intent inference

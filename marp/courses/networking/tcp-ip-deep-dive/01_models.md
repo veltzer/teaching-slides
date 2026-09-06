@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # OSI and TCP/IP Models
 
 ---
+
 ## What This Chapter Covers
 
 - The OSI seven-layer model
@@ -20,6 +22,7 @@ audience:
 - Why we use both names
 
 ---
+
 ## Why Reference Models?
 
 - Networking is layered by design
@@ -29,6 +32,7 @@ audience:
 - Real protocols don't always fit cleanly
 
 ---
+
 ## OSI Seven Layers
 
 - 7 — Application
@@ -41,6 +45,7 @@ audience:
 - "All People Seem To Need Data Processing"
 
 ---
+
 ## TCP/IP Four Layers
 
 - Application
@@ -51,16 +56,19 @@ audience:
 - Maps roughly to OSI
 
 ---
+
 ## What Each Layer Does
 
 ![layer_responsibilities](svg/courses/networking/tcp-ip-deep-dive/01_models/layer_responsibilities.svg)
 
 ---
+
 ## Models Visualized
 
 ![models](svg/courses/networking/tcp-ip-deep-dive/01_models/models.svg)
 
 ---
+
 ## OSI Layer 1: Physical
 
 - Bits on the wire
@@ -70,6 +78,7 @@ audience:
 - Where errors start: bad cables, electrical interference
 
 ---
+
 ## OSI Layer 2: Data Link
 
 - Frames between adjacent nodes
@@ -79,6 +88,7 @@ audience:
 - Switches operate here
 
 ---
+
 ## OSI Layer 3: Network
 
 - Packets across networks
@@ -88,6 +98,7 @@ audience:
 - Where the internet really lives
 
 ---
+
 ## OSI Layer 4: Transport
 
 - Segments / datagrams
@@ -97,6 +108,7 @@ audience:
 - End-to-end delivery
 
 ---
+
 ## OSI Layers 5-7
 
 - Session — manages dialog (rarely a separate layer in practice)
@@ -106,6 +118,7 @@ audience:
 - Most developers live here
 
 ---
+
 ## TCP/IP Layer Comparison
 
 - TCP/IP Application = OSI 5+6+7
@@ -115,6 +128,7 @@ audience:
 - The TCP/IP model fits actual protocols better
 
 ---
+
 ## Encapsulation
 
 - Each layer wraps the layer above
@@ -124,11 +138,13 @@ audience:
 - Layered isolation in practice
 
 ---
+
 ## Encapsulation Visualized
 
 ![encapsulation](svg/courses/networking/tcp-ip-deep-dive/01_models/encapsulation.svg)
 
 ---
+
 ## Why TLS Doesn't Fit Cleanly
 
 - TLS is between Transport and Application
@@ -138,6 +154,7 @@ audience:
 - Context matters more than strict layering
 
 ---
+
 ## What Crosses Each Layer
 
 - Same network: Link layer (Ethernet)
@@ -147,6 +164,7 @@ audience:
 - Each hop adds and strips headers
 
 ---
+
 ## Routers vs Switches
 
 - Switch: Layer 2, forwards by MAC
@@ -156,6 +174,7 @@ audience:
 - Choose based on broadcast domain needs
 
 ---
+
 ## Real-World Devices
 
 - Switch — single subnet, MAC learning
@@ -165,6 +184,7 @@ audience:
 - IDS/IPS — inspects payload at Layer 7
 
 ---
+
 ## Same vs Different Subnets
 
 - Same subnet: ARP for MAC, frame directly to neighbor
@@ -174,6 +194,7 @@ audience:
 - Critical for routing correctness
 
 ---
+
 ## TCP/IP Stack in OS
 
 - NIC drivers handle Link layer
@@ -183,6 +204,7 @@ audience:
 - Different OS implementations; same protocols
 
 ---
+
 ## Network Protocol Mapping
 
 - HTTP — Application
@@ -193,6 +215,7 @@ audience:
 - Ethernet — Link
 
 ---
+
 ## Why Layer Discipline Matters
 
 - Loose coupling between layers
@@ -202,6 +225,7 @@ audience:
 - Misuse across layers creates fragile systems
 
 ---
+
 ## Course Roadmap
 
 - Chapter 2: Link layer (Ethernet, MAC)
@@ -213,6 +237,7 @@ audience:
 - Chapter 8: Packet analysis with Wireshark
 
 ---
+
 ## Common Misconceptions
 
 - "OSI is the truth" — it's a model; reality differs
@@ -222,6 +247,7 @@ audience:
 - "Models are useless in practice" — they shape vocabulary and tooling
 
 ---
+
 ## Summary
 
 - OSI: 7 layers; TCP/IP: 4

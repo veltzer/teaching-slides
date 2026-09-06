@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Introduction to Elasticsearch
 
 ---
+
 ## What This Chapter Covers
 
 - Elasticsearch architecture and core concepts
@@ -21,6 +23,7 @@ audience:
 - Self-managed vs Elastic Cloud vs Kubernetes (ECK)
 
 ---
+
 ## What Is Elasticsearch?
 
 - Distributed, RESTful search and analytics engine
@@ -31,6 +34,7 @@ audience:
 - Common for search, observability (logs/metrics/traces), and security (SIEM)
 
 ---
+
 ## Core Architectural Concepts
 
 - Everything is exposed over a JSON HTTP REST API
@@ -41,6 +45,7 @@ audience:
 - Distributed by default — no single point of failure when sized correctly
 
 ---
+
 ## Documents
 
 - The basic unit of information is a JSON document
@@ -58,6 +63,7 @@ audience:
 ```
 
 ---
+
 ## Indices
 
 - An index is a logical collection of related documents
@@ -71,6 +77,7 @@ GET _cat/indices?v
 ```
 
 ---
+
 ## Shards
 
 - A shard is a self-contained Lucene index
@@ -81,6 +88,7 @@ GET _cat/indices?v
 - A document is routed to a shard by hashing its routing value (default `_id`)
 
 ---
+
 ## Replica Shards
 
 - Each primary shard can have zero or more replicas
@@ -95,6 +103,7 @@ PUT products/_settings
 ```
 
 ---
+
 ## Nodes
 
 - A node is a single running Elasticsearch instance (one JVM)
@@ -108,6 +117,7 @@ GET _cat/nodes?v
 ```
 
 ---
+
 ## Cluster Topology
 
 - A cluster is one or more nodes sharing a `cluster.name`
@@ -121,6 +131,7 @@ GET _cluster/health
 ```
 
 ---
+
 ## Cluster Health States
 
 - Green: all primary and replica shards are allocated
@@ -134,6 +145,7 @@ GET _cluster/allocation/explain
 ```
 
 ---
+
 ## Apache Lucene Fundamentals
 
 - Elasticsearch is a distributed layer over Lucene
@@ -143,6 +155,7 @@ GET _cluster/allocation/explain
 - Lucene handles the inverted index, scoring, and term storage
 
 ---
+
 ## Segments and Merging
 
 - Indexing creates small immutable segments
@@ -156,6 +169,7 @@ POST logs-2026.06/_forcemerge?max_num_segments=1
 ```
 
 ---
+
 ## The Inverted Index
 
 - Maps each term to the list of documents containing it
@@ -165,6 +179,7 @@ POST logs-2026.06/_forcemerge?max_num_segments=1
 - Complemented by doc values (columnar) for sorting and aggregations
 
 ---
+
 ## Inverted Index Example
 
 - Source documents are analyzed into terms
@@ -183,6 +198,7 @@ dog    -> [2]
 ```
 
 ---
+
 ## Comparison With Relational Databases
 
 - Index ≈ table, document ≈ row, field ≈ column (loosely)
@@ -193,6 +209,7 @@ dog    -> [2]
 - Eventual consistency for search; per-document operations are strongly consistent
 
 ---
+
 ## When To Use Elasticsearch
 
 - Full-text and faceted search applications
@@ -203,6 +220,7 @@ dog    -> [2]
 - Not a replacement for a transactional system of record
 
 ---
+
 ## Deployment Patterns: Self-Managed
 
 - Install on bare metal or VMs you operate
@@ -212,6 +230,7 @@ dog    -> [2]
 - Highest operational effort
 
 ---
+
 ## Deployment Patterns: Elastic Cloud
 
 - Managed Elasticsearch Service hosted by Elastic
@@ -221,6 +240,7 @@ dog    -> [2]
 - Trades control for reduced operational burden
 
 ---
+
 ## Deployment Patterns: Kubernetes (ECK)
 
 - Elastic Cloud on Kubernetes operator manages clusters in K8s

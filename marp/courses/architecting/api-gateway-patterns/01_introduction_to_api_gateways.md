@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Introduction to API Gateways
 
 ---
+
 ## What This Chapter Covers
 
 - What an API gateway is
@@ -21,11 +23,13 @@ audience:
 - A short tour of the landscape
 
 ---
+
 ## Gateway in the Big Picture
 
 ![gateway_role](svg/courses/architecting/api-gateway-patterns/01_introduction_to_api_gateways/gateway_role.svg)
 
 ---
+
 ## What An API Gateway Is
 
 - A single entry point in front of multiple services
@@ -35,6 +39,7 @@ audience:
 - Inside the gateway: many services, all internal
 
 ---
+
 ## Why Bother
 
 - Without it: clients call N services directly
@@ -44,6 +49,7 @@ audience:
 - Consumers see one API, even though many services back it
 
 ---
+
 ## Common Gateway Responsibilities
 
 - Routing: URL &#8594; service mapping
@@ -55,11 +61,13 @@ audience:
 - Logging, metrics, tracing
 
 ---
+
 ## Four Pillars
 
 ![gateway_responsibilities](svg/courses/architecting/api-gateway-patterns/01_introduction_to_api_gateways/responsibilities.svg)
 
 ---
+
 ## Cross-Cutting Concerns
 
 - Same logic that every service would need
@@ -69,6 +77,7 @@ audience:
 - Trade-off: services become slightly less standalone
 
 ---
+
 ## What Gateways Shouldn't Do
 
 - Business logic
@@ -78,6 +87,7 @@ audience:
 - "If it took more than a few ms, the gateway shouldn't do it"
 
 ---
+
 ## Gateway vs Service Mesh
 
 - **Gateway**: north-south traffic (external &#8596; internal)
@@ -87,6 +97,7 @@ audience:
 - Modern stacks often have both
 
 ---
+
 ## BFF Pattern
 
 - Backend for Frontend
@@ -96,6 +107,7 @@ audience:
 - Common in customer-facing public APIs
 
 ---
+
 ## Edge vs Internal Gateways
 
 - **Edge gateway**: at the internet boundary; SSL termination, WAF
@@ -105,6 +117,7 @@ audience:
 - Smaller: one gateway covers both
 
 ---
+
 ## Hosted vs Self-Hosted
 
 - **Hosted**: AWS API Gateway, Azure API Management, Apigee
@@ -114,6 +127,7 @@ audience:
 - All capable for typical needs
 
 ---
+
 ## Gateway Landscape
 
 - **Kong**: open-source, plugin-rich, well-known
@@ -124,6 +138,7 @@ audience:
 - **Tyk**: open-source competitor to Kong
 
 ---
+
 ## When You DON'T Need One
 
 - Single service; no microservices
@@ -133,6 +148,7 @@ audience:
 - "Add a gateway when you have ~3+ services and external consumers"
 
 ---
+
 ## What's Next
 
 - Architectures: monolith with gateway, microservices, serverless

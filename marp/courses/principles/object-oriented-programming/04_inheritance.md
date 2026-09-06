@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Inheritance
 
 ---
+
 ## What This Chapter Covers
 
 - What inheritance is and what it gives you
@@ -21,6 +23,7 @@ audience:
 - When inheritance is the wrong tool
 
 ---
+
 ## What Inheritance Is
 
 - A class can extend another, gaining its fields and methods
@@ -30,16 +33,19 @@ audience:
 - Common in libraries: extending base classes the framework provides
 
 ---
+
 ## Forms
 
 ![inheritance_kinds](svg/courses/principles/object-oriented-programming/04_inheritance/inheritance_kinds.svg)
 
 ---
+
 ## Liskov Substitution
 
 ![liskov_principle](svg/courses/principles/object-oriented-programming/04_inheritance/liskov_principle.svg)
 
 ---
+
 ## A First Example
 
 ```java
@@ -57,6 +63,7 @@ public class Dog extends Animal {
 ```
 
 ---
+
 ## Method Overriding
 
 - Subclass redefines a method inherited from the superclass
@@ -66,6 +73,7 @@ public class Dog extends Animal {
 - The pattern of using overriding for varied behaviour is *polymorphism* (next chapter)
 
 ---
+
 ## Constructor Chaining
 
 - Subclass constructor must initialise the superclass first
@@ -75,6 +83,7 @@ public class Dog extends Animal {
 - The superclass invariants must hold before the subclass adds its own state
 
 ---
+
 ## Calling Super Methods
 
 ```python
@@ -90,6 +99,7 @@ class TimedAnimal(Animal):
 - Pattern: pre-action, super call, post-action
 
 ---
+
 ## Single vs Multiple Inheritance
 
 - Single inheritance: a class has at most one parent (Java, C#, Kotlin)
@@ -99,6 +109,7 @@ class TimedAnimal(Animal):
 - Interfaces give "is-a" without bringing implementation
 
 ---
+
 ## The Diamond Problem
 
 - Class B extends A; class C extends A; class D extends B and C
@@ -108,6 +119,7 @@ class TimedAnimal(Animal):
 - Avoid by preferring composition or interfaces
 
 ---
+
 ## Interfaces as a Cheaper Alternative
 
 ```java
@@ -125,6 +137,7 @@ public class Cat implements Speaker { ... }
 - Interfaces give you polymorphism without inheritance
 
 ---
+
 ## The Fragile Base Class Problem
 
 - Subclasses depend on the *implementation*, not just the interface, of the base
@@ -134,6 +147,7 @@ public class Cat implements Speaker { ... }
 - Final classes (Java) and `@final` decorators are tools to prohibit it
 
 ---
+
 ## When Inheritance Is the Wrong Tool
 
 - "Code reuse" is *not* a good reason — use composition
@@ -143,6 +157,7 @@ public class Cat implements Speaker { ... }
 - When a Liskov violation lurks (next chapter)
 
 ---
+
 ## Composition Over Inheritance
 
 ```python
@@ -160,6 +175,7 @@ class OrderService:
 - Forms the basis of the Strategy pattern
 
 ---
+
 ## Inheritance in Python
 
 - Use `class Sub(Base):`
@@ -169,6 +185,7 @@ class OrderService:
 - Most Python OO uses single inheritance + mixins
 
 ---
+
 ## Inheritance in Java
 
 - Use `class Sub extends Base`
@@ -178,6 +195,7 @@ class OrderService:
 - Modern Java: prefer composition + interfaces
 
 ---
+
 ## Practical Guideline
 
 - First reach: composition
@@ -187,6 +205,7 @@ class OrderService:
 - Keep hierarchies shallow
 
 ---
+
 ## Common Mistakes
 
 - Inheritance for code reuse rather than for an "is-a" relationship

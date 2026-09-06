@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Expectation and Moments
 
 ---
+
 ## What This Chapter Covers
 
 - Expectation as a Lebesgue integral
@@ -21,11 +23,13 @@ audience:
 - Key inequalities: Markov, Chebyshev, Jensen, Cauchy&ndash;Schwarz
 
 ---
+
 ## What Each Moment Tells You
 
 ![moments](svg/courses/math/statistics-theory/04_expectation_and_moments/moments.svg)
 
 ---
+
 ## Expectation Is An Integral
 
 - **E[X] = &#8747;_&Omega; X dP** — the Lebesgue integral of the random variable against the probability measure
@@ -35,6 +39,7 @@ audience:
 - The single integral unifies all distribution types — discrete, continuous, mixed — under one definition
 
 ---
+
 ## Law Of The Unconscious Statistician
 
 - To find E[g(X)] you do **not** need the law of g(X): **E[g(X)] = &#8747; g(x) dP_X(x)** — integrate g against X's *own* distribution
@@ -44,6 +49,7 @@ audience:
 - "Unconscious" because we use it so reflexively we forget it's a substitution theorem (the pushforward / change-of-variables identity)
 
 ---
+
 ## Core Properties
 
 - **Linearity**: E[aX + bY] = aE[X] + bE[Y] — *always*, no independence needed (whenever the pieces are integrable)
@@ -53,6 +59,7 @@ audience:
 - **Conditioning (tower / law of total expectation)**: E[X] = E[ E[X | G] ] — average the conditional means
 
 ---
+
 ## The Convergence Theorems
 
 - These say *when* you may swap a limit and an expectation — the central technical tools of the subject:
@@ -62,6 +69,7 @@ audience:
 - Without a hypothesis like these, lim E &ne; E lim in general — "mass escaping to infinity" is the standard counterexample
 
 ---
+
 ## Variance And Higher Moments
 
 - **Variance**: Var(X) = E[(X &minus; &mu;)&sup2;] = E[X&sup2;] &minus; &mu;&sup2; (when E[X&sup2;] &lt; &infin;); SD = &radic;Var; scaling Var(aX + b) = a&sup2;Var(X)
@@ -71,6 +79,7 @@ audience:
 - **Moment problem**: the moment sequence does *not* always determine the distribution — the classic counterexample is the lognormal, which shares all its moments with a family of other laws (Carleman's condition gives a sufficient condition for uniqueness)
 
 ---
+
 ## Generating Functions
 
 - **Moment generating function** M_X(t) = E[e&#8348;&#7587;], when finite in a neighborhood of 0 — then moments fall out by differentiation: E[X&#8319;] = M_X&#8317;&#8319;&#8318;(0)
@@ -80,6 +89,7 @@ audience:
 - **Cumulants** &kappa;_n come from log M_X(t) (or log &phi;): &kappa;&#8321; = mean, &kappa;&#8322; = variance, &kappa;&#8323; = third central moment, and cumulants of independent sums simply *add* — which is exactly why the normal (all &kappa;_n = 0 for n &geq; 3) is the natural "additive" limit
 
 ---
+
 ## The Workhorse Inequalities
 
 - **Markov**: X &geq; 0 &#8658; P(X &geq; a) &leq; E[X]/a — the seed from which the others grow
@@ -89,6 +99,7 @@ audience:
 - Sharper tools — **Chernoff bounds** (optimize over t in Markov applied to e&#8348;&#7587;), **Hoeffding**, **Bernstein** — give *exponential* tail decay for sums and underpie concentration of measure and learning theory
 
 ---
+
 ## Moments And Bounds In Code
 
 ```python
@@ -107,6 +118,7 @@ print("sum mean~3:", s.mean().round(3), " sum var~12:", s.var(ddof=1).round(3))
 ```
 
 ---
+
 ## Common Mistakes
 
 - Assuming E[X] exists — it can be infinite or undefined (Cauchy has no mean; some Paretos have no variance)

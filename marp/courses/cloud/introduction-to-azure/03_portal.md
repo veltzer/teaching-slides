@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Working with the Azure Portal
 
 ---

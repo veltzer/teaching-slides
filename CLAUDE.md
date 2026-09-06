@@ -20,7 +20,7 @@
 - Always close code fences before starting a new slide (`---`)
 - Use `1. 1. 1.` for ordered lists, not `1. 2. 3.` — the renderer numbers automatically
 - Never number "parts" in slide headings (e.g., `## Part 3: Foo`, `## Part II: Foo`). Reordering slides breaks the numbering. Just use the descriptive title.
-- Indent sub-items with 4 spaces: `    - item`
+- Indent sub-items with 4 spaces (four spaces followed by `- item`)
 - No mermaid diagrams — prefer SVG (no fast mermaid tool available yet)
 - Always use the project SVG color palette: `resources/palette_diagram.yaml`
 - No external image URLs — all images must be in `svg/` or `jpg/` directories

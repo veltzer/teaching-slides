@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to QEMU for Kernel Developers
 
 ---
@@ -53,6 +54,7 @@ QEMU vs Other Virtualization Solutions
 - QEMU's unique features for kernel developers
 
 ---
+
 QEMU Architecture Overview
 
 ---
@@ -115,6 +117,7 @@ QEMU Installation
 - Verifying installation
 
 ---
+
 Basic QEMU Usage
 
 ---

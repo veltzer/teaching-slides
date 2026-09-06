@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Functions and the Stack
 
 ---

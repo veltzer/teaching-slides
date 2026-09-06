@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Buildroot
 
 ---
@@ -220,6 +221,7 @@ BR2_INIT_SYSTEMD=y
 ```
 
 ---
+
 ## Package Infrastructure
 ### Package Types
 

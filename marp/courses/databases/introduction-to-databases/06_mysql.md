@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # MySQL
 
 ---
+
 ## What This Chapter Covers
 
 - MySQL overview
@@ -20,6 +22,7 @@ audience:
 - vs Postgres
 
 ---
+
 ## What MySQL Is
 
 - Open-source relational database
@@ -28,11 +31,13 @@ audience:
 - Web app default
 
 ---
+
 ## Quick Tour
 
 ![mysql_features](svg/courses/databases/introduction-to-databases/06_mysql/mysql_features.svg)
 
 ---
+
 ## MySQL vs Postgres
 
 - MySQL: simpler, faster for some workloads
@@ -41,6 +46,7 @@ audience:
 - Most: Postgres preferred for new projects
 
 ---
+
 ## Storage Engines
 
 - InnoDB: default; ACID; row-level locks
@@ -49,11 +55,13 @@ audience:
 - Use InnoDB unless special reason
 
 ---
+
 ## Engine Comparison
 
 ![storage_engines_compare](svg/courses/databases/introduction-to-databases/06_mysql/storage_engines.svg)
 
 ---
+
 ## Connecting
 
 ```bash
@@ -64,6 +72,7 @@ mysql -h host -u user -p database
 - TLS for production
 
 ---
+
 ## Auto-Increment
 
 ```sql
@@ -74,6 +83,7 @@ CREATE TABLE users (
 ```
 
 ---
+
 ## CHARSET
 
 - utf8 (3 bytes; doesn't cover all UTF-8)
@@ -81,6 +91,7 @@ CREATE TABLE users (
 - Always use utf8mb4
 
 ---
+
 ## Indexes
 
 - Primary key clustered
@@ -89,6 +100,7 @@ CREATE TABLE users (
 - Hash for memory tables
 
 ---
+
 ## Replication
 
 - Source / replica (formerly master / slave)
@@ -97,6 +109,7 @@ CREATE TABLE users (
 - Standard in production
 
 ---
+
 ## Group Replication
 
 - Multi-leader; consensus-based
@@ -105,6 +118,7 @@ CREATE TABLE users (
 - Galera Cluster: third-party alternative
 
 ---
+
 ## Backups
 
 - mysqldump: logical
@@ -113,6 +127,7 @@ CREATE TABLE users (
 - Test restores
 
 ---
+
 ## Common Configuration
 
 - innodb_buffer_pool_size: 70% of RAM typical
@@ -121,6 +136,7 @@ CREATE TABLE users (
 - innodb_flush_log_at_trx_commit: durability vs perf
 
 ---
+
 ## Hosted MySQL
 
 - AWS RDS, Aurora MySQL
@@ -130,6 +146,7 @@ CREATE TABLE users (
 - Each: different cost / feature trade-off
 
 ---
+
 ## MariaDB
 
 - Fork of MySQL
@@ -138,6 +155,7 @@ CREATE TABLE users (
 - Common: distro default in some Linux
 
 ---
+
 ## Common MySQL Mistakes
 
 - utf8 instead of utf8mb4

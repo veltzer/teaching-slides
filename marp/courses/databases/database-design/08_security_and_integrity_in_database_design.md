@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Security and Integrity in Database Design
 
 ---
+
 ## What This Chapter Covers
 
 - Role-based access
@@ -21,6 +23,7 @@ audience:
 - Compliance considerations
 
 ---
+
 ## Database Users
 
 - Don't use root / superuser for apps
@@ -29,6 +32,7 @@ audience:
 - Audit periodically
 
 ---
+
 ## Roles
 
 - Group privileges
@@ -37,6 +41,7 @@ audience:
 - Standard in Postgres, MySQL, others
 
 ---
+
 ## Row-Level Security
 
 - Postgres: RLS policies
@@ -45,16 +50,19 @@ audience:
 - Powerful; setup carefully
 
 ---
+
 ## Access Control Layers
 
 ![access_control](svg/courses/databases/database-design/08_security_and_integrity_in_database_design/access_control.svg)
 
 ---
+
 ## Layers of Data Integrity
 
 ![integrity_layers](svg/courses/databases/database-design/08_security_and_integrity_in_database_design/integrity_layers.svg)
 
 ---
+
 ## Encryption At Rest
 
 - Disk-level: TDE (Transparent Data Encryption)
@@ -63,6 +71,7 @@ audience:
 - Standard for compliance
 
 ---
+
 ## Encryption In Transit
 
 - TLS to the database
@@ -71,6 +80,7 @@ audience:
 - Cloud DBs: usually default-on
 
 ---
+
 ## Audit Logs
 
 - Log: who did what, when
@@ -79,6 +89,7 @@ audience:
 - Or: pgaudit / built-in audit
 
 ---
+
 ## Backups
 
 - Regular, automated, tested
@@ -87,6 +98,7 @@ audience:
 - Retention policy aligned with compliance
 
 ---
+
 ## Point-In-Time Recovery
 
 - Restore to any specific moment
@@ -95,6 +107,7 @@ audience:
 - Most cloud DBs offer this
 
 ---
+
 ## Disaster Recovery
 
 - Multi-region replication
@@ -104,6 +117,7 @@ audience:
 - Match to business need
 
 ---
+
 ## Compliance
 
 - HIPAA, PCI, GDPR, SOX
@@ -112,6 +126,7 @@ audience:
 - DBAs and engineers both involved
 
 ---
+
 ## Data Retention
 
 - How long do you keep data?
@@ -120,6 +135,7 @@ audience:
 - Document the policy
 
 ---
+
 ## SQL Injection
 
 - App-layer concern; mention here
@@ -128,6 +144,7 @@ audience:
 - Never concatenate user input into SQL
 
 ---
+
 ## Common Security Mistakes
 
 - App connecting as superuser
@@ -137,6 +154,7 @@ audience:
 - Forgetting to encrypt backup snapshots
 
 ---
+
 ## Course Wrap-Up
 
 - ER &#8594; logical &#8594; physical

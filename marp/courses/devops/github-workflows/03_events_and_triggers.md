@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Events and Triggers
 
 ---

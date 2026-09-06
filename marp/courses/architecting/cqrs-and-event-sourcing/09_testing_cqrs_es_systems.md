@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Testing CQRS / Event-Sourced Systems
 
 ---
+
 ## What This Chapter Covers
 
 - The given-when-then pattern for command handlers
@@ -24,6 +26,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## Why Testing Looks Different Here
 
 - The system speaks in events; tests should too
@@ -33,6 +36,7 @@ audience:
 - Tests are reproducible by construction: feed in events, get the same output
 
 ---
+
 ## The Given-When-Then Pattern
 
 - **Given**: a sequence of events that already happened to the aggregate
@@ -42,11 +46,13 @@ audience:
 - The same scaffold works for hundreds of test cases
 
 ---
+
 ## Given-When-Then Visualized
 
 ![given_when_then](svg/courses/architecting/cqrs-and-event-sourcing/09_testing_cqrs_es_systems/given_when_then.svg)
 
 ---
+
 ## A Concrete Test
 
 ```python
@@ -73,6 +79,7 @@ def test_placing_an_order_emits_OrderPlaced():
 - Stable: events are values; equality just works
 
 ---
+
 ## Testing Failure Cases
 
 ```python
@@ -91,6 +98,7 @@ def test_placing_an_already_placed_order_is_rejected():
 - Cover both: events emitted on success, exception on failure
 
 ---
+
 ## Testing the Apply Method
 
 ```python
@@ -106,6 +114,7 @@ def test_apply_OrderPlaced_sets_status_to_placed():
 - These are tiny, fast, and catch state-shape regressions early
 
 ---
+
 ## Testing Aggregates: The Whole Picture
 
 ```python
@@ -123,6 +132,7 @@ def test_full_lifecycle():
 - Pair every command with at least one happy-path and one failure test
 
 ---
+
 ## Property-Based Testing
 
 ```python
@@ -141,6 +151,7 @@ def test_replay_is_deterministic(events):
 - Catches edge cases that example-based tests miss
 
 ---
+
 ## Testing Projections
 
 ```python
@@ -161,6 +172,7 @@ def test_OrderSummaryProjection_handles_OrderPlaced():
 - The same projection code is used in production and in test
 
 ---
+
 ## Replay Scenario Tests
 
 - Build a list of events that represents an interesting scenario
@@ -169,11 +181,13 @@ def test_OrderSummaryProjection_handles_OrderPlaced():
 - Run on the same events with a different starting checkpoint to test resumability
 
 ---
+
 ## Replay Scenarios
 
 ![replay_scenarios](svg/courses/architecting/cqrs-and-event-sourcing/09_testing_cqrs_es_systems/replay_scenarios.svg)
 
 ---
+
 ## Idempotency Tests
 
 ```python
@@ -193,6 +207,7 @@ def test_projection_is_idempotent():
 - A required test for any production projection
 
 ---
+
 ## Out-of-Order Event Tests
 
 ```python
@@ -207,6 +222,7 @@ def test_projection_handles_events_out_of_order():
 - Test handlers tolerate it (or document the assumption that they don't)
 
 ---
+
 ## Integration Tests: Command Pipeline
 
 ```python
@@ -226,6 +242,7 @@ def test_command_pipeline_end_to_end(db, store, bus):
 - Use a small docker-compose for the supporting services
 
 ---
+
 ## Integration Tests: Query Pipeline
 
 ```python
@@ -243,6 +260,7 @@ def test_query_pipeline_end_to_end(db, queries):
 - Authorization tests fit naturally here
 
 ---
+
 ## Wait-Until for Eventual Consistency
 
 ```python
@@ -260,6 +278,7 @@ def wait_until(predicate, *, timeout=5.0, interval=0.05):
 - The timeout is generous enough to not flap under CI load
 
 ---
+
 ## Consumer-Driven Contract Tests
 
 - A producer publishes integration events; multiple consumers depend on them
@@ -269,11 +288,13 @@ def wait_until(predicate, *, timeout=5.0, interval=0.05):
 - Tools: Pact, Spring Cloud Contract
 
 ---
+
 ## Pact Flow
 
 ![pact_flow](svg/courses/architecting/cqrs-and-event-sourcing/09_testing_cqrs_es_systems/pact_flow.svg)
 
 ---
+
 ## A Pact-Style Test
 
 ```python
@@ -291,6 +312,7 @@ def test_consumer_expects_OrderPlaced():
 - Adding a new field is safe; removing one breaks the build
 
 ---
+
 ## Test Data and Event Fixtures
 
 - A library of named event sequences that represent canonical scenarios
@@ -300,6 +322,7 @@ def test_consumer_expects_OrderPlaced():
 - Reuse across tests; the names communicate intent
 
 ---
+
 ## Fixture Builders
 
 ```python
@@ -320,6 +343,7 @@ def shipped_order(order_id="42"):
 - Avoids large copy-paste of event payloads in every test
 
 ---
+
 ## Snapshot Tests for Read Models
 
 - Take a known event sequence
@@ -329,6 +353,7 @@ def shipped_order(order_id="42"):
 - Re-run after intentional changes; review the diff before accepting
 
 ---
+
 ## Snapshot Test Trade-Offs
 
 - Catches unintentional output changes immediately
@@ -337,6 +362,7 @@ def shipped_order(order_id="42"):
 - Pair with example-based tests for surgical assertions
 
 ---
+
 ## Common Pitfalls
 
 - **Testing through the database**: slow and brittle; prefer pure handler tests
@@ -346,6 +372,7 @@ def shipped_order(order_id="42"):
 - **Coupling tests to read model schema**: prefer asserting on rows by column name
 
 ---
+
 ## A Reasonable Test Pyramid
 
 - **Many** unit tests for handlers (`given/when/then` over events)
@@ -356,11 +383,13 @@ def shipped_order(order_id="42"):
 - **Always-on** consumer-driven contracts for integration events
 
 ---
+
 ## Test Pyramid
 
 ![test_pyramid](svg/courses/architecting/cqrs-and-event-sourcing/09_testing_cqrs_es_systems/test_pyramid.svg)
 
 ---
+
 ## Course Recap
 
 - Chapter 1: CQRS — separate read and write models
@@ -373,6 +402,7 @@ def shipped_order(order_id="42"):
 - Chapter 9: testing the whole thing
 
 ---
+
 ## Where to Go From Here
 
 - Pick a small bounded context in your system
@@ -383,6 +413,7 @@ def shipped_order(order_id="42"):
 - Read the source: Greg Young's talks, Vaughn Vernon's books, Adam Dymitruk's posts
 
 ---
+
 ## Summary
 
 - Tests follow the system: events in, events out

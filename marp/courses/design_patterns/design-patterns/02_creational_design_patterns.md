@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Creational Design Patterns
 
 ---
+
 ## Patterns Overview
 
 ![creational_patterns](svg/courses/design_patterns/design-patterns/02_creational_design_patterns/creational_patterns.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Five patterns that *create* objects with intent
@@ -24,6 +27,7 @@ audience:
 - A short worked example that uses two of them together
 
 ---
+
 ## Why Creational Patterns
 
 - Object construction often does more than `new`
@@ -33,11 +37,13 @@ audience:
 - Pulling these concerns out of consumers makes the code cleaner
 
 ---
+
 ## Creational Patterns Compared
 
 ![factories_compared](svg/courses/design_patterns/design-patterns/02_creational_design_patterns/factories_compared.svg)
 
 ---
+
 ## Singleton
 
 - *Intent*: ensure a class has exactly one instance, give global access
@@ -46,6 +52,7 @@ audience:
 - The most overused pattern — start by *not* using it
 
 ---
+
 ## Singleton in Code
 
 ```python
@@ -63,6 +70,7 @@ class Logger:
 - Modern preference: dependency injection over Singleton
 
 ---
+
 ## Singleton Trade-offs
 
 - Pro: guaranteed single instance, easy access
@@ -72,6 +80,7 @@ class Logger:
 - If you need shared state, an injected service is usually better
 
 ---
+
 ## Factory Method
 
 - *Intent*: defer instantiation to subclasses
@@ -81,6 +90,7 @@ class Logger:
 - "Open for extension" without modifying the framework
 
 ---
+
 ## Factory Method in Code
 
 ```python
@@ -102,6 +112,7 @@ class WordDocument(Document):
 - Subclass picks; `open` runs the same way for both
 
 ---
+
 ## Abstract Factory
 
 - *Intent*: create *families* of related objects without naming concrete classes
@@ -111,6 +122,7 @@ class WordDocument(Document):
 - Heavyweight; consider Factory Method first
 
 ---
+
 ## Abstract Factory in Code
 
 ```python
@@ -133,6 +145,7 @@ class WinFactory(GuiFactory):
 - The rest of the app uses the abstract `Button`, `Window`
 
 ---
+
 ## Builder
 
 - *Intent*: construct a complex object step by step, separate construction from representation
@@ -141,6 +154,7 @@ class WinFactory(GuiFactory):
 - Often combined with a fluent interface
 
 ---
+
 ## Builder in Code
 
 ```python
@@ -158,6 +172,7 @@ p = PizzaBuilder().size("L").thin_crust().cheese("mozz").build()
 - `build()` returns the finished product
 
 ---
+
 ## Builder Trade-offs
 
 - Pro: readable construction of complex objects
@@ -167,6 +182,7 @@ p = PizzaBuilder().size("L").thin_crust().cheese("mozz").build()
 - Modern languages with named arguments (Python, Kotlin) often skip Builder
 
 ---
+
 ## Prototype
 
 - *Intent*: create new objects by *cloning* an existing one
@@ -176,6 +192,7 @@ p = PizzaBuilder().size("L").thin_crust().cheese("mozz").build()
 - Common in games (clone a tree template, place 100 trees)
 
 ---
+
 ## Prototype in Code
 
 ```python
@@ -196,6 +213,7 @@ new.x, new.y = 100, 200
 - Mutating the clone doesn't affect the original
 
 ---
+
 ## Worked Example: Logger With Factory
 
 - A `LoggerFactory` decides whether to make a FileLogger or NetLogger
@@ -205,6 +223,7 @@ new.x, new.y = 100, 200
 - Two patterns, well-applied, no surprises in the API
 
 ---
+
 ## Choosing Among Creational Patterns
 
 - One instance forever &#8594; Singleton (or skip and inject a regular one)
@@ -214,6 +233,7 @@ new.x, new.y = 100, 200
 - Expensive construction, customise from a template &#8594; Prototype
 
 ---
+
 ## Common Mistakes
 
 - Singleton everywhere &#8594; effectively global mutable state

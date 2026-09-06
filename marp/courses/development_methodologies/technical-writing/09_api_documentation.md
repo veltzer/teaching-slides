@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # API Documentation
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![api_doc_sections](svg/courses/development_methodologies/technical-writing/09_api_documentation/api_doc_sections.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - OpenAPI / Swagger specification
@@ -27,6 +29,7 @@ audience:
 - What good API docs look like
 
 ---
+
 ## Why API Docs Matter
 
 - Users decide to integrate based on the docs
@@ -36,11 +39,13 @@ audience:
 - Docs are the API's first impression
 
 ---
+
 ## Pieces of Good API Docs
 
 ![api_doc_pieces](svg/courses/development_methodologies/technical-writing/09_api_documentation/api_doc_pieces.svg)
 
 ---
+
 ## OpenAPI Specification
 
 - Industry-standard format for REST APIs
@@ -50,6 +55,7 @@ audience:
 - Most modern API platforms support it
 
 ---
+
 ## A Minimal OpenAPI Spec
 
 ```yaml
@@ -76,6 +82,7 @@ paths:
 ```
 
 ---
+
 ## Per-Endpoint Documentation
 
 - **Summary**: one line; what it does
@@ -86,6 +93,7 @@ paths:
 - **Errors**: explicit list of error codes
 
 ---
+
 ## Schemas
 
 - Define the shape of request and response bodies
@@ -95,6 +103,7 @@ paths:
 - The single source of truth for API contracts
 
 ---
+
 ## Examples In API Docs
 
 - Concrete example for every endpoint
@@ -104,6 +113,7 @@ paths:
 - "Try it out" widgets in modern API docs
 
 ---
+
 ## Documenting Authentication
 
 - Once at the top, then per-endpoint if relevant
@@ -113,6 +123,7 @@ paths:
 - Sample auth headers
 
 ---
+
 ## Error Documentation
 
 - List every error code that can be returned
@@ -122,6 +133,7 @@ paths:
 - Most APIs under-document errors; users get stuck
 
 ---
+
 ## Versioning
 
 - Document which version applies
@@ -131,6 +143,7 @@ paths:
 - Don't make users guess
 
 ---
+
 ## API Doc Generators
 
 - **Swagger UI**: classic interactive docs from OpenAPI
@@ -140,6 +153,7 @@ paths:
 - **Docusaurus + plugin**: docs site with API integration
 
 ---
+
 ## Auto-Generated Docs
 
 - From source code annotations (Java, Python, Go)
@@ -149,6 +163,7 @@ paths:
 - Test the spec in CI by hitting the actual API
 
 ---
+
 ## Stripe-Style Docs
 
 - Three-pane layout: navigation, prose, code examples
@@ -158,6 +173,7 @@ paths:
 - Tools: Slate, Mintlify, custom
 
 ---
+
 ## Common Sections
 
 - Getting started
@@ -170,6 +186,7 @@ paths:
 - Changelog
 
 ---
+
 ## Beyond REST
 
 - GraphQL: introspection generates docs
@@ -179,6 +196,7 @@ paths:
 - Each pattern has its own docs convention
 
 ---
+
 ## SDK Documentation
 
 - Many APIs ship official SDKs
@@ -188,6 +206,7 @@ paths:
 - Tutorials specific to the SDK
 
 ---
+
 ## Common API Doc Mistakes
 
 - Out-of-date spec

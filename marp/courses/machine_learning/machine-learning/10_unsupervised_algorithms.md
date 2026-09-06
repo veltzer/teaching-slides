@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Unsupervised Algorithms
 
 ---
+
 ## What This Chapter Covers
 
 - Clustering
@@ -22,6 +24,7 @@ audience:
 - Anomaly detection
 
 ---
+
 ## What Unsupervised Means
 
 - No labels
@@ -30,6 +33,7 @@ audience:
 - Often for exploration
 
 ---
+
 ## When To Use
 
 - Customer segmentation
@@ -39,6 +43,7 @@ audience:
 - Pre-processing for supervised
 
 ---
+
 ## Clustering Goals
 
 - Group similar points
@@ -47,6 +52,7 @@ audience:
 - Distance metric matters
 
 ---
+
 ## Distance Metrics
 
 - Euclidean
@@ -56,6 +62,7 @@ audience:
 - Domain-specific
 
 ---
+
 ## k-Means
 
 - Partition into k clusters
@@ -64,6 +71,7 @@ audience:
 - Sensitive to initialisation
 
 ---
+
 ## k-Means Algorithm
 
 - Pick k random centroids
@@ -72,11 +80,13 @@ audience:
 - Repeat until stable
 
 ---
+
 ## k-Means Picture
 
 ![kmeans](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/kmeans.svg)
 
 ---
+
 ## k-Means in sklearn
 
 ```python
@@ -87,6 +97,7 @@ labels = km.labels_
 ```
 
 ---
+
 ## Choosing k
 
 - Elbow method: inertia vs k
@@ -95,6 +106,7 @@ labels = km.labels_
 - Try a few values
 
 ---
+
 ## Elbow Method
 
 - Plot within-cluster sum of squares
@@ -103,6 +115,7 @@ labels = km.labels_
 - Combine with silhouette
 
 ---
+
 ## Silhouette Score
 
 - Per-point: how well it fits its cluster vs others
@@ -111,6 +124,7 @@ labels = km.labels_
 - Average for cluster quality
 
 ---
+
 ## k-Means Strengths
 
 - Fast, scales well
@@ -118,6 +132,7 @@ labels = km.labels_
 - Good for spherical clusters
 
 ---
+
 ## k-Means Weaknesses
 
 - Need k
@@ -126,6 +141,7 @@ labels = km.labels_
 - Local optima
 
 ---
+
 ## k-Means++
 
 - Smart initialisation
@@ -134,6 +150,7 @@ labels = km.labels_
 - Faster convergence
 
 ---
+
 ## Mini-Batch k-Means
 
 - Update on small batches
@@ -142,6 +159,7 @@ labels = km.labels_
 - Production-friendly
 
 ---
+
 ## Hierarchical Clustering
 
 - Nested clusters
@@ -150,6 +168,7 @@ labels = km.labels_
 - Dendrogram visualisation
 
 ---
+
 ## Linkage Methods
 
 - Single: closest pair
@@ -158,6 +177,7 @@ labels = km.labels_
 - Ward: minimise variance
 
 ---
+
 ## Dendrogram
 
 - Tree of merges
@@ -166,6 +186,7 @@ labels = km.labels_
 - Doesn't scale to huge data
 
 ---
+
 ## Hierarchical in sklearn
 
 ```python
@@ -175,6 +196,7 @@ labels = hc.fit_predict(X)
 ```
 
 ---
+
 ## Hierarchical Strengths
 
 - No need to choose k upfront
@@ -182,6 +204,7 @@ labels = hc.fit_predict(X)
 - Captures nested structure
 
 ---
+
 ## Hierarchical Weaknesses
 
 - O(n squared) memory
@@ -189,6 +212,7 @@ labels = hc.fit_predict(X)
 - Greedy: bad merges stick
 
 ---
+
 ## DBSCAN
 
 - Density-based clustering
@@ -197,6 +221,7 @@ labels = hc.fit_predict(X)
 - No need for k
 
 ---
+
 ## DBSCAN Parameters
 
 - eps: neighbourhood radius
@@ -205,6 +230,7 @@ labels = hc.fit_predict(X)
 - Sensitive to scaling
 
 ---
+
 ## DBSCAN in sklearn
 
 ```python
@@ -213,6 +239,7 @@ labels = DBSCAN(eps=0.5, min_samples=5).fit_predict(X)
 ```
 
 ---
+
 ## DBSCAN Strengths
 
 - Arbitrary cluster shapes
@@ -220,6 +247,7 @@ labels = DBSCAN(eps=0.5, min_samples=5).fit_predict(X)
 - Built-in outlier detection
 
 ---
+
 ## DBSCAN Weaknesses
 
 - Density assumption
@@ -227,6 +255,7 @@ labels = DBSCAN(eps=0.5, min_samples=5).fit_predict(X)
 - High dim: distances flatten
 
 ---
+
 ## HDBSCAN
 
 - Hierarchical version of DBSCAN
@@ -235,6 +264,7 @@ labels = DBSCAN(eps=0.5, min_samples=5).fit_predict(X)
 - Strong default these days
 
 ---
+
 ## Gaussian Mixture Models
 
 - Each cluster is a Gaussian
@@ -243,6 +273,7 @@ labels = DBSCAN(eps=0.5, min_samples=5).fit_predict(X)
 - More flexible than k-means
 
 ---
+
 ## EM Algorithm
 
 - E-step: compute responsibilities
@@ -251,6 +282,7 @@ labels = DBSCAN(eps=0.5, min_samples=5).fit_predict(X)
 - Local optima
 
 ---
+
 ## GMM in sklearn
 
 ```python
@@ -261,6 +293,7 @@ probs = gmm.predict_proba(X)
 ```
 
 ---
+
 ## GMM Strengths
 
 - Soft cluster assignment
@@ -269,6 +302,7 @@ probs = gmm.predict_proba(X)
 - Good for density estimation
 
 ---
+
 ## GMM Weaknesses
 
 - Assumes Gaussian
@@ -276,6 +310,7 @@ probs = gmm.predict_proba(X)
 - Number of components is a knob
 
 ---
+
 ## Cluster Evaluation Without Labels
 
 - Silhouette
@@ -284,6 +319,7 @@ probs = gmm.predict_proba(X)
 - All have biases
 
 ---
+
 ## Cluster Evaluation With Labels
 
 - Adjusted rand index
@@ -292,6 +328,7 @@ probs = gmm.predict_proba(X)
 - When ground truth available
 
 ---
+
 ## Association Rules
 
 - Find frequent co-occurrences
@@ -300,6 +337,7 @@ probs = gmm.predict_proba(X)
 - Market basket analysis
 
 ---
+
 ## Apriori Concepts
 
 - Support: how often items appear
@@ -308,6 +346,7 @@ probs = gmm.predict_proba(X)
 - Filter by minimums
 
 ---
+
 ## Association in mlxtend
 
 ```python
@@ -317,6 +356,7 @@ rules = association_rules(items, metric="lift", min_threshold=1.0)
 ```
 
 ---
+
 ## Dimensionality Reduction
 
 - Project to fewer dimensions
@@ -325,6 +365,7 @@ rules = association_rules(items, metric="lift", min_threshold=1.0)
 - Denoising
 
 ---
+
 ## PCA
 
 - Project to lower dimensions
@@ -333,6 +374,7 @@ rules = association_rules(items, metric="lift", min_threshold=1.0)
 - Linear
 
 ---
+
 ## PCA Math
 
 - Eigenvectors of covariance matrix
@@ -341,6 +383,7 @@ rules = association_rules(items, metric="lift", min_threshold=1.0)
 - Decide k by threshold
 
 ---
+
 ## PCA in sklearn
 
 ```python
@@ -350,6 +393,7 @@ X2 = pca.fit_transform(X)
 ```
 
 ---
+
 ## PCA Strengths
 
 - Fast, deterministic
@@ -357,6 +401,7 @@ X2 = pca.fit_transform(X)
 - Useful preprocessing
 
 ---
+
 ## PCA Weaknesses
 
 - Linear only
@@ -364,6 +409,7 @@ X2 = pca.fit_transform(X)
 - Sensitive to scale
 
 ---
+
 ## t-SNE
 
 - Nonlinear, for visualisation
@@ -372,6 +418,7 @@ X2 = pca.fit_transform(X)
 - Stochastic
 
 ---
+
 ## UMAP
 
 - Newer than t-SNE
@@ -380,6 +427,7 @@ X2 = pca.fit_transform(X)
 - Default for high-dim viz
 
 ---
+
 ## Autoencoders
 
 - Neural net compression
@@ -388,6 +436,7 @@ X2 = pca.fit_transform(X)
 - Used for anomaly detection too
 
 ---
+
 ## Anomaly Detection
 
 - Find points unlike the rest
@@ -395,6 +444,7 @@ X2 = pca.fit_transform(X)
 - Often unsupervised
 
 ---
+
 ## Isolation Forest
 
 - Random partitioning
@@ -403,6 +453,7 @@ X2 = pca.fit_transform(X)
 - Good default
 
 ---
+
 ## One-Class SVM
 
 - Boundary around normal data
@@ -411,6 +462,7 @@ X2 = pca.fit_transform(X)
 - Kernel choice matters
 
 ---
+
 ## Local Outlier Factor
 
 - Density-based outliers
@@ -418,6 +470,7 @@ X2 = pca.fit_transform(X)
 - Catches local anomalies
 
 ---
+
 ## Anomaly in sklearn
 
 ```python
@@ -427,6 +480,7 @@ preds = iso.fit_predict(X)
 ```
 
 ---
+
 ## Common Unsupervised Mistakes
 
 - Choosing k arbitrarily
@@ -435,66 +489,79 @@ preds = iso.fit_predict(X)
 - Confusing exploration with conclusions
 
 ---
+
 ## Dendrogram
 
 ![dendrogram](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/dendrogram.svg)
 
 ---
+
 ## DBSCAN
 
 ![dbscan](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/dbscan.svg)
 
 ---
+
 ## Gaussian Mixtures
 
 ![gmm](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/gmm.svg)
 
 ---
+
 ## PCA
 
 ![pca](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/pca.svg)
 
 ---
+
 ## t-SNE vs UMAP
 
 ![tsne_vs_umap](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/tsne_vs_umap.svg)
 
 ---
+
 ## Association Rules
 
 ![association_rules](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/association_rules.svg)
 
 ---
+
 ## Isolation Forest
 
 ![isolation_forest](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/isolation_forest.svg)
 
 ---
+
 ## Anomaly Types
 
 ![anomaly_types](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/anomaly_types.svg)
 
 ---
+
 ## Elbow Method
 
 ![elbow_method](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/elbow_method.svg)
 
 ---
+
 ## Silhouette
 
 ![silhouette](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/silhouette.svg)
 
 ---
+
 ## EM Algorithm
 
 ![em_algorithm](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/em_algorithm.svg)
 
 ---
+
 ## Vector Distance
 
 ![vector_distance](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/vector_distance.svg)
 
 ---
+
 ## Summary
 
 - Clustering, association, dimensionality reduction, anomaly

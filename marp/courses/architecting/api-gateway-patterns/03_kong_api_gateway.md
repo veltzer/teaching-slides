@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Kong API Gateway
 
 ---
+
 ## What This Chapter Covers
 
 - What Kong is
@@ -22,6 +24,7 @@ audience:
 - When Kong fits
 
 ---
+
 ## What Kong Is
 
 - Open-source API gateway
@@ -31,11 +34,13 @@ audience:
 - The most-deployed gateway in the open-source world
 
 ---
+
 ## Kong Pieces
 
 ![kong_pieces](svg/courses/architecting/api-gateway-patterns/03_kong_api_gateway/kong_pieces.svg)
 
 ---
+
 ## Architecture
 
 - nginx for HTTP handling
@@ -45,6 +50,7 @@ audience:
 - Stateless data plane; stateful or stateless control plane
 
 ---
+
 ## Installation Modes
 
 - **DB-mode**: traditional; central config in Postgres
@@ -54,6 +60,7 @@ audience:
 - Hybrid for multi-cluster / multi-region
 
 ---
+
 ## Services and Routes
 
 ```yaml
@@ -71,11 +78,13 @@ services:
 - One service can have many routes
 
 ---
+
 ## Object Model
 
 ![kong_concepts](svg/courses/architecting/api-gateway-patterns/03_kong_api_gateway/kong_concepts.svg)
 
 ---
+
 ## Plugins
 
 - Authentication: jwt, oauth2, key-auth, basic-auth
@@ -85,6 +94,7 @@ services:
 - Hundreds available
 
 ---
+
 ## Plugin Configuration
 
 ```yaml
@@ -101,6 +111,7 @@ plugins:
 - Order matters; documented in plugin docs
 
 ---
+
 ## Admin API
 
 - REST API for managing Kong
@@ -109,6 +120,7 @@ plugins:
 - Tools (deck, decK) sync declarative config
 
 ---
+
 ## decK
 
 - Tool for declarative Kong management
@@ -118,6 +130,7 @@ plugins:
 - The GitOps approach to Kong
 
 ---
+
 ## Konnect
 
 - Kong's hosted SaaS offering
@@ -127,6 +140,7 @@ plugins:
 - Commercial; useful at scale
 
 ---
+
 ## Custom Plugins
 
 - Lua scripts that hook into the request lifecycle
@@ -136,6 +150,7 @@ plugins:
 - Used for company-specific requirements
 
 ---
+
 ## Kong vs Alternatives
 
 - **Tyk**: similar feature set; less popular
@@ -145,6 +160,7 @@ plugins:
 - Kong is mature middle-ground
 
 ---
+
 ## When Kong Fits
 
 - You want open-source
@@ -154,6 +170,7 @@ plugins:
 - You need fine-grained control
 
 ---
+
 ## When Kong Doesn't
 
 - You're all-in on AWS (use API Gateway)
@@ -162,6 +179,7 @@ plugins:
 - Plugins don't cover your use case (might be Envoy time)
 
 ---
+
 ## Common Kong Mistakes
 
 - Storing config only in DB; lost on outage

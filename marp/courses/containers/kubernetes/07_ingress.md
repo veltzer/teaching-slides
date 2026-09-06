@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Ingress
 
 ---
+
 ## What This Chapter Covers
 
 - What Ingress is
@@ -21,6 +23,7 @@ audience:
 - Gateway API
 
 ---
+
 ## What Ingress Is
 
 - HTTP / HTTPS routing into the cluster
@@ -29,11 +32,13 @@ audience:
 - Replaces many LoadBalancers
 
 ---
+
 ## Ingress Path
 
 ![ingress_path](svg/courses/containers/kubernetes/07_ingress/ingress_path.svg)
 
 ---
+
 ## Ingress vs Service
 
 - Service: layer 4 (TCP)
@@ -42,6 +47,7 @@ audience:
 - Ingress sits in front of Services
 
 ---
+
 ## Sample Ingress
 
 ```yaml
@@ -71,6 +77,7 @@ spec:
 ```
 
 ---
+
 ## Ingress Controllers
 
 - nginx-ingress
@@ -81,6 +88,7 @@ spec:
 - Pick one; install separately
 
 ---
+
 ## NGINX Ingress
 
 - Most popular
@@ -89,6 +97,7 @@ spec:
 - Fast
 
 ---
+
 ## Traefik
 
 - Auto-discovers services
@@ -97,6 +106,7 @@ spec:
 - Modern UX
 
 ---
+
 ## TLS Termination
 
 - Ingress decrypts TLS
@@ -105,6 +115,7 @@ spec:
 - Certificates in Secrets
 
 ---
+
 ## Sample TLS
 
 ```yaml
@@ -115,6 +126,7 @@ spec:
 ```
 
 ---
+
 ## Cert-Manager
 
 - Auto-provisions certs from Let's Encrypt
@@ -123,6 +135,7 @@ spec:
 - Standard in K8s
 
 ---
+
 ## Path Types
 
 - Exact: must match exactly
@@ -131,6 +144,7 @@ spec:
 - Use Prefix or Exact
 
 ---
+
 ## Annotations
 
 - Controller-specific config
@@ -139,6 +153,7 @@ spec:
 - Each controller has its own set
 
 ---
+
 ## Gateway API
 
 - Newer alternative to Ingress
@@ -147,11 +162,13 @@ spec:
 - Adoption growing
 
 ---
+
 ## Two Routing APIs
 
 ![ingress_vs_gateway](svg/courses/containers/kubernetes/07_ingress/ingress_vs_gateway.svg)
 
 ---
+
 ## When To Use Gateway API
 
 - Need TCP / UDP routing
@@ -160,6 +177,7 @@ spec:
 - Existing Ingress: stick for now
 
 ---
+
 ## Common Ingress Mistakes
 
 - One Ingress per host (use one with many paths)

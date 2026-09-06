@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Strategic Domain-Driven Design
 
 ---
+
 ## What This Course Covers
 
 - DDD is two halves: strategic (the big picture) and tactical (the building blocks)
@@ -18,6 +20,7 @@ audience:
 - Later chapters: tactical building blocks, integration with CQRS/ES, sagas, refactoring
 
 ---
+
 ## What DDD Is
 
 - A philosophy of software development centered on the business domain
@@ -26,6 +29,7 @@ audience:
 - Especially valuable for complex domains where the model isn't obvious
 
 ---
+
 ## Why DDD
 
 - Software for complex domains needs careful modeling
@@ -34,6 +38,7 @@ audience:
 - Strategic DDD scales better than ad-hoc design
 
 ---
+
 ## The Domain
 
 - The problem space the software addresses
@@ -42,6 +47,7 @@ audience:
 - Each is a distinct area with its own concepts
 
 ---
+
 ## Subdomains
 
 - A domain divides into subdomains
@@ -51,11 +57,13 @@ audience:
 - Invest most in the core; buy or use libraries for generic
 
 ---
+
 ## Subdomain Investment
 
 ![subdomain_kinds](svg/courses/architecting/domain-driven-design/01_strategic_design/subdomain_kinds.svg)
 
 ---
+
 ## Bounded Context
 
 - A boundary within which a particular domain model applies
@@ -64,11 +72,13 @@ audience:
 - The unit of "this is one team's responsibility"
 
 ---
+
 ## Bounded Contexts in Practice
 
 ![bounded_context](svg/courses/architecting/domain-driven-design/01_strategic_design/bounded_context.svg)
 
 ---
+
 ## Why Bounded Contexts
 
 - Without them, every concept becomes "global" — `User` means everything
@@ -77,6 +87,7 @@ audience:
 - Translation happens at the boundary
 
 ---
+
 ## A Concrete Example
 
 - In Sales context: `Customer` has order history and lifetime value
@@ -85,6 +96,7 @@ audience:
 - Three different `Customer` models; three different services
 
 ---
+
 ## Ubiquitous Language
 
 - Each bounded context has its own vocabulary
@@ -93,6 +105,7 @@ audience:
 - "Place an order" in conversation = `place_order` in code
 
 ---
+
 ## Building the Ubiquitous Language
 
 - Workshops with domain experts
@@ -102,6 +115,7 @@ audience:
 - Treat as a living document
 
 ---
+
 ## Context Mapping
 
 - Documents how bounded contexts relate
@@ -110,6 +124,7 @@ audience:
 - A diagram + descriptions
 
 ---
+
 ## Common Context Map Relationships
 
 - **Customer/Supplier**: upstream provides, downstream consumes; downstream's needs influence upstream
@@ -119,11 +134,13 @@ audience:
 - **Published Language**: a shared schema between two contexts
 
 ---
+
 ## Relationship Stances
 
 ![context_relationships](svg/courses/architecting/domain-driven-design/01_strategic_design/context_relationships.svg)
 
 ---
+
 ## Anti-Corruption Layer
 
 - A translator between bounded contexts
@@ -132,6 +149,7 @@ audience:
 - Often implemented as a thin module per integration
 
 ---
+
 ## ACL Example
 
 - Sales emits `OrderPlaced` with fields `customer_id`, `items`, `address`
@@ -140,6 +158,7 @@ audience:
 - Billing's domain language stays clean
 
 ---
+
 ## Core Domain Focus
 
 - Identify the core domain — what makes the business different
@@ -148,6 +167,7 @@ audience:
 - "Differentiation matters; commodity doesn't"
 
 ---
+
 ## Domain Vision Statement
 
 - A short paragraph describing the core domain
@@ -156,6 +176,7 @@ audience:
 - Aligns the team on priorities
 
 ---
+
 ## Big Ball of Mud
 
 - The anti-pattern: no clear boundaries, no consistent language
@@ -164,6 +185,7 @@ audience:
 - DDD's strategic design is the antidote
 
 ---
+
 ## Strategic Patterns Recap
 
 - Bounded contexts as the unit
@@ -173,6 +195,7 @@ audience:
 - Core domain prioritization
 
 ---
+
 ## Anti-Patterns
 
 - "One unified model for everything"
@@ -181,6 +204,7 @@ audience:
 - Glossaries that nobody updates
 
 ---
+
 ## Summary
 
 - Strategic DDD is about boundaries, language, and integration

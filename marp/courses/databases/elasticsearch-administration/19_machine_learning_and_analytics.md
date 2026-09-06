@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Machine Learning and Analytics
 
 ---
+
 ## What This Chapter Covers
 
 - Machine learning features and anomaly detection
@@ -21,6 +23,7 @@ audience:
 - ML node sizing and job lifecycle for operators
 
 ---
+
 ## ML and Analytics for Operators
 
 - ML features find patterns and anomalies without manual rules
@@ -31,6 +34,7 @@ audience:
 - Treat ML jobs and transforms as long-running stateful services
 
 ---
+
 ## ML Nodes
 
 - ML work runs only on nodes with the `ml` role
@@ -46,6 +50,7 @@ xpack.ml.enabled: true
 - Isolate ML nodes so heavy jobs do not starve search and indexing
 
 ---
+
 ## Anomaly Detection: Concepts
 
 - Anomaly detection learns a baseline, then flags deviations
@@ -56,6 +61,7 @@ xpack.ml.enabled: true
 - Results carry an `anomaly_score` and `record_score`
 
 ---
+
 ## Defining an Anomaly Detection Job
 
 - The job config sets buckets, detectors, and the field to influence
@@ -78,6 +84,7 @@ PUT _ml/anomaly_detectors/response_times
 - Functions include `mean`, `max`, `count`, and `rare`
 
 ---
+
 ## Datafeeds
 
 - A datafeed queries source indices and streams data to the job
@@ -101,6 +108,7 @@ POST _ml/datafeeds/datafeed-response_times/_start
 - A real-time datafeed runs on the configured `frequency`
 
 ---
+
 ## Job Lifecycle
 
 - Open a job to load its model into memory before running
@@ -117,6 +125,7 @@ POST _ml/anomaly_detectors/response_times/_close
 - Close jobs you are not actively using to free capacity
 
 ---
+
 ## Anomaly Results
 
 - Results are written to internal `.ml-anomalies-*` indices
@@ -132,6 +141,7 @@ GET _ml/anomaly_detectors/response_times/results/buckets
 - Drive alerting off `anomaly_score` thresholds
 
 ---
+
 ## ML Node Sizing
 
 - Each open job reserves a model memory limit on an ML node
@@ -147,6 +157,7 @@ PUT _ml/anomaly_detectors/big_job
 - Plan ML node count from the sum of all concurrent job limits
 
 ---
+
 ## Transforms: Concepts
 
 - Transforms turn event streams into entity-centric indices
@@ -157,6 +168,7 @@ PUT _ml/anomaly_detectors/big_job
 - They are ideal for building summary and reporting indices
 
 ---
+
 ## A Pivot Transform
 
 - Group by an entity, then aggregate metrics per group
@@ -179,6 +191,7 @@ PUT _transform/customer_summary
 - The destination holds one summarized document per customer
 
 ---
+
 ## Continuous Transforms
 
 - A continuous transform keeps the destination up to date
@@ -196,6 +209,7 @@ PUT _transform/customer_summary
 - Only changed entities are recomputed on each run
 
 ---
+
 ## Operating Transforms: Checkpointing
 
 - A transform advances through numbered checkpoints
@@ -211,6 +225,7 @@ GET _transform/customer_summary/_stats
 - Scale source query efficiency or `frequency` if it lags
 
 ---
+
 ## Transform Lifecycle
 
 - Create, then start a transform to begin processing
@@ -226,6 +241,7 @@ POST _transform/customer_summary/_stop
 - Never edit the destination index directly under a running transform
 
 ---
+
 ## Graph Analytics
 
 - Graph analytics finds significantly connected terms
@@ -245,6 +261,7 @@ POST /clickstream/_graph/explore
 - Significance scoring filters out merely popular but unrelated terms
 
 ---
+
 ## ML and Analytics Checklist
 
 - Run ML and transforms on dedicated node roles

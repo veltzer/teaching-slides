@@ -11,6 +11,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Serverless with `Knative`
 
 Advanced Kubernetes Course - Day 3, Module 5
@@ -103,11 +104,13 @@ kubectl apply -f hello-service.yaml
 ```
 
 ---
+
 ## `Knative` Concepts
 
 ![knative_concepts](svg/courses/devops/advanced-kubernetes/15_serverless_knative/knative_concepts.svg)
 
 ---
+
 ## `Knative` Concepts: Details
 
 - **Configuration**: Desired state of the workload

@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Data Modeling
 
 ---
+
 ## What This Chapter Covers
 
 - Single-table design
@@ -19,6 +21,7 @@ audience:
 - Patterns
 
 ---
+
 ## Single-Table Design
 
 - One table per service
@@ -27,6 +30,7 @@ audience:
 - Cost-efficient
 
 ---
+
 ## Why Single Table
 
 - Fewer requests per page
@@ -35,6 +39,7 @@ audience:
 - More design upfront
 
 ---
+
 ## Partition Key
 
 - Routes item to physical partition
@@ -43,11 +48,13 @@ audience:
 - Often combines entity type and id
 
 ---
+
 ## Modelling Building Blocks
 
 ![access_patterns](svg/courses/databases/dynamodb/02_data_modeling/access_patterns.svg)
 
 ---
+
 ## Sort Key
 
 - Within a partition
@@ -56,6 +63,7 @@ audience:
 - Common for time-ordered data
 
 ---
+
 ## Composite Keys
 
 - Partition and sort key together
@@ -64,6 +72,7 @@ audience:
 - Foundation of most designs
 
 ---
+
 ## Item Collections
 
 - All items sharing partition key
@@ -72,11 +81,13 @@ audience:
 - Power of single-table
 
 ---
+
 ## Single-Table Example
 
 ![single_table](svg/courses/databases/dynamodb/02_data_modeling/single_table.svg)
 
 ---
+
 ## GSI
 
 - Global secondary index
@@ -85,6 +96,7 @@ audience:
 - Adds capacity and storage cost
 
 ---
+
 ## LSI
 
 - Local secondary index
@@ -93,6 +105,7 @@ audience:
 - Defined at table create only
 
 ---
+
 ## Sparse Indexes
 
 - Only items with the index attribute
@@ -101,6 +114,7 @@ audience:
 - Common pattern
 
 ---
+
 ## Access Patterns First
 
 - List queries up front
@@ -109,6 +123,7 @@ audience:
 - Only then write code
 
 ---
+
 ## Overloading Attributes
 
 - Generic SK like "DETAIL" or "USER#123"
@@ -117,6 +132,7 @@ audience:
 - Increases cognitive load
 
 ---
+
 ## Document Attributes
 
 - JSON-like Map and List types
@@ -125,6 +141,7 @@ audience:
 - Watch payload size
 
 ---
+
 ## Common Modeling Mistakes
 
 - Many tables instead of single-table

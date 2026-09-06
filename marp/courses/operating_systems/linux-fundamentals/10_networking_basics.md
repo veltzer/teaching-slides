@@ -10,6 +10,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Networking Basics
 ## Understanding UNIX Network Configuration and Tools
 
@@ -55,6 +56,7 @@ ifconfig eth0 down
 ```
 
 ---
+
 ## Modern IP Command
 
 ```bash
@@ -178,6 +180,7 @@ rsync -av local/ user@remote.host:backup/
 ```
 
 ---
+
 ## Legacy Remote Commands
 
 ```bash
@@ -238,6 +241,7 @@ tcpdump -i eth0
 ```
 
 ---
+
 ## Network Security Basics
 
 ```bash
@@ -256,6 +260,7 @@ iftop -i eth0
 ```
 
 ---
+
 ## Practical Examples
 
 1. Remote Server Setup:

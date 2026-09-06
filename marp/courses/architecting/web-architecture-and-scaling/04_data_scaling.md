@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Data Scaling
 
 ---
+
 ## What This Chapter Covers
 
 - Replication
@@ -20,6 +22,7 @@ audience:
 - Polyglot persistence
 
 ---
+
 ## Why Data Is Hard
 
 - Scaling reads is easy
@@ -28,6 +31,7 @@ audience:
 - Trade-offs are physical
 
 ---
+
 ## Vertical Database Scaling
 
 - Bigger instance
@@ -36,6 +40,7 @@ audience:
 - Buys time, not eternity
 
 ---
+
 ## Read Replicas
 
 - Async copy of primary
@@ -44,11 +49,13 @@ audience:
 - Replica lag must be measured
 
 ---
+
 ## Scaling Patterns
 
 ![scaling_patterns](svg/courses/architecting/web-architecture-and-scaling/04_data_scaling/scaling_patterns.svg)
 
 ---
+
 ## Lag Effects
 
 - Read your writes broken
@@ -57,6 +64,7 @@ audience:
 - Or pin reads for short window
 
 ---
+
 ## Sharding
 
 - Partition data across nodes
@@ -65,11 +73,13 @@ audience:
 - Cross-shard queries are hard
 
 ---
+
 ## Replication vs Sharding
 
 ![replication_sharding](svg/courses/architecting/web-architecture-and-scaling/04_data_scaling/replication_sharding.svg)
 
 ---
+
 ## Shard Keys
 
 - High cardinality
@@ -78,6 +88,7 @@ audience:
 - Often hardest design choice
 
 ---
+
 ## Resharding
 
 - Adding nodes is painful
@@ -86,6 +97,7 @@ audience:
 - Plan early, do late
 
 ---
+
 ## CAP
 
 - Consistency, Availability, Partition tolerance
@@ -94,6 +106,7 @@ audience:
 - Document the choice
 
 ---
+
 ## Eventual Consistency
 
 - Updates converge
@@ -102,6 +115,7 @@ audience:
 - App must show this state
 
 ---
+
 ## Strong Consistency
 
 - Reads see latest write
@@ -110,6 +124,7 @@ audience:
 - Some workloads demand it
 
 ---
+
 ## Polyglot Persistence
 
 - Right database per use case
@@ -119,6 +134,7 @@ audience:
 - Wide-column for time series
 
 ---
+
 ## Caching Layer
 
 - Read-through for hot data
@@ -127,6 +143,7 @@ audience:
 - Measure hit rate
 
 ---
+
 ## Common Data Scaling Mistakes
 
 - Sharding before measuring

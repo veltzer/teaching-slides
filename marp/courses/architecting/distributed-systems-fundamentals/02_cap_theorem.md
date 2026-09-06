@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # CAP Theorem
 
 ---
+
 ## What This Chapter Covers
 
 - The CAP theorem precisely stated
@@ -21,16 +23,19 @@ audience:
 - Misuses of CAP
 
 ---
+
 ## CAP Triangle
 
 ![cap_triangle](svg/courses/architecting/distributed-systems-fundamentals/02_cap_theorem/cap_triangle.svg)
 
 ---
+
 ## CP Versus AP
 
 ![cp_vs_ap](svg/courses/architecting/distributed-systems-fundamentals/02_cap_theorem/cp_vs_ap.svg)
 
 ---
+
 ## CAP Stated
 
 - A distributed data store cannot simultaneously provide more than two of:
@@ -39,6 +44,7 @@ audience:
 - **Partition tolerance**: continues to operate despite network partitions
 
 ---
+
 ## What Partitions Are
 
 - Some nodes can't communicate with others
@@ -48,6 +54,7 @@ audience:
 - Real; happens regularly
 
 ---
+
 ## Why P Is Non-Negotiable
 
 - Real networks partition
@@ -57,6 +64,7 @@ audience:
 - "CA only" is a marketing fantasy
 
 ---
+
 ## CP Systems
 
 - During partition: refuse some requests to keep consistent
@@ -66,6 +74,7 @@ audience:
 - Strict consistency at the cost of availability
 
 ---
+
 ## AP Systems
 
 - During partition: accept all requests; reconcile later
@@ -75,6 +84,7 @@ audience:
 - Eventual consistency at the cost of immediate consistency
 
 ---
+
 ## CP vs AP By Example
 
 - Bank transaction: CP (you can't have two valid balances)
@@ -83,6 +93,7 @@ audience:
 - Some systems mix per-operation
 
 ---
+
 ## Misuses Of CAP
 
 - "Pick two": misleading; you always have P
@@ -91,6 +102,7 @@ audience:
 - Read the original Brewer/Lynch papers; the nuances matter
 
 ---
+
 ## PACELC Extension
 
 - **Partition** &#8594; **Availability or Consistency**
@@ -99,6 +111,7 @@ audience:
 - More complete picture than CAP alone
 
 ---
+
 ## Latency vs Consistency
 
 - Strong consistency requires coordination
@@ -107,6 +120,7 @@ audience:
 - Most systems trade some consistency for sub-100ms latency
 
 ---
+
 ## Tunable Consistency
 
 - Per-operation consistency choice
@@ -116,6 +130,7 @@ audience:
 - A pragmatic compromise
 
 ---
+
 ## Real Decisions
 
 - Will users notice 5 seconds of staleness? AP often fine
@@ -124,6 +139,7 @@ audience:
 - Most "we're fine with AP" actually wants conflict-free updates
 
 ---
+
 ## Misunderstandings
 
 - "Consistent" doesn't mean ACID
@@ -133,6 +149,7 @@ audience:
 - Read the literature; vocabulary trips many engineers
 
 ---
+
 ## Beyond CAP
 
 - CRDTs: conflict-free; eventually consistent without coordination
@@ -141,6 +158,7 @@ audience:
 - Active research area
 
 ---
+
 ## Common CAP Mistakes
 
 - Treating CAP as a marketing slogan

@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Generative Adversarial Networks
 
 ---
+
 ## What This Chapter Covers
 
 - Generator and discriminator architecture
@@ -20,6 +22,7 @@ audience:
 - Introduction to diffusion models
 
 ---
+
 ## Generative vs Discriminative
 
 - Discriminative: predict labels given inputs
@@ -28,6 +31,7 @@ audience:
 - A different ML goal entirely
 
 ---
+
 ## The GAN Idea
 
 - Two networks playing a game
@@ -36,11 +40,13 @@ audience:
 - Both improve as they compete
 
 ---
+
 ## GAN Architecture
 
 ![gan_architecture](svg/courses/machine_learning/deep-learning-fundamentals/07_gans/gan_architecture.svg)
 
 ---
+
 ## The Generator
 
 - Input: random noise vector
@@ -49,6 +55,7 @@ audience:
 - Goal: fool the discriminator
 
 ---
+
 ## The Discriminator
 
 - Input: a sample, real or fake
@@ -57,11 +64,13 @@ audience:
 - Goal: tell them apart
 
 ---
+
 ## The Minimax Game Visualized
 
 ![gan minimax](svg/courses/machine_learning/deep-learning-fundamentals/07_gans/gan_minimax.svg)
 
 ---
+
 ## The Minimax Game
 
 - Generator minimizes discriminator success
@@ -70,6 +79,7 @@ audience:
 - Equilibrium: discriminator at 50/50
 
 ---
+
 ## Training Loop
 
 - Sample real images from data
@@ -78,11 +88,13 @@ audience:
 - Update generator to fool discriminator
 
 ---
+
 ## GAN Training Loop
 
 ![gan_training](svg/courses/machine_learning/deep-learning-fundamentals/07_gans/gan_training.svg)
 
 ---
+
 ## Loss Functions
 
 - Original: log loss for both networks
@@ -91,6 +103,7 @@ audience:
 - LSGAN, hinge loss, and others
 
 ---
+
 ## Why Original Loss Saturates
 
 - Early generator outputs look obviously fake
@@ -99,6 +112,7 @@ audience:
 - Non-saturating loss fixes this
 
 ---
+
 ## Training Is Hard
 
 - Two networks must improve together
@@ -107,6 +121,7 @@ audience:
 - Visual inspection is essential
 
 ---
+
 ## Mode Collapse
 
 - Generator produces only a few outputs
@@ -115,6 +130,7 @@ audience:
 - A signature GAN failure mode
 
 ---
+
 ## Fixing Mode Collapse
 
 - Different loss (Wasserstein, hinge)
@@ -123,6 +139,7 @@ audience:
 - Two-timescale updates
 
 ---
+
 ## Training Stability Tricks
 
 - Balanced learning rates per network
@@ -131,6 +148,7 @@ audience:
 - Exponential moving average of generator weights
 
 ---
+
 ## DCGAN
 
 - Deep Convolutional GAN
@@ -139,6 +157,7 @@ audience:
 - Set practical training conventions
 
 ---
+
 ## DCGAN Guidelines
 
 - Strided conv instead of pooling
@@ -147,6 +166,7 @@ audience:
 - Tanh output, normalize inputs to [-1, 1]
 
 ---
+
 ## Conditional GANs
 
 - Condition on a label or input
@@ -155,6 +175,7 @@ audience:
 - Controllable generation
 
 ---
+
 ## Pix2Pix
 
 - Image-to-image translation
@@ -163,6 +184,7 @@ audience:
 - Discriminator is a PatchGAN
 
 ---
+
 ## CycleGAN
 
 - Image translation without pairs
@@ -171,6 +193,7 @@ audience:
 - Horses to zebras, summer to winter
 
 ---
+
 ## StyleGAN
 
 - Karras et al, 2018 and beyond
@@ -179,6 +202,7 @@ audience:
 - State of the art face generation for years
 
 ---
+
 ## StyleGAN Tricks
 
 - Mapping network from noise to W space
@@ -187,6 +211,7 @@ audience:
 - Path length regularization
 
 ---
+
 ## Progressive Growing
 
 - Start at low resolution
@@ -195,6 +220,7 @@ audience:
 - Used in early StyleGAN and ProGAN
 
 ---
+
 ## Evaluating GANs
 
 - No single perfect metric
@@ -203,6 +229,7 @@ audience:
 - Human evaluation still important
 
 ---
+
 ## FID
 
 - Frechet Inception Distance
@@ -211,6 +238,7 @@ audience:
 - The de facto standard for image GANs
 
 ---
+
 ## GAN Applications
 
 - Face generation and editing
@@ -219,6 +247,7 @@ audience:
 - Domain transfer
 
 ---
+
 ## Beyond Images
 
 - Music generation
@@ -227,6 +256,7 @@ audience:
 - Privacy-preserving synthetic data
 
 ---
+
 ## Other Generative Models
 
 - VAEs: variational autoencoders
@@ -235,6 +265,7 @@ audience:
 - Diffusion: noise then denoise
 
 ---
+
 ## VAE in One Slide
 
 - Encode to a distribution, not a point
@@ -243,6 +274,7 @@ audience:
 - Smooth, structured latent space
 
 ---
+
 ## Autoregressive Generation
 
 - Generate one pixel or token at a time
@@ -251,6 +283,7 @@ audience:
 - Foundation of large language models
 
 ---
+
 ## Diffusion Models
 
 - New dominant approach since ~2020
@@ -259,6 +292,7 @@ audience:
 - Different training dynamic
 
 ---
+
 ## Diffusion Idea
 
 - Add noise to data step by step
@@ -267,11 +301,13 @@ audience:
 - Easier to train than GANs
 
 ---
+
 ## Diffusion Diagram
 
 ![diffusion](svg/courses/machine_learning/deep-learning-fundamentals/07_gans/diffusion.svg)
 
 ---
+
 ## Forward Process
 
 - Start with a real sample
@@ -280,6 +316,7 @@ audience:
 - Fixed, no learning here
 
 ---
+
 ## Reverse Process
 
 - Learn to predict the noise added
@@ -288,6 +325,7 @@ audience:
 - This is the model we train
 
 ---
+
 ## Latent Diffusion
 
 - Run diffusion in a compressed latent space
@@ -296,6 +334,7 @@ audience:
 - Pair with a VAE for encoding and decoding
 
 ---
+
 ## Conditioning Diffusion
 
 - Text conditioning via cross-attention
@@ -304,6 +343,7 @@ audience:
 - The "prompt" knob in image generators
 
 ---
+
 ## Classifier-Free Guidance
 
 - Train with and without conditioning
@@ -312,6 +352,7 @@ audience:
 - Standard trick in modern text-to-image
 
 ---
+
 ## Speeding Up Diffusion
 
 - Original: hundreds of steps
@@ -320,6 +361,7 @@ audience:
 - Consistency models: one step possible
 
 ---
+
 ## GANs vs Diffusion
 
 - GANs: fast inference, hard to train
@@ -328,6 +370,7 @@ audience:
 - GANs still strong for specialized fast use cases
 
 ---
+
 ## Ethical Considerations
 
 - Deepfakes and misinformation
@@ -336,6 +379,7 @@ audience:
 - Watermarking and provenance
 
 ---
+
 ## Safety in Generative Models
 
 - Content filters at input and output
@@ -344,6 +388,7 @@ audience:
 - Continuous review and red-teaming
 
 ---
+
 ## When to Reach for a GAN
 
 - Speed-critical inference
@@ -352,6 +397,7 @@ audience:
 - When diffusion is overkill
 
 ---
+
 ## When to Use Diffusion
 
 - High quality, controllable images
@@ -360,6 +406,7 @@ audience:
 - When latency budget allows
 
 ---
+
 ## Practical Tips
 
 - Start small and reproduce a known result
@@ -368,6 +415,7 @@ audience:
 - Save checkpoints generously
 
 ---
+
 ## Common Pitfalls
 
 - Tuning learning rates blindly
@@ -376,6 +424,7 @@ audience:
 - Mismatched normalization between train and inference
 
 ---
+
 ## Summary
 
 - GANs pit a generator against a discriminator

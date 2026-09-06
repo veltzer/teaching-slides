@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Kubernetes as Cloud Abstraction
 
 ---

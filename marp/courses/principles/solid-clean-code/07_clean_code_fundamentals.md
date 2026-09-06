@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Clean Code Fundamentals
 
 ---
+
 ## What This Chapter Covers
 
 - Naming: variables, functions, classes
@@ -21,6 +23,7 @@ audience:
 - Code organisation
 
 ---
+
 ## Naming Matters Most
 
 - The single biggest readability lever
@@ -30,6 +33,7 @@ audience:
 - Pay the cost of a thoughtful name now; save the cost of a bad one many times over
 
 ---
+
 ## Naming Variables
 
 - Reveal *intent*, not *type*: `total_seconds` over `t`
@@ -39,6 +43,7 @@ audience:
 - Constants: `UPPER_SNAKE_CASE`
 
 ---
+
 ## Naming Functions
 
 - Verb phrases: `calculate_total`, `send_email`, `is_eligible`
@@ -48,6 +53,7 @@ audience:
 - A good function name lets a reader skip the body
 
 ---
+
 ## Naming Classes
 
 - Noun phrases: `OrderService`, `Customer`, `EmailSender`
@@ -57,6 +63,7 @@ audience:
 - Class names are read everywhere; spend the time
 
 ---
+
 ## Function Length
 
 - The classic guideline: a function should fit on one screen
@@ -66,6 +73,7 @@ audience:
 - Pay attention to your eye scanning back to find context
 
 ---
+
 ## Function Responsibility
 
 - One thing, well-named for what it does
@@ -75,6 +83,7 @@ audience:
 - Tests get smaller and clearer with each extraction
 
 ---
+
 ## Function Parameters
 
 - Fewer is better: 0-3 parameters is the sweet spot
@@ -84,6 +93,7 @@ audience:
 - Default values are fine; use them to add optionality
 
 ---
+
 ## Avoiding Long Parameter Lists
 
 ```python
@@ -102,6 +112,7 @@ def book_room(reservation: ReservationRequest):
 - Adding a new field doesn't break every caller
 
 ---
+
 ## Comments: When to Write Them
 
 - *Why* the code does something non-obvious — yes
@@ -111,6 +122,7 @@ def book_room(reservation: ReservationRequest):
 - Documentation is a separate concern from code comments
 
 ---
+
 ## Comments: When Not To
 
 - Don't restate the code: `// increment i` next to `i++`
@@ -120,6 +132,7 @@ def book_room(reservation: ReservationRequest):
 - Self-documenting code beats most comments
 
 ---
+
 ## Magic Numbers and Strings
 
 ```python
@@ -140,6 +153,7 @@ if order.total > HIGH_VALUE_THRESHOLD:
 - A reader sees *why* 1000 matters
 
 ---
+
 ## Code Formatting
 
 - Consistent indentation, line length, spacing
@@ -149,6 +163,7 @@ if order.total > HIGH_VALUE_THRESHOLD:
 - Format on save; fight no one over it
 
 ---
+
 ## File Structure
 
 - One main concept per file
@@ -158,6 +173,7 @@ if order.total > HIGH_VALUE_THRESHOLD:
 - Tests in a parallel directory mirror, not in the same file
 
 ---
+
 ## Naming Conventions Per Language
 
 - Python: `snake_case` for functions and variables, `PascalCase` for classes
@@ -167,6 +183,7 @@ if order.total > HIGH_VALUE_THRESHOLD:
 - Linters enforce most of this for free
 
 ---
+
 ## Reading Code
 
 - Code is read 10x more than written
@@ -176,6 +193,7 @@ if order.total > HIGH_VALUE_THRESHOLD:
 - Skim a function — if you can't tell what it does in 10 seconds, rename or split
 
 ---
+
 ## Common Mistakes
 
 - One-letter variable names outside tiny loops
@@ -186,16 +204,19 @@ if order.total > HIGH_VALUE_THRESHOLD:
 - Magic numbers in conditional branches
 
 ---
+
 ## Naming Quality Levels
 
 ![naming_levels](svg/courses/principles/solid-clean-code/07_clean_code_fundamentals/naming_levels.svg)
 
 ---
+
 ## Common Code Smells
 
 ![code_smells](svg/courses/principles/solid-clean-code/07_clean_code_fundamentals/code_smells.svg)
 
 ---
+
 ## Comment Strategy
 
 ![comment_strategy](svg/courses/principles/solid-clean-code/07_clean_code_fundamentals/comment_strategy.svg)

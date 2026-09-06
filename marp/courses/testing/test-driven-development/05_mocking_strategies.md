@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Mocking Strategies
 
 ---
+
 ## When to Mock
 
 ![mocking_strategies](svg/courses/testing/test-driven-development/05_mocking_strategies/mocking_strategies.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Mocking frameworks
@@ -26,11 +29,13 @@ audience:
 - Mocking time, randomness, and environment
 
 ---
+
 ## Mock Stub Fake Spy
 
 ![mock_vs_stub](svg/courses/testing/test-driven-development/05_mocking_strategies/mock_vs_stub.svg)
 
 ---
+
 ## Mocking Frameworks
 
 - **Java**: Mockito, EasyMock, JMockit
@@ -41,6 +46,7 @@ audience:
 - All similar; learn one, others are easy
 
 ---
+
 ## Mockito (Java)
 
 ```java
@@ -56,6 +62,7 @@ verify(email).send("a@b.com", "Welcome");
 - `verify()`: assert the call happened
 
 ---
+
 ## unittest.mock (Python)
 
 ```python
@@ -73,6 +80,7 @@ def test_fetches_user(mock_get):
 - `return_value` chains for fluent calls
 
 ---
+
 ## Jest (JavaScript)
 
 ```javascript
@@ -89,6 +97,7 @@ expect(send).toHaveBeenCalledWith('a@b.com', 'Welcome');
 - Built into Jest
 
 ---
+
 ## Sinon (JavaScript)
 
 ```javascript
@@ -104,6 +113,7 @@ sinon.assert.calledOnce(stub);
 - Common in older JS codebases
 
 ---
+
 ## Setting Up Expectations
 
 - "When this method is called with X, return Y"
@@ -113,6 +123,7 @@ sinon.assert.calledOnce(stub);
 - Each `when` should have a reason
 
 ---
+
 ## Argument Matchers
 
 - `anyString()`, `anyInt()`, etc.
@@ -122,6 +133,7 @@ sinon.assert.calledOnce(stub);
 - A specific matcher catches more bugs
 
 ---
+
 ## Verifying Calls
 
 - `verify(mock).method(args)`: did it happen?
@@ -131,6 +143,7 @@ sinon.assert.calledOnce(stub);
 - More precision = more brittleness
 
 ---
+
 ## Partial Mocking
 
 - Mock some methods of a real object
@@ -140,6 +153,7 @@ sinon.assert.calledOnce(stub);
 - Use sparingly
 
 ---
+
 ## Mocking External Dependencies
 
 - HTTP clients
@@ -149,6 +163,7 @@ sinon.assert.calledOnce(stub);
 - Inject the dependency; mock it in tests
 
 ---
+
 ## Mocking HTTP
 
 ```python
@@ -164,6 +179,7 @@ def test_fetch_handles_500(mock_get):
 - Pair with integration tests against a real server
 
 ---
+
 ## Mocking Time
 
 - `freezegun` (Python), `Sinon.useFakeTimers()` (JS), `Clock` (Java)
@@ -173,6 +189,7 @@ def test_fetch_handles_500(mock_get):
 - Inject a clock object for real flexibility
 
 ---
+
 ## Mocking Randomness
 
 - Seed your random source (`random.seed(42)`)
@@ -182,6 +199,7 @@ def test_fetch_handles_500(mock_get):
 - Same approach as time
 
 ---
+
 ## Mocking Environment
 
 - `os.environ` patches in Python
@@ -191,6 +209,7 @@ def test_fetch_handles_500(mock_get):
 - The Twelve-Factor App approach
 
 ---
+
 ## Mock Boundaries
 
 - Mock at the *seam* of your code
@@ -200,6 +219,7 @@ def test_fetch_handles_500(mock_get):
 - Mocks for: I/O, time, randomness, external services
 
 ---
+
 ## Auto-Spec / Strict Mocks
 
 - `unittest.mock.create_autospec`: matches the real object's interface
@@ -208,6 +228,7 @@ def test_fetch_handles_500(mock_get):
 - Use these to keep mocks honest as the real interface evolves
 
 ---
+
 ## Common Mocking Mistakes
 
 - Mocking everything; not testing real logic

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # API Documentation
 
 ---
+
 ## What This Chapter Covers
 
 - Why API docs matter
@@ -22,6 +24,7 @@ audience:
 - Documentation that consumers actually use
 
 ---
+
 ## Why API Docs Matter
 
 - The first thing a potential consumer reads
@@ -31,11 +34,13 @@ audience:
 - The single biggest UX touchpoint for many APIs
 
 ---
+
 ## Three Layers
 
 ![doc_layers](svg/courses/architecting/api-first-development/07_api_documentation/doc_layers.svg)
 
 ---
+
 ## OpenAPI Renders to Docs
 
 - Spec describes the API
@@ -45,6 +50,7 @@ audience:
 - Free; the path of least resistance
 
 ---
+
 ## Swagger UI
 
 - The classic OpenAPI renderer
@@ -54,6 +60,7 @@ audience:
 - Aesthetic: functional, not beautiful
 
 ---
+
 ## Redoc
 
 - Three-pane layout: nav, content, code samples
@@ -63,6 +70,7 @@ audience:
 - Open source
 
 ---
+
 ## Stoplight Studio / Elements
 
 - Commercial product family
@@ -72,6 +80,7 @@ audience:
 - Used by some big public APIs
 
 ---
+
 ## Mintlify, Readme.com, etc.
 
 - Hosted docs platforms
@@ -81,6 +90,7 @@ audience:
 - Worth it for public-facing developer-platform APIs
 
 ---
+
 ## Which Renderer
 
 - Internal API: Swagger UI is fine
@@ -89,11 +99,13 @@ audience:
 - Match the polish to the audience and stakes
 
 ---
+
 ## Renderer Catalog
 
 ![doc_renderers](svg/courses/architecting/api-first-development/07_api_documentation/doc_renderers.svg)
 
 ---
+
 ## Hosting
 
 - Generated docs: static HTML
@@ -103,6 +115,7 @@ audience:
 - Trivial compared to the writing
 
 ---
+
 ## Beyond The Spec
 
 - Reference docs: what every endpoint does (auto from spec)
@@ -112,6 +125,7 @@ audience:
 - Troubleshooting: common errors and fixes
 
 ---
+
 ## Tutorials
 
 - Step-by-step "your first integration"
@@ -121,6 +135,7 @@ audience:
 - Take an hour to write; save days of support
 
 ---
+
 ## Recipes
 
 - "How to authenticate"
@@ -130,6 +145,7 @@ audience:
 - Concrete code; works as-is
 
 ---
+
 ## Migration Guides
 
 - For every version bump
@@ -139,6 +155,7 @@ audience:
 - Reduces support burden
 
 ---
+
 ## Troubleshooting
 
 - Common error codes; what they mean; how to fix
@@ -147,6 +164,7 @@ audience:
 - Searchable; first hit deflects a support ticket
 
 ---
+
 ## Documentation In CI
 
 - Build the docs on every PR
@@ -156,6 +174,7 @@ audience:
 - Without CI, docs rot silently
 
 ---
+
 ## Examples Tested In CI
 
 - Code snippets in tutorials should run
@@ -164,6 +183,7 @@ audience:
 - The strongest guarantee that docs are accurate
 
 ---
+
 ## Searchable Docs
 
 - For more than ~20 pages, search is essential
@@ -173,6 +193,7 @@ audience:
 - Bad search makes good docs feel broken
 
 ---
+
 ## Common Documentation Mistakes
 
 - Spec-only; no tutorials

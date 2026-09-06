@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # QEMU and Virtualization
 
 ---
@@ -39,6 +40,7 @@ Introduction to Virtualization
 - Importance for kernel developers
 
 ---
+
 QEMU/KVM Architecture
 
 ---

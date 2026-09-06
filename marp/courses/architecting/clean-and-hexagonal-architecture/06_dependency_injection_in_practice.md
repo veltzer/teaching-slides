@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Dependency Injection in Practice
 
 ---
+
 ## Container Pattern
 
 ![di_container](svg/courses/architecting/clean-and-hexagonal-architecture/06_dependency_injection_in_practice/di_container.svg)
 
 ---
+
 ## DI Styles
 
 ![di_styles](svg/courses/architecting/clean-and-hexagonal-architecture/06_dependency_injection_in_practice/di_styles.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why DI
@@ -31,6 +35,7 @@ audience:
 - Tool choice
 
 ---
+
 ## Why DI
 
 - Inner layers don't construct outer
@@ -39,6 +44,7 @@ audience:
 - Wiring at the composition root
 
 ---
+
 ## Constructor Injection
 
 - Dependencies in constructor
@@ -47,6 +53,7 @@ audience:
 - The default
 
 ---
+
 ## Setter Injection
 
 - Dependencies via setters after construction
@@ -55,6 +62,7 @@ audience:
 - Use sparingly
 
 ---
+
 ## Manual Wiring
 
 ```python
@@ -71,6 +79,7 @@ def main():
 - For small / medium apps: ideal
 
 ---
+
 ## DI Containers
 
 - Spring (Java), Microsoft.Extensions (.NET), wired (Go), inversify (TS)
@@ -79,6 +88,7 @@ def main():
 - Magic: harder to debug
 
 ---
+
 ## Composition Root
 
 - The single place wiring happens
@@ -87,6 +97,7 @@ def main():
 - Avoid: wiring scattered throughout the code
 
 ---
+
 ## Lifetime / Scope
 
 - Singleton: one instance per app
@@ -96,6 +107,7 @@ def main():
 - Misuse: state leaks across requests (singleton with state)
 
 ---
+
 ## DI Anti-Patterns
 
 - Service Locator: components ask container for deps
@@ -104,6 +116,7 @@ def main():
 - Avoid
 
 ---
+
 ## Optional Dependencies
 
 - Some deps are optional
@@ -112,6 +125,7 @@ def main():
 - Don't make tests construct everything
 
 ---
+
 ## Circular Dependencies
 
 - A &#8594; B &#8594; A
@@ -120,6 +134,7 @@ def main():
 - Better: extract a third component to break the cycle
 
 ---
+
 ## Test-Time DI
 
 - Test constructs use case with fakes
@@ -128,6 +143,7 @@ def main():
 - Don't pull in the production wiring for unit tests
 
 ---
+
 ## DI vs Service Locator
 
 - DI: constructor declares deps; passed in
@@ -136,6 +152,7 @@ def main():
 - Service Locator: hides; harder to test
 
 ---
+
 ## Common DI Mistakes
 
 - Service Locator pattern

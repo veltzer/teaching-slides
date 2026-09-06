@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Schema and Types
 
 ---
+
 ## What This Chapter Covers
 
 - Type system
@@ -20,6 +22,7 @@ audience:
 - Input types
 
 ---
+
 ## Schema Definition Language
 
 - SDL: human-readable
@@ -27,21 +30,25 @@ audience:
 - Tools generate code from SDL
 
 ---
+
 ## Type System
 
 ![type_system](svg/courses/networking/graphql/02_schema_and_types/type_system.svg)
 
 ---
+
 ## Scalars And Customs
 
 ![scalar_types](svg/courses/networking/graphql/02_schema_and_types/scalar_types.svg)
 
 ---
+
 ## Type Kinds
 
 ![type_kinds](svg/courses/networking/graphql/02_schema_and_types/type_kinds.svg)
 
 ---
+
 ## Object Types
 
 ```graphql
@@ -58,6 +65,7 @@ type User {
 - [] means list
 
 ---
+
 ## Scalar Types
 
 - ID, String, Int, Float, Boolean
@@ -66,6 +74,7 @@ type User {
 - Encoded in JSON
 
 ---
+
 ## Enums
 
 ```graphql
@@ -80,6 +89,7 @@ enum Status {
 - Type-safe
 
 ---
+
 ## Lists and Nullability
 
 - [Post!]!: non-null list of non-null posts
@@ -88,6 +98,7 @@ enum Status {
 - Pick deliberately
 
 ---
+
 ## Interfaces
 
 ```graphql
@@ -105,6 +116,7 @@ type User implements Node {
 - Polymorphism
 
 ---
+
 ## Unions
 
 ```graphql
@@ -116,6 +128,7 @@ union SearchResult = User | Post | Comment
 - Client must check `__typename`
 
 ---
+
 ## Input Types
 
 ```graphql
@@ -130,6 +143,7 @@ input CreateUserInput {
 - Reusable
 
 ---
+
 ## Query Type
 
 ```graphql
@@ -143,6 +157,7 @@ type Query {
 - Required
 
 ---
+
 ## Mutation Type
 
 ```graphql
@@ -155,6 +170,7 @@ type Mutation {
 - Optional but standard
 
 ---
+
 ## Subscription Type
 
 - Entry point for live updates
@@ -162,6 +178,7 @@ type Mutation {
 - Uses WebSocket or SSE
 
 ---
+
 ## Directives
 
 - @deprecated, @include, @skip
@@ -169,6 +186,7 @@ type Mutation {
 - Custom directives possible
 
 ---
+
 ## Common Schema Mistakes
 
 - Overusing nullable; clients break unexpectedly

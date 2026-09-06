@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Performance
 
 ---
+
 ## What This Chapter Covers
 
 - Vectorized engine
@@ -20,6 +22,7 @@ audience:
 - Query plans
 
 ---
+
 ## Vectorized Execution
 
 - Operate on chunks not rows
@@ -28,11 +31,13 @@ audience:
 - Source of speed
 
 ---
+
 ## Pipeline Visualized
 
 ![vectorized_pipeline](svg/courses/databases/duckdb/04_performance/vectorized_pipeline.svg)
 
 ---
+
 ## Parallelism
 
 - Multi-threaded by default
@@ -41,11 +46,13 @@ audience:
 - Profile to verify usage
 
 ---
+
 ## Performance Tips
 
 ![perf_tips](svg/courses/databases/duckdb/04_performance/perf_tips.svg)
 
 ---
+
 ## Memory Limit
 
 - PRAGMA memory_limit
@@ -54,6 +61,7 @@ audience:
 - Avoid OS-killed sessions
 
 ---
+
 ## Spilling
 
 - Temporary files on disk
@@ -62,6 +70,7 @@ audience:
 - Fast SSD strongly preferred
 
 ---
+
 ## Storage Layout
 
 - Native file is columnar
@@ -70,6 +79,7 @@ audience:
 - Versioned format
 
 ---
+
 ## Compression
 
 - Choose at write
@@ -78,6 +88,7 @@ audience:
 - Test on representative data
 
 ---
+
 ## Statistics
 
 - Min/max per row group
@@ -86,6 +97,7 @@ audience:
 - Helps both Parquet and native
 
 ---
+
 ## Query Plans
 
 - EXPLAIN
@@ -94,6 +106,7 @@ audience:
 - Look for big scans, big joins
 
 ---
+
 ## Joins
 
 - Hash joins by default
@@ -102,6 +115,7 @@ audience:
 - Filter early to reduce
 
 ---
+
 ## Aggregations
 
 - Hash aggregate
@@ -110,6 +124,7 @@ audience:
 - Window aggregates also vectorized
 
 ---
+
 ## ORDER BY And LIMIT
 
 - Top-N optimization
@@ -118,6 +133,7 @@ audience:
 - Saves memory
 
 ---
+
 ## Caching Layers
 
 - OS page cache
@@ -126,6 +142,7 @@ audience:
 - Cold runs may be slower
 
 ---
+
 ## Common Performance Mistakes
 
 - Memory limit too low

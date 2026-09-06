@@ -12,6 +12,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Basic Shell Features
 
 ---
@@ -21,6 +22,7 @@ audience:
 ![Basic Shell Features](svg/courses/languages/bash/bash-scripting/03_basic_shell_features/basic_shell_features.svg)
 
 ---
+
 ## Running Multiple Commands
 
 ```bash
@@ -37,6 +39,7 @@ echo "second"
 ```
 
 ---
+
 ## Semicolons vs Newlines vs `&&`
 
 ```bash
@@ -51,6 +54,7 @@ false || echo "yes"   # prints "yes"
 ```
 
 ---
+
 ## Command Grouping
 
 ```bash
@@ -72,6 +76,7 @@ echo "$x"   # prints 1 (subshell change lost)
 ```
 
 ---
+
 ## Variables: The Basics
 
 ```bash
@@ -90,6 +95,7 @@ echo "${name}_course"
 ```
 
 ---
+
 ## Why No Spaces Around `=`?
 
 ```bash
@@ -108,6 +114,7 @@ name=value
 ```
 
 ---
+
 ## Variable Substitution
 
 ```bash
@@ -125,6 +132,7 @@ echo "${name}foo"          # worldfoo
 ```
 
 ---
+
 ## Default Values
 
 ```bash
@@ -145,6 +153,7 @@ echo "$color"            # prints "blue"
 ```
 
 ---
+
 ## Error on Unset Variables
 
 ```bash
@@ -160,6 +169,7 @@ echo "${name?Variable name is required}"
 ```
 
 ---
+
 ## String Operations on Variables
 
 ```bash
@@ -185,6 +195,7 @@ echo "${path%%/*}"            # (empty, first char is /)
 ```
 
 ---
+
 ## String Replacement
 
 ```bash
@@ -208,6 +219,7 @@ echo "${text/%bash/shell}"
 ```
 
 ---
+
 ## Case Conversion (`bash` 4.0+)
 
 ```bash
@@ -227,6 +239,7 @@ echo "${name^^}"    # HELLO WORLD
 ```
 
 ---
+
 ## Quoting: The Three Types
 
 ```bash
@@ -243,6 +256,7 @@ echo '$((1+1))'   # prints literally: $((1+1))
 ```
 
 ---
+
 ## When to Use Double Quotes
 
 ```bash
@@ -266,6 +280,7 @@ echo "$pattern"    # prints: *
 ```
 
 ---
+
 ## The Golden Rule of Quoting
 > **Always double-quote your variables unless you have
 > a specific reason not to.**
@@ -283,6 +298,7 @@ done
 ```
 
 ---
+
 ## Escaping Special Characters
 
 ```bash
@@ -302,7 +318,9 @@ long line"
 ```
 
 ---
+
 ## Special Characters Summary
+
 | Character | Meaning | Escape with |
 |-----------|---------|-------------|
 | `$` | Variable expansion | `\$` or single quotes |
@@ -315,6 +333,7 @@ long line"
 | `~` | Home directory | quotes |
 
 ---
+
 ## Command Substitution
 
 ```bash
@@ -334,6 +353,7 @@ echo "Files: $(ls $(pwd))"   # Much clearer
 ```
 
 ---
+
 ## Arithmetic Expansion
 
 ```bash

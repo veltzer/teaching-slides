@@ -11,6 +11,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Workflows
 
 ---
@@ -141,6 +142,7 @@ sarah/api-optimization
 - Keep names descriptive but concise
 
 ---
+
 ## Development vs Production Branches: Details
 
 **Development branch (`develop`):**
@@ -156,6 +158,7 @@ sarah/api-optimization
 - Source for releases
 
 ---
+
 ## Development vs Production Branches
 
 ![development_vs_production_branches](svg/courses/git/git/09_workflows/development_vs_production_branches.svg)

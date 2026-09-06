@@ -46,6 +46,8 @@ function navigateFolder(folder) {
     render();
     window.scrollTo(0, 0);
 }
+// Called from inline onclick handlers in generated markup, so it must be a global.
+window.navigateFolder = navigateFolder;
 
 function renderBreadcrumb() {
     if (!currentFolder) {

@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Introduction to ETL
 
 ---
+
 ## What This Chapter Covers
 
 - What ETL is
@@ -19,6 +21,7 @@ audience:
 - Course outline
 
 ---
+
 ## What ETL Is
 
 - Extract from source
@@ -27,11 +30,13 @@ audience:
 - Move data where it is useful
 
 ---
+
 ## Pipeline Steps
 
 ![data_pipeline_steps](svg/courses/data_engineering/etl/01_introduction/data_pipeline_steps.svg)
 
 ---
+
 ## What Each Step Does
 
 - Extract: read from systems
@@ -40,6 +45,7 @@ audience:
 - Schedule: repeat
 
 ---
+
 ## Why ETL
 
 - Source systems are operational
@@ -48,6 +54,7 @@ audience:
 - Volumes need batching
 
 ---
+
 ## ETL vs ELT
 
 - ETL transforms before load
@@ -56,11 +63,13 @@ audience:
 - Most modern warehouses use ELT
 
 ---
+
 ## ETL vs ELT Visualized
 
 ![etl_vs_elt](svg/courses/data_engineering/etl/01_introduction/etl_vs_elt.svg)
 
 ---
+
 ## Why ELT Won
 
 - Cheap warehouse compute
@@ -69,6 +78,7 @@ audience:
 - Simpler operationally
 
 ---
+
 ## Where ETL Still Fits
 
 - Sensitive data masking
@@ -77,6 +87,7 @@ audience:
 - Air-gapped environments
 
 ---
+
 ## Common Sources
 
 - Operational databases
@@ -85,6 +96,7 @@ audience:
 - Event streams
 
 ---
+
 ## Common Targets
 
 - Data warehouse
@@ -93,6 +105,7 @@ audience:
 - Cache
 
 ---
+
 ## Batch vs Streaming
 
 - Batch: periodic
@@ -101,6 +114,7 @@ audience:
 - Kappa: streaming only
 
 ---
+
 ## Tools Landscape
 
 - Workflow orchestrators
@@ -109,6 +123,7 @@ audience:
 - Hand-coded scripts
 
 ---
+
 ## Build vs Buy
 
 - Connectors are commodity products
@@ -117,6 +132,7 @@ audience:
 - Mind cost at scale
 
 ---
+
 ## Course Outline
 
 - Extraction
@@ -126,6 +142,7 @@ audience:
 - Operations
 
 ---
+
 ## Common ETL Beginner Mistakes
 
 - One giant pipeline

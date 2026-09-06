@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Factor VIII: Concurrency
 
 ---
+
 ## The Rule
 
 - Scale out via the process model
@@ -19,11 +21,13 @@ audience:
 - Adding capacity = adding more processes
 
 ---
+
 ## Process Types
 
 ![concurrency_via_processes](svg/courses/architecting/twelve-factor-app/09_concurrency/concurrency_via_processes.svg)
 
 ---
+
 ## The Process Model
 
 - Each process is a unit of horizontal scaling
@@ -32,6 +36,7 @@ audience:
 - The OS schedules them; no orchestration needed inside the app
 
 ---
+
 ## Process Types
 
 - A web app might have: `web`, `worker`, `scheduler`, `migration`
@@ -40,6 +45,7 @@ audience:
 - Different concurrency rules per type
 
 ---
+
 ## Examples
 
 - `web`: handles HTTP requests; scales with traffic
@@ -48,6 +54,7 @@ audience:
 - The Procfile (Heroku-style) declares process types
 
 ---
+
 ## Procfile Example
 
 ```yaml
@@ -61,6 +68,7 @@ scheduler: python scheduler.py
 - Scaling = changing the count
 
 ---
+
 ## Within a Process
 
 - Processes themselves can be threaded, async, or use event loops
@@ -69,11 +77,13 @@ scheduler: python scheduler.py
 - Threads ≠ processes; the factor is about processes
 
 ---
+
 ## Scaling By Process Type
 
 ![scaling_axes](svg/courses/architecting/twelve-factor-app/09_concurrency/scaling_axes.svg)
 
 ---
+
 ## Horizontal Scaling Patterns
 
 - Stateless processes (factor VI) make horizontal scaling work
@@ -82,6 +92,7 @@ scheduler: python scheduler.py
 - Remove a process: requests drain naturally
 
 ---
+
 ## Workload Diversity
 
 - HTTP requests need fast response, low latency
@@ -90,6 +101,7 @@ scheduler: python scheduler.py
 - Different workloads → different process types → different scaling profiles
 
 ---
+
 ## Container Orchestration
 
 - Kubernetes Deployments map onto process types
@@ -98,6 +110,7 @@ scheduler: python scheduler.py
 - The factor maps cleanly onto K8s primitives
 
 ---
+
 ## Anti-Patterns
 
 - One process trying to do everything (web + worker + scheduler in one)
@@ -106,6 +119,7 @@ scheduler: python scheduler.py
 - Using sticky sessions to avoid horizontal scaling complexity
 
 ---
+
 ## Summary
 
 - Concurrency = adding more processes

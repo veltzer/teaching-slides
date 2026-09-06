@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Monitoring and Observability
 
 ---
+
 ## Three Pillars
 
 - **Logs**: discrete events, time-stamped
@@ -20,16 +22,19 @@ audience:
 - All three together = observability
 
 ---
+
 ## Three Signals
 
 ![three_signals](svg/courses/architecting/microservices-architecture/12_monitoring/three_signals.svg)
 
 ---
+
 ## Observability Pillars
 
 ![observability_pillars](svg/courses/architecting/microservices-architecture/12_monitoring/observability_pillars.svg)
 
 ---
+
 ## Why Observability Matters in Microservices
 
 - A single user request touches many services
@@ -39,6 +44,7 @@ audience:
 - "What was the user-visible message?" needs logs
 
 ---
+
 ## Structured Logs
 
 - One log line = one JSON object
@@ -47,6 +53,7 @@ audience:
 - See twelve-factor course chapter 11
 
 ---
+
 ## Correlation IDs
 
 - A unique id for a user request, propagated across all services it touches
@@ -55,6 +62,7 @@ audience:
 - Without correlation IDs, distributed debugging is guesswork
 
 ---
+
 ## Metrics
 
 - Counters: rate of events (requests/sec, errors/sec)
@@ -63,6 +71,7 @@ audience:
 - Tools: Prometheus, Datadog, CloudWatch, OpenTelemetry
 
 ---
+
 ## The RED Method
 
 - **Rate**: how many requests per second
@@ -72,6 +81,7 @@ audience:
 - Pair with USE (Utilization, Saturation, Errors) for resources
 
 ---
+
 ## Distributed Tracing
 
 - Each cross-service call adds a span to a trace
@@ -80,6 +90,7 @@ audience:
 - Tools: OpenTelemetry, Jaeger, Zipkin, Tempo
 
 ---
+
 ## Trace Propagation
 
 - The first service generates a trace_id
@@ -88,6 +99,7 @@ audience:
 - One id ties the whole flow together
 
 ---
+
 ## Tracing Headers
 
 - W3C Trace Context: `traceparent`, `tracestate`
@@ -96,6 +108,7 @@ audience:
 - Make sure async messages also carry trace context
 
 ---
+
 ## OpenTelemetry
 
 - Vendor-neutral standard for telemetry
@@ -104,6 +117,7 @@ audience:
 - Increasingly the default for new systems
 
 ---
+
 ## Alerts
 
 - Alerts come from metrics, occasionally logs
@@ -112,6 +126,7 @@ audience:
 - Each alert should have a runbook
 
 ---
+
 ## Service-Level Indicators (SLIs)
 
 - A measurable property of the service
@@ -120,6 +135,7 @@ audience:
 - The numbers behind your SLOs
 
 ---
+
 ## Service-Level Objectives (SLOs)
 
 - A target for an SLI
@@ -128,6 +144,7 @@ audience:
 - Communicates reliability goals across teams
 
 ---
+
 ## Error Budgets
 
 - "We allow 0.1% of requests to fail per month"
@@ -136,6 +153,7 @@ audience:
 - Aligns dev and ops on a shared metric
 
 ---
+
 ## Dashboards
 
 - One per service: RED metrics, dependencies, error rates
@@ -144,6 +162,7 @@ audience:
 - Built before incidents, not during
 
 ---
+
 ## Anti-Patterns
 
 - "We'll add observability later"
@@ -153,6 +172,7 @@ audience:
 - Tracing in only some services (trace breaks at the boundary)
 
 ---
+
 ## Summary
 
 - Logs, metrics, traces — all three from day one

@@ -8,9 +8,11 @@ audience:
   - audiences:data-analysts
 
 ---
+
 # SQL for Analysts
 
 ---
+
 ## What This Chapter Covers
 
 - Relational database basics
@@ -22,6 +24,7 @@ audience:
 - Writing efficient queries
 
 ---
+
 ## Relational Basics
 
 - Data lives in **tables** (rows + columns)
@@ -31,11 +34,13 @@ audience:
 - Most warehouses speak SQL — learn it once, use it everywhere
 
 ---
+
 ## Anatomy of a Query
 
 ![sql_query_anatomy](svg/courses/data_science/data-analyst-fundamentals/02_sql_for_analysts/sql_query_anatomy.svg)
 
 ---
+
 ## SELECT, WHERE
 
 ```sql
@@ -54,6 +59,7 @@ LIMIT 10;
 - The first SQL most analysts learn — and the most-used
 
 ---
+
 ## Filtering Patterns
 
 ```sql
@@ -70,6 +76,7 @@ WHERE NOT (status = 'archived')
 - Complex filters benefit from CTEs
 
 ---
+
 ## JOINs
 
 ```sql
@@ -86,11 +93,13 @@ WHERE o.status = 'completed';
 - Pick by which side's missing data matters
 
 ---
+
 ## Join Type Comparison
 
 ![join_types](svg/courses/data_science/data-analyst-fundamentals/02_sql_for_analysts/join_types.svg)
 
 ---
+
 ## When To Use Which JOIN
 
 - Customers with orders (only matched) &#8594; INNER
@@ -99,6 +108,7 @@ WHERE o.status = 'completed';
 - A diagram on paper before writing the JOIN saves bugs
 
 ---
+
 ## Subqueries
 
 ```sql
@@ -114,6 +124,7 @@ WHERE id IN (SELECT customer_id
 - Database optimisers usually handle them well; profile if in doubt
 
 ---
+
 ## Aggregation
 
 ```sql
@@ -130,6 +141,7 @@ ORDER BY users DESC;
 - `WHERE` filters rows before grouping; `HAVING` filters groups after
 
 ---
+
 ## Distinct vs Group By
 
 ```sql
@@ -143,6 +155,7 @@ SELECT country FROM customers GROUP BY country;
 - `DISTINCT` is shorter when you just want unique values
 
 ---
+
 ## Window Functions
 
 ```sql
@@ -159,11 +172,13 @@ FROM orders;
 - The analyst's secret weapon — learn these well
 
 ---
+
 ## Window Function Patterns
 
 ![window_functions](svg/courses/data_science/data-analyst-fundamentals/02_sql_for_analysts/window_functions.svg)
 
 ---
+
 ## Useful Window Functions
 
 - `ROW_NUMBER()`: rank with no ties
@@ -173,6 +188,7 @@ FROM orders;
 - `SUM() OVER (...)` / `AVG() OVER (...)`: running aggregates
 
 ---
+
 ## Running Totals Example
 
 ```sql
@@ -189,6 +205,7 @@ FROM (SELECT order_date, SUM(total) AS daily_total
 - Great for cumulative metrics: revenue YTD, signups to date
 
 ---
+
 ## Common Table Expressions (CTEs)
 
 ```sql
@@ -206,6 +223,7 @@ INNER JOIN high_value h ON c.id = h.customer_id;
 - Most modern warehouses support recursive CTEs too
 
 ---
+
 ## CTEs Are Better Than Nested Subqueries
 
 ```sql
@@ -223,6 +241,7 @@ SELECT * FROM c;
 - Easier to debug — comment out one CTE at a time
 
 ---
+
 ## Writing Efficient Queries
 
 - Filter early (`WHERE` before `JOIN` if possible)
@@ -232,6 +251,7 @@ SELECT * FROM c;
 - Run `EXPLAIN` to see what the optimiser is doing
 
 ---
+
 ## Common Mistakes
 
 - Comparing with `= NULL` instead of `IS NULL`

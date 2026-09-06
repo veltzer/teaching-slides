@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Spark Optimization and Tuning
 
 ---
+
 ## Performance Overview
 
 1. Memory Management

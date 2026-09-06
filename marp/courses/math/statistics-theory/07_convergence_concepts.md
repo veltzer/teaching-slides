@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Modes of Convergence
 
 ---
+
 ## What This Chapter Covers
 
 - Four notions: a.s., in probability, in L^p, in distribution
@@ -21,11 +23,13 @@ audience:
 - The delta method
 
 ---
+
 ## The Hierarchy Of Convergence Modes
 
 ![convergence hierarchy](svg/courses/math/statistics-theory/07_convergence_concepts/convergence_hierarchy.svg)
 
 ---
+
 ## Why "Converges" Needs Qualifying
 
 - For sequences of *random variables* X&#8345;, "X&#8345; &#8594; X" can mean several genuinely different things
@@ -35,6 +39,7 @@ audience:
 - Master the lattice of implications and the toolbox (CMT, Slutsky, delta method) and most asymptotic arguments become routine
 
 ---
+
 ## Almost Sure Convergence
 
 - **X&#8345; &#8594; X a.s.** iff P( {&omega; : X&#8345;(&omega;) &#8594; X(&omega;)} ) = 1 — for almost every outcome, the *numerical sequence* converges
@@ -44,6 +49,7 @@ audience:
 - It does **not** by itself control E[X&#8345;] — for that you need an integrability hypothesis (next slide)
 
 ---
+
 ## Convergence In Probability And In L^p
 
 - **In probability**, X&#8345; &#8597;&#7510; X: for every &epsilon; &gt; 0, P(|X&#8345; &minus; X| &gt; &epsilon;) &#8594; 0 — the *probability* of a non-trivial gap vanishes (a single sequence can be far off, just rarely)
@@ -53,6 +59,7 @@ audience:
 - Both are *weaker* than a.s. convergence — they say nothing about the trajectory of any individual &omega;
 
 ---
+
 ## Convergence In Distribution
 
 - **X&#8345; &#8658; X** (in law / weakly) iff F&#8345;(x) &#8594; F(x) at every continuity point x of F; equivalently E[g(X&#8345;)] &#8594; E[g(X)] for all bounded continuous g; equivalently &phi;&#8345;(t) &#8594; &phi;(t) pointwise (Lévy)
@@ -62,6 +69,7 @@ audience:
 - The right tool for *approximate* statements ("the test statistic is approximately &chi;&sup2;"), confidence intervals, and p-values in large samples
 
 ---
+
 ## The Implication Lattice
 
 - **a.s. &#8658; in probability &#8658; in distribution** — and **L^p &#8658; in probability &#8658; in distribution**
@@ -71,6 +79,7 @@ audience:
 - From any mode you can extract an a.s.-convergent subsequence — useful when you only need *some* subsequence
 
 ---
+
 ## Counterexamples That Pin Down The Differences
 
 - **In probability but not a.s.** — the "typewriter" sequence: indicators of intervals [j/2&#7466;, (j+1)/2&#7466;] sweeping [0,1]; P(X&#8345; = 1) = 1/2&#7466; &#8594; 0, yet every &omega; has X&#8345;(&omega;) = 1 infinitely often
@@ -80,6 +89,7 @@ audience:
 - Moral: the modes are genuinely distinct; an argument valid for one need not transfer
 
 ---
+
 ## The Working Toolbox
 
 - **Continuous Mapping Theorem**: if X&#8345; &#8594; X (a.s. / in prob / in dist) and g is continuous (more generally, continuous on a set of probability 1 under X), then g(X&#8345;) &#8594; g(X) *in the same mode*
@@ -89,6 +99,7 @@ audience:
 - These three, plus the CLT and the LLN, are the entire engine of classical large-sample inference
 
 ---
+
 ## Convergence In Code
 
 ```python
@@ -109,6 +120,7 @@ print("delta-method var ~ exp(2)^2 * 1^2 =", round(np.exp(2.0)**2, 2), " empiric
 ```
 
 ---
+
 ## Common Mistakes
 
 - Concluding E[X&#8345;] &#8594; E[X] from a.s. (or in-probability) convergence without uniform integrability / a dominating function

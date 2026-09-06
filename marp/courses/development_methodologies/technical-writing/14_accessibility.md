@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Accessibility
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![accessibility_areas](svg/courses/development_methodologies/technical-writing/14_accessibility/accessibility_areas.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why accessibility matters in docs
@@ -27,6 +29,7 @@ audience:
 - Practical tips and tooling
 
 ---
+
 ## Why It Matters
 
 - Some users can't see, hear, or use a mouse
@@ -36,11 +39,13 @@ audience:
 - A small effort that helps a lot of people
 
 ---
+
 ## Accessibility Checklist
 
 ![accessible_docs](svg/courses/development_methodologies/technical-writing/14_accessibility/accessible_docs.svg)
 
 ---
+
 ## WCAG Standards
 
 - Web Content Accessibility Guidelines
@@ -50,6 +55,7 @@ audience:
 - Apply to documentation websites as much as web apps
 
 ---
+
 ## Accessible Structure
 
 - Use semantic markup (real headings, not bold text)
@@ -59,6 +65,7 @@ audience:
 - Markdown does most of this automatically
 
 ---
+
 ## Alt Text for Images
 
 - Every meaningful image needs alt text
@@ -68,6 +75,7 @@ audience:
 - For complex diagrams: longer description in surrounding text
 
 ---
+
 ## Alt Text Examples
 
 - Bad: "Image"
@@ -77,6 +85,7 @@ audience:
 - Be specific; describe the meaning, not the visual
 
 ---
+
 ## Diagrams and Screenshots
 
 - Add a text description nearby
@@ -86,6 +95,7 @@ audience:
 - Both seeing and non-seeing users benefit
 
 ---
+
 ## Screen Readers
 
 - Software that reads the screen aloud
@@ -95,6 +105,7 @@ audience:
 - Test your docs by closing your eyes and listening
 
 ---
+
 ## Color and Contrast
 
 - WCAG AA: 4.5:1 contrast for normal text, 3:1 for large
@@ -104,6 +115,7 @@ audience:
 - "Items in red are required" — also use a label
 
 ---
+
 ## Color-Blind Considerations
 
 - ~8% of men, ~0.5% of women have some color vision deficiency
@@ -113,6 +125,7 @@ audience:
 - Test with simulators (Sim Daltonism, Color Oracle)
 
 ---
+
 ## Link Text
 
 - Bad: "click here", "read more"
@@ -122,6 +135,7 @@ audience:
 - Descriptive link text helps everyone
 
 ---
+
 ## Keyboard Navigation
 
 - Some users can't use a mouse
@@ -131,6 +145,7 @@ audience:
 - Test by unplugging your mouse
 
 ---
+
 ## Code Blocks Are Often Inaccessible
 
 - Long lines that horizontally scroll
@@ -140,6 +155,7 @@ audience:
 - Material for MkDocs and Docusaurus do well by default
 
 ---
+
 ## Alt Text for Code Screenshots
 
 - Code as image: nightmare for accessibility
@@ -149,6 +165,7 @@ audience:
 - If you must: include the code in the alt text or surrounding prose
 
 ---
+
 ## Accessibility Tooling
 
 - **axe** (browser extension): scans for issues
@@ -158,6 +175,7 @@ audience:
 - Run regularly, fix incrementally
 
 ---
+
 ## Manual Testing
 
 - Tab through your doc site
@@ -167,6 +185,7 @@ audience:
 - Once a quarter; not every PR
 
 ---
+
 ## Common Accessibility Mistakes
 
 - Missing alt text
@@ -178,6 +197,7 @@ audience:
 - Long inaccessible PDFs as primary docs
 
 ---
+
 ## Course Wrap-Up
 
 - Technical writing is craft you can learn

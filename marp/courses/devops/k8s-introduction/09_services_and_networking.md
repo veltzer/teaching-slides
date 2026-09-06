@@ -13,9 +13,11 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Services and Networking
 
 ---
+
 ## Networking Layers
 
 ![k8s_networking](svg/courses/devops/k8s-introduction/09_services_and_networking/k8s_networking.svg)

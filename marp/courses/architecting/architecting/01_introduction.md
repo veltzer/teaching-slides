@@ -10,14 +10,17 @@ audience:
   - audiences:architects
 
 ---
+
 # Introduction
 
 ---
+
 ## What Is Software Architecture?
 
 ![what_is_software_architecture](svg/courses/architecting/architecting/01_introduction/what_is_software_architecture.svg)
 
 ---
+
 ## Why Architecture Matters
 
 - Determines the long-term maintainability of a system
@@ -26,6 +29,7 @@ audience:
 - Good architecture enables change without rewriting the system
 
 ---
+
 ## The Monolithic Architecture
 
 - A single deployable unit containing all functionality
@@ -34,11 +38,13 @@ audience:
 - The traditional default for most applications
 
 ---
+
 ## Monolith Diagram
 
 ![monolith_diagram](svg/courses/architecting/architecting/01_introduction/monolith_diagram.svg)
 
 ---
+
 ## Advantages of the Monolith
 
 - Simple to develop initially
@@ -48,6 +54,7 @@ audience:
 - No network latency between components
 
 ---
+
 ## Disadvantages of the Monolith
 
 - Codebase grows large and hard to understand
@@ -57,6 +64,7 @@ audience:
 - Deployment of one change requires redeploying everything
 
 ---
+
 ## The Path to Microservices
 
 - Monoliths become harder to maintain as organizations grow
@@ -65,11 +73,13 @@ audience:
 - The need for independent scaling drives decomposition
 
 ---
+
 ## Architecture Evolution
 
 ![architecture_evolution](svg/courses/architecting/architecting/01_introduction/architecture_evolution.svg)
 
 ---
+
 ## What Are Microservices?
 
 - An architectural style where a system is composed of small, independent services
@@ -78,11 +88,13 @@ audience:
 - Each service can be deployed, scaled, and updated independently
 
 ---
+
 ## Microservices Diagram
 
 ![microservices_diagram](svg/courses/architecting/architecting/01_introduction/microservices_diagram.svg)
 
 ---
+
 ## Key Characteristics of Microservices
 
 - Single responsibility per service
@@ -92,6 +104,7 @@ audience:
 - Designed for failure and resilience
 
 ---
+
 ## Monolith vs Microservices Comparison
 
 | Aspect | Monolith | Microservices |
@@ -103,21 +116,25 @@ audience:
 | Complexity | In the code | In the infrastructure |
 
 ---
+
 ## The Transition Journey
 
 ![the_transition_journey](svg/courses/architecting/architecting/01_introduction/the_transition_journey.svg)
 
 ---
+
 ## Modular Monolith as a Stepping Stone
 
 ![modular_monolith](svg/courses/architecting/architecting/01_introduction/modular_monolith.svg)
 
 ---
+
 ## Service-Oriented Architecture (SOA)
 
 ![soa_architecture](svg/courses/architecting/architecting/01_introduction/soa_architecture.svg)
 
 ---
+
 ## SOA vs Microservices
 
 | Aspect | SOA | Microservices |
@@ -128,6 +145,7 @@ audience:
 | Governance | Centralized | Decentralized |
 
 ---
+
 ## When to Choose Microservices
 
 - Large teams that need to work independently
@@ -136,6 +154,7 @@ audience:
 - Organization can invest in operational infrastructure
 
 ---
+
 ## When to Stay with a Monolith
 
 - Small teams with limited operational expertise
@@ -144,6 +163,7 @@ audience:
 - Low traffic with no need for independent scaling
 
 ---
+
 ## What Are Architectural Drivers?
 
 - Forces that shape the architecture of a system
@@ -152,11 +172,13 @@ audience:
 - Provide a rationale for every design choice
 
 ---
+
 ## Categories of Architectural Drivers
 
 ![categories_of_architectural_drivers](svg/courses/architecting/architecting/01_introduction/categories_of_architectural_drivers.svg)
 
 ---
+
 ## Quality Attributes Defined
 
 - Non-functional requirements that measure system quality
@@ -165,6 +187,7 @@ audience:
 - They drive the most important architectural decisions
 
 ---
+
 ## Common Quality Attributes
 
 - `Availability` - system uptime and recovery time
@@ -175,6 +198,7 @@ audience:
 - `Testability` - ease of validating behavior
 
 ---
+
 ## Quality Attribute Scenarios
 
 - A structured way to specify quality attributes
@@ -187,6 +211,7 @@ audience:
     - Measure: how success is quantified
 
 ---
+
 ## Example Quality Attribute Scenario
 
 - Source: A user
@@ -197,11 +222,13 @@ audience:
 - Measure: Within 200 milliseconds for the 95th percentile
 
 ---
+
 ## The Quality Attribute Triangle
 
 ![the_quality_attribute_triangle](svg/courses/architecting/architecting/01_introduction/the_quality_attribute_triangle.svg)
 
 ---
+
 ## Architectural Trade-Offs
 
 - No architecture can optimize every quality attribute
@@ -210,6 +237,7 @@ audience:
 - Stakeholder priorities determine which attributes win
 
 ---
+
 ## Classic Trade-Off: Consistency vs Availability
 
 - In distributed systems, you cannot have both perfectly
@@ -218,6 +246,7 @@ audience:
 - The `CAP` theorem formalizes this constraint
 
 ---
+
 ## Classic Trade-Off: Performance vs Security
 
 - Encryption and authorization add processing overhead
@@ -226,6 +255,7 @@ audience:
 - The right balance depends on the threat model
 
 ---
+
 ## Classic Trade-Off: Simplicity vs Flexibility
 
 - More abstractions enable future change but add complexity now
@@ -234,6 +264,7 @@ audience:
 - Start simple and refactor when the need becomes clear
 
 ---
+
 ## Trade-Off Analysis Framework
 
 1. Identify the key quality attributes for the system
@@ -243,6 +274,7 @@ audience:
 1. Validate with stakeholders before committing
 
 ---
+
 ## Architecture Decision Records (ADR)
 
 - A lightweight document capturing one architectural decision
@@ -251,6 +283,7 @@ audience:
 - Prevents revisiting settled decisions without new information
 
 ---
+
 ## ADR Template
 
 ```markdown
@@ -270,6 +303,7 @@ Use an event broker for inter-service communication.
 ```
 
 ---
+
 ## Evaluating Architecture: ATAM
 
 - `Architecture Tradeoff Analysis Method`
@@ -278,11 +312,13 @@ Use an event broker for inter-service communication.
 - Brings architects and stakeholders together
 
 ---
+
 ## ATAM Process Overview
 
 ![atam_process_overview](svg/courses/architecting/architecting/01_introduction/atam_process_overview.svg)
 
 ---
+
 ## Fitness Functions
 
 - Automated checks that validate architectural properties
@@ -293,6 +329,7 @@ Use an event broker for inter-service communication.
     - Security scans that block vulnerable dependencies
 
 ---
+
 ## Conway's Law
 
 - "Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations"
@@ -301,11 +338,13 @@ Use an event broker for inter-service communication.
 - Inverse Conway Maneuver: restructure teams to get the architecture you want
 
 ---
+
 ## Conway's Law Illustrated
 
 ![conway_s_law_illustrated](svg/courses/architecting/architecting/01_introduction/conway_s_law_illustrated.svg)
 
 ---
+
 ## The Role of the Software Architect
 
 - Translates business goals into technical decisions
@@ -314,6 +353,7 @@ Use an event broker for inter-service communication.
 - Continuously evaluates and evolves the architecture
 
 ---
+
 ## Architecture Is Not a One-Time Activity
 
 - Requirements evolve and so must the architecture
@@ -322,6 +362,7 @@ Use an event broker for inter-service communication.
 - Regular architecture reviews keep the system healthy
 
 ---
+
 ## Evolutionary Architecture
 
 - Architecture that supports guided, incremental change
@@ -330,6 +371,7 @@ Use an event broker for inter-service communication.
 - Small, reversible decisions are preferred over big, irreversible ones
 
 ---
+
 ## Key Principles of Modern Architecture
 
 - Design for failure, not just for success
@@ -339,6 +381,7 @@ Use an event broker for inter-service communication.
 - Make decisions reversible whenever possible
 
 ---
+
 ## Summary
 
 - Modern architecture is a spectrum from monoliths to microservices

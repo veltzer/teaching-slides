@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Language-Specific Package Managers
 
 ---
+
 ## Why Every Language Has Its Own
 
 Distribution packages can't be the answer for everything:
@@ -26,6 +28,7 @@ System package managers solve "what is on this machine?". Language package manag
 The two answer different questions and can both be right at the same time.
 
 ---
+
 ## Common Themes Across Languages
 
 Every modern language package manager has roughly the same parts:
@@ -40,16 +43,19 @@ Every modern language package manager has roughly the same parts:
 Once you know one, the rest are vocabulary changes.
 
 ---
+
 ## Three Common Themes
 
 ![lang_pkg_themes](svg/courses/operating_systems/linux-package-managers/05_language_package_managers/lang_pkg_themes.svg)
 
 ---
+
 ## Lockfiles and Resolution
 
 ![lock_file_resolution](svg/courses/operating_systems/linux-package-managers/05_language_package_managers/lockfile_resolution.svg)
 
 ---
+
 ## `Python`: `pip`, `venv`, `pipx`, `poetry`, `uv`
 
 `Python` packaging is famously fragmented. The pieces:
@@ -63,6 +69,7 @@ Once you know one, the rest are vocabulary changes.
 The right answer depends on whether you're consuming, developing, or distributing.
 
 ---
+
 ## `pip` and `venv`: The Foundation
 
 ```bash
@@ -87,6 +94,7 @@ deactivate
 The `venv` is a directory of binaries and a `lib/python*/site-packages/` tree. Activating it just adjusts `$PATH`.
 
 ---
+
 ## `PEP 668`: "externally-managed-environment"
 
 On modern `Debian`/`Ubuntu`/`Fedora`, this fails:
@@ -116,6 +124,7 @@ sudo apt install python3-requests
 The override `--break-system-packages` exists. Don't.
 
 ---
+
 ## `pipx`: `Python` CLI Apps Done Right
 
 `pipx` installs each `Python` command-line tool in its own venv and exposes only the executables.
@@ -144,6 +153,7 @@ pipx uninstall black
 `pipx` is the right tool for `Python`-based command-line utilities you want available globally.
 
 ---
+
 ## `poetry` and Friends
 
 `poetry` (and `pdm`, `hatch`) handle the full project lifecycle: `pyproject.toml`, lock file, virtual env, build, publish.
@@ -163,6 +173,7 @@ poetry publish                   # upload to PyPI
 `pyproject.toml` is the manifest. `poetry.lock` is the lock file. Both go into git.
 
 ---
+
 ## `uv`: The New Fast Path
 
 `uv` is a single tool that replaces `pip`, `pip-tools`, `virtualenv`, and a lot of `poetry`. Written in `Rust`, very fast.
@@ -191,6 +202,7 @@ uv tool run black .
 If you start a `Python` project today, `uv` is a strong default.
 
 ---
+
 ## `Rust`: `cargo` and `crates.io`
 
 `cargo` is the package manager and build system that ships with `Rust`. There is one way to do things, and it works.
@@ -229,6 +241,7 @@ cargo install -f ripgrep   # force reinstall / upgrade
 `cargo install` is the easy way to get fast modern command-line tools (`ripgrep`, `bat`, `fd`, `eza`, `tokei`, ...).
 
 ---
+
 ## `JavaScript`/`Node.js`: `npm`, `yarn`, `pnpm`
 
 Three competing package managers, one registry (`npm`).
@@ -256,6 +269,7 @@ All three read `package.json`. Each has its own lock file (`package-lock.json`, 
 `pnpm`'s killer feature: every version of every package exists once on disk, hard-linked into each project.
 
 ---
+
 ## `npm`: Local vs Global
 
 ```bash
@@ -283,6 +297,7 @@ npx prettier --write .
 `npx` runs a package without installing it permanently. Great for project bootstrap tools.
 
 ---
+
 ## `Ruby`: `gem` and `bundler`
 
 ```bash
@@ -310,6 +325,7 @@ bundle update rails
 `Gemfile` + `Gemfile.lock` is the project pin. Run gems via `bundle exec` to get the project's pinned version, not whatever is on `$PATH`.
 
 ---
+
 ## `Go`: `go modules`
 
 `Go` modules are baked into the toolchain. There is no separate package manager.
@@ -340,6 +356,7 @@ go install github.com/junegunn/fzf@latest
 The model is simple: import a module by URL, the tool fetches it, the version goes in `go.mod`. No central registry — `Go` modules come from `git` repos directly (with a public proxy in front).
 
 ---
+
 ## `Java`: `maven`, `gradle`
 
 The JVM world has two heavyweights and several niche tools.
@@ -361,6 +378,7 @@ The shared registry is `Maven Central`. Both tools talk to it. Both use a local 
 Lock files exist (Gradle's `gradle.lockfile`, Maven's `enforcer-plugin`-driven approach) but are less consistently used than in newer ecosystems.
 
 ---
+
 ## `Haskell`: `cabal` and `stack`
 
 ```bash
@@ -380,6 +398,7 @@ stack install pandoc       # ~/.local/bin/pandoc
 `stack` was created specifically to fix `cabal`'s historical reproducibility pain via curated snapshots. Modern `cabal` has caught up with `cabal.project.freeze`.
 
 ---
+
 ## Common Cross-Language Pitfalls
 
 - **Lockfiles in git.** `package-lock.json`, `Cargo.lock`, `poetry.lock`, `Gemfile.lock`, `go.sum` all belong in `git`. Without them, "works on my machine" is the rule.
@@ -390,6 +409,7 @@ stack install pandoc       # ~/.local/bin/pandoc
 - **Dependency confusion.** A private package name accidentally also exists on the public registry, and the public one wins.
 
 ---
+
 ## A Note on Versioning Schemes
 
 Different ecosystems mean different things by `>=1.2.0` and `^1.2.0`.
@@ -405,6 +425,7 @@ Different ecosystems mean different things by `>=1.2.0` and `^1.2.0`.
 When you read someone else's manifest, check what the symbols mean in *that* ecosystem. The same character can mean different things.
 
 ---
+
 ## Private Registries and Mirrors
 
 Most of these tools support both:

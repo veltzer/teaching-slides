@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # DR Strategies
 
 ---
+
 ## What This Chapter Covers
 
 - Backup and restore
@@ -21,11 +23,13 @@ audience:
 - Choosing among them
 
 ---
+
 ## Strategy Spectrum
 
 ![strategy_spectrum](svg/courses/architecting/disaster-recovery/02_strategies/strategy_spectrum.svg)
 
 ---
+
 ## Backup and Restore
 
 - Cheapest tier
@@ -34,6 +38,7 @@ audience:
 - RTO hours to days
 
 ---
+
 ## Pilot Light
 
 - Minimal infrastructure running
@@ -42,6 +47,7 @@ audience:
 - RTO tens of minutes to hours
 
 ---
+
 ## Warm Standby
 
 - Reduced-capacity copy running
@@ -50,6 +56,7 @@ audience:
 - RTO minutes
 
 ---
+
 ## Active-Active
 
 - Full capacity in two or more regions
@@ -58,11 +65,13 @@ audience:
 - Highest cost
 
 ---
+
 ## Tier Comparison
 
 ![dr_tiers](svg/courses/architecting/disaster-recovery/02_strategies/dr_tiers.svg)
 
 ---
+
 ## Active-Passive
 
 - One region serves
@@ -71,6 +80,7 @@ audience:
 - Cheaper than active-active
 
 ---
+
 ## Database Replication
 
 - Sync vs async
@@ -79,6 +89,7 @@ audience:
 - Pick by data criticality
 
 ---
+
 ## State and Sessions
 
 - Stateless services scale easily
@@ -87,6 +98,7 @@ audience:
 - Test on failover
 
 ---
+
 ## DNS and Traffic Routing
 
 - Health-checked routing
@@ -95,6 +107,7 @@ audience:
 - TTLs matter on flip
 
 ---
+
 ## Storage Replication
 
 - Object storage cross-region replication
@@ -103,6 +116,7 @@ audience:
 - Verify replicas regularly
 
 ---
+
 ## Choosing a Tier
 
 - Map RTO and RPO per service
@@ -111,6 +125,7 @@ audience:
 - Most orgs run multiple tiers
 
 ---
+
 ## Hybrid Strategies
 
 - Active-active for tier 1
@@ -119,6 +134,7 @@ audience:
 - Document who is what
 
 ---
+
 ## Common Strategy Mistakes
 
 - One strategy for everything

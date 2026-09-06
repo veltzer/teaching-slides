@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Tactical DDD Building Blocks
 
 ---
+
 ## What Tactical DDD Provides
 
 - Concrete patterns for implementing the domain model in code
@@ -19,16 +21,19 @@ audience:
 - Strategic design defined the boundaries; tactical design fills them
 
 ---
+
 ## Aggregate
 
 ![aggregate](svg/courses/architecting/domain-driven-design/03_tactical_building_blocks/aggregate.svg)
 
 ---
+
 ## Building Blocks
 
 ![tactical_blocks](svg/courses/architecting/domain-driven-design/03_tactical_building_blocks/tactical_blocks.svg)
 
 ---
+
 ## Entities
 
 - An object with identity that persists over time
@@ -37,6 +42,7 @@ audience:
 - Identity comes from the domain, not from the database
 
 ---
+
 ## Entity Identity
 
 - The id is part of the entity, not metadata
@@ -45,6 +51,7 @@ audience:
 - Equality is by id, not by structural equality
 
 ---
+
 ## Value Objects
 
 - An object defined by its attributes, not by an identity
@@ -53,6 +60,7 @@ audience:
 - Examples: `Money`, `Address`, `DateRange`, `EmailAddress`
 
 ---
+
 ## Why Value Objects Matter
 
 - "$100" and another "$100" are interchangeable — no identity
@@ -61,11 +69,13 @@ audience:
 - Reduces primitive obsession in the codebase
 
 ---
+
 ## Value Object vs Entity
 
 ![value_vs_entity](svg/courses/architecting/domain-driven-design/03_tactical_building_blocks/value_vs_entity.svg)
 
 ---
+
 ## Aggregates
 
 - A cluster of entities and value objects treated as one unit
@@ -74,6 +84,7 @@ audience:
 - Internal entities are not visible from outside
 
 ---
+
 ## Aggregate Boundaries
 
 - Define the **consistency boundary**: invariants hold within an aggregate
@@ -82,6 +93,7 @@ audience:
 - This is the most important tactical decision
 
 ---
+
 ## Aggregate Root
 
 - The entry point to the aggregate
@@ -90,6 +102,7 @@ audience:
 - All commands target the root
 
 ---
+
 ## Aggregate Example
 
 - `Order` is the aggregate root
@@ -98,6 +111,7 @@ audience:
 - External code calls `order.add_line_item(...)`, not `line_item.set_quantity(...)`
 
 ---
+
 ## Aggregate Size
 
 - Smaller is better
@@ -106,6 +120,7 @@ audience:
 - Most aggregates should fit on one screen
 
 ---
+
 ## Aggregate Rules
 
 - Reference other aggregates by id, not by object reference
@@ -114,6 +129,7 @@ audience:
 - Invariants across: eventual consistency, sagas, process managers
 
 ---
+
 ## Domain Events
 
 - A meaningful business fact that happened
@@ -122,6 +138,7 @@ audience:
 - Other parts of the system react to them
 
 ---
+
 ## Domain Event Anatomy
 
 ```python
@@ -138,6 +155,7 @@ class OrderPlaced:
 - Names the business fact in domain terms
 
 ---
+
 ## Repositories
 
 - The persistence abstraction for aggregates
@@ -146,6 +164,7 @@ class OrderPlaced:
 - One repository per aggregate type
 
 ---
+
 ## Repository Sketch
 
 ```python
@@ -158,6 +177,7 @@ class OrderRepository:
 - Implementation hits the database; client code doesn't care how
 
 ---
+
 ## Domain Services
 
 - Operations that don't naturally belong to a single aggregate
@@ -166,6 +186,7 @@ class OrderRepository:
 - Use sparingly; prefer aggregate methods when possible
 
 ---
+
 ## Application Services
 
 - Orchestrate use cases: load an aggregate, call domain methods, save
@@ -174,6 +195,7 @@ class OrderRepository:
 - One application service method per use case
 
 ---
+
 ## Application Service Sketch
 
 ```python
@@ -186,6 +208,7 @@ class PlaceOrderHandler:
 ```
 
 ---
+
 ## Factories
 
 - Encapsulate the creation of complex aggregates
@@ -194,6 +217,7 @@ class PlaceOrderHandler:
 - Or a separate factory class for very complex creation
 
 ---
+
 ## Specifications
 
 - Encapsulate query criteria as objects
@@ -202,6 +226,7 @@ class PlaceOrderHandler:
 - Useful when you have many similar queries
 
 ---
+
 ## Anti-Corruption Layer (Tactical View)
 
 - A translator between bounded contexts (strategic concept)
@@ -210,6 +235,7 @@ class PlaceOrderHandler:
 - Keeps the domain layer free of external concerns
 
 ---
+
 ## Anti-Patterns
 
 - **Anemic domain model**: aggregates with only getters and setters; logic in services
@@ -219,6 +245,7 @@ class PlaceOrderHandler:
 - **Cross-aggregate transactions**: should be sagas
 
 ---
+
 ## Summary
 
 - Entities (with identity), value objects (without), aggregates (consistency boundary)

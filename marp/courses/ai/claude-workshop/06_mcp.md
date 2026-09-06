@@ -11,9 +11,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Connecting to MCP Servers
 
 ---
+
 ## What This Chapter Covers
 
 - What MCP is and why it exists
@@ -24,6 +26,7 @@ audience:
 - Writing a small server
 
 ---
+
 ## What MCP Is
 
 - The Model Context Protocol
@@ -32,6 +35,7 @@ audience:
 - Vendor-neutral by design
 
 ---
+
 ## Why It Exists
 
 - Every model needs the same tools
@@ -40,6 +44,7 @@ audience:
 - Write once, plug into many clients
 
 ---
+
 ## The Three Primitives
 
 - Tools: actions the model can call
@@ -48,11 +53,13 @@ audience:
 - That is the whole protocol
 
 ---
+
 ## The Three Primitives Visualized
 
 ![mcp_primitives](svg/courses/ai/claude-workshop/06_mcp/mcp_primitives.svg)
 
 ---
+
 ## Why A Standard Matters
 
 - Tool authors target one spec
@@ -61,6 +68,7 @@ audience:
 - Ecosystem effects compound
 
 ---
+
 ## The MCP Ecosystem
 
 - Filesystem servers
@@ -69,6 +77,7 @@ audience:
 - Browser automation servers
 
 ---
+
 ## Vendor Vs Community Servers
 
 - Vendors ship official servers
@@ -77,6 +86,7 @@ audience:
 - Pin versions to known-good
 
 ---
+
 ## Local Vs Remote Servers
 
 - Local runs on your machine
@@ -85,11 +95,13 @@ audience:
 - Remote unlocks shared state
 
 ---
+
 ## MCP Architecture
 
 ![mcp_architecture](svg/courses/ai/claude-workshop/06_mcp/mcp_architecture.svg)
 
 ---
+
 ## Adding A Server
 
 - Edit `.claude/settings.json` or user settings
@@ -98,6 +110,7 @@ audience:
 - Restart Claude Code to pick it up
 
 ---
+
 ## Server Configuration Shape
 
 - A name for the server
@@ -106,6 +119,7 @@ audience:
 - Optional env block
 
 ---
+
 ## Authentication And Secrets
 
 - Pass tokens via env vars
@@ -114,6 +128,7 @@ audience:
 - Rotate when in doubt
 
 ---
+
 ## Verifying It Is Wired Up
 
 - The status line shows MCP servers
@@ -122,6 +137,7 @@ audience:
 - Smoke-test with a small call
 
 ---
+
 ## Using MCP In A Workflow
 
 - Querying a database directly
@@ -130,6 +146,7 @@ audience:
 - Talking to internal services
 
 ---
+
 ## Database Example
 
 - Connect to a read-only replica
@@ -138,6 +155,7 @@ audience:
 - Decide what to do next
 
 ---
+
 ## Browser Example
 
 - Open a URL
@@ -146,6 +164,7 @@ audience:
 - Fill a form and submit
 
 ---
+
 ## Issue Tracker Example
 
 - Read open tickets
@@ -154,6 +173,7 @@ audience:
 - Generate weekly summaries
 
 ---
+
 ## The Trust Boundary
 
 - Every MCP server is code you run
@@ -162,6 +182,7 @@ audience:
 - Prompt injection lives here
 
 ---
+
 ## Prompt Injection Via Tool Results
 
 - A tool returns "ignore prior rules"
@@ -170,11 +191,13 @@ audience:
 - Treat tool output like user input
 
 ---
+
 ## The Trust Boundary Visualized
 
 ![trust_boundary](svg/courses/ai/claude-workshop/06_mcp/trust_boundary.svg)
 
 ---
+
 ## Auditing A Server Before Install
 
 - Read the source if open
@@ -183,6 +206,7 @@ audience:
 - Run it in a sandbox first
 
 ---
+
 ## Writing A Minimum Server
 
 - A few dozen lines in the SDK
@@ -191,6 +215,7 @@ audience:
 - Speaks JSON-RPC
 
 ---
+
 ## Exposing One Internal Tool
 
 - Wrap an existing internal command
@@ -199,6 +224,7 @@ audience:
 - Ship it for your team
 
 ---
+
 ## When This Is Worth It
 
 - The tool is used many times a day
@@ -207,6 +233,7 @@ audience:
 - Long-term ROI is clear
 
 ---
+
 ## When It Is Not
 
 - One-off scripts
@@ -215,6 +242,7 @@ audience:
 - Tools no one else will use
 
 ---
+
 ## Hands-On Exercise
 
 - Install a filesystem MCP server

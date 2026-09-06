@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Emerging Technologies
 Modern observability and service management tools
 

@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Rust and C Integration
 
 FFI, Bindgen, and `#![no_std]`
@@ -769,6 +770,7 @@ cargo build --release
 ```
 
 ---
+
 ## Best Practices - FFI
 
 1. **Always use `#[repr(C)]`** for FFI structs

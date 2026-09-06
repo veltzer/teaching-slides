@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Operations and Quality
 
 ---
+
 ## What This Chapter Covers
 
 - Data quality
@@ -19,6 +21,7 @@ audience:
 - Debugging
 
 ---
+
 ## Why Data Quality
 
 - Bad data is worse than no data
@@ -27,6 +30,7 @@ audience:
 - Catch at the boundary
 
 ---
+
 ## Quality Dimensions
 
 - Accuracy
@@ -36,6 +40,7 @@ audience:
 - Uniqueness
 
 ---
+
 ## Where to Check
 
 - At ingest
@@ -44,6 +49,7 @@ audience:
 - In dashboards
 
 ---
+
 ## Tests as Code
 
 - Stored next to models
@@ -52,11 +58,13 @@ audience:
 - Warn on soft fails
 
 ---
+
 ## Quality Gates
 
 ![quality_gates](svg/courses/data_engineering/etl/05_operations_and_quality/quality_gates.svg)
 
 ---
+
 ## Anomaly Detection
 
 - Volume changes
@@ -65,6 +73,7 @@ audience:
 - Auto-thresholds beat fixed ones
 
 ---
+
 ## Monitoring
 
 - Pipeline success rate
@@ -73,6 +82,7 @@ audience:
 - Resource use
 
 ---
+
 ## Dashboards
 
 - One per pipeline
@@ -81,6 +91,7 @@ audience:
 - Tag by owner
 
 ---
+
 ## Alerts
 
 - On failures
@@ -89,6 +100,7 @@ audience:
 - Route to on-call
 
 ---
+
 ## Cost
 
 - Compute per run
@@ -97,6 +109,7 @@ audience:
 - Tag for chargeback
 
 ---
+
 ## Debugging
 
 - Replay a partition
@@ -105,6 +118,7 @@ audience:
 - Use logs and lineage
 
 ---
+
 ## Schema Changes
 
 - Coordinate with consumers
@@ -113,6 +127,7 @@ audience:
 - Deprecate, do not delete
 
 ---
+
 ## Privacy
 
 - Tag PII columns
@@ -121,6 +136,7 @@ audience:
 - Encrypt at rest and in transit
 
 ---
+
 ## Common Operational Mistakes
 
 - Quality checks added after incidents

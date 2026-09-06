@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Using Modules
 
 ---
+
 ## What is a Module?
 - A module is a `.py` file containing Python code
 - Provides reusable functions, classes, and variables
@@ -21,6 +23,7 @@ import math_utils
 ```
 
 ---
+
 ## Why Use Modules?
 - Code reuse across multiple files
 - Namespace separation (avoid name collisions)
@@ -29,6 +32,7 @@ import math_utils
 - Python's standard library is a collection of modules
 
 ---
+
 ## The `import` Statement
 
 ```python
@@ -43,6 +47,7 @@ print(math.factorial(5))  # 120
 - Access contents with dot notation
 
 ---
+
 ## `from ... import`
 
 ```python
@@ -57,6 +62,7 @@ print(factorial(5))  # 120
 - No need for the module prefix
 
 ---
+
 ## `from ... import *`
 
 ```python
@@ -72,6 +78,7 @@ print(sqrt(16))  # Works
 - Can shadow existing names
 
 ---
+
 ## Import with Alias
 
 ```python
@@ -87,6 +94,7 @@ arr = np.array([1, 2, 3])
 - Some aliases are conventions (e.g., `np`, `pd`, `plt`)
 
 ---
+
 ## `from ... import ... as`
 
 ```python
@@ -98,6 +106,7 @@ print(now)
 ```
 
 ---
+
 ## Namespaces
 - A namespace maps names to objects
 - Python has several namespaces:
@@ -113,6 +122,7 @@ import math
 ```
 
 ---
+
 ## The `dir()` Function
 - Lists names in a module or current namespace
 
@@ -128,6 +138,7 @@ print(public)
 ```
 
 ---
+
 ## The `help()` Function
 
 ```python
@@ -142,6 +153,7 @@ help(json.loads)     # Function documentation
 - Extremely useful in the interactive shell
 
 ---
+
 ## How Python Finds Modules
 - Python searches for modules in this order:
     1. Current directory
@@ -156,6 +168,7 @@ print(sys.path)
 - `sys.path` is a list of directories to search
 
 ---
+
 ## Modifying the Module Search Path
 
 ```python
@@ -170,6 +183,7 @@ import my_custom_module
 ```
 
 ---
+
 ## The `PYTHONPATH` Environment Variable
 
 ```bash
@@ -182,6 +196,7 @@ python3 my_script.py
 - Colon-separated on Unix, semicolon on Windows
 
 ---
+
 ## Module Attributes
 - Every module has special attributes
 
@@ -195,6 +210,7 @@ print(math.__spec__)   # Module specification
 ```
 
 ---
+
 ## The `__name__` Variable
 - Set to `"__main__"` when script runs directly
 - Set to the module name when imported
@@ -211,6 +227,7 @@ if __name__ == "__main__":
 - Common pattern to make a module both importable and runnable
 
 ---
+
 ## `__name__` in Action
 
 ```python
@@ -233,6 +250,7 @@ greetings.greet("Alice")   # "Hello, Alice!"
 ```
 
 ---
+
 ## Reloading Modules
 - Modules are cached after first import
 - Changes to module source are not automatically reflected
@@ -249,6 +267,7 @@ importlib.reload(my_module)
 - Not recommended in production code
 
 ---
+
 ## Standard Library - `os` Module
 
 ```python
@@ -263,6 +282,7 @@ os.makedirs("a/b/c", exist_ok=True)  # Create dirs
 ```
 
 ---
+
 ## Standard Library - `os.path`
 
 ```python
@@ -278,6 +298,7 @@ print(os.path.expanduser("~"))  # /home/user
 ```
 
 ---
+
 ## Standard Library - `pathlib` (Modern)
 
 ```python
@@ -296,6 +317,7 @@ print(new)  # output/data/results.csv
 ```
 
 ---
+
 ## Standard Library - `sys` Module
 
 ```python
@@ -312,6 +334,7 @@ sys.exit(0)               # Exit program
 ```
 
 ---
+
 ## Standard Library - `datetime`
 
 ```python
@@ -330,6 +353,7 @@ tomorrow = today + timedelta(days=1)
 ```
 
 ---
+
 ## Standard Library - `json`
 
 ```python
@@ -350,6 +374,7 @@ with open("data.json", "w") as f:
 ```
 
 ---
+
 ## Standard Library - `re` (Regular Expressions)
 
 ```python
@@ -372,6 +397,7 @@ print(clean)  # My phone is XXX-XXXX and ...
 ```
 
 ---
+
 ## Standard Library - `collections`
 
 ```python
@@ -394,6 +420,7 @@ print(d)  # deque([2, 3, 4], maxlen=3)
 ```
 
 ---
+
 ## Standard Library - `itertools`
 
 ```python
@@ -412,6 +439,7 @@ print(list(permutations("ABC", 2)))
 ```
 
 ---
+
 ## Standard Library - `functools`
 
 ```python
@@ -432,6 +460,7 @@ double = partial(pow, exp=2)
 ```
 
 ---
+
 ## Standard Library - `random`
 
 ```python
@@ -449,6 +478,7 @@ print(random.sample(range(100), 5))  # 5 unique randoms
 ```
 
 ---
+
 ## Standard Library - `logging`
 
 ```python
@@ -465,6 +495,7 @@ logger.critical("Critical!")      # Shown
 ```
 
 ---
+
 ## Standard Library - `argparse`
 
 ```python
@@ -486,6 +517,7 @@ python3 tool.py data.txt -v -n 5
 ```
 
 ---
+
 ## Standard Library - `unittest`
 
 ```python
@@ -509,7 +541,9 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Standard Library Overview
+
 | Module | Purpose |
 |--------|---------|
 | `os`, `pathlib` | File system operations |
@@ -524,6 +558,7 @@ if __name__ == "__main__":
 | `argparse` | Command-line parsing |
 
 ---
+
 ## Circular Imports
 - Module A imports B, and B imports A
 - Can cause `ImportError` or partial imports
@@ -542,6 +577,7 @@ from a import func_a  # Circular!
     - Use late imports
 
 ---
+
 ## Summary
 - Modules are `.py` files that organize reusable code
 - Import with `import`, `from ... import`, or aliases

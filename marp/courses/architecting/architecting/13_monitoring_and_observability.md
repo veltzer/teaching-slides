@@ -11,9 +11,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Monitoring and Observability
 
 ---
+
 ## Monitoring vs Observability
 
 - Monitoring tells you when something is wrong
@@ -22,6 +24,7 @@ audience:
 - Observability lets you ask arbitrary questions about system behavior
 
 ---
+
 ## Why Observability Matters
 
 - Microservices create complex, distributed call chains
@@ -30,22 +33,26 @@ audience:
 - Mean Time to Resolution (MTTR) depends on how quickly you understand the problem
 
 ---
+
 ## The Observability Challenge
 
 ![the_observability_challenge](svg/courses/architecting/architecting/13_monitoring_and_observability/the_observability_challenge.svg)
 
 ---
+
 ## The Challenge in Practice
 
 - A single user request may touch 5+ services
 - Where did the latency spike occur? Which service returned an error?
 
 ---
+
 ## The Three Pillars of Observability
 
 ![the_three_pillars_of_observability](svg/courses/architecting/architecting/13_monitoring_and_observability/the_three_pillars_of_observability.svg)
 
 ---
+
 ## Pillar 1: Metrics
 
 - Numeric measurements collected at regular intervals
@@ -54,6 +61,7 @@ audience:
 - Used for alerting, dashboards, and capacity planning
 
 ---
+
 ## Types of Metrics
 
 - Counter: monotonically increasing value (e.g., total requests)
@@ -62,6 +70,7 @@ audience:
 - Summary: similar to histogram but calculates percentiles client-side
 
 ---
+
 ## Key Metrics to Track
 
 - `RED` method for services:
@@ -74,6 +83,7 @@ audience:
     - Errors: count of error events
 
 ---
+
 ## Prometheus Metrics Example
 
 ```python
@@ -93,11 +103,13 @@ REQUEST_LATENCY = Histogram(
 ```
 
 ---
+
 ## Metrics Architecture
 
 ![metrics_architecture](svg/courses/architecting/architecting/13_monitoring_and_observability/metrics_architecture.svg)
 
 ---
+
 ## Grafana Dashboards
 
 - Visualization tool for metrics data
@@ -106,6 +118,7 @@ REQUEST_LATENCY = Histogram(
 - Pre-built dashboards available for common infrastructure
 
 ---
+
 ## Alerting Best Practices
 
 - Alert on symptoms (high error rate) not causes (disk full)
@@ -115,6 +128,7 @@ REQUEST_LATENCY = Histogram(
 - Use escalation policies for unacknowledged alerts
 
 ---
+
 ## Pillar 2: Logging
 
 - Discrete records of events that occurred in the system
@@ -123,6 +137,7 @@ REQUEST_LATENCY = Histogram(
 - Volume can be very high; require efficient storage and querying
 
 ---
+
 ## Structured Logging
 
 ```json
@@ -142,6 +157,7 @@ REQUEST_LATENCY = Histogram(
 - Include correlation IDs for tracing across services
 
 ---
+
 ## Log Levels
 
 | Level | Purpose |
@@ -154,11 +170,13 @@ REQUEST_LATENCY = Histogram(
 | `FATAL` | Severe errors causing shutdown |
 
 ---
+
 ## Centralized Logging Architecture
 
 ![centralized_logging_architecture](svg/courses/architecting/architecting/13_monitoring_and_observability/centralized_logging_architecture.svg)
 
 ---
+
 ## Logging Stack Options
 
 - `ELK Stack`: `Elasticsearch`, `Logstash`, `Kibana`
@@ -170,6 +188,7 @@ REQUEST_LATENCY = Histogram(
 - Cloud-managed: `CloudWatch`, `Stackdriver`, `Azure Monitor`
 
 ---
+
 ## Logging Best Practices
 
 - Write logs to `stdout` and `stderr`, not to files
@@ -180,6 +199,7 @@ REQUEST_LATENCY = Histogram(
 - Use sampling for high-volume debug logs in production
 
 ---
+
 ## Pillar 3: Distributed Tracing
 
 - Tracks a single request as it flows through multiple services
@@ -188,17 +208,20 @@ REQUEST_LATENCY = Histogram(
 - Essential for understanding latency in microservice architectures
 
 ---
+
 ## Trace Anatomy
 
 ![trace_anatomy](svg/courses/architecting/architecting/13_monitoring_and_observability/trace_anatomy.svg)
 
 ---
+
 ## Traces and Spans
 
 - A trace represents the entire request journey
 - Each span represents one operation within the trace
 
 ---
+
 ## Trace Terminology
 
 - `Trace` - the end-to-end journey of a request through the system
@@ -208,6 +231,7 @@ REQUEST_LATENCY = Histogram(
 - `Parent Span ID` - links a child span to its parent
 
 ---
+
 ## Context Propagation
 
 - Trace context must be passed between services
@@ -216,11 +240,13 @@ REQUEST_LATENCY = Histogram(
 - Libraries handle injection and extraction automatically
 
 ---
+
 ## Context Propagation Flow
 
 ![context_propagation_flow](svg/courses/architecting/architecting/13_monitoring_and_observability/context_propagation_flow.svg)
 
 ---
+
 ## OpenTelemetry
 
 - A vendor-neutral standard for collecting telemetry data
@@ -229,11 +255,13 @@ REQUEST_LATENCY = Histogram(
 - Supported by all major observability vendors
 
 ---
+
 ## OpenTelemetry Architecture
 
 ![opentelemetry_architecture](svg/courses/architecting/architecting/13_monitoring_and_observability/opentelemetry_architecture.svg)
 
 ---
+
 ## OpenTelemetry Collector
 
 - A vendor-agnostic proxy for receiving, processing, and exporting telemetry
@@ -243,6 +271,7 @@ REQUEST_LATENCY = Histogram(
 - Decouples applications from specific observability backends
 
 ---
+
 ## Instrumenting with OpenTelemetry
 
 ```python
@@ -265,6 +294,7 @@ with tracer.start_as_current_span("process"):
 ```
 
 ---
+
 ## Auto-Instrumentation
 
 - Automatically instruments common libraries without code changes
@@ -273,6 +303,7 @@ with tracer.start_as_current_span("process"):
 - Reduces the effort to add observability to existing applications
 
 ---
+
 ## Tracing Tools
 
 - `Jaeger` - open-source distributed tracing by Uber
@@ -282,11 +313,13 @@ with tracer.start_as_current_span("process"):
 - `Datadog APM` - commercial tracing with rich analytics
 
 ---
+
 ## Trace Visualization
 
 ![trace_visualization](svg/courses/architecting/architecting/13_monitoring_and_observability/trace_visualization.svg)
 
 ---
+
 ## Health Check Strategies
 
 - Liveness checks: is the process alive and not deadlocked?
@@ -295,6 +328,7 @@ with tracer.start_as_current_span("process"):
 - Shallow vs deep health checks serve different purposes
 
 ---
+
 ## Shallow vs Deep Health Checks
 
 | Type | What It Checks | Use Case |
@@ -308,6 +342,7 @@ with tracer.start_as_current_span("process"):
 - Prefer shallow readiness; use deep checks for observability dashboards, not for traffic-routing decisions
 
 ---
+
 ## Health Check Endpoint Example
 
 ```python
@@ -331,6 +366,7 @@ def readiness():
 ```
 
 ---
+
 ## SLIs, SLOs, and SLAs
 
 - `SLI` (Service Level Indicator): a measurable metric (e.g., latency p99)
@@ -339,11 +375,13 @@ def readiness():
 - SLIs inform SLOs which back SLAs
 
 ---
+
 ## SLI/SLO Relationship
 
 ![sli_slo_relationship](svg/courses/architecting/architecting/13_monitoring_and_observability/sli_slo_relationship.svg)
 
 ---
+
 ## Error Budgets
 
 - The acceptable amount of unreliability within an SLO
@@ -352,6 +390,7 @@ def readiness():
 - When the budget is exhausted, focus shifts to reliability over features
 
 ---
+
 ## Correlation Across Pillars
 
 - Use trace IDs to connect logs, metrics, and traces
@@ -361,11 +400,13 @@ def readiness():
 - All three pillars work together for fast resolution
 
 ---
+
 ## Correlation Flow
 
 ![correlation_flow](svg/courses/architecting/architecting/13_monitoring_and_observability/correlation_flow.svg)
 
 ---
+
 ## Observability in Kubernetes
 
 - `Prometheus` with `kube-state-metrics` for cluster metrics
@@ -374,6 +415,7 @@ def readiness():
 - `Grafana` as the unified dashboard for all three pillars
 
 ---
+
 ## Monitoring Anti-Patterns
 
 - Alert on every metric instead of meaningful symptoms
@@ -383,6 +425,7 @@ def readiness():
 - Monitoring only in production, not in staging
 
 ---
+
 ## Summary
 
 - Observability lets you understand system behavior through metrics, logs, and traces

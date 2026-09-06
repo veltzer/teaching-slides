@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Physical Database Design
 
 ---
+
 ## What This Chapter Covers
 
 - Indexes
@@ -20,6 +22,7 @@ audience:
 - Storage parameters
 
 ---
+
 ## Indexes
 
 - Trade write speed for read speed
@@ -28,11 +31,13 @@ audience:
 - Each adds storage and slows writes
 
 ---
+
 ## Index Kinds
 
 ![index_kinds](svg/courses/databases/database-design/05_physical_database_design/index_kinds.svg)
 
 ---
+
 ## Index Choice
 
 - B-tree: equality and range queries
@@ -42,6 +47,7 @@ audience:
 - Match to query pattern
 
 ---
+
 ## Composite Indexes
 
 - Index on multiple columns
@@ -51,6 +57,7 @@ audience:
 - Useless: WHERE b = ? alone
 
 ---
+
 ## Partial Indexes
 
 - Index only rows matching a condition
@@ -59,6 +66,7 @@ audience:
 - Postgres feature
 
 ---
+
 ## Covering Indexes
 
 - Include all columns the query needs
@@ -67,6 +75,7 @@ audience:
 - Reads complete from index alone
 
 ---
+
 ## Partitioning
 
 - Split table into smaller pieces
@@ -75,6 +84,7 @@ audience:
 - Per-partition operations (vacuum, drop)
 
 ---
+
 ## When To Partition
 
 - Tables &gt; 100M rows
@@ -83,6 +93,7 @@ audience:
 - Adds complexity; not free
 
 ---
+
 ## Clustering
 
 - Physical row order matches index order
@@ -91,11 +102,13 @@ audience:
 - MySQL: clustered primary key (default)
 
 ---
+
 ## Storage Layouts Compared
 
 ![storage_layouts](svg/courses/databases/database-design/05_physical_database_design/storage_layouts.svg)
 
 ---
+
 ## Storage Parameters
 
 - Fillfactor: leave space for updates
@@ -104,6 +117,7 @@ audience:
 - Match to workload
 
 ---
+
 ## Tablespaces
 
 - Distribute tables across storage devices
@@ -112,6 +126,7 @@ audience:
 - Useful in on-prem setups
 
 ---
+
 ## Common Physical Design Mistakes
 
 - No indexes

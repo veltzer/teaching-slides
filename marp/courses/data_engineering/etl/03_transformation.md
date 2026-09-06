@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Transformation
 
 ---
+
 ## What This Chapter Covers
 
 - Transform tooling
@@ -19,6 +21,7 @@ audience:
 - Testing
 
 ---
+
 ## Where to Transform
 
 - In the source: pre-load
@@ -27,6 +30,7 @@ audience:
 - ELT pattern: warehouse wins
 
 ---
+
 ## SQL-Based Transformation
 
 - Familiar to analysts
@@ -35,6 +39,7 @@ audience:
 - Hard to test without tooling
 
 ---
+
 ## Code-Based Transformation
 
 - Spark or Pandas or similar engines
@@ -43,6 +48,7 @@ audience:
 - Heavier infrastructure
 
 ---
+
 ## Modeling Approaches
 
 - Star schema
@@ -51,11 +57,13 @@ audience:
 - Medallion (bronze, silver, gold)
 
 ---
+
 ## Approaches Compared
 
 ![modeling_approaches](svg/courses/data_engineering/etl/03_transformation/modeling_approaches.svg)
 
 ---
+
 ## Star Schema
 
 - Fact table at center
@@ -64,6 +72,7 @@ audience:
 - Classic warehouse design
 
 ---
+
 ## Wide Tables
 
 - Denormalize for query speed
@@ -72,6 +81,7 @@ audience:
 - Common in lakehouse
 
 ---
+
 ## Slowly Changing Dimensions
 
 - Type 1: overwrite
@@ -80,6 +90,7 @@ audience:
 - Pick by audit needs
 
 ---
+
 ## Idempotent Transforms
 
 - Re-runnable
@@ -88,11 +99,13 @@ audience:
 - Required for backfills
 
 ---
+
 ## Idempotency Levers
 
 ![idempotency_keys](svg/courses/data_engineering/etl/03_transformation/idempotency_keys.svg)
 
 ---
+
 ## Reusability
 
 - Macros and shared models
@@ -101,6 +114,7 @@ audience:
 - Test the shared layer hard
 
 ---
+
 ## Tests
 
 - Not-null
@@ -109,6 +123,7 @@ audience:
 - Domain ranges
 
 ---
+
 ## Documentation
 
 - Column descriptions
@@ -117,6 +132,7 @@ audience:
 - Auto-generated where possible
 
 ---
+
 ## Performance
 
 - Push down to warehouse
@@ -125,6 +141,7 @@ audience:
 - Profile slow queries
 
 ---
+
 ## Common Transformation Mistakes
 
 - One big query

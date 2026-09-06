@@ -10,9 +10,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Message Brokers and Streaming Platforms
 
 ---
+
 ## What This Chapter Covers
 
 - Topics, queues, partitions, consumer groups
@@ -22,6 +24,7 @@ audience:
 - Choosing a broker; serialization formats; dead-letter queues
 
 ---
+
 ## Broker Fundamentals
 
 - A broker accepts events from producers and delivers to consumers
@@ -31,6 +34,7 @@ audience:
 - The right broker depends on the workload
 
 ---
+
 ## Topics and Queues
 
 - Topic: pub-sub channel; many consumers each see all messages
@@ -40,6 +44,7 @@ audience:
 - Same vocabulary, different semantics across brokers
 
 ---
+
 ## Partitions
 
 - A topic split into N parallel logs
@@ -49,6 +54,7 @@ audience:
 - Choosing the key is a critical design decision
 
 ---
+
 ## Consumer Groups
 
 - A group of consumers cooperating to process a topic
@@ -58,16 +64,19 @@ audience:
 - Different groups consume independently — pub-sub at the group level
 
 ---
+
 ## Broker Architecture Visualized
 
 ![broker_architecture](svg/courses/architecting/event-driven-architecture/02_message_brokers/broker_architecture.svg)
 
 ---
+
 ## Broker Feature Comparison
 
 ![broker_features](svg/courses/architecting/event-driven-architecture/02_message_brokers/broker_features.svg)
 
 ---
+
 ## Apache Kafka: The Big Idea
 
 - A distributed, persistent, replicated log
@@ -77,6 +86,7 @@ audience:
 - Re-reading old messages is a feature, not a bug
 
 ---
+
 ## Kafka Partitioning
 
 - Each partition is an ordered, append-only log
@@ -86,6 +96,7 @@ audience:
 - Pick partition keys to align with consumer locality
 
 ---
+
 ## Kafka Consumer Groups
 
 - Each consumer instance reads a subset of partitions
@@ -95,6 +106,7 @@ audience:
 - One consumer per partition is the typical max
 
 ---
+
 ## Kafka Offsets and Replay
 
 - Offset: the position a consumer has reached
@@ -104,6 +116,7 @@ audience:
 - Be careful — replay can flood downstream systems
 
 ---
+
 ## RabbitMQ: Exchanges and Queues
 
 - Producers send to an exchange, not a queue
@@ -113,6 +126,7 @@ audience:
 - More flexible routing than Kafka; less throughput
 
 ---
+
 ## RabbitMQ Routing Strategies
 
 - Direct: exact match on routing key
@@ -122,6 +136,7 @@ audience:
 - Pick per use case; RabbitMQ shines at flexible routing
 
 ---
+
 ## AWS SNS and SQS
 
 - SNS: pub-sub, fan-out to many subscribers
@@ -131,6 +146,7 @@ audience:
 - Serverless workloads benefit from these
 
 ---
+
 ## SNS Filtering
 
 - Subscribers can attach a filter policy
@@ -140,6 +156,7 @@ audience:
 - Filter policies are JSON-based and limited but useful
 
 ---
+
 ## Azure Service Bus
 
 - Enterprise-focused, transactional messaging
@@ -149,6 +166,7 @@ audience:
 - More enterprise features (transactions, scheduling) than SQS
 
 ---
+
 ## Pulsar: A Modern Alternative
 
 - Combines Kafka-style log with RabbitMQ-style queueing
@@ -158,6 +176,7 @@ audience:
 - Less mainstream but technically strong
 
 ---
+
 ## Choosing a Broker
 
 - Throughput needs: Kafka and Pulsar handle millions/sec
@@ -167,6 +186,7 @@ audience:
 - Ecosystem: Kafka has the largest
 
 ---
+
 ## Dead Letter Queues
 
 - A separate queue for messages that consistently fail
@@ -176,6 +196,7 @@ audience:
 - Triage process: investigate, fix, replay
 
 ---
+
 ## Serialization: JSON
 
 - Human-readable; easy to debug
@@ -185,6 +206,7 @@ audience:
 - Default for many teams; OK for low-throughput
 
 ---
+
 ## Serialization: Avro
 
 - Schema-based, compact binary
@@ -194,6 +216,7 @@ audience:
 - Better than JSON for high-throughput, schema-strict environments
 
 ---
+
 ## Serialization: Protobuf
 
 - Schema-based, very compact, fast
@@ -203,6 +226,7 @@ audience:
 - Often paired with Buf for schema management
 
 ---
+
 ## Choosing a Format
 
 - JSON for low-volume internal events; readability matters
@@ -212,6 +236,7 @@ audience:
 - Document schemas alongside service code
 
 ---
+
 ## Topology Patterns
 
 - Single broker, single topic — simple, fast
@@ -221,6 +246,7 @@ audience:
 - Pick the granularity that matches your team boundaries
 
 ---
+
 ## Operational Concerns
 
 - Broker downtime is critical infrastructure failure
@@ -230,6 +256,7 @@ audience:
 - Backups are different from replication — plan both
 
 ---
+
 ## Common Pitfalls
 
 - Choosing Kafka without operational expertise
@@ -239,6 +266,7 @@ audience:
 - Schema drift accepted as "we'll fix it later"
 
 ---
+
 ## Summary
 
 - Brokers are critical infrastructure with diverse trade-offs

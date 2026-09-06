@@ -12,6 +12,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Expansion: Brace and Comma
 
 ---
@@ -21,6 +22,7 @@ audience:
 ![Shell Expansion Order](svg/courses/languages/bash/bash-scripting/09_expansion/expansion_order.svg)
 
 ---
+
 ## Brace Expansion
 - Generates arbitrary strings
 - Processed BEFORE variable expansion
@@ -36,6 +38,7 @@ echo file{1,2,3}.txt
 ```
 
 ---
+
 ## Brace Expansion: Comma Lists
 
 ```bash
@@ -59,6 +62,7 @@ mv file.{txt,md}
 ```
 
 ---
+
 ## Brace Expansion: Sequences
 
 ```bash
@@ -83,6 +87,7 @@ echo {001..010}
 ```
 
 ---
+
 ## Nesting Brace Expansions
 
 ```bash
@@ -104,6 +109,7 @@ echo {a,b}{1,2}{x,y}
 ```
 
 ---
+
 ## Brace Expansion is NOT Globbing
 
 ```bash
@@ -125,6 +131,7 @@ echo {a,b}           # a b
 ```
 
 ---
+
 ## Practical Brace Expansion Examples
 
 ```bash
@@ -145,6 +152,7 @@ touch test_{pass,fail}_{01..05}.log
 ```
 
 ---
+
 ## Tilde Expansion
 
 ```bash
@@ -168,6 +176,7 @@ echo ~/file   # /home/mark/file
 ```
 
 ---
+
 ## `$PATH` and Brace Expansion Together
 
 ```bash
@@ -184,6 +193,7 @@ export PATH="${HOME}/bin:${HOME}/scripts:${HOME}/tools:${PATH}"
 ```
 
 ---
+
 ## Expansion Order Summary
 ```misc
 1. Brace expansion:       {a,b,c}
@@ -198,6 +208,7 @@ export PATH="${HOME}/bin:${HOME}/scripts:${HOME}/tools:${PATH}"
 ```
 
 ---
+
 ## Day 1 Summary
 - The shell is the interface between you and the kernel
 - `bash` is the standard scripting shell on `Linux`

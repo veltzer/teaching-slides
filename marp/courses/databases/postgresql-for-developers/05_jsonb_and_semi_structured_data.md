@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # JSONB and Semi-Structured Data
 
 ---
+
 ## Operators &amp; Indexing
 
 ![jsonb_ops](svg/courses/databases/postgresql-for-developers/05_jsonb_and_semi_structured_data/jsonb_ops.svg)
 
 ---
+
 ## JSONB Index Types
 
 ![jsonb_indexes](svg/courses/databases/postgresql-for-developers/05_jsonb_and_semi_structured_data/jsonb_indexes.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - JSONB vs JSON
@@ -31,6 +35,7 @@ audience:
 - When NOT to
 
 ---
+
 ## JSONB
 
 - Binary JSON
@@ -40,6 +45,7 @@ audience:
 - The default for JSON in modern Postgres
 
 ---
+
 ## JSON Operators
 
 - `->`: get JSON object field
@@ -50,6 +56,7 @@ audience:
 - `?`: key exists
 
 ---
+
 ## Examples
 
 ```sql
@@ -63,6 +70,7 @@ SELECT * FROM users WHERE data ? 'verified';
 - Check key existence
 
 ---
+
 ## GIN Index For JSONB
 
 ```sql
@@ -74,6 +82,7 @@ CREATE INDEX idx_data ON events USING GIN (data);
 - Larger than B-tree
 
 ---
+
 ## Path-Specific Index
 
 ```sql
@@ -85,6 +94,7 @@ CREATE INDEX idx_data_type ON events ((data->>'type'));
 - Only that field's queries benefit
 
 ---
+
 ## When To Use JSONB
 
 - Schemaless / heterogeneous data
@@ -94,6 +104,7 @@ CREATE INDEX idx_data_type ON events ((data->>'type'));
 - Flexible audit / event payloads
 
 ---
+
 ## When NOT To
 
 - Well-structured, predictable schema
@@ -102,6 +113,7 @@ CREATE INDEX idx_data_type ON events ((data->>'type'));
 - Postgres can do; relational columns are usually better
 
 ---
+
 ## Updates In JSONB
 
 - `jsonb_set(data, '{key}', '"value"')`
@@ -110,6 +122,7 @@ CREATE INDEX idx_data_type ON events ((data->>'type'));
 - Consider relational columns for hot fields
 
 ---
+
 ## JSONB In Tables
 
 ```sql
@@ -123,6 +136,7 @@ CREATE TABLE events (
 - Common pattern
 
 ---
+
 ## Hybrid Schema
 
 - Common fields as columns
@@ -131,6 +145,7 @@ CREATE TABLE events (
 - Most pragmatic
 
 ---
+
 ## Validation
 
 - Postgres doesn't validate schema of JSONB by default
@@ -139,6 +154,7 @@ CREATE TABLE events (
 - JSON Schema extensions exist
 
 ---
+
 ## Performance Tips
 
 - Index only what you query
@@ -147,6 +163,7 @@ CREATE TABLE events (
 - Profile JSONB query plans
 
 ---
+
 ## Common JSONB Mistakes
 
 - Schemaless when relational would do

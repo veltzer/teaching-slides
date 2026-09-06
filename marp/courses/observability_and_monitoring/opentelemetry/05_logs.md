@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Logs
 
 ---
+
 ## What This Chapter Covers
 
 - Why logs in OTel
@@ -19,6 +21,7 @@ audience:
 - Best practices
 
 ---
+
 ## Why Logs in OTel
 
 - Unified telemetry
@@ -27,11 +30,13 @@ audience:
 - Stable since 2023
 
 ---
+
 ## Log Correlation
 
 ![log_correlation](svg/courses/observability_and_monitoring/opentelemetry/05_logs/log_correlation.svg)
 
 ---
+
 ## Log Model
 
 - Timestamp
@@ -41,6 +46,7 @@ audience:
 - Resource
 
 ---
+
 ## Body
 
 - The message
@@ -48,6 +54,7 @@ audience:
 - Don't put PII
 
 ---
+
 ## Attributes
 
 - Structured key-value
@@ -55,6 +62,7 @@ audience:
 - Add request id, user id (at the right level)
 
 ---
+
 ## Severity
 
 - TRACE, DEBUG, INFO, WARN, ERROR, FATAL
@@ -62,6 +70,7 @@ audience:
 - Backends filter by severity
 
 ---
+
 ## Bridging Loggers
 
 - log4j, logback (Java)
@@ -70,6 +79,7 @@ audience:
 - Bridge appenders forward to OTel
 
 ---
+
 ## Sample Bridge
 
 - Existing app logs to logback
@@ -77,6 +87,7 @@ audience:
 - No code changes
 
 ---
+
 ## Correlation
 
 - Logs include trace_id and span_id
@@ -84,11 +95,13 @@ audience:
 - Click trace, see its logs
 
 ---
+
 ## Correlation Keys
 
 ![log_correlation_keys](svg/courses/observability_and_monitoring/opentelemetry/05_logs/log_correlation_keys.svg)
 
 ---
+
 ## Structured Logging
 
 - Key-value pairs, not free text
@@ -96,6 +109,7 @@ audience:
 - Standard practice; OTel embraces it
 
 ---
+
 ## Sample Structured Log
 
 ```json
@@ -111,6 +125,7 @@ audience:
 ```
 
 ---
+
 ## Don't Log Everything
 
 - INFO for important business events
@@ -119,6 +134,7 @@ audience:
 - Costs add up
 
 ---
+
 ## Sampling Logs
 
 - Filter at SDK or collector
@@ -126,6 +142,7 @@ audience:
 - Keep all errors
 
 ---
+
 ## Replacing Old Pipelines
 
 - Many start: Fluentd or Filebeat
@@ -133,6 +150,7 @@ audience:
 - One pipeline for all signals
 
 ---
+
 ## Common Log Mistakes
 
 - Logs without trace correlation

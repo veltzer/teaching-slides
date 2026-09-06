@@ -9,14 +9,17 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Text Preprocessing and Tokenization
 
 ---
+
 ## Tokenization Strategies
 
 ![tokenization](svg/courses/ai/natural-language-processing/02_text_preprocessing_and_tokenization/tokenization.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Character encoding and the realities of `Unicode`
@@ -26,6 +29,7 @@ audience:
 - Where preprocessing helps and where it silently destroys signal
 
 ---
+
 ## Why Preprocessing Matters
 
 - Garbage in, garbage out — the metaphor is more literal here than elsewhere
@@ -34,6 +38,7 @@ audience:
 - The deeper the model, the easier it is to hide preprocessing mistakes — until production
 
 ---
+
 ## Character Encoding: The Foundation
 
 - All text is bytes; encoding tells us which characters those bytes represent
@@ -42,11 +47,13 @@ audience:
 - A misidentified encoding produces silent corruption, not a hard error
 
 ---
+
 ## The Encoding Landscape
 
 ![encoding_landscape](svg/courses/ai/natural-language-processing/02_text_preprocessing_and_tokenization/encoding_landscape.svg)
 
 ---
+
 ## Unicode in Practice
 
 - `Unicode` assigns each character a code point (e.g., U+00E9 for `e` with acute accent)
@@ -55,6 +62,7 @@ audience:
 - Equality of "the same word" depends on which representation you compare
 
 ---
+
 ## Normalization Forms
 
 - `NFC` — composed: each character is one code point where possible
@@ -63,6 +71,7 @@ audience:
 - Pick one and apply it everywhere; mixing them silently breaks string equality
 
 ---
+
 ## Common Encoding Pitfalls
 
 - Invisible zero-width characters appear in copied text from rich editors
@@ -71,6 +80,7 @@ audience:
 - Emoji modifiers and ZWJ sequences make a single grapheme span many code points
 
 ---
+
 ## Sentence Segmentation
 
 - Splitting a paragraph into sentences sounds trivial; it isn't
@@ -79,6 +89,7 @@ audience:
 - Some languages don't use the same punctuation system at all
 
 ---
+
 ## Sentence Segmentation Across Languages
 
 - Chinese and Japanese use different sentence-ending characters
@@ -87,6 +98,7 @@ audience:
 - A pipeline tuned for English will misbehave silently on most other languages
 
 ---
+
 ## Word Tokenization
 
 - Splitting a sentence into words sounds trivial; it isn't
@@ -95,6 +107,7 @@ audience:
 - Arabic: rich morphology means a single token can carry several morphemes
 
 ---
+
 ## English Tokenization Edge Cases
 
 - Contractions: `don't` → `do n't` or `don't` or `do not`?
@@ -104,6 +117,7 @@ audience:
 - Hashtags and mentions: `#NLP` and `@user` are first-class on social media
 
 ---
+
 ## Subword Tokenization Motivation
 
 - Word-level vocabularies are huge and miss rare words
@@ -112,6 +126,7 @@ audience:
 - Out-of-vocabulary tokens disappear — every input is representable
 
 ---
+
 ## Byte-Pair Encoding
 
 - Start with characters as the initial vocabulary
@@ -120,6 +135,7 @@ audience:
 - The result: common words become single tokens; rare words split into pieces
 
 ---
+
 ## BPE Walkthrough
 
 ```diagram
@@ -135,6 +151,7 @@ final : low, lower, newest, widest as compact tokens
 - Final vocabulary mixes characters, common subwords, common whole words
 
 ---
+
 ## WordPiece
 
 - Same idea as `BPE`; different scoring function
@@ -143,6 +160,7 @@ final : low, lower, newest, widest as compact tokens
 - A `##` prefix marks subword continuations: `playing` → `play ##ing`
 
 ---
+
 ## SentencePiece
 
 - Treats raw text as a sequence of bytes — no preliminary whitespace splitting
@@ -151,11 +169,13 @@ final : low, lower, newest, widest as compact tokens
 - The default for many multilingual models (`mT5`, `XLM-RoBERTa`)
 
 ---
+
 ## Subword Tokenizers Compared
 
 ![subword_tokenizers](svg/courses/ai/natural-language-processing/02_text_preprocessing_and_tokenization/subword_tokenizers.svg)
 
 ---
+
 ## Unigram Language Model Tokenization
 
 - Starts with a large vocabulary of subwords and prunes
@@ -164,6 +184,7 @@ final : low, lower, newest, widest as compact tokens
 - Used by `SentencePiece` in unigram mode; gives multiple valid tokenizations of the same string
 
 ---
+
 ## Vocabulary Size Trade-offs
 
 - Small vocabulary: more tokens per sentence, longer sequences, less memorization
@@ -172,6 +193,7 @@ final : low, lower, newest, widest as compact tokens
 - The right size depends on languages, scripts, and downstream sequence length
 
 ---
+
 ## Tokenization at Inference
 
 - The same tokenizer used in training must be used at inference
@@ -180,11 +202,13 @@ final : low, lower, newest, widest as compact tokens
 - Custom preprocessing on top of a pretrained tokenizer is almost always a mistake
 
 ---
+
 ## Tokenizer Pipeline
 
 ![tokenizer_pipeline](svg/courses/ai/natural-language-processing/02_text_preprocessing_and_tokenization/tokenizer_pipeline.svg)
 
 ---
+
 ## Normalization: Case Folding
 
 - Lowercasing was a default in classical NLP
@@ -193,6 +217,7 @@ final : low, lower, newest, widest as compact tokens
 - Mixed: lowercase queries, preserve case in entities
 
 ---
+
 ## Normalization: Accent and Diacritic Handling
 
 - Stripping accents: `café` → `cafe`
@@ -201,6 +226,7 @@ final : low, lower, newest, widest as compact tokens
 - Decide per language and per task
 
 ---
+
 ## Stop Words
 
 - Frequent function words: `the`, `a`, `of`, `is`
@@ -209,6 +235,7 @@ final : low, lower, newest, widest as compact tokens
 - Stop word lists are language-specific and domain-specific
 
 ---
+
 ## Spelling Correction as Preprocessing
 
 - Helpful for noisy text from search queries or social media
@@ -217,6 +244,7 @@ final : low, lower, newest, widest as compact tokens
 - Use with care; measure the downstream effect, not just the surface accuracy
 
 ---
+
 ## A Complete Preprocessing Pipeline
 
 ```python
@@ -232,6 +260,7 @@ def preprocess(text: str) -> list[int]:
 - Same code path at training and inference
 
 ---
+
 ## Detokenization
 
 - Going from tokens back to readable text
@@ -240,6 +269,7 @@ def preprocess(text: str) -> list[int]:
 - A round-trip test (text → tokens → text) catches many bugs
 
 ---
+
 ## Preprocessing Anti-Patterns
 
 - Different normalization in training and inference — silent quality drop
@@ -248,6 +278,7 @@ def preprocess(text: str) -> list[int]:
 - "Just lowercase everything" without checking the script
 
 ---
+
 ## When To Skip Preprocessing
 
 - Modern large models often perform better on raw text than aggressively cleaned text
@@ -256,6 +287,7 @@ def preprocess(text: str) -> list[int]:
 - Trust the tokenizer to do its job
 
 ---
+
 ## Diagnosing Tokenization Issues
 
 - Inspect the token stream — print what the model actually sees
@@ -264,6 +296,7 @@ def preprocess(text: str) -> list[int]:
 - Tokenization debugging is unglamorous and often the highest-impact fix
 
 ---
+
 ## Token Counts and Costs
 
 - Many APIs charge per token — tokenization decisions become billing decisions
@@ -272,11 +305,13 @@ def preprocess(text: str) -> list[int]:
 - Always measure tokens per sentence on your real data
 
 ---
+
 ## Tokens Per Language
 
 ![tokens_per_language](svg/courses/ai/natural-language-processing/02_text_preprocessing_and_tokenization/tokens_per_language.svg)
 
 ---
+
 ## Special Tokens
 
 - Models reserve a few tokens for structural roles: `<bos>`, `<eos>`, `<pad>`, `<sep>`, `<unk>`
@@ -285,6 +320,7 @@ def preprocess(text: str) -> list[int]:
 - Special tokens are part of the vocabulary; they have weights
 
 ---
+
 ## Anti-Patterns Summary
 
 - Mixing normalization forms across components
@@ -293,6 +329,7 @@ def preprocess(text: str) -> list[int]:
 - Ignoring multilingual realities until non-English data shows up
 
 ---
+
 ## Summary
 
 - Encoding and normalization choices are quiet but consequential

@@ -11,9 +11,11 @@ audience:
   - audiences:managers
 
 ---
+
 # Networking and Content Delivery
 
 ---
+
 ## VPC Anatomy
 
 ![vpc_anatomy](svg/courses/cloud/introduction-to-aws/04_networking_and_content_delivery/vpc_anatomy.svg)

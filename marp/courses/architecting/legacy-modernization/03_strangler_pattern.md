@@ -7,9 +7,11 @@ audience:
   - audiences:architects
 
 ---
+
 # The Strangler Pattern
 
 ---
+
 ## What This Chapter Covers
 
 - The pattern
@@ -19,6 +21,7 @@ audience:
 - Pitfalls
 
 ---
+
 ## What It Is
 
 - Wrap the legacy
@@ -27,6 +30,7 @@ audience:
 - Retire the legacy when empty
 
 ---
+
 ## Why The Name
 
 - After the strangler fig tree
@@ -35,11 +39,13 @@ audience:
 - Slow but inevitable
 
 ---
+
 ## The Pattern Over Time
 
 ![strangler](svg/courses/architecting/legacy-modernization/03_strangler_pattern/strangler.svg)
 
 ---
+
 ## When To Use
 
 - Cannot stop and rewrite
@@ -48,6 +54,7 @@ audience:
 - Long timeline available
 
 ---
+
 ## The Routing Layer
 
 - Sits between client and old system
@@ -56,6 +63,7 @@ audience:
 - Logs everything
 
 ---
+
 ## Building the Router
 
 - Reverse proxy is common
@@ -64,6 +72,7 @@ audience:
 - Custom code as a last resort
 
 ---
+
 ## Carving a Slice
 
 - Pick a coherent feature
@@ -72,6 +81,7 @@ audience:
 - Build the new path
 
 ---
+
 ## First Slice Choice
 
 - Boring, valuable, contained
@@ -80,6 +90,7 @@ audience:
 - Pick something that proves the model
 
 ---
+
 ## Data Strategy
 
 - Read from legacy first
@@ -88,6 +99,7 @@ audience:
 - Then migrate ownership
 
 ---
+
 ## Behavioral Parity
 
 - New must match old
@@ -96,6 +108,7 @@ audience:
 - Gate the cutover
 
 ---
+
 ## Cutting Over
 
 - Feature flag per slice
@@ -104,6 +117,7 @@ audience:
 - Roll back fast
 
 ---
+
 ## Retirement
 
 - Old code path unused
@@ -112,6 +126,7 @@ audience:
 - Archive what compliance requires
 
 ---
+
 ## Pitfalls
 
 - Strangler pattern adopted as label, not practice
@@ -120,6 +135,7 @@ audience:
 - No retirement step
 
 ---
+
 ## Common Strangler Mistakes
 
 - Carving too big a slice

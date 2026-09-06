@@ -15,6 +15,7 @@ audience:
 duration_hours: 40
 
 ---
+
 # Web Application Hacking
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Reflog
 
 ---
+
 ## What This Chapter Covers
 
 - What the reflog records and why it exists
@@ -21,6 +23,7 @@ audience:
 - Day-to-day uses beyond emergency recovery
 
 ---
+
 ## What Is the Reflog?
 
 - A per-reference log of every position the reference has held
@@ -30,6 +33,7 @@ audience:
 - Your private "undo history" for Git operations
 
 ---
+
 ## Why Reflog Exists
 
 - Git's data model never deletes commits, only references
@@ -39,11 +43,13 @@ audience:
 - Recovery is finding the SHA, not undeleting data
 
 ---
+
 ## Reflog Visualized
 
 ![reflog_recovery](svg/courses/git/advanced-git/07_reflog/reflog_recovery.svg)
 
 ---
+
 ## Reading the Reflog
 
 ```bash
@@ -60,6 +66,7 @@ jkl3456 HEAD@{3}: commit: Initial work
 - Use this to spot when you went off course
 
 ---
+
 ## HEAD@{N} vs HEAD~N
 
 - `HEAD~N` — N commits back in current branch's *parent chain*
@@ -69,6 +76,7 @@ jkl3456 HEAD@{3}: commit: Initial work
 - Use `HEAD@{N}` to undo command sequences
 
 ---
+
 ## Time-Based References
 
 ```bash
@@ -83,11 +91,13 @@ git log feature@{2.weeks.ago}..feature
 - Times are local-only — the reflog you query is your local one
 
 ---
+
 ## Reflog Recovery Scenarios
 
 ![reflog_uses](svg/courses/git/advanced-git/07_reflog/reflog_uses.svg)
 
 ---
+
 ## Recovering a Lost Commit
 
 ```bash
@@ -104,6 +114,7 @@ git branch recovered abc1234
 - Garbage collection only removes commits the reflog has forgotten
 
 ---
+
 ## Recovering a Deleted Branch
 
 ```bash
@@ -118,6 +129,7 @@ git branch feature abc1234  # restore from the SHA
 - Even after deletion, the per-branch reflog is in `.git/logs/refs/heads/feature` for a while
 
 ---
+
 ## Recovering a Bad Reset
 
 ```bash
@@ -133,6 +145,7 @@ git reset --hard HEAD@{1}
 - Test before celebrating — make sure you got the right entry
 
 ---
+
 ## Recovering From a Bad Rebase
 
 ```bash
@@ -148,6 +161,7 @@ git reset --hard HEAD@{N}
 - Better than re-rebasing from scratch when you know the prior state was correct
 
 ---
+
 ## Recovering a Lost Stash
 
 ```bash
@@ -164,6 +178,7 @@ git stash apply <sha>
 - Identify the stash by its commit message and contents
 
 ---
+
 ## Per-Branch Reflog
 
 ```bash
@@ -178,6 +193,7 @@ def5678 feature@{1}: branch: created
 - Stored in `.git/logs/refs/heads/<branch>`
 
 ---
+
 ## Reflog Expiration
 
 - Reachable reflog entries expire after 90 days (default)
@@ -187,6 +203,7 @@ def5678 feature@{1}: branch: created
 - For recovery, time matters — act sooner rather than later
 
 ---
+
 ## Extending Reflog Lifetime
 
 ```bash
@@ -200,6 +217,7 @@ git config gc.reflogExpireUnreachable "60 days"
 - Some teams set "never" for critical refs to forbid expiration
 
 ---
+
 ## Pruning the Reflog
 
 ```bash
@@ -213,6 +231,7 @@ git gc --prune=now
 - After this, recovery is *not* possible — no more reflog
 
 ---
+
 ## Day-to-Day Reflog Use
 
 - "What was I working on last Friday?" — `git reflog` and look
@@ -222,6 +241,7 @@ git gc --prune=now
 - It's not just for recovery; it's for orientation
 
 ---
+
 ## Reflog Is Local Only
 
 - Pushing a branch does *not* push its reflog
@@ -231,6 +251,7 @@ git gc --prune=now
 - Don't rely on reflog for cross-machine forensics
 
 ---
+
 ## Reflog and Bare Repos
 
 - Bare repos (servers) typically don't keep reflogs by default
@@ -240,6 +261,7 @@ git gc --prune=now
 - For self-hosted, configure deliberately
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting reflog exists during a panic — `git reflog` first, every time
@@ -249,6 +271,7 @@ git gc --prune=now
 - Treating force-push as harmless because "we have reflog" — only locally
 
 ---
+
 ## Best Practices
 
 - Make `git reflog` your first instinct after a destructive command
@@ -258,6 +281,7 @@ git gc --prune=now
 - Pair reflog with backups for true safety nets
 
 ---
+
 ## Summary
 
 - Reflog records every reference movement locally

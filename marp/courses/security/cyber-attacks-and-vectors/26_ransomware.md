@@ -15,6 +15,7 @@ audience:
 # Ransomware: Understanding and Defending Against Digital Extortion
 
 ---
+
 ## What is Ransomware?
 
 - Ransomware is malware that encrypts victim's files or locks systems, demanding payment for restoration
@@ -24,6 +25,7 @@ audience:
 - Total ransomware damages estimated at $20 billion annually
 
 ---
+
 ## Evolution of Ransomware
 
 ```bash
@@ -60,6 +62,7 @@ audience:
 ```
 
 ---
+
 ## How Ransomware Works
 
 ```bash
@@ -108,6 +111,7 @@ audience:
 - Some ransomware families have had implementation bugs allowing free decryption
 
 ---
+
 ## Delivery Methods
 
 | Method                   | Prevalence | Description                              |
@@ -121,6 +125,7 @@ audience:
 | Insider threat           | ~2%        | Malicious or compromised employee        |
 
 ---
+
 ## Lateral Movement Techniques
 
 ```python
@@ -152,6 +157,7 @@ audience:
 ```
 
 ---
+
 ## Pre-Encryption Actions
 
 ```bash
@@ -186,6 +192,7 @@ taskkill /F /IM outlook.exe
 > Understanding pre-encryption behavior enables detection before encryption begins.
 
 ---
+
 ## Ransomware-as-a-Service (RaaS)
 
 ```bash
@@ -220,6 +227,7 @@ taskkill /F /IM outlook.exe
 ```
 
 ---
+
 ## Notable Ransomware Campaigns
 
 ### WannaCry (2017)
@@ -236,6 +244,7 @@ taskkill /F /IM outlook.exe
 | Attribution     | North Korea (Lazarus Group)                    |
 
 ---
+
 ### NotPetya (2017)
 
 ```python
@@ -265,6 +274,7 @@ taskkill /F /IM outlook.exe
 ```
 
 ---
+
 ### REvil / Sodinokibi
 
 - Responsible for JBS meatpacking ($11M ransom paid) and Kaseya supply chain attack
@@ -282,16 +292,19 @@ taskkill /F /IM outlook.exe
 - Partial recovery and continued operations post-takedown
 
 ---
+
 ## Double and Triple Extortion
 
 ![double_and_triple_extortion](svg/courses/security/cyber-attacks-and-vectors/26_ransomware/double_and_triple_extortion.svg)
 
 ---
+
 ## Backup Strategies: The 3-2-1-1-0 Rule
 
 ![backup_strategies_the_3_2_1_1_0_rule](svg/courses/security/cyber-attacks-and-vectors/26_ransomware/backup_strategies_the_3_2_1_1_0_rule.svg)
 
 ---
+
 ## Immutable Backups
 
 ```bash
@@ -323,6 +336,7 @@ sha256sum /backup/data/*.tar.gz > /backup/checksums.txt
 ```
 
 ---
+
 ## Ransomware Prevention
 
 ```bash
@@ -354,6 +368,7 @@ sha256sum /backup/data/*.tar.gz > /backup/checksums.txt
 ```
 
 ---
+
 ## Ransomware Detection
 
 ```bash
@@ -388,6 +403,7 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 | Ransom note creation                 | Post-encryption    | EDR                 |
 
 ---
+
 ## Incident Response Playbook
 
 ```python
@@ -444,6 +460,7 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 ```
 
 ---
+
 ## To Pay or Not to Pay?
 
 | Factor                        | Pay                        | Don't Pay                  |
@@ -464,11 +481,13 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 - Law enforcement strongly recommends NOT paying
 
 ---
+
 ## Free Decryption Resources
 
 ![free_decryption_resources](svg/courses/security/cyber-attacks-and-vectors/26_ransomware/free_decryption_resources.svg)
 
 ---
+
 ## Key Takeaways
 
 - Ransomware has evolved from simple encryption malware to sophisticated extortion operations

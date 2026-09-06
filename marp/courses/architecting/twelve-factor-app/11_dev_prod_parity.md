@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Factor X: Dev/Prod Parity
 
 ---
+
 ## The Rule
 
 - Keep development, staging, and production as similar as possible
@@ -19,11 +21,13 @@ audience:
 - Closing the gap is a continuous discipline, not a one-time setup
 
 ---
+
 ## Three Parity Gaps
 
 ![parity_gaps](svg/courses/architecting/twelve-factor-app/11_dev_prod_parity/parity_gaps.svg)
 
 ---
+
 ## Three Gaps to Close
 
 - **Time gap**: code written today reaches production weeks later
@@ -31,6 +35,7 @@ audience:
 - **Tools gap**: dev uses SQLite, prod uses Postgres; dev uses local file, prod uses S3
 
 ---
+
 ## Time Gap
 
 - Long delay between commit and prod = forgotten context, drift, hidden incompatibilities
@@ -39,6 +44,7 @@ audience:
 - The shorter the gap, the smaller the surprise
 
 ---
+
 ## Personnel Gap
 
 - "Dev wrote it; ops runs it" — feedback loop is broken
@@ -47,6 +53,7 @@ audience:
 - Twelve-factor practices are easier when you'll be paged at 3am if they fail
 
 ---
+
 ## Tools Gap
 
 - The most insidious gap
@@ -55,6 +62,7 @@ audience:
 - Use the same backing services everywhere
 
 ---
+
 ## Containers Reduce the Gap
 
 - The same image in dev and prod
@@ -63,6 +71,7 @@ audience:
 - The compatibility surface is the image, not the environment
 
 ---
+
 ## Local Development With Real Services
 
 - A dev's laptop runs the production-equivalent stack via docker-compose
@@ -71,6 +80,7 @@ audience:
 - The cost is laptop resources; the gain is fewer prod-only bugs
 
 ---
+
 ## When Differences Are Inevitable
 
 - Production: 100 nodes, real users, terabytes of data
@@ -79,6 +89,7 @@ audience:
 - Behavior differences are not — and that's where the factor focuses
 
 ---
+
 ## Anti-Patterns
 
 - "Dev uses SQLite, prod uses Postgres"
@@ -88,6 +99,7 @@ audience:
 - "Ops runs custom config that dev doesn't know about"
 
 ---
+
 ## Staging Should Mirror Production
 
 - Same image, same backing services (smaller scale)
@@ -96,6 +108,7 @@ audience:
 - A staging that diverges from prod is just another dev environment
 
 ---
+
 ## Summary
 
 - Close the time, personnel, and tools gaps

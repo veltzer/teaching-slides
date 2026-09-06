@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Event-Driven Microservices in Practice
 
 ---
+
 ## What This Chapter Covers
 
 - Decomposing monoliths into events
@@ -21,6 +23,7 @@ audience:
 - Anti-patterns and performance considerations
 
 ---
+
 ## From Monolith to Events
 
 - Identify the bounded contexts
@@ -30,6 +33,7 @@ audience:
 - Decomposition takes time
 
 ---
+
 ## Bounded Contexts as Service Boundaries
 
 - A bounded context is a coherent model with shared language
@@ -39,16 +43,19 @@ audience:
 - Service boundaries should match context boundaries
 
 ---
+
 ## Service Boundaries Visualized
 
 ![service_boundaries](svg/courses/architecting/event-driven-architecture/07_microservices_in_practice/service_boundaries.svg)
 
 ---
+
 ## EDA Smells
 
 ![eda_smells](svg/courses/architecting/event-driven-architecture/07_microservices_in_practice/eda_smells.svg)
 
 ---
+
 ## Event Ownership
 
 - Each event is owned by one service
@@ -58,6 +65,7 @@ audience:
 - Cross-service events need cross-team coordination
 
 ---
+
 ## Internal vs Public Events
 
 - Internal: within a bounded context, rich and detailed
@@ -67,6 +75,7 @@ audience:
 - Treat public events as a stable API
 
 ---
+
 ## Testing Event-Driven Systems
 
 - Unit: pure logic per service, with test events as input
@@ -76,6 +85,7 @@ audience:
 - Each level catches different bugs
 
 ---
+
 ## Unit Testing
 
 - Test the event handler logic in isolation
@@ -85,6 +95,7 @@ audience:
 - The first line of defense
 
 ---
+
 ## Integration Testing
 
 - Spin up the broker (Testcontainers, embedded Kafka)
@@ -94,6 +105,7 @@ audience:
 - Slower but invaluable
 
 ---
+
 ## Contract Testing
 
 - Producer and consumer share a contract
@@ -103,6 +115,7 @@ audience:
 - Especially valuable across team boundaries
 
 ---
+
 ## Consumer-Driven Contracts
 
 - Consumers describe what they need from events
@@ -112,6 +125,7 @@ audience:
 - Reduces "broken by surprise" incidents
 
 ---
+
 ## End-to-End Testing
 
 - Full stack: real services, real broker, real DB
@@ -121,6 +135,7 @@ audience:
 - Necessary but not sufficient
 
 ---
+
 ## Observability: Distributed Tracing
 
 - Correlation ID flows through every event
@@ -130,6 +145,7 @@ audience:
 - Instrument from day one
 
 ---
+
 ## Tracing in Event Systems
 
 - Producer creates a span; correlation ID in headers
@@ -139,6 +155,7 @@ audience:
 - Latency per step becomes visible
 
 ---
+
 ## Metrics That Matter
 
 - Producer rate per topic
@@ -149,6 +166,7 @@ audience:
 - Broker health: disk, throughput, partition count
 
 ---
+
 ## Logging in Event Systems
 
 - Structured logs (JSON) with correlation ID always
@@ -158,6 +176,7 @@ audience:
 - Centralized log aggregation is mandatory
 
 ---
+
 ## Correlation IDs in Practice
 
 - Generated at the entry point (HTTP request, scheduled job)
@@ -167,6 +186,7 @@ audience:
 - The single most useful operational tool
 
 ---
+
 ## Anti-Pattern: Event Soup
 
 - Every change emits a generic event
@@ -176,6 +196,7 @@ audience:
 - Granularity matters
 
 ---
+
 ## Anti-Pattern: Distributed Monolith
 
 - Microservices that must deploy together
@@ -185,6 +206,7 @@ audience:
 - Events should decouple, not just distribute
 
 ---
+
 ## Anti-Pattern: Temporal Coupling
 
 - Service A assumes service B processes events within X seconds
@@ -194,6 +216,7 @@ audience:
 - Verify under realistic load conditions
 
 ---
+
 ## Performance Considerations
 
 - Throughput vs latency trade-offs
@@ -203,6 +226,7 @@ audience:
 - Profile before optimizing
 
 ---
+
 ## Scaling Consumers
 
 - Add consumer instances up to partition count
@@ -212,6 +236,7 @@ audience:
 - Stateful consumers (read models) need coordination
 
 ---
+
 ## Backpressure Handling
 
 - Slow consumer + high producer = lag accumulates
@@ -221,6 +246,7 @@ audience:
 - Monitor lag; alert before it's catastrophic
 
 ---
+
 ## Deployment Considerations
 
 - Deploy producers and consumers independently
@@ -230,6 +256,7 @@ audience:
 - Rollback plans for schema changes are critical
 
 ---
+
 ## Migration Strategies
 
 - Strangler fig: extract one capability at a time
@@ -239,6 +266,7 @@ audience:
 - Patient, iterative; not a big-bang
 
 ---
+
 ## Common Pitfalls
 
 - Treating events as "messages" — losing semantic meaning
@@ -248,6 +276,7 @@ audience:
 - Microservices without a real reason
 
 ---
+
 ## Course Recap
 
 - Fundamentals — events, commands, queries, types
@@ -259,6 +288,7 @@ audience:
 - Microservices in practice
 
 ---
+
 ## Summary
 
 - Event-driven microservices need disciplined contracts and observability

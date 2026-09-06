@@ -15,6 +15,7 @@ audience:
 # Broken Authentication
 
 ---
+
 ## What is Broken Authentication
 
 - Broken Authentication is a web application security risk that occurs when authentication mechanisms are improperly implemented, allowing attackers to compromise user accounts or gain unauthorized access to sensitive data
@@ -22,6 +23,7 @@ audience:
 - Responsible for some of the largest data breaches in history
 
 ---
+
 ## Authentication vs Authorization
 
 ```bash
@@ -42,6 +44,7 @@ audience:
 - Both are critical; a failure in either can lead to unauthorized access
 
 ---
+
 ## Common Broken Authentication Vulnerabilities
 
 - Weak or easily guessable credentials
@@ -68,6 +71,7 @@ audience:
 - Require MFA for all users
 
 ---
+
 ## Brute Force vs Credential Stuffing
 
 | Aspect              | Brute Force              | Credential Stuffing        |
@@ -79,6 +83,7 @@ audience:
 | Defense             | Account lockout          | Breached password check    |
 
 ---
+
 ## Session Fixation Attack
 
 ```python
@@ -120,6 +125,7 @@ def login():
 ```
 
 ---
+
 ## JWT Vulnerabilities
 
 ### The "none" Algorithm Attack
@@ -166,6 +172,7 @@ forged_token = jwt.encode(
 ```
 
 ---
+
 ## JWT Security Best Practices
 
 ```python
@@ -214,6 +221,7 @@ def verify_token(token):
 ## Password Storage: Comparison
 
 ### Why bcrypt/Argon2 are Preferred
+
 | Algorithm  | Speed (hashes/sec) | Memory Usage | Resistant To        |
 |------------|--------------------|--------------|--------------------|
 | MD5        | ~10 billion/sec    | Negligible   | Nothing            |
@@ -223,6 +231,7 @@ def verify_token(token):
 | Argon2id   | ~10,000/sec        | 64+ MB       | GPU, ASIC, side-ch.|
 
 ---
+
 ## Implementing Secure Password Hashing
 
 ```python
@@ -264,6 +273,7 @@ except Exception:
 ```
 
 ---
+
 ## Multi-Factor Authentication (MFA)
 
 ```python
@@ -295,6 +305,7 @@ except Exception:
 | Hardware key (YubiKey)| Highest  | Yes               | Medium          |
 
 ---
+
 ## MFA Bypass Techniques
 
 ```bash
@@ -383,6 +394,7 @@ def create_reset_token(user_email):
 ```
 
 ---
+
 ## Session Management Best Practices
 
 ```python
@@ -407,6 +419,7 @@ app.config.update(
 | Invalidate on logout   | Prevent session reuse                | Always            |
 
 ---
+
 ## Implementing Account Lockout
 
 ```python
@@ -448,6 +461,7 @@ def check_login(username, password):
 ```
 
 ---
+
 ## Authentication Security Checklist
 
 ```sql
@@ -482,6 +496,7 @@ def check_login(username, password):
 ```
 
 ---
+
 ## Key Takeaways
 
 - Broken authentication is one of the most common and dangerous web vulnerabilities

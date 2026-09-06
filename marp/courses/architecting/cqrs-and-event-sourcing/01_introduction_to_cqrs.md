@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to CQRS
 
 ---
+
 ## What Is CQRS?
 
 - **Command Query Responsibility Segregation**
@@ -20,6 +22,7 @@ audience:
 - Two models that share a name space and a domain — but not their internal structure
 
 ---
+
 ## Command-Query Separation: The Older Idea
 
 - Bertrand Meyer (1988): every method should either
@@ -29,6 +32,7 @@ audience:
 - A useful local discipline, but not an architecture
 
 ---
+
 ## CQRS Goes Further
 
 - Splits the entire application into two cooperating models, not just methods
@@ -37,16 +41,19 @@ audience:
 - The two halves are kept consistent by event flow, not by sharing tables
 
 ---
+
 ## The Classic Single-Model Picture
 
 ![single_model_architecture](svg/courses/architecting/cqrs-and-event-sourcing/01_introduction_to_cqrs/single_model_architecture.svg)
 
 ---
+
 ## The CQRS Picture
 
 ![cqrs_architecture](svg/courses/architecting/cqrs-and-event-sourcing/01_introduction_to_cqrs/cqrs_architecture.svg)
 
 ---
+
 ## What Problem Does It Solve?
 
 - Read and write traffic almost always have different shapes
@@ -56,6 +63,7 @@ audience:
 - CQRS lets each side optimize for its real workload
 
 ---
+
 ## Why CQRS Was Introduced
 
 - Domain models grew complex with read concerns
@@ -65,6 +73,7 @@ audience:
 - Teams needed to scale read replicas independently from the write path
 
 ---
+
 ## The Difference From Read Replicas
 
 - A read replica is **the same schema** kept in sync at the database level
@@ -74,11 +83,13 @@ audience:
 - A system can use both: CQRS read models on top of replicated stores
 
 ---
+
 ## Read Replicas vs CQRS
 
 ![read_replicas_vs_cqrs](svg/courses/architecting/cqrs-and-event-sourcing/01_introduction_to_cqrs/read_replicas_vs_cqrs.svg)
 
 ---
+
 ## Commands
 
 - A request to change state, named in the imperative
@@ -88,6 +99,7 @@ audience:
 - Returns acknowledgement of acceptance, not data
 
 ---
+
 ## Anatomy of a Command
 
 ```python
@@ -105,6 +117,7 @@ class PlaceOrder:
 - Includes a stable identifier so the operation can be made idempotent
 
 ---
+
 ## Queries
 
 - A request to read state, named as a question
@@ -114,6 +127,7 @@ class PlaceOrder:
 - May be served from a denormalized cache or projection
 
 ---
+
 ## Anatomy of a Query
 
 ```python
@@ -134,6 +148,7 @@ class OrderSummary:
 - Names match the screen or API the result will fill
 
 ---
+
 ## Command and Query Responsibilities
 
 - Commands own invariants, transactions, and emitting events
@@ -143,6 +158,7 @@ class OrderSummary:
     - Queries: filter and authorization (must reflect what the caller may see)
 
 ---
+
 ## Synchronous Command Handling
 
 - Caller waits for the command to be accepted, processed, and persisted
@@ -152,6 +168,7 @@ class OrderSummary:
 - Every async fan-out (notifications, integrations) must be deferred
 
 ---
+
 ## Asynchronous Command Handling
 
 - Caller submits the command, gets an acknowledgement, and polls or subscribes for the result
@@ -161,11 +178,13 @@ class OrderSummary:
 - Standard for long-running or fan-out-heavy operations
 
 ---
+
 ## Sync vs Async at a Glance
 
 ![sync_vs_async_commands](svg/courses/architecting/cqrs-and-event-sourcing/01_introduction_to_cqrs/sync_vs_async_commands.svg)
 
 ---
+
 ## CQRS in a Layered Architecture
 
 - The application layer accepts a command, hands it to the domain
@@ -174,6 +193,7 @@ class OrderSummary:
 - Queries skip the domain entirely and hit the read model directly
 
 ---
+
 ## CQRS in Hexagonal Architecture
 
 - Two primary ports: a command port and a query port
@@ -183,11 +203,13 @@ class OrderSummary:
 - The two halves never share an object — they share an event stream
 
 ---
+
 ## CQRS in Hexagonal Architecture (Diagram)
 
 ![cqrs_in_hexagonal](svg/courses/architecting/cqrs-and-event-sourcing/01_introduction_to_cqrs/cqrs_in_hexagonal.svg)
 
 ---
+
 ## When CQRS Pays Off
 
 - Read and write workloads diverge sharply in shape or volume
@@ -197,6 +219,7 @@ class OrderSummary:
 - Teams need to scale read and write independently
 
 ---
+
 ## When CQRS Is Overkill
 
 - Simple CRUD where reads are essentially the rows you just wrote
@@ -205,6 +228,7 @@ class OrderSummary:
 - The added eventual consistency is a worse trade-off than the duplication you'd avoid
 
 ---
+
 ## A Common Anti-Pattern: CQRS Everywhere
 
 - Splitting trivial CRUD into commands and queries adds ceremony without value
@@ -212,6 +236,7 @@ class OrderSummary:
 - Apply CQRS to bounded contexts where the trade-off pays — not by default
 
 ---
+
 ## CQRS Without Event Sourcing
 
 - The two patterns are independent
@@ -220,6 +245,7 @@ class OrderSummary:
 - Useful when the team wants the read/write split but not the operational cost of an event store
 
 ---
+
 ## CQRS With Event Sourcing
 
 - The natural pair: events are both the persistence format **and** the projection input
@@ -228,6 +254,7 @@ class OrderSummary:
 - Pays for itself when the domain is event-shaped to begin with
 
 ---
+
 ## Frameworks and Libraries
 
 - **Java/Kotlin**: Axon Framework, Eventuate, Lagom
@@ -238,6 +265,7 @@ class OrderSummary:
 - A framework is optional — CQRS is a structure, not a technology
 
 ---
+
 ## The Cost Side of the Ledger
 
 - Two models means two sets of types, repositories, and tests
@@ -246,6 +274,7 @@ class OrderSummary:
 - Onboarding cost: developers need to learn the split before they can ship
 
 ---
+
 ## Common Misconceptions
 
 - "CQRS means using events" — no, CQRS is the read/write split; events are common but optional
@@ -254,6 +283,7 @@ class OrderSummary:
 - "CQRS is always faster" — it's often slower for trivial cases, faster for complex ones
 
 ---
+
 ## A Decision Framework
 
 - Map the read patterns and the write patterns in the bounded context
@@ -262,6 +292,7 @@ class OrderSummary:
 - Decide per bounded context, not per system
 
 ---
+
 ## Course Roadmap
 
 - Chapter 2: Event Sourcing fundamentals (the natural companion)
@@ -273,6 +304,7 @@ class OrderSummary:
 - Chapter 9: testing CQRS/ES systems
 
 ---
+
 ## Summary
 
 - CQRS splits the read model from the write model

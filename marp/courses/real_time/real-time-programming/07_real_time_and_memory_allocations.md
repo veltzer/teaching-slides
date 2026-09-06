@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Real-Time and Memory Allocations
 
 ---
+
 ## What This Chapter Covers
 
 - Why malloc is incompatible with hard RT
@@ -22,6 +24,7 @@ audience:
 - Memory allocation patterns for RT
 
 ---
+
 ## Why malloc Is Bad for RT
 
 - Variable execution time
@@ -32,16 +35,19 @@ audience:
 - A single malloc can blow a tight deadline
 
 ---
+
 ## Allocation Strategies
 
 ![alloc_strategies](svg/courses/real_time/real-time-programming/07_real_time_and_memory_allocations/alloc_strategies.svg)
 
 ---
+
 ## Pool Allocator
 
 ![pool_allocator](svg/courses/real_time/real-time-programming/07_real_time_and_memory_allocations/pool_allocator.svg)
 
 ---
+
 ## What malloc Does
 
 - Maintains free lists of memory chunks
@@ -51,6 +57,7 @@ audience:
 - The "may"s are why timing varies
 
 ---
+
 ## The Buddy Algorithm
 
 - Memory split into power-of-two-sized blocks
@@ -60,6 +67,7 @@ audience:
 - Bounded operations, but variable cost
 
 ---
+
 ## Slab Allocators
 
 - Pre-allocated cache of fixed-size objects
@@ -69,6 +77,7 @@ audience:
 - The right tool when you have a specific size
 
 ---
+
 ## Pool Allocation
 
 - Pre-allocate a pool of N objects at startup
@@ -79,6 +88,7 @@ audience:
 - The standard pattern for RT
 
 ---
+
 ## Pool Allocation in Code
 
 ```c
@@ -99,6 +109,7 @@ MyObject* pool_alloc() {
 - Bounded; predictable
 
 ---
+
 ## Stack Allocation
 
 - Variables on the stack: zero-cost allocation
@@ -108,6 +119,7 @@ MyObject* pool_alloc() {
 - VLAs (variable-length arrays in C99) work but be careful with sizes
 
 ---
+
 ## Pre-Allocation at Startup
 
 - Allocate all needed memory before entering the RT path
@@ -117,6 +129,7 @@ MyObject* pool_alloc() {
 - `mlockall(MCL_CURRENT | MCL_FUTURE)` to prevent swapping
 
 ---
+
 ## mlockall
 
 ```c
@@ -133,6 +146,7 @@ if (mlockall(MCL_CURRENT | MCL_FUTURE) != 0) {
 - Pre-faults future allocations too
 
 ---
+
 ## Lock-Free Allocators
 
 - Pool allocators that handle concurrent allocation
@@ -142,6 +156,7 @@ if (mlockall(MCL_CURRENT | MCL_FUTURE) != 0) {
 - For one-thread RT: a simple pool is enough
 
 ---
+
 ## Per-Thread Pools
 
 - Each thread has its own pool
@@ -151,6 +166,7 @@ if (mlockall(MCL_CURRENT | MCL_FUTURE) != 0) {
 - Folly, libumem, jemalloc all use variants of this
 
 ---
+
 ## Common Allocation Patterns
 
 - **Object pool**: N pre-allocated, recycled in/out
@@ -160,6 +176,7 @@ if (mlockall(MCL_CURRENT | MCL_FUTURE) != 0) {
 - Each fits a specific use case
 
 ---
+
 ## Fragmentation
 
 - malloc's worst long-term enemy
@@ -169,6 +186,7 @@ if (mlockall(MCL_CURRENT | MCL_FUTURE) != 0) {
 - Long-running RT systems must avoid this
 
 ---
+
 ## Memory Pressure and OOM
 
 - If physical memory runs out, kernel may kill processes (OOM killer)
@@ -178,6 +196,7 @@ if (mlockall(MCL_CURRENT | MCL_FUTURE) != 0) {
 - Cgroups (Linux) for hard limits
 
 ---
+
 ## Stack Overflow
 
 - Recursive code or large stack frames blow past the stack size
@@ -187,6 +206,7 @@ if (mlockall(MCL_CURRENT | MCL_FUTURE) != 0) {
 - A stack overflow is a guaranteed bad day
 
 ---
+
 ## Common Mistakes
 
 - Calling malloc in the RT path

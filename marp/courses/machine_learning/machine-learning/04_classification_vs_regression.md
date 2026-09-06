@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Classification vs Regression
 
 ---
+
 ## What This Chapter Covers
 
 - The two big supervised tasks
@@ -20,6 +22,7 @@ audience:
 - Conversion between them
 
 ---
+
 ## The Core Distinction
 
 - Classification: discrete output
@@ -28,6 +31,7 @@ audience:
 - Same workflow, different metrics
 
 ---
+
 ## Classification Examples
 
 - Email: spam or ham
@@ -36,6 +40,7 @@ audience:
 - Loan: default or not
 
 ---
+
 ## Regression Examples
 
 - House price
@@ -44,6 +49,7 @@ audience:
 - Time-to-failure
 
 ---
+
 ## Output Type Matters
 
 - Classifier: a label, sometimes with a probability
@@ -51,6 +57,7 @@ audience:
 - Confuse the two and your metrics break
 
 ---
+
 ## Binary Classification
 
 - Two classes
@@ -59,6 +66,7 @@ audience:
 - Measure with AUC, F1
 
 ---
+
 ## Multi-Class Classification
 
 - Three or more classes, exclusive
@@ -67,6 +75,7 @@ audience:
 - Confusion matrix is bigger
 
 ---
+
 ## Multi-Label Classification
 
 - Multiple labels can be true at once
@@ -75,11 +84,13 @@ audience:
 - Or use chain models
 
 ---
+
 ## Multi-Class vs Multi-Label
 
 ![multiclass_multilabel](svg/courses/machine_learning/machine-learning/04_classification_vs_regression/multiclass_multilabel.svg)
 
 ---
+
 ## Ordinal Targets
 
 - Ordered categories: low, medium, high
@@ -88,6 +99,7 @@ audience:
 - Specialised algorithms exist
 
 ---
+
 ## Predicting Probabilities
 
 - Many problems need a probability, not just a label
@@ -96,6 +108,7 @@ audience:
 - Calibrate if needed
 
 ---
+
 ## Probability vs Score
 
 - Some models output a score, not a probability
@@ -104,6 +117,7 @@ audience:
 - Calibration converts scores to probabilities
 
 ---
+
 ## Choosing a Threshold
 
 - Default 0.5 is rarely optimal
@@ -112,6 +126,7 @@ audience:
 - Document the choice
 
 ---
+
 ## Threshold Tradeoffs
 
 - High threshold: high precision, low recall
@@ -119,6 +134,7 @@ audience:
 - ROC and PR curves visualise the tradeoff
 
 ---
+
 ## Class Imbalance
 
 - 99% one class, 1% another
@@ -127,6 +143,7 @@ audience:
 - Resample or weight classes
 
 ---
+
 ## Cost-Sensitive
 
 - Different errors cost different amounts
@@ -135,6 +152,7 @@ audience:
 - Calibrate threshold to costs
 
 ---
+
 ## Regression Output
 
 - A real number
@@ -143,6 +161,7 @@ audience:
 - Sometimes quantiles
 
 ---
+
 ## Linear Regression
 
 - Output: weighted sum of features
@@ -151,6 +170,7 @@ audience:
 - Strong baseline
 
 ---
+
 ## Logistic Regression
 
 - Despite the name: classification
@@ -159,6 +179,7 @@ audience:
 - Strong baseline
 
 ---
+
 ## Sigmoid
 
 - f(x) = 1 / (1 + exp(-x))
@@ -167,6 +188,7 @@ audience:
 - Interpretable
 
 ---
+
 ## Softmax
 
 - Multi-class generalisation of sigmoid
@@ -175,6 +197,7 @@ audience:
 - Can be miscalibrated
 
 ---
+
 ## Quantile Regression
 
 - Predict median, percentiles
@@ -183,6 +206,7 @@ audience:
 - Pinball loss
 
 ---
+
 ## Poisson Regression
 
 - For count data
@@ -191,6 +215,7 @@ audience:
 - Use when data are counts
 
 ---
+
 ## Survival Analysis
 
 - Time to event
@@ -199,6 +224,7 @@ audience:
 - Common in medicine, churn
 
 ---
+
 ## Choosing Classification vs Regression
 
 - Bin a continuous target if categories are decisions
@@ -207,6 +233,7 @@ audience:
 - Default to regression for continuous
 
 ---
+
 ## Discretisation Tradeoff
 
 - Binning is lossy
@@ -215,6 +242,7 @@ audience:
 - Decide late, predict raw
 
 ---
+
 ## Convert Regression to Classification
 
 - Predict the number
@@ -223,6 +251,7 @@ audience:
 - Decision is downstream
 
 ---
+
 ## Convert Classification to Regression
 
 - Predict probability instead of label
@@ -230,6 +259,7 @@ audience:
 - Often more useful in practice
 
 ---
+
 ## Common Confusions
 
 - Calling logistic regression a regressor
@@ -238,6 +268,7 @@ audience:
 - Treating ordinal as nominal
 
 ---
+
 ## Sklearn Classes
 
 - Classifier: ends with Classifier or LogisticRegression
@@ -245,6 +276,7 @@ audience:
 - Always check the type
 
 ---
+
 ## sklearn Examples
 
 ```python
@@ -254,6 +286,7 @@ reg = LinearRegression()
 ```
 
 ---
+
 ## Predicting With Both
 
 ```python
@@ -262,6 +295,7 @@ reg.fit(X, y_real).predict(X_new)
 ```
 
 ---
+
 ## Evaluation Metrics
 
 - Classification: accuracy, F1, AUC
@@ -269,6 +303,7 @@ reg.fit(X, y_real).predict(X_new)
 - Don't mix them up
 
 ---
+
 ## Common Mistakes
 
 - Threshold = 0.5 always
@@ -277,26 +312,31 @@ reg.fit(X, y_real).predict(X_new)
 - Treating probs as calibrated
 
 ---
+
 ## Threshold Tradeoff
 
 ![threshold_tradeoff](svg/courses/machine_learning/machine-learning/04_classification_vs_regression/threshold_tradeoff.svg)
 
 ---
+
 ## Sigmoid vs Softmax
 
 ![sigmoid_vs_softmax](svg/courses/machine_learning/machine-learning/04_classification_vs_regression/sigmoid_vs_softmax.svg)
 
 ---
+
 ## Binary vs Multiclass
 
 ![binary_vs_multiclass](svg/courses/machine_learning/machine-learning/04_classification_vs_regression/binary_vs_multiclass.svg)
 
 ---
+
 ## Class Imbalance
 
 ![class_imbalance](svg/courses/machine_learning/machine-learning/04_classification_vs_regression/class_imbalance.svg)
 
 ---
+
 ## Summary
 
 - Classification = label; regression = number

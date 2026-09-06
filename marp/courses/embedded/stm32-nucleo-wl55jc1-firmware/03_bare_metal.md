@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Writing Bare Metal
 
 ---

@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Cluster topology
@@ -20,6 +22,7 @@ audience:
 - Performance tuning
 
 ---
+
 ## Topology
 
 - Three or more nodes
@@ -28,11 +31,13 @@ audience:
 - Plan replicas to survive
 
 ---
+
 ## Topology Tiers
 
 ![cluster_topology](svg/courses/databases/cockroachdb/05_operations/cluster_topology.svg)
 
 ---
+
 ## Cluster Init
 
 - Start nodes
@@ -41,6 +46,7 @@ audience:
 - Configure cluster settings
 
 ---
+
 ## Adding Nodes
 
 - Start with same join address
@@ -49,6 +55,7 @@ audience:
 - No manual sharding
 
 ---
+
 ## Removing Nodes
 
 - Decommission cleanly
@@ -57,6 +64,7 @@ audience:
 - Avoid abrupt stops
 
 ---
+
 ## Backups
 
 - Full and incremental
@@ -65,6 +73,7 @@ audience:
 - Test restores quarterly
 
 ---
+
 ## Restore
 
 - Full plus incremental backups applied
@@ -73,6 +82,7 @@ audience:
 - Validate before swap
 
 ---
+
 ## Upgrades
 
 - Rolling node by node
@@ -81,6 +91,7 @@ audience:
 - Have rollback plan
 
 ---
+
 ## Monitoring Metrics
 
 - Replicas leader, follower counts
@@ -89,6 +100,7 @@ audience:
 - Live nodes vs expected
 
 ---
+
 ## Built-in DB Console
 
 - Real-time view of cluster
@@ -97,6 +109,7 @@ audience:
 - Slow query insight
 
 ---
+
 ## Alerts
 
 - Under-replicated ranges
@@ -105,6 +118,7 @@ audience:
 - Time skew exceeded
 
 ---
+
 ## Performance Tuning
 
 - Hot range fixes
@@ -113,6 +127,7 @@ audience:
 - Query plan inspection
 
 ---
+
 ## Cost Awareness
 
 - Three replicas means three times storage
@@ -121,6 +136,7 @@ audience:
 - Tag and chargeback
 
 ---
+
 ## Security
 
 - TLS required
@@ -129,6 +145,7 @@ audience:
 - Encryption at rest
 
 ---
+
 ## Common Operational Mistakes
 
 - One AZ deployment

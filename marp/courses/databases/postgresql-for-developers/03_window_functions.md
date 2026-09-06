@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Window Functions
 
 ---
+
 ## Windows vs GROUP BY
 
 ![window_basics](svg/courses/databases/postgresql-for-developers/03_window_functions/window_basics.svg)
 
 ---
+
 ## Common Window Functions
 
 ![window_functions_overview](svg/courses/databases/postgresql-for-developers/03_window_functions/window_functions_overview.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What window functions are
@@ -30,6 +34,7 @@ audience:
 - Frames
 
 ---
+
 ## What Window Functions Are
 
 - Compute across a set of rows without collapsing
@@ -37,6 +42,7 @@ audience:
 - Game-changing for analytics
 
 ---
+
 ## OVER Clause
 
 ```sql
@@ -52,6 +58,7 @@ FROM employees;
 - PARTITION BY: split into groups
 
 ---
+
 ## PARTITION BY
 
 ```sql
@@ -67,6 +74,7 @@ FROM employees;
 - "Rank within department"
 
 ---
+
 ## Common Functions
 
 - `ROW_NUMBER()`: unique sequence
@@ -76,6 +84,7 @@ FROM employees;
 - `LEAD(col, n)`: next row
 
 ---
+
 ## LAG and LEAD
 
 ```sql
@@ -90,6 +99,7 @@ FROM daily_revenue;
 - Day-over-day metrics
 
 ---
+
 ## Aggregates As Window
 
 ```sql
@@ -104,6 +114,7 @@ FROM employees;
 - All work as window functions
 
 ---
+
 ## Running Totals
 
 ```sql
@@ -118,6 +129,7 @@ FROM sales;
 - Common in financial / activity analysis
 
 ---
+
 ## Frames
 
 - "ROWS BETWEEN n PRECEDING AND m FOLLOWING"
@@ -126,6 +138,7 @@ FROM sales;
 - Be explicit when needed
 
 ---
+
 ## Moving Average
 
 ```sql
@@ -143,6 +156,7 @@ FROM daily;
 - Smooths noisy data
 
 ---
+
 ## Top N Per Group
 
 ```sql
@@ -157,6 +171,7 @@ SELECT * FROM ranked WHERE rn <= 3;
 - Top 3 products per category
 
 ---
+
 ## Performance
 
 - Windows can be expensive (sort + scan)
@@ -164,6 +179,7 @@ SELECT * FROM ranked WHERE rn <= 3;
 - EXPLAIN ANALYZE to verify
 
 ---
+
 ## Common Window Mistakes
 
 - Forgetting PARTITION BY (one big window)

@@ -15,6 +15,7 @@ audience:
 # Supply Chain Attacks
 
 ---
+
 ## What is a Supply Chain Attack?
 
 - A supply chain attack targets the less-secure elements in the software or hardware supply chain
@@ -41,6 +42,7 @@ audience:
 ```
 
 ---
+
 ## Types of Software Supply Chain Attacks
 
 | Attack Type                  | Vector                                    | Example               |
@@ -55,6 +57,7 @@ audience:
 | Container image poisoning    | Malicious Docker images on registries     | Various               |
 
 ---
+
 ## Software Supply Chain Attack Flow
 
 ```bash
@@ -85,6 +88,7 @@ audience:
 ```
 
 ---
+
 ## Case Study: SolarWinds SUNBURST (2020)
 
 ```bash
@@ -123,16 +127,19 @@ audience:
 - Only activated on "interesting" targets (selective targeting)
 
 ---
+
 ## Case Study: xz-utils Backdoor (2024)
 
 ![case_study_xz_utils_backdoor_2024](svg/courses/security/cyber-attacks-and-vectors/25_supply_chain_attacks/case_study_xz_utils_backdoor_2024.svg)
 
 ---
+
 ## Dependency Confusion
 
 ![dependency_confusion](svg/courses/security/cyber-attacks-and-vectors/25_supply_chain_attacks/dependency_confusion.svg)
 
 ---
+
 ## Dependency Confusion Defense
 
 ```bash
@@ -178,6 +185,7 @@ def verify_packages():
 ```
 
 ---
+
 ## Typosquatting Attacks
 
 ```bash
@@ -205,6 +213,7 @@ def verify_packages():
 ```
 
 ---
+
 ## npm and PyPI Security Incidents
 
 | Incident                | Year | Package/Registry | Impact                         |
@@ -218,6 +227,7 @@ def verify_packages():
 | polyfill.io takeover    | 2024 | CDN              | Malicious JS served to 100K+ sites |
 
 ---
+
 ## Software Bill of Materials (SBOM)
 
 ```bash
@@ -271,6 +281,7 @@ safety check
 ```
 
 ---
+
 ## Verification Strategies
 
 ### Package Signing and Verification
@@ -294,6 +305,7 @@ cosign verify --key cosign.pub myregistry/myimage:latest
 ```
 
 ---
+
 ## Sigstore: Open Source Signing
 
 ```bash
@@ -338,6 +350,7 @@ npm publish --provenance
 ```
 
 ---
+
 ## CI/CD Pipeline Security
 
 ```bash
@@ -372,11 +385,13 @@ npm publish --provenance
 ```
 
 ---
+
 ## SLSA Framework (Supply-chain Levels for Software Artifacts)
 
 ![slsa_framework_supply_chain_levels_for_software_artifacts](svg/courses/security/cyber-attacks-and-vectors/25_supply_chain_attacks/slsa_framework_supply_chain_levels_for_software_artifacts.svg)
 
 ---
+
 ## Practical Defense Checklist
 
 ```bash
@@ -412,6 +427,7 @@ grype myapp:latest
 ```
 
 ---
+
 ## Key Takeaways
 
 - Supply chain attacks exploit trust relationships to bypass security controls

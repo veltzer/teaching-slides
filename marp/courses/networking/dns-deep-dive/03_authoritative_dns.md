@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Authoritative DNS and Zones
 
 ---
+
 ## What This Chapter Covers
 
 - Zone file format and structure
@@ -21,6 +23,7 @@ audience:
 - Cloud-hosted zones
 
 ---
+
 ## What Is a Zone?
 
 - A contiguous portion of the namespace
@@ -30,6 +33,7 @@ audience:
 - Lives on authoritative nameservers
 
 ---
+
 ## Zone File Format
 
 ```output
@@ -47,6 +51,7 @@ mail IN A    5.6.7.8
 ```
 
 ---
+
 ## Zone File Anatomy
 
 - `$ORIGIN` — the zone name
@@ -56,6 +61,7 @@ mail IN A    5.6.7.8
 - Tab-separated; columns are name, class, type, data
 
 ---
+
 ## Primary Nameserver
 
 - Holds the master copy of the zone
@@ -65,6 +71,7 @@ mail IN A    5.6.7.8
 - Often called "master" historically
 
 ---
+
 ## Secondary Nameservers
 
 - Read-only copies of the zone
@@ -74,21 +81,25 @@ mail IN A    5.6.7.8
 - Listed in NS records alongside primary
 
 ---
+
 ## Zone Transfer Visualized
 
 ![zone_transfer](svg/courses/networking/dns-deep-dive/03_authoritative_dns/zone_transfer.svg)
 
 ---
+
 ## Zone File Anatomy
 
 ![zone_file](svg/courses/networking/dns-deep-dive/03_authoritative_dns/zone_file.svg)
 
 ---
+
 ## Anycast Deployment
 
 ![anycast_deployment](svg/courses/networking/dns-deep-dive/03_authoritative_dns/anycast_deployment.svg)
 
 ---
+
 ## AXFR — Full Zone Transfer
 
 - Transfer the entire zone
@@ -98,6 +109,7 @@ mail IN A    5.6.7.8
 - Often restricted by IP for security
 
 ---
+
 ## IXFR — Incremental Zone Transfer
 
 - Transfer only the changes since a given serial
@@ -107,6 +119,7 @@ mail IN A    5.6.7.8
 - Default in modern setups
 
 ---
+
 ## NOTIFY
 
 - Primary tells secondaries: "I've updated"
@@ -116,6 +129,7 @@ mail IN A    5.6.7.8
 - Standard in modern deployments
 
 ---
+
 ## Serial Number
 
 - Increases with every zone change
@@ -125,6 +139,7 @@ mail IN A    5.6.7.8
 - Bumping the serial without changes is occasionally needed
 
 ---
+
 ## Refresh, Retry, Expire
 
 - Refresh: how often to check for updates (3600s default)
@@ -134,6 +149,7 @@ mail IN A    5.6.7.8
 - Tune for your topology
 
 ---
+
 ## TSIG: Authenticated Updates
 
 - Transaction signatures for DNS messages
@@ -143,6 +159,7 @@ mail IN A    5.6.7.8
 - Standard for managed DNS today
 
 ---
+
 ## Dynamic DNS
 
 - RFC 2136: programmatic record updates
@@ -152,6 +169,7 @@ mail IN A    5.6.7.8
 - A power tool — use with care
 
 ---
+
 ## Glue Records
 
 - A nameserver's address inside its own zone
@@ -161,6 +179,7 @@ mail IN A    5.6.7.8
 - Easy to forget — breaks delegation
 
 ---
+
 ## Cloud-Hosted Zones
 
 - AWS Route 53
@@ -170,6 +189,7 @@ mail IN A    5.6.7.8
 - All managed; you don't run servers
 
 ---
+
 ## Route 53
 
 - Highly available, globally distributed
@@ -179,6 +199,7 @@ mail IN A    5.6.7.8
 - Pay per query (very cheap at low volume)
 
 ---
+
 ## Choosing a Provider
 
 - Performance (anycast quality)
@@ -188,6 +209,7 @@ mail IN A    5.6.7.8
 - Most enterprises use multiple providers for redundancy
 
 ---
+
 ## Multi-Provider DNS
 
 - Two providers serving the same zone
@@ -197,6 +219,7 @@ mail IN A    5.6.7.8
 - Sync mechanism: CI pipeline writing both APIs
 
 ---
+
 ## Zone File Best Practices
 
 - Comment liberally
@@ -206,6 +229,7 @@ mail IN A    5.6.7.8
 - Validate before deploying
 
 ---
+
 ## Validation Tools
 
 - `named-checkzone` — BIND-specific zone validation
@@ -215,6 +239,7 @@ mail IN A    5.6.7.8
 - Test before deploying production changes
 
 ---
+
 ## Change Management
 
 - All changes via version-controlled zone files
@@ -224,6 +249,7 @@ mail IN A    5.6.7.8
 - DNS changes need rollback paths
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting to bump the serial
@@ -233,6 +259,7 @@ mail IN A    5.6.7.8
 - Forgetting glue when delegating
 
 ---
+
 ## Operational Concerns
 
 - Monitor query rates per zone
@@ -242,6 +269,7 @@ mail IN A    5.6.7.8
 - Keep registrar credentials secure (lock domains)
 
 ---
+
 ## Summary
 
 - Zones are the unit of authoritative DNS administration

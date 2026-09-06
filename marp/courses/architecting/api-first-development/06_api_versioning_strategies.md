@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # API Versioning Strategies
 
 ---
+
 ## Deprecation Lifecycle
 
 ![deprecation_lifecycle](svg/courses/architecting/api-first-development/06_api_versioning_strategies/deprecation_lifecycle.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why APIs need versioning
@@ -27,6 +30,7 @@ audience:
 - Practical versioning workflows
 
 ---
+
 ## Why Versioning
 
 - APIs evolve
@@ -36,6 +40,7 @@ audience:
 - Version is the contract between you and your consumers
 
 ---
+
 ## Breaking vs Non-Breaking
 
 - **Non-breaking**: add new optional fields, new endpoints, new optional params
@@ -45,6 +50,7 @@ audience:
 - "It's just a small change" often isn't
 
 ---
+
 ## URL Versioning
 
 ```http
@@ -59,6 +65,7 @@ GET /v2/users/42
 - The pragmatic default
 
 ---
+
 ## Header Versioning
 
 ```http
@@ -73,6 +80,7 @@ Accept: application/vnd.example.v2+json
 - Works; less common in practice
 
 ---
+
 ## Query Parameter Versioning
 
 ```http
@@ -85,6 +93,7 @@ GET /users/42?version=2
 - Possible but rarely the best choice
 
 ---
+
 ## Content Negotiation
 
 - The HTTP standard way: client sends `Accept` header, server picks best match
@@ -94,6 +103,7 @@ GET /users/42?version=2
 - Use if your team understands HTTP deeply
 
 ---
+
 ## Semantic Versioning For APIs
 
 - Major.Minor.Patch
@@ -104,6 +114,7 @@ GET /users/42?version=2
 - Minor and patch evolve in place
 
 ---
+
 ## Deprecation Policy
 
 - "This endpoint is deprecated; will be removed on 2027-01-01"
@@ -113,6 +124,7 @@ GET /users/42?version=2
 - Without a policy, consumers have no time to migrate
 
 ---
+
 ## Sunset Header
 
 ```http
@@ -126,6 +138,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Self-documenting
 
 ---
+
 ## Maintaining Two Versions
 
 - Two implementations? Painful
@@ -135,6 +148,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Most teams: keep v1 alive minimally; build new in v2
 
 ---
+
 ## When To Bump Major
 
 - Removing an endpoint or field
@@ -145,6 +159,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Real breakage; not "I want a clean slate"
 
 ---
+
 ## When NOT To Bump Major
 
 - Adding a new endpoint
@@ -154,6 +169,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Bug fixes that don't change behaviour spec'd in the contract
 
 ---
+
 ## Backward-Compatible Schema Changes
 
 - Adding optional fields: safe
@@ -162,6 +178,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Tightening: NOT safe (will reject previously-valid input)
 
 ---
+
 ## Internal vs Public APIs
 
 - **Internal**: deprecate quickly; teams update together
@@ -171,6 +188,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Match your process to your audience
 
 ---
+
 ## API Versioning In CI
 
 - Spec lint: warn on potential breaking changes
@@ -179,6 +197,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Helps a team catch what's easy to miss
 
 ---
+
 ## Common Versioning Mistakes
 
 - Renaming things in v1 instead of bumping to v2
@@ -188,6 +207,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Versioning at the wrong level (per-endpoint when you have a whole API contract)
 
 ---
+
 ## Where to Put the Version
 
 ![version_methods](svg/courses/architecting/api-first-development/06_api_versioning_strategies/version_methods.svg)

@@ -7,14 +7,17 @@ audience:
   - audiences:developers
 
 ---
+
 # PostgreSQL Architecture and Internals
 
 ---
+
 ## MVCC Basics
 
 ![mvcc_basics](svg/courses/databases/postgresql-for-developers/01_postgresql_architecture_and_internals/mvcc_basics.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Process architecture
@@ -25,6 +28,7 @@ audience:
 - A high-level mental model
 
 ---
+
 ## Process Model
 
 - One process per connection (postmaster forks)
@@ -33,11 +37,13 @@ audience:
 - Each connection: separate Linux process
 
 ---
+
 ## Process Architecture
 
 ![postgres_processes](svg/courses/databases/postgresql-for-developers/01_postgresql_architecture_and_internals/postgres_processes.svg)
 
 ---
+
 ## Storage Layout
 
 - Database = directory
@@ -46,6 +52,7 @@ audience:
 - TOAST: large values stored separately
 
 ---
+
 ## Pages
 
 - 8KB blocks
@@ -54,6 +61,7 @@ audience:
 - The fundamental unit of I/O
 
 ---
+
 ## WAL (Write-Ahead Log)
 
 - Every change logged to WAL first
@@ -62,6 +70,7 @@ audience:
 - Foundation of durability
 
 ---
+
 ## Checkpoints
 
 - Periodic flush of dirty pages to disk
@@ -70,6 +79,7 @@ audience:
 - Trade-off: I/O spike vs recovery time
 
 ---
+
 ## MVCC
 
 - Multi-Version Concurrency Control
@@ -79,6 +89,7 @@ audience:
 - Vacuum cleans up
 
 ---
+
 ## VACUUM
 
 - Reclaims space from dead tuples
@@ -87,6 +98,7 @@ audience:
 - Manual VACUUM for special cases
 
 ---
+
 ## Background Workers
 
 - Logical replication
@@ -95,6 +107,7 @@ audience:
 - Configurable count
 
 ---
+
 ## Buffers
 
 - shared_buffers: cache
@@ -103,6 +116,7 @@ audience:
 - Tune for workload
 
 ---
+
 ## Replication
 
 - Streaming: WAL streamed to replicas
@@ -111,6 +125,7 @@ audience:
 - Read replicas: read-only physical replicas
 
 ---
+
 ## Common Misconceptions
 
 - "Postgres is single-threaded": wrong (one process per connection; parallel query exists)

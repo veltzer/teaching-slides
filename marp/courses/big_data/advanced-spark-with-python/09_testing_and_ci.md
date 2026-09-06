@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Testing and CI/CD for PySpark
 
 ---
+
 ## Chapter Overview
 * Unit testing PySpark with pytest
 * Creating test SparkSessions and fixtures
@@ -24,6 +26,7 @@ audience:
 * Code quality tools: pylint, mypy, black
 
 ---
+
 ## Learning Objectives
 * Write effective unit tests for PySpark transformations
 * Set up reusable test fixtures with conftest.py
@@ -34,16 +37,19 @@ audience:
 * Enforce code quality with linting and type checking
 
 ---
+
 ## Spark Testing Pyramid
 
 ![spark_testing_pyramid](svg/courses/big_data/advanced-spark-with-python/09_testing_and_ci/spark_testing_pyramid.svg)
 
 ---
+
 ## Testing Architecture
 
 ![testing_architecture](svg/courses/big_data/advanced-spark-with-python/09_testing_and_ci/testing_architecture.svg)
 
 ---
+
 ## Project Structure for Testable Spark Code
 
 ```tree
@@ -82,6 +88,7 @@ my_spark_project/
 ```
 
 ---
+
 ## Creating a Test SparkSession
 
 ```python
@@ -115,6 +122,7 @@ def reset_spark_context(spark):
 ```
 
 ---
+
 ## Why These SparkSession Settings
 
 | Setting | Value | Reason |
@@ -126,6 +134,7 @@ def reset_spark_context(spark):
 | driver.bindAddress | 127.0.0.1 | Avoid network issues in CI |
 
 ---
+
 ## Writing Your First PySpark Test
 
 ```python
@@ -151,6 +160,7 @@ def normalize_email(df: DataFrame) -> DataFrame:
 ```
 
 ---
+
 ## Test for Cleaning Functions
 
 ```python
@@ -207,6 +217,7 @@ def test_normalize_email(spark):
 ```
 
 ---
+
 ## DataFrame Assertions Without Libraries
 
 ```python
@@ -266,6 +277,7 @@ def test_transformation_output(spark):
 ```
 
 ---
+
 ## Using chispa for DataFrame Equality
 
 ```python
@@ -323,11 +335,13 @@ def test_column_equality(spark):
 ```
 
 ---
+
 ## chispa Error Messages
 
 ![chispa_error_messages](svg/courses/big_data/advanced-spark-with-python/09_testing_and_ci/chispa_error_messages.svg)
 
 ---
+
 ## Test Fixtures with conftest.py
 
 ```python
@@ -398,6 +412,7 @@ def empty_orders(spark):
 ```
 
 ---
+
 ## Testing UDFs
 
 ```python
@@ -434,6 +449,7 @@ clean_phone_udf = F.udf(clean_phone_logic, StringType())
 ```
 
 ---
+
 ## Testing UDFs: Pure Python and Spark
 
 ```python
@@ -535,6 +551,7 @@ def test_clean_phone_udf_in_spark(spark):
 ```
 
 ---
+
 ## Mocking External Data Sources
 
 ```python
@@ -601,6 +618,7 @@ def test_etl_with_mocked_reader(spark):
 ```
 
 ---
+
 ## Integration Testing Patterns
 
 ```python
@@ -710,6 +728,7 @@ def test_pipeline_idempotent(spark, etl_dirs):
 ```
 
 ---
+
 ## Testing Edge Cases
 
 ```python
@@ -781,6 +800,7 @@ def test_large_values(spark):
 ```
 
 ---
+
 ## Running Tests with pytest
 
 ```bash
@@ -815,6 +835,7 @@ pytest tests/ -v -x
 ```
 
 ---
+
 ## pytest Configuration
 
 ```python
@@ -850,6 +871,7 @@ pytest tests/ -v -x
 ```
 
 ---
+
 ## CI/CD Pipeline: GitHub Actions
 
 ```yaml
@@ -922,11 +944,13 @@ jobs:
 ```
 
 ---
+
 ## CI Pipeline Visualization
 
 ![ci_pipeline_visualization](svg/courses/big_data/advanced-spark-with-python/09_testing_and_ci/ci_pipeline_visualization.svg)
 
 ---
+
 ## Code Quality: pylint Configuration
 
 ```python
@@ -959,6 +983,7 @@ jobs:
 ```
 
 ---
+
 ## Code Quality: mypy with PySpark Stubs
 
 ```python
@@ -1000,6 +1025,7 @@ def aggregate_by_columns(
 ```
 
 ---
+
 ## Code Quality: black Formatting
 
 ```python
@@ -1037,6 +1063,7 @@ def process_data(
 ```
 
 ---
+
 ## Full Program: Complete Test Suite
 
 ```python
@@ -1077,6 +1104,7 @@ def sample_events(spark):
 ```
 
 ---
+
 ## Full Program: Transformations and Aggregations
 
 ```python
@@ -1156,6 +1184,7 @@ def test_compute_user_totals_single_user(spark):
 ```
 
 ---
+
 ## Summary: Testing and CI/CD
 
 **Testing Strategy:**

@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Introduction to Data Lakehouse
 
 ---
+
 ## What This Chapter Covers
 
 - What a lakehouse is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What a Lakehouse Is
 
 - Single store for raw and curated data
@@ -28,6 +31,7 @@ audience:
 - Both BI and ML workloads
 
 ---
+
 ## Data Lake
 
 - Cheap object storage
@@ -36,6 +40,7 @@ audience:
 - Flexible but messy
 
 ---
+
 ## Data Warehouse
 
 - Structured tables
@@ -44,6 +49,7 @@ audience:
 - Expensive at scale
 
 ---
+
 ## The Gap
 
 - Two systems, two copies
@@ -52,11 +58,13 @@ audience:
 - Wasted storage
 
 ---
+
 ## Lake vs Warehouse vs Lakehouse
 
 ![lakehouse_compare](svg/courses/data_engineering/data-lakehouse/01_introduction/lakehouse_compare.svg)
 
 ---
+
 ## Lakehouse Promise
 
 - One copy of the data
@@ -65,6 +73,7 @@ audience:
 - Open formats
 
 ---
+
 ## Why Now
 
 - Cheap object storage matured
@@ -73,11 +82,13 @@ audience:
 - Cloud platforms support it
 
 ---
+
 ## Lakehouse History
 
 ![lakehouse_history](svg/courses/data_engineering/data-lakehouse/01_introduction/lakehouse_history.svg)
 
 ---
+
 ## Open Table Formats
 
 - Provide ACID over object stores
@@ -86,6 +97,7 @@ audience:
 - Compaction and clustering
 
 ---
+
 ## Storage Layer
 
 - Object stores (S3 and equivalents)
@@ -94,6 +106,7 @@ audience:
 - Designed for big-block reads
 
 ---
+
 ## Compute Engines
 
 - Read open tables
@@ -102,6 +115,7 @@ audience:
 - Pay for what you use
 
 ---
+
 ## Workloads
 
 - Batch ETL
@@ -110,6 +124,7 @@ audience:
 - ML feature pipelines
 
 ---
+
 ## When Lakehouse Fits
 
 - Mixed BI and ML
@@ -118,6 +133,7 @@ audience:
 - Data sovereignty needs
 
 ---
+
 ## Course Outline
 
 - Storage and formats
@@ -127,6 +143,7 @@ audience:
 - Operations
 
 ---
+
 ## Common Beginner Mistakes
 
 - Treating object store as a database

@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Recurrent Neural Networks
 
 ---
+
 ## What This Chapter Covers
 
 - Sequence modeling fundamentals
@@ -20,6 +22,7 @@ audience:
 - Applications in text and time series
 
 ---
+
 ## What Is a Sequence
 
 - Ordered data where order matters
@@ -28,6 +31,7 @@ audience:
 - Sensor readings, stock prices, video
 
 ---
+
 ## Why Not a Feedforward Net
 
 - Inputs can be variable length
@@ -36,6 +40,7 @@ audience:
 - We need memory of what came before
 
 ---
+
 ## The RNN Idea
 
 - Process one element at a time
@@ -44,11 +49,13 @@ audience:
 - Hidden state summarizes the past
 
 ---
+
 ## The Recurrent Cell
 
 ![rnn_cell](svg/courses/machine_learning/deep-learning-fundamentals/04_rnns/rnn_cell.svg)
 
 ---
+
 ## Unrolling Through Time
 
 - Same cell applied at each step
@@ -57,6 +64,7 @@ audience:
 - Weights are tied across layers
 
 ---
+
 ## RNN Math
 
 - h_t = tanh(W_h h_{t-1} + W_x x_t + b)
@@ -65,6 +73,7 @@ audience:
 - Updated by backprop through time
 
 ---
+
 ## Backprop Through Time
 
 - Unroll the RNN
@@ -73,6 +82,7 @@ audience:
 - Memory cost grows with sequence length
 
 ---
+
 ## Truncated BPTT
 
 - Only backprop a fixed number of steps
@@ -81,6 +91,7 @@ audience:
 - Common practical compromise
 
 ---
+
 ## Vanishing Gradients
 
 - Repeated multiplication shrinks gradients
@@ -89,6 +100,7 @@ audience:
 - The main weakness of vanilla RNNs
 
 ---
+
 ## Exploding Gradients
 
 - Same product, but blowing up
@@ -97,6 +109,7 @@ audience:
 - Fix with gradient clipping
 
 ---
+
 ## Gradient Clipping
 
 - If gradient norm > threshold, scale it down
@@ -105,6 +118,7 @@ audience:
 - One line in modern frameworks
 
 ---
+
 ## LSTM
 
 - Long Short-Term Memory
@@ -113,16 +127,19 @@ audience:
 - Designed to preserve long-range information
 
 ---
+
 ## LSTM Gates Visualized
 
 ![lstm gates](svg/courses/machine_learning/deep-learning-fundamentals/04_rnns/lstm_gates.svg)
 
 ---
+
 ## LSTM Cell
 
 ![lstm_cell](svg/courses/machine_learning/deep-learning-fundamentals/04_rnns/lstm_cell.svg)
 
 ---
+
 ## LSTM Gates
 
 - Forget gate: what to drop from cell state
@@ -131,6 +148,7 @@ audience:
 - Each gate is a small sigmoid network
 
 ---
+
 ## Why LSTMs Work
 
 - Cell state is mostly additive
@@ -139,6 +157,7 @@ audience:
 - Long dependencies become tractable
 
 ---
+
 ## GRU
 
 - Gated Recurrent Unit
@@ -147,6 +166,7 @@ audience:
 - Often matches LSTM with fewer parameters
 
 ---
+
 ## LSTM vs GRU
 
 - LSTM: more parameters, more expressive
@@ -155,6 +175,7 @@ audience:
 - Try both, keep the better one
 
 ---
+
 ## Bidirectional RNNs
 
 - Run one RNN forward, another backward
@@ -163,6 +184,7 @@ audience:
 - Useful when full sequence is available
 
 ---
+
 ## Stacked RNNs
 
 - Stack multiple RNN layers
@@ -171,6 +193,7 @@ audience:
 - Diminishing returns past 2-3 layers
 
 ---
+
 ## RNN in Keras
 
 ```python
@@ -183,6 +206,7 @@ model = keras.Sequential([
 ```
 
 ---
+
 ## RNN in PyTorch
 
 ```python
@@ -199,6 +223,7 @@ class Tagger(nn.Module):
 ```
 
 ---
+
 ## Embeddings
 
 - Map tokens to dense vectors
@@ -207,6 +232,7 @@ class Tagger(nn.Module):
 - The entry point of any text model
 
 ---
+
 ## Sequence-to-Sequence
 
 - Input sequence, output sequence
@@ -215,11 +241,13 @@ class Tagger(nn.Module):
 - Decoder produces output
 
 ---
+
 ## Encoder-Decoder
 
 ![seq2seq](svg/courses/machine_learning/deep-learning-fundamentals/04_rnns/seq2seq.svg)
 
 ---
+
 ## Seq2Seq Training
 
 - Encoder summarizes input into a state
@@ -228,6 +256,7 @@ class Tagger(nn.Module):
 - Trained end to end on pairs
 
 ---
+
 ## Teacher Forcing
 
 - During training, feed the true previous token
@@ -236,6 +265,7 @@ class Tagger(nn.Module):
 - Sometimes mixed with sampled tokens
 
 ---
+
 ## Beam Search
 
 - At inference, pick top-k partial outputs
@@ -244,6 +274,7 @@ class Tagger(nn.Module):
 - Standard for translation and captioning
 
 ---
+
 ## The Bottleneck
 
 - Encoder must squeeze input into one vector
@@ -252,6 +283,7 @@ class Tagger(nn.Module):
 - Discussed in the transformers chapter
 
 ---
+
 ## Text Classification
 
 - Embed tokens, pass through RNN
@@ -260,6 +292,7 @@ class Tagger(nn.Module):
 - Sentiment, topic, spam, intent
 
 ---
+
 ## Sequence Labeling
 
 - Predict a label per token
@@ -268,6 +301,7 @@ class Tagger(nn.Module):
 - Combine with a CRF for structured output
 
 ---
+
 ## Time Series Forecasting
 
 - Input: past values (and features)
@@ -276,6 +310,7 @@ class Tagger(nn.Module):
 - Compare to ARIMA and gradient boosted trees
 
 ---
+
 ## Sliding Windows
 
 - Convert series into supervised pairs
@@ -284,6 +319,7 @@ class Tagger(nn.Module):
 - Same trick used for many sequence tasks
 
 ---
+
 ## Multivariate Series
 
 - Multiple input channels per time step
@@ -292,6 +328,7 @@ class Tagger(nn.Module):
 - Watch for differing scales
 
 ---
+
 ## When Not to Use RNNs
 
 - Very long sequences: prefer transformers
@@ -300,6 +337,7 @@ class Tagger(nn.Module):
 - When pretrained transformers exist for your task
 
 ---
+
 ## Why Transformers Won
 
 - Parallel across the sequence
@@ -308,6 +346,7 @@ class Tagger(nn.Module):
 - Pretrained checkpoints dominate
 
 ---
+
 ## Where RNNs Still Shine
 
 - Streaming inference: low latency per step
@@ -316,6 +355,7 @@ class Tagger(nn.Module):
 - Reinforcement learning agents
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting to mask padding tokens
@@ -324,6 +364,7 @@ class Tagger(nn.Module):
 - Letting sequence length blow up memory
 
 ---
+
 ## Practical Tips
 
 - Start with a single-layer LSTM or GRU
@@ -332,6 +373,7 @@ class Tagger(nn.Module):
 - Track per-step and per-example losses
 
 ---
+
 ## Summary
 
 - RNNs share weights across time and carry hidden state

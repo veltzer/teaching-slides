@@ -14,6 +14,7 @@ audience:
   - audiences:managers
 
 ---
+
 # FinOps / IT Cost Optimization
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

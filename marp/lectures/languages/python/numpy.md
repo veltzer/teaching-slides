@@ -12,6 +12,7 @@ audience:
 - audiences:data-scientists
 
 ---
+
 # NumPy and Python
 ## The Foundation of Numerical Computing in Python
 ## Mark Veltzer

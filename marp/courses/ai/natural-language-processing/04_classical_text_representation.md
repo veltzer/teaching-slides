@@ -12,9 +12,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Classical Text Representation
 
 ---
+
 ## What This Chapter Covers
 
 - Bag-of-words and the document-term matrix
@@ -24,6 +26,7 @@ audience:
 - The distributional hypothesis and co-occurrence vectors
 
 ---
+
 ## Why Classical Methods Still Matter
 
 - Many production pipelines still run on `TF-IDF` and friends
@@ -33,6 +36,7 @@ audience:
 - Cheap to train, cheap to serve, easy to inspect
 
 ---
+
 ## From Tokens to Vectors
 
 - Tokenization gives a stream of discrete tokens
@@ -42,6 +46,7 @@ audience:
 - The choice of representation shapes everything downstream
 
 ---
+
 ## Bag-of-Words: The Core Idea
 
 - Treat a document as an unordered multiset of tokens
@@ -51,11 +56,13 @@ audience:
 - Surprisingly effective for many classification and retrieval tasks
 
 ---
+
 ## The Document-Term Matrix
 
 ![document_term_matrix](svg/courses/ai/natural-language-processing/04_classical_text_representation/document_term_matrix.svg)
 
 ---
+
 ## Vocabulary Construction
 
 - Scan the corpus and collect distinct tokens
@@ -65,6 +72,7 @@ audience:
 - The vocabulary is part of the model — version it with the weights
 
 ---
+
 ## Sparse Storage
 
 - Vocabularies have tens to hundreds of thousands of terms
@@ -74,6 +82,7 @@ audience:
 - `scipy.sparse` and `sklearn` use sparse matrices throughout
 
 ---
+
 ## Bag-of-Words Code
 
 ```python
@@ -93,6 +102,7 @@ X = vectorizer.fit_transform(documents)
 - `max_features` caps the dimensionality
 
 ---
+
 ## What Bag-of-Words Loses
 
 - Word order: `dog bites man` and `man bites dog` map to the same vector
@@ -102,6 +112,7 @@ X = vectorizer.fit_transform(documents)
 - And yet: enough signal remains to classify topics, sentiment, language
 
 ---
+
 ## N-Gram Features
 
 - Capture local order by counting contiguous token sequences
@@ -111,6 +122,7 @@ X = vectorizer.fit_transform(documents)
 - Higher orders are possible but rapidly impractical
 
 ---
+
 ## Why N-Grams Help
 
 - `not good` becomes its own feature, distinct from `good`
@@ -120,6 +132,7 @@ X = vectorizer.fit_transform(documents)
 - Often combined: unigrams plus bigrams as a single feature space
 
 ---
+
 ## Skip-Grams
 
 - Allow gaps between the tokens that form the n-gram
@@ -129,11 +142,13 @@ X = vectorizer.fit_transform(documents)
 - Will reappear in `word2vec` as a training objective rather than a feature
 
 ---
+
 ## The Feature Explosion
 
 ![feature_explosion](svg/courses/ai/natural-language-processing/04_classical_text_representation/feature_explosion.svg)
 
 ---
+
 ## Feature Selection
 
 - Filter by document frequency: drop terms seen in too few or too many documents
@@ -143,6 +158,7 @@ X = vectorizer.fit_transform(documents)
 - Better features beat more features for classical methods
 
 ---
+
 ## Term Weighting: Raw Counts
 
 - The simplest weighting: cell value equals the count
@@ -152,6 +168,7 @@ X = vectorizer.fit_transform(documents)
 - Forms the baseline against which other weightings are measured
 
 ---
+
 ## Binary Weighting
 
 - Cell is 1 if the term appears, 0 otherwise
@@ -161,6 +178,7 @@ X = vectorizer.fit_transform(documents)
 - A useful sanity check before reaching for `TF-IDF`
 
 ---
+
 ## Term Frequency Variants
 
 - Raw count: `tf = count`
@@ -170,6 +188,7 @@ X = vectorizer.fit_transform(documents)
 - Sublinear scaling tames the influence of repeated terms
 
 ---
+
 ## Inverse Document Frequency
 
 - A term that appears in every document carries no discriminative signal
@@ -179,6 +198,7 @@ X = vectorizer.fit_transform(documents)
 - Combines with `tf` multiplicatively: `tfidf = tf * idf`
 
 ---
+
 ## TF-IDF Derivation
 
 ```python
@@ -196,6 +216,7 @@ def tfidf(tf_matrix):
 - Sklearn's `TfidfVectorizer` rolls all of this into one call
 
 ---
+
 ## TF-IDF Intuition
 
 - Up-weight terms that are frequent in this document but rare across the corpus
@@ -205,6 +226,7 @@ def tfidf(tf_matrix):
 - Decades of `IR` systems rely on this exact recipe
 
 ---
+
 ## Sublinear Scaling
 
 - Raw `tf` over-rewards repetition: ten mentions are not ten times more informative
@@ -214,6 +236,7 @@ def tfidf(tf_matrix):
 - A small change with measurable retrieval quality gains
 
 ---
+
 ## BM25 and Probabilistic Weighting
 
 - `BM25` extends `TF-IDF` with explicit term saturation and length normalization
@@ -223,6 +246,7 @@ def tfidf(tf_matrix):
 - Still the default ranking function in `Elasticsearch` and `Lucene`
 
 ---
+
 ## BM25 Formula
 
 ```python
@@ -237,6 +261,7 @@ def bm25(tf, idf, doc_len, avg_len, k1=1.5, b=0.75):
 - Tuning matters less than people think — defaults are robust
 
 ---
+
 ## Why BM25 Beats Plain TF-IDF
 
 - Saturates the contribution of any single term — no single word can dominate
@@ -246,11 +271,13 @@ def bm25(tf, idf, doc_len, avg_len, k1=1.5, b=0.75):
 - Modern hybrid retrieval blends `BM25` with dense embeddings
 
 ---
+
 ## Weighting Schemes Compared
 
 ![weighting_schemes](svg/courses/ai/natural-language-processing/04_classical_text_representation/weighting_schemes.svg)
 
 ---
+
 ## The Curse of High Dimensions
 
 - Vocabularies of 100k+ make distance metrics behave badly
@@ -260,6 +287,7 @@ def bm25(tf, idf, doc_len, avg_len, k1=1.5, b=0.75):
 - Latent representations address exactly this problem
 
 ---
+
 ## Latent Semantic Analysis
 
 - Apply truncated `SVD` to the document-term matrix
@@ -269,6 +297,7 @@ def bm25(tf, idf, doc_len, avg_len, k1=1.5, b=0.75):
 - A linear, deterministic precursor to neural embeddings
 
 ---
+
 ## LSA via SVD
 
 ```python
@@ -284,6 +313,7 @@ doc_topics = svd.fit_transform(tfidf_matrix)
 - Cosine similarity in the latent space captures semantic closeness
 
 ---
+
 ## Latent Dirichlet Allocation
 
 - Generative probabilistic model: documents are mixtures of topics
@@ -293,11 +323,13 @@ doc_topics = svd.fit_transform(tfidf_matrix)
 - More interpretable than `SVD` but slower and harder to tune
 
 ---
+
 ## Topic Modeling as Dimensionality Reduction
 
 ![topic_modeling](svg/courses/ai/natural-language-processing/04_classical_text_representation/topic_modeling.svg)
 
 ---
+
 ## When to Use Topic Models
 
 - Exploratory analysis of large corpora
@@ -307,6 +339,7 @@ doc_topics = svd.fit_transform(tfidf_matrix)
 - Less useful as a direct classifier — `TF-IDF` plus linear is usually stronger
 
 ---
+
 ## The Distributional Hypothesis
 
 - Firth, 1957: "you shall know a word by the company it keeps"
@@ -316,6 +349,7 @@ doc_topics = svd.fit_transform(tfidf_matrix)
 - Counts in, vectors out — the recipe is older than it looks
 
 ---
+
 ## Co-occurrence Matrices
 
 - Slide a context window over the corpus
@@ -325,6 +359,7 @@ doc_topics = svd.fit_transform(tfidf_matrix)
 - Cosine similarity over rows captures semantic similarity surprisingly well
 
 ---
+
 ## Pointwise Mutual Information
 
 - Raw co-occurrence counts favor frequent words
@@ -334,6 +369,7 @@ doc_topics = svd.fit_transform(tfidf_matrix)
 - A simple `PPMI` matrix already contains much of what neural embeddings learn
 
 ---
+
 ## From Counts to Vectors
 
 - Start with a sparse co-occurrence or `PPMI` matrix
@@ -343,6 +379,7 @@ doc_topics = svd.fit_transform(tfidf_matrix)
 - The classical and neural approaches are not as different as they appear
 
 ---
+
 ## Practical Pipeline
 
 - Tokenize and normalize as in the previous chapter
@@ -352,6 +389,7 @@ doc_topics = svd.fit_transform(tfidf_matrix)
 - Cache the fitted vectorizer — it is part of the model
 
 ---
+
 ## Anti-Patterns
 
 - Refitting the vectorizer at inference instead of loading the trained one
@@ -361,6 +399,7 @@ doc_topics = svd.fit_transform(tfidf_matrix)
 - Skipping `IDF` because "the model will figure it out"
 
 ---
+
 ## When Classical Methods Are Still Right
 
 - Small corpora where neural models overfit
@@ -370,6 +409,7 @@ doc_topics = svd.fit_transform(tfidf_matrix)
 - Hybrid retrieval: `BM25` plus dense embeddings beats either alone
 
 ---
+
 ## Summary
 
 - Bag-of-words remains a transparent and powerful representation

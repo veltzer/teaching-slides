@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Refactoring Toward Deeper Insight
 
 ---
+
 ## What This Chapter Is About
 
 - DDD is iterative; the first model is rarely the right one
@@ -20,6 +22,7 @@ audience:
 - The mature DDD team refactors the model continuously
 
 ---
+
 ## Why Models Drift
 
 - Initial understanding is incomplete
@@ -28,6 +31,7 @@ audience:
 - The model that fit yesterday may not fit today
 
 ---
+
 ## Signs of a Drifting Model
 
 - Names don't match how the business talks anymore
@@ -36,11 +40,13 @@ audience:
 - The codebase has more `if special_case` than business logic
 
 ---
+
 ## Drift Symptoms
 
 ![drift_signs](svg/courses/architecting/domain-driven-design/07_refactoring_toward_deeper_insight/drift_signs.svg)
 
 ---
+
 ## Three Levels of Refactoring
 
 - **Code-level**: rename, extract method, simplify (the standard refactorings)
@@ -49,11 +55,13 @@ audience:
 - All three apply; DDD emphasizes the latter two
 
 ---
+
 ## Levels Visualized
 
 ![refactor_levels](svg/courses/architecting/domain-driven-design/07_refactoring_toward_deeper_insight/refactor_levels.svg)
 
 ---
+
 ## Continuous Refactoring as Discipline
 
 - Refactoring isn't a project; it's a daily practice
@@ -62,6 +70,7 @@ audience:
 - Without this discipline, models decay
 
 ---
+
 ## Listening for the Domain
 
 - Conversations with domain experts surface new concepts
@@ -70,6 +79,7 @@ audience:
 - These are signals to refactor
 
 ---
+
 ## Concept Mining
 
 - Look in the code for repeated patterns
@@ -78,6 +88,7 @@ audience:
 - The implicit becomes explicit
 
 ---
+
 ## Discovery Through Implementation
 
 - Sometimes you only see the right model after writing the wrong one
@@ -86,6 +97,7 @@ audience:
 - Plan for it; don't expect to nail the model on day one
 
 ---
+
 ## Pivoting on a Pivotal Concept
 
 - Sometimes a single new concept reorganizes everything
@@ -94,6 +106,7 @@ audience:
 - These are rare but transformative
 
 ---
+
 ## Splitting an Aggregate
 
 - An aggregate that's grown too big and slow
@@ -102,6 +115,7 @@ audience:
 - Cross-aggregate operations become process managers (or sagas)
 
 ---
+
 ## Merging Aggregates
 
 - Two aggregates that always change together
@@ -110,6 +124,7 @@ audience:
 - Less common than splitting, but real
 
 ---
+
 ## Redrawing Bounded Contexts
 
 - Two contexts that always exchange the same data
@@ -118,6 +133,7 @@ audience:
 - Sometimes the right answer is one bigger context
 
 ---
+
 ## When to Stop Refactoring
 
 - The model is clear, the team agrees, the names match the business
@@ -126,6 +142,7 @@ audience:
 - "Refactor when you feel friction" is a useful heuristic
 
 ---
+
 ## Resistance to Refactoring
 
 - "We don't have time to refactor"
@@ -134,6 +151,7 @@ audience:
 - All real; all overcome by tying refactoring to feature velocity
 
 ---
+
 ## Tying Refactoring to Features
 
 - "This feature is hard because the model is wrong"
@@ -142,6 +160,7 @@ audience:
 - The business sees velocity; the team sees a healthy model
 
 ---
+
 ## Strategic Refactoring
 
 - Bounded context boundaries change
@@ -150,6 +169,7 @@ audience:
 - Apply the strangler fig pattern: build new alongside, migrate gradually
 
 ---
+
 ## Watch for Hot Spots
 
 - Areas of the codebase with frequent bugs
@@ -158,6 +178,7 @@ audience:
 - These are model-drift indicators
 
 ---
+
 ## Tools to Help
 
 - Event storming workshops to re-explore the domain
@@ -166,6 +187,7 @@ audience:
 - Tests as a safety net for refactoring
 
 ---
+
 ## Anti-Patterns
 
 - Refactoring in a separate branch that lives forever
@@ -174,6 +196,7 @@ audience:
 - Refactoring that doesn't reflect the actual domain — just rearranging
 
 ---
+
 ## Course Recap
 
 - Chapter 1: strategic design — bounded contexts, ubiquitous language
@@ -185,6 +208,7 @@ audience:
 - Chapter 7: refactoring as discipline
 
 ---
+
 ## Where to Go From Here
 
 - Pick one bounded context in your system
@@ -194,6 +218,7 @@ audience:
 - Repeat for the next context
 
 ---
+
 ## Recommended Reading
 
 - Eric Evans, "Domain-Driven Design" (the original "blue book")
@@ -202,6 +227,7 @@ audience:
 - Alberto Brandolini's writing on event storming
 
 ---
+
 ## Summary
 
 - DDD is iterative; refactoring is part of the practice

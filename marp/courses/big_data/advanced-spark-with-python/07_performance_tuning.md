@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Performance Tuning and Optimization
 
 ---
+
 ## Chapter Overview
 * Spark UI interpretation and DAG visualization
 * Shuffle optimization and partition tuning
@@ -23,6 +25,7 @@ audience:
 * Caching strategies and storage levels
 
 ---
+
 ## Learning Objectives
 * Read and interpret the Spark Web UI
 * Diagnose performance bottlenecks from DAGs and metrics
@@ -32,11 +35,13 @@ audience:
 * Choose the right caching strategy for each workload
 
 ---
+
 ## Spark Performance Levers
 
 ![spark_performance_levers](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/spark_performance_levers.svg)
 
 ---
+
 ## The Spark Web UI
 1. Jobs tab: shows all jobs triggered by actions
 1. Stages tab: shows stages within each job
@@ -46,6 +51,7 @@ audience:
 1. SQL tab: shows query plans and execution statistics
 
 ---
+
 ## Spark UI: Key Metrics to Watch
 
 | Metric | Where to Find | What it Tells You |
@@ -59,11 +65,13 @@ audience:
 | Peak Execution Memory | SQL tab | Memory consumption |
 
 ---
+
 ## Understanding the DAG
 
 ![understanding_the_dag](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/understanding_the_dag.svg)
 
 ---
+
 ## Reading Execution Plans
 
 ```python
@@ -100,6 +108,7 @@ query.explain(mode="codegen")
 ```
 
 ---
+
 ## Execution Plan Key Operators
 
 | Operator | Symbol | Meaning |
@@ -114,11 +123,13 @@ query.explain(mode="codegen")
 | WholeStageCodegen | WholeStageCodegen | Fused code generation |
 
 ---
+
 ## Shuffle Deep Dive
 
 ![shuffle_deep_dive](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/shuffle_deep_dive.svg)
 
 ---
+
 ## Shuffle Configuration
 
 ```python
@@ -158,6 +169,7 @@ spark.conf.set("spark.shuffle.service.enabled", "true")
 ```
 
 ---
+
 ## Partition Tuning Guide
 
 ```python
@@ -211,6 +223,7 @@ df_by_key = df.repartition(100, "user_id")
 ```
 
 ---
+
 ## Partition Size Guidelines
 
 | Partition Size | Status | Action |
@@ -223,11 +236,13 @@ df_by_key = df.repartition(100, "user_id")
 | > 2 GB | Critical | Will likely OOM |
 
 ---
+
 ## Memory Architecture
 
 ![memory_architecture](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/memory_architecture.svg)
 
 ---
+
 ## Memory Configuration Guide
 
 ```python
@@ -261,6 +276,7 @@ spark.conf.set("spark.driver.maxResultSize", "2g")
 ```
 
 ---
+
 ## Memory Tuning Scenarios
 
 | Symptom | Likely Cause | Fix |
@@ -273,6 +289,7 @@ spark.conf.set("spark.driver.maxResultSize", "2g")
 | Container killed by YARN | Memory overhead too low | Increase memoryOverhead |
 
 ---
+
 ## Data Skew Detection
 
 ```python
@@ -333,11 +350,13 @@ partition_stats.describe().show()
 ```
 
 ---
+
 ## Data Skew Solutions
 
 ![data_skew_solutions](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/data_skew_solutions.svg)
 
 ---
+
 ## Full Program: Salted Join for Skewed Data
 
 ```python
@@ -397,6 +416,7 @@ result.withColumn("pid", F.spark_partition_id()) \
 ```
 
 ---
+
 ## Broadcast Join for Skew Avoidance
 
 ```python
@@ -427,6 +447,7 @@ result.explain()
 ```
 
 ---
+
 ## Adaptive Query Execution (AQE) Configuration
 
 ```python
@@ -483,11 +504,13 @@ spark.conf.set(
 ```
 
 ---
+
 ## AQE: How It Works
 
 ![aqe_how_it_works](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/aqe_how_it_works.svg)
 
 ---
+
 ## Dynamic Partition Pruning (DPP)
 
 ```python
@@ -520,6 +543,7 @@ result.explain()
 ```
 
 ---
+
 ## Full Program: Caching Strategy
 
 ```python
@@ -562,6 +586,7 @@ base_df.unpersist()
 ```
 
 ---
+
 ## cache() vs persist() vs checkpoint()
 
 | Method | Storage | Lineage | Recovery | Use Case |
@@ -572,11 +597,13 @@ base_df.unpersist()
 | localCheckpoint() | Disk (local) | Truncated | Lost if executor dies | Fast, less reliable |
 
 ---
+
 ## When to Cache and When Not To
 
 ![when_to_cache_and_when_not_to](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/when_to_cache_and_when_not_to.svg)
 
 ---
+
 ## Storage Level Selection Guide
 
 ```python
@@ -610,6 +637,7 @@ for (rdd_id, rdd) in spark.sparkContext._jsc.sc().getRDDStorageInfo():
 ```
 
 ---
+
 ## Full Program: Complete Performance Tuning Session
 
 ```python
@@ -705,11 +733,13 @@ print(f"\nTotal pipeline time: {total_time:.2f}s")
 ```
 
 ---
+
 ## Performance Tuning Checklist
 
 ![performance_tuning_checklist](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/performance_tuning_checklist.svg)
 
 ---
+
 ## Common Performance Anti-Patterns
 
 | Anti-Pattern | Impact | Better Approach |

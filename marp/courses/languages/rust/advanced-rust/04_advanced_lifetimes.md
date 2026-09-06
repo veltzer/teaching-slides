@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced Lifetimes
 
 Elision, Bounds, Variance, and Self-Referential Structs

@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Animation
 
 ---
+
 ## Animation Principles
 
 ![animation_principles](svg/courses/unity/introduction-to-game-development-with-unity/05_animation/animation_principles.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The principles that make animation feel alive
@@ -26,6 +29,7 @@ audience:
 - Driving animations from script
 
 ---
+
 ## What "Animation" Means Here
 
 - Changing a property over time — position, rotation, colour, anything
@@ -35,6 +39,7 @@ audience:
 - Both go through the same Animator pipeline in Unity
 
 ---
+
 ## A Few Animation Principles
 
 - **Squash and stretch**: even rigid things deform under acceleration
@@ -44,6 +49,7 @@ audience:
 - These come from Disney's Twelve Principles of Animation
 
 ---
+
 ## Animation Clip vs Animator
 
 - A **Clip** is a single named animation: "Walk", "Jump", "Idle"
@@ -53,6 +59,7 @@ audience:
 - Both live as assets in your project
 
 ---
+
 ## Creating a Clip in Unity
 
 - Select a GameObject &#8594; Window &#8594; Animation &#8594; Animation
@@ -62,6 +69,7 @@ audience:
 - Stop recording, hit Play in the Animation window to preview
 
 ---
+
 ## Keyframes
 
 - A **keyframe** is "at time t, this property has value v"
@@ -71,6 +79,7 @@ audience:
 - Less is more: a few good keyframes beat dozens of redundant ones
 
 ---
+
 ## The Animator Window
 
 - Window &#8594; Animation &#8594; Animator
@@ -80,11 +89,13 @@ audience:
 - Parameters: variables that drive transitions (Bool, Int, Float, Trigger)
 
 ---
+
 ## Animator State Machine
 
 ![state_machine](svg/courses/unity/introduction-to-game-development-with-unity/05_animation/state_machine.svg)
 
 ---
+
 ## Transitions
 
 - Right-click a state &#8594; Make Transition &#8594; click target
@@ -94,6 +105,7 @@ audience:
 - Always provide a way back — a transition graph with no exit is a trap
 
 ---
+
 ## Parameters
 
 - Bool: on/off (`IsRunning`, `IsGrounded`)
@@ -103,6 +115,7 @@ audience:
 - Set from script: `animator.SetBool("IsRunning", true)`
 
 ---
+
 ## Importing Animated Characters
 
 - FBX from Maya / Blender / Mixamo brings the rig and clips together
@@ -112,6 +125,7 @@ audience:
 - Drag the result into the Hierarchy and you have an animated character
 
 ---
+
 ## Mixamo Workflow
 
 - Mixamo (mixamo.com, free): upload a model, get hundreds of mocap animations
@@ -121,6 +135,7 @@ audience:
 - Watch the animation pivot; mismatched pivots look strange
 
 ---
+
 ## Blend Trees
 
 - A way to interpolate between several clips based on a parameter
@@ -130,6 +145,7 @@ audience:
 - Add via Animator window: right-click empty space &#8594; Create State &#8594; From New Blend Tree
 
 ---
+
 ## Driving Animation From Script
 
 ```csharp
@@ -153,6 +169,7 @@ void Update() {
 - Avoid driving the Animator directly with `Play("clipname")` — couples logic to clip names
 
 ---
+
 ## Layers and Avatar Masks
 
 - Animator can have multiple **layers** that play in parallel
@@ -162,6 +179,7 @@ void Update() {
 - Powerful but adds complexity; ignore until you need it
 
 ---
+
 ## Tweens for UI and Simple Motion
 
 - Animator is overkill for "fade this button to 50% over 0.3s"
@@ -171,6 +189,7 @@ void Update() {
 - Coroutine example: gradual fade with `Mathf.Lerp` and `yield return null`
 
 ---
+
 ## Common Pitfalls
 
 - Animator state names typo'd in `SetTrigger` calls — silent failure

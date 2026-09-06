@@ -13,11 +13,13 @@ audience:
   - audiences:devops
 
 ---
+
 # Bash Scripting
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
+
 ## Brian Fox - Creator of Bash
 
 ![bg left](jpg/courses/languages/bash/bash-scripting/brian_fox.png)

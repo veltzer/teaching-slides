@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Diagrams
 
 ---
+
 ## When Diagrams Earn Their Place
 
 ![diagram_purposes](svg/courses/development_methodologies/technical-writing/07_diagrams/diagram_purposes.svg)
@@ -22,6 +24,7 @@ audience:
 ![diagram_types](svg/courses/development_methodologies/technical-writing/07_diagrams/diagram_types.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - When and how to use diagrams
@@ -32,6 +35,7 @@ audience:
 - Diagram-as-code workflows
 
 ---
+
 ## Why Diagrams Help
 
 - Some concepts are inherently visual
@@ -41,6 +45,7 @@ audience:
 - Done badly, diagrams confuse more than they clarify
 
 ---
+
 ## When To Use a Diagram
 
 - Showing relationships between many things
@@ -50,6 +55,7 @@ audience:
 - When prose is taking too many words
 
 ---
+
 ## When Not To Use a Diagram
 
 - A single concept (use prose or a list)
@@ -59,6 +65,7 @@ audience:
 - When you can't explain it in words first
 
 ---
+
 ## Diagram-as-Code
 
 - Diagrams written as text (Mermaid, PlantUML)
@@ -68,6 +75,7 @@ audience:
 - The modern default for technical docs
 
 ---
+
 ## Mermaid
 
 ```misc
@@ -85,6 +93,7 @@ flowchart LR
 - The most-deployed diagram tool today
 
 ---
+
 ## Mermaid Diagram Types
 
 - `flowchart`: boxes and arrows
@@ -95,6 +104,7 @@ flowchart LR
 - `gantt`: project timelines
 
 ---
+
 ## PlantUML
 
 ```misc
@@ -116,6 +126,7 @@ Server --> User: JSON
 - Less integrated with modern doc sites
 
 ---
+
 ## Architecture Diagrams
 
 - Show major components and their relationships
@@ -125,6 +136,7 @@ Server --> User: JSON
 - Less is more: 5-10 boxes, not 50
 
 ---
+
 ## C4 Model
 
 - A specific approach to architecture diagrams
@@ -134,6 +146,7 @@ Server --> User: JSON
 - Tools: Structurizr, Mermaid (`C4Context` syntax)
 
 ---
+
 ## Sequence Diagrams
 
 - Time flows top to bottom
@@ -143,6 +156,7 @@ Server --> User: JSON
 - Excellent for explaining APIs and protocols
 
 ---
+
 ## A Sample Sequence
 
 ```misc
@@ -160,6 +174,7 @@ sequenceDiagram
 - Self-loops for internal work
 
 ---
+
 ## Network Diagrams
 
 - Boxes for hosts / services
@@ -169,6 +184,7 @@ sequenceDiagram
 - Avoid clutter; one concept per diagram
 
 ---
+
 ## State Machines
 
 ```misc
@@ -187,6 +203,7 @@ stateDiagram-v2
 - Useful for workflows and protocols
 
 ---
+
 ## Diagram Aesthetics
 
 - One reading direction: left-to-right or top-to-bottom
@@ -196,6 +213,7 @@ stateDiagram-v2
 - White space is part of the design
 
 ---
+
 ## Where Diagrams Live
 
 - Inline in markdown (Mermaid)
@@ -205,6 +223,7 @@ stateDiagram-v2
 - Generate to image in CI; commit the source
 
 ---
+
 ## Maintaining Diagrams
 
 - Diagrams rot just like code
@@ -214,6 +233,7 @@ stateDiagram-v2
 - Stale diagrams mislead more than they help
 
 ---
+
 ## Common Diagram Mistakes
 
 - Too many boxes; everything connected to everything

@@ -8,9 +8,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Network Policies
 
 ---
+
 ## What This Chapter Covers
 
 - The default permissive network model
@@ -20,6 +22,7 @@ audience:
 - CNI requirements and tools
 
 ---
+
 ## Default Network Behavior
 
 - Every pod can talk to every other pod
@@ -29,11 +32,13 @@ audience:
 - Lateral movement after one compromise is trivial
 
 ---
+
 ## Why It Matters
 
 ![policy_intent](svg/courses/security/kubernetes-security/03_network_policies/policy_intent.svg)
 
 ---
+
 ## Why NetworkPolicies Matter
 
 - Limit east-west traffic (pod-to-pod)
@@ -43,16 +48,19 @@ audience:
 - Implementing them is mandatory in 2026
 
 ---
+
 ## Defence Layers
 
 ![policy_layers](svg/courses/security/kubernetes-security/03_network_policies/policy_layers.svg)
 
 ---
+
 ## Network Topology Visualized
 
 ![network_default](svg/courses/security/kubernetes-security/03_network_policies/network_default.svg)
 
 ---
+
 ## NetworkPolicy Resource
 
 ```yaml
@@ -72,6 +80,7 @@ spec:
 - No ingress or egress rules = deny all
 
 ---
+
 ## Default Deny Everything
 
 - Apply a default-deny in every namespace
@@ -81,6 +90,7 @@ spec:
 - More work but worth it
 
 ---
+
 ## Allowing Specific Ingress
 
 ```yaml
@@ -100,6 +110,7 @@ spec:
 ```
 
 ---
+
 ## Allowing Specific Egress
 
 ```yaml
@@ -119,6 +130,7 @@ spec:
 ```
 
 ---
+
 ## Selectors
 
 - podSelector — match by labels in same namespace
@@ -128,6 +140,7 @@ spec:
 - Cross-namespace: namespaceSelector + podSelector
 
 ---
+
 ## Cross-Namespace Example
 
 ```yaml
@@ -144,6 +157,7 @@ ingress:
 - Pods labeled `app: frontend` in any namespace labeled `tier: web`
 
 ---
+
 ## DNS Egress
 
 - Pods need DNS to function
@@ -152,6 +166,7 @@ ingress:
 - Easy to forget; common cause of "policies broke us"
 
 ---
+
 ## DNS Egress Rule
 
 ```yaml
@@ -169,6 +184,7 @@ egress:
 ```
 
 ---
+
 ## Egress to Outside Cluster
 
 - ipBlock for external endpoints
@@ -177,6 +193,7 @@ egress:
 - Useful for restricting where workloads can connect
 
 ---
+
 ## ipBlock Example
 
 ```yaml
@@ -192,6 +209,7 @@ egress:
 - Allow internet but block sensitive endpoints
 
 ---
+
 ## CNI Requirement
 
 - NetworkPolicy is a spec; CNI plugins implement it
@@ -201,6 +219,7 @@ egress:
 - Verify your CNI implements policies
 
 ---
+
 ## Calico
 
 - Most-used CNI for NetworkPolicy
@@ -209,6 +228,7 @@ egress:
 - Felix and Typha for performance at scale
 
 ---
+
 ## Cilium
 
 - eBPF-based; high performance
@@ -218,6 +238,7 @@ egress:
 - Identity-based rather than IP-based
 
 ---
+
 ## Layer 7 Policies (Cilium)
 
 - Allow only specific HTTP paths/methods
@@ -227,6 +248,7 @@ egress:
 - Trade-off: CNI lock-in but powerful
 
 ---
+
 ## Testing Policies
 
 - Pre-deploy with `kubectl apply --dry-run`
@@ -236,6 +258,7 @@ egress:
 - Negative tests: confirm bad paths are blocked
 
 ---
+
 ## Default Deny Workflow
 
 - Apply default-deny per namespace
@@ -245,6 +268,7 @@ egress:
 - Iterate and tighten
 
 ---
+
 ## Policy Visualization
 
 - Tools to render the active policy graph
@@ -254,6 +278,7 @@ egress:
 - Run periodically
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting DNS egress
@@ -263,6 +288,7 @@ egress:
 - Overlap and conflicts between policies
 
 ---
+
 ## Multi-Cluster Considerations
 
 - NetworkPolicy is per-cluster
@@ -272,6 +298,7 @@ egress:
 - Plan boundaries explicitly
 
 ---
+
 ## Audit and Monitoring
 
 - Cilium Hubble: flow logs in real time
@@ -281,6 +308,7 @@ egress:
 - Layer multiple sources for full picture
 
 ---
+
 ## Best Practices
 
 - Default-deny in every namespace
@@ -290,6 +318,7 @@ egress:
 - Re-validate after every architecture change
 
 ---
+
 ## Summary
 
 - Default Kubernetes networking is permissive — change it

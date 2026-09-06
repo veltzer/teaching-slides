@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Spark Streaming
 
 ---
+
 ## What is Spark Streaming
 - Extension of core Spark API for stream processing
 - Enables scalable, high-throughput, fault-tolerant processing
@@ -21,10 +23,12 @@ audience:
 - Integrated with the rest of Spark ecosystem
 
 ---
+
 ## Architecture Overview
 ![architecture_overview](svg/courses/big_data/apache-spark-with-python/03_streaming/architecture_overview.svg)
 
 ---
+
 ## Supported Input Sources
 - Kafka
 - Flume
@@ -34,6 +38,7 @@ audience:
 - Custom sources
 
 ---
+
 ## Key Features
 1. Fault Tolerance
     - Exactly-once semantics
@@ -45,6 +50,7 @@ audience:
     - GraphX for graph processing
 
 ---
+
 ## DStream Basics
 - Continuous sequence of RDDs
 - Each RDD contains data from a specific interval
@@ -52,11 +58,13 @@ audience:
 - Automatic batching of data
 
 ---
+
 ## DStream Lifecycle
 
 ![dstream_lifecycle](svg/courses/big_data/apache-spark-with-python/03_streaming/dstream_lifecycle.svg)
 
 ---
+
 ## Creating DStreams
 
 ```python
@@ -78,6 +86,7 @@ kafka_stream = KafkaUtils.createDirectStream(ssc,
 ```
 
 ---
+
 ## DStream Transformations
 
 ```python
@@ -99,6 +108,7 @@ joined = stream1.join(stream2)
 ```
 
 ---
+
 ## Output Operations
 
 ```python
@@ -113,11 +123,13 @@ word_counts.foreachRDD(lambda rdd: rdd.foreachPartition(save_to_db))
 ```
 
 ---
+
 ## Window Operations
 
 ![window_operations](svg/courses/big_data/apache-spark-with-python/03_streaming/window_operations.svg)
 
 ---
+
 ## UpdateStateByKey
 
 ```python
@@ -131,6 +143,7 @@ running_counts = pairs.updateStateByKey(update_function)
 ```
 
 ---
+
 ## MapWithState
 
 ```python
@@ -140,6 +153,7 @@ state_stream = stream.mapWithState(state_spec)
 ```
 
 ---
+
 ## Real-time Analytics Dashboard
 
 ```python
@@ -157,6 +171,7 @@ metrics_stream.foreachRDD(process_metrics)
 ```
 
 ---
+
 ## Fraud Detection System
 
 ```python
@@ -171,6 +186,7 @@ fraudulent.foreachRDD(alert_security_team)
 ```
 
 ---
+
 ## Log Analysis
 
 ```python
@@ -187,6 +203,7 @@ avg_response = response_times.meanByWindow(60, 10)
 ```
 
 ---
+
 ## Batch Size Optimization
 - Smaller batches: lower latency but higher overhead
 - Larger batches: higher throughput but increased latency
@@ -198,6 +215,7 @@ ssc = StreamingContext(sc, batchDuration=optimize_batch_size())
 ```
 
 ---
+
 ## Memory Tuning
 
 ```python
@@ -209,6 +227,7 @@ ssc.remember(duration)  # How long to remember old data
 ```
 
 ---
+
 ## Backpressure
 
 ```python
@@ -217,6 +236,7 @@ conf = SparkConf().set("spark.streaming.backpressure.enabled", "true")
 ```
 
 ---
+
 ## Checkpointing
 
 ```python
@@ -228,6 +248,7 @@ reliable_stream = ssc.receiverStream(reliable_receiver)
 ```
 
 ---
+
 ## Error Recovery
 
 ```python
@@ -241,6 +262,7 @@ context = StreamingContext.getOrCreate(checkpoint_dir, create_context)
 ```
 
 ---
+
 ## Metrics Collection
 
 ```python
@@ -256,6 +278,7 @@ ssc.addStreamingListener(CustomListener())
 ```
 
 ---
+
 ## Common Issues and Solutions
 1. Data Loss
     - Enable Write Ahead Logs
@@ -271,6 +294,7 @@ ssc.addStreamingListener(CustomListener())
     - Monitor garbage collection
 
 ---
+
 ## Kafka Integration
 
 ```python
@@ -284,6 +308,7 @@ stream = directKafkaStream.transform(lambda rdd: process_with_exactly_once(rdd))
 ```
 
 ---
+
 ## Database Integration
 
 ```python
@@ -299,6 +324,7 @@ stream.foreachRDD(lambda rdd: rdd.foreachPartition(save_partition))
 ```
 
 ---
+
 ## Production Deployment Best Practices
 1. Monitoring Setup
     - Implement custom metrics
@@ -310,6 +336,7 @@ stream.foreachRDD(lambda rdd: rdd.foreachPartition(save_partition))
     - Log error details
 
 ---
+
 ## Testing Streaming Applications
 
 ```python
@@ -324,6 +351,7 @@ def test_streaming_word_count():
 ```
 
 ---
+
 ## Summary
 - Spark Streaming enables real-time processing
 - DStreams provide high-level abstraction

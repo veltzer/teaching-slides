@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Best Practices and Optimization
 
 ---

@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # API Versioning at the Gateway
 
 ---
+
 ## Gateway Versioning
 
 ![gateway_versioning](svg/courses/architecting/api-gateway-patterns/06_api_versioning/gateway_versioning.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Versioning strategies revisited
@@ -26,6 +29,7 @@ audience:
 - Deprecation at the gateway
 
 ---
+
 ## Why Version At The Gateway
 
 - The gateway routes by version &#8594; correct service
@@ -34,6 +38,7 @@ audience:
 - Centralises versioning policy
 
 ---
+
 ## URL Versioning
 
 ```misc
@@ -47,6 +52,7 @@ audience:
 - Gateway routes by URL prefix
 
 ---
+
 ## Header-Based Versioning
 
 ```http
@@ -60,6 +66,7 @@ Accept: application/vnd.example.v2+json
 - More REST-purist
 
 ---
+
 ## Routing Rules
 
 - One service per major version (parallel deployments)
@@ -68,11 +75,13 @@ Accept: application/vnd.example.v2+json
 - Consolidate when versions diverge minimally
 
 ---
+
 ## Strategy Compared
 
 ![versioning_strategies](svg/courses/architecting/api-gateway-patterns/06_api_versioning/versioning_strategies.svg)
 
 ---
+
 ## Stages of an API Lifecycle
 
 - New: behind a feature flag, internal users only
@@ -82,6 +91,7 @@ Accept: application/vnd.example.v2+json
 - End-of-Life: returns 410 Gone
 
 ---
+
 ## Deprecation Headers
 
 ```http
@@ -95,6 +105,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Standard headers; tools can monitor
 
 ---
+
 ## Sunset Process
 
 - 6+ months notice for public APIs
@@ -104,6 +115,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Hard cutover only after "we tried" phase
 
 ---
+
 ## Migration Helpers
 
 - Side-by-side examples in docs
@@ -113,6 +125,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Lower the friction; more migrate on time
 
 ---
+
 ## Backward Compatibility At The Gateway
 
 - Translate v1 requests to v2 backend
@@ -121,6 +134,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Use sparingly; prefer parallel versions
 
 ---
+
 ## Multiple Versions, One Spec
 
 - OpenAPI 3 doesn't natively version
@@ -129,6 +143,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Gateway and SDK generators must agree
 
 ---
+
 ## Routing And Auth Per Version
 
 - v1 may use API keys; v2 may use OAuth
@@ -137,6 +152,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Force new auth for new clients
 
 ---
+
 ## Monitoring Versions
 
 - Track requests per version
@@ -146,6 +162,7 @@ Link: <https://api.example.com/v2/users>; rel="successor-version"
 - Without metrics, you sunset blindly
 
 ---
+
 ## Common Versioning Mistakes At The Gateway
 
 - No deprecation headers

@@ -12,14 +12,17 @@ audience:
   - audiences:devops
 
 ---
+
 # Timing
 
 ---
+
 ## Real vs User vs Sys Time
 
 ![real_user_sys_time](svg/courses/languages/bash/bash-scripting/22_timing/real_user_sys_time.svg)
 
 ---
+
 ## The `time` Built-in
 
 ```bash
@@ -40,6 +43,7 @@ time {
 ```
 
 ---
+
 ## Understanding `time` Output
 
 ```misc
@@ -55,6 +59,7 @@ Relationships:
 ```
 
 ---
+
 ## The `/usr/bin/time` Command
 
 ```bash
@@ -73,6 +78,7 @@ Relationships:
 ```
 
 ---
+
 ## High-Precision Timing
 
 ```bash
@@ -97,6 +103,7 @@ echo "Elapsed: $(bc <<< "$end - $start") seconds"
 ```
 
 ---
+
 ## Timing Functions
 
 ```bash
@@ -121,6 +128,7 @@ timer find /usr -name "*.so" -type f > /dev/null
 ```
 
 ---
+
 ## Benchmarking
 
 ```bash
@@ -150,6 +158,7 @@ benchmark 10 ls -la /usr/bin
 ```
 
 ---
+
 ## `SECONDS` Variable
 
 ```bash
@@ -175,6 +184,7 @@ echo "Script completed in $SECONDS seconds"
 ```
 
 ---
+
 ## Timeout for Commands
 
 ```bash
@@ -198,6 +208,7 @@ kill $timer_pid 2>/dev/null
 ```
 
 ---
+
 ## Profiling Scripts
 
 ```bash

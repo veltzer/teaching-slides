@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Leader Election
 
 ---
+
 ## What This Chapter Covers
 
 - Why leaders
@@ -21,6 +23,7 @@ audience:
 - Practical considerations
 
 ---
+
 ## Why Leaders
 
 - Centralised decisions: simpler than fully distributed
@@ -30,16 +33,19 @@ audience:
 - Most distributed systems have a leader somewhere
 
 ---
+
 ## Election Approaches
 
 ![election_methods](svg/courses/architecting/distributed-systems-fundamentals/07_leader_election/election_methods.svg)
 
 ---
+
 ## Handling Leader Failure
 
 ![leader_failure](svg/courses/architecting/distributed-systems-fundamentals/07_leader_election/leader_failure.svg)
 
 ---
+
 ## When You Need One
 
 - Replication: leader takes writes; followers copy
@@ -49,6 +55,7 @@ audience:
 - Consensus algorithms: usually need a leader
 
 ---
+
 ## When You Don't
 
 - Symmetric peer-to-peer (BitTorrent, Cassandra reads)
@@ -57,6 +64,7 @@ audience:
 - "Leader for everything" is overkill
 
 ---
+
 ## Bully Algorithm
 
 - Each node has an ID
@@ -67,6 +75,7 @@ audience:
 - Garcia-Molina, 1982
 
 ---
+
 ## Ring Algorithm
 
 - Nodes arranged in a logical ring
@@ -76,6 +85,7 @@ audience:
 - Slower than bully but less network chatter
 
 ---
+
 ## Raft Leader Election
 
 - Each follower has a random election timeout
@@ -85,6 +95,7 @@ audience:
 - Modern, used in etcd, Consul, CockroachDB
 
 ---
+
 ## Why Random Timeouts
 
 - Without randomness: tied elections
@@ -94,6 +105,7 @@ audience:
 - Critical for liveness
 
 ---
+
 ## Failure Detection
 
 - How do you know the leader is dead?
@@ -103,6 +115,7 @@ audience:
 - 1-3 seconds typical for cross-DC
 
 ---
+
 ## False Positives
 
 - Slow leader looks dead
@@ -112,6 +125,7 @@ audience:
 - Disruption; mitigate with longer timeouts and proper heartbeats
 
 ---
+
 ## Split Brain
 
 - Network partition
@@ -121,6 +135,7 @@ audience:
 - Quorum requirement prevents this in proper consensus
 
 ---
+
 ## Quorum For Leader Election
 
 - Leader requires majority votes
@@ -130,6 +145,7 @@ audience:
 - The CP choice in CAP
 
 ---
+
 ## Lease-Based Leadership
 
 - Leader holds a "lease" for N seconds
@@ -139,6 +155,7 @@ audience:
 - Used in Chubby, etcd
 
 ---
+
 ## Re-Election Cost
 
 - All operations pause during election
@@ -148,6 +165,7 @@ audience:
 - Test under realistic network conditions
 
 ---
+
 ## Stateful Leaders
 
 - Leader has state followers don't
@@ -157,6 +175,7 @@ audience:
 - Trim logs / snapshot regularly
 
 ---
+
 ## Common Leader Election Mistakes
 
 - No randomness in timeouts &#8594; election livelock

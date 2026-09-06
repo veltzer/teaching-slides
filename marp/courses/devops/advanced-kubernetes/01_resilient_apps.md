@@ -11,6 +11,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Deploying Resilient Applications in `Kubernetes`
 
 Advanced Kubernetes Course - Day 1, Module 1
@@ -26,6 +27,7 @@ Advanced Kubernetes Course - Day 1, Module 1
 - Designing for failure
 
 ---
+
 ## What Makes an App Resilient?: Details
 
 - **Self-healing**: Automatically recovers from failures
@@ -34,6 +36,7 @@ Advanced Kubernetes Course - Day 1, Module 1
 - **Redundant**: No single point of failure
 
 ---
+
 ## What Makes an App Resilient?
 
 ![what_makes_an_app_resilient](svg/courses/devops/advanced-kubernetes/01_resilient_apps/what_makes_an_app_resilient.svg)
@@ -337,6 +340,7 @@ spec:
 | Memory exceeded | N/A | OOMKilled |
 
 ---
+
 ## Understanding CPU Units: Example
 
 ```misc
@@ -348,6 +352,7 @@ spec:
 ```
 
 ---
+
 ## Understanding CPU Units
 
 ![understanding_cpu_units](svg/courses/devops/advanced-kubernetes/01_resilient_apps/understanding_cpu_units.svg)
@@ -458,6 +463,7 @@ spec:
 ```
 
 ---
+
 ## Readiness Probes: Example
 
 Determines if a container is **ready to receive traffic**. If it fails, the pod is removed from `Service` endpoints.
@@ -476,6 +482,7 @@ spec:
 ```
 
 ---
+
 ## Readiness Probes
 
 ![readiness_probes](svg/courses/devops/advanced-kubernetes/01_resilient_apps/readiness_probes.svg)

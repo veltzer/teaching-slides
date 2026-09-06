@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Cluster managers
@@ -19,6 +21,7 @@ audience:
 - Cost
 
 ---
+
 ## Cluster Managers
 
 - Kubernetes is now common
@@ -27,6 +30,7 @@ audience:
 - Cloud platforms abstract many
 
 ---
+
 ## Submitting Jobs
 
 - spark-submit
@@ -35,6 +39,7 @@ audience:
 - Or via APIs in platforms
 
 ---
+
 ## Configuration Sources
 
 - Defaults
@@ -43,6 +48,7 @@ audience:
 - Code-set values
 
 ---
+
 ## Resource Policies
 
 - Cores and memory per executor
@@ -51,11 +57,13 @@ audience:
 - Match to cluster
 
 ---
+
 ## Allocation Layout
 
 ![resource_allocation](svg/courses/data_engineering/spark/05_operations/resource_allocation.svg)
 
 ---
+
 ## Dynamic Allocation
 
 - Add executors under load
@@ -64,6 +72,7 @@ audience:
 - Watch shuffle service interactions
 
 ---
+
 ## Logging
 
 - Driver logs
@@ -72,6 +81,7 @@ audience:
 - Searchable
 
 ---
+
 ## Spark UI
 
 - Real-time job view
@@ -80,6 +90,7 @@ audience:
 - Persist as event logs
 
 ---
+
 ## History Server
 
 - Replays event logs
@@ -88,6 +99,7 @@ audience:
 - Storage for event logs
 
 ---
+
 ## Failures and Retries
 
 - Tasks retry by default
@@ -96,6 +108,7 @@ audience:
 - Use job-level orchestrator for retries
 
 ---
+
 ## Multi-Tenant
 
 - Separate queues
@@ -104,6 +117,7 @@ audience:
 - Watch for noisy neighbors
 
 ---
+
 ## Security
 
 - Encrypt at rest
@@ -112,6 +126,7 @@ audience:
 - Least-privilege roles
 
 ---
+
 ## Cost Levers
 
 - Right-size executors
@@ -120,6 +135,7 @@ audience:
 - Tag and report
 
 ---
+
 ## Capacity Planning
 
 - Profile real workloads
@@ -128,6 +144,7 @@ audience:
 - Rebalance quarterly
 
 ---
+
 ## Common Operational Mistakes
 
 - One configuration for all jobs

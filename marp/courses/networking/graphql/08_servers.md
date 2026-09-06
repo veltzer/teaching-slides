@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Servers
 
 ---
+
 ## What This Chapter Covers
 
 - Server landscape
@@ -20,6 +22,7 @@ audience:
 - Tooling
 
 ---
+
 ## Server Landscape
 
 - Apollo Server: Node, popular
@@ -28,16 +31,19 @@ audience:
 - Many language: graphql-go, graphene (Python), graphql-java
 
 ---
+
 ## Server Choices
 
 ![server_choices](svg/courses/networking/graphql/08_servers/server_choices.svg)
 
 ---
+
 ## Server Pipeline
 
 ![server_pipeline](svg/courses/networking/graphql/08_servers/server_pipeline.svg)
 
 ---
+
 ## Apollo Server
 
 - Mature, large ecosystem
@@ -46,6 +52,7 @@ audience:
 - Standard
 
 ---
+
 ## Sample Apollo Server
 
 ```javascript
@@ -60,6 +67,7 @@ await server.listen({ port: 4000 });
 - Express, Fastify, Lambda variants
 
 ---
+
 ## Yoga
 
 - Lighter, less opinionated
@@ -67,6 +75,7 @@ await server.listen({ port: 4000 });
 - Plugin model
 
 ---
+
 ## Schema-First
 
 - SDL is source of truth
@@ -75,6 +84,7 @@ await server.listen({ port: 4000 });
 - Standard
 
 ---
+
 ## Code-First
 
 - Define types in code (decorators / classes)
@@ -83,6 +93,7 @@ await server.listen({ port: 4000 });
 - Nexus, TypeGraphQL, Pothos
 
 ---
+
 ## Schema Stitching vs Federation
 
 - Stitching: combine schemas at gateway
@@ -90,6 +101,7 @@ await server.listen({ port: 4000 });
 - Federation is the modern approach
 
 ---
+
 ## DataLoader
 
 - Batches and caches per request
@@ -97,6 +109,7 @@ await server.listen({ port: 4000 });
 - Wrap data sources
 
 ---
+
 ## Validation Phase
 
 - Parse query
@@ -105,6 +118,7 @@ await server.listen({ port: 4000 });
 - Built-in
 
 ---
+
 ## Plugins / Middleware
 
 - Logging
@@ -113,6 +127,7 @@ await server.listen({ port: 4000 });
 - Caching
 
 ---
+
 ## Mocking
 
 - Default values per type
@@ -120,6 +135,7 @@ await server.listen({ port: 4000 });
 - Built into Apollo
 
 ---
+
 ## Production Concerns
 
 - Query complexity limits
@@ -128,6 +144,7 @@ await server.listen({ port: 4000 });
 - Persisted queries
 
 ---
+
 ## Common Server Mistakes
 
 - No depth or complexity limits; DoS risk

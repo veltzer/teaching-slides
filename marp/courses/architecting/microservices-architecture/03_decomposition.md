@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Decomposition Strategies
 
 ---
+
 ## The Question
 
 - Given a domain (existing or planned), how do you split it into services?
@@ -19,16 +21,19 @@ audience:
 - This is the hardest microservices design problem
 
 ---
+
 ## Decomposition Strategies
 
 ![decomposition_strategies](svg/courses/architecting/microservices-architecture/03_decomposition/decomposition_strategies.svg)
 
 ---
+
 ## Strategy Choice Visualised
 
 ![strategy_choice](svg/courses/architecting/microservices-architecture/03_decomposition/strategy_choice.svg)
 
 ---
+
 ## Decompose by Business Capability
 
 - Identify the business activities the system supports
@@ -37,6 +42,7 @@ audience:
 - The names match how the business talks about itself
 
 ---
+
 ## Decompose by Subdomain
 
 - DDD term for a conceptually distinct part of the domain
@@ -45,6 +51,7 @@ audience:
 - Subdomain ≈ bounded context (chapter 4)
 
 ---
+
 ## Decompose by Use Case
 
 - Each major user-facing flow becomes a service
@@ -53,6 +60,7 @@ audience:
 - Risks: too many tiny services if every screen becomes one
 
 ---
+
 ## Don't Decompose by Layer
 
 - "API service, business service, data service" is a distributed monolith
@@ -61,6 +69,7 @@ audience:
 - The split should be vertical (by capability), not horizontal (by layer)
 
 ---
+
 ## Don't Decompose by Verb
 
 - "Validation service", "Calculation service", "Notification service"
@@ -69,6 +78,7 @@ audience:
 - Verbs become methods within capability services
 
 ---
+
 ## Decompose by Data Ownership
 
 - Identify the entities in the domain
@@ -77,6 +87,7 @@ audience:
 - Reads can flow through APIs or denormalized projections
 
 ---
+
 ## A Working Example: E-Commerce
 
 - Catalog: products, categories, search
@@ -88,6 +99,7 @@ audience:
 - Customer: profiles, addresses, preferences
 
 ---
+
 ## Granularity
 
 - Too coarse: services that look like mini-monoliths
@@ -96,6 +108,7 @@ audience:
 - Two pizzas team is a useful heuristic for ownership
 
 ---
+
 ## Cohesion vs Coupling
 
 - High cohesion within a service: related things together
@@ -104,6 +117,7 @@ audience:
 - A bad decomposition makes both worse
 
 ---
+
 ## The Test: Independent Change
 
 - Can a feature change be implemented in one service?
@@ -112,6 +126,7 @@ audience:
 - Above 1.5: decomposition has issues
 
 ---
+
 ## The Test: Independent Failure
 
 - If service X is down, what stops working?
@@ -120,6 +135,7 @@ audience:
 - Critical paths should depend on as few services as possible
 
 ---
+
 ## Evolutionary Architecture
 
 - The first decomposition is rarely right
@@ -128,6 +144,7 @@ audience:
 - Don't aim for perfect; aim for evolvable
 
 ---
+
 ## Anti-Patterns
 
 - Decompose to match the database schema (one service per table)
@@ -136,6 +153,7 @@ audience:
 - Decompose by who owns the existing code
 
 ---
+
 ## Summary
 
 - Decompose by business capability or subdomain

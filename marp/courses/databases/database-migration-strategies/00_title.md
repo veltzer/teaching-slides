@@ -10,6 +10,7 @@ audience:
   - audiences:architects
 
 ---
+
 # Database Migration Strategies
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

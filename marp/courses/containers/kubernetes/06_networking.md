@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Networking
 
 ---
+
 ## What This Chapter Covers
 
 - Pod networking model
@@ -21,6 +23,7 @@ audience:
 - Common patterns
 
 ---
+
 ## Pod Networking Model
 
 - Every pod has its own IP
@@ -29,11 +32,13 @@ audience:
 - Containers within a pod share a network namespace
 
 ---
+
 ## Network Layers
 
 ![cluster_network](svg/courses/containers/kubernetes/06_networking/cluster_network.svg)
 
 ---
+
 ## CNI Plugins
 
 - Calico, Flannel, Weave, Cilium
@@ -42,6 +47,7 @@ audience:
 - Pick at cluster install
 
 ---
+
 ## Cilium
 
 - eBPF-based; modern
@@ -50,6 +56,7 @@ audience:
 - Increasing adoption
 
 ---
+
 ## NetworkPolicy
 
 - Firewall rules within the cluster
@@ -58,11 +65,13 @@ audience:
 - Requires CNI that enforces (Calico, Cilium)
 
 ---
+
 ## Building Blocks
 
 ![network_policy_intent](svg/courses/containers/kubernetes/06_networking/network_policy_intent.svg)
 
 ---
+
 ## Sample NetworkPolicy
 
 ```yaml
@@ -83,6 +92,7 @@ spec:
 ```
 
 ---
+
 ## Default-Deny
 
 - Block all by default; allow specific
@@ -91,6 +101,7 @@ spec:
 - More configuration
 
 ---
+
 ## DNS
 
 - CoreDNS in every cluster
@@ -99,6 +110,7 @@ spec:
 - Forwards external queries upstream
 
 ---
+
 ## DNS Caching
 
 - Pods can have NodeLocal DNSCache
@@ -107,6 +119,7 @@ spec:
 - Recommended at scale
 
 ---
+
 ## Service Mesh
 
 - Adds: mTLS, traffic management, observability
@@ -115,6 +128,7 @@ spec:
 - Heavy; adopt only if needed
 
 ---
+
 ## Service Mesh Use Cases
 
 - Encrypted service-to-service (mTLS)
@@ -123,6 +137,7 @@ spec:
 - Most teams: skip for years
 
 ---
+
 ## External Traffic
 
 - LoadBalancer: cloud LB
@@ -130,6 +145,7 @@ spec:
 - Gateway API: newer alternative
 
 ---
+
 ## Egress
 
 - Pods to external internet: allowed by default
@@ -137,6 +153,7 @@ spec:
 - For compliance: required
 
 ---
+
 ## DNS Policies On Pods
 
 - ClusterFirst (default): cluster DNS first
@@ -145,6 +162,7 @@ spec:
 - Custom resolv.conf
 
 ---
+
 ## Common Networking Mistakes
 
 - No NetworkPolicies (everything talks to everything)

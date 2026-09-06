@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Introduction to Software Quality and Design Principles
 
 ---
+
 ## What This Chapter Covers
 
 - What "clean" code actually means
@@ -22,11 +24,13 @@ audience:
 - A short tour of the day ahead
 
 ---
+
 ## SOLID Overview
 
 ![solid_overview](svg/courses/principles/solid-clean-code/01_introduction_to_software_quality_and_design_principles/solid_overview.svg)
 
 ---
+
 ## What "Clean" Means
 
 - Code that reads like prose
@@ -36,11 +40,13 @@ audience:
 - "Clean" is what you wish *yesterday's* developer had written
 
 ---
+
 ## Quality Attributes
 
 ![quality_attributes](svg/courses/principles/solid-clean-code/01_introduction_to_software_quality_and_design_principles/quality_attributes.svg)
 
 ---
+
 ## Three Audiences for Code
 
 - **The compiler / interpreter**: needs syntactic correctness
@@ -50,6 +56,7 @@ audience:
 - The other two are why we care about clean code
 
 ---
+
 ## Technical Debt
 
 - A metaphor: shortcuts now, payments later
@@ -59,6 +66,7 @@ audience:
 - Unlike financial debt, you can't see the balance — until you can't move
 
 ---
+
 ## What Tech Debt Looks Like
 
 - Adding a feature now takes 3x as long as it did a year ago
@@ -68,6 +76,7 @@ audience:
 - Shipping requires heroics from the same two people
 
 ---
+
 ## Code Smells
 
 - Surface-level signs of deeper design problems
@@ -77,6 +86,7 @@ audience:
 - A smell is an *invitation* to investigate, not a verdict
 
 ---
+
 ## Common Code Smells
 
 - **Long Method**: hard to read, hard to test
@@ -87,6 +97,7 @@ audience:
 - **Primitive Obsession**: int/string everywhere; needs a value type
 
 ---
+
 ## Design Principles vs Design Patterns
 
 - **Principles**: general guidance ("favour composition over inheritance")
@@ -96,6 +107,7 @@ audience:
 - This course is about the principles
 
 ---
+
 ## The Cost of Not Caring
 
 - 70% of a system's lifetime cost is *maintenance*
@@ -105,6 +117,7 @@ audience:
 - Replacing those people is the most expensive part of all
 
 ---
+
 ## A Short History of SOLID
 
 - Robert C. Martin compiled them from existing principles in the 1990s
@@ -114,6 +127,7 @@ audience:
 - They aren't perfect; they aren't the only thing — they are *useful*
 
 ---
+
 ## SOLID at a Glance
 
 - **S**ingle Responsibility Principle (SRP)
@@ -124,6 +138,7 @@ audience:
 - One letter per principle, one chapter per letter
 
 ---
+
 ## Languages We'll Use
 
 - Most examples in Python — concise, readable on slides
@@ -133,6 +148,7 @@ audience:
 - Translate to your stack as you read
 
 ---
+
 ## How to Use This Material
 
 - Read the principle
@@ -142,6 +158,7 @@ audience:
 - Notice whether the result feels easier to change
 
 ---
+
 ## What's Coming
 
 - One chapter per SOLID principle, with refactoring examples

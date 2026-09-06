@@ -9,14 +9,17 @@ audience:
   - audiences:architects
 
 ---
+
 # Composition Patterns
 
 ---
+
 ## Composition Patterns
 
 ![composition_patterns](svg/courses/architecting/microservices-architecture/13_composition/composition_patterns.svg)
 
 ---
+
 ## What Composition Means
 
 - A user request often needs data from multiple services
@@ -24,6 +27,7 @@ audience:
 - Several patterns; trade-offs between client, gateway, and aggregator
 
 ---
+
 ## API Gateway as Aggregator
 
 - The gateway receives the request
@@ -32,6 +36,7 @@ audience:
 - Returns to the client
 
 ---
+
 ## Backend for Frontend (BFF)
 
 - A gateway tailored to one client type (mobile, web, partner)
@@ -40,6 +45,7 @@ audience:
 - The BFF owns the client-specific composition
 
 ---
+
 ## Why BFF
 
 - Mobile clients need small, focused responses (bandwidth)
@@ -48,6 +54,7 @@ audience:
 - One BFF per client lets each be optimized
 
 ---
+
 ## Composition at the Client
 
 - Client makes multiple calls; combines locally
@@ -56,6 +63,7 @@ audience:
 - Can be brittle: many calls, complex logic in the client
 
 ---
+
 ## Composition at the Server (Aggregator)
 
 - One service is the aggregator: it calls others, returns a unified response
@@ -64,6 +72,7 @@ audience:
 - Most production systems use this pattern
 
 ---
+
 ## Choreography vs Orchestration
 
 - **Choreography**: services react to events; no central coordinator
@@ -72,6 +81,7 @@ audience:
 - Composition often uses orchestration; choreography is more for workflows
 
 ---
+
 ## GraphQL as a Composition Layer
 
 - A single GraphQL endpoint
@@ -80,6 +90,7 @@ audience:
 - Powerful but complex; not always the right answer
 
 ---
+
 ## Request Aggregation Patterns
 
 - Parallel: call N services in parallel; combine results
@@ -88,6 +99,7 @@ audience:
 - Pick based on dependencies between the calls
 
 ---
+
 ## Caching Aggregated Responses
 
 - The aggregated response can be cached at the gateway
@@ -96,6 +108,7 @@ audience:
 - Reduces load on backends; speeds up the client
 
 ---
+
 ## API Composition Anti-Pattern
 
 - "We need data from 10 services for this one screen"
@@ -104,6 +117,7 @@ audience:
 - Refactor: a dedicated read model that aggregates the data ahead of time
 
 ---
+
 ## CQRS as Composition
 
 - A read model maintained by event subscribers
@@ -112,6 +126,7 @@ audience:
 - Trades freshness for read performance
 
 ---
+
 ## Composition and Failure
 
 - An aggregated response fails if any backend fails
@@ -120,6 +135,7 @@ audience:
 - Failure handling in composition is a design decision
 
 ---
+
 ## Anti-Patterns
 
 - A single composition layer that becomes a monolith
@@ -128,6 +144,7 @@ audience:
 - "Just call all the services and combine" without thinking about failure
 
 ---
+
 ## Summary
 
 - Aggregation belongs at gateway, BFF, or aggregator service

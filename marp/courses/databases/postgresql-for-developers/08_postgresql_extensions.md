@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # PostgreSQL Extensions
 
 ---
+
 ## Popular Extensions
 
 ![popular_extensions](svg/courses/databases/postgresql-for-developers/08_postgresql_extensions/popular_extensions.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Extension model
@@ -27,6 +30,7 @@ audience:
 - Other notables
 
 ---
+
 ## Extension Model
 
 - Loadable C / SQL packages
@@ -35,6 +39,7 @@ audience:
 - Often: distro packages
 
 ---
+
 ## Installing
 
 ```bash
@@ -48,6 +53,7 @@ CREATE EXTENSION postgis;
 - Install package; enable per-database
 
 ---
+
 ## pg_stat_statements
 
 - Track query execution stats
@@ -56,6 +62,7 @@ CREATE EXTENSION postgis;
 - Standard in production
 
 ---
+
 ## Enabling pg_stat_statements
 
 ```bash
@@ -69,6 +76,7 @@ SELECT * FROM pg_stat_statements ORDER BY total_time DESC LIMIT 10;
 ```
 
 ---
+
 ## PostGIS
 
 - Geospatial extension
@@ -78,6 +86,7 @@ SELECT * FROM pg_stat_statements ORDER BY total_time DESC LIMIT 10;
 - Used by ArcGIS, OpenStreetMap, Uber
 
 ---
+
 ## PostGIS Example
 
 ```sql
@@ -90,6 +99,7 @@ WHERE ST_DWithin(location, ST_MakePoint(-73.9, 40.7)::geography, 1000);
 - Within 1km of a point
 
 ---
+
 ## pgcrypto
 
 - Cryptographic functions
@@ -98,6 +108,7 @@ WHERE ST_DWithin(location, ST_MakePoint(-73.9, 40.7)::geography, 1000);
 - AES for column encryption
 
 ---
+
 ## uuid-ossp
 
 - UUID generation
@@ -106,6 +117,7 @@ WHERE ST_DWithin(location, ST_MakePoint(-73.9, 40.7)::geography, 1000);
 - Standard in many schemas
 
 ---
+
 ## TimescaleDB
 
 - Time-series on Postgres
@@ -114,6 +126,7 @@ WHERE ST_DWithin(location, ST_MakePoint(-73.9, 40.7)::geography, 1000);
 - Compressed historical data
 
 ---
+
 ## Citus
 
 - Distributed Postgres
@@ -122,6 +135,7 @@ WHERE ST_DWithin(location, ST_MakePoint(-73.9, 40.7)::geography, 1000);
 - For: very large workloads
 
 ---
+
 ## pg_partman
 
 - Partition management automation
@@ -130,6 +144,7 @@ WHERE ST_DWithin(location, ST_MakePoint(-73.9, 40.7)::geography, 1000);
 - Standard with declarative partitioning
 
 ---
+
 ## Hypopg
 
 - "Hypothetical" indexes
@@ -138,6 +153,7 @@ WHERE ST_DWithin(location, ST_MakePoint(-73.9, 40.7)::geography, 1000);
 - Read-only
 
 ---
+
 ## Common Extension Mistakes
 
 - Not using pg_stat_statements (flying blind)

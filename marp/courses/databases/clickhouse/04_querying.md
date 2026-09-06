@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Querying
 
 ---
+
 ## What This Chapter Covers
 
 - SQL dialect notes
@@ -20,6 +22,7 @@ audience:
 - Optimization
 
 ---
+
 ## SQL Dialect
 
 - Mostly familiar
@@ -28,11 +31,13 @@ audience:
 - Lambdas inline
 
 ---
+
 ## Query Patterns
 
 ![query_patterns](svg/courses/databases/clickhouse/04_querying/query_patterns.svg)
 
 ---
+
 ## Aggregations
 
 - Standard sum, count, avg
@@ -41,6 +46,7 @@ audience:
 - Aggregate states for materialized views
 
 ---
+
 ## Approximate Functions
 
 - Sketch-based unique counters
@@ -49,6 +55,7 @@ audience:
 - Document tolerance
 
 ---
+
 ## Joins
 
 - Hash join default
@@ -57,6 +64,7 @@ audience:
 - Mind memory cost
 
 ---
+
 ## Distributed Joins
 
 - Subquery push-down works
@@ -65,6 +73,7 @@ audience:
 - Or denormalize at write
 
 ---
+
 ## Array Join
 
 - Expand array column to rows
@@ -73,6 +82,7 @@ audience:
 - Watch row blowup
 
 ---
+
 ## Window Functions
 
 - Standard SQL syntax
@@ -81,6 +91,7 @@ audience:
 - Combine with sort key for streams
 
 ---
+
 ## Skip Indexes
 
 - Min-max, set, n-gram, token bloom
@@ -89,11 +100,13 @@ audience:
 - Define per filter pattern
 
 ---
+
 ## Pruning Visualized
 
 ![skip_indexes](svg/courses/databases/clickhouse/04_querying/skip_indexes.svg)
 
 ---
+
 ## Settings
 
 - Per-query overrides
@@ -102,6 +115,7 @@ audience:
 - Timeout
 
 ---
+
 ## Plan Inspection
 
 - Explain syntax variants
@@ -110,6 +124,7 @@ audience:
 - Iterate
 
 ---
+
 ## Common Optimization Steps
 
 - Add sort-key columns to filter
@@ -118,6 +133,7 @@ audience:
 - Avoid star-select
 
 ---
+
 ## Pitfalls
 
 - Hash join blowing memory
@@ -126,6 +142,7 @@ audience:
 - Sorting huge result sets
 
 ---
+
 ## Common Querying Mistakes
 
 - Star-select in dashboards

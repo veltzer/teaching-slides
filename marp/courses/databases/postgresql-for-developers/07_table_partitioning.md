@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Table Partitioning
 
 ---
+
 ## Strategies
 
 ![partition_strategies](svg/courses/databases/postgresql-for-developers/07_table_partitioning/partition_strategies.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What partitioning is
@@ -26,6 +29,7 @@ audience:
 - When to partition
 
 ---
+
 ## What Partitioning Is
 
 - Split a table into pieces
@@ -34,6 +38,7 @@ audience:
 - Postgres: declarative partitioning since v10
 
 ---
+
 ## Range Partitioning
 
 ```sql
@@ -48,6 +53,7 @@ CREATE TABLE events_2026 PARTITION OF events
 - Drop old partitions cheaply
 
 ---
+
 ## List Partitioning
 
 ```sql
@@ -61,6 +67,7 @@ CREATE TABLE orders_eu PARTITION OF orders FOR VALUES IN ('EU');
 - Region, status, type
 
 ---
+
 ## Hash Partitioning
 
 ```sql
@@ -73,6 +80,7 @@ CREATE TABLE orders_p0 PARTITION OF orders FOR VALUES WITH (modulus 4, remainder
 - Good for: write distribution
 
 ---
+
 ## Partition Pruning
 
 - Planner skips partitions that can't match WHERE
@@ -80,6 +88,7 @@ CREATE TABLE orders_p0 PARTITION OF orders FOR VALUES WITH (modulus 4, remainder
 - Requires WHERE on partition key
 
 ---
+
 ## Constraint Exclusion
 
 - Older mechanism
@@ -87,6 +96,7 @@ CREATE TABLE orders_p0 PARTITION OF orders FOR VALUES WITH (modulus 4, remainder
 - For non-declarative inheritance, still relevant
 
 ---
+
 ## Adding A Partition
 
 - Each new period: create a new partition
@@ -94,6 +104,7 @@ CREATE TABLE orders_p0 PARTITION OF orders FOR VALUES WITH (modulus 4, remainder
 - Or: cron job to create monthly
 
 ---
+
 ## Detaching Partitions
 
 - DETACH PARTITION
@@ -101,6 +112,7 @@ CREATE TABLE orders_p0 PARTITION OF orders FOR VALUES WITH (modulus 4, remainder
 - Useful for archiving / dropping old data
 
 ---
+
 ## Indexes On Partitions
 
 - Index per partition
@@ -108,6 +120,7 @@ CREATE TABLE orders_p0 PARTITION OF orders FOR VALUES WITH (modulus 4, remainder
 - Auto-applied to new partitions
 
 ---
+
 ## Constraints
 
 - Primary key must include partition key
@@ -115,6 +128,7 @@ CREATE TABLE orders_p0 PARTITION OF orders FOR VALUES WITH (modulus 4, remainder
 - Plan accordingly
 
 ---
+
 ## When To Partition
 
 - Tables &gt; 100M rows
@@ -123,6 +137,7 @@ CREATE TABLE orders_p0 PARTITION OF orders FOR VALUES WITH (modulus 4, remainder
 - Need to drop old data fast
 
 ---
+
 ## When NOT To
 
 - Small tables
@@ -131,6 +146,7 @@ CREATE TABLE orders_p0 PARTITION OF orders FOR VALUES WITH (modulus 4, remainder
 - Premature; not free
 
 ---
+
 ## Common Partitioning Mistakes
 
 - Partitioning small tables

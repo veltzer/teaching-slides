@@ -7,19 +7,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Case Study: Chat System
 
 ---
+
 ## Chat Design
 
 ![chat_design](svg/courses/architecting/system-design/09_case_study_chat_system/chat_design.svg)
 
 ---
+
 ## Component Breakdown
 
 ![chat_components](svg/courses/architecting/system-design/09_case_study_chat_system/chat_components.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Requirements
@@ -31,6 +35,7 @@ audience:
 - Scaling
 
 ---
+
 ## Requirements
 
 - 1:1 and group chat
@@ -41,6 +46,7 @@ audience:
 - 100M users
 
 ---
+
 ## Architecture Overview
 
 - Client &#8596; WebSocket gateway &#8594; backend &#8594; DB
@@ -49,6 +55,7 @@ audience:
 - Push for offline users
 
 ---
+
 ## Real-Time Delivery
 
 - WebSockets: bidirectional, persistent
@@ -57,6 +64,7 @@ audience:
 - Server-side: message broker (Kafka, NATS)
 
 ---
+
 ## Server Affinity
 
 - User connects to one gateway
@@ -65,6 +73,7 @@ audience:
 - Sticky session via load balancer
 
 ---
+
 ## Message Storage
 
 - Cassandra: time-series; partition by chat ID
@@ -73,6 +82,7 @@ audience:
 - Append-only; archive old
 
 ---
+
 ## Group Chat
 
 - Group ID; members list
@@ -81,6 +91,7 @@ audience:
 - Limit: typical 1000-10000 members per group
 
 ---
+
 ## Presence
 
 - Last-seen heartbeat
@@ -90,6 +101,7 @@ audience:
 - Costly at scale; aggregate
 
 ---
+
 ## Push Notifications
 
 - User offline: push via APNs / FCM
@@ -99,6 +111,7 @@ audience:
 - Cost: per-message push fees
 
 ---
+
 ## Read Receipts
 
 - Per-message-per-user state
@@ -107,6 +120,7 @@ audience:
 - Privacy / cost trade-offs
 
 ---
+
 ## Search
 
 - Optional; expensive
@@ -115,6 +129,7 @@ audience:
 - Add when users demand it
 
 ---
+
 ## Scaling
 
 - WebSocket gateways: stateless behind LB
@@ -124,6 +139,7 @@ audience:
 - Scale each independently
 
 ---
+
 ## Failure Modes
 
 - Gateway crash: clients reconnect; brief gap
@@ -132,6 +148,7 @@ audience:
 - Most: graceful degradation, not catastrophic
 
 ---
+
 ## End-To-End Encryption
 
 - Message bodies encrypted client-to-client
@@ -141,6 +158,7 @@ audience:
 - Optional in many systems; default in some (Signal)
 
 ---
+
 ## Common Discussion Points
 
 - "How do you order messages?" — server timestamp + client ordering

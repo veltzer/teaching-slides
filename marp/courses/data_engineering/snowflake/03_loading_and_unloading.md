@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Loading and Unloading
 
 ---
+
 ## What This Chapter Covers
 
 - Stages
@@ -19,6 +21,7 @@ audience:
 - Unloading
 
 ---
+
 ## Stages
 
 - Pointers to files
@@ -27,6 +30,7 @@ audience:
 - Permissions per stage
 
 ---
+
 ## Internal Stages
 
 - Snowflake-managed
@@ -35,6 +39,7 @@ audience:
 - Handy for ad-hoc loads
 
 ---
+
 ## External Stages
 
 - Point at object storage
@@ -43,6 +48,7 @@ audience:
 - Common in production
 
 ---
+
 ## File Formats
 
 - CSV, JSON, Parquet, Avro, ORC
@@ -51,6 +57,7 @@ audience:
 - Test formats before bulk runs
 
 ---
+
 ## COPY INTO
 
 - Bulk load command
@@ -59,11 +66,13 @@ audience:
 - Tracks loaded files
 
 ---
+
 ## Loading Paths
 
 ![load_paths](svg/courses/data_engineering/snowflake/03_loading_and_unloading/load_paths.svg)
 
 ---
+
 ## Load Validation
 
 - VALIDATION_MODE for dry run
@@ -72,6 +81,7 @@ audience:
 - Track in load history
 
 ---
+
 ## Idempotent Loads
 
 - Same file loaded twice is skipped by default
@@ -80,6 +90,7 @@ audience:
 - Important for retries
 
 ---
+
 ## Snowpipe
 
 - Continuous loading
@@ -88,11 +99,13 @@ audience:
 - Per-file billing
 
 ---
+
 ## Snowpipe Flow
 
 ![snowpipe_flow](svg/courses/data_engineering/snowflake/03_loading_and_unloading/snowpipe_flow.svg)
 
 ---
+
 ## Snowpipe Streaming
 
 - API-based ingest
@@ -101,6 +114,7 @@ audience:
 - Watches connection health
 
 ---
+
 ## Unloading
 
 - COPY INTO stage
@@ -109,6 +123,7 @@ audience:
 - File format chosen at unload
 
 ---
+
 ## Performance Tips
 
 - Many medium files beat few huge ones
@@ -117,6 +132,7 @@ audience:
 - Pre-sort for cluster-friendly loads
 
 ---
+
 ## Permissions
 
 - USAGE on stage
@@ -125,6 +141,7 @@ audience:
 - Avoid raw user privileges
 
 ---
+
 ## Common Loading Mistakes
 
 - Single huge file

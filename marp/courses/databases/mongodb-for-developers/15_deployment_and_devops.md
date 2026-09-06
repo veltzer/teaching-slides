@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Deployment and DevOps
 
 ---
+
 ## What This Chapter Covers
 
 - Deploying MongoDB
@@ -22,11 +24,13 @@ audience:
 - Atlas vs self-hosted
 
 ---
+
 ## Cluster Topology Choices
 
 ![cluster_topologies](svg/courses/databases/mongodb-for-developers/15_deployment_and_devops/cluster_topologies.svg)
 
 ---
+
 ## Replica Sets
 
 - Primary + secondaries (typically 3 nodes)
@@ -35,6 +39,7 @@ audience:
 - Foundation for production
 
 ---
+
 ## Replica Set Setup
 
 ```bash
@@ -48,6 +53,7 @@ mongosh
 - Cluster discovers itself
 
 ---
+
 ## Sharding
 
 - Horizontal scaling
@@ -56,6 +62,7 @@ mongosh
 - mongos routes queries
 
 ---
+
 ## When To Shard
 
 - Data &gt; one node's storage / RAM
@@ -64,6 +71,7 @@ mongosh
 - Last resort; complex to operate
 
 ---
+
 ## Backups
 
 - mongodump: logical export
@@ -72,6 +80,7 @@ mongosh
 - Regularly test restoration
 
 ---
+
 ## Point-In-Time Recovery
 
 - Atlas: any second within retention
@@ -79,6 +88,7 @@ mongosh
 - Plan for: "we deleted at 14:32; restore to 14:30"
 
 ---
+
 ## Disaster Recovery
 
 - Cross-region replica
@@ -87,6 +97,7 @@ mongosh
 - RTO and RPO targets
 
 ---
+
 ## Monitoring
 
 - Atlas: built-in dashboards, alerts
@@ -95,6 +106,7 @@ mongosh
 - Alerts on: high lag, low free space, slow queries
 
 ---
+
 ## Logging
 
 - mongod logs: connections, slow queries, errors
@@ -102,6 +114,7 @@ mongosh
 - Watch for: assertion failures, OOM kills
 
 ---
+
 ## Capacity Planning
 
 - Working set should fit in RAM
@@ -110,6 +123,7 @@ mongosh
 - Atlas: scale up / scale down easily
 
 ---
+
 ## Upgrades
 
 - Self-hosted: rolling upgrades on replica set
@@ -118,6 +132,7 @@ mongosh
 - Test on staging first
 
 ---
+
 ## Atlas vs Self-Hosted
 
 - Atlas: managed, integrated, more expensive
@@ -126,6 +141,7 @@ mongosh
 - Self-host when: cost, on-prem requirement, specific compliance
 
 ---
+
 ## Cost Considerations
 
 - Storage, compute, network
@@ -134,6 +150,7 @@ mongosh
 - Auto-scaling: enable carefully
 
 ---
+
 ## Compliance
 
 - HIPAA, SOC2, GDPR
@@ -142,6 +159,7 @@ mongosh
 - BAA with MongoDB for HIPAA
 
 ---
+
 ## Common DevOps Mistakes
 
 - Standalone MongoDB in production
@@ -151,6 +169,7 @@ mongosh
 - Storing full document in oplog forever (oplog grows)
 
 ---
+
 ## Course Wrap-Up
 
 - MongoDB: document-oriented, schema-flexible

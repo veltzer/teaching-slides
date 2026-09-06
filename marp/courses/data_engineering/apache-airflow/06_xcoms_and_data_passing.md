@@ -7,14 +7,17 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # XComs and Data Passing
 
 ---
+
 ## XCom Pattern
 
 ![xcom_pattern](svg/courses/data_engineering/apache-airflow/06_xcoms_and_data_passing/xcom_pattern.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - XComs (cross-communication)
@@ -24,6 +27,7 @@ audience:
 - Limitations
 
 ---
+
 ## What XComs Are
 
 - Pass small data between tasks
@@ -32,6 +36,7 @@ audience:
 - "X-com" = cross-communication
 
 ---
+
 ## Pushing XCom
 
 ```python
@@ -44,6 +49,7 @@ def push2(**ctx):
 ```
 
 ---
+
 ## Pulling XCom
 
 ```python
@@ -55,6 +61,7 @@ def pull(**ctx):
 - Optional key (default: return_value)
 
 ---
+
 ## TaskFlow API XComs
 
 ```python
@@ -73,6 +80,7 @@ process(extract())
 - The modern way
 
 ---
+
 ## Limitations
 
 - Stored in metadata DB
@@ -81,6 +89,7 @@ process(extract())
 - Don't pass huge data
 
 ---
+
 ## Custom XCom Backend
 
 - For big data: store elsewhere
@@ -89,6 +98,7 @@ process(extract())
 - Configure in airflow.cfg
 
 ---
+
 ## Anti-Pattern: Big XComs
 
 - Don't pass dataframes
@@ -97,12 +107,14 @@ process(extract())
 - Big data: in S3 / DB; pass the reference
 
 ---
+
 ## Branching Via XCom
 
 - Branch operator returns task_id
 - Or: BranchPythonOperator with logic
 
 ---
+
 ## Templating With XComs
 
 ```python
@@ -116,6 +128,7 @@ BashOperator(
 - Avoids explicit Python wrappers
 
 ---
+
 ## XCom For Configuration
 
 - Don't pass config via XCom
@@ -123,6 +136,7 @@ BashOperator(
 - XCom: data from one run
 
 ---
+
 ## XCom Persistence
 
 - Per-DAG-run
@@ -130,12 +144,14 @@ BashOperator(
 - Cleared when run cleared
 
 ---
+
 ## Cross-DAG Data
 
 - XComs are within a DAG run
 - Cross-DAG: use Datasets, or external store (S3 + manifest file)
 
 ---
+
 ## Common XCom Mistakes
 
 - Passing huge data
@@ -145,6 +161,7 @@ BashOperator(
 - Overusing instead of: writing to a real store
 
 ---
+
 ## Passing Data Between Tasks
 
 ![xcom_choices](svg/courses/data_engineering/apache-airflow/06_xcoms_and_data_passing/xcom_choices.svg)

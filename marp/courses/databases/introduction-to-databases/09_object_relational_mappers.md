@@ -7,14 +7,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Object-Relational Mappers (ORMs)
 
 ---
+
 ## ORM Trade-offs
 
 ![orm_tradeoffs](svg/courses/databases/introduction-to-databases/09_object_relational_mappers/orm_tradeoffs.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What an ORM is
@@ -25,6 +28,7 @@ audience:
 - When to drop to SQL
 
 ---
+
 ## What An ORM Is
 
 - Maps DB rows to language objects
@@ -33,6 +37,7 @@ audience:
 - Common in: Java (Hibernate), Python (SQLAlchemy, Django ORM), Ruby (ActiveRecord), JavaScript (Prisma, TypeORM)
 
 ---
+
 ## Pros
 
 - Less boilerplate
@@ -42,6 +47,7 @@ audience:
 - Faster initial development
 
 ---
+
 ## Cons
 
 - Hides SQL: hard to optimise
@@ -51,6 +57,7 @@ audience:
 - Performance ceiling for complex queries
 
 ---
+
 ## Active Record Pattern
 
 - Object knows how to save itself
@@ -59,6 +66,7 @@ audience:
 - ActiveRecord (Rails), Django ORM
 
 ---
+
 ## Repository Pattern
 
 - Separate object for persistence
@@ -67,6 +75,7 @@ audience:
 - Java's JPA, .NET Entity Framework
 
 ---
+
 ## Lazy Loading
 
 - Related objects loaded on access
@@ -75,6 +84,7 @@ audience:
 - Disable when not needed
 
 ---
+
 ## N+1 Problem
 
 - Fetch list of N items; for each: fetch related (1 query)
@@ -83,11 +93,13 @@ audience:
 - ORMs hide this; you must catch it
 
 ---
+
 ## Cause and Cure
 
 ![n_plus_one_problem](svg/courses/databases/introduction-to-databases/09_object_relational_mappers/n_plus_one.svg)
 
 ---
+
 ## Eager Loading
 
 - Pre-fetch related objects
@@ -96,6 +108,7 @@ audience:
 - The fix for N+1
 
 ---
+
 ## Query Builder
 
 - Programmatic SQL construction
@@ -104,6 +117,7 @@ audience:
 - Knex, jOOQ, SqlAlchemy core
 
 ---
+
 ## Raw SQL Fallback
 
 - Even with ORM: drop to raw SQL when needed
@@ -111,6 +125,7 @@ audience:
 - Document; don't make every query a ticket of complaints
 
 ---
+
 ## Migrations
 
 - Most ORMs include migration tools
@@ -119,6 +134,7 @@ audience:
 - Versioned in source control
 
 ---
+
 ## Validation
 
 - Many ORMs validate before saving
@@ -127,6 +143,7 @@ audience:
 - Combine with DB constraints
 
 ---
+
 ## Performance Tips
 
 - Profile generated SQL
@@ -135,6 +152,7 @@ audience:
 - Drop to raw SQL for analytics
 
 ---
+
 ## Common ORM Mistakes
 
 - N+1 queries (the classic)

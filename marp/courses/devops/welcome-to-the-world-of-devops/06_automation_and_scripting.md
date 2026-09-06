@@ -12,10 +12,12 @@ audience:
   - audiences:managers
 
 ---
+
 # Automation and Scripting
 Leveraging automation for DevOps efficiency
 
 ---
+
 ## Automation Layers
 
 ![automation_layers](svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/automation_layers.svg)

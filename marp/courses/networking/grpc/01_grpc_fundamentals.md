@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # gRPC Fundamentals
 
 ---
+
 ## What This Chapter Covers
 
 - What gRPC is and what problem it solves
@@ -20,6 +22,7 @@ audience:
 - Supported languages and the ecosystem
 
 ---
+
 ## What Is gRPC?
 
 - A high-performance, open-source RPC framework
@@ -29,6 +32,7 @@ audience:
 - Cross-language: clients and servers in different languages interoperate
 
 ---
+
 ## Why gRPC?
 
 - Type-safe contracts via .proto files
@@ -38,6 +42,7 @@ audience:
 - First-class support for many languages
 
 ---
+
 ## HTTP/2: The Transport
 
 - Binary framing instead of plain-text HTTP/1
@@ -47,6 +52,7 @@ audience:
 - Long-lived connections — better latency
 
 ---
+
 ## Why HTTP/2 Matters Here
 
 - Multiplexing eliminates head-of-line blocking
@@ -56,6 +62,7 @@ audience:
 - The basis of gRPC's performance claims
 
 ---
+
 ## Protocol Buffers: The Schema
 
 - Strongly-typed schema language
@@ -65,21 +72,25 @@ audience:
 - Schema is the contract, shared between client and server
 
 ---
+
 ## Architecture Overview
 
 ![grpc_architecture](svg/courses/networking/grpc/01_grpc_fundamentals/grpc_architecture.svg)
 
 ---
+
 ## HTTP/2 Features
 
 ![http2_features](svg/courses/networking/grpc/01_grpc_fundamentals/http2_features.svg)
 
 ---
+
 ## gRPC Compared To REST
 
 ![grpc_vs_rest](svg/courses/networking/grpc/01_grpc_fundamentals/grpc_vs_rest.svg)
 
 ---
+
 ## Communication Model
 
 - Client invokes a method on a stub (generated)
@@ -89,6 +100,7 @@ audience:
 - Client receives, deserializes, returns
 
 ---
+
 ## Stubs and Generated Code
 
 - The .proto file defines the service
@@ -98,6 +110,7 @@ audience:
 - Wire details are abstracted
 
 ---
+
 ## gRPC vs REST
 
 - REST: HTTP/1, JSON, resource-oriented
@@ -108,6 +121,7 @@ audience:
 - gRPC: better for internal microservices
 
 ---
+
 ## gRPC vs GraphQL
 
 - GraphQL: query language, flexible response shape
@@ -117,6 +131,7 @@ audience:
 - Different tools for different problems
 
 ---
+
 ## When to Use gRPC
 
 - Microservices communicating internally
@@ -126,6 +141,7 @@ audience:
 - Mobile clients where bandwidth matters
 
 ---
+
 ## When Not to Use gRPC
 
 - Browser-direct calls (need gRPC-Web proxy)
@@ -135,6 +151,7 @@ audience:
 - Cases where text-readable wire format matters for debugging
 
 ---
+
 ## Language Support
 
 - First-class: Go, Java, Python, C++, C#, Node, Ruby, Dart
@@ -144,6 +161,7 @@ audience:
 - Not all languages have all features
 
 ---
+
 ## Ecosystem and Tooling
 
 - `grpcurl` — like curl for gRPC
@@ -153,6 +171,7 @@ audience:
 - Connect — gRPC-compatible alternative with browser support
 
 ---
+
 ## Performance Claims
 
 - 5-10x faster than equivalent JSON over HTTP/1 in many benchmarks
@@ -162,6 +181,7 @@ audience:
 - Real numbers vary by use case — always benchmark
 
 ---
+
 ## Course Roadmap
 
 - Chapter 2: Protocol Buffers syntax
@@ -175,6 +195,7 @@ audience:
 - Chapter 10: Testing and performance
 
 ---
+
 ## Setting Up: A Simple Workflow
 
 - Define service in .proto
@@ -184,6 +205,7 @@ audience:
 - Run, test, iterate
 
 ---
+
 ## Example: Hello World
 
 ```protobuf
@@ -203,6 +225,7 @@ message HelloReply {
 - Generated code in client and server languages
 
 ---
+
 ## Common Misconceptions
 
 - "gRPC is just RPC over HTTP" — it's tightly tied to HTTP/2 and protobuf
@@ -212,6 +235,7 @@ message HelloReply {
 - "Streaming means async" — gRPC streaming is its own thing
 
 ---
+
 ## Summary
 
 - gRPC: HTTP/2 + Protocol Buffers + cross-language codegen

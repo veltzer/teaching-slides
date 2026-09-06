@@ -11,6 +11,7 @@ audience:
 - audiences:managers
 
 ---
+
 # DevOps: Bridging Development and Operations
 ## A Comprehensive Overview
 ## Mark Veltzer

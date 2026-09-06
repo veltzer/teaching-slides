@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Request and Response
 
 ---
+
 ## What This Chapter Covers
 
 - Request bodies
@@ -19,6 +21,7 @@ audience:
 - Content negotiation
 
 ---
+
 ## JSON Bodies
 
 - Standard for modern REST
@@ -26,11 +29,13 @@ audience:
 - Symmetric: requests and responses
 
 ---
+
 ## Status Code Classes
 
 ![status_class](svg/courses/networking/restful-apis/05_request_and_response/status_class.svg)
 
 ---
+
 ## Sample Request
 
 ```json
@@ -42,6 +47,7 @@ POST /users
 ```
 
 ---
+
 ## Sample Response
 
 ```json
@@ -56,6 +62,7 @@ Location: /users/123
 ```
 
 ---
+
 ## Response Envelopes
 
 - Wrap data: `{"data": {...}, "meta": {...}}`
@@ -64,6 +71,7 @@ Location: /users/123
 - Envelope helps with metadata
 
 ---
+
 ## Error Responses
 
 - Use proper status code
@@ -72,6 +80,7 @@ Location: /users/123
 - Stable error structure
 
 ---
+
 ## Sample Error
 
 ```json
@@ -86,6 +95,7 @@ HTTP/1.1 400 Bad Request
 ```
 
 ---
+
 ## Problem Details (RFC 7807)
 
 - Standard error format
@@ -94,6 +104,7 @@ HTTP/1.1 400 Bad Request
 - Worth considering
 
 ---
+
 ## Validation
 
 - Validate inputs server-side
@@ -102,6 +113,7 @@ HTTP/1.1 400 Bad Request
 - Consistent error structure
 
 ---
+
 ## Idempotency
 
 - Safe to retry
@@ -110,6 +122,7 @@ HTTP/1.1 400 Bad Request
 - Critical for payments
 
 ---
+
 ## Content Negotiation
 
 - Accept: application/json
@@ -118,6 +131,7 @@ HTTP/1.1 400 Bad Request
 - Most APIs are JSON-only
 
 ---
+
 ## Compression
 
 - Accept-Encoding: gzip
@@ -126,6 +140,7 @@ HTTP/1.1 400 Bad Request
 - Usually transparent
 
 ---
+
 ## Common Request/Response Mistakes
 
 - Returning 200 for errors
@@ -135,6 +150,7 @@ HTTP/1.1 400 Bad Request
 - Throwing on first validation error instead of collecting all
 
 ---
+
 ## Anatomy of an Error Response
 
 ![error_response](svg/courses/networking/restful-apis/05_request_and_response/error_response.svg)

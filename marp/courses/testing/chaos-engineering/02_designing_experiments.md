@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Designing Experiments
 
 ---
+
 ## What This Chapter Covers
 
 - Picking targets
@@ -21,6 +23,7 @@ audience:
 - Documentation
 
 ---
+
 ## Picking A Target
 
 - Critical user paths first
@@ -29,6 +32,7 @@ audience:
 - Recently changed systems
 
 ---
+
 ## Hypothesis Form
 
 - Steady state X
@@ -37,11 +41,13 @@ audience:
 - Measure to verify
 
 ---
+
 ## Experiment Flow
 
 ![chaos_flow](svg/courses/testing/chaos-engineering/02_designing_experiments/chaos_flow.svg)
 
 ---
+
 ## Independent Variables
 
 - What you change
@@ -50,6 +56,7 @@ audience:
 - Avoid confounding
 
 ---
+
 ## Dependent Variables
 
 - What you measure
@@ -58,6 +65,7 @@ audience:
 - Multiple per experiment
 
 ---
+
 ## Pre-Conditions
 
 - System healthy
@@ -66,11 +74,13 @@ audience:
 - Maintenance window if needed
 
 ---
+
 ## Experiment Anatomy
 
 ![experiment_anatomy](svg/courses/testing/chaos-engineering/02_designing_experiments/experiment_anatomy.svg)
 
 ---
+
 ## Abort Conditions
 
 - Customer impact threshold
@@ -79,6 +89,7 @@ audience:
 - Manual override
 
 ---
+
 ## Time Window
 
 - Off-peak first
@@ -87,6 +98,7 @@ audience:
 - Consistent across runs
 
 ---
+
 ## Cohorts
 
 - Small percentage of users
@@ -95,6 +107,7 @@ audience:
 - Document cohort criteria
 
 ---
+
 ## Communication
 
 - On-call team aware
@@ -103,6 +116,7 @@ audience:
 - Status page if needed
 
 ---
+
 ## Reporting
 
 - What you tested
@@ -111,6 +125,7 @@ audience:
 - Owners and deadlines
 
 ---
+
 ## Action Items
 
 - Bugs filed
@@ -119,6 +134,7 @@ audience:
 - Re-test scheduled
 
 ---
+
 ## Repetition
 
 - Same experiment over time
@@ -127,6 +143,7 @@ audience:
 - Cheap to run again
 
 ---
+
 ## Common Design Mistakes
 
 - Vague hypothesis

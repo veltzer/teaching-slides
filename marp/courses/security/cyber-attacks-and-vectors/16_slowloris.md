@@ -15,6 +15,7 @@ audience:
 # Slowloris Attack and Mitigation
 
 ---
+
 ## What is Slowloris Attack
 
 - Slowloris is a type of Denial of Service (DoS) attack that targets web servers
@@ -25,6 +26,7 @@ audience:
 - Requires very low bandwidth compared to volumetric DDoS attacks
 
 ---
+
 ## How HTTP Connections Normally Work
 
 ```bash
@@ -67,6 +69,7 @@ audience:
 - With enough connections, the server cannot accept legitimate clients
 
 ---
+
 ## Slowloris Step by Step
 
 1. **Open connections**: Attacker opens hundreds of connections to the target
@@ -76,6 +79,7 @@ audience:
 1. **Deny service**: Legitimate users receive connection refused errors
 
 ---
+
 ## Why Slowloris is Effective
 
 | Characteristic       | Slowloris              | Volumetric DDoS         |
@@ -88,6 +92,7 @@ audience:
 | Cost to attacker     | Nearly free            | Expensive infrastructure |
 
 ---
+
 ## Python Implementation for Testing
 
 ```python
@@ -168,6 +173,7 @@ def slowloris_attack():
 > WARNING: Only use this against systems you own or have written authorization to test.
 
 ---
+
 ## Slowloris Variants
 
 | Variant            | Technique                                     | Target          |
@@ -193,6 +199,7 @@ def slowloris_attack():
 - Even harder to detect than standard Slowloris
 
 ---
+
 ## Detecting Slowloris Attacks
 
 ### Using netstat and ss
@@ -223,6 +230,7 @@ watch -n 1 'ss -tn state established | wc -l'
 - Connection count approaching server max without proportional traffic
 
 ---
+
 ## Detection with Server Logs
 
 ```bash
@@ -259,6 +267,7 @@ curl http://localhost/server-status?auto | \
 ![apache_vs_nginx_resilience](svg/courses/security/cyber-attacks-and-vectors/16_slowloris/apache_vs_nginx_resilience.svg)
 
 ---
+
 ## Apache mod_reqtimeout Configuration
 
 ```apache
@@ -299,6 +308,7 @@ apachectl -M | grep reqtimeout
 ```
 
 ---
+
 ## Nginx Configuration for Slowloris Defense
 
 ```nginx
@@ -338,6 +348,7 @@ http {
 ```
 
 ---
+
 ## Rate Limiting with iptables
 
 ```bash
@@ -382,6 +393,7 @@ nft add rule inet filter input \
 - This is the single most effective defense against Slowloris
 
 ---
+
 ## Cloud-Based Mitigation
 
 | Service            | Feature                                  |
@@ -397,6 +409,7 @@ nft add rule inet filter input \
 - Often the simplest solution for production environments
 
 ---
+
 ## Testing Your Defenses
 
 ```bash
@@ -425,6 +438,7 @@ slowhttptest -c 1000 -B -g -o slow_post_test \
 ```
 
 ---
+
 ## Monitoring and Alerting
 
 ```bash
@@ -455,6 +469,7 @@ done
 ```
 
 ---
+
 ## Defense Checklist
 
 ```bash
@@ -475,6 +490,7 @@ done
 ```
 
 ---
+
 ## Key Takeaways
 
 - Slowloris is a low-bandwidth, application-layer DoS attack

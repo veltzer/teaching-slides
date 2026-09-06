@@ -8,9 +8,11 @@ audience:
   - audiences:developers
   - audiences:security-professionals
 ---
+
 # Asymmetric Encryption
 
 ---
+
 ## Two Keys, Two Operations
 
 ![asymmetric](svg/courses/security/cryptography-fundamentals/03_asymmetric/asymmetric.svg)

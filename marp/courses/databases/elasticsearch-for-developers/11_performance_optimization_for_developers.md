@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Performance Optimisation for Developers
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![perf_tactics](svg/courses/databases/elasticsearch-for-developers/11_performance_optimization_for_developers/perf_tactics.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Query profiling
@@ -27,16 +29,19 @@ audience:
 - Common slow queries
 
 ---
+
 ## Performance Levers
 
 ![perf_levers](svg/courses/databases/elasticsearch-for-developers/11_performance_optimization_for_developers/perf_levers.svg)
 
 ---
+
 ## Performance Pillars
 
 ![perf_pillars](svg/courses/databases/elasticsearch-for-developers/11_performance_optimization_for_developers/perf_pillars.svg)
 
 ---
+
 ## Profile API
 
 ```json
@@ -51,6 +56,7 @@ audience:
 - Use sparingly (overhead)
 
 ---
+
 ## Filter Context
 
 - Filters cached
@@ -59,6 +65,7 @@ audience:
 - Wrap in `bool.filter`
 
 ---
+
 ## doc_values
 
 - Column-store for aggregations and sorting
@@ -67,6 +74,7 @@ audience:
 - Set `doc_values: false` only when sure
 
 ---
+
 ## Source Field
 
 - _source: original document
@@ -75,6 +83,7 @@ audience:
 - Most: keep enabled
 
 ---
+
 ## Caching
 
 - Filter cache
@@ -84,6 +93,7 @@ audience:
 - Many layers
 
 ---
+
 ## Force Merge
 
 - Merge segments in an index
@@ -92,6 +102,7 @@ audience:
 - Don't on actively-written indexes
 
 ---
+
 ## Pagination Performance
 
 - `from + size > 10000`: error by default
@@ -99,6 +110,7 @@ audience:
 - Or scroll for batch processing
 
 ---
+
 ## Aggregation Performance
 
 - Aggregations on huge indexes: slow
@@ -107,6 +119,7 @@ audience:
 - Pre-aggregate at index time
 
 ---
+
 ## Multi-Index Searches
 
 - Search many indexes at once
@@ -114,6 +127,7 @@ audience:
 - Cross-cluster search for federated
 
 ---
+
 ## Mappings For Speed
 
 - `keyword` not `text` if exact match
@@ -122,6 +136,7 @@ audience:
 - Match field to query pattern
 
 ---
+
 ## Refresh Interval
 
 - Default: 1s
@@ -130,6 +145,7 @@ audience:
 - Saves segment churn
 
 ---
+
 ## Number Of Shards
 
 - Each shard is overhead
@@ -138,6 +154,7 @@ audience:
 - Rule of thumb: 1 shard per 10-50GB data
 
 ---
+
 ## Number Of Replicas
 
 - 1 for production (HA)
@@ -145,6 +162,7 @@ audience:
 - More replicas = more read scaling
 
 ---
+
 ## Common Performance Mistakes
 
 - Wildcard query on text field (slow)

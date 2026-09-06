@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Semantics and Meaning
 
 ---
+
 ## What This Chapter Covers
 
 - Lexical semantics — word senses, relations, and lexical knowledge bases
@@ -21,6 +23,7 @@ audience:
 - Coreference resolution and textual entailment
 
 ---
+
 ## Why Semantics Is Hard
 
 - Syntax tells you the structure; semantics tells you the meaning
@@ -30,6 +33,7 @@ audience:
 - Modern systems learn meaning implicitly rather than building it explicitly
 
 ---
+
 ## Lexical Semantics
 
 - The meaning of individual words and the relations between them
@@ -39,6 +43,7 @@ audience:
 - The mapping is many-to-many and changes over time
 
 ---
+
 ## Word Senses and Polysemy
 
 - Polysemy: one word, multiple related senses (`paper` as material, document, journal)
@@ -48,6 +53,7 @@ audience:
 - Granularity matters: too fine, and disambiguation is impossible; too coarse, and distinctions are lost
 
 ---
+
 ## Lexical Relations
 
 - Synonymy — same meaning in some context (`big` and `large`)
@@ -57,11 +63,13 @@ audience:
 - These relations form a graph that powers reasoning over language
 
 ---
+
 ## Lexical Relations Map
 
 ![lexical_relations](svg/courses/ai/natural-language-processing/15_semantics_and_meaning/lexical_relations.svg)
 
 ---
+
 ## WordNet
 
 - A large lexical database for English organized around synsets
@@ -71,6 +79,7 @@ audience:
 - The reference resource for symbolic semantic processing
 
 ---
+
 ## What WordNet Looks Like
 
 ```python
@@ -89,6 +98,7 @@ for s in senses:
 - A starting point for symbolic and hybrid systems
 
 ---
+
 ## Other Lexical Knowledge Bases
 
 - `FrameNet` — words organized by the situational frames they evoke
@@ -98,6 +108,7 @@ for s in senses:
 - Each resource encodes a different slice of meaning
 
 ---
+
 ## Word Sense Disambiguation
 
 - Given a word in context, choose the right sense from a sense inventory
@@ -107,6 +118,7 @@ for s in senses:
 - Modern systems often disambiguate implicitly without naming senses
 
 ---
+
 ## The Lesk Algorithm
 
 - A simple, knowledge-based disambiguation method from 1986
@@ -116,6 +128,7 @@ for s in senses:
 - Surprisingly hard to beat with no training data
 
 ---
+
 ## Lesk in Practice
 
 ```python
@@ -134,6 +147,7 @@ def lesk(word, context, senses):
 - Variants weight rarer overlapping words more heavily
 
 ---
+
 ## Supervised Disambiguation
 
 - Treat sense selection as a classifier over labeled examples
@@ -143,6 +157,7 @@ def lesk(word, context, senses):
 - Strong baselines for years; eclipsed by contextual embeddings
 
 ---
+
 ## Contextual Embeddings as Implicit Disambiguation
 
 - A `BERT` embedding for `bank` in a financial sentence differs from `bank` near a river
@@ -152,6 +167,7 @@ def lesk(word, context, senses):
 - The downside: there is no symbolic label to reason over
 
 ---
+
 ## Compositional Semantics
 
 - The meaning of a phrase is a function of the meanings of its parts
@@ -161,11 +177,13 @@ def lesk(word, context, senses):
 - The classical bridge between syntax and meaning
 
 ---
+
 ## Compositional Semantics Pipeline
 
 ![compositional_semantics](svg/courses/ai/natural-language-processing/15_semantics_and_meaning/compositional_semantics.svg)
 
 ---
+
 ## Combinators and Tree Composition
 
 - Each syntactic rule has a corresponding semantic combinator
@@ -175,6 +193,7 @@ def lesk(word, context, senses):
 - Elegant, but brittle when grammar coverage breaks
 
 ---
+
 ## Why Deep Learning Sidesteps Composition
 
 - Vector embeddings combine via attention rather than logical rules
@@ -184,6 +203,7 @@ def lesk(word, context, senses):
 - The cost: no symbolic handle on the meaning the model produced
 
 ---
+
 ## Semantic Role Labeling
 
 - Identify the predicate of a sentence and label its arguments
@@ -193,6 +213,7 @@ def lesk(word, context, senses):
 - A bridge between syntax and structured meaning
 
 ---
+
 ## Predicates and Arguments
 
 - Predicate: typically a verb, sometimes a noun or adjective
@@ -202,6 +223,7 @@ def lesk(word, context, senses):
 - Same predicate, different argument structures across languages
 
 ---
+
 ## PropBank
 
 - Annotates predicate-argument structure on top of the `Penn Treebank`
@@ -211,6 +233,7 @@ def lesk(word, context, senses):
 - The standard training resource for English `SRL` systems
 
 ---
+
 ## FrameNet
 
 - Builds on Fillmore's frame semantics
@@ -220,11 +243,13 @@ def lesk(word, context, senses):
 - Richer than `PropBank` but with smaller corpus coverage
 
 ---
+
 ## SRL System Architectures
 
 ![srl_architecture](svg/courses/ai/natural-language-processing/15_semantics_and_meaning/srl_architecture.svg)
 
 ---
+
 ## Neural SRL Systems
 
 - Encode the sentence with a pretrained transformer
@@ -234,6 +259,7 @@ def lesk(word, context, senses):
 - Modern `SRL` exceeds 90% F1 on `OntoNotes` benchmarks
 
 ---
+
 ## Coreference Resolution
 
 - Determine which mentions in a text refer to the same entity
@@ -243,6 +269,7 @@ def lesk(word, context, senses):
 - Critical when downstream tasks need to track entities across sentences
 
 ---
+
 ## Anaphora and Cataphora
 
 - Anaphora — a mention refers backward (`Alice ... she`)
@@ -252,6 +279,7 @@ def lesk(word, context, senses):
 - Zero anaphora — the referent is implicit, common in pro-drop languages
 
 ---
+
 ## Mention Detection and Clustering
 
 - Two-stage pipeline: find mentions, then cluster mentions that corefer
@@ -261,6 +289,7 @@ def lesk(word, context, senses):
 - Errors in mention detection cascade into clustering errors
 
 ---
+
 ## Neural Coreference Systems
 
 - End-to-end models score every span pair in a document
@@ -270,6 +299,7 @@ def lesk(word, context, senses):
 - `OntoNotes` is the standard English benchmark
 
 ---
+
 ## Coreference Challenges
 
 - Pronoun ambiguity: `The trophy doesn't fit in the suitcase because it is too big`
@@ -279,6 +309,7 @@ def lesk(word, context, senses):
 - Nested mentions: `the President of the company` contains `the company`
 
 ---
+
 ## Textual Entailment
 
 - Given a premise and a hypothesis, decide if the premise implies the hypothesis
@@ -288,6 +319,7 @@ def lesk(word, context, senses):
 - Also called natural language inference
 
 ---
+
 ## NLI Datasets
 
 - `SNLI` — image-caption pairs labeled by crowd workers
@@ -297,6 +329,7 @@ def lesk(word, context, senses):
 - Models that hit 90%+ on `SNLI` still struggle on `ANLI`
 
 ---
+
 ## NLI in Practice
 
 ```python
@@ -314,6 +347,7 @@ result = nli({
 - Often used as a building block for fact-checking and zero-shot classification
 
 ---
+
 ## NLI Challenges
 
 - Annotation artifacts — models learn shortcuts in the hypothesis alone
@@ -323,6 +357,7 @@ result = nli({
 - Multilingual `NLI` is harder than the leaderboards suggest
 
 ---
+
 ## Where Semantics Meets Generation
 
 - Modern large language models do not output logical forms
@@ -332,6 +367,7 @@ result = nli({
 - Evaluation increasingly uses `NLI` models to score faithfulness automatically
 
 ---
+
 ## Anti-Patterns
 
 - Treating word senses as fixed categories when context defines them
@@ -341,6 +377,7 @@ result = nli({
 - Trusting a single high `NLI` score across very different domains
 
 ---
+
 ## Summary
 
 - Lexical semantics organizes word meaning into senses and relations

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Security
 
 ---
+
 ## What This Chapter Covers
 
 - Authentication
@@ -20,6 +22,7 @@ audience:
 - Persisted queries
 
 ---
+
 ## Authentication
 
 - Same as REST: token / JWT / session
@@ -27,11 +30,13 @@ audience:
 - Set into context
 
 ---
+
 ## Security Concerns
 
 ![security_concerns](svg/courses/networking/graphql/10_security/security_concerns.svg)
 
 ---
+
 ## Authorisation
 
 - Field-level: per resolver
@@ -40,6 +45,7 @@ audience:
 - Combine layers
 
 ---
+
 ## Schema Directives
 
 ```graphql
@@ -52,6 +58,7 @@ type Query {
 - Less boilerplate
 
 ---
+
 ## Resolver-Level
 
 ```javascript
@@ -69,6 +76,7 @@ type Query {
 - More flexible
 
 ---
+
 ## Common Attacks
 
 - Excessive depth: deep recursion
@@ -77,6 +85,7 @@ type Query {
 - Introspection: schema discovery
 
 ---
+
 ## Depth Limiting
 
 - Reject nesting beyond N
@@ -84,6 +93,7 @@ type Query {
 - Often 7-10 max
 
 ---
+
 ## Complexity Analysis
 
 - Score each field
@@ -92,6 +102,7 @@ type Query {
 - Prevents runaway queries
 
 ---
+
 ## Rate Limiting
 
 - Per IP, per user
@@ -99,6 +110,7 @@ type Query {
 - Different from REST: same endpoint
 
 ---
+
 ## Introspection in Production
 
 - Schema discovery via __schema
@@ -107,6 +119,7 @@ type Query {
 - Or auth-gated
 
 ---
+
 ## Persisted Queries as Allow-List
 
 - Only registered queries allowed
@@ -115,6 +128,7 @@ type Query {
 - Drop introspection in prod safely
 
 ---
+
 ## Input Validation
 
 - Schema enforces types
@@ -122,6 +136,7 @@ type Query {
 - Don't trust IDs as parents
 
 ---
+
 ## Logging
 
 - Log queries with operation name
@@ -130,6 +145,7 @@ type Query {
 - Correlate to user
 
 ---
+
 ## Common Security Mistakes
 
 - Auth at gateway only; resolver bypass

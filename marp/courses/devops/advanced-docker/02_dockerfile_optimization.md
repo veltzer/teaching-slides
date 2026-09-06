@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced Dockerfile Techniques and Image Optimization
 
 Building production-grade container images
@@ -656,6 +657,7 @@ docker history --format "{{.Size}}\t{{.CreatedBy}}" myapp:latest
 ```
 
 ---
+
 ## `dive` - Image Layer Explorer: Example
 
 ```bash
@@ -674,6 +676,7 @@ dive myapp:latest --ci
 ```
 
 ---
+
 ## `dive` - Image Layer Explorer
 
 ![total_image_size](svg/courses/devops/advanced-docker/02_dockerfile_optimization/total_image_size.svg)

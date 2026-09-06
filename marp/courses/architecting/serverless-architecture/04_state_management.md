@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # State Management
 
 ---
+
 ## State Options
 
 ![state_options](svg/courses/architecting/serverless-architecture/04_state_management/state_options.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Serverless functions are stateless
@@ -27,6 +30,7 @@ audience:
 - Common patterns
 
 ---
+
 ## Stateless By Design
 
 - Each invocation is independent
@@ -36,6 +40,7 @@ audience:
 - Don't rely on either for state
 
 ---
+
 ## Where State Lives
 
 - Database (DynamoDB, RDS, MongoDB Atlas)
@@ -45,11 +50,13 @@ audience:
 - Config (Parameter Store, Secrets Manager)
 
 ---
+
 ## State Stores Compared
 
 ![state_decision](svg/courses/architecting/serverless-architecture/04_state_management/state_decision.svg)
 
 ---
+
 ## DynamoDB With Lambda
 
 - Serverless DB; scales to zero (per-request pricing)
@@ -59,6 +66,7 @@ audience:
 - Limitations: query model, no joins
 
 ---
+
 ## RDS With Lambda
 
 - Traditional relational DB
@@ -68,6 +76,7 @@ audience:
 - Often: RDS Aurora Serverless instead
 
 ---
+
 ## RDS Proxy
 
 - AWS managed connection pooler
@@ -77,6 +86,7 @@ audience:
 - Adds cost; required at scale
 
 ---
+
 ## Aurora Serverless
 
 - MySQL / Postgres compatible
@@ -86,6 +96,7 @@ audience:
 - Paying for capacity, not connections
 
 ---
+
 ## ElastiCache / Redis
 
 - Managed Redis
@@ -95,6 +106,7 @@ audience:
 - Acceptable when used heavily
 
 ---
+
 ## Sessions
 
 - Don't store session in Lambda memory (won't persist)
@@ -104,6 +116,7 @@ audience:
 - Pick by: how much state, how often accessed
 
 ---
+
 ## JWTs As State
 
 - Encode user state in the token
@@ -113,6 +126,7 @@ audience:
 - Sign with a server key; verify on each request
 
 ---
+
 ## File State (S3)
 
 - For documents, images, blobs
@@ -122,6 +136,7 @@ audience:
 - The standard pattern for file workflows
 
 ---
+
 ## Step Functions As State
 
 - Step Functions tracks workflow state
@@ -131,6 +146,7 @@ audience:
 - Limit: state size (256 KB typical)
 
 ---
+
 ## In-Memory Caching
 
 - Cache outside the handler (in init code)
@@ -140,6 +156,7 @@ audience:
 - Periodically invalidate
 
 ---
+
 ## Distributed State
 
 - Shared state between Lambdas: needs external store
@@ -149,6 +166,7 @@ audience:
 - Match the store to the access pattern
 
 ---
+
 ## Common State Mistakes
 
 - Local files / globals expected to persist
@@ -158,6 +176,7 @@ audience:
 - Storing PII in JWTs without encryption
 
 ---
+
 ## A Decision Tree
 
 - Per-user, short-lived &#8594; JWT or DynamoDB

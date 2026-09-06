@@ -15,11 +15,13 @@ audience:
 # Cross-Site Scripting (XSS)
 
 ---
+
 ## What is XSS?
 
 Cross-Site Scripting (XSS) is a type of security vulnerability that allows an attacker to inject malicious code (usually client-side scripts) into web applications. This code is then executed by the victim's web browser, enabling the attacker to hijack user sessions, deface websites, or redirect users to malicious sites.
 
 ---
+
 ## Types of XSS
 
 1. **Reflected XSS**: The malicious script is reflected off the web application to the victim's browser. This occurs when user input is immediately returned by the web application without proper validation
@@ -27,6 +29,7 @@ Cross-Site Scripting (XSS) is a type of security vulnerability that allows an at
 1. **DOM-based XSS**: The malicious script is executed as a result of modifying the Document Object Model (DOM) environment in the victim's browser
 
 ---
+
 ## Reflected XSS Example
 
 Suppose a website has a search function that takes user input and displays the results on the same page without proper validation.

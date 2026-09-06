@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Unit Testing Foundations for TDD
 
 ---
+
 ## What This Chapter Covers
 
 - Effective unit tests
@@ -21,6 +23,7 @@ audience:
 - Keeping tests fast and deterministic
 
 ---
+
 ## What Makes A Unit Test Good
 
 - Tests *one* thing
@@ -31,16 +34,19 @@ audience:
 - Easy to read
 
 ---
+
 ## FIRST Principles
 
 ![test_fundamentals](svg/courses/testing/test-driven-development/03_unit_testing_foundations_for_tdd/test_fundamentals.svg)
 
 ---
+
 ## FIRST Expanded
 
 ![first_principles](svg/courses/testing/test-driven-development/03_unit_testing_foundations_for_tdd/first_principles.svg)
 
 ---
+
 ## Arrange-Act-Assert
 
 ```python
@@ -61,11 +67,13 @@ def test_user_promotion():
 - Spaces or comments separate the sections
 
 ---
+
 ## Arrange Act Assert Layout
 
 ![arrange_act_assert](svg/courses/testing/test-driven-development/03_unit_testing_foundations_for_tdd/arrange_act_assert.svg)
 
 ---
+
 ## Test Naming
 
 - The test name should describe the behaviour
@@ -75,6 +83,7 @@ def test_user_promotion():
 - A descriptive name doubles as documentation
 
 ---
+
 ## Naming Conventions
 
 - `test_<unit>_<scenario>_<expected>`
@@ -84,6 +93,7 @@ def test_user_promotion():
 - Consistency aids navigation
 
 ---
+
 ## One Assertion Per Test
 
 - A test should have one *concept* being verified
@@ -93,6 +103,7 @@ def test_user_promotion():
 - Multiple tests > one mega-test
 
 ---
+
 ## Edge Cases
 
 - Empty input
@@ -105,6 +116,7 @@ def test_user_promotion():
 - Each is a potential test
 
 ---
+
 ## Boundary Conditions
 
 - Just below the boundary
@@ -114,6 +126,7 @@ def test_user_promotion():
 - Test these explicitly
 
 ---
+
 ## Test Independence
 
 - Tests should be runnable in any order
@@ -123,11 +136,13 @@ def test_user_promotion():
 - Failures should be reproducible in isolation
 
 ---
+
 ## Independence Pitfalls
 
 ![test_independence](svg/courses/testing/test-driven-development/03_unit_testing_foundations_for_tdd/test_independence.svg)
 
 ---
+
 ## Test Isolation
 
 - Each test sets up what it needs
@@ -137,6 +152,7 @@ def test_user_promotion():
 - Tests that pollute the environment are flaky
 
 ---
+
 ## Setup and Teardown
 
 ```python
@@ -156,6 +172,7 @@ def test_user_promotion(user):
 - The cleanup runs even if the test fails
 
 ---
+
 ## Speed Matters
 
 - A test suite that takes 30 seconds runs constantly
@@ -165,6 +182,7 @@ def test_user_promotion(user):
 - Keep slow tests in a separate (integration) suite
 
 ---
+
 ## What Slows Tests Down
 
 - Database access
@@ -175,6 +193,7 @@ def test_user_promotion(user):
 - These belong in *integration* tests, not unit tests
 
 ---
+
 ## Determinism
 
 - Same code, same input &#8594; same result, every run
@@ -184,6 +203,7 @@ def test_user_promotion(user):
 - Track and fix; don't tolerate
 
 ---
+
 ## Test Patterns
 
 - **AAA**: Arrange, Act, Assert
@@ -193,6 +213,7 @@ def test_user_promotion(user):
 - Pick what fits your team and codebase
 
 ---
+
 ## Reading Test Failures
 
 - The error message should make the failure obvious
@@ -202,6 +223,7 @@ def test_user_promotion(user):
 - Bad messages waste minutes per failure
 
 ---
+
 ## Common Foundation Mistakes
 
 - Tests that depend on each other

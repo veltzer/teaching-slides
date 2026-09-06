@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Worktrees
 
 ---
+
 ## What This Chapter Covers
 
 - The problem: needing two checkouts of one repo
@@ -20,6 +22,7 @@ audience:
 - Workflow patterns that worktrees enable
 
 ---
+
 ## The Problem
 
 - You're deep in a feature branch
@@ -29,6 +32,7 @@ audience:
 - Worktrees solve this elegantly
 
 ---
+
 ## What Is a Worktree?
 
 - An additional working directory linked to your repo
@@ -38,11 +42,13 @@ audience:
 - One repo, many simultaneous checkouts
 
 ---
+
 ## Worktrees Visualized
 
 ![worktree_layout](svg/courses/git/advanced-git/08_worktrees/worktree_layout.svg)
 
 ---
+
 ## Adding a Worktree
 
 ```bash
@@ -57,6 +63,7 @@ cd ../hotfix-tree
 - Same repo metadata, separate filesystem
 
 ---
+
 ## Listing Worktrees
 
 ```bash
@@ -71,6 +78,7 @@ git worktree list
 - Quick way to remember "what was I working on where?"
 
 ---
+
 ## Removing a Worktree
 
 ```bash
@@ -83,6 +91,7 @@ git worktree remove ../hotfix-tree
 - Better: clean up via `git worktree prune` after manual rm
 
 ---
+
 ## Why Not Just Branch and Stash?
 
 - Stash + branch switch loses focus on long-running operations
@@ -92,11 +101,13 @@ git worktree remove ../hotfix-tree
 - Workflows scale naturally to many parallel tasks
 
 ---
+
 ## Worktree Use Cases
 
 ![worktree_use_cases](svg/courses/git/advanced-git/08_worktrees/worktree_use_cases.svg)
 
 ---
+
 ## Use Case: Long-Running Builds
 
 - Branch A is in the middle of a 20-minute build
@@ -106,6 +117,7 @@ git worktree remove ../hotfix-tree
 - No "kill it and restart" — context preserved on both
 
 ---
+
 ## Use Case: PR Review
 
 ```bash
@@ -120,6 +132,7 @@ cd ../review-pr-42
 - Delete the worktree when review is done
 
 ---
+
 ## Use Case: Comparing Builds
 
 - Build branch A in `~/repo`
@@ -129,6 +142,7 @@ cd ../review-pr-42
 - The cleanest way to compare two versions empirically
 
 ---
+
 ## Detached HEAD Worktrees
 
 ```bash
@@ -141,6 +155,7 @@ git worktree add ../inspect abc1234
 - Commits there are unreferenced unless you create a branch
 
 ---
+
 ## The Branch Lock Rule
 
 - A branch can be checked out in only one worktree
@@ -150,6 +165,7 @@ git worktree add ../inspect abc1234
 - Or check out a different branch and create a copy
 
 ---
+
 ## Bare Repos and Worktrees
 
 - A bare repo has no working tree at all
@@ -159,6 +175,7 @@ git worktree add ../inspect abc1234
 - Mental model shift: the repo is metadata, worktrees are the work
 
 ---
+
 ## Bare Repo + Worktree Pattern
 
 ```bash
@@ -175,6 +192,7 @@ git worktree add ../prod prod
 - Avoids "wrong branch deployed" by construction
 
 ---
+
 ## Worktrees and Hooks
 
 - Hooks live in the bare repo or main `.git/hooks/`
@@ -184,6 +202,7 @@ git worktree add ../prod prod
 - Configure once, applies everywhere
 
 ---
+
 ## Worktrees and Submodules
 
 - Submodules per worktree are tricky
@@ -193,6 +212,7 @@ git worktree add ../prod prod
 - Subtrees behave more cleanly across worktrees
 
 ---
+
 ## Worktree Pruning
 
 - A removed directory still leaves metadata behind
@@ -202,6 +222,7 @@ git worktree add ../prod prod
 - Better: always use `git worktree remove`
 
 ---
+
 ## Performance Considerations
 
 - Worktrees share the object database — no duplicate storage
@@ -211,6 +232,7 @@ git worktree add ../prod prod
 - Lighter than two full clones; heavier than nothing
 
 ---
+
 ## Common Pitfalls
 
 - Trying to check out a branch already in another worktree
@@ -220,6 +242,7 @@ git worktree add ../prod prod
 - Tools that hardcode `.git` as a directory — worktrees use `.git` *files*
 
 ---
+
 ## Worktrees and IDEs
 
 - Some IDEs index per project root — point each at its worktree
@@ -229,6 +252,7 @@ git worktree add ../prod prod
 - One IDE window per worktree avoids confusion
 
 ---
+
 ## Best Practices
 
 - Name worktree directories for the branch or task: `../feat-login`, `../hotfix-3.2`
@@ -238,6 +262,7 @@ git worktree add ../prod prod
 - Treat worktrees as "task workspaces"
 
 ---
+
 ## Summary
 
 - Worktrees: many simultaneous checkouts of one repo

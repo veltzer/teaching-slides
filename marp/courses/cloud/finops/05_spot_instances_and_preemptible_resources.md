@@ -11,6 +11,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Spot Instances and Preemptible Resources
 
 ---

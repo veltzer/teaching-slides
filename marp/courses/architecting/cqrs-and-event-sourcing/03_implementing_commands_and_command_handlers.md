@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Implementing Commands and Command Handlers
 
 ---
+
 ## What This Chapter Covers
 
 - Designing command objects
@@ -21,6 +23,7 @@ audience:
 - Failure modes, idempotency, and middleware
 
 ---
+
 ## A Command Is a Request
 
 - Imperative name: `PlaceOrder`, `RefundPayment`, `ChangeAddress`
@@ -29,6 +32,7 @@ audience:
 - May fail; the failure is itself a meaningful response
 
 ---
+
 ## Command Object Design
 
 ```python
@@ -47,6 +51,7 @@ class PlaceOrder:
 - Includes metadata, not just payload
 
 ---
+
 ## Command Validation: Two Layers
 
 - **Structural**: shape, types, lengths, formats — fail fast before reaching the domain
@@ -55,6 +60,7 @@ class PlaceOrder:
 - Domain validation lives in the aggregate itself
 
 ---
+
 ## Structural Validation Example
 
 ```python
@@ -74,6 +80,7 @@ def validate(cmd: PlaceOrder) -> list[str]:
 - Fail-fast: if this fails, nothing else needs to happen
 
 ---
+
 ## Domain Validation Lives in the Aggregate
 
 ```python
@@ -93,6 +100,7 @@ class Order:
 - Returns events on success, not state
 
 ---
+
 ## Aggregate Roots
 
 - The unit of consistency in DDD
@@ -101,11 +109,13 @@ class Order:
 - Mutations are produced as events, not direct state changes
 
 ---
+
 ## Aggregate Lifecycle
 
 ![aggregate_lifecycle](svg/courses/architecting/cqrs-and-event-sourcing/03_implementing_commands_and_command_handlers/aggregate_lifecycle.svg)
 
 ---
+
 ## Loading an Aggregate
 
 ```python
@@ -122,6 +132,7 @@ def load_order(order_id: OrderId) -> Order:
 - Snapshots can short-circuit this for long streams (chapter 7)
 
 ---
+
 ## Saving an Aggregate
 
 ```python
@@ -139,6 +150,7 @@ def save_order(order: Order) -> None:
 - A version mismatch is a `ConcurrencyConflict` — the command must be retried
 
 ---
+
 ## The Command Handler
 
 ```python
@@ -164,11 +176,13 @@ class PlaceOrderHandler:
 - Loads, decides, saves — that's the whole shape
 
 ---
+
 ## The Generic Pattern
 
 ![command_handler_pipeline](svg/courses/architecting/cqrs-and-event-sourcing/03_implementing_commands_and_command_handlers/command_handler_pipeline.svg)
 
 ---
+
 ## Command Bus
 
 - A dispatcher that routes commands to their handlers
@@ -189,6 +203,7 @@ class CommandBus:
 ```
 
 ---
+
 ## Middleware Pipelines
 
 - Cross-cutting concerns shouldn't pollute every handler
@@ -197,6 +212,7 @@ class CommandBus:
 - Order matters; the outer layer runs first on entry, last on exit
 
 ---
+
 ## Middleware Example
 
 ```python
@@ -217,6 +233,7 @@ bus = LoggingMiddleware(MetricsMiddleware(ValidationMiddleware(CommandBus())))
 ```
 
 ---
+
 ## Common Middleware
 
 - **Validation**: structural validation before reaching the handler
@@ -228,6 +245,7 @@ bus = LoggingMiddleware(MetricsMiddleware(ValidationMiddleware(CommandBus())))
 - **Retry**: on transient failures (concurrency conflicts, network errors)
 
 ---
+
 ## Idempotency Matters
 
 - Networks lose responses; clients retry
@@ -236,6 +254,7 @@ bus = LoggingMiddleware(MetricsMiddleware(ValidationMiddleware(CommandBus())))
 - This is not optional in any production system
 
 ---
+
 ## Idempotency Through Command IDs
 
 ```python
@@ -251,6 +270,7 @@ class PlaceOrder:
 - Subsequent attempts with the same `command_id` are no-ops or return the original result
 
 ---
+
 ## Idempotency Through Event Identity
 
 - Each event carries a stable `event_id`
@@ -259,6 +279,7 @@ class PlaceOrder:
 - Effective even when client-side `command_id` is missing
 
 ---
+
 ## Concurrency Conflicts
 
 - Two clients try to modify the same aggregate at version `v`
@@ -267,6 +288,7 @@ class PlaceOrder:
 - The handler must retry: load fresh, decide again, append
 
 ---
+
 ## Retry on Conflict
 
 ```python
@@ -285,11 +307,13 @@ for attempt in range(3):
 - Re-decide based on the new state — the original decision may now be invalid
 
 ---
+
 ## Concurrency Conflict Resolution
 
 ![concurrency_conflict](svg/courses/architecting/cqrs-and-event-sourcing/03_implementing_commands_and_command_handlers/concurrency_conflict.svg)
 
 ---
+
 ## Producing Events: One vs Many
 
 - A single command often produces a single event
@@ -299,6 +323,7 @@ for attempt in range(3):
 - Treat the events as a unit: all are appended atomically or none are
 
 ---
+
 ## Atomicity of the Append
 
 - The event store guarantees the append of a list of events is atomic
@@ -307,6 +332,7 @@ for attempt in range(3):
 - Side effects beyond the append (notifications, integrations) are eventually consistent
 
 ---
+
 ## Side Effects: The Hard Part
 
 - An event in the log does not automatically reach external systems
@@ -315,11 +341,13 @@ for attempt in range(3):
 - This decouples the write path from the integration path
 
 ---
+
 ## Side Effects Belong in Subscribers
 
 ![side_effects_in_subscribers](svg/courses/architecting/cqrs-and-event-sourcing/03_implementing_commands_and_command_handlers/side_effects_in_subscribers.svg)
 
 ---
+
 ## Failure Modes
 
 - **Validation failure**: shape is wrong; return errors before loading anything
@@ -329,6 +357,7 @@ for attempt in range(3):
 - **Bug**: an assertion fires; do not swallow — let it crash and log
 
 ---
+
 ## Mapping Failures to Responses
 
 - Validation failure → 400 Bad Request, with the list of issues
@@ -338,6 +367,7 @@ for attempt in range(3):
 - Bug → 500, alert on-call
 
 ---
+
 ## Authorization
 
 - Belongs in middleware, not in the handler
@@ -346,6 +376,7 @@ for attempt in range(3):
 - Domain rules are domain rules; permissions are permissions — keep them apart
 
 ---
+
 ## Command Handler Smells
 
 - **Returning state**: handlers should return acknowledgement, not data
@@ -355,6 +386,7 @@ for attempt in range(3):
 - **Skipping the aggregate**: every state change goes through the root
 
 ---
+
 ## One Command, One Aggregate
 
 - A command operates on exactly one aggregate root
@@ -363,6 +395,7 @@ for attempt in range(3):
 - Cross-aggregate operations are explicit, not accidental
 
 ---
+
 ## Testing Command Handlers (Preview)
 
 - Given a sequence of past events
@@ -371,6 +404,7 @@ for attempt in range(3):
 - We cover this in detail in chapter 9
 
 ---
+
 ## Summary
 
 - Commands are immutable requests, named imperatively, carrying identity for idempotency

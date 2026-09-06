@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Saga Pattern Fundamentals
 
 ---
+
 ## Forward vs Backward Recovery
 
 ![forward_vs_backward](svg/courses/architecting/saga-pattern/02_saga_pattern_fundamentals/forward_vs_backward.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The structure of a saga: steps, transactions, compensations
@@ -25,6 +28,7 @@ audience:
 - Choreography vs orchestration: the high-level choice
 
 ---
+
 ## A Saga, Defined
 
 - A sequence of local transactions, each in a different service
@@ -34,6 +38,7 @@ audience:
 - The saga is itself a domain concept; name it like one
 
 ---
+
 ## Saga Anatomy
 
 - **Steps**: discrete units of work, each owned by one service
@@ -43,11 +48,13 @@ audience:
 - **Trigger**: the event or command that starts the saga
 
 ---
+
 ## Saga Anatomy Visualized
 
 ![saga_anatomy](svg/courses/architecting/saga-pattern/02_saga_pattern_fundamentals/saga_anatomy.svg)
 
 ---
+
 ## A Worked Example: Order Saga
 
 - Step 1: Reserve inventory (compensation: release inventory)
@@ -57,6 +64,7 @@ audience:
 - Failure at step 3 triggers compensations for steps 2 and 1, in reverse
 
 ---
+
 ## Forward Recovery
 
 - On failure, push forward to a known-good state instead of unwinding
@@ -65,6 +73,7 @@ audience:
 - Requires the failing step to be intermittently failing, not permanently broken
 
 ---
+
 ## Backward Recovery
 
 - On failure, undo earlier steps via compensations
@@ -73,6 +82,7 @@ audience:
 - Requires every step to have a meaningful compensation
 
 ---
+
 ## Forward vs Backward
 
 - Forward: "we're committed to finishing"
@@ -81,6 +91,7 @@ audience:
 - The right choice depends on the business — talk to domain experts
 
 ---
+
 ## Semantic Rollback vs ACID Rollback
 
 - ACID rollback: the database forgets it ever happened
@@ -90,6 +101,7 @@ audience:
 - This is fundamentally different from "the charge never happened"
 
 ---
+
 ## Saga State
 
 - Where are we in the sequence?
@@ -99,6 +111,7 @@ audience:
 - Persisting it is non-negotiable
 
 ---
+
 ## Where to Store Saga State
 
 - **In the orchestrator's database** (orchestration-based sagas)
@@ -107,6 +120,7 @@ audience:
 - The choice affects observability, recovery, and team boundaries
 
 ---
+
 ## Idempotency: Required, Not Optional
 
 - Every saga step must be idempotent — safe to call twice with no extra effect
@@ -115,6 +129,7 @@ audience:
 - Use natural keys, dedup tables, or version numbers
 
 ---
+
 ## Idempotency in Practice
 
 ```python
@@ -131,6 +146,7 @@ def reserve_inventory(reservation_id, items):
 - Retries return the original result, not a new one
 
 ---
+
 ## Saga Triggers
 
 - A user action (REST POST)
@@ -139,6 +155,7 @@ def reserve_inventory(reservation_id, items):
 - The trigger is not part of the saga; it kicks the saga off
 
 ---
+
 ## Two Implementation Styles
 
 - **Choreography**: each service knows the next step; participants react to events
@@ -147,11 +164,13 @@ def reserve_inventory(reservation_id, items):
 - The choice affects coupling, observability, and team coordination
 
 ---
+
 ## Choreography vs Orchestration
 
 ![choreography_vs_orchestration_overview](svg/courses/architecting/saga-pattern/02_saga_pattern_fundamentals/choreography_vs_orchestration_overview.svg)
 
 ---
+
 ## Choreography in One Slide
 
 - Step A emits an event
@@ -160,6 +179,7 @@ def reserve_inventory(reservation_id, items):
 - No central authority; the saga emerges from the event graph
 
 ---
+
 ## Orchestration in One Slide
 
 - A central orchestrator owns the saga
@@ -168,6 +188,7 @@ def reserve_inventory(reservation_id, items):
 - The orchestrator is itself an aggregate with state
 
 ---
+
 ## Choosing Between Them
 
 - **Few steps, few teams** → choreography is simple
@@ -177,6 +198,7 @@ def reserve_inventory(reservation_id, items):
 - **Strong contracts between teams** → orchestration is more explicit
 
 ---
+
 ## When Choreography Wins
 
 - The flow is short and changes infrequently
@@ -185,6 +207,7 @@ def reserve_inventory(reservation_id, items):
 - The cost of a central orchestrator's deployment is high
 
 ---
+
 ## When Orchestration Wins
 
 - The flow is long and likely to evolve
@@ -193,6 +216,7 @@ def reserve_inventory(reservation_id, items):
 - The business explicitly cares about the workflow as a thing
 
 ---
+
 ## Common Mistakes Already Worth Naming
 
 - **Treating the saga as atomic**: it isn't; it is eventually consistent
@@ -202,6 +226,7 @@ def reserve_inventory(reservation_id, items):
 - **Hiding the saga**: not naming it as a thing in the codebase
 
 ---
+
 ## What We Cover in the Rest of the Course
 
 - Chapters 3-4: each style in depth
@@ -209,6 +234,7 @@ def reserve_inventory(reservation_id, items):
 - Chapter 6: testing, debugging, monitoring, and operating sagas
 
 ---
+
 ## Summary
 
 - A saga = sequence of local transactions + compensations

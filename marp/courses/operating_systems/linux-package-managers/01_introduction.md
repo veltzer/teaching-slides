@@ -10,19 +10,23 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to Linux Package Management
 
 ---
+
 ## Package Manager Layers
 
 ![package_layers](svg/courses/operating_systems/linux-package-managers/01_introduction/package_layers.svg)
 
 ---
+
 ## Version Pinning
 
 ![version_pinning](svg/courses/operating_systems/linux-package-managers/01_introduction/version_pinning.svg)
 
 ---
+
 ## Where Does Software Come From?
 
 A modern Linux machine pulls software from many places:
@@ -38,6 +42,7 @@ A modern Linux machine pulls software from many places:
 Each of these has its own command, its own concept of "version", its own update story, and its own security model.
 
 ---
+
 ## What a Package Manager Does
 
 A package manager is a system that installs, upgrades, removes and tracks software in a controlled way.
@@ -52,6 +57,7 @@ A package manager is a system that installs, upgrades, removes and tracks softwa
 Without a package manager you are doing all of this by hand.
 
 ---
+
 ## What Life Looks Like Without a Package Manager
 
 - "I have no idea what is installed on this machine."
@@ -64,6 +70,7 @@ Without a package manager you are doing all of this by hand.
 This is exactly the world that package managers were built to fix.
 
 ---
+
 ## The Five Hard Problems
 
 Every package manager has to solve, or at least make tradeoffs about, the same five problems:
@@ -77,6 +84,7 @@ Every package manager has to solve, or at least make tradeoffs about, the same f
 How a tool answers these is what makes it different from the others.
 
 ---
+
 ## High-Level vs Low-Level Tools
 
 Most package managers come in pairs.
@@ -93,6 +101,7 @@ Most package managers come in pairs.
 You almost always want the high-level tool. The low-level tool is for surgery.
 
 ---
+
 ## The Linux Package Management Landscape
 
 | Family | Low-level | High-level | Format |
@@ -107,6 +116,7 @@ You almost always want the high-level tool. The low-level tool is for surgery.
 | Declarative | — | `nix`, `guix` | various |
 
 ---
+
 ## Distribution Repos vs Third-Party vs Upstream
 
 A piece of software can reach you via several paths:
@@ -121,6 +131,7 @@ A piece of software can reach you via several paths:
 The further from the distro, the fresher the software and the more responsibility on you.
 
 ---
+
 ## What "Installed" Even Means
 
 The same program can be installed in very different ways:
@@ -142,6 +153,7 @@ curl -L .../rg.tar.gz | tar xz   # ~/bin/rg, owned by you
 Four different `rg` binaries. Four different update stories. Four different things in your `$PATH`.
 
 ---
+
 ## A First Rule of Hygiene
 
 Pick the *most distribution-native* option that works.
@@ -155,6 +167,7 @@ Pick the *most distribution-native* option that works.
 This is the order most experienced sysadmins reach for, and the rest of this course will explain why.
 
 ---
+
 ## What This Course Covers
 
 1. 1. 1. The `Debian` family: `dpkg` and `apt`

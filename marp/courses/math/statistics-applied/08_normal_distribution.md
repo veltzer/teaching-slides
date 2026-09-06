@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # The Normal Distribution
 
 ---
+
 ## What This Chapter Covers
 
 - The shape and its two parameters
@@ -22,11 +24,13 @@ audience:
 - Checking normality
 
 ---
+
 ## The 68-95-99.7 Rule
 
 ![empirical_rule](svg/courses/math/statistics-applied/08_normal_distribution/empirical_rule.svg)
 
 ---
+
 ## The Bell Curve
 
 - Symmetric, single peak at the mean, tails that never quite touch zero
@@ -36,6 +40,7 @@ audience:
 - "Gaussian" is the same thing
 
 ---
+
 ## The Empirical Rule
 
 - About **68%** of values fall within &mu; &plusmn; 1&sigma;
@@ -45,6 +50,7 @@ audience:
 - These numbers only hold *if the data is actually normal*
 
 ---
+
 ## Z-Scores
 
 - z = (x &minus; &mu;) / &sigma; — how many SDs above or below the mean a value is
@@ -54,11 +60,13 @@ audience:
 - All normal-curve probabilities are looked up on that one standard curve
 
 ---
+
 ## z-Scores in Pictures
 
 ![z_score](svg/courses/math/statistics-applied/08_normal_distribution/z_score.svg)
 
 ---
+
 ## Using The Standard Normal
 
 - P(Z &lt; z) is the cumulative probability — "the fraction below z"
@@ -68,6 +76,7 @@ audience:
 - Old courses used printed "z-tables"; now it's one function call
 
 ---
+
 ## Why Normal Shows Up Everywhere
 
 - The central limit theorem (next chapter): *sums and averages* tend to be normal, whatever the raw data looks like
@@ -77,6 +86,7 @@ audience:
 - It does **not** mean your raw data is normal — averages, not individuals
 
 ---
+
 ## Where Normal Fails
 
 - Skewed data: incomes, response times, sales — long right tail
@@ -86,6 +96,7 @@ audience:
 - Multimodal data: two populations mixed together
 
 ---
+
 ## Standardizing And Checking In Python
 
 ```python
@@ -101,6 +112,7 @@ print("Shapiro p  =", stats.shapiro(x).pvalue)    # >0.05 -> consistent with nor
 - Also eyeball a Q-Q plot — points on a straight line means roughly normal
 
 ---
+
 ## Common Mistakes
 
 - Assuming raw business data is normal because "data usually is" — it usually isn't

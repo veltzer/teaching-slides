@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to Containers and Docker
 
 ---
+
 ## What This Chapter Covers
 
 - What containers are and why they matter
@@ -22,6 +24,7 @@ audience:
 - The Docker CLI at a glance
 
 ---
+
 ## What a Container Is
 
 - A package that bundles an application with everything it needs to run
@@ -31,11 +34,13 @@ audience:
 - "Works on my machine" becomes "works the same everywhere"
 
 ---
+
 ## Container vs VM
 
 ![container_vs_vm](svg/courses/containers/docker-fundamentals/01_introduction_to_containers_and_docker/container_vs_vm.svg)
 
 ---
+
 ## Why Containers
 
 - Consistent environments from laptop to production
@@ -45,6 +50,7 @@ audience:
 - The unit that orchestrators (Kubernetes, Nomad) schedule
 
 ---
+
 ## Containers vs Virtual Machines
 
 - VM: full guest OS on top of a hypervisor; gigabytes; minutes to boot
@@ -54,11 +60,13 @@ audience:
 - Pick by isolation needs and density goals
 
 ---
+
 ## Containers vs VMs Diagram
 
 ![containers_vs_vms](svg/courses/containers/docker-fundamentals/01_introduction_to_containers_and_docker/containers_vs_vms.svg)
 
 ---
+
 ## A Short History
 
 - chroot (1979): the first filesystem isolation
@@ -69,6 +77,7 @@ audience:
 - OCI (2015): Open Container Initiative standardised the format
 
 ---
+
 ## Docker Architecture
 
 - **Docker Client** (`docker` CLI): what you type
@@ -78,11 +87,13 @@ audience:
 - The daemon talks to the kernel via cgroups and namespaces
 
 ---
+
 ## Daemon, Client, Registry Diagram
 
 ![docker_architecture](svg/courses/containers/docker-fundamentals/01_introduction_to_containers_and_docker/docker_architecture.svg)
 
 ---
+
 ## What Makes a Container Isolated
 
 - **Namespaces**: separate views of processes, network, filesystem, users
@@ -92,11 +103,13 @@ audience:
 - All Linux kernel features; Docker just orchestrates them
 
 ---
+
 ## Docker on Linux
 
 ![docker_on_linux](svg/courses/containers/docker-fundamentals/01_introduction_to_containers_and_docker/docker_on_linux.svg)
 
 ---
+
 ## Installing Docker on Linux
 
 ```bash
@@ -112,6 +125,7 @@ docker run hello-world
 - macOS / Windows: Docker Desktop runs a small Linux VM under the hood
 
 ---
+
 ## The Docker CLI Map
 
 - `docker run`: create and start a container
@@ -123,6 +137,7 @@ docker run hello-world
 - `docker logs`: stream container output
 
 ---
+
 ## A First Container
 
 ```bash
@@ -136,6 +151,7 @@ docker run -it ubuntu bash
 - `docker run --rm` removes the container automatically when it exits
 
 ---
+
 ## A Long-Running Container
 
 ```bash
@@ -150,6 +166,7 @@ curl http://localhost:8080
 - Standard nginx welcome page served from the container
 
 ---
+
 ## Container Lifecycle
 
 - **Created**: image instantiated, not yet started
@@ -160,6 +177,7 @@ curl http://localhost:8080
 - Common commands: `start`, `stop`, `pause`, `unpause`, `rm`
 
 ---
+
 ## Where Things Live
 
 - `/var/lib/docker/`: images, container layers, volumes
@@ -169,6 +187,7 @@ curl http://localhost:8080
 - Most users never need to look here directly
 
 ---
+
 ## Common Beginner Mistakes
 
 - Confusing image with container (image is the template, container is the instance)
@@ -178,6 +197,7 @@ curl http://localhost:8080
 - Treating Docker like a VM — it's a process boundary, not a sandbox
 
 ---
+
 ## What's Next
 
 - Images: how they're built, layered, and shared
@@ -186,6 +206,7 @@ curl http://localhost:8080
 - Networking, storage, Compose, security
 
 ---
+
 ## Why Teams Adopt Containers
 
 ![container_benefits](svg/courses/containers/docker-fundamentals/01_introduction_to_containers_and_docker/container_benefits.svg)

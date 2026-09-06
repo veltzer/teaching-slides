@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Production RAG
 
 ---
+
 ## What This Chapter Covers
 
 - Ingestion pipelines
@@ -20,6 +22,7 @@ audience:
 - Failure modes
 
 ---
+
 ## Ingestion Pipeline
 
 - Pull from source
@@ -29,11 +32,13 @@ audience:
 - Index
 
 ---
+
 ## Pipeline Visualized
 
 ![ingestion_pipeline](svg/courses/ai/rag-applications/05_production_rag/ingestion_pipeline.svg)
 
 ---
+
 ## Source Connectors
 
 - File systems
@@ -42,6 +47,7 @@ audience:
 - Internal APIs
 
 ---
+
 ## Incremental Updates
 
 - Detect new and changed docs
@@ -50,11 +56,13 @@ audience:
 - Track lineage
 
 ---
+
 ## Freshness Pipeline
 
 ![freshness_pipeline](svg/courses/ai/rag-applications/05_production_rag/freshness_pipeline.svg)
 
 ---
+
 ## Permissions
 
 - Store ACL with each chunk
@@ -63,6 +71,7 @@ audience:
 - Test for leakage
 
 ---
+
 ## Audit Logging
 
 - Query
@@ -71,6 +80,7 @@ audience:
 - Per-user retention
 
 ---
+
 ## Latency Budget
 
 - Embedding: tens of ms
@@ -79,6 +89,7 @@ audience:
 - Stream the answer
 
 ---
+
 ## Cost Levers
 
 - Cache embeddings
@@ -87,6 +98,7 @@ audience:
 - Larger LLM only on hard queries
 
 ---
+
 ## Caching Layers
 
 - Query embedding cache
@@ -95,6 +107,7 @@ audience:
 - Salt by user permissions
 
 ---
+
 ## Drift
 
 - New docs, new vocabulary
@@ -103,6 +116,7 @@ audience:
 - Re-evaluate on a schedule
 
 ---
+
 ## Hallucination Defense
 
 - Require citations
@@ -111,6 +125,7 @@ audience:
 - Human escalation
 
 ---
+
 ## Multi-Tenant
 
 - Per-tenant index
@@ -119,6 +134,7 @@ audience:
 - Separate eval per tenant
 
 ---
+
 ## Failure Modes
 
 - Index unavailable
@@ -127,6 +143,7 @@ audience:
 - Have a graceful fallback for each
 
 ---
+
 ## Common Production Mistakes
 
 - No incremental ingestion

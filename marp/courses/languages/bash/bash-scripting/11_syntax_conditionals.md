@@ -12,6 +12,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Syntax: Conditionals
 
 ---
@@ -21,6 +22,7 @@ audience:
 ![Conditional Flow in Bash](svg/courses/languages/bash/bash-scripting/11_syntax_conditionals/if_elif_else_flow.svg)
 
 ---
+
 ## The `if` Statement
 
 ```bash
@@ -45,6 +47,7 @@ fi
 ```
 
 ---
+
 ## `if` / `elif` / `else`
 
 ```bash
@@ -63,6 +66,7 @@ fi
 ```
 
 ---
+
 ## No Brace Style (Using Commands Directly)
 
 ```bash
@@ -85,6 +89,7 @@ fi
 ```
 
 ---
+
 ## The `test` Command and `[`
 
 ```bash
@@ -103,6 +108,7 @@ fi
 ```
 
 ---
+
 ## String Tests with `[`
 
 ```bash
@@ -120,6 +126,7 @@ x=""
 ```
 
 ---
+
 ## Numeric Tests with `[`
 
 ```bash
@@ -138,6 +145,7 @@ x=""
 ```
 
 ---
+
 ## Logical Operators with `[`
 
 ```bash
@@ -157,6 +165,7 @@ fi
 ```
 
 ---
+
 ## The `[[` Keyword (bash Extension)
 
 ```bash
@@ -180,6 +189,7 @@ fi
 ```
 
 ---
+
 ## `[[` Pattern Matching
 
 ```bash
@@ -198,6 +208,7 @@ shopt -s extglob
 ```
 
 ---
+
 ## `[[` Regex Matching
 
 ```bash
@@ -219,7 +230,9 @@ pattern='^[0-9]+$'
 ```
 
 ---
+
 ## `[` vs `[[` Summary
+
 | Feature | `[` (test) | `[[` |
 |---------|-----------|------|
 | POSIX compatible | Yes | No (bash only) |
@@ -230,6 +243,7 @@ pattern='^[0-9]+$'
 | `<` / `>` for strings | Must escape | Direct |
 
 ---
+
 ## The `case` Statement
 
 ```bash
@@ -256,6 +270,7 @@ esac
 ```
 
 ---
+
 ## `case` with Patterns
 
 ```bash
@@ -280,6 +295,7 @@ esac
 ```
 
 ---
+
 ## `case` Fall-Through (`bash` 4.0+)
 
 ```bash
@@ -302,6 +318,7 @@ esac
 ```
 
 ---
+
 ## Ternary-Style Expressions
 
 ```bash

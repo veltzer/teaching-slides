@@ -10,6 +10,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Network Troubleshooting
 ## Tools and Techniques for Diagnosing Network Issues
 
@@ -359,6 +360,7 @@ $ sudo tcpdump -i eth0 -nn port 80
 ```
 
 **TCP Flag meanings:**
+
 | Flag | Symbol | Meaning |
 |------|--------|---------|
 | SYN | [S] | Connection initiation |

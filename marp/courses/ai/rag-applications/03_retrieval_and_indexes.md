@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Retrieval and Indexes
 
 ---
+
 ## What This Chapter Covers
 
 - Vector indexes
@@ -20,6 +22,7 @@ audience:
 - Reranking
 
 ---
+
 ## Vector Indexes
 
 - Store vectors
@@ -28,11 +31,13 @@ audience:
 - Scale to billions
 
 ---
+
 ## Index Kinds
 
 ![index_kinds](svg/courses/ai/rag-applications/03_retrieval_and_indexes/index_kinds.svg)
 
 ---
+
 ## ANN Algorithms
 
 - Graph-based methods
@@ -41,6 +46,7 @@ audience:
 - Disk-resident variants
 
 ---
+
 ## Vector Stores
 
 - Hosted vector databases
@@ -49,6 +55,7 @@ audience:
 - Embedded libraries
 
 ---
+
 ## Choosing a Store
 
 - Dataset size
@@ -57,6 +64,7 @@ audience:
 - Cost model
 
 ---
+
 ## Cosine Similarity
 
 - Dot product on normalized vectors
@@ -65,6 +73,7 @@ audience:
 - Inner product or L2 sometimes
 
 ---
+
 ## Filtering
 
 - Pre-filter by metadata
@@ -73,6 +82,7 @@ audience:
 - Test both for your data
 
 ---
+
 ## Hybrid Search
 
 - Keyword search plus vector
@@ -81,11 +91,13 @@ audience:
 - Strong default in production
 
 ---
+
 ## Hybrid Visualized
 
 ![hybrid_search](svg/courses/ai/rag-applications/03_retrieval_and_indexes/hybrid_search.svg)
 
 ---
+
 ## Reranking
 
 - Take top N from retrieval
@@ -94,6 +106,7 @@ audience:
 - Use a dedicated reranker model
 
 ---
+
 ## Top-K Choice
 
 - Too low: miss the right chunk
@@ -102,6 +115,7 @@ audience:
 - Often 5 to 20
 
 ---
+
 ## Diversity
 
 - Maximal Marginal Relevance
@@ -110,6 +124,7 @@ audience:
 - Tunes recall vs novelty
 
 ---
+
 ## Query Rewriting
 
 - Expand abbreviations
@@ -118,6 +133,7 @@ audience:
 - Use a small LLM for cost
 
 ---
+
 ## Multi-Index
 
 - One index per domain
@@ -126,6 +142,7 @@ audience:
 - Cheaper updates
 
 ---
+
 ## Common Retrieval Mistakes
 
 - Using vector only

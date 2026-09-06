@@ -7,14 +7,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Services and Service Discovery
 
 ---
+
 ## Service Types
 
 ![service_types](svg/courses/containers/kubernetes/04_services_and_service_discovery/service_types.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What a Service is
@@ -25,6 +28,7 @@ audience:
 - External services
 
 ---
+
 ## Why Services
 
 - Pods are ephemeral; IPs change
@@ -33,6 +37,7 @@ audience:
 - The way to reach pods
 
 ---
+
 ## ClusterIP
 
 - Default
@@ -41,6 +46,7 @@ audience:
 - For: service-to-service
 
 ---
+
 ## Sample Service
 
 ```yaml
@@ -57,6 +63,7 @@ spec:
 ```
 
 ---
+
 ## NodePort
 
 - Opens a port on every node
@@ -65,6 +72,7 @@ spec:
 - Rarely used directly in production
 
 ---
+
 ## LoadBalancer
 
 - Cloud-provisioned LB
@@ -73,6 +81,7 @@ spec:
 - Standard for exposing services in cloud
 
 ---
+
 ## ExternalName
 
 - DNS alias for an external service
@@ -81,6 +90,7 @@ spec:
 - For: bringing external services into cluster naming
 
 ---
+
 ## DNS
 
 - Every service has a DNS name
@@ -89,11 +99,13 @@ spec:
 - CoreDNS provides; configurable
 
 ---
+
 ## Discovery Plumbing
 
 ![dns_and_endpoints](svg/courses/containers/kubernetes/04_services_and_service_discovery/dns_and_endpoints.svg)
 
 ---
+
 ## Pod-To-Service
 
 - Pod queries DNS for service name
@@ -102,6 +114,7 @@ spec:
 - Round-robin by default
 
 ---
+
 ## Endpoint Slices
 
 - Modern replacement for Endpoints
@@ -110,6 +123,7 @@ spec:
 - Used by kube-proxy
 
 ---
+
 ## Headless Service
 
 ```yaml
@@ -123,6 +137,7 @@ spec:
 - Used by StatefulSets
 
 ---
+
 ## Session Affinity
 
 - Send same client to same pod
@@ -131,6 +146,7 @@ spec:
 - Disable when stateless
 
 ---
+
 ## kube-proxy Modes
 
 - iptables (default): per-rule routing
@@ -138,6 +154,7 @@ spec:
 - eBPF (Cilium): newer, faster
 
 ---
+
 ## External Connections
 
 - LoadBalancer: cloud LB
@@ -146,6 +163,7 @@ spec:
 - Pick by use case
 
 ---
+
 ## Common Service Mistakes
 
 - LoadBalancer per service (cost)

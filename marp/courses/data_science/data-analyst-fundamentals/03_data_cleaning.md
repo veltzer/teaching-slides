@@ -7,14 +7,17 @@ audience:
   - audiences:data-analysts
 
 ---
+
 # Data Cleaning
 
 ---
+
 ## Cleaning Steps
 
 ![cleaning_steps](svg/courses/data_science/data-analyst-fundamentals/03_data_cleaning/cleaning_steps.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Identifying data quality issues
@@ -26,6 +29,7 @@ audience:
 - Validation techniques
 
 ---
+
 ## Why Cleaning Matters
 
 - Most analysis time goes here
@@ -35,16 +39,19 @@ audience:
 - The skill of catching data issues separates senior from junior analysts
 
 ---
+
 ## Data Quality Dimensions
 
 ![data_quality_dimensions](svg/courses/data_science/data-analyst-fundamentals/03_data_cleaning/data_quality_dimensions.svg)
 
 ---
+
 ## Cleaning Pillars
 
 ![cleaning_pillars](svg/courses/data_science/data-analyst-fundamentals/03_data_cleaning/cleaning_pillars.svg)
 
 ---
+
 ## Common Quality Issues
 
 - **Missing values**: NULL, empty string, "N/A", 0 (often wrong)
@@ -55,6 +62,7 @@ audience:
 - **Encoding**: UTF-8 vs Latin-1 mojibake
 
 ---
+
 ## Detecting Missing Data
 
 ```python
@@ -68,6 +76,7 @@ df[df['email'].isnull()].head()    # rows with missing email
 - Document what you found; surprise stakeholders early
 
 ---
+
 ## Handling Missing Data
 
 - **Drop rows**: simple, but biases toward complete records
@@ -78,6 +87,7 @@ df[df['email'].isnull()].head()    # rows with missing email
 - **Treat missing as a value**: sometimes the most honest
 
 ---
+
 ## Dealing With Duplicates
 
 ```python
@@ -91,6 +101,7 @@ df.drop_duplicates(subset=['email'], keep='last')
 - Keep first / keep last / aggregate may all be valid choices
 
 ---
+
 ## Type Conversions
 
 ```python
@@ -104,6 +115,7 @@ df['price'] = df['price'].str.replace('$', '').astype(float)
 - Currency strings, "1,000.00" formats — clean before converting
 
 ---
+
 ## Detecting Outliers
 
 ```python
@@ -121,6 +133,7 @@ df_clean = df[~mask]
 - Outliers may be data errors *or* real and important — investigate before discarding
 
 ---
+
 ## Treating Outliers
 
 - **Remove**: only if you're sure they're errors
@@ -130,6 +143,7 @@ df_clean = df[~mask]
 - Document the choice — "we excluded the top 0.5% of orders"
 
 ---
+
 ## Standardisation
 
 - Same value, many representations: "USA", "U.S.A.", "United States"
@@ -139,6 +153,7 @@ df_clean = df[~mask]
 - Build a "lookup table" for common transformations
 
 ---
+
 ## Normalisation
 
 - Rescaling numbers to a comparable range
@@ -148,6 +163,7 @@ df_clean = df[~mask]
 - Be careful: normalising changes interpretability
 
 ---
+
 ## Encoding Issues
 
 - "café" rendered as "café" = UTF-8 bytes interpreted as Latin-1
@@ -157,6 +173,7 @@ df_clean = df[~mask]
 - Save outputs as UTF-8 — the modern standard
 
 ---
+
 ## Validation Rules
 
 - Each column has *constraints*: type, range, format
@@ -166,6 +183,7 @@ df_clean = df[~mask]
 - Catch bad data at the source, not in the dashboard
 
 ---
+
 ## Idempotent Cleaning
 
 - The same cleaning script should produce the same output every time
@@ -175,6 +193,7 @@ df_clean = df[~mask]
 - This is what makes pipelines trustworthy
 
 ---
+
 ## Document Everything
 
 - Every cleaning decision changes the dataset
@@ -184,6 +203,7 @@ df_clean = df[~mask]
 - A README plus a versioned cleaning script is the minimum
 
 ---
+
 ## Common Mistakes
 
 - Cleaning silently — nobody knows what changed

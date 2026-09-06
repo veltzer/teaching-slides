@@ -11,6 +11,7 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # PEFT for Image Generating Models — DreamBooth & Textual Inversion
 
 ---
@@ -125,11 +126,13 @@ Prevents the model from forgetting how to draw the class in general:
 Instead of fine-tuning model weights, learn a **new word** in the text encoder:
 
 ---
+
 ## Textual Inversion
 
 ![textual_inversion](svg/courses/ai/generative-ai-applications/17_peft_image_models/textual_inversion.svg)
 
 ---
+
 ## Textual Inversion: Example
 
 ```misc

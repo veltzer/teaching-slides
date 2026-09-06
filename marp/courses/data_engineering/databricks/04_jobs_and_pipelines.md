@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Jobs and Pipelines
 
 ---
+
 ## What This Chapter Covers
 
 - Jobs in depth
@@ -19,6 +21,7 @@ audience:
 - CI/CD
 
 ---
+
 ## Why Jobs
 
 - Production scheduling
@@ -27,6 +30,7 @@ audience:
 - Source of truth for runs
 
 ---
+
 ## Job Anatomy
 
 - Tasks
@@ -35,11 +39,13 @@ audience:
 - Schedule or trigger
 
 ---
+
 ## Job Anatomy Diagram
 
 ![job_anatomy](svg/courses/data_engineering/databricks/04_jobs_and_pipelines/job_anatomy.svg)
 
 ---
+
 ## Task Types
 
 - Notebook
@@ -49,6 +55,7 @@ audience:
 - Pipeline
 
 ---
+
 ## Cluster Reuse
 
 - Same cluster across tasks
@@ -57,6 +64,7 @@ audience:
 - Trade-off vs isolation
 
 ---
+
 ## Notifications
 
 - On success, failure, duration
@@ -65,6 +73,7 @@ audience:
 - Document runbooks
 
 ---
+
 ## Retries
 
 - Per-task setting
@@ -73,6 +82,7 @@ audience:
 - Idempotent code required
 
 ---
+
 ## Workflows
 
 - Multi-task DAGs
@@ -81,11 +91,13 @@ audience:
 - Conditional logic
 
 ---
+
 ## Workflow DAG
 
 ![workflow_dag](svg/courses/data_engineering/databricks/04_jobs_and_pipelines/workflow_dag.svg)
 
 ---
+
 ## Declarative Pipelines
 
 - Define datasets, not steps
@@ -94,6 +106,7 @@ audience:
 - Monitoring included
 
 ---
+
 ## Expectations
 
 - Declarative data quality
@@ -102,6 +115,7 @@ audience:
 - Reduces hand-rolled checks
 
 ---
+
 ## Triggering
 
 - Cron schedule
@@ -110,6 +124,7 @@ audience:
 - Continuous
 
 ---
+
 ## CI/CD
 
 - Code in git
@@ -118,6 +133,7 @@ audience:
 - Promote with approval
 
 ---
+
 ## Secrets
 
 - Secrets API
@@ -126,6 +142,7 @@ audience:
 - Rotate regularly
 
 ---
+
 ## Common Job Mistakes
 
 - All-purpose clusters for jobs

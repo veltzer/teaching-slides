@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Architecting for Resiliency
 
 ---
+
 ## What Is Resiliency?
 
 - The ability of a system to handle and recover from failures gracefully
@@ -21,6 +23,7 @@ audience:
 - Critical for systems that run at scale in distributed environments
 
 ---
+
 ## Why Resiliency Matters
 
 - In distributed systems, failures are not exceptional; they are normal
@@ -29,16 +32,19 @@ audience:
 - Resilient systems maintain acceptable service levels during partial failures
 
 ---
+
 ## Failure Categories
 
 ![failure_categories](svg/courses/architecting/architecting/11_architecting_for_resiliency/failure_categories.svg)
 
 ---
+
 ## The Cascade Effect
 
 ![the_cascade_effect](svg/courses/architecting/architecting/11_architecting_for_resiliency/the_cascade_effect.svg)
 
 ---
+
 ## The Cascade Effect Explained
 
 - Service C fails; B waits and exhausts its thread pool
@@ -46,11 +52,13 @@ audience:
 - A single failure propagates through the entire call chain
 
 ---
+
 ## Resiliency Patterns Overview
 
 ![resiliency_patterns_overview](svg/courses/architecting/architecting/11_architecting_for_resiliency/resiliency_patterns_overview.svg)
 
 ---
+
 ## Timeouts
 
 - Set a maximum time a caller will wait for a response
@@ -59,6 +67,7 @@ audience:
 - Every external call should have a timeout configured
 
 ---
+
 ## Timeout Best Practices
 
 - Set timeouts based on measured response time percentiles
@@ -67,6 +76,7 @@ audience:
 - Log timeouts for monitoring and debugging
 
 ---
+
 ## Timeout Configuration Example
 
 ```python
@@ -82,6 +92,7 @@ response = requests.get(
 - Read timeout: 10 seconds to receive the response
 
 ---
+
 ## Retries
 
 - Automatically resend a failed request after a delay
@@ -90,11 +101,13 @@ response = requests.get(
 - Only retry on errors that are likely to be transient
 
 ---
+
 ## Retry with Exponential Backoff
 
 ![retry_with_exponential_backoff](svg/courses/architecting/architecting/11_architecting_for_resiliency/retry_with_exponential_backoff.svg)
 
 ---
+
 ## Retry Best Practices
 
 - Each retry waits longer than the previous one
@@ -102,6 +115,7 @@ response = requests.get(
 - Set a maximum number of retries to avoid infinite loops
 
 ---
+
 ## Retry Code Example
 
 ```python
@@ -121,6 +135,7 @@ def retry_with_backoff(func, max_retries=3):
 ```
 
 ---
+
 ## When NOT to Retry
 
 - The error is clearly permanent (e.g., `400 Bad Request`, `404 Not Found`)
@@ -130,6 +145,7 @@ def retry_with_backoff(func, max_retries=3):
 - Always check the HTTP status code before deciding to retry
 
 ---
+
 ## Circuit Breaker in Practice
 
 - The named pattern is defined in the Architecture Patterns course
@@ -138,11 +154,13 @@ def retry_with_backoff(func, max_retries=3):
 - The hard part is choosing thresholds and timeouts
 
 ---
+
 ## Circuit Breaker States
 
 ![circuit_breaker_states](svg/courses/architecting/architecting/11_architecting_for_resiliency/circuit_breaker_states.svg)
 
 ---
+
 ## Circuit Breaker: Closed State
 
 - Normal operation; requests pass through to the service
@@ -151,6 +169,7 @@ def retry_with_backoff(func, max_retries=3):
 - Success resets the failure counter
 
 ---
+
 ## Circuit Breaker: Open State
 
 - All requests are immediately rejected without calling the service
@@ -159,6 +178,7 @@ def retry_with_backoff(func, max_retries=3):
 - Gives the failing service time to recover
 
 ---
+
 ## Circuit Breaker: Half-Open State
 
 - A limited number of probe requests are sent to the service
@@ -167,6 +187,7 @@ def retry_with_backoff(func, max_retries=3):
 - Prevents overwhelming a recovering service with full traffic
 
 ---
+
 ## Circuit Breaker Code Example
 
 ```python
@@ -195,6 +216,7 @@ class CircuitBreaker:
 ```
 
 ---
+
 ## Circuit Breaker Libraries
 
 - `Resilience4j` - Java library with circuit breaker, retry, rate limiter
@@ -204,6 +226,7 @@ class CircuitBreaker:
 - `Istio` - service mesh with built-in circuit breaking
 
 ---
+
 ## Bulkhead in Practice
 
 - The named pattern is defined in the Architecture Patterns course
@@ -212,17 +235,20 @@ class CircuitBreaker:
 - Sizing each pool is the operational challenge
 
 ---
+
 ## Bulkhead Architecture
 
 ![bulkhead_architecture](svg/courses/architecting/architecting/11_architecting_for_resiliency/bulkhead_architecture.svg)
 
 ---
+
 ## Bulkhead Benefits
 
 - Service C is slow but only consumes its own thread pool
 - Services A and B continue to operate normally
 
 ---
+
 ## Bulkhead Implementation Strategies
 
 - Thread pool isolation: separate thread pools per downstream service
@@ -231,6 +257,7 @@ class CircuitBreaker:
 - Connection pool isolation: separate database connection pools
 
 ---
+
 ## Rate Limiting
 
 - Controls the number of requests a client can make in a given time window
@@ -239,6 +266,7 @@ class CircuitBreaker:
 - Essential for public-facing APIs and shared resources
 
 ---
+
 ## Rate Limiting Algorithms
 
 - Fixed Window: count requests in fixed time intervals
@@ -247,11 +275,13 @@ class CircuitBreaker:
 - Leaky Bucket: requests flow out at a constant rate
 
 ---
+
 ## Token Bucket Diagram
 
 ![token_bucket_diagram](svg/courses/architecting/architecting/11_architecting_for_resiliency/token_bucket_diagram.svg)
 
 ---
+
 ## Rate Limiting Response
 
 - Return `HTTP 429 Too Many Requests` when the limit is exceeded
@@ -262,6 +292,7 @@ class CircuitBreaker:
     - `X-RateLimit-Reset` - time when the window resets
 
 ---
+
 ## Fallback Strategies
 
 - Provide a degraded but acceptable response when a dependency fails
@@ -271,11 +302,13 @@ class CircuitBreaker:
 - Show a meaningful error message instead of a crash
 
 ---
+
 ## Fallback Decision Tree
 
 ![fallback_decision_tree](svg/courses/architecting/architecting/11_architecting_for_resiliency/fallback_decision_tree.svg)
 
 ---
+
 ## Hedging
 
 - Send the same request to multiple instances simultaneously
@@ -284,17 +317,20 @@ class CircuitBreaker:
 - Useful for latency-sensitive operations
 
 ---
+
 ## Hedging Diagram
 
 ![hedging_diagram](svg/courses/architecting/architecting/11_architecting_for_resiliency/hedging_diagram.svg)
 
 ---
+
 ## Hedging Trade-Offs
 
 - Instance 2 responds first; its response is used
 - Trade-off: uses more resources for lower latency
 
 ---
+
 ## Chaos Engineering
 
 - The discipline of experimenting on a system to build confidence in resilience
@@ -303,6 +339,7 @@ class CircuitBreaker:
 - Based on the principle that untested resilience is not resilience
 
 ---
+
 ## Chaos Engineering Principles
 
 1. Define the steady state of the system (normal behavior metrics)
@@ -312,11 +349,13 @@ class CircuitBreaker:
 1. Fix any weaknesses discovered
 
 ---
+
 ## Chaos Engineering Process
 
 ![chaos_engineering_process](svg/courses/architecting/architecting/11_architecting_for_resiliency/chaos_engineering_process.svg)
 
 ---
+
 ## Chaos Engineering Tools
 
 - `Chaos Monkey` - randomly terminates VM instances (Netflix)
@@ -326,6 +365,7 @@ class CircuitBreaker:
 - `Toxiproxy` - simulate network conditions between services
 
 ---
+
 ## Common Chaos Experiments
 
 - Kill random pods or nodes in a Kubernetes cluster
@@ -336,6 +376,7 @@ class CircuitBreaker:
 - Block network traffic between availability zones
 
 ---
+
 ## Chaos Engineering in Practice
 
 - Start in non-production environments to build confidence
@@ -345,11 +386,13 @@ class CircuitBreaker:
 - Automate experiments and integrate them into CI/CD
 
 ---
+
 ## Resiliency Testing Pyramid
 
 ![resiliency_testing_pyramid](svg/courses/architecting/architecting/11_architecting_for_resiliency/resiliency_testing_pyramid.svg)
 
 ---
+
 ## Service Mesh for Resiliency
 
 - A dedicated infrastructure layer for service-to-service communication
@@ -358,11 +401,13 @@ class CircuitBreaker:
 - Resiliency policies are configured declaratively, not coded
 
 ---
+
 ## Service Mesh Architecture
 
 ![service_mesh_architecture](svg/courses/architecting/architecting/11_architecting_for_resiliency/service_mesh_architecture.svg)
 
 ---
+
 ## Sidecar vs Sidecarless Meshes
 
 - **Sidecar model** — a proxy (usually `Envoy`) runs next to every app container
@@ -374,6 +419,7 @@ class CircuitBreaker:
 - Istio ambient mesh and Cilium service mesh exemplify the sidecarless direction
 
 ---
+
 ## Mesh Capabilities
 
 - **Traffic management** — weighted routing, canary splits, fault injection
@@ -383,6 +429,7 @@ class CircuitBreaker:
 - **Policy** — quota, rate limits, and allow/deny rules at the edge of each service
 
 ---
+
 ## Mutual TLS in a Mesh
 
 - Every workload gets a SPIFFE-style cryptographic identity
@@ -392,6 +439,7 @@ class CircuitBreaker:
 - Rotates certs on a schedule so a leaked key has a small blast radius
 
 ---
+
 ## Traffic Shaping
 
 ```yaml
@@ -412,6 +460,7 @@ spec:
 - Shift a fraction of traffic to a new version — the canary lives in the mesh config, not in the app
 
 ---
+
 ## When NOT to Use a Mesh
 
 - Small systems (< 10 services) — the operational overhead outweighs the benefits
@@ -420,6 +469,7 @@ spec:
 - Language-native libraries already provide what you need (e.g., gRPC's built-ins)
 
 ---
+
 ## Building a Resiliency Strategy
 
 1. Identify critical paths and dependencies
@@ -431,6 +481,7 @@ spec:
 1. Test with chaos experiments
 
 ---
+
 ## Resiliency Checklist
 
 - Every external call has a timeout configured
@@ -442,6 +493,7 @@ spec:
 - Chaos experiments validate resilience regularly
 
 ---
+
 ## Summary
 
 - Resiliency is about surviving failures, not preventing them

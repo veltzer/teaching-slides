@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Service Discovery
 
 ---
+
 ## The Problem
 
 - Service A wants to call service B
@@ -20,11 +22,13 @@ audience:
 - A needs to find current B instances at any time
 
 ---
+
 ## Discovery Modes
 
 ![discovery_modes](svg/courses/architecting/microservices-architecture/08_service_discovery/discovery_modes.svg)
 
 ---
+
 ## Static Configuration
 
 - A's config has B's URL: `http://b.example.com`
@@ -33,6 +37,7 @@ audience:
 - Requires DNS to be up to date
 
 ---
+
 ## Client-Side Discovery
 
 - A queries a registry to find B's instances
@@ -41,6 +46,7 @@ audience:
 - Examples: Eureka, Consul + client SDK
 
 ---
+
 ## Server-Side Discovery
 
 - A calls a load balancer or service proxy
@@ -49,6 +55,7 @@ audience:
 - Examples: Kubernetes Service objects, AWS ELB
 
 ---
+
 ## Kubernetes Service Discovery
 
 - Each Service object gets a stable DNS name
@@ -57,6 +64,7 @@ audience:
 - Handles registration and deregistration automatically
 
 ---
+
 ## Service Registry
 
 - Central database of "service X has instances at these endpoints"
@@ -65,6 +73,7 @@ audience:
 - Most platforms have one built in
 
 ---
+
 ## Health Checks
 
 - Instances mark themselves healthy/unhealthy
@@ -73,6 +82,7 @@ audience:
 - Crucial: an unhealthy instance must be removed from rotation quickly
 
 ---
+
 ## Health vs Readiness
 
 - **Liveness**: is the process alive? (restart if not)
@@ -81,6 +91,7 @@ audience:
 - Distinguish them; misconfigured probes cause incidents
 
 ---
+
 ## Load Balancing
 
 - Round-robin: simple, fair under uniform conditions
@@ -90,6 +101,7 @@ audience:
 - Most platforms default to round-robin or least connections
 
 ---
+
 ## Client Load Balancing
 
 - The client picks an instance from the registry
@@ -98,6 +110,7 @@ audience:
 - Common in service mesh setups
 
 ---
+
 ## Service Mesh and Discovery
 
 - Service mesh proxies handle discovery transparently
@@ -106,6 +119,7 @@ audience:
 - Adds operational complexity but standardizes the cross-cutting concerns
 
 ---
+
 ## DNS-Based Discovery
 
 - Simple: just DNS records that resolve to instance IPs
@@ -114,6 +128,7 @@ audience:
 - Often combined with a load balancer for finer control
 
 ---
+
 ## Anti-Patterns
 
 - Hardcoded IPs in config
@@ -123,6 +138,7 @@ audience:
 - Single point of failure in the registry
 
 ---
+
 ## Summary
 
 - Multiple instances of each service; need a way to find them

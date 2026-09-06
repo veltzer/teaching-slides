@@ -7,9 +7,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Modernization Strategies
 
 ---
+
 ## What This Chapter Covers
 
 - The six strategies
@@ -18,6 +20,7 @@ audience:
 - Combining strategies
 
 ---
+
 ## Encapsulate
 
 - Wrap legacy with API
@@ -26,6 +29,7 @@ audience:
 - Buys time, not progress
 
 ---
+
 ## Rehost
 
 - Lift and shift to new infrastructure
@@ -34,6 +38,7 @@ audience:
 - Cost shifts but does not drop
 
 ---
+
 ## Replatform
 
 - Minor changes for new platform
@@ -42,6 +47,7 @@ audience:
 - Capture some platform benefits
 
 ---
+
 ## Refactor
 
 - Internal restructuring
@@ -50,6 +56,7 @@ audience:
 - Slow and invisible to users
 
 ---
+
 ## Rearchitect
 
 - Restructure for new properties
@@ -58,6 +65,7 @@ audience:
 - New risks introduced
 
 ---
+
 ## Rebuild
 
 - Same scope, new code base
@@ -66,6 +74,7 @@ audience:
 - Expensive but bounded
 
 ---
+
 ## Replace
 
 - Buy or use SaaS instead
@@ -74,6 +83,7 @@ audience:
 - Vendor lock-in trade
 
 ---
+
 ## Choosing
 
 - Per system, not per portfolio
@@ -82,11 +92,13 @@ audience:
 - Money drives scope
 
 ---
+
 ## Effort vs Value
 
 ![effort_vs_value](svg/courses/architecting/legacy-modernization/02_strategies/effort_vs_value.svg)
 
 ---
+
 ## Combining
 
 - Encapsulate first to slow bleeding
@@ -95,6 +107,7 @@ audience:
 - Replace pieces over time
 
 ---
+
 ## Sequencing
 
 - Buy time before investing
@@ -103,11 +116,13 @@ audience:
 - Skipping steps risks rework
 
 ---
+
 ## Sequence Over Time
 
 ![strategy_combos](svg/courses/architecting/legacy-modernization/02_strategies/strategy_combos.svg)
 
 ---
+
 ## What Not to Do
 
 - Big bang
@@ -116,6 +131,7 @@ audience:
 - Strategy with no ROI
 
 ---
+
 ## Decision Record
 
 - Document the choice
@@ -124,6 +140,7 @@ audience:
 - Treat as living artifact
 
 ---
+
 ## Common Strategy Mistakes
 
 - One strategy for everything

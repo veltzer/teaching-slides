@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Resampling and Simulation
 
 ---
+
 ## What This Chapter Covers
 
 - Trading formulas for compute
@@ -21,11 +23,13 @@ audience:
 - Monte Carlo simulation, power, and a few pitfalls
 
 ---
+
 ## How the Bootstrap Works
 
 ![bootstrap](svg/courses/math/statistics-inference/15_resampling_and_simulation/bootstrap.svg)
 
 ---
+
 ## Let The Computer Do The Statistics
 
 - Classical inference derives a sampling distribution by math — often only possible under strong assumptions
@@ -35,6 +39,7 @@ audience:
 - Three workhorses: the **bootstrap** (standard errors and CIs), **permutation tests** (p-values), **cross-validation** (predictive error)
 
 ---
+
 ## The Bootstrap
 
 - To estimate the sampling variability of a statistic: resample your n data points **with replacement** to get a "bootstrap sample" of size n; recompute the statistic; repeat B times (B = a few thousand)
@@ -44,6 +49,7 @@ audience:
 - It breaks down for statistics that depend on extreme order values (the sample max/min) and for strongly dependent data — for time series use a **block bootstrap**
 
 ---
+
 ## The Jackknife
 
 - The bootstrap's older, simpler cousin: form n datasets by leaving out **one** observation at a time, recompute the statistic on each
@@ -53,6 +59,7 @@ audience:
 - Its "leave-one-out" idea, though, is exactly what reappears in cross-validation
 
 ---
+
 ## Permutation Tests
 
 - The most assumption-light hypothesis test: under H&#8320; the group labels are arbitrary, so **shuffle them**
@@ -62,6 +69,7 @@ audience:
 - The one requirement is **exchangeability under H&#8320;** — which a randomized experiment hands you for free; it generalizes naturally to paired data (shuffle *within* pairs) and to multi-group designs
 
 ---
+
 ## Cross-Validation
 
 - The honest way to estimate how well a model will predict **new** data — because in-sample error (training R&sup2;, training accuracy) is optimistically biased
@@ -71,11 +79,13 @@ audience:
 - "Tuned on CV, then also reported CV error as the final estimate" is mild double-dipping — keep a separate untouched test set for the final number
 
 ---
+
 ## k-fold Cross-Validation
 
 ![k_fold_cv](svg/courses/math/statistics-inference/15_resampling_and_simulation/k_fold_cv.svg)
 
 ---
+
 ## Monte Carlo Simulation
 
 - When you *do* have a model, simulate from it to answer questions that resist pencil-and-paper
@@ -85,6 +95,7 @@ audience:
 - **Always set and record a random seed** — reproducibility, and the ability to debug a weird run
 
 ---
+
 ## Resampling In Python
 
 ```python
@@ -105,6 +116,7 @@ print("permutation p:", round(p, 3))
 ```
 
 ---
+
 ## Common Mistakes
 
 - Bootstrapping a statistic that depends on extreme values (max/min), or bootstrapping dependent data without blocking

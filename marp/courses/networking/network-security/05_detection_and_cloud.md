@@ -8,9 +8,11 @@ audience:
   - audiences:security
 
 ---
+
 # Detection and Cloud Security
 
 ---
+
 ## What This Chapter Covers
 
 - Logging and SIEM
@@ -20,6 +22,7 @@ audience:
 - Incident response
 
 ---
+
 ## Logs Everywhere
 
 - Edge devices
@@ -28,6 +31,7 @@ audience:
 - Identity providers
 
 ---
+
 ## Centralization
 
 - Forward to central store
@@ -36,6 +40,7 @@ audience:
 - Required for incident reconstruction
 
 ---
+
 ## SIEM
 
 - Security information and event management
@@ -44,11 +49,13 @@ audience:
 - Investigation workflows
 
 ---
+
 ## Detection Pipeline
 
 ![siem_pipeline](svg/courses/networking/network-security/05_detection_and_cloud/siem_pipeline.svg)
 
 ---
+
 ## IDS And IPS
 
 - Intrusion detection observes
@@ -57,6 +64,7 @@ audience:
 - Tune to reduce false positives
 
 ---
+
 ## Endpoint Detection
 
 - Agent on each host
@@ -65,6 +73,7 @@ audience:
 - Feeds the SIEM
 
 ---
+
 ## NetFlow And Friends
 
 - Summary records of connections
@@ -73,6 +82,7 @@ audience:
 - Less data than full capture
 
 ---
+
 ## Cloud Network Primitives
 
 - Virtual private cloud
@@ -81,6 +91,7 @@ audience:
 - Network ACLs
 
 ---
+
 ## Security Groups
 
 - Stateful per-instance firewall
@@ -89,6 +100,7 @@ audience:
 - Default deny inbound
 
 ---
+
 ## Network ACLs
 
 - Stateless subnet-level rules
@@ -97,6 +109,7 @@ audience:
 - Layered defense
 
 ---
+
 ## Private Endpoints
 
 - Reach managed services without internet
@@ -105,6 +118,7 @@ audience:
 - Common pattern in modern cloud
 
 ---
+
 ## DDoS Defense
 
 - Provider-level scrubbing
@@ -113,6 +127,7 @@ audience:
 - Preplan playbook
 
 ---
+
 ## Incident Response
 
 - Detect
@@ -122,6 +137,7 @@ audience:
 - Learn
 
 ---
+
 ## Forensics
 
 - Preserve evidence
@@ -130,6 +146,7 @@ audience:
 - Document everything
 
 ---
+
 ## Common Detection Mistakes
 
 - Logs without retention

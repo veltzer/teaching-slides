@@ -15,6 +15,7 @@ audience:
 # Hacking Landscape
 
 ---
+
 ## Who are the hackers?
 
 - Script kiddies
@@ -39,6 +40,7 @@ audience:
 ![script_kiddies](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/script_kiddies.svg)
 
 ---
+
 ## Hacktivists
 
 - Motivated by political, social, or ideological causes
@@ -64,6 +66,7 @@ audience:
 ![cyber_criminals](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/cyber_criminals.svg)
 
 ---
+
 ## State-Sponsored Actors (APTs)
 
 - Advanced Persistent Threat groups backed by nation-states
@@ -80,6 +83,7 @@ audience:
 | Equation    | USA (NSA)     | Stuxnet, EternalBlue             |
 
 ---
+
 ## Insider Threats
 
 - Current or former employees, contractors, or partners
@@ -92,6 +96,7 @@ audience:
 - Detection requires User Behavior Analytics (UBA)
 
 ---
+
 ## What are the hackers' motivations
 
 - Financial gain
@@ -101,6 +106,7 @@ audience:
 - Revenge
 
 ---
+
 ## Motivation Deep Dive
 
 | Motivation | Actor Type  | Typical Attack            |
@@ -113,6 +119,7 @@ audience:
 | Warfare    | State APT   | Infrastructure attacks    |
 
 ---
+
 ## What are the hackers' goals
 
 - Data theft
@@ -122,6 +129,7 @@ audience:
 - Financial fraud
 
 ---
+
 ## What are the hackers' targets
 
 - Governments
@@ -143,6 +151,7 @@ Organizations should understand why they are targets:
 ![target_value_assessment](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/target_value_assessment.svg)
 
 ---
+
 ## Attack Life-cycle
 
 1. Reconnaissance
@@ -154,6 +163,7 @@ Organizations should understand why they are targets:
 1. Actions on Objectives
 
 ---
+
 ## Attack Life-cycle: The Cyber Kill Chain (Lockheed Martin)
 
 ![attack_life_cycle_the_cyber_kill_chain_lockheed_martin](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/attack_life_cycle_the_cyber_kill_chain_lockheed_martin.svg)
@@ -165,6 +175,7 @@ Organizations should understand why they are targets:
 Breaking the chain at any stage prevents the attack from succeeding.
 
 ---
+
 ## Reconnaissance Phase - Tools and Techniques
 
 Attackers gather information before launching attacks:
@@ -195,6 +206,7 @@ dig example.com NS
 - Job postings revealing technology stack
 
 ---
+
 ## MITRE ATT&CK Framework
 
 An alternative model to the Kill Chain that describes adversary behavior:
@@ -213,6 +225,7 @@ An alternative model to the Kill Chain that describes adversary behavior:
 | Exfiltration        | Stealing data out                        | DNS tunneling, cloud storage |
 
 ---
+
 ## Forensics Introduction
 
 - Collecting and analyzing digital evidence
@@ -239,6 +252,7 @@ Key forensic tools:
 - **FTK Imager**: Forensic disk imaging
 
 ---
+
 ## Chain of Custody
 
 Maintaining evidence integrity is critical for legal proceedings:
@@ -259,6 +273,7 @@ diff evidence_hash_source.txt evidence_hash_image.txt
 ```
 
 ---
+
 ## Exercise: Threat Landscape Mapping
 
 1. Choose a fictional organization (e.g., a mid-size hospital)

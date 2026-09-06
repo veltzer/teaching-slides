@@ -11,9 +11,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Relational Databases
 
 ---
+
 ## What Is an RDBMS?
 
 A relational database management system stores data in tables with rows and columns, enforces schemas, and exposes SQL for queries.
@@ -26,6 +28,7 @@ A relational database management system stores data in tables with rows and colu
 Examples: PostgreSQL, MySQL/MariaDB, SQL Server, Oracle, SQLite.
 
 ---
+
 ## ACID
 
 The four properties that make an RDBMS transaction trustworthy:
@@ -38,6 +41,7 @@ The four properties that make an RDBMS transaction trustworthy:
 Isolation is the most subtle of the four — and the focus of this chapter.
 
 ---
+
 ## The Isolation Problem
 
 A database serves many clients at once. Two transactions running in parallel can interfere in ways that produce wrong answers even though each transaction, viewed alone, is correct.
@@ -47,36 +51,43 @@ The SQL standard catalogs four classes of interference — called **anomalies** 
 Higher isolation → more correctness, less concurrency, more retries.
 
 ---
+
 ## Anomaly 1: Dirty Read
 
 ![dirty_read](svg/courses/architecting/architecting/05_rdbms/dirty_read.svg)
 
 ---
+
 ## Anomaly 2: Non-Repeatable Read
 
 ![non_repeatable_read](svg/courses/architecting/architecting/05_rdbms/non_repeatable_read.svg)
 
 ---
+
 ## Anomaly 3: Phantom Read
 
 ![phantom_read](svg/courses/architecting/architecting/05_rdbms/phantom_read.svg)
 
 ---
+
 ## Anomaly 4: Write Skew
 
 ![write_skew](svg/courses/architecting/architecting/05_rdbms/write_skew.svg)
 
 ---
+
 ## Related Anomaly: Lost Update
 
 ![lost_update](svg/courses/architecting/architecting/05_rdbms/lost_update.svg)
 
 ---
+
 ## ANSI Isolation Levels
 
 ![isolation_levels_table](svg/courses/architecting/architecting/05_rdbms/isolation_levels_table.svg)
 
 ---
+
 ## PostgreSQL's REPEATABLE READ Is Different
 
 The SQL standard says REPEATABLE READ allows phantom reads. PostgreSQL's implementation uses **snapshot isolation** and prevents them.
@@ -91,6 +102,7 @@ But snapshot isolation is **not** true serializable:
 For write skew, use `SERIALIZABLE`, which PostgreSQL implements with Serializable Snapshot Isolation (SSI). SSI detects dependency cycles between snapshots and aborts offenders at commit time.
 
 ---
+
 ## Configuring Isolation: PostgreSQL
 
 Per transaction:
@@ -117,6 +129,7 @@ SET SESSION CHARACTERISTICS AS TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 Default is `READ COMMITTED`. Note: `READ UNCOMMITTED` exists as a keyword but PostgreSQL silently upgrades it to `READ COMMITTED`.
 
 ---
+
 ## Configuring Isolation: MySQL / InnoDB
 
 Per next transaction only (one-shot, must precede `BEGIN`):
@@ -143,6 +156,7 @@ SET GLOBAL TRANSACTION ISOLATION LEVEL READ COMMITTED;
 Default is `REPEATABLE READ`. InnoDB uses next-key locks, so phantom reads are also blocked in practice — stronger than the ANSI definition.
 
 ---
+
 ## Configuring Isolation: SQL Server
 
 Per session (sticky until changed or disconnected):
@@ -170,6 +184,7 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 ```
 
 ---
+
 ## Choosing an Isolation Level
 
 - **READ UNCOMMITTED** — almost never. A curiosity.
@@ -180,6 +195,7 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 Rule of thumb: start at the default, raise only when you hit an anomaly you can't work around.
 
 ---
+
 ## Optimistic vs. Pessimistic Concurrency
 
 Two strategies for handling contention — both work at any isolation level.
@@ -204,6 +220,7 @@ WHERE id = 1 AND version = ?;
 Pick pessimistic for high-contention short transactions; optimistic when conflicts are rare and retries are cheap.
 
 ---
+
 ## Serialization Failures & Retry
 
 At `SERIALIZABLE`, the database may abort a transaction at COMMIT with a serialization failure — not because anything is broken, but because the concurrent schedule was not serializable.
@@ -228,6 +245,7 @@ for attempt in range(5):
 The retry loop is not optional at SERIALIZABLE — it's part of the contract.
 
 ---
+
 ## Schema, Keys, and Indexes
 
 Things an RDBMS gives you that NoSQL systems often don't:
@@ -242,6 +260,7 @@ Things an RDBMS gives you that NoSQL systems often don't:
 These are enforced inside transactions and respect isolation levels — a unique violation is a hard stop, not a race.
 
 ---
+
 ## Normalization vs. Denormalization
 
 **Normalization** (3NF) stores every fact once. Joins at read time.
@@ -257,6 +276,7 @@ These are enforced inside transactions and respect isolation levels — a unique
 Start normalized. Denormalize when a specific read path proves too slow and the write-side cost is acceptable.
 
 ---
+
 ## Chapter Takeaways
 
 - ACID's "I" is the one that bites — isolation levels are a contract, not magic

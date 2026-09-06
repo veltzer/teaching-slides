@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Factorial ANOVA and Interactions
 
 ---
+
 ## What This Chapter Covers
 
 - Two or more factors at once
@@ -21,11 +23,13 @@ audience:
 - ANCOVA: adding a continuous covariate
 
 ---
+
 ## Interaction Plots
 
 ![interaction_plots](svg/courses/math/statistics-inference/06_factorial_anova/interaction_plots.svg)
 
 ---
+
 ## Why More Than One Factor
 
 - Real outcomes depend on several things at once: layout *and* device, drug *and* dose, region *and* season
@@ -35,6 +39,7 @@ audience:
 - More efficient and more informative than a pile of one-factor studies
 
 ---
+
 ## Main Effects vs Interaction
 
 - A **main effect** is the average effect of one factor, collapsing over the others — "on average, layout B beats A by 4 points"
@@ -44,6 +49,7 @@ audience:
 - Factorial ANOVA gives an F-test for each main effect *and* for each interaction
 
 ---
+
 ## Reading An Interaction Plot
 
 - Plot the cell means: one factor on the x-axis, separate lines for the other factor's levels
@@ -53,6 +59,7 @@ audience:
 - Always draw it before writing the interpretation
 
 ---
+
 ## Balanced vs Unbalanced
 
 - **Balanced**: equal sample size in every cell — the sums of squares partition cleanly and the analysis is unambiguous
@@ -62,11 +69,13 @@ audience:
 - Design balanced if you possibly can; it sidesteps the whole issue
 
 ---
+
 ## Types I / II / III Sums of Squares
 
 ![types_of_ss](svg/courses/math/statistics-inference/06_factorial_anova/types_of_ss.svg)
 
 ---
+
 ## Repeated-Measures Designs
 
 - The same subjects are measured under every condition (within-subjects), not different subjects per condition
@@ -76,6 +85,7 @@ audience:
 - Mixed models also handle missing cells and unequal numbers of observations gracefully
 
 ---
+
 ## ANCOVA
 
 - **Analysis of covariance**: factorial ANOVA plus one (or more) continuous **covariate**
@@ -85,6 +95,7 @@ audience:
 - In the linear-model view it's just `y ~ C(group) + covariate` — nothing new under the hood
 
 ---
+
 ## It's Still The Linear Model
 
 - Two-way ANOVA, repeated measures, ANCOVA, unbalanced designs — all special cases of the linear (or linear mixed) model
@@ -94,6 +105,7 @@ audience:
 - Learn the linear-model lens once and the zoo of ANOVA designs collapses into it
 
 ---
+
 ## Factorial ANOVA In Python
 
 ```python
@@ -112,6 +124,7 @@ print(sm.stats.anova_lm(model, typ=2))     # main effects + interaction
 ```
 
 ---
+
 ## Common Mistakes
 
 - Interpreting main effects while ignoring a real interaction

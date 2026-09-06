@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Machine Learning Overview
 
 ---
+
 ## What This Chapter Covers
 
 - What is ML
@@ -20,11 +22,13 @@ audience:
 - When to use ML
 
 ---
+
 ## Three Flavors
 
 ![ml_categories](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/ml_categories.svg)
 
 ---
+
 ## What ML Is
 
 - Algorithms learn patterns from data
@@ -33,6 +37,7 @@ audience:
 - Predict or decide
 
 ---
+
 ## ML vs Traditional Programming
 
 - Traditional: rules + data → answers
@@ -40,6 +45,7 @@ audience:
 - ML wins when rules are hard to write
 
 ---
+
 ## A Brief History
 
 - 1950s: perceptron
@@ -49,6 +55,7 @@ audience:
 - 2020s: foundation models
 
 ---
+
 ## Why ML Now
 
 - Data abundance
@@ -57,6 +64,7 @@ audience:
 - Cloud infrastructure
 
 ---
+
 ## Three Types
 
 - Supervised: labelled data
@@ -64,6 +72,7 @@ audience:
 - Reinforcement: agent learns from rewards
 
 ---
+
 ## Supervised Learning
 
 - Input X, target y
@@ -72,6 +81,7 @@ audience:
 - Most production ML
 
 ---
+
 ## Examples Supervised
 
 - Spam detection
@@ -80,6 +90,7 @@ audience:
 - Medical diagnosis
 
 ---
+
 ## Unsupervised Learning
 
 - Only X, no labels
@@ -88,6 +99,7 @@ audience:
 - Anomaly detection
 
 ---
+
 ## Examples Unsupervised
 
 - Customer segmentation
@@ -96,6 +108,7 @@ audience:
 - Fraud signals from outliers
 
 ---
+
 ## Reinforcement Learning
 
 - Agent, environment, rewards
@@ -104,6 +117,7 @@ audience:
 - Hard to train, sparse rewards
 
 ---
+
 ## Examples Reinforcement
 
 - AlphaGo, chess engines
@@ -112,6 +126,7 @@ audience:
 - Inventory management
 
 ---
+
 ## Semi-Supervised
 
 - Few labels, many unlabelled
@@ -120,6 +135,7 @@ audience:
 - Often realistic case
 
 ---
+
 ## Self-Supervised
 
 - Labels invented from data
@@ -128,6 +144,7 @@ audience:
 - Pretrain then fine-tune
 
 ---
+
 ## ML Workflow
 
 - Define problem
@@ -139,6 +156,7 @@ audience:
 - Monitor
 
 ---
+
 ## Define the Problem
 
 - What do we predict
@@ -147,6 +165,7 @@ audience:
 - Is ML even the right tool
 
 ---
+
 ## Collect Data
 
 - Sources, volume, quality
@@ -155,6 +174,7 @@ audience:
 - Bias in collection
 
 ---
+
 ## Train Models
 
 - Pick a baseline
@@ -163,6 +183,7 @@ audience:
 - Compare on validation
 
 ---
+
 ## Evaluate
 
 - Right metric for the problem
@@ -171,6 +192,7 @@ audience:
 - Slice by subgroup
 
 ---
+
 ## Deploy
 
 - Latency, throughput
@@ -179,6 +201,7 @@ audience:
 - Feature parity train and serve
 
 ---
+
 ## Monitor
 
 - Input drift
@@ -187,6 +210,7 @@ audience:
 - Retrain triggers
 
 ---
+
 ## The Math Underneath
 
 - Linear algebra: vectors, matrices
@@ -195,6 +219,7 @@ audience:
 - Optimisation: minimise a loss
 
 ---
+
 ## Loss Functions
 
 - Squared error: regression
@@ -203,6 +228,7 @@ audience:
 - Custom: tailor to business cost
 
 ---
+
 ## Optimisation
 
 - Find weights that minimise loss
@@ -211,6 +237,7 @@ audience:
 - Stochastic, mini-batch, batch
 
 ---
+
 ## Gradient Descent
 
 - Compute gradient of loss
@@ -219,6 +246,7 @@ audience:
 - Repeat until converged
 
 ---
+
 ## Bias vs Variance
 
 - Bias: model too simple, underfits
@@ -227,11 +255,13 @@ audience:
 - Balance with regularisation, more data
 
 ---
+
 ## Bias vs Variance
 
 ![bias_variance](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/bias_variance.svg)
 
 ---
+
 ## Overfitting
 
 - Model memorises training data
@@ -240,6 +270,7 @@ audience:
 - Mitigate: regularisation, more data, cross-validation
 
 ---
+
 ## Underfitting
 
 - Model too simple
@@ -247,6 +278,7 @@ audience:
 - Mitigate: richer features, deeper model
 
 ---
+
 ## Generalisation
 
 - Performance on new data
@@ -255,6 +287,7 @@ audience:
 - Practice: holdout, CV
 
 ---
+
 ## No Free Lunch
 
 - No single algorithm best always
@@ -262,6 +295,7 @@ audience:
 - Try several, compare honestly
 
 ---
+
 ## Classification Metrics
 
 - Accuracy: % correct
@@ -271,6 +305,7 @@ audience:
 - AUC-ROC: threshold-independent
 
 ---
+
 ## Regression Metrics
 
 - MAE: mean absolute error
@@ -279,6 +314,7 @@ audience:
 - Use multiple
 
 ---
+
 ## Calibration
 
 - Predicted probabilities should match observed
@@ -287,6 +323,7 @@ audience:
 - Platt scaling, isotonic
 
 ---
+
 ## Choosing a Model
 
 - Linear: interpretable, fast
@@ -295,6 +332,7 @@ audience:
 - Ensemble: often best in practice
 
 ---
+
 ## scikit-learn
 
 - The Python ML standard
@@ -303,6 +341,7 @@ audience:
 - Pipelines, model selection
 
 ---
+
 ## sklearn API
 
 ```python
@@ -314,6 +353,7 @@ probs = model.predict_proba(X_test)
 ```
 
 ---
+
 ## Try Multiple Algorithms
 
 ```python
@@ -323,6 +363,7 @@ for clf in [LogisticRegression(), RandomForestClassifier(), GradientBoostingClas
 ```
 
 ---
+
 ## When ML Is Not The Answer
 
 - Small data
@@ -331,6 +372,7 @@ for clf in [LogisticRegression(), RandomForestClassifier(), GradientBoostingClas
 - Cost of errors very high
 
 ---
+
 ## ML vs Rules
 
 - Rules: stable problem, known logic
@@ -338,6 +380,7 @@ for clf in [LogisticRegression(), RandomForestClassifier(), GradientBoostingClas
 - Hybrid: rules with ML overrides
 
 ---
+
 ## Cost of Mistakes
 
 - Some errors are cheap
@@ -346,6 +389,7 @@ for clf in [LogisticRegression(), RandomForestClassifier(), GradientBoostingClas
 - Asymmetric losses
 
 ---
+
 ## Common Overview Mistakes
 
 - Choosing complex model with little data
@@ -355,21 +399,25 @@ for clf in [LogisticRegression(), RandomForestClassifier(), GradientBoostingClas
 - Not retraining on shifting distributions
 
 ---
+
 ## Supervised vs Unsupervised
 
 ![supervised_vs_unsupervised](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/supervised_vs_unsupervised.svg)
 
 ---
+
 ## Loss Landscape
 
 ![loss_landscape](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/loss_landscape.svg)
 
 ---
+
 ## Gradient Descent
 
 ![gradient_descent](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/gradient_descent.svg)
 
 ---
+
 ## Summary
 
 - ML learns from data, not rules

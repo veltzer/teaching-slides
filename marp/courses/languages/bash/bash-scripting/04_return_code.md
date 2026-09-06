@@ -12,6 +12,7 @@ audience:
   - audiences:devops
 
 ---
+
 # The Return Code
 
 ---
@@ -21,6 +22,7 @@ audience:
 ![Return Code Reference](svg/courses/languages/bash/bash-scripting/04_return_code/return_code_table.svg)
 
 ---
+
 ## What is a Return Code?
 - Every command that runs produces a return code (exit status)
 - It is an integer from 0 to 255
@@ -29,6 +31,7 @@ audience:
 - This is the opposite of most programming languages!
 
 ---
+
 ## Checking the Return Code
 
 ```bash
@@ -46,7 +49,9 @@ echo $?    # 0 (the previous echo succeeded!)
 ```
 
 ---
+
 ## Common Return Codes
+
 | Code | Meaning |
 |------|---------|
 | 0 | Success |
@@ -60,6 +65,7 @@ echo $?    # 0 (the previous echo succeeded!)
 | 143 | Killed by SIGTERM (128+15) |
 
 ---
+
 ## `true` and `false` Commands
 
 ```bash
@@ -83,6 +89,7 @@ done
 ```
 
 ---
+
 ## Return Codes and `&&` / `||`
 
 ```bash
@@ -101,6 +108,7 @@ true && false || echo "this runs unexpectedly"
 ```
 
 ---
+
 ## Return Codes in Conditional Context
 
 ```bash
@@ -123,6 +131,7 @@ fi
 ```
 
 ---
+
 ## The `test` Command and `[`
 
 ```bash
@@ -143,6 +152,7 @@ echo $?    # 0
 ```
 
 ---
+
 ## Return Codes from Scripts
 
 ```bash
@@ -165,6 +175,7 @@ exit 0
 ```
 
 ---
+
 ## Capturing Return Codes
 
 ```bash
@@ -186,6 +197,7 @@ fi
 ```
 
 ---
+
 ## `PIPESTATUS` Array
 
 ```bash
@@ -209,6 +221,7 @@ saved=("${PIPESTATUS[@]}")
 ```
 
 ---
+
 ## `set -o pipefail`
 
 ```bash

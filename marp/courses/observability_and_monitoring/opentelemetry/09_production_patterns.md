@@ -8,9 +8,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Production Patterns
 
 ---
+
 ## What This Chapter Covers
 
 - Sampling
@@ -21,6 +23,7 @@ audience:
 - SLOs
 
 ---
+
 ## Sampling Strategy
 
 - Head: cheap, randomised
@@ -28,11 +31,13 @@ audience:
 - Combine: head at edge, tail at gateway
 
 ---
+
 ## Sampling Strategies
 
 ![sampling](svg/courses/observability_and_monitoring/opentelemetry/09_production_patterns/sampling.svg)
 
 ---
+
 ## Tail Sampling Rules
 
 - Always keep errors
@@ -41,11 +46,13 @@ audience:
 - Per-tenant policies
 
 ---
+
 ## Strategy Trade-Offs
 
 ![sampling_strategies](svg/courses/observability_and_monitoring/opentelemetry/09_production_patterns/sampling_strategies.svg)
 
 ---
+
 ## Cost Drivers
 
 - Span volume
@@ -54,6 +61,7 @@ audience:
 - Retention period
 
 ---
+
 ## Reducing Cost
 
 - Drop noisy attributes
@@ -62,6 +70,7 @@ audience:
 - Different tiers per signal
 
 ---
+
 ## Reliability
 
 - Collector HA: multiple replicas
@@ -70,6 +79,7 @@ audience:
 - Retry with backoff
 
 ---
+
 ## Persistent Queue
 
 - Disk-backed buffer in collector
@@ -77,6 +87,7 @@ audience:
 - Configurable size
 
 ---
+
 ## Privacy
 
 - Don't put PII in attributes
@@ -85,6 +96,7 @@ audience:
 - Audit periodically
 
 ---
+
 ## Redaction
 
 - regex patterns in transform processor
@@ -92,6 +104,7 @@ audience:
 - Apply at agent and gateway
 
 ---
+
 ## Rollout
 
 - One service first
@@ -100,6 +113,7 @@ audience:
 - Don't replace all monitoring at once
 
 ---
+
 ## Versioning
 
 - Pin SDK and collector versions
@@ -107,6 +121,7 @@ audience:
 - Spec is stable; some semconv evolving
 
 ---
+
 ## SLOs From OTel
 
 - Define in semantic terms
@@ -115,6 +130,7 @@ audience:
 - Same as Prometheus pattern
 
 ---
+
 ## Dashboards
 
 - One per service
@@ -123,6 +139,7 @@ audience:
 - Drill from metric to trace
 
 ---
+
 ## Service Maps
 
 - Auto-generated from spans
@@ -131,6 +148,7 @@ audience:
 - Backend feature
 
 ---
+
 ## Resource Attributes
 
 - service.name (required)
@@ -139,6 +157,7 @@ audience:
 - Set by SDK or by collector enrichment
 
 ---
+
 ## Common Production Mistakes
 
 - 100% sampling in prod

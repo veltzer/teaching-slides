@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Vendor Lock-In Assessment
 
 ---

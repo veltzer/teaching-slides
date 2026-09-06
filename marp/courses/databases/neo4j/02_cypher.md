@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Cypher
 
 ---
+
 ## What This Chapter Covers
 
 - Match patterns
@@ -20,6 +22,7 @@ audience:
 - Procedures
 
 ---
+
 ## MATCH
 
 - Find nodes and relationships
@@ -28,16 +31,19 @@ audience:
 - Returns rows
 
 ---
+
 ## Core Clauses
 
 ![cypher_clauses](svg/courses/databases/neo4j/02_cypher/cypher_clauses.svg)
 
 ---
+
 ## Pattern Syntax
 
 ![match_pattern](svg/courses/databases/neo4j/02_cypher/match_pattern.svg)
 
 ---
+
 ## Patterns
 
 - (a:Label) for node
@@ -46,6 +52,7 @@ audience:
 - Variable length with *
 
 ---
+
 ## CREATE
 
 - Create nodes and relationships
@@ -54,6 +61,7 @@ audience:
 - Pair with MERGE for uniqueness
 
 ---
+
 ## MERGE
 
 - Match or create
@@ -62,6 +70,7 @@ audience:
 - Common for upserts
 
 ---
+
 ## SET
 
 - Assign or update properties
@@ -70,6 +79,7 @@ audience:
 - Use carefully on hot nodes
 
 ---
+
 ## DELETE And DETACH DELETE
 
 - DELETE removes nodes only if no relationships
@@ -78,6 +88,7 @@ audience:
 - Easy to over-delete
 
 ---
+
 ## WHERE
 
 - Filter rows
@@ -86,6 +97,7 @@ audience:
 - Pattern predicates supported
 
 ---
+
 ## RETURN
 
 - Choose what to emit
@@ -94,6 +106,7 @@ audience:
 - ORDER BY and LIMIT
 
 ---
+
 ## Aggregations
 
 - count, sum, avg, min, max
@@ -102,6 +115,7 @@ audience:
 - Same gotchas as SQL
 
 ---
+
 ## WITH
 
 - Pipe between query parts
@@ -110,6 +124,7 @@ audience:
 - Required for multi-stage logic
 
 ---
+
 ## Variable Length Paths
 
 - (a)-[*1..3]->(b)
@@ -118,6 +133,7 @@ audience:
 - Use the shortest-path function where applicable
 
 ---
+
 ## Procedures
 
 - CALL keyword
@@ -126,6 +142,7 @@ audience:
 - Read-only vs write declared
 
 ---
+
 ## Common Cypher Mistakes
 
 - MERGE without unique constraint

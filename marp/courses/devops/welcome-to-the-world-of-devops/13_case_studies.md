@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Case Studies
 Real-world DevOps transformation examples
 

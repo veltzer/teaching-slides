@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Data Modeling and Mappings
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![field_types](svg/courses/databases/elasticsearch-for-developers/03_data_modeling_and_mappings/field_types.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Field types
@@ -28,6 +30,7 @@ audience:
 - Best practices
 
 ---
+
 ## Field Types
 
 - Text, keyword
@@ -38,6 +41,7 @@ audience:
 - Range, IP, geo
 
 ---
+
 ## Text Vs Keyword
 
 - **text**: analysed; broken into tokens; for full-text search
@@ -46,6 +50,7 @@ audience:
 - Common: name as text + name.keyword
 
 ---
+
 ## Multi-Field
 
 ```json
@@ -61,11 +66,13 @@ audience:
 - Sort / aggregate: name.keyword (raw)
 
 ---
+
 ## text vs keyword
 
 ![text_vs_keyword](svg/courses/databases/elasticsearch-for-developers/03_data_modeling_and_mappings/text_vs_keyword.svg)
 
 ---
+
 ## Date Type
 
 - ISO 8601 strings
@@ -74,6 +81,7 @@ audience:
 - Time zones: store UTC; render in UI
 
 ---
+
 ## Nested
 
 - Array of objects
@@ -82,6 +90,7 @@ audience:
 - Use when sub-objects need internal queries
 
 ---
+
 ## Object
 
 - Default for nested objects
@@ -90,6 +99,7 @@ audience:
 - Most apps: object is fine
 
 ---
+
 ## Dynamic Mapping
 
 - ES auto-detects field types on first ingest
@@ -98,6 +108,7 @@ audience:
 - Define explicitly for important fields
 
 ---
+
 ## Strict Mapping
 
 ```json
@@ -109,6 +120,7 @@ audience:
 - Recommended for production
 
 ---
+
 ## Index Settings
 
 - number_of_shards
@@ -117,6 +129,7 @@ audience:
 - analysis (analyzers, tokenisers, filters)
 
 ---
+
 ## Analyzers
 
 - How text is tokenised
@@ -125,6 +138,7 @@ audience:
 - Shape full-text behaviour
 
 ---
+
 ## Custom Analyzer
 
 ```json
@@ -141,6 +155,7 @@ audience:
 ```
 
 ---
+
 ## Index Templates
 
 - Apply mapping to many indexes
@@ -148,6 +163,7 @@ audience:
 - Standard for time-based indexes
 
 ---
+
 ## Reindexing
 
 - Mappings can't change in-place
@@ -156,6 +172,7 @@ audience:
 - Plan for it; not "edit the mapping"
 
 ---
+
 ## Common Mapping Mistakes
 
 - Letting ES auto-map text as keyword (or vice versa)

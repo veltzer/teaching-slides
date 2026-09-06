@@ -15,6 +15,7 @@ audience:
 # Container Security Issues
 
 ---
+
 ## Security Risks with Containers
 - Kernel Exploits
     - Containers share the host kernel
@@ -241,6 +242,7 @@ spec:
     - Implement image lifecycle management
 
 ---
+
 ## Additional Security Controls
 
 - Network Segmentation
@@ -299,6 +301,7 @@ spec:
 ```
 
 ---
+
 ## Key Takeaways
 
 - Containers introduce new security risks

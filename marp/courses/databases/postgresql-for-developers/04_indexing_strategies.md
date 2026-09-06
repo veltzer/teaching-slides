@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Indexing Strategies
 
 ---
+
 ## Index Types
 
 ![index_types](svg/courses/databases/postgresql-for-developers/04_indexing_strategies/index_types.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Index types in Postgres
@@ -26,11 +29,13 @@ audience:
 - Maintenance
 
 ---
+
 ## Index Types Overview
 
 ![index_choice](svg/courses/databases/postgresql-for-developers/04_indexing_strategies/index_choice.svg)
 
 ---
+
 ## B-Tree
 
 - Default
@@ -39,6 +44,7 @@ audience:
 - 95% of indexes are B-tree
 
 ---
+
 ## Hash
 
 - Equality only
@@ -47,6 +53,7 @@ audience:
 - Rare benefit over B-tree
 
 ---
+
 ## GIN
 
 - Generalised Inverted Index
@@ -55,6 +62,7 @@ audience:
 - Standard for tsvector, JSONB
 
 ---
+
 ## GiST
 
 - Generalised Search Tree
@@ -63,6 +71,7 @@ audience:
 - PostGIS uses extensively
 
 ---
+
 ## BRIN
 
 - Block Range Index
@@ -71,6 +80,7 @@ audience:
 - Trade-off: less precise
 
 ---
+
 ## Composite Indexes
 
 - Multiple columns: (a, b, c)
@@ -79,6 +89,7 @@ audience:
 - Order matters
 
 ---
+
 ## Partial Indexes
 
 ```sql
@@ -90,6 +101,7 @@ CREATE INDEX idx_active ON users (email) WHERE active = true;
 - Only for queries matching the WHERE
 
 ---
+
 ## Covering Indexes (INCLUDE)
 
 ```sql
@@ -101,6 +113,7 @@ CREATE INDEX idx_user_email ON users (email) INCLUDE (name);
 - No table lookup
 
 ---
+
 ## Expression Indexes
 
 ```sql
@@ -112,6 +125,7 @@ CREATE INDEX idx_lower_email ON users (LOWER(email));
 - Query must use same expression
 
 ---
+
 ## Unique Indexes
 
 - Enforce uniqueness
@@ -119,6 +133,7 @@ CREATE INDEX idx_lower_email ON users (LOWER(email));
 - Combined with partial: "unique among non-deleted rows"
 
 ---
+
 ## Index Maintenance
 
 - Vacuum keeps indexes healthy
@@ -127,6 +142,7 @@ CREATE INDEX idx_lower_email ON users (LOWER(email));
 - Drop unused indexes
 
 ---
+
 ## Concurrent Index Creation
 
 ```sql
@@ -138,6 +154,7 @@ CREATE INDEX CONCURRENTLY idx_foo ON bar (baz);
 - Standard practice
 
 ---
+
 ## Common Index Mistakes
 
 - Indexing every column

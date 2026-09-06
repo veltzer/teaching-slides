@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Rebasing Strategies
 
 ---
+
 ## What This Chapter Covers
 
 - Rebase vs merge — what each actually does to history
@@ -20,6 +22,7 @@ audience:
 - Recovering when a rebase goes wrong
 
 ---
+
 ## Merge: Preserves History As-It-Happened
 
 - A merge commit records two parents
@@ -29,6 +32,7 @@ audience:
 - Cannot easily get a linear, readable history
 
 ---
+
 ## Rebase: Replays Commits On Top of Another Branch
 
 - Picks each commit from your branch
@@ -38,16 +42,19 @@ audience:
 - The result is a linear history, as if you started from the target tip
 
 ---
+
 ## Rebase vs Merge Visualized
 
 ![rebase_vs_merge](svg/courses/git/advanced-git/01_rebasing_strategies/rebase_vs_merge.svg)
 
 ---
+
 ## Rebase Workflow Pillars
 
 ![rebase_workflow](svg/courses/git/advanced-git/01_rebasing_strategies/rebase_workflow.svg)
 
 ---
+
 ## When to Rebase
 
 - Your local feature branch before opening a PR
@@ -56,6 +63,7 @@ audience:
 - When your team's workflow values linear history
 
 ---
+
 ## When to Merge
 
 - Integrating a long-lived branch where the merge point matters
@@ -64,11 +72,13 @@ audience:
 - Release branches and hotfix integration
 
 ---
+
 ## The Golden Rule
 
 ![golden_rule](svg/courses/git/advanced-git/01_rebasing_strategies/golden_rule.svg)
 
 ---
+
 ## Interactive Rebase: The Power Tool
 
 - `git rebase -i HEAD~5` opens an editor with the last 5 commits
@@ -78,6 +88,7 @@ audience:
 - Conflicts pause the rebase for resolution
 
 ---
+
 ## Interactive Rebase Actions
 
 - `pick` — keep the commit as-is
@@ -88,11 +99,13 @@ audience:
 - `drop` — remove the commit entirely
 
 ---
+
 ## Interactive Rebase Action Map
 
 ![interactive_rebase_actions](svg/courses/git/advanced-git/01_rebasing_strategies/interactive_rebase_actions.svg)
 
 ---
+
 ## Squashing: A Practical Example
 
 ```bash
@@ -108,6 +121,7 @@ git rebase -i HEAD~4
 - Result: reviewers see one logical change, not the journey
 
 ---
+
 ## Splitting a Commit
 
 - Use `edit` action in interactive rebase
@@ -117,6 +131,7 @@ git rebase -i HEAD~4
 - `git rebase --continue` to resume
 
 ---
+
 ## Rebase Onto: Surgical Rewrites
 
 - `git rebase --onto NEW_BASE OLD_BASE BRANCH`
@@ -126,6 +141,7 @@ git rebase -i HEAD~4
 - Use case: dropping merged commits from a long-running branch
 
 ---
+
 ## Rebase Onto Example
 
 ```bash
@@ -138,6 +154,7 @@ git rebase --onto main feature topic
 - The cleanest way to relocate a branch
 
 ---
+
 ## The Golden Rule of Rebasing
 
 - Never rebase commits that exist outside your local repo
@@ -147,6 +164,7 @@ git rebase --onto main feature topic
 - Public branches are immutable
 
 ---
+
 ## Force-Push After Rebase
 
 - Rebasing changes commit SHAs
@@ -156,6 +174,7 @@ git rebase --onto main feature topic
 - Plain `--force` overwrites unconditionally — dangerous
 
 ---
+
 ## Rebasing Shared Branches
 
 - If you must rebase a shared branch, coordinate first
@@ -165,6 +184,7 @@ git rebase --onto main feature topic
 - Better: use merge for branches with many contributors
 
 ---
+
 ## Recovering From a Bad Rebase
 
 - The original commits are not deleted — only unreferenced
@@ -174,11 +194,13 @@ git rebase --onto main feature topic
 - A bad rebase is recoverable, not catastrophic
 
 ---
+
 ## Recovery Steps Visualised
 
 ![rebase_recovery](svg/courses/git/advanced-git/01_rebasing_strategies/rebase_recovery.svg)
 
 ---
+
 ## Aborting an In-Progress Rebase
 
 - During conflict resolution, you can bail out
@@ -188,6 +210,7 @@ git rebase --onto main feature topic
 - Never edit files manually and run `--continue` without `git add`
 
 ---
+
 ## Auto-Squash for Fixup Commits
 
 - Make a commit with `git commit --fixup=<sha>`
@@ -197,6 +220,7 @@ git rebase --onto main feature topic
 - Ideal workflow: review feedback as fixup commits, autosquash before merge
 
 ---
+
 ## Rebase Strategy Options
 
 - `--strategy=recursive` (default) — three-way merge per commit
@@ -206,6 +230,7 @@ git rebase --onto main feature topic
 - Strategy options apply to every replayed commit
 
 ---
+
 ## Rebase With Merge Commits Preserved
 
 - `git rebase --rebase-merges` (or `-r`)
@@ -215,6 +240,7 @@ git rebase --onto main feature topic
 - Read the output carefully — the todo list shows the planned topology
 
 ---
+
 ## Common Rebase Mistakes
 
 - Rebasing the wrong direction (rebase onto your branch by mistake)
@@ -224,6 +250,7 @@ git rebase --onto main feature topic
 - Rebasing a branch others have already based work on
 
 ---
+
 ## Summary
 
 - Rebase rewrites history; merge preserves it

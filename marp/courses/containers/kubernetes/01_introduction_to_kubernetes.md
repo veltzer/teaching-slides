@@ -8,9 +8,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to Kubernetes
 
 ---
+
 ## What This Chapter Covers
 
 - What Kubernetes is
@@ -20,6 +22,7 @@ audience:
 - A short tour
 
 ---
+
 ## What Kubernetes Is
 
 - Container orchestration platform
@@ -29,6 +32,7 @@ audience:
 - Originally from Google (Borg-inspired)
 
 ---
+
 ## Why Orchestration
 
 - One container: easy
@@ -37,6 +41,7 @@ audience:
 - K8s automates all of this
 
 ---
+
 ## Architecture
 
 - Control plane: API server, scheduler, controller, etcd
@@ -45,11 +50,13 @@ audience:
 - HA: multiple control plane replicas
 
 ---
+
 ## Control Plane and Nodes
 
 ![control_plane](svg/courses/containers/kubernetes/01_introduction_to_kubernetes/control_plane.svg)
 
 ---
+
 ## Pod
 
 - The smallest deployable unit
@@ -58,6 +65,7 @@ audience:
 - Most pods have one container
 
 ---
+
 ## Service
 
 - Stable network endpoint
@@ -66,6 +74,7 @@ audience:
 - ClusterIP, NodePort, LoadBalancer
 
 ---
+
 ## Deployment
 
 - Manages pod replicas
@@ -74,6 +83,7 @@ audience:
 - The standard way to run pods
 
 ---
+
 ## Namespace
 
 - Logical separation within a cluster
@@ -81,6 +91,7 @@ audience:
 - Per-team, per-env
 
 ---
+
 ## kubectl
 
 - The CLI
@@ -89,6 +100,7 @@ audience:
 - The daily workflow
 
 ---
+
 ## YAML Manifests
 
 - Declarative configuration
@@ -97,6 +109,7 @@ audience:
 - Versioned in git
 
 ---
+
 ## Kubernetes Distributions
 
 - Vanilla: kubeadm
@@ -105,6 +118,7 @@ audience:
 - Pick by deployment target
 
 ---
+
 ## When K8s Wins
 
 - Many services, many machines
@@ -113,11 +127,13 @@ audience:
 - Polyglot stacks
 
 ---
+
 ## Fit and Misfit
 
 ![k8s_wins_loses](svg/courses/containers/kubernetes/01_introduction_to_kubernetes/wins_loses.svg)
 
 ---
+
 ## When K8s Is Overkill
 
 - One service
@@ -126,6 +142,7 @@ audience:
 - Fargate / Cloud Run might do
 
 ---
+
 ## Common Misconceptions
 
 - "K8s is just Docker but bigger" — way more complex

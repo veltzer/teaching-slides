@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # MongoDB
 
 ---
+
 ## What This Chapter Covers
 
 - MongoDB at a glance
@@ -20,6 +22,7 @@ audience:
 - Comparison with relational
 
 ---
+
 ## What MongoDB Is
 
 - Document-oriented NoSQL
@@ -28,6 +31,7 @@ audience:
 - Most-deployed document DB
 
 ---
+
 ## Document
 
 ```json
@@ -42,6 +46,7 @@ audience:
 ```
 
 ---
+
 ## Collections
 
 - Group of documents
@@ -50,6 +55,7 @@ audience:
 - Per-database
 
 ---
+
 ## CRUD
 
 ```python
@@ -60,6 +66,7 @@ db.users.delete_one({"_id": 1})
 ```
 
 ---
+
 ## Embed vs Reference
 
 - Embed: nested document; atomic; fast read
@@ -67,11 +74,13 @@ db.users.delete_one({"_id": 1})
 - Pick by query patterns
 
 ---
+
 ## Modelling Choice
 
 ![embed_vs_reference](svg/courses/databases/introduction-to-databases/07_mongodb/embed_vs_reference.svg)
 
 ---
+
 ## Aggregation
 
 - Pipeline: $match, $group, $project, $lookup
@@ -79,6 +88,7 @@ db.users.delete_one({"_id": 1})
 - Powerful for analytics
 
 ---
+
 ## Indexes
 
 - Same as relational (B-tree, multi-key, text, geo)
@@ -86,6 +96,7 @@ db.users.delete_one({"_id": 1})
 - Per-collection
 
 ---
+
 ## Transactions
 
 - Multi-document since 4.0
@@ -93,6 +104,7 @@ db.users.delete_one({"_id": 1})
 - Use for: ACID across collections
 
 ---
+
 ## Schema Flexibility
 
 - Each document can have different fields
@@ -100,6 +112,7 @@ db.users.delete_one({"_id": 1})
 - Risk: junk accumulates without validation
 
 ---
+
 ## When MongoDB Wins
 
 - Hierarchical data
@@ -108,6 +121,7 @@ db.users.delete_one({"_id": 1})
 - Geospatial
 
 ---
+
 ## When MongoDB Loses
 
 - Multi-document ACID at scale
@@ -115,6 +129,7 @@ db.users.delete_one({"_id": 1})
 - Heavy joins
 
 ---
+
 ## Atlas
 
 - Hosted MongoDB
@@ -123,6 +138,7 @@ db.users.delete_one({"_id": 1})
 - Default for most teams
 
 ---
+
 ## Common MongoDB Mistakes
 
 - Modeling like SQL (separate collections everywhere)

@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Emerging Technologies and Future Trends
 ## Next Generation Android Development
 

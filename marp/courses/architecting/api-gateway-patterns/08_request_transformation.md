@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Request and Response Transformation
 
 ---
+
 ## What This Chapter Covers
 
 - When to transform
@@ -21,6 +23,7 @@ audience:
 - Real-world examples
 
 ---
+
 ## Why Transform
 
 - Legacy backends with awkward shapes
@@ -30,11 +33,13 @@ audience:
 - Bridge protocol differences (JSON in / XML out)
 
 ---
+
 ## Transformation Pipeline
 
 ![transform_pipeline](svg/courses/architecting/api-gateway-patterns/08_request_transformation/transform_pipeline.svg)
 
 ---
+
 ## Transforming Requests
 
 - Add headers: tracing IDs, auth context
@@ -44,6 +49,7 @@ audience:
 - Most transforms are header-level
 
 ---
+
 ## Transforming Responses
 
 - Strip internal fields before returning
@@ -53,6 +59,7 @@ audience:
 - Standardise error envelopes
 
 ---
+
 ## Header Manipulation Examples
 
 ```yaml
@@ -70,6 +77,7 @@ plugins:
 - Plugin-driven in most gateways
 
 ---
+
 ## URL Rewriting
 
 ```misc
@@ -82,6 +90,7 @@ plugins:
 - Strip-path option: include / exclude the prefix
 
 ---
+
 ## Body Transformation
 
 - More expensive than header manipulation
@@ -91,6 +100,7 @@ plugins:
 - Use sparingly
 
 ---
+
 ## Aggregation
 
 - One client request &#8594; multiple backend calls
@@ -100,6 +110,7 @@ plugins:
 - Common for slow / mobile clients
 
 ---
+
 ## Aggregation Risks
 
 - Slowest backend determines latency
@@ -109,6 +120,7 @@ plugins:
 - Gateway aggregation: keep simple
 
 ---
+
 ## GraphQL At The Gateway
 
 - A different model: one endpoint; field-level resolution
@@ -118,6 +130,7 @@ plugins:
 - Powerful; significant complexity
 
 ---
+
 ## CORS
 
 ```yaml
@@ -136,6 +149,7 @@ plugins:
 - Misconfigured CORS = mysterious frontend errors
 
 ---
+
 ## Compression
 
 - Decompress request bodies
@@ -145,6 +159,7 @@ plugins:
 - Verify it's enabled
 
 ---
+
 ## Logging Sensitive Data
 
 - Default request/response logging may include passwords, tokens
@@ -154,6 +169,7 @@ plugins:
 - Audit periodically
 
 ---
+
 ## Anti-Patterns
 
 - Business logic in transformations
@@ -163,6 +179,7 @@ plugins:
 - Transformations that hide rather than help
 
 ---
+
 ## Common Mistakes
 
 - CORS misconfigured (missing methods, headers, origins)

@@ -9,14 +9,17 @@ audience:
   - audiences:team-leads
 
 ---
+
 # Kanban
 
 ---
+
 ## Kanban Basics
 
 ![kanban_basics](svg/courses/practices/agile-and-scrum/06_kanban/kanban_basics.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Where Kanban came from
@@ -27,6 +30,7 @@ audience:
 - When to choose Kanban over Scrum
 
 ---
+
 ## Where Kanban Came From
 
 - Toyota Production System, 1940s-50s
@@ -36,6 +40,7 @@ audience:
 - Now common in software, especially for support and ops teams
 
 ---
+
 ## The Kanban Board
 
 - Columns = stages of work (Backlog, To Do, In Progress, Review, Done)
@@ -45,11 +50,13 @@ audience:
 - Physical board (whiteboard + sticky notes) or digital tool — same idea
 
 ---
+
 ## A Simple Board
 
 ![kanban_board](svg/courses/practices/agile-and-scrum/06_kanban/kanban_board.svg)
 
 ---
+
 ## Six Practices of Kanban
 
 - **Visualise** the work
@@ -61,6 +68,7 @@ audience:
 - The first three are the headline; the rest support them
 
 ---
+
 ## Work-In-Progress Limits
 
 - Each column has a max number of cards
@@ -70,6 +78,7 @@ audience:
 - Counterintuitive but powerful: less WIP = more done
 
 ---
+
 ## Why WIP Limits Work
 
 - Multitasking has a real cost: context switches, half-finished work
@@ -79,6 +88,7 @@ audience:
 - Teams that resist WIP limits usually have the worst flow
 
 ---
+
 ## Lead Time vs Cycle Time
 
 - **Lead time**: from when the customer asked to when they got it
@@ -88,6 +98,7 @@ audience:
 - Both are useful — lead time is what the customer feels
 
 ---
+
 ## Throughput
 
 - Cards completed per unit time (e.g., per week)
@@ -97,6 +108,7 @@ audience:
 - Track over many weeks to see the pattern
 
 ---
+
 ## Cumulative Flow Diagram
 
 - A stacked area chart: cards in each column, over time
@@ -106,6 +118,7 @@ audience:
 - One picture summarises a month of flow
 
 ---
+
 ## Scrum vs Kanban
 
 - Scrum: time-boxed sprints, defined roles, defined events
@@ -115,6 +128,7 @@ audience:
 - Many teams blend the two
 
 ---
+
 ## Scrumban
 
 - Take Scrum's planning and Retrospective
@@ -124,6 +138,7 @@ audience:
 - Others do the reverse — start loose, add structure
 
 ---
+
 ## When To Choose Kanban Over Scrum
 
 - Work is interrupt-driven (support, on-call, ops)
@@ -133,6 +148,7 @@ audience:
 - Stakeholders need work pulled in continuously rather than at Sprint boundaries
 
 ---
+
 ## Common Kanban Mistakes
 
 - Skipping WIP limits — turns the board into a backlog viewer

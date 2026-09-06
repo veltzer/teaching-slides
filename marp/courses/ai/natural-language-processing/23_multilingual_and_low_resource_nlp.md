@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Multilingual and Low-Resource NLP
 
 ---
+
 ## What This Chapter Covers
 
 - The shape of the world's languages and where data lives
@@ -22,6 +24,7 @@ audience:
 - Evaluation that survives across languages and writing systems
 
 ---
+
 ## Why This Matters
 
 - More than 7000 living languages; `NLP` covers a small fraction well
@@ -31,11 +34,13 @@ audience:
 - Bias, equity, and access shape what gets built
 
 ---
+
 ## The Long Tail of Languages
 
 ![language_long_tail](svg/courses/ai/natural-language-processing/23_multilingual_and_low_resource_nlp/language_long_tail.svg)
 
 ---
+
 ## High-Resource vs Low-Resource
 
 - High-resource: English, Mandarin, Spanish, Arabic, French, German
@@ -45,6 +50,7 @@ audience:
 - The right architecture depends on which side of the line you are on
 
 ---
+
 ## Why English Dominates Datasets
 
 - Web scale plus historical accidents of computing infrastructure
@@ -54,6 +60,7 @@ audience:
 - The cost falls disproportionately on speakers of underrepresented languages
 
 ---
+
 ## Tokenization Across Languages
 
 - English-trained `BPE` produces excessive splits on many other languages
@@ -63,6 +70,7 @@ audience:
 - Cost and accuracy both suffer when tokenization is mismatched
 
 ---
+
 ## Tokens per Language
 
 - 1 English word ≈ 1 to 1.3 tokens with English-tuned `BPE`
@@ -72,6 +80,7 @@ audience:
 - An overlooked fairness issue in `LLM` pricing
 
 ---
+
 ## Multilingual BERT
 
 - Trained on Wikipedia in 104 languages with shared subword vocabulary
@@ -81,6 +90,7 @@ audience:
 - Largely superseded by `XLM-R`
 
 ---
+
 ## XLM-R
 
 - Trained on `CommonCrawl` in 100 languages with much more data per language
@@ -90,11 +100,13 @@ audience:
 - A de facto baseline for non-English encoder tasks
 
 ---
+
 ## Cross-Lingual Transfer
 
 ![cross_lingual_transfer](svg/courses/ai/natural-language-processing/23_multilingual_and_low_resource_nlp/cross_lingual_transfer.svg)
 
 ---
+
 ## Zero-Shot Transfer
 
 - Fine-tune on a high-resource language, evaluate on others
@@ -104,6 +116,7 @@ audience:
 - Fails on language-specific phenomena like morphology and word order
 
 ---
+
 ## Few-Shot Transfer
 
 - Add a small number of target-language examples to the fine-tune
@@ -113,6 +126,7 @@ audience:
 - Cheaper than full localization, more reliable than zero-shot
 
 ---
+
 ## Translation as Augmentation
 
 - Translate high-resource training data into the target language
@@ -122,6 +136,7 @@ audience:
 - Can introduce translation artifacts the model latches onto
 
 ---
+
 ## Backtranslation in Low-Resource MT
 
 - Translate target-language monolingual text into the source
@@ -131,11 +146,13 @@ audience:
 - Iterating multiple rounds compounds the gains
 
 ---
+
 ## Backtranslation Loop
 
 ![backtranslation_loop](svg/courses/ai/natural-language-processing/23_multilingual_and_low_resource_nlp/backtranslation_loop.svg)
 
 ---
+
 ## Multilingual NMT
 
 - One model translates between many language pairs
@@ -145,6 +162,7 @@ audience:
 - Per-direction fine-tuning often improves a chosen low-resource pair
 
 ---
+
 ## NLLB and the African Languages Push
 
 - `No Language Left Behind` targeted 200+ languages including many African ones
@@ -154,6 +172,7 @@ audience:
 - Still a long tail of completely unserved languages
 
 ---
+
 ## Massively Multilingual LLMs
 
 - Modern `LLMs` train on data from many languages without explicit balancing
@@ -163,6 +182,7 @@ audience:
 - Quality varies wildly by language and task — always test on your target
 
 ---
+
 ## Code-Switching
 
 - Speakers mix two or more languages within a single utterance or sentence
@@ -172,6 +192,7 @@ audience:
 - Annotation is hard because conventions for tagging code-switched data vary
 
 ---
+
 ## Morphologically Rich Languages
 
 - Finnish, Turkish, Arabic, Hindi, Tamil have rich inflection and agglutination
@@ -181,6 +202,7 @@ audience:
 - A reminder that "natural language" is not a homogeneous thing
 
 ---
+
 ## Writing Systems and Scripts
 
 - Latin, Cyrillic, Greek, Devanagari, Arabic, Hangul, CJK ideographs
@@ -190,6 +212,7 @@ audience:
 - Modern Unicode handling is necessary but not sufficient
 
 ---
+
 ## Low-Resource Data Sources
 
 - Religious texts, especially Bible translations, exist in thousands of languages
@@ -199,6 +222,7 @@ audience:
 - Each source has biases that show up in trained models
 
 ---
+
 ## Weak Supervision
 
 - Use heuristics to label data when human annotators are scarce
@@ -208,6 +232,7 @@ audience:
 - A practical bridge for low-resource languages
 
 ---
+
 ## Active Learning
 
 - Use a model's uncertainty to choose what to annotate next
@@ -217,6 +242,7 @@ audience:
 - Requires a working model already to bootstrap
 
 ---
+
 ## Data Augmentation Techniques
 
 - Token replacement using language-specific lexicons
@@ -226,6 +252,7 @@ audience:
 - Augmentation needs to be tested per language — what works in English often does not transfer
 
 ---
+
 ## Multilingual Evaluation
 
 - `XNLI`, `XCOPA`, `XQuAD` benchmark cross-lingual `NLU`
@@ -235,6 +262,7 @@ audience:
 - Average scores hide enormous per-language variance
 
 ---
+
 ## Bias in Multilingual Systems
 
 - Translation systems sometimes mistranslate gender across languages
@@ -244,6 +272,7 @@ audience:
 - Auditing requires speakers of each target language, not just developers
 
 ---
+
 ## Practical Multilingual Engineering
 
 - Test on real target-language data, not translated benchmarks
@@ -253,6 +282,7 @@ audience:
 - Plan for ongoing data collection, not a one-shot release
 
 ---
+
 ## Common Production Pitfalls
 
 - Shipping English-tuned models to non-English markets without retesting
@@ -262,6 +292,7 @@ audience:
 - Ignoring code-switching in markets where it is the norm
 
 ---
+
 ## Anti-Patterns
 
 - "Multilingual" features that only support five European languages
@@ -271,6 +302,7 @@ audience:
 - Treating low-resource languages as low-priority rather than high-leverage
 
 ---
+
 ## Summary
 
 - The world's languages are unevenly served by `NLP` data and tools

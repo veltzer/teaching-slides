@@ -11,9 +11,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Attention and Transformers
 
 ---
+
 ## What This Chapter Covers
 
 - Attention as the answer to the recurrent bottleneck
@@ -23,6 +25,7 @@ audience:
 - Pre-training objectives and what scaling laws tell us about them
 
 ---
+
 ## The Bottleneck Problem
 
 - Sequence-to-sequence with `RNN` encoders compresses the entire input into one fixed vector
@@ -31,11 +34,13 @@ audience:
 - Bahdanau and colleagues asked: what if the decoder could look back directly?
 
 ---
+
 ## From Bottleneck to Soft Alignment
 
 ![attention_evolution](svg/courses/ai/natural-language-processing/08_attention_and_transformers/attention_evolution.svg)
 
 ---
+
 ## Bahdanau Attention
 
 - At each decoder step, score every encoder hidden state against the decoder state
@@ -44,6 +49,7 @@ audience:
 - The context vector is the weighted average of encoder states under that distribution
 
 ---
+
 ## Luong Attention
 
 - A leaner variant that arrived shortly after Bahdanau
@@ -52,6 +58,7 @@ audience:
 - Faster and simpler; sets the stage for the dot-product attention used everywhere today
 
 ---
+
 ## Scaled Dot-Product Attention
 
 - Score = query dot key, then divide by square root of the key dimension
@@ -60,6 +67,7 @@ audience:
 - The scaling factor keeps the `softmax` from saturating when dimensions grow
 
 ---
+
 ## The Attention Equation
 
 ```python
@@ -76,6 +84,7 @@ def attention(Q, K, V, mask=None):
 - Mask future positions for causal models, padding for batched inputs
 
 ---
+
 ## Self-Attention
 
 - Queries, keys, and values all come from the same sequence
@@ -84,11 +93,13 @@ def attention(Q, K, V, mask=None):
 - No recurrence, no convolutions — just one global matching step
 
 ---
+
 ## Queries, Keys, and Values
 
 ![qkv_intuition](svg/courses/ai/natural-language-processing/08_attention_and_transformers/qkv_intuition.svg)
 
 ---
+
 ## Why Self-Attention Captures Long Range
 
 - Every position can attend to every other position in a single layer
@@ -97,6 +108,7 @@ def attention(Q, K, V, mask=None):
 - Long-range dependencies stop being a structural problem and become a learning problem
 
 ---
+
 ## Computational Complexity
 
 - Attention is `O(n squared d)` in time and memory for sequence length `n`
@@ -105,6 +117,7 @@ def attention(Q, K, V, mask=None):
 - The quadratic term motivates sparse, linear, and chunked attention variants
 
 ---
+
 ## Why Three Projections
 
 - Queries, keys, and values are all linear projections of the same input
@@ -113,6 +126,7 @@ def attention(Q, K, V, mask=None):
 - The projections are where most of the parameters of an attention layer live
 
 ---
+
 ## Multi-Head Attention
 
 - Run several attention computations in parallel on different projected subspaces
@@ -121,11 +135,13 @@ def attention(Q, K, V, mask=None):
 - More heads, smaller per-head dimension; same total parameter budget
 
 ---
+
 ## Multi-Head Architecture
 
 ![multi_head_attention](svg/courses/ai/natural-language-processing/08_attention_and_transformers/multi_head_attention.svg)
 
 ---
+
 ## Multi-Head in Code
 
 ```python
@@ -150,6 +166,7 @@ class MultiHeadAttention(nn.Module):
 - The reshape splits the model dimension across heads
 
 ---
+
 ## What Heads Learn
 
 - Some heads track local syntax — adjacent words, dependency arcs
@@ -158,6 +175,7 @@ class MultiHeadAttention(nn.Module):
 - Most heads are individually useful; some can be pruned with no loss
 
 ---
+
 ## The Transformer Block
 
 - Multi-head self-attention followed by a position-wise feed-forward network
@@ -166,6 +184,7 @@ class MultiHeadAttention(nn.Module):
 - The block is repeated `L` times — depth comes from stacking, not from recurrence
 
 ---
+
 ## Encoder, Decoder, and Both
 
 - Encoder-only: `BERT` and friends — bidirectional self-attention, used for understanding
@@ -174,6 +193,7 @@ class MultiHeadAttention(nn.Module):
 - Same building block; different masking and connection patterns
 
 ---
+
 ## Cross-Attention
 
 - In encoder-decoder models, decoder layers attend to encoder outputs
@@ -182,6 +202,7 @@ class MultiHeadAttention(nn.Module):
 - Functionally, it is the modern replacement for Bahdanau-style alignment
 
 ---
+
 ## Positional Encoding
 
 - Self-attention is permutation-equivariant — it sees a set, not a sequence
@@ -190,11 +211,13 @@ class MultiHeadAttention(nn.Module):
 - Each makes different trade-offs between simplicity, length generalization, and inductive bias
 
 ---
+
 ## Positional Encoding Variants
 
 ![positional_encodings](svg/courses/ai/natural-language-processing/08_attention_and_transformers/positional_encodings.svg)
 
 ---
+
 ## Sinusoidal Positions
 
 - The original transformer used fixed sine and cosine functions of different frequencies
@@ -203,6 +226,7 @@ class MultiHeadAttention(nn.Module):
 - Generalizes (somewhat) to lengths longer than seen in training
 
 ---
+
 ## Learned Positions
 
 - Just an embedding table indexed by position
@@ -211,6 +235,7 @@ class MultiHeadAttention(nn.Module):
 - Used by `BERT` and `GPT-2`
 
 ---
+
 ## Rotary Positions
 
 - Rotate query and key vectors by an angle that depends on position
@@ -219,6 +244,7 @@ class MultiHeadAttention(nn.Module):
 - The default in `LLaMA`, `Mistral`, and most modern open models
 
 ---
+
 ## Layer Normalization Placement
 
 - Post-norm: normalize after the residual addition — original transformer
@@ -227,6 +253,7 @@ class MultiHeadAttention(nn.Module):
 - A small change with outsized effects on training stability
 
 ---
+
 ## Residual Connections
 
 - Each sublayer adds its output to its input rather than replacing it
@@ -235,6 +262,7 @@ class MultiHeadAttention(nn.Module):
 - The "residual stream" is now a useful interpretability frame as well
 
 ---
+
 ## A Minimal Transformer Block
 
 ```python
@@ -259,6 +287,7 @@ class Block(nn.Module):
 - Pre-norm style; everything else is composed of these blocks
 
 ---
+
 ## Pre-Training Objectives Overview
 
 - The architecture is fixed; the training objective shapes what the model becomes
@@ -267,6 +296,7 @@ class Block(nn.Module):
 - Choosing the objective is choosing a prior over what the model learns
 
 ---
+
 ## Masked Language Modeling
 
 - Used by `BERT`: mask 15 percent of tokens, predict them from both sides
@@ -275,6 +305,7 @@ class Block(nn.Module):
 - The masking ratio and strategy are tunable knobs
 
 ---
+
 ## Causal Language Modeling
 
 - Used by `GPT`-style decoders: predict each token from its left context
@@ -283,6 +314,7 @@ class Block(nn.Module):
 - The dominant pre-training objective for current chat and instruction models
 
 ---
+
 ## Span Corruption
 
 - Used by `T5`: replace contiguous spans with sentinel tokens, then generate the spans
@@ -291,6 +323,7 @@ class Block(nn.Module):
 - Strong on conditional generation tasks
 
 ---
+
 ## Denoising and Contrastive
 
 - Denoising: reconstruct a clean sequence from a noised version (deletion, permutation, infilling)
@@ -299,6 +332,7 @@ class Block(nn.Module):
 - Sentence and document embeddings are typically learned with contrastive losses
 
 ---
+
 ## Choosing an Objective
 
 - Generation-first: causal LM
@@ -307,6 +341,7 @@ class Block(nn.Module):
 - Embeddings and retrieval: contrastive on top of an encoder
 
 ---
+
 ## Scaling Laws
 
 - Loss falls as a power law in compute, data, and parameters — within ranges studied
@@ -315,6 +350,7 @@ class Block(nn.Module):
 - Predictability lets us budget large training runs before launching them
 
 ---
+
 ## Compute, Data, and Parameters
 
 - For a fixed compute budget, there is an optimal pair of model size and tokens trained
@@ -323,6 +359,7 @@ class Block(nn.Module):
 - Cheap inference favors smaller-but-longer-trained models on the same budget
 
 ---
+
 ## Emergent Capabilities
 
 - Some abilities (arithmetic, multi-step reasoning, instruction following) appear abruptly with scale
@@ -331,6 +368,7 @@ class Block(nn.Module):
 - Either way, capabilities at one scale do not always extrapolate to the next
 
 ---
+
 ## Attention Anti-Patterns
 
 - Forgetting the causal mask in a causal model — the model cheats and looks ahead
@@ -339,6 +377,7 @@ class Block(nn.Module):
 - Treating quadratic memory as free — long contexts are expensive
 
 ---
+
 ## Production Considerations
 
 - `KV` caching during generation turns each step from `O(n)` into `O(1)` per token
@@ -347,6 +386,7 @@ class Block(nn.Module):
 - Memory, not flops, is usually the binding constraint at deployment
 
 ---
+
 ## When Not To Use a Transformer
 
 - Very short sequences with strong locality — a small `CNN` may suffice
@@ -355,6 +395,7 @@ class Block(nn.Module):
 - The transformer is a default, not a law
 
 ---
+
 ## Summary
 
 - Attention turns a fixed bottleneck into soft, learned alignment over the whole sequence

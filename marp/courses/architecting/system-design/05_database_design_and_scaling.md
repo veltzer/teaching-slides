@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Database Design and Scaling
 
 ---
+
 ## Scaling Paths
 
 ![scaling_paths](svg/courses/architecting/system-design/05_database_design_and_scaling/scaling_paths.svg)
 
 ---
+
 ## Sharding Styles
 
 ![sharding_styles](svg/courses/architecting/system-design/05_database_design_and_scaling/sharding_styles.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - SQL vs NoSQL choice
@@ -32,6 +36,7 @@ audience:
 - Database connection pooling
 
 ---
+
 ## SQL vs NoSQL
 
 - SQL: relational, ACID, schema-on-write, joins
@@ -41,6 +46,7 @@ audience:
 - Most apps: SQL is enough
 
 ---
+
 ## Normalisation
 
 - Reduce redundancy
@@ -49,6 +55,7 @@ audience:
 - Default for transactional systems
 
 ---
+
 ## Denormalisation
 
 - Duplicate data for read speed
@@ -57,6 +64,7 @@ audience:
 - Modern: often denormalise for the read path
 
 ---
+
 ## Indexes
 
 - Trade write speed for read speed
@@ -66,6 +74,7 @@ audience:
 - Composite indexes for compound queries
 
 ---
+
 ## Index Mistakes
 
 - Indexing every column (slow writes)
@@ -74,6 +83,7 @@ audience:
 - Missing index on frequently-queried column
 
 ---
+
 ## Read Replicas
 
 - Followers replicate from leader
@@ -83,6 +93,7 @@ audience:
 - Standard in cloud DBs
 
 ---
+
 ## Sharding
 
 - Split data across nodes
@@ -92,6 +103,7 @@ audience:
 - Consider only when single-node hits limits
 
 ---
+
 ## Connection Pooling
 
 - DB connections expensive
@@ -100,6 +112,7 @@ audience:
 - Avoid: thousands of clients connecting directly
 
 ---
+
 ## Caching In Front Of DB
 
 - Redis / Memcached
@@ -109,6 +122,7 @@ audience:
 - Often: 90%+ hit ratio possible
 
 ---
+
 ## Vertical vs Horizontal Scaling
 
 - Vertical: bigger machine
@@ -118,6 +132,7 @@ audience:
 - Most apps: vertical first; horizontal when needed
 
 ---
+
 ## ACID vs BASE
 
 - **ACID**: Atomicity, Consistency, Isolation, Durability (SQL)
@@ -126,6 +141,7 @@ audience:
 - Pick by requirements, not by hype
 
 ---
+
 ## Choosing A DB
 
 - Transactional, complex queries: PostgreSQL / MySQL
@@ -136,6 +152,7 @@ audience:
 - Often: multiple, each for its strength
 
 ---
+
 ## Common DB Scaling Mistakes
 
 - Sharding before needing it

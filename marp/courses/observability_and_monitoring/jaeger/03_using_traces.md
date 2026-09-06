@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Using Traces
 
 ---
+
 ## What This Chapter Covers
 
 - The trace UI
@@ -20,6 +22,7 @@ audience:
 - Debugging workflows
 
 ---
+
 ## Trace UI
 
 - Tree of spans
@@ -28,6 +31,7 @@ audience:
 - Click for details
 
 ---
+
 ## Reading A Trace
 
 - Long bars are slow operations
@@ -36,6 +40,7 @@ audience:
 - Find the critical path
 
 ---
+
 ## Searching
 
 - By service
@@ -44,6 +49,7 @@ audience:
 - By error
 
 ---
+
 ## Time Range
 
 - Default last hour
@@ -52,6 +58,7 @@ audience:
 - Save time ranges in URLs
 
 ---
+
 ## Comparing Traces
 
 - Side by side
@@ -60,6 +67,7 @@ audience:
 - Useful for regressions
 
 ---
+
 ## Service Map
 
 - Auto-built from traces
@@ -68,6 +76,7 @@ audience:
 - Useful for new joiners
 
 ---
+
 ## Workflow For Latency Bug
 
 - Filter by slow traces
@@ -76,11 +85,13 @@ audience:
 - Read its logs
 
 ---
+
 ## Diagnose Workflow
 
 ![diagnose_workflow](svg/courses/observability_and_monitoring/jaeger/03_using_traces/diagnose_workflow.svg)
 
 ---
+
 ## Workflow For Errors
 
 - Filter by error tag
@@ -89,6 +100,7 @@ audience:
 - Cross-reference logs system
 
 ---
+
 ## Linking To Logs
 
 - Correlate by trace ID
@@ -97,11 +109,13 @@ audience:
 - Saves context-switching
 
 ---
+
 ## Three Pillars
 
 ![trace_to_logs](svg/courses/observability_and_monitoring/jaeger/03_using_traces/trace_to_logs.svg)
 
 ---
+
 ## Linking To Metrics
 
 - Tag-based panels
@@ -110,6 +124,7 @@ audience:
 - Connected workflow
 
 ---
+
 ## Sampling Surprises
 
 - Some related calls missing
@@ -118,6 +133,7 @@ audience:
 - Verify sampler config
 
 ---
+
 ## Retention
 
 - Bounded by storage
@@ -126,6 +142,7 @@ audience:
 - Tune to budget
 
 ---
+
 ## Permissions
 
 - Restrict who sees traces
@@ -134,6 +151,7 @@ audience:
 - Train teams
 
 ---
+
 ## Common Trace Use Mistakes
 
 - Searching across years

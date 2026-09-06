@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # DNS Record Types
 
 ---
+
 ## What This Chapter Covers
 
 - Address records: A, AAAA
@@ -21,6 +23,7 @@ audience:
 - Modern records: HTTPS, SVCB, TLSA
 
 ---
+
 ## A and AAAA
 
 - A — IPv4 address
@@ -30,21 +33,25 @@ audience:
 - Order may vary per query (round-robin)
 
 ---
+
 ## Common Record Types Visualized
 
 ![record_types](svg/courses/networking/dns-deep-dive/02_record_types/record_types.svg)
 
 ---
+
 ## CNAME And Aliases
 
 ![cname_aname](svg/courses/networking/dns-deep-dive/02_record_types/cname_aname.svg)
 
 ---
+
 ## Specialised Records
 
 ![special_records](svg/courses/networking/dns-deep-dive/02_record_types/special_records.svg)
 
 ---
+
 ## CNAME
 
 - Canonical name — alias one domain to another
@@ -54,6 +61,7 @@ audience:
 - Cannot apply at the zone apex (without ALIAS)
 
 ---
+
 ## CNAME Limitations
 
 - The "no apex CNAME" rule is real and important
@@ -63,6 +71,7 @@ audience:
 - Behave like A/AAAA but pointing to a name
 
 ---
+
 ## MX Records
 
 - Mail Exchange — where email for this domain goes
@@ -72,6 +81,7 @@ audience:
 - Senders try lowest priority first
 
 ---
+
 ## NS Records
 
 - Nameserver — which servers are authoritative for the zone
@@ -81,6 +91,7 @@ audience:
 - Mismatches between parent/child cause delegation issues
 
 ---
+
 ## TXT Records
 
 - Arbitrary text — many uses
@@ -91,6 +102,7 @@ audience:
 - Maximum 255 chars per string; multiple strings allowed
 
 ---
+
 ## SPF, DKIM, DMARC
 
 - SPF — which servers may send email for the domain
@@ -100,6 +112,7 @@ audience:
 - The standard email-deliverability trinity
 
 ---
+
 ## SRV Records
 
 - Service discovery
@@ -109,6 +122,7 @@ audience:
 - Underused for general service discovery
 
 ---
+
 ## PTR Records
 
 - Reverse DNS — IP to name
@@ -118,6 +132,7 @@ audience:
 - Used by some logs and access controls
 
 ---
+
 ## SOA Records
 
 - Start of Authority — zone metadata
@@ -127,6 +142,7 @@ audience:
 - Minimum is the negative caching TTL
 
 ---
+
 ## SOA Example
 
 ```output
@@ -143,6 +159,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - Critical for secondary servers to track changes
 
 ---
+
 ## CAA Records
 
 - Certificate Authority Authorization
@@ -152,6 +169,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - Strong defense against fraudulent certs
 
 ---
+
 ## NS Apex vs Subdomain
 
 - NS at the apex: who runs the whole zone
@@ -161,6 +179,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - Useful for separating dev/prod or team-owned subdomains
 
 ---
+
 ## HTTPS and SVCB
 
 - Newer record types (RFC 9460)
@@ -170,6 +189,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - Browsers and Cloudflare adopting actively
 
 ---
+
 ## TLSA Records
 
 - DANE — TLS keys via DNS
@@ -179,6 +199,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - Enterprise and security-conscious deployments
 
 ---
+
 ## DS and DNSKEY
 
 - DS — Delegation Signer (in parent zone)
@@ -188,6 +209,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - Mention here for record type completeness
 
 ---
+
 ## Wildcards
 
 - `*.example.com A 1.2.3.4`
@@ -197,6 +219,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - More-specific records win over wildcards
 
 ---
+
 ## When to Use Which
 
 - A/AAAA — direct addresses, leaf records
@@ -207,6 +230,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - CAA — control cert issuance
 
 ---
+
 ## Common Mistakes
 
 - CNAME at the zone apex — breaks
@@ -216,6 +240,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - Forgetting AAAA when adding IPv6 support
 
 ---
+
 ## TTL by Record Type
 
 - High traffic A records: short TTL (60-300s)
@@ -225,6 +250,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - Match TTL to change frequency
 
 ---
+
 ## Tools for Querying Each
 
 - `dig example.com A` — A record only
@@ -234,6 +260,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - `dig _dmarc.example.com TXT` — DMARC
 
 ---
+
 ## Summary
 
 - Each record type has a specific purpose; learn the common ones

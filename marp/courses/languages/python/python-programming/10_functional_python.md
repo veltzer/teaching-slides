@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Functional Python
 
 ---
+
 ## What is Functional Programming?
 - Programming paradigm that treats computation as evaluation of functions
 - Key principles:
@@ -20,6 +22,7 @@ audience:
 - Python supports functional style alongside OOP
 
 ---
+
 ## Iterables
 - An iterable is any object you can loop over
 - Examples: `list`, `tuple`, `str`, `dict`, `set`, `range`, `file`
@@ -34,6 +37,7 @@ for x in range(5): pass
 ```
 
 ---
+
 ## The Iterator Protocol
 - An **iterable** has an `__iter__` method that returns an **iterator**
 - An **iterator** has a `__next__` method that returns values one at a time
@@ -50,6 +54,7 @@ print(next(iterator))  # 3
 ```
 
 ---
+
 ## How `for` Loops Work Internally
 
 ```python
@@ -68,6 +73,7 @@ while True:
 ```
 
 ---
+
 ## Creating Custom Iterators
 
 ```python
@@ -90,6 +96,7 @@ for n in Countdown(5):
 ```
 
 ---
+
 ## Iterators are Lazy
 - Iterators produce values on demand
 - They do not store all values in memory
@@ -110,6 +117,7 @@ for n in numbers:
 ```
 
 ---
+
 ## Generators - Introduction
 - A simpler way to create iterators
 - Use `yield` instead of `return`
@@ -127,6 +135,7 @@ for x in countdown(5):
 ```
 
 ---
+
 ## Generator vs Regular Function
 
 ```python
@@ -148,6 +157,7 @@ for x in get_squares_gen(5):
 ```
 
 ---
+
 ## Generator Memory Efficiency
 
 ```python
@@ -163,6 +173,7 @@ print(sys.getsizeof(squares_gen))   # ~200 bytes
 ```
 
 ---
+
 ## Generator Functions - Multiple Yields
 
 ```python
@@ -180,6 +191,7 @@ for _ in range(10):
 ```
 
 ---
+
 ## `yield` from
 
 ```python
@@ -198,6 +210,7 @@ print(list(flatten(data)))
 - `yield from` delegates to a sub-generator
 
 ---
+
 ## Generator Expressions
 - Like list comprehensions but lazy
 - Use parentheses instead of square brackets
@@ -218,6 +231,7 @@ print(total)  # 285
 ```
 
 ---
+
 ## List Comprehensions
 
 ```python
@@ -236,6 +250,7 @@ print(upper)  # ['HELLO', 'WORLD']
 ```
 
 ---
+
 ## List Comprehension vs Loop
 
 ```python
@@ -254,6 +269,7 @@ print(result)  # [0, 4, 16, 36, 64]
 - More readable for simple transformations
 
 ---
+
 ## Nested List Comprehensions
 
 ```python
@@ -269,6 +285,7 @@ print(matrix)
 ```
 
 ---
+
 ## Dictionary Comprehensions
 
 ```python
@@ -288,6 +305,7 @@ print(filtered)  # {'c': 3, 'd': 4}
 ```
 
 ---
+
 ## Set Comprehensions
 
 ```python
@@ -302,6 +320,7 @@ print(unique)  # {'hello', 'world'}
 ```
 
 ---
+
 ## Comprehension with Walrus Operator
 
 ```python
@@ -319,6 +338,7 @@ print(roots)  # [4.0, 5.0]
 ```
 
 ---
+
 ## When NOT to Use Comprehensions
 - When the logic is complex (use a loop instead)
 - When you do not need the result (use a loop for side effects)
@@ -345,6 +365,7 @@ for x in range(10):
 ```
 
 ---
+
 ## The `map()` Function
 
 ```python
@@ -363,6 +384,7 @@ print(sums)  # [11, 22, 33]
 ```
 
 ---
+
 ## The `filter()` Function
 
 ```python
@@ -382,6 +404,7 @@ print(truthy)  # [1, 'hello', 42, [1]]
 ```
 
 ---
+
 ## The `reduce()` Function
 
 ```python
@@ -403,11 +426,13 @@ print(maximum)  # 5
 ```
 
 ---
+
 ## `reduce()` Visualization
 
 ![reduce_visualization](svg/courses/languages/python/python-programming/10_functional_python/reduce_visualization.svg)
 
 ---
+
 ## `any()` and `all()`
 
 ```python
@@ -426,6 +451,7 @@ print(any(x > 0 for x in numbers))  # Stops at first True
 ```
 
 ---
+
 ## `sorted()` with Key Functions
 
 ```python
@@ -445,6 +471,7 @@ by_grade = sorted(students, key=itemgetter("grade"))
 ```
 
 ---
+
 ## `itertools` - Infinite Iterators
 
 ```python
@@ -467,6 +494,7 @@ print(threes)  # [3, 3, 3, 3, 3]
 ```
 
 ---
+
 ## `itertools` - Combinatoric
 
 ```python
@@ -486,6 +514,7 @@ print(list(product([0, 1], repeat=3)))
 ```
 
 ---
+
 ## `itertools` - Chain and Groupby
 
 ```python
@@ -504,6 +533,7 @@ for key, group in groupby(data, key=lambda x: x[0]):
 ```
 
 ---
+
 ## `itertools` - Slicing Iterators
 
 ```python
@@ -525,6 +555,7 @@ print(result)  # [7, 2, 4, 6]
 ```
 
 ---
+
 ## `itertools` - Accumulate
 
 ```python
@@ -547,6 +578,7 @@ print(list(accumulate([3, 1, 4, 1, 5], max)))
 ```
 
 ---
+
 ## `functools.partial`
 
 ```python
@@ -568,6 +600,7 @@ print(doubled)  # [2, 4, 6, 8, 10]
 ```
 
 ---
+
 ## `functools.lru_cache`
 
 ```python
@@ -590,6 +623,7 @@ fibonacci.cache_clear()
 ```
 
 ---
+
 ## `operator` Module
 
 ```python
@@ -608,6 +642,7 @@ print(by_grade)
 ```
 
 ---
+
 ## Generator Pipelines
 
 ```python
@@ -632,6 +667,7 @@ result = to_upper(filtered)
 ```
 
 ---
+
 ## Chaining Generators
 
 ```python
@@ -655,6 +691,7 @@ print(result)  # [1, 4, 9, 16, 25]
 ```
 
 ---
+
 ## Pure Functions
 - Same input always produces same output
 - No side effects (no modifying external state)
@@ -673,6 +710,7 @@ def add_to_total(n):
 ```
 
 ---
+
 ## Immutability Patterns
 
 ```python
@@ -698,6 +736,7 @@ class Config:
 ```
 
 ---
+
 ## Summary
 - Iterators produce values lazily using `__next__`
 - Generators simplify iterator creation with `yield`

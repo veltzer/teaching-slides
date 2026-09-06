@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # REST API Design
 
 ---
+
 ## What REST Is
 
 - Roy Fielding's 2000 dissertation
@@ -19,6 +21,7 @@ audience:
 - Stateless, cacheable, uniform interface, layered
 
 ---
+
 ## What REST Is Not
 
 - Not the same as "HTTP API"
@@ -27,11 +30,13 @@ audience:
 - Not the only good API style — gRPC and GraphQL are also valid
 
 ---
+
 ## REST in One Picture
 
 ![rest_principles](svg/courses/architecting/api-design-best-practices/02_rest_api_design/rest_principles.svg)
 
 ---
+
 ## Resources
 
 - A resource is anything important enough to name and refer to
@@ -40,6 +45,7 @@ audience:
 - The resource is the noun; the method is the verb
 
 ---
+
 ## Resource-Oriented Design
 
 - Identify the nouns in the domain
@@ -48,6 +54,7 @@ audience:
 - Use IDs for individual resources: `/users/42`
 
 ---
+
 ## HTTP Methods
 
 | Method | Purpose | Idempotent | Safe |
@@ -62,11 +69,13 @@ audience:
 - Use them for what they mean
 
 ---
+
 ## HTTP Method Semantics
 
 ![http_methods](svg/courses/architecting/api-design-best-practices/02_rest_api_design/http_methods.svg)
 
 ---
+
 ## Method Semantics in Practice
 
 - `GET /users/42` — fetch user 42
@@ -76,6 +85,7 @@ audience:
 - `DELETE /users/42` — remove user 42
 
 ---
+
 ## HTTP Status Codes
 
 - **2xx success**: 200 OK, 201 Created, 204 No Content
@@ -84,11 +94,13 @@ audience:
 - **5xx server error**: 500 Internal Error, 502 Bad Gateway, 503 Service Unavailable
 
 ---
+
 ## Status Code Buckets
 
 ![status_code_buckets](svg/courses/architecting/api-design-best-practices/02_rest_api_design/status_code_buckets.svg)
 
 ---
+
 ## Status Code Discipline
 
 - Use the right code; don't return 200 with `{"success": false}`
@@ -97,6 +109,7 @@ audience:
 - 409 vs 422: 409 = state conflict; 422 = the request is malformed
 
 ---
+
 ## HATEOAS
 
 - Hypermedia as the Engine of Application State
@@ -105,6 +118,7 @@ audience:
 - Powerful in theory; rare in practice; usually overkill
 
 ---
+
 ## Why HATEOAS Is Rare
 
 - Most clients are tightly coupled to specific endpoints anyway
@@ -113,6 +127,7 @@ audience:
 - Skip HATEOAS unless you have a specific reason to use it
 
 ---
+
 ## Content Negotiation
 
 - The client says what format it accepts (`Accept: application/json`)
@@ -121,6 +136,7 @@ audience:
 - In practice: JSON is the default; supporting more is rarely necessary
 
 ---
+
 ## RESTful Examples
 
 ```http
@@ -137,6 +153,7 @@ POST   /orders/42/items        # add item
 - Predictable; readable; consistent
 
 ---
+
 ## Anti-Patterns
 
 - `POST /getUserById?id=42` — verbs in URLs
@@ -145,6 +162,7 @@ POST   /orders/42/items        # add item
 - Status code 200 with `{"error": "not found"}` — should be 404
 
 ---
+
 ## Summary
 
 - REST = resources + HTTP methods + status codes

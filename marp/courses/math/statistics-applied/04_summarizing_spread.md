@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Summarizing Data: Spread and Shape
 
 ---
+
 ## What This Chapter Covers
 
 - Range, IQR, variance, standard deviation
@@ -21,11 +23,13 @@ audience:
 - Coefficient of variation
 
 ---
+
 ## Same Mean, Different Spread
 
 ![same_mean_different_spread](svg/courses/math/statistics-applied/04_summarizing_spread/same_mean_different_spread.svg)
 
 ---
+
 ## Center Is Not Enough
 
 - "Average wait time: 5 minutes" — every time, or sometimes 1 and sometimes 20?
@@ -35,6 +39,7 @@ audience:
 - Always report center *and* spread together
 
 ---
+
 ## Range And IQR
 
 - **Range**: max &minus; min — simple, but driven entirely by the two extremes
@@ -44,6 +49,7 @@ audience:
 - IQR is the basis of the box-plot whiskers
 
 ---
+
 ## Variance And Standard Deviation
 
 - **Variance** s&sup2;: average of squared deviations from the mean
@@ -53,6 +59,7 @@ audience:
 - SD is *the* spread measure for roughly-normal data
 
 ---
+
 ## n vs n&minus;1
 
 - Sample variance divides by **n&minus;1**, not n (Bessel's correction)
@@ -62,6 +69,7 @@ audience:
 - For real samples, use n&minus;1 — pandas does this by default
 
 ---
+
 ## Percentiles And Quartiles
 
 - The **p-th percentile**: the value below which p% of the data falls
@@ -71,6 +79,7 @@ audience:
 - A mean latency of 100ms can hide a p99 of 4 seconds
 
 ---
+
 ## Five-Number Summary And Box Plots
 
 - Min, Q1, median, Q3, max — a compact shape sketch
@@ -80,11 +89,13 @@ audience:
 - One box plot per group beats a table of means
 
 ---
+
 ## Anatomy of a Box Plot
 
 ![boxplot_anatomy](svg/courses/math/statistics-applied/04_summarizing_spread/boxplot_anatomy.svg)
 
 ---
+
 ## Shape: Skewness And Kurtosis
 
 - **Skewness**: asymmetry — positive = long right tail, negative = long left tail
@@ -94,6 +105,7 @@ audience:
 - A histogram tells you most of this faster than the statistics do
 
 ---
+
 ## Computing Spread
 
 ```python
@@ -107,6 +119,7 @@ print("CV    :", np.std(x, ddof=1) / x.mean())  # unitless spread
 ```
 
 ---
+
 ## Common Mistakes
 
 - Reporting a mean with no SD or IQR beside it

@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Document Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Indexing documents with PUT and POST
@@ -21,6 +23,7 @@ audience:
 - DBA guidance for throughput and durability trade-offs
 
 ---
+
 ## Indexing a Single Document
 
 - `PUT` with an explicit ID is idempotent for that ID
@@ -38,6 +41,7 @@ POST /products/_doc
 - Use `op_type=create` to fail if the document already exists
 
 ---
+
 ## Create vs Index Semantics
 
 - `PUT /idx/_doc/1` overwrites any existing document with that ID
@@ -52,6 +56,7 @@ PUT /products/_create/1
 - Every write bumps `_version` and the sequence number even on overwrite
 
 ---
+
 ## Bulk Operations and NDJSON
 
 - The `_bulk` API batches many index/create/update/delete actions in one request
@@ -68,6 +73,7 @@ POST /_bulk
 ```
 
 ---
+
 ## Sizing Bulk Batches
 
 - Bulk is the single biggest throughput lever for ingest
@@ -84,6 +90,7 @@ POST /_bulk
 - A 429 means `es_rejected_execution` — back off and retry that item
 
 ---
+
 ## Partial Updates with _update
 
 - `_update` modifies a document without resending the whole source
@@ -98,6 +105,7 @@ POST /products/_update/1
 - Use `detect_noop` (default on) to skip writes when nothing changed
 
 ---
+
 ## Scripted Updates
 
 - Scripts run server-side via Painless, avoiding a read round-trip
@@ -118,6 +126,7 @@ POST /products/_update/1
 - Scripts cost CPU; avoid heavy scripted updates in hot ingest paths
 
 ---
+
 ## Delete Operations
 
 - Delete by ID is a normal write that creates a tombstone
@@ -135,6 +144,7 @@ POST /products/_delete_by_query
 ```
 
 ---
+
 ## Delete and Update by Query Operations
 
 - Both run as background tasks over a snapshot of matching docs
@@ -152,6 +162,7 @@ POST /products/_update_by_query?slices=auto&wait_for_completion=false
 - Version conflicts mid-run can abort the job; set `conflicts=proceed` to skip them
 
 ---
+
 ## Document Versioning
 
 - Every document carries an internal `_version` that increments on each write
@@ -167,6 +178,7 @@ PUT /products/_doc/1?version=5&version_type=external
 - External versioning is useful when an external system is the source of truth
 
 ---
+
 ## Optimistic Concurrency Control
 
 - Read a document, then write back conditionally on its `_seq_no` and `_primary_term`
@@ -186,6 +198,7 @@ POST /products/_update/1?retry_on_conflict=3
 ```
 
 ---
+
 ## Routing
 
 - By default a document's shard is `hash(_id) % number_of_primary_shards`
@@ -201,6 +214,7 @@ PUT /orders/_doc/1?routing=customer42
 - You must supply the same routing value on get, update, and delete
 
 ---
+
 ## Search Preference
 
 - `preference` controls which shard copies serve a search
@@ -216,6 +230,7 @@ GET /products/_search?preference=user_session_7
 - Avoid forcing `_primary`; it removes replica read scaling
 
 ---
+
 ## Refresh: Making Writes Searchable
 
 - Writes are not searchable until a refresh creates a new segment
@@ -231,6 +246,7 @@ PUT /products/_settings
 - During heavy bulk load, raise or disable the interval, then restore it
 
 ---
+
 ## Flush and the Translog
 
 - The translog is a per-shard write-ahead log for durability between Lucene commits
@@ -245,6 +261,7 @@ POST /products/_flush
 - Recovery replays the translog, so a large translog slows restart
 
 ---
+
 ## Translog Durability
 
 - `index.translog.durability` controls when the translog is fsync'd
@@ -261,6 +278,7 @@ PUT /products/_settings
 - For financial or audit data, keep the default `request` durability
 
 ---
+
 ## Operational Summary
 
 - Use `_bulk` for ingest; size batches by MB and watch for 429s

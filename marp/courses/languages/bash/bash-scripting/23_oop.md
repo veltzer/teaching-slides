@@ -12,6 +12,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Object Oriented Programming with Associative Arrays
 
 ---
@@ -21,6 +22,7 @@ audience:
 ![OOP Patterns in Bash](svg/courses/languages/bash/bash-scripting/23_oop/oop_in_bash.svg)
 
 ---
+
 ## OOP in `bash`? Really?
 - `bash` is not an OOP language
 - But we can simulate some OOP patterns
@@ -30,6 +32,7 @@ audience:
 - Not recommended for production — consider `Python` instead
 
 ---
+
 ## A Simple Object
 
 ```bash
@@ -51,6 +54,7 @@ person_greet person
 ```
 
 ---
+
 ## Constructor Pattern
 
 ```bash
@@ -76,6 +80,7 @@ echo "${bob[name]} is ${bob[age]}"
 ```
 
 ---
+
 ## Methods as Functions
 
 ```bash
@@ -102,6 +107,7 @@ person_birthday alice     # Happy birthday Alice! Now 31
 ```
 
 ---
+
 ## Dispatch Table Pattern
 
 ```bash
@@ -132,6 +138,7 @@ call alice birthday
 ```
 
 ---
+
 ## Simulating Collections
 
 ```bash
@@ -165,6 +172,7 @@ list_persons
 ```
 
 ---
+
 ## Practical Example: Config Manager
 
 ```bash
@@ -208,6 +216,7 @@ config_save() {
 ```
 
 ---
+
 ## Limitations of OOP in `bash`
 
 ```output

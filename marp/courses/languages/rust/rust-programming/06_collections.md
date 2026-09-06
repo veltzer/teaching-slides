@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Collections
 ## Chapter 5: Working with Data Structures
 
@@ -334,6 +335,7 @@ vec.extend([6,7,8]);     // Add multiple
 ```
 
 ---
+
 ## Performance Considerations
 
 ![performance_considerations](svg/courses/languages/rust/rust-programming/06_collections/performance_considerations.svg)

@@ -11,6 +11,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Declarative Object Configuration
 
 Advanced Kubernetes Course - Day 3, Module 1
@@ -422,11 +423,13 @@ helm uninstall myrelease -n production
 ```
 
 ---
+
 ## GitOps with `ArgoCD`
 
 ![gitops_with_argocd](svg/courses/devops/advanced-kubernetes/11_declarative_config/gitops_with_argocd.svg)
 
 ---
+
 ## GitOps with `ArgoCD`: Example
 
 ```yaml

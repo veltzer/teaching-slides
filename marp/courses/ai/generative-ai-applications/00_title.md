@@ -12,6 +12,7 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Generative Ai Applications
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

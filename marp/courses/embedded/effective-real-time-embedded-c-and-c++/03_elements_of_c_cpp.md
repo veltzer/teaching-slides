@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Elements of C/C++
 
 ---
@@ -144,6 +145,7 @@ uint8_t c = a + b;  // Overflow! Result is 44
 ```
 
 ---
+
 ## Structure Layout: Example
 
 ```c
@@ -157,6 +159,7 @@ struct Example {
 ```
 
 ---
+
 ## Structure Layout
 
 ![structure_layout](svg/courses/embedded/effective-real-time-embedded-c-and-c++/03_elements_of_c_cpp/structure_layout.svg)

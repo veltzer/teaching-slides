@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Case Study: URL Shortener
 
 ---
+
 ## What This Chapter Covers
 
 - Requirements
@@ -21,6 +23,7 @@ audience:
 - Scaling
 
 ---
+
 ## Requirements
 
 - Long URL &#8594; short URL
@@ -30,16 +33,19 @@ audience:
 - 100M URLs / month
 
 ---
+
 ## Key Decisions
 
 ![url_shortener](svg/courses/architecting/system-design/08_case_study_url_shortener/url_shortener.svg)
 
 ---
+
 ## Request Flow
 
 ![url_shortener_flow](svg/courses/architecting/system-design/08_case_study_url_shortener/url_shortener_flow.svg)
 
 ---
+
 ## Capacity Estimation
 
 - 100M / month = ~40 / sec writes
@@ -49,6 +55,7 @@ audience:
 - One mid-size DB
 
 ---
+
 ## API
 
 - POST /shorten { url, custom_alias? } &#8594; { short_url }
@@ -56,6 +63,7 @@ audience:
 - GET /:code/stats &#8594; click count
 
 ---
+
 ## Short Code Generation
 
 - Hash + base62: 7 chars = 3.5T URLs
@@ -64,6 +72,7 @@ audience:
 - Pre-generate batches: fast issuance
 
 ---
+
 ## Storage
 
 - Postgres: codes, urls, owner, created_at
@@ -72,6 +81,7 @@ audience:
 - Or denormalised for read perf
 
 ---
+
 ## Caching
 
 - Redis cache: code &#8594; long URL
@@ -80,6 +90,7 @@ audience:
 - Massive read cost reduction
 
 ---
+
 ## Read Path
 
 - Request: /abc123
@@ -88,6 +99,7 @@ audience:
 - 95% hit: avg latency near 1ms
 
 ---
+
 ## Write Path
 
 - POST /shorten
@@ -97,6 +109,7 @@ audience:
 - Async: pre-warm cache
 
 ---
+
 ## Analytics
 
 - Each click: write event to log / Kafka
@@ -105,6 +118,7 @@ audience:
 - Don't update click count on every request (write contention)
 
 ---
+
 ## Scaling Reads
 
 - Cache absorbs 90%+
@@ -113,6 +127,7 @@ audience:
 - CDN caches the redirect (HTTP 301 with TTL)
 
 ---
+
 ## Scaling Writes
 
 - Single DB writes 40/sec — easy
@@ -121,6 +136,7 @@ audience:
 - Code generation might bottleneck if not careful
 
 ---
+
 ## Failure Modes
 
 - Cache down: hit DB; latency rises but works
@@ -129,6 +145,7 @@ audience:
 - Plan for each
 
 ---
+
 ## Common Discussion Points
 
 - "Why hash and not counter?" — hashing prevents enumeration

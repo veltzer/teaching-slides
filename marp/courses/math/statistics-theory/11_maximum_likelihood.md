@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Maximum Likelihood and Asymptotics
 
 ---
+
 ## What This Chapter Covers
 
 - The likelihood function and the MLE
@@ -21,11 +23,13 @@ audience:
 - Where the MLE misbehaves
 
 ---
+
 ## The Likelihood Surface
 
 ![mle likelihood](svg/courses/math/statistics-theory/11_maximum_likelihood/mle_likelihood.svg)
 
 ---
+
 ## The Likelihood And The MLE
 
 - Given data x and a model { f(&middot; | &theta;) : &theta; &isin; &Theta; }, the **likelihood function** is L(&theta; | x) = f(x | &theta;) — the *same* density, but read as a function of &theta; with x fixed; it is **not** a probability distribution over &theta;
@@ -35,6 +39,7 @@ audience:
 - Sufficiency connection: &theta;&#770; depends on x only through any sufficient statistic, since the likelihood does
 
 ---
+
 ## Invariance And The Score Equations
 
 - **Functional invariance**: if &theta;&#770; is the MLE of &theta;, then g(&theta;&#770;) is the MLE of g(&theta;) for *any* function g — a property no other major estimation principle shares (Bayes posterior means, UMVUEs are *not* invariant). Want the MLE of &sigma; instead of &sigma;&sup2;? Just take the square root
@@ -44,6 +49,7 @@ audience:
 - The score is also the link to Fisher information: E&#952;[score] = 0, Var&#952;(score) = I(&theta;) — which is what the asymptotics below run on
 
 ---
+
 ## Consistency
 
 - Under regularity conditions (correct, identifiable model; common support; some compactness/uniformity), the MLE is **consistent**: &theta;&#770;&#8345; &#8594; &theta;&#8320; (in probability, often a.s.) at the true &theta;&#8320; as n &#8594; &infin;
@@ -53,6 +59,7 @@ audience:
 - Failure modes: non-identifiability (no unique maximizer), parameter dimension growing with n (Neyman&ndash;Scott — incidental parameters spoil consistency), heavy irregularity
 
 ---
+
 ## Asymptotic Normality And Efficiency
 
 - Under stronger regularity (twice-differentiable log-likelihood, finite non-singular information, etc.), the MLE is **asymptotically normal**: **&radic;n ( &theta;&#770;&#8345; &minus; &theta;&#8320; ) &#8658; N( 0, I&#8321;(&theta;&#8320;)&#8315;&sup1; )** — so &theta;&#770;&#8345; &asymp; N( &theta;&#8320;, [n I&#8321;(&theta;&#8320;)]&#8315;&sup1; ) for large n
@@ -62,6 +69,7 @@ audience:
 - Under misspecification the limit is N(&theta;*, sandwich), variance A&#8315;&sup1; B A&#8315;&sup1; with A = &minus;E[Hessian], B = Var[score] — the **robust ("sandwich") standard errors** that don't assume the model is right
 
 ---
+
 ## Information In Practice; The Three Asymptotic Tests
 
 - For interval estimates and tests you need to *estimate* the information. **Expected (Fisher) information** I_n(&theta;&#770;) = &minus;E&#952;[&#8467;''] |_{&theta;&#770;} requires knowing the expectation; **observed information** J_n(&theta;&#770;) = &minus;&#8467;''(&theta;&#770;) is just (minus) the Hessian at the optimum — cheap, and often the *better* finite-sample choice (Efron&ndash;Hinkley). A **Wald CI** for &theta; is &theta;&#770; &plusmn; z&#8901; / &radic;J_n(&theta;&#770;)
@@ -74,6 +82,7 @@ audience:
 - Caveat: all of this is *asymptotic* — for small n, near boundaries, or with weak identification, prefer exact, conditional, or bootstrap procedures
 
 ---
+
 ## Where The MLE Misbehaves
 
 - **Boundary / irregular models**: support depends on &theta; (Uniform(0,&theta;)) — &theta;&#770; isn't a stationary point, isn't asymptotically normal, and converges at rate n rather than &radic;n; the standard CRLB/asymptotic theory simply doesn't apply
@@ -83,6 +92,7 @@ audience:
 - **Small samples / weak information**: a nearly flat log-likelihood &#8658; huge variance, unstable estimates, normal approximation poor — and **separation** in logistic regression sends the MLE to &plusmn;&infin; (use penalized likelihood, e.g. Firth, or a Bayesian prior)
 
 ---
+
 ## MLE Asymptotics In Code
 
 ```python
@@ -105,6 +115,7 @@ print(f"MLE lambda_hat = {Lh:.3f}   LR stat = {LR:.2f}   p = {stats.chi2.sf(LR, 
 ```
 
 ---
+
 ## Common Mistakes
 
 - Treating the likelihood L(&theta; | x) as a probability distribution over &theta; (it doesn't integrate to 1, and "P(&theta; &isin; A)" is meaningless without a prior)

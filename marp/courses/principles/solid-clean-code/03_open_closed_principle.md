@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Open/Closed Principle (OCP)
 
 ---
+
 ## What This Chapter Covers
 
 - A precise statement of OCP
@@ -20,6 +22,7 @@ audience:
 - Limits: when to *not* apply OCP
 
 ---
+
 ## The Principle, Stated Carefully
 
 - "Open for extension, closed for modification" — Bertrand Meyer
@@ -29,11 +32,13 @@ audience:
 - Reduces the risk of breaking working code when adding features
 
 ---
+
 ## Closed vs Open
 
 ![ocp_extension](svg/courses/principles/solid-clean-code/03_open_closed_principle/ocp_extension.svg)
 
 ---
+
 ## A Smelly Function
 
 ```python
@@ -53,6 +58,7 @@ def calculate_pay(employee):
 - High risk: regressions in the other branches
 
 ---
+
 ## A First Refactor: Polymorphism
 
 ```python
@@ -75,6 +81,7 @@ class Contractor(Employee):
 - The "calculate_pay" function shrinks to `employee.monthly_pay()`
 
 ---
+
 ## Strategy Pattern
 
 - A specific OCP-realising design
@@ -84,6 +91,7 @@ class Contractor(Employee):
 - Functional languages do it with first-class functions
 
 ---
+
 ## Strategy in Java
 
 ```java
@@ -104,6 +112,7 @@ public class CartCalculator {
 - `CartCalculator` doesn't change
 
 ---
+
 ## Strategy in Python
 
 ```python
@@ -120,6 +129,7 @@ def black_friday(amount): return amount * 0.8
 - Pass it in at the call site
 
 ---
+
 ## Plugin Architectures
 
 - A program defines an interface and discovers implementations at runtime
@@ -129,6 +139,7 @@ def black_friday(amount): return amount * 0.8
 - Heavy investment, big payoff for systems with many extension points
 
 ---
+
 ## OCP and Inheritance
 
 - Subclasses extend without modifying the base
@@ -138,6 +149,7 @@ def black_friday(amount): return amount * 0.8
 - See the Liskov chapter for what happens when subclass contracts diverge
 
 ---
+
 ## Limits of OCP
 
 - Every extension point is a *cost*: an interface, more files, more indirection
@@ -147,6 +159,7 @@ def black_friday(amount): return amount * 0.8
 - Adding extension *speculatively* is expensive and usually wrong
 
 ---
+
 ## When OCP Hurts
 
 - One implementation forever: the abstraction is overhead
@@ -155,6 +168,7 @@ def black_friday(amount): return amount * 0.8
 - Premature OCP gives you many tiny one-implementation interfaces
 
 ---
+
 ## Recognising the Smell
 
 - Long if/elif/switch chains that grow with each release
@@ -164,6 +178,7 @@ def black_friday(amount): return amount * 0.8
 - Bug fix in one branch leaves the others broken because they need the same fix
 
 ---
+
 ## A Refactoring Recipe
 
 - Identify the switch / if-chain
@@ -173,6 +188,7 @@ def black_friday(amount): return amount * 0.8
 - Add new variants as new implementations
 
 ---
+
 ## OCP and the Other Principles
 
 - OCP needs polymorphism &#8594; needs LSP to be safe
@@ -181,6 +197,7 @@ def black_friday(amount): return amount * 0.8
 - The principles reinforce each other when applied together
 
 ---
+
 ## Common Mistakes
 
 - Adding interfaces "in case we need them" — premature OCP
@@ -190,6 +207,7 @@ def black_friday(amount): return amount * 0.8
 - Forgetting that *adding the abstraction* is itself a modification
 
 ---
+
 ## Strategies for OCP
 
 ![ocp_strategies](svg/courses/principles/solid-clean-code/03_open_closed_principle/ocp_strategies.svg)

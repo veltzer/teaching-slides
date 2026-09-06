@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Scheduling and Execution
 
 ---
+
 ## What This Chapter Covers
 
 - Schedules
@@ -20,6 +22,7 @@ audience:
 - Pools
 
 ---
+
 ## Schedule Expressions
 
 - Cron: `'0 12 * * *'`
@@ -28,11 +31,13 @@ audience:
 - None: manually triggered
 
 ---
+
 ## Scheduling Concepts
 
 ![schedule_intervals](svg/courses/data_engineering/apache-airflow/05_scheduling_and_execution/schedule_intervals.svg)
 
 ---
+
 ## Data Interval
 
 - Each DAG run covers a data interval
@@ -41,6 +46,7 @@ audience:
 - Different from execution time
 
 ---
+
 ## Execution Date / Logical Date
 
 - Confusing: NOT when the DAG ran
@@ -49,6 +55,7 @@ audience:
 - Templated as {{ ds }} = "2026-05-01"
 
 ---
+
 ## Catchup
 
 - Backfill all intervals since start_date
@@ -57,6 +64,7 @@ audience:
 - "Run from start_date until now"
 
 ---
+
 ## Catchup=False
 
 ```python
@@ -67,6 +75,7 @@ DAG(..., catchup=False)
 - Most production DAGs
 
 ---
+
 ## Backfills
 
 - Manually run DAG for past dates
@@ -75,6 +84,7 @@ DAG(..., catchup=False)
 - Rerun only failed: `--rerun-failed-tasks`
 
 ---
+
 ## Concurrency Limits
 
 - max_active_runs: per DAG
@@ -84,6 +94,7 @@ DAG(..., catchup=False)
 - Tune to avoid overwhelming downstream
 
 ---
+
 ## Pools
 
 - Limit total concurrent tasks of a type
@@ -92,6 +103,7 @@ DAG(..., catchup=False)
 - Manage external resource constraints
 
 ---
+
 ## Sample Pool
 
 ```python
@@ -103,6 +115,7 @@ def heavy_query(): ...
 - Pool limit set
 
 ---
+
 ## Time Zones
 
 - DAGs use UTC by default
@@ -111,6 +124,7 @@ def heavy_query(): ...
 - Best: UTC throughout
 
 ---
+
 ## Templating Date Values
 
 - {{ ds }}: 2026-05-01
@@ -119,6 +133,7 @@ def heavy_query(): ...
 - {{ macros.ds_add(ds, 7) }}: 2026-05-08
 
 ---
+
 ## SLAs
 
 - Per-task: time budget from start of DAG
@@ -126,6 +141,7 @@ def heavy_query(): ...
 - For: late-arriving data alerts
 
 ---
+
 ## Datasets
 
 - Modern feature
@@ -133,6 +149,7 @@ def heavy_query(): ...
 - Cleaner than schedule + sensor
 
 ---
+
 ## Common Scheduling Mistakes
 
 - Catchup=True with old start_date (huge backlog)
@@ -142,6 +159,7 @@ def heavy_query(): ...
 - Time zone surprises
 
 ---
+
 ## Choosing an Executor
 
 ![executor_types](svg/courses/data_engineering/apache-airflow/05_scheduling_and_execution/executor_types.svg)

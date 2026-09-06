@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Caching
 
 ---
+
 ## What This Chapter Covers
 
 - Cache layers
@@ -20,6 +22,7 @@ audience:
 - Pitfalls
 
 ---
+
 ## Why Cache
 
 - Move work closer to user
@@ -28,6 +31,7 @@ audience:
 - Lower cost
 
 ---
+
 ## Layers
 
 - Browser
@@ -38,6 +42,7 @@ audience:
 - Database
 
 ---
+
 ## Cache-Aside
 
 - App reads from cache
@@ -46,11 +51,13 @@ audience:
 - Most common
 
 ---
+
 ## Patterns Compared
 
 ![cache_aside_patterns](svg/courses/architecting/web-architecture-and-scaling/03_caching/cache_aside_patterns.svg)
 
 ---
+
 ## Read-Through
 
 - Cache fronts the DB
@@ -59,6 +66,7 @@ audience:
 - Fewer code paths
 
 ---
+
 ## Write-Through
 
 - Writes go to cache and DB
@@ -67,6 +75,7 @@ audience:
 - No staleness
 
 ---
+
 ## Write-Behind
 
 - Writes to cache first
@@ -75,6 +84,7 @@ audience:
 - High write throughput
 
 ---
+
 ## TTL
 
 - Time to live per entry
@@ -83,6 +93,7 @@ audience:
 - Cheapest invalidation
 
 ---
+
 ## Active Invalidation
 
 - Notify cache on write
@@ -91,6 +102,7 @@ audience:
 - Often combined with TTL
 
 ---
+
 ## Eviction
 
 - Least recently used
@@ -99,6 +111,7 @@ audience:
 - First in first out
 
 ---
+
 ## Stampede
 
 - Many misses for same key
@@ -107,6 +120,7 @@ audience:
 - Or stale-while-revalidate
 
 ---
+
 ## Negative Caching
 
 - Cache misses too
@@ -115,6 +129,7 @@ audience:
 - Beware cache poisoning
 
 ---
+
 ## Per-User Caching
 
 - Hard to share
@@ -123,6 +138,7 @@ audience:
 - Or pushed to client
 
 ---
+
 ## Common Caching Mistakes
 
 - No invalidation plan

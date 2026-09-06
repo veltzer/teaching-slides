@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced SQL Techniques
 
 ---
+
 ## UPSERT and RETURNING
 
 ![upsert_returning](svg/courses/databases/postgresql-for-developers/02_advanced_sql_techniques/upsert_returning.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - CTEs and recursive queries
@@ -26,11 +29,13 @@ audience:
 - Returning clauses
 
 ---
+
 ## CTE and Window at a Glance
 
 ![cte_window](svg/courses/databases/postgresql-for-developers/02_advanced_sql_techniques/cte_window.svg)
 
 ---
+
 ## CTEs
 
 ```sql
@@ -45,6 +50,7 @@ SELECT * FROM active WHERE created_at > '2026-01-01';
 - Modern Postgres: CTEs can be inlined
 
 ---
+
 ## Recursive CTEs
 
 ```sql
@@ -61,6 +67,7 @@ SELECT * FROM tree;
 - Hierarchies, dependency chains
 
 ---
+
 ## Lateral Joins
 
 ```sql
@@ -77,6 +84,7 @@ LEFT JOIN LATERAL (
 - "For each user, top post"
 
 ---
+
 ## DISTINCT ON
 
 ```sql
@@ -90,6 +98,7 @@ ORDER BY user_id, created_at DESC;
 - Faster than window-function alternatives
 
 ---
+
 ## UPSERT
 
 ```sql
@@ -102,6 +111,7 @@ ON CONFLICT (email) DO UPDATE SET name = EXCLUDED.name;
 - The right way to "upsert"
 
 ---
+
 ## RETURNING
 
 ```sql
@@ -115,6 +125,7 @@ DELETE FROM orders WHERE id = 1 RETURNING *;
 - Postgres-specific
 
 ---
+
 ## Subqueries
 
 - Scalar: returns one value
@@ -123,6 +134,7 @@ DELETE FROM orders WHERE id = 1 RETURNING *;
 - IN, EXISTS, NOT EXISTS
 
 ---
+
 ## EXISTS vs IN
 
 - `WHERE id IN (SELECT id FROM ...)`
@@ -131,6 +143,7 @@ DELETE FROM orders WHERE id = 1 RETURNING *;
 - EXISTS slightly clearer for correlated subqueries
 
 ---
+
 ## Aggregations
 
 - GROUP BY ... HAVING
@@ -139,6 +152,7 @@ DELETE FROM orders WHERE id = 1 RETURNING *;
 - More expressive than CASE WHEN
 
 ---
+
 ## Set Operations
 
 - UNION, INTERSECT, EXCEPT
@@ -146,6 +160,7 @@ DELETE FROM orders WHERE id = 1 RETURNING *;
 - Useful for: comparing two queries
 
 ---
+
 ## CASE Expressions
 
 ```sql
@@ -162,6 +177,7 @@ FROM users;
 - Conditional logic in queries
 
 ---
+
 ## Common SQL Mistakes
 
 - Forgetting to filter NULL (`= NULL` doesn't work)

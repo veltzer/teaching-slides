@@ -12,9 +12,11 @@ audience:
   - audiences:managers
 
 ---
+
 # Deployment Strategies
 
 ---
+
 ## Why Deployment Strategy Matters
 
 - Deployment is the riskiest phase of the software delivery lifecycle
@@ -26,6 +28,7 @@ audience:
     - Database migration complexity
 
 ---
+
 ## Overview of Common Strategies
 
 1. **Blue/Green Deployments** - switch traffic between two identical environments
@@ -35,6 +38,7 @@ audience:
 1. **Progressive Delivery** - combine strategies with experimentation
 
 ---
+
 ## Strategy Comparison
 
 | Strategy | Downtime | Rollback Speed | Infra Cost | Complexity |
@@ -45,6 +49,7 @@ audience:
 | Feature Flags | None | Instant | Low | High |
 
 ---
+
 ## Blue/Green Deployments - Concept
 
 - Maintain two identical production environments: `Blue` and `Green`
@@ -54,11 +59,13 @@ audience:
 - The old environment becomes the instant rollback target
 
 ---
+
 ## Blue/Green Architecture Diagram
 
 ![blue_green_architecture_diagram](svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/blue_green_architecture_diagram.svg)
 
 ---
+
 ## Blue/Green - The Switch
 
 - The traffic switch is typically performed by updating:
@@ -69,6 +76,7 @@ audience:
 - If problems arise, switch traffic back to the old environment immediately
 
 ---
+
 ## Blue/Green - Infrastructure Cost Implications
 
 - You pay for **double the compute resources** at all times
@@ -80,6 +88,7 @@ audience:
     - Tear down the idle environment and rebuild on next deploy
 
 ---
+
 ## Blue/Green - Database Compatibility
 
 - The database is the hardest part of blue/green deployments
@@ -92,11 +101,13 @@ audience:
     - Step 4: Remove old columns in a future release
 
 ---
+
 ## Blue/Green - Database Migration Pattern
 
 ![blue_green_database_migration_pattern](svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/blue_green_database_migration_pattern.svg)
 
 ---
+
 ## Blue/Green - When to Use
 
 - Applications where instant rollback is critical
@@ -106,6 +117,7 @@ audience:
 - When database schema changes can be managed with expand-and-contract
 
 ---
+
 ## Canary Deployments - Concept
 
 - Deploy the new version to a **small subset** of production infrastructure
@@ -115,11 +127,13 @@ audience:
 - Roll back immediately if anomalies are detected
 
 ---
+
 ## Canary Traffic Split Diagram
 
 ![canary_traffic_split_diagram](svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/canary_traffic_split_diagram.svg)
 
 ---
+
 ## Canary - Traffic Splitting Mechanisms
 
 - **Load balancer weighted routing** - assign weights to target groups (e.g., `AWS ALB`, `NGINX`)
@@ -129,6 +143,7 @@ audience:
 - **Kubernetes** - use `Argo Rollouts` or `Flagger` for automated canary
 
 ---
+
 ## Canary - Traffic Splitting with `Istio`
 
 ```yaml
@@ -152,6 +167,7 @@ spec:
 ```
 
 ---
+
 ## Canary - Key Metrics to Monitor
 
 - **Error rate** - HTTP 5xx responses, exception counts
@@ -162,6 +178,7 @@ spec:
 - **Saturation** - queue depths, connection pool usage
 
 ---
+
 ## Canary - Rollback Criteria
 
 - Define **automated rollback triggers** before deploying:
@@ -173,6 +190,7 @@ spec:
 - Rollback should be automatic, not dependent on human decision
 
 ---
+
 ## Canary - Progressive Traffic Ramp
 
 1. Deploy canary with 1% traffic
@@ -188,6 +206,7 @@ spec:
 At any step, if metrics degrade, roll back to 0%.
 
 ---
+
 ## Canary - Automated Rollout with `Flagger`
 
 ```yaml
@@ -213,6 +232,7 @@ spec:
 ```
 
 ---
+
 ## Canary - When to Use
 
 - High-traffic applications where issues affect many users quickly
@@ -222,6 +242,7 @@ spec:
 - When rollback speed is important but you cannot afford full blue/green costs
 
 ---
+
 ## Rolling Deployments - Concept
 
 - Update instances **one at a time** (or in small batches)
@@ -230,11 +251,13 @@ spec:
 - No additional infrastructure is required beyond the existing fleet
 
 ---
+
 ## Rolling Update Sequence Diagram
 
 ![rolling_update_sequence_diagram](svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/rolling_update_sequence_diagram.svg)
 
 ---
+
 ## Rolling - Update Ordering
 
 - **One-at-a-time** - safest, slowest; one instance updated per step
@@ -246,6 +269,7 @@ spec:
     - Consider data locality and session affinity
 
 ---
+
 ## Rolling - Health Checks
 
 - Each updated instance must pass health checks before the next batch starts
@@ -257,6 +281,7 @@ spec:
 - Fail the deployment if any instance fails to become healthy
 
 ---
+
 ## Rolling - Kubernetes Example
 
 ```yaml
@@ -284,6 +309,7 @@ spec:
 ```
 
 ---
+
 ## Rolling - Backward Compatibility Requirements
 
 - During a rolling update, **both versions run simultaneously**
@@ -295,6 +321,7 @@ spec:
 - Shared caches must handle both versions' data formats
 
 ---
+
 ## Rolling - Handling Stateful Services
 
 - Stateful services add complexity to rolling updates
@@ -305,6 +332,7 @@ spec:
 - Database replicas need special care for schema compatibility
 
 ---
+
 ## Rolling - When to Use
 
 - Applications with many identical instances behind a load balancer
@@ -314,6 +342,7 @@ spec:
 - Kubernetes-native workloads using `Deployment` or `StatefulSet`
 
 ---
+
 ## Feature Flags - Concept
 
 - Separate **deployment** (shipping code) from **release** (enabling functionality)
@@ -322,11 +351,13 @@ spec:
 - Enables dark launches, A/B testing, and gradual rollouts
 
 ---
+
 ## Feature Flag Decision Tree
 
 ![feature_flag_decision_tree](svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/feature_flag_decision_tree.svg)
 
 ---
+
 ## Feature Flags - Implementation Example
 
 ```python
@@ -344,6 +375,7 @@ def get_checkout_page(user, cart):
 - No redeployment needed to enable or disable
 
 ---
+
 ## Feature Flag Types
 
 - **Release flags** - toggle incomplete features in production; short-lived
@@ -353,6 +385,7 @@ def get_checkout_page(user, cart):
 - Each type has a different expected lifecycle and management strategy
 
 ---
+
 ## Feature Flag Lifecycle Management
 
 1. **Create** - define the flag with a clear owner and expiration date
@@ -364,11 +397,13 @@ def get_checkout_page(user, cart):
 Every flag should have a planned removal date in the backlog.
 
 ---
+
 ## Feature Flag Lifecycle Diagram
 
 ![feature_flag_lifecycle_diagram](svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/feature_flag_lifecycle_diagram.svg)
 
 ---
+
 ## Feature Flags - Testing Complexity
 
 - Each flag doubles the possible code paths: N flags = 2^N combinations
@@ -381,6 +416,7 @@ Every flag should have a planned removal date in the backlog.
     - Focus on pairwise coverage (every pair of flags tested together)
 
 ---
+
 ## Feature Flags - Testing in CI/CD
 
 ```yaml
@@ -401,6 +437,7 @@ test-feature-flags:
 - Flag combinations for integration tests
 
 ---
+
 ## Feature Flags - Technical Debt from Long-Lived Flags
 
 - Flags that outlive their purpose become **technical debt**
@@ -415,6 +452,7 @@ test-feature-flags:
     - Track flag age in dashboards
 
 ---
+
 ## Feature Flags - Stale Flag Detection
 
 ```python
@@ -440,6 +478,7 @@ def check_stale_flags():
 ```
 
 ---
+
 ## Feature Flags - Common Pitfalls
 
 - **Nested flags** - flag A depends on flag B, creating brittle logic
@@ -450,6 +489,7 @@ def check_stale_flags():
     - Avoid remote calls in hot paths
 
 ---
+
 ## Feature Flags - Tooling Landscape
 
 - **`LaunchDarkly`** - enterprise flag management with targeting and analytics
@@ -460,6 +500,7 @@ def check_stale_flags():
 - **Custom solutions** - config files, environment variables, database rows
 
 ---
+
 ## Feature Flags - When to Use
 
 - When you want to deploy code without exposing features to all users
@@ -469,6 +510,7 @@ def check_stale_flags():
 - When different customers need different feature sets
 
 ---
+
 ## Progressive Delivery - Concept
 
 - Progressive delivery **combines** deployment strategies with experimentation
@@ -479,11 +521,13 @@ def check_stale_flags():
     - Integration with experimentation platforms
 
 ---
+
 ## Progressive Delivery Pipeline
 
 ![progressive_delivery_pipeline](svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/progressive_delivery_pipeline.svg)
 
 ---
+
 ## Progressive Delivery - User Segmentation
 
 - Target specific groups before broader rollout:
@@ -495,6 +539,7 @@ def check_stale_flags():
 - Provides early feedback from representative user groups
 
 ---
+
 ## Progressive Delivery - Experimentation
 
 - Run **controlled experiments** during progressive rollout
@@ -506,6 +551,7 @@ def check_stale_flags():
 - Tools: `Optimizely`, `Statsig`, `Eppo`, `GrowthBook`
 
 ---
+
 ## Progressive Delivery - Combining Strategies
 
 - A real-world deployment often uses multiple strategies together:
@@ -516,11 +562,13 @@ def check_stale_flags():
 - The combination provides both safety and data-driven decisions
 
 ---
+
 ## Deployment Strategies - Risk vs. Speed
 
 ![deployment_strategies_risk_vs_speed](svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/deployment_strategies_risk_vs_speed.svg)
 
 ---
+
 ## Choosing the Right Strategy
 
 - **Blue/Green** - choose when you need instant rollback and can afford double infrastructure
@@ -530,6 +578,7 @@ def check_stale_flags():
 - **Progressive Delivery** - choose when you want maximum safety with experimentation
 
 ---
+
 ## Choosing Based on Application Type
 
 - **Monolithic applications**
@@ -543,6 +592,7 @@ def check_stale_flags():
     - Blue/green with expand-and-contract migrations
 
 ---
+
 ## Infrastructure as Code for Deployment Strategies
 
 - Define deployment strategies in `IaC` to ensure consistency
@@ -553,6 +603,7 @@ def check_stale_flags():
 - Store deployment configuration alongside application code
 
 ---
+
 ## Observability is Non-Negotiable
 
 - No deployment strategy works without proper observability
@@ -564,6 +615,7 @@ def check_stale_flags():
 - Automated alerts that trigger rollback decisions
 
 ---
+
 ## Rollback Strategies Compared
 
 | Strategy | Rollback Method | Time to Rollback | Data Risk |
@@ -575,6 +627,7 @@ def check_stale_flags():
 | Progressive | Automated by controller | Seconds | Low |
 
 ---
+
 ## Real-World Example: Deploying a Payment Service
 
 1. Develop behind a feature flag (`new-payment-gateway`)
@@ -586,6 +639,7 @@ def check_stale_flags():
 1. Remove the feature flag and old code path within 30 days
 
 ---
+
 ## Anti-Patterns to Avoid
 
 - **Big bang deployments** - deploying everything at once with no rollback plan
@@ -596,6 +650,7 @@ def check_stale_flags():
 - **No monitoring** - deploying blind without observability
 
 ---
+
 ## Summary
 
 - Every deployment strategy is a trade-off between **cost**, **speed**, **safety**, and **complexity**

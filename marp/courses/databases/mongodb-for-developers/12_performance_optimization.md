@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Performance Optimisation
 
 ---
+
 ## Checklist
 
 ![perf_checklist](svg/courses/databases/mongodb-for-developers/12_performance_optimization/perf_checklist.svg)
 
 ---
+
 ## Performance Workflow
 
 ![perf_workflow](svg/courses/databases/mongodb-for-developers/12_performance_optimization/perf_workflow.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Profiling
@@ -31,6 +35,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## Profiling
 
 ```javascript
@@ -44,6 +49,7 @@ db.system.profile.find().sort({ts: -1}).limit(10);
 - Inspect via system.profile collection
 
 ---
+
 ## Slow Query Log
 
 - Logs queries above slowms
@@ -52,6 +58,7 @@ db.system.profile.find().sort({ts: -1}).limit(10);
 - Atlas: built-in slow query advisor
 
 ---
+
 ## explain() Plans
 
 ```javascript
@@ -63,6 +70,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - N docs examined &gt;&gt; N returned: index issue
 
 ---
+
 ## Index Usage
 
 - $indexStats: per-index counters
@@ -71,6 +79,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - ESR rule
 
 ---
+
 ## Working Set
 
 - Active data fits in RAM &#8594; fast
@@ -79,6 +88,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - Scale up tier or shard
 
 ---
+
 ## Connection Pooling
 
 - 100 connections per app process default
@@ -87,6 +97,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - Over-pooled: server resource exhaustion
 
 ---
+
 ## Read Preferences For Scale
 
 - Read from secondaries: spread load
@@ -95,6 +106,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - Effective for analytics
 
 ---
+
 ## Bulk Writes
 
 - Batch operations: 1 round trip vs N
@@ -102,6 +114,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - Most drivers have bulkWrite
 
 ---
+
 ## Avoid
 
 - Unbounded queries (no limit)
@@ -110,6 +123,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - $regex without anchor on indexed field
 
 ---
+
 ## Aggregation Performance
 
 - $match early
@@ -118,6 +132,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - $lookup is expensive; avoid in hot paths
 
 ---
+
 ## Index Build Performance
 
 - Background by default in modern MongoDB
@@ -126,6 +141,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - Monitor progress
 
 ---
+
 ## Collection Scans
 
 - COLLSCAN: read every document
@@ -134,6 +150,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - Add indexes
 
 ---
+
 ## Sharding
 
 - For: data &gt; one node's capacity
@@ -142,6 +159,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - Last resort
 
 ---
+
 ## Atlas Performance Advisor
 
 - Auto-suggests indexes based on slow queries
@@ -149,6 +167,7 @@ db.users.find({email: "a@b.com"}).explain("executionStats");
 - Implement what it recommends (after review)
 
 ---
+
 ## Common Performance Mistakes
 
 - No profiling enabled

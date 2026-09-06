@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Aggregation Framework
 
 ---
+
 ## What This Chapter Covers
 
 - The pipeline model
@@ -20,6 +22,7 @@ audience:
 - Optimisation
 
 ---
+
 ## The Pipeline
 
 ```javascript
@@ -35,16 +38,19 @@ db.orders.aggregate([
 - Each stage's output is next stage's input
 
 ---
+
 ## Pipeline Visualized
 
 ![pipeline_stages](svg/courses/databases/mongodb-for-developers/07_aggregation_framework/pipeline_stages.svg)
 
 ---
+
 ## Pipeline Thinking
 
 ![pipeline_thinking](svg/courses/databases/mongodb-for-developers/07_aggregation_framework/pipeline_thinking.svg)
 
 ---
+
 ## $match
 
 - Like find()
@@ -52,6 +58,7 @@ db.orders.aggregate([
 - Uses indexes (when first stage)
 
 ---
+
 ## $project
 
 - Reshape documents
@@ -59,6 +66,7 @@ db.orders.aggregate([
 - `{ $project: { name: 1, year: { $year: "$created_at" } } }`
 
 ---
+
 ## $group
 
 ```javascript
@@ -75,6 +83,7 @@ db.orders.aggregate([
 - Many accumulators
 
 ---
+
 ## $lookup (Join)
 
 ```javascript
@@ -91,6 +100,7 @@ db.orders.aggregate([
 - Use sparingly (more expensive than embedding)
 
 ---
+
 ## $unwind
 
 - Flatten an array
@@ -99,6 +109,7 @@ db.orders.aggregate([
 - Or for "explode tags" workflows
 
 ---
+
 ## $sort, $limit, $skip
 
 - Like find cursor methods but in pipeline
@@ -106,6 +117,7 @@ db.orders.aggregate([
 - Limit early to reduce work
 
 ---
+
 ## $facet
 
 ```javascript
@@ -120,6 +132,7 @@ db.orders.aggregate([
 - Useful for: dashboards
 
 ---
+
 ## $setWindowFields
 
 - Window-function-like
@@ -128,6 +141,7 @@ db.orders.aggregate([
 - Postgres-style power
 
 ---
+
 ## Aggregation Operators
 
 - Math: $add, $subtract, $multiply
@@ -137,6 +151,7 @@ db.orders.aggregate([
 - Many; check docs
 
 ---
+
 ## Pipeline Optimisation
 
 - $match before $group (filter first)
@@ -146,6 +161,7 @@ db.orders.aggregate([
 - The planner reorders some; you should still write efficiently
 
 ---
+
 ## Aggregation vs Application Code
 
 - Heavy aggregations: faster in DB
@@ -154,6 +170,7 @@ db.orders.aggregate([
 - For dashboards: usually DB
 
 ---
+
 ## Performance
 
 - `explain()` works on pipelines
@@ -162,6 +179,7 @@ db.orders.aggregate([
 - $allowDiskUse for big aggregations
 
 ---
+
 ## Common Aggregation Mistakes
 
 - $match late in pipeline (no index use)

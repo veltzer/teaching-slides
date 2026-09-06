@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Memory and Garbage Collector
 
 ## Overview

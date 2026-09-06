@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Multi-Region
 
 ---
+
 ## What This Chapter Covers
 
 - Why multi-region
@@ -21,6 +23,7 @@ audience:
 - Cost
 
 ---
+
 ## Why Multi-Region
 
 - Region-level outage survival
@@ -29,6 +32,7 @@ audience:
 - Compliance with sovereignty
 
 ---
+
 ## Topologies
 
 - Active-passive
@@ -37,11 +41,13 @@ audience:
 - Sharded by region
 
 ---
+
 ## Failover Modes
 
 ![failover_modes](svg/courses/architecting/disaster-recovery/04_multi_region/failover_modes.svg)
 
 ---
+
 ## Read-Local, Write-Global
 
 - Reads local, fast
@@ -50,6 +56,7 @@ audience:
 - Common with managed databases
 
 ---
+
 ## Active-Active
 
 - Writes accepted in any region
@@ -58,6 +65,7 @@ audience:
 - Hardest to operate
 
 ---
+
 ## Conflict Resolution
 
 - Last writer wins
@@ -66,6 +74,7 @@ audience:
 - Avoid where consistency matters
 
 ---
+
 ## Latency Trade-offs
 
 - Sync replication adds RTT
@@ -74,6 +83,7 @@ audience:
 - Test from real client locations
 
 ---
+
 ## Failover Mechanics
 
 - Detect failure
@@ -82,6 +92,7 @@ audience:
 - Reconcile conflicts after
 
 ---
+
 ## DNS-Based Failover
 
 - Health-checked routes
@@ -90,6 +101,7 @@ audience:
 - Pair with client retry logic
 
 ---
+
 ## Network Path
 
 - Inter-region links
@@ -98,6 +110,7 @@ audience:
 - Plan for jitter
 
 ---
+
 ## Stateful Services
 
 - Caches per region
@@ -106,6 +119,7 @@ audience:
 - Idempotent producers required
 
 ---
+
 ## Data Residency
 
 - Pin user data to a region
@@ -114,6 +128,7 @@ audience:
 - Audit access logs
 
 ---
+
 ## Cost
 
 - Egress dominates
@@ -122,6 +137,7 @@ audience:
 - Engineering time
 
 ---
+
 ## Common Multi-Region Mistakes
 
 - Cache coherence ignored

@@ -8,9 +8,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Alerting and Production
 
 ---
+
 ## What This Chapter Covers
 
 - Alerting rules
@@ -20,11 +22,13 @@ audience:
 - Production patterns
 
 ---
+
 ## Alert Pipeline
 
 ![alert_pipeline](svg/courses/observability_and_monitoring/prometheus-and-grafana/06_alerting_and_production/alert_pipeline.svg)
 
 ---
+
 ## Alerting Rules
 
 ```yaml
@@ -42,6 +46,7 @@ groups:
 - Fires after `for` duration
 
 ---
+
 ## Alertmanager
 
 - Receives alerts from Prometheus
@@ -49,6 +54,7 @@ groups:
 - Sends to PagerDuty, Slack, email
 
 ---
+
 ## Routing
 
 - By labels: team, severity
@@ -57,6 +63,7 @@ groups:
 - Inhibit rules: silence one when another fires
 
 ---
+
 ## Silences
 
 - Mute alerts during maintenance
@@ -64,6 +71,7 @@ groups:
 - Match by label
 
 ---
+
 ## Templates
 
 - Format alert messages
@@ -71,6 +79,7 @@ groups:
 - Consistent format across alerts
 
 ---
+
 ## SLOs and SLIs
 
 - SLI: indicator (latency, availability)
@@ -79,6 +88,7 @@ groups:
 - Use to gate releases
 
 ---
+
 ## Burn Rate Alerts
 
 - Alert when burning budget too fast
@@ -87,6 +97,7 @@ groups:
 - Better than threshold alerts
 
 ---
+
 ## Alert Fatigue
 
 - Too many alerts: ignored
@@ -95,6 +106,7 @@ groups:
 - Run blameless reviews
 
 ---
+
 ## Recording Rules in Production
 
 - Pre-aggregate hot queries
@@ -102,6 +114,7 @@ groups:
 - Lower percentile latency on dashboards
 
 ---
+
 ## Federation
 
 - Scale Prometheus across regions
@@ -109,6 +122,7 @@ groups:
 - Or: use Thanos / Cortex / Mimir
 
 ---
+
 ## Long-Term Storage
 
 - Prometheus: weeks of local data
@@ -116,6 +130,7 @@ groups:
 - Object storage backend
 
 ---
+
 ## High Availability
 
 - Two Prometheus servers, same config
@@ -124,6 +139,7 @@ groups:
 - No single point of failure
 
 ---
+
 ## Capacity Planning
 
 - Memory: ~3 KB per series
@@ -132,6 +148,7 @@ groups:
 - Plan for growth
 
 ---
+
 ## Migration Path
 
 - Start: single Prometheus
@@ -140,6 +157,7 @@ groups:
 - Each step adds complexity
 
 ---
+
 ## Common Production Mistakes
 
 - No HA; single point of failure

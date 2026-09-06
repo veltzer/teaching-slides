@@ -9,19 +9,23 @@ audience:
   - audiences:architects
 
 ---
+
 # Versioning Strategies
 
 ---
+
 ## Three Strategies
 
 ![versioning](svg/courses/architecting/api-design-best-practices/04_versioning_strategies/versioning.svg)
 
 ---
+
 ## Versioning Options
 
 ![versioning_options](svg/courses/architecting/api-design-best-practices/04_versioning_strategies/versioning_options.svg)
 
 ---
+
 ## Why Version
 
 - APIs change; consumers depend on specific behavior
@@ -30,6 +34,7 @@ audience:
 - Lack of versioning is the #1 cause of brittle integrations
 
 ---
+
 ## URL-Based Versioning
 
 - `/v1/users`, `/v2/users`
@@ -38,6 +43,7 @@ audience:
 - The "version" is part of the URL, like a path segment
 
 ---
+
 ## URL Versioning: Pros
 
 - Easy to see; easy to test
@@ -46,6 +52,7 @@ audience:
 - Cacheable — different URLs are different cache keys
 
 ---
+
 ## URL Versioning: Cons
 
 - "REST purists" argue the URL should identify the resource, not the version
@@ -54,11 +61,13 @@ audience:
 - Real-world: most APIs accept the trade-off
 
 ---
+
 ## Versioning Style Comparison
 
 ![versioning_styles](svg/courses/architecting/api-design-best-practices/04_versioning_strategies/versioning_styles.svg)
 
 ---
+
 ## Header-Based Versioning
 
 - Version in a custom header: `X-API-Version: 2`
@@ -66,6 +75,7 @@ audience:
 - The URL stays the same across versions
 
 ---
+
 ## Header Versioning: Pros
 
 - URL is "clean"
@@ -73,6 +83,7 @@ audience:
 - Clients can negotiate: "I prefer v2; v1 is acceptable"
 
 ---
+
 ## Header Versioning: Cons
 
 - Less visible — easy to miss in logs and debugging
@@ -81,6 +92,7 @@ audience:
 - Many consumers forget the header and get the default version unexpectedly
 
 ---
+
 ## Query Parameter Versioning
 
 - `/users?api_version=2`
@@ -89,6 +101,7 @@ audience:
 - But: query params are usually for filtering, not for routing
 
 ---
+
 ## Query Versioning Trade-Offs
 
 - Easy to discover and test
@@ -97,6 +110,7 @@ audience:
 - Less common than URL versioning
 
 ---
+
 ## Semantic Versioning for APIs
 
 - Major (breaking), minor (additive), patch (fixes)
@@ -105,6 +119,7 @@ audience:
 - For HTTP APIs, only the major number usually appears in the URL
 
 ---
+
 ## Additive Changes Are Free
 
 - Adding a new field to a response: backward-compatible
@@ -113,6 +128,7 @@ audience:
 - Old consumers ignore what they don't know
 
 ---
+
 ## Breaking Changes Need a New Version
 
 - Removing or renaming a field
@@ -122,11 +138,13 @@ audience:
 - Changing default values that affect behavior
 
 ---
+
 ## Breaking Versus Additive
 
 ![breaking_vs_additive](svg/courses/architecting/api-design-best-practices/04_versioning_strategies/breaking_vs_additive.svg)
 
 ---
+
 ## Choosing a Strategy
 
 - **URL** is the most common; recommend for new APIs
@@ -135,6 +153,7 @@ audience:
 - The strategy matters less than committing to one and applying it consistently
 
 ---
+
 ## Default Version
 
 - Be explicit about the default
@@ -143,6 +162,7 @@ audience:
 - Never default to "latest" — consumers will break randomly
 
 ---
+
 ## Versioning Bounded Context
 
 - Some teams version each endpoint independently
@@ -151,6 +171,7 @@ audience:
 - Pick what your team can maintain
 
 ---
+
 ## Anti-Patterns
 
 - "Just add fields and hope it doesn't break"
@@ -159,6 +180,7 @@ audience:
 - "v2 in production, v1 still here, v1.1 deprecated, v3 in beta" — version sprawl
 
 ---
+
 ## Summary
 
 - URL versioning is the most common; pick it unless you have a reason not to

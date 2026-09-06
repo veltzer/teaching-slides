@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # POSIX IPC
 
 ---
@@ -46,17 +47,17 @@ audience:
 ## POSIX Message Queue API
 
 1. `mq_open(3)`: Create or open a message queue. Returns a message queue descriptor (like a file descriptor).
-    ```c
+   ```c
     mqd_t mq_open(const char *name, int oflag, mode_t mode, struct mq_attr *attr);
-    ```
+   ```
 1. `mq_send(3)`: Send a message to a queue.
-    ```c
+   ```c
     int mq_send(mqd_t mqdes, const char *msg_ptr, size_t msg_len, unsigned int msg_prio);
-    ```
+   ```
 1. `mq_receive(3)`: Receive a message from a queue.
-    ```c
+   ```c
     ssize_t mq_receive(mqd_t mqdes, char *msg_ptr, size_t msg_len, unsigned int *msg_prio);
-    ```
+   ```
 1. `mq_close(3)`: Close the message queue descriptor.
 1. `mq_unlink(3)`: Remove the message queue from the system.
 
@@ -74,9 +75,9 @@ audience:
 ## Named Semaphore API
 
 1. `sem_open(3)`: Create or open a named semaphore. Returns a `sem_t*` pointer.
-    ```c
+   ```c
     sem_t *sem_open(const char *name, int oflag, mode_t mode, unsigned int value);
-    ```
+   ```
 1. `sem_wait(3)`: Decrement (lock) the semaphore. Blocks if the value is zero.
 1. `sem_post(3)`: Increment (unlock) the semaphore.
 1. `sem_close(3)`: Close the semaphore.
@@ -87,10 +88,10 @@ audience:
 ## Unnamed Semaphore API
 
 1. `sem_init(3)`: Initialize a semaphore located in shared memory.
-    ```c
+   ```c
     int sem_init(sem_t *sem, int pshared, unsigned int value);
     // pshared must be non-zero for sharing between processes
-    ```
+   ```
 1. `sem_wait(3)` and `sem_post(3)` are used just like with named semaphores.
 1. `sem_destroy(3)`: Destroy the unnamed semaphore.
 
@@ -107,9 +108,9 @@ audience:
 ## POSIX Shared Memory API
 
 1. `shm_open(3)`: Create or open a shared memory object. It returns a file descriptor. The name (e.g., `/my_shm`) identifies the object.
-    ```c
+   ```c
     int shm_open(const char *name, int oflag, mode_t mode);
-    ```
+   ```
 1. `ftruncate(2)`: Set the size of the shared memory object. This must be done after creating it.
 1. `mmap(2)`: Map the shared memory object into the process's address space using the file descriptor from `shm_open`.
 1. `munmap(2)`: Unmap the memory region.

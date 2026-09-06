@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Factor XI: Logs
 
 ---
+
 ## The Rule
 
 - Treat logs as event streams
@@ -19,11 +21,13 @@ audience:
 - The app does not manage log files
 
 ---
+
 ## Streams Not Files
 
 ![logs_as_streams](svg/courses/architecting/twelve-factor-app/12_logs/logs_as_streams.svg)
 
 ---
+
 ## Logs Are Streams
 
 - A log is a time-ordered stream of events
@@ -32,6 +36,7 @@ audience:
 - Decoupling: the app's job is to emit; routing is operational
 
 ---
+
 ## Writing to stdout/stderr
 
 - Every language can write to stdout
@@ -40,6 +45,7 @@ audience:
 - It's the universal standard
 
 ---
+
 ## What the App Does NOT Do
 
 - Open log files
@@ -49,6 +55,7 @@ audience:
 - All of these are the platform's responsibility
 
 ---
+
 ## Why This Decoupling Helps
 
 - Replace log routing without changing the app
@@ -57,6 +64,7 @@ audience:
 - Aggregation, filtering, alerting are all infrastructure concerns
 
 ---
+
 ## Structured Logging
 
 - One log line = one event = one JSON object
@@ -65,6 +73,7 @@ audience:
 - Searchable, filterable, alertable
 
 ---
+
 ## Structured Log Example
 
 ```json
@@ -77,6 +86,7 @@ audience:
 - Plain-text logs are harder to query at scale
 
 ---
+
 ## Log Levels
 
 - `DEBUG`: developer detail; off in production by default
@@ -87,6 +97,7 @@ audience:
 - Use them deliberately, not as commentary
 
 ---
+
 ## Anti-Patterns
 
 - Hardcoded log file paths
@@ -96,6 +107,7 @@ audience:
 - Sensitive data in logs (passwords, tokens, full credit card numbers)
 
 ---
+
 ## Log Aggregation Stack
 
 - App writes to stdout
@@ -105,11 +117,13 @@ audience:
 - UI (Kibana, Grafana, Datadog) queries and alerts
 
 ---
+
 ## End to End Log Pipeline
 
 ![log_pipeline](svg/courses/architecting/twelve-factor-app/12_logs/log_pipeline.svg)
 
 ---
+
 ## Tracing Complements Logging
 
 - Logs answer "what happened?"
@@ -119,6 +133,7 @@ audience:
 - Correlation IDs tie them together
 
 ---
+
 ## Summary
 
 - Logs are event streams; write to stdout

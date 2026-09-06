@@ -11,13 +11,16 @@ audience:
   - audiences:managers
 
 ---
+
 # Git Course Summary
 
 ---
+
 ## Course Overview
 ![course_overview](svg/courses/git/git/21_summary/course_overview.svg)
 
 ---
+
 ## Key Concepts Reviewed
 - Version control fundamentals
 - Repository management
@@ -25,6 +28,7 @@ audience:
 - Remote operations
 
 ---
+
 ## Basic Operations Mastered
 - Repository setup
 - Staging changes
@@ -32,6 +36,7 @@ audience:
 - History viewing
 
 ---
+
 ## Configuration Skills
 - User settings
 - Repository config
@@ -39,10 +44,12 @@ audience:
 - Aliases and tools
 
 ---
+
 ## Branch Operations
 ![branch_operations](svg/courses/git/git/21_summary/branch_operations.svg)
 
 ---
+
 ## Collaboration Methods
 - Remote repositories
 - Push/pull operations
@@ -50,6 +57,7 @@ audience:
 - Team workflows
 
 ---
+
 ## Advanced Features
 - Rebase operations
 - Interactive tools
@@ -57,6 +65,7 @@ audience:
 - Custom commands
 
 ---
+
 ## Best Practices Learned
 - Clear commit messages
 - Branch management
@@ -64,6 +73,7 @@ audience:
 - Team coordination
 
 ---
+
 ## Common Workflows
 - Feature branching
 - GitFlow
@@ -71,6 +81,7 @@ audience:
 - Release management
 
 ---
+
 ## Tool Proficiency
 - Command line
 - GUI clients
@@ -78,6 +89,7 @@ audience:
 - Custom scripts
 
 ---
+
 ## Security Considerations
 - Access control
 - Secure protocols
@@ -85,6 +97,7 @@ audience:
 - Signed commits
 
 ---
+
 ## Performance Optimization
 - Repository structure
 - Operation efficiency
@@ -92,6 +105,7 @@ audience:
 - Storage optimization
 
 ---
+
 ## Problem Solving
 - Conflict resolution
 - Error recovery
@@ -99,10 +113,12 @@ audience:
 - Support resources
 
 ---
+
 ## Next Learning Steps
 ![next_learning_steps](svg/courses/git/git/21_summary/next_learning_steps.svg)
 
 ---
+
 ## Recommended Practice
 - Personal projects
 - Team collaboration
@@ -110,6 +126,7 @@ audience:
 - Documentation review
 
 ---
+
 ## Advanced Learning Paths
 - Git internals
 - Custom tooling
@@ -117,6 +134,7 @@ audience:
 - Platform specifics
 
 ---
+
 ## Resource Guide
 - Official documentation
 - Online tutorials
@@ -124,6 +142,7 @@ audience:
 - Technical blogs
 
 ---
+
 ## Real-World Application
 - Project workflows
 - Team integration
@@ -131,6 +150,7 @@ audience:
 - Process optimization
 
 ---
+
 ## Career Development
 - DevOps practices
 - Collaboration skills
@@ -138,6 +158,7 @@ audience:
 - Leadership opportunities
 
 ---
+
 ## Staying Current
 - New Git features
 - Tool updates
@@ -145,6 +166,7 @@ audience:
 - Best practices
 
 ---
+
 ## Community Engagement
 - Local groups
 - Online forums
@@ -152,6 +174,7 @@ audience:
 - Knowledge sharing
 
 ---
+
 ## Final Thoughts
 - Version control importance
 - Continuous learning

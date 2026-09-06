@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Redis Cluster and Scalability
 
 ---
@@ -35,6 +36,7 @@ Scaling strategies:
 ![redis_scaling_architectures](svg/courses/databases/redis/08_cluster_scalability/redis_scaling_architectures.svg)
 
 ---
+
 ## Master-Replica Architecture
 
 ![master_replica_architecture](svg/courses/databases/redis/08_cluster_scalability/master_replica_architecture.svg)
@@ -50,6 +52,7 @@ Scaling strategies:
 - Limited by master's capacity
 
 ---
+
 ## Client-Side Partitioning
 
 ![client_side_partitioning](svg/courses/databases/redis/08_cluster_scalability/client_side_partitioning.svg)
@@ -65,6 +68,7 @@ Scaling strategies:
 - Drawbacks: Client complexity, inconsistent distribution
 
 ---
+
 ## Proxy-Based Partitioning
 
 ![proxy_based_partitioning](svg/courses/databases/redis/08_cluster_scalability/proxy_based_partitioning.svg)
@@ -80,6 +84,7 @@ Scaling strategies:
 - Drawbacks: Additional network hop, maintenance
 
 ---
+
 ## Introduction to Redis Cluster: Details
 
 Redis Cluster is the official Redis distributed solution:
@@ -97,6 +102,7 @@ Redis Cluster is the official Redis distributed solution:
 ![introduction_to_redis_cluster](svg/courses/databases/redis/08_cluster_scalability/introduction_to_redis_cluster.svg)
 
 ---
+
 ## Redis Cluster Data Sharding: Details
 
 Redis Cluster uses a hash slot approach:
@@ -112,6 +118,7 @@ Redis Cluster uses a hash slot approach:
 ![redis_cluster_data_sharding](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_data_sharding.svg)
 
 ---
+
 ## Redis Cluster Topology: Overview
 
 Minimum recommended configuration:
@@ -241,6 +248,7 @@ CLUSTER FAILOVER
 ```
 
 ---
+
 ## Redis Cluster Client Connections
 
 ![redis_cluster_client_connections](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_client_connections.svg)
@@ -346,6 +354,7 @@ redis-cli --cluster del-node 127.0.0.1:7000 [node-id]
 Important: Never remove a master with assigned slots!
 
 ---
+
 ## Redis Cluster Failover
 
 ![redis_cluster_failover](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_failover.svg)
@@ -359,12 +368,13 @@ Important: Never remove a master with assigned slots!
     - Multiple nodes agree (objective down)
     - Replica with highest replication offset becomes master
 1. Manual failover:
-    ```bash
+   ```bash
     # On a replica:
     CLUSTER FAILOVER
-    ```
+   ```
 
 ---
+
 ## Redis Cluster Availability: Overview
 
 Cluster fails when:
@@ -491,6 +501,7 @@ Alternative scaling approaches:
     - More features and guarantees
 
 ---
+
 ## Functional Partitioning Example
 
 ![functional_partitioning_example](svg/courses/databases/redis/08_cluster_scalability/functional_partitioning_example.svg)
@@ -564,6 +575,7 @@ Key areas for optimization:
     - Rebalance as needed
 
 ---
+
 ## Disaster Recovery for Redis Cluster: Overview
 
 DR strategies for Redis Cluster:

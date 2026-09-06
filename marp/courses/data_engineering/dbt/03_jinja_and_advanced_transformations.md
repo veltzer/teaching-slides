@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Jinja and Advanced Transformations
 
 ---
+
 ## What This Chapter Covers
 
 - Jinja basics
@@ -20,6 +22,7 @@ audience:
 - Common patterns
 
 ---
+
 ## Jinja In dbt
 
 - Templating layer over SQL
@@ -28,11 +31,13 @@ audience:
 - Compiles to plain SQL
 
 ---
+
 ## Jinja, ref, Macros
 
 ![jinja_macros](svg/courses/data_engineering/dbt/03_jinja_and_advanced_transformations/jinja_macros.svg)
 
 ---
+
 ## Variables
 
 ```sql
@@ -45,6 +50,7 @@ FROM users
 ```
 
 ---
+
 ## ref() And source()
 
 - `{{ ref('model') }}`: reference another model
@@ -52,6 +58,7 @@ FROM users
 - dbt resolves at compile time
 
 ---
+
 ## Conditionals
 
 ```sql
@@ -68,6 +75,7 @@ FROM users
 - Different SQL per environment
 
 ---
+
 ## Loops
 
 ```sql
@@ -81,6 +89,7 @@ FROM events
 - Generate repetitive SQL
 
 ---
+
 ## Built-In Variables
 
 - `{{ target.name }}`: env name (dev, prod)
@@ -89,6 +98,7 @@ FROM events
 - `{{ env_var('VAR') }}`: env variable
 
 ---
+
 ## var()
 
 - Custom variables in dbt_project.yml
@@ -96,6 +106,7 @@ FROM events
 - Per-environment overrides
 
 ---
+
 ## Macros
 
 - Reusable Jinja code
@@ -104,6 +115,7 @@ FROM events
 - Covered in detail later
 
 ---
+
 ## Compile vs Run
 
 - `dbt compile`: render Jinja; produce SQL
@@ -111,6 +123,7 @@ FROM events
 - Always check compiled SQL when debugging
 
 ---
+
 ## Pre-Hooks / Post-Hooks
 
 - Run before / after a model
@@ -118,12 +131,14 @@ FROM events
 - Common for: permissions, auditing
 
 ---
+
 ## adapter Macros
 
 - `{{ adapter.dispatch(...) }}`: warehouse-specific impl
 - Write once; works on Snowflake, BigQuery, etc.
 
 ---
+
 ## dbt_utils
 
 - Popular package: macros for common patterns
@@ -132,6 +147,7 @@ FROM events
 - Standard
 
 ---
+
 ## Examples Of Useful Macros
 
 - Generate dim/fact joins
@@ -140,6 +156,7 @@ FROM events
 - All in dbt_utils or fivetran-utils
 
 ---
+
 ## Common Jinja Mistakes
 
 - Heavy logic in Jinja (hard to read)
@@ -149,6 +166,7 @@ FROM events
 - Treating Jinja as a programming language
 
 ---
+
 ## Jinja Features in dbt
 
 ![jinja_features](svg/courses/data_engineering/dbt/03_jinja_and_advanced_transformations/jinja_features.svg)

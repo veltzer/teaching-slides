@@ -11,11 +11,13 @@ audience:
   - audiences:developers
 
 ---
+
 # C++ Design Patterns
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
+
 ## Bjarne Stroustrup
 
 ![bg left](jpg/courses/languages/c++/c++-design-patterns/bjarne_stroustrup.jpg)

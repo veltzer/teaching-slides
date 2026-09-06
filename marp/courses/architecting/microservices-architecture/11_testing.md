@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Testing Microservices
 
 ---
+
 ## Why Testing Is Different
 
 - A monolith: one process to test
@@ -19,6 +21,7 @@ audience:
 - End-to-end across all services is expensive and brittle
 
 ---
+
 ## The Test Pyramid for Microservices
 
 - Many: unit tests within each service
@@ -27,11 +30,13 @@ audience:
 - Fewer: end-to-end tests across the system
 
 ---
+
 ## Testing Layers
 
 ![microservice_testing](svg/courses/architecting/microservices-architecture/11_testing/microservice_testing.svg)
 
 ---
+
 ## Unit Tests
 
 - Same as for any code
@@ -40,6 +45,7 @@ audience:
 - Run on every commit
 
 ---
+
 ## Integration Tests
 
 - Test the service in isolation, but with its real dependencies (or close)
@@ -48,6 +54,7 @@ audience:
 - Slower than unit tests; check that the service works correctly with its store
 
 ---
+
 ## Component Tests
 
 - Test a service from outside its API
@@ -56,6 +63,7 @@ audience:
 - Often the sweet spot for microservices testing
 
 ---
+
 ## Contract Tests
 
 - Verify that consumer and producer agree on the API
@@ -64,6 +72,7 @@ audience:
 - Tools: Pact, Spring Cloud Contract
 
 ---
+
 ## Why Contract Tests Matter
 
 - A producer changes the API; consumers fail in production
@@ -72,6 +81,7 @@ audience:
 - Solves the "producer broke us" class of bugs
 
 ---
+
 ## End-to-End Tests
 
 - Test a user-visible flow across multiple services
@@ -80,6 +90,7 @@ audience:
 - Not a replacement for unit, integration, or contract tests
 
 ---
+
 ## Testing in Production
 
 - Some bugs only show up under real load and real data
@@ -88,6 +99,7 @@ audience:
 - Chaos engineering: deliberate failures to verify resilience
 
 ---
+
 ## Test Data Strategies
 
 - Each test starts from a known state
@@ -96,6 +108,7 @@ audience:
 - Per-service test data is easier than shared
 
 ---
+
 ## Mocking External Services
 
 - For integration tests, mock the other services
@@ -104,6 +117,7 @@ audience:
 - Mocks are convenient but introduce drift risk
 
 ---
+
 ## Local Development
 
 - Run a service locally; mock its dependencies
@@ -112,6 +126,7 @@ audience:
 - Most teams use both at different times
 
 ---
+
 ## Anti-Patterns
 
 - Only end-to-end tests, no contract tests (slow, brittle, expensive)
@@ -121,6 +136,7 @@ audience:
 - "Test in staging" without test discipline
 
 ---
+
 ## Summary
 
 - Unit and integration tests at each service

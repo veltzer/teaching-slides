@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Structural Design Patterns
 
 ---
+
 ## What This Chapter Covers
 
 - Seven patterns for *composing* classes and objects
@@ -19,6 +21,7 @@ audience:
 - Two patterns get longer treatment because they appear most often
 
 ---
+
 ## Why Structural Patterns
 
 - They answer: how do classes and objects fit together?
@@ -27,16 +30,19 @@ audience:
 - Most are about indirection — adding a layer to gain flexibility
 
 ---
+
 ## Patterns at a Glance
 
 ![structural_patterns](svg/courses/design_patterns/design-patterns/03_structural_design_patterns/structural_patterns.svg)
 
 ---
+
 ## Compared
 
 ![structural_compared](svg/courses/design_patterns/design-patterns/03_structural_design_patterns/structural_compared.svg)
 
 ---
+
 ## Adapter
 
 - *Intent*: convert one interface to another expected by clients
@@ -46,6 +52,7 @@ audience:
 - The "USB-to-HDMI" of object design
 
 ---
+
 ## Adapter in Code
 
 ```python
@@ -66,6 +73,7 @@ class PrinterAdapter(TargetPrinter):
 - Adapter forwards calls to `OldPrinter`'s API
 
 ---
+
 ## Bridge
 
 - *Intent*: decouple an abstraction from its implementation so the two can vary independently
@@ -75,6 +83,7 @@ class PrinterAdapter(TargetPrinter):
 - Looks like Strategy at small scale; differs in intent (varying *implementation*, not *algorithm*)
 
 ---
+
 ## Composite
 
 - *Intent*: treat individual objects and compositions of objects uniformly
@@ -84,6 +93,7 @@ class PrinterAdapter(TargetPrinter):
 - Heavy use in UI trees, file systems, organisation hierarchies
 
 ---
+
 ## Composite in Code
 
 ```python
@@ -105,6 +115,7 @@ class Directory(Component):
 - Clients work with `Component` regardless of leaf or composite
 
 ---
+
 ## Decorator
 
 - *Intent*: add responsibility to an object dynamically without changing its class
@@ -114,6 +125,7 @@ class Directory(Component):
 - Java I/O is the classic: `BufferedReader(new InputStreamReader(new FileInputStream(...)))`
 
 ---
+
 ## Decorator in Code
 
 ```python
@@ -137,6 +149,7 @@ n.send("hello")  # email: [2026-...] hello
 - Stack them: `WithLogging(WithTimestamp(EmailNotifier()))`
 
 ---
+
 ## Decorator vs Inheritance
 
 - Decorator adds behaviour at *runtime*; inheritance fixes it at compile time
@@ -146,6 +159,7 @@ n.send("hello")  # email: [2026-...] hello
 - Trade-off: many small classes that look similar
 
 ---
+
 ## Facade
 
 - *Intent*: provide a unified, simpler interface to a complex subsystem
@@ -155,6 +169,7 @@ n.send("hello")  # email: [2026-...] hello
 - One of the easiest patterns to apply correctly
 
 ---
+
 ## Facade in Code
 
 ```python
@@ -174,6 +189,7 @@ class HomeTheaterFacade:
 - Doesn't have to know about all the components
 
 ---
+
 ## Flyweight
 
 - *Intent*: share many small objects efficiently by separating *intrinsic* (shared) from *extrinsic* (per-instance) state
@@ -183,6 +199,7 @@ class HomeTheaterFacade:
 - Modern systems often achieve the same with object pools or interning
 
 ---
+
 ## Proxy
 
 - *Intent*: provide a placeholder for another object to control access
@@ -194,6 +211,7 @@ class HomeTheaterFacade:
     - **Caching Proxy**: caches results of slow calls
 
 ---
+
 ## Proxy in Code
 
 ```python
@@ -220,6 +238,7 @@ class ImageProxy(Image):
 - Disk read happens only on first `display()`
 
 ---
+
 ## AOP: Generalising Proxy and Decorator
 
 - Aspect-oriented programming pulls out *cross-cutting concerns* and weaves them in
@@ -229,11 +248,13 @@ class ImageProxy(Image):
 - Closely related to Proxy and Decorator — same idea, different machinery
 
 ---
+
 ## Tangled vs Woven
 
 ![aop_cross_cutting](svg/courses/design_patterns/design-patterns/03_structural_design_patterns/aop_cross_cutting.svg)
 
 ---
+
 ## Choosing Among Structural Patterns
 
 - Wrong-shaped interface &#8594; Adapter
@@ -245,6 +266,7 @@ class ImageProxy(Image):
 - Controlled access to an object &#8594; Proxy
 
 ---
+
 ## Patterns vs Composition
 
 - All structural patterns *use* composition
@@ -254,6 +276,7 @@ class ImageProxy(Image):
 - Vocabulary buys you precise communication
 
 ---
+
 ## Common Mistakes
 
 - Adapter chain wrapping an Adapter that wraps an Adapter — fix the underlying interface

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Routing Patterns
 
 ---
+
 ## What This Chapter Covers
 
 - Direct routing for point-to-point
@@ -21,6 +23,7 @@ audience:
 - Choosing the right one for the job
 
 ---
+
 ## Direct Routing
 
 - Routing key on message matches binding key on queue
@@ -30,16 +33,19 @@ audience:
 - Use for: routing logs by severity, jobs by type
 
 ---
+
 ## Routing Patterns
 
 ![routing_patterns](svg/courses/queues/rabbitmq/03_routing_patterns/routing_patterns.svg)
 
 ---
+
 ## Topic Routing
 
 ![topic_routing](svg/courses/queues/rabbitmq/03_routing_patterns/topic_routing.svg)
 
 ---
+
 ## Direct Routing Example
 
 - Exchange `log` (type direct)
@@ -49,6 +55,7 @@ audience:
 - Add a new queue with key `warning`: zero code changes elsewhere
 
 ---
+
 ## Topic Routing
 
 - Routing keys are dotted strings: `category.subcategory.detail`
@@ -58,6 +65,7 @@ audience:
 - Routing decisions become declarative
 
 ---
+
 ## Topic Routing Example
 
 - Routing keys for events: `user.signup.usa`, `order.placed.eu`, `user.login.uk`
@@ -67,6 +75,7 @@ audience:
 - `*.placed.eu` matches just `order.placed.eu`
 
 ---
+
 ## Topic Use Cases
 
 - Logs by service and severity: `<service>.<severity>`
@@ -76,6 +85,7 @@ audience:
 - Most flexible without going to headers exchange
 
 ---
+
 ## Fanout Routing
 
 - No routing logic; just broadcasts to all bindings
@@ -85,6 +95,7 @@ audience:
 - Simple and predictable
 
 ---
+
 ## Fanout Use Cases
 
 - "User updated profile" &#8594; refresh cache, update search index, audit log
@@ -93,6 +104,7 @@ audience:
 - Risk: large fanout exchanges fill many queues; watch memory
 
 ---
+
 ## Headers Routing
 
 - Routing by message headers (key-value pairs)
@@ -102,6 +114,7 @@ audience:
 - Less common than topic; harder to reason about
 
 ---
+
 ## Headers Routing Example
 
 - Headers binding: `{format: pdf, region: eu, x-match: all}`
@@ -111,6 +124,7 @@ audience:
 - Slower than topic for the same expressive power
 
 ---
+
 ## Combining Routing
 
 - A topic exchange's matched message can be routed to *another* exchange
@@ -120,6 +134,7 @@ audience:
 - Document the routing graph
 
 ---
+
 ## Round-Robin To Queue
 
 - A queue with multiple consumers: messages distributed round-robin
@@ -129,6 +144,7 @@ audience:
 - Watch: prefetch and ack must be tuned
 
 ---
+
 ## Pub-Sub Across Many Queues
 
 - Fanout to N queues, each consumed by a different group
@@ -137,6 +153,7 @@ audience:
 - Common for: independent services reacting to the same event
 
 ---
+
 ## Pub-Sub With Filtering
 
 - Topic exchange + each subscriber binds with their pattern
@@ -146,6 +163,7 @@ audience:
 - The most common production pattern
 
 ---
+
 ## Anti-Pattern: Routing in Code
 
 - Producer code that picks the queue name based on logic
@@ -155,6 +173,7 @@ audience:
 - Producer publishes to a topic; consumers self-route via bindings
 
 ---
+
 ## A Decision Tree
 
 - Same destination always? &#8594; direct (or default exchange)
@@ -164,6 +183,7 @@ audience:
 - Most teams: direct or topic; rarely the other two
 
 ---
+
 ## Common Routing Mistakes
 
 - Hardcoded routing keys (typos lurk)

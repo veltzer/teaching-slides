@@ -11,6 +11,7 @@ audience:
 - audiences:data-engineers
 
 ---
+
 # Advanced Spark Ecosystem and Best Practices
 
 ---

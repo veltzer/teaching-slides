@@ -10,6 +10,7 @@ audience:
   - audiences:architects
 
 ---
+
 # Data Lakes and Lakehouses
 
 ---
@@ -45,6 +46,7 @@ audience:
 - Strong for known questions on known data
 
 ---
+
 ## Data Lake vs Data Warehouse
 
 ![data_lake_vs_data_warehouse](svg/courses/architecting/architecture-patterns/14_data_lakes/data_lake_vs_data_warehouse.svg)

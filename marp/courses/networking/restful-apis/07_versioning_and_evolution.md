@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Versioning and Evolution
 
 ---
+
 ## Breaking vs Non-Breaking
 
 ![breaking_changes](svg/courses/networking/restful-apis/07_versioning_and_evolution/breaking_changes.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why versioning
@@ -25,6 +28,7 @@ audience:
 - Schema evolution
 
 ---
+
 ## Why Version
 
 - APIs evolve
@@ -33,6 +37,7 @@ audience:
 - Need a path to change
 
 ---
+
 ## Breaking vs Non-Breaking
 
 - Breaking: removes / renames / restricts
@@ -41,6 +46,7 @@ audience:
 - Plan for breaking changes deliberately
 
 ---
+
 ## Versioning Strategies
 
 - URL path: /v1/users
@@ -49,6 +55,7 @@ audience:
 - Media type: application/vnd.example.v1+json
 
 ---
+
 ## URL Path Versioning
 
 - Most common
@@ -57,6 +64,7 @@ audience:
 - Browser-friendly
 
 ---
+
 ## Header Versioning
 
 - Cleaner URLs
@@ -64,6 +72,7 @@ audience:
 - Routing is more complex
 
 ---
+
 ## Avoid Versioning
 
 - Make changes additive
@@ -72,6 +81,7 @@ audience:
 - Add new endpoints rather than mutate old
 
 ---
+
 ## Backwards Compatibility
 
 - Old clients keep working
@@ -80,6 +90,7 @@ audience:
 - Serialise unknown fields conservatively
 
 ---
+
 ## Deprecation
 
 - Mark as deprecated in docs
@@ -88,6 +99,7 @@ audience:
 - Grace period
 
 ---
+
 ## Migration Plan
 
 - Notify clients
@@ -97,6 +109,7 @@ audience:
 - Switch off when usage low
 
 ---
+
 ## Schema Evolution
 
 - Add fields: safe
@@ -105,6 +118,7 @@ audience:
 - Tighten validation: breaking
 
 ---
+
 ## Versioning Internal vs External
 
 - Internal: coordinate with consumers; can move fast
@@ -112,6 +126,7 @@ audience:
 - Different policies per audience
 
 ---
+
 ## Documentation Per Version
 
 - Each version has its own docs
@@ -120,6 +135,7 @@ audience:
 - Sunset dates clear
 
 ---
+
 ## Common Versioning Mistakes
 
 - No version from the start; painful retrofit

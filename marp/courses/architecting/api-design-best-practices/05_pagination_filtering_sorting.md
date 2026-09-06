@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Pagination, Filtering, Sorting, and Searching
 
 ---
+
 ## Pagination Strategies
 
 ![pagination](svg/courses/architecting/api-design-best-practices/05_pagination_filtering_sorting/pagination.svg)
 
 ---
+
 ## Why Pagination
 
 - Lists grow; full-list responses don't scale
@@ -24,11 +27,13 @@ audience:
 - Required for any list endpoint that could grow
 
 ---
+
 ## Pagination Style Choice
 
 ![pagination_styles](svg/courses/architecting/api-design-best-practices/05_pagination_filtering_sorting/pagination_styles.svg)
 
 ---
+
 ## Offset-Based Pagination
 
 - `/orders?offset=20&limit=10`
@@ -37,6 +42,7 @@ audience:
 - Doesn't require special schema
 
 ---
+
 ## Offset Problems
 
 - Inefficient at scale: `OFFSET 1000000` skips a million rows
@@ -45,6 +51,7 @@ audience:
 - Fine for small datasets; bad above thousands of rows
 
 ---
+
 ## Cursor-Based Pagination
 
 - `/orders?cursor=abc123&limit=10`
@@ -53,6 +60,7 @@ audience:
 - Client doesn't construct cursors; treats them as opaque
 
 ---
+
 ## Cursor: Pros
 
 - Stable under concurrent writes
@@ -61,6 +69,7 @@ audience:
 - The default for production APIs
 
 ---
+
 ## Cursor: Cons
 
 - Can't jump to "page 5" — only sequential
@@ -68,6 +77,7 @@ audience:
 - Requires careful schema design (need a sortable, unique key)
 
 ---
+
 ## Keyset Pagination
 
 - A specific cursor implementation
@@ -76,6 +86,7 @@ audience:
 - Performant, stable, simple
 
 ---
+
 ## Keyset Example
 
 ```http
@@ -89,6 +100,7 @@ Response:
 ```
 
 ---
+
 ## Filtering
 
 - Query parameters become filters: `?status=pending&customer_id=c1`
@@ -97,6 +109,7 @@ Response:
 - Keep simple cases simple; reach for query languages only when needed
 
 ---
+
 ## Filtering Conventions
 
 - `?status=pending` — exact match
@@ -105,6 +118,7 @@ Response:
 - Document each filter; don't expose every database column
 
 ---
+
 ## Sorting
 
 - `?sort=created_at` — ascending
@@ -113,6 +127,7 @@ Response:
 - Document which fields are sortable
 
 ---
+
 ## Searching
 
 - Free-text search: `?q=red+shoes`
@@ -121,6 +136,7 @@ Response:
 - Returns ranked results
 
 ---
+
 ## Search vs Filter
 
 - Filter: structured, exact, predictable
@@ -129,6 +145,7 @@ Response:
 - `/products/search?q=shoes&filter=in_stock`
 
 ---
+
 ## Field Selection (Sparse Fieldsets)
 
 - Client requests only the fields it needs
@@ -137,6 +154,7 @@ Response:
 - Enable when responses are large; don't bother for tiny resources
 
 ---
+
 ## Combining Concerns
 
 - `/orders?status=pending&sort=-created_at&cursor=abc&limit=20&fields=id,total`
@@ -145,6 +163,7 @@ Response:
 - Document each separately; the combinations are obvious
 
 ---
+
 ## Anti-Patterns
 
 - No pagination at all on a growing collection
@@ -153,6 +172,7 @@ Response:
 - Inventing a custom query language (use SQL or a known DSL if needed)
 
 ---
+
 ## Summary
 
 - Cursor-based pagination is the safe default

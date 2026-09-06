@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Language Models
 
 ---
+
 ## What This Chapter Covers
 
 - What a language model actually is — probability over sequences
@@ -21,6 +23,7 @@ audience:
 - Evaluation: perplexity, cross-entropy, bits-per-character, downstream tasks
 
 ---
+
 ## What Is a Language Model
 
 - A distribution over sequences of tokens: `P(w_1, w_2, ..., w_n)`
@@ -29,6 +32,7 @@ audience:
 - Everything else — generation, scoring, ranking — falls out of that one distribution
 
 ---
+
 ## Why Sequence Probabilities Matter
 
 - Speech recognition: pick the transcript with the highest probability
@@ -37,11 +41,13 @@ audience:
 - Generation: sample the next token from the conditional distribution
 
 ---
+
 ## The Three Eras
 
 ![lm_taxonomy](svg/courses/ai/natural-language-processing/06_language_models/lm_taxonomy.svg)
 
 ---
+
 ## Next-Token Prediction
 
 - Given a prefix, predict the distribution over the next token
@@ -50,6 +56,7 @@ audience:
 - Decoding turns the distribution into text — greedy, sampling, or beam search
 
 ---
+
 ## n-gram Language Models
 
 - Approximate `P(w_t | history)` by truncating the history to the last `n-1` tokens
@@ -58,6 +65,7 @@ audience:
 - Counts come from a training corpus; probabilities are ratios of counts
 
 ---
+
 ## Maximum Likelihood Estimation
 
 - For a bigram model: `P(w_t | w_{t-1}) = count(w_{t-1}, w_t) / count(w_{t-1})`
@@ -66,6 +74,7 @@ audience:
 - Any `n-gram` not in training gets probability zero — and zero kills the whole sequence
 
 ---
+
 ## The Sparsity Problem
 
 - Vocabulary of 50k words means 2.5 billion possible bigrams
@@ -74,6 +83,7 @@ audience:
 - We need to redistribute probability mass to events we have not yet seen
 
 ---
+
 ## Laplace Smoothing
 
 - Add one (or a small alpha) to every count before normalizing
@@ -82,6 +92,7 @@ audience:
 - Over-corrects badly: rare-but-real events get too little, unseen events get too much
 
 ---
+
 ## Good-Turing Smoothing
 
 - Use the count of `n-grams` that occur `r` times to estimate the probability of `n-grams` that occur `r-1` times
@@ -90,6 +101,7 @@ audience:
 - Usually combined with another method for the high-count tail
 
 ---
+
 ## Kneser-Ney Smoothing
 
 - Backs off based on how many distinct contexts a word appears in, not raw frequency
@@ -98,11 +110,13 @@ audience:
 - Still a sensible baseline when you cannot afford a neural model
 
 ---
+
 ## Smoothing Compared
 
 ![ngram_smoothing](svg/courses/ai/natural-language-processing/06_language_models/ngram_smoothing.svg)
 
 ---
+
 ## Back-off vs Interpolation
 
 - Back-off: if the trigram is unseen, fall back to the bigram, then the unigram
@@ -111,6 +125,7 @@ audience:
 - Both need a held-out set to tune the back-off weights or interpolation lambdas
 
 ---
+
 ## Limits of n-gram Models
 
 - Long-range dependencies are invisible — anything beyond `n-1` tokens is ignored
@@ -119,6 +134,7 @@ audience:
 - No sharing of statistical strength between similar contexts
 
 ---
+
 ## The Neural Turn
 
 - Represent each word as a dense vector — an embedding
@@ -127,11 +143,13 @@ audience:
 - Bengio et al. (2003) introduced this with a feed-forward neural language model
 
 ---
+
 ## Bengio Feed-Forward LM
 
 ![neural_lm_architecture](svg/courses/ai/natural-language-processing/06_language_models/neural_lm_architecture.svg)
 
 ---
+
 ## Why the FFN LM Worked
 
 - Embeddings let `cat` and `dog` share statistical strength
@@ -140,6 +158,7 @@ audience:
 - And it gave us word embeddings for free as a side effect
 
 ---
+
 ## Recurrent Language Models
 
 - A recurrent network processes the sequence one token at a time
@@ -148,6 +167,7 @@ audience:
 - `LSTM` and `GRU` cells made training stable enough to be useful at scale
 
 ---
+
 ## RNN Strengths and Weaknesses
 
 - Strength: variable-length context, parameter sharing across positions
@@ -156,6 +176,7 @@ audience:
 - The transformer eventually replaced them, but the conceptual leap was the RNN
 
 ---
+
 ## A Simple RNN LM in Code
 
 ```python
@@ -176,6 +197,7 @@ class RnnLM(nn.Module):
 - The same `forward` is used for training and for autoregressive sampling
 
 ---
+
 ## Modern Language Models
 
 - Transformer architectures replaced recurrence with self-attention
@@ -184,11 +206,13 @@ class RnnLM(nn.Module):
 - Scale changed everything: more data, more parameters, more compute
 
 ---
+
 ## Causal vs Masked
 
 ![causal_vs_masked](svg/courses/ai/natural-language-processing/06_language_models/causal_vs_masked.svg)
 
 ---
+
 ## Causal Language Modeling
 
 - Predict each token from the tokens to its left
@@ -197,6 +221,7 @@ class RnnLM(nn.Module):
 - Also used as a pure pretraining objective even when generation is not the end goal
 
 ---
+
 ## Masked Language Modeling
 
 - Mask out 15 percent of tokens; predict them from both sides of context
@@ -205,6 +230,7 @@ class RnnLM(nn.Module):
 - Not directly usable for generation — it predicts a fixed slot, not a continuation
 
 ---
+
 ## The Paradigm Shift
 
 - Old way: design a task-specific model, train it from scratch on labeled data
@@ -213,6 +239,7 @@ class RnnLM(nn.Module):
 - The general model often beats the specialist, even with much less labeled data
 
 ---
+
 ## Pretrain Then Finetune
 
 - Pretraining: huge unlabeled corpus, expensive, done once per architecture
@@ -221,6 +248,7 @@ class RnnLM(nn.Module):
 - The pretrained checkpoint is the artifact you actually share and reuse
 
 ---
+
 ## Evaluation: Perplexity
 
 - Perplexity is the exponentiated average negative log-likelihood per token
@@ -229,6 +257,7 @@ class RnnLM(nn.Module):
 - Lower is better; only comparable across models on the exact same tokenization
 
 ---
+
 ## Cross-Entropy and Bits-per-Character
 
 - Cross-entropy in nats is just the average negative log-likelihood
@@ -237,6 +266,7 @@ class RnnLM(nn.Module):
 - The two units are interchangeable; pick whichever is conventional in your subfield
 
 ---
+
 ## Why Tokenization Affects Perplexity
 
 - Perplexity is per-token; smaller tokens mean more tokens per sentence
@@ -245,6 +275,7 @@ class RnnLM(nn.Module):
 - When in doubt, report both perplexity and bits-per-character
 
 ---
+
 ## Intrinsic vs Extrinsic Evaluation
 
 - Intrinsic: how well the model fits text it has not seen — perplexity
@@ -253,6 +284,7 @@ class RnnLM(nn.Module):
 - For deployed systems, extrinsic numbers are what matter
 
 ---
+
 ## Downstream Task Evaluation
 
 - Question answering, summarization, classification, translation, code generation
@@ -261,6 +293,7 @@ class RnnLM(nn.Module):
 - Always look at multiple benchmarks before drawing a conclusion about a model
 
 ---
+
 ## Computing Perplexity
 
 ```python
@@ -278,6 +311,7 @@ def perplexity(model, ids):
 - Make sure the loss does not include padding or special tokens
 
 ---
+
 ## Common Evaluation Pitfalls
 
 - Reporting perplexity across different tokenizers — not comparable
@@ -286,6 +320,7 @@ def perplexity(model, ids):
 - Comparing models trained on different amounts of data without saying so
 
 ---
+
 ## When n-gram Models Still Make Sense
 
 - Edge devices with no GPU and tight latency budgets
@@ -294,6 +329,7 @@ def perplexity(model, ids):
 - As baselines — if a neural model does not beat Kneser-Ney, something is wrong
 
 ---
+
 ## Anti-Patterns
 
 - Treating perplexity as the only signal — it misses many failure modes
@@ -302,6 +338,7 @@ def perplexity(model, ids):
 - Reporting downstream numbers without held-out evaluation
 
 ---
+
 ## Summary
 
 - A language model is a distribution over sequences; everything else follows

@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Basic Types and Operators
 
 ---
+
 ## Python's Built-in Types
 - **Numeric**: `int`, `float`, `complex`
 - **Text**: `str`
@@ -25,6 +27,7 @@ print(type(True))     # <class 'bool'>
 ```
 
 ---
+
 ## Integers (`int`)
 - Whole numbers, positive or negative
 - Unlimited precision (no overflow!)
@@ -37,6 +40,7 @@ print(type(x))   # <class 'int'>
 ```
 
 ---
+
 ## Integer Literals
 - Decimal: `42`
 - Binary: `0b101010`
@@ -52,7 +56,9 @@ print(1_000_000)   # 1000000
 ```
 
 ---
+
 ## Arithmetic Operators
+
 | Operator | Description | Example |
 |----------|-------------|---------|
 | `+` | Addition | `5 + 3` = `8` |
@@ -64,6 +70,7 @@ print(1_000_000)   # 1000000
 | `**` | Power | `5 ** 3` = `125` |
 
 ---
+
 ## Division Types
 
 ```python
@@ -81,6 +88,7 @@ print(-7 % 2)   # 1
 ```
 
 ---
+
 ## Integer Methods and Functions
 
 ```python
@@ -95,6 +103,7 @@ print(oct(8))         # '0o10'
 ```
 
 ---
+
 ## Floats (`float`)
 - Floating-point numbers (IEEE 754 double precision)
 - 64-bit, ~15-17 significant digits
@@ -109,6 +118,7 @@ print(type(x))  # <class 'float'>
 ```
 
 ---
+
 ## Float Precision Issues
 - Floats cannot represent all decimal numbers exactly
 
@@ -122,6 +132,7 @@ print(math.isclose(0.1 + 0.2, 0.3))  # True
 ```
 
 ---
+
 ## The `decimal` Module
 - For exact decimal arithmetic
 
@@ -137,6 +148,7 @@ print(a + b == Decimal("0.3"))  # True
 - Use when precision matters (e.g., financial calculations)
 
 ---
+
 ## Float Functions
 
 ```python
@@ -151,6 +163,7 @@ print(math.pi)           # 3.141592653589793
 ```
 
 ---
+
 ## Special Float Values
 
 ```python
@@ -167,6 +180,7 @@ print(nan == nan)             # False (NaN quirk)
 ```
 
 ---
+
 ## Complex Numbers
 
 ```python
@@ -182,6 +196,7 @@ print(z * w)        # (-5+10j)
 ```
 
 ---
+
 ## Type Conversion (Casting)
 
 ```python
@@ -198,6 +213,7 @@ print(float("3.14")) # 3.14
 ```
 
 ---
+
 ## Booleans (`bool`)
 - Two values: `True` and `False`
 - Subclass of `int` (`True` is `1`, `False` is `0`)
@@ -210,7 +226,9 @@ print(isinstance(True, int))  # True
 ```
 
 ---
+
 ## Comparison Operators
+
 | Operator | Description |
 |----------|-------------|
 | `==` | Equal to |
@@ -223,6 +241,7 @@ print(isinstance(True, int))  # True
 | `is not` | Not the same object |
 
 ---
+
 ## Comparison Examples
 
 ```python
@@ -237,6 +256,7 @@ print(1 < 2 > 0)  # True
 ```
 
 ---
+
 ## Boolean Operators
 
 ```python
@@ -250,6 +270,7 @@ print(False and 1/0)    # False (1/0 not evaluated)
 ```
 
 ---
+
 ## Truthiness and Falsiness
 - These are falsy (evaluate to `False`):
     - `False`, `None`
@@ -267,6 +288,7 @@ print(bool("hi"))  # True
 ```
 
 ---
+
 ## The `None` Type
 - Represents the absence of a value
 - Only one `None` object exists (singleton)
@@ -280,6 +302,7 @@ print(x == None)     # True (but use 'is')
 ```
 
 ---
+
 ## `==` vs `is`
 - `==` checks value equality
 - `is` checks identity (same object in memory)
@@ -295,6 +318,7 @@ print(a is c)   # True (same object)
 ```
 
 ---
+
 ## Strings (`str`)
 - Sequence of Unicode characters
 - Immutable (cannot be changed after creation)
@@ -310,7 +334,9 @@ multi-line"""
 ```
 
 ---
+
 ## String Escape Characters
+
 | Escape | Meaning |
 |--------|---------|
 | `\n` | Newline |
@@ -327,6 +353,7 @@ print("She said \"hi\"")
 ```
 
 ---
+
 ## Raw Strings
 - Prefix with `r` to disable escape processing
 - Useful for regex patterns and file paths
@@ -341,6 +368,7 @@ print(path)
 ```
 
 ---
+
 ## String Indexing: Example
 
 - Zero-based indexing
@@ -355,11 +383,13 @@ print(s[-2])   # 'o'
 ```
 
 ---
+
 ## String Indexing
 
 ![string_indexing](svg/courses/languages/python/python-programming/03_basic_types_and_operators/string_indexing.svg)
 
 ---
+
 ## String Slicing
 - `s[start:stop:step]`
 - `start` is inclusive, `stop` is exclusive
@@ -374,6 +404,7 @@ print(s[::-1])   # 'nohtyP' (reversed)
 ```
 
 ---
+
 ## String Operations
 
 ```python
@@ -386,6 +417,7 @@ print("xyz" not in s)  # True
 ```
 
 ---
+
 ## String Methods - Case
 
 ```python
@@ -398,6 +430,7 @@ print(s.swapcase())    # 'hELLO wORLD'
 ```
 
 ---
+
 ## String Methods - Search
 
 ```python
@@ -411,6 +444,7 @@ print(s.endswith("Hello"))    # True
 ```
 
 ---
+
 ## String Methods - Modify
 
 ```python
@@ -424,6 +458,7 @@ print(s2.replace("World", "Python"))  # 'Hello Python'
 ```
 
 ---
+
 ## String Methods - Split and Join
 
 ```python
@@ -438,6 +473,7 @@ print(",".join(words))   # 'Hello,World'
 ```
 
 ---
+
 ## String Methods - Testing
 
 ```python
@@ -451,6 +487,7 @@ print("hello".islower())   # True
 ```
 
 ---
+
 ## String Formatting - f-strings (Python 3.6+)
 - Recommended way to format strings
 
@@ -469,6 +506,7 @@ print(f"Pi is {pi:.2f}")  # Pi is 3.14
 ```
 
 ---
+
 ## f-string Format Specifiers
 
 ```python
@@ -485,6 +523,7 @@ print(f"{y:.2e}")    # '1.23e+06'
 ```
 
 ---
+
 ## f-string Alignment
 
 ```python
@@ -496,6 +535,7 @@ print(f"{s:*^10}")  # '****hi****' (fill)
 ```
 
 ---
+
 ## String Formatting - `.format()` Method
 
 ```python
@@ -509,6 +549,7 @@ print("{:.2f}".format(3.14159))
 - f-strings are preferred for new code
 
 ---
+
 ## String Formatting - `%` Operator (Legacy)
 
 ```python
@@ -522,6 +563,7 @@ print("Hex: %x" % 255)
 - Not recommended for new code
 
 ---
+
 ## Strings are Immutable
 
 ```python
@@ -537,7 +579,9 @@ print(s)  # 'Hello'
 - Original string is never modified
 
 ---
+
 ## Bitwise Operators
+
 | Operator | Description | Example |
 |----------|-------------|---------|
 | `&` | AND | `5 & 3` = `1` |
@@ -548,6 +592,7 @@ print(s)  # 'Hello'
 | `>>` | Right shift | `5 >> 1` = `2` |
 
 ---
+
 ## Augmented Assignment Operators
 
 ```python
@@ -562,6 +607,7 @@ x %= 5    # x = x % 5 -> 2.0
 ```
 
 ---
+
 ## Operator Precedence (High to Low)
 1. `**` (exponentiation)
 1. `~`, `+x`, `-x` (unary)
@@ -577,6 +623,7 @@ x %= 5    # x = x % 5 -> 2.0
 1. `or`
 
 ---
+
 ## The `math` Module
 
 ```python
@@ -592,6 +639,7 @@ print(math.factorial(5))      # 120
 ```
 
 ---
+
 ## Built-in Numeric Functions
 
 ```python
@@ -605,6 +653,7 @@ print(pow(2, 10))      # 1024
 ```
 
 ---
+
 ## Summary
 - Python has rich built-in types: `int`, `float`, `str`, `bool`, `None`
 - Integers have unlimited precision

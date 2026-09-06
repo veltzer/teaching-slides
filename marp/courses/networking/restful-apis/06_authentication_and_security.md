@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Authentication and Security
 
 ---
+
 ## Auth Methods
 
 ![auth_methods](svg/courses/networking/restful-apis/06_authentication_and_security/auth_methods.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Auth concepts
@@ -26,6 +29,7 @@ audience:
 - HTTPS, CORS, common pitfalls
 
 ---
+
 ## Authentication vs Authorisation
 
 - Authn: who are you
@@ -34,6 +38,7 @@ audience:
 - Often discussed together
 
 ---
+
 ## API Keys
 
 - Static secret per client
@@ -42,6 +47,7 @@ audience:
 - Good for: server-to-server, internal
 
 ---
+
 ## Basic Auth
 
 - Username + password, base64 encoded
@@ -50,6 +56,7 @@ audience:
 - Use over HTTPS only; rare in modern APIs
 
 ---
+
 ## Bearer Tokens
 
 - `Authorization: Bearer <token>`
@@ -58,6 +65,7 @@ audience:
 - Standard for REST APIs
 
 ---
+
 ## JWT
 
 - JSON Web Token
@@ -66,6 +74,7 @@ audience:
 - Stateless verification
 
 ---
+
 ## JWT Pros and Cons
 
 - Pro: no DB lookup per request
@@ -74,6 +83,7 @@ audience:
 - Con: large; payload sent every call
 
 ---
+
 ## OAuth2
 
 - Delegated authorisation
@@ -82,6 +92,7 @@ audience:
 - Standard for third-party access
 
 ---
+
 ## OAuth2 Flows
 
 - Authorization code: web apps
@@ -90,6 +101,7 @@ audience:
 - Implicit and password: deprecated
 
 ---
+
 ## OIDC
 
 - OpenID Connect
@@ -98,6 +110,7 @@ audience:
 - Standard for SSO
 
 ---
+
 ## HTTPS
 
 - Required everywhere
@@ -106,6 +119,7 @@ audience:
 - HSTS to enforce
 
 ---
+
 ## CORS
 
 - Cross-Origin Resource Sharing
@@ -114,6 +128,7 @@ audience:
 - Origin whitelist
 
 ---
+
 ## Rate Limiting
 
 - Cap requests per client
@@ -122,6 +137,7 @@ audience:
 - Protect from abuse
 
 ---
+
 ## Input Validation
 
 - Don't trust clients
@@ -130,6 +146,7 @@ audience:
 - Prevents injection
 
 ---
+
 ## Common Security Mistakes
 
 - Storing JWT in localStorage (XSS)
@@ -139,6 +156,7 @@ audience:
 - CORS with `*` for credentialed requests
 
 ---
+
 ## Layered Security Controls
 
 ![security_layers](svg/courses/networking/restful-apis/06_authentication_and_security/security_layers.svg)

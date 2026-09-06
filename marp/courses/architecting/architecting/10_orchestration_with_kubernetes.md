@@ -11,9 +11,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Orchestration with Kubernetes
 
 ---
+
 ## What Is Container Orchestration?
 
 - Automated management of containerized applications at scale
@@ -22,6 +24,7 @@ audience:
 - Required when running dozens or hundreds of containers
 
 ---
+
 ## Why Kubernetes?
 
 - Open-source, originally developed by Google
@@ -31,11 +34,13 @@ audience:
 - Massive ecosystem of tools and extensions
 
 ---
+
 ## Kubernetes Architecture
 
 ![kubernetes_architecture](svg/courses/architecting/architecting/10_orchestration_with_kubernetes/kubernetes_architecture.svg)
 
 ---
+
 ## Control Plane Components
 
 - `API Server` - the front door to the cluster, handles all REST requests
@@ -44,6 +49,7 @@ audience:
 - `Controller Manager` - runs control loops that reconcile desired vs actual state
 
 ---
+
 ## Worker Node Components
 
 - `kubelet` - agent running on each node that manages pods
@@ -52,6 +58,7 @@ audience:
 - Each node reports its status to the control plane
 
 ---
+
 ## Pods
 
 - The smallest deployable unit in Kubernetes
@@ -60,6 +67,7 @@ audience:
 - Pods are ephemeral and can be replaced at any time
 
 ---
+
 ## Pod Definition
 
 ```yaml
@@ -85,11 +93,13 @@ spec:
 ```
 
 ---
+
 ## Multi-Container Pod Patterns
 
 ![multi_container_pod_patterns](svg/courses/architecting/architecting/10_orchestration_with_kubernetes/multi_container_pod_patterns.svg)
 
 ---
+
 ## Sidecar Pattern
 
 - A helper container that runs alongside the main container
@@ -98,6 +108,7 @@ spec:
 - The main container does not need to know about the sidecar
 
 ---
+
 ## Deployments
 
 - Manages the lifecycle of a set of identical pods
@@ -106,6 +117,7 @@ spec:
 - The standard way to run stateless applications
 
 ---
+
 ## Deployment Definition
 
 ```yaml
@@ -131,11 +143,13 @@ spec:
 ```
 
 ---
+
 ## Rolling Update Strategy
 
 ![rolling_update_strategy](svg/courses/architecting/architecting/10_orchestration_with_kubernetes/rolling_update_strategy.svg)
 
 ---
+
 ## Deployment Update Configuration
 
 ```yaml
@@ -152,6 +166,7 @@ spec:
 - Setting `maxUnavailable: 0` ensures zero downtime
 
 ---
+
 ## ReplicaSets
 
 - Ensures a specified number of pod replicas are running
@@ -160,6 +175,7 @@ spec:
 - Provides self-healing by replacing failed pods
 
 ---
+
 ## Services
 
 - A stable network endpoint that exposes a set of pods
@@ -168,6 +184,7 @@ spec:
 - The IP address of a Service remains constant even as pods come and go
 
 ---
+
 ## Service Types
 
 | Type | Description |
@@ -178,6 +195,7 @@ spec:
 | `ExternalName` | Maps to a DNS name |
 
 ---
+
 ## ClusterIP Service
 
 ```yaml
@@ -198,11 +216,13 @@ spec:
 - Other pods reach it via `web-service.default.svc.cluster.local`
 
 ---
+
 ## Service Networking Diagram
 
 ![service_networking_diagram](svg/courses/architecting/architecting/10_orchestration_with_kubernetes/service_networking_diagram.svg)
 
 ---
+
 ## Ingress
 
 - Manages external HTTP/HTTPS access to services in the cluster
@@ -211,6 +231,7 @@ spec:
 - More flexible than `LoadBalancer` services
 
 ---
+
 ## Ingress Definition
 
 ```yaml
@@ -233,6 +254,7 @@ spec:
 ```
 
 ---
+
 ## ConfigMaps
 
 - Store non-sensitive configuration data as key-value pairs
@@ -241,6 +263,7 @@ spec:
 - Changes can be applied without rebuilding images
 
 ---
+
 ## ConfigMap Definition
 
 ```yaml
@@ -258,6 +281,7 @@ data:
 ```
 
 ---
+
 ## Using ConfigMaps in Pods
 
 ```yaml
@@ -278,6 +302,7 @@ spec:
 ```
 
 ---
+
 ## Secrets
 
 - Store sensitive data such as passwords, tokens, and certificates
@@ -286,6 +311,7 @@ spec:
 - Mounted as files or environment variables, similar to ConfigMaps
 
 ---
+
 ## Secret Definition
 
 ```yaml
@@ -303,6 +329,7 @@ data:
 - Use `kubectl create secret` to avoid manual encoding
 
 ---
+
 ## Secrets Best Practices
 
 - Enable encryption at rest in `etcd`
@@ -312,6 +339,7 @@ data:
 - Rotate secrets regularly and automate the process
 
 ---
+
 ## Namespaces
 
 - Virtual clusters within a physical cluster
@@ -320,6 +348,7 @@ data:
 - Default namespaces: `default`, `kube-system`, `kube-public`
 
 ---
+
 ## Health Checks: Liveness Probes
 
 - Determines if a container is running and healthy
@@ -328,6 +357,7 @@ data:
 - Types: HTTP, TCP, and command-based probes
 
 ---
+
 ## Liveness Probe Example
 
 ```yaml
@@ -345,6 +375,7 @@ spec:
 ```
 
 ---
+
 ## Health Checks: Readiness Probes
 
 - Determines if a container is ready to accept traffic
@@ -353,6 +384,7 @@ spec:
 - Used during startup and when dependencies are temporarily unavailable
 
 ---
+
 ## Readiness Probe Example
 
 ```yaml
@@ -370,6 +402,7 @@ spec:
 ```
 
 ---
+
 ## Startup Probes
 
 - Used for containers that take a long time to start
@@ -378,11 +411,13 @@ spec:
 - Only runs during the initial startup phase
 
 ---
+
 ## Self-Healing Mechanisms
 
 ![self_healing_mechanisms](svg/courses/architecting/architecting/10_orchestration_with_kubernetes/self_healing_mechanisms.svg)
 
 ---
+
 ## Horizontal Pod Autoscaler (HPA)
 
 ```yaml
@@ -407,6 +442,7 @@ spec:
 ```
 
 ---
+
 ## Resource Management
 
 ```yaml
@@ -425,6 +461,7 @@ resources:
 - Pod is throttled if it exceeds CPU limits
 
 ---
+
 ## Custom Resource Definitions (CRDs)
 
 - Extend the Kubernetes API with your own resource types
@@ -433,6 +470,7 @@ resources:
 - Examples: `PostgresCluster`, `Certificate`, `PrometheusRule`
 
 ---
+
 ## CRD Example
 
 ```yaml
@@ -454,6 +492,7 @@ spec:
 ```
 
 ---
+
 ## The Operator Pattern
 
 - An operator is a controller that watches a CRD and reconciles reality to the spec
@@ -462,6 +501,7 @@ spec:
 - Common for stateful systems: databases, message brokers, caches
 
 ---
+
 ## Operator Reconciliation Loop
 
 - Watch — subscribe to changes on the CRD
@@ -471,6 +511,7 @@ spec:
 - Loop forever — the cluster is always converging toward the spec
 
 ---
+
 ## Popular Operators
 
 - `prometheus-operator` - manages Prometheus, Alertmanager, and rules
@@ -481,6 +522,7 @@ spec:
 - Operator SDK and Kubebuilder scaffold your own operators
 
 ---
+
 ## When to Write an Operator
 
 - You have a stateful application with complex operational requirements
@@ -490,6 +532,7 @@ spec:
 - Otherwise: prefer existing operators or simple manifests
 
 ---
+
 ## Summary
 
 - Kubernetes automates deployment, scaling, and management of containers

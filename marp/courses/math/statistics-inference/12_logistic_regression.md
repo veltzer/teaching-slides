@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Logistic Regression
 
 ---
+
 ## What This Chapter Covers
 
 - Why linear regression fails for a yes/no outcome
@@ -21,11 +23,13 @@ audience:
 - Using the model for classification, and where it sits among GLMs
 
 ---
+
 ## The Logistic (Sigmoid) Curve
 
 ![sigmoid](svg/courses/math/statistics-inference/12_logistic_regression/sigmoid.svg)
 
 ---
+
 ## A Binary Outcome Breaks The Line
 
 - The response is 0/1: converted or not, churned or not, defective or not
@@ -35,6 +39,7 @@ audience:
 - That transform is the **logit** — and the model is logistic regression
 
 ---
+
 ## The Logit Link And The S-Curve
 
 - Define **odds** = p / (1 &minus; p), and **logit(p) = log(odds)** — maps (0, 1) to (&minus;&infin;, +&infin;)
@@ -44,6 +49,7 @@ audience:
 - Same idea generalizes — Poisson regression for counts, etc. — same fitting machinery
 
 ---
+
 ## Odds, Log-Odds, And Odds Ratios
 
 - Coefficients live on the **log-odds** scale: &beta;&#8332; = the change in log-odds of y=1 per one-unit increase in x&#8332;, holding the rest fixed
@@ -53,11 +59,13 @@ audience:
 - For a categorical predictor, e^&beta; is the odds ratio for that level versus the baseline
 
 ---
+
 ## Odds Ratios on a Forest Plot
 
 ![odds_ratio_forest](svg/courses/math/statistics-inference/12_logistic_regression/odds_ratio_forest.svg)
 
 ---
+
 ## Fitting And Deviance
 
 - No closed form — fit by **maximum likelihood**, maximizing the (log-)likelihood of the observed 0s and 1s, solved iteratively (IRLS / Newton steps)
@@ -67,6 +75,7 @@ audience:
 - Watch for **complete separation** (a predictor perfectly splits the classes): the MLE runs off to infinity, coefficients and SEs explode — the fitter will usually warn you
 
 ---
+
 ## Inference On Coefficients
 
 - Each &beta;&#8332; has a standard error; the **Wald test** (z = &beta;&#8332; / SE) tests H&#8320;: &beta;&#8332; = 0, i.e. OR = 1
@@ -76,6 +85,7 @@ audience:
 - Same modeling discipline as linear regression: watch multicollinearity (VIFs still apply), don't run stepwise then trust the p-values, validate out of sample
 
 ---
+
 ## From Probabilities To Decisions
 
 - The model outputs a **probability** for each case; turning it into a 0/1 prediction needs a **threshold** (0.5 is a default, rarely the right one)
@@ -85,6 +95,7 @@ audience:
 - Logistic regression is a solid, interpretable baseline classifier — and the building block for much of applied ML
 
 ---
+
 ## Logistic Regression In Python
 
 ```python
@@ -102,6 +113,7 @@ print("odds-ratio 95% CI:\n", np.exp(fit.conf_int()).round(3))
 ```
 
 ---
+
 ## Common Mistakes
 
 - Using linear regression for a 0/1 outcome

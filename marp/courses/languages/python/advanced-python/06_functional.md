@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Functional Python
 
 ## Overview

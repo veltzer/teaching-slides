@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Scaling Microservices
 
 ---
+
 ## Why Microservices Help With Scale
 
 - Each service scales independently
@@ -20,11 +22,13 @@ audience:
 - Tech: pick the right tool per service
 
 ---
+
 ## Scaling Axes
 
 ![scaling_axes](svg/courses/architecting/microservices-architecture/14_scaling/scaling_axes.svg)
 
 ---
+
 ## Horizontal vs Vertical
 
 - **Horizontal**: more instances of the same service
@@ -33,6 +37,7 @@ audience:
 - Stateless services scale horizontally trivially (twelve-factor)
 
 ---
+
 ## Autoscaling
 
 - The platform scales replicas based on load
@@ -42,6 +47,7 @@ audience:
 - Kubernetes HPA is the typical tool
 
 ---
+
 ## Scaling Reads vs Writes
 
 - Reads: scale horizontally easily (more replicas, more cache)
@@ -50,6 +56,7 @@ audience:
 - For writes at scale: partition by key, accept eventual consistency
 
 ---
+
 ## Database Scaling
 
 - Per-service databases scale per service
@@ -58,6 +65,7 @@ audience:
 - Or: switch to a database designed for scale (DynamoDB, Cassandra)
 
 ---
+
 ## Caching Strategies
 
 - Per-service caches: Redis, Memcached
@@ -66,6 +74,7 @@ audience:
 - See Architecture Patterns ch 10 (caching) for depth
 
 ---
+
 ## Backpressure
 
 - A service overloaded: rejects work or slows down upstream
@@ -74,6 +83,7 @@ audience:
 - The signal travels upstream so the source slows down
 
 ---
+
 ## Async for Scale
 
 - Replace synchronous calls with messages where possible
@@ -82,6 +92,7 @@ audience:
 - Trades immediacy for throughput
 
 ---
+
 ## Partitioning Data
 
 - Split data by a key (user id, region, customer id)
@@ -90,6 +101,7 @@ audience:
 - The pattern is the same for databases and message brokers
 
 ---
+
 ## Sharding Trade-Offs
 
 - Shard key choice is critical and hard to change
@@ -98,6 +110,7 @@ audience:
 - Pick a key with good cardinality and even distribution
 
 ---
+
 ## Geographic Scaling
 
 - Multi-region deployment
@@ -106,6 +119,7 @@ audience:
 - Failover between regions: complex but feasible
 
 ---
+
 ## Capacity Planning
 
 - Measure current load and growth rate
@@ -114,6 +128,7 @@ audience:
 - Don't autoscale alone — set bounds
 
 ---
+
 ## Cost vs Performance
 
 - More replicas = higher cost
@@ -122,6 +137,7 @@ audience:
 - Run cost reports per service; teams own the line item
 
 ---
+
 ## Anti-Patterns
 
 - Premature scaling: 50 services for an MVP
@@ -131,6 +147,7 @@ audience:
 - Sharding before measuring whether it's needed
 
 ---
+
 ## Course Recap
 
 - 14 chapters covering: principles, decomposition, communication, data, deployment, observability, composition, and scaling
@@ -139,6 +156,7 @@ audience:
 - Done wrong: distributed monolith with all the costs and none of the benefits
 
 ---
+
 ## Where to Go Next
 
 - Pick one capability in your system
@@ -148,6 +166,7 @@ audience:
 - Don't try to "go microservices" all at once
 
 ---
+
 ## Summary
 
 - Horizontal scaling is the default; per-service granularity is the win

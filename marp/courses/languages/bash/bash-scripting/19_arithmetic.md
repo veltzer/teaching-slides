@@ -12,14 +12,17 @@ audience:
   - audiences:devops
 
 ---
+
 # Doing Arithmetic
 
 ---
+
 ## Arithmetic Operators Reference
 
 ![arithmetic_operators](svg/courses/languages/bash/bash-scripting/19_arithmetic/arithmetic_operators.svg)
 
 ---
+
 ## Integer Arithmetic: `$(( ))`
 
 ```bash
@@ -39,6 +42,7 @@ echo $(($x + $y))    # 13 (also works, but $ is redundant)
 ```
 
 ---
+
 ## Assignment Operators
 
 ```bash
@@ -59,6 +63,7 @@ x=$((x + 5))     # x = 15 (long form)
 ```
 
 ---
+
 ## The `(( ))` Command
 
 ```bash
@@ -81,6 +86,7 @@ fi
 ```
 
 ---
+
 ## Comparison Operators in `(( ))`
 
 ```bash
@@ -104,6 +110,7 @@ echo $(( 1 << 8 ))         # 256 (left shift)
 ```
 
 ---
+
 ## Bases and Number Representation
 
 ```bash
@@ -129,6 +136,7 @@ printf "%08b\n" 42   # not standard, use bc
 ```
 
 ---
+
 ## Integer Overflow
 
 ```bash
@@ -142,6 +150,7 @@ echo $((2**63))               # -9223372036854775808 (overflow!)
 ```
 
 ---
+
 ## Floating Point: The Problem
 
 ```bash
@@ -153,6 +162,7 @@ echo $((1.5 + 2.5))     # syntax error!
 ```
 
 ---
+
 ## Floating Point with `bc`
 
 ```bash
@@ -184,6 +194,7 @@ CALC
 ```
 
 ---
+
 ## Floating Point with `awk`
 
 ```bash
@@ -207,6 +218,7 @@ awk "BEGIN {print $x + $y}"
 ```
 
 ---
+
 ## Floating Point with `python3`
 
 ```bash
@@ -231,6 +243,7 @@ calc "2**100"
 ```
 
 ---
+
 ## Floating Point Comparison
 
 ```bash
@@ -256,6 +269,7 @@ fi
 ```
 
 ---
+
 ## `let` Command
 
 ```bash
@@ -277,6 +291,7 @@ echo "$c"    # 8
 ```
 
 ---
+
 ## Practical: Unit Conversion Script
 
 ```bash

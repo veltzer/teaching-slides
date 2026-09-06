@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Advanced Spark Ecosystem and Best Practices
 
 ---
+
 ## Ecosystem Overview
 * Kubernetes integration
 * Cloud platforms
@@ -21,10 +23,12 @@ audience:
 * MLflow integration
 
 ---
+
 ## Modern Architecture
 ![modern_architecture](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/modern_architecture.svg)
 
 ---
+
 ## Deployment Options
 1. Standalone cluster
 1. YARN deployment
@@ -32,6 +36,7 @@ audience:
 1. Cloud services
 
 ---
+
 ## Kubernetes Integration
 ```python
 # Kubernetes configuration
@@ -40,10 +45,12 @@ spark.kubernetes.namespace=spark
 ```
 
 ---
+
 ## Resource Management
 ![resource_management](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/resource_management.svg)
 
 ---
+
 ## Cloud Integration
 1. AWS EMR
 1. Azure Synapse
@@ -51,6 +58,7 @@ spark.kubernetes.namespace=spark
 1. Custom deployment
 
 ---
+
 ## Cloud Configuration
 ```python
 # AWS EMR configuration
@@ -61,10 +69,12 @@ spark.conf.set(
 ```
 
 ---
+
 ## Storage Integration
 ![storage_integration](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/storage_integration.svg)
 
 ---
+
 ## Delta Lake Overview
 1. ACID transactions
 1. Schema enforcement
@@ -72,6 +82,7 @@ spark.conf.set(
 1. Optimization
 
 ---
+
 ## Delta Lake Operations
 ```python
 # Write to Delta Lake
@@ -81,10 +92,12 @@ df.write.format("delta") \
 ```
 
 ---
+
 ## Version Control
 ![version_control](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/version_control.svg)
 
 ---
+
 ## Time Travel
 ```python
 # Read specific version
@@ -94,6 +107,7 @@ df = spark.read.format("delta") \
 ```
 
 ---
+
 ## Schema Evolution
 1. Add columns
 1. Remove columns
@@ -101,6 +115,7 @@ df = spark.read.format("delta") \
 1. Merge schema
 
 ---
+
 ## Delta Operations
 ```python
 from delta.tables import *
@@ -110,10 +125,12 @@ deltaTable = DeltaTable.forPath(
 ```
 
 ---
+
 ## Optimization Methods
 ![optimization_methods](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/optimization_methods.svg)
 
 ---
+
 ## Performance Tuning
 1. File sizing
 1. Partitioning
@@ -121,6 +138,7 @@ deltaTable = DeltaTable.forPath(
 1. Indexing
 
 ---
+
 ## Monitoring Setup
 ```python
 # Configure monitoring
@@ -131,10 +149,12 @@ spark.conf.set(
 ```
 
 ---
+
 ## Metrics Collection
 ![metrics_collection](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/metrics_collection.svg)
 
 ---
+
 ## Security Framework
 1. Authentication
 1. Authorization
@@ -142,6 +162,7 @@ spark.conf.set(
 1. Auditing
 
 ---
+
 ## Authentication Setup
 ```python
 # Kerberos configuration
@@ -152,10 +173,12 @@ spark.conf.set(
 ```
 
 ---
+
 ## Authorization Model
 ![authorization_model](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/authorization_model.svg)
 
 ---
+
 ## Data Governance
 1. Lineage tracking
 1. Audit logging
@@ -163,6 +186,7 @@ spark.conf.set(
 1. Compliance
 
 ---
+
 ## Backup Strategies
 ```python
 # Backup configuration
@@ -172,10 +196,12 @@ def backup_data():
 ```
 
 ---
+
 ## Disaster Recovery
 ![disaster_recovery](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/disaster_recovery.svg)
 
 ---
+
 ## CI/CD Pipeline
 1. Build process
 1. Testing
@@ -183,6 +209,7 @@ def backup_data():
 1. Monitoring
 
 ---
+
 ## Testing Framework
 ```python
 # Unit test example
@@ -192,10 +219,12 @@ def test_transformation():
 ```
 
 ---
+
 ## Quality Assurance
 ![quality_assurance](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/quality_assurance.svg)
 
 ---
+
 ## Cost Optimization
 1. Resource sizing
 1. Spot instances
@@ -203,6 +232,7 @@ def test_transformation():
 1. Caching strategy
 
 ---
+
 ## Resource Planning
 ```python
 # Resource configuration
@@ -213,10 +243,12 @@ spark.conf.set(
 ```
 
 ---
+
 ## Capacity Planning
 ![capacity_planning](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/capacity_planning.svg)
 
 ---
+
 ## MLflow Integration
 1. Experiment tracking
 1. Model registry
@@ -224,6 +256,7 @@ spark.conf.set(
 1. Monitoring
 
 ---
+
 ## Production Pipeline
 ```python
 # Pipeline configuration
@@ -232,10 +265,12 @@ mlflow.spark.log_model(pipeline, "model")
 ```
 
 ---
+
 ## Workflow Management
 ![workflow_management](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/workflow_management.svg)
 
 ---
+
 ## Best Practices
 1. Code organization
 1. Documentation
@@ -243,6 +278,7 @@ mlflow.spark.log_model(pipeline, "model")
 1. Monitoring
 
 ---
+
 ## Code Standards
 ```python
 # Example structure
@@ -252,10 +288,12 @@ class SparkJob:
 ```
 
 ---
+
 ## Documentation
 ![documentation](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/documentation.svg)
 
 ---
+
 ## Troubleshooting
 1. Log analysis
 1. Metrics review
@@ -263,6 +301,7 @@ class SparkJob:
 1. Error tracking
 
 ---
+
 ## Common Issues
 ```python
 # Memory issues
@@ -273,10 +312,12 @@ spark.conf.set(
 ```
 
 ---
+
 ## Error Handling
 ![error_handling](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/error_handling.svg)
 
 ---
+
 ## Maintenance
 1. Updates
 1. Patches
@@ -284,6 +325,7 @@ spark.conf.set(
 1. Cleanup
 
 ---
+
 ## Version Management
 ```python
 # Version compatibility
@@ -294,10 +336,12 @@ spark.conf.set(
 ```
 
 ---
+
 ## Future Planning
 ![future_planning](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/future_planning.svg)
 
 ---
+
 ## Migration Strategies
 1. Version upgrade
 1. Platform migration
@@ -305,6 +349,7 @@ spark.conf.set(
 1. Service migration
 
 ---
+
 ## Cost Management
 ```python
 # Cost optimization
@@ -314,10 +359,12 @@ def optimize_resources():
 ```
 
 ---
+
 ## Scaling Strategies
 ![scaling_strategies](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/scaling_strategies.svg)
 
 ---
+
 ## Advanced Features
 1. Custom extensions
 1. Plugins
@@ -325,6 +372,7 @@ def optimize_resources():
 1. Tools
 
 ---
+
 ## Community Resources
 * Documentation
 * Forums

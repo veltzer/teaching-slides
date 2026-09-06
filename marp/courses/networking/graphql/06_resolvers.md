@@ -7,19 +7,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Resolvers
 
 ---
+
 ## N+1 Problem
 
 ![resolver_chain](svg/courses/networking/graphql/06_resolvers/resolver_chain.svg)
 
 ---
+
 ## DataLoader Pattern
 
 ![dataloader_pattern](svg/courses/networking/graphql/06_resolvers/dataloader_pattern.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What resolvers are
@@ -30,6 +34,7 @@ audience:
 - Error handling
 
 ---
+
 ## What Resolvers Are
 
 - Functions that fetch field data
@@ -38,6 +43,7 @@ audience:
 - Where logic lives
 
 ---
+
 ## Resolver Signature
 
 - `(parent, args, context, info) => value`
@@ -47,6 +53,7 @@ audience:
 - info: query AST
 
 ---
+
 ## Default Resolvers
 
 - If no resolver for field: read from parent
@@ -54,6 +61,7 @@ audience:
 - Reduces boilerplate
 
 ---
+
 ## Custom Resolvers
 
 ```javascript
@@ -66,6 +74,7 @@ audience:
 ```
 
 ---
+
 ## Per-Field Granularity
 
 - Each field can have its own resolver
@@ -73,6 +82,7 @@ audience:
 - Server stitches the result
 
 ---
+
 ## Context
 
 - Per-request object
@@ -82,6 +92,7 @@ audience:
 - Don't mutate
 
 ---
+
 ## Async
 
 - Resolvers can return Promise
@@ -89,6 +100,7 @@ audience:
 - Use for any IO
 
 ---
+
 ## Resolver Order
 
 - Top-down: query, then nested
@@ -96,6 +108,7 @@ audience:
 - Children after parent resolves
 
 ---
+
 ## Error Handling
 
 - Throw: bubbles to errors array
@@ -104,6 +117,7 @@ audience:
 - Custom errors for clients
 
 ---
+
 ## Information Leak
 
 - Don't expose internal errors
@@ -111,6 +125,7 @@ audience:
 - Log full info server-side
 
 ---
+
 ## Field-Level Auth
 
 - Check in resolver
@@ -118,6 +133,7 @@ audience:
 - Or return null for sensitive fields
 
 ---
+
 ## Performance
 
 - Parallel sibling resolution
@@ -125,6 +141,7 @@ audience:
 - Cache where appropriate
 
 ---
+
 ## Testing Resolvers
 
 - Unit: call directly with mocks
@@ -132,6 +149,7 @@ audience:
 - Both useful
 
 ---
+
 ## Common Resolver Mistakes
 
 - Logic in resolvers that should be in services

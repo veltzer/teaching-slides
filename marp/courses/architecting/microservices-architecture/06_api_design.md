@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # API Design for Microservices
 
 ---
+
 ## What's Different About Microservice APIs
 
 - Internal APIs serve other services, not end users
@@ -19,6 +21,7 @@ audience:
 - See the API Design Best Practices course for the general principles
 
 ---
+
 ## Internal vs External APIs
 
 - External: public, versioned carefully, documented for outsiders
@@ -26,16 +29,19 @@ audience:
 - Both still need contracts; internal "freer" doesn't mean unstructured
 
 ---
+
 ## Style Choices
 
 ![api_styles](svg/courses/architecting/microservices-architecture/06_api_design/api_styles.svg)
 
 ---
+
 ## API Style Comparison
 
 ![api_styles_compared](svg/courses/architecting/microservices-architecture/06_api_design/api_styles_compared.svg)
 
 ---
+
 ## Contract First
 
 - Write the API spec before the implementation
@@ -44,6 +50,7 @@ audience:
 - Mocks come from the spec for parallel work
 
 ---
+
 ## Versioning Internally
 
 - Internal APIs change more often than external
@@ -52,6 +59,7 @@ audience:
 - Roll out producers before consumers, or vice versa, depending on direction
 
 ---
+
 ## Idempotency
 
 - Every state-changing endpoint should accept an idempotency key
@@ -59,6 +67,7 @@ audience:
 - This is non-negotiable for any production microservice
 
 ---
+
 ## Authentication Between Services
 
 - mTLS: mutual TLS; each service has its own cert
@@ -67,6 +76,7 @@ audience:
 - Don't roll your own; use a standard
 
 ---
+
 ## Authorization Between Services
 
 - Even internal calls need auth: "is service A allowed to call service B?"
@@ -75,6 +85,7 @@ audience:
 - Defense in depth: don't trust internal callers blindly
 
 ---
+
 ## Pagination, Filtering, Sorting
 
 - Same as external APIs (cursor pagination, etc.)
@@ -82,6 +93,7 @@ audience:
 - Don't expose unbounded lists to internal callers either
 
 ---
+
 ## Error Handling
 
 - Same principles as external APIs
@@ -90,6 +102,7 @@ audience:
 - Help the caller decide what to do
 
 ---
+
 ## Documentation
 
 - OpenAPI specs in the repo
@@ -98,6 +111,7 @@ audience:
 - Self-service is the goal
 
 ---
+
 ## Anti-Patterns
 
 - Internal APIs without specs ("we'll just call the producer's tech lead")
@@ -107,6 +121,7 @@ audience:
 - "Internal so we don't need rate limits" — also wrong
 
 ---
+
 ## Summary
 
 - Internal APIs follow the same principles as external ones, with more room to evolve

@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Workflow Fundamentals
 
 ---
@@ -171,6 +172,7 @@ jobs:
 ![job_dependency_flow](svg/courses/devops/github-workflows/02_workflow_fundamentals/job_dependency_flow.svg)
 
 ---
+
 ## Workflow Status Badges
 
 - Add a badge to your `README.md`:

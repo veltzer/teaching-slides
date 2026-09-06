@@ -13,11 +13,13 @@ audience:
   - audiences:developers
 
 ---
+
 # Modern C++ For C Programmers
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
+
 ## Bjarne Stroustrup
 
 ![bg left](jpg/courses/languages/c++/modern-c++-for-c-programmers/bjarne_stroustrup.jpg)

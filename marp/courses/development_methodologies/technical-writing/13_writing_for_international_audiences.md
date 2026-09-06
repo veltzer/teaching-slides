@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Writing for International Audiences
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![global_writing_tips](svg/courses/development_methodologies/technical-writing/13_writing_for_international_audiences/global_writing_tips.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Plain language principles
@@ -27,6 +29,7 @@ audience:
 - When localisation is worth it
 
 ---
+
 ## Why It Matters
 
 - Most software users worldwide aren't native English speakers
@@ -36,11 +39,13 @@ audience:
 - Even US-only docs benefit
 
 ---
+
 ## Practices
 
 ![global_writing](svg/courses/development_methodologies/technical-writing/13_writing_for_international_audiences/intl_writing.svg)
 
 ---
+
 ## Plain Language Basics
 
 - Short sentences (under 25 words)
@@ -51,6 +56,7 @@ audience:
 - Same advice that helps native speakers, more so for non-native
 
 ---
+
 ## What Translates Poorly
 
 - **Idioms**: "hit the ground running" makes no sense
@@ -60,6 +66,7 @@ audience:
 - **Sarcasm**: never works in writing, ever
 
 ---
+
 ## What Translates Well
 
 - Concrete nouns: "the database", "the user"
@@ -69,6 +76,7 @@ audience:
 - Diagrams and screenshots
 
 ---
+
 ## Numbers and Units
 
 - "1,000": Anglo-American thousands separator; many countries use "1.000"
@@ -78,6 +86,7 @@ audience:
 - Time zones: "14:00 UTC" not "2pm"
 
 ---
+
 ## Date Formats
 
 - US: 5/1/2026 (May 1)
@@ -87,6 +96,7 @@ audience:
 - Always: ISO 8601 (YYYY-MM-DD)
 
 ---
+
 ## Localisation vs Internationalisation
 
 - **i18n**: making the software ready for multiple locales
@@ -96,6 +106,7 @@ audience:
 - Both are projects of their own
 
 ---
+
 ## Cost of Localisation
 
 - Translation: $0.10-$0.30 per word per language, professionally
@@ -105,6 +116,7 @@ audience:
 - Pick the locales that justify the cost
 
 ---
+
 ## Tools for Localisation
 
 - Crowdin, Lokalise, Phrase, Transifex: web-based translation platforms
@@ -114,6 +126,7 @@ audience:
 - Free tiers for open source
 
 ---
+
 ## Cultural Sensitivity
 
 - Examples shouldn't centre one culture
@@ -123,6 +136,7 @@ audience:
 - Test with diverse reviewers if possible
 
 ---
+
 ## Avoiding Casual Language
 
 - "Hey there!" — feels presumptuous in some cultures
@@ -132,6 +146,7 @@ audience:
 - Save personality for the marketing site, not the docs
 
 ---
+
 ## Inclusive Language
 
 - "Master/slave" → "primary/replica"
@@ -142,6 +157,7 @@ audience:
 - Tools (alex, woke) catch these
 
 ---
+
 ## When Localisation Is Worth It
 
 - Large user base in non-English-speaking regions
@@ -151,6 +167,7 @@ audience:
 - High-conversion content (landing pages, onboarding)
 
 ---
+
 ## When Plain English Is Enough
 
 - Internal docs
@@ -160,6 +177,7 @@ audience:
 - Most of the time, this is the right answer
 
 ---
+
 ## A Practical Approach
 
 - Default: write in plain English
@@ -170,6 +188,7 @@ audience:
 - Keep docs short — less to translate
 
 ---
+
 ## Common Mistakes
 
 - Jargon-heavy docs assuming everyone reads English

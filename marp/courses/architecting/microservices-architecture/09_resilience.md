@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Resilience Patterns
 
 ---
+
 ## Why Resilience
 
 - Services fail; networks blip; dependencies are slow
@@ -18,11 +20,13 @@ audience:
 - These patterns are how distributed systems survive
 
 ---
+
 ## Resilience Pillars
 
 ![resilience_pillars](svg/courses/architecting/microservices-architecture/09_resilience/resilience_pillars.svg)
 
 ---
+
 ## Timeouts
 
 - Every cross-service call must have a timeout
@@ -31,6 +35,7 @@ audience:
 - Pick timeouts based on the called service's SLA, not a guess
 
 ---
+
 ## Retries
 
 - Retry on transient failures (network blip, 503)
@@ -39,6 +44,7 @@ audience:
 - Bound the retry count; don't retry forever
 
 ---
+
 ## Retry Anti-Patterns
 
 - Tight retry loops: 1000 retries in a second amplifies the problem
@@ -47,6 +53,7 @@ audience:
 - "Just retry" without thinking about the error model
 
 ---
+
 ## Circuit Breaker
 
 - Track recent failure rate to a dependency
@@ -55,6 +62,7 @@ audience:
 - Restore to closed if it succeeds
 
 ---
+
 ## Circuit Breaker States
 
 - **Closed**: normal operation, calls go through
@@ -63,16 +71,19 @@ audience:
 - States transition based on success/failure rates
 
 ---
+
 ## Circuit Breaker Visualized
 
 ![circuit_breaker](svg/courses/architecting/microservices-architecture/09_resilience/circuit_breaker.svg)
 
 ---
+
 ## Resilience Pattern Toolkit
 
 ![resilience_patterns](svg/courses/architecting/microservices-architecture/09_resilience/resilience_patterns.svg)
 
 ---
+
 ## Bulkhead
 
 - Isolate failure domains so one bad area doesn't sink the rest
@@ -81,6 +92,7 @@ audience:
 - Inspired by ship hull design
 
 ---
+
 ## Bulkhead Example
 
 - Service A has 100 worker threads
@@ -89,6 +101,7 @@ audience:
 - One bad dependency degrades 25%, not 100%
 
 ---
+
 ## Fallbacks
 
 - When a dependency fails, return something useful (not just an error)
@@ -97,6 +110,7 @@ audience:
 - Fallbacks turn outages into degraded modes
 
 ---
+
 ## Graceful Degradation
 
 - Identify each feature's importance
@@ -105,6 +119,7 @@ audience:
 - The system stays usable even when parts are down
 
 ---
+
 ## Health Endpoints
 
 - Each service exposes `/healthz` and `/ready`
@@ -113,6 +128,7 @@ audience:
 - Treat them as part of the API
 
 ---
+
 ## Rate Limiting (Self-Protection)
 
 - A service should limit how fast it accepts work
@@ -121,6 +137,7 @@ audience:
 - Backpressure protects everyone
 
 ---
+
 ## Service Mesh Resilience
 
 - A mesh handles timeouts, retries, circuit breakers transparently
@@ -129,6 +146,7 @@ audience:
 - Examples: Istio, Linkerd
 
 ---
+
 ## Chaos Engineering
 
 - Deliberately inject failures in production-like environments
@@ -137,6 +155,7 @@ audience:
 - Tools: Chaos Monkey, Litmus, Gremlin
 
 ---
+
 ## Anti-Patterns
 
 - No timeouts (infinite waits)
@@ -145,6 +164,7 @@ audience:
 - Hidden cascading failures because no one tested under failure conditions
 
 ---
+
 ## Summary
 
 - Timeouts, retries, circuit breakers, bulkheads, fallbacks

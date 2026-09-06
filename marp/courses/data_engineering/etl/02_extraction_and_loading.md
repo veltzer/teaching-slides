@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Extraction and Loading
 
 ---
+
 ## What This Chapter Covers
 
 - Source types
@@ -19,6 +21,7 @@ audience:
 - Idempotency
 
 ---
+
 ## Database Sources
 
 - JDBC and ODBC
@@ -27,6 +30,7 @@ audience:
 - Change feeds
 
 ---
+
 ## File Sources
 
 - Local
@@ -35,6 +39,7 @@ audience:
 - FTP, SFTP
 
 ---
+
 ## API Sources
 
 - REST and GraphQL
@@ -43,6 +48,7 @@ audience:
 - Authentication churn
 
 ---
+
 ## Stream Sources
 
 - Kafka and friends
@@ -51,6 +57,7 @@ audience:
 - Idempotent writers required
 
 ---
+
 ## Full Extract
 
 - Re-read everything
@@ -59,6 +66,7 @@ audience:
 - Captures hard deletes
 
 ---
+
 ## Incremental Extract
 
 - Only new and changed rows
@@ -67,6 +75,7 @@ audience:
 - Cheaper at scale
 
 ---
+
 ## Change Data Capture
 
 - Source emits changes
@@ -75,11 +84,13 @@ audience:
 - Latency in seconds
 
 ---
+
 ## CDC Flow
 
 ![cdc_flow](svg/courses/data_engineering/etl/02_extraction_and_loading/cdc_flow.svg)
 
 ---
+
 ## Loading Modes
 
 - Append
@@ -88,11 +99,13 @@ audience:
 - Truncate and reload
 
 ---
+
 ## Modes Compared
 
 ![load_modes](svg/courses/data_engineering/etl/02_extraction_and_loading/load_modes.svg)
 
 ---
+
 ## Bulk Loading
 
 - Use the warehouse loader
@@ -101,6 +114,7 @@ audience:
 - Avoid row-by-row inserts
 
 ---
+
 ## Idempotency
 
 - Re-running yields same result
@@ -109,6 +123,7 @@ audience:
 - Required for safe retries
 
 ---
+
 ## Backfills
 
 - Reload old data
@@ -117,6 +132,7 @@ audience:
 - Validate after
 
 ---
+
 ## Late-Arriving Data
 
 - Out-of-order rows
@@ -125,6 +141,7 @@ audience:
 - Track lateness metrics
 
 ---
+
 ## Common Loading Mistakes
 
 - Row-by-row inserts at scale

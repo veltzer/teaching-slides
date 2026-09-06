@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Tracing Concepts
 
 ---
+
 ## What This Chapter Covers
 
 - What tracing is
@@ -20,11 +22,13 @@ audience:
 - Events and links
 
 ---
+
 ## Spans, Traces, Propagation
 
 ![spans_and_traces](svg/courses/observability_and_monitoring/opentelemetry/02_tracing_concepts/spans_and_traces.svg)
 
 ---
+
 ## What Tracing Is
 
 - Track a request through services
@@ -33,6 +37,7 @@ audience:
 - Distributed-systems debugging tool
 
 ---
+
 ## Span
 
 - One unit of work
@@ -40,11 +45,13 @@ audience:
 - Building block of traces
 
 ---
+
 ## What Lives Inside a Span
 
 ![span_anatomy](svg/courses/observability_and_monitoring/opentelemetry/02_tracing_concepts/span_anatomy.svg)
 
 ---
+
 ## Trace
 
 - Tree of spans
@@ -53,6 +60,7 @@ audience:
 - Identified by trace_id
 
 ---
+
 ## Trace Diagram
 
 - Service A starts root span
@@ -61,6 +69,7 @@ audience:
 - All share trace_id
 
 ---
+
 ## Context Propagation
 
 - trace_id and parent span_id passed across boundaries
@@ -68,6 +77,7 @@ audience:
 - Carries context across HTTP, gRPC, queues
 
 ---
+
 ## W3C Trace Context
 
 - Standard headers
@@ -76,6 +86,7 @@ audience:
 - Replaces older formats
 
 ---
+
 ## Span Attributes
 
 - Key-value tags
@@ -84,6 +95,7 @@ audience:
 - Searchable in backends
 
 ---
+
 ## Events
 
 - Timestamped log within a span
@@ -91,6 +103,7 @@ audience:
 - Lighter than separate spans
 
 ---
+
 ## Links
 
 - Connect spans across traces
@@ -98,6 +111,7 @@ audience:
 - Less common
 
 ---
+
 ## Status
 
 - OK or ERROR
@@ -105,6 +119,7 @@ audience:
 - Helps backends highlight failures
 
 ---
+
 ## Sampling
 
 - Don't capture every trace
@@ -112,6 +127,7 @@ audience:
 - Saves cost and storage
 
 ---
+
 ## Head Sampling
 
 - Decide at trace start
@@ -119,6 +135,7 @@ audience:
 - Simple, cheap
 
 ---
+
 ## Tail Sampling
 
 - Decide after trace finishes
@@ -126,6 +143,7 @@ audience:
 - More expensive but smarter
 
 ---
+
 ## Common Tracing Mistakes
 
 - No context propagation; broken traces across services

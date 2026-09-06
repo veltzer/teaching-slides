@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Bayesian Theory
 
 ---
+
 ## What This Chapter Covers
 
 - Priors, posteriors, and the formal Bayesian model
@@ -21,11 +23,13 @@ audience:
 - Admissibility, the complete-class theorems, and objective priors
 
 ---
+
 ## Prior, Likelihood, Posterior
 
 ![prior posterior](svg/courses/math/statistics-theory/14_bayesian_theory/prior_posterior.svg)
 
 ---
+
 ## The Bayesian Model, Formally
 
 - Add to the sampling model { f(x | &theta;) : &theta; &isin; &Theta; } a **prior** &pi;(&theta;) — a probability distribution on &Theta; encoding beliefs (or a chosen reference) *before* the data; this turns &theta; into a random variable
@@ -35,6 +39,7 @@ audience:
 - **Improper priors** (&#8747;&pi; = &infin;, e.g. "flat on &#8477;") are allowed *if* the posterior comes out proper — convenient, but check; an improper posterior is a non-result
 
 ---
+
 ## Conjugacy And The Exponential Family
 
 - A prior family is **conjugate** to a likelihood if the posterior stays in the same family — then Bayes' theorem is just an *update of the prior's parameters*, no integration needed
@@ -44,6 +49,7 @@ audience:
 - Conjugacy is now mostly a *teaching and prototyping* device; real models are non-conjugate and the posterior is approximated numerically (MCMC, variational inference) — but the conjugate cases build the right intuition and are the building blocks of hierarchical models
 
 ---
+
 ## Bayes Estimators And Decision Theory
 
 - Pick a loss L(&theta;, a); the **Bayes estimator** minimizes the *posterior expected loss* &#8747; L(&theta;, a) &pi;(&theta; | x) d&theta; — equivalently it minimizes the **Bayes risk** r(&pi;, &delta;) = &#8747; R(&theta;, &delta;) &pi;(&theta;) d&theta;, the prior-averaged frequentist risk
@@ -53,6 +59,7 @@ audience:
 - Prediction is decision-theoretic too: the posterior predictive minimizes expected predictive loss and correctly propagates **both** parameter uncertainty and irreducible noise — the right thing to report instead of a plug-in forecast
 
 ---
+
 ## Credible Sets vs Confidence Sets
 
 - A **credible set** C with &#8747;_C &pi;(&theta; | x) d&theta; = 1&minus;&alpha; is, by construction, a *probability statement about &theta; given the data*: P(&theta; &isin; C | x) = 1&minus;&alpha; — the interpretation most people *want* (and wrongly attach to confidence intervals)
@@ -62,6 +69,7 @@ audience:
 - Honesty rule: report which one you actually computed and under which prior — don't compute a confidence interval and describe it with the "95% probability the parameter is in here" credible-set language
 
 ---
+
 ## Asymptotics: Bernstein&ndash;von Mises
 
 - **Bernstein&ndash;von Mises theorem**: in a regular parametric model, as n &#8594; &infin; the posterior is asymptotically **Normal**, centered at the MLE &theta;&#770;&#8345;, with covariance the inverse Fisher information: &pi;(&theta; | x&#8321;,...,x&#8345;) &asymp; N( &theta;&#770;&#8345;, [n I&#8321;(&theta;&#8320;)]&#8315;&sup1; ) — and the dependence on the (continuous, positive) prior **washes out**
@@ -71,6 +79,7 @@ audience:
 - Bottom line: in nice large-sample problems Bayesian and frequentist machinery converge; the genuine divergences (and the genuine value-add of priors) are in *small samples, hierarchical pooling, and irregular models*
 
 ---
+
 ## Admissibility, Complete Classes, Objective Priors
 
 - Bayes meets decision theory: under mild conditions a Bayes estimator (with a proper prior, unique Bayes rule) is **admissible** — not uniformly dominated by any other estimator; conversely the **complete-class theorems** say (essentially) every admissible estimator *is* a Bayes rule or a limit of Bayes rules. So "admissible" &asymp; "Bayes for some prior" — the Bayesian framework *generates* the good frequentist procedures
@@ -80,6 +89,7 @@ audience:
 - **Sensitivity analysis is mandatory**: report results under a few defensible priors (an informative one, a weakly-informative one, a reference one); if conclusions swing with the prior, *that* is the finding — say so rather than hiding behind one prior
 
 ---
+
 ## Bayesian Theory In Code
 
 ```python
@@ -104,6 +114,7 @@ for (a0, b0) in [(1, 1), (50, 5), (2, 200)]:                # very different pri
 ```
 
 ---
+
 ## Common Mistakes
 
 - Pretending a prior is "objective" and assumption-free — it isn't; report it, justify it, and check sensitivity to it

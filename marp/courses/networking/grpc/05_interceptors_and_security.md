@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Interceptors and Security
 
 ---
+
 ## What This Chapter Covers
 
 - Interceptors: client and server, unary and streaming
@@ -21,6 +23,7 @@ audience:
 - mTLS, JWT, OAuth2 integration
 
 ---
+
 ## What Is an Interceptor?
 
 - Middleware for gRPC calls
@@ -30,21 +33,25 @@ audience:
 - Equivalent to HTTP middleware in REST frameworks
 
 ---
+
 ## Common Interceptor Chain
 
 ![interceptor_chain](svg/courses/networking/grpc/05_interceptors_and_security/interceptor_chain.svg)
 
 ---
+
 ## Interceptor Use Cases
 
 ![interceptor_uses](svg/courses/networking/grpc/05_interceptors_and_security/interceptor_uses.svg)
 
 ---
+
 ## Authentication Layers
 
 ![auth_layers](svg/courses/networking/grpc/05_interceptors_and_security/auth_layers.svg)
 
 ---
+
 ## Why Interceptors?
 
 - Cross-cutting concerns: logging, tracing, auth
@@ -54,6 +61,7 @@ audience:
 - The standard way to extend gRPC behavior
 
 ---
+
 ## Server Interceptor (Unary, Go)
 
 ```go
@@ -75,6 +83,7 @@ func loggingInterceptor(
 - Returns or transforms the response
 
 ---
+
 ## Server Streaming Interceptor
 
 - Similar shape, but wraps a stream
@@ -84,6 +93,7 @@ func loggingInterceptor(
 - Same purpose: cross-cutting logic
 
 ---
+
 ## Client Interceptor
 
 - Wraps outgoing calls
@@ -93,6 +103,7 @@ func loggingInterceptor(
 - Both unary and streaming variants
 
 ---
+
 ## Common Server Interceptors
 
 - Logging — request/response, latency
@@ -103,6 +114,7 @@ func loggingInterceptor(
 - Recovery — convert panics to gRPC errors
 
 ---
+
 ## Common Client Interceptors
 
 - Auth token attachment
@@ -112,6 +124,7 @@ func loggingInterceptor(
 - Request ID generation
 
 ---
+
 ## Chaining Interceptors
 
 ```go
@@ -130,6 +143,7 @@ server := grpc.NewServer(
 - Each library has a chain helper
 
 ---
+
 ## Auth Interceptor Example
 
 ```go
@@ -149,6 +163,7 @@ func authInterceptor(ctx context.Context, req interface{},
 ```
 
 ---
+
 ## Why TLS for gRPC?
 
 - gRPC defaults to plaintext only on localhost
@@ -158,6 +173,7 @@ func authInterceptor(ctx context.Context, req interface{},
 - Without TLS, anyone can read or modify traffic
 
 ---
+
 ## TLS Setup (Server)
 
 ```go
@@ -172,6 +188,7 @@ server := grpc.NewServer(grpc.Creds(creds))
 - Clients must trust the cert (or use mTLS)
 
 ---
+
 ## TLS Setup (Client)
 
 ```go
@@ -186,6 +203,7 @@ conn, err := grpc.Dial(addr, grpc.WithTransportCredentials(creds))
 - Public CAs work for hosted services
 
 ---
+
 ## Mutual TLS (mTLS)
 
 - Both client and server present certs
@@ -195,6 +213,7 @@ conn, err := grpc.Dial(addr, grpc.WithTransportCredentials(creds))
 - Common in service meshes
 
 ---
+
 ## mTLS Setup
 
 ```go
@@ -210,6 +229,7 @@ creds := credentials.NewTLS(&tls.Config{
 ```
 
 ---
+
 ## Token-Based Authentication
 
 - JWT tokens in `authorization` metadata
@@ -219,6 +239,7 @@ creds := credentials.NewTLS(&tls.Config{
 - Per-call rather than per-connection
 
 ---
+
 ## Per-RPC Credentials
 
 - Library construct: attach creds per call
@@ -228,6 +249,7 @@ creds := credentials.NewTLS(&tls.Config{
 - Layered security model
 
 ---
+
 ## OAuth2 Integration
 
 - Tokens minted by an OAuth2 IdP
@@ -237,6 +259,7 @@ creds := credentials.NewTLS(&tls.Config{
 - Standard for user-facing systems
 
 ---
+
 ## Channel Credentials vs Call Credentials
 
 - Channel: per-connection (TLS, mTLS)
@@ -246,6 +269,7 @@ creds := credentials.NewTLS(&tls.Config{
 - Call credentials are typically per-user
 
 ---
+
 ## Authorization vs Authentication
 
 - Authentication: "who are you?"
@@ -255,6 +279,7 @@ creds := credentials.NewTLS(&tls.Config{
 - Don't conflate the two
 
 ---
+
 ## Security Anti-Patterns
 
 - Plaintext gRPC in production
@@ -264,6 +289,7 @@ creds := credentials.NewTLS(&tls.Config{
 - Auth interceptor that ignores some methods
 
 ---
+
 ## Defense in Depth
 
 - TLS everywhere
@@ -273,6 +299,7 @@ creds := credentials.NewTLS(&tls.Config{
 - Audit logs for everything
 
 ---
+
 ## Summary
 
 - Interceptors are the gRPC middleware mechanism

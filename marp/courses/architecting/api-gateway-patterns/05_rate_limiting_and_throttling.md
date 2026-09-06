@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Rate Limiting and Throttling
 
 ---
+
 ## Token Bucket
 
 ![token_bucket](svg/courses/architecting/api-gateway-patterns/05_rate_limiting_and_throttling/token_bucket.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why rate limiting matters
@@ -27,6 +30,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## Why Rate Limit
 
 - Prevent abuse (scraping, brute force)
@@ -36,6 +40,7 @@ audience:
 - A baseline of resilience
 
 ---
+
 ## Token Bucket
 
 - A bucket with N tokens; refills at rate R per second
@@ -45,6 +50,7 @@ audience:
 - Smooth, common, flexible
 
 ---
+
 ## Leaky Bucket
 
 - Requests enter a queue (bucket)
@@ -54,6 +60,7 @@ audience:
 - Good for protecting downstream that can't burst
 
 ---
+
 ## Fixed Window
 
 - N requests per window (e.g., 100 / minute)
@@ -63,6 +70,7 @@ audience:
 - Burst at window edge
 
 ---
+
 ## Sliding Window
 
 - Counts requests in the *last* 60 seconds, continuously
@@ -71,6 +79,7 @@ audience:
 - The modern default for serious rate limiting
 
 ---
+
 ## Sliding Window Log
 
 - Store timestamps of every request
@@ -79,6 +88,7 @@ audience:
 - Use for low-volume / high-precision needs
 
 ---
+
 ## Sliding Window Counter
 
 - Approximation: count current minute + (previous minute * weight)
@@ -87,11 +97,13 @@ audience:
 - The pragmatic choice for high-volume
 
 ---
+
 ## Algorithm Cheatsheet
 
 ![rate_limiting_algorithms](svg/courses/architecting/api-gateway-patterns/05_rate_limiting_and_throttling/algorithms.svg)
 
 ---
+
 ## Distributed Rate Limiting
 
 - Multi-instance gateways need shared state
@@ -101,6 +113,7 @@ audience:
 - Fall-open vs fall-closed on Redis failure
 
 ---
+
 ## Per-IP Rate Limiting
 
 - Default for unauthenticated traffic
@@ -109,6 +122,7 @@ audience:
 - Pair with: CAPTCHAs, account creation rate limits
 
 ---
+
 ## Per-User Rate Limiting
 
 - After authentication
@@ -118,6 +132,7 @@ audience:
 - Implement at the gateway
 
 ---
+
 ## Per-Endpoint
 
 - Different limits for different operations
@@ -127,6 +142,7 @@ audience:
 - Standard sophistication
 
 ---
+
 ## HTTP Headers
 
 ```http
@@ -144,6 +160,7 @@ Retry-After: 30
 - Standard headers; well-supported
 
 ---
+
 ## Throttling Strategies On Limit
 
 - Reject (429): cleanest
@@ -152,6 +169,7 @@ Retry-After: 30
 - Different choice per endpoint and audience
 
 ---
+
 ## Common Rate Limiting Mistakes
 
 - Per-IP only (NAT lets one user circumvent)

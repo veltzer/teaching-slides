@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced Querying
 
 ---
+
 ## What This Chapter Covers
 
 - Array queries
@@ -20,16 +22,19 @@ audience:
 - Cursor methods
 
 ---
+
 ## Operator Categories
 
 ![query_operators](svg/courses/databases/mongodb-for-developers/06_advanced_querying/query_operators.svg)
 
 ---
+
 ## Operator Categories Detail
 
 ![operator_categories](svg/courses/databases/mongodb-for-developers/06_advanced_querying/operator_categories.svg)
 
 ---
+
 ## Array Queries
 
 ```python
@@ -43,6 +48,7 @@ db.users.find({"tags": {"$size": 3}})
 - $size: exact length
 
 ---
+
 ## $elemMatch
 
 ```python
@@ -55,6 +61,7 @@ db.users.find({
 - Without it: conditions can match different elements
 
 ---
+
 ## Nested Document Queries
 
 ```python
@@ -65,6 +72,7 @@ db.users.find({"address.city": "NYC"})
 - Works for filtering and sorting
 
 ---
+
 ## Geospatial
 
 ```python
@@ -83,6 +91,7 @@ db.places.find({
 - $near, $within, $intersects
 
 ---
+
 ## Text Search
 
 ```python
@@ -95,6 +104,7 @@ db.articles.find({"$text": {"$search": "mongodb tutorial"}})
 - For richer search: Elasticsearch
 
 ---
+
 ## Cursor Methods
 
 - `.sort({"name": 1})`: ascending
@@ -104,6 +114,7 @@ db.articles.find({"$text": {"$search": "mongodb tutorial"}})
 - Combine: paginated query
 
 ---
+
 ## Pagination
 
 - Skip-based: `find().skip(20).limit(10)` — slow at depth
@@ -111,6 +122,7 @@ db.articles.find({"$text": {"$search": "mongodb tutorial"}})
 - `_id` is well-indexed; cursor pagination is fast
 
 ---
+
 ## $regex
 
 ```python
@@ -123,6 +135,7 @@ db.users.find({"name": {"$regex": "^A", "$options": "i"}})
 - Unanchored: full collection scan
 
 ---
+
 ## $expr
 
 ```python
@@ -135,6 +148,7 @@ db.orders.find({
 - Aggregation expressions in find
 
 ---
+
 ## Distinct
 
 ```python
@@ -145,6 +159,7 @@ db.users.distinct("country")
 - Works with index on the field
 
 ---
+
 ## Count
 
 ```python
@@ -156,6 +171,7 @@ db.users.estimated_document_count()
 - Estimated: fast, may be slightly off (uses metadata)
 
 ---
+
 ## Explain
 
 ```python
@@ -167,6 +183,7 @@ db.users.find({"email": "a@b.com"}).explain("executionStats")
 - Reveals: index used, docs examined, time
 
 ---
+
 ## Common Query Mistakes
 
 - Unanchored $regex (full scan)

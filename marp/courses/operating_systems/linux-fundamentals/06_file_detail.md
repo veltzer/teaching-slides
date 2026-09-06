@@ -10,6 +10,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Files in Detail
 ## Understanding UNIX File Types and Inodes
 
@@ -40,6 +41,7 @@ prw-r--r--  # Named pipe
 ![file_attributes](svg/courses/operating_systems/linux-fundamentals/06_file_detail/file_attributes.svg)
 
 ---
+
 ## Regular Files (-)
 
 ```bash
@@ -82,6 +84,7 @@ ls -ld newdir
 ```
 
 ---
+
 ## Device Files (c, b)
 
 Character Devices (c):
@@ -125,6 +128,7 @@ find . -type l -! -exec test -e {} \; -print
 ```
 
 ---
+
 ## Sockets (s) and Named Pipes (p)
 
 Sockets:
@@ -167,6 +171,7 @@ Inode contains:
 - Data block pointers
 
 ---
+
 ## Working with Inodes
 
 ```bash
@@ -212,6 +217,7 @@ ls -li target.txt hardlink.txt symlink.txt
 ```
 
 ---
+
 ## Link Count and Storage
 
 ```bash
@@ -231,6 +237,7 @@ cat link1.txt      # Still accessible
 ```
 
 ---
+
 ## File Timestamps
 
 Three main timestamps:
@@ -263,6 +270,7 @@ touch -m file.txt
 ```
 
 ---
+
 ## Practical Examples
 
 1. Finding files by inode:

@@ -12,10 +12,12 @@ audience:
   - audiences:managers
 
 ---
+
 # Environment Strategy
 ## Architectural Decisions in DevOps
 
 ---
+
 ## Table of Contents
 
 1. How Many Environments and Why
@@ -29,6 +31,7 @@ audience:
 1. Data Management in Non-production Environments
 
 ---
+
 ## Why Environments Matter
 
 - Environments are the backbone of every software delivery pipeline
@@ -40,17 +43,20 @@ audience:
 - Getting it right is a foundational architectural decision
 
 ---
+
 ## The Classic Environment Pipeline
 
 ![the_classic_environment_pipeline](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/the_classic_environment_pipeline.svg)
 
 ---
+
 ## The Classic Environment Pipeline: Details
 
 - Code flows through progressively more production-like environments
 - Each stage acts as a quality gate
 
 ---
+
 ## How Many Environments?
 
 - There is no universal answer, but common patterns exist
@@ -63,6 +69,7 @@ audience:
 - Too few environments means risk; too many means cost and complexity
 
 ---
+
 ## Minimal Setup: Two Environments
 
 - **Development** and **Production** only
@@ -75,6 +82,7 @@ audience:
     - Hard to reproduce production bugs safely
 
 ---
+
 ## Standard and Enterprise Setups
 
 - **Three environments**: Dev, Staging, Production
@@ -87,11 +95,13 @@ audience:
     - Common in regulated industries (finance, healthcare)
 
 ---
+
 ## Environment Topology Diagram
 
 ![environment_topology_diagram](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/environment_topology_diagram.svg)
 
 ---
+
 ## Production-like vs Lightweight Environments
 
 - **Production-like**: mirrors production in architecture, config, and scale
@@ -103,6 +113,7 @@ audience:
 - Rule of thumb: the closer to production, the more it should resemble production
 
 ---
+
 ## Cost Implications of Environment Proliferation
 
 - Every persistent environment has ongoing costs:
@@ -113,6 +124,7 @@ audience:
     - Human cost (maintenance, monitoring, troubleshooting)
 
 ---
+
 ## Cost Growth Example
 
 | Environments | Monthly Compute | Storage | Networking | Total |
@@ -125,6 +137,7 @@ audience:
 - Costs scale roughly linearly with number of persistent environments
 
 ---
+
 ## Strategies to Control Environment Costs
 
 1. Use ephemeral environments instead of persistent ones
@@ -135,6 +148,7 @@ audience:
 1. Set budgets and alerts per environment
 
 ---
+
 ## Scheduling Non-production Environments
 
 ```yaml
@@ -163,6 +177,7 @@ spec:
 ```
 
 ---
+
 ## Ephemeral vs Persistent Environments
 
 - **Persistent**: always running, manually maintained
@@ -175,6 +190,7 @@ spec:
     - Cons: provisioning latency, setup complexity
 
 ---
+
 ## Ephemeral Environment Lifecycle
 
 ![ephemeral_environment_lifecycle](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/ephemeral_environment_lifecycle.svg)
@@ -186,6 +202,7 @@ spec:
 - Entire lifecycle is automated and tied to the PR workflow
 
 ---
+
 ## Preview Environments for Pull Requests
 
 - A dedicated environment spun up for every PR
@@ -196,11 +213,13 @@ spec:
 - Popular tools: `Vercel`, `Netlify`, `Argo CD`, `Crossplane`, `Terraform`
 
 ---
+
 ## Preview Environment Architecture
 
 ![preview_environment_architecture](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/preview_environment_architecture.svg)
 
 ---
+
 ## Setting Up PR Preview Environments
 
 ```yaml
@@ -235,6 +254,7 @@ jobs:
 ```
 
 ---
+
 ## On-demand Staging Environments
 
 - A full staging environment created when needed
@@ -247,6 +267,7 @@ jobs:
 - Destroyed after a defined TTL or manual teardown
 
 ---
+
 ## On-demand Environment with `Terraform`
 
 ```hcl
@@ -276,6 +297,7 @@ resource "aws_ecs_service" "app" {
 ```
 
 ---
+
 ## Cleanup and Lifecycle Management
 
 - Ephemeral environments must be cleaned up or they become persistent costs
@@ -287,6 +309,7 @@ resource "aws_ecs_service" "app" {
 - Always tag resources with metadata for tracking
 
 ---
+
 ## Tagging Strategy for Lifecycle Management
 
 ```yaml
@@ -305,6 +328,7 @@ tags:
 - Tags enable automated cleanup scripts to find and destroy stale resources
 
 ---
+
 ## Automated Cleanup Script
 
 ```bash
@@ -331,6 +355,7 @@ done
 ```
 
 ---
+
 ## Cleanup on PR Close
 
 ```yaml
@@ -364,6 +389,7 @@ jobs:
 ```
 
 ---
+
 ## Environment Parity: The Goal
 
 - Environment parity means all environments behave the same way
@@ -375,6 +401,7 @@ jobs:
     - Dependencies (service versions, API contracts)
 
 ---
+
 ## What Is Configuration Drift?
 
 - Configuration drift occurs when environments diverge from their intended state
@@ -386,6 +413,7 @@ jobs:
     - Different cloud regions or instance types
 
 ---
+
 ## Configuration Drift Visualization
 
 ![configuration_drift_visualization](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/configuration_drift_visualization.svg)
@@ -397,6 +425,7 @@ jobs:
 - Without active management, every environment drifts away from production
 
 ---
+
 ## Consequences of Configuration Drift
 
 - "It works in staging but breaks in production"
@@ -407,6 +436,7 @@ jobs:
 - Team confidence in the pipeline erodes
 
 ---
+
 ## Preventing Drift: Infrastructure as Code
 
 - Define all infrastructure in version-controlled code
@@ -425,6 +455,7 @@ module "environment" {
 ```
 
 ---
+
 ## Preventing Drift: Continuous Reconciliation
 
 - Actively detect and correct drift
@@ -436,6 +467,7 @@ module "environment" {
 - Alert on drift; auto-remediate when safe
 
 ---
+
 ## Drift Detection Pipeline
 
 ```yaml
@@ -465,6 +497,7 @@ jobs:
 ```
 
 ---
+
 ## Ensuring Consistency: Container Images
 
 - Use the exact same container image across all environments
@@ -484,6 +517,7 @@ helm upgrade app ./chart \
 ```
 
 ---
+
 ## Ensuring Consistency: Dependency Pinning
 
 - Pin every dependency to exact versions
@@ -501,6 +535,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 ```
 
 ---
+
 ## Data Management in Non-production Environments
 
 - Non-production environments need realistic data to be useful
@@ -511,6 +546,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
     - Test data must cover edge cases
 
 ---
+
 ## Data Strategies for Non-production
 
 | Strategy | Pros | Cons |
@@ -524,6 +560,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 - Most teams use a combination of these approaches
 
 ---
+
 ## Data Anonymization Pipeline
 
 ![data_anonymization_pipeline](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/data_anonymization_pipeline.svg)
@@ -535,6 +572,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 - Automate the pipeline so non-prod data stays fresh and safe
 
 ---
+
 ## Data Anonymization Techniques
 
 - **Masking**: replace sensitive values with realistic fakes
@@ -546,6 +584,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 - **Synthetic generation**: create entirely fake but realistic data
 
 ---
+
 ## Database Schema Consistency
 
 - Schema must match across all environments
@@ -557,6 +596,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 - Never apply schema changes manually
 
 ---
+
 ## Environment-specific Secrets Management
 
 - Secrets must differ per environment but be managed consistently
@@ -567,11 +607,13 @@ FROM python:3.12.2-slim@sha256:abcdef123456
     - Never store secrets in environment definition files
 
 ---
+
 ## Secrets Architecture
 
 ![secrets_architecture](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/secrets_architecture.svg)
 
 ---
+
 ## Feature Flags Across Environments
 
 - Feature flags let you decouple deployment from release
@@ -582,6 +624,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 - Tools: `LaunchDarkly`, `Unleash`, `Flagsmith`, `ConfigCat`
 
 ---
+
 ## Feature Flag Configuration Example
 
 ```json
@@ -604,11 +647,13 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 - Same codebase, different behavior per environment
 
 ---
+
 ## Environment Promotion Strategy
 
 ![environment_promotion_strategy](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/environment_promotion_strategy.svg)
 
 ---
+
 ## `GitOps` for Environment Management
 
 - Declare desired state of each environment in `Git`
@@ -631,6 +676,7 @@ environments/
 - Changes to any environment go through code review
 
 ---
+
 ## Environment Strategy Decision Matrix
 
 | Factor | Fewer Environments | More Environments |
@@ -643,6 +689,7 @@ environments/
 | Risk tolerance | Higher | Lower |
 
 ---
+
 ## Anti-patterns to Avoid
 
 1. Long-lived "shared dev" environments that nobody owns
@@ -654,6 +701,7 @@ environments/
 1. Treating environment configuration as an afterthought
 
 ---
+
 ## Best Practices Summary
 
 1. Start with the minimum viable number of environments
@@ -666,6 +714,7 @@ environments/
 1. Isolate environments at the network level
 
 ---
+
 ## Choosing Your Environment Strategy
 
 - Step 1: Assess your team size, deployment frequency, and risk profile

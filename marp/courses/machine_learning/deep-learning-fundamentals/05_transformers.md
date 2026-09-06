@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Transformers
 
 ---
+
 ## What This Chapter Covers
 
 - Attention mechanism
@@ -21,6 +23,7 @@ audience:
 - Hugging Face Transformers library
 
 ---
+
 ## Why Transformers
 
 - RNNs are sequential and slow
@@ -29,6 +32,7 @@ audience:
 - Backbone of modern AI
 
 ---
+
 ## The Attention Idea
 
 - Look at all positions, weight by relevance
@@ -37,6 +41,7 @@ audience:
 - Originated as an RNN add-on, took over
 
 ---
+
 ## Attention as Soft Lookup
 
 - Query: what am I looking for
@@ -45,16 +50,19 @@ audience:
 - Output: weighted sum of values
 
 ---
+
 ## Attention Diagram
 
 ![attention](svg/courses/machine_learning/deep-learning-fundamentals/05_transformers/attention.svg)
 
 ---
+
 ## Query, Key, Value
 
 ![qkv attention](svg/courses/machine_learning/deep-learning-fundamentals/05_transformers/qkv_attention.svg)
 
 ---
+
 ## Scaled Dot-Product Attention
 
 - Score = Q dot K^T
@@ -63,6 +71,7 @@ audience:
 - Output = weights dot V
 
 ---
+
 ## Why Scale by Sqrt(d)
 
 - Dot products grow with dimension
@@ -71,6 +80,7 @@ audience:
 - Tiny but essential detail
 
 ---
+
 ## Self-Attention
 
 - Q, K, V all come from the same sequence
@@ -79,6 +89,7 @@ audience:
 - The core building block
 
 ---
+
 ## Cross-Attention
 
 - Q from one sequence, K and V from another
@@ -87,6 +98,7 @@ audience:
 - Replaces the RNN bottleneck
 
 ---
+
 ## Multi-Head Attention
 
 - Project to multiple smaller subspaces
@@ -95,11 +107,13 @@ audience:
 - Different heads focus on different patterns
 
 ---
+
 ## Multi-Head Attention Diagram
 
 ![multi_head_attention](svg/courses/machine_learning/deep-learning-fundamentals/05_transformers/multi_head_attention.svg)
 
 ---
+
 ## What Heads Learn
 
 - Some track syntax
@@ -108,6 +122,7 @@ audience:
 - Often interpretable, sometimes not
 
 ---
+
 ## The Transformer Block
 
 - Multi-head self-attention
@@ -116,11 +131,13 @@ audience:
 - Add and layer norm again
 
 ---
+
 ## Transformer Block Diagram
 
 ![transformer_block](svg/courses/machine_learning/deep-learning-fundamentals/05_transformers/transformer_block.svg)
 
 ---
+
 ## Residual Connections
 
 - Skip connection around each sublayer
@@ -129,6 +146,7 @@ audience:
 - Inherited from ResNet ideas
 
 ---
+
 ## Layer Normalization
 
 - Normalize across features per token
@@ -137,6 +155,7 @@ audience:
 - Pre-norm dominates modern designs
 
 ---
+
 ## Feedforward Sublayer
 
 - Two linear layers with a nonlinearity
@@ -145,6 +164,7 @@ audience:
 - Often 4x the hidden dimension
 
 ---
+
 ## Positional Encoding
 
 - Attention has no order by itself
@@ -153,6 +173,7 @@ audience:
 - Two main flavors: sinusoidal and learned
 
 ---
+
 ## Sinusoidal Positions
 
 - Fixed sin and cos patterns
@@ -161,6 +182,7 @@ audience:
 - The original transformer choice
 
 ---
+
 ## Learned Positions
 
 - One embedding per position
@@ -169,6 +191,7 @@ audience:
 - Used by BERT and many others
 
 ---
+
 ## Rotary Position Embeddings
 
 - Rotate Q and K by position
@@ -177,6 +200,7 @@ audience:
 - Used by LLaMA and many modern LLMs
 
 ---
+
 ## The Original Transformer
 
 - Vaswani et al, "Attention Is All You Need", 2017
@@ -185,11 +209,13 @@ audience:
 - Replaced RNNs in seq2seq
 
 ---
+
 ## Encoder-Decoder Transformer
 
 ![transformer_architecture](svg/courses/machine_learning/deep-learning-fundamentals/05_transformers/transformer_architecture.svg)
 
 ---
+
 ## Encoder Only
 
 - Bidirectional attention
@@ -198,6 +224,7 @@ audience:
 - Output: contextual embeddings
 
 ---
+
 ## Decoder Only
 
 - Causal attention (masked future)
@@ -206,6 +233,7 @@ audience:
 - One model handles many tasks
 
 ---
+
 ## Encoder-Decoder
 
 - Encoder reads input, decoder writes output
@@ -214,6 +242,7 @@ audience:
 - Less popular than decoder-only for chat
 
 ---
+
 ## Causal Masking
 
 - Each position only sees prior positions
@@ -222,6 +251,7 @@ audience:
 - Essential for autoregressive generation
 
 ---
+
 ## Tokenization
 
 - Models see token IDs, not characters
@@ -230,6 +260,7 @@ audience:
 - Same model, different tokenizer, different behavior
 
 ---
+
 ## BERT
 
 - Bidirectional Encoder Representations
@@ -238,6 +269,7 @@ audience:
 - Fine-tune for classification, QA, NER
 
 ---
+
 ## Masked Language Modeling
 
 - Hide 15% of tokens
@@ -246,6 +278,7 @@ audience:
 - Cheap, parallel pretraining objective
 
 ---
+
 ## Using BERT
 
 - Add a small head on top
@@ -254,6 +287,7 @@ audience:
 - Workhorse of NLP for years
 
 ---
+
 ## GPT
 
 - Generative Pretrained Transformer
@@ -262,6 +296,7 @@ audience:
 - Same architecture, many sizes
 
 ---
+
 ## Next-Token Prediction
 
 - Read tokens left to right
@@ -270,6 +305,7 @@ audience:
 - Simple objective, huge capability
 
 ---
+
 ## GPT-2, GPT-3, GPT-4
 
 - Same idea, much more scale
@@ -278,6 +314,7 @@ audience:
 - The chat models you use daily
 
 ---
+
 ## Scaling Laws
 
 - Loss decreases with model size, data, compute
@@ -286,6 +323,7 @@ audience:
 - Famously due to Kaplan et al, Hoffmann et al
 
 ---
+
 ## Instruction Tuning
 
 - Pretrained model knows language
@@ -294,6 +332,7 @@ audience:
 - Step toward useful assistants
 
 ---
+
 ## RLHF
 
 - Reinforcement Learning from Human Feedback
@@ -302,6 +341,7 @@ audience:
 - Optimize policy against the reward
 
 ---
+
 ## Transformer Variants
 
 - T5: text-to-text everything
@@ -310,6 +350,7 @@ audience:
 - Mistral, Falcon, Qwen, Gemma
 
 ---
+
 ## Multimodal Transformers
 
 - Same architecture, mixed inputs
@@ -318,6 +359,7 @@ audience:
 - Audio, video, robotics
 
 ---
+
 ## Vision Transformer
 
 - Split image into patches
@@ -326,6 +368,7 @@ audience:
 - Competitive with CNNs at scale
 
 ---
+
 ## Hugging Face Transformers
 
 - Library with thousands of pretrained models
@@ -334,6 +377,7 @@ audience:
 - Most NLP starts here today
 
 ---
+
 ## Loading a Model
 
 ```python
@@ -347,6 +391,7 @@ out = model(**x)
 ```
 
 ---
+
 ## Text Classification with HF
 
 ```python
@@ -360,6 +405,7 @@ print(cls("I love this course"))
 - Great for prototyping
 
 ---
+
 ## Fine-Tuning with HF
 
 ```python
@@ -372,6 +418,7 @@ trainer.train()
 ```
 
 ---
+
 ## Inference Tricks
 
 - KV cache: reuse past attention keys and values
@@ -380,6 +427,7 @@ trainer.train()
 - Quantization: 8-bit or 4-bit weights
 
 ---
+
 ## Context Length
 
 - How many tokens the model can attend to
@@ -388,6 +436,7 @@ trainer.train()
 - Modern models reach 100k tokens and beyond
 
 ---
+
 ## Limitations
 
 - Quadratic attention cost
@@ -396,6 +445,7 @@ trainer.train()
 - Expensive to train from scratch
 
 ---
+
 ## When to Use a Transformer
 
 - Any NLP task: almost always
@@ -404,6 +454,7 @@ trainer.train()
 - When a strong pretrained model exists
 
 ---
+
 ## Summary
 
 - Attention replaces recurrence with parallel lookups

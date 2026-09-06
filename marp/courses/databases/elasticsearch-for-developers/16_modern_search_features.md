@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Modern Search Features
 
 ---
+
 ## What This Chapter Covers
 
 - Vector search
@@ -21,6 +23,7 @@ audience:
 - Search Applications
 
 ---
+
 ## Vector Search
 
 - Search by vector similarity
@@ -29,6 +32,7 @@ audience:
 - Semantic, not lexical
 
 ---
+
 ## Embeddings
 
 - Pre-trained model converts text to vector
@@ -37,6 +41,7 @@ audience:
 - Stored as `dense_vector` field
 
 ---
+
 ## Vector Index Example
 
 ```json
@@ -49,6 +54,7 @@ audience:
 ```
 
 ---
+
 ## kNN Search
 
 ```json
@@ -67,6 +73,7 @@ audience:
 - Trade-off: precision vs speed
 
 ---
+
 ## Hybrid Search
 
 - Combine lexical + vector
@@ -75,6 +82,7 @@ audience:
 - Best of both
 
 ---
+
 ## ELSER
 
 - Elastic's Learned Sparse EncodeR
@@ -83,6 +91,7 @@ audience:
 - No external model needed
 
 ---
+
 ## RAG Pattern
 
 - Retrieval-Augmented Generation
@@ -91,6 +100,7 @@ audience:
 - ES + LLM = Q&A over your data
 
 ---
+
 ## Behavioural Analytics
 
 - Track: search queries, clicks
@@ -99,6 +109,7 @@ audience:
 - Machine-learning-driven relevance
 
 ---
+
 ## Search Applications
 
 - Higher-level Elastic Cloud feature
@@ -107,6 +118,7 @@ audience:
 - Recently added; evolving
 
 ---
+
 ## Synonyms API
 
 - Manage synonyms via API
@@ -115,6 +127,7 @@ audience:
 - Standard pattern for managed search
 
 ---
+
 ## Stemmer / Tokeniser Choices
 
 - Per-language stemmers
@@ -122,6 +135,7 @@ audience:
 - Mix and match for global products
 
 ---
+
 ## Query Rules
 
 - Pin specific results to top
@@ -129,6 +143,7 @@ audience:
 - A/B test the rules
 
 ---
+
 ## ML Inference
 
 - Run an ML model at index / query time
@@ -137,6 +152,7 @@ audience:
 - Adds compute cost
 
 ---
+
 ## Common Modern-Feature Mistakes
 
 - Vector search without dimension consistency

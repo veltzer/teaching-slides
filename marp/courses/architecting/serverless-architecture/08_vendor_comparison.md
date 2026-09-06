@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Vendor Comparison
 
 ---
+
 ## What This Chapter Covers
 
 - AWS Lambda
@@ -22,16 +24,19 @@ audience:
 - Multi-cloud considerations
 
 ---
+
 ## Major Platforms
 
 ![vendor_compare](svg/courses/architecting/serverless-architecture/08_vendor_comparison/vendor_compare.svg)
 
 ---
+
 ## Platform Comparison
 
 ![platform_compare](svg/courses/architecting/serverless-architecture/08_vendor_comparison/platform_compare.svg)
 
 ---
+
 ## AWS Lambda
 
 - Original FaaS; deepest ecosystem
@@ -42,6 +47,7 @@ audience:
 - The default for AWS shops
 
 ---
+
 ## AWS Lambda Strengths
 
 - Tightest AWS integration
@@ -51,6 +57,7 @@ audience:
 - Best-known; most learning resources
 
 ---
+
 ## AWS Lambda Weaknesses
 
 - Cold starts (especially for Java/.NET)
@@ -60,6 +67,7 @@ audience:
 - Event source quirks (e.g., max 10 messages per SQS batch)
 
 ---
+
 ## Azure Functions
 
 - Microsoft's FaaS
@@ -70,6 +78,7 @@ audience:
 - Standard for Azure shops
 
 ---
+
 ## Azure Functions Strengths
 
 - Bindings simplify integration code
@@ -79,6 +88,7 @@ audience:
 - Strong .NET story
 
 ---
+
 ## Google Cloud Functions
 
 - Google's original FaaS
@@ -88,6 +98,7 @@ audience:
 - Used heavily inside GCP
 
 ---
+
 ## Cloud Run
 
 - GCP's container-as-a-service
@@ -97,6 +108,7 @@ audience:
 - Sweet spot for many workloads
 
 ---
+
 ## Cloud Run vs Lambda
 
 - Cloud Run: any container, any language, any size
@@ -106,6 +118,7 @@ audience:
 - Cloud Run is closer to "serverless containers"
 
 ---
+
 ## Cloudflare Workers
 
 - V8-based; sub-ms cold start
@@ -115,6 +128,7 @@ audience:
 - Different programming model: no Node APIs by default
 
 ---
+
 ## Cloudflare Workers Strengths
 
 - Lowest cold start by far
@@ -124,6 +138,7 @@ audience:
 - Excellent for: edge logic, A/B testing, CDN customisation
 
 ---
+
 ## Cloudflare Workers Limits
 
 - No persistent storage in the Worker itself
@@ -133,6 +148,7 @@ audience:
 - Different mental model
 
 ---
+
 ## Vercel / Netlify
 
 - Serverless platforms aimed at frontend / fullstack
@@ -142,6 +158,7 @@ audience:
 - Costs: a markup on Lambda; pay for the DX
 
 ---
+
 ## Choosing By Use Case
 
 - Already on AWS / GCP / Azure: pick the native one
@@ -151,6 +168,7 @@ audience:
 - Don't fight the cloud you're already on
 
 ---
+
 ## Multi-Cloud Serverless
 
 - Rare; expensive; hard to do well
@@ -160,6 +178,7 @@ audience:
 - Lock-in is the price of convenience
 
 ---
+
 ## Migration Considerations
 
 - Code interfaces differ (event shape, context)
@@ -169,6 +188,7 @@ audience:
 - Plan for it as a project, not a config change
 
 ---
+
 ## Common Vendor Mistakes
 
 - Choosing by feature lists not real workload fit

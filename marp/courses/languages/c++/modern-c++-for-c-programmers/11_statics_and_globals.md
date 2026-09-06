@@ -13,6 +13,7 @@ Storage classes determine the lifetime, scope, and linkage of variables in C++
 Each storage class has different initialization, destruction, and visibility rules
 
 ---
+
 ## Storage Class Overview
 
 ```cpp
@@ -33,6 +34,7 @@ thread_local int tlsVar = 300;  // One instance per thread
 ```
 
 ---
+
 ## Static Local Variables
 
 Static local variables retain their value between function calls:
@@ -62,6 +64,7 @@ int getThreadSafeId() {
 ```
 
 ---
+
 ## Static Local Initialization
 
 Static locals are initialized on first use (lazy initialization):
@@ -88,6 +91,7 @@ void example() {
 ```
 
 ---
+
 ## Static Class Members
 
 Static members belong to the class, not to any specific instance:
@@ -122,6 +126,7 @@ public:
 ```
 
 ---
+
 ## Static Member Definition
 
 Static data members must be defined outside the class:
@@ -158,6 +163,7 @@ void example() {
 ```
 
 ---
+
 ## Inline Static Members (C++17)
 
 C++17 allows inline static data members:
@@ -189,6 +195,7 @@ public:
 ```
 
 ---
+
 ## Stateless Classes
 
 Classes that contain only static members and functions:
@@ -224,6 +231,7 @@ private:
 ```
 
 ---
+
 ## Static vs Namespace Functions
 
 Stateless classes vs namespaces for utility functions:
@@ -259,6 +267,7 @@ void example() {
 ```
 
 ---
+
 ## Global Variables Problems
 
 Global variables can cause numerous issues:
@@ -288,6 +297,7 @@ void function2() {
 ```
 
 ---
+
 ## Static Initialization Order Fiasco
 
 Global static objects can have undefined initialization order:
@@ -315,6 +325,7 @@ Database globalDB;  // Order with globalLogger is undefined!
 ```
 
 ---
+
 ## Solving Initialization Order Issues
 
 Use functions to control initialization order:
@@ -345,6 +356,7 @@ void someFunction() {
 ```
 
 ---
+
 ## Safe Global Variables
 
 Make globals safe through encapsulation:
@@ -372,6 +384,7 @@ public:
 ```
 
 ---
+
 ## Safe Global Variables: Accessors
 
 ```cpp
@@ -400,6 +413,7 @@ public:
 ```
 
 ---
+
 ## The Singleton Pattern
 
 Singleton ensures only one instance of a class exists:
@@ -438,6 +452,7 @@ void example() {
 ```
 
 ---
+
 ## Thread-Safe Singleton (Pre-C++11)
 
 Before C++11, manual synchronization was needed:
@@ -474,6 +489,7 @@ std::mutex ThreadSafeSingleton::instanceMutex;
 ```
 
 ---
+
 ## Singleton with Parameters
 
 Singletons with initialization parameters:
@@ -513,6 +529,7 @@ public:
 ```
 
 ---
+
 ## Singleton with Parameters: Usage
 
 ```cpp
@@ -528,6 +545,7 @@ void useApp() {
 ```
 
 ---
+
 ## Singleton Registry Pattern
 
 Manage multiple named singletons:
@@ -571,6 +589,7 @@ std::mutex SingletonRegistry<T>::registryMutex;
 ```
 
 ---
+
 ## Problems with Singleton
 
 Singleton pattern has several drawbacks:
@@ -606,6 +625,7 @@ void processOrder(const Order& order) {
 ```
 
 ---
+
 ## Alternatives to Singleton
 
 Consider these alternatives before using Singleton:
@@ -642,6 +662,7 @@ public:
 ```
 
 ---
+
 ## Global Access Without Globals
 
 Provide global-like access without global state:
@@ -683,6 +704,7 @@ void useServices(ServiceLocator& locator) {
 ```
 
 ---
+
 ## RAII and Static Resources
 
 Use RAII to manage static resources safely:
@@ -720,6 +742,7 @@ FileManager& getLogFile() {
 ```
 
 ---
+
 ## Thread-Local Storage
 
 Each thread gets its own instance:
@@ -759,6 +782,7 @@ thread_local std::unique_ptr<ThreadLocalLogger> ThreadLocalLogger::instance;
 ```
 
 ---
+
 ## Thread-Local Example
 
 ```cpp
@@ -791,6 +815,7 @@ void demonstrateThreadLocal() {
 ```
 
 ---
+
 ## Static Analysis and Global State
 
 Tools to analyze global state usage:
@@ -821,6 +846,7 @@ thread_local int tlsVar = 0;  // Flag: thread-local storage
 ```
 
 ---
+
 ## Global State in Libraries
 
 Best practices for library design:
@@ -857,16 +883,19 @@ namespace GoodLibrary {
 ```
 
 ---
+
 ## Memory Layout of Static Variables: Overview
 
 Understanding where static variables are stored.
 
 ---
+
 ## Memory Layout of Static Variables
 
 ![memory_layout_of_static_variables](svg/courses/languages/c++/modern-c++-for-c-programmers/11_statics_and_globals/memory_layout_of_static_variables.svg)
 
 ---
+
 ## Memory Layout of Static Variables (cont.)
 
 ```cpp
@@ -881,6 +910,7 @@ void function() {
 ```
 
 ---
+
 ## Performance Implications
 
 Static variables have performance characteristics:
@@ -909,6 +939,7 @@ void processData() {
 ```
 
 ---
+
 ## Debugging Static Variables
 
 Techniques for debugging static variable issues:
@@ -951,6 +982,7 @@ int main() {
 ```
 
 ---
+
 ## Best Practices Summary
 
 **Do:**
@@ -968,6 +1000,7 @@ int main() {
 - Use static members for utility functions (prefer namespaces)
 
 ---
+
 ## Refactoring Global State
 
 Transform global state into better designs:
@@ -1009,6 +1042,7 @@ void main() {
 ```
 
 ---
+
 ## Modern C++ Static Features
 
 C++11/14/17/20 improvements for static storage:
@@ -1039,6 +1073,7 @@ auto getProcessor() {
 ```
 
 ---
+
 ## Testing Strategies
 
 Strategies for testing code with static state:
@@ -1068,6 +1103,7 @@ public:
 ```
 
 ---
+
 ## Testing Strategies: Test Fixture
 
 ```cpp
@@ -1093,6 +1129,7 @@ TEST_F(SingletonTest, ValuePersistence) {
 ```
 
 ---
+
 ## Static Polymorphism
 
 Use static members for compile-time polymorphism:
@@ -1123,6 +1160,7 @@ public:
 ```
 
 ---
+
 ## Static Polymorphism: `ConcreteB` and Usage
 
 ```cpp

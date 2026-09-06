@@ -21,6 +21,7 @@ audience:
 ![scraping_architecture](svg/courses/security/cyber-attacks-and-vectors/24_scraping/scraping_architecture.svg)
 
 ---
+
 ## What is Web Scraping
 
 - Web scraping is the process of extracting data from websites, typically by parsing the HTML content and extracting specific data points
@@ -34,6 +35,7 @@ audience:
     - Search engine indexing (legitimate scraping)
 
 ---
+
 ## How Web Scraping Works
 
 ```python
@@ -61,6 +63,7 @@ audience:
 ```
 
 ---
+
 ## Scraping Tools Overview
 
 | Tool/Library    | Language   | Type              | Best For                        |
@@ -75,6 +78,7 @@ audience:
 | Cheerio         | Node.js    | HTML parser       | Server-side jQuery-like parsing |
 
 ---
+
 ## Scraping with Python: requests + BeautifulSoup
 
 ```python
@@ -107,6 +111,7 @@ print(f"Found {len(products)} products")
 ```
 
 ---
+
 ## Scraping with Scrapy
 
 ```python
@@ -151,6 +156,7 @@ scrapy crawl products -o products.csv
 ```
 
 ---
+
 ## Scraping JavaScript-Heavy Sites
 
 ```python
@@ -212,6 +218,7 @@ const puppeteer = require('puppeteer');
 ```
 
 ---
+
 ## Anti-Scraping Techniques
 
 ```python
@@ -246,6 +253,7 @@ const puppeteer = require('puppeteer');
 ```
 
 ---
+
 ## robots.txt
 
 ```python
@@ -280,6 +288,7 @@ Crawl-delay: 10
 - Should be combined with actual rate limiting and access controls
 
 ---
+
 ## CAPTCHA Systems
 
 | CAPTCHA Type    | Mechanism                              | Bypass Difficulty |
@@ -315,6 +324,7 @@ Crawl-delay: 10
 ```
 
 ---
+
 ## Rate Limiting Implementation
 
 ```python
@@ -372,6 +382,7 @@ http {
 ```
 
 ---
+
 ## Browser Fingerprinting as Anti-Scraping
 
 ```javascript
@@ -406,6 +417,7 @@ function detectHeadless() {
 ```
 
 ---
+
 ## Scraping Defenses: Honeypot Traps
 
 ```html
@@ -438,6 +450,7 @@ def honeypot():
 ```
 
 ---
+
 ## Legal Considerations
 
 ```bash
@@ -468,6 +481,7 @@ def honeypot():
 ```
 
 ---
+
 ## Ethical Scraping Guidelines
 
 ```python
@@ -525,6 +539,7 @@ class EthicalScraper:
 ```
 
 ---
+
 ## Scraping Detection and Monitoring
 
 ```bash
@@ -550,6 +565,7 @@ grep -Ei "scrapy|python-requests|wget|curl|bot|spider" \
 ```
 
 ---
+
 ## Defense Strategy for Website Owners
 
 ```bash
@@ -585,6 +601,7 @@ grep -Ei "scrapy|python-requests|wget|curl|bot|spider" \
 ```
 
 ---
+
 ## Key Takeaways
 
 - Web scraping is a powerful technique with both legitimate and malicious uses

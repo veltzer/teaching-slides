@@ -11,6 +11,7 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Parameter Efficient Fine Tuning — LoRA, QLoRA, Prompt Tuning
 
 ---
@@ -51,6 +52,7 @@ LoRA:
 ```
 
 ---
+
 ## LoRA — Low-Rank Adaptation
 
 ![lora_low_rank_adaptation](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/lora_low_rank_adaptation.svg)

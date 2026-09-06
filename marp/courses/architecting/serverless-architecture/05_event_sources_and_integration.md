@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Event Sources and Integration
 
 ---
+
 ## What This Chapter Covers
 
 - Sync vs async invocation
@@ -22,6 +24,7 @@ audience:
 - EventBridge
 
 ---
+
 ## Sync vs Async
 
 - **Sync**: caller waits for response (HTTP)
@@ -31,16 +34,19 @@ audience:
 - Sync: caller responsible for handling errors
 
 ---
+
 ## Two Invocation Modes
 
 ![sync_vs_async_invocation](svg/courses/architecting/serverless-architecture/05_event_sources_and_integration/sync_vs_async.svg)
 
 ---
+
 ## Event Source Categories
 
 ![event_sources](svg/courses/architecting/serverless-architecture/05_event_sources_and_integration/event_sources.svg)
 
 ---
+
 ## API Gateway + Lambda
 
 - HTTP requests trigger Lambda
@@ -50,6 +56,7 @@ audience:
 - HTTP API for cheaper / faster than REST API
 
 ---
+
 ## SQS (Queue-Based)
 
 - Messages in queue trigger Lambda
@@ -59,6 +66,7 @@ audience:
 - The classic decoupled pattern
 
 ---
+
 ## SQS Patterns
 
 - Producer service writes to queue
@@ -68,6 +76,7 @@ audience:
 - Idempotency required (retries happen)
 
 ---
+
 ## Kinesis (Stream-Based)
 
 - Ordered, partitioned event stream
@@ -77,6 +86,7 @@ audience:
 - Used for: high-volume event ingestion
 
 ---
+
 ## DynamoDB Streams
 
 - Capture changes to DynamoDB tables
@@ -86,6 +96,7 @@ audience:
 - Free with the table
 
 ---
+
 ## S3 Events
 
 - File uploaded / deleted &#8594; Lambda
@@ -95,6 +106,7 @@ audience:
 - The original "serverless trigger"
 
 ---
+
 ## SNS Events
 
 - Pub-sub
@@ -104,6 +116,7 @@ audience:
 - Cheaper than EventBridge but less feature-rich
 
 ---
+
 ## EventBridge
 
 - AWS's event bus
@@ -113,6 +126,7 @@ audience:
 - The modern AWS event hub
 
 ---
+
 ## EventBridge Patterns
 
 - Rule: filter by source + detail
@@ -122,6 +136,7 @@ audience:
 - Replaces a lot of custom event-routing code
 
 ---
+
 ## Scheduled Events
 
 - EventBridge / CloudWatch Schedules: cron-like
@@ -131,6 +146,7 @@ audience:
 - Reliable, easy to set up
 
 ---
+
 ## API Gateway Authoriser
 
 - Lambda authorises API Gateway requests
@@ -139,6 +155,7 @@ audience:
 - Cached by default to reduce calls
 
 ---
+
 ## Event Filtering
 
 - SNS, SQS, EventBridge support filtering
@@ -148,6 +165,7 @@ audience:
 - Filter at the source, not in code
 
 ---
+
 ## Failure Modes
 
 - Sync: caller gets error; retry is caller's job
@@ -157,6 +175,7 @@ audience:
 - Each pattern has its own failure semantics
 
 ---
+
 ## Common Integration Mistakes
 
 - Using sync where async would do (cost, latency)

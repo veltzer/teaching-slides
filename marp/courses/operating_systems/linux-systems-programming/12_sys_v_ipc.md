@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Sys V IPC
 
 ---
@@ -70,17 +71,17 @@ key_t ftok(const char *pathname, int proj_id);
 ## Message Queue API
 
 1. `msgget(2)`: Get a message queue ID. Creates a new queue or gets an existing one.
-    ```c
+   ```c
     int msgget(key_t key, int msgflg);
-    ```
+   ```
 1. `msgsnd(2)`: Send a message to a queue. The call can block if the queue is full.
-    ```c
+   ```c
     int msgsnd(int msqid, const void *msgp, size_t msgsz, int msgflg);
-    ```
+   ```
 1. `msgrcv(2)`: Receive a message from a queue. Can block if the queue is empty.
-    ```c
+   ```c
     ssize_t msgrcv(int msqid, void *msgp, size_t msgsz, long msgtyp, int msgflg);
-    ```
+   ```
 1. `msgctl(2)`: Control operations (e.g., query status, set permissions, remove queue).
 
 ---
@@ -97,13 +98,13 @@ key_t ftok(const char *pathname, int proj_id);
 ## Semaphore API
 
 1. `semget(2)`: Get a semaphore set ID.
-    ```c
+   ```c
     int semget(key_t key, int nsems, int semflg);
-    ```
+   ```
 1. `semop(2)`: Perform operations on semaphores in a set. This is the core function. It takes an array of `sembuf` structures, each specifying an operation (increment, decrement, or wait-for-zero) on a semaphore in the set.
-    ```c
+   ```c
     int semop(int semid, struct sembuf *sops, size_t nsops);
-    ```
+   ```
 1. `semctl(2)`: Control operations (e.g., initialize value, get value, remove set).
 
 ---
@@ -120,17 +121,17 @@ key_t ftok(const char *pathname, int proj_id);
 ## Shared Memory API
 
 1. `shmget(2)`: Get a shared memory segment ID.
-    ```c
+   ```c
     int shmget(key_t key, size_t size, int shmflg);
-    ```
+   ```
 1. `shmat(2)`: Attach the shared memory segment to the process's address space. It returns a pointer to the start of the segment.
-    ```c
+   ```c
     void *shmat(int shmid, const void *shmaddr, int shmflg);
-    ```
+   ```
 1. `shmdt(2)`: Detach the segment from the process's address space.
-    ```c
+   ```c
     int shmdt(const void *shmaddr);
-    ```
+   ```
 1. `shmctl(2)`: Control operations (e.g., query status, set permissions, remove segment).
 
 ---

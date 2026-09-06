@@ -15,6 +15,7 @@ audience:
 # Port Scanning
 
 ---
+
 ## What is Port Scanning?
 
 - Port scanning is the process of identifying open ports on a computer or network device
@@ -49,6 +50,7 @@ audience:
 - **Filtered**: A firewall is protecting this port (most secure from attacker's view)
 
 ---
+
 ## Why Port Scanning is Done
 
 **Offensive (Red Team / Attackers):**
@@ -64,6 +66,7 @@ audience:
 - Compliance validation
 
 ---
+
 ## Nmap: The Standard Tool
 
 ```bash
@@ -113,6 +116,7 @@ sudo nmap -sS 192.168.1.1
 - Less likely to be logged by applications (but IDS will detect it)
 
 ---
+
 ### TCP Connect Scan
 
 ```bash
@@ -126,6 +130,7 @@ nmap -sT 192.168.1.1
 - Slower than SYN scan
 
 ---
+
 ### UDP Scan
 
 ```bash
@@ -146,6 +151,7 @@ sudo nmap -sU --top-ports 20 192.168.1.1
 - Important: many services use UDP (DNS, SNMP, DHCP, NTP)
 
 ---
+
 ### Stealth Scans (FIN, NULL, Xmas)
 
 ```c
@@ -185,6 +191,7 @@ sudo nmap -sX 192.168.1.1
 ```
 
 ---
+
 ## Scan Type Comparison
 
 | Scan Type    | Flag | Root? | Speed  | Stealth | Works on Windows |
@@ -199,6 +206,7 @@ sudo nmap -sX 192.168.1.1
 | Idle (-sI)  | SYN  | Yes   | Slow   | Highest | Yes             |
 
 ---
+
 ## Service and Version Detection
 
 ```bash
@@ -246,6 +254,7 @@ sudo nmap -A 192.168.1.1
 ![tcp_sequence_prediction_difficulty_261_good_luck](svg/courses/security/cyber-attacks-and-vectors/20_port_scanning/tcp_sequence_prediction_difficulty_261_good_luck.svg)
 
 ---
+
 ## Timing Options
 
 ```bash
@@ -273,6 +282,7 @@ nmap --host-timeout 300s 192.168.1.1  # 5 min timeout per host
 | T5       | 250 ms        | 0           | Parallel    | Speed over accuracy|
 
 ---
+
 ## Nmap Scripting Engine (NSE)
 
 ```bash
@@ -315,6 +325,7 @@ nmap --script "safe and discovery" 192.168.1.1
 | intrusive | May crash services or trigger alerts       | http-sql-injection       |
 
 ---
+
 ## Comprehensive Scan Examples
 
 ```bash
@@ -345,6 +356,7 @@ sudo nmap -sS -T2 -f --data-length 50 \
 ```
 
 ---
+
 ## Output Formats
 
 ```bash
@@ -367,6 +379,7 @@ grep "open" scan_results.gnmap | \
 ```
 
 ---
+
 ## Defense: Detecting Port Scans with iptables
 
 ```bash
@@ -400,6 +413,7 @@ iptables -A INPUT -p tcp --syn \
 ```
 
 ---
+
 ## Defense: IDS/IPS Detection
 
 ```bash
@@ -437,6 +451,7 @@ sudo psad --Status
 ```
 
 ---
+
 ## Defense: Minimizing Attack Surface
 
 ```bash
@@ -467,6 +482,7 @@ iptables -A INPUT -p tcp --dport 443 -j ACCEPT  # HTTPS
 ```
 
 ---
+
 ## Key Takeaways
 
 - Port scanning is a fundamental reconnaissance technique for both attackers and defenders

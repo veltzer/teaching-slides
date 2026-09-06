@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Database Design Principles
 
 ---
+
 ## What This Chapter Covers
 
 - Why design matters
@@ -18,6 +20,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## Why Design Matters
 
 - Schema lives longer than the code
@@ -26,11 +29,13 @@ audience:
 - The single most important DB skill
 
 ---
+
 ## Three Phases
 
 ![design_phases](svg/courses/databases/database-design/01_introduction_to_database_design_principles/design_phases.svg)
 
 ---
+
 ## Goals
 
 - Data integrity
@@ -39,6 +44,7 @@ audience:
 - Clarity for developers
 
 ---
+
 ## Three Models
 
 - Conceptual: ER diagrams; "what entities exist"
@@ -47,6 +53,7 @@ audience:
 - Each builds on the last
 
 ---
+
 ## Conceptual Modelling
 
 - Entities: User, Order, Product
@@ -55,6 +62,7 @@ audience:
 - High-level; for stakeholders
 
 ---
+
 ## Logical Design
 
 - Convert to tables
@@ -63,6 +71,7 @@ audience:
 - Independent of database vendor
 
 ---
+
 ## Physical Design
 
 - Storage decisions
@@ -71,6 +80,7 @@ audience:
 - Vendor-specific features
 
 ---
+
 ## Iterating
 
 - First pass: get it correct
@@ -79,6 +89,7 @@ audience:
 - Measure before adding indexes
 
 ---
+
 ## Conventions
 
 - Plural table names: users, orders
@@ -88,6 +99,7 @@ audience:
 - Consistency saves debate
 
 ---
+
 ## Common Pitfalls
 
 - Designing tables before understanding the queries

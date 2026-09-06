@@ -11,9 +11,11 @@ audience:
   - audiences:architects
 
 ---
+
 # NoSQL Databases
 
 ---
+
 ## Why NoSQL Emerged
 
 By the mid-2000s, the web outgrew the single-node RDBMS:
@@ -27,6 +29,7 @@ By the mid-2000s, the web outgrew the single-node RDBMS:
 NoSQL is not one thing. It's four distinct families that each relax a different part of the relational contract in exchange for one of these properties.
 
 ---
+
 ## What NoSQL Gives Up
 
 - **Joins across entities** — most NoSQL stores don't support them, or only within limits
@@ -37,6 +40,7 @@ NoSQL is not one thing. It's four distinct families that each relax a different 
 In return you get horizontal scalability, flexible schemas, and models that fit specific problems better than rows and columns.
 
 ---
+
 ## CAP Recap
 
 From chapter 2: during a network partition, a distributed system can guarantee either **Consistency** or **Availability**, not both.
@@ -47,21 +51,25 @@ From chapter 2: during a network partition, a distributed system can guarantee e
 Most real systems are tunable — you pick consistency level per operation, not per database.
 
 ---
+
 ## BASE vs ACID
 
 ![base_vs_acid](svg/courses/architecting/architecting/06_nosql/base_vs_acid.svg)
 
 ---
+
 ## Consistency Is a Spectrum
 
 "Eventually consistent" is a family, not a single guarantee. Applications care about which ordering promises hold.
 
 ---
+
 ## Consistency Models
 
 ![consistency_models](svg/courses/architecting/architecting/06_nosql/consistency_models.svg)
 
 ---
+
 ## Picking a Consistency Level
 
 - **Linearizable** — bank balance, inventory count. Slow across regions.
@@ -73,11 +81,13 @@ Most real systems are tunable — you pick consistency level per operation, not 
 Most NoSQL systems let you pick per query — the default is usually eventual.
 
 ---
+
 ## The Four Families
 
 ![four_families](svg/courses/architecting/architecting/06_nosql/four_families.svg)
 
 ---
+
 ## Family 1: Key-Value Stores
 
 The simplest NoSQL model: a dictionary that persists. The value is opaque to the database.
@@ -90,6 +100,7 @@ The simplest NoSQL model: a dictionary that persists. The value is opaque to the
 Redis extends the model with typed values — lists, sets, sorted sets, streams — while keeping single-key semantics.
 
 ---
+
 ## Key-Value Example: Redis
 
 ```bash
@@ -109,6 +120,7 @@ ZREVRANGE scores 0 9 WITHSCORES   # top 10
 All O(log N) or O(1) per operation. Millions of ops/sec on a single node.
 
 ---
+
 ## Family 2: Document Stores
 
 Documents are self-describing — each is a JSON-like object with nested structure.
@@ -122,11 +134,13 @@ Documents are self-describing — each is a JSON-like object with nested structu
 The data model matches what most applications already serialize over the wire.
 
 ---
+
 ## Relational vs. Document
 
 ![relational_vs_document](svg/courses/architecting/architecting/06_nosql/relational_vs_document.svg)
 
 ---
+
 ## Document Example: MongoDB
 
 ```javascript
@@ -154,6 +168,7 @@ db.users.updateOne(
 The nested array lives inside the user document. One fetch returns everything.
 
 ---
+
 ## Document Trade-offs
 
 **Pros**:
@@ -170,6 +185,7 @@ The nested array lives inside the user document. One fetch returns everything.
 Rule of thumb: embed when the child is always fetched with the parent; reference when the child is shared or grows unbounded.
 
 ---
+
 ## Family 3: Column-Family (Wide-Column)
 
 A sparse, two-dimensional map: `row_key → column_family → (column_name → value)`.
@@ -182,11 +198,13 @@ A sparse, two-dimensional map: `row_key → column_family → (column_name → v
 The row is the unit of locality. Queries within one row are cheap; queries across rows usually require knowing the row key.
 
 ---
+
 ## Wide-Column Row Structure
 
 ![wide_column_row](svg/courses/architecting/architecting/06_nosql/wide_column_row.svg)
 
 ---
+
 ## Wide-Column Example: Cassandra
 
 ```sql
@@ -211,6 +229,7 @@ LIMIT 100;
 The partition key (`user_id`) determines which node stores the data. The clustering key (`event_time`) orders columns within the partition. You design the schema around the queries you need.
 
 ---
+
 ## Wide-Column Trade-offs
 
 **Pros**:
@@ -225,6 +244,7 @@ The partition key (`user_id`) determines which node stores the data. The cluster
 - Compactions need tuning for write-heavy workloads
 
 ---
+
 ## Family 4: Graph Databases
 
 Data is modeled as **nodes** (entities) and **edges** (typed, directed relationships).
@@ -237,11 +257,13 @@ Data is modeled as **nodes** (entities) and **edges** (typed, directed relations
 The shape of the data *is* the query plan.
 
 ---
+
 ## Graph Model
 
 ![graph_example](svg/courses/architecting/architecting/06_nosql/graph_example.svg)
 
 ---
+
 ## Graph Example: Cypher (Neo4j)
 
 ```sql
@@ -264,6 +286,7 @@ RETURN p
 The same traversal in SQL would be a self-join per hop — at six hops, the planner gives up.
 
 ---
+
 ## Schema Flexibility — Pros and Pitfalls
 
 **Pro**: add a field to new records without touching old ones. No `ALTER TABLE`.
@@ -279,6 +302,7 @@ Mitigations: schema validation (MongoDB `$jsonSchema`, Couchbase enforces via ap
 The flexibility is real. So is the cost.
 
 ---
+
 ## Indexing in NoSQL
 
 The primary key index is free. Everything else is explicit.
@@ -291,16 +315,19 @@ The primary key index is free. Everything else is explicit.
 Design rule: if you haven't planned how a query is served, it probably requires a full scan.
 
 ---
+
 ## Sharding Strategies
 
 ![sharding_strategies](svg/courses/architecting/architecting/06_nosql/sharding_strategies.svg)
 
 ---
+
 ## Replication Models
 
 ![replication_models](svg/courses/architecting/architecting/06_nosql/replication_models.svg)
 
 ---
+
 ## Quorum: R + W > N
 
 In leaderless replication, consistency is tunable per operation.
@@ -320,6 +347,7 @@ Common settings (N = 3):
 Cassandra, DynamoDB, and Riak all expose these as tunable knobs.
 
 ---
+
 ## Transactions in NoSQL
 
 **Per-document** is the common denominator. Most NoSQL systems guarantee atomicity of a single document/row update.
@@ -333,6 +361,7 @@ Cassandra, DynamoDB, and Riak all expose these as tunable knobs.
 If you need cross-entity ACID, an RDBMS is probably still the right tool.
 
 ---
+
 ## Query Languages
 
 NoSQL didn't abolish query languages — it fragmented them.
@@ -347,11 +376,13 @@ NoSQL didn't abolish query languages — it fragmented them.
 SQL-like surface syntax doesn't mean SQL semantics — CQL's `WHERE` rejects any clause the partition design can't satisfy.
 
 ---
+
 ## When to Pick Each Family
 
 ![when_to_pick_each](svg/courses/architecting/architecting/06_nosql/when_to_pick_each.svg)
 
 ---
+
 ## Polyglot Persistence
 
 Few real systems use a single database. A typical architecture might run:
@@ -366,6 +397,7 @@ Few real systems use a single database. A typical architecture might run:
 Each store solves one problem well. The cost is operational complexity: backups, monitoring, and data-pipeline integration multiply per system.
 
 ---
+
 ## Common NoSQL Mistakes
 
 - **"NoSQL means no schema"** — no, it means the schema is your app's job. Write validators.
@@ -378,6 +410,7 @@ Each store solves one problem well. The cost is operational complexity: backups,
 NoSQL databases are sharp tools. Sharp both ways.
 
 ---
+
 ## Chapter Takeaways
 
 - NoSQL is four families, not one alternative — key-value, document, column-family, graph

@@ -9,14 +9,17 @@ audience:
   - audiences:devops
 
 ---
+
 # The Red Hat Family: rpm, yum, and dnf
 
 ---
+
 ## Tooling Layers
 
 ![rpm_lifecycle](svg/courses/operating_systems/linux-package-managers/03_rpm_and_dnf/rpm_lifecycle.svg)
 
 ---
+
 ## What Is a `.rpm` File?
 
 `.rpm` is the package format used by `RHEL`, `CentOS Stream`, `Rocky`, `Alma`, `Fedora`, `openSUSE`, `Amazon Linux`, and others.
@@ -30,11 +33,13 @@ audience:
 Unlike `.deb` you don't usually take a `.rpm` apart by hand. `rpm -qp` and `rpm2cpio` exist if you must.
 
 ---
+
 ## Anatomy of an RPM Package
 
 ![rpm_anatomy](svg/courses/operating_systems/linux-package-managers/03_rpm_and_dnf/rpm_anatomy.svg)
 
 ---
+
 ## Inspecting an `.rpm` Without Installing
 
 ```bash
@@ -58,6 +63,7 @@ rpm2cpio /path/to/httpd*.rpm | cpio -idmv
 `rpm -qp` (query a package file) is the read-only mode you want for auditing.
 
 ---
+
 ## `rpm`: The Low-Level Tool
 
 ```bash
@@ -85,6 +91,7 @@ rpm -qf /usr/sbin/httpd   # which package owns this file?
 Like `dpkg`, `rpm` does *not* fetch and does *not* resolve dependencies.
 
 ---
+
 ## `rpm` Verification
 
 `rpm -V` checks installed files against the metadata recorded at install time.
@@ -115,6 +122,7 @@ rpm -qa gpg-pubkey*    # what keys are trusted?
 This is your "did anything tamper with my files?" tool.
 
 ---
+
 ## `yum` → `dnf` → `dnf5`
 
 - `yum` was the original high-level tool on `RHEL`/`Fedora`
@@ -125,6 +133,7 @@ This is your "did anything tamper with my files?" tool.
 The everyday commands are nearly identical. Use `dnf` going forward; `yum` is legacy muscle memory.
 
 ---
+
 ## Everyday `dnf`
 
 ```bash
@@ -157,6 +166,7 @@ dnf list --showduplicates httpd
 ```
 
 ---
+
 ## `dnf history`: A Real Audit Log
 
 This is one of `dnf`'s killer features over `apt`.
@@ -181,6 +191,7 @@ sudo dnf history rollback 20
 `apt` has nothing this clean built-in. On `RHEL`/`Fedora`, you can revert a bad upgrade with one command.
 
 ---
+
 ## `dnf` Groups and Modules
 
 ```bash
@@ -207,6 +218,7 @@ dnf module disable nodejs
 Modules are how RHEL ships, e.g., both `Node.js 18` and `20` from one repo.
 
 ---
+
 ## Repositories: `/etc/yum.repos.d/`
 
 Each repo is one `.repo` file, one or more `[section]` blocks per file.
@@ -240,6 +252,7 @@ sudo dnf --disablerepo='*' --enablerepo=baseos install bar
 Always set `gpgcheck=1`. A repo that asks you to disable `gpgcheck` is asking you to lower your guard.
 
 ---
+
 ## `EPEL` and Other Common Third-Party Repos
 
 `EPEL` (Extra Packages for Enterprise Linux) is the canonical third-party repo for `RHEL` and clones.
@@ -263,6 +276,7 @@ sudo dnf install thatproject
 ```
 
 ---
+
 ## Building Your Own `.rpm` with `rpmbuild`
 
 The minimum you need is a `.spec` file.
@@ -308,6 +322,7 @@ rpmbuild -ba ~/rpmbuild/SPECS/myapp.spec
 ```
 
 ---
+
 ## Signing Your `.rpm`
 
 Unsigned `.rpm`s install only if you disable `gpgcheck`. Sign them.
@@ -329,6 +344,7 @@ gpg --export -a 'Your Name' > RPM-GPG-KEY-myapp
 A signed package + a published key + `gpgcheck=1` in the repo definition = a chain of trust.
 
 ---
+
 ## Side-by-Side: `apt` vs `dnf`
 
 | Task | `apt` (Debian/Ubuntu) | `dnf` (RHEL/Fedora) |
@@ -348,6 +364,7 @@ A signed package + a published key + `gpgcheck=1` in the repo definition = a cha
 | Clean | `apt clean` | `dnf clean all` |
 
 ---
+
 ## Why You Might Prefer One Over the Other
 
 `apt` strengths:
@@ -368,6 +385,7 @@ A signed package + a published key + `gpgcheck=1` in the repo definition = a cha
 Most of the time, the choice is made *for* you by your distribution. Knowing both is a useful muscle when you change jobs.
 
 ---
+
 ## A Word on `zypper`, `pacman`, and `apk`
 
 You will sooner or later hit a non-Debian, non-Red Hat system. The vocabulary translates.

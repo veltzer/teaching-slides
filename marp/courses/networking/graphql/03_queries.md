@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Queries
 
 ---
+
 ## What This Chapter Covers
 
 - Basic queries
@@ -20,16 +22,19 @@ audience:
 - Operation names
 
 ---
+
 ## GraphQL vs REST
 
 ![graphql_vs_rest](svg/courses/networking/graphql/03_queries/graphql_vs_rest.svg)
 
 ---
+
 ## Query Features
 
 ![query_features](svg/courses/networking/graphql/03_queries/query_features.svg)
 
 ---
+
 ## Basic Query
 
 ```graphql
@@ -45,6 +50,7 @@ query {
 - Server returns matching shape
 
 ---
+
 ## Nested Selection
 
 ```graphql
@@ -65,6 +71,7 @@ query {
 - Single round trip
 
 ---
+
 ## Arguments
 
 ```graphql
@@ -78,6 +85,7 @@ query {
 - Defined in schema
 
 ---
+
 ## Aliases
 
 ```graphql
@@ -91,6 +99,7 @@ query {
 - Disambiguate response
 
 ---
+
 ## Fragments
 
 ```graphql
@@ -109,6 +118,7 @@ fragment UserFields on User {
 - DRY
 
 ---
+
 ## Inline Fragments
 
 ```graphql
@@ -125,6 +135,7 @@ fragment UserFields on User {
 - For unions and interfaces
 
 ---
+
 ## Variables
 
 ```graphql
@@ -138,6 +149,7 @@ query GetUser($id: ID!) {
 - Better than string interpolation
 
 ---
+
 ## Operation Names
 
 - `query GetUser { ... }` not just `{ ... }`
@@ -145,6 +157,7 @@ query GetUser($id: ID!) {
 - Helps logging and debugging
 
 ---
+
 ## Default Values
 
 ```graphql
@@ -157,6 +170,7 @@ query Posts($limit: Int = 10) {
 - Schema arg defaults too
 
 ---
+
 ## Introspection
 
 - `__schema`, `__type`
@@ -164,6 +178,7 @@ query Posts($limit: Int = 10) {
 - Enables tooling
 
 ---
+
 ## Why Field Selection Wins
 
 - Each consumer fetches only needed fields
@@ -171,6 +186,7 @@ query Posts($limit: Int = 10) {
 - One round trip for nested data
 
 ---
+
 ## Common Query Mistakes
 
 - Asking for too many fields by habit

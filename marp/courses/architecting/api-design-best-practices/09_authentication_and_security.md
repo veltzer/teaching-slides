@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Authentication and Security
 
 ---
+
 ## Authentication vs Authorization
 
 - **Authentication** (AuthN): who is making the request?
@@ -20,11 +22,13 @@ audience:
 - The client doesn't enforce either — only suggests intent
 
 ---
+
 ## Auth Layers
 
 ![auth_layers](svg/courses/architecting/api-design-best-practices/09_authentication_and_security/auth_layers.svg)
 
 ---
+
 ## API Keys
 
 - A simple shared secret
@@ -33,6 +37,7 @@ audience:
 - Useful for server-to-server, less for end-user authentication
 
 ---
+
 ## API Key Limitations
 
 - A leaked key is a permanent breach until rotated
@@ -42,6 +47,7 @@ audience:
 - Use API keys, but don't rely on them alone for sensitive APIs
 
 ---
+
 ## OAuth 2.0
 
 - A framework for delegated authorization
@@ -50,6 +56,7 @@ audience:
 - Industry standard for user-permitted access
 
 ---
+
 ## OAuth Flows
 
 - **Authorization Code**: web apps; user logs in, app gets a code, exchanges for token
@@ -59,6 +66,7 @@ audience:
 - **Refresh Token**: get a new access token without re-authenticating
 
 ---
+
 ## OpenID Connect (OIDC)
 
 - An identity layer on top of OAuth 2.0
@@ -66,6 +74,7 @@ audience:
 - Common stack: OAuth 2.0 for authorization + OIDC for authentication
 
 ---
+
 ## JWT Tokens
 
 - JSON Web Token: a signed (sometimes encrypted) JSON payload
@@ -74,6 +83,7 @@ audience:
 - The signature lets the API verify the token without a database lookup
 
 ---
+
 ## JWT Anatomy
 
 ```diagram
@@ -85,6 +95,7 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1MSIsImV4cCI6MTczNzAwMDAwMH0.signature
 - Signature: HMAC or RSA over header + payload
 
 ---
+
 ## JWT Caveats
 
 - JWTs cannot be revoked easily — use short expiry + refresh tokens
@@ -93,6 +104,7 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1MSIsImV4cCI6MTczNzAwMDAwMH0.signature
 - Don't put sensitive data in the payload — it's just base64, anyone can read it
 
 ---
+
 ## Scopes and Permissions
 
 - A scope is a named permission: `read:orders`, `write:orders`, `admin:users`
@@ -101,6 +113,7 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1MSIsImV4cCI6MTczNzAwMDAwMH0.signature
 - Coarse scopes lead to over-permissioned tokens; very fine scopes burden the user
 
 ---
+
 ## Authorization at the API
 
 - Every endpoint declares what scope/role/permission it requires
@@ -109,6 +122,7 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1MSIsImV4cCI6MTczNzAwMDAwMH0.signature
 - The resource owner check is separate: scope says "can edit orders", but does this user own this order?
 
 ---
+
 ## Transport Security
 
 - HTTPS everywhere — even between internal services
@@ -117,6 +131,7 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1MSIsImV4cCI6MTczNzAwMDAwMH0.signature
 - TLS 1.2 minimum; prefer TLS 1.3
 
 ---
+
 ## CORS
 
 - Browsers enforce same-origin policy by default
@@ -125,6 +140,7 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1MSIsImV4cCI6MTczNzAwMDAwMH0.signature
 - Don't use `Access-Control-Allow-Origin: *` for authenticated APIs
 
 ---
+
 ## CSRF
 
 - Relevant for cookie-authenticated APIs called from browsers
@@ -133,6 +149,7 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1MSIsImV4cCI6MTczNzAwMDAwMH0.signature
 - Browser-facing APIs need explicit CSRF design
 
 ---
+
 ## Common Vulnerabilities
 
 - Broken authentication (predictable tokens, weak secrets)
@@ -142,6 +159,7 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1MSIsImV4cCI6MTczNzAwMDAwMH0.signature
 - Unrestricted resource consumption (no pagination, no rate limit)
 
 ---
+
 ## OWASP API Security Top 10
 
 - A widely-used checklist
@@ -150,6 +168,7 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1MSIsImV4cCI6MTczNzAwMDAwMH0.signature
 - The 10 items align well with this chapter
 
 ---
+
 ## Summary
 
 - AuthN: who; AuthZ: may they

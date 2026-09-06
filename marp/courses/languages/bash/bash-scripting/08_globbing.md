@@ -12,6 +12,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Globbing
 
 ---
@@ -21,6 +22,7 @@ audience:
 ![Glob Pattern Overview](svg/courses/languages/bash/bash-scripting/08_globbing/glob_pattern_overview.svg)
 
 ---
+
 ## What is Globbing?
 - Pattern matching for filenames
 - Performed by the **shell**, not by commands
@@ -34,6 +36,7 @@ echo *.txt
 ```
 
 ---
+
 ## The Asterisk `*`
 
 ```bash
@@ -50,6 +53,7 @@ ls .* *           # all files, hidden and non-hidden
 ```
 
 ---
+
 ## The Question Mark `?`
 
 ```bash
@@ -63,6 +67,7 @@ ls file?.*        # file1.txt, fileA.md, etc.
 ```
 
 ---
+
 ## Character Classes `[...]`
 
 ```bash
@@ -81,6 +86,7 @@ ls file[0-9a-f].txt     # hexadecimal single digit
 ```
 
 ---
+
 ## Negation `[!...]` and `[^...]`
 
 ```bash
@@ -96,6 +102,7 @@ ls [^.]*                # same thing
 ```
 
 ---
+
 ## POSIX Character Classes
 
 ```bash
@@ -116,6 +123,7 @@ ls [:digit:]       # WRONG (matches :, d, i, g, t)
 ```
 
 ---
+
 ## When Globs Don't Match
 
 ```bash
@@ -141,6 +149,7 @@ echo /nonexistent/*.xyz
 ```
 
 ---
+
 ## The `dotglob` Option
 
 ```bash
@@ -157,6 +166,7 @@ shopt -u dotglob
 ```
 
 ---
+
 ## Extended Globbing
 
 ```bash
@@ -180,7 +190,9 @@ ls !(*.txt)               # all files except .txt files
 ```
 
 ---
+
 ## Globbing vs Regular Expressions
+
 | Glob | Regex | Meaning |
 |------|-------|---------|
 | `*` | `.*` | Any characters |
@@ -197,6 +209,7 @@ ls .*\.txt      # WRONG! (regex syntax)
 ```
 
 ---
+
 ## Globbing Safety
 
 ```bash

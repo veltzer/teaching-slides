@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Testing and Runbooks
 
 ---
+
 ## What This Chapter Covers
 
 - DR testing levels
@@ -21,6 +23,7 @@ audience:
 - Post-incident review
 
 ---
+
 ## Why Test
 
 - Untested DR is theoretical DR
@@ -29,6 +32,7 @@ audience:
 - Tools change
 
 ---
+
 ## Testing Levels
 
 - Walkthrough
@@ -37,11 +41,13 @@ audience:
 - Full failover
 
 ---
+
 ## Drill Levels
 
 ![drill_levels](svg/courses/architecting/disaster-recovery/05_testing_and_runbooks/drill_levels.svg)
 
 ---
+
 ## Walkthrough
 
 - Read the runbook with the team
@@ -50,6 +56,7 @@ audience:
 - Cheap to run often
 
 ---
+
 ## Tabletop Exercise
 
 - Scenario-driven discussion
@@ -58,6 +65,7 @@ audience:
 - Find missing inputs
 
 ---
+
 ## Failover Drill
 
 - Real failover in lower environment
@@ -66,6 +74,7 @@ audience:
 - Identify automation gaps
 
 ---
+
 ## Full Failover
 
 - Production traffic moved
@@ -74,6 +83,7 @@ audience:
 - Highest fidelity
 
 ---
+
 ## Game Days
 
 - Inject realistic faults
@@ -82,6 +92,7 @@ audience:
 - Document learnings
 
 ---
+
 ## Runbook Anatomy
 
 - Trigger conditions
@@ -91,11 +102,13 @@ audience:
 - Rollback steps
 
 ---
+
 ## Runbook Sections
 
 ![runbook_anatomy](svg/courses/architecting/disaster-recovery/05_testing_and_runbooks/runbook_anatomy.svg)
 
 ---
+
 ## Runbook Quality
 
 - Linkable from alerts
@@ -104,6 +117,7 @@ audience:
 - Versioned with code
 
 ---
+
 ## Communication Plan
 
 - Internal status updates
@@ -112,6 +126,7 @@ audience:
 - Pre-approved templates
 
 ---
+
 ## Decision Authority
 
 - Who can declare disaster
@@ -120,6 +135,7 @@ audience:
 - Documented and on-call
 
 ---
+
 ## Post-Incident Review
 
 - Blameless culture
@@ -128,6 +144,7 @@ audience:
 - Update runbooks afterward
 
 ---
+
 ## Common Testing Mistakes
 
 - Annual-only drill

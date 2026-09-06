@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Reliability
 
 ---
+
 ## What This Chapter Covers
 
 - Delivery semantics in depth
@@ -21,6 +23,7 @@ audience:
 - Backpressure
 
 ---
+
 ## Acknowledgments
 
 - Consumer signals success
@@ -29,11 +32,13 @@ audience:
 - Tunes the at-least-once guarantee
 
 ---
+
 ## Delivery Guarantees
 
 ![delivery_guarantees](svg/courses/architecting/message-queues/03_reliability/delivery_guarantees.svg)
 
 ---
+
 ## Auto-Ack
 
 - Ack on receive
@@ -42,6 +47,7 @@ audience:
 - Default in some clients
 
 ---
+
 ## Manual Ack
 
 - Ack after processing
@@ -50,6 +56,7 @@ audience:
 - Slightly more work
 
 ---
+
 ## Visibility Timeout
 
 - Ack window
@@ -58,6 +65,7 @@ audience:
 - Tune to typical work time
 
 ---
+
 ## Idempotent Consumers
 
 - Same message twice yields same effect
@@ -66,6 +74,7 @@ audience:
 - Or use natural keys
 
 ---
+
 ## Deduplication Window
 
 - Time-bounded uniqueness
@@ -74,6 +83,7 @@ audience:
 - Document the window
 
 ---
+
 ## Outbox Pattern
 
 - Write event to local table in same transaction as data
@@ -82,11 +92,13 @@ audience:
 - Required when correctness matters
 
 ---
+
 ## Outbox Visualized
 
 ![outbox_pattern](svg/courses/architecting/message-queues/03_reliability/outbox_pattern.svg)
 
 ---
+
 ## Inbox Pattern
 
 - Receiver records processed IDs
@@ -95,6 +107,7 @@ audience:
 - Closes the loop
 
 ---
+
 ## Backpressure
 
 - Slow consumer
@@ -103,6 +116,7 @@ audience:
 - Drop, block, or scale
 
 ---
+
 ## Bounded Queues
 
 - Cap on depth
@@ -111,6 +125,7 @@ audience:
 - Prevents runaway memory
 
 ---
+
 ## Flow Control
 
 - Credits or windows
@@ -119,6 +134,7 @@ audience:
 - Avoid silent overload
 
 ---
+
 ## Disaster Scenarios
 
 - Broker total loss
@@ -127,6 +143,7 @@ audience:
 - Replay from backup
 
 ---
+
 ## Common Reliability Mistakes
 
 - Auto-ack in production

@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # What to Look For
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![review_focus_areas](svg/courses/development_methodologies/code-review-best-practices/04_what_to_look_for/review_focus_areas.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Bugs and logic errors
@@ -27,11 +29,13 @@ audience:
 - A mental checklist
 
 ---
+
 ## Review Priorities
 
 ![review_priorities](svg/courses/development_methodologies/code-review-best-practices/04_what_to_look_for/review_priorities.svg)
 
 ---
+
 ## A Mental Checklist
 
 - Does it work? (correctness)
@@ -43,11 +47,13 @@ audience:
 - Run through these every time
 
 ---
+
 ## A Reviewer's Lens
 
 ![review_checklist](svg/courses/development_methodologies/code-review-best-practices/04_what_to_look_for/review_checklist.svg)
 
 ---
+
 ## Bugs and Logic Errors
 
 - Off-by-one errors
@@ -58,6 +64,7 @@ audience:
 - Compare against the description: does the code match?
 
 ---
+
 ## How To Spot Bugs
 
 - Run the code mentally with sample inputs
@@ -67,6 +74,7 @@ audience:
 - Trust your "this looks weird" instinct
 
 ---
+
 ## Design Concerns
 
 - Is this in the right module?
@@ -77,6 +85,7 @@ audience:
 - Design issues are expensive to fix later
 
 ---
+
 ## When To Push Back on Design
 
 - The change is in the wrong direction
@@ -86,6 +95,7 @@ audience:
 - Block when the design is wrong; suggest when it's just different
 
 ---
+
 ## Code Style
 
 - Naming, formatting, indentation
@@ -95,6 +105,7 @@ audience:
 - Comment "nit:" for style nitpicks (so authors know they're not blockers)
 
 ---
+
 ## Test Coverage
 
 - Are there tests at all?
@@ -104,6 +115,7 @@ audience:
 - "Tests added" without checking what they test is rubber-stamping
 
 ---
+
 ## Test Quality
 
 - A test that always passes is worse than no test
@@ -113,6 +125,7 @@ audience:
 - Quality > quantity for tests
 
 ---
+
 ## Security
 
 - Untrusted input handling
@@ -123,6 +136,7 @@ audience:
 - For sensitive areas: get a security review
 
 ---
+
 ## Common Security Smells
 
 - String concatenation into queries (SQL injection)
@@ -133,6 +147,7 @@ audience:
 - Disabled cert validation
 
 ---
+
 ## Performance
 
 - Loops over large datasets
@@ -142,6 +157,7 @@ audience:
 - Don't optimise prematurely; do flag clear issues
 
 ---
+
 ## Performance Smells
 
 - Database query inside a loop
@@ -151,6 +167,7 @@ audience:
 - Synchronous I/O in async contexts
 
 ---
+
 ## Comments and Documentation
 
 - Are comments explaining *why*, not *what*?
@@ -160,6 +177,7 @@ audience:
 - Doc rot is real; comment changes catch it
 
 ---
+
 ## What NOT To Look For
 
 - Personal style preferences (tabs vs spaces — let the formatter decide)
@@ -169,6 +187,7 @@ audience:
 - Save those for the right channel; don't pile onto a PR
 
 ---
+
 ## Common Mistakes
 
 - Reviewing only style, missing logic bugs

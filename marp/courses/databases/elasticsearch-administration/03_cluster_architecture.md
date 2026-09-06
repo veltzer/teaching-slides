@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Cluster Architecture
 
 ---
+
 ## What This Chapter Covers
 
 - Node roles and types
@@ -22,6 +24,7 @@ audience:
 - Discovery and cluster formation
 
 ---
+
 ## Node Roles Overview
 
 - Each node can hold one or more roles
@@ -32,6 +35,7 @@ audience:
 - Configured via `node.roles` in elasticsearch.yml
 
 ---
+
 ## Configuring node.roles
 
 - An explicit list assigns precise responsibilities
@@ -49,6 +53,7 @@ node.roles: [ ]
 ```
 
 ---
+
 ## Master-Eligible Nodes
 
 - Master-eligible nodes can be elected cluster master
@@ -58,6 +63,7 @@ node.roles: [ ]
 - Keep master duties lightweight and stable
 
 ---
+
 ## Master Elections and Quorum
 
 - One master is elected from the master-eligible nodes
@@ -71,6 +77,7 @@ GET _cluster/state/metadata/cluster_coordination
 ```
 
 ---
+
 ## Why Three Dedicated Masters
 
 - Three master-eligible nodes tolerate one failure and keep quorum
@@ -84,6 +91,7 @@ node.roles: [ master ]
 ```
 
 ---
+
 ## Voting Configuration
 
 - Elasticsearch maintains the set of voting master-eligible nodes
@@ -96,6 +104,7 @@ DELETE _cluster/voting_config_exclusions
 ```
 
 ---
+
 ## Data Nodes
 
 - Data nodes store shards and execute index/search/aggregation work
@@ -109,6 +118,7 @@ node.roles: [ data, ingest ]
 ```
 
 ---
+
 ## Data Tiers
 
 - data_content: non-time-series content (e.g. product catalogs)
@@ -119,6 +129,7 @@ node.roles: [ data, ingest ]
 - Index Lifecycle Management moves indices across tiers
 
 ---
+
 ## Configuring Data Tiers
 
 - Assign tier roles to align hardware with access patterns
@@ -133,6 +144,7 @@ node.roles: [ data_warm ]
 ```
 
 ---
+
 ## Ingest Nodes
 
 - Ingest nodes run pipelines that transform documents before indexing
@@ -149,6 +161,7 @@ PUT _ingest/pipeline/add-timestamp
 ```
 
 ---
+
 ## Using an Ingest Pipeline
 
 - Reference the pipeline when indexing documents
@@ -165,6 +178,7 @@ PUT logs/_settings
 ```
 
 ---
+
 ## Coordinating-Only Nodes
 
 - Created with an empty `node.roles: []`
@@ -178,6 +192,7 @@ node.roles: [ ]
 ```
 
 ---
+
 ## Machine Learning Nodes
 
 - The `ml` role runs anomaly detection and data frame analytics jobs
@@ -190,6 +205,7 @@ node.roles: [ ml, remote_cluster_client ]
 ```
 
 ---
+
 ## Cluster State Management
 
 - Cluster state holds metadata: indices, mappings, settings, routing
@@ -203,6 +219,7 @@ GET _cluster/state?filter_path=metadata.indices.*.settings
 ```
 
 ---
+
 ## Discovery and Formation
 
 - Discovery is how nodes find each other and form a cluster
@@ -217,6 +234,7 @@ discovery.seed_hosts:
 ```
 
 ---
+
 ## First-Time Bootstrap
 
 - `cluster.initial_master_nodes` is used only on the very first start
@@ -232,6 +250,7 @@ cluster.initial_master_nodes:
 ```
 
 ---
+
 ## A Production Topology Example
 
 - 3 dedicated master-eligible nodes (quorum, stability)

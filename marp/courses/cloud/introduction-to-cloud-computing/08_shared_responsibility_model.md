@@ -11,6 +11,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Shared Responsibility Model
 
 ---

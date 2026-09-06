@@ -10,6 +10,7 @@ audience:
 - audiences:developers
 
 ---
+
 # The Context Window
 ## What an LLM Can See, and What It Forgets
 ## Mark Veltzer

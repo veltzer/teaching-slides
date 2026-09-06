@@ -11,6 +11,7 @@ audience:
 - audiences:developers
 
 ---
+
 # The Model Context Protocol
 ## A Universal Standard for Connecting LLMs to the World
 ## Mark Veltzer

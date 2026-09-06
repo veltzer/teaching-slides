@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Messaging Patterns
 
 ---
+
 ## What This Chapter Covers
 
 - Point-to-point
@@ -21,6 +23,7 @@ audience:
 - Dead-letter queues
 
 ---
+
 ## Point-to-Point
 
 - One queue
@@ -29,11 +32,13 @@ audience:
 - Classic work queue
 
 ---
+
 ## Pattern Catalog
 
 ![messaging_patterns](svg/courses/architecting/message-queues/02_patterns/messaging_patterns.svg)
 
 ---
+
 ## Publish-Subscribe
 
 - Topic, not queue
@@ -42,11 +47,13 @@ audience:
 - Filtered subscriptions optional
 
 ---
+
 ## Queue vs Topic
 
 ![queue_vs_topic](svg/courses/architecting/message-queues/02_patterns/queue_vs_topic.svg)
 
 ---
+
 ## Fan-Out
 
 - One producer, many consumers
@@ -55,6 +62,7 @@ audience:
 - Add subscribers without producer change
 
 ---
+
 ## Fan-In
 
 - Many producers, one queue
@@ -63,6 +71,7 @@ audience:
 - Watch for hot keys
 
 ---
+
 ## Request-Reply
 
 - Producer sends request
@@ -71,6 +80,7 @@ audience:
 - Adds latency, useful for sync
 
 ---
+
 ## Correlation IDs
 
 - Tag each message
@@ -79,6 +89,7 @@ audience:
 - Standard for debugging
 
 ---
+
 ## Competing Consumers
 
 - Multiple consumers on one queue
@@ -87,6 +98,7 @@ audience:
 - Hot keys break it
 
 ---
+
 ## Worker Pool
 
 - Stateless workers
@@ -95,6 +107,7 @@ audience:
 - Idempotent processing
 
 ---
+
 ## Dead-Letter Queue
 
 - Messages that fail too many times
@@ -103,6 +116,7 @@ audience:
 - Required in production
 
 ---
+
 ## Retry With Backoff
 
 - Transient failures retry
@@ -111,6 +125,7 @@ audience:
 - Then dead-letter
 
 ---
+
 ## Delayed Delivery
 
 - Schedule for later
@@ -119,6 +134,7 @@ audience:
 - Native in some brokers
 
 ---
+
 ## Priority Queues
 
 - Urgent messages first
@@ -127,6 +143,7 @@ audience:
 - Prefer separate queues
 
 ---
+
 ## Message Routing
 
 - By topic
@@ -135,6 +152,7 @@ audience:
 - Routing logic in broker
 
 ---
+
 ## Common Pattern Mistakes
 
 - Reply queue per request

@@ -8,9 +8,11 @@ audience:
   - audiences:data-analysts
 
 ---
+
 # Reporting
 
 ---
+
 ## What This Chapter Covers
 
 - Report types and their purposes
@@ -21,6 +23,7 @@ audience:
 - The handoff to action
 
 ---
+
 ## Report Types
 
 - **Recurring**: same metrics, regular cadence (weekly, monthly)
@@ -30,16 +33,19 @@ audience:
 - Each has a different structure and audience
 
 ---
+
 ## Effective Structure
 
 ![report_structure](svg/courses/data_science/data-analyst-fundamentals/12_reporting/report_structure.svg)
 
 ---
+
 ## Reporting Audiences
 
 ![report_audiences](svg/courses/data_science/data-analyst-fundamentals/12_reporting/report_audiences.svg)
 
 ---
+
 ## What a Report Is For
 
 - A document that *triggers* a decision or *records* one
@@ -49,6 +55,7 @@ audience:
 - Pre-meeting reading material if you're lucky
 
 ---
+
 ## Structuring an Analytical Report
 
 - **Executive summary**: 3-5 bullets, the headline
@@ -60,6 +67,7 @@ audience:
 - **Appendix**: data, methodology details
 
 ---
+
 ## The Executive Summary
 
 - The single most important section
@@ -69,6 +77,7 @@ audience:
 - "We should do X because Y, with Z risk" is the template
 
 ---
+
 ## Findings
 
 - Lead with the most important
@@ -78,6 +87,7 @@ audience:
 - Don't bury the lede in a long methodology section
 
 ---
+
 ## Recommendations
 
 - Concrete: who should do what, by when
@@ -87,6 +97,7 @@ audience:
 - The bridge between analysis and action
 
 ---
+
 ## Caveats
 
 - What you don't know
@@ -96,6 +107,7 @@ audience:
 - Honest caveats build trust; missing caveats break it
 
 ---
+
 ## Automated Reports
 
 - Scheduled queries that produce a report
@@ -105,6 +117,7 @@ audience:
 - Frees analyst time from repetitive runs
 
 ---
+
 ## Building an Automation
 
 - Parameterise the date range
@@ -114,6 +127,7 @@ audience:
 - Documented in a runbook
 
 ---
+
 ## When Automation Helps
 
 - Recurring reports with stable structure
@@ -123,6 +137,7 @@ audience:
 - Most weekly status reports
 
 ---
+
 ## When Automation Hurts
 
 - Stakeholders need a *story*, not numbers
@@ -132,6 +147,7 @@ audience:
 - Some reports need a human in the loop
 
 ---
+
 ## Presenting Findings
 
 - Slides for live presentation; reports for reading
@@ -141,6 +157,7 @@ audience:
 - Practice once — really
 
 ---
+
 ## Stakeholder Q&A
 
 - "I don't know" is acceptable; "I'll find out" is the follow-up
@@ -150,6 +167,7 @@ audience:
 - Calibration over time builds trust
 
 ---
+
 ## After the Report
 
 - Track whether the recommendation was acted on
@@ -159,6 +177,7 @@ audience:
 - This loop is what makes an analyst trusted
 
 ---
+
 ## Recommendations and Next Steps
 
 - Always end the report with a list
@@ -168,6 +187,7 @@ audience:
 - Without this, reports go on a shelf
 
 ---
+
 ## Common Mistakes
 
 - 50-page reports nobody reads
@@ -177,6 +197,7 @@ audience:
 - "Send me the data" without analysis or recommendation
 
 ---
+
 ## Course Wrap-Up
 
 - The data analyst's job is *answering questions* and *communicating answers*

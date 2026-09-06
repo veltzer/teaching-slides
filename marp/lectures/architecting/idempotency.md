@@ -9,6 +9,7 @@ audience:
 - audiences:developers
 
 ---
+
 # Idempotency in Web Services
 ## Building Reliable APIs
 ## Mark Veltzer
@@ -868,9 +869,9 @@ redis_client.set(key, response)  # No expiration
     - Storage capacity issues
     - Failed key lookups
 - **Logging**
-    ```python
+  ```python
     logger.info(f"Idempotency key {key}: {'HIT' if cached else 'MISS'}")
-    ```
+  ```
 
 ---
 

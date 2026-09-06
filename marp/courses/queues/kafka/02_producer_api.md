@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Producer API
 
 ---
+
 ## What This Chapter Covers
 
 - The Producer in Kafka
@@ -21,6 +23,7 @@ audience:
 - Common producer patterns and pitfalls
 
 ---
+
 ## What a Producer Does
 
 - Constructs records (key + value + metadata)
@@ -31,11 +34,13 @@ audience:
 - That's the whole job; everything else is configuration
 
 ---
+
 ## Acks Trade-off
 
 ![producer_acks](svg/courses/queues/kafka/02_producer_api/producer_acks.svg)
 
 ---
+
 ## A Minimal Java Producer
 
 ```java
@@ -53,6 +58,7 @@ producer.close();
 - The hard part is configuration
 
 ---
+
 ## Records Have a Key
 
 - The key is optional but powerful
@@ -62,6 +68,7 @@ producer.close();
 - No key &#8594; round-robin across partitions
 
 ---
+
 ## Why Keys Matter
 
 - Within a partition, records are ordered
@@ -71,6 +78,7 @@ producer.close();
 - Pick the key carefully
 
 ---
+
 ## Serialisation
 
 - Records are bytes on the wire
@@ -80,6 +88,7 @@ producer.close();
 - Don't ship JSON in production at scale (Avro/Protobuf much smaller)
 
 ---
+
 ## Acknowledgements (acks)
 
 - `acks=0`: fire and forget; fastest, can lose data
@@ -89,11 +98,13 @@ producer.close();
 - Trade-off: latency vs durability
 
 ---
+
 ## Producer Send Flow
 
 ![producer_send_flow](svg/courses/queues/kafka/02_producer_api/producer_send_flow.svg)
 
 ---
+
 ## Idempotent Producer
 
 - `enable.idempotence=true`
@@ -103,11 +114,13 @@ producer.close();
 - Required for transactional producer
 
 ---
+
 ## Idempotent Producer Diagram
 
 ![idempotent_producer](svg/courses/queues/kafka/02_producer_api/idempotent_producer.svg)
 
 ---
+
 ## Transactional Producer
 
 - Atomic writes across multiple topics/partitions
@@ -117,6 +130,7 @@ producer.close();
 - Performance overhead modest
 
 ---
+
 ## Batching
 
 - Producer accumulates records in memory; sends in batches
@@ -126,6 +140,7 @@ producer.close();
 - Default: 0ms linger, 16KB batches; tune for your workload
 
 ---
+
 ## Compression
 
 - `compression.type`: none, gzip, snappy, lz4, zstd
@@ -135,6 +150,7 @@ producer.close();
 - `lz4` and `zstd` are good defaults
 
 ---
+
 ## Async Sending
 
 ```java
@@ -149,6 +165,7 @@ producer.send(record, (metadata, exception) -> {
 - Handle errors in the callback or via global error handler
 
 ---
+
 ## Sync Sending
 
 ```java
@@ -161,6 +178,7 @@ RecordMetadata md = producer.send(record).get();
 - Avoid in tight loops
 
 ---
+
 ## Partitioning Strategies
 
 - **Default**: hash(key) mod numPartitions, or round-robin if no key
@@ -170,6 +188,7 @@ RecordMetadata md = producer.send(record).get();
 - Watch for partition skew (one partition takes most traffic)
 
 ---
+
 ## Common Producer Pitfalls
 
 - `acks=0` in production — silent data loss
@@ -179,6 +198,7 @@ RecordMetadata md = producer.send(record).get();
 - Logging every successful send — drowns the logs
 
 ---
+
 ## Producer Tuning Knobs
 
 - `acks`, `linger.ms`, `batch.size`, `compression.type`
@@ -188,6 +208,7 @@ RecordMetadata md = producer.send(record).get();
 - Tune based on your throughput / latency / durability trade-off
 
 ---
+
 ## Common Mistakes
 
 - No key on data that needs ordering

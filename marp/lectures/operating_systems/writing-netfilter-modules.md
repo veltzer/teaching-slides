@@ -9,6 +9,7 @@ audience:
 - audiences:developers
 
 ---
+
 # Writing Netfilter Modules
 ## An Introduction with Examples
 ## Mark Veltzer
@@ -34,6 +35,7 @@ audience:
 1. Best Practices and Considerations
 
 ---
+
 ## Introduction to Netfilter
 - Netfilter is the packet filtering framework in the Linux kernel
 - It allows packet filtering, network address translation (NAT), and other packet mangling
@@ -41,6 +43,7 @@ audience:
 - Modules can register callback functions with these hooks
 
 ---
+
 ## Netfilter Hook Points
 Five main hook points:
 1. `NF_INET_PRE_ROUTING`
@@ -51,6 +54,7 @@ Five main hook points:
 Each hook point allows you to intercept and modify packets at different stages of processing.
 
 ---
+
 ## Basic Structure of a Netfilter Module
 
 ```c
@@ -119,6 +123,7 @@ MODULE_LICENSE("GPL");
 ```
 
 ---
+
 ## Example: IP Address Blacklist
 
 ```c
@@ -196,6 +201,7 @@ sudo rmmod mymodule
 - Different hook functions can also run concurrently
 
 ---
+
 ## Concurrency Challenges
 
 1. Shared Resource Access
@@ -208,6 +214,7 @@ Understand the context in which your hook functions run (softirq context)
 Use appropriate synchronization primitives based on the execution context
 
 ---
+
 ## Example: Using Spinlocks for Shared Data
 
 ```c
@@ -230,6 +237,7 @@ unsigned int hook_func(void *priv, struct sk_buff *skb, const struct nf_hook_sta
 ```
 
 ---
+
 ## Example: Using Per-CPU Variables
 
 ```c
@@ -248,6 +256,7 @@ unsigned int hook_func(void *priv, struct sk_buff *skb, const struct nf_hook_sta
 ```
 
 ---
+
 ## Concurrency Considerations
 
 - Minimize time spent in critical sections

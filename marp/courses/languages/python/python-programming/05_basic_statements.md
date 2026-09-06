@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Basic Statements
 
 ---
+
 ## Variable Assignment
 - Variables are created by assignment
 - No declaration needed
@@ -23,6 +25,7 @@ _private = "hidden"
 ```
 
 ---
+
 ## Multiple Assignment
 
 ```python
@@ -41,6 +44,7 @@ print(a, b)  # 2 1
 ```
 
 ---
+
 ## Augmented Assignment
 
 ```python
@@ -55,6 +59,7 @@ x **= 2  # x = x ** 2
 ```
 
 ---
+
 ## The Walrus Operator `:=` (Python 3.8+)
 - Assignment expression: assigns and returns a value
 
@@ -71,6 +76,7 @@ while (line := input("Enter: ")) != "quit":
 ```
 
 ---
+
 ## The `print()` Function - Detailed
 
 ```python
@@ -90,6 +96,7 @@ with open("output.txt", "w") as f:
 ```
 
 ---
+
 ## Formatted Printing
 
 ```python
@@ -112,6 +119,7 @@ Banana     $  0.75
 ```
 
 ---
+
 ## The `if` Statement
 
 ```python
@@ -126,6 +134,7 @@ if age >= 18:
 - No parentheses needed around the condition
 
 ---
+
 ## `if`/`else`
 
 ```python
@@ -138,6 +147,7 @@ else:
 ```
 
 ---
+
 ## `if`/`elif`/`else`
 
 ```python
@@ -158,6 +168,7 @@ print(f"Grade: {grade}")  # Grade: B
 ```
 
 ---
+
 ## Conditional Expression (Ternary)
 
 ```python
@@ -172,6 +183,7 @@ print(label)  # 'high'
 ```
 
 ---
+
 ## Truthy and Falsy in Conditions
 
 ```python
@@ -192,6 +204,7 @@ if items:
 ```
 
 ---
+
 ## The `while` Loop
 
 ```python
@@ -210,6 +223,7 @@ while count < 5:
 ```
 
 ---
+
 ## `while` with User Input
 
 ```python
@@ -221,6 +235,7 @@ while True:
 ```
 
 ---
+
 ## The `for` Loop
 
 ```python
@@ -236,6 +251,7 @@ for char in "Python":
 ```
 
 ---
+
 ## The `range()` Function
 
 ```python
@@ -257,6 +273,7 @@ for i in range(0, 10, 2):
 ```
 
 ---
+
 ## `range()` - Counting Down
 
 ```python
@@ -271,6 +288,7 @@ for i in reversed(range(5)):
 ```
 
 ---
+
 ## `range()` is Lazy
 - `range()` does not create a list in memory
 - It generates numbers on demand
@@ -284,6 +302,7 @@ print(r[500])            # 500
 ```
 
 ---
+
 ## Iterating Over Dictionaries
 
 ```python
@@ -303,6 +322,7 @@ for key, value in person.items():
 ```
 
 ---
+
 ## Nested Loops
 
 ```python
@@ -320,6 +340,7 @@ for i in range(1, 4):
 ```
 
 ---
+
 ## The `break` Statement
 - Exits the innermost loop immediately
 
@@ -339,6 +360,7 @@ for n in numbers:
 ```
 
 ---
+
 ## The `continue` Statement
 - Skips the rest of the current iteration
 
@@ -351,11 +373,13 @@ for i in range(10):
 ```
 
 ---
+
 ## `break` vs `continue` Diagram
 
 ![break_vs_continue_diagram](svg/courses/languages/python/python-programming/05_basic_statements/break_vs_continue_diagram.svg)
 
 ---
+
 ## The `else` Clause on Loops
 - Executes when the loop completes without `break`
 
@@ -372,6 +396,7 @@ else:
 ```
 
 ---
+
 ## The `pass` Statement
 - Does nothing (placeholder)
 
@@ -394,6 +419,7 @@ if True:
 ```
 
 ---
+
 ## The `match` Statement (Python 3.10+)
 
 ```python
@@ -411,6 +437,7 @@ match command:
 ```
 
 ---
+
 ## `match` with Patterns
 
 ```python
@@ -428,6 +455,7 @@ match point:
 ```
 
 ---
+
 ## `match` with Guards
 
 ```python
@@ -447,6 +475,7 @@ match age:
 ```
 
 ---
+
 ## Common Loop Patterns - Accumulator
 
 ```python
@@ -462,6 +491,7 @@ print(sum(numbers))  # 15
 ```
 
 ---
+
 ## Common Loop Patterns - Filtering
 
 ```python
@@ -476,6 +506,7 @@ print(positives)  # [1, 3, 5]
 ```
 
 ---
+
 ## Common Loop Patterns - Transformation
 
 ```python
@@ -490,6 +521,7 @@ print(upper_words)
 ```
 
 ---
+
 ## Common Loop Patterns - Finding Max/Min
 
 ```python
@@ -508,6 +540,7 @@ print(min(numbers))  # 1
 ```
 
 ---
+
 ## Looping Techniques - `enumerate()`
 
 ```python
@@ -523,6 +556,7 @@ for i, color in enumerate(colors):
 ```
 
 ---
+
 ## Looping Techniques - `zip()`
 
 ```python
@@ -539,6 +573,7 @@ for name, score in zip(names, scores):
 ```
 
 ---
+
 ## Looping Techniques - `reversed()`
 
 ```python
@@ -555,6 +590,7 @@ red
 ```
 
 ---
+
 ## Looping Techniques - `sorted()`
 
 ```python
@@ -572,6 +608,7 @@ for n in sorted(numbers, reverse=True):
 ```
 
 ---
+
 ## The `del` Statement
 - Deletes variables, list items, dict keys
 
@@ -593,6 +630,7 @@ print(d)  # {'b': 2}
 ```
 
 ---
+
 ## Assertions
 
 ```python
@@ -609,6 +647,7 @@ assert age > 0, "Age must be positive"
 - Can be disabled with `python -O` flag
 
 ---
+
 ## Summary
 - Assignment creates variables; no declaration needed
 - `if`/`elif`/`else` for conditional branching

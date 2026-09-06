@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Inheritance and OO Design
 
 ---

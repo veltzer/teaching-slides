@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Backward Compatibility and Deprecation
 
 ---
+
 ## The Problem
 
 - APIs change; consumers depend on specific behavior
@@ -20,11 +22,13 @@ audience:
 - Need a process for change that respects existing users
 
 ---
+
 ## Deprecation Timeline
 
 ![deprecation_timeline](svg/courses/architecting/api-design-best-practices/11_backward_compatibility_and_deprecation/deprecation_timeline.svg)
 
 ---
+
 ## Additive Changes Are Safe
 
 - Adding a new endpoint
@@ -35,6 +39,7 @@ audience:
 Old consumers ignore what they don't know — these are non-breaking.
 
 ---
+
 ## Breaking Changes
 
 - Removing or renaming a field
@@ -45,6 +50,7 @@ Old consumers ignore what they don't know — these are non-breaking.
 - Removing an endpoint
 
 ---
+
 ## The Robustness Principle
 
 - "Be conservative in what you send, liberal in what you accept"
@@ -53,6 +59,7 @@ Old consumers ignore what they don't know — these are non-breaking.
 - Both sides cooperate to keep the contract working
 
 ---
+
 ## Tolerant Readers
 
 - Consumer code that ignores unknown fields
@@ -61,6 +68,7 @@ Old consumers ignore what they don't know — these are non-breaking.
 - This is why additive changes are safe: tolerant readers don't break
 
 ---
+
 ## Deprecation
 
 - A signal that "this is going away; switch to X"
@@ -69,6 +77,7 @@ Old consumers ignore what they don't know — these are non-breaking.
 - Followed by a sunset (actual removal)
 
 ---
+
 ## Deprecation Headers
 
 - `Deprecation: true` — this endpoint is deprecated
@@ -77,6 +86,7 @@ Old consumers ignore what they don't know — these are non-breaking.
 - Standard, machine-readable
 
 ---
+
 ## Deprecation Timeline
 
 - T+0: announce deprecation; new consumers should use the new version
@@ -87,6 +97,7 @@ Old consumers ignore what they don't know — these are non-breaking.
 Each org adjusts the timeline; the structure is similar.
 
 ---
+
 ## Versioning and Deprecation Together
 
 - v1 is the current version
@@ -96,6 +107,7 @@ Each org adjusts the timeline; the structure is similar.
 - At any time, only two major versions are live
 
 ---
+
 ## Sunset
 
 - The actual removal of the deprecated functionality
@@ -104,6 +116,7 @@ Each org adjusts the timeline; the structure is similar.
 - Often accompanied by a migration guide URL in the error body
 
 ---
+
 ## Communicating Changes
 
 - API changelog (a public file or page)
@@ -112,6 +125,7 @@ Each org adjusts the timeline; the structure is similar.
 - Status pages for incidents and planned removals
 
 ---
+
 ## Migration Guides
 
 - Side-by-side examples: old request → new request
@@ -121,6 +135,7 @@ Each org adjusts the timeline; the structure is similar.
 - Make migration as easy as possible — your consumers' time matters
 
 ---
+
 ## Detecting Consumers Using Deprecated APIs
 
 - Log every request to deprecated endpoints with consumer identifier
@@ -129,6 +144,7 @@ Each org adjusts the timeline; the structure is similar.
 - Don't sunset until the dashboard is empty (or close)
 
 ---
+
 ## Anti-Patterns
 
 - Silent breaking changes — "it just stopped working"
@@ -138,6 +154,7 @@ Each org adjusts the timeline; the structure is similar.
 - "We'll deprecate it eventually" — eventually never comes
 
 ---
+
 ## When to Break
 
 - Sometimes you have to (security, legal, fundamental redesign)
@@ -146,6 +163,7 @@ Each org adjusts the timeline; the structure is similar.
 - A breaking change without warning is a breach of contract
 
 ---
+
 ## Compatibility Across Implementations
 
 - Same API spec across multiple servers (active-active, regional)
@@ -154,6 +172,7 @@ Each org adjusts the timeline; the structure is similar.
 - Rolling deploys assume backward compatibility within a version
 
 ---
+
 ## Summary
 
 - Additive changes are free; breaking changes need a new version

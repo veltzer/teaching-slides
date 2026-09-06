@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Working with Arrays and Strings
 
 ---

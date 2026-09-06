@@ -8,9 +8,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to Observability
 
 ---
+
 ## What This Chapter Covers
 
 - Observability concepts
@@ -20,6 +22,7 @@ audience:
 - Stack overview
 
 ---
+
 ## What Observability Is
 
 - Ability to understand a system from outside
@@ -28,6 +31,7 @@ audience:
 - Critical for distributed systems
 
 ---
+
 ## Monitoring vs Observability
 
 - Monitoring: known unknowns; alerts you set
@@ -35,11 +39,13 @@ audience:
 - Overlap; observability is the broader concept
 
 ---
+
 ## Compared
 
 ![monitoring_vs_observability](svg/courses/observability_and_monitoring/prometheus-and-grafana/01_introduction_to_observability/monitoring_vs_observability.svg)
 
 ---
+
 ## Three Pillars
 
 - Metrics: numerical, time-series
@@ -48,11 +54,13 @@ audience:
 - Different questions, different tools
 
 ---
+
 ## Three Pillars Visualized
 
 ![three_pillars](svg/courses/observability_and_monitoring/prometheus-and-grafana/01_introduction_to_observability/three_pillars.svg)
 
 ---
+
 ## Metrics
 
 - CPU, memory, requests/sec
@@ -61,6 +69,7 @@ audience:
 - Best for dashboards and alerts
 
 ---
+
 ## Logs
 
 - "What happened at this moment?"
@@ -69,6 +78,7 @@ audience:
 - Structured logs preferred
 
 ---
+
 ## Traces
 
 - "How did this request travel?"
@@ -77,6 +87,7 @@ audience:
 - OpenTelemetry standard
 
 ---
+
 ## Why Prometheus
 
 - Open source
@@ -86,6 +97,7 @@ audience:
 - Standard for cloud-native
 
 ---
+
 ## Why Grafana
 
 - Visualises Prometheus and many others
@@ -94,6 +106,7 @@ audience:
 - Multi-source
 
 ---
+
 ## The Stack
 
 - Prometheus: collection + storage
@@ -102,6 +115,7 @@ audience:
 - Exporters: bridge to non-native sources
 
 ---
+
 ## Cloud-Native Standard
 
 - CNCF projects
@@ -109,6 +123,7 @@ audience:
 - Huge ecosystem of exporters
 
 ---
+
 ## Course Plan
 
 - Prometheus setup and queries
@@ -117,6 +132,7 @@ audience:
 - Production patterns
 
 ---
+
 ## Common Observability Mistakes
 
 - Logging everything; cost explosion

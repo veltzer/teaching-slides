@@ -8,15 +8,18 @@ audience:
   - audiences:developers
 
 ---
+
 # Getting Started with Rust
 ## Chapter 1: Introduction to Rust Programming
 
 ---
+
 ## What is Rust
 
 ![bg right:40% 80%](svg/courses/languages/rust/rust-programming/01_getting_started/rust_logo.svg)
 
 ---
+
 ## What is Rust: Details
 
 - Systems programming language
@@ -26,11 +29,13 @@ audience:
 - Now used by: Mozilla, Microsoft, Amazon, Google
 
 ---
+
 ## Key Features of Rust
 
 ![key_features_of_rust](svg/courses/languages/rust/rust-programming/01_getting_started/key_features_of_rust.svg)
 
 ---
+
 ## Why Choose Rust
 
 <div class="columns">
@@ -55,16 +60,19 @@ audience:
 </div>
 
 ---
+
 ## Use Cases for Rust
 
 ![use_cases_for_rust](svg/courses/languages/rust/rust-programming/01_getting_started/use_cases_for_rust.svg)
 
 ---
+
 ## Rust vs Other Languages
 
 ![rust_vs_other_languages](svg/courses/languages/rust/rust-programming/01_getting_started/rust_vs_other_languages.svg)
 
 ---
+
 ## Installing Rust
 
 <div class="columns">
@@ -88,11 +96,13 @@ curl --proto '=https' --tlsv1.2 -sSf 'https://sh.rustup.rs' | sh
 </div>
 
 ---
+
 ## Rustup Components
 
 ![rustup_components](svg/courses/languages/rust/rust-programming/01_getting_started/rustup_components.svg)
 
 ---
+
 ## Verifying Installation
 
 ```bash
@@ -107,6 +117,7 @@ rustup component list
 ```
 
 ---
+
 ## Development Environment
 
 ### Recommended Setup
@@ -116,11 +127,13 @@ rustup component list
 - Even Better TOML extension
 
 ---
+
 ## Cargo: Rust's Package Manager
 
 ![cargo_rust_s_package_manager](svg/courses/languages/rust/rust-programming/01_getting_started/cargo_rust_s_package_manager.svg)
 
 ---
+
 ## Common Cargo Commands
 
 <div class="columns">
@@ -149,6 +162,7 @@ cargo doc
 </div>
 
 ---
+
 ## Project Structure
 
 ```misc
@@ -160,6 +174,7 @@ my_project/
 ```
 
 ---
+
 ## Cargo.toml Explained
 
 ```toml
@@ -174,6 +189,7 @@ tokio = { version = "1.0", features = ["full"] }
 ```
 
 ---
+
 ## Hello, World
 
 ```rust
@@ -183,6 +199,7 @@ fn main() {
 ```
 
 ---
+
 ## Basic Program Structure
 
 ```rust
@@ -197,6 +214,7 @@ fn main() {
 ```
 
 ---
+
 ## Comments in Rust
 
 ```rust
@@ -213,11 +231,13 @@ fn main() {
 ```
 
 ---
+
 ## Basic Syntax Elements
 
 ![basic_syntax_elements](svg/courses/languages/rust/rust-programming/01_getting_started/basic_syntax_elements.svg)
 
 ---
+
 ## Function Syntax
 
 ```rust
@@ -234,6 +254,7 @@ fn add(a: i32, b: i32) -> i32 {
 ```
 
 ---
+
 ## Macro Usage
 
 ```rust
@@ -249,6 +270,7 @@ println!("Hello, {}!", name);
 ```
 
 ---
+
 ## Basic Input/Output
 
 ```rust
@@ -268,11 +290,13 @@ fn main() {
 ```
 
 ---
+
 ## Code Organization
 
 ![code_organization](svg/courses/languages/rust/rust-programming/01_getting_started/code_organization.svg)
 
 ---
+
 ## Best Practices
 
 <div class="columns">
@@ -297,11 +321,13 @@ fn main() {
 </div>
 
 ---
+
 ## Common Mistakes to Avoid
 
 ![common_mistakes_to_avoid](svg/courses/languages/rust/rust-programming/01_getting_started/common_mistakes_to_avoid.svg)
 
 ---
+
 ## Resources for Learning
 
 <div class="columns">

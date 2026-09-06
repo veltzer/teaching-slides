@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Bayesian Inference Basics
 
 ---
+
 ## What This Chapter Covers
 
 - The Bayesian view: parameters have distributions
@@ -21,11 +23,13 @@ audience:
 - When and why to compute the posterior numerically (MCMC)
 
 ---
+
 ## Prior × Likelihood → Posterior
 
 ![prior_likelihood_posterior](svg/courses/math/statistics-inference/14_bayesian_basics/prior_likelihood_posterior.svg)
 
 ---
+
 ## A Different Stance On Uncertainty
 
 - **Frequentist**: the parameter is a fixed unknown; probability describes the *procedure* (over hypothetical repeated samples)
@@ -35,6 +39,7 @@ audience:
 - Neither is universally "right" — pick the one whose outputs answer your actual question
 
 ---
+
 ## Prior, Likelihood, Posterior
 
 - **Prior** P(&theta;): what you believe about the parameter *before* seeing this data — from past studies, domain knowledge, or deliberately vague ("weakly informative")
@@ -44,6 +49,7 @@ audience:
 - One slogan: **posterior &prop; prior &times; likelihood** — Bayes' theorem doing its job on parameters
 
 ---
+
 ## Conjugate Priors
 
 - A prior is **conjugate** to a likelihood if the posterior is in the same family — the update is then just arithmetic on the parameters, no integration
@@ -53,6 +59,7 @@ audience:
 - Conjugacy is mostly a teaching and prototyping convenience now — real models use numerical methods — but it builds the right intuition
 
 ---
+
 ## A Worked Beta&ndash;Binomial Example
 
 ```python
@@ -71,6 +78,7 @@ print(f"P(rate > 4%) = {1 - post.cdf(0.04):.2%}")   # a question frequentists ca
 - The posterior is a full distribution — summarize it however the decision needs
 
 ---
+
 ## Credible Intervals vs Confidence Intervals
 
 - A **credible interval** is a range that contains the parameter with stated *probability* — "95% probability &theta; is in [a, b]", a direct statement about &theta; given this data
@@ -80,11 +88,13 @@ print(f"P(rate > 4%) = {1 - post.cdf(0.04):.2%}")   # a question frequentists ca
 - Most people *want* the credible-interval interpretation — just be honest about which one you actually computed
 
 ---
+
 ## Credible vs Confidence Interval
 
 ![credible_vs_confidence](svg/courses/math/statistics-inference/14_bayesian_basics/credible_vs_confidence.svg)
 
 ---
+
 ## Posterior Predictive Checks
 
 - Beyond estimating &theta;, simulate **new data** from the fitted model (draw &theta; from the posterior, then data from the likelihood) — that's the **posterior predictive distribution**
@@ -94,6 +104,7 @@ print(f"P(rate > 4%) = {1 - post.cdf(0.04):.2%}")   # a question frequentists ca
 - Also use the posterior predictive for honest forecasts — it bakes in *both* parameter uncertainty and irreducible noise
 
 ---
+
 ## When Conjugacy Runs Out: MCMC
 
 - Real models (many parameters, hierarchical structure, non-conjugate priors) have posteriors with no closed form and impossible-to-do integrals
@@ -103,6 +114,7 @@ print(f"P(rate > 4%) = {1 - post.cdf(0.04):.2%}")   # a question frequentists ca
 - **Hierarchical (multilevel) models** are where Bayesian methods especially shine — partial pooling across groups, principled shrinkage, honest uncertainty when some groups have little data
 
 ---
+
 ## Common Mistakes
 
 - Pretending the prior is "objective" — every analysis has assumptions; state the prior and check sensitivity to it

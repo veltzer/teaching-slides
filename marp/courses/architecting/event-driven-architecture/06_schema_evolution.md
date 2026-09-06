@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Event Schema Evolution and Governance
 
 ---
+
 ## What This Chapter Covers
 
 - Why schemas matter in event-driven systems
@@ -21,6 +23,7 @@ audience:
 - Event contracts and ownership
 
 ---
+
 ## Why Schemas Matter
 
 - Events outlive the code that produced them
@@ -30,6 +33,7 @@ audience:
 - The schema is the contract
 
 ---
+
 ## The Compatibility Problem
 
 - Producer publishes events with schema v1
@@ -39,6 +43,7 @@ audience:
 - New consumers must still read v1 events from history
 
 ---
+
 ## Backward Compatibility
 
 - New schema can read data written by old schema
@@ -48,6 +53,7 @@ audience:
 - Most teams aim for backward compatibility
 
 ---
+
 ## Forward Compatibility
 
 - Old schema can read data written by new schema
@@ -57,6 +63,7 @@ audience:
 - Combined with backward = full compatibility
 
 ---
+
 ## Full Compatibility
 
 - Old reads new; new reads old
@@ -66,16 +73,19 @@ audience:
 - Use for cross-team, cross-org events
 
 ---
+
 ## Compatibility Visualized
 
 ![schema_compatibility](svg/courses/architecting/event-driven-architecture/06_schema_evolution/schema_compatibility.svg)
 
 ---
+
 ## Registry Workflow
 
 ![registry_workflow](svg/courses/architecting/event-driven-architecture/06_schema_evolution/registry_workflow.svg)
 
 ---
+
 ## Schema Registries
 
 - A central service that stores and validates schemas
@@ -85,6 +95,7 @@ audience:
 - Confluent, AWS Glue, Apicurio are common
 
 ---
+
 ## How a Registry Helps
 
 - Prevents incompatible schema changes from being deployed
@@ -94,6 +105,7 @@ audience:
 - A non-negotiable piece of infrastructure for serious EDA
 
 ---
+
 ## Confluent Schema Registry
 
 - The most-used registry, especially with Kafka
@@ -103,6 +115,7 @@ audience:
 - Open-source core; commercial features
 
 ---
+
 ## Versioning Strategies
 
 - Implicit: registry tracks versions; clients fetch by ID
@@ -112,6 +125,7 @@ audience:
 - Pick one and document it
 
 ---
+
 ## Implicit Versioning (Schema Registry)
 
 - Each schema version has a unique ID stored in the registry
@@ -121,6 +135,7 @@ audience:
 - Best when you have a registry already
 
 ---
+
 ## Embedded Versioning
 
 - Field inside the event payload: `"version": 2`
@@ -130,6 +145,7 @@ audience:
 - Code gets messy as versions accumulate
 
 ---
+
 ## Topic-Based Versioning
 
 - New version means a new topic
@@ -139,6 +155,7 @@ audience:
 - Heaviest, but cleanest separation
 
 ---
+
 ## Handling Breaking Changes
 
 - Sometimes a breaking change is unavoidable
@@ -148,6 +165,7 @@ audience:
 - Coordinate across teams; never break silently
 
 ---
+
 ## Field Removal Strategy
 
 - Mark field deprecated in producers; emit but ignore
@@ -157,6 +175,7 @@ audience:
 - The slow path is the safe path
 
 ---
+
 ## Field Addition Strategy
 
 - Add as optional with a default
@@ -166,6 +185,7 @@ audience:
 - Easy because schemas allow optional fields
 
 ---
+
 ## Field Rename Strategy
 
 - Don't rename — add a new field, deprecate the old
@@ -175,6 +195,7 @@ audience:
 - "Rename" is forever in event-sourced systems
 
 ---
+
 ## Event Catalogs
 
 - Discoverability matters as event count grows
@@ -184,6 +205,7 @@ audience:
 - Helps onboard new consumers quickly
 
 ---
+
 ## Event Ownership
 
 - Each event has an owner (team, service)
@@ -193,6 +215,7 @@ audience:
 - Document in CODEOWNERS or equivalent
 
 ---
+
 ## Producer-Consumer Contracts
 
 - Beyond the schema: behavior expectations
@@ -202,6 +225,7 @@ audience:
 - A contract is more than a JSON shape
 
 ---
+
 ## Contract Testing
 
 - Producer publishes test events; consumers verify they can process
@@ -211,6 +235,7 @@ audience:
 - Supplements compatibility checks; doesn't replace them
 
 ---
+
 ## Avro Schema Evolution
 
 - Native compatibility checking via the Avro spec
@@ -220,6 +245,7 @@ audience:
 - Industry standard for evolving binary events
 
 ---
+
 ## Protobuf Schema Evolution
 
 - Numbered fields; never reuse a number
@@ -229,6 +255,7 @@ audience:
 - Buf provides linting and breaking-change detection
 
 ---
+
 ## JSON Schema Evolution
 
 - Flexible but undisciplined by default
@@ -238,6 +265,7 @@ audience:
 - Cleanest with explicit schema files in version control
 
 ---
+
 ## Common Pitfalls
 
 - Treating events as transient and not versioning them
@@ -247,6 +275,7 @@ audience:
 - Renaming fields "just this once"
 
 ---
+
 ## Building a Governance Practice
 
 - Schema reviews like code reviews
@@ -256,6 +285,7 @@ audience:
 - Quarterly catalog audit
 
 ---
+
 ## Summary
 
 - Schemas are the contract; respect it

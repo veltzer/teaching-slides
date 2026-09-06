@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Testing Distributed Systems
 
 ---
+
 ## Why Distributed Testing Is Different
 
 - Unit tests catch logic bugs; they don't catch integration bugs
@@ -21,6 +23,7 @@ audience:
 - Traditional end-to-end pyramids break down when you have dozens of services
 
 ---
+
 ## The Testing Pyramid (Revised)
 
 - **Unit** — fast, many, inside a single process
@@ -32,6 +35,7 @@ audience:
 In microservices, the pyramid flattens at the top and bulges at contract.
 
 ---
+
 ## Unit Tests
 
 - Fast, deterministic, no I/O
@@ -41,6 +45,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Run on every commit, on every branch
 
 ---
+
 ## Component Tests
 
 - A single service spun up in isolation
@@ -49,6 +54,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Slow enough to run minutes, not seconds; run on every PR
 
 ---
+
 ## The End-to-End Problem
 
 - E2E tests become flakier linearly with the number of services
@@ -57,6 +63,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Keep E2E tests few, critical-path, and well-isolated
 
 ---
+
 ## Contract Testing
 
 - Each consumer states the shape of requests and responses it expects
@@ -65,6 +72,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Scales linearly with the number of dependencies, not quadratically
 
 ---
+
 ## Pact Flow
 
 - Consumer test generates a contract file
@@ -74,6 +82,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Any breaking change fails the provider's build
 
 ---
+
 ## Consumer-Driven vs Provider-Driven
 
 - **Consumer-driven** — consumers write contracts; providers comply
@@ -82,6 +91,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Can and often should coexist
 
 ---
+
 ## Integration Testing Done Right
 
 - Pick the smallest meaningful subset of services
@@ -90,6 +100,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Tear down completely between runs — no shared state across tests
 
 ---
+
 ## Synthetic Monitoring
 
 - Continuously run a small set of E2E scenarios against production
@@ -99,6 +110,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Keep it cheap and fast — it's a monitor, not a regression suite
 
 ---
+
 ## Load and Performance Testing
 
 - Load tests confirm the system handles expected traffic
@@ -108,6 +120,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Tools: `k6`, `Gatling`, `Locust`, `wrk`, `JMeter`
 
 ---
+
 ## Shadow Traffic
 
 - Mirror real production requests to a candidate system in parallel
@@ -116,6 +129,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Uncovers load patterns you cannot synthesize
 
 ---
+
 ## Dark Launches
 
 - Deploy the new code behind a feature flag disabled for all users
@@ -124,6 +138,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Enable broadly only after it has been silently correct for days
 
 ---
+
 ## Testing in Production (Responsibly)
 
 - Modern services are too complex to fully replicate in staging
@@ -132,6 +147,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Not a license to skip pre-prod tests — a complement, not a replacement
 
 ---
+
 ## Chaos Testing
 
 - Deliberately inject failures in test or staging clusters
@@ -144,6 +160,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Start small, scheduled, with a kill switch
 
 ---
+
 ## Game Days
 
 - A scheduled exercise: a team simulates a failure, others respond
@@ -152,6 +169,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Output: action items to close identified gaps
 
 ---
+
 ## Flaky Test Discipline
 
 - Flaky tests are worse than no tests — they train teams to ignore failures
@@ -160,6 +178,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Track flake rate as a first-class quality metric
 
 ---
+
 ## Test Data Management
 
 - **Anonymized production snapshots** — realistic, privacy-safe
@@ -169,6 +188,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Avoid: hand-crafted dev databases passed around on USB sticks
 
 ---
+
 ## Observability for Tests
 
 - Every test environment emits the same metrics, logs, and traces as production
@@ -177,6 +197,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Log aggregation for test runs — not just prod
 
 ---
+
 ## Test Environment Strategy
 
 - **Ephemeral per-PR environment** — best fidelity, requires infrastructure investment
@@ -185,6 +206,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - **Production-like data volumes** — matters more than most teams admit
 
 ---
+
 ## Progressive Rollout as Test
 
 - Every canary is a test against real traffic
@@ -193,6 +215,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Shifts testing burden from pre-prod to early post-prod — cheaper and more realistic
 
 ---
+
 ## Architectural Fitness Functions
 
 - Automated tests that validate architectural properties
@@ -203,6 +226,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - Run in CI; fail the build on violation
 
 ---
+
 ## Common Anti-Patterns
 
 - **Mocking what you should integration-test** — happy mock tests, unhappy prod
@@ -212,6 +236,7 @@ In microservices, the pyramid flattens at the top and bulges at contract.
 - **Chaos tests without observability** — you break things but can't tell what broke
 
 ---
+
 ## Summary
 
 - The testing pyramid for microservices flattens at the top; contract tests fill the middle

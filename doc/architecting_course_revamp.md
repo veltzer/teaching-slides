@@ -14,24 +14,24 @@ Tracks the restructuring work for `marp/courses/architecting/architecture-patter
 
 - **Course role:** Catalog of architectural patterns + data-path/operations deep-dives at intermediate level. Keeps overlap with `modern-software-architecture/` (advanced) but at a different depth.
 - **Final ordering** (planned):
-  - 00 Title
-  - 01 Introduction & Pattern Taxonomy (new)
-  - 02 Communication Patterns
-  - 03 System Architectures
-  - 04 Internal Code Architectures
-  - 05 Classic Structural Patterns
-  - 06 Resiliency & Cross-Cutting Patterns
-  - 07 Small-Scale Design Patterns (was 12)
-  - 08 Database (was 5; absorb Mesh/Sharded from old ch 1)
-  - 09 Isolation Levels (was 8)
-  - 10 Caching (was 4)
-  - 11 Queues (was 11)
-  - 12 Kafka (was 9)
-  - 13 Data Processing Engines (was 7)
-  - 14 Data Lakes (was 6)
-  - 15 Big Data (was 2; absorb Lambda/Kappa from old ch 1)
-  - 16 Workflows (was 13)
-  - 17 Monitoring (was 10; absorb Throttling from old ch 1)
+    - 00 Title
+    - 01 Introduction & Pattern Taxonomy (new)
+    - 02 Communication Patterns
+    - 03 System Architectures
+    - 04 Internal Code Architectures
+    - 05 Classic Structural Patterns
+    - 06 Resiliency & Cross-Cutting Patterns
+    - 07 Small-Scale Design Patterns (was 12)
+    - 08 Database (was 5; absorb Mesh/Sharded from old ch 1)
+    - 09 Isolation Levels (was 8)
+    - 10 Caching (was 4)
+    - 11 Queues (was 11)
+    - 12 Kafka (was 9)
+    - 13 Data Processing Engines (was 7)
+    - 14 Data Lakes (was 6)
+    - 15 Big Data (was 2; absorb Lambda/Kappa from old ch 1)
+    - 16 Workflows (was 13)
+    - 17 Monitoring (was 10; absorb Throttling from old ch 1)
 
 ---
 

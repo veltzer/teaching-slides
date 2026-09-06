@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced Search Features
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![advanced_features](svg/courses/databases/elasticsearch-for-developers/06_advanced_search_features/advanced_features.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Multi-match
@@ -26,11 +28,13 @@ audience:
 - Synonyms
 
 ---
+
 ## Relevance Levers
 
 ![relevance_features](svg/courses/databases/elasticsearch-for-developers/06_advanced_search_features/relevance_features.svg)
 
 ---
+
 ## Multi-Match
 
 ```json
@@ -47,6 +51,7 @@ audience:
 - Many strategy options
 
 ---
+
 ## Function Scores
 
 - Modify relevance with custom functions
@@ -55,6 +60,7 @@ audience:
 - Combine: `score = match_score * popularity * recency_decay`
 
 ---
+
 ## Function Score Example
 
 ```json
@@ -70,6 +76,7 @@ audience:
 ```
 
 ---
+
 ## Suggesters
 
 - "Did you mean?" suggestions
@@ -78,6 +85,7 @@ audience:
 - Completion suggester: autocomplete
 
 ---
+
 ## Completion Suggester
 
 - Optimised for autocomplete
@@ -86,6 +94,7 @@ audience:
 - Requires special field type
 
 ---
+
 ## Highlighting
 
 ```json
@@ -101,6 +110,7 @@ audience:
 - Show users *why* the document matched
 
 ---
+
 ## Fuzzy Matching
 
 ```json
@@ -112,6 +122,7 @@ audience:
 - Slower than exact
 
 ---
+
 ## Synonyms
 
 - Map equivalent terms
@@ -120,6 +131,7 @@ audience:
 - Loaded from file or API
 
 ---
+
 ## Stop Words
 
 - Common words filtered out: the, a, is
@@ -128,6 +140,7 @@ audience:
 - Per-language
 
 ---
+
 ## Stemming
 
 - Reduce words to roots: "running" &#8594; "run"
@@ -136,6 +149,7 @@ audience:
 - Built-in for many languages
 
 ---
+
 ## More Like This
 
 - Find documents similar to a given one
@@ -143,6 +157,7 @@ audience:
 - "Customers who viewed this..."
 
 ---
+
 ## Percolator
 
 - Reverse search: index queries, search documents
@@ -150,6 +165,7 @@ audience:
 - Use case: alerting on patterns
 
 ---
+
 ## Boosting
 
 - Per-term, per-field, per-document
@@ -158,6 +174,7 @@ audience:
 - A/B test changes
 
 ---
+
 ## Common Advanced Mistakes
 
 - Heavy boosting without measuring

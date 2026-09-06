@@ -46,9 +46,6 @@ max_jobs = 2
 [processor.ruff]
 src_dirs = ["scripts"]
 
-[processor.markdownlint]
-src_dirs = ["marp"]
-
 [processor.stylelint]
 src_dirs = ["resources"]
 src_extensions = [".css"]
@@ -100,3 +97,42 @@ dir = "_site"
 # lint the GitHub Actions workflow files with actionlint
 [processor.actionlint]
 src_dirs = [".github/workflows"]
+
+# ─── markdown ────────────────────────────────────────────────────────────────
+
+[processor.rumdl]
+src_dirs = ["doc", "marp"]
+src_files = ["CLAUDE.md", "README.md"]
+
+# ─── yaml ────────────────────────────────────────────────────────────────────
+
+[processor.yamllint]
+src_dirs = ["resources"]
+src_files = ["text_labels.yaml"]
+
+# ─── json ────────────────────────────────────────────────────────────────────
+
+[processor.ijsonlint]
+src_files = ["package.json"]
+
+# ─── xml / svg ───────────────────────────────────────────────────────────────
+
+[processor.xmllint]
+src_dirs = ["svg", "to_integrate"]
+
+# ─── lua ─────────────────────────────────────────────────────────────────────
+
+[processor.luacheck]
+src_dirs = ["config"]
+
+# ─── html ────────────────────────────────────────────────────────────────────
+
+[processor.htmlhint]
+src_dirs = ["resources", "to_integrate"]
+
+# ─── javascript ──────────────────────────────────────────────────────────────
+
+[processor.eslint]
+src_dirs = ["resources"]
+src_files = [".marprc.mjs"]
+args = ["-c", ".eslint.config.js"]

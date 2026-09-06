@@ -10,6 +10,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Shell Scripting Introduction
 ## Getting Started with Shell Programming
 

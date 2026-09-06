@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Document Types
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![document_categories](svg/courses/development_methodologies/technical-writing/03_document_types/document_categories.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - READMEs
@@ -27,6 +29,7 @@ audience:
 - Release notes and changelogs
 
 ---
+
 ## Different Docs, Different Jobs
 
 - A README isn't a spec
@@ -36,11 +39,13 @@ audience:
 - Pick the right type for the job
 
 ---
+
 ## Four Doc Modes
 
 ![doc_modes](svg/courses/development_methodologies/technical-writing/03_document_types/diataxis.svg)
 
 ---
+
 ## The Diátaxis Framework
 
 - Four kinds of docs:
@@ -52,6 +57,7 @@ audience:
 - Mixing them confuses readers
 
 ---
+
 ## READMEs
 
 - The first thing readers see
@@ -61,6 +67,7 @@ audience:
 - Link to deeper docs for the rest
 
 ---
+
 ## What A README Should Contain
 
 - One-line description
@@ -72,6 +79,7 @@ audience:
 - License
 
 ---
+
 ## API Documentation
 
 - Reference for every public function/method
@@ -81,6 +89,7 @@ audience:
 - Versioned alongside the code
 
 ---
+
 ## Architecture Decision Records (ADRs)
 
 - A short document recording one decision
@@ -90,6 +99,7 @@ audience:
 - Future engineers can answer "why is it this way?" in seconds
 
 ---
+
 ## A Sample ADR
 
 ```markdown
@@ -110,6 +120,7 @@ Postgres.
 ```
 
 ---
+
 ## Runbooks
 
 - Step-by-step instructions for operating procedures
@@ -119,6 +130,7 @@ Postgres.
 - Each step a single action; no judgement required
 
 ---
+
 ## Runbook Anti-Patterns
 
 - "Use your judgement" steps
@@ -128,6 +140,7 @@ Postgres.
 - Not exercised regularly
 
 ---
+
 ## Tutorials
 
 - Take the reader from zero to a working result
@@ -137,6 +150,7 @@ Postgres.
 - Build confidence first; teach features later
 
 ---
+
 ## How-To Guides
 
 - Solve a specific problem
@@ -146,6 +160,7 @@ Postgres.
 - Different from a tutorial: focused on a task, not learning
 
 ---
+
 ## Reference Documentation
 
 - Comprehensive, alphabetised, searchable
@@ -155,6 +170,7 @@ Postgres.
 - Brevity is a feature
 
 ---
+
 ## Release Notes / Changelogs
 
 - What changed in this release
@@ -164,6 +180,7 @@ Postgres.
 - Customers actually read these — write them well
 
 ---
+
 ## A CHANGELOG.md Sample
 
 ```markdown
@@ -180,6 +197,7 @@ Postgres.
 ```
 
 ---
+
 ## Choosing the Right Type
 
 - A user trying to learn &#8594; tutorial
@@ -190,6 +208,7 @@ Postgres.
 - A user upgrading &#8594; changelog
 
 ---
+
 ## Common Mistakes
 
 - A README that's secretly a tutorial

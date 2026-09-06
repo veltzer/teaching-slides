@@ -10,9 +10,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Allocating Memory in Linux
 
 ---
+
 ## Virtual Memory Layout
 
 ![virtual_memory](svg/courses/operating_systems/linux-systems-programming/06_memory/virtual_memory.svg)

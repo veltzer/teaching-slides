@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Index Management
 
 ---
+
 ## What This Chapter Covers
 
 - Index creation and configuration
@@ -22,6 +24,7 @@ audience:
 - Force merge and refresh
 
 ---
+
 ## Creating an Index
 
 - Create an index with settings and mappings in one request
@@ -38,6 +41,7 @@ PUT products
 ```
 
 ---
+
 ## Inspecting an Index
 
 - View settings, mappings, and stats with the REST API
@@ -50,6 +54,7 @@ GET products/_stats
 ```
 
 ---
+
 ## Mappings Overview
 
 - A mapping defines the fields in an index and their types
@@ -59,6 +64,7 @@ GET products/_stats
 - Mappings can be extended by adding new fields
 
 ---
+
 ## Core Field Types
 
 - text: full-text, analyzed into terms for search
@@ -69,6 +75,7 @@ GET products/_stats
 - object / nested: structured and array-of-object data
 
 ---
+
 ## text vs keyword
 
 - text is analyzed: tokenized and lowercased for full-text search
@@ -82,6 +89,7 @@ GET products/_stats
 ```
 
 ---
+
 ## Object and Nested Types
 
 - object: JSON objects flattened into dotted field paths
@@ -95,6 +103,7 @@ GET products/_stats
 ```
 
 ---
+
 ## Explicit Mapping
 
 - Define field types up front for predictable behavior
@@ -115,6 +124,7 @@ PUT products
 ```
 
 ---
+
 ## Dynamic Mapping
 
 - Elasticsearch can infer field types from incoming documents
@@ -128,6 +138,7 @@ PUT products
 ```
 
 ---
+
 ## Adding Fields to a Mapping
 
 - New fields can be added to an existing mapping
@@ -143,6 +154,7 @@ PUT products/_mapping
 ```
 
 ---
+
 ## Index Settings: Shards and Replicas
 
 - `number_of_shards` is fixed at creation time
@@ -156,6 +168,7 @@ PUT products/_settings
 ```
 
 ---
+
 ## Analysis: Analyzers and Tokenizers
 
 - An analyzer turns text into searchable terms
@@ -165,6 +178,7 @@ PUT products/_settings
 - Custom analyzers are defined in index settings
 
 ---
+
 ## Defining a Custom Analyzer
 
 - Combine a tokenizer with token filters in settings
@@ -187,6 +201,7 @@ PUT articles
 ```
 
 ---
+
 ## Testing an Analyzer
 
 - Use the _analyze API to see produced tokens
@@ -200,6 +215,7 @@ POST articles/_analyze
 ```
 
 ---
+
 ## Aliases
 
 - An alias is a pointer to one or more indices
@@ -218,6 +234,7 @@ POST _aliases
 ```
 
 ---
+
 ## Data Streams
 
 - Append-only abstraction for time-series data (logs, metrics)
@@ -231,6 +248,7 @@ PUT _data_stream/logs-app-default
 ```
 
 ---
+
 ## Index Templates
 
 - Templates apply settings and mappings to new matching indices
@@ -247,6 +265,7 @@ PUT _index_template/logs-template
 ```
 
 ---
+
 ## Component Templates
 
 - Reusable building blocks of settings, mappings, or aliases
@@ -263,6 +282,7 @@ PUT _component_template/logs-settings
 ```
 
 ---
+
 ## Rollover
 
 - Rolls writing over to a new index when conditions are met
@@ -278,6 +298,7 @@ POST logs-write/_rollover
 ```
 
 ---
+
 ## Shrink
 
 - Reduces the number of primary shards of an index
@@ -293,6 +314,7 @@ POST logs-2026.05/_shrink/logs-2026.05-shrunk
 ```
 
 ---
+
 ## Force Merge
 
 - Merges Lucene segments to reduce their count
@@ -305,6 +327,7 @@ POST logs-2026.05/_forcemerge?max_num_segments=1
 ```
 
 ---
+
 ## Refresh
 
 - Refresh makes newly indexed documents searchable
@@ -320,6 +343,7 @@ POST logs/_refresh
 ```
 
 ---
+
 ## Index Management Best Practices
 
 - Use explicit mappings for production indices

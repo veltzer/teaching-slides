@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Receiving Feedback Gracefully
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![receiving_feedback](svg/courses/development_methodologies/code-review-best-practices/06_receiving_feedback_gracefully/receiving_feedback.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Separating ego from code
@@ -26,6 +28,7 @@ audience:
 - The mindset that grows fastest
 
 ---
+
 ## Code Is Not You
 
 - Reviewers comment on the code, not on you
@@ -35,11 +38,13 @@ audience:
 - Practice this; it's a skill
 
 ---
+
 ## Receiving Practices
 
 ![receiving_feedback](svg/courses/development_methodologies/code-review-best-practices/06_receiving_feedback_gracefully/receiving_feedback.svg)
 
 ---
+
 ## Default Response: Curiosity
 
 - "Why do they think that?"
@@ -49,6 +54,7 @@ audience:
 - Sometimes you both have a point — discuss
 
 ---
+
 ## Responding To Comments
 
 - Acknowledge each comment
@@ -58,6 +64,7 @@ audience:
 - Silence on a comment leaves the reviewer guessing
 
 ---
+
 ## When To Push Back
 
 - The reviewer is wrong on facts
@@ -67,6 +74,7 @@ audience:
 - Push back politely; defend with reasons, not pride
 
 ---
+
 ## Pushing Back Examples
 
 - "I considered that; I went with this because [reason]. Open to changing."
@@ -76,6 +84,7 @@ audience:
 - Practice these phrasings
 
 ---
+
 ## Hard Feedback
 
 - "This whole approach is wrong"
@@ -85,6 +94,7 @@ audience:
 - Then engage substantively; sometimes they're right
 
 ---
+
 ## When To Defer To The Reviewer
 
 - They have more context (longer at the company, owns the area)
@@ -94,6 +104,7 @@ audience:
 - Don't fight every comment; reviewers have finite patience too
 
 ---
+
 ## Learning From Feedback
 
 - Each PR is a free mentoring session
@@ -103,6 +114,7 @@ audience:
 - Senior developers got that way by listening
 
 ---
+
 ## Asking For Clarification
 
 - "Could you elaborate?" beats arguing past each other
@@ -112,6 +124,7 @@ audience:
 - Saves a back-and-forth round
 
 ---
+
 ## Avoiding Author Anti-Patterns
 
 - Defensiveness on every comment
@@ -121,6 +134,7 @@ audience:
 - Going around the reviewer to a friendlier one
 
 ---
+
 ## When To Escalate
 
 - Reviewer blocks for unclear reasons
@@ -130,6 +144,7 @@ audience:
 - Rare; usually a sign of larger team friction
 
 ---
+
 ## Author's Bill of Rights
 
 - Specific, actionable feedback
@@ -140,6 +155,7 @@ audience:
 - Reviewers who treat you as a peer
 
 ---
+
 ## Common Mistakes
 
 - Treating feedback as criticism of you personally

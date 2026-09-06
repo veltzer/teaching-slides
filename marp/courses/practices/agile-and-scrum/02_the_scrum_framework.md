@@ -8,14 +8,17 @@ audience:
   - audiences:team-leads
 
 ---
+
 # The Scrum Framework
 
 ---
+
 ## Scrum Roles
 
 ![scrum_roles](svg/courses/practices/agile-and-scrum/02_the_scrum_framework/scrum_roles.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Scrum's origin and what it actually is (and isn't)
@@ -26,6 +29,7 @@ audience:
 - The five Scrum values
 
 ---
+
 ## Where Scrum Came From
 
 - Coined in a 1986 *Harvard Business Review* article: "The New New Product Development Game"
@@ -35,6 +39,7 @@ audience:
 - Read it. Most people who critique Scrum have never read it.
 
 ---
+
 ## What Scrum Is
 
 - A lightweight framework for delivering value in iterative cycles
@@ -44,6 +49,7 @@ audience:
 - Self-managing: the team decides *how* to do the work
 
 ---
+
 ## What Scrum Is Not
 
 - A complete project management methodology
@@ -53,11 +59,13 @@ audience:
 - A guarantee of success — bad teams using Scrum produce bad results faster
 
 ---
+
 ## Scrum at a Glance
 
 ![scrum_overview](svg/courses/practices/agile-and-scrum/02_the_scrum_framework/scrum_overview.svg)
 
 ---
+
 ## The Product Owner
 
 - One person — never a committee
@@ -67,6 +75,7 @@ audience:
 - Can decline stakeholder requests if they don't fit the product vision
 
 ---
+
 ## The Scrum Master
 
 - Coaches the team in Scrum and removes impediments
@@ -76,6 +85,7 @@ audience:
 - Helps the organisation understand what Scrum is and isn't
 
 ---
+
 ## The Developers
 
 - Cross-functional: collectively have all skills needed to build a Done Increment
@@ -85,6 +95,7 @@ audience:
 - "Developer" includes anyone doing the work — engineers, designers, testers
 
 ---
+
 ## Product Backlog
 
 - The single ordered list of everything the team might build
@@ -94,6 +105,7 @@ audience:
 - Refined continuously through "backlog refinement" sessions (formerly "grooming")
 
 ---
+
 ## Sprint Backlog
 
 - The subset of Product Backlog items the team commits to *this Sprint*
@@ -103,6 +115,7 @@ audience:
 - Updated daily as understanding evolves
 
 ---
+
 ## Increment
 
 - A concrete step toward the product goal
@@ -112,6 +125,7 @@ audience:
 - An Increment that isn't Done is *not* an Increment
 
 ---
+
 ## The Five Events
 
 - The Sprint itself (the container for everything else)
@@ -121,6 +135,7 @@ audience:
 - Sprint Retrospective (end of the Sprint, internal)
 
 ---
+
 ## Definition of Done
 
 - The team's shared understanding of what "complete" means
@@ -130,6 +145,7 @@ audience:
 - Without it, "done" means whatever each developer wants it to mean
 
 ---
+
 ## Definition of Ready (Optional)
 
 - The team's shared understanding of when an item is ready to enter a Sprint
@@ -139,6 +155,7 @@ audience:
 - Don't make it so strict that nothing ever qualifies
 
 ---
+
 ## The Five Scrum Values
 
 - **Commitment**: do what the team agreed to do
@@ -149,6 +166,7 @@ audience:
 - These aren't decoration — they're how Scrum actually works in practice
 
 ---
+
 ## Why Scrum Often Fails
 
 - Roles are filled by job titles, not by people who actually do the role
@@ -158,6 +176,7 @@ audience:
 - Management uses velocity as a performance metric — guarantees gaming
 
 ---
+
 ## Adopting Scrum: Practical Advice
 
 - Start with the events, then add the roles

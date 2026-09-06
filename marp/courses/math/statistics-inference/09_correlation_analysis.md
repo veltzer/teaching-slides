@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Correlation Analysis
 
 ---
+
 ## What This Chapter Covers
 
 - Pearson correlation and inference on it
@@ -21,11 +23,13 @@ audience:
 - Correlation vs causation, one more time
 
 ---
+
 ## Pearson, Spearman, Kendall
 
 ![three_correlations](svg/courses/math/statistics-inference/09_correlation_analysis/three_correlations.svg)
 
 ---
+
 ## Pearson Correlation, Recapped
 
 - r measures the strength of a **linear** relationship between two numeric variables, on [&minus;1, +1]
@@ -35,6 +39,7 @@ audience:
 - It is *blind* to non-linear relationships and *very* sensitive to outliers — always plot the scatter
 
 ---
+
 ## Inference On r
 
 - The sample r estimates the population correlation &rho;; we can test and bound &rho;
@@ -44,6 +49,7 @@ audience:
 - A "significant" r of 0.05 in a million-row dataset is real and useless — report the value, not just the p
 
 ---
+
 ## Spearman And Kendall
 
 - **Spearman's &rho;**: Pearson correlation computed on the *ranks* — measures any **monotonic** relationship, not just linear
@@ -53,6 +59,7 @@ audience:
 - If Pearson and Spearman disagree a lot, suspect non-linearity or outliers — and go look at the plot
 
 ---
+
 ## Partial And Semi-Partial Correlation
 
 - A raw correlation between X and Y can be entirely due to a third variable Z driving both
@@ -62,11 +69,13 @@ audience:
 - Caveat: it only controls for the variables you *included* — unmeasured confounders still lurk
 
 ---
+
 ## Partial Correlation Explained
 
 ![partial_correlation](svg/courses/math/statistics-inference/09_correlation_analysis/partial_correlation.svg)
 
 ---
+
 ## The Correlation Matrix
 
 - For p variables, the p&times;p table of pairwise correlations — a quick map of relationships
@@ -76,6 +85,7 @@ audience:
 - A heatmap of the matrix is far more readable than the raw numbers
 
 ---
+
 ## What Quietly Distorts Correlations
 
 - **Outliers**: a single point can create a correlation from noise or destroy a real one
@@ -85,6 +95,7 @@ audience:
 - **Non-linearity**: r &asymp; 0 can hide a strong U-shape — Pearson simply can't see it
 
 ---
+
 ## Correlation Is Not Causation
 
 - X&ndash;Y correlated permits four stories: X&#8594;Y, Y&#8594;X, a common cause Z&#8594;X and Z&#8594;Y, or coincidence
@@ -94,6 +105,7 @@ audience:
 - "Controlling for covariates" strengthens a causal *argument*; it does not, by itself, establish causation
 
 ---
+
 ## Correlation Analysis In Python
 
 ```python
@@ -112,6 +124,7 @@ print("partial r(x,y | z):", round(stats.pearsonr(rx, ry).statistic, 2))   # ~0
 ```
 
 ---
+
 ## Common Mistakes
 
 - Reporting Pearson r without plotting the scatter (missing non-linearity or an outlier)

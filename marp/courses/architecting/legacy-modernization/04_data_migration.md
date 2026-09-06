@@ -7,9 +7,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Data Migration
 
 ---
+
 ## What This Chapter Covers
 
 - Why data is the hardest part
@@ -19,6 +21,7 @@ audience:
 - Cutover
 
 ---
+
 ## Why Data Is Hardest
 
 - Cannot be re-deployed
@@ -27,6 +30,7 @@ audience:
 - Schemas drift over time
 
 ---
+
 ## Inventory First
 
 - Sources, sinks, owners
@@ -35,6 +39,7 @@ audience:
 - Sensitivity tags
 
 ---
+
 ## Patterns
 
 - Big bang
@@ -43,11 +48,13 @@ audience:
 - Read replica then promote
 
 ---
+
 ## Migration Styles
 
 ![migration_styles](svg/courses/architecting/legacy-modernization/04_data_migration/migration_styles.svg)
 
 ---
+
 ## Big Bang
 
 - Stop, copy, start
@@ -56,6 +63,7 @@ audience:
 - Acceptable for small systems only
 
 ---
+
 ## Trickle
 
 - Continuous flow old to new
@@ -64,6 +72,7 @@ audience:
 - More moving parts
 
 ---
+
 ## Dual Write
 
 - Application writes both
@@ -72,11 +81,13 @@ audience:
 - Flip reads when ready
 
 ---
+
 ## Dual-Write Phases
 
 ![dual_write_recon](svg/courses/architecting/legacy-modernization/04_data_migration/dual_write_recon.svg)
 
 ---
+
 ## Read Replica Promotion
 
 - Replicate from old to new
@@ -85,6 +96,7 @@ audience:
 - Common with database upgrades
 
 ---
+
 ## Backfill
 
 - Historical rows copied
@@ -93,6 +105,7 @@ audience:
 - Track progress
 
 ---
+
 ## Reconciliation
 
 - Compare old vs new
@@ -101,6 +114,7 @@ audience:
 - Required before cutover
 
 ---
+
 ## Schema Differences
 
 - Map fields explicitly
@@ -109,6 +123,7 @@ audience:
 - Test edge cases
 
 ---
+
 ## Encoding and Time Zones
 
 - Character encodings differ
@@ -117,6 +132,7 @@ audience:
 - Add tests for known offenders
 
 ---
+
 ## Cutover Window
 
 - Plan the freeze
@@ -125,6 +141,7 @@ audience:
 - Communicate to users
 
 ---
+
 ## Common Data Migration Mistakes
 
 - No reconciliation

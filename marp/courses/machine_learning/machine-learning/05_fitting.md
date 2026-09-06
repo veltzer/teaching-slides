@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Overfitting and Underfitting
 
 ---
+
 ## What This Chapter Covers
 
 - The two failure modes
@@ -20,6 +22,7 @@ audience:
 - Regularisation in depth
 
 ---
+
 ## The Goal
 
 - A model that generalises
@@ -28,6 +31,7 @@ audience:
 - Generalisation gap is what we fight
 
 ---
+
 ## Underfitting
 
 - Model too simple to capture the pattern
@@ -36,6 +40,7 @@ audience:
 - Increase capacity
 
 ---
+
 ## Overfitting
 
 - Model captured noise, not signal
@@ -44,6 +49,7 @@ audience:
 - Reduce capacity or add data
 
 ---
+
 ## Just Right
 
 - Captures real pattern
@@ -52,11 +58,13 @@ audience:
 - Sweet spot
 
 ---
+
 ## Visualising the Three
 
 ![overfit_underfit](svg/courses/machine_learning/machine-learning/05_fitting/overfit_underfit.svg)
 
 ---
+
 ## Bias-Variance Decomposition
 
 - Expected error = bias squared + variance + noise
@@ -65,6 +73,7 @@ audience:
 - Noise: irreducible
 
 ---
+
 ## Bias
 
 - Model can't represent the truth
@@ -72,6 +81,7 @@ audience:
 - Reduce by: more capacity, better features
 
 ---
+
 ## Variance
 
 - Model overreacts to training data
@@ -79,6 +89,7 @@ audience:
 - Reduce by: more data, regularisation, ensembling
 
 ---
+
 ## Noise
 
 - Inherent randomness
@@ -86,6 +97,7 @@ audience:
 - Sometimes mislabelled as overfitting
 
 ---
+
 ## How To Detect Underfitting
 
 - Training loss high
@@ -94,6 +106,7 @@ audience:
 - Plot learning curves
 
 ---
+
 ## How To Detect Overfitting
 
 - Training loss low
@@ -102,6 +115,7 @@ audience:
 - Cross-validation reveals it
 
 ---
+
 ## Learning Curves
 
 - Plot loss vs training size
@@ -110,11 +124,13 @@ audience:
 - Just right: both low and close
 
 ---
+
 ## Learning Curves Plot
 
 ![learning_curves](svg/courses/machine_learning/machine-learning/05_fitting/learning_curves.svg)
 
 ---
+
 ## Validation Curves
 
 - Plot loss vs hyperparameter
@@ -123,6 +139,7 @@ audience:
 - Catches over- and under-fitting
 
 ---
+
 ## Causes Of Overfitting
 
 - Too many parameters
@@ -132,6 +149,7 @@ audience:
 - Training too long
 
 ---
+
 ## Causes Of Underfitting
 
 - Model too simple
@@ -141,6 +159,7 @@ audience:
 - Training stopped too early
 
 ---
+
 ## Mitigations Overview
 
 - More data
@@ -151,6 +170,7 @@ audience:
 - Feature engineering
 
 ---
+
 ## More Data
 
 - The most reliable cure for overfitting
@@ -159,6 +179,7 @@ audience:
 - Augmentation in vision, NLP
 
 ---
+
 ## Augmentation
 
 - Generate new training examples
@@ -167,6 +188,7 @@ audience:
 - Tabular: SMOTE for minority class
 
 ---
+
 ## Regularisation
 
 - Penalise complexity in the loss
@@ -175,6 +197,7 @@ audience:
 - Trades fit for generalisation
 
 ---
+
 ## L2 Regularisation
 
 - Loss + lambda * sum(weights squared)
@@ -183,6 +206,7 @@ audience:
 - Default in many models
 
 ---
+
 ## L1 Regularisation
 
 - Loss + lambda * sum(|weights|)
@@ -191,6 +215,7 @@ audience:
 - Lasso
 
 ---
+
 ## Elastic Net
 
 - Mix of L1 and L2
@@ -199,6 +224,7 @@ audience:
 - Often best of both
 
 ---
+
 ## Regularisation Strength
 
 - Too low: overfits anyway
@@ -207,6 +233,7 @@ audience:
 - Plot validation curve
 
 ---
+
 ## Early Stopping
 
 - Train until validation stops improving
@@ -215,6 +242,7 @@ audience:
 - Form of regularisation
 
 ---
+
 ## Dropout
 
 - Randomly zero units during training
@@ -223,6 +251,7 @@ audience:
 - No effect at inference
 
 ---
+
 ## Weight Decay
 
 - L2 by another name
@@ -230,6 +259,7 @@ audience:
 - Independent of learning rate
 
 ---
+
 ## Cross-Validation
 
 - Honest estimate of generalisation
@@ -238,6 +268,7 @@ audience:
 - Use it for selection
 
 ---
+
 ## Train, Validate, Test
 
 - Train: fit weights
@@ -246,6 +277,7 @@ audience:
 - Three sets, three roles
 
 ---
+
 ## Test Set Discipline
 
 - Never look until you're done
@@ -254,6 +286,7 @@ audience:
 - Or fresh holdouts
 
 ---
+
 ## Ensembling
 
 - Combine many models
@@ -262,6 +295,7 @@ audience:
 - Stacking does both
 
 ---
+
 ## Capacity Control
 
 - Tree depth
@@ -270,6 +304,7 @@ audience:
 - Number of features
 
 ---
+
 ## Polynomial Example
 
 - Degree 1: probably underfits
@@ -278,6 +313,7 @@ audience:
 - Validation curve picks
 
 ---
+
 ## Curse Of Dimensionality
 
 - Many features, few samples
@@ -286,6 +322,7 @@ audience:
 - Reduce or regularise
 
 ---
+
 ## Feature Selection
 
 - Drop irrelevant features
@@ -294,6 +331,7 @@ audience:
 - Methods: filter, wrapper, embedded
 
 ---
+
 ## Noisy Labels
 
 - Looks like overfitting
@@ -302,6 +340,7 @@ audience:
 - Better labelling helps more
 
 ---
+
 ## Diagnosis Flow
 
 - Train loss high → underfit
@@ -310,6 +349,7 @@ audience:
 - Match diagnosis to fix
 
 ---
+
 ## sklearn Validation Curve
 
 ```python
@@ -321,6 +361,7 @@ train_scores, test_scores = validation_curve(
 ```
 
 ---
+
 ## sklearn Learning Curve
 
 ```python
@@ -331,6 +372,7 @@ sizes, train, test = learning_curve(
 ```
 
 ---
+
 ## Common Mistakes
 
 - Picking model on test set
@@ -339,36 +381,43 @@ sizes, train, test = learning_curve(
 - Ignoring class imbalance in CV folds
 
 ---
+
 ## Bias-Variance Dartboard
 
 ![bias_variance_dartboard](svg/courses/machine_learning/machine-learning/05_fitting/bias_variance_dartboard.svg)
 
 ---
+
 ## Regularisation Path
 
 ![regularization_path](svg/courses/machine_learning/machine-learning/05_fitting/regularization_path.svg)
 
 ---
+
 ## Dropout
 
 ![dropout](svg/courses/machine_learning/machine-learning/05_fitting/dropout.svg)
 
 ---
+
 ## Polynomial Capacity
 
 ![polynomial_capacity](svg/courses/machine_learning/machine-learning/05_fitting/polynomial_capacity.svg)
 
 ---
+
 ## Noise Decomposition
 
 ![noise_decomposition](svg/courses/machine_learning/machine-learning/05_fitting/noise_decomposition.svg)
 
 ---
+
 ## Curse of Dimensionality
 
 ![curse_of_dimensionality](svg/courses/machine_learning/machine-learning/05_fitting/curse_of_dimensionality.svg)
 
 ---
+
 ## Summary
 
 - Underfit and overfit are the two failure modes

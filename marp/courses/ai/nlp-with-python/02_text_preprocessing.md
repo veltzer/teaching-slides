@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Text Preprocessing
 
 ---
+
 ## What This Chapter Covers
 
 - Tokenization
@@ -20,6 +22,7 @@ audience:
 - Subword units
 
 ---
+
 ## Tokenization
 
 - Split text into units
@@ -28,6 +31,7 @@ audience:
 - Language matters
 
 ---
+
 ## Word Tokenization
 
 - spaCy: rule-based, language-aware
@@ -36,6 +40,7 @@ audience:
 - Use a library, not your own
 
 ---
+
 ## Sentence Tokenization
 
 - Period is ambiguous
@@ -44,6 +49,7 @@ audience:
 - Watch out for abbreviations
 
 ---
+
 ## Normalization
 
 - Lowercasing
@@ -52,11 +58,13 @@ audience:
 - Number handling
 
 ---
+
 ## Normalisation Steps
 
 ![normalisation_steps](svg/courses/ai/nlp-with-python/02_text_preprocessing/normalisation_steps.svg)
 
 ---
+
 ## Stop Words
 
 - Common low-content words
@@ -65,6 +73,7 @@ audience:
 - Domain-specific lists matter
 
 ---
+
 ## Stemming
 
 - Crude root extraction
@@ -73,6 +82,7 @@ audience:
 - Rarely used today
 
 ---
+
 ## Lemmatization
 
 - Real dictionary form
@@ -81,6 +91,7 @@ audience:
 - spaCy does it well
 
 ---
+
 ## Regex Cleaning
 
 - Strip HTML
@@ -89,6 +100,7 @@ audience:
 - Be careful with emojis
 
 ---
+
 ## Subword Tokenization
 
 - BPE, WordPiece, SentencePiece
@@ -97,11 +109,13 @@ audience:
 - Vocab is part of the model
 
 ---
+
 ## Strategies Compared
 
 ![tokenization](svg/courses/ai/nlp-with-python/02_text_preprocessing/tokenization.svg)
 
 ---
+
 ## Vectorization
 
 - Bag of words
@@ -110,6 +124,7 @@ audience:
 - Contextual embeddings
 
 ---
+
 ## Pipelines
 
 - Compose steps
@@ -118,6 +133,7 @@ audience:
 - Same code train and predict
 
 ---
+
 ## Common Preprocessing Mistakes
 
 - Lowercasing for NER

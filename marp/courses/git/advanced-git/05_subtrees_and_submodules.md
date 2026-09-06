@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Subtrees and Submodules
 
 ---
+
 ## What This Chapter Covers
 
 - The need for embedding one repo inside another
@@ -20,6 +22,7 @@ audience:
 - Choosing between them for a real project
 
 ---
+
 ## Why Embed Repos?
 
 - Vendored third-party code that you patch locally
@@ -29,6 +32,7 @@ audience:
 - Submodules and subtrees both solve this; very differently
 
 ---
+
 ## Submodule Mechanics
 
 - A submodule is a *pointer* to a specific commit in another repo
@@ -38,11 +42,13 @@ audience:
 - Each submodule is a full clone with its own `.git`
 
 ---
+
 ## Submodule vs Subtree Visualized
 
 ![submodule_vs_subtree](svg/courses/git/advanced-git/05_subtrees_and_submodules/submodule_vs_subtree.svg)
 
 ---
+
 ## Adding a Submodule
 
 ```bash
@@ -56,6 +62,7 @@ git commit -m "add example library as submodule"
 - Or clone with `--recurse-submodules` from the start
 
 ---
+
 ## Updating a Submodule
 
 ```bash
@@ -72,6 +79,7 @@ git commit -m "bump example to v2.1.0"
 - This separation is the source of most submodule confusion
 
 ---
+
 ## The Submodule Pitfall
 
 - After pulling the outer repo, submodules don't auto-update
@@ -81,6 +89,7 @@ git commit -m "bump example to v2.1.0"
 - Or set `submodule.recurse=true` in config
 
 ---
+
 ## Submodule Update Modes
 
 - `git submodule update --init` — initialize and check out the recorded SHA
@@ -90,6 +99,7 @@ git commit -m "bump example to v2.1.0"
 - Mixing the two confuses team members — pick one and document it
 
 ---
+
 ## Removing a Submodule
 
 ```bash
@@ -104,6 +114,7 @@ git commit -m "remove example library"
 - Use a script if your team does this often
 
 ---
+
 ## Subtree Mechanics
 
 - A subtree merges another repo's history into a subdirectory of yours
@@ -113,6 +124,7 @@ git commit -m "remove example library"
 - Pulling updates uses `git subtree pull`
 
 ---
+
 ## Adding a Subtree
 
 ```bash
@@ -126,6 +138,7 @@ git subtree add --prefix=lib/example \
 - Most teams use `--squash` to avoid history bloat
 
 ---
+
 ## Pulling Subtree Updates
 
 ```bash
@@ -139,6 +152,7 @@ git subtree pull --prefix=lib/example \
 - No special "submodule update" dance for collaborators
 
 ---
+
 ## Pushing Subtree Changes Back
 
 ```bash
@@ -152,6 +166,7 @@ git subtree push --prefix=lib/example \
 - Slower than submodule equivalent — git rewalks history
 
 ---
+
 ## Submodules: When They Fit
 
 - The inner repo evolves independently and you pin specific versions
@@ -161,6 +176,7 @@ git subtree push --prefix=lib/example \
 - Strong organizational boundary between repos
 
 ---
+
 ## Subtrees: When They Fit
 
 - You want clones to "just work" without extra commands
@@ -170,11 +186,13 @@ git subtree push --prefix=lib/example \
 - Onboarding speed matters more than version isolation
 
 ---
+
 ## Decision Matrix
 
 ![decision_matrix](svg/courses/git/advanced-git/05_subtrees_and_submodules/decision_matrix.svg)
 
 ---
+
 ## Common Submodule Mistakes
 
 - Forgetting `--recurse-submodules` on clone
@@ -184,6 +202,7 @@ git subtree push --prefix=lib/example \
 - Branching strategies that don't account for submodule SHAs
 
 ---
+
 ## Common Subtree Mistakes
 
 - Forgetting `--squash` and importing thousands of commits
@@ -193,6 +212,7 @@ git subtree push --prefix=lib/example \
 - Treating subtrees like submodules and over-thinking version pinning
 
 ---
+
 ## Submodule Tooling
 
 - `git submodule foreach 'git pull'` — run a command in every submodule
@@ -202,6 +222,7 @@ git subtree push --prefix=lib/example \
 - Most submodule complaints come from missing this config
 
 ---
+
 ## A Hybrid Pattern
 
 - Use submodules for large dependencies you pin (compilers, big libs)
@@ -211,6 +232,7 @@ git subtree push --prefix=lib/example \
 - Both can coexist in the same repo
 
 ---
+
 ## Migration Considerations
 
 - Submodule to subtree: rewrite history is required to flatten
@@ -220,6 +242,7 @@ git subtree push --prefix=lib/example \
 - Reach for migration only when the pain is concrete
 
 ---
+
 ## Best Practices
 
 - Document the choice and the workflow in the repo's README
@@ -229,6 +252,7 @@ git subtree push --prefix=lib/example \
 - Test the clone-and-build flow regularly — it's where new contributors fail
 
 ---
+
 ## Summary
 
 - Submodules: pointers to specific SHAs in independent repos

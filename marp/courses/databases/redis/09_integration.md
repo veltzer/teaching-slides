@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Integrating Redis with Applications
 
 ---
+
 ## Why Redis in Modern Applications: Details
 
 Redis enhances application architecture:
@@ -58,6 +60,7 @@ When choosing a Redis client:
     - Documentation quality
 
 ---
+
 ## Connection Management: Overview
 
 Best practices for Redis connections:
@@ -173,6 +176,7 @@ public class RedisConnectionPool {
 ```
 
 ---
+
 ## Data Serialization: Overview
 
 Converting application data for Redis storage:
@@ -223,6 +227,7 @@ user_hash = r.hgetall('user:123')
 ```
 
 ---
+
 ## Integrating Redis as a Cache
 
 ![integrating_redis_as_a_cache](svg/courses/databases/redis/09_integration/integrating_redis_as_a_cache.svg)
@@ -383,6 +388,7 @@ public class ProductService {
 ```
 
 ---
+
 ## Redis for Session Management
 
 ![redis_for_session_management](svg/courses/databases/redis/09_integration/redis_for_session_management.svg)
@@ -617,6 +623,7 @@ app.use('/api', rateLimit);
 ```
 
 ---
+
 ## Redis for Job Queues
 
 ![redis_for_job_queues](svg/courses/databases/redis/09_integration/redis_for_job_queues.svg)
@@ -1013,6 +1020,7 @@ app.listen(3000, () => {
 ```
 
 ---
+
 ## Caching Strategies in Microservices
 
 ![caching_strategies_in_microservices](svg/courses/databases/redis/09_integration/caching_strategies_in_microservices.svg)
@@ -1027,6 +1035,7 @@ app.listen(3000, () => {
 - Distributed locking for updates
 
 ---
+
 ## Redis and Database Integration
 
 ![redis_and_database_integration](svg/courses/databases/redis/09_integration/redis_and_database_integration.svg)
@@ -1041,6 +1050,7 @@ app.listen(3000, () => {
 - Event sourcing with Redis Streams
 
 ---
+
 ## Error Handling and Resilience
 
 ![error_handling_and_resilience](svg/courses/databases/redis/09_integration/error_handling_and_resilience.svg)

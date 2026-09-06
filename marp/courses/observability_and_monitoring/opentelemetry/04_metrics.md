@@ -7,14 +7,17 @@ audience:
   - audiences:devops
 
 ---
+
 # Metrics
 
 ---
+
 ## Instrument Types
 
 ![metric_types](svg/courses/observability_and_monitoring/opentelemetry/04_metrics/metric_types.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - OTel metrics model
@@ -25,6 +28,7 @@ audience:
 - Best practices
 
 ---
+
 ## OTel Metrics Model
 
 - Synchronous and asynchronous instruments
@@ -32,6 +36,7 @@ audience:
 - Exported as OTLP, Prometheus, or other
 
 ---
+
 ## Instrument Types
 
 - Counter: monotonic
@@ -40,6 +45,7 @@ audience:
 - Gauge (async): observed value
 
 ---
+
 ## Counter
 
 - Total requests, bytes sent
@@ -47,6 +53,7 @@ audience:
 - Reset on restart
 
 ---
+
 ## UpDownCounter
 
 - Active connections, queue depth
@@ -54,6 +61,7 @@ audience:
 - Replaces gauges for sync paths
 
 ---
+
 ## Histogram
 
 - Latency, request size
@@ -61,6 +69,7 @@ audience:
 - Compute percentiles in backend
 
 ---
+
 ## Asynchronous Gauge
 
 - Read on demand
@@ -68,6 +77,7 @@ audience:
 - Callback at export time
 
 ---
+
 ## Sample Counter (Go)
 
 ```go
@@ -76,6 +86,7 @@ counter.Add(ctx, 1, attribute.String("status", "ok"))
 ```
 
 ---
+
 ## Aggregations
 
 - Built into SDK
@@ -83,11 +94,13 @@ counter.Add(ctx, 1, attribute.String("status", "ok"))
 - Per-instrument default
 
 ---
+
 ## Cumulative or Delta
 
 ![aggregation_modes](svg/courses/observability_and_monitoring/opentelemetry/04_metrics/aggregation_temporality.svg)
 
 ---
+
 ## Views
 
 - Customise aggregation
@@ -96,6 +109,7 @@ counter.Add(ctx, 1, attribute.String("status", "ok"))
 - Customise histogram buckets
 
 ---
+
 ## Sample View
 
 - Drop high-cardinality attribute
@@ -103,6 +117,7 @@ counter.Add(ctx, 1, attribute.String("status", "ok"))
 - Per-export pipeline
 
 ---
+
 ## Push vs Pull
 
 - Push: SDK sends to collector
@@ -110,6 +125,7 @@ counter.Add(ctx, 1, attribute.String("status", "ok"))
 - OTel supports both via exporters
 
 ---
+
 ## Cardinality
 
 - Limit attribute values
@@ -117,6 +133,7 @@ counter.Add(ctx, 1, attribute.String("status", "ok"))
 - Same pitfall as Prometheus
 
 ---
+
 ## OTel + Prometheus
 
 - Export OTel metrics in Prometheus format
@@ -124,6 +141,7 @@ counter.Add(ctx, 1, attribute.String("status", "ok"))
 - Coexist easily
 
 ---
+
 ## Semantic Conventions
 
 - http.server.duration
@@ -131,6 +149,7 @@ counter.Add(ctx, 1, attribute.String("status", "ok"))
 - Standard names; portable dashboards
 
 ---
+
 ## Common Metric Mistakes
 
 - High-cardinality attributes

@@ -21,6 +21,7 @@ audience:
 ![api_threat_landscape](svg/courses/security/cyber-attacks-and-vectors/27_api_security/api_threat_landscape.svg)
 
 ---
+
 ## Why API Security Matters
 
 - APIs (Application Programming Interfaces) are the backbone of modern applications
@@ -31,6 +32,7 @@ audience:
 - APIs are now the #1 attack surface for web applications
 
 ---
+
 ## OWASP API Security Top 10 (2023)
 
 | Rank | Vulnerability                           | Risk Level |
@@ -47,6 +49,7 @@ audience:
 | 10   | Unsafe Consumption of APIs              | Medium     |
 
 ---
+
 ## BOLA: Broken Object Level Authorization
 
 ```bash
@@ -87,6 +90,7 @@ def get_orders(user_id):
 ```
 
 ---
+
 ## BOLA in the Real World
 
 | Company        | Year | What Happened                                      |
@@ -104,6 +108,7 @@ def get_orders(user_id):
 - Log and alert on access pattern anomalies
 
 ---
+
 ## Mass Assignment
 
 ```python
@@ -196,6 +201,7 @@ def is_safe_url(url):
 ```
 
 ---
+
 ## Rate Limiting and Resource Consumption
 
 ```bash
@@ -272,6 +278,7 @@ Retry-After: 30
 ```
 
 ---
+
 ## JWT Attacks
 
 ### The "none" Algorithm Attack
@@ -306,6 +313,7 @@ decoded = jwt.decode(token, SECRET, algorithms=["HS256"])
 ```
 
 ---
+
 ### JWT Key Confusion Attack
 
 ```asm
@@ -337,6 +345,7 @@ decoded = jwt.decode(token, SECRET, algorithms=["HS256"])
 ```
 
 ---
+
 ### Other JWT Attacks
 
 | Attack                    | Description                                | Defense                        |
@@ -358,6 +367,7 @@ python3 jwt_tool.py <JWT_TOKEN> -M at  # All tests
 ```
 
 ---
+
 ## GraphQL API Attacks
 
 ```bash
@@ -408,6 +418,7 @@ python3 jwt_tool.py <JWT_TOKEN> -M at  # All tests
 ```
 
 ---
+
 ### GraphQL DoS: Nested Query Attack
 
 ```graphql
@@ -452,6 +463,7 @@ def depth_limit_middleware(next, root, info, **args):
 ```
 
 ---
+
 ## GraphQL Security Best Practices
 
 ```python
@@ -492,11 +504,13 @@ def execute_persisted_query(query_id, variables):
 ![api_security_architecture](svg/courses/security/cyber-attacks-and-vectors/27_api_security/api_security_architecture.svg)
 
 ---
+
 ## API Gateway Security
 
 ![api_gateway_security](svg/courses/security/cyber-attacks-and-vectors/27_api_security/api_gateway_security.svg)
 
 ---
+
 ## API Authentication Best Practices
 
 | Method              | Use Case                     | Security Level |
@@ -540,6 +554,7 @@ def validate_api_request(request):
 ```
 
 ---
+
 ## Input Validation and Schema Enforcement
 
 ```python
@@ -578,6 +593,7 @@ def create_user():
 ```
 
 ---
+
 ## API Security Testing
 
 ```bash
@@ -629,6 +645,7 @@ apicheck-curl http://api.example.com/openapi.json | \
 ```
 
 ---
+
 ## Key Takeaways
 
 - APIs are the most common attack surface for modern applications

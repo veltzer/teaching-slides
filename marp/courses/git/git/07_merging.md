@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Merging Changes
 
 ---
@@ -267,6 +268,7 @@ git pull origin main
 ```
 
 ---
+
 ## Pull with Rebase: Example
 
 Use `--rebase` to maintain linear history:
@@ -286,6 +288,7 @@ git config --global pull.rebase true
 - Better for code reviews
 
 ---
+
 ## Pull with Rebase
 
 ![configure_as_default](svg/courses/git/git/07_merging/configure_as_default.svg)
@@ -475,16 +478,16 @@ git merge --no-commit feature-branch
     - Faster merge operations
 
 1. **Use `.gitattributes` for merge strategies:**
-    ```config
+   ```config
     *.generated merge=ours
     package-lock.json merge=union
-    ```
+   ```
 
 1. **Clean up before merging:**
-    ```bash
+   ```bash
     git clean -fd
     git reset --hard HEAD
-    ```
+   ```
 
 1. **Use merge commits strategically:**
     - Preserve feature branch context

@@ -11,11 +11,13 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced Docker
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
+
 ## Solomon Hykes
 
 ![bg left](jpg/courses/devops/advanced-docker/solomon_hykes.jpg)

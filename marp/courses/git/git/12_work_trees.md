@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Work Trees
 
 ---
@@ -52,6 +53,7 @@ git stash pop               # Restore work
 ```
 
 ---
+
 ## What Are Git Worktrees?: Details
 
 Worktrees allow multiple working directories for a single repository:
@@ -63,6 +65,7 @@ Worktrees allow multiple working directories for a single repository:
 - **Separate branches:** Each worktree can be on different branch
 
 ---
+
 ## What Are Git Worktrees?
 
 ![what_are_git_worktrees](svg/courses/git/git/12_work_trees/what_are_git_worktrees.svg)

@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Reliability and Delivery Guarantees
 
 ---
+
 ## What This Chapter Covers
 
 - At-most-once, at-least-once, exactly-once
@@ -21,6 +23,7 @@ audience:
 - Ordering, retries, poison messages
 
 ---
+
 ## Three Delivery Semantics
 
 - At-most-once — may be lost, never duplicated
@@ -30,21 +33,25 @@ audience:
 - Exactly-once is conditional, not absolute
 
 ---
+
 ## Delivery Semantics Visualized
 
 ![delivery_semantics](svg/courses/architecting/event-driven-architecture/04_reliability_and_delivery/delivery_semantics.svg)
 
 ---
+
 ## Deduplication Strategies
 
 ![dedup_strategies](svg/courses/architecting/event-driven-architecture/04_reliability_and_delivery/dedup_strategies.svg)
 
 ---
+
 ## Poison Pill Handling
 
 ![poison_pill](svg/courses/architecting/event-driven-architecture/04_reliability_and_delivery/poison_pill.svg)
 
 ---
+
 ## At-Most-Once
 
 - The producer sends, doesn't track
@@ -54,6 +61,7 @@ audience:
 - Not suitable: orders, payments, anything that matters
 
 ---
+
 ## At-Least-Once
 
 - Producer retries until acknowledgment
@@ -63,6 +71,7 @@ audience:
 - Requires consumers to be idempotent
 
 ---
+
 ## Exactly-Once
 
 - The hardest guarantee — and often misunderstood
@@ -72,6 +81,7 @@ audience:
 - This is what most teams actually deliver
 
 ---
+
 ## What Is Idempotency?
 
 - An operation is idempotent if applying it twice has the same effect as once
@@ -81,6 +91,7 @@ audience:
 - Design for idempotency from the start
 
 ---
+
 ## Idempotency Patterns
 
 - Track processed message IDs in a database
@@ -90,6 +101,7 @@ audience:
 - Reframe non-idempotent operations into idempotent ones
 
 ---
+
 ## Idempotency Keys
 
 - A unique ID attached to each message
@@ -99,6 +111,7 @@ audience:
 - Standard in payment APIs (Stripe, others)
 
 ---
+
 ## Deduplication Storage
 
 - Where do you track processed IDs?
@@ -108,6 +121,7 @@ audience:
 - Trade-off: storage cost vs window of dedup
 
 ---
+
 ## Transactional Outbox Pattern
 
 - Problem: write to DB and emit event atomically
@@ -117,11 +131,13 @@ audience:
 - Atomicity preserved at the cost of slight latency
 
 ---
+
 ## Outbox Pattern Visualized
 
 ![outbox_pattern](svg/courses/architecting/event-driven-architecture/04_reliability_and_delivery/outbox_pattern.svg)
 
 ---
+
 ## Implementing Outbox
 
 - Outbox table: `(id, event, status, created_at)`
@@ -131,6 +147,7 @@ audience:
 - Tools: Debezium can stream from DB to broker automatically
 
 ---
+
 ## Inbox Pattern
 
 - The dual: deduplication on the consumer side
@@ -140,6 +157,7 @@ audience:
 - Pair outbox + inbox for end-to-end exactly-once feel
 
 ---
+
 ## Ordering Guarantees
 
 - Ordering is a per-partition (Kafka) or per-queue (Rabbit) property
@@ -149,6 +167,7 @@ audience:
 - Don't fight ordering — design around it
 
 ---
+
 ## Retry Policies
 
 - Linear retry: same delay between attempts
@@ -158,6 +177,7 @@ audience:
 - Where to retry: in the consumer, or via a delay queue
 
 ---
+
 ## Poison Messages
 
 - A message that always fails, no matter how many retries
@@ -167,6 +187,7 @@ audience:
 - Triage process: investigate, fix, replay (or accept loss)
 
 ---
+
 ## Circuit Breakers
 
 - Stop trying when downstream is failing
@@ -176,6 +197,7 @@ audience:
 - Pair with retries and DLQ for full resilience
 
 ---
+
 ## Backpressure
 
 - Producer outpaces consumer; queue grows unbounded
@@ -185,6 +207,7 @@ audience:
 - Plan for sustained imbalance, not just spikes
 
 ---
+
 ## Rate Limiting Producers
 
 - Sometimes the producer is the problem
@@ -194,6 +217,7 @@ audience:
 - Coordinate with capacity planning
 
 ---
+
 ## End-to-End Latency
 
 - Producer write + broker durability + consumer read + processing
@@ -203,6 +227,7 @@ audience:
 - Dashboards per step are non-negotiable
 
 ---
+
 ## Cross-Service Consistency
 
 - Each local operation is atomic; cross-service is not
@@ -212,6 +237,7 @@ audience:
 - Document the consistency contract per use case
 
 ---
+
 ## Operational Discipline
 
 - Monitor consumer lag per group per topic
@@ -221,6 +247,7 @@ audience:
 - Reliability is operations, not architecture
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting idempotency until duplicates appear in production
@@ -230,6 +257,7 @@ audience:
 - Treating "exactly-once" as a guarantee instead of a careful construction
 
 ---
+
 ## Summary
 
 - At-least-once + idempotent consumers is the typical target

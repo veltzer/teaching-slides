@@ -12,14 +12,17 @@ audience:
   - audiences:devops
 
 ---
+
 # Using Associative Arrays
 
 ---
+
 ## Associative Array Structure
 
 ![associative_array_structure](svg/courses/languages/bash/bash-scripting/21_associative_arrays/associative_array_structure.svg)
 
 ---
+
 ## Declaring Associative Arrays
 
 ```bash
@@ -38,6 +41,7 @@ declare -A colors=(
 ```
 
 ---
+
 ## Adding Key-Value Pairs
 
 ```bash
@@ -62,6 +66,7 @@ settings[debug]="false"
 ```
 
 ---
+
 ## Accessing Values
 
 ```bash
@@ -83,6 +88,7 @@ echo "Japan's capital: $city"     # Tokyo
 ```
 
 ---
+
 ## Iterating Over Associative Arrays
 
 ```bash
@@ -108,6 +114,7 @@ done
 ```
 
 ---
+
 ## Checking Key Existence
 
 ```bash
@@ -132,6 +139,7 @@ fi
 ```
 
 ---
+
 ## Removing Keys
 
 ```bash
@@ -153,6 +161,7 @@ declare -A fruits
 ```
 
 ---
+
 ## Size and Membership
 
 ```bash
@@ -174,6 +183,7 @@ echo "Running: $running"
 ```
 
 ---
+
 ## Associative Arrays from Files
 
 ```bash
@@ -197,6 +207,7 @@ echo "Database: ${config[db_host]}:${config[db_port]}"
 ```
 
 ---
+
 ## Associative Array as Counter
 
 ```bash
@@ -216,6 +227,7 @@ done | sort -t' ' -k2 -rn | head -20
 ```
 
 ---
+
 ## Nested Structures (Simulated)
 
 ```bash
@@ -240,6 +252,7 @@ done
 ```
 
 ---
+
 ## Passing Associative Arrays to Functions
 
 ```bash
@@ -271,6 +284,7 @@ deserialize_map() {
 ```
 
 ---
+
 ## Practical: Simple Key-Value Store
 
 ```bash

@@ -12,9 +12,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Multi Processing
 
 ---
+
 ## Parallel Execution
 
 ![parallel_execution](svg/courses/languages/bash/bash-scripting/16_multiprocessing/parallel_execution.svg)
@@ -43,6 +45,7 @@ bg %1
 ```
 
 ---
+
 ## `$!` - Last Background PID
 
 ```bash
@@ -57,6 +60,7 @@ echo "Started: $pid1 and $pid2"
 ```
 
 ---
+
 ## `wait` - Waiting for Background Jobs
 
 ```bash
@@ -76,6 +80,7 @@ echo "All jobs finished"
 ```
 
 ---
+
 ## Collecting Return Codes
 
 ```bash
@@ -107,6 +112,7 @@ exit $((failed > 0 ? 1 : 0))
 ```
 
 ---
+
 ## Parallel Execution with Return Codes
 
 ```bash
@@ -136,6 +142,7 @@ done
 ```
 
 ---
+
 ## Subshells
 
 ```bash
@@ -157,6 +164,7 @@ echo "outside: $x"           # outside: 1
 ```
 
 ---
+
 ## Process Substitution for Parallel Execution
 
 ```bash
@@ -171,6 +179,7 @@ cat data.txt | tee >(gzip > data.gz) >(wc -l > count.txt) > /dev/null
 ```
 
 ---
+
 ## Job Control
 
 ```bash
@@ -191,6 +200,7 @@ wait %1
 ```
 
 ---
+
 ## `xargs -P` for Parallel Execution
 
 ```bash
@@ -205,6 +215,7 @@ find /logs -name "*.log" -print0 | xargs -0 -P $(nproc) gzip
 ```
 
 ---
+
 ## GNU `parallel`
 
 ```bash
@@ -226,6 +237,7 @@ parallel -S web1,web2,web3 uptime
 ```
 
 ---
+
 ## Signals
 
 ```bash
@@ -249,6 +261,7 @@ trap 'cleanup; exit 0' TERM
 ```
 
 ---
+
 ## Day 2 Summary
 - Scripts need a shebang, `chmod +x`, and error handling
 - Use `set -euo pipefail` as the standard starting point

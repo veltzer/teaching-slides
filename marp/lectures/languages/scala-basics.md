@@ -9,6 +9,7 @@ audience:
 - audiences:developers
 
 ---
+
 # Scala Programming
 ## A Comprehensive Guide
 ## Mark Veltzer

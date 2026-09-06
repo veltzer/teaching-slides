@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Using the C Preprocessor
 
 ---
@@ -94,6 +95,7 @@ printf("Debug: x = %d\n", x);
     - `__STDC__`: Conformance to ISO Standard C
 
 ---
+
 ## Macro Pitfalls and Best Practices
 - Be cautious with side effects
 - Use parentheses in macro definitions
@@ -107,6 +109,7 @@ printf("Debug: x = %d\n", x);
 ```
 
 ---
+
 ## #pragma Directive
 - Compiler-specific instructions
 - Common uses:

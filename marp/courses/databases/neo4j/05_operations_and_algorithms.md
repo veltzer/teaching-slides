@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Operations and Algorithms
 
 ---
+
 ## What This Chapter Covers
 
 - Causal Cluster
@@ -20,6 +22,7 @@ audience:
 - Use cases
 
 ---
+
 ## Causal Cluster
 
 - Core servers handle writes
@@ -28,11 +31,13 @@ audience:
 - Survives core minority loss
 
 ---
+
 ## Cluster Topology
 
 ![causal_cluster](svg/courses/databases/neo4j/05_operations_and_algorithms/causal_cluster.svg)
 
 ---
+
 ## Topology
 
 - Three or five core servers
@@ -41,6 +46,7 @@ audience:
 - Plan for region survival
 
 ---
+
 ## Backups
 
 - Online backup against replicas
@@ -49,6 +55,7 @@ audience:
 - Daily for production
 
 ---
+
 ## Restore
 
 - Stop a node
@@ -57,6 +64,7 @@ audience:
 - Or restore to a fresh cluster
 
 ---
+
 ## Monitoring Metrics
 
 - Page cache hit ratio
@@ -65,6 +73,7 @@ audience:
 - Query latency
 
 ---
+
 ## Alerts
 
 - Cluster member down
@@ -73,6 +82,7 @@ audience:
 - Query timeouts
 
 ---
+
 ## Graph Data Science
 
 - Built-in algorithms library
@@ -81,6 +91,7 @@ audience:
 - Run as procedures
 
 ---
+
 ## Centrality
 
 - Page-rank, between-ness, closeness
@@ -89,6 +100,7 @@ audience:
 - Tune precision and runtime
 
 ---
+
 ## Community Detection
 
 - Modularity-based clustering, label propagation
@@ -97,6 +109,7 @@ audience:
 - Watch for memory cost
 
 ---
+
 ## Path Algorithms
 
 - Shortest path
@@ -105,6 +118,7 @@ audience:
 - Useful for routing
 
 ---
+
 ## Link Prediction
 
 - Train on existing relationships
@@ -113,6 +127,7 @@ audience:
 - Validate against held-out data
 
 ---
+
 ## Embeddings
 
 - node2vec and similar
@@ -121,6 +136,7 @@ audience:
 - Bridge graph and ML worlds
 
 ---
+
 ## Use Cases
 
 - Recommendations
@@ -129,6 +145,7 @@ audience:
 - Identity resolution
 
 ---
+
 ## Common Operational Mistakes
 
 - One node in production

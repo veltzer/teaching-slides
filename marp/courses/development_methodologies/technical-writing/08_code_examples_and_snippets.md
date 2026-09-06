@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Code Examples and Snippets
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![snippet_practices](svg/courses/development_methodologies/technical-writing/08_code_examples_and_snippets/snippet_practices.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Writing effective code examples
@@ -27,6 +29,7 @@ audience:
 - The pyramid of example coverage
 
 ---
+
 ## Why Examples Matter
 
 - Most developers learn by example, not theory
@@ -36,11 +39,13 @@ audience:
 - A 3-line example often beats a 30-line description
 
 ---
+
 ## Quality Checklist
 
 ![example_quality](svg/courses/development_methodologies/technical-writing/08_code_examples_and_snippets/example_quality.svg)
 
 ---
+
 ## What Makes A Good Example
 
 - **Self-contained**: works on its own
@@ -50,6 +55,7 @@ audience:
 - **Idiomatic**: shows the recommended way
 
 ---
+
 ## Self-Contained Examples
 
 ```python
@@ -68,6 +74,7 @@ print(api.get_users(token))
 - All variables defined
 
 ---
+
 ## Minimal Examples
 
 - Don't include unrelated logic
@@ -77,6 +84,7 @@ print(api.get_users(token))
 - Each example demonstrates *one* thing
 
 ---
+
 ## Realistic Examples
 
 - "foo" / "bar" / "baz" are forgettable
@@ -86,6 +94,7 @@ print(api.get_users(token))
 - Use realistic data (anonymised)
 
 ---
+
 ## Correctness
 
 - Test your examples
@@ -95,6 +104,7 @@ print(api.get_users(token))
 - Automation catches what humans forget
 
 ---
+
 ## Doctests in Python
 
 ```python
@@ -115,6 +125,7 @@ def add(a, b):
 - Drift impossible — broken docs fail CI
 
 ---
+
 ## Example Coverage Pyramid
 
 - One quickstart example at the top of the doc
@@ -124,14 +135,15 @@ def add(a, b):
 - Layer; let readers descend as needed
 
 ---
+
 ## Syntax Highlighting
 
-```markdown
+````markdown
 ```python
 def hello():
     print("hi")
 ```misc
-```
+````
 
 - Always specify the language
 - Lets the renderer color-code
@@ -139,6 +151,7 @@ def hello():
 - Wrong language tag &#8594; no highlighting
 
 ---
+
 ## Code Formatting
 
 - Format examples with the same tool as your real code
@@ -148,6 +161,7 @@ def hello():
 - Run examples through the formatter before committing
 
 ---
+
 ## Output Examples
 
 - Show what running the code produces
@@ -156,6 +170,7 @@ def hello():
 - Realistic output ("OK" not enough; show *what* OK looks like)
 
 ---
+
 ## Long Examples
 
 - For tutorials, sometimes a 50-line example is right
@@ -165,6 +180,7 @@ def hello():
 - Don't dump 500 lines without commentary
 
 ---
+
 ## Runnable Examples
 
 - Sandboxes: CodePen, JSFiddle, Replit, Go Playground
@@ -174,6 +190,7 @@ def hello():
 - Consider security implications (anyone can run anything)
 
 ---
+
 ## Avoid In Examples
 
 - Stale syntax (Python 2, old API versions)
@@ -183,6 +200,7 @@ def hello():
 - Code that doesn't compile
 
 ---
+
 ## Show Errors Too
 
 - Document what happens when things go wrong
@@ -192,6 +210,7 @@ def hello():
 - Especially useful in API docs
 
 ---
+
 ## Common Example Mistakes
 
 - Not running them; finding out later they're broken

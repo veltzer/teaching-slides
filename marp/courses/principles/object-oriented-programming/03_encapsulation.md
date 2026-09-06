@@ -8,24 +8,29 @@ audience:
   - audiences:developers
 
 ---
+
 # Encapsulation
 
 ---
+
 ## With vs Without
 
 ![encapsulation](svg/courses/principles/object-oriented-programming/03_encapsulation/encapsulation.svg)
 
 ---
+
 ## Access Modifiers
 
 ![access_modifiers](svg/courses/principles/object-oriented-programming/03_encapsulation/access_modifiers.svg)
 
 ---
+
 ## Why It Matters
 
 ![encapsulation_benefits](svg/courses/principles/object-oriented-programming/03_encapsulation/encapsulation_benefits.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What encapsulation actually means
@@ -36,6 +41,7 @@ audience:
 - Common mistakes
 
 ---
+
 ## What Encapsulation Is
 
 - Bundling state with the behaviour that operates on it
@@ -45,6 +51,7 @@ audience:
 - Internal redesign doesn't break clients
 
 ---
+
 ## Why Hide Data?
 
 - Direct field access spreads knowledge of representation everywhere
@@ -54,6 +61,7 @@ audience:
 - Concurrency, lazy loading, computed values — all become possible
 
 ---
+
 ## Access Modifiers in Java
 
 - `public`: visible everywhere
@@ -63,6 +71,7 @@ audience:
 - Use the most restrictive that works; widen later if needed
 
 ---
+
 ## "Access Modifiers" in Python
 
 - Python has no enforced access control
@@ -72,6 +81,7 @@ audience:
 - "We're all consenting adults here"
 
 ---
+
 ## Getters and Setters
 
 ```java
@@ -92,6 +102,7 @@ public void setAge(int age) {
 - Add them when there's a *reason*
 
 ---
+
 ## Properties in Python
 
 ```python
@@ -115,6 +126,7 @@ class Account:
 - C# has the same idea built in
 
 ---
+
 ## Don't Just Mirror Fields
 
 - A getter for every field, a setter for every field, no other methods = anemic class
@@ -124,6 +136,7 @@ class Account:
 - Bare data with bare accessors is just a struct in disguise
 
 ---
+
 ## Information Hiding vs Data Hiding
 
 - **Data hiding**: keep fields private
@@ -133,6 +146,7 @@ class Account:
 - Data hiding is the easy half; information hiding is the discipline
 
 ---
+
 ## Designing Clean Interfaces
 
 - Few methods, each with a clear purpose
@@ -142,6 +156,7 @@ class Account:
 - Beware the temptation to add "convenience" methods that bloat the API
 
 ---
+
 ## Immutability
 
 - The simplest encapsulation: no setters at all
@@ -151,6 +166,7 @@ class Account:
 - Java records, Python frozen dataclasses, Kotlin data classes — language-level support
 
 ---
+
 ## Visibility in Practice
 
 - Start with `private` for everything
@@ -160,6 +176,7 @@ class Account:
 - Every public field is a future support ticket
 
 ---
+
 ## Encapsulation and Testing
 
 - Tests should exercise the *interface*, not the internals
@@ -168,6 +185,7 @@ class Account:
 - Refactor the class to expose the right behaviours, then test those
 
 ---
+
 ## Encapsulation and Concurrency
 
 - Mutable state shared across threads needs coordination
@@ -177,6 +195,7 @@ class Account:
 - Immutable objects are inherently thread-safe
 
 ---
+
 ## Common Mistakes
 
 - Bare getter/setter for every field — defeats the purpose

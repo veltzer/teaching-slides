@@ -14,6 +14,7 @@ audience:
   - audiences:developers
 
 ---
+
 # The Modern AI Development Landscape
 
 ## Overview
@@ -394,7 +395,6 @@ Choosing a model depends on your task:
     - Where is data processed and stored geographically?
     - Can you use a zero-retention API agreement?
     - Does your code contain trade secrets or regulated data?
-
 - **Mitigation strategies**:
     - Use enterprise tiers with data protection agreements
     - Self-host open-source models for sensitive repositories

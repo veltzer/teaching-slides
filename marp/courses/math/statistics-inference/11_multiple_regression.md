@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Multiple Regression
 
 ---
+
 ## What This Chapter Covers
 
 - Extending regression to many predictors
@@ -21,11 +23,13 @@ audience:
 - Diagnostics specific to the multivariable case
 
 ---
+
 ## Multicollinearity (VIF)
 
 ![multicollinearity_vif](svg/courses/math/statistics-inference/11_multiple_regression/multicollinearity_vif.svg)
 
 ---
+
 ## More Than One Predictor
 
 - y = &beta;&#8320; + &beta;&#8321;x&#8321; + &beta;&#8322;x&#8322; + ... + &beta;&#8345;x&#8345; + &epsilon;
@@ -35,6 +39,7 @@ audience:
 - Same machinery as simple regression, more dials
 
 ---
+
 ## Interpreting A Coefficient
 
 - &beta;&#8332; is the expected change in y for a one-unit increase in x&#8332; **holding all other predictors fixed**
@@ -44,6 +49,7 @@ audience:
 - Always interpret coefficients in the context of the full model, never one at a time as if alone
 
 ---
+
 ## Categorical Predictors And Interactions
 
 - A categorical variable with k levels enters as k&minus;1 **dummy (indicator)** variables; one level is the baseline, and each coefficient is "this level vs the baseline"
@@ -53,6 +59,7 @@ audience:
 - Center continuous predictors before forming interactions — it makes the main-effect coefficients interpretable
 
 ---
+
 ## Multicollinearity
 
 - Predictors that are highly correlated with *each other* carry overlapping information
@@ -62,6 +69,7 @@ audience:
 - It hurts *interpretation of individual coefficients*, not prediction — if you only care about predictions, you may not need to act
 
 ---
+
 ## Adjusted R&sup2; And Overfitting
 
 - Plain **R&sup2; only ever goes up** when you add predictors — even pure-noise ones — so it can't be used to compare models of different sizes
@@ -71,6 +79,7 @@ audience:
 - A model that nails the training data and flops on new data has learned noise, not signal
 
 ---
+
 ## Model Selection — Carefully
 
 - Stepwise selection (forward/backward by p-value) is convenient and statistically dangerous: it inflates R&sup2;, biases coefficients, and produces p-values that no longer mean what they say
@@ -80,6 +89,7 @@ audience:
 - "We tried 40 predictor combinations and report the best one's p-values" is p-hacking in a lab coat
 
 ---
+
 ## Diagnostics For Multiple Regression
 
 - All the simple-regression diagnostics still apply: residuals vs fitted (linearity, equal variance), Q-Q plot (normality), residuals vs order (independence)
@@ -89,6 +99,7 @@ audience:
 - A clean coefficient table over un-checked residuals is a trap
 
 ---
+
 ## Multiple Regression In Python
 
 ```python
@@ -107,11 +118,13 @@ print("VIFs:", [round(variance_inflation_factor(X, i), 1) for i in range(1, 4)])
 ```
 
 ---
+
 ## Adjusted R² vs Plain R²
 
 ![r2_vs_adjusted](svg/courses/math/statistics-inference/11_multiple_regression/r2_vs_adjusted.svg)
 
 ---
+
 ## Common Mistakes
 
 - Interpreting a coefficient without the "holding the others constant" caveat (sign flips will surprise you)

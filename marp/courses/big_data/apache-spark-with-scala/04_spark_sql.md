@@ -10,9 +10,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Spark SQL
 
 ---
+
 ## Introduction to Spark SQL
 
 1. High-level API for structured data
@@ -241,6 +243,7 @@ df1.crossJoin(df2)
 ```
 
 ---
+
 ## Performance Optimization
 
 ![performance_optimization](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/performance_optimization.svg)

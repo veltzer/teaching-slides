@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Troubleshooting
 
 ---
+
 ## What This Chapter Covers
 
 - A symptom to diagnosis to fix workflow for common cluster issues
@@ -21,6 +23,7 @@ audience:
 - Collecting support diagnostics for escalation
 
 ---
+
 ## The Troubleshooting Mindset
 
 - Always work the pattern: symptom, then diagnosis, then fix
@@ -37,6 +40,7 @@ GET /_cat/indices?v&health=red
 - Never restart nodes blindly; identify the cause first
 
 ---
+
 ## Reading Cluster Health
 
 - `number_of_pending_tasks` rising indicates a backed-up master
@@ -52,6 +56,7 @@ GET /_cluster/pending_tasks
 - A flapping master points to network or GC problems
 
 ---
+
 ## Out of Memory: Heap Pressure
 
 - Symptom: nodes slow, then drop out; logs show `OutOfMemoryError`
@@ -67,6 +72,7 @@ GET /_cat/nodes?v&h=name,heap.current,heap.max,heap.percent
 - Leave the rest of RAM for the filesystem cache and off-heap data
 
 ---
+
 ## Circuit Breakers
 
 - Symptom: requests rejected with `circuit_breaking_exception`
@@ -82,6 +88,7 @@ GET /_nodes/stats/breaker
 - Raising a breaker limit only delays the eventual OOM
 
 ---
+
 ## Garbage Collection Problems
 
 - Symptom: periodic stalls, node disconnects, master elections
@@ -96,6 +103,7 @@ GET /_nodes/stats/jvm?filter_path=**.gc
 - Fix: reduce memory demand or scale out; avoid huge heaps that pause longer
 
 ---
+
 ## Unassigned Shards: Diagnosis
 
 - Symptom: cluster `yellow` or `red`, shards stuck unassigned
@@ -115,6 +123,7 @@ GET /_cat/shards?v&h=index,shard,prirep,state,node,unassigned.reason
 - The explain output names the deciders that blocked allocation
 
 ---
+
 ## Unassigned Shards: Common Causes
 
 - `NODE_LEFT`: the node holding the shard is gone
@@ -130,6 +139,7 @@ POST /_cluster/reroute?retry_failed=true
 - Fix only after the explain output tells you which decider said no
 
 ---
+
 ## Disk Watermarks
 
 - Three thresholds govern shard placement based on free disk
@@ -141,6 +151,7 @@ POST /_cluster/reroute?retry_failed=true
 - Flood stage: enforce a read-only block on affected indices
 
 ---
+
 ## Cluster Block: read_only_allow_delete
 
 - Symptom: writes fail with `cluster_block_exception` and `read_only_allow_delete`
@@ -161,6 +172,7 @@ PUT /_all/_settings
 - The block does not clear by itself; you must reset it after recovery
 
 ---
+
 ## Performance Degradation: Hot Threads
 
 - Symptom: high CPU, slow responses, but no errors
@@ -176,6 +188,7 @@ GET /_nodes/hot_threads?threads=5&interval=500ms
 - Run it twice a few seconds apart to confirm a sustained pattern
 
 ---
+
 ## Performance Degradation: Slow Logs
 
 - Slow logs capture queries and indexing that exceed thresholds
@@ -194,6 +207,7 @@ PUT /myindex/_settings
 - Use them to find the specific slow query shapes, not just symptoms
 
 ---
+
 ## Data Corruption
 
 - Symptom: shard fails to start; logs show `CorruptIndexException`
@@ -208,6 +222,7 @@ GET /_cat/shards?v&h=index,shard,prirep,state,unassigned.reason
 - Replacing the disk and re-replicating is safer than forcing a corrupt shard
 
 ---
+
 ## Recovery Procedures
 
 - Prefer restoring from snapshots over salvaging corrupt data
@@ -229,6 +244,7 @@ POST /_cluster/reroute
 - Treat `accept_data_loss` as deliberate, documented data loss
 
 ---
+
 ## Support Diagnostics
 
 - For escalation, capture a full point-in-time snapshot of the cluster
@@ -244,6 +260,7 @@ POST /_cluster/reroute
 - Redact sensitive data before sharing externally
 
 ---
+
 ## Troubleshooting Checklist
 
 - Check cluster health and identify `red` or `yellow` first

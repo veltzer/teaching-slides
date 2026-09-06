@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to APIs
 
 ---
+
 ## What This Chapter Covers
 
 - What is an API
@@ -19,6 +21,7 @@ audience:
 - RESTful vs other styles
 
 ---
+
 ## What An API Is
 
 - Application Programming Interface
@@ -27,6 +30,7 @@ audience:
 - Hides implementation
 
 ---
+
 ## Why APIs
 
 - Reuse functionality
@@ -35,6 +39,7 @@ audience:
 - Decoupling: change one side without breaking the other
 
 ---
+
 ## Web APIs
 
 - APIs over HTTP
@@ -43,6 +48,7 @@ audience:
 - Language agnostic
 
 ---
+
 ## API Styles
 
 - REST: resources + HTTP verbs
@@ -51,6 +57,7 @@ audience:
 - SOAP: legacy, XML-based
 
 ---
+
 ## Client-Server
 
 - Client makes requests
@@ -59,6 +66,7 @@ audience:
 - Foundation of web
 
 ---
+
 ## Synchronous vs Asynchronous
 
 - Sync: client waits for reply
@@ -67,6 +75,7 @@ audience:
 - Long-running: async patterns
 
 ---
+
 ## API Consumers
 
 - Frontend apps (web, mobile)
@@ -75,11 +84,13 @@ audience:
 - Internal tools
 
 ---
+
 ## Both Sides Of The API
 
 ![api_consumers_producers](svg/courses/networking/restful-apis/01_introduction_to_apis/api_consumers_producers.svg)
 
 ---
+
 ## API Producers
 
 - Build the API
@@ -88,6 +99,7 @@ audience:
 - Operate it (uptime, performance)
 
 ---
+
 ## Why REST Won
 
 - Built on HTTP, leverages caching, proxies
@@ -96,6 +108,7 @@ audience:
 - Tooling ubiquitous
 
 ---
+
 ## Rest's Limits
 
 - Over- and under-fetching
@@ -104,6 +117,7 @@ audience:
 - GraphQL and gRPC fill gaps
 
 ---
+
 ## Common API Mistakes
 
 - No documentation
@@ -113,6 +127,7 @@ audience:
 - No deprecation policy
 
 ---
+
 ## Comparing API Styles
 
 ![api_styles](svg/courses/networking/restful-apis/01_introduction_to_apis/api_styles.svg)

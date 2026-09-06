@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # SQL vs NoSQL
 
 ---
+
 ## What This Chapter Covers
 
 - SQL strengths
@@ -20,11 +22,13 @@ audience:
 - Choosing
 
 ---
+
 ## SQL vs NoSQL Side-by-Side
 
 ![sql_vs_nosql](svg/courses/databases/introduction-to-databases/04_sql_vs_nosql/sql_vs_nosql.svg)
 
 ---
+
 ## SQL Strengths
 
 - Mature: 50 years of optimisation
@@ -34,6 +38,7 @@ audience:
 - Constraints
 
 ---
+
 ## SQL Weaknesses
 
 - Vertical scaling (mostly)
@@ -41,6 +46,7 @@ audience:
 - Less flexible for nested data
 
 ---
+
 ## NoSQL Flavours
 
 - Document (MongoDB, DynamoDB)
@@ -50,6 +56,7 @@ audience:
 - Search (Elasticsearch)
 
 ---
+
 ## Document
 
 - JSON-like documents
@@ -58,6 +65,7 @@ audience:
 - Best: hierarchical data
 
 ---
+
 ## Key-Value
 
 - Simple: key &#8594; value
@@ -66,6 +74,7 @@ audience:
 - Limited query model
 
 ---
+
 ## Wide-Column
 
 - Tables with sparse columns
@@ -74,6 +83,7 @@ audience:
 - Best: time-series at scale
 
 ---
+
 ## Graph
 
 - Nodes and edges
@@ -82,6 +92,7 @@ audience:
 - Best: social, fraud, knowledge graphs
 
 ---
+
 ## Search
 
 - Full-text + analytics
@@ -90,6 +101,7 @@ audience:
 - Best: search experiences
 
 ---
+
 ## When SQL Wins
 
 - Complex relations
@@ -99,6 +111,7 @@ audience:
 - Default choice
 
 ---
+
 ## When NoSQL Wins
 
 - Specific access patterns (key-only)
@@ -108,6 +121,7 @@ audience:
 - Match to need
 
 ---
+
 ## Hybrid
 
 - SQL for core data
@@ -117,6 +131,7 @@ audience:
 - Use the right tool
 
 ---
+
 ## ACID vs BASE
 
 - ACID: atomic, consistent, isolated, durable (SQL)
@@ -125,11 +140,13 @@ audience:
 - Pick by: how much staleness can you tolerate
 
 ---
+
 ## Two Consistency Models
 
 ![acid_vs_base](svg/courses/databases/introduction-to-databases/04_sql_vs_nosql/acid_vs_base.svg)
 
 ---
+
 ## Common SQL/NoSQL Mistakes
 
 - Choosing NoSQL for hype

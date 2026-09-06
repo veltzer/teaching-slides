@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Summarizing Data: Center
 
 ---
+
 ## What This Chapter Covers
 
 - Mean, median, mode — what each one is
@@ -21,11 +23,13 @@ audience:
 - The "average" trap
 
 ---
+
 ## Mean, Median, Mode on a Skewed Distribution
 
 ![skewed_three_centers](svg/courses/math/statistics-applied/03_summarizing_center/skewed_three_centers.svg)
 
 ---
+
 ## Why We Summarize
 
 - A column of 10,000 numbers tells you nothing at a glance
@@ -35,6 +39,7 @@ audience:
 - Always pair center with spread (next chapter)
 
 ---
+
 ## The Mean
 
 - Sum divided by count: x&#772; = (&Sigma; x&#7522;) / n
@@ -44,6 +49,7 @@ audience:
 - One billionaire ruins the "average net worth" of a room
 
 ---
+
 ## The Median
 
 - The middle value when sorted (average of the two middles if n is even)
@@ -53,6 +59,7 @@ audience:
 - "Median household income" is the honest headline number
 
 ---
+
 ## The Mode
 
 - The most frequently occurring value
@@ -62,6 +69,7 @@ audience:
 - Less informative for continuous data — bin first, then it's the tallest bar
 
 ---
+
 ## Mean vs Median And Skew
 
 - **Right-skewed** (long tail to the right): mean > median — incomes, response times
@@ -71,11 +79,13 @@ audience:
 - Report the median for skewed money and time data
 
 ---
+
 ## How an Outlier Drags the Mean
 
 ![outlier_pulls_mean](svg/courses/math/statistics-applied/03_summarizing_center/outlier_pulls_mean.svg)
 
 ---
+
 ## Weighted And Trimmed Means
 
 - **Weighted mean**: each value carries a weight — average price weighted by quantity sold
@@ -85,6 +95,7 @@ audience:
 - A 10% trimmed mean is a good default when a few outliers are suspect
 
 ---
+
 ## Computing Centers
 
 ```python
@@ -98,6 +109,7 @@ print("trim10 :", stats.trim_mean(x, 0.1))
 ```
 
 ---
+
 ## Common Mistakes
 
 - Quoting the mean for skewed money or latency data

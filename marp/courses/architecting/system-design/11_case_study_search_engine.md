@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Case Study: Search Engine
 
 ---
+
 ## What This Chapter Covers
 
 - Requirements
@@ -21,6 +23,7 @@ audience:
 - Real-time updates
 
 ---
+
 ## Requirements
 
 - Crawl the web (or a subset)
@@ -30,6 +33,7 @@ audience:
 - Billions of pages
 
 ---
+
 ## Crawler
 
 - Fetcher: HTTP requests to URLs
@@ -39,6 +43,7 @@ audience:
 - Distributed: many machines crawl in parallel
 
 ---
+
 ## URL Frontier
 
 - Priority queue
@@ -48,6 +53,7 @@ audience:
 - Distributed via consistent hashing
 
 ---
+
 ## Parsing And Extraction
 
 - HTML &#8594; text
@@ -56,6 +62,7 @@ audience:
 - Tokenisation, stemming, stopword removal
 
 ---
+
 ## Inverted Index
 
 - Term &#8594; list of (doc id, position, frequency)
@@ -64,6 +71,7 @@ audience:
 - Compressed (delta encoding, varint)
 
 ---
+
 ## Building The Index
 
 - MapReduce / Spark over crawled docs
@@ -72,6 +80,7 @@ audience:
 - Rebuild periodically; incremental updates
 
 ---
+
 ## Query Processing
 
 - Parse query
@@ -81,6 +90,7 @@ audience:
 - Return top-k
 
 ---
+
 ## Ranking
 
 - TF-IDF: classic baseline
@@ -90,6 +100,7 @@ audience:
 - Combine many signals
 
 ---
+
 ## PageRank
 
 - Random walk model
@@ -98,6 +109,7 @@ audience:
 - Updated periodically
 
 ---
+
 ## Storage
 
 - Crawled HTML: object storage (S3)
@@ -106,6 +118,7 @@ audience:
 - Petabytes typical
 
 ---
+
 ## Scale
 
 - Billions of documents
@@ -115,6 +128,7 @@ audience:
 - Hard problem; specialised systems
 
 ---
+
 ## Real-Time Updates
 
 - News, social media: minutes-fresh
@@ -123,6 +137,7 @@ audience:
 - Trade-off: complexity vs freshness
 
 ---
+
 ## Caching
 
 - Popular queries: cache the result
@@ -131,6 +146,7 @@ audience:
 - Reduces tail latency
 
 ---
+
 ## Quality Signals
 
 - Click-through rate
@@ -140,6 +156,7 @@ audience:
 - All folded into ranking
 
 ---
+
 ## Common Discussion Points
 
 - "How do you handle freshness?" — split index, real-time updates
@@ -149,6 +166,7 @@ audience:
 - Design discussion shows depth
 
 ---
+
 ## Course Wrap-Up
 
 - System design is asking the right questions, then making trade-offs

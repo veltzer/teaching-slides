@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Mock Servers and Contract Testing
 
 ---
+
 ## Contract Testing
 
 ![contract_testing](svg/courses/architecting/api-first-development/05_mock_servers_and_contract_testing/contract_testing.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Mock servers from OpenAPI specs
@@ -26,6 +29,7 @@ audience:
 - The "tests against the spec" pattern
 
 ---
+
 ## Why Mock Servers
 
 - Frontend / consumers need an API to develop against
@@ -35,6 +39,7 @@ audience:
 - Replaces "wait for the backend" with "build in parallel"
 
 ---
+
 ## Prism
 
 ```bash
@@ -48,6 +53,7 @@ prism mock api-spec.yaml -p 4010
 - Free, easy, the most common choice
 
 ---
+
 ## What Prism Returns
 
 - If the spec has `example`: that
@@ -57,6 +63,7 @@ prism mock api-spec.yaml -p 4010
 - Errors when the request doesn't match the spec
 
 ---
+
 ## WireMock
 
 - Java-based mock server; very flexible
@@ -66,6 +73,7 @@ prism mock api-spec.yaml -p 4010
 - Good for: complex scenarios, stateful mocks
 
 ---
+
 ## Mock Limitations
 
 - Mocks return canned data; they don't have real business logic
@@ -74,6 +82,7 @@ prism mock api-spec.yaml -p 4010
 - Don't test business logic against a mock
 
 ---
+
 ## Contract Testing
 
 - Verify the *agreement* between producer and consumer
@@ -83,6 +92,7 @@ prism mock api-spec.yaml -p 4010
 - Critical for microservices
 
 ---
+
 ## Consumer-Driven Contract Testing
 
 - Consumer writes tests that capture expectations
@@ -91,6 +101,7 @@ prism mock api-spec.yaml -p 4010
 - Pact is the leading tool
 
 ---
+
 ## Pact Workflow
 
 - Consumer test: "When I call POST /users with X, I expect 200 and Y"
@@ -100,6 +111,7 @@ prism mock api-spec.yaml -p 4010
 - Producer fails CI if it can't
 
 ---
+
 ## Pact Consumer Example
 
 ```javascript
@@ -116,6 +128,7 @@ expect(user.name).toBe('Alice');
 ```
 
 ---
+
 ## Pact Producer Verification
 
 ```bash
@@ -130,6 +143,7 @@ pact-verifier --provider-base-url=http://localhost:8080 \
 - Fails if anything diverges
 
 ---
+
 ## OpenAPI vs Pact
 
 - **OpenAPI**: defines the *spec* (what's possible)
@@ -139,6 +153,7 @@ pact-verifier --provider-base-url=http://localhost:8080 \
 - Sometimes you need both
 
 ---
+
 ## Schemathesis
 
 - Generates tests from OpenAPI; runs against the producer
@@ -147,6 +162,7 @@ pact-verifier --provider-base-url=http://localhost:8080 \
 - Runs in CI; catches regressions
 
 ---
+
 ## CI Integration
 
 - Mock server: spin up in CI for end-to-end frontend tests
@@ -156,6 +172,7 @@ pact-verifier --provider-base-url=http://localhost:8080 \
 - Together: high confidence the API works as designed
 
 ---
+
 ## A Realistic Workflow
 
 - Consumer team writes Pact tests
@@ -165,6 +182,7 @@ pact-verifier --provider-base-url=http://localhost:8080 \
 - Producer ships: passes both
 
 ---
+
 ## Common Mock and Contract Mistakes
 
 - Mocks too "smart" — frontend depends on behaviour the real API doesn't have
@@ -174,6 +192,7 @@ pact-verifier --provider-base-url=http://localhost:8080 \
 - Forgetting Pact when removing endpoints
 
 ---
+
 ## Mock Realism Levels
 
 ![mock_levels](svg/courses/architecting/api-first-development/05_mock_servers_and_contract_testing/mock_levels.svg)

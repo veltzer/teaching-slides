@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # The Red-Green-Refactor Cycle
 
 ---
+
 ## What This Chapter Covers
 
 - Writing the first failing test
@@ -20,6 +22,7 @@ audience:
 - Step size: baby vs large
 
 ---
+
 ## Red: Write A Failing Test
 
 - Pick the smallest possible behaviour to add
@@ -29,21 +32,25 @@ audience:
 - A test that passes immediately tells you nothing
 
 ---
+
 ## Cycle in Detail
 
 ![cycle_steps](svg/courses/testing/test-driven-development/02_the_red_green_refactor_cycle/cycle_steps.svg)
 
 ---
+
 ## Cycle Phases at a Glance
 
 ![cycle_phases](svg/courses/testing/test-driven-development/02_the_red_green_refactor_cycle/cycle_phases.svg)
 
 ---
+
 ## Cycle Phases In Detail
 
 ![cycle_in_detail](svg/courses/testing/test-driven-development/02_the_red_green_refactor_cycle/cycle_in_detail.svg)
 
 ---
+
 ## Why The Failure Matters
 
 - Confirms the test is actually testing something
@@ -53,6 +60,7 @@ audience:
 - Treat the failure as feedback
 
 ---
+
 ## Green: Make It Pass
 
 - Write the *minimum* code to pass
@@ -62,6 +70,7 @@ audience:
 - Speed over elegance for now
 
 ---
+
 ## "Fake It Till You Make It"
 
 - Test: `add(2, 3) == 5`. Code: `return 5`.
@@ -71,6 +80,7 @@ audience:
 - Trains you to take small steps
 
 ---
+
 ## Refactor: Improve Without Breaking
 
 - Tests still pass after each refactor
@@ -80,6 +90,7 @@ audience:
 - Don't add features in the refactor step
 
 ---
+
 ## A Cycle in Practice
 
 ```python
@@ -104,6 +115,7 @@ def add(a, b):
 ```
 
 ---
+
 ## When To Refactor
 
 - After every green
@@ -113,6 +125,7 @@ def add(a, b):
 - Skip it and tech debt accumulates
 
 ---
+
 ## When NOT To Refactor
 
 - When you're about to throw away the code
@@ -122,6 +135,7 @@ def add(a, b):
 - When tests don't cover the behaviour
 
 ---
+
 ## Cycle Times
 
 - Per cycle: 1-5 minutes typical
@@ -131,6 +145,7 @@ def add(a, b):
 - Investment in fast tests pays back many times
 
 ---
+
 ## Step Size: Baby
 
 - New domain, unfamiliar territory
@@ -140,6 +155,7 @@ def add(a, b):
 - When confidence is low
 
 ---
+
 ## Step Size: Big
 
 - Familiar domain
@@ -149,11 +165,13 @@ def add(a, b):
 - High confidence
 
 ---
+
 ## Step Size Choices
 
 ![step_sizes](svg/courses/testing/test-driven-development/02_the_red_green_refactor_cycle/step_sizes.svg)
 
 ---
+
 ## When You Get Stuck
 
 - Tests not passing? Write a *smaller* test
@@ -163,6 +181,7 @@ def add(a, b):
 - Don't push through; back up
 
 ---
+
 ## Generalisation
 
 - After triangulation, generalise the implementation
@@ -172,6 +191,7 @@ def add(a, b):
 - Don't avoid generalising (technical debt)
 
 ---
+
 ## Tracking Progress
 
 - A list of tests-to-write
@@ -181,6 +201,7 @@ def add(a, b):
 - An informal but powerful habit
 
 ---
+
 ## Cycle Discipline
 
 - Every cycle: red, green, refactor
@@ -190,6 +211,7 @@ def add(a, b):
 - Discipline pays off over months and years
 
 ---
+
 ## Common Cycle Mistakes
 
 - Writing multiple tests at once (lose feedback)

@@ -25,6 +25,7 @@ audience:
 - DNS is a critical internet component, translating domain names to IP addresses
 
 ---
+
 ## Types of DNS DoS Attacks
 
 1. **UDP Flood Attack**: This attack involves sending a large number of UDP packets to the DNS server, overwhelming its ability to process legitimate requests.

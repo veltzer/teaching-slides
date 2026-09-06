@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Elasticsearch
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![use_cases](svg/courses/databases/elasticsearch-for-developers/01_introduction_to_elasticsearch/use_cases.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What Elasticsearch is
@@ -25,6 +27,7 @@ audience:
 - A short history
 
 ---
+
 ## What Elasticsearch Is
 
 - Distributed, full-text search engine
@@ -34,6 +37,7 @@ audience:
 - Industry standard for search and log analytics
 
 ---
+
 ## The Elastic Stack
 
 - **Elasticsearch**: search and analytics
@@ -43,6 +47,7 @@ audience:
 - "ELK" or "Elastic stack"
 
 ---
+
 ## Use Cases
 
 - Full-text search (websites, products)
@@ -53,6 +58,7 @@ audience:
 - Vector / semantic search
 
 ---
+
 ## ES vs Solr
 
 - Both built on Lucene
@@ -61,6 +67,7 @@ audience:
 - ES has won most of the market
 
 ---
+
 ## ES vs OpenSearch
 
 - AWS forked ES after license change
@@ -69,6 +76,7 @@ audience:
 - Pick by: cloud preference, license needs
 
 ---
+
 ## Versions
 
 - 7.x is widely deployed
@@ -77,6 +85,7 @@ audience:
 - Run a recent version
 
 ---
+
 ## Document-Oriented
 
 - Each "row" is a JSON document
@@ -85,6 +94,7 @@ audience:
 - Inverted index for fast text search
 
 ---
+
 ## Inverted Index
 
 - Term &#8594; list of documents containing it
@@ -93,11 +103,13 @@ audience:
 - Updated as documents are indexed
 
 ---
+
 ## Inverted Index Visualized
 
 ![inverted_index](svg/courses/databases/elasticsearch-for-developers/01_introduction_to_elasticsearch/inverted_index.svg)
 
 ---
+
 ## Distributed By Design
 
 - Cluster of nodes
@@ -106,6 +118,7 @@ audience:
 - Survives node failure
 
 ---
+
 ## REST API
 
 - Everything is HTTP + JSON
@@ -114,6 +127,7 @@ audience:
 - No SQL by default (ES|QL added later)
 
 ---
+
 ## Hosted Options
 
 - Elastic Cloud (official)
@@ -122,6 +136,7 @@ audience:
 - Docker for dev
 
 ---
+
 ## Common Misconceptions
 
 - "ES is a database" — primary store risky; usually paired with one

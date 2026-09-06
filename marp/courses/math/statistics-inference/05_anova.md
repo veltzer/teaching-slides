@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Analysis of Variance
 
 ---
+
 ## What This Chapter Covers
 
 - Why not just run many t-tests
@@ -21,11 +23,13 @@ audience:
 - Effect size and the ANOVA&ndash;regression connection
 
 ---
+
 ## Partitioning Variance
 
 ![between_vs_within](svg/courses/math/statistics-inference/05_anova/between_vs_within.svg)
 
 ---
+
 ## The Many-Groups Problem
 
 - You have a numeric metric across *k* groups (3+ ad creatives, 4 server configs) and want to know if any differ
@@ -35,6 +39,7 @@ audience:
 - It's an omnibus test, a gatekeeper for the pairwise questions
 
 ---
+
 ## Partitioning The Variance
 
 - Total variability in the data = variability **between** group means + variability **within** groups
@@ -44,6 +49,7 @@ audience:
 - ANOVA compares these two sources of variability — hence the name
 
 ---
+
 ## The F-Statistic
 
 - Convert each SS to a **mean square** by dividing by its degrees of freedom: MS_between (df = k&minus;1), MS_within (df = N&minus;k)
@@ -53,6 +59,7 @@ audience:
 - The F-distribution is right-skewed and lives on [0, &infin;) — it's the ratio of two scaled chi-squares
 
 ---
+
 ## One-Way ANOVA Assumptions
 
 - **Independence** of observations within and across groups — the critical one
@@ -62,6 +69,7 @@ audience:
 - Badly non-normal with small groups? Use the **Kruskal&ndash;Wallis** test (later chapter)
 
 ---
+
 ## Post-Hoc Comparisons
 
 - A significant ANOVA says "not all equal" — not *which* ones differ
@@ -71,11 +79,13 @@ audience:
 - If you only care about specific pre-planned comparisons, you can sometimes skip the omnibus test entirely
 
 ---
+
 ## ANOVA Workflow
 
 ![workflow](svg/courses/math/statistics-inference/05_anova/workflow.svg)
 
 ---
+
 ## Effect Size For ANOVA
 
 - p (and F) depend on sample size; effect size doesn't
@@ -85,6 +95,7 @@ audience:
 - A "highly significant" ANOVA with &eta;&sup2; = 0.005 means the grouping barely matters
 
 ---
+
 ## ANOVA Is Regression
 
 - One-way ANOVA is exactly a linear regression with the group as a categorical predictor (dummy variables)
@@ -94,6 +105,7 @@ audience:
 - Use `statsmodels` formulas (`y ~ C(group)`) and you get ANOVA, regression, and diagnostics from one fit
 
 ---
+
 ## One-Way ANOVA In Python
 
 ```python
@@ -109,6 +121,7 @@ print(pairwise_tukeyhsd(df.y, df.g))                          # which pairs diff
 ```
 
 ---
+
 ## Common Mistakes
 
 - Running all pairwise t-tests instead of an omnibus test first

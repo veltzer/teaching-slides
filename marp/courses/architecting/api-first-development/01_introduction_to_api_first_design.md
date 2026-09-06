@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Introduction to API-First Design
 
 ---
+
 ## What This Chapter Covers
 
 - What API-first means
@@ -21,11 +23,13 @@ audience:
 - Common adoption challenges
 
 ---
+
 ## API-First Workflow
 
 ![api_first_flow](svg/courses/architecting/api-first-development/01_introduction_to_api_first_design/api_first_flow.svg)
 
 ---
+
 ## What API-First Means
 
 - Design the API *before* writing the implementation
@@ -35,6 +39,7 @@ audience:
 - The opposite of code-first ("ship code; doc it later")
 
 ---
+
 ## Code-First vs API-First
 
 - **Code-first**: implementation defines the API; doc is generated after
@@ -44,6 +49,7 @@ audience:
 - Most modern teams converge to API-first as they scale
 
 ---
+
 ## Benefits
 
 - Frontend / mobile teams can start *immediately* against the contract
@@ -53,6 +59,7 @@ audience:
 - Clearer ownership of the API surface
 
 ---
+
 ## The Contract As Communication
 
 - OpenAPI document is the canonical agreement
@@ -62,6 +69,7 @@ audience:
 - Replaces hand-written API docs that always go stale
 
 ---
+
 ## The Workflow
 
 - Designers / architects draft the OpenAPI spec
@@ -72,6 +80,7 @@ audience:
 - Backend implements; CI verifies it matches the spec
 
 ---
+
 ## API As A Product
 
 - Treat the API like any product: users, journeys, evolution
@@ -81,6 +90,7 @@ audience:
 - "Customer-zero" mindset: dogfood your own API
 
 ---
+
 ## Common Challenges
 
 - Engineers used to code-first feel slowed down at first
@@ -90,6 +100,7 @@ audience:
 - Initial investment is real; pays back over a year
 
 ---
+
 ## Adoption Strategies
 
 - Start with one new API; not "rewrite everything"
@@ -99,6 +110,7 @@ audience:
 - Write a short style guide
 
 ---
+
 ## Tools You'll Use
 
 - **Swagger Editor / Stoplight Studio**: write specs visually
@@ -108,6 +120,7 @@ audience:
 - **Spectral**: lint OpenAPI specs
 
 ---
+
 ## What's Next
 
 - OpenAPI 3.x in detail
@@ -118,6 +131,7 @@ audience:
 - Documentation tools and governance
 
 ---
+
 ## When NOT API-First
 
 - One-off internal scripts
@@ -127,6 +141,7 @@ audience:
 - Match the discipline to the longevity of the API
 
 ---
+
 ## Common Mistakes
 
 - API-first as a slogan; specs that drift from code
@@ -136,6 +151,7 @@ audience:
 - Treating the spec as final; never updating
 
 ---
+
 ## Process Comparison
 
 ![process_compare](svg/courses/architecting/api-first-development/01_introduction_to_api_first_design/process_compare.svg)

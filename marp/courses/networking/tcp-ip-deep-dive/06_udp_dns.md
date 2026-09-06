@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # UDP, DNS, and DHCP
 
 ---
+
 ## What This Chapter Covers
 
 - UDP basics
@@ -21,6 +23,7 @@ audience:
 - QUIC: modern UDP-based transport
 
 ---
+
 ## UDP Design
 
 - Connectionless: no handshake
@@ -30,6 +33,7 @@ audience:
 - Application handles reliability if it needs to
 
 ---
+
 ## UDP Header
 
 ```output
@@ -47,6 +51,7 @@ audience:
 - Checksum optional in IPv4, mandatory in IPv6
 
 ---
+
 ## When to Use UDP
 
 - DNS — small queries, fast response
@@ -56,11 +61,13 @@ audience:
 - Telemetry — lossy is OK
 
 ---
+
 ## TCP vs UDP
 
 ![tcp_vs_udp](svg/courses/networking/tcp-ip-deep-dive/06_udp_dns/tcp_vs_udp.svg)
 
 ---
+
 ## UDP and Reliability
 
 - Application can add reliability if needed
@@ -69,6 +76,7 @@ audience:
 - QUIC is the modern way to do this
 
 ---
+
 ## DNS over UDP
 
 - Default for most DNS queries
@@ -78,6 +86,7 @@ audience:
 - EDNS extension allows larger UDP
 
 ---
+
 ## DNS over TCP
 
 - Used when response > UDP size
@@ -87,11 +96,13 @@ audience:
 - TCP fallback adds latency on miss
 
 ---
+
 ## DNS Record Types
 
 ![dns_record_types](svg/courses/networking/tcp-ip-deep-dive/06_udp_dns/dns_record_types.svg)
 
 ---
+
 ## DHCP
 
 - Dynamic Host Configuration Protocol
@@ -101,6 +112,7 @@ audience:
 - DORA: Discover, Offer, Request, Acknowledge
 
 ---
+
 ## DHCP DORA Process
 
 - Discover: broadcast "I need an IP"
@@ -110,11 +122,13 @@ audience:
 - Client now configured
 
 ---
+
 ## DHCP Visualized
 
 ![dhcp](svg/courses/networking/tcp-ip-deep-dive/06_udp_dns/dhcp.svg)
 
 ---
+
 ## DHCP Reservations
 
 - Server gives same IP to specific MAC
@@ -124,6 +138,7 @@ audience:
 - Rotate reservations carefully
 
 ---
+
 ## DHCP Failure Modes
 
 - DHCP server unreachable → 169.254.x.x (link-local)
@@ -133,6 +148,7 @@ audience:
 - Switch security: DHCP snooping
 
 ---
+
 ## NTP
 
 - Network Time Protocol
@@ -142,6 +158,7 @@ audience:
 - Stratum hierarchy: 0 (atomic) to 16 (unreachable)
 
 ---
+
 ## Why Time Matters
 
 - TLS certificate validation
@@ -151,6 +168,7 @@ audience:
 - Security audit trails
 
 ---
+
 ## QUIC
 
 - UDP-based transport from Google
@@ -160,6 +178,7 @@ audience:
 - Fixes head-of-line blocking from TCP+TLS
 
 ---
+
 ## QUIC Improvements
 
 - 0-RTT or 1-RTT connection setup
@@ -169,6 +188,7 @@ audience:
 - Better for mobile networks
 
 ---
+
 ## HTTP/3 over QUIC
 
 - HTTP/2 over TCP had head-of-line blocking
@@ -178,6 +198,7 @@ audience:
 - Adoption growing fast
 
 ---
+
 ## Stream Control Transmission Protocol
 
 - Stream Control Transmission Protocol
@@ -187,6 +208,7 @@ audience:
 - Less common in general internet
 
 ---
+
 ## ICMP and UDP
 
 - ICMP "port unreachable" replies tell sender app isn't there
@@ -195,6 +217,7 @@ audience:
 - Filtering ICMP breaks UDP error reporting
 
 ---
+
 ## UDP Common Pitfalls
 
 - No back-pressure → flooding
@@ -204,6 +227,7 @@ audience:
 - Stateful firewalls handle UDP loosely
 
 ---
+
 ## NAT and UDP
 
 - NAT must guess the connection state
@@ -213,6 +237,7 @@ audience:
 - UDP hole punching for P2P
 
 ---
+
 ## Tools
 
 - `tcpdump -p udp` — capture UDP
@@ -222,6 +247,7 @@ audience:
 - `ntpq` — NTP statistics
 
 ---
+
 ## Performance Considerations
 
 - UDP doesn't congestion-control by default
@@ -231,6 +257,7 @@ audience:
 - Be a good citizen on shared networks
 
 ---
+
 ## Common Pitfalls
 
 - Assuming UDP is always faster than TCP (sometimes slower under loss)
@@ -240,6 +267,7 @@ audience:
 - Ignoring MTU issues in UDP-heavy protocols
 
 ---
+
 ## Summary
 
 - UDP: simple, fast, unreliable

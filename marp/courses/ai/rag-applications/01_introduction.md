@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Introduction to RAG
 
 ---
+
 ## What This Chapter Covers
 
 - What RAG is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What RAG Is
 
 - Retrieval-Augmented Generation
@@ -28,6 +31,7 @@ audience:
 - Let the model answer with grounding
 
 ---
+
 ## Why RAG
 
 - Knowledge can be updated
@@ -36,6 +40,7 @@ audience:
 - Less hallucination
 
 ---
+
 ## RAG vs Fine-Tuning
 
 - Fine-tune: change behavior
@@ -44,6 +49,7 @@ audience:
 - Most teams start with RAG
 
 ---
+
 ## Components
 
 - Document store
@@ -53,6 +59,7 @@ audience:
 - LLM
 
 ---
+
 ## Lifecycle
 
 - Ingest documents
@@ -62,11 +69,13 @@ audience:
 - Return answer with citations
 
 ---
+
 ## RAG Flow Visualized
 
 ![rag_flow](svg/courses/ai/rag-applications/01_introduction/rag_flow.svg)
 
 ---
+
 ## Use Cases
 
 - Internal knowledge base
@@ -75,6 +84,7 @@ audience:
 - Code search and explain
 
 ---
+
 ## Quality Levers
 
 - Better chunks
@@ -83,6 +93,7 @@ audience:
 - Better prompts
 
 ---
+
 ## When RAG Struggles
 
 - Multi-hop reasoning
@@ -91,6 +102,7 @@ audience:
 - Up-to-the-second freshness
 
 ---
+
 ## Hybrid With Fine-Tuning
 
 - Fine-tune for tone and format
@@ -99,6 +111,7 @@ audience:
 - Evaluate end-to-end
 
 ---
+
 ## Hosted vs Self-Hosted
 
 - Hosted is fast to start
@@ -107,6 +120,7 @@ audience:
 - Pick by data sensitivity
 
 ---
+
 ## Course Outline
 
 - Embeddings
@@ -116,6 +130,7 @@ audience:
 - Production
 
 ---
+
 ## Common Beginner Mistakes
 
 - Treating RAG as a database query

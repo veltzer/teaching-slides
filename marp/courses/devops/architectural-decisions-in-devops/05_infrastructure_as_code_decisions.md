@@ -12,9 +12,11 @@ audience:
   - audiences:managers
 
 ---
+
 # Infrastructure as Code Decisions
 
 ---
+
 ## What is Infrastructure as Code?
 
 - Managing infrastructure through machine-readable definition files
@@ -23,6 +25,7 @@ audience:
 - Key decision: which approach, tool, and patterns to adopt
 
 ---
+
 ## Why IaC Matters for DevOps
 
 1. Eliminates configuration drift between environments
@@ -32,16 +35,19 @@ audience:
 1. Reduces mean time to recovery (`MTTR`)
 
 ---
+
 ## The Two Paradigms
 
 ![the_two_paradigms](svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/the_two_paradigms.svg)
 
 ---
+
 ## Declarative vs Imperative Flow
 
 ![declarative_vs_imperative_flow](svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/declarative_vs_imperative_flow.svg)
 
 ---
+
 ## Terraform Overview
 
 - HashiCorp's declarative IaC tool
@@ -51,6 +57,7 @@ audience:
 - Open-source core with commercial offerings (`Terraform Cloud`, `HCP Terraform`)
 
 ---
+
 ## Terraform Example
 
 ```hcl
@@ -72,11 +79,13 @@ output "public_ip" {
 - `terraform plan` shows what will change
 
 ---
+
 ## Terraform Plan-Apply Cycle
 
 ![terraform_plan_apply_cycle](svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/terraform_plan_apply_cycle.svg)
 
 ---
+
 ## Terraform Strengths and Weaknesses
 
 - Strengths:
@@ -90,6 +99,7 @@ output "public_ip" {
     - Refactoring resources often requires `terraform state mv`
 
 ---
+
 ## Pulumi Overview
 
 - IaC using general-purpose languages
@@ -98,6 +108,7 @@ output "public_ip" {
 - Managed state service or self-managed backends
 
 ---
+
 ## Pulumi Example
 
 ```python
@@ -118,6 +129,7 @@ pulumi.export("public_ip", instance.public_ip)
 - Same outcome as the Terraform example
 
 ---
+
 ## Pulumi Strengths and Weaknesses
 
 - Strengths:
@@ -131,6 +143,7 @@ pulumi.export("public_ip", instance.public_ip)
     - Debugging infrastructure bugs mixed with code bugs
 
 ---
+
 ## CloudFormation Overview
 
 - AWS-native IaC service
@@ -140,6 +153,7 @@ pulumi.export("public_ip", instance.public_ip)
 - No external tooling or state backend required
 
 ---
+
 ## CloudFormation Example
 
 ```yaml
@@ -161,6 +175,7 @@ Outputs:
 - Rollback on failure is automatic
 
 ---
+
 ## CloudFormation Strengths and Weaknesses
 
 - Strengths:
@@ -174,6 +189,7 @@ Outputs:
     - Template size limits (51,200 bytes inline, 460,800 bytes in S3)
 
 ---
+
 ## Tool Comparison Matrix
 
 | Criteria | `Terraform` | `Pulumi` | `CloudFormation` |
@@ -186,6 +202,7 @@ Outputs:
 | Testing | Limited | Native | Limited |
 
 ---
+
 ## Choosing the Right Tool
 
 - All-in on AWS? `CloudFormation` or `AWS CDK` may suffice
@@ -195,11 +212,13 @@ Outputs:
 - Consider: team skills, cloud strategy, existing tooling
 
 ---
+
 ## State Management: The Core Challenge
 
 ![state_management_the_core_challenge](svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/state_management_the_core_challenge.svg)
 
 ---
+
 ## Remote State Backends
 
 - Store state in a shared, durable location
@@ -212,6 +231,7 @@ Outputs:
 - Enables team collaboration on shared infrastructure
 
 ---
+
 ## Remote Backend Configuration
 
 ```hcl
@@ -230,6 +250,7 @@ terraform {
 - `DynamoDB` table provides state locking
 
 ---
+
 ## State Locking and Collaboration
 
 - Prevents concurrent modifications to the same state
@@ -242,11 +263,13 @@ terraform force-unlock LOCK_ID
 ```
 
 ---
+
 ## State Locking Flow
 
 ![state_locking_flow](svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/state_locking_flow.svg)
 
 ---
+
 ## State Per Environment vs Shared State
 
 - **Per-environment state** (recommended):
@@ -259,6 +282,7 @@ terraform force-unlock LOCK_ID
     - Risky: one bad apply affects everything
 
 ---
+
 ## State Organization Patterns
 
 ```misc
@@ -280,6 +304,7 @@ state/
 - Each state file is independently lockable
 
 ---
+
 ## State Security Considerations
 
 - State files contain sensitive data (passwords, keys, IPs)
@@ -296,6 +321,7 @@ output "db_password" {
 ```
 
 ---
+
 ## Reusable Modules: The Building Blocks
 
 - Modules encapsulate a set of resources as a unit
@@ -313,11 +339,13 @@ module "vpc" {
 ```
 
 ---
+
 ## Module Architecture
 
 ![module_architecture](svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/module_architecture.svg)
 
 ---
+
 ## Module Versioning Best Practices
 
 - Pin module versions in production
@@ -335,11 +363,13 @@ module "vpc" {
 - Maintain a changelog for breaking changes
 
 ---
+
 ## Abstraction Layers and Platform Engineering
 
 ![abstraction_layers_and_platform_engineering](svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/abstraction_layers_and_platform_engineering.svg)
 
 ---
+
 ## Terragrunt: DRY Terraform
 
 - Wrapper around Terraform to reduce repetition
@@ -358,6 +388,7 @@ inputs = {
 ```
 
 ---
+
 ## What is Configuration Drift?
 
 - Drift occurs when real infrastructure diverges from IaC definitions
@@ -369,16 +400,19 @@ inputs = {
 - Result: IaC no longer reflects reality
 
 ---
+
 ## Drift Detection Approaches
 
 ![drift_detection_approaches](svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/drift_detection_approaches.svg)
 
 ---
+
 ## Drift Detection Cycle
 
 ![drift_detection_cycle](svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/drift_detection_cycle.svg)
 
 ---
+
 ## Auto-Remediation: Benefits and Risks
 
 - Benefits:
@@ -392,6 +426,7 @@ inputs = {
     - Requires rock-solid IaC definitions and testing
 
 ---
+
 ## Preventing Drift in the First Place
 
 1. Enforce IaC-only changes via `SCP` or IAM policies
@@ -401,6 +436,7 @@ inputs = {
 1. Educate teams on the cost of manual modifications
 
 ---
+
 ## IaC Testing Strategies
 
 - **Static analysis**: `tflint`, `checkov`, `tfsec`
@@ -415,6 +451,7 @@ checkov -d .
 ```
 
 ---
+
 ## IaC in CI/CD Pipelines
 
 ```yaml
@@ -436,6 +473,7 @@ jobs:
 - Plan on every PR; apply on merge to `main`
 
 ---
+
 ## Policy as Code
 
 - Codify governance rules alongside infrastructure
@@ -448,11 +486,13 @@ jobs:
     - Instance types must be from an approved list
 
 ---
+
 ## Summary: Key IaC Decisions
 
 ![summary_key_iac_decisions](svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/summary_key_iac_decisions.svg)
 
 ---
+
 ## Recommended Reading
 
 - "Terraform: Up and Running" by Yevgeniy Brikman

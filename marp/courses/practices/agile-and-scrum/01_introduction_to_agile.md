@@ -8,14 +8,17 @@ audience:
   - audiences:team-leads
 
 ---
+
 # Introduction to Agile
 
 ---
+
 ## Manifesto Values
 
 ![manifesto_values](svg/courses/practices/agile-and-scrum/01_introduction_to_agile/manifesto_values.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Where Agile came from
@@ -26,6 +29,7 @@ audience:
 - The popular Agile flavours, briefly
 
 ---
+
 ## A Short History
 
 - Software projects in the 1990s ran on Waterfall: spec, design, build, test, ship
@@ -35,6 +39,7 @@ audience:
 - 25 years later, "Agile" is the default vocabulary in the industry
 
 ---
+
 ## The Agile Manifesto
 
 - We have come to value:
@@ -45,6 +50,7 @@ audience:
 - The right side has value; the left side has more value
 
 ---
+
 ## Reading the Manifesto Carefully
 
 - "Over" is not "instead of" — both sides matter
@@ -54,6 +60,7 @@ audience:
 - Documentation, plans, and contracts still matter — they just stop being the goal
 
 ---
+
 ## The Twelve Principles, Distilled
 
 - Deliver working software early and often
@@ -65,11 +72,13 @@ audience:
 - Sustainable pace; reflect and adjust regularly
 
 ---
+
 ## Waterfall vs Agile
 
 ![waterfall_vs_agile](svg/courses/practices/agile-and-scrum/01_introduction_to_agile/waterfall_vs_agile.svg)
 
 ---
+
 ## What Waterfall Optimises For
 
 - Predictability: a clear plan, a clear price, a clear date
@@ -79,6 +88,7 @@ audience:
 - Software requirements change because we don't know what we want until we see something
 
 ---
+
 ## What Agile Optimises For
 
 - Adaptability: small steps, frequent course-corrections
@@ -88,6 +98,7 @@ audience:
 - "We don't know exactly what we'll have built in six months" — and that's a feature
 
 ---
+
 ## Benefits
 
 - Faster feedback &#8594; fewer expensive surprises
@@ -97,6 +108,7 @@ audience:
 - Continuous improvement &#8594; the team gets better at its job, not just the product
 
 ---
+
 ## Costs
 
 - Up-front planning is harder to sell to traditional stakeholders
@@ -106,6 +118,7 @@ audience:
 - Requires real cultural change; you can't just install Jira and call it Agile
 
 ---
+
 ## Common Agile Flavours
 
 - **Scrum**: timeboxed sprints, defined roles and events. Most popular.
@@ -115,6 +128,7 @@ audience:
 - **SAFe / LeSS / Nexus**: scaling Agile across many teams (with varying success)
 
 ---
+
 ## Where We're Going Today
 
 - Most of this course is Scrum, since it's the most common
@@ -124,6 +138,7 @@ audience:
 - And to know when to adapt or skip them
 
 ---
+
 ## What Agile Is Not
 
 - A magic productivity boost
@@ -133,6 +148,7 @@ audience:
 - A guarantee that the project will succeed
 
 ---
+
 ## What Agile *Is*
 
 - A bias toward learning faster than the competition

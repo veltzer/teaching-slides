@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Authentication and Authorization
 
 ---
+
 ## What This Chapter Covers
 
 - Authentication vs authorization
@@ -20,6 +22,7 @@ audience:
 - Course roadmap
 
 ---
+
 ## Authentication
 
 - Who are you?
@@ -29,11 +32,13 @@ audience:
 - The first half of access control
 
 ---
+
 ## Side by Side
 
 ![authn_vs_authz](svg/courses/networking/oauth2-and-oidc/01_authn_authz/authn_vs_authz.svg)
 
 ---
+
 ## Authorization
 
 - What can you do?
@@ -43,6 +48,7 @@ audience:
 - The second half of access control
 
 ---
+
 ## A Common Mix-Up
 
 - "Log in with Google" looks like authentication
@@ -52,6 +58,7 @@ audience:
 - We will fix the mental model in this chapter
 
 ---
+
 ## Why Not Just Use Passwords?
 
 - Sharing passwords with third-party apps is dangerous
@@ -61,6 +68,7 @@ audience:
 - OAuth2 solves: delegated, scoped access without sharing credentials
 
 ---
+
 ## OAuth2 Roles
 
 - Resource Owner — the user
@@ -70,11 +78,13 @@ audience:
 - All four have well-defined responsibilities
 
 ---
+
 ## OAuth2 Roles Visualized
 
 ![oauth_roles](svg/courses/networking/oauth2-and-oidc/01_authn_authz/oauth_roles.svg)
 
 ---
+
 ## Resource Owner
 
 - Usually a human user
@@ -84,6 +94,7 @@ audience:
 - Sometimes a system in machine-to-machine flows
 
 ---
+
 ## Client
 
 - The application requesting access
@@ -93,6 +104,7 @@ audience:
 - Different security postures per client type
 
 ---
+
 ## Authorization Server
 
 - Authenticates the user
@@ -102,6 +114,7 @@ audience:
 - Examples: Auth0, Okta, Keycloak, Cognito
 
 ---
+
 ## Resource Server
 
 - Hosts the API the client wants to access
@@ -111,6 +124,7 @@ audience:
 - Stateless validation enables scaling
 
 ---
+
 ## What OAuth2 Is Not
 
 - Not authentication (despite common misuse)
@@ -120,6 +134,7 @@ audience:
 - It's specifically delegated authorization
 
 ---
+
 ## What OIDC Adds
 
 - A standardized identity layer on top of OAuth2
@@ -129,6 +144,7 @@ audience:
 - Discovery and standard scopes (`openid`, `profile`, `email`)
 
 ---
+
 ## When You Need OAuth2
 
 - Letting users grant third-party apps access to your API
@@ -138,6 +154,7 @@ audience:
 - Almost every modern web app
 
 ---
+
 ## When You Need OIDC
 
 - Single sign-on (SSO) flows
@@ -147,6 +164,7 @@ audience:
 - Identity-aware proxies and zero-trust networks
 
 ---
+
 ## OAuth2 Specs
 
 - RFC 6749 — the core framework
@@ -156,6 +174,7 @@ audience:
 - Draft 2.1 — current best practices consolidated
 
 ---
+
 ## OIDC Specs
 
 - OpenID Connect Core 1.0
@@ -165,6 +184,7 @@ audience:
 - All built on OAuth2
 
 ---
+
 ## Mental Model
 
 - Authentication: I know who you are
@@ -174,6 +194,7 @@ audience:
 - The auth server is the trusted party
 
 ---
+
 ## Course Roadmap
 
 - Chapter 2: OAuth2 basics
@@ -186,6 +207,7 @@ audience:
 - Chapter 9: Real providers and integration
 
 ---
+
 ## Common Misconceptions
 
 - "OAuth2 logs users in" — no, OAuth2 grants access; OIDC does login
@@ -195,6 +217,7 @@ audience:
 - "Scopes equal permissions" — scopes are coarse; fine-grained authz is separate
 
 ---
+
 ## Summary
 
 - Authentication is "who"; authorization is "what"

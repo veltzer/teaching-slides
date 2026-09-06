@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Your First Python Program
 
 ---
+
 ## Installing Python on Linux
 - Most Linux distributions come with Python pre-installed
 - Check your version:
@@ -26,6 +28,7 @@ sudo apt install python3 python3-pip python3-venv
 ```
 
 ---
+
 ## Installing Python on macOS
 - macOS may come with an older Python
 - Recommended: use Homebrew
@@ -42,6 +45,7 @@ python3 --version
 ```
 
 ---
+
 ## Installing Python on Windows
 - Download from https://python.org
 - Check "Add Python to PATH" during installation
@@ -54,6 +58,7 @@ python --version
 - On Windows, use `python` instead of `python3`
 
 ---
+
 ## The Python Interactive Shell
 - Start by typing `python3` in terminal
 - The `>>>` prompt means Python is ready
@@ -69,6 +74,7 @@ Python 3.12.0 (main, Oct  2 2023)
 ```
 
 ---
+
 ## Using the Interactive Shell
 - Immediate feedback for expressions
 - Great for testing small code snippets
@@ -82,6 +88,7 @@ Python 3.12.0 (main, Oct  2 2023)
 ```
 
 ---
+
 ## IPython - Enhanced Interactive Shell
 - More powerful than the default shell
 - Install with `pip install ipython`
@@ -97,6 +104,7 @@ ipython
 ```
 
 ---
+
 ## Your First Script
 - Create a file called `hello.py`
 
@@ -117,6 +125,7 @@ Hello, World!
 ```
 
 ---
+
 ## The Shebang Line
 - On Unix systems, you can make scripts executable
 
@@ -133,6 +142,7 @@ chmod +x hello.py
 - `#!/usr/bin/env python` tells the OS which interpreter to use
 
 ---
+
 ## Comments in Python
 - Single-line comments start with `#`
 - No multi-line comment syntax (use multiple `#`)
@@ -147,6 +157,7 @@ x = 42  # This is an inline comment
 ```
 
 ---
+
 ## Docstrings
 - Triple-quoted strings used for documentation
 - First statement in a module, function, class, or method
@@ -165,6 +176,7 @@ def greet(name):
 ```
 
 ---
+
 ## The `print()` Function
 - Outputs text to the console
 - Can print multiple values separated by space
@@ -179,6 +191,7 @@ print(" here")
 ```
 
 ---
+
 ## Print Output
 
 ```output
@@ -190,6 +203,7 @@ No newline here
 ```
 
 ---
+
 ## The `input()` Function
 - Reads text input from the user
 - Always returns a string
@@ -204,6 +218,7 @@ print(f"Next year you will be {age + 1}")
 ```
 
 ---
+
 ## A Complete Interactive Program
 
 ```python
@@ -216,6 +231,7 @@ print(f"Hello {name}, you are {age} years old!")
 ```
 
 ---
+
 ## Running Python with `-c` Flag
 - Execute a one-liner from the command line
 
@@ -228,6 +244,7 @@ python3 -c "print(2 ** 10)"
 - Useful for quick calculations and checks
 
 ---
+
 ## Running Python with `-m` Flag
 - Run a module as a script
 
@@ -239,6 +256,7 @@ python3 -m pip install requests
 ```
 
 ---
+
 ## IDEs for Python - VS Code
 - Free, open source, by Microsoft
 - Excellent Python extension
@@ -250,6 +268,7 @@ python3 -m pip install requests
     - Extensions marketplace
 
 ---
+
 ## IDEs for Python - PyCharm
 - By JetBrains
 - Community Edition is free
@@ -262,6 +281,7 @@ python3 -m pip install requests
     - Scientific tools (Pro)
 
 ---
+
 ## IDEs for Python - Other Options
 - **Vim/Neovim**: With Python plugins
 - **Emacs**: With `elpy` or `lsp-mode`
@@ -271,6 +291,7 @@ python3 -m pip install requests
 - **IDLE**: Built-in with Python (basic)
 
 ---
+
 ## Jupyter Notebooks
 - Interactive documents mixing code and text
 - Popular in data science and education
@@ -285,6 +306,7 @@ jupyter notebook
 - Code cells show output inline
 
 ---
+
 ## Python File Encoding
 - Python 3 source files are UTF-8 by default
 - You can specify encoding explicitly:
@@ -297,6 +319,7 @@ jupyter notebook
 - In Python 3, UTF-8 is the default
 
 ---
+
 ## Python Style Guide (PEP 8)
 - Use 4 spaces for indentation (never tabs)
 - Maximum line length: 79 characters
@@ -307,6 +330,7 @@ jupyter notebook
 - Use `UPPER_CASE` for constants
 
 ---
+
 ## PEP 8 - Naming Conventions
 
 ```python
@@ -325,6 +349,7 @@ PI = 3.14159
 ```
 
 ---
+
 ## Linting with `flake8`
 - Checks code against PEP 8
 
@@ -340,6 +365,7 @@ flake8 my_script.py
     - Unused variables
 
 ---
+
 ## Formatting with `black`
 - Automatic code formatter
 - Opinionated: one way to format
@@ -353,6 +379,7 @@ black my_script.py
 - Widely adopted in the Python community
 
 ---
+
 ## Type Checking with `mypy`
 - Static type checker for Python
 - Uses type hints to find bugs
@@ -370,6 +397,7 @@ add("hello", "world")  # mypy catches this
 ```
 
 ---
+
 ## Summary
 - Python can be installed on all major platforms
 - Use `python3` to start the interactive shell

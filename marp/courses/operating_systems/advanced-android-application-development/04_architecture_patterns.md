@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Architecture Patterns
 ## Building Scalable Android Applications
 

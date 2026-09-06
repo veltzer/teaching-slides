@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Cherry-Pick
 
 ---
+
 ## What This Chapter Covers
 
 - What cherry-pick really does
@@ -20,6 +22,7 @@ audience:
 - When cherry-pick is the wrong tool
 
 ---
+
 ## What Is Cherry-Pick?
 
 - Take an existing commit from anywhere
@@ -29,6 +32,7 @@ audience:
 - It's a copy, not a move
 
 ---
+
 ## Basic Cherry-Pick
 
 ```bash
@@ -41,6 +45,7 @@ git cherry-pick abc1234
 - Working tree must be clean before cherry-picking
 
 ---
+
 ## Cherry-Pick a Range
 
 - `git cherry-pick A..B` — picks commits *after* A through B
@@ -50,16 +55,19 @@ git cherry-pick abc1234
 - Use `--no-commit` to apply without committing each one
 
 ---
+
 ## Cherry-Pick Visualized
 
 ![cherry_pick_flow](svg/courses/git/advanced-git/02_cherry_pick/cherry_pick_flow.svg)
 
 ---
+
 ## Cherry Pick Use Cases
 
 ![cherry_pick_uses](svg/courses/git/advanced-git/02_cherry_pick/cherry_pick_uses.svg)
 
 ---
+
 ## The Hotfix Use Case
 
 - Bug discovered on `main`
@@ -69,6 +77,7 @@ git cherry-pick abc1234
 - The release ships without pulling in unrelated `main` work
 
 ---
+
 ## The Backport Use Case
 
 - Active development is on `main`
@@ -78,6 +87,7 @@ git cherry-pick abc1234
 - Some teams script this for predictable backports
 
 ---
+
 ## Recovering Lost Commits
 
 - A branch was deleted, but commits are still in reflog
@@ -87,6 +97,7 @@ git cherry-pick abc1234
 - Effective for "I deleted that branch, but I want one of its commits back"
 
 ---
+
 ## Cherry-Pick With Conflicts
 
 - Cherry-pick stops mid-operation on conflict
@@ -96,6 +107,7 @@ git cherry-pick abc1234
 - `git cherry-pick --abort` to bail out entirely
 
 ---
+
 ## The -x Flag: Trace Back to the Source
 
 ```bash
@@ -108,6 +120,7 @@ git cherry-pick -x abc1234
 - Habit-forming: always use `-x` for cross-branch cherry-picks
 
 ---
+
 ## Cherry-Pick a Merge Commit
 
 - Merge commits have multiple parents
@@ -117,6 +130,7 @@ git cherry-pick -x abc1234
 - Usually `-m 1` for "pick what this merge introduced"
 
 ---
+
 ## Cherry-Pick Without Committing
 
 ```bash
@@ -129,6 +143,7 @@ git cherry-pick --no-commit A B C
 - Useful when picking several commits that should become one
 
 ---
+
 ## The Empty Commit Trap
 
 - Cherry-picking a commit whose change is already present produces an empty commit
@@ -138,6 +153,7 @@ git cherry-pick --no-commit A B C
 - Usually a sign that the cherry-pick wasn't needed
 
 ---
+
 ## When NOT to Cherry-Pick
 
 - Long-running parallel branches that drift apart
@@ -147,6 +163,7 @@ git cherry-pick --no-commit A B C
 - Cherry-picking instead of forward-porting via merge creates duplicate-effort divergence
 
 ---
+
 ## Cherry-Pick vs Rebase --onto
 
 - Cherry-pick: copies one or more commits, keeps both copies in history
@@ -156,6 +173,7 @@ git cherry-pick --no-commit A B C
 - They overlap; pick the one that matches your intent
 
 ---
+
 ## Cherry-Pick With Strategy Options
 
 - `git cherry-pick -X theirs <sha>` — favor incoming on conflict
@@ -165,6 +183,7 @@ git cherry-pick --no-commit A B C
 - Mostly used in scripted backport pipelines
 
 ---
+
 ## Tracking Cherry-Picks Over Time
 
 - `git log --grep="cherry picked from"` — finds annotated cherry-picks
@@ -174,6 +193,7 @@ git cherry-pick --no-commit A B C
 - Build into release checklists for predictability
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting `-x` when backporting
@@ -183,6 +203,7 @@ git cherry-pick --no-commit A B C
 - Treating cherry-pick as a substitute for proper branch management
 
 ---
+
 ## Best Practices
 
 - Always test after cherry-pick — conflicts can mask logic errors
@@ -192,6 +213,7 @@ git cherry-pick --no-commit A B C
 - For repeated backport patterns, automate with a script
 
 ---
+
 ## Summary
 
 - Cherry-pick copies a commit from anywhere onto your branch

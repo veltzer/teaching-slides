@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Introduction & Pattern Taxonomy
 
 ---
+
 ## What an Architectural Pattern Is
 
 - A named, reusable solution to a recurring structural problem in software
@@ -22,6 +24,7 @@ audience:
 - Patterns describe shapes, not implementations — they survive technology churn
 
 ---
+
 ## What This Course Covers
 
 - A working catalog of architectural patterns at three scopes:
@@ -33,6 +36,7 @@ audience:
 - Each pattern is presented with overview, key concepts, diagram, pros/cons, and when to use
 
 ---
+
 ## Audience and Level
 
 - Intermediate developers and architects
@@ -41,6 +45,7 @@ audience:
 - Not a prescription — every pattern has trade-offs and a context where it fails
 
 ---
+
 ## Pattern Scope: Three Levels
 
 1. Communication Patterns
@@ -54,6 +59,7 @@ audience:
     - Examples: Hexagonal, Clean, Onion, DDD, CQRS
 
 ---
+
 ## Cross-Cutting Concerns
 
 - Some patterns address concerns that span scopes:
@@ -63,6 +69,7 @@ audience:
 - These are usually overlaid on top of a primary architecture
 
 ---
+
 ## Data and Operations
 
 - A correct architecture means little without the right data path
@@ -75,6 +82,7 @@ audience:
     - Visibility: monitoring, observability
 
 ---
+
 ## How to Read This Course
 
 - Each chapter groups related patterns
@@ -83,6 +91,7 @@ audience:
 - The goal is judgment, not memorization
 
 ---
+
 ## A Note on Trade-Offs
 
 - Every pattern adds complexity in exchange for some property:
@@ -94,6 +103,7 @@ audience:
 - The patterns name the dependencies so you can reason about them
 
 ---
+
 ## Course Outline
 
 - 02 Communication Patterns

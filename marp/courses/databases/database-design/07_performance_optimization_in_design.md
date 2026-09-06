@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Performance Optimisation in Design
 
 ---
+
 ## Design for Performance
 
 ![perf_design](svg/courses/databases/database-design/07_performance_optimization_in_design/perf_design.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Indexes for queries
@@ -26,6 +29,7 @@ audience:
 - Caching layers
 
 ---
+
 ## Index For Queries
 
 - Add indexes for: WHERE, JOIN, ORDER BY
@@ -34,6 +38,7 @@ audience:
 - Maintenance: each adds write cost
 
 ---
+
 ## Index For Foreign Keys
 
 - Almost always: index your foreign keys
@@ -42,6 +47,7 @@ audience:
 - Postgres doesn't auto-index FKs (unlike MySQL)
 
 ---
+
 ## N+1 Queries
 
 - Loop: 1 query for the list, N for each item
@@ -50,6 +56,7 @@ audience:
 - ORMs hide; profile to find
 
 ---
+
 ## Materialised Views
 
 - Pre-computed query result
@@ -58,6 +65,7 @@ audience:
 - For complex aggregations queried often
 
 ---
+
 ## Read Replicas
 
 - Followers serve read traffic
@@ -66,6 +74,7 @@ audience:
 - Standard in cloud DBs
 
 ---
+
 ## Sharding
 
 - Split data across nodes
@@ -75,6 +84,7 @@ audience:
 - Last resort
 
 ---
+
 ## Connection Pooling
 
 - DB connections expensive
@@ -83,6 +93,7 @@ audience:
 - Critical for web apps
 
 ---
+
 ## Query Cache
 
 - Memcached / Redis in front
@@ -91,6 +102,7 @@ audience:
 - 80%+ hit ratio common
 
 ---
+
 ## Denormalisation For Reads
 
 - Add summary columns
@@ -99,6 +111,7 @@ audience:
 - Update via triggers or events
 
 ---
+
 ## Hot Rows
 
 - A few rows get most updates
@@ -107,6 +120,7 @@ audience:
 - Detect: per-row update counters
 
 ---
+
 ## Common Performance Mistakes
 
 - No indexes &#8594; full table scans

@@ -9,9 +9,11 @@ audience:
   - audiences:security-professionals
 
 ---
+
 # OAuth2 Security Best Practices
 
 ---
+
 ## What This Chapter Covers
 
 - The OAuth2 Best Current Practices (BCP)
@@ -21,6 +23,7 @@ audience:
 - Audit and monitoring
 
 ---
+
 ## OAuth2 BCP
 
 - RFC 6819 (Threats and considerations)
@@ -30,11 +33,13 @@ audience:
 - Read it; it's the cumulative wisdom of the community
 
 ---
+
 ## Threat Catalogue
 
 ![security_threats](svg/courses/networking/oauth2-and-oidc/08_security/security_threats.svg)
 
 ---
+
 ## CSRF on Authorize
 
 - Attacker tricks user into starting an auth flow
@@ -44,6 +49,7 @@ audience:
 - Random, unpredictable, single-use
 
 ---
+
 ## Authorization Code Interception
 
 - Attacker steals the code in transit (mobile, native apps)
@@ -53,6 +59,7 @@ audience:
 - Critical for SPA and mobile
 
 ---
+
 ## Open-Redirect Abuse
 
 - Loose redirect URI matching = open redirect
@@ -62,6 +69,7 @@ audience:
 - Check this on every provider integration
 
 ---
+
 ## Token Replay
 
 - Attacker steals a token; replays it later
@@ -71,6 +79,7 @@ audience:
 - Long tokens = bigger replay window
 
 ---
+
 ## Cross-Site Request Forgery on Token
 
 - Less common but real
@@ -80,6 +89,7 @@ audience:
 - Don't `*` allowed origins
 
 ---
+
 ## XSS-Driven Token Theft
 
 - Attacker XSS injects a script that steals tokens
@@ -89,6 +99,7 @@ audience:
 - XSS is still XSS — fix the underlying bug too
 
 ---
+
 ## Mix-Up Attacks
 
 - Attacker swaps which auth server the client thinks it's talking to
@@ -98,6 +109,7 @@ audience:
 - Worth checking your provider's posture
 
 ---
+
 ## Phishing-Resistant Auth
 
 - WebAuthn / FIDO2 at the auth server
@@ -107,11 +119,13 @@ audience:
 - Best practice in 2026
 
 ---
+
 ## Defence In Depth Layers
 
 ![defence_layers](svg/courses/networking/oauth2-and-oidc/08_security/defence_layers.svg)
 
 ---
+
 ## TLS Everywhere
 
 - Every endpoint, every request
@@ -121,6 +135,7 @@ audience:
 - TLS 1.3 wherever supported
 
 ---
+
 ## Token Storage Recap
 
 - Server-side: secure session store
@@ -130,6 +145,7 @@ audience:
 - Never plain text on disk
 
 ---
+
 ## Refresh Token Security
 
 - Most sensitive token — guard it
@@ -139,6 +155,7 @@ audience:
 - Consider sender-constrained refresh tokens
 
 ---
+
 ## Sender-Constrained Tokens
 
 - Proof-of-possession — sign each request to bind the token
@@ -148,6 +165,7 @@ audience:
 - Worth deploying for high-stakes APIs
 
 ---
+
 ## Logout Properly
 
 - Local: clear session and tokens
@@ -157,6 +175,7 @@ audience:
 - Revoke refresh tokens explicitly on logout
 
 ---
+
 ## Consent Hygiene
 
 - Show clear, concrete consent screens
@@ -166,6 +185,7 @@ audience:
 - Audit consent records
 
 ---
+
 ## Scope Hygiene
 
 - Don't request more than you need
@@ -175,6 +195,7 @@ audience:
 - Drift over time — review periodically
 
 ---
+
 ## Audit Logging
 
 - Log every authorize and token call
@@ -184,6 +205,7 @@ audience:
 - Tools: SIEM, custom dashboards
 
 ---
+
 ## Rate Limiting
 
 - Per-IP, per-client, per-user
@@ -193,6 +215,7 @@ audience:
 - Watch for distributed attacks
 
 ---
+
 ## Provider-Side Concerns
 
 - If you run an auth server: keep it patched
@@ -202,6 +225,7 @@ audience:
 - Subscribe to security advisories from your provider
 
 ---
+
 ## Multi-Tenant Considerations
 
 - One auth server, many tenants
@@ -211,6 +235,7 @@ audience:
 - Tenant isolation is your job
 
 ---
+
 ## Common Mistakes Recap
 
 - Skipping `state` and `nonce`
@@ -220,6 +245,7 @@ audience:
 - Trusting `alg` from JWT header
 
 ---
+
 ## Threat Model Quick Check
 
 - Token theft via XSS — BFF, no localStorage
@@ -229,6 +255,7 @@ audience:
 - Confused deputy — audience validation
 
 ---
+
 ## Compliance and Standards
 
 - Financial-grade API profiles for high-stakes
@@ -238,6 +265,7 @@ audience:
 - Match implementation to compliance regime
 
 ---
+
 ## Testing Your Implementation
 
 - OAuth2/OIDC compliance test suites (OpenID Foundation provides one)
@@ -247,6 +275,7 @@ audience:
 - Routine audits, not one-time
 
 ---
+
 ## Summary
 
 - OAuth2 BCP captures cumulative attack lessons

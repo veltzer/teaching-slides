@@ -8,9 +8,11 @@ audience:
   - audiences:data-analysts
 
 ---
+
 # Tableau for Data Visualization
 
 ---
+
 ## What This Chapter Covers
 
 - The Tableau interface
@@ -21,6 +23,7 @@ audience:
 - Publishing and sharing
 
 ---
+
 ## What Tableau Is
 
 - A drag-and-drop visualisation tool
@@ -30,11 +33,13 @@ audience:
 - Industry standard in many large organisations
 
 ---
+
 ## Quick Tour
 
 ![tableau_basics](svg/courses/data_science/data-analyst-fundamentals/07_tableau_for_data_visualization/tableau_basics.svg)
 
 ---
+
 ## Tableau Editions
 
 - **Tableau Desktop**: build worksheets, dashboards (the analyst's tool)
@@ -44,6 +49,7 @@ audience:
 - **Tableau Reader**: free, view-only
 
 ---
+
 ## The Interface
 
 - **Data pane** (left): your fields, dimensions, measures
@@ -53,6 +59,7 @@ audience:
 - **Pages, Filters, Cards**: more controls on the right
 
 ---
+
 ## Connecting to Data
 
 - File: CSV, Excel, JSON, PDF, spatial files
@@ -63,6 +70,7 @@ audience:
     - Extract: cached snapshot, faster, schedulable refresh
 
 ---
+
 ## Dimensions vs Measures
 
 - **Dimensions**: categorical fields (country, product, date)
@@ -72,6 +80,7 @@ audience:
 - Right-click the field on a shelf to change the aggregation
 
 ---
+
 ## Building a First Worksheet
 
 - Connect data &#8594; new worksheet
@@ -81,6 +90,7 @@ audience:
 - Add `Region` to Color in the Marks card &#8594; multiple lines
 
 ---
+
 ## Show Me Panel
 
 - Tableau suggests chart types based on what's on the shelves
@@ -89,6 +99,7 @@ audience:
 - Custom charts: drag fields into specific shelves, override defaults
 
 ---
+
 ## Calculated Fields
 
 ```misc
@@ -101,6 +112,7 @@ Profit Margin = SUM([Profit]) / SUM([Sales])
 - Centralise calculations; don't redo them in every worksheet
 
 ---
+
 ## Parameters
 
 - A user-controllable value (number, string, date)
@@ -110,6 +122,7 @@ Profit Margin = SUM([Profit]) / SUM([Sales])
 - The dashboard becomes interactive
 
 ---
+
 ## Filters
 
 - Drag a field to the Filters shelf
@@ -119,6 +132,7 @@ Profit Margin = SUM([Profit]) / SUM([Sales])
 - "Show Filter" makes it interactive on a dashboard
 
 ---
+
 ## Sets and Groups
 
 - **Set**: subset of dimension values
@@ -128,6 +142,7 @@ Profit Margin = SUM([Profit]) / SUM([Sales])
 - Both are reusable across the workbook
 
 ---
+
 ## Dashboards
 
 - Combine worksheets into one view
@@ -137,6 +152,7 @@ Profit Margin = SUM([Profit]) / SUM([Sales])
 - Resize for the target screen size
 
 ---
+
 ## Actions
 
 - **Filter actions**: clicking a chart filters another
@@ -146,6 +162,7 @@ Profit Margin = SUM([Profit]) / SUM([Sales])
 - Configure under Dashboard &#8594; Actions
 
 ---
+
 ## Publishing
 
 - Tableau Server / Cloud: upload, share with permissions
@@ -155,6 +172,7 @@ Profit Margin = SUM([Profit]) / SUM([Sales])
 - Subscriptions: email a snapshot on a schedule
 
 ---
+
 ## Performance Tips
 
 - Use extracts for large data sources, live for small / fast ones
@@ -164,6 +182,7 @@ Profit Margin = SUM([Profit]) / SUM([Sales])
 - "Performance Recording" finds bottlenecks
 
 ---
+
 ## Common Mistakes
 
 - Live-connecting to a slow source and shipping a slow dashboard

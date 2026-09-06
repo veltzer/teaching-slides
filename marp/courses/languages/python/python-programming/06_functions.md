@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Functions
 
 ---
+
 ## Defining Functions
 
 ```python
@@ -27,6 +29,7 @@ print(result)  # Hello, Alice!
 - Body is indented
 
 ---
+
 ## Functions Without Return
 
 ```python
@@ -41,6 +44,7 @@ print(result)  # None
 - `return` without a value also returns `None`
 
 ---
+
 ## Multiple Return Values
 
 ```python
@@ -57,6 +61,7 @@ print(f"17 / 5 = {q} remainder {r}")
 - Actually returns a tuple
 
 ---
+
 ## Early Return
 
 ```python
@@ -70,6 +75,7 @@ print(absolute(3))   # 3
 ```
 
 ---
+
 ## Parameters vs Arguments
 - **Parameters**: Variables in the function definition
 - **Arguments**: Values passed when calling the function
@@ -82,6 +88,7 @@ greet("Alice")        # "Alice" is an argument
 ```
 
 ---
+
 ## Positional Arguments
 
 ```python
@@ -93,6 +100,7 @@ print(power(10, 2))   # 100 (order matters!)
 ```
 
 ---
+
 ## Keyword Arguments
 
 ```python
@@ -107,6 +115,7 @@ print(power(2, exponent=10))         # 1024 (mix positional and keyword)
 ```
 
 ---
+
 ## Default Parameter Values
 
 ```python
@@ -119,6 +128,7 @@ print(greet("Alice", greeting="Hey"))  # Hey, Alice!
 ```
 
 ---
+
 ## Mutable Default Arguments - Beware!
 
 ```python
@@ -139,6 +149,7 @@ def append_to(item, lst=None):
 ```
 
 ---
+
 ## `*args` - Variable Positional Arguments
 
 ```python
@@ -154,6 +165,7 @@ print(add())             # 0
 - `*args` collects extra positional arguments into a tuple
 
 ---
+
 ## `**kwargs` - Variable Keyword Arguments
 
 ```python
@@ -172,6 +184,7 @@ city: NYC
 ```
 
 ---
+
 ## Combining `*args` and `**kwargs`
 
 ```python
@@ -190,6 +203,7 @@ kwargs={'x': 5, 'y': 6}
 ```
 
 ---
+
 ## Parameter Order Rules
 - The order must be:
     1. Regular positional parameters
@@ -206,6 +220,7 @@ func(1, 2, 3, 4, c=20, x=30)
 ```
 
 ---
+
 ## Keyword-Only Arguments
 - Parameters after `*` must be passed as keywords
 
@@ -219,6 +234,7 @@ connect("localhost", 8080, timeout=10)
 ```
 
 ---
+
 ## Positional-Only Arguments (Python 3.8+)
 - Parameters before `/` must be passed positionally
 
@@ -232,6 +248,7 @@ print(greet("Alice", "Hi"))       # Hi, Alice!
 ```
 
 ---
+
 ## Complete Parameter Syntax
 
 ```python
@@ -245,6 +262,7 @@ func(1, normal=2, kw_only=3)   # OK
 ```
 
 ---
+
 ## Unpacking Arguments
 
 ```python
@@ -261,6 +279,7 @@ print(add(**kwargs))  # 6
 ```
 
 ---
+
 ## Lambda Functions
 - Anonymous, single-expression functions
 
@@ -276,6 +295,7 @@ print(double(5))  # 10
 ```
 
 ---
+
 ## Lambda Use Cases
 
 ```python
@@ -292,6 +312,7 @@ print(positives)  # [1, 3, 5]
 ```
 
 ---
+
 ## `map()` Function
 
 ```python
@@ -310,6 +331,7 @@ print(squared)  # [1, 4, 9, 16, 25]
 ```
 
 ---
+
 ## `filter()` Function
 
 ```python
@@ -328,6 +350,7 @@ print(evens)  # [-4, -2, 0, 2, 4]
 ```
 
 ---
+
 ## `reduce()` Function
 
 ```python
@@ -345,6 +368,7 @@ print(product)  # 120
 ```
 
 ---
+
 ## LEGB Scope Rules
 
 ![legb_scope](svg/courses/languages/python/python-programming/06_functions/legb_scope.svg)
@@ -370,6 +394,7 @@ def outer():
 ```
 
 ---
+
 ## Local vs Global Scope
 
 ```python
@@ -384,6 +409,7 @@ print(x)   # 10 (global unchanged)
 ```
 
 ---
+
 ## The `global` Keyword
 
 ```python
@@ -401,6 +427,7 @@ print(x)   # 20 (global changed)
 - Use sparingly; prefer returning values instead
 
 ---
+
 ## The `nonlocal` Keyword
 
 ```python
@@ -420,6 +447,7 @@ outer()
 ```
 
 ---
+
 ## Closures
 - A function that remembers values from its enclosing scope
 
@@ -437,6 +465,7 @@ print(triple(5))   # 15
 ```
 
 ---
+
 ## Closure - Counter Example
 
 ```python
@@ -457,6 +486,7 @@ print(c())  # 3
 ```
 
 ---
+
 ## Functions are First-Class Objects
 - Functions can be:
     - Assigned to variables
@@ -477,6 +507,7 @@ funcs = [len, str.upper, abs]
 ```
 
 ---
+
 ## Functions as Arguments
 
 ```python
@@ -489,6 +520,7 @@ print(apply(len, [1, 2, 3]))  # 3
 ```
 
 ---
+
 ## Decorators - Concept
 - A decorator wraps a function to extend its behavior
 
@@ -503,6 +535,7 @@ def my_decorator(func):
 ```
 
 ---
+
 ## Decorators - Usage
 
 ```python
@@ -528,6 +561,7 @@ After
 ```
 
 ---
+
 ## Decorator - Timing Example
 
 ```python
@@ -550,6 +584,7 @@ slow_function()  # slow_function took 1.0012s
 ```
 
 ---
+
 ## Preserving Function Metadata
 
 ```python
@@ -571,6 +606,7 @@ print(greet.__doc__)   # 'Greet someone.'
 ```
 
 ---
+
 ## Decorators with Arguments
 
 ```python
@@ -594,6 +630,7 @@ say_hi()  # Prints "Hi!" three times
 ```
 
 ---
+
 ## Type Hints
 
 ```python
@@ -611,6 +648,7 @@ def process(items: list[str]) -> dict[str, int]:
 - Used by IDEs and type checkers like `mypy`
 
 ---
+
 ## Type Hints - Optional and Union
 
 ```python
@@ -629,6 +667,7 @@ def process(value: int | str) -> str:
 ```
 
 ---
+
 ## Recursive Functions
 
 ```python
@@ -648,6 +687,7 @@ print(fibonacci(10))  # 55
 ```
 
 ---
+
 ## Recursion Limit
 
 ```python
@@ -664,6 +704,7 @@ sys.setrecursionlimit(5000)
 - Prefer iterative solutions for deep recursion
 
 ---
+
 ## Docstring Conventions
 
 ```python
@@ -686,6 +727,7 @@ def calculate_area(length: float, width: float) -> float:
 ```
 
 ---
+
 ## `callable()` and `__call__`
 
 ```python
@@ -706,6 +748,7 @@ print(callable(add5))  # True
 ```
 
 ---
+
 ## Summary
 - Functions are defined with `def` and can return values
 - Parameters support defaults, `*args`, `**kwargs`

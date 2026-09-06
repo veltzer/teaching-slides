@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Production Concerns
 
 ---
+
 ## What This Chapter Covers
 
 - Observability
@@ -19,6 +21,7 @@ audience:
 - Deployment
 
 ---
+
 ## Logging Everything
 
 - Prompts, completions, tool calls
@@ -27,6 +30,7 @@ audience:
 - Trace ID across steps
 
 ---
+
 ## Tracing
 
 - Tree of LLM and tool calls
@@ -35,6 +39,7 @@ audience:
 - Replay for debugging
 
 ---
+
 ## Evaluation
 
 - Define success metrics
@@ -43,6 +48,7 @@ audience:
 - Track pass rate over time
 
 ---
+
 ## Eval Strategies
 
 - Exact-match for structured tasks
@@ -51,6 +57,7 @@ audience:
 - Sample real traffic
 
 ---
+
 ## Guardrails
 
 - Input filters: PII, prompt injection
@@ -59,11 +66,13 @@ audience:
 - Hard caps on actions
 
 ---
+
 ## Defense in Depth
 
 ![guardrails_layers](svg/courses/ai/ai-agents-development/05_production_concerns/guardrails_layers.svg)
 
 ---
+
 ## Prompt Injection
 
 - User input may try to override system
@@ -72,6 +81,7 @@ audience:
 - Strip control instructions
 
 ---
+
 ## Cost Management
 
 - Tokens per request
@@ -80,11 +90,13 @@ audience:
 - Set per-user and per-tenant budgets
 
 ---
+
 ## Cost Levers
 
 ![cost_levers](svg/courses/ai/ai-agents-development/05_production_concerns/cost_levers.svg)
 
 ---
+
 ## Latency
 
 - Streaming for perceived speed
@@ -93,6 +105,7 @@ audience:
 - Async background work
 
 ---
+
 ## Versioning
 
 - Pin model versions
@@ -101,6 +114,7 @@ audience:
 - A/B test changes
 
 ---
+
 ## Rate Limits
 
 - Provider quotas
@@ -109,6 +123,7 @@ audience:
 - Queue spikes
 
 ---
+
 ## Deployment
 
 - Stateless workers
@@ -117,6 +132,7 @@ audience:
 - Health checks include LLM call
 
 ---
+
 ## Common Production Mistakes
 
 - No logging

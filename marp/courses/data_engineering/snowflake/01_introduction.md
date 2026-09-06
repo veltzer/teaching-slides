@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Introduction to Snowflake
 
 ---
+
 ## What This Chapter Covers
 
 - What Snowflake is
@@ -19,6 +21,7 @@ audience:
 - Course outline
 
 ---
+
 ## What Snowflake Is
 
 - Cloud data warehouse
@@ -27,6 +30,7 @@ audience:
 - Decoupled storage and compute
 
 ---
+
 ## Why It Took Off
 
 - Easy to operate
@@ -35,6 +39,7 @@ audience:
 - Familiar SQL
 
 ---
+
 ## Architecture
 
 - Storage layer on object storage
@@ -43,11 +48,13 @@ audience:
 - Each scales independently
 
 ---
+
 ## Architecture Visualized
 
 ![snowflake_arch](svg/courses/data_engineering/snowflake/01_introduction/snowflake_arch.svg)
 
 ---
+
 ## Virtual Warehouses
 
 - Compute clusters
@@ -56,6 +63,7 @@ audience:
 - Scale up or out per workload
 
 ---
+
 ## Multi-Cluster
 
 - Add clusters under load
@@ -64,6 +72,7 @@ audience:
 - Pay for active clusters
 
 ---
+
 ## Storage
 
 - Compressed columnar
@@ -72,6 +81,7 @@ audience:
 - Time travel built in
 
 ---
+
 ## Account Model
 
 - Account at top
@@ -80,11 +90,13 @@ audience:
 - Resource monitors for cost
 
 ---
+
 ## Core Concepts
 
 ![snowflake_concepts](svg/courses/data_engineering/snowflake/01_introduction/snowflake_concepts.svg)
 
 ---
+
 ## Roles
 
 - Hierarchical
@@ -93,6 +105,7 @@ audience:
 - Role-based access control everywhere
 
 ---
+
 ## Pricing Model
 
 - Storage by GB month
@@ -101,6 +114,7 @@ audience:
 - Egress in some cases
 
 ---
+
 ## Auto-Suspend
 
 - Warehouses stop when idle
@@ -109,6 +123,7 @@ audience:
 - Restart latency is small
 
 ---
+
 ## Editions
 
 - Standard
@@ -117,6 +132,7 @@ audience:
 - Higher tiers add features and SLAs
 
 ---
+
 ## Course Outline
 
 - Tables and storage
@@ -126,6 +142,7 @@ audience:
 - Operations
 
 ---
+
 ## Common Beginner Mistakes
 
 - One huge warehouse for everything

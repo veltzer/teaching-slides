@@ -8,14 +8,17 @@ audience:
   - audiences:managers
 
 ---
+
 # Tools
 
 ---
+
 ## The Analyst Tool Stack
 
 ![tool_choices](svg/courses/data_driven/data-analytics-for-managers/06_tools/tool_choices.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Web analytics: Google Analytics
@@ -26,6 +29,7 @@ audience:
 - A practical buying framework
 
 ---
+
 ## Tool Categories at a Glance
 
 - **Web / mobile analytics**: visits, sessions, conversions
@@ -35,6 +39,7 @@ audience:
 - **Statistical / advanced**: notebooks, models, experiments
 
 ---
+
 ## Google Analytics
 
 - The most-deployed analytics platform, free at the entry tier
@@ -44,6 +49,7 @@ audience:
 - Strong on web, weaker on product/behavioural depth
 
 ---
+
 ## What GA Is Good For
 
 - "How many people visited and from where?"
@@ -53,6 +59,7 @@ audience:
 - High-level traffic and acquisition reporting
 
 ---
+
 ## What GA Misses
 
 - Per-user behavioural depth ("which features does Customer X use?")
@@ -62,6 +69,7 @@ audience:
 - Many teams complement GA with Mixpanel or Amplitude
 
 ---
+
 ## Mixpanel
 
 - Behavioural analytics tool — every action is an *event*
@@ -71,6 +79,7 @@ audience:
 - Common pairing: GA for marketing, Mixpanel for product
 
 ---
+
 ## Amplitude
 
 - Direct competitor to Mixpanel, similar feature set
@@ -80,6 +89,7 @@ audience:
 - Picking between Mixpanel and Amplitude is largely taste
 
 ---
+
 ## Tableau
 
 - The default for "big" BI: financial services, retail, manufacturing
@@ -89,6 +99,7 @@ audience:
 - Strong community and training resources
 
 ---
+
 ## Power BI
 
 - Microsoft's BI platform, cheap if you have Office 365
@@ -98,6 +109,7 @@ audience:
 - Can feel constrained outside that ecosystem
 
 ---
+
 ## Looker / Looker Studio
 
 - Looker (Google Cloud): semantic layer (LookML), dashboards, embedded analytics
@@ -107,6 +119,7 @@ audience:
 - Especially common at GCP shops
 
 ---
+
 ## Open-Source BI: Metabase, Superset
 
 - **Metabase**: easy to deploy, friendly UI, capable for most teams
@@ -116,6 +129,7 @@ audience:
 - Many startups start here, migrate to Tableau/Looker as they grow
 
 ---
+
 ## Elasticsearch + Kibana
 
 - Originally for logs and full-text search
@@ -125,6 +139,7 @@ audience:
 - Modern variants: OpenSearch (Amazon's fork)
 
 ---
+
 ## Splunk
 
 - Enterprise log analytics
@@ -134,6 +149,7 @@ audience:
 - Open-source competitors (Loki, OpenSearch) eating its low end
 
 ---
+
 ## Choosing a Tool
 
 - Start with the *question*, not the tool
@@ -143,6 +159,7 @@ audience:
 - The "shiny demo" is rarely the daily reality
 
 ---
+
 ## A Buying Framework
 
 - What decisions will this tool support?
@@ -152,11 +169,13 @@ audience:
 - Exit cost: how hard is it to migrate off?
 
 ---
+
 ## Buying Lenses
 
 ![buying_framework](svg/courses/data_driven/data-analytics-for-managers/06_tools/buying_framework.svg)
 
 ---
+
 ## Tool Sprawl
 
 - Most companies end up with 5-10 analytics tools
@@ -166,6 +185,7 @@ audience:
 - Better: master 2-3 tools deeply
 
 ---
+
 ## Common Mistakes
 
 - Buying based on a sales demo

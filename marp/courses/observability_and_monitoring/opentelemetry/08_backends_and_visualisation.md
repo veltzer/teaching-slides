@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Backends and Visualisation
 
 ---
+
 ## What This Chapter Covers
 
 - Where telemetry goes
@@ -19,6 +21,7 @@ audience:
 - Switching backends
 
 ---
+
 ## Backends
 
 - Receive OTLP
@@ -27,11 +30,13 @@ audience:
 - Backend choice independent of OTel
 
 ---
+
 ## Where Telemetry Lands
 
 ![backend_choices](svg/courses/observability_and_monitoring/opentelemetry/08_backends_and_visualisation/backend_choices.svg)
 
 ---
+
 ## Open-Source: Jaeger
 
 - Tracing-focused
@@ -40,6 +45,7 @@ audience:
 - Often used with collector
 
 ---
+
 ## Open-Source: Tempo
 
 - Grafana stack
@@ -48,6 +54,7 @@ audience:
 - Trace search
 
 ---
+
 ## Open-Source: SigNoz
 
 - All-in-one
@@ -56,6 +63,7 @@ audience:
 - Self-host alternative to APMs
 
 ---
+
 ## Open-Source: Grafana
 
 - Frontend for many backends
@@ -63,6 +71,7 @@ audience:
 - Common cloud-native choice
 
 ---
+
 ## Vendor: Datadog
 
 - Mature APM
@@ -70,6 +79,7 @@ audience:
 - Strong UI and AIOps
 
 ---
+
 ## Vendor: New Relic
 
 - One platform across signals
@@ -77,6 +87,7 @@ audience:
 - Distributed tracing UI
 
 ---
+
 ## Vendor: Dynatrace
 
 - Auto-instrumentation strong
@@ -84,6 +95,7 @@ audience:
 - Enterprise focus
 
 ---
+
 ## Vendor: Honeycomb
 
 - High-cardinality first
@@ -91,6 +103,7 @@ audience:
 - OTel-native
 
 ---
+
 ## Choosing
 
 - Open-source: control, ops burden
@@ -99,11 +112,13 @@ audience:
 - Migrate over time
 
 ---
+
 ## Decision Lenses
 
 ![backend_picker](svg/courses/observability_and_monitoring/opentelemetry/08_backends_and_visualisation/backend_picker.svg)
 
 ---
+
 ## Switching Backends
 
 - Reconfigure collector exporter
@@ -111,6 +126,7 @@ audience:
 - The OTel value proposition
 
 ---
+
 ## Multi-Backend
 
 - Send to two simultaneously
@@ -119,6 +135,7 @@ audience:
 - Common in practice
 
 ---
+
 ## Cost
 
 - Volume-based pricing typical
@@ -127,6 +144,7 @@ audience:
 - Watch cost dashboards
 
 ---
+
 ## SLOs Across Backends
 
 - Define SLIs in OTel attributes
@@ -134,6 +152,7 @@ audience:
 - Portable definitions
 
 ---
+
 ## Common Backend Mistakes
 
 - Picking before knowing volume

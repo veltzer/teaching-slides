@@ -10,6 +10,7 @@ audience:
 - audiences:data-scientists
 
 ---
+
 # Spark Notebooks Guide
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
@@ -31,11 +32,13 @@ audience:
 1. Google Colab
 
 ---
+
 ## Core Features
 
 ![core_features](svg/lectures/big_data/spark-notebooks/core_features.svg)
 
 ---
+
 ## Jupyter with PySpark
 ```python
 from pyspark.sql import SparkSession
@@ -45,6 +48,7 @@ spark = SparkSession.builder \
 ```
 
 ---
+
 ## Apache Zeppelin
 ```scala
 %spark
@@ -55,11 +59,13 @@ df = spark.read.json("data.json")
 ```
 
 ---
+
 ## Databricks Environment
 
 ![databricks_environment](svg/lectures/big_data/spark-notebooks/databricks_environment.svg)
 
 ---
+
 ## Mixed Language Support
 1. Python (PySpark)
 1. Scala
@@ -67,6 +73,7 @@ df = spark.read.json("data.json")
 1. R (SparkR)
 
 ---
+
 ## Data Visualization
 ```python
 # Example visualization code
@@ -77,6 +84,7 @@ df.groupBy("category") \
 ```
 
 ---
+
 ## Magic Commands
 1. %%spark
 1. %%sql
@@ -84,6 +92,7 @@ df.groupBy("category") \
 1. %%display
 
 ---
+
 ## Working with Data
 
 ```python
@@ -95,6 +104,7 @@ display(df)
 ```
 
 ---
+
 ## Interactive Analysis
 1. Cell execution
 1. Real-time results
@@ -102,6 +112,7 @@ display(df)
 1. Code history
 
 ---
+
 ## Notebook Widgets
 ```python
 from ipywidgets import interact
@@ -111,6 +122,7 @@ def plot_distribution(column):
 ```
 
 ---
+
 ## Collaboration Features
 1. Shared workspaces
 1. Version control
@@ -118,11 +130,13 @@ def plot_distribution(column):
 1. Export options
 
 ---
+
 ## Best Practices
 
 ![best_practices](svg/lectures/big_data/spark-notebooks/best_practices.svg)
 
 ---
+
 ## Performance Tips
 1. Cache wisely
 1. Clean up resources
@@ -130,6 +144,7 @@ def plot_distribution(column):
 1. Use display limits
 
 ---
+
 ## Common Patterns
 
 ```python
@@ -141,6 +156,7 @@ df.cache()
 ```
 
 ---
+
 ## Debugging Tools
 1. Cell outputs
 1. Spark UI access
@@ -148,6 +164,7 @@ df.cache()
 1. Memory tracking
 
 ---
+
 ## Integration Options
 1. Version control
 1. Data sources
@@ -155,6 +172,7 @@ df.cache()
 1. Visualization tools
 
 ---
+
 ## Export Capabilities
 1. HTML format
 1. PDF documents
@@ -162,6 +180,7 @@ df.cache()
 1. Markdown files
 
 ---
+
 ## Security Features
 1. Access control
 1. Credential management
@@ -169,11 +188,13 @@ df.cache()
 1. Network security
 
 ---
+
 ## Resource Management
 
 ![resource_management](svg/lectures/big_data/spark-notebooks/resource_management.svg)
 
 ---
+
 ## Development Workflow
 1. Prototyping
 1. Testing
@@ -181,6 +202,7 @@ df.cache()
 1. Deployment
 
 ---
+
 ## Notebook Extensions
 1. Code formatters
 1. Git integration
@@ -188,6 +210,7 @@ df.cache()
 1. Command palette
 
 ---
+
 ## Cloud Integration
 1. AWS services
 1. Azure platforms
@@ -195,6 +218,7 @@ df.cache()
 1. Private clouds
 
 ---
+
 ## Production Usage
 1. Scheduled jobs
 1. API endpoints
@@ -202,6 +226,7 @@ df.cache()
 1. Report generation
 
 ---
+
 ## Future Trends
 1. Enhanced collaboration
 1. Better performance

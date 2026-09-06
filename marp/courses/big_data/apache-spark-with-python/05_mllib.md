@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Spark MLlib
 
 ---
+
 ## What is Machine Learning
 - Automated pattern recognition
 - Learning from data without explicit programming
@@ -21,10 +23,12 @@ audience:
 - Types: Supervised, Unsupervised, and Reinforcement Learning
 
 ---
+
 ## MLlib Overview
 ![mllib_overview](svg/courses/big_data/apache-spark-with-python/05_mllib/mllib_overview.svg)
 
 ---
+
 ## MLlib Key Components
 1. Transformers
     - Transform one DataFrame to another
@@ -44,6 +48,7 @@ audience:
 ![ml_pipeline](svg/courses/big_data/apache-spark-with-python/05_mllib/ml_pipeline.svg)
 
 ---
+
 ## Basic Pipeline Structure
 
 ```python
@@ -62,6 +67,7 @@ pipeline = Pipeline(stages=[tokenizer, hashingTF, lr])
 ```
 
 ---
+
 ## Data Preprocessing
 
 ```python
@@ -85,6 +91,7 @@ scaler = StandardScaler(
 ```
 
 ---
+
 ## Feature Transformations
 
 ```python
@@ -106,6 +113,7 @@ assembler = VectorAssembler(
 ```
 
 ---
+
 ## Classification
 
 ```python
@@ -132,6 +140,7 @@ predictions = model.transform(test_data)
 ```
 
 ---
+
 ## Regression
 
 ```python
@@ -151,6 +160,7 @@ dt = DecisionTreeRegressor(
 ```
 
 ---
+
 ## Clustering
 
 ```python
@@ -164,6 +174,7 @@ model = gmm.fit(dataset)
 ```
 
 ---
+
 ## Dimensionality Reduction
 
 ```python
@@ -180,6 +191,7 @@ word2Vec = Word2Vec(
 ```
 
 ---
+
 ## Evaluation Metrics and Validation
 
 ```python
@@ -199,6 +211,7 @@ evaluator = RegressionEvaluator(
 ```
 
 ---
+
 ## Cross Validation
 
 ```python
@@ -221,6 +234,7 @@ cvModel = crossval.fit(training_data)
 ```
 
 ---
+
 ## Customer Churn Prediction
 
 ```python
@@ -242,6 +256,7 @@ pipeline = Pipeline(stages=[
 ```
 
 ---
+
 ## Recommendation System
 
 ```python
@@ -260,6 +275,7 @@ predictions = model.transform(test_ratings)
 ```
 
 ---
+
 ## Text Classification
 
 ```python
@@ -273,6 +289,7 @@ pipeline = Pipeline(stages=[
 ```
 
 ---
+
 ## Saving and Loading Models
 
 ```python
@@ -285,6 +302,7 @@ loaded_model = PipelineModel.load("path/to/model")
 ```
 
 ---
+
 ## Model Serving
 
 ```python
@@ -300,6 +318,7 @@ streaming_data.foreachBatch(process_stream)
 ```
 
 ---
+
 ## Performance Optimization
 
 ```python
@@ -311,6 +330,7 @@ spark.conf.set("spark.sql.shuffle.partitions", "100")
 ```
 
 ---
+
 ## Model Monitoring
 
 ```python
@@ -321,6 +341,7 @@ def log_metrics(predictions, timestamp):
 ```
 
 ---
+
 ## Pipeline Management
 
 ```python
@@ -334,6 +355,7 @@ class CustomFeatureTransformer(Transformer):
 ```
 
 ---
+
 ## Summary
 - MLlib provides scalable ML algorithms
 - Pipeline API for end-to-end ML workflows

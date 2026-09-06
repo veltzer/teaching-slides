@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # OOP in Practice
 
 ---
+
 ## What This Chapter Covers
 
 - Patterns that recur in real OOP code
@@ -20,6 +22,7 @@ audience:
 - A short tour of where this knowledge lands you
 
 ---
+
 ## Common Patterns You'll See
 
 - **Template Method**: base class defines the skeleton, subclasses fill in steps
@@ -29,16 +32,19 @@ audience:
 - **Singleton**: exactly one instance (use sparingly)
 
 ---
+
 ## Smells to Watch For
 
 ![oop_smells](svg/courses/principles/object-oriented-programming/11_oop_in_practice/oop_smells.svg)
 
 ---
+
 ## Team Practices
 
 ![team_practices](svg/courses/principles/object-oriented-programming/11_oop_in_practice/team_practices.svg)
 
 ---
+
 ## Refactoring Procedural to OOP
 
 - Find functions that always operate on the same dictionary or struct
@@ -48,6 +54,7 @@ audience:
 - Replace direct field access with method calls
 
 ---
+
 ## Refactoring Example
 
 Before:
@@ -75,6 +82,7 @@ car.start()
 ```
 
 ---
+
 ## Testing OOP Code
 
 - Test through the public interface — don't poke at private state
@@ -84,6 +92,7 @@ car.start()
 - Test the *contract*, not the implementation
 
 ---
+
 ## Test Doubles
 
 - **Dummy**: passed but never used
@@ -93,6 +102,7 @@ car.start()
 - **Fake**: simplified working implementation (in-memory DB, etc.)
 
 ---
+
 ## When To Use Which
 
 - A test that doesn't care about the collaborator: dummy
@@ -102,6 +112,7 @@ car.start()
 - Heavy use of mocks is a smell — usually means the design is too coupled
 
 ---
+
 ## OOP Anti-Patterns: God Object
 
 - One class that does everything
@@ -111,6 +122,7 @@ car.start()
 - Fix: extract cohesive responsibilities into smaller classes
 
 ---
+
 ## Anti-Pattern: Anaemic Domain Model
 
 - Classes that are just data — getters and setters, no behaviour
@@ -120,6 +132,7 @@ car.start()
 - Fix: move behaviour into the data class where it belongs
 
 ---
+
 ## Anti-Pattern: Yo-Yo Problem
 
 - Inheritance hierarchy is so deep that finding behaviour requires hopping up and down the chain
@@ -127,6 +140,7 @@ car.start()
 - Fix: flatten the hierarchy, extract behaviour into helpers
 
 ---
+
 ## Anti-Pattern: Inappropriate Intimacy
 
 - Two classes know too much about each other's internals
@@ -134,6 +148,7 @@ car.start()
 - Fix: move the methods to the class that owns the data
 
 ---
+
 ## Anti-Pattern: Telescoping Constructor
 
 - A class with constructors taking 2, 3, 4, 5, 6 args
@@ -142,6 +157,7 @@ car.start()
 - Fix: builder pattern, named arguments (Python, Kotlin)
 
 ---
+
 ## Modern OOP Conventions
 
 - Classes are smaller than they used to be (one job each)
@@ -151,6 +167,7 @@ car.start()
 - Dependencies are injected, not constructed inside
 
 ---
+
 ## OOP and Functional Programming
 
 - Modern languages mix the two: Python, Scala, Kotlin, C#
@@ -160,6 +177,7 @@ car.start()
 - Pure functions inside encapsulated objects: best of both
 
 ---
+
 ## When NOT to Reach for OOP
 
 - Single-purpose scripts — overkill
@@ -169,6 +187,7 @@ car.start()
 - Don't force a hierarchy where there isn't one
 
 ---
+
 ## What Comes Next
 
 - **Design patterns**: standard solutions to recurring problems
@@ -178,6 +197,7 @@ car.start()
 - This course is the foundation; those are the next steps
 
 ---
+
 ## Course Wrap-Up
 
 - OOP gives you a vocabulary for organising change-resistant code

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Normalisation: Theory and Practice
 
 ---
+
 ## What This Chapter Covers
 
 - Why normalise
@@ -20,11 +22,13 @@ audience:
 - Practical guidance
 
 ---
+
 ## Normal Forms
 
 ![normalization_forms](svg/courses/databases/database-design/04_normalization_theory_and_practice/normalization_forms.svg)
 
 ---
+
 ## Why Normalise
 
 - Eliminate redundancy
@@ -33,6 +37,7 @@ audience:
 - Simplify queries (sometimes)
 
 ---
+
 ## 1NF: Atomic Values
 
 - Each cell holds one value
@@ -41,6 +46,7 @@ audience:
 - Move to a separate table
 
 ---
+
 ## 2NF: Full Functional Dependency
 
 - Every non-key column depends on the *whole* primary key
@@ -48,6 +54,7 @@ audience:
 - Fix: split tables
 
 ---
+
 ## 3NF: No Transitive Dependencies
 
 - Non-key columns don't depend on other non-key columns
@@ -55,6 +62,7 @@ audience:
 - Fix: extract
 
 ---
+
 ## BCNF
 
 - Stronger than 3NF
@@ -63,6 +71,7 @@ audience:
 - 3NF is usually enough
 
 ---
+
 ## Update Anomalies
 
 - Update a value in one place; missed in another
@@ -71,6 +80,7 @@ audience:
 - Normalisation prevents these
 
 ---
+
 ## Denormalisation
 
 - Add redundancy back
@@ -79,6 +89,7 @@ audience:
 - Trade-off: query speed vs update complexity
 
 ---
+
 ## When To Denormalise
 
 - Read-heavy workload
@@ -87,11 +98,13 @@ audience:
 - Reporting tables alongside transactional
 
 ---
+
 ## Denormalisation Trade-offs
 
 ![denormalization_tradeoffs](svg/courses/databases/database-design/04_normalization_theory_and_practice/denormalization_tradeoffs.svg)
 
 ---
+
 ## Hybrid Approach
 
 - Normalise transactional tables
@@ -100,6 +113,7 @@ audience:
 - Best of both
 
 ---
+
 ## A Practical Example
 
 - Order: order_id, customer_id, total
@@ -107,6 +121,7 @@ audience:
 - Both normalised; total denormalised (sum of lines)
 
 ---
+
 ## Common Normalisation Mistakes
 
 - Extreme normalisation that hurts queries

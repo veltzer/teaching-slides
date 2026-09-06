@@ -8,9 +8,11 @@ audience:
   - audiences:data-analysts
 
 ---
+
 # Exploratory Data Analysis
 
 ---
+
 ## What This Chapter Covers
 
 - What EDA is and why it matters
@@ -22,6 +24,7 @@ audience:
 - Documenting findings
 
 ---
+
 ## What EDA Is
 
 - *Looking around* before deciding what to do
@@ -31,11 +34,13 @@ audience:
 - Most insights come from EDA, not from formal modelling
 
 ---
+
 ## Steps
 
 ![eda_steps](svg/courses/data_science/data-analyst-fundamentals/04_exploratory_data_analysis/eda_steps.svg)
 
 ---
+
 ## Why EDA First
 
 - The data is rarely what you expected
@@ -45,6 +50,7 @@ audience:
 - Time spent here saves multiples later
 
 ---
+
 ## Summary Statistics
 
 ```python
@@ -59,6 +65,7 @@ df['amount'].quantile([0.1, 0.5, 0.9])
 - Min and max often reveal data errors
 
 ---
+
 ## Distribution Shapes
 
 - **Normal / bell**: classic, mean = median
@@ -68,6 +75,7 @@ df['amount'].quantile([0.1, 0.5, 0.9])
 - **Uniform**: equal across the range (rare; often suspicious)
 
 ---
+
 ## Histograms
 
 ```python
@@ -80,6 +88,7 @@ df['age'].hist(bins=30)
 - For wide ranges: log-scale on the y-axis
 
 ---
+
 ## Box Plots
 
 ```python
@@ -92,6 +101,7 @@ df.boxplot(column='salary', by='department')
 - Add the data points (`stripplot` in Seaborn) for small samples
 
 ---
+
 ## Categorical Counts
 
 ```python
@@ -104,6 +114,7 @@ sns.countplot(data=df, x='status', order=df['status'].value_counts().index)
 - Sort by frequency for readability
 
 ---
+
 ## Bivariate Analysis
 
 - Two variables at a time
@@ -113,6 +124,7 @@ sns.countplot(data=df, x='status', order=df['status'].value_counts().index)
 - Look for: relationships, clusters, gaps
 
 ---
+
 ## Scatter Plots
 
 ```python
@@ -125,6 +137,7 @@ df.plot.scatter(x='age', y='spend', alpha=0.5)
 - Watch for: nonlinear shapes, clusters, outliers
 
 ---
+
 ## Correlation
 
 ```python
@@ -139,6 +152,7 @@ sns.heatmap(df.corr(), annot=True)
 - Heatmap: spot pairs that move together
 
 ---
+
 ## Cross-Tabulation
 
 ```python
@@ -151,6 +165,7 @@ pd.crosstab(df['country'], df['plan_type'], normalize='index')
 - Pair with a heatmap for visualisation
 
 ---
+
 ## Pattern Recognition
 
 - Time trends: line plots over a date column
@@ -160,6 +175,7 @@ pd.crosstab(df['country'], df['plan_type'], normalize='index')
 - Train your eye on real data; intuition improves with reps
 
 ---
+
 ## Pandas Idioms
 
 ```python
@@ -177,6 +193,7 @@ df.groupby('country').apply(lambda g: g.nlargest(3, 'spend'))
 - Build the muscle of "split-apply-combine" thinking
 
 ---
+
 ## Documenting Findings
 
 - Notebook with text + chart + commentary
@@ -186,11 +203,13 @@ df.groupby('country').apply(lambda g: g.nlargest(3, 'spend'))
 - Notebooks are documentation as much as analysis
 
 ---
+
 ## Exploratory Outputs Visualised
 
 ![eda_outputs](svg/courses/data_science/data-analyst-fundamentals/04_exploratory_data_analysis/eda_outputs.svg)
 
 ---
+
 ## EDA Output
 
 - A short writeup (the analyst's report)
@@ -200,6 +219,7 @@ df.groupby('country').apply(lambda g: g.nlargest(3, 'spend'))
 - A recommendation for the next step
 
 ---
+
 ## Common Mistakes
 
 - Skipping EDA; jumping to a model

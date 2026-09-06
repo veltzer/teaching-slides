@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Introduction to Web Architecture and Scaling
 
 ---
+
 ## What This Chapter Covers
 
 - What web architecture means
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What Web Architecture Is
 
 - Layers serving HTTP
@@ -28,6 +31,7 @@ audience:
 - Concerns at each layer
 
 ---
+
 ## The Tier Model
 
 - Edge cache
@@ -37,11 +41,13 @@ audience:
 - Database
 
 ---
+
 ## Layers Visualized
 
 ![web_layers](svg/courses/architecting/web-architecture-and-scaling/01_introduction/web_layers.svg)
 
 ---
+
 ## Request Lifecycle
 
 - Client to DNS
@@ -51,6 +57,7 @@ audience:
 - App to data
 
 ---
+
 ## Vertical Scaling
 
 - Bigger machine
@@ -59,6 +66,7 @@ audience:
 - Fast remediation
 
 ---
+
 ## Horizontal Scaling
 
 - More machines
@@ -67,11 +75,13 @@ audience:
 - Cheaper per unit at scale
 
 ---
+
 ## Scale Axes
 
 ![scale_axes](svg/courses/architecting/web-architecture-and-scaling/01_introduction/scale_axes.svg)
 
 ---
+
 ## Stateless vs Stateful
 
 - Stateless is easy to scale
@@ -80,6 +90,7 @@ audience:
 - These are the bottlenecks
 
 ---
+
 ## Capacity vs Reliability
 
 - Capacity: handle load
@@ -88,6 +99,7 @@ audience:
 - Plan together
 
 ---
+
 ## Latency Budgets
 
 - End-to-end target
@@ -96,6 +108,7 @@ audience:
 - p99 dominates user experience
 
 ---
+
 ## Cost Curve
 
 - Capacity is linear
@@ -104,6 +117,7 @@ audience:
 - Set targets explicitly
 
 ---
+
 ## Why It Is Hard
 
 - State must live somewhere
@@ -112,6 +126,7 @@ audience:
 - Caching is correctness-sensitive
 
 ---
+
 ## Course Outline
 
 - Load balancing
@@ -121,6 +136,7 @@ audience:
 - Observability
 
 ---
+
 ## Common Beginner Mistakes
 
 - Scaling app before measuring DB

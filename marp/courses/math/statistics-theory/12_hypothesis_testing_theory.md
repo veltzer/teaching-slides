@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Hypothesis Testing Theory
 
 ---
+
 ## What This Chapter Covers
 
 - Tests as decision rules; size, level, power
@@ -21,11 +23,13 @@ audience:
 - p-values, multiplicity, and the duality with confidence sets
 
 ---
+
 ## Type I And Type II Errors
 
 ![type errors](svg/courses/math/statistics-theory/12_hypothesis_testing_theory/type_errors.svg)
 
 ---
+
 ## Tests As Decision Rules
 
 - A hypothesis test partitions the parameter space: **null** H&#8320;: &theta; &isin; &Theta;&#8320; vs **alternative** H&#8321;: &theta; &isin; &Theta;&#8321;; a (possibly randomized) **test** is a function &phi;(x) &isin; [0, 1] giving the probability of rejecting H&#8320; when x is observed
@@ -35,6 +39,7 @@ audience:
 - Randomized tests look strange but are needed for *exact* size in discrete problems (where no non-randomized rejection region hits &alpha; precisely) — and they appear in the Neyman&ndash;Pearson optimum below
 
 ---
+
 ## The Neyman&ndash;Pearson Lemma
 
 - **Simple vs simple**: H&#8320;: &theta; = &theta;&#8320; against H&#8321;: &theta; = &theta;&#8321;. Among all tests of level &alpha;, the **most powerful** one rejects when the **likelihood ratio** &Lambda;(x) = f(x | &theta;&#8321;) / f(x | &theta;&#8320;) is large: &phi;(x) = 1 if &Lambda; &gt; k, = &gamma; if &Lambda; = k, = 0 if &Lambda; &lt; k, with k and &gamma; chosen so E_{&theta;&#8320;}[&phi;] = &alpha;
@@ -44,6 +49,7 @@ audience:
 - The threshold k controls size; nothing about the *form* of the optimal test changes with &alpha;
 
 ---
+
 ## UMP Tests And Monotone Likelihood Ratio
 
 - For composite hypotheses, a **uniformly most powerful (UMP)** level-&alpha; test is one whose power &beta;&#966;(&theta;) is &geq; that of *every* other level-&alpha; test, simultaneously for **all** &theta; &isin; &Theta;&#8321; — a single test that's optimal against the entire alternative
@@ -53,6 +59,7 @@ audience:
 - Practical reading: for one-sided questions in a nice family there's a *provably best* test, and it's the obvious one; for two-sided questions you must add a fairness criterion to single out a "best" test
 
 ---
+
 ## Two-Sided, Unbiased, And Invariant Tests
 
 - A test is **unbiased** if &beta;&#966;(&theta;) &geq; &alpha; for all &theta; &isin; &Theta;&#8321; (and &leq; &alpha; on &Theta;&#8320;) — you're at least as likely to reject under the alternative as under the null; a "biased" two-sided test could actually be *less* likely to reject for some true alternatives, which is absurd, so we exclude those
@@ -62,6 +69,7 @@ audience:
 - When even these don't pin down a unique optimum, fall back to **asymptotic optimality** (the likelihood-ratio family below) or to **most stringent** / minimax-power criteria
 
 ---
+
 ## Likelihood-Ratio Tests And Wilks' Theorem
 
 - The **generalized likelihood ratio statistic** for H&#8320;: &theta; &isin; &Theta;&#8320; vs H&#8321;: &theta; &isin; &Theta; is &lambda;(x) = sup_{&theta; &isin; &Theta;&#8320;} L(&theta; | x) / sup_{&theta; &isin; &Theta;} L(&theta; | x) &isin; (0, 1]; reject when &lambda;(x) is small (the null fits much worse than the unrestricted model)
@@ -71,6 +79,7 @@ audience:
 - Caveats: it's *asymptotic* (use exact/bootstrap versions for small n), and the &chi;&sup2; limit **fails on the boundary** — if H&#8320; sits at the edge of the parameter space (e.g. a variance component = 0), the limit is a *mixture* of &chi;&sup2;'s (Self&ndash;Liang, Chernoff), not a plain &chi;&sup2;
 
 ---
+
 ## p-Values And Multiplicity
 
 - The **p-value** is p(X) = sup_{&theta; &isin; &Theta;&#8320;} P&#952;( T(X') is at least as extreme as T(X) ) — the probability, under the *most favorable* null, of a test statistic as or more extreme than the observed one; equivalently, the smallest &alpha; at which you'd reject. Under a simple H&#8320; with continuous T it is **exactly Uniform(0,1)**; in discrete or composite cases it's stochastically &geq; uniform (conservative)
@@ -80,6 +89,7 @@ audience:
 - **Optional stopping**: peeking at the data and stopping the first time p &lt; 0.05 makes the actual Type I rate balloon (toward 1 as you peek indefinitely) — use a procedure *designed* for sequential looks: group-sequential boundaries (O'Brien&ndash;Fleming, Pocock), alpha-spending functions, or always-valid e-values / e-processes
 
 ---
+
 ## The Duality With Confidence Sets
 
 - **Inverting tests &#8658; confidence sets**: if for each &theta;&#8320; you have a level-&alpha; test of H&#8320;: &theta; = &theta;&#8320; with acceptance region A(&theta;&#8320;), then C(X) = { &theta;&#8320; : X &isin; A(&theta;&#8320;) } — the set of null values *not* rejected — is a **(1&minus;&alpha;) confidence set**: P&#952;( &theta; &isin; C(X) ) &geq; 1&minus;&alpha; for all &theta;
@@ -89,6 +99,7 @@ audience:
 - This duality is also the engine behind *bootstrap* and *permutation* confidence intervals: invert the corresponding resampling test
 
 ---
+
 ## Testing Theory In Code
 
 ```python
@@ -111,6 +122,7 @@ print("Wilks KS-vs-chi2_1 p:", stats.kstest(LR, "chi2", args=(1,)).pvalue.round(
 ```
 
 ---
+
 ## Common Mistakes
 
 - Reading the p-value as P(H&#8320; true | data), or treating "not significant" as "H&#8320; is true"

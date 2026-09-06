@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # QEMU Networking for Kernel Developers
 
 ---
@@ -39,6 +40,7 @@ Importance of Networking in Kernel Development
 - Performance optimization
 
 ---
+
 QEMU Network Models Overview
 
 ---
@@ -101,6 +103,7 @@ QEMU Network Configuration Syntax
 - Common configurations for kernel testing
 
 ---
+
 Setting Up a Basic Network
 
 ---

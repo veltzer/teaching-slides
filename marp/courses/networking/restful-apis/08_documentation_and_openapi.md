@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Documentation and OpenAPI
 
 ---
+
 ## What This Chapter Covers
 
 - Why API docs matter
@@ -20,6 +22,7 @@ audience:
 - Mock servers
 
 ---
+
 ## Why Docs Matter
 
 - API is its docs to consumers
@@ -28,6 +31,7 @@ audience:
 - Source of truth
 
 ---
+
 ## OpenAPI
 
 - Specification for HTTP APIs
@@ -36,6 +40,7 @@ audience:
 - Formerly Swagger
 
 ---
+
 ## What OpenAPI Captures
 
 - Paths and methods
@@ -45,6 +50,7 @@ audience:
 - Authentication
 
 ---
+
 ## Sample OpenAPI
 
 ```yaml
@@ -68,6 +74,7 @@ paths:
 ```
 
 ---
+
 ## Schemas
 
 - Reusable types under components/schemas
@@ -76,6 +83,7 @@ paths:
 - Drives codegen
 
 ---
+
 ## Swagger UI
 
 - HTML viewer for OpenAPI
@@ -84,6 +92,7 @@ paths:
 - Standard for API docs
 
 ---
+
 ## Other Viewers
 
 - Redoc: read-only, polished
@@ -91,6 +100,7 @@ paths:
 - Built-in to many frameworks
 
 ---
+
 ## Code Generation
 
 - OpenAPI Generator: clients in many languages
@@ -99,6 +109,7 @@ paths:
 - Quality varies by language
 
 ---
+
 ## Spec-First vs Code-First
 
 - Spec-first: write OpenAPI, generate code
@@ -107,6 +118,7 @@ paths:
 - Code-first: easier to maintain
 
 ---
+
 ## Mock Servers
 
 - Generate from OpenAPI
@@ -115,6 +127,7 @@ paths:
 - Prism, Stoplight
 
 ---
+
 ## Validation
 
 - Validate requests against schema at gateway
@@ -122,6 +135,7 @@ paths:
 - Catch contract violations early
 
 ---
+
 ## Beyond Reference
 
 - Tutorials
@@ -131,6 +145,7 @@ paths:
 - Reference is necessary, not sufficient
 
 ---
+
 ## Common Documentation Mistakes
 
 - Auto-generated docs without examples
@@ -140,6 +155,7 @@ paths:
 - Tutorial only for happy path
 
 ---
+
 ## OpenAPI Document Pieces
 
 ![openapi_pieces](svg/courses/networking/restful-apis/08_documentation_and_openapi/openapi_pieces.svg)

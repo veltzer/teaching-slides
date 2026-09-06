@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Open Table Formats
 
 ---
+
 ## What This Chapter Covers
 
 - Why a table format
@@ -20,6 +22,7 @@ audience:
 - Compaction
 
 ---
+
 ## Why a Table Format
 
 - ACID over object storage
@@ -28,6 +31,7 @@ audience:
 - Catalog for metadata
 
 ---
+
 ## Family of Formats
 
 - Iceberg
@@ -36,11 +40,13 @@ audience:
 - Each with strengths
 
 ---
+
 ## Table Formats Compared
 
 ![table_formats](svg/courses/data_engineering/data-lakehouse/03_table_formats/table_formats.svg)
 
 ---
+
 ## Snapshots
 
 - Each commit creates a snapshot
@@ -49,6 +55,7 @@ audience:
 - Forms the basis for time travel
 
 ---
+
 ## Time Travel
 
 - Query as-of timestamp or version
@@ -57,11 +64,13 @@ audience:
 - Reproducible analytics
 
 ---
+
 ## Snapshots Over Time
 
 ![snapshots_time_travel](svg/courses/data_engineering/data-lakehouse/03_table_formats/snapshots_time_travel.svg)
 
 ---
+
 ## Schema Evolution
 
 - Add column
@@ -70,6 +79,7 @@ audience:
 - Drop column
 
 ---
+
 ## Schema Compatibility
 
 - Strict reads on type changes
@@ -78,6 +88,7 @@ audience:
 - Coordinate writers and readers
 
 ---
+
 ## Partition Evolution
 
 - Change partition strategy without rewriting
@@ -86,6 +97,7 @@ audience:
 - Saves migration cost
 
 ---
+
 ## Compaction
 
 - Merge small files
@@ -94,6 +106,7 @@ audience:
 - Tunable thresholds
 
 ---
+
 ## Vacuum and Retention
 
 - Delete files past retention
@@ -102,6 +115,7 @@ audience:
 - Tune to compliance and cost
 
 ---
+
 ## Concurrency
 
 - Optimistic concurrency
@@ -110,6 +124,7 @@ audience:
 - Most writes commute
 
 ---
+
 ## Streaming Writes
 
 - Append-only into a table
@@ -118,6 +133,7 @@ audience:
 - Producers must be idempotent
 
 ---
+
 ## Catalog
 
 - Maps table name to metadata location
@@ -126,6 +142,7 @@ audience:
 - Cloud-native catalogs
 
 ---
+
 ## Common Table-Format Mistakes
 
 - Mixed write engines without locks

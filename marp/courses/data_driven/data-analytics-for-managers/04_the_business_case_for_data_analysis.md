@@ -8,9 +8,11 @@ audience:
   - audiences:managers
 
 ---
+
 # The Business Case for Data Analysis
 
 ---
+
 ## What This Chapter Covers
 
 - Marketing decisions data can answer
@@ -21,6 +23,7 @@ audience:
 - The case for further data investment
 
 ---
+
 ## Marketing Decisions
 
 - Which channels actually convert?
@@ -30,11 +33,13 @@ audience:
 - Spend reallocation is the highest-ROI use of marketing data
 
 ---
+
 ## Building the Case
 
 ![roi_dimensions](svg/courses/data_driven/data-analytics-for-managers/04_the_business_case_for_data_analysis/roi_dimensions.svg)
 
 ---
+
 ## Multi-Touch Attribution
 
 - Last-click attribution: simple, gives 100% credit to the final touch
@@ -44,6 +49,7 @@ audience:
 - Switching attribution models retroactively breaks every comparison
 
 ---
+
 ## Business Decisions: Pricing
 
 - Test prices on real customers (with care)
@@ -53,6 +59,7 @@ audience:
 - The wrong price is rarely "too cheap" — it's usually "wrong target"
 
 ---
+
 ## Business Decisions: Segmentation
 
 - Group customers by behaviour, not by demographics alone
@@ -62,6 +69,7 @@ audience:
 - Segment-level metrics surface this; aggregate metrics hide it
 
 ---
+
 ## Understanding Your Users
 
 - Who they are: demographics, role, company size
@@ -71,6 +79,7 @@ audience:
 - Quantitative + qualitative together; either alone misleads
 
 ---
+
 ## Cohort Analysis
 
 - Compare users by *when they signed up*, not just where they are now
@@ -80,11 +89,13 @@ audience:
 - Standard tool for SaaS; underused everywhere else
 
 ---
+
 ## Cohort Workflow
 
 ![cohort_analysis](svg/courses/data_driven/data-analytics-for-managers/04_the_business_case_for_data_analysis/cohort_analysis.svg)
 
 ---
+
 ## New Products: Build vs Buy vs Skip
 
 - Data on existing usage hints at unmet needs
@@ -94,6 +105,7 @@ audience:
 - Most product ideas are bad; data filters quickly
 
 ---
+
 ## Features: What to Add, What to Remove
 
 - 80% of features are used by less than 20% of users
@@ -103,6 +115,7 @@ audience:
 - Have the awkward conversation about retiring features
 
 ---
+
 ## UI Decisions
 
 - A/B test changes that touch real users
@@ -112,6 +125,7 @@ audience:
 - Pair tests with qualitative observation — *why* did the metric move?
 
 ---
+
 ## Terminating Products
 
 - The hardest decision: shutting down something with users
@@ -121,6 +135,7 @@ audience:
 - Better than a slow death — your team and your customers benefit
 
 ---
+
 ## The Case for More Data
 
 - Each successful initiative justifies more data investment
@@ -130,6 +145,7 @@ audience:
 - With it, the data org becomes a competitive advantage
 
 ---
+
 ## A Worked Example
 
 - Product team wants to build a new dashboard feature
@@ -139,6 +155,7 @@ audience:
 - Decision: build only if usage projection + revenue lift > cost
 
 ---
+
 ## Decision Hygiene
 
 - Document the decision and the data that led to it
@@ -148,6 +165,7 @@ audience:
 - The discipline matters more than the answer in any single case
 
 ---
+
 ## Common Mistakes
 
 - Asking data to *justify* a decision already made

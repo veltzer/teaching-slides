@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Chi-Square Tests
 
 ---
+
 ## What This Chapter Covers
 
 - Categorical data and contingency tables
@@ -21,11 +23,13 @@ audience:
 - Effect size for categorical associations
 
 ---
+
 ## A Contingency Table
 
 ![contingency_table](svg/courses/math/statistics-inference/07_chi_square_tests/contingency_table.svg)
 
 ---
+
 ## When The Data Is Counts In Categories
 
 - No means here — just *how many* fall in each category: browsers, plan tiers, pass/fail, region
@@ -35,6 +39,7 @@ audience:
 - Statistic: &chi;&sup2; = &Sigma; (observed &minus; expected)&sup2; / expected — sum over all cells
 
 ---
+
 ## Goodness-Of-Fit Test
 
 - One categorical variable; H&#8320;: the category proportions equal a specified set (e.g. "die is fair: 1/6 each", "traffic split is 25/25/25/25")
@@ -44,6 +49,7 @@ audience:
 - Use it for: dice fairness, "does our user mix match the population", checking a randomizer
 
 ---
+
 ## Test Of Independence
 
 - Two categorical variables in a contingency table; H&#8320;: the two variables are **independent** (no association)
@@ -53,6 +59,7 @@ audience:
 - A **test of homogeneity** (do several groups have the same category distribution?) uses the identical arithmetic — just a different sampling story
 
 ---
+
 ## Expected Counts And Assumptions
 
 - **Independence** of observations — each unit counted once, no repeated measures
@@ -62,6 +69,7 @@ audience:
 - For 2&times;2 tables some software applies **Yates' continuity correction**; it's conservative — fine to report, or just use Fisher
 
 ---
+
 ## Fisher's Exact Test
 
 - Computes the *exact* probability of the observed table (and more extreme ones) given the margins — no large-sample approximation
@@ -71,11 +79,13 @@ audience:
 - `scipy.stats.fisher_exact` for 2&times;2; `scipy.stats.chi2_contingency` warns you when counts are small
 
 ---
+
 ## Chi-Square vs Fisher's Exact
 
 ![chi_vs_fisher](svg/courses/math/statistics-inference/07_chi_square_tests/chi_vs_fisher.svg)
 
 ---
+
 ## Effect Size For Categorical Data
 
 - &chi;&sup2; itself grows with sample size — a huge n makes trivial associations "significant"
@@ -85,6 +95,7 @@ audience:
 - Always pair the p-value with one of these; "significant" without a magnitude is half a result
 
 ---
+
 ## Chi-Square Tests In Python
 
 ```python
@@ -104,6 +115,7 @@ print("exact (2x2):", stats.fisher_exact(table)[1])    # cross-check
 ```
 
 ---
+
 ## Common Mistakes
 
 - Running chi-square when several expected counts are below ~5 instead of Fisher's exact test

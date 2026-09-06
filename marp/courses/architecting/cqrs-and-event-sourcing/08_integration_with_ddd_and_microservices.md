@@ -11,9 +11,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Integration with DDD and Microservices
 
 ---
+
 ## What This Chapter Covers
 
 - Mapping CQRS to DDD building blocks
@@ -26,6 +28,7 @@ audience:
 - Decomposing monoliths
 
 ---
+
 ## DDD Recap
 
 - **Ubiquitous language** — shared vocabulary inside a context
@@ -35,6 +38,7 @@ audience:
 - CQRS and ES are implementation patterns; DDD is the modeling approach
 
 ---
+
 ## CQRS Maps Cleanly Onto DDD
 
 | DDD concept | CQRS / ES expression |
@@ -47,11 +51,13 @@ audience:
 | Anti-corruption layer | Event translator at context boundary |
 
 ---
+
 ## DDD Mapping Visualized
 
 ![ddd_mapping](svg/courses/architecting/cqrs-and-event-sourcing/08_integration_with_ddd_and_microservices/ddd_mapping.svg)
 
 ---
+
 ## Aggregate Boundaries Are Event Boundaries
 
 - A command operates on one aggregate (chapter 3)
@@ -60,6 +66,7 @@ audience:
 - This keeps the consistency story simple
 
 ---
+
 ## Bounded Context Boundaries Are Service Boundaries
 
 - A bounded context typically becomes a service or module
@@ -68,6 +75,7 @@ audience:
 - Internal events (the full stream) stay private to the context
 
 ---
+
 ## Domain Events vs Integration Events
 
 - **Domain event**: emitted inside a bounded context; part of the write model's stream
@@ -77,11 +85,13 @@ audience:
 - The two have different schemas, audiences, and lifecycles
 
 ---
+
 ## Domain vs Integration Events
 
 ![domain_vs_integration_events](svg/courses/architecting/cqrs-and-event-sourcing/08_integration_with_ddd_and_microservices/domain_vs_integration_events.svg)
 
 ---
+
 ## Why the Distinction Matters
 
 - Domain events are an internal contract; the schema can evolve with the aggregate
@@ -90,6 +100,7 @@ audience:
 - Treat integration events with the same care as a public API
 
 ---
+
 ## Publishing Integration Events
 
 - A subscriber tails the internal event stream
@@ -99,11 +110,13 @@ audience:
 - Subscribers in other contexts consume only what they care about
 
 ---
+
 ## Event Publishing Pipeline
 
 ![integration_event_publishing](svg/courses/architecting/cqrs-and-event-sourcing/08_integration_with_ddd_and_microservices/integration_event_publishing.svg)
 
 ---
+
 ## Anti-Corruption Layer
 
 - A translator at the context boundary
@@ -112,6 +125,7 @@ audience:
 - Often the right place to handle versioning of integration events
 
 ---
+
 ## ACL Example
 
 - The Billing context receives `OrderPlaced` from the Sales context
@@ -121,6 +135,7 @@ audience:
 - Billing's domain language stays clean
 
 ---
+
 ## Process Managers
 
 - An aggregate that coordinates a multi-step workflow across aggregates
@@ -129,6 +144,7 @@ audience:
 - "When OrderPlaced happens, reserve inventory, then capture payment, then schedule shipping"
 
 ---
+
 ## Saga Pattern
 
 - A long-running workflow with explicit compensation steps
@@ -137,11 +153,13 @@ audience:
 - The compensation steps are themselves commands; the saga decides when to fire them
 
 ---
+
 ## Saga Example
 
 ![saga_example](svg/courses/architecting/cqrs-and-event-sourcing/08_integration_with_ddd_and_microservices/saga_example.svg)
 
 ---
+
 ## Saga Failure Compensation
 
 ```diagram
@@ -160,6 +178,7 @@ InventoryReleased        → MarkOrderFailed
 - Compensation may itself fail; the saga must handle that too
 
 ---
+
 ## Choreography vs Orchestration
 
 - **Choreography**: each service reacts to events; no central coordinator
@@ -169,11 +188,13 @@ InventoryReleased        → MarkOrderFailed
 - Use orchestration when the workflow is non-trivial; choreography when it is simple
 
 ---
+
 ## Choreography vs Orchestration
 
 ![choreography_vs_orchestration](svg/courses/architecting/cqrs-and-event-sourcing/08_integration_with_ddd_and_microservices/choreography_vs_orchestration.svg)
 
 ---
+
 ## When Choreography Wins
 
 - Few steps; each is independent
@@ -181,6 +202,7 @@ InventoryReleased        → MarkOrderFailed
 - Teams are autonomous and can change their service without coordinating
 
 ---
+
 ## When Orchestration Wins
 
 - Many steps; they have dependencies and ordering constraints
@@ -189,6 +211,7 @@ InventoryReleased        → MarkOrderFailed
 - Debugging "why didn't this happen?" needs a single owner
 
 ---
+
 ## Sharing the Event Store?
 
 - One event store per service: each context owns its streams
@@ -197,11 +220,13 @@ InventoryReleased        → MarkOrderFailed
 - Most production systems pick the first; integration events flow through a broker
 
 ---
+
 ## One Store Per Service
 
 ![one_store_per_service](svg/courses/architecting/cqrs-and-event-sourcing/08_integration_with_ddd_and_microservices/one_store_per_service.svg)
 
 ---
+
 ## Decomposing a Monolith
 
 - Identify a bounded context to extract
@@ -211,11 +236,13 @@ InventoryReleased        → MarkOrderFailed
 - Eventually, retire the monolith's logic for that context
 
 ---
+
 ## Strangler Fig + Events
 
 ![strangler_fig_with_events](svg/courses/architecting/cqrs-and-event-sourcing/08_integration_with_ddd_and_microservices/strangler_fig_with_events.svg)
 
 ---
+
 ## Strangler Fig Steps
 
 - Phase 1: monolith handles all traffic; events emitted internally
@@ -225,6 +252,7 @@ InventoryReleased        → MarkOrderFailed
 - Phase 5: monolith and new service coexist; gradually more is moved
 
 ---
+
 ## Identity in Cross-Context Events
 
 - An aggregate id is local to its context
@@ -233,6 +261,7 @@ InventoryReleased        → MarkOrderFailed
 - Avoid leaking implementation-specific ids; use semantic ones
 
 ---
+
 ## Versioning Integration Events
 
 - Integration events are an external contract; breaking changes hurt
@@ -243,6 +272,7 @@ InventoryReleased        → MarkOrderFailed
 - Most teams use additive-only with a registry for safety
 
 ---
+
 ## Event Schema Registry
 
 - A central place that holds the schema of every integration event
@@ -251,6 +281,7 @@ InventoryReleased        → MarkOrderFailed
 - Catches breaking changes before they reach production
 
 ---
+
 ## A Reasonable Topology
 
 - One event store per bounded context (per microservice)
@@ -261,6 +292,7 @@ InventoryReleased        → MarkOrderFailed
 - Schema registry for integration event contracts
 
 ---
+
 ## Common Mistakes
 
 - **Sharing aggregates across contexts**: defeats the boundary
@@ -270,6 +302,7 @@ InventoryReleased        → MarkOrderFailed
 - **No versioning discipline on integration events**: every release is a risk
 
 ---
+
 ## Summary
 
 - DDD provides the modeling; CQRS and ES provide the implementation

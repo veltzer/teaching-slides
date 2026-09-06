@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced Clean Code Techniques
 
 ---
+
 ## What This Chapter Covers
 
 - Error handling patterns
@@ -21,6 +23,7 @@ audience:
 - Approaching legacy code
 
 ---
+
 ## Error Handling: Two Schools
 
 - **Exceptions**: errors are flow-changing events (Java, Python, C#)
@@ -30,6 +33,7 @@ audience:
 - Pick one and apply it everywhere
 
 ---
+
 ## Exception Patterns
 
 - Throw exceptions for *exceptional* conditions, not control flow
@@ -39,6 +43,7 @@ audience:
 - Log at the boundary, not at every layer
 
 ---
+
 ## Errors as Values
 
 ```go
@@ -54,6 +59,7 @@ if err != nil {
 - Wrap errors with context as they propagate
 
 ---
+
 ## Avoiding Deep Nesting
 
 ```python
@@ -71,6 +77,7 @@ def process(req):
 - Each `if` should ideally be a guard or an early return
 
 ---
+
 ## Refactor: Early Returns
 
 ```python
@@ -90,6 +97,7 @@ def process(req):
 - Readable top to bottom
 
 ---
+
 ## DRY: Don't Repeat Yourself
 
 - Don't duplicate *knowledge* — the same fact in two places
@@ -99,6 +107,7 @@ def process(req):
 - The wrong DRY couples unrelated things; the right DRY decouples them
 
 ---
+
 ## DRY Done Wrong
 
 ```python
@@ -115,6 +124,7 @@ result = safe_divide(x, y)
 - Sometimes inline is clearer
 
 ---
+
 ## KISS: Keep It Simple
 
 - Resist the urge to add cleverness
@@ -124,6 +134,7 @@ result = safe_divide(x, y)
 - Simple isn't easy — it takes work to *strip down* to the essentials
 
 ---
+
 ## YAGNI: You Aren't Gonna Need It
 
 - Don't add a feature until it's actually needed
@@ -133,6 +144,7 @@ result = safe_divide(x, y)
 - When the need arrives, *then* add — informed by what's actually needed
 
 ---
+
 ## Cyclomatic Complexity
 
 - Counts the number of independent execution paths through a function
@@ -142,6 +154,7 @@ result = safe_divide(x, y)
 - Tools (radon, SonarQube, ESLint) report it for free
 
 ---
+
 ## Code Coverage
 
 - The percentage of code lines (or branches) executed by tests
@@ -151,6 +164,7 @@ result = safe_divide(x, y)
 - Coverage on dead code is fake comfort
 
 ---
+
 ## Maintainability Index
 
 - A composite score of complexity, comment density, and code volume
@@ -160,6 +174,7 @@ result = safe_divide(x, y)
 - Don't game it; use it to find the worst-offending files
 
 ---
+
 ## Reading Legacy Code
 
 - Start with the tests — they document intent
@@ -169,6 +184,7 @@ result = safe_divide(x, y)
 - The boy scout rule: leave it cleaner than you found it
 
 ---
+
 ## The Strangler Fig Pattern
 
 - Wrap legacy code in a new interface
@@ -178,6 +194,7 @@ result = safe_divide(x, y)
 - Refactoring without big-bang risk
 
 ---
+
 ## Refactoring with Tests
 
 - Refactoring without tests is gambling
@@ -187,6 +204,7 @@ result = safe_divide(x, y)
 - Add tests *before* refactoring; refactor *with* tests as your sensor
 
 ---
+
 ## A Sustainable Pace
 
 - Clean code is built incrementally, every commit
@@ -196,6 +214,7 @@ result = safe_divide(x, y)
 - Quality is a long game
 
 ---
+
 ## Course Wrap-Up
 
 - SOLID is heuristics, not commandments
@@ -205,11 +224,13 @@ result = safe_divide(x, y)
 - The team that takes the time to read each other's code writes the cleanest code
 
 ---
+
 ## Refactoring Workflow
 
 ![refactoring_steps](svg/courses/principles/solid-clean-code/08_advanced_clean_code_techniques/refactoring_steps.svg)
 
 ---
+
 ## Levels of Duplication
 
 ![dry_levels](svg/courses/principles/solid-clean-code/08_advanced_clean_code_techniques/dry_levels.svg)

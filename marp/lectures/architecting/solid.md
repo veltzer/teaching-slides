@@ -9,6 +9,7 @@ audience:
 - audiences:developers
 
 ---
+
 # SOLID Principles
 ## Understanding the Foundation of Object-Oriented Design
 ## Mark Veltzer
@@ -31,6 +32,7 @@ audience:
 1. Dependency Inversion Principle (DIP)
 
 ---
+
 ## Why SOLID?
 - Maintainable code
 - Easier testing
@@ -40,12 +42,14 @@ audience:
 - Easier to understand and modify
 
 ---
+
 ## Single Responsibility Principle
 
 > "A class should have one, and only one, reason to change."
 > - Robert C. Martin
 
 ---
+
 ## SRP - Bad Example
 
 ```java
@@ -61,11 +65,13 @@ class Employee {
 ```
 
 ---
+
 ## SRP - Violation Visualization
 
 ![srp_violation_visualization](svg/lectures/architecting/solid/srp_violation_visualization.svg)
 
 ---
+
 ## SRP - Good Example
 
 ```java
@@ -92,17 +98,20 @@ class EmailService {
 ```
 
 ---
+
 ## SRP - Better Structure
 
 ![srp_better_structure](svg/lectures/architecting/solid/srp_better_structure.svg)
 
 ---
+
 ## Open/Closed Principle
 
 > "Software entities should be open for extension, but closed for modification."
 > - Bertrand Meyer
 
 ---
+
 ## OCP - Bad Example
 
 ```java
@@ -128,11 +137,13 @@ class AreaCalculator {
 ```
 
 ---
+
 ## OCP - Violation Visualization
 
 ![ocp_violation_visualization](svg/lectures/architecting/solid/ocp_violation_visualization.svg)
 
 ---
+
 ## OCP - Good Example
 
 ```java
@@ -159,17 +170,20 @@ class Circle implements Shape {
 ```
 
 ---
+
 ## OCP - Better Structure
 
 ![ocp_better_structure](svg/lectures/architecting/solid/ocp_better_structure.svg)
 
 ---
+
 ## Liskov Substitution Principle
 
 > "Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
 > - Barbara Liskov
 
 ---
+
 ## LSP - Bad Example
 
 ```java
@@ -188,11 +202,13 @@ class Penguin extends Bird {
 ```
 
 ---
+
 ## LSP - Violation Visualization
 
 ![lsp_violation_visualization](svg/lectures/architecting/solid/lsp_violation_visualization.svg)
 
 ---
+
 ## LSP - Good Example
 
 ```java
@@ -215,17 +231,20 @@ class Penguin implements Bird {
 ```
 
 ---
+
 ## LSP - Better Structure
 
 ![lsp_better_structure](svg/lectures/architecting/solid/lsp_better_structure.svg)
 
 ---
+
 ## Interface Segregation Principle
 
 > "Clients should not be forced to depend upon interfaces that they do not use."
 > - Robert C. Martin
 
 ---
+
 ## ISP - Bad Example
 
 ```java
@@ -249,11 +268,13 @@ class Robot implements Worker {
 ```
 
 ---
+
 ## ISP - Violation Visualization
 
 ![isp_violation_visualization](svg/lectures/architecting/solid/isp_violation_visualization.svg)
 
 ---
+
 ## ISP - Good Example
 
 ```java
@@ -281,17 +302,20 @@ class Robot implements Workable {
 ```
 
 ---
+
 ## ISP - Better Structure
 
 ![isp_better_structure](svg/lectures/architecting/solid/isp_better_structure.svg)
 
 ---
+
 ## Dependency Inversion Principle
 
 > "High-level modules should not depend on low-level modules. Both should depend on abstractions."
 > - Robert C. Martin
 
 ---
+
 ## DIP - Bad Example
 
 ```java
@@ -315,11 +339,13 @@ class Switch {
 ```
 
 ---
+
 ## DIP - Violation Visualization
 
 ![dip_violation_visualization](svg/lectures/architecting/solid/dip_violation_visualization.svg)
 
 ---
+
 ## DIP - Good Example
 
 ```java
@@ -347,16 +373,19 @@ class Switch {
 ```
 
 ---
+
 ## DIP - Better Structure
 
 ![dip_better_structure](svg/lectures/architecting/solid/dip_better_structure.svg)
 
 ---
+
 ## Real-World Example: E-commerce System
 
 Let's see how SOLID principles work together in a real system.
 
 ---
+
 ## E-commerce System - Bad Design
 
 ```java
@@ -373,11 +402,13 @@ class Order {
 ```
 
 ---
+
 ## E-commerce - Bad Design Visualization
 
 ![e_commerce_bad_design_visualization](svg/lectures/architecting/solid/e_commerce_bad_design_visualization.svg)
 
 ---
+
 ## E-commerce System - SOLID Design
 
 ```java
@@ -414,11 +445,13 @@ class OrderService {
 ```
 
 ---
+
 ## E-commerce - SOLID Design Visualization
 
 ![e_commerce_solid_design_visualization](svg/lectures/architecting/solid/e_commerce_solid_design_visualization.svg)
 
 ---
+
 ## Benefits of SOLID in the E-commerce Example
 1. Single Responsibility: Each class has one job
 1. Open/Closed: New payment methods without changing existing code
@@ -427,6 +460,7 @@ class OrderService {
 1. Dependency Inversion: High-level OrderService depends on abstractions
 
 ---
+
 ## Common SOLID Violations
 1. God Classes
 1. Tight Coupling
@@ -435,6 +469,7 @@ class OrderService {
 1. Concrete Dependencies
 
 ---
+
 ## How to Identify SOLID Violations
 1. Multiple responsibilities in one class
 1. Frequent changes to existing code
@@ -443,6 +478,7 @@ class OrderService {
 1. Direct instantiation of dependencies
 
 ---
+
 ## Refactoring Towards SOLID
 1. Extract Class
 1. Extract Interface
@@ -451,6 +487,7 @@ class OrderService {
 1. Abstract Factory Pattern
 
 ---
+
 ## Testing Benefits with SOLID
 - Easier unit testing
 - Better mock objects
@@ -459,6 +496,7 @@ class OrderService {
 - Improved test coverage
 
 ---
+
 ## Best Practices
 1. Keep classes small and focused
 1. Use composition over inheritance
@@ -467,6 +505,7 @@ class OrderService {
 1. Follow the Law of Demeter
 
 ---
+
 ## Common Questions
 1. When to break SOLID principles?
 1. How to balance SOLID with pragmatism?
@@ -475,6 +514,7 @@ class OrderService {
 1. Where to start applying SOLID?
 
 ---
+
 ## Tools and Techniques
 1. Static Code Analysis
 1. Design Pattern Recognition
@@ -483,6 +523,7 @@ class OrderService {
 1. Architecture Validation Tools
 
 ---
+
 ## Summary
 SOLID Principles:
 1. Single Responsibility
@@ -492,6 +533,7 @@ SOLID Principles:
 1. Dependency Inversion
 
 ---
+
 ## Additional Resources
 1. *Clean Code* — Robert C. Martin
 1. *Agile Software Development: Principles, Patterns, and Practices* — Robert C. Martin (the original SOLID source)

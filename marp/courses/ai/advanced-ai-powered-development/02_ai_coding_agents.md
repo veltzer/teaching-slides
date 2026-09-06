@@ -14,6 +14,7 @@ audience:
   - audiences:developers
 
 ---
+
 # AI Coding Agents
 
 ---
@@ -161,6 +162,7 @@ IDE-integrated agents share a common interaction model:
 1. **Accept/reject**: approve or discard individual edits before they apply
 
 **Key differences**:
+
 | Feature | Cursor | Windsurf | Cline |
 |---|---|---|---|
 | Model choice | Multiple | Multiple | Multiple |

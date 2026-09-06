@@ -9,9 +9,11 @@ audience:
   - audiences:network-engineers
 
 ---
+
 # DNSSEC
 
 ---
+
 ## What This Chapter Covers
 
 - Why DNSSEC exists
@@ -21,6 +23,7 @@ audience:
 - Key rollover and operations
 
 ---
+
 ## The Problem DNSSEC Solves
 
 - DNS responses are unauthenticated by default
@@ -30,6 +33,7 @@ audience:
 - DNSSEC adds cryptographic authentication
 
 ---
+
 ## What DNSSEC Provides
 
 - Authentication: response really came from the zone owner
@@ -39,21 +43,25 @@ audience:
 - Different protections; both useful
 
 ---
+
 ## DNSSEC Records Visualized
 
 ![dnssec_chain](svg/courses/networking/dns-deep-dive/05_dnssec/dnssec_chain.svg)
 
 ---
+
 ## DNSSEC Record Types
 
 ![dnssec_records](svg/courses/networking/dns-deep-dive/05_dnssec/dnssec_records.svg)
 
 ---
+
 ## Key Rollover
 
 ![key_rollover](svg/courses/networking/dns-deep-dive/05_dnssec/key_rollover.svg)
 
 ---
+
 ## RRSIG: Record Signatures
 
 - Each record set is signed
@@ -63,6 +71,7 @@ audience:
 - Validity period limits replay
 
 ---
+
 ## DNSKEY: Public Keys
 
 - The zone's public keys, in DNS itself
@@ -72,6 +81,7 @@ audience:
 - Resolvers cache them for the validity period
 
 ---
+
 ## DS: Delegation Signer
 
 - Hash of the child zone's KSK
@@ -81,6 +91,7 @@ audience:
 - Critical: missing/wrong DS breaks DNSSEC
 
 ---
+
 ## KSK and ZSK
 
 - Key Signing Key — signs DNSKEY records only
@@ -90,6 +101,7 @@ audience:
 - KSK rollover is the harder operation
 
 ---
+
 ## NSEC: Authenticated Denial
 
 - "This name does not exist between A and Z"
@@ -99,6 +111,7 @@ audience:
 - Replaced by NSEC3 in many deployments
 
 ---
+
 ## NSEC3: Hashed Denial
 
 - Same idea as NSEC, but names are hashed
@@ -108,6 +121,7 @@ audience:
 - Default for most signed zones today
 
 ---
+
 ## The Chain of Trust
 
 - Root zone is signed
@@ -117,6 +131,7 @@ audience:
 - Resolver validates from root downward
 
 ---
+
 ## Trust Anchor
 
 - The root key must be known a priori
@@ -126,6 +141,7 @@ audience:
 - All DNSSEC validators ship with the root anchor
 
 ---
+
 ## Validating Resolver
 
 - Receives signed responses from the wire
@@ -135,6 +151,7 @@ audience:
 - Failed validation: SERVFAIL
 
 ---
+
 ## Enabling Validation
 
 - Most modern resolvers default to validating
@@ -144,6 +161,7 @@ audience:
 - Should fail; if it doesn't, your resolver isn't validating
 
 ---
+
 ## Signing a Zone (BIND)
 
 - Generate KSK and ZSK
@@ -153,6 +171,7 @@ audience:
 - Monitor for rollover events
 
 ---
+
 ## Signing a Zone (Cloud)
 
 - One-click in Route 53, Cloud DNS, others
@@ -162,6 +181,7 @@ audience:
 - Easier than running BIND for most
 
 ---
+
 ## Key Rollover: ZSK
 
 - Every few months typically
@@ -171,6 +191,7 @@ audience:
 - Remove old ZSK
 
 ---
+
 ## Key Rollover: KSK
 
 - Every 1-5 years typically
@@ -180,6 +201,7 @@ audience:
 - Manage with tools (knot, opendnssec)
 
 ---
+
 ## DNSSEC Operational Risks
 
 - Expired signatures: zone goes dark
@@ -189,6 +211,7 @@ audience:
 - Most outages are operational, not cryptographic
 
 ---
+
 ## Validity Periods
 
 - RRSIG has not-before and not-after
@@ -198,6 +221,7 @@ audience:
 - Monitor with health checks
 
 ---
+
 ## DNSSEC Adoption
 
 - Root: 100%
@@ -207,6 +231,7 @@ audience:
 - DNSSEC has caught many real attacks
 
 ---
+
 ## DANE: Real-World Use
 
 - DNS-Based Authentication of Named Entities
@@ -216,6 +241,7 @@ audience:
 - Limited browser adoption
 
 ---
+
 ## DNSSEC and DoH/DoT
 
 - DoH/DoT encrypts DNS in transit
@@ -225,6 +251,7 @@ audience:
 - Don't substitute one for the other
 
 ---
+
 ## When NOT to Use DNSSEC
 
 - Internal-only zones with no external exposure
@@ -234,6 +261,7 @@ audience:
 - Better safe and unsigned than broken and signed
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting to add DS at registrar after enabling
@@ -243,6 +271,7 @@ audience:
 - Mixing signed and unsigned subzones inconsistently
 
 ---
+
 ## Validating With dig
 
 ```bash
@@ -254,6 +283,7 @@ dig +dnssec example.com A
 ```
 
 ---
+
 ## Tools
 
 - `delv` — modern DNSSEC validation tool
@@ -263,6 +293,7 @@ dig +dnssec example.com A
 - Most cloud providers offer health pages
 
 ---
+
 ## Summary
 
 - DNSSEC adds cryptographic signing to DNS

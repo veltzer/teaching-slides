@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Advanced QEMU Features for Kernel Development
 
 ---
@@ -39,6 +40,7 @@ QEMU Tracing Framework
 - Analyzing trace output for kernel debugging
 
 ---
+
 QEMU Tracing Architecture
 
 ---

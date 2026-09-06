@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Named Entity Recognition
 
 ---
+
 ## What This Chapter Covers
 
 - The fundamentals of `NER`: standard and domain-specific entity types
@@ -21,6 +23,7 @@ audience:
 - Evaluation: entity-level metrics, partial matches, and error analysis
 
 ---
+
 ## What Is Named Entity Recognition
 
 - The task of locating spans of text that refer to entities in the world
@@ -29,6 +32,7 @@ audience:
 - A foundational building block for search, knowledge graphs, and information extraction
 
 ---
+
 ## Standard Entity Types
 
 - `PER` — people, real or fictional, including aliases and titled forms
@@ -38,11 +42,13 @@ audience:
 - The `CoNLL-2003` shared task fixed these four labels as a de facto baseline
 
 ---
+
 ## Entity Type Examples
 
 ![entity_types](svg/courses/ai/natural-language-processing/13_named_entity_recognition/entity_types.svg)
 
 ---
+
 ## Domain-Specific Entity Types
 
 - Biomedical: `GENE`, `PROTEIN`, `DISEASE`, `DRUG`, `CELL_LINE`
@@ -52,6 +58,7 @@ audience:
 - The right schema is decided by the downstream consumer, not the modeler
 
 ---
+
 ## Nested and Overlapping Entities
 
 - `Bank of America` is one `ORG` containing the `LOC` `America`
@@ -60,6 +67,7 @@ audience:
 - Nested `NER` requires span-based or stacked formulations to express both
 
 ---
+
 ## The BIO and BIOES Tag Schemes
 
 - `BIO`: `B-` begins a span, `I-` continues it, `O` is outside
@@ -68,11 +76,13 @@ audience:
 - A token-level classifier produces these tags; spans are recovered by decoding
 
 ---
+
 ## Tagging Schemes Compared
 
 ![tagging_schemes](svg/courses/ai/natural-language-processing/13_named_entity_recognition/tagging_schemes.svg)
 
 ---
+
 ## Rule-Based and Gazetteer-Driven NER
 
 - A gazetteer is a curated list of known entity strings — cities, drug names, tickers
@@ -81,6 +91,7 @@ audience:
 - Weaknesses: brittle on variation, expensive to maintain, poor recall on novel entities
 
 ---
+
 ## When Rules Still Win
 
 - The schema is small, closed, and stable
@@ -89,6 +100,7 @@ audience:
 - A rule-based system is often the right baseline before any model is trained
 
 ---
+
 ## Feature Engineering for Classical NER
 
 - Word identity, lowercase form, prefix and suffix character n-grams
@@ -97,6 +109,7 @@ audience:
 - Gazetteer lookups, capitalization in context, sentence position
 
 ---
+
 ## Conditional Random Fields
 
 - A linear-chain `CRF` scores entire tag sequences, not single tokens
@@ -105,6 +118,7 @@ audience:
 - For a long time the strongest non-neural method on `CoNLL-2003`
 
 ---
+
 ## CRF Strengths and Limits
 
 - Exploits structural constraints between adjacent tags directly
@@ -113,6 +127,7 @@ audience:
 - Outperformed by neural encoders, but still lives inside many neural taggers as the output layer
 
 ---
+
 ## BiLSTM-CRF
 
 - A bidirectional `LSTM` produces a contextual vector per token
@@ -121,11 +136,13 @@ audience:
 - The dominant architecture from roughly 2016 to the rise of pretrained transformers
 
 ---
+
 ## BiLSTM-CRF Architecture
 
 ![bilstm_crf_architecture](svg/courses/ai/natural-language-processing/13_named_entity_recognition/bilstm_crf_architecture.svg)
 
 ---
+
 ## Transformer-Based NER
 
 - A pretrained encoder (`BERT`, `RoBERTa`, `DeBERTa`) produces token vectors
@@ -134,6 +151,7 @@ audience:
 - This is the modern default for supervised `NER` on a labeled corpus
 
 ---
+
 ## Subword Tokens and NER Labels
 
 - Pretrained tokenizers split words into subwords; only one subword carries the gold label
@@ -142,6 +160,7 @@ audience:
 - The alignment code is small, easy to get wrong, and silently degrades scores
 
 ---
+
 ## Span-Based NER
 
 - Enumerate candidate spans up to a maximum length
@@ -150,6 +169,7 @@ audience:
 - Computational cost grows quadratically with sequence length
 
 ---
+
 ## Biaffine NER
 
 - Two feed-forward heads project each token into a "start" and "end" representation
@@ -158,6 +178,7 @@ audience:
 - A strong design for nested entities, popularized by Yu and colleagues in 2020
 
 ---
+
 ## Biaffine Scoring
 
 ```python
@@ -172,6 +193,7 @@ def biaffine_score(start_h, end_h, U, b):
 - Decoding picks the highest-scoring non-conflicting set of spans
 
 ---
+
 ## Choosing an NER Architecture
 
 - Flat entities, plenty of labeled data: a transformer encoder with a softmax head
@@ -180,6 +202,7 @@ def biaffine_score(start_h, end_h, U, b):
 - Latency-sensitive on a small schema: distilled encoder or even a `BiLSTM-CRF`
 
 ---
+
 ## Few-Shot NER with Prompts
 
 - Frame extraction as a generation or filling task for a large language model
@@ -188,6 +211,7 @@ def biaffine_score(start_h, end_h, U, b):
 - Quality depends heavily on prompt phrasing and on consistent post-processing
 
 ---
+
 ## Zero-Shot NER
 
 - No labeled examples for the target schema — only label names and definitions
@@ -196,6 +220,7 @@ def biaffine_score(start_h, end_h, U, b):
 - Recall on rare types is uneven; a small validation set still pays for itself
 
 ---
+
 ## Distantly Supervised NER
 
 - Use an external knowledge base to auto-label mentions in a large corpus
@@ -204,6 +229,7 @@ def biaffine_score(start_h, end_h, U, b):
 - Robust loss functions and partial labeling help the model learn from imperfect data
 
 ---
+
 ## Cross-Lingual NER
 
 - Train on a high-resource language, evaluate on a low-resource one
@@ -212,6 +238,7 @@ def biaffine_score(start_h, end_h, U, b):
 - Performance varies by script, by domain, and by typological distance
 
 ---
+
 ## Token-Level vs Entity-Level Evaluation
 
 - Token-level: accuracy or `F1` over individual tag predictions
@@ -220,11 +247,13 @@ def biaffine_score(start_h, end_h, U, b):
 - Entity-level `F1` is the standard reported metric for `NER`
 
 ---
+
 ## Evaluation Metrics
 
 ![evaluation_metrics](svg/courses/ai/natural-language-processing/13_named_entity_recognition/evaluation_metrics.svg)
 
 ---
+
 ## Partial-Match Scoring
 
 - Strict match: span and type both exact — the `CoNLL` default
@@ -233,6 +262,7 @@ def biaffine_score(start_h, end_h, U, b):
 - The `MUC` and `SemEval` schemes give partial credit; the choice changes the headline number
 
 ---
+
 ## Error Analysis
 
 - Boundary errors: right type, wrong span — common with multi-token names
@@ -241,6 +271,7 @@ def biaffine_score(start_h, end_h, U, b):
 - Spurious entities: spans the model invented, common on rare-looking phrases
 
 ---
+
 ## Confusion Patterns to Watch
 
 - `PER` versus `ORG` for company names that contain personal names
@@ -249,6 +280,7 @@ def biaffine_score(start_h, end_h, U, b):
 - Annotation guidelines determine the answer; the model can only follow them
 
 ---
+
 ## Annotation Quality Matters
 
 - Inter-annotator agreement caps the achievable model score
@@ -257,6 +289,7 @@ def biaffine_score(start_h, end_h, U, b):
 - A small clean test set is worth more than a large noisy one
 
 ---
+
 ## NER in Production
 
 - Schemas drift: new entity types appear, old ones become more granular
@@ -265,6 +298,7 @@ def biaffine_score(start_h, end_h, U, b):
 - Reserve a held-out slice for regression checks at every model update
 
 ---
+
 ## Anti-Patterns
 
 - Reporting token-level `F1` and calling it `NER` accuracy
@@ -273,6 +307,7 @@ def biaffine_score(start_h, end_h, U, b):
 - Trusting distant supervision labels without measuring noise
 
 ---
+
 ## Summary
 
 - `NER` finds typed spans in text, with `BIO` or span-based output formats

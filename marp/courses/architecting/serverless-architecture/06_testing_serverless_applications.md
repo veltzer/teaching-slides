@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Testing Serverless Applications
 
 ---
+
 ## What This Chapter Covers
 
 - Why testing serverless is different
@@ -22,6 +24,7 @@ audience:
 - CI/CD for serverless
 
 ---
+
 ## Why Different
 
 - Functions run in a managed environment
@@ -31,11 +34,13 @@ audience:
 - Hard to reproduce production locally
 
 ---
+
 ## Testing Layers
 
 ![testing_layers](svg/courses/architecting/serverless-architecture/06_testing_serverless_applications/testing_layers.svg)
 
 ---
+
 ## Unit Testing
 
 - Test the handler function directly
@@ -45,6 +50,7 @@ audience:
 - The bedrock
 
 ---
+
 ## Unit Test Example
 
 ```python
@@ -60,6 +66,7 @@ def test_handler_writes_to_dynamodb(mock_boto):
 ```
 
 ---
+
 ## Local Emulation
 
 - AWS SAM CLI: invoke Lambda locally
@@ -69,6 +76,7 @@ def test_handler_writes_to_dynamodb(mock_boto):
 - Good for development, not full validation
 
 ---
+
 ## LocalStack
 
 - Mocks ~80 AWS services locally
@@ -78,6 +86,7 @@ def test_handler_writes_to_dynamodb(mock_boto):
 - Standard for local serverless dev
 
 ---
+
 ## LocalStack Workflow
 
 ```bash
@@ -91,6 +100,7 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - Same code, local execution
 
 ---
+
 ## Integration Tests
 
 - Deploy to a real AWS account (a test environment)
@@ -100,6 +110,7 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - The most realistic check before prod
 
 ---
+
 ## Test Stages
 
 - Unit (every commit; mocked)
@@ -109,6 +120,7 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - Layered confidence
 
 ---
+
 ## Async Testing
 
 - Trigger an event; wait for the side effect
@@ -118,6 +130,7 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - Same pattern as testing any async system
 
 ---
+
 ## Testing Step Functions
 
 - AWS Step Functions Local for execution
@@ -126,6 +139,7 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - Test each branch (success, error, retry)
 
 ---
+
 ## Testing Auth
 
 - Mock the authoriser in unit tests
@@ -133,6 +147,7 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - Don't skip auth in test environment (different code paths)
 
 ---
+
 ## CI/CD
 
 - AWS SAM, Serverless Framework, AWS CDK
@@ -142,6 +157,7 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - Without IaC: drift, manual deploy nightmare
 
 ---
+
 ## Canary Deployments
 
 - Deploy new version; route 10% of traffic
@@ -151,6 +167,7 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - Standard for production deployments
 
 ---
+
 ## Smoke Tests After Deploy
 
 - Hit a few endpoints; check health
@@ -159,6 +176,7 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - Quick (minutes); valuable
 
 ---
+
 ## Common Testing Mistakes
 
 - Only unit tests; no integration with real AWS
@@ -168,6 +186,7 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - Skipping tests "to ship faster" (worse outcome)
 
 ---
+
 ## A Practical Test Pyramid
 
 - Many: unit tests (fast, cheap)
@@ -177,6 +196,7 @@ aws --endpoint-url=http://localhost:4566 s3 mb s3://my-bucket
 - Match cost to risk
 
 ---
+
 ## Pyramid Levels
 
 ![test_pyramid](svg/courses/architecting/serverless-architecture/06_testing_serverless_applications/test_pyramid.svg)

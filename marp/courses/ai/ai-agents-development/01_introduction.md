@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to AI Agents
 
 ---
+
 ## What This Chapter Covers
 
 - What an AI agent is
@@ -19,6 +21,7 @@ audience:
 - Use cases
 
 ---
+
 ## What an Agent Is
 
 - LLM with tools
@@ -27,6 +30,7 @@ audience:
 - Iterates until done
 
 ---
+
 ## Agent vs Chatbot
 
 - Chatbot: single-turn reply
@@ -35,6 +39,7 @@ audience:
 - Agents have goals, not just inputs
 
 ---
+
 ## Core Components
 
 - Model (the LLM)
@@ -43,6 +48,7 @@ audience:
 - Planner (what to do next)
 
 ---
+
 ## The Agent Loop
 
 - Receive goal
@@ -52,11 +58,13 @@ audience:
 - Repeat until goal met
 
 ---
+
 ## Agent Loop Visualized
 
 ![agent_loop](svg/courses/ai/ai-agents-development/01_introduction/agent_loop.svg)
 
 ---
+
 ## ReAct Pattern
 
 - Reason + Act
@@ -65,6 +73,7 @@ audience:
 - Foundation for many agents
 
 ---
+
 ## Tool Calling
 
 - LLM emits structured call
@@ -73,6 +82,7 @@ audience:
 - LLM decides next step
 
 ---
+
 ## Memory
 
 - Short-term: conversation context
@@ -81,6 +91,7 @@ audience:
 - Persistence across sessions
 
 ---
+
 ## Use Cases
 
 - Code generation and review
@@ -89,6 +100,7 @@ audience:
 - Workflow automation
 
 ---
+
 ## Risks
 
 - Tool calls can have side effects
@@ -97,6 +109,7 @@ audience:
 - Cost explosion
 
 ---
+
 ## What You Will Build
 
 - Single-tool agent
@@ -105,6 +118,7 @@ audience:
 - Production-grade agent
 
 ---
+
 ## Common Beginner Mistakes
 
 - Treating agents as deterministic

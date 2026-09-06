@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Ansible Fundamentals
 
 ## Course Overview

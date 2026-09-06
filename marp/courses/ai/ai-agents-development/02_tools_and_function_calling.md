@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Tools and Function Calling
 
 ---
+
 ## What This Chapter Covers
 
 - What tools are
@@ -19,6 +21,7 @@ audience:
 - Error handling
 
 ---
+
 ## What a Tool Is
 
 - A function the agent can invoke
@@ -27,6 +30,7 @@ audience:
 - The model decides when to call it
 
 ---
+
 ## Why Tools
 
 - LLMs are not databases
@@ -35,6 +39,7 @@ audience:
 - Tools bridge to the real world
 
 ---
+
 ## Tool Definition
 
 - Name: short, verb-like
@@ -43,11 +48,13 @@ audience:
 - Return type: structured
 
 ---
+
 ## Designing Good Tools
 
 ![tool_design_traits](svg/courses/ai/ai-agents-development/02_tools_and_function_calling/tool_design_traits.svg)
 
 ---
+
 ## JSON Schema for Tools
 
 - Type, properties, required fields
@@ -56,6 +63,7 @@ audience:
 - Validate on the server side too
 
 ---
+
 ## Anatomy of a Tool Call
 
 - Model emits JSON
@@ -64,11 +72,13 @@ audience:
 - Result serialized back
 
 ---
+
 ## Tool Call Visualized
 
 ![tool_call_anatomy](svg/courses/ai/ai-agents-development/02_tools_and_function_calling/tool_call_anatomy.svg)
 
 ---
+
 ## Choosing What to Expose
 
 - One tool per coherent action
@@ -77,6 +87,7 @@ audience:
 - Keep parameter sets small
 
 ---
+
 ## Description Quality
 
 - Description is a prompt
@@ -85,6 +96,7 @@ audience:
 - Test by varying user input
 
 ---
+
 ## Tool Errors
 
 - Network errors
@@ -93,6 +105,7 @@ audience:
 - Return structured error to model
 
 ---
+
 ## Letting the Model Recover
 
 - Return error message in result
@@ -101,6 +114,7 @@ audience:
 - Cap retries to avoid loops
 
 ---
+
 ## Side Effects
 
 - Read-only vs mutating tools
@@ -109,6 +123,7 @@ audience:
 - Audit log all calls
 
 ---
+
 ## Schema Validation
 
 - Validate on entry
@@ -117,6 +132,7 @@ audience:
 - Same as any external input
 
 ---
+
 ## Common Function-Calling Mistakes
 
 - Vague tool descriptions

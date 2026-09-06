@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Tagging
 
 ---
@@ -50,6 +51,7 @@ git checkout v1.0.0               # Return to this version anytime
 ```
 
 ---
+
 ## Lightweight vs Annotated Tags: Details
 
 Git supports two types of tags with different characteristics:
@@ -68,6 +70,7 @@ Git supports two types of tags with different characteristics:
 - Recommended for releases
 
 ---
+
 ## Lightweight vs Annotated Tags
 
 ![lightweight_vs_annotated_tags](svg/courses/git/git/13_tagging/lightweight_vs_annotated_tags.svg)

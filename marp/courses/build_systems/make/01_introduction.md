@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Make
 
 ---
@@ -55,7 +56,6 @@ make -f custom_makefile
 - Originally for Unix systems
 - GNU Make released in 1988
 - Still widely used today (nearly 50 years later!)
-
 - GNU Make (most common on Linux)
 - BSD Make
 - Microsoft NMAKE
@@ -84,7 +84,6 @@ make -f custom_makefile
 - Projects requiring portability
 - When dependencies are file-based
 - Shell script orchestration
-
 - Consider alternatives when:
     - Very large codebases (Bazel, Buck)
     - Cross-platform GUI builds (CMake)

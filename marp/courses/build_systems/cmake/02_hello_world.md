@@ -11,6 +11,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Hello World with CMake
 
 ---
@@ -377,6 +378,7 @@ target_link_libraries(app PRIVATE mylib)
 - This is the core of modern CMake's target-based approach
 
 ---
+
 ## Visualizing Property Propagation
 
 ![visualizing_property_propagation](svg/courses/build_systems/cmake/02_hello_world/visualizing_property_propagation.svg)

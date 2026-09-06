@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Beyond Twelve-Factor
 
 ---
+
 ## What's Missing From the Original
 
 - The original twelve factors were written before observability was a discipline
@@ -20,11 +22,13 @@ audience:
 - Modern teams add factors to address these gaps
 
 ---
+
 ## Beyond The Original Twelve
 
 ![beyond_factors](svg/courses/architecting/twelve-factor-app/14_beyond_twelve_factor/beyond_factors.svg)
 
 ---
+
 ## API-First Design
 
 - Define the API before writing code
@@ -33,6 +37,7 @@ audience:
 - Consumers can build against the contract before the service exists
 
 ---
+
 ## Why API-First
 
 - Two teams can work in parallel — consumer and producer
@@ -41,6 +46,7 @@ audience:
 - The API is the integration point; treating it as code is good discipline
 
 ---
+
 ## Telemetry
 
 - Three pillars: logs, metrics, traces
@@ -50,6 +56,7 @@ audience:
 - All three together = observability
 
 ---
+
 ## Telemetry as a Factor
 
 - Apps should emit metrics and traces, not just logs
@@ -58,6 +65,7 @@ audience:
 - The platform routes the data; the app just emits
 
 ---
+
 ## Authentication and Authorization
 
 - Apps need to know who is making the request and what they may do
@@ -66,6 +74,7 @@ audience:
 - Both should be standardized across services, not reinvented per service
 
 ---
+
 ## Identity Federation
 
 - Single source of truth for users
@@ -74,6 +83,7 @@ audience:
 - OAuth 2.0 + OIDC is the most common pattern
 
 ---
+
 ## Security as a First-Class Concern
 
 - HTTPS everywhere — even between internal services
@@ -83,6 +93,7 @@ audience:
 - Container images scanned before deploy
 
 ---
+
 ## Backups and Disaster Recovery
 
 - Twelve-factor doesn't address operational backup strategy
@@ -92,6 +103,7 @@ audience:
 - These are platform concerns; the app should be region-portable
 
 ---
+
 ## Cost Awareness
 
 - Modern factor: the app should expose cost-relevant signals
@@ -100,6 +112,7 @@ audience:
 - Helps make architectural decisions with cost in mind
 
 ---
+
 ## The "Beyond Twelve" Lists
 
 - Pivotal added 3: API-first, telemetry, authentication
@@ -108,6 +121,7 @@ audience:
 - The original 12 are the foundation; modern systems extend them
 
 ---
+
 ## Twelve-Factor Is a Floor, Not a Ceiling
 
 - Following them gets you to "deployable, scalable, operable"
@@ -116,6 +130,7 @@ audience:
 - A team that doesn't even meet the factors won't reach the additions
 
 ---
+
 ## Summary
 
 - The original twelve factors are a foundation

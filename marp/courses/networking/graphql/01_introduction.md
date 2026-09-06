@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to GraphQL
 
 ---
+
 ## What This Chapter Covers
 
 - What GraphQL is
@@ -19,6 +21,7 @@ audience:
 - Adoption
 
 ---
+
 ## What GraphQL Is
 
 - Query language for APIs
@@ -27,16 +30,19 @@ audience:
 - Single endpoint, one POST per request
 
 ---
+
 ## Why It Exists
 
 ![why_graphql](svg/courses/networking/graphql/01_introduction/why_graphql.svg)
 
 ---
+
 ## Origins And Adoption
 
 ![graphql_history](svg/courses/networking/graphql/01_introduction/graphql_history.svg)
 
 ---
+
 ## Origin
 
 - Built at Facebook, 2012
@@ -45,6 +51,7 @@ audience:
 - Used by Shopify, GitHub, Netflix, others
 
 ---
+
 ## REST vs GraphQL
 
 - REST: many endpoints, server-defined shape
@@ -53,6 +60,7 @@ audience:
 - GraphQL: ask for what you need
 
 ---
+
 ## The Hello Query
 
 ```graphql
@@ -68,6 +76,7 @@ query {
 - Nothing more
 
 ---
+
 ## Same Endpoint
 
 - POST /graphql
@@ -76,6 +85,7 @@ query {
 - HTTP becomes a transport
 
 ---
+
 ## Schema
 
 - Types, fields, queries, mutations
@@ -84,6 +94,7 @@ query {
 - Foundation of GraphQL
 
 ---
+
 ## Three Operations
 
 - Query: read
@@ -91,6 +102,7 @@ query {
 - Subscription: live updates
 
 ---
+
 ## Why Adopted
 
 - Mobile clients with bandwidth limits
@@ -99,6 +111,7 @@ query {
 - Generated typed clients
 
 ---
+
 ## Why Not Adopted
 
 - Caching is harder
@@ -107,6 +120,7 @@ query {
 - REST often is enough
 
 ---
+
 ## Common Misconceptions
 
 - "Replaces REST": no, choose by fit
@@ -115,6 +129,7 @@ query {
 - "No need for versioning": still need to deprecate
 
 ---
+
 ## Common Introduction Mistakes
 
 - Adopting GraphQL because it is trendy

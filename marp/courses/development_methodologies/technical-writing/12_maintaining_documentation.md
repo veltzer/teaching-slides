@@ -9,6 +9,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Maintaining Documentation
 
 ---
@@ -18,6 +19,7 @@ audience:
 ![maintenance_tasks](svg/courses/development_methodologies/technical-writing/12_maintaining_documentation/maintenance_tasks.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Documentation debt
@@ -28,6 +30,7 @@ audience:
 - The cost of not maintaining
 
 ---
+
 ## Documentation Debt
 
 - Like tech debt, but for docs
@@ -37,11 +40,13 @@ audience:
 - A team with high doc debt has frustrated users
 
 ---
+
 ## Fighting Doc Decay
 
 ![doc_decay](svg/courses/development_methodologies/technical-writing/12_maintaining_documentation/doc_decay.svg)
 
 ---
+
 ## Why Docs Decay
 
 - Code changes; docs don't
@@ -51,6 +56,7 @@ audience:
 - Old features deprecate; docs still describe them
 
 ---
+
 ## Strategies for Keeping Docs Current
 
 - Docs in the same PR as the code change
@@ -60,6 +66,7 @@ audience:
 - Owners per doc area
 
 ---
+
 ## Docs With Code
 
 - The most effective strategy
@@ -69,6 +76,7 @@ audience:
 - Universal in mature engineering teams
 
 ---
+
 ## Required Doc Checkboxes
 
 - PR template includes "did this need a doc change?"
@@ -78,6 +86,7 @@ audience:
 - Combined with team norms, works well
 
 ---
+
 ## Auto-Generated Docs
 
 - API docs from OpenAPI / source comments
@@ -87,6 +96,7 @@ audience:
 - The docs that take care of themselves
 
 ---
+
 ## Owners
 
 - Per-doc area, in CODEOWNERS
@@ -96,6 +106,7 @@ audience:
 - Even a "weak" owner is better than none
 
 ---
+
 ## Quarterly Doc Audit
 
 - Review traffic data
@@ -105,6 +116,7 @@ audience:
 - Catches what continuous maintenance misses
 
 ---
+
 ## Archiving
 
 - Old features that no longer exist: don't pretend they do
@@ -114,6 +126,7 @@ audience:
 - Search results should not lead to outdated content
 
 ---
+
 ## Deprecation Notices
 
 - For features being phased out
@@ -123,6 +136,7 @@ audience:
 - Better than silently breaking users
 
 ---
+
 ## Stale Indicators
 
 - Date stamps on pages ("last updated 2026-05-01")
@@ -132,6 +146,7 @@ audience:
 - Subtle; just enough to prompt review
 
 ---
+
 ## Doc Tests in CI
 
 - Code examples that run as tests
@@ -141,6 +156,7 @@ audience:
 - Worth the setup; pays back continuously
 
 ---
+
 ## Reorganising
 
 - Periodically: are the docs structured for current users?
@@ -150,6 +166,7 @@ audience:
 - Redirects from old URLs preserve external links
 
 ---
+
 ## Cost of Bad Docs
 
 - Repeated questions
@@ -160,6 +177,7 @@ audience:
 - Real money, every day
 
 ---
+
 ## Cost of Good Docs
 
 - Time to write and maintain
@@ -169,6 +187,7 @@ audience:
 - Less than the cost of bad docs by a wide margin
 
 ---
+
 ## A Maintenance Cadence
 
 - Daily: PR-level doc updates with code changes
@@ -178,6 +197,7 @@ audience:
 - Yearly: full content review
 
 ---
+
 ## Common Maintenance Mistakes
 
 - "We'll set up doc maintenance next quarter"

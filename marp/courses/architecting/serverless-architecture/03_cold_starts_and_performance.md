@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Cold Starts and Performance
 
 ---
+
 ## Cold Start Anatomy
 
 ![cold_start](svg/courses/architecting/serverless-architecture/03_cold_starts_and_performance/cold_start.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What a cold start is
@@ -26,6 +29,7 @@ audience:
 - When to accept; when to fix
 
 ---
+
 ## What A Cold Start Is
 
 - Lambda runtime container created from scratch
@@ -35,6 +39,7 @@ audience:
 - Next invocation: cold start again
 
 ---
+
 ## Cold Start Latency
 
 - Java / .NET: 1-3 seconds
@@ -44,6 +49,7 @@ audience:
 - Choice of runtime matters
 
 ---
+
 ## Why It Matters
 
 - User-facing API: 1s extra latency = noticeable
@@ -53,6 +59,7 @@ audience:
 - For sustained traffic: most are warm
 
 ---
+
 ## Measuring Cold Starts
 
 - CloudWatch: duration includes init time
@@ -62,6 +69,7 @@ audience:
 - Synthetic tests after deploy: catch initial cold start
 
 ---
+
 ## Provisioned Concurrency
 
 - Pre-warmed Lambda containers
@@ -71,11 +79,13 @@ audience:
 - Configure: per-function, per-region
 
 ---
+
 ## Mitigation Toolbox
 
 ![cold_start_mitigations](svg/courses/architecting/serverless-architecture/03_cold_starts_and_performance/cold_start_mitigations.svg)
 
 ---
+
 ## Smaller Runtimes
 
 - Less code = faster init
@@ -85,6 +95,7 @@ audience:
 - Profile your code; trim ruthlessly
 
 ---
+
 ## Layer Optimisation
 
 - AWS Lambda Layers: shared libs across functions
@@ -93,6 +104,7 @@ audience:
 - Use sparingly; large layers don't help
 
 ---
+
 ## Init Code
 
 - Code outside the handler runs once per cold start
@@ -101,6 +113,7 @@ audience:
 - Handler stays fast on warm invocations
 
 ---
+
 ## Avoid In Hot Path
 
 - DNS lookups
@@ -110,6 +123,7 @@ audience:
 - Each adds ms to every cold start
 
 ---
+
 ## Lightweight Frameworks
 
 - Express, FastAPI, Flask: lightweight; ~100-200ms init
@@ -118,6 +132,7 @@ audience:
 - Pick framework with serverless in mind
 
 ---
+
 ## Latency Budget
 
 - Frontend: 100ms target
@@ -127,6 +142,7 @@ audience:
 - Don't blow the budget on cold starts
 
 ---
+
 ## Async Helps
 
 - Async invocations: no client waiting
@@ -136,6 +152,7 @@ audience:
 - Architecture helps; not just runtime tuning
 
 ---
+
 ## Edge Functions
 
 - Cloudflare Workers: V8 isolates; sub-ms cold start
@@ -145,6 +162,7 @@ audience:
 - Worth considering for global APIs
 
 ---
+
 ## When To Accept Cold Starts
 
 - Internal APIs with relaxed SLAs
@@ -154,6 +172,7 @@ audience:
 - Optimisation cost > value
 
 ---
+
 ## Common Performance Mistakes
 
 - Java / .NET for low-latency APIs

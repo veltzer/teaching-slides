@@ -9,9 +9,11 @@ audience:
   - audiences:senior-developers
 
 ---
+
 # The Context Window and Compaction
 
 ---
+
 ## What This Chapter Covers
 
 - What lives in the context window
@@ -21,6 +23,7 @@ audience:
 - Prompt caching
 
 ---
+
 ## What Is The Context Window
 
 - Everything the model sees this turn
@@ -29,6 +32,7 @@ audience:
 - The running conversation
 
 ---
+
 ## What Else Lives There
 
 - Tool definitions
@@ -37,6 +41,7 @@ audience:
 - Past assistant turns
 
 ---
+
 ## The System Prompt
 
 - Set by Anthropic and the harness
@@ -45,6 +50,7 @@ audience:
 - You influence it via CLAUDE.md and config
 
 ---
+
 ## Tool Results
 
 - Big tool outputs cost tokens
@@ -53,6 +59,7 @@ audience:
 - Use grep over find, head over cat
 
 ---
+
 ## File Reads
 
 - Each read consumes tokens
@@ -61,11 +68,13 @@ audience:
 - Be intentional about what to load
 
 ---
+
 ## What Is In The Window
 
 ![context_window](svg/courses/ai/claude-workshop/03_context_and_compaction/context_window.svg)
 
 ---
+
 ## Token Budgets
 
 - Models have hard token limits
@@ -74,6 +83,7 @@ audience:
 - A "1M context" model is still finite
 
 ---
+
 ## Cost As A Function Of Tokens
 
 - Input tokens cost less than output
@@ -82,6 +92,7 @@ audience:
 - Watch the meter, not just the answer
 
 ---
+
 ## Latency As A Function Of Tokens
 
 - Bigger context means slower turns
@@ -90,6 +101,7 @@ audience:
 - Short prompts win when possible
 
 ---
+
 ## Reading Your Window
 
 - Status line shows token usage
@@ -98,6 +110,7 @@ audience:
 - Trim accordingly
 
 ---
+
 ## How Long Sessions Go Wrong
 
 - Attention drifts from early rules
@@ -106,6 +119,7 @@ audience:
 - Errors compound silently
 
 ---
+
 ## Tool Result Spam
 
 - Verbose output fills the window
@@ -114,6 +128,7 @@ audience:
 - Ask for summaries, not dumps
 
 ---
+
 ## The "I Forgot" Failure Mode
 
 - Mid-task drift
@@ -122,6 +137,7 @@ audience:
 - Time to compact or restart
 
 ---
+
 ## What Is Compaction
 
 - The harness summarizes earlier turns
@@ -130,6 +146,7 @@ audience:
 - Old detail is gone
 
 ---
+
 ## Automatic Compaction
 
 - Triggered as you approach the limit
@@ -138,6 +155,7 @@ audience:
 - Work proceeds normally after
 
 ---
+
 ## Manual Compaction
 
 - `/compact` triggers it on demand
@@ -146,6 +164,7 @@ audience:
 - Better than letting it surprise you
 
 ---
+
 ## What Survives Compaction
 
 - The summary the harness wrote
@@ -154,6 +173,7 @@ audience:
 - Any pinned tasks
 
 ---
+
 ## What Does Not Survive
 
 - Verbatim tool outputs
@@ -162,11 +182,13 @@ audience:
 - Implicit understanding
 
 ---
+
 ## Compaction: Before And After
 
 ![compaction_before_after](svg/courses/ai/claude-workshop/03_context_and_compaction/compaction_before_after.svg)
 
 ---
+
 ## Prompt Caching
 
 - Anthropic caches identical prefixes
@@ -175,6 +197,7 @@ audience:
 - Structure prompts to maximize hits
 
 ---
+
 ## Keeping The Cache Warm
 
 - Reuse the same system prompt
@@ -183,6 +206,7 @@ audience:
 - Repeat queries soon, not later
 
 ---
+
 ## The Five Minute Window
 
 - TTL resets on each hit
@@ -191,11 +215,13 @@ audience:
 - Cheaper to keep going than to come back
 
 ---
+
 ## Prompt Cache In Practice
 
 ![prompt_cache](svg/courses/ai/claude-workshop/03_context_and_compaction/prompt_cache.svg)
 
 ---
+
 ## Starting Fresh Vs Continuing
 
 - Continue when the goal is the same
@@ -204,6 +230,7 @@ audience:
 - A fresh session is cheap
 
 ---
+
 ## Sub-Agents To Stay Clean
 
 - Delegate big reads to an agent
@@ -212,6 +239,7 @@ audience:
 - More on this later
 
 ---
+
 ## Writing Things Down
 
 - Memory and notes outlive a session
@@ -220,6 +248,7 @@ audience:
 - Do not trust the conversation alone
 
 ---
+
 ## Hands-On Exercise
 
 - Trigger a compaction with `/compact`

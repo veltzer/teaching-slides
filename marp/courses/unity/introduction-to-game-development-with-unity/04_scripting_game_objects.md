@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Scripting Game Objects
 
 ---
+
 ## Movement Options
 
 ![movement_options](svg/courses/unity/introduction-to-game-development-with-unity/04_scripting_game_objects/movement_options.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Attaching scripts to GameObjects
@@ -26,6 +29,7 @@ audience:
 - A working "shooter" example, piece by piece
 
 ---
+
 ## Attaching a Script
 
 - Right-click in Project &#8594; Create &#8594; C# Script &#8594; name it `PlayerController`
@@ -35,6 +39,7 @@ audience:
 - One GameObject can have any number of scripts attached
 
 ---
+
 ## Update vs FixedUpdate
 
 ```csharp
@@ -53,6 +58,7 @@ void FixedUpdate() {
 - Use `Time.fixedDeltaTime` in FixedUpdate (or just trust the cadence)
 
 ---
+
 ## Reading Input
 
 ```csharp
@@ -73,6 +79,7 @@ void Update() {
 - Newer alternative: the Input System package — covered in advanced courses
 
 ---
+
 ## The Transform Component
 
 - Every GameObject has a Transform; it's how Unity knows where it is
@@ -82,6 +89,7 @@ void Update() {
 - `transform.localPosition`: position relative to the parent
 
 ---
+
 ## Moving With Transform
 
 ```csharp
@@ -95,6 +103,7 @@ transform.Rotate(0, 90 * Time.deltaTime, 0);
 - For physically-realistic motion, use Rigidbody instead
 
 ---
+
 ## Moving With Rigidbody
 
 ```csharp
@@ -115,6 +124,7 @@ void FixedUpdate() {
 - Cache `GetComponent<Rigidbody>()` in `Awake` — it's not free
 
 ---
+
 ## Accessing Other Components
 
 ```csharp
@@ -137,6 +147,7 @@ void OnHit() {
 - Returns `null` if not found — protect against that or fail loudly
 
 ---
+
 ## Inspector-Visible References
 
 ```csharp
@@ -154,6 +165,7 @@ public class Turret : MonoBehaviour
 - Always-public fields work too but encapsulation is generally better
 
 ---
+
 ## Spawning With Instantiate
 
 ```csharp
@@ -171,6 +183,7 @@ void Fire() {
 - Pair with `Destroy(go)` or you'll leak GameObjects forever
 
 ---
+
 ## Destroy
 
 ```csharp
@@ -186,6 +199,7 @@ void OnCollisionEnter(Collision c) {
 - For frequent spawn/despawn, prefer object pooling — covered later
 
 ---
+
 ## Collisions and Triggers
 
 ```csharp
@@ -205,6 +219,7 @@ void OnTriggerEnter(Collider other) {
 - Use tags for cheap categorisation; layers for physics filtering
 
 ---
+
 ## Tags and Layers
 
 - Tags: human-readable label per GameObject ("Player", "Enemy", "Pickup")
@@ -214,6 +229,7 @@ void OnTriggerEnter(Collider other) {
 - Don't overuse tags for state — that's what scripts are for
 
 ---
+
 ## Public Methods Called From the Editor
 
 ```csharp
@@ -230,11 +246,13 @@ public class HighScore : MonoBehaviour {
 - Saves writing event-handler code by hand
 
 ---
+
 ## Putting It Together
 
 ![object_interaction](svg/courses/unity/introduction-to-game-development-with-unity/04_scripting_game_objects/object_interaction.svg)
 
 ---
+
 ## Common Mistakes
 
 - Calling `GetComponent<T>()` in Update every frame instead of caching in Awake

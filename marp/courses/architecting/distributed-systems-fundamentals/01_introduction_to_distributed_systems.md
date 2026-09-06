@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Introduction to Distributed Systems
 
 ---
+
 ## What This Chapter Covers
 
 - What a distributed system is
@@ -21,6 +23,7 @@ audience:
 - A short tour of what's ahead
 
 ---
+
 ## What A Distributed System Is
 
 - Multiple computers cooperating to deliver a service
@@ -30,16 +33,19 @@ audience:
 - Even "your laptop" + cloud is a distributed system
 
 ---
+
 ## Fallacies
 
 ![fallacies](svg/courses/architecting/distributed-systems-fundamentals/01_introduction_to_distributed_systems/fallacies.svg)
 
 ---
+
 ## System Properties
 
 ![system_properties](svg/courses/architecting/distributed-systems-fundamentals/01_introduction_to_distributed_systems/system_properties.svg)
 
 ---
+
 ## Why Distribute
 
 - Scale: more capacity than one machine
@@ -49,6 +55,7 @@ audience:
 - Specialisation: different machines for different jobs
 
 ---
+
 ## The 8 Fallacies
 
 - The network is reliable
@@ -61,6 +68,7 @@ audience:
 - The network is homogeneous
 
 ---
+
 ## What The Fallacies Mean
 
 - Each is *false*; designers who assume true build broken systems
@@ -70,6 +78,7 @@ audience:
 - Read Peter Deutsch (1994) for the original
 
 ---
+
 ## Local vs Distributed Calls
 
 - Local function call: nanoseconds; never fails (unless OOM)
@@ -78,6 +87,7 @@ audience:
 - The first lesson: respect the network
 
 ---
+
 ## Failure Modes
 
 - Network partition (some nodes can't reach others)
@@ -87,6 +97,7 @@ audience:
 - Most systems handle the first three; the fourth is exotic
 
 ---
+
 ## Determinism Goes Out The Window
 
 - Same input + same code &#8594; same output (local)
@@ -96,6 +107,7 @@ audience:
 - Tools (formal methods, fault injection) help
 
 ---
+
 ## Trade-Offs
 
 - Strong consistency vs availability (CAP)
@@ -105,6 +117,7 @@ audience:
 - Pick deliberately; don't drift
 
 ---
+
 ## When NOT To Distribute
 
 - Your data fits on one big server
@@ -114,6 +127,7 @@ audience:
 - "We need microservices" before having a working monolith — usually wrong
 
 ---
+
 ## A Map Of The Course
 
 - CAP theorem and consistency models
@@ -125,6 +139,7 @@ audience:
 - Failure modes
 
 ---
+
 ## Vocabulary You'll Need
 
 - **Node**: a participant
@@ -134,6 +149,7 @@ audience:
 - **Eventual consistency**: replicas converge over time
 
 ---
+
 ## What This Course Won't Cover
 
 - Distributed databases in detail (separate course)
@@ -142,6 +158,7 @@ audience:
 - This is the *fundamentals*; build the conceptual framework
 
 ---
+
 ## Common Beginner Mistakes
 
 - "Just retry" without idempotency

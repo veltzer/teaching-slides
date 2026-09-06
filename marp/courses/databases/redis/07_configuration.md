@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Redis Configuration and Management
 
 ---
@@ -381,6 +382,7 @@ redis-cli MEMORY STATS
 ```
 
 ---
+
 ## Automatic Key Management: Example
 
 Key expiration and eviction:
@@ -432,6 +434,7 @@ MEMORY DOCTOR
 ```
 
 ---
+
 ## Monitoring Redis in Production: Overview
 
 Key metrics to monitor:

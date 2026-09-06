@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Backups and Restore
 
 ---
+
 ## What This Chapter Covers
 
 - Backup types
@@ -21,6 +23,7 @@ audience:
 - Restore drills
 
 ---
+
 ## Why Backups
 
 - Last line of defense
@@ -29,6 +32,7 @@ audience:
 - Required by compliance
 
 ---
+
 ## Backup Types
 
 - Full
@@ -37,11 +41,13 @@ audience:
 - Snapshot
 
 ---
+
 ## Backup Cadence
 
 ![backup_types](svg/courses/architecting/disaster-recovery/03_backups_and_restore/backup_types.svg)
 
 ---
+
 ## Frequency
 
 - Driven by RPO
@@ -50,6 +56,7 @@ audience:
 - Continuous via WAL or change feeds
 
 ---
+
 ## Snapshots
 
 - Point in time
@@ -58,6 +65,7 @@ audience:
 - Cheap to take, careful to verify
 
 ---
+
 ## Storage Tiers
 
 - Hot for recent
@@ -66,11 +74,13 @@ audience:
 - Costs differ by orders of magnitude
 
 ---
+
 ## Tiers Compared
 
 ![storage_tiers](svg/courses/architecting/disaster-recovery/03_backups_and_restore/storage_tiers.svg)
 
 ---
+
 ## Offsite
 
 - Same region is not enough
@@ -79,6 +89,7 @@ audience:
 - Air gap for highest tier
 
 ---
+
 ## Immutability
 
 - Object lock or WORM
@@ -87,6 +98,7 @@ audience:
 - Time-bound retention
 
 ---
+
 ## Encryption
 
 - Encrypt at rest
@@ -95,6 +107,7 @@ audience:
 - Test that decryption still works
 
 ---
+
 ## Retention
 
 - Driven by policy and law
@@ -103,6 +116,7 @@ audience:
 - Audit deletions
 
 ---
+
 ## Restore Procedures
 
 - Documented step by step
@@ -111,6 +125,7 @@ audience:
 - Validation steps
 
 ---
+
 ## Restore Drills
 
 - Quarterly minimum
@@ -119,6 +134,7 @@ audience:
 - Time the operation
 
 ---
+
 ## Partial Restore
 
 - Single table or directory
@@ -127,6 +143,7 @@ audience:
 - Keep granular backups
 
 ---
+
 ## Common Backup Mistakes
 
 - Untested backups

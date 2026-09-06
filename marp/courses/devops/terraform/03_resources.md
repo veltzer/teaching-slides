@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Resources
 
 ## What is a Resource?
@@ -65,6 +66,7 @@ resource "google_compute_instance" "web_server" {
 ```
 
 ---
+
 ## What are Providers?: Details
 
 - Plugins that Terraform uses to interact with APIs
@@ -73,6 +75,7 @@ resource "google_compute_instance" "web_server" {
 - Downloaded during `terraform init`
 
 ---
+
 ## What are Providers?
 
 ![what_are_providers](svg/courses/devops/terraform/03_resources/what_are_providers.svg)
@@ -310,6 +313,7 @@ resource "aws_instance" "web" {
 - Format: `resource_type.resource_name.attribute`
 
 ---
+
 ## Implicit Dependencies: Example
 
 ```hcl
@@ -324,6 +328,7 @@ resource "aws_subnet" "public" {
 ```
 
 ---
+
 ## Implicit Dependencies
 
 ![terraform_automatically_knows_this_depends_on_the_vpc](svg/courses/devops/terraform/03_resources/terraform_automatically_knows_this_depends_on_the_vpc.svg)

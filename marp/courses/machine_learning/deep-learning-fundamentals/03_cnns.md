@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Convolutional Neural Networks
 
 ---
+
 ## What This Chapter Covers
 
 - Convolution and pooling operations
@@ -20,6 +22,7 @@ audience:
 - Data augmentation techniques
 
 ---
+
 ## Why CNNs
 
 - Images have spatial structure
@@ -28,6 +31,7 @@ audience:
 - CNNs bake locality into the architecture
 
 ---
+
 ## What a CNN Sees
 
 - Pixels as a 2D grid
@@ -36,6 +40,7 @@ audience:
 - Shared filters across the image
 
 ---
+
 ## The Convolution Operation
 
 - Slide a small filter over the image
@@ -44,11 +49,13 @@ audience:
 - Output is a feature map
 
 ---
+
 ## Convolution Visualized
 
 ![convolution](svg/courses/machine_learning/deep-learning-fundamentals/03_cnns/convolution.svg)
 
 ---
+
 ## Filters Learn Features
 
 - First layer: edges, colors
@@ -57,6 +64,7 @@ audience:
 - Learned, not hand-coded
 
 ---
+
 ## Filter, Kernel, Feature Map
 
 - Filter and kernel: same thing
@@ -65,6 +73,7 @@ audience:
 - Many filters per layer
 
 ---
+
 ## Stride
 
 - Step size of the filter
@@ -73,6 +82,7 @@ audience:
 - Trade resolution for speed
 
 ---
+
 ## Padding
 
 - Add zeros around the image
@@ -81,6 +91,7 @@ audience:
 - "valid" padding: no padding, output shrinks
 
 ---
+
 ## Receptive Field
 
 - The input region that affects one output
@@ -89,11 +100,13 @@ audience:
 - Key concept for what a layer can learn
 
 ---
+
 ## Receptive Field Grows With Depth
 
 ![receptive field](svg/courses/machine_learning/deep-learning-fundamentals/03_cnns/receptive_field.svg)
 
 ---
+
 ## Pooling
 
 - Downsample feature maps
@@ -102,11 +115,13 @@ audience:
 - Reduces compute and gives translation tolerance
 
 ---
+
 ## Pooling Visualized
 
 ![pooling](svg/courses/machine_learning/deep-learning-fundamentals/03_cnns/pooling.svg)
 
 ---
+
 ## Channels
 
 - Color images: 3 channels (RGB)
@@ -115,6 +130,7 @@ audience:
 - Number of output channels = number of filters
 
 ---
+
 ## A Convolutional Block
 
 - Conv layer
@@ -123,6 +139,7 @@ audience:
 - Optional pooling
 
 ---
+
 ## Building a CNN
 
 - Stack convolutional blocks
@@ -131,11 +148,13 @@ audience:
 - Add a small dense head
 
 ---
+
 ## CNN Architecture Diagram
 
 ![cnn_architecture](svg/courses/machine_learning/deep-learning-fundamentals/03_cnns/cnn_architecture.svg)
 
 ---
+
 ## A Tiny CNN in Keras
 
 ```python
@@ -150,6 +169,7 @@ model = keras.Sequential([
 ```
 
 ---
+
 ## The Same in PyTorch
 
 ```python
@@ -168,6 +188,7 @@ class TinyCNN(nn.Module):
 ```
 
 ---
+
 ## LeNet
 
 - LeCun, 1998
@@ -176,6 +197,7 @@ class TinyCNN(nn.Module):
 - Ran on a CPU on small images
 
 ---
+
 ## AlexNet
 
 - Krizhevsky et al, 2012
@@ -184,6 +206,7 @@ class TinyCNN(nn.Module):
 - Kicked off the deep learning era
 
 ---
+
 ## VGG
 
 - Simonyan and Zisserman, 2014
@@ -192,6 +215,7 @@ class TinyCNN(nn.Module):
 - Heavy on parameters, easy to understand
 
 ---
+
 ## GoogLeNet and Inception
 
 - Inception modules: parallel filter sizes
@@ -200,6 +224,7 @@ class TinyCNN(nn.Module):
 - Won ImageNet 2014
 
 ---
+
 ## ResNet
 
 - He et al, 2015
@@ -208,6 +233,7 @@ class TinyCNN(nn.Module):
 - Backbone of countless modern models
 
 ---
+
 ## Why Residual Connections
 
 - Gradient has a direct path back
@@ -216,11 +242,13 @@ class TinyCNN(nn.Module):
 - Now standard everywhere
 
 ---
+
 ## ResNet Block
 
 ![resnet_block](svg/courses/machine_learning/deep-learning-fundamentals/03_cnns/resnet_block.svg)
 
 ---
+
 ## Modern Architectures
 
 - EfficientNet: scaled depth, width, resolution
@@ -229,6 +257,7 @@ class TinyCNN(nn.Module):
 - Vision Transformers: convs replaced by attention
 
 ---
+
 ## Image Classification
 
 - One label per image
@@ -237,6 +266,7 @@ class TinyCNN(nn.Module):
 - Top-1 and top-5 accuracy
 
 ---
+
 ## ImageNet
 
 - 1000 classes, ~1.3M training images
@@ -245,6 +275,7 @@ class TinyCNN(nn.Module):
 - Most CV transfer learning starts here
 
 ---
+
 ## Object Detection
 
 - Find and classify objects in an image
@@ -253,6 +284,7 @@ class TinyCNN(nn.Module):
 - Two main families: two-stage and one-stage
 
 ---
+
 ## Two-Stage Detectors
 
 - R-CNN, Fast R-CNN, Faster R-CNN
@@ -261,6 +293,7 @@ class TinyCNN(nn.Module):
 - Accurate, slower
 
 ---
+
 ## One-Stage Detectors
 
 - YOLO, SSD, RetinaNet
@@ -269,11 +302,13 @@ class TinyCNN(nn.Module):
 - Good for real-time use
 
 ---
+
 ## Object Detection Output
 
 ![object_detection](svg/courses/machine_learning/deep-learning-fundamentals/03_cnns/object_detection.svg)
 
 ---
+
 ## Anchor Boxes
 
 - Predefined box shapes
@@ -282,6 +317,7 @@ class TinyCNN(nn.Module):
 - Modern: anchor-free designs gaining ground
 
 ---
+
 ## Non-Maximum Suppression
 
 - Many overlapping boxes per object
@@ -290,6 +326,7 @@ class TinyCNN(nn.Module):
 - Post-processing step, not learned
 
 ---
+
 ## Semantic Segmentation
 
 - Label every pixel
@@ -298,6 +335,7 @@ class TinyCNN(nn.Module):
 - Used in medical imaging, satellite, autonomous driving
 
 ---
+
 ## Instance Segmentation
 
 - Segment each object separately
@@ -306,6 +344,7 @@ class TinyCNN(nn.Module):
 - Heavier and slower
 
 ---
+
 ## Data Augmentation
 
 - Generate variants from training data
@@ -314,11 +353,13 @@ class TinyCNN(nn.Module):
 - Effectively grows the dataset
 
 ---
+
 ## Augmentation Examples
 
 ![augmentation](svg/courses/machine_learning/deep-learning-fundamentals/03_cnns/augmentation.svg)
 
 ---
+
 ## Augmentation in Keras
 
 ```python
@@ -330,6 +371,7 @@ augment = keras.Sequential([
 ```
 
 ---
+
 ## Augmentation Best Practices
 
 - Pick transforms that preserve labels
@@ -338,6 +380,7 @@ augment = keras.Sequential([
 - Stronger augmentation, larger nets
 
 ---
+
 ## Common CNN Pitfalls
 
 - Forgetting to normalize inputs
@@ -346,6 +389,7 @@ augment = keras.Sequential([
 - Augmenting validation data by accident
 
 ---
+
 ## Practical Tips
 
 - Start with a known architecture
@@ -354,6 +398,7 @@ augment = keras.Sequential([
 - Try one architecture deeply before swapping
 
 ---
+
 ## Summary
 
 - CNNs exploit spatial structure with shared filters

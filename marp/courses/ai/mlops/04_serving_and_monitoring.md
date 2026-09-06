@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Serving and Monitoring
 
 ---
+
 ## What This Chapter Covers
 
 - Serving patterns
@@ -21,6 +23,7 @@ audience:
 - Alerts
 
 ---
+
 ## Online Serving
 
 - Synchronous request, response
@@ -29,6 +32,7 @@ audience:
 - High availability
 
 ---
+
 ## Batch Serving
 
 - Bulk inference offline
@@ -37,6 +41,7 @@ audience:
 - Scheduled jobs
 
 ---
+
 ## Streaming Serving
 
 - Process events as they arrive
@@ -45,6 +50,7 @@ audience:
 - State for session-based features
 
 ---
+
 ## Serving Frameworks
 
 - TensorFlow Serving
@@ -53,6 +59,7 @@ audience:
 - KServe
 
 ---
+
 ## Performance Knobs
 
 - Batch size
@@ -61,6 +68,7 @@ audience:
 - Async pipelining
 
 ---
+
 ## Operational Metrics
 
 - Latency p50, p95, p99
@@ -69,6 +77,7 @@ audience:
 - Resource use
 
 ---
+
 ## Quality Metrics
 
 - Live accuracy where labels arrive
@@ -77,6 +86,7 @@ audience:
 - Business KPI link
 
 ---
+
 ## Data Drift
 
 - Input distribution changes
@@ -85,11 +95,13 @@ audience:
 - Alert when drift exceeds threshold
 
 ---
+
 ## Drift Kinds
 
 ![drift_kinds](svg/courses/ai/mlops/04_serving_and_monitoring/drift_kinds.svg)
 
 ---
+
 ## Concept Drift
 
 - Relationship between input and label changes
@@ -98,6 +110,7 @@ audience:
 - Triggers retraining
 
 ---
+
 ## Shadow and Canary
 
 - Shadow: new model gets traffic, no answer
@@ -106,11 +119,13 @@ audience:
 - Promote on success
 
 ---
+
 ## Shadow vs Canary
 
 ![shadow_canary](svg/courses/ai/mlops/04_serving_and_monitoring/shadow_canary.svg)
 
 ---
+
 ## A/B Testing
 
 - Split users
@@ -119,6 +134,7 @@ audience:
 - Decide with statistical rigor
 
 ---
+
 ## Alerting
 
 - On latency
@@ -127,6 +143,7 @@ audience:
 - On accuracy regression
 
 ---
+
 ## Common Serving Mistakes
 
 - No online metrics

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Bisect
 
 ---
+
 ## What This Chapter Covers
 
 - The binary search idea behind `git bisect`
@@ -20,6 +22,7 @@ audience:
 - When bisect helps and when it doesn't
 
 ---
+
 ## The Problem Bisect Solves
 
 - A bug exists today; the codebase worked fine some time ago
@@ -29,6 +32,7 @@ audience:
 - 1024 commits become 10 tests, not 1024
 
 ---
+
 ## How Binary Search Applies to Commits
 
 - Mark a known-good commit and a known-bad commit
@@ -38,16 +42,19 @@ audience:
 - Continue until exactly one commit is left — the culprit
 
 ---
+
 ## Bisect Visualized
 
 ![bisect_search](svg/courses/git/advanced-git/03_bisect/bisect_search.svg)
 
 ---
+
 ## Bisect Workflow Visualised
 
 ![bisect_workflow](svg/courses/git/advanced-git/03_bisect/bisect_workflow.svg)
 
 ---
+
 ## Starting a Manual Bisect
 
 ```bash
@@ -61,6 +68,7 @@ git bisect good v2.3.0            # this older release was fine
 - You then test and report
 
 ---
+
 ## Reporting Results
 
 ```bash
@@ -74,6 +82,7 @@ git bisect skip        # cannot test (e.g., build broken)
 - Continues until it identifies the first bad commit
 
 ---
+
 ## Skip: When You Cannot Test
 
 - Sometimes the midpoint commit doesn't compile
@@ -83,6 +92,7 @@ git bisect skip        # cannot test (e.g., build broken)
 - Final result may be a range if skipped commits cannot be ruled out
 
 ---
+
 ## Ending a Bisect
 
 ```bash
@@ -95,6 +105,7 @@ git bisect reset
 - `git bisect log` saves a record of the search
 
 ---
+
 ## Automated Bisect With Run
 
 ```bash
@@ -109,11 +120,13 @@ git bisect run ./test_for_bug.sh
 - Exit 128+ — abort the bisect
 
 ---
+
 ## Automated Bisect Visualised
 
 ![bisect_automation](svg/courses/git/advanced-git/03_bisect/bisect_automation.svg)
 
 ---
+
 ## Writing a Bisect Script
 
 ```bash
@@ -128,6 +141,7 @@ exit 0                               # test passes: good
 - Keep the script in your repo — every bisect can use it
 
 ---
+
 ## Bisect Output: Reading the Result
 
 ```output
@@ -143,6 +157,7 @@ Date:   ...
 - Sometimes the "first bad" is an innocent merge commit; investigate its parents
 
 ---
+
 ## Using Bisect on a Subset
 
 ```bash
@@ -155,6 +170,7 @@ git bisect start HEAD v2.3.0 -- src/auth/
 - Useful for monorepos
 
 ---
+
 ## Bisecting Through Merges
 
 - Bisect handles merge commits naturally
@@ -163,6 +179,7 @@ git bisect start HEAD v2.3.0 -- src/auth/
 - Don't dismiss merges — they are real commits with real changes
 
 ---
+
 ## Bisect Tips That Save Time
 
 - Write the test script before starting bisect — half the work is reproducing the bug reliably
@@ -172,6 +189,7 @@ git bisect start HEAD v2.3.0 -- src/auth/
 - A flaky test makes bisect lie
 
 ---
+
 ## Common Pitfalls
 
 - Forgetting `git bisect reset` — leaves HEAD detached
@@ -181,6 +199,7 @@ git bisect start HEAD v2.3.0 -- src/auth/
 - Build environment differences between commits cause false positives
 
 ---
+
 ## Bisect vs Other Tools
 
 - Bisect — finds the *first* commit that broke something
@@ -190,6 +209,7 @@ git bisect start HEAD v2.3.0 -- src/auth/
 - Bisect is unique: it's the only tool that uses behavior, not text, as the predicate
 
 ---
+
 ## Bisect Beyond Bugs
 
 - Find the commit that improved performance — bad means "fast", good means "slow"
@@ -199,6 +219,7 @@ git bisect start HEAD v2.3.0 -- src/auth/
 - The script defines what "good" means for your search
 
 ---
+
 ## Bisect at Scale
 
 - Works on long histories without slowing down
@@ -208,6 +229,7 @@ git bisect start HEAD v2.3.0 -- src/auth/
 - For huge repos, partial clone or sparse checkout helps each step
 
 ---
+
 ## Best Practices
 
 - Reproduce the bug *before* starting bisect
@@ -217,6 +239,7 @@ git bisect start HEAD v2.3.0 -- src/auth/
 - Review the "first bad" commit before celebrating — sometimes it's misleading
 
 ---
+
 ## Summary
 
 - Bisect performs binary search across commits

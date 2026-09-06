@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to Message Queues
 
 ---
+
 ## What This Chapter Covers
 
 - What a queue is
@@ -21,6 +23,7 @@ audience:
 - Course outline
 
 ---
+
 ## What a Queue Is
 
 - Buffer between producer and consumer
@@ -29,6 +32,7 @@ audience:
 - Decouples in topology
 
 ---
+
 ## Why Use One
 
 - Smooth load spikes
@@ -37,11 +41,13 @@ audience:
 - Async workflows
 
 ---
+
 ## Reasons Visualised
 
 ![why_queues](svg/courses/architecting/message-queues/01_introduction/why_queues.svg)
 
 ---
+
 ## Queue vs Topic
 
 - Queue: one consumer per message
@@ -50,6 +56,7 @@ audience:
 - Many systems offer both
 
 ---
+
 ## Producer and Consumer
 
 - Producer writes messages
@@ -58,11 +65,13 @@ audience:
 - Broker is the trust boundary
 
 ---
+
 ## Three Roles
 
 ![producer_broker_consumer](svg/courses/architecting/message-queues/01_introduction/producer_broker_consumer.svg)
 
 ---
+
 ## Pull vs Push
 
 - Pull: consumer asks for work
@@ -71,6 +80,7 @@ audience:
 - Push needs flow control
 
 ---
+
 ## Throughput Model
 
 - Messages per second
@@ -79,6 +89,7 @@ audience:
 - Bound by slowest consumer
 
 ---
+
 ## Persistence
 
 - In-memory only: fast, lossy
@@ -87,6 +98,7 @@ audience:
 - Pick by data value
 
 ---
+
 ## Ordering
 
 - Per-queue or per-key
@@ -95,6 +107,7 @@ audience:
 - Document the guarantee
 
 ---
+
 ## At-Most-Once
 
 - May be lost
@@ -103,6 +116,7 @@ audience:
 - Suitable for telemetry only
 
 ---
+
 ## At-Least-Once
 
 - Never lost
@@ -111,6 +125,7 @@ audience:
 - Consumer must be idempotent
 
 ---
+
 ## Exactly-Once
 
 - Lossless and unique
@@ -119,6 +134,7 @@ audience:
 - Idempotency still required
 
 ---
+
 ## Course Outline
 
 - Patterns
@@ -128,6 +144,7 @@ audience:
 - Failure modes
 
 ---
+
 ## Common Beginner Mistakes
 
 - Using queue as a database

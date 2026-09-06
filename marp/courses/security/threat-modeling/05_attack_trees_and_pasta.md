@@ -11,9 +11,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Attack Trees and PASTA
 
 ---
+
 ## What This Chapter Covers
 
 - Attack trees: structure, nodes, semantics
@@ -23,6 +25,7 @@ audience:
 - When to use each, and how they complement STRIDE
 
 ---
+
 ## Why Attack Trees?
 
 - Goal-driven instead of element-driven
@@ -32,6 +35,7 @@ audience:
 - A complementary lens to STRIDE's per-element view
 
 ---
+
 ## Attack Tree Basics
 
 - Root node — the attacker's goal (e.g., "exfiltrate customer data")
@@ -41,11 +45,13 @@ audience:
 - OR nodes — any child suffices
 
 ---
+
 ## Attack Tree Visualized
 
 ![attack_tree](svg/courses/security/threat-modeling/05_attack_trees_and_pasta/attack_tree.svg)
 
 ---
+
 ## Building an Attack Tree
 
 - State the attacker's goal at the root
@@ -55,6 +61,7 @@ audience:
 - Iterate — add detail where threats are concentrated
 
 ---
+
 ## OR vs AND Nodes
 
 - OR: any child achieves the parent — attacker picks the easiest
@@ -64,6 +71,7 @@ audience:
 - OR nodes need every branch defended
 
 ---
+
 ## Annotating Nodes
 
 - Cost — dollars, time, or skill required
@@ -73,6 +81,7 @@ audience:
 - Each annotation drives different mitigation choices
 
 ---
+
 ## Computing Properties Up the Tree
 
 - For OR nodes — minimum cost across children (attackers pick the cheapest)
@@ -82,6 +91,7 @@ audience:
 - Defend it first
 
 ---
+
 ## A Worked Example
 
 - Goal: "Read another user's emails"
@@ -91,11 +101,13 @@ audience:
 - Each leaf gets cost and probability — reveals the easy path
 
 ---
+
 ## Attack Tree Worked Visual
 
 ![attack_tree_example](svg/courses/security/threat-modeling/05_attack_trees_and_pasta/attack_tree_example.svg)
 
 ---
+
 ## Attack Trees in Practice
 
 - Treat as living documents — update with new techniques
@@ -105,6 +117,7 @@ audience:
 - Don't try to enumerate everything — focus on critical assets
 
 ---
+
 ## Attack Trees vs STRIDE
 
 - STRIDE — what could go wrong with each element?
@@ -114,6 +127,7 @@ audience:
 - Attack trees are heavier — reserve them for crown-jewel scenarios
 
 ---
+
 ## What is PASTA?
 
 - Process for Attack Simulation and Threat Analysis
@@ -123,6 +137,7 @@ audience:
 - Strong on integrating business impact
 
 ---
+
 ## PASTA's Seven Stages
 
 - Stage 1 — define objectives (business)
@@ -134,16 +149,19 @@ audience:
 - Stage 7 — risk and impact analysis
 
 ---
+
 ## PASTA Stages Visualized
 
 ![pasta_stages](svg/courses/security/threat-modeling/05_attack_trees_and_pasta/pasta_stages.svg)
 
 ---
+
 ## PASTA Outcomes By Phase
 
 ![pasta_outcomes](svg/courses/security/threat-modeling/05_attack_trees_and_pasta/pasta_outcomes.svg)
 
 ---
+
 ## Stage 1: Define Objectives
 
 - Business goals: revenue, compliance, brand
@@ -153,6 +171,7 @@ audience:
 - Output: business security objectives document
 
 ---
+
 ## Stage 2: Define Technical Scope
 
 - Boundaries of the system being modeled
@@ -162,6 +181,7 @@ audience:
 - Output: scope document with explicit in/out lists
 
 ---
+
 ## Stage 3: Application Decomposition
 
 - DFDs, use cases, user/role models
@@ -171,6 +191,7 @@ audience:
 - This is where PASTA overlaps most with STRIDE-style work
 
 ---
+
 ## Stage 4: Threat Analysis
 
 - Identify relevant threat actors and their motivations
@@ -180,6 +201,7 @@ audience:
 - Output: a curated threat list, not a generic one
 
 ---
+
 ## Stage 5: Vulnerability Analysis
 
 - Map known vulnerabilities to your assets
@@ -189,6 +211,7 @@ audience:
 - Output: vulnerabilities with affected assets
 
 ---
+
 ## Stage 6: Attack Modeling
 
 - Build attack trees for the most relevant threats
@@ -198,6 +221,7 @@ audience:
 - Output: validated attack scenarios
 
 ---
+
 ## Stage 7: Risk and Impact
 
 - Quantify business risk per threat
@@ -207,6 +231,7 @@ audience:
 - Output: prioritized risk-treatment plan
 
 ---
+
 ## PASTA Strengths
 
 - Business-aligned — risk in financial terms
@@ -216,6 +241,7 @@ audience:
 - Drives accountability at the executive level
 
 ---
+
 ## PASTA Weaknesses
 
 - Heavyweight — costly for small teams
@@ -225,6 +251,7 @@ audience:
 - Overkill for simple internal applications
 
 ---
+
 ## When to Use Attack Trees
 
 - High-stakes assets (crown jewels)
@@ -234,6 +261,7 @@ audience:
 - Combined with PASTA stage 6
 
 ---
+
 ## When to Use PASTA
 
 - Regulated industries with formal compliance demands
@@ -243,6 +271,7 @@ audience:
 - When STRIDE alone leaves stakeholders unconvinced
 
 ---
+
 ## Combining Methodologies
 
 - STRIDE — daily/sprintly threat enumeration
@@ -252,6 +281,7 @@ audience:
 - Pick a stack appropriate to your maturity
 
 ---
+
 ## Common Pitfalls
 
 - Building elaborate trees nobody updates
@@ -261,6 +291,7 @@ audience:
 - Treating any methodology as a substitute for thinking
 
 ---
+
 ## Summary
 
 - Attack trees — goal-driven, multi-step, annotated with cost

@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Message Persistence and Reliability
 
 ---
+
 ## Three Layers of Durability
 
 ![durability](svg/courses/queues/rabbitmq/07_message_persistence_and_reliability/durability.svg)
 
 ---
+
 ## Publisher Confirms
 
 ![publisher_confirms](svg/courses/queues/rabbitmq/07_message_persistence_and_reliability/publisher_confirms.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Durable queues and persistent messages
@@ -31,6 +35,7 @@ audience:
 - A reliability checklist
 
 ---
+
 ## Three Levels of Reliability
 
 - **Best-effort**: fast, no guarantees
@@ -40,6 +45,7 @@ audience:
 - RabbitMQ offers at-least-once with care; exactly-once needs idempotency
 
 ---
+
 ## Durable Queues
 
 - `queue_declare(durable=True)`
@@ -49,6 +55,7 @@ audience:
 - Doesn't make messages persistent; you need both
 
 ---
+
 ## Persistent Messages
 
 - `properties=BasicProperties(delivery_mode=2)`
@@ -58,6 +65,7 @@ audience:
 - Write performance lower; reliability higher
 
 ---
+
 ## Both Are Required
 
 - Durable queue + non-persistent message: queue survives, messages don't
@@ -67,6 +75,7 @@ audience:
 - Default to both unless you have a reason
 
 ---
+
 ## Publisher Confirms
 
 - Producer asks the broker: "did you persist this?"
@@ -76,6 +85,7 @@ audience:
 - The producer-side reliability mechanism
 
 ---
+
 ## Setting Up Confirms
 
 ```python
@@ -93,6 +103,7 @@ else:
 - Synchronous; high overhead per message
 
 ---
+
 ## Async Confirms
 
 - Don't wait per message
@@ -102,6 +113,7 @@ else:
 - Used in production high-throughput pipelines
 
 ---
+
 ## Consumer Acknowledgements
 
 - Consumer must ack to remove from queue
@@ -111,6 +123,7 @@ else:
 - The consumer-side reliability mechanism
 
 ---
+
 ## Manual Ack Pattern
 
 ```python
@@ -125,6 +138,7 @@ ch.basic_consume(queue='q', on_message_callback=callback, auto_ack=False)
 ```
 
 ---
+
 ## Transactions
 
 - AMQP supports transactions: `tx_select`, publish, `tx_commit`
@@ -134,6 +148,7 @@ ch.basic_consume(queue='q', on_message_callback=callback, auto_ack=False)
 - Use only if you absolutely need cross-message atomicity
 
 ---
+
 ## Publisher Confirms vs Transactions
 
 - Both ensure broker received and persisted the message
@@ -143,6 +158,7 @@ ch.basic_consume(queue='q', on_message_callback=callback, auto_ack=False)
 - Transactions are an old API; aware-of, not used-by-default
 
 ---
+
 ## High Availability: Mirrored Queues
 
 - Old approach (RabbitMQ < 3.8): queue mirrored across brokers
@@ -152,6 +168,7 @@ ch.basic_consume(queue='q', on_message_callback=callback, auto_ack=False)
 - Some performance hit; brittleness in network partitions
 
 ---
+
 ## Quorum Queues (Modern)
 
 - Replacement for mirrored queues since RabbitMQ 3.8
@@ -161,6 +178,7 @@ ch.basic_consume(queue='q', on_message_callback=callback, auto_ack=False)
 - Some features differ; check compatibility
 
 ---
+
 ## When To Use Quorum
 
 - Multi-broker cluster
@@ -170,6 +188,7 @@ ch.basic_consume(queue='q', on_message_callback=callback, auto_ack=False)
 - Default for new HA queue declarations
 
 ---
+
 ## Lazy Queues
 
 - Page messages to disk aggressively
@@ -179,6 +198,7 @@ ch.basic_consume(queue='q', on_message_callback=callback, auto_ack=False)
 - Combine with TTLs to prevent unbounded growth
 
 ---
+
 ## Network Partition Handling
 
 - Cluster partitioned: brokers can't see each other
@@ -188,6 +208,7 @@ ch.basic_consume(queue='q', on_message_callback=callback, auto_ack=False)
 - Test partition behaviour before production
 
 ---
+
 ## A Reliability Checklist
 
 - [ ] Durable queues
@@ -199,6 +220,7 @@ ch.basic_consume(queue='q', on_message_callback=callback, auto_ack=False)
 - [ ] Monitoring for queue depths and broker health
 
 ---
+
 ## Trade-Offs
 
 - Reliability has a throughput cost
@@ -208,6 +230,7 @@ ch.basic_consume(queue='q', on_message_callback=callback, auto_ack=False)
 - Pick the level your business needs
 
 ---
+
 ## Common Reliability Mistakes
 
 - "We have RabbitMQ; messages won't be lost" — without durable + persistent + ack, they will

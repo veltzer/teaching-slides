@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to OpenTelemetry
 
 ---
+
 ## What This Chapter Covers
 
 - What OpenTelemetry is
@@ -20,6 +22,7 @@ audience:
 - Adoption
 
 ---
+
 ## What OpenTelemetry Is
 
 - Open standard for observability
@@ -28,11 +31,13 @@ audience:
 - CNCF graduated project
 
 ---
+
 ## What OTel Standardizes
 
 ![otel_pillars](svg/courses/observability_and_monitoring/opentelemetry/01_introduction/otel_pillars.svg)
 
 ---
+
 ## History
 
 - Merger of OpenCensus + OpenTracing (2019)
@@ -41,6 +46,7 @@ audience:
 - De facto standard now
 
 ---
+
 ## Three Signals
 
 - Traces: request flows
@@ -49,6 +55,7 @@ audience:
 - All in one toolkit
 
 ---
+
 ## Components
 
 - API: instrumentation surface
@@ -58,11 +65,13 @@ audience:
 - Auto-instrumentation: agents
 
 ---
+
 ## Component Layers
 
 ![otel_components](svg/courses/observability_and_monitoring/opentelemetry/01_introduction/components.svg)
 
 ---
+
 ## Why Use OTel
 
 - One instrumentation; many backends
@@ -71,6 +80,7 @@ audience:
 - Future-proof
 
 ---
+
 ## Vendor-Neutral
 
 - Send to Jaeger, Tempo, Datadog, New Relic, ...
@@ -78,6 +88,7 @@ audience:
 - Mix and match
 
 ---
+
 ## Adoption
 
 - Most cloud vendors support OTLP
@@ -86,6 +97,7 @@ audience:
 - 2024+: standard expectation
 
 ---
+
 ## Compared to Prometheus
 
 - Prometheus: pull, metrics-focused
@@ -93,6 +105,7 @@ audience:
 - Coexist: OTel can export to Prometheus
 
 ---
+
 ## Compared to Vendor SDKs
 
 - Vendor SDK: tight integration, lock-in
@@ -100,6 +113,7 @@ audience:
 - OTel SDK with vendor exporter: best of both
 
 ---
+
 ## OTLP
 
 - OpenTelemetry Protocol
@@ -108,6 +122,7 @@ audience:
 - Backends accept it directly
 
 ---
+
 ## Course Plan
 
 - Tracing details
@@ -117,6 +132,7 @@ audience:
 - Production deployment
 
 ---
+
 ## Common Introduction Mistakes
 
 - Adopting all signals at once; too much change

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Sampling and Storage
 
 ---
+
 ## What This Chapter Covers
 
 - Sampling strategies
@@ -20,6 +22,7 @@ audience:
 - Cost control
 
 ---
+
 ## Why Sample
 
 - Full collection too expensive
@@ -28,6 +31,7 @@ audience:
 - Keep the interesting ones
 
 ---
+
 ## Probabilistic Sampling
 
 - Fixed percentage of traces
@@ -36,11 +40,13 @@ audience:
 - Misses rare bugs
 
 ---
+
 ## Sampling Strategies
 
 ![sampling_strategies](svg/courses/observability_and_monitoring/jaeger/04_sampling_and_storage/sampling_strategies.svg)
 
 ---
+
 ## Rate Limiting
 
 - N traces per second per service
@@ -49,6 +55,7 @@ audience:
 - Combine with probabilistic
 
 ---
+
 ## Adaptive Sampling
 
 - Higher rate for rare endpoints
@@ -57,6 +64,7 @@ audience:
 - Configurable in modern collectors
 
 ---
+
 ## Tail-Based Sampling
 
 - Buffer traces in collector
@@ -65,11 +73,13 @@ audience:
 - More expensive collector
 
 ---
+
 ## Head vs Tail
 
 ![tail_sampling](svg/courses/observability_and_monitoring/jaeger/04_sampling_and_storage/tail_sampling.svg)
 
 ---
+
 ## Force Sampling
 
 - App-level decision to keep
@@ -78,6 +88,7 @@ audience:
 - Use sparingly
 
 ---
+
 ## Storage Backends
 
 - Cassandra: high write throughput
@@ -86,6 +97,7 @@ audience:
 - Memory for testing only
 
 ---
+
 ## Indexing
 
 - By service, operation, tag
@@ -94,6 +106,7 @@ audience:
 - Tune to query patterns
 
 ---
+
 ## Retention
 
 - Days for high-volume systems
@@ -102,6 +115,7 @@ audience:
 - Drop after retention
 
 ---
+
 ## Compaction
 
 - Merge small files
@@ -110,6 +124,7 @@ audience:
 - Required for long-running clusters
 
 ---
+
 ## Cost Control
 
 - Sample harder
@@ -118,6 +133,7 @@ audience:
 - Tier storage
 
 ---
+
 ## Privacy
 
 - PII in tags must be redacted
@@ -126,6 +142,7 @@ audience:
 - Compliance dictates
 
 ---
+
 ## Capacity Planning
 
 - Spans per second
@@ -134,6 +151,7 @@ audience:
 - Multiplied by retention
 
 ---
+
 ## Common Storage Mistakes
 
 - 100% sampling forever

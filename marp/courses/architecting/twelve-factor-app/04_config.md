@@ -9,19 +9,23 @@ audience:
   - audiences:devops
 
 ---
+
 # Factor III: Config
 
 ---
+
 ## Config in Environment
 
 ![config_in_env](svg/courses/architecting/twelve-factor-app/04_config/config_in_env.svg)
 
 ---
+
 ## Config Practices
 
 ![config_practices](svg/courses/architecting/twelve-factor-app/04_config/config_practices.svg)
 
 ---
+
 ## The Rule
 
 - Strict separation of config from code
@@ -29,6 +33,7 @@ audience:
 - The same code runs in every environment with different config
 
 ---
+
 ## What Config Includes
 
 - Database URLs and credentials
@@ -38,6 +43,7 @@ audience:
 - Anything that varies between deploys
 
 ---
+
 ## What Config Does Not Include
 
 - Internal application config that doesn't vary by deploy
@@ -46,6 +52,7 @@ audience:
 - "Config" by twelve-factor means deploy-specific values only
 
 ---
+
 ## Why Environment Variables
 
 - Language-agnostic — every runtime can read them
@@ -55,6 +62,7 @@ audience:
 - Easy to override locally for testing
 
 ---
+
 ## Anti-Patterns
 
 - Config files committed to the repo
@@ -64,6 +72,7 @@ audience:
 - "Just edit `prod.config` on the server"
 
 ---
+
 ## The Litmus Test
 
 - Could the codebase be open-sourced without leaking credentials?
@@ -71,6 +80,7 @@ audience:
 - If no, secrets are mixed in
 
 ---
+
 ## Reading Config in Code
 
 ```python
@@ -86,6 +96,7 @@ FEATURE_X    = os.environ.get("FEATURE_X", "false") == "true"
 - Type coercion is explicit, not magic
 
 ---
+
 ## Validation at Startup
 
 - Read all config at startup
@@ -94,6 +105,7 @@ FEATURE_X    = os.environ.get("FEATURE_X", "false") == "true"
 - "App started but feature broken because env var was misspelled" is the failure mode to avoid
 
 ---
+
 ## Secrets vs Plain Config
 
 - Secrets are sensitive: API keys, passwords, certificates
@@ -102,11 +114,13 @@ FEATURE_X    = os.environ.get("FEATURE_X", "false") == "true"
 - The injection mechanism differs (secret manager vs. plain config map)
 
 ---
+
 ## Where to Put Configuration
 
 ![config_storage_options](svg/courses/architecting/twelve-factor-app/04_config/config_storage_options.svg)
 
 ---
+
 ## Secrets Management
 
 - Secrets stored in a vault (AWS Secrets Manager, HashiCorp Vault, GCP Secret Manager)
@@ -115,6 +129,7 @@ FEATURE_X    = os.environ.get("FEATURE_X", "false") == "true"
 - Audited: who read which secret when
 
 ---
+
 ## Kubernetes Config Patterns
 
 - `ConfigMap` for plain config
@@ -123,6 +138,7 @@ FEATURE_X    = os.environ.get("FEATURE_X", "false") == "true"
 - The app reads env vars uniformly; the deployment manifest knows what's secret
 
 ---
+
 ## Anti-Pattern: Bundled Config Per Environment
 
 - `config/prod.yaml`, `config/staging.yaml` in the repo
@@ -131,6 +147,7 @@ FEATURE_X    = os.environ.get("FEATURE_X", "false") == "true"
 - New environments require code changes; secrets still leak
 
 ---
+
 ## Why That Anti-Pattern Persists
 
 - Editor support for structured files
@@ -139,6 +156,7 @@ FEATURE_X    = os.environ.get("FEATURE_X", "false") == "true"
 - The right answer: parse env vars into a typed config object at startup
 
 ---
+
 ## A Reasonable Compromise
 
 - Environment variables drive config
@@ -147,6 +165,7 @@ FEATURE_X    = os.environ.get("FEATURE_X", "false") == "true"
 - Single source of truth in code; clean factor-III compliance at the boundary
 
 ---
+
 ## Summary
 
 - Config = anything that varies between deploys

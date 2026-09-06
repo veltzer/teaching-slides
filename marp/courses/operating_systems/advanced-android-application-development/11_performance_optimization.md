@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Performance Optimization
 ## Building High-Performance Android Applications
 

@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Capacity and Cost
 
 ---
+
 ## What This Chapter Covers
 
 - read capacity unit and write capacity unit
@@ -19,6 +21,7 @@ audience:
 - Cost levers
 
 ---
+
 ## Capacity Units
 
 - write capacity unit: writes per second of 1KB items
@@ -27,11 +30,13 @@ audience:
 - Transactional ops cost twice
 
 ---
+
 ## Cost Levers
 
 ![cost_levers](svg/courses/databases/dynamodb/04_capacity_and_cost/cost_levers.svg)
 
 ---
+
 ## Sizing
 
 - Average and peak rates
@@ -40,6 +45,7 @@ audience:
 - Reserve headroom
 
 ---
+
 ## On-Demand
 
 - No provisioning
@@ -48,11 +54,13 @@ audience:
 - Best for unpredictable traffic
 
 ---
+
 ## Modes Compared
 
 ![on_demand_vs_provisioned](svg/courses/databases/dynamodb/04_capacity_and_cost/on_demand_vs_provisioned.svg)
 
 ---
+
 ## Provisioned
 
 - Buy units up front
@@ -61,6 +69,7 @@ audience:
 - Plan for steady patterns
 
 ---
+
 ## Auto-Scaling Targets
 
 - Aim for 70% utilization
@@ -69,6 +78,7 @@ audience:
 - Watch alarm chatter
 
 ---
+
 ## Reserved Capacity
 
 - One-year or three-year commits
@@ -77,6 +87,7 @@ audience:
 - Use on top of auto-scaling
 
 ---
+
 ## Hot Partition
 
 - Single key absorbs traffic
@@ -85,6 +96,7 @@ audience:
 - Re-shard via key design
 
 ---
+
 ## Item Size
 
 - 400KB hard limit
@@ -93,6 +105,7 @@ audience:
 - Or store blob in S3 with reference
 
 ---
+
 ## Storage Cost
 
 - Per GB month
@@ -101,6 +114,7 @@ audience:
 - Watch global-index sprawl
 
 ---
+
 ## Stream Cost
 
 - Per shard hour
@@ -109,6 +123,7 @@ audience:
 - Tune retention to needed window
 
 ---
+
 ## Backup Cost
 
 - On-demand backups stored
@@ -117,6 +132,7 @@ audience:
 - Cheaper than storage of similar size
 
 ---
+
 ## Multi-Region Cost
 
 - Replicated write capacity units
@@ -125,6 +141,7 @@ audience:
 - Track per-region usage
 
 ---
+
 ## Tagging
 
 - Tag tables and indexes
@@ -133,6 +150,7 @@ audience:
 - Required for chargeback
 
 ---
+
 ## Common Cost Mistakes
 
 - On-demand for steady high traffic

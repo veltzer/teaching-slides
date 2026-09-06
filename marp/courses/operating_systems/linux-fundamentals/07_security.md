@@ -10,6 +10,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Security in Practice
 ## Understanding UNIX Security Mechanisms
 
@@ -37,6 +38,7 @@ Key components:
 ![user_management](svg/courses/operating_systems/linux-fundamentals/07_security/user_management.svg)
 
 ---
+
 ## The /etc/passwd File
 
 Structure:
@@ -86,6 +88,7 @@ john:$6$xyz...:18900:0:99999:7:::
 ```
 
 ---
+
 ## File Ownership
 
 ```bash
@@ -124,6 +127,7 @@ Output example:
 ![directory_and_file_access_modes_2](svg/courses/operating_systems/linux-fundamentals/07_security/directory_and_file_access_modes_2.svg)
 
 ---
+
 ## Understanding Permission Bits
 
 Permission calculation:
@@ -167,6 +171,7 @@ Access check order:
 1. What are "other" permissions?
 
 ---
+
 ## Changing Modes and Ownership
 
 Symbolic mode:
@@ -242,6 +247,7 @@ umask 022  # rwxr-xr-x
 ```
 
 ---
+
 ## Practical Security Examples
 
 1. Setting up a shared directory:
@@ -267,6 +273,7 @@ umask 077
 ```
 
 ---
+
 ## Security Best Practices
 
 1. File Permissions:

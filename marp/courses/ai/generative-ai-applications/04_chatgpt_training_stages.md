@@ -11,6 +11,7 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # An Overview of ChatGPT Training Stages
 
 ---

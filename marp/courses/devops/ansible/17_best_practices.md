@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Best Practices and Real-World Patterns
 
 ## Topics Covered

@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Domain-Driven Design
 
 ---
+
 ## What Is Domain-Driven Design?
 
 - An approach to software development that centers on the business domain
@@ -21,6 +23,7 @@ audience:
 - Focuses on creating a shared understanding of the problem space
 
 ---
+
 ## Why DDD Matters for Modern Architecture
 
 - Provides a principled way to decompose systems into services
@@ -29,11 +32,13 @@ audience:
 - Scales well as systems and organizations grow
 
 ---
+
 ## Strategic vs Tactical Design
 
 ![strategic_vs_tactical_design](svg/courses/architecting/architecting/04_domain_driven_design/strategic_vs_tactical_design.svg)
 
 ---
+
 ## The Ubiquitous Language
 
 - A shared vocabulary between developers and domain experts
@@ -42,6 +47,7 @@ audience:
 - Each `Bounded Context` has its own ubiquitous language
 
 ---
+
 ## Building the Ubiquitous Language
 
 - Collaborate with domain experts through workshops and interviews
@@ -50,6 +56,7 @@ audience:
 - Revise the language as understanding of the domain deepens
 
 ---
+
 ## Ubiquitous Language Example
 
 - Domain expert says: "A customer places an order with line items"
@@ -66,6 +73,7 @@ class Customer:
 - Avoid technical jargon that domain experts do not recognize
 
 ---
+
 ## Bounded Contexts Defined
 
 - A boundary within which a particular domain model applies
@@ -74,16 +82,19 @@ class Customer:
 - Boundaries are explicit and enforced
 
 ---
+
 ## Bounded Context Example
 
 ![bounded_context_example](svg/courses/architecting/architecting/04_domain_driven_design/bounded_context_example.svg)
 
 ---
+
 ## Bounded Contexts
 
 ![bounded_contexts](svg/courses/architecting/architecting/04_domain_driven_design/bounded_contexts.svg)
 
 ---
+
 ## Why Bounded Contexts Matter
 
 - Prevent model pollution from trying to create a single universal model
@@ -92,6 +103,7 @@ class Customer:
 - Map naturally to microservice boundaries
 
 ---
+
 ## Context Mapping
 
 - Describes the relationships between `Bounded Contexts`
@@ -100,6 +112,7 @@ class Customer:
 - Documented in a Context Map diagram
 
 ---
+
 ## Context Map Patterns
 
 - `Shared Kernel` - two contexts share a subset of the model
@@ -110,11 +123,13 @@ class Customer:
 - `Published Language` - a shared format for exchanging data
 
 ---
+
 ## Context Map Diagram
 
 ![context_map_diagram](svg/courses/architecting/architecting/04_domain_driven_design/context_map_diagram.svg)
 
 ---
+
 ## Anti-Corruption Layer (ACL)
 
 - A translation layer that protects a context from external model changes
@@ -123,11 +138,13 @@ class Customer:
 - Essential when integrating with legacy systems or third-party APIs
 
 ---
+
 ## ACL Architecture
 
 ![acl_architecture](svg/courses/architecting/architecting/04_domain_driven_design/acl_architecture.svg)
 
 ---
+
 ## Entities
 
 - Objects defined by their identity, not their attributes
@@ -136,6 +153,7 @@ class Customer:
 - Examples: `User`, `Order`, `Product`, `Account`
 
 ---
+
 ## Entity Example
 
 ```python
@@ -155,6 +173,7 @@ class Order:
 ```
 
 ---
+
 ## Value Objects
 
 - Objects defined by their attributes, not by identity
@@ -163,6 +182,7 @@ class Order:
 - Examples: `Money`, `Address`, `DateRange`, `Email`
 
 ---
+
 ## Value Object Example
 
 ```python
@@ -182,6 +202,7 @@ class Money:
 ```
 
 ---
+
 ## Entity vs Value Object
 
 | Aspect | Entity | Value Object |
@@ -193,6 +214,7 @@ class Money:
 | Example | `Order #123` | `$49.99 USD` |
 
 ---
+
 ## Aggregates
 
 - A cluster of related entities and value objects treated as a single unit
@@ -201,11 +223,13 @@ class Money:
 - Defines a consistency boundary for transactions
 
 ---
+
 ## Aggregate Structure
 
 ![aggregate_structure](svg/courses/architecting/architecting/04_domain_driven_design/aggregate_structure.svg)
 
 ---
+
 ## Aggregate Design Rules
 
 - Only the aggregate root has a global identity
@@ -215,6 +239,7 @@ class Money:
 - Reference other aggregates by ID, not by object reference
 
 ---
+
 ## Domain Services
 
 - Operations that do not naturally belong to any entity or value object
@@ -223,6 +248,7 @@ class Money:
 - Example: `TransferMoney`, `CalculateShipping`, `ValidateOrder`
 
 ---
+
 ## Domain Service Example
 
 ```python
@@ -241,6 +267,7 @@ class PricingService:
 ```
 
 ---
+
 ## Application Services
 
 - Orchestrate domain objects to fulfill use cases
@@ -249,6 +276,7 @@ class PricingService:
 - Act as the entry point from the outside world into the domain
 
 ---
+
 ## Application Service Example
 
 ```python
@@ -271,6 +299,7 @@ class PlaceOrderService:
 ```
 
 ---
+
 ## Repositories
 
 - Provide a collection-like interface for accessing aggregates
@@ -279,6 +308,7 @@ class PlaceOrderService:
 - Methods: `find_by_id`, `save`, `delete`
 
 ---
+
 ## Domain Events
 
 - Record that something significant happened in the domain
@@ -287,11 +317,13 @@ class PlaceOrderService:
 - Enable loose coupling between aggregates and bounded contexts
 
 ---
+
 ## Domain Event Flow
 
 ![domain_event_flow](svg/courses/architecting/architecting/04_domain_driven_design/domain_event_flow.svg)
 
 ---
+
 ## Mapping Domains to Microservices
 
 - Each `Bounded Context` is a candidate for a microservice
@@ -300,11 +332,13 @@ class PlaceOrderService:
 - The ubiquitous language of each context guides the service API
 
 ---
+
 ## Decomposition Strategy
 
 ![decomposition_strategy](svg/courses/architecting/architecting/04_domain_driven_design/decomposition_strategy.svg)
 
 ---
+
 ## Subdomain Types
 
 - Core Domain: the primary competitive advantage of the business
@@ -315,6 +349,7 @@ class PlaceOrderService:
     - Use off-the-shelf products (authentication, email)
 
 ---
+
 ## Event Storming
 
 - A collaborative workshop technique for discovering domain events
@@ -323,11 +358,13 @@ class PlaceOrderService:
 - Outputs: domain events, commands, aggregates, and bounded contexts
 
 ---
+
 ## Event Storming Flow
 
 ![event_storming_flow](svg/courses/architecting/architecting/04_domain_driven_design/event_storming_flow.svg)
 
 ---
+
 ## Common DDD Pitfalls
 
 - Creating a single model that tries to represent everything
@@ -337,6 +374,7 @@ class PlaceOrderService:
 - Treating DDD as a technology rather than a design philosophy
 
 ---
+
 ## DDD and Microservices Alignment
 
 - Bounded Contexts define service boundaries
@@ -346,6 +384,7 @@ class PlaceOrderService:
 - Domain Events become the integration mechanism between services
 
 ---
+
 ## Summary
 
 - DDD provides a framework for modeling complex business domains

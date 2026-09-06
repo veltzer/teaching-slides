@@ -11,10 +11,12 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Network Security Basics
 ## Encryption, Firewalls, and VPNs
 
 ---
+
 ## Why Network Security Matters: Details
 - Data in transit is vulnerable to interception, modification, and impersonation
 - Every packet crosses multiple networks and devices you do not control
@@ -262,6 +264,7 @@ A firewall controls network traffic based on predefined rules.
 ## Firewalls: Concept: Comparison
 
 **Types of firewalls:**
+
 | Type | Layer | Description |
 |------|-------|-------------|
 | Packet filter | L3-L4 | Inspects headers (IP, port, protocol) |
@@ -792,6 +795,7 @@ notAfter=Mar 14 23:59:59 2025 GMT
 ![zero_trust_network_architecture](svg/courses/networking/networking-basics/05_network_security_basics/zero_trust_network_architecture.svg)
 
 ---
+
 ## Zero Trust Network Architecture: Details
 The traditional "castle and moat" model (trust everything inside the network) is outdated. Zero Trust assumes no implicit trust.
 **Principles:**

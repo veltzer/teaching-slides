@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Building Infrastructure
 
 ---
@@ -304,6 +305,7 @@ resource "aws_instance" "web" {
 ```
 
 ---
+
 ## Connection via Bastion Host: Example
 
 ```hcl
@@ -319,6 +321,7 @@ connection {
 ```
 
 ---
+
 ## Connection via Bastion Host
 
 ![connection_via_bastion_host](svg/courses/devops/terraform/11_building_infrastructure/connection_via_bastion_host.svg)

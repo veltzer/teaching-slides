@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Template Method Pattern
 
 ---

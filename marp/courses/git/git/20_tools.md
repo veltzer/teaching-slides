@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Git Tools
 
 ---
@@ -785,6 +786,7 @@ if __name__ == '__main__':
 ```
 
 ---
+
 ## Tool Selection Criteria
 
 ![tool_selection_criteria](svg/courses/git/git/20_tools/tool_selection_criteria.svg)

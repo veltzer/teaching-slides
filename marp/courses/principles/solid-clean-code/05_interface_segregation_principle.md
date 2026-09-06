@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Interface Segregation Principle (ISP)
 
 ---
+
 ## What This Chapter Covers
 
 - A precise statement of ISP
@@ -20,6 +22,7 @@ audience:
 - Trade-offs
 
 ---
+
 ## The Principle, Stated Carefully
 
 - "Clients should not be forced to depend on methods they do not use"
@@ -29,11 +32,13 @@ audience:
 - Solution: many small interfaces, each focused on a *role*
 
 ---
+
 ## Fat vs Split
 
 ![isp_split](svg/courses/principles/solid-clean-code/05_interface_segregation_principle/isp_split.svg)
 
 ---
+
 ## A Smelly Interface
 
 ```java
@@ -55,6 +60,7 @@ public class Robot implements Worker {
 - Adding `bathe()` later affects Robot for no reason
 
 ---
+
 ## Refactored With Small Interfaces
 
 ```java
@@ -71,6 +77,7 @@ public class Robot implements Workable { ... }
 - Each interface evolves independently
 
 ---
+
 ## Role-Based Interfaces
 
 - Define interfaces by *what the client needs*, not by *what the implementer is*
@@ -80,6 +87,7 @@ public class Robot implements Workable { ... }
 - Each interface is a *role* an object can play
 
 ---
+
 ## The Client Decides the Shape
 
 - An interface should be designed from the *consumer*'s perspective
@@ -89,6 +97,7 @@ public class Robot implements Workable { ... }
 - This inverts the usual instinct of "design the interface around the implementation"
 
 ---
+
 ## A Real-World Example
 
 ```python
@@ -107,6 +116,7 @@ class Repository(Protocol):
 - One fat interface vs three focused ones — pick consumer-by-consumer
 
 ---
+
 ## After ISP
 
 ```python
@@ -127,6 +137,7 @@ class Archiver(Protocol):
 - Adding archive features only affects archive consumers
 
 ---
+
 ## ISP and Testing
 
 - Smaller interfaces &#8594; smaller mocks
@@ -135,6 +146,7 @@ class Archiver(Protocol):
 - Less brittle tests when the implementation evolves
 
 ---
+
 ## ISP Across Boundaries
 
 - Same idea applies to API endpoints
@@ -143,6 +155,7 @@ class Archiver(Protocol):
 - Same idea applies to event payloads — don't include 50 fields for one consumer of 3
 
 ---
+
 ## ISP and OCP
 
 - Small interfaces are easier to keep stable (closed)
@@ -151,6 +164,7 @@ class Archiver(Protocol):
 - The combination scales well in growing codebases
 
 ---
+
 ## Trade-offs
 
 - Many small interfaces &#8594; more files, more navigation
@@ -159,6 +173,7 @@ class Archiver(Protocol):
 - Don't fragment so much that you can't see the whole picture
 
 ---
+
 ## When NOT to Apply
 
 - Truly cohesive interfaces where every method is used together
@@ -167,6 +182,7 @@ class Archiver(Protocol):
 - The split would create interfaces nobody implements separately
 
 ---
+
 ## Recognising Violations
 
 - Implementations with throwing or no-op methods
@@ -175,6 +191,7 @@ class Archiver(Protocol):
 - Interface name needs an "And" or "All" to be honest
 
 ---
+
 ## A Refactoring Recipe
 
 - List every method on the fat interface
@@ -184,6 +201,7 @@ class Archiver(Protocol):
 - Original implementer implements all of them — clients depend on one each
 
 ---
+
 ## Common Mistakes
 
 - One interface per method (over-application)

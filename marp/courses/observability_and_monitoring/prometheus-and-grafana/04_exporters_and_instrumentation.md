@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Exporters and Instrumentation
 
 ---
+
 ## What This Chapter Covers
 
 - Exporters
@@ -19,6 +21,7 @@ audience:
 - Best practices
 
 ---
+
 ## Exporters
 
 - Bridge non-Prometheus sources
@@ -26,11 +29,13 @@ audience:
 - Many official and community
 
 ---
+
 ## Exporter Categories
 
 ![exporter_kinds](svg/courses/observability_and_monitoring/prometheus-and-grafana/04_exporters_and_instrumentation/exporter_kinds.svg)
 
 ---
+
 ## Node Exporter
 
 - Linux host metrics
@@ -39,6 +44,7 @@ audience:
 - Standard
 
 ---
+
 ## kube-state-metrics
 
 - Kubernetes object state
@@ -46,6 +52,7 @@ audience:
 - Different from cAdvisor (resource usage)
 
 ---
+
 ## Database Exporters
 
 - MySQL exporter, Postgres exporter
@@ -53,6 +60,7 @@ audience:
 - Run alongside DB
 
 ---
+
 ## Black Box Exporter
 
 - Probes endpoints
@@ -61,6 +69,7 @@ audience:
 - External monitoring
 
 ---
+
 ## Custom Exporters
 
 - Write your own
@@ -68,6 +77,7 @@ audience:
 - Use client libraries
 
 ---
+
 ## Direct Instrumentation
 
 - Best option when possible
@@ -75,6 +85,7 @@ audience:
 - Client libraries: Go, Python, Java, ...
 
 ---
+
 ## Sample (Python)
 
 ```python
@@ -86,6 +97,7 @@ start_http_server(8000)
 ```
 
 ---
+
 ## Naming Conventions
 
 - snake_case
@@ -94,6 +106,7 @@ start_http_server(8000)
 - Subsystem prefix: `http_`, `db_`
 
 ---
+
 ## What to Measure
 
 - The four golden signals
@@ -101,6 +114,7 @@ start_http_server(8000)
 - Cover these for any service
 
 ---
+
 ## RED Method
 
 - Rate, Errors, Duration
@@ -108,6 +122,7 @@ start_http_server(8000)
 - Quick observability win
 
 ---
+
 ## USE Method
 
 - Utilisation, Saturation, Errors
@@ -115,6 +130,7 @@ start_http_server(8000)
 - Brendan Gregg
 
 ---
+
 ## Histogram Buckets
 
 - Pick by your latency profile
@@ -122,6 +138,7 @@ start_http_server(8000)
 - Don't change buckets often (breaks comparisons)
 
 ---
+
 ## Avoid High Cardinality
 
 - No user_id, request_id labels
@@ -129,6 +146,7 @@ start_http_server(8000)
 - Prometheus is not for tracing
 
 ---
+
 ## Common Instrumentation Mistakes
 
 - High-cardinality labels in tight loops

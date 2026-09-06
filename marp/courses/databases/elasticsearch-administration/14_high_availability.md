@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # High Availability
 
 ---
+
 ## What This Chapter Covers
 
 - Designing for resilience across availability zones
@@ -21,6 +23,7 @@ audience:
 - Zero-downtime operations
 
 ---
+
 ## High Availability Goals
 
 - Survive node, rack, and zone failures without data loss
@@ -31,6 +34,7 @@ audience:
 - HA is a property of design, not a single setting
 
 ---
+
 ## Replicas Are the Foundation
 
 - At least one replica per primary for any HA cluster
@@ -45,6 +49,7 @@ PUT logs-*/_settings
 ```
 
 ---
+
 ## Dedicated Master Nodes
 
 - Separate master-eligible nodes from data and ingest roles
@@ -58,6 +63,7 @@ node.roles: [ master ]
 ```
 
 ---
+
 ## Quorum and Voting
 
 - The master quorum requires a majority of voting nodes
@@ -71,6 +77,7 @@ GET _cluster/state/metadata?filter_path=metadata.cluster_coordination
 ```
 
 ---
+
 ## Zone Awareness
 
 - Shard allocation awareness spreads copies across zones
@@ -86,6 +93,7 @@ cluster.routing.allocation.awareness.force.zone.values: us-east-1a,us-east-1b,us
 ```
 
 ---
+
 ## Quorum Across Three Zones
 
 - Place one dedicated master in each of three zones
@@ -95,6 +103,7 @@ cluster.routing.allocation.awareness.force.zone.values: us-east-1a,us-east-1b,us
 - Two zones is not enough — losing one can lose quorum
 
 ---
+
 ## Why Not Stretch One Cluster Far
 
 - A single cluster assumes low, stable inter-node latency
@@ -105,6 +114,7 @@ cluster.routing.allocation.awareness.force.zone.values: us-east-1a,us-east-1b,us
 - Span regions with separate clusters plus replication, not one cluster
 
 ---
+
 ## Multi-Datacenter Options
 
 - One cluster across nearby AZs in a single region: supported
@@ -114,6 +124,7 @@ cluster.routing.allocation.awareness.force.zone.values: us-east-1a,us-east-1b,us
 - Choose based on latency, sovereignty, and RPO/RTO targets
 
 ---
+
 ## Remote Clusters
 
 - Register another cluster as a named remote
@@ -132,6 +143,7 @@ PUT _cluster/settings
 ```
 
 ---
+
 ## Cross-Cluster Search
 
 - Query indices on local and remote clusters in one request
@@ -146,6 +158,7 @@ GET dc_west:logs-*,logs-*/_search
 ```
 
 ---
+
 ## Failover Strategies
 
 - Within a cluster, replicas fail over automatically on node loss
@@ -161,6 +174,7 @@ POST follower-logs/_ccr/unfollow
 ```
 
 ---
+
 ## Load Balancing With Coordinating Nodes
 
 - Coordinating-only nodes route requests and merge results
@@ -174,6 +188,7 @@ node.roles: [ ]
 ```
 
 ---
+
 ## Client-Side Round Robin
 
 - Official clients can hold a list of node addresses
@@ -189,6 +204,7 @@ es = Elasticsearch(
 ```
 
 ---
+
 ## Network Resilience and Fault Detection
 
 - The master pings nodes to detect failures (follower checks)
@@ -204,6 +220,7 @@ cluster.fault_detection.follower_check.retry_count: 3
 ```
 
 ---
+
 ## Request Timeouts and Retries
 
 - Set sensible timeouts on client requests to fail fast
@@ -217,6 +234,7 @@ GET _cat/thread_pool/search,write?v&h=node_name,name,active,queue,rejected
 ```
 
 ---
+
 ## Disaster Recovery Testing
 
 - An untested DR plan is not a plan
@@ -227,6 +245,7 @@ GET _cat/thread_pool/search,write?v&h=node_name,name,active,queue,rejected
 - Document gaps and fix them before a real incident
 
 ---
+
 ## Zero-Downtime Operations
 
 - Use rolling restarts so the cluster stays available
@@ -244,6 +263,7 @@ POST _aliases
 ```
 
 ---
+
 ## High Availability Checklist
 
 - At least one replica, allocated across zones

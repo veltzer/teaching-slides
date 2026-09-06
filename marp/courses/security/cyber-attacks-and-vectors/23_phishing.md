@@ -15,6 +15,7 @@ audience:
 # Phishing: Don't Take the Bait
 
 ---
+
 ## What is Phishing?
 - Phishing is a type of cyber attack where criminals attempt to steal sensitive information like login credentials or financial information
 - Phishers use fraudulent emails, texts, websites, and other tactics to trick victims into revealing this information
@@ -29,6 +30,7 @@ audience:
 ![phishing_attack_chain](svg/courses/security/cyber-attacks-and-vectors/23_phishing/phishing_attack_chain.svg)
 
 ---
+
 ## How Phishers Lure Victims
 
 - Phishing emails and messages typically:
@@ -59,6 +61,7 @@ audience:
 ![phishing_types_comparison](svg/courses/security/cyber-attacks-and-vectors/23_phishing/phishing_types_comparison.svg)
 
 ---
+
 ## Types of Phishing Attacks
 
 | Type              | Target           | Channel       | Sophistication |
@@ -74,6 +77,7 @@ audience:
 | Clone Phishing    | Previous recipients| Email       | High           |
 
 ---
+
 ## Spear Phishing
 
 ```python
@@ -106,6 +110,7 @@ audience:
 ```
 
 ---
+
 ## Whaling: Targeting Executives
 
 - Targets C-level executives, board members, senior managers
@@ -131,6 +136,7 @@ Regards,
 ```
 
 ---
+
 ## Vishing (Voice Phishing)
 
 ```python
@@ -161,6 +167,7 @@ Regards,
 ```
 
 ---
+
 ## Smishing (SMS Phishing)
 
 ```bash
@@ -186,6 +193,7 @@ Unlock at: https://apple-id-verify.xyz"
 - Difficult to filter compared to email
 
 ---
+
 ## Business Email Compromise (BEC)
 
 ```python
@@ -214,6 +222,7 @@ Unlock at: https://apple-id-verify.xyz"
 ```
 
 ---
+
 ## Email Header Analysis
 
 ```bash
@@ -274,6 +283,7 @@ dig TXT _dmarc.example.com
 ```
 
 ---
+
 ## How SPF, DKIM, and DMARC Work Together
 
 ```python
@@ -303,6 +313,7 @@ dig TXT _dmarc.example.com
 ```
 
 ---
+
 ## Phishing Detection Indicators
 
 ```bash
@@ -336,6 +347,7 @@ dig TXT _dmarc.example.com
 ```
 
 ---
+
 ## Modern Phishing Infrastructure
 
 ```bash
@@ -363,6 +375,7 @@ dig TXT _dmarc.example.com
 ```
 
 ---
+
 ## Adversary-in-the-Middle (AiTM) Phishing
 
 ```bash
@@ -402,6 +415,7 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 ## Security Awareness Training: Comparison
 
 ### Effective Training Program Elements
+
 | Component                    | Frequency       | Purpose                         |
 |------------------------------|-----------------|----------------------------------|
 | Initial onboarding training  | Once            | Baseline security knowledge      |
@@ -431,6 +445,7 @@ Phishing simulation best practices:
 - Ignore the data (track trends, adjust program)
 
 ---
+
 ## Technical Defenses
 
 ```bash
@@ -465,6 +480,7 @@ Phishing simulation best practices:
 ```
 
 ---
+
 ## Phishing Incident Response
 
 1. **Report**: User clicks "Report Phishing" button or contacts security team
@@ -481,6 +497,7 @@ Phishing simulation best practices:
 1. **Improve**: Update email filtering rules, add to training simulations
 
 ---
+
 ## Key Takeaways
 
 - Phishing remains the number one initial access vector for cyber attacks

@@ -8,14 +8,17 @@ audience:
   - audiences:architects
 
 ---
+
 # Choosing the Right Database
 
 ---
+
 ## Decision Tree
 
 ![decision_tree](svg/courses/databases/introduction-to-databases/10_choosing_the_right_database/decision_tree.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - A decision framework
@@ -26,6 +29,7 @@ audience:
 - Polyglot persistence
 
 ---
+
 ## Start With The Workload
 
 - Read-heavy or write-heavy?
@@ -35,6 +39,7 @@ audience:
 - Latency requirements?
 
 ---
+
 ## Workload Patterns
 
 - OLTP: transactional; high concurrency; small queries
@@ -44,11 +49,13 @@ audience:
 - Graph: relationship traversal
 
 ---
+
 ## Workload Map
 
 ![workload_patterns](svg/courses/databases/introduction-to-databases/10_choosing_the_right_database/workload_patterns.svg)
 
 ---
+
 ## Default: Postgres
 
 - Capable for 90% of OLTP workloads
@@ -57,6 +64,7 @@ audience:
 - Easy to find DBAs / docs
 
 ---
+
 ## When Not Default
 
 - Specific access pattern (key-value, time-series)
@@ -66,6 +74,7 @@ audience:
 - Graph-first (Neo4j)
 
 ---
+
 ## Cloud Hosted
 
 - AWS RDS, Aurora
@@ -76,6 +85,7 @@ audience:
 - Less ops; more cost
 
 ---
+
 ## Self-Hosted
 
 - Cheaper at scale
@@ -84,6 +94,7 @@ audience:
 - Ops team required
 
 ---
+
 ## Cost Considerations
 
 - Storage
@@ -94,6 +105,7 @@ audience:
 - Forecast year 1 and year 3
 
 ---
+
 ## Vendor Lock-In
 
 - Proprietary features = lock-in
@@ -102,6 +114,7 @@ audience:
 - Multi-cloud is usually a fantasy; just pick one
 
 ---
+
 ## Polyglot Persistence
 
 - Multiple DBs for different needs
@@ -111,6 +124,7 @@ audience:
 - Common in modern stacks
 
 ---
+
 ## Hidden Costs
 
 - Operational complexity
@@ -119,6 +133,7 @@ audience:
 - Pick polyglot deliberately
 
 ---
+
 ## When To Switch DBs
 
 - Workload outgrew current DB
@@ -127,6 +142,7 @@ audience:
 - Migration: months of work
 
 ---
+
 ## A Decision Framework
 
 - Identify the workload
@@ -136,6 +152,7 @@ audience:
 - Forecast cost; check lock-in
 
 ---
+
 ## Course Wrap-Up
 
 - Databases store and query data persistently

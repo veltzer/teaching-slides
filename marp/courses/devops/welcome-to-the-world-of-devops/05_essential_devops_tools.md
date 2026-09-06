@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Essential DevOps Tools
 Understanding the core toolset for DevOps implementation
 

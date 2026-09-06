@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Elastic Stack Integration
 
 ---
+
 ## What This Chapter Covers
 
 - Administering Kibana: config, spaces, and saved objects
@@ -21,6 +23,7 @@ audience:
 - Stack monitoring
 
 ---
+
 ## The Elastic Stack
 
 - Elasticsearch is the storage and search engine
@@ -31,6 +34,7 @@ audience:
 - Together they form an end-to-end observability platform
 
 ---
+
 ## Kibana Administration: kibana.yml
 
 - Configure how Kibana connects to Elasticsearch
@@ -49,6 +53,7 @@ xpack.encryptedSavedObjects.encryptionKey: "${ENC_KEY}"
 ```
 
 ---
+
 ## Kibana Spaces
 
 - Spaces partition Kibana into isolated work areas
@@ -64,6 +69,7 @@ POST kbn:/api/spaces/space
 ```
 
 ---
+
 ## Kibana Saved Objects
 
 - Dashboards, visualizations, and data views are saved objects
@@ -78,6 +84,7 @@ POST kbn:/api/saved_objects/_export
 ```
 
 ---
+
 ## Logstash Pipeline Structure
 
 - A pipeline has three stages: input, filter, output
@@ -87,6 +94,7 @@ POST kbn:/api/saved_objects/_export
 - Pipelines are defined in `.conf` files under `pipelines.yml`
 
 ---
+
 ## Logstash Pipeline Example
 
 ```output
@@ -108,6 +116,7 @@ output {
 ```
 
 ---
+
 ## Logstash Persistent Queue
 
 - By default Logstash uses an in-memory queue
@@ -123,6 +132,7 @@ path.queue: /var/lib/logstash/queue
 ```
 
 ---
+
 ## Beats Overview
 
 - Lightweight Go agents that ship one type of data
@@ -132,6 +142,7 @@ path.queue: /var/lib/logstash/queue
 - Beats can send directly to Elasticsearch or via Logstash
 
 ---
+
 ## Filebeat Configuration
 
 - Define inputs pointing at log paths
@@ -152,6 +163,7 @@ output.elasticsearch:
 ```
 
 ---
+
 ## Metricbeat Configuration
 
 - Collects metrics from the host and from services
@@ -168,6 +180,7 @@ metricbeat.modules:
 ```
 
 ---
+
 ## Elastic Agent
 
 - A single unified agent replacing individual Beats
@@ -177,6 +190,7 @@ metricbeat.modules:
 - Can run standalone or, preferably, managed by Fleet
 
 ---
+
 ## Fleet and Fleet Server
 
 - Fleet is the central management plane inside Kibana
@@ -192,6 +206,7 @@ elastic-agent enroll \
 ```
 
 ---
+
 ## Integrations
 
 - Prebuilt packages for ingesting from specific sources
@@ -201,6 +216,7 @@ elastic-agent enroll \
 - Dramatically reduce manual pipeline and dashboard work
 
 ---
+
 ## Ingest Pipelines vs Logstash
 
 - Ingest pipelines run inside Elasticsearch on ingest nodes
@@ -211,6 +227,7 @@ elastic-agent enroll \
 - Many architectures combine both as needed
 
 ---
+
 ## Ingest Pipeline Example
 
 - Define processors that run in order on each document
@@ -230,6 +247,7 @@ PUT _ingest/pipeline/weblog
 ```
 
 ---
+
 ## Visualization and Dashboards
 
 - Data views (formerly index patterns) define searchable fields
@@ -240,6 +258,7 @@ PUT _ingest/pipeline/weblog
 - Export dashboards as saved objects for promotion
 
 ---
+
 ## Stack Monitoring
 
 - Monitor Elasticsearch, Kibana, Logstash, and Beats health
@@ -253,6 +272,7 @@ xpack.monitoring.elasticsearch.collection.enabled: false
 ```
 
 ---
+
 ## Stack Integration Checklist
 
 - Kibana on a dedicated service account with an encryption key

@@ -8,9 +8,11 @@ audience:
   - audiences:managers
 
 ---
+
 # Extra Topics: Cloud, Modern Architecture, Industry Examples
 
 ---
+
 ## What This Chapter Covers
 
 - GCP tools for data analytics
@@ -20,6 +22,7 @@ audience:
 - A short tour for the manager who wants to ask better questions
 
 ---
+
 ## GCP Data Stack
 
 - **BigQuery**: serverless warehouse; SQL at petabyte scale
@@ -30,6 +33,7 @@ audience:
 - Tightly integrated; hard to leave once committed
 
 ---
+
 ## AWS Data Stack
 
 - **S3**: cheap storage; the "lake"
@@ -40,6 +44,7 @@ audience:
 - More pieces, more flexibility, more sharp edges
 
 ---
+
 ## Azure Data Stack
 
 - **ADLS**: data lake storage
@@ -49,11 +54,13 @@ audience:
 - Strong fit for organisations already on Microsoft enterprise stack
 
 ---
+
 ## Three Clouds Side By Side
 
 ![cloud_stack_compare](svg/courses/data_driven/data-analytics-for-managers/09_extra_topics_for_ncr/cloud_compare.svg)
 
 ---
+
 ## Containers
 
 - Application packaged with all its dependencies
@@ -63,6 +70,7 @@ audience:
 - For data: lets you ship analytics jobs as containers, schedule with orchestrators
 
 ---
+
 ## Container Orchestration
 
 - Kubernetes: the dominant orchestrator
@@ -72,6 +80,7 @@ audience:
 - Operationally complex; managed services (EKS, GKE, AKS) ease the burden
 
 ---
+
 ## Microservices
 
 - Many small services instead of one big app
@@ -81,6 +90,7 @@ audience:
 - For data: many sources to integrate; analytics gets harder
 
 ---
+
 ## Serverless
 
 - Functions-as-a-service: write a function, the cloud runs it on demand
@@ -90,6 +100,7 @@ audience:
 - Bad for: long-running jobs, predictable high-volume traffic
 
 ---
+
 ## Service Mesh
 
 - Adds traffic control and observability between microservices
@@ -99,6 +110,7 @@ audience:
 - Heavy operational burden; only worth it past a certain scale
 
 ---
+
 ## VMs vs Containers vs Serverless
 
 - **VMs**: full machines; minutes to start; expensive, flexible
@@ -108,6 +120,7 @@ audience:
 - For data: pick by workload shape — serverless for spiky, VMs for sustained
 
 ---
+
 ## Web Functions / Cloud Functions
 
 - Code triggered by HTTP, file upload, queue message
@@ -117,6 +130,7 @@ audience:
 - Treat them like any other production code — observability, testing, versioning
 
 ---
+
 ## Industry Example: Retail
 
 - POS systems generate sale events
@@ -126,6 +140,7 @@ audience:
 - Twiggle (search), recommendation engines, dynamic pricing — all data-driven
 
 ---
+
 ## Architecture Affects Analytics
 
 - Microservices &#8594; data scattered across many DBs &#8594; harder ETL
@@ -135,6 +150,7 @@ audience:
 - Retrofitting analytics-friendly logging is painful
 
 ---
+
 ## Data Architecture Patterns
 
 - **Lambda**: batch + speed layers, merged at query time
@@ -144,6 +160,7 @@ audience:
 - Don't pick a pattern because it's trendy
 
 ---
+
 ## Why Managers Should Care
 
 - These choices determine what's possible analytically, years out
@@ -153,6 +170,7 @@ audience:
 - Sit in the architecture review
 
 ---
+
 ## Course Wrap-Up
 
 - Data is valuable when it changes decisions, not when it's collected
@@ -163,6 +181,7 @@ audience:
 - The unique manager skill: asking the right question, then trusting the answer
 
 ---
+
 ## Where to Go Next
 
 - Pick one decision in your area; identify the data it needs

@@ -10,9 +10,11 @@ audience:
   - audiences:network-engineers
 
 ---
+
 # IP Addressing and Subnetting
 
 ---
+
 ## What This Chapter Covers
 
 - IPv4 and IPv6 addressing
@@ -22,6 +24,7 @@ audience:
 - NAT
 
 ---
+
 ## IPv4 Addressing
 
 - 32-bit addresses
@@ -31,6 +34,7 @@ audience:
 - Exhausted years ago — NAT and IPv6 fill the gap
 
 ---
+
 ## IPv6 Addressing
 
 - 128-bit addresses
@@ -40,6 +44,7 @@ audience:
 - Adoption growing; not everywhere
 
 ---
+
 ## CIDR Notation
 
 - `192.168.1.0/24` — 24 bits for network, 8 for hosts
@@ -49,6 +54,7 @@ audience:
 - Pronounced "slash twenty-four"
 
 ---
+
 ## Network and Host Bits
 
 - /24 → 24 network bits, 8 host bits
@@ -58,11 +64,13 @@ audience:
 - Broadcast address: all host bits 1
 
 ---
+
 ## Subnet Math Visualized
 
 ![cidr](svg/courses/networking/tcp-ip-deep-dive/03_ip_subnetting/cidr.svg)
 
 ---
+
 ## Common Subnet Sizes
 
 - /32 — single host
@@ -72,6 +80,7 @@ audience:
 - /8 — 16M addresses
 
 ---
+
 ## Subnet Masks
 
 - /24 = 255.255.255.0
@@ -81,6 +90,7 @@ audience:
 - Modern tools accept either CIDR or mask
 
 ---
+
 ## Private Address Ranges
 
 - 10.0.0.0/8 — class A (16M addresses)
@@ -90,11 +100,13 @@ audience:
 - For internal networks behind NAT
 
 ---
+
 ## Address Range Map
 
 ![private_ranges](svg/courses/networking/tcp-ip-deep-dive/03_ip_subnetting/private_ranges.svg)
 
 ---
+
 ## Special Reserved Ranges
 
 - 127.0.0.0/8 — loopback (`localhost`)
@@ -104,6 +116,7 @@ audience:
 - Don't use these as host addresses
 
 ---
+
 ## IPv6 Address Types
 
 - Global unicast (2000::/3) — internet-routable
@@ -113,6 +126,7 @@ audience:
 - No broadcast in IPv6 — use multicast
 
 ---
+
 ## IPv6 Notation Rules
 
 - Leading zeros omitted: `2001:db8:0:0:0:0:0:1` → `2001:db8::1`
@@ -122,6 +136,7 @@ audience:
 - Loopback: `::1`
 
 ---
+
 ## Subnetting Example
 
 - ISP gives you `203.0.113.0/24` (256 addresses)
@@ -131,6 +146,7 @@ audience:
 - Each: 62 usable host addresses
 
 ---
+
 ## NAT: Network Address Translation
 
 - Translates private IP to public
@@ -140,6 +156,7 @@ audience:
 - Critical for IPv4 conservation
 
 ---
+
 ## NAT Types
 
 - Source NAT (SNAT) — outbound, change source
@@ -149,11 +166,13 @@ audience:
 - Each is appropriate to specific scenarios
 
 ---
+
 ## NAT Visualized
 
 ![nat](svg/courses/networking/tcp-ip-deep-dive/03_ip_subnetting/nat.svg)
 
 ---
+
 ## NAT Limitations
 
 - Breaks end-to-end addressing
@@ -163,6 +182,7 @@ audience:
 - Carrier-grade NAT adds another layer
 
 ---
+
 ## Default Gateway
 
 - Router that sends packets outside the subnet
@@ -172,6 +192,7 @@ audience:
 - DHCP usually provides it
 
 ---
+
 ## DHCP Basics
 
 - Dynamic Host Configuration Protocol
@@ -181,6 +202,7 @@ audience:
 - Used in most networks (excluding servers)
 
 ---
+
 ## Static vs Dynamic Allocation
 
 - Servers: usually static
@@ -190,6 +212,7 @@ audience:
 - Track in IP-address-management tools at scale
 
 ---
+
 ## Routing Table
 
 - Tells the OS where to send packets
@@ -199,6 +222,7 @@ audience:
 - View with `ip route` (Linux), `route print` (Windows)
 
 ---
+
 ## Common Pitfalls
 
 - Subnet masks copy-pasted wrong
@@ -208,6 +232,7 @@ audience:
 - Forgetting that 0.0.0.0/0 is a real route
 
 ---
+
 ## Calculating Subnets
 
 - Total addresses: 2^(32 - prefix)
@@ -217,6 +242,7 @@ audience:
 - /31 has special semantics (RFC 3021)
 
 ---
+
 ## Aggregation and Summarization
 
 - Combine specific routes into a summary
@@ -226,6 +252,7 @@ audience:
 - Less critical on small networks
 
 ---
+
 ## Summary
 
 - IPv4 is 32 bits; IPv6 is 128

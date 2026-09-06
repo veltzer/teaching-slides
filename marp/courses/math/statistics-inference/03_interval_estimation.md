@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Interval Estimation Revisited
 
 ---
+
 ## What This Chapter Covers
 
 - Confidence intervals as a procedure, recapped precisely
@@ -22,11 +24,13 @@ audience:
 - Coverage and what "95%" guarantees
 
 ---
+
 ## The Pivot Method
 
 ![pivot_method](svg/courses/math/statistics-inference/03_interval_estimation/pivot_method.svg)
 
 ---
+
 ## The Procedural Meaning, Sharpened
 
 - A 95% confidence procedure produces an interval such that, *over repeated samples*, ~95% of the intervals it produces contain the true parameter
@@ -36,6 +40,7 @@ audience:
 - A *single* interval is either right or wrong — you just don't know which
 
 ---
+
 ## Pivotal Quantities
 
 - A **pivot** is a function of the data *and* the parameter whose distribution doesn't depend on the parameter
@@ -45,6 +50,7 @@ audience:
 - Most classical CIs are "find a pivot, invert it"
 
 ---
+
 ## Intervals For Means
 
 - Known &sigma; (rare): x&#772; &plusmn; z&#8901;(&sigma;/&radic;n)
@@ -54,6 +60,7 @@ audience:
 - Always pair the estimate with this interval, not a bare number
 
 ---
+
 ## Intervals For Variances And Proportions
 
 - **Variance**: the pivot (n&minus;1)s&sup2;/&sigma;&sup2; is chi-square with n&minus;1 df &#8594; an asymmetric interval for &sigma;&sup2;. Very sensitive to non-normality — use with care
@@ -63,11 +70,13 @@ audience:
 - The "rule of three": if 0 successes in n trials, the 95% upper bound is roughly 3/n
 
 ---
+
 ## CIs for a Proportion
 
 ![ci_for_proportion](svg/courses/math/statistics-inference/03_interval_estimation/ci_for_proportion.svg)
 
 ---
+
 ## One-Sided And Equivalence Intervals
 
 - **One-sided** interval: only a lower (or only an upper) bound — "the failure rate is at most 0.3% with 95% confidence". Use when only one direction matters
@@ -77,6 +86,7 @@ audience:
 - Decide one-sided vs two-sided, and the margin, *before* seeing data
 
 ---
+
 ## Bootstrap Confidence Intervals
 
 - When no clean pivot exists (medians, ratios, correlations, custom statistics), resample
@@ -86,6 +96,7 @@ audience:
 - Use a few thousand resamples; more for the tails of BCa
 
 ---
+
 ## Coverage
 
 - **Coverage** = the actual long-run fraction of intervals that contain the truth
@@ -95,6 +106,7 @@ audience:
 - "Nominal" (what it claims) vs "actual" (what it delivers) coverage — know the gap for your method
 
 ---
+
 ## Bootstrap And Wilson Intervals In Python
 
 ```python
@@ -112,6 +124,7 @@ print("Wilson 95% CI:", (round(ci.low, 3), round(ci.high, 3)))
 ```
 
 ---
+
 ## Common Mistakes
 
 - Saying "95% probability the parameter is in this interval" without a Bayesian setup

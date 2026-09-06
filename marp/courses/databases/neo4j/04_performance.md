@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Performance
 
 ---
+
 ## What This Chapter Covers
 
 - Index usage
@@ -20,6 +22,7 @@ audience:
 - Transaction sizing
 
 ---
+
 ## Index Use
 
 - EXPLAIN shows index hits
@@ -28,6 +31,7 @@ audience:
 - Use where you filter most
 
 ---
+
 ## Query Plans
 
 - EXPLAIN: plan only
@@ -36,6 +40,7 @@ audience:
 - Match expansion order matters
 
 ---
+
 ## Match Expansion
 
 - Start at most selective node
@@ -44,11 +49,13 @@ audience:
 - Cardinality stats drive plan
 
 ---
+
 ## Plan Comparison
 
 ![expansion_plan](svg/courses/databases/neo4j/04_performance/expansion_plan.svg)
 
 ---
+
 ## Variable Length Paths
 
 - Bound depth
@@ -57,6 +64,7 @@ audience:
 - Filter early
 
 ---
+
 ## Cartesian Products
 
 - Two unrelated patterns in same MATCH
@@ -65,11 +73,13 @@ audience:
 - Engine warns when detected
 
 ---
+
 ## Pitfalls Overview
 
 ![perf_pitfalls](svg/courses/databases/neo4j/04_performance/perf_pitfalls.svg)
 
 ---
+
 ## Heap And Page Cache
 
 - Heap for queries and transactions
@@ -78,6 +88,7 @@ audience:
 - Heap moderate, GC tuned
 
 ---
+
 ## GC Tuning
 
 - G1 default
@@ -86,6 +97,7 @@ audience:
 - Adjust heap size with care
 
 ---
+
 ## Transaction Size
 
 - Smaller transactions commit faster
@@ -94,6 +106,7 @@ audience:
 - Use procedure libraries for huge writes
 
 ---
+
 ## Read Concurrency
 
 - Multiple readers fine
@@ -102,6 +115,7 @@ audience:
 - Watch for cache contention
 
 ---
+
 ## Hot Spot Nodes
 
 - Super-nodes with many edges
@@ -110,6 +124,7 @@ audience:
 - Or model differently
 
 ---
+
 ## Caching
 
 - OS page cache helps
@@ -118,6 +133,7 @@ audience:
 - Beware staleness
 
 ---
+
 ## Bulk Imports
 
 - neo4j-admin import for greenfield
@@ -126,6 +142,7 @@ audience:
 - Skip for incremental
 
 ---
+
 ## Common Performance Mistakes
 
 - No index on key properties

@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Connections, Variables, and Security
 
 ---
+
 ## What This Chapter Covers
 
 - Connections
@@ -22,6 +24,7 @@ audience:
 - Best practices
 
 ---
+
 ## Connections
 
 - Reusable definitions: host, user, password, port
@@ -30,11 +33,13 @@ audience:
 - Centralised credential management
 
 ---
+
 ## Secrets Layers
 
 ![secrets_layers](svg/courses/data_engineering/apache-airflow/07_connections_variables_and_security/secrets_layers.svg)
 
 ---
+
 ## Defining A Connection
 
 - UI: Admin &#8594; Connections
@@ -43,6 +48,7 @@ audience:
 - Code: less common
 
 ---
+
 ## Variables
 
 - Key-value pairs
@@ -51,6 +57,7 @@ audience:
 - "max_retries", "data_lake_path"
 
 ---
+
 ## Reading Variables
 
 ```python
@@ -62,6 +69,7 @@ v = Variable.get('max_retries', default_var='3')
 - Better: use Jinja: `{{ var.value.max_retries }}`
 
 ---
+
 ## Secrets Backends
 
 - HashiCorp Vault
@@ -71,6 +79,7 @@ v = Variable.get('max_retries', default_var='3')
 - External secret store; Airflow looks up
 
 ---
+
 ## Why Secrets Backend
 
 - No secrets in metadata DB
@@ -79,6 +88,7 @@ v = Variable.get('max_retries', default_var='3')
 - Compliance
 
 ---
+
 ## Authentication
 
 - LDAP, OAuth, Kerberos, custom
@@ -86,6 +96,7 @@ v = Variable.get('max_retries', default_var='3')
 - For prod: integrate with company SSO
 
 ---
+
 ## Authorisation
 
 - Roles: Admin, Op, User, Viewer, Public
@@ -93,6 +104,7 @@ v = Variable.get('max_retries', default_var='3')
 - "Team A can only view team A's DAGs"
 
 ---
+
 ## RBAC
 
 - Built-in: based on Flask-AppBuilder
@@ -100,6 +112,7 @@ v = Variable.get('max_retries', default_var='3')
 - Custom roles possible
 
 ---
+
 ## DAG-Level Permissions
 
 - access_control argument on DAG
@@ -107,6 +120,7 @@ v = Variable.get('max_retries', default_var='3')
 - Useful for multi-tenant Airflow
 
 ---
+
 ## Audit Logs
 
 - DB tables: dag_runs, task_instance, log
@@ -114,6 +128,7 @@ v = Variable.get('max_retries', default_var='3')
 - Forward to external log system
 
 ---
+
 ## Network Security
 
 - Webserver behind reverse proxy
@@ -122,6 +137,7 @@ v = Variable.get('max_retries', default_var='3')
 - Don't expose to public internet directly
 
 ---
+
 ## Best Practices
 
 - Secrets in a backend, not metadata DB
@@ -130,6 +146,7 @@ v = Variable.get('max_retries', default_var='3')
 - Audit log retention policy
 
 ---
+
 ## Common Security Mistakes
 
 - Default admin password

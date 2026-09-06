@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Observability
 
 ---
+
 ## What This Chapter Covers
 
 - Logs
@@ -22,6 +24,7 @@ audience:
 - Application monitoring
 
 ---
+
 ## The Three Pillars
 
 - Logs: what happened
@@ -30,11 +33,13 @@ audience:
 - Together: full picture
 
 ---
+
 ## Cluster Signals
 
 ![four_signals](svg/courses/containers/kubernetes/10_observability/four_signals.svg)
 
 ---
+
 ## Logging
 
 - Apps log to stdout / stderr
@@ -43,6 +48,7 @@ audience:
 - Don't write to files inside the pod
 
 ---
+
 ## Log Shippers
 
 - Fluent Bit: lightweight
@@ -51,6 +57,7 @@ audience:
 - Filebeat: from Elastic
 
 ---
+
 ## Centralised Log Storage
 
 - Loki: cheap, log-only
@@ -59,6 +66,7 @@ audience:
 - Pick: cost vs features
 
 ---
+
 ## Metrics: Prometheus
 
 - Pull-based
@@ -67,6 +75,7 @@ audience:
 - Stores time-series
 
 ---
+
 ## Service Monitor
 
 ```yaml
@@ -85,6 +94,7 @@ spec:
 - Tells Prometheus to scrape
 
 ---
+
 ## Grafana
 
 - Dashboards over Prometheus, Loki, etc.
@@ -93,6 +103,7 @@ spec:
 - Build your own per-service
 
 ---
+
 ## Tracing: OpenTelemetry
 
 - Standard for tracing
@@ -101,6 +112,7 @@ spec:
 - Forward to: Jaeger, Tempo, vendor backends
 
 ---
+
 ## Cluster Monitoring
 
 - Metrics-server: basic CPU / memory
@@ -109,6 +121,7 @@ spec:
 - All Prometheus-compatible
 
 ---
+
 ## Application Monitoring
 
 - Per-service /metrics endpoint
@@ -117,6 +130,7 @@ spec:
 - Custom business metrics
 
 ---
+
 ## Alerting
 
 - Prometheus Alertmanager
@@ -125,6 +139,7 @@ spec:
 - Tune to avoid alert fatigue
 
 ---
+
 ## SLO-Based Alerting
 
 - Service Level Objectives: targets (99.9% uptime)
@@ -133,6 +148,7 @@ spec:
 - Modern best practice
 
 ---
+
 ## Distributed Tracing
 
 - Trace request across services
@@ -141,6 +157,7 @@ spec:
 - Sample (don't trace 100%)
 
 ---
+
 ## Cost Considerations
 
 - Logs: $$$ at scale
@@ -149,6 +166,7 @@ spec:
 - Sample logs / traces; keep all metrics
 
 ---
+
 ## Common Observability Mistakes
 
 - Logging request bodies (cost; PII)
@@ -158,6 +176,7 @@ spec:
 - Logs without trace context (can't correlate)
 
 ---
+
 ## Course Wrap-Up
 
 - K8s orchestrates containers across machines

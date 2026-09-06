@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Components
@@ -20,6 +22,7 @@ audience:
 - Pitfalls
 
 ---
+
 ## Components
 
 - Agent or collector receivers
@@ -28,11 +31,13 @@ audience:
 - Query and UI
 
 ---
+
 ## Pipeline Visualized
 
 ![collector_pipeline](svg/courses/observability_and_monitoring/jaeger/05_operations/collector_pipeline.svg)
 
 ---
+
 ## Sidecar Agents
 
 - One per host or pod
@@ -41,6 +46,7 @@ audience:
 - Reduces app coupling
 
 ---
+
 ## Direct To Collector
 
 - Apps send straight to collector
@@ -49,6 +55,7 @@ audience:
 - Common in cloud-native
 
 ---
+
 ## Collector Tier
 
 - Stateless workers
@@ -57,6 +64,7 @@ audience:
 - Forward to storage
 
 ---
+
 ## High Availability
 
 - Multiple collectors
@@ -65,6 +73,7 @@ audience:
 - Graceful degradation under load
 
 ---
+
 ## Monitoring
 
 - Spans received
@@ -73,6 +82,7 @@ audience:
 - Query latency
 
 ---
+
 ## Alerts
 
 - Drop rate exceeds threshold
@@ -81,6 +91,7 @@ audience:
 - Disk near full
 
 ---
+
 ## Upgrades
 
 - Read release notes
@@ -89,6 +100,7 @@ audience:
 - Have rollback plan
 
 ---
+
 ## Multi-Tenant
 
 - Separate ingestion per tenant
@@ -97,6 +109,7 @@ audience:
 - Audit access
 
 ---
+
 ## Security
 
 - TLS at every hop
@@ -105,6 +118,7 @@ audience:
 - Strip sensitive tags
 
 ---
+
 ## OpenTelemetry Migration
 
 - Industry-standard protocol
@@ -113,6 +127,7 @@ audience:
 - Less vendor lock-in
 
 ---
+
 ## Disaster Recovery
 
 - Storage backup
@@ -121,6 +136,7 @@ audience:
 - Document the runbook
 
 ---
+
 ## Cost Awareness
 
 - Storage dominates
@@ -129,6 +145,7 @@ audience:
 - Tag for cost allocation
 
 ---
+
 ## Common Operational Mistakes
 
 - One collector node

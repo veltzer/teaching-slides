@@ -12,6 +12,7 @@ audience:
 - audiences:data-scientists
 
 ---
+
 # Polars and Python
 ## Fast, Modern DataFrames Beyond pandas
 ## Mark Veltzer

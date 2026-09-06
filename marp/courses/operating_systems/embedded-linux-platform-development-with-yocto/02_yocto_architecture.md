@@ -10,6 +10,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Yocto Architecture Deep Dive
 
 ---

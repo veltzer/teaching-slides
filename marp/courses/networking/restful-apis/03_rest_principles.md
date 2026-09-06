@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # REST Principles
 
 ---
+
 ## What This Chapter Covers
 
 - Origin of REST
@@ -20,16 +22,19 @@ audience:
 - Pragmatic REST
 
 ---
+
 ## Six Constraints
 
 ![rest_constraints](svg/courses/networking/restful-apis/03_rest_principles/rest_constraints.svg)
 
 ---
+
 ## Uniform Interface in Detail
 
 ![uniform_interface](svg/courses/networking/restful-apis/03_rest_principles/uniform_interface.svg)
 
 ---
+
 ## Origin
 
 - Roy Fielding, 2000 dissertation
@@ -37,6 +42,7 @@ audience:
 - Generalises web architecture
 
 ---
+
 ## Constraints
 
 - Client-server
@@ -47,6 +53,7 @@ audience:
 - Code on demand (optional)
 
 ---
+
 ## Stateless
 
 - Each request: complete information
@@ -55,6 +62,7 @@ audience:
 - Auth: send credentials each time
 
 ---
+
 ## Cacheable
 
 - Responses indicate cacheability
@@ -63,6 +71,7 @@ audience:
 - GET: cacheable; POST: usually not
 
 ---
+
 ## Uniform Interface
 
 - Same conventions across the API
@@ -71,6 +80,7 @@ audience:
 - The hard-to-define one
 
 ---
+
 ## Resources
 
 - Nouns: users, orders, products
@@ -79,6 +89,7 @@ audience:
 - The core REST abstraction
 
 ---
+
 ## Representations
 
 - A resource has multiple representations
@@ -87,6 +98,7 @@ audience:
 - Server sends the format the client wants
 
 ---
+
 ## HATEOAS
 
 - Hypermedia as the engine of application state
@@ -95,6 +107,7 @@ audience:
 - Theoretical purity; rarely fully done
 
 ---
+
 ## Richardson Maturity Model
 
 - Level 0: tunneling RPC over HTTP
@@ -103,6 +116,7 @@ audience:
 - Level 3: hypermedia controls
 
 ---
+
 ## Pragmatic REST
 
 - Most "REST" is level 2
@@ -111,6 +125,7 @@ audience:
 - Don't argue about HATEOAS in code review
 
 ---
+
 ## REST vs RPC
 
 - REST: resources, manipulate state
@@ -119,6 +134,7 @@ audience:
 - REST aligns with HTTP semantics
 
 ---
+
 ## Common REST Mistakes
 
 - Verbs in URLs (/getUser instead of /users/123)

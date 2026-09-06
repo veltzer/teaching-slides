@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Advanced TDD Practices
 
 ---
+
 ## What This Chapter Covers
 
 - Outside-in vs inside-out TDD
@@ -22,6 +24,7 @@ audience:
 - Code review for test quality
 
 ---
+
 ## Outside-In TDD
 
 - Start at the user-facing layer
@@ -31,11 +34,13 @@ audience:
 - Common in BDD-style work
 
 ---
+
 ## Advanced Tools
 
 ![advanced_tdd](svg/courses/testing/test-driven-development/10_advanced_tdd_practices/advanced_tdd.svg)
 
 ---
+
 ## Inside-Out TDD
 
 - Start at the lowest level (a class, a function)
@@ -45,6 +50,7 @@ audience:
 - Common in functional / library code
 
 ---
+
 ## When To Use Each
 
 - Outside-in: feature-driven work; clear user goals
@@ -53,6 +59,7 @@ audience:
 - Don't dogmatise; use what fits
 
 ---
+
 ## London School TDD
 
 - Heavy use of mocks
@@ -62,6 +69,7 @@ audience:
 - Originated in London (XtC)
 
 ---
+
 ## Detroit / Chicago School TDD
 
 - Use real objects where practical
@@ -71,6 +79,7 @@ audience:
 - Originated in the US (Beck, Jeffries)
 
 ---
+
 ## Picking A School
 
 - Mostly preference; both work
@@ -80,6 +89,7 @@ audience:
 - Object-state-rich codebases lean Detroit
 
 ---
+
 ## Property-Based Testing
 
 - Define properties (invariants) that should hold
@@ -89,6 +99,7 @@ audience:
 - Hypothesis (Python), QuickCheck (Haskell), fast-check (JS)
 
 ---
+
 ## Property-Based + TDD
 
 - Use property-based for general properties
@@ -98,6 +109,7 @@ audience:
 - Especially powerful for parsers, protocols, math
 
 ---
+
 ## Acceptance TDD (ATDD)
 
 - Write the acceptance criteria as tests *first*
@@ -107,6 +119,7 @@ audience:
 - Closely related to BDD
 
 ---
+
 ## ATDD Workflow
 
 - Three Amigos meeting: business + dev + tester
@@ -116,6 +129,7 @@ audience:
 - Done when scenarios green and stakeholder accepts
 
 ---
+
 ## Continuous Integration and TDD
 
 - TDD without CI: half the value
@@ -125,6 +139,7 @@ audience:
 - The feedback loop the discipline depends on
 
 ---
+
 ## Speed Of CI Matters
 
 - Slow CI &#8594; people skip it
@@ -134,6 +149,7 @@ audience:
 - Your CI speed is your TDD speed
 
 ---
+
 ## TDD And Code Review
 
 - Reviewers should check: tests exist, tests are good
@@ -143,6 +159,7 @@ audience:
 - Test quality matters more than quantity
 
 ---
+
 ## Mutation Testing
 
 - Tools introduce small mutations to the production code
@@ -152,6 +169,7 @@ audience:
 - A way to grade your test suite
 
 ---
+
 ## Why Mutation Testing
 
 - Coverage tells you what was *executed*
@@ -161,6 +179,7 @@ audience:
 - A revelation if you've never tried it
 
 ---
+
 ## Test Smells
 
 - Long setup
@@ -171,6 +190,7 @@ audience:
 - Each is a flag for refactoring
 
 ---
+
 ## Refactoring Tests
 
 - Tests are code; they need maintenance too
@@ -180,6 +200,7 @@ audience:
 - A clean test suite makes TDD enjoyable
 
 ---
+
 ## When TDD Gets Hard
 
 - The design is wrong; tests fight you
@@ -189,6 +210,7 @@ audience:
 - TDD is a design pressure
 
 ---
+
 ## TDD Habits That Compound
 
 - Test first; *every* time
@@ -199,6 +221,7 @@ audience:
 - After two years, you can't imagine working without it
 
 ---
+
 ## Course Wrap-Up
 
 - TDD is a design discipline, not a testing technique

@@ -11,6 +11,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Deployment Patterns
 
 Advanced Kubernetes Course - Day 3, Module 3

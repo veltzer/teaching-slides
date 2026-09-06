@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Decision Frameworks for DevOps
 A systematic approach to making and documenting architectural decisions
 

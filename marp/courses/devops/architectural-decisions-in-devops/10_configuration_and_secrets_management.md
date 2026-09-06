@@ -12,9 +12,11 @@ audience:
   - audiences:managers
 
 ---
+
 # Configuration and Secrets Management
 
 ---
+
 ## Why Configuration Management Matters
 
 - Applications need different settings per environment
@@ -24,11 +26,13 @@ audience:
 - Proper management enables reproducibility and auditability
 
 ---
+
 ## The Configuration Spectrum
 
 ![the_configuration_spectrum](svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/the_configuration_spectrum.svg)
 
 ---
+
 ## Baked-in vs Runtime Configuration
 
 - **Baked-in**: configuration embedded into the artifact at build time
@@ -37,6 +41,7 @@ audience:
 - Most production systems use a combination of both
 
 ---
+
 ## Baked-in Configuration
 
 - Configuration values are set during the build or packaging step
@@ -51,6 +56,7 @@ RUN npm run build
 ```
 
 ---
+
 ## Immutable Deployments with Baked Config: Details
 
 - Each environment gets its own built artifact
@@ -58,11 +64,13 @@ RUN npm run build
 - No configuration drift between what was tested and what runs
 
 ---
+
 ## Immutable Deployments with Baked Config
 
 ![immutable_deployments_with_baked_config](svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/immutable_deployments_with_baked_config.svg)
 
 ---
+
 ## Baked-in Config: Pros and Cons
 
 - Pros:
@@ -76,6 +84,7 @@ RUN npm run build
     - Secrets should never be baked into artifacts
 
 ---
+
 ## Runtime Configuration
 
 - Configuration is provided when the application starts
@@ -95,11 +104,13 @@ services:
 ```
 
 ---
+
 ## Runtime Config Injection Flow
 
 ![runtime_config_injection_flow](svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/runtime_config_injection_flow.svg)
 
 ---
+
 ## Runtime Config: Pros and Cons
 
 - Pros:
@@ -113,11 +124,13 @@ services:
     - Harder to reproduce exact deployment state
 
 ---
+
 ## Baked vs Runtime: Decision Matrix
 
 ![baked_vs_runtime_decision_matrix](svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/baked_vs_runtime_decision_matrix.svg)
 
 ---
+
 ## Dynamic Configuration and Feature Toggles
 
 - Config values can change while the application is running
@@ -138,6 +151,7 @@ services:
 ```
 
 ---
+
 ## Feature Toggle Platforms
 
 - `LaunchDarkly` -- commercial, full-featured
@@ -148,6 +162,7 @@ services:
 - Custom solutions using config stores like `etcd` or `Consul`
 
 ---
+
 ## Restart vs Hot-Reload Tradeoffs
 
 | Aspect | Restart | Hot-Reload |
@@ -159,6 +174,7 @@ services:
 | Debugging | Easier | Harder to reproduce |
 
 ---
+
 ## Implementing Hot-Reload
 
 - File watchers: `inotify`, `fsnotify`, `chokidar`
@@ -178,6 +194,7 @@ signal.signal(signal.SIGHUP, reload_config)
 ```
 
 ---
+
 ## When to Restart vs Hot-Reload
 
 - **Restart** when:
@@ -191,6 +208,7 @@ signal.signal(signal.SIGHUP, reload_config)
     - Restart cost is high (JVM warm-up, cache rebuild)
 
 ---
+
 ## Secrets Management: The Problem
 
 - Secrets include: database passwords, API keys, TLS certificates, tokens
@@ -199,6 +217,7 @@ signal.signal(signal.SIGHUP, reload_config)
 - Shared secrets across teams are hard to rotate and audit
 
 ---
+
 ## Common Anti-Patterns for Secrets
 
 1. Committing secrets to `git` repositories
@@ -209,11 +228,13 @@ signal.signal(signal.SIGHUP, reload_config)
 1. Embedding secrets in container images
 
 ---
+
 ## Secrets Management Approaches
 
 ![secrets_management_approaches](svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_management_approaches.svg)
 
 ---
+
 ## HashiCorp Vault Overview
 
 - Centralized secrets management platform
@@ -223,11 +244,13 @@ signal.signal(signal.SIGHUP, reload_config)
 - Audit logging for every secret access
 
 ---
+
 ## Vault Architecture
 
 ![vault_architecture](svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/vault_architecture.svg)
 
 ---
+
 ## Using Vault: Basic Workflow
 
 ```bash
@@ -248,6 +271,7 @@ export DB_PASS=$(vault kv get \
 ```
 
 ---
+
 ## Vault Dynamic Secrets
 
 - Vault generates short-lived credentials on demand
@@ -266,6 +290,7 @@ vault read database/creds/readonly
 ```
 
 ---
+
 ## Cloud-Native Secrets Managers
 
 - **AWS Secrets Manager**: automatic rotation, RDS integration, cross-account sharing
@@ -275,6 +300,7 @@ vault read database/creds/readonly
 - All provide SDK-based access, encryption at rest, and API-driven retrieval
 
 ---
+
 ## Encrypted Config Files
 
 - Secrets are encrypted and stored alongside code in `git`
@@ -296,6 +322,7 @@ sops -d secrets/prod.enc.yaml
 ```
 
 ---
+
 ## Vault vs Encrypted Config: When to Use Each
 
 | Criteria | Vault / Secrets Mgr | Encrypted Config |
@@ -308,6 +335,7 @@ sops -d secrets/prod.enc.yaml
 | Learning curve | Steeper | Lower |
 
 ---
+
 ## Kubernetes Secrets
 
 - Native `Secret` objects stored in `etcd`
@@ -327,6 +355,7 @@ data:
 ```
 
 ---
+
 ## External Secrets Operator
 
 - Syncs secrets from external providers into Kubernetes `Secret` objects
@@ -353,6 +382,7 @@ spec:
 ```
 
 ---
+
 ## Secret Rotation: Why It Matters
 
 - Limits the blast radius of a compromised credential
@@ -362,6 +392,7 @@ spec:
 - Short-lived credentials are inherently more secure
 
 ---
+
 ## Secret Rotation Strategies
 
 1. **Manual rotation**: human-initiated, error-prone, infrequent
@@ -371,11 +402,13 @@ spec:
 1. **Zero-standing privileges**: credentials exist only during active use
 
 ---
+
 ## Secrets Rotation Lifecycle
 
 ![secrets_rotation_lifecycle](svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_rotation_lifecycle.svg)
 
 ---
+
 ## Dual-Secret Rotation Pattern
 
 - Maintain two active versions of a secret simultaneously
@@ -385,6 +418,7 @@ spec:
 - Prevents downtime during rotation windows
 
 ---
+
 ## Implementing Automated Rotation
 
 ```python
@@ -415,6 +449,7 @@ def lambda_handler(event, context):
 ```
 
 ---
+
 ## Secrets in CI/CD Pipelines: Details
 
 - CI/CD systems need secrets for deployments, testing, and artifact publishing
@@ -422,11 +457,13 @@ def lambda_handler(event, context):
 - Use platform-native secret storage, not hardcoded values
 
 ---
+
 ## Secrets in CI/CD Pipelines
 
 ![secrets_in_ci_cd_pipelines](svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_in_ci_cd_pipelines.svg)
 
 ---
+
 ## GitHub Actions Secrets
 
 ```yaml
@@ -452,6 +489,7 @@ jobs:
 - Scoped to repository or organization level
 
 ---
+
 ## OIDC-Based Secret Access in CI/CD
 
 - CI/CD pipelines authenticate to cloud providers via `OIDC` tokens
@@ -473,6 +511,7 @@ steps:
 ```
 
 ---
+
 ## CI/CD Secrets Best Practices
 
 1. Never echo or print secrets in build logs
@@ -484,6 +523,7 @@ steps:
 1. Use secret scanning tools (`trufflehog`, `gitleaks`) in CI
 
 ---
+
 ## Configuration as Code
 
 - All configuration is stored in version-controlled files
@@ -502,6 +542,7 @@ repo/
 ```
 
 ---
+
 ## Benefits of Configuration as Code
 
 1. Full change history via `git log`
@@ -512,6 +553,7 @@ repo/
 1. Drift detection when compared against live state
 
 ---
+
 ## Configuration Services
 
 - Centralized services that store and serve configuration
@@ -529,11 +571,13 @@ consul kv get myapp/db/host
 ```
 
 ---
+
 ## Config as Code vs Config Services
 
 ![config_as_code_vs_config_services](svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/config_as_code_vs_config_services.svg)
 
 ---
+
 ## Hybrid Approach: Best of Both Worlds
 
 - Use config-as-code for baseline and environment-specific settings
@@ -550,6 +594,7 @@ Priority (highest to lowest):
 ```
 
 ---
+
 ## The Twelve-Factor App: Config
 
 - Factor III: "Store config in the environment"
@@ -560,6 +605,7 @@ Priority (highest to lowest):
 - Litmus test: could the codebase be open-sourced without leaking any credentials?
 
 ---
+
 ## Configuration Validation
 
 - Validate configuration at startup to fail fast
@@ -582,6 +628,7 @@ class AppConfig(BaseSettings):
 ```
 
 ---
+
 ## Secret Scanning and Prevention
 
 - Scan repositories for accidentally committed secrets
@@ -599,6 +646,7 @@ repos:
 ```
 
 ---
+
 ## Handling Secret Leaks
 
 1. **Immediately revoke** the compromised credential
@@ -616,6 +664,7 @@ git filter-branch --force --index-filter \
 ```
 
 ---
+
 ## `Helm` and `Kustomize` for Config Management
 
 - `Helm` charts use `values.yaml` with per-environment overrides
@@ -638,6 +687,7 @@ kubectl apply -k kustomize/overlays/prod/
 ```
 
 ---
+
 ## Config Drift Detection
 
 - Compare live configuration against the declared source of truth
@@ -653,6 +703,7 @@ terraform plan -detailed-exitcode
 ```
 
 ---
+
 ## Summary: Configuration Best Practices
 
 1. Separate config from code -- never hardcode values

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Polymorphism
 
 ---
+
 ## What This Chapter Covers
 
 - What polymorphism actually means
@@ -21,6 +23,7 @@ audience:
 - Why polymorphism is the real point of OOP
 
 ---
+
 ## What "Polymorphism" Means
 
 - Greek: "many forms"
@@ -30,16 +33,19 @@ audience:
 - The discipline of programming to a common contract
 
 ---
+
 ## Forms
 
 ![polymorphism_kinds](svg/courses/principles/object-oriented-programming/05_polymorphism/polymorphism_kinds.svg)
 
 ---
+
 ## Method Dispatch
 
 ![dispatch_kinds](svg/courses/principles/object-oriented-programming/05_polymorphism/dispatch_kinds.svg)
 
 ---
+
 ## A First Example
 
 ```python
@@ -59,6 +65,7 @@ total = sum(s.area() for s in shapes)
 ```
 
 ---
+
 ## Why This Matters
 
 - The caller has no `if isinstance(...)` chain
@@ -68,6 +75,7 @@ total = sum(s.area() for s in shapes)
 - Open/closed principle in action
 
 ---
+
 ## Dynamic Dispatch
 
 - The runtime looks up the method based on the object's *actual type*
@@ -77,6 +85,7 @@ total = sum(s.area() for s in shapes)
 - C++: marked `virtual` to enable dynamic dispatch; non-virtual is static
 
 ---
+
 ## Compile-Time Polymorphism
 
 - Method *overloading*: same name, different parameter lists
@@ -86,6 +95,7 @@ total = sum(s.area() for s in shapes)
 - Easier to misuse than overriding — readers can't tell which version is called
 
 ---
+
 ## Overloading vs Overriding
 
 - **Overloading**: same name, different *parameter lists*, same class
@@ -95,6 +105,7 @@ total = sum(s.area() for s in shapes)
 - Java has both; Python only really has overriding
 
 ---
+
 ## Duck Typing
 
 > "If it walks like a duck and quacks like a duck, it's a duck."
@@ -106,6 +117,7 @@ total = sum(s.area() for s in shapes)
 - Type hints + protocols (PEP 544) get you back some of the safety
 
 ---
+
 ## Interfaces as Polymorphism's Vehicle
 
 ```java
@@ -123,6 +135,7 @@ public class Rectangle implements Shape { ... }
 - Java's preferred shape for polymorphism
 
 ---
+
 ## Polymorphism Without Inheritance
 
 - Strategy pattern: pass a function (or a function object) instead
@@ -132,6 +145,7 @@ public class Rectangle implements Shape { ... }
 - OOP's polymorphism is one of several techniques
 
 ---
+
 ## A Practical Example
 
 ```python
@@ -145,6 +159,7 @@ def total_area(shapes):
 - This is the daily payoff of polymorphism
 
 ---
+
 ## When Polymorphism Helps
 
 - Multiple things implement the same operation differently
@@ -153,6 +168,7 @@ def total_area(shapes):
 - Testing benefits from substitution (mocks, fakes)
 
 ---
+
 ## When Polymorphism Hurts
 
 - Only one implementation exists today and probably ever
@@ -161,6 +177,7 @@ def total_area(shapes):
 - Premature polymorphism is a flavour of premature abstraction
 
 ---
+
 ## Common Mistakes
 
 - A subclass that overrides a method to do nothing or throw — violates substitutability

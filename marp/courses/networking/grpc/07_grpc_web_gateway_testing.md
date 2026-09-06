@@ -9,14 +9,17 @@ audience:
   - audiences:developers
 
 ---
+
 # gRPC-Web, Gateway, Testing, Performance
 
 ---
+
 ## Web And Gateway
 
 ![web_and_gateway](svg/courses/networking/grpc/07_grpc_web_gateway_testing/web_and_gateway.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - gRPC-Web: bringing gRPC to browsers
@@ -26,6 +29,7 @@ audience:
 - Optimizing protobuf and connections
 
 ---
+
 ## The Browser Problem
 
 - Browsers don't expose HTTP/2 frames directly
@@ -35,16 +39,19 @@ audience:
 - Requires a proxy in the middle
 
 ---
+
 ## gRPC-Web Architecture
 
 ![grpc_web](svg/courses/networking/grpc/07_grpc_web_gateway_testing/grpc_web.svg)
 
 ---
+
 ## Testing Strategies
 
 ![testing_strategies](svg/courses/networking/grpc/07_grpc_web_gateway_testing/testing_strategies.svg)
 
 ---
+
 ## gRPC-Web Protocol
 
 - HTTP/1.1 or HTTP/2 between browser and proxy
@@ -54,6 +61,7 @@ audience:
 - Slightly different feature set
 
 ---
+
 ## gRPC-Web Limitations
 
 - No client-side streaming (yet, in some impls)
@@ -63,6 +71,7 @@ audience:
 - Most apps fit within these limits
 
 ---
+
 ## Setting Up gRPC-Web
 
 - Run Envoy or a similar proxy
@@ -72,6 +81,7 @@ audience:
 - Browser code looks like normal JS
 
 ---
+
 ## What Is gRPC-Gateway?
 
 - Generates a REST/JSON proxy from .proto files
@@ -81,6 +91,7 @@ audience:
 - One backend serves both
 
 ---
+
 ## Annotating .proto for Gateway
 
 ```protobuf
@@ -100,6 +111,7 @@ service Greeter {
 - POST/PUT use body mapping
 
 ---
+
 ## Generating the Gateway
 
 - `protoc-gen-grpc-gateway` plugin
@@ -109,6 +121,7 @@ service Greeter {
 - OpenAPI specs can also be generated
 
 ---
+
 ## When to Use Gateway
 
 - You need REST for browsers and gRPC for services
@@ -118,6 +131,7 @@ service Greeter {
 - Lightweight overhead per call
 
 ---
+
 ## Connect: An Alternative
 
 - Connect protocol (Buf) is gRPC-compatible
@@ -127,6 +141,7 @@ service Greeter {
 - Worth evaluating for new projects
 
 ---
+
 ## Testing: Unit Tests
 
 - Unit-test handlers as pure functions
@@ -136,6 +151,7 @@ service Greeter {
 - Fast feedback for developers
 
 ---
+
 ## Testing: Integration Tests
 
 - Use `grpc.NewServer` in-process
@@ -145,6 +161,7 @@ service Greeter {
 - Catches wiring bugs unit tests miss
 
 ---
+
 ## Bufconn Pattern (Go)
 
 ```go
@@ -161,6 +178,7 @@ client := pb.NewGreeterClient(conn)
 ```
 
 ---
+
 ## Mocking Clients
 
 - Generate mock client code
@@ -170,6 +188,7 @@ client := pb.NewGreeterClient(conn)
 - Don't over-mock — integration tests catch what mocks don't
 
 ---
+
 ## Contract Testing
 
 - Producer and consumer share the .proto
@@ -179,6 +198,7 @@ client := pb.NewGreeterClient(conn)
 - Catches schema regressions before merge
 
 ---
+
 ## Performance: Where Time Goes
 
 - Serialization (proto encode/decode)
@@ -188,6 +208,7 @@ client := pb.NewGreeterClient(conn)
 - Profile to find the bottleneck
 
 ---
+
 ## Benchmarking gRPC
 
 - `ghz` is the standard load tester
@@ -197,6 +218,7 @@ client := pb.NewGreeterClient(conn)
 - Run benchmarks before optimizing
 
 ---
+
 ## Optimizing Payload Size
 
 - Use scalar types matching actual range
@@ -206,6 +228,7 @@ client := pb.NewGreeterClient(conn)
 - Compress at the gRPC layer if needed
 
 ---
+
 ## Connection Pooling
 
 - One gRPC connection multiplexes many calls
@@ -215,6 +238,7 @@ client := pb.NewGreeterClient(conn)
 - Profile if in doubt
 
 ---
+
 ## Streaming Performance
 
 - Server streaming amortizes connection overhead
@@ -224,6 +248,7 @@ client := pb.NewGreeterClient(conn)
 - Profile under realistic load
 
 ---
+
 ## Compression
 
 - gzip support built in
@@ -233,6 +258,7 @@ client := pb.NewGreeterClient(conn)
 - Configurable per-call
 
 ---
+
 ## Memory Considerations
 
 - Large messages allocate per call
@@ -242,6 +268,7 @@ client := pb.NewGreeterClient(conn)
 - Profile before micro-optimizing
 
 ---
+
 ## CPU Considerations
 
 - Protobuf encode/decode dominates for small calls
@@ -251,6 +278,7 @@ client := pb.NewGreeterClient(conn)
 - Standard concurrency tuning applies
 
 ---
+
 ## Common Pitfalls
 
 - One connection per call — defeats HTTP/2
@@ -260,6 +288,7 @@ client := pb.NewGreeterClient(conn)
 - Premature optimization at the protobuf level
 
 ---
+
 ## Course Recap
 
 - Fundamentals of gRPC and HTTP/2
@@ -271,6 +300,7 @@ client := pb.NewGreeterClient(conn)
 - gRPC-Web, Gateway, testing, performance
 
 ---
+
 ## Final Thoughts
 
 - gRPC shines in internal microservices
@@ -280,6 +310,7 @@ client := pb.NewGreeterClient(conn)
 - Profile, then optimize — not the other way around
 
 ---
+
 ## Summary
 
 - gRPC-Web brings gRPC to browsers via a proxy

@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # System Architectures
 
 ---
+
 ## Monolithic Overview
 
 - Combines all the functionality of an application into a single, unified codebase
@@ -22,6 +24,7 @@ audience:
 - Suitable for small to medium-sized applications with a limited set of functionalities
 
 ---
+
 ## Monolithic Architecture Key Concepts
 
 - Monolithic Codebase
@@ -73,6 +76,7 @@ Cons:
 - When simplicity and ease of development are prioritized over flexibility and scalability
 
 ---
+
 ## Modular Monolith Overview
 
 - Combines the simplicity of a monolithic architecture with the modularity of microservices
@@ -104,6 +108,7 @@ Cons:
     - Deployment can be automated and optimized for the modular structure
 
 ---
+
 ## Modular Monolith Architecture Diagram
 
 ![modular_monolith_architecture_diagram](svg/courses/architecting/architecture-patterns/03_system_architectures/modular_monolith_architecture_diagram.svg)
@@ -138,6 +143,7 @@ Cons:
 - When incremental adoption and refactoring of legacy systems are required
 
 ---
+
 ## Microservices Overview
 
 - Structures an application as a collection of small, independent services
@@ -146,6 +152,7 @@ Cons:
 - Enables developing, deploying, and scaling services independently
 
 ---
+
 ## Microservices Key Principles
 
 - Single Responsibility Principle
@@ -160,11 +167,13 @@ Cons:
     - Services are designed to handle failures gracefully and recover independently
 
 ---
+
 ## Microservices Architecture Diagram
 
 ![microservices_architecture_diagram](svg/courses/architecting/architecture-patterns/03_system_architectures/microservices_architecture_diagram.svg)
 
 ---
+
 ## Microservices Pros and Cons
 
 Pros:
@@ -190,6 +199,7 @@ Cons:
 - When incremental adoption and migration from a monolithic application is desired
 
 ---
+
 ## SOA Overview
 
 - Structures an application as a collection of services that provide business functionality
@@ -198,6 +208,7 @@ Cons:
 - Enables integration and interoperability between heterogeneous systems
 
 ---
+
 ## Service-Oriented Architecture Key Principles
 
 - Service Contract
@@ -220,6 +231,7 @@ Cons:
 ![service_oriented_architecture_diagram](svg/courses/architecting/architecture-patterns/03_system_architectures/service_oriented_architecture_diagram.svg)
 
 ---
+
 ## Service-Oriented Architecture Pros and Cons
 
 Pros:
@@ -247,6 +259,7 @@ Cons:
 - When a mature infrastructure and tooling for service management and governance are available
 
 ---
+
 ## EDA Overview
 
 - Structures an application around the production, detection, and consumption of events
@@ -295,6 +308,7 @@ Cons:
 - Can lead to increased latency and eventual consistency challenges
 
 ---
+
 ## Event-Driven Architecture When to Use
 
 - When the application needs to react to real-time events and state changes
@@ -304,6 +318,7 @@ Cons:
 - When integration with external systems and services through event-based interfaces is necessary
 
 ---
+
 ## Serverless Overview
 
 - Builds applications as a collection of small, independent, and stateless functions
@@ -313,6 +328,7 @@ Cons:
 - Enables rapid development, deployment, and iteration of application components
 
 ---
+
 ## Serverless Key Concepts
 
 - Function
@@ -334,11 +350,13 @@ Cons:
     - State is typically stored in external services like databases or object storage
 
 ---
+
 ## Serverless Architecture Diagram
 
 ![serverless_architecture_diagram](svg/courses/architecting/architecture-patterns/03_system_architectures/serverless_architecture_diagram.svg)
 
 ---
+
 ## Serverless Pros and Cons
 
 Pros:
@@ -356,6 +374,7 @@ Cons:
 - May not be suitable for long-running or stateful processes
 
 ---
+
 ## Serverless When to Use
 
 - When building event-driven and reactive applications
@@ -366,6 +385,7 @@ Cons:
 - When integrating with various cloud services and APIs
 
 ---
+
 ## Space-Based Overview
 
 - Designed for highly scalable and distributed applications
@@ -375,6 +395,7 @@ Cons:
 - Enables linear scalability and fault tolerance
 
 ---
+
 ## Space-Based Key Concepts
 
 - Processing Unit
@@ -395,11 +416,13 @@ Cons:
     - Enables transparent data access and querying
 
 ---
+
 ## Space-Based Architecture Diagram
 
 ![space_based_architecture_diagram](svg/courses/architecting/architecture-patterns/03_system_architectures/space_based_architecture_diagram.svg)
 
 ---
+
 ## Space-Based Pros and Cons
 
 Pros:
@@ -417,6 +440,7 @@ Cons:
 - May not be suitable for applications with strong consistency requirements
 
 ---
+
 ## Space-Based When to Use
 
 - When building highly scalable and distributed applications
@@ -427,6 +451,7 @@ Cons:
 - When linear scalability is desired by adding more nodes and processing units
 
 ---
+
 ## Share-Nothing Overview
 
 - Consists of independent nodes that do not share any resources (e.g., memory, storage)
@@ -436,6 +461,7 @@ Cons:
 - Commonly used in distributed systems and big data processing
 
 ---
+
 ## Share-Nothing Key Concepts
 
 - Independent Nodes
@@ -456,11 +482,13 @@ Cons:
     - Results from individual nodes are aggregated to produce the final output
 
 ---
+
 ## Share-Nothing Architecture Diagram
 
 ![share_nothing_architecture_diagram](svg/courses/architecting/architecture-patterns/03_system_architectures/share_nothing_architecture_diagram.svg)
 
 ---
+
 ## Share-Nothing Pros and Cons
 
 Pros:
@@ -478,6 +506,7 @@ Cons:
 - Debugging and troubleshooting can be challenging in a distributed environment
 
 ---
+
 ## Share-Nothing When to Use
 
 - When building large-scale, data-intensive applications that require high scalability
@@ -488,6 +517,7 @@ Cons:
 - When flexibility and independent scaling of nodes are desired
 
 ---
+
 ## Summary
 
 - Monolith and Modular Monolith are the simplest deployment shapes

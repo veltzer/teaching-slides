@@ -7,19 +7,23 @@ audience:
   - audiences:managers
 
 ---
+
 # Big Data
 
 ---
+
 ## The "V"s
 
 ![big_data_v](svg/courses/data_driven/data-analytics-for-managers/08_big_data/big_data_v.svg)
 
 ---
+
 ## NoSQL Families
 
 ![nosql_families](svg/courses/data_driven/data-analytics-for-managers/08_big_data/nosql_families.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What "big" means, in practice
@@ -30,6 +34,7 @@ audience:
 - Cloud-native big-data analytics
 
 ---
+
 ## What "Big" Means
 
 - Big enough that traditional databases struggle
@@ -39,6 +44,7 @@ audience:
 - 1 TB fits on a thumb drive; you may not need a Hadoop cluster
 
 ---
+
 ## The Five V's
 
 - **Volume**: how much
@@ -49,6 +55,7 @@ audience:
 - "Big data" is a problem only when one or more V is genuinely extreme
 
 ---
+
 ## Honest Self-Assessment
 
 - Is your data > 1 TB? Probably not
@@ -58,6 +65,7 @@ audience:
 - If none are extreme, a regular DB or warehouse will do
 
 ---
+
 ## NoSQL
 
 - Databases that *don't* enforce SQL's relational model
@@ -69,6 +77,7 @@ audience:
 - Each shines on a different access pattern
 
 ---
+
 ## When NoSQL
 
 - Massive scale-out write workloads (Cassandra)
@@ -78,6 +87,7 @@ audience:
 - Most apps still want a SQL DB; NoSQL serves specific needs
 
 ---
+
 ## Hadoop
 
 - Original "big data" platform, born at Yahoo (2006)
@@ -88,6 +98,7 @@ audience:
 - Still common in on-prem enterprise; rarely the *first* choice now
 
 ---
+
 ## Spark
 
 - The dominant batch + streaming engine today
@@ -97,6 +108,7 @@ audience:
 - Used at Netflix, Uber, Spotify, almost every big-data org
 
 ---
+
 ## What Spark Does
 
 - Read data from anywhere (HDFS, S3, Kafka, JDBC, ...)
@@ -106,6 +118,7 @@ audience:
 - The Swiss Army knife of large-scale data processing
 
 ---
+
 ## Data Lakes
 
 - Cheap storage of *raw*, often unstructured data
@@ -115,6 +128,7 @@ audience:
 - Foundation for modern analytics
 
 ---
+
 ## Lakehouses
 
 - Lake (cheap storage) + Warehouse (fast queries) in one platform
@@ -124,6 +138,7 @@ audience:
 - The current "modern data stack" centre of gravity
 
 ---
+
 ## Cloud Big-Data Services
 
 - **AWS**: S3 + Athena (SQL on S3), Redshift, EMR
@@ -133,6 +148,7 @@ audience:
 - Set quotas and alerts before turning data scientists loose
 
 ---
+
 ## BigQuery, Specifically
 
 - Google's serverless warehouse
@@ -142,6 +158,7 @@ audience:
 - Easy to overspend if your team isn't trained on partitioning and clustering
 
 ---
+
 ## Streaming vs Batch
 
 - **Batch**: process today's data tomorrow morning
@@ -151,11 +168,13 @@ audience:
 - "Real-time" requirements are often "fresh enough" requirements
 
 ---
+
 ## Architecture Choices
 
 ![lambda_kappa_architectures](svg/courses/data_driven/data-analytics-for-managers/08_big_data/lambda_kappa.svg)
 
 ---
+
 ## When Big Data Is Worth It
 
 - Genuine scale that makes regular DBs unworkable
@@ -165,6 +184,7 @@ audience:
 - Otherwise: a postgres + a warehouse + good ETL is plenty
 
 ---
+
 ## When It's Not
 
 - Your data fits on one big server
@@ -174,6 +194,7 @@ audience:
 - Premature scale is one of the most expensive mistakes
 
 ---
+
 ## Common Mistakes
 
 - "We need a data lake" — before knowing what would land in it

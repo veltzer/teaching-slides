@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Real World ML Cycle
 
 ---
+
 ## What This Chapter Covers
 
 - Project framing
@@ -22,6 +24,7 @@ audience:
 - MLOps basics
 
 ---
+
 ## The Cycle
 
 - Frame
@@ -33,6 +36,7 @@ audience:
 - Retrain
 
 ---
+
 ## Frame The Problem
 
 - What decision does this support
@@ -41,6 +45,7 @@ audience:
 - What's the cost of being wrong
 
 ---
+
 ## Define Success Early
 
 - Business KPI, not just model metric
@@ -49,6 +54,7 @@ audience:
 - Agree before training
 
 ---
+
 ## Stakeholders
 
 - Product
@@ -58,6 +64,7 @@ audience:
 - Talk to all of them
 
 ---
+
 ## Baselines First
 
 - Random guess
@@ -67,6 +74,7 @@ audience:
 - Beat these before going fancy
 
 ---
+
 ## Why Baselines
 
 - Tells you the floor
@@ -75,6 +83,7 @@ audience:
 - Sometimes good enough
 
 ---
+
 ## Iteration
 
 - One change at a time
@@ -83,6 +92,7 @@ audience:
 - Compare honestly
 
 ---
+
 ## Experiment Tracking
 
 - MLflow, Weights and Biases, Neptune
@@ -91,6 +101,7 @@ audience:
 - Shareable
 
 ---
+
 ## Reproducibility
 
 - Pin versions
@@ -99,6 +110,7 @@ audience:
 - Containerise
 
 ---
+
 ## Data Versioning
 
 - DVC, lakeFS, Delta Lake
@@ -107,6 +119,7 @@ audience:
 - Audit trail
 
 ---
+
 ## Train In CI
 
 - Run training in CI
@@ -115,6 +128,7 @@ audience:
 - Catches accidental regressions
 
 ---
+
 ## Deployment Options
 
 - Batch: predict offline, store
@@ -123,6 +137,7 @@ audience:
 - Edge: phone, IoT, browser
 
 ---
+
 ## Batch Serving
 
 - Run nightly, store predictions
@@ -131,6 +146,7 @@ audience:
 - Good for scoring catalogues
 
 ---
+
 ## Real-Time Serving
 
 - HTTP endpoint
@@ -139,6 +155,7 @@ audience:
 - Most complexity
 
 ---
+
 ## Edge Serving
 
 - Run on device
@@ -147,6 +164,7 @@ audience:
 - Constraints: memory, power
 
 ---
+
 ## Inference Optimisation
 
 - Quantisation
@@ -155,6 +173,7 @@ audience:
 - ONNX, TensorRT, OpenVINO
 
 ---
+
 ## Feature Stores
 
 - Centralised feature storage
@@ -163,6 +182,7 @@ audience:
 - Feast, Tecton, Hopsworks
 
 ---
+
 ## Train-Serve Skew
 
 - Different features in training vs production
@@ -171,6 +191,7 @@ audience:
 - Feature stores help
 
 ---
+
 ## Model Registry
 
 - Versioned models
@@ -179,6 +200,7 @@ audience:
 - MLflow, SageMaker, Vertex
 
 ---
+
 ## Model Packaging
 
 - Container image
@@ -187,6 +209,7 @@ audience:
 - Scan for vulnerabilities
 
 ---
+
 ## Canary Deployment
 
 - Roll out to small percentage
@@ -195,6 +218,7 @@ audience:
 - Standard for risky changes
 
 ---
+
 ## Shadow Mode
 
 - Run new model in parallel
@@ -203,6 +227,7 @@ audience:
 - Validate before switch
 
 ---
+
 ## Rollback Plan
 
 - Always have one
@@ -211,6 +236,7 @@ audience:
 - Old model stays warm
 
 ---
+
 ## A/B Testing
 
 - Random assignment to model versions
@@ -219,6 +245,7 @@ audience:
 - Run long enough
 
 ---
+
 ## Sample Size
 
 - Power analysis upfront
@@ -227,6 +254,7 @@ audience:
 - Document the plan
 
 ---
+
 ## Multi-Armed Bandit
 
 - Adaptive A/B
@@ -235,6 +263,7 @@ audience:
 - Less rigorous than full A/B
 
 ---
+
 ## Monitoring
 
 - Inputs
@@ -243,6 +272,7 @@ audience:
 - System health
 
 ---
+
 ## Input Drift
 
 - Distribution of features changes
@@ -250,6 +280,7 @@ audience:
 - Alerts when drift exceeds threshold
 
 ---
+
 ## Output Drift
 
 - Distribution of predictions changes
@@ -258,6 +289,7 @@ audience:
 - Still need ground truth eventually
 
 ---
+
 ## Performance Decay
 
 - Compare predictions to actuals
@@ -266,6 +298,7 @@ audience:
 - Plan retraining frequency
 
 ---
+
 ## Logging
 
 - Every prediction
@@ -274,6 +307,7 @@ audience:
 - Needed for retraining
 
 ---
+
 ## Alerting
 
 - Drift exceeded
@@ -282,6 +316,7 @@ audience:
 - Page someone
 
 ---
+
 ## Retraining
 
 - Scheduled
@@ -290,6 +325,7 @@ audience:
 - Match cadence to problem
 
 ---
+
 ## Continual Learning
 
 - Update model with new data
@@ -298,6 +334,7 @@ audience:
 - Validate every update
 
 ---
+
 ## Champion Challenger
 
 - New model challenges current
@@ -306,6 +343,7 @@ audience:
 - Standard pattern
 
 ---
+
 ## MLOps Pipeline
 
 - Data ingest
@@ -316,6 +354,7 @@ audience:
 - Deploy
 
 ---
+
 ## CI / CD For ML
 
 - Code, data, model all versioned
@@ -324,6 +363,7 @@ audience:
 - Rollback ready
 
 ---
+
 ## Common Production Mistakes
 
 - No monitoring
@@ -333,6 +373,7 @@ audience:
 - Deploying without baselines
 
 ---
+
 ## Summary
 
 - ML success is mostly process
@@ -341,41 +382,49 @@ audience:
 - Treat models like software, but more
 
 ---
+
 ## Champion / Challenger
 
 ![champion_challenger](svg/courses/machine_learning/machine-learning/12_real_world_cycle/champion_challenger.svg)
 
 ---
+
 ## A/B vs Bandit
 
 ![ab_vs_bandit](svg/courses/machine_learning/machine-learning/12_real_world_cycle/ab_vs_bandit.svg)
 
 ---
+
 ## Drift Monitoring
 
 ![drift_monitoring](svg/courses/machine_learning/machine-learning/12_real_world_cycle/drift_monitoring.svg)
 
 ---
+
 ## MLOps Pipeline
 
 ![mlops_pipeline](svg/courses/machine_learning/machine-learning/12_real_world_cycle/mlops_pipeline.svg)
 
 ---
+
 ## Train-Serve Skew
 
 ![train_serve_skew](svg/courses/machine_learning/machine-learning/12_real_world_cycle/train_serve_skew.svg)
 
 ---
+
 ## Canary / Shadow
 
 ![canary_shadow](svg/courses/machine_learning/machine-learning/12_real_world_cycle/canary_shadow.svg)
 
 ---
+
 ## Retraining Loop
 
 ![retraining_loop](svg/courses/machine_learning/machine-learning/12_real_world_cycle/retraining_loop.svg)
 
 ---
+
 ## End Of Module
 
 - ML is engineering plus statistics

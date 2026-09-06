@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Introduction to Databricks
 
 ---
+
 ## What This Chapter Covers
 
 - What Databricks is
@@ -19,6 +21,7 @@ audience:
 - Course outline
 
 ---
+
 ## What Databricks Is
 
 - Cloud platform for data and AI
@@ -27,6 +30,7 @@ audience:
 - Unified for SQL, Python, Scala, R
 
 ---
+
 ## Why Use It
 
 - Managed Spark with autoscaling
@@ -35,6 +39,7 @@ audience:
 - Strong on ML workflows
 
 ---
+
 ## Workspace
 
 - Top-level container
@@ -43,11 +48,13 @@ audience:
 - Per-region deployment
 
 ---
+
 ## Workspace Components
 
 ![databricks_arch](svg/courses/data_engineering/databricks/01_introduction/databricks_arch.svg)
 
 ---
+
 ## Repos and Notebooks
 
 - Notebooks: interactive cells
@@ -56,6 +63,7 @@ audience:
 - Source of truth lives in git
 
 ---
+
 ## Clusters
 
 - Compute on demand
@@ -64,6 +72,7 @@ audience:
 - Terminate to save cost
 
 ---
+
 ## All-Purpose vs Job Clusters
 
 - All-purpose: shared, interactive
@@ -72,11 +81,13 @@ audience:
 - Production prefers job clusters
 
 ---
+
 ## Cluster Choices
 
 ![cluster_types](svg/courses/data_engineering/databricks/01_introduction/cluster_types.svg)
 
 ---
+
 ## Runtime
 
 - Bundle of Spark plus libraries
@@ -85,6 +96,7 @@ audience:
 - Pin in production
 
 ---
+
 ## Notebooks
 
 - Cell-based execution
@@ -93,6 +105,7 @@ audience:
 - Comments and lineage
 
 ---
+
 ## Jobs
 
 - Scheduled or triggered
@@ -101,6 +114,7 @@ audience:
 - Source of production runs
 
 ---
+
 ## Workflows
 
 - Multi-task jobs
@@ -109,6 +123,7 @@ audience:
 - Replaces external orchestrators for many
 
 ---
+
 ## Catalog
 
 - Unity Catalog for governance
@@ -117,6 +132,7 @@ audience:
 - Lineage tracked
 
 ---
+
 ## Pricing Model
 
 - Compute units per second
@@ -125,6 +141,7 @@ audience:
 - Tag for chargeback
 
 ---
+
 ## Course Outline
 
 - Spark on Databricks
@@ -134,6 +151,7 @@ audience:
 - Operations
 
 ---
+
 ## Common Beginner Mistakes
 
 - Long-lived all-purpose clusters

@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Multi-Region
 
 ---
+
 ## What This Chapter Covers
 
 - Multi-region setup
@@ -20,6 +22,7 @@ audience:
 - Trade-offs
 
 ---
+
 ## Why Multi-Region
 
 - Survive a region outage
@@ -28,6 +31,7 @@ audience:
 - Compliance with sovereignty
 
 ---
+
 ## Setting It Up
 
 - Add nodes in multiple regions
@@ -36,6 +40,7 @@ audience:
 - Choose locality per table
 
 ---
+
 ## Survival Goals
 
 - Zone: tolerate zone loss
@@ -44,6 +49,7 @@ audience:
 - Document the choice
 
 ---
+
 ## Table Localities
 
 - Regional by row
@@ -52,16 +58,19 @@ audience:
 - Each suits a pattern
 
 ---
+
 ## Locality Choices
 
 ![locality_choices](svg/courses/databases/cockroachdb/04_multi_region/locality_choices.svg)
 
 ---
+
 ## Localities Compared
 
 ![table_localities](svg/courses/databases/cockroachdb/04_multi_region/table_localities.svg)
 
 ---
+
 ## Regional By Row
 
 - Each row pinned to a region
@@ -70,6 +79,7 @@ audience:
 - Common for user-owned data
 
 ---
+
 ## Regional By Table
 
 - Whole table pinned to one region
@@ -78,6 +88,7 @@ audience:
 - Suits region-specific data
 
 ---
+
 ## Global Tables
 
 - Reads everywhere with bounded staleness
@@ -86,6 +97,7 @@ audience:
 - Higher write latency
 
 ---
+
 ## Latency Planning
 
 - Local writes within region
@@ -94,6 +106,7 @@ audience:
 - Map every query
 
 ---
+
 ## Failure Behaviors
 
 - Zone outage: continues
@@ -102,6 +115,7 @@ audience:
 - Test each scenario
 
 ---
+
 ## Cost
 
 - More replicas, more storage
@@ -110,6 +124,7 @@ audience:
 - Worth it for tier-1 data
 
 ---
+
 ## Hybrid Patterns
 
 - Some tables global
@@ -118,6 +133,7 @@ audience:
 - Document the policy
 
 ---
+
 ## Disaster Recovery
 
 - Backups still required
@@ -126,6 +142,7 @@ audience:
 - Practice failover
 
 ---
+
 ## Common Multi-Region Mistakes
 
 - One region in production

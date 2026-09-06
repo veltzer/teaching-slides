@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Chain of Responsibility Pattern
 
 ---

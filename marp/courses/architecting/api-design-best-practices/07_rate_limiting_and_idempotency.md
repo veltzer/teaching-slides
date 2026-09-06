@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Rate Limiting and Idempotency
 
 ---
+
 ## Why Rate Limit
 
 - Protect the service from abuse
@@ -20,11 +22,13 @@ audience:
 - Make capacity planning predictable
 
 ---
+
 ## Two Concerns
 
 ![rate_idempotency](svg/courses/architecting/api-design-best-practices/07_rate_limiting_and_idempotency/rate_idempotency.svg)
 
 ---
+
 ## Rate Limiting Strategies
 
 - **Fixed window**: N requests per minute, resets on the boundary
@@ -33,6 +37,7 @@ audience:
 - **Leaky bucket**: requests queue and drain at a fixed rate
 
 ---
+
 ## Token Bucket: Most Common
 
 - Allows bursts up to bucket size
@@ -41,6 +46,7 @@ audience:
 - Implementation in Redis or similar is straightforward
 
 ---
+
 ## Rate Limit Headers
 
 - Standard practice: tell the client what's going on
@@ -50,6 +56,7 @@ audience:
 - `Retry-After: 30` — how long to wait if 429'd
 
 ---
+
 ## When Limits Are Hit
 
 - Return 429 Too Many Requests
@@ -58,6 +65,7 @@ audience:
 - The client backs off; doesn't retry immediately
 
 ---
+
 ## Per-What Rate Limits
 
 - Per API key — common
@@ -67,6 +75,7 @@ audience:
 - Combinations: "10 calls per second per user, but unlimited reads"
 
 ---
+
 ## Quotas
 
 - Like rate limits, but on a longer time window (daily, monthly)
@@ -74,6 +83,7 @@ audience:
 - Usually paired with rate limits
 
 ---
+
 ## Idempotency
 
 - An operation is idempotent if calling it twice has the same effect as calling it once
@@ -82,6 +92,7 @@ audience:
 - Idempotency makes retries safe
 
 ---
+
 ## Why Idempotency Matters
 
 - Networks lose responses
@@ -90,6 +101,7 @@ audience:
 - This is a real production concern, not a theoretical one
 
 ---
+
 ## Idempotency Keys
 
 - Client generates a unique key per logical operation
@@ -98,6 +110,7 @@ audience:
 - A second request with the same key returns the original result
 
 ---
+
 ## Stripe-Style Idempotency
 
 ```http
@@ -113,6 +126,7 @@ Content-Type: application/json
 - The window is bounded (e.g., 24 hours)
 
 ---
+
 ## Server-Side Implementation
 
 - Hash the request body
@@ -121,6 +135,7 @@ Content-Type: application/json
 - If exists with different body_hash, return 422 (key reuse with different request)
 
 ---
+
 ## Idempotent vs Non-Idempotent Methods
 
 - Idempotent: GET, HEAD, PUT, DELETE
@@ -129,6 +144,7 @@ Content-Type: application/json
 - Document which endpoints are idempotent
 
 ---
+
 ## Retry-Safe API Design
 
 - Use idempotency keys for any state-changing operation
@@ -137,6 +153,7 @@ Content-Type: application/json
 - Make PUT replace; second PUT with same body is a no-op
 
 ---
+
 ## Anti-Patterns
 
 - "POST creates a new resource on every retry" — duplicates
@@ -145,6 +162,7 @@ Content-Type: application/json
 - Idempotency window too short (legitimate retries get a different result)
 
 ---
+
 ## Summary
 
 - Rate limit to protect; quota to bill

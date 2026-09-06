@@ -11,6 +11,7 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Fine-Tuning
 
 ---
@@ -20,11 +21,13 @@ audience:
 Adapting a pre-trained model to your specific task by continuing training on your own data:
 
 ---
+
 ## What is Fine-Tuning?
 
 ![what_is_fine_tuning](svg/courses/ai/generative-ai-applications/09_fine_tuning/what_is_fine_tuning.svg)
 
 ---
+
 ## What is Fine-Tuning?: Details
 
 **When to fine-tune vs. when to use prompting:**

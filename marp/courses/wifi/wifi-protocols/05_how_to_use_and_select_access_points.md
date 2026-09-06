@@ -9,9 +9,11 @@ audience:
   - audiences:embedded-engineers
 
 ---
+
 # How to Use and Select Access Points
 
 ---
+
 ## What This Chapter Covers
 
 - The classes of AP products on the market
@@ -21,6 +23,7 @@ audience:
 - A short procurement checklist
 
 ---
+
 ## Three Classes of AP
 
 - **Consumer**: combined router/AP/switch, web UI, set-and-forget
@@ -30,6 +33,7 @@ audience:
 - Buy the class that matches the team, not the household-name brand
 
 ---
+
 ## Specs That Matter
 
 - Supported 802.11 generations (Wi-Fi 6 minimum for new buys)
@@ -39,6 +43,7 @@ audience:
 - PoE power class (PoE+ usually required for Wi-Fi 6)
 
 ---
+
 ## Specs to Read Skeptically
 
 - "AX5400" and other made-up totals: sum of theoretical peak rates per band
@@ -48,6 +53,7 @@ audience:
 - Always look at independent reviews with throughput-under-load tests
 
 ---
+
 ## How Many APs Do I Need?
 
 - Rule of thumb (offices): one AP per 1500 sq ft / 140 sq m of usable area
@@ -57,6 +63,7 @@ audience:
 - Always do a survey for production deployments
 
 ---
+
 ## Where to Mount
 
 - Ceiling, near the centre of the area to cover
@@ -66,6 +73,7 @@ audience:
 - Outdoor APs need outdoor enclosures; indoor APs do not survive rain
 
 ---
+
 ## Power and Cabling
 
 - PoE (Power over Ethernet) feeds power and data on one cable
@@ -75,6 +83,7 @@ audience:
 - Cable: Cat5e is enough for 1 GbE; Cat6 if you want 2.5 GbE / 10 GbE uplink
 
 ---
+
 ## Standalone vs Controller
 
 - Standalone: one AP, configured via its own UI
@@ -84,6 +93,7 @@ audience:
 - Multi-AP without a controller is awkward — channels and roaming need coordination
 
 ---
+
 ## Mesh
 
 - Each AP is also a *backhaul* node; one wired AP feeds wireless ones
@@ -93,16 +103,19 @@ audience:
 - Mesh is a workaround, not a substitute for a wired backbone
 
 ---
+
 ## Deployment Topologies
 
 ![deployment_topologies](svg/courses/wifi/wifi-protocols/05_how_to_use_and_select_access_points/deployment_topologies.svg)
 
 ---
+
 ## Architecture Comparison
 
 ![architecture_comparison](svg/courses/wifi/wifi-protocols/05_how_to_use_and_select_access_points/architecture_comparison.svg)
 
 ---
+
 ## SSID Strategy
 
 - One SSID for staff (WPA2/3-Enterprise), one for guests (PSK), one for IoT
@@ -112,6 +125,7 @@ audience:
 - Hide nothing: hidden SSIDs do not improve security and break some clients
 
 ---
+
 ## Channel Planning Cheat-Sheet
 
 - 2.4 GHz: only 1, 6, 11. Always 20 MHz wide. Live with it.
@@ -121,6 +135,7 @@ audience:
 - Auto-channel works for small deployments; survey for the rest
 
 ---
+
 ## Power Planning
 
 - Resist the temptation to crank TX power to maximum
@@ -130,6 +145,7 @@ audience:
 - Many APs auto-tune; check it actually went down on quiet APs
 
 ---
+
 ## Roaming Behaviour
 
 - Sticky clients hold a far AP and won't switch
@@ -139,6 +155,7 @@ audience:
 - Old clients ignore all of this; budget for them in AP density
 
 ---
+
 ## Procurement Checklist
 
 - Wi-Fi 6 or newer; Wi-Fi 6E if you have 6 GHz allowed and dense clients
@@ -148,6 +165,7 @@ audience:
 - Vendor still publishing security firmware updates 5 years on?
 
 ---
+
 ## Common Mistakes
 
 - Buying consumer routers for an office that has IT staff

@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Rollout and Verification
 
 ---
+
 ## What This Chapter Covers
 
 - Rollout patterns
@@ -21,6 +23,7 @@ audience:
 - Post-migration cleanup
 
 ---
+
 ## Rollout Patterns
 
 - All at once
@@ -29,6 +32,7 @@ audience:
 - Per user percentage
 
 ---
+
 ## Feature Flags
 
 - Decouple deploy from release
@@ -37,6 +41,7 @@ audience:
 - Required for safe migrations
 
 ---
+
 ## Per-Tenant Cutover
 
 - Smaller blast radius
@@ -45,6 +50,7 @@ audience:
 - Best for shared schemas
 
 ---
+
 ## Per-Region Cutover
 
 - Limit blast to one region
@@ -53,6 +59,7 @@ audience:
 - Common in multi-region setups
 
 ---
+
 ## Canary Cutover
 
 - 1%, then 5%, then 25%, then 100%
@@ -61,11 +68,13 @@ audience:
 - Default for risky changes
 
 ---
+
 ## Cutover Schedule
 
 ![canary_cutover](svg/courses/databases/database-migration-strategies/05_rollout_and_verification/canary_cutover.svg)
 
 ---
+
 ## Verification Layers
 
 - Syntactic: counts, sums
@@ -74,6 +83,7 @@ audience:
 - User: dogfood and beta
 
 ---
+
 ## Smoke Tests
 
 - Critical user journeys
@@ -82,6 +92,7 @@ audience:
 - Block promotion on failure
 
 ---
+
 ## Performance Verification
 
 - p50 and p99 stable
@@ -90,6 +101,7 @@ audience:
 - Compare side by side
 
 ---
+
 ## Data Verification
 
 - Row counts match
@@ -98,6 +110,7 @@ audience:
 - Spot checks of business KPIs
 
 ---
+
 ## Rollback
 
 - Documented trigger
@@ -106,6 +119,7 @@ audience:
 - Loud alerting on rollback path
 
 ---
+
 ## Communication
 
 - Stakeholders informed
@@ -114,6 +128,7 @@ audience:
 - Internal channel for incidents
 
 ---
+
 ## Post-Migration Cleanup
 
 - Remove dual writes
@@ -122,6 +137,7 @@ audience:
 - Update docs
 
 ---
+
 ## Documentation
 
 - What changed
@@ -130,6 +146,7 @@ audience:
 - Lessons learned
 
 ---
+
 ## Common Rollout Mistakes
 
 - Rolling out to all users at once

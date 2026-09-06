@@ -11,9 +11,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Resiliency & Cross-Cutting Patterns
 
 ---
+
 ## Pattern Index
 
 - Resiliency: Circuit Breaker, Bulkhead, Saga, Throttling
@@ -23,6 +25,7 @@ audience:
 - Operational: Ambassador, Sidecar, Valet Key
 
 ---
+
 ## Circuit Breaker Overview
 
 - Prevents cascading failures in distributed systems
@@ -31,11 +34,13 @@ audience:
 - Provides fallback mechanisms and automatic recovery
 
 ---
+
 ## Circuit Breaker Pattern Diagram
 
 ![circuit_breaker_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/circuit_breaker_pattern_diagram.svg)
 
 ---
+
 ## Circuit Breaker Pros and Cons
 
 Pros:
@@ -51,6 +56,7 @@ Cons:
 - Can lead to reduced functionality during outages
 
 ---
+
 ## Circuit Breaker When to Use
 
 - In microservices architectures
@@ -60,6 +66,7 @@ Cons:
 - In scenarios requiring rapid failure detection and recovery
 
 ---
+
 ## Bulkhead Overview
 
 - Isolates elements of an application into pools so that if one fails, the others will continue to function
@@ -68,11 +75,13 @@ Cons:
 - Enables fault tolerance and graceful degradation
 
 ---
+
 ## Bulkhead Pattern Diagram
 
 ![bulkhead_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/bulkhead_pattern_diagram.svg)
 
 ---
+
 ## Bulkhead Pros and Cons
 
 Pros:
@@ -88,6 +97,7 @@ Cons:
 - Can be challenging to implement in legacy systems
 
 ---
+
 ## Bulkhead When to Use
 
 - In microservices architectures to isolate services
@@ -97,6 +107,7 @@ Cons:
 - In scenarios requiring different quality-of-service levels for different operations
 
 ---
+
 ## Saga Overview
 
 - Manages data consistency across microservices in distributed transaction scenarios
@@ -106,11 +117,13 @@ Cons:
 - Provides compensating transactions for rollback
 
 ---
+
 ## Saga Pattern Diagram
 
 ![saga_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/saga_pattern_diagram.svg)
 
 ---
+
 ## Saga Pros and Cons
 
 Pros:
@@ -126,6 +139,7 @@ Cons:
 - May introduce eventual consistency
 
 ---
+
 ## Saga When to Use
 
 - In microservices architectures with distributed transactions
@@ -135,6 +149,7 @@ Cons:
 - In scenarios where traditional two-phase commit is not feasible
 
 ---
+
 ## Throttling Overview
 
 - Controls the rate at which requests are processed or resources are consumed
@@ -144,11 +159,13 @@ Cons:
 - Helps maintain system stability and responsiveness under high load
 
 ---
+
 ## Throttling Pattern Diagram
 
 ![throttling_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/throttling_pattern_diagram.svg)
 
 ---
+
 ## Throttling Pros and Cons
 
 Pros:
@@ -166,6 +183,7 @@ Cons:
 - May require additional infrastructure for rate limiting
 
 ---
+
 ## Throttling When to Use
 
 - In public-facing APIs to prevent abuse
@@ -177,6 +195,7 @@ Cons:
 - To manage traffic spikes and ensure system stability
 
 ---
+
 ## API Gateway Overview
 
 - Acts as a single entry point for all client requests
@@ -186,11 +205,13 @@ Cons:
 - Can perform protocol translation and API composition
 
 ---
+
 ## API Gateway Pattern Diagram
 
 ![api_gateway_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/api_gateway_pattern_diagram.svg)
 
 ---
+
 ## API Gateway Pros and Cons
 
 Pros:
@@ -208,6 +229,7 @@ Cons:
 - May require significant infrastructure investment
 
 ---
+
 ## API Gateway When to Use
 
 - In microservices architectures to provide a unified entry point
@@ -218,6 +240,7 @@ Cons:
 - For gradually migrating from a monolith to microservices
 
 ---
+
 ## Backend for Frontend (BFF) Overview
 
 - Creates separate backend services for specific frontend applications or interfaces
@@ -227,11 +250,13 @@ Cons:
 - Simplifies client-side logic by moving complexity to the BFF layer
 
 ---
+
 ## BFF Pattern Diagram
 
 ![backend_for_frontend_bff_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/backend_for_frontend_bff_pattern_diagram.svg)
 
 ---
+
 ## BFF Pros and Cons
 
 Pros:
@@ -249,6 +274,7 @@ Cons:
 - Can become a bottleneck if not properly designed
 
 ---
+
 ## BFF When to Use
 
 - When supporting multiple client types with different needs (e.g., web, mobile, IoT)
@@ -258,6 +284,7 @@ Cons:
 - When different clients require different data shapes or operations
 
 ---
+
 ## Anti-Corruption Layer (ACL) Overview
 
 - Acts as a facade between different subsystems or models
@@ -268,11 +295,13 @@ Cons:
 - Originated from Domain-Driven Design principles
 
 ---
+
 ## ACL Pattern Diagram
 
 ![anti_corruption_layer_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/anti_corruption_layer_pattern_diagram.svg)
 
 ---
+
 ## ACL Pros and Cons
 
 Pros:
@@ -290,6 +319,7 @@ Cons:
 - Can be challenging to keep in sync with changes in connected systems
 
 ---
+
 ## ACL When to Use
 
 - During large-scale system modernization or migration projects
@@ -301,6 +331,7 @@ Cons:
 - To facilitate communication between bounded contexts in a microservices architecture
 
 ---
+
 ## Strangler Fig Overview
 
 - Gradual migration strategy for rewriting or replacing legacy systems
@@ -310,11 +341,13 @@ Cons:
 - Allows for coexistence of old and new systems during transition
 
 ---
+
 ## Strangler Fig Pattern Diagram
 
 ![strangler_fig_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/strangler_fig_pattern_diagram.svg)
 
 ---
+
 ## Strangler Fig Pros and Cons
 
 Pros:
@@ -330,6 +363,7 @@ Cons:
 - Can be challenging to maintain consistency between old and new systems
 
 ---
+
 ## Strangler Fig When to Use
 
 - When migrating large, mission-critical legacy systems
@@ -339,6 +373,7 @@ Cons:
 - When the existing system is too large or complex for a single, complete rewrite
 
 ---
+
 ## Database per Service Overview
 
 - Each microservice has its own private database
@@ -349,11 +384,13 @@ Cons:
 - Facilitates independent scaling and deployment of services
 
 ---
+
 ## Database per Service Pattern Diagram
 
 ![database_per_service_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/database_per_service_pattern_diagram.svg)
 
 ---
+
 ## Database per Service Pros and Cons
 
 Pros:
@@ -371,6 +408,7 @@ Cons:
 - Requires careful handling of distributed transactions
 
 ---
+
 ## Database per Service When to Use
 
 - In microservices architectures to ensure service independence
@@ -383,6 +421,7 @@ Cons:
 - When different teams are responsible for different services and their data
 
 ---
+
 ## Geode Overview
 
 - Deploys a subset of application's services into satellite locations
@@ -393,11 +432,13 @@ Cons:
 - Allows for local processing while maintaining global consistency
 
 ---
+
 ## Geode Pattern Diagram
 
 ![geode_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/geode_pattern_diagram.svg)
 
 ---
+
 ## Geode Pros and Cons
 
 Pros:
@@ -415,6 +456,7 @@ Cons:
 - Can complicate deployment and versioning processes
 
 ---
+
 ## Geode When to Use
 
 - For globally distributed applications with users across different regions
@@ -426,6 +468,7 @@ Cons:
 - In large-scale systems where global deployment is necessary but challenging
 
 ---
+
 ## Ambassador Overview
 
 - Provides a proxy service for connecting to external services or resources
@@ -435,11 +478,13 @@ Cons:
 - Simplifies the main application by abstracting connection complexities
 
 ---
+
 ## Ambassador Pattern Diagram
 
 ![ambassador_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/ambassador_pattern_diagram.svg)
 
 ---
+
 ## Ambassador Pros and Cons
 
 Pros:
@@ -457,6 +502,7 @@ Cons:
 - Can complicate local development and testing scenarios
 
 ---
+
 ## Ambassador When to Use
 
 - In microservices architectures to manage inter-service communication
@@ -468,6 +514,7 @@ Cons:
 - In scenarios where you want to shield the main application from the complexities of service discovery
 
 ---
+
 ## Sidecar Overview
 
 - Deploys components of an application as a separate process or container
@@ -477,11 +524,13 @@ Cons:
 - Common uses include logging, monitoring, security, and network services
 
 ---
+
 ## Sidecar Pattern Diagram
 
 ![sidecar_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/sidecar_pattern_diagram.svg)
 
 ---
+
 ## Sidecar Pros and Cons
 
 Pros:
@@ -499,6 +548,7 @@ Cons:
 - Can lead to version compatibility issues between application and sidecar
 
 ---
+
 ## Sidecar When to Use
 
 - In microservices architectures to handle cross-cutting concerns
@@ -510,6 +560,7 @@ Cons:
 - To extend the functionality of legacy applications without modifying them
 
 ---
+
 ## Valet Key Overview
 
 - Provides clients with restricted direct access to a specific resource
@@ -520,11 +571,13 @@ Cons:
 - Often used for operations like uploads/downloads in cloud storage
 
 ---
+
 ## Valet Key Pattern Diagram
 
 ![valet_key_pattern_diagram](svg/courses/architecting/architecture-patterns/06_resiliency_and_cross_cutting_patterns/valet_key_pattern_diagram.svg)
 
 ---
+
 ## Valet Key Pros and Cons
 
 Pros:
@@ -542,6 +595,7 @@ Cons:
 - Might not be suitable for frequently changing or sensitive data
 
 ---
+
 ## Valet Key When to Use
 
 - In cloud-based applications for managing access to storage services
@@ -553,6 +607,7 @@ Cons:
 - In multi-tenant systems to securely manage resource access across tenants
 
 ---
+
 ## Summary
 
 - Resiliency: Circuit Breaker stops cascades, Bulkhead isolates pools, Saga gives distributed transactions, Throttling enforces rate limits

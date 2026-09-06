@@ -12,6 +12,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Redirection in Scripts
 
 ---
@@ -21,6 +22,7 @@ audience:
 ![Script Redirection Overview](svg/courses/languages/bash/bash-scripting/15_redirection_in_scripts/redirection_overview.svg)
 
 ---
+
 ## Redirecting Entire Scripts
 
 ```bash
@@ -38,6 +40,7 @@ ls -la
 ```
 
 ---
+
 ## Redirecting to Both Log and Terminal
 
 ```bash
@@ -51,6 +54,7 @@ echo "Errors too" >&2
 ```
 
 ---
+
 ## Saving and Restoring File Descriptors
 
 ```bash
@@ -74,6 +78,7 @@ echo "This goes to the terminal again"
 ```
 
 ---
+
 ## Saving and Restoring: Full Pattern
 
 ```bash
@@ -96,6 +101,7 @@ echo "back to terminal"
 ```
 
 ---
+
 ## Redirect a Block of Commands
 
 ```bash
@@ -121,6 +127,7 @@ echo "Report saved (this prints to terminal)"
 ```
 
 ---
+
 ## Logging Functions
 
 ```bash
@@ -144,6 +151,7 @@ exec 3>&-    # close log file
 ```
 
 ---
+
 ## Input Redirection in Scripts
 
 ```bash
@@ -166,6 +174,7 @@ echo "Config: $HOST:$PORT (debug=$DEBUG)"
 ```
 
 ---
+
 ## Here Document Tricks
 
 ```bash
@@ -190,6 +199,7 @@ REMOTE
 ```
 
 ---
+
 ## Practical: Script that Logs Everything
 
 ```bash

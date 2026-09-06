@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # NLP Evaluation Methodology
 
 ---
+
 ## What This Chapter Covers
 
 - The metrics zoo and how to pick the right one
@@ -22,6 +24,7 @@ audience:
 - Holistic evaluation across capability, safety, and cost
 
 ---
+
 ## Why Evaluation Is the Hard Part
 
 - Models are easy to train; deciding which is better is hard
@@ -31,11 +34,13 @@ audience:
 - The deepest engineering challenges in modern `NLP` live here
 
 ---
+
 ## Levels of Evaluation
 
 ![evaluation_levels](svg/courses/ai/natural-language-processing/25_nlp_evaluation_methodology/evaluation_levels.svg)
 
 ---
+
 ## Intrinsic vs Extrinsic Evaluation
 
 - Intrinsic: measure the property a model is supposed to have (perplexity, accuracy)
@@ -45,6 +50,7 @@ audience:
 - Healthy programs run both and reconcile divergences
 
 ---
+
 ## Reference-Based Metrics
 
 - Compare model output to one or more human references
@@ -54,6 +60,7 @@ audience:
 - Plateau quickly as model quality improves
 
 ---
+
 ## BLEU and Its Limits
 
 - N-gram precision against references with brevity penalty
@@ -63,6 +70,7 @@ audience:
 - Replaced as the headline metric by `COMET` and `chrF` in modern work
 
 ---
+
 ## ROUGE for Summarization
 
 - Recall-oriented n-gram overlap, with `ROUGE-1`, `ROUGE-2`, and `ROUGE-L`
@@ -72,6 +80,7 @@ audience:
 - Reporting only `ROUGE` is now a red flag in reviews
 
 ---
+
 ## BERTScore and Embedding Metrics
 
 - Compare contextual embeddings of candidate and reference tokens
@@ -81,6 +90,7 @@ audience:
 - A reasonable second metric to pair with `BLEU` or `ROUGE`
 
 ---
+
 ## Learned Metrics
 
 - Train a regressor from human ratings to predict quality
@@ -90,6 +100,7 @@ audience:
 - Becoming the default for `MT` and increasingly for summarization
 
 ---
+
 ## Reference-Free Metrics
 
 - Score a generation without a reference
@@ -99,6 +110,7 @@ audience:
 - Pair with reference-based when references exist
 
 ---
+
 ## Perplexity
 
 - The exponentiated cross-entropy of the model on a held-out corpus
@@ -108,6 +120,7 @@ audience:
 - Disconnected from generation quality at the high end
 
 ---
+
 ## Task-Specific Benchmarks
 
 - `GLUE`, `SuperGLUE` for classification and inference
@@ -117,6 +130,7 @@ audience:
 - Standardize methodology, but they age fast
 
 ---
+
 ## Benchmark Saturation
 
 - Models hit human parity on a benchmark
@@ -126,6 +140,7 @@ audience:
 - Saturation is when to switch metrics, not declare victory
 
 ---
+
 ## Test-Set Contamination
 
 - Training data scraped from the web includes public test sets
@@ -135,6 +150,7 @@ audience:
 - Healthy benchmarks have private held-out sets that prove generalization
 
 ---
+
 ## Statistical Significance
 
 - A 0.5 point `BLEU` gap on a 1000-sentence test is rarely significant
@@ -144,6 +160,7 @@ audience:
 - Report the `p` value or interval, not just the point estimate
 
 ---
+
 ## Significance Testing in Practice
 
 ```python
@@ -161,6 +178,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - Worth running before publishing a new "state of the art"
 
 ---
+
 ## Human Evaluation: When and How
 
 - The gold standard for any generation task
@@ -170,6 +188,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - Most reliable when the rubric is task-specific and well-piloted
 
 ---
+
 ## Direct Assessment
 
 - Annotators rate outputs on a 0-100 scale against a reference or source
@@ -179,6 +198,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - Pair with pairwise comparisons for robustness
 
 ---
+
 ## Multidimensional Quality Metrics (MQM)
 
 - Annotators mark errors with categories: accuracy, fluency, locale, style
@@ -188,6 +208,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - Closer to how editors actually think about quality
 
 ---
+
 ## LLM as Judge
 
 - Prompt a strong `LLM` to rate or compare outputs
@@ -197,11 +218,13 @@ print(f"Wilcoxon p = {p:.4f}")
 - Increasingly common but not yet a replacement for humans
 
 ---
+
 ## LLM Judge Pitfalls
 
 ![llm_judge_pitfalls](svg/courses/ai/natural-language-processing/25_nlp_evaluation_methodology/llm_judge_pitfalls.svg)
 
 ---
+
 ## Human-LLM Hybrid Evaluation
 
 - Use the `LLM` judge as a first-pass filter
@@ -211,6 +234,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - Standard in production evaluation pipelines for chat systems
 
 ---
+
 ## Counterfactual and Targeted Evaluation
 
 - Build challenge sets that probe specific behaviors
@@ -220,6 +244,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - Catches regressions that aggregate metrics miss
 
 ---
+
 ## Robustness Evaluation
 
 - Test the model on perturbed inputs: typos, paraphrase, code-switching
@@ -229,6 +254,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - The cheapest improvement comes from training on more diverse data
 
 ---
+
 ## Calibration Evaluation
 
 - Does the model's confidence match its accuracy
@@ -238,6 +264,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - Modern `LLMs` are often poorly calibrated until reward modeling is applied
 
 ---
+
 ## Holistic Evaluation Frameworks
 
 - `HELM` evaluates models across many tasks, metrics, and conditions
@@ -247,6 +274,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - The closest thing the field has to a comprehensive `LLM` scorecard
 
 ---
+
 ## Benchmark Cards
 
 - Document a benchmark's purpose, composition, limitations, license
@@ -256,6 +284,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - Underused but increasingly expected
 
 ---
+
 ## Reproducibility
 
 - Pin random seeds, document hardware, log software versions
@@ -265,6 +294,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - The minimum bar for credible numbers in 2026
 
 ---
+
 ## Cost-Aware Evaluation
 
 - Latency-to-first-token, total time, throughput at peak load
@@ -274,6 +304,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - A more accurate model at 10x the cost is not a clear win
 
 ---
+
 ## Common Production Pitfalls
 
 - Evaluating only on the easy splits and ignoring tail behavior
@@ -283,6 +314,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - Not measuring drift after deployment
 
 ---
+
 ## Anti-Patterns
 
 - "We hit `97%` on `XYZ` benchmark, ship it"
@@ -292,6 +324,7 @@ print(f"Wilcoxon p = {p:.4f}")
 - Adding a metric to the dashboard but never acting on it
 
 ---
+
 ## Summary
 
 - Pick metrics that match the user-visible behavior, not the easiest to compute

@@ -9,19 +9,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Real-Time and Scheduling
 
 ---
+
 ## RMS vs EDF
 
 ![scheduling](svg/courses/real_time/real-time-programming/08_real_time_and_scheduling/scheduling.svg)
 
 ---
+
 ## Scheduling Classes
 
 ![scheduling_classes](svg/courses/real_time/real-time-programming/08_real_time_and_scheduling/scheduling_classes.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Designing threads and priorities
@@ -32,6 +36,7 @@ audience:
 - Schedulability analysis basics
 
 ---
+
 ## Linux Scheduling Classes
 
 - **SCHED_OTHER (CFS)**: default; fair-share; non-RT
@@ -42,6 +47,7 @@ audience:
 - **SCHED_DEADLINE**: EDF-based, true real-time
 
 ---
+
 ## SCHED_FIFO
 
 - Real-time priority class
@@ -51,6 +57,7 @@ audience:
 - The simplest real-time scheduling
 
 ---
+
 ## SCHED_RR
 
 - Like SCHED_FIFO but with time slices
@@ -60,6 +67,7 @@ audience:
 - Useful when several equal-priority RT threads need to run
 
 ---
+
 ## SCHED_DEADLINE
 
 - EDF (Earliest Deadline First) scheduler
@@ -69,6 +77,7 @@ audience:
 - Linux 3.14+; less commonly used than FIFO
 
 ---
+
 ## Setting Priority
 
 ```c
@@ -82,6 +91,7 @@ pthread_setschedparam(pthread_self(), SCHED_FIFO, &p);
 - SCHED_FIFO at priority 99: highest non-kernel priority
 
 ---
+
 ## Designing Priorities
 
 - One thread per criticality level
@@ -91,6 +101,7 @@ pthread_setschedparam(pthread_self(), SCHED_FIFO, &p);
 - Standard practice: rate-monotonic — shorter period = higher priority
 
 ---
+
 ## Rate-Monotonic Analysis
 
 - Theoretical analysis of fixed-priority scheduling
@@ -100,6 +111,7 @@ pthread_setschedparam(pthread_self(), SCHED_FIFO, &p);
 - A budget; not a guarantee, but a useful starting point
 
 ---
+
 ## CPU Affinity
 
 ```c
@@ -116,6 +128,7 @@ sched_setaffinity(0, sizeof(set), &set);
 - `taskset` for command-line use
 
 ---
+
 ## CPU Isolation
 
 - Take CPUs out of the kernel's general scheduler pool
@@ -125,6 +138,7 @@ sched_setaffinity(0, sizeof(set), &set);
 - Pair with `nohz_full=2,3` to disable scheduler tick on those CPUs
 
 ---
+
 ## Interrupts as Latency Sources
 
 - An interrupt preempts whatever is running, including RT threads
@@ -134,6 +148,7 @@ sched_setaffinity(0, sizeof(set), &set);
 - Some IRQs (timer, IPI) can't be moved
 
 ---
+
 ## Pinning Interrupts
 
 ```bash
@@ -146,6 +161,7 @@ echo 1 > /proc/irq/24/smp_affinity     # IRQ 24 -> CPU 0
 - Verify with `cat /proc/interrupts`
 
 ---
+
 ## Priority Inversion
 
 - Low-priority thread holds a lock that a high-priority thread needs
@@ -155,11 +171,13 @@ echo 1 > /proc/irq/24/smp_affinity     # IRQ 24 -> CPU 0
 - Without protection, can cause arbitrary delays
 
 ---
+
 ## Priority Inversion Diagram
 
 ![priority_inversion](svg/courses/real_time/real-time-programming/08_real_time_and_scheduling/priority_inversion.svg)
 
 ---
+
 ## Solution: Priority Inheritance
 
 - The lock-holding thread *temporarily inherits* the priority of any waiter
@@ -169,6 +187,7 @@ echo 1 > /proc/irq/24/smp_affinity     # IRQ 24 -> CPU 0
 - The standard solution
 
 ---
+
 ## Solution: Priority Ceiling
 
 - Each lock has a priority ceiling — the highest priority of any thread that uses it
@@ -178,6 +197,7 @@ echo 1 > /proc/irq/24/smp_affinity     # IRQ 24 -> CPU 0
 - Less common in user-space than priority inheritance
 
 ---
+
 ## Schedulability in Practice
 
 - Compute total CPU usage (sum of C/T)
@@ -187,6 +207,7 @@ echo 1 > /proc/irq/24/smp_affinity     # IRQ 24 -> CPU 0
 - Be skeptical of "average" measurements — RT is about the worst case
 
 ---
+
 ## Common Mistakes
 
 - All RT threads at priority 99 (no ordering, surprises)

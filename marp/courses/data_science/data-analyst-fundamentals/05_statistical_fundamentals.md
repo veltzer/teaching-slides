@@ -7,14 +7,17 @@ audience:
   - audiences:data-analysts
 
 ---
+
 # Statistical Fundamentals
 
 ---
+
 ## Distribution Shapes
 
 ![dist_shapes](svg/courses/data_science/data-analyst-fundamentals/05_statistical_fundamentals/dist_shapes.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Descriptive statistics: mean, median, mode, variance
@@ -25,6 +28,7 @@ audience:
 - Common statistical pitfalls
 
 ---
+
 ## Why Statistics Matters
 
 - Data is *samples* of a larger reality
@@ -34,16 +38,19 @@ audience:
 - A little knowledge prevents a lot of embarrassment
 
 ---
+
 ## Central Tendency And Spread
 
 ![central_tendency](svg/courses/data_science/data-analyst-fundamentals/05_statistical_fundamentals/central_tendency.svg)
 
 ---
+
 ## Statistical Pillars
 
 ![stat_pillars](svg/courses/data_science/data-analyst-fundamentals/05_statistical_fundamentals/stat_pillars.svg)
 
 ---
+
 ## Mean
 
 - Sum / count
@@ -52,6 +59,7 @@ audience:
 - Avoid when: skewed data, outliers present
 
 ---
+
 ## Median
 
 - The middle value when sorted
@@ -61,6 +69,7 @@ audience:
 - "Median income" is more honest than "mean income"
 
 ---
+
 ## Mode
 
 - The most frequent value
@@ -70,6 +79,7 @@ audience:
 - A bimodal distribution has *two* modes
 
 ---
+
 ## Variance and Standard Deviation
 
 - **Variance**: average squared deviation from the mean
@@ -79,6 +89,7 @@ audience:
 - "Mean 50, SD 10" tells you most data is roughly 40-60
 
 ---
+
 ## Percentiles
 
 - The value below which a given % of data falls
@@ -88,6 +99,7 @@ audience:
 - Use them when extremes matter
 
 ---
+
 ## Probability Basics
 
 - Probability of an event: 0 (impossible) to 1 (certain)
@@ -97,6 +109,7 @@ audience:
 - Conditional: P(A | B) = "probability of A given B happened"
 
 ---
+
 ## Bayes' Theorem, Briefly
 
 - P(A | B) = P(B | A) * P(A) / P(B)
@@ -106,6 +119,7 @@ audience:
 - Worth understanding even if you never compute it manually
 
 ---
+
 ## Distributions
 
 - **Normal**: bell curve; many natural phenomena
@@ -116,6 +130,7 @@ audience:
 - Match the right distribution to your data before testing
 
 ---
+
 ## The Central Limit Theorem
 
 - The mean of *many* samples tends toward a normal distribution, even if the underlying data isn't normal
@@ -125,6 +140,7 @@ audience:
 - One of the most important results in statistics
 
 ---
+
 ## Sampling
 
 - Take a subset to estimate a property of the whole
@@ -134,6 +150,7 @@ audience:
 - Convenience sampling (whoever's easy): biased, common, often unfit for purpose
 
 ---
+
 ## Sample Size
 
 - Bigger samples &#8594; smaller error bars
@@ -143,6 +160,7 @@ audience:
 - Overpowered tests are wasteful but conservative
 
 ---
+
 ## Hypothesis Testing
 
 - **Null hypothesis (H0)**: no effect / no difference
@@ -152,11 +170,13 @@ audience:
 - Small p &#8594; reject H0; large p &#8594; can't distinguish from noise
 
 ---
+
 ## Hypothesis Test Flow
 
 ![hypothesis_test_flow](svg/courses/data_science/data-analyst-fundamentals/05_statistical_fundamentals/hypothesis_test_flow.svg)
 
 ---
+
 ## P-Values, Carefully
 
 - p < 0.05 is the conventional threshold; not magic
@@ -166,6 +186,7 @@ audience:
 - p-hacking (testing many things, reporting only the significant) is misuse
 
 ---
+
 ## Confidence Intervals
 
 - A range likely to contain the true value
@@ -175,6 +196,7 @@ audience:
 - Always quote with the estimate
 
 ---
+
 ## A/B Testing
 
 - Random assignment to A or B
@@ -184,6 +206,7 @@ audience:
 - Beware: peeking, multiple comparisons, novelty effects, regression to mean
 
 ---
+
 ## Common Statistical Pitfalls
 
 - Confusing correlation with causation
@@ -193,6 +216,7 @@ audience:
 - Goodhart's law: "when a measure becomes a target, it ceases to be a good measure"
 
 ---
+
 ## Common Mistakes
 
 - Quoting means for skewed data

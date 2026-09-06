@@ -12,14 +12,17 @@ audience:
   - audiences:devops
 
 ---
+
 # Using Arrays
 
 ---
+
 ## Array Memory Layout
 
 ![array_memory_layout](svg/courses/languages/bash/bash-scripting/20_arrays/array_memory_layout.svg)
 
 ---
+
 ## Creating Arrays
 
 ```bash
@@ -42,6 +45,7 @@ IFS=',' read -ra items <<< "a,b,c,d"
 ```
 
 ---
+
 ## Accessing Array Elements
 
 ```bash
@@ -66,6 +70,7 @@ echo "${!arr[@]}"    # 0 1 2 3 4
 ```
 
 ---
+
 ## `"${arr[@]}"` vs `"${arr[*]}"`
 
 ```bash
@@ -89,6 +94,7 @@ done
 ```
 
 ---
+
 ## Adding Elements
 
 ```bash
@@ -113,6 +119,7 @@ arr=("zero" "${arr[@]}")
 ```
 
 ---
+
 ## Removing Elements
 
 ```bash
@@ -142,6 +149,7 @@ remove_value() {
 ```
 
 ---
+
 ## Array Slicing
 
 ```bash
@@ -163,6 +171,7 @@ echo "${merged[@]}"      # a b c d
 ```
 
 ---
+
 ## Iterating Over Arrays
 
 ```bash
@@ -191,6 +200,7 @@ done
 ```
 
 ---
+
 ## Checking If an Element Exists
 
 ```bash
@@ -218,6 +228,7 @@ fi
 ```
 
 ---
+
 ## Checking If an Index Exists
 
 ```bash
@@ -237,6 +248,7 @@ fi
 ```
 
 ---
+
 ## Sorting Arrays
 
 ```bash
@@ -260,6 +272,7 @@ echo "${sorted[@]}"    # date cherry banana apple
 ```
 
 ---
+
 ## Unique Elements
 
 ```bash
@@ -275,6 +288,7 @@ echo "${unique[@]}"    # apple banana cherry date
 ```
 
 ---
+
 ## Arrays as Function Arguments
 
 ```bash
@@ -300,6 +314,7 @@ echo "${output_array[@]}"
 ```
 
 ---
+
 ## `mapfile` / `readarray`
 
 ```bash
@@ -326,6 +341,7 @@ mapfile -t pids < <(pgrep bash)
 ```
 
 ---
+
 ## Practical: Stack Implementation
 
 ```bash

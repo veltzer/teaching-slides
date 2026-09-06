@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Saga and Choreography Patterns
 
 ---
+
 ## What This Chapter Covers
 
 - The distributed transaction problem
@@ -21,6 +23,7 @@ audience:
 - Long-running processes; tracking saga state
 
 ---
+
 ## The Distributed Transaction Problem
 
 - Multi-service workflow: reserve inventory, charge payment, ship order
@@ -30,6 +33,7 @@ audience:
 - Sagas are the response
 
 ---
+
 ## What Is a Saga?
 
 - A sequence of local transactions
@@ -39,21 +43,25 @@ audience:
 - Eventual consistency by design
 
 ---
+
 ## Saga Coordination Styles
 
 ![saga_styles](svg/courses/architecting/event-driven-architecture/05_saga_and_choreography/saga_styles.svg)
 
 ---
+
 ## Saga Visualized
 
 ![saga_overview](svg/courses/architecting/event-driven-architecture/05_saga_and_choreography/saga_overview.svg)
 
 ---
+
 ## Orchestration Versus Choreography
 
 ![orchestration_vs_choreography](svg/courses/architecting/event-driven-architecture/05_saga_and_choreography/orchestration_vs_choreography.svg)
 
 ---
+
 ## Two Approaches
 
 - Orchestration: a coordinator drives each step
@@ -63,6 +71,7 @@ audience:
 - Pick per workflow; mix within a system
 
 ---
+
 ## Orchestration: The Coordinator
 
 - A dedicated saga coordinator (orchestrator)
@@ -72,6 +81,7 @@ audience:
 - The state machine is explicit and centralized
 
 ---
+
 ## Orchestration: Pros
 
 - Clear, explicit workflow logic
@@ -81,6 +91,7 @@ audience:
 - The orchestrator is the system of record for the workflow
 
 ---
+
 ## Orchestration: Cons
 
 - The orchestrator is a single point of complexity
@@ -90,6 +101,7 @@ audience:
 - Risk of becoming a "god service"
 
 ---
+
 ## Choreography: The Reactive Approach
 
 - No central coordinator
@@ -99,6 +111,7 @@ audience:
 - The "workflow" emerges from decentralized rules
 
 ---
+
 ## Choreography: Pros
 
 - No single point of failure
@@ -108,6 +121,7 @@ audience:
 - Loose coupling extended to workflow
 
 ---
+
 ## Choreography: Cons
 
 - The workflow is implicit — hard to see end to end
@@ -117,11 +131,13 @@ audience:
 - Failure recovery is harder to coordinate
 
 ---
+
 ## Choreography Visualized
 
 ![choreography](svg/courses/architecting/event-driven-architecture/05_saga_and_choreography/choreography.svg)
 
 ---
+
 ## When to Choose Orchestration
 
 - Long, complex workflows with branching logic
@@ -131,6 +147,7 @@ audience:
 - Regulated industries with explicit process documentation
 
 ---
+
 ## When to Choose Choreography
 
 - Short workflows with linear or simple flow
@@ -140,6 +157,7 @@ audience:
 - Pure event-driven culture
 
 ---
+
 ## Compensating Transactions
 
 - The "undo" of a previously completed step
@@ -149,6 +167,7 @@ audience:
 - Must be idempotent and well-defined per step
 
 ---
+
 ## Designing Compensations
 
 - For each step, write its compensation up front
@@ -158,6 +177,7 @@ audience:
 - Document compensation semantics per step
 
 ---
+
 ## Long-Running Processes
 
 - Sagas can take hours, days, or weeks
@@ -167,6 +187,7 @@ audience:
 - Workflow engines (Temporal, Camunda) handle this
 
 ---
+
 ## Saga State Tracking
 
 - Per saga: ID, current step, status, started_at, completed_at
@@ -176,6 +197,7 @@ audience:
 - Debugging starts from the state record
 
 ---
+
 ## Workflow Engines
 
 - Temporal — code-as-workflow, durable execution
@@ -185,6 +207,7 @@ audience:
 - All solve persistence, retries, timeouts so you don't have to
 
 ---
+
 ## Mixing Orchestration and Choreography
 
 - Top-level workflow is orchestrated
@@ -194,6 +217,7 @@ audience:
 - Document the choice per workflow
 
 ---
+
 ## Error Handling
 
 - Different errors need different responses
@@ -203,6 +227,7 @@ audience:
 - Distinguish at design time, not at debug time
 
 ---
+
 ## Partial Failure Scenarios
 
 - Step succeeds but ack fails — appears as failure
@@ -212,6 +237,7 @@ audience:
 - Test these paths; they're not theoretical
 
 ---
+
 ## Tracking Saga State Across Services
 
 - Correlation ID flows through every event
@@ -221,6 +247,7 @@ audience:
 - Without correlation, debugging is nearly impossible
 
 ---
+
 ## Common Anti-Patterns
 
 - "Compensation = call DELETE" — semantic vs technical undo
@@ -230,6 +257,7 @@ audience:
 - Orchestrators that grow into monoliths
 
 ---
+
 ## Saga Testing
 
 - Unit-test each step's command and compensation
@@ -239,6 +267,7 @@ audience:
 - Test timeouts and partial failures explicitly
 
 ---
+
 ## Summary
 
 - Sagas: local transactions plus compensations, no 2PC

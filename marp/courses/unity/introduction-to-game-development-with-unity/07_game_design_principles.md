@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Game Design Principles
 
 ---
+
 ## Feedback Loops
 
 ![feedback_loops](svg/courses/unity/introduction-to-game-development-with-unity/07_game_design_principles/feedback_loops.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The core ingredients of a game
@@ -26,6 +29,7 @@ audience:
 - A short tour of common pitfalls
 
 ---
+
 ## What Makes a Game
 
 - A **goal** the player is trying to reach
@@ -35,6 +39,7 @@ audience:
 - A **conclusion** — win, lose, or some end state worth reaching
 
 ---
+
 ## The Core Loop
 
 - The smallest repeatable cycle of player activity
@@ -44,6 +49,7 @@ audience:
 - Prototype the core loop *first*, before art, story, or systems
 
 ---
+
 ## Mechanics, Dynamics, Aesthetics
 
 - The **MDA framework**: a way to think about game design
@@ -53,11 +59,13 @@ audience:
 - Designers tweak mechanics; players experience aesthetics
 
 ---
+
 ## The MDA Loop
 
 ![mda_loop](svg/courses/unity/introduction-to-game-development-with-unity/07_game_design_principles/mda_loop.svg)
 
 ---
+
 ## What "Fun" Means
 
 - Different players want different things — there is no universal "fun"
@@ -67,6 +75,7 @@ audience:
 - Watching real people play your game is a humbling, indispensable practice
 
 ---
+
 ## Player Agency
 
 - The player should feel that *their* choices matter
@@ -76,6 +85,7 @@ audience:
 - Avoid the illusion of choice; either commit to consequence or remove the choice
 
 ---
+
 ## Feedback Loops
 
 - Every player action needs a perceptible response
@@ -85,6 +95,7 @@ audience:
 - A delay between action and feedback &gt; 100ms feels sluggish
 
 ---
+
 ## Difficulty Curves
 
 - Players need to *feel* like they're getting better
@@ -94,6 +105,7 @@ audience:
 - Periodic dips give breathing room before the next climb
 
 ---
+
 ## Onboarding
 
 - The first 5 minutes determine whether a player keeps playing
@@ -103,6 +115,7 @@ audience:
 - "Show, don't tell" — let the level itself train the player
 
 ---
+
 ## Pacing
 
 - Mix high-intensity sequences with low-intensity ones
@@ -112,6 +125,7 @@ audience:
 - Every game is, at heart, a controlled emotional journey
 
 ---
+
 ## Level Design Basics
 
 - Block out levels with primitive shapes first ("greybox")
@@ -121,6 +135,7 @@ audience:
 - Iterate on the layout *first* — once art is in, changes get expensive
 
 ---
+
 ## World Building
 
 - Setting and tone shape every other design decision
@@ -130,6 +145,7 @@ audience:
 - The world should suggest stories happened here even when you weren't looking
 
 ---
+
 ## Reward Schedules
 
 - Constant reward &#8594; rewards lose meaning fast
@@ -139,6 +155,7 @@ audience:
 - Match reward type to player motivation (Achievers want stats; Explorers want lore)
 
 ---
+
 ## Balancing
 
 - Numbers (damage, health, prices) must support the experience you want
@@ -148,6 +165,7 @@ audience:
 - A balance pass is never "done"; treat it as continuous
 
 ---
+
 ## Prototyping
 
 - Build the smallest playable thing as fast as possible
@@ -157,6 +175,7 @@ audience:
 - A prototype that ships is rare and lucky
 
 ---
+
 ## Common Pitfalls
 
 - Designing in your head — playtest *early*, with someone other than yourself
@@ -166,6 +185,7 @@ audience:
 - Not finishing — the world is full of unfinished prototypes; finishing is the rarest skill
 
 ---
+
 ## Course Wrap-Up
 
 - The Unity editor, scenes, and GameObjects: structure

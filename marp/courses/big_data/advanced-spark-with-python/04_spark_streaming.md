@@ -11,9 +11,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Spark Streaming and Structured Streaming
 
 ---
+
 ## Streaming Fundamentals
 * Real-time data processing
 * Stream processing models
@@ -21,10 +23,12 @@ audience:
 * Continuous processing
 
 ---
+
 ## Stream Processing Models
 ![stream_processing_models](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/stream_processing_models.svg)
 
 ---
+
 ## Basic Concepts
 1. Data sources
 1. Processing time
@@ -32,6 +36,7 @@ audience:
 1. Watermarks
 
 ---
+
 ## Streaming Sources
 ```python
 # Kafka source example
@@ -43,10 +48,12 @@ stream = spark.readStream \
 ```
 
 ---
+
 ## Input Data Sources
 ![input_data_sources](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/input_data_sources.svg)
 
 ---
+
 ## Stream Processing Modes
 1. Micro-batch processing
 1. Continuous processing
@@ -54,6 +61,7 @@ stream = spark.readStream \
 1. Processing guarantees
 
 ---
+
 ## Event Time Processing
 ```python
 from pyspark.sql.functions import window
@@ -65,10 +73,12 @@ windowed = stream.groupBy(
 ```
 
 ---
+
 ## Watermark Configuration
 ![watermark_configuration](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/watermark_configuration.svg)
 
 ---
+
 ## Late Data Handling
 ```python
 # Configure watermark
@@ -79,6 +89,7 @@ stream_df = stream_df \
 ```
 
 ---
+
 ## Stateful Processing
 1. Window operations
 1. Aggregations
@@ -86,10 +97,12 @@ stream_df = stream_df \
 1. Checkpointing
 
 ---
+
 ## Window Operations
 ![window_operations](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/window_operations.svg)
 
 ---
+
 ## Window Types
 ```python
 # Sliding window
@@ -99,6 +112,7 @@ windowed = stream.groupBy(
 ```
 
 ---
+
 ## State Management
 ```python
 # Maintain running count
@@ -110,10 +124,12 @@ def update_state(key, value, state):
 ```
 
 ---
+
 ## Checkpointing
 ![checkpointing](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/checkpointing.svg)
 
 ---
+
 ## Fault Tolerance
 1. Exactly-once processing
 1. Checkpoint configuration
@@ -121,6 +137,7 @@ def update_state(key, value, state):
 1. State recovery
 
 ---
+
 ## Output Modes
 ```python
 # Complete output mode
@@ -131,10 +148,12 @@ query = stream.writeStream \
 ```
 
 ---
+
 ## Output Sinks
 ![output_sinks](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/output_sinks.svg)
 
 ---
+
 ## Streaming Joins
 1. Stream-stream joins
 1. Stream-static joins
@@ -142,6 +161,7 @@ query = stream.writeStream \
 1. State cleanup
 
 ---
+
 ## Stream-Stream Join
 ```python
 # Join two streams
@@ -153,10 +173,12 @@ joined = stream1.join(
 ```
 
 ---
+
 ## Performance Optimization
 ![performance_optimization](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/performance_optimization.svg)
 
 ---
+
 ## Memory Management
 1. State cleanup
 1. Watermark tuning
@@ -164,6 +186,7 @@ joined = stream1.join(
 1. Resource allocation
 
 ---
+
 ## Trigger Options
 ```python
 # Process every 5 minutes
@@ -173,10 +196,12 @@ query = stream.writeStream \
 ```
 
 ---
+
 ## Monitoring Streams
 ![monitoring_streams](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/monitoring_streams.svg)
 
 ---
+
 ## Performance Metrics
 1. Input rate
 1. Processing rate
@@ -184,6 +209,7 @@ query = stream.writeStream \
 1. Operation metrics
 
 ---
+
 ## Error Handling
 ```python
 def handle_errors(df, epoch_id):
@@ -194,10 +220,12 @@ def handle_errors(df, epoch_id):
 ```
 
 ---
+
 ## Data Quality
 ![data_quality](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/data_quality.svg)
 
 ---
+
 ## Schema Evolution
 ```python
 # Schema enforcement
@@ -207,6 +235,7 @@ stream = spark.readStream \
 ```
 
 ---
+
 ## Custom Sources
 ```python
 from pyspark.sql.streaming import Source
@@ -217,10 +246,12 @@ class CustomSource(Source):
 ```
 
 ---
+
 ## Custom Sinks
 ![custom_sinks](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/custom_sinks.svg)
 
 ---
+
 ## Rate Limiting
 1. Input rate control
 1. Processing rate control
@@ -228,6 +259,7 @@ class CustomSource(Source):
 1. Resource management
 
 ---
+
 ## Kafka Integration
 ```python
 # Write to Kafka
@@ -238,10 +270,12 @@ query = stream.writeStream \
 ```
 
 ---
+
 ## Security Setup
 ![security_setup](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/security_setup.svg)
 
 ---
+
 ## Production Deployment
 1. Monitoring setup
 1. Alert configuration
@@ -249,6 +283,7 @@ query = stream.writeStream \
 1. Scaling strategy
 
 ---
+
 ## Recovery Mechanisms
 ```python
 # Checkpoint configuration
@@ -258,10 +293,12 @@ stream.writeStream \
 ```
 
 ---
+
 ## Testing Strategies
 ![testing_strategies](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/testing_strategies.svg)
 
 ---
+
 ## Debugging Tools
 1. Progress monitoring
 1. Query explanation
@@ -269,6 +306,7 @@ stream.writeStream \
 1. Log analysis
 
 ---
+
 ## Advanced Patterns
 ```python
 # Streaming aggregation pattern
@@ -278,10 +316,12 @@ def process_stream(batch_df, batch_id):
 ```
 
 ---
+
 ## Stream Processing Patterns
 ![stream_processing_patterns](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/stream_processing_patterns.svg)
 
 ---
+
 ## State Store
 1. RocksDB backend
 1. State versioning
@@ -289,6 +329,7 @@ def process_stream(batch_df, batch_id):
 1. Size management
 
 ---
+
 ## Metrics Collection
 ```python
 # Custom metrics
@@ -298,10 +339,12 @@ def process_metrics(batch_df, epoch_id):
 ```
 
 ---
+
 ## Monitoring Dashboard
 ![monitoring_dashboard](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/monitoring_dashboard.svg)
 
 ---
+
 ## Scaling Considerations
 1. Partition management
 1. Resource allocation
@@ -309,6 +352,7 @@ def process_metrics(batch_df, epoch_id):
 1. Load balancing
 
 ---
+
 ## Best Practices
 ```python
 # Configure proper watermark
@@ -318,10 +362,12 @@ df = df.withWatermark("timestamp", "1 hour")
 ```
 
 ---
+
 ## Common Pitfalls
 ![common_pitfalls](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/common_pitfalls.svg)
 
 ---
+
 ## Optimization Tips
 1. Proper partitioning
 1. Efficient watermarks
@@ -329,6 +375,7 @@ df = df.withWatermark("timestamp", "1 hour")
 1. Batch size tuning
 
 ---
+
 ## Advanced Features
 ```python
 # Arbitrary stateful processing
@@ -338,10 +385,12 @@ def update_state(key, values, state):
 ```
 
 ---
+
 ## Future Development
 ![future_development](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/future_development.svg)
 
 ---
+
 ## Integration Patterns
 1. Lambda architecture
 1. Kappa architecture
@@ -349,6 +398,7 @@ def update_state(key, values, state):
 1. Custom patterns
 
 ---
+
 ## Production Checklist
 ```python
 # Essential configurations
@@ -357,10 +407,12 @@ spark.conf.set("spark.sql.streaming.checkpointLocation", "path")
 ```
 
 ---
+
 ## Documentation
 ![documentation](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/documentation.svg)
 
 ---
+
 ## Additional Resources
 * Official documentation
 * Community guides

@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Client Libraries and Integration
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![client_options](svg/courses/databases/elasticsearch-for-developers/12_client_libraries_and_integration/client_options.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Official clients
@@ -26,6 +28,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## Official Clients
 
 - Java, JavaScript / Node, Python, .NET, Go, Ruby, PHP, Rust
@@ -34,6 +37,7 @@ audience:
 - Standard for production
 
 ---
+
 ## Connection
 
 ```python
@@ -45,6 +49,7 @@ es = Elasticsearch(["http://localhost:9200"])
 - Auth, TLS configurable
 
 ---
+
 ## Connection Pool
 
 - Reuse client across requests
@@ -52,6 +57,7 @@ es = Elasticsearch(["http://localhost:9200"])
 - Driver handles pooling
 
 ---
+
 ## Retries
 
 - Transient errors: client retries
@@ -60,6 +66,7 @@ es = Elasticsearch(["http://localhost:9200"])
 - Circuit-break on chronic failures
 
 ---
+
 ## Timeouts
 
 - Connect timeout
@@ -68,6 +75,7 @@ es = Elasticsearch(["http://localhost:9200"])
 - Set both; never infinite
 
 ---
+
 ## Bulk Helpers
 
 ```python
@@ -81,6 +89,7 @@ bulk(es, actions)
 - Use for any batch ingestion
 
 ---
+
 ## Async Clients
 
 - Python: AsyncElasticsearch
@@ -89,6 +98,7 @@ bulk(es, actions)
 - Match your app's concurrency model
 
 ---
+
 ## Search Helpers
 
 - Scan: scroll through large results
@@ -96,6 +106,7 @@ bulk(es, actions)
 - Bulk doesn't apply to search
 
 ---
+
 ## High-Level Clients
 
 - Elasticsearch DSL (Python): query builder
@@ -103,6 +114,7 @@ bulk(es, actions)
 - Pick: convenience vs control
 
 ---
+
 ## ORM-Like Layers
 
 - elasticsearch-dsl-py: Python
@@ -111,6 +123,7 @@ bulk(es, actions)
 - Less raw JSON
 
 ---
+
 ## Configuration
 
 - `verify_certs`: TLS verification
@@ -119,6 +132,7 @@ bulk(es, actions)
 - Clean configuration in app code
 
 ---
+
 ## Authentication
 
 - API key
@@ -127,6 +141,7 @@ bulk(es, actions)
 - Configure in client; rotate periodically
 
 ---
+
 ## Multi-Cluster
 
 - Separate clients per cluster
@@ -134,6 +149,7 @@ bulk(es, actions)
 - Manage via service discovery
 
 ---
+
 ## Common Client Mistakes
 
 - New client per request

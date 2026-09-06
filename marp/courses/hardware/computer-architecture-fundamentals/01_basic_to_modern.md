@@ -10,10 +10,12 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Computer Architecture Fundamentals
 ## From Basic Principles to Modern Systems
 
 ---
+
 ## Table of Contents
 1. System Architecture Basics
 1. Data Management
@@ -23,6 +25,7 @@ audience:
 1. Modern Architecture Patterns
 
 ---
+
 ## What is Computer Architecture?
 - Design and organization of computing systems
 - Hardware and software integration
@@ -30,6 +33,7 @@ audience:
 - Balance of competing needs
 
 ---
+
 ## Key Architecture Components
 - Processing units (CPU, GPU)
 - Memory systems
@@ -38,6 +42,7 @@ audience:
 - Input/Output systems
 
 ---
+
 ## System Boundaries
 - Physical boundaries
 - Logical boundaries
@@ -45,6 +50,7 @@ audience:
 - Network segments
 
 ---
+
 ## Data Duplication
 - Purpose and benefits
 - Types of duplication
@@ -54,6 +60,7 @@ audience:
 - Trade-offs
 
 ---
+
 ## Data Consistency
 - Strong consistency
 - Eventual consistency
@@ -61,6 +68,7 @@ audience:
 - Synchronization methods
 
 ---
+
 ## Caching Strategies
 - Cache levels
 - Cache invalidation
@@ -68,6 +76,7 @@ audience:
 - Cache coherency
 
 ---
+
 ## Data Locality
 - Temporal locality
 - Spatial locality
@@ -75,6 +84,7 @@ audience:
 - Access patterns
 
 ---
+
 ## Load Balancing
 - Purpose
 - Common algorithms
@@ -84,6 +94,7 @@ audience:
 - Health checks
 
 ---
+
 ## Load Balancer Types
 - Layer 4 (Transport)
 - Layer 7 (Application)
@@ -91,6 +102,7 @@ audience:
 - Geographic
 
 ---
+
 ## Scaling Patterns
 - Vertical scaling (Up/Down)
 - Horizontal scaling (Out/In)
@@ -98,6 +110,7 @@ audience:
 - Cost considerations
 
 ---
+
 ## Performance Metrics
 - Throughput
 - Latency
@@ -106,6 +119,7 @@ audience:
 - Resource utilization
 
 ---
+
 ## Concurrent Operations
 - Parallel processing
 - Asynchronous I/O
@@ -113,6 +127,7 @@ audience:
 - Process scheduling
 
 ---
+
 ## I/O Optimization
 - Buffering
 - Queuing
@@ -120,6 +135,7 @@ audience:
 - Prioritization
 
 ---
+
 ## High Availability Basics
 - Availability calculations
 - SLA definitions
@@ -127,11 +143,13 @@ audience:
 - Failure domains
 
 ---
+
 ## Redundancy Patterns
 
 ![reliability_redundancy_patterns](svg/courses/hardware/computer-architecture-fundamentals/01_basic_to_modern/reliability_redundancy_patterns.svg)
 
 ---
+
 ## Redundancy Patterns: Summary
 - N+1
 - N+2
@@ -140,6 +158,7 @@ audience:
 - Cost vs. reliability
 
 ---
+
 ## Fault Tolerance
 - Failure detection
 - Failover mechanisms
@@ -147,6 +166,7 @@ audience:
 - Testing strategies
 
 ---
+
 ## Self-Healing Systems
 - Automated recovery
 - Health monitoring
@@ -154,6 +174,7 @@ audience:
 - Circuit breakers
 
 ---
+
 ## Disaster Recovery
 - RPO (Recovery Point Objective)
 - RTO (Recovery Time Objective)
@@ -161,6 +182,7 @@ audience:
 - Site redundancy
 
 ---
+
 ## Basic Encryption
 - Symmetric encryption
 - Asymmetric encryption
@@ -168,6 +190,7 @@ audience:
 - Common algorithms
 
 ---
+
 ## Data in Transit
 - TLS/SSL
 - VPN
@@ -175,6 +198,7 @@ audience:
 - Network encryption
 
 ---
+
 ## Data at Rest
 - Disk encryption
 - Database encryption
@@ -182,6 +206,7 @@ audience:
 - Access controls
 
 ---
+
 ## Security Layers
 - Physical security
 - Network security
@@ -189,6 +214,7 @@ audience:
 - Data security
 
 ---
+
 ## Microservices
 - Service boundaries
 - Inter-service communication
@@ -196,6 +222,7 @@ audience:
 - Monitoring
 
 ---
+
 ## Containerization
 - Container basics
 - Orchestration
@@ -203,6 +230,7 @@ audience:
 - Security considerations
 
 ---
+
 ## Serverless Architecture
 - Functions as a Service (FaaS)
 - Event-driven design
@@ -210,6 +238,7 @@ audience:
 - Cost optimization
 
 ---
+
 ## Edge Computing
 - Edge vs. Cloud
 - Use cases
@@ -217,6 +246,7 @@ audience:
 - Performance benefits
 
 ---
+
 ## Cloud Native Design
 - Cloud services
 - Managed services
@@ -224,6 +254,7 @@ audience:
 - DevOps integration
 
 ---
+
 ## Best Practices: Documentation
 - Architecture diagrams
 - System specifications
@@ -231,6 +262,7 @@ audience:
 - Recovery procedures
 
 ---
+
 ## Monitoring
 - System metrics
 - Application metrics
@@ -238,6 +270,7 @@ audience:
 - Alert management
 
 ---
+
 ## Performance Testing
 - Load testing
 - Stress testing
@@ -245,6 +278,7 @@ audience:
 - Benchmarking
 
 ---
+
 ## Cost Optimization
 - Resource sizing
 - Usage patterns
@@ -252,6 +286,7 @@ audience:
 - Efficiency metrics
 
 ---
+
 ## Future Trends
 - Quantum computing
 - AI/ML integration

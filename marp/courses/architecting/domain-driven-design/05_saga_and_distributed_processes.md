@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Saga Pattern and Distributed Processes
 
 ---
+
 ## Why DDD Cares About Sagas
 
 - An aggregate is a consistency boundary; one transaction per aggregate
@@ -20,6 +22,7 @@ audience:
 - DDD's solution to "what if we need to coordinate"
 
 ---
+
 ## What a Saga Is
 
 - A sequence of local transactions, each touching one aggregate (or service)
@@ -28,11 +31,13 @@ audience:
 - Eventual consistency, not atomic
 
 ---
+
 ## Two Coordination Styles
 
 ![saga_pattern](svg/courses/architecting/domain-driven-design/05_saga_and_distributed_processes/saga_pattern.svg)
 
 ---
+
 ## A Process Manager
 
 - A DDD term closely related to saga
@@ -41,6 +46,7 @@ audience:
 - Is itself a domain concept; usually an aggregate
 
 ---
+
 ## Saga vs Process Manager
 
 - Saga: emphasis on compensation and recovery
@@ -49,6 +55,7 @@ audience:
 - Use whichever term the team is comfortable with
 
 ---
+
 ## Choreography vs Orchestration
 
 - **Choreography**: each service reacts to events; no central coordinator
@@ -57,11 +64,13 @@ audience:
 - Each has trade-offs (covered in the saga course)
 
 ---
+
 ## Two Saga Styles
 
 ![choreography_vs_orchestration](svg/courses/architecting/domain-driven-design/05_saga_and_distributed_processes/choreography_vs_orchestration.svg)
 
 ---
+
 ## When to Choreograph
 
 - Few steps, stable flow, autonomous teams
@@ -69,6 +78,7 @@ audience:
 - The flow is implicit in the event graph
 
 ---
+
 ## When to Orchestrate
 
 - Many steps, evolving flow, complex compensation
@@ -76,6 +86,7 @@ audience:
 - The workflow is a domain concept the business names
 
 ---
+
 ## Compensating Transactions
 
 - A new transaction that undoes the effect of a previous one
@@ -84,6 +95,7 @@ audience:
 - "Charged $100" + "Refunded $100" — both visible
 
 ---
+
 ## Designing Compensations
 
 - Every step's compensation is defined alongside the step
@@ -92,6 +104,7 @@ audience:
 - "Send physical mailing" → there is no compensation; pivot transaction
 
 ---
+
 ## Pivot Transactions
 
 - A point past which compensation is impossible
@@ -100,6 +113,7 @@ audience:
 - Often: physical or legal commitments
 
 ---
+
 ## Idempotency
 
 - Saga steps may be retried; compensations may be retried
@@ -108,6 +122,7 @@ audience:
 - Without this, retries cause damage
 
 ---
+
 ## Saga as a DDD Aggregate
 
 - The saga itself has identity and state
@@ -116,6 +131,7 @@ audience:
 - Audit trail of the saga's life
 
 ---
+
 ## Saga State
 
 - Saga id (correlation id across the flow)
@@ -125,6 +141,7 @@ audience:
 - Persists across restarts and failures
 
 ---
+
 ## Where Saga State Lives
 
 - Event-sourced: as a stream of saga events (recommended)
@@ -133,6 +150,7 @@ audience:
 - Pick what fits the team's operational model
 
 ---
+
 ## Cross-Service Sagas
 
 - Each service performs its local steps
@@ -141,6 +159,7 @@ audience:
 - Each service is a participant; the saga is the conductor
 
 ---
+
 ## Halted Sagas
 
 - A saga that can't complete and can't compensate cleanly
@@ -149,6 +168,7 @@ audience:
 - These are real production events; plan for them
 
 ---
+
 ## A Concrete Example: Order Saga
 
 - Aggregates: Order, Inventory, Payment, Shipment
@@ -157,6 +177,7 @@ audience:
 - On failure: refund, release, cancel, notify
 
 ---
+
 ## The Saga in Code
 
 - A new aggregate: `OrderSaga`
@@ -165,6 +186,7 @@ audience:
 - It emits commands to other services as it progresses
 
 ---
+
 ## Where to Go Deeper
 
 - The dedicated **Saga Pattern** course covers:
@@ -174,6 +196,7 @@ audience:
     - Workflow engines
 
 ---
+
 ## Common Pitfalls
 
 - Treating sagas as atomic transactions
@@ -183,6 +206,7 @@ audience:
 - Hidden orchestration that pretends to be choreography
 
 ---
+
 ## Summary
 
 - Sagas/process managers coordinate work across aggregates and services

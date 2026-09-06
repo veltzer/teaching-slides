@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Identity Federation in Multi-Cloud
 
 ---

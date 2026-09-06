@@ -9,9 +9,11 @@ audience:
   - audiences:testers
 
 ---
+
 # Behavior-Driven Development
 
 ---
+
 ## What This Chapter Covers
 
 - BDD principles
@@ -22,6 +24,7 @@ audience:
 - Living documentation
 
 ---
+
 ## What BDD Is
 
 - A discipline of describing behaviour in business-readable language
@@ -31,11 +34,13 @@ audience:
 - Coined by Dan North in the 2000s
 
 ---
+
 ## Given / When / Then
 
 ![bdd_format](svg/courses/testing/test-driven-development/06_behavior_driven_development/bdd_format.svg)
 
 ---
+
 ## Why BDD
 
 - Bridges the gap between business and developers
@@ -45,6 +50,7 @@ audience:
 - A different kind of feedback loop
 
 ---
+
 ## Gherkin Syntax
 
 ```misc
@@ -59,6 +65,7 @@ Feature: User signup
 ```
 
 ---
+
 ## Given-When-Then
 
 - **Given**: the initial context (preconditions)
@@ -68,6 +75,7 @@ Feature: User signup
 - One Scenario, one behaviour
 
 ---
+
 ## Feature Files
 
 - Each `Feature` is a coherent capability
@@ -77,6 +85,7 @@ Feature: User signup
 - Versioned alongside the code
 
 ---
+
 ## A Full Feature File
 
 ```misc
@@ -97,6 +106,7 @@ Feature: Shopping cart
 ```
 
 ---
+
 ## Cucumber
 
 - The original BDD framework (Ruby; ports for many languages)
@@ -106,6 +116,7 @@ Feature: Shopping cart
 - Most-known BDD tool
 
 ---
+
 ## Behave (Python)
 
 - Cucumber-style for Python
@@ -115,6 +126,7 @@ Feature: Shopping cart
 - Common in Django/Flask BDD projects
 
 ---
+
 ## SpecFlow (.NET)
 
 - Cucumber-style for C#
@@ -124,6 +136,7 @@ Feature: Shopping cart
 - Maintained, mature
 
 ---
+
 ## Mapping Steps To Code
 
 ```python
@@ -144,6 +157,7 @@ def step_dashboard(context):
 ```
 
 ---
+
 ## Step Definition Reuse
 
 - Same step text used across many scenarios &#8594; one definition
@@ -153,6 +167,7 @@ def step_dashboard(context):
 - Saves enormous duplication
 
 ---
+
 ## Backgrounds
 
 - A `Background` section runs before each scenario in the feature
@@ -161,6 +176,7 @@ def step_dashboard(context):
 - Use sparingly; too much background hides what's special
 
 ---
+
 ## Scenario Outlines
 
 ```misc
@@ -180,6 +196,7 @@ Scenario Outline: Login validation
 - Reduces duplication; preserves precision
 
 ---
+
 ## BDD Workflow
 
 - Stakeholders + developers write feature files together
@@ -189,6 +206,7 @@ Scenario Outline: Login validation
 - New behaviour: new scenario first
 
 ---
+
 ## BDD vs Plain TDD
 
 - TDD: developer-only; unit-level
@@ -198,6 +216,7 @@ Scenario Outline: Login validation
 - Use both: TDD for units, BDD for end-to-end behaviours
 
 ---
+
 ## Living Documentation
 
 - Feature files describe what the system does
@@ -207,6 +226,7 @@ Scenario Outline: Login validation
 - The most underrated benefit of BDD
 
 ---
+
 ## When BDD Fails
 
 - Stakeholders not involved (just developers writing English-flavoured tests)
@@ -216,6 +236,7 @@ Scenario Outline: Login validation
 - "Cucumber theatre" — looks like BDD; isn't
 
 ---
+
 ## Common BDD Mistakes
 
 - Treating Gherkin as just another test syntax

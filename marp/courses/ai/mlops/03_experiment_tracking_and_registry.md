@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Experiment Tracking and Model Registry
 
 ---
+
 ## What This Chapter Covers
 
 - Why track experiments
@@ -21,6 +23,7 @@ audience:
 - Promotion flow
 
 ---
+
 ## Why Tracking
 
 - Reproducibility
@@ -29,6 +32,7 @@ audience:
 - Debug regressions
 
 ---
+
 ## What to Log
 
 - Code version
@@ -38,6 +42,7 @@ audience:
 - Artifacts
 
 ---
+
 ## Tools
 
 - MLflow: open, simple
@@ -46,6 +51,7 @@ audience:
 - Pick one and standardize
 
 ---
+
 ## Run Identity
 
 - Unique ID per run
@@ -54,6 +60,7 @@ audience:
 - Always link to git SHA
 
 ---
+
 ## Metrics Beyond Accuracy
 
 - Precision, recall, F1
@@ -63,6 +70,7 @@ audience:
 - Cost per inference
 
 ---
+
 ## Artifacts
 
 - Model weights
@@ -72,11 +80,13 @@ audience:
 - Evaluation reports
 
 ---
+
 ## Run Artifacts
 
 ![run_artifacts](svg/courses/ai/mlops/03_experiment_tracking_and_registry/run_artifacts.svg)
 
 ---
+
 ## Model Registry
 
 - Source of truth for models
@@ -85,6 +95,7 @@ audience:
 - Stage: dev, staging, prod
 
 ---
+
 ## Promotion Flow
 
 - Train and evaluate
@@ -94,11 +105,13 @@ audience:
 - Promote to prod
 
 ---
+
 ## Promotion Visualized
 
 ![registry_promotion](svg/courses/ai/mlops/03_experiment_tracking_and_registry/registry_promotion.svg)
 
 ---
+
 ## Approval Gates
 
 - Metric thresholds
@@ -107,6 +120,7 @@ audience:
 - Manual sign-off when required
 
 ---
+
 ## Lineage
 
 - Which data trained which model
@@ -115,6 +129,7 @@ audience:
 - Required for incident triage
 
 ---
+
 ## Rollbacks
 
 - Keep previous version warm
@@ -123,6 +138,7 @@ audience:
 - Canary new versions
 
 ---
+
 ## Common Tracking Mistakes
 
 - Logging only the final run

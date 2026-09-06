@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Publish/Subscribe
 
 ---
+
 ## Pub/Sub Pattern
 
 ![pubsub_pattern](svg/courses/queues/rabbitmq/04_publish_subscribe/pubsub_pattern.svg)
 
 ---
+
 ## Fanout Topology
 
 ![fanout_topology](svg/courses/queues/rabbitmq/04_publish_subscribe/fanout_topology.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The pub/sub pattern with fanout
@@ -31,6 +35,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## What Pub/Sub Is
 
 - One producer publishes a message
@@ -40,6 +45,7 @@ audience:
 - Loose coupling at the messaging layer
 
 ---
+
 ## Fanout Pub/Sub
 
 - Producer publishes to a fanout exchange
@@ -49,6 +55,7 @@ audience:
 - Standard fan-out pattern
 
 ---
+
 ## Fanout Setup
 
 ```python
@@ -65,6 +72,7 @@ ch.basic_publish(exchange='events', routing_key='', body='user_signed_up')
 - Add a third queue: bind it; no producer change
 
 ---
+
 ## Topic Pub/Sub With Filtering
 
 - Producer publishes with a routing key
@@ -73,6 +81,7 @@ ch.basic_publish(exchange='events', routing_key='', body='user_signed_up')
 - More efficient than fanout + client-side filter
 
 ---
+
 ## Topic Pub/Sub Example
 
 ```python
@@ -88,6 +97,7 @@ ch.basic_publish(exchange='events', routing_key='auth.success', body='...')
 ```
 
 ---
+
 ## Competing Consumers
 
 - One queue, multiple consumers
@@ -97,6 +107,7 @@ ch.basic_publish(exchange='events', routing_key='auth.success', body='...')
 - Different from pub/sub
 
 ---
+
 ## Pub/Sub + Competing Consumers
 
 - A queue per "consumer group"
@@ -106,6 +117,7 @@ ch.basic_publish(exchange='events', routing_key='auth.success', body='...')
 - The common scalable pub/sub pattern
 
 ---
+
 ## Diagram In Words
 
 - Producer &#8594; events exchange
@@ -115,6 +127,7 @@ ch.basic_publish(exchange='events', routing_key='auth.success', body='...')
 - Within a group, work is shared
 
 ---
+
 ## Pub/Sub vs Kafka Pub/Sub
 
 - RabbitMQ: each subscriber needs its own queue (or queue group)
@@ -124,6 +137,7 @@ ch.basic_publish(exchange='events', routing_key='auth.success', body='...')
 - Different mental models; pick by need
 
 ---
+
 ## Late Subscribers
 
 - RabbitMQ: subscribers see only messages published *after* they bind
@@ -133,6 +147,7 @@ ch.basic_publish(exchange='events', routing_key='auth.success', body='...')
 - Workaround: durable queues that buffer until consumers connect
 
 ---
+
 ## Durable Subscribers
 
 - Queue is durable; subscriber can disconnect and reconnect
@@ -142,6 +157,7 @@ ch.basic_publish(exchange='events', routing_key='auth.success', body='...')
 - Both required for full durability
 
 ---
+
 ## Ephemeral Subscribers
 
 - Auto-delete queue; gone when consumer disconnects
@@ -150,6 +166,7 @@ ch.basic_publish(exchange='events', routing_key='auth.success', body='...')
 - Common pattern with `queue_declare(exclusive=True)`
 
 ---
+
 ## Slow Consumers
 
 - A subscriber that can't keep up
@@ -159,6 +176,7 @@ ch.basic_publish(exchange='events', routing_key='auth.success', body='...')
 - This is *the* RabbitMQ pub/sub advantage over shared-queue brokers
 
 ---
+
 ## Backpressure
 
 - When a queue fills:
@@ -169,6 +187,7 @@ ch.basic_publish(exchange='events', routing_key='auth.success', body='...')
 - Always set max-length on pub/sub queues
 
 ---
+
 ## A Real-World Example
 
 - Customer signs up
@@ -179,6 +198,7 @@ ch.basic_publish(exchange='events', routing_key='auth.success', body='...')
 - Adding a producer that emits signups too: zero changes to subscribers
 
 ---
+
 ## Common Pub/Sub Mistakes
 
 - One queue, many subscribers expecting all to see all messages (it's competing-consumers)

@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # API Documentation
 
 ---
+
 ## Why Documentation Matters
 
 - An undocumented API is a hostile API
@@ -19,16 +21,19 @@ audience:
 - A well-documented API onboards developers in minutes; a bad one takes days
 
 ---
+
 ## Doc Practices
 
 ![doc_practices](svg/courses/architecting/api-design-best-practices/08_api_documentation/doc_practices.svg)
 
 ---
+
 ## Documentation Audiences
 
 ![doc_audiences](svg/courses/architecting/api-design-best-practices/08_api_documentation/doc_audiences.svg)
 
 ---
+
 ## OpenAPI / Swagger
 
 - The de facto standard for HTTP API specs
@@ -37,6 +42,7 @@ audience:
 - Humans can read it (tooling makes it pleasant)
 
 ---
+
 ## OpenAPI Sketch
 
 ```yaml
@@ -62,6 +68,7 @@ paths:
 ```
 
 ---
+
 ## What to Document Per Endpoint
 
 - HTTP method and path
@@ -73,6 +80,7 @@ paths:
 - Possible errors
 
 ---
+
 ## Schema Definitions
 
 - Define request and response schemas as named components
@@ -81,6 +89,7 @@ paths:
 - A change in the schema is visible in the diff
 
 ---
+
 ## Examples Are Critical
 
 - A schema without examples is a guess
@@ -89,6 +98,7 @@ paths:
 - Tools can generate mock servers from examples
 
 ---
+
 ## Code Generation
 
 - OpenAPI → client SDKs in many languages
@@ -97,6 +107,7 @@ paths:
 - The spec is leverage; treat it as a first-class artifact
 
 ---
+
 ## Documentation Portals
 
 - A web UI for browsing the API
@@ -105,6 +116,7 @@ paths:
 - Hosted alongside the API or on a docs site
 
 ---
+
 ## Keeping Docs in Sync With Code
 
 - The hardest problem
@@ -114,6 +126,7 @@ paths:
 - Spec-first is more disciplined; code-first is more pragmatic
 
 ---
+
 ## Spec-First Workflow
 
 - Write or modify the OpenAPI spec
@@ -123,6 +136,7 @@ paths:
 - Spec is the source of truth
 
 ---
+
 ## Code-First Workflow
 
 - Annotate routes with metadata: parameters, responses, examples
@@ -131,6 +145,7 @@ paths:
 - The code is the source of truth; the spec is a derivative
 
 ---
+
 ## What Belongs Outside the Spec
 
 - Tutorials and onboarding guides
@@ -140,6 +155,7 @@ paths:
 - These are prose, not spec
 
 ---
+
 ## A Two-Layer Documentation Set
 
 - Reference: generated from the spec — every endpoint, every field
@@ -147,6 +163,7 @@ paths:
 - Both are needed; they serve different audiences
 
 ---
+
 ## API Design Reviews
 
 - Review the API spec before implementation
@@ -155,6 +172,7 @@ paths:
 - Establishes a culture of intentional design
 
 ---
+
 ## Anti-Patterns
 
 - "The code is the documentation"
@@ -164,6 +182,7 @@ paths:
 - Documentation that needs more documentation to use
 
 ---
+
 ## Summary
 
 - OpenAPI is the standard; use it

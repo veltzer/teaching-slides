@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Docker Security Best Practices
 
 ---
+
 ## What This Chapter Covers
 
 - Running as non-root
@@ -23,6 +25,7 @@ audience:
 - Securing the Docker daemon
 
 ---
+
 ## Why Container Security Matters
 
 - A container is a process, not a sandbox
@@ -32,6 +35,7 @@ audience:
 - These are *easy* mistakes — and easy to fix
 
 ---
+
 ## Run As Non-Root
 
 ```dockerfile
@@ -49,6 +53,7 @@ CMD ["node", "server.js"]
 - A compromised container that's already non-root has fewer escalation paths
 
 ---
+
 ## Use Minimal Base Images
 
 - `alpine`: ~5 MB; uses musl libc, may have edge cases
@@ -58,6 +63,7 @@ CMD ["node", "server.js"]
 - Each MB removed is one less thing that can have a CVE
 
 ---
+
 ## Image Scanning
 
 ```bash
@@ -72,6 +78,7 @@ grype nginx:1.27
 - Keep base images current — most CVEs are fixed in the next patch release
 
 ---
+
 ## Read-Only Filesystems
 
 ```bash
@@ -84,6 +91,7 @@ docker run --read-only --tmpfs /tmp myapp
 - Stops a compromised process from modifying its own binaries
 
 ---
+
 ## Drop Capabilities
 
 ```bash
@@ -96,6 +104,7 @@ docker run --cap-drop=ALL --cap-add=NET_BIND_SERVICE nginx
 - `NET_BIND_SERVICE` to bind ports < 1024; `CHOWN` for changing file ownership; etc.
 
 ---
+
 ## Seccomp Profiles
 
 - Restrict which syscalls a container can make
@@ -105,6 +114,7 @@ docker run --cap-drop=ALL --cap-add=NET_BIND_SERVICE nginx
 - Combined with `--cap-drop`, dramatically reduces attack surface
 
 ---
+
 ## Secrets Management
 
 - *Never* bake secrets into images: they live forever in layers
@@ -114,6 +124,7 @@ docker run --cap-drop=ALL --cap-add=NET_BIND_SERVICE nginx
 - For prod: a real secrets manager (Vault, AWS Secrets Manager, etc.)
 
 ---
+
 ## Don't Bake Secrets, Examples
 
 ```dockerfile
@@ -130,6 +141,7 @@ COPY id_rsa /root/.ssh/
 - Trust nobody including your future self
 
 ---
+
 ## Multi-Stage Builds for Security
 
 ```dockerfile
@@ -149,6 +161,7 @@ ENTRYPOINT ["/server"]
 - Even an attacker who gets RCE has nothing to work with
 
 ---
+
 ## Content Trust and Signing
 
 - Image tags are mutable; an attacker swapping `:latest` is undetectable without verification
@@ -158,6 +171,7 @@ ENTRYPOINT ["/server"]
 - Without signing, you're trusting the registry not to be compromised
 
 ---
+
 ## Securing the Daemon
 
 - The Docker daemon runs as root and exposes a socket
@@ -167,6 +181,7 @@ ENTRYPOINT ["/server"]
 - Mounting `docker.sock` into a container = giving the container root on the host
 
 ---
+
 ## Daemon Hardening Checklist
 
 - Don't expose TCP unless required; if required, use TLS mutual auth
@@ -176,6 +191,7 @@ ENTRYPOINT ["/server"]
 - Audit Docker socket access — `docker.sock` is the keys to the kingdom
 
 ---
+
 ## Network Isolation
 
 - Don't put untrusted services on the same Docker network as trusted ones
@@ -185,6 +201,7 @@ ENTRYPOINT ["/server"]
 - Most attacks pivot via the network
 
 ---
+
 ## Resource Limits = Security
 
 - An attacker that consumes all CPU is a DoS
@@ -193,6 +210,7 @@ ENTRYPOINT ["/server"]
 - Set sensible defaults; tighten per service
 
 ---
+
 ## A Security Checklist
 
 - [ ] Non-root USER in every Dockerfile
@@ -206,6 +224,7 @@ ENTRYPOINT ["/server"]
 - [ ] Image signing in CI, verification at runtime
 
 ---
+
 ## Common Mistakes
 
 - "We'll add security later" &#8594; rebuilding the foundation is expensive
@@ -215,6 +234,7 @@ ENTRYPOINT ["/server"]
 - Treating containers as VMs and leaving them sloppy
 
 ---
+
 ## Course Wrap-Up
 
 - Docker is the unit of modern application packaging
@@ -225,6 +245,7 @@ ENTRYPOINT ["/server"]
 - Next steps: Kubernetes for production orchestration
 
 ---
+
 ## Layered Container Security
 
 ![security_layers](svg/courses/containers/docker-fundamentals/08_docker_security_best_practices/security_layers.svg)

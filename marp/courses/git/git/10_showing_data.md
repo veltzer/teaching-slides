@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Showing Git Data
 
 ---
@@ -110,6 +111,7 @@ git log --author="Jane" --since="1 month ago" --grep="feature"
 ```
 
 ---
+
 ## Git Log with Visual Elements: Example
 
 Create informative visual representations:
@@ -126,6 +128,7 @@ git log --oneline --graph --all -10
 ```
 
 ---
+
 ## Git Log with Visual Elements
 
 ![compact_branch_view](svg/courses/git/git/10_showing_data/compact_branch_view.svg)
@@ -400,17 +403,17 @@ git log --stat
 **Command-line tools:**
 
 1. **Gitk** - Built-in Git GUI
-    ```bash
+   ```bash
     gitk --all
-    ```
+   ```
     - Repository browser
     - Commit history visualization
     - Built into Git
 
 1. **Tig** - Text-mode interface
-    ```bash
+   ```bash
     tig
-    ```
+   ```
     - Terminal-based
     - Interactive browsing
     - Efficient for SSH environments
@@ -574,29 +577,29 @@ export GIT_EDITOR="vim"
 **Common debugging scenarios:**
 
 1. **"Where did my changes go?"**
-    ```bash
+   ```bash
     git reflog
     git log --all --full-history -- path/to/file
-    ```
+   ```
 
 1. **"Who broke the build?"**
-    ```bash
+   ```bash
     git bisect start
     git bisect bad HEAD
     git bisect good v1.0
-    ```
+   ```
 
 1. **"What changed between releases?"**
-    ```bash
+   ```bash
     git log v1.0..v2.0 --oneline
     git diff v1.0..v2.0 --stat
-    ```
+   ```
 
 1. **"When was this bug introduced?"**
-    ```bash
+   ```bash
     git log -S"buggy_code" --oneline
     git blame file.txt | grep -n "buggy_line"
-    ```
+   ```
 
 ---
 

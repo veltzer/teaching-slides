@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Entity-Relationship Modeling
 
 ---
+
 ## ER Diagram
 
 ![diagram](svg/courses/databases/database-design/02_entity_relationship_modeling/erd.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Entities, attributes, relationships
@@ -25,6 +28,7 @@ audience:
 - Examples
 
 ---
+
 ## Entities
 
 - Real-world things you track
@@ -32,6 +36,7 @@ audience:
 - Become tables (usually)
 
 ---
+
 ## Attributes
 
 - Properties of entities
@@ -39,6 +44,7 @@ audience:
 - Become columns
 
 ---
+
 ## Relationships
 
 - Connections between entities
@@ -46,6 +52,7 @@ audience:
 - Captured by foreign keys
 
 ---
+
 ## Cardinality
 
 - 1:1: each row in A relates to at most one in B
@@ -54,11 +61,13 @@ audience:
 - Drives the schema
 
 ---
+
 ## Cardinality Visual
 
 ![cardinality_types](svg/courses/databases/database-design/02_entity_relationship_modeling/cardinality_types.svg)
 
 ---
+
 ## Mapping 1:N
 
 - The "many" side has a foreign key
@@ -66,6 +75,7 @@ audience:
 - One column on Order
 
 ---
+
 ## Mapping M:N
 
 - Add a junction table
@@ -73,6 +83,7 @@ audience:
 - Composite primary key
 
 ---
+
 ## Mapping 1:1
 
 - Foreign key on either side, marked unique
@@ -80,6 +91,7 @@ audience:
 - Less common; sometimes inheritance
 
 ---
+
 ## Identifying vs Non-Identifying
 
 - Identifying: child can't exist without parent (composite key)
@@ -87,6 +99,7 @@ audience:
 - Most are non-identifying
 
 ---
+
 ## ER Diagrams
 
 - Boxes: entities
@@ -95,6 +108,7 @@ audience:
 - Tools: dbdiagram.io, draw.io
 
 ---
+
 ## A Worked Example
 
 - Order, Customer, Product, OrderLine
@@ -103,6 +117,7 @@ audience:
 - OrderLine M:1 Product
 
 ---
+
 ## Common Mistakes
 
 - Confusing 1:N with M:N

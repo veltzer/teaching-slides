@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Common Distributions
 
 ---
+
 ## What This Chapter Covers
 
 - What a probability distribution is
@@ -22,11 +24,13 @@ audience:
 - Sampling and fitting in Python
 
 ---
+
 ## Six Distribution Shapes
 
 ![six_shapes](svg/courses/math/statistics-applied/07_common_distributions/six_shapes.svg)
 
 ---
+
 ## What A Distribution Is
 
 - A rule that assigns probability to each possible value of a random variable
@@ -36,6 +40,7 @@ audience:
 - Pick the distribution that matches how your data is *generated*
 
 ---
+
 ## Bernoulli And Binomial
 
 - **Bernoulli**: one trial, success with probability p — a single coin flip
@@ -45,6 +50,7 @@ audience:
 - Needs fixed n, constant p, independent trials — check all three
 
 ---
+
 ## Poisson
 
 - Count of events in a fixed interval, when events happen at a constant average rate independently
@@ -54,6 +60,7 @@ audience:
 - The limit of a binomial with huge n and tiny p
 
 ---
+
 ## Geometric And Exponential
 
 - **Geometric** (discrete): number of trials until the first success
@@ -63,6 +70,7 @@ audience:
 - Use exponential for inter-arrival times, time-to-failure of simple components
 
 ---
+
 ## Uniform
 
 - Every value in [a, b] equally likely (continuous), or each of k outcomes equally likely (discrete)
@@ -72,6 +80,7 @@ audience:
 - The basis from which other random variates are generated
 
 ---
+
 ## The Normal Distribution
 
 - The bell curve — symmetric, defined by mean &mu; and SD &sigma;
@@ -81,11 +90,13 @@ audience:
 - The default for *averages*, not necessarily for raw data — gets its own chapter
 
 ---
+
 ## How the Families Relate
 
 ![family_relationships](svg/courses/math/statistics-applied/07_common_distributions/family_relationships.svg)
 
 ---
+
 ## Power Laws And Long Tails
 
 - A few values are enormous; most are tiny — file sizes, city populations, wealth, page views
@@ -95,6 +106,7 @@ audience:
 - When in doubt with web-scale data, suspect a long tail
 
 ---
+
 ## Working With Distributions In Python
 
 ```python
@@ -107,6 +119,7 @@ print(stats.expon.fit(sample))              # estimate the parameter back
 ```
 
 ---
+
 ## Common Mistakes
 
 - Forcing a normal model onto skewed or long-tailed data

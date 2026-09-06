@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Joint Distributions and Independence
 
 ---
+
 ## What This Chapter Covers
 
 - Joint distributions of random vectors
@@ -21,11 +23,13 @@ audience:
 - Sums of independent variables and convolution
 
 ---
+
 ## Joint, Marginal, Conditional
 
 ![joint marginal conditional](svg/courses/math/statistics-theory/05_joint_distributions/joint_marginal_conditional.svg)
 
 ---
+
 ## Joint Distribution Of A Random Vector
 
 - A random vector X = (X&#8321;,...,X&#8345;) : &Omega; &#8594; &#8477;&#8319; is measurable into the Borel sets of &#8477;&#8319;; its **joint law** is the pushforward P_X(B) = P(X &isin; B) for Borel B &sube; &#8477;&#8319;
@@ -35,6 +39,7 @@ audience:
 - Everything about how the coordinates move together lives in the joint distribution, nowhere else
 
 ---
+
 ## Marginals And Conditionals
 
 - **Marginal** of X&#8321;: integrate (or sum) the joint over the other coordinates — f_{X&#8321;}(x&#8321;) = &#8747; f(x&#8321;, x&#8322;,...) dx&#8322;...dx&#8345;; the marginal CDF is F(x&#8321;, &infin;, ..., &infin;)
@@ -44,6 +49,7 @@ audience:
 - Marginalizing *loses* the dependence structure; you can never reconstruct the joint from marginals alone
 
 ---
+
 ## Independence Of Random Variables
 
 - X&#8321;,...,X&#8345; are **independent** iff the joint law factorizes: F(x&#8321;,...,x&#8345;) = &prod; F_{X&#8345;}(x&#8345;) for all x — equivalently the joint pmf/density factorizes, f(x&#8321;,...,x&#8345;) = &prod; f_{X&#8345;}(x&#8345;)
@@ -53,6 +59,7 @@ audience:
 - Pairwise independence is again weaker than mutual independence; and a function of independent variables can break independence with others unless the index sets are disjoint
 
 ---
+
 ## Covariance, Correlation, And The Covariance Matrix
 
 - **Cov(X, Y) = E[(X&minus;&mu;_X)(Y&minus;&mu;_Y)]**; bilinear and symmetric; Cov(X, X) = Var(X)
@@ -62,6 +69,7 @@ audience:
 - &Sigma; only captures *second-order* (linear) dependence — variables can have &Sigma; = diagonal yet be wildly dependent (e.g. Y = X&sup2; with X symmetric)
 
 ---
+
 ## Conditional Expectation
 
 - **E[Y | X]** is a random variable — a (measurable) function of X — namely the &sigma;(X)-measurable function whose integral matches Y's over every event in &sigma;(X); existence and a.s.-uniqueness from Radon&ndash;Nikodym
@@ -71,6 +79,7 @@ audience:
 - This object is the rigorous home of "P(A | X = x)" for continuous X, the foundation of regression theory, and the building block of martingales
 
 ---
+
 ## Sums Of Independent Variables
 
 - If X &#8869; Y, the law of S = X + Y is the **convolution** of their laws: discrete p_S(s) = &Sigma;_k p_X(k) p_Y(s&minus;k); continuous f_S(s) = &#8747; f_X(t) f_Y(s&minus;t) dt
@@ -80,6 +89,7 @@ audience:
 - The sample mean X&#772; = (1/n)&Sigma; X&#8345; of i.i.d. data thus has mean &mu; and variance &sigma;&sup2;/n — and, by repeated convolution + the CLT, an approximately normal law for large n
 
 ---
+
 ## Joint Distributions In Code
 
 ```python
@@ -99,6 +109,7 @@ print("Var(Y)=", y.var().round(2), "  ~ E[Var(Y|X)] + Var(E[Y|X])")
 ```
 
 ---
+
 ## Common Mistakes
 
 - Believing the marginals determine the joint distribution — dependence is extra information

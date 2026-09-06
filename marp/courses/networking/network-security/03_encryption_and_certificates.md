@@ -8,9 +8,11 @@ audience:
   - audiences:security
 
 ---
+
 # Encryption and Certificates
 
 ---
+
 ## What This Chapter Covers
 
 - TLS basics
@@ -20,6 +22,7 @@ audience:
 - VPN protocols
 
 ---
+
 ## Why Encrypt
 
 - Confidentiality on the wire
@@ -28,6 +31,7 @@ audience:
 - Sometimes client authenticity
 
 ---
+
 ## Symmetric vs Asymmetric
 
 - Symmetric: same key both sides
@@ -36,6 +40,7 @@ audience:
 - Asymmetric is for handshakes
 
 ---
+
 ## TLS Handshake
 
 - Negotiate ciphers
@@ -44,11 +49,13 @@ audience:
 - Encrypt the rest
 
 ---
+
 ## Handshake Sequence
 
 ![tls_handshake](svg/courses/networking/network-security/03_encryption_and_certificates/tls_handshake.svg)
 
 ---
+
 ## Certificates
 
 - Identity binding to a public key
@@ -57,11 +64,13 @@ audience:
 - Revoked when compromised
 
 ---
+
 ## Certificate Lifecycle
 
 ![cert_lifecycle](svg/courses/networking/network-security/03_encryption_and_certificates/cert_lifecycle.svg)
 
 ---
+
 ## Certificate Authorities
 
 - Public CAs for the web
@@ -70,6 +79,7 @@ audience:
 - Compromise is critical
 
 ---
+
 ## Common Mistakes With Certificates
 
 - Self-signed in production
@@ -78,6 +88,7 @@ audience:
 - No automated renewal
 
 ---
+
 ## Automated Renewal
 
 - Short-lived certificates
@@ -86,6 +97,7 @@ audience:
 - Forgotten cert is downtime
 
 ---
+
 ## Mutual TLS
 
 - Both sides present certificates
@@ -94,6 +106,7 @@ audience:
 - Common in service meshes
 
 ---
+
 ## Cipher Suites
 
 - Algorithms for handshake and bulk encryption
@@ -102,6 +115,7 @@ audience:
 - Test with scanners
 
 ---
+
 ## TLS Versions
 
 - 1.2 minimum today
@@ -110,6 +124,7 @@ audience:
 - Test with scanning tools
 
 ---
+
 ## VPN Protocols
 
 - IPsec for site-to-site
@@ -118,6 +133,7 @@ audience:
 - TLS tunnels for ad-hoc
 
 ---
+
 ## Key Management
 
 - Hardware security modules for highest tier
@@ -126,6 +142,7 @@ audience:
 - Audit access
 
 ---
+
 ## Common Encryption Mistakes
 
 - Self-signed certificates

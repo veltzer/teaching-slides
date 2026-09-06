@@ -100,6 +100,7 @@ audience:
 ## The CVE Process: Comparison
 
 ### CVSS Severity Ratings
+
 | Score    | Severity | Example                                  |
 |----------|----------|------------------------------------------|
 | 0.0      | None     | Informational finding                    |

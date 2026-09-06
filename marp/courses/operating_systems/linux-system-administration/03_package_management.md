@@ -9,10 +9,12 @@ audience:
   - audiences:devops
 
 ---
+
 # Package Management Deep Dive
 ## apt, dpkg, dnf, rpm, Repositories, and Source Builds
 
 ---
+
 ## Why Package Management Matters
 
 - Consistent software installation and removal
@@ -40,6 +42,7 @@ Without package management:
 - `dpkg`/`rpm` are low-level: install/remove individual packages
 
 ---
+
 ## dpkg: Low-Level Package Tool
 
 ```bash
@@ -67,6 +70,7 @@ dpkg -s nginx
 ```
 
 ---
+
 ## dpkg Advanced Usage
 
 ```bash
@@ -92,6 +96,7 @@ dpkg --configure -a
 ```
 
 ---
+
 ## Understanding dpkg Package States
 
 ```bash
@@ -114,6 +119,7 @@ dpkg --configure -a
 | `iU` | Installed, unpacked (needs configure) |
 
 ---
+
 ## apt: High-Level Package Tool
 
 ```bash
@@ -143,6 +149,7 @@ apt list --installed
 ```
 
 ---
+
 ## apt Install Options
 
 ```bash
@@ -169,6 +176,7 @@ apt install -y nginx
 ```
 
 ---
+
 ## apt Upgrade and Maintenance
 
 ```bash
@@ -197,6 +205,7 @@ apt list --upgradable
 ```
 
 ---
+
 ## apt-mark: Managing Package State
 
 ```bash
@@ -223,6 +232,7 @@ apt-mark showauto
 Holding packages is critical for production systems where you need to control when specific packages get upgraded.
 
 ---
+
 ## apt-cache: Querying Package Information
 
 ```bash
@@ -249,6 +259,7 @@ apt-cache stats
 ```
 
 ---
+
 ## apt-file: Finding Files in Packages
 
 ```bash
@@ -273,6 +284,7 @@ apt-file search --regexp 'bin/dig$'
 This is invaluable when you get "command not found" or "library not found" errors.
 
 ---
+
 ## Repository Configuration (Debian/Ubuntu)
 
 ```bash
@@ -298,6 +310,7 @@ deb-src http://archive.ubuntu.com/ubuntu noble main restricted
 Components: `main` (supported), `restricted` (proprietary drivers), `universe` (community), `multiverse` (non-free).
 
 ---
+
 ## Adding Third-Party Repositories
 
 ```bash
@@ -326,6 +339,7 @@ add-apt-repository --remove ppa:some/ppa
 ```
 
 ---
+
 ## Repository Pinning and Priorities
 
 ```bash
@@ -358,6 +372,7 @@ Pin-Priority: 400
 | >= 1000 | Force downgrade if needed |
 
 ---
+
 ## Package Management: dnf (RHEL/Fedora)
 
 ```bash
@@ -391,6 +406,7 @@ dnf history info 15
 ```
 
 ---
+
 ## dnf Advanced Usage
 
 ```bash
@@ -420,6 +436,7 @@ dnf clean all
 ```
 
 ---
+
 ## rpm: Low-Level Package Tool
 
 ```bash
@@ -447,6 +464,7 @@ rpm -qf /usr/sbin/httpd
 ```
 
 ---
+
 ## rpm Verification and Security
 
 ```bash
@@ -473,6 +491,7 @@ rpm --rebuilddb
 ```
 
 ---
+
 ## Repository Configuration (RHEL/Fedora)
 
 ```ini
@@ -501,6 +520,7 @@ dnf install epel-release
 ```
 
 ---
+
 ## Creating Custom Repositories
 
 ```bash
@@ -528,6 +548,7 @@ createrepo /opt/local-repo/
 ```
 
 ---
+
 ## Hosting a Repository with a Web Server
 
 ```bash
@@ -552,6 +573,7 @@ gpg --armor --clearsign -o dists/stable/InRelease \
 Serve via `nginx` or `Apache` at `http://repo.example.com/`.
 
 ---
+
 ## Building Software from Source
 
 ```bash
@@ -573,6 +595,7 @@ sudo checkinstall
 ```
 
 ---
+
 ## Managing Source Builds
 
 ```bash
@@ -597,6 +620,7 @@ sudo stow myapp-1.0
 ```
 
 ---
+
 ## Building .deb Packages
 
 ```bash
@@ -628,6 +652,7 @@ dpkg-deb --build myapp-1.0
 ```
 
 ---
+
 ## Package Scripts (Pre/Post Install/Remove)
 
 ```bash
@@ -660,6 +685,7 @@ chmod 755 myapp-1.0/DEBIAN/postinst
 ```
 
 ---
+
 ## Package Verification and Security
 
 ```bash
@@ -682,6 +708,7 @@ apt-cache showpkg nginx  # shows versions and repos
 ```
 
 ---
+
 ## Snap and Flatpak
 
 Alternative package formats with sandboxing:
@@ -711,6 +738,7 @@ flatpak update
 | System integration | Full | Limited | Limited |
 
 ---
+
 ## Package Management Best Practices
 
 1. Always run `apt update` before installing
@@ -733,6 +761,7 @@ xargs apt install -y < packages.txt
 ```
 
 ---
+
 ## Troubleshooting Package Issues
 
 ```bash
@@ -760,6 +789,7 @@ dpkg-reconfigure nginx
 ```
 
 ---
+
 ## Dependency Hell: Causes and Solutions
 
 Dependency conflicts arise when packages require incompatible library versions.
@@ -789,6 +819,7 @@ Pin-Priority: 1001" > /etc/apt/preferences.d/libfoo
 ```
 
 ---
+
 ## Setting Up an `apt` Caching Proxy
 
 An `apt-cacher-ng` proxy saves bandwidth when multiple machines install the same packages.
@@ -829,6 +860,7 @@ ls -lh /var/cache/apt-cacher-ng/
 - Ideal for labs, CI/CD pipelines, and air-gapped staging
 
 ---
+
 ## Comparing Package Versions Across Systems
 
 ```bash
@@ -853,6 +885,7 @@ apt-show-versions | grep -v uptodate  # not up to date
 ```
 
 ---
+
 ## Unattended Upgrades for Security Patches
 
 ```bash
@@ -882,6 +915,7 @@ cat /var/log/unattended-upgrades/unattended-upgrades.log
 ```
 
 ---
+
 ## `apt` Transaction Simulation
 
 Always simulate before making changes in production.
@@ -908,6 +942,7 @@ Key output to watch:
 - Download size and disk space impact
 
 ---
+
 ## `dpkg` Triggers
 
 Triggers allow packages to defer expensive operations until all related packages are configured.
@@ -937,6 +972,7 @@ dpkg --configure -a --force-triggers
 Triggers explain why `apt install` sometimes runs `update-initramfs` or `ldconfig` at the end.
 
 ---
+
 ## Package Downgrade Procedures
 
 Rolling back to a previous package version when an upgrade causes issues:
@@ -968,6 +1004,7 @@ dnf downgrade httpd-2.4.51
 ```
 
 ---
+
 ## Comparing `apt` vs `dnf` Side by Side
 
 | Task | `apt` (Debian/Ubuntu) | `dnf` (RHEL/Fedora) |
@@ -985,6 +1022,7 @@ dnf downgrade httpd-2.4.51
 | Hold pkg | `apt-mark hold pkg` | `dnf versionlock pkg` |
 
 ---
+
 ## Virtual Packages
 
 Virtual packages are not real packages but represent a capability that multiple packages can provide.
@@ -1010,6 +1048,7 @@ Common virtual packages:
 - `editor` - text editor (vim, nano)
 
 ---
+
 ## Essential Packages
 
 Essential packages cannot be removed without the `--force-remove-essential` flag. They are critical for system operation.
@@ -1053,6 +1092,7 @@ Never remove essential packages on a production system.
 - **Purged**: all files including config removed
 
 ---
+
 ## Exercise: Package Management Scenarios
 
 1. Simulate installing `postgresql` and note all dependencies that would be added
@@ -1073,6 +1113,7 @@ debsums openssh-server
 Practice the full package lifecycle: install, verify, hold, downgrade, remove, and purge.
 
 ---
+
 ## Package Changelog and History
 
 ```bash
@@ -1102,6 +1143,7 @@ dnf history info 15
 Regularly reviewing package logs helps with auditing and troubleshooting.
 
 ---
+
 ## Debian Package Internals
 
 A `.deb` file is an `ar` archive containing two compressed tarballs.
@@ -1133,6 +1175,7 @@ dpkg -I package.deb     # show control information
 Understanding internals helps when debugging broken packages or building custom ones.
 
 ---
+
 ## apt Proxy and Offline Install
 
 For disconnected or air-gapped systems, use `apt-offline` to download packages on a connected machine and transfer them.
@@ -1167,6 +1210,7 @@ apt --fix-broken install
 ```
 
 ---
+
 ## Package Management Automation
 
 Automate package operations in scripts using `DEBIAN_FRONTEND=noninteractive` to suppress interactive prompts.

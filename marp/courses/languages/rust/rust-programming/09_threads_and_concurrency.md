@@ -9,15 +9,18 @@ audience:
   - audiences:developers
 
 ---
+
 # Threads and Concurrency
 ## Chapter 8: Parallel Programming in Rust
 
 ---
+
 ## Concurrency Models
 
 ![concurrency_models](svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/concurrency_models.svg)
 
 ---
+
 ## Creating Threads
 
 ```rust
@@ -37,6 +40,7 @@ fn main() {
 ```
 
 ---
+
 ## Thread Handles
 
 ```rust
@@ -54,6 +58,7 @@ match handle.join() {
 ```
 
 ---
+
 ## Moving Values into Threads
 
 ```rust
@@ -68,6 +73,7 @@ handle.join().unwrap();
 ```
 
 ---
+
 ## Message Passing: Channels
 
 ```rust
@@ -85,6 +91,7 @@ println!("Got: {}", received);
 ```
 
 ---
+
 ## Multiple Producers
 
 ```rust
@@ -105,11 +112,13 @@ for received in rx {
 ```
 
 ---
+
 ## Channel Types
 
 ![channel_types](svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/channel_types.svg)
 
 ---
+
 ## Shared State: Mutex
 
 ```rust
@@ -126,6 +135,7 @@ println!("m = {:?}", m);
 ```
 
 ---
+
 ## Mutex Between Threads
 
 ```rust
@@ -146,6 +156,7 @@ for _ in 0..10 {
 ```
 
 ---
+
 ## Arc (Atomic Reference Counting)
 
 ```rust
@@ -163,6 +174,7 @@ for _ in 0..3 {
 ```
 
 ---
+
 ## Atomic Types
 
 ```rust
@@ -175,6 +187,7 @@ println!("Count: {}", counter.load(Ordering::SeqCst));
 ```
 
 ---
+
 ## Memory Ordering
 
 ```rust
@@ -189,6 +202,7 @@ Ordering::SeqCst;     // Strongest
 ```
 
 ---
+
 ## RwLock (Reader-Writer Lock)
 
 ```rust
@@ -206,6 +220,7 @@ let w = lock.write().unwrap();
 ```
 
 ---
+
 ## Thread Pools
 
 ```rust
@@ -221,6 +236,7 @@ for i in 0..8 {
 ```
 
 ---
+
 ## Barrier Synchronization
 
 ```rust
@@ -239,6 +255,7 @@ for _ in 0..3 {
 ```
 
 ---
+
 ## Condition Variables
 
 ```rust
@@ -256,11 +273,13 @@ thread::spawn(move || {
 ```
 
 ---
+
 ## Thread Safety Traits
 
 ![thread_safety_traits](svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/thread_safety_traits.svg)
 
 ---
+
 ## Send and Sync
 
 ```rust
@@ -277,6 +296,7 @@ unsafe impl Send for MySendType {}
 ```
 
 ---
+
 ## Deadlock Prevention
 
 ```rust
@@ -304,6 +324,7 @@ fn transfer(
 ```
 
 ---
+
 ## Thread Local Storage
 
 ```rust
@@ -318,6 +339,7 @@ COUNTER.with(|c| {
 ```
 
 ---
+
 ## Scoped Threads
 
 ```rust
@@ -333,6 +355,7 @@ println!("v: {:?}", v);
 ```
 
 ---
+
 ## Error Handling in Threads
 
 ```rust
@@ -352,11 +375,13 @@ match handle.join() {
 ```
 
 ---
+
 ## Best Practices
 
 ![best_practices](svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/best_practices.svg)
 
 ---
+
 ## Performance Considerations
 1. Thread creation overhead
 1. Context switching costs
@@ -365,6 +390,7 @@ match handle.join() {
 1. Memory ordering impact
 
 ---
+
 ## Practice Exercise
 Create a concurrent application that:
 1. Uses multiple threads
@@ -374,6 +400,7 @@ Create a concurrent application that:
 1. Uses message passing
 
 ---
+
 ## Common Pitfalls
 1. Race conditions
 1. Deadlocks
@@ -382,6 +409,7 @@ Create a concurrent application that:
 1. Incorrect synchronization
 
 ---
+
 ## Summary
 - Thread basics
 - Message passing

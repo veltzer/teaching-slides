@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # OpenID Connect
 
 ---
+
 ## What This Chapter Covers
 
 - What OIDC adds on top of OAuth2
@@ -20,11 +22,13 @@ audience:
 - Logout patterns
 
 ---
+
 ## OIDC in One Sentence
 
 - An identity layer on top of OAuth2 that lets clients verify the user's identity using a standardized ID token.
 
 ---
+
 ## Why OIDC?
 
 - OAuth2 alone doesn't say who the user is
@@ -34,11 +38,13 @@ audience:
 - The de facto standard for federated login
 
 ---
+
 ## OIDC vs OAuth2 Visualized
 
 ![oidc_layer](svg/courses/networking/oauth2-and-oidc/06_oidc/oidc_layer.svg)
 
 ---
+
 ## What OIDC Adds
 
 - ID token (a JWT) with user identity
@@ -48,6 +54,7 @@ audience:
 - Discovery via `.well-known/openid-configuration`
 
 ---
+
 ## The ID Token
 
 - A JWT signed by the auth server
@@ -57,6 +64,7 @@ audience:
 - Lifetime usually matches the access token
 
 ---
+
 ## ID Token Claims
 
 ```json
@@ -73,6 +81,7 @@ audience:
 ```
 
 ---
+
 ## Required Claims
 
 - `iss` — issuer URL of the auth server
@@ -83,6 +92,7 @@ audience:
 - Validate all of these, every time
 
 ---
+
 ## The sub Claim
 
 - The user's unique identifier at the issuer
@@ -92,11 +102,13 @@ audience:
 - Don't use `email` — it can change or be reused
 
 ---
+
 ## Claim Buckets
 
 ![oidc_claim_buckets](svg/courses/networking/oauth2-and-oidc/06_oidc/oidc_claim_buckets.svg)
 
 ---
+
 ## Standard Scopes
 
 - `openid` — required, asks for an ID token
@@ -107,6 +119,7 @@ audience:
 - Pick what you need; least privilege
 
 ---
+
 ## Requesting an ID Token
 
 - Add `openid` to the scope: `scope=openid profile email`
@@ -115,6 +128,7 @@ audience:
 - The presence of `openid` switches OAuth2 → OIDC
 
 ---
+
 ## Token Endpoint Response (OIDC)
 
 ```json
@@ -131,6 +145,7 @@ audience:
 - Both tokens in one response
 
 ---
+
 ## Validating the ID Token
 
 - Verify the JWT signature using JWKS
@@ -140,11 +155,13 @@ audience:
 - Check `nonce` matches what you sent
 
 ---
+
 ## Validation Step Detail
 
 ![oidc_validation_steps](svg/courses/networking/oauth2-and-oidc/06_oidc/oidc_validation_steps.svg)
 
 ---
+
 ## The Nonce Parameter
 
 - A random value the client generates
@@ -154,6 +171,7 @@ audience:
 - Always use it (different from `state`)
 
 ---
+
 ## UserInfo Endpoint
 
 - `/userinfo` — returns user claims for an access token
@@ -163,6 +181,7 @@ audience:
 - Returns same claim format as the ID token
 
 ---
+
 ## When to Use UserInfo
 
 - Get richer user profile after login
@@ -172,6 +191,7 @@ audience:
 - Scope-gated; only returns what was authorized
 
 ---
+
 ## Discovery
 
 - `https://issuer/.well-known/openid-configuration`
@@ -181,6 +201,7 @@ audience:
 - Standard across OIDC providers
 
 ---
+
 ## Discovery Document Example
 
 ```json
@@ -196,6 +217,7 @@ audience:
 ```
 
 ---
+
 ## OIDC Flows
 
 - Authorization Code (default for web/mobile)
@@ -205,6 +227,7 @@ audience:
 - Authorization Code is the right default
 
 ---
+
 ## Hybrid Flow
 
 - `response_type=code id_token`
@@ -214,6 +237,7 @@ audience:
 - Less common than pure code flow
 
 ---
+
 ## Front-Channel Logout
 
 - Auth server includes iframes pointing to each client's logout endpoint
@@ -223,6 +247,7 @@ audience:
 - Less reliable than back-channel
 
 ---
+
 ## Back-Channel Logout
 
 - Auth server sends a server-to-server logout token to each client
@@ -232,6 +257,7 @@ audience:
 - The recommended modern logout
 
 ---
+
 ## End-Session Endpoint
 
 - `end_session_endpoint` from discovery
@@ -241,6 +267,7 @@ audience:
 - The user-initiated logout flow
 
 ---
+
 ## Session Management
 
 - Session iframe spec for cross-tab session monitoring
@@ -250,6 +277,7 @@ audience:
 - Often replaced by silent token refresh
 
 ---
+
 ## OIDC vs SAML
 
 - SAML — older, XML-based, popular in enterprise
@@ -259,6 +287,7 @@ audience:
 - Both standards in active use
 
 ---
+
 ## Common Pitfalls
 
 - Treating the ID token as an access token (don't)
@@ -268,6 +297,7 @@ audience:
 - Forgetting that `openid` scope is required
 
 ---
+
 ## Summary
 
 - OIDC adds standard identity on top of OAuth2

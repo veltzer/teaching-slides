@@ -8,9 +8,11 @@ audience:
   - audiences:testers
 
 ---
+
 # Continuous Performance
 
 ---
+
 ## What This Chapter Covers
 
 - Performance in CI
@@ -20,6 +22,7 @@ audience:
 - Culture
 
 ---
+
 ## Why Continuous
 
 - Performance regressions sneak in
@@ -28,11 +31,13 @@ audience:
 - Faster fixes
 
 ---
+
 ## CI Strategy
 
 ![ci_strategy](svg/courses/testing/performance-testing/05_continuous_performance/ci_strategy.svg)
 
 ---
+
 ## Smoke Perf In CI
 
 - Small synthetic load
@@ -41,6 +46,7 @@ audience:
 - Blocks egregious regressions
 
 ---
+
 ## Nightly Full Tests
 
 - Realistic workload
@@ -49,6 +55,7 @@ audience:
 - Trend over weeks
 
 ---
+
 ## Trend Tracking
 
 - Store metrics over time
@@ -57,11 +64,13 @@ audience:
 - Alert on threshold breach
 
 ---
+
 ## Trend Over Builds
 
 ![trend_tracking](svg/courses/testing/performance-testing/05_continuous_performance/trend_tracking.svg)
 
 ---
+
 ## Regression Alerts
 
 - p99 latency above target
@@ -70,6 +79,7 @@ audience:
 - Page or ticket per breach
 
 ---
+
 ## Bisect Regressions
 
 - Run between known-good and known-bad
@@ -78,6 +88,7 @@ audience:
 - Saves time
 
 ---
+
 ## Capacity Planning Inputs
 
 - Max sustainable rate per service
@@ -86,6 +97,7 @@ audience:
 - Update quarterly
 
 ---
+
 ## Forecasting
 
 - Project growth from analytics
@@ -94,6 +106,7 @@ audience:
 - Plan architecture work
 
 ---
+
 ## Headroom
 
 - Aim for 50% utilization at peak
@@ -102,6 +115,7 @@ audience:
 - Document the policy
 
 ---
+
 ## Performance Budgets
 
 - Per endpoint or per page
@@ -110,6 +124,7 @@ audience:
 - Negotiate increases explicitly
 
 ---
+
 ## Performance Reviews
 
 - Monthly or quarterly
@@ -118,6 +133,7 @@ audience:
 - Plan investments
 
 ---
+
 ## Onboarding New Services
 
 - Performance plan required
@@ -126,6 +142,7 @@ audience:
 - Same as new test discipline
 
 ---
+
 ## Tooling Investment
 
 - Reuse generators
@@ -134,6 +151,7 @@ audience:
 - Cheap to run more often
 
 ---
+
 ## Culture
 
 - Performance is everyone's job
@@ -142,6 +160,7 @@ audience:
 - Customers feel the difference
 
 ---
+
 ## Common Continuous Mistakes
 
 - One engineer owns it all

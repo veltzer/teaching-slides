@@ -8,9 +8,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Non-Parametric Tests
 
 ---
+
 ## What This Chapter Covers
 
 - When to abandon the normality assumption
@@ -21,11 +23,13 @@ audience:
 - Costs, benefits, and what these tests actually test
 
 ---
+
 ## Parametric ↔ Non-Parametric Pairings
 
 ![parametric_to_rank](svg/courses/math/statistics-inference/08_nonparametric_tests/parametric_to_rank.svg)
 
 ---
+
 ## When Parametric Assumptions Fail
 
 - Small samples *and* clearly non-normal data: heavy skew, fat tails, outliers, ordinal scales
@@ -35,6 +39,7 @@ audience:
 - The trade: a little less power when normality *does* hold; much more reliability when it doesn't
 
 ---
+
 ## What These Tests Actually Test
 
 - They're often *not* tests about the mean — and that matters for interpretation
@@ -44,6 +49,7 @@ audience:
 - Don't claim "the means differ" from a rank test — claim "one group tends to be larger"
 
 ---
+
 ## Sign Test And Wilcoxon Signed-Rank
 
 - Both replace the **one-sample / paired t-test** (work on the differences, or on data vs a reference value)
@@ -53,6 +59,7 @@ audience:
 - Use Wilcoxon by default for paired non-normal data; fall back to the sign test if symmetry is doubtful
 
 ---
+
 ## Mann&ndash;Whitney U Test
 
 - Replaces the **independent two-sample t-test** (also called the Wilcoxon rank-sum test — same thing)
@@ -62,6 +69,7 @@ audience:
 - With ties or small samples, use the exact version; `scipy` handles this
 
 ---
+
 ## Kruskal&ndash;Wallis Test
 
 - The **non-parametric one-way ANOVA** — three or more independent groups
@@ -71,6 +79,7 @@ audience:
 - For repeated measures across 3+ conditions, the **Friedman test** is the analog
 
 ---
+
 ## Permutation Tests
 
 - The most flexible option: build the null distribution by *shuffling* the data, no distributional assumption at all
@@ -80,11 +89,13 @@ audience:
 - Only real assumption: **exchangeability** under H&#8320; (which is what randomized experiments give you for free); costs CPU, not cleverness
 
 ---
+
 ## How a Permutation Test Works
 
 ![permutation_test](svg/courses/math/statistics-inference/08_nonparametric_tests/permutation_test.svg)
 
 ---
+
 ## Costs And Benefits
 
 - **Benefits**: few assumptions, robust to outliers and skew, valid for ordinal data, often exact for small samples
@@ -94,6 +105,7 @@ audience:
 - Permutation tests are a great default middle ground: assumption-light *and* you choose the statistic
 
 ---
+
 ## Non-Parametric Tests In Python
 
 ```python
@@ -110,6 +122,7 @@ print("permutation p :",
 ```
 
 ---
+
 ## Common Mistakes
 
 - Reaching for a rank test at large n when a parametric test would be more powerful and just as valid

@@ -9,9 +9,11 @@ audience:
   - audiences:embedded-engineers
 
 ---
+
 # Protocols Review
 
 ---
+
 ## What This Chapter Covers
 
 - The shape of the IEEE 802.11 standard
@@ -21,6 +23,7 @@ audience:
 - The Wi-Fi Alliance's marketing names (Wi-Fi 4, 5, 6, 6E, 7)
 
 ---
+
 ## The 802.11 Family
 
 - IEEE 802.11 is a *base standard* with periodic *amendments*
@@ -30,6 +33,7 @@ audience:
 - Wi-Fi Alliance certifies products against the IEEE specs
 
 ---
+
 ## Bands We Operate In
 
 - 2.4 GHz: ISM band, 11-14 channels (region-dependent), 20 MHz wide
@@ -39,11 +43,13 @@ audience:
 - Lower frequency = better range; higher frequency = more capacity
 
 ---
+
 ## Frequency Bands at a Glance
 
 ![frequency_bands](svg/courses/wifi/wifi-protocols/02_protocols_review/frequency_bands.svg)
 
 ---
+
 ## Channels and Overlap (2.4 GHz)
 
 - 2.4 GHz channels are 5 MHz apart but 20 MHz wide — adjacent channels overlap
@@ -53,6 +59,7 @@ audience:
 - 5 GHz has plenty of non-overlapping wide channels — much easier
 
 ---
+
 ## Legacy 802.11 (1997)
 
 - The original standard: up to 2 Mbps in 2.4 GHz
@@ -62,6 +69,7 @@ audience:
 - A modern Wi-Fi 6 AP must still send legacy preambles for compatibility
 
 ---
+
 ## 802.11b (1999)
 
 - Pushed throughput to 11 Mbps in 2.4 GHz
@@ -71,6 +79,7 @@ audience:
 - Vulnerable to interference from microwaves and Bluetooth
 
 ---
+
 ## 802.11a (1999)
 
 - Released alongside 802.11b but used 5 GHz
@@ -80,6 +89,7 @@ audience:
 - Its OFDM techniques were the foundation for everything that followed
 
 ---
+
 ## 802.11g (2003)
 
 - Brought OFDM and 54 Mbps to the 2.4 GHz band
@@ -89,6 +99,7 @@ audience:
 - Effective real-world throughput: ~25 Mbps
 
 ---
+
 ## 802.11n (2009) — Wi-Fi 4
 
 - First MIMO-capable amendment: up to 4 spatial streams
@@ -98,6 +109,7 @@ audience:
 - Introduced frame aggregation (A-MPDU, A-MSDU) for efficiency
 
 ---
+
 ## 802.11ac (2013) — Wi-Fi 5
 
 - 5 GHz only; legacy bands stay on 802.11n
@@ -107,6 +119,7 @@ audience:
 - Top advertised rate (Wave 2, 4 streams, 160 MHz): ~3.5 Gbps
 
 ---
+
 ## 802.11ax (2019) — Wi-Fi 6 and Wi-Fi 6E
 
 - Targets *efficiency* in dense environments, not just peak speed
@@ -116,11 +129,13 @@ audience:
 - Wi-Fi 6E extends Wi-Fi 6 into the 6 GHz band
 
 ---
+
 ## Generation Comparison
 
 ![generation_comparison](svg/courses/wifi/wifi-protocols/02_protocols_review/generation_comparison.svg)
 
 ---
+
 ## Backward Compatibility, In Practice
 
 - Every modern AP can still talk to a 1999-era 802.11b client
@@ -130,6 +145,7 @@ audience:
 - Plan migrations: profile what's actually attached before turning rates off
 
 ---
+
 ## Channel Width Tradeoffs
 
 - Wider channels: more peak throughput, fewer non-overlapping channels
@@ -139,6 +155,7 @@ audience:
 - Auto-channel features in modern APs help but are not magic
 
 ---
+
 ## Marketing Names vs IEEE Names
 
 - IEEE name: 802.11n &#8594; Wi-Fi 4
@@ -148,6 +165,7 @@ audience:
 - Wi-Fi Alliance simplified the labels because customers couldn't tell which 802.11* was newer
 
 ---
+
 ## Wi-Fi 7 (802.11be) Preview
 
 - Up to 320 MHz channels in the 6 GHz band
@@ -157,6 +175,7 @@ audience:
 - Standard ratified late, but products are shipping
 
 ---
+
 ## Choosing a Generation Today
 
 - New deployment: Wi-Fi 6 minimum, Wi-Fi 6E if you need 6 GHz capacity

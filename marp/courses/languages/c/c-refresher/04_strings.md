@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Strings in C Refresher
 
 ---

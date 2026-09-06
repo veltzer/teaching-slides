@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Tokens: Access, Refresh, and ID
 
 ---
+
 ## What This Chapter Covers
 
 - The three token types and their roles
@@ -20,6 +22,7 @@ audience:
 - Revocation and introspection
 
 ---
+
 ## Three Token Types
 
 - Access token — authorizes API calls
@@ -29,11 +32,13 @@ audience:
 - Mixing them up is a common bug
 
 ---
+
 ## Access vs Refresh
 
 ![token_lifecycle](svg/courses/networking/oauth2-and-oidc/05_tokens/token_lifecycle.svg)
 
 ---
+
 ## Access Token
 
 - Short-lived (5-60 minutes typically)
@@ -43,6 +48,7 @@ audience:
 - Resource server doesn't need to call auth server (for JWT)
 
 ---
+
 ## Refresh Token
 
 - Long-lived (hours to weeks)
@@ -52,6 +58,7 @@ audience:
 - Most sensitive — guard it carefully
 
 ---
+
 ## ID Token
 
 - OIDC-specific
@@ -61,11 +68,13 @@ audience:
 - Should never be used as an API access token
 
 ---
+
 ## Token Roles Visualized
 
 ![token_roles](svg/courses/networking/oauth2-and-oidc/05_tokens/token_roles.svg)
 
 ---
+
 ## Opaque Tokens
 
 - Random strings; meaningless to anyone but the auth server
@@ -75,6 +84,7 @@ audience:
 - Caching introspection results helps
 
 ---
+
 ## JWT Tokens
 
 - Self-contained; signed by the auth server
@@ -84,11 +94,13 @@ audience:
 - Revocation is harder (covered later)
 
 ---
+
 ## JWT Versus Opaque Comparison
 
 ![jwt_vs_opaque](svg/courses/networking/oauth2-and-oidc/05_tokens/jwt_vs_opaque.svg)
 
 ---
+
 ## Choosing Between Them
 
 - High volume, low latency → JWT
@@ -98,6 +110,7 @@ audience:
 - Mix per scope or per client if your stack supports it
 
 ---
+
 ## Token Lifetimes
 
 - Access: 5-60 min (Google: 1h; AWS: 1h)
@@ -107,11 +120,13 @@ audience:
 - Shorter access + rotation refresh = strong default
 
 ---
+
 ## Token Storage Choices
 
 ![storage_choices](svg/courses/networking/oauth2-and-oidc/05_tokens/storage_choices.svg)
 
 ---
+
 ## Storage: Server-Side Apps
 
 - Tokens in the server-side session store
@@ -121,6 +136,7 @@ audience:
 - Most secure for SPAs and mobile
 
 ---
+
 ## Storage: SPAs
 
 - Avoid `localStorage` (XSS reads it)
@@ -130,6 +146,7 @@ audience:
 - If you must, accept the risk and document it
 
 ---
+
 ## Storage: Mobile
 
 - iOS secure storage (key store)
@@ -139,6 +156,7 @@ audience:
 - Wipe on logout
 
 ---
+
 ## Storage: CLI Tools
 
 - OS credential store (Linux secret service, macOS key store, Windows credential manager)
@@ -148,6 +166,7 @@ audience:
 - Consider device authorization grant for the initial login
 
 ---
+
 ## Token Validation: JWT
 
 - Verify signature using the auth server's public key
@@ -157,6 +176,7 @@ audience:
 - Don't roll your own JWT library
 
 ---
+
 ## JWKS
 
 - JSON Web Key Set
@@ -166,6 +186,7 @@ audience:
 - Always look up by `kid` and re-fetch if missing
 
 ---
+
 ## Token Validation: Opaque
 
 - Resource server calls `/introspect` (RFC 7662)
@@ -175,6 +196,7 @@ audience:
 - Always check `active=true`
 
 ---
+
 ## Audience and Authorization
 
 - `aud` claim says who the token is for
@@ -184,6 +206,7 @@ audience:
 - Often forgotten — check yours
 
 ---
+
 ## Scopes vs Permissions
 
 - Scopes are coarse: `read:profile`, `write:posts`
@@ -193,6 +216,7 @@ audience:
 - Don't expect scopes alone to do fine-grained authz
 
 ---
+
 ## Revocation
 
 - `/revoke` endpoint takes a token
@@ -202,6 +226,7 @@ audience:
 - Short access token TTL limits damage
 
 ---
+
 ## Revoking JWTs
 
 - Maintain a deny list of `jti` (JWT IDs)
@@ -211,6 +236,7 @@ audience:
 - Combine: short JWT TTL, deny-list for emergencies
 
 ---
+
 ## Token Introspection
 
 - `/introspect` endpoint (RFC 7662)
@@ -220,6 +246,7 @@ audience:
 - Returns active/inactive, scope, claims
 
 ---
+
 ## Refresh Token Rotation Details
 
 - New refresh token returned with each use
@@ -229,6 +256,7 @@ audience:
 - Security best practice; some providers default-on
 
 ---
+
 ## Token Binding (Future)
 
 - Bind tokens to client TLS keys
@@ -238,6 +266,7 @@ audience:
 - Strongest mitigation for token theft
 
 ---
+
 ## Proof-of-Possession
 
 - A way to bind a token to a holder's key
@@ -247,6 +276,7 @@ audience:
 - Adoption growing in financial APIs
 
 ---
+
 ## Common Pitfalls
 
 - Treating ID tokens as access tokens
@@ -256,6 +286,7 @@ audience:
 - Long-lived access tokens (>1h without good reason)
 
 ---
+
 ## Summary
 
 - Three token types; each has a specific role

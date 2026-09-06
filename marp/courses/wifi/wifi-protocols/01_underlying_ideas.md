@@ -9,9 +9,11 @@ audience:
   - audiences:embedded-engineers
 
 ---
+
 # Underlying Ideas
 
 ---
+
 ## What This Chapter Covers
 
 - Why a wireless link is physically harder than a wire
@@ -21,6 +23,7 @@ audience:
 - Spatial multiplexing: independent streams in the same channel
 
 ---
+
 ## The Wireless Channel Is Hostile
 
 - The radio channel is shared, not switched
@@ -30,6 +33,7 @@ audience:
 - A single carrier collapses under all of this; we need clever modulation
 
 ---
+
 ## Symbols, Bits, and Bandwidth
 
 - A modem maps bits onto a continuous waveform
@@ -39,6 +43,7 @@ audience:
 - Wi-Fi keeps both knobs adjustable; rate adapts to channel quality
 
 ---
+
 ## Single Carrier vs Multi Carrier
 
 - Single carrier: one big channel, one fast symbol stream
@@ -48,6 +53,7 @@ audience:
 - This is the core idea behind OFDM
 
 ---
+
 ## OFDM Overview
 
 - OFDM = Orthogonal Frequency Division Multiplexing
@@ -57,11 +63,13 @@ audience:
 - Result: high spectral efficiency in a multipath environment
 
 ---
+
 ## OFDM Symbol Structure
 
 ![ofdm_symbol](svg/courses/wifi/wifi-protocols/01_underlying_ideas/ofdm_symbol.svg)
 
 ---
+
 ## OFDM in Numbers
 
 - 802.11a/g: 64 subcarriers in 20 MHz (52 carry data)
@@ -71,6 +79,7 @@ audience:
 - The strongest subcarriers carry the most bits; weak ones drop back
 
 ---
+
 ## The Cyclic Prefix
 
 - Echoes from the previous symbol leak into the next
@@ -80,6 +89,7 @@ audience:
 - Costs throughput in exchange for robustness
 
 ---
+
 ## OFDMA: Sharing the Subcarriers
 
 - OFDM gives one device the whole channel for one symbol time
@@ -89,6 +99,7 @@ audience:
 - Drastically improves efficiency in dense, low-traffic-per-client deployments
 
 ---
+
 ## What MIMO Solves
 
 - One antenna, one symbol, one bit stream — that is SISO
@@ -98,6 +109,7 @@ audience:
 - Each path is its own channel; we can stuff more data through them in parallel
 
 ---
+
 ## MIMO Configurations
 
 - SISO: 1x1 — single antenna each side
@@ -107,6 +119,7 @@ audience:
 - Notation: 4x4:2 means 4 TX, 4 RX, 2 spatial streams
 
 ---
+
 ## Spatial Multiplexing
 
 - The transmitter splits one bit stream into N parallel streams
@@ -116,11 +129,13 @@ audience:
 - Aggregate throughput scales roughly with the number of streams
 
 ---
+
 ## MIMO Diagram
 
 ![mimo_streams](svg/courses/wifi/wifi-protocols/01_underlying_ideas/mimo_streams.svg)
 
 ---
+
 ## Channel Estimation
 
 - The receiver only knows what came out, not what went in
@@ -130,6 +145,7 @@ audience:
 - Channel changes with motion, so estimation runs constantly
 
 ---
+
 ## Beamforming Idea
 
 - Multiple antennas, all transmitting the same signal with deliberate phase shifts
@@ -139,6 +155,7 @@ audience:
 - Improves range, throughput, and reduces interference at other devices
 
 ---
+
 ## Explicit vs Implicit Beamforming
 
 - Explicit: the AP asks the client for channel feedback, then computes weights
@@ -148,6 +165,7 @@ audience:
 - Wi-Fi 6 retains explicit beamforming
 
 ---
+
 ## Multi-User MIMO (MU-MIMO)
 
 - Single-user MIMO: many streams to one client at a time
@@ -157,6 +175,7 @@ audience:
 - Wi-Fi 5 added downlink MU-MIMO; Wi-Fi 6 added uplink MU-MIMO
 
 ---
+
 ## Putting It All Together
 
 - OFDM splits the channel in *frequency* — tames multipath
@@ -166,6 +185,7 @@ audience:
 - Every Wi-Fi generation since 802.11n stacks more of these on top of each other
 
 ---
+
 ## Why This Matters Up the Stack
 
 - Throughput numbers on the box assume good radio conditions

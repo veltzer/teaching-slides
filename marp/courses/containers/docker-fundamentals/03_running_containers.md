@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Running Containers
 
 ---
+
 ## What This Chapter Covers
 
 - The `docker run` command in depth
@@ -22,6 +24,7 @@ audience:
 - Environment variables and configuration
 
 ---
+
 ## docker run, Decomposed
 
 ```bash
@@ -34,6 +37,7 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 - Knowing the common options well covers 90% of daily use
 
 ---
+
 ## Most-Used run Options
 
 - `-d`: detach (background)
@@ -45,6 +49,7 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 - `-v src:dst`: mount volume / bind
 
 ---
+
 ## Foreground Containers
 
 ```bash
@@ -58,6 +63,7 @@ docker run --rm python:3.12 python -c "print(1+1)"
 - Not what you want for long-running services
 
 ---
+
 ## Background Containers
 
 ```bash
@@ -72,6 +78,7 @@ docker stop api
 - `docker logs` retrieves recent stdout/stderr
 
 ---
+
 ## Lifecycle Commands
 
 - `docker start NAME`: start a stopped container
@@ -82,11 +89,13 @@ docker stop api
 - `docker kill NAME`: SIGKILL immediately
 
 ---
+
 ## Lifecycle Diagram
 
 ![lifecycle](svg/courses/containers/docker-fundamentals/03_running_containers/lifecycle.svg)
 
 ---
+
 ## Inspecting Containers
 
 ```bash
@@ -101,6 +110,7 @@ docker top NAME              # processes inside
 - `stats` is your "is anything wrong" first stop
 
 ---
+
 ## Logs
 
 ```bash
@@ -115,6 +125,7 @@ docker logs --since 5m api
 - Don't ssh into a container to read logs — let the host see them
 
 ---
+
 ## Exec: Running Commands Inside
 
 ```bash
@@ -129,6 +140,7 @@ docker exec -e DEBUG=1 api /app/diagnose
 - For real long-term needs, build the image with the tool included
 
 ---
+
 ## Resource Limits
 
 ```bash
@@ -142,6 +154,7 @@ docker run -d --memory 1g --memory-swap 1g myapp
 - Set limits in production — unbounded containers can starve neighbours
 
 ---
+
 ## Restart Policies
 
 ```bash
@@ -155,6 +168,7 @@ docker run -d --restart=on-failure:5 myjob
 - Less crucial for one-off jobs
 
 ---
+
 ## Environment Variables
 
 ```bash
@@ -169,6 +183,7 @@ docker run --env-file .env myapp
 - Don't put secrets in environment unless you trust the host (use Docker secrets / orchestrator secrets for prod)
 
 ---
+
 ## Naming Containers
 
 - Without `--name`, Docker invents `eager_einstein`-style names
@@ -178,6 +193,7 @@ docker run --env-file .env myapp
 - For replicas, scope by label, not by trying to share a name
 
 ---
+
 ## Working Directory and User
 
 ```bash
@@ -190,6 +206,7 @@ docker run -w /app -u 1000:1000 myapp ./script.sh
 - Best practice: build images with a non-root user
 
 ---
+
 ## A Short Workflow
 
 ```bash
@@ -208,6 +225,7 @@ docker stop web && docker rm web
 - Clean up when done
 
 ---
+
 ## Common Mistakes
 
 - Forgetting `-d` &#8594; terminal hijacked, hit Ctrl+C and the container dies
@@ -217,6 +235,7 @@ docker stop web && docker rm web
 - Using `:latest` everywhere &#8594; restart pulls a different image
 
 ---
+
 ## Key docker run Flags
 
 ![run_options](svg/courses/containers/docker-fundamentals/03_running_containers/run_options.svg)

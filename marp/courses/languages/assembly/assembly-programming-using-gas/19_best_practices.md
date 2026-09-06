@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Best Practices and Coding Standards
 
 ---
@@ -156,6 +157,7 @@ Example:
 ```
 
 ---
+
 ## Use of Macros
 
 - Create macros for repeated code patterns

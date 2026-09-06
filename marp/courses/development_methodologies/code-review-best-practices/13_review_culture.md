@@ -9,6 +9,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Review Culture
 
 ---
@@ -18,6 +19,7 @@ audience:
 ![culture_pillars](svg/courses/development_methodologies/code-review-best-practices/13_review_culture/culture_pillars.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Psychological safety
@@ -28,6 +30,7 @@ audience:
 - Repairing a broken culture
 
 ---
+
 ## What Culture Means Here
 
 - The unwritten rules of how reviews happen
@@ -37,11 +40,13 @@ audience:
 - More important than the tooling
 
 ---
+
 ## Healthy Culture Practices
 
 ![healthy_culture](svg/courses/development_methodologies/code-review-best-practices/13_review_culture/healthy_culture.svg)
 
 ---
+
 ## Psychological Safety
 
 - A team where people feel safe to be wrong
@@ -51,6 +56,7 @@ audience:
 - Without it, reviews degrade fast
 
 ---
+
 ## Building Safety
 
 - Senior people demonstrate vulnerability ("I don't know", "I was wrong")
@@ -60,6 +66,7 @@ audience:
 - Manager sets the tone
 
 ---
+
 ## Blameless Feedback
 
 - "What went wrong?" not "who screwed up?"
@@ -69,6 +76,7 @@ audience:
 - Same culture in reviews
 
 ---
+
 ## Mentoring Through Reviews
 
 - Senior reviewers teach in PR comments
@@ -78,6 +86,7 @@ audience:
 - Compound interest of mentorship
 
 ---
+
 ## Cross-Team Reviews
 
 - Reviewer outside your area
@@ -87,6 +96,7 @@ audience:
 - Common at companies that scale well
 
 ---
+
 ## Setting Team Norms
 
 - A short doc: "How we review at <team>"
@@ -96,6 +106,7 @@ audience:
 - Review meetings include "how we review" check-in
 
 ---
+
 ## Sample Norms
 
 - We respond to review requests within one business day
@@ -105,6 +116,7 @@ audience:
 - We don't approve PRs we haven't read
 
 ---
+
 ## Habits That Compound
 
 - Review with your morning coffee, not at end of day
@@ -114,6 +126,7 @@ audience:
 - Small habits make large culture
 
 ---
+
 ## Demoting Heroics
 
 - "Sarah saved the production deploy by reviewing at midnight"
@@ -123,6 +136,7 @@ audience:
 - Sustainable practices > rescue stories
 
 ---
+
 ## Repairing a Broken Culture
 
 - Acknowledge the problem
@@ -132,6 +146,7 @@ audience:
 - Patience: culture changes over months, not weeks
 
 ---
+
 ## Manager's Role
 
 - Doesn't review every PR (usually shouldn't)
@@ -141,6 +156,7 @@ audience:
 - Removes obstacles for reviewers
 
 ---
+
 ## When Culture Goes Wrong
 
 - Brilliant jerk who tears apart every PR
@@ -150,6 +166,7 @@ audience:
 - Each erodes a different value; address each
 
 ---
+
 ## Recognising Reviewers
 
 - Public credit for thorough reviews
@@ -159,6 +176,7 @@ audience:
 - The team that recognises reviewers gets better reviews
 
 ---
+
 ## Long-Term Indicators
 
 - Junior devs become senior devs through reviews
@@ -169,6 +187,7 @@ audience:
 - All visible in retrospect; subtle quarter to quarter
 
 ---
+
 ## Common Cultural Mistakes
 
 - Tolerating one toxic reviewer

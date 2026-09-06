@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Data Validation and Security
 
 ---
+
 ## What This Chapter Covers
 
 - Schema validation
@@ -21,11 +23,13 @@ audience:
 - Auditing
 
 ---
+
 ## Security Layers
 
 ![security_layers](svg/courses/databases/mongodb-for-developers/11_data_validation_and_security/security_layers.svg)
 
 ---
+
 ## Schema Validation
 
 ```javascript
@@ -46,6 +50,7 @@ db.createCollection("users", {
 - Server-side; defence in depth
 
 ---
+
 ## When To Validate
 
 - Always for production collections
@@ -54,6 +59,7 @@ db.createCollection("users", {
 - Schema validation is a safety net, not a primary guard
 
 ---
+
 ## Authentication
 
 - Per-user credentials (username + password)
@@ -62,6 +68,7 @@ db.createCollection("users", {
 - Atlas: integrated auth providers
 
 ---
+
 ## Authorisation
 
 - Role-based access control
@@ -70,6 +77,7 @@ db.createCollection("users", {
 - Per-database; cluster-wide for admin
 
 ---
+
 ## Best Practice Permissions
 
 - App users: readWrite on their database only
@@ -78,6 +86,7 @@ db.createCollection("users", {
 - Audit periodically
 
 ---
+
 ## Encryption At Rest
 
 - WiredTiger: enterprise feature
@@ -86,6 +95,7 @@ db.createCollection("users", {
 - Compliance check-mark
 
 ---
+
 ## Encryption In Transit
 
 - TLS to the cluster
@@ -94,6 +104,7 @@ db.createCollection("users", {
 - Required for compliance
 
 ---
+
 ## Field-Level Encryption
 
 - Specific fields encrypted before sending to DB
@@ -102,6 +113,7 @@ db.createCollection("users", {
 - Client-side keys; server-side queryable encryption (newer)
 
 ---
+
 ## Queryable Encryption
 
 - MongoDB 6+
@@ -110,6 +122,7 @@ db.createCollection("users", {
 - Strongest encryption; some performance cost
 
 ---
+
 ## Auditing
 
 - Enterprise / Atlas feature
@@ -118,6 +131,7 @@ db.createCollection("users", {
 - Compliance use case
 
 ---
+
 ## SQL Injection (NoSQL Equivalent)
 
 - Don't pass raw user input as query operators
@@ -126,6 +140,7 @@ db.createCollection("users", {
 - Validate input before queries
 
 ---
+
 ## Connection Security
 
 - Don't expose MongoDB to the internet
@@ -134,6 +149,7 @@ db.createCollection("users", {
 - Strong passwords + auth always
 
 ---
+
 ## Backup Encryption
 
 - Backups encrypted too
@@ -142,6 +158,7 @@ db.createCollection("users", {
 - Compliance requirement
 
 ---
+
 ## Common Security Mistakes
 
 - App connecting as root

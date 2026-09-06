@@ -9,9 +9,11 @@ audience:
   - audiences:senior-developers
 
 ---
+
 # Introduction and Orientation
 
 ---
+
 ## What This Chapter Covers
 
 - What Claude is and is not
@@ -20,6 +22,7 @@ audience:
 - Workshop ground rules
 
 ---
+
 ## Claude the Model vs Claude the Product
 
 - The model is the weights and the API
@@ -28,6 +31,7 @@ audience:
 - We will mostly use Claude Code
 
 ---
+
 ## Claude Code as a Coding Agent
 
 - Runs in your terminal
@@ -36,6 +40,7 @@ audience:
 - Designed for real day-to-day work
 
 ---
+
 ## Other Claude Surfaces
 
 - The web app at claude.ai
@@ -44,11 +49,13 @@ audience:
 - The desktop app
 
 ---
+
 ## Surfaces At A Glance
 
 ![surfaces](svg/courses/ai/claude-workshop/01_introduction/surfaces.svg)
 
 ---
+
 ## When To Use Which Surface
 
 - Web app for ad hoc questions
@@ -57,6 +64,7 @@ audience:
 - IDE extension for inline help
 
 ---
+
 ## The Claude Model Family
 
 - Opus: the heaviest model
@@ -65,6 +73,7 @@ audience:
 - Pick by task, not by habit
 
 ---
+
 ## When To Reach For Opus
 
 - Hard reasoning
@@ -73,6 +82,7 @@ audience:
 - Anything where you would pay for quality
 
 ---
+
 ## When To Reach For Sonnet
 
 - Default for most coding work
@@ -81,6 +91,7 @@ audience:
 - Handles long context well
 
 ---
+
 ## When To Reach For Haiku
 
 - Quick fixes and small edits
@@ -89,11 +100,13 @@ audience:
 - Latency-sensitive interactions
 
 ---
+
 ## Model Family Trade-Offs
 
 ![model_family](svg/courses/ai/claude-workshop/01_introduction/model_family.svg)
 
 ---
+
 ## Cost, Latency and Capability
 
 - Bigger model: better but slower and pricier
@@ -102,6 +115,7 @@ audience:
 - Measure, do not guess
 
 ---
+
 ## Knowledge Cutoff
 
 - The model knows the world up to a date
@@ -110,6 +124,7 @@ audience:
 - Feed it docs or let it fetch
 
 ---
+
 ## Why Claude Reads And Runs Things
 
 - Static answers go stale fast
@@ -118,11 +133,13 @@ audience:
 - The agent loop closes feedback
 
 ---
+
 ## The Agent Loop
 
 ![agent_loop](svg/courses/ai/claude-workshop/01_introduction/agent_loop.svg)
 
 ---
+
 ## Prompts Are Not The Whole Story
 
 - The agent reads files, you do not paste
@@ -131,6 +148,7 @@ audience:
 - The prompt is just one input
 
 ---
+
 ## Where Humans Stay In The Loop
 
 - Reviewing diffs before merge
@@ -139,6 +157,7 @@ audience:
 - Catching subtle wrongness
 
 ---
+
 ## Workshop Ground Rules
 
 - We work on a real repo all day
@@ -147,6 +166,7 @@ audience:
 - Ask out loud, not in DMs
 
 ---
+
 ## Common Newcomer Mistakes
 
 - Treating the agent like a search engine

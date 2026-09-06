@@ -7,14 +7,17 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Snapshots and Slowly Changing Dimensions
 
 ---
+
 ## SCD Types
 
 ![scd_types](svg/courses/data_engineering/dbt/07_snapshots_and_slowly_changing_dimensions/scd_types.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What snapshots are
@@ -24,6 +27,7 @@ audience:
 - Patterns
 
 ---
+
 ## What Snapshots Are
 
 - Track changes to a source over time
@@ -32,6 +36,7 @@ audience:
 - Type 2 Slowly Changing Dimension
 
 ---
+
 ## Why
 
 - Source systems often overwrite
@@ -39,6 +44,7 @@ audience:
 - Snapshots: keep the history
 
 ---
+
 ## Sample Snapshot
 
 ```sql
@@ -60,6 +66,7 @@ SELECT * FROM {{ source('raw', 'orders') }}
 - dbt manages valid_from / valid_to columns
 
 ---
+
 ## Strategies
 
 - **timestamp**: row changed if `updated_at` is newer
@@ -67,6 +74,7 @@ SELECT * FROM {{ source('raw', 'orders') }}
 - Pick by source's nature
 
 ---
+
 ## Check Strategy
 
 ```sql
@@ -82,6 +90,7 @@ SELECT * FROM {{ source('raw', 'orders') }}
 - Useful when no `updated_at`
 
 ---
+
 ## Snapshot Output
 
 - Original columns
@@ -90,12 +99,14 @@ SELECT * FROM {{ source('raw', 'orders') }}
 - `dbt_scd_id`
 
 ---
+
 ## Querying
 
 - Latest version: `WHERE dbt_valid_to IS NULL`
 - As-of date: `WHERE date BETWEEN valid_from AND valid_to`
 
 ---
+
 ## Running
 
 ```bash
@@ -107,6 +118,7 @@ dbt snapshot
 - Append-only
 
 ---
+
 ## When To Use
 
 - Source overwrites; you need history
@@ -115,6 +127,7 @@ dbt snapshot
 - Type 2 SCD requirement
 
 ---
+
 ## When Not To
 
 - Source already has versioning (event log)
@@ -122,6 +135,7 @@ dbt snapshot
 - Source data is immutable
 
 ---
+
 ## Performance
 
 - Snapshot tables grow
@@ -129,6 +143,7 @@ dbt snapshot
 - Periodic cleanup if too big
 
 ---
+
 ## Combine With Models
 
 - Snapshot in snapshots/
@@ -136,6 +151,7 @@ dbt snapshot
 - Fact tables often use snapshots
 
 ---
+
 ## Common Snapshot Mistakes
 
 - Wrong unique_key (creates duplicates)

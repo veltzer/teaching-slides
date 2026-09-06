@@ -10,9 +10,11 @@ audience:
   - audiences:network-engineers
 
 ---
+
 # Packet Analysis and Troubleshooting
 
 ---
+
 ## What This Chapter Covers
 
 - Wireshark and tcpdump basics
@@ -22,6 +24,7 @@ audience:
 - Common failure signatures
 
 ---
+
 ## Why Packet Analysis?
 
 - The wire never lies
@@ -31,6 +34,7 @@ audience:
 - Skill that distinguishes senior engineers
 
 ---
+
 ## tcpdump
 
 - Command-line packet capture
@@ -40,6 +44,7 @@ audience:
 - Use on servers without GUI
 
 ---
+
 ## tcpdump Basics
 
 ```bash
@@ -53,6 +58,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - BPF filters as the last argument
 
 ---
+
 ## Wireshark
 
 - GUI packet analyzer
@@ -62,6 +68,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - The standard for deep dives
 
 ---
+
 ## Capture vs Display Filters
 
 - Capture filter: limits what's captured (BPF syntax)
@@ -71,6 +78,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Different syntax — easy mistake
 
 ---
+
 ## Common Display Filters
 
 - `tcp.port == 443` — HTTPS
@@ -80,11 +88,13 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - `dns` — DNS queries and responses
 
 ---
+
 ## Reading a TCP Trace
 
 ![tcp_trace](svg/courses/networking/tcp-ip-deep-dive/08_packet_analysis/tcp_trace.svg)
 
 ---
+
 ## TCP Stream Reassembly
 
 - Wireshark joins packets into the original stream
@@ -94,6 +104,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Same idea: "Follow HTTP stream"
 
 ---
+
 ## Sequence Number Analysis
 
 - Wireshark shows relative seq numbers by default
@@ -103,6 +114,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - The "Statistics → TCP Stream Graph" is gold
 
 ---
+
 ## Analyzing Packet Loss
 
 - Wireshark marks "TCP Retransmission"
@@ -112,6 +124,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Quantitative: loss percentage in stream
 
 ---
+
 ## Diagnosing Slow Sessions
 
 - Look at TCP RTT in stream graph
@@ -121,6 +134,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Application thinking vs network waiting
 
 ---
+
 ## TLS Decryption
 
 - Wireshark can decrypt TLS with the session keys
@@ -130,6 +144,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Critical for modern app debugging
 
 ---
+
 ## DNS Analysis
 
 - Filter `dns`
@@ -139,6 +154,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Timeouts: missing responses
 
 ---
+
 ## HTTP Analysis
 
 - Filter `http` for cleartext
@@ -148,6 +164,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - HTTP/3 (QUIC) needs special handling
 
 ---
+
 ## Systematic Troubleshooting
 
 - Reproduce the issue while capturing
@@ -158,11 +175,13 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Each layer up only when the lower one is OK
 
 ---
+
 ## A Workflow Loop
 
 ![troubleshooting_workflow](svg/courses/networking/tcp-ip-deep-dive/08_packet_analysis/troubleshooting_workflow.svg)
 
 ---
+
 ## Capture Strategy
 
 - Both ends if possible
@@ -172,6 +191,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Trim large files (`editcap`)
 
 ---
+
 ## tshark
 
 - Command-line Wireshark
@@ -181,6 +201,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Useful in scripts
 
 ---
+
 ## Common Patterns
 
 - SYN sent, no SYN-ACK → firewall, server down, route issue
@@ -190,6 +211,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Slow handshakes → DNS or routing latency
 
 ---
+
 ## Asymmetric Path Detection
 
 - Capture on both ends
@@ -199,6 +221,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Common in multi-homed sites
 
 ---
+
 ## MTU/MSS Issues
 
 - Look for ICMP "fragmentation needed"
@@ -208,6 +231,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Lower MSS on tunnels
 
 ---
+
 ## Performance Debugging
 
 - TCP Stream Graph: time/sequence
@@ -217,6 +241,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Helpful for "the server is slow" claims
 
 ---
+
 ## Tools Beyond Wireshark
 
 - `iperf3` — bandwidth/latency tests
@@ -226,6 +251,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - `netstat` (legacy)
 
 ---
+
 ## Cloud Capture Quirks
 
 - VPC flow logs help, but limited fields
@@ -235,6 +261,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Document what you can/can't capture
 
 ---
+
 ## Common Pitfalls
 
 - Capturing too much, drowning in data
@@ -244,6 +271,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Big captures crash Wireshark — use tshark + grep
 
 ---
+
 ## Best Practices
 
 - Capture both ends when feasible
@@ -253,6 +281,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Practice on known-good traces
 
 ---
+
 ## Course Recap
 
 - OSI/TCP-IP models — vocabulary
@@ -265,6 +294,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - Packet analysis — Wireshark, tcpdump
 
 ---
+
 ## Summary
 
 - The wire is the truth; capture it

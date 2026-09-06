@@ -10,6 +10,7 @@ audience:
 - audiences:developers
 
 ---
+
 # AI Everywhere
 ## One Technology, Every Field of Human Endeavour
 ## Mark Veltzer

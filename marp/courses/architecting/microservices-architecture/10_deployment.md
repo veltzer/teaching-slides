@@ -10,9 +10,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Deployment Strategies
 
 ---
+
 ## Why Deployment Matters in Microservices
 
 - Many services × many deploys per day = a lot of deploys
@@ -21,16 +23,19 @@ audience:
 - Deploy strategy is part of architecture
 
 ---
+
 ## Deploy Strategies
 
 ![deploy_strategies](svg/courses/architecting/microservices-architecture/10_deployment/deploy_strategies.svg)
 
 ---
+
 ## Deployment Pipeline
 
 ![deployment_pipeline](svg/courses/architecting/microservices-architecture/10_deployment/deployment_pipeline.svg)
 
 ---
+
 ## Containerization
 
 - Each service runs as a container
@@ -39,6 +44,7 @@ audience:
 - Docker is the de facto standard
 
 ---
+
 ## Kubernetes as the Platform
 
 - Manages containers across a cluster
@@ -47,6 +53,7 @@ audience:
 - The dominant choice for microservices deployment
 
 ---
+
 ## CI/CD Per Service
 
 - Each service has its own pipeline
@@ -55,6 +62,7 @@ audience:
 - Independent deploys = independent pipelines
 
 ---
+
 ## Pipeline Stages
 
 - **Build**: compile, build image
@@ -64,6 +72,7 @@ audience:
 - **Verify**: smoke tests against the new version
 
 ---
+
 ## Blue-Green Deployment
 
 - Two identical environments: blue (current) and green (new)
@@ -73,6 +82,7 @@ audience:
 - Requires double the infrastructure during deploy
 
 ---
+
 ## Rolling Deployment
 
 - Gradually replace old instances with new
@@ -81,6 +91,7 @@ audience:
 - Default in Kubernetes Deployments
 
 ---
+
 ## Canary Deployment
 
 - Route a small percentage of traffic to the new version
@@ -89,6 +100,7 @@ audience:
 - Excellent for catching issues before full rollout
 
 ---
+
 ## Canary Sketch
 
 - 1% to v2, 99% to v1 — for 10 minutes
@@ -98,6 +110,7 @@ audience:
 - 100% — done
 
 ---
+
 ## Feature Flags
 
 - Decouple deploy from release
@@ -107,6 +120,7 @@ audience:
 - Tools: LaunchDarkly, Unleash, in-house
 
 ---
+
 ## A/B Testing as Deployment
 
 - Two versions running side by side
@@ -115,6 +129,7 @@ audience:
 - Common in product experimentation
 
 ---
+
 ## Database Migrations
 
 - The hardest part of deployment
@@ -123,6 +138,7 @@ audience:
 - Never break the old version's read/write during deploy
 
 ---
+
 ## Expand-and-Contract
 
 - Phase 1: add new column/table; old version ignores it; new version writes both
@@ -131,6 +147,7 @@ audience:
 - Phase 4: remove old column; old version is gone by now
 
 ---
+
 ## Rollback Strategy
 
 - Every deploy must be rollback-able
@@ -139,6 +156,7 @@ audience:
 - Test rollback like you test deploy
 
 ---
+
 ## Anti-Patterns
 
 - Manual deploys
@@ -148,6 +166,7 @@ audience:
 - No automated rollback path
 
 ---
+
 ## Summary
 
 - Containerize; Kubernetes; per-service CI/CD

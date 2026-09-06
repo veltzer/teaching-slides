@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Aggregations
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![aggregation_kinds](svg/courses/databases/elasticsearch-for-developers/08_aggregations/aggregation_kinds.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Bucket aggregations
@@ -26,22 +28,26 @@ audience:
 - Performance
 
 ---
+
 ## Aggregation Families
 
 ![agg_types](svg/courses/databases/elasticsearch-for-developers/08_aggregations/agg_types.svg)
 
 ---
+
 ## Aggregation Overview
 
 ![agg_overview](svg/courses/databases/elasticsearch-for-developers/08_aggregations/agg_overview.svg)
 
 ---
+
 ## Bucket Aggregations
 
 - Group documents into buckets
 - terms, date_histogram, range, filter
 
 ---
+
 ## Terms Aggregation
 
 ```json
@@ -55,6 +61,7 @@ audience:
 ```
 
 ---
+
 ## Date Histogram
 
 ```json
@@ -71,6 +78,7 @@ audience:
 ```
 
 ---
+
 ## Range Aggregation
 
 ```json
@@ -91,12 +99,14 @@ audience:
 ```
 
 ---
+
 ## Metric Aggregations
 
 - sum, avg, min, max, percentiles, cardinality
 - Often nested inside buckets
 
 ---
+
 ## Sub-Aggregations
 
 ```json
@@ -113,6 +123,7 @@ audience:
 ```
 
 ---
+
 ## Cardinality
 
 - Distinct count
@@ -120,6 +131,7 @@ audience:
 - Cheaper than exact
 
 ---
+
 ## Percentiles
 
 ```json
@@ -129,6 +141,7 @@ audience:
 - For SLA reporting
 
 ---
+
 ## Pipeline Aggregations
 
 - Operate on results of other aggregations
@@ -136,6 +149,7 @@ audience:
 - Run after the buckets are computed
 
 ---
+
 ## Filter Aggregation
 
 ```json
@@ -150,6 +164,7 @@ audience:
 - Pre-filter then aggregate
 
 ---
+
 ## Composite Aggregation
 
 - For pagination through many buckets
@@ -157,6 +172,7 @@ audience:
 - Page through with composite
 
 ---
+
 ## Performance
 
 - Aggregations are heavy
@@ -165,6 +181,7 @@ audience:
 - Cardinality precision_threshold trade-off
 
 ---
+
 ## Common Aggregation Mistakes
 
 - terms on text field (analysed; weird groups)

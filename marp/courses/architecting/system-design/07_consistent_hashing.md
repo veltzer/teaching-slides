@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Consistent Hashing
 
 ---
+
 ## Naive vs Consistent
 
 ![consistent_hashing](svg/courses/architecting/system-design/07_consistent_hashing/consistent_hashing.svg)
 
 ---
+
 ## Virtual Nodes
 
 ![virtual_nodes](svg/courses/architecting/system-design/07_consistent_hashing/virtual_nodes.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The problem: rebalancing
@@ -31,6 +35,7 @@ audience:
 - Where it's used
 
 ---
+
 ## The Problem
 
 - N servers, hash(key) % N decides which
@@ -39,6 +44,7 @@ audience:
 - Consistent hashing: minimal remapping
 
 ---
+
 ## Hash Modulo
 
 - `partition = hash(key) % N`
@@ -46,6 +52,7 @@ audience:
 - Bad for cache, sharded DBs
 
 ---
+
 ## The Ring
 
 - Hash space arranged in a circle
@@ -55,6 +62,7 @@ audience:
 - Adding a server: only nearby keys move
 
 ---
+
 ## Virtual Nodes
 
 - Each physical server owns many virtual positions
@@ -63,6 +71,7 @@ audience:
 - Common: 100-256 virtual nodes per server
 
 ---
+
 ## Replicas
 
 - Key mapped to N adjacent servers
@@ -71,6 +80,7 @@ audience:
 - Used in: Cassandra, DynamoDB
 
 ---
+
 ## Removing A Server
 
 - Server dies / drained
@@ -79,6 +89,7 @@ audience:
 - Fast recovery
 
 ---
+
 ## Adding A Server
 
 - New server takes over some range
@@ -87,6 +98,7 @@ audience:
 - vs hash modulo: massive movement
 
 ---
+
 ## Performance
 
 - Hashing: O(1)
@@ -95,6 +107,7 @@ audience:
 - Fast even with thousands of nodes
 
 ---
+
 ## Where It's Used
 
 - Memcached clients (consistent hashing)
@@ -104,6 +117,7 @@ audience:
 - Standard pattern at scale
 
 ---
+
 ## Implementation
 
 - Hash function: murmur3, FNV, SHA-1 truncated
@@ -112,6 +126,7 @@ audience:
 - Library exists in most languages
 
 ---
+
 ## Pitfalls
 
 - Skewed key distribution: hot servers
@@ -120,6 +135,7 @@ audience:
 - Monitor per-server load
 
 ---
+
 ## Beyond Consistent Hashing
 
 - Rendezvous (highest random weight) hashing: alternative
@@ -128,6 +144,7 @@ audience:
 - Each fits different needs
 
 ---
+
 ## Common Mistakes
 
 - Hash modulo at scale

@@ -9,14 +9,17 @@ audience:
   - audiences:team-leads
 
 ---
+
 # Sprints
 
 ---
+
 ## Sprint Events
 
 ![sprint_events](svg/courses/practices/agile-and-scrum/03_sprints/sprint_events.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - What a Sprint actually is, in mechanical terms
@@ -27,6 +30,7 @@ audience:
 - Handling change mid-Sprint
 
 ---
+
 ## A Sprint Is a Container
 
 - A fixed time-box, 1 to 4 weeks long
@@ -36,11 +40,13 @@ audience:
 - Same length each time — predictability lets people plan
 
 ---
+
 ## Sprint Anatomy
 
 ![sprint_anatomy](svg/courses/practices/agile-and-scrum/03_sprints/sprint_anatomy.svg)
 
 ---
+
 ## The Sprint Goal
 
 - One coherent objective for the Sprint
@@ -50,6 +56,7 @@ audience:
 - Without a Sprint Goal, a Sprint is just a list
 
 ---
+
 ## Sprint Planning
 
 - Time-boxed: max 8 hours for a 4-week Sprint, less for shorter ones
@@ -60,6 +67,7 @@ audience:
 - The Product Owner brings the Backlog; the Developers commit to the work
 
 ---
+
 ## Forecasting Capacity
 
 - The team uses past data (velocity, throughput) to forecast
@@ -69,6 +77,7 @@ audience:
 - "Stretch goals" are a smell — they imply you didn't really plan
 
 ---
+
 ## Working the Sprint
 
 - Developers self-organise: who does what, in what order
@@ -78,6 +87,7 @@ audience:
 - Stay focused on the Sprint Goal — defer other work
 
 ---
+
 ## Sprint Review
 
 - Time-boxed: max 4 hours for a 4-week Sprint
@@ -87,6 +97,7 @@ audience:
 - *Not* a status meeting — a working session about what's next
 
 ---
+
 ## Sprint Review Antipatterns
 
 - Polished slide deck instead of working software
@@ -96,6 +107,7 @@ audience:
 - Treating the Review as a sign-off ceremony — it isn't
 
 ---
+
 ## Choosing a Sprint Length
 
 - 1 week: fast feedback, lots of overhead from events
@@ -105,6 +117,7 @@ audience:
 - New teams: start at 2 weeks, change later if you have a real reason
 
 ---
+
 ## Handling Change Mid-Sprint
 
 - The Sprint Backlog is owned by the Developers
@@ -114,6 +127,7 @@ audience:
 - Losing a day to a production incident does not cancel the Sprint
 
 ---
+
 ## Cancelling a Sprint
 
 - Only the Product Owner can do it
@@ -123,6 +137,7 @@ audience:
 - After cancellation: review the Backlog, plan a new Sprint
 
 ---
+
 ## Sprint Hygiene
 
 - Demo is at the *end* of the Sprint, on the planned date
@@ -132,6 +147,7 @@ audience:
 - Update tickets honestly — half-truths corrupt next Sprint's planning
 
 ---
+
 ## Velocity, Carefully
 
 - Velocity = amount of work the team typically completes in a Sprint

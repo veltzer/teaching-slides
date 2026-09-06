@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to Packer
 
 ---

@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Multi-Agent Systems
 
 ---
+
 ## What This Chapter Covers
 
 - Why multi-agent
@@ -19,6 +21,7 @@ audience:
 - Pitfalls
 
 ---
+
 ## Why More Than One Agent
 
 - Specialization beats generalization
@@ -27,6 +30,7 @@ audience:
 - Cleaner audit trail
 
 ---
+
 ## Roles
 
 - Planner
@@ -36,6 +40,7 @@ audience:
 - Each with its own prompt and tools
 
 ---
+
 ## Specialization
 
 - Narrow tools per role
@@ -44,6 +49,7 @@ audience:
 - Easier to swap models
 
 ---
+
 ## Orchestration Patterns
 
 - Supervisor delegates
@@ -52,11 +58,13 @@ audience:
 - Swarm shares scratchpad
 
 ---
+
 ## Patterns Visualized
 
 ![orchestration_patterns](svg/courses/ai/ai-agents-development/04_multi_agent_systems/orchestration_patterns.svg)
 
 ---
+
 ## Supervisor Pattern
 
 - One agent routes work
@@ -65,6 +73,7 @@ audience:
 - Maps to org chart
 
 ---
+
 ## Pipeline Pattern
 
 - Fixed sequence of agents
@@ -73,6 +82,7 @@ audience:
 - Easy to test stages
 
 ---
+
 ## Debate Pattern
 
 - Two agents argue a question
@@ -81,6 +91,7 @@ audience:
 - Expensive but robust
 
 ---
+
 ## Communication
 
 - Structured messages
@@ -89,6 +100,7 @@ audience:
 - Version the schema
 
 ---
+
 ## Shared Memory
 
 - Vector store for facts
@@ -97,6 +109,7 @@ audience:
 - Garbage-collect old entries
 
 ---
+
 ## Failure Isolation
 
 - One bad agent must not poison others
@@ -105,6 +118,7 @@ audience:
 - Fall back to single-agent path
 
 ---
+
 ## Cost Control
 
 - More agents = more tokens
@@ -113,6 +127,7 @@ audience:
 - Use small models where possible
 
 ---
+
 ## Common Multi-Agent Mistakes
 
 - Adding agents instead of fixing prompts

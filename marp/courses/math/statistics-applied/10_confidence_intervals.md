@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Confidence Intervals
 
 ---
+
 ## What This Chapter Covers
 
 - Point estimates vs interval estimates
@@ -22,11 +24,13 @@ audience:
 - Width, sample size, and what changes it
 
 ---
+
 ## 20 Confidence Intervals, One True Mean
 
 ![repeated_samples](svg/courses/math/statistics-applied/10_confidence_intervals/repeated_samples.svg)
 
 ---
+
 ## A Single Number Lies By Omission
 
 - "The conversion rate is 4.2%" — measured exactly, or 4.2% &plusmn; 3%?
@@ -36,6 +40,7 @@ audience:
 - "X, 95% CI [a, b]" is the professional way to state a result
 
 ---
+
 ## What "95% Confidence" Means
 
 - *Procedure-level* guarantee: if you repeated the whole study many times, ~95% of the intervals you'd construct would contain the true value
@@ -45,6 +50,7 @@ audience:
 - The confidence level is about the *method*, not any single interval
 
 ---
+
 ## The Recipe For A Mean
 
 - CI = x&#772; &plusmn; (critical value) &times; (standard error)
@@ -54,6 +60,7 @@ audience:
 - More variable data (bigger s) &#8594; wider interval
 
 ---
+
 ## Why The t-Distribution
 
 - We rarely know the true SD &sigma;, so we plug in the sample SD s — an extra source of error
@@ -63,6 +70,7 @@ audience:
 - Use t for means of small samples; software does this automatically
 
 ---
+
 ## Intervals For Proportions
 
 - For a proportion p&#770; (conversion rate, defect rate): SE = &radic;( p&#770;(1&minus;p&#770;) / n )
@@ -72,6 +80,7 @@ audience:
 - This is the workhorse for "what fraction of users..." questions
 
 ---
+
 ## What Controls The Width
 
 - **Sample size**: width &prop; 1/&radic;n — to halve it, quadruple n
@@ -81,11 +90,13 @@ audience:
 - Plan sample size *before* collecting data, from a target width
 
 ---
+
 ## How CI Width Shrinks with n
 
 ![width_vs_n](svg/courses/math/statistics-applied/10_confidence_intervals/width_vs_n.svg)
 
 ---
+
 ## Confidence Intervals In Python
 
 ```python
@@ -102,6 +113,7 @@ print(f"rate 95% CI = [{res.low:.3%}, {res.high:.3%}]")
 ```
 
 ---
+
 ## Common Mistakes
 
 - Reporting the point estimate with no interval

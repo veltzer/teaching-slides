@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Pods
 
 ---
+
 ## What This Chapter Covers
 
 - The pod abstraction
@@ -20,11 +22,13 @@ audience:
 - Init containers
 
 ---
+
 ## Pod Anatomy
 
 ![pod_anatomy](svg/courses/containers/kubernetes/02_pods/pod_anatomy.svg)
 
 ---
+
 ## What A Pod Is
 
 - One or more containers; shared network and storage
@@ -33,6 +37,7 @@ audience:
 - "Like a logical host"
 
 ---
+
 ## Single-Container Pod
 
 - 99% of pods
@@ -40,6 +45,7 @@ audience:
 - Replicated via Deployment
 
 ---
+
 ## Multi-Container Pod
 
 - Sidecar pattern: app + helper
@@ -48,6 +54,7 @@ audience:
 - Less common; specific use cases
 
 ---
+
 ## A Simple Pod Manifest
 
 ```yaml
@@ -64,6 +71,7 @@ spec:
 ```
 
 ---
+
 ## Pod Lifecycle
 
 - Pending: scheduled but not started
@@ -73,11 +81,13 @@ spec:
 - Unknown: lost contact
 
 ---
+
 ## Phase Reference
 
 ![pod_lifecycle_phases](svg/courses/containers/kubernetes/02_pods/lifecycle_phases.svg)
 
 ---
+
 ## Resource Requests
 
 ```yaml
@@ -95,6 +105,7 @@ resources:
 - Scheduling uses requests
 
 ---
+
 ## Liveness Probe
 
 - "Is the container alive?"
@@ -103,6 +114,7 @@ resources:
 - For: detecting deadlocks, hangs
 
 ---
+
 ## Readiness Probe
 
 - "Is the container ready to serve?"
@@ -110,6 +122,7 @@ resources:
 - For: warm-up, dependency checks
 
 ---
+
 ## Startup Probe
 
 - "Has it finished starting?"
@@ -118,6 +131,7 @@ resources:
 - Avoids: false-positive kills
 
 ---
+
 ## Init Containers
 
 - Run before main containers
@@ -126,6 +140,7 @@ resources:
 - Then main containers run
 
 ---
+
 ## Restart Policy
 
 - Always (default)
@@ -134,6 +149,7 @@ resources:
 - Affects pod-level behaviour
 
 ---
+
 ## Pod Anti-Affinity
 
 - Spread pods across nodes
@@ -141,6 +157,7 @@ resources:
 - For HA
 
 ---
+
 ## Sharing Storage Across Pods
 
 - A `PersistentVolumeClaim` outlives the pod and can be mounted by many pods
@@ -150,11 +167,13 @@ resources:
 - The CSI driver provisions a `PersistentVolume` and binds it to the claim
 
 ---
+
 ## Shared Storage in Practice
 
 ![shared_storage](svg/courses/containers/kubernetes/02_pods/shared_storage.svg)
 
 ---
+
 ## Common Pod Mistakes
 
 - No resource requests (scheduler can't plan)

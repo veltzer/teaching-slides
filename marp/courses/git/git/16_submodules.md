@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Git Submodules
 
 ---
@@ -52,6 +53,7 @@ main-project/
 ```
 
 ---
+
 ## Why Use Submodules?: Details
 
 Benefits and trade-offs of submodules:
@@ -71,6 +73,7 @@ Benefits and trade-offs of submodules:
 - **Nested issues:** Problems compound with multiple levels
 
 ---
+
 ## Why Use Submodules?
 
 ![why_use_submodules](svg/courses/git/git/16_submodules/why_use_submodules.svg)

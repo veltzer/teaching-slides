@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Data Sources
 
 ---
+
 ## What This Chapter Covers
 
 - Common data sources
@@ -19,6 +21,7 @@ audience:
 - Mixing sources
 
 ---
+
 ## Common Sources
 
 - Time-series metrics stores
@@ -27,11 +30,13 @@ audience:
 - Relational and document databases
 
 ---
+
 ## Source Categories
 
 ![source_kinds](svg/courses/observability_and_monitoring/grafana-basics/02_data_sources/source_kinds.svg)
 
 ---
+
 ## Adding A Source
 
 - Configuration UI or API
@@ -40,6 +45,7 @@ audience:
 - Save to workspace
 
 ---
+
 ## Naming Sources
 
 - Use descriptive names
@@ -48,6 +54,7 @@ audience:
 - Version control names too
 
 ---
+
 ## Authentication
 
 - Direct credentials
@@ -56,11 +63,13 @@ audience:
 - Avoid embedding secrets
 
 ---
+
 ## Auth Patterns
 
 ![source_auth](svg/courses/observability_and_monitoring/grafana-basics/02_data_sources/source_auth.svg)
 
 ---
+
 ## TLS To Backends
 
 - Always TLS in production
@@ -69,6 +78,7 @@ audience:
 - Disable plain HTTP
 
 ---
+
 ## Per-User vs Per-Service
 
 - Service accounts for dashboards
@@ -77,6 +87,7 @@ audience:
 - Pick based on backend support
 
 ---
+
 ## Provisioning
 
 - Sources defined as code
@@ -85,6 +96,7 @@ audience:
 - Easy disaster recovery
 
 ---
+
 ## Versioning
 
 - Track changes to sources
@@ -93,6 +105,7 @@ audience:
 - Test after each change
 
 ---
+
 ## Mixed Sources In One Dashboard
 
 - Different panels, different sources
@@ -101,6 +114,7 @@ audience:
 - Mix metrics with logs
 
 ---
+
 ## Caching
 
 - Optional in some setups
@@ -109,6 +123,7 @@ audience:
 - Tune carefully
 
 ---
+
 ## Permissions
 
 - Per-source view and edit
@@ -117,6 +132,7 @@ audience:
 - Audit periodically
 
 ---
+
 ## Backups
 
 - Source definitions backed up
@@ -125,6 +141,7 @@ audience:
 - Test restore
 
 ---
+
 ## Common Data Source Mistakes
 
 - Hardcoded credentials in source

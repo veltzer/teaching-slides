@@ -11,9 +11,11 @@ audience:
   - audiences:managers
 
 ---
+
 # Identity and Access Management
 
 ---
+
 ## IAM Model
 
 ![iam_model](svg/courses/cloud/introduction-to-aws/05_identity_and_access_management/iam_model.svg)

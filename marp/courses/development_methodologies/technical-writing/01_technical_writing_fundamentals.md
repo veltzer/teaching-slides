@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Technical Writing Fundamentals
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![writing_pillars](svg/courses/development_methodologies/technical-writing/01_technical_writing_fundamentals/writing_pillars.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why technical writing matters
@@ -26,6 +28,7 @@ audience:
 - Setting expectations for the course
 
 ---
+
 ## Why It Matters
 
 - Code is read 10x more than written; docs even more
@@ -35,6 +38,7 @@ audience:
 - Writing is one of the most leveraged skills in software
 
 ---
+
 ## The Cost of Bad Documentation
 
 - Repeated questions in chat that the doc could have answered
@@ -44,6 +48,7 @@ audience:
 - Real money, every day, in every team that ships software
 
 ---
+
 ## Characteristics of Good Technical Writing
 
 - **Clear**: a reader's first reading is the right reading
@@ -53,6 +58,7 @@ audience:
 - **Current**: reflects the code as it is now, not as it was
 
 ---
+
 ## The Writing Process
 
 - **Plan**: who, what, why
@@ -63,6 +69,7 @@ audience:
 - Skipping any step shows in the finished writing
 
 ---
+
 ## Why Engineers Should Care
 
 - Engineers write the most technical content
@@ -72,6 +79,7 @@ audience:
 - Promoted engineers tend to write well; correlation is causation
 
 ---
+
 ## Writing Is Thinking
 
 - The act of writing surfaces gaps in your understanding
@@ -81,6 +89,7 @@ audience:
 - Many bugs are caught during documentation
 
 ---
+
 ## What Makes Documentation Hard
 
 - Writing for someone who knows less than you
@@ -90,6 +99,7 @@ audience:
 - Time-pressured engineers cut docs first
 
 ---
+
 ## What This Course Won't Do
 
 - Make you a novelist or essayist
@@ -99,6 +109,7 @@ audience:
 - This is *technical* writing — utilitarian by design
 
 ---
+
 ## What This Course Will Do
 
 - Teach the principles that work across formats
@@ -108,6 +119,7 @@ audience:
 - Habits that compound over a career
 
 ---
+
 ## A Short Tour
 
 - Audience analysis (who you're writing for)
@@ -118,6 +130,7 @@ audience:
 - Documentation as code, review, accessibility
 
 ---
+
 ## Common Beginner Mistakes
 
 - Writing for yourself instead of the reader
@@ -127,6 +140,7 @@ audience:
 - Treating docs as a one-time deliverable
 
 ---
+
 ## A Useful Mindset
 
 - Imagine the reader: tired, in a hurry, doesn't speak your jargon
@@ -136,11 +150,13 @@ audience:
 - Good service compounds; bad service drives them away
 
 ---
+
 ## Audience First
 
 ![audience_first](svg/courses/development_methodologies/technical-writing/01_technical_writing_fundamentals/audience_first.svg)
 
 ---
+
 ## What to Take Away
 
 - Technical writing is a high-leverage engineering skill

@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Android UI Architecture
 ## Advanced View Development and Layout Systems
 

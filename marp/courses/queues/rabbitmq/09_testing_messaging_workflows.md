@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Testing Messaging Workflows
 
 ---
+
 ## What This Chapter Covers
 
 - Unit testing producers and consumers
@@ -21,6 +23,7 @@ audience:
 - Common testing mistakes
 
 ---
+
 ## Why Testing Messaging Is Hard
 
 - Asynchronous: can't return a value to assert on
@@ -30,16 +33,19 @@ audience:
 - Solid testing requires deliberate patterns
 
 ---
+
 ## Testing Strategies
 
 ![testing_strategies](svg/courses/queues/rabbitmq/09_testing_messaging_workflows/testing_strategies.svg)
 
 ---
+
 ## Test Environments
 
 ![test_environments](svg/courses/queues/rabbitmq/09_testing_messaging_workflows/test_environments.svg)
 
 ---
+
 ## Three Layers of Testing
 
 - **Unit**: producer / consumer logic in isolation
@@ -49,6 +55,7 @@ audience:
 - Most teams under-invest in messaging tests
 
 ---
+
 ## Unit Testing Producers
 
 - Mock the channel
@@ -58,6 +65,7 @@ audience:
 - Fast; runs on every commit
 
 ---
+
 ## A Producer Unit Test
 
 ```python
@@ -75,6 +83,7 @@ def test_publish_order_uses_correct_routing_key():
 ```
 
 ---
+
 ## Unit Testing Consumers
 
 - Call the consumer's `on_message` directly with a fake message
@@ -83,6 +92,7 @@ def test_publish_order_uses_correct_routing_key():
 - Doesn't test that messages actually arrive — integration does
 
 ---
+
 ## A Consumer Unit Test
 
 ```python
@@ -97,6 +107,7 @@ def test_consumer_acks_on_success():
 ```
 
 ---
+
 ## Integration Testing
 
 - Spin up a real RabbitMQ (Docker, Testcontainers)
@@ -105,6 +116,7 @@ def test_consumer_acks_on_success():
 - Catches: serialisation, exchange/queue setup, ack flow
 
 ---
+
 ## Testcontainers For RabbitMQ
 
 ```python
@@ -120,6 +132,7 @@ with RabbitMqContainer("rabbitmq:3.13") as rabbit:
 - Available in Java, Python, Node, Go
 
 ---
+
 ## End-to-End Testing
 
 - Deploy the full system in a test environment
@@ -129,6 +142,7 @@ with RabbitMqContainer("rabbitmq:3.13") as rabbit:
 - Don't run on every commit
 
 ---
+
 ## Async Test Pattern
 
 ```python
@@ -149,6 +163,7 @@ wait_until(lambda: db.has_order(order.id))
 - Use for any async assertion
 
 ---
+
 ## Replaying Failures
 
 - Capture messages that caused production bugs
@@ -158,6 +173,7 @@ wait_until(lambda: db.has_order(order.id))
 - Particularly useful for poison-message bugs
 
 ---
+
 ## Monitoring in Production
 
 - Management UI: queues, rates, broker health
@@ -167,6 +183,7 @@ wait_until(lambda: db.has_order(order.id))
 - Connection / channel counts (alert on spikes)
 
 ---
+
 ## Useful Metrics
 
 - Queue depth (per queue)
@@ -177,6 +194,7 @@ wait_until(lambda: db.has_order(order.id))
 - Dead-letter count
 
 ---
+
 ## Debugging With The Management UI
 
 - "Get messages": peek at messages without consuming
@@ -186,6 +204,7 @@ wait_until(lambda: db.has_order(order.id))
 - Indispensable for live debugging
 
 ---
+
 ## Performance Testing
 
 - `perf-test` tool: official RabbitMQ load tester
@@ -195,6 +214,7 @@ wait_until(lambda: db.has_order(order.id))
 - Tune broker and clients based on findings
 
 ---
+
 ## Load Testing Realistic Scenarios
 
 - Don't just throw messages at one queue
@@ -204,6 +224,7 @@ wait_until(lambda: db.has_order(order.id))
 - Most teams stop at "it can do 10k msg/s in a clean test"
 
 ---
+
 ## Common Testing Mistakes
 
 - Testing only the happy path
@@ -214,6 +235,7 @@ wait_until(lambda: db.has_order(order.id))
 - No production monitoring
 
 ---
+
 ## Course Wrap-Up
 
 - RabbitMQ is a flexible, mature message broker

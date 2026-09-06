@@ -10,9 +10,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Choosing the Right Tool and Best Practices
 
 ---
+
 ## The Big Picture
 
 We've now seen six worlds:
@@ -27,6 +29,7 @@ We've now seen six worlds:
 A real Linux machine usually mixes several. The question is not "which one is best?" — it's "which one for this need?"
 
 ---
+
 ## A Decision Flow
 
 For a given thing you want to install:
@@ -43,11 +46,13 @@ For a given thing you want to install:
 Walk the list top-to-bottom. Stop at the first match.
 
 ---
+
 ## Distro Package Manager Matrix
 
 ![distro_matrix](svg/courses/operating_systems/linux-package-managers/07_comparison_and_best_practices/distro_matrix.svg)
 
 ---
+
 ## Comparison: Trust Surface
 
 How much do you have to trust to install this?
@@ -66,6 +71,7 @@ How much do you have to trust to install this?
 Each row down trusts more parties. Pick accordingly.
 
 ---
+
 ## Comparison: Update Story
 
 | Source | Updates |
@@ -81,6 +87,7 @@ Each row down trusts more parties. Pick accordingly.
 The further you get from system tools, the more security updates become *your* job.
 
 ---
+
 ## Comparison: Reproducibility
 
 | Source | Same input → same output? |
@@ -98,6 +105,7 @@ The further you get from system tools, the more security updates become *your* j
 If you care about reproducibility, the answer rotates around lock files and pins.
 
 ---
+
 ## Mixing Package Managers Safely
 
 You will mix them. Some rules of thumb that prevent most pain:
@@ -111,6 +119,7 @@ You will mix them. Some rules of thumb that prevent most pain:
 If your `$PATH` has more than two `bin` directories, you're fine. If you're not sure which one wins, run `which`.
 
 ---
+
 ## Common Pitfalls
 
 ```bash
@@ -138,6 +147,7 @@ gpgcheck=0   # in /etc/yum.repos.d/foo.repo
 Each of these is a real story you'll hear from real sysadmins.
 
 ---
+
 ## Auditing What's Installed
 
 Periodically take stock. The whole point of a package manager is that it can answer this.
@@ -170,6 +180,7 @@ ls ~/.cargo/bin/ ~/.local/bin/ ~/go/bin/ ~/.npm-global/bin/ 2>/dev/null
 If you can't reproduce the list of installed software, you can't reproduce the machine.
 
 ---
+
 ## Reproducing a Machine
 
 For a server you actually care about, "reinstall by hand" is not a recovery plan. A few approaches:
@@ -200,6 +211,7 @@ xargs sudo apt install -y < packages.txt
 The point: at *some* level you should have a written description of what's on the machine.
 
 ---
+
 ## Security: A Short List
 
 The most-recommended-and-most-ignored list in this whole course.
@@ -214,6 +226,7 @@ The most-recommended-and-most-ignored list in this whole course.
 1. 1. 1. **Remove what you don't use.** `apt autoremove`, `flatpak uninstall --unused`, `pipx uninstall`.
 
 ---
+
 ## A Production Server Profile
 
 For a typical Linux server, a sensible posture:
@@ -228,6 +241,7 @@ For a typical Linux server, a sensible posture:
 Boring is the goal. The exciting servers are the ones that page you at 3am.
 
 ---
+
 ## A Developer Workstation Profile
 
 Different priorities — you're optimizing for fast iteration on many tools.
@@ -243,6 +257,7 @@ Different priorities — you're optimizing for fast iteration on many tools.
 Mix freely. Just keep one installer per app.
 
 ---
+
 ## Closing Exercise
 
 Take any small open-source CLI tool of your choice. Install it five different ways and compare:
@@ -264,6 +279,7 @@ For each:
 You will end the exercise with strong opinions about which to reach for first.
 
 ---
+
 ## What to Take Away
 
 - **Package managers are tools for managing risk and lifecycle**, not just for getting binaries onto disk.

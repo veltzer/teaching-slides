@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Dependency Inversion Principle (DIP)
 
 ---
+
 ## With vs Without DIP
 
 ![dip](svg/courses/principles/solid-clean-code/06_dependency_inversion_principle/dip.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - A precise statement of DIP
@@ -26,6 +29,7 @@ audience:
 - Common pitfalls
 
 ---
+
 ## The Principle, Stated Carefully
 
 - "High-level modules shouldn't depend on low-level modules — both should depend on abstractions"
@@ -35,6 +39,7 @@ audience:
 - With DIP: business logic depends on a Repository interface; the database module implements it
 
 ---
+
 ## A Smelly Class
 
 ```python
@@ -53,6 +58,7 @@ class OrderService:
 - Switching DB or SMTP provider edits this class
 
 ---
+
 ## After DIP
 
 ```python
@@ -71,6 +77,7 @@ class OrderService:
 - Postgres and SMTP implementations live in another layer that imports the abstractions
 
 ---
+
 ## Dependency Injection
 
 - The pattern of passing collaborators in, instead of constructing them inside
@@ -81,6 +88,7 @@ class OrderService:
 - Constructor injection wins by default — invariants set at construction
 
 ---
+
 ## Wiring at the Edge
 
 ```python
@@ -97,6 +105,7 @@ def main():
 - Replacing implementations means changing one file
 
 ---
+
 ## IoC Containers
 
 - A library that registers types and resolves their dependencies automatically
@@ -106,6 +115,7 @@ def main():
 - Magic resolution can mask cyclic dependencies and other smells
 
 ---
+
 ## Testing Benefits
 
 ```python
@@ -127,6 +137,7 @@ def test_place_order():
 - Test exactly the OrderService logic
 
 ---
+
 ## DIP and Plugin Architectures
 
 - The plugin host depends on a plugin interface
@@ -136,6 +147,7 @@ def test_place_order():
 - Same idea, scaled up
 
 ---
+
 ## DIP at Layer Boundaries
 
 - Business layer defines `Repository` interface
@@ -145,6 +157,7 @@ def test_place_order():
 - Hexagonal/Clean architecture is built on this inversion
 
 ---
+
 ## When DIP Hurts
 
 - One implementation forever &#8594; the abstraction is overhead
@@ -153,6 +166,7 @@ def test_place_order():
 - Premature DIP gives you many one-implementation interfaces
 
 ---
+
 ## DIP Done Wrong: Service Locator
 
 - Class asks a global container for its dependencies
@@ -161,6 +175,7 @@ def test_place_order():
 - Generally an anti-pattern; constructor injection is clearer
 
 ---
+
 ## DIP Done Wrong: Anaemic Interfaces
 
 - One interface per implementation, even when there's one of each
@@ -169,6 +184,7 @@ def test_place_order():
 - Refactor: until the second implementation appears, just use the concrete class
 
 ---
+
 ## DIP and the Test Pyramid
 
 - The unit-test layer especially benefits from DIP — fast, isolated tests
@@ -177,6 +193,7 @@ def test_place_order():
 - DIP gives you the *option* to mock; doesn't oblige you
 
 ---
+
 ## A Refactoring Recipe
 
 - Find the concrete dependency hiding in a constructor or method
@@ -186,6 +203,7 @@ def test_place_order():
 - Pass the concrete instance into the consumer at startup
 
 ---
+
 ## Common Mistakes
 
 - Defining interfaces that mirror the implementation (`IDatabaseConnection` with `connect()`/`disconnect()`)

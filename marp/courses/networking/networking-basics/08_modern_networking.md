@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Modern Networking
 ## SDN, Containers, Service Mesh, and Beyond
 
@@ -61,6 +62,7 @@ SDN separates the **control plane** (decision-making) from the **data plane** (p
 ## SDN Architecture: Comparison
 
 **SDN controllers:**
+
 | Controller | Language | Use Case |
 |-----------|----------|----------|
 | ONOS | Java | Service provider, large scale |
@@ -69,9 +71,11 @@ SDN separates the **control plane** (decision-making) from the **data plane** (p
 | Ryu | Python | Lightweight, prototyping |
 
 ---
+
 ## Network Virtualization: Comparison
 Network virtualization creates logical networks on top of physical infrastructure.
 **Key technologies:**
+
 | Technology | Description |
 |-----------|-------------|
 | VLAN | L2 segmentation within a switch (802.1Q) |
@@ -166,6 +170,7 @@ $ docker service create --name web --network myoverlay --replicas 3 nginx
 ```
 
 ---
+
 ## Kubernetes Networking Model: Details
 Kubernetes networking has these fundamental requirements:
 1. Every Pod gets its own IP address
@@ -227,12 +232,14 @@ Services provide stable network endpoints for dynamic Pods.
 ## Kubernetes Services: Example
 
 **Service types:**
+
 | Type | Scope | Use Case |
 |------|-------|----------|
 | ClusterIP | Internal only | Default, inter-service communication |
 | NodePort | External via node IP:port | Development, simple exposure |
 | LoadBalancer | External via cloud LB | Production external access |
 | ExternalName | DNS alias | Map to external service |
+
 ```yaml
 # Service definition
 apiVersion: v1
@@ -294,6 +301,7 @@ spec:
 ```
 
 ---
+
 ## Kubernetes Network Policies: Example
 Network Policies control traffic flow between Pods (like a firewall for Pods).
 ```yaml
@@ -341,6 +349,7 @@ A service mesh is a dedicated infrastructure layer for service-to-service commun
 ## Service Mesh Concepts: Comparison
 
 **Popular service meshes:**
+
 | Mesh | Sidecar Proxy | Key Feature |
 |------|---------------|-------------|
 | Istio | Envoy | Feature-rich, complex |

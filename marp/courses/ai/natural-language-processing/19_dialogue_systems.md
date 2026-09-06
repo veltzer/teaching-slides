@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Dialogue Systems
 
 ---
+
 ## What This Chapter Covers
 
 - Task-oriented vs open-domain dialogue, and the architectures for each
@@ -22,6 +24,7 @@ audience:
 - Production realities: grounding, tool use, and safety
 
 ---
+
 ## Why Dialogue Is Hard
 
 - Language is incremental — context arrives a turn at a time
@@ -31,11 +34,13 @@ audience:
 - Even minor misunderstandings compound into broken interactions
 
 ---
+
 ## Two Families of Dialogue Systems
 
 ![dialogue_taxonomy](svg/courses/ai/natural-language-processing/19_dialogue_systems/dialogue_taxonomy.svg)
 
 ---
+
 ## Task-Oriented Dialogue
 
 - The user has a goal: book a flight, change a setting, get account info
@@ -45,6 +50,7 @@ audience:
 - The setting where most production deployments live
 
 ---
+
 ## Open-Domain Dialogue
 
 - Conversation for its own sake — companionship, brainstorming, chit-chat
@@ -54,6 +60,7 @@ audience:
 - Often combined with task capabilities in real products
 
 ---
+
 ## The Classical Pipeline
 
 - Natural Language Understanding extracts intent and slot values
@@ -63,11 +70,13 @@ audience:
 - A clean factorization that pre-deep-learning systems all shared
 
 ---
+
 ## Pipeline Architecture
 
 ![dialog_pipeline](svg/courses/ai/natural-language-processing/19_dialogue_systems/dialog_pipeline.svg)
 
 ---
+
 ## Natural Language Understanding
 
 - Two sub-tasks: intent classification and slot filling
@@ -77,6 +86,7 @@ audience:
 - `BERT`-based intent + slot models are the standard backbone
 
 ---
+
 ## Slot Filling
 
 - Treat slot filling as `BIO`-style sequence labeling
@@ -86,6 +96,7 @@ audience:
 - Mixed-domain training improves generalization to new intents
 
 ---
+
 ## Dialogue State Tracking
 
 - A running summary of what the user has said about each slot
@@ -95,6 +106,7 @@ audience:
 - Modern trackers are sequence-to-sequence over the conversation
 
 ---
+
 ## Slot Lookup vs Generative Tracking
 
 - Slot lookup: classifier per slot picks among ontology values
@@ -104,6 +116,7 @@ audience:
 - Hybrid systems mix the two depending on slot type
 
 ---
+
 ## Dialogue Policy
 
 - Given state, decide the next system action
@@ -113,6 +126,7 @@ audience:
 - Modern `LLM` systems collapse policy into the generation step
 
 ---
+
 ## Reinforcement Learning for Dialogue
 
 - Frame dialogue as a Markov Decision Process over states and actions
@@ -122,6 +136,7 @@ audience:
 - Often used for fine-tuning conversational `LLMs` post-pretraining
 
 ---
+
 ## Natural Language Generation
 
 - Turn the chosen action into a fluent system utterance
@@ -131,6 +146,7 @@ audience:
 - Templates dominate when consistency matters more than naturalness
 
 ---
+
 ## End-to-End Neural Dialogue
 
 - One model takes conversation history and emits the next system turn
@@ -140,6 +156,7 @@ audience:
 - Hard to debug when the model misbehaves
 
 ---
+
 ## LLM-Based Dialogue Agents
 
 - Instruction-tuned `LLMs` handle dialogue out of the box
@@ -149,11 +166,13 @@ audience:
 - The current default for both task-oriented and open-domain dialogue
 
 ---
+
 ## LLM Dialogue Stack
 
 ![llm_dialog_stack](svg/courses/ai/natural-language-processing/19_dialogue_systems/llm_dialog_stack.svg)
 
 ---
+
 ## Grounding in Knowledge
 
 - Ungrounded dialogue agents hallucinate confidently
@@ -163,6 +182,7 @@ audience:
 - Without grounding, even strong `LLMs` produce convincing fabrications
 
 ---
+
 ## Multi-Turn Coreference
 
 - "Book it for tomorrow" — what is `it`
@@ -172,6 +192,7 @@ audience:
 - Retrieval over conversation history fills the gap for very long sessions
 
 ---
+
 ## Persona and Style
 
 - A consistent persona makes the agent feel coherent
@@ -181,6 +202,7 @@ audience:
 - A short persona statement in every system prompt mitigates drift
 
 ---
+
 ## Safety Filters
 
 - Pre-filter user input for prompt injection and policy violations
@@ -190,6 +212,7 @@ audience:
 - Layered defense beats any single filter
 
 ---
+
 ## Evaluation: Task Completion
 
 - Did the user achieve their goal in the conversation
@@ -199,6 +222,7 @@ audience:
 - Deceptively simple: many calls succeed but feel terrible
 
 ---
+
 ## Evaluation: Conversational Quality
 
 - Coherence — does the response follow from the prior turns
@@ -208,6 +232,7 @@ audience:
 - Almost always requires human raters for trustworthy scores
 
 ---
+
 ## Evaluation: Automatic Metrics
 
 - `BLEU` and `ROUGE` correlate poorly with conversational quality
@@ -217,6 +242,7 @@ audience:
 - Calibrate against human ratings on a held-out subset
 
 ---
+
 ## Production Pitfalls
 
 - Treating multi-turn context as if it were a single prompt
@@ -226,6 +252,7 @@ audience:
 - Underestimating how long users will keep a session open
 
 ---
+
 ## Anti-Patterns
 
 - Training a chatbot on web scrapes and shipping it to consumers
@@ -235,6 +262,7 @@ audience:
 - Personas that promise capabilities the system does not have
 
 ---
+
 ## When to Use Each Architecture
 
 - Narrow domain, high accuracy needed -> classical pipeline with `NLU`
@@ -244,6 +272,7 @@ audience:
 - The right answer is almost always a hybrid
 
 ---
+
 ## Summary
 
 - Dialogue systems split into task-oriented and open-domain families

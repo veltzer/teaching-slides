@@ -8,9 +8,11 @@ audience:
   - audiences:dba
 
 ---
+
 # Consistency and Replication
 
 ---
+
 ## What This Chapter Covers
 
 - Replication topology
@@ -20,6 +22,7 @@ audience:
 - Multi-region
 
 ---
+
 ## Replication Strategy
 
 - Simple strategy: dev only
@@ -28,6 +31,7 @@ audience:
 - Defines copies per data center
 
 ---
+
 ## Replication Factor
 
 - How many copies of each row
@@ -36,11 +40,13 @@ audience:
 - Common: 3 in production
 
 ---
+
 ## Ring &amp; Replication
 
 ![cassandra_ring](svg/courses/databases/cassandra/03_consistency_and_replication/cassandra_ring.svg)
 
 ---
+
 ## Tunable Consistency
 
 - Per query
@@ -49,6 +55,7 @@ audience:
 - Application chooses
 
 ---
+
 ## Common Levels
 
 - ONE: any one replica
@@ -57,11 +64,13 @@ audience:
 - ALL: every replica
 
 ---
+
 ## Levels Compared
 
 ![consistency_levels](svg/courses/databases/cassandra/03_consistency_and_replication/consistency_levels.svg)
 
 ---
+
 ## Strong Consistency Recipe
 
 - W + R > N
@@ -70,6 +79,7 @@ audience:
 - Use only when needed
 
 ---
+
 ## Eventual Consistency
 
 - Replicas converge
@@ -78,6 +88,7 @@ audience:
 - Default mindset
 
 ---
+
 ## Read Repair
 
 - Coordinator detects mismatch
@@ -86,6 +97,7 @@ audience:
 - Helps convergence
 
 ---
+
 ## Hinted Handoff
 
 - Coordinator stores writes for down nodes
@@ -94,6 +106,7 @@ audience:
 - Avoids lost writes for short outages
 
 ---
+
 ## Anti-Entropy Repair
 
 - Background process
@@ -102,6 +115,7 @@ audience:
 - Schedule in production
 
 ---
+
 ## Multi-Region
 
 - Replicate across data centers
@@ -110,6 +124,7 @@ audience:
 - Watch network costs
 
 ---
+
 ## CAP
 
 - Cassandra is AP by default
@@ -118,6 +133,7 @@ audience:
 - Application sees stale during partition
 
 ---
+
 ## Lightweight Transactions
 
 - Compare-and-set semantics
@@ -126,6 +142,7 @@ audience:
 - Use sparingly
 
 ---
+
 ## Common Consistency Mistakes
 
 - ALL for daily reads

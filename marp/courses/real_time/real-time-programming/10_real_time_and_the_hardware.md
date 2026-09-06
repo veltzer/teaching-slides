@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Real-Time and the Hardware
 
 ---
+
 ## What This Chapter Covers
 
 - Hardware-induced latency sources
@@ -22,6 +24,7 @@ audience:
 - Picking RT-friendly hardware
 
 ---
+
 ## Hardware Matters
 
 - Software can't fix bad hardware behaviour
@@ -31,16 +34,19 @@ audience:
 - Pick hardware before tuning software
 
 ---
+
 ## Hardware Concerns
 
 ![hw_concerns](svg/courses/real_time/real-time-programming/10_real_time_and_the_hardware/hw_concerns.svg)
 
 ---
+
 ## Hardware Isolation
 
 ![hw_isolation](svg/courses/real_time/real-time-programming/10_real_time_and_the_hardware/hw_isolation.svg)
 
 ---
+
 ## I/O Buses and Latency
 
 - **PCIe**: high throughput, variable latency
@@ -50,6 +56,7 @@ audience:
 - For RT: simpler buses are easier to reason about
 
 ---
+
 ## DMA Adds Predictability
 
 - DMA controller transfers without CPU
@@ -59,6 +66,7 @@ audience:
 - Modern peripherals usually offer DMA
 
 ---
+
 ## Interrupt Storms
 
 - A misbehaving device can fire interrupts faster than the CPU handles them
@@ -68,6 +76,7 @@ audience:
 - A failed sensor can take down the system
 
 ---
+
 ## Interrupt Priorities
 
 - Hardware-level priority encoder picks the next IRQ
@@ -77,6 +86,7 @@ audience:
 - A misconfigured priority gives surprises
 
 ---
+
 ## SMM (System Management Mode) on x86
 
 - A hardware-level mode invisible to the OS
@@ -86,6 +96,7 @@ audience:
 - Mitigations: vendor firmware that minimises SMM use, custom firmware, alternative platforms
 
 ---
+
 ## CPU Power Management
 
 - C-states: power-saving idle states
@@ -95,6 +106,7 @@ audience:
 - Saves power, costs predictability
 
 ---
+
 ## CPU Frequency Scaling
 
 - Modern CPUs change frequency based on load
@@ -104,6 +116,7 @@ audience:
 - Disables scaling, locks at max
 
 ---
+
 ## Hyperthreading
 
 - Two logical CPUs share one physical core
@@ -113,6 +126,7 @@ audience:
 - Modern CPUs: SMT can be disabled in BIOS or at boot
 
 ---
+
 ## Cache Effects from Other Cores
 
 - Cache snoop traffic can stall an RT core
@@ -122,6 +136,7 @@ audience:
 - For demanding RT: dedicate a CPU and minimise sharing
 
 ---
+
 ## NUMA Effects
 
 - Multi-socket systems: memory is local or remote
@@ -131,6 +146,7 @@ audience:
 - Verify with `numastat`
 
 ---
+
 ## Picking RT Hardware
 
 - For hard RT: dedicated microcontroller (ARM Cortex-M, RISC-V)
@@ -140,6 +156,7 @@ audience:
 - ARM Cortex-R and -A processors aimed at RT
 
 ---
+
 ## Real-Time Ethernet
 
 - Standard Ethernet: best-effort, no timing guarantees
@@ -149,6 +166,7 @@ audience:
 - Plain Ethernet is fine for soft RT; TSN for hard RT over network
 
 ---
+
 ## Watchdog Timers
 
 - A hardware timer that *resets the system* if not "kicked" regularly
@@ -158,6 +176,7 @@ audience:
 - Standard practice in embedded RT
 
 ---
+
 ## Common Hardware Pitfalls
 
 - SMM interrupts on x86 (especially older firmware)
@@ -168,6 +187,7 @@ audience:
 - Always test on production hardware, not your laptop
 
 ---
+
 ## A Pre-Production Checklist
 
 - BIOS: disable hyperthreading, set CPU to performance
@@ -178,6 +198,7 @@ audience:
 - Run cyclictest under load; verify worst-case latency
 
 ---
+
 ## Course Wrap-Up
 
 - Real-time is about *predictability*, not speed

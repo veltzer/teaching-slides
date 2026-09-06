@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Security and Operational Concerns
 
 ---
+
 ## What This Chapter Covers
 
 - IAM and least privilege
@@ -21,6 +23,7 @@ audience:
 - Compliance considerations
 
 ---
+
 ## IAM At Function Granularity
 
 - Each Lambda gets its own IAM role
@@ -30,11 +33,13 @@ audience:
 - A common security failing in serverless
 
 ---
+
 ## Security Concerns
 
 ![serverless_security](svg/courses/architecting/serverless-architecture/09_security_and_operational_concerns/serverless_security.svg)
 
 ---
+
 ## Sample IAM Policy
 
 ```json
@@ -51,6 +56,7 @@ audience:
 - Catch issues in IAM Access Analyzer
 
 ---
+
 ## Secret Management
 
 - Never in code; never in environment variables (in plaintext)
@@ -60,11 +66,13 @@ audience:
 - Cache in init code; expire after N minutes
 
 ---
+
 ## Defence in Depth
 
 ![security_layers](svg/courses/architecting/serverless-architecture/09_security_and_operational_concerns/security_layers.svg)
 
 ---
+
 ## VPC Lambda
 
 - Lambda runs in AWS-managed VPC by default
@@ -74,6 +82,7 @@ audience:
 - Use only when needed
 
 ---
+
 ## Network Egress
 
 - Lambda can call out to internet
@@ -83,6 +92,7 @@ audience:
 - Compliance often requires egress control
 
 ---
+
 ## Function URL Auth
 
 - AWS Lambda Function URLs: simple HTTPS endpoints
@@ -91,6 +101,7 @@ audience:
 - Convenient but risky if misconfigured
 
 ---
+
 ## Logging
 
 - CloudWatch Logs: every Lambda log
@@ -100,6 +111,7 @@ audience:
 - Forward to centralised logging (Datadog, Splunk) for production
 
 ---
+
 ## Metrics
 
 - CloudWatch: invocations, duration, errors, throttles, concurrency
@@ -108,6 +120,7 @@ audience:
 - Custom metrics from your code
 
 ---
+
 ## Distributed Tracing
 
 - AWS X-Ray: distributed traces in AWS
@@ -117,6 +130,7 @@ audience:
 - Critical for serverless debugging
 
 ---
+
 ## Vulnerability Management
 
 - Lambda runtime: AWS patches the OS / language runtime
@@ -126,6 +140,7 @@ audience:
 - A "scan in CI" + "scan deployed Lambdas" combo
 
 ---
+
 ## Code Signing
 
 - Lambda: AWS Signer signs your code
@@ -134,6 +149,7 @@ audience:
 - Compliance use case primarily
 
 ---
+
 ## DDoS / Abuse
 
 - API Gateway: throttle, AWS WAF
@@ -142,6 +158,7 @@ audience:
 - Always set max concurrency on production Lambdas
 
 ---
+
 ## Compliance
 
 - HIPAA, PCI, SOC2: AWS Lambda is in scope (if configured right)
@@ -151,6 +168,7 @@ audience:
 - BAA with AWS for HIPAA workloads
 
 ---
+
 ## Operational Practices
 
 - Infra as code (SAM, CDK, Terraform)
@@ -160,6 +178,7 @@ audience:
 - Runbooks for common issues
 
 ---
+
 ## Disaster Recovery
 
 - Multi-region: deploy Lambda + DynamoDB in 2 regions
@@ -168,6 +187,7 @@ audience:
 - DynamoDB Global Tables: makes active-active easier
 
 ---
+
 ## Common Operational Mistakes
 
 - "Action: *" in IAM policies
@@ -177,6 +197,7 @@ audience:
 - Ignoring DLQs
 
 ---
+
 ## Course Wrap-Up
 
 - Serverless: don't manage servers; pay for use

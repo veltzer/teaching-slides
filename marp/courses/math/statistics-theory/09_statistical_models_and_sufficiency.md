@@ -8,9 +8,11 @@ audience:
   - audiences:ml-engineers
 
 ---
+
 # Statistical Models and Sufficiency
 
 ---
+
 ## What This Chapter Covers
 
 - What a statistical model is, formally
@@ -21,11 +23,13 @@ audience:
 - Basu's theorem and the exponential-family case
 
 ---
+
 ## Sufficiency: Lossless Compression
 
 ![sufficiency](svg/courses/math/statistics-theory/09_statistical_models_and_sufficiency/sufficiency.svg)
 
 ---
+
 ## A Statistical Model, Formally
 
 - Data X lives in a sample space &#119987;; a **statistical model** is a family of candidate distributions **P = { P&#952; : &theta; &isin; &Theta; }** for the law of X
@@ -35,6 +39,7 @@ audience:
 - Inference = using the observed X to say which P&#952; (or which feature of it) is in force
 
 ---
+
 ## Statistics, Parameters, Identifiability
 
 - A **statistic** is any (measurable) function T = T(X) of the *data alone* — no unknown &theta; in it; T has a distribution, derived from P&#952;, that generally *does* depend on &theta;
@@ -44,6 +49,7 @@ audience:
 - Non-identifiability is a *model* defect, not a sample-size problem: fix the parametrization (constraints, reparametrize) before estimating anything
 
 ---
+
 ## Sufficiency
 
 - A statistic T(X) is **sufficient** for &theta; if the conditional distribution of X given T = t **does not depend on &theta;** — once you know T, the rest of the data carries no further information about &theta;
@@ -53,6 +59,7 @@ audience:
 - The **likelihood function** &theta; &#8614; L(&theta; | x) is itself the "ultimate" sufficient summary — sufficiency is precisely "T captures everything the likelihood depends on through x"
 
 ---
+
 ## The Factorization Theorem
 
 - **Fisher&ndash;Neyman factorization**: T(X) is sufficient for &theta; **iff** the joint density/pmf factors as f(x | &theta;) = **g( T(x), &theta; ) &middot; h(x)** — a piece that involves &theta; only through T, times a piece free of &theta;
@@ -62,6 +69,7 @@ audience:
 - Caveat: factorization tells you *a* sufficient statistic, not the *smallest* one — that's the next slide
 
 ---
+
 ## Minimal Sufficiency
 
 - T is **minimal sufficient** if it is sufficient *and* is a function of every other sufficient statistic — the coarsest possible reduction that still loses nothing; it's unique up to one-to-one transformations
@@ -71,6 +79,7 @@ audience:
 - Minimal sufficiency is the floor for *information*; the next concept (completeness) is what you need for *optimality*
 
 ---
+
 ## Completeness And Ancillarity
 
 - A (sufficient) statistic T is **complete** if the only function g with E&#952;[g(T)] = 0 for *all* &theta; is g &#8801; 0 — informally, T's distribution "moves enough with &theta;" that no non-trivial unbiased estimator of zero can be built from it
@@ -80,6 +89,7 @@ audience:
 - **Conditionality principle** (motivating ancillarity): inference should arguably be carried out *conditional on the observed value of an ancillary statistic* — e.g. condition on the realized design / sample size — which is where many "exact" conditional procedures come from
 
 ---
+
 ## Basu's Theorem
 
 - **Basu's theorem**: if T is **complete sufficient** for &theta; and A is **ancillary**, then T and A are **independent** — for every &theta;
@@ -89,6 +99,7 @@ audience:
 - Hidden subtlety: completeness is *essential* — drop it (Uniform-with-both-endpoints, where {min, max} is sufficient but not complete) and the conclusion can fail
 
 ---
+
 ## Sufficiency In Code
 
 ```python
@@ -111,6 +122,7 @@ print("corr(Xbar, S^2) ~ 0:", np.corrcoef(xbar, s2)[0, 1].round(3))
 ```
 
 ---
+
 ## Common Mistakes
 
 - Forgetting to check **identifiability** before estimating — non-identifiable parameters can't be recovered from any sample size

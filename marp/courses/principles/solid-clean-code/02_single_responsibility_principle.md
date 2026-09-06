@@ -8,19 +8,23 @@ audience:
   - audiences:developers
 
 ---
+
 # Single Responsibility Principle (SRP)
 
 ---
+
 ## With vs Without SRP
 
 ![srp](svg/courses/principles/solid-clean-code/02_single_responsibility_principle/srp.svg)
 
 ---
+
 ## One Reason to Change
 
 ![srp_one_reason](svg/courses/principles/solid-clean-code/02_single_responsibility_principle/srp_one_reason.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - A precise statement of SRP
@@ -30,6 +34,7 @@ audience:
 - Trade-offs and limits
 
 ---
+
 ## The Principle, Stated Carefully
 
 - "A class should have *one reason to change*" — Robert C. Martin
@@ -39,6 +44,7 @@ audience:
 - SRP isn't "one thing", it's "one *axis* of variation"
 
 ---
+
 ## A Smelly Class
 
 ```python
@@ -57,6 +63,7 @@ class Report:
 - Three teams stepping on each other
 
 ---
+
 ## After Refactoring
 
 ```python
@@ -77,6 +84,7 @@ class ReportSender:
 - Consumers compose them as needed
 
 ---
+
 ## Cohesion and Coupling
 
 - **Cohesion**: how related are the things inside one class?
@@ -86,6 +94,7 @@ class ReportSender:
 - Done poorly, can *raise* coupling — lots of tiny classes that all need each other
 
 ---
+
 ## Spotting Violations
 
 - The class name needs an "and" or "or" to describe it
@@ -95,6 +104,7 @@ class ReportSender:
 - The class file is over ~500 lines
 
 ---
+
 ## SRP at the Function Level
 
 - The same idea applies smaller
@@ -104,6 +114,7 @@ class ReportSender:
 - Each function gets a precise name and a focused test
 
 ---
+
 ## SRP and Microservices
 
 - The principle scales: a microservice should have one reason to deploy
@@ -113,6 +124,7 @@ class ReportSender:
 - Don't apply mechanically; coordination cost matters too
 
 ---
+
 ## When NOT to Split
 
 - The "responsibilities" always change *together*
@@ -121,6 +133,7 @@ class ReportSender:
 - The result would be procedural code in OO clothing
 
 ---
+
 ## Limits and Trade-offs
 
 - Splitting too aggressively gives you a swarm of tiny classes
@@ -130,6 +143,7 @@ class ReportSender:
 - A 5-person startup and a 200-person platform team have different sweet spots
 
 ---
+
 ## A Useful Test
 
 - Imagine three separate teams owning the codebase
@@ -139,6 +153,7 @@ class ReportSender:
 - This thought experiment beats abstract debate
 
 ---
+
 ## SRP and Other Principles
 
 - SRP enables OCP — you can extend a focused class without breaking it
@@ -148,6 +163,7 @@ class ReportSender:
 - Fix the SRP problem first; the rest often follow
 
 ---
+
 ## A Refactoring Recipe
 
 - Identify the cluster of methods that always change together &#8594; one new class
@@ -157,6 +173,7 @@ class ReportSender:
 - Run the tests; commit when green
 
 ---
+
 ## Common Mistakes
 
 - Splitting along *technical* lines (DTO, Service, Repository) when the responsibility is one *business* concept
@@ -166,6 +183,7 @@ class ReportSender:
 - Forgetting that "what changes together stays together" is also valid
 
 ---
+
 ## Splitting by Actor
 
 ![srp_split](svg/courses/principles/solid-clean-code/02_single_responsibility_principle/srp_split.svg)

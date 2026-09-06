@@ -11,6 +11,7 @@ audience:
   - audiences:architects
 
 ---
+
 # SOLID Principles and Clean Code
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

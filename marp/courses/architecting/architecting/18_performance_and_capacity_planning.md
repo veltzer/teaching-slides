@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Performance and Capacity Planning
 
 ---
+
 ## Why Architects Own Performance
 
 - Performance and cost are two sides of the same coin
@@ -21,6 +23,7 @@ audience:
 - Teams that skip capacity planning discover limits only at peak traffic
 
 ---
+
 ## Performance Vocabulary
 
 - **Latency** — time to serve one request
@@ -32,6 +35,7 @@ audience:
 Do not conflate latency with throughput — they trade against each other.
 
 ---
+
 ## Little's Law
 
 `L = lambda * W`
@@ -44,6 +48,7 @@ Example: 1000 req/s × 0.1s average latency = 100 concurrent requests in flight.
 Useful for sanity-checking capacity numbers in seconds.
 
 ---
+
 ## Latency vs Throughput Trade-Off
 
 - More concurrency can raise throughput but queues up latency
@@ -52,6 +57,7 @@ Useful for sanity-checking capacity numbers in seconds.
 - Batch processing sacrifices latency for throughput
 
 ---
+
 ## Percentiles, Not Averages
 
 - Average latency hides the bad experiences
@@ -60,6 +66,7 @@ Useful for sanity-checking capacity numbers in seconds.
 - At microservice fan-out of 10, p99 at each service becomes p90 overall
 
 ---
+
 ## Tail Latency Amplification
 
 - User request fans out to N backend calls
@@ -68,6 +75,7 @@ Useful for sanity-checking capacity numbers in seconds.
 - Fight with hedging, parallelism, and aggressive timeouts on non-critical paths
 
 ---
+
 ## The USE Method
 
 For resources (CPU, memory, disk, network):
@@ -79,6 +87,7 @@ For resources (CPU, memory, disk, network):
 Walk through each resource in USE order when diagnosing performance.
 
 ---
+
 ## The RED Method
 
 For services:
@@ -90,6 +99,7 @@ For services:
 Track RED per service; track USE per host/pod.
 
 ---
+
 ## Back-of-Envelope Capacity
 
 - Expected peak requests per second (RPS)?
@@ -100,6 +110,7 @@ Track RED per service; track USE per host/pod.
 A 10-minute calculation saves a 10-day overrun.
 
 ---
+
 ## Example: Sizing a Service
 
 - 1M daily active users
@@ -110,6 +121,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Plus rolling update surge = 20 instances
 
 ---
+
 ## Cost Modeling
 
 - Compute cost per 1M requests
@@ -119,6 +131,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Cost must be a first-class metric, not a quarterly surprise
 
 ---
+
 ## Load Testing Workflow
 
 - Start with a realistic workload model (not random traffic)
@@ -128,6 +141,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Tools: `k6`, `Gatling`, `Locust`, `wrk2`, `JMeter`
 
 ---
+
 ## Soak Testing
 
 - Run moderate load for hours or days
@@ -136,6 +150,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Production is a soak test you're running on your users
 
 ---
+
 ## Stress and Spike Testing
 
 - **Stress** — push beyond expected load to find the breaking point
@@ -144,6 +159,7 @@ A 10-minute calculation saves a 10-day overrun.
 - The goal is not to survive unlimited load; it is to fail predictably
 
 ---
+
 ## Identifying Bottlenecks
 
 - Profile under load, not in isolation
@@ -152,6 +168,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Queue length is the earliest warning sign of saturation
 
 ---
+
 ## The Database Is Usually the Bottleneck
 
 - Stateless services scale horizontally cheaply
@@ -160,6 +177,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Caching layers shift but do not eliminate database load
 
 ---
+
 ## Caching: When and Where
 
 - Identify reads with high rate and low change frequency
@@ -168,6 +186,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Invalidation is genuinely hard — design for staleness when possible
 
 ---
+
 ## Choosing an Invalidation Strategy
 
 - TTL alone — bounded staleness; cheap; cannot react to writes between expirations
@@ -177,6 +196,7 @@ A 10-minute calculation saves a 10-day overrun.
 - The pattern catalog (Architecture Patterns ch 10) covers each strategy in depth
 
 ---
+
 ## Cache Coherence Across Nodes
 
 - A single cache instance is rare in production; clusters and replicas need to agree
@@ -186,6 +206,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Most teams accept eventual coherence and bound the window with TTL
 
 ---
+
 ## Cache-Hit Math
 
 - Cache hit ratio 95% means 5% of traffic still hits the origin
@@ -194,6 +215,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Thundering herd on cache expiry can break origin anyway
 
 ---
+
 ## Connection Pool Sizing
 
 - Too small — requests queue behind connections; latency spikes
@@ -202,6 +224,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Always monitor pool utilization and wait time
 
 ---
+
 ## Tail Latency Mitigation
 
 - **Hedged requests** — send to two instances, use the first response
@@ -211,6 +234,7 @@ A 10-minute calculation saves a 10-day overrun.
 - **Priority queueing** — user-facing work ahead of background work
 
 ---
+
 ## Autoscaling Done Right
 
 - Scale on leading indicators (queue depth, in-flight requests), not CPU alone
@@ -219,6 +243,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Beware the cold-start cost — new instances take time to be useful
 
 ---
+
 ## Capacity Planning Cadence
 
 - Refresh capacity model quarterly or before known events
@@ -227,6 +252,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Share the numbers with product; demand drives capacity
 
 ---
+
 ## Performance Testing as a Gate
 
 - CI job: run a representative load test on every release candidate
@@ -235,6 +261,7 @@ A 10-minute calculation saves a 10-day overrun.
 - Budget-based testing: reject changes that spend more than the performance budget
 
 ---
+
 ## SLOs as Capacity Anchors
 
 - Latency SLO (p99 < 200ms) sets the capacity target
@@ -243,6 +270,7 @@ A 10-minute calculation saves a 10-day overrun.
 - If SLO is unachievable within cost constraints, architecture is the answer
 
 ---
+
 ## Common Performance Mistakes
 
 - **Averaging percentiles** — p95 of averages is meaningless
@@ -252,6 +280,7 @@ A 10-minute calculation saves a 10-day overrun.
 - **No capacity math** — "we'll scale when we need to" is a post-mortem in waiting
 
 ---
+
 ## Summary
 
 - Little's Law ties latency, throughput, and concurrency with one equation

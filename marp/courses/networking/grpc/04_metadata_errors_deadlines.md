@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Metadata, Errors, and Deadlines
 
 ---
+
 ## What This Chapter Covers
 
 - Metadata: headers and trailers
@@ -20,6 +22,7 @@ audience:
 - Best practices for resilient calls
 
 ---
+
 ## What Is Metadata?
 
 - Key-value pairs attached to a call
@@ -29,16 +32,19 @@ audience:
 - Auth tokens, request IDs, tracing context
 
 ---
+
 ## Deadlines Propagate
 
 ![deadlines](svg/courses/networking/grpc/04_metadata_errors_deadlines/deadlines.svg)
 
 ---
+
 ## Metadata Flow
 
 ![metadata_flow](svg/courses/networking/grpc/04_metadata_errors_deadlines/metadata_flow.svg)
 
 ---
+
 ## Initial vs Trailing Metadata
 
 - Initial metadata — sent before the response body
@@ -48,6 +54,7 @@ audience:
 - gRPC status code itself is a special trailer
 
 ---
+
 ## Setting Metadata (Client)
 
 ```go
@@ -63,6 +70,7 @@ resp, err := client.Method(ctx, req)
 - Bin-suffixed keys (`-bin`) are binary
 
 ---
+
 ## Reading Metadata (Server)
 
 ```go
@@ -78,6 +86,7 @@ tokens := md.Get("authorization")
 - Multi-value friendly
 
 ---
+
 ## gRPC Status Codes
 
 - `OK` — success
@@ -91,11 +100,13 @@ tokens := md.Get("authorization")
 - `UNAVAILABLE` — try again later
 
 ---
+
 ## Status Codes Visualized
 
 ![status_codes](svg/courses/networking/grpc/05_metadata_errors_deadlines/status_codes.svg)
 
 ---
+
 ## Returning Errors (Server)
 
 ```go
@@ -108,6 +119,7 @@ return nil, status.Error(codes.NotFound, "user 42 not found")
 - Map domain errors to status codes consistently
 
 ---
+
 ## Reading Errors (Client)
 
 ```go
@@ -125,6 +137,7 @@ if err != nil {
 - Branch your retry logic accordingly
 
 ---
+
 ## Rich Error Details
 
 - Status can carry typed details
@@ -134,6 +147,7 @@ if err != nil {
 - Cleaner than parsing error strings
 
 ---
+
 ## Mapping to HTTP Codes
 
 - `INVALID_ARGUMENT` → 400
@@ -145,6 +159,7 @@ if err != nil {
 - gRPC-Gateway and similar use these mappings
 
 ---
+
 ## What Is a Deadline?
 
 - An absolute time by which the call must complete
@@ -154,6 +169,7 @@ if err != nil {
 - The standard way to bound RPC calls
 
 ---
+
 ## Setting a Deadline
 
 ```go
@@ -167,6 +183,7 @@ resp, err := client.Method(ctx, req)
 - Callee inherits the deadline
 
 ---
+
 ## Deadline Propagation
 
 - A receives request from B; A calls C
@@ -176,6 +193,7 @@ resp, err := client.Method(ctx, req)
 - Wasted work; orphaned resources
 
 ---
+
 ## Detecting Deadline Exceeded (Server)
 
 ```go
@@ -192,6 +210,7 @@ default:
 - Slow operations should be cancellable
 
 ---
+
 ## Cancellation
 
 - Client can cancel before completion
@@ -201,6 +220,7 @@ default:
 - A core resilience pattern
 
 ---
+
 ## Client-Side Cancellation
 
 - `cancel()` on the context
@@ -209,6 +229,7 @@ default:
 - Gracefully aborts the in-flight RPC
 
 ---
+
 ## Best Practices for Deadlines
 
 - Set deadlines on every RPC; no infinite waits
@@ -218,6 +239,7 @@ default:
 - Default deadlines per service tier
 
 ---
+
 ## The Deadline Hierarchy
 
 - User-facing call: 5s budget
@@ -227,6 +249,7 @@ default:
 - Final services see the smallest deadline
 
 ---
+
 ## Common Pitfalls
 
 - No deadline → calls hang under failure
@@ -236,6 +259,7 @@ default:
 - Putting auth tokens in proto fields instead of metadata
 
 ---
+
 ## Tracing via Metadata
 
 - W3C Trace Context headers (`traceparent`, `tracestate`)
@@ -245,6 +269,7 @@ default:
 - Critical for debugging async calls
 
 ---
+
 ## Summary
 
 - Metadata: headers and trailers for cross-cutting concerns

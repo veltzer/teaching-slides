@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # What is DevOps?
 Understanding the fundamentals of DevOps practices and culture
 
@@ -73,16 +74,19 @@ Understanding the fundamentals of DevOps practices and culture
 - User experience focus
 
 ---
+
 ## Breaking Down Silos: Overview
 
 Before:
 
 ---
+
 ## Breaking Down Silos
 
 ![breaking_down_silos_1](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/breaking_down_silos_1.svg)
 
 ---
+
 ## Breaking Down Silos: Overview (2)
 
 After:

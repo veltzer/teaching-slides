@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # What Are Databases?
 
 ---
+
 ## What This Chapter Covers
 
 - What a database is
@@ -19,6 +21,7 @@ audience:
 - A short tour
 
 ---
+
 ## What A Database Is
 
 - A structured way to store and retrieve data
@@ -28,11 +31,13 @@ audience:
 - Versus: ad-hoc files
 
 ---
+
 ## Major Database Kinds
 
 ![db_kinds](svg/courses/databases/introduction-to-databases/01_what_are_databases/db_kinds.svg)
 
 ---
+
 ## Why Databases
 
 - Persistence beyond memory
@@ -43,11 +48,13 @@ audience:
 - The standard for non-trivial apps
 
 ---
+
 ## What Databases Manage
 
 ![database_responsibilities](svg/courses/databases/introduction-to-databases/01_what_are_databases/database_responsibilities.svg)
 
 ---
+
 ## SQL vs NoSQL
 
 - SQL: relational, schema-on-write
@@ -57,6 +64,7 @@ audience:
 - Most apps: SQL is enough
 
 ---
+
 ## File-Based
 
 - SQLite: a database in one file
@@ -65,6 +73,7 @@ audience:
 - Surprisingly capable
 
 ---
+
 ## Server-Based
 
 - Postgres, MySQL, MongoDB, etc.
@@ -73,6 +82,7 @@ audience:
 - Standard for production
 
 ---
+
 ## ACID
 
 - **A**tomicity: all or nothing
@@ -82,6 +92,7 @@ audience:
 - Relational DBs: full ACID
 
 ---
+
 ## CAP
 
 - For distributed systems
@@ -90,6 +101,7 @@ audience:
 - Mostly: CP or AP
 
 ---
+
 ## Storage Models
 
 - Relational: tables, rows, columns
@@ -99,6 +111,7 @@ audience:
 - Graph: nodes and edges
 
 ---
+
 ## Use Cases
 
 - Transactional: banking, e-commerce
@@ -108,6 +121,7 @@ audience:
 - Different DBs for different needs
 
 ---
+
 ## Vocabulary
 
 - Schema: structure of the data
@@ -116,6 +130,7 @@ audience:
 - Transaction: atomic group of operations
 
 ---
+
 ## Common DB Misconceptions
 
 - "All databases are the same" — wildly different in trade-offs
@@ -124,6 +139,7 @@ audience:
 - "MongoDB is faster than Postgres" — depends entirely on the workload
 
 ---
+
 ## What's Next
 
 - Relational concepts

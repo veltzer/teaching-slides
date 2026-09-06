@@ -11,9 +11,11 @@ audience:
   - audiences:managers
 
 ---
+
 # Integration and Remediation
 
 ---
+
 ## What This Chapter Covers
 
 - Threat modeling in agile and DevOps workflows
@@ -23,6 +25,7 @@ audience:
 - Validating mitigations through testing
 
 ---
+
 ## The Integration Problem
 
 - Threat modeling is most valuable when it influences code
@@ -32,6 +35,7 @@ audience:
 - "Living threat model" is the goal
 
 ---
+
 ## Threat Modeling in Agile
 
 - One threat model per epic, not per project
@@ -41,11 +45,13 @@ audience:
 - Friction kills the practice — keep it fast
 
 ---
+
 ## Agile Integration Visualised
 
 ![agile_integration](svg/courses/security/threat-modeling/08_integration_and_remediation/agile_integration.svg)
 
 ---
+
 ## Lightweight Threat Modeling
 
 - "What can go wrong?" on the whiteboard
@@ -55,6 +61,7 @@ audience:
 - Heavy methodologies for high-stakes systems only
 
 ---
+
 ## Per-Epic Threat Modeling
 
 - Architect proposes the design
@@ -64,6 +71,7 @@ audience:
 - Re-review at the end of the epic
 
 ---
+
 ## Threat Modeling Cadence
 
 - Per feature — for any feature touching auth, data, or trust boundaries
@@ -73,6 +81,7 @@ audience:
 - Match the cadence to risk
 
 ---
+
 ## Microsoft Threat Modeling Tool
 
 - Free, Windows-only, Microsoft-supported
@@ -82,6 +91,7 @@ audience:
 - Strong starting point for STRIDE-focused teams
 
 ---
+
 ## OWASP Threat Dragon
 
 - Open source, cross-platform
@@ -91,6 +101,7 @@ audience:
 - Good fit for teams that prefer open tools
 
 ---
+
 ## IriusRisk
 
 - Commercial, automated threat modeling
@@ -100,6 +111,7 @@ audience:
 - Suited to enterprises with compliance demands
 
 ---
+
 ## Threagile
 
 - Diagram-as-code: YAML describes the system
@@ -109,11 +121,13 @@ audience:
 - Strong fit for infrastructure-as-code teams
 
 ---
+
 ## Tool Comparison Visualized
 
 ![tool_comparison](svg/courses/security/threat-modeling/08_integration_and_remediation/tool_comparison.svg)
 
 ---
+
 ## Choosing a Tool
 
 - Team size, budget, regulatory environment
@@ -123,6 +137,7 @@ audience:
 - Start with paper or whiteboard; tool later
 
 ---
+
 ## Connecting to Issue Trackers
 
 - Each unmitigated threat becomes a ticket
@@ -132,6 +147,7 @@ audience:
 - A threat without a ticket is a forgotten threat
 
 ---
+
 ## Threat IDs and Traceability
 
 - Give each threat a stable ID
@@ -141,6 +157,7 @@ audience:
 - Especially valuable for compliance evidence
 
 ---
+
 ## Prioritization in Practice
 
 - Don't prioritize threats individually — prioritize batches
@@ -150,6 +167,7 @@ audience:
 - The point is making decisions, not stacking the rank
 
 ---
+
 ## Mitigation Strategies
 
 - Eliminate — change the design so the threat doesn't apply
@@ -159,11 +177,13 @@ audience:
 - Each is valid in context
 
 ---
+
 ## Mitigation Strategies Visualised
 
 ![mitigation_strategies](svg/courses/security/threat-modeling/08_integration_and_remediation/mitigation_strategies.svg)
 
 ---
+
 ## Eliminate by Design
 
 - Don't store data you don't need
@@ -173,6 +193,7 @@ audience:
 - Often the cheapest path to security
 
 ---
+
 ## Mitigation Tracking
 
 - Status: planned, implemented, tested, accepted, monitored
@@ -182,6 +203,7 @@ audience:
 - Review the tracker, not the threat list, in standups
 
 ---
+
 ## Validating Mitigations
 
 - Unit and integration tests that exercise the threat
@@ -191,6 +213,7 @@ audience:
 - A mitigation without a test is hope-driven security
 
 ---
+
 ## Continuous Threat Modeling
 
 - New code triggers a model review
@@ -200,6 +223,7 @@ audience:
 - Automation reduces friction; doesn't replace judgment
 
 ---
+
 ## Threat Modeling and Code Review
 
 - Reviewers ask: does this PR introduce a new threat?
@@ -209,6 +233,7 @@ audience:
 - Code review is the most consistent place to catch drift
 
 ---
+
 ## Metrics That Matter
 
 - Threats found per review — calibrates the model
@@ -218,6 +243,7 @@ audience:
 - Avoid vanity metrics — count what changes behavior
 
 ---
+
 ## Building a Security Culture
 
 - Threat modeling is a habit, not an event
@@ -227,6 +253,7 @@ audience:
 - A team that does it weekly is a team that knows its system
 
 ---
+
 ## Common Pitfalls
 
 - Threat models that exist but nobody reads
@@ -236,6 +263,7 @@ audience:
 - Compliance ceremony with no actual mitigation
 
 ---
+
 ## Anti-Patterns to Avoid
 
 - One central security team owns all threat models
@@ -245,11 +273,13 @@ audience:
 - Treating low-rated threats as "no threat"
 
 ---
+
 ## Maturity Stages Visualised
 
 ![maturity_levels](svg/courses/security/threat-modeling/08_integration_and_remediation/maturity_levels.svg)
 
 ---
+
 ## Maturing the Practice
 
 - Stage 1 — ad-hoc, when someone remembers
@@ -259,6 +289,7 @@ audience:
 - Stage 5 — culture-driven, every developer thinks this way
 
 ---
+
 ## Course Recap
 
 - Fundamentals — what threat modeling is and isn't
@@ -271,6 +302,7 @@ audience:
 - Integration — making it stick
 
 ---
+
 ## Final Thoughts
 
 - The best threat model is the one your team actually uses
@@ -280,6 +312,7 @@ audience:
 - Remember the four questions, every time
 
 ---
+
 ## Summary
 
 - Integrate threat modeling into the development workflow

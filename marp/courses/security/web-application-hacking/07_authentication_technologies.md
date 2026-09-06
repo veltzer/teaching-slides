@@ -17,6 +17,7 @@ audience:
 ## Day 2: Breaking and Securing Login Mechanisms
 
 ---
+
 ## Attack Surface
 
 ![auth_attacks](svg/courses/security/web-application-hacking/07_authentication_technologies/auth_attacks.svg)

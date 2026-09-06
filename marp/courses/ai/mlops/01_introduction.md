@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to MLOps
 
 ---
+
 ## What This Chapter Covers
 
 - What MLOps is
@@ -21,6 +23,7 @@ audience:
 - Tooling landscape
 
 ---
+
 ## What MLOps Is
 
 - DevOps for machine learning
@@ -29,6 +32,7 @@ audience:
 - Continuous delivery of models
 
 ---
+
 ## Why Not Just DevOps
 
 - Models are data plus code
@@ -37,6 +41,7 @@ audience:
 - Evaluation is statistical, not boolean
 
 ---
+
 ## ML Lifecycle
 
 - Data ingestion
@@ -47,11 +52,13 @@ audience:
 - Monitoring
 
 ---
+
 ## ML Lifecycle Visualized
 
 ![ml_lifecycle](svg/courses/ai/mlops/01_introduction/ml_lifecycle.svg)
 
 ---
+
 ## Reproducibility
 
 - Pin data version
@@ -60,6 +67,7 @@ audience:
 - Pin random seed
 
 ---
+
 ## Roles
 
 - Data engineer
@@ -69,6 +77,7 @@ audience:
 - SRE
 
 ---
+
 ## Why Roles Blur
 
 - Data scientists ship code
@@ -77,6 +86,7 @@ audience:
 - Hand-offs cause failures
 
 ---
+
 ## Tooling Landscape
 
 - Pipelines: Kubeflow, Airflow
@@ -85,6 +95,7 @@ audience:
 - Feature stores: Feast, Tecton
 
 ---
+
 ## Build vs Buy
 
 - Cloud platforms bundle most of it
@@ -93,6 +104,7 @@ audience:
 - Choose by team size
 
 ---
+
 ## Maturity Levels
 
 - Manual everything
@@ -101,6 +113,7 @@ audience:
 - Auto-retraining and rollback
 
 ---
+
 ## Cost Reality
 
 - GPUs are expensive
@@ -109,6 +122,7 @@ audience:
 - Track cost per experiment
 
 ---
+
 ## Course Outline
 
 - Pipelines
@@ -118,6 +132,7 @@ audience:
 - Governance
 
 ---
+
 ## Common Misconceptions
 
 - "Just deploy the notebook"

@@ -12,9 +12,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Writing Bash Functions
 
 ---
+
 ## Day 3: Functions, Types & Advanced
 - Functions: definition, return codes, parameters
 - Variable types: strings, arrays, associative arrays
@@ -23,6 +25,7 @@ audience:
 - Timing, OOP patterns, test harnesses, aliases
 
 ---
+
 ## Defining Functions
 
 ```bash
@@ -47,6 +50,7 @@ greet Alice       # Hello, Alice!
 ```
 
 ---
+
 ## Functions are Commands
 
 ```bash
@@ -74,6 +78,7 @@ fi
 ```
 
 ---
+
 ## Function Parameters
 
 ```bash
@@ -96,6 +101,7 @@ process_file "file1.txt" "file2.txt"
 ```
 
 ---
+
 ## Return Codes from Functions
 
 ```bash
@@ -121,6 +127,7 @@ get_sum 200 200    # returns 400 % 256 = 144!
 ```
 
 ---
+
 ## Returning Values from Functions
 
 ```bash
@@ -147,6 +154,7 @@ echo "Lines: $num_lines"
 ```
 
 ---
+
 ## Local Variables
 
 ```bash
@@ -169,6 +177,7 @@ echo "outside: $x"       # 1 (unchanged)
 ```
 
 ---
+
 ## Always Use `local`
 
 ```bash
@@ -191,6 +200,7 @@ process() {
 ```
 
 ---
+
 ## Pass By Reference (`nameref`)
 
 ```bash
@@ -218,6 +228,7 @@ echo "${my_array[@]}"    # one two three
 ```
 
 ---
+
 ## Recursive Functions
 
 ```bash
@@ -242,6 +253,7 @@ FUNCNEST=100    # limit to 100 levels
 ```
 
 ---
+
 ## Function Libraries
 
 ```bash
@@ -270,6 +282,7 @@ log_info "All dependencies found"
 ```
 
 ---
+
 ## Function Scope: Dynamic Scoping
 
 ```bash
@@ -293,6 +306,7 @@ outer    # prints x=10
 ```
 
 ---
+
 ## Variadic Functions
 
 ```bash
@@ -317,6 +331,7 @@ process_files *.txt
 ```
 
 ---
+
 ## Decorator Pattern
 
 ```bash
@@ -340,5 +355,6 @@ with_timing find /usr -name "*.so" -type f > /dev/null
 ```
 
 ---
+
 ## Functions vs Scripts vs Aliases
 ![functions_vs_scripts_vs_aliases](svg/courses/languages/bash/bash-scripting/17_functions/functions_vs_scripts_vs_aliases.svg)

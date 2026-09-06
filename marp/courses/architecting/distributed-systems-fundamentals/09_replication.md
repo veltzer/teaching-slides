@@ -8,19 +8,23 @@ audience:
   - audiences:architects
 
 ---
+
 # Replication
 
 ---
+
 ## Topologies
 
 ![replication_topologies](svg/courses/architecting/distributed-systems-fundamentals/09_replication/replication_topologies.svg)
 
 ---
+
 ## Replication Lag
 
 ![replication_lag](svg/courses/architecting/distributed-systems-fundamentals/09_replication/replication_lag.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why replicate
@@ -32,6 +36,7 @@ audience:
 - Practical guidance
 
 ---
+
 ## Why Replicate
 
 - Durability: survive a node failure
@@ -41,6 +46,7 @@ audience:
 - Disaster recovery: cross-region copies
 
 ---
+
 ## Single-Leader Replication
 
 - One node: leader; accepts writes
@@ -50,6 +56,7 @@ audience:
 - Simple; well-understood
 
 ---
+
 ## Multi-Leader Replication
 
 - Multiple leaders accept writes
@@ -59,6 +66,7 @@ audience:
 - Active-active multi-region setups
 
 ---
+
 ## Leaderless Replication
 
 - Any node accepts writes
@@ -68,6 +76,7 @@ audience:
 - High availability; no leader to fail
 
 ---
+
 ## Synchronous Replication
 
 - Write succeeds only after replicas ack
@@ -77,6 +86,7 @@ audience:
 - Often: at least one synchronous replica
 
 ---
+
 ## Asynchronous Replication
 
 - Leader writes locally; replicates later
@@ -86,6 +96,7 @@ audience:
 - Trade-off: latency vs durability
 
 ---
+
 ## Semi-Synchronous
 
 - At least one synchronous replica; others async
@@ -94,6 +105,7 @@ audience:
 - Pragmatic compromise
 
 ---
+
 ## Replication Lag
 
 - Followers are behind the leader
@@ -103,6 +115,7 @@ audience:
 - Monitor lag; alert on growth
 
 ---
+
 ## Read Replicas
 
 - Followers serve read traffic
@@ -112,6 +125,7 @@ audience:
 - Most cloud DBs offer this
 
 ---
+
 ## Read-Your-Writes Consistency
 
 - After your write, you should see it
@@ -122,6 +136,7 @@ audience:
     - Pin user to one replica for session
 
 ---
+
 ## Failover
 
 - Leader dies
@@ -131,6 +146,7 @@ audience:
 - Time: seconds to minutes; may lose unrepicated data
 
 ---
+
 ## Conflict Resolution (Multi-Leader)
 
 - **Last Write Wins**: timestamp-based; loses data
@@ -140,6 +156,7 @@ audience:
 - Pick by data semantics
 
 ---
+
 ## Replication Topologies
 
 - Star: one leader, many followers
@@ -148,6 +165,7 @@ audience:
 - Each: trade-offs in latency, write amplification, complexity
 
 ---
+
 ## Cross-Region Replication
 
 - Slow links (50-150ms inter-continental)
@@ -157,6 +175,7 @@ audience:
 - Cost: replication bandwidth charges
 
 ---
+
 ## Common Replication Mistakes
 
 - Async replication + reading from replicas without considering staleness
@@ -166,6 +185,7 @@ audience:
 - Multi-leader without conflict strategy
 
 ---
+
 ## Practical Tips
 
 - Always have at least one replica (durability + failover)

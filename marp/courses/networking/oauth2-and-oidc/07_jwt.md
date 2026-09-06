@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # JWT in Depth
 
 ---
+
 ## What This Chapter Covers
 
 - JWT structure: header, payload, signature
@@ -20,6 +22,7 @@ audience:
 - Pitfalls and attacks
 
 ---
+
 ## What Is a JWT?
 
 - JSON Web Token (RFC 7519)
@@ -29,11 +32,13 @@ audience:
 - Used for ID tokens and often access tokens
 
 ---
+
 ## JWT Structure Visualized
 
 ![jwt_anatomy](svg/courses/networking/oauth2-and-oidc/07_jwt/jwt_anatomy.svg)
 
 ---
+
 ## Three Parts
 
 - Header — algorithm and key ID
@@ -43,6 +48,7 @@ audience:
 - Signature covers header + payload
 
 ---
+
 ## Header Example
 
 ```json
@@ -58,6 +64,7 @@ audience:
 - `kid` — key ID for rotation
 
 ---
+
 ## Payload (Claims) Example
 
 ```json
@@ -75,6 +82,7 @@ audience:
 - All values JSON
 
 ---
+
 ## Standard Claims
 
 - `iss` — issuer
@@ -86,6 +94,7 @@ audience:
 - `jti` — unique JWT ID
 
 ---
+
 ## Signature
 
 - `signature = HMAC_SHA256(base64(header) + "." + base64(payload), secret)`
@@ -95,6 +104,7 @@ audience:
 - The whole point of a JWT
 
 ---
+
 ## Signing Algorithms
 
 - HS256 — HMAC-SHA256, symmetric (shared secret)
@@ -104,6 +114,7 @@ audience:
 - Ed25519 — modern, fast, small
 
 ---
+
 ## HS256 vs RS256
 
 - HS256: same secret signs and verifies
@@ -113,11 +124,13 @@ audience:
 - Use RS256 (or ES256) in OAuth2/OIDC
 
 ---
+
 ## JWT Pitfall Catalogue
 
 ![jwt_pitfalls](svg/courses/networking/oauth2-and-oidc/07_jwt/jwt_pitfalls.svg)
 
 ---
+
 ## The "alg=none" Attack
 
 - A malicious token with `alg: "none"`
@@ -127,6 +140,7 @@ audience:
 - Modern libraries reject this; verify yours does
 
 ---
+
 ## Algorithm Confusion Attack
 
 - Server uses RS256 (asymmetric)
@@ -136,6 +150,7 @@ audience:
 - Don't trust `alg` from the header
 
 ---
+
 ## Validation Steps
 
 - Decode header; check `alg` matches what you expect
@@ -145,6 +160,7 @@ audience:
 - Check any custom claims your app needs
 
 ---
+
 ## Validation in Pseudocode
 
 ```python
@@ -160,6 +176,7 @@ def validate(jwt, expected_iss, expected_aud):
 ```
 
 ---
+
 ## JWKS: Key Distribution
 
 - JSON Web Key Set
@@ -169,6 +186,7 @@ def validate(jwt, expected_iss, expected_aud):
 - Re-fetch on cache miss for unknown `kid`
 
 ---
+
 ## JWKS Example
 
 ```json
@@ -187,6 +205,7 @@ def validate(jwt, expected_iss, expected_aud):
 ```
 
 ---
+
 ## Key Rotation
 
 - Auth server rotates keys periodically
@@ -196,6 +215,7 @@ def validate(jwt, expected_iss, expected_aud):
 - Standard practice in OIDC
 
 ---
+
 ## Lifetimes for JWT
 
 - Short access tokens: 5-15 min
@@ -205,6 +225,7 @@ def validate(jwt, expected_iss, expected_aud):
 - Don't use 24h JWTs without a strong reason
 
 ---
+
 ## JWT vs Opaque Tokens (Recap)
 
 - JWT: stateless, scales, hard to revoke
@@ -214,6 +235,7 @@ def validate(jwt, expected_iss, expected_aud):
 - Many auth servers offer both
 
 ---
+
 ## Encrypted JWTs
 
 - JSON Web Encryption (RFC 7516)
@@ -223,6 +245,7 @@ def validate(jwt, expected_iss, expected_aud):
 - Most OAuth2 deployments use signed JWTs, not encrypted
 
 ---
+
 ## When to Encrypt
 
 - Claims contain personally identifiable info you don't want exposed
@@ -232,6 +255,7 @@ def validate(jwt, expected_iss, expected_aud):
 - Clients almost never decrypt; auth servers use encryption for inter-server
 
 ---
+
 ## Common JWT Pitfalls
 
 - Trusting `alg` from the header
@@ -241,6 +265,7 @@ def validate(jwt, expected_iss, expected_aud):
 - Logging tokens (please don't)
 
 ---
+
 ## Decoding JWTs for Debugging
 
 - jwt.io — decodes and validates in browser (don't paste prod tokens)
@@ -249,6 +274,7 @@ def validate(jwt, expected_iss, expected_aud):
 - Decoding is not validating — never trust without verifying signature
 
 ---
+
 ## Best Practices
 
 - Pin the expected algorithm during validation
@@ -258,6 +284,7 @@ def validate(jwt, expected_iss, expected_aud):
 - Monitor for unusual `kid` values
 
 ---
+
 ## When NOT to Use JWT
 
 - Sessions where you can use server-side session storage instead
@@ -266,6 +293,7 @@ def validate(jwt, expected_iss, expected_aud):
 - Use the right tool — JWT isn't always it
 
 ---
+
 ## Summary
 
 - JWT: header + payload + signature, base64url-encoded

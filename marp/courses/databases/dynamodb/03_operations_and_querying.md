@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Operations and Querying
 
 ---
+
 ## What This Chapter Covers
 
 - Item operations
@@ -19,6 +21,7 @@ audience:
 - Batch operations
 
 ---
+
 ## Get Operation
 
 - Read by primary key
@@ -27,11 +30,13 @@ audience:
 - Cheapest read
 
 ---
+
 ## Operation Costs
 
 ![operation_costs](svg/courses/databases/dynamodb/03_operations_and_querying/operation_costs.svg)
 
 ---
+
 ## Put Operation
 
 - Insert or replace
@@ -40,6 +45,7 @@ audience:
 - Returns old item optionally
 
 ---
+
 ## Update Operation
 
 - Modify in place
@@ -48,6 +54,7 @@ audience:
 - Increment, append, set
 
 ---
+
 ## Delete Operation
 
 - By primary key
@@ -56,6 +63,7 @@ audience:
 - Triggers a stream event
 
 ---
+
 ## Query
 
 - By partition key
@@ -64,6 +72,7 @@ audience:
 - Pagination via tokens
 
 ---
+
 ## Scan
 
 - Reads whole table
@@ -72,11 +81,13 @@ audience:
 - Filter is server-side but post-read
 
 ---
+
 ## Query vs Scan
 
 ![query_vs_scan](svg/courses/databases/dynamodb/03_operations_and_querying/query_vs_scan.svg)
 
 ---
+
 ## Conditional Writes
 
 - Optimistic concurrency
@@ -85,6 +96,7 @@ audience:
 - Compare to versions
 
 ---
+
 ## Transactions
 
 - Transactional read and write APIs
@@ -93,6 +105,7 @@ audience:
 - Twice the cost of normal ops
 
 ---
+
 ## Batch Operations
 
 - Bulk read and write APIs
@@ -101,6 +114,7 @@ audience:
 - Retry unprocessed
 
 ---
+
 ## Pagination
 
 - Last evaluated key returned
@@ -109,6 +123,7 @@ audience:
 - Watch for hot pagination
 
 ---
+
 ## Filter Expressions
 
 - Applied after read
@@ -117,6 +132,7 @@ audience:
 - Prefer schema design over filters
 
 ---
+
 ## Projection
 
 - Limit attributes returned
@@ -125,6 +141,7 @@ audience:
 - Set per query or index
 
 ---
+
 ## TTL
 
 - Background sweep deletes expired items
@@ -133,6 +150,7 @@ audience:
 - Use for sessions, carts, caches
 
 ---
+
 ## Common Operation Mistakes
 
 - Scan in hot paths

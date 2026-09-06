@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Correlation and Simple Regression
 
 ---
+
 ## What This Chapter Covers
 
 - Covariance and the correlation coefficient
@@ -21,11 +23,13 @@ audience:
 - Residuals, and when the line is the wrong model
 
 ---
+
 ## What Different Correlations Look Like
 
 ![correlations](svg/courses/math/statistics-applied/13_correlation_and_regression/correlations.svg)
 
 ---
+
 ## Two Variables Moving Together
 
 - Do taller people weigh more? Does ad spend track revenue?
@@ -35,6 +39,7 @@ audience:
 - |r| near 1 means the points hug a straight line
 
 ---
+
 ## What r Tells You — And Doesn't
 
 - r measures the strength of a *linear* relationship — only linear
@@ -44,6 +49,7 @@ audience:
 - One outlier can manufacture or destroy a correlation — always plot the scatter
 
 ---
+
 ## Correlation Is Not Causation
 
 - A&ndash;B correlated could mean: A causes B, B causes A, a third thing C causes both, or coincidence
@@ -53,6 +59,7 @@ audience:
 - State correlations *as* correlations; don't smuggle in causal language
 
 ---
+
 ## Fitting A Line
 
 - **Simple linear regression**: y &asymp; b&#8320; + b&#8321;x — predict y from x with a straight line
@@ -62,11 +69,13 @@ audience:
 - It's the simplest predictive model and the foundation for everything fancier
 
 ---
+
 ## Regression Line and Residuals
 
 ![regression_residuals](svg/courses/math/statistics-applied/13_correlation_and_regression/regression_residuals.svg)
 
 ---
+
 ## Reading The Output
 
 - **Slope**: "each extra $1k of ad spend is associated with ~$3.2k more revenue" — *associated with*, not "causes"
@@ -76,6 +85,7 @@ audience:
 - High R&sup2; with a meaningless model still predicts badly out of sample — beware
 
 ---
+
 ## Residuals Tell The Truth
 
 - A **residual** is actual y minus predicted y — what the line missed
@@ -85,6 +95,7 @@ audience:
 - Big isolated residuals &#8594; outliers worth investigating
 
 ---
+
 ## When The Line Is Wrong
 
 - Clearly curved relationship — fit a polynomial or transform a variable
@@ -94,6 +105,7 @@ audience:
 - Time series with trend and autocorrelation — needs time-series methods
 
 ---
+
 ## Correlation And Regression In Python
 
 ```python
@@ -109,6 +121,7 @@ print(f"y = {res.intercept:.2f} + {res.slope:.2f}*x   slope p = {res.pvalue:.1e}
 ```
 
 ---
+
 ## Common Mistakes
 
 - Reading a correlation as a cause

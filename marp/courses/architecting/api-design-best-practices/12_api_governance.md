@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # API Governance
 
 ---
+
 ## What Governance Means
 
 - A set of standards, processes, and tools that keep APIs consistent
@@ -20,6 +22,7 @@ audience:
 - Important when more than a few teams ship APIs
 
 ---
+
 ## Why It Matters
 
 - Without governance: each team invents its own conventions
@@ -28,11 +31,13 @@ audience:
 - The cost is invisible until it isn't
 
 ---
+
 ## Governance Pillars
 
 ![governance_pillars](svg/courses/architecting/api-design-best-practices/12_api_governance/governance_pillars.svg)
 
 ---
+
 ## API Design Guidelines
 
 - A document that specifies the standards
@@ -41,6 +46,7 @@ audience:
 - Public if possible — your guidelines are also a recruiting signal
 
 ---
+
 ## Sample Guidelines Coverage
 
 - URL structure (lowercase, hyphens, plural nouns)
@@ -53,6 +59,7 @@ audience:
 - Documentation (OpenAPI required)
 
 ---
+
 ## Linting Tools
 
 - **Spectral**: lint OpenAPI specs against rules
@@ -62,6 +69,7 @@ audience:
 - Run in CI; fail builds on violations
 
 ---
+
 ## API Review Process
 
 - New APIs go through design review before implementation
@@ -70,6 +78,7 @@ audience:
 - Reviews are fast (30 minutes) and frequent — not gatekeeping
 
 ---
+
 ## What Reviews Look At
 
 - Naming and resource modeling
@@ -80,6 +89,7 @@ audience:
 - Documentation quality
 
 ---
+
 ## Automated Validation
 
 - CI runs the linter on every spec change
@@ -88,6 +98,7 @@ audience:
 - Manual review focuses on judgment, automation handles rules
 
 ---
+
 ## API Lifecycle Management
 
 - Stages: design → implement → release → deprecate → sunset
@@ -96,6 +107,7 @@ audience:
 - Forgotten APIs are caught early
 
 ---
+
 ## API Catalog
 
 - A central registry of all APIs in the organization
@@ -104,6 +116,7 @@ audience:
 - Tools: Backstage (Spotify), Postman API Network, internal portals
 
 ---
+
 ## Standards vs Autonomy
 
 - Standardize what matters for consumers (naming, errors, auth)
@@ -112,6 +125,7 @@ audience:
 - Too little: every consumer fights inconsistency
 
 ---
+
 ## API Maturity Levels
 
 - Level 0: no governance — each team does its own thing
@@ -121,6 +135,7 @@ audience:
 - Move up incrementally; don't try to skip levels
 
 ---
+
 ## Cultural Aspects
 
 - Governance only works with developer buy-in
@@ -129,6 +144,7 @@ audience:
 - Architects should be helpers, not police
 
 ---
+
 ## Tooling Stack
 
 - API spec format: OpenAPI 3
@@ -139,6 +155,7 @@ audience:
 - Contract testing: Pact
 
 ---
+
 ## When to Skip Governance
 
 - A small team with a single API
@@ -147,6 +164,7 @@ audience:
 - Don't impose governance on the wrong scale
 
 ---
+
 ## Course Recap
 
 - API design is a contract with consumers
@@ -157,6 +175,7 @@ audience:
 - Governance keeps APIs consistent at scale
 
 ---
+
 ## Summary
 
 - Governance = standards + reviews + tooling

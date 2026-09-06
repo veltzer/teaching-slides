@@ -9,6 +9,7 @@ audience:
   - audiences:architects
 
 ---
+
 # Small Scale Design Patterns
 
 ---

@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Network Device Overview
 ## Chapter 6: Device Drivers and Network Stack Integration
 
@@ -25,6 +26,7 @@ audience:
 - Memory Mapping
 
 ---
+
 ## Socket Buffer (`sk_buff`)
 
 ```c

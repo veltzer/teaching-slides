@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Search Fundamentals
 
 ---
@@ -23,6 +24,7 @@ audience:
 ![search_essentials](svg/courses/databases/elasticsearch-for-developers/05_search_fundamentals/search_essentials.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The search API
@@ -34,6 +36,7 @@ audience:
 - Sort
 
 ---
+
 ## The Search API
 
 ```http
@@ -49,6 +52,7 @@ POST /products/_search
 - Returns hits, total, time
 
 ---
+
 ## Query DSL
 
 - JSON-based query language
@@ -56,6 +60,7 @@ POST /products/_search
 - Composable
 
 ---
+
 ## Match Query
 
 ```json
@@ -67,6 +72,7 @@ POST /products/_search
 - Default for full-text
 
 ---
+
 ## Term Query
 
 ```json
@@ -77,11 +83,13 @@ POST /products/_search
 - For keyword fields, IDs, exact values
 
 ---
+
 ## Match vs Term
 
 ![match_vs_term](svg/courses/databases/elasticsearch-for-developers/05_search_fundamentals/match_vs_term.svg)
 
 ---
+
 ## Match Phrase
 
 ```json
@@ -92,6 +100,7 @@ POST /products/_search
 - For phrase search
 
 ---
+
 ## Bool Query
 
 ```json
@@ -107,6 +116,7 @@ POST /products/_search
 - Combine multiple clauses
 
 ---
+
 ## must vs filter
 
 - **must**: scored; affects relevance
@@ -115,6 +125,7 @@ POST /products/_search
 - Use filter for: exact matches, ranges, exists checks
 
 ---
+
 ## Range Query
 
 ```json
@@ -124,6 +135,7 @@ POST /products/_search
 - Numeric, date, IP fields
 
 ---
+
 ## Pagination
 
 - `from`, `size`
@@ -132,6 +144,7 @@ POST /products/_search
 - Don't: deep `from` paging on big indexes
 
 ---
+
 ## Sort
 
 ```json
@@ -142,6 +155,7 @@ POST /products/_search
 - Combine with score
 
 ---
+
 ## Source Filtering
 
 ```json
@@ -152,6 +166,7 @@ POST /products/_search
 - Saves bandwidth
 
 ---
+
 ## Common Search Mistakes
 
 - Term query on analysed text

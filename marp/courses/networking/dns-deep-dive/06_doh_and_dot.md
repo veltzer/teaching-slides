@@ -9,9 +9,11 @@ audience:
   - audiences:network-engineers
 
 ---
+
 # DNS over HTTPS and DNS over TLS
 
 ---
+
 ## What This Chapter Covers
 
 - The privacy problem with traditional DNS
@@ -21,6 +23,7 @@ audience:
 - Trade-offs and enterprise concerns
 
 ---
+
 ## The Privacy Problem
 
 - Plain DNS is unencrypted UDP
@@ -30,6 +33,7 @@ audience:
 - Widely considered a real privacy issue
 
 ---
+
 ## What DoH and DoT Solve
 
 - Encrypt the DNS query end-to-end
@@ -39,16 +43,19 @@ audience:
 - Different protocols for different deployment styles
 
 ---
+
 ## DoH vs DoT Visualized
 
 ![doh_dot](svg/courses/networking/dns-deep-dive/06_doh_and_dot/doh_dot.svg)
 
 ---
+
 ## Encrypted DNS Compared
 
 ![encrypted_dns_compared](svg/courses/networking/dns-deep-dive/06_doh_and_dot/encrypted_dns_compared.svg)
 
 ---
+
 ## DNS over TLS (DoT)
 
 - DNS queries inside TLS sessions
@@ -58,6 +65,7 @@ audience:
 - Strong choice for known infrastructure
 
 ---
+
 ## DNS over HTTPS (DoH)
 
 - DNS queries inside HTTPS POST/GET
@@ -67,6 +75,7 @@ audience:
 - The choice browsers have largely made
 
 ---
+
 ## DoH Wire Format
 
 - HTTP/2 POST with `application/dns-message`
@@ -76,6 +85,7 @@ audience:
 - Caching headers can apply
 
 ---
+
 ## DoT Wire Format
 
 - TCP connection on port 853
@@ -85,6 +95,7 @@ audience:
 - Standard fits well into existing DNS resolvers
 
 ---
+
 ## Server Configuration: Unbound
 
 ```output
@@ -100,6 +111,7 @@ server:
 - Standard DoT server in a few lines
 
 ---
+
 ## Server Configuration: BIND
 
 - More involved than Unbound
@@ -109,6 +121,7 @@ server:
 - Modern BIND is improving fast
 
 ---
+
 ## Browser DoH
 
 - Firefox: enables Cloudflare DoH by default in some regions
@@ -118,6 +131,7 @@ server:
 - Configure per browser policy if needed
 
 ---
+
 ## OS-Level DoH/DoT
 
 - Android: built-in private DNS (DoT) for years
@@ -127,6 +141,7 @@ server:
 - Adoption is rapid
 
 ---
+
 ## Public DoH/DoT Providers
 
 - Cloudflare: 1.1.1.1 (DoH/DoT)
@@ -136,6 +151,7 @@ server:
 - Most major resolvers support encrypted variants
 
 ---
+
 ## Oblivious DoH (ODoH)
 
 - Adds a relay between client and resolver
@@ -145,6 +161,7 @@ server:
 - Cloudflare and Apple support this
 
 ---
+
 ## Client Configuration: macOS
 
 - System Settings → Network → DNS
@@ -154,6 +171,7 @@ server:
 - Apple ecosystem has rich tooling
 
 ---
+
 ## Client Configuration: Linux
 
 - systemd-resolved: `DNS=` and `DNSOverTLS=yes` in resolved.conf
@@ -163,6 +181,7 @@ server:
 - Container networks add complexity
 
 ---
+
 ## Enterprise Concerns
 
 - DoH bypasses DNS-based filtering and logging
@@ -172,6 +191,7 @@ server:
 - Policy decision; trade-offs all around
 
 ---
+
 ## Blocking Public DoH
 
 - Block known public DoH IP ranges (Cloudflare, Google)
@@ -181,6 +201,7 @@ server:
 - Becoming harder as adoption rises
 
 ---
+
 ## Performance: DoH vs Plain DNS
 
 - TLS handshake adds latency on first connection
@@ -190,6 +211,7 @@ server:
 - Real-world: typically negligible for users
 
 ---
+
 ## Performance: DoT vs DoH
 
 - DoT: simpler protocol, slightly faster
@@ -199,6 +221,7 @@ server:
 - Both vastly faster than the latency they hide
 
 ---
+
 ## Privacy Threats DoH/DoT Don't Solve
 
 - The resolver still sees your queries
@@ -208,6 +231,7 @@ server:
 - Pick a resolver you trust; don't assume
 
 ---
+
 ## DoH/DoT vs VPN
 
 - VPN encrypts everything; DoH/DoT only DNS
@@ -217,6 +241,7 @@ server:
 - Combine for layered defense
 
 ---
+
 ## Common Pitfalls
 
 - Plaintext fallback allowed silently — defeats purpose
@@ -226,6 +251,7 @@ server:
 - Assuming all "encrypted DNS" means the same thing
 
 ---
+
 ## Best Practices
 
 - Configure both DoH and DoT where possible
@@ -235,6 +261,7 @@ server:
 - Document and educate team about DoH/DoT
 
 ---
+
 ## The Future
 
 - DoH/DoT becoming default in most stacks
@@ -244,6 +271,7 @@ server:
 - Plain DNS will look anachronistic in a few years
 
 ---
+
 ## Summary
 
 - DoT and DoH encrypt DNS in transit

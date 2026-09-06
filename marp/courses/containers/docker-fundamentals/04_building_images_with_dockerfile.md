@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Building Images with Dockerfile
 
 ---
+
 ## What This Chapter Covers
 
 - Dockerfile syntax
@@ -22,6 +24,7 @@ audience:
 - Multi-stage builds
 
 ---
+
 ## What a Dockerfile Is
 
 - A text file with a sequence of instructions
@@ -31,11 +34,13 @@ audience:
 - Comments start with `#`
 
 ---
+
 ## Layers and Multi-stage
 
 ![dockerfile_layers](svg/courses/containers/docker-fundamentals/04_building_images_with_dockerfile/dockerfile_layers.svg)
 
 ---
+
 ## A Minimal Dockerfile
 
 ```dockerfile
@@ -52,6 +57,7 @@ CMD ["python", "main.py"]
 - `docker run myapp:1.0` runs it
 
 ---
+
 ## FROM
 
 - Always the first instruction (after optional ARG)
@@ -61,6 +67,7 @@ CMD ["python", "main.py"]
 - `FROM scratch` for absolutely empty (rare; mostly Go binaries)
 
 ---
+
 ## RUN, COPY, ADD
 
 - **RUN**: execute a command at build time (`apt-get install`, `pip install`)
@@ -70,6 +77,7 @@ CMD ["python", "main.py"]
 - Combine RUN with `&&` to keep layer count down
 
 ---
+
 ## WORKDIR, ENV
 
 - **WORKDIR**: sets the current directory for following instructions and the running container
@@ -79,6 +87,7 @@ CMD ["python", "main.py"]
 - Multiple `ENV` in one line is fine: `ENV LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8`
 
 ---
+
 ## EXPOSE, USER
 
 - **EXPOSE**: documents which port the container listens on (does *not* publish it)
@@ -88,6 +97,7 @@ CMD ["python", "main.py"]
 - Create the user first: `RUN useradd -m app && USER app`
 
 ---
+
 ## CMD vs ENTRYPOINT
 
 - **CMD**: the *default* command. Overridable at `docker run`.
@@ -97,6 +107,7 @@ CMD ["python", "main.py"]
 - Use ENTRYPOINT for "this image *is* this binary"; CMD for default behaviour
 
 ---
+
 ## CMD vs ENTRYPOINT in Code
 
 ```dockerfile
@@ -109,6 +120,7 @@ CMD ["--config", "/etc/app.yaml"]
 - Use the JSON-array form (exec form) — avoids a shell wrapper
 
 ---
+
 ## Build Context
 
 - The set of files Docker sends to the daemon at build time
@@ -118,6 +130,7 @@ CMD ["--config", "/etc/app.yaml"]
 - Don't run `docker build` at `/` — you'll send your whole disk
 
 ---
+
 ## .dockerignore
 
 ```gitignore
@@ -135,6 +148,7 @@ __pycache__/
 - Also keeps secrets out of the context (and out of the image)
 
 ---
+
 ## Layer Caching
 
 - Docker caches each layer
@@ -144,6 +158,7 @@ __pycache__/
 - One bad cache miss can recompile everything from there down
 
 ---
+
 ## Cache-Friendly Ordering
 
 ```dockerfile
@@ -163,6 +178,7 @@ CMD ["python", "main.py"]
 - Adding a new dependency invalidates only from `requirements.txt` down
 
 ---
+
 ## Multi-Stage Builds
 
 - A single Dockerfile with multiple `FROM` stages
@@ -172,6 +188,7 @@ CMD ["python", "main.py"]
 - Standard practice for Go, Rust, Java, modern Node
 
 ---
+
 ## Multi-Stage in Practice
 
 ```dockerfile
@@ -193,6 +210,7 @@ ENTRYPOINT ["/app/server"]
 - Final image: alpine + one binary, no Go toolchain
 
 ---
+
 ## Tagging During Build
 
 ```bash
@@ -206,6 +224,7 @@ docker build --target builder -t myapp:dev .  # stop at named stage
 - Use registry-prefixed tags right away if you'll push
 
 ---
+
 ## Build Arguments
 
 ```dockerfile
@@ -222,6 +241,7 @@ docker build --build-arg NODE_VERSION=22 -t myapp .
 - Don't use ARG for secrets — they end up in the image history
 
 ---
+
 ## Common Mistakes
 
 - Copying the entire repo before installing dependencies (cache busts on every code change)
@@ -231,6 +251,7 @@ docker build --build-arg NODE_VERSION=22 -t myapp .
 - Using `:latest` base images (your build is non-reproducible)
 
 ---
+
 ## Dockerfile Best Practices
 
 ![dockerfile_best_practices](svg/courses/containers/docker-fundamentals/04_building_images_with_dockerfile/dockerfile_best_practices.svg)

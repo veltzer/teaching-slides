@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Function Pointers in C
 
 ---

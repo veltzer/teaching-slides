@@ -10,9 +10,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Part-of-Speech Tagging
 
 ---
+
 ## What This Chapter Covers
 
 - POS tagging concepts and tag set design
@@ -22,6 +24,7 @@ audience:
 - POS tagging across morphologically rich and low-resource languages
 
 ---
+
 ## Why Part-of-Speech Tagging Still Matters
 
 - A foundational sequence labeling task — every word gets a syntactic category
@@ -30,6 +33,7 @@ audience:
 - Cheap, fast, and surprisingly informative for downstream features
 
 ---
+
 ## What a POS Tagger Produces
 
 - Input: a tokenized sentence
@@ -38,6 +42,7 @@ audience:
 - The tag inventory is the design choice that shapes everything else
 
 ---
+
 ## Universal Dependencies Tag Set
 
 - A coarse, language-agnostic inventory of seventeen tags
@@ -47,6 +52,7 @@ audience:
 - Designed for cross-lingual consistency, not linguistic depth
 
 ---
+
 ## Language-Specific Fine-Grained Tags
 
 - Penn Treebank uses 36 tags for English alone
@@ -55,6 +61,7 @@ audience:
 - Many treebanks add morphological features beyond the bare tag
 
 ---
+
 ## Tag Set Design Trade-offs
 
 - Coarse tags are easier to learn and easier to evaluate consistently
@@ -63,11 +70,13 @@ audience:
 - Monolingual production systems often want the fine ones
 
 ---
+
 ## Tag Set Comparison
 
 ![tag_set_comparison](svg/courses/ai/natural-language-processing/12_part_of_speech_tagging/tag_set_comparison.svg)
 
 ---
+
 ## Tagging as Sequence Labeling
 
 - Each token gets a label that depends on its context, not just its form
@@ -76,6 +85,7 @@ audience:
 - Joint decoding over the whole sentence beats independent per-token guesses
 
 ---
+
 ## Ambiguity Is the Whole Problem
 
 - Most frequent English words have more than one possible tag
@@ -84,6 +94,7 @@ audience:
 - Local context usually disambiguates; sometimes long-range context is required
 
 ---
+
 ## Rule-Based Tagging
 
 - Hand-written rules of the form "if context matches, assign tag"
@@ -92,6 +103,7 @@ audience:
 - Still useful as a baseline and for low-resource languages with grammars but no data
 
 ---
+
 ## Hidden Markov Model Tagging
 
 - Tags are hidden states; words are observations
@@ -100,6 +112,7 @@ audience:
 - Viterbi decoding finds the most likely tag sequence in linear time
 
 ---
+
 ## HMM in Practice
 
 ```python
@@ -121,6 +134,7 @@ def viterbi(words, tags, transition, emission):
 - Unknown words need a fallback distribution
 
 ---
+
 ## The Brill Tagger
 
 - Start with a baseline: tag each word with its most frequent tag
@@ -129,6 +143,7 @@ def viterbi(words, tags, transition, emission):
 - Apply the learned rules in order at inference
 
 ---
+
 ## Transformation-Based Learning
 
 - Greedy: at each step pick the rule that reduces error the most
@@ -137,11 +152,13 @@ def viterbi(words, tags, transition, emission):
 - Slow to train, fast to apply, transparent to debug
 
 ---
+
 ## Classical Taggers Compared
 
 ![classical_taggers](svg/courses/ai/natural-language-processing/12_part_of_speech_tagging/classical_taggers.svg)
 
 ---
+
 ## Why Neural Taggers Won
 
 - Hand-crafted features cap at the imagination of the engineer
@@ -150,6 +167,7 @@ def viterbi(words, tags, transition, emission):
 - Subword and character signals dissolve the unknown-word problem
 
 ---
+
 ## Character-Level Features
 
 - Word embeddings miss the morphology inside the word
@@ -158,6 +176,7 @@ def viterbi(words, tags, transition, emission):
 - The character vector concatenates with the word vector before tagging
 
 ---
+
 ## BiLSTM Tagger Architecture
 
 - Embed each token, optionally with character features
@@ -166,6 +185,7 @@ def viterbi(words, tags, transition, emission):
 - Decode greedily or with a `CRF` layer on top
 
 ---
+
 ## CRF Decoding Layer
 
 - A linear-chain `CRF` learns transition scores between tag pairs
@@ -174,6 +194,7 @@ def viterbi(words, tags, transition, emission):
 - Trained jointly with the encoder — backprop through the dynamic program
 
 ---
+
 ## Transformer-Based Taggers
 
 - Replace the `BiLSTM` with a pretrained transformer encoder
@@ -182,6 +203,7 @@ def viterbi(words, tags, transition, emission):
 - State of the art on most languages with small effort
 
 ---
+
 ## Subword Alignment
 
 - Tokenizers split words; tags are assigned per word
@@ -190,6 +212,7 @@ def viterbi(words, tags, transition, emission):
 - The alignment code is unglamorous but easy to get wrong
 
 ---
+
 ## Multi-Task Tagging
 
 - Joint training of POS, morphology, and sometimes parsing
@@ -198,11 +221,13 @@ def viterbi(words, tags, transition, emission):
 - Common in modern toolkits like `Stanza`, `Trankit`, `spaCy`
 
 ---
+
 ## Neural Tagger Architecture
 
 ![neural_tagger](svg/courses/ai/natural-language-processing/12_part_of_speech_tagging/neural_tagger.svg)
 
 ---
+
 ## Token Accuracy
 
 - Fraction of tokens tagged correctly
@@ -211,6 +236,7 @@ def viterbi(words, tags, transition, emission):
 - Modest absolute gains hide a lot of qualitative improvement
 
 ---
+
 ## Sentence Accuracy
 
 - Fraction of sentences with every token tagged correctly
@@ -219,6 +245,7 @@ def viterbi(words, tags, transition, emission):
 - Often sits in the 50 to 70 percent range even for excellent models
 
 ---
+
 ## Confusion Analysis
 
 - Which tag pairs does the model swap most often?
@@ -227,6 +254,7 @@ def viterbi(words, tags, transition, emission):
 - Fixing the data label guideline beats tweaking the model
 
 ---
+
 ## Out-of-Vocabulary Tokens
 
 - Words the tagger never saw during training
@@ -235,6 +263,7 @@ def viterbi(words, tags, transition, emission):
 - Track OOV accuracy separately from overall accuracy
 
 ---
+
 ## Error Analysis Workflow
 
 - Bucket errors by tag, by frequency, by sentence length, by domain
@@ -243,6 +272,7 @@ def viterbi(words, tags, transition, emission):
 - Most production gains come from cleaning the data, not retraining
 
 ---
+
 ## Morphologically Rich Languages
 
 - Turkish, Finnish, Hungarian, Arabic, Russian — many forms per lemma
@@ -251,6 +281,7 @@ def viterbi(words, tags, transition, emission):
 - Joint POS plus morphological feature tagging is standard practice
 
 ---
+
 ## Low-Resource Languages
 
 - Few hundred to few thousand tagged sentences, if any
@@ -259,6 +290,7 @@ def viterbi(words, tags, transition, emission):
 - Annotation projection from parallel text is a useful supplement
 
 ---
+
 ## Cross-Lingual Tagger Approaches
 
 - Train on a high-resource source, evaluate on a low-resource target
@@ -267,6 +299,7 @@ def viterbi(words, tags, transition, emission):
 - The Universal Dependencies treebanks were built for this kind of work
 
 ---
+
 ## When To Use POS Tags Today
 
 - As features for downstream classifiers when data is small
@@ -275,6 +308,7 @@ def viterbi(words, tags, transition, emission):
 - As a debugging aid when something downstream looks wrong
 
 ---
+
 ## When Not To Bother
 
 - End-to-end neural models often need no explicit tags
@@ -283,6 +317,7 @@ def viterbi(words, tags, transition, emission):
 - Use POS when the consumer is a rule-based system or a feature-based classifier
 
 ---
+
 ## Anti-Patterns
 
 - Mixing tag sets across training and evaluation
@@ -291,6 +326,7 @@ def viterbi(words, tags, transition, emission):
 - Treating fine-grained tags as if they were coarse without remapping
 
 ---
+
 ## Summary
 
 - POS tagging is the canonical sequence labeling task

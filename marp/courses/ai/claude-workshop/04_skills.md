@@ -10,9 +10,11 @@ audience:
   - audiences:senior-developers
 
 ---
+
 # Skills
 
 ---
+
 ## What This Chapter Covers
 
 - What a skill is
@@ -22,6 +24,7 @@ audience:
 - When not to use one
 
 ---
+
 ## What A Skill Is
 
 - A named, reusable instruction set
@@ -30,6 +33,7 @@ audience:
 - A way to package a workflow
 
 ---
+
 ## Skills Vs Plain Prompts
 
 - A prompt is one-shot
@@ -38,6 +42,7 @@ audience:
 - A skill can scope its tools
 
 ---
+
 ## Skills Vs Agents
 
 - A skill runs in the main conversation
@@ -46,11 +51,13 @@ audience:
 - An agent does not
 
 ---
+
 ## Skills Vs Sub-Agents
 
 ![skills_vs_agents](svg/courses/ai/claude-workshop/04_skills/skills_vs_agents.svg)
 
 ---
+
 ## Anatomy Of A Skill
 
 - A name and a description
@@ -59,6 +66,7 @@ audience:
 - Optional tool list
 
 ---
+
 ## Built-In Skills
 
 - Shipped with Claude Code
@@ -67,6 +75,7 @@ audience:
 - A good place to learn the pattern
 
 ---
+
 ## Touring The Built-Ins
 
 - `init` to set up CLAUDE.md
@@ -75,6 +84,7 @@ audience:
 - `update-config` to edit settings
 
 ---
+
 ## Reading A Skill Description
 
 - The description tells when it fires
@@ -83,6 +93,7 @@ audience:
 - Avoid overly broad descriptions
 
 ---
+
 ## Invoking Explicitly
 
 - Type `/<name>` to call it
@@ -91,6 +102,7 @@ audience:
 - Useful for testing a new skill
 
 ---
+
 ## Authoring A Skill
 
 - Place a file in `.claude/skills/`
@@ -99,11 +111,13 @@ audience:
 - Write the instructions
 
 ---
+
 ## Anatomy Visualized
 
 ![skill_anatomy](svg/courses/ai/claude-workshop/04_skills/skill_anatomy.svg)
 
 ---
+
 ## A Good Description
 
 - States the trigger conditions
@@ -112,6 +126,7 @@ audience:
 - Says what is out of scope
 
 ---
+
 ## Scoping Tools
 
 - Allow only what the skill needs
@@ -120,6 +135,7 @@ audience:
 - Smaller scope is safer
 
 ---
+
 ## Versioning A Skill
 
 - Commit it to the repo
@@ -128,6 +144,7 @@ audience:
 - Tag with the team that owns it
 
 ---
+
 ## Sharing Across A Team
 
 - Project skills live in the repo
@@ -136,6 +153,7 @@ audience:
 - Symlinks or a sync tool keep them in step
 
 ---
+
 ## Slash Commands
 
 - A user-facing way to invoke a skill
@@ -144,6 +162,7 @@ audience:
 - Documented in CLAUDE.md
 
 ---
+
 ## Workflow Patterns
 
 - `review` to do a structured PR review
@@ -152,6 +171,7 @@ audience:
 - `audit` for a checklist pass
 
 ---
+
 ## A Concrete Example
 
 - Skill: `release-notes`
@@ -160,6 +180,7 @@ audience:
 - Outputs markdown for the changelog
 
 ---
+
 ## When Not To Use A Skill
 
 - One-off tasks
@@ -168,6 +189,7 @@ audience:
 - Tasks that change every time
 
 ---
+
 ## Common Skill Mistakes
 
 - Description too vague to trigger
@@ -176,6 +198,7 @@ audience:
 - Not scoping tools
 
 ---
+
 ## Hands-On Exercise
 
 - Write a skill that runs your linter

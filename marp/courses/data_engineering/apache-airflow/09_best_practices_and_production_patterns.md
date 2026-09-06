@@ -8,14 +8,17 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Best Practices and Production Patterns
 
 ---
+
 ## Patterns
 
 ![best_practices](svg/courses/data_engineering/apache-airflow/09_best_practices_and_production_patterns/best_practices.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - DAG design
@@ -26,6 +29,7 @@ audience:
 - Anti-patterns
 
 ---
+
 ## DAG Design
 
 - Each DAG: one logical pipeline
@@ -34,6 +38,7 @@ audience:
 - Multiple smaller DAGs better than one giant
 
 ---
+
 ## Idempotency
 
 - Same task with same data interval &#8594; same result
@@ -42,6 +47,7 @@ audience:
 - Output: deterministic per interval
 
 ---
+
 ## Atomic Writes
 
 - Write to staging; rename to final
@@ -49,6 +55,7 @@ audience:
 - Avoids: partial data in target
 
 ---
+
 ## Code Organisation
 
 - DAGs in dags/ folder
@@ -57,6 +64,7 @@ audience:
 - Don't pollute the dag folder
 
 ---
+
 ## DAG File Structure
 
 - One DAG per file (mostly)
@@ -65,6 +73,7 @@ audience:
 - Imports at top
 
 ---
+
 ## Avoid In DAG Definition
 
 - DB queries
@@ -74,6 +83,7 @@ audience:
 - These run every parse (every minute by default)
 
 ---
+
 ## Testing
 
 - Unit test custom operators
@@ -82,6 +92,7 @@ audience:
 - pytest-airflow helps
 
 ---
+
 ## DAG Validation Test
 
 ```python
@@ -92,6 +103,7 @@ def test_dag_loads():
 ```
 
 ---
+
 ## Deployment
 
 - DAGs from git
@@ -100,6 +112,7 @@ def test_dag_loads():
 - Standard ops practice
 
 ---
+
 ## CI for DAGs
 
 - pytest for unit tests
@@ -108,6 +121,7 @@ def test_dag_loads():
 - On merge: deploy
 
 ---
+
 ## Versioning
 
 - DAG behaviour can change
@@ -116,6 +130,7 @@ def test_dag_loads():
 - Don't surprise consumers
 
 ---
+
 ## Anti-Patterns
 
 - DAGs that import heavy libraries
@@ -125,6 +140,7 @@ def test_dag_loads():
 - Synchronous chains where parallel would work
 
 ---
+
 ## When To Use Airflow
 
 - Batch pipelines
@@ -133,6 +149,7 @@ def test_dag_loads():
 - Team familiar with Python
 
 ---
+
 ## When Not To
 
 - Real-time / streaming
@@ -141,6 +158,7 @@ def test_dag_loads():
 - Tight latency requirements
 
 ---
+
 ## Course Wrap-Up
 
 - Airflow: workflow orchestration in Python
@@ -151,6 +169,7 @@ def test_dag_loads():
 - The standard for batch data pipelines
 
 ---
+
 ## DAG Anti-Patterns
 
 ![dag_anti_patterns](svg/courses/data_engineering/apache-airflow/09_best_practices_and_production_patterns/dag_anti_patterns.svg)

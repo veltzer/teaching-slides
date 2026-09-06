@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # TDD in Different Contexts
 
 ---
+
 ## What This Chapter Covers
 
 - TDD for web applications
@@ -20,16 +22,19 @@ audience:
 - Where TDD struggles
 
 ---
+
 ## Across Contexts
 
 ![tdd_contexts](svg/courses/testing/test-driven-development/09_tdd_in_different_contexts/tdd_contexts.svg)
 
 ---
+
 ## Context Trade Offs
 
 ![context_tradeoffs](svg/courses/testing/test-driven-development/09_tdd_in_different_contexts/context_tradeoffs.svg)
 
 ---
+
 ## Web Applications
 
 - Unit tests: components, controllers, business logic
@@ -39,6 +44,7 @@ audience:
 - Backend: framework-specific (Rails, Django, Spring)
 
 ---
+
 ## Frontend TDD
 
 - Component-level tests with React Testing Library, Vue Test Utils
@@ -48,6 +54,7 @@ audience:
 - E2E with Cypress / Playwright for flows
 
 ---
+
 ## APIs and Microservices
 
 - TDD per endpoint
@@ -57,6 +64,7 @@ audience:
 - Mock external services; test against the contract
 
 ---
+
 ## Contract Testing
 
 - Provider says "I support these calls"
@@ -66,6 +74,7 @@ audience:
 - Pact is the leading tool
 
 ---
+
 ## Algorithms and Data Processing
 
 - TDD shines here
@@ -75,6 +84,7 @@ audience:
 - Performance tests separate from correctness tests
 
 ---
+
 ## Property-Based Testing
 
 ```python
@@ -94,6 +104,7 @@ def test_add_commutative(a, b):
 - Combines well with TDD
 
 ---
+
 ## Databases
 
 - Unit tests: mock the repository
@@ -103,6 +114,7 @@ def test_add_commutative(a, b):
 - Tools: testcontainers for ephemeral DBs
 
 ---
+
 ## TestContainers
 
 ```python
@@ -123,6 +135,7 @@ def test_user_save(db):
 - Drops the "but unit tests can't touch the DB" problem
 
 ---
+
 ## Legacy Codebases
 
 - Untested code; making changes is risky
@@ -132,6 +145,7 @@ def test_user_save(db):
 - Don't try to test everything at once
 
 ---
+
 ## Brownfield TDD
 
 - Existing code; partial test coverage
@@ -141,6 +155,7 @@ def test_user_save(db):
 - Coverage grows over time
 
 ---
+
 ## When TDD Struggles
 
 - UI animations and visual design
@@ -150,6 +165,7 @@ def test_user_save(db):
 - Discovery / research where you don't know the requirements
 
 ---
+
 ## TDD With ML
 
 - Tests for: data pipeline, feature engineering, post-processing
@@ -159,6 +175,7 @@ def test_user_save(db):
 - TDD applies to the *engineering*, not the *learning*
 
 ---
+
 ## TDD With Embedded
 
 - Pure logic: tests on the host
@@ -168,6 +185,7 @@ def test_user_save(db):
 - Test the algorithm; integration-test the bindings
 
 ---
+
 ## TDD With Distributed Systems
 
 - Per-service: TDD as usual
@@ -177,6 +195,7 @@ def test_user_save(db):
 - Don't try to E2E-test every interaction
 
 ---
+
 ## TDD Mindset Across Contexts
 
 - Always: separate logic from I/O
@@ -186,6 +205,7 @@ def test_user_save(db):
 - The first project is hard; subsequent ones easier
 
 ---
+
 ## Common Context Mistakes
 
 - Forcing TDD where it doesn't help (UI animation)

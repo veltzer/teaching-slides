@@ -10,9 +10,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Git Hooks
 
 ---
+
 ## What This Chapter Covers
 
 - Where hooks live and how Git invokes them
@@ -22,6 +24,7 @@ audience:
 - Integrating hooks with CI/CD
 
 ---
+
 ## What Are Git Hooks?
 
 - Scripts in `.git/hooks/` that Git runs at lifecycle events
@@ -31,6 +34,7 @@ audience:
 - Per-repository by default — not pushed with the repo
 
 ---
+
 ## The Hooks Directory
 
 ```bash
@@ -46,21 +50,25 @@ post-update.sample     pre-push.sample        update.sample
 - Local-only — not version-controlled
 
 ---
+
 ## Hook Lifecycle Visualized
 
 ![hook_lifecycle](svg/courses/git/advanced-git/04_hooks/hook_lifecycle.svg)
 
 ---
+
 ## What Hooks Are For
 
 ![hook_uses](svg/courses/git/advanced-git/04_hooks/hook_uses.svg)
 
 ---
+
 ## Hook Categories
 
 ![hook_categories](svg/courses/git/advanced-git/04_hooks/hook_categories.svg)
 
 ---
+
 ## pre-commit: Run Before Commit Is Created
 
 - Fires when `git commit` is invoked
@@ -70,6 +78,7 @@ post-update.sample     pre-push.sample        update.sample
 - The most-used hook in practice
 
 ---
+
 ## A Practical pre-commit
 
 ```bash
@@ -87,6 +96,7 @@ npm run lint --silent || exit 1
 - `--no-verify` skips hooks; treat that as a code smell
 
 ---
+
 ## commit-msg: Validate the Commit Message
 
 - Fires after the message is written
@@ -96,6 +106,7 @@ npm run lint --silent || exit 1
 - Edit the file in-place to amend the message
 
 ---
+
 ## A commit-msg That Enforces Format
 
 ```bash
@@ -114,6 +125,7 @@ fi
 - Pair with a tool like commitlint for richer validation
 
 ---
+
 ## pre-push: Last Chance Before Sharing
 
 - Fires before any commits are sent to a remote
@@ -123,6 +135,7 @@ fi
 - Use for slow checks: full test suites, security scans
 
 ---
+
 ## A pre-push That Runs Tests
 
 ```bash
@@ -140,6 +153,7 @@ fi
 - Skip with `--no-verify` if you really must
 
 ---
+
 ## post-commit and post-merge
 
 - Fire *after* the action completes
@@ -149,6 +163,7 @@ fi
 - Common: `post-commit` triggers documentation rebuilds
 
 ---
+
 ## Server-Side: pre-receive
 
 - Fires on the *server* when a push arrives
@@ -158,6 +173,7 @@ fi
 - Cannot be bypassed by clients
 
 ---
+
 ## Server-Side: update
 
 - Fires per-ref during a push
@@ -167,6 +183,7 @@ fi
 - Same use cases, different blast radius
 
 ---
+
 ## Server-Side: post-receive
 
 - Fires after the push is accepted
@@ -176,6 +193,7 @@ fi
 - The hook hosting providers (GitHub, GitLab) expose
 
 ---
+
 ## Bypassing Hooks
 
 - `git commit --no-verify` skips pre-commit and commit-msg
@@ -185,6 +203,7 @@ fi
 - A bypass is usually a sign the hook is too slow or too strict
 
 ---
+
 ## The Sharing Problem
 
 - `.git/hooks/` is per-repository, not version-controlled
@@ -194,6 +213,7 @@ fi
 - Pre-commit, husky, lefthook are common solutions
 
 ---
+
 ## Sharing Hooks With pre-commit
 
 ```yaml
@@ -212,6 +232,7 @@ repos:
 - Cross-language: hooks can be Python, Node, Go, Rust
 
 ---
+
 ## core.hooksPath: Out-of-Repo Hooks
 
 ```bash
@@ -224,6 +245,7 @@ git config core.hooksPath .githooks
 - Simpler than a hook framework for small teams
 
 ---
+
 ## Hooks vs CI/CD
 
 - Hooks run on the developer's machine — fast, local feedback
@@ -233,6 +255,7 @@ git config core.hooksPath .githooks
 - Don't duplicate slow checks in both — pick the right layer
 
 ---
+
 ## Performance Matters
 
 - A 30-second pre-commit destroys productivity
@@ -242,6 +265,7 @@ git config core.hooksPath .githooks
 - Developers will bypass hooks they perceive as friction
 
 ---
+
 ## Common Pitfalls
 
 - Hook script is not executable — silently skipped
@@ -251,6 +275,7 @@ git config core.hooksPath .githooks
 - `cd` to a known location in the script
 
 ---
+
 ## Best Practices
 
 - Keep hooks fast — under a few seconds for pre-commit
@@ -260,6 +285,7 @@ git config core.hooksPath .githooks
 - Server-side hooks for policy, client-side for productivity
 
 ---
+
 ## Summary
 
 - Hooks are scripts at lifecycle points — flexible automation

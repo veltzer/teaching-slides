@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # CRDTs: Conflict-Free Replicated Data Types
 
 ---
+
 ## What This Chapter Covers
 
 - The problem CRDTs solve
@@ -20,6 +22,7 @@ audience:
 - A short tour
 
 ---
+
 ## The Problem
 
 - Multiple replicas accept writes
@@ -29,16 +32,19 @@ audience:
 - CRDTs provide deterministic merges
 
 ---
+
 ## Common CRDT Types
 
 ![crdt_kinds](svg/courses/architecting/distributed-systems-fundamentals/06_crdts_conflict_free_replicated_data_types/crdt_kinds.svg)
 
 ---
+
 ## CRDT Use Cases
 
 ![crdt_use_cases](svg/courses/architecting/distributed-systems-fundamentals/06_crdts_conflict_free_replicated_data_types/crdt_use_cases.svg)
 
 ---
+
 ## What "Conflict-Free" Means
 
 - Concurrent updates merge to a deterministic result
@@ -48,6 +54,7 @@ audience:
 - Strong eventual consistency
 
 ---
+
 ## State-Based CRDTs
 
 - Each replica has a state
@@ -57,6 +64,7 @@ audience:
 - Examples: G-Counter, OR-Set
 
 ---
+
 ## Op-Based CRDTs
 
 - Each replica broadcasts operations
@@ -66,6 +74,7 @@ audience:
 - Smaller messages than state-based
 
 ---
+
 ## G-Counter
 
 - "Grow-only counter"
@@ -75,6 +84,7 @@ audience:
 - Used for: page views, votes that only increase
 
 ---
+
 ## PN-Counter
 
 - Two G-Counters: increments and decrements
@@ -83,6 +93,7 @@ audience:
 - Used for: distributed counters with both directions
 
 ---
+
 ## OR-Set
 
 - "Observed-Remove Set"
@@ -92,6 +103,7 @@ audience:
 - Used for: shared collections
 
 ---
+
 ## LWW-Register
 
 - "Last-Write-Wins"
@@ -101,6 +113,7 @@ audience:
 - Common in eventual-consistency stores
 
 ---
+
 ## CRDT Use Cases
 
 - Collaborative editing (Google Docs, Figma)
@@ -110,6 +123,7 @@ audience:
 - Session state across regions
 
 ---
+
 ## CRDTs in Practice
 
 - Riak: built on CRDTs
@@ -119,6 +133,7 @@ audience:
 - Firebase Realtime DB
 
 ---
+
 ## Tradeoffs
 
 - Pro: no coordination needed; high availability
@@ -128,6 +143,7 @@ audience:
 - Con: operations are restricted (no "delete unconditionally")
 
 ---
+
 ## Tombstones
 
 - Removed elements need to be tracked, not just deleted
@@ -136,6 +152,7 @@ audience:
 - A real cost of OR-Sets and similar
 
 ---
+
 ## CRDTs vs Coordination
 
 - Coordination (consensus): strong consistency, slow, less available
@@ -144,6 +161,7 @@ audience:
 - Mix: CRDTs for high-volume; consensus for control plane
 
 ---
+
 ## When To Use CRDTs
 
 - Collaborative apps (multiple users editing simultaneously)
@@ -153,6 +171,7 @@ audience:
 - High-availability over strict consistency
 
 ---
+
 ## When NOT To
 
 - Strong consistency required (financial)
@@ -162,6 +181,7 @@ audience:
 - Domain doesn't fit existing CRDT types
 
 ---
+
 ## Common CRDT Mistakes
 
 - Custom CRDTs without proving correctness (wrong merges)

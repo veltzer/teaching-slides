@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Engine Migrations
 
 ---
+
 ## What This Chapter Covers
 
 - Why change engines
@@ -21,6 +23,7 @@ audience:
 - Cutover
 
 ---
+
 ## Why Change
 
 - Cost
@@ -29,6 +32,7 @@ audience:
 - Cloud strategy
 
 ---
+
 ## Compatibility Surface
 
 - SQL dialect differences
@@ -37,6 +41,7 @@ audience:
 - Driver and ORM behavior
 
 ---
+
 ## Pre-Migration Audit
 
 - Inventory queries
@@ -45,6 +50,7 @@ audience:
 - Catalog stored procedures and triggers
 
 ---
+
 ## Replication-Based
 
 - Source streams to target
@@ -53,16 +59,19 @@ audience:
 - Cutover when caught up
 
 ---
+
 ## Cutover Steps
 
 ![cutover_steps](svg/courses/databases/database-migration-strategies/04_engine_migrations/cutover_steps.svg)
 
 ---
+
 ## Cutover Flow
 
 ![replication_cutover](svg/courses/databases/database-migration-strategies/04_engine_migrations/replication_cutover.svg)
 
 ---
+
 ## Tools
 
 - Built-in logical replication
@@ -71,6 +80,7 @@ audience:
 - Custom for unsupported pairs
 
 ---
+
 ## Dual Writes
 
 - App writes both
@@ -79,6 +89,7 @@ audience:
 - Flip when stable
 
 ---
+
 ## Shadow Reads
 
 - Read both sources
@@ -87,6 +98,7 @@ audience:
 - Useful before full cutover
 
 ---
+
 ## Behavioral Differences
 
 - Implicit conversions
@@ -95,6 +107,7 @@ audience:
 - Date and time arithmetic
 
 ---
+
 ## Performance Reset
 
 - Old indexes may not fit new engine
@@ -103,6 +116,7 @@ audience:
 - Tune before cutover
 
 ---
+
 ## Cutover Plan
 
 - Freeze schema window
@@ -111,6 +125,7 @@ audience:
 - Monitor closely
 
 ---
+
 ## Rollback Plan
 
 - Keep source running
@@ -119,6 +134,7 @@ audience:
 - Document the trigger
 
 ---
+
 ## Decommission
 
 - Old engine kept warm for weeks
@@ -127,6 +143,7 @@ audience:
 - Then shut down
 
 ---
+
 ## Cost and Effort
 
 - Engine moves are months not weeks
@@ -135,6 +152,7 @@ audience:
 - Plan accordingly
 
 ---
+
 ## Common Engine Migration Mistakes
 
 - No pre-audit

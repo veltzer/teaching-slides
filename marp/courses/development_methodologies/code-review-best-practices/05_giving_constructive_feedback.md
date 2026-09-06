@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Giving Constructive Feedback
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![feedback_guidelines](svg/courses/development_methodologies/code-review-best-practices/05_giving_constructive_feedback/feedback_guidelines.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Tone and language
@@ -26,16 +28,19 @@ audience:
 - A few rephrasings to learn
 
 ---
+
 ## Anatomy of Feedback
 
 ![feedback_anatomy](svg/courses/development_methodologies/code-review-best-practices/05_giving_constructive_feedback/feedback_anatomy.svg)
 
 ---
+
 ## Feedback Principles
 
 ![feedback_principles](svg/courses/development_methodologies/code-review-best-practices/05_giving_constructive_feedback/feedback_principles.svg)
 
 ---
+
 ## Why Tone Matters
 
 - Reviews persist in writing; tone reads worse than spoken
@@ -45,6 +50,7 @@ audience:
 - This is not about being nice — it's about being effective
 
 ---
+
 ## Be Specific
 
 - "This is wrong" — useless
@@ -54,6 +60,7 @@ audience:
 - Vague feedback wastes everyone's time
 
 ---
+
 ## Be Actionable
 
 - Every comment should imply a change (or explicitly not)
@@ -63,6 +70,7 @@ audience:
 - Authors should know what to do with each comment
 
 ---
+
 ## Nits vs Blockers
 
 - **nit:** prefix for stylistic / minor preferences
@@ -72,6 +80,7 @@ audience:
 - Saves arguments by being explicit about which is which
 
 ---
+
 ## Examples of nits
 
 - "nit: this could use a more descriptive name"
@@ -81,6 +90,7 @@ audience:
 - Don't pile up nits; one or two per PR is plenty
 
 ---
+
 ## Asking Questions vs Demands
 
 - "Why did you do it this way?" beats "Don't do it this way"
@@ -90,6 +100,7 @@ audience:
 - A wrong reason is fixed by understanding it
 
 ---
+
 ## Question-Based Examples
 
 - "Have you considered using X here?"
@@ -99,6 +110,7 @@ audience:
 - Authors learn more from answering questions than from following orders
 
 ---
+
 ## Praising Good Work
 
 - Reviews aren't only about problems
@@ -108,6 +120,7 @@ audience:
 - Teams with positive feedback culture have lower turnover
 
 ---
+
 ## Avoid "You" Statements
 
 - "You forgot the null check" &#8594; defensive reaction
@@ -117,6 +130,7 @@ audience:
 - Even compliments work better impersonally: "this approach is elegant"
 
 ---
+
 ## When You're Wrong
 
 - The author replies; the reply has merit
@@ -126,6 +140,7 @@ audience:
 - Builds trust both ways
 
 ---
+
 ## Severity Vocabulary
 
 - **must**: blocks merge
@@ -136,6 +151,7 @@ audience:
 - Pick a vocabulary your team uses; stick with it
 
 ---
+
 ## Long Comments
 
 - Sometimes a substantial comment is right
@@ -145,6 +161,7 @@ audience:
 - Lift those into a separate discussion
 
 ---
+
 ## Reviewer Time
 
 - Don't leave 50 nits on a 100-line PR
@@ -154,6 +171,7 @@ audience:
 - A flood of comments demotivates
 
 ---
+
 ## Common Mistakes
 
 - Sarcasm in writing — never reads as intended

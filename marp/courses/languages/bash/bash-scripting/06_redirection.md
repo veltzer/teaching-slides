@@ -12,13 +12,16 @@ audience:
   - audiences:devops
 
 ---
+
 # Redirection
 
 ---
+
 ## File Descriptors
 ![file_descriptors](svg/courses/languages/bash/bash-scripting/06_redirection/file_descriptors.svg)
 
 ---
+
 ## stdout Redirection
 
 ```bash
@@ -33,6 +36,7 @@ echo "hello" 1> output.txt    # same as >
 ```
 
 ---
+
 ## stderr Redirection
 
 ```bash
@@ -52,6 +56,7 @@ find / -name "*.conf" 2> /dev/null
 ```
 
 ---
+
 ## Redirecting Both stdout and stderr
 
 ```bash
@@ -70,6 +75,7 @@ command &>> all_output.txt    # bash 4.0+
 ```
 
 ---
+
 ## Order Matters!
 
 ```bash
@@ -87,6 +93,7 @@ command 2>&1 > file.txt
 ```
 
 ---
+
 ## Visualizing Redirect Order
 ```misc
 CORRECT: command > file.txt 2>&1
@@ -103,6 +110,7 @@ INCORRECT: command 2>&1 > file.txt
 ```
 
 ---
+
 ## stdin Redirection
 
 ```bash
@@ -120,6 +128,7 @@ bc <<< "2 + 3"    # prints 5
 ```
 
 ---
+
 ## Here Documents
 
 ```bash
@@ -144,6 +153,7 @@ EOF
 ```
 
 ---
+
 ## `/dev/null` - The Black Hole
 
 ```bash
@@ -164,6 +174,7 @@ fi
 ```
 
 ---
+
 ## `/dev/zero`, `/dev/urandom`, `/dev/stdin`
 
 ```bash
@@ -180,6 +191,7 @@ echo "data" | cat /dev/stdin
 ```
 
 ---
+
 ## Redirecting to Multiple Places: `tee`
 
 ```bash
@@ -198,6 +210,7 @@ make 2>&1 | tee build.log
 ```
 
 ---
+
 ## Process Substitution
 
 ```bash
@@ -216,6 +229,7 @@ echo <(true)    # prints something like /dev/fd/63
 ```
 
 ---
+
 ## Opening Custom File Descriptors
 
 ```bash
@@ -236,6 +250,7 @@ exec 5<> bidirectional.txt
 ```
 
 ---
+
 ## Swapping stdout and stderr
 
 ```bash
@@ -255,6 +270,7 @@ command 3>&1 1>&2 2>&3 3>&-
 ```
 
 ---
+
 ## Redirection Tricks
 
 ```bash
@@ -280,6 +296,7 @@ echo "data" | sudo tee -a /etc/some_config > /dev/null
 ```
 
 ---
+
 ## The `noclobber` Option
 
 ```bash

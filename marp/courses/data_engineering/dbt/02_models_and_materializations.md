@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Models and Materialisations
 
 ---
+
 ## What This Chapter Covers
 
 - Model files
@@ -19,11 +21,13 @@ audience:
 - Folder structure
 
 ---
+
 ## Materialisations
 
 ![materialisations](svg/courses/data_engineering/dbt/02_models_and_materializations/materializations.svg)
 
 ---
+
 ## Model Files
 
 - One SQL file per model
@@ -32,6 +36,7 @@ audience:
 - dbt wraps in CREATE / INSERT
 
 ---
+
 ## Materialisations
 
 - **view**: SQL view; recomputed on each query
@@ -40,6 +45,7 @@ audience:
 - **ephemeral**: CTE; inlined in dependents
 
 ---
+
 ## View
 
 ```sql
@@ -52,6 +58,7 @@ SELECT * FROM {{ source('raw', 'users') }}
 - Default for staging
 
 ---
+
 ## Table
 
 ```sql
@@ -64,6 +71,7 @@ SELECT ...
 - For: small / medium models
 
 ---
+
 ## Incremental
 
 ```sql
@@ -78,6 +86,7 @@ SELECT * FROM {{ source('raw', 'events') }}
 - For big tables; saves compute
 
 ---
+
 ## Incremental Strategies
 
 - append: just insert new rows
@@ -86,6 +95,7 @@ SELECT * FROM {{ source('raw', 'events') }}
 - Pick by deduplication needs
 
 ---
+
 ## Ephemeral
 
 ```sql
@@ -98,6 +108,7 @@ SELECT ...
 - For: simple intermediate logic
 
 ---
+
 ## Configuring
 
 - Per-model in the model file
@@ -106,6 +117,7 @@ SELECT ...
 - Cleaner: project-level defaults
 
 ---
+
 ## Folder Structure
 
 ```misc
@@ -119,6 +131,7 @@ models/
 - Each layer narrows / aggregates
 
 ---
+
 ## Naming Conventions
 
 - stg_: staging
@@ -128,6 +141,7 @@ models/
 - Consistent across team
 
 ---
+
 ## ref()
 
 - Reference another model: `{{ ref('stg_users') }}`
@@ -135,6 +149,7 @@ models/
 - Order of execution automatic
 
 ---
+
 ## Schema
 
 - `{{ this }}`: current model's table reference
@@ -142,6 +157,7 @@ models/
 - Useful in incremental logic
 
 ---
+
 ## Common Materialisation Mistakes
 
 - Table when view would do (wasteful)
@@ -151,6 +167,7 @@ models/
 - Same materialisation everywhere (one size doesn't fit all)
 
 ---
+
 ## Incremental Strategies
 
 ![incremental_strategies](svg/courses/data_engineering/dbt/02_models_and_materializations/incremental_strategies.svg)

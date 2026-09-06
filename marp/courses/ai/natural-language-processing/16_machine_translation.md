@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Machine Translation
 
 ---
+
 ## What This Chapter Covers
 
 - A brief history from rule-based to neural translation
@@ -22,6 +24,7 @@ audience:
 - Where large language models fit into the translation stack today
 
 ---
+
 ## Why Machine Translation Matters
 
 - The original `NLP` task and its longest-running benchmark
@@ -31,11 +34,13 @@ audience:
 - Modern `MT` pipelines remain the workhorse of multilingual products
 
 ---
+
 ## A Short History of MT
 
 ![mt_history](svg/courses/ai/natural-language-processing/16_machine_translation/mt_history.svg)
 
 ---
+
 ## Rule-Based Translation
 
 - Hand-crafted dictionaries and transfer rules per language pair
@@ -45,6 +50,7 @@ audience:
 - Replaced by data-driven methods once parallel corpora became available
 
 ---
+
 ## Statistical MT: The IBM Models
 
 - Treat translation as a noisy-channel problem: argmax_e P(e) P(f | e)
@@ -54,6 +60,7 @@ audience:
 - Still the conceptual base layer under phrase-based systems
 
 ---
+
 ## Phrase-Based Translation
 
 - Translate contiguous phrases rather than individual words
@@ -63,11 +70,13 @@ audience:
 - `Moses` was the dominant open-source toolkit for over a decade
 
 ---
+
 ## Phrase-Based MT Pipeline
 
 ![phrase_based_pipeline](svg/courses/ai/natural-language-processing/16_machine_translation/phrase_based_pipeline.svg)
 
 ---
+
 ## Limits of Phrase-Based MT
 
 - Long-range reordering is poorly captured by local phrases
@@ -77,6 +86,7 @@ audience:
 - Neural sequence-to-sequence models bypassed the entire pipeline
 
 ---
+
 ## Sequence-to-Sequence with RNNs
 
 - An encoder reads the source sentence into a fixed vector
@@ -86,6 +96,7 @@ audience:
 - Attention was the fix that made `NMT` competitive at scale
 
 ---
+
 ## Bahdanau Attention
 
 - The decoder produces a weighted sum over all encoder states at every step
@@ -95,6 +106,7 @@ audience:
 - The same attention mechanism reappears in transformers
 
 ---
+
 ## Transformer NMT
 
 - The original transformer paper was an `NMT` paper
@@ -104,6 +116,7 @@ audience:
 - Set the architecture that the rest of `NLP` would adopt
 
 ---
+
 ## Tokenization and Vocabulary
 
 - Subword tokenization is a near-requirement for `NMT`
@@ -113,6 +126,7 @@ audience:
 - Tokenizer mismatch is a common silent source of quality loss
 
 ---
+
 ## Multilingual NMT
 
 - One model serving many language pairs with shared parameters
@@ -122,6 +136,7 @@ audience:
 - Quality is uneven — the head of the distribution dominates training
 
 ---
+
 ## Beam Search Decoding
 
 - Maintain a beam of `k` partial translations and extend each step
@@ -131,6 +146,7 @@ audience:
 - Beam search is still the default at inference time for `NMT`
 
 ---
+
 ## Decoding in Practice
 
 ```python
@@ -150,6 +166,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - For most language pairs there is already a competitive starting point
 
 ---
+
 ## Sampling and Diverse Decoding
 
 - Beam search produces fluent but bland translations
@@ -159,6 +176,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - Beam search remains the default when a single best output is needed
 
 ---
+
 ## Evaluation: BLEU
 
 - N-gram precision against one or more reference translations
@@ -168,6 +186,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - Should report `sacreBLEU` with version and signature
 
 ---
+
 ## Evaluation: chrF and METEOR
 
 - `chrF` is character-level F-score; better for morphologically rich languages
@@ -177,6 +196,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - Each metric captures a different aspect of similarity
 
 ---
+
 ## Evaluation: Learned Metrics
 
 - `COMET` and `BLEURT` train regressors from human ratings
@@ -186,11 +206,13 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - Pair them with `BLEU` for backward comparability
 
 ---
+
 ## Evaluation Choice
 
 ![mt_evaluation](svg/courses/ai/natural-language-processing/16_machine_translation/mt_evaluation.svg)
 
 ---
+
 ## Domain Adaptation
 
 - Fine-tune a generic checkpoint on in-domain bilingual data
@@ -200,6 +222,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - Domain mismatch is the single biggest production-time risk
 
 ---
+
 ## Backtranslation
 
 - Translate target-language monolingual data into the source language
@@ -209,6 +232,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - A standard trick in low-resource and out-of-domain settings
 
 ---
+
 ## Document-Level Translation
 
 - Sentence-by-sentence `NMT` loses cross-sentence cohesion
@@ -218,6 +242,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - A growing area as `LLMs` translate full documents in context
 
 ---
+
 ## Quality Estimation
 
 - Predict translation quality without a reference
@@ -227,6 +252,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - Critical for production pipelines that route uncertain outputs to humans
 
 ---
+
 ## LLMs for Translation
 
 - General-purpose `LLMs` translate competitively without `MT`-specific training
@@ -236,6 +262,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - The choice depends on volume, quality bar, and language coverage
 
 ---
+
 ## Hybrid Translation Stacks
 
 - A specialized `NMT` model for high-volume bulk translation
@@ -245,6 +272,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - Modern translation products are pipelines, not single models
 
 ---
+
 ## Common Production Pitfalls
 
 - Mixing tokenizers between training and inference
@@ -254,6 +282,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - Treating `MT` as solved when one direction works and the others do not
 
 ---
+
 ## Anti-Patterns
 
 - Training on web-scraped pseudo-parallel data without quality filtering
@@ -263,6 +292,7 @@ print(tok.batch_decode(out, skip_special_tokens=True))
 - Promising real-time translation without measuring tail latency
 
 ---
+
 ## Summary
 
 - Machine translation evolved from rules to phrases to attention to transformers

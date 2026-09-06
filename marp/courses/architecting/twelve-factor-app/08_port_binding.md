@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Factor VII: Port Binding
 
 ---
+
 ## Port Binding At A Glance
 
 ![port_binding](svg/courses/architecting/twelve-factor-app/08_port_binding/port_binding.svg)
 
 ---
+
 ## The Rule
 
 - Export services via port binding
@@ -23,6 +26,7 @@ audience:
 - No reliance on external application servers (Apache, IIS, etc.)
 
 ---
+
 ## Self-Contained Apps
 
 - The app starts itself, opens a port, and accepts connections
@@ -31,6 +35,7 @@ audience:
 - The app is a standalone executable, not a plugin
 
 ---
+
 ## Embedded Server vs External Server
 
 - Old way: write a `.war` file and deploy into Tomcat
@@ -39,6 +44,7 @@ audience:
 - The deployment unit becomes the app, not the app + server pair
 
 ---
+
 ## Examples
 
 - Spring Boot: embeds Tomcat by default
@@ -48,6 +54,7 @@ audience:
 - Rust: actix, axum, etc. — embedded
 
 ---
+
 ## Why It Matters
 
 - One artifact, one runtime — easier to ship and operate
@@ -56,6 +63,7 @@ audience:
 - Containers became practical because of this shift
 
 ---
+
 ## Port Configuration
 
 - The port is a config value (factor III)
@@ -64,6 +72,7 @@ audience:
 - Heroku and similar platforms set this automatically
 
 ---
+
 ## A Minimal Pattern
 
 ```python
@@ -80,6 +89,7 @@ server.serve_forever()
 - Start serving — that's it
 
 ---
+
 ## Anti-Patterns
 
 - Apps that require a specific Apache config
@@ -88,6 +98,7 @@ server.serve_forever()
 - Apps that depend on the operating system's init system
 
 ---
+
 ## Beyond HTTP
 
 - The factor applies to any protocol over a port
@@ -95,6 +106,7 @@ server.serve_forever()
 - The app exports a service via a network port; clients connect
 
 ---
+
 ## Routing in Front
 
 - A reverse proxy (nginx, Cloud Load Balancer) usually sits in front
@@ -103,6 +115,7 @@ server.serve_forever()
 - This is composition; not a violation of factor VII
 
 ---
+
 ## Summary
 
 - The app embeds its server and binds to a port

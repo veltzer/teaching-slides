@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # C++ Resource Management
 
 ---

@@ -12,9 +12,11 @@ audience:
   - audiences:managers
 
 ---
+
 # Multi-Cloud and Cloud Strategy
 
 ---
+
 ## Why Cloud Strategy Matters
 
 - Cloud is no longer "if" but "how"
@@ -24,11 +26,13 @@ audience:
 - No single approach fits all organizations
 
 ---
+
 ## Cloud Deployment Models Overview
 
 ![cloud_deployment_models_overview](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/cloud_deployment_models_overview.svg)
 
 ---
+
 ## Single Cloud Strategy
 
 - All infrastructure and services on one cloud provider
@@ -39,6 +43,7 @@ audience:
 - Smaller operations team needed
 
 ---
+
 ## Single Cloud Risks
 
 - Complete dependency on one vendor
@@ -48,6 +53,7 @@ audience:
 - Migration cost grows exponentially with adoption depth
 
 ---
+
 ## Multi-Cloud Strategy
 
 - Workloads distributed across two or more cloud providers
@@ -57,16 +63,19 @@ audience:
 - Growing trend among enterprises
 
 ---
+
 ## Multi-Cloud Topology
 
 ![multi_cloud_topology](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/multi_cloud_topology.svg)
 
 ---
+
 ## Hybrid Cloud Strategy
 
 ![hybrid_cloud_strategy](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/hybrid_cloud_strategy.svg)
 
 ---
+
 ## Comparing the Three Approaches
 
 | Aspect | Single Cloud | Multi-Cloud | Hybrid |
@@ -78,6 +87,7 @@ audience:
 | Compliance | Provider-dependent | Flexible | Strong |
 
 ---
+
 ## Vendor Lock-in: What It Really Means
 
 - Lock-in is not just about compute instances
@@ -89,11 +99,13 @@ audience:
     - Data egress costs making migration expensive
 
 ---
+
 ## The Lock-in Spectrum
 
 ![the_lock_in_spectrum](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_lock_in_spectrum.svg)
 
 ---
+
 ## Embracing Cloud-Native Services
 
 - Cloud-native services offer significant advantages:
@@ -105,6 +117,7 @@ audience:
 - Using `SQS` instead of self-managed `RabbitMQ` eliminates cluster management
 
 ---
+
 ## The Cost of Not Going Cloud-Native
 
 - Running `Kubernetes` + `PostgreSQL` + `Kafka` yourself means:
@@ -116,6 +129,7 @@ audience:
 - The "portable" choice can be the more expensive choice
 
 ---
+
 ## When to Embrace or Avoid Lock-in
 
 - Embrace lock-in when:
@@ -129,6 +143,7 @@ audience:
     - You need competitive pricing leverage
 
 ---
+
 ## Regulatory and Data Sovereignty
 
 - Laws dictate where data can be stored and processed
@@ -140,11 +155,13 @@ audience:
 - Multi-cloud helps: deploy in local providers per jurisdiction
 
 ---
+
 ## Data Sovereignty Map
 
 ![data_sovereignty_map](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/data_sovereignty_map.svg)
 
 ---
+
 ## Cloud Strategy Decision Framework
 
 - Ask these questions before choosing a strategy:
@@ -156,6 +173,7 @@ audience:
     - How likely is a future migration?
 
 ---
+
 ## Cloud-Agnostic Tooling
 
 - Tools that work across cloud providers:
@@ -168,16 +186,19 @@ audience:
 - Each provider has different networking, IAM, storage, and DNS models
 
 ---
+
 ## The Lowest Common Denominator Problem
 
 ![the_lowest_common_denominator_problem](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_lowest_common_denominator_problem.svg)
 
 ---
+
 ## Abstraction Layer Architecture
 
 ![abstraction_layer_architecture](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/abstraction_layer_architecture.svg)
 
 ---
+
 ## Cost of Abstraction Layers
 
 - Engineering cost to build and maintain the abstraction
@@ -188,6 +209,7 @@ audience:
 - Estimate: 1-3 full-time engineers to maintain a cloud abstraction
 
 ---
+
 ## Terraform as a Multi-Cloud Tool
 
 - `Terraform` uses providers to abstract cloud resources
@@ -212,6 +234,7 @@ resource "google_compute_instance" "web" {
 ```
 
 ---
+
 ## Terraform Multi-Cloud Limitations
 
 - Resource types are completely different across providers
@@ -222,6 +245,7 @@ resource "google_compute_instance" "web" {
 - True portability requires a wrapper layer on top of `Terraform`
 
 ---
+
 ## Kubernetes as a Portability Layer
 
 - `Kubernetes` provides a consistent API across clouds
@@ -233,11 +257,13 @@ resource "google_compute_instance" "web" {
     - Node auto-scaling behavior (`Karpenter` vs `Autopilot`)
 
 ---
+
 ## The Real Multi-Cloud Cost
 
 ![the_real_multi_cloud_cost](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_real_multi_cloud_cost.svg)
 
 ---
+
 ## When Multi-Cloud Makes Sense
 
 - Acquisitions bring different cloud footprints
@@ -249,6 +275,7 @@ resource "google_compute_instance" "web" {
 - Genuine need for vendor negotiation leverage
 
 ---
+
 ## When Multi-Cloud Does Not Make Sense
 
 - "We might need it someday" is not a strategy
@@ -258,6 +285,7 @@ resource "google_compute_instance" "web" {
 - If you lack budget for the additional tooling and staff
 
 ---
+
 ## Disaster Recovery: Core Concepts
 
 - `RPO` - Recovery Point Objective: how much data can you lose?
@@ -267,6 +295,7 @@ resource "google_compute_instance" "web" {
 - Must be defined per workload, not globally
 
 ---
+
 ## DR Tiers
 
 | Tier | Strategy | RTO | RPO | Cost |
@@ -277,21 +306,25 @@ resource "google_compute_instance" "web" {
 | 4 | Active-Active | Near zero | Near zero | Very High |
 
 ---
+
 ## Backup and Restore Architecture
 
 ![backup_and_restore_architecture](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/backup_and_restore_architecture.svg)
 
 ---
+
 ## Warm Standby Architecture
 
 ![warm_standby_architecture](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/warm_standby_architecture.svg)
 
 ---
+
 ## Active-Active Architecture
 
 ![active_active_architecture](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/active_active_architecture.svg)
 
 ---
+
 ## Cross-Region Networking and Replication
 
 - Connectivity options:
@@ -304,6 +337,7 @@ resource "google_compute_instance" "web" {
     - **Eventual consistency**: replicas converge over time
 
 ---
+
 ## Multi-Region DNS Failover
 
 ```yaml
@@ -328,11 +362,13 @@ Resources:
 ```
 
 ---
+
 ## Cross-Cloud DR Architecture
 
 ![cross_cloud_dr_architecture](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/cross_cloud_dr_architecture.svg)
 
 ---
+
 ## Testing and Automating DR
 
 - Test your DR plan before you need it
@@ -344,6 +380,7 @@ Resources:
 - No manual steps during high-stress failover events
 
 ---
+
 ## Multi-Region Data Consistency
 
 - CAP theorem applies: you cannot have all three:
@@ -355,6 +392,7 @@ Resources:
 - Critical transactions may need CP with higher latency
 
 ---
+
 ## Egress Costs and Exit Strategy
 
 - Cloud providers charge for outbound data transfer
@@ -367,6 +405,7 @@ Resources:
     - Document all cloud-specific dependencies
 
 ---
+
 ## Cloud Strategy Anti-Patterns
 
 - "Multi-cloud by accident" - no intentional strategy
@@ -377,11 +416,13 @@ Resources:
 - "Cloud-native maximalist" - using every managed service available
 
 ---
+
 ## Decision Matrix: Choosing Your Strategy
 
 ![decision_matrix_choosing_your_strategy](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/decision_matrix_choosing_your_strategy.svg)
 
 ---
+
 ## Summary: Key Takeaways
 
 - Start with business requirements, not technology preferences

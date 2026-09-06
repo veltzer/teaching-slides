@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Delta Tables
 
 ---
+
 ## What This Chapter Covers
 
 - Delta basics
@@ -19,6 +21,7 @@ audience:
 - Optimization
 
 ---
+
 ## What Delta Is
 
 - Open table format on Parquet
@@ -27,6 +30,7 @@ audience:
 - Default table format on Databricks
 
 ---
+
 ## Why Delta
 
 - Safe concurrent writes
@@ -35,11 +39,13 @@ audience:
 - Streaming and batch on one table
 
 ---
+
 ## Delta Features
 
 ![delta_features](svg/courses/data_engineering/databricks/03_delta_tables/delta_features.svg)
 
 ---
+
 ## Transaction Log
 
 - JSON files in _delta_log
@@ -48,6 +54,7 @@ audience:
 - Source of truth for the table
 
 ---
+
 ## ACID Properties
 
 - Atomic commits
@@ -56,6 +63,7 @@ audience:
 - Durable on object store
 
 ---
+
 ## Time Travel
 
 - Query as-of version or timestamp
@@ -64,6 +72,7 @@ audience:
 - Bounded by retention
 
 ---
+
 ## Schema Evolution
 
 - mergeSchema option
@@ -72,6 +81,7 @@ audience:
 - Strict mode prevents accidents
 
 ---
+
 ## Updates and Deletes
 
 - UPDATE, DELETE, MERGE on tables
@@ -80,6 +90,7 @@ audience:
 - GDPR-style deletes supported
 
 ---
+
 ## MERGE
 
 - Upsert pattern
@@ -88,6 +99,7 @@ audience:
 - Update when present
 
 ---
+
 ## OPTIMIZE
 
 - Compact small files
@@ -96,6 +108,7 @@ audience:
 - Schedulable
 
 ---
+
 ## Z-ORDER
 
 - Multi-column clustering
@@ -104,6 +117,7 @@ audience:
 - Use sparingly
 
 ---
+
 ## VACUUM
 
 - Removes files past retention
@@ -112,11 +126,13 @@ audience:
 - Default retention is conservative
 
 ---
+
 ## Operations Compared
 
 ![merge_optimize_vacuum](svg/courses/data_engineering/databricks/03_delta_tables/merge_optimize_vacuum.svg)
 
 ---
+
 ## Streaming Sources and Sinks
 
 - Read changes as a stream
@@ -125,6 +141,7 @@ audience:
 - Idempotent batches by default
 
 ---
+
 ## Common Delta Mistakes
 
 - No OPTIMIZE schedule

@@ -10,9 +10,11 @@ audience:
   - audiences:network-engineers
 
 ---
+
 # DNS Security and Troubleshooting
 
 ---
+
 ## What This Chapter Covers
 
 - DNS attack landscape
@@ -22,6 +24,7 @@ audience:
 - Troubleshooting toolkit
 
 ---
+
 ## DNS Attack Landscape
 
 - Cache poisoning
@@ -31,16 +34,19 @@ audience:
 - DGA (Domain Generation Algorithm) for malware
 
 ---
+
 ## Threat Map Visualized
 
 ![attack_map](svg/courses/networking/dns-deep-dive/07_security_and_troubleshooting/attack_map.svg)
 
 ---
+
 ## Diagnostic Tools
 
 ![diagnostic_tools](svg/courses/networking/dns-deep-dive/07_security_and_troubleshooting/diagnostic_tools.svg)
 
 ---
+
 ## Cache Poisoning
 
 - Inject fake records into a resolver's cache
@@ -50,6 +56,7 @@ audience:
 - Modern resolvers are much harder to poison
 
 ---
+
 ## DNS Amplification DDoS
 
 - Attacker spoofs source IP (the victim's)
@@ -59,6 +66,7 @@ audience:
 - Defense: don't run open resolvers; rate limit; BCP38 ingress filtering
 
 ---
+
 ## Reflection Attacks
 
 - Similar to amplification, sometimes the same
@@ -68,6 +76,7 @@ audience:
 - DNS Flag Day improvements help
 
 ---
+
 ## DNS Tunneling
 
 - Encode arbitrary data in DNS queries
@@ -77,6 +86,7 @@ audience:
 - Specialized DNS firewalls (RPZ) help
 
 ---
+
 ## DNS Tunneling Patterns
 
 - Many TXT queries to a controlled domain
@@ -86,6 +96,7 @@ audience:
 - Statistical detection works well
 
 ---
+
 ## Domain Generation Algorithms (DGA)
 
 - Malware generates domain names algorithmically
@@ -95,6 +106,7 @@ audience:
 - ML-based classifiers in modern security tools
 
 ---
+
 ## NXDOMAIN Hijacking
 
 - ISPs return ads for typo'd domains
@@ -104,6 +116,7 @@ audience:
 - Watch out for it; switch resolvers if affected
 
 ---
+
 ## DNS Hijacking via Registrar
 
 - Attacker compromises registrar account
@@ -113,6 +126,7 @@ audience:
 - Mitigation: registry lock, MFA on registrar
 
 ---
+
 ## Registrar Lock
 
 - Disables NS changes without manual confirmation
@@ -122,6 +136,7 @@ audience:
 - One of the most underused security features
 
 ---
+
 ## Response Policy Zones (RPZ)
 
 - Resolver-level domain filtering
@@ -131,6 +146,7 @@ audience:
 - Works with any RPZ-aware resolver (BIND, Unbound)
 
 ---
+
 ## RPZ Use Cases
 
 - Block ads and malware domains
@@ -140,6 +156,7 @@ audience:
 - Pair with threat intelligence feeds
 
 ---
+
 ## Sinkholing
 
 - Redirect known-bad domains to a controlled IP
@@ -149,6 +166,7 @@ audience:
 - Standard incident-response technique
 
 ---
+
 ## Logging and Monitoring
 
 - Log all queries (with care for privacy/scale)
@@ -158,6 +176,7 @@ audience:
 - Pair with threat intel for triage
 
 ---
+
 ## DNS Firewalls
 
 - RPZ + threat intel + analytics
@@ -167,6 +186,7 @@ audience:
 - Privacy concerns — log retention policies
 
 ---
+
 ## Troubleshooting: dig
 
 - The standard tool — learn it well
@@ -176,6 +196,7 @@ audience:
 - `dig @8.8.8.8 example.com` — query specific resolver
 
 ---
+
 ## Reading dig Output
 
 - HEADER: status, flags, IDs
@@ -185,6 +206,7 @@ audience:
 - ADDITIONAL: helpful glue records
 
 ---
+
 ## Useful dig Flags
 
 - `+short` — only the answer values
@@ -194,6 +216,7 @@ audience:
 - `+tcp` — force TCP (test firewall issues)
 
 ---
+
 ## Common Failures: NXDOMAIN
 
 - The name truly doesn't exist
@@ -203,6 +226,7 @@ audience:
 - Check parent zone delegation
 
 ---
+
 ## Common Failures: SERVFAIL
 
 - Server-side failure
@@ -212,6 +236,7 @@ audience:
 - Check the zone with DNSViz
 
 ---
+
 ## Common Failures: Slow Lookups
 
 - Network path issues to resolver
@@ -221,6 +246,7 @@ audience:
 - Consider local cache (dnsmasq, systemd-resolved)
 
 ---
+
 ## Diagnosing Delegation
 
 - `dig NS example.com` — what your zone says
@@ -230,6 +256,7 @@ audience:
 - Often the cause of "DNS doesn't work"
 
 ---
+
 ## Diagnosing DNSSEC
 
 - `dig +dnssec example.com` — see signatures
@@ -239,6 +266,7 @@ audience:
 - delv command for command-line validation
 
 ---
+
 ## Wireshark for DNS
 
 - Capture all DNS traffic
@@ -248,6 +276,7 @@ audience:
 - Match query/response by transaction ID
 
 ---
+
 ## Best Practices
 
 - Lock your registrar account; enable MFA
@@ -257,6 +286,7 @@ audience:
 - Document your DNS topology
 
 ---
+
 ## Common Pitfalls
 
 - Not enabling registrar lock
@@ -266,6 +296,7 @@ audience:
 - No backup nameserver provider
 
 ---
+
 ## Course Recap
 
 - Fundamentals and resolution
@@ -277,6 +308,7 @@ audience:
 - Security and troubleshooting
 
 ---
+
 ## Summary
 
 - DNS attacks are common and varied

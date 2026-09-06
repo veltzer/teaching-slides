@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # A/B Testing in Practice
 
 ---
+
 ## What This Chapter Covers
 
 - What an A/B test is and why randomization matters
@@ -21,11 +23,13 @@ audience:
 - Threats: novelty, seasonality, regression to the mean
 
 ---
+
 ## An A/B Test, End to End
 
 ![ab_flow](svg/courses/math/statistics-applied/14_ab_testing/ab_flow.svg)
 
 ---
+
 ## What An A/B Test Is
 
 - Randomly split users into A (control) and B (variant), ship the change to B, compare a metric
@@ -35,6 +39,7 @@ audience:
 - Everything else in this chapter is about not blowing that advantage
 
 ---
+
 ## Pick The Metric First
 
 - Decide the **primary metric** before launching — conversion rate, revenue per user, retention
@@ -44,6 +49,7 @@ audience:
 - Define exactly how it's computed, including edge cases, *in writing*
 
 ---
+
 ## Minimum Detectable Effect And Sample Size
 
 - The **minimum detectable effect (MDE)** is the smallest lift worth caring about — set it from business value, not hope
@@ -53,6 +59,7 @@ audience:
 - If you can't get the sample size, test a bigger change instead
 
 ---
+
 ## How Long To Run
 
 - Run for whole numbers of weeks to average over day-of-week effects
@@ -62,6 +69,7 @@ audience:
 - Decide the stopping rule before you start, then follow it
 
 ---
+
 ## The Peeking Problem
 
 - Checking the p-value repeatedly and stopping the moment it dips below 0.05 inflates the false-positive rate badly — easily to 20%+
@@ -71,11 +79,13 @@ audience:
 - Build the dashboard so it *doesn't* tempt you to peek
 
 ---
+
 ## Peeking Inflates the False-Positive Rate
 
 ![peeking_alpha_inflation](svg/courses/math/statistics-applied/14_ab_testing/peeking_alpha_inflation.svg)
 
 ---
+
 ## Many Variants, Many Metrics
 
 - Testing A vs B vs C vs D? More comparisons &#8594; more chances for a fluke "winner"
@@ -85,6 +95,7 @@ audience:
 - Fewer, sharper tests beat a buffet of underpowered ones
 
 ---
+
 ## Threats To Validity
 
 - **Novelty effect**: users click the new thing because it's new; the lift fades — run long enough to see past it
@@ -94,6 +105,7 @@ audience:
 - **Interference**: A and B users affect each other (social features, shared inventory) — naive A/B breaks down
 
 ---
+
 ## A Power And Test Calculation In Python
 
 ```python
@@ -110,6 +122,7 @@ print(f"z = {z:.2f}, p = {p:.3f}")
 ```
 
 ---
+
 ## Common Mistakes
 
 - Peeking and stopping the instant p &lt; 0.05

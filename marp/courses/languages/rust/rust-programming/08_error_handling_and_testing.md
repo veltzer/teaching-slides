@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Error Handling and Testing
 ## Chapter 7: Writing Reliable Code
 
@@ -48,6 +49,7 @@ fn main() {
 ```
 
 ---
+
 ## Recoverable Errors: Result
 
 ```rust
@@ -383,6 +385,7 @@ cargo tarpaulin -o Html
 ```
 
 ---
+
 ## Practice Exercise
 Create a library that:
 1. Implements error handling
@@ -392,6 +395,7 @@ Create a library that:
 1. Has integration tests
 
 ---
+
 ## Common Pitfalls
 1. Inadequate error handling
 1. Missing edge cases
@@ -400,6 +404,7 @@ Create a library that:
 1. Insufficient documentation
 
 ---
+
 ## Summary
 - Error types and handling
 - Testing methodology

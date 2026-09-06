@@ -37,15 +37,15 @@
   <text x="220" y="245" text-anchor="middle" class="label">2. Request Buffers</text>
   <text x="80" y="270" class="code">struct v4l2_requestbuffers req;</text>
   <text x="80" y="285" class="code">req.count = 4;  // 4 buffers</text>
-  <text x="80" y="300" class="code">ioctl(fd, VIDIOC_REQBUFS, &req);</text>
+  <text x="80" y="300" class="code">ioctl(fd, VIDIOC_REQBUFS, &amp;req);</text>
   
   <!-- Step 3: Query & Map -->
   <rect x="430" y="120" width="300" height="190" class="box" rx="3"/>
-  <text x="580" y="145" text-anchor="middle" class="label">3. Query & mmap Each Buffer</text>
-  <text x="440" y="170" class="code">for (i = 0; i < 4; i++) {</text>
+  <text x="580" y="145" text-anchor="middle" class="label">3. Query &amp; mmap Each Buffer</text>
+  <text x="440" y="170" class="code">for (i = 0; i &lt; 4; i++) {</text>
   <text x="450" y="185" class="code">  struct v4l2_buffer buf;</text>
   <text x="450" y="200" class="code">  buf.index = i;</text>
-  <text x="450" y="215" class="code">  ioctl(fd, VIDIOC_QUERYBUF, &buf);</text>
+  <text x="450" y="215" class="code">  ioctl(fd, VIDIOC_QUERYBUF, &amp;buf);</text>
   <text x="450" y="235" class="code">  buffers[i] = mmap(NULL,</text>
   <text x="470" y="250" class="code">buf.length,</text>
   <text x="470" y="265" class="code">PROT_READ | PROT_WRITE,</text>
@@ -55,8 +55,8 @@
   
   <!-- Step 4: Queue & Stream -->
   <rect x="70" y="330" width="300" height="70" class="box" rx="3"/>
-  <text x="220" y="355" text-anchor="middle" class="label">4. Queue Buffers & Start</text>
-  <text x="80" y="375" class="code">ioctl(fd, VIDIOC_QBUF, &buf);</text>
+  <text x="220" y="355" text-anchor="middle" class="label">4. Queue Buffers &amp; Start</text>
+  <text x="80" y="375" class="code">ioctl(fd, VIDIOC_QBUF, &amp;buf);</text>
   <text x="80" y="390" class="code">ioctl(fd, VIDIOC_STREAMON, ...);</text>
   
   <!-- Arrows between steps -->
@@ -110,10 +110,10 @@
   
   <text x="70" y="880" class="code">while (capturing) {</text>
   <text x="80" y="900" class="code">  // Wait for buffer to be filled by hardware</text>
-  <text x="80" y="915" class="code">  ioctl(fd, VIDIOC_DQBUF, &buf);  // Dequeue</text>
+  <text x="80" y="915" class="code">  ioctl(fd, VIDIOC_DQBUF, &amp;buf);  // Dequeue</text>
   <text x="80" y="935" class="code">  // Access frame data directly in memory!</text>
   <text x="80" y="950" class="code">  process_frame(buffers[buf.index], buf.bytesused);</text>
-  <text x="80" y="970" class="code">  ioctl(fd, VIDIOC_QBUF, &buf);   // Re-queue</text>
+  <text x="80" y="970" class="code">  ioctl(fd, VIDIOC_QBUF, &amp;buf);   // Re-queue</text>
   <text x="70" y="985" class="code">}</text>
   
   <!-- Key benefit callout -->

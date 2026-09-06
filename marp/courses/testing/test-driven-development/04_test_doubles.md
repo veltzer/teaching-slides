@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Test Doubles
 
 ---
+
 ## Four Flavors
 
 ![test_doubles](svg/courses/testing/test-driven-development/04_test_doubles/test_doubles.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Types of test doubles: dummy, stub, spy, mock, fake
@@ -26,6 +29,7 @@ audience:
 - Choosing the right double
 
 ---
+
 ## What A Test Double Is
 
 - A stand-in for a real collaborator
@@ -35,6 +39,7 @@ audience:
 - Five types, each with a specific role
 
 ---
+
 ## Dummy
 
 - Passed but never used
@@ -44,6 +49,7 @@ audience:
 - Example: a logger argument the test doesn't care about
 
 ---
+
 ## Stub
 
 - Returns canned answers
@@ -53,6 +59,7 @@ audience:
 - Most-common test double
 
 ---
+
 ## Stub Example
 
 ```python
@@ -70,6 +77,7 @@ def test_processes_user():
 ```
 
 ---
+
 ## Spy
 
 - Records what was called
@@ -79,6 +87,7 @@ def test_processes_user():
 - "Was this method called with the right args?"
 
 ---
+
 ## Spy Example
 
 ```python
@@ -96,6 +105,7 @@ def test_signup_sends_welcome():
 ```
 
 ---
+
 ## Mock
 
 - Pre-programmed expectations
@@ -105,6 +115,7 @@ def test_signup_sends_welcome():
 - Most common in OO codebases
 
 ---
+
 ## Mock Example
 
 ```python
@@ -121,6 +132,7 @@ def test_signup_sends_welcome():
 - Verification syntax is framework-specific
 
 ---
+
 ## Fake
 
 - A working implementation, simplified
@@ -130,6 +142,7 @@ def test_signup_sends_welcome():
 - Reused across many tests
 
 ---
+
 ## Fake Example
 
 ```python
@@ -145,6 +158,7 @@ class FakeRepo:
 - More confidence than mocks (real behaviour)
 
 ---
+
 ## When To Use Each
 
 - **Dummy**: argument required but unused
@@ -154,6 +168,7 @@ class FakeRepo:
 - **Fake**: you need realistic behaviour without external dependencies
 
 ---
+
 ## Testing State vs Interactions
 
 - **State testing**: assert the resulting state of the unit
@@ -163,6 +178,7 @@ class FakeRepo:
 - Prefer state when you can
 
 ---
+
 ## When Interaction Testing Wins
 
 - Testing side effects (sent an email, wrote a log)
@@ -172,6 +188,7 @@ class FakeRepo:
 - Use sparingly; over-mocking ties tests to implementation
 
 ---
+
 ## Hand-Rolled vs Framework Mocks
 
 - Hand-rolled: explicit class, more code, more control
@@ -181,6 +198,7 @@ class FakeRepo:
 - A mix in most codebases
 
 ---
+
 ## Over-Mocking
 
 - Every collaborator mocked
@@ -190,6 +208,7 @@ class FakeRepo:
 - Use real objects where they're cheap; mock the slow / external
 
 ---
+
 ## Mockist vs Classicist
 
 - **Mockist** (London school): mock all collaborators; test in pure isolation
@@ -199,6 +218,7 @@ class FakeRepo:
 - Choose a school; apply consistently
 
 ---
+
 ## Common Test Double Mistakes
 
 - Mocking everything; not testing the unit

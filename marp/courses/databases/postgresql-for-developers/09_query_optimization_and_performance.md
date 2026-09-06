@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Query Optimisation and Performance
 
 ---
+
 ## EXPLAIN Anatomy
 
 ![explain_anatomy](svg/courses/databases/postgresql-for-developers/09_query_optimization_and_performance/explain_anatomy.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - EXPLAIN
@@ -26,6 +29,7 @@ audience:
 - A practical workflow
 
 ---
+
 ## EXPLAIN
 
 ```sql
@@ -37,6 +41,7 @@ EXPLAIN SELECT * FROM users WHERE email = 'a@b.com';
 - Gives expected costs and rows
 
 ---
+
 ## EXPLAIN ANALYZE
 
 ```sql
@@ -48,6 +53,7 @@ EXPLAIN ANALYZE SELECT * FROM users WHERE email = 'a@b.com';
 - The truth-teller
 
 ---
+
 ## Reading Plans
 
 - Indented tree
@@ -57,6 +63,7 @@ EXPLAIN ANALYZE SELECT * FROM users WHERE email = 'a@b.com';
 - Rows: estimated vs actual
 
 ---
+
 ## Common Plan Issues
 
 - Seq Scan on a big table (no index)
@@ -65,6 +72,7 @@ EXPLAIN ANALYZE SELECT * FROM users WHERE email = 'a@b.com';
 - Wildly wrong row estimates (statistics out of date)
 
 ---
+
 ## ANALYZE Statistics
 
 ```sql
@@ -77,6 +85,7 @@ ANALYZE;  -- all tables
 - autovacuum does this; sometimes needs manual
 
 ---
+
 ## Slow Patterns
 
 - N+1 queries (fetch list, then one per item)
@@ -85,6 +94,7 @@ ANALYZE;  -- all tables
 - Functions on indexed columns (`WHERE LOWER(email) = ...`)
 
 ---
+
 ## Configuration
 
 - shared_buffers: 25% of RAM typical
@@ -94,6 +104,7 @@ ANALYZE;  -- all tables
 - autovacuum_*: never disable
 
 ---
+
 ## Connection Pooling
 
 - pgbouncer: lightweight pooler
@@ -102,6 +113,7 @@ ANALYZE;  -- all tables
 - Critical for cloud DBs
 
 ---
+
 ## Auto Explain
 
 ```bash
@@ -114,6 +126,7 @@ auto_explain.log_min_duration = '500ms'
 - Standard in production
 
 ---
+
 ## Indexes Aren't Always Used
 
 - Small tables: seq scan faster
@@ -123,6 +136,7 @@ auto_explain.log_min_duration = '500ms'
 - Each disables index use
 
 ---
+
 ## Vacuuming
 
 - Reclaims space
@@ -131,6 +145,7 @@ auto_explain.log_min_duration = '500ms'
 - Manual VACUUM ANALYZE for special cases
 
 ---
+
 ## Bloat
 
 - Update / delete creates dead tuples
@@ -139,6 +154,7 @@ auto_explain.log_min_duration = '500ms'
 - VACUUM FULL or pg_repack to shrink
 
 ---
+
 ## A Workflow
 
 - Find slow query (pg_stat_statements)
@@ -148,6 +164,7 @@ auto_explain.log_min_duration = '500ms'
 - Re-measure
 
 ---
+
 ## Common Performance Mistakes
 
 - No pg_stat_statements
@@ -157,6 +174,7 @@ auto_explain.log_min_duration = '500ms'
 - ORM queries unprofiled (N+1 hidden)
 
 ---
+
 ## Course Wrap-Up
 
 - Postgres is a powerful, mature database

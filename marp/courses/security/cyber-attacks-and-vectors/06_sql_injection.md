@@ -15,11 +15,13 @@ audience:
 # SQL Injection
 
 ---
+
 ## Vulnerable vs Safe
 
 ![sqli_attack](svg/courses/security/cyber-attacks-and-vectors/06_sql_injection/sqli_attack.svg)
 
 ---
+
 ## What is SQL Injection?
 - A technique to exploit web applications by injecting malicious SQL statements
 - Attacker can gain unauthorized access to databases
@@ -27,11 +29,13 @@ audience:
 - Consistently ranked #1 or top 3 in OWASP Top 10 since 2003
 
 ---
+
 ## How Does SQL Injection Work?
 
 ![how_does_sql_injection_work](svg/courses/security/cyber-attacks-and-vectors/06_sql_injection/how_does_sql_injection_work.svg)
 
 ---
+
 ## How Does SQL Injection Work?: Details
 1. User input is not properly sanitized
 1. Malicious SQL code is injected into application queries
@@ -39,6 +43,7 @@ audience:
 1. Attacker can retrieve, modify, or delete data
 
 ---
+
 ## Types of SQL Injection
 
 | Type          | Description                                  | Visibility |
@@ -51,6 +56,7 @@ audience:
 | Out-of-band   | Data sent via DNS/HTTP to attacker server    | None       |
 
 ---
+
 ## Examples of SQL Injection
 - Login bypass: `' OR '1'='1`
 - Retrieving data: `UNION SELECT password FROM users`
@@ -58,6 +64,7 @@ audience:
 - Deleting data: `'; DROP TABLE users; --`
 
 ---
+
 ## Step-by-Step: Authentication Bypass
 
 ```sql
@@ -77,6 +84,7 @@ SELECT * FROM users WHERE username='' OR 1=1 --' AND password='';
 ```
 
 ---
+
 ## Step-by-Step: UNION-Based Data Extraction
 
 ```sql
@@ -104,6 +112,7 @@ SELECT name, price FROM products WHERE id=INPUT;
 ```
 
 ---
+
 ## Blind SQL Injection: Boolean-Based
 
 When the application does not show query results but behaves differently for true/false:
@@ -126,6 +135,7 @@ When the application does not show query results but behaves differently for tru
 This is slow but fully automated by tools like sqlmap.
 
 ---
+
 ## Blind SQL Injection: Time-Based
 
 When there is no visible difference in response:
@@ -149,11 +159,13 @@ When there is no visible difference in response:
 ```
 
 ---
+
 ## Second-Order SQL Injection
 
 ![second_order_sql_injection](svg/courses/security/cyber-attacks-and-vectors/06_sql_injection/second_order_sql_injection.svg)
 
 ---
+
 ## Vulnerable Code: Multiple Languages
 
 ### Python (Flask + SQLite)
@@ -192,6 +204,7 @@ $result = mysqli_query($conn, $query);
 ```
 
 ---
+
 ## Preventing SQL Injection
 1. **Input Validation**: Validate and sanitize user input
 1. **Parameterized Queries**: Use parameterized queries or prepared statements
@@ -200,6 +213,7 @@ $result = mysqli_query($conn, $query);
 1. **Security Updates**: Keep your software and libraries up-to-date
 
 ---
+
 ## Parameterized Queries
 
 ```python
@@ -212,6 +226,7 @@ cursor.execute(query, (username,))
 ```
 
 ---
+
 ## Parameterized Queries: All Languages
 
 ### Python (SQLAlchemy ORM - recommended)
@@ -250,6 +265,7 @@ const result = await pool.query(query, [username, password]);
 ```
 
 ---
+
 ## Stored Procedures (Additional Defense Layer)
 
 ```sql
@@ -272,6 +288,7 @@ END;
 Note: Stored procedures alone do not prevent SQLi if they use dynamic SQL internally.
 
 ---
+
 ## Sanitizing User Input
 - Remove or escape special characters (', ", `, etc.)
 - Use allowlists (whitelisting) instead of denylists (blacklisting)
@@ -279,6 +296,7 @@ Note: Stored procedures alone do not prevent SQLi if they use dynamic SQL intern
 - Avoid interpreting input as executable code
 
 ---
+
 ## Real-World SQL Injection Incidents
 
 | Incident             | Year | Impact                                 |
@@ -290,6 +308,7 @@ Note: Stored procedures alone do not prevent SQLi if they use dynamic SQL intern
 | Equifax             | 2017 | 147 million records (via Struts vuln)  |
 
 ---
+
 ## Detection and Testing Tools
 
 ```bash
@@ -312,6 +331,7 @@ sqlmap -u "http://target.com/page?id=1" -D dbname -T users --dump
 ```
 
 ---
+
 ## WAF Rules for SQL Injection
 
 ```sql
@@ -334,6 +354,7 @@ SecRule ARGS "@detectSQLi" \
 ```
 
 ---
+
 ## Database Hardening
 
 ```sql
@@ -356,6 +377,7 @@ GRANT SELECT ON myapp.products TO 'webapp'@'localhost';
 ```
 
 ---
+
 ## Best Practices
 - Follow the principle of "least privilege" for database accounts
 - Implement secure authentication and access control mechanisms
@@ -364,6 +386,7 @@ GRANT SELECT ON myapp.products TO 'webapp'@'localhost';
 - Educate developers on secure coding practices and SQL Injection prevention
 
 ---
+
 ## Exercise: SQL Injection Lab
 
 1. Set up a vulnerable login form using Flask + SQLite

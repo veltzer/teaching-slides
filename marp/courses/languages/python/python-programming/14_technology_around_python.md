@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Technology Around Python
 
 ---
+
 ## Overview
 - Debugging Python code
 - Profiling performance
@@ -19,6 +21,7 @@ audience:
 - Useful developer tools
 
 ---
+
 ## The Python Debugger (`pdb`)
 - Built-in interactive debugger
 - Set breakpoints, inspect variables, step through code
@@ -35,7 +38,9 @@ def buggy_function(items):
 ```
 
 ---
+
 ## `pdb` Commands
+
 | Command | Description |
 |---------|-------------|
 | `n` (next) | Execute next line |
@@ -50,6 +55,7 @@ def buggy_function(items):
 | `h` (help) | Show help |
 
 ---
+
 ## `breakpoint()` (Python 3.7+)
 
 ```python
@@ -71,6 +77,7 @@ PYTHONBREAKPOINT=ipdb.set_trace python3 script.py
 ```
 
 ---
+
 ## Running `pdb` from Command Line
 
 ```bash
@@ -85,6 +92,7 @@ python3 -m pdb -c continue script.py
 - Use `c` to run until an exception or breakpoint
 
 ---
+
 ## `pdb` - Post-mortem Debugging
 
 ```python
@@ -100,6 +108,7 @@ except ZeroDivisionError:
 - Very useful for debugging crashes
 
 ---
+
 ## `pdb` - Practical Session
 
 ```python
@@ -124,6 +133,7 @@ def find_max(numbers):
 ```
 
 ---
+
 ## `ipdb` - Enhanced Debugger
 
 ```bash
@@ -141,6 +151,7 @@ ipdb.set_trace()
 - All `pdb` commands work
 
 ---
+
 ## VS Code Debugging
 - Set breakpoints by clicking line numbers
 - Run with F5 or Debug panel
@@ -160,6 +171,7 @@ ipdb.set_trace()
 ```
 
 ---
+
 ## Profiling - Why?
 - Find performance bottlenecks
 - Understand where time is spent
@@ -167,6 +179,7 @@ ipdb.set_trace()
 - "Premature optimization is the root of all evil" - Donald Knuth
 
 ---
+
 ## `time` Module for Basic Timing
 
 ```python
@@ -185,6 +198,7 @@ print(f"Elapsed: {elapsed:.6f}s")
 ```
 
 ---
+
 ## `timeit` Module
 
 ```python
@@ -202,6 +216,7 @@ print(f"Map:       {t2:.4f}s")
 ```
 
 ---
+
 ## `timeit` from Command Line
 
 ```bash
@@ -213,6 +228,7 @@ python3 -m timeit -s "data = list(range(1000))" "sorted(data)"
 ```
 
 ---
+
 ## `cProfile` - The Built-in Profiler
 
 ```python
@@ -235,6 +251,7 @@ cProfile.run("slow_function()")
 ```
 
 ---
+
 ## `cProfile` from Command Line
 
 ```bash
@@ -249,6 +266,7 @@ python3 -m cProfile -o output.prof script.py
 ```
 
 ---
+
 ## Analyzing Profile Data
 
 ```python
@@ -266,6 +284,7 @@ stats.print_callers("slow_function")
 ```
 
 ---
+
 ## `line_profiler` - Line-by-Line Profiling
 
 ```bash
@@ -289,6 +308,7 @@ kernprof -l -v script.py
 - Very useful for optimizing hot loops
 
 ---
+
 ## `memory_profiler`
 
 ```bash
@@ -311,6 +331,7 @@ python3 -m memory_profiler script.py
 ```
 
 ---
+
 ## Code Formatting - `black`
 
 ```bash
@@ -333,6 +354,7 @@ black --diff my_script.py
 - Default line length: 88 characters
 
 ---
+
 ## `black` Configuration in `pyproject.toml`
 
 ```toml
@@ -343,6 +365,7 @@ include = '\.pyi?$'
 ```
 
 ---
+
 ## Code Formatting - `isort`
 - Sorts and organizes imports
 
@@ -374,6 +397,7 @@ from collections import defaultdict
 ```
 
 ---
+
 ## Linting - `flake8`
 
 ```bash
@@ -391,6 +415,7 @@ flake8 --max-line-length 88 src/
 - Configurable rules
 
 ---
+
 ## Linting - `ruff`
 - Modern, fast Python linter (written in Rust)
 - Replaces `flake8`, `isort`, `pyupgrade`, and more
@@ -409,6 +434,7 @@ ruff format .
 ```
 
 ---
+
 ## `ruff` Configuration
 
 ```toml
@@ -424,6 +450,7 @@ known-first-party = ["my_package"]
 ```
 
 ---
+
 ## Type Checking - `mypy`
 
 ```bash
@@ -445,6 +472,7 @@ greet(42)  # mypy error: Argument 1 has incompatible type "int"
 ```
 
 ---
+
 ## `mypy` Configuration
 
 ```toml
@@ -456,6 +484,7 @@ disallow_untyped_defs = true
 ```
 
 ---
+
 ## Pre-commit Hooks
 
 ```bash
@@ -481,7 +510,9 @@ pre-commit run --all-files
 ```
 
 ---
+
 ## `virtualenv` vs `venv`
+
 | Feature | `venv` | `virtualenv` |
 |---------|--------|-------------|
 | Built-in | Yes (3.3+) | No (pip install) |
@@ -497,6 +528,7 @@ virtualenv -p python3.11 myenv
 ```
 
 ---
+
 ## `pyenv` - Python Version Manager
 
 ```bash
@@ -517,6 +549,7 @@ pyenv local 3.11.0
 ```
 
 ---
+
 ## `pipx` - Install CLI Tools
 
 ```bash
@@ -537,6 +570,7 @@ pipx run cowsay "Hello!"
 - Available globally without polluting your project
 
 ---
+
 ## `poetry` - Dependency Management
 
 ```bash
@@ -561,6 +595,7 @@ poetry run python3 script.py
 ```
 
 ---
+
 ## `uv` - Modern Python Package Manager
 
 ```bash
@@ -581,6 +616,7 @@ uv pip sync requirements.txt
 - Drop-in replacement for pip and venv
 
 ---
+
 ## `Makefile` for Python Projects
 
 ```makefile
@@ -605,6 +641,7 @@ clean:
 ```
 
 ---
+
 ## Continuous Integration Example
 
 ```yaml
@@ -626,6 +663,7 @@ jobs:
 ```
 
 ---
+
 ## Docker for Python Projects
 
 ```dockerfile
@@ -645,6 +683,7 @@ CMD ["python3", "-m", "my_package"]
 ```
 
 ---
+
 ## Python Performance Tips
 1. Use built-in functions (`sum`, `max`, `min`, `sorted`)
 1. Use list comprehensions over loops
@@ -655,6 +694,7 @@ CMD ["python3", "-m", "my_package"]
 1. Profile before optimizing
 
 ---
+
 ## Useful Standard Library Tools
 
 ```bash
@@ -675,6 +715,7 @@ python3 -m doctest module.py
 ```
 
 ---
+
 ## `logging` Best Practices
 
 ```python
@@ -697,7 +738,9 @@ def process():
 ```
 
 ---
+
 ## Environment Management Summary
+
 | Tool | Purpose |
 |------|---------|
 | `venv` | Built-in virtual environments |
@@ -709,6 +752,7 @@ def process():
 | `uv` | Fast pip/venv replacement |
 
 ---
+
 ## Developer Workflow Summary
 1. Use `pyenv` to manage Python versions
 1. Create virtual environment with `venv` or `uv`
@@ -722,6 +766,7 @@ def process():
 1. CI/CD for automated checks
 
 ---
+
 ## Summary
 - `pdb` and `breakpoint()` for debugging
 - `cProfile` and `timeit` for profiling

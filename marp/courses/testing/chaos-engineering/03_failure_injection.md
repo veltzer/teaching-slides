@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Failure Injection
 
 ---
+
 ## What This Chapter Covers
 
 - Categories of failures
@@ -21,6 +23,7 @@ audience:
 - Dependency failures
 
 ---
+
 ## Failure Categories
 
 - Network
@@ -30,16 +33,19 @@ audience:
 - Operational
 
 ---
+
 ## Injection Levels
 
 ![injection_levels](svg/courses/testing/chaos-engineering/03_failure_injection/injection_levels.svg)
 
 ---
+
 ## Categories Visualized
 
 ![injection_categories](svg/courses/testing/chaos-engineering/03_failure_injection/injection_categories.svg)
 
 ---
+
 ## Killing Instances
 
 - Stop a node
@@ -48,6 +54,7 @@ audience:
 - Foundational experiment
 
 ---
+
 ## Latency Injection
 
 - Add delay to network calls
@@ -56,6 +63,7 @@ audience:
 - Often where bugs hide
 
 ---
+
 ## Packet Loss
 
 - Drop a percentage of packets
@@ -64,6 +72,7 @@ audience:
 - Realistic edge case
 
 ---
+
 ## Network Partition
 
 - Split nodes from each other
@@ -72,6 +81,7 @@ audience:
 - Hardest to recover from
 
 ---
+
 ## CPU Pressure
 
 - Pin cores at 100%
@@ -80,6 +90,7 @@ audience:
 - Tests timeout sensitivity
 
 ---
+
 ## Memory Pressure
 
 - Allocate large blocks
@@ -88,6 +99,7 @@ audience:
 - Reveals leaks
 
 ---
+
 ## Disk Pressure
 
 - Fill the disk
@@ -96,6 +108,7 @@ audience:
 - Often surprising failures
 
 ---
+
 ## Application Failures
 
 - Kill a process
@@ -104,6 +117,7 @@ audience:
 - Reject random requests
 
 ---
+
 ## Dependency Failures
 
 - DB unavailable
@@ -112,6 +126,7 @@ audience:
 - Test fallbacks
 
 ---
+
 ## Clock Skew
 
 - Move clocks forward or back
@@ -120,6 +135,7 @@ audience:
 - Especially in distributed systems
 
 ---
+
 ## Region Outage
 
 - Drop traffic to a region
@@ -128,6 +144,7 @@ audience:
 - Run rarely, prepare thoroughly
 
 ---
+
 ## Tools
 
 - Open source platforms
@@ -136,6 +153,7 @@ audience:
 - Pick by environment
 
 ---
+
 ## Common Injection Mistakes
 
 - Killing without observing

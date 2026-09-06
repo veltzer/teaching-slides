@@ -15,11 +15,13 @@ audience:
 # Buffer Overflows in C
 
 ---
+
 ## Stack Smashing
 
 ![stack_smash](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/stack_smash.svg)
 
 ---
+
 ## What is a Buffer Overflow?
 - Occurs when a program tries to write data beyond the bounds of a buffer
 - Can overwrite adjacent memory locations
@@ -28,6 +30,7 @@ audience:
 - Responsible for major incidents: Morris Worm (1988), Code Red (2001), Heartbleed (2014)
 
 ---
+
 ## How Buffer Overflows Happen
 - Common coding mistakes:
     - Using insecure functions (e.g. `strcpy`, `strcat`, `sprintf`)
@@ -35,6 +38,7 @@ audience:
     - Inadequate bounds checking
 
 ---
+
 ## Types of Buffer Overflows
 
 | Type              | Location    | Difficulty | Common Target          |
@@ -46,16 +50,19 @@ audience:
 | Off-by-one        | Stack/Heap  | Hard       | Frame pointer          |
 
 ---
+
 ## Stack Layout Diagram
 
 ![stack_layout_diagram](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/stack_layout_diagram.svg)
 
 ---
+
 ## Diagram
 
 ![diagram](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/diagram.svg)
 
 ---
+
 ## Vulnerable Code Example: strcpy
 
 ```c
@@ -91,6 +98,7 @@ gcc -fno-stack-protector -z execstack -no-pie \
 ```
 
 ---
+
 ## Secure Code Alternative
 
 ```c
@@ -130,6 +138,7 @@ void dynamic_function(const char *user_input) {
 ```
 
 ---
+
 ## Unsafe vs Safe C Functions
 
 | Unsafe Function | Safe Alternative         | Notes                        |
@@ -142,6 +151,7 @@ void dynamic_function(const char *user_input) {
 | `vsprintf`      | `vsnprintf`             | Specify buffer size          |
 
 ---
+
 ## Heap Overflow Example
 
 ```c
@@ -203,6 +213,7 @@ void secure_format(const char *user_input) {
 ![format_string_vulnerability](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/format_string_vulnerability.svg)
 
 ---
+
 ## Integer Overflow Leading to Buffer Overflow
 
 ```c
@@ -234,6 +245,7 @@ void secure_integer(size_t count, size_t element_size) {
 ```
 
 ---
+
 ## Consequences
 - Execution of malicious code
 - Privilege escalation
@@ -241,6 +253,7 @@ void secure_integer(size_t count, size_t element_size) {
 - Information leaks
 
 ---
+
 ## Real-World Case Studies
 
 | Vulnerability   | Year | Impact                                      |
@@ -252,6 +265,7 @@ void secure_integer(size_t count, size_t element_size) {
 | EternalBlue    | 2017 | SMB overflow, enabled WannaCry ransomware     |
 
 ---
+
 ## Heartbleed (CVE-2014-0160) Deep Dive
 
 ![heartbleed_cve_2014_0160_deep_dive](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/heartbleed_cve_2014_0160_deep_dive.svg)
@@ -263,6 +277,7 @@ void secure_integer(size_t count, size_t element_size) {
 The bug: Server trusts client-specified length without bounds checking.
 
 ---
+
 ## Defending Against Buffer Overflows
 - Use safe functions (`strncpy`, `strncat`) with bounds checking
 - Enable compiler warnings and address sanitizers
@@ -271,6 +286,7 @@ The bug: Server trusts client-specified length without bounds checking.
 - Implement DEP, ASLR, stack canaries
 
 ---
+
 ## Compiler Protections
 
 ```bash
@@ -305,6 +321,7 @@ gcc -Wall -Wextra -Werror \
 | `-z relro -z now`       | Read-only relocations (GOT protect) |
 
 ---
+
 ## Mitigation Techniques
 - Data Execution Prevention (DEP)
     - Marks memory regions as non-executable
@@ -340,6 +357,7 @@ readelf -h /usr/bin/ls | grep Type
 ![dyn_position_independent_executable](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/dyn_position_independent_executable.svg)
 
 ---
+
 ## Detection Tools
 
 ```bash
@@ -362,6 +380,7 @@ valgrind --tool=memcheck --leak-check=full ./program
 ```
 
 ---
+
 ## Other Best Practices
 
 - Keep software up-to-date
@@ -370,6 +389,7 @@ valgrind --tool=memcheck --leak-check=full ./program
 - Use safe alternatives (e.g. rust, memory-safe languages)
 
 ---
+
 ## Modern Language Alternatives
 
 Languages that prevent buffer overflows by design:
@@ -401,6 +421,7 @@ func safeFunction(input string) {
 ```
 
 ---
+
 ## Exercise: Buffer Overflow Lab
 
 1. Compile the vulnerable `strcpy` example without protections

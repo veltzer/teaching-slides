@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Team Collaboration with AI
 
 ---

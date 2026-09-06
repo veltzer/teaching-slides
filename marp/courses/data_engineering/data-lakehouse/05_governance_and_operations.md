@@ -8,9 +8,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Governance and Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Data quality
@@ -20,6 +22,7 @@ audience:
 - Cost
 
 ---
+
 ## Data Quality
 
 - Validate at ingest
@@ -28,6 +31,7 @@ audience:
 - Block bad data, do not silently drop
 
 ---
+
 ## Quality Tests
 
 - Not-null
@@ -36,6 +40,7 @@ audience:
 - Referential integrity
 
 ---
+
 ## Quality Frameworks
 
 - Built-in test runners
@@ -44,6 +49,7 @@ audience:
 - Block downstream on failure
 
 ---
+
 ## Lineage
 
 - Source to table to dashboard
@@ -52,11 +58,13 @@ audience:
 - Required for debugging
 
 ---
+
 ## Lineage and Quality
 
 ![lineage_quality](svg/courses/data_engineering/data-lakehouse/05_governance_and_operations/lineage_quality.svg)
 
 ---
+
 ## Cataloging
 
 - Inventory of tables
@@ -65,6 +73,7 @@ audience:
 - Discovery for users
 
 ---
+
 ## Access Control
 
 - Per-table read and write
@@ -73,6 +82,7 @@ audience:
 - Audit access logs
 
 ---
+
 ## PII Handling
 
 - Tag PII columns
@@ -81,6 +91,7 @@ audience:
 - Honor deletion requests
 
 ---
+
 ## Monitoring
 
 - Pipeline success rate
@@ -89,6 +100,7 @@ audience:
 - Storage usage
 
 ---
+
 ## Alerts
 
 - Late tables
@@ -97,6 +109,7 @@ audience:
 - Cost spikes
 
 ---
+
 ## Cost Levers
 
 - Compaction reduces small-file overhead
@@ -105,6 +118,7 @@ audience:
 - Cache hot tables
 
 ---
+
 ## Storage Tiers
 
 - Hot for active data
@@ -113,6 +127,7 @@ audience:
 - Watch for accidental hot-data demotion
 
 ---
+
 ## Disaster Recovery
 
 - Cross-region replication
@@ -121,6 +136,7 @@ audience:
 - RPO and RTO documented
 
 ---
+
 ## Common Operational Mistakes
 
 - Quality checks added after incidents

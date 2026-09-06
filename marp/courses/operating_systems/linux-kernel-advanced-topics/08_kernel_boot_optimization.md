@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Kernel Boot Time Optimization
 
 ---

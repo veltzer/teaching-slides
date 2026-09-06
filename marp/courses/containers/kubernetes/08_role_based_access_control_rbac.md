@@ -8,9 +8,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Role-Based Access Control (RBAC)
 
 ---
+
 ## What This Chapter Covers
 
 - RBAC concepts
@@ -21,6 +23,7 @@ audience:
 - Auditing
 
 ---
+
 ## RBAC Concepts
 
 - Subjects (users, groups, service accounts)
@@ -29,11 +32,13 @@ audience:
 - Combine: who can do what to what
 
 ---
+
 ## RBAC Model
 
 ![rbac_model](svg/courses/containers/kubernetes/08_role_based_access_control_rbac/rbac_model.svg)
 
 ---
+
 ## Roles
 
 - Permissions per namespace
@@ -41,6 +46,7 @@ audience:
 - "Read pods in this namespace"
 
 ---
+
 ## Sample Role
 
 ```yaml
@@ -56,6 +62,7 @@ rules:
 ```
 
 ---
+
 ## ClusterRoles
 
 - Cluster-wide permissions
@@ -63,6 +70,7 @@ rules:
 - Apply via ClusterRoleBinding (cluster) or RoleBinding (namespace)
 
 ---
+
 ## RoleBinding
 
 - Binds a Role to subjects
@@ -70,6 +78,7 @@ rules:
 - "User Alice can do what pod-reader allows"
 
 ---
+
 ## ClusterRoleBinding
 
 - Binds a ClusterRole to subjects
@@ -77,6 +86,7 @@ rules:
 - "Admin gets cluster-admin"
 
 ---
+
 ## Built-In Roles
 
 - cluster-admin: everything
@@ -86,11 +96,13 @@ rules:
 - Use as starting points
 
 ---
+
 ## Subjects of Access
 
 ![rbac_subjects](svg/courses/containers/kubernetes/08_role_based_access_control_rbac/rbac_subjects.svg)
 
 ---
+
 ## ServiceAccount
 
 - Identity for pods
@@ -99,6 +111,7 @@ rules:
 - Or: cloud workload identity
 
 ---
+
 ## Sample ServiceAccount
 
 ```yaml
@@ -121,6 +134,7 @@ roleRef:
 ```
 
 ---
+
 ## Pod's ServiceAccount
 
 ```yaml
@@ -132,6 +146,7 @@ spec:
 - Don't use the default ServiceAccount
 
 ---
+
 ## Workload Identity (Cloud)
 
 - AWS IRSA, GCP Workload Identity
@@ -140,6 +155,7 @@ spec:
 - Standard for cloud-native apps
 
 ---
+
 ## Auditing
 
 - Enable audit logs at API server
@@ -148,6 +164,7 @@ spec:
 - Compliance requirement
 
 ---
+
 ## Common RBAC Patterns
 
 - Per-team namespace + RoleBinding
@@ -156,6 +173,7 @@ spec:
 - cluster-admin: only break-glass
 
 ---
+
 ## Anti-Patterns
 
 - Using cluster-admin for everything
@@ -165,6 +183,7 @@ spec:
 - Permissions never reviewed
 
 ---
+
 ## Common RBAC Mistakes
 
 - Granting wildcard verbs

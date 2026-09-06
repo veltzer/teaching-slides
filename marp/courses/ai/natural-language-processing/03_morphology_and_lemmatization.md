@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Morphology and Lemmatization
 
 ---
+
 ## What This Chapter Covers
 
 - The internal structure of words: stems, roots, affixes, clitics
@@ -21,6 +23,7 @@ audience:
 - Compounds, decompounding, and when modern systems make morphology less urgent
 
 ---
+
 ## Why Morphology Matters
 
 - A word is rarely a single atom of meaning
@@ -29,6 +32,7 @@ audience:
 - Treating them as identical erases distinctions the model needs
 
 ---
+
 ## Morphemes: The Building Blocks
 
 - A morpheme is the smallest unit that carries meaning
@@ -37,6 +41,7 @@ audience:
 - Morphemes can be free (stand alone) or bound (must attach)
 
 ---
+
 ## Stems, Roots, and Affixes
 
 - A `root` is the irreducible core of a word: `believe`
@@ -45,11 +50,13 @@ audience:
 - `clitics` are reduced forms that attach phonologically: `'s`, `'ll`, `n't`
 
 ---
+
 ## Morpheme Anatomy
 
 ![morpheme_anatomy](svg/courses/ai/natural-language-processing/03_morphology_and_lemmatization/morpheme_anatomy.svg)
 
 ---
+
 ## Inflectional Morphology
 
 - Modifies a word for grammatical role without changing its category
@@ -58,6 +65,7 @@ audience:
 - The lemma stays the same; the part of speech stays the same
 
 ---
+
 ## Derivational Morphology
 
 - Builds new words, often changing the part of speech
@@ -66,6 +74,7 @@ audience:
 - Each step is a different lexeme, often with a separate dictionary entry
 
 ---
+
 ## Productive vs Unproductive Processes
 
 - A `productive` process applies freely to new bases: `-ness` attaches to almost any adjective
@@ -74,6 +83,7 @@ audience:
 - Modern coinages (`tweetable`, `googled`) reveal which suffixes still travel
 
 ---
+
 ## Stemming: The Idea
 
 - Reduce a surface form to a crude common shape
@@ -82,6 +92,7 @@ audience:
 - Fast, rule-based, language-specific, and lossy
 
 ---
+
 ## The Porter Stemmer
 
 - The classic English stemmer; published by Martin Porter in 1980
@@ -90,6 +101,7 @@ audience:
 - The output is often not a word, but it is consistent
 
 ---
+
 ## The Snowball Stemmer
 
 - Porter's later framework for writing stemmers in many languages
@@ -98,6 +110,7 @@ audience:
 - Still rule-based, still produces non-words, still language-specific
 
 ---
+
 ## Stemming Limitations
 
 - `Over-stemming`: collapses words that should differ (`university` and `universe` -> `univers`)
@@ -106,11 +119,13 @@ audience:
 - Rules tuned for one language behave badly on another
 
 ---
+
 ## Stemming vs Lemmatization
 
 ![stemming_vs_lemmatization](svg/courses/ai/natural-language-processing/03_morphology_and_lemmatization/stemming_vs_lemmatization.svg)
 
 ---
+
 ## Lemmatization: The Idea
 
 - Reduce a word to its dictionary form, the `lemma`
@@ -119,6 +134,7 @@ audience:
 - Requires more knowledge: a lexicon, morphological rules, often the part of speech
 
 ---
+
 ## Dictionary-Based Lemmatization
 
 - Look the surface form up in a table mapping every inflected form to its lemma
@@ -127,6 +143,7 @@ audience:
 - Disambiguation by part of speech: `saw` (verb) -> `see`; `saw` (noun) -> `saw`
 
 ---
+
 ## Morphological Analyzers
 
 - Two-level finite-state transducers map surface forms to lemma plus features
@@ -135,6 +152,7 @@ audience:
 - Industrial tools: `HFST`, `Foma`, `XFST`, language-specific analyzers
 
 ---
+
 ## WordNet and Lexical Resources
 
 - `WordNet` groups English words into synsets of near-synonyms
@@ -143,6 +161,7 @@ audience:
 - Sister resources exist for many languages (`OpenMultilingualWordNet`, `BabelNet`)
 
 ---
+
 ## A Lemmatization Snippet
 
 ```python
@@ -158,6 +177,7 @@ lemma.lemmatize("mice",    pos="n")  # -> "mouse"
 - Part-of-speech tagging usually runs before lemmatization
 
 ---
+
 ## Morphologically Rich Languages
 
 - English has a tiny inflectional system: a handful of suffixes per word class
@@ -166,6 +186,7 @@ lemma.lemmatize("mice",    pos="n")  # -> "mouse"
 - Tokenization, lemmatization, and modeling all change shape
 
 ---
+
 ## Agglutinative Languages
 
 - Each grammatical feature is a separate, stackable suffix
@@ -174,6 +195,7 @@ lemma.lemmatize("mice",    pos="n")  # -> "mouse"
 - A single word can express what English needs a whole phrase for
 
 ---
+
 ## Templatic Morphology
 
 - Roots are consonant skeletons; vowels are interleaved by a pattern
@@ -182,11 +204,13 @@ lemma.lemmatize("mice",    pos="n")  # -> "mouse"
 - Surface forms hide the root unless an analyzer extracts it
 
 ---
+
 ## Morphologically Rich Languages
 
 ![morph_rich_languages](svg/courses/ai/natural-language-processing/03_morphology_and_lemmatization/morph_rich_languages.svg)
 
 ---
+
 ## Why Subword Tokenization Helps
 
 - Subword tokenizers fragment rare inflected forms into recurring pieces
@@ -195,6 +219,7 @@ lemma.lemmatize("mice",    pos="n")  # -> "mouse"
 - Vocabulary stays bounded even when surface forms are unbounded
 
 ---
+
 ## Compounding
 
 - Two or more roots combine into a single word
@@ -203,6 +228,7 @@ lemma.lemmatize("mice",    pos="n")  # -> "mouse"
 - A single token may carry the meaning of a five-word English phrase
 
 ---
+
 ## Decompounding Strategies
 
 - Split a compound into its parts before further processing
@@ -211,6 +237,7 @@ lemma.lemmatize("mice",    pos="n")  # -> "mouse"
 - Subword tokenizers do this implicitly; explicit decompounding still helps for retrieval
 
 ---
+
 ## A Decompounding Example
 
 ```diagram
@@ -223,6 +250,7 @@ gloss : Danube + steam + ship + travel + company
 - A surface-only index misses every variant
 
 ---
+
 ## Morphology in Modern NLP Systems
 
 - Subword tokenization absorbs much of what classical morphology handled
@@ -231,6 +259,7 @@ gloss : Danube + steam + ship + travel + company
 - The places it still helps: search, classical IR, low-resource languages
 
 ---
+
 ## When Morphology Still Matters
 
 - Information retrieval: matching `runs` to a query for `run`
@@ -239,6 +268,7 @@ gloss : Danube + steam + ship + travel + company
 - Morphologically rich languages where subword tokens correspond to morphemes
 
 ---
+
 ## When To Skip Lemmatization
 
 - Modern transformers tokenize at subword level and learn inflection in their embeddings
@@ -247,6 +277,7 @@ gloss : Danube + steam + ship + travel + company
 - Trust the tokenizer; reach for lemmatization only when measurement says you should
 
 ---
+
 ## Anti-Patterns
 
 - Stemming once at training and lemmatizing at inference
@@ -255,6 +286,7 @@ gloss : Danube + steam + ship + travel + company
 - Decompounding before subword tokenization, then re-merging differently
 
 ---
+
 ## Morphology and Information Retrieval
 
 - Stemming and lemmatization expand recall: a query for `run` retrieves `runs` and `running`
@@ -263,6 +295,7 @@ gloss : Danube + steam + ship + travel + company
 - Hybrid systems combine sparse (lemmatized) and dense (embedded) signals
 
 ---
+
 ## Diagnosing Morphological Errors
 
 - Inspect the lemma stream alongside the token stream
@@ -271,6 +304,7 @@ gloss : Danube + steam + ship + travel + company
 - A small evaluation set of (form, lemma) pairs catches most regressions
 
 ---
+
 ## Tools Across Languages
 
 - English: `NLTK`, `spaCy`, `Stanza`, `WordNet`
@@ -279,6 +313,7 @@ gloss : Danube + steam + ship + travel + company
 - Finnish, Turkish, Hungarian: dedicated morphological analyzers in `HFST`
 
 ---
+
 ## Morphology and Evaluation
 
 - Lemmatization accuracy is measured against gold-standard lexicons
@@ -287,6 +322,7 @@ gloss : Danube + steam + ship + travel + company
 - Errors cluster on rare or irregular forms, the ones that matter most for users
 
 ---
+
 ## Summary
 
 - Morphology decomposes words into stems, affixes, and clitics

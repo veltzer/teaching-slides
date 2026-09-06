@@ -11,11 +11,13 @@ audience:
   - audiences:developers
 
 ---
+
 # Autoscaling in `Kubernetes`
 
 Advanced Kubernetes Course - Day 1, Module 2
 
 ---
+
 ## HPA, VPA, Cluster Autoscaler
 
 ![hpa_vpa](svg/courses/devops/advanced-kubernetes/02_autoscaling/hpa_vpa.svg)

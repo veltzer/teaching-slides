@@ -10,14 +10,17 @@ audience:
   - audiences:architects
 
 ---
+
 # Distributed Systems Theory
 
 ---
+
 ## What Is a Distributed System?
 
 ![what_is_distributed_system](svg/courses/architecting/architecting/02_distributed_systems_theory/what_is_distributed_system.svg)
 
 ---
+
 ## Why Distributed Systems?
 
 - Handle more traffic than a single machine can support
@@ -26,6 +29,7 @@ audience:
 - Enable independent development and deployment of components
 
 ---
+
 ## Core Challenges
 
 - Network is unreliable and introduces latency
@@ -34,6 +38,7 @@ audience:
 - Achieving consensus across nodes is fundamentally hard
 
 ---
+
 ## The Fallacies of Distributed Computing
 
 - Eight assumptions that developers new to distributed systems wrongly make
@@ -42,6 +47,7 @@ audience:
 - Understanding them is essential for building robust systems
 
 ---
+
 ## Fallacy 1: The Network Is Reliable
 
 - Packets get lost, connections drop, switches fail
@@ -50,6 +56,7 @@ audience:
 - Always expect and handle network failures gracefully
 
 ---
+
 ## Fallacy 2: Latency Is Zero
 
 - Every network call adds milliseconds or more of delay
@@ -58,6 +65,7 @@ audience:
 - Measure and account for latency in performance budgets
 
 ---
+
 ## Fallacy 3: Bandwidth Is Infinite
 
 - Network capacity is limited and shared with other traffic
@@ -66,6 +74,7 @@ audience:
 - Monitor network utilization and plan for growth
 
 ---
+
 ## Fallacy 4: The Network Is Secure
 
 - Every network boundary is a potential attack surface
@@ -74,6 +83,7 @@ audience:
 - Never assume internal networks are inherently safe
 
 ---
+
 ## Fallacy 5: Topology Doesn't Change
 
 - Network paths, servers, and load balancers change frequently
@@ -82,6 +92,7 @@ audience:
 - Build systems that adapt to topology changes automatically
 
 ---
+
 ## Fallacy 6: There Is One Administrator
 
 - Modern systems span teams, organizations, and cloud providers
@@ -90,6 +101,7 @@ audience:
 - Assume limited control over external dependencies
 
 ---
+
 ## Fallacy 7: Transport Cost Is Zero
 
 - Serialization, deserialization, and network I/O consume resources
@@ -98,6 +110,7 @@ audience:
 - Consider the total cost of each network interaction
 
 ---
+
 ## Fallacy 8: The Network Is Homogeneous
 
 - Systems use different protocols, formats, and versions
@@ -106,6 +119,7 @@ audience:
 - Test against multiple client and server versions
 
 ---
+
 ## The CAP Theorem
 
 - Proposed by Eric Brewer in 2000, proven in 2002
@@ -116,11 +130,13 @@ audience:
 - Network partitions are inevitable, so the real choice is C vs A
 
 ---
+
 ## CAP Theorem
 
 ![cap_theorem](svg/courses/architecting/architecting/02_distributed_systems_theory/cap_theorem.svg)
 
 ---
+
 ## Consistency in CAP
 
 - Every read receives the most recent write or an error
@@ -129,6 +145,7 @@ audience:
 - Requires coordination between nodes on every write
 
 ---
+
 ## Availability in CAP
 
 - Every request receives a non-error response
@@ -137,6 +154,7 @@ audience:
 - Measured as the percentage of successful responses
 
 ---
+
 ## Partition Tolerance in CAP
 
 - The system continues to operate despite network partitions
@@ -145,6 +163,7 @@ audience:
 - Therefore partition tolerance is not optional
 
 ---
+
 ## CP Systems
 
 - Prioritize consistency over availability during partitions
@@ -153,6 +172,7 @@ audience:
 - Use cases: financial transactions, configuration management
 
 ---
+
 ## AP Systems
 
 - Prioritize availability over consistency during partitions
@@ -161,11 +181,13 @@ audience:
 - Use cases: social media feeds, product catalogs, caching
 
 ---
+
 ## The PACELC Theorem
 
 ![pacelc_theorem](svg/courses/architecting/architecting/02_distributed_systems_theory/pacelc_theorem.svg)
 
 ---
+
 ## PACELC Examples
 
 | System | Partition (P) | Else (E) |
@@ -176,17 +198,20 @@ audience:
 | `PNUTS` | A | C |
 
 ---
+
 ## Consistency Models Spectrum
 
 ![consistency_models_spectrum](svg/courses/architecting/architecting/02_distributed_systems_theory/consistency_models_spectrum.svg)
 
 ---
+
 ## Consistency Trade-Offs
 
 - Stronger consistency means more coordination overhead
 - Weaker consistency means better performance and availability
 
 ---
+
 ## Eventual Consistency
 
 - If no new updates are made, all replicas will eventually converge
@@ -195,6 +220,7 @@ audience:
 - Widely used in `AP` systems for high availability
 
 ---
+
 ## Strong Consistency
 
 - All reads reflect the most recent write across all nodes
@@ -203,6 +229,7 @@ audience:
 - Necessary when correctness depends on data freshness
 
 ---
+
 ## FLP Impossibility
 
 Fischer, Lynch, Paterson (1985):
@@ -216,6 +243,7 @@ Implications:
 - Raft and Paxos assume eventual synchrony to make progress
 
 ---
+
 ## Logical Clocks (Lamport)
 
 Physical clocks disagree; logical clocks give a consistent *partial order* of events:
@@ -227,6 +255,7 @@ Physical clocks disagree; logical clocks give a consistent *partial order* of ev
 Captures "happens-before" but not concurrency — two unrelated events may have equal timestamps with no causal link.
 
 ---
+
 ## Vector Clocks
 
 Track causality across *all* nodes. Each process holds a vector `V[i]` of counters, one per node:
@@ -238,6 +267,7 @@ Track causality across *all* nodes. Each process holds a vector `V[i]` of counte
 Two events `A` and `B` are concurrent iff `V(A) < V(B)` is false AND `V(B) < V(A)` is false. Used in Dynamo, Riak, version vectors for conflict detection.
 
 ---
+
 ## Consensus Algorithms
 
 - Enable multiple nodes to agree on a single value
@@ -246,11 +276,13 @@ Two events `A` and `B` are concurrent iff `V(A) < V(B)` is false AND `V(B) < V(A
 - Trade availability for correctness during partitions
 
 ---
+
 ## Raft Consensus Overview
 
 ![raft_consensus_overview](svg/courses/architecting/architecting/02_distributed_systems_theory/raft_consensus_overview.svg)
 
 ---
+
 ## Raft Consensus Details
 
 - Leader handles all writes
@@ -258,6 +290,7 @@ Two events `A` and `B` are concurrent iff `V(A) < V(B)` is false AND `V(B) < V(A
 - New leader elected if current leader fails
 
 ---
+
 ## Byzantine Fault Tolerance
 
 Crash faults: a node stops. Byzantine faults: a node lies, sends contradicting messages, or is malicious.
@@ -269,6 +302,7 @@ Crash faults: a node stops. Byzantine faults: a node lies, sends contradicting m
 Most traditional distributed systems (ZooKeeper, etcd, Cassandra) assume crash-only faults — not Byzantine.
 
 ---
+
 ## Quorum-Based Systems
 
 - A quorum is the minimum number of nodes that must agree
@@ -277,6 +311,7 @@ Most traditional distributed systems (ZooKeeper, etcd, Cassandra) assume crash-o
 - Tuning W and R trades consistency for latency
 
 ---
+
 ## Gossip Protocols
 
 Epidemic-style information spread:
@@ -288,6 +323,7 @@ Epidemic-style information spread:
 Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT replication.
 
 ---
+
 ## High Availability Defined
 
 - The ability of a system to remain operational for a high percentage of time
@@ -296,6 +332,7 @@ Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT r
 - Requires both technical and operational disciplines
 
 ---
+
 ## Availability Tiers
 
 | Level | Uptime | Downtime/Year |
@@ -306,6 +343,7 @@ Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT r
 | 99.999% | Five nines | 5.26 minutes |
 
 ---
+
 ## Redundancy Strategies
 
 - Active-Active: multiple nodes serve traffic simultaneously
@@ -314,16 +352,19 @@ Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT r
 - Geographic redundancy: replicate across data centers or regions
 
 ---
+
 ## Active-Active Architecture
 
 ![active_active_architecture](svg/courses/architecting/architecting/02_distributed_systems_theory/active_active_architecture.svg)
 
 ---
+
 ## Active-Passive Architecture
 
 ![active_passive_architecture](svg/courses/architecting/architecting/02_distributed_systems_theory/active_passive_architecture.svg)
 
 ---
+
 ## Fault Tolerance Principles
 
 - Assume every component can and will fail
@@ -332,6 +373,7 @@ Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT r
 - Recover automatically without human intervention when possible
 
 ---
+
 ## Failure Detection
 
 - Heartbeat mechanisms between nodes
@@ -340,6 +382,7 @@ Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT r
 - Gossip protocols for peer-to-peer failure detection
 
 ---
+
 ## Failover Strategies
 
 - DNS failover: update DNS records to point to healthy nodes
@@ -348,6 +391,7 @@ Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT r
 - Application-level failover: retry on a different service instance
 
 ---
+
 ## Data Replication
 
 - Synchronous replication: write is acknowledged only after all replicas confirm
@@ -357,11 +401,13 @@ Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT r
 - Semi-synchronous: primary waits for at least one replica to confirm
 
 ---
+
 ## Replication Topologies
 
 ![replication_topologies](svg/courses/architecting/architecting/02_distributed_systems_theory/replication_topologies.svg)
 
 ---
+
 ## Split-Brain Problem
 
 A network partition leaves two groups of nodes each believing it is the primary:
@@ -376,6 +422,7 @@ Mitigations:
 - **STONITH** / dedicated arbiter nodes in clustering systems
 
 ---
+
 ## Idempotency
 
 - An operation that produces the same result when applied multiple times
@@ -384,6 +431,7 @@ Mitigations:
 - `GET`, `PUT`, and `DELETE` are naturally idempotent; `POST` is not
 
 ---
+
 ## Designing for Partial Failure
 
 - Not all components fail at once; handle degraded states gracefully
@@ -392,6 +440,7 @@ Mitigations:
 - Bound every external call with a timeout
 
 ---
+
 ## Summary
 
 - The `CAP` theorem forces a choice between consistency and availability during partitions

@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Docker Compose
 
 ---
+
 ## What This Chapter Covers
 
 - The problem Compose solves
@@ -22,6 +24,7 @@ audience:
 - Scaling, profiles, overrides
 
 ---
+
 ## What Compose Is
 
 - A way to define and run multi-container applications with one file
@@ -31,6 +34,7 @@ audience:
 - For production at scale: Kubernetes is the usual upgrade path
 
 ---
+
 ## Why Use Compose
 
 - A single file replaces a script of `docker run` commands
@@ -40,6 +44,7 @@ audience:
 - Onboarding: `git clone && docker compose up` and your dev env is running
 
 ---
+
 ## A Minimal compose.yaml
 
 ```yaml
@@ -64,6 +69,7 @@ volumes:
 - `docker compose up` starts both
 
 ---
+
 ## Service Configuration
 
 ```yaml
@@ -85,6 +91,7 @@ services:
 - `depends_on`: start order (does *not* wait for "ready")
 
 ---
+
 ## Networks
 
 ```yaml
@@ -103,6 +110,7 @@ networks:
 - Multiple networks isolate concerns: `web` exposed; `db` not
 
 ---
+
 ## Volumes
 
 ```yaml
@@ -126,6 +134,7 @@ services:
 - `:ro` for read-only
 
 ---
+
 ## Running Compose
 
 ```bash
@@ -142,6 +151,7 @@ docker compose exec api bash     # exec into a running service
 - v1 (`docker-compose`) is deprecated
 
 ---
+
 ## Building With Compose
 
 ```yaml
@@ -162,6 +172,7 @@ docker compose up --build         # rebuild before starting
 ```
 
 ---
+
 ## Environment Variables
 
 ```yaml
@@ -180,6 +191,7 @@ services:
 - Don't commit `.env` to git
 
 ---
+
 ## Scaling
 
 ```bash
@@ -192,6 +204,7 @@ docker compose up -d --scale api=3
 - For a load balancer, you'll need an additional service in front
 
 ---
+
 ## Profiles
 
 ```yaml
@@ -214,6 +227,7 @@ docker compose --profile testing up     # include "testing" services
 - Don't run debug containers in production by accident
 
 ---
+
 ## Overrides
 
 - `compose.override.yaml` is loaded automatically alongside `compose.yaml`
@@ -222,6 +236,7 @@ docker compose --profile testing up     # include "testing" services
 - Layered config keeps the base file clean
 
 ---
+
 ## A Real-ish Example
 
 ```yaml
@@ -246,6 +261,7 @@ volumes:
 ```
 
 ---
+
 ## Common Mistakes
 
 - `depends_on` without a healthcheck &#8594; api starts before db is *ready*
@@ -255,6 +271,7 @@ volumes:
 - Treating Compose as production orchestration — it isn't, beyond a single host
 
 ---
+
 ## When To Outgrow Compose
 
 - More than one host
@@ -264,6 +281,7 @@ volumes:
 - All of the above &#8594; Kubernetes (or Nomad, ECS, etc.)
 
 ---
+
 ## What Docker Compose Provides
 
 ![compose_features](svg/courses/containers/docker-fundamentals/07_docker_compose/compose_features.svg)

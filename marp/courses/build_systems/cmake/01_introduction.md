@@ -11,6 +11,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Introduction to CMake
 
 ---
@@ -77,6 +78,7 @@ audience:
 | IDE support | Excellent | Basic | Good | Good |
 
 ---
+
 ## Build Tool Comparison
 
 ![cmake_vs_others](svg/courses/build_systems/cmake/01_introduction/cmake_vs_others.svg)

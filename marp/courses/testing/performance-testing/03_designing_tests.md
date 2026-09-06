@@ -8,9 +8,11 @@ audience:
   - audiences:testers
 
 ---
+
 # Designing Tests
 
 ---
+
 ## What This Chapter Covers
 
 - Workload modeling
@@ -20,6 +22,7 @@ audience:
 - Data variety
 
 ---
+
 ## Workload Modeling
 
 - Match real user behavior
@@ -28,16 +31,19 @@ audience:
 - Realistic burst patterns
 
 ---
+
 ## Scenario Inputs
 
 ![scenario_inputs](svg/courses/testing/performance-testing/03_designing_tests/scenario_inputs.svg)
 
 ---
+
 ## Workload Visualized
 
 ![workload_model](svg/courses/testing/performance-testing/03_designing_tests/workload_model.svg)
 
 ---
+
 ## Sources Of Truth
 
 - Production logs
@@ -46,6 +52,7 @@ audience:
 - Sampling tools
 
 ---
+
 ## Scenarios
 
 - Sign-up
@@ -55,6 +62,7 @@ audience:
 - Settings
 
 ---
+
 ## Mix
 
 - Common scenarios at production rates
@@ -63,6 +71,7 @@ audience:
 - Document the mix
 
 ---
+
 ## Pacing
 
 - Time between requests per user
@@ -71,6 +80,7 @@ audience:
 - Tune to match real users
 
 ---
+
 ## Open Vs Closed Models
 
 - Open: arrival rate independent of response
@@ -79,6 +89,7 @@ audience:
 - Closed mirrors fixed-thread workers
 
 ---
+
 ## Think Time
 
 - Pause between user actions
@@ -87,6 +98,7 @@ audience:
 - Vary across users
 
 ---
+
 ## Data Variety
 
 - Many user IDs
@@ -95,6 +107,7 @@ audience:
 - Avoid cache-only paths
 
 ---
+
 ## Cache Warming
 
 - Realistic warm-up before measurement
@@ -103,6 +116,7 @@ audience:
 - Compare warm and cold runs
 
 ---
+
 ## Authentication
 
 - Realistic logins per session
@@ -111,6 +125,7 @@ audience:
 - Watch for auth-server bottleneck
 
 ---
+
 ## Rate Ramps
 
 - Step up gradually
@@ -119,6 +134,7 @@ audience:
 - Cool-down phase
 
 ---
+
 ## Repeatability
 
 - Same script, same data
@@ -127,6 +143,7 @@ audience:
 - Compare runs apples to apples
 
 ---
+
 ## Test Length
 
 - Long enough to flush warm-up
@@ -135,6 +152,7 @@ audience:
 - Pretty long, in practice
 
 ---
+
 ## Common Design Mistakes
 
 - One endpoint at a time

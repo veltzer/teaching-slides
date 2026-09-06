@@ -7,14 +7,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Chain of Thought
 
 ---
+
 ## Variants
 
 ![cot_variants](svg/courses/ai/prompt-engineering/03_chain_of_thought/cot_variants.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Reasoning prompts
@@ -24,6 +27,7 @@ audience:
 - Tradeoffs
 
 ---
+
 ## Why Reasoning Prompts
 
 - LLMs answer math wrong if asked directly
@@ -31,6 +35,7 @@ audience:
 - Trades tokens for accuracy
 
 ---
+
 ## Sample Without CoT
 
 - Q: 17 x 24
@@ -38,6 +43,7 @@ audience:
 - Often wrong on harder problems
 
 ---
+
 ## Sample With CoT
 
 - Q: 17 x 24
@@ -45,6 +51,7 @@ audience:
 - Shows work; more accurate
 
 ---
+
 ## Triggering CoT
 
 - Append "Let's think step by step"
@@ -53,6 +60,7 @@ audience:
 - Multiple ways
 
 ---
+
 ## When CoT Helps
 
 - Math
@@ -61,11 +69,13 @@ audience:
 - Code understanding
 
 ---
+
 ## CoT Helps vs Hurts
 
 ![cot_when](svg/courses/ai/prompt-engineering/03_chain_of_thought/cot_when.svg)
 
 ---
+
 ## When It Hurts
 
 - Simple lookups
@@ -74,6 +84,7 @@ audience:
 - Don't blindly add
 
 ---
+
 ## Self-Consistency
 
 - Generate multiple chains
@@ -82,6 +93,7 @@ audience:
 - Robust to single-chain errors
 
 ---
+
 ## Tree of Thoughts
 
 - Explore multiple branches
@@ -90,6 +102,7 @@ audience:
 - Higher cost
 
 ---
+
 ## ReAct
 
 - Reason + Act
@@ -98,6 +111,7 @@ audience:
 - Covered in agents course
 
 ---
+
 ## Latency Cost
 
 - More tokens out: slower
@@ -105,6 +119,7 @@ audience:
 - Decide per use case
 
 ---
+
 ## Hidden Reasoning
 
 - Some models think internally
@@ -113,6 +128,7 @@ audience:
 - Different prompting style
 
 ---
+
 ## Common CoT Mistakes
 
 - Asking for reasoning then ignoring it

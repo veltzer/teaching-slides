@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Organizational Models for Multi-Cloud
 
 ---

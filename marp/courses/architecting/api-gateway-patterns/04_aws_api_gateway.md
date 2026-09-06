@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # AWS API Gateway
 
 ---
+
 ## What This Chapter Covers
 
 - AWS API Gateway: REST vs HTTP vs WebSocket
@@ -22,6 +24,7 @@ audience:
 - When to use it
 
 ---
+
 ## Three Flavours
 
 - **REST API**: classic; full features; expensive
@@ -30,11 +33,13 @@ audience:
 - Choose: HTTP API by default for new work; REST when you need a feature
 
 ---
+
 ## At a Glance
 
 ![aws_gateway_kinds](svg/courses/architecting/api-gateway-patterns/04_aws_api_gateway/aws_gateway_kinds.svg)
 
 ---
+
 ## Integration Types
 
 - **Lambda Proxy**: gateway forwards request to Lambda; passes return
@@ -44,11 +49,13 @@ audience:
 - **Mock**: returns canned data; useful for testing
 
 ---
+
 ## Integration Targets
 
 ![integration_kinds](svg/courses/architecting/api-gateway-patterns/04_aws_api_gateway/integration_kinds.svg)
 
 ---
+
 ## Lambda Proxy
 
 ```yaml
@@ -66,6 +73,7 @@ paths:
 - Pair with Cognito or custom authoriser
 
 ---
+
 ## Custom Domains
 
 - Map `api.example.com` to your gateway
@@ -75,6 +83,7 @@ paths:
 - Setup once; rarely changes
 
 ---
+
 ## Authorisers
 
 - **IAM**: AWS-signed requests
@@ -84,6 +93,7 @@ paths:
 - Run before the integration; reject early on auth failure
 
 ---
+
 ## Lambda Authoriser
 
 - Called for every request
@@ -93,6 +103,7 @@ paths:
 - Use when standard authorisers don't fit
 
 ---
+
 ## Stages and Deployments
 
 - "Deployment": a snapshot of the API config
@@ -102,6 +113,7 @@ paths:
 - Stage variables for per-environment config
 
 ---
+
 ## Throttling and Quotas
 
 - Per-method throttling: rate + burst
@@ -110,6 +122,7 @@ paths:
 - AWS WAF for more complex rules
 
 ---
+
 ## Pricing
 
 - REST API: ~$3.50 per million requests + $0.09/GB out
@@ -119,6 +132,7 @@ paths:
 - Adds up at scale; budget accordingly
 
 ---
+
 ## When To Use AWS API Gateway
 
 - All-in on AWS
@@ -128,6 +142,7 @@ paths:
 - Acceptable lock-in
 
 ---
+
 ## When NOT To Use
 
 - Multi-cloud
@@ -136,6 +151,7 @@ paths:
 - Want everything in one repo (gateway config tied to AWS)
 
 ---
+
 ## OpenAPI Import
 
 - Import an OpenAPI 3 spec
@@ -144,6 +160,7 @@ paths:
 - One source of truth for API + gateway config
 
 ---
+
 ## CDK / CloudFormation
 
 - Infrastructure as code
@@ -153,6 +170,7 @@ paths:
 - Standard for AWS-native projects
 
 ---
+
 ## Common AWS API Gateway Mistakes
 
 - Choosing REST API when HTTP API would suffice (3x cost)

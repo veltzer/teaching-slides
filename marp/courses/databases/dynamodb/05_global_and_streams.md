@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Global Tables, Streams, and Operations
 
 ---
+
 ## What This Chapter Covers
 
 - Global Tables
@@ -19,6 +21,7 @@ audience:
 - Monitoring
 
 ---
+
 ## Global Tables
 
 - Multi-region replication
@@ -27,6 +30,7 @@ audience:
 - Local read latency
 
 ---
+
 ## Conflict Resolution
 
 - Last writer wins by item
@@ -35,6 +39,7 @@ audience:
 - Document the policy
 
 ---
+
 ## Topology
 
 - All regions writeable
@@ -43,6 +48,7 @@ audience:
 - Watch egress
 
 ---
+
 ## Streams Overview
 
 - Change feed of writes
@@ -51,6 +57,7 @@ audience:
 - Fan-out via Kinesis or Lambda
 
 ---
+
 ## Stream Records
 
 - New image
@@ -59,6 +66,7 @@ audience:
 - Choose by need
 
 ---
+
 ## Lambda Triggers
 
 - Subscribe to stream
@@ -67,11 +75,13 @@ audience:
 - Watch for retries on errors
 
 ---
+
 ## Trigger Patterns
 
 ![lambda_triggers](svg/courses/databases/dynamodb/05_global_and_streams/lambda_triggers.svg)
 
 ---
+
 ## Use Cases
 
 - Replicate to search index
@@ -80,6 +90,7 @@ audience:
 - Materialized views
 
 ---
+
 ## Backups
 
 - On-demand snapshots
@@ -88,6 +99,7 @@ audience:
 - Same region only
 
 ---
+
 ## Cross-Region Restore
 
 - Restore in source region
@@ -96,6 +108,7 @@ audience:
 - Plan ahead
 
 ---
+
 ## Monitoring
 
 - Consumed capacity
@@ -104,6 +117,7 @@ audience:
 - Item count and table size
 
 ---
+
 ## Alarms
 
 - Throttling
@@ -112,6 +126,7 @@ audience:
 - Storage growth
 
 ---
+
 ## Logging
 
 - DynamoDB metrics in CloudWatch
@@ -120,6 +135,7 @@ audience:
 - Pay attention to streams metrics
 
 ---
+
 ## Security
 
 - IAM policies per table
@@ -128,6 +144,7 @@ audience:
 - VPC endpoints for private access
 
 ---
+
 ## Common Operational Mistakes
 
 - Global Tables without conflict plan

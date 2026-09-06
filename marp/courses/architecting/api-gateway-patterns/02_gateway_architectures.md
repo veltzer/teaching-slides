@@ -7,9 +7,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Gateway Architectures
 
 ---
+
 ## What This Chapter Covers
 
 - Monolith + gateway
@@ -20,11 +22,13 @@ audience:
 - Architecture trade-offs
 
 ---
+
 ## Topology Choices
 
 ![gateway_topologies](svg/courses/architecting/api-gateway-patterns/02_gateway_architectures/gateway_topologies.svg)
 
 ---
+
 ## Monolith + Gateway
 
 - A single backend; gateway in front
@@ -34,6 +38,7 @@ audience:
 - nginx + a few Lua scripts often suffices
 
 ---
+
 ## Microservices + Gateway
 
 - The classic case
@@ -43,6 +48,7 @@ audience:
 - Standard pattern in cloud-native architectures
 
 ---
+
 ## BFF (Backend for Frontend)
 
 - Per-client gateway
@@ -52,6 +58,7 @@ audience:
 - More gateways; better client experience
 
 ---
+
 ## When BFF Wins
 
 - Different clients have very different needs
@@ -61,11 +68,13 @@ audience:
 - Trade-off: more services to maintain
 
 ---
+
 ## BFF Variants
 
 ![bff_pattern](svg/courses/architecting/api-gateway-patterns/02_gateway_architectures/bff_pattern.svg)
 
 ---
+
 ## Multi-Region
 
 - Gateway in each region
@@ -75,6 +84,7 @@ audience:
 - Standard for global services
 
 ---
+
 ## Active-Active Multi-Region
 
 - All regions serve traffic simultaneously
@@ -84,6 +94,7 @@ audience:
 - Pay the cost; reap the resilience
 
 ---
+
 ## Active-Passive
 
 - Primary region serves; secondary on standby
@@ -93,6 +104,7 @@ audience:
 - Adequate for many use cases
 
 ---
+
 ## Sidecar / Service Mesh
 
 - Each service has a sidecar proxy
@@ -102,6 +114,7 @@ audience:
 - Complementary, not replacement
 
 ---
+
 ## Gateway Inside Kubernetes
 
 - Ingress controllers: NGINX Ingress, Traefik, Kong, Contour
@@ -111,6 +124,7 @@ audience:
 - Often combined with a service mesh
 
 ---
+
 ## Single Gateway vs Multiple
 
 - One gateway: simpler operations, single point of (failure / config)
@@ -119,6 +133,7 @@ audience:
 - Conway's Law applies
 
 ---
+
 ## Trade-Offs
 
 - Gateway complexity vs service simplicity
@@ -128,6 +143,7 @@ audience:
 - No free lunch
 
 ---
+
 ## A Decision Framework
 
 - 1 service: nginx is fine
@@ -137,6 +153,7 @@ audience:
 - Many languages, deep observability: + service mesh
 
 ---
+
 ## Common Architectural Mistakes
 
 - "We need a gateway" before having services to gateway

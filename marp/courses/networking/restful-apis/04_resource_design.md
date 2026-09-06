@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Resource Design
 
 ---
+
 ## What This Chapter Covers
 
 - URL design
@@ -20,6 +22,7 @@ audience:
 - Filtering, sorting, pagination
 
 ---
+
 ## URLs Are Nouns
 
 - /users, /orders, /products
@@ -28,11 +31,13 @@ audience:
 - No verbs
 
 ---
+
 ## Do This / Avoid This
 
 ![url_design](svg/courses/networking/restful-apis/04_resource_design/url_design.svg)
 
 ---
+
 ## Hierarchical Resources
 
 - /users/123/orders
@@ -41,6 +46,7 @@ audience:
 - Don't nest more than 2 levels
 
 ---
+
 ## Collections
 
 - GET /users: list
@@ -49,6 +55,7 @@ audience:
 - Paginate
 
 ---
+
 ## Singletons
 
 - GET /users/123: read
@@ -57,6 +64,7 @@ audience:
 - DELETE /users/123: remove
 
 ---
+
 ## Sub-resources
 
 - GET /users/123/avatar
@@ -64,6 +72,7 @@ audience:
 - Operations on the relationship
 
 ---
+
 ## Filtering
 
 - Query params: ?status=active
@@ -72,6 +81,7 @@ audience:
 - Not in path
 
 ---
+
 ## Sorting
 
 - ?sort=created_at
@@ -80,6 +90,7 @@ audience:
 - Pick a convention; document
 
 ---
+
 ## Pagination
 
 - Offset / limit: ?page=2&size=20
@@ -88,6 +99,7 @@ audience:
 - Always include total or next-link
 
 ---
+
 ## Searching
 
 - ?q=foo: simple
@@ -95,6 +107,7 @@ audience:
 - Beyond filters: full-text
 
 ---
+
 ## Field Selection
 
 - ?fields=id,name
@@ -103,6 +116,7 @@ audience:
 - GraphQL solves this natively
 
 ---
+
 ## Bulk Operations
 
 - POST /users with array
@@ -111,6 +125,7 @@ audience:
 - Document semantics
 
 ---
+
 ## Async Operations
 
 - Long-running: 202 Accepted
@@ -118,6 +133,7 @@ audience:
 - Poll or webhook for result
 
 ---
+
 ## Naming Conventions
 
 - snake_case or camelCase: pick one
@@ -126,6 +142,7 @@ audience:
 - Lowercase URLs
 
 ---
+
 ## Common Resource Design Mistakes
 
 - Verbs in URLs (/getUser, /createOrder)
@@ -135,6 +152,7 @@ audience:
 - Filtering in path instead of query
 
 ---
+
 ## Modeling Relationships
 
 ![relationship_patterns](svg/courses/networking/restful-apis/04_resource_design/relationship_patterns.svg)

@@ -9,6 +9,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Multi-Platform Development and Modern Architecture
 ## Building Cross-Platform and Scalable Applications
 

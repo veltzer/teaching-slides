@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Refactoring With Tests
 
 ---
+
 ## What This Chapter Covers
 
 - What refactoring is
@@ -21,6 +23,7 @@ audience:
 - Continuous refactoring as part of TDD
 
 ---
+
 ## What Refactoring Is
 
 - Changing the structure of code without changing behaviour
@@ -30,11 +33,13 @@ audience:
 - Coined / popularised by Martin Fowler
 
 ---
+
 ## Tests as Safety Net
 
 ![refactor_safety](svg/courses/testing/test-driven-development/08_refactoring_with_tests/refactor_safety.svg)
 
 ---
+
 ## Why Tests Matter
 
 - Without tests: refactor by faith, hope it still works
@@ -44,6 +49,7 @@ audience:
 - Even simple renames break things in subtle ways
 
 ---
+
 ## Common Refactoring Patterns
 
 - **Extract Method**: pull a chunk of code into its own method
@@ -53,6 +59,7 @@ audience:
 - **Extract Class**: a class is doing too much; split
 
 ---
+
 ## Extract Method
 
 ```python
@@ -73,6 +80,7 @@ def apply_discount(order):
 ```
 
 ---
+
 ## Inline Method
 
 ```python
@@ -89,6 +97,7 @@ def get_rating(driver):
 ```
 
 ---
+
 ## Rename
 
 - The simplest, most underrated refactor
@@ -98,6 +107,7 @@ def get_rating(driver):
 - Default to renaming when you understand a thing better
 
 ---
+
 ## Move Method
 
 - A method that uses another class's data more than its own
@@ -106,6 +116,7 @@ def get_rating(driver):
 - "Feature envy" smell &#8594; this refactor
 
 ---
+
 ## Extract Class
 
 - A class doing two things
@@ -115,6 +126,7 @@ def get_rating(driver):
 - A SOLID-driven refactor (Single Responsibility)
 
 ---
+
 ## The Strangler Pattern
 
 - For replacing legacy code
@@ -124,6 +136,7 @@ def get_rating(driver):
 - Coined by Martin Fowler; named after strangler-fig vines
 
 ---
+
 ## Characterisation Tests
 
 - For untested legacy code
@@ -133,6 +146,7 @@ def get_rating(driver):
 - Working Effectively with Legacy Code (Feathers) is the canonical reference
 
 ---
+
 ## Working With Untested Code
 
 - Don't change anything until you have tests
@@ -142,6 +156,7 @@ def get_rating(driver):
 - Repeat: peeling layers, like a programming-archaeology dig
 
 ---
+
 ## Safe Refactoring Workflow
 
 - Run all tests; ensure green
@@ -151,6 +166,7 @@ def get_rating(driver):
 - Repeat
 
 ---
+
 ## When Tests Fail Mid-Refactor
 
 - Don't power through
@@ -160,6 +176,7 @@ def get_rating(driver):
 - Don't suppress tests to make them pass
 
 ---
+
 ## Continuous Refactoring
 
 - Part of every cycle (TDD's third step)
@@ -169,6 +186,7 @@ def get_rating(driver):
 - With it: the codebase stays workable for years
 
 ---
+
 ## When NOT To Refactor
 
 - Tests are red
@@ -178,6 +196,7 @@ def get_rating(driver):
 - Pick your moments; don't refactor everything
 
 ---
+
 ## Refactoring vs Adding Features
 
 - Don't mix them
@@ -187,6 +206,7 @@ def get_rating(driver):
 - "Refactor + feature" PRs are nightmare to review
 
 ---
+
 ## Common Refactoring Mistakes
 
 - Refactoring without tests

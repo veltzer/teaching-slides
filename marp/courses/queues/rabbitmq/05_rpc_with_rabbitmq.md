@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # RPC With RabbitMQ
 
 ---
+
 ## What This Chapter Covers
 
 - The request-reply pattern
@@ -21,6 +23,7 @@ audience:
 - When *not* to
 
 ---
+
 ## What RPC Is
 
 - Remote Procedure Call
@@ -30,16 +33,19 @@ audience:
 - Many transports: HTTP, gRPC, AMQP, custom
 
 ---
+
 ## RPC Pattern
 
 ![rpc_pattern](svg/courses/queues/rabbitmq/05_rpc_with_rabbitmq/rpc_pattern.svg)
 
 ---
+
 ## Correlation Identifier Pattern
 
 ![correlation_id](svg/courses/queues/rabbitmq/05_rpc_with_rabbitmq/correlation_id.svg)
 
 ---
+
 ## Why Use RabbitMQ For RPC
 
 - The broker handles routing
@@ -49,6 +55,7 @@ audience:
 - Especially nice when you already use RabbitMQ for messaging
 
 ---
+
 ## Why NOT to Use RabbitMQ For RPC
 
 - HTTP / gRPC are more common; better tooling
@@ -58,6 +65,7 @@ audience:
 - RabbitMQ RPC fits when async is the natural model
 
 ---
+
 ## The Request-Reply Pattern
 
 - Client publishes a request to a request queue
@@ -66,6 +74,7 @@ audience:
 - Client correlates the reply to the original request
 
 ---
+
 ## Correlation IDs
 
 - A unique ID per request
@@ -75,6 +84,7 @@ audience:
 - Usually a UUID
 
 ---
+
 ## Reply Queues
 
 - Where the reply lands
@@ -83,6 +93,7 @@ audience:
 - "Direct reply-to" feature: a special pseudo-queue, no declaration needed
 
 ---
+
 ## A Simple RPC Client
 
 ```python
@@ -112,6 +123,7 @@ while 'body' not in response:
 ```
 
 ---
+
 ## A Simple RPC Worker
 
 ```python
@@ -131,6 +143,7 @@ ch.basic_consume(queue='rpc_queue', on_message_callback=on_request)
 - Echoes the correlation_id and routes to the reply_to queue
 
 ---
+
 ## Timeout Handling
 
 - Worker may not respond (crashed, slow, never existed)
@@ -140,6 +153,7 @@ ch.basic_consume(queue='rpc_queue', on_message_callback=on_request)
 - Without timeout: client hangs forever
 
 ---
+
 ## Error Propagation
 
 - Worker failed mid-request
@@ -150,6 +164,7 @@ ch.basic_consume(queue='rpc_queue', on_message_callback=on_request)
 - Define an error contract (HTTP-style status, body)
 
 ---
+
 ## Async RPC
 
 - Same pattern but caller doesn't block
@@ -159,6 +174,7 @@ ch.basic_consume(queue='rpc_queue', on_message_callback=on_request)
 - Forms the basis of orchestration patterns
 
 ---
+
 ## Direct Reply-To
 
 - A RabbitMQ feature: `amq.rabbitmq.reply-to` pseudo-queue
@@ -168,6 +184,7 @@ ch.basic_consume(queue='rpc_queue', on_message_callback=on_request)
 - Modern recommended approach for RPC
 
 ---
+
 ## Load Balancing
 
 - Multiple workers consuming the same request queue
@@ -177,6 +194,7 @@ ch.basic_consume(queue='rpc_queue', on_message_callback=on_request)
 - One queue, N workers, each replying directly
 
 ---
+
 ## Idempotency
 
 - Worker may process a request twice (retry, network glitch)
@@ -186,6 +204,7 @@ ch.basic_consume(queue='rpc_queue', on_message_callback=on_request)
 - Pattern across all messaging, not just RPC
 
 ---
+
 ## When To Pick RabbitMQ RPC
 
 - You're already using RabbitMQ for other messaging
@@ -195,6 +214,7 @@ ch.basic_consume(queue='rpc_queue', on_message_callback=on_request)
 - You can tolerate the extra latency
 
 ---
+
 ## When To Pick HTTP / gRPC Instead
 
 - Simple sync calls
@@ -204,6 +224,7 @@ ch.basic_consume(queue='rpc_queue', on_message_callback=on_request)
 - Most synchronous service-to-service: just use HTTP
 
 ---
+
 ## Common RPC Mistakes
 
 - No timeout &#8594; clients hang

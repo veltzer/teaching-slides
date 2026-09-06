@@ -8,9 +8,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Basics
 
 ---
+
 ## What This Chapter Covers
 
 - Connections
@@ -20,6 +22,7 @@ audience:
 - Transactions
 
 ---
+
 ## Opening A Database
 
 - In-memory: empty connection
@@ -28,11 +31,13 @@ audience:
 - Close releases resources
 
 ---
+
 ## Connection Lifecycle
 
 ![connection_lifecycle](svg/courses/databases/duckdb/02_basics/connection_lifecycle.svg)
 
 ---
+
 ## Tables
 
 - CREATE TABLE like SQL
@@ -41,6 +46,7 @@ audience:
 - MAP for key-value
 
 ---
+
 ## Types
 
 - Integers, floats, decimals
@@ -49,6 +55,7 @@ audience:
 - BOOLEAN, UUID
 
 ---
+
 ## Inserts
 
 - INSERT INTO ... VALUES
@@ -57,6 +64,7 @@ audience:
 - Bulk is much faster
 
 ---
+
 ## Updates and Deletes
 
 - Standard SQL
@@ -65,6 +73,7 @@ audience:
 - DuckDB is OLAP-flavored
 
 ---
+
 ## Views
 
 - Logical query stored under a name
@@ -73,6 +82,7 @@ audience:
 - Cheap to create
 
 ---
+
 ## Common Table Expressions
 
 - WITH clause
@@ -81,6 +91,7 @@ audience:
 - Same engine optimizes
 
 ---
+
 ## Window Functions
 
 - OVER clauses
@@ -89,11 +100,13 @@ audience:
 - Replace many self-joins
 
 ---
+
 ## SQL Features Overview
 
 ![sql_features](svg/courses/databases/duckdb/02_basics/sql_features.svg)
 
 ---
+
 ## Joins
 
 - All standard join types
@@ -102,6 +115,7 @@ audience:
 - Hints rarely needed
 
 ---
+
 ## Transactions
 
 - BEGIN, COMMIT, ROLLBACK
@@ -110,6 +124,7 @@ audience:
 - Read-only allows concurrency
 
 ---
+
 ## Configuration
 
 - PRAGMA settings
@@ -118,6 +133,7 @@ audience:
 - Storage format options
 
 ---
+
 ## Importing CSV
 
 - COPY FROM 'file.csv'
@@ -126,6 +142,7 @@ audience:
 - Override types as needed
 
 ---
+
 ## Common Basics Mistakes
 
 - Auto type detect for production loads

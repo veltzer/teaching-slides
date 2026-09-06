@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # API Design Principles
 
 ---
+
 ## What Makes a Good API
 
 - Predictable: similar things look similar
@@ -22,11 +24,13 @@ audience:
 - Hard to misuse: defaults are safe
 
 ---
+
 ## Quality Pillars
 
 ![api_qualities](svg/courses/architecting/api-design-best-practices/01_design_principles/api_qualities.svg)
 
 ---
+
 ## API as a Product
 
 - An API has consumers — users, even when those users are developers
@@ -35,6 +39,7 @@ audience:
 - Think of consumers when you make decisions, not just implementers
 
 ---
+
 ## API-First Development
 
 - Design the contract before writing code
@@ -43,6 +48,7 @@ audience:
 - The API spec is the source of truth
 
 ---
+
 ## API-First Workflow
 
 - Draft the API spec (OpenAPI, gRPC proto, GraphQL schema)
@@ -52,11 +58,13 @@ audience:
 - Deploy with confidence that contracts are met
 
 ---
+
 ## API First Workflow
 
 ![api_first_workflow](svg/courses/architecting/api-design-best-practices/01_design_principles/api_first_workflow.svg)
 
 ---
+
 ## Consumer-Driven Design
 
 - The consumer's needs shape the API, not the producer's internals
@@ -65,6 +73,7 @@ audience:
 - Avoid forcing the consumer to understand your domain to use it
 
 ---
+
 ## The Principle of Least Surprise
 
 - Names mean what they look like they mean
@@ -73,6 +82,7 @@ audience:
 - "What does this do?" should be answerable from the signature alone
 
 ---
+
 ## Consistency Across the API
 
 - One naming convention: snake_case or camelCase, pick one
@@ -82,11 +92,13 @@ audience:
 - Consistency is more important than which convention you pick
 
 ---
+
 ## Consistency Dimensions
 
 ![consistency_dimensions](svg/courses/architecting/api-design-best-practices/01_design_principles/consistency_dimensions.svg)
 
 ---
+
 ## Discoverability
 
 - A good URL hints at what's nearby
@@ -95,6 +107,7 @@ audience:
 - Hypermedia (HATEOAS) embeds links — but is rarely worth the cost in practice
 
 ---
+
 ## Versioning Awareness From Day One
 
 - Don't ship `v1` and hope to never make a breaking change
@@ -102,6 +115,7 @@ audience:
 - We cover versioning in chapter 4
 
 ---
+
 ## Security by Default
 
 - Authentication is required, not optional
@@ -110,6 +124,7 @@ audience:
 - We cover this in chapter 9
 
 ---
+
 ## Anti-Patterns
 
 - "RPC over HTTP" disguised as REST
@@ -119,6 +134,7 @@ audience:
 - "Internal" details exposed: `/sql_users_table_v3`
 
 ---
+
 ## Summary
 
 - An API is a contract, a product, and a UX surface

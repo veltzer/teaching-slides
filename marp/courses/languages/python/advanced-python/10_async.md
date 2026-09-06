@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Async Python
 
 ## Overview
@@ -18,6 +19,7 @@ audience:
 - Best practices for async code
 
 ---
+
 ## What are Generators?: Generators Fundamentals
 
 - Special type of iterator
@@ -45,6 +47,7 @@ print(next(counter))  # 5
 ```
 
 ---
+
 ## What are Generators?: How Generators Work
 
 - `yield` pauses function execution
@@ -77,6 +80,7 @@ val3 = next(gen)  # Prints "Third value: 3", returns 3
 ```
 
 ---
+
 ## What are Generators?: Generator Expressions
 
 - Concise syntax similar to list comprehensions
@@ -106,6 +110,7 @@ for i, square in enumerate(squares_gen):
 ```
 
 ---
+
 ## What are Generators?: Generator Benefits
 
 - Memory efficiency for large datasets
@@ -145,6 +150,7 @@ for i, line in enumerate(warning_lines):
 ```
 
 ---
+
 ## Writing Your Own Generators: Basic Generator Functions
 
 - Use `yield` statement to return values
@@ -174,6 +180,7 @@ print(next(fib))  # 1
 ```
 
 ---
+
 ## Writing Your Own Generators: Generator Methods: send()
 
 - Send values back into the generator
@@ -201,6 +208,7 @@ print(c.send(10)) # 16 (count is now 16)
 ```
 
 ---
+
 ## Writing Your Own Generators: Generator Methods: throw() and close()
 
 - `throw()`: Raise an exception inside the generator
@@ -231,6 +239,7 @@ gen.close()                # Resource closed
 ```
 
 ---
+
 ## Writing Your Own Generators: Yielding From Other Generators
 
 - `yield from`: Delegate to another generator
@@ -261,6 +270,7 @@ print(next(g))  # 4
 ```
 
 ---
+
 ## Writing Your Own Generators: Advanced Generator Patterns
 
 - Pipeline processing
@@ -298,6 +308,7 @@ for square in squares:
 ```
 
 ---
+
 ## What are Coroutines?: From Generators to Coroutines
 
 - Generators: produce data (yield values out)
@@ -331,6 +342,7 @@ coro.send(42)       # Got: 42
 ```
 
 ---
+
 ## What are Coroutines?: Coroutines vs. Generators
 
 - Generators: primarily yield values out
@@ -365,6 +377,7 @@ def hybrid():
 ```
 
 ---
+
 ## Writing Your Own Coroutines: Basic Coroutine Pattern
 
 - Call next() or send(None) to prime coroutine
@@ -393,6 +406,7 @@ coro.close()
 ```
 
 ---
+
 ## Writing Your Own Coroutines: Coroutine for Data Processing
 
 - Initialize with next() or send(None)
@@ -423,6 +437,7 @@ print(avg.send(30))  # 20.0
 ```
 
 ---
+
 ## Writing Your Own Coroutines: Coroutine Priming Decorator
 
 - Initialize coroutine automatically
@@ -455,6 +470,7 @@ filter_coroutine.send("error in system")    # Found pattern in: error in system
 ```
 
 ---
+
 ## Writing Your Own Coroutines: Coroutine Pipelines
 
 - Connect coroutines in series
@@ -491,6 +507,7 @@ for line in log_file:
 ```
 
 ---
+
 ## Writing Your Own Coroutines: Coroutine Exception Handling
 
 - Handle exceptions in the coroutine
@@ -521,6 +538,7 @@ coro.close()                 # Coroutine closing, cleanup complete
 ```
 
 ---
+
 ## What is Asynchronous Programming?: Understanding Async Programming
 
 - Non-blocking execution model
@@ -530,11 +548,13 @@ coro.close()                 # Coroutine closing, cleanup complete
 - Different from parallelism (multi-threading/processing)
 
 ---
+
 ## What is Asynchronous Programming?
 
 ![understanding_async_programming](svg/courses/languages/python/advanced-python/10_async/understanding_async_programming.svg)
 
 ---
+
 ## What is Asynchronous Programming?: When to Use Async
 
 - I/O-bound operations
@@ -563,6 +583,7 @@ Less Suitable:
 ```
 
 ---
+
 ## What is Asynchronous Programming?: Async vs. Multi-threading vs. Multi-processing
 
 - Async: Single thread, cooperative task switching
@@ -581,6 +602,7 @@ Less Suitable:
 | Overhead | Low | Medium | High |
 
 ---
+
 ## What is Asynchronous Programming?: The Python Async Landscape
 
 - Initial approaches: callbacks, generators
@@ -602,6 +624,7 @@ Timeline of Python Async Evolution:
 ```
 
 ---
+
 ## The Python asyncio Module: Introduction to asyncio
 
 - Standard library for asynchronous programming
@@ -624,6 +647,7 @@ asyncio.run(hello_world())
 ```
 
 ---
+
 ## The Python asyncio Module: Async and Await Syntax
 
 - `async def`: Define a coroutine function
@@ -653,6 +677,7 @@ asyncio.run(process_data())
 ```
 
 ---
+
 ## The Python asyncio Module: Running Coroutines
 
 - asyncio.run(): Main entry point (Python 3.7+)
@@ -681,6 +706,7 @@ finally:
 ```
 
 ---
+
 ## The Python asyncio Module: Concurrent Execution with gather()
 
 - Run multiple coroutines concurrently
@@ -717,6 +743,7 @@ asyncio.run(concurrent_example())
 ```
 
 ---
+
 ## The Python asyncio Module: Working with Tasks
 
 - Tasks wrap coroutines
@@ -772,6 +799,7 @@ asyncio.run(main())
 ```
 
 ---
+
 ## The Python asyncio Module: Timeouts and Cancellation
 
 - Set timeouts for operations
@@ -808,6 +836,7 @@ asyncio.run(main())
 ```
 
 ---
+
 ## The Python asyncio Module: Asynchronous Context Managers
 
 - `async with` statement
@@ -844,6 +873,7 @@ asyncio.run(main())
 ```
 
 ---
+
 ## The Python asyncio Module: Asynchronous Iteration
 
 - `async for` statement
@@ -879,6 +909,7 @@ asyncio.run(main())
 ```
 
 ---
+
 ## The Python asyncio Module: Creating Asynchronous Generators
 
 - `async def` with `yield`
@@ -909,6 +940,7 @@ asyncio.run(main())
 ```
 
 ---
+
 ## The Python asyncio Module: Handling Synchronous Code
 
 - Use executors for blocking operations
@@ -952,6 +984,7 @@ asyncio.run(main())
 ```
 
 ---
+
 ## The Python asyncio Module: Streams API
 
 - High-level API for network operations
@@ -1012,6 +1045,7 @@ asyncio.run(tcp_echo_client())
 ```
 
 ---
+
 ## The Python asyncio Module: Synchronization Primitives
 
 - Lock: Mutual exclusion
@@ -1068,6 +1102,7 @@ asyncio.run(main())
 ```
 
 ---
+
 ## Alternative Async Frameworks: The Twisted Framework
 
 - One of the oldest Python async frameworks
@@ -1109,6 +1144,7 @@ reactor.run()
 ```
 
 ---
+
 ## Alternative Async Frameworks: Trio
 
 - Modern async framework
@@ -1141,6 +1177,7 @@ trio.run(parent_task)
 ```
 
 ---
+
 ## Integrating Different Async Frameworks
 
 ## Working with Multiple Frameworks
@@ -1199,6 +1236,7 @@ asyncio.run(main())
 ```
 
 ---
+
 ## Best Practices for Async Code: Async Code Organization
 
 - Keep coroutines focused on a single responsibility
@@ -1241,6 +1279,7 @@ async def process_user_data(user_id):
 ```
 
 ---
+
 ## Best Practices for Async Code: Error Handling in Async Code
 
 - Use try/except inside coroutines
@@ -1279,6 +1318,7 @@ async def fetch_with_retry(url, max_retries=3):
 ```
 
 ---
+
 ## Best Practices for Async Code: Debugging Async Code
 
 - Use logging extensively
@@ -1323,6 +1363,7 @@ asyncio.run(main(), debug=True)
 ```
 
 ---
+
 ## Best Practices for Async Code: Testing Async Code
 
 - Use pytest-asyncio for async tests
@@ -1381,6 +1422,7 @@ async def test_fetch_with_timeout():
 ```
 
 ---
+
 ## Practical Example
 
 ## Complete Async Web API Client: Class Setup
@@ -1478,6 +1520,7 @@ if __name__ == "__main__":
 ```
 
 ---
+
 ## Summary
 
 ## Key Takeaways
@@ -1491,6 +1534,7 @@ if __name__ == "__main__":
 - Async excels at I/O-bound operations
 
 ---
+
 ## Resources
 
 ## Further Learning

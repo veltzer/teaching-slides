@@ -8,14 +8,17 @@ audience:
   - audiences:developers
 
 ---
+
 # Consumer API
 
 ---
+
 ## Consumer Groups
 
 ![consumer_groups](svg/courses/queues/kafka/03_consumer_api/consumer_groups.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The high-level Consumer
@@ -26,6 +29,7 @@ audience:
 - Common consumer patterns
 
 ---
+
 ## High-Level Consumer
 
 ```java
@@ -50,6 +54,7 @@ while (true) {
 - `poll` gets a batch of records
 
 ---
+
 ## Consumer Groups
 
 - A `group.id` defines a logical consumer
@@ -59,6 +64,7 @@ while (true) {
 - Different group.id = independent reading of the same data
 
 ---
+
 ## Partition Assignment
 
 - Kafka coordinator assigns partitions to consumers
@@ -68,6 +74,7 @@ while (true) {
 - Sticky assignment minimises movement on rebalance
 
 ---
+
 ## Offsets
 
 - Each consumer tracks where it is in each partition
@@ -77,6 +84,7 @@ while (true) {
 - Misunderstanding offsets is the #1 source of consumer bugs
 
 ---
+
 ## Auto-Commit
 
 - `enable.auto.commit=true` (default)
@@ -86,6 +94,7 @@ while (true) {
 - For exactly-once: must commit manually after processing
 
 ---
+
 ## Manual Commit
 
 ```java
@@ -101,6 +110,7 @@ while (true) {
 - Commit before processing = potential skip on crash (don't do this)
 
 ---
+
 ## Async vs Sync Commit
 
 - `commitAsync`: faster, doesn't block; failures less obvious
@@ -109,11 +119,13 @@ while (true) {
 - Failure handling for async: callback parameter
 
 ---
+
 ## Offset Management Options
 
 ![offset_management](svg/courses/queues/kafka/03_consumer_api/offset_management.svg)
 
 ---
+
 ## Rebalances
 
 - When consumers join or leave the group
@@ -123,6 +135,7 @@ while (true) {
 - Frequent rebalances kill throughput
 
 ---
+
 ## Causes of Frequent Rebalances
 
 - Consumers timing out (`session.timeout.ms`)
@@ -132,6 +145,7 @@ while (true) {
 - Tune timeouts to avoid spurious rebalances
 
 ---
+
 ## Cooperative Rebalance
 
 - Newer protocol; only the affected partitions move
@@ -141,11 +155,13 @@ while (true) {
 - The default for new deployments
 
 ---
+
 ## Rebalance Protocol Map
 
 ![rebalance_protocol](svg/courses/queues/kafka/03_consumer_api/rebalance_protocol.svg)
 
 ---
+
 ## Pause and Resume
 
 - `consumer.pause(partitions)` stops fetching from those partitions
@@ -155,6 +171,7 @@ while (true) {
 - A common back-pressure pattern
 
 ---
+
 ## Seek
 
 - `consumer.seek(partition, offset)` jumps to a specific offset
@@ -163,6 +180,7 @@ while (true) {
 - Combine with timestamp lookup (`offsetsForTimes`) to seek by time
 
 ---
+
 ## Simple/Low-Level Consumer
 
 - Manual partition assignment (`assign` instead of `subscribe`)
@@ -172,6 +190,7 @@ while (true) {
 - Worth knowing exists
 
 ---
+
 ## Reading From the Beginning
 
 - New consumer group with no committed offsets
@@ -181,6 +200,7 @@ while (true) {
 - After first run, consumer continues from last commit
 
 ---
+
 ## Long-Running Consumer Pattern
 
 ```java
@@ -200,6 +220,7 @@ try {
 - Final sync commit and close on shutdown
 
 ---
+
 ## Common Consumer Pitfalls
 
 - Long-running processing inside the poll loop &#8594; rebalance
@@ -209,6 +230,7 @@ try {
 - Not handling rebalances &#8594; double-processing
 
 ---
+
 ## Common Mistakes
 
 - Treating Kafka like a queue with one consumer (use 1 partition)

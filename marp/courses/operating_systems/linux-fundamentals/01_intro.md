@@ -10,6 +10,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Introduction to UNIX
 
 ---
@@ -28,6 +29,7 @@ audience:
 ![linux_distro_landscape](svg/courses/operating_systems/linux-fundamentals/01_intro/linux_distro_landscape.svg)
 
 ---
+
 ## What is UNIX?
 
 - Multi-user operating system
@@ -39,11 +41,13 @@ audience:
     - Everything is a file philosophy
 
 ---
+
 ## History of UNIX
 
 ![history_of_unix](svg/courses/operating_systems/linux-fundamentals/01_intro/history_of_unix.svg)
 
 ---
+
 ## Operating System Core Structure
 
 ![operating_system_core_structure](svg/courses/operating_systems/linux-fundamentals/01_intro/operating_system_core_structure.svg)
@@ -77,6 +81,7 @@ audience:
 - Adopted by init if parent dies
 
 ---
+
 ## System Calls
 
 Example of a simple system call in C:
@@ -114,6 +119,7 @@ int main() {
 - User/group-based access control
 
 ---
+
 ## The Root User
 
 - UID 0

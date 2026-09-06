@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Indexing for Developers
 
 ---
+
 ## What This Chapter Covers
 
 - Index types in MongoDB
@@ -21,16 +23,19 @@ audience:
 - Maintenance
 
 ---
+
 ## Index Types
 
 ![index_types](svg/courses/databases/mongodb-for-developers/08_indexing_for_developers/index_types.svg)
 
 ---
+
 ## Index Design Rules
 
 ![index_design_rules](svg/courses/databases/mongodb-for-developers/08_indexing_for_developers/index_design_rules.svg)
 
 ---
+
 ## Single-Field Index
 
 ```javascript
@@ -41,6 +46,7 @@ db.users.createIndex({ email: 1 });
 - 1 = ascending; -1 = descending (rarely matters)
 
 ---
+
 ## Compound Index
 
 ```javascript
@@ -52,6 +58,7 @@ db.orders.createIndex({ customer_id: 1, created_at: -1 });
 - ESR rule: Equality, Sort, Range
 
 ---
+
 ## ESR Rule
 
 - Equality fields first
@@ -60,6 +67,7 @@ db.orders.createIndex({ customer_id: 1, created_at: -1 });
 - "find email = X, sort by date desc" &#8594; (email, date)
 
 ---
+
 ## Multi-Key Index
 
 - Index over array fields
@@ -68,6 +76,7 @@ db.orders.createIndex({ customer_id: 1, created_at: -1 });
 - Watch: cardinality
 
 ---
+
 ## Text Index
 
 ```javascript
@@ -79,6 +88,7 @@ db.articles.createIndex({ title: "text", body: "text" });
 - `$text` queries use it
 
 ---
+
 ## Geospatial Index
 
 - 2dsphere for true earth coords
@@ -87,6 +97,7 @@ db.articles.createIndex({ title: "text", body: "text" });
 - Standard for location-based queries
 
 ---
+
 ## TTL Index
 
 ```javascript
@@ -98,6 +109,7 @@ db.sessions.createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0 });
 - Background cleanup
 
 ---
+
 ## Hashed Index
 
 - For sharding by hash
@@ -105,6 +117,7 @@ db.sessions.createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0 });
 - Doesn't support range queries
 
 ---
+
 ## Wildcard Index
 
 ```javascript
@@ -116,6 +129,7 @@ db.events.createIndex({ "$**": 1 });
 - Bigger than targeted indexes
 
 ---
+
 ## Index Hints
 
 ```javascript
@@ -127,6 +141,7 @@ db.users.find({...}).hint({ email: 1 });
 - Last resort
 
 ---
+
 ## Index Build
 
 - Foreground: blocks the collection (avoid in prod)
@@ -134,6 +149,7 @@ db.users.find({...}).hint({ email: 1 });
 - Long for big collections; show progress
 
 ---
+
 ## Index Stats
 
 ```javascript
@@ -145,6 +161,7 @@ db.users.aggregate([{ $indexStats: {} }]);
 - Heavy ops on writes
 
 ---
+
 ## Index Cardinality
 
 - Low cardinality: few unique values; index less useful
@@ -152,6 +169,7 @@ db.users.aggregate([{ $indexStats: {} }]);
 - "is_active boolean" &#8594; low; "user_id" &#8594; high
 
 ---
+
 ## Common Index Mistakes
 
 - Indexing every field

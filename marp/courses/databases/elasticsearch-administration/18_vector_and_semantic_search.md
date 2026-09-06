@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Vector and Semantic Search
 
 ---
+
 ## What This Chapter Covers
 
 - The `dense_vector` field type and how vectors are indexed
@@ -21,6 +23,7 @@ audience:
 - Quantization options to control memory
 
 ---
+
 ## Why Vector Search Matters for DBAs
 
 - Semantic search ranks by meaning, not just keyword overlap
@@ -31,6 +34,7 @@ audience:
 - Treat vector indices as a distinct, memory-hungry workload tier
 
 ---
+
 ## The dense_vector Field Type
 
 - Store an embedding per document as a `dense_vector`
@@ -56,6 +60,7 @@ PUT /articles
 - `dot_product` is fastest but expects normalized vectors
 
 ---
+
 ## HNSW Index Options
 
 - By default `dense_vector` builds an HNSW graph for approximate search
@@ -80,6 +85,7 @@ PUT /articles
 - Tune these against a recall benchmark, not by guesswork
 
 ---
+
 ## Approximate kNN Search
 
 - The `knn` query searches the HNSW graph efficiently
@@ -102,6 +108,7 @@ POST /articles/_search
 - Keep `num_candidates` at least as large as `k`, usually much larger
 
 ---
+
 ## Exact versus Approximate kNN
 
 - Approximate kNN uses the HNSW graph and is the default at scale
@@ -126,6 +133,7 @@ POST /articles/_search
 - Use exact kNN only on small, pre-filtered candidate sets
 
 ---
+
 ## Embeddings and Inference Endpoints
 
 - Embeddings can be generated outside or inside Elasticsearch
@@ -148,6 +156,7 @@ PUT /_inference/text_embedding/my-embeddings
 - One endpoint serves both ingest-time and query-time embeddings
 
 ---
+
 ## Semantic Search Pipelines
 
 - An ingest pipeline can embed text automatically on write
@@ -174,6 +183,7 @@ PUT /_ingest/pipeline/embed
 - The `semantic_text` field type can manage this end to end
 
 ---
+
 ## Querying with semantic_text
 
 - `semantic_text` hides chunking and embedding behind one field
@@ -200,6 +210,7 @@ POST /docs/_search
 - This is the lowest-effort path to semantic search
 
 ---
+
 ## Hybrid Search with RRF
 
 - Hybrid search blends lexical BM25 with semantic kNN
@@ -225,6 +236,7 @@ POST /articles/_search
 - RRF gives robust relevance that beats either method alone
 
 ---
+
 ## Tuning RRF
 
 - `rank_window_size` is how deep each retriever contributes
@@ -243,6 +255,7 @@ POST /articles/_search
 - Keep the window large enough to surface semantic matches BM25 misses
 
 ---
+
 ## Sizing: Memory for HNSW
 
 - HNSW graphs are most effective when they fit in RAM
@@ -253,6 +266,7 @@ POST /articles/_search
 - Size node RAM so vectors plus graph stay cached, not paged from disk
 
 ---
+
 ## Off-Heap and the Filesystem Cache
 
 - Vector data lives off-heap, served from the OS page cache
@@ -268,6 +282,7 @@ GET /_nodes/stats/indices/dense_vector
 - Provision dedicated vector nodes when the working set is large
 
 ---
+
 ## Quantization: int8 and bbq
 
 - Quantization shrinks vectors to cut memory dramatically
@@ -287,6 +302,7 @@ GET /_nodes/stats/indices/dense_vector
 - Always validate recall after enabling quantization
 
 ---
+
 ## Vector Workload Checklist
 
 - Match `dims` to the embedding model exactly

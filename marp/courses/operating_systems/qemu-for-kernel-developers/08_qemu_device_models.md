@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # QEMU Device Models
 
 ---
@@ -39,6 +40,7 @@ Introduction to QEMU Device Models
 - Importance for kernel developers
 
 ---
+
 QEMU Device Model Architecture
 
 ---

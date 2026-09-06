@@ -9,9 +9,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Game Days
 
 ---
+
 ## What This Chapter Covers
 
 - What a game day is
@@ -21,6 +23,7 @@ audience:
 - Aftermath
 
 ---
+
 ## What A Game Day Is
 
 - Scheduled chaos exercise
@@ -29,6 +32,7 @@ audience:
 - Time-bounded
 
 ---
+
 ## Why Schedule
 
 - Forces action
@@ -37,6 +41,7 @@ audience:
 - Builds muscle memory
 
 ---
+
 ## Planning
 
 - Pick a scenario
@@ -45,11 +50,13 @@ audience:
 - Prepare materials
 
 ---
+
 ## Game Day Phases
 
 ![game_day_phases](svg/courses/testing/chaos-engineering/04_game_days/game_day_phases.svg)
 
 ---
+
 ## Scenario Design
 
 - Realistic but bounded
@@ -58,6 +65,7 @@ audience:
 - Document exit criteria
 
 ---
+
 ## Roles
 
 - Game master runs the show
@@ -66,11 +74,13 @@ audience:
 - Stakeholders read the report
 
 ---
+
 ## Roles Visualized
 
 ![game_day_roles](svg/courses/testing/chaos-engineering/04_game_days/game_day_roles.svg)
 
 ---
+
 ## Pre-Brief
 
 - Recap roles
@@ -79,6 +89,7 @@ audience:
 - Confirm abort triggers
 
 ---
+
 ## Running The Day
 
 - Inject the failure
@@ -87,6 +98,7 @@ audience:
 - Game master coordinates
 
 ---
+
 ## Communication Discipline
 
 - One incident channel
@@ -95,6 +107,7 @@ audience:
 - Practice the same as real incidents
 
 ---
+
 ## Stuck Moments
 
 - Missing tools
@@ -103,6 +116,7 @@ audience:
 - Each is an action item
 
 ---
+
 ## Recovery
 
 - End the experiment cleanly
@@ -111,6 +125,7 @@ audience:
 - Save artifacts for review
 
 ---
+
 ## Debrief
 
 - Run blameless review
@@ -119,6 +134,7 @@ audience:
 - List what to improve
 
 ---
+
 ## Action Items
 
 - Owners and deadlines
@@ -127,6 +143,7 @@ audience:
 - Block next game day if not done
 
 ---
+
 ## Frequency
 
 - Quarterly minimum
@@ -135,6 +152,7 @@ audience:
 - Adapt to risk
 
 ---
+
 ## Common Game Day Mistakes
 
 - Too few participants

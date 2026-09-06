@@ -11,6 +11,7 @@ audience:
   - audiences:managers
 
 ---
+
 # On-Prem Cost Fundamentals
 
 ---

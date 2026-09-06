@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Merge vs Rebase
 
 ---
@@ -33,6 +34,7 @@ audience:
 But understanding *why* and *when* is crucial for effective `Git` workflows and team collaboration.
 
 ---
+
 ## What is Rebasing?: Example
 
 Rebasing rewrites commit history by moving commits to a new base:
@@ -46,6 +48,7 @@ git rebase -i HEAD~3
 ```
 
 ---
+
 ## What is Rebasing?
 
 ![interactive_rebase_to_edit_commits](svg/courses/git/git/08_merge_vs_rebase/interactive_rebase_to_edit_commits.svg)
@@ -93,10 +96,10 @@ git rebase main  # DON'T DO THIS!
 ## When to Use Merge
 
 1. **Integrating feature branches into main:**
-    ```bash
+   ```bash
     git checkout main
     git merge --no-ff feature-branch
-    ```
+   ```
 
 1. **Preserving collaboration context:**
     - Multiple developers worked on the branch
@@ -118,10 +121,10 @@ git rebase main  # DON'T DO THIS!
 ## When to Use Rebase
 
 1. **Updating private feature branches:**
-    ```bash
+   ```bash
     git checkout feature-branch
     git rebase main
-    ```
+   ```
 
 1. **Cleaning up commit history:**
     - Remove "work in progress" commits
@@ -183,6 +186,7 @@ squash j1k2l3m Fix validation bug
 **Result:** Single commit with combined changes and new message.
 
 ---
+
 ## Rebase vs Merge: Team Workflow Impact: Details
 
 **Merge-based workflow:**
@@ -198,6 +202,7 @@ squash j1k2l3m Fix validation bug
 - Better for code archaeology
 
 ---
+
 ## Rebase vs Merge: Team Workflow Impact
 
 ![rebase_vs_merge_team_workflow_impact](svg/courses/git/git/08_merge_vs_rebase/rebase_vs_merge_team_workflow_impact.svg)
@@ -260,28 +265,28 @@ git rebase --onto main~2 main feature
 ## The Rebase Workflow
 
 1. **Start with updated main:**
-    ```bash
+   ```bash
     git checkout main
     git pull origin main
-    ```
+   ```
 
 1. **Rebase your feature branch:**
-    ```bash
+   ```bash
     git checkout feature-branch
     git rebase main
-    ```
+   ```
 
 1. **Handle any conflicts:**
-    ```bash
+   ```bash
     # Fix conflicts, stage files, continue
     git add .
     git rebase --continue
-    ```
+   ```
 
 1. **Force push if already shared:**
-    ```bash
+   ```bash
     git push --force-with-lease origin feature-branch
-    ```
+   ```
 
 ---
 

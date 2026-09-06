@@ -8,9 +8,11 @@ audience:
   - audiences:testers
 
 ---
+
 # Introduction to Contract Testing
 
 ---
+
 ## What This Chapter Covers
 
 - What contract testing is
@@ -20,6 +22,7 @@ audience:
 - Course outline
 
 ---
+
 ## What It Is
 
 - Verify the boundary between services
@@ -28,6 +31,7 @@ audience:
 - Run in isolation
 
 ---
+
 ## Why Now
 
 - Microservices multiply boundaries
@@ -36,6 +40,7 @@ audience:
 - Need a faster check
 
 ---
+
 ## The Integration Test Problem
 
 - Spinning up many services is expensive
@@ -44,11 +49,13 @@ audience:
 - Slow to run in CI
 
 ---
+
 ## Contract Tests vs E2E
 
 ![contract_vs_e2e](svg/courses/testing/contract-testing/01_introduction/contract_vs_e2e.svg)
 
 ---
+
 ## End-To-End Has Its Place
 
 - Smoke tests for critical journeys
@@ -57,6 +64,7 @@ audience:
 - Combine with contract tests
 
 ---
+
 ## The Contract
 
 - Promise from provider to consumer
@@ -65,6 +73,7 @@ audience:
 - Includes status codes and headers
 
 ---
+
 ## Consumer Tests
 
 - Define expected interactions
@@ -73,6 +82,7 @@ audience:
 - Cheap and fast
 
 ---
+
 ## Provider Verification
 
 - Replay the contract against the real provider
@@ -81,6 +91,7 @@ audience:
 - Fast feedback to provider team
 
 ---
+
 ## Pact Style
 
 - Consumer-driven contracts
@@ -89,11 +100,13 @@ audience:
 - Industry-standard tools
 
 ---
+
 ## End-to-End Flow
 
 ![contract_flow](svg/courses/testing/contract-testing/01_introduction/contract_flow.svg)
 
 ---
+
 ## OpenAPI Style
 
 - Spec-driven contracts
@@ -102,6 +115,7 @@ audience:
 - Less detail than Pact
 
 ---
+
 ## When It Pays Off
 
 - Many small services
@@ -110,6 +124,7 @@ audience:
 - High cost of integration regressions
 
 ---
+
 ## When It Does Not
 
 - Monolithic apps
@@ -118,6 +133,7 @@ audience:
 - Small system overall
 
 ---
+
 ## Course Outline
 
 - Contracts and tools
@@ -127,6 +143,7 @@ audience:
 - Pitfalls
 
 ---
+
 ## Common Misconceptions
 
 - "Contract testing replaces integration tests"

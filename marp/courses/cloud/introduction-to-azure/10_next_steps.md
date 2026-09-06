@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Next Steps and Azure Certifications
 
 ---

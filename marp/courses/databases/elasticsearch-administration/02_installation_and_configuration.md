@@ -7,9 +7,11 @@ audience:
   - audiences:dbas
 
 ---
+
 # Installation and Configuration
 
 ---
+
 ## What This Chapter Covers
 
 - System requirements and sizing guidelines
@@ -22,6 +24,7 @@ audience:
 - Cluster bootstrapping
 
 ---
+
 ## System Requirements
 
 - 64-bit Linux is the recommended production OS
@@ -32,6 +35,7 @@ audience:
 - Reliable, low-latency network between nodes
 
 ---
+
 ## Sizing Guidelines
 
 - Plan capacity around data volume, retention, and query load
@@ -42,6 +46,7 @@ audience:
 - Leave headroom for replicas and growth
 
 ---
+
 ## Installation Methods
 
 - Archive: `tar.gz` (Linux) — flexible, manual setup
@@ -52,6 +57,7 @@ audience:
 - Packages integrate with systemd; archives run from any directory
 
 ---
+
 ## Installing the tar.gz Archive
 
 - Download, extract, and run as a non-root user
@@ -65,6 +71,7 @@ cd elasticsearch-9.0.0/
 ```
 
 ---
+
 ## Installing the deb/rpm Packages
 
 - Packages install to system paths and register a systemd service
@@ -79,6 +86,7 @@ sudo dnf install elasticsearch
 ```
 
 ---
+
 ## Running with Docker
 
 - Pull the official image and run a container
@@ -93,6 +101,7 @@ docker run --name es01 \
 ```
 
 ---
+
 ## Directory Structure (Archive)
 
 - `bin/` — executables (elasticsearch, elasticsearch-keystore)
@@ -103,6 +112,7 @@ docker run --name es01 \
 - `modules/` — bundled modules
 
 ---
+
 ## Directory Structure (Packages)
 
 - Config: `/etc/elasticsearch/`
@@ -113,6 +123,7 @@ docker run --name es01 \
 - Keep data and logs off the root filesystem in production
 
 ---
+
 ## Configuring Paths
 
 - Separate data and logs onto appropriate volumes
@@ -124,6 +135,7 @@ path.logs: /var/log/elasticsearch
 ```
 
 ---
+
 ## elasticsearch.yml: Cluster and Node Identity
 
 - All nodes in a cluster must share `cluster.name`
@@ -135,6 +147,7 @@ node.name: ${HOSTNAME}
 ```
 
 ---
+
 ## elasticsearch.yml: Network Settings
 
 - `network.host` controls which interfaces the node binds to
@@ -148,6 +161,7 @@ transport.port: 9300
 ```
 
 ---
+
 ## Discovery and Cluster Formation
 
 - `discovery.seed_hosts` lists addresses to contact for forming a cluster
@@ -165,6 +179,7 @@ cluster.initial_master_nodes:
 ```
 
 ---
+
 ## Important: initial_master_nodes
 
 - Only used the first time a brand-new cluster bootstraps
@@ -174,6 +189,7 @@ cluster.initial_master_nodes:
 - Misuse can split a cluster into two separate clusters
 
 ---
+
 ## JVM Configuration
 
 - JVM options live in `config/jvm.options` and `jvm.options.d/`
@@ -187,6 +203,7 @@ cluster.initial_master_nodes:
 ```
 
 ---
+
 ## Heap Sizing Rules
 
 - Set heap to no more than 50% of physical RAM
@@ -196,6 +213,7 @@ cluster.initial_master_nodes:
 - Larger machines: run multiple nodes rather than huge heaps
 
 ---
+
 ## Network and Transport
 
 - HTTP (9200): REST/client traffic, Kibana, applications
@@ -205,6 +223,7 @@ cluster.initial_master_nodes:
 - TLS should secure both HTTP and transport in production
 
 ---
+
 ## System-Level Tuning
 
 - Disable swap or set `bootstrap.memory_lock: true`
@@ -220,6 +239,7 @@ sudo sysctl -w vm.max_map_count=262144
 ```
 
 ---
+
 ## Starting and Stopping with systemd
 
 - Packages register an `elasticsearch` systemd service
@@ -233,6 +253,7 @@ sudo systemctl status elasticsearch
 ```
 
 ---
+
 ## Verifying the Installation
 
 - Confirm the node responds and check cluster health
@@ -244,6 +265,7 @@ curl -k -u elastic:$PASSWORD https://localhost:9200/_cluster/health?pretty
 ```
 
 ---
+
 ## Cluster Bootstrapping Checklist
 
 - Configure `cluster.name`, `node.name`, `network.host` on every node

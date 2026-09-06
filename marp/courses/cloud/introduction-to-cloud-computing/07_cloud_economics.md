@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Cloud Economics and Pay-As-You-Go
 
 ---

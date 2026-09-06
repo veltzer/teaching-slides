@@ -9,15 +9,18 @@ audience:
   - audiences:developers
 
 ---
+
 # Understanding Ownership
 ## Chapter 3: Rust's Unique Memory Management
 
 ---
+
 ## Memory Management Evolution
 
 ![memory_management_evolution](svg/courses/languages/rust/rust-programming/03_understanding_ownership/memory_management_evolution.svg)
 
 ---
+
 ## What is Ownership
 
 - Memory management system
@@ -27,6 +30,7 @@ audience:
 - Rules enforced by compiler
 
 ---
+
 ## Ownership Rules
 
 1. Each value in Rust has an owner
@@ -34,6 +38,7 @@ audience:
 1. When the owner goes out of scope, the value is dropped
 
 ---
+
 ## Variable Scope Basics
 
 ```rust
@@ -44,11 +49,13 @@ audience:
 ```
 
 ---
+
 ## The Stack and The Heap
 
 ![the_stack_and_the_heap](svg/courses/languages/rust/rust-programming/03_understanding_ownership/the_stack_and_the_heap.svg)
 
 ---
+
 ## Stack vs Heap
 
 <div class="columns">
@@ -75,6 +82,7 @@ audience:
 </div>
 
 ---
+
 ## Stack-Only Data
 
 ```rust
@@ -86,6 +94,7 @@ fn main() {
 ```
 
 ---
+
 ## Move Semantics
 
 ```rust
@@ -98,11 +107,13 @@ fn main() {
 ```
 
 ---
+
 ## Memory Layout: Move
 
 ![memory_layout_move](svg/courses/languages/rust/rust-programming/03_understanding_ownership/memory_layout_move.svg)
 
 ---
+
 ## Clone for Deep Copy
 
 ```rust
@@ -114,6 +125,7 @@ fn main() {
 ```
 
 ---
+
 ## Copy Types
 
 - Integers
@@ -124,6 +136,7 @@ fn main() {
 - Arrays (if elements are Copy)
 
 ---
+
 ## Ownership and Functions
 
 ```rust
@@ -139,6 +152,7 @@ fn takes_ownership(s: String) {
 ```
 
 ---
+
 ## Return Values and Scope
 
 ```rust
@@ -158,6 +172,7 @@ fn takes_and_gives_back(s: String) -> String {
 ```
 
 ---
+
 ## References and Borrowing
 
 ```rust
@@ -173,6 +188,7 @@ fn calculate_length(s: &String) -> usize {
 ```
 
 ---
+
 ## References Rules
 
 1. One mutable reference OR many immutable references
@@ -180,6 +196,7 @@ fn calculate_length(s: &String) -> usize {
 1. Reference scope ends at last usage
 
 ---
+
 ## Mutable References
 
 ```rust
@@ -195,6 +212,7 @@ fn change(s: &mut String) {
 ```
 
 ---
+
 ## Reference Restrictions
 
 ```rust
@@ -207,6 +225,7 @@ fn main() {
 ```
 
 ---
+
 ## Multiple Immutable References
 
 ```rust
@@ -219,6 +238,7 @@ fn main() {
 ```
 
 ---
+
 ## Reference Scope
 
 ```rust
@@ -234,6 +254,7 @@ fn main() {
 ```
 
 ---
+
 ## Dangling References
 
 ```rust
@@ -248,6 +269,7 @@ fn dangle() -> &String { // Error!
 ```
 
 ---
+
 ## The Slice Type
 
 ```rust
@@ -260,6 +282,7 @@ fn main() {
 ```
 
 ---
+
 ## String Slices
 
 ```rust
@@ -272,6 +295,7 @@ let hw = &s[..];         // whole string
 ```
 
 ---
+
 ## String Literals as Slices: Example
 
 ```rust
@@ -279,11 +303,13 @@ let s: &str = "Hello, world!";
 ```
 
 ---
+
 ## String Literals as Slices
 
 ![string_literals_as_slices](svg/courses/languages/rust/rust-programming/03_understanding_ownership/string_literals_as_slices.svg)
 
 ---
+
 ## Other Slice Types
 
 ```rust
@@ -295,6 +321,7 @@ fn main() {
 ```
 
 ---
+
 ## String Types
 
 <div class="columns">
@@ -319,11 +346,13 @@ fn main() {
 </div>
 
 ---
+
 ## Best Practices
 
 ![best_practices](svg/courses/languages/rust/rust-programming/03_understanding_ownership/best_practices.svg)
 
 ---
+
 ## Common Pitfalls
 
 1. Fighting the borrow checker
@@ -333,6 +362,7 @@ fn main() {
 1. Improper scope management
 
 ---
+
 ## String Operations Example
 
 ```rust
@@ -349,6 +379,7 @@ fn main() {
 ```
 
 ---
+
 ## Practice Exercise
 
 Create a function that:
@@ -358,6 +389,7 @@ Create a function that:
 1. Handles empty strings
 
 ---
+
 ## Summary
 - Ownership rules
 - References and borrowing

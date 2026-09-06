@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Templates and Generic Programming
 
 ---

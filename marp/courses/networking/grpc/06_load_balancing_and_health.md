@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Load Balancing, Service Discovery, and Health
 
 ---
+
 ## What This Chapter Covers
 
 - Why HTTP/1 load balancers don't work well for gRPC
@@ -21,6 +23,7 @@ audience:
 - Server reflection
 
 ---
+
 ## The Long-Lived Connection Problem
 
 - gRPC uses HTTP/2 with persistent connections
@@ -30,6 +33,7 @@ audience:
 - L7 load balancers help, but with caveats
 
 ---
+
 ## Two Approaches
 
 - Client-side LB: client picks the backend per call
@@ -39,16 +43,19 @@ audience:
 - Cloud platforms favor proxy approaches
 
 ---
+
 ## LB Approaches Visualized
 
 ![lb_approaches](svg/courses/networking/grpc/06_load_balancing_health/lb_approaches.svg)
 
 ---
+
 ## Health Checking
 
 ![health_check](svg/courses/networking/grpc/06_load_balancing_and_health/health_check.svg)
 
 ---
+
 ## Client-Side Load Balancing
 
 - Client knows all backends
@@ -58,6 +65,7 @@ audience:
 - Requires service discovery integration
 
 ---
+
 ## Pick-First
 
 - The default in some clients
@@ -67,6 +75,7 @@ audience:
 - Move to round-robin for production
 
 ---
+
 ## Round-Robin
 
 - Cycles through backends
@@ -76,6 +85,7 @@ audience:
 - Adequate for most internal services
 
 ---
+
 ## Weighted Round-Robin
 
 - Backends have weights
@@ -85,6 +95,7 @@ audience:
 - Common in mesh-managed deployments
 
 ---
+
 ## Latency-Aware Algorithms
 
 - Track per-backend latency
@@ -94,6 +105,7 @@ audience:
 - Good when backends vary in performance
 
 ---
+
 ## DNS-Based Discovery
 
 - Client queries DNS for backend addresses
@@ -103,6 +115,7 @@ audience:
 - Limited control: just an A record list
 
 ---
+
 ## Registry-Based Discovery
 
 - Service registry (Consul, etcd, ZooKeeper)
@@ -112,6 +125,7 @@ audience:
 - Operational complexity is the cost
 
 ---
+
 ## Service Mesh Discovery
 
 - Mesh handles discovery transparently
@@ -121,6 +135,7 @@ audience:
 - Consul, Istio, Linkerd are common
 
 ---
+
 ## Envoy-Based LB
 
 - Envoy as a smart L7 proxy
@@ -130,6 +145,7 @@ audience:
 - The default in many cloud setups
 
 ---
+
 ## Kubernetes and gRPC
 
 - Service IPs are L4 — not great for gRPC
@@ -139,6 +155,7 @@ audience:
 - Plain ClusterIP is the trap
 
 ---
+
 ## The Health Checking Protocol
 
 - A standard gRPC service: `grpc.health.v1.Health`
@@ -148,6 +165,7 @@ audience:
 - Implement on every server
 
 ---
+
 ## Implementing Health Checks
 
 ```go
@@ -164,6 +182,7 @@ healthSrv.SetServingStatus("", healthpb.HealthCheckResponse_SERVING)
 - Update on dependency changes
 
 ---
+
 ## Kubernetes Probes
 
 - gRPC liveness/readiness via `grpc-health-probe` binary
@@ -173,6 +192,7 @@ healthSrv.SetServingStatus("", healthpb.HealthCheckResponse_SERVING)
 - Standard pattern for production
 
 ---
+
 ## Server Reflection
 
 - Server exposes its service definitions at runtime
@@ -182,6 +202,7 @@ healthSrv.SetServingStatus("", healthpb.HealthCheckResponse_SERVING)
 - Can leak info; gate on environment
 
 ---
+
 ## Enabling Reflection (Server)
 
 ```go
@@ -195,6 +216,7 @@ reflection.Register(server)
 - Disable in production unless you understand the trade-offs
 
 ---
+
 ## Connection Management
 
 - Long-lived connections vs reconnection
@@ -204,6 +226,7 @@ reflection.Register(server)
 - Each language has different defaults
 
 ---
+
 ## Keepalive Configuration
 
 ```go
@@ -220,6 +243,7 @@ opts := []grpc.DialOption{
 - Tune to your network and SLOs
 
 ---
+
 ## Common Pitfalls
 
 - Using a TCP load balancer for gRPC — uneven load
@@ -229,6 +253,7 @@ opts := []grpc.DialOption{
 - Keepalive too aggressive — wastes resources
 
 ---
+
 ## Service Mesh Trade-Offs
 
 - Wins: mTLS, observability, retries, rate limiting
@@ -238,6 +263,7 @@ opts := []grpc.DialOption{
 - Start simple; add mesh when needed
 
 ---
+
 ## Best Practices
 
 - Always implement health checks
@@ -247,6 +273,7 @@ opts := []grpc.DialOption{
 - Monitor connection counts and per-backend latency
 
 ---
+
 ## Summary
 
 - gRPC's HTTP/2 connections need smarter load balancing

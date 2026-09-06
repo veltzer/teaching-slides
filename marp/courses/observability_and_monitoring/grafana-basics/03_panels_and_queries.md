@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Panels and Queries
 
 ---
+
 ## What This Chapter Covers
 
 - Panel types
@@ -19,6 +21,7 @@ audience:
 - Annotations
 
 ---
+
 ## Time Series Panel
 
 - Default for metrics
@@ -27,11 +30,13 @@ audience:
 - Most-used panel type
 
 ---
+
 ## Panel Types Compared
 
 ![panel_types](svg/courses/observability_and_monitoring/grafana-basics/03_panels_and_queries/panel_types.svg)
 
 ---
+
 ## Stat Panel
 
 - Single big number
@@ -40,6 +45,7 @@ audience:
 - Pick units carefully
 
 ---
+
 ## Gauge
 
 - Bounded scalar
@@ -48,6 +54,7 @@ audience:
 - Less precise than time series
 
 ---
+
 ## Table
 
 - Rows and columns of data
@@ -56,6 +63,7 @@ audience:
 - Sortable
 
 ---
+
 ## Bar Gauge
 
 - Compare values across rows
@@ -64,6 +72,7 @@ audience:
 - Compact display
 
 ---
+
 ## Logs Panel
 
 - Stream of log lines
@@ -72,6 +81,7 @@ audience:
 - Time-aligned with metrics
 
 ---
+
 ## Heatmap
 
 - Distribution over time
@@ -80,6 +90,7 @@ audience:
 - Color as count
 
 ---
+
 ## Writing Queries
 
 - Per-source query language
@@ -88,11 +99,13 @@ audience:
 - Save with descriptive name
 
 ---
+
 ## Query And Transform
 
 ![query_layers](svg/courses/observability_and_monitoring/grafana-basics/03_panels_and_queries/query_layers.svg)
 
 ---
+
 ## Variables In Queries
 
 - Dollar-sign substitution
@@ -101,6 +114,7 @@ audience:
 - Test all combinations
 
 ---
+
 ## Transformations
 
 - Post-process query results
@@ -109,6 +123,7 @@ audience:
 - Avoid for huge datasets
 
 ---
+
 ## Field Options
 
 - Units, decimals
@@ -117,6 +132,7 @@ audience:
 - Override per series
 
 ---
+
 ## Annotations
 
 - Mark events on time series
@@ -125,6 +141,7 @@ audience:
 - Useful for context
 
 ---
+
 ## Tooltip
 
 - On hover
@@ -133,6 +150,7 @@ audience:
 - Easier debugging
 
 ---
+
 ## Common Panel Mistakes
 
 - Wrong unit

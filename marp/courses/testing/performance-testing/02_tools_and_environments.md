@@ -8,9 +8,11 @@ audience:
   - audiences:testers
 
 ---
+
 # Tools and Environments
 
 ---
+
 ## What This Chapter Covers
 
 - Tool families
@@ -20,6 +22,7 @@ audience:
 - Networks and topology
 
 ---
+
 ## Tool Families
 
 - Open-source script-based
@@ -28,11 +31,13 @@ audience:
 - Cloud provider services
 
 ---
+
 ## Tool Choices
 
 ![tool_choices](svg/courses/testing/performance-testing/02_tools_and_environments/tool_choices.svg)
 
 ---
+
 ## Script-Based
 
 - JavaScript or Lua test scripts
@@ -41,6 +46,7 @@ audience:
 - Common in modern stacks
 
 ---
+
 ## GUI-Based
 
 - Drag and drop scenarios
@@ -49,6 +55,7 @@ audience:
 - Still in use for legacy
 
 ---
+
 ## Hosted Platforms
 
 - Distributed load generators
@@ -57,6 +64,7 @@ audience:
 - Good for occasional spikes
 
 ---
+
 ## Picking A Tool
 
 - Skill set of team
@@ -65,6 +73,7 @@ audience:
 - Integration with CI
 
 ---
+
 ## Test Environment
 
 - As production-like as possible
@@ -73,11 +82,13 @@ audience:
 - Similar topology
 
 ---
+
 ## Likeness Spectrum
 
 ![env_likeness](svg/courses/testing/performance-testing/02_tools_and_environments/env_likeness.svg)
 
 ---
+
 ## Why Production-Likeness
 
 - Different config breaks results
@@ -86,6 +97,7 @@ audience:
 - Conclusions invalid otherwise
 
 ---
+
 ## Sampling Production Data
 
 - Cleanse for PII
@@ -94,6 +106,7 @@ audience:
 - Document what you changed
 
 ---
+
 ## Synthetic Data
 
 - Fast to generate
@@ -102,6 +115,7 @@ audience:
 - Validate against real data later
 
 ---
+
 ## Load Generator Placement
 
 - Cloud region near or far
@@ -110,6 +124,7 @@ audience:
 - Scale generators with target
 
 ---
+
 ## Network Conditions
 
 - Add latency
@@ -118,6 +133,7 @@ audience:
 - Realistic for mobile users
 
 ---
+
 ## Observability During Tests
 
 - Same monitoring as production
@@ -126,6 +142,7 @@ audience:
 - Logs aggregated
 
 ---
+
 ## CI Integration
 
 - Smoke perf tests on PRs
@@ -134,6 +151,7 @@ audience:
 - Trends tracked over time
 
 ---
+
 ## Common Environment Mistakes
 
 - Smaller environment than production

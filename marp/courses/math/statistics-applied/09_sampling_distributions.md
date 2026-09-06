@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Sampling and Sampling Distributions
 
 ---
+
 ## What This Chapter Covers
 
 - Why we sample at all
@@ -21,11 +23,13 @@ audience:
 - Bootstrapping as a shortcut
 
 ---
+
 ## Central Limit Theorem in Action
 
 ![clt](svg/courses/math/statistics-applied/09_sampling_distributions/clt.svg)
 
 ---
+
 ## Why Sample
 
 - Measuring the whole population is usually impossible, slow, or expensive
@@ -35,6 +39,7 @@ audience:
 - No amount of data fixes a biased sampling method — only a better method does
 
 ---
+
 ## Sampling Methods
 
 - **Simple random**: every unit equally likely — the gold standard, often hard in practice
@@ -44,11 +49,13 @@ audience:
 - **Convenience**: whoever's easy to reach — biased, common, usually unfit for inference
 
 ---
+
 ## Four Sampling Methods
 
 ![sampling_methods](svg/courses/math/statistics-applied/09_sampling_distributions/sampling_methods.svg)
 
 ---
+
 ## How Sampling Goes Wrong
 
 - **Selection bias**: the sampling frame misses part of the population (online-only survey)
@@ -58,6 +65,7 @@ audience:
 - Each of these biases the *expected* answer — bigger samples don't help
 
 ---
+
 ## The Sampling Distribution
 
 - Imagine taking many samples and computing the statistic (say the mean) for each
@@ -67,6 +75,7 @@ audience:
 - This is the conceptual heart of every confidence interval and p-value
 
 ---
+
 ## Standard Error
 
 - The **standard error (SE)** is the standard deviation *of the sampling distribution*
@@ -76,6 +85,7 @@ audience:
 - Don't confuse SE (precision of the estimate) with SD (spread of the data)
 
 ---
+
 ## The Central Limit Theorem
 
 - The sampling distribution of the **mean** is approximately **normal** for large n — *no matter* the shape of the original data
@@ -85,6 +95,7 @@ audience:
 - One of the most consequential results in the whole subject
 
 ---
+
 ## Bootstrapping
 
 - Don't want to derive the sampling distribution? *Simulate* it
@@ -94,6 +105,7 @@ audience:
 - Costs CPU instead of cleverness — a great default in practice
 
 ---
+
 ## CLT And Bootstrap In Python
 
 ```python
@@ -108,6 +120,7 @@ print("95% interval     :", np.percentile(boot, [2.5, 97.5]))
 ```
 
 ---
+
 ## Common Mistakes
 
 - Trusting a convenience sample for population inference

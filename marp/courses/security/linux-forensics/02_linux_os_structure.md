@@ -477,6 +477,7 @@ sudo grep "sshd" /var/log/auth.log | grep "Failed"
 ## Shell Basics for Forensics
 
 ### Common Shells
+
 | Shell    | Path              | Config Files                |
 |----------|------------------|-----------------------------|
 | `bash`   | `/bin/bash`      | `.bashrc`, `.bash_profile`  |

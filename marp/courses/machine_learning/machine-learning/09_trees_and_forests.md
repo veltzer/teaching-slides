@@ -7,9 +7,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Trees, Forests, and Boosting
 
 ---
+
 ## What This Chapter Covers
 
 - Decision trees
@@ -21,6 +23,7 @@ audience:
 - XGBoost, LightGBM, CatBoost
 
 ---
+
 ## Why Trees
 
 - Handle nonlinearity
@@ -30,6 +33,7 @@ audience:
 - Strong on tabular
 
 ---
+
 ## Decision Tree Basics
 
 - Series of yes/no splits
@@ -38,11 +42,13 @@ audience:
 - Recursive partitioning
 
 ---
+
 ## A Tree
 
 ![decision_tree](svg/courses/machine_learning/machine-learning/09_trees_and_forests/decision_tree.svg)
 
 ---
+
 ## How A Split Is Chosen
 
 - For each feature, each threshold
@@ -51,6 +57,7 @@ audience:
 - Recurse on each side
 
 ---
+
 ## Gini Impurity
 
 - Probability of wrong label if labelled by frequency
@@ -58,6 +65,7 @@ audience:
 - Default in sklearn
 
 ---
+
 ## Entropy
 
 - -sum p_i log p_i
@@ -66,12 +74,14 @@ audience:
 - Use either
 
 ---
+
 ## Information Gain
 
 - Parent impurity minus weighted child impurity
 - Tree picks the split with the most gain
 
 ---
+
 ## Variance Reduction
 
 - For regression trees
@@ -79,6 +89,7 @@ audience:
 - Pick split that reduces it most
 
 ---
+
 ## Stopping Criteria
 
 - Max depth
@@ -87,6 +98,7 @@ audience:
 - Min impurity decrease
 
 ---
+
 ## Pruning
 
 - Grow full, then trim
@@ -95,6 +107,7 @@ audience:
 - Reduces overfitting
 
 ---
+
 ## Decision Tree in sklearn
 
 ```python
@@ -104,6 +117,7 @@ clf.fit(X_train, y_train)
 ```
 
 ---
+
 ## Tree Strengths
 
 - Interpretable
@@ -112,6 +126,7 @@ clf.fit(X_train, y_train)
 - Captures interactions
 
 ---
+
 ## Tree Weaknesses
 
 - High variance
@@ -120,6 +135,7 @@ clf.fit(X_train, y_train)
 - Linear relationships waste of structure
 
 ---
+
 ## Why Ensemble Trees
 
 - A single tree is unstable
@@ -128,6 +144,7 @@ clf.fit(X_train, y_train)
 - The default for tabular
 
 ---
+
 ## Bagging
 
 - Bootstrap aggregating
@@ -136,6 +153,7 @@ clf.fit(X_train, y_train)
 - Reduces variance
 
 ---
+
 ## Bootstrap Sampling
 
 - Sample with replacement
@@ -144,6 +162,7 @@ clf.fit(X_train, y_train)
 - The rest are out-of-bag
 
 ---
+
 ## Out-Of-Bag Score
 
 - Predict each row from trees that didn't see it
@@ -151,6 +170,7 @@ clf.fit(X_train, y_train)
 - No CV needed
 
 ---
+
 ## Random Forest
 
 - Bagging + random feature subsets
@@ -159,6 +179,7 @@ clf.fit(X_train, y_train)
 - Few knobs to tune
 
 ---
+
 ## Why Random Features
 
 - Trees pick the best split
@@ -167,6 +188,7 @@ clf.fit(X_train, y_train)
 - Lower variance
 
 ---
+
 ## RF Hyperparameters
 
 - n_estimators: more is better, slower
@@ -175,6 +197,7 @@ clf.fit(X_train, y_train)
 - min_samples_leaf: smoothness
 
 ---
+
 ## Random Forest in sklearn
 
 ```python
@@ -184,6 +207,7 @@ clf.fit(X_train, y_train)
 ```
 
 ---
+
 ## RF Strengths
 
 - Robust default
@@ -192,6 +216,7 @@ clf.fit(X_train, y_train)
 - Works on small data
 
 ---
+
 ## RF Weaknesses
 
 - Bigger model, slower predict
@@ -199,6 +224,7 @@ clf.fit(X_train, y_train)
 - Often beaten by boosting on tabular
 
 ---
+
 ## Extra Trees
 
 - Even more randomness
@@ -207,6 +233,7 @@ clf.fit(X_train, y_train)
 - Same API
 
 ---
+
 ## Boosting
 
 - Sequential, each model fixes the previous
@@ -215,6 +242,7 @@ clf.fit(X_train, y_train)
 - Currently top of the leaderboard for tabular
 
 ---
+
 ## AdaBoost
 
 - Reweight misclassified examples
@@ -223,6 +251,7 @@ clf.fit(X_train, y_train)
 - Original boosting algorithm
 
 ---
+
 ## Gradient Boosting
 
 - Each tree fits the residual
@@ -231,6 +260,7 @@ clf.fit(X_train, y_train)
 - Foundation of modern boosters
 
 ---
+
 ## Gradient Boosting in sklearn
 
 ```python
@@ -240,6 +270,7 @@ clf.fit(X_train, y_train)
 ```
 
 ---
+
 ## Learning Rate
 
 - Shrinks each tree's contribution
@@ -248,6 +279,7 @@ clf.fit(X_train, y_train)
 - Trade time for accuracy
 
 ---
+
 ## Subsampling
 
 - Train each tree on a fraction
@@ -256,6 +288,7 @@ clf.fit(X_train, y_train)
 - Stochastic gradient boosting
 
 ---
+
 ## XGBoost
 
 - Optimised gradient boosting
@@ -264,6 +297,7 @@ clf.fit(X_train, y_train)
 - Won countless competitions
 
 ---
+
 ## LightGBM
 
 - Histogram-based splits
@@ -272,6 +306,7 @@ clf.fit(X_train, y_train)
 - Best for many real datasets
 
 ---
+
 ## CatBoost
 
 - Strong with categorical features natively
@@ -280,6 +315,7 @@ clf.fit(X_train, y_train)
 - Competes with the others
 
 ---
+
 ## XGBoost Example
 
 ```python
@@ -289,6 +325,7 @@ clf.fit(X_train, y_train)
 ```
 
 ---
+
 ## LightGBM Example
 
 ```python
@@ -298,6 +335,7 @@ model.fit(X_train, y_train)
 ```
 
 ---
+
 ## CatBoost Example
 
 ```python
@@ -307,6 +345,7 @@ clf.fit(X_train, y_train, cat_features=cat_cols)
 ```
 
 ---
+
 ## Boosting Strengths
 
 - Best on tabular data
@@ -315,6 +354,7 @@ clf.fit(X_train, y_train, cat_features=cat_cols)
 - Calibrated probabilities
 
 ---
+
 ## Boosting Weaknesses
 
 - More tuning than RF
@@ -323,6 +363,7 @@ clf.fit(X_train, y_train, cat_features=cat_cols)
 - Less interpretable
 
 ---
+
 ## Tuning Boosting
 
 - learning_rate
@@ -332,6 +373,7 @@ clf.fit(X_train, y_train, cat_features=cat_cols)
 - reg_alpha, reg_lambda
 
 ---
+
 ## Early Stopping
 
 - Stop adding trees when validation stops improving
@@ -340,6 +382,7 @@ clf.fit(X_train, y_train, cat_features=cat_cols)
 - Use a held-out set
 
 ---
+
 ## Feature Importance
 
 - Tree models give it free
@@ -348,6 +391,7 @@ clf.fit(X_train, y_train, cat_features=cat_cols)
 - Use cautiously
 
 ---
+
 ## Permutation Importance
 
 - Shuffle a column, see metric drop
@@ -356,6 +400,7 @@ clf.fit(X_train, y_train, cat_features=cat_cols)
 - Available in sklearn
 
 ---
+
 ## SHAP Values
 
 - Per-prediction attributions
@@ -364,6 +409,7 @@ clf.fit(X_train, y_train, cat_features=cat_cols)
 - shap library
 
 ---
+
 ## Categorical Features
 
 - One-hot for trees works but explodes
@@ -372,6 +418,7 @@ clf.fit(X_train, y_train, cat_features=cat_cols)
 - LightGBM has built-in support
 
 ---
+
 ## Missing Values
 
 - XGBoost and LightGBM handle natively
@@ -380,6 +427,7 @@ clf.fit(X_train, y_train, cat_features=cat_cols)
 - Big practical win
 
 ---
+
 ## Ensembling Across Algorithms
 
 - Average RF, boosting, linear
@@ -388,6 +436,7 @@ clf.fit(X_train, y_train, cat_features=cat_cols)
 - Often improves Kaggle leaderboards
 
 ---
+
 ## Stacking
 
 ```python
@@ -400,6 +449,7 @@ stack = StackingClassifier(estimators=estimators, final_estimator=LogisticRegres
 ```
 
 ---
+
 ## Tree-Based Choice
 
 - Small data: random forest
@@ -408,6 +458,7 @@ stack = StackingClassifier(estimators=estimators, final_estimator=LogisticRegres
 - Big data: LightGBM
 
 ---
+
 ## Pitfalls
 
 - Overfitting deep boosting models
@@ -416,6 +467,7 @@ stack = StackingClassifier(estimators=estimators, final_estimator=LogisticRegres
 - One-hot encoding huge cardinality
 
 ---
+
 ## Common Mistakes
 
 - Choosing deep trees with little data
@@ -424,61 +476,73 @@ stack = StackingClassifier(estimators=estimators, final_estimator=LogisticRegres
 - Ignoring categorical handling
 
 ---
+
 ## Tree Split
 
 ![tree_split](svg/courses/machine_learning/machine-learning/09_trees_and_forests/tree_split.svg)
 
 ---
+
 ## Gini vs Entropy
 
 ![gini_vs_entropy](svg/courses/machine_learning/machine-learning/09_trees_and_forests/gini_vs_entropy.svg)
 
 ---
+
 ## Bagging vs Boosting
 
 ![bagging_vs_boosting](svg/courses/machine_learning/machine-learning/09_trees_and_forests/bagging_vs_boosting.svg)
 
 ---
+
 ## Random Forest Ensemble
 
 ![random_forest_ensemble](svg/courses/machine_learning/machine-learning/09_trees_and_forests/random_forest_ensemble.svg)
 
 ---
+
 ## Gradient Boosting Sequence
 
 ![gradient_boosting_sequence](svg/courses/machine_learning/machine-learning/09_trees_and_forests/gradient_boosting_sequence.svg)
 
 ---
+
 ## XGBoost / LightGBM / CatBoost
 
 ![xgb_lgb_cat](svg/courses/machine_learning/machine-learning/09_trees_and_forests/xgb_lgb_cat.svg)
 
 ---
+
 ## Feature Importance
 
 ![feature_importance](svg/courses/machine_learning/machine-learning/09_trees_and_forests/feature_importance.svg)
 
 ---
+
 ## Early Stopping
 
 ![early_stopping](svg/courses/machine_learning/machine-learning/09_trees_and_forests/early_stopping.svg)
 
 ---
+
 ## Information Gain
 
 ![information_gain](svg/courses/machine_learning/machine-learning/09_trees_and_forests/information_gain.svg)
 
 ---
+
 ## Learning Rate
 
 ![learning_rate](svg/courses/machine_learning/machine-learning/09_trees_and_forests/learning_rate.svg)
 
 ---
+
 ## Out-of-Bag Score
 
 ![oob_score](svg/courses/machine_learning/machine-learning/09_trees_and_forests/oob_score.svg)
 
 ---
+
 ## Summary
 
 - One tree: interpretable but unstable

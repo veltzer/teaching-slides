@@ -7,6 +7,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Search Patterns and Features
 
 ---
@@ -16,6 +17,7 @@ audience:
 ![pattern_uses](svg/courses/databases/elasticsearch-for-developers/09_search_patterns_and_features/pattern_uses.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Faceting
@@ -26,11 +28,13 @@ audience:
 - Common patterns
 
 ---
+
 ## Common Patterns
 
 ![search_patterns](svg/courses/databases/elasticsearch-for-developers/09_search_patterns_and_features/search_patterns.svg)
 
 ---
+
 ## Faceting
 
 - Show counts of matching values
@@ -39,6 +43,7 @@ audience:
 - Standard e-commerce pattern
 
 ---
+
 ## Search-As-You-Type
 
 - User types &#8594; suggestions appear
@@ -47,6 +52,7 @@ audience:
 - Sub-100ms latency target
 
 ---
+
 ## Did-You-Mean
 
 - Suggest correction for typos
@@ -55,6 +61,7 @@ audience:
 - Increases recovery from typos
 
 ---
+
 ## Personalisation
 
 - Boost results based on user profile
@@ -63,6 +70,7 @@ audience:
 - Privacy considerations
 
 ---
+
 ## Boosting Recent
 
 ```json
@@ -81,6 +89,7 @@ audience:
 ```
 
 ---
+
 ## Boosting Popular
 
 - Maintain a popularity score per document
@@ -89,6 +98,7 @@ audience:
 - Combine signals
 
 ---
+
 ## Geo-Boosting
 
 - Boost results near the user
@@ -96,6 +106,7 @@ audience:
 - Combine with relevance
 
 ---
+
 ## Multi-Lingual Search
 
 - One index per language; or analyzers per field
@@ -104,6 +115,7 @@ audience:
 - Common in global products
 
 ---
+
 ## Filtering UI Patterns
 
 - Active filters as chips
@@ -112,6 +124,7 @@ audience:
 - Persistent in URL
 
 ---
+
 ## Result Diversification
 
 - Avoid: 10 results from same merchant
@@ -120,6 +133,7 @@ audience:
 - Better UX
 
 ---
+
 ## Long-Tail Queries
 
 - Most queries have many results
@@ -127,6 +141,7 @@ audience:
 - Rank carefully; show fewer per page
 
 ---
+
 ## No-Result Pages
 
 - Helpful messaging
@@ -135,6 +150,7 @@ audience:
 - Don't just say "no results"
 
 ---
+
 ## A/B Testing Search
 
 - Try new ranking; measure click-through
@@ -143,6 +159,7 @@ audience:
 - Standard for serious search products
 
 ---
+
 ## Common Search Pattern Mistakes
 
 - All boosts; no clear baseline

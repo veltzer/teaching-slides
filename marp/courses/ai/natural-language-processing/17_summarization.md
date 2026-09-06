@@ -9,9 +9,11 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Summarization
 
 ---
+
 ## What This Chapter Covers
 
 - Extractive vs abstractive summarization and when each fits
@@ -22,6 +24,7 @@ audience:
 - Faithfulness, hallucination, and the metrics that catch them
 
 ---
+
 ## Why Summarize
 
 - Information arrives faster than humans can read it
@@ -31,6 +34,7 @@ audience:
 - Legal, medical, and financial domains have hard requirements for faithfulness
 
 ---
+
 ## Extractive vs Abstractive
 
 - Extractive: pick spans of the input verbatim and concatenate them
@@ -39,11 +43,13 @@ audience:
 - Real systems often hybridize: extract candidates, then rewrite
 
 ---
+
 ## Two Approaches Compared
 
 ![extractive_vs_abstractive](svg/courses/ai/natural-language-processing/17_summarization/extractive_vs_abstractive.svg)
 
 ---
+
 ## Luhn's Method
 
 - Score each sentence by the density of significant words
@@ -53,6 +59,7 @@ audience:
 - A baseline that more elaborate systems rarely match by huge margins
 
 ---
+
 ## TextRank
 
 - Build a graph where nodes are sentences and edges weight similarity
@@ -62,6 +69,7 @@ audience:
 - Implementations available in `gensim`, `summa`, and other toolkits
 
 ---
+
 ## TextRank in Practice
 
 ```python
@@ -82,6 +90,7 @@ def textrank(sentences, top_k=3):
 - Graph-based methods scale linearly with document length
 
 ---
+
 ## Supervised Extractive Summarization
 
 - Treat each sentence as a binary classifier: include or skip
@@ -91,6 +100,7 @@ def textrank(sentences, top_k=3):
 - `BertSum` was the strong baseline that displaced unsupervised methods
 
 ---
+
 ## Sequence-to-Sequence Summarization
 
 - Encoder reads the document, decoder generates the summary
@@ -100,6 +110,7 @@ def textrank(sentences, top_k=3):
 - Largely superseded by transformer variants
 
 ---
+
 ## BART for Summarization
 
 - A denoising autoencoder pretrained to reconstruct corrupted text
@@ -109,6 +120,7 @@ def textrank(sentences, top_k=3):
 - Cheap to fine-tune given a few thousand labeled pairs
 
 ---
+
 ## Pegasus
 
 - Pretrains by masking entire sentences and predicting them from the rest
@@ -118,6 +130,7 @@ def textrank(sentences, top_k=3):
 - Still competitive on out-of-domain transfer
 
 ---
+
 ## T5 and the Text-to-Text View
 
 - `T5` frames every task as text-to-text, including summarization
@@ -127,6 +140,7 @@ def textrank(sentences, top_k=3):
 - A common backbone for instruction-tuned summarizers
 
 ---
+
 ## Long Document Summarization
 
 - Standard transformers cap at 512-2048 tokens of input
@@ -136,11 +150,13 @@ def textrank(sentences, top_k=3):
 - Modern `LLMs` with 100k+ context windows changed the trade-offs
 
 ---
+
 ## Hierarchical Summarization
 
 ![hierarchical_summarization](svg/courses/ai/natural-language-processing/17_summarization/hierarchical_summarization.svg)
 
 ---
+
 ## Query-Focused Summarization
 
 - The summary should answer a specific question or focus on a topic
@@ -150,6 +166,7 @@ def textrank(sentences, top_k=3):
 - A natural fit for `RAG`-style systems with a generation step
 
 ---
+
 ## Multi-Document Summarization
 
 - Synthesize one summary from many input documents
@@ -159,6 +176,7 @@ def textrank(sentences, top_k=3):
 - Modern systems concatenate documents and let attention sort it out
 
 ---
+
 ## Faithfulness and Hallucination
 
 - An abstractive summary can be fluent and still wrong
@@ -168,6 +186,7 @@ def textrank(sentences, top_k=3):
 - The headline issue for production deployment
 
 ---
+
 ## Sources of Hallucination
 
 - Pretraining data that confidently asserts the wrong fact
@@ -177,11 +196,13 @@ def textrank(sentences, top_k=3):
 - Long contexts where the model loses track of what was actually said
 
 ---
+
 ## Hallucination Taxonomy
 
 ![hallucination_types](svg/courses/ai/natural-language-processing/17_summarization/hallucination_types.svg)
 
 ---
+
 ## Reducing Hallucination
 
 - Constrain decoding with copy or pointer mechanisms
@@ -191,6 +212,7 @@ def textrank(sentences, top_k=3):
 - Conservative system prompts with explicit "do not invent" instructions
 
 ---
+
 ## Evaluation: ROUGE
 
 - N-gram recall against one or more reference summaries
@@ -200,6 +222,7 @@ def textrank(sentences, top_k=3):
 - Should never be the only metric reported
 
 ---
+
 ## Evaluation: BERTScore
 
 - Compares contextual embeddings of summary and reference tokens
@@ -209,6 +232,7 @@ def textrank(sentences, top_k=3):
 - Pair with `ROUGE` for backward comparability
 
 ---
+
 ## Faithfulness Metrics
 
 - `FactCC`, `DAE`, `QuestEval` directly score factual consistency
@@ -218,6 +242,7 @@ def textrank(sentences, top_k=3):
 - Cost more to run but answer the question users actually care about
 
 ---
+
 ## LLMs as Summarizers
 
 - Prompt an instruction-tuned `LLM` with the document and a directive
@@ -227,6 +252,7 @@ def textrank(sentences, top_k=3):
 - Faithfulness still has to be verified — fluent does not mean correct
 
 ---
+
 ## When to Fine-Tune vs Prompt
 
 - Specialized domain with stable schema -> fine-tune
@@ -236,6 +262,7 @@ def textrank(sentences, top_k=3):
 - Compliance requirements -> fine-tune with audited data
 
 ---
+
 ## A Practical Summarization Stack
 
 - Retrieve or chunk the input depending on length
@@ -245,6 +272,7 @@ def textrank(sentences, top_k=3):
 - Surface uncertainty to the user when the summary is unstable
 
 ---
+
 ## Common Production Pitfalls
 
 - Reporting `ROUGE` and assuming faithfulness is fine
@@ -254,6 +282,7 @@ def textrank(sentences, top_k=3):
 - Ignoring the cost of long context at inference time
 
 ---
+
 ## Anti-Patterns
 
 - Treating extractive output as inherently faithful — it is not
@@ -263,6 +292,7 @@ def textrank(sentences, top_k=3):
 - Using the same prompt across very different document types
 
 ---
+
 ## Summary
 
 - Extractive methods are simple, robust, and still competitive

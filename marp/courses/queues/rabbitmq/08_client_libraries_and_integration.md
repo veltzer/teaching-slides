@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Client Libraries and Integration
 
 ---
+
 ## What This Chapter Covers
 
 - RabbitMQ client libraries by language
@@ -21,6 +23,7 @@ audience:
 - Common integration pitfalls
 
 ---
+
 ## Major Client Libraries
 
 - **Python**: pika (synchronous), aio-pika (async)
@@ -31,16 +34,19 @@ audience:
 - **Ruby**: bunny
 
 ---
+
 ## Side by Side
 
 ![client_libraries](svg/courses/queues/rabbitmq/08_client_libraries_and_integration/client_libraries.svg)
 
 ---
+
 ## Library Choices
 
 ![library_choices](svg/courses/queues/rabbitmq/08_client_libraries_and_integration/library_choices.svg)
 
 ---
+
 ## Higher-Level Frameworks
 
 - **Spring AMQP** (Java): templated patterns, annotations
@@ -50,6 +56,7 @@ audience:
 - Higher-level frameworks save boilerplate
 
 ---
+
 ## Connection Management
 
 - TCP connection: expensive (~1 second to open)
@@ -59,6 +66,7 @@ audience:
 - Most libraries support connection pooling internally
 
 ---
+
 ## Channels
 
 - Lightweight session within a connection
@@ -68,6 +76,7 @@ audience:
 - Close channels explicitly; leaks are common
 
 ---
+
 ## Reconnection
 
 - Connections drop (network blip, broker restart)
@@ -77,6 +86,7 @@ audience:
 - Most modern libraries handle this; older ones don't
 
 ---
+
 ## Serialisation
 
 - AMQP carries opaque bytes
@@ -86,6 +96,7 @@ audience:
 - Pick based on size, speed, schema-evolution needs
 
 ---
+
 ## JSON Example
 
 ```python
@@ -103,6 +114,7 @@ ch.basic_publish(
 - Easy to debug; verbose on the wire
 
 ---
+
 ## Protobuf Example
 
 ```python
@@ -122,6 +134,7 @@ ch.basic_publish(
 - Schema evolution rules; easier than ad-hoc JSON
 
 ---
+
 ## Web Framework Integration
 
 - **Flask + Celery**: defer slow work to background workers
@@ -131,6 +144,7 @@ ch.basic_publish(
 - Pattern: web request &#8594; publish job &#8594; respond fast; worker &#8594; consumes &#8594; processes
 
 ---
+
 ## A Web + Worker Pattern
 
 - Web app: handle request, validate input, publish to queue, return 202 Accepted
@@ -140,6 +154,7 @@ ch.basic_publish(
 - Standard pattern for emails, reports, processing
 
 ---
+
 ## Microservices Integration
 
 - Each service has its own queues
@@ -149,6 +164,7 @@ ch.basic_publish(
 - Choreography (events) often beats orchestration (RPC)
 
 ---
+
 ## Service Discovery
 
 - Producer doesn't need to know consumer addresses
@@ -158,6 +174,7 @@ ch.basic_publish(
 - Removing a consumer: nothing changes for the producer
 
 ---
+
 ## Schema Management
 
 - Producers and consumers must agree on message format
@@ -167,6 +184,7 @@ ch.basic_publish(
 - Versioning fields helps
 
 ---
+
 ## Connection Limits
 
 - Each connection costs broker resources
@@ -176,6 +194,7 @@ ch.basic_publish(
 - Surprise: a leak can take the broker down
 
 ---
+
 ## Channel Limits
 
 - Per-connection channel limit (default 2047)
@@ -185,6 +204,7 @@ ch.basic_publish(
 - Restart-and-redeploy patterns help bound growth
 
 ---
+
 ## TLS
 
 - Encrypt the broker-client traffic
@@ -194,6 +214,7 @@ ch.basic_publish(
 - Rotate certs; many incidents are stale-cert related
 
 ---
+
 ## Authentication
 
 - Default user: `guest/guest`, only from localhost
@@ -203,6 +224,7 @@ ch.basic_publish(
 - Apply principle of least privilege
 
 ---
+
 ## Common Integration Mistakes
 
 - One connection per request (TCP overhead)

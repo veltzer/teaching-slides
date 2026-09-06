@@ -14,11 +14,13 @@ audience:
   - audiences:devops
 
 ---
+
 # Terraform
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
+
 ## Mitchell Hashimoto
 
 ![bg left](jpg/courses/devops/terraform/mitchell_hashimoto.jpg)
@@ -29,4 +31,5 @@ audience:
 - Advocate for DevOps automation
 
 ---
+
 ![title](svg/courses/devops/terraform/title.svg)

@@ -9,9 +9,11 @@ audience:
   - audiences:architects
 
 ---
+
 # API Gateways
 
 ---
+
 ## What an API Gateway Does
 
 - A single entry point in front of multiple backend services
@@ -20,6 +22,7 @@ audience:
 - Aggregates or transforms responses if needed
 
 ---
+
 ## Why Use One
 
 - Without a gateway, every service implements: TLS, auth, rate limiting, logging
@@ -28,11 +31,13 @@ audience:
 - Operations have one place to look at incoming traffic
 
 ---
+
 ## Gateway Responsibilities Visualised
 
 ![gateway_responsibilities](svg/courses/architecting/api-design-best-practices/10_api_gateways/gateway_responsibilities.svg)
 
 ---
+
 ## Common Gateway Responsibilities
 
 - Request routing (path → service)
@@ -45,6 +50,7 @@ audience:
 - CORS handling
 
 ---
+
 ## Routing
 
 - Match the request path/host to a backend
@@ -53,6 +59,7 @@ audience:
 - Configurable; reloads without restart in good gateways
 
 ---
+
 ## Authentication at the Gateway
 
 - The gateway validates the token
@@ -61,6 +68,7 @@ audience:
 - One implementation, applied to every service
 
 ---
+
 ## Rate Limiting at the Gateway
 
 - Per-user, per-key, per-route limits
@@ -69,11 +77,13 @@ audience:
 - 429 + Retry-After at the gateway is the right pattern
 
 ---
+
 ## Cross-Cutting Concerns Diagram
 
 ![api_gateway](svg/courses/architecting/api-design-best-practices/10_api_gateways/api_gateway.svg)
 
 ---
+
 ## Popular Gateways
 
 - **Kong**: open-source, plugin ecosystem
@@ -84,6 +94,7 @@ audience:
 - **Cloudflare**: edge gateway with global PoPs
 
 ---
+
 ## Gateway vs Load Balancer
 
 - Load balancer: distributes traffic across instances of one service
@@ -91,6 +102,7 @@ audience:
 - Often combined: the gateway has load balancing built in
 
 ---
+
 ## BFF Pattern
 
 - "Backend for Frontend"
@@ -99,6 +111,7 @@ audience:
 - A specialized API in front of a generic one
 
 ---
+
 ## Gateway Patterns
 
 - **Aggregator**: one client request, multiple backend calls, single response
@@ -107,6 +120,7 @@ audience:
 - **Throttler**: stops bursts before they reach the backend
 
 ---
+
 ## Anti-Patterns
 
 - **Smart gateway, dumb services**: business logic creeps into the gateway
@@ -115,6 +129,7 @@ audience:
 - **Gateway as a middleware monolith**: all 50 plugins enabled, slow
 
 ---
+
 ## Operational Considerations
 
 - The gateway is a single point of failure — make it highly available
@@ -123,6 +138,7 @@ audience:
 - Observability: the gateway is the best place to measure overall traffic
 
 ---
+
 ## Internal vs External Gateways
 
 - **External gateway**: faces the internet; high security, rate limits, auth
@@ -130,6 +146,7 @@ audience:
 - Some systems use both: outer gateway → internal mesh → service
 
 ---
+
 ## Service Mesh vs API Gateway
 
 - **Gateway**: north-south traffic (clients to services)
@@ -138,6 +155,7 @@ audience:
 - Most production systems have both kinds of concerns
 
 ---
+
 ## Summary
 
 - A gateway centralizes cross-cutting API concerns

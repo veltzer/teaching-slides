@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Writing Style
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![style_principles](svg/courses/development_methodologies/technical-writing/04_writing_style/style_principles.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Clarity and conciseness
@@ -27,16 +29,19 @@ audience:
 - A few rules that fix most prose
 
 ---
+
 ## Active Voice
 
 ![passive_to_active](svg/courses/development_methodologies/technical-writing/04_writing_style/passive_to_active.svg)
 
 ---
+
 ## Style Pillars
 
 ![style_pillars](svg/courses/development_methodologies/technical-writing/04_writing_style/style_pillars.svg)
 
 ---
+
 ## Clarity Above All
 
 - The reader's first reading is the right reading
@@ -46,6 +51,7 @@ audience:
 - Clarity beats brevity, sometimes
 
 ---
+
 ## Conciseness, Without Cutting Meaning
 
 - Every word should earn its place
@@ -55,6 +61,7 @@ audience:
 - Cut 30% on revision; the prose gets stronger
 
 ---
+
 ## Active Voice
 
 - "The system writes the log" — active
@@ -64,6 +71,7 @@ audience:
 - "Records are kept for 7 years" is fine
 
 ---
+
 ## Why Passive Drains Energy
 
 - "It is recommended that" &#8594; "we recommend"
@@ -73,6 +81,7 @@ audience:
 - Active prose gets read
 
 ---
+
 ## Consistent Terminology
 
 - Pick one term per concept; use it everywhere
@@ -82,6 +91,7 @@ audience:
 - Tools: Vale (style linter) can enforce
 
 ---
+
 ## Sentence Length
 
 - Mix short and medium
@@ -91,6 +101,7 @@ audience:
 - Read aloud; if you run out of breath, split
 
 ---
+
 ## Paragraph Structure
 
 - One paragraph, one idea
@@ -100,6 +111,7 @@ audience:
 - Lists are paragraphs in disguise; use them
 
 ---
+
 ## Avoiding Jargon
 
 - Jargon: terminology specific to a field, opaque to outsiders
@@ -109,6 +121,7 @@ audience:
 - Inappropriate jargon excludes; appropriate jargon includes
 
 ---
+
 ## Avoiding Ambiguity
 
 - "It" is dangerous — what does "it" refer to?
@@ -118,6 +131,7 @@ audience:
 - Edit for ambiguity ruthlessly
 
 ---
+
 ## Concrete Over Abstract
 
 - "Set the timeout to 30 seconds" beats "Configure the timeout appropriately"
@@ -127,6 +141,7 @@ audience:
 - Concrete language is also easier to translate
 
 ---
+
 ## Tone
 
 - Confident but not arrogant
@@ -136,6 +151,7 @@ audience:
 - Read your draft as if a stranger wrote it; would you trust the writer?
 
 ---
+
 ## "We" vs "You" vs Imperative
 
 - "We recommend X" — formal
@@ -145,6 +161,7 @@ audience:
 - For reference: third person ("the function returns...")
 
 ---
+
 ## Easy Edits That Improve Most Prose
 
 - Cut adjectives and adverbs
@@ -154,6 +171,7 @@ audience:
 - Break long sentences
 
 ---
+
 ## Examples
 
 - Bad: "It is generally considered to be a good practice to have unit tests written before the implementation code is finalized."
@@ -163,6 +181,7 @@ audience:
 - Each cuts ~70%; meaning preserved
 
 ---
+
 ## Style Guides
 
 - Google's developer documentation style guide is excellent
@@ -172,6 +191,7 @@ audience:
 - A style guide is a tie-breaker, not a straightjacket
 
 ---
+
 ## Common Style Mistakes
 
 - "Should" everywhere — when do you mean "must"?

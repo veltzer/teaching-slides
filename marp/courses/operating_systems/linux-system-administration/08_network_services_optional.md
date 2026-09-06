@@ -9,6 +9,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Network Services (Optional)
 ## nginx, Apache, HAProxy, and Postfix
 
@@ -19,6 +20,7 @@ audience:
 ![Linux Network Services Architecture](svg/courses/operating_systems/linux-system-administration/08_network_services_optional/web_server_architecture.svg)
 
 ---
+
 ## Web Server: nginx
 
 ```bash
@@ -48,6 +50,7 @@ server {
 ```
 
 ---
+
 ## nginx Configuration Structure
 
 ```tree
@@ -72,6 +75,7 @@ systemctl reload nginx
 ```
 
 ---
+
 ## nginx: Reverse Proxy Configuration
 
 ```nginx
@@ -99,6 +103,7 @@ server {
 ```
 
 ---
+
 ## nginx: SSL and Performance
 
 ```nginx
@@ -127,6 +132,7 @@ systemctl reload nginx
 ```
 
 ---
+
 ## nginx: Security Headers and Rate Limiting
 
 ```nginx
@@ -155,6 +161,7 @@ server {
 ```
 
 ---
+
 ## Web Server: Apache
 
 ```bash
@@ -183,6 +190,7 @@ a2dissite 000-default.conf
 ```
 
 ---
+
 ## Apache: SSL and Reverse Proxy
 
 ```apache
@@ -211,6 +219,7 @@ systemctl restart apache2
 ```
 
 ---
+
 ## Load Balancer: HAProxy
 
 ```bash
@@ -242,6 +251,7 @@ systemctl restart haproxy
 ```
 
 ---
+
 ## HAProxy: SSL Termination and Algorithms
 
 ```config
@@ -269,6 +279,7 @@ cat server.crt server.key > /etc/ssl/haproxy.pem
 ```
 
 ---
+
 ## Email Server: Postfix Basics
 
 ```bash
@@ -300,6 +311,7 @@ postqueue -f    # flush queue
 ```
 
 ---
+
 ## Postfix: Relay and Security
 
 ```config
@@ -330,6 +342,7 @@ chmod 600 /etc/postfix/sasl_passwd*
 ```
 
 ---
+
 ## nginx: Logging and Debugging
 
 ```nginx
@@ -360,6 +373,7 @@ tail -f /var/log/nginx/access.log | awk '{print $9}'
 ```
 
 ---
+
 ## Apache MPM Models
 
 ```bash
@@ -392,6 +406,7 @@ systemctl restart apache2
 ```
 
 ---
+
 ## HAProxy: ACLs and Routing
 
 ```config
@@ -414,6 +429,7 @@ frontend http_front
 ```
 
 ---
+
 ## HAProxy: Health Checks
 
 ```config
@@ -442,6 +458,7 @@ backend db_back
 - `rise` - successes before marking up
 
 ---
+
 ## Let's Encrypt with Web Servers
 
 ```bash
@@ -471,6 +488,7 @@ certbot certonly --standalone -d example.com
 ```
 
 ---
+
 ## nginx: Reverse Proxy for WebSocket
 
 ```nginx
@@ -501,6 +519,7 @@ server {
 ```
 
 ---
+
 ## Load Testing Web Services
 
 ```bash
@@ -530,6 +549,7 @@ watch -n 1 'curl -s localhost/nginx_status'
 ```
 
 ---
+
 ## nginx: Worker Process Tuning
 
 ```nginx
@@ -565,6 +585,7 @@ curl -s http://localhost/nginx_status
 ```
 
 ---
+
 ## Apache: `.htaccess` Configuration
 
 `.htaccess` provides per-directory configuration without restarting Apache:
@@ -599,6 +620,7 @@ htpasswd -c /etc/apache2/.htpasswd admin
 ```
 
 ---
+
 ## HAProxy: Stick Tables
 
 Stick tables track client state for rate limiting and session persistence:
@@ -633,6 +655,7 @@ echo "show table http_front" | \
 ```
 
 ---
+
 ## Postfix: Virtual Domains and Aliases
 
 Serve multiple domains from a single `Postfix` instance:
@@ -667,6 +690,7 @@ systemctl reload postfix
 ```
 
 ---
+
 ## Exercise: Deploy a Reverse Proxy Stack
 
 Build a load-balanced web setup with SSL termination:

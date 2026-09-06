@@ -8,14 +8,17 @@ audience:
   - audiences:data-analysts
 
 ---
+
 # Storytelling with Data
 
 ---
+
 ## Story Structure
 
 ![story_structure](svg/courses/data_science/data-analyst-fundamentals/08_storytelling_with_data/story_structure.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why storytelling matters for analysts
@@ -26,6 +29,7 @@ audience:
 - Templates for common formats
 
 ---
+
 ## Why Storytelling Matters
 
 - Analysis without communication is decoration
@@ -35,6 +39,7 @@ audience:
 - Time spent here pays off more than another tool to learn
 
 ---
+
 ## The Three Audiences
 
 - **Decision-makers**: want the recommendation up front
@@ -44,11 +49,13 @@ audience:
 - A good report has layers — surface to depth
 
 ---
+
 ## Story Arc Visualised
 
 ![story_arc](svg/courses/data_science/data-analyst-fundamentals/08_storytelling_with_data/story_arc.svg)
 
 ---
+
 ## The Structure of a Data Narrative
 
 - **Setup**: what's the situation?
@@ -58,6 +65,7 @@ audience:
 - This is just storytelling, applied to a memo
 
 ---
+
 ## Lead With the Bottom Line
 
 - Decision-makers read the first paragraph and the last
@@ -67,6 +75,7 @@ audience:
 - The Pyramid Principle (Barbara Minto) is the canonical reference
 
 ---
+
 ## Match Tone to Audience
 
 - Executives: short, decisive, confident
@@ -76,6 +85,7 @@ audience:
 - One report rarely fits all audiences
 
 ---
+
 ## Designing for Clarity
 
 - One chart, one message
@@ -85,6 +95,7 @@ audience:
 - Use color to draw the eye, not as decoration
 
 ---
+
 ## The Annotation Layer
 
 - Numbers without context are noise
@@ -94,6 +105,7 @@ audience:
 - Label sparingly; one or two callouts per chart
 
 ---
+
 ## The Scale Question
 
 - Linear y-axis: differences in absolute terms
@@ -103,6 +115,7 @@ audience:
 - Always label the axis clearly
 
 ---
+
 ## Choosing What to Show
 
 - Less is more: every chart is a cost on the reader
@@ -112,6 +125,7 @@ audience:
 - "I didn't have time to write a short report, so I wrote a long one" — Twain
 
 ---
+
 ## Designing Slides
 
 - One slide, one message — same as one chart, one message
@@ -121,6 +135,7 @@ audience:
 - 2-3 slides for executive summaries; deep details in an appendix
 
 ---
+
 ## Designing Reports
 
 - Executive summary at the top: 3-5 bullets
@@ -130,6 +145,7 @@ audience:
 - Searchable, skimmable, navigable
 
 ---
+
 ## Designing Dashboards
 
 - Most-important metric at top-left
@@ -139,6 +155,7 @@ audience:
 - Mobile-friendly if it'll be viewed on phones
 
 ---
+
 ## The "So What" Test
 
 - For every chart and number: ask "so what?"
@@ -148,6 +165,7 @@ audience:
 - Better questions get better answers
 
 ---
+
 ## Common Mistakes
 
 - Recommending nothing — leaving the decision-maker to draw conclusions
@@ -157,6 +175,7 @@ audience:
 - Overconfidence: presenting uncertain results as certain
 
 ---
+
 ## A Template
 
 - **Question**: what we set out to learn
@@ -167,6 +186,7 @@ audience:
 - **Appendix**: charts, data, code
 
 ---
+
 ## Storytelling Resources
 
 - Stephen Few — *Show Me the Numbers* (dashboards)

@@ -12,6 +12,7 @@ audience:
   - audiences:managers
 
 ---
+
 # Observability Architecture
 
 ---

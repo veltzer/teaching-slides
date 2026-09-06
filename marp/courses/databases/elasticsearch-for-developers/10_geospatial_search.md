@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Geospatial Search
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![geo_capabilities](svg/courses/databases/elasticsearch-for-developers/10_geospatial_search/geo_capabilities.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - geo_point and geo_shape
@@ -27,11 +29,13 @@ audience:
 - Distance sort
 
 ---
+
 ## Geospatial Features
 
 ![geo_features](svg/courses/databases/elasticsearch-for-developers/10_geospatial_search/geo_features.svg)
 
 ---
+
 ## geo_point
 
 - Single lat/lon
@@ -39,6 +43,7 @@ audience:
 - Distance queries fast
 
 ---
+
 ## Geo Point Example
 
 ```json
@@ -48,6 +53,7 @@ audience:
 - Or as GeoJSON, geohash, string
 
 ---
+
 ## Distance Query
 
 ```json
@@ -63,6 +69,7 @@ audience:
 - Common: stores near me
 
 ---
+
 ## Bounding Box
 
 ```json
@@ -80,6 +87,7 @@ audience:
 - Faster than distance
 
 ---
+
 ## Polygon
 
 ```json
@@ -97,6 +105,7 @@ audience:
 - Slower than bounding box
 
 ---
+
 ## geo_shape
 
 - Lines, polygons, multi-shapes
@@ -104,6 +113,7 @@ audience:
 - Use for: regions, routes, areas
 
 ---
+
 ## Geo Aggregations
 
 - geohash_grid: bucket by geohash
@@ -111,6 +121,7 @@ audience:
 - Used for heat maps
 
 ---
+
 ## Distance Sort
 
 - Sort by distance from a point
@@ -118,12 +129,14 @@ audience:
 - "Nearest restaurants" with score boost
 
 ---
+
 ## Geo Distance Aggregation
 
 - "How many in each radius"
 - 1km, 5km, 10km buckets
 
 ---
+
 ## Performance
 
 - geo_point much faster than geo_shape
@@ -131,6 +144,7 @@ audience:
 - Pre-filter heavily
 
 ---
+
 ## Geo Decay
 
 - Function score with linear / gauss / exp decay
@@ -138,6 +152,7 @@ audience:
 - Combined with full-text relevance
 
 ---
+
 ## Geo Indexing
 
 - Lat/lon coords from frontend
@@ -145,6 +160,7 @@ audience:
 - Common: MapBox, Google Maps for display
 
 ---
+
 ## Common Geo Mistakes
 
 - geo_shape when geo_point would do

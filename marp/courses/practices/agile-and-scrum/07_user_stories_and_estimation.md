@@ -10,14 +10,17 @@ audience:
   - audiences:team-leads
 
 ---
+
 # User Stories and Estimation
 
 ---
+
 ## INVEST Criteria
 
 ![invest_criteria](svg/courses/practices/agile-and-scrum/07_user_stories_and_estimation/invest_criteria.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - The user story format and why it works
@@ -29,6 +32,7 @@ audience:
 - Splitting epics into stories
 
 ---
+
 ## What a User Story Is
 
 - A short statement of a piece of value, from a user's perspective
@@ -38,6 +42,7 @@ audience:
 - Two developers seeing the same story should ask similar questions
 
 ---
+
 ## A Good Story Looks Like
 
 > As a *registered customer*,
@@ -50,6 +55,7 @@ audience:
 - Vague enough to invite conversation, specific enough to estimate
 
 ---
+
 ## What a Story Is Not
 
 - A spec document
@@ -59,6 +65,7 @@ audience:
 - A mechanism to move work between teams without conversation
 
 ---
+
 ## INVEST
 
 - **I**ndependent: can be developed in any order relative to other stories
@@ -69,6 +76,7 @@ audience:
 - **T**estable: there's a clear way to know it's done
 
 ---
+
 ## Acceptance Criteria
 
 - The conditions that must hold for the story to be considered done
@@ -78,6 +86,7 @@ audience:
 - Frozen once the story is being worked on, unless re-negotiated
 
 ---
+
 ## Acceptance Criteria Example
 
 ```misc
@@ -93,6 +102,7 @@ And I am redirected to a confirmation page
 - Could be lifted into automated acceptance tests
 
 ---
+
 ## Why Estimate at All?
 
 - To plan: how much can we commit to this Sprint?
@@ -102,6 +112,7 @@ And I am redirected to a confirmation page
 - *Not* to commit to a date with management
 
 ---
+
 ## Story Points vs Hours
 
 - Hours: an estimate of how long a *specific person* will take
@@ -111,6 +122,7 @@ And I am redirected to a confirmation page
 - Two teams' story points are not comparable
 
 ---
+
 ## The Fibonacci Sequence
 
 - Common scale: 1, 2, 3, 5, 8, 13, 20, 40, 100
@@ -120,6 +132,7 @@ And I am redirected to a confirmation page
 - Skip "1" if your team always rounds tiny things up
 
 ---
+
 ## Planning Poker
 
 - Each developer picks a card with their estimate
@@ -129,6 +142,7 @@ And I am redirected to a confirmation page
 - The conversation is the point; the number is a side effect
 
 ---
+
 ## Reference Stories
 
 - Pin a few previously-completed stories to known sizes
@@ -138,6 +152,7 @@ And I am redirected to a confirmation page
 - Better than calibrating in the abstract
 
 ---
+
 ## Velocity
 
 - Story points completed per Sprint
@@ -147,6 +162,7 @@ And I am redirected to a confirmation page
 - Velocity *is not a productivity metric*; do not treat it as one
 
 ---
+
 ## Capacity Planning
 
 - Velocity says what we usually finish; capacity adjusts for *this* Sprint
@@ -156,6 +172,7 @@ And I am redirected to a confirmation page
 - Track actuals vs forecast over time — calibration improves
 
 ---
+
 ## Splitting Stories
 
 - Anything bigger than ~13 points should probably split
@@ -165,6 +182,7 @@ And I am redirected to a confirmation page
 - Don't split by *technical layer* (database / backend / frontend) — those aren't independently valuable
 
 ---
+
 ## Common Estimation Mistakes
 
 - Treating estimates as commitments

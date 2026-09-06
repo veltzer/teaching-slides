@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # SOLID Principles
 
 ---
+
 ## What This Chapter Covers
 
 - Where SOLID came from
@@ -20,6 +22,7 @@ audience:
 - Common code smells that signal a violation
 
 ---
+
 ## Where SOLID Came From
 
 - Five principles, each named by an existing OOP pioneer
@@ -29,16 +32,19 @@ audience:
 - Read in order, they reinforce each other
 
 ---
+
 ## SOLID at a Glance
 
 ![solid_overview](svg/courses/principles/object-oriented-programming/08_solid_principles/solid_overview.svg)
 
 ---
+
 ## Dependency Inversion
 
 ![dependency_inversion](svg/courses/principles/object-oriented-programming/08_solid_principles/dependency_inversion.svg)
 
 ---
+
 ## S: Single Responsibility Principle
 
 - A class should have *one reason to change*
@@ -48,6 +54,7 @@ audience:
 - Tells you *when* to split a class
 
 ---
+
 ## SRP Smell
 
 - Methods that have nothing in common with each other
@@ -57,6 +64,7 @@ audience:
 - The class file is over 500 lines
 
 ---
+
 ## O: Open/Closed Principle
 
 - Classes should be *open for extension*, *closed for modification*
@@ -66,6 +74,7 @@ audience:
 - Adding crypto support means a new class, not editing the processor
 
 ---
+
 ## OCP Smell
 
 - Long `if/elif` (or `switch`) chains that grow each release
@@ -75,6 +84,7 @@ audience:
 - The fix: extract the variation behind an interface
 
 ---
+
 ## L: Liskov Substitution Principle
 
 - Subtypes must be substitutable for their base types
@@ -84,6 +94,7 @@ audience:
 - The base class's *behavioural contract* must be honoured
 
 ---
+
 ## LSP Worked Example
 
 ```python
@@ -100,6 +111,7 @@ class Penguin(Bird):
 - Fix: split into `Bird` and `FlyingBird`, or use composition
 
 ---
+
 ## I: Interface Segregation Principle
 
 - Clients should not be forced to depend on methods they do not use
@@ -108,6 +120,7 @@ class Penguin(Bird):
 - Java's `Iterable` is well-segregated; old AWT had nightmare-fat interfaces
 
 ---
+
 ## ISP Worked Example
 
 ```java
@@ -127,6 +140,7 @@ public interface Feedable  { void eat(); }
 - Each interface evolves independently
 
 ---
+
 ## D: Dependency Inversion Principle
 
 - High-level modules shouldn't depend on low-level modules; both should depend on *abstractions*
@@ -136,6 +150,7 @@ public interface Feedable  { void eat(); }
 - Pairs naturally with dependency injection frameworks
 
 ---
+
 ## DIP Worked Example
 
 Before (high-level depends on low-level):
@@ -156,6 +171,7 @@ class OrderService:
 - Easy to test with an in-memory fake
 
 ---
+
 ## How They Reinforce Each Other
 
 - **S**RP gives you small focused classes
@@ -165,6 +181,7 @@ class OrderService:
 - Following one well usually pulls the others along
 
 ---
+
 ## SOLID Is Not Religion
 
 - These are *heuristics*, not laws
@@ -174,6 +191,7 @@ class OrderService:
 - Aim for *understandable* code; SOLID is one tool
 
 ---
+
 ## Common Mistakes
 
 - Splitting a class into 12 microclasses to "follow SRP" — now nothing makes sense

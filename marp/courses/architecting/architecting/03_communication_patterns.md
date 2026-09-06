@@ -10,9 +10,11 @@ audience:
   - audiences:architects
 
 ---
+
 # Communication Patterns
 
 ---
+
 ## Why Communication Patterns Matter
 
 - Microservices must communicate across process and network boundaries
@@ -21,6 +23,7 @@ audience:
 - Architects must select patterns that match each interaction's requirements
 
 ---
+
 ## Scope of This Chapter
 
 - The structural patterns (Client-Server, Broker, P2P, Event Bus, Pub-Sub) are defined in the Architecture Patterns course
@@ -28,6 +31,7 @@ audience:
 - Different angle on the same word — both are worth knowing
 
 ---
+
 ## Synchronous Communication
 
 - The caller sends a request and waits for a response
@@ -36,11 +40,13 @@ audience:
 - Creates temporal coupling between caller and callee
 
 ---
+
 ## Synchronous Communication Diagram
 
 ![synchronous_communication_diagram](svg/courses/architecting/architecting/03_communication_patterns/synchronous_communication_diagram.svg)
 
 ---
+
 ## Asynchronous Communication
 
 - The caller sends a message and does not wait for an immediate response
@@ -49,11 +55,13 @@ audience:
 - Enables better resilience and scalability
 
 ---
+
 ## Asynchronous Communication Diagram
 
 ![asynchronous_communication_diagram](svg/courses/architecting/architecting/03_communication_patterns/asynchronous_communication_diagram.svg)
 
 ---
+
 ## Sync vs Async Comparison
 
 | Aspect | Synchronous | Asynchronous |
@@ -65,11 +73,13 @@ audience:
 | Scalability | Limited by slowest service | Buffer absorbs spikes |
 
 ---
+
 ## Sync vs Async
 
 ![sync_vs_async](svg/courses/architecting/architecting/03_communication_patterns/sync_vs_async.svg)
 
 ---
+
 ## When to Use Synchronous
 
 - User-facing requests that need immediate responses
@@ -78,6 +88,7 @@ audience:
 - Scenarios where failure should be immediately visible
 
 ---
+
 ## When to Use Asynchronous
 
 - Long-running operations that should not block the caller
@@ -86,6 +97,7 @@ audience:
 - Cross-service communication where resilience matters most
 
 ---
+
 ## RESTful API Design
 
 - `REST` stands for `Representational State Transfer`
@@ -94,6 +106,7 @@ audience:
 - Resources are the core abstraction, identified by `URIs`
 
 ---
+
 ## REST Principles
 
 - Client-server separation
@@ -103,6 +116,7 @@ audience:
 - Layered system: intermediaries like proxies and gateways allowed
 
 ---
+
 ## HTTP Methods for REST
 
 | Method | Purpose | Idempotent | Safe |
@@ -114,6 +128,7 @@ audience:
 | `DELETE` | Remove a resource | Yes | No |
 
 ---
+
 ## Resource Naming Best Practices
 
 - Use nouns, not verbs: `/orders` not `/getOrders`
@@ -123,6 +138,7 @@ audience:
 - Keep URIs lowercase and use hyphens for readability
 
 ---
+
 ## REST Response Status Codes
 
 - `2xx` Success: `200 OK`, `201 Created`, `204 No Content`
@@ -132,6 +148,7 @@ audience:
 - Use the most specific code that applies
 
 ---
+
 ## API Versioning Strategies
 
 - URI path versioning: `/api/v1/users`
@@ -140,6 +157,7 @@ audience:
 - Each approach has trade-offs in discoverability and caching
 
 ---
+
 ## REST Pagination
 
 - Offset-based: `?offset=20&limit=10`
@@ -149,6 +167,7 @@ audience:
 - Include pagination metadata in the response body or `Link` headers
 
 ---
+
 ## REST Best Practices Summary
 
 - Use proper `HTTP` methods and status codes
@@ -158,6 +177,7 @@ audience:
 - Document APIs with `OpenAPI` / `Swagger` specifications
 
 ---
+
 ## Introduction to gRPC
 
 - A high-performance, open-source `RPC` framework by Google
@@ -166,6 +186,7 @@ audience:
 - Generates client and server code from `.proto` definitions
 
 ---
+
 ## gRPC vs REST
 
 | Aspect | gRPC | REST |
@@ -177,6 +198,7 @@ audience:
 | Browser support | Requires proxy | Native |
 
 ---
+
 ## Protocol Buffers Definition
 
 ```protobuf
@@ -201,11 +223,13 @@ message OrderResponse {
 ```
 
 ---
+
 ## gRPC Communication Patterns
 
 ![grpc_communication_patterns](svg/courses/architecting/architecting/03_communication_patterns/grpc_communication_patterns.svg)
 
 ---
+
 ## When to Use gRPC
 
 - Internal service-to-service communication
@@ -215,6 +239,7 @@ message OrderResponse {
 - Polyglot environments with multiple programming languages
 
 ---
+
 ## Message Brokers
 
 - Middleware that receives, stores, and delivers messages
@@ -223,11 +248,13 @@ message OrderResponse {
 - Examples: `RabbitMQ`, `Apache Kafka`, `Amazon SQS`, `NATS`
 
 ---
+
 ## Message Broker Architecture
 
 ![message_broker_architecture](svg/courses/architecting/architecting/03_communication_patterns/message_broker_architecture.svg)
 
 ---
+
 ## Point-to-Point Messaging
 
 - A message is delivered to exactly one consumer from a queue
@@ -236,6 +263,7 @@ message OrderResponse {
 - Guarantees each message is processed once
 
 ---
+
 ## Publish-Subscribe Messaging
 
 - A message is delivered to all subscribers of a topic
@@ -244,11 +272,13 @@ message OrderResponse {
 - Subscribers can be added without changing the publisher
 
 ---
+
 ## Pub-Sub Diagram
 
 ![pub_sub_diagram](svg/courses/architecting/architecting/03_communication_patterns/pub_sub_diagram.svg)
 
 ---
+
 ## Kafka vs RabbitMQ
 
 | Aspect | `Apache Kafka` | `RabbitMQ` |
@@ -260,6 +290,7 @@ message OrderResponse {
 | Use case | Event streaming | Task queues |
 
 ---
+
 ## Event-Driven Architecture (EDA)
 
 - A design pattern where the flow is determined by events
@@ -268,6 +299,7 @@ message OrderResponse {
 - Promotes loose coupling and high scalability
 
 ---
+
 ## EDA Core Concepts
 
 - Event: a record of something that happened (immutable fact)
@@ -276,11 +308,13 @@ message OrderResponse {
 - Event Channel: the medium that transports events (broker, stream)
 
 ---
+
 ## Event-Driven Flow
 
 ![event_driven_flow](svg/courses/architecting/architecting/03_communication_patterns/event_driven_flow.svg)
 
 ---
+
 ## Event Types
 
 - Domain Events: represent business-relevant occurrences
@@ -291,6 +325,7 @@ message OrderResponse {
 - Event-Carried State Transfer: carry full state snapshot in the event payload
 
 ---
+
 ## Event Schema Design
 
 ```json
@@ -308,6 +343,7 @@ message OrderResponse {
 ```
 
 ---
+
 ## Guaranteed Delivery Patterns
 
 - At-most-once: message may be lost but never duplicated
@@ -316,6 +352,7 @@ message OrderResponse {
 - Most systems use at-least-once with idempotent consumers
 
 ---
+
 ## Dead Letter Queues
 
 - A special queue for messages that cannot be processed
@@ -324,16 +361,19 @@ message OrderResponse {
 - Critical for operational visibility in async systems
 
 ---
+
 ## Dead Letter Queue Flow
 
 ![dead_letter_queue_flow](svg/courses/architecting/architecting/03_communication_patterns/dead_letter_queue_flow.svg)
 
 ---
+
 ## Choosing a Communication Pattern
 
 ![choosing_a_communication_pattern](svg/courses/architecting/architecting/03_communication_patterns/choosing_a_communication_pattern.svg)
 
 ---
+
 ## Summary
 
 - Synchronous communication is simpler but creates tight coupling

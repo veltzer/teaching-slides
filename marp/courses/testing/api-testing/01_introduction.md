@@ -8,9 +8,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Introduction to API Testing
 
 ---
+
 ## What This Chapter Covers
 
 - What API testing is
@@ -20,6 +22,7 @@ audience:
 - Roles
 
 ---
+
 ## What API Testing Is
 
 - Validating APIs at the integration level
@@ -28,6 +31,7 @@ audience:
 - Automatable
 
 ---
+
 ## Why Test APIs
 
 - APIs are public surface for clients
@@ -36,6 +40,7 @@ audience:
 - Catch contract breakage early
 
 ---
+
 ## Levels of Testing
 
 - Unit: code units
@@ -45,6 +50,7 @@ audience:
 - API tests sit in the middle
 
 ---
+
 ## Pyramid
 
 - Many unit tests
@@ -53,11 +59,13 @@ audience:
 - Inversion is a smell
 
 ---
+
 ## Where API Tests Sit
 
 ![api_testing_pyramid](svg/courses/testing/api-testing/01_introduction/api_testing_pyramid.svg)
 
 ---
+
 ## What to Test
 
 - Happy paths: 200 responses, correct shape
@@ -67,6 +75,7 @@ audience:
 - Rate limits, idempotency
 
 ---
+
 ## Functional vs Non-Functional
 
 - Functional: does it do the right thing
@@ -74,6 +83,7 @@ audience:
 - Both need coverage
 
 ---
+
 ## Manual vs Automated
 
 - Manual: exploration, ad-hoc
@@ -81,6 +91,7 @@ audience:
 - Both have a place; favor automated
 
 ---
+
 ## Tools
 
 - Postman, Insomnia: manual + scripted
@@ -89,6 +100,7 @@ audience:
 - k6, JMeter, Locust: load
 
 ---
+
 ## Roles
 
 - QA: defines and runs tests
@@ -97,6 +109,7 @@ audience:
 - Shared ownership
 
 ---
+
 ## Where Tests Live
 
 - Same repo as code (preferred)
@@ -104,6 +117,7 @@ audience:
 - CI runs on every change
 
 ---
+
 ## Course Plan
 
 - Tools, contract testing
@@ -112,6 +126,7 @@ audience:
 - CI integration
 
 ---
+
 ## Common Introduction Mistakes
 
 - Treating API tests as a UI substitute

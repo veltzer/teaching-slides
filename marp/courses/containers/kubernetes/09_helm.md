@@ -9,9 +9,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Helm
 
 ---
+
 ## What This Chapter Covers
 
 - What Helm is
@@ -22,6 +24,7 @@ audience:
 - Alternatives
 
 ---
+
 ## What Helm Is
 
 - The package manager for K8s
@@ -30,16 +33,19 @@ audience:
 - Standard for installing common tools
 
 ---
+
 ## Helm Concepts
 
 ![helm_concepts](svg/courses/containers/kubernetes/09_helm/helm_concepts.svg)
 
 ---
+
 ## Release Lifecycle
 
 ![release_lifecycle](svg/courses/containers/kubernetes/09_helm/release_lifecycle.svg)
 
 ---
+
 ## Charts
 
 - A chart: a bundle of manifests + config
@@ -48,6 +54,7 @@ audience:
 - Templated with Go templates
 
 ---
+
 ## Chart Structure
 
 ```tree
@@ -61,6 +68,7 @@ mychart/
 ```
 
 ---
+
 ## Values
 
 - Configurable inputs
@@ -68,6 +76,7 @@ mychart/
 - "image: {{ .Values.image.repository }}"
 
 ---
+
 ## Installing
 
 ```bash
@@ -82,6 +91,7 @@ helm install my-postgres bitnami/postgresql -f values.yaml
 ```
 
 ---
+
 ## Upgrading
 
 ```bash
@@ -93,6 +103,7 @@ helm upgrade my-postgres bitnami/postgresql --version 12.5.0
 - Rollback if failed
 
 ---
+
 ## Rollback
 
 ```bash
@@ -103,6 +114,7 @@ helm rollback my-postgres
 - History preserved
 
 ---
+
 ## Templating
 
 ```yaml
@@ -119,6 +131,7 @@ spec:
 - .Release: install metadata
 
 ---
+
 ## Helmfile
 
 - Manage many releases declaratively
@@ -126,6 +139,7 @@ spec:
 - GitOps-friendly
 
 ---
+
 ## Repositories
 
 - Public: artifacthub.io
@@ -133,6 +147,7 @@ spec:
 - OCI registries (since Helm 3.8)
 
 ---
+
 ## When To Use
 
 - Installing third-party software (Postgres, nginx, Redis)
@@ -140,6 +155,7 @@ spec:
 - Multi-environment deploys
 
 ---
+
 ## When Not To
 
 - Simple internal app (kubectl apply might suffice)
@@ -147,6 +163,7 @@ spec:
 - Use Kustomize for overrides without templating
 
 ---
+
 ## Kustomize Alternative
 
 - Built into kubectl
@@ -155,6 +172,7 @@ spec:
 - Simpler for some cases; less powerful
 
 ---
+
 ## Helm vs Kustomize
 
 - Helm: templating, package management
@@ -163,6 +181,7 @@ spec:
 - Or: Helm for everything
 
 ---
+
 ## Common Helm Mistakes
 
 - Hardcoded values that should be configurable

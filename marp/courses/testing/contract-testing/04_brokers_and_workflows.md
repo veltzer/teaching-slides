@@ -8,9 +8,11 @@ audience:
   - audiences:testers
 
 ---
+
 # Brokers and Workflows
 
 ---
+
 ## What This Chapter Covers
 
 - Why a broker
@@ -20,6 +22,7 @@ audience:
 - Webhooks
 
 ---
+
 ## What A Broker Is
 
 - Central store for contracts
@@ -28,6 +31,7 @@ audience:
 - Powers safe deploy
 
 ---
+
 ## Why Use One
 
 - Multiple consumers and providers
@@ -36,11 +40,13 @@ audience:
 - Audit trail
 
 ---
+
 ## Broker Value
 
 ![broker_value](svg/courses/testing/contract-testing/04_brokers_and_workflows/broker_value.svg)
 
 ---
+
 ## Publishing Contracts
 
 - Consumer publishes after generation
@@ -49,6 +55,7 @@ audience:
 - Provider can pull and verify
 
 ---
+
 ## Tags
 
 - Branch tags
@@ -57,6 +64,7 @@ audience:
 - Drive compatibility queries
 
 ---
+
 ## Pending Contracts
 
 - New interaction not yet verified
@@ -65,6 +73,7 @@ audience:
 - Promotes when verified
 
 ---
+
 ## Can-I-Deploy
 
 - Query broker before deploy
@@ -73,11 +82,13 @@ audience:
 - Wired into deploy pipeline
 
 ---
+
 ## Compatibility Gate
 
 ![can_i_deploy](svg/courses/testing/contract-testing/04_brokers_and_workflows/can_i_deploy.svg)
 
 ---
+
 ## Webhooks
 
 - Notify provider on new contract
@@ -86,6 +97,7 @@ audience:
 - Closes the loop
 
 ---
+
 ## Workflow End To End
 
 - Consumer writes test
@@ -95,6 +107,7 @@ audience:
 - Both deploy when compatible
 
 ---
+
 ## Branch Strategies
 
 - Verify on feature branches
@@ -103,6 +116,7 @@ audience:
 - Plan with deploy strategy
 
 ---
+
 ## Multi-Consumer Provider
 
 - One provider, many consumers
@@ -111,6 +125,7 @@ audience:
 - Useful overview
 
 ---
+
 ## Deprecation
 
 - Mark old contracts
@@ -119,6 +134,7 @@ audience:
 - Remove after migration
 
 ---
+
 ## Audit And Reporting
 
 - Who changed what
@@ -127,6 +143,7 @@ audience:
 - Useful for compliance
 
 ---
+
 ## Hosted Vs Self-Hosted
 
 - Hosted brokers reduce ops
@@ -135,6 +152,7 @@ audience:
 - Both common
 
 ---
+
 ## Common Workflow Mistakes
 
 - No broker, manual sync

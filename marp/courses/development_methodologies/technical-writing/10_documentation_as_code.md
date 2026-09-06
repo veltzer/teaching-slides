@@ -8,6 +8,7 @@ audience:
   - audiences:developers
 
 ---
+
 # Documentation as Code
 
 ---
@@ -17,6 +18,7 @@ audience:
 ![docs_as_code_pillars](svg/courses/development_methodologies/technical-writing/10_documentation_as_code/docs_as_code_pillars.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why docs in the code repo
@@ -27,6 +29,7 @@ audience:
 - The full pipeline
 
 ---
+
 ## What "Docs as Code" Means
 
 - Treat documentation like source code
@@ -36,11 +39,13 @@ audience:
 - The modern industry default for technical docs
 
 ---
+
 ## The Pipeline
 
 ![docs_as_code](svg/courses/development_methodologies/technical-writing/10_documentation_as_code/docs_as_code.svg)
 
 ---
+
 ## Why It Wins
 
 - Docs evolve with code (no drift)
@@ -50,6 +55,7 @@ audience:
 - One workflow to learn
 
 ---
+
 ## Docs In The Code Repo
 
 - `docs/` folder alongside `src/`
@@ -59,6 +65,7 @@ audience:
 - Beats wikis that nobody updates
 
 ---
+
 ## Version Control For Docs
 
 - Every change has an author, a date, a reason (commit message)
@@ -68,6 +75,7 @@ audience:
 - Same skills you already have
 
 ---
+
 ## CI for Docs
 
 - Build the doc site on every PR
@@ -77,6 +85,7 @@ audience:
 - Same disciplines as software CI
 
 ---
+
 ## Automated Link Checking
 
 - Broken internal links: caught at build
@@ -86,6 +95,7 @@ audience:
 - One of the cheapest quality wins
 
 ---
+
 ## Documentation Linting
 
 - **Vale**: prose linter; configurable styles
@@ -95,6 +105,7 @@ audience:
 - Run in CI; report inline in PRs
 
 ---
+
 ## Style Enforcement
 
 - Vale supports custom rules (`use "we" not "us"`, `avoid "simply"`)
@@ -104,6 +115,7 @@ audience:
 - Effective for large doc sets
 
 ---
+
 ## Spell Check
 
 - Surprisingly easy to break trust with typos
@@ -113,6 +125,7 @@ audience:
 - Catches what humans miss
 
 ---
+
 ## Code Examples In CI
 
 - Run examples as tests
@@ -122,6 +135,7 @@ audience:
 - Worth the setup time
 
 ---
+
 ## Preview Deploys
 
 - Each PR builds a temporary doc site
@@ -131,6 +145,7 @@ audience:
 - Reviewing docs in raw markdown misses too much
 
 ---
+
 ## Docs Owners
 
 - CODEOWNERS for `docs/` paths
@@ -140,6 +155,7 @@ audience:
 - "Everyone's responsible" = nobody is
 
 ---
+
 ## Doc Reviews
 
 - Same PR review process
@@ -149,6 +165,7 @@ audience:
 - Treats docs like the deliverable they are
 
 ---
+
 ## A Sample Pipeline
 
 - Engineer writes docs in markdown alongside code
@@ -159,6 +176,7 @@ audience:
 - Schedule: monthly link-check, quarterly content review
 
 ---
+
 ## Tooling Stack
 
 - Editor: VS Code with markdown preview
@@ -169,6 +187,7 @@ audience:
 - Total cost: usually free at small scale
 
 ---
+
 ## When Docs-As-Code Hurts
 
 - Marketing teams who don't use git
@@ -178,6 +197,7 @@ audience:
 - Pick the right tool for the right content
 
 ---
+
 ## Common Mistakes
 
 - Docs in a wiki disconnected from the code

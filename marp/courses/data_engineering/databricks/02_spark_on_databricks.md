@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Spark on Databricks
 
 ---
+
 ## What This Chapter Covers
 
 - Spark recap
@@ -19,6 +21,7 @@ audience:
 - UDFs
 
 ---
+
 ## Spark in 60 Seconds
 
 - Distributed compute engine
@@ -27,6 +30,7 @@ audience:
 - Driver coordinates workers
 
 ---
+
 ## DataFrames
 
 - Tabular abstraction
@@ -35,11 +39,13 @@ audience:
 - Same API across languages
 
 ---
+
 ## API Layers
 
 ![dataframe_layers](svg/courses/data_engineering/databricks/02_spark_on_databricks/dataframe_layers.svg)
 
 ---
+
 ## Datasets
 
 - Typed rows, JVM languages
@@ -48,6 +54,7 @@ audience:
 - Use where types matter
 
 ---
+
 ## Spark SQL
 
 - ANSI-style SQL
@@ -56,6 +63,7 @@ audience:
 - Familiar to analysts
 
 ---
+
 ## Reads and Writes
 
 - Read CSV, Parquet, Delta, JSON
@@ -64,6 +72,7 @@ audience:
 - Write modes: append, overwrite, error
 
 ---
+
 ## Partitions
 
 - Unit of parallelism
@@ -72,6 +81,7 @@ audience:
 - Skew is a common problem
 
 ---
+
 ## Joins
 
 - Broadcast for small tables
@@ -80,6 +90,7 @@ audience:
 - Hint when needed
 
 ---
+
 ## Skew
 
 - One key dominates
@@ -88,6 +99,7 @@ audience:
 - Adaptive query execution helps
 
 ---
+
 ## Caching
 
 - Cache DataFrame for reuse
@@ -96,6 +108,7 @@ audience:
 - Release when done
 
 ---
+
 ## UDFs
 
 - Custom logic
@@ -104,6 +117,7 @@ audience:
 - Native SQL faster still
 
 ---
+
 ## Adaptive Query Execution
 
 - Re-plans at runtime
@@ -112,11 +126,13 @@ audience:
 - Often a free win
 
 ---
+
 ## Catalyst Pipeline
 
 ![catalyst_optimizer](svg/courses/data_engineering/databricks/02_spark_on_databricks/catalyst_optimizer.svg)
 
 ---
+
 ## Cost vs Performance
 
 - Bigger clusters not always faster
@@ -125,6 +141,7 @@ audience:
 - Profile before scaling
 
 ---
+
 ## Common Spark Mistakes
 
 - Schema inference in production

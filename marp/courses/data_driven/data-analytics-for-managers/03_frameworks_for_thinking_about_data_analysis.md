@@ -8,14 +8,17 @@ audience:
   - audiences:managers
 
 ---
+
 # Frameworks for Thinking About Data Analysis
 
 ---
+
 ## Four Levels of Analytics
 
 ![four_levels](svg/courses/data_driven/data-analytics-for-managers/03_frameworks_for_thinking_about_data_analysis/four_levels.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Why frameworks help (and how they hurt)
@@ -26,6 +29,7 @@ audience:
 - Choosing and adapting frameworks
 
 ---
+
 ## What a Framework Is
 
 - A *mental model* for organising metrics into a coherent story
@@ -35,6 +39,7 @@ audience:
 - With one: even disagreements happen at the right level
 
 ---
+
 ## Why Frameworks Help
 
 - They force prioritisation: 5 numbers, not 50
@@ -44,6 +49,7 @@ audience:
 - New team members can learn the model quickly
 
 ---
+
 ## How Frameworks Hurt
 
 - A wrong framework hides important things
@@ -53,6 +59,7 @@ audience:
 - Use them as *scaffolding*, not as *gospel*
 
 ---
+
 ## The Four Aspects
 
 - **What** to measure: which metrics matter
@@ -62,6 +69,7 @@ audience:
 - A complete framework answers all four
 
 ---
+
 ## AARRR (Pirate Metrics)
 
 - **A**cquisition — how do users find you?
@@ -72,11 +80,13 @@ audience:
 - A funnel for product growth, in five letters
 
 ---
+
 ## AARRR Visualised
 
 ![aarrr](svg/courses/data_driven/data-analytics-for-managers/03_frameworks_for_thinking_about_data_analysis/aarrr.svg)
 
 ---
+
 ## When AARRR Fits
 
 - Consumer products with self-serve sign-up
@@ -86,6 +96,7 @@ audience:
 - Less appropriate for enterprise sales (long cycles, single accounts)
 
 ---
+
 ## HEART (UI / UX)
 
 - **H**appiness — sentiment, satisfaction
@@ -96,6 +107,7 @@ audience:
 - For UX teams, complements AARRR
 
 ---
+
 ## North Star Metric
 
 - *One* metric that captures whether your product is working
@@ -105,6 +117,7 @@ audience:
 - Hard to pick; harder to commit to
 
 ---
+
 ## Lagging vs Leading
 
 - **Lagging** indicators: what already happened (revenue, churn)
@@ -114,11 +127,13 @@ audience:
 - A good dashboard mixes both
 
 ---
+
 ## Two Indicator Families
 
 ![lagging_vs_leading](svg/courses/data_driven/data-analytics-for-managers/03_frameworks_for_thinking_about_data_analysis/lagging_vs_leading.svg)
 
 ---
+
 ## OKRs and Metrics
 
 - Objectives and Key Results: a goal-setting framework
@@ -128,6 +143,7 @@ audience:
 - The *act of writing* sharpens thinking; the resulting numbers are secondary
 
 ---
+
 ## Choosing a Framework
 
 - Match the *shape* of your business
@@ -138,6 +154,7 @@ audience:
 - Don't borrow another industry's framework whole
 
 ---
+
 ## Adapting Over Time
 
 - The right framework today is wrong in 18 months
@@ -147,6 +164,7 @@ audience:
 - Add metrics that capture new user behaviours
 
 ---
+
 ## Implementing a Framework
 
 - Document each metric: definition, source, owner, threshold
@@ -156,6 +174,7 @@ audience:
 - Without rituals, even the best framework dies
 
 ---
+
 ## Common Mistakes
 
 - Adopting a framework without adapting it

@@ -7,9 +7,11 @@ audience:
   - audiences:devops
 
 ---
+
 # Instrumentation
 
 ---
+
 ## What This Chapter Covers
 
 - Auto vs manual
@@ -19,11 +21,13 @@ audience:
 - Best practices
 
 ---
+
 ## Three Ways to Instrument
 
 ![instrumentation_kinds](svg/courses/observability_and_monitoring/opentelemetry/03_instrumentation/instrumentation_kinds.svg)
 
 ---
+
 ## Auto-Instrumentation
 
 - Agent or library wraps frameworks
@@ -32,11 +36,13 @@ audience:
 - Fast onboarding
 
 ---
+
 ## Three Ways Side By Side
 
 ![instrumentation_three_ways](svg/courses/observability_and_monitoring/opentelemetry/03_instrumentation/three_ways.svg)
 
 ---
+
 ## Manual Instrumentation
 
 - Explicit span creation
@@ -44,6 +50,7 @@ audience:
 - Combines with auto
 
 ---
+
 ## Per-Language SDKs
 
 - Go, Python, Java, .NET, Node, Ruby
@@ -51,6 +58,7 @@ audience:
 - Maturity varies
 
 ---
+
 ## Java Auto-Agent
 
 - Attach JAR at JVM start
@@ -59,6 +67,7 @@ audience:
 - Most mature
 
 ---
+
 ## Sample Manual Span (Go)
 
 ```go
@@ -71,6 +80,7 @@ span.SetAttributes(attribute.String("order.id", id))
 - Pass ctx; child spans link automatically
 
 ---
+
 ## Sample Manual Span (Python)
 
 ```python
@@ -83,6 +93,7 @@ with tracer.start_as_current_span("process-order") as span:
 ```
 
 ---
+
 ## Naming Spans
 
 - Verb + noun: "process-order", "fetch-user"
@@ -90,6 +101,7 @@ with tracer.start_as_current_span("process-order") as span:
 - Aggregate well in backends
 
 ---
+
 ## Semantic Conventions
 
 - Standard attribute names
@@ -97,6 +109,7 @@ with tracer.start_as_current_span("process-order") as span:
 - Consistent across services and vendors
 
 ---
+
 ## Errors
 
 - Mark span status ERROR
@@ -104,6 +117,7 @@ with tracer.start_as_current_span("process-order") as span:
 - Backends highlight automatically
 
 ---
+
 ## Span Granularity
 
 - Too fine: noisy, expensive
@@ -111,6 +125,7 @@ with tracer.start_as_current_span("process-order") as span:
 - Aim: one per logical operation
 
 ---
+
 ## Cross-Cutting Concerns
 
 - Add common attributes globally
@@ -118,6 +133,7 @@ with tracer.start_as_current_span("process-order") as span:
 - Resource attributes apply to all telemetry
 
 ---
+
 ## Resource
 
 - Identifies the producer
@@ -125,6 +141,7 @@ with tracer.start_as_current_span("process-order") as span:
 - Set once at SDK init
 
 ---
+
 ## Library Instrumentation
 
 - Many libraries publish OTel hooks
@@ -132,6 +149,7 @@ with tracer.start_as_current_span("process-order") as span:
 - Integrations registry: open-telemetry/instrumentation-*
 
 ---
+
 ## Common Instrumentation Mistakes
 
 - Skipping auto-instrumentation; reinventing

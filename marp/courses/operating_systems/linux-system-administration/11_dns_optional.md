@@ -9,6 +9,7 @@ audience:
   - audiences:devops
 
 ---
+
 # DNS Server Administration (Optional)
 ## Concepts, BIND, Zone Files, and DNSSEC
 
@@ -26,6 +27,7 @@ audience:
 - Query flow: client -> resolver -> root -> TLD -> authoritative
 
 ---
+
 ## DNS Resolution Process
 
 1. Client checks local cache and `/etc/hosts`
@@ -46,6 +48,7 @@ dig example.com +stats
 ```
 
 ---
+
 ## DNS Record Types
 
 | Type | Purpose | Example |
@@ -61,6 +64,7 @@ dig example.com +stats
 | SRV | Service location | `_sip._tcp SRV ...` |
 
 ---
+
 ## DNS Query Tools
 
 ```bash
@@ -83,6 +87,7 @@ host 93.184.216.34          # reverse lookup
 ```
 
 ---
+
 ## Setting Up BIND
 
 ```bash
@@ -110,6 +115,7 @@ options {
 ```
 
 ---
+
 ## BIND Security Options
 
 ```config
@@ -136,6 +142,7 @@ options {
 ```
 
 ---
+
 ## Setting Up dnsmasq
 
 ```bash
@@ -161,6 +168,7 @@ address=/app.example.com/192.168.1.50
 Lightweight alternative to `BIND` for small networks.
 
 ---
+
 ## Zone Files
 
 ```config
@@ -184,6 +192,7 @@ mail    IN  A       93.184.216.20
 ```
 
 ---
+
 ## Zone File Details
 
 ```config
@@ -209,6 +218,7 @@ sub     IN  NS      ns1.sub.example.com.
 ```
 
 ---
+
 ## Zone Configuration and Transfers
 
 ```config
@@ -237,6 +247,7 @@ named-checkconf
 ```
 
 ---
+
 ## Reverse Lookup Zones
 
 ```config
@@ -265,6 +276,7 @@ dig @localhost -x 192.168.1.34
 ```
 
 ---
+
 ## DNS Troubleshooting
 
 ```bash
@@ -288,6 +300,7 @@ dig @your-server . ANY +edns=0 +bufsize=4096
 ```
 
 ---
+
 ## DNS Security (DNSSEC Basics)
 
 ```bash
@@ -311,6 +324,7 @@ delv example.com
 - Authenticated denial of existence
 
 ---
+
 ## DNSSEC Validation
 
 ```bash
@@ -333,6 +347,7 @@ delv @127.0.0.1 example.com
 ```
 
 ---
+
 ## DNS Caching with `unbound`
 
 ```bash
@@ -370,6 +385,7 @@ unbound-control dump_cache > cache-backup.txt
 ```
 
 ---
+
 ## Split-Horizon DNS
 
 ```config
@@ -402,6 +418,7 @@ Use cases:
 - Different `MX` records per network
 
 ---
+
 ## DNS-Based Load Balancing
 
 ```config
@@ -432,6 +449,7 @@ Limitations of DNS load balancing:
 For production, combine with `HAProxy` or cloud load balancers.
 
 ---
+
 ## DNS Monitoring and Alerting
 
 ```bash
@@ -464,6 +482,7 @@ fi
 ```
 
 ---
+
 ## Advanced `dig` Usage
 
 ```bash
@@ -498,6 +517,7 @@ dig +tcp example.com AXFR
 ```
 
 ---
+
 ## DNS over HTTPS and DNS over TLS
 
 Encrypt DNS queries to prevent eavesdropping and tampering:
@@ -536,6 +556,7 @@ tcpdump -i eth0 port 853  # DoT traffic visible here
 ```
 
 ---
+
 ## BIND Logging Configuration
 
 Fine-grained logging helps with debugging and security monitoring:
@@ -578,6 +599,7 @@ rndc querylog off
 ```
 
 ---
+
 ## DNS Migration Strategies
 
 Migrating DNS providers or servers with minimal downtime:
@@ -612,6 +634,7 @@ Key pitfalls:
 - Missing `DNSSEC` DS record updates at registrar
 
 ---
+
 ## Exercise: Build a Caching DNS Resolver
 
 Set up a local caching DNS resolver with logging and forwarding:

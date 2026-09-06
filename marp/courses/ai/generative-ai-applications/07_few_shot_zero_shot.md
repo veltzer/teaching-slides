@@ -11,6 +11,7 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Few-Shot and Zero-Shot Learning
 
 ---
@@ -156,6 +157,7 @@ result = few_shot_classify("Dashboard metrics are stale", examples,
 ![choosing_examples_quality_matters](svg/courses/ai/generative-ai-applications/07_few_shot_zero_shot/choosing_examples_quality_matters.svg)
 
 ---
+
 ## Choosing Examples — Quality Matters: Example
 
 ```python

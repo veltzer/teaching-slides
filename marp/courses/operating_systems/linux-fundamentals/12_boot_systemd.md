@@ -10,6 +10,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Linux Boot System
 ## Understanding systemd and Boot Process
 
@@ -90,6 +91,7 @@ Common unit types:
 ```
 
 ---
+
 ## Basic systemctl Commands
 
 ```bash
@@ -131,6 +133,7 @@ journalctl -u service
 ```
 
 ---
+
 ## Writing systemd Service Files
 
 Location: `/etc/systemd/system/myservice.service`
@@ -177,6 +180,7 @@ WantedBy=
 ```
 
 ---
+
 ## Dependency Management
 
 ```bash
@@ -192,6 +196,7 @@ systemctl show -p "Wants" nginx.service
 ```
 
 ---
+
 ## rc.local Compatibility
 
 For legacy support:
@@ -216,6 +221,7 @@ WantedBy=multi-user.target
 ```
 
 ---
+
 ## Writing Custom init.d Scripts
 
 ```bash
@@ -292,6 +298,7 @@ systemctl status
 ```
 
 ---
+
 ## Best Practices
 
 1. Service Management:

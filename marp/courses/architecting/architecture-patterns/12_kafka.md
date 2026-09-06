@@ -10,10 +10,12 @@ audience:
   - audiences:architects
 
 ---
+
 # Message Queue Systems
 ## Kafka vs Traditional Queue Systems
 
 ---
+
 ## What This Chapter Compares
 
 - Three messaging systems: Kafka, SQS, RabbitMQ
@@ -22,6 +24,7 @@ audience:
 - Kafka gets the deepest treatment because its model (durable log) differs most from classic queues
 
 ---
+
 ## Traditional Messaging vs Streaming
 
 - Traditional queues: messages are consumed, acknowledged, then deleted
@@ -30,11 +33,13 @@ audience:
 - Choosing one is choosing how messages relate to time
 
 ---
+
 ## Traditional vs Streaming Diagram
 
 ![traditional_kafka_vs_streaming](svg/courses/architecting/architecture-patterns/12_kafka/traditional_kafka_vs_streaming.svg)
 
 ---
+
 ## Traditional Message Processing
 
 - Messages are **consumed and committed**
@@ -43,11 +48,13 @@ audience:
 - Focus on **durability** and **reliability**
 
 ---
+
 ## Kafka Streams
 
 ![kafka_streams](svg/courses/architecting/architecture-patterns/12_kafka/kafka_streams.svg)
 
 ---
+
 ## Kafka Streams Features
 
 - **Real-time** processing
@@ -57,6 +64,7 @@ audience:
 - **Fault-tolerant** processing
 
 ---
+
 ## Message Queue Comparison
 
 | Feature | Kafka | SQS | RabbitMQ | ActiveMQ |
@@ -68,11 +76,13 @@ audience:
 | Retention | Configurable | 14 days max | Until consumed | Until consumed |
 
 ---
+
 ## SQS Deep Dive
 
 ![sqs_deep_dive](svg/courses/architecting/architecture-patterns/12_kafka/sqs_deep_dive.svg)
 
 ---
+
 ## SQS Key Features
 
 - **Standard** vs **FIFO** queues
@@ -100,11 +110,13 @@ audience:
 - Temporary message storage
 
 ---
+
 ## RabbitMQ Architecture
 
 ![rabbitmq_architecture](svg/courses/architecting/architecture-patterns/12_kafka/rabbitmq_architecture.svg)
 
 ---
+
 ## RabbitMQ Key Features
 
 - **Exchange types**: Direct, Fanout, Topic, Headers
@@ -142,11 +154,13 @@ audience:
 - Complex topologies
 
 ---
+
 ## Kafka Deep Dive: Topics & Partitions
 
 ![kafka_deep_dive_topics_partitions](svg/courses/architecting/architecture-patterns/12_kafka/kafka_deep_dive_topics_partitions.svg)
 
 ---
+
 ## Kafka Partition Details
 
 - Each partition is an **ordered log**
@@ -155,11 +169,13 @@ audience:
 - **Compaction** for key-based retention
 
 ---
+
 ## Advanced Kafka: Consumer Groups
 
 ![advanced_kafka_consumer_groups](svg/courses/architecting/architecture-patterns/12_kafka/advanced_kafka_consumer_groups.svg)
 
 ---
+
 ## Consumer Group Features
 
 - **Automatic partition assignment**
@@ -179,11 +195,13 @@ audience:
 | ActiveMQ | Yes | Yes | Yes (with XA) |
 
 ---
+
 ## Kafka Scaling Patterns
 
 ![kafka](svg/courses/architecting/architecture-patterns/12_kafka/kafka.svg)
 
 ---
+
 ## Kafka Scaling Details
 
 - **Horizontal scaling** via partitions
@@ -192,11 +210,13 @@ audience:
 - **Consumer group** scaling
 
 ---
+
 ## SQS Scaling Patterns
 
 ![sqs_scaling_patterns](svg/courses/architecting/architecture-patterns/12_kafka/sqs_scaling_patterns.svg)
 
 ---
+
 ## SQS Scaling Approaches
 
 - **Queue-per-microservice**
@@ -215,6 +235,7 @@ audience:
 - Set **acks** based on durability needs
 
 ---
+
 ## Performance Optimization: Topics
 
 - Choose proper **partition count**
@@ -222,16 +243,19 @@ audience:
     - Typically 1 partition per broker for start
 
 ---
+
 ## Topic Optimization Diagram
 
 ![performance_optimization_topics](svg/courses/architecting/architecture-patterns/12_kafka/performance_optimization_topics.svg)
 
 ---
+
 ## Advanced Kafka: Replication
 
 ![advanced_kafka_replication](svg/courses/architecting/architecture-patterns/12_kafka/advanced_kafka_replication.svg)
 
 ---
+
 ## Kafka Replication Details
 
 - **Leader** handles all reads/writes
@@ -312,11 +336,13 @@ Key Metrics to Watch
 - Need protocol variety
 
 ---
+
 ## Integration Patterns
 
 ![integration_patterns](svg/courses/architecting/architecture-patterns/12_kafka/integration_patterns.svg)
 
 ---
+
 ## Integration Approaches
 
 - **Hybrid** approaches

@@ -10,6 +10,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Git Hooks
 
 ---
@@ -48,6 +49,7 @@ Git hooks are scripts that run automatically at specific points in Git operation
 - Security checks
 
 ---
+
 ## Git Hook Types Overview: Overview
 
 Two main categories of hooks:

@@ -10,6 +10,7 @@ audience:
   - audiences:developers
 
 ---
+
 # QEMU Block Devices and File Systems for Kernel Developers
 
 ---
@@ -39,6 +40,7 @@ Importance of Block Devices in Kernel Development
 - I/O scheduler optimization
 
 ---
+
 QEMU Block Device Models
 
 ---
@@ -110,6 +112,7 @@ Configuring Block Devices in QEMU
 - Best practices for kernel testing scenarios
 
 ---
+
 QEMU Block Layer Architecture
 
 ---

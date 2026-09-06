@@ -7,9 +7,11 @@ audience:
   - audiences:data-engineers
 
 ---
+
 # Tables and Storage
 
 ---
+
 ## What This Chapter Covers
 
 - Table types
@@ -19,6 +21,7 @@ audience:
 - Cloning
 
 ---
+
 ## Permanent Tables
 
 - Default table type
@@ -27,11 +30,13 @@ audience:
 - Cost includes retention
 
 ---
+
 ## Table Kinds
 
 ![table_kinds](svg/courses/data_engineering/snowflake/02_tables_and_storage/table_kinds.svg)
 
 ---
+
 ## Transient Tables
 
 - No fail-safe
@@ -40,6 +45,7 @@ audience:
 - For staging data
 
 ---
+
 ## Temporary Tables
 
 - Session-scoped
@@ -48,6 +54,7 @@ audience:
 - Handy for scratch work
 
 ---
+
 ## External Tables
 
 - Point at object storage
@@ -56,6 +63,7 @@ audience:
 - Useful for raw zone
 
 ---
+
 ## Micro-Partitions
 
 - Small immutable column chunks
@@ -64,6 +72,7 @@ audience:
 - Foundation of pruning
 
 ---
+
 ## Pruning
 
 - Skip partitions that cannot match
@@ -72,11 +81,13 @@ audience:
 - Watch the pruning metric
 
 ---
+
 ## Pruning Visualized
 
 ![micro_partitions](svg/courses/data_engineering/snowflake/02_tables_and_storage/micro_partitions.svg)
 
 ---
+
 ## Clustering
 
 - Co-locate related rows
@@ -85,6 +96,7 @@ audience:
 - Costs re-clustering credits
 
 ---
+
 ## Time Travel
 
 - Query past versions
@@ -93,6 +105,7 @@ audience:
 - Stops costing once expired
 
 ---
+
 ## Fail-Safe
 
 - 7 days after time travel ends
@@ -101,6 +114,7 @@ audience:
 - Insurance against deletion
 
 ---
+
 ## Cloning
 
 - Zero-copy clones
@@ -109,6 +123,7 @@ audience:
 - Common for testing on real data
 
 ---
+
 ## Streams
 
 - Track changes to a table
@@ -117,6 +132,7 @@ audience:
 - Pairs with tasks
 
 ---
+
 ## Tasks
 
 - Scheduled SQL
@@ -125,6 +141,7 @@ audience:
 - Cheap orchestration
 
 ---
+
 ## Common Storage Mistakes
 
 - Permanent tables for staging

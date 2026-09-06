@@ -13,6 +13,7 @@ audience:
   - audiences:devops
 
 ---
+
 # Security and Terraform
 
 ---
@@ -359,11 +360,13 @@ opa eval -i plan.json -d policy/ "data.terraform.deny"
 ```
 
 ---
+
 ## Securing the CI/CD Pipeline
 
 ![securing_the_ci_cd_pipeline](svg/courses/devops/terraform/09_security/securing_the_ci_cd_pipeline.svg)
 
 ---
+
 ## Securing the CI/CD Pipeline: Details
 
 - Store credentials in CI/CD secret store

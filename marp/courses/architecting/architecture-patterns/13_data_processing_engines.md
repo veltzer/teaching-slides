@@ -10,10 +10,12 @@ audience:
   - audiences:architects
 
 ---
+
 # Modern Data Processing Engines
 ## A Comparison
 
 ---
+
 ## Table of Contents
 
 1. Overview and Classification
@@ -26,11 +28,13 @@ audience:
 1. Decision Framework
 
 ---
+
 ## Processing Engines Comparison
 
 ![processing_engines_comparison](svg/courses/architecting/architecture-patterns/13_data_processing_engines/processing_engines_comparison.svg)
 
 ---
+
 ## Processing Engines Overview
 Current Landscape of Major Players:
 - Apache Spark
@@ -43,6 +47,7 @@ Current Landscape of Major Players:
 - Splunk
 
 ---
+
 ## Quick Classification
 
 ### Batch Processing
@@ -64,6 +69,7 @@ Current Landscape of Major Players:
 - Druid (Time Series)
 
 ---
+
 ## Core Characteristics Comparison
 
 | Engine | Processing Type | Best For | Language | Latency |
@@ -75,6 +81,7 @@ Current Landscape of Major Players:
 | Splunk | Log Analytics | Security/IT | SPL | Sub-second |
 
 ---
+
 ## Apache Spark
 
 Core Strengths
@@ -91,6 +98,7 @@ Primary Use Cases
 1. Graph processing
 
 ---
+
 ## Trino (PrestoSQL)
 
 Core Strengths
@@ -170,6 +178,7 @@ Primary Use Cases
 1. Compliance
 
 ---
+
 ## Performance Metrics
 
 | Engine | Query Speed | Scalability | Resource Usage |
@@ -181,6 +190,7 @@ Primary Use Cases
 | Splunk | High | Good | High |
 
 ---
+
 ## Architecture Patterns
 
 ### Lambda Architecture
@@ -194,6 +204,7 @@ Primary Use Cases
 - Query: Trino
 
 ---
+
 ## Cloud Integration Matrix
 
 | Engine | AWS | Azure | GCP |
@@ -205,6 +216,7 @@ Primary Use Cases
 | Splunk | Native | Native | Native |
 
 ---
+
 ## Development Experience
 
 | Engine | IDEs | Languages | Testing |
@@ -215,6 +227,7 @@ Primary Use Cases
 | Splunk | Web UI | SPL | Searches |
 
 ---
+
 ## Security Features
 
 | Feature | Authentication | Authorization | Encryption |
@@ -225,6 +238,7 @@ Primary Use Cases
 | Splunk | Multiple | RBAC | Advanced |
 
 ---
+
 ## Cost Considerations
 
 ### Direct Costs
@@ -240,6 +254,7 @@ Primary Use Cases
 - Support
 
 ---
+
 ## Industry-Specific Use Cases
 
 ### Financial Services
@@ -274,6 +289,7 @@ Primary Use Cases
 1. Integration requirements
 
 ---
+
 ## Key Questions to Ask
 
 1. What's your primary use case?

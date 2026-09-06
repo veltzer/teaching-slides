@@ -7,9 +7,11 @@ audience:
   - audiences:developers
 
 ---
+
 # Change Streams and Real-Time Data
 
 ---
+
 ## What This Chapter Covers
 
 - What change streams are
@@ -20,6 +22,7 @@ audience:
 - Comparison with polling
 
 ---
+
 ## What Change Streams Are
 
 - Subscribe to data changes
@@ -29,11 +32,13 @@ audience:
 - Backed by oplog
 
 ---
+
 ## Change Streams Overview
 
 ![change_streams](svg/courses/databases/mongodb-for-developers/10_change_streams_and_real_time_data/change_streams.svg)
 
 ---
+
 ## Subscribing
 
 ```python
@@ -47,6 +52,7 @@ with db.users.watch() as stream:
 - Run in background thread / async
 
 ---
+
 ## Event Shape
 
 ```json
@@ -63,6 +69,7 @@ with db.users.watch() as stream:
 - fullDocument on insert, optional otherwise
 
 ---
+
 ## Filtering
 
 ```python
@@ -77,6 +84,7 @@ db.users.watch(pipeline)
 - Save bandwidth
 
 ---
+
 ## Resume Tokens
 
 - Each event has a resume token
@@ -85,6 +93,7 @@ db.users.watch(pipeline)
 - Build durable consumers
 
 ---
+
 ## Use Cases
 
 - Real-time dashboards
@@ -94,6 +103,7 @@ db.users.watch(pipeline)
 - Webhooks to external systems
 
 ---
+
 ## Polling vs Change Streams
 
 - Polling: every N seconds, query for changes
@@ -102,6 +112,7 @@ db.users.watch(pipeline)
 - Polling: simpler, works on standalone
 
 ---
+
 ## Per-Collection vs Per-Database
 
 - `db.users.watch()`: one collection
@@ -110,6 +121,7 @@ db.users.watch(pipeline)
 - Pick scope appropriately
 
 ---
+
 ## Errors and Retries
 
 - Server timeouts; network blips
@@ -118,6 +130,7 @@ db.users.watch(pipeline)
 - Long-running consumers: build resilient
 
 ---
+
 ## Pre / Post Images
 
 - Update events: by default, only the change
@@ -126,6 +139,7 @@ db.users.watch(pipeline)
 - Costs more space in oplog
 
 ---
+
 ## Limits
 
 - Replica set required (not standalone)
@@ -133,6 +147,7 @@ db.users.watch(pipeline)
 - For long disconnects: re-bootstrap data
 
 ---
+
 ## Performance
 
 - Each watcher: a connection + cursor
@@ -141,6 +156,7 @@ db.users.watch(pipeline)
 - Scale: many watchers vs centralised consumer
 
 ---
+
 ## Real-World Pattern
 
 - One service consumes change stream
@@ -150,6 +166,7 @@ db.users.watch(pipeline)
 - Common in microservices
 
 ---
+
 ## Common Change Stream Mistakes
 
 - Watching without filtering (too many events)

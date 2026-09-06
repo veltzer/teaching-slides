@@ -8,14 +8,17 @@ audience:
   - audiences:architects
 
 ---
+
 # Comparing Clean and Hexagonal with Other Patterns
 
 ---
+
 ## Related Patterns
 
 ![related_patterns](svg/courses/architecting/clean-and-hexagonal-architecture/08_comparing_clean_and_hexagonal_with_other_patterns/related_patterns.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - Clean vs Hexagonal
@@ -26,6 +29,7 @@ audience:
 - When to use which
 
 ---
+
 ## Clean vs Hexagonal
 
 - Both: domain at the centre, dependencies inward
@@ -35,11 +39,13 @@ audience:
 - Pick whichever your team prefers
 
 ---
+
 ## Patterns Side by Side
 
 ![pattern_comparison](svg/courses/architecting/clean-and-hexagonal-architecture/08_comparing_clean_and_hexagonal_with_other_patterns/pattern_comparison.svg)
 
 ---
+
 ## Onion Architecture
 
 - Same idea: layers, dependencies inward
@@ -49,6 +55,7 @@ audience:
 - Naming convergence: pick one in the team
 
 ---
+
 ## DDD (Domain-Driven Design)
 
 - Eric Evans (2003)
@@ -58,6 +65,7 @@ audience:
 - Complementary; not alternative
 
 ---
+
 ## DDD + Clean
 
 - DDD models the domain
@@ -66,6 +74,7 @@ audience:
 - Common pairing in serious enterprise codebases
 
 ---
+
 ## Layered (3-Tier)
 
 - Presentation, Business, Data
@@ -74,6 +83,7 @@ audience:
 - Clean fixes: Data depends on Business (interfaces)
 
 ---
+
 ## MVC
 
 - Model, View, Controller
@@ -82,6 +92,7 @@ audience:
 - Clean: replace MVC's model with full layered architecture
 
 ---
+
 ## MVP / MVVM
 
 - UI patterns, related to MVC
@@ -90,6 +101,7 @@ audience:
 - Use within the UI / adapter layer
 
 ---
+
 ## CQRS
 
 - Command Query Responsibility Segregation
@@ -99,6 +111,7 @@ audience:
 - Pairs naturally; not required
 
 ---
+
 ## Event Sourcing
 
 - Storage of events; current state derived
@@ -107,6 +120,7 @@ audience:
 - Events live in the domain layer
 
 ---
+
 ## Microservices
 
 - Distribution choice; orthogonal to internal architecture
@@ -115,6 +129,7 @@ audience:
 - Don't conflate these decisions
 
 ---
+
 ## When To Use Each
 
 - Clean / Hexagonal: long-lived domains, complex logic
@@ -124,6 +139,7 @@ audience:
 - Serverless / functions: per-function structure usually flat
 
 ---
+
 ## Hybrid
 
 - Clean Architecture + DDD: common
@@ -132,6 +148,7 @@ audience:
 - The patterns complement; don't compete
 
 ---
+
 ## Picking By Team
 
 - Match the pattern to the team's discipline
@@ -140,6 +157,7 @@ audience:
 - Pick the simplest that meets the longevity goal
 
 ---
+
 ## Common Pattern Mistakes
 
 - Pattern as religion
@@ -149,6 +167,7 @@ audience:
 - "We chose pattern X" without team buy-in
 
 ---
+
 ## Course Wrap-Up
 
 - Domain at the centre is the universal idea

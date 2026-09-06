@@ -11,6 +11,7 @@ audience:
   - audiences:sysadmins
 
 ---
+
 # Build Optimization and CI/CD
 
 ---
@@ -46,6 +47,7 @@ Memory recommendations:
 - Swap: 2x RAM size
 
 ---
+
 ## Storage Optimization: Overview
 SSD vs HDD performance:
 

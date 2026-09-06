@@ -7,14 +7,17 @@ audience:
   - audiences:data-scientists
 
 ---
+
 # Practical Data Science
 
 ---
+
 ## ML Workflow
 
 ![ml_workflow](svg/courses/machine_learning/machine-learning/02_practical_data_science/ml_workflow.svg)
 
 ---
+
 ## What This Chapter Covers
 
 - numpy
@@ -24,6 +27,7 @@ audience:
 - Cleaning, splits, pipelines
 
 ---
+
 ## numpy
 
 - Array library for Python
@@ -32,6 +36,7 @@ audience:
 - C under the hood
 
 ---
+
 ## numpy Arrays
 
 ```python
@@ -43,6 +48,7 @@ d = np.linspace(0, 1, 5)
 ```
 
 ---
+
 ## numpy Operations
 
 ```python
@@ -54,6 +60,7 @@ a.reshape(2, 2)
 ```
 
 ---
+
 ## Broadcasting
 
 ```python
@@ -66,6 +73,7 @@ m + v       # row-wise add
 - Avoids loops
 
 ---
+
 ## numpy Indexing
 
 ```python
@@ -76,6 +84,7 @@ a[[0, 2]]   # fancy
 ```
 
 ---
+
 ## Random Numbers
 
 ```python
@@ -87,6 +96,7 @@ rng.choice([0, 1], size=10)
 - Seed for reproducibility
 
 ---
+
 ## pandas
 
 - Tabular data, like a spreadsheet
@@ -95,6 +105,7 @@ rng.choice([0, 1], size=10)
 - Foundation of cleaning work
 
 ---
+
 ## DataFrame Basics
 
 ```python
@@ -106,6 +117,7 @@ df.describe()
 ```
 
 ---
+
 ## Selecting Columns
 
 ```python
@@ -116,6 +128,7 @@ df.iloc[:, 0:3]
 ```
 
 ---
+
 ## Filtering Rows
 
 ```python
@@ -125,6 +138,7 @@ df.query("age > 30 and dept == 'A'")
 ```
 
 ---
+
 ## Missing Data
 
 ```python
@@ -135,6 +149,7 @@ df["col"].fillna(df["col"].mean())
 ```
 
 ---
+
 ## GroupBy
 
 ```python
@@ -143,6 +158,7 @@ df.groupby(["dept", "level"]).agg({"salary": "mean", "id": "count"})
 ```
 
 ---
+
 ## Joins
 
 ```python
@@ -152,6 +168,7 @@ pd.concat([df1, df2], axis=0)
 ```
 
 ---
+
 ## Reshaping
 
 ```python
@@ -160,6 +177,7 @@ df.melt(id_vars="id", value_vars=["a", "b"])
 ```
 
 ---
+
 ## Time Series
 
 ```python
@@ -169,6 +187,7 @@ df["lag1"] = df["x"].shift(1)
 ```
 
 ---
+
 ## Apply
 
 ```python
@@ -179,6 +198,7 @@ df.apply(np.mean, axis=0)
 - Slow vs vectorised; prefer built-ins
 
 ---
+
 ## matplotlib
 
 - The plotting workhorse
@@ -187,6 +207,7 @@ df.apply(np.mean, axis=0)
 - Foundation for seaborn, others
 
 ---
+
 ## Basic Plot
 
 ```python
@@ -198,6 +219,7 @@ plt.show()
 ```
 
 ---
+
 ## Histogram
 
 ```python
@@ -207,6 +229,7 @@ plt.show()
 ```
 
 ---
+
 ## Scatter
 
 ```python
@@ -215,6 +238,7 @@ plt.show()
 ```
 
 ---
+
 ## Subplots
 
 ```python
@@ -225,6 +249,7 @@ plt.tight_layout()
 ```
 
 ---
+
 ## scipy
 
 - Scientific computing
@@ -233,6 +258,7 @@ plt.tight_layout()
 - Used inside scikit-learn
 
 ---
+
 ## scipy.stats
 
 ```python
@@ -243,6 +269,7 @@ stats.pearsonr(x, y)
 ```
 
 ---
+
 ## Optimisation
 
 ```python
@@ -252,6 +279,7 @@ res.x
 ```
 
 ---
+
 ## Sparse Matrices
 
 ```python
@@ -263,6 +291,7 @@ m = csr_matrix(dense)
 - Used in NLP, recommenders
 
 ---
+
 ## Data Cleaning
 
 - Missing values
@@ -272,11 +301,13 @@ m = csr_matrix(dense)
 - 80% of the work
 
 ---
+
 ## Feature Engineering
 
 ![feature_engineering](svg/courses/machine_learning/machine-learning/02_practical_data_science/feature_engineering.svg)
 
 ---
+
 ## Missing Values
 
 - Drop rows / columns
@@ -285,6 +316,7 @@ m = csr_matrix(dense)
 - Choice depends on data
 
 ---
+
 ## Outliers
 
 - Visual: box plots, scatter
@@ -293,6 +325,7 @@ m = csr_matrix(dense)
 - Decide: drop, cap, or keep
 
 ---
+
 ## Feature Engineering Basics
 
 - Create new variables
@@ -301,6 +334,7 @@ m = csr_matrix(dense)
 - Examples: ratios, time-of-day, lags
 
 ---
+
 ## Encoding
 
 - Categorical to numeric
@@ -309,6 +343,7 @@ m = csr_matrix(dense)
 - Target encoding (with care; leakage risk)
 
 ---
+
 ## Scaling
 
 - Standardise: zero mean, unit variance
@@ -317,6 +352,7 @@ m = csr_matrix(dense)
 - Tree models: unaffected
 
 ---
+
 ## Train / Test Split
 
 - Holdout set: never touched until final
@@ -325,6 +361,7 @@ m = csr_matrix(dense)
 - Time series: respect temporal order
 
 ---
+
 ## Split with sklearn
 
 ```python
@@ -335,6 +372,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 ```
 
 ---
+
 ## Cross Validation
 
 - k-fold: rotate which subset is test
@@ -343,6 +381,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 - Standard for model selection
 
 ---
+
 ## CV with sklearn
 
 ```python
@@ -352,6 +391,7 @@ scores.mean(), scores.std()
 ```
 
 ---
+
 ## Data Leakage
 
 - Test info contaminates training
@@ -360,6 +400,7 @@ scores.mean(), scores.std()
 - Catastrophic; fit and transform per fold
 
 ---
+
 ## Pipelines
 
 - Chain: preprocessing + model
@@ -368,6 +409,7 @@ scores.mean(), scores.std()
 - Reproducible
 
 ---
+
 ## Pipeline Example
 
 ```python
@@ -382,6 +424,7 @@ pipe.fit(X_train, y_train)
 ```
 
 ---
+
 ## ColumnTransformer
 
 ```python
@@ -394,6 +437,7 @@ ct = ColumnTransformer([
 ```
 
 ---
+
 ## Imbalanced Classes
 
 - Naive accuracy misleading
@@ -402,6 +446,7 @@ ct = ColumnTransformer([
 - Use precision, recall, F1, AUC
 
 ---
+
 ## Saving Models
 
 ```python
@@ -413,6 +458,7 @@ loaded = joblib.load("model.pkl")
 - Pin sklearn version
 
 ---
+
 ## Common Practical Mistakes
 
 - Scaling before split
@@ -422,26 +468,31 @@ loaded = joblib.load("model.pkl")
 - Single train/test split for noisy data
 
 ---
+
 ## NumPy Broadcasting
 
 ![numpy_broadcasting](svg/courses/machine_learning/machine-learning/02_practical_data_science/numpy_broadcasting.svg)
 
 ---
+
 ## Pandas GroupBy
 
 ![pandas_groupby](svg/courses/machine_learning/machine-learning/02_practical_data_science/pandas_groupby.svg)
 
 ---
+
 ## Train / Test Split Visualised
 
 ![train_test_split](svg/courses/machine_learning/machine-learning/02_practical_data_science/train_test_split.svg)
 
 ---
+
 ## Cross Validation Visualised
 
 ![cross_validation](svg/courses/machine_learning/machine-learning/02_practical_data_science/cross_validation.svg)
 
 ---
+
 ## Summary
 
 - numpy, pandas, matplotlib, scipy are the toolkit
