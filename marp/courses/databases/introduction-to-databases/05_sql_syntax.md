@@ -2,7 +2,7 @@
 tags:
   - databases:sql
 level: beginner
-category: databases
+category: database
 audience:
   - audiences:developers
 

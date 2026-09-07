@@ -1,6 +1,6 @@
 ---
 tags:
-  - testing:api
+  - practices:api-testing
   - security:authentication
 level: intermediate
 category: testing

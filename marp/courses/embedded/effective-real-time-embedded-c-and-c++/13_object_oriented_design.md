@@ -1,7 +1,7 @@
 ---
 tags:
   - languages:c++
-  - design-patterns:oop
+  - concepts:oop
 level: advanced
 category: embedded
 audience:

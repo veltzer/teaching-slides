@@ -3,7 +3,7 @@ tags:
   - databases:elasticsearch
   - practices:best-practices
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

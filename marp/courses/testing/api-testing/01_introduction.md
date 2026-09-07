@@ -1,6 +1,6 @@
 ---
 tags:
-  - testing:api
+  - practices:api-testing
 level: intermediate
 category: testing
 audience:

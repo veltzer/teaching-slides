@@ -1,8 +1,8 @@
 ---
 tags:
-  - architecting:patterns
+  - architecture:patterns
 level: intermediate
-category: architecting
+category: architecture
 duration_hours: 16
 audience:
   - audiences:architects

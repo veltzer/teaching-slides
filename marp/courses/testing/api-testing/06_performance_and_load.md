@@ -1,6 +1,6 @@
 ---
 tags:
-  - testing:api
+  - practices:api-testing
   - practices:performance
 level: intermediate
 category: testing

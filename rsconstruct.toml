@@ -136,3 +136,10 @@ src_dirs = ["resources", "to_integrate"]
 src_dirs = ["resources"]
 src_files = [".marprc.mjs"]
 args = ["-c", ".eslint.config.js"]
+
+[processor.tags]
+# Validates the marp decks' front-matter against the shared vocabulary, the
+# same lists teaching-syllabi and business-syllabi validate against.
+# tags_dir defaults to "tags", so the submodule location must be named.
+tags_dir = "shared/shared-tags"
+src_dirs = ["marp"]

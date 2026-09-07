@@ -3,7 +3,7 @@ tags:
   - databases:postgresql
   - databases:sql
 level: intermediate
-category: databases
+category: database
 duration_hours: 24
 audience:
   - audiences:developers

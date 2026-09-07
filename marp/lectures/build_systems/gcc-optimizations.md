@@ -4,7 +4,7 @@ tags:
 - concepts:performance
 - concepts:compilation
 level: advanced
-category: build-systems
+category: build-system
 audience:
 - audiences:developers
 

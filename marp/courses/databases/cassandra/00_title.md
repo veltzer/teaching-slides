@@ -2,7 +2,7 @@
 tags:
   - databases:cassandra
 level: intermediate
-category: databases
+category: database
 duration_hours: 16
 audience:
   - audiences:developers

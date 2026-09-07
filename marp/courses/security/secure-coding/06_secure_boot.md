@@ -2,7 +2,7 @@
 tags:
   - security:secure-coding
   - hardware-and-embedded:embedded
-  - operating-systems:linux
+  - infrastructure:linux
 level: intermediate
 category: security
 audience:

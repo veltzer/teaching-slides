@@ -3,7 +3,7 @@ tags:
   - databases:elasticsearch
   - data-and-ai:search
 level: intermediate
-category: databases
+category: database
 duration_hours: 40
 audience:
   - audiences:developers

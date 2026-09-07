@@ -1,9 +1,9 @@
 ---
 tags:
-  - architecting:patterns
-  - queues:overview
+  - architecture:patterns
+  - messaging:overview
 level: intermediate
-category: architecting
+category: architecture
 audience:
   - audiences:architects
   - audiences:developers

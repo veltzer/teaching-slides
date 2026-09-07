@@ -3,7 +3,7 @@ tags:
   - databases:elasticsearch
   - databases:mappings
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

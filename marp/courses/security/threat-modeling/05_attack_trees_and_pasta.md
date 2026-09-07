@@ -1,8 +1,8 @@
 ---
 tags:
   - security:threat-modeling
-  - methodology:attack-trees
-  - methodology:pasta
+  - security:attack-trees
+  - security:pasta
 level: intermediate
 category: security
 audience:

@@ -3,7 +3,7 @@ tags:
   - databases:design
   - databases:er
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

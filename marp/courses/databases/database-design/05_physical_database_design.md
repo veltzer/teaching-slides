@@ -3,7 +3,7 @@ tags:
   - databases:design
   - databases:physical
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

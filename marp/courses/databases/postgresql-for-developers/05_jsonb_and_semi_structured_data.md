@@ -3,7 +3,7 @@ tags:
   - databases:postgresql
   - databases:jsonb
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

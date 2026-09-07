@@ -2,7 +2,7 @@
 tags:
   - databases:choosing
 level: beginner
-category: databases
+category: database
 audience:
   - audiences:developers
   - audiences:architects

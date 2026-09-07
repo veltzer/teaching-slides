@@ -2,7 +2,7 @@
 tags:
   - databases:orm
 level: beginner
-category: databases
+category: database
 audience:
   - audiences:developers
 

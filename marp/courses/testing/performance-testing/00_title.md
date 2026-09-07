@@ -1,6 +1,6 @@
 ---
 tags:
-  - testing:performance
+  - practices:performance-testing
 level: intermediate
 category: testing
 duration_hours: 16

@@ -1,7 +1,7 @@
 ---
 tags:
-  - patterns:event-sourcing
-  - patterns:cqrs
+  - architecture:event-sourcing
+  - architecture:cqrs
 level: advanced
 category: architecture
 audience:

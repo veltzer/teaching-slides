@@ -2,7 +2,7 @@
 tags:
   - databases:neo4j
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
   - audiences:dba

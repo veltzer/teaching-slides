@@ -1,7 +1,7 @@
 ---
 tags:
   - security:threat-modeling
-  - methodology:stride
+  - security:stride
 level: intermediate
 category: security
 audience:

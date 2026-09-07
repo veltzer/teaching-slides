@@ -3,7 +3,7 @@ tags:
   - databases:mongodb
   - databases:nosql
 level: intermediate
-category: databases
+category: database
 duration_hours: 24
 audience:
   - audiences:developers

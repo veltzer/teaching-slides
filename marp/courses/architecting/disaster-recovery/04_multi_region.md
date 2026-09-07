@@ -1,9 +1,9 @@
 ---
 tags:
-  - architecting:patterns
+  - architecture:patterns
   - practices:reliability
 level: intermediate
-category: architecting
+category: architecture
 audience:
   - audiences:architects
   - audiences:devops

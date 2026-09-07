@@ -3,7 +3,7 @@ tags:
   - databases:mongodb
   - databases:security
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

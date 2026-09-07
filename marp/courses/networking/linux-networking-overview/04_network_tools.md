@@ -2,7 +2,7 @@
 tags:
   - networking:tools
   - infrastructure:linux
-  - operations:monitoring
+  - observability:monitoring
 level: intermediate
 category: networking
 audience:

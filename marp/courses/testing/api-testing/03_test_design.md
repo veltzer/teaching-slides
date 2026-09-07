@@ -1,6 +1,6 @@
 ---
 tags:
-  - testing:api
+  - practices:api-testing
   - practices:design
 level: intermediate
 category: testing

@@ -2,7 +2,7 @@
 tags:
   - databases:duckdb
 level: intermediate
-category: databases
+category: database
 duration_hours: 8
 audience:
   - audiences:developers

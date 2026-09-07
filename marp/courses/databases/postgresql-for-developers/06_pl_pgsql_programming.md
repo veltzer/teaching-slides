@@ -3,7 +3,7 @@ tags:
   - databases:postgresql
   - languages:plpgsql
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

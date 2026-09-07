@@ -1,9 +1,9 @@
 ---
 tags:
-  - architecting:patterns
+  - architecture:patterns
   - practices:scalability
 level: intermediate
-category: architecting
+category: architecture
 audience:
   - audiences:architects
 

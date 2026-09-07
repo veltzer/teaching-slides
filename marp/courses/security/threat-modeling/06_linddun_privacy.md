@@ -1,7 +1,7 @@
 ---
 tags:
   - security:threat-modeling
-  - methodology:linddun
+  - security:linddun
   - concepts:privacy
 level: intermediate
 category: security

@@ -3,7 +3,7 @@ tags:
   - databases:relational
   - databases:document
 level: beginner
-category: databases
+category: database
 audience:
   - audiences:developers
 

@@ -3,7 +3,7 @@ tags:
   - databases:elasticsearch
   - practices:observability
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

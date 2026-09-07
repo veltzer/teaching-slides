@@ -3,7 +3,7 @@ tags:
   - databases:mongodb
   - databases:performance
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

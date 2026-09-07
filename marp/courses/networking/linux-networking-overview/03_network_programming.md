@@ -1,7 +1,7 @@
 ---
 tags:
   - networking:sockets
-  - programming:c
+  - languages:c
   - infrastructure:linux
 level: intermediate
 category: networking

@@ -2,7 +2,7 @@
 tags:
   - databases:mongodb
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

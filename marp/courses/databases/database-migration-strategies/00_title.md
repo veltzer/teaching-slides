@@ -3,7 +3,7 @@ tags:
   - databases:migrations
   - practices:migration
 level: intermediate
-category: databases
+category: database
 duration_hours: 16
 audience:
   - audiences:dba

@@ -1,6 +1,6 @@
 ---
 tags:
-  - testing:chaos
+  - practices:chaos-testing
   - practices:reliability
 level: advanced
 category: testing

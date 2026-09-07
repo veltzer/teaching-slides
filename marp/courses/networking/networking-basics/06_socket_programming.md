@@ -1,7 +1,7 @@
 ---
 tags:
   - networking:sockets
-  - programming:python
+  - languages:python
 level: beginner
 category: networking
 audience:

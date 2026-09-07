@@ -1,7 +1,7 @@
 ---
 tags:
   - security:threat-modeling
-  - methodology:dread
+  - security:dread
   - concepts:risk
 level: intermediate
 category: security

@@ -1,7 +1,7 @@
 ---
 tags:
   - languages:c++
-  - design-patterns:raii
+  - concepts:raii
 level: advanced
 category: embedded
 audience:

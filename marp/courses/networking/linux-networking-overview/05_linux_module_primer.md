@@ -2,7 +2,7 @@
 tags:
   - infrastructure:linux
   - concepts:kernel
-  - programming:c
+  - languages:c
 level: intermediate
 category: networking
 audience:

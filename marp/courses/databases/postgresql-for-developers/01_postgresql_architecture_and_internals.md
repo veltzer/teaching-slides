@@ -2,7 +2,7 @@
 tags:
   - databases:postgresql
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

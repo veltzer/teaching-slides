@@ -2,7 +2,7 @@
 tags:
   - databases:elasticsearch
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

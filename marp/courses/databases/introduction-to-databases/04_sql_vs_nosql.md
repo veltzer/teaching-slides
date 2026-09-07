@@ -3,7 +3,7 @@ tags:
   - databases:sql
   - databases:nosql
 level: beginner
-category: databases
+category: database
 audience:
   - audiences:developers
 

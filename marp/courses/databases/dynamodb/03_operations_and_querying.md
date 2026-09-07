@@ -2,7 +2,7 @@
 tags:
   - databases:dynamodb
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
 

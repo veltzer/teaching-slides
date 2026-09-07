@@ -3,7 +3,7 @@ tags:
   - databases:relational
   - databases:nosql
 level: beginner
-category: databases
+category: database
 duration_hours: 24
 audience:
   - audiences:developers

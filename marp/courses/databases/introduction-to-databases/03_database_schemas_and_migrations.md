@@ -3,7 +3,7 @@ tags:
   - databases:schemas
   - databases:migrations
 level: beginner
-category: databases
+category: database
 audience:
   - audiences:developers
 

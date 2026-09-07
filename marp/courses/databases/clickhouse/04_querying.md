@@ -2,7 +2,7 @@
 tags:
   - databases:clickhouse
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
   - audiences:data-engineers

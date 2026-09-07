@@ -3,7 +3,7 @@ tags:
   - databases:mongodb
   - infrastructure:devops
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
   - audiences:devops

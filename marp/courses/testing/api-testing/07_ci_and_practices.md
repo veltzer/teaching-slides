@@ -1,6 +1,6 @@
 ---
 tags:
-  - testing:api
+  - practices:api-testing
   - practices:ci-cd
 level: intermediate
 category: testing

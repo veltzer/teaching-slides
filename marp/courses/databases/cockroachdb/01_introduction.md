@@ -2,7 +2,7 @@
 tags:
   - databases:cockroachdb
 level: intermediate
-category: databases
+category: database
 audience:
   - audiences:developers
   - audiences:dba

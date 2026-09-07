@@ -4,7 +4,7 @@ tags:
   - data-and-ai:search
   - concepts:distributed-systems
 level: intermediate
-category: databases
+category: database
 duration_hours: 40
 audience:
   - audiences:dbas

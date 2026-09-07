@@ -1,6 +1,6 @@
 ---
 tags:
-  - testing:contract
+  - practices:contract-testing
 level: intermediate
 category: testing
 audience:

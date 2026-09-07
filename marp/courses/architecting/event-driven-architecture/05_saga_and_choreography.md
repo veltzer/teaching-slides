@@ -1,7 +1,7 @@
 ---
 tags:
-  - patterns:saga
-  - patterns:choreography
+  - architecture:saga
+  - architecture:choreography
 level: advanced
 category: architecture
 audience:
