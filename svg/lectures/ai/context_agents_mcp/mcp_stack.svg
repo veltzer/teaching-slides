@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect x="40" y="40" width="380" height="580" rx="6" fill="none" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="230" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">host</text>
+  <rect x="80" y="110" width="300" height="100" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="167.7" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">user</text>
+  <line x1="230" y1="210" x2="230" y2="253" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+  <rect x="80" y="260" width="300" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="312.7" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">model</text>
+  <text x="230" y="342.7" text-anchor="middle" font-size="20" fill="var(--primary-text)" font-family="Arial, sans-serif">sees only the tool list</text>
+  <line x1="230" y1="380" x2="230" y2="423" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <rect x="80" y="430" width="300" height="100" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="487.7" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">MCP client</text>
+  <text x="230" y="585" text-anchor="middle" font-size="15" fill="var(--text-muted)" font-family="Arial, sans-serif">one client per server</text>
+  <rect x="560" y="40" width="300" height="120" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="710" y="93" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">GitHub server</text>
+  <text x="710" y="121" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">PRs, issues, reviews</text>
+  <rect x="1000" y="70" width="240" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1120" y="106.3" text-anchor="middle" font-size="18" fill="var(--text)" font-family="Arial, sans-serif">GitHub</text>
+  <line x1="420" y1="480" x2="553" y2="100" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="860" y1="100" x2="993" y2="100" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="560" y="193" width="300" height="120" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="710" y="246" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">CI server</text>
+  <text x="710" y="274" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">logs, re-run jobs</text>
+  <rect x="1000" y="223" width="240" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1120" y="259.3" text-anchor="middle" font-size="18" fill="var(--text)" font-family="Arial, sans-serif">Actions / Jenkins</text>
+  <line x1="420" y1="480" x2="553" y2="253" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="860" y1="253" x2="993" y2="253" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="560" y="347" width="300" height="120" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="710" y="400" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">browser server</text>
+  <text x="710" y="428" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">navigate, screenshot</text>
+  <rect x="1000" y="377" width="240" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1120" y="413.3" text-anchor="middle" font-size="18" fill="var(--text)" font-family="Arial, sans-serif">Chrome</text>
+  <line x1="420" y1="480" x2="553" y2="407" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="860" y1="407" x2="993" y2="407" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="560" y="500" width="300" height="120" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="710" y="553" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">tickets server</text>
+  <text x="710" y="581" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">read, transition</text>
+  <rect x="1000" y="530" width="240" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1120" y="566.3" text-anchor="middle" font-size="18" fill="var(--text)" font-family="Arial, sans-serif">Jira / Linear</text>
+  <line x1="420" y1="480" x2="553" y2="560" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="860" y1="560" x2="993" y2="560" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="480" y="610" text-anchor="middle" font-size="15" fill="var(--text-muted)" font-family="Arial, sans-serif">stdio or HTTP</text>
+  <text x="930" y="610" text-anchor="middle" font-size="15" fill="var(--text-muted)" font-family="Arial, sans-serif">native API</text>
+</svg>
