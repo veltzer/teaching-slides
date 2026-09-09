@@ -4,7 +4,7 @@ KEYWORDS = {
     "teaching",
     "slides",
     "powerpoint",
-    "open office",
+    "openoffice",
     "odp",
     "marp",
 }
