@@ -1,3 +1,7 @@
+[build]
+# src_dirs entries name directories; "." (the whole tree) is a config error
+reject_dot_src_dirs = true
+
 [processor.tera]
 src_dirs = ["tera.templates"]
 dep_inputs = [
@@ -54,7 +58,7 @@ src_extensions = [".css"]
 src_dirs = ["marp"]
 
 [processor.ipdfunite]
-src_dirs = ["."]
+src_dirs = ["marp/courses"]
 output_dir = "_site/pdfunite"
 source_output_dir = "out/chapters"
 
