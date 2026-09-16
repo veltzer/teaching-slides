@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="300" height="160" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190.0" y="105.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Legacy module</text>
+  <text x="190.0" y="132.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">no spec, no tests,</text>
+  <text x="190.0" y="153.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">three authors gone</text>
+  <rect x="490" y="40" width="300" height="160" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0" y="105.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Agent extracts</text>
+  <text x="640.0" y="132.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">what the code does today:</text>
+  <text x="640.0" y="153.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">inputs, outputs, errors, quirks</text>
+  <rect x="940" y="40" width="300" height="160" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090.0" y="105.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Baseline spec</text>
+  <text x="1090.0" y="132.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">observed behavior,</text>
+  <text x="1090.0" y="153.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">unknowns marked</text>
+  <line x1="340" y1="120" x2="490" y2="120" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="790" y1="120" x2="940" y2="120" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="940" y="260" width="300" height="140" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090.0" y="315.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Human corrects</text>
+  <text x="1090.0" y="342.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">is that quirk a bug</text>
+  <text x="1090.0" y="363.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">or a contract?</text>
+  <line x1="1090" y1="200" x2="1090" y2="260" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+  <rect x="490" y="260" width="300" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0" y="315.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Feature spec</text>
+  <text x="640.0" y="342.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">written as a delta:</text>
+  <text x="640.0" y="363.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">keep, change, add</text>
+  <line x1="940" y1="330" x2="790" y2="330" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <rect x="40" y="260" width="300" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190.0" y="315.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Normal SDD loop</text>
+  <text x="190.0" y="342.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">plan, tasks,</text>
+  <text x="190.0" y="363.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">implement, verify</text>
+  <line x1="490" y1="330" x2="340" y2="330" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <rect x="40" y="440" width="1200" height="180" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Scope the baseline to what the feature touches</text>
+  <text x="640" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">one module or one endpoint family, not the whole system</text>
+  <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">characterization tests pin the behavior you decided to keep</text>
+  <text x="640" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">the baseline spec becomes the first page of documentation this module ever had</text>
+</svg>
