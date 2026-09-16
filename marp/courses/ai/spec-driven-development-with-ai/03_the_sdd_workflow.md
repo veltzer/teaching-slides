@@ -75,7 +75,7 @@ implementation. List every assumption you made under Open questions.
 - Order matters: data model, then interfaces, then logic, then edges
 - Mark tasks that can run in parallel; they can go to parallel agents
 
-```markdown
+```misc
 - [ ] T1 migration + model        (D-1)      test: test_models.py
 - [ ] T2 POST /exports            (AC-2.3)   test: test_api.py::test_queue
 - [ ] T3 worker: generate CSV     (AC-2.1/2) test: test_worker.py
