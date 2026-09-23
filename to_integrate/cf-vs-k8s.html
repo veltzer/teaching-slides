@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cloud Foundry vs Kubernetes</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm 16mm;
+    @bottom-center {
+      content: "Cloud Foundry vs Kubernetes  ·  Page " counter(page) " of " counter(pages);
+      font-family: "Noto Sans", "DejaVu Sans", sans-serif;
+      font-size: 8.5pt;
+      color: #8a94a6;
+    }
+  }
+  :root {
+    --ink: #1c2333;
+    --muted: #5b6577;
+    --faint: #8a94a6;
+    --rule: #e3e7ee;
+    --paper: #ffffff;
+    --tint: #f5f7fa;
+    --cf: #0f7a8a;        /* Cloud Foundry teal */
+    --cf-soft: #e3f3f5;
+    --k8s: #2f5bd6;       /* Kubernetes blue */
+    --k8s-soft: #e6ecfb;
+    --accent: #d9822b;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); }
+  body {
+    font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif;
+    color: var(--ink);
+    font-size: 9.8pt;
+    line-height: 1.45;
+  }
+  h1, h2, h3 { margin: 0; line-height: 1.2; letter-spacing: -0.01em; }
+  h2 {
+    font-size: 17pt;
+    font-weight: 700;
+    margin: 0 0 3mm 0;
+    padding-bottom: 1.5mm;
+    border-bottom: 2px solid var(--ink);
+    break-after: avoid;
+  }
+  h2 .num {
+    display: inline-block;
+    min-width: 9mm;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  h3 { font-size: 11.5pt; font-weight: 700; margin: 4mm 0 1.5mm 0; break-after: avoid; }
+  p { margin: 0 0 2.4mm 0; }
+  .lead { font-size: 10.6pt; color: var(--muted); }
+  section { break-inside: auto; margin-bottom: 4mm; }
+  section.page { break-before: page; }
+  code {
+    font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+    font-size: 8.8pt;
+    background: var(--tint);
+    padding: 0 3px;
+    border-radius: 3px;
+  }
+  pre {
+    font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+    font-size: 7.6pt;
+    line-height: 1.3;
+    background: #1c2333;
+    color: #e6eaf2;
+    padding: 2.8mm 3.5mm;
+    border-radius: 4px;
+    margin: 0;
+    white-space: pre;
+    overflow: hidden;
+  }
+  pre .c { color: #8a94a6; }
+  pre .k { color: #7fd4e0; }
+
+  /* Cover */
+  .cover {
+    height: 250mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    break-after: page;
+  }
+  .cover .kicker {
+    font-size: 9.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--faint);
+    font-weight: 600;
+  }
+  .cover h1 {
+    font-size: 40pt;
+    font-weight: 800;
+    margin-top: 6mm;
+    line-height: 1.05;
+  }
+  .cover h1 .cf { color: var(--cf); }
+  .cover h1 .k8s { color: var(--k8s); }
+  .cover h1 .vs { color: var(--faint); font-weight: 300; font-size: 26pt; margin: 0 3mm; }
+  .cover .sub {
+    font-size: 13pt;
+    color: var(--muted);
+    margin-top: 6mm;
+    max-width: 130mm;
+    line-height: 1.45;
+  }
+  .cover .bars { display: flex; gap: 3mm; margin-top: 12mm; }
+  .cover .bars div { height: 5mm; flex: 1; border-radius: 3px; }
+  .glance { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4mm; margin-top: 14mm; }
+  .glance .g { border-top: 1px solid var(--rule); padding-top: 2.5mm; }
+  .glance .l { font-size: 8pt; text-transform: uppercase; letter-spacing: 0.12em; color: var(--faint); font-weight: 600; margin-bottom: 1mm; }
+  .glance .cfv { color: var(--cf); font-weight: 600; }
+  .glance .kv { color: var(--k8s); font-weight: 600; }
+  .cover .meta { color: var(--faint); font-size: 9.5pt; border-top: 1px solid var(--rule); padding-top: 4mm; }
+  .cover .meta b { color: var(--ink); font-weight: 600; }
+
+  /* Two-column intro cards */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin: 3mm 0 3mm 0; }
+  .card {
+    border: 1px solid var(--rule);
+    border-top: 4px solid var(--ink);
+    border-radius: 4px;
+    padding: 3.2mm 4mm 3mm 4mm;
+    background: var(--paper);
+    break-inside: avoid;
+  }
+  .card.cf { border-top-color: var(--cf); }
+  .card.k8s { border-top-color: var(--k8s); }
+  .card h3 { margin-top: 0; font-size: 13pt; }
+  .card.cf h3 { color: var(--cf); }
+  .card.k8s h3 { color: var(--k8s); }
+  .card .tag { font-size: 8.5pt; color: var(--faint); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+  .card ul { margin: 1.5mm 0 0 0; padding-left: 4.5mm; }
+  .card li { margin-bottom: 0.8mm; }
+
+  /* Callout */
+  .callout {
+    background: var(--tint);
+    border-left: 4px solid var(--accent);
+    padding: 3mm 4mm;
+    border-radius: 0 4px 4px 0;
+    margin: 2.5mm 0 3mm 0;
+    break-inside: avoid;
+  }
+  .callout b { color: var(--accent); }
+
+  /* Comparison table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3mm 0 4mm 0;
+    font-size: 9.1pt;
+    line-height: 1.38;
+  }
+  thead th {
+    text-align: left;
+    font-size: 8.8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--paper);
+    background: var(--ink);
+    padding: 2.4mm 3mm;
+  }
+  thead th.cf { background: var(--cf); }
+  thead th.k8s { background: var(--k8s); }
+  tbody td {
+    padding: 1.7mm 3mm;
+    vertical-align: top;
+    border-bottom: 1px solid var(--rule);
+  }
+  tbody tr { break-inside: avoid; }
+  tbody tr:nth-child(even) td { background: var(--tint); }
+  tbody td.dim { font-weight: 600; color: var(--ink); width: 26%; }
+  td.cfc { border-left: 3px solid var(--cf-soft); }
+  td.k8c { border-left: 3px solid var(--k8s-soft); }
+
+  /* Pros / cons */
+  .pc { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 3mm; }
+  .pc .col { break-inside: avoid; }
+  .pc h4 { margin: 0 0 1.5mm 0; font-size: 9.2pt; text-transform: uppercase; letter-spacing: 0.1em; }
+  .pc h4.plus { color: #2e8b57; }
+  .pc h4.minus { color: #c0392b; }
+  .pc ul { margin: 0; padding-left: 4.5mm; }
+  .pc li { margin-bottom: 1.4mm; }
+
+  /* Layer diagram */
+  .layers { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin: 3mm 0 2mm 0; break-inside: avoid; }
+  .stack { break-inside: avoid; }
+  .stack .title { font-weight: 700; font-size: 10pt; margin-bottom: 1.5mm; }
+  .stack .title.cf { color: var(--cf); }
+  .stack .title.k8s { color: var(--k8s); }
+  .layer {
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 1.1mm 3mm;
+    margin-bottom: 0.9mm;
+    font-size: 8.6pt;
+    background: var(--paper);
+    display: flex; justify-content: space-between; align-items: baseline; gap: 3mm;
+  }
+  .layer small { color: var(--faint); font-size: 7.4pt; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.06em; }
+  .layer.you { border-style: dashed; border-color: var(--accent); background: #fdf4ea; }
+  .layer.platform-cf { background: var(--cf-soft); border-color: var(--cf); }
+  .layer.platform-k8s { background: var(--k8s-soft); border-color: var(--k8s); }
+
+  /* Decision guide */
+  .decide { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 3mm; }
+  .decide .box { border-radius: 4px; padding: 3.5mm 4.5mm; break-inside: avoid; }
+  .decide .box.cf { background: var(--cf-soft); }
+  .decide .box.k8s { background: var(--k8s-soft); }
+  .decide h4 { margin: 0 0 1.5mm 0; font-size: 10.5pt; }
+  .decide .box.cf h4 { color: var(--cf); }
+  .decide .box.k8s h4 { color: var(--k8s); }
+  .decide ul { margin: 0; padding-left: 4.5mm; }
+  .decide li { margin-bottom: 1.2mm; }
+
+  .glossary dt { font-weight: 700; margin-top: 2mm; }
+  .glossary dd { margin: 0 0 1mm 0; color: var(--muted); }
+  .two { column-count: 2; column-gap: 7mm; }
+  .glossary-wrap { break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<!-- ===================== COVER ===================== -->
+<div class="cover">
+  <div>
+    <div class="kicker">Platform comparison</div>
+    <h1><span class="cf">Cloud Foundry</span><span class="vs">vs</span><span class="k8s">Kubernetes</span></h1>
+    <p class="sub">Two very different answers to the same question: how do we get code from a developer's laptop to production, and keep it running there, without every team reinventing the plumbing?</p>
+    <div class="bars">
+      <div style="background: var(--cf)"></div>
+      <div style="background: var(--k8s)"></div>
+      <div style="background: var(--accent)"></div>
+      <div style="background: var(--rule)"></div>
+    </div>
+    <div class="glance">
+      <div class="g"><div class="l">Category</div><div class="cfv">Platform as a Service</div><div class="kv">Container orchestrator</div></div>
+      <div class="g"><div class="l">Unit of deployment</div><div class="cfv">Application</div><div class="kv">Pod</div></div>
+      <div class="g"><div class="l">You write</div><div class="cfv">Source + manifest.yml</div><div class="kv">Image + YAML manifests</div></div>
+      <div class="g"><div class="l">Guiding principle</div><div class="cfv">Convention over configuration</div><div class="kv">Primitives you compose</div></div>
+      <div class="g"><div class="l">Sweet spot</div><div class="cfv">Stateless twelve-factor apps</div><div class="kv">Any containerised workload</div></div>
+      <div class="g"><div class="l">First released</div><div class="cfv">2011</div><div class="kv">2014</div></div>
+    </div>
+  </div>
+  <div class="meta">
+    <b>Contents</b> &nbsp; 1 Overview &nbsp;·&nbsp; 2 Philosophy &nbsp;·&nbsp; 3 Architecture &nbsp;·&nbsp; 4 Developer experience &nbsp;·&nbsp; 5 Feature-by-feature &nbsp;·&nbsp; 6 Operations &nbsp;·&nbsp; 7 Strengths &amp; weaknesses &nbsp;·&nbsp; 8 Choosing &nbsp;·&nbsp; 9 Glossary<br>
+    Prepared September 2026
+  </div>
+</div>
+
+<!-- ===================== 1 OVERVIEW ===================== -->
+<section>
+  <h2><span class="num">1</span>Overview</h2>
+  <p class="lead">Cloud Foundry (CF) is an opinionated <em>application platform</em>: you hand it source code and it does the rest. Kubernetes (k8s) is a general-purpose <em>container orchestrator</em>: you hand it containers plus a precise description of how they should run, and it makes reality match that description.</p>
+
+  <div class="duo">
+    <div class="card cf">
+      <div class="tag">Application platform · PaaS</div>
+      <h3>Cloud Foundry</h3>
+      <ul>
+        <li>Born at VMware in 2011, later Pivotal; now a Cloud Foundry Foundation project under the Linux Foundation.</li>
+        <li>Core promise: <code>cf push</code> and your app is built, packaged, scheduled, routed, logged and health-checked.</li>
+        <li>Buildpacks turn source into a runnable image; you never write a Dockerfile.</li>
+        <li>Strong multi-tenancy model: orgs, spaces, quotas, roles out of the box.</li>
+        <li>Modern distributions (Korifi, cf-for-k8s lineage) run <em>on top of</em> Kubernetes.</li>
+      </ul>
+    </div>
+    <div class="card k8s">
+      <div class="tag">Container orchestrator · CaaS</div>
+      <h3>Kubernetes</h3>
+      <ul>
+        <li>Open-sourced by Google in 2014, based on Borg; graduated CNCF project and de-facto industry standard.</li>
+        <li>Core promise: declare desired state in YAML; controllers reconcile the cluster toward it continuously.</li>
+        <li>Runs any OCI container: web apps, batch jobs, databases, ML pipelines, network functions.</li>
+        <li>Everything is an extensible API object; a vast ecosystem fills the gaps (Helm, Istio, ArgoCD, Knative…).</li>
+        <li>Available from every cloud (EKS, GKE, AKS) and on-prem (OpenShift, Rancher, k3s).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <b>The one-sentence summary.</b> Cloud Foundry optimises for the <em>developer</em> who wants to ship a twelve-factor app and never think about infrastructure. Kubernetes optimises for the <em>platform team</em> who wants a universal substrate on which to build whatever is needed.
+  </div>
+</section>
+
+<!-- ===================== 2 PHILOSOPHY ===================== -->
+<section>
+  <h2><span class="num">2</span>Philosophy: opinions vs primitives</h2>
+  <p>The deepest difference is not technical but cultural. Cloud Foundry ships with a strong opinion about what an application is: a stateless, horizontally scalable process that speaks HTTP, reads configuration from the environment, and logs to stdout. If your workload fits that shape, CF removes almost every decision from your path. If it does not, you fight the platform.</p>
+  <p>Kubernetes refuses to have that opinion. It offers primitives (Pods, Services, Volumes, Jobs, ConfigMaps) and lets you compose them. The price is that <em>somebody</em> has to hold the opinions: which ingress controller, which secrets store, which CI pipeline, which observability stack. In a mature organisation that somebody is a platform team building an internal developer platform (IDP). In a small team it is often nobody, and the YAML sprawls.</p>
+
+  <h3>What each platform asks of you <span style="font-weight:400; color: var(--muted); font-size: 9pt;">(dashed orange boxes are what you author and maintain)</span></h3>
+  <div class="layers">
+    <div class="stack">
+      <div class="title cf">Cloud Foundry</div>
+      <div class="layer you"><span>Your source code + <code>manifest.yml</code></span><small>You own this</small></div>
+      <div class="layer platform-cf">Buildpacks (detect, compile, release)<small>Platform</small></div>
+      <div class="layer platform-cf">Diego scheduler · Garden containers<small>Platform</small></div>
+      <div class="layer platform-cf">Gorouter · Loggregator · UAA · Cloud Controller<small>Platform</small></div>
+      <div class="layer platform-cf">Service brokers (databases, queues, caches)<small>Platform</small></div>
+      <div class="layer">BOSH-managed VMs or a Kubernetes cluster<small>Infrastructure</small></div>
+    </div>
+    <div class="stack">
+      <div class="title k8s">Kubernetes</div>
+      <div class="layer you">Your source code + Dockerfile / Buildpack<small>You own this</small></div>
+      <div class="layer you">Deployment, Service, Ingress, HPA, ConfigMap, Secret YAML<small>You own this</small></div>
+      <div class="layer you">Ingress controller, cert-manager, logging, metrics, service mesh<small>You / platform team</small></div>
+      <div class="layer platform-k8s">API server · etcd · scheduler · controllers · kubelet<small>Platform</small></div>
+      <div class="layer platform-k8s">Operators and CRDs for stateful services<small>Platform + eco</small></div>
+      <div class="layer">Managed cloud service or self-hosted nodes<small>Infrastructure</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 3 ARCHITECTURE ===================== -->
+<section class="page">
+  <h2><span class="num">3</span>Architecture</h2>
+
+  <h3>Cloud Foundry components</h3>
+  <table>
+    <thead><tr><th>Component</th><th>Role</th><th>Nearest Kubernetes analogue</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">Cloud Controller (CAPI)</td><td>REST API; stores apps, spaces, orgs, service bindings; drives staging and deployment.</td><td>kube-apiserver + etcd</td></tr>
+      <tr><td class="dim">Diego</td><td>Scheduler and runtime: BBS state store, auctioneer bids work to cells, reps run it.</td><td>kube-scheduler + kubelet</td></tr>
+      <tr><td class="dim">Garden</td><td>Container runtime abstraction (runC underneath).</td><td>containerd / CRI-O</td></tr>
+      <tr><td class="dim">Gorouter</td><td>Built-in HTTP/TCP router; every app gets a route automatically.</td><td>Ingress controller + Service (nothing is automatic)</td></tr>
+      <tr><td class="dim">Loggregator</td><td>Streams app logs and metrics to <code>cf logs</code> and to drains.</td><td>Fluent Bit / Loki / Prometheus (bring your own)</td></tr>
+      <tr><td class="dim">UAA</td><td>OAuth2 identity server for users and clients.</td><td>OIDC provider + RBAC</td></tr>
+      <tr><td class="dim">Buildpacks</td><td>Turn source into a droplet: language detection, dependency install, start command.</td><td>Cloud Native Buildpacks / kpack (optional)</td></tr>
+      <tr><td class="dim">Service brokers (OSBAPI)</td><td>Provision and bind backing services with one command.</td><td>Operators, Crossplane, Service Binding spec</td></tr>
+      <tr><td class="dim">BOSH</td><td>Deploys and upgrades the platform itself across VMs.</td><td>Cluster API / managed control plane</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Kubernetes components</h3>
+  <table>
+    <thead><tr><th>Component</th><th>Role</th><th>Nearest Cloud Foundry analogue</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">kube-apiserver</td><td>The single front door; every object is created, read and watched here.</td><td>Cloud Controller</td></tr>
+      <tr><td class="dim">etcd</td><td>Consistent key-value store holding all cluster state.</td><td>CAPI database + Diego BBS</td></tr>
+      <tr><td class="dim">kube-scheduler</td><td>Assigns Pods to nodes based on resources, affinities and taints.</td><td>Diego auctioneer</td></tr>
+      <tr><td class="dim">Controllers</td><td>Reconcile loops for Deployments, ReplicaSets, Jobs, Nodes, endpoints…</td><td>Diego + Cloud Controller workers</td></tr>
+      <tr><td class="dim">kubelet</td><td>Node agent that runs and reports on Pods.</td><td>Diego rep</td></tr>
+      <tr><td class="dim">kube-proxy / CNI</td><td>Cluster networking and Service virtual IPs.</td><td>Silk / CF networking</td></tr>
+      <tr><td class="dim">CRDs + Operators</td><td>Extend the API with new resource types and their controllers.</td><td>No direct equivalent (CF is closed for extension)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <b>Same shape, different scope.</b> Both are API-driven control planes with a scheduler, node agents and a state store. The difference is that Cloud Foundry bundles the router, log pipeline, identity and build system as first-class parts of the control plane, while Kubernetes leaves them to add-ons.
+  </div>
+</section>
+
+<!-- ===================== 4 DEVELOPER EXPERIENCE ===================== -->
+<section class="page">
+  <h2><span class="num">4</span>Developer experience</h2>
+  <p>The clearest way to feel the difference is to deploy the same small web app on each.</p>
+
+  <div class="duo">
+    <div class="card cf">
+      <h3>Cloud Foundry</h3>
+      <p><code>manifest.yml</code></p>
+<pre><span class="k">applications:</span>
+- name: hello
+  memory: 256M
+  instances: 2
+  buildpacks:
+  - python_buildpack
+  services:
+  - hello-db</pre>
+      <p style="margin-top:2.5mm">Deploy, scale, inspect:</p>
+<pre>$ cf push
+$ cf scale hello -i 4
+$ cf logs hello
+$ cf create-service postgres small hello-db
+$ cf bind-service hello hello-db</pre>
+      <p style="margin-top:2.5mm; margin-bottom:0; color: var(--muted); font-size:9pt;">Route, TLS, health check, logs and the credentials in <code>VCAP_SERVICES</code> all appear with no further configuration.</p>
+    </div>
+    <div class="card k8s">
+      <h3>Kubernetes</h3>
+      <p>Dockerfile + at least three manifests:</p>
+<pre><span class="k">apiVersion:</span> apps/v1
+<span class="k">kind:</span> Deployment
+<span class="k">metadata:</span> { name: hello }
+<span class="k">spec:</span>
+  replicas: 2
+  selector: { matchLabels: { app: hello } }
+  template:
+    metadata: { labels: { app: hello } }
+    spec:
+      containers:
+      - name: hello
+        image: registry/hello:1.4.2
+        resources:
+          limits: { memory: 256Mi }
+        readinessProbe:
+          httpGet: { path: /healthz, port: 8080 }
+<span class="c">--- plus Service, Ingress, Secret, HPA,
+    and a database wired in by hand.</span></pre>
+      <p style="margin-top:2.5mm">Deploy, scale, inspect:</p>
+<pre>$ docker build -t registry/hello:1.4.2 . &amp;&amp; docker push …
+$ kubectl apply -f k8s/
+$ kubectl scale deploy/hello --replicas=4
+$ kubectl logs -l app=hello -f</pre>
+    </div>
+  </div>
+
+  <p>Neither approach is wrong. The Kubernetes version is more verbose because it is more explicit: every decision the CF buildpack and router made silently is now visible and changeable. Teams that need that control love it. Teams that just want the app running see it as ceremony. Tools like Helm, Kustomize, Skaffold, Tilt and Knative exist precisely to shrink this gap, at the cost of yet another layer to learn.</p>
+
+  <h3>Day-to-day workflow comparison</h3>
+  <table>
+    <thead><tr><th>Task</th><th class="cf">Cloud Foundry</th><th class="k8s">Kubernetes</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">Build an artefact</td><td class="cfc">Automatic via buildpack during push.</td><td class="k8c">You build and push an image (CI, Docker, Buildpacks, ko, Jib…).</td></tr>
+      <tr><td class="dim">Expose over HTTP</td><td class="cfc">Automatic route on a shared domain; <code>cf map-route</code> for custom.</td><td class="k8c">Service + Ingress (or Gateway API) + ingress controller + DNS.</td></tr>
+      <tr><td class="dim">TLS</td><td class="cfc">Terminated at Gorouter with platform certs.</td><td class="k8c">cert-manager or cloud LB, configured per Ingress.</td></tr>
+      <tr><td class="dim">Environment config</td><td class="cfc"><code>cf set-env</code>, manifest, user-provided services.</td><td class="k8c">ConfigMap, Secret, env vars, mounted volumes.</td></tr>
+      <tr><td class="dim">Attach a database</td><td class="cfc"><code>cf create-service</code> + <code>cf bind-service</code>.</td><td class="k8c">Operator CRD, cloud console or Terraform; wire credentials manually.</td></tr>
+      <tr><td class="dim">Zero-downtime deploy</td><td class="cfc">Rolling deploys built in; blue/green via <code>cf</code> plugins.</td><td class="k8c">Deployment rolling update built in; canary via Argo Rollouts or Flagger.</td></tr>
+      <tr><td class="dim">Debug a running instance</td><td class="cfc"><code>cf ssh</code>, <code>cf logs</code>, <code>cf events</code>.</td><td class="k8c"><code>kubectl exec</code>, <code>logs</code>, <code>describe</code>, <code>debug</code>, ephemeral containers.</td></tr>
+      <tr><td class="dim">Scheduled task</td><td class="cfc"><code>cf run-task</code> (one-off); scheduler is an add-on.</td><td class="k8c">Job and CronJob are core resources.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===================== 5 FEATURE BY FEATURE ===================== -->
+<section class="page">
+  <h2><span class="num">5</span>Feature-by-feature comparison</h2>
+  <table>
+    <thead><tr><th>Dimension</th><th class="cf">Cloud Foundry</th><th class="k8s">Kubernetes</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">Abstraction level</td><td class="cfc">Application. The unit is an app with instances.</td><td class="k8c">Container. The unit is a Pod, composed upward into Deployments, StatefulSets, Jobs.</td></tr>
+      <tr><td class="dim">Workload types</td><td class="cfc">Stateless HTTP/TCP apps, one-off tasks. Stateful workloads are unsupported by design.</td><td class="k8c">Anything containerisable: stateless, stateful, batch, daemon, GPU, serverless (via Knative).</td></tr>
+      <tr><td class="dim">Packaging</td><td class="cfc">Source via buildpacks, or a Docker image.</td><td class="k8c">OCI images only. How you build them is your business.</td></tr>
+      <tr><td class="dim">Configuration model</td><td class="cfc">Imperative CLI plus a small manifest. Limited surface, hard to misconfigure.</td><td class="k8c">Declarative YAML for everything. Huge surface, GitOps-friendly, easy to misconfigure.</td></tr>
+      <tr><td class="dim">Extensibility</td><td class="cfc">Buildpacks, service brokers, CLI plugins. The core is not pluggable.</td><td class="k8c">CRDs, operators, admission webhooks, scheduler plugins, CSI/CNI/CRI. Everything is pluggable.</td></tr>
+      <tr><td class="dim">Multi-tenancy</td><td class="cfc">Orgs, spaces, quotas, roles built in and well understood.</td><td class="k8c">Namespaces, RBAC, ResourceQuota, NetworkPolicy. Workable but assembled by hand; hard multi-tenancy usually means separate clusters.</td></tr>
+      <tr><td class="dim">Networking</td><td class="cfc">Gorouter plus container-to-container policies. Simple and sufficient for most web apps.</td><td class="k8c">CNI plugin of your choice, Services, Ingress/Gateway, NetworkPolicy, optional service mesh. Powerful and complicated.</td></tr>
+      <tr><td class="dim">Storage</td><td class="cfc">Ephemeral disk only; volume services exist but are a niche.</td><td class="k8c">PersistentVolumes, StorageClasses, CSI drivers, snapshots. First-class.</td></tr>
+      <tr><td class="dim">Autoscaling</td><td class="cfc">App Autoscaler add-on: CPU, memory, throughput, schedule based.</td><td class="k8c">HPA, VPA, KEDA (event driven), Cluster Autoscaler / Karpenter for nodes.</td></tr>
+      <tr><td class="dim">Health &amp; self-healing</td><td class="cfc">Port, HTTP or process health checks; crashed instances restarted automatically.</td><td class="k8c">Liveness, readiness and startup probes; restart policies; PodDisruptionBudgets.</td></tr>
+      <tr><td class="dim">Observability</td><td class="cfc">Loggregator, Firehose, log drains, app metrics. Integrated but less flexible.</td><td class="k8c">Nothing built in beyond <code>kubectl logs</code>; Prometheus, OpenTelemetry, Loki etc. are the norm.</td></tr>
+      <tr><td class="dim">Security posture</td><td class="cfc">Non-root containers, rootfs from stemcells, automatic CVE patching via buildpack and stack updates.</td><td class="k8c">Pod Security Standards, RBAC, secrets, image scanning, policy engines (Kyverno, OPA). Secure when configured; insecure by default in many installs.</td></tr>
+      <tr><td class="dim">Ecosystem &amp; hiring</td><td class="cfc">Mature but shrinking; specialised skill set.</td><td class="k8c">Enormous and growing; the most common skill on platform-engineering CVs.</td></tr>
+      <tr><td class="dim">Vendor landscape</td><td class="cfc">VMware Tanzu (Broadcom), SAP BTP, Cloud.gov, open-source cf-deployment and Korifi.</td><td class="k8c">Every hyperscaler, OpenShift, Rancher, Tanzu, k3s, Talos, and dozens more.</td></tr>
+      <tr><td class="dim">Runs on</td><td class="cfc">BOSH-managed VMs on any IaaS, or Kubernetes (Korifi).</td><td class="k8c">Bare metal, VMs, every cloud, edge devices, laptops.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===================== 6 OPERATIONS ===================== -->
+<section class="page">
+  <h2><span class="num">6</span>Operating the platform</h2>
+  <p>Developer experience is where Cloud Foundry shines. Operations is where the trade-offs get interesting.</p>
+
+  <h3>Installation and upgrades</h3>
+  <p>Classic Cloud Foundry is deployed with BOSH, which manages the full VM lifecycle including OS images (stemcells). Upgrades are a well-rehearsed, mostly rolling process, but BOSH itself is a large, unfamiliar tool with a small community. A full CF foundation is heavy: dozens of VMs before the first app is pushed.</p>
+  <p>Kubernetes is available as a managed control plane from every cloud, which removes most of the installation burden. On-prem, tools like kubeadm, Cluster API, Rancher, Talos and OpenShift cover it. Upgrades are frequent (three minor releases a year, each supported for roughly fourteen months), and each one can break API versions or add-ons, so operators spend real effort staying current.</p>
+
+  <h3>Day-2 concerns</h3>
+  <table>
+    <thead><tr><th>Concern</th><th class="cf">Cloud Foundry</th><th class="k8s">Kubernetes</th></tr></thead>
+    <tbody>
+      <tr><td class="dim">Patching CVEs in app runtimes</td><td class="cfc">Update the buildpack or stack, restage apps. Platform-wide and fast.</td><td class="k8c">Rebuild every image, redeploy. Requires CI discipline and image scanning.</td></tr>
+      <tr><td class="dim">Capacity management</td><td class="cfc">Add Diego cells; the auctioneer balances load.</td><td class="k8c">Node pools, autoscalers, requests/limits tuning, bin-packing analysis.</td></tr>
+      <tr><td class="dim">Backups and DR</td><td class="cfc">BBR (BOSH Backup and Restore) for platform state.</td><td class="k8c">etcd snapshots plus Velero or similar for workloads and volumes.</td></tr>
+      <tr><td class="dim">Cost visibility</td><td class="cfc">Per-org and per-space quotas; simple chargeback.</td><td class="k8c">Namespace quotas plus tools such as OpenCost or Kubecost.</td></tr>
+      <tr><td class="dim">Team size to run it</td><td class="cfc">Small platform team once stood up; steep learning curve to start.</td><td class="k8c">Small if fully managed; substantial if self-hosted with a full add-on stack.</td></tr>
+      <tr><td class="dim">Blast radius of mistakes</td><td class="cfc">Limited: developers cannot touch the platform layer.</td><td class="k8c">Wide: a bad RBAC rule or admission webhook can take down a cluster.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <b>The convergence story.</b> The CF community responded to Kubernetes rather than fighting it. <em>Korifi</em> reimplements the Cloud Foundry API as Kubernetes CRDs and controllers, using Cloud Native Buildpacks (kpack) and Contour, so <code>cf push</code> works against an ordinary cluster. Cloud Native Buildpacks themselves are a CNCF project born from CF and Heroku buildpacks. Meanwhile projects such as Knative, Backstage and various internal developer platforms rebuild the "just push code" experience on Kubernetes from the other direction. The two worlds are meeting in the middle.
+  </div>
+</section>
+
+<!-- ===================== 7 STRENGTHS & WEAKNESSES ===================== -->
+<section class="page">
+  <h2><span class="num">7</span>Strengths and weaknesses</h2>
+
+  <h3 style="color: var(--cf)">Cloud Foundry</h3>
+  <div class="pc">
+    <div class="col">
+      <h4 class="plus">Strengths</h4>
+      <ul>
+        <li>Fastest path from source to running, routed, logged application.</li>
+        <li>Developers need to learn one command and one small manifest.</li>
+        <li>Strong guardrails: consistent security, no root, patched runtimes, quotas.</li>
+        <li>Multi-tenancy and RBAC that match how enterprises are organised.</li>
+        <li>Service marketplace makes backing services a one-liner.</li>
+        <li>Proven at scale in regulated industries (banks, insurers, government).</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4 class="minus">Weaknesses</h4>
+      <ul>
+        <li>Opinionated: stateful, non-HTTP or unusual workloads fit badly or not at all.</li>
+        <li>Heavy footprint and BOSH learning curve for the classic distribution.</li>
+        <li>Shrinking community and vendor pool; hiring is harder every year.</li>
+        <li>Limited extensibility; if the platform lacks a feature you wait for it.</li>
+        <li>Less momentum in tooling and integrations than the CNCF ecosystem.</li>
+        <li>Perceived as legacy, which affects buy-in regardless of technical merit.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="color: var(--k8s)">Kubernetes</h3>
+  <div class="pc">
+    <div class="col">
+      <h4 class="plus">Strengths</h4>
+      <ul>
+        <li>Runs every kind of workload on every kind of infrastructure.</li>
+        <li>Declarative API is a natural fit for GitOps and infrastructure as code.</li>
+        <li>Unmatched ecosystem: meshes, operators, observability, policy, ML, serverless.</li>
+        <li>Managed offerings from every cloud reduce the operations burden.</li>
+        <li>Largest talent pool and knowledge base in the industry.</li>
+        <li>Extensible to the core; you are never blocked waiting for upstream.</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4 class="minus">Weaknesses</h4>
+      <ul>
+        <li>Steep learning curve; developers must understand infrastructure concepts.</li>
+        <li>Verbose configuration; an app needs many YAML objects to be production-ready.</li>
+        <li>No batteries included: ingress, logging, secrets, CI must all be chosen and assembled.</li>
+        <li>Frequent releases and deprecations create ongoing upgrade toil.</li>
+        <li>Easy to build an insecure or unreliable cluster; many defaults are permissive.</li>
+        <li>Complexity tends to leak upward to application teams unless a platform team absorbs it.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 8 CHOOSING ===================== -->
+<section class="page">
+  <h2><span class="num">8</span>Choosing between them</h2>
+  <p>The honest answer in 2026 is that most new platforms are built on Kubernetes, and the real question is <em>which developer experience you put on top of it</em>. Cloud Foundry remains an excellent answer where it is already installed, where the workload shape fits, and where the organisation values guardrails over flexibility.</p>
+
+  <div class="decide">
+    <div class="box cf">
+      <h4>Lean towards Cloud Foundry when…</h4>
+      <ul>
+        <li>Your fleet is mostly stateless web services and APIs.</li>
+        <li>You want developers to never see a Dockerfile or YAML.</li>
+        <li>Compliance requires strong, uniform guardrails across hundreds of teams.</li>
+        <li>You already run CF and it is meeting your needs.</li>
+        <li>A single vendor with a supported, integrated product is preferred.</li>
+        <li>You can run Korifi and get both CF ergonomics and a Kubernetes substrate.</li>
+      </ul>
+    </div>
+    <div class="box k8s">
+      <h4>Lean towards Kubernetes when…</h4>
+      <ul>
+        <li>Workloads include stateful services, batch, ML, GPUs or anything unusual.</li>
+        <li>You want one substrate for everything, including third-party software.</li>
+        <li>GitOps and declarative infrastructure are part of your culture.</li>
+        <li>You have (or will build) a platform team to curate the stack.</li>
+        <li>Hiring, community and long-term ecosystem momentum matter.</li>
+        <li>You are starting fresh with no existing platform investment.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>A pragmatic middle path</h3>
+  <p>Treat Kubernetes as the operating system and buy or build the application platform on top. Options in rising order of effort: a managed PaaS-on-k8s (OpenShift, Tanzu Application Platform), an open-source layer (Korifi, Knative plus Cloud Native Buildpacks), or a bespoke internal developer platform stitched from Backstage, ArgoCD, Crossplane and Helm. Whatever you pick, the goal is the same one Cloud Foundry set in 2011: a developer should be able to push code and walk away.</p>
+</section>
+
+<!-- ===================== 9 GLOSSARY ===================== -->
+<section>
+  <div class="glossary-wrap">
+  <h2><span class="num">9</span>Glossary</h2>
+  <div class="two">
+    <dl class="glossary">
+      <dt>BOSH</dt><dd>Cloud Foundry's tool for deploying and managing the platform's own VMs across any IaaS.</dd>
+      <dt>Buildpack</dt><dd>A script set that detects an app's language, installs dependencies and produces a runnable image. Now standardised as Cloud Native Buildpacks.</dd>
+      <dt>CNCF</dt><dd>Cloud Native Computing Foundation, home of Kubernetes, Prometheus, Envoy, Buildpacks and many more.</dd>
+      <dt>CRD</dt><dd>Custom Resource Definition; the mechanism for adding new object types to the Kubernetes API.</dd>
+      <dt>Diego</dt><dd>Cloud Foundry's container scheduler and runtime layer.</dd>
+      <dt>Droplet</dt><dd>The staged, ready-to-run artefact a buildpack produces from source in Cloud Foundry.</dd>
+      <dt>Gorouter</dt><dd>Cloud Foundry's built-in HTTP router that maps routes to app instances.</dd>
+      <dt>HPA</dt><dd>Horizontal Pod Autoscaler; scales Kubernetes replicas on metrics.</dd>
+      <dt>IDP</dt><dd>Internal Developer Platform; an organisation's curated, self-service layer over raw infrastructure.</dd>
+      <dt>Ingress</dt><dd>Kubernetes object describing external HTTP routing; requires a controller to act on it.</dd>
+      <dt>Korifi</dt><dd>Cloud Foundry's Kubernetes-native reimplementation, exposing the CF API as CRDs.</dd>
+      <dt>Loggregator</dt><dd>Cloud Foundry's log and metric streaming subsystem.</dd>
+      <dt>OCI image</dt><dd>The standard container image format consumed by Docker, containerd, Kubernetes and Cloud Foundry alike.</dd>
+      <dt>Operator</dt><dd>A Kubernetes controller that manages a complex application (often stateful) using CRDs.</dd>
+      <dt>Org / Space</dt><dd>Cloud Foundry's two-level tenancy hierarchy for grouping apps, users and quotas.</dd>
+      <dt>Pod</dt><dd>The smallest deployable unit in Kubernetes: one or more containers sharing network and storage.</dd>
+      <dt>Service broker</dt><dd>An Open Service Broker API implementation that provisions and binds backing services in CF.</dd>
+      <dt>Twelve-factor app</dt><dd>A methodology for building portable, stateless, config-from-environment services; the workload shape CF was designed for.</dd>
+      <dt>UAA</dt><dd>User Account and Authentication; Cloud Foundry's OAuth2 identity server.</dd>
+    </dl>
+  </div>
+  </div>
+</section>
+
+</body>
+</html>
