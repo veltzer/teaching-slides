@@ -22,12 +22,12 @@ version: 0.0.1
 ![build](https://github.com/veltzer/teaching-slides/workflows/build/badge.svg)
 ## Slide numbers
 
-- Currently there are 142 courses in this repo.
+- Currently there are 143 courses in this repo.
 - Currently there are 47 lectures in this repo.
 - Currently there are 1657 marp files in this repo.
-- Currently there are 38681 marp slides in this repo.
+- Currently there are 39215 marp slides in this repo.
 - Currently there are 5344 SVG diagrams in this repo.
-- Currently there are 825 tables in this repo.
+- Currently there are 826 tables in this repo.
 
 ## contact me
 
