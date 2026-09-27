@@ -1041,3 +1041,73 @@ strings /evidence/crash_dump.core | grep -iE \
 ## Binary Analysis Techniques
 
 ![binary_analysis_techniques](svg/courses/security/linux-forensics/10_advanced_linux_analysis/binary_analysis_techniques.svg)
+
+---
+
+## `ftrace` - Kernel Function Tracing
+
+- `ftrace` traces kernel functions, complementing user-space `strace`
+- Lives in `/sys/kernel/debug/tracing` (or `/sys/kernel/tracing`)
+- Forensically useful for seeing which kernel paths a suspicious process drives
+- Read-only observation on a live system: no code loaded into the kernel
+
+```bash
+# Mount the tracing filesystem if needed
+mount -t tracefs nodev /sys/kernel/tracing
+cd /sys/kernel/tracing
+
+# List available tracers
+cat available_tracers
+# function function_graph nop ...
+
+# See which kernel functions can be traced
+wc -l available_filter_functions
+```
+
+---
+
+## `ftrace` - Function Graph for Forensics
+
+```bash
+cd /sys/kernel/tracing
+
+# Choose the call-graph tracer
+echo function_graph > current_tracer
+
+# Limit to one process under investigation
+echo $SUSPECT_PID > set_ftrace_pid
+
+# Capture, then stop
+echo 1 > tracing_on ; sleep 2 ; echo 0 > tracing_on
+
+# Read the ordered call graph
+cat trace | head -40
+```
+
+- Reveals file, network, and module operations at the kernel boundary
+- Pair with `strace` output to corroborate what a process claimed to do
+- Reset with `echo nop > current_tracer` when finished
+
+---
+
+## `ftrace` - Watching Specific Kernel Events
+
+```bash
+cd /sys/kernel/tracing
+
+# Trace only the execve family (program launches)
+echo function > current_tracer
+echo '*execve*' > set_ftrace_filter
+echo 1 > tracing_on
+
+# Trace kernel module load/unload paths
+echo 'do_init_module' > set_ftrace_filter
+echo 'free_module' >> set_ftrace_filter
+
+# Inspect the results
+cat trace_pipe
+```
+
+- Narrowing the filter keeps the buffer readable during triage
+- Module load/unload tracing helps spot late-loading kernel implants
+- On a seized image, the equivalent evidence is the kernel ring buffer (`dmesg`)

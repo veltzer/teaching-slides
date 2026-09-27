@@ -34,7 +34,7 @@ audience:
 
 ## Autopsy Overview
 
-![autopsy_overview](svg/courses/security/linux-forensics/13_reporting_tools/autopsy_overview.svg)
+![autopsy_overview](svg/courses/security/linux-forensics/15_reporting_tools/autopsy_overview.svg)
 
 ---
 
@@ -115,7 +115,7 @@ Creating a New Case:
 
 ## Autopsy File Analysis
 
-![autopsy_file_analysis](svg/courses/security/linux-forensics/13_reporting_tools/autopsy_file_analysis.svg)
+![autopsy_file_analysis](svg/courses/security/linux-forensics/15_reporting_tools/autopsy_file_analysis.svg)
 
 ---
 
@@ -262,7 +262,7 @@ Generated HTML Report:
 
 ## Dradis Framework Overview
 
-![dradis_framework_overview](svg/courses/security/linux-forensics/13_reporting_tools/dradis_framework_overview.svg)
+![dradis_framework_overview](svg/courses/security/linux-forensics/15_reporting_tools/dradis_framework_overview.svg)
 
 ---
 
@@ -429,7 +429,7 @@ Steps:
 
 ## Dradis Collaboration Features
 
-![dradis_collaboration_features](svg/courses/security/linux-forensics/13_reporting_tools/dradis_collaboration_features.svg)
+![dradis_collaboration_features](svg/courses/security/linux-forensics/15_reporting_tools/dradis_collaboration_features.svg)
 
 ---
 
@@ -732,12 +732,14 @@ Required Deliverables:
 
 ### Day 4: Analysis
 - Image analysis with The Sleuth Kit
-- `strace`, `ltrace`, `GDB` for advanced analysis
-- Volatile memory analysis with Volatility
+- `strace`, `ltrace`, `ftrace`, `GDB` for advanced analysis
+- Volatile memory analysis and syscall-hook detection
+- Network forensics from `pcap` evidence
 
-### Day 5: Reporting
-- Report structure and documentation
-- Autopsy and Dradis for report generation
+### Day 5: Reporting and Capstone
+- Anti-forensics detection and countermeasures
+- Report structure, Autopsy, and Dradis
+- Capstone investigation of a compromised system
 
 ---
 
@@ -799,7 +801,7 @@ curl -X POST http://localhost:9000/api/case \
 
 ## MITRE ATT&CK Mapping in Reports
 
-![mitre_att_ck_mapping_in_reports](svg/courses/security/linux-forensics/13_reporting_tools/mitre_att_ck_mapping_in_reports.svg)
+![mitre_att_ck_mapping_in_reports](svg/courses/security/linux-forensics/15_reporting_tools/mitre_att_ck_mapping_in_reports.svg)
 
 ---
 
@@ -1054,10 +1056,10 @@ Deliverables:
 
 ## Timeline Visualization
 
-![timeline_visualization](svg/courses/security/linux-forensics/13_reporting_tools/timeline_visualization.svg)
+![timeline_visualization](svg/courses/security/linux-forensics/15_reporting_tools/timeline_visualization.svg)
 
 ---
 
 ## Evidence Preservation Tools
 
-![evidence_preservation_tools](svg/courses/security/linux-forensics/13_reporting_tools/evidence_preservation_tools.svg)
+![evidence_preservation_tools](svg/courses/security/linux-forensics/15_reporting_tools/evidence_preservation_tools.svg)

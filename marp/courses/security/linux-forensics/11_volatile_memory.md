@@ -870,3 +870,61 @@ EOF
 ## Volatility Framework Overview
 
 ![volatility_framework_overview](svg/courses/security/linux-forensics/11_volatile_memory/volatility_framework_overview.svg)
+
+---
+
+## Kernel Rootkits: Syscall Hooking
+
+- Kernel rootkits hide by intercepting the paths the OS uses to answer queries
+- A hooked `getdents64` hides files; a hooked `tcp4_seq_show` hides connections
+- The kernel's own tables are overwritten to point at attacker code
+- Memory forensics detects this by comparing tables against known-good values
+
+```output
+Legitimate:  sys_call_table[__NR_getdents64] -> 0xffffffff8130a2b0 (kernel)
+Hooked:      sys_call_table[__NR_getdents64] -> 0xffffffffc0a41000 (module)
+```
+
+- An entry pointing outside the kernel text segment is the red flag
+- The same idea covers the IDT, the VFS operations, and network `seq_show` hooks
+
+---
+
+## Detecting Syscall Hooks with Volatility 3
+
+```bash
+# Verify the system call table entry-by-entry
+vol -f /evidence/ram.lime linux.check_syscall
+
+# Verify network protocol handler structures
+vol -f /evidence/ram.lime linux.check_afinfo
+
+# Verify the interrupt descriptor table
+vol -f /evidence/ram.lime linux.check_idt
+
+# Verify credential structures for tampering
+vol -f /evidence/ram.lime linux.check_creds
+```
+
+- Each plugin flags handlers that resolve outside legitimate kernel modules
+- `check_syscall` is the first stop when files or processes seem to be hidden
+- A HOOKED verdict names the offending address to chase in `linux.lsmod`
+
+---
+
+## Correlating Hooks with Hidden Modules
+
+```bash
+# Modules the kernel admits to
+vol -f /evidence/ram.lime linux.lsmod
+
+# Modules present in memory but unlinked from the list
+vol -f /evidence/ram.lime linux.hidden_modules
+
+# Tie a hooking address back to the module that owns it
+vol -f /evidence/ram.lime linux.kmsg | grep -i taint
+```
+
+- A hidden module plus an out-of-range syscall pointer is strong rootkit evidence
+- `hidden_modules` finds modules that unlinked themselves from `lsmod`
+- Record the offending address, owning module, and hidden objects for the report

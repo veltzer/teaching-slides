@@ -33,7 +33,7 @@ audience:
 
 ## Report Audience
 
-![report_audience](svg/courses/security/linux-forensics/12_report_writing/report_audience.svg)
+![report_audience](svg/courses/security/linux-forensics/14_report_writing/report_audience.svg)
 
 ---
 
@@ -729,7 +729,7 @@ After Testimony:
 
 ## Incident Response Report vs Legal Report
 
-![incident_response_report_vs_legal_report](svg/courses/security/linux-forensics/12_report_writing/incident_response_report_vs_legal_report.svg)
+![incident_response_report_vs_legal_report](svg/courses/security/linux-forensics/14_report_writing/incident_response_report_vs_legal_report.svg)
 
 ---
 
@@ -800,7 +800,7 @@ Types of Visualizations:
 
 ## Multi-Evidence Correlation
 
-![multi_evidence_correlation](svg/courses/security/linux-forensics/12_report_writing/multi_evidence_correlation.svg)
+![multi_evidence_correlation](svg/courses/security/linux-forensics/14_report_writing/multi_evidence_correlation.svg)
 
 ---
 
@@ -975,10 +975,10 @@ Resources to Follow:
 
 ## Report Writing Principles
 
-![report_writing_principles](svg/courses/security/linux-forensics/12_report_writing/report_writing_principles.svg)
+![report_writing_principles](svg/courses/security/linux-forensics/14_report_writing/report_writing_principles.svg)
 
 ---
 
 ## Case Documentation
 
-![case_documentation](svg/courses/security/linux-forensics/12_report_writing/case_documentation.svg)
+![case_documentation](svg/courses/security/linux-forensics/14_report_writing/case_documentation.svg)
