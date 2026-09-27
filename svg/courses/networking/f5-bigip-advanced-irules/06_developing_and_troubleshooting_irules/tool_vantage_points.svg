@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect x="40" y="200" width="260" height="220" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="170.0" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Client</text>
+  <text x="170.0" y="315.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">browser</text>
+  <text x="170.0" y="350.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">curl</text>
+  <rect x="340" y="40" width="240" height="120" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="460.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Fiddler</text>
+  <text x="460.0" y="106.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">intercepting proxy</text>
+  <text x="460.0" y="137.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">edit and replay</text>
+  <line x1="300" y1="300" x2="480" y2="300" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <text x="390.0" y="292.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">client VLAN</text>
+  <rect x="480" y="200" width="380" height="220" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="670.0" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">BIG-IP / TMM</text>
+  <text x="670.0" y="315.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">iRule runs here</text>
+  <text x="670.0" y="350.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">log local0.</text>
+  <line x1="860" y1="300" x2="1040" y2="300" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <text x="950.0" y="292.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">server VLAN</text>
+  <rect x="1040" y="200" width="200" height="220" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1140.0" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Pool member</text>
+  <text x="1140.0" y="333.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">web server</text>
+  <rect x="340" y="480" width="260" height="140" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="470.0" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-text)">tcpdump client side</text>
+  <text x="470.0" y="570.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">what was sent</text>
+  <rect x="760" y="480" width="260" height="140" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="890.0" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-text)">tcpdump server side</text>
+  <text x="890.0" y="570.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">what was changed</text>
+  <rect x="600" y="40" width="260" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="730.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">/var/log/ltm</text>
+  <text x="730.0" y="121.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">errors and log lines</text>
+  <line x1="390" y1="160" x2="390" y2="300" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="8 6"/>
+  <line x1="390" y1="420" x2="390" y2="480" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="8 6"/>
+  <line x1="950" y1="420" x2="950" y2="480" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="8 6"/>
+  <line x1="730" y1="160" x2="730" y2="200" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="8 6"/>
+  <rect x="1040" y="480" width="200" height="140" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1140.0" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Wireshark</text>
+  <text x="1140.0" y="570.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">reads the pcap</text>
+  <line x1="1020" y1="550" x2="1040" y2="550" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

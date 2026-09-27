@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect x="40" y="240" width="240" height="200" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160.0" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">iRule in TMM</text>
+  <text x="160.0" y="346.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">log</text>
+  <text x="160.0" y="377.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">HSL::send</text>
+  <line x1="280" y1="300" x2="420" y2="160" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+  <text x="360.0" y="230.0" text-anchor="start" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">log</text>
+  <rect x="420" y="40" width="300" height="220" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="570.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">syslog-ng on host</text>
+  <text x="570.0" y="156.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">context switch</text>
+  <text x="570.0" y="187.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">string formatting</text>
+  <line x1="720" y1="150" x2="900" y2="150" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+  <rect x="900" y="40" width="340" height="220" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">/var/log/ltm</text>
+  <text x="1070.0" y="140.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">local disk</text>
+  <text x="1070.0" y="171.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">rotation</text>
+  <text x="1070.0" y="202.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">slow</text>
+  <line x1="280" y1="380" x2="420" y2="500" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="360.0" y="440.0" text-anchor="start" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">HSL</text>
+  <rect x="420" y="400" width="300" height="220" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="570.0" y="426" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">TMM socket</text>
+  <text x="570.0" y="516.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">UDP or TCP</text>
+  <text x="570.0" y="547.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">no host, no disk</text>
+  <line x1="720" y1="510" x2="900" y2="510" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <rect x="900" y="400" width="340" height="220" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070.0" y="426" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Remote collector pool</text>
+  <text x="1070.0" y="516.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">syslog, SIEM</text>
+  <text x="1070.0" y="547.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">line rate</text>
+</svg>

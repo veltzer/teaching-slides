@@ -407,9 +407,10 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [ ] mlflow
 - [ ] nlp_with_transformers
 
-## networking (1/16)
+## networking (4/17)
 
 - [ ] dns_deep_dive
+- [x] f5_bigip_advanced_irules — 8 chapters + title; 16h advanced; 29 SVGs; build clean
 - [x] graphql — 12 chapters + title; intermediate; build clean
 - [ ] grpc
 - [ ] http2_and_http3
