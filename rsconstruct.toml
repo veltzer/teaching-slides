@@ -15,9 +15,6 @@ src_extensions = [".svg"]
 src_dirs = ["svg"]
 batch = true
 
-[processor.svglint]
-src_dirs = ["svg"]
-
 [processor.script.check_md]
 command = "scripts/check_md.py"
 src_extensions = [".md"]
@@ -117,6 +114,11 @@ src_files = ["CLAUDE.md", "README.md"]
 [processor.yamllint]
 src_dirs = ["resources"]
 src_files = ["text_labels.yaml"]
+
+# ─── json ────────────────────────────────────────────────────────────────────
+
+[processor.ijsonlint]
+src_files = ["package.json"]
 
 # ─── xml / svg ───────────────────────────────────────────────────────────────
 
