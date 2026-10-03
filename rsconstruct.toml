@@ -50,9 +50,13 @@ max_jobs = 2
 [processor.ruff]
 src_dirs = ["scripts"]
 
-[processor.stylelint]
+# Design-token rules (biome GritQL plugin) from the shared-themes submodule:
+# stylesheets must use its var(--<role>) tokens instead of raw colors.
+[processor.biome]
 src_dirs = ["resources"]
 src_extensions = [".css"]
+args = ["--config-path", "shared/shared-themes/biome-tokens.jsonc"]
+dep_inputs = ["shared/shared-themes/biome-tokens.jsonc", "shared/shared-themes/design-tokens.grit"]
 
 [processor.zspell]
 src_dirs = ["marp"]
@@ -114,10 +118,6 @@ src_files = ["CLAUDE.md", "README.md"]
 src_dirs = ["resources"]
 src_files = ["text_labels.yaml"]
 
-# ─── json ────────────────────────────────────────────────────────────────────
-
-[processor.ijsonlint]
-src_files = ["package.json", ".stylelintrc.json"]
 # ─── xml / svg ───────────────────────────────────────────────────────────────
 
 [processor.xmllint]
@@ -132,6 +132,11 @@ src_dirs = ["config"]
 
 [processor.tidy]
 src_dirs = ["resources", "to_integrate"]
+# The index pages use Material Web components (<md-outlined-select>, ...),
+# which are valid HTML5 custom elements tidy only accepts with custom-tags,
+# and a CSS-drawn toggle built from an empty <span>, which is valid HTML that
+# tidy would otherwise warn it might trim.
+args = ["--custom-tags", "blocklevel", "--drop-empty-elements", "no"]
 
 # ─── javascript ──────────────────────────────────────────────────────────────
 
