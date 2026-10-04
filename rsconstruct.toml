@@ -2,20 +2,20 @@
 # src_dirs entries name directories; "." (the whole tree) is a config error
 reject_dot_src_dirs = true
 
-[processor.tera]
+[processor.generator.tera]
 src_dirs = ["tera.templates"]
 dep_inputs = [
     "config/project.lua",
     "config/personal.lua",
 ]
 
-[processor.script.check_svg]
+[processor.checker.script.check_svg]
 command = "scripts/check_svg.py"
 src_extensions = [".svg"]
 src_dirs = ["svg"]
 batch = true
 
-[processor.script.check_md]
+[processor.checker.script.check_md]
 command = "scripts/check_md.py"
 src_extensions = [".md"]
 src_dirs = ["marp"]
@@ -23,9 +23,9 @@ batch = true
 
 # Per-chapter course PDFs are only inputs for ipdfunite merging; they render
 # outside _site so the published site carries only the united course PDFs.
-# Note: paths under out/marp would be remapped to out/marp.courses by the
+# Note: paths under out/processor.generator.marp would be remapped to out/processor.generator.marp.courses by the
 # named-instance output_dir rule, hence out/chapters.
-[processor.marp.courses]
+[processor.generator.marp.courses]
 formats = [ "pdf" ]
 src_dirs = ["marp/courses"]
 output_dir = "out/chapters/courses"
@@ -36,7 +36,7 @@ timeout_secs = 120
 max_jobs = 2
 
 # Standalone lectures have no united PDF; the site links them individually.
-[processor.marp.lectures]
+[processor.generator.marp.lectures]
 formats = [ "pdf" ]
 src_dirs = ["marp/lectures"]
 output_dir = "_site/marp/lectures"
@@ -44,26 +44,26 @@ timeout_secs = 120
 # See the max_jobs note on marp.courses.
 max_jobs = 2
 
-[processor.ruff]
+[processor.checker.ruff]
 src_dirs = ["scripts"]
 
 # Design-token rules (biome GritQL plugin) from the shared-themes submodule:
 # stylesheets must use its var(--<role>) tokens instead of raw colors.
-[processor.biome]
+[processor.checker.biome]
 src_dirs = ["resources"]
 src_extensions = [".css"]
 args = ["--config-path", "shared/shared-themes/biome-tokens.jsonc"]
 dep_inputs = ["shared/shared-themes/biome-tokens.jsonc", "shared/shared-themes/design-tokens.grit"]
 
-[processor.zspell]
+[processor.checker.zspell]
 src_dirs = ["marp"]
 
-[processor.ipdfunite]
+[processor.generator.ipdfunite]
 src_dirs = ["marp/courses"]
 output_dir = "_site/pdfunite"
 source_output_dir = "out/chapters"
 
-[processor.explicit]
+[processor.explicit.generic]
 command = "scripts/build_index.py"
 inputs = [
     "resources/courses_index_material_web.html",
@@ -90,7 +90,7 @@ output_dirs = [ "_site" ]
 
 [analyzer.python]
 
-[processor.terms]
+[processor.checker.terms]
 dir_terms_unambiguous = "shared/shared-terms/unambiguous"
 dir_terms_ambiguous = "shared/shared-terms/ambiguous"
 src_dirs = [ "marp" ]
@@ -100,39 +100,39 @@ enabled = false
 dir = "_site"
 
 # lint the GitHub Actions workflow files with actionlint
-[processor.actionlint]
+[processor.checker.actionlint]
 src_dirs = [".github/workflows"]
 
 # ─── markdown ────────────────────────────────────────────────────────────────
 
-[processor.rumdl]
+[processor.checker.rumdl]
 src_dirs = ["doc", "marp"]
 src_files = ["CLAUDE.md", "README.md"]
 
 # ─── yaml ────────────────────────────────────────────────────────────────────
 
-[processor.yamllint]
+[processor.checker.yamllint]
 src_dirs = ["resources"]
 src_files = ["text_labels.yaml"]
 
 # ─── json ────────────────────────────────────────────────────────────────────
 
-[processor.ijsonlint]
+[processor.checker.ijsonlint]
 src_files = ["package.json"]
 
 # ─── xml / svg ───────────────────────────────────────────────────────────────
 
-[processor.xmllint]
+[processor.checker.xmllint]
 src_dirs = ["svg", "to_integrate"]
 
 # ─── lua ─────────────────────────────────────────────────────────────────────
 
-[processor.luacheck]
+[processor.checker.luacheck]
 src_dirs = ["config"]
 
 # ─── html ────────────────────────────────────────────────────────────────────
 
-[processor.tidy]
+[processor.checker.tidy]
 src_dirs = ["resources", "to_integrate"]
 # The index pages use Material Web components (<md-outlined-select>, ...),
 # which are valid HTML5 custom elements tidy only accepts with custom-tags,
@@ -142,12 +142,12 @@ args = ["--custom-tags", "blocklevel", "--drop-empty-elements", "no"]
 
 # ─── javascript ──────────────────────────────────────────────────────────────
 
-[processor.oxlint]
+[processor.checker.oxlint]
 src_dirs = ["resources"]
 src_files = [".marprc.mjs"]
 args = ["-c", ".oxlintrc.json"]
 
-[processor.tags]
+[processor.generator.tags]
 # Validates the marp decks' front-matter against the shared vocabulary, the
 # same lists teaching-syllabi and business-syllabi validate against.
 # tags_dir defaults to "tags", so the submodule location must be named.
