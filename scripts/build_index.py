@@ -8,14 +8,16 @@ counts slides per entry, and generates a self-contained index.html with
 filtering, sorting, folder navigation, and PDF download links.
 
 Usage:
-    ./scripts/build_index.py [--source-dir DIR] [--lectures-dir DIR] [--output-dir DIR] [--source-ext EXT] [--out FILE]
+    ./scripts/build_index.py [--source-dir DIR] [--lectures-dir DIR] [--output-dir DIR] [--marp-output-dir DIR] [--source-ext EXT] [--out FILE]
 
-Defaults match rsconstruct's pdfunite processor defaults:
-    --source-dir   marp/courses
-    --lectures-dir marp/lectures
-    --output-dir   out/pdfunite
-    --source-ext   .md
-    --out          _site/index.html
+Defaults match where this repo's rsconstruct.toml puts things
+([processor.generator.ipdfunite] and [processor.generator.marp.lectures]):
+    --source-dir      marp/courses
+    --lectures-dir    marp/lectures
+    --output-dir      _site/pdfunite
+    --marp-output-dir _site/marp
+    --source-ext      .md
+    --out             _site/index.html
 """
 
 import argparse
