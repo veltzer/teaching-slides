@@ -71,7 +71,7 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 | wifi | 1 | 0 | 1 |
 | **TOTAL** | **50** | **346** | **396** |
 
-## ai (3/16)
+## ai (4/17)
 
 - [x] advanced_ai_powered_development
 - [ ] ai_agents_development
@@ -81,6 +81,7 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 - [ ] explainable_ai
 - [ ] federated_learning
 - [x] generative_ai_applications
+- [x] github_copilot_in_practice — 9 chapters + title; 16h intermediate; 35 SVGs; build clean
 - [ ] llm_fine_tuning_and_prompt_engineering
 - [ ] mlops
 - [ ] nlp_with_python
