@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect x="40.0" y="200.0" width="240.0" height="180.0" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160.0" y="272.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Problem</text>
+  <text x="160.0" y="297.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">symptom on</text>
+  <text x="160.0" y="321.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">BIG-IP</text>
+  <rect x="360.0" y="200.0" width="240.0" height="180.0" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480.0" y="272.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">qkview</text>
+  <text x="480.0" y="297.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">tmsh run</text>
+  <text x="480.0" y="321.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">util qkview</text>
+  <rect x="680.0" y="200.0" width="240.0" height="180.0" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="800.0" y="272.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">iHealth</text>
+  <text x="800.0" y="297.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">diagnostics</text>
+  <text x="800.0" y="321.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">and heuristics</text>
+  <rect x="1000.0" y="40.0" width="240.0" height="160.0" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120.0" y="102.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">AskF5</text>
+  <text x="1120.0" y="127.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">K articles</text>
+  <text x="1120.0" y="151.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">fixes, CVEs</text>
+  <rect x="1000.0" y="380.0" width="240.0" height="160.0" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120.0" y="442.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Support case</text>
+  <text x="1120.0" y="467.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">attach qkview</text>
+  <text x="1120.0" y="491.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">case number</text>
+  <line x1="280.0" y1="290.0" x2="360.0" y2="290.0" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="320.0" y="282.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">collect</text>
+  <line x1="600.0" y1="290.0" x2="680.0" y2="290.0" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640.0" y="282.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">upload</text>
+  <line x1="920.0" y1="260.0" x2="1000.0" y2="120.0" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="960.0" y="182.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">known issue</text>
+  <line x1="920.0" y1="320.0" x2="1000.0" y2="460.0" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+  <text x="960.0" y="414.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">still stuck</text>
+  <text x="640.0" y="610.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text-muted)">search AskF5 first, open a case with a qkview attached</text>
+  <line x1="40.0" y1="620.0" x2="1240.0" y2="620.0" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="8 6"/>
+</svg>

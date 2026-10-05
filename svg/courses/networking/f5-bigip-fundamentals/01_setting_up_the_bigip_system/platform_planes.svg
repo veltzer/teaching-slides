@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect x="40.0" y="40.0" width="1200.0" height="250.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="70.0" y="75.0" text-anchor="start" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text-muted)">Data plane</text>
+  <rect x="80.0" y="100.0" width="250.0" height="160.0" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.0" y="162.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">TMM 0</text>
+  <text x="205.0" y="187.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">one per CPU core</text>
+  <text x="205.0" y="211.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">own TCP/IP stack</text>
+  <rect x="370.0" y="100.0" width="250.0" height="160.0" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495.0" y="162.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">TMM 1</text>
+  <text x="495.0" y="187.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">one per CPU core</text>
+  <text x="495.0" y="211.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">own TCP/IP stack</text>
+  <rect x="660.0" y="100.0" width="250.0" height="160.0" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785.0" y="162.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">TMM 2</text>
+  <text x="785.0" y="187.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">one per CPU core</text>
+  <text x="785.0" y="211.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">own TCP/IP stack</text>
+  <rect x="950.0" y="100.0" width="250.0" height="160.0" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1075.0" y="162.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">TMM 3</text>
+  <text x="1075.0" y="187.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">one per CPU core</text>
+  <text x="1075.0" y="211.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">own TCP/IP stack</text>
+  <rect x="40.0" y="370.0" width="1200.0" height="250.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="70.0" y="405.0" text-anchor="start" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text-muted)">Control plane (Linux host)</text>
+  <rect x="80.0" y="430.0" width="250.0" height="150.0" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.0" y="499.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">mcpd</text>
+  <text x="205.0" y="524.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">config database</text>
+  <rect x="370.0" y="430.0" width="250.0" height="150.0" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495.0" y="499.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">httpd</text>
+  <text x="495.0" y="524.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">web GUI</text>
+  <rect x="660.0" y="430.0" width="250.0" height="150.0" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785.0" y="499.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">bigd</text>
+  <text x="785.0" y="524.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">health monitors</text>
+  <rect x="950.0" y="430.0" width="250.0" height="150.0" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1075.0" y="499.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">tmsh / SSH</text>
+  <text x="1075.0" y="524.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">CLI access</text>
+  <line x1="640.0" y1="430.0" x2="640.0" y2="260.0" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+  <text x="650.0" y="337.0" text-anchor="start" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">config pushed to TMM</text>
+</svg>

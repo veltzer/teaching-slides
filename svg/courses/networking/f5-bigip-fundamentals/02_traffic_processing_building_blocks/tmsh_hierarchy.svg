@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect x="500.0" y="40.0" width="280.0" height="70.0" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0" y="81.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">(tmos)#</text>
+  <rect x="40.0" y="180.0" width="270.0" height="70.0" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="175.0" y="222.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">ltm</text>
+  <line x1="640.0" y1="110.0" x2="175.0" y2="180.0" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="70.0" y="290.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="175.0" y="325.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">pool</text>
+  <rect x="70.0" y="370.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="175.0" y="405.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">virtual</text>
+  <rect x="70.0" y="450.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="175.0" y="485.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">node</text>
+  <rect x="70.0" y="530.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="175.0" y="565.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">monitor</text>
+  <line x1="55.0" y1="250.0" x2="55.0" y2="560.0" stroke="var(--text-muted)" stroke-width="2"/>
+  <rect x="350.0" y="180.0" width="270.0" height="70.0" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485.0" y="222.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">net</text>
+  <line x1="640.0" y1="110.0" x2="485.0" y2="180.0" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="380.0" y="290.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="485.0" y="325.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">vlan</text>
+  <rect x="380.0" y="370.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="485.0" y="405.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">self</text>
+  <rect x="380.0" y="450.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="485.0" y="485.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">route</text>
+  <rect x="380.0" y="530.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="485.0" y="565.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">interface</text>
+  <line x1="365.0" y1="250.0" x2="365.0" y2="560.0" stroke="var(--text-muted)" stroke-width="2"/>
+  <rect x="660.0" y="180.0" width="270.0" height="70.0" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="795.0" y="222.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">sys</text>
+  <line x1="640.0" y1="110.0" x2="795.0" y2="180.0" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="690.0" y="290.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="795.0" y="325.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">ntp</text>
+  <rect x="690.0" y="370.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="795.0" y="405.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">dns</text>
+  <rect x="690.0" y="450.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="795.0" y="485.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">ucs</text>
+  <rect x="690.0" y="530.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="795.0" y="565.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">config</text>
+  <line x1="675.0" y1="250.0" x2="675.0" y2="560.0" stroke="var(--text-muted)" stroke-width="2"/>
+  <rect x="970.0" y="180.0" width="270.0" height="70.0" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105.0" y="222.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">cm</text>
+  <line x1="640.0" y1="110.0" x2="1105.0" y2="180.0" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1000.0" y="290.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1105.0" y="325.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">device</text>
+  <rect x="1000.0" y="370.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1105.0" y="405.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">device-group</text>
+  <rect x="1000.0" y="450.0" width="210.0" height="60.0" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1105.0" y="485.8" text-anchor="middle" font-family="Courier New, monospace" font-size="18" fill="var(--text)">trust-domain</text>
+  <line x1="985.0" y1="250.0" x2="985.0" y2="480.0" stroke="var(--text-muted)" stroke-width="2"/>
+  <text x="640.0" y="620.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-muted)">module  &gt;  component  &gt;  object</text>
+</svg>
