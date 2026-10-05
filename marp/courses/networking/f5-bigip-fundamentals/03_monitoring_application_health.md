@@ -101,7 +101,7 @@ audience:
 
 ---
 
-## Built In Monitors
+## Built In Address and Service Monitors
 
 | Monitor | Probe | Default interval | Default timeout |
 | --- | --- | --- | --- |
@@ -109,6 +109,13 @@ audience:
 | `icmp` | `ICMP` echo | 5s | 16s |
 | `tcp` | Open `TCP` connection, optional send/receive | 5s | 16s |
 | `tcp_half_open` | `SYN`, expect `SYN-ACK`, then reset | 5s | 16s |
+
+---
+
+## Built In Content Monitors
+
+| Monitor | Probe | Default interval | Default timeout |
+| --- | --- | --- | --- |
 | `http` | `GET /`, any reply counts | 5s | 16s |
 | `https` | `GET /` over `TLS`, any reply counts | 5s | 16s |
 
