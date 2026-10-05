@@ -81,6 +81,10 @@ audience:
 | Content | Does the application answer correctly? | `http`, `https`, `ftp`, `smtp` | Medium |
 | Performance | How loaded is the server? | `snmp_dca`, `wmi` | Medium |
 
+---
+
+## Why Deeper Checks Win
+
 - Each layer proves more than the one below it
 - A server can answer `ping` while its web server is stopped
 - Prefer content checks for anything that serves users
@@ -108,13 +112,12 @@ audience:
 | `http` | `GET /`, any reply counts | 5s | 16s |
 | `https` | `GET /` over `TLS`, any reply counts | 5s | 16s |
 
-- Built in monitors cannot be modified
-- To change anything, create a custom monitor that uses one as its parent
-
 ---
 
 ## Custom Monitors
 
+- Built in monitors cannot be modified
+- To change anything, create a custom monitor that uses one as its parent
 - Local Traffic > Monitors > Create
 - Choose a type (`HTTP`, `HTTPS`, `TCP`...) and a parent monitor
 - Settings not changed are inherited from the parent
@@ -191,13 +194,20 @@ tmsh modify ltm monitor http mon_shop_http \
 
 ---
 
-## Interval and Timeout Settings
+## Probe Timing Settings
 
 | Setting | Default | Effect |
 | --- | --- | --- |
 | `interval` | 5 | Seconds between probes while the member is down or up |
 | `timeout` | 16 | Seconds without a good reply before marking down |
 | `up-interval` | 0 (disabled) | Separate, slower probe rate while the member is up |
+
+---
+
+## Recovery Settings
+
+| Setting | Default | Effect |
+| --- | --- | --- |
 | `time-until-up` | 0 | Seconds of passing probes before marking up |
 | `manual-resume` | disabled | Stay down until an operator enables the member |
 
@@ -349,13 +359,20 @@ curl -v --interface 10.1.20.245 \
 
 ---
 
-## Common Monitor Mistakes
+## Common Monitor Request Mistakes
 
 | Mistake | Symptom | Fix |
 | --- | --- | --- |
 | No receive string | Error pages keep the member up | Match a healthy response |
 | `HTTP/1.1` without `Host` | Server answers `400`, member down | Add the `Host` header |
 | Missing `\r\n\r\n` | Probe hangs until timeout | End the request with an empty line |
+
+---
+
+## Common Monitor Design Mistakes
+
+| Mistake | Symptom | Fix |
+| --- | --- | --- |
 | Timeout shorter than interval | Flapping members | Use timeout = 3 × interval + 1 |
 | Only `icmp` on a web pool | Dead web server still gets traffic | Add a content monitor |
 

@@ -320,13 +320,20 @@ openssl s_client -connect 10.1.10.100:443 -servername app.example.com \
 
 ---
 
-## Protocol Versions
+## Retired Protocol Versions
 
 | Version | Status | Recent `BIG-IP` default | Recommendation |
 | --- | --- | --- | --- |
 | `SSLv3` | Broken (`POODLE`) | Disabled | Never |
 | `TLS 1.0` | Deprecated (`RFC 8996`) | Disabled in new profiles | Disable |
 | `TLS 1.1` | Deprecated (`RFC 8996`) | Disabled in new profiles | Disable |
+
+---
+
+## Current Protocol Versions
+
+| Version | Status | Recent `BIG-IP` default | Recommendation |
+| --- | --- | --- | --- |
 | `TLS 1.2` | Current | Enabled | Enable |
 | `TLS 1.3` | Current | Off until enabled | Enable |
 

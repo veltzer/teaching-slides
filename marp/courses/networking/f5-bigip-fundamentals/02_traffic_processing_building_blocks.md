@@ -419,17 +419,24 @@ root@(bigip1)(cfg-sync Standalone)(Active)(/Common)(tmos.ltm.pool)# cd /
 
 ---
 
-## Common tmsh Verbs
+## tmsh Verbs That Read
 
 | Verb | Purpose | Example |
 | --- | --- | --- |
 | `list` | Show configuration | `list ltm pool http_pool` |
 | `show` | Show status and statistics | `show ltm virtual http_vs` |
+| `run` | Run a utility | `run util ping 10.1.20.11` |
+
+---
+
+## tmsh Verbs That Change
+
+| Verb | Purpose | Example |
+| --- | --- | --- |
 | `create` | Create a new object | `create ltm node web4 address 10.1.20.14` |
 | `modify` | Change properties | `modify ltm pool http_pool monitor tcp` |
 | `delete` | Remove an object | `delete ltm node web4` |
 | `save` / `load` | Save or load configuration | `save sys config` |
-| `run` | Run a utility | `run util ping 10.1.20.11` |
 
 ---
 
