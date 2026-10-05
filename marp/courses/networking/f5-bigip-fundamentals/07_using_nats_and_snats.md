@@ -285,6 +285,13 @@ tmsh show ltm snat snat_servers_out
 | Mapping | One to one | Many to self `IP` | Many to a few | Many to one or a few |
 | Direction | Both | Server side only | Server side only | Outbound only |
 | Attached to | Nothing | Virtual server | Virtual server or `SNAT` | Origin addresses |
+
+---
+
+## Address and Port Budget per Translation
+
+| Feature | `NAT` | `SNAT` auto map | `SNAT` pool | Standalone `SNAT` |
+| --- | --- | --- | --- | --- |
 | Extra addresses | One per host | None | One per member | One or more |
 | Port capacity | All ports | About 64,000 per self `IP` | About 64,000 per member | Depends on translation |
 
@@ -345,6 +352,13 @@ Oct  5 10:42:17 bigip1 err tmm[12034]: 01010201:3: Inet port exhaustion
 | Replace auto map with a `SNAT` pool | Each added address adds about 64,000 ports |
 | Add pool members | Each new destination `IP:port` has its own port range |
 | Shorten idle timeouts on the `SNAT` translation or `TCP` profile | Ports return to the free list sooner |
+
+---
+
+## Reducing the Demand for Ports
+
+| Mitigation | Effect |
+| --- | --- |
 | Enable `OneConnect` | Server side connections are reused across requests |
 | Route servers through `BIG-IP` and drop `SNAT` | No source translation, no shared ports |
 

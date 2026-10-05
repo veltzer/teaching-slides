@@ -166,13 +166,20 @@ tmsh modify ltm policy uri_routing create-draft
 
 ---
 
-## Actions
+## Routing Actions
 
 | Action | tmsh form | Effect |
 | --- | --- | --- |
 | Forward | `forward select pool api_pool` | Choose a pool, node or virtual server |
 | Reject | `forward reset` | Reset the connection |
 | Redirect | `http-reply redirect location ...` | Send a `302` to the client |
+
+---
+
+## Rewrite and Logging Actions
+
+| Action | tmsh form | Effect |
+| --- | --- | --- |
 | Header | `http-header insert name ... value ...` | Insert, replace or remove a header |
 | `URI` | `http-uri replace path ...` | Rewrite the path before forwarding |
 | Compression | `compress disable` | Toggle compression for this request |

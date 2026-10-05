@@ -144,15 +144,26 @@ tmsh list sys crypto cert app.example.com
 
 ---
 
-## Certificate and Key File Types
+## Text Certificate and Key Files
 
 | Format | Extension | Content | `BIG-IP` import |
 | --- | --- | --- | --- |
 | `PEM` | `.crt`, `.pem` | Base64 certificate, `BEGIN CERTIFICATE` | Certificate |
 | `PEM` key | `.key` | Base64 private key, maybe encrypted | Key |
+| Bundle | `.crt` | Several `PEM` certificates concatenated | Certificate (chain) |
+
+---
+
+## Binary Certificate and Key Files
+
+| Format | Extension | Content | `BIG-IP` import |
+| --- | --- | --- | --- |
 | `DER` | `.cer`, `.der` | Binary certificate | Convert to `PEM` first |
 | `PKCS#12` | `.pfx`, `.p12` | Certificate + key (+ chain), password protected | `PKCS 12 (IIS)` |
-| Bundle | `.crt` | Several `PEM` certificates concatenated | Certificate (chain) |
+
+---
+
+## Converting Certificate Formats
 
 ```bash
 openssl x509 -inform der -in app.cer -out app.crt
@@ -311,13 +322,17 @@ openssl s_client -connect 10.1.10.100:443 -servername app.example.com \
 
 ## Protocol Versions
 
-| Version | Status | Default on recent `BIG-IP` | Recommendation |
+| Version | Status | Recent `BIG-IP` default | Recommendation |
 | --- | --- | --- | --- |
 | `SSLv3` | Broken (`POODLE`) | Disabled | Never |
 | `TLS 1.0` | Deprecated (`RFC 8996`) | Disabled in new profiles | Disable |
 | `TLS 1.1` | Deprecated (`RFC 8996`) | Disabled in new profiles | Disable |
 | `TLS 1.2` | Current | Enabled | Enable |
 | `TLS 1.3` | Current | Off until enabled | Enable |
+
+---
+
+## Switching Versions On and Off
 
 - Versions are switched off with `options`: `no-tlsv1`, `no-tlsv1.1`
 - `TLS 1.3` is enabled by removing `no-tlsv1.3` from the options
@@ -388,14 +403,21 @@ tmsh modify ltm profile client-ssl clientssl_app ciphers none cipher-group group
 
 ---
 
-## Other Client SSL Options
+## Session Resumption Options
+
+| Setting | Default | Purpose |
+| --- | --- | --- |
+| `cache-size` / `cache-timeout` | `262144` / `3600` | Session ID cache for resumption |
+| `session-ticket` | disabled | Stateless resumption with tickets |
+| `strict-resume` | disabled | Refuse resumption after an unclean shutdown |
+
+---
+
+## Renegotiation, Client Certificates and Alerts
 
 | Setting | Default | Purpose |
 | --- | --- | --- |
 | `renegotiation` | enabled | Allow mid-session renegotiation; usually disable |
-| `cache-size` / `cache-timeout` | `262144` / `3600` | Session ID cache for resumption |
-| `session-ticket` | disabled | Stateless resumption with tickets |
-| `strict-resume` | disabled | Refuse resumption after an unclean shutdown |
 | `peer-cert-mode` | ignore | Request or require client certificates (mutual `TLS`) |
 | `alert-timeout` | indefinite | How long to wait for a close alert |
 
@@ -518,16 +540,23 @@ tmsh modify sys db log.ssl.level value Warning
 
 ---
 
-## Troubleshooting Symptoms
+## Troubleshooting Certificate Problems
 
 | Symptom | Likely cause | Check |
 | --- | --- | --- |
 | Browser warns, name mismatch | Wrong certificate or missing `SAN` | `s_client` subject, `SNI` profile |
 | Works in one browser, fails in another | Chain not configured | `-showcerts` depth |
+| Sudden outage for everyone | Expired certificate | `check-cert`, expiry dates |
+
+---
+
+## Troubleshooting Handshake Problems
+
+| Symptom | Likely cause | Check |
+| --- | --- | --- |
 | `handshake failure` alert | No shared version or cipher | `tmm --clientciphers`, profile options |
 | Old clients cannot connect | `TLS 1.0/1.1` disabled | Version counters in stats |
 | `502`/reset on re-encrypt only | Server side handshake fails | Server `SSL` stats, `server-name` |
-| Sudden outage for everyone | Expired certificate | `check-cert`, expiry dates |
 
 ---
 

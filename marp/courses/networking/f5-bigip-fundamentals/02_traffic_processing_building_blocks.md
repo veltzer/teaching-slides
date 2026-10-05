@@ -97,13 +97,20 @@ tmsh list ltm node web1
 
 ---
 
-## Virtual Server Types
+## Load Balancing Virtual Server Types
 
 | Type | What it does | Typical use |
 | --- | --- | --- |
 | Standard | Full proxy, all profiles available | `HTTP`, `HTTPS`, most applications |
 | Performance (Layer 4) | Fast path, `FastL4` profile, no `L7` | High throughput `TCP`/`UDP` |
 | Performance (`HTTP`) | Fast `HTTP` profile, limited features | Simple, very high volume `HTTP` |
+
+---
+
+## Forwarding and Reject Virtual Server Types
+
+| Type | What it does | Typical use |
+| --- | --- | --- |
 | Forwarding (`IP`) | Routes packets, no pool | Using `BIG-IP` as a router |
 | Forwarding (Layer 2) | Bridges packets between `VLAN`s | Transparent deployments |
 | Reject | Rejects matching traffic | Blocking a network or port |
@@ -117,6 +124,10 @@ tmsh list ltm node web1
 - A specific port beats the wildcard port `*` (any)
 - A source address restriction makes a virtual server more specific
 - Only enabled virtual servers on the ingress `VLAN` are candidates
+
+---
+
+## Matching Order Example
 
 | Destination | Port | Specificity |
 | --- | --- | --- |

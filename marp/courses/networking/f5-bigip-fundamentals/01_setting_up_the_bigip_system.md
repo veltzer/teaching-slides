@@ -57,13 +57,20 @@ audience:
 
 ---
 
-## BIG-IP Platforms
+## BIG-IP Hardware Platforms
 
 | Platform | Form | Typical use |
 | --- | --- | --- |
 | `iSeries` appliance | Dedicated hardware with `FPGA` offload | Data center edge, high throughput |
 | `VELOS` / `rSeries` | Chassis or appliance running tenants | Large consolidated deployments |
 | `vCMP` guest | Virtual instance on `F5` hardware | Isolating teams on shared hardware |
+
+---
+
+## BIG-IP Virtual Platforms
+
+| Platform | Form | Typical use |
+| --- | --- | --- |
 | Virtual Edition (`VE`) | VM on `VMware`, `KVM`, `Hyper-V` | Labs, private cloud |
 | `VE` in public cloud | `AWS`, `Azure`, `GCP` images | Cloud application delivery |
 
@@ -349,6 +356,7 @@ dig @10.1.1.53 www.f5.com
 - System > Archives > Create
 - Take one after initial setup and before every change window
 - Copy archives off the box: a dead box takes its archives with it
+- `UCS` with private keys can be encrypted: `passphrase` option
 
 ```bash
 tmsh save sys ucs /var/local/ucs/bigip1_initial.ucs
@@ -365,11 +373,9 @@ tmsh load sys ucs /var/local/ucs/bigip1_initial.ucs
 | Format | Compressed tar archive | Single text file |
 | Contents | Config, license, certificates, keys, users | Configuration only |
 | Restores license | Yes (same device) | No |
-| Readable and diffable | No | Yes |
+| Readable, diffable | No | Yes |
 | Typical use | Backup and disaster recovery | Templating, review, `git` |
 | Command | `tmsh save sys ucs` | `tmsh save sys config file` |
-
-- `UCS` with private keys can be encrypted: `passphrase` option
 
 ---
 

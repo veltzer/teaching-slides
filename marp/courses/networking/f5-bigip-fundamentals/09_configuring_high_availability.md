@@ -66,6 +66,13 @@ audience:
 | Traffic groups | One, active on one device | Two or more, spread over devices |
 | Normal load | One device carries all traffic | Each device carries part of it |
 | Failover result | Standby takes everything | Survivor carries both groups |
+
+---
+
+## Operating Each HA Mode
+
+| Aspect | Active-standby | Active-active |
+| --- | --- | --- |
 | Capacity planning | Simple: one box must fit all | Each box must fit the total load |
 | Troubleshooting | Easy: one place to look | Harder: traffic is split |
 | Typical use | Most deployments | Squeezing value from both boxes |
@@ -130,6 +137,13 @@ audience:
 | `ConfigSync` | Carries config changes between members | `HA` `VLAN` self `IP` |
 | Failover unicast | Heartbeats, `UDP` 1026 | `HA` `VLAN` self `IP` plus management `IP` |
 | Failover multicast | Heartbeats on hardware with serial link | Optional, management interface |
+
+---
+
+## Mirroring Addresses
+
+| Address | Purpose | Recommended setting |
+| --- | --- | --- |
 | Primary mirroring | Connection and persistence state | `HA` `VLAN` self `IP` |
 | Secondary mirroring | Backup path for mirroring | Another `VLAN` self `IP` |
 
@@ -238,6 +252,13 @@ tmsh show cm sync-status
 | Automatic Sync | Disabled | Push every change immediately to the group |
 | Full Sync | Disabled | Send the whole config instead of the changes |
 | Maximum Incremental Sync Size | 1024 KB | Above this a full sync is sent |
+
+---
+
+## Failover and Save Options
+
+| Option | Default | Meaning |
+| --- | --- | --- |
 | Network Failover | Enabled | Heartbeats over the network |
 | Save on Auto Sync | Disabled | Write config to disk after each auto sync |
 
@@ -333,6 +354,13 @@ tmsh run sys failover standby traffic-group traffic-group-2
 | In Sync | All members have the same config | None |
 | Changes Pending | One member has newer changes | Sync that member to the group |
 | Awaiting Initial Sync | New group, nothing synced yet | Sync from the device with the config |
+
+---
+
+## Sync Problem Messages
+
+| Status | Meaning | Action |
+| --- | --- | --- |
 | Not All Devices Synced | Some members lag behind | Sync, then check connectivity |
 | Sync Failure | A member rejected the change | Read `/var/log/ltm`, fix, sync again |
 | Disconnected | Peer unreachable on `ConfigSync` address | Check `HA` `VLAN`, self `IP`, port lockdown |
@@ -508,9 +536,16 @@ traffic-group-1   bigip2.lab.local   active   false
 | --- | --- | --- |
 | Both devices active | Heartbeats not reaching peer | Unicast addresses, port lockdown |
 | Sync stays Disconnected | `ConfigSync` address unreachable | `ping` peer `HA` self `IP` |
+| Trust fails | Hostname or time mismatch | Device name, `NTP` |
+
+---
+
+## Troubleshooting Traffic After Failover
+
+| Symptom | Likely cause | Check |
+| --- | --- | --- |
 | Servers lose gateway after failover | Gateway is a non-floating self `IP` | Server default route |
 | Failover but clients still hit old box | Upstream `ARP` cache | Gratuitous `ARP`, `MAC` masquerade |
-| Trust fails | Hostname or time mismatch | Device name, `NTP` |
 
 ---
 

@@ -236,18 +236,32 @@ tmsh list ltm virtual vs_http profiles
 | `tcp-lan-optimized` | Low latency, high bandwidth data center links |
 | `tcp-wan-optimized` | Higher latency internet links |
 | `tcp-mobile-optimized` | Lossy, high latency cellular clients |
+
+---
+
+## Newer F5 TCP Profiles
+
+| Profile | Tuned for |
+| --- | --- |
 | `f5-tcp-progressive` | `F5` recommended general purpose starting point |
 | `f5-tcp-lan`, `f5-tcp-wan`, `f5-tcp-mobile` | Newer tuned variants of the above |
 
 ---
 
-## Key TCP Profile Settings
+## Key TCP Timer and Segment Settings
 
 | Setting | Default in `tcp` | Effect |
 | --- | --- | --- |
 | Idle Timeout | 300 seconds | Closes quiet connections |
 | Nagle's Algorithm | Disabled | Coalesces small segments |
 | Delayed ACK | Enabled | Fewer ACK packets |
+
+---
+
+## Key TCP Buffer and Recovery Settings
+
+| Setting | Default in `tcp` | Effect |
+| --- | --- | --- |
 | Proxy Buffer High / Low | 49152 / 32768 | Buffer between client and server sides |
 | Send Buffer / Receive Window | 65535 bytes | Data in flight per connection |
 | Selective ACK | Enabled | Faster loss recovery |
@@ -548,16 +562,23 @@ HTTP/2 200
 
 ---
 
-## `OneConnect` Settings
+## `OneConnect` Sharing Settings
 
 | Setting | Default | Meaning |
 | --- | --- | --- |
 | Source Mask | `0.0.0.0` | Which clients may share a server connection |
 | Maximum Size | 10000 | Idle connections kept in the reuse pool |
+| Limit Type | None | How reuse interacts with connection limits |
+
+---
+
+## `OneConnect` Retirement Settings
+
+| Setting | Default | Meaning |
+| --- | --- | --- |
 | Maximum Age | 86400 seconds | Retire a server connection after this long |
 | Maximum Reuse | 1000 | Retire after this many requests |
 | Idle Timeout Override | Disabled | Separate idle timeout for pooled connections |
-| Limit Type | None | How reuse interacts with connection limits |
 
 ---
 
@@ -622,6 +643,13 @@ tmsh show ltm profile one-connect oc_lab
 | Minimum Content Length | 1024 bytes | Small responses are not worth it |
 | Content Type Include | `text/`, `application/xml` and similar | What to compress |
 | Content Type Exclude | (empty) | Never compress these |
+
+---
+
+## Compression Header and Level Settings
+
+| Setting | Default | Meaning |
+| --- | --- | --- |
 | Keep Accept Encoding | Disabled | Strip the header so servers send plain |
 | Vary Header | Enabled | Insert `Vary: Accept-Encoding` |
 | `gzip` Compression Level | 1 | Higher is smaller and slower |
@@ -824,13 +852,20 @@ ltm virtual vs_https {
 
 ---
 
-## Troubleshooting Profiles
+## Troubleshooting Profile Setup
 
 | Symptom | Check |
 | --- | --- |
 | Virtual server rejects a profile | Missing dependency (`http`, `tcp`, `clientssl`) |
 | Client addresses missing in server logs | `insert-xforwarded-for` and server log format |
 | Connections drop after a few minutes | `TCP` idle timeout |
+
+---
+
+## Troubleshooting Profile Behavior
+
+| Symptom | Check |
+| --- | --- |
 | Stale content | Web acceleration cache, `Age` header |
 | Rewrite does not happen | Compression from the server, wrong source string |
 | Uneven load with `OneConnect` | Source mask and persistence |

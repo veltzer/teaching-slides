@@ -70,13 +70,20 @@ audience:
 
 ---
 
-## Persistence Methods at a Glance
+## Persistence Methods Keyed on Addresses
 
 | Method | Key | Record stored on | Typical use |
 | --- | --- | --- | --- |
 | Source address affinity | Client `IP` (masked) | `BIG-IP` | Non `HTTP` `TCP`/`UDP` services |
-| Cookie | `HTTP` cookie | Client browser (insert) | Web applications |
 | Destination address | Destination `IP` | `BIG-IP` | Cache and proxy farms |
+
+---
+
+## Persistence Methods Keyed on Session Data
+
+| Method | Key | Record stored on | Typical use |
+| --- | --- | --- | --- |
+| Cookie | `HTTP` cookie | Client browser (insert) | Web applications |
 | `SSL` session | `SSL` session ID | `BIG-IP` | Encrypted pass through |
 | Universal | Any value an iRule extracts | `BIG-IP` | `JSESSIONID`, custom tokens |
 | Hash | Hash of a value | Nothing (computed) | Stateless consistent mapping |
