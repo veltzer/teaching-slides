@@ -95,7 +95,7 @@ Tracks the comprehensive restructuring work for `marp/courses/architecting/moder
 ## Phase 8: Build & verify
 
 - [x] Run `rsconstruct build --verbose -j10` after each chapter edit
-- [x] Run `scripts/check_md.py --images` to verify all image refs (runs inside rsconstruct)
+- [x] Run `scripts/check_marp_md.py --images` to verify all image refs (runs inside rsconstruct)
 - [x] Run `scripts/check_svg.py --dimensions --fonts --fit` (runs inside rsconstruct)
 - [x] Final full build — 0 failures, all 19 chapters + title.pdf built
 

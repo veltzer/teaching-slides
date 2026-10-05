@@ -383,7 +383,7 @@ you look.
 
 - `scripts/check_svg.py --dimensions --fonts` — enforce viewBox and font-size
 - `scripts/check_svg.py --colors` — enforce palette compliance
-- `scripts/check_md.py --images` — verify all image references resolve
+- `scripts/check_marp_md.py --images` — verify all image references resolve
 - `scripts/svg_fix.py --aspect-ratio` — normalize viewBox to 1280x720
 - `scripts/install_palette.py` — push canonical palette defs into every SVG (reads `<metadata><type>` to select palette)
-- `rsconstruct build --verbose -j10` — full build (runs `check_md.py`)
+- `rsconstruct build --verbose -j10` — full build (runs `check_marp_md.py`)

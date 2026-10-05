@@ -8,10 +8,12 @@ Findings from a code scan on 2026-10-04.
 
 ## Medium
 
-- `pyproject.toml:14` - `mypy` and `pytest` are declared dev dependencies, but nothing runs them: `rsconstruct.toml` has no mypy or pytest processor and the repo has no tests. Running mypy on `scripts/` gives 12 errors in 5 files (e.g. `scripts/check_svg.py:66`, `:128`, `scripts/check_md.py:490`, plus missing `lxml` stubs for `scripts/svg_lib.py:35` and `scripts/svg_fix.py:42`). The fix is to add a `[processor.mypy]` on `scripts`, add `lxml-stubs` to the dev group and fix the errors. Also drop `pytest` unless tests are added.
+- `pyproject.toml:14` - `mypy` and `pytest` are declared dev dependencies, but nothing runs them: `rsconstruct.toml` has no mypy or pytest processor and the repo has no tests. Running mypy on `scripts/` gives 11 errors in 4 files (e.g. `scripts/check_svg.py:66`, `:128`, `scripts/check_marp_md.py:490`, plus missing `lxml` stubs for `scripts/svg_lib.py:35` and `scripts/svg_fix.py:42`). The fix is to add a `[processor.mypy]` on `scripts`, add `lxml-stubs` to the dev group and fix the errors. Also drop `pytest` unless tests are added.
 - `rsconstruct.toml:97` - `[processor.terms]` is configured but `enabled = false`, with no comment saying why (git history only shows "no commit message given"). The fix is to enable it and fix what it reports, or remove the section along with the `shared/shared-terms` submodule (`.gitmodules:1`) if the check is abandoned.
 - `scripts/check_svg.py:237` - `_svg_type_from_file` catches `Exception` and returns `"regular"`, so an unreadable or malformed SVG gets checked against the wrong palette without any warning. This breaks the CLAUDE.md "never pass errors silently" rule (`CLAUDE.md:5`). The fix is to let it raise, or to report the error through the parse check.
 - `doc/HowToWriteSlides.txt:28` - tells the reader to add mermaid through an external CDN `<script>` (lines 28-47). That contradicts its own line 11, `CLAUDE.md:24` (no mermaid) and `CLAUDE.md:26` (no external URLs). The fix is to delete the block.
+
+- `scripts/check_marp_md.py:48` - `_LINK_RE` is anchored with `^` but compiled without `re.MULTILINE` and applied to the whole file with `finditer` (line 88), so `--links` (on by default here, since `rsconstruct.toml` passes no args) only ever looks at the very first characters of a file and never reports a broken link; add `re.MULTILINE` (or drop the anchor). The script is shared byte-identical with demos-lang-marp (rsmultigit check `marp-check-md`), so fix it in both.
 
 ## Low
 

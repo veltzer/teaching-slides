@@ -32,6 +32,6 @@
 - SVG drawing content must be exactly fitted to the usable area [40,1240]x[40,620] (enforced by `scripts/check_svg.py --fit`). Run `scripts/svg_fix.py --fit` to fix.
 
 ## Validation
-- Check markdown: `scripts/check_md.py` (run via `rsconstruct build --verbose -j10`)
+- Check markdown: `scripts/check_marp_md.py` (run via `rsconstruct build --verbose -j10`)
 - Check SVGs: `scripts/check_svg.py --dimensions --fonts`
-- Verify image refs exist: `scripts/check_md.py --images`
+- Verify image refs exist: `scripts/check_marp_md.py --images`
