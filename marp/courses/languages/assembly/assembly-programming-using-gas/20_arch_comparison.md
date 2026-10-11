@@ -117,7 +117,7 @@ add [ecx], edx  @ Load, add, and store in one instruction
 
 - Another RISC architecture
 - Used in embedded systems and networking equipment
-- 32 general-purpose registers ($0-$31)
+- 32 general-purpose registers (`$0`-`$31`)
 
 MIPS Example:
 
@@ -194,13 +194,13 @@ message:
 
 ## Instruction Set Comparison
 
-| Architecture | Add           | Load                | Branch        |
-|--------------|---------------|---------------------|---------------|
-| x86          | add eax, ebx  | mov eax, [ebx]      | jne label     |
-| ARM          | add r0, r1, r2| ldr r0, [r1]        | bne label     |
-| MIPS         | add $t0,$t1,$t2| lw $t0, 0($t1)     | bne $t0,$t1,label |
-| PowerPC      | add r3, r4, r5| lwz r3, 0(r4)       | bne cr0, label|
-| RISC-V       | add a0, a1, a2| lw a0, 0(a1)        | bne a0, a1, label |
+| Architecture | Add                 | Load               | Branch                |
+|--------------|---------------------|--------------------|-----------------------|
+| x86          | `add eax, ebx`      | `mov eax, [ebx]`   | `jne label`           |
+| ARM          | `add r0, r1, r2`    | `ldr r0, [r1]`     | `bne label`           |
+| MIPS         | `add $t0, $t1, $t2` | `lw $t0, 0($t1)`   | `bne $t0, $t1, label` |
+| PowerPC      | `add r3, r4, r5`    | `lwz r3, 0(r4)`    | `bne cr0, label`      |
+| RISC-V       | `add a0, a1, a2`    | `lw a0, 0(a1)`     | `bne a0, a1, label`   |
 
 ---
 

@@ -171,16 +171,31 @@ void show_all_clocks() {
 
 ## Clock Properties Comparison
 
-| Clock | Affected by NTP | Monotonic | Suspend | Resolution | Use Case |
-|-------|-----------------|-----------|---------|------------|----------|
-| **REALTIME** | Yes | No | Continues | ~1ns | Wall clock |
-| **REALTIME_COARSE** | Yes | No | Continues | ~1-4ms | Fast wall clock |
-| **MONOTONIC** | Rate only | Yes | Stops | ~1ns | Intervals |
-| **MONOTONIC_COARSE** | Rate only | Yes | Stops | ~1-4ms | Fast intervals |
-| **MONOTONIC_RAW** | No | Yes | Stops | ~1ns | Hardware time |
-| **BOOTTIME** | Rate only | Yes | Continues | ~1ns | Uptime |
-| **PROCESS_CPUTIME** | No | Yes | N/A | ~1ns | CPU profiling |
-| **THREAD_CPUTIME** | No | Yes | N/A | ~1ns | Thread profiling |
+| Clock | Affected by NTP | Monotonic | Suspend |
+|-------|-----------------|-----------|---------|
+| **REALTIME** | Yes | No | Continues |
+| **REALTIME_COARSE** | Yes | No | Continues |
+| **MONOTONIC** | Rate only | Yes | Stops |
+| **MONOTONIC_COARSE** | Rate only | Yes | Stops |
+| **MONOTONIC_RAW** | No | Yes | Stops |
+| **BOOTTIME** | Rate only | Yes | Continues |
+| **PROCESS_CPUTIME** | No | Yes | N/A |
+| **THREAD_CPUTIME** | No | Yes | N/A |
+
+---
+
+## Clock Resolution and Use Cases
+
+| Clock | Resolution | Use Case |
+|-------|------------|----------|
+| **REALTIME** | ~1ns | Wall clock |
+| **REALTIME_COARSE** | ~1-4ms | Fast wall clock |
+| **MONOTONIC** | ~1ns | Intervals |
+| **MONOTONIC_COARSE** | ~1-4ms | Fast intervals |
+| **MONOTONIC_RAW** | ~1ns | Hardware time |
+| **BOOTTIME** | ~1ns | Uptime |
+| **PROCESS_CPUTIME** | ~1ns | CPU profiling |
+| **THREAD_CPUTIME** | ~1ns | Thread profiling |
 
 ---
 
