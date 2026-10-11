@@ -2,6 +2,23 @@
 # src_dirs entries name directories; "." (the whole tree) is a config error
 reject_dot_src_dirs = true
 
+# rsslide renders the decks (crates.io, cargo install), with the fonts its
+# default configuration draws with: Noto Sans and Noto Sans Math, Liberation
+# Sans and Mono, DejaVu Sans and Mono, FreeSans and FreeMono, Noto Sans CJK
+# and Noto Color Emoji for the characters Noto Sans lacks.
+[dependencies]
+cargo = ["rsslide"]
+system = [
+    "fonts-noto-core",
+    "fonts-noto-extra",
+    "fonts-liberation",
+    "fonts-dejavu-core",
+    "fonts-dejavu-mono",
+    "fonts-freefont-ttf",
+    "fonts-noto-cjk",
+    "fonts-noto-color-emoji",
+]
+
 [processor.generator.tera]
 src_dirs = ["tera.templates"]
 
@@ -17,28 +34,31 @@ src_extensions = [".md"]
 src_dirs = ["marp"]
 batch = true
 
+# The decks render with rsslide (https://github.com/veltzer/rsslide), which
+# reproduces marp's default theme without a browser and reads the marp
+# decks directly. Content that runs off a slide fails the build, where
+# marp silently cut it off: split the slide (`## Title (cont.)`).
+
 # Per-chapter course PDFs are only inputs for ipdfunite merging; they render
 # outside _site so the published site carries only the united course PDFs.
-# Note: paths under out/processor.generator.marp would be remapped to out/processor.generator.marp.courses by the
-# named-instance output_dir rule, hence out/chapters.
-[processor.generator.marp.courses]
-formats = [ "pdf" ]
+[processor.generator.generic.rsslide_courses]
+command = "rsslide"
+args = ["generate", "--format=pdf"]
 src_dirs = ["marp/courses"]
+src_extensions = [".md"]
 output_dir = "out/chapters/courses"
-timeout_secs = 120
-# marp spawns Chromium per job, so cap its concurrency. This used to be
-# --pset marp.max_jobs=2 in build.yml — kept here so the workflow file can
-# stay identical across repos.
-max_jobs = 2
+output_extension = "pdf"
+batch = true
 
 # Standalone lectures have no united PDF; the site links them individually.
-[processor.generator.marp.lectures]
-formats = [ "pdf" ]
+[processor.generator.generic.rsslide_lectures]
+command = "rsslide"
+args = ["generate", "--format=pdf"]
 src_dirs = ["marp/lectures"]
+src_extensions = [".md"]
 output_dir = "_site/marp/lectures"
-timeout_secs = 120
-# See the max_jobs note on marp.courses.
-max_jobs = 2
+output_extension = "pdf"
+batch = true
 
 [processor.checker.ruff]
 src_dirs = ["scripts"]
