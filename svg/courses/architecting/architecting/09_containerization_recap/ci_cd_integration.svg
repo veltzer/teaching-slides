@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -102,32 +97,32 @@
   <text x="1050" y="40" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">CD</text>
   <line x1="850" y1="61.886792" x2="1240" y2="61.886792" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="6"/>
 
-  <rect x="40" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="130" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Code Push</text>
   <text x="130" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--primary-text)" font-family="Arial, sans-serif">git commit</text>
   <text x="130" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--primary-text)" font-family="Arial, sans-serif">triggers pipeline</text>
 
-  <rect x="240" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="240" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="330" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Build Image</text>
   <text x="330" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--primary-text)" font-family="Arial, sans-serif">docker build</text>
   <text x="330" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--primary-text)" font-family="Arial, sans-serif">tag with SHA</text>
 
-  <rect x="440" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="440" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="530" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Run Tests</text>
   <text x="530" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--warn-text)" font-family="Arial, sans-serif">unit and integration</text>
   <text x="530" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--warn-text)" font-family="Arial, sans-serif">in container</text>
 
-  <rect x="640" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="730" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Security Scan</text>
   <text x="730" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--danger-text)" font-family="Arial, sans-serif">CVE scan layers</text>
   <text x="730" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--danger-text)" font-family="Arial, sans-serif">block on critical</text>
 
-  <rect x="840" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="840" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="930" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Push Registry</text>
   <text x="930" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--ok-text)" font-family="Arial, sans-serif">sign image</text>
   <text x="930" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--ok-text)" font-family="Arial, sans-serif">push to registry</text>
 
-  <rect x="1040" y="116.603774" width="200" height="503.396226" rx="6.276641" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1040" y="116.603774" width="200" height="503.396226" rx="6.276641" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1140" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Deploy</text>
   <text x="1140" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--ok-text)" font-family="Arial, sans-serif">rollout to k8s</text>
   <text x="1140" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--ok-text)" font-family="Arial, sans-serif">canary, then full</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,20 +92,20 @@
   </defs>
   <text x="295.7376" y="43.91877" text-anchor="middle" font-size="21.596658" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Concurrent (Threading)</text>
   <text x="295.7376" y="71.351256" text-anchor="middle" font-size="15.706619" fill="var(--text-muted)" font-family="Arial, sans-serif">Tasks interleaved on one CPU</text>
-  <rect x="40" y="98.783742" width="511.47541" height="97.973025" rx="6.77769" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="98.783742" width="511.47541" height="97.973025" rx="6.77769" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="295.7376" y="155.607916" text-anchor="middle" font-size="19.633387" fill="var(--text)" font-family="Arial, sans-serif">Task A</text>
-  <rect x="40" y="216.351347" width="511.47541" height="97.973025" rx="6.77769" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="216.351347" width="511.47541" height="97.973025" rx="6.77769" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="295.7376" y="273.175522" text-anchor="middle" font-size="19.633387" fill="var(--text)" font-family="Arial, sans-serif">Task B</text>
-  <rect x="40" y="333.918831" width="511.47541" height="97.973025" rx="6.77769" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="333.918831" width="511.47541" height="97.973025" rx="6.77769" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="295.7376" y="390.743127" text-anchor="middle" font-size="19.633387" fill="var(--text)" font-family="Arial, sans-serif">Task C</text>
   <text x="295.7376" y="510.270178" text-anchor="middle" font-size="15.706619" fill="var(--text-muted)" font-family="Arial, sans-serif">GIL allows only one thread at a time (for CPU work)</text>
   <text x="944.918033" y="43.91877" text-anchor="middle" font-size="21.596658" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Parallel (Multiprocessing)</text>
   <text x="944.918033" y="71.351256" text-anchor="middle" font-size="15.706619" fill="var(--text-muted)" font-family="Arial, sans-serif">Tasks run simultaneously on multiple CPUs</text>
-  <rect x="689.180328" y="98.783742" width="157.377049" height="333.108114" rx="6.77769" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="689.180328" y="98.783742" width="157.377049" height="333.108114" rx="6.77769" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="767.868852" y="279.053859" text-anchor="middle" font-size="17.670003" fill="var(--text)" font-family="Arial, sans-serif">Task A</text>
-  <rect x="885.901639" y="98.783742" width="157.377049" height="333.108114" rx="6.77769" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="885.901639" y="98.783742" width="157.377049" height="333.108114" rx="6.77769" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="964.590164" y="279.053859" text-anchor="middle" font-size="17.670003" fill="var(--text)" font-family="Arial, sans-serif">Task B</text>
-  <rect x="1082.622951" y="98.783742" width="157.377049" height="333.108114" rx="6.77769" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1082.622951" y="98.783742" width="157.377049" height="333.108114" rx="6.77769" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1161.311475" y="279.053859" text-anchor="middle" font-size="17.670003" fill="var(--text)" font-family="Arial, sans-serif">Task C</text>
   <text x="944.918033" y="510.270178" text-anchor="middle" font-size="15.706619" fill="var(--text-muted)" font-family="Arial, sans-serif">Separate processes bypass the GIL</text>
   <line x1="610.491803" y1="40" x2="610.491803" y2="549.459339" stroke="var(--border)" stroke-width="1.3333" stroke-dasharray="7.1111 7.1111"/>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,22 +91,22 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="220" height="160" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="220" height="160" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="150" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Raw Text</text>
   <text x="150" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">"The cats are sleeping."</text>
   <text x="150" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">UTF-8 bytes</text>
 
-  <rect x="320" y="40" width="220" height="160" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="320" y="40" width="220" height="160" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="430" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Normalize</text>
   <text x="430" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">NFC, casing</text>
   <text x="430" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">accent rules</text>
 
-  <rect x="600" y="40" width="220" height="160" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="600" y="40" width="220" height="160" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="710" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Pre-tokenize</text>
   <text x="710" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">split on spaces,</text>
   <text x="710" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">punctuation</text>
 
-  <rect x="880" y="40" width="360" height="160" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="880" y="40" width="360" height="160" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1060" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Subword Model</text>
   <text x="1060" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">apply BPE / WordPiece /</text>
   <text x="1060" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">SentencePiece merges</text>

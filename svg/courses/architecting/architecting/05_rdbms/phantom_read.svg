@@ -5,10 +5,10 @@
 
   <text x="640" y="40" text-anchor="middle" font-size="32.378113687942" font-family="Arial, sans-serif" fill="var(--text)">A range query re-run in T1 returns a row that "appeared"</text>
 
-  <rect x="40" y="74.117647058824" width="463.636363636364" height="68.235294117647" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.471872389525" filter="url(#shadow)"/>
+  <rect x="40" y="74.117647058824" width="463.636363636364" height="68.235294117647" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.471872389525"/>
   <text x="271.818181818182" y="119.607843137255" text-anchor="middle" font-size="34.868737817784" font-family="Arial, sans-serif" fill="var(--primary-text)">T1</text>
 
-  <rect x="776.363636363636" y="74.117647058824" width="463.636363636364" height="68.235294117647" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.471872389525" filter="url(#shadow)"/>
+  <rect x="776.363636363636" y="74.117647058824" width="463.636363636364" height="68.235294117647" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.471872389525"/>
   <text x="1008.181818181818" y="119.607843137255" text-anchor="middle" font-size="34.868737817784" font-family="Arial, sans-serif" fill="var(--danger-text)">T2</text>
 
   <line x1="271.818181818182" y1="153.725490196078" x2="271.818181818182" y2="620" stroke="var(--text-muted)" stroke-width="2"/>
@@ -26,7 +26,7 @@
   <text x="271.818181818182" y="438.039215686274" text-anchor="middle" font-size="24.906241298417" font-family="Courier New, monospace" fill="var(--text)">SELECT COUNT(*) WHERE</text>
   <text x="271.818181818182" y="477.843137254902" text-anchor="middle" font-size="24.906241298417" font-family="Courier New, monospace" fill="var(--danger-accent)">dept='ENG' returns 11</text>
 
-  <rect x="40" y="517.647058823529" width="1200" height="90.980392156863" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.471872389525" filter="url(#shadow)"/>
+  <rect x="40" y="517.647058823529" width="1200" height="90.980392156863" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.471872389525"/>
   <text x="640" y="557.450980392157" text-anchor="middle" font-size="27.396865428259" font-family="Arial, sans-serif" fill="var(--warn-text)">Unlike non-repeatable read, this is about new rows matching a predicate.</text>
   <text x="640" y="591.56862745098" text-anchor="middle" font-size="27.396865428259" font-family="Arial, sans-serif" fill="var(--warn-text)">Prevented by SERIALIZABLE (predicate / next-key locking, or SSI).</text>
 
@@ -94,11 +94,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
 
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">

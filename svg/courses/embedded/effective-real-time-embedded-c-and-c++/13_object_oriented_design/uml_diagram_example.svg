@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="425.714286" y="40" width="428.571429" height="176.949181" rx="7.085777" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="425.714286" y="40" width="428.571429" height="176.949181" rx="7.085777" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <rect x="425.714286" y="40" width="428.571429" height="43.25419" rx="7.085777" fill="var(--primary-accent)"/>
   <rect x="425.714286" y="77.355803" width="428.571429" height="5.898265" fill="var(--primary-accent)" rx="7.085777"/>
   <text x="640" y="69.491449" text-anchor="middle" font-size="22.578357" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Sensor</text>
@@ -106,8 +101,8 @@
   <text x="640" y="199.254263" text-anchor="middle" font-size="14.367949" fill="var(--primary-accent)" font-family="Arial, sans-serif">interface: read(), calibrate()</text>
   <line x1="489.999886" y1="218.915148" x2="275.714286" y2="305.423772" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
   <rect x="40" y="307.389739" width="471.428571" height="176.949181" rx="7.085777" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="40" y="307.389739" width="471.428571" height="43.25419" rx="7.085777" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="344.745785" width="471.428571" height="5.898265" fill="url(#grad-primary)" rx="7.085777" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="307.389739" width="471.428571" height="43.25419" rx="7.085777" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="344.745785" width="471.428571" height="5.898265" fill="url(#grad-primary)" rx="7.085777" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="275.714286" y="336.88131" text-anchor="middle" font-size="22.578357" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">TempSensor</text>
   <text x="275.714286" y="370.305057" text-anchor="middle" font-size="16.42058" fill="var(--text-muted)" font-family="Courier New, monospace">- raw_adc : uint16_t</text>
   <text x="275.714286" y="393.898363" text-anchor="middle" font-size="16.42058" fill="var(--text-muted)" font-family="Courier New, monospace">- offset : float</text>

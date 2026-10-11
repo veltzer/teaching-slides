@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -99,7 +94,7 @@
   <rect x="40" y="40" width="1200" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="640" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Linux Boot Stages: From Power-On to Kernel</text>
 
-  <rect x="40" y="160" width="280" height="320" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="160" width="280" height="320" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="180" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--danger-text)">ROM Boot</text>
   <text x="180" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">Stage 0</text>
   <text x="180" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Runs from SoC mask ROM</text>
@@ -107,7 +102,7 @@
   <text x="180" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Finds boot device</text>
   <text x="180" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Loads SPL into SRAM</text>
 
-  <rect x="340" y="160" width="280" height="320" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="160" width="280" height="320" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="480" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--primary-text)">SPL / MLO</text>
   <text x="480" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Stage 1</text>
   <text x="480" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Small secondary loader</text>
@@ -115,7 +110,7 @@
   <text x="480" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Sets up clocks</text>
   <text x="480" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Loads U-Boot</text>
 
-  <rect x="640" y="160" width="280" height="320" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="160" width="280" height="320" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="780" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">U-Boot</text>
   <text x="780" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Stage 2</text>
   <text x="780" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Full bootloader</text>
@@ -123,7 +118,7 @@
   <text x="780" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Loads kernel + dtb</text>
   <text x="780" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Jumps to kernel</text>
 
-  <rect x="940" y="160" width="300" height="320" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="160" width="300" height="320" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1090" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--warn-text)">Kernel</text>
   <text x="1090" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Stage 3</text>
   <text x="1090" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Decompresses itself</text>
@@ -135,7 +130,7 @@
   <line x1="620" y1="320" x2="640" y2="320" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="920" y1="320" x2="940" y2="320" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="510" width="1200" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="510" width="1200" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Each stage bootstraps the next: more hardware initialized, more memory available</text>
   <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">ROM (bytes) to SPL (KB in SRAM) to U-Boot (MB in DRAM) to Kernel (full system)</text>
 </svg>

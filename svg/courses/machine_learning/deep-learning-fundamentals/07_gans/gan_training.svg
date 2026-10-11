@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -100,13 +95,13 @@
   <rect x="40" y="104.444444444444" width="578.571428571429" height="461.851851851852" rx="10.727505072446" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="329.285714285714" y="142.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.600511159382" font-weight="bold" fill="var(--danger-border)">Step 1: Train D</text>
 
-  <rect x="125.714285714286" y="179.62962962963" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="125.714285714286" y="179.62962962963" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="232.857142857143" y="219.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" fill="var(--info-text)">Real batch</text>
 
-  <rect x="125.714285714286" y="276.296296296296" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="125.714285714286" y="276.296296296296" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="232.857142857143" y="316.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" fill="var(--info-text)">G(z) fakes</text>
 
-  <rect x="382.857142857143" y="222.592592592593" width="171.428571428571" height="85.925925925926" rx="6.436503043468" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="382.857142857143" y="222.592592592593" width="171.428571428571" height="85.925925925926" rx="6.436503043468" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="468.571428571428" y="260.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" font-weight="bold" fill="var(--danger-text)">D</text>
   <text x="468.571428571428" y="287.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.873006086936" fill="var(--danger-text)">classify</text>
 
@@ -121,13 +116,13 @@
   <rect x="661.428571428571" y="104.444444444444" width="578.571428571429" height="461.851851851852" rx="10.727505072446" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="950.714285714286" y="142.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.600511159382" font-weight="bold" fill="var(--primary-border)">Step 2: Train G</text>
 
-  <rect x="747.142857142857" y="179.62962962963" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="747.142857142857" y="179.62962962963" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="854.285714285714" y="219.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" fill="var(--info-text)">Noise z</text>
 
-  <rect x="747.142857142857" y="276.296296296296" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="747.142857142857" y="276.296296296296" width="214.285714285714" height="64.444444444444" rx="6.436503043468" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="854.285714285714" y="316.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" font-weight="bold" fill="var(--primary-text)">G(z)</text>
 
-  <rect x="1004.285714285714" y="276.296296296296" width="171.428571428571" height="64.444444444444" rx="6.436503043468" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1004.285714285714" y="276.296296296296" width="171.428571428571" height="64.444444444444" rx="6.436503043468" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1090" y="316.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.164008115914" font-weight="bold" fill="var(--danger-text)">D (frozen)</text>
 
   <line x1="854.285714285714" y1="244.074074074074" x2="854.285714285714" y2="270.925925925926" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>

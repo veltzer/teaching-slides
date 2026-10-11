@@ -60,9 +60,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -86,16 +83,16 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Anatomy of a Skill</text>
-  <rect x="40" y="100" width="1200" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="100" width="1200" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Name</text>
   <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Short identifier; what the user types after the slash</text>
-  <rect x="40" y="220" width="1200" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="220" width="1200" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Description</text>
   <text x="640" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Defines when the skill triggers; this is the single most important line</text>
-  <rect x="40" y="340" width="1200" height="100" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="340" width="1200" height="100" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Instructions</text>
   <text x="640" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">The behavior the model should follow when the skill is active</text>
-  <rect x="40" y="460" width="1200" height="100" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="460" width="1200" height="100" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Tool scope (optional)</text>
   <text x="640" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Restrict the skill to a subset of tools; smaller is safer</text>
   <text x="640" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Lives in .claude/skills/, versioned with the repo</text>

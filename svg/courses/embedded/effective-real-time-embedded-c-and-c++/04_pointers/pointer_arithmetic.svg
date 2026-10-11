@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,13 +90,13 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="230.769231" height="193.333383" rx="8.152395" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="230.769231" height="193.333383" rx="8.152395" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="155.384615" y="136.666617" text-anchor="middle" font-size="44.869561" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">[0]</text>
   <text x="155.384615" y="180.166624" text-anchor="middle" font-size="20.073235" fill="var(--primary-accent)" font-family="Arial, sans-serif">0x1000</text>
   <rect x="282.307692" y="40" width="230.769231" height="193.333383" rx="8.152395" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="397.692308" y="146.333218" text-anchor="middle" font-size="44.869561" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">[1]</text>
   <text x="397.692308" y="180.166624" text-anchor="middle" font-size="20.073235" fill="var(--text-faint)" font-family="Arial, sans-serif">0x1004</text>
-  <rect x="524.615262" y="40" width="230.769231" height="193.333383" rx="8.152395" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="524.615262" y="40" width="230.769231" height="193.333383" rx="8.152395" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="136.666617" text-anchor="middle" font-size="44.869561" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">[2]</text>
   <text x="640" y="180.166624" text-anchor="middle" font-size="20.073235" fill="var(--primary-accent)" font-family="Arial, sans-serif">0x1008</text>
   <rect x="766.923077" y="40" width="230.769231" height="193.333383" rx="8.152395" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -118,7 +113,7 @@
   <text x="640" y="397.666662" text-anchor="middle" font-size="18.892361" fill="var(--text-muted)" font-family="Arial, sans-serif">= &amp;arr[2]</text>
   <line x1="40" y1="475.000075" x2="513.076923" y2="475.000075" stroke="var(--border)" stroke-width="1.3333" marker-end="url(#arrow)"/>
   <text x="276.538462" y="511.249981" text-anchor="middle" font-size="21.253974" fill="var(--text-muted)" font-family="Arial, sans-serif">+2 × sizeof(int) = +8 bytes</text>
-  <rect x="178.461538" y="547.500038" width="1015.384615" height="72.499962" rx="8.152395" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="178.461538" y="547.500038" width="1015.384615" height="72.499962" rx="8.152395" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="686.153846" y="581.333293" text-anchor="middle" font-size="21.253974" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">ptr + n  advances by  n × sizeof(*ptr)  bytes</text>
   <text x="686.153846" y="607.916598" text-anchor="middle" font-size="18.892361" fill="var(--text-muted)" font-family="Arial, sans-serif">Pointer arithmetic is type-aware — the compiler scales by element size automatically</text>
 </svg>

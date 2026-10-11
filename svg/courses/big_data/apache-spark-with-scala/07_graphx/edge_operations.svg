@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="290" height="269.285714" rx="6.106203" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="290" height="269.285714" rx="6.106203" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="185" y="76.25" text-anchor="middle" font-size="20.35401" font-weight="bold" fill="var(--primary-text)" font-family="Courier New, monospace">reverse</text>
   <text x="185" y="102.142857" text-anchor="middle" font-size="13.230106" fill="var(--primary-text)" font-family="Arial, sans-serif">flip every edge direction</text>
   <rect x="77.6106" y="162.611" width="44.7788" height="44.7788" rx="14" fill="var(--bg)"/>
@@ -109,7 +104,7 @@
   <line x1="122" y1="273.035714" x2="240" y2="273.035714" stroke="var(--bg)" stroke-width="3" stroke-dasharray="4,3"/>
   <polygon points="122,273.035714 130,268.892857 130,277.178571" fill="var(--bg)"/>
 
-  <rect x="350" y="40" width="290" height="269.285714" rx="6.106203" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350" y="40" width="290" height="269.285714" rx="6.106203" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="495" y="76.25" text-anchor="middle" font-size="20.35401" font-weight="bold" fill="var(--ok-text)" font-family="Courier New, monospace">subgraph</text>
   <text x="495" y="102.142857" text-anchor="middle" font-size="13.230106" fill="var(--ok-text)" font-family="Arial, sans-serif">filter edges and vertices</text>
   <rect x="381.681" y="166.681" width="36.6372" height="36.6372" rx="14" fill="var(--bg)"/>
@@ -123,7 +118,7 @@
   <line x1="446" y1="257.5" x2="554" y2="257.5" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="4,3"/>
   <text x="495" y="298.928571" text-anchor="middle" font-size="12.212406" fill="var(--ok-text)" font-family="Arial, sans-serif">keep only edges where pred=true</text>
 
-  <rect x="660" y="40" width="290" height="269.285714" rx="6.106203" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="40" width="290" height="269.285714" rx="6.106203" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="805" y="76.25" text-anchor="middle" font-size="20.35401" font-weight="bold" fill="var(--warn-text)" font-family="Courier New, monospace">groupEdges</text>
   <text x="805" y="102.142857" text-anchor="middle" font-size="13.230106" fill="var(--warn-text)" font-family="Arial, sans-serif">merge parallel edges</text>
   <rect x="687.611" y="178.146" width="44.7788" height="44.7788" rx="14" fill="var(--bg)"/>
@@ -135,7 +130,7 @@
   <path d="M 732 216.071429 Q 805 257.5 878 216.071429" stroke="var(--bg)" stroke-width="2" fill="none"/>
   <text x="805" y="278.214286" text-anchor="middle" font-size="12.212406" fill="var(--warn-text)" font-family="Arial, sans-serif">3 edges + merge fn = 1 edge</text>
 
-  <rect x="970" y="40" width="270" height="269.285714" rx="6.106203" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="970" y="40" width="270" height="269.285714" rx="6.106203" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1105" y="76.25" text-anchor="middle" font-size="20.35401" font-weight="bold" fill="var(--info-text)" font-family="Courier New, monospace">mapEdges</text>
   <text x="1105" y="102.142857" text-anchor="middle" font-size="13.230106" fill="var(--info-text)" font-family="Arial, sans-serif">transform edge attrs</text>
   <rect x="987.611" y="172.968" width="44.7788" height="44.7788" rx="14" fill="var(--bg)"/>

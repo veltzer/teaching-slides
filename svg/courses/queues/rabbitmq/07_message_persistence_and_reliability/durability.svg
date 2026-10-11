@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,7 +94,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Three Layers of Durability</text>
 
-  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="231.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--primary-text)">1. Durable queue</text>
   <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">queue.declare(durable=true)</text>
   <text x="60.689655172414" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Survives broker restart</text>
@@ -107,7 +102,7 @@
   <text x="60.689655172414" y="268.807339449541" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--primary-text)">Without this, queue gone</text>
   <text x="60.689655172414" y="295.412844036697" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">on broker restart</text>
 
-  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">2. Persistent message</text>
   <text x="469.310344827586" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">delivery_mode=2</text>
   <text x="469.310344827586" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Written to disk</text>
@@ -115,7 +110,7 @@
   <text x="469.310344827586" y="268.807339449541" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--warn-text)">Without this, msg lost</text>
   <text x="469.310344827586" y="295.412844036697" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">on broker restart</text>
 
-  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--ok-text)">3. Publisher confirms</text>
   <text x="877.931034482759" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">channel.confirm_select()</text>
   <text x="877.931034482759" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Broker acks each publish</text>

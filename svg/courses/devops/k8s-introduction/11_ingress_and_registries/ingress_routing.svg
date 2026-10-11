@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,12 +90,12 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="294.386087" width="168.421053" height="61.052585" rx="7.1455" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="294.386087" width="168.421053" height="61.052585" rx="7.1455" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="124.210526" y="320.842169" text-anchor="middle" font-size="15.524075" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Browser</text>
   <text x="124.210526" y="341.193157" text-anchor="middle" font-size="11.909166" fill="var(--danger-accent)" font-family="Arial, sans-serif">app.example.com</text>
   <line x1="208.421053" y1="324.912316" x2="282.105263" y2="324.912316" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="245.263158" y="314.736822" text-anchor="middle" font-size="11.909166" fill="var(--text-muted)" font-family="Arial, sans-serif">HTTPS :443</text>
-  <rect x="282.105263" y="233.333375" width="231.578947" height="183.157881" rx="7.1455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="282.105263" y="233.333375" width="231.578947" height="183.157881" rx="7.1455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="397.894737" y="263.859731" text-anchor="middle" font-size="16.558981" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Ingress Controller</text>
   <text x="397.894737" y="286.245793" text-anchor="middle" font-size="12.419355" fill="var(--primary-accent)" font-family="Arial, sans-serif">(nginx / traefik)</text>
   <text x="397.894737" y="310.666801" text-anchor="middle" font-size="12.419355" fill="var(--primary-accent)" font-family="Arial, sans-serif">TLS termination</text>
@@ -108,9 +103,9 @@
   <text x="397.894737" y="351.368398" text-anchor="middle" font-size="12.419355" fill="var(--primary-accent)" font-family="Arial, sans-serif">Path matching</text>
   <text x="397.894737" y="371.719386" text-anchor="middle" font-size="12.419355" fill="var(--primary-accent)" font-family="Arial, sans-serif">Header rewriting</text>
   <text x="397.894737" y="396.140522" text-anchor="middle" font-size="11.909166" fill="var(--primary-accent)" font-family="Arial, sans-serif">LoadBalancer svc in front</text>
-  <rect x="587.368421" y="40" width="357.894737" height="264.561328" rx="7.1455" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="587.368421" y="40" width="357.894737" height="44.77187" rx="7.1455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="587.368421" y="72.561556" width="357.894737" height="12.210568" fill="url(#grad-primary)" rx="7.1455" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="587.368421" y="40" width="357.894737" height="264.561328" rx="7.1455" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="587.368421" y="40" width="357.894737" height="44.77187" rx="7.1455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="587.368421" y="72.561556" width="357.894737" height="12.210568" fill="url(#grad-primary)" rx="7.1455" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="766.315789" y="70.526356" text-anchor="middle" font-size="16.558981" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Ingress Rules</text>
   <text x="603.157895" y="105.122858" font-size="12.419355" fill="var(--primary-accent)" font-family="Courier New, monospace">host: app.example.com</text>
   <text x="603.157895" y="125.47372" font-size="12.419355" fill="var(--primary-accent)" font-family="Courier New, monospace">  /          → web-svc:80</text>
@@ -122,32 +117,32 @@
   <text x="766.315789" y="274.035225" text-anchor="middle" font-size="11.909166" fill="var(--info-accent)" font-family="Arial, sans-serif">TLS: secretName: tls-cert</text>
   <line x1="513.684211" y1="274.035225" x2="587.368421" y2="192.631652" stroke="var(--primary-border)" stroke-width="1.3333" stroke-dasharray="4.4444 2.6667" marker-end="url(#arrow)"/>
   <text x="550.526316" y="218.070261" font-size="11.909166" fill="var(--primary-accent)" font-family="Arial, sans-serif">reads rules</text>
-  <rect x="1029.473684" y="50.175494" width="210.526316" height="73.263153" rx="7.1455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1029.473684" y="50.175494" width="210.526316" height="73.263153" rx="7.1455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1134.736842" y="78.666776" text-anchor="middle" font-size="14.489049" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">web-svc</text>
   <text x="1134.736842" y="99.017638" text-anchor="middle" font-size="11.909166" fill="var(--text-muted)" font-family="Arial, sans-serif">ClusterIP :80</text>
-  <rect x="1050.526316" y="133.614141" width="73.684211" height="36.631576" rx="7.1455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1050.526316" y="133.614141" width="73.684211" height="36.631576" rx="7.1455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1087.368421" y="156.000076" text-anchor="middle" font-size="11.909166" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
-  <rect x="1145.263158" y="133.614141" width="73.684211" height="36.631576" rx="7.1455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1145.263158" y="133.614141" width="73.684211" height="36.631576" rx="7.1455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1182.105263" y="156.000076" text-anchor="middle" font-size="11.909166" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
   <line x1="1134.736842" y1="123.438647" x2="1134.736842" y2="133.614141" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow)"/>
-  <rect x="1029.473684" y="212.98264" width="210.526316" height="73.263153" rx="7.1455" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1029.473684" y="212.98264" width="210.526316" height="73.263153" rx="7.1455" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1134.736842" y="241.47367" text-anchor="middle" font-size="14.489049" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">api-svc</text>
   <text x="1134.736842" y="261.824658" text-anchor="middle" font-size="11.909166" fill="var(--text-muted)" font-family="Arial, sans-serif">ClusterIP :8080</text>
-  <rect x="1050.526316" y="296.421034" width="73.684211" height="36.631576" rx="7.1455" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1050.526316" y="296.421034" width="73.684211" height="36.631576" rx="7.1455" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1087.368421" y="318.807096" text-anchor="middle" font-size="11.909166" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
-  <rect x="1145.263158" y="296.421034" width="73.684211" height="36.631576" rx="7.1455" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1145.263158" y="296.421034" width="73.684211" height="36.631576" rx="7.1455" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1182.105263" y="318.807096" text-anchor="middle" font-size="11.909166" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
   <line x1="1134.736842" y1="286.245793" x2="1134.736842" y2="296.421034" stroke="var(--ok-border)" stroke-width="1.3333" marker-end="url(#arrow)"/>
-  <rect x="1029.473684" y="375.789534" width="210.526316" height="73.263153" rx="7.1455" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1029.473684" y="375.789534" width="210.526316" height="73.263153" rx="7.1455" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1134.736842" y="404.280816" text-anchor="middle" font-size="14.489049" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">cdn-svc</text>
   <text x="1134.736842" y="424.631551" text-anchor="middle" font-size="11.909166" fill="var(--text-muted)" font-family="Arial, sans-serif">ClusterIP :80</text>
   <rect x="1050.526316" y="459.22818" width="168.421053" height="36.631576" rx="7.1455" fill="var(--warn-accent)"/>
   <text x="1134.736842" y="481.614115" text-anchor="middle" font-size="11.909166" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod (CDN/static)</text>
   <line x1="1134.736842" y1="449.052686" x2="1134.736842" y2="459.22818" stroke="var(--warn-border)" stroke-width="1.3333" marker-end="url(#arrow)"/>
-  <rect x="1029.473684" y="508.070198" width="210.526316" height="65.122858" rx="7.1455" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1029.473684" y="508.070198" width="210.526316" height="65.122858" rx="7.1455" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1134.736842" y="534.52628" text-anchor="middle" font-size="14.489049" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">admin-svc</text>
   <text x="1134.736842" y="554.877268" text-anchor="middle" font-size="11.909166" fill="var(--text-muted)" font-family="Arial, sans-serif">ClusterIP :3000</text>
-  <rect x="1050.526316" y="583.368424" width="168.421053" height="36.631576" rx="7.1455" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1050.526316" y="583.368424" width="168.421053" height="36.631576" rx="7.1455" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1134.736842" y="605.754485" text-anchor="middle" font-size="11.909166" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod (admin UI)</text>
   <line x1="1134.736842" y1="573.193056" x2="1134.736842" y2="583.368424" stroke="var(--info-border)" stroke-width="1.3333" marker-end="url(#arrow)"/>
   <line x1="513.684211" y1="294.386087" x2="1029.473684" y2="86.80707" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)"/>

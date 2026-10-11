@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,19 +92,19 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.609199220546" font-weight="bold" fill="var(--text)">Catalyst Query Optimizer</text>
 
-  <rect x="40" y="129.230769230769" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="129.230769230769" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="168.571428571429" y="168.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.490970983169" font-weight="bold" fill="var(--info-text)">SQL or DataFrame</text>
   <text x="168.571428571429" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--info-text)">user code</text>
 
-  <rect x="40" y="263.076923076923" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="263.076923076923" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="168.571428571429" y="302.115384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.490970983169" font-weight="bold" fill="var(--warn-text)">Logical plan</text>
   <text x="168.571428571429" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--warn-text)">parsed, unresolved</text>
 
-  <rect x="40" y="396.923076923077" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="396.923076923077" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="168.571428571429" y="435.961538461539" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.490970983169" font-weight="bold" fill="var(--warn-text)">Optimized plan</text>
   <text x="168.571428571429" y="463.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--warn-text)">rules applied</text>
 
-  <rect x="40" y="530.769230769231" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="530.769230769231" width="257.142857142857" height="89.230769230769" rx="10.931856864481" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="168.571428571429" y="569.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.490970983169" font-weight="bold" fill="var(--primary-text)">Physical plan</text>
   <text x="168.571428571429" y="597.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--primary-text)">cheapest chosen</text>
 
@@ -129,7 +124,7 @@
   <text x="404.285714285714" y="376.846153846154" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--text-muted)">Cost-based: stats on row counts</text>
   <text x="404.285714285714" y="401.384615384615" font-family="Arial, sans-serif" font-size="14.211413923825" fill="var(--text-muted)">Adaptive query execution re-plans at runtime</text>
 
-  <rect x="382.857142857143" y="441.538461538462" width="857.142857142857" height="178.461538461538" rx="10.931856864481" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="382.857142857143" y="441.538461538462" width="857.142857142857" height="178.461538461538" rx="10.931856864481" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="811.428571428571" y="480.576923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.677342356065" font-weight="bold" fill="var(--ok-text)">Result</text>
   <text x="811.428571428571" y="514.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.304599610273" fill="var(--ok-text)">DataFrame and SQL both run through Catalyst</text>
   <text x="811.428571428571" y="541.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.304599610273" fill="var(--ok-text)">Same engine plans both — performance parity</text>

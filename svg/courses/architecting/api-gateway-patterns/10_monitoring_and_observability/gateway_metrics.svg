@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,22 +91,22 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">What the Gateway Reports</text>
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Traffic</text>
   <text x="60" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Requests per second</text>
   <text x="60" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">By route, by client</text>
   <text x="60" y="220" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Spot abusers fast</text>
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Latency</text>
   <text x="365" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">p50, p95, p99</text>
   <text x="365" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Gateway vs upstream</text>
   <text x="365" y="220" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Where time goes</text>
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Errors</text>
   <text x="670" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">4xx vs 5xx ratio</text>
   <text x="670" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Per upstream</text>
   <text x="670" y="220" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Auth failures separately</text>
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Tracing</text>
   <text x="975" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Inject trace headers</text>
   <text x="975" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Sample dynamically</text>

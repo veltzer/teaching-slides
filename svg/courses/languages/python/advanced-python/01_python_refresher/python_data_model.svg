@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,41 +91,41 @@
     </marker>
   </defs>
   <!-- Title -->
-  <rect x="40" y="40" width="1200" height="42.181822" rx="6.321041" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="42.181822" rx="6.321041" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="639.999948" y="66.842872" font-family="Arial, sans-serif" font-size="19.421399" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Data Model</text>
 
   <!-- Center: "Everything is an object" -->
-  <rect x="492.458872" y="102.314002" width="295.081941" height="57.520666" rx="6.321041" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="492.458872" y="102.314002" width="295.081941" height="57.520666" rx="6.321041" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="639.999948" y="136.826296" font-family="Arial, sans-serif" font-size="15.537014" font-weight="bold" fill="var(--bg)" text-anchor="middle">All is object</text>
 
   <!-- Objects radiating out -->
   <!-- int -->
   <line x1="492.458872" y1="131.07423" x2="305.573852" y2="169.421552" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <rect x="108.852453" y="150.247785" width="196.721189" height="67.107444" rx="6.321041" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="108.852453" y="150.247785" width="196.721189" height="67.107444" rx="6.321041" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="207.2131" y="177.090869" font-size="13.594769" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">42</text>
   <text x="207.2131" y="196.264424" font-family="Arial, sans-serif" font-size="12.230477" fill="var(--text-muted)" text-anchor="middle">int</text>
 
   <!-- str -->
   <line x1="541.6393" y1="102.314002" x2="423.606629" y2="73.553669" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <rect x="276.065658" y="44.793336" width="196.721189" height="57.520666" rx="6.321041" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="276.065658" y="44.793336" width="196.721189" height="57.520666" rx="6.321041" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="374.426305" y="70.677689" font-size="13.594769" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">"hello"</text>
   <text x="374.426305" y="90.809869" font-family="Arial, sans-serif" font-size="12.230477" fill="var(--text-muted)" text-anchor="middle">str</text>
 
   <!-- list -->
   <line x1="639.999948" y1="159.834563" x2="639.999948" y2="205.851096" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <rect x="531.803341" y="207.768557" width="216.393529" height="57.520666" rx="6.321041" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="531.803341" y="207.768557" width="216.393529" height="57.520666" rx="6.321041" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="639.999948" y="233.65291" font-size="13.594769" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Courier New, monospace">[1, 2, 3]</text>
   <text x="639.999948" y="252.82636" font-family="Arial, sans-serif" font-size="12.230477" fill="var(--text-muted)" text-anchor="middle">list</text>
 
   <!-- function -->
   <line x1="787.540813" y1="102.314002" x2="885.90167" y2="73.553669" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <rect x="817.049217" y="44.793336" width="216.393529" height="57.520666" rx="6.321041" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="817.049217" y="44.793336" width="216.393529" height="57.520666" rx="6.321041" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="925.245824" y="70.677689" font-size="13.594769" font-weight="bold" fill="var(--info-accent)" text-anchor="middle" font-family="Courier New, monospace">def foo(): ...</text>
   <text x="925.245824" y="90.809869" font-family="Arial, sans-serif" font-size="12.230477" fill="var(--text-muted)" text-anchor="middle">function</text>
 
   <!-- class -->
   <line x1="787.540813" y1="131.07423" x2="974.426253" y2="169.421552" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <rect x="974.426253" y="150.247785" width="196.721189" height="67.107444" rx="6.321041" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="974.426253" y="150.247785" width="196.721189" height="67.107444" rx="6.321041" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1072.787005" y="177.090869" font-size="13.594769" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Courier New, monospace">class Foo:</text>
   <text x="1072.787005" y="196.264424" font-family="Arial, sans-serif" font-size="12.230477" fill="var(--text-muted)" text-anchor="middle">type</text>
 
@@ -158,9 +153,9 @@
 
   <!-- Dunder methods table -->
   <rect x="846.557307" y="284.462779" width="393.442589" height="335.537221" rx="6.321041" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="846.557307" y="284.462779" width="393.442589" height="34.512506" rx="6.321041" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.557307" y="284.462779" width="393.442589" height="34.512506" rx="6.321041" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1043.278601" y="306.512315" font-family="Arial, sans-serif" font-size="14.565891" font-weight="bold" fill="var(--bg)" text-anchor="middle">Dunders</text>
-  <rect x="856.393476" y="322.809996" width="373.770564" height="26.842872" rx="6.321041" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="856.393476" y="322.809996" width="373.770564" height="26.842872" rx="6.321041" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="866.229436" y="341.024715" font-family="Arial, sans-serif" font-size="12.230477" font-weight="bold" fill="var(--info-accent)">Method</text>
   <text x="866.229436" y="364.991606" font-size="12.230477" fill="var(--info-accent)" font-family="Courier New, monospace">__init__</text>
   <text x="1023.606576" y="364.991606" font-family="Arial, sans-serif" font-size="12.230477" fill="var(--text)">Class()</text>
@@ -190,13 +185,13 @@
   <rect x="40" y="490.578448" width="786.885282" height="119.834669" rx="6.321041" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="433.442589" y="512.627984" font-family="Arial, sans-serif" font-size="13.594769" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Type Hierarchy</text>
   <!-- boxes -->
-  <rect x="59.672129" y="522.214973" width="118.032777" height="34.512506" rx="6.321041" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="59.672129" y="522.214973" width="118.032777" height="34.512506" rx="6.321041" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="118.688623" y="544.264403" font-family="Arial, sans-serif" font-size="12.230477" fill="var(--bg)" text-anchor="middle">object</text>
-  <rect x="207.2131" y="522.214973" width="118.032777" height="34.512506" rx="6.321041" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="207.2131" y="522.214973" width="118.032777" height="34.512506" rx="6.321041" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="266.229593" y="544.264403" font-family="Arial, sans-serif" font-size="12.230477" fill="var(--bg)" text-anchor="middle">type</text>
-  <rect x="354.754071" y="522.214973" width="118.032777" height="34.512506" rx="6.321041" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="354.754071" y="522.214973" width="118.032777" height="34.512506" rx="6.321041" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="413.770564" y="544.264403" font-family="Arial, sans-serif" font-size="12.230477" fill="var(--bg)" text-anchor="middle">int/str/list</text>
-  <rect x="502.295042" y="522.214973" width="137.704906" height="34.512506" rx="6.321041" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="502.295042" y="522.214973" width="137.704906" height="34.512506" rx="6.321041" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="571.147495" y="544.264403" font-family="Arial, sans-serif" font-size="12.230477" fill="var(--bg)" text-anchor="middle">MyClass</text>
   <text x="59.672129" y="581.652889" font-family="Arial, sans-serif" font-size="12.623962" fill="var(--text)">type(42) is int</text>
   <text x="59.672129" y="600.826445" font-family="Arial, sans-serif" font-size="12.623962" fill="var(--text)">Inherits object</text>

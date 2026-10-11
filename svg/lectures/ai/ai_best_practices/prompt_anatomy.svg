@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -95,16 +90,16 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="90" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="90" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="70" y="93" text-anchor="start" font-size="22" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">example</text>
   <text x="340" y="93" text-anchor="start" font-size="20" fill="var(--primary-text)" font-family="Arial, sans-serif">match src/parser.py, not "write clean code"</text>
-  <rect x="40" y="160" width="1200" height="90" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="160" width="1200" height="90" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="70" y="213" text-anchor="start" font-size="22" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">gate</text>
   <text x="340" y="213" text-anchor="start" font-size="20" fill="var(--ok-text)" font-family="Arial, sans-serif">pytest tests/ must pass — paste the output</text>
-  <rect x="40" y="280" width="1200" height="90" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="280" width="1200" height="90" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="70" y="333" text-anchor="start" font-size="22" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">scope</text>
   <text x="340" y="333" text-anchor="start" font-size="20" fill="var(--warn-text)" font-family="Arial, sans-serif">do not touch .github/workflows</text>
-  <rect x="40" y="400" width="1200" height="90" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="400" width="1200" height="90" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="70" y="453" text-anchor="start" font-size="22" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">rule + reason</text>
   <text x="340" y="453" text-anchor="start" font-size="20" fill="var(--info-text)" font-family="Arial, sans-serif">never pin versions, because the lockfile owns them</text>
   <rect x="40" y="550" width="1200" height="70" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="291.063829787234" height="284.313725490196" rx="8.621653910079" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="291.063829787234" height="284.313725490196" rx="8.621653910079" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="185.021276595745" y="85.490196078431" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.554134775198" font-weight="bold" fill="var(--danger-text)">Shuffle</text>
   <text x="185.021276595745" y="130.980392156863" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--danger-text)">Largest cost</text>
   <text x="185.021276595745" y="165.098039215686" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--danger-text)">Avoid wide transforms</text>
@@ -105,7 +100,7 @@
   <text x="185.021276595745" y="233.333333333334" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--danger-text)">Tune partitions</text>
   <text x="185.021276595745" y="273.13725490196" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--danger-text)">AQE coalesces</text>
 
-  <rect x="341.276595744681" y="40" width="291.063829787234" height="284.313725490196" rx="8.621653910079" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="341.276595744681" y="40" width="291.063829787234" height="284.313725490196" rx="8.621653910079" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="486.297872340425" y="85.490196078431" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.554134775198" font-weight="bold" fill="var(--warn-text)">Data Skew</text>
   <text x="486.297872340425" y="130.980392156863" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--warn-text)">One task dominates</text>
   <text x="486.297872340425" y="165.098039215686" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--warn-text)">Hot keys in joins</text>
@@ -113,7 +108,7 @@
   <text x="486.297872340425" y="233.333333333334" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--warn-text)">AQE skew handling</text>
   <text x="486.297872340425" y="273.13725490196" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--warn-text)">Pre-aggregate</text>
 
-  <rect x="642.553191489362" y="40" width="291.063829787234" height="284.313725490196" rx="8.621653910079" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="642.553191489362" y="40" width="291.063829787234" height="284.313725490196" rx="8.621653910079" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="787.574468085106" y="85.490196078431" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.554134775198" font-weight="bold" fill="var(--ok-text)">Partitioning</text>
   <text x="787.574468085106" y="130.980392156863" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--ok-text)">Few: no parallelism</text>
   <text x="787.574468085106" y="165.098039215686" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--ok-text)">Many: overhead</text>
@@ -121,7 +116,7 @@
   <text x="787.574468085106" y="233.333333333334" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--ok-text)">2-4x cores</text>
   <text x="787.574468085106" y="273.13725490196" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--ok-text)">repartition / coalesce</text>
 
-  <rect x="943.829787234043" y="40" width="296.170212765957" height="284.313725490196" rx="8.621653910079" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="943.829787234043" y="40" width="296.170212765957" height="284.313725490196" rx="8.621653910079" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1091.914893617021" y="85.490196078431" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.554134775198" font-weight="bold" fill="var(--primary-text)">I/O + Formats</text>
   <text x="1091.914893617021" y="130.980392156863" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--primary-text)">Parquet / ORC</text>
   <text x="1091.914893617021" y="165.098039215686" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.087894342638" fill="var(--primary-text)">Predicate pushdown</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="600" height="280" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="600" height="280" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="340" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--ok-text)">UTF-8</text>
   <text x="340" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">variable length, 1 to 4 bytes per character</text>
   <text x="340" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">backward-compatible with ASCII</text>
@@ -104,7 +99,7 @@
   <text x="340" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">the modern default</text>
   <text x="340" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">use this unless you have a reason not to</text>
 
-  <rect x="660" y="40" width="580" height="280" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="40" width="580" height="280" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="950" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--warn-text)">Legacy Encodings</text>
   <text x="950" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Latin-1: Western European</text>
   <text x="950" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Shift-JIS: Japanese</text>

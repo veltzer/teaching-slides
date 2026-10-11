@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,15 +91,15 @@
     </marker>
   </defs>
   <polygon points="640,40 1240,620 40,620" fill="none" stroke="var(--primary-border)" stroke-width="3.6"/>
-  <rect x="373.3333" y="66.769240568048" width="533.3332" height="124.923122650889" rx="6.181859382607" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="373.3333" y="66.769240568048" width="533.3332" height="124.923122650889" rx="6.181859382607" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="111.384641514793" text-anchor="middle" font-size="24.940917741106" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">E2E / Smoke Tests</text>
   <text x="640" y="141.723092927811" text-anchor="middle" font-size="19.18529756293" fill="var(--text)" font-family="Arial, sans-serif">Full cluster, real data</text>
   <text x="640" y="170.276885841419" text-anchor="middle" font-size="19.18529756293" fill="var(--text-muted)" font-family="Arial, sans-serif">Few tests, slow, high cost</text>
-  <rect x="256.6666" y="218.461497633135" width="766.6666" height="142.769283029587" rx="6.181859382607" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="256.6666" y="218.461497633135" width="766.6666" height="142.769283029587" rx="6.181859382607" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="263.076898579881" text-anchor="middle" font-size="24.940917741106" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Integration Tests</text>
   <text x="640" y="295.200008492308" text-anchor="middle" font-size="19.18529756293" fill="var(--text)" font-family="Arial, sans-serif">Local Spark, real I/O, small datasets</text>
   <text x="640" y="325.538459905325" text-anchor="middle" font-size="19.18529756293" fill="var(--text-muted)" font-family="Arial, sans-serif">Medium count, medium speed</text>
-  <rect x="123.3334" y="388.00002123077" width="1033.3333" height="196.307658011834" rx="6.181859382607" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="123.3334" y="388.00002123077" width="1033.3333" height="196.307658011834" rx="6.181859382607" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="441.538502366865" text-anchor="middle" font-size="24.940917741106" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Unit Tests</text>
   <text x="640" y="477.230716970413" text-anchor="middle" font-size="19.18529756293" fill="var(--text)" font-family="Arial, sans-serif">Local Spark, in-memory data, mocked sources</text>
   <text x="640" y="512.92303772781" text-anchor="middle" font-size="19.18529756293" fill="var(--text-muted)" font-family="Arial, sans-serif">Many tests, fast, low cost</text>

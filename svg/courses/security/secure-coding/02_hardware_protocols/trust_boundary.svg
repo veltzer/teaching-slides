@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -102,7 +97,7 @@
   <text x="318.571428571429" y="124.488188976378" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.908395389235" font-weight="bold" fill="var(--text)">Rich / untrusted world</text>
   <text x="318.571428571429" y="151.889763779528" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.378285558892" font-style="italic" fill="var(--text-muted)">assume it is hostile</text>
 
-  <rect x="82.857142857143" y="188.425196850394" width="471.428571428571" height="91.338582677165" rx="6.636131796412" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="82.857142857143" y="188.425196850394" width="471.428571428571" height="91.338582677165" rx="6.636131796412" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="318.571428571429" y="229.527559055118" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.696351457098" font-weight="bold" fill="var(--primary-text)">Application code</text>
   <text x="318.571428571429" y="256.929133858268" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.378285558892" fill="var(--primary-text)">large, complex, frequently updated</text>
 
@@ -114,17 +109,17 @@
   <text x="318.571428571429" y="480.708661417323" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.696351457098" font-weight="bold" fill="var(--text)">Sees only: handles + results</text>
   <text x="318.571428571429" y="508.110236220472" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.378285558892" fill="var(--text-muted)">"sign with handle 3" — never the key bytes</text>
 
-  <rect x="704.285714285714" y="85.669291338583" width="535.714285714286" height="490.944881889764" rx="6.636131796412" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="704.285714285714" y="85.669291338583" width="535.714285714286" height="490.944881889764" rx="6.636131796412" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="972.142857142857" y="124.488188976378" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.908395389235" font-weight="bold" fill="var(--ok-text)">Trusted hardware</text>
   <text x="972.142857142857" y="151.889763779528" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.378285558892" font-style="italic" fill="var(--ok-text)">small, fixed, auditable — the TCB</text>
 
-  <rect x="747.142857142857" y="188.425196850394" width="450" height="79.92125984252" rx="6.636131796412" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="747.142857142857" y="188.425196850394" width="450" height="79.92125984252" rx="6.636131796412" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="972.142857142857" y="236.377952755905" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.590329491029" font-weight="bold" fill="var(--info-text)">Key storage — never leaves the chip</text>
 
-  <rect x="747.142857142857" y="291.181102362205" width="450" height="79.92125984252" rx="6.636131796412" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="747.142857142857" y="291.181102362205" width="450" height="79.92125984252" rx="6.636131796412" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="972.142857142857" y="339.133858267717" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.590329491029" font-weight="bold" fill="var(--info-text)">Crypto ops: sign · verify · decrypt · key-agree</text>
 
-  <rect x="747.142857142857" y="393.937007874016" width="450" height="79.92125984252" rx="6.636131796412" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="747.142857142857" y="393.937007874016" width="450" height="79.92125984252" rx="6.636131796412" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="972.142857142857" y="441.889763779528" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.590329491029" font-weight="bold" fill="var(--info-text)">TRNG · attestation · monotonic counter</text>
 
   <text x="747.142857142857" y="517.244094488189" font-family="Arial, sans-serif" font-size="14.378285558892" fill="var(--ok-text)">tamper-resistant: probing · glitching · side channels</text>

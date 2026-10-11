@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">DataLoader And N Plus One</text>
 
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="185" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">The N plus one</text>
   <text x="60" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">List query loads parents</text>
   <text x="60" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Each child triggers a query</text>
@@ -105,7 +100,7 @@
   <text x="60" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Slow under load</text>
   <text x="60" y="290" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Common GraphQL trap</text>
 
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="490" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">DataLoader basics</text>
   <text x="365" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Per request batch utility</text>
   <text x="365" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Coalesces calls in a tick</text>
@@ -113,7 +108,7 @@
   <text x="365" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Returns matching values</text>
   <text x="365" y="290" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">In memory cache too</text>
 
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="795" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Implementation</text>
   <text x="670" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">One loader per resource</text>
   <text x="670" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Created per request</text>
@@ -121,7 +116,7 @@
   <text x="670" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Return promises</text>
   <text x="670" y="290" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Languages have ports</text>
 
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-with="2" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-with="2" stroke-width="2"/>
   <text x="1097" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Beyond DataLoader</text>
   <text x="975" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Lookahead resolvers</text>
   <text x="975" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Database join hints</text>

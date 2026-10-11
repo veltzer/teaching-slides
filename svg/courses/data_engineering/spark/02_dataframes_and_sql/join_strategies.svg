@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.982753492379" font-weight="bold" fill="var(--text)">Spark Join Strategies</text>
 
-  <rect x="40" y="102.142857142857" width="393.103448275862" height="227.857142857143" rx="10.350983390135" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="102.142857142857" width="393.103448275862" height="227.857142857143" rx="10.350983390135" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="236.551724137931" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--info-text)">Broadcast hash join</text>
   <text x="236.551724137931" y="169.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">small table → all executors</text>
   <text x="236.551724137931" y="193.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">no shuffle, hash lookup</text>
@@ -105,7 +100,7 @@
   <text x="236.551724137931" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--ok-accent)">+ fastest by far</text>
   <text x="236.551724137931" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--danger-accent)">- driver memory limit</text>
 
-  <rect x="443.448275862069" y="102.142857142857" width="393.103448275862" height="227.857142857143" rx="10.350983390135" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.448275862069" y="102.142857142857" width="393.103448275862" height="227.857142857143" rx="10.350983390135" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--warn-text)">Sort-merge join</text>
   <text x="640" y="169.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--warn-text)">shuffle both sides</text>
   <text x="640" y="193.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--warn-text)">sort, merge by key</text>
@@ -113,7 +108,7 @@
   <text x="640" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--ok-accent)">+ scales linearly</text>
   <text x="640" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--danger-accent)">- shuffle is expensive</text>
 
-  <rect x="846.896551724138" y="102.142857142857" width="393.103448275862" height="227.857142857143" rx="10.350983390135" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.896551724138" y="102.142857142857" width="393.103448275862" height="227.857142857143" rx="10.350983390135" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1043.448275862069" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--primary-text)">Shuffle hash join</text>
   <text x="1043.448275862069" y="169.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--primary-text)">shuffle both</text>
   <text x="1043.448275862069" y="193.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--primary-text)">build hash on smaller side</text>

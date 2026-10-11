@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="590" height="267.692307692308" rx="8.44894167246" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="590" height="267.692307692308" rx="8.44894167246" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="335" y="84.615384615384" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--primary-text)">Columnar Formats</text>
   <text x="335" y="123.653846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--primary-text)">Read only projected columns</text>
   <rect x="70" y="151.538461538461" width="260" height="133.846153846154" rx="6.336706254345" fill="var(--bg)" stroke="var(--primary-border)"/>
@@ -111,7 +106,7 @@
   <text x="470" y="240.76923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--text-muted)">Stripes + bloom</text>
   <text x="470" y="268.653846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--text-muted)">ACID, vectorized</text>
 
-  <rect x="650" y="40" width="590" height="267.692307692308" rx="8.44894167246" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="590" height="267.692307692308" rx="8.44894167246" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="945" y="84.615384615384" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--ok-text)">Compression</text>
   <text x="945" y="123.653846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--ok-text)">Trade CPU for I/O</text>
   <rect x="670" y="151.538461538461" width="175" height="133.846153846154" rx="6.336706254345" fill="var(--bg)" stroke="var(--ok-border)"/>
@@ -127,7 +122,7 @@
   <text x="1130" y="212.884615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--text-muted)">Slower</text>
   <text x="1130" y="240.76923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--text-muted)">Not splittable</text>
 
-  <rect x="40" y="341.153846153846" width="590" height="278.846153846154" rx="8.44894167246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="341.153846153846" width="590" height="278.846153846154" rx="8.44894167246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="335" y="385.769230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--warn-text)">Partitioning</text>
   <text x="335" y="424.807692307692" text-anchor="middle" font-family="Courier New, monospace" font-size="15.841765635861" fill="var(--warn-text)">partitionBy("dt","country")</text>
   <text x="335" y="463.846153846153" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--warn-text)">Engine skips dirs</text>
@@ -135,7 +130,7 @@
   <text x="335" y="541.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--warn-text)">128 MB - 1 GB files</text>
   <text x="335" y="586.538461538461" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" font-style="italic" fill="var(--warn-text)">Coalesce before write</text>
 
-  <rect x="650" y="341.153846153846" width="590" height="278.846153846154" rx="8.44894167246" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="341.153846153846" width="590" height="278.846153846154" rx="8.44894167246" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="945" y="385.769230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--info-text)">Bucketing</text>
   <text x="945" y="424.807692307692" text-anchor="middle" font-family="Courier New, monospace" font-size="15.841765635861" fill="var(--info-text)">bucketBy(N, key).sortBy(ts)</text>
   <text x="945" y="463.846153846153" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--info-text)">Joins skip shuffle</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="600" height="284.528301886793" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="600" height="284.528301886793" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="340" y="83.77358490566" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014351551988" font-weight="bold" fill="var(--primary-text)">SparkContext</text>
   <text x="340" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--primary-text)">Entry point per application</text>
   <text x="340" y="152.716981132075" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--primary-text)">Owns the DAG and executors</text>
@@ -106,7 +101,7 @@
   <text x="340" y="275.283018867925" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" font-style="italic" fill="var(--primary-text)">SparkSession wraps it in 2.0+</text>
   <text x="340" y="302.641509433962" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" font-style="italic" fill="var(--primary-text)">Exposes DataFrame / SQL</text>
 
-  <rect x="660" y="40" width="580" height="284.528301886793" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="40" width="580" height="284.528301886793" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950" y="83.77358490566" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014351551988" font-weight="bold" fill="var(--ok-text)">Schedulers</text>
   <text x="950" y="127.547169811321" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.737710219627" font-weight="bold" fill="var(--ok-text)">DAGScheduler</text>
   <text x="950" y="154.905660377358" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--ok-text)">Splits jobs at shuffles</text>
@@ -115,7 +110,7 @@
   <text x="950" y="258.867924528302" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.737710219627" font-weight="bold" fill="var(--ok-text)">BlockManager</text>
   <text x="950" y="286.22641509434" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--ok-text)">Cache and shuffle blocks</text>
 
-  <rect x="40" y="351.88679245283" width="390" height="268.11320754717" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="351.88679245283" width="390" height="268.11320754717" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="235" y="395.660377358491" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014351551988" font-weight="bold" fill="var(--warn-text)">RDD Engine</text>
   <text x="235" y="433.962264150944" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--warn-text)">Distributed datasets</text>
   <text x="235" y="466.792452830189" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--warn-text)">Narrow + wide transforms</text>
@@ -123,7 +118,7 @@
   <text x="235" y="537.924528301887" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--warn-text)">Fault tolerance</text>
   <text x="235" y="581.698113207547" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" font-style="italic" fill="var(--warn-text)">Foundation for DF / SQL / MLlib</text>
 
-  <rect x="450" y="351.88679245283" width="390" height="268.11320754717" rx="8.368855109814" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="351.88679245283" width="390" height="268.11320754717" rx="8.368855109814" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="645" y="395.660377358491" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014351551988" font-weight="bold" fill="var(--info-text)">Cluster Manager</text>
   <text x="645" y="433.962264150944" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--info-text)">Standalone / YARN / K8s</text>
   <text x="645" y="466.792452830189" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--info-text)">Allocates executors</text>
@@ -131,7 +126,7 @@
   <text x="645" y="543.396226415094" text-anchor="middle" font-family="Courier New, monospace" font-size="13.599389553448" fill="var(--info-text)">--master local | yarn</text>
   <text x="645" y="568.56603773585" text-anchor="middle" font-family="Courier New, monospace" font-size="13.599389553448" fill="var(--info-text)">--master k8s://...</text>
 
-  <rect x="860" y="351.88679245283" width="380" height="268.11320754717" rx="8.368855109814" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="351.88679245283" width="380" height="268.11320754717" rx="8.368855109814" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1050" y="395.660377358491" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014351551988" font-weight="bold" fill="var(--danger-text)">Shuffle Service</text>
   <text x="1050" y="433.962264150944" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--danger-text)">Helper per worker</text>
   <text x="1050" y="466.792452830189" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--danger-text)">Serves shuffle files</text>

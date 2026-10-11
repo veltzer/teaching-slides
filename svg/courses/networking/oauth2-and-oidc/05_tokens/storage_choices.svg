@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,25 +91,25 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Token Storage Choices</text>
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Server side session</text>
   <text x="60" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Tokens stay on the server</text>
   <text x="60" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Browser only sees a session cookie</text>
   <text x="60" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Best for traditional web apps</text>
   <text x="60" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Pattern works with backend for frontend</text>
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Browser memory</text>
   <text x="365" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Tokens kept in JavaScript memory</text>
   <text x="365" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Cleared on tab close or reload</text>
   <text x="365" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Safer than local storage</text>
   <text x="365" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Lost on every refresh</text>
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Mobile keystore</text>
   <text x="670" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Operating system protected store</text>
   <text x="670" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Not in shared preferences</text>
   <text x="670" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Refresh tokens encrypted at rest</text>
   <text x="670" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Wipe on user logout</text>
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Avoid</text>
   <text x="975" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Local storage in browsers</text>
   <text x="975" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Cookies without httpOnly secure</text>

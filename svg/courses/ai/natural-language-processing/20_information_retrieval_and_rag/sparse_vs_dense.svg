@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,7 +93,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.071383656624" font-weight="bold" fill="var(--text)">Sparse vs dense vs hybrid retrieval</text>
 
-  <rect x="40" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="230" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--warn-text)">Sparse (BM25)</text>
   <text x="230" y="175.514018691589" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">term-frequency vectors</text>
   <text x="230" y="202.616822429907" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">over the vocabulary</text>
@@ -109,7 +104,7 @@
   <text x="230" y="403.177570093458" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">on new domains</text>
   <text x="230" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">- weak on paraphrase</text>
       
-  <rect x="450" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--primary-text)">Dense (bi-encoder)</text>
   <text x="640" y="175.514018691589" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">learned embedding</text>
   <text x="640" y="202.616822429907" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">~768 dim per doc</text>
@@ -120,7 +115,7 @@
   <text x="640" y="462.803738317757" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">- needs training data</text>
   <text x="640" y="489.906542056075" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">- weak on rare entities</text>
       
-  <rect x="860" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1050" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--ok-text)">Hybrid</text>
   <text x="1050" y="175.514018691589" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">run both, fuse scores</text>
   <text x="1050" y="202.616822429907" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">reciprocal rank fusion</text>

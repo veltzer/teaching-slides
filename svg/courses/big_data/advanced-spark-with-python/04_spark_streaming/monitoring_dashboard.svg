@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -103,14 +98,14 @@
   <text x="373.333468209877" y="244.705968944636" font-family="Arial, sans-serif" font-size="16.28987381847" fill="var(--ok-accent)">-- Process rate</text>
   <rect x="648.333347260802" y="40" width="591.666652739197" height="221.764639273358" rx="6.55968073227" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2.1854"/>
   <text x="943.33336529321" y="77.529459723182" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.547848582163" font-weight="bold" fill="var(--warn-accent)">Batch Duration (ms)</text>
-  <rect x="698.333325270062" y="142.353041089963" width="41.666683526235" height="85.294144290657" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="756.666703317901" y="125.294144290657" width="41.666683526235" height="102.352927854671" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="815.000081365741" y="159.411824653978" width="41.666683526235" height="68.23524749135" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="873.333459413581" y="116.764695891003" width="41.666683526235" height="110.882376254325" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="931.666731905864" y="133.82359269031" width="41.666683526235" height="93.82359269031" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="990.000109953704" y="150.882489489617" width="41.666683526235" height="76.764695891003" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1048.333382445988" y="108.235360726642" width="41.666683526235" height="119.411824653978" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1106.666654938271" y="125.294144290657" width="41.666683526235" height="102.352927854671" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="698.333325270062" y="142.353041089963" width="41.666683526235" height="85.294144290657" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="756.666703317901" y="125.294144290657" width="41.666683526235" height="102.352927854671" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="815.000081365741" y="159.411824653978" width="41.666683526235" height="68.23524749135" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="873.333459413581" y="116.764695891003" width="41.666683526235" height="110.882376254325" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="931.666731905864" y="133.82359269031" width="41.666683526235" height="93.82359269031" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="990.000109953704" y="150.882489489617" width="41.666683526235" height="76.764695891003" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="1048.333382445988" y="108.235360726642" width="41.666683526235" height="119.411824653978" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="1106.666654938271" y="125.294144290657" width="41.666683526235" height="102.352927854671" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="943.33336529321" y="244.705968944636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.28987381847" fill="var(--text-faint)">Batch #  (red = exceeded trigger)</text>
   <rect x="40" y="278.823536072664" width="383.33334066358" height="170.588288581315" rx="6.55968073227" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2.1854"/>
   <text x="231.666828665124" y="316.352995795847" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.547848582163" font-weight="bold" fill="var(--ok-accent)">State Store</text>
@@ -136,9 +131,9 @@
   <text x="931.666731905864" y="403.353029766435" font-family="Arial, sans-serif" font-size="17.918861200317" fill="var(--text-muted)">Processing on schedule</text>
   <rect x="897.230498413104" y="418.818253060574" width="18.87333342071" height="20.246470280226" rx="9.773924291082" fill="var(--warn-accent)"/>
   <text x="931.666731905864" y="437.470710129756" font-family="Arial, sans-serif" font-size="17.918861200317" fill="var(--text-muted)">State size warning</text>
-  <rect x="40" y="475.000056617646" width="1200" height="68.23524749135" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="475.000056617646" width="1200" height="68.23524749135" rx="6.55968073227" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="73.33338904321" y="517.647072145329" font-family="Arial, sans-serif" font-size="19.547848582163" font-weight="bold" fill="var(--warn-accent)">Alerts:</text>
   <text x="173.333450617284" y="517.647072145329" font-family="Arial, sans-serif" font-size="19.547848582163" fill="var(--text-muted)">processRate/inputRate ratio = 0.85 (below 0.9 threshold) | State size growing 5%/hour</text>
-  <rect x="40" y="560.294200908304" width="1200" height="59.705799091696" rx="6.55968073227" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="560.294200908304" width="1200" height="59.705799091696" rx="6.55968073227" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640.000158333334" y="597.823660631486" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.918861200317" fill="var(--text-muted)">API: query.lastProgress | query.status | spark.streams.active | StreamingQueryListener</text>
 </svg>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,28 +91,28 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">TCP Congestion Control Algorithms</text>
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Reno</text>
   <text x="60" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Slow start to threshold</text>
   <text x="60" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Then linear growth</text>
   <text x="60" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Halve on packet loss</text>
   <text x="60" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Loss as the signal</text>
   <text x="60" y="285" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">Classic, conservative</text>
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Cubic</text>
   <text x="365" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Default on Linux</text>
   <text x="365" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Cubic growth function</text>
   <text x="365" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Quick recovery to peak</text>
   <text x="365" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Better for high-BDP links</text>
   <text x="365" y="285" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--primary-text)">Faster than Reno</text>
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="795" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">BBR</text>
   <text x="670" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Bottleneck bandwidth model</text>
   <text x="670" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">RTT estimate driven</text>
   <text x="670" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Loss-agnostic</text>
   <text x="670" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Used by Google, YouTube</text>
   <text x="670" y="285" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--ok-text)">Higher throughput</text>
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1097" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Choosing</text>
   <text x="975" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Default Cubic is fine</text>
   <text x="975" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">BBR for streaming</text>

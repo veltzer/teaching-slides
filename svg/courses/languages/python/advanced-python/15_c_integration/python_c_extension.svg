@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
 
 
   <!-- Four method cards -->
-  <rect x="40" y="40" width="290" height="259.029126213593" rx="10.612321104419" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="290" height="259.029126213593" rx="10.612321104419" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="185" y="79.417475728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.102177987955" font-weight="bold" fill="var(--primary-text)">ctypes</text>
   <text x="185" y="113.203883495145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--primary-text)">stdlib, no compile</text>
   <text x="185" y="152.621359223301" text-anchor="middle" font-family="Courier New, monospace" font-size="12.734785325303" fill="var(--primary-text)">cdll.LoadLibrary</text>
@@ -106,7 +101,7 @@
   <text x="185" y="225.825242718447" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--primary-text)">Manual type mapping</text>
   <text x="185" y="259.611650485437" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--primary-text)">Best: quick .so calls</text>
 
-  <rect x="340" y="40" width="290" height="259.029126213593" rx="10.612321104419" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="290" height="259.029126213593" rx="10.612321104419" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="485" y="79.417475728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.102177987955" font-weight="bold" fill="var(--ok-text)">cffi</text>
   <text x="485" y="113.203883495145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--ok-text)">Declare C in Python</text>
   <text x="485" y="152.621359223301" text-anchor="middle" font-family="Courier New, monospace" font-size="12.734785325303" fill="var(--ok-text)">ffi.cdef(sig)</text>
@@ -114,7 +109,7 @@
   <text x="485" y="225.825242718447" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--ok-text)">ABI + API modes</text>
   <text x="485" y="259.611650485437" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--ok-text)">Best: wrap libraries</text>
 
-  <rect x="640" y="40" width="290" height="259.029126213593" rx="10.612321104419" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="40" width="290" height="259.029126213593" rx="10.612321104419" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="785" y="79.417475728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.102177987955" font-weight="bold" fill="var(--warn-text)">Cython</text>
   <text x="785" y="113.203883495145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--warn-text)">Python compiled to C</text>
   <text x="785" y="152.621359223301" text-anchor="middle" font-family="Courier New, monospace" font-size="12.734785325303" fill="var(--warn-text)">cdef int f(int x)</text>
@@ -122,7 +117,7 @@
   <text x="785" y="225.825242718447" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--warn-text)">Near-C speed</text>
   <text x="785" y="259.611650485437" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--warn-text)">Best: numeric hot loops</text>
 
-  <rect x="940" y="40" width="300" height="259.029126213593" rx="10.612321104419" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="259.029126213593" rx="10.612321104419" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1090" y="79.417475728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.102177987955" font-weight="bold" fill="var(--info-text)">C Extension</text>
   <text x="1090" y="113.203883495145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--info-text)">Python/C API</text>
   <text x="1090" y="152.621359223301" text-anchor="middle" font-family="Courier New, monospace" font-size="12.734785325303" fill="var(--info-text)">#include Python.h</text>

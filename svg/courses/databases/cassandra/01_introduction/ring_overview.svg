@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.03701420285" font-weight="bold" fill="var(--text)">Cassandra Architecture Overview</text>
 
-  <rect x="40" y="104.444444444444" width="578.571428571429" height="236.296296296296" rx="10.727505072446" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="104.444444444444" width="578.571428571429" height="236.296296296296" rx="10.727505072446" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="329.285714285714" y="142.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.309509130404" font-weight="bold" fill="var(--info-text)">Peer-to-peer ring</text>
   <text x="61.428571428571" y="185" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--info-text)">Every node equal — no master</text>
   <text x="61.428571428571" y="211.851851851852" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--info-text)">Coordinator role chosen per request</text>
@@ -105,7 +100,7 @@
   <text x="61.428571428571" y="265.555555555556" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--info-text)">Replicas spread across racks/DCs</text>
   <text x="61.428571428571" y="292.407407407407" font-family="Arial, sans-serif" font-size="15.018507101425" font-weight="bold" fill="var(--ok-accent)">Survives node loss seamlessly</text>
 
-  <rect x="661.428571428571" y="104.444444444444" width="578.571428571429" height="236.296296296296" rx="10.727505072446" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="661.428571428571" y="104.444444444444" width="578.571428571429" height="236.296296296296" rx="10.727505072446" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="950.714285714286" y="142.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.309509130404" font-weight="bold" fill="var(--warn-text)">Tunable consistency</text>
   <text x="682.857142857143" y="185" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--warn-text)">Per query: ONE / QUORUM / ALL</text>
   <text x="682.857142857143" y="211.851851851852" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--warn-text)">R + W &gt; N → strong reads</text>
@@ -113,7 +108,7 @@
   <text x="682.857142857143" y="265.555555555556" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--warn-text)">App chooses cost vs safety</text>
   <text x="682.857142857143" y="292.407407407407" font-family="Arial, sans-serif" font-size="15.018507101425" font-weight="bold" fill="var(--ok-accent)">AP system, tunable toward CP</text>
 
-  <rect x="40" y="383.703703703704" width="578.571428571429" height="236.296296296296" rx="10.727505072446" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="383.703703703704" width="578.571428571429" height="236.296296296296" rx="10.727505072446" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="329.285714285714" y="421.296296296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.309509130404" font-weight="bold" fill="var(--primary-text)">Strengths</text>
   <text x="61.428571428571" y="458.888888888889" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--primary-text)">Massive write throughput</text>
   <text x="61.428571428571" y="485.740740740741" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--primary-text)">Multi-region active-active</text>
@@ -121,7 +116,7 @@
   <text x="61.428571428571" y="539.444444444444" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--primary-text)">Always-on for tier-1 systems</text>
   <text x="61.428571428571" y="571.666666666667" font-family="Arial, sans-serif" font-size="15.018507101425" font-weight="bold" fill="var(--ok-accent)">Time-series, event data, IoT</text>
 
-  <rect x="661.428571428571" y="383.703703703704" width="578.571428571429" height="236.296296296296" rx="10.727505072446" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="661.428571428571" y="383.703703703704" width="578.571428571429" height="236.296296296296" rx="10.727505072446" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="950.714285714286" y="421.296296296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.309509130404" font-weight="bold" fill="var(--danger-text)">Limitations</text>
   <text x="682.857142857143" y="458.888888888889" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--danger-text)">No joins, no foreign keys</text>
   <text x="682.857142857143" y="485.740740740741" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--danger-text)">No ad-hoc queries</text>

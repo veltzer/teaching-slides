@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
   <!-- Reusable -->
-  <rect x="40" y="40" width="590" height="200" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="590" height="200" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="335" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Reusable Workflows</text>
   <text x="60" y="110" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">on:</text>
   <text x="60" y="135" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  workflow_call:</text>
@@ -106,7 +101,7 @@
   <text x="60" y="220" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">uses: org/repo/.github/...@main</text>
 
   <!-- Caching -->
-  <rect x="650" y="40" width="590" height="200" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="590" height="200" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="945" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Caching</text>
   <text x="670" y="110" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">- uses: actions/cache@v4</text>
   <text x="670" y="135" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  with:</text>
@@ -115,7 +110,7 @@
   <text x="670" y="220" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="var(--bg)">Hash-based invalidation</text>
 
   <!-- Concurrency -->
-  <rect x="40" y="260" width="390" height="200" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="260" width="390" height="200" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="235" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Concurrency</text>
   <text x="60" y="330" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">concurrency:</text>
   <text x="60" y="355" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  group: ${{ github.ref }}</text>
@@ -123,7 +118,7 @@
   <text x="60" y="420" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">Cancels old PR runs</text>
 
   <!-- Security -->
-  <rect x="445" y="260" width="390" height="200" rx="8" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="260" width="390" height="200" rx="8" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Security</text>
   <text x="465" y="330" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">permissions:</text>
   <text x="465" y="355" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  contents: read</text>
@@ -131,7 +126,7 @@
   <text x="465" y="420" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">Use secrets.NAME</text>
 
   <!-- Matrix -->
-  <rect x="850" y="260" width="390" height="200" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="260" width="390" height="200" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1045" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Matrix</text>
   <text x="870" y="330" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">strategy:</text>
   <text x="870" y="355" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  matrix:</text>
@@ -140,7 +135,7 @@
   <text x="870" y="440" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">fail-fast: false</text>
 
   <!-- Tips -->
-  <rect x="40" y="480" width="1200" height="140" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="480" width="1200" height="140" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--bg)">Optimization</text>
   <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">needs: runs independent jobs in parallel</text>
   <text x="640" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">paths: filter skips unrelated changes</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,14 +90,14 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="433.103448" y="40" width="413.793103" height="70.947954" fill="url(#grad-primary)" rx="6.613092" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="433.103448" y="40" width="413.793103" height="70.947954" fill="url(#grad-primary)" rx="6.613092" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="69.266125" font-size="18.198679" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">std::error::Error</text>
   <text x="640" y="95" font-size="12.451792" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">trait Error: Debug + Display + source()</text>
   <line x1="557.241379" y1="110.947954" x2="319.310345" y2="204.954181" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
   <line x1="722.758621" y1="110.947954" x2="960.689545" y2="204.954181" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <rect x="40" y="204.954181" width="537.931034" height="301.529026" fill="url(#grad-ok)" rx="6.613092" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="204.954181" width="537.931034" height="40.795151" fill="url(#grad-ok)" rx="6.613092" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="231.559609" width="537.931034" height="14.189613" fill="url(#grad-ok)" rx="6.613092" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="204.954181" width="537.931034" height="301.529026" fill="url(#grad-ok)" rx="6.613092" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="204.954181" width="537.931034" height="40.795151" fill="url(#grad-ok)" rx="6.613092" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="231.559609" width="537.931034" height="14.189613" fill="url(#grad-ok)" rx="6.613092" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="91.724138" y="231.559609" font-size="19.156585" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">anyhow</text>
   <text x="484.827586" y="229.786031" font-size="12.451792" fill="var(--ok-accent)" text-anchor="end" font-family="Arial, sans-serif">anyhow = "1.0"</text>
   <text x="68.965517" y="268.807384" font-size="13.409478" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Target: Applications</text>
@@ -115,7 +110,7 @@
   <text x="81.37931" y="435" font-size="11.493995" fill="var(--bg)" font-family="Courier New, monospace">  let s = fs::read_to_string(p)</text>
   <text x="81.37931" y="455" font-size="11.493995" fill="var(--bg)" font-family="Courier New, monospace">    .context("reading")?;</text>
   <text x="81.37931" y="475" font-size="11.493995" fill="var(--bg)" font-family="Courier New, monospace">  Ok(toml::from_str(&amp;s)?) }</text>
-  <rect x="702.068966" y="204.954181" width="537.931034" height="301.529026" fill="url(#grad-warn)" rx="6.613092" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="702.068966" y="204.954181" width="537.931034" height="301.529026" fill="url(#grad-warn)" rx="6.613092" stroke="var(--warn-border)" stroke-width="2"/>
   <rect x="702.068966" y="204.954181" width="537.931034" height="40.795151" fill="var(--warn-accent)" rx="6.613092"/>
   <rect x="702.068966" y="231.559609" width="537.931034" height="14.189613" fill="var(--warn-accent)" rx="6.613092"/>
   <text x="751.724138" y="231.559609" font-size="19.156585" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">thiserror</text>
@@ -131,7 +126,7 @@
   <text x="743.448276" y="435" font-size="11.493995" fill="var(--warn-accent)" font-family="Courier New, monospace">  #[error("io: {0}")]</text>
   <text x="743.448276" y="455" font-size="11.493995" fill="var(--bg)" font-family="Courier New, monospace">  Io(#[from] io::Error),</text>
   <text x="743.448276" y="475" font-size="11.493995" fill="var(--bg)" font-family="Courier New, monospace">  Parse, }</text>
-  <rect x="184.827586" y="531.314947" width="910.344828" height="88.685053" fill="url(#grad-primary)" rx="6.613092" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="184.827586" y="531.314947" width="910.344828" height="88.685053" fill="url(#grad-primary)" rx="6.613092" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="554.373109" font-size="14.367384" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">? Operator Flow</text>
   <text x="267.586207" y="585" font-size="12.451792" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Result&lt;T,E&gt;</text>
   <line x1="350.344828" y1="584.525913" x2="433.103448" y2="584.525913" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)"/>

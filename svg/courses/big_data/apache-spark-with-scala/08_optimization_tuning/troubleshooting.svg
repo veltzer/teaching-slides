@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,25 +92,25 @@
   </defs>
 
 
-  <rect x="40" y="40" width="590" height="193.333333333333" rx="6.21825270206" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="590" height="193.333333333333" rx="6.21825270206" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="335" y="77.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--danger-text)">OutOfMemoryError</text>
   <text x="335" y="115.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--danger-text)">Driver: large collect / broadcast</text>
   <text x="335" y="142.037037037038" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--danger-text)">Executor: skew, huge shuffle</text>
   <text x="335" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" font-style="italic" fill="var(--danger-text)">Fix: bump memory, salt, raise overhead</text>
 
-  <rect x="650" y="40" width="590" height="193.333333333333" rx="6.21825270206" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="590" height="193.333333333333" rx="6.21825270206" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="945" y="77.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--warn-text)">Data Skew</text>
   <text x="945" y="115.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--warn-text)">One task runs minutes</text>
   <text x="945" y="142.037037037038" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--warn-text)">Others finish in seconds</text>
   <text x="945" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" font-style="italic" fill="var(--warn-text)">Fix: AQE skew join, salt hot keys</text>
 
-  <rect x="40" y="254.814814814815" width="590" height="193.333333333333" rx="6.21825270206" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="254.814814814815" width="590" height="193.333333333333" rx="6.21825270206" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="335" y="292.407407407408" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--info-text)">Shuffle Bottleneck</text>
   <text x="335" y="330.000000000001" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">Huge read or spill</text>
   <text x="335" y="356.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">Network saturated</text>
   <text x="335" y="399.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" font-style="italic" fill="var(--info-text)">Fix: filter early, broadcast small</text>
 
-  <rect x="650" y="254.814814814815" width="590" height="193.333333333333" rx="6.21825270206" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="254.814814814815" width="590" height="193.333333333333" rx="6.21825270206" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="945" y="292.407407407408" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--primary-text)">Slow Stage</text>
   <text x="945" y="330.000000000001" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--primary-text)">Low CPU use</text>
   <text x="945" y="356.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--primary-text)">GC dominates</text>

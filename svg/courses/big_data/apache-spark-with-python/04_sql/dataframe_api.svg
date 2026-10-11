@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,14 +94,14 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Spark DataFrame API</text>
 
-  <rect x="40" y="86.194690265487" width="579.310344827586" height="225.840707964602" rx="10.305080798591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="86.194690265487" width="579.310344827586" height="225.840707964602" rx="10.305080798591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="329.655172413793" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">RDD (low-level)</text>
   <rect x="60.689655172414" y="147.787610619469" width="537.931034482759" height="123.185840707965" rx="6.183048479155" fill="var(--surface)"/>
   <text x="81.379310344828" y="178.58407079646" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text)">data.map(parse).filter(...)</text>
   <text x="81.379310344828" y="204.247787610619" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text)">  .map(extract).reduceByKey(...)</text>
   <text x="81.379310344828" y="245.309734513274" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">No optimizer; you tune</text>
 
-  <rect x="660.689655172414" y="86.194690265487" width="579.310344827586" height="225.840707964602" rx="10.305080798591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660.689655172414" y="86.194690265487" width="579.310344827586" height="225.840707964602" rx="10.305080798591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950.344827586207" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--ok-text)">DataFrame (high-level)</text>
   <rect x="681.379310344828" y="147.787610619469" width="537.931034482759" height="123.185840707965" rx="6.183048479155" fill="var(--surface)"/>
   <text x="702.068965517241" y="178.58407079646" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--text)">df.filter(col("status") == "ok")</text>

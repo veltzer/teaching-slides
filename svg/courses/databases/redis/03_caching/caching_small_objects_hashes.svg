@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,27 +91,27 @@
     </marker>
   </defs>
   <text x="318.5714" y="40" text-anchor="middle" font-size="23.1006" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">String Keys (wasteful)</text>
-  <rect x="40" y="64.3114" width="557.1429" height="347.3054" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" opacity="0.3" filter="url(#shadow)"/>
-  <rect x="61.4286" y="88.6227" width="514.2857" height="69.4611" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="64.3114" width="557.1429" height="347.3054" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" opacity="0.3"/>
+  <rect x="61.4286" y="88.6227" width="514.2857" height="69.4611" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="318.5714" y="140.7185" text-anchor="middle" font-size="21.0005" font-family="Arial, sans-serif" fill="var(--warn-text)">user:42:name = "Alice"</text>
-  <rect x="61.4286" y="175.4491" width="514.2857" height="69.4611" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="61.4286" y="175.4491" width="514.2857" height="69.4611" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="318.5714" y="227.5449" text-anchor="middle" font-size="21.0005" font-family="Arial, sans-serif" fill="var(--warn-text)">user:42:email = "a@b.com"</text>
-  <rect x="61.4286" y="262.2755" width="514.2857" height="69.4611" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="61.4286" y="262.2755" width="514.2857" height="69.4611" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="318.5714" y="314.3713" text-anchor="middle" font-size="21.0005" font-family="Arial, sans-serif" fill="var(--warn-text)">user:42:role = "admin"</text>
   <text x="318.5714" y="394.2515" text-anchor="middle" font-size="21.0005" fill="var(--danger-accent)" font-family="Arial, sans-serif">3 keys x overhead each</text>
   <text x="961.4286" y="40" text-anchor="middle" font-size="23.1006" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Hash (efficient)</text>
-  <rect x="682.8571" y="64.3114" width="557.1429" height="347.3054" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" opacity="0.3" filter="url(#shadow)"/>
-  <rect x="704.2857" y="88.6227" width="514.2857" height="295.2096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="682.8571" y="64.3114" width="557.1429" height="347.3054" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" opacity="0.3"/>
+  <rect x="704.2857" y="88.6227" width="514.2857" height="295.2096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="961.4286" y="151.1377" text-anchor="middle" font-size="21.0005" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">HSET user:42</text>
-  <rect x="736.4286" y="178.9221" width="214.2857" height="62.515" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="736.4286" y="178.9221" width="214.2857" height="62.515" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="843.5715" y="224.0718" text-anchor="middle" font-size="21.0005" font-family="Arial, sans-serif" fill="var(--warn-text)">name: "Alice"</text>
-  <rect x="736.4286" y="248.3832" width="214.2857" height="62.515" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="736.4286" y="248.3832" width="214.2857" height="62.515" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="843.5715" y="293.5329" text-anchor="middle" font-size="21.0005" font-family="Arial, sans-serif" fill="var(--warn-text)">email: "a@b.com"</text>
-  <rect x="972.1429" y="178.9221" width="214.2857" height="62.515" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="972.1429" y="178.9221" width="214.2857" height="62.515" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="1079.2857" y="224.0718" text-anchor="middle" font-size="21.0005" font-family="Arial, sans-serif" fill="var(--warn-text)">role: "admin"</text>
   <text x="961.4286" y="394.2515" text-anchor="middle" font-size="21.0005" fill="var(--ok-accent)" font-family="Arial, sans-serif">1 key, ziplist encoding</text>
   <line x1="597.1429" y1="237.9641" x2="678.5714" y2="237.9641" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="318.5714" y="463.7125" width="642.8571" height="156.2875" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="318.5714" y="463.7125" width="642.8571" height="156.2875" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="640" y="526.2275" text-anchor="middle" font-size="21.0005" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Memory savings: up to 10x fewer bytes</text>
   <text x="640" y="585.2695" text-anchor="middle" font-size="21.0005" font-family="Arial, sans-serif" fill="var(--ok-text)">HGETALL user:42 retrieves all fields at once</text>
 </svg>

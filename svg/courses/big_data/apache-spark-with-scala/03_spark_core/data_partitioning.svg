@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="1200" height="66.923076923077" rx="8.520242022381" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="66.923076923077" rx="8.520242022381" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="67.884615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.10551429756" font-weight="bold" fill="var(--primary-text)">One task per partition, executed in parallel</text>
   <text x="640" y="93.538461538461" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.910423539167" fill="var(--primary-text)">Default: cluster cores or HDFS block count</text>
 
@@ -113,7 +108,7 @@
   <text x="1046.779661016949" y="160.461538461539" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" font-weight="bold" fill="var(--text)">Partition 2</text>
   <text x="1046.779661016949" y="190.576923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.84539328637" fill="var(--text-muted)">Executor C — repartition/coalesce</text>
 
-  <rect x="40" y="240.769230769231" width="589.830508474576" height="379.230769230769" rx="8.520242022381" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="240.769230769231" width="589.830508474576" height="379.230769230769" rx="8.520242022381" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="334.915254237288" y="285.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.430665561548" font-weight="bold" fill="var(--ok-text)">HashPartitioner</text>
   <text x="334.915254237288" y="324.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.975453791965" fill="var(--ok-text)">Default for pair RDDs</text>
   <text x="334.915254237288" y="363.461538461538" text-anchor="middle" font-family="Courier New, monospace" font-size="14.910423539167" fill="var(--ok-text)">key.hashCode mod N</text>
@@ -128,7 +123,7 @@
   <text x="334.915254237288" y="530.769230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.910423539167" fill="var(--ok-text)">Does not preserve order</text>
   <text x="334.915254237288" y="575.384615384616" text-anchor="middle" font-family="Courier New, monospace" font-size="13.84539328637" fill="var(--ok-text)">partitionBy(new HashPartitioner(n))</text>
 
-  <rect x="650.169491525424" y="240.769230769231" width="589.830508474576" height="379.230769230769" rx="8.520242022381" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650.169491525424" y="240.769230769231" width="589.830508474576" height="379.230769230769" rx="8.520242022381" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="945.084745762712" y="285.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.430665561548" font-weight="bold" fill="var(--info-text)">RangePartitioner</text>
   <text x="945.084745762712" y="324.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.975453791965" fill="var(--info-text)">Used by sortByKey / orderBy</text>
   <text x="945.084745762712" y="363.461538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.910423539167" fill="var(--info-text)">Samples keys, picks splits</text>

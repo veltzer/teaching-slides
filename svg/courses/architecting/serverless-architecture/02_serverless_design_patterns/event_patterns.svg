@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,40 +94,40 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Serverless Patterns</text>
 
-  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="231.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--primary-text)">API Gateway -&gt; Function</text>
   <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--primary-text)">HTTP request</text>
   <text x="60.689655172414" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">REST or GraphQL</text>
   <text x="60.689655172414" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Sync response</text>
   <text x="60.689655172414" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--primary-text)">Classic web backend</text>
 
-  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">Event-driven</text>
   <text x="469.310344827586" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--warn-text)">S3 / SQS / Kinesis</text>
   <text x="469.310344827586" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Reacts to events</text>
   <text x="469.310344827586" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Async, scales naturally</text>
   <text x="469.310344827586" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--warn-text)">ETL, image resize</text>
 
-  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--ok-text)">Scheduled</text>
   <text x="877.931034482759" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-text)">EventBridge / cron</text>
   <text x="877.931034482759" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Fires on a timer</text>
   <text x="877.931034482759" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Replaces cron jobs</text>
   <text x="877.931034482759" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--ok-text)">Reports, cleanup</text>
 
-  <rect x="40" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="231.379310344828" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--info-text)">Fan-out</text>
   <text x="60.689655172414" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">SNS -&gt; many subscribers</text>
   <text x="60.689655172414" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Each runs independently</text>
   <text x="60.689655172414" y="540.183486238532" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--info-text)">Decoupled side effects</text>
 
-  <rect x="448.620689655172" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">Step Functions</text>
   <text x="469.310344827586" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Orchestrate workflow</text>
   <text x="469.310344827586" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">State machine</text>
   <text x="469.310344827586" y="540.183486238532" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--warn-text)">Long-running processes</text>
 
-  <rect x="857.241379310345" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--danger-text)">Avoid</text>
   <text x="877.931034482759" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Long-running &gt; 15 min</text>
   <text x="877.931034482759" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Heavy state per call</text>

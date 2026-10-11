@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,19 +92,19 @@
   </defs>
 
 
-  <rect x="40" y="40" width="400" height="131.320754716981" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="400" height="131.320754716981" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="240" y="67.358490566038" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" font-weight="bold" fill="var(--primary-text)">With @decorator</text>
   <text x="60" y="100.188679245282" font-family="Courier New, monospace" font-size="12.553282664721" fill="var(--primary-text)">@my_decorator</text>
   <text x="60" y="127.54716981132" font-family="Courier New, monospace" font-size="12.553282664721" fill="var(--primary-text)">def greet(name):</text>
   <text x="60" y="154.905660377359" font-family="Courier New, monospace" font-size="12.553282664721" fill="var(--primary-text)">    return hi</text>
 
-  <rect x="40" y="193.207547169811" width="400" height="131.320754716981" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="193.207547169811" width="400" height="131.320754716981" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="240" y="220.566037735849" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" font-weight="bold" fill="var(--warn-text)">Equivalent</text>
   <text x="60" y="253.396226415094" font-family="Courier New, monospace" font-size="12.553282664721" fill="var(--warn-text)">def greet(name):</text>
   <text x="60" y="280.754716981131" font-family="Courier New, monospace" font-size="12.553282664721" fill="var(--warn-text)">    return hi</text>
   <text x="60" y="308.11320754717" font-family="Courier New, monospace" font-size="12.553282664721" fill="var(--warn-text)">greet = my_decorator(greet)</text>
 
-  <rect x="40" y="346.415094339623" width="400" height="262.641509433963" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="346.415094339623" width="400" height="262.641509433963" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="240" y="373.773584905661" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" font-weight="bold" fill="var(--ok-text)">Key Points</text>
   <text x="60" y="406.603773584905" font-family="Arial, sans-serif" font-size="12.553282664721" fill="var(--ok-text)">applied at definition</text>
   <text x="60" y="439.433962264151" font-family="Arial, sans-serif" font-size="12.553282664721" fill="var(--ok-text)">greet becomes wrapper</text>
@@ -117,36 +112,36 @@
   <text x="60" y="505.094339622641" font-family="Arial, sans-serif" font-size="12.553282664721" fill="var(--ok-text)">stacks bottom-up</text>
   <text x="60" y="537.924528301887" font-family="Courier New, monospace" font-size="12.553282664721" fill="var(--ok-text)">@A @B f becomes A(B(f))</text>
 
-  <rect x="460" y="40" width="380" height="437.735849056604" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="460" y="40" width="380" height="437.735849056604" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="650" y="67.358490566038" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" font-weight="bold" fill="var(--warn-text)">Factory Structure</text>
 
-  <rect x="480" y="94.716981132075" width="340" height="350.188679245283" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="480" y="94.716981132075" width="340" height="350.188679245283" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="650" y="122.075471698113" text-anchor="middle" font-family="Courier New, monospace" font-size="12.553282664721" font-weight="bold" fill="var(--primary-text)">decorator(func)</text>
 
-  <rect x="500" y="143.962264150943" width="300" height="262.641509433963" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="500" y="143.962264150943" width="300" height="262.641509433963" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="650" y="171.320754716981" text-anchor="middle" font-family="Courier New, monospace" font-size="12.553282664721" font-weight="bold" fill="var(--ok-text)">wrapper</text>
   <text x="515" y="204.150943396226" font-family="Courier New, monospace" font-size="10.461068887267" fill="var(--ok-text)">before()</text>
   <text x="515" y="231.509433962264" font-family="Courier New, monospace" font-size="10.461068887267" fill="var(--ok-text)">r = func(args)</text>
   <text x="515" y="258.867924528302" font-family="Courier New, monospace" font-size="10.461068887267" fill="var(--ok-text)">after()</text>
   <text x="515" y="286.226415094339" font-family="Courier New, monospace" font-size="10.461068887267" fill="var(--ok-text)">return r</text>
 
-  <rect x="870" y="40" width="370" height="54.716981132075" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="870" y="40" width="370" height="54.716981132075" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1055" y="72.830188679245" text-anchor="middle" font-family="Courier New, monospace" font-size="13.599389553448" font-weight="bold" fill="var(--primary-text)">caller: greet("Alice")</text>
   <line x1="1055" y1="94.716981132075" x2="1055" y2="114.415094339622" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="870" y="116.603773584906" width="370" height="54.716981132075" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="870" y="116.603773584906" width="370" height="54.716981132075" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1055" y="149.43396226415" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" font-weight="bold" fill="var(--warn-text)">wrapper: before</text>
   <line x1="1055" y1="171.320754716981" x2="1055" y2="191.018867924528" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="870" y="193.207547169811" width="370" height="54.716981132075" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="870" y="193.207547169811" width="370" height="54.716981132075" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1055" y="226.037735849056" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" font-weight="bold" fill="var(--ok-text)">original runs</text>
   <line x1="1055" y1="247.924528301887" x2="1055" y2="267.622641509434" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="870" y="269.811320754717" width="370" height="54.716981132075" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="870" y="269.811320754717" width="370" height="54.716981132075" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1055" y="302.641509433962" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" font-weight="bold" fill="var(--warn-text)">wrapper: after</text>
   <line x1="1055" y1="324.528301886792" x2="1055" y2="344.226415094339" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="870" y="346.415094339623" width="370" height="54.716981132075" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="870" y="346.415094339623" width="370" height="54.716981132075" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1055" y="379.245283018868" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" font-weight="bold" fill="var(--primary-text)">return result</text>
 
   <rect x="460" y="499.622641509434" width="780" height="120.377358490566" rx="8.368855109814" fill="var(--surface)" stroke="var(--border)"/>

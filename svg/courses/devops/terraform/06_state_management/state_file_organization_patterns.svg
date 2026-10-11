@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,11 +90,11 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="136.776041" rx="6.319377" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="136.776041" rx="6.319377" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="81.552276" text-anchor="middle" font-size="20.136273" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">Pattern 1: Single State File</text>
   <text x="260.645058" y="116.179227" text-anchor="end" font-size="18.30576" fill="var(--text)" font-family="Arial, sans-serif">all-resources/</text>
   <text x="280" y="116.179227" text-anchor="start" font-size="18.30576" fill="var(--text-muted)" font-family="Arial, sans-serif">→ terraform.tfstate</text>
-  <rect x="40" y="197.552233" width="1200" height="207.761167" rx="6.319377" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="197.552233" width="1200" height="207.761167" rx="6.319377" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="239.10451" text-anchor="middle" font-size="20.136273" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Pattern 2: Per-Environment States</text>
   <text x="260.645058" y="275.462684" text-anchor="end" font-size="18.30576" fill="var(--text)" font-family="Arial, sans-serif">dev/</text>
   <text x="280" y="275.462684" text-anchor="start" font-size="18.30576" fill="var(--text-muted)" font-family="Arial, sans-serif">→ dev.tfstate</text>
@@ -107,7 +102,7 @@
   <text x="280" y="318.7464" text-anchor="start" font-size="18.30576" fill="var(--text-muted)" font-family="Arial, sans-serif">→ staging.tfstate</text>
   <text x="260.645058" y="362.0299" text-anchor="end" font-size="18.30576" fill="var(--text)" font-family="Arial, sans-serif">prod/</text>
   <text x="280" y="362.0299" text-anchor="start" font-size="18.30576" fill="var(--text-muted)" font-family="Arial, sans-serif">→ prod.tfstate</text>
-  <rect x="40" y="426.089592" width="1200" height="193.910408" rx="6.319377" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="426.089592" width="1200" height="193.910408" rx="6.319377" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="467.641761" text-anchor="middle" font-size="20.136273" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">Pattern 3: Per-Component States</text>
   <text x="260.645058" y="504.000043" text-anchor="end" font-size="18.30576" fill="var(--text)" font-family="Arial, sans-serif">network/</text>
   <text x="280" y="504.000043" text-anchor="start" font-size="18.30576" fill="var(--text-muted)" font-family="Arial, sans-serif">→ network.tfstate</text>

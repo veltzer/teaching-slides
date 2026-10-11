@@ -2,20 +2,20 @@
   <metadata>
     <type>regular</type>
   </metadata>
-  <rect x="40" y="193.5294" width="218.1818" height="136.4706" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="193.5294" width="218.1818" height="136.4706" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="149.0909" y="278.8236" text-anchor="middle" font-size="23.1031" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">App Request</text>
-  <rect x="345.4545" y="40" width="283.6364" height="153.5294" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="345.4545" y="40" width="283.6364" height="153.5294" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="487.2728" y="101.4118" text-anchor="middle" font-size="23.1031" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Redis OK</text>
   <text x="487.2728" y="159.4118" text-anchor="middle" font-size="21.0028" fill="var(--ok-accent)" font-family="Arial, sans-serif">Normal path</text>
-  <rect x="345.4545" y="312.9411" width="283.6364" height="153.5294" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="345.4545" y="312.9411" width="283.6364" height="153.5294" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="487.2728" y="374.3529" text-anchor="middle" font-size="23.1031" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Redis Down</text>
   <text x="487.2728" y="432.3529" text-anchor="middle" font-size="21.0028" fill="var(--danger-accent)" font-family="Arial, sans-serif">Connection error</text>
-  <rect x="760" y="40" width="480" height="153.5294" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="760" y="40" width="480" height="153.5294" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="1000" y="101.4118" text-anchor="middle" font-size="21.0028" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Retry with backoff</text>
   <text x="1000" y="159.4118" text-anchor="middle" font-size="21.0028" font-family="Arial, sans-serif" fill="var(--primary-text)">Exponential: 100ms, 200ms, 400ms</text>
-  <rect x="760" y="244.7059" width="480" height="119.4118" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="760" y="244.7059" width="480" height="119.4118" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="1000" y="319.7647" text-anchor="middle" font-size="21.0028" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">Circuit breaker: skip Redis</text>
-  <rect x="760" y="415.2941" width="480" height="119.4118" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="760" y="415.2941" width="480" height="119.4118" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="1000" y="490.3529" text-anchor="middle" font-size="21.0028" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Fallback: query DB directly</text>
   <line x1="258.1818" y1="234.4706" x2="345.4545" y2="118.4706" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="258.1818" y1="289.0588" x2="345.4545" y2="391.4117" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
@@ -85,11 +85,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
 
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,22 +92,22 @@
   </defs>
   <rect x="40" y="40" width="1200" height="44.323154" rx="6.078094" fill="var(--text)"/>
   <text x="640" y="69.126556" text-anchor="middle" font-size="18.796709" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">FAIRNESS METRICS</text>
-  <rect x="80" y="96.986781" width="1120" height="101.310037" rx="6.078094" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="96.986781" width="1120" height="101.310037" rx="6.078094" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="120" y="121.048009" font-size="17.45416" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">DEMOGRAPHIC PARITY</text>
   <text x="120" y="145.109136" font-size="16.111509" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">P(positive | group A) = P(positive | group B)</text>
   <text x="120" y="167.903827" font-size="16.111509" fill="var(--text)" font-family="Arial, sans-serif">Same rate of positive outcomes regardless of group</text>
-  <rect x="80" y="214.75985" width="1120" height="101.310037" rx="6.078094" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="214.75985" width="1120" height="101.310037" rx="6.078094" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="120" y="238.820977" font-size="17.45416" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">EQUALIZED ODDS</text>
   <text x="120" y="262.882103" font-size="16.111509" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">P(ŷ=1 | y=1, A) = P(ŷ=1 | y=1, B)</text>
   <text x="120" y="285.676795" font-size="16.111509" fill="var(--text)" font-family="Arial, sans-serif">Same true positive rate across groups</text>
-  <rect x="80" y="332.532715" width="1120" height="101.310037" rx="6.078094" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="332.532715" width="1120" height="101.310037" rx="6.078094" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="120" y="356.593841" font-size="17.45416" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">CALIBRATION</text>
   <text x="120" y="380.654967" font-size="16.111509" fill="var(--text)" font-family="Arial, sans-serif">Among those scored X%, ~X% should be positive</text>
   <text x="120" y="403.449762" font-size="16.111509" fill="var(--text)" font-family="Arial, sans-serif">for ALL groups</text>
   <rect x="80" y="450.30558" width="1120" height="75.982579" rx="6.078094" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="120" y="474.366808" font-size="17.45416" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">INDIVIDUAL FAIRNESS</text>
   <text x="120" y="498.427935" font-size="16.111509" fill="var(--text)" font-family="Arial, sans-serif">Similar individuals should get similar outcomes</text>
-  <rect x="80" y="544.017421" width="1120" height="75.982579" rx="6.078094" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="544.017421" width="1120" height="75.982579" rx="6.078094" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="120" y="568.078649" font-size="16.111509" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">NOTE: Perfect fairness across ALL metrics simultaneously</text>
   <text x="120" y="590.873444" font-size="16.111509" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">is mathematically impossible (Impossibility theorem, Chouldechova 2017)</text>
 </svg>

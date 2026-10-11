@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,43 +91,43 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="232" y="75.929203539823" text-anchor="middle" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">1. Immediate</text>
   <text x="232" y="106.725663716814" text-anchor="middle" font-size="15.197810741269" fill="var(--primary-text)" font-family="Courier New, monospace">movl $42, %eax</text>
   <text x="232" y="147.787610619469" text-anchor="middle" font-size="14.184623358518" fill="var(--primary-text)" font-family="Arial, sans-serif">EAX = 42</text>
   <text x="232" y="188.849557522124" text-anchor="middle" font-size="13.171435975767" fill="var(--primary-text)" font-family="Arial, sans-serif">Fastest</text>
 
-  <rect x="447" y="40" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="447" y="40" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="75.929203539823" text-anchor="middle" font-size="18.237372889523" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">2. Register</text>
   <text x="640" y="106.725663716814" text-anchor="middle" font-size="15.197810741269" fill="var(--ok-text)" font-family="Courier New, monospace">movl %ebx, %eax</text>
   <text x="640" y="147.787610619469" text-anchor="middle" font-size="14.184623358518" fill="var(--ok-text)" font-family="Arial, sans-serif">EAX = EBX</text>
   <text x="640" y="188.849557522124" text-anchor="middle" font-size="13.171435975767" fill="var(--ok-text)" font-family="Arial, sans-serif">Very fast</text>
 
-  <rect x="855" y="40" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="855" y="40" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1047" y="75.929203539823" text-anchor="middle" font-size="18.237372889523" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">3. Direct</text>
   <text x="1047" y="106.725663716814" text-anchor="middle" font-size="15.197810741269" fill="var(--info-text)" font-family="Courier New, monospace">movl 0x1000, %eax</text>
   <text x="1047" y="147.787610619469" text-anchor="middle" font-size="14.184623358518" fill="var(--info-text)" font-family="Arial, sans-serif">EAX = mem[addr]</text>
   <text x="1047" y="188.849557522124" text-anchor="middle" font-size="13.171435975767" fill="var(--info-text)" font-family="Arial, sans-serif">Globals</text>
 
-  <rect x="40" y="240.176991150442" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="240.176991150442" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="232" y="276.106194690265" text-anchor="middle" font-size="18.237372889523" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">4. Indirect</text>
   <text x="232" y="306.902654867257" text-anchor="middle" font-size="15.197810741269" fill="var(--warn-text)" font-family="Courier New, monospace">movl (%ebx), %eax</text>
   <text x="232" y="347.964601769911" text-anchor="middle" font-size="14.184623358518" fill="var(--warn-text)" font-family="Arial, sans-serif">EAX = mem[EBX]</text>
   <text x="232" y="389.026548672566" text-anchor="middle" font-size="13.171435975767" fill="var(--warn-text)" font-family="Arial, sans-serif">Pointer deref</text>
 
-  <rect x="447" y="240.176991150442" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="447" y="240.176991150442" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="276.106194690265" text-anchor="middle" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">5. Base + Offset</text>
   <text x="640" y="306.902654867257" text-anchor="middle" font-size="15.197810741269" fill="var(--primary-text)" font-family="Courier New, monospace">movl 8(%ebp), %eax</text>
   <text x="640" y="347.964601769911" text-anchor="middle" font-size="14.184623358518" fill="var(--primary-text)" font-family="Arial, sans-serif">EAX = mem[EBP+8]</text>
   <text x="640" y="389.026548672566" text-anchor="middle" font-size="13.171435975767" fill="var(--primary-text)" font-family="Arial, sans-serif">Stack params, structs</text>
 
-  <rect x="855" y="240.176991150442" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="855" y="240.176991150442" width="385" height="174.513274336283" rx="8.10549906201" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1047" y="276.106194690265" text-anchor="middle" font-size="18.237372889523" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">6. Scaled Index</text>
   <text x="1047" y="306.902654867257" text-anchor="middle" font-size="14.184623358518" fill="var(--info-text)" font-family="Courier New, monospace">(%ebx,%ecx,4),%eax</text>
   <text x="1047" y="347.964601769911" text-anchor="middle" font-size="14.184623358518" fill="var(--info-text)" font-family="Arial, sans-serif">EAX = mem[EBX+ECX*4]</text>
   <text x="1047" y="389.026548672566" text-anchor="middle" font-size="13.171435975767" fill="var(--info-text)" font-family="Arial, sans-serif">Array access</text>
 
-  <rect x="200" y="445.486725663717" width="880" height="66.725663716814" rx="8.10549906201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="200" y="445.486725663717" width="880" height="66.725663716814" rx="8.10549906201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="473.203539823009" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">General form</text>
   <text x="640" y="498.867256637168" text-anchor="middle" font-size="15.197810741269" fill="var(--primary-text)" font-family="Courier New, monospace">disp(base, index, scale)</text>
 

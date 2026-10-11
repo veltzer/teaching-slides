@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,17 +90,17 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="580.645168574402" height="302.608695652174" fill="url(#grad-primary)" rx="7.519959567814" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="580.645168574402" height="302.608695652174" fill="url(#grad-primary)" rx="7.519959567814" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="330.322527835586" y="115.652173913043" text-anchor="middle" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Readiness Probe</text>
   <text x="330.322527835586" y="178.695652173913" text-anchor="middle" fill="var(--bg)" font-size="22.911938143875" font-family="Arial, sans-serif">• Removes from service endpoints</text>
   <text x="330.322527835586" y="229.130434782609" text-anchor="middle" fill="var(--bg)" font-size="22.911938143875" font-family="Arial, sans-serif">• Traffic stops routing to pod</text>
   <text x="330.322527835586" y="279.565217391305" text-anchor="middle" fill="var(--bg)" font-size="22.911938143875" font-family="Arial, sans-serif">• Container keeps running</text>
-  <rect x="659.354831425598" y="40" width="580.645168574402" height="302.608695652174" fill="url(#grad-ok)" rx="7.519959567814" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="659.354831425598" y="40" width="580.645168574402" height="302.608695652174" fill="url(#grad-ok)" rx="7.519959567814" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="949.677472164414" y="115.652173913043" text-anchor="middle" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Liveness Probe</text>
   <text x="949.677472164414" y="178.695652173913" text-anchor="middle" fill="var(--bg)" font-size="22.911938143875" font-family="Arial, sans-serif">• Restarts container</text>
   <text x="949.677472164414" y="229.130434782609" text-anchor="middle" fill="var(--bg)" font-size="22.911938143875" font-family="Arial, sans-serif">• Kills unhealthy container</text>
   <text x="949.677472164414" y="279.565217391305" text-anchor="middle" fill="var(--bg)" font-size="22.911938143875" font-family="Arial, sans-serif">• Based on restart policy</text>
-  <rect x="40" y="418.260869565217" width="1200" height="201.739130434783" fill="url(#grad-warn)" rx="7.519959567814" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="418.260869565217" width="1200" height="201.739130434783" fill="url(#grad-warn)" rx="7.519959567814" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640.000056451615" y="481.304347826086" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Best Practice</text>
   <text x="640.000056451615" y="531.739130434782" text-anchor="middle" font-size="24.994841611499" font-family="Arial, sans-serif" fill="var(--warn-text)">Use both probes with different endpoints</text>
   <text x="640.000056451615" y="582.173913043478" text-anchor="middle" font-size="24.994841611499" font-family="Arial, sans-serif" fill="var(--warn-text)">Readiness: /ready (dependencies check) | Liveness: /health (app health)</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
 
   <!-- Stage 1: Schema -->
-  <rect x="40" y="161.52380952381" width="250" height="116" rx="6.306459273747" fill="url(#grad-primary)" stroke="var(--primary-border)" filter="url(#shadow)"/>
+  <rect x="40" y="161.52380952381" width="250" height="116" rx="6.306459273747" fill="url(#grad-primary)" stroke="var(--primary-border)"/>
   <text x="165" y="205.714285714286" text-anchor="middle" font-size="21.02153091249" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Schema</text>
   <text x="165" y="236.647619047619" text-anchor="middle" font-size="14.715071638743" fill="var(--primary-text)" font-family="Arial, sans-serif">Typed arguments,</text>
   <text x="165" y="258.742857142857" text-anchor="middle" font-size="14.715071638743" fill="var(--primary-text)" font-family="Arial, sans-serif">constraints, required fields</text>
@@ -106,7 +101,7 @@
   <line x1="290" y1="218.971428571429" x2="355" y2="218.971428571429" stroke="var(--primary-border)" stroke-width="3" marker-end="url(#arrow-primary)"/>
 
   <!-- Stage 2: Model emits call -->
-  <rect x="360" y="161.52380952381" width="250" height="116" rx="6.306459273747" fill="url(#grad-info)" stroke="var(--info-border)" filter="url(#shadow)"/>
+  <rect x="360" y="161.52380952381" width="250" height="116" rx="6.306459273747" fill="url(#grad-info)" stroke="var(--info-border)"/>
   <text x="485" y="205.714285714286" text-anchor="middle" font-size="21.02153091249" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Model emits call</text>
   <text x="485" y="236.647619047619" text-anchor="middle" font-size="14.715071638743" fill="var(--info-text)" font-family="Arial, sans-serif">Well-formed JSON</text>
   <text x="485" y="258.742857142857" text-anchor="middle" font-size="14.715071638743" fill="var(--info-text)" font-family="Arial, sans-serif">guided by the schema</text>
@@ -115,7 +110,7 @@
   <line x1="610" y1="218.971428571429" x2="675" y2="218.971428571429" stroke="var(--info-border)" stroke-width="3" marker-end="url(#arrow-info)"/>
 
   <!-- Stage 3: Validate -->
-  <rect x="680" y="161.52380952381" width="250" height="116" rx="6.306459273747" fill="url(#grad-warn)" stroke="var(--warn-border)" filter="url(#shadow)"/>
+  <rect x="680" y="161.52380952381" width="250" height="116" rx="6.306459273747" fill="url(#grad-warn)" stroke="var(--warn-border)"/>
   <text x="805" y="205.714285714286" text-anchor="middle" font-size="21.02153091249" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Validate</text>
   <text x="805" y="236.647619047619" text-anchor="middle" font-size="14.715071638743" fill="var(--warn-text)" font-family="Arial, sans-serif">Check types, ranges,</text>
   <text x="805" y="258.742857142857" text-anchor="middle" font-size="14.715071638743" fill="var(--warn-text)" font-family="Arial, sans-serif">required</text>
@@ -124,14 +119,14 @@
   <path d="M 930 194.666666666667 L 990 194.666666666667 L 990 84.190476190476 L 1010 84.190476190476" fill="none" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow-ok)"/>
   <text x="985" y="128.380952380952" text-anchor="middle" font-size="15.766148184367" fill="var(--text-muted)" font-family="Arial, sans-serif">valid</text>
 
-  <rect x="1015" y="40" width="225" height="88.380952380952" rx="6.306459273747" fill="url(#grad-ok)" stroke="var(--ok-border)" filter="url(#shadow)"/>
+  <rect x="1015" y="40" width="225" height="88.380952380952" rx="6.306459273747" fill="url(#grad-ok)" stroke="var(--ok-border)"/>
   <text x="1127" y="93.028571428571" text-anchor="middle" font-size="21.02153091249" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Execute</text>
 
   <!-- Branch: invalid -> Reject (bottom) -->
   <path d="M 930 244.380952380952 L 990 244.380952380952 L 990 354.857142857143 L 1010 354.857142857143" fill="none" stroke="var(--danger-border)" stroke-width="3" marker-end="url(#arrow-danger)"/>
   <text x="985" y="313.980952380952" text-anchor="middle" font-size="15.766148184367" fill="var(--text-muted)" font-family="Arial, sans-serif">invalid</text>
 
-  <rect x="1015" y="310.666666666667" width="225" height="88.380952380952" rx="6.306459273747" fill="url(#grad-danger)" stroke="var(--danger-border)" filter="url(#shadow)"/>
+  <rect x="1015" y="310.666666666667" width="225" height="88.380952380952" rx="6.306459273747" fill="url(#grad-danger)" stroke="var(--danger-border)"/>
   <text x="1127" y="349.333333333333" text-anchor="middle" font-size="21.02153091249" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Reject +</text>
   <text x="1127" y="378.057142857143" text-anchor="middle" font-size="18.919377821241" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">ask to retry</text>
 

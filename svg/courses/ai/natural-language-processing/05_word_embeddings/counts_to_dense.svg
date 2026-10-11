@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="560" height="580" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="560" height="580" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="320" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--warn-text)">Sparse Counts</text>
   <text x="320" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">one-hot or co-occurrence rows</text>
 
@@ -113,7 +108,7 @@
 
   <path d="M 615 330 L 685 330" fill="none" stroke="var(--text-muted)" stroke-width="4" marker-end="url(#arrow)"/>
 
-  <rect x="700" y="40" width="540" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="700" y="40" width="540" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="970" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">Dense Embeddings</text>
   <text x="970" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">learned low-dimensional vectors</text>
 

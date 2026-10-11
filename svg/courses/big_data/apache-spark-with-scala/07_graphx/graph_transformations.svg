@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="380" height="284.727273" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="380" height="284.727273" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="230" y="76.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--primary-text)" font-family="Courier New, monospace">mapVertices</text>
   <text x="230" y="103.272727" text-anchor="middle" font-size="13.349838" fill="var(--primary-text)" font-family="Arial, sans-serif">transform every vertex attribute</text>
   <text x="230" y="156" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)" font-family="Courier New, monospace">(id, attr) =&gt; newAttr</text>
@@ -105,7 +100,7 @@
   <text x="230" y="242.472727" text-anchor="middle" font-size="13.349838" fill="var(--bg)" font-family="Courier New, monospace">  a.age * 2)</text>
   <text x="230" y="277.272727" text-anchor="middle" font-size="12.322928" fill="var(--primary-text)" font-family="Arial, sans-serif">edges unchanged, vertex type may change</text>
 
-  <rect x="440" y="40" width="380" height="284.727273" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="440" y="40" width="380" height="284.727273" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="630" y="76.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--ok-text)" font-family="Courier New, monospace">mapEdges</text>
   <text x="630" y="103.272727" text-anchor="middle" font-size="13.349838" fill="var(--ok-text)" font-family="Arial, sans-serif">transform every edge attribute</text>
   <text x="630" y="156" text-anchor="middle" font-size="14.376749" fill="var(--ok-text)" font-family="Courier New, monospace">edge =&gt; newAttr</text>
@@ -114,7 +109,7 @@
   <text x="630" y="242.472727" text-anchor="middle" font-size="13.349838" fill="var(--bg)" font-family="Courier New, monospace">  e.attr.length.toDouble)</text>
   <text x="630" y="277.272727" text-anchor="middle" font-size="12.322928" fill="var(--ok-text)" font-family="Arial, sans-serif">sees only the edge, not its endpoints</text>
 
-  <rect x="840" y="40" width="400" height="284.727273" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="840" y="40" width="400" height="284.727273" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1040" y="76.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--warn-text)" font-family="Courier New, monospace">mapTriplets</text>
   <text x="1040" y="103.272727" text-anchor="middle" font-size="13.349838" fill="var(--warn-text)" font-family="Arial, sans-serif">edge + both vertex attrs</text>
   <text x="1040" y="156" text-anchor="middle" font-size="13.349838" fill="var(--warn-text)" font-family="Courier New, monospace">(srcAttr, edge, dstAttr) =&gt; newAttr</text>
@@ -123,7 +118,7 @@
   <text x="1040" y="242.472727" text-anchor="middle" font-size="13.349838" fill="var(--bg)" font-family="Courier New, monospace">  t.srcAttr.age - t.dstAttr.age)</text>
   <text x="1040" y="277.272727" text-anchor="middle" font-size="12.322928" fill="var(--warn-text)" font-family="Arial, sans-serif">richest edge-level rewrite</text>
 
-  <rect x="40" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="335" y="393.272727" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--danger-text)" font-family="Courier New, monospace">reverse</text>
   <text x="335" y="419.636364" text-anchor="middle" font-size="13.349838" fill="var(--danger-text)" font-family="Arial, sans-serif">flip every edge direction; structure preserved</text>
   <rect x="133.3" y="477.3" width="53.3994" height="53.3994" rx="14" fill="var(--bg)"/>
@@ -141,7 +136,7 @@
   <polygon points="516,504 528,497.672727 528,510.327273" fill="var(--bg)"/>
   <text x="335" y="588.363636" text-anchor="middle" font-size="12.322928" fill="var(--danger-text)" font-family="Arial, sans-serif">graph.reverse - no data shuffled</text>
 
-  <rect x="650" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="945" y="393.272727" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--info-text)" font-family="Courier New, monospace">subgraph</text>
   <text x="945" y="419.636364" text-anchor="middle" font-size="13.349838" fill="var(--info-text)" font-family="Arial, sans-serif">filter with epred and vpred</text>
   <rect x="697.408" y="470.863" width="45.1841" height="45.1841" rx="14" fill="var(--bg)"/>

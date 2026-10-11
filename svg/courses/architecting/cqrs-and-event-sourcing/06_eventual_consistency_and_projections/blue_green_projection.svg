@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,21 +94,21 @@
   <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.924994259434" font-weight="bold" fill="var(--text)">Blue-Green Projection</text>
 
   <!-- Event log -->
-  <rect x="40" y="134.909090909091" width="244.067796610169" height="337.454545454545" rx="14.498073832003" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="134.909090909091" width="244.067796610169" height="337.454545454545" rx="14.498073832003" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="162.033898305085" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687450291" font-weight="bold" fill="var(--info-text)">Event Log</text>
   <text x="162.033898305085" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--info-text)">single source</text>
   <text x="162.033898305085" y="245.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--info-text)">unchanged during</text>
   <text x="162.033898305085" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--info-text)">the migration</text>
 
   <!-- Blue (old) -->
-  <rect x="416.271186440678" y="92.727272727273" width="386.440677966102" height="168.727272727273" rx="14.498073832003" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="416.271186440678" y="92.727272727273" width="386.440677966102" height="168.727272727273" rx="14.498073832003" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="609.491525423729" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687450291" font-weight="bold" fill="var(--primary-text)">Blue (old)</text>
   <text x="609.491525423729" y="171.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--primary-text)">live; serving reads</text>
   <text x="609.491525423729" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--primary-text)">current schema v1</text>
   <text x="609.491525423729" y="229.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--primary-text)">reads still hit here</text>
 
   <!-- Green (new) -->
-  <rect x="416.271186440678" y="303.636363636364" width="386.440677966102" height="168.727272727273" rx="14.498073832003" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="416.271186440678" y="303.636363636364" width="386.440677966102" height="168.727272727273" rx="14.498073832003" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="609.491525423729" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687450291" font-weight="bold" fill="var(--ok-text)">Green (new)</text>
   <text x="609.491525423729" y="382.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--ok-text)">catching up from 0</text>
   <text x="609.491525423729" y="409.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--ok-text)">new schema v2</text>
@@ -123,7 +118,7 @@
   <path d="M 284.067796610169 366.909090909091 L 416.271186440678 388" fill="none" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Switch -->
-  <rect x="894.237288135593" y="198.181818181818" width="244.067796610169" height="168.727272727273" rx="14.498073832003" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="894.237288135593" y="198.181818181818" width="244.067796610169" height="168.727272727273" rx="14.498073832003" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1016.271186440678" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687450291" font-weight="bold" fill="var(--info-text)">Reads</text>
   <text x="1016.271186440678" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--info-text)">configurable</text>
   <text x="1016.271186440678" y="303.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--info-text)">"blue" until ready,</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -138,7 +133,7 @@
   <text x="1048" y="414.690265486726" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--text-muted)">tight cluster, but offset</text>
   <text x="1048" y="440.353982300885" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-style="italic" fill="var(--danger-accent)">consistently wrong</text>
 
-  <rect x="40" y="471.150442477876" width="1200" height="148.849557522124" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="471.150442477876" width="1200" height="148.849557522124" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="507.079646017699" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--info-text)">MSE = Bias² + Variance</text>
   <text x="640" y="543.008849557522" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--info-text)">E[(θ̂ − θ)²] = (E[θ̂] − θ)² + Var(θ̂)</text>
   <text x="640" y="578.938053097345" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">unbiased is not the same as good — a biased estimator with much lower variance can win on MSE</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,25 +91,25 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Consistency Choices</text>
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Read concern</text>
   <text x="60" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">local sees recent writes</text>
   <text x="60" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">majority committed across replica</text>
   <text x="60" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">linearizable strongest read</text>
   <text x="60" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Pick per query criticality</text>
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Write concern</text>
   <text x="365" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">w one acknowledges primary only</text>
   <text x="365" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">w majority is durable to majority</text>
   <text x="365" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">j true waits for journal sync</text>
   <text x="365" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Trade latency for durability</text>
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Read preference</text>
   <text x="670" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">primary for fresh data</text>
   <text x="670" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">secondary for offload</text>
   <text x="670" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">nearest for low latency</text>
   <text x="670" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Stale reads possible from replicas</text>
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Transactions</text>
   <text x="975" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Multi document atomic group</text>
   <text x="975" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Available within replica set</text>

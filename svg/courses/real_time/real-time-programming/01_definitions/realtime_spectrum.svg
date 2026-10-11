@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,19 +91,19 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Real-Time Spectrum</text>
-  <rect x="40" y="80" width="382" height="260" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="382" height="260" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="231" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Hard real-time</text>
   <text x="60" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Miss = system failure</text>
   <text x="60" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Avionics, ABS, pacemakers</text>
   <text x="60" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Microsecond budgets</text>
   <text x="60" y="280" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--danger-text)">Lives at stake</text>
-  <rect x="448" y="80" width="382" height="260" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448" y="80" width="382" height="260" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Firm real-time</text>
   <text x="468" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Miss = result useless</text>
   <text x="468" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Trading, video streams</text>
   <text x="468" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Late = drop the frame</text>
   <text x="468" y="280" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">Money or quality</text>
-  <rect x="856" y="80" width="382" height="260" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="856" y="80" width="382" height="260" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1047" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Soft real-time</text>
   <text x="876" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Miss = degraded quality</text>
   <text x="876" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">UI, voice, gaming</text>

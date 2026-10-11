@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,17 +91,17 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="138.348623853211" rx="6.524477552988" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="138.348623853211" rx="6.524477552988" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="82.56880733945" text-anchor="middle" font-size="23.923084360957" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Level 1 — Metadata (always in context)</text>
   <text x="640" y="119.816513761468" text-anchor="middle" font-size="18.486019733467" fill="var(--primary-text)" font-family="Arial, sans-serif">Just name + description, a few dozen tokens per skill</text>
   <text x="640" y="154.935779816514" text-anchor="middle" font-size="18.486019733467" fill="var(--primary-text)" font-family="Arial, sans-serif">Lets the agent decide IF this skill is relevant</text>
 
-  <rect x="195.555555555556" y="242.201834862385" width="888.888888888889" height="138.348623853211" rx="6.524477552988" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="195.555555555556" y="242.201834862385" width="888.888888888889" height="138.348623853211" rx="6.524477552988" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="284.770642201835" text-anchor="middle" font-size="23.923084360957" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Level 2 — SKILL.md body (loaded when triggered)</text>
   <text x="640" y="322.018348623853" text-anchor="middle" font-size="18.486019733467" fill="var(--info-text)" font-family="Arial, sans-serif">The core instructions, read once the skill fires</text>
   <text x="640" y="357.137614678899" text-anchor="middle" font-size="18.486019733467" fill="var(--info-text)" font-family="Arial, sans-serif">Kept under a few hundred lines on purpose</text>
 
-  <rect x="351.111111111111" y="444.403669724771" width="577.777777777778" height="138.348623853211" rx="6.524477552988" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="351.111111111111" y="444.403669724771" width="577.777777777778" height="138.348623853211" rx="6.524477552988" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="486.97247706422" text-anchor="middle" font-size="23.923084360957" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Level 3 — Linked files &amp; scripts</text>
   <text x="640" y="524.220183486239" text-anchor="middle" font-size="18.486019733467" fill="var(--ok-text)" font-family="Arial, sans-serif">reference.md, code, templates</text>
   <text x="640" y="559.339449541284" text-anchor="middle" font-size="18.486019733467" fill="var(--ok-text)" font-family="Arial, sans-serif">Pulled in only if the task reaches that deep</text>

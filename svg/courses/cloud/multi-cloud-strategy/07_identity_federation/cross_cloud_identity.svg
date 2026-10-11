@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -99,18 +94,18 @@
   <rect x="40" y="182.45614" width="206.896552" height="244.210526" rx="6.678513" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="143.448276" y="223.157895" font-family="Arial, sans-serif" font-size="20.519621" font-weight="bold" fill="var(--text)" text-anchor="middle">Users</text>
   <!-- User icons (simple circles + bodies) -->
-  <rect x="85.6533" y="257.619" width="32.8314" height="32.8314" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="85.6533" y="257.619" width="32.8314" height="32.8314" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="133.103448" y="280.140351" font-family="Arial, sans-serif" font-size="13.33777" fill="var(--text-muted)">Developer</text>
-  <rect x="85.6533" y="308.497" width="32.8314" height="32.8314" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="85.6533" y="308.497" width="32.8314" height="32.8314" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="133.103448" y="331.017544" font-family="Arial, sans-serif" font-size="13.33777" fill="var(--text-muted)">DevOps</text>
-  <rect x="85.6533" y="359.374" width="32.8314" height="32.8314" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="85.6533" y="359.374" width="32.8314" height="32.8314" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="133.103448" y="381.894737" font-family="Arial, sans-serif" font-size="13.33777" fill="var(--text-muted)">Admin</text>
   <!-- SSO Arrow -->
   <line x1="246.896552" y1="304.561404" x2="402.068966" y2="304.561404" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="324.482759" y="294.385965" font-family="Arial, sans-serif" font-size="14.363701" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">SSO</text>
   <!-- Central IdP -->
-  <rect x="454.643" y="201.964" width="205.196" height="205.196" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
-  <rect x="480.293" y="227.613" width="153.897" height="153.897" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="454.643" y="201.964" width="205.196" height="205.196" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3"/>
+  <rect x="480.293" y="227.613" width="153.897" height="153.897" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1"/>
   <text x="557.241379" y="289.298189" font-family="Arial, sans-serif" font-size="22.571483" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Identity</text>
   <text x="557.241379" y="314.736842" font-family="Arial, sans-serif" font-size="22.571483" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Provider</text>
   <text x="557.241379" y="340.175495" font-family="Arial, sans-serif" font-size="14.363701" fill="var(--text-faint)" text-anchor="middle">(Okta, Azure AD)</text>
@@ -125,17 +120,17 @@
   <line x1="660.689655" y1="355.438596" x2="877.931034" y2="508.070175" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="752.5" y="465.9375" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" transform="rotate(30,760,470)">OIDC</text>
   <!-- AWS IAM -->
-  <rect x="877.931034" y="40" width="362.068966" height="122.105263" rx="6.678513" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="877.931034" y="40" width="362.068966" height="122.105263" rx="6.678513" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1058.965517" y="80.701754" font-family="Arial, sans-serif" font-size="22.571483" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">AWS IAM</text>
   <text x="1058.965517" y="111.22807" font-family="Arial, sans-serif" font-size="14.363701" fill="var(--text-muted)" text-anchor="middle">Roles, Policies, STS</text>
   <text x="1058.965517" y="136.666723" font-family="Arial, sans-serif" font-size="13.33777" fill="var(--text-faint)" text-anchor="middle">Assume role via federation</text>
   <!-- Azure AD -->
-  <rect x="877.931034" y="243.508772" width="362.068966" height="122.105263" rx="6.678513" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="877.931034" y="243.508772" width="362.068966" height="122.105263" rx="6.678513" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1058.965517" y="284.210526" font-family="Arial, sans-serif" font-size="22.571483" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Azure AD / Entra ID</text>
   <text x="1058.965517" y="314.736842" font-family="Arial, sans-serif" font-size="14.363701" fill="var(--text-muted)" text-anchor="middle">Service Principals, RBAC</text>
   <text x="1058.965517" y="340.175495" font-family="Arial, sans-serif" font-size="13.33777" fill="var(--text-faint)" text-anchor="middle">App registrations, managed identity</text>
   <!-- GCP IAM -->
-  <rect x="877.931034" y="447.017544" width="362.068966" height="122.105263" rx="6.678513" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="877.931034" y="447.017544" width="362.068966" height="122.105263" rx="6.678513" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1058.965517" y="487.719298" font-family="Arial, sans-serif" font-size="22.571483" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">GCP IAM</text>
   <text x="1058.965517" y="518.245614" font-family="Arial, sans-serif" font-size="14.363701" fill="var(--text-muted)" text-anchor="middle">Service Accounts, Roles</text>
   <text x="1058.965517" y="543.684267" font-family="Arial, sans-serif" font-size="13.33777" fill="var(--text-faint)" text-anchor="middle">Workload identity federation</text>

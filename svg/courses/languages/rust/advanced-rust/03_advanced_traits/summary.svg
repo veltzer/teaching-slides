@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,38 +90,38 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="399.999901666668" y="71.071452806128" text-anchor="middle" font-size="26.968728029725" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Static dispatch</text>
   <text x="839.999868888891" y="71.071452806128" font-size="26.968728029725" fill="var(--text)" font-family="Courier New, monospace">fn foo&lt;T: Trait&gt;(x: T)</text>
-  <rect x="40" y="93.511927650231" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="93.511927650231" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="399.999901666668" y="124.583267361098" text-anchor="middle" font-size="26.968728029725" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Dynamic dispatch</text>
   <text x="839.999868888891" y="124.583267361098" font-size="26.968728029725" fill="var(--text)" font-family="Courier New, monospace">fn foo(x: &amp;dyn Trait)</text>
-  <rect x="40" y="147.023742205202" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="147.023742205202" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="399.999901666668" y="178.095308106591" text-anchor="middle" font-size="26.968728029725" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Associated types</text>
   <text x="839.999868888891" y="178.095308106591" font-size="26.968728029725" fill="var(--text)" font-family="Arial, sans-serif">type Item; (one impl per type)</text>
-  <rect x="40" y="200.535669855434" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="200.535669855434" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="399.999901666668" y="231.607122661561" text-anchor="middle" font-size="26.968728029725" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Type parameters</text>
   <text x="839.999868888891" y="231.607122661561" font-size="26.968728029725" fill="var(--text)" font-family="Courier New, monospace">Trait&lt;T&gt;</text>
   <text x="1240" y="231.607122661561" font-size="26.968728029725" fill="var(--text-muted)" font-family="Arial, sans-serif">(many impls per type)</text>
-  <rect x="40" y="254.047597505665" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="254.047597505665" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="399.999901666668" y="285.119050311792" text-anchor="middle" font-size="26.968728029725" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Supertraits</text>
   <text x="839.999868888891" y="285.119050311792" font-size="26.968728029725" fill="var(--text)" font-family="Courier New, monospace">trait Sub: Super { }</text>
-  <rect x="40" y="307.559525155896" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="307.559525155896" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="399.999901666668" y="338.630864866763" text-anchor="middle" font-size="26.968728029725" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Blanket impl</text>
   <text x="839.999868888891" y="338.630864866763" font-size="26.968728029725" fill="var(--text)" font-family="Courier New, monospace">impl&lt;T: X&gt; Y for T { }</text>
-  <rect x="40" y="361.071452806128" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="361.071452806128" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="399.999901666668" y="392.142905612256" text-anchor="middle" font-size="26.968728029725" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Orphan rule</text>
   <text x="839.999868888891" y="392.142905612256" font-size="26.968728029725" fill="var(--text)" font-family="Arial, sans-serif">your trait OR your type</text>
-  <rect x="40" y="414.583380456359" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="414.583380456359" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="399.999901666668" y="445.654833262487" text-anchor="middle" font-size="26.968728029725" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Newtype pattern</text>
   <text x="839.999868888891" y="445.654833262487" font-size="26.968728029725" fill="var(--text)" font-family="Courier New, monospace">struct W(ForeignType);</text>
-  <rect x="40" y="468.095308106591" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="468.095308106591" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="399.999901666668" y="499.166647817457" text-anchor="middle" font-size="26.968728029725" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Send</text>
   <text x="839.999868888891" y="499.166647817457" font-size="26.968728029725" fill="var(--text)" font-family="Arial, sans-serif">safe to move between threads</text>
-  <rect x="40" y="521.607122661561" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="521.607122661561" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="399.999901666668" y="552.678688562949" text-anchor="middle" font-size="26.968728029725" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Sync</text>
   <text x="839.999868888891" y="552.678688562949" font-size="26.968728029725" fill="var(--text)" font-family="Arial, sans-serif">safe to share references</text>
-  <rect x="40" y="575.119050311792" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="575.119050311792" width="719.999803333336" height="44.880949688208" rx="8.948264853833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="399.999901666668" y="606.190503117921" text-anchor="middle" font-size="26.968728029725" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Sized / Unpin</text>
   <text x="839.999868888891" y="606.190503117921" font-size="26.968728029725" fill="var(--text)" font-family="Arial, sans-serif">compile-time size / safe to move after pinning</text>
 </svg>

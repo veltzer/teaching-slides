@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,18 +90,18 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="80" width="300" height="280.0001" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="300" height="280.0001" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="190" y="168" text-anchor="middle" font-size="24.7912" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Application</text>
   <text x="190" y="240" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--primary-text)">writes to</text>
   <text x="190" y="299.9999" text-anchor="middle" font-size="22.5374" fill="var(--text-muted)" font-family="Arial, sans-serif">stdout / stderr</text>
   <line x1="340" y1="220" x2="464.2857" y2="220" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="468.5714" y="40" width="342.8571" height="360.0001" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="468.5714" y="40" width="342.8571" height="360.0001" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="639.9999" y="128" text-anchor="middle" font-size="24.7912" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">Docker Daemon</text>
   <text x="639.9999" y="200" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--info-text)">Captures streams</text>
   <text x="639.9999" y="259.9999" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--info-text)">Applies log driver</text>
   <text x="639.9999" y="319.9999" text-anchor="middle" font-size="22.5374" fill="var(--text-muted)" font-family="Arial, sans-serif">(json-file default)</text>
   <line x1="811.4286" y1="220" x2="935.7142" y2="220" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="940" y="80" width="300" height="280.0001" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="940" y="80" width="300" height="280.0001" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="1089.9999" y="168" text-anchor="middle" font-size="24.7912" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Log Storage</text>
   <text x="1089.9999" y="240" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--ok-text)">/var/lib/docker/</text>
   <text x="1089.9999" y="299.9999" text-anchor="middle" font-size="22.5374" fill="var(--text-muted)" font-family="Arial, sans-serif">containers/&lt;id&gt;/</text>

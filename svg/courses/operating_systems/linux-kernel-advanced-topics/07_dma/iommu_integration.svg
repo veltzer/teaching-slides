@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,14 +91,14 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="360" height="320" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="360" height="320" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="220" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--danger-text)">Device</text>
   <text x="220" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">NIC / GPU / NVMe</text>
   <text x="220" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Issues DMA with</text>
   <text x="220" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">I/O virtual addresses</text>
   <text x="220" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">cannot see real RAM</text>
 
-  <rect x="460" y="40" width="360" height="320" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="460" y="40" width="360" height="320" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--primary-text)">IOMMU</text>
   <text x="640" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Intel VT-d / AMD-Vi</text>
   <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Translates IOVA to PA</text>
@@ -111,7 +106,7 @@
   <text x="640" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">page permissions</text>
   <text x="640" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">page tables + IOTLB</text>
 
-  <rect x="880" y="40" width="360" height="320" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="880" y="40" width="360" height="320" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1060" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--ok-text)">Memory</text>
   <text x="1060" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">System RAM</text>
   <text x="1060" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Physical frames</text>

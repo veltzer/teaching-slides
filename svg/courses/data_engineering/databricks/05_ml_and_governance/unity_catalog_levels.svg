@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,22 +92,22 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Unity Catalog: Three-Level Namespace</text>
 
-  <rect x="40" y="102.142857142857" width="1200" height="103.571428571429" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="102.142857142857" width="1200" height="103.571428571429" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--primary-text)">Level 1: Catalog</text>
   <text x="640" y="169.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--primary-text)">e.g. prod, staging, sandbox, finance, analytics</text>
   <text x="640" y="192.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--primary-text)">Top-level grouping, environment or domain</text>
 
-  <rect x="147.142857142857" y="247.142857142857" width="985.714285714286" height="103.571428571429" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="147.142857142857" y="247.142857142857" width="985.714285714286" height="103.571428571429" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="283.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--warn-text)">Level 2: Schema (database)</text>
   <text x="640" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">e.g. orders, users, ml_features, audit_logs</text>
   <text x="640" y="337.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--warn-text)">Logical grouping within a catalog</text>
 
-  <rect x="254.285714285714" y="392.142857142857" width="771.428571428571" height="103.571428571429" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="254.285714285714" y="392.142857142857" width="771.428571428571" height="103.571428571429" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="428.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--info-text)">Level 3: Table / View / Volume / Function</text>
   <text x="640" y="459.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--info-text)">prod.orders.fact_orders</text>
   <text x="640" y="482.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">Permissions, lineage, audit attached here</text>
 
-  <rect x="40" y="537.142857142857" width="1200" height="82.857142857143" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="537.142857142857" width="1200" height="82.857142857143" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="568.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--ok-text)">Permissions cascade or override at any level</text>
   <text x="640" y="594.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--ok-text)">GRANT SELECT ON CATALOG prod TO data_analysts → covers all schemas and tables</text>
 </svg>

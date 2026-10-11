@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,22 +92,22 @@
   </defs>
 
   <!-- Box A: You send prompt + tools (top-left) -->
-  <rect x="80" y="40" width="280" height="117.064220183486" rx="6.189662883026" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="40" width="280" height="117.064220183486" rx="6.189662883026" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="220" y="87.889908256881" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--primary-text)">You send</text>
   <text x="220" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.474157207564" fill="var(--primary-text)">prompt + tool definitions</text>
 
   <!-- Box B: Model returns a tool call (top-right) -->
-  <rect x="920" y="40" width="280" height="117.064220183486" rx="6.189662883026" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920" y="40" width="280" height="117.064220183486" rx="6.189662883026" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1060" y="87.889908256881" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--info-text)">Model returns</text>
   <text x="1060" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.474157207564" fill="var(--info-text)">a tool call</text>
 
   <!-- Box C: Your code validates + executes (bottom-right) -->
-  <rect x="920" y="337.981651376147" width="280" height="117.064220183486" rx="6.189662883026" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920" y="337.981651376147" width="280" height="117.064220183486" rx="6.189662883026" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1060" y="385.871559633028" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--warn-text)">Your code</text>
   <text x="1060" y="417.798165137615" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.474157207564" fill="var(--warn-text)">validates + executes</text>
 
   <!-- Box D: You send the result back (bottom-left) -->
-  <rect x="80" y="337.981651376147" width="280" height="117.064220183486" rx="6.189662883026" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="337.981651376147" width="280" height="117.064220183486" rx="6.189662883026" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="220" y="385.871559633028" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--ok-text)">You send</text>
   <text x="220" y="417.798165137615" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.474157207564" fill="var(--ok-text)">the result back</text>
 

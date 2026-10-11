@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
   <rect x="40" y="40" width="470" height="580" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="40" y="40" width="470" height="50" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="470" height="50" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="275" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Directory Tree</text>
 
   <text x="90" y="130" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="var(--primary-accent)">/</text>
@@ -131,22 +126,22 @@
   <text x="150" y="512" font-family="Courier New, monospace" font-size="17" fill="var(--text)">tmp/</text>
 
   <rect x="560" y="40" width="680" height="580" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="560" y="40" width="680" height="50" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="560" y="40" width="680" height="50" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="900" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Navigation Commands</text>
 
-  <rect x="585" y="105" width="630" height="90" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="585" y="105" width="630" height="90" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="615" y="135" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="var(--primary-text)">pwd</text>
   <text x="615" y="158" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Print working directory</text>
   <text x="615" y="180" font-family="Courier New, monospace" font-size="14" fill="var(--primary-text)">$ pwd → /home/alice</text>
 
-  <rect x="585" y="210" width="630" height="130" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="585" y="210" width="630" height="130" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="615" y="240" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="var(--ok-text)">ls</text>
   <text x="615" y="263" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">List contents</text>
   <text x="615" y="285" font-family="Courier New, monospace" font-size="14" fill="var(--ok-text)">$ ls -l   long format</text>
   <text x="615" y="305" font-family="Courier New, monospace" font-size="14" fill="var(--ok-text)">$ ls -la  include hidden</text>
   <text x="615" y="328" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Flags: -l -a -h -R</text>
 
-  <rect x="585" y="355" width="630" height="170" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="585" y="355" width="630" height="170" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="615" y="385" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="var(--warn-text)">cd</text>
   <text x="615" y="408" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Change directory</text>
   <text x="615" y="432" font-family="Courier New, monospace" font-size="14" fill="var(--warn-text)">$ cd /home/alice   absolute</text>
@@ -154,7 +149,7 @@
   <text x="615" y="476" font-family="Courier New, monospace" font-size="14" fill="var(--warn-text)">$ cd ~             home</text>
   <text x="615" y="498" font-family="Courier New, monospace" font-size="14" fill="var(--warn-text)">$ cd -             previous</text>
 
-  <rect x="585" y="540" width="630" height="65" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="585" y="540" width="630" height="65" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="615" y="567" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-text)">Tip: Tab completion</text>
   <text x="615" y="590" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Press TAB to auto-complete paths</text>
 </svg>

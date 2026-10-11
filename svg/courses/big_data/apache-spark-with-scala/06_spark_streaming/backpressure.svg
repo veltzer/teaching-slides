@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -100,21 +95,21 @@
   <text x="640" y="69.261261261261" text-anchor="middle" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--text-muted)">spark.streaming.backpressure.enabled = true</text>
 
   <!-- Pipeline: source, receiver, processing -->
-  <rect x="40" y="102.702702702703" width="360" height="188.108108108108" rx="8.178195576219" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="102.702702702703" width="360" height="188.108108108108" rx="8.178195576219" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="220" y="139.279279279279" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--primary-text)">Source</text>
   <text x="220" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Kafka / socket</text>
   <text x="220" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Variable rate</text>
   <text x="220" y="249.009009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">maxRatePerPartition caps</text>
   <text x="220" y="273.045045045045" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">initialRate on start</text>
 
-  <rect x="460" y="102.702702702703" width="360" height="188.108108108108" rx="8.178195576219" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="460" y="102.702702702703" width="360" height="188.108108108108" rx="8.178195576219" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="139.279279279279" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--warn-text)">Receiver</text>
   <text x="640" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--warn-text)">Rate limited</text>
   <text x="640" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--warn-text)">Blocks producer</text>
   <text x="640" y="249.009009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--warn-text)">RateEstimator sets target</text>
   <text x="640" y="273.045045045045" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--warn-text)">Updated every batch</text>
 
-  <rect x="880" y="102.702702702703" width="360" height="188.108108108108" rx="8.178195576219" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="880" y="102.702702702703" width="360" height="188.108108108108" rx="8.178195576219" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1060" y="139.279279279279" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--ok-text)">Processing</text>
   <text x="1060" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--ok-text)">Batch interval 2s</text>
   <text x="1060" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--ok-text)">Keep within interval</text>
@@ -125,7 +120,7 @@
   <line x1="820" y1="196.756756756757" x2="875" y2="196.756756756757" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- PID controller -->
-  <rect x="40" y="327.387387387387" width="1200" height="292.612612612613" rx="10.222744470273" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="327.387387387387" width="1200" height="292.612612612613" rx="10.222744470273" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="363.963963963964" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490037834601" font-weight="bold" fill="var(--info-text)">PID Rate Estimator</text>
 
   <rect x="70" y="395.315315315315" width="270" height="182.882882882883" rx="6.133646682164" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1"/>

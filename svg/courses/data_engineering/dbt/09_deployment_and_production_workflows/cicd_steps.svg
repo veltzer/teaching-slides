@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">dbt CI/CD Pipeline Steps</text>
 
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">1. Lint and Parse</text>
   <text x="60" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">SQLFluff format</text>
   <text x="60" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">dbt parse compiles</text>
@@ -106,7 +101,7 @@
   <text x="60" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">Fastest feedback</text>
   <text x="60" y="340" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Run on every push</text>
 
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">2. Slim CI</text>
   <text x="365" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">state:modified+</text>
   <text x="365" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Build only changes</text>
@@ -115,7 +110,7 @@
   <text x="365" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--primary-text)">Cuts CI minutes</text>
   <text x="365" y="340" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Defer to prod artifact</text>
 
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">3. Run Tests</text>
   <text x="670" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">dbt build command</text>
   <text x="670" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Run plus tests</text>
@@ -124,7 +119,7 @@
   <text x="670" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">Quality gate</text>
   <text x="670" y="340" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Annotate the PR</text>
 
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">4. Deploy</text>
   <text x="975" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Merge to main</text>
   <text x="975" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Production target</text>

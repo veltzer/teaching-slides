@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -100,7 +95,7 @@
   <text x="320" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.459060435492" font-weight="bold" fill="var(--text)">State-Based</text>
   <text x="320" y="71.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--text-muted)">Save current value; overwrite on change</text>
 
-  <rect x="40" y="129.230769230769" width="560" height="312.307692307692" rx="14.785647926803" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="129.230769230769" width="560" height="312.307692307692" rx="14.785647926803" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="320" y="173.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599262" font-weight="bold" fill="var(--primary-text)">orders table</text>
   <text x="80" y="229.615384615385" font-family="Courier New, monospace" font-size="21.122354181148" fill="var(--primary-text)">order_id  |  total  |  status</text>
   <text x="80" y="274.230769230769" font-family="Courier New, monospace" font-size="21.122354181148" fill="var(--primary-text)">    1042  |   95.0  |  placed</text>
@@ -118,7 +113,7 @@
   <text x="960" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.459060435492" font-weight="bold" fill="var(--text)">Event-Sourced</text>
   <text x="960" y="71.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--text-muted)">Append events; never overwrite</text>
 
-  <rect x="680" y="129.230769230769" width="560" height="423.846153846154" rx="14.785647926803" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="680" y="129.230769230769" width="560" height="423.846153846154" rx="14.785647926803" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="960" y="173.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599262" font-weight="bold" fill="var(--info-text)">order:1042 stream</text>
   <text x="720" y="218.461538461538" font-family="Courier New, monospace" font-size="16.897883344918" fill="var(--info-text)">v1: OrderCreated(total=0)</text>
   <text x="720" y="251.923076923077" font-family="Courier New, monospace" font-size="16.897883344918" fill="var(--info-text)">v2: LineItemAdded(price=50)</text>

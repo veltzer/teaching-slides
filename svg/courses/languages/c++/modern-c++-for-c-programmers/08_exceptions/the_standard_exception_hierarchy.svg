@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,42 +91,42 @@
     </marker>
   </defs>
 
-  <rect x="440" y="40" width="400" height="80" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="440" y="40" width="400" height="80" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">std::exception</text>
   <text x="640" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">virtual const char* what()</text>
 
   <line x1="640" y1="120" x2="240" y2="170" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="640" y1="120" x2="1040" y2="170" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="180" width="600" height="80" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="180" width="600" height="80" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="340" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">logic_error</text>
   <text x="340" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Preventable bugs; fix calling code</text>
 
-  <rect x="640" y="180" width="600" height="80" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="180" width="600" height="80" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="940" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">runtime_error</text>
   <text x="940" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">External failures at runtime</text>
 
-  <rect x="40" y="280" width="190" height="340" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="280" width="190" height="340" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="135" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">invalid_argument</text>
   <text x="135" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">bad input</text>
 
-  <rect x="240" y="280" width="190" height="340" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="240" y="280" width="190" height="340" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="335" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">out_of_range</text>
   <text x="335" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">index outside</text>
 
-  <rect x="440" y="280" width="200" height="340" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="440" y="280" width="200" height="340" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="540" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">length_error</text>
   <text x="540" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">size exceeds max</text>
 
-  <rect x="650" y="280" width="180" height="340" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="280" width="180" height="340" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="740" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">range_error</text>
   <text x="740" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">math out</text>
 
-  <rect x="840" y="280" width="200" height="340" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="840" y="280" width="200" height="340" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="940" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">overflow_error</text>
   <text x="940" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">arith overflow</text>
 
-  <rect x="1050" y="280" width="190" height="340" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1050" y="280" width="190" height="340" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1145" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">system_error</text>
   <text x="1145" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">OS / errno</text>
 </svg>

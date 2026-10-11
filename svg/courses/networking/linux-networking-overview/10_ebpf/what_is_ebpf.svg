@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,27 +90,27 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="365.391047" height="253.090897" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.08417" filter="url(#shadow)"/>
-  <rect x="40" y="40" width="365.391047" height="54.836385" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="82.181663" width="365.391047" height="12.654591" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="365.391047" height="253.090897" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.08417"/>
+  <rect x="40" y="40" width="365.391047" height="54.836385" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="82.181663" width="365.391047" height="12.654591" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="222.695524" y="77.963641" text-anchor="middle" font-size="21.54721" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">User Space</text>
   <text x="222.695524" y="158.108946" text-anchor="middle" font-size="18.469021" fill="var(--text-muted)" font-family="Arial, sans-serif">C program compiled</text>
   <text x="222.695524" y="206.618101" text-anchor="middle" font-size="18.469021" fill="var(--text-muted)" font-family="Arial, sans-serif">to eBPF bytecode</text>
-  <rect x="457.30453" y="40" width="365.391047" height="253.090897" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.08417" filter="url(#shadow)"/>
-  <rect x="457.30453" y="40" width="365.391047" height="54.836385" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="457.30453" y="82.181663" width="365.391047" height="12.654591" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="457.30453" y="40" width="365.391047" height="253.090897" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.08417"/>
+  <rect x="457.30453" y="40" width="365.391047" height="54.836385" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="457.30453" y="82.181663" width="365.391047" height="12.654591" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.000053" y="77.963641" text-anchor="middle" font-size="21.54721" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Verifier + JIT</text>
   <text x="640.000053" y="158.108946" text-anchor="middle" font-size="18.469021" fill="var(--text-muted)" font-family="Arial, sans-serif">Safety checks</text>
   <text x="640.000053" y="206.618101" text-anchor="middle" font-size="18.469021" fill="var(--text-muted)" font-family="Arial, sans-serif">Native compilation</text>
-  <rect x="874.608953" y="40" width="365.391047" height="253.090897" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.08417" filter="url(#shadow)"/>
-  <rect x="874.608953" y="40" width="365.391047" height="54.836385" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="874.608953" y="82.181663" width="365.391047" height="12.654591" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="874.608953" y="40" width="365.391047" height="253.090897" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.08417"/>
+  <rect x="874.608953" y="40" width="365.391047" height="54.836385" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="874.608953" y="82.181663" width="365.391047" height="12.654591" fill="url(#grad-primary)" rx="7.08417" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1057.304583" y="77.963641" text-anchor="middle" font-size="21.54721" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Kernel Hooks</text>
   <text x="1057.304583" y="158.108946" text-anchor="middle" font-size="18.469021" fill="var(--text-muted)" font-family="Arial, sans-serif">XDP, tc, kprobes</text>
   <text x="1057.304583" y="206.618101" text-anchor="middle" font-size="18.469021" fill="var(--text-muted)" font-family="Arial, sans-serif">tracepoints, LSM</text>
   <line x1="405.391047" y1="166.545514" x2="457.30453" y2="166.545514" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="822.695577" y1="166.545514" x2="874.608953" y2="166.545514" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
-  <rect x="359.467582" y="379.563563" width="557.071597" height="177.163615" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.08417" filter="url(#shadow)"/>
+  <rect x="359.467582" y="379.563563" width="557.071597" height="177.163615" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.08417"/>
   <text x="638.003381" y="451.272822" text-anchor="middle" font-size="21.54721" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">eBPF Maps (shared data)</text>
   <text x="638.003381" y="512.436307" text-anchor="middle" font-size="17.442997" fill="var(--text-muted)" font-family="Arial, sans-serif">Hash, Array, Ring Buffer, Per-CPU</text>
   <line x1="222.695524" y1="293.090897" x2="222.695524" y2="467.090963" stroke="var(--text-faint)" stroke-width="1.3333"/>

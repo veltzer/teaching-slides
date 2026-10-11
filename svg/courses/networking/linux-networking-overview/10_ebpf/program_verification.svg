@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,22 +90,22 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="260.869588" height="219.876941" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.539577" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="260.869588" height="219.876941" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.539577"/>
   <text x="170.434794" y="123.196593" text-anchor="middle" font-size="22.932379" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">BPF Bytecode</text>
   <text x="170.434794" y="192.131135" text-anchor="middle" font-size="18.564325" fill="var(--text-muted)" font-family="Arial, sans-serif">ELF .o file</text>
-  <rect x="357.056884" y="40" width="260.869588" height="219.876941" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.539577" filter="url(#shadow)"/>
+  <rect x="357.056884" y="40" width="260.869588" height="219.876941" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.539577"/>
   <text x="487.491679" y="123.196593" text-anchor="middle" font-size="22.932379" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Verifier</text>
   <text x="487.491679" y="192.131135" text-anchor="middle" font-size="18.564325" fill="var(--text-muted)" font-family="Arial, sans-serif">DAG analysis</text>
-  <rect x="674.113769" y="40" width="260.869588" height="219.876941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.539577" filter="url(#shadow)"/>
+  <rect x="674.113769" y="40" width="260.869588" height="219.876941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.539577"/>
   <text x="804.548563" y="123.196593" text-anchor="middle" font-size="22.932379" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">JIT Compiler</text>
   <text x="804.548563" y="192.131135" text-anchor="middle" font-size="18.564325" fill="var(--text-muted)" font-family="Arial, sans-serif">Native x86/ARM</text>
-  <rect x="991.170653" y="40" width="248.829347" height="219.876941" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.539577" filter="url(#shadow)"/>
+  <rect x="991.170653" y="40" width="248.829347" height="219.876941" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.539577"/>
   <text x="1115.58538" y="123.196593" text-anchor="middle" font-size="22.932379" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Execute</text>
   <text x="1115.58538" y="192.131135" text-anchor="middle" font-size="18.564325" fill="var(--text-muted)" font-family="Arial, sans-serif">At hook point</text>
   <line x1="300.869481" y1="149.344249" x2="357.056884" y2="149.344249" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="617.926473" y1="149.344249" x2="674.113769" y2="149.344249" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="934.983357" y1="149.344249" x2="991.170653" y2="149.344249" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
-  <rect x="254.715738" y="360.901648" width="770.568631" height="259.098352" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.539577" stroke-dasharray="8.8889 5.3333" filter="url(#shadow)"/>
+  <rect x="254.715738" y="360.901648" width="770.568631" height="259.098352" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.539577" stroke-dasharray="8.8889 5.3333"/>
   <text x="640.000054" y="441.721208" text-anchor="middle" font-size="22.932379" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Verifier Checks:</text>
   <text x="640.000054" y="510.655751" text-anchor="middle" font-size="18.564325" fill="var(--text-muted)" font-family="Arial, sans-serif">No loops | Bounded execution | Valid memory access</text>
   <text x="640.000054" y="570.081867" text-anchor="middle" font-size="18.564325" fill="var(--text-muted)" font-family="Arial, sans-serif">No null pointer deref | Proper map access | Stack bounds</text>

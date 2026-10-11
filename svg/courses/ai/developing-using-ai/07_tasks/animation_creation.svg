@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,15 +90,15 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="120" fill="url(#grad-ok)" rx="6.302708777267" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="120" fill="url(#grad-ok)" rx="6.302708777267" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="110" text-anchor="middle" fill="var(--bg)" font-size="24.888871735695" font-family="Arial, sans-serif">✅ Transform &amp; Opacity (GPU accelerated)</text>
   <text x="640" y="140" text-anchor="middle" fill="var(--bg)" font-size="17.777735512597" font-family="Arial, sans-serif">Best performance - 60 FPS</text>
-  <rect x="40" y="200" width="1200" height="120" fill="url(#grad-warn)" rx="6.302708777267" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="200" width="1200" height="120" fill="url(#grad-warn)" rx="6.302708777267" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="270" text-anchor="middle" fill="var(--bg)" font-size="24.888871735695" font-family="Arial, sans-serif">⚠️ Color &amp; Shadow Changes</text>
   <text x="640" y="300.000110344828" text-anchor="middle" fill="var(--bg)" font-size="17.777735512597" font-family="Arial, sans-serif">Triggers repaint - Moderate performance</text>
-  <rect x="40" y="360" width="1200" height="120" fill="url(#grad-danger)" rx="6.302708777267" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="360" width="1200" height="120" fill="url(#grad-danger)" rx="6.302708777267" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="430" text-anchor="middle" fill="var(--bg)" font-size="24.888871735695" font-family="Arial, sans-serif">❌ Width, Height, Position Changes</text>
   <text x="640" y="460" text-anchor="middle" fill="var(--bg)" font-size="17.777735512597" font-family="Arial, sans-serif">Triggers reflow - Poor performance</text>
-  <rect x="240" y="520" width="800" height="100" fill="url(#grad-primary)" rx="6.302708777267" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="240" y="520" width="800" height="100" fill="url(#grad-primary)" rx="6.302708777267" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="580" text-anchor="middle" fill="var(--bg)" font-size="21.333408669292" font-family="Arial, sans-serif">Use will-change and transform3d for optimization</text>
 </svg>

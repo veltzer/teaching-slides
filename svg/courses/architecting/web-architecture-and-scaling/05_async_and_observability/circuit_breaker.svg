@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,19 +92,19 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Circuit Breaker State Machine</text>
 
-  <rect x="147.142857142857" y="185" width="257.142857142857" height="165.714285714286" rx="14.747881203753" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="147.142857142857" y="185" width="257.142857142857" height="165.714285714286" rx="14.747881203753" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="275.714285714286" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--ok-text)">CLOSED</text>
   <text x="275.714285714286" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--ok-text)">requests flow</text>
   <text x="275.714285714286" y="286.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--ok-text)">count failures</text>
   <text x="275.714285714286" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--ok-text)">healthy state</text>
 
-  <rect x="511.428571428571" y="185" width="257.142857142857" height="165.714285714286" rx="14.747881203753" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="511.428571428571" y="185" width="257.142857142857" height="165.714285714286" rx="14.747881203753" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--danger-text)">OPEN</text>
   <text x="640" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--danger-text)">reject all calls</text>
   <text x="640" y="286.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--danger-text)">return error fast</text>
   <text x="640" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--danger-text)">protects downstream</text>
 
-  <rect x="875.714285714286" y="185" width="257.142857142857" height="165.714285714286" rx="14.747881203753" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="875.714285714286" y="185" width="257.142857142857" height="165.714285714286" rx="14.747881203753" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1004.285714285714" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--warn-text)">HALF-OPEN</text>
   <text x="1004.285714285714" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">trial request</text>
   <text x="1004.285714285714" y="286.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">probe recovery</text>

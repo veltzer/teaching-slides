@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,21 +93,21 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.280399254524" font-weight="bold" fill="var(--text)">Open-domain QA pipeline</text>
 
-  <rect x="40" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="153.793103448276" y="130.45871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--info-text)">question</text>
   <text x="153.793103448276" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">"who founded Apple?"</text>
 
-  <rect x="308.965517241379" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="308.965517241379" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="422.758620689655" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--primary-text)">query encoder</text>
   <text x="422.758620689655" y="154.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">DPR, ColBERT</text>
   <text x="422.758620689655" y="176.220183486239" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">→ vector</text>
 
-  <rect x="577.931034482759" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="577.931034482759" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="691.724137931035" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">vector index</text>
   <text x="691.724137931035" y="154.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">FAISS, ScaNN</text>
   <text x="691.724137931035" y="176.220183486239" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">approximate kNN</text>
 
-  <rect x="846.896551724138" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.896551724138" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="960.689655172414" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">top-k passages</text>
   <text x="960.689655172414" y="154.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">k = 5..20</text>
   <text x="960.689655172414" y="176.220183486239" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">from Wikipedia / corpus</text>
@@ -128,7 +123,7 @@
 
   <line x1="153.793103448276" y1="258.165137614679" x2="153.793103448276" y2="194.311926605505" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="102.068965517241" y="417.798165137615" width="827.586206896552" height="127.706422018349" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="102.068965517241" y="417.798165137615" width="827.586206896552" height="127.706422018349" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="515.862068965517" y="465.688073394495" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.083414753828" font-weight="bold" fill="var(--primary-text)">reader (extractive or generative)</text>
   <text x="515.862068965517" y="497.614678899083" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--primary-text)">conditions on (question + retrieved passages)</text>
   <text x="515.862068965517" y="524.220183486239" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--primary-text)">BERT span head, T5/BART generator, or instruction-tuned LLM</text>
@@ -136,7 +131,7 @@
   <line x1="960.689655172414" y1="194.311926605505" x2="702.068965517241" y2="417.798165137615" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
   <line x1="153.793103448276" y1="194.311926605505" x2="153.793103448276" y2="417.798165137615" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="991.724137931035" y="439.082568807339" width="248.275862068966" height="85.137614678899" rx="14.689445752436" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="991.724137931035" y="439.082568807339" width="248.275862068966" height="85.137614678899" rx="14.689445752436" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1115.862068965517" y="476.330275229358" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--ok-text)">answer + citations</text>
   <text x="1115.862068965517" y="502.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">"Steve Jobs, Steve Wozniak"</text>
 

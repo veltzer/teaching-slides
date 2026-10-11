@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,7 +94,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Window Functions</text>
 
-  <rect x="40" y="87.889908256881" width="579.310344827586" height="255.412844036697" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="579.310344827586" height="255.412844036697" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="329.655172413793" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--info-text)">GROUP BY collapses</text>
   <rect x="60.689655172414" y="146.422018348624" width="537.931034482759" height="170.275229357798" rx="6.295476751044" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="81.379310344828" y="178.348623853211" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">SELECT dept, AVG(salary)</text>
@@ -108,7 +103,7 @@
   <text x="81.379310344828" y="274.128440366972" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text-muted)">eng | 80000</text>
   <text x="81.379310344828" y="295.412844036697" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text-muted)">sales | 65000</text>
 
-  <rect x="660.689655172414" y="87.889908256881" width="579.310344827586" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-with="2" filter="url(#shadow)"/>
+  <rect x="660.689655172414" y="87.889908256881" width="579.310344827586" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-with="2"/>
   <text x="950.344827586207" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--ok-text)">Window keeps rows</text>
   <rect x="681.379310344828" y="146.422018348624" width="537.931034482759" height="170.275229357798" rx="6.295476751044" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="702.068965517241" y="178.348623853211" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">SELECT name, salary,</text>
@@ -117,21 +112,21 @@
   <text x="702.068965517241" y="268.807339449541" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text-muted)">-- all rows + dept avg alongside</text>
   <text x="702.068965517241" y="295.412844036697" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text-muted)">Alice | 90000 | 80000</text>
 
-  <rect x="40" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="231.379310344828" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--primary-text)">Ranking</text>
   <text x="60.689655172414" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">ROW_NUMBER()</text>
   <text x="60.689655172414" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">RANK()  DENSE_RANK()</text>
   <text x="60.689655172414" y="524.220183486239" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">NTILE(4) -- quartiles</text>
   <text x="60.689655172414" y="572.110091743119" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--primary-text)">Top-N per group</text>
 
-  <rect x="448.620689655172" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">Offset</text>
   <text x="469.310344827586" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">LAG(col)  LEAD(col)</text>
   <text x="469.310344827586" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">FIRST_VALUE  LAST_VALUE</text>
   <text x="469.310344827586" y="524.220183486239" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Diff to previous row</text>
   <text x="469.310344827586" y="572.110091743119" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--warn-text)">Time-series deltas</text>
 
-  <rect x="857.241379310345" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--ok-text)">Aggregate</text>
   <text x="877.931034482759" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">SUM/AVG/COUNT OVER ()</text>
   <text x="877.931034482759" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Running totals</text>

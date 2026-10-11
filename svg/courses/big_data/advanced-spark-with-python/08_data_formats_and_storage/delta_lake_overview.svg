@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="563.6364" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="563.6364" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="58.75" y="80" font-size="22.6301" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Delta Lake adds ACID transactions on top of Parquet</text>
   <text x="58.75" y="116.3636" font-size="22.6301" fill="var(--ok-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Delta Table Directory Structure</text>
   <text x="73.75" y="152.7273" font-size="20.8893" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">/data/delta_table/</text>
@@ -109,7 +104,7 @@
   <text x="73.75" y="400" font-size="20.8893" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">├── part-00001-...snappy.parquet</text>
   <text x="73.75" y="430.9091" font-size="20.8893" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">├── part-00002-...snappy.parquet</text>
   <text x="73.75" y="461.8182" font-size="20.8893" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">└── part-00003-...snappy.parquet</text>
-  <rect x="58.75" y="503.6363" width="1162.5" height="116.3637" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="58.75" y="503.6363" width="1162.5" height="116.3637" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="73.75" y="532.7272" font-size="20.8893" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Transaction Log (_delta_log):</text>
   <text x="73.75" y="561.8181" font-size="19.1485" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Each JSON file = one atomic transaction   • Contains: add/remove file actions</text>
   <text x="73.75" y="590.9091" font-size="19.1485" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Checkpoints every 10 transactions         • Enables time travel and ACID</text>

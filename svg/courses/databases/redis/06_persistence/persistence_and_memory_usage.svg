@@ -2,25 +2,25 @@
   <metadata>
     <type>regular</type>
   </metadata>
-  <rect x="40" y="40" width="349.0909" height="253.75" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="349.0909" height="253.75" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="214.5455" y="123.375" text-anchor="middle" font-size="23.8141" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Parent Process</text>
   <text x="214.5455" y="185" text-anchor="middle" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--primary-text)">Shared memory</text>
   <text x="214.5455" y="246.625" text-anchor="middle" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--primary-text)">pages: A B C D</text>
-  <rect x="40" y="366.25" width="349.0909" height="253.75" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="366.25" width="349.0909" height="253.75" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="214.5455" y="449.625" text-anchor="middle" font-size="23.8141" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Child Process</text>
   <text x="214.5455" y="511.25" text-anchor="middle" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--warn-text)">Reads shared pages</text>
   <text x="214.5455" y="572.875" text-anchor="middle" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--warn-text)">for RDB dump</text>
   <line x1="410.9091" y1="166.875" x2="585.4545" y2="166.875" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="498.1818" y="141.5" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--text)">write to A</text>
-  <rect x="607.2727" y="40" width="283.6363" height="253.75" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="607.2727" y="40" width="283.6363" height="253.75" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="749.0908" y="123.375" text-anchor="middle" font-size="23.8141" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">COW Copy</text>
   <text x="749.0908" y="185" text-anchor="middle" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--danger-text)">Page A copied</text>
   <text x="749.0908" y="246.625" text-anchor="middle" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--danger-text)">before write</text>
-  <rect x="934.5454" y="40" width="305.4546" height="253.75" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="934.5454" y="40" width="305.4546" height="253.75" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="1087.2727" y="123.375" text-anchor="middle" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--ok-text)">B, C, D still shared</text>
   <text x="1087.2727" y="185" text-anchor="middle" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--ok-text)">Memory efficient</text>
   <text x="1087.2727" y="246.625" text-anchor="middle" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--ok-text)">until modified</text>
-  <rect x="607.2727" y="384.375" width="632.7273" height="199.375" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="607.2727" y="384.375" width="632.7273" height="199.375" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="923.6363" y="464.125" text-anchor="middle" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--info-text)">Peak memory = base + modified pages only</text>
   <text x="923.6363" y="529.375" text-anchor="middle" font-size="21.6491" font-family="Arial, sans-serif" fill="var(--info-text)">High write load = more COW memory usage</text>
   <defs>
@@ -87,11 +87,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
 
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">

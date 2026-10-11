@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,15 +90,15 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="300" height="220" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="300" height="220" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="190" y="120" text-anchor="middle" font-size="24.7912" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">Manual (C/C++)</text>
   <text x="190" y="192" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--danger-text)">malloc / free</text>
   <text x="190" y="240" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--danger-text)">Dangling ptrs, leaks</text>
-  <rect x="490" y="40" width="300" height="220" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="490" y="40" width="300" height="220" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="639.9999" y="120" text-anchor="middle" font-size="24.7912" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">GC (Java/Go)</text>
   <text x="639.9999" y="192" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--primary-text)">Runtime overhead</text>
   <text x="639.9999" y="240" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--primary-text)">Pause times, memory</text>
-  <rect x="940" y="40" width="300" height="220" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="220" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="1089.9999" y="120" text-anchor="middle" font-size="24.7912" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Ownership (Rust)</text>
   <text x="1089.9999" y="192" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--ok-text)">Compile-time checks</text>
   <text x="1089.9999" y="240" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--ok-text)">Zero runtime cost</text>
@@ -111,7 +106,7 @@
   <line x1="789.9999" y1="148" x2="940" y2="148" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="415" y="112" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--text)">evolves</text>
   <text x="864.9999" y="112" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--text)">evolves</text>
-  <rect x="211.4285" y="400" width="857.1428" height="220" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="211.4285" y="400" width="857.1428" height="220" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="639.9999" y="480" text-anchor="middle" font-size="24.7912" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Rust's Innovation</text>
   <text x="639.9999" y="552" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--warn-text)">Ownership + Borrowing + Lifetimes = Memory safety at compile time</text>
 </svg>

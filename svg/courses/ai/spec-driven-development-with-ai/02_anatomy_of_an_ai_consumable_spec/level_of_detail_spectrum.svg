@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,19 +91,19 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="380" height="100" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="380" height="100" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="230.0" y="96.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Under-specified</text>
   <rect x="40" y="160" width="380" height="200" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="230" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">agent fills gaps with guesses</text>
   <text x="230" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">every run gives a different design</text>
   <text x="230" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">review finds surprises</text>
-  <rect x="450" y="40" width="380" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="40" width="380" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640.0" y="96.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Calibrated</text>
   <rect x="450" y="160" width="380" height="200" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">you decide the what and the limits</text>
   <text x="640" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">agent decides the how</text>
   <text x="640" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">review checks the contract</text>
-  <rect x="860" y="40" width="380" height="100" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="40" width="380" height="100" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1050.0" y="96.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Over-specified</text>
   <rect x="860" y="160" width="380" height="200" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1050" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">the code written in prose</text>
@@ -117,7 +112,7 @@
   <line x1="60" y1="400" x2="1220" y2="400" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
   <text x="60" y="430" text-anchor="start" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">less detail</text>
   <text x="1220" y="430" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">more detail</text>
-  <rect x="40" y="460" width="1200" height="160" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="460" width="1200" height="160" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.0" y="524.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Leave to the agent on purpose</text>
   <text x="640.0" y="552.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">naming, file layout, private helpers, test scaffolding, idiomatic details</text>
   <text x="640.0" y="574.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Keep for yourself: behavior, interfaces, data, limits, errors, non-goals</text>

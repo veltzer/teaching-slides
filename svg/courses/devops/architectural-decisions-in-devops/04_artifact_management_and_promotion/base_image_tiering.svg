@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,13 +90,13 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="280.0001" y="40" width="720" height="126.0869" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="280.0001" y="40" width="720" height="126.0869" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640.0001" y="90.4348" text-anchor="middle" fill="var(--bg)" font-size="27.5579" font-weight="bold" font-family="Arial, sans-serif">Tier 3: Application Images</text>
   <text x="640.0001" y="135.8261" text-anchor="middle" fill="var(--bg)" font-size="25.0526" font-family="Arial, sans-serif">myapp:2.3.1</text>
-  <rect x="160.0001" y="216.5217" width="960.0001" height="126.0869" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="160.0001" y="216.5217" width="960.0001" height="126.0869" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640.0001" y="266.9565" text-anchor="middle" fill="var(--bg)" font-size="27.5579" font-weight="bold" font-family="Arial, sans-serif">Tier 2: Runtime Base Images</text>
   <text x="640.0001" y="312.3478" text-anchor="middle" fill="var(--bg)" font-size="25.0526" font-family="Arial, sans-serif">node-base:20, python-base:3.12</text>
-  <rect x="40" y="393.0435" width="1200" height="126.0869" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="393.0435" width="1200" height="126.0869" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.0001" y="443.4783" text-anchor="middle" fill="var(--bg)" font-size="27.5579" font-weight="bold" font-family="Arial, sans-serif">Tier 1: OS Foundation Images</text>
   <text x="640.0001" y="488.8696" text-anchor="middle" fill="var(--bg)" font-size="25.0526" font-family="Arial, sans-serif">ubuntu-hardened:22.04, alpine-approved:3.19</text>
   <text x="640.0001" y="620" text-anchor="middle" fill="var(--text-muted)" font-size="27.5579" font-style="italic" font-family="Arial, sans-serif">Each tier inherits security policies from below</text>

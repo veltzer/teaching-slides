@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,22 +90,22 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="434.7368" y="40" width="378.9474" height="92.463717517321" rx="6.171463517385" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="434.7368" y="40" width="378.9474" height="92.463717517321" rx="6.171463517385" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="624.2105" y="78.66662434782" text-anchor="middle" font-size="23.041159042158" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Apache Airflow / Orchestrator</text>
   <text x="624.2105" y="112.289688557002" text-anchor="middle" font-size="18.432927233727" fill="var(--text)" font-family="Arial, sans-serif">DAG scheduling &amp; monitoring</text>
-  <rect x="40" y="199.710057529918" width="221.0526" height="109.275408317587" rx="6.171463517385" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="199.710057529918" width="221.0526" height="109.275408317587" rx="6.171463517385" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="150.5263" y="241.739020037792" text-anchor="middle" font-size="19.968901645479" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Ingest</text>
   <text x="150.5263" y="275.362295841207" text-anchor="middle" font-size="16.896849964249" fill="var(--text)" font-family="Arial, sans-serif">Raw data load</text>
   <text x="150.5263" y="297.217335185877" text-anchor="middle" font-size="16.896849964249" fill="var(--text)" font-family="Arial, sans-serif">S3 / Kafka / DB</text>
-  <rect x="308.421" y="199.710057529918" width="221.0526" height="109.275408317587" rx="6.171463517385" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="308.421" y="199.710057529918" width="221.0526" height="109.275408317587" rx="6.171463517385" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="418.9474" y="241.739020037792" text-anchor="middle" font-size="19.968901645479" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Transform</text>
   <text x="418.9474" y="275.362295841207" text-anchor="middle" font-size="16.896849964249" fill="var(--text)" font-family="Arial, sans-serif">Spark ETL jobs</text>
   <text x="418.9474" y="297.217335185877" text-anchor="middle" font-size="16.896849964249" fill="var(--text)" font-family="Arial, sans-serif">Clean &amp; enrich</text>
-  <rect x="576.8421" y="199.710057529918" width="221.0526" height="109.275408317587" rx="6.171463517385" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="576.8421" y="199.710057529918" width="221.0526" height="109.275408317587" rx="6.171463517385" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="687.3684" y="241.739020037792" text-anchor="middle" font-size="19.968901645479" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Validate</text>
   <text x="687.3684" y="275.362295841207" text-anchor="middle" font-size="16.896849964249" fill="var(--text)" font-family="Arial, sans-serif">Quality checks</text>
   <text x="687.3684" y="297.217335185877" text-anchor="middle" font-size="16.896849964249" fill="var(--text)" font-family="Arial, sans-serif">Schema enforce</text>
-  <rect x="845.2631" y="199.710057529918" width="221.0526" height="109.275408317587" rx="6.171463517385" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="845.2631" y="199.710057529918" width="221.0526" height="109.275408317587" rx="6.171463517385" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="955.7895" y="241.739020037792" text-anchor="middle" font-size="19.968901645479" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">ML Pipeline</text>
   <text x="955.7895" y="275.362295841207" text-anchor="middle" font-size="16.896849964249" fill="var(--text)" font-family="Arial, sans-serif">MLflow + Spark ML</text>
   <text x="955.7895" y="297.217335185877" text-anchor="middle" font-size="16.896849964249" fill="var(--text)" font-family="Arial, sans-serif">Train &amp; evaluate</text>
@@ -121,7 +116,7 @@
   <line x1="576.8421" y1="132.463717517321" x2="418.9474" y2="199.710057529918" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="671.5789" y1="132.463717517321" x2="687.3684" y2="199.710057529918" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="718.9473" y1="132.463717517321" x2="955.7895" y2="199.710057529918" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="1097.8947" y="199.710057529918" width="142.1053" height="109.275408317587" rx="6.171463517385" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1097.8947" y="199.710057529918" width="142.1053" height="109.275408317587" rx="6.171463517385" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1168.9474" y="241.739020037792" text-anchor="middle" font-size="19.968901645479" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Serve</text>
   <text x="1168.9474" y="275.362295841207" text-anchor="middle" font-size="16.896849964249" fill="var(--text)" font-family="Arial, sans-serif">Delta Lake</text>
   <text x="1168.9474" y="297.217335185877" text-anchor="middle" font-size="16.896849964249" fill="var(--text)" font-family="Arial, sans-serif">Dashboard</text>
@@ -129,13 +124,13 @@
   <rect x="71.5789" y="384.637704158793" width="1105.2632" height="92.463717517321" rx="6.171463517385" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="624.2105" y="423.304328506614" text-anchor="middle" font-size="21.505081772681" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Orchestration Tools</text>
   <text x="624.2105" y="456.927498512912" text-anchor="middle" font-size="18.432927233727" fill="var(--text)" font-family="Arial, sans-serif">Apache Airflow | Prefect | Dagster | AWS Step Functions | Azure Data Factory</text>
-  <rect x="71.5789" y="510.724591682413" width="252.6316" height="67.246340012597" rx="6.171463517385" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="71.5789" y="510.724591682413" width="252.6316" height="67.246340012597" rx="6.171463517385" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="197.8947" y="552.753659987403" text-anchor="middle" font-size="16.896849964249" fill="var(--ok-accent)" font-family="Arial, sans-serif">Dependency Mgmt</text>
-  <rect x="355.7895" y="510.724591682413" width="221.0526" height="67.246340012597" rx="6.171463517385" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="355.7895" y="510.724591682413" width="221.0526" height="67.246340012597" rx="6.171463517385" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="466.3157" y="552.753659987403" text-anchor="middle" font-size="16.896849964249" fill="var(--danger-accent)" font-family="Arial, sans-serif">Retry &amp; Backfill</text>
-  <rect x="608.4211" y="510.724591682413" width="221.0526" height="67.246340012597" rx="6.171463517385" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="608.4211" y="510.724591682413" width="221.0526" height="67.246340012597" rx="6.171463517385" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="718.9473" y="552.753659987403" text-anchor="middle" font-size="16.896849964249" fill="var(--info-accent)" font-family="Arial, sans-serif">Alerting</text>
-  <rect x="861.0526" y="510.724591682413" width="315.7895" height="67.246340012597" rx="6.171463517385" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="861.0526" y="510.724591682413" width="315.7895" height="67.246340012597" rx="6.171463517385" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1018.9474" y="552.753659987403" text-anchor="middle" font-size="16.896849964249" fill="var(--primary-accent)" font-family="Arial, sans-serif">SLA Monitoring</text>
   <text x="624.2105" y="620" text-anchor="middle" font-size="18.432927233727" fill="var(--text-muted)" font-family="Arial, sans-serif">End-to-end pipeline orchestration with dependency management</text>
 </svg>

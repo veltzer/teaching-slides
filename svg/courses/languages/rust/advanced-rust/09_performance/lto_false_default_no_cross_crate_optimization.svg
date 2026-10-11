@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,41 +91,41 @@
     </marker>
   </defs>
   <text x="40" y="40" font-size="24.5694" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Without LTO</text>
-  <rect x="40" y="56.4538" width="342.8573" height="102.8369" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="56.4538" width="342.8573" height="102.8369" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="211.4286" y="97.5886" font-size="22.6794" fill="var(--text)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Crate A</text>
   <text x="211.4286" y="134.6099" font-size="20.7896" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">optimize alone</text>
   <line x1="211.4286" y1="159.2908" x2="211.4286" y2="202.4823" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
-  <rect x="447.1428" y="56.4538" width="342.8573" height="102.8369" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="447.1428" y="56.4538" width="342.8573" height="102.8369" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="618.5715" y="97.5886" font-size="22.6794" fill="var(--text)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Crate B</text>
   <text x="618.5715" y="134.6099" font-size="20.7896" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">optimize alone</text>
   <line x1="618.5715" y1="159.2908" x2="618.5715" y2="202.4823" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
-  <rect x="854.2858" y="56.4538" width="342.8573" height="102.8369" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="854.2858" y="56.4538" width="342.8573" height="102.8369" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="1025.7143" y="97.5886" font-size="22.6794" fill="var(--text)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Crate C</text>
   <text x="1025.7143" y="134.6099" font-size="20.7896" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">optimize alone</text>
   <line x1="1025.7143" y1="159.2908" x2="1025.7143" y2="202.4823" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="211.4286" y1="204.5389" x2="1240" y2="204.5389" stroke="var(--text-muted)" stroke-width="1.6841"/>
   <line x1="725.7143" y1="204.5389" x2="725.7143" y2="229.2198" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="736.4287" y="220.9929" font-size="18.8996" fill="var(--text-muted)" text-anchor="start" font-family="Arial, sans-serif">link</text>
-  <rect x="565" y="237.4468" width="321.4285" height="61.7021" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="565" y="237.4468" width="321.4285" height="61.7021" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="725.7143" y="278.5816" font-size="22.6794" fill="var(--text)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Binary</text>
   <text x="725.7143" y="311.4894" font-size="20.7896" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Cross-crate calls NOT inlined</text>
   <text x="40" y="348.5106" font-size="24.5694" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">With LTO</text>
-  <rect x="40" y="364.9645" width="342.8573" height="102.8369" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="364.9645" width="342.8573" height="102.8369" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="211.4286" y="406.0994" font-size="22.6794" fill="var(--text)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Crate A</text>
   <text x="211.4286" y="443.1206" font-size="20.7896" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(IR)</text>
   <line x1="211.4286" y1="467.8014" x2="211.4286" y2="510.993" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
-  <rect x="447.1428" y="364.9645" width="342.8573" height="102.8369" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="447.1428" y="364.9645" width="342.8573" height="102.8369" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="618.5715" y="406.0994" font-size="22.6794" fill="var(--text)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Crate B</text>
   <text x="618.5715" y="443.1206" font-size="20.7896" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(IR)</text>
   <line x1="618.5715" y1="467.8014" x2="618.5715" y2="510.993" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
-  <rect x="854.2858" y="364.9645" width="342.8573" height="102.8369" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="854.2858" y="364.9645" width="342.8573" height="102.8369" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="1025.7143" y="406.0994" font-size="22.6794" fill="var(--text)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Crate C</text>
   <text x="1025.7143" y="443.1206" font-size="20.7896" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(IR)</text>
   <line x1="1025.7143" y1="467.8014" x2="1025.7143" y2="510.993" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="211.4286" y1="513.0496" x2="1240" y2="513.0496" stroke="var(--text-muted)" stroke-width="1.6841"/>
   <line x1="725.7143" y1="513.0496" x2="725.7143" y2="537.7305" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="736.4287" y="529.5036" font-size="18.8996" fill="var(--text-muted)" text-anchor="start" font-family="Arial, sans-serif">merge + optimize</text>
-  <rect x="565" y="545.9574" width="321.4285" height="61.7021" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="565" y="545.9574" width="321.4285" height="61.7021" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="725.7143" y="587.0922" font-size="22.6794" fill="var(--text)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Binary</text>
   <text x="725.7143" y="620" font-size="20.7896" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Full cross-crate optimization</text>
 </svg>

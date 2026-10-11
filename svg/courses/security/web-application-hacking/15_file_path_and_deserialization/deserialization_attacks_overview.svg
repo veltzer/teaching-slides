@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,27 +90,27 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="580" height="162.9213" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="580" height="162.9213" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="330" y="105.1685" text-anchor="middle" font-size="25.9366" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Serialization</text>
   <text x="330" y="170.3371" text-anchor="middle" font-size="25.9366" fill="var(--text)" font-family="Arial, sans-serif">Converting an object to a byte stream</text>
-  <rect x="660" y="40" width="580" height="162.9213" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="660" y="40" width="580" height="162.9213" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="949.9999" y="105.1685" text-anchor="middle" font-size="25.9366" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Deserialization</text>
   <text x="949.9999" y="170.3371" text-anchor="middle" font-size="25.9366" fill="var(--text)" font-family="Arial, sans-serif">Recreating an object from a byte stream</text>
-  <rect x="40" y="242.0225" width="1200" height="123.8202" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="242.0225" width="1200" height="123.8202" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="640" y="294.1573" text-anchor="middle" font-size="25.9366" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">If an application deserializes UNTRUSTED data, attackers can craft</text>
   <text x="640" y="343.0337" text-anchor="middle" font-size="25.9366" fill="var(--text)" font-family="Arial, sans-serif">malicious serialized objects that execute code during deserialization.</text>
-  <rect x="40" y="424.4944" width="280" height="195.5056" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="424.4944" width="280" height="195.5056" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="180" y="502.6966" text-anchor="middle" font-size="28.098" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Attacker</text>
   <text x="180" y="561.3483" text-anchor="middle" font-size="23.7752" fill="var(--text-muted)" font-family="Arial, sans-serif">crafts malicious</text>
   <text x="180" y="606.9663" text-anchor="middle" font-size="23.7752" fill="var(--text-muted)" font-family="Arial, sans-serif">serialized object</text>
   <line x1="319.9999" y1="522.2472" x2="455.9999" y2="522.2472" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="388" y="496.1798" text-anchor="middle" font-size="21.6139" fill="var(--text-muted)" font-family="Arial, sans-serif">sends</text>
-  <rect x="459.9999" y="424.4944" width="310" height="195.5056" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="459.9999" y="424.4944" width="310" height="195.5056" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="615.9999" y="502.6966" text-anchor="middle" font-size="25.9366" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Server</text>
   <text x="615.9999" y="561.3483" text-anchor="middle" font-size="23.7752" fill="var(--text-muted)" font-family="Arial, sans-serif">deserializes</text>
   <text x="615.9999" y="606.9663" text-anchor="middle" font-size="23.7752" fill="var(--text-muted)" font-family="Arial, sans-serif">the object</text>
   <line x1="769.9999" y1="522.2472" x2="905.9999" y2="522.2472" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
-  <rect x="910" y="424.4944" width="330" height="195.5056" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="910" y="424.4944" width="330" height="195.5056" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="1073.9999" y="502.6966" text-anchor="middle" font-size="28.098" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Code Execution!</text>
   <text x="1073.9999" y="561.3483" text-anchor="middle" font-size="23.7752" fill="var(--text)" font-family="Arial, sans-serif">RCE, privilege</text>
   <text x="1073.9999" y="606.9663" text-anchor="middle" font-size="23.7752" fill="var(--text)" font-family="Arial, sans-serif">escalation, etc.</text>

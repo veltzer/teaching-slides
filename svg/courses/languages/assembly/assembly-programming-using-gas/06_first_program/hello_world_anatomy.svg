@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -120,14 +115,14 @@
   <text x="60" y="579.298245614035" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--ok-text)">$ ld -o hello hello.o</text>
   <text x="60" y="604.736842105263" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--ok-text)">$ ./hello</text>
 
-  <rect x="580" y="40" width="660" height="183.157894736842" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="580" y="40" width="660" height="183.157894736842" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="910" y="75.614035087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--primary-text)">Sections</text>
   <text x="600" y="111.228070175439" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">.data  initialized RW</text>
   <text x="600" y="141.754385964912" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">.text  executable RO</text>
   <text x="600" y="172.280701754386" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">.globl exports entry</text>
   <text x="600" y="202.80701754386" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">labels become addresses</text>
 
-  <rect x="580" y="238.421052631579" width="660" height="244.210526315789" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="580" y="238.421052631579" width="660" height="244.210526315789" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="910" y="274.035087719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--info-text)">Syscall (int 0x80)</text>
   <text x="600" y="309.649122807018" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">eax  number</text>
   <text x="600" y="340.175438596491" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">ebx  arg1</text>

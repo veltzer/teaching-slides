@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,25 +90,25 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="76.731518" rx="6.172614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="76.731518" rx="6.172614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.0001" y="89.649949" font-size="26.143182" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Common OAuth Vulnerabilities</text>
-  <rect x="71.8113" y="142.182" width="34.8576" height="34.8576" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1.7302" filter="url(#shadow)"/>
+  <rect x="71.8113" y="142.182" width="34.8576" height="34.8576" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1.7302"/>
   <text x="89.2401" y="168.638115" font-size="19.171626" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">1</text>
   <text x="122.0668" y="168.638115" font-size="22.657404" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Open Redirect in redirect_uri</text>
   <text x="122.0668" y="204.747121" font-size="20.914463" fill="var(--text-muted)" font-family="Arial, sans-serif">Attacker sets redirect_uri=https://evil.com — gets the authorization code</text>
-  <rect x="71.8113" y="245.995" width="34.8576" height="34.8576" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1.7302" filter="url(#shadow)"/>
+  <rect x="71.8113" y="245.995" width="34.8576" height="34.8576" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1.7302"/>
   <text x="89.2401" y="272.451414" font-size="19.171626" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">2</text>
   <text x="122.0668" y="272.451414" font-size="22.657404" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Insufficient redirect_uri validation</text>
   <text x="122.0668" y="308.560314" font-size="20.914463" fill="var(--text-muted)" font-family="Arial, sans-serif">Allows https://app.com.evil.com or https://app.com/../evil</text>
-  <rect x="71.8113" y="349.809" width="34.8576" height="34.8576" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1.7302" filter="url(#shadow)"/>
+  <rect x="71.8113" y="349.809" width="34.8576" height="34.8576" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1.7302"/>
   <text x="89.2401" y="376.264608" font-size="19.171626" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">3</text>
   <text x="122.0668" y="376.264608" font-size="22.657404" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Missing state parameter (CSRF)</text>
   <text x="122.0668" y="412.373613" font-size="20.914463" fill="var(--text-muted)" font-family="Arial, sans-serif">Attacker can force victim to link attacker's account</text>
-  <rect x="71.8113" y="453.622" width="34.8576" height="34.8576" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1.7302" filter="url(#shadow)"/>
+  <rect x="71.8113" y="453.622" width="34.8576" height="34.8576" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1.7302"/>
   <text x="89.2401" y="480.077801" font-size="19.171626" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">4</text>
   <text x="122.0668" y="480.077801" font-size="22.657404" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Token leakage in browser history / referrer</text>
   <text x="122.0668" y="516.186807" font-size="20.914463" fill="var(--text-muted)" font-family="Arial, sans-serif">Implicit flow puts token in URL fragment — visible in logs and referrer headers</text>
-  <rect x="71.8113" y="557.435" width="34.8576" height="34.8576" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1.7302" filter="url(#shadow)"/>
+  <rect x="71.8113" y="557.435" width="34.8576" height="34.8576" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1.7302"/>
   <text x="89.2401" y="583.8911" font-size="19.171626" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">5</text>
   <text x="122.0668" y="583.8911" font-size="22.657404" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Scope escalation</text>
   <text x="122.0668" y="620" font-size="20.914463" fill="var(--text-muted)" font-family="Arial, sans-serif">Application requests more permissions than needed</text>

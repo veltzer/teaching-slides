@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,7 +94,7 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.793210076336" font-weight="bold" fill="var(--text)">Schema Compatibility Modes</text>
 
   <!-- Backward -->
-  <rect x="40" y="106.725663716814" width="382.758620689655" height="246.371681415929" rx="6.183048479155" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="106.725663716814" width="382.758620689655" height="246.371681415929" rx="6.183048479155" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="231.379310344828" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.610161597182" font-weight="bold" fill="var(--ok-text)">Backward</text>
   <text x="231.379310344828" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">new reads old data</text>
   <text x="60.689655172414" y="207.327433628319" font-family="Courier New, monospace" font-size="12.366096958309" fill="var(--ok-text)">v1: {id, name}</text>
@@ -109,7 +104,7 @@
   <text x="60.689655172414" y="327.433628318584" font-family="Arial, sans-serif" font-size="12.366096958309" font-style="italic" fill="var(--ok-text)">producer upgrades first</text>
 
   <!-- Forward -->
-  <rect x="448.620689655172" y="106.725663716814" width="382.758620689655" height="246.371681415929" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="106.725663716814" width="382.758620689655" height="246.371681415929" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.610161597182" font-weight="bold" fill="var(--warn-text)">Forward</text>
   <text x="640" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">old reads new data</text>
   <text x="469.310344827586" y="207.327433628319" font-family="Courier New, monospace" font-size="12.366096958309" fill="var(--warn-text)">v1: {id, name}</text>
@@ -119,7 +114,7 @@
   <text x="469.310344827586" y="327.433628318584" font-family="Arial, sans-serif" font-size="12.366096958309" font-style="italic" fill="var(--warn-text)">consumer upgrades first</text>
 
   <!-- Full -->
-  <rect x="857.241379310345" y="106.725663716814" width="382.758620689655" height="246.371681415929" rx="6.183048479155" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="106.725663716814" width="382.758620689655" height="246.371681415929" rx="6.183048479155" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.610161597182" font-weight="bold" fill="var(--primary-text)">Full</text>
   <text x="1048.620689655173" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">old↔new both directions</text>
   <text x="877.931034482759" y="207.327433628319" font-family="Courier New, monospace" font-size="12.366096958309" fill="var(--primary-text)">no removed fields</text>

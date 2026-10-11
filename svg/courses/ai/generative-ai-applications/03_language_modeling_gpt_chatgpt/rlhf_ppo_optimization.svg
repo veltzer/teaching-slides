@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="203.6364" y="40" width="872.7274" height="328.955212809088" rx="6.176508461473" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="203.6364" y="40" width="872.7274" height="328.955212809088" rx="6.176508461473" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.0001" y="88.477744165749" text-anchor="middle" font-size="24.602783212777" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">PPO (Proximal Policy Optimization)</text>
   <text x="640.0001" y="135.223829984402" text-anchor="middle" font-size="22.709992194758" fill="var(--text)" font-family="Arial, sans-serif">1. Sample prompt from dataset</text>
   <text x="640.0001" y="175.044660026723" text-anchor="middle" font-size="22.709992194758" fill="var(--text)" font-family="Arial, sans-serif">2. Generate response with policy</text>
@@ -104,10 +99,10 @@
   <text x="640.0001" y="294.507468064157" text-anchor="middle" font-size="22.709992194758" fill="var(--text)" font-family="Arial, sans-serif">5. Update policy (with KL penalty)</text>
   <path d="M 1076.3636 161.194042503899 Q 1174.5454 161.194042503899 1174.5454 230.44787190912 Q 1174.5454 299.701489374025 1076.3636 299.701489374025" fill="none" stroke="var(--primary-border)" stroke-width="0.904" stroke-dasharray="2.26 1.356"/>
   <text x="1218.1819" y="239.104574092233" text-anchor="middle" font-size="21.416425439311" fill="var(--primary-accent)" font-family="Arial, sans-serif">repeat</text>
-  <rect x="40" y="420.895531877925" width="1200" height="86.567339741605" rx="6.176508461473" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="420.895531877925" width="1200" height="86.567339741605" rx="6.176508461473" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640.0001" y="458.985233423938" text-anchor="middle" font-size="22.709992194758" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Objective: maximize E[reward(prompt, response)]</text>
   <text x="640.0001" y="490.149255312988" text-anchor="middle" font-size="22.709992194758" fill="var(--danger-accent)" font-family="Arial, sans-serif">subject to KL(policy || sft_model) &lt; delta</text>
-  <rect x="40" y="542.089574381824" width="1200" height="77.910425618176" rx="6.176508461473" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="542.089574381824" width="1200" height="77.910425618176" rx="6.176508461473" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640.0001" y="576.716489084434" text-anchor="middle" font-size="21.416425439311" fill="var(--danger-accent)" font-family="Arial, sans-serif">KL constraint prevents "reward hacking" -- finding degenerate responses</text>
   <text x="640.0001" y="604.418042040554" text-anchor="middle" font-size="21.416425439311" fill="var(--danger-accent)" font-family="Arial, sans-serif">that score high on reward model but are actually low quality</text>
 </svg>

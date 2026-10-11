@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,33 +92,33 @@
   </defs>
   <rect x="40" y="40" width="1200" height="250" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Control plane: Linux host</text>
-  <rect x="70" y="100" width="260" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="100" width="260" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="200.0" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">tmsh / GUI</text>
   <text x="200.0" y="196.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">configuration</text>
-  <rect x="360" y="100" width="260" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360" y="100" width="260" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="490.0" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">mcpd</text>
   <text x="490.0" y="196.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">config database</text>
-  <rect x="650" y="100" width="260" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="100" width="260" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="780.0" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">syslog-ng</text>
   <text x="780.0" y="196.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">/var/log/ltm</text>
-  <rect x="940" y="100" width="270" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="100" width="270" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1075.0" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">bigd</text>
   <text x="1075.0" y="196.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">health monitors</text>
   <rect x="40" y="370" width="1200" height="250" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640.0" y="396" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Data plane: TMM</text>
-  <rect x="70" y="430" width="260" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="430" width="260" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="200.0" y="456" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">TMM 0</text>
   <text x="200.0" y="511.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">CPU 0</text>
   <text x="200.0" y="542.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">own TCP stack</text>
-  <rect x="360" y="430" width="260" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360" y="430" width="260" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490.0" y="456" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">TMM 1</text>
   <text x="490.0" y="511.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">CPU 1</text>
   <text x="490.0" y="542.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">own TCP stack</text>
-  <rect x="650" y="430" width="260" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="430" width="260" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="780.0" y="456" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">TMM 2</text>
   <text x="780.0" y="511.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">CPU 2</text>
   <text x="780.0" y="542.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">own TCP stack</text>
-  <rect x="940" y="430" width="260" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="430" width="260" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1070.0" y="456" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">TMM 3</text>
   <text x="1070.0" y="511.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">CPU 3</text>
   <text x="1070.0" y="542.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">own TCP stack</text>

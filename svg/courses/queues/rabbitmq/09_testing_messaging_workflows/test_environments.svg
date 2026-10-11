@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Test Environments</text>
 
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">In memory fakes</text>
   <text x="60" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Replace transport layer</text>
   <text x="60" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Pure unit tests</text>
@@ -105,7 +100,7 @@
   <text x="60" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Drift from real broker</text>
   <text x="60" y="290" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Use sparingly</text>
 
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Embedded broker</text>
   <text x="365" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Real RabbitMQ in container</text>
   <text x="365" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">testcontainers helper</text>
@@ -113,7 +108,7 @@
   <text x="365" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">High fidelity behaviour</text>
   <text x="365" y="290" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Slower than fakes</text>
 
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Shared staging</text>
   <text x="670" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Cluster used by many teams</text>
   <text x="670" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Real production topology</text>
@@ -121,7 +116,7 @@
   <text x="670" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Use unique vhosts</text>
   <text x="670" y="290" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Cleanup after each run</text>
 
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Chaos testing</text>
   <text x="975" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Kill broker mid stream</text>
   <text x="975" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Drop network briefly</text>

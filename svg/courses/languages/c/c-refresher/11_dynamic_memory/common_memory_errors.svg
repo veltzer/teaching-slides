@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,42 +92,42 @@
   </defs>
 
 
-  <rect x="40" y="40" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="334.915254237288" y="72.523364485981" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.899887985909" font-weight="bold" fill="var(--danger-text)">Memory Leak</text>
   <text x="60.338983050847" y="110.467289719626" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--danger-text)">int *p = malloc(...);</text>
   <text x="60.338983050847" y="137.570093457944" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--danger-text)">return; // forgot free!</text>
   <text x="60.338983050847" y="170.093457943926" font-family="Arial, sans-serif" font-size="13.649919100935" fill="var(--danger-text)">Memory never reclaimed</text>
 
-  <rect x="650.169491525424" y="40" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650.169491525424" y="40" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="945.084745762712" y="72.523364485981" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.899887985909" font-weight="bold" fill="var(--danger-text)">Use After Free</text>
   <text x="670.508474576271" y="110.467289719626" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--danger-text)">free(p);</text>
   <text x="670.508474576271" y="137.570093457944" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--danger-text)">*p = 42; // UB!</text>
   <text x="670.508474576271" y="170.093457943926" font-family="Arial, sans-serif" font-size="13.649919100935" fill="var(--danger-text)">Fix: set p = NULL after free</text>
 
-  <rect x="40" y="213.457943925234" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="213.457943925234" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="334.915254237288" y="245.981308411215" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.899887985909" font-weight="bold" fill="var(--danger-text)">Double Free</text>
   <text x="60.338983050847" y="283.92523364486" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--danger-text)">free(p);</text>
   <text x="60.338983050847" y="311.028037383178" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--danger-text)">free(p); // CRASH!</text>
   <text x="60.338983050847" y="343.551401869159" font-family="Arial, sans-serif" font-size="13.649919100935" fill="var(--danger-text)">Heap corruption, exploitable</text>
 
-  <rect x="650.169491525424" y="213.457943925234" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650.169491525424" y="213.457943925234" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="945.084745762712" y="245.981308411215" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.899887985909" font-weight="bold" fill="var(--danger-text)">Buffer Overflow</text>
   <text x="670.508474576271" y="283.92523364486" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--danger-text)">arr = malloc(5*sizeof(int));</text>
   <text x="670.508474576271" y="311.028037383178" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--danger-text)">arr[5] = 99; // OOB!</text>
   <text x="670.508474576271" y="343.551401869159" font-family="Arial, sans-serif" font-size="13.649919100935" fill="var(--danger-text)">Corrupts adjacent memory</text>
 
-  <rect x="40" y="386.915887850467" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="386.915887850467" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="334.915254237288" y="419.439252336448" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.899887985909" font-weight="bold" fill="var(--warn-text)">Uninitialized</text>
   <text x="60.338983050847" y="457.383177570093" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--warn-text)">p = malloc(sizeof(int));</text>
   <text x="60.338983050847" y="484.485981308412" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--warn-text)">printf("%d", *p); // junk</text>
   <text x="60.338983050847" y="517.009345794393" font-family="Arial, sans-serif" font-size="13.649919100935" fill="var(--warn-text)">Fix: calloc / memset</text>
 
-  <rect x="650.169491525424" y="386.915887850467" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650.169491525424" y="386.915887850467" width="589.830508474576" height="151.775700934579" rx="8.39995021596" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="945.084745762712" y="419.439252336448" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.899887985909" font-weight="bold" fill="var(--warn-text)">NULL Deref</text>
   <text x="670.508474576271" y="457.383177570093" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--warn-text)">p = malloc(huge);</text>
   <text x="670.508474576271" y="484.485981308412" font-family="Courier New, monospace" font-size="13.649919100935" fill="var(--warn-text)">*p = 1; // SEGFAULT</text>
   <text x="670.508474576271" y="517.009345794393" font-family="Arial, sans-serif" font-size="13.649919100935" fill="var(--warn-text)">Always check malloc result</text>
 
-  <rect x="151.864406779661" y="554.953271028038" width="976.271186440678" height="65.046728971962" rx="8.39995021596" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="151.864406779661" y="554.953271028038" width="976.271186440678" height="65.046728971962" rx="8.39995021596" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="598.317757009346" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.799900431919" font-weight="bold" fill="var(--primary-text)">Detect: Valgrind, ASan, LeakSanitizer</text>
 </svg>

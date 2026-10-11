@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="290" height="580" rx="14" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="290" height="580" rx="14" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="185" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Full Fine-tune</text>
   <text x="185" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">update every weight</text>
   <text x="185" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">trainable: 100%</text>
@@ -106,7 +101,7 @@
   <text x="185" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">expensive at scale</text>
   <text x="185" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">large storage cost</text>
 
-  <rect x="345" y="40" width="290" height="580" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="40" width="290" height="580" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">LoRA</text>
   <text x="490" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">low-rank delta</text>
   <text x="490" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">trainable: under 1%</text>
@@ -116,7 +111,7 @@
   <text x="490" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">most popular choice</text>
   <text x="490" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">easy to swap per task</text>
 
-  <rect x="650" y="40" width="290" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="290" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="795" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Adapters</text>
   <text x="795" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">bottleneck modules</text>
   <text x="795" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">trainable: 1 to 5%</text>
@@ -126,7 +121,7 @@
   <text x="795" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">multi-task friendly</text>
   <text x="795" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">composable across tasks</text>
 
-  <rect x="955" y="40" width="285" height="580" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="40" width="285" height="580" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1097" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Prefix Tuning</text>
   <text x="1097" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">trainable prefix vectors</text>
   <text x="1097" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">trainable: very small</text>

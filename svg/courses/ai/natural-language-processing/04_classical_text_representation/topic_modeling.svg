@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,19 +91,19 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="320" height="207.142857142857" rx="14.247806848775" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="320" height="207.142857142857" rx="14.247806848775" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="200" y="91.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--primary-text)">Sparse Counts</text>
   <text x="200" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--primary-text)">D x V matrix</text>
   <text x="200" y="169.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--primary-text)">V is huge</text>
   <text x="200" y="210.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">synonyms are orthogonal</text>
 
-  <rect x="480" y="40" width="320" height="207.142857142857" rx="14.247806848775" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="480" y="40" width="320" height="207.142857142857" rx="14.247806848775" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="91.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--info-text)">Reduce Rank</text>
   <text x="640" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--info-text)">SVD: linear, fast</text>
   <text x="640" y="169.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--info-text)">LDA: probabilistic</text>
   <text x="640" y="210.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--info-text)">k = 100 to 500 topics</text>
 
-  <rect x="920" y="40" width="320" height="207.142857142857" rx="14.247806848775" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920" y="40" width="320" height="207.142857142857" rx="14.247806848775" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1080" y="91.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--ok-text)">Latent Space</text>
   <text x="1080" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--ok-text)">D x k dense matrix</text>
   <text x="1080" y="169.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--ok-text)">synonyms cluster</text>
@@ -117,7 +112,7 @@
   <path d="M 360 143.571428571429 L 480 143.571428571429" fill="none" stroke="var(--info-border)" stroke-width="3" marker-end="url(#arrow-info)"/>
   <path d="M 800 143.571428571429 L 920 143.571428571429" fill="none" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow-ok)"/>
 
-  <rect x="40" y="288.571428571429" width="585" height="331.428571428571" rx="14.247806848775" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="288.571428571429" width="585" height="331.428571428571" rx="14.247806848775" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="332" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--warn-text)">LSA via SVD</text>
   <text x="332" y="386.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--warn-text)">X = U Sigma V^T</text>
   <text x="332" y="423.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--warn-text)">truncate to top-k singular values</text>
@@ -126,7 +121,7 @@
   <text x="332" y="563.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">topics are abstract directions</text>
   <text x="332" y="599.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">may have negative components</text>
 
-  <rect x="655" y="288.571428571429" width="585" height="331.428571428571" rx="14.247806848775" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="655" y="288.571428571429" width="585" height="331.428571428571" rx="14.247806848775" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="947" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--danger-text)">LDA Generative Model</text>
   <text x="947" y="386.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--danger-text)">documents are mixtures of topics</text>
   <text x="947" y="423.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--danger-text)">topics are distributions over words</text>

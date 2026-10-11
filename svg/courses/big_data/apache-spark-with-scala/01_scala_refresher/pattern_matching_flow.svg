@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,10 +91,10 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="60" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="60" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Pattern Matching: Dispatch on Shape</text>
 
-  <rect x="40" y="130" width="260" height="300" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="130" width="260" height="300" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="170" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Input</text>
   <text x="170" y="215" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="var(--info-text)">x match { ... }</text>
   <text x="170" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">evaluated once</text>
@@ -107,32 +102,32 @@
   <text x="170" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">first match wins</text>
   <text x="170" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">MatchError if none</text>
 
-  <rect x="320" y="130" width="280" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="320" y="130" width="280" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="460" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Literal / wildcard</text>
   <text x="460" y="210" text-anchor="middle" font-family="Courier New, monospace" font-size="15" fill="var(--ok-text)">case 0 =&gt; ...</text>
   <text x="460" y="240" text-anchor="middle" font-family="Courier New, monospace" font-size="15" fill="var(--ok-text)">case _ =&gt; default</text>
 
-  <rect x="320" y="290" width="280" height="140" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="320" y="290" width="280" height="140" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="460" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Variable binding</text>
   <text x="460" y="370" text-anchor="middle" font-family="Courier New, monospace" font-size="15" fill="var(--warn-text)">case n: Int =&gt; n+1</text>
   <text x="460" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">lowercase binds</text>
 
-  <rect x="620" y="130" width="280" height="140" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620" y="130" width="280" height="140" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="760" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Constructor</text>
   <text x="760" y="210" text-anchor="middle" font-family="Courier New, monospace" font-size="15" fill="var(--danger-text)">case Some(x) =&gt; ...</text>
   <text x="760" y="240" text-anchor="middle" font-family="Courier New, monospace" font-size="15" fill="var(--danger-text)">case Point(x,y) =&gt; ...</text>
 
-  <rect x="620" y="290" width="280" height="140" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620" y="290" width="280" height="140" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="760" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Sequence</text>
   <text x="760" y="370" text-anchor="middle" font-family="Courier New, monospace" font-size="15" fill="var(--primary-text)">case x :: rest =&gt; ...</text>
   <text x="760" y="400" text-anchor="middle" font-family="Courier New, monospace" font-size="15" fill="var(--primary-text)">case List(a,b,_*) =&gt;</text>
 
-  <rect x="920" y="130" width="320" height="140" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920" y="130" width="320" height="140" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1080" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Type / guard</text>
   <text x="1080" y="210" text-anchor="middle" font-family="Courier New, monospace" font-size="15" fill="var(--info-text)">case s: String =&gt; ...</text>
   <text x="1080" y="240" text-anchor="middle" font-family="Courier New, monospace" font-size="15" fill="var(--info-text)">case n if n&gt;0 =&gt; ...</text>
 
-  <rect x="920" y="290" width="320" height="140" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920" y="290" width="320" height="140" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1080" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Alternatives</text>
   <text x="1080" y="370" text-anchor="middle" font-family="Courier New, monospace" font-size="15" fill="var(--warn-text)">case 1 | 2 | 3 =&gt; ...</text>
   <text x="1080" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">merges cases</text>

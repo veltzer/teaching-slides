@@ -5,10 +5,10 @@
 
   <text x="640" y="40" text-anchor="middle" font-size="25.06718245762" font-family="Arial, sans-serif" fill="var(--text)">Two concurrent read-modify-write cycles; one update silently overwrites the other</text>
 
-  <rect x="184.827586206897" y="61.090909090909" width="351.724137931035" height="63.272727272727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.266795614405" filter="url(#shadow)"/>
+  <rect x="184.827586206897" y="61.090909090909" width="351.724137931035" height="63.272727272727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.266795614405"/>
   <text x="360.689655172414" y="103.272727272727" text-anchor="middle" font-size="25.06718245762" font-family="Arial, sans-serif" fill="var(--primary-text)">T1 (clerk A)</text>
 
-  <rect x="743.448275862069" y="61.090909090909" width="351.724137931035" height="63.272727272727" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.266795614405" filter="url(#shadow)"/>
+  <rect x="743.448275862069" y="61.090909090909" width="351.724137931035" height="63.272727272727" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.266795614405"/>
   <text x="919.310344827586" y="103.272727272727" text-anchor="middle" font-size="25.06718245762" font-family="Arial, sans-serif" fill="var(--danger-text)">T2 (clerk B)</text>
 
   <line x1="360.689655172414" y1="134.909090909091" x2="360.689655172414" y2="546.181818181818" stroke="var(--text-muted)" stroke-width="2"/>
@@ -30,7 +30,7 @@
   <text x="919.310344827586" y="472.363636363636" text-anchor="middle" font-size="22.978250586152" font-family="Courier New, monospace" fill="var(--text)">UPDATE stock = 6</text>
   <text x="919.310344827586" y="504" text-anchor="middle" font-size="22.978250586152" font-family="Courier New, monospace" fill="var(--text)">COMMIT</text>
 
-  <rect x="40" y="546.181818181818" width="1200" height="73.818181818182" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.266795614405" filter="url(#shadow)"/>
+  <rect x="40" y="546.181818181818" width="1200" height="73.818181818182" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.266795614405"/>
   <text x="640" y="577.818181818182" text-anchor="middle" font-size="22.978250586152" font-family="Arial, sans-serif" fill="var(--warn-text)">Final stock = 6. Expected = 10 - 3 - 4 = 3. T1's update was lost.</text>
   <text x="640" y="607.345454545454" text-anchor="middle" font-size="20.889318714684" font-family="Arial, sans-serif" fill="var(--warn-text)">Fix: SELECT ... FOR UPDATE, version columns, or UPDATE stock SET qty = qty - 3.</text>
 
@@ -98,11 +98,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
 
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">

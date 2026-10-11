@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,17 +90,17 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="392.3077" height="128.888900529102" rx="6.141196141572" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="392.3077" height="128.888900529102" rx="6.141196141572" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="236.1538" y="76.825280423267" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.015147511618" font-weight="bold" fill="var(--text)">Source (Kafka)</text>
   <text x="236.1538" y="108.126884021153" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.015147511618" fill="var(--text-muted)">Offsets tracked</text>
   <text x="236.1538" y="135.746001481478" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.015147511618" fill="var(--text-muted)">in checkpoint</text>
-  <rect x="847.6923" y="40" width="392.3077" height="128.888900529102" rx="6.141196141572" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="847.6923" y="40" width="392.3077" height="128.888900529102" rx="6.141196141572" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1043.8462" y="76.825280423267" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.015147511618" font-weight="bold" fill="var(--text)">Processing</text>
   <text x="1043.8462" y="108.126884021153" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.015147511618" fill="var(--text-muted)">State</text>
   <text x="1043.8462" y="135.746001481478" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.015147511618" fill="var(--text-muted)">checkpointed</text>
   <line x1="236.1538" y1="168.888900529102" x2="478.4616" y2="224.126925925919" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="1043.8462" y1="168.888900529102" x2="801.5385" y2="224.126925925919" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="155.3846" y="233.333298412694" width="969.2308" height="184.126925925919" rx="6.141196141572" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="155.3846" y="233.333298412694" width="969.2308" height="184.126925925919" rx="6.141196141572" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="273.841169735438" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.016358627619" font-weight="bold" fill="var(--text)">Checkpoint Directory</text>
   <text x="386.1538" y="312.507955132277" font-family="Arial, sans-serif" font-size="24.015147511618" fill="var(--text-muted)">offsets/</text>
   <text x="640" y="312.507955132277" font-family="Arial, sans-serif" font-size="24.015147511618" fill="var(--text-faint)">(source offsets)</text>
@@ -116,7 +111,7 @@
   <text x="386.1538" y="406.412661164017" font-family="Arial, sans-serif" font-size="24.015147511618" fill="var(--text-muted)">metadata</text>
   <text x="640" y="406.412661164017" font-family="Arial, sans-serif" font-size="24.015147511618" fill="var(--text-faint)">(query metadata)</text>
   <line x1="640" y1="417.460224338614" x2="640" y2="472.698459259265" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="339.9999" y="481.904726984123" width="600" height="92.063515343918" rx="6.141196141572" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="339.9999" y="481.904726984123" width="600" height="92.063515343918" rx="6.141196141572" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="518.730216931224" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.015147511618" font-weight="bold" fill="var(--text)">Sink: Delta Lake</text>
   <text x="640" y="551.873011216931" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.015147511618" fill="var(--text-muted)">ACID writes ensure no duplicates (idempotent)</text>
   <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.015147511618" fill="var(--text-faint)">On failure: replay from last committed checkpoint, reprocess the batch</text>

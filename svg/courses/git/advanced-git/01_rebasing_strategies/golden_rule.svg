@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,12 +91,12 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">The Golden Rule of Rebasing</text>
-  <rect x="40" y="80" width="1200" height="200" rx="14" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="1200" height="200" rx="14" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--danger-text)">Never rebase shared branches</text>
   <text x="640" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Rewriting pulled commits creates parallel histories</text>
   <text x="640" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Other copies diverge silently and re-merge old work</text>
 
-  <rect x="40" y="300" width="585" height="320" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="300" width="585" height="320" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="332" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Safe to rebase</text>
   <text x="60" y="375" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Your local feature branch, untouched by others</text>
   <text x="60" y="410" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">A branch only you have pushed to your fork</text>
@@ -110,7 +105,7 @@
   <text x="60" y="525" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">git push --force-with-lease, never plain --force</text>
   <text x="60" y="555" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Lease check fails if anyone else pushed first</text>
 
-  <rect x="640" y="300" width="600" height="320" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="300" width="600" height="320" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="940" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Don't rebase</text>
   <text x="660" y="375" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">main, master, develop, release/*</text>
   <text x="660" y="410" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Any branch the team pulls from</text>

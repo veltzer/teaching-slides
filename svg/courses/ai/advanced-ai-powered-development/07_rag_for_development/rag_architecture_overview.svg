@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,25 +91,25 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="50" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="50" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Ingestion Pipeline (offline, runs on change)</text>
 
-  <rect x="40" y="110" width="280" height="180" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="110" width="280" height="180" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="180" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Codebase</text>
   <text x="180" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">source files,</text>
   <text x="180" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">docs, issues</text>
 
-  <rect x="340" y="110" width="280" height="180" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="110" width="280" height="180" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="480" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Chunking</text>
   <text x="480" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">AST-based splits,</text>
   <text x="480" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">respects functions</text>
 
-  <rect x="640" y="110" width="280" height="180" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="110" width="280" height="180" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="780" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Embedding</text>
   <text x="780" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">code-tuned model</text>
   <text x="780" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">(voyage-code-3)</text>
 
-  <rect x="940" y="110" width="300" height="180" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="110" width="300" height="180" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1090" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Vector DB</text>
   <text x="1090" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">ChromaDB, pgvector,</text>
   <text x="1090" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Pinecone</text>
@@ -123,26 +118,26 @@
   <line x1="620" y1="200" x2="638" y2="200" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="920" y1="200" x2="938" y2="200" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="310" width="1200" height="50" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="310" width="1200" height="50" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Query Pipeline (real-time, runs per request)</text>
 
-  <rect x="40" y="380" width="220" height="180" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="380" width="220" height="180" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="150" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Query</text>
   <text x="150" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">"fix auth bug"</text>
 
-  <rect x="280" y="380" width="220" height="180" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="280" y="380" width="220" height="180" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="390" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Embed</text>
   <text x="390" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">query vector</text>
 
-  <rect x="520" y="380" width="220" height="180" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="520" y="380" width="220" height="180" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="630" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Retrieve</text>
   <text x="630" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">top-K chunks</text>
 
-  <rect x="760" y="380" width="220" height="180" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="760" y="380" width="220" height="180" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="870" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Re-rank</text>
   <text x="870" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">cross-encoder</text>
 
-  <rect x="1000" y="380" width="240" height="180" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1000" y="380" width="240" height="180" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1120" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">LLM</text>
   <text x="1120" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">grounded answer</text>
 

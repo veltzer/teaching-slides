@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,7 +93,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.227078547234" font-weight="bold" fill="var(--text)">Golden Signals</text>
 
-  <rect x="60" y="90.877192982456" width="280" height="223.859649122807" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="90.877192982456" width="280" height="223.859649122807" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="200" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--primary-text)">Latency</text>
   <text x="200" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">request time</text>
   <text x="80" y="187.543859649123" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">- p50, p95, p99</text>
@@ -106,7 +101,7 @@
   <text x="80" y="238.421052631579" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">- queueing too</text>
   <text x="200" y="284.210526315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-style="italic" fill="var(--primary-text)">slow = degraded</text>
 
-  <rect x="360" y="90.877192982456" width="280" height="223.859649122807" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360" y="90.877192982456" width="280" height="223.859649122807" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="500" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--ok-text)">Traffic</text>
   <text x="500" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">demand</text>
   <text x="380" y="187.543859649123" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">- requests/sec</text>
@@ -114,7 +109,7 @@
   <text x="380" y="238.421052631579" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">- sessions</text>
   <text x="500" y="284.210526315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-style="italic" fill="var(--ok-text)">spike/drop = signal</text>
 
-  <rect x="660" y="90.877192982456" width="280" height="223.859649122807" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="90.877192982456" width="280" height="223.859649122807" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="800" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--danger-text)">Errors</text>
   <text x="800" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--danger-text)">failed requests</text>
   <text x="680" y="187.543859649123" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--danger-text)">- 5xx, timeouts</text>
@@ -122,7 +117,7 @@
   <text x="680" y="238.421052631579" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--danger-text)">- ratio, not count</text>
   <text x="800" y="284.210526315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-style="italic" fill="var(--danger-text)">drives SLO</text>
 
-  <rect x="960" y="90.877192982456" width="280" height="223.859649122807" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="960" y="90.877192982456" width="280" height="223.859649122807" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1100" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--warn-text)">Saturation</text>
   <text x="1100" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--warn-text)">how full</text>
   <text x="980" y="187.543859649123" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--warn-text)">- CPU, memory, IO</text>

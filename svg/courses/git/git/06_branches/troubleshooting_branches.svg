@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,24 +90,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="600" height="267.69228994083" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.44503365266" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="600" height="267.69228994083" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.44503365266"/>
   <text x="340" y="106.923072485207" text-anchor="middle" font-size="25.811930109994" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">Problem: Diverged Branches</text>
   <text x="74.2857" y="162.692376479285" font-size="20.280802229281" font-family="Arial, sans-serif" fill="var(--danger-text)">Your branch and origin have diverged</text>
   <text x="74.2857" y="207.307681213018" font-size="20.280802229281" font-family="Courier New, monospace" fill="var(--danger-text)">git pull --rebase</text>
   <text x="74.2857" y="251.923101331359" font-size="20.280802229281" font-family="Arial, sans-serif" fill="var(--danger-text)">or merge remote changes:</text>
   <text x="74.2857" y="285.384637573963" font-size="20.280802229281" font-family="Courier New, monospace" fill="var(--danger-text)">git pull --no-rebase</text>
-  <rect x="674.2857" y="40" width="565.7143" height="267.69228994083" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.44503365266" filter="url(#shadow)"/>
+  <rect x="674.2857" y="40" width="565.7143" height="267.69228994083" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.44503365266"/>
   <text x="957.1429" y="106.923072485207" text-anchor="middle" font-size="25.811930109994" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Problem: Detached HEAD</text>
   <text x="708.5714" y="162.692376479285" font-size="20.280802229281" font-family="Arial, sans-serif" fill="var(--warn-text)">Not on any branch</text>
   <text x="708.5714" y="207.307681213018" font-size="20.280802229281" font-family="Courier New, monospace" fill="var(--warn-text)">git branch temp-branch</text>
   <text x="708.5714" y="251.923101331359" font-size="20.280802229281" font-family="Arial, sans-serif" fill="var(--warn-text)">or return to branch:</text>
   <text x="708.5714" y="285.384637573963" font-size="20.280802229281" font-family="Courier New, monospace" fill="var(--warn-text)">git switch main</text>
-  <rect x="40" y="352.30771005917" width="600" height="267.69228994083" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.44503365266" filter="url(#shadow)"/>
+  <rect x="40" y="352.30771005917" width="600" height="267.69228994083" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.44503365266"/>
   <text x="340" y="419.230782544378" text-anchor="middle" font-size="25.811930109994" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Problem: Can't Delete Branch</text>
   <text x="74.2857" y="474.999971153848" font-size="20.280802229281" font-family="Arial, sans-serif" fill="var(--primary-text)">Branch not fully merged</text>
   <text x="74.2857" y="519.615391272189" font-size="20.280802229281" font-family="Courier New, monospace" fill="var(--primary-text)">git branch -D branch-name</text>
   <text x="74.2857" y="564.23081139053" font-size="20.280802229281" font-family="Arial, sans-serif" fill="var(--primary-text)">⚠️ Force delete (loses commits)</text>
-  <rect x="674.2857" y="352.30771005917" width="565.7143" height="267.69228994083" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.44503365266" filter="url(#shadow)"/>
+  <rect x="674.2857" y="352.30771005917" width="565.7143" height="267.69228994083" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.44503365266"/>
   <text x="957.1429" y="419.230782544378" text-anchor="middle" font-size="25.811930109994" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Problem: Lost Branch</text>
   <text x="708.5714" y="474.999971153848" font-size="20.280802229281" font-family="Arial, sans-serif" fill="var(--ok-text)">Accidentally deleted branch</text>
   <text x="708.5714" y="519.615391272189" font-size="20.280802229281" font-family="Courier New, monospace" fill="var(--ok-text)">git reflog | grep branch-name</text>

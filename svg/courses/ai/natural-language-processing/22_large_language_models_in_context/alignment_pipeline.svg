@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,28 +93,28 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.280399254524" font-weight="bold" fill="var(--text)">From base model to aligned assistant</text>
 
-  <rect x="40" y="87.889908256881" width="289.655172413793" height="191.559633027523" rx="14.689445752436" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="289.655172413793" height="191.559633027523" rx="14.689445752436" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="184.827586206897" y="135.779816513761" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--info-text)">1. Pretraining</text>
   <text x="184.827586206897" y="178.348623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">causal LM on trillions</text>
   <text x="184.827586206897" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">of web tokens</text>
   <text x="184.827586206897" y="231.559633027523" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">learns language,</text>
   <text x="184.827586206897" y="252.844036697248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">facts, code, reasoning</text>
 
-  <rect x="360.689655172414" y="87.889908256881" width="289.655172413793" height="191.559633027523" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360.689655172414" y="87.889908256881" width="289.655172413793" height="191.559633027523" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="505.51724137931" y="135.779816513761" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--primary-text)">2. Instruction tuning</text>
   <text x="505.51724137931" y="178.348623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">supervised fine-tune on</text>
   <text x="505.51724137931" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">(instruction, response)</text>
   <text x="505.51724137931" y="231.559633027523" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">FLAN, Self-Instruct,</text>
   <text x="505.51724137931" y="252.844036697248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">OpenAssistant</text>
 
-  <rect x="681.379310344828" y="87.889908256881" width="289.655172413793" height="191.559633027523" rx="14.689445752436" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="681.379310344828" y="87.889908256881" width="289.655172413793" height="191.559633027523" rx="14.689445752436" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="826.206896551724" y="135.779816513761" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--warn-text)">3. Reward modeling</text>
   <text x="826.206896551724" y="178.348623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">rate pairs of model</text>
   <text x="826.206896551724" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">outputs A vs B</text>
   <text x="826.206896551724" y="231.559633027523" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">train scalar reward model</text>
   <text x="826.206896551724" y="252.844036697248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">on human preferences</text>
 
-  <rect x="1002.068965517241" y="87.889908256881" width="237.931034482759" height="191.559633027523" rx="14.689445752436" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1002.068965517241" y="87.889908256881" width="237.931034482759" height="191.559633027523" rx="14.689445752436" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1121.034482758621" y="135.779816513761" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">4. RLHF / DPO</text>
   <text x="1121.034482758621" y="178.348623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">optimize policy</text>
   <text x="1121.034482758621" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">against reward</text>
@@ -134,7 +129,7 @@
   <text x="640" y="359.266055045872" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--text)">Optional 5. Continued safety + capability training</text>
   <text x="640" y="391.192660550459" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--text-muted)">red-team data, refusal training, constitutional AI, debate, scalable oversight</text>
 
-  <rect x="40" y="449.724770642202" width="1200" height="170.275229357798" rx="14.689445752436" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="449.724770642202" width="1200" height="170.275229357798" rx="14.689445752436" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="492.293577981651" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--info-text)">What each stage actually fixes</text>
   <text x="640" y="529.54128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--info-text)">pretraining: language modeling capability   ·   instruction tuning: follow user intent</text>
     </svg>

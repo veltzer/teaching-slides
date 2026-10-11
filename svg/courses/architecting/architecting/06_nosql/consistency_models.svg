@@ -5,23 +5,23 @@
 
   <text x="706.666666666667" y="40" text-anchor="middle" font-size="29.944870252367" font-family="Arial, sans-serif" fill="var(--text)">Stronger consistency costs more latency and availability</text>
 
-  <rect x="173.333333333333" y="94.716981132075" width="1066.666666666667" height="87.547169811321" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.910354673623" filter="url(#shadow)"/>
+  <rect x="173.333333333333" y="94.716981132075" width="1066.666666666667" height="87.547169811321" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.910354673623"/>
   <text x="706.666666666667" y="136.301886792453" text-anchor="middle" font-size="29.944870252367" font-family="Arial, sans-serif" fill="var(--primary-text)">Strong / Linearizable</text>
   <text x="706.666666666667" y="169.132075471698" text-anchor="middle" font-size="20.73106402087" font-family="Arial, sans-serif" fill="var(--primary-text)">every read returns the latest committed write — as if one global copy</text>
 
-  <rect x="173.333333333333" y="204.150943396226" width="1066.666666666667" height="87.547169811321" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.910354673623" filter="url(#shadow)"/>
+  <rect x="173.333333333333" y="204.150943396226" width="1066.666666666667" height="87.547169811321" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.910354673623"/>
   <text x="706.666666666667" y="245.735849056604" text-anchor="middle" font-size="29.944870252367" font-family="Arial, sans-serif" fill="var(--info-text)">Causal</text>
   <text x="706.666666666667" y="278.566037735849" text-anchor="middle" font-size="20.73106402087" font-family="Arial, sans-serif" fill="var(--info-text)">writes causally related to reads are seen in order; independent ones may not be</text>
 
-  <rect x="173.333333333333" y="313.584905660377" width="1066.666666666667" height="87.547169811321" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.910354673623" filter="url(#shadow)"/>
+  <rect x="173.333333333333" y="313.584905660377" width="1066.666666666667" height="87.547169811321" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.910354673623"/>
   <text x="706.666666666667" y="355.169811320755" text-anchor="middle" font-size="29.944870252367" font-family="Arial, sans-serif" fill="var(--ok-text)">Read-Your-Writes</text>
   <text x="706.666666666667" y="388" text-anchor="middle" font-size="20.73106402087" font-family="Arial, sans-serif" fill="var(--ok-text)">a client always sees its own writes; other clients may not yet</text>
 
-  <rect x="173.333333333333" y="423.018867924528" width="1066.666666666667" height="87.547169811321" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.910354673623" filter="url(#shadow)"/>
+  <rect x="173.333333333333" y="423.018867924528" width="1066.666666666667" height="87.547169811321" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.910354673623"/>
   <text x="706.666666666667" y="464.603773584906" text-anchor="middle" font-size="29.944870252367" font-family="Arial, sans-serif" fill="var(--warn-text)">Monotonic Reads</text>
   <text x="706.666666666667" y="497.433962264151" text-anchor="middle" font-size="20.73106402087" font-family="Arial, sans-serif" fill="var(--warn-text)">successive reads never go backward in time</text>
 
-  <rect x="173.333333333333" y="532.452830188679" width="1066.666666666667" height="87.547169811321" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.910354673623" filter="url(#shadow)"/>
+  <rect x="173.333333333333" y="532.452830188679" width="1066.666666666667" height="87.547169811321" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.910354673623"/>
   <text x="706.666666666667" y="574.037735849057" text-anchor="middle" font-size="29.944870252367" font-family="Arial, sans-serif" fill="var(--danger-text)">Eventual</text>
   <text x="706.666666666667" y="606.867924528302" text-anchor="middle" font-size="20.73106402087" font-family="Arial, sans-serif" fill="var(--danger-text)">all replicas converge if writes stop — no ordering guarantees meanwhile</text>
 
@@ -93,11 +93,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
 
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">

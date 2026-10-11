@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="595" height="580" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="595" height="580" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="337" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--primary-text)">CBOW</text>
   <text x="337" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">predict center from context</text>
 
@@ -126,7 +121,7 @@
   <text x="337" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">faster training, better on frequent words</text>
   <text x="337" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">smooths over a bag of context vectors</text>
 
-  <rect x="655" y="40" width="585" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="655" y="40" width="585" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="947" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">Skip-gram</text>
   <text x="947" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">predict context from center</text>
 

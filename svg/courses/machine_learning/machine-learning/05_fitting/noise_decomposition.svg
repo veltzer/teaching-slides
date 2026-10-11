@@ -42,7 +42,6 @@
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
@@ -52,9 +51,9 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Bias–Variance–Noise Decomposition</text>
-  <rect x="40" y="80" width="1200" height="80" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="1200" height="80" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Expected error = Bias² + Variance + Irreducible noise</text>
-  <rect x="40" y="180" width="380" height="440" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="180" width="380" height="440" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="230" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Bias²</text>
   <text x="60" y="260" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">How wrong on average</text>
   <text x="60" y="295" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Model too simple for pattern</text>
@@ -65,7 +64,7 @@
   <text x="60" y="520" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">• Better features</text>
   <text x="60" y="550" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">• Less regularisation</text>
   <text x="60" y="590" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Linear model on curves</text>
-  <rect x="450" y="180" width="380" height="440" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="180" width="380" height="440" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Variance</text>
   <text x="470" y="260" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Sensitivity to data sample</text>
   <text x="470" y="295" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Different sets give different models</text>
@@ -76,7 +75,7 @@
   <text x="470" y="520" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">• Regularisation</text>
   <text x="470" y="550" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">• Simpler model / ensembling</text>
   <text x="470" y="590" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Deep tree on tiny data</text>
-  <rect x="860" y="180" width="380" height="440" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="180" width="380" height="440" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1050" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Noise (irreducible)</text>
   <text x="880" y="260" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Inherent randomness</text>
   <text x="880" y="295" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Perfect model still hits floor</text>

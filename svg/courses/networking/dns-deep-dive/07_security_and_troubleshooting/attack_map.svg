@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,37 +94,37 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.793210076336" font-weight="bold" fill="var(--text)">DNS Attack Landscape and Defenses</text>
 
   <!-- 6 attack types in a 3x2 grid with mitigations -->
-  <rect x="40" y="86.194690265487" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="86.194690265487" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="236.551724137931" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--danger-text)">Cache Poisoning</text>
   <text x="60.689655172414" y="158.053097345133" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">fake records injected</text>
   <text x="60.689655172414" y="183.716814159292" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">all clients affected</text>
   <text x="60.689655172414" y="214.513274336283" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--danger-text)">def: ports, DNSSEC</text>
 
-  <rect x="443.448275862069" y="86.194690265487" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.448275862069" y="86.194690265487" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--danger-text)">Amplification DDoS</text>
   <text x="464.137931034483" y="158.053097345133" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">spoofed source IP</text>
   <text x="464.137931034483" y="183.716814159292" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">50x to victim</text>
   <text x="464.137931034483" y="214.513274336283" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--danger-text)">def: rate limit, BCP38</text>
 
-  <rect x="846.896551724138" y="86.194690265487" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.896551724138" y="86.194690265487" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1043.448275862069" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">DNS Tunneling</text>
   <text x="867.586206896552" y="158.053097345133" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">malware C2 over DNS</text>
   <text x="867.586206896552" y="183.716814159292" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">firewalls allow DNS</text>
   <text x="867.586206896552" y="214.513274336283" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--warn-text)">def: analysis, RPZ</text>
 
-  <rect x="40" y="270.973451327434" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="270.973451327434" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="236.551724137931" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--danger-text)">Registrar Hijacking</text>
   <text x="60.689655172414" y="342.83185840708" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">domain takeover</text>
   <text x="60.689655172414" y="368.495575221239" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">changes NS records</text>
   <text x="60.689655172414" y="399.29203539823" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--danger-text)">def: lock, MFA</text>
 
-  <rect x="443.448275862069" y="270.973451327434" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.448275862069" y="270.973451327434" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">DGA Malware</text>
   <text x="464.137931034483" y="342.83185840708" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">algorithmic domains</text>
   <text x="464.137931034483" y="368.495575221239" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">finds active C2</text>
   <text x="464.137931034483" y="399.29203539823" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--warn-text)">def: ML, RPZ</text>
 
-  <rect x="846.896551724138" y="270.973451327434" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.896551724138" y="270.973451327434" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1043.448275862069" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--info-text)">NXDOMAIN Hijack</text>
   <text x="867.586206896552" y="342.83185840708" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">ISP ads on typos</text>
   <text x="867.586206896552" y="368.495575221239" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">breaks NX-dependent code</text>

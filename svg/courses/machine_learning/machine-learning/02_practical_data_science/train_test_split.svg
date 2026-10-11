@@ -42,7 +42,6 @@
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
@@ -56,21 +55,21 @@
   <text x="640" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Full dataset (N rows)</text>
   <line x1="640" y1="170" x2="640" y2="200" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="670" y="195" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Random shuffle, then split</text>
-  <rect x="40" y="220" width="800" height="80" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="220" width="800" height="80" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="440" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Train (≈ 80%)</text>
-  <rect x="840" y="220" width="400" height="80" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="840" y="220" width="400" height="80" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1040" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Test (≈ 20%)</text>
-  <rect x="40" y="320" width="800" height="130" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="320" width="800" height="130" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="440" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Train set</text>
   <text x="440" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Fit the model</text>
   <text x="440" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Tune hyperparameters via CV</text>
   <text x="440" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">May see this data many times</text>
-  <rect x="840" y="320" width="400" height="130" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="840" y="320" width="400" height="130" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1040" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Test set</text>
   <text x="1040" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Touch only ONCE</text>
   <text x="1040" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Final unbiased estimate</text>
   <text x="1040" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Locked away until done</text>
-  <rect x="40" y="470" width="1200" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="470" width="1200" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Common pitfalls</text>
   <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Splitting after preprocessing → leakage</text>
   <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Time-series shuffled randomly → leakage from the future</text>

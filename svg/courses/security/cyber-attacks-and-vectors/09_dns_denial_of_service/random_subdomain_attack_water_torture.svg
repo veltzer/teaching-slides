@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,19 +92,19 @@
   </defs>
   <text x="663.076996449705" y="40" text-anchor="middle" font-size="32.722151334905" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Random Subdomain Attack</text>
   <text x="663.076996449705" y="88.603463687151" text-anchor="middle" font-size="23.632677677478" fill="var(--text-muted)" font-family="Arial, sans-serif">Attacker generates queries for:</text>
-  <rect x="40" y="112.905027932961" width="1200" height="129.60905027933" rx="6.925225323432" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="112.905027932961" width="1200" height="129.60905027933" rx="6.925225323432" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="86.153873668639" y="150.167709497207" font-size="23.632677677478" fill="var(--danger-accent)" font-family="Courier New, monospace">abc123.example.com</text>
   <text x="86.153873668639" y="182.569944134078" font-size="23.632677677478" fill="var(--danger-accent)" font-family="Courier New, monospace">xyz789.example.com</text>
   <text x="86.153873668639" y="214.97217877095" font-size="23.632677677478" fill="var(--danger-accent)" font-family="Courier New, monospace">qwe456.example.com  ... (millions of unique random subdomains)</text>
-  <rect x="40" y="274.916312849162" width="1200" height="56.703910614525" rx="6.925225323432" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="274.916312849162" width="1200" height="56.703910614525" rx="6.925225323432" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="86.153873668639" y="312.178882681564" font-size="23.632677677478" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Why this is effective:</text>
-  <rect x="40" y="347.821229050279" width="1200" height="48.603351955307" rx="6.925225323432" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="347.821229050279" width="1200" height="48.603351955307" rx="6.925225323432" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="86.153873668639" y="380.223463687151" font-size="21.814806030077" fill="var(--text)" font-family="Arial, sans-serif">1. Recursive resolver cannot find in cache (unique)</text>
-  <rect x="40" y="409.385586592179" width="1200" height="48.603351955307" rx="6.925225323432" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="409.385586592179" width="1200" height="48.603351955307" rx="6.925225323432" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="86.153873668639" y="441.78782122905" font-size="21.814806030077" fill="var(--text)" font-family="Arial, sans-serif">2. Must query authoritative server for EACH one</text>
-  <rect x="40" y="470.949832402235" width="1200" height="48.603351955307" rx="6.925225323432" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="470.949832402235" width="1200" height="48.603351955307" rx="6.925225323432" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="86.153873668639" y="503.351955307263" font-size="21.814806030077" fill="var(--text)" font-family="Arial, sans-serif">3. Authoritative server overwhelmed with NXDOMAIN</text>
-  <rect x="40" y="532.514078212291" width="1200" height="48.603351955307" rx="6.925225323432" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="532.514078212291" width="1200" height="48.603351955307" rx="6.925225323432" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="86.153873668639" y="564.916312849162" font-size="21.814806030077" fill="var(--text)" font-family="Arial, sans-serif">4. Both resolver AND authoritative server are DoSed</text>
   <text x="663.076996449705" y="620" text-anchor="middle" font-size="23.632677677478" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Hard to filter: each query looks legitimate!</text>
 </svg>

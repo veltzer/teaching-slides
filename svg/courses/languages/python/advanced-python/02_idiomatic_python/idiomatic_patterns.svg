@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,44 +91,44 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="45" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="45" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Idiomatic Python</text>
 
-  <rect x="40" y="100" width="373" height="250" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="100" width="373" height="250" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="226" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Comprehensions</text>
   <text x="60" y="165" font-family="Courier New, monospace" font-size="12" fill="var(--primary-text)">[x*2 for x in data]</text>
   <text x="60" y="195" font-family="Courier New, monospace" font-size="12" fill="var(--primary-text)">{x for x in d}</text>
   <text x="60" y="225" font-family="Courier New, monospace" font-size="12" fill="var(--primary-text)">{k: k**2 for k in r}</text>
   <text x="60" y="290" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">List/dict/set/gen forms.</text>
 
-  <rect x="433" y="100" width="373" height="250" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="433" y="100" width="373" height="250" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="620" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Context Managers</text>
   <text x="453" y="165" font-family="Courier New, monospace" font-size="12" fill="var(--ok-text)">with open("f") as f:</text>
   <text x="453" y="195" font-family="Courier New, monospace" font-size="12" fill="var(--ok-text)">    data = f.read()</text>
   <text x="453" y="245" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">No close needed.</text>
   <text x="453" y="280" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">__enter__/__exit__.</text>
 
-  <rect x="826" y="100" width="414" height="250" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="826" y="100" width="414" height="250" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1033" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Generators</text>
   <text x="846" y="175" font-family="Courier New, monospace" font-size="12" fill="var(--warn-text)">def f(n):</text>
   <text x="846" y="200" font-family="Courier New, monospace" font-size="12" fill="var(--warn-text)">  yield i*i</text>
   <text x="846" y="240" font-family="Courier New, monospace" font-size="12" fill="var(--warn-text)">(x*x for x in r)</text>
   <text x="846" y="285" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">Lazy.</text>
 
-  <rect x="40" y="370" width="373" height="250" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="370" width="373" height="250" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="226" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Unpacking</text>
   <text x="60" y="435" font-family="Courier New, monospace" font-size="12" fill="var(--info-text)">a,b,c = (1,2,3)</text>
   <text x="60" y="460" font-family="Courier New, monospace" font-size="12" fill="var(--info-text)">first,*rest = xs</text>
   <text x="60" y="485" font-family="Courier New, monospace" font-size="12" fill="var(--info-text)">a,b = b,a</text>
   <text x="60" y="510" font-family="Courier New, monospace" font-size="12" fill="var(--info-text)">for k,v in d.items():</text>
 
-  <rect x="433" y="370" width="380" height="250" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="433" y="370" width="380" height="250" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="623" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-text)">LBYL (avoid)</text>
   <text x="453" y="450" font-family="Courier New, monospace" font-size="12" fill="var(--danger-text)">if key in d: v=d[key]</text>
   <text x="453" y="480" font-family="Courier New, monospace" font-size="12" fill="var(--danger-text)">else: v=default</text>
   <text x="453" y="555" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">Race risk.</text>
 
-  <rect x="833" y="370" width="407" height="250" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="833" y="370" width="407" height="250" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1036" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">EAFP (prefer)</text>
   <text x="853" y="450" font-family="Courier New, monospace" font-size="12" fill="var(--ok-text)">try: v=d[key]</text>
   <text x="853" y="480" font-family="Courier New, monospace" font-size="12" fill="var(--ok-text)">except KeyError: v=default</text>

@@ -68,11 +68,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,34 +91,34 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="130.00005075" y="60.714234863954" width="1020.000043500001" height="69.047632086166" rx="7.561178488139" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="130.00005075" y="60.714234863954" width="1020.000043500001" height="69.047632086166" rx="7.561178488139" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="205.000141375001" y="88.333397222212" font-size="22.187522155594" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">1. SCAN</text>
   <text x="205.000141375001" y="113.190479058956" font-size="18.774028127124" fill="var(--text)" font-family="Arial, sans-serif">nmap -sV -sC -p- target -&gt; Found port 80, 22</text>
   <line x1="640.000145000001" y1="129.761866950119" x2="640.000145000001" y2="150.476211337865" stroke="var(--primary-border)" stroke-width="2"/>
   <polygon points="625.000039875001,143.571393367352 655.000250125002,143.571393367352 640.000145000001,157.380919784586" fill="var(--primary-fill)"/>
-  <rect x="40" y="157.380919784586" width="1200" height="69.047632086166" rx="7.561178488139" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="157.380919784586" width="1200" height="69.047632086166" rx="7.561178488139" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="115.000090625001" y="184.999972619052" font-size="22.187522155594" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">2. ENUMERATE</text>
   <text x="115.000090625001" y="209.857054455796" font-size="18.774028127124" fill="var(--text)" font-family="Arial, sans-serif">gobuster -&gt; /admin, /uploads | whatweb -&gt; WordPress 5.4</text>
   <line x1="640.000145000001" y1="226.428551870751" x2="640.000145000001" y2="247.142786734705" stroke="var(--primary-border)" stroke-width="2"/>
   <polygon points="625.000039875001,240.238078287984 655.000250125002,240.238078287984 640.000145000001,254.047604705218" fill="var(--primary-fill)"/>
-  <rect x="40" y="254.047604705218" width="1200" height="89.761866950119" rx="7.561178488139" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="254.047604705218" width="1200" height="89.761866950119" rx="7.561178488139" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="115.000090625001" y="281.666657539684" font-size="22.187522155594" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">3. EXPLOIT</text>
   <text x="115.000090625001" y="306.523739376428" font-size="18.774028127124" fill="var(--text)" font-family="Arial, sans-serif">wpscan -&gt; Found vulnerable plugin</text>
   <text x="115.000090625001" y="327.237974240382" font-size="18.774028127124" fill="var(--text)" font-family="Arial, sans-serif">Exploit -&gt; Upload web shell -&gt; Reverse shell as www-data</text>
   <line x1="640.000145000001" y1="343.809471655337" x2="640.000145000001" y2="364.523816043083" stroke="var(--primary-border)" stroke-width="2"/>
   <polygon points="625.000039875001,357.61899807257 655.000250125002,357.61899807257 640.000145000001,371.428524489803" fill="var(--primary-fill)"/>
-  <rect x="40" y="371.428524489803" width="1200" height="89.761866950119" rx="7.561178488139" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="371.428524489803" width="1200" height="89.761866950119" rx="7.561178488139" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="115.000090625001" y="399.047467800477" font-size="22.187522155594" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">4. ESCALATE</text>
   <text x="115.000090625001" y="423.904768684806" font-size="18.774028127124" fill="var(--text)" font-family="Arial, sans-serif">sudo -l -&gt; Can run /usr/bin/python3 as root</text>
   <text x="115.000090625001" y="444.61900354876" font-size="18.774028127124" fill="var(--text)" font-family="Arial, sans-serif">sudo python3 -c 'import os; os.system("/bin/bash")' -&gt; ROOT!</text>
   <line x1="640.000145000001" y1="461.190391439923" x2="640.000145000001" y2="481.904735827668" stroke="var(--primary-border)" stroke-width="2"/>
   <polygon points="625.000039875001,474.999917857156 655.000250125002,474.999917857156 640.000145000001,488.809444274389" fill="var(--primary-fill)"/>
-  <rect x="130.00005075" y="488.809444274389" width="1020.000043500001" height="55.238105668933" rx="7.561178488139" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="130.00005075" y="488.809444274389" width="1020.000043500001" height="55.238105668933" rx="7.561178488139" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="205.000141375001" y="516.428497108855" font-size="22.187522155594" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">5. CAPTURE</text>
   <text x="489.99996375" y="516.428497108855" font-size="18.774028127124" fill="var(--text)" font-family="Arial, sans-serif">cat /root/flag.txt -&gt; FLAG{...}</text>
   <line x1="640.000145000001" y1="544.047549943321" x2="640.000145000001" y2="564.761784807275" stroke="var(--primary-border)" stroke-width="2"/>
   <polygon points="625.000039875001,557.857076360555 655.000250125002,557.857076360555 640.000145000001,571.666602777788" fill="var(--primary-fill)"/>
-  <rect x="130.00005075" y="571.666602777788" width="1020.000043500001" height="48.333397222212" rx="7.561178488139" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="130.00005075" y="571.666602777788" width="1020.000043500001" height="48.333397222212" rx="7.561178488139" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="205.000141375001" y="603.428502585045" font-size="22.187522155594" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">6. DOCUMENT</text>
   <text x="550.000094250001" y="603.428502585045" font-size="18.774028127124" fill="var(--text)" font-family="Arial, sans-serif">Write report with all steps and evidence</text>
 </svg>

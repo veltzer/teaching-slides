@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,26 +92,26 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="27.015437062405" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Memory Orderings</text>
   <line x1="40" y1="54.683435218698" x2="1240" y2="54.683435218698" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="40" y="69.36698689311" width="1199.999681818246" height="102.784745265172" rx="6.668200671147" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="69.36698689311" width="1199.999681818246" height="102.784745265172" rx="6.668200671147" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="67.272842975183" y="106.075924306998" font-size="21.012055998172" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Relaxed</text>
   <text x="294.545403122141" y="106.075924306998" font-size="19.511155163775" fill="var(--text)" font-family="Arial, sans-serif">No ordering guarantees between threads.</text>
   <text x="294.545403122141" y="132.506247447512" font-size="19.511155163775" fill="var(--text)" font-family="Arial, sans-serif">Only guarantees atomicity of the operation.</text>
   <text x="294.545403122141" y="158.93668704374" font-size="19.511155163775" fill="var(--text-muted)" font-family="Arial, sans-serif">Use for: counters, flags where order does not matter.</text>
-  <rect x="40" y="186.835400288409" width="1199.999681818246" height="102.784745265172" rx="6.668200671147" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="186.835400288409" width="1199.999681818246" height="102.784745265172" rx="6.668200671147" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="67.272842975183" y="223.544337702297" font-size="21.012055998172" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Acquire</text>
   <text x="294.545403122141" y="223.544337702297" font-size="19.511155163775" fill="var(--text)" font-family="Arial, sans-serif">All reads/writes after this load see writes before</text>
   <text x="294.545403122141" y="249.97466084281" font-size="19.511155163775" fill="var(--text)" font-family="Arial, sans-serif">the corresponding Release store.</text>
   <text x="294.545403122141" y="276.404983983324" font-size="19.511155163775" fill="var(--text-muted)" font-family="Arial, sans-serif">Use for: loading a lock/flag.</text>
-  <rect x="40" y="304.303813683707" width="1199.999681818246" height="102.784745265172" rx="6.668200671147" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="304.303813683707" width="1199.999681818246" height="102.784745265172" rx="6.668200671147" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="67.272842975183" y="341.012634641881" font-size="21.012055998172" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Release</text>
   <text x="294.545403122141" y="341.012634641881" font-size="19.511155163775" fill="var(--text)" font-family="Arial, sans-serif">All prior reads/writes are visible to threads</text>
   <text x="294.545403122141" y="367.443074238109" font-size="19.511155163775" fill="var(--text)" font-family="Arial, sans-serif">that do an Acquire load.</text>
   <text x="294.545403122141" y="393.873397378622" font-size="19.511155163775" fill="var(--text-muted)" font-family="Arial, sans-serif">Use for: storing a lock/flag.</text>
-  <rect x="40" y="421.772110623291" width="1199.999681818246" height="80.75947598141" rx="6.668200671147" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="421.772110623291" width="1199.999681818246" height="80.75947598141" rx="6.668200671147" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="67.272842975183" y="458.481048037179" font-size="21.012055998172" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">AcqRel</text>
   <text x="294.545403122141" y="458.481048037179" font-size="19.511155163775" fill="var(--text)" font-family="Arial, sans-serif">Acquire + Release combined.</text>
   <text x="294.545403122141" y="484.911371177692" font-size="19.511155163775" fill="var(--text-muted)" font-family="Arial, sans-serif">Use for: read-modify-write operations (e.g., compare_exchange).</text>
-  <rect x="40" y="517.215254734828" width="1199.999681818246" height="102.784745265172" rx="6.668200671147" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="517.215254734828" width="1199.999681818246" height="102.784745265172" rx="6.668200671147" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="67.272842975183" y="553.923959237287" font-size="21.012055998172" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">SeqCst</text>
   <text x="294.545403122141" y="553.923959237287" font-size="19.511155163775" fill="var(--text)" font-family="Arial, sans-serif">Strongest ordering. Total global order.</text>
   <text x="294.545403122141" y="580.35451528923" font-size="19.511155163775" fill="var(--text)" font-family="Arial, sans-serif">All threads agree on the order of all SeqCst operations.</text>

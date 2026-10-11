@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,13 +90,13 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="271.875" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="271.875" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="55" y="72.6249" font-size="19.8192" fill="var(--primary-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Partitioning</text>
   <text x="55" y="108.875" font-size="16.9878" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Physically separates data into folders</text>
   <text x="55" y="145.125" font-size="16.9878" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">/table/date=2024-01-01/   /table/date=2024-01-02/</text>
   <text x="55" y="188.6249" font-size="16.9878" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Pros: partition pruning, human-readable layout on disk</text>
   <text x="55" y="232.125" font-size="16.9878" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Cons: small files problem, limited to low-cardinality columns</text>
-  <rect x="40" y="339.0624" width="1200" height="280.9376" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="339.0624" width="1200" height="280.9376" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="55" y="371.6875" font-size="19.8192" fill="var(--ok-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Bucketing</text>
   <text x="55" y="407.9375" font-size="16.9878" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Distributes data into fixed-size buckets based on hash of column value</text>
   <text x="55" y="451.4375" font-size="16.9878" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">/table/part-00000 (bucket 0)   /table/part-00001 (bucket 1)</text>

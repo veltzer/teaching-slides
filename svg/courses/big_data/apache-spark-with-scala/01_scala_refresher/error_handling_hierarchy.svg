@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,36 +91,36 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="70" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="70" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Error Handling: Three Levels of Safety</text>
 
-  <rect x="40" y="130" width="390" height="210" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="130" width="390" height="210" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="235" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--danger-text)">throw / try-catch</text>
   <text x="235" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">JVM exceptions</text>
   <text x="235" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">unchecked in Scala</text>
   <text x="235" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">side channel, breaks flow</text>
   <text x="235" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">interop with Java only</text>
 
-  <rect x="445" y="130" width="390" height="210" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="130" width="390" height="210" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">Try[T]</text>
   <text x="640" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Success(value)</text>
   <text x="640" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Failure(throwable)</text>
   <text x="640" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">wraps exceptions as values</text>
   <text x="640" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">composes with map/flatMap</text>
 
-  <rect x="850" y="130" width="390" height="210" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="130" width="390" height="210" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1045" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">Either[L, R]</text>
   <text x="1045" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Left(error)</text>
   <text x="1045" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Right(value)</text>
   <text x="1045" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">typed error, no stack trace</text>
   <text x="1045" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">right-biased in 2.12+</text>
 
-  <rect x="40" y="360" width="390" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="360" width="390" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="235" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Option[T]</text>
   <text x="235" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Some(x) / None</text>
   <text x="235" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">for absence, not errors</text>
 
-  <rect x="445" y="360" width="390" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="360" width="390" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Future[T]</text>
   <text x="640" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">async Try[T]</text>
   <text x="640" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">onComplete / recover</text>

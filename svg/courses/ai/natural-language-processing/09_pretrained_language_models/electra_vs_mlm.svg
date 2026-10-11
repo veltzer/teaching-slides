@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="600" height="280" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="600" height="280" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="340" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">BERT-style MLM</text>
   <text x="340" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">mask 15% of tokens</text>
   <text x="340" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">predict the originals</text>
@@ -104,7 +99,7 @@
   <text x="340" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">85% of compute trains nothing</text>
   <text x="340" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">[MASK] absent at fine-tune time</text>
 
-  <rect x="660" y="40" width="580" height="280" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="40" width="580" height="280" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">ELECTRA Discriminator</text>
   <text x="950" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">small generator swaps tokens</text>
   <text x="950" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">discriminator detects swaps</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,13 +90,13 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="275" height="331.4286" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="275" height="331.4286" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="177.4999" y="247.143" text-anchor="middle" font-size="36.1237" fill="var(--text)" font-family="Arial, sans-serif">CPU Write</text>
   <line x1="324.9999" y1="205.7144" x2="417.5" y2="205.7144" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
-  <rect x="427.5" y="40" width="325" height="331.4286" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="427.5" y="40" width="325" height="331.4286" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="590" y="247.143" text-anchor="middle" font-size="36.1237" fill="var(--text)" font-family="Arial, sans-serif">Update Cache</text>
   <line x1="762.5" y1="205.7144" x2="855" y2="205.7144" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
-  <rect x="865" y="40" width="375" height="331.4286" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="865" y="40" width="375" height="331.4286" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1052.5" y="189.143" text-anchor="middle" font-size="36.1237" fill="var(--text)" font-family="Arial, sans-serif">Mark line</text>
   <text x="1052.5" y="330" text-anchor="middle" font-size="36.1237" fill="var(--text)" font-family="Arial, sans-serif">"dirty"</text>
   <text x="40" y="620" font-size="33.345" fill="var(--text-muted)" font-family="Arial, sans-serif">Memory updated only on eviction. Fast but complex. Used in modern CPUs.</text>

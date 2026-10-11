@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Anatomy of a SQL Query</text>
-  <rect x="40" y="80" width="1200" height="400" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="1200" height="400" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <rect x="80" y="120" width="1120" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="100" y="158" font-family="Courier New, monospace" font-size="18" fill="var(--text)">SELECT product, SUM(qty) FROM orders WHERE date &gt;= '2026-01-01'</text>
   <rect x="80" y="195" width="1120" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>

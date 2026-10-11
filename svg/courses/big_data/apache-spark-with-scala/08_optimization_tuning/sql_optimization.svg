@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -103,25 +98,25 @@
 
   <line x1="210.689655172414" y1="88.333333333333" x2="241.724137931034" y2="88.333333333333" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="246.896551724138" y="40" width="206.896551724138" height="96.666666666667" rx="8.432740427116" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="246.896551724138" y="40" width="206.896551724138" height="96.666666666667" rx="8.432740427116" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="350.344827586207" y="77.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" font-weight="bold" fill="var(--bg)">1. Analysis</text>
   <text x="350.344827586207" y="109.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--bg)">resolve via Catalog</text>
 
   <line x1="458.965517241379" y1="88.333333333333" x2="490" y2="88.333333333333" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="495.172413793103" y="40" width="237.931034482759" height="96.666666666667" rx="8.432740427116" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="495.172413793103" y="40" width="237.931034482759" height="96.666666666667" rx="8.432740427116" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="614.137931034483" y="77.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" font-weight="bold" fill="var(--bg)">2. Logical Opt</text>
   <text x="614.137931034483" y="109.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--bg)">rule-based rewrites</text>
 
   <line x1="738.275862068966" y1="88.333333333333" x2="769.310344827586" y2="88.333333333333" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="774.48275862069" y="40" width="237.931034482759" height="96.666666666667" rx="8.432740427116" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="774.48275862069" y="40" width="237.931034482759" height="96.666666666667" rx="8.432740427116" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="893.448275862069" y="77.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" font-weight="bold" fill="var(--bg)">3. Physical Plan</text>
   <text x="893.448275862069" y="109.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--bg)">cost-based strategies</text>
 
   <line x1="1017.586206896552" y1="88.333333333333" x2="1048.620689655173" y2="88.333333333333" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="1053.793103448276" y="40" width="186.206896551724" height="96.666666666667" rx="8.432740427116" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1053.793103448276" y="40" width="186.206896551724" height="96.666666666667" rx="8.432740427116" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1146.896551724138" y="77.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" font-weight="bold" fill="var(--bg)">4. Codegen</text>
   <text x="1146.896551724138" y="109.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--bg)">JVM bytecode</text>
 
@@ -166,7 +161,7 @@
   <text x="976.206896551724" y="442.777777777778" font-family="Arial, sans-serif" font-size="13.703203194063" font-style="italic" fill="var(--text-muted)">* = codegen stage</text>
 
   <!-- Bottom summary -->
-  <rect x="40" y="501.851851851852" width="1200" height="118.148148148148" rx="8.432740427116" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="501.851851851852" width="1200" height="118.148148148148" rx="8.432740427116" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="539.444444444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.919573407621" font-weight="bold" fill="var(--bg)">Tuning Tips</text>
   <text x="640" y="571.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--bg)">ANALYZE TABLE -&gt; stats for CBO</text>
   <text x="640" y="598.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--bg)">read EXPLAIN bottom-up; enable AQE</text>

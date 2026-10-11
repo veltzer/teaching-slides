@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -99,19 +94,19 @@
   <rect x="40" y="40" width="1200" height="270" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">for-yield desugars to flatMap/map/withFilter</text>
 
-  <rect x="80" y="130" width="240" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="130" width="240" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="200" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">generator</text>
   <text x="200" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">x &lt;- xs</text>
 
-  <rect x="370" y="130" width="240" height="150" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="370" y="130" width="240" height="150" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="490" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">filter</text>
   <text x="490" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">if x &gt; 0</text>
 
-  <rect x="660" y="130" width="240" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="130" width="240" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="780" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">nested gen</text>
   <text x="780" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">y &lt;- ys</text>
 
-  <rect x="950" y="130" width="240" height="150" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="950" y="130" width="240" height="150" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1070" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">yield</text>
   <text x="1070" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">yield x + y</text>
 
@@ -119,14 +114,14 @@
   <line x1="610" y1="205" x2="660" y2="205" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="900" y1="205" x2="950" y2="205" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="340" width="590" height="280" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="340" width="590" height="280" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="335" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Works for any monad</text>
   <text x="335" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">List, Option, Future, Either,</text>
   <text x="335" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Try, Try, Stream, IO</text>
   <text x="335" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">...anything with flatMap.</text>
   <text x="335" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Types must be consistent.</text>
 
-  <rect x="650" y="340" width="590" height="280" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="340" width="590" height="280" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="945" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Desugared form</text>
   <text x="945" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">xs.withFilter(_ &gt; 0)</text>
   <text x="945" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">  .flatMap(x =&gt; ys.map(y =&gt;</text>

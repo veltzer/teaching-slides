@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,22 +91,22 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">REST API Performance Levers</text>
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Caching</text>
   <text x="60" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Cache-Control headers</text>
   <text x="60" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">ETag + If-None-Match</text>
   <text x="60" y="220" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">CDN handles most</text>
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Compression</text>
   <text x="365" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">gzip or brotli</text>
   <text x="365" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">JSON shrinks 70-90%</text>
   <text x="365" y="220" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Negotiated via Accept-Encoding</text>
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Pagination</text>
   <text x="670" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Cursor-based at scale</text>
   <text x="670" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Default + max limits</text>
   <text x="670" y="220" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">No "give me everything"</text>
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">HTTP/2 + HTTP/3</text>
   <text x="975" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Multiplexed connections</text>
   <text x="975" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Header compression</text>

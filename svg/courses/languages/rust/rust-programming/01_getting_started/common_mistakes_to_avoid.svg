@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,26 +90,26 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="578.5715" height="126.087" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="578.5715" height="126.087" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="329.2857" y="87.2826" text-anchor="middle" font-size="20.0069" fill="var(--danger-accent)" font-family="Arial, sans-serif">let s1 = String::from("hi"); let s2 = s1;</text>
   <text x="329.2857" y="140.8696" text-anchor="middle" font-size="20.0069" fill="var(--danger-accent)" font-family="Arial, sans-serif">println!("{}", s1); // Error: value moved</text>
-  <rect x="661.4285" y="40" width="578.5715" height="126.087" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="661.4285" y="40" width="578.5715" height="126.087" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="950.7142" y="87.2826" text-anchor="middle" font-size="20.0069" fill="var(--ok-accent)" font-family="Arial, sans-serif">let s1 = String::from("hi");</text>
   <text x="950.7142" y="140.8696" text-anchor="middle" font-size="20.0069" fill="var(--ok-accent)" font-family="Arial, sans-serif">let s2 = s1.clone(); // OK: deep copy</text>
-  <rect x="40" y="213.3696" width="578.5715" height="126.087" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="213.3696" width="578.5715" height="126.087" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="329.2857" y="260.6521" text-anchor="middle" font-size="20.0069" fill="var(--danger-accent)" font-family="Arial, sans-serif">let mut s = String::new();</text>
   <text x="329.2857" y="314.2391" text-anchor="middle" font-size="20.0069" fill="var(--danger-accent)" font-family="Arial, sans-serif">let r1 = &amp;mut s; let r2 = &amp;mut s; // Error</text>
-  <rect x="661.4285" y="213.3696" width="578.5715" height="126.087" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="661.4285" y="213.3696" width="578.5715" height="126.087" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="950.7142" y="260.6521" text-anchor="middle" font-size="20.0069" fill="var(--ok-accent)" font-family="Arial, sans-serif">Use r1, then drop scope;</text>
   <text x="950.7142" y="314.2391" text-anchor="middle" font-size="20.0069" fill="var(--ok-accent)" font-family="Arial, sans-serif">then create r2 // OK</text>
-  <rect x="40" y="386.7391" width="578.5715" height="126.087" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="386.7391" width="578.5715" height="126.087" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="329.2857" y="434.0217" text-anchor="middle" font-size="20.0069" fill="var(--danger-accent)" font-family="Arial, sans-serif">Missing semicolons / wrong return</text>
   <text x="329.2857" y="487.6087" text-anchor="middle" font-size="20.0069" fill="var(--danger-accent)" font-family="Arial, sans-serif">fn f() -&gt; i32 { 5; } // returns ()</text>
-  <rect x="661.4285" y="386.7391" width="578.5715" height="126.087" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="661.4285" y="386.7391" width="578.5715" height="126.087" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="950.7142" y="434.0217" text-anchor="middle" font-size="20.0069" fill="var(--ok-accent)" font-family="Arial, sans-serif">Implicit return (no semicolon)</text>
   <text x="950.7142" y="487.6087" text-anchor="middle" font-size="20.0069" fill="var(--ok-accent)" font-family="Arial, sans-serif">fn f() -&gt; i32 { 5 } // returns 5</text>
-  <rect x="254.2858" y="550.6522" width="342.8571" height="69.3478" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="254.2858" y="550.6522" width="342.8571" height="69.3478" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="425.7144" y="597.9348" text-anchor="middle" font-size="20.0069" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">Common Mistakes</text>
-  <rect x="682.8572" y="550.6522" width="342.8571" height="69.3478" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="682.8572" y="550.6522" width="342.8571" height="69.3478" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="854.2856" y="597.9348" text-anchor="middle" font-size="20.0069" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Correct Patterns</text>
 </svg>

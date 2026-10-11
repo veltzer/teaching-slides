@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,19 +90,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="99.210526315789" rx="6.155870112511" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="99.210526315789" rx="6.155870112511" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="77.5001" y="78.157894736842" font-size="21.45064239622" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">1. Lock Ordering</text>
   <text x="77.5001" y="116.315789473684" font-size="19.918446325216" fill="var(--text)" font-family="Arial, sans-serif">Always acquire locks in the same order (e.g., by address or ID).</text>
-  <rect x="40" y="154.473684210526" width="1200" height="99.210526315789" rx="6.155870112511" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="154.473684210526" width="1200" height="99.210526315789" rx="6.155870112511" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="77.5001" y="192.631578947368" font-size="21.45064239622" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">2. try_lock with Backoff</text>
   <text x="77.5001" y="230.789473684211" font-size="19.918446325216" fill="var(--text)" font-family="Arial, sans-serif">Use try_lock() to avoid blocking. If it fails, release all locks and retry.</text>
-  <rect x="40" y="268.947368421053" width="1200" height="99.210526315789" rx="6.155870112511" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="268.947368421053" width="1200" height="99.210526315789" rx="6.155870112511" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="77.5001" y="307.105263157895" font-size="21.45064239622" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">3. Single Lock</text>
   <text x="77.5001" y="345.263157894737" font-size="19.918446325216" fill="var(--text)" font-family="Arial, sans-serif">Combine related data under one Mutex to eliminate ordering issues.</text>
-  <rect x="40" y="383.421052631579" width="1200" height="99.210526315789" rx="6.155870112511" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="383.421052631579" width="1200" height="99.210526315789" rx="6.155870112511" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="77.5001" y="421.578947368421" font-size="21.45064239622" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">4. Message Passing</text>
   <text x="77.5001" y="459.736842105263" font-size="19.918446325216" fill="var(--text)" font-family="Arial, sans-serif">Replace shared state with channels. Actors never deadlock.</text>
-  <rect x="40" y="497.894736842105" width="1200" height="122.105263157895" rx="6.155870112511" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="497.894736842105" width="1200" height="122.105263157895" rx="6.155870112511" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="77.5001" y="536.052631578947" font-size="21.45064239622" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">5. Lock Hierarchies</text>
   <text x="77.5001" y="574.210526315789" font-size="19.918446325216" fill="var(--text)" font-family="Arial, sans-serif">Assign a numeric level to each lock. A thread holding level N</text>
   <text x="77.5001" y="601.684210526316" font-size="19.918446325216" fill="var(--text)" font-family="Arial, sans-serif">may only acquire locks at level N+1 or higher.</text>

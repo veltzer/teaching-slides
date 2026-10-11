@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,17 +92,17 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Snowflake Caching Layers</text>
 
-  <rect x="40" y="102.142857142857" width="1200" height="103.571428571429" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="102.142857142857" width="1200" height="103.571428571429" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--ok-text)">L1: Result Cache</text>
   <text x="640" y="169.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--ok-text)">Identical query → cached result</text>
   <text x="640" y="193.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--ok-text)">Free, 24-hour validity, invalidated on data change</text>
 
-  <rect x="40" y="226.428571428571" width="1200" height="103.571428571429" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="226.428571428571" width="1200" height="103.571428571429" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--warn-text)">L2: Warehouse Local Disk</text>
   <text x="640" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">Caches micro-partitions on warehouse compute nodes</text>
   <text x="640" y="317.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--warn-text)">Warms over time; lost when warehouse suspends</text>
 
-  <rect x="40" y="350.714285714286" width="1200" height="103.571428571429" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="350.714285714286" width="1200" height="103.571428571429" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="386.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--info-text)">L3: Remote Storage (cloud object store)</text>
   <text x="640" y="418.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--info-text)">Source of truth — all warehouses see the same data</text>
   <text x="640" y="441.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">Reads here go over the network</text>

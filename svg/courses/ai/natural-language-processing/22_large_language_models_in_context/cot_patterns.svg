@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,7 +93,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.327990186237" font-weight="bold" fill="var(--text)">Chain-of-thought patterns</text>
 
-  <rect x="40" y="78.666666666667" width="595" height="265.142857142857" rx="14.715071638743" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="78.666666666667" width="595" height="265.142857142857" rx="14.715071638743" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="337" y="122.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.02153091249" font-weight="bold" fill="var(--info-text)">Zero-shot CoT</text>
   <text x="337" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--info-text)">just append "Let's think step by step."</text>
 
@@ -108,7 +103,7 @@
   <text x="100" y="253" font-family="Arial, sans-serif" font-size="12.6" fill="var(--text)">A: Let's think step by step.</text>
   <text x="100" y="284" font-family="Arial, sans-serif" font-size="12.6" font-style="italic" fill="var(--text-muted)">→ 3/5 · 2/4 = 3/10</text>
 
-  <rect x="645" y="78.666666666667" width="595" height="265.142857142857" rx="14.715071638743" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="645" y="78.666666666667" width="595" height="265.142857142857" rx="14.715071638743" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="942" y="122.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.02153091249" font-weight="bold" fill="var(--primary-text)">Few-shot CoT</text>
   <text x="942" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--primary-text)">show worked examples in the prompt</text>
 
@@ -118,14 +113,14 @@
   <text x="705" y="253" font-family="Arial, sans-serif" font-size="12.6" fill="var(--text)">Q: 7-4 cars?  A: 7-4=3. Three.</text>
   <text x="705" y="284" font-family="Arial, sans-serif" font-size="12.6" font-style="italic" fill="var(--text-muted)">Q: ... → model imitates the style</text>
 
-  <rect x="40" y="376.952380952381" width="595" height="243.047619047619" rx="14.715071638743" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="376.952380952381" width="595" height="243.047619047619" rx="14.715071638743" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="337" y="421.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="var(--warn-text)">Self-consistency</text>
   <text x="337" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">sample N chains, majority-vote</text>
   <rect x="80" y="481.904761904762" width="510" height="110.47619047619" rx="10.510765456245" fill="var(--info-text)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="335" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">5 chains → 12, 11, 12, 12, 13</text>
   <text x="335" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)">majority → 12</text>
 
-  <rect x="645" y="376.952380952381" width="595" height="243.047619047619" rx="14.715071638743" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="645" y="376.952380952381" width="595" height="243.047619047619" rx="14.715071638743" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="942" y="421.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="var(--ok-text)">Tree-of-thought</text>
   <text x="942" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">branch, prune, expand best</text>
   <rect x="685" y="481.904761904762" width="510" height="110.47619047619" rx="10.510765456245" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="2"/>

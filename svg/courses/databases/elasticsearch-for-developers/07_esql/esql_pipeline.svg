@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="71.926543" width="196.721207" height="133.027732" rx="7.897675" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="71.926543" width="196.721207" height="133.027732" rx="7.897675" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="138.360656" y="127.798036" text-anchor="middle" font-size="22.877723" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">FROM</text>
   <text x="138.360656" y="162.385275" text-anchor="middle" font-size="17.158358" fill="var(--primary-accent)" font-family="Courier New, monospace">products</text>
   <text x="138.360656" y="40" text-anchor="middle" font-size="16.014117" fill="var(--text-muted)" font-family="Arial, sans-serif">Source index</text>
@@ -141,6 +136,6 @@
   <text x="59.672131" y="473.66961" font-size="18.301941" fill="var(--primary-accent)" font-family="Courier New, monospace">FROM products</text>
   <text x="59.672131" y="505.596319" font-size="18.301941" fill="var(--primary-accent)" font-family="Courier New, monospace">| WHERE price &gt; 100</text>
   <text x="59.672131" y="537.522862" font-size="18.301941" fill="var(--primary-accent)" font-family="Courier New, monospace">| EVAL tax = price * 0.2  | STATS avg_price = AVG(price)</text>
-  <rect x="40" y="564.128507" width="1200" height="55.871493" rx="7.897675" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="564.128507" width="1200" height="55.871493" rx="7.897675" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="598.715583" text-anchor="middle" font-size="18.301941" fill="var(--primary-accent)" font-family="Arial, sans-serif">Each <tspan font-family="Courier New, monospace" fill="var(--text)">|</tspan> passes its output as input to the next command — like Unix pipes for data</text>
 </svg>

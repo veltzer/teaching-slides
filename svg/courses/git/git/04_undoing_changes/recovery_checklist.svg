@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,16 +91,16 @@
     </marker>
   </defs>
   <text x="639.999833333349" y="40" text-anchor="middle" font-size="38.153505345352" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Recovery Steps</text>
-  <rect x="40" y="85.490188465972" width="1200" height="79.607797462502" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.194769957354" filter="url(#shadow)"/>
+  <rect x="40" y="85.490188465972" width="1200" height="79.607797462502" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.194769957354"/>
   <text x="84.444329218118" y="135.529331072643" font-size="29.674828689108" font-family="Arial, sans-serif" fill="var(--ok-text)">1. Check git status - Is it just unstaged?</text>
-  <rect x="40" y="176.470565397917" width="1200" height="79.607797462502" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.194769957354" filter="url(#shadow)"/>
+  <rect x="40" y="176.470565397917" width="1200" height="79.607797462502" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.194769957354"/>
   <text x="84.444329218118" y="226.509708004589" font-size="29.674828689108" font-family="Arial, sans-serif" fill="var(--primary-text)">2. Check git reflog - Find the SHA</text>
-  <rect x="40" y="267.450942329863" width="1200" height="79.607797462502" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.194769957354" filter="url(#shadow)"/>
+  <rect x="40" y="267.450942329863" width="1200" height="79.607797462502" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.194769957354"/>
   <text x="84.444329218118" y="317.490214348333" font-size="29.674828689108" font-family="Arial, sans-serif" fill="var(--warn-text)">3. Check git fsck --lost-found - Dangling commits</text>
-  <rect x="40" y="358.431319261808" width="1200" height="79.607797462502" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.194769957354" filter="url(#shadow)"/>
+  <rect x="40" y="358.431319261808" width="1200" height="79.607797462502" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.194769957354"/>
   <text x="84.444329218118" y="408.470591280277" font-size="29.674828689108" font-family="Arial, sans-serif" fill="var(--info-text)">4. Check git stash list - Maybe you stashed it?</text>
-  <rect x="40" y="449.411825605553" width="1200" height="79.607797462502" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.194769957354" filter="url(#shadow)"/>
+  <rect x="40" y="449.411825605553" width="1200" height="79.607797462502" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.194769957354"/>
   <text x="84.444329218118" y="499.451097624022" font-size="29.674828689108" font-family="Arial, sans-serif" fill="var(--danger-text)">5. Check backups/clones - Other copies?</text>
-  <rect x="40" y="540.392202537498" width="1200" height="79.607797462502" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.194769957354" filter="url(#shadow)"/>
+  <rect x="40" y="540.392202537498" width="1200" height="79.607797462502" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.194769957354"/>
   <text x="84.444329218118" y="590.431474555967" font-size="29.674828689108" font-family="Arial, sans-serif" fill="var(--primary-text)">6. Act quickly - Garbage collection in 90 days</text>
 </svg>

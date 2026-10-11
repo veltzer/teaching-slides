@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,26 +91,26 @@
     </marker>
   </defs>
   <text x="251.7647" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.750760528021" font-weight="bold" fill="var(--text)">Original Weight Matrix W (frozen)</text>
-  <rect x="40" y="57.846034556188" width="423.5294" height="249.846256094696" rx="6.314818409018" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="57.846034556188" width="423.5294" height="249.846256094696" rx="6.314818409018" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="251.7647" y="155.999889230746" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.423976912464" fill="var(--danger-accent)">d x d matrix</text>
   <text x="251.7647" y="200.615307928978" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.077649390552" fill="var(--text-muted)">(16M params)</text>
   <text x="251.7647" y="245.23072662721" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.404538253083" fill="var(--text-faint)">Frozen -- no gradients</text>
   <text x="957.6471" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.750760528021" font-weight="bold" fill="var(--ok-accent)">LoRA Decomposition</text>
-  <rect x="710.5883" y="57.846034556188" width="105.8823" height="249.846256094696" rx="6.314818409018" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="710.5883" y="57.846034556188" width="105.8823" height="249.846256094696" rx="6.314818409018" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="763.5294" y="164.923017278094" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.750760528021" font-weight="bold" fill="var(--text)">B</text>
   <text x="763.5294" y="200.615307928978" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73132186864" fill="var(--text-muted)">d x r</text>
   <text x="851.7648" y="191.692290650884" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.116526709315" fill="var(--text)">x</text>
-  <rect x="887.0588" y="129.230615857956" width="352.9412" height="89.230837396464" rx="6.314818409018" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="887.0588" y="129.230615857956" width="352.9412" height="89.230837396464" rx="6.314818409018" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1063.5295" y="170.27682764495" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.750760528021" font-weight="bold" fill="var(--text)">A</text>
   <text x="1063.5295" y="200.615307928978" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73132186864" fill="var(--text-muted)">r x d</text>
   <text x="957.6471" y="280.923017278094" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.423976912464" fill="var(--text)">= delta-W approximation</text>
-  <rect x="75.294" y="379.076871952652" width="441.1765" height="107.076982721906" rx="6.314818409018" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="75.294" y="379.076871952652" width="441.1765" height="107.076982721906" rx="6.314818409018" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="295.8823" y="423.692290650884" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.077649390552" font-weight="bold" fill="var(--danger-accent)">Full Fine-tuning</text>
   <text x="295.8823" y="464.738391668624" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.077649390552" fill="var(--text)">16,000,000 params (d x d)</text>
-  <rect x="692.9412" y="379.076871952652" width="441.1765" height="107.076982721906" rx="6.314818409018" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="692.9412" y="379.076871952652" width="441.1765" height="107.076982721906" rx="6.314818409018" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="913.5294" y="423.692290650884" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.077649390552" font-weight="bold" fill="var(--ok-accent)">LoRA (rank r)</text>
   <text x="913.5294" y="464.738391668624" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.077649390552" fill="var(--text)">131,000 params (d*r + r*d)</text>
-  <rect x="304.7059" y="530.769162603536" width="600.0001" height="89.230837396464" rx="6.314818409018" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="304.7059" y="530.769162603536" width="600.0001" height="89.230837396464" rx="6.314818409018" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="604.7059" y="571.81537439053" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.750760528021" font-weight="bold" fill="var(--danger-accent)">~99% parameter reduction!</text>
   <text x="604.7059" y="605.723061585796" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.404538253083" fill="var(--text-muted)">Same or similar quality with far fewer trainable params</text>
 </svg>

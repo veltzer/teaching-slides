@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Dockerfile Best Practices</text>
 
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Choose Base Image</text>
   <text x="60" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Pin a digest</text>
   <text x="60" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Slim or alpine</text>
@@ -106,7 +101,7 @@
   <text x="60" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">Smaller is safer</text>
   <text x="60" y="340" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Less attack surface</text>
 
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Layer Order</text>
   <text x="365" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Stable steps first</text>
   <text x="365" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Deps before code</text>
@@ -115,7 +110,7 @@
   <text x="365" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--primary-text)">Maximize cache hits</text>
   <text x="365" y="340" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Faster rebuilds</text>
 
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Multi Stage</text>
   <text x="670" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Build stage compiles</text>
   <text x="670" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Final stage runs</text>
@@ -124,7 +119,7 @@
   <text x="670" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">Tiny final image</text>
   <text x="670" y="340" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Common pattern</text>
 
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Hygiene</text>
   <text x="975" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">.dockerignore file</text>
   <text x="975" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">No secrets baked in</text>

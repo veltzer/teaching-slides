@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
   <rect x="510.000042" y="40" width="260.000023" height="55.050831" rx="6.845511" fill="var(--text-muted)"/>
   <text x="640.000053" y="72.440636" text-anchor="middle" font-size="15.863787" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod broken</text>
   <line x1="640.000053" y1="95.050709" x2="640.000053" y2="122.576186" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
-  <polygon points="640.000053,126.508484 760.000064,163.864401 640.000053,201.220196 520.000043,163.864401" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2.2222" filter="url(#shadow)"/>
+  <polygon points="640.000053,126.508484 760.000064,163.864401 640.000053,201.220196 520.000043,163.864401" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2.2222"/>
   <text x="640.000053" y="157.966015" text-anchor="middle" font-size="12.889412" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">kubectl get pod</text>
   <text x="640.000053" y="175.660929" text-anchor="middle" font-size="11.897954" fill="var(--primary-accent)" font-family="Arial, sans-serif">What PHASE?</text>
   <line x1="520.000043" y1="163.864401" x2="120.000007" y2="275.932152" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
@@ -116,29 +111,29 @@
   <text x="270.00002" y="370.304988" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">• Taint mismatch</text>
   <line x1="640.000053" y1="201.220196" x2="640.000053" y2="275.932152" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
   <text x="660.000055" y="244.474621" font-size="11.897954" fill="var(--text-muted)" font-family="Arial, sans-serif">Running</text>
-  <rect x="510.000042" y="275.932152" width="260.000023" height="98.305134" rx="6.845511" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="510.000042" y="275.932152" width="260.000023" height="98.305134" rx="6.845511" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.000053" y="299.52533" text-anchor="middle" font-size="13.880756" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Readiness/liveness</text>
   <text x="640.000053" y="319.186333" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">describe → Events</text>
   <text x="640.000053" y="336.881247" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">logs my-pod</text>
   <text x="640.000053" y="354.576162" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">logs --previous</text>
   <line x1="760.000064" y1="163.864401" x2="1000.000085" y2="275.932152" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
   <text x="920.000078" y="211.050758" text-anchor="middle" font-size="11.897954" fill="var(--text-muted)" font-family="Arial, sans-serif">CrashLoop/Error</text>
-  <rect x="920.000078" y="275.932152" width="319.999922" height="117.966137" rx="6.845511" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920.000078" y="275.932152" width="319.999922" height="117.966137" rx="6.845511" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1080.000092" y="301.491418" text-anchor="middle" font-size="13.880756" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">CrashLoopBackOff</text>
   <text x="935.00008" y="323.118631" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">logs --previous</text>
   <text x="935.00008" y="340.813545" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">describe → Last State</text>
   <text x="935.00008" y="358.50846" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">→ crash/CMD/OOM</text>
   <text x="935.00008" y="376.203374" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">→ get events</text>
-  <rect x="920.000078" y="413.559169" width="319.999922" height="98.305134" rx="6.845511" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920.000078" y="413.559169" width="319.999922" height="98.305134" rx="6.845511" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1080.000092" y="437.15247" text-anchor="middle" font-size="13.880756" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">ImagePullBackOff</text>
   <text x="935.00008" y="458.77956" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">• Bad image/tag</text>
   <text x="935.00008" y="476.474475" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">• Missing imagePullSecret</text>
   <text x="935.00008" y="494.169389" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">• Registry blocked</text>
-  <rect x="920.000078" y="531.525306" width="319.999922" height="78.64401" rx="6.845511" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920.000078" y="531.525306" width="319.999922" height="78.64401" rx="6.845511" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1080.000092" y="555.118484" text-anchor="middle" font-size="13.880756" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">OOMKilled</text>
   <text x="935.00008" y="574.779609" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">Memory limit hit</text>
   <text x="935.00008" y="592.474523" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">→ raise limits.memory</text>
-  <rect x="510.000042" y="423.389731" width="260.000023" height="98.305134" rx="6.845511" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="510.000042" y="423.389731" width="260.000023" height="98.305134" rx="6.845511" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640.000053" y="446.983032" text-anchor="middle" font-size="13.880756" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Check Node</text>
   <text x="640.000053" y="466.643912" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">describe node</text>
   <text x="640.000053" y="484.338827" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">top node</text>

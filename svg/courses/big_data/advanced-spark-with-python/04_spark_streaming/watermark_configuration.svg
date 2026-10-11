@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -117,7 +112,7 @@
   <line x1="623.3333" y1="236.3075780355" x2="873.3333" y2="236.3075780355" stroke="var(--warn-border)" stroke-width="1.4971"/>
   <text x="290" y="197.046106120709" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.260005440942" fill="var(--warn-accent)">WM = E1 - threshold</text>
   <text x="498.3333" y="214.892229718341" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.260005440942" fill="var(--warn-accent)">WM = E2 - threshold</text>
-  <rect x="40" y="280.922996260353" width="566.6666" height="339.077003739647" rx="6.270811595833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="280.922996260353" width="566.6666" height="339.077003739647" rx="6.270811595833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="323.3333" y="325.538523715978" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.763986714613" font-weight="bold" fill="var(--primary-accent)">How Watermarks Work</text>
   <text x="73.3333" y="370.153832710059" font-family="Arial, sans-serif" font-size="19.511943821014" fill="var(--text-muted)">1. Track max event time seen so far</text>
   <text x="73.3333" y="405.846079905323" font-family="Arial, sans-serif" font-size="19.511943821014" fill="var(--text-muted)">2. Watermark = max_event_time - threshold</text>
@@ -125,7 +120,7 @@
   <text x="73.3333" y="477.230792757397" font-family="Arial, sans-serif" font-size="19.511943821014" fill="var(--text-muted)">4. State for old windows is cleaned up</text>
   <text x="73.3333" y="530.769272781066" font-family="Arial, sans-serif" font-size="19.511943821014" font-style="italic" fill="var(--text-faint)">withWatermark("eventTime", "10 minutes")</text>
   <text x="73.3333" y="566.461519976331" font-family="Arial, sans-serif" font-size="19.511943821014" font-style="italic" fill="var(--text-faint)">threshold = allowed lateness</text>
-  <rect x="656.6667" y="280.922996260353" width="583.3333" height="339.077003739647" rx="6.270811595833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="656.6667" y="280.922996260353" width="583.3333" height="339.077003739647" rx="6.270811595833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="948.3333" y="325.538523715978" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.763986714613" font-weight="bold" fill="var(--warn-accent)">Configuration Tips</text>
   <text x="690.0001" y="370.153832710059" font-family="Arial, sans-serif" font-size="19.511943821014" fill="var(--text-muted)">Too small threshold:</text>
   <text x="690.0001" y="400.492242826034" font-family="Arial, sans-serif" font-size="19.511943821014" fill="var(--danger-accent)">  - Drops legitimate late data</text>

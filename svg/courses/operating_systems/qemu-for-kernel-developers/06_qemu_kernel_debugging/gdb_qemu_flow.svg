@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,14 +91,14 @@
     </marker>
   </defs>
   <text x="641.001669449082" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.023362540568" font-weight="bold" fill="var(--text)">GDB + QEMU Flow</text>
-  <rect x="40" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="231.318864774624" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--info-text)">Build the kernel</text>
   <text x="60.033388981636" y="160" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">CONFIG_DEBUG_INFO=y</text>
   <text x="60.033388981636" y="190" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">CONFIG_GDB_SCRIPTS=y</text>
   <text x="60.033388981636" y="220" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">Resulting vmlinux has syms</text>
   <text x="60.033388981636" y="285" font-family="Arial, sans-serif" font-size="13.010846893835" font-style="italic" fill="var(--info-text)">Don't strip the binary</text>
 
-  <rect x="448.681135225376" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.681135225376" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="641.001669449082" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--primary-text)">Start QEMU paused</text>
   <text x="468.714524207012" y="160" font-family="Courier New, monospace" font-size="13.010846893835" fill="var(--primary-text)">qemu -kernel vmlinux \</text>
   <text x="468.714524207012" y="185" font-family="Courier New, monospace" font-size="13.010846893835" fill="var(--primary-text)">  -s -S -nographic</text>
@@ -111,7 +106,7 @@
   <text x="468.714524207012" y="255" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--primary-text)">-S = halt at boot</text>
   <text x="468.714524207012" y="295" font-family="Arial, sans-serif" font-size="13.010846893835" font-style="italic" fill="var(--primary-text)">Wait for gdb to attach</text>
 
-  <rect x="857.362270450751" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.362270450751" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1048.681135225376" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--ok-text)">Attach GDB</text>
   <text x="877.395659432387" y="160" font-family="Courier New, monospace" font-size="13.010846893835" fill="var(--ok-text)">gdb vmlinux</text>
   <text x="877.395659432387" y="185" font-family="Courier New, monospace" font-size="13.010846893835" fill="var(--ok-text)">(gdb) target remote :1234</text>

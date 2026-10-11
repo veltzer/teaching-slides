@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Query vs Scan</text>
 
-  <rect x="40" y="102.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="102.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="329.285714285714" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--ok-text)">Query (good)</text>
   <text x="61.428571428571" y="179.821428571429" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--ok-text)">Requires PK; SK optional</text>
   <text x="61.428571428571" y="205.714285714286" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--ok-text)">Goes to one partition</text>
@@ -105,7 +100,7 @@
   <text x="61.428571428571" y="257.5" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--ok-text)">Pagination via tokens</text>
   <text x="329.285714285714" y="309.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--ok-text)">Use this whenever possible</text>
 
-  <rect x="661.428571428571" y="102.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="661.428571428571" y="102.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="950.714285714286" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--danger-text)">Scan (avoid)</text>
   <text x="682.857142857143" y="179.821428571429" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--danger-text)">Reads every partition</text>
   <text x="682.857142857143" y="205.714285714286" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--danger-text)">Filter applied after read</text>

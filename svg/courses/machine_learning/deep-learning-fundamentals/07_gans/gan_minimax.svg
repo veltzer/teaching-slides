@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,25 +94,25 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">GAN: a two-player game</text>
 
-  <rect x="40" y="86.194690265487" width="280" height="184.778761061947" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="86.194690265487" width="280" height="184.778761061947" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="180" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--info-text)">Noise z</text>
   <text x="180" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">z ∼ N(0, I)</text>
   <text x="180" y="193.982300884956" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">low-dim latent</text>
   <text x="180" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--info-text)"/>
 
-  <rect x="370" y="86.194690265487" width="280" height="184.778761061947" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="370" y="86.194690265487" width="280" height="184.778761061947" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="510" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--primary-text)">Generator G</text>
   <text x="510" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">x̂ = G(z)</text>
   <text x="510" y="193.982300884956" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">z → sample</text>
   <text x="510" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">D should think fake = real</text>
 
-  <rect x="700" y="86.194690265487" width="280" height="184.778761061947" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="700" y="86.194690265487" width="280" height="184.778761061947" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="840" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--ok-text)">Real samples</text>
   <text x="840" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">x ∼ p_data</text>
   <text x="840" y="193.982300884956" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)"/>
   <text x="840" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)"/>
 
-  <rect x="1030" y="86.194690265487" width="210" height="184.778761061947" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1030" y="86.194690265487" width="210" height="184.778761061947" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1135" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">Discriminator D</text>
   <text x="1135" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">D(x) ∈ [0, 1]</text>
   <text x="1135" y="193.982300884956" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">real vs fake</text>
@@ -127,17 +122,17 @@
   <line x1="650" y1="178.58407079646" x2="1030" y2="178.58407079646" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
   <line x1="980" y1="229.911504424779" x2="1030" y2="209.380530973451" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="312.035398230089" width="595" height="143.716814159292" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="312.035398230089" width="595" height="143.716814159292" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="337" y="347.964601769912" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--primary-text)">G's objective (minimize)</text>
   <text x="337" y="389.026548672566" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" fill="var(--primary-text)">− log D(G(z))</text>
   <text x="337" y="424.955752212389" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">push fakes toward score 1.0</text>
 
-  <rect x="655" y="312.035398230089" width="585" height="143.716814159292" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="655" y="312.035398230089" width="585" height="143.716814159292" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="947" y="347.964601769912" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">D's objective (maximize)</text>
   <text x="947" y="389.026548672566" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" fill="var(--warn-text)">log D(x) + log (1 − D(G(z)))</text>
   <text x="947" y="424.955752212389" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--warn-text)">real → 1.0, fake → 0.0</text>
 
-  <rect x="40" y="486.548672566372" width="1200" height="133.451327433628" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="486.548672566372" width="1200" height="133.451327433628" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="522.477876106195" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">Common failure modes</text>
   <text x="640" y="553.274336283186" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">mode collapse · vanishing G grad · D wins · oscillation</text>
   <text x="640" y="584.070796460177" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">fixes: WGAN-GP, spectral norm, TTUR, label smoothing</text>

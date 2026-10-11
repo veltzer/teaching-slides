@@ -68,11 +68,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -100,17 +95,17 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="33.411583004806" font-weight="bold" fill="var(--text)">Request / Response Round Trip</text>
   <text x="247.692307692308" y="101.702127659574" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.251958075205" font-weight="bold" fill="var(--primary-border)">CPU1 (M4)</text>
   <text x="1032.307692307692" y="101.702127659574" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.251958075205" font-weight="bold" fill="var(--warn-border)">CPU2 (M0+)</text>
-  <rect x="40" y="151.063829787234" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="151.063829787234" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="247.692307692308" y="209.063829787234" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.865416432005" font-weight="bold" fill="var(--primary-text)">1. write payload to RAM</text>
-  <rect x="40" y="274.468085106383" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="274.468085106383" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="247.692307692308" y="332.468085106383" text-anchor="middle" font-family="Courier New, monospace" font-size="23.865416432005" font-weight="bold" fill="var(--primary-text)">2. __DMB(), ring channel</text>
-  <rect x="824.615384615385" y="274.468085106383" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="824.615384615385" y="274.468085106383" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1032.307692307692" y="332.468085106383" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.865416432005" font-weight="bold" fill="var(--warn-text)">3. IRQ: read payload</text>
-  <rect x="824.615384615385" y="397.872340425532" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="824.615384615385" y="397.872340425532" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1032.307692307692" y="455.872340425532" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.865416432005" font-weight="bold" fill="var(--warn-text)">4. process command</text>
-  <rect x="824.615384615385" y="521.276595744681" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="824.615384615385" y="521.276595744681" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1032.307692307692" y="579.276595744681" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.865416432005" font-weight="bold" fill="var(--ok-text)">5. clear channel = done</text>
-  <rect x="40" y="521.276595744681" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="521.276595744681" width="415.384615384615" height="98.723404255319" rx="7.159624929601" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="247.692307692308" y="579.276595744681" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.865416432005" font-weight="bold" fill="var(--ok-text)">6. completion IRQ</text>
   <line x1="455.384615384615" y1="323.829787234043" x2="824.615384615385" y2="323.829787234043" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
   <line x1="1032.307692307692" y1="373.191489361702" x2="1032.307692307692" y2="397.872340425532" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>

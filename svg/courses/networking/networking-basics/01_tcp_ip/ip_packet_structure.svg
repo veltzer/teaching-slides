@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,16 +90,16 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="110" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="110" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="90" text-anchor="middle" font-size="30" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">IP Header</text>
   <text x="640" y="130" text-anchor="middle" font-size="18" fill="var(--primary-text)" font-family="Arial, sans-serif">Version, TTL, Protocol, Checksum, Length</text>
 
-  <rect x="40" y="170" width="590" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="170" width="590" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="335" y="225" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Source IP</text>
   <text x="335" y="265" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">32-bit address of sender</text>
   <text x="335" y="293" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">e.g. 192.168.1.10</text>
 
-  <rect x="650" y="170" width="590" height="140" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="170" width="590" height="140" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="945" y="225" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Destination IP</text>
   <text x="945" y="265" text-anchor="middle" font-size="18" fill="var(--warn-text)" font-family="Arial, sans-serif">32-bit address of receiver</text>
   <text x="945" y="293" text-anchor="middle" font-size="18" fill="var(--warn-text)" font-family="Arial, sans-serif">routed hop by hop</text>

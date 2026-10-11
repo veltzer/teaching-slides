@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,25 +90,25 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="100" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="100" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--primary-text)">Delta Lake</text>
   <text x="640" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">ACID on data lakes</text>
 
-  <rect x="40" y="160" width="390" height="220" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="160" width="390" height="220" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="235" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">ACID Transactions</text>
   <text x="235" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Atomic commits</text>
   <text x="235" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Concurrent R/W</text>
   <text x="235" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Snapshot isolation</text>
   <text x="235" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Crash-safe upserts</text>
 
-  <rect x="445" y="160" width="390" height="220" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="160" width="390" height="220" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Time Travel</text>
   <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Query by version</text>
   <text x="640" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Query by timestamp</text>
   <text x="640" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Audit, reproduce</text>
   <text x="640" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">One-command rollback</text>
 
-  <rect x="850" y="160" width="390" height="220" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="160" width="390" height="220" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1045" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Schema Evolution</text>
   <text x="1045" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Enforce on write</text>
   <text x="1045" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">mergeSchema</text>
@@ -128,7 +123,7 @@
   <text x="335" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Stats enable skipping, Z-order</text>
   <text x="335" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">S3/ADLS/GCS/HDFS</text>
 
-  <rect x="650" y="400" width="590" height="220" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="400" width="590" height="220" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="945" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Batch + Streaming</text>
   <text x="945" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">One table, both</text>
   <text x="945" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Streaming reads changes</text>

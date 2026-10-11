@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,17 +92,17 @@
   </defs>
   <rect x="40" y="40" width="1200" height="49.512159" rx="6.07273" fill="var(--text)"/>
   <text x="639.9999" y="72.536579" text-anchor="middle" font-size="20.965088" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">BIAS MITIGATION APPROACHES</text>
-  <rect x="79.9999" y="103.658578" width="1119.9999" height="120.243844" rx="6.07273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="79.9999" y="103.658578" width="1119.9999" height="120.243844" rx="6.07273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="119.9999" y="130.536528" font-size="19.467552" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">PRE-TRAINING (Data level)</text>
   <text x="119.9999" y="157.414683" font-size="17.970118" fill="var(--text)" font-family="Arial, sans-serif">• Balance training data demographics</text>
   <text x="119.9999" y="182.878155" font-size="17.970118" fill="var(--text)" font-family="Arial, sans-serif">• Remove known biased text</text>
   <text x="119.9999" y="208.341422" font-size="17.970118" fill="var(--text)" font-family="Arial, sans-serif">• Augment underrepresented groups</text>
-  <rect x="79.9999" y="245.121947" width="1119.9999" height="120.243844" rx="6.07273" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="79.9999" y="245.121947" width="1119.9999" height="120.243844" rx="6.07273" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="119.9999" y="272.000102" font-size="19.467552" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">TRAINING (Model level)</text>
   <text x="119.9999" y="298.878155" font-size="17.970118" fill="var(--text)" font-family="Arial, sans-serif">• Contrastive debiasing objectives</text>
   <text x="119.9999" y="324.341422" font-size="17.970118" fill="var(--text)" font-family="Arial, sans-serif">• Adversarial training against bias classifiers</text>
   <text x="119.9999" y="349.804997" font-size="17.970118" fill="var(--text)" font-family="Arial, sans-serif">• Fairness constraints in loss function</text>
-  <rect x="79.9999" y="386.58542" width="1119.9999" height="120.243844" rx="6.07273" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="79.9999" y="386.58542" width="1119.9999" height="120.243844" rx="6.07273" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="119.9999" y="413.463472" font-size="19.467552" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">POST-TRAINING (Output level)</text>
   <text x="119.9999" y="440.341422" font-size="17.970118" fill="var(--text)" font-family="Arial, sans-serif">• RLHF with bias-aware human feedback</text>
   <text x="119.9999" y="465.804894" font-size="17.970118" fill="var(--text)" font-family="Arial, sans-serif">• Constitutional AI with fairness principles</text>

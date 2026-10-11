@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
 
 
   <!-- Column: when -->
-  <rect x="40" y="40" width="290" height="261.568627450981" rx="10.664215404617" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="290" height="261.568627450981" rx="10.664215404617" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="185" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--primary-text)">when</text>
   <text x="60" y="119.607843137255" font-family="Courier New, monospace" font-size="13.863480026002" fill="var(--primary-text)">when: os_family == "Debian"</text>
   <text x="60" y="153.725490196079" font-family="Courier New, monospace" font-size="13.863480026002" fill="var(--primary-text)">when:</text>
@@ -107,7 +102,7 @@
   <text x="60" y="264.117647058824" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--primary-text)">List = AND, or = OR</text>
 
   <!-- Column: loop -->
-  <rect x="355" y="40" width="290" height="261.568627450981" rx="10.664215404617" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="355" y="40" width="290" height="261.568627450981" rx="10.664215404617" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="500" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--ok-text)">loop</text>
   <text x="375" y="119.607843137255" font-family="Courier New, monospace" font-size="13.863480026002" fill="var(--ok-text)">apt: name={{ item }}</text>
   <text x="375" y="148.039215686274" font-family="Courier New, monospace" font-size="13.863480026002" fill="var(--ok-text)">loop:</text>
@@ -118,7 +113,7 @@
   <text x="375" y="278.823529411765" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--ok-text)">Access: item.name</text>
 
   <!-- Column: loop_control -->
-  <rect x="670" y="40" width="290" height="261.568627450981" rx="10.664215404617" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="670" y="40" width="290" height="261.568627450981" rx="10.664215404617" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="815" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--warn-text)">loop_control</text>
   <text x="690" y="119.607843137255" font-family="Courier New, monospace" font-size="13.863480026002" fill="var(--warn-text)">loop_control:</text>
   <text x="690" y="148.039215686274" font-family="Courier New, monospace" font-size="13.863480026002" fill="var(--warn-text)">  loop_var: usr</text>
@@ -128,7 +123,7 @@
   <text x="690" y="278.823529411765" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--warn-text)">Rename / pause</text>
 
   <!-- Column: register -->
-  <rect x="985" y="40" width="255" height="261.568627450981" rx="10.664215404617" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="985" y="40" width="255" height="261.568627450981" rx="10.664215404617" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1112" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--info-text)">register</text>
   <text x="1005" y="119.607843137255" font-family="Courier New, monospace" font-size="13.863480026002" fill="var(--info-text)">stat:</text>
   <text x="1005" y="148.039215686274" font-family="Courier New, monospace" font-size="13.863480026002" fill="var(--info-text)">  path: /etc/app</text>
@@ -138,7 +133,7 @@
   <text x="1005" y="278.823529411765" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--info-text)">Act on output</text>
 
   <!-- Combined example -->
-  <rect x="40" y="335.686274509804" width="600" height="193.333333333333" rx="10.664215404617" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="335.686274509804" width="600" height="193.333333333333" rx="10.664215404617" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="340" y="375.490196078431" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--ok-text)">when + loop</text>
   <text x="60" y="415.294117647059" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--ok-text)">file: path=/var/{{ item.name }}</text>
   <text x="60" y="443.725490196079" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--ok-text)">loop: "{{ services }}"</text>
@@ -146,7 +141,7 @@
   <text x="60" y="511.960784313726" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--ok-text)">per-iteration eval</text>
 
   <!-- Retry pattern -->
-  <rect x="660" y="335.686274509804" width="580" height="193.333333333333" rx="10.664215404617" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="335.686274509804" width="580" height="193.333333333333" rx="10.664215404617" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="950" y="375.490196078431" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--primary-text)">Retry / until</text>
   <text x="680" y="415.294117647059" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--primary-text)">command: curl http://app</text>
   <text x="680" y="443.725490196079" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--primary-text)">register: r</text>
@@ -154,6 +149,6 @@
   <text x="680" y="500.588235294117" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--primary-text)">retries: 10  delay: 3</text>
 
   <!-- Tips bar -->
-  <rect x="40" y="551.764705882353" width="1200" height="68.235294117647" rx="10.664215404617" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="551.764705882353" width="1200" height="68.235294117647" rx="10.664215404617" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="593.039215686275" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.615608065086" fill="var(--warn-text)">Prefer loop over with_items</text>
 </svg>

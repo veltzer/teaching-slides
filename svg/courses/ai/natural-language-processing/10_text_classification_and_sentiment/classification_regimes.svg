@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="390" height="270" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="390" height="270" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="235" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--primary-text)">Binary</text>
   <text x="235" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">exactly one of two labels</text>
   <text x="235" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">spam / not spam</text>
@@ -104,7 +99,7 @@
   <text x="235" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">churn / retain</text>
   <text x="235" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">sigmoid + threshold</text>
 
-  <rect x="445" y="40" width="390" height="270" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="40" width="390" height="270" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">Multi-Class</text>
   <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">exactly one of many labels</text>
   <text x="640" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">language detection</text>
@@ -112,7 +107,7 @@
   <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">support ticket category</text>
   <text x="640" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">softmax over classes</text>
 
-  <rect x="850" y="40" width="390" height="270" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="40" width="390" height="270" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1045" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--info-text)">Multi-Label</text>
   <text x="1045" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">any subset of labels</text>
   <text x="1045" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">tags on a blog post</text>

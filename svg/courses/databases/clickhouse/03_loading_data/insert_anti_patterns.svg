@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.982753492379" font-weight="bold" fill="var(--text)">ClickHouse Insert Patterns</text>
-  <rect x="40" y="80" width="557.142857142857" height="540" rx="10.350983390135" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="557.142857142857" height="540" rx="10.350983390135" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="318.571428571429" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.772163458298" font-weight="bold" fill="var(--ok-text)">Do</text>
   <text x="61.428571428571" y="170" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--ok-text)">Big batches every second</text>
   <text x="61.428571428571" y="210" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--ok-text)">10k+ rows per insert</text>
@@ -104,7 +99,7 @@
   <text x="61.428571428571" y="290" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--ok-text)">Async inserts setting</text>
   <text x="61.428571428571" y="330" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--ok-text)">Insert into Distributed table</text>
   <text x="61.428571428571" y="370" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--ok-text)">Native protocol when possible</text>
-  <rect x="682.857142857143" y="80" width="557.142857142857" height="540" rx="10.350983390135" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="682.857142857143" y="80" width="557.142857142857" height="540" rx="10.350983390135" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="961.428571428571" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.772163458298" font-weight="bold" fill="var(--danger-text)">Don't</text>
   <text x="704.285714285714" y="170" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--danger-text)">One INSERT per row</text>
   <text x="704.285714285714" y="210" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--danger-text)">Hundreds per second</text>

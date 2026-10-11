@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -104,7 +99,7 @@
   <text x="90.847457627119" y="76.25" font-family="Courier New, monospace" font-size="11.289177143668" fill="var(--text-faint)">0xC0000000</text>
   <text x="90.847457627119" y="614.821428571429" font-family="Courier New, monospace" font-size="11.289177143668" fill="var(--text-faint)">0x08048000</text>
 
-  <rect x="80.677966101695" y="81.428571428571" width="447.457627118644" height="93.214285714286" rx="6.157732987455" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80.677966101695" y="81.428571428571" width="447.457627118644" height="93.214285714286" rx="6.157732987455" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="304.406779661017" y="115.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.525776624851" font-weight="bold" fill="var(--bg)">Stack</text>
   <text x="304.406779661017" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--bg)">local vars, call frames</text>
   <text x="304.406779661017" y="164.285714285714" text-anchor="middle" font-family="Courier New, monospace" font-size="12.31546597491" fill="var(--bg)">ESP -&gt; grows down</text>
@@ -112,44 +107,44 @@
   <rect x="80.677966101695" y="190.178571428571" width="447.457627118644" height="77.678571428571" rx="6.157732987455" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="6,3"/>
   <text x="304.406779661017" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.341754806153" font-style="italic" fill="var(--text-faint)">free / unmapped</text>
 
-  <rect x="80.677966101695" y="283.392857142857" width="447.457627118644" height="88.035714285714" rx="6.157732987455" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80.677966101695" y="283.392857142857" width="447.457627118644" height="88.035714285714" rx="6.157732987455" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="304.406779661017" y="317.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.525776624851" font-weight="bold" fill="var(--bg)">Heap</text>
   <text x="304.406779661017" y="345.535714285714" text-anchor="middle" font-family="Courier New, monospace" font-size="12.31546597491" fill="var(--bg)">brk / mmap -&gt; grows up</text>
 
-  <rect x="80.677966101695" y="386.964285714286" width="447.457627118644" height="62.142857142857" rx="6.157732987455" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80.677966101695" y="386.964285714286" width="447.457627118644" height="62.142857142857" rx="6.157732987455" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="304.406779661017" y="418.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.473198962366" font-weight="bold" fill="var(--bg)">BSS</text>
   <text x="304.406779661017" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.31546597491" fill="var(--bg)">uninit static, zero-filled</text>
 
-  <rect x="80.677966101695" y="464.642857142857" width="447.457627118644" height="62.142857142857" rx="6.157732987455" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80.677966101695" y="464.642857142857" width="447.457627118644" height="62.142857142857" rx="6.157732987455" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="304.406779661017" y="495.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.473198962366" font-weight="bold" fill="var(--bg)">Data</text>
   <text x="304.406779661017" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.31546597491" fill="var(--bg)">init globals, read-write</text>
 
-  <rect x="80.677966101695" y="542.321428571429" width="447.457627118644" height="72.5" rx="6.157732987455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80.677966101695" y="542.321428571429" width="447.457627118644" height="72.5" rx="6.157732987455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="304.406779661017" y="575.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.473198962366" font-weight="bold" fill="var(--bg)">Text / Code</text>
   <text x="304.406779661017" y="599.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.31546597491" fill="var(--bg)">read-only, shared</text>
 
   <!-- Right panel detailed -->
-  <rect x="558.64406779661" y="76.25" width="681.35593220339" height="103.571428571429" rx="8.21031064994" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="558.64406779661" y="76.25" width="681.35593220339" height="103.571428571429" rx="8.21031064994" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="578.983050847458" y="102.142857142857" font-family="Arial, sans-serif" font-size="14.368043637396" font-weight="bold" fill="var(--bg)">Stack</text>
   <text x="578.983050847458" y="125.964285714286" font-family="Arial, sans-serif" font-size="12.31546597491" fill="var(--bg)">push/pop adjust ESP automatically</text>
   <text x="578.983050847458" y="150" font-family="Courier New, monospace" font-size="11" fill="var(--bg)">sub/add $16,%esp   default 8MB</text>
 
-  <rect x="558.64406779661" y="190.178571428571" width="681.35593220339" height="103.571428571429" rx="8.21031064994" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="558.64406779661" y="190.178571428571" width="681.35593220339" height="103.571428571429" rx="8.21031064994" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="578.983050847458" y="216.071428571429" font-family="Arial, sans-serif" font-size="14.368043637396" font-weight="bold" fill="var(--bg)">Heap</text>
   <text x="578.983050847458" y="239.892857142857" font-family="Arial, sans-serif" font-size="12.31546597491" fill="var(--bg)">runtime allocation, dynamic size</text>
   <text x="578.983050847458" y="260.607142857143" font-family="Courier New, monospace" font-size="11.289177143668" fill="var(--bg)">sys_brk / mmap -&gt; malloc uses these</text>
 
-  <rect x="558.64406779661" y="304.107142857143" width="681.35593220339" height="93.214285714286" rx="8.21031064994" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="558.64406779661" y="304.107142857143" width="681.35593220339" height="93.214285714286" rx="8.21031064994" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="578.983050847458" y="330" font-family="Arial, sans-serif" font-size="14.368043637396" font-weight="bold" fill="var(--bg)">BSS</text>
   <text x="578.983050847458" y="353.821428571429" font-family="Arial, sans-serif" font-size="12.31546597491" fill="var(--bg)">not stored in binary, OS zero-fills</text>
   <text x="578.983050847458" y="374.535714285714" font-family="Courier New, monospace" font-size="11.289177143668" fill="var(--bg)">buffer: .space 1024</text>
 
-  <rect x="558.64406779661" y="407.678571428571" width="681.35593220339" height="93.214285714286" rx="8.21031064994" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="558.64406779661" y="407.678571428571" width="681.35593220339" height="93.214285714286" rx="8.21031064994" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="578.983050847458" y="433.571428571429" font-family="Arial, sans-serif" font-size="14.368043637396" font-weight="bold" fill="var(--bg)">Data</text>
   <text x="578.983050847458" y="457.392857142857" font-family="Arial, sans-serif" font-size="12.31546597491" fill="var(--bg)">stored in binary, fixed size</text>
   <text x="578.983050847458" y="478.107142857143" font-family="Courier New, monospace" font-size="11.289177143668" fill="var(--bg)">msg: .asciz "hello"</text>
 
-  <rect x="558.64406779661" y="511.25" width="681.35593220339" height="103.571428571429" rx="8.21031064994" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="558.64406779661" y="511.25" width="681.35593220339" height="103.571428571429" rx="8.21031064994" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="578.983050847458" y="537.142857142857" font-family="Arial, sans-serif" font-size="14.368043637396" font-weight="bold" fill="var(--bg)">Text / Code</text>
   <text x="578.983050847458" y="560.964285714286" font-family="Arial, sans-serif" font-size="12.31546597491" fill="var(--bg)">read-only, MMU-enforced, shared</text>
   <text x="578.983050847458" y="581.678571428572" font-family="Courier New, monospace" font-size="11.289177143668" fill="var(--bg)">.globl _start   entry at 0x08048000</text>

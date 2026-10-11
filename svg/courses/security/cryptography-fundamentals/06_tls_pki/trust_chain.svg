@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,22 +91,22 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="39.597979746447" font-weight="bold" fill="var(--text)">Certificate Trust Chain</text>
-  <rect x="40" y="80" width="1200" height="120" rx="14.142135623731" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="1200" height="120" rx="14.142135623731" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.112698372208" font-weight="bold" fill="var(--ok-text)">Root CA</text>
   <text x="640" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--ok-text)">Pre-installed in browser/OS trust store</text>
   <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--ok-text)">Self-signed; the root of all trust</text>
   <path d="M 640 200 L 640 240" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
   <text x="680" y="225" font-family="Arial, sans-serif" font-size="18.38477631085" fill="var(--text-muted)">signs</text>
-  <rect x="40" y="250" width="1200" height="120" rx="14.142135623731" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="250" width="1200" height="120" rx="14.142135623731" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.112698372208" font-weight="bold" fill="var(--primary-text)">Intermediate CA</text>
   <text x="640" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--primary-text)">Issued and signed by the root</text>
   <text x="640" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--primary-text)">Used day-to-day so the root stays offline</text>
   <path d="M 640 370 L 640 410" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
   <text x="680" y="395" font-family="Arial, sans-serif" font-size="18.38477631085" fill="var(--text-muted)">signs</text>
-  <rect x="40" y="420" width="1200" height="120" rx="14.142135623731" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="420" width="1200" height="120" rx="14.142135623731" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.112698372208" font-weight="bold" fill="var(--info-text)">Leaf Certificate</text>
   <text x="640" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--info-text)">Your server's cert; presented at handshake</text>
   <text x="640" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--info-text)">Browser verifies the chain back to the root</text>
-  <rect x="40" y="560" width="1200" height="60" rx="14.142135623731" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="560" width="1200" height="60" rx="14.142135623731" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.798989873223" fill="var(--warn-text)">Server sends leaf + intermediates; browser supplies the root</text>
 </svg>

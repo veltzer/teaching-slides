@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -103,7 +98,7 @@
   <line x1="348.8235" y1="40" x2="348.8235" y2="452.5773" stroke="var(--text-faint)" stroke-width="1.8286"/>
   <line x1="525.2942" y1="40" x2="525.2942" y2="452.5773" stroke="var(--text-faint)" stroke-width="1.8286"/>
   <line x1="692.9411" y1="40" x2="692.9411" y2="452.5773" stroke="var(--text-faint)" stroke-width="1.8286"/>
-  <rect x="40" y="117.732" width="1200" height="83.7113" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="117.732" width="1200" height="83.7113" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="50.5882" y="171.5464" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">lto = false</text>
   <text x="359.4117" y="171.5464" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Fast</text>
   <text x="535.8824" y="171.5464" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Larger</text>
@@ -113,7 +108,7 @@
   <text x="359.4117" y="255.2577" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Moderate</text>
   <text x="535.8824" y="255.2577" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Smaller</text>
   <text x="703.5294" y="255.2577" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Good (5–15% faster)</text>
-  <rect x="40" y="285.1546" width="1200" height="83.7113" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="285.1546" width="1200" height="83.7113" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="50.5882" y="338.9691" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">lto = true</text>
   <text x="359.4117" y="338.9691" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Slow</text>
   <text x="535.8824" y="338.9691" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Smallest</text>
@@ -124,6 +119,6 @@
   <text x="535.8824" y="422.6804" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Smaller</text>
   <text x="703.5294" y="422.6804" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Better inlining</text>
   <text x="57.647" y="524.3299" font-size="21.963" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Recommended release profile for maximum performance:</text>
-  <rect x="40" y="548.2474" width="1200" height="71.7526" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="548.2474" width="1200" height="71.7526" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="54.1177" y="596.0825" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">[profile.release]  lto=true  codegen-units=1  opt-level=3  strip=true  panic="abort"</text>
 </svg>

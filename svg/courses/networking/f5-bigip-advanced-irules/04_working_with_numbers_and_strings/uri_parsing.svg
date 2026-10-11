@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,33 +93,33 @@
   <rect x="40" y="40" width="1200" height="90" rx="6" fill="var(--code-bg)" stroke="var(--border)" stroke-width="1"/>
   <text x="56" y="92.3" text-anchor="start" font-family="Courier New, monospace" font-size="22" fill="var(--surface)">/app/v2/users?id=42&amp;lang=en</text>
   <line x1="190.0" y1="130" x2="190.0" y2="200" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <rect x="40" y="200" width="300" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="200" width="300" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="190.0" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">getfield $uri / 2</text>
   <text x="190.0" y="297.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">app</text>
   <line x1="500.0" y1="130" x2="500.0" y2="200" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <rect x="350" y="200" width="300" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350" y="200" width="300" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="500.0" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">getfield $uri / 3</text>
   <text x="500.0" y="297.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">v2</text>
   <line x1="800.0" y1="130" x2="800.0" y2="200" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <rect x="660" y="200" width="280" height="150" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="200" width="280" height="150" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="800.0" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">substr $uri 0 "?"</text>
   <text x="800.0" y="297.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">/app/v2/users</text>
   <line x1="1095.0" y1="130" x2="1095.0" y2="200" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
-  <rect x="950" y="200" width="290" height="150" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="950" y="200" width="290" height="150" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1095.0" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">findstr $uri "id=" 3 "&amp;"</text>
   <text x="1095.0" y="297.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">42</text>
   <rect x="40" y="400" width="1200" height="220" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640.0" y="426" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">split $uri "/"</text>
-  <rect x="80" y="460" width="260" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="460" width="260" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="210.0" y="484" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">lindex 0</text>
   <text x="210.0" y="541.3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="var(--info-text)">""</text>
-  <rect x="370" y="460" width="260" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="370" y="460" width="260" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="500.0" y="484" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">lindex 1</text>
   <text x="500.0" y="541.3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="var(--info-text)">app</text>
-  <rect x="660" y="460" width="260" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="460" width="260" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="790.0" y="484" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">lindex 2</text>
   <text x="790.0" y="541.3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="var(--info-text)">v2</text>
-  <rect x="950" y="460" width="260" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="950" y="460" width="260" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1080.0" y="484" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">lindex 3</text>
   <text x="1080.0" y="541.3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="var(--info-text)">users?id=42&amp;lang=en</text>
 </svg>

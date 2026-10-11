@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -110,7 +105,7 @@
   <text x="525.561497" y="187.843118" text-anchor="middle" font-size="15.440034" fill="var(--primary-accent)" font-family="Arial, sans-serif">High IRQ</text>
   <rect x="525.561497" y="203.764719" width="192.513369" height="61.41177" rx="7.614493" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="4.4444 2.6667"/>
   <text x="621.818182" y="240.156769" text-anchor="middle" font-size="15.440034" fill="var(--text-faint)" font-family="Arial, sans-serif">Low suspended</text>
-  <rect x="525.561497" y="351.607837" width="192.513369" height="61.41177" rx="7.614493" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="525.561497" y="351.607837" width="192.513369" height="61.41177" rx="7.614493" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="621.818182" y="388.000028" text-anchor="middle" font-size="17.645826" fill="var(--bg)" font-family="Arial, sans-serif">High ISR</text>
   <line x1="720.213904" y1="351.607837" x2="720.213904" y2="265.176489" stroke="var(--primary-border)" stroke-width="1.7778" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-primary)"/>
   <text x="758.716578" y="319.764634" font-size="15.440034" fill="var(--primary-accent)" font-family="Arial, sans-serif">returns</text>
@@ -120,7 +115,7 @@
   <text x="972.620207" y="167.372528" font-size="15.440034" fill="var(--text-muted)" font-family="Arial, sans-serif">returns</text>
   <rect x="934.117533" y="55.92146" width="299.465241" height="61.41177" rx="7.614493" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1083.850267" y="92.313792" text-anchor="middle" font-size="17.645826" fill="var(--text-faint)" font-family="Arial, sans-serif">Main resumes</text>
-  <rect x="138.395722" y="488.078483" width="983.957219" height="90.980337" rx="7.614493" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="138.395722" y="488.078483" width="983.957219" height="90.980337" rx="7.614493" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="630.374332" y="524.470533" text-anchor="middle" font-size="20.95445" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Higher-priority IRQ preempts a running ISR — full nesting</text>
   <text x="630.374332" y="554.039101" text-anchor="middle" font-size="17.645826" fill="var(--text-muted)" font-family="Arial, sans-serif">CPU saves/restores registers automatically (Cortex-M hardware stacking)</text>
   <text x="630.374332" y="579.05882" text-anchor="middle" font-size="16.542993" fill="var(--text-faint)" font-family="Arial, sans-serif">Each nesting level uses ~32–64 bytes of stack — beware deep nesting on small MCUs</text>

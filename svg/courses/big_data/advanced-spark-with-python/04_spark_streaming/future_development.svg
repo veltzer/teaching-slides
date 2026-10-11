@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -103,9 +98,9 @@
   <text x="504" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" font-weight="bold" fill="var(--ok-accent)">Near-term</text>
   <rect x="811.89" y="44.364946001874" width="24.2196" height="26.421385131208" rx="12.648274381549" fill="var(--warn-accent)" stroke="var(--bg)" stroke-width="2.9553"/>
   <text x="824" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" font-weight="bold" fill="var(--warn-accent)">Mid-term</text>
-  <rect x="1099.89" y="44.364946001874" width="24.2196" height="26.421385131208" rx="12.648274381549" fill="url(#grad-info)" stroke="var(--bg)" stroke-width="2.9553" filter="url(#shadow)"/>
+  <rect x="1099.89" y="44.364946001874" width="24.2196" height="26.421385131208" rx="12.648274381549" fill="url(#grad-info)" stroke="var(--bg)" stroke-width="2.9553"/>
   <text x="1112" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" font-weight="bold" fill="var(--info-accent)">Long-term</text>
-  <rect x="40" y="101.515171349865" width="288" height="246.060685399459" rx="6.266796007308" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="101.515171349865" width="288" height="246.060685399459" rx="6.266796007308" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="184" y="145.454485950406" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.972411572324" font-weight="bold" fill="var(--primary-accent)">Spark 3.x Stable</text>
   <text x="184" y="185.878781928374" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Structured Streaming</text>
   <text x="184" y="215.75747658401" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Micro-batch default</text>
@@ -113,21 +108,21 @@
   <text x="184" y="275.515084077127" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Delta Lake support</text>
   <text x="184" y="305.393996914608" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Session windows</text>
   <text x="184" y="335.272691570243" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">RocksDB state store</text>
-  <rect x="352" y="101.515171349865" width="304" height="246.060685399459" rx="6.266796007308" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="352" y="101.515171349865" width="304" height="246.060685399459" rx="6.266796007308" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="504" y="145.454485950406" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.972411572324" font-weight="bold" fill="var(--ok-accent)">Enhancements</text>
   <text x="504" y="185.878781928374" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Improved continuous mode</text>
   <text x="504" y="215.75747658401" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Better state store APIs</text>
   <text x="504" y="245.636389421491" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Enhanced monitoring</text>
   <text x="504" y="275.515084077127" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Schema evolution support</text>
   <text x="504" y="305.393996914608" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Async progress tracking</text>
-  <rect x="672" y="101.515171349865" width="304" height="246.060685399459" rx="6.266796007308" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="672" y="101.515171349865" width="304" height="246.060685399459" rx="6.266796007308" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="824" y="145.454485950406" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.972411572324" font-weight="bold" fill="var(--warn-accent)">New Capabilities</text>
   <text x="824" y="185.878781928374" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">True low-latency mode</text>
   <text x="824" y="215.75747658401" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Native ML streaming</text>
   <text x="824" y="245.636389421491" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Multi-query optimization</text>
   <text x="824" y="275.515084077127" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Improved backpressure</text>
   <text x="824" y="305.393996914608" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Cross-stream operations</text>
-  <rect x="992" y="101.515171349865" width="248" height="246.060685399459" rx="6.266796007308" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="992" y="101.515171349865" width="248" height="246.060685399459" rx="6.266796007308" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1115.2" y="145.454485950406" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.972411572324" font-weight="bold" fill="var(--info-accent)">Vision</text>
   <text x="1115.2" y="185.878781928374" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Unified batch +</text>
   <text x="1115.2" y="212.242457961437" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">streaming runtime</text>
@@ -135,7 +130,7 @@
   <text x="1115.2" y="277.272757024797" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Auto-scaling</text>
   <text x="1115.2" y="312.424252341599" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">Serverless</text>
   <text x="1115.2" y="338.787928374662" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.39140338628" fill="var(--text-muted)">streaming</text>
-  <rect x="40" y="391.515171349865" width="1184" height="96.666666666667" rx="6.266796007308" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="391.515171349865" width="1184" height="96.666666666667" rx="6.266796007308" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="632" y="431.939467327833" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.553419758367" font-weight="bold" fill="var(--ok-accent)">Ecosystem Growth</text>
   <text x="632" y="467.090853553712" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.972411572324" fill="var(--text-muted)">Delta Lake | Apache Iceberg | Apache Hudi | Confluent Platform | Databricks | Cloud-native integrations</text>
   <rect x="40" y="514.545404958671" width="1184" height="105.454595041329" rx="6.266796007308" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>

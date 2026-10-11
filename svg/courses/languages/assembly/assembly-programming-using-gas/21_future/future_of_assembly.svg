@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
 
 
   <!-- RISC-V -->
-  <rect x="40" y="40" width="590" height="218.867924528302" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="590" height="218.867924528302" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="335" y="78.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--bg)">RISC-V: Open ISA</text>
   <text x="60" y="111.132075471698" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--bg)">Free, open standard</text>
   <text x="60" y="138.490566037735" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--bg)">Modular base + extensions</text>
@@ -108,7 +103,7 @@
   <text x="80" y="230.415094339623" font-family="Courier New, monospace" font-size="13.599389553448" fill="var(--bg)">addi a0, zero, 42</text>
 
   <!-- WebAssembly -->
-  <rect x="650" y="40" width="590" height="218.867924528302" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="590" height="218.867924528302" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="945" y="78.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--bg)">WebAssembly</text>
   <text x="670" y="111.132075471698" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--bg)">Stack-based VM bytecode</text>
   <text x="670" y="138.490566037735" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--bg)">Runs in browser and WASI</text>
@@ -118,7 +113,7 @@
   <text x="690" y="230.415094339623" font-family="Courier New, monospace" font-size="13.599389553448" fill="var(--bg)">(func (param i32 i32) i32.add)</text>
 
   <!-- Specialized ISAs -->
-  <rect x="40" y="280.754716981132" width="590" height="196.981132075472" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="280.754716981132" width="590" height="196.981132075472" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="335" y="319.056603773585" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--bg)">Specialized ISAs</text>
   <text x="60" y="357.358490566038" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--bg)">GPU: PTX, GCN/RDNA</text>
   <text x="60" y="384.716981132075" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--bg)">DSP: C6000, Hexagon</text>
@@ -126,7 +121,7 @@
   <text x="60" y="444.905660377359" font-family="Courier New, monospace" font-size="13.599389553448" fill="var(--bg)">SPIR-V = portable IR</text>
 
   <!-- Still matters -->
-  <rect x="650" y="280.754716981132" width="590" height="196.981132075472" rx="8.368855109814" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="280.754716981132" width="590" height="196.981132075472" rx="8.368855109814" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="945" y="319.056603773585" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--bg)">Still Matters For</text>
   <text x="670" y="357.358490566038" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--bg)">Kernels, firmware, boot</text>
   <text x="670" y="384.716981132075" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--bg)">Crypto, constant-time code</text>
@@ -138,11 +133,11 @@
   <text x="640" y="532.452830188679" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.737710219627" font-weight="bold" fill="var(--text)">Narrowing, Not Disappearing</text>
   <rect x="60" y="554.33962264151" width="228" height="32.830188679245" rx="4.184427554907" fill="var(--primary-accent)"/>
   <text x="174" y="576.226415094339" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" fill="var(--bg)">Boot / Kernel</text>
-  <rect x="296" y="554.33962264151" width="228" height="32.830188679245" rx="4.184427554907" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="296" y="554.33962264151" width="228" height="32.830188679245" rx="4.184427554907" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="410" y="576.226415094339" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" fill="var(--bg)">Crypto / Codec</text>
-  <rect x="532" y="554.33962264151" width="228" height="32.830188679245" rx="4.184427554907" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="532" y="554.33962264151" width="228" height="32.830188679245" rx="4.184427554907" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="646" y="576.226415094339" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" fill="var(--bg)">Hot Paths</text>
-  <rect x="768" y="554.33962264151" width="228" height="32.830188679245" rx="4.184427554907" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="768" y="554.33962264151" width="228" height="32.830188679245" rx="4.184427554907" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="882" y="576.226415094339" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" fill="var(--bg)">GPU / SIMD</text>
   <rect x="1004" y="554.33962264151" width="216" height="32.830188679245" rx="4.184427554907" fill="var(--text-muted)"/>
   <text x="1112" y="576.226415094339" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553448" fill="var(--bg)">Security / RE</text>

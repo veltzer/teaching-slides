@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,40 +94,40 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">Query, key, value</text>
 
-  <rect x="40" y="86.194690265487" width="380" height="205.309734513274" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="86.194690265487" width="380" height="205.309734513274" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="230" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)">Query Q</text>
   <text x="230" y="152.920353982301" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">"looking for"</text>
   <text x="230" y="188.849557522124" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">per token</text>
   <text x="230" y="229.911504424779" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">Q = X W_Q</text>
   <text x="230" y="265.840707964602" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">shape (n, dₖ)</text>
 
-  <rect x="450" y="86.194690265487" width="380" height="205.309734513274" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="86.194690265487" width="380" height="205.309734513274" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--info-text)">Key K</text>
   <text x="640" y="152.920353982301" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">"offer"</text>
   <text x="640" y="188.849557522124" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">per token</text>
   <text x="640" y="229.911504424779" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--info-text)">K = X W_K</text>
   <text x="640" y="265.840707964602" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">shape (n, dₖ)</text>
 
-  <rect x="860" y="86.194690265487" width="380" height="205.309734513274" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="86.194690265487" width="380" height="205.309734513274" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1050" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--ok-text)">Value V</text>
   <text x="1050" y="152.920353982301" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">"share"</text>
   <text x="1050" y="188.849557522124" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">per token</text>
   <text x="1050" y="229.911504424779" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">V = X W_V</text>
   <text x="1050" y="265.840707964602" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--ok-text)">shape (n, dᵛ)</text>
 
-  <rect x="40" y="327.433628318584" width="595" height="138.58407079646" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="327.433628318584" width="595" height="138.58407079646" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="337" y="363.362831858407" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">Step 1: similarity</text>
   <text x="337" y="399.29203539823" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" fill="var(--warn-text)">scores = Q Kᵀ / √dₖ</text>
   <text x="337" y="433.16814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">n×n: each Q vs each K</text>
   <text x="337" y="457.805309734513" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" font-style="italic" fill="var(--warn-text)">√dₖ keeps softmax from saturating</text>
 
-  <rect x="650" y="327.433628318584" width="590" height="138.58407079646" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="327.433628318584" width="590" height="138.58407079646" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="945" y="363.362831858407" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">Step 2: softmax</text>
   <text x="945" y="399.29203539823" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" fill="var(--danger-text)">A = softmax(scores)</text>
   <text x="945" y="433.16814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--danger-text)">rows sum to 1 — attention weights</text>
   <text x="945" y="457.805309734513" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" font-style="italic" fill="var(--danger-text)">causal mask zeroes the future</text>
 
-  <rect x="40" y="486.548672566372" width="1200" height="133.451327433628" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="486.548672566372" width="1200" height="133.451327433628" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="522.477876106195" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--info-text)">Step 3: aggregate</text>
   <text x="640" y="558.407079646018" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--info-text)">out = A V</text>
   <text x="640" y="589.203539823009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">each token = soft-weighted sum of values</text>

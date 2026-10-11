@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,31 +94,31 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.113013714962" font-weight="bold" fill="var(--text)">Cold Start Anatomy</text>
 
-  <rect x="40" y="87.027027027027" width="165.51724137931" height="83.603603603604" rx="6.23850293892" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <rect x="40" y="87.027027027027" width="165.51724137931" height="83.603603603604" rx="6.23850293892" fill="url(#grad-warn)"/>
   <text x="122.758620689655" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--warn-text)">Init runtime</text>
   <text x="122.758620689655" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--warn-text)">100-300 ms</text>
 
   <path d="M 207.586206896552 128.828828828829 L 248.965517241379 128.828828828829" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="257.241379310345" y="87.027027027027" width="165.51724137931" height="83.603603603604" rx="6.23850293892" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <rect x="257.241379310345" y="87.027027027027" width="165.51724137931" height="83.603603603604" rx="6.23850293892" fill="url(#grad-warn)"/>
   <text x="340" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--warn-text)">Load code</text>
   <text x="340" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--warn-text)">50-500 ms</text>
 
   <path d="M 424.827586206897 128.828828828829 L 466.206896551724 128.828828828829" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="474.48275862069" y="87.027027027027" width="165.51724137931" height="83.603603603604" rx="6.23850293892" fill="url(#grad-danger)" filter="url(#shadow)"/>
+  <rect x="474.48275862069" y="87.027027027027" width="165.51724137931" height="83.603603603604" rx="6.23850293892" fill="url(#grad-danger)"/>
   <text x="557.241379310345" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--danger-text)">Init handler</text>
   <text x="557.241379310345" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--danger-text)">YOUR code</text>
 
   <path d="M 642.068965517241 128.828828828829 L 683.448275862069 128.828828828829" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="691.724137931035" y="87.027027027027" width="165.51724137931" height="83.603603603604" rx="6.23850293892" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <rect x="691.724137931035" y="87.027027027027" width="165.51724137931" height="83.603603603604" rx="6.23850293892" fill="url(#grad-ok)"/>
   <text x="774.48275862069" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--ok-text)">Run handler</text>
   <text x="774.48275862069" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--ok-text)">your work</text>
 
   <text x="448.620689655172" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--text)">Total: 200ms - 5+ seconds (depends on lang/size)</text>
 
-  <rect x="40" y="254.234234234234" width="382.758620689655" height="209.009009009009" rx="10.397504898201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="254.234234234234" width="382.758620689655" height="209.009009009009" rx="10.397504898201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="231.379310344828" y="290.810810810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--primary-text)">Causes</text>
   <text x="60.689655172414" y="322.162162162162" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">- First invocation</text>
   <text x="60.689655172414" y="348.288288288288" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">- After idle (~15 min)</text>
@@ -131,7 +126,7 @@
   <text x="60.689655172414" y="400.540540540541" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">- Code update</text>
   <text x="60.689655172414" y="431.891891891892" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--primary-text)">"Warm" containers stay ~15 min</text>
 
-  <rect x="448.620689655172" y="254.234234234234" width="382.758620689655" height="209.009009009009" rx="10.397504898201" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="254.234234234234" width="382.758620689655" height="209.009009009009" rx="10.397504898201" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="290.810810810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--ok-text)">Mitigations</text>
   <text x="469.310344827586" y="322.162162162162" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">- Provisioned concurrency</text>
   <text x="469.310344827586" y="350" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">- Smaller bundles</text>
@@ -139,7 +134,7 @@
   <text x="469.310344827586" y="410" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">- More memory</text>
   <text x="469.310344827586" y="440" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">- Faster runtime</text>
 
-  <rect x="857.241379310345" y="254.234234234234" width="382.758620689655" height="209.009009009009" rx="10.397504898201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="254.234234234234" width="382.758620689655" height="209.009009009009" rx="10.397504898201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="290.810810810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--warn-text)">When it hurts</text>
   <text x="877.931034482759" y="322.162162162162" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">- Latency-sensitive APIs</text>
   <text x="877.931034482759" y="348.288288288288" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">- p99 SLOs</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,24 +93,24 @@
 
   <text x="40" y="40" font-size="20.263747655025" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">SR-IOV: Splitting One NIC Into Many Virtual NICs</text>
 
-  <rect x="40" y="65.663716814159" width="385" height="195.044247787611" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <rect x="40" y="65.663716814159" width="385" height="195.044247787611" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508"/>
   <text x="232" y="101.592920353982" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">VM 1</text>
   <text x="232" y="132.389380530973" text-anchor="middle" font-size="13.171435975767" fill="var(--info-text)" font-family="Courier New, monospace">eth0: ixgbevf</text>
-  <rect x="60" y="158.053097345133" width="345" height="82.12389380531" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <rect x="60" y="158.053097345133" width="345" height="82.12389380531" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.079124296508"/>
   <text x="232" y="188.849557522124" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">VF 0 (via VFIO)</text>
   <text x="232" y="219.646017699115" text-anchor="middle" font-size="11.145061210264" fill="var(--ok-text)" font-family="Arial, sans-serif" font-style="italic">DMA direct to silicon</text>
 
-  <rect x="447" y="65.663716814159" width="385" height="195.044247787611" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <rect x="447" y="65.663716814159" width="385" height="195.044247787611" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508"/>
   <text x="640" y="101.592920353982" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">VM 2</text>
   <text x="640" y="132.389380530973" text-anchor="middle" font-size="13.171435975767" fill="var(--info-text)" font-family="Courier New, monospace">eth0: ixgbevf</text>
-  <rect x="467" y="158.053097345133" width="345" height="82.12389380531" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <rect x="467" y="158.053097345133" width="345" height="82.12389380531" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.079124296508"/>
   <text x="640" y="188.849557522124" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">VF 1</text>
   <text x="640" y="219.646017699115" text-anchor="middle" font-size="11.145061210264" fill="var(--ok-text)" font-family="Arial, sans-serif" font-style="italic">own ring + MSI-X</text>
 
-  <rect x="855" y="65.663716814159" width="385" height="195.044247787611" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <rect x="855" y="65.663716814159" width="385" height="195.044247787611" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508"/>
   <text x="1047" y="101.592920353982" text-anchor="middle" font-size="15.197810741269" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">VM N</text>
   <text x="1047" y="132.389380530973" text-anchor="middle" font-size="13.171435975767" fill="var(--info-text)" font-family="Courier New, monospace">eth0: ixgbevf</text>
-  <rect x="875" y="158.053097345133" width="345" height="82.12389380531" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <rect x="875" y="158.053097345133" width="345" height="82.12389380531" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.079124296508"/>
   <text x="1047" y="188.849557522124" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">VF N</text>
   <text x="1047" y="219.646017699115" text-anchor="middle" font-size="11.145061210264" fill="var(--ok-text)" font-family="Arial, sans-serif" font-style="italic">looks like a real NIC</text>
 
@@ -123,25 +118,25 @@
   <path d="M 640 260.70796460177 L 640 312.035398230089" stroke="var(--text-muted)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
   <path d="M 1047 260.70796460177 L 1047 312.035398230089" stroke="var(--text-muted)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="322.300884955752" width="1200" height="123.185840707965" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <rect x="40" y="322.300884955752" width="1200" height="123.185840707965" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.079124296508"/>
   <text x="640" y="358.230088495575" text-anchor="middle" font-size="16.21099812402" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Hypervisor host (KVM)</text>
   <text x="640" y="389.026548672566" text-anchor="middle" font-size="12.158248593015" fill="var(--warn-text)" font-family="Courier New, monospace">echo 64 &gt; /sys/class/net/eth0/device/sriov_numvfs</text>
   <text x="640" y="419.823008849558" text-anchor="middle" font-size="11.145061210264" fill="var(--warn-text)" font-family="Arial, sans-serif" font-style="italic">control plane only — not on the per-packet path</text>
 
-  <rect x="40" y="460.884955752212" width="1200" height="159.115044247788" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <rect x="40" y="460.884955752212" width="1200" height="159.115044247788" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.079124296508"/>
   <text x="640" y="491.681415929204" text-anchor="middle" font-size="16.21099812402" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Physical NIC</text>
 
-  <rect x="65" y="507.079646017699" width="240" height="102.654867256637" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <rect x="65" y="507.079646017699" width="240" height="102.654867256637" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.079124296508"/>
   <text x="185" y="543.008849557522" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">PF (host)</text>
   <text x="185" y="573.805309734513" text-anchor="middle" font-size="12.158248593015" fill="var(--primary-text)" font-family="Arial, sans-serif">enables VFs</text>
   <text x="185" y="599.469026548673" text-anchor="middle" font-size="11.145061210264" fill="var(--primary-text)" font-family="Arial, sans-serif" font-style="italic">driver: ixgbe / mlx5</text>
 
-  <rect x="320" y="507.079646017699" width="600" height="102.654867256637" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <rect x="320" y="507.079646017699" width="600" height="102.654867256637" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.079124296508"/>
   <text x="620" y="537.87610619469" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">On-card embedded switch</text>
   <text x="620" y="566.619469026549" text-anchor="middle" font-size="12.158248593015" fill="var(--warn-text)" font-family="Courier New, monospace">VF0 | VF1 | VF2 | ... | VFN</text>
   <text x="620" y="594.336283185841" text-anchor="middle" font-size="11.145061210264" fill="var(--warn-text)" font-family="Arial, sans-serif" font-style="italic">MAC/VLAN match in HW; IOMMU isolates DMA</text>
 
-  <rect x="935" y="507.079646017699" width="285" height="102.654867256637" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508" filter="url(#shadow)"/>
+  <rect x="935" y="507.079646017699" width="285" height="102.654867256637" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.079124296508"/>
   <text x="1077" y="543.008849557522" text-anchor="middle" font-size="14.184623358518" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Wire</text>
   <text x="1077" y="573.805309734513" text-anchor="middle" font-size="12.158248593015" fill="var(--info-text)" font-family="Arial, sans-serif">25/100 Gbps port</text>
   <text x="1077" y="599.469026548673" text-anchor="middle" font-size="11.145061210264" fill="var(--info-text)" font-family="Arial, sans-serif" font-style="italic">QoS shaped per VF</text>

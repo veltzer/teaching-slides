@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -113,35 +108,35 @@
   <text x="1230" y="424.955752212389" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--info-accent)">hₜ</text>
   <text x="640" y="450.619469026549" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--info-accent)">hidden state — output at step t</text>
 
-  <rect x="180" y="209.380530973451" width="200" height="184.778761061947" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="180" y="209.380530973451" width="200" height="184.778761061947" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="280" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">Forget gate</text>
   <text x="280" y="276.106194690266" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--danger-text)">fₜ = σ(W₌ · [h, x])</text>
   <text x="280" y="312.035398230089" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--danger-text)">multiplied onto c</text>
   <text x="280" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--danger-text)">what to drop from c</text>
   <text x="280" y="373.628318584071" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--danger-text)"/>
 
-  <rect x="450" y="209.380530973451" width="200" height="184.778761061947" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="209.380530973451" width="200" height="184.778761061947" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="550" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--ok-text)">Input gate</text>
   <text x="550" y="276.106194690266" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--ok-text)">iₜ = σ(Wᵢ · [h, x])</text>
   <text x="550" y="312.035398230089" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--ok-text)">+ candidate c̃</text>
   <text x="550" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)"/>
   <text x="550" y="373.628318584071" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--ok-text)"/>
 
-  <rect x="720" y="209.380530973451" width="200" height="184.778761061947" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="720" y="209.380530973451" width="200" height="184.778761061947" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="820" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--info-text)">Update c</text>
   <text x="820" y="281.238938053097" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--info-text)">cₜ = f ⊙ cₜ₋₁</text>
   <text x="820" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--info-text)">+ i ⊙ c̃</text>
   <text x="820" y="347.964601769912" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--info-text)"/>
   <text x="820" y="373.628318584071" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--info-text)">additive ⇒ gradients flow</text>
 
-  <rect x="990" y="209.380530973451" width="200" height="184.778761061947" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="990" y="209.380530973451" width="200" height="184.778761061947" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1090" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">Output gate</text>
   <text x="1090" y="276.106194690266" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--warn-text)">oₜ = σ(Wₒ · [h, x])</text>
   <text x="1090" y="312.035398230089" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">h = o ⊙ tanh(c)</text>
   <text x="1090" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--warn-text)"/>
   <text x="1090" y="373.628318584071" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--warn-text)"/>
 
-  <rect x="40" y="486.548672566372" width="1200" height="133.451327433628" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="486.548672566372" width="1200" height="133.451327433628" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="522.477876106195" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--primary-text)">Why this beats vanilla RNN</text>
   <text x="640" y="553.274336283186" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">additive path on c ⇒ gradients survive long sequences</text>
   <text x="640" y="580.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">gates pick per-step what to keep, write, or read</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,28 +93,28 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.954011755682" font-weight="bold" fill="var(--text)">LLM dialogue stack</text>
 
-  <rect x="40" y="71.351351351351" width="1200" height="62.702702702703" rx="10.397504898201" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="71.351351351351" width="1200" height="62.702702702703" rx="10.397504898201" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="107.927927927928" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--danger-text)">Safety filters: input checks, output checks, policy guardrails</text>
 
-  <rect x="40" y="154.954954954955" width="1200" height="62.702702702703" rx="10.397504898201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="154.954954954955" width="1200" height="62.702702702703" rx="10.397504898201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="191.531531531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--warn-text)">System prompt: persona, constraints, available tools, output format</text>
 
-  <rect x="40" y="238.558558558559" width="1200" height="62.702702702703" rx="10.397504898201" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="238.558558558559" width="1200" height="62.702702702703" rx="10.397504898201" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="275.135135135135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--info-text)">Conversation history + user message + retrieved documents</text>
 
-  <rect x="40" y="322.162162162162" width="1200" height="104.504504504504" rx="14.556506857481" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="322.162162162162" width="1200" height="104.504504504504" rx="14.556506857481" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="363.963963963964" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--primary-text)">Instruction-tuned LLM</text>
   <text x="640" y="395.315315315315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--primary-text)">decides: respond directly, ask a clarifying question, or call a tool</text>
 
-  <rect x="40" y="447.567567567568" width="382.758620689655" height="83.603603603604" rx="14.556506857481" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="447.567567567568" width="382.758620689655" height="83.603603603604" rx="14.556506857481" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="231.379310344828" y="484.144144144144" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--ok-text)">tool calls</text>
   <text x="231.379310344828" y="510.27027027027" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">search, calc, DB, code, APIs</text>
 
-  <rect x="448.620689655172" y="447.567567567568" width="382.758620689655" height="83.603603603604" rx="14.556506857481" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="447.567567567568" width="382.758620689655" height="83.603603603604" rx="14.556506857481" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="484.144144144144" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--info-text)">retrieval</text>
   <text x="640" y="510.27027027027" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--info-text)">vector DB or BM25 over docs</text>
 
-  <rect x="857.241379310345" y="447.567567567568" width="382.758620689655" height="83.603603603604" rx="14.556506857481" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="447.567567567568" width="382.758620689655" height="83.603603603604" rx="14.556506857481" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="484.144144144144" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--warn-text)">memory</text>
   <text x="1048.620689655173" y="510.27027027027" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">summarized history, user prefs</text>
 

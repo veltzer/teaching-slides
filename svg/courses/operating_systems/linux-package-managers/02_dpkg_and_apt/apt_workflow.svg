@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,28 +94,28 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.113013714962" font-weight="bold" fill="var(--text)">apt &amp; dpkg Workflow</text>
 
-  <rect x="60.689655172414" y="87.027027027027" width="227.586206896552" height="104.504504504504" rx="8.318003918561" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60.689655172414" y="87.027027027027" width="227.586206896552" height="104.504504504504" rx="8.318003918561" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="174.48275862069" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--primary-text)">apt update</text>
   <text x="174.48275862069" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--primary-text)">refresh package lists</text>
   <text x="174.48275862069" y="170.630630630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--primary-text)">from sources</text>
 
   <path d="M 290.344827586207 139.279279279279 L 352.413793103448 139.279279279279" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="360.689655172414" y="87.027027027027" width="227.586206896552" height="104.504504504504" rx="8.318003918561" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360.689655172414" y="87.027027027027" width="227.586206896552" height="104.504504504504" rx="8.318003918561" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="474.48275862069" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--info-text)">apt install foo</text>
   <text x="474.48275862069" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--info-text)">resolve deps</text>
   <text x="474.48275862069" y="170.630630630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--info-text)">download .deb</text>
 
   <path d="M 590.344827586207 139.279279279279 L 652.413793103448 139.279279279279" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="660.689655172414" y="87.027027027027" width="227.586206896552" height="104.504504504504" rx="8.318003918561" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660.689655172414" y="87.027027027027" width="227.586206896552" height="104.504504504504" rx="8.318003918561" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="774.48275862069" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--warn-text)">dpkg -i foo.deb</text>
   <text x="774.48275862069" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--warn-text)">extract files</text>
   <text x="774.48275862069" y="170.630630630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--warn-text)">run hooks</text>
 
   <path d="M 890.344827586207 139.279279279279 L 952.413793103448 139.279279279279" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="960.689655172414" y="87.027027027027" width="227.586206896552" height="104.504504504504" rx="8.318003918561" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="960.689655172414" y="87.027027027027" width="227.586206896552" height="104.504504504504" rx="8.318003918561" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1074.48275862069" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--ok-text)">Installed</text>
   <text x="1074.48275862069" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--ok-text)">in /var/lib/dpkg/</text>
   <text x="1074.48275862069" y="170.630630630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--ok-text)">tracked db</text>
@@ -149,7 +144,7 @@
   <text x="877.931034482759" y="390.09009009009" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text)">PPAs add 3rd-party</text>
   <text x="877.931034482759" y="426.666666666667" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--text-muted)">GPG keys verify packages</text>
 
-  <rect x="40" y="494.594594594595" width="1200" height="125.405405405405" rx="8.318003918561" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="494.594594594595" width="1200" height="125.405405405405" rx="8.318003918561" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="531.171171171171" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--warn-text)">apt is high-level; dpkg is low-level</text>
   <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">apt resolves deps; dpkg installs files</text>
 </svg>

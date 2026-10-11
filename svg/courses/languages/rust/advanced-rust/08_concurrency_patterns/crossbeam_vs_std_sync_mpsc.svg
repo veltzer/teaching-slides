@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,51 +90,51 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="338.0281" height="72.5" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="338.0281" height="72.5" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="209.0141" y="85.312539843747" text-anchor="middle" font-size="24.448984529671" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Feature</text>
-  <rect x="378.0282" y="40" width="388.7323" height="72.5" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="378.0282" y="40" width="388.7323" height="72.5" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="572.3943" y="85.312539843747" text-anchor="middle" font-size="24.448984529671" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">std::sync::mpsc</text>
-  <rect x="766.7606" y="40" width="473.2394" height="72.5" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="766.7606" y="40" width="473.2394" height="72.5" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1003.3802" y="85.312539843747" text-anchor="middle" font-size="24.448984529671" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">crossbeam-channel</text>
-  <rect x="40" y="121.562486718751" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="121.562486718751" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <rect x="378.0282" y="121.562486718751" width="388.7323" height="63.437513281249" rx="6.184658171846" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="766.7606" y="121.562486718751" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="766.7606" y="121.562486718751" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="56.9014" y="161.437470781253" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">Multiple producers</text>
   <text x="394.9296" y="161.437470781253" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">Yes (clone tx)</text>
   <text x="783.662" y="161.437470781253" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">Yes (clone tx)</text>
-  <rect x="40" y="194.062592968742" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="378.0282" y="194.062592968742" width="388.7323" height="63.437513281249" rx="6.184658171846" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="766.7606" y="194.062592968742" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="194.062592968742" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="378.0282" y="194.062592968742" width="388.7323" height="63.437513281249" rx="6.184658171846" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="766.7606" y="194.062592968742" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="56.9014" y="233.937577031243" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">Multiple consumers</text>
   <text x="394.9296" y="233.937577031243" font-size="20.956301904757" fill="var(--danger-accent)" font-family="Arial, sans-serif">No (MPSC only)</text>
   <text x="783.662" y="233.937577031243" font-size="20.956301904757" fill="var(--ok-accent)" font-family="Arial, sans-serif">Yes (MPMC)</text>
-  <rect x="40" y="266.562486718751" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="378.0282" y="266.562486718751" width="388.7323" height="63.437513281249" rx="6.184658171846" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="766.7606" y="266.562486718751" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="266.562486718751" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="378.0282" y="266.562486718751" width="388.7323" height="63.437513281249" rx="6.184658171846" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="766.7606" y="266.562486718751" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="56.9014" y="306.437577031243" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">select! macro</text>
   <text x="394.9296" y="306.437577031243" font-size="20.956301904757" fill="var(--danger-accent)" font-family="Arial, sans-serif">No</text>
   <text x="783.662" y="306.437577031243" font-size="20.956301904757" fill="var(--ok-accent)" font-family="Arial, sans-serif">Yes</text>
-  <rect x="40" y="339.062486718751" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="339.062486718751" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <rect x="378.0282" y="339.062486718751" width="388.7323" height="63.437513281249" rx="6.184658171846" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <rect x="766.7606" y="339.062486718751" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="56.9014" y="378.937470781253" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">Bounded channel</text>
   <text x="394.9296" y="378.937470781253" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">sync_channel(n)</text>
   <text x="783.662" y="378.937470781253" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">bounded(n)</text>
-  <rect x="40" y="411.562592968742" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="411.562592968742" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <rect x="378.0282" y="411.562592968742" width="388.7323" height="63.437513281249" rx="6.184658171846" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <rect x="766.7606" y="411.562592968742" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="56.9014" y="451.437470781253" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">Unbounded channel</text>
   <text x="394.9296" y="451.437470781253" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">channel()</text>
   <text x="783.662" y="451.437470781253" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">unbounded()</text>
-  <rect x="40" y="484.062486718751" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="484.062486718751" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <rect x="378.0282" y="484.062486718751" width="388.7323" height="63.437513281249" rx="6.184658171846" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="766.7606" y="484.062486718751" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="766.7606" y="484.062486718751" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="56.9014" y="523.937577031243" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">Send + Sync sender</text>
   <text x="394.9296" y="523.937577031243" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">Sender: Send</text>
   <text x="783.662" y="523.937577031243" font-size="20.956301904757" fill="var(--ok-accent)" font-family="Arial, sans-serif">Sender: Send + Sync</text>
-  <rect x="40" y="556.562486718751" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="556.562486718751" width="338.0281" height="63.437513281249" rx="6.184658171846" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <rect x="378.0282" y="556.562486718751" width="388.7323" height="63.437513281249" rx="6.184658171846" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="766.7606" y="556.562486718751" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="766.7606" y="556.562486718751" width="473.2394" height="63.437513281249" rx="6.184658171846" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="56.9014" y="596.437470781253" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">Performance</text>
   <text x="394.9296" y="596.437470781253" font-size="20.956301904757" fill="var(--text)" font-family="Arial, sans-serif">Good</text>
   <text x="783.662" y="596.437470781253" font-size="20.956301904757" fill="var(--ok-accent)" font-family="Arial, sans-serif">Better (lock-free)</text>

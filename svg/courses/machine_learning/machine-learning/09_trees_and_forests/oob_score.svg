@@ -42,7 +42,6 @@
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
@@ -55,25 +54,25 @@
   <rect x="40" y="80" width="1200" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Original training set: N samples</text>
   <text x="60" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Tree 1</text>
-  <rect x="160" y="200" width="600" height="50" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="160" y="200" width="600" height="50" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="460" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">Bootstrap sample (~63% of unique rows)</text>
-  <rect x="780" y="200" width="460" height="50" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="780" y="200" width="460" height="50" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1010" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">OOB rows (~37%) — never seen</text>
   <text x="60" y="325" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Tree 2</text>
-  <rect x="160" y="300" width="600" height="50" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="160" y="300" width="600" height="50" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="460" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">Bootstrap sample (~63% of unique rows)</text>
-  <rect x="780" y="300" width="460" height="50" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="780" y="300" width="460" height="50" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1010" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">OOB rows (~37%) — never seen</text>
   <text x="60" y="425" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Tree 3</text>
-  <rect x="160" y="400" width="600" height="50" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="160" y="400" width="600" height="50" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="460" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">Bootstrap sample (~63% of unique rows)</text>
-  <rect x="780" y="400" width="460" height="50" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="780" y="400" width="460" height="50" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1010" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">OOB rows (~37%) — never seen</text>
-  <rect x="40" y="510" width="580" height="110" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="510" width="580" height="110" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="330" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">OOB prediction for sample i</text>
   <text x="60" y="580" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Average vote of trees that did NOT</text>
   <text x="60" y="605" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">include sample i in their bootstrap</text>
-  <rect x="660" y="510" width="580" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="510" width="580" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="950" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Why care</text>
   <text x="680" y="580" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Free unbiased estimate — no held-out set</text>
   <text x="680" y="605" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Use for tuning n_estimators</text>

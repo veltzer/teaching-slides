@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,14 +91,14 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Anatomy of an Elasticsearch Index</text>
-  <rect x="40" y="80" width="1200" height="200" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="1200" height="200" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Index (logical container)</text>
   <text x="60" y="150" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Holds documents of one logical type</text>
   <text x="60" y="180" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Mappings define field types</text>
   <text x="60" y="210" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Settings: shards, replicas, refresh</text>
   <text x="60" y="245" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--primary-text)">Like a table, with text indexing built in</text>
 
-  <rect x="40" y="300" width="585" height="320" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="300" width="585" height="320" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="332" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Primary shard</text>
   <text x="60" y="375" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Lucene index, the unit of work</text>
   <text x="60" y="405" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Document hashed to one shard</text>
@@ -112,7 +107,7 @@
   <text x="60" y="510" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Tiny shards = scheduling overhead</text>
   <text x="60" y="555" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">Aim for 10–50GB per shard</text>
 
-  <rect x="640" y="300" width="600" height="320" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="300" width="600" height="320" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="940" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Replica shard</text>
   <text x="660" y="375" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Exact copy of a primary</text>
   <text x="660" y="405" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">On a different node</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -101,7 +96,7 @@
   <rect x="40" y="40" width="580" height="580" rx="8.616264104551" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="330" y="86.4000000432" text-anchor="middle" font-size="25.848791274423" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Synchronous</text>
 
-  <rect x="80" y="121.1999998056" width="500" height="81.1999998056" rx="6.462198078413" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="121.1999998056" width="500" height="81.1999998056" rx="6.462198078413" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="330" y="173.3999994492" text-anchor="middle" font-size="23.694725248285" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">read(fd, buf, n)</text>
 
   <rect x="80" y="225.6000001728" width="500" height="81.1999998056" rx="6.462198078413" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -113,14 +108,14 @@
   <rect x="80" y="434.3999998272" width="500" height="81.1999998056" rx="6.462198078413" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="330" y="484.27999963064" text-anchor="middle" font-size="19.38659319601" fill="var(--text)" font-family="Arial, sans-serif">Simple control flow, linear code</text>
 
-  <rect x="80" y="538.8000001944" width="500" height="63.7999999244" rx="6.462198078413" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="538.8000001944" width="500" height="63.7999999244" rx="6.462198078413" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="330" y="580.55999947728" text-anchor="middle" font-size="19.38659319601" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Poor concurrency scaling</text>
 
   <!-- Asynchronous panel -->
   <rect x="660" y="40" width="580" height="580" rx="8.616264104551" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950" y="86.4000000432" text-anchor="middle" font-size="25.848791274423" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Asynchronous</text>
 
-  <rect x="700" y="121.1999998056" width="500" height="81.1999998056" rx="6.462198078413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="700" y="121.1999998056" width="500" height="81.1999998056" rx="6.462198078413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950" y="173.3999994492" text-anchor="middle" font-size="23.694725248285" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">aio_read / io_uring_submit</text>
 
   <rect x="700" y="225.6000001728" width="500" height="81.1999998056" rx="6.462198078413" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -132,6 +127,6 @@
   <rect x="700" y="434.3999998272" width="500" height="81.1999998056" rx="6.462198078413" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="950" y="484.27999963064" text-anchor="middle" font-size="19.38659319601" fill="var(--text)" font-family="Arial, sans-serif">Completion via callback, signal, or poll</text>
 
-  <rect x="700" y="538.8000001944" width="500" height="63.7999999244" rx="6.462198078413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="700" y="538.8000001944" width="500" height="63.7999999244" rx="6.462198078413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950" y="580.55999947728" text-anchor="middle" font-size="19.38659319601" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Scales to many in-flight operations</text>
 </svg>

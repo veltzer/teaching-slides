@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,15 +93,15 @@
 
   <!-- Column 1: CDC -->
   <text x="205.51724137931" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.469631926082" font-weight="bold" fill="var(--text)">Change Data Capture</text>
-  <rect x="40" y="87.835051546392" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.835051546392" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="205.51724137931" y="129.690721649485" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--primary-text)">App writes row</text>
   <text x="205.51724137931" y="159.587628865979" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--primary-text)">UPDATE orders SET ...</text>
 
-  <rect x="40" y="231.340206185567" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="231.340206185567" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="205.51724137931" y="273.19587628866" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--warn-text)">DB Write-Ahead Log</text>
   <text x="205.51724137931" y="303.092783505155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--warn-text)">row diffs</text>
 
-  <rect x="40" y="374.845360824742" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="374.845360824742" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="205.51724137931" y="416.701030927835" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--ok-text)">Stream of row changes</text>
   <text x="205.51724137931" y="446.59793814433" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--ok-text)">low-level, mechanical</text>
 
@@ -120,15 +115,15 @@
 
   <!-- Column 2: Outbox -->
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.469631926082" font-weight="bold" fill="var(--text)">Outbox Pattern</text>
-  <rect x="474.48275862069" y="87.835051546392" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="474.48275862069" y="87.835051546392" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="129.690721649485" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--primary-text)">App writes row + outbox</text>
   <text x="640" y="159.587628865979" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--primary-text)">single transaction</text>
 
-  <rect x="474.48275862069" y="231.340206185567" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="474.48275862069" y="231.340206185567" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="273.19587628866" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--warn-text)">Outbox table</text>
   <text x="640" y="303.092783505155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--warn-text)">domain events as rows</text>
 
-  <rect x="474.48275862069" y="374.845360824742" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="474.48275862069" y="374.845360824742" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="416.701030927835" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--ok-text)">Publisher to broker</text>
   <text x="640" y="446.59793814433" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--ok-text)">domain-meaningful</text>
 
@@ -142,15 +137,15 @@
 
   <!-- Column 3: ES -->
   <text x="1074.48275862069" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.469631926082" font-weight="bold" fill="var(--text)">Event Sourcing</text>
-  <rect x="908.965517241379" y="87.835051546392" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="908.965517241379" y="87.835051546392" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1074.48275862069" y="129.690721649485" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--primary-text)">App writes events</text>
   <text x="1074.48275862069" y="159.587628865979" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--primary-text)">no row to update</text>
 
-  <rect x="908.965517241379" y="231.340206185567" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="908.965517241379" y="231.340206185567" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1074.48275862069" y="273.19587628866" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--info-text)">Event Store</text>
   <text x="1074.48275862069" y="303.092783505155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--info-text)">the source of truth</text>
 
-  <rect x="908.965517241379" y="374.845360824742" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="908.965517241379" y="374.845360824742" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1074.48275862069" y="416.701030927835" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--ok-text)">Read models projected</text>
   <text x="1074.48275862069" y="446.59793814433" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--ok-text)">derived views</text>
 

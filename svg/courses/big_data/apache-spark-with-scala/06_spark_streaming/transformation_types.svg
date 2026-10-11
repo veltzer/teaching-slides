@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="585" height="280" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="585" height="280" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="332" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Stateless</text>
   <text x="332" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">map, filter, flatMap</text>
   <text x="332" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">reduceByKey, union</text>
@@ -104,7 +99,7 @@
   <text x="332" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">no memory across batches</text>
   <text x="332" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">cheap, trivially parallel</text>
 
-  <rect x="655" y="40" width="585" height="280" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="655" y="40" width="585" height="280" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="947" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Stateful</text>
   <text x="947" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">updateStateByKey</text>
   <text x="947" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">mapWithState, sessions</text>
@@ -112,7 +107,7 @@
   <text x="947" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">needs checkpointing</text>
   <text x="947" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">use TTL to cap growth</text>
 
-  <rect x="40" y="340" width="585" height="280" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="340" width="585" height="280" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="332" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Windowed</text>
   <text x="332" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">window, reduceByWindow</text>
   <text x="332" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">countByWindow</text>
@@ -120,7 +115,7 @@
   <text x="332" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">window and slide multiples</text>
   <text x="332" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">of the batch interval</text>
 
-  <rect x="655" y="340" width="585" height="280" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="655" y="340" width="585" height="280" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="947" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Join / Output</text>
   <text x="947" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">stream-stream, stream-static</text>
   <text x="947" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">transform, foreachRDD</text>

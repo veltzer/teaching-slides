@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,25 +94,25 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Kubernetes Networking Layers</text>
 
-  <rect x="40" y="86.194690265487" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="86.194690265487" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--danger-text)">External traffic</text>
   <text x="640" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">Cloud LB, DNS, public IP</text>
 
   <path d="M 640 176.530973451327 L 640 207.327433628319" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="209.380530973451" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="209.380530973451" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">Ingress / Gateway</text>
   <text x="640" y="270.973451327434" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">L7 routing, TLS termination, path-based to services</text>
 
   <path d="M 640 299.716814159292 L 640 330.513274336283" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="332.566371681416" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="332.566371681416" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="368.495575221239" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--primary-text)">Service</text>
   <text x="640" y="394.159292035398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--primary-text)">Stable virtual IP / DNS, load balances to pods</text>
 
   <path d="M 640 422.902654867257 L 640 453.699115044248" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="455.752212389381" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="455.752212389381" width="1200" height="82.12389380531" rx="8.244064638873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="491.681415929204" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--ok-text)">Pod network (CNI plugin)</text>
   <text x="640" y="517.345132743363" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--ok-text)">Flat IP, every pod can reach every other; Calico, Cilium, Flannel</text>
 

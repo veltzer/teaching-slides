@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,19 +92,19 @@
   </defs>
 
   <!-- Stack: Python API over Rust engine over Arrow memory -->
-  <rect x="40" y="40" width="760" height="140" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="760" height="140" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="420" y="100" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Python API</text>
   <text x="420" y="138" text-anchor="middle" font-size="17" fill="var(--primary-text)" font-family="Arial, sans-serif">DataFrame, LazyFrame, expressions</text>
 
   <line x1="420" y1="180" x2="420" y2="252" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="260" width="760" height="140" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="260" width="760" height="140" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="420" y="320" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Rust query engine</text>
   <text x="420" y="358" text-anchor="middle" font-size="17" fill="var(--info-text)" font-family="Arial, sans-serif">vectorized kernels, no interpreter, no GIL</text>
 
   <line x1="420" y1="400" x2="420" y2="472" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="480" width="760" height="140" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="480" width="760" height="140" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="420" y="540" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Apache Arrow memory</text>
   <text x="420" y="578" text-anchor="middle" font-size="17" fill="var(--warn-text)" font-family="Arial, sans-serif">contiguous columnar buffers, cheap to scan</text>
 
@@ -117,20 +112,20 @@
   <rect x="880" y="40" width="360" height="580" rx="8" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="1060" y="88" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">All cores, automatically</text>
 
-  <rect x="910" y="120" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="910" y="120" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="982" y="178" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">core 0</text>
-  <rect x="1075" y="120" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1075" y="120" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1147" y="178" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">core 1</text>
-  <rect x="910" y="240" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="910" y="240" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="982" y="298" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">core 2</text>
-  <rect x="1075" y="240" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1075" y="240" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1147" y="298" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">core 3</text>
-  <rect x="910" y="360" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="910" y="360" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="982" y="418" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">core 4</text>
-  <rect x="1075" y="360" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1075" y="360" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1147" y="418" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">core 5</text>
-  <rect x="910" y="480" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="910" y="480" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="982" y="538" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">core 6</text>
-  <rect x="1075" y="480" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1075" y="480" width="145" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1147" y="538" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">core 7</text>
 </svg>

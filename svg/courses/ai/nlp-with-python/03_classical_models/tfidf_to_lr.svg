@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,21 +93,21 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">TF-IDF + Logistic Regression: The Default Baseline</text>
 
-  <rect x="40" y="102.142857142857" width="235.714285714286" height="82.857142857143" rx="8.427360687859" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="102.142857142857" width="235.714285714286" height="82.857142857143" rx="8.427360687859" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="157.857142857143" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.801301289735" font-weight="bold" fill="var(--info-text)">Document</text>
   <text x="157.857142857143" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">"great movie, loved it"</text>
 
-  <rect x="329.285714285714" y="102.142857142857" width="235.714285714286" height="82.857142857143" rx="8.427360687859" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="329.285714285714" y="102.142857142857" width="235.714285714286" height="82.857142857143" rx="8.427360687859" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="447.142857142857" y="128.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.801301289735" font-weight="bold" fill="var(--info-text)">Tokenize + clean</text>
   <text x="447.142857142857" y="153.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">[great, movie,</text>
   <text x="447.142857142857" y="174.642857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">loved, it]</text>
 
-  <rect x="618.571428571429" y="102.142857142857" width="235.714285714286" height="82.857142857143" rx="8.427360687859" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="618.571428571429" y="102.142857142857" width="235.714285714286" height="82.857142857143" rx="8.427360687859" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="736.428571428571" y="128.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.801301289735" font-weight="bold" fill="var(--warn-text)">TF-IDF vector</text>
   <text x="736.428571428571" y="153.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--warn-text)">[0.0, 0.4, 0.0,</text>
   <text x="736.428571428571" y="174.642857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--warn-text)">0.5, 0.0, ...]</text>
 
-  <rect x="907.857142857143" y="102.142857142857" width="235.714285714286" height="82.857142857143" rx="8.427360687859" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="907.857142857143" y="102.142857142857" width="235.714285714286" height="82.857142857143" rx="8.427360687859" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1025.714285714286" y="128.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.801301289735" font-weight="bold" fill="var(--primary-text)">Logistic Reg</text>
   <text x="1025.714285714286" y="153.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--primary-text)">w·x + b → sigmoid</text>
   <text x="1025.714285714286" y="174.642857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--primary-text)">P(positive) = 0.92</text>
@@ -136,7 +131,7 @@
   <text x="682.857142857143" y="380" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Calibrated probabilities</text>
   <text x="682.857142857143" y="415" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">Run before any transformer</text>
 
-  <rect x="40" y="464.642857142857" width="1200" height="155.357142857143" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="464.642857142857" width="1200" height="155.357142857143" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--ok-text)">Inspectable coefficients</text>
   <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--ok-text)">"loved" → +1.8, "great" → +1.4, "boring" → -1.6</text>
   <text x="640" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--ok-text)">Sanity check</text>

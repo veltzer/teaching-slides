@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,18 +94,18 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.797299082095" font-weight="bold" fill="var(--text)">Three-Way Merge: Why Git Needs the Common Ancestor</text>
 
   <!-- Base box (top center) -->
-  <rect x="479.285714285714" y="84.615384615385" width="321.428571428571" height="79.316239316239" rx="6.183992095868" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="479.285714285714" y="84.615384615385" width="321.428571428571" height="79.316239316239" rx="6.183992095868" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="114.358974358974" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--primary-text)">BASE  (common ancestor)</text>
   <text x="640" y="139.145299145299" text-anchor="middle" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--primary-text)">price = item.price</text>
 
   <!-- Ours (left) -->
-  <rect x="40" y="223.418803418803" width="342.857142857143" height="99.145299145299" rx="6.183992095868" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="223.418803418803" width="342.857142857143" height="99.145299145299" rx="6.183992095868" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="211.428571428571" y="253.162393162393" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--ok-text)">OURS  (HEAD branch)</text>
   <text x="211.428571428571" y="280.923076923077" text-anchor="middle" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--ok-text)">price = item.price * tax_rate</text>
   <text x="211.428571428571" y="304.717948717949" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" fill="var(--ok-text)">we added tax_rate</text>
 
   <!-- Theirs (right) -->
-  <rect x="897.142857142857" y="223.418803418803" width="342.857142857143" height="99.145299145299" rx="6.183992095868" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="897.142857142857" y="223.418803418803" width="342.857142857143" height="99.145299145299" rx="6.183992095868" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1068.571428571428" y="253.162393162393" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--warn-text)">THEIRS  (incoming branch)</text>
   <text x="1068.571428571428" y="280.923076923077" text-anchor="middle" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--warn-text)">price = item.price * discount</text>
   <text x="1068.571428571428" y="304.717948717949" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" fill="var(--warn-text)">they added discount</text>
@@ -133,7 +128,7 @@
   <text x="918.571428571429" y="530.769230769231" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--text-faint)">their edit</text>
 
   <!-- Resolution -->
-  <rect x="382.857142857143" y="570.42735042735" width="514.285714285714" height="49.57264957265" rx="6.183992095868" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="382.857142857143" y="570.42735042735" width="514.285714285714" height="49.57264957265" rx="6.183992095868" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="591.247863247863" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.429314890359" font-weight="bold" fill="var(--info-text)">Resolution: combine both intentions</text>
   <text x="640" y="610.08547008547" text-anchor="middle" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--info-text)">price = item.price * tax_rate * discount</text>
 </svg>

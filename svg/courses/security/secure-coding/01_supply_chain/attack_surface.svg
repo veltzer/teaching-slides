@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -103,24 +98,24 @@
   <text x="151.864406779661" y="182.264150943396" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320619" fill="var(--text-muted)">reviewed, tested</text>
   <text x="151.864406779661" y="206.339622641509" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320619" fill="var(--text-muted)">a small fraction</text>
 
-  <rect x="40" y="247.924528301887" width="223.728813559322" height="120.377358490566" rx="6.329609708837" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="247.924528301887" width="223.728813559322" height="120.377358490566" rx="6.329609708837" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="151.864406779661" y="291.698113207547" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.933894175037" font-weight="bold" fill="var(--primary-text)">Dependencies</text>
   <text x="151.864406779661" y="324.528301886792" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320619" fill="var(--primary-text)">direct + transitive</text>
   <text x="151.864406779661" y="348.603773584906" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320619" fill="var(--primary-text)">most of what ships</text>
 
-  <rect x="40" y="390.188679245283" width="223.728813559322" height="120.377358490566" rx="6.329609708837" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="390.188679245283" width="223.728813559322" height="120.377358490566" rx="6.329609708837" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="151.864406779661" y="433.962264150943" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.933894175037" font-weight="bold" fill="var(--info-text)">Build + tooling</text>
   <text x="151.864406779661" y="466.792452830189" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320619" fill="var(--info-text)">CI runners, compilers</text>
   <text x="151.864406779661" y="490.867924528302" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320619" fill="var(--info-text)">base images</text>
 
-  <rect x="395.932203389831" y="193.207547169811" width="254.237288135593" height="306.415094339623" rx="6.329609708837" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="395.932203389831" y="193.207547169811" width="254.237288135593" height="306.415094339623" rx="6.329609708837" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="523.050847457627" y="236.981132075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.933894175037" font-weight="bold" fill="var(--warn-text)">Build / assemble</text>
   <text x="523.050847457627" y="280.754716981132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320619" fill="var(--warn-text)">compile, link, package</text>
   <text x="523.050847457627" y="309.207547169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320619" fill="var(--warn-text)">sign + generate SBOM</text>
   <text x="523.050847457627" y="359.547169811321" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.714154369146" font-style="italic" fill="var(--warn-text)">artifact can be poisoned</text>
   <text x="523.050847457627" y="385.811320754717" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.714154369146" font-style="italic" fill="var(--warn-text)">even when source is clean</text>
 
-  <rect x="731.525423728814" y="269.811320754717" width="254.237288135593" height="153.207547169811" rx="6.329609708837" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="731.525423728814" y="269.811320754717" width="254.237288135593" height="153.207547169811" rx="6.329609708837" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="858.64406779661" y="313.584905660377" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.933894175037" font-weight="bold" fill="var(--ok-text)">Artifact + provenance</text>
   <text x="858.64406779661" y="348.603773584906" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320619" fill="var(--ok-text)">hashed, signed, attested</text>
   <text x="858.64406779661" y="377.056603773585" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320619" fill="var(--ok-text)">verified on the way in</text>
@@ -135,7 +130,7 @@
   <line x1="650.169491525424" y1="346.415094339623" x2="729.491525423729" y2="346.415094339623" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="985.762711864407" y1="346.415094339623" x2="1014.237288135593" y2="346.415094339623" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="395.932203389831" y="543.396226415094" width="844.067796610169" height="76.603773584906" rx="6.329609708837" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="395.932203389831" y="543.396226415094" width="844.067796610169" height="76.603773584906" rx="6.329609708837" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="817.966101694915" y="574.037735849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.824024272091" font-weight="bold" fill="var(--danger-text)">How attackers get in</text>
   <text x="817.966101694915" y="602.490566037736" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320619" fill="var(--danger-text)">typosquatting · dependency confusion · account takeover · build compromise · tampered binaries</text>
   <line x1="523.050847457627" y1="543.396226415094" x2="523.050847457627" y2="501.811320754717" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>

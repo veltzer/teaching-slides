@@ -3,7 +3,7 @@
     <type>regular</type>
   </metadata>
 
-  <rect x="40" y="40" width="589.655172413793" height="279.259259259259" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.324555320337" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="589.655172413793" height="279.259259259259" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.324555320337"/>
   <text x="334.827586206897" y="88.333333333333" text-anchor="middle" font-size="31.622776601684" font-family="Arial, sans-serif" fill="var(--primary-text)">Key-Value</text>
   <text x="334.827586206897" y="131.296296296296" text-anchor="middle" font-size="21.081851067789" font-family="Arial, sans-serif" fill="var(--primary-text)">opaque value under a key</text>
   <text x="334.827586206897" y="179.62962962963" text-anchor="middle" font-size="23.190036174568" font-family="Courier New, monospace" fill="var(--primary-text)">SET user:42 "Alice"</text>
@@ -11,7 +11,7 @@
   <text x="334.827586206897" y="270.925925925926" text-anchor="middle" font-size="23.190036174568" font-family="Arial, sans-serif" fill="var(--primary-text)">Redis, Memcached,</text>
   <text x="334.827586206897" y="297.777777777778" text-anchor="middle" font-size="23.190036174568" font-family="Arial, sans-serif" fill="var(--primary-text)">DynamoDB, etcd</text>
 
-  <rect x="650.344827586207" y="40" width="589.655172413793" height="279.259259259259" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.324555320337" filter="url(#shadow)"/>
+  <rect x="650.344827586207" y="40" width="589.655172413793" height="279.259259259259" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.324555320337"/>
   <text x="945.172413793103" y="88.333333333333" text-anchor="middle" font-size="31.622776601684" font-family="Arial, sans-serif" fill="var(--ok-text)">Document</text>
   <text x="945.172413793103" y="131.296296296296" text-anchor="middle" font-size="21.081851067789" font-family="Arial, sans-serif" fill="var(--ok-text)">self-describing JSON/BSON</text>
   <text x="945.172413793103" y="179.62962962963" text-anchor="middle" font-size="21.081851067789" font-family="Courier New, monospace" fill="var(--ok-text)">{ name: "Alice",</text>
@@ -19,7 +19,7 @@
   <text x="945.172413793103" y="270.925925925926" text-anchor="middle" font-size="23.190036174568" font-family="Arial, sans-serif" fill="var(--ok-text)">MongoDB, Couchbase,</text>
   <text x="945.172413793103" y="297.777777777778" text-anchor="middle" font-size="23.190036174568" font-family="Arial, sans-serif" fill="var(--ok-text)">Firestore, DocumentDB</text>
 
-  <rect x="40" y="340.740740740741" width="589.655172413793" height="279.259259259259" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.324555320337" filter="url(#shadow)"/>
+  <rect x="40" y="340.740740740741" width="589.655172413793" height="279.259259259259" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.324555320337"/>
   <text x="334.827586206897" y="389.074074074074" text-anchor="middle" font-size="31.622776601684" font-family="Arial, sans-serif" fill="var(--warn-text)">Column-Family</text>
   <text x="334.827586206897" y="432.037037037037" text-anchor="middle" font-size="21.081851067789" font-family="Arial, sans-serif" fill="var(--warn-text)">sparse wide rows, columns grouped by family</text>
   <text x="334.827586206897" y="480.37037037037" text-anchor="middle" font-size="21.081851067789" font-family="Courier New, monospace" fill="var(--warn-text)">user42 { profile: ...,</text>
@@ -27,7 +27,7 @@
   <text x="334.827586206897" y="571.666666666667" text-anchor="middle" font-size="23.190036174568" font-family="Arial, sans-serif" fill="var(--warn-text)">Cassandra, HBase,</text>
   <text x="334.827586206897" y="598.518518518518" text-anchor="middle" font-size="23.190036174568" font-family="Arial, sans-serif" fill="var(--warn-text)">ScyllaDB, Bigtable</text>
 
-  <rect x="650.344827586207" y="340.740740740741" width="589.655172413793" height="279.259259259259" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.324555320337" filter="url(#shadow)"/>
+  <rect x="650.344827586207" y="340.740740740741" width="589.655172413793" height="279.259259259259" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.324555320337"/>
   <text x="945.172413793103" y="389.074074074074" text-anchor="middle" font-size="31.622776601684" font-family="Arial, sans-serif" fill="var(--info-text)">Graph</text>
   <text x="945.172413793103" y="432.037037037037" text-anchor="middle" font-size="21.081851067789" font-family="Arial, sans-serif" fill="var(--info-text)">nodes + labeled edges, traversal-first</text>
   <text x="945.172413793103" y="480.37037037037" text-anchor="middle" font-size="21.081851067789" font-family="Courier New, monospace" fill="var(--info-text)">(:User)-[:FOLLOWS]-&gt;(:User)</text>
@@ -99,11 +99,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
 
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">

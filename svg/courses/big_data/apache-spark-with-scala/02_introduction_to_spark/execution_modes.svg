@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,21 +92,21 @@
   </defs>
 
   <!-- Row 1: three deploy modes -->
-  <rect x="40" y="40" width="383.193277310924" height="263.636363636364" rx="8.2497308797" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="383.193277310924" height="263.636363636364" rx="8.2497308797" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="231.596638655462" y="87.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.686759919174" font-weight="bold" fill="var(--primary-text)">Local Mode</text>
   <text x="231.596638655462" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--primary-text)">Single JVM</text>
   <text x="231.596638655462" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--primary-text)">local[*] = all cores</text>
   <text x="231.596638655462" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--primary-text)">No manager</text>
   <text x="231.596638655462" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.468245399437" font-weight="bold" fill="var(--primary-text)">Use for: dev, tests</text>
 
-  <rect x="443.361344537815" y="40" width="383.193277310924" height="263.636363636364" rx="8.2497308797" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.361344537815" y="40" width="383.193277310924" height="263.636363636364" rx="8.2497308797" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="634.957983193277" y="87.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.686759919174" font-weight="bold" fill="var(--ok-text)">Client Mode</text>
   <text x="634.957983193277" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--ok-text)">Driver on submit host</text>
   <text x="634.957983193277" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--ok-text)">Executors on cluster</text>
   <text x="634.957983193277" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--ok-text)">Gateway stays online</text>
   <text x="634.957983193277" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.468245399437" font-weight="bold" fill="var(--ok-text)">Use for: shells, notebooks</text>
 
-  <rect x="846.72268907563" y="40" width="383.193277310924" height="263.636363636364" rx="8.2497308797" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.72268907563" y="40" width="383.193277310924" height="263.636363636364" rx="8.2497308797" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1038.319327731092" y="87.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.686759919174" font-weight="bold" fill="var(--info-text)">Cluster Mode</text>
   <text x="1038.319327731092" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--info-text)">Driver in cluster</text>
   <text x="1038.319327731092" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--info-text)">Submitter disconnects</text>

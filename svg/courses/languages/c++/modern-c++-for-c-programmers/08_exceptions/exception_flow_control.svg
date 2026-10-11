@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="280" height="580" rx="6.398529361204" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="280" height="580" rx="6.398529361204" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180" y="85.490196748943" text-anchor="middle" font-size="21.328431204015" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">try</text>
   <text x="180" y="142.352941616494" text-anchor="middle" font-size="15.996322886139" fill="var(--primary-text)" font-family="Arial, sans-serif">Guarded region</text>
   <text x="180" y="187.843137296809" text-anchor="middle" font-size="15.996322886139" fill="var(--primary-text)" font-family="Arial, sans-serif">Code runs normally</text>
@@ -107,7 +102,7 @@
   <text x="180" y="449.41176432872" text-anchor="middle" font-size="15.996322886139" fill="var(--primary-text)" font-family="Arial, sans-serif">on the happy path</text>
   <text x="180" y="540.392156757978" text-anchor="middle" font-size="15.996322886139" fill="var(--primary-text)" font-family="Arial, sans-serif">Zero-cost model</text>
 
-  <rect x="340" y="40" width="280" height="580" rx="6.398529361204" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="280" height="580" rx="6.398529361204" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="480" y="85.490196748943" text-anchor="middle" font-size="21.328431204015" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">throw</text>
   <text x="480" y="142.352941616494" text-anchor="middle" font-size="15.996322886139" fill="var(--danger-text)" font-family="Arial, sans-serif">Allocate exception</text>
   <text x="480" y="187.843137296809" text-anchor="middle" font-size="15.996322886139" fill="var(--danger-text)" font-family="Arial, sans-serif">Copy into slot</text>
@@ -117,7 +112,7 @@
   <text x="480" y="449.41176432872" text-anchor="middle" font-size="15.996322886139" fill="var(--danger-text)" font-family="Arial, sans-serif">Match by type</text>
   <text x="480" y="540.392156757978" text-anchor="middle" font-size="15.996322886139" fill="var(--danger-text)" font-family="Arial, sans-serif">terminate if none</text>
 
-  <rect x="640" y="40" width="280" height="580" rx="6.398529361204" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="40" width="280" height="580" rx="6.398529361204" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="780" y="85.490196748943" text-anchor="middle" font-size="21.328431204015" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Unwind</text>
   <text x="780" y="142.352941616494" text-anchor="middle" font-size="15.996322886139" fill="var(--warn-text)" font-family="Arial, sans-serif">Walk the stack</text>
   <text x="780" y="187.843137296809" text-anchor="middle" font-size="15.996322886139" fill="var(--warn-text)" font-family="Arial, sans-serif">Pop each frame</text>
@@ -127,7 +122,7 @@
   <text x="780" y="449.41176432872" text-anchor="middle" font-size="15.996322886139" fill="var(--warn-text)" font-family="Arial, sans-serif">No leaks if disciplined</text>
   <text x="780" y="540.392156757978" text-anchor="middle" font-size="15.996322886139" fill="var(--warn-text)" font-family="Arial, sans-serif">Stops at catch</text>
 
-  <rect x="940" y="40" width="300" height="580" rx="6.398529361204" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="580" rx="6.398529361204" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1090" y="85.490196748943" text-anchor="middle" font-size="21.328431204015" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">catch</text>
   <text x="1090" y="142.352941616494" text-anchor="middle" font-size="15.996322886139" fill="var(--ok-text)" font-family="Arial, sans-serif">Handler executes</text>
   <text x="1090" y="187.843137296809" text-anchor="middle" font-size="15.996322886139" fill="var(--ok-text)" font-family="Arial, sans-serif">Exception bound</text>

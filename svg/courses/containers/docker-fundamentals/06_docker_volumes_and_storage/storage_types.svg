@@ -39,12 +39,11 @@
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
   </defs>
 
   <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Three storage options for containers</text>
 
-  <rect x="40" y="100" width="380" height="500" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="100" width="380" height="500" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="230" y="155" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Named Volume</text>
   <text x="230" y="195" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">-v pg-data:/var/lib/...</text>
   <text x="60" y="245" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Docker-managed</text>
@@ -55,7 +54,7 @@
   <text x="230" y="535" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Courier New, monospace">/var/lib/docker/volumes</text>
   <text x="230" y="570" text-anchor="middle" font-size="14" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">use: databases</text>
 
-  <rect x="450" y="100" width="380" height="500" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="450" y="100" width="380" height="500" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="640" y="155" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Bind Mount</text>
   <text x="640" y="195" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">-v "$(pwd)":/app</text>
   <text x="470" y="245" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Any host path</text>
@@ -65,7 +64,7 @@
   <text x="640" y="535" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Courier New, monospace">any host path</text>
   <text x="640" y="570" text-anchor="middle" font-size="14" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">use: dev source mounts</text>
 
-  <rect x="860" y="100" width="380" height="500" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="860" y="100" width="380" height="500" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="1050" y="155" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">tmpfs Mount</text>
   <text x="1050" y="195" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">--tmpfs /run/secrets</text>
   <text x="880" y="245" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; In-RAM filesystem</text>

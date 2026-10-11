@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,15 +91,15 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="48.2608" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Performance Tips</text>
-  <rect x="40" y="142.3529" width="540" height="204.7059" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="142.3529" width="540" height="204.7059" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="310" y="227.6471" text-anchor="middle" font-size="36.1955" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Fast ✓</text>
   <text x="310" y="278.8236" text-anchor="middle" font-size="30.163" font-family="Arial, sans-serif" fill="var(--ok-text)">• string_view for parameters</text>
   <text x="310" y="330" text-anchor="middle" font-size="30.163" font-family="Arial, sans-serif" fill="var(--ok-text)">• Structured bindings</text>
-  <rect x="700" y="142.3529" width="540" height="204.7059" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="700" y="142.3529" width="540" height="204.7059" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="970" y="227.6471" text-anchor="middle" font-size="36.1955" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">Potentially Slow ⚠</text>
   <text x="970" y="278.8236" text-anchor="middle" font-size="30.163" font-family="Arial, sans-serif" fill="var(--danger-text)">• std::any (type erasure)</text>
   <text x="970" y="330" text-anchor="middle" font-size="30.163" font-family="Arial, sans-serif" fill="var(--danger-text)">• std::variant visits</text>
-  <rect x="370" y="415.2941" width="540" height="204.7059" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="370" y="415.2941" width="540" height="204.7059" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="640" y="500.5882" text-anchor="middle" font-size="36.1955" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Zero-cost Abstractions</text>
   <text x="640" y="551.7647" text-anchor="middle" font-size="30.163" font-family="Arial, sans-serif" fill="var(--primary-text)">• constexpr if</text>
   <text x="640" y="602.9412" text-anchor="middle" font-size="30.163" font-family="Arial, sans-serif" fill="var(--primary-text)">• Template argument deduction</text>

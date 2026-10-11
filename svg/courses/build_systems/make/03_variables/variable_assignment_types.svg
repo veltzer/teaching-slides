@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -102,7 +97,7 @@
   <text x="1035" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--text)">Example</text>
   <line x1="40" y1="55.818181818182" x2="1240" y2="55.818181818182" stroke="var(--border)" stroke-width="1"/>
 
-  <rect x="40" y="71.636363636364" width="160" height="105.454545454545" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="71.636363636364" width="160" height="105.454545454545" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="120" y="140.181818181818" text-anchor="middle" font-family="Courier New, monospace" font-size="36.968782899778" font-weight="bold" fill="var(--primary-text)">=</text>
   <text x="305" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text)">Recursive</text>
   <text x="305" y="145.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text)">expand</text>
@@ -112,7 +107,7 @@
   <text x="850" y="113.818181818182" font-family="Courier New, monospace" font-size="15.403659541574" fill="var(--primary-accent)">CC = gcc</text>
   <text x="850" y="140.181818181818" font-family="Courier New, monospace" font-size="15.403659541574" fill="var(--primary-accent)">CFLAGS = $(EXTRA)</text>
 
-  <rect x="40" y="192.909090909091" width="160" height="105.454545454545" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="192.909090909091" width="160" height="105.454545454545" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="120" y="261.454545454545" text-anchor="middle" font-family="Courier New, monospace" font-size="36.968782899778" font-weight="bold" fill="var(--primary-text)">:=</text>
   <text x="305" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text)">Simple</text>
   <text x="305" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text)">expand</text>
@@ -122,7 +117,7 @@
   <text x="850" y="235.090909090909" font-family="Courier New, monospace" font-size="15.403659541574" fill="var(--primary-accent)">SRC := $(wildcard *.c)</text>
   <text x="850" y="261.454545454545" font-family="Courier New, monospace" font-size="15.403659541574" fill="var(--primary-accent)">OBJ := $(SRC:.c=.o)</text>
 
-  <rect x="40" y="314.181818181818" width="160" height="105.454545454545" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="314.181818181818" width="160" height="105.454545454545" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="120" y="382.727272727273" text-anchor="middle" font-family="Courier New, monospace" font-size="36.968782899778" font-weight="bold" fill="var(--ok-text)">?=</text>
   <text x="305" y="361.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text)">Conditional</text>
   <text x="305" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text)">assign</text>
@@ -132,7 +127,7 @@
   <text x="850" y="356.363636363636" font-family="Courier New, monospace" font-size="15.403659541574" fill="var(--ok-accent)">CC ?= gcc</text>
   <text x="850" y="388" font-family="Courier New, monospace" font-size="15.403659541574" fill="var(--text-muted)">make CC=clang</text>
 
-  <rect x="40" y="435.454545454545" width="160" height="105.454545454545" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="435.454545454545" width="160" height="105.454545454545" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="120" y="504" text-anchor="middle" font-family="Courier New, monospace" font-size="36.968782899778" font-weight="bold" fill="var(--warn-text)">+=</text>
   <text x="305" y="488.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text)">Append</text>
   <text x="615" y="477.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Append with space</text>
@@ -141,6 +136,6 @@
   <text x="850" y="498.727272727273" font-family="Courier New, monospace" font-size="15.403659541574" fill="var(--warn-accent)">CFLAGS += -O2</text>
   <text x="850" y="525.090909090909" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-faint)">= -Wall -O2</text>
 
-  <rect x="40" y="562" width="1200" height="58" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="562" width="1200" height="58" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="598.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--primary-text)">Prefer := — faster, no surprise re-expansion</text>
 </svg>

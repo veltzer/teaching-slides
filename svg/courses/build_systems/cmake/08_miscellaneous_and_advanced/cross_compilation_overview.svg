@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="370" height="580" rx="6.462198078413" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="370" height="580" rx="6.462198078413" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="225" y="92.1999996436" text-anchor="middle" font-size="23.694725248285" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Host</text>
   <text x="225" y="132.8000000864" text-anchor="middle" font-size="17.232527169872" fill="var(--primary-text)" font-family="Arial, sans-serif">Machine that runs CMake</text>
   <text x="225" y="190.8000004104" text-anchor="middle" font-size="17.232527169872" fill="var(--primary-text)" font-family="Arial, sans-serif">x86_64 Linux laptop</text>
@@ -108,7 +103,7 @@
   <text x="225" y="480.7999998704" text-anchor="middle" font-size="17.232527169872" fill="var(--primary-text)" font-family="Arial, sans-serif">-DCMAKE_TOOLCHAIN_FILE</text>
   <text x="225" y="550.4000004752" text-anchor="middle" font-size="17.232527169872" fill="var(--primary-text)" font-family="Arial, sans-serif">points at sysroot</text>
 
-  <rect x="455" y="40" width="370" height="580" rx="6.462198078413" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="455" y="40" width="370" height="580" rx="6.462198078413" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="92.1999996436" text-anchor="middle" font-size="23.694725248285" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Toolchain</text>
   <text x="640" y="132.8000000864" text-anchor="middle" font-size="17.232527169872" fill="var(--warn-text)" font-family="Arial, sans-serif">Cross compiler + sysroot</text>
   <text x="640" y="190.8000004104" text-anchor="middle" font-size="17.232527169872" fill="var(--warn-text)" font-family="Arial, sans-serif">aarch64-linux-gnu-gcc</text>
@@ -119,7 +114,7 @@
   <text x="640" y="469.1999995896" text-anchor="middle" font-size="17.232527169872" fill="var(--warn-text)" font-family="Arial, sans-serif">find_root rules</text>
   <text x="640" y="550.4000004752" text-anchor="middle" font-size="17.232527169872" fill="var(--warn-text)" font-family="Arial, sans-serif">Reproducible builds</text>
 
-  <rect x="870" y="40" width="370" height="580" rx="6.462198078413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="870" y="40" width="370" height="580" rx="6.462198078413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1055" y="92.1999996436" text-anchor="middle" font-size="23.694725248285" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Target</text>
   <text x="1055" y="132.8000000864" text-anchor="middle" font-size="17.232527169872" fill="var(--ok-text)" font-family="Arial, sans-serif">Device that runs output</text>
   <text x="1055" y="190.8000004104" text-anchor="middle" font-size="17.232527169872" fill="var(--ok-text)" font-family="Arial, sans-serif">ARM board, MCU</text>

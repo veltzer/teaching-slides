@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -104,28 +99,28 @@
   <text x="950" y="71.071428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="18.318608805568" font-weight="bold" fill="var(--text)">persist(level)</text>
   <text x="950" y="96.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--text-muted)">explicit level, replication, off-heap</text>
 
-  <rect x="40" y="153.928571428571" width="290" height="227.857142857143" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="153.928571428571" width="290" height="227.857142857143" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="185" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--primary-text)">MEMORY_ONLY</text>
   <text x="185" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">deserialized</text>
   <text x="185" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">fastest read</text>
   <text x="185" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">recompute on miss</text>
   <text x="185" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" font-style="italic" fill="var(--primary-text)">small hot data</text>
 
-  <rect x="340" y="153.928571428571" width="290" height="227.857142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="153.928571428571" width="290" height="227.857142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="485" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--ok-text)">MEMORY_AND_DISK</text>
   <text x="485" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">spill to disk</text>
   <text x="485" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">DataFrame default</text>
   <text x="485" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">no recompute</text>
   <text x="485" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" font-style="italic" fill="var(--ok-text)">safe default</text>
 
-  <rect x="640" y="153.928571428571" width="290" height="227.857142857143" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="153.928571428571" width="290" height="227.857142857143" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="785" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">MEMORY_ONLY_SER</text>
   <text x="785" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">serialized bytes</text>
   <text x="785" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">compact, CPU cost</text>
   <text x="785" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">lower GC pressure</text>
   <text x="785" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" font-style="italic" fill="var(--warn-text)">tight heap</text>
 
-  <rect x="940" y="153.928571428571" width="300" height="227.857142857143" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="153.928571428571" width="300" height="227.857142857143" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1090" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-text)">DISK_ONLY / _2</text>
   <text x="1090" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">disk only</text>
   <text x="1090" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">_2 replicates</text>

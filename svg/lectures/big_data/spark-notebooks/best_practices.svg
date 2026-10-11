@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-size="26.699677" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Spark Notebook Best Practices</text>
 
-  <rect x="40" y="82.181818" width="390" height="253.090909" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="82.181818" width="390" height="253.090909" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="235" y="129.636364" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Clear Documentation</text>
   <text x="235" y="171.818182" text-anchor="middle" font-size="15.40366" fill="var(--primary-text)" font-family="Arial, sans-serif">Markdown per step</text>
   <text x="235" y="203.454545" text-anchor="middle" font-size="15.40366" fill="var(--primary-text)" font-family="Arial, sans-serif">State I/O</text>
@@ -106,7 +101,7 @@
   <text x="235" y="266.727273" text-anchor="middle" font-size="15.40366" fill="var(--primary-text)" font-family="Arial, sans-serif">Link source</text>
   <text x="235" y="303.636364" text-anchor="middle" font-size="14.376749" font-style="italic" fill="var(--primary-text)" font-family="Arial, sans-serif">Readers win</text>
 
-  <rect x="445" y="82.181818" width="390" height="253.090909" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="82.181818" width="390" height="253.090909" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="129.636364" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Memory Management</text>
   <text x="640" y="171.818182" text-anchor="middle" font-size="15.40366" fill="var(--info-text)" font-family="Arial, sans-serif">cache() hot only</text>
   <text x="640" y="203.454545" text-anchor="middle" font-size="15.40366" fill="var(--info-text)" font-family="Arial, sans-serif">unpersist()</text>
@@ -114,7 +109,7 @@
   <text x="640" y="266.727273" text-anchor="middle" font-size="15.40366" fill="var(--info-text)" font-family="Arial, sans-serif">Avoid toPandas()</text>
   <text x="640" y="303.636364" text-anchor="middle" font-size="14.376749" font-style="italic" fill="var(--info-text)" font-family="Arial, sans-serif">Watch Spark UI</text>
 
-  <rect x="850" y="82.181818" width="390" height="253.090909" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="82.181818" width="390" height="253.090909" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1045" y="129.636364" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Code Organization</text>
   <text x="1045" y="171.818182" text-anchor="middle" font-size="15.40366" fill="var(--ok-text)" font-family="Arial, sans-serif">Functions in .py</text>
   <text x="1045" y="203.454545" text-anchor="middle" font-size="15.40366" fill="var(--ok-text)" font-family="Arial, sans-serif">One step per cell</text>
@@ -122,7 +117,7 @@
   <text x="1045" y="266.727273" text-anchor="middle" font-size="15.40366" fill="var(--ok-text)" font-family="Arial, sans-serif">Pin versions</text>
   <text x="1045" y="303.636364" text-anchor="middle" font-size="14.376749" font-style="italic" fill="var(--ok-text)" font-family="Arial, sans-serif">Not a scratchpad</text>
 
-  <rect x="40" y="366.909091" width="600" height="253.090909" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="366.909091" width="600" height="253.090909" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="340" y="414.363636" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Reproducibility</text>
   <text x="340" y="456.545455" text-anchor="middle" font-size="15.40366" fill="var(--warn-text)" font-family="Arial, sans-serif">Run All before sharing</text>
   <text x="340" y="488.181818" text-anchor="middle" font-size="15.40366" fill="var(--warn-text)" font-family="Arial, sans-serif">Parameterise paths/dates</text>
@@ -130,7 +125,7 @@
   <text x="340" y="551.454545" text-anchor="middle" font-size="15.40366" fill="var(--warn-text)" font-family="Arial, sans-serif">Version notebook + inputs</text>
   <text x="340" y="588.363636" text-anchor="middle" font-size="14.376749" font-style="italic" fill="var(--warn-text)" font-family="Arial, sans-serif">No re-run = a guess</text>
 
-  <rect x="660" y="366.909091" width="580" height="253.090909" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="366.909091" width="580" height="253.090909" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="950" y="414.363636" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Move to Production</text>
   <text x="950" y="456.545455" text-anchor="middle" font-size="15.40366" fill="var(--danger-text)" font-family="Arial, sans-serif">Promote to job script</text>
   <text x="950" y="488.181818" text-anchor="middle" font-size="15.40366" fill="var(--danger-text)" font-family="Arial, sans-serif">Schedule via Airflow</text>

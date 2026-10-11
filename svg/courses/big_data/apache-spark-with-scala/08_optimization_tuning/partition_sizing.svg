@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="390" height="309.333333333333" rx="6.306459273747" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="390" height="309.333333333333" rx="6.306459273747" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="235" y="84.190476190477" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.02153091249" font-weight="bold" fill="var(--danger-text)">Too Few</text>
   <text x="235" y="128.380952380953" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--danger-text)">Idle cores</text>
   <text x="235" y="161.523809523809" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--danger-text)">Giant tasks, OOM</text>
@@ -105,7 +100,7 @@
   <text x="235" y="227.809523809524" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--danger-text)">Slow recovery</text>
   <text x="235" y="283.047619047619" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" font-style="italic" fill="var(--danger-text)">fix: repartition(N)</text>
 
-  <rect x="445" y="40" width="390" height="309.333333333333" rx="6.306459273747" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="40" width="390" height="309.333333333333" rx="6.306459273747" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="84.190476190477" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.02153091249" font-weight="bold" fill="var(--ok-text)">Goldilocks</text>
   <text x="640" y="128.380952380953" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--ok-text)">128-256 MB each</text>
   <text x="640" y="161.523809523809" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--ok-text)">2-10 sec per task</text>
@@ -113,7 +108,7 @@
   <text x="640" y="227.809523809524" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--ok-text)">Fits in memory</text>
   <text x="640" y="283.047619047619" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" font-style="italic" fill="var(--ok-text)">AQE targets this</text>
 
-  <rect x="850" y="40" width="390" height="309.333333333333" rx="6.306459273747" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="40" width="390" height="309.333333333333" rx="6.306459273747" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1045" y="84.190476190477" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.02153091249" font-weight="bold" fill="var(--warn-text)">Too Many</text>
   <text x="1045" y="128.380952380953" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--warn-text)">Scheduler overhead</text>
   <text x="1045" y="161.523809523809" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--warn-text)">Tiny tasks</text>

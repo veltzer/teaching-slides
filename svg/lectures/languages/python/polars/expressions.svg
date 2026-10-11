@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
 
   <!-- One expression on top -->
-  <rect x="390" y="40" width="500" height="100" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="390" y="40" width="500" height="100" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="85" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">pl.col("salary").mean()</text>
   <text x="640" y="120" text-anchor="middle" font-size="15" fill="var(--info-text)" font-family="Arial, sans-serif">an expression: a description of work, not a result</text>
 
@@ -108,19 +103,19 @@
   <line x1="800" y1="145" x2="1095" y2="295" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
 
   <!-- The four contexts -->
-  <rect x="40" y="300" width="270" height="120" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="300" width="270" height="120" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="175" y="352" text-anchor="middle" font-size="21" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">select</text>
   <text x="175" y="390" text-anchor="middle" font-size="15" fill="var(--primary-text)" font-family="Arial, sans-serif">picks columns</text>
 
-  <rect x="350" y="300" width="270" height="120" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350" y="300" width="270" height="120" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="485" y="352" text-anchor="middle" font-size="21" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">filter</text>
   <text x="485" y="390" text-anchor="middle" font-size="15" fill="var(--primary-text)" font-family="Arial, sans-serif">keeps rows</text>
 
-  <rect x="660" y="300" width="270" height="120" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="300" width="270" height="120" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="795" y="352" text-anchor="middle" font-size="21" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">with_columns</text>
   <text x="795" y="390" text-anchor="middle" font-size="15" fill="var(--primary-text)" font-family="Arial, sans-serif">adds columns</text>
 
-  <rect x="970" y="300" width="270" height="120" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="970" y="300" width="270" height="120" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1105" y="352" text-anchor="middle" font-size="21" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">group_by.agg</text>
   <text x="1105" y="390" text-anchor="middle" font-size="15" fill="var(--primary-text)" font-family="Arial, sans-serif">aggregates groups</text>
 
@@ -130,7 +125,7 @@
   <line x1="795" y1="420" x2="795" y2="516" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
   <line x1="1105" y1="420" x2="1105" y2="516" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
 
-  <rect x="40" y="520" width="1200" height="100" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="520" width="1200" height="100" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="565" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Write it once — every context runs it in parallel</text>
   <text x="640" y="598" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">one expression language across the whole API</text>
 </svg>

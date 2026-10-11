@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,11 +91,11 @@
     </marker>
   </defs>
 
-  <rect x="440" y="40" width="400" height="47.027027027027" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="440" y="40" width="400" height="47.027027027027" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="71.351351351351" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--primary-text)">Power On / Reset</text>
   <line x1="640" y1="87.027027027027" x2="640" y2="113.153153153153" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="390" y="118.378378378378" width="500" height="57.477477477477" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="390" y="118.378378378378" width="500" height="57.477477477477" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.356391152437" font-weight="bold" fill="var(--primary-text)">1. CPU Init</text>
   <text x="640" y="165.405405405405" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">vectors, cache, privileged mode</text>
   <line x1="640" y1="175.855855855856" x2="640" y2="201.981981981982" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
@@ -125,11 +120,11 @@
   <text x="640" y="520.720720720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">GIC / NVIC, priorities</text>
   <line x1="640" y1="531.171171171171" x2="640" y2="557.297297297297" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="390" y="562.522522522522" width="500" height="57.477477477477" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="390" y="562.522522522522" width="500" height="57.477477477477" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="588.648648648649" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.356391152437" font-weight="bold" fill="var(--primary-text)">6. Kernel Handoff</text>
   <text x="640" y="609.54954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">jump + pass device tree</text>
 
-  <rect x="40" y="118.378378378378" width="340" height="229.90990990991" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="118.378378378378" width="340" height="229.90990990991" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="210" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.33411670541" font-weight="bold" fill="var(--primary-text)">BSP components</text>
   <text x="60" y="196.756756756757" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--primary-text)">board/vendor/board.c</text>
   <text x="60" y="228.108108108108" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--primary-text)">arch/arm/mach-xxx/</text>

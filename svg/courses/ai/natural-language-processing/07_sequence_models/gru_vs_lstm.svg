@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="595" height="580" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="595" height="580" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="337" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--primary-text)">LSTM</text>
   <text x="337" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">three gates and a separate cell state</text>
 
@@ -117,7 +112,7 @@
   <text x="337" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">historical default for tagging,</text>
   <text x="337" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">translation, generation</text>
 
-  <rect x="650" y="40" width="590" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="590" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="945" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--ok-text)">GRU</text>
   <text x="945" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">two gates and a single hidden state</text>
 

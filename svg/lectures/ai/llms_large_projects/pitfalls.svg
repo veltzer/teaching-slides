@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,28 +91,28 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="320" y="92.727272727273" text-anchor="middle" font-size="21.565123358204" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">big-bang refactor</text>
   <text x="320" y="129.636363636364" text-anchor="middle" font-size="16.430570177679" fill="var(--danger-text)" font-family="Arial, sans-serif">thousands of unreviewable lines</text>
-  <rect x="70" y="177.090909090909" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="177.090909090909" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="320" y="216.109090909091" text-anchor="middle" font-size="15.403659541574" fill="var(--ok-text)" font-family="Arial, sans-serif">fix: slice by seam, review each step</text>
 
-  <rect x="680" y="40" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="680" y="40" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="960" y="92.727272727273" text-anchor="middle" font-size="21.565123358204" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">hallucinated internals</text>
   <text x="960" y="129.636363636364" text-anchor="middle" font-size="16.430570177679" fill="var(--danger-text)" font-family="Arial, sans-serif">calls helpers that do not exist here</text>
-  <rect x="710" y="177.090909090909" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="710" y="177.090909090909" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="960" y="216.109090909091" text-anchor="middle" font-size="15.403659541574" fill="var(--ok-text)" font-family="Arial, sans-serif">fix: ground in real files; the build catches the rest</text>
 
-  <rect x="40" y="314.181818181818" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="314.181818181818" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="320" y="366.909090909091" text-anchor="middle" font-size="21.565123358204" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">architecture erosion</text>
   <text x="320" y="403.818181818182" text-anchor="middle" font-size="16.430570177679" fill="var(--danger-text)" font-family="Arial, sans-serif">each merge is fine, the sum drifts</text>
-  <rect x="70" y="451.272727272727" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="451.272727272727" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="320" y="490.290909090909" text-anchor="middle" font-size="15.403659541574" fill="var(--ok-text)" font-family="Arial, sans-serif">fix: encode the rules in instructions and linters</text>
 
-  <rect x="680" y="314.181818181818" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="680" y="314.181818181818" width="560" height="232" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="960" y="366.909090909091" text-anchor="middle" font-size="21.565123358204" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">trust creep</text>
   <text x="960" y="403.818181818182" text-anchor="middle" font-size="16.430570177679" fill="var(--danger-text)" font-family="Arial, sans-serif">week ten: skim and merge</text>
-  <rect x="710" y="451.272727272727" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="710" y="451.272727272727" width="500" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="960" y="490.290909090909" text-anchor="middle" font-size="15.403659541574" fill="var(--ok-text)" font-family="Arial, sans-serif">fix: keep diffs small; review is never optional</text>
 
   <text x="640" y="620" text-anchor="middle" font-size="18.484391449889" fill="var(--text-muted)" font-family="Arial, sans-serif">All four are failures of method, not failures of the model</text>

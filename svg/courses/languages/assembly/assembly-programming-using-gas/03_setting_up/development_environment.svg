@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="560" height="55.478260869565" rx="6.026030490983" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="560" height="55.478260869565" rx="6.026030490983" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="320" y="76.313043478261" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.095445133606" font-weight="bold" fill="var(--primary-text)">Development Tools</text>
 
   <rect x="40" y="115.652173913043" width="160" height="105.913043478261" rx="6.026030490983" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -123,7 +118,7 @@
   <text x="480" y="287.130434782609" text-anchor="middle" font-family="Courier New, monospace" font-size="18.07809147295" font-weight="bold" fill="var(--ok-accent)">objdump</text>
   <text x="480" y="327.478260869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.060737812294" fill="var(--text)">Disassembler</text>
 
-  <rect x="660" y="40" width="580" height="55.478260869565" rx="6.026030490983" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="40" width="580" height="55.478260869565" rx="6.026030490983" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950" y="76.313043478261" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.095445133606" font-weight="bold" fill="var(--ok-text)">Compile / Link / Debug</text>
 
   <rect x="720" y="125.739130434783" width="160" height="80.695652173913" rx="6.026030490983" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -155,7 +150,7 @@
   <text x="60" y="463.652173913043" font-family="Courier New, monospace" font-size="15.065076227458" fill="var(--primary-accent)">sudo apt install build-essential gdb binutils</text>
   <text x="60" y="498.95652173913" font-family="Arial, sans-serif" font-size="14.060737812294" fill="var(--text-muted)">Provides gcc, as, ld, objdump, make.</text>
 
-  <rect x="960" y="125.739130434783" width="280" height="292.521739130435" rx="6.026030490983" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="960" y="125.739130434783" width="280" height="292.521739130435" rx="6.026030490983" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1100" y="161.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.073753057786" font-weight="bold" fill="var(--warn-text)">gcc as driver</text>
   <text x="980" y="201.391304347826" font-family="Arial, sans-serif" font-size="14.060737812294" fill="var(--warn-text)">Invokes as and ld:</text>
   <text x="980" y="241.739130434783" font-family="Courier New, monospace" font-size="13.056399397131" fill="var(--warn-text)">gcc -o hello hello.s</text>

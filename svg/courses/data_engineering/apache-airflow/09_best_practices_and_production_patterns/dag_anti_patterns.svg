@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">DAG Anti-Patterns to Avoid</text>
 
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="185" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Top-Level API Calls</text>
   <text x="60" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Network in DAG file</text>
   <text x="60" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Slow parser</text>
@@ -106,7 +101,7 @@
   <text x="60" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--danger-text)">Move into tasks</text>
   <text x="60" y="340" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Dynamic loops only</text>
 
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="490" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Long-Running Tasks</text>
   <text x="365" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Hours per task</text>
   <text x="365" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Hard to retry</text>
@@ -115,7 +110,7 @@
   <text x="365" y="290" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">Break into pieces</text>
   <text x="365" y="340" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Use deferrable mode</text>
 
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="795" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Hardcoded Secrets</text>
   <text x="670" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Tokens in DAG code</text>
   <text x="670" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Plain text in repo</text>
@@ -124,7 +119,7 @@
   <text x="670" y="280" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Or a Secret Backend</text>
   <text x="670" y="320" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">Vault, AWS Secrets</text>
 
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">No Idempotency</text>
   <text x="975" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Reruns double up</text>
   <text x="975" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Append without dedup</text>

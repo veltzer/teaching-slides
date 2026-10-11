@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="590" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="590" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="335" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Implicit Conventions</text>
   <text x="335" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">patterns never written down</text>
   <text x="335" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">naming, folder layout</text>
@@ -104,7 +99,7 @@
   <text x="335" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">preferred helpers</text>
   <text x="335" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--warn-text)">AI sees code, not rules</text>
 
-  <rect x="650" y="40" width="590" height="270" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="590" height="270" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="945" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Cross-Module Deps</text>
   <text x="945" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">changes here break there</text>
   <text x="945" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">shared types, schemas</text>
@@ -112,19 +107,19 @@
   <text x="945" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">coupling through data</text>
   <text x="945" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--info-text)">local context not enough</text>
 
-  <rect x="40" y="340" width="390" height="280" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="340" width="390" height="280" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="235" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Looks Correct Locally</text>
   <text x="235" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">compiles, tests pass</text>
   <text x="235" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">matches visible code</text>
   <text x="235" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--danger-text)">ignores house style</text>
 
-  <rect x="445" y="340" width="390" height="280" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="340" width="390" height="280" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Breaks Unseen Modules</text>
   <text x="640" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">other callers rely</text>
   <text x="640" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">on old contract</text>
   <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--danger-text)">fails at runtime</text>
 
-  <rect x="850" y="340" width="390" height="280" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="340" width="390" height="280" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1045" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Fix: Surface the Rules</text>
   <text x="1045" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">style guides in context</text>
   <text x="1045" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">reference callers</text>

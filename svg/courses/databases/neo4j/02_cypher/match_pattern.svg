@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Cypher Pattern Matching</text>
 
-  <rect x="40" y="102.142857142857" width="1200" height="103.571428571429" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="102.142857142857" width="1200" height="103.571428571429" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.961561547682" font-weight="bold" fill="var(--info-text)">MATCH (a:Person)-[:KNOWS]-&gt;(b:Person)-[:WORKS_AT]-&gt;(c:Company)</text>
   <text x="640" y="169.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--info-text)">WHERE a.name = "Alice" AND c.industry = "tech"</text>
   <text x="640" y="193.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--info-text)">RETURN b.name, c.name</text>
@@ -118,7 +113,7 @@
   <text x="682.857142857143" y="423.214285714286" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--text)">-[:KNOWS*1..3]-&gt; depth 1-3</text>
   <text x="682.857142857143" y="449.107142857143" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--text)">-[r:KNOWS|FRIEND]-&gt; alternatives</text>
 
-  <rect x="40" y="495.714285714286" width="1200" height="124.285714285714" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="495.714285714286" width="1200" height="124.285714285714" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="526.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--warn-text)">Engine traverses index-free</text>
   <text x="640" y="552.678571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">Each node knows its edges directly — pointer-following</text>
   <text x="640" y="578.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">No index lookup per hop — constant time per traversal step</text>

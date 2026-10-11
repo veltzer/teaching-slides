@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Variables and Drilldown Flow</text>
 
-  <rect x="40" y="102.142857142857" width="1200" height="62.142857142857" rx="8.427360687859" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="102.142857142857" width="1200" height="62.142857142857" rx="8.427360687859" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="82.857142857143" y="139.428571428571" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">Environment: [prod ▾]</text>
   <text x="361.428571428571" y="139.428571428571" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">Region: [us-east ▾]</text>
   <text x="640" y="139.428571428571" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">Service: [api ▾]</text>
@@ -105,23 +100,23 @@
 
   <text x="640" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">Substituted into every panel query</text>
 
-  <rect x="40" y="236.785714285714" width="578.571428571429" height="62.142857142857" rx="6.320520515894" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="40" y="236.785714285714" width="578.571428571429" height="62.142857142857" rx="6.320520515894" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="1"/>
   <text x="329.285714285714" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">rate(http_requests{env="$env", region="$region"}[5m])</text>
 
-  <rect x="661.428571428571" y="236.785714285714" width="578.571428571429" height="62.142857142857" rx="6.320520515894" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="661.428571428571" y="236.785714285714" width="578.571428571429" height="62.142857142857" rx="6.320520515894" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="1"/>
   <text x="950.714285714286" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">latency p99 by service{env="$env"}</text>
 
   <text x="640" y="350.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--text)">Drilldown links</text>
 
-  <rect x="40" y="381.785714285714" width="342.857142857143" height="103.571428571429" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="381.785714285714" width="342.857142857143" height="103.571428571429" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="211.428571428571" y="418.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--primary-text)">Service overview</text>
   <text x="211.428571428571" y="443.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">click on api row →</text>
 
-  <rect x="468.571428571428" y="381.785714285714" width="342.857142857143" height="103.571428571429" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="468.571428571428" y="381.785714285714" width="342.857142857143" height="103.571428571429" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="418.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--warn-text)">api detail dashboard</text>
   <text x="640" y="443.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--warn-text)">env, region pre-filled</text>
 
-  <rect x="897.142857142857" y="381.785714285714" width="342.857142857143" height="103.571428571429" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="897.142857142857" y="381.785714285714" width="342.857142857143" height="103.571428571429" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1068.571428571428" y="418.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" font-weight="bold" fill="var(--ok-text)">trace search</text>
   <text x="1068.571428571428" y="443.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--ok-text)">click on slow request →</text>
 

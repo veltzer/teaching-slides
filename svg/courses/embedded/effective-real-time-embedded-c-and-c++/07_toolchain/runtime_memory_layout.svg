@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <text x="40" y="40" font-size="18.58803" fill="var(--text-faint)" font-family="Courier New, monospace">High address (RAM)</text>
-  <rect x="203.636218" y="49.897667" width="872.727273" height="87.099" rx="8.021071" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="203.636218" y="49.897667" width="872.727273" height="87.099" rx="8.021071" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="530.909091" y="99.385632" text-anchor="middle" font-size="30.205616" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Stack  ↓  (grows down)</text>
   <text x="1021.818182" y="94.436921" text-anchor="middle" font-size="17.426312" fill="var(--primary-accent)" font-family="Courier New, monospace">local vars, return addr</text>
   <rect x="203.636218" y="142.93507" width="872.727273" height="104.914702" rx="8.021071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="5.3333 2.6667"/>
@@ -113,7 +108,7 @@
   <text x="530.909091" y="489.351561" text-anchor="middle" font-size="30.205616" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">.data</text>
   <text x="1021.818182" y="484.402728" text-anchor="middle" font-size="17.426312" fill="var(--text-muted)" font-family="Courier New, monospace">initialized globals</text>
   <text x="40" y="542.798667" font-size="18.58803" fill="var(--text-faint)" font-family="Courier New, monospace">Low address (RAM)</text>
-  <rect x="40" y="564.573386" width="1200" height="55.426614" rx="8.021071" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="564.573386" width="1200" height="55.426614" rx="8.021071" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="592.286754" text-anchor="middle" font-size="20.911601" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Stack overflow: stack grows into heap — silent data corruption in embedded systems</text>
   <text x="640" y="612.081842" text-anchor="middle" font-size="17.426312" fill="var(--text-muted)" font-family="Arial, sans-serif">Use MPU stack guard regions or canary values to detect overflow early</text>
 </svg>

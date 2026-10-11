@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,28 +90,28 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="417.7778" y="40" width="444.4445" height="106.2827" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="417.7778" y="40" width="444.4445" height="106.2827" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="640.0001" y="109.843" text-anchor="middle" font-size="23.9967" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Async Best Practices</text>
   <line x1="528.8888" y1="146.2827" x2="239.9999" y2="200.9425" stroke="var(--text)" stroke-width="2"/>
   <line x1="751.1112" y1="146.2827" x2="1040.0001" y2="200.9425" stroke="var(--text)" stroke-width="2"/>
   <line x1="528.8888" y1="146.2827" x2="239.9999" y2="404.3979" stroke="var(--text)" stroke-width="2"/>
   <line x1="751.1112" y1="146.2827" x2="1040.0001" y2="404.3979" stroke="var(--text)" stroke-width="2"/>
-  <rect x="40" y="185.7592" width="400" height="136.6492" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="185.7592" width="400" height="136.6492" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="239.9999" y="237.3822" text-anchor="middle" font-size="19.9971" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Never block in async</text>
   <text x="239.9999" y="279.8953" text-anchor="middle" font-size="19.9971" font-family="Arial, sans-serif" fill="var(--primary-text)">Use spawn_blocking() for</text>
   <text x="239.9999" y="313.2985" text-anchor="middle" font-size="19.9971" font-family="Arial, sans-serif" fill="var(--primary-text)">CPU-heavy or sync I/O work</text>
-  <rect x="840" y="185.7592" width="400" height="136.6492" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="840" y="185.7592" width="400" height="136.6492" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="1040.0001" y="237.3822" text-anchor="middle" font-size="19.9971" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">Use select! wisely</text>
   <text x="1040.0001" y="279.8953" text-anchor="middle" font-size="19.9971" font-family="Arial, sans-serif" fill="var(--info-text)">Race futures, cancel losers</text>
   <text x="1040.0001" y="313.2985" text-anchor="middle" font-size="19.9971" font-family="Arial, sans-serif" fill="var(--info-text)">Great for timeouts</text>
-  <rect x="40" y="389.2146" width="400" height="136.6492" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="389.2146" width="400" height="136.6492" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="239.9999" y="440.8377" text-anchor="middle" font-size="19.9971" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Bound concurrency</text>
   <text x="239.9999" y="483.3508" text-anchor="middle" font-size="19.9971" font-family="Arial, sans-serif" fill="var(--ok-text)">Use Semaphore or buffered</text>
   <text x="239.9999" y="516.7539" text-anchor="middle" font-size="19.9971" font-family="Arial, sans-serif" fill="var(--ok-text)">streams to limit parallelism</text>
-  <rect x="840" y="389.2146" width="400" height="136.6492" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="840" y="389.2146" width="400" height="136.6492" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="1040.0001" y="440.8377" text-anchor="middle" font-size="19.9971" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Graceful shutdown</text>
   <text x="1040.0001" y="483.3508" text-anchor="middle" font-size="19.9971" font-family="Arial, sans-serif" fill="var(--warn-text)">Handle Ctrl+C signals</text>
   <text x="1040.0001" y="516.7539" text-anchor="middle" font-size="19.9971" font-family="Arial, sans-serif" fill="var(--warn-text)">Drain tasks before exit</text>
-  <rect x="306.6666" y="565.3403" width="666.6667" height="54.6597" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="306.6666" y="565.3403" width="666.6667" height="54.6597" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="640.0001" y="604.8168" text-anchor="middle" font-size="19.9971" font-family="Arial, sans-serif" fill="var(--danger-text)">Keep async tasks small; use channels for coordination between tasks</text>
 </svg>

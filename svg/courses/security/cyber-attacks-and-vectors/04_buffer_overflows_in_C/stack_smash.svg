@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,23 +94,23 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Stack Buffer Overflow</text>
 
-  <rect x="40" y="87.889908256881" width="558.620689655172" height="532.110091743119" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="558.620689655172" height="532.110091743119" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="319.310344827586" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--info-text)">Stack frame (before)</text>
-  <rect x="81.379310344828" y="151.743119266055" width="475.862068965517" height="53.211009174312" rx="4.196984500696" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <rect x="81.379310344828" y="151.743119266055" width="475.862068965517" height="53.211009174312" rx="4.196984500696" fill="url(#grad-warn)"/>
   <text x="319.310344827586" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">return address</text>
-  <rect x="81.379310344828" y="215.596330275229" width="475.862068965517" height="53.211009174312" rx="4.196984500696" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <rect x="81.379310344828" y="215.596330275229" width="475.862068965517" height="53.211009174312" rx="4.196984500696" fill="url(#grad-warn)"/>
   <text x="319.310344827586" y="247.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">saved frame pointer</text>
-  <rect x="81.379310344828" y="279.449541284404" width="475.862068965517" height="297.981651376147" rx="4.196984500696" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <rect x="81.379310344828" y="279.449541284404" width="475.862068965517" height="297.981651376147" rx="4.196984500696" fill="url(#grad-ok)"/>
   <text x="319.310344827586" y="322.018348623853" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">char buf[256]</text>
   <text x="319.310344827586" y="353.94495412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--ok-text)">user input lands here</text>
 
-  <rect x="660.689655172414" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660.689655172414" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="950.344827586207" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--danger-text)">After overflow</text>
-  <rect x="702.068965517241" y="151.743119266055" width="496.551724137931" height="53.211009174312" rx="4.196984500696" fill="url(#grad-danger)" filter="url(#shadow)"/>
+  <rect x="702.068965517241" y="151.743119266055" width="496.551724137931" height="53.211009174312" rx="4.196984500696" fill="url(#grad-danger)"/>
   <text x="950.344827586207" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--danger-text)">attacker's address!</text>
-  <rect x="702.068965517241" y="215.596330275229" width="496.551724137931" height="53.211009174312" rx="4.196984500696" fill="url(#grad-danger)" filter="url(#shadow)"/>
+  <rect x="702.068965517241" y="215.596330275229" width="496.551724137931" height="53.211009174312" rx="4.196984500696" fill="url(#grad-danger)"/>
   <text x="950.344827586207" y="247.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">overflowed</text>
-  <rect x="702.068965517241" y="279.449541284404" width="496.551724137931" height="297.981651376147" rx="4.196984500696" fill="url(#grad-danger)" filter="url(#shadow)"/>
+  <rect x="702.068965517241" y="279.449541284404" width="496.551724137931" height="297.981651376147" rx="4.196984500696" fill="url(#grad-danger)"/>
   <text x="950.344827586207" y="322.018348623853" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">overflowed shellcode</text>
   <text x="950.344827586207" y="353.94495412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--danger-text)">strcpy(buf, gets());</text>
   <text x="950.344827586207" y="380.550458715596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--danger-text)">attacker sends 300 bytes</text>

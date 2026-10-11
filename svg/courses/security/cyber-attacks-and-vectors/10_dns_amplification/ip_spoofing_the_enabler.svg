@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,17 +93,17 @@
   <text x="640.000057142862" y="40" text-anchor="middle" font-size="30.415276916772" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">IP Spoofing in DNS Amplification</text>
   <text x="40" y="87.027005040177" font-size="21.966640105191" fill="var(--text-muted)" font-family="Arial, sans-serif">Attacker IP: 10.0.0.1 | Victim IP: 192.168.1.100</text>
   <text x="40" y="134.054010080353" font-size="23.656275269967" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 1: Attacker crafts UDP packet</text>
-  <rect x="40" y="157.567454492338" width="857.142938775518" height="141.081131336739" rx="6.91481548916" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="157.567454492338" width="857.142938775518" height="141.081131336739" rx="6.91481548916" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="82.857146938776" y="196.756722205992" font-size="21.966640105191" fill="var(--text)" font-family="Arial, sans-serif">Source IP: 192.168.1.100 (VICTIM)</text>
   <text x="82.857146938776" y="228.108136376916" font-size="21.966640105191" fill="var(--text)" font-family="Arial, sans-serif">Dest IP: 8.8.8.8 (Open DNS)</text>
   <text x="82.857146938776" y="259.459434331631" font-size="21.966640105191" fill="var(--text)" font-family="Arial, sans-serif">Query: dig . ANY</text>
   <text x="961.428544897956" y="196.756722205992" font-size="21.966640105191" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">&lt;-- Spoofed!</text>
   <text x="40" y="345.675707085462" font-size="23.656275269967" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 2: DNS server responds to VICTIM</text>
-  <rect x="40" y="369.189151497446" width="857.142938775518" height="141.081131336739" rx="6.91481548916" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="369.189151497446" width="857.142938775518" height="141.081131336739" rx="6.91481548916" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="82.857146938776" y="408.378302994892" font-size="21.966640105191" fill="var(--text)" font-family="Arial, sans-serif">Source IP: 8.8.8.8</text>
   <text x="82.857146938776" y="439.729717165815" font-size="21.966640105191" fill="var(--text)" font-family="Arial, sans-serif">Dest IP: 192.168.1.100 (VICTIM)</text>
   <text x="82.857146938776" y="471.08101512053" font-size="21.966640105191" fill="var(--text)" font-family="Arial, sans-serif">Response: ~3000 bytes</text>
   <text x="961.428544897956" y="471.08101512053" font-size="21.966640105191" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">&lt;-- Amplified!</text>
-  <rect x="40" y="557.297287874361" width="1200" height="62.702712125639" rx="6.91481548916" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="557.297287874361" width="1200" height="62.702712125639" rx="6.91481548916" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640.000057142862" y="598.054079810079" text-anchor="middle" font-size="21.966640105191" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">UDP is connectionless: no handshake to verify source</text>
 </svg>

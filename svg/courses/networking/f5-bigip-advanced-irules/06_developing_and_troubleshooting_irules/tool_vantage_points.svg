@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -95,32 +90,32 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="200" width="260" height="220" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="200" width="260" height="220" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="170.0" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Client</text>
   <text x="170.0" y="315.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">browser</text>
   <text x="170.0" y="350.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">curl</text>
-  <rect x="340" y="40" width="240" height="120" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="240" height="120" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="460.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Fiddler</text>
   <text x="460.0" y="106.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">intercepting proxy</text>
   <text x="460.0" y="137.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">edit and replay</text>
   <line x1="300" y1="300" x2="480" y2="300" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
   <text x="390.0" y="292.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">client VLAN</text>
-  <rect x="480" y="200" width="380" height="220" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="480" y="200" width="380" height="220" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="670.0" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">BIG-IP / TMM</text>
   <text x="670.0" y="315.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">iRule runs here</text>
   <text x="670.0" y="350.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">log local0.</text>
   <line x1="860" y1="300" x2="1040" y2="300" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
   <text x="950.0" y="292.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">server VLAN</text>
-  <rect x="1040" y="200" width="200" height="220" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1040" y="200" width="200" height="220" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1140.0" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Pool member</text>
   <text x="1140.0" y="333.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">web server</text>
-  <rect x="340" y="480" width="260" height="140" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="480" width="260" height="140" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="470.0" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-text)">tcpdump client side</text>
   <text x="470.0" y="570.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">what was sent</text>
-  <rect x="760" y="480" width="260" height="140" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="760" y="480" width="260" height="140" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="890.0" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-text)">tcpdump server side</text>
   <text x="890.0" y="570.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">what was changed</text>
-  <rect x="600" y="40" width="260" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="600" y="40" width="260" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="730.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">/var/log/ltm</text>
   <text x="730.0" y="121.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">errors and log lines</text>
   <line x1="390" y1="160" x2="390" y2="300" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="8 6"/>

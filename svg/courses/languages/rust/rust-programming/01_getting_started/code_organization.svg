@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,26 +90,26 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="257.1428" height="158.1818" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="257.1428" height="158.1818" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="168.5714" y="103.2728" text-anchor="middle" font-size="23.2402" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Crate</text>
   <text x="168.5714" y="159.5151" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--primary-text)">(compilation unit)</text>
-  <rect x="404.2857" y="40" width="257.1428" height="158.1818" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="404.2857" y="40" width="257.1428" height="158.1818" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="532.8571" y="103.2728" text-anchor="middle" font-size="23.2402" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">Modules</text>
   <text x="532.8571" y="159.5151" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--info-text)">mod my_mod {}</text>
-  <rect x="768.5714" y="40" width="257.1428" height="158.1818" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="768.5714" y="40" width="257.1428" height="158.1818" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="897.1428" y="103.2728" text-anchor="middle" font-size="23.2402" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Functions</text>
   <text x="897.1428" y="159.5151" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--ok-text)">fn / pub fn</text>
   <line x1="297.1428" y1="117.3333" x2="404.2857" y2="117.3333" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="661.4285" y1="117.3333" x2="768.5714" y2="117.3333" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="286.0606" width="1200" height="105.4546" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="286.0606" width="1200" height="105.4546" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="618.5714" y="356.3636" text-anchor="middle" font-size="23.2402" font-family="Arial, sans-serif" fill="var(--warn-text)">use crate::module::function; -- path-based imports with visibility control (pub)</text>
-  <rect x="40" y="461.8182" width="364.2857" height="158.1818" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="461.8182" width="364.2857" height="158.1818" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="222.1428" y="525.0909" text-anchor="middle" font-size="21.1274" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">src/main.rs</text>
   <text x="222.1428" y="584.8485" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--danger-text)">Binary crate root</text>
-  <rect x="447.1428" y="461.8182" width="364.2857" height="158.1818" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="447.1428" y="461.8182" width="364.2857" height="158.1818" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="629.2857" y="525.0909" text-anchor="middle" font-size="21.1274" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">src/lib.rs</text>
   <text x="629.2857" y="584.8485" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--primary-text)">Library crate root</text>
-  <rect x="854.2857" y="461.8182" width="385.7143" height="158.1818" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="854.2857" y="461.8182" width="385.7143" height="158.1818" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="1047.1429" y="525.0909" text-anchor="middle" font-size="21.1274" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">src/module_name.rs</text>
   <text x="1047.1429" y="584.8485" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--info-text)">Or src/module_name/mod.rs</text>
 </svg>

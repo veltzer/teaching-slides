@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,25 +91,25 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="280" height="580" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="280" height="580" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">UEFI</text>
   <text x="180" y="320" text-anchor="middle" font-size="18" fill="var(--primary-text)" font-family="Arial, sans-serif">Firmware</text>
   <text x="180" y="350" text-anchor="middle" font-size="18" fill="var(--primary-text)" font-family="Arial, sans-serif">verifies Shim</text>
   <text x="180" y="380" text-anchor="middle" font-size="16" fill="var(--primary-text)" font-family="Arial, sans-serif">Microsoft key</text>
 
-  <rect x="340" y="40" width="280" height="580" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="280" height="580" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="480" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Shim</text>
   <text x="480" y="320" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">MS-signed</text>
   <text x="480" y="350" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">loads GRUB</text>
   <text x="480" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">uses distro key</text>
 
-  <rect x="660" y="40" width="280" height="580" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="40" width="280" height="580" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="800" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">GRUB</text>
   <text x="800" y="320" text-anchor="middle" font-size="18" fill="var(--warn-text)" font-family="Arial, sans-serif">distro-signed</text>
   <text x="800" y="350" text-anchor="middle" font-size="18" fill="var(--warn-text)" font-family="Arial, sans-serif">picks kernel</text>
   <text x="800" y="380" text-anchor="middle" font-size="16" fill="var(--warn-text)" font-family="Arial, sans-serif">verifies kernel</text>
 
-  <rect x="960" y="40" width="280" height="580" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="960" y="40" width="280" height="580" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1100" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Kernel</text>
   <text x="1100" y="320" text-anchor="middle" font-size="18" fill="var(--danger-text)" font-family="Arial, sans-serif">signed image</text>
   <text x="1100" y="350" text-anchor="middle" font-size="18" fill="var(--danger-text)" font-family="Arial, sans-serif">boots Linux</text>

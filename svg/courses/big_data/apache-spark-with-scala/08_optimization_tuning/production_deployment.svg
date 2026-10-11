@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="590" height="290" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="590" height="290" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="335" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">YARN Deployment</text>
   <text x="60" y="125" font-family="Courier New, monospace" font-size="14" fill="var(--primary-text)">--master yarn --deploy-mode cluster</text>
   <text x="60" y="155" font-family="Courier New, monospace" font-size="14" fill="var(--primary-text)">--queue prod --principal --keytab</text>
@@ -106,7 +101,7 @@
   <text x="60" y="290" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--primary-text)">log aggregation to HDFS</text>
   <text x="60" y="320" font-family="Courier New, monospace" font-size="13" fill="var(--primary-text)">yarn logs -applicationId &lt;id&gt;</text>
 
-  <rect x="650" y="40" width="590" height="290" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="590" height="290" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="945" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Kubernetes Deployment</text>
   <text x="670" y="125" font-family="Courier New, monospace" font-size="14" fill="var(--info-text)">--master k8s://https://&lt;api&gt;</text>
   <text x="670" y="155" font-family="Courier New, monospace" font-size="14" fill="var(--info-text)">spark.kubernetes.container.image</text>
@@ -116,7 +111,7 @@
   <text x="670" y="290" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--info-text)">graceful decommissioning</text>
   <text x="670" y="320" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">migrates shuffle blocks</text>
 
-  <rect x="40" y="350" width="590" height="270" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="350" width="590" height="270" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="335" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Dynamic Allocation</text>
   <text x="60" y="430" font-family="Courier New, monospace" font-size="13" fill="var(--ok-text)">dynamicAllocation.enabled = true</text>
   <text x="60" y="458" font-family="Courier New, monospace" font-size="13" fill="var(--ok-text)">minExecutors = 2</text>
@@ -126,7 +121,7 @@
   <text x="60" y="580" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">needs shuffle service</text>
   <text x="60" y="605" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">or K8s shuffle tracking</text>
 
-  <rect x="650" y="350" width="590" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="350" width="590" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="945" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Sizing Checklist</text>
   <text x="670" y="425" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">5 cores per executor</text>
   <text x="670" y="450" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">executor.memory 4-16 GB</text>

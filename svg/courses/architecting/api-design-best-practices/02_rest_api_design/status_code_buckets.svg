@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,25 +91,25 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Status Code Buckets</text>
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">2xx success</text>
   <text x="60" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">200 OK is general success</text>
   <text x="60" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">201 Created has Location header</text>
   <text x="60" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">202 Accepted means async processing</text>
   <text x="60" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">204 No Content for empty body</text>
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">3xx redirect</text>
   <text x="365" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">301 permanent moved address</text>
   <text x="365" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">302 temporary redirect</text>
   <text x="365" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">304 Not Modified for caches</text>
   <text x="365" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">307 keeps method semantics</text>
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">4xx client errors</text>
   <text x="670" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">400 Bad Request validation failed</text>
   <text x="670" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">401 not authenticated</text>
   <text x="670" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">403 not authorised</text>
   <text x="670" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">404 Not Found and 409 Conflict</text>
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">5xx server errors</text>
   <text x="975" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">500 Internal generic failure</text>
   <text x="975" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">502 Bad Gateway upstream issue</text>

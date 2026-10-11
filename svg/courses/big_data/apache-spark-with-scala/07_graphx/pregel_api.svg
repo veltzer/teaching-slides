@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,25 +92,25 @@
   </defs>
 
 
-  <rect x="40" y="40" width="280" height="241.666666666667" rx="10.992421631894" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="280" height="241.666666666667" rx="10.992421631894" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180" y="88.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.183327590167" font-weight="bold" fill="var(--primary-text)">1. vprog</text>
   <text x="180" y="136.666666666667" text-anchor="middle" font-family="Courier New, monospace" font-size="15.389390284651" fill="var(--primary-text)">(id, attr, msg) =&gt; attr</text>
   <text x="180" y="184.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.58787461103" fill="var(--primary-text)">update vertex state</text>
   <text x="180" y="227.291666666666" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.58787461103" fill="var(--primary-text)">active vertices only</text>
 
-  <rect x="340" y="40" width="280" height="241.666666666667" rx="10.992421631894" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="280" height="241.666666666667" rx="10.992421631894" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="480" y="88.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.183327590167" font-weight="bold" fill="var(--ok-text)">2. sendMsg</text>
   <text x="480" y="136.666666666667" text-anchor="middle" font-family="Courier New, monospace" font-size="15.389390284651" fill="var(--ok-text)">triplet =&gt; Iterator[msg]</text>
   <text x="480" y="184.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.58787461103" fill="var(--ok-text)">emit along edges</text>
   <text x="480" y="227.291666666666" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.58787461103" fill="var(--ok-text)">empty halts vertex</text>
 
-  <rect x="640" y="40" width="280" height="241.666666666667" rx="10.992421631894" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="40" width="280" height="241.666666666667" rx="10.992421631894" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="780" y="88.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.183327590167" font-weight="bold" fill="var(--warn-text)">3. mergeMsg</text>
   <text x="780" y="136.666666666667" text-anchor="middle" font-family="Courier New, monospace" font-size="15.389390284651" fill="var(--warn-text)">(a, b) =&gt; combined</text>
   <text x="780" y="184.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.58787461103" fill="var(--warn-text)">combine inbound</text>
   <text x="780" y="227.291666666666" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.58787461103" fill="var(--warn-text)">commutative, associative</text>
 
-  <rect x="940" y="40" width="300" height="241.666666666667" rx="10.992421631894" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="241.666666666667" rx="10.992421631894" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1090" y="88.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.183327590167" font-weight="bold" fill="var(--info-text)">Superstep Barrier</text>
   <text x="1090" y="136.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.58787461103" fill="var(--info-text)">all workers sync</text>
   <text x="1090" y="178.958333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.58787461103" fill="var(--info-text)">step N msgs → N+1</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,33 +92,33 @@
   </defs>
 
 
-  <rect x="40" y="40" width="225" height="267.692307692308" rx="8.44894167246" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="225" height="267.692307692308" rx="8.44894167246" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="152" y="90.192307692307" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--primary-text)">1. Build</text>
   <text x="152" y="145.961538461538" text-anchor="middle" font-family="Courier New, monospace" font-size="14.785647926803" fill="var(--primary-text)">docker build</text>
   <text x="152" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--primary-text)">Pinned base</text>
   <text x="152" y="224.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--primary-text)">SBOM</text>
   <text x="152" y="263.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--primary-text)">Tag by SHA</text>
 
-  <rect x="285" y="40" width="225" height="267.692307692308" rx="8.44894167246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="285" y="40" width="225" height="267.692307692308" rx="8.44894167246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="397" y="90.192307692307" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--warn-text)">2. Scan/Sign</text>
   <text x="397" y="145.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--warn-text)">CVE scan</text>
   <text x="397" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--warn-text)">Block high sev</text>
   <text x="397" y="224.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--warn-text)">Cosign sig</text>
   <text x="397" y="263.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--warn-text)">Attestation</text>
 
-  <rect x="530" y="40" width="225" height="267.692307692308" rx="8.44894167246" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="530" y="40" width="225" height="267.692307692308" rx="8.44894167246" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="642" y="90.192307692307" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--info-text)">3. Publish</text>
   <text x="642" y="145.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--info-text)">Push to registry</text>
   <text x="642" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--info-text)">Immutable digest</text>
   <text x="642" y="224.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--info-text)">dev / rc tags</text>
 
-  <rect x="775" y="40" width="225" height="267.692307692308" rx="8.44894167246" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="775" y="40" width="225" height="267.692307692308" rx="8.44894167246" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="887" y="90.192307692307" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--ok-text)">4. Promote</text>
   <text x="887" y="145.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--ok-text)">Retag, no rebuild</text>
   <text x="887" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--ok-text)">stage → prod</text>
   <text x="887" y="224.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--ok-text)">Verify sig</text>
 
-  <rect x="1020" y="40" width="220" height="267.692307692308" rx="8.44894167246" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1020" y="40" width="220" height="267.692307692308" rx="8.44894167246" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1130" y="90.192307692307" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--danger-text)">5. Retire</text>
   <text x="1130" y="145.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--danger-text)">Keep current</text>
   <text x="1130" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--danger-text)">+ rollback target</text>

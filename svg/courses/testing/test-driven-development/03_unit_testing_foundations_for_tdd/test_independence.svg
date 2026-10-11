@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,25 +91,25 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Test Independence Pitfalls</text>
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Shared state</text>
   <text x="60" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Static or global variables</text>
   <text x="60" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Class level fields reused</text>
   <text x="60" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Singletons across tests</text>
   <text x="60" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Tests pass only in order</text>
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Side effects</text>
   <text x="365" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Files left on disk</text>
   <text x="365" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Database rows persisted</text>
   <text x="365" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Network connections open</text>
   <text x="365" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Caches not cleared</text>
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Symptoms</text>
   <text x="670" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Flaky failures appear</text>
   <text x="670" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Pass alone fail in suite</text>
   <text x="670" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Random order breaks suite</text>
   <text x="670" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Hard to debug in isolation</text>
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Fixes</text>
   <text x="975" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Fresh fixtures each test</text>
   <text x="975" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Reset shared singletons</text>

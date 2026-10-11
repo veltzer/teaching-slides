@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -100,13 +95,13 @@
   <rect x="40" y="40" width="560" height="400" rx="8" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="320" y="80" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Python loop, one element at a time</text>
 
-  <rect x="90" y="110" width="460" height="70" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="90" y="110" width="460" height="70" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="320" y="152" text-anchor="middle" font-size="17" fill="var(--warn-text)" font-family="Arial, sans-serif">interpreter dispatch</text>
   <line x1="320" y1="180" x2="320" y2="206" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
-  <rect x="90" y="210" width="460" height="70" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="90" y="210" width="460" height="70" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="320" y="252" text-anchor="middle" font-size="17" fill="var(--warn-text)" font-family="Arial, sans-serif">unbox, compute, re-box</text>
   <line x1="320" y1="280" x2="320" y2="306" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
-  <rect x="90" y="310" width="460" height="70" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="90" y="310" width="460" height="70" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="320" y="352" text-anchor="middle" font-size="17" fill="var(--warn-text)" font-family="Arial, sans-serif">next element, start over</text>
 
   <text x="320" y="416" text-anchor="middle" font-size="16" fill="var(--text-muted)" font-family="Arial, sans-serif">millions of interpreter steps</text>
@@ -115,29 +110,29 @@
   <rect x="680" y="40" width="560" height="400" rx="8" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="960" y="80" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">ufunc: data * 2</text>
 
-  <rect x="730" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="806" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="882" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="958" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1034" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1110" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="730" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="806" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="882" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="958" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="1034" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="1110" y="110" width="76" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
 
   <line x1="960" y1="170" x2="960" y2="226" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="760" y="230" width="400" height="90" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="760" y="230" width="400" height="90" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="960" y="270" text-anchor="middle" font-size="19" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">one compiled C loop</text>
   <text x="960" y="302" text-anchor="middle" font-size="15" fill="var(--ok-text)" font-family="Arial, sans-serif">whole buffer, cache-friendly</text>
 
   <line x1="960" y1="320" x2="960" y2="356" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="730" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="806" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="882" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="958" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1034" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1110" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="730" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="806" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="882" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="958" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1034" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1110" y="360" width="76" height="60" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
 
-  <rect x="40" y="530" width="1200" height="90" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="530" width="1200" height="90" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="570" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Vectorization moves the loop from Python into C</text>
   <text x="640" y="602" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">same math, none of the per-element interpreter cost</text>
 </svg>

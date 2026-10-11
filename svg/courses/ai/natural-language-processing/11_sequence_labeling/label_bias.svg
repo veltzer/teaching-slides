@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="595" height="580" rx="14" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="595" height="580" rx="14" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="337" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--danger-text)">MEMM: locally normalized</text>
   <text x="337" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">each step softmaxes over next labels</text>
 
@@ -125,7 +120,7 @@
   <text x="337" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">states with few outgoing arcs</text>
   <text x="337" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">are unfairly favored</text>
     
-  <rect x="645" y="40" width="595" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="645" y="40" width="595" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="942" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">CRF: globally normalized</text>
   <text x="942" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">whole sequence is scored together</text>
 

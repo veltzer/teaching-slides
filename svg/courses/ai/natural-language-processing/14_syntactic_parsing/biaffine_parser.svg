@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,28 +93,28 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.891513188361" font-weight="bold" fill="var(--text)">Biaffine dependency parser (Dozat &amp; Manning)</text>
 
-  <rect x="40" y="77.592592592593" width="1200" height="64.444444444444" rx="10.727505072446" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="77.592592592593" width="1200" height="64.444444444444" rx="10.727505072446" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="118.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.455010144893" font-weight="bold" fill="var(--info-text)">contextual encoder (BiLSTM or transformer): one vector per token</text>
 
-  <rect x="40" y="174.259259259259" width="578.571428571429" height="85.925925925926" rx="10.727505072446" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="174.259259259259" width="578.571428571429" height="85.925925925926" rx="10.727505072446" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="329.285714285714" y="208.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.309509130404" font-weight="bold" fill="var(--primary-text)">MLP-head</text>
   <text x="329.285714285714" y="240.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--primary-text)">project each token as a candidate head</text>
 
-  <rect x="661.428571428571" y="174.259259259259" width="578.571428571429" height="85.925925925926" rx="10.727505072446" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="661.428571428571" y="174.259259259259" width="578.571428571429" height="85.925925925926" rx="10.727505072446" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="950.714285714286" y="208.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.309509130404" font-weight="bold" fill="var(--warn-text)">MLP-dep</text>
   <text x="950.714285714286" y="240.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.94575659418" fill="var(--warn-text)">project each token as a candidate dependent</text>
 
   <line x1="490" y1="142.037037037037" x2="329.285714285714" y2="174.259259259259" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
   <line x1="790" y1="142.037037037037" x2="950.714285714286" y2="174.259259259259" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="254.285714285714" y="303.148148148148" width="771.428571428571" height="85.925925925926" rx="10.727505072446" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="254.285714285714" y="303.148148148148" width="771.428571428571" height="85.925925925926" rx="10.727505072446" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="340.740740740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.455010144893" font-weight="bold" fill="var(--ok-text)">Biaffine arc score</text>
   <text x="640" y="372.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--ok-text)">score(i, j) = h_i^T W h_j + u^T h_j</text>
 
   <line x1="329.285714285714" y1="260.185185185185" x2="490" y2="303.148148148148" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
   <line x1="950.714285714286" y1="260.185185185185" x2="790" y2="303.148148148148" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="254.285714285714" y="432.037037037037" width="771.428571428571" height="85.925925925926" rx="10.727505072446" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="254.285714285714" y="432.037037037037" width="771.428571428571" height="85.925925925926" rx="10.727505072446" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="469.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.455010144893" font-weight="bold" fill="var(--ok-text)">second biaffine: label score given (head, dep)</text>
   <text x="640" y="501.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.018507101425" fill="var(--ok-text)">picks among nsubj, obj, amod, ...</text>
 

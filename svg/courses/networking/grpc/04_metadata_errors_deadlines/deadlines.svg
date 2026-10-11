@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,21 +91,21 @@
     </marker>
   </defs>
   <text x="641.001669449082" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.023362540568" font-weight="bold" fill="var(--text)">gRPC Deadlines Propagate</text>
-  <rect x="40" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="231.318864774624" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--info-text)">Set at the edge</text>
   <text x="60.033388981636" y="160" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">Caller passes a deadline</text>
   <text x="60.033388981636" y="190" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">Absolute time, not duration</text>
   <text x="60.033388981636" y="220" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">Sent on every RPC</text>
   <text x="60.033388981636" y="280" font-family="Arial, sans-serif" font-size="13.010846893835" font-style="italic" fill="var(--info-text)">Default is none — set one</text>
 
-  <rect x="448.681135225376" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.681135225376" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="641.001669449082" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--primary-text)">Propagation</text>
   <text x="468.714524207012" y="160" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--primary-text)">Server sees remaining time</text>
   <text x="468.714524207012" y="190" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--primary-text)">Onward calls inherit</text>
   <text x="468.714524207012" y="220" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--primary-text)">Whole chain dies on time</text>
   <text x="468.714524207012" y="280" font-family="Arial, sans-serif" font-size="13.010846893835" font-style="italic" fill="var(--primary-text)">Cancellation is automatic</text>
 
-  <rect x="857.362270450751" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.362270450751" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1048.681135225376" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--warn-text)">When it expires</text>
   <text x="877.395659432387" y="160" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--warn-text)">DEADLINE_EXCEEDED</text>
   <text x="877.395659432387" y="190" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--warn-text)">Server stops work</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,10 +91,10 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.822117064936" fill="var(--text)" font-weight="bold">Chi-square vs Fisher: when to switch</text>
-  <rect x="40" y="149.433962264151" width="578.571428571429" height="218.867924528302" rx="8.662588023613" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="149.433962264151" width="578.571428571429" height="218.867924528302" rx="8.662588023613" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="329.285714285714" y="254.490566037736" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.49082305313" font-weight="bold" fill="var(--ok-text)">expected counts ≥ 5 in every cell</text>
   <text x="329.285714285714" y="278.566037735849" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.159529041323" fill="var(--ok-text)">use χ² test of independence</text>
-  <rect x="661.428571428571" y="149.433962264151" width="578.571428571429" height="218.867924528302" rx="8.662588023613" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="661.428571428571" y="149.433962264151" width="578.571428571429" height="218.867924528302" rx="8.662588023613" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="950.714285714286" y="254.490566037736" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.49082305313" font-weight="bold" fill="var(--danger-text)">any expected count &lt; ~5</text>
   <text x="950.714285714286" y="278.566037735849" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.159529041323" fill="var(--danger-text)">use Fisher's exact test</text>
   <rect x="40" y="401.132075471698" width="1200" height="218.867924528302" rx="8.662588023613" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>

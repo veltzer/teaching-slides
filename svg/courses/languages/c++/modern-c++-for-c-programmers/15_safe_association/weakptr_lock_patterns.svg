@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,12 +90,12 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="450" height="580" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="450" height="580" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="265" y="185" text-anchor="middle" font-size="47.1932" font-family="Arial, sans-serif" fill="var(--warn-text)">weak_ptr</text>
   <text x="265" y="330.0001" text-anchor="middle" font-size="39.3277" font-family="Arial, sans-serif" fill="var(--warn-text)">Non-owning</text>
   <text x="265" y="446.0001" text-anchor="middle" font-size="39.3277" font-family="Arial, sans-serif" fill="var(--warn-text)">May be null</text>
   <text x="602.5" y="359.0001" text-anchor="middle" font-size="55.0588" font-family="Arial, sans-serif" fill="var(--text)">lock()</text>
-  <rect x="790" y="40" width="450" height="580" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="790" y="40" width="450" height="580" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="1015" y="185" text-anchor="middle" font-size="47.1932" font-family="Arial, sans-serif" fill="var(--ok-text)">shared_ptr</text>
   <text x="1015" y="330.0001" text-anchor="middle" font-size="39.3277" font-family="Arial, sans-serif" fill="var(--ok-text)">Temporary owner</text>
   <text x="1015" y="446.0001" text-anchor="middle" font-size="39.3277" font-family="Arial, sans-serif" fill="var(--ok-text)">Safe to use</text>

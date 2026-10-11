@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -95,12 +90,12 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40.0" y="180.0" width="340.0" height="220.0" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40.0" y="180.0" width="340.0" height="220.0" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="210.0" y="260.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">bigip1</text>
   <text x="210.0" y="285.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">device certificate</text>
   <text x="210.0" y="309.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">device key</text>
   <text x="210.0" y="333.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">adds peer</text>
-  <rect x="900.0" y="180.0" width="340.0" height="220.0" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="900.0" y="180.0" width="340.0" height="220.0" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1070.0" y="260.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">bigip2</text>
   <text x="1070.0" y="285.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">device certificate</text>
   <text x="1070.0" y="309.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">device key</text>
@@ -109,7 +104,7 @@
   <text x="640.0" y="238.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">1. connect to peer mgmt IP with admin login</text>
   <line x1="900.0" y1="330.0" x2="380.0" y2="330.0" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
   <text x="640.0" y="318.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">2. peer certificate shown, fingerprint confirmed</text>
-  <rect x="380.0" y="470.0" width="520.0" height="150.0" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="380.0" y="470.0" width="520.0" height="150.0" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640.0" y="528.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Device trust domain</text>
   <text x="640.0" y="552.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">each device stores the other certificate</text>
   <text x="640.0" y="575.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">mutual TLS between members from now on</text>

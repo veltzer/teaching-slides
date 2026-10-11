@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
 
   <!-- Background -->
   <!-- DNS Endpoint at top -->
-  <rect x="433.103448" y="40" width="413.793103" height="52.72733" rx="6.482456" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="433.103448" y="40" width="413.793103" height="52.72733" rx="6.482456" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="63.966891" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.937847" font-weight="bold" fill="var(--bg)">RDS DNS Endpoint</text>
   <text x="640" y="83.140447" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" fill="var(--info-accent)">mydb.abc123.us-east-1.rds.amazonaws.com</text>
 
@@ -111,11 +106,11 @@
   <text x="386.551724" y="179.008224" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--primary-accent)">Active</text>
 
   <!-- AZ-1 -->
-  <rect x="40" y="217.355335" width="517.241379" height="268.429777" rx="6.482456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="217.355335" width="517.241379" height="268.429777" rx="6.482456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="298.62069" y="244.198313" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.933768" font-weight="bold" fill="var(--primary-accent)">Availability Zone 1</text>
 
   <!-- Primary DB -->
-  <rect x="122.758621" y="265.289224" width="351.724138" height="95.867777" rx="6.482456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="122.758621" y="265.289224" width="351.724138" height="95.867777" rx="6.482456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="298.62069" y="303.636335" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.925503" font-weight="bold" fill="var(--bg)">Primary DB Instance</text>
   <text x="298.62069" y="330.479312" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.94622" fill="var(--primary-accent)">Read + Write operations</text>
 
@@ -142,28 +137,28 @@
 
   <!-- Synchronous replication arrow -->
   <line x1="474.482759" y1="313.223113" x2="805.517241" y2="313.223113" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="557.241379" y="289.256221" width="206.896552" height="23.008267" rx="6.482456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="557.241379" y="289.256221" width="206.896552" height="23.008267" rx="6.482456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="660.689655" y="305.55369" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--warn-accent)">Synchronous Replication</text>
 
   <!-- After failover section -->
-  <rect x="40" y="504.958667" width="1200" height="115.041333" rx="6.482456" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="504.958667" width="1200" height="115.041333" rx="6.482456" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="533.719" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.933768" font-weight="bold" fill="var(--ok-accent)">After Failover (Automatic)</text>
 
-  <rect x="81.37931" y="548.099114" width="206.896552" height="47.933889" rx="6.482456" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="81.37931" y="548.099114" width="206.896552" height="47.933889" rx="6.482456" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="184.827586" y="567.27267" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--danger-accent)">Old Primary (AZ-1)</text>
   <text x="184.827586" y="584.528975" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.954486" fill="var(--danger-accent)">Failed / Demoted</text>
 
   <line x1="288.275862" y1="572.066111" x2="453.793103" y2="572.066111" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5,3"/>
   <text x="371.034483" y="562.479334" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.954486" fill="var(--danger-accent)">DNS update</text>
 
-  <rect x="453.793103" y="548.099114" width="206.896552" height="47.933889" rx="6.482456" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="453.793103" y="548.099114" width="206.896552" height="47.933889" rx="6.482456" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="557.241379" y="570.148756" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.94622" font-weight="bold" fill="var(--bg)">DNS Endpoint</text>
   <text x="557.241379" y="586.446225" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.954486" fill="var(--info-accent)">Points to new primary</text>
 
   <line x1="660.689655" y1="572.066111" x2="826.206897" y2="572.066111" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
   <text x="743.448276" y="562.479334" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.954486" font-weight="bold" fill="var(--ok-accent)">Now active</text>
 
-  <rect x="826.206897" y="548.099114" width="206.896552" height="47.933889" rx="6.482456" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="826.206897" y="548.099114" width="206.896552" height="47.933889" rx="6.482456" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="929.655172" y="567.27267" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--bg)">New Primary (AZ-2)</text>
   <text x="929.655172" y="584.528975" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.954486" fill="var(--ok-accent)">Promoted automatically</text>
 

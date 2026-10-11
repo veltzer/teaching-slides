@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -111,6 +106,6 @@
   <line x1="269.4118" y1="447.622374233458" x2="1010.5883" y2="447.622374233458" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="640.0001" y="427.342615545982" text-anchor="middle" font-size="19.337002881841" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">(repeat for hundreds of connections simultaneously)</text>
   <text x="1081.1765" y="455.734299246915" text-anchor="start" font-size="19.337002881841" fill="var(--danger-accent)" font-family="Arial, sans-serif">All slots consumed!</text>
-  <rect x="40" y="563.216847982802" width="1200" height="56.783152017198" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.226495003169" filter="url(#shadow)"/>
+  <rect x="40" y="563.216847982802" width="1200" height="56.783152017198" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.226495003169"/>
   <text x="640.0001" y="599.720349004858" text-anchor="middle" font-size="21.094949971069" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">Attacker keeps connections alive by drip-feeding headers — never completes the request</text>
 </svg>

@@ -60,9 +60,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
@@ -89,21 +86,21 @@
   <!-- Publisher process A -->
   <rect x="40" y="40" width="240" height="190" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
   <text x="160" y="65" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Service A (process)</text>
-  <rect x="60" y="100" width="200" height="110" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="60" y="100" width="200" height="110" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="160" y="145" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Publisher A</text>
   <text x="160" y="180" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">publish("orders", m)</text>
 
   <!-- Publisher process B -->
   <rect x="40" y="430" width="240" height="190" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
   <text x="160" y="455" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Service B (process)</text>
-  <rect x="60" y="475" width="200" height="130" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="60" y="475" width="200" height="130" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="160" y="525" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Publisher B</text>
   <text x="160" y="565" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">publish("metrics", m)</text>
 
   <!-- Broker process -->
   <rect x="430" y="40" width="420" height="580" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
   <text x="640" y="85" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Broker (separate process — Kafka / RabbitMQ / NATS)</text>
-  <rect x="450" y="100" width="380" height="480" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="450" y="100" width="380" height="480" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="640" y="140" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Message Broker</text>
 
   <!-- Topic boxes inside broker -->
@@ -123,21 +120,21 @@
   <!-- Subscriber process A -->
   <rect x="1000" y="40" width="240" height="190" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
   <text x="1120" y="65" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Service C (process)</text>
-  <rect x="1020" y="100" width="200" height="110" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="1020" y="100" width="200" height="110" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="1120" y="145" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Subscriber C</text>
   <text x="1120" y="180" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">subscribe("orders")</text>
 
   <!-- Subscriber process B -->
   <rect x="1000" y="245" width="240" height="170" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
   <text x="1120" y="270" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Service D (process)</text>
-  <rect x="1020" y="285" width="200" height="110" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="1020" y="285" width="200" height="110" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="1120" y="330" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Subscriber D</text>
   <text x="1120" y="365" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">subscribe("orders")</text>
 
   <!-- Subscriber process E -->
   <rect x="1000" y="430" width="240" height="190" fill="none" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,6" rx="6"/>
   <text x="1120" y="455" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">Service E (process)</text>
-  <rect x="1020" y="475" width="200" height="130" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="1020" y="475" width="200" height="130" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="1120" y="525" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Subscriber E</text>
   <text x="1120" y="565" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Courier New, monospace">subscribe("metrics")</text>
 

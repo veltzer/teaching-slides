@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -103,7 +98,7 @@
   <text x="60.689655172414" y="87.027027027027" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--ok-fill)">Strong</text>
   <text x="1146.896551724138" y="87.027027027027" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--danger-fill)">Weak (fast)</text>
 
-  <rect x="40" y="139.279279279279" width="289.655172413793" height="229.90990990991" rx="10.397504898201" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="139.279279279279" width="289.655172413793" height="229.90990990991" rx="10.397504898201" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="184.827586206897" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--ok-text)">Linearizable</text>
   <text x="60.689655172414" y="207.207207207207" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">All ops see latest write</text>
   <text x="60.689655172414" y="233.333333333333" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">Single global order</text>
@@ -111,7 +106,7 @@
   <text x="60.689655172414" y="301.261261261261" font-family="Arial, sans-serif" font-size="13.516756367661" font-weight="bold" fill="var(--ok-text)">Cost: latency, availability</text>
   <text x="60.689655172414" y="332.612612612613" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--ok-text)">Spanner, etcd, ZooKeeper</text>
 
-  <rect x="350.344827586207" y="139.279279279279" width="289.655172413793" height="229.90990990991" rx="10.397504898201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350.344827586207" y="139.279279279279" width="289.655172413793" height="229.90990990991" rx="10.397504898201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="495.172413793103" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--primary-text)">Sequential</text>
   <text x="371.034482758621" y="207.207207207207" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">All clients see same order</text>
   <text x="371.034482758621" y="233.333333333333" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">Order respects per-client</text>
@@ -119,7 +114,7 @@
   <text x="371.034482758621" y="301.261261261261" font-family="Arial, sans-serif" font-size="13.516756367661" font-weight="bold" fill="var(--primary-text)">Cheaper than linearizable</text>
   <text x="371.034482758621" y="332.612612612613" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--primary-text)">Multi-leader DBs</text>
 
-  <rect x="660.689655172414" y="139.279279279279" width="289.655172413793" height="229.90990990991" rx="10.397504898201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660.689655172414" y="139.279279279279" width="289.655172413793" height="229.90990990991" rx="10.397504898201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="805.51724137931" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--warn-text)">Causal</text>
   <text x="681.379310344828" y="207.207207207207" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">Cause-effect order kept</text>
   <text x="681.379310344828" y="233.333333333333" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">Concurrent ops can disagree</text>
@@ -127,7 +122,7 @@
   <text x="681.379310344828" y="301.261261261261" font-family="Arial, sans-serif" font-size="13.516756367661" font-weight="bold" fill="var(--warn-text)">Good for collaboration</text>
   <text x="681.379310344828" y="332.612612612613" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--warn-text)">Comments, chat, social feeds</text>
 
-  <rect x="971.034482758621" y="139.279279279279" width="268.965517241379" height="229.90990990991" rx="10.397504898201" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="971.034482758621" y="139.279279279279" width="268.965517241379" height="229.90990990991" rx="10.397504898201" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1105.51724137931" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--danger-text)">Eventual</text>
   <text x="991.724137931035" y="207.207207207207" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">Replicas converge</text>
   <text x="991.724137931035" y="233.333333333333" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">Reads may be stale</text>

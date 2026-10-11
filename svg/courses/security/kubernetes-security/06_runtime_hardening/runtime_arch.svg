@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,7 +93,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.033512735322" font-weight="bold" fill="var(--text)">Runtime Detection Architecture</text>
 
-  <rect x="40" y="107.927927927928" width="517.241379310345" height="292.612612612613" rx="6.23850293892" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="107.927927927928" width="517.241379310345" height="292.612612612613" rx="6.23850293892" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="298.620689655172" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--primary-text)">Node</text>
 
   <rect x="60.689655172414" y="170.630630630631" width="206.896551724138" height="83.603603603604" rx="6.23850293892" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -109,11 +104,11 @@
   <text x="412.413793103448" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--text)">Container</text>
   <text x="412.413793103448" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--text-muted)">app</text>
 
-  <rect x="60.689655172414" y="285.585585585586" width="455.172413793103" height="94.054054054054" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60.689655172414" y="285.585585585586" width="455.172413793103" height="94.054054054054" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="288.275862068966" y="322.162162162162" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--warn-text)">Linux kernel + eBPF</text>
   <text x="288.275862068966" y="353.513513513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--warn-text)">syscalls, network, file events</text>
 
-  <rect x="619.310344827586" y="107.927927927928" width="289.655172413793" height="292.612612612613" rx="6.23850293892" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="619.310344827586" y="107.927927927928" width="289.655172413793" height="292.612612612613" rx="6.23850293892" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="764.137931034483" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--ok-text)">Falco / Tracee</text>
   <text x="764.137931034483" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">DaemonSet</text>
   <text x="640" y="217.657657657658" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">- watches kernel</text>
@@ -124,7 +119,7 @@
   <text x="640" y="356.648648648649" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--ok-text)">- shell in container</text>
   <text x="640" y="377.54954954955" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--ok-text)">- write to /etc/shadow</text>
 
-  <rect x="971.034482758621" y="107.927927927928" width="268.965517241379" height="292.612612612613" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="971.034482758621" y="107.927927927928" width="268.965517241379" height="292.612612612613" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1105.51724137931" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--danger-text)">SIEM / Alert</text>
   <text x="1105.51724137931" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">central monitoring</text>
   <text x="991.724137931035" y="217.657657657658" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">- webhook fwd</text>

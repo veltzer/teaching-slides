@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -108,13 +103,13 @@
   <text x="40" y="253.7629" text-anchor="start" font-size="18.9659" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Attack:</text>
   <line x1="291.6129" y1="298.6082" x2="988.3871" y2="298.6082" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="640" y="286.6495" text-anchor="middle" font-size="17.3854" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">"bird" (claimed length=65535)</text>
-  <rect x="78.7097" y="343.4536" width="1122.5807" height="119.5877" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="78.7097" y="343.4536" width="1122.5807" height="119.5877" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="640" y="377.8351" text-anchor="middle" font-size="18.9659" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Server responds with:</text>
   <text x="640" y="407.732" text-anchor="middle" font-size="18.9659" fill="var(--text)" font-family="Arial, sans-serif">"bird" + up to 65,531 bytes of server memory</text>
   <text x="640" y="437.6289" text-anchor="middle" font-size="18.9659" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">(private keys, passwords, session tokens!)</text>
   <line x1="988.3871" y1="482.4742" x2="291.6129" y2="482.4742" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="640" y="473.5052" text-anchor="middle" font-size="17.3854" fill="var(--danger-accent)" font-style="italic" font-family="Arial, sans-serif">memory leak response</text>
-  <rect x="40" y="515.3608" width="1200" height="89.6907" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="515.3608" width="1200" height="89.6907" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="640" y="548.2474" text-anchor="middle" font-size="18.9659" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">Root Cause: Server trusts client-supplied length field</text>
   <text x="640" y="575.1547" text-anchor="middle" font-size="17.3854" fill="var(--text-muted)" font-family="Arial, sans-serif">No bounds check → reads beyond the heartbeat payload buffer</text>
 </svg>

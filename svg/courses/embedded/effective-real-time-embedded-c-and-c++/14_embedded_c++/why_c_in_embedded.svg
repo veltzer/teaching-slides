@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="535.714222" height="145.519613" rx="7.286121" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="535.714222" height="145.519613" rx="7.286121" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="307.857168" y="94.050065" text-anchor="middle" font-size="27.437954" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Type Safety</text>
   <text x="307.857168" y="125.232774" text-anchor="middle" font-size="17.940252" fill="var(--primary-accent)" font-family="Arial, sans-serif">Strong typing catches errors at compile time</text>
   <text x="307.857168" y="150.179097" text-anchor="middle" font-size="15.829584" fill="var(--primary-accent)" font-family="Courier New, monospace">no implicit void* casts</text>
@@ -115,12 +110,12 @@
   <text x="972.142832" y="296.738194" text-anchor="middle" font-size="17.940252" fill="var(--text-muted)" font-family="Arial, sans-serif">Generic code, resolved at compile time</text>
   <text x="972.142832" y="321.684387" text-anchor="middle" font-size="15.829584" fill="var(--text-faint)" font-family="Courier New, monospace">RingBuffer&lt;uint8_t, 64&gt; buf;</text>
   <text x="972.142832" y="344.551871" text-anchor="middle" font-size="15.829584" fill="var(--text-faint)" font-family="Courier New, monospace">zero runtime overhead</text>
-  <rect x="372.142889" y="383.01071" width="535.714222" height="145.519613" rx="7.286121" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="372.142889" y="383.01071" width="535.714222" height="145.519613" rx="7.286121" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.000057" y="437.060774" text-anchor="middle" font-size="27.437954" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Const Correctness</text>
   <text x="640.000057" y="468.243613" text-anchor="middle" font-size="17.940252" fill="var(--primary-accent)" font-family="Arial, sans-serif">const and constexpr prevent unintended writes</text>
   <text x="640.000057" y="493.189806" text-anchor="middle" font-size="15.829584" fill="var(--primary-accent)" font-family="Courier New, monospace">constexpr uint32_t CLK = 168'000'000;</text>
   <text x="640.000057" y="516.05729" text-anchor="middle" font-size="15.829584" fill="var(--primary-accent)" font-family="Courier New, monospace">evaluated at compile time, zero RAM</text>
-  <rect x="168.571441" y="568.028516" width="942.857233" height="49.892516" rx="7.286121" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="168.571441" y="568.028516" width="942.857233" height="49.892516" rx="7.286121" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.000057" y="599.211355" text-anchor="middle" font-size="17.940252" fill="var(--primary-accent)" font-family="Arial, sans-serif">Use C++ features that have zero or near-zero overhead: constexpr, templates, RAII, inline</text>
   <text x="640.000057" y="620" text-anchor="middle" font-size="15.829584" fill="var(--text-muted)" font-family="Arial, sans-serif">Avoid: exceptions, RTTI, dynamic_cast, virtual in hot paths — these add size/overhead</text>
 </svg>

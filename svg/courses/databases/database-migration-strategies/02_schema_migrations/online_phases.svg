@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,27 +92,27 @@
   </defs>
   <text x="629.473684210526" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.339509388906" font-weight="bold" fill="var(--text)">Online Schema Change Phases</text>
 
-  <rect x="40" y="106.923076923077" width="231.578947368421" height="133.846153846154" rx="10.835539067466" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="106.923076923077" width="231.578947368421" height="133.846153846154" rx="10.835539067466" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="155.789473684211" y="145.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.336862507946" font-weight="bold" fill="var(--info-text)">1. Add column</text>
   <text x="155.789473684211" y="179.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.086200787706" fill="var(--info-text)">nullable, default null</text>
   <text x="155.789473684211" y="207.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.086200787706" fill="var(--info-text)">app keeps working</text>
 
-  <rect x="292.631578947368" y="106.923076923077" width="231.578947368421" height="133.846153846154" rx="10.835539067466" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="292.631578947368" y="106.923076923077" width="231.578947368421" height="133.846153846154" rx="10.835539067466" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="408.421052631579" y="145.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.336862507946" font-weight="bold" fill="var(--warn-text)">2. Backfill</text>
   <text x="408.421052631579" y="179.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.086200787706" fill="var(--warn-text)">populate in batches</text>
   <text x="408.421052631579" y="207.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.086200787706" fill="var(--warn-text)">throttled, resumable</text>
 
-  <rect x="545.263157894737" y="106.923076923077" width="231.578947368421" height="133.846153846154" rx="10.835539067466" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="545.263157894737" y="106.923076923077" width="231.578947368421" height="133.846153846154" rx="10.835539067466" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="661.052631578947" y="145.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.336862507946" font-weight="bold" fill="var(--warn-text)">3. App writes both</text>
   <text x="661.052631578947" y="179.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.086200787706" fill="var(--warn-text)">old and new column</text>
   <text x="661.052631578947" y="207.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.086200787706" fill="var(--warn-text)">verify equality</text>
 
-  <rect x="797.894736842105" y="106.923076923077" width="231.578947368421" height="133.846153846154" rx="10.835539067466" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="797.894736842105" y="106.923076923077" width="231.578947368421" height="133.846153846154" rx="10.835539067466" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="913.684210526316" y="145.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.336862507946" font-weight="bold" fill="var(--primary-text)">4. Switch reads</text>
   <text x="913.684210526316" y="179.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.086200787706" fill="var(--primary-text)">app reads new only</text>
   <text x="913.684210526316" y="207.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.086200787706" fill="var(--primary-text)">old still written</text>
 
-  <rect x="1050.526315789474" y="106.923076923077" width="189.473684210526" height="133.846153846154" rx="10.835539067466" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1050.526315789474" y="106.923076923077" width="189.473684210526" height="133.846153846154" rx="10.835539067466" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1145.263157894737" y="145.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.336862507946" font-weight="bold" fill="var(--ok-text)">5. Drop old</text>
   <text x="1145.263157894737" y="179.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.086200787706" fill="var(--ok-text)">stop writing old</text>
   <text x="1145.263157894737" y="207.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.086200787706" fill="var(--ok-text)">drop column</text>

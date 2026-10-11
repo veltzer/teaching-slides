@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -108,10 +103,10 @@
 
   <line x1="240" y1="282.545455" x2="280" y2="282.545455" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="280" y="156" width="720" height="274.181818" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="280" y="156" width="720" height="274.181818" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">Logstash Pipeline</text>
 
-  <rect x="300" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="400" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--ok-text)">Input</text>
   <text x="400" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Read events</text>
   <text x="400" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Plugin per source</text>
@@ -119,7 +114,7 @@
   <text x="400" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Queued events</text>
   <text x="400" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Back-pressure aware</text>
 
-  <rect x="540" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="540" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--warn-text)">Filter</text>
   <text x="640" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Grok / dissect</text>
   <text x="640" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Mutate fields</text>
@@ -127,7 +122,7 @@
   <text x="640" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Date, JSON, KV</text>
   <text x="640" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Drop unwanted events</text>
 
-  <rect x="780" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="780" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="880" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--info-text)">Output</text>
   <text x="880" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Send events</text>
   <text x="880" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Batch + retry</text>

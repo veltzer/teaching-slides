@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,15 +90,15 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="125.714286" y="183.971766453582" width="300" height="164.538997466728" rx="7.24726041388" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="125.714286" y="183.971766453582" width="300" height="164.538997466728" rx="7.24726041388" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="275.714286" y="272.4113702526" text-anchor="middle" font-size="29.391024118865" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Metrics</text>
   <text x="275.714286" y="313.546215399412" text-anchor="middle" font-size="17.844568323607" fill="var(--text-muted)" font-family="Arial, sans-serif">avg, min, max, sum</text>
   <text x="275.714286" y="399.929095992151" text-anchor="middle" font-size="16.794802135734" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Cheap - O(1) per shard</text>
-  <rect x="489.999886" y="122.269562236902" width="300" height="226.241200633763" rx="7.24726041388" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="489.999886" y="122.269562236902" width="300" height="226.241200633763" rx="7.24726041388" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="225.106355486951" text-anchor="middle" font-size="29.391024118865" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Terms</text>
   <text x="640" y="266.241200633763" text-anchor="middle" font-size="17.844568323607" fill="var(--text-muted)" font-family="Arial, sans-serif">top-N buckets</text>
   <text x="640" y="399.929095992151" text-anchor="middle" font-size="16.794802135734" fill="var(--text-muted)" font-weight="bold" font-family="Arial, sans-serif">Medium - scales with cardinality</text>
-  <rect x="854.285714" y="40" width="321.428571" height="308.510635863589" rx="7.24726041388" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="854.285714" y="40" width="321.428571" height="308.510635863589" rx="7.24726041388" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1015" y="163.404280376638" text-anchor="middle" font-size="29.391024118865" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Cardinality</text>
   <text x="1015" y="208.652570886363" text-anchor="middle" font-size="17.844568323607" fill="var(--text-muted)" font-family="Arial, sans-serif">unique count (HLL)</text>
   <text x="1015" y="399.929095992151" text-anchor="middle" font-size="16.794802135734" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Expensive - HyperLogLog algorithm</text>

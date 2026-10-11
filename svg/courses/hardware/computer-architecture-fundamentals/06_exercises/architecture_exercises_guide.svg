@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
   <!-- CPU identification -->
-  <rect x="40" y="40" width="589.655172413793" height="247.037037037037" rx="10.540925533895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="589.655172413793" height="247.037037037037" rx="10.540925533895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="334.827586206897" y="77.592592592593" font-family="Arial, sans-serif" font-size="21.081851067789" font-weight="bold" fill="var(--bg)" text-anchor="middle">CPU Identification</text>
   <text x="60.689655172414" y="115.185185185185" font-family="Courier New, monospace" font-size="15.811388300842" fill="var(--bg)">lscpu</text>
   <text x="60.689655172414" y="142.037037037037" font-family="Courier New, monospace" font-size="15.811388300842" fill="var(--bg)">cat /proc/cpuinfo</text>
@@ -107,7 +102,7 @@
   <text x="60.689655172414" y="265.555555555556" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--bg)">flags, model id</text>
 
   <!-- Cache -->
-  <rect x="650.344827586207" y="40" width="589.655172413793" height="247.037037037037" rx="10.540925533895" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650.344827586207" y="40" width="589.655172413793" height="247.037037037037" rx="10.540925533895" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="945.172413793103" y="77.592592592593" font-family="Arial, sans-serif" font-size="21.081851067789" font-weight="bold" fill="var(--bg)" text-anchor="middle">Cache Performance</text>
   <text x="671.034482758621" y="115.185185185185" font-family="Courier New, monospace" font-size="14.757295747452" fill="var(--bg)">perf stat -e cache-misses ./bench</text>
   <text x="671.034482758621" y="158.148148148148" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--bg)">cache line 64 B</text>
@@ -117,7 +112,7 @@
   <text x="671.034482758621" y="270.925925925926" font-family="Arial, sans-serif" font-size="14.757295747452" font-style="italic" fill="var(--bg)">compare sequential vs random</text>
 
   <!-- Memory latency -->
-  <rect x="40" y="308.518518518519" width="589.655172413793" height="225.555555555556" rx="10.540925533895" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="308.518518518519" width="589.655172413793" height="225.555555555556" rx="10.540925533895" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="334.827586206897" y="346.111111111111" font-family="Arial, sans-serif" font-size="21.081851067789" font-weight="bold" fill="var(--bg)" text-anchor="middle">Memory Latency</text>
   <text x="60.689655172414" y="383.703703703704" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--bg)">L1: ~4 cycles</text>
   <text x="60.689655172414" y="410.555555555556" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--bg)">L2: ~12 cycles</text>
@@ -126,7 +121,7 @@
   <text x="60.689655172414" y="501.851851851852" font-family="Courier New, monospace" font-size="14.757295747452" fill="var(--bg)">pointer-chase benchmark</text>
 
   <!-- TLB -->
-  <rect x="650.344827586207" y="308.518518518519" width="589.655172413793" height="225.555555555556" rx="10.540925533895" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650.344827586207" y="308.518518518519" width="589.655172413793" height="225.555555555556" rx="10.540925533895" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="945.172413793103" y="346.111111111111" font-family="Arial, sans-serif" font-size="21.081851067789" font-weight="bold" fill="var(--bg)" text-anchor="middle">TLB and Paging</text>
   <text x="671.034482758621" y="383.703703703704" font-family="Courier New, monospace" font-size="14.757295747452" fill="var(--bg)">cat /proc/self/maps</text>
   <text x="671.034482758621" y="410.555555555556" font-family="Courier New, monospace" font-size="14.757295747452" fill="var(--bg)">getconf PAGE_SIZE</text>

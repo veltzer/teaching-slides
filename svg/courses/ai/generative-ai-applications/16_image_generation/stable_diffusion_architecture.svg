@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,27 +90,27 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1088.372123" height="52.051322724359" rx="8.431986111832" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1088.372123" height="52.051322724359" rx="8.431986111832" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="584.186142" y="72.71790835641" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.455784289931" fill="var(--text)">"A cat wearing a top hat, oil painting"</text>
   <line x1="584.186142" y1="92.05132376282" x2="584.186142" y2="129.230769230769" stroke="var(--primary-border)" stroke-width="1.9592" marker-end="url(#arrow)"/>
-  <rect x="151.628038" y="129.230769230769" width="865.116369" height="81.794831121795" rx="8.431986111832" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="151.628038" y="129.230769230769" width="865.116369" height="81.794831121795" rx="8.431986111832" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="584.186142" y="166.41021573718" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.326982032149" font-weight="bold" fill="var(--text)">CLIP Text Encoder</text>
   <text x="584.186142" y="196.153846673077" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.584305290099" fill="var(--text-muted)">Text -&gt; embedding vector</text>
   <line x1="584.186142" y1="211.025600352564" x2="584.186142" y2="255.64110750641" stroke="var(--primary-border)" stroke-width="1.9592" marker-end="url(#arrow)"/>
   <text x="598.139386" y="243.743631247436" font-family="Arial, sans-serif" font-size="18.712965900024" fill="var(--text-faint)">text embedding</text>
-  <rect x="40" y="255.64110750641" width="558.139546" height="104.102646487179" rx="8.431986111832" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="255.64110750641" width="558.139546" height="104.102646487179" rx="8.431986111832" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="319.069853" y="300.256492121795" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.326982032149" font-weight="bold" fill="var(--text)">U-Net</text>
   <text x="319.069853" y="330.000000519231" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.584305290099" fill="var(--text-muted)">(denoiser)</text>
-  <rect x="737.674392" y="255.64110750641" width="502.325608" height="104.102646487179" rx="8.431986111832" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="737.674392" y="255.64110750641" width="502.325608" height="104.102646487179" rx="8.431986111832" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="988.837276" y="300.256492121795" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.326982032149" font-weight="bold" fill="var(--text)">Noise Scheduler</text>
   <text x="988.837276" y="330.000000519231" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.584305290099" fill="var(--text-muted)">(50 steps)</text>
   <line x1="737.674392" y1="307.692307692308" x2="612.093111" y2="307.692307692308" stroke="var(--warn-border)" stroke-width="1.9592" marker-end="url(#arrow)"/>
   <line x1="319.069853" y1="359.743631455128" x2="319.069853" y2="419.23076975" stroke="var(--primary-border)" stroke-width="1.9592" marker-end="url(#arrow)"/>
   <text x="333.023097" y="404.35889249359" font-family="Arial, sans-serif" font-size="18.712965900024" fill="var(--text-faint)">latent representation</text>
-  <rect x="151.628038" y="419.23076975" width="865.116369" height="81.794831121795" rx="8.431986111832" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="151.628038" y="419.23076975" width="865.116369" height="81.794831121795" rx="8.431986111832" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="584.186142" y="456.410215217949" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.326982032149" font-weight="bold" fill="var(--text)">VAE Decoder</text>
   <text x="584.186142" y="486.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.584305290099" fill="var(--text-muted)">Latent -&gt; pixel space</text>
   <line x1="584.186142" y1="501.025599833333" x2="584.186142" y2="553.076923596154" stroke="var(--ok-border)" stroke-width="1.9592" marker-end="url(#arrow)"/>
-  <rect x="151.628038" y="553.076923596154" width="865.116369" height="66.923076403846" rx="8.431986111832" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="151.628038" y="553.076923596154" width="865.116369" height="66.923076403846" rx="8.431986111832" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="584.186142" y="594.717907214103" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.326982032149" font-weight="bold" fill="var(--ok-accent)">Generated Image (512x512 or 1024x1024)</text>
 </svg>

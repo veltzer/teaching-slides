@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,22 +90,22 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="247.848537" height="187.647121" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.482287" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="247.848537" height="187.647121" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.482287"/>
   <text x="163.924269" y="100.274452" text-anchor="middle" font-size="20.59063" fill="var(--primary-accent)" font-family="Arial, sans-serif">ndo_open()</text>
   <text x="163.924269" y="151.450927" text-anchor="middle" font-size="20.59063" fill="var(--text-muted)" font-family="Arial, sans-serif">ndo_stop()</text>
-  <rect x="343.614458" y="40" width="268.502582" height="187.647121" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.482287" filter="url(#shadow)"/>
+  <rect x="343.614458" y="40" width="268.502582" height="187.647121" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.482287"/>
   <text x="477.865749" y="100.274452" text-anchor="middle" font-size="20.59063" fill="var(--warn-accent)" font-family="Arial, sans-serif">ndo_start_xmit()</text>
   <text x="477.865749" y="151.450927" text-anchor="middle" font-size="18.423261" fill="var(--text-muted)" font-family="Arial, sans-serif">TX path</text>
-  <rect x="667.88296" y="40" width="268.502582" height="187.647121" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.482287" filter="url(#shadow)"/>
+  <rect x="667.88296" y="40" width="268.502582" height="187.647121" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.482287"/>
   <text x="802.134251" y="100.274452" text-anchor="middle" font-size="20.59063" fill="var(--ok-accent)" font-family="Arial, sans-serif">netif_rx()</text>
   <text x="802.134251" y="151.450927" text-anchor="middle" font-size="18.423261" fill="var(--text-muted)" font-family="Arial, sans-serif">RX path / NAPI</text>
-  <rect x="992.151463" y="40" width="247.848537" height="187.647121" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.482287" filter="url(#shadow)"/>
+  <rect x="992.151463" y="40" width="247.848537" height="187.647121" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.482287"/>
   <text x="1116.075731" y="100.274452" text-anchor="middle" font-size="20.59063" fill="var(--info-accent)" font-family="Arial, sans-serif">ndo_get_stats()</text>
   <text x="1116.075731" y="151.450927" text-anchor="middle" font-size="18.423261" fill="var(--text-muted)" font-family="Arial, sans-serif">ndo_do_ioctl()</text>
   <line x1="287.848537" y1="133.254831" x2="343.614458" y2="133.254831" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
   <line x1="612.11704" y1="133.254831" x2="667.88296" y2="133.254831" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
   <line x1="936.385542" y1="133.254831" x2="992.151463" y2="133.254831" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
-  <rect x="242.409639" y="358.43132" width="793.115318" height="147.843259" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.482287" filter="url(#shadow)"/>
+  <rect x="242.409639" y="358.43132" width="793.115318" height="147.843259" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.482287"/>
   <text x="638.967298" y="447.137162" text-anchor="middle" font-size="23.841808" fill="var(--danger-accent)" font-family="Arial, sans-serif">struct net_device_ops (function pointers)</text>
   <line x1="638.967298" y1="227.647121" x2="638.967298" y2="358.43132" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
   <text x="638.967298" y="620" text-anchor="middle" font-size="19.506945" fill="var(--text-muted)" font-family="Arial, sans-serif">Registered via register_netdev() during driver init</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="90" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="90" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Spark Storage Layer</text>
 
   <line x1="320" y1="130" x2="180" y2="178" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
@@ -104,25 +99,25 @@
   <line x1="740" y1="130" x2="780" y2="178" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="960" y1="130" x2="1100" y2="178" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="180" width="285" height="230" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="180" width="285" height="230" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="182" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">HDFS</text>
   <text x="182" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">on-prem clusters</text>
   <text x="182" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">data locality</text>
   <text x="182" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">hdfs://...</text>
 
-  <rect x="345" y="180" width="285" height="230" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="180" width="285" height="230" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="487" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">S3 / GCS / ADLS</text>
   <text x="487" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">cloud object store</text>
   <text x="487" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">pay per GB</text>
   <text x="487" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">s3a://bucket/...</text>
 
-  <rect x="650" y="180" width="285" height="230" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="180" width="285" height="230" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="792" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">JDBC / Hive</text>
   <text x="792" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">warehouse tables</text>
   <text x="792" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">pushdown filters</text>
   <text x="792" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">catalog-aware</text>
 
-  <rect x="955" y="180" width="285" height="230" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="180" width="285" height="230" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1097" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Local / NFS</text>
   <text x="1097" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">dev and test only</text>
   <text x="1097" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">no fault tolerance</text>

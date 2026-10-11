@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.885093" font-weight="bold" fill="var(--text)">Resource Management</text>
 
-  <rect x="40" y="77.247706" width="340" height="542.752294" rx="6.189663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="77.247706" width="340" height="542.752294" rx="6.189663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="210" y="119.816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695431" font-weight="bold" fill="var(--ok-text)">Session</text>
   <text x="210" y="157.06422" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">One per kernel</text>
   <text x="210" y="188.990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Driver, executors</text>
@@ -118,28 +113,28 @@
   <line x1="380" y1="348.623853" x2="420" y2="348.623853" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="380" y1="518.899083" x2="420" y2="518.899083" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="430" y="77.247706" width="400" height="170.275229" rx="6.189663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="430" y="77.247706" width="400" height="170.275229" rx="6.189663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="630" y="114.495413" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.63221" font-weight="bold" fill="var(--warn-text)">Memory</text>
   <text x="630" y="151.743119" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Driver heap: results</text>
   <text x="630" y="178.348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Executor heap: shuffle</text>
   <text x="630" y="210.275229" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Watch collect, toPandas</text>
   <text x="630" y="236.880734" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Unpersist caches</text>
 
-  <rect x="430" y="258.165138" width="400" height="170.275229" rx="6.189663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="430" y="258.165138" width="400" height="170.275229" rx="6.189663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="630" y="295.412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.63221" font-weight="bold" fill="var(--danger-text)">CPU</text>
   <text x="630" y="332.66055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Parallel tasks</text>
   <text x="630" y="359.266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Cores tune throughput</text>
   <text x="630" y="391.192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Partitions = cores</text>
   <text x="630" y="417.798165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Share fairly</text>
 
-  <rect x="430" y="439.082569" width="400" height="180.917431" rx="6.189663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="430" y="439.082569" width="400" height="180.917431" rx="6.189663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="630" y="476.330275" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.63221" font-weight="bold" fill="var(--primary-text)">Storage</text>
   <text x="630" y="513.577982" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Cache hot DataFrames</text>
   <text x="630" y="540.183486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Disk spill on OOM</text>
   <text x="630" y="572.110092" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Checkpoint lineages</text>
   <text x="630" y="598.715596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Clear caches</text>
 
-  <rect x="850" y="77.247706" width="390" height="542.752294" rx="6.189663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="77.247706" width="390" height="542.752294" rx="6.189663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1045" y="119.816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695431" font-weight="bold" fill="var(--info-text)">Habits</text>
   <text x="1045" y="162.385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Use SparkUI</text>
   <text x="1045" y="188.990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Port 4040</text>

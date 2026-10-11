@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
 
   <!-- Header box -->
-  <rect x="420" y="40" width="440" height="106.842105263158" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="420" y="40" width="440" height="106.842105263158" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.227078547234" font-weight="bold" fill="var(--primary-text)">Tool Definition</text>
   <text x="640" y="118.350877192982" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.14847443473" fill="var(--primary-text)">All the model knows about the tool</text>
 
@@ -107,21 +102,21 @@
   <line x1="740" y1="146.842105263158" x2="1058" y2="226.210526315789" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
 
   <!-- Box 1: name -->
-  <rect x="40" y="228.245614035088" width="364" height="203.508771929825" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="228.245614035088" width="364" height="203.508771929825" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="222" y="279.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--ok-text)">name</text>
   <text x="222" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">A short, unique identifier</text>
   <text x="222" y="362.561403508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">The model emits it to call the tool</text>
   <text x="222" y="395.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">e.g. get_weather, run_query</text>
 
   <!-- Box 2: description -->
-  <rect x="458" y="228.245614035088" width="364" height="203.508771929825" rx="6.052402741669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="458" y="228.245614035088" width="364" height="203.508771929825" rx="6.052402741669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="279.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--info-text)">description</text>
   <text x="640" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--info-text)">What it does AND when to use it</text>
   <text x="640" y="362.561403508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--info-text)">The model reads this to decide</text>
   <text x="640" y="395.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--info-text)">Trigger-rich, concrete, no overlap</text>
 
   <!-- Box 3: input_schema -->
-  <rect x="876" y="228.245614035088" width="364" height="203.508771929825" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="876" y="228.245614035088" width="364" height="203.508771929825" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1058" y="279.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--warn-text)">input_schema</text>
   <text x="1058" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--warn-text)">The arguments, typed, in JSON Schema</text>
   <text x="1058" y="362.561403508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--warn-text)">Constrains valid calls</text>

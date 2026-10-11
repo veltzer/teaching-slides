@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,14 +94,14 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Data Cleaning Checklist</text>
 
-  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="231.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--danger-text)">Missing values</text>
   <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Drop row / column</text>
   <text x="60.689655172414" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Fill with mean / median</text>
   <text x="60.689655172414" y="215.596330275229" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Forward fill</text>
   <text x="60.689655172414" y="290.091743119266" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--danger-text)">Decide why first</text>
 
-  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--warn-text)">Duplicates</text>
   <text x="469.310344827586" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">- Exact duplicates</text>
   <text x="469.310344827586" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">- Near-duplicates (whitespace)</text>
@@ -114,14 +109,14 @@
   <text x="469.310344827586" y="242.201834862385" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">- Keep first / last / merge</text>
   <text x="469.310344827586" y="290.091743119266" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--warn-text)">df.duplicated().sum() first</text>
 
-  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--primary-text)">Types &amp; units</text>
   <text x="877.931034482759" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">- Strings as numbers</text>
   <text x="877.931034482759" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">- Date format consistency</text>
   <text x="877.931034482759" y="215.596330275229" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">- Currency, time zones</text>
   <text x="877.931034482759" y="290.091743119266" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--primary-text)">df.dtypes lies sometimes</text>
 
-  <rect x="40" y="364.587155963303" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="364.587155963303" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="231.379310344828" y="401.834862385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--info-text)">Outliers</text>
   <text x="60.689655172414" y="439.082568807339" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">- IQR / z-score</text>
   <text x="60.689655172414" y="465.688073394495" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">- Visual: boxplot</text>
@@ -129,7 +124,7 @@
   <text x="60.689655172414" y="556.146788990826" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--info-text)">Investigate, don't auto-drop</text>
   <text x="60.689655172414" y="588.073394495413" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--info-text)">Real outliers tell stories</text>
 
-  <rect x="448.620689655172" y="364.587155963303" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="364.587155963303" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="401.834862385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">Encoding</text>
   <text x="469.310344827586" y="445" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Trim whitespace</text>
   <text x="469.310344827586" y="475" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">- Lowercase, map synonyms</text>

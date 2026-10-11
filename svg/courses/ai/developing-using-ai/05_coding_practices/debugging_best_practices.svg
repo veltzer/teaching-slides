@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="235" height="580" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="235" height="580" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="157" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Reproduce</text>
   <text x="157" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Smallest input</text>
   <text x="157" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Failing test</text>
@@ -106,7 +101,7 @@
 
   <line x1="280" y1="330" x2="335" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="340" y="40" width="235" height="580" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="235" height="580" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="457" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Ask AI</text>
   <text x="457" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Paste stack trace</text>
   <text x="457" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Share failing test</text>
@@ -116,7 +111,7 @@
 
   <line x1="580" y1="330" x2="635" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="640" y="40" width="235" height="580" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="40" width="235" height="580" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="757" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Verify</text>
   <text x="757" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Read suspect code</text>
   <text x="757" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Add logs</text>
@@ -126,7 +121,7 @@
 
   <line x1="880" y1="330" x2="935" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="940" y="40" width="300" height="580" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="580" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1090" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Fix and Lock</text>
   <text x="1090" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Smallest fix</text>
   <text x="1090" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Rerun test</text>

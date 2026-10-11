@@ -16,27 +16,26 @@
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
   </defs>
-  <rect x="40" y="40" width="595" height="280" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="595" height="280" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="337" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Training pipeline</text>
   <text x="60" y="130" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Pandas, notebooks</text>
   <text x="60" y="165" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">feature_age = 2024 − birth_year</text>
   <text x="60" y="200" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Mean income on train set</text>
   <text x="60" y="235" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">String → enum cleanup</text>
   <text x="60" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Data scientists' code</text>
-  <rect x="645" y="40" width="595" height="280" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="645" y="40" width="595" height="280" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="942" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Serving pipeline</text>
   <text x="665" y="130" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Java/Go service</text>
   <text x="665" y="165" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">feature_age = current_year − dob</text>
   <text x="665" y="200" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">No mean income calculated</text>
   <text x="665" y="235" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Strings stay strings</text>
   <text x="665" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Backend engineers' code</text>
-  <rect x="40" y="340" width="1200" height="120" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="340" width="1200" height="120" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Train-serve skew</text>
   <text x="640" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Subtle differences in feature computation between train and prod</text>
   <text x="640" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Model degrades silently — common cause of mystery production failures</text>
-  <rect x="40" y="480" width="1200" height="140" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="480" width="1200" height="140" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Prevention</text>
   <text x="60" y="575" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Feature store: same code, same data train and serve</text>
   <text x="60" y="610" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Or: shared library used by both pipelines, with tests</text>

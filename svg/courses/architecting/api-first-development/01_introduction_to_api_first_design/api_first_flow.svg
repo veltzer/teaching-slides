@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,12 +94,12 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.727393858384" font-weight="bold" fill="var(--text)">API-First Workflow</text>
 
-  <rect x="40" y="90.877192982456" width="1200" height="101.754385964912" rx="10.259783520852" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="90.877192982456" width="1200" height="101.754385964912" rx="10.259783520852" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.519567041703" font-weight="bold" fill="var(--danger-text)">Code-first (traditional)</text>
   <text x="640" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.363696929192" fill="var(--danger-text)">Build server -&gt; generate docs from code -&gt; consumers find issues at integration</text>
   <text x="640" y="180.421052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--danger-text)">Late discovery, contract drift</text>
 
-  <rect x="40" y="233.333333333333" width="1200" height="122.105263157895" rx="10.259783520852" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="233.333333333333" width="1200" height="122.105263157895" rx="10.259783520852" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="274.035087719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.519567041703" font-weight="bold" fill="var(--ok-text)">API-first</text>
 
   <rect x="60.689655172414" y="289.298245614035" width="206.896551724138" height="50.877192982456" rx="6.155870112511" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -126,7 +121,7 @@
   <rect x="1086.896551724138" y="289.298245614035" width="134.48275862069" height="50.877192982456" rx="6.155870112511" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1154.137931034483" y="319.824561403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.363696929192" font-weight="bold" fill="var(--text)">5. Ship</text>
 
-  <rect x="40" y="396.140350877193" width="382.758620689655" height="223.859649122807" rx="10.259783520852" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="396.140350877193" width="382.758620689655" height="223.859649122807" rx="10.259783520852" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="231.379310344828" y="431.754385964912" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.467610337533" font-weight="bold" fill="var(--primary-text)">Wins</text>
   <text x="60.689655172414" y="462.280701754386" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--primary-text)">- Contract reviewed early</text>
   <text x="60.689655172414" y="487.719298245614" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--primary-text)">- Server + client in parallel</text>
@@ -134,7 +129,7 @@
   <text x="60.689655172414" y="538.59649122807" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--primary-text)">- Docs always in sync</text>
   <text x="60.689655172414" y="564.035087719298" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--primary-text)">- Mock servers for testing</text>
 
-  <rect x="448.620689655172" y="396.140350877193" width="382.758620689655" height="223.859649122807" rx="10.259783520852" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="396.140350877193" width="382.758620689655" height="223.859649122807" rx="10.259783520852" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="431.754385964912" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.467610337533" font-weight="bold" fill="var(--info-text)">Tools</text>
   <text x="469.310344827586" y="462.280701754386" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--info-text)">- OpenAPI / Swagger</text>
   <text x="469.310344827586" y="487.719298245614" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--info-text)">- Stoplight, Postman</text>
@@ -142,7 +137,7 @@
   <text x="469.310344827586" y="538.59649122807" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--info-text)">- Prism (mock server)</text>
   <text x="469.310344827586" y="564.035087719298" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--info-text)">- Spectral (linter)</text>
 
-  <rect x="857.241379310345" y="396.140350877193" width="382.758620689655" height="223.859649122807" rx="10.259783520852" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="396.140350877193" width="382.758620689655" height="223.859649122807" rx="10.259783520852" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="431.754385964912" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.467610337533" font-weight="bold" fill="var(--warn-text)">Watch out</text>
   <text x="877.931034482759" y="462.280701754386" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--warn-text)">- Spec drift from impl</text>
   <text x="877.931034482759" y="487.719298245614" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--warn-text)">- Verbose YAML</text>

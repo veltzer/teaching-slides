@@ -5,23 +5,23 @@
   <text x="639.999942857137" y="40" text-anchor="middle" font-size="32.842288089662" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">BCP38 / RFC 2827: Ingress Filtering</text>
   <text x="639.999942857137" y="82.647167820047" text-anchor="middle" font-size="23.719475380279" fill="var(--text-muted)" font-family="Arial, sans-serif">ISP Network: 203.0.113.0/24</text>
   <text x="40" y="142.353038062264" font-size="27.368670036553" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">WITHOUT BCP38:</text>
-  <rect x="40" y="167.941268166071" width="214.285734693879" height="85.294100346024" rx="6.957252053524" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="167.941268166071" width="214.285734693879" height="85.294100346024" rx="6.957252053524" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="147.142753061215" y="219.117610726651" text-anchor="middle" font-size="21.894936029242" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Host</text>
   <text x="511.42850204081" y="210.588318339084" text-anchor="middle" font-size="20.070280724005" fill="var(--danger-accent)" font-family="Arial, sans-serif">src: 10.0.0.1 (spoofed!)</text>
   <line x1="254.285734693879" y1="210.588318339084" x2="725.714351020414" y2="210.588318339084" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="725.714351020414" y="167.941268166071" width="257.142881632655" height="85.294100346024" rx="6.957252053524" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="725.714351020414" y="167.941268166071" width="257.142881632655" height="85.294100346024" rx="6.957252053524" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="854.285677551017" y="219.117610726651" text-anchor="middle" font-size="21.894936029242" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Router (passes)</text>
   <line x1="982.85723265307" y1="210.588318339084" x2="1154.285706122448" y2="210.588318339084" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="1197.142853061224" y="219.117610726651" font-size="21.894936029242" fill="var(--text-muted)" font-family="Arial, sans-serif">Internet</text>
   <text x="40" y="330.000058823517" font-size="27.368670036553" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">WITH BCP38:</text>
-  <rect x="40" y="355.588288927325" width="214.285734693879" height="85.294100346024" rx="6.957252053524" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="355.588288927325" width="214.285734693879" height="85.294100346024" rx="6.957252053524" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="147.142753061215" y="406.764749134939" text-anchor="middle" font-size="21.894936029242" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Host</text>
   <text x="511.42850204081" y="398.235221453302" text-anchor="middle" font-size="20.070280724005" fill="var(--ok-accent)" font-family="Arial, sans-serif">src: 10.0.0.1 (not in range)</text>
   <line x1="254.285734693879" y1="398.235221453302" x2="725.714351020414" y2="398.235221453302" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="725.714351020414" y="355.588288927325" width="257.142881632655" height="85.294100346024" rx="6.957252053524" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="725.714351020414" y="355.588288927325" width="257.142881632655" height="85.294100346024" rx="6.957252053524" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="854.285677551017" y="406.764749134939" text-anchor="middle" font-size="21.894936029242" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Router (checks)</text>
   <text x="1068.571412244896" y="406.764749134939" font-size="25.544130685516" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">X DROPPED</text>
-  <rect x="40" y="483.529321799326" width="1200" height="136.470678200674" rx="6.957252053524" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="483.529321799326" width="1200" height="136.470678200674" rx="6.957252053524" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="639.999942857137" y="534.705782006941" text-anchor="middle" font-size="23.719475380279" fill="var(--text)" font-family="Arial, sans-serif">Router only forwards packets with source IPs</text>
   <text x="639.999942857137" y="568.82342214535" text-anchor="middle" font-size="23.719475380279" fill="var(--text)" font-family="Arial, sans-serif">belonging to its customer network (203.0.113.0/24)</text>
   <defs>
@@ -88,11 +88,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
 
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">

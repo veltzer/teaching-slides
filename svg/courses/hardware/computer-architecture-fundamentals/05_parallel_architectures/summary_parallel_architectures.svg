@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,23 +90,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="120.833287037055" rx="6.531971105777" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="120.833287037055" rx="6.531971105777" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="79.999996444445" y="77.055652469098" font-size="22.075122950527" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Classification</text>
   <text x="79.999996444445" y="109.277751234577" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">Flynn's Taxonomy: SISD, SIMD, MISD, MIMD</text>
   <text x="79.999996444445" y="141.500072222194" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">Modern CPUs combine SIMD + MIMD</text>
-  <rect x="40" y="176.944391975329" width="1200" height="153.055496913603" rx="6.531971105777" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="176.944391975329" width="1200" height="153.055496913603" rx="6.531971105777" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="79.999996444445" y="214.000044444427" font-size="22.075122950527" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Hardware Parallelism</text>
   <text x="79.999996444445" y="246.222143209906" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">Multi-core: independent cores on one die</text>
   <text x="79.999996444445" y="273.611132716041" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">SMT/Hyper-threading: multiple threads per core</text>
   <text x="79.999996444445" y="301.000011111107" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">SIMD (SSE/AVX): operate on vectors of data</text>
   <text x="679.999943111116" y="246.222143209906" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">GPU: thousands of simple cores for throughput</text>
-  <rect x="40" y="346.111104938274" width="1200" height="153.055496913603" rx="6.531971105777" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="346.111104938274" width="1200" height="153.055496913603" rx="6.531971105777" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="79.999996444445" y="383.166646296303" font-size="22.075122950527" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Memory Architecture</text>
   <text x="79.999996444445" y="415.388856172852" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">UMA: equal access, simple, limited scalability</text>
   <text x="79.999996444445" y="442.777734567917" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">NUMA: non-uniform access, scales to 100+ cores</text>
   <text x="79.999996444445" y="470.166724074052" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">Cache coherence (MESI/MOESI) keeps cores consistent</text>
   <text x="779.999934222228" y="415.388856172852" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">False sharing: avoidable performance killer</text>
-  <rect x="40" y="515.277817901219" width="1200" height="104.722182098781" rx="6.531971105777" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="515.277817901219" width="1200" height="104.722182098781" rx="6.531971105777" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="79.999996444445" y="552.333248148181" font-size="22.075122950527" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Scaling Laws</text>
   <text x="79.999996444445" y="584.555458024729" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">Amdahl: serial fraction limits speedup</text>
   <text x="539.999848888902" y="584.555458024729" font-size="18.679042306449" fill="var(--text)" font-family="Arial, sans-serif">Gustafson: scale problem size with processors</text>

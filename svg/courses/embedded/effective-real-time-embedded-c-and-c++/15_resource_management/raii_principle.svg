@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="361.428602" y="40" width="557.14291" height="95.867824" rx="6.997386" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="361.428602" y="40" width="557.14291" height="95.867824" rx="6.997386" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.000057" y="86.01657" text-anchor="middle" font-size="26.350638" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Constructor</text>
   <text x="640.000057" y="114.776822" text-anchor="middle" font-size="18.242768" fill="var(--primary-accent)" font-family="Arial, sans-serif">Acquires the resource</text>
   <line x1="640.000057" y1="137.785166" x2="640.000057" y2="181.884155" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
@@ -103,7 +98,7 @@
   <text x="640.000057" y="229.818186" text-anchor="middle" font-size="26.350638" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Object Lifetime</text>
   <text x="640.000057" y="258.578557" text-anchor="middle" font-size="18.242768" fill="var(--text-muted)" font-family="Arial, sans-serif">Resource is valid and usable</text>
   <line x1="640.000057" y1="281.586782" x2="640.000057" y2="325.685891" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <rect x="361.428602" y="327.603352" width="557.14291" height="95.867824" rx="6.997386" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="361.428602" y="327.603352" width="557.14291" height="95.867824" rx="6.997386" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.000057" y="373.619803" text-anchor="middle" font-size="26.350638" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Destructor</text>
   <text x="640.000057" y="402.380174" text-anchor="middle" font-size="18.242768" fill="var(--primary-accent)" font-family="Arial, sans-serif">Releases the resource — always, even on exception</text>
   <rect x="40" y="452.231309" width="557.14291" height="167.768691" rx="6.997386" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -114,7 +109,7 @@
   <text x="82.857147" y="574.942161" font-size="17.229313" fill="var(--primary-accent)" font-family="Courier New, monospace">  ~MutexGuard() {</text>
   <text x="104.28572" y="597.950386" font-size="17.229313" fill="var(--text-muted)" font-family="Courier New, monospace">    m.unlock(); // release</text>
   <text x="61.428573" y="613.289124" font-size="17.229313" fill="var(--text)" font-family="Courier New, monospace">};</text>
-  <rect x="682.85709" y="452.231309" width="557.14291" height="167.768691" rx="6.997386" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="682.85709" y="452.231309" width="557.14291" height="167.768691" rx="6.997386" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="961.428659" y="488.661167" text-anchor="middle" font-size="20.269794" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Why it matters in embedded:</text>
   <text x="704.285778" y="519.338761" font-size="17.229313" fill="var(--text-muted)" font-family="Arial, sans-serif">• Mutex always unlocked on scope exit</text>
   <text x="704.285778" y="544.264329" font-size="17.229313" fill="var(--text-muted)" font-family="Arial, sans-serif">• DMA buffer always returned to pool</text>

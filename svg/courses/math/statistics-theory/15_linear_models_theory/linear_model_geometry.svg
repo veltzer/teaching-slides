@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -123,7 +118,7 @@
   <text x="330" y="527.610619469027" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--text-muted)">a covariate direction</text>
   <text x="100" y="424.955752212389" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--text-muted)">another covariate</text>
 
-  <rect x="650" y="86.194690265487" width="590" height="251.504424778761" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="86.194690265487" width="590" height="251.504424778761" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="945" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)">Normal equations</text>
   <text x="945" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" fill="var(--primary-text)">β̂ = (XᵀX)⁻¹ Xᵀy</text>
   <text x="945" y="214.513274336283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">minimizes ∑(yᵢ − xᵢᵀβ)²</text>
@@ -131,7 +126,7 @@
   <text x="945" y="286.371681415929" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">Xᵀe = 0 — the source of "the residuals sum to zero"</text>
   <text x="945" y="317.16814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">whenever the model has an intercept</text>
 
-  <rect x="650" y="358.230088495575" width="590" height="261.769911504425" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="358.230088495575" width="590" height="261.769911504425" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="945" y="394.159292035398" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--ok-text)">Gauss–Markov</text>
   <text x="945" y="433.16814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--ok-text)">if E[e] = 0, Var(e) = σ² I,</text>
   <text x="945" y="460.884955752212" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--ok-text)">then OLS is BLUE</text>

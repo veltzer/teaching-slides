@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="151.864406779661" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.992670575388" font-weight="bold" fill="var(--primary-text)">Classification</text>
   <text x="151.864406779661" y="147.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">label per text</text>
   <text x="151.864406779661" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">sentiment</text>
@@ -108,7 +103,7 @@
   <text x="151.864406779661" y="528.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--primary-text)">labels are discrete</text>
   <text x="151.864406779661" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--primary-text)">often well understood</text>
 
-  <rect x="284.067796610169" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="284.067796610169" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="395.932203389831" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.992670575388" font-weight="bold" fill="var(--ok-text)">Tagging</text>
   <text x="395.932203389831" y="147.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--ok-text)">label per token</text>
   <text x="395.932203389831" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--ok-text)">part of speech</text>
@@ -119,7 +114,7 @@
   <text x="395.932203389831" y="528.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--ok-text)">tags constrained</text>
   <text x="395.932203389831" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--ok-text)">CRF or transformer</text>
 
-  <rect x="528.135593220339" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="528.135593220339" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.992670575388" font-weight="bold" fill="var(--info-text)">Parsing</text>
   <text x="640" y="147.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">structure over text</text>
   <text x="640" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">dependencies</text>
@@ -130,7 +125,7 @@
   <text x="640" y="528.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--info-text)">strict constraints</text>
   <text x="640" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--info-text)">less central today</text>
 
-  <rect x="772.203389830509" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="772.203389830509" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="884.067796610169" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.992670575388" font-weight="bold" fill="var(--warn-text)">Generation</text>
   <text x="884.067796610169" y="147.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--warn-text)">produce text</text>
   <text x="884.067796610169" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--warn-text)">translation</text>
@@ -141,7 +136,7 @@
   <text x="884.067796610169" y="528.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--warn-text)">hard to evaluate</text>
   <text x="884.067796610169" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--warn-text)">drives the LLM era</text>
 
-  <rect x="1016.271186440678" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1016.271186440678" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1128.135593220339" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.992670575388" font-weight="bold" fill="var(--danger-text)">Retrieval</text>
   <text x="1128.135593220339" y="147.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--danger-text)">find relevant text</text>
   <text x="1128.135593220339" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--danger-text)">search</text>

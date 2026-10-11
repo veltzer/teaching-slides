@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -100,30 +95,30 @@
   <rect x="40" y="40" width="300" height="480" rx="8" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="190" y="82" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">input: 200 GB</text>
 
-  <rect x="70" y="110" width="240" height="65" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="110" width="240" height="65" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="190" y="150" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">batch 1</text>
-  <rect x="70" y="185" width="240" height="65" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="185" width="240" height="65" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="190" y="225" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">batch 2</text>
-  <rect x="70" y="260" width="240" height="65" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="260" width="240" height="65" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="190" y="300" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">batch 3</text>
-  <rect x="70" y="335" width="240" height="65" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="335" width="240" height="65" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="190" y="375" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">batch 4</text>
-  <rect x="70" y="410" width="240" height="65" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="410" width="240" height="65" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="190" y="450" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">batch 5</text>
 
   <!-- Pipeline -->
   <line x1="340" y1="280" x2="456" y2="280" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
-  <rect x="460" y="190" width="380" height="180" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="460" y="190" width="380" height="180" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="650" y="255" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">one query pipeline</text>
   <text x="650" y="292" text-anchor="middle" font-size="16" fill="var(--primary-text)" font-family="Arial, sans-serif">filter, group_by, agg</text>
   <text x="650" y="322" text-anchor="middle" font-size="14" fill="var(--primary-text)" font-family="Arial, sans-serif">one batch in memory at a time</text>
 
   <!-- Result -->
   <line x1="840" y1="280" x2="956" y2="280" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
-  <rect x="960" y="210" width="280" height="140" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="960" y="210" width="280" height="140" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1100" y="272" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">result: 40 MB</text>
   <text x="1100" y="308" text-anchor="middle" font-size="15" fill="var(--ok-text)" font-family="Arial, sans-serif">fits comfortably in RAM</text>
 
-  <rect x="40" y="550" width="1200" height="70" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="550" width="1200" height="70" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="593" text-anchor="middle" font-size="21" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Constant memory: batch in, batch out — same query, one machine</text>
 </svg>

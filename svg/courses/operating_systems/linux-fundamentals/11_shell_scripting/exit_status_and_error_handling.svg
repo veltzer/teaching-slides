@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,23 +90,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="257.1428" height="235.625" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="257.1428" height="235.625" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="168.5714" y="112.5" text-anchor="middle" font-size="23.6005" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Exit 0</text>
   <text x="168.5714" y="174.125" text-anchor="middle" font-size="21.455" font-family="Arial, sans-serif" fill="var(--ok-text)">Success</text>
   <text x="168.5714" y="232.125" text-anchor="middle" font-size="21.455" fill="var(--ok-accent)" font-family="Arial, sans-serif">Command OK</text>
-  <rect x="339.9999" y="40" width="257.1428" height="235.625" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="339.9999" y="40" width="257.1428" height="235.625" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="468.5713" y="112.5" text-anchor="middle" font-size="23.6005" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">Exit 1</text>
   <text x="468.5713" y="174.125" text-anchor="middle" font-size="21.455" font-family="Arial, sans-serif" fill="var(--danger-text)">General Error</text>
   <text x="468.5713" y="232.125" text-anchor="middle" font-size="21.455" fill="var(--danger-accent)" font-family="Arial, sans-serif">Catchall</text>
-  <rect x="639.9999" y="40" width="257.1428" height="235.625" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="639.9999" y="40" width="257.1428" height="235.625" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="768.5714" y="112.5" text-anchor="middle" font-size="23.6005" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">Exit 2</text>
   <text x="768.5714" y="174.125" text-anchor="middle" font-size="21.455" font-family="Arial, sans-serif" fill="var(--danger-text)">Misuse</text>
   <text x="768.5714" y="232.125" text-anchor="middle" font-size="21.455" fill="var(--danger-accent)" font-family="Arial, sans-serif">Bad syntax</text>
-  <rect x="940" y="40" width="300" height="235.625" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="235.625" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="1089.9999" y="112.5" text-anchor="middle" font-size="23.6005" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">Exit 126/127</text>
   <text x="1089.9999" y="174.125" text-anchor="middle" font-size="21.455" font-family="Arial, sans-serif" fill="var(--danger-text)">Not executable /</text>
   <text x="1089.9999" y="232.125" text-anchor="middle" font-size="21.455" fill="var(--danger-accent)" font-family="Arial, sans-serif">Not found</text>
-  <rect x="40" y="348.125" width="1200" height="271.875" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="348.125" width="1200" height="271.875" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="639.9999" y="427.875" text-anchor="middle" font-size="23.6005" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Error Handling Patterns</text>
   <text x="639.9999" y="493.125" text-anchor="middle" font-size="21.455" font-family="Arial, sans-serif" fill="var(--warn-text)">$? = check last exit code | set -e = exit on error</text>
   <text x="639.9999" y="558.375" text-anchor="middle" font-size="21.455" font-family="Arial, sans-serif" fill="var(--warn-text)">trap 'cleanup' EXIT | command || { echo "failed"; exit 1; }</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,35 +92,35 @@
   </defs>
 
 
-  <rect x="40" y="40" width="386.440677966102" height="261.56862745098" rx="8.603368303259" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="386.440677966102" height="261.56862745098" rx="8.603368303259" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="233.220338983051" y="85.490196078432" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.508420758147" font-weight="bold" fill="var(--primary-text)">RDD Lineage</text>
   <text x="233.220338983051" y="130.980392156863" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--primary-text)">DAG of transforms</text>
   <text x="233.220338983051" y="170.784313725491" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--primary-text)">Recompute from source</text>
   <text x="233.220338983051" y="210.588235294118" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--primary-text)">Narrow: local replay</text>
   <text x="233.220338983051" y="250.392156862745" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--primary-text)">Wide: re-shuffle</text>
 
-  <rect x="446.779661016949" y="40" width="386.440677966102" height="261.56862745098" rx="8.603368303259" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="446.779661016949" y="40" width="386.440677966102" height="261.56862745098" rx="8.603368303259" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="85.490196078432" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.508420758147" font-weight="bold" fill="var(--ok-text)">Checkpointing</text>
   <text x="640" y="130.980392156863" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--ok-text)">Persist to HDFS/S3</text>
   <text x="640" y="170.784313725491" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--ok-text)">Truncates lineage</text>
   <text x="640" y="210.588235294118" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--ok-text)">For iterative jobs</text>
   <text x="640" y="250.392156862745" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--ok-text)">Required in Streaming</text>
 
-  <rect x="853.559322033898" y="40" width="386.440677966102" height="261.56862745098" rx="8.603368303259" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="853.559322033898" y="40" width="386.440677966102" height="261.56862745098" rx="8.603368303259" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1046.779661016949" y="85.490196078432" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.508420758147" font-weight="bold" fill="var(--warn-text)">Task Retries</text>
   <text x="1046.779661016949" y="130.980392156863" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--warn-text)">maxFailures=4</text>
   <text x="1046.779661016949" y="170.784313725491" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--warn-text)">Stage re-attempts</text>
   <text x="1046.779661016949" y="210.588235294118" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--warn-text)">Speculation + blacklist</text>
   <text x="1046.779661016949" y="250.392156862745" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--warn-text)">Idempotency assumed</text>
 
-  <rect x="40" y="341.372549019609" width="386.440677966102" height="278.627450980391" rx="8.603368303259" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="341.372549019609" width="386.440677966102" height="278.627450980391" rx="8.603368303259" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="233.220338983051" y="386.862745098039" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.508420758147" font-weight="bold" fill="var(--info-text)">Driver Recovery</text>
   <text x="233.220338983051" y="432.352941176471" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--info-text)">Single point of failure</text>
   <text x="233.220338983051" y="472.156862745098" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--info-text)">--supervise mode</text>
   <text x="233.220338983051" y="511.960784313725" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--info-text)">Streaming WAL</text>
   <text x="233.220338983051" y="551.764705882353" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--info-text)">Restart via YARN/K8s</text>
 
-  <rect x="446.779661016949" y="341.372549019609" width="386.440677966102" height="278.627450980391" rx="8.603368303259" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="446.779661016949" y="341.372549019609" width="386.440677966102" height="278.627450980391" rx="8.603368303259" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="386.862745098039" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.508420758147" font-weight="bold" fill="var(--danger-text)">Executor Loss</text>
   <text x="640" y="432.352941176471" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--danger-text)">Blocks recomputed</text>
   <text x="640" y="472.156862745098" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.13131556861" fill="var(--danger-text)">Shuffle may vanish</text>

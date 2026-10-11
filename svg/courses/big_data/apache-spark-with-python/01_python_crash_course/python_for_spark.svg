@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,25 +92,25 @@
   </defs>
 
   <!-- Row 1: core data types -->
-  <rect x="40" y="40" width="279.310344827586" height="171.851851851852" rx="10.540925533895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="279.310344827586" height="171.851851851852" rx="10.540925533895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="179.655172413793" y="77.592592592593" font-family="Arial, sans-serif" font-size="23.190036174568" font-weight="bold" fill="var(--bg)" text-anchor="middle">list  [ ]</text>
   <text x="179.655172413793" y="115.185185185185" font-family="Courier New, monospace" font-size="16.865480854231" fill="var(--bg)" text-anchor="middle">[1, 2, 3]</text>
   <text x="179.655172413793" y="147.407407407407" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--bg)" text-anchor="middle">ordered, mutable</text>
   <text x="179.655172413793" y="179.62962962963" font-family="Arial, sans-serif" font-size="15.811388300842" font-weight="bold" fill="var(--bg)" text-anchor="middle">Spark: RDD</text>
 
-  <rect x="340" y="40" width="279.310344827586" height="171.851851851852" rx="10.540925533895" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="279.310344827586" height="171.851851851852" rx="10.540925533895" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="479.655172413793" y="77.592592592593" font-family="Arial, sans-serif" font-size="23.190036174568" font-weight="bold" fill="var(--bg)" text-anchor="middle">dict  { }</text>
   <text x="479.655172413793" y="115.185185185185" font-family="Courier New, monospace" font-size="16.865480854231" fill="var(--bg)" text-anchor="middle">{"k": "v"}</text>
   <text x="479.655172413793" y="147.407407407407" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--bg)" text-anchor="middle">key/value, O(1)</text>
   <text x="479.655172413793" y="179.62962962963" font-family="Arial, sans-serif" font-size="15.811388300842" font-weight="bold" fill="var(--bg)" text-anchor="middle">Spark: Row</text>
 
-  <rect x="640" y="40" width="279.310344827586" height="171.851851851852" rx="10.540925533895" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="40" width="279.310344827586" height="171.851851851852" rx="10.540925533895" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="779.655172413793" y="77.592592592593" font-family="Arial, sans-serif" font-size="23.190036174568" font-weight="bold" fill="var(--bg)" text-anchor="middle">tuple  ( )</text>
   <text x="779.655172413793" y="115.185185185185" font-family="Courier New, monospace" font-size="16.865480854231" fill="var(--bg)" text-anchor="middle">(1, "x")</text>
   <text x="779.655172413793" y="147.407407407407" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--bg)" text-anchor="middle">immutable, hashable</text>
   <text x="779.655172413793" y="179.62962962963" font-family="Arial, sans-serif" font-size="15.811388300842" font-weight="bold" fill="var(--bg)" text-anchor="middle">Spark: PairRDD</text>
 
-  <rect x="940" y="40" width="300" height="171.851851851852" rx="10.540925533895" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="171.851851851852" rx="10.540925533895" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1090" y="77.592592592593" font-family="Arial, sans-serif" font-size="23.190036174568" font-weight="bold" fill="var(--bg)" text-anchor="middle">set  { }</text>
   <text x="1090" y="115.185185185185" font-family="Courier New, monospace" font-size="16.865480854231" fill="var(--bg)" text-anchor="middle">{1, 2, 3}</text>
   <text x="1090" y="147.407407407407" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--bg)" text-anchor="middle">unique, unordered</text>

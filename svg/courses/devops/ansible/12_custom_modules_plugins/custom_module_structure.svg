@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
   <!-- Module skeleton -->
-  <rect x="40" y="40" width="455.172413793103" height="580" rx="10.540925533895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="455.172413793103" height="580" rx="10.540925533895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="267.586206896552" y="77.592592592593" font-family="Arial, sans-serif" font-size="18.97366596101" font-weight="bold" fill="var(--bg)" text-anchor="middle">Module Skeleton</text>
   <text x="60.689655172414" y="120.555555555556" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">from ansible.module_utils.basic</text>
   <text x="60.689655172414" y="142.037037037037" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">  import AnsibleModule</text>
@@ -116,7 +111,7 @@
   <text x="267.586206896552" y="598.518518518519" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--bg)" text-anchor="middle">or collections/plugins/modules/</text>
 
   <!-- AnsibleModule features -->
-  <rect x="515.862068965517" y="40" width="331.034482758621" height="279.259259259259" rx="10.540925533895" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="515.862068965517" y="40" width="331.034482758621" height="279.259259259259" rx="10.540925533895" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="681.379310344828" y="77.592592592593" font-family="Arial, sans-serif" font-size="18.97366596101" font-weight="bold" fill="var(--bg)" text-anchor="middle">Helpers</text>
   <text x="536.551724137931" y="115.185185185185" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">exit_json / fail_json</text>
   <text x="536.551724137931" y="147.407407407407" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">run_command(cmd)</text>
@@ -126,7 +121,7 @@
   <text x="536.551724137931" y="287.037037037037" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">set_mode_if_different</text>
 
   <!-- Return values -->
-  <rect x="515.862068965517" y="340.740740740741" width="331.034482758621" height="279.259259259259" rx="10.540925533895" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="515.862068965517" y="340.740740740741" width="331.034482758621" height="279.259259259259" rx="10.540925533895" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="681.379310344828" y="378.333333333333" font-family="Arial, sans-serif" font-size="18.97366596101" font-weight="bold" fill="var(--bg)" text-anchor="middle">Return Keys</text>
   <text x="536.551724137931" y="415.925925925926" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">changed</text>
   <text x="536.551724137931" y="448.148148148148" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">failed</text>
@@ -136,7 +131,7 @@
   <text x="536.551724137931" y="577.037037037037" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">invocation (auto)</text>
 
   <!-- Filter / callback plugins -->
-  <rect x="867.586206896552" y="40" width="372.413793103448" height="279.259259259259" rx="10.540925533895" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="867.586206896552" y="40" width="372.413793103448" height="279.259259259259" rx="10.540925533895" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1053.793103448276" y="77.592592592593" font-family="Arial, sans-serif" font-size="18.97366596101" font-weight="bold" fill="var(--bg)" text-anchor="middle">Filter Plugin</text>
   <text x="888.275862068966" y="120.555555555556" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">class FilterModule:</text>
   <text x="888.275862068966" y="147.407407407407" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">  def filters(self):</text>
@@ -144,7 +139,7 @@
   <text x="888.275862068966" y="217.222222222222" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">{{ v | upper }}</text>
   <text x="888.275862068966" y="260.185185185185" font-family="Arial, sans-serif" font-size="13.703203194063" font-style="italic" fill="var(--bg)">filter_plugins/ dir</text>
 
-  <rect x="867.586206896552" y="340.740740740741" width="372.413793103448" height="279.259259259259" rx="10.540925533895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="867.586206896552" y="340.740740740741" width="372.413793103448" height="279.259259259259" rx="10.540925533895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1053.793103448276" y="378.333333333333" font-family="Arial, sans-serif" font-size="18.97366596101" font-weight="bold" fill="var(--bg)" text-anchor="middle">Callback Plugin</text>
   <text x="888.275862068966" y="415.925925925926" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">yaml</text>
   <text x="888.275862068966" y="442.777777777778" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">json</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
   <!-- Stage 1 -->
-  <rect x="40" y="40" width="380" height="580" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="380" height="580" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="230" y="100" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Stage 1</text>
   <text x="230" y="140" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Pre-Training</text>
   <text x="230" y="175" text-anchor="middle" font-size="16" fill="var(--primary-text)" font-family="Arial, sans-serif">(unsupervised)</text>
@@ -115,7 +110,7 @@
   <line x1="420" y1="330" x2="460" y2="330" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
   <!-- Stage 2 -->
-  <rect x="470" y="40" width="380" height="580" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="470" y="40" width="380" height="580" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="660" y="100" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Stage 2</text>
   <text x="660" y="140" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Supervised FT</text>
   <text x="660" y="175" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">(SFT)</text>
@@ -133,7 +128,7 @@
   <line x1="850" y1="330" x2="890" y2="330" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
   <!-- Stage 3 -->
-  <rect x="900" y="40" width="340" height="580" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="900" y="40" width="340" height="580" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1070" y="100" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Stage 3</text>
   <text x="1070" y="140" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">RLHF</text>
   <text x="1070" y="175" text-anchor="middle" font-size="16" fill="var(--warn-text)" font-family="Arial, sans-serif">reward learning</text>

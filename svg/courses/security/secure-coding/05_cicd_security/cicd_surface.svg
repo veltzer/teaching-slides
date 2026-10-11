@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -104,25 +99,25 @@
   <text x="150.847457627119" y="243.783783783784" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--text-muted)">SAST · lint</text>
   <text x="150.847457627119" y="272.895752895753" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--text-muted)">peer review</text>
 
-  <rect x="292.203389830509" y="116.138996138996" width="221.694915254237" height="190.34749034749" rx="6.402505889888" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="292.203389830509" y="116.138996138996" width="221.694915254237" height="190.34749034749" rx="6.402505889888" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="403.050847457627" y="169.88416988417" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.207517669663" font-weight="bold" fill="var(--primary-text)">Build</text>
   <text x="403.050847457627" y="214.671814671815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--primary-text)">hermetic</text>
   <text x="403.050847457627" y="243.783783783784" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--primary-text)">pinned deps</text>
   <text x="403.050847457627" y="272.895752895753" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--primary-text)">SBOM</text>
 
-  <rect x="544.406779661017" y="116.138996138996" width="221.694915254237" height="190.34749034749" rx="6.402505889888" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="544.406779661017" y="116.138996138996" width="221.694915254237" height="190.34749034749" rx="6.402505889888" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="655.254237288136" y="169.88416988417" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.207517669663" font-weight="bold" fill="var(--warn-text)">Scan + sign</text>
   <text x="655.254237288136" y="214.671814671815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--warn-text)">CVE scan</text>
   <text x="655.254237288136" y="243.783783783784" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--warn-text)">cosign</text>
   <text x="655.254237288136" y="272.895752895753" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--warn-text)">provenance</text>
 
-  <rect x="796.610169491525" y="116.138996138996" width="221.694915254237" height="190.34749034749" rx="6.402505889888" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="796.610169491525" y="116.138996138996" width="221.694915254237" height="190.34749034749" rx="6.402505889888" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="907.457627118644" y="169.88416988417" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.207517669663" font-weight="bold" fill="var(--info-text)">Registry</text>
   <text x="907.457627118644" y="214.671814671815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--info-text)">immutable</text>
   <text x="907.457627118644" y="243.783783783784" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--info-text)">access-</text>
   <text x="907.457627118644" y="268.416988416988" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--info-text)">controlled</text>
 
-  <rect x="1048.813559322034" y="116.138996138996" width="191.186440677966" height="190.34749034749" rx="6.402505889888" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1048.813559322034" y="116.138996138996" width="191.186440677966" height="190.34749034749" rx="6.402505889888" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1144.406779661017" y="169.88416988417" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.207517669663" font-weight="bold" fill="var(--ok-text)">Deploy</text>
   <text x="1144.406779661017" y="214.671814671815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--ok-text)">verify sig +</text>
   <text x="1144.406779661017" y="243.783783783784" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.939180409738" fill="var(--ok-text)">provenance</text>
@@ -133,7 +128,7 @@
   <line x1="766.101694915254" y1="211.312741312741" x2="794.576271186441" y2="211.312741312741" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="1018.305084745763" y1="211.312741312741" x2="1046.779661016949" y2="211.312741312741" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="362.471042471042" width="569.491525423729" height="257.528957528958" rx="6.402505889888" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="362.471042471042" width="569.491525423729" height="257.528957528958" rx="6.402505889888" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="324.745762711864" y="407.258687258687" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.207517669663" font-weight="bold" fill="var(--danger-text)">Attacker's target</text>
   <text x="60.338983050847" y="458.764478764479" font-family="Arial, sans-serif" font-size="17.073349039701" fill="var(--danger-text)">- deploy credentials, cloud admin</text>
   <text x="60.338983050847" y="505.791505791506" font-family="Arial, sans-serif" font-size="17.073349039701" fill="var(--danger-text)">- signing keys, source access</text>

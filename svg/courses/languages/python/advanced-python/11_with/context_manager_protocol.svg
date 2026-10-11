@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <!-- Title bar -->
-  <rect x="40" y="40" width="1200" height="48.645161" fill="url(#grad-primary)" rx="6.096006" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="48.645161" fill="url(#grad-primary)" rx="6.096006" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="71.806452" font-size="20.602773" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Context Manager Protocol</text>
 
   <!-- Column headers -->
@@ -109,7 +104,7 @@
   <!-- === NORMAL PATH (left side) === -->
 
   <!-- Step 1: with statement -->
-  <rect x="115" y="131.677419" width="206.25" height="43.032258" rx="6.096006" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="115" y="131.677419" width="206.25" height="43.032258" rx="6.096006" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="218.125" y="152.258065" font-size="13.110884" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">with CM() as obj:</text>
   <text x="218.125" y="168.161239" font-size="10.301438" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">evaluate</text>
 
@@ -125,7 +120,7 @@
   <line x1="218.125" y1="245.806452" x2="218.125" y2="273.870968" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Step 3: body executes -->
-  <rect x="115" y="273.870968" width="206.25" height="43.032258" rx="6.096006" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="115" y="273.870968" width="206.25" height="43.032258" rx="6.096006" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="218.125" y="294.451613" font-size="13.110884" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">body executes</text>
   <text x="218.125" y="310.354787" font-size="10.301438" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif"/>
 
@@ -142,13 +137,13 @@
   <line x1="218.125" y1="395.483871" x2="218.125" y2="423.548387" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
 
   <!-- Step 5: Done -->
-  <rect x="133.75" y="423.548387" width="168.75" height="37.419355" rx="6.096006" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="133.75" y="423.548387" width="168.75" height="37.419355" rx="6.096006" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="218.125" y="446.935535" font-size="13.110884" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Execution continues</text>
 
   <!-- === EXCEPTION PATH (right side) === -->
 
   <!-- Step 1: with statement -->
-  <rect x="658.75" y="131.677419" width="206.25" height="43.032258" rx="6.096006" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="658.75" y="131.677419" width="206.25" height="43.032258" rx="6.096006" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="761.875" y="152.258065" font-size="13.110884" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">with CM() as obj:</text>
   <text x="761.875" y="168.161239" font-size="10.301438" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">evaluate</text>
 
@@ -164,7 +159,7 @@
   <line x1="761.875" y1="245.806452" x2="761.875" y2="273.870968" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Step 3: body raises -->
-  <rect x="658.75" y="273.870968" width="206.25" height="43.032258" rx="6.096006" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="658.75" y="273.870968" width="206.25" height="43.032258" rx="6.096006" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="761.875" y="294.451613" font-size="13.110884" fill="var(--danger-accent)" text-anchor="middle" font-family="Courier New, monospace">body raises</text>
   <text x="761.875" y="310.354787" font-size="10.301438" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">propagates up</text>
 
@@ -185,22 +180,22 @@
   <!-- Arrow: True → suppress -->
   <line x1="818.125" y1="442.258065" x2="986.875" y2="442.258065" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
   <text x="902.5" y="434.774194" font-size="10.301438" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">True</text>
-  <rect x="986.875" y="423.548387" width="168.75" height="37.419355" rx="6.096006" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="986.875" y="423.548387" width="168.75" height="37.419355" rx="6.096006" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1071.25" y="446.935535" font-size="12.174435" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Exception suppressed</text>
 
   <!-- Arrow: False → re-raise -->
   <line x1="761.875" y1="470.322581" x2="761.875" y2="498.387097" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
   <text x="780.625" y="489.032258" font-size="10.301438" fill="var(--danger-accent)" font-family="Arial, sans-serif">False</text>
-  <rect x="668.125" y="498.387097" width="187.5" height="37.419355" rx="6.096006" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="668.125" y="498.387097" width="187.5" height="37.419355" rx="6.096006" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="761.875" y="521.774245" font-size="12.174435" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Exception re-raised</text>
 
   <!-- Bottom info box: __enter__ note -->
-  <rect x="96.25" y="479.677419" width="487.5" height="46.774194" rx="6.096006" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="96.25" y="479.677419" width="487.5" height="46.774194" rx="6.096006" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="115" y="498.387097" font-size="11.237886" font-weight="bold" fill="var(--ok-accent)" font-family="Courier New, monospace">__enter__ → 'as' variable</text>
   <text x="115" y="517.096774" font-size="11.237886" fill="var(--text)" font-family="Courier New, monospace">with open('f.txt') as f:</text>
 
   <!-- Method signatures box -->
-  <rect x="96.25" y="541.419355" width="487.5" height="63.612903" rx="6.096006" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="96.25" y="541.419355" width="487.5" height="63.612903" rx="6.096006" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="115" y="560.129032" font-size="11.237886" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Protocol Methods:</text>
   <text x="115" y="576.967742" font-size="10.301438" fill="var(--text)" font-family="Courier New, monospace">__enter__(self) → value</text>
   <text x="115" y="593.806452" font-size="10.301438" fill="var(--text)" font-family="Courier New, monospace">__exit__(self, type, val, tb) → bool</text>

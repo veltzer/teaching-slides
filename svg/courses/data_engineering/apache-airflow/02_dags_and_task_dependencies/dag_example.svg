@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,15 +94,15 @@
 
   <text x="600" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.369246717036" font-weight="bold" fill="var(--text)">Airflow DAG: Daily ETL</text>
 
-  <rect x="40" y="106.725663716814" width="200" height="82.12389380531" rx="10.131873827513" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="106.725663716814" width="200" height="82.12389380531" rx="10.131873827513" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="140" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--info-text)">extract_users</text>
   <text x="140" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--info-text)">PostgresOperator</text>
 
-  <rect x="40" y="229.911504424779" width="200" height="82.12389380531" rx="10.131873827513" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="229.911504424779" width="200" height="82.12389380531" rx="10.131873827513" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="140" y="265.840707964602" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--info-text)">extract_orders</text>
   <text x="140" y="291.504424778761" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--info-text)">PostgresOperator</text>
 
-  <rect x="40" y="353.097345132743" width="200" height="82.12389380531" rx="10.131873827513" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="353.097345132743" width="200" height="82.12389380531" rx="10.131873827513" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="140" y="389.026548672566" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--info-text)">extract_events</text>
   <text x="140" y="414.690265486726" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--info-text)">S3Sensor + Hook</text>
 
@@ -115,24 +110,24 @@
   <path d="M 242 270.973451327434 L 365 270.973451327434" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
   <path d="M 242 394.159292035398 L 365 270.973451327434" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="370" y="229.911504424779" width="220" height="82.12389380531" rx="10.131873827513" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="370" y="229.911504424779" width="220" height="82.12389380531" rx="10.131873827513" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="480" y="265.840707964602" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--warn-text)">transform</text>
   <text x="480" y="291.504424778761" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--warn-text)">PythonOperator</text>
 
   <path d="M 592 270.973451327434 L 705 270.973451327434" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="710" y="229.911504424779" width="220" height="82.12389380531" rx="10.131873827513" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="710" y="229.911504424779" width="220" height="82.12389380531" rx="10.131873827513" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="820" y="265.840707964602" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--ok-text)">load_warehouse</text>
   <text x="820" y="291.504424778761" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--ok-text)">SnowflakeOperator</text>
 
   <path d="M 932 270.973451327434 L 1035 209.380530973451" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
   <path d="M 932 270.973451327434 L 1035 332.566371681416" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="1040" y="168.318584070796" width="200" height="82.12389380531" rx="10.131873827513" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1040" y="168.318584070796" width="200" height="82.12389380531" rx="10.131873827513" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1140" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--primary-text)">notify_team</text>
   <text x="1140" y="229.911504424779" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--primary-text)">SlackWebhook</text>
 
-  <rect x="1040" y="291.504424778761" width="200" height="82.12389380531" rx="10.131873827513" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1040" y="291.504424778761" width="200" height="82.12389380531" rx="10.131873827513" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1140" y="327.433628318584" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--primary-text)">refresh_bi</text>
   <text x="1140" y="353.097345132743" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.158248593015" fill="var(--primary-text)">HttpOperator</text>
 

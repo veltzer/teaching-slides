@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
 
   <!-- ===== LEFT: PURE ADVICE ===== -->
-  <rect x="40" y="40" width="569.491525423729" height="62.477558348294" rx="12.348586965176" fill="url(#grad-ok)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="569.491525423729" height="62.477558348294" rx="12.348586965176" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="324.745762711864" y="79.569120287253" font-size="24.697173930352" font-weight="bold" text-anchor="middle" fill="var(--ok-text)" font-family="Arial, sans-serif">Pure advice</text>
 
   <rect x="70.508474576271" y="128.50987432675" width="152.542372881356" height="62.477558348294" rx="8.232391310117" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -111,7 +106,7 @@
   <text x="324.745762711864" y="251.382405745063" font-size="14.406684792705" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">no external state touched — try again anytime</text>
 
   <!-- ===== RIGHT: EFFECTFUL ===== -->
-  <rect x="670.508474576271" y="40" width="569.491525423729" height="62.477558348294" rx="12.348586965176" fill="url(#grad-danger)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="670.508474576271" y="40" width="569.491525423729" height="62.477558348294" rx="12.348586965176" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="955.254237288136" y="79.569120287253" font-size="24.697173930352" font-weight="bold" text-anchor="middle" fill="var(--danger-text)" font-family="Arial, sans-serif">Effectful</text>
 
   <rect x="701.016949152542" y="128.50987432675" width="152.542372881356" height="62.477558348294" rx="8.232391310117" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -132,20 +127,20 @@
   <text x="640" y="355.511669658887" font-size="13.377635878941" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">steps 1–2 already changed the world before step 3 crashed</text>
 
   <!-- state-left-behind band -->
-  <rect x="40" y="399.245960502693" width="508.474576271186" height="41.65170556553" rx="8.232391310117" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" opacity="0.35" filter="url(#shadow)"/>
+  <rect x="40" y="399.245960502693" width="508.474576271186" height="41.65170556553" rx="8.232391310117" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" opacity="0.35"/>
   <text x="294.237288135593" y="426.319569120287" font-size="14.406684792705" font-weight="bold" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial, sans-serif">state left behind (steps 1–2 committed)</text>
 
   <!-- step chain y=470..560 -->
   <!-- step 1 (shaded) -->
-  <rect x="45.084745762712" y="492.962298025135" width="193.220338983051" height="57.271095152603" rx="8.232391310117" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="45.084745762712" y="492.962298025135" width="193.220338983051" height="57.271095152603" rx="8.232391310117" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1"/>
   <text x="141.694915254237" y="528.366247755835" font-size="17.493831533999" font-weight="bold" text-anchor="middle" fill="var(--warn-text)" font-family="Arial, sans-serif">step 1</text>
   <line x1="238.305084745763" y1="521.077199281867" x2="289.152542372881" y2="521.077199281867" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <!-- step 2 (shaded) -->
-  <rect x="294.237288135593" y="492.962298025135" width="193.220338983051" height="57.271095152603" rx="8.232391310117" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="294.237288135593" y="492.962298025135" width="193.220338983051" height="57.271095152603" rx="8.232391310117" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1"/>
   <text x="390.847457627119" y="528.366247755835" font-size="17.493831533999" font-weight="bold" text-anchor="middle" fill="var(--warn-text)" font-family="Arial, sans-serif">step 2</text>
   <line x1="487.457627118644" y1="521.077199281867" x2="538.305084745763" y2="521.077199281867" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <!-- step 3 (dies) -->
-  <rect x="543.389830508475" y="492.962298025135" width="193.220338983051" height="57.271095152603" rx="8.232391310117" fill="url(#grad-danger)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="543.389830508475" y="492.962298025135" width="193.220338983051" height="57.271095152603" rx="8.232391310117" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="528.366247755835" font-size="17.493831533999" font-weight="bold" text-anchor="middle" fill="var(--danger-text)" font-family="Arial, sans-serif">step 3</text>
   <text x="640" y="480.466786355476" font-size="15.43573370647" font-weight="bold" text-anchor="middle" fill="var(--danger-accent)" font-family="Arial, sans-serif">✗ dies here</text>
   <line x1="736.610169491525" y1="521.077199281867" x2="787.457627118644" y2="521.077199281867" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>

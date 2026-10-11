@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
   <!-- Flow: top to bottom in left column -->
 
   <!-- 1. Setup -->
-  <rect x="40" y="40" width="560" height="77.983186" rx="6.426834" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="560" height="77.983186" rx="6.426834" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="320" y="67.294115" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--bg)" text-anchor="middle" font-weight="bold">1. Setup</text>
   <text x="60" y="90.689071" font-size="12.835138" fill="var(--primary-accent)" font-family="Courier New, monospace">setup() { mkdir -p /tmp/t; }</text>
   <text x="60" y="108.235288" font-family="Arial, sans-serif" font-size="11.847762" fill="var(--primary-accent)"/>
@@ -124,14 +119,14 @@
   <line x1="320" y1="429.91593" x2="320" y2="459.159625" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 4. Teardown -->
-  <rect x="40" y="459.159625" width="560" height="77.983186" rx="6.426834" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="459.159625" width="560" height="77.983186" rx="6.426834" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="320" y="486.45374" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">4. Teardown</text>
   <text x="60" y="509.848696" font-size="12.835138" fill="var(--text)" font-family="Courier New, monospace">teardown() { rm -rf /tmp/t; }</text>
   <text x="60" y="527.394913" font-family="Arial, sans-serif" font-size="11.847762" fill="var(--text-muted)">trap on EXIT</text>
   <line x1="320" y1="537.142811" x2="320" y2="566.386506" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 5. Reporting -->
-  <rect x="40" y="566.386506" width="560" height="53.613494" rx="6.426834" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="566.386506" width="560" height="53.613494" rx="6.426834" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="320" y="593.680621" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--bg)" text-anchor="middle" font-weight="bold">5. Reporting</text>
   <text x="60" y="608.302415" font-size="12.835138" fill="var(--ok-accent)" font-family="Courier New, monospace">echo "P:$pass F:$fail"; exit $fail</text>
 
@@ -160,7 +155,7 @@
   <text x="680" y="439.663828" font-family="Arial, sans-serif" font-size="11.847762" fill="var(--text-muted)"/>
 
   <!-- Frameworks -->
-  <rect x="660" y="464.03352" width="580" height="155.966372" rx="6.426834" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="464.03352" width="580" height="155.966372" rx="6.426834" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="950" y="491.327635" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Bash Test Frameworks</text>
   <text x="680" y="517.647015" font-family="Arial, sans-serif" font-size="13.822407" fill="var(--text)" font-weight="bold">bats-core</text>
   <text x="680" y="537.142811" font-family="Arial, sans-serif" font-size="12.835138" fill="var(--text-muted)">TAP output</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <rect x="40" y="40" width="560" height="50" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
-  <rect x="40" y="40" width="340" height="50" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="340" height="50" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="210" y="71" text-anchor="middle" font-size="17" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">spent</text>
   <text x="490" y="71" text-anchor="middle" font-size="17" fill="var(--text)" font-family="Arial, sans-serif">remaining</text>
   <text x="320" y="130" text-anchor="middle" font-size="17" fill="var(--text-muted)" font-family="Arial, sans-serif">the budget is a hard ceiling enforced in code</text>
@@ -108,20 +103,20 @@
   <rect x="40" y="380" width="460" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="270" y="417" text-anchor="middle" font-size="17" fill="var(--text)" font-family="Arial, sans-serif">audit: 30 workers + verification panel</text>
 
-  <rect x="700" y="40" width="280" height="80" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="700" y="40" width="280" height="80" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="840" y="75" text-anchor="middle" font-size="17" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">remaining budget</text>
   <text x="840" y="103" text-anchor="middle" font-size="17" fill="var(--primary-text)" font-family="Arial, sans-serif">&gt; cost of one round?</text>
 
   <line x1="840" y1="120" x2="840" y2="193" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
   <text x="865" y="160" text-anchor="start" font-size="16" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">yes</text>
 
-  <rect x="700" y="200" width="280" height="80" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="700" y="200" width="280" height="80" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="840" y="247" text-anchor="middle" font-size="17" fill="var(--info-text)" font-family="Arial, sans-serif">run another round</text>
   <path d="M700,240 L660,240 L660,80 L693,80" fill="none" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
 
   <line x1="980" y1="80" x2="1033" y2="80" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="1006" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">no</text>
-  <rect x="1040" y="40" width="200" height="80" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1040" y="40" width="200" height="80" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1140" y="75" text-anchor="middle" font-size="17" fill="var(--ok-text)" font-family="Arial, sans-serif">finish + report</text>
   <text x="1140" y="103" text-anchor="middle" font-size="17" fill="var(--ok-text)" font-family="Arial, sans-serif">what was skipped</text>
 

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,22 +92,22 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.762697824931" font-weight="bold" fill="var(--text)">Change Data Capture Flow</text>
 
-  <rect x="40" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="157.857142857143" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--info-text)">Source DB</text>
   <text x="157.857142857143" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--info-text)">app writes</text>
   <text x="157.857142857143" y="238.254545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--info-text)">WAL or binlog</text>
 
-  <rect x="361.428571428571" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="361.428571428571" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="479.285714285714" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--warn-text)">CDC connector</text>
   <text x="479.285714285714" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">reads change log</text>
   <text x="479.285714285714" y="238.254545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">emits events</text>
 
-  <rect x="682.857142857143" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="682.857142857143" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="800.714285714286" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--warn-text)">Stream</text>
   <text x="800.714285714286" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">ordered, durable</text>
   <text x="800.714285714286" y="238.254545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">per-table topic</text>
 
-  <rect x="1004.285714285714" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1004.285714285714" y="145.454545454545" width="235.714285714286" height="126.545454545455" rx="10.629534937476" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1122.142857142857" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--ok-text)">Target lake</text>
   <text x="1122.142857142857" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-text)">apply changes</text>
   <text x="1122.142857142857" y="238.254545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-text)">MERGE upsert</text>
@@ -137,7 +132,7 @@
   <text x="682.857142857143" y="461.818181818182" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-accent)">Less load on source</text>
   <text x="682.857142857143" y="488.181818181818" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--danger-accent)">Requires source support &amp; ops</text>
 
-  <rect x="40" y="525.090909090909" width="1200" height="94.909090909091" rx="8.50362794998" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="525.090909090909" width="1200" height="94.909090909091" rx="8.50362794998" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--primary-text)">Reliability needs idempotent apply</text>
   <text x="640" y="588.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--primary-text)">Track last-applied offset; replay safe; survives restarts</text>
 </svg>

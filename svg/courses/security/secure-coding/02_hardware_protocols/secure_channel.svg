@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,7 +94,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">A secure hardware channel</text>
 
-  <rect x="40" y="86.194690265487" width="280" height="441.41592920354" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="86.194690265487" width="280" height="441.41592920354" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)">Device A</text>
   <text x="180" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)"/>
 
@@ -119,7 +114,7 @@
   <text x="180" y="481.41592920354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">conf: hide payload</text>
   <text x="180" y="507.079646017699" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">integrity: detect tamper</text>
 
-  <rect x="380" y="209.380530973451" width="520" height="195.044247787611" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="380" y="209.380530973451" width="520" height="195.044247787611" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="245.309734513274" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--info-text)">Hostile channel</text>
   <text x="640" y="281.238938053097" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">USB, BLE, CAN, NFC, RS-485, ...</text>
   <text x="640" y="327.433628318584" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">attacker reads, replays, modifies</text>
@@ -128,7 +123,7 @@
   <line x1="320" y1="306.902654867257" x2="380" y2="306.902654867257" stroke="var(--info-text)" stroke-width="3" marker-end="url(#arrow-info)"/>
   <line x1="900" y1="306.902654867257" x2="960" y2="306.902654867257" stroke="var(--info-text)" stroke-width="3" marker-end="url(#arrow-info)"/>
 
-  <rect x="960" y="86.194690265487" width="280" height="441.41592920354" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="960" y="86.194690265487" width="280" height="441.41592920354" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1100" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--ok-text)">Device B / gateway</text>
   <text x="1100" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--ok-text)"/>
 
@@ -148,7 +143,7 @@
   <text x="1100" y="481.41592920354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">as TLS — over</text>
   <text x="1100" y="507.079646017699" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">your physical layer</text>
 
-  <rect x="40" y="553.274336283186" width="1200" height="66.725663716814" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="553.274336283186" width="1200" height="66.725663716814" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="589.203539823009" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--warn-text)">Anti: hardcoded keys, plaintext UART, XOR "obscurity"</text>
   <text x="640" y="611.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--warn-text)">"internal bus" — one bad supplier and bus on Pastebin</text>
 </svg>

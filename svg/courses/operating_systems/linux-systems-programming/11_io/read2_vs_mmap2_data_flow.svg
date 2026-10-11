@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -99,19 +94,19 @@
   <!-- LEFT column: read(2) -->
   <text x="267.586206896552" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.236291109018" font-weight="bold" fill="var(--primary-accent)">read(2)</text>
 
-  <rect x="40" y="69.491525423729" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="69.491525423729" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="267.586206896552" y="148.135593220339" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.202535236301" font-weight="bold" fill="var(--primary-text)">User Buffer</text>
 
   <line x1="267.586206896552" y1="216.949152542373" x2="267.586206896552" y2="236.610169491525" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
   <text x="360.689655172414" y="231.694915254237" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--text-muted)">CPU copy</text>
 
-  <rect x="40" y="256.271186440678" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="256.271186440678" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="267.586206896552" y="334.915254237288" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.202535236301" font-weight="bold" fill="var(--info-text)">Kernel Page Cache</text>
 
   <line x1="267.586206896552" y1="403.728813559322" x2="267.586206896552" y2="423.389830508475" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
   <text x="329.655172413793" y="418.474576271186" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--text-muted)">DMA</text>
 
-  <rect x="40" y="443.050847457627" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="443.050847457627" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="267.586206896552" y="521.694915254237" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.202535236301" font-weight="bold" fill="var(--warn-text)">Disk</text>
 
   <text x="267.586206896552" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.118145554509" font-style="italic" fill="var(--text-muted)">two hops: DMA to kernel, CPU copy to user</text>
@@ -119,20 +114,20 @@
   <!-- RIGHT column: mmap(2) -->
   <text x="1012.413793103448" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.236291109018" font-weight="bold" fill="var(--primary-accent)">mmap(2)</text>
 
-  <rect x="784.827586206897" y="69.491525423729" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="784.827586206897" y="69.491525423729" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1012.413793103448" y="148.135593220339" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.202535236301" font-weight="bold" fill="var(--primary-text)">User Mapping</text>
 
   <!-- Dashed line: direct memory mapping -->
   <line x1="1012.413793103448" y1="216.949152542373" x2="1012.413793103448" y2="236.610169491525" stroke="var(--info-border)" stroke-width="2.5" stroke-dasharray="6,4"/>
   <text x="1115.862068965517" y="231.694915254237" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--info-accent)">direct map</text>
 
-  <rect x="784.827586206897" y="256.271186440678" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="784.827586206897" y="256.271186440678" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1012.413793103448" y="334.915254237288" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.202535236301" font-weight="bold" fill="var(--info-text)">Kernel Page Cache</text>
 
   <line x1="1012.413793103448" y1="403.728813559322" x2="1012.413793103448" y2="423.389830508475" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
   <text x="1074.48275862069" y="418.474576271186" font-family="Arial, sans-serif" font-size="16.135023490868" fill="var(--text-muted)">DMA</text>
 
-  <rect x="784.827586206897" y="443.050847457627" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="784.827586206897" y="443.050847457627" width="455.172413793103" height="127.796610169492" rx="10.084389681792" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1012.413793103448" y="521.694915254237" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.202535236301" font-weight="bold" fill="var(--warn-text)">Disk</text>
 
   <text x="1012.413793103448" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.118145554509" font-style="italic" fill="var(--text-muted)">one hop: user sees page cache directly</text>

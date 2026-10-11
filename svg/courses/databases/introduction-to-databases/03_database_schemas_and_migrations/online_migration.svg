@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,28 +91,28 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Online Schema Migration Steps</text>
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">1. Expand</text>
   <text x="60" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Add new column or table</text>
   <text x="60" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Old code keeps working</text>
   <text x="60" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">No data moved yet</text>
   <text x="60" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Backwards compatible</text>
   <text x="60" y="285" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">Schema grows safely</text>
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">2. Backfill</text>
   <text x="365" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Copy old data to new</text>
   <text x="365" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Run in batches</text>
   <text x="365" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Throttle to avoid load</text>
   <text x="365" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Resumable on failure</text>
   <text x="365" y="285" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--primary-text)">Can take days</text>
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="795" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">3. Switch reads</text>
   <text x="670" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Deploy code that reads new</text>
   <text x="670" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Still writes to both</text>
   <text x="670" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Verify with shadow reads</text>
   <text x="670" y="245" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Roll back if mismatch</text>
   <text x="670" y="285" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--ok-text)">Safe cutover</text>
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1097" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">4. Contract</text>
   <text x="975" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Stop writing old</text>
   <text x="975" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Drop the old column</text>

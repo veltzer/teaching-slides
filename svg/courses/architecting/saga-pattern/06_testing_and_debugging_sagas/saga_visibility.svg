@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,24 +94,24 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.063727755485" font-weight="bold" fill="var(--text)">Saga Visibility Stack</text>
 
   <!-- Service layer -->
-  <rect x="40" y="130.097087378641" width="1200" height="112.621359223301" rx="15.111238022184" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="130.097087378641" width="1200" height="112.621359223301" rx="15.111238022184" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="175.145631067961" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.746231177718" font-weight="bold" fill="var(--primary-text)">Services + Orchestrator</text>
   <text x="640" y="208.932038834951" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.111238022184" fill="var(--primary-text)">Each step emits structured logs, metrics, traces with saga_id</text>
 
   <!-- Tracing layer -->
-  <rect x="40" y="287.766990291262" width="558.620689655172" height="112.621359223301" rx="15.111238022184" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="287.766990291262" width="558.620689655172" height="112.621359223301" rx="15.111238022184" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="319.310344827586" y="327.184466019417" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.587482888835" font-weight="bold" fill="var(--info-text)">Distributed Tracing</text>
   <text x="319.310344827586" y="360.970873786408" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.111238022184" fill="var(--info-text)">OpenTelemetry → Jaeger / Tempo</text>
   <text x="319.310344827586" y="383.495145631068" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.031863877743" fill="var(--info-text)">"What happened in saga X?"</text>
 
   <!-- Metrics layer -->
-  <rect x="681.379310344828" y="287.766990291262" width="558.620689655172" height="112.621359223301" rx="15.111238022184" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="681.379310344828" y="287.766990291262" width="558.620689655172" height="112.621359223301" rx="15.111238022184" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="960.689655172414" y="327.184466019417" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.587482888835" font-weight="bold" fill="var(--warn-text)">Metrics &amp; Alerts</text>
   <text x="960.689655172414" y="360.970873786408" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.111238022184" fill="var(--warn-text)">Prometheus / Datadog / Grafana</text>
   <text x="960.689655172414" y="383.495145631068" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.031863877743" fill="var(--warn-text)">"How is the saga fleet doing?"</text>
 
   <!-- Saga timeline -->
-  <rect x="40" y="445.436893203883" width="1200" height="112.621359223301" rx="15.111238022184" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="445.436893203883" width="1200" height="112.621359223301" rx="15.111238022184" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="484.854368932039" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.746231177718" font-weight="bold" fill="var(--ok-text)">Saga Timeline (read model)</text>
   <text x="640" y="518.640776699029" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.111238022184" fill="var(--ok-text)">aggregated by saga_id; powers admin UI and ops dashboards</text>
   <text x="640" y="541.165048543689" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.031863877743" fill="var(--ok-text)">supports retry / skip / mark-resolved actions</text>

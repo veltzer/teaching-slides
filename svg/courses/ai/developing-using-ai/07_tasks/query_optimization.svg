@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,16 +91,16 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" fill="var(--bg)" font-size="39.3618066037" font-weight="bold" font-family="Arial, sans-serif">Query Performance Analysis</text>
-  <rect x="40" y="90.434691871462" width="1200" height="100.86964461247" fill="url(#grad-danger)" rx="7.506518624701" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="90.434691871462" width="1200" height="100.86964461247" fill="url(#grad-danger)" rx="7.506518624701" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="63.99988" y="153.478121928177" fill="var(--bg)" font-size="26.241287808229" font-family="Arial, sans-serif">Before: SELECT * FROM orders WHERE status = 'pending'</text>
   <text x="999.99988" y="153.478121928177" fill="var(--bg)" font-size="26.241287808229" font-family="Arial, sans-serif">Time: 2.5s</text>
-  <rect x="40" y="216.521682419664" width="1200" height="201.739158790168" fill="url(#grad-ok)" rx="7.506518624701" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="216.521682419664" width="1200" height="201.739158790168" fill="url(#grad-ok)" rx="7.506518624701" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="63.99988" y="279.565112476378" fill="var(--bg)" font-size="26.241287808229" font-family="Arial, sans-serif">After: WITH pending_orders AS (</text>
   <text x="111.99988" y="329.999934782614" fill="var(--bg)" font-size="26.241287808229" font-family="Arial, sans-serif">SELECT id, customer_id, total FROM orders</text>
   <text x="111.99988" y="380.434757088849" fill="var(--bg)" font-size="26.241287808229" font-family="Arial, sans-serif">WHERE status = 'pending' AND created_at &gt; NOW() - INTERVAL '7 days'</text>
   <text x="63.99988" y="430.869579395084" fill="var(--bg)" font-size="26.241287808229" font-family="Arial, sans-serif">) SELECT * FROM pending_orders;</text>
   <text x="999.99988" y="329.999934782614" fill="var(--bg)" font-size="26.241287808229" font-family="Arial, sans-serif">Time: 0.08s</text>
-  <rect x="40" y="468.695663516067" width="1200" height="151.304336483933" fill="url(#grad-primary)" rx="7.506518624701" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="468.695663516067" width="1200" height="151.304336483933" fill="url(#grad-primary)" rx="7.506518624701" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="63.99988" y="531.738963138009" fill="var(--bg)" font-size="26.241287808229" font-family="Arial, sans-serif">Optimizations Applied:</text>
   <text x="63.99988" y="582.173915879017" fill="var(--bg)" font-size="26.241287808229" font-family="Arial, sans-serif">✓ Partial index ✓ Column selection ✓ Date range ✓ CTE usage</text>
 </svg>

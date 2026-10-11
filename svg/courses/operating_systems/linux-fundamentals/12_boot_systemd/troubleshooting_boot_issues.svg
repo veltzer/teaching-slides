@@ -2,28 +2,28 @@
   <metadata>
     <type>regular</type>
   </metadata>
-  <rect x="40" y="40" width="364.2857" height="182.2857" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="364.2857" height="182.2857" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="222.1429" y="106.2857" text-anchor="middle" font-size="22.5665" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">journalctl -b</text>
   <text x="222.1429" y="165.9429" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--primary-text)">Current boot logs</text>
-  <rect x="457.8572" y="40" width="364.2857" height="182.2857" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="457.8572" y="40" width="364.2857" height="182.2857" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="639.9999" y="106.2857" text-anchor="middle" font-size="22.5665" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">systemctl --failed</text>
   <text x="639.9999" y="165.9429" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--danger-text)">List failed units</text>
-  <rect x="875.7143" y="40" width="364.2857" height="182.2857" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="875.7143" y="40" width="364.2857" height="182.2857" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="1057.8571" y="106.2857" text-anchor="middle" font-size="22.5665" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">dmesg</text>
   <text x="1057.8571" y="165.9429" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--warn-text)">Kernel ring buffer</text>
   <line x1="222.1429" y1="222.2857" x2="222.1429" y2="321.7142" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="639.9999" y1="222.2857" x2="639.9999" y2="321.7142" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="1057.8571" y1="222.2857" x2="1057.8571" y2="321.7142" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="321.7142" width="364.2857" height="132.5715" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="321.7142" width="364.2857" height="132.5715" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="222.1429" y="378.0572" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--ok-text)">Service-level issues</text>
   <text x="222.1429" y="424.4571" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--ok-text)">journalctl -u svc</text>
-  <rect x="457.8572" y="321.7142" width="364.2857" height="132.5715" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="457.8572" y="321.7142" width="364.2857" height="132.5715" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="639.9999" y="378.0572" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--ok-text)">Dependency errors</text>
   <text x="639.9999" y="424.4571" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--ok-text)">Missing config</text>
-  <rect x="875.7143" y="321.7142" width="364.2857" height="132.5715" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="875.7143" y="321.7142" width="364.2857" height="132.5715" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="1057.8571" y="378.0572" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--ok-text)">Hardware / driver</text>
   <text x="1057.8571" y="424.4571" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--ok-text)">Early boot issues</text>
-  <rect x="104.2857" y="520.5714" width="1071.4286" height="99.4286" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="104.2857" y="520.5714" width="1071.4286" height="99.4286" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="639.9999" y="586.8571" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--info-text)">Tip: Boot with systemd.unit=rescue.target for recovery mode</text>
   <defs>
     <style id="palette-vars">
@@ -89,11 +89,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
 
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">

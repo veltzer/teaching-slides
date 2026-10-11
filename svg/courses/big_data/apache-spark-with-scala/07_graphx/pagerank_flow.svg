@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,21 +92,21 @@
   </defs>
 
 
-  <rect x="40" y="40" width="372.413793103448" height="307.755102040816" rx="8.85253336276" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="372.413793103448" height="307.755102040816" rx="8.85253336276" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="226.206896551724" y="87.34693877551" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.344466747589" font-weight="bold" fill="var(--primary-text)">1. Send</text>
   <text x="226.206896551724" y="140.612244897959" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.705066725519" fill="var(--primary-text)">Each vertex splits rank</text>
   <text x="226.206896551724" y="170.204081632653" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.705066725519" fill="var(--primary-text)">across outgoing edges</text>
   <text x="226.206896551724" y="235.306122448979" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.705066725519" fill="var(--primary-text)">send(v→u) = rank(v)/outDeg(v)</text>
   <text x="226.206896551724" y="300.408163265306" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--primary-text)">Dangling nodes lose rank</text>
 
-  <rect x="453.793103448276" y="40" width="372.413793103448" height="307.755102040816" rx="8.85253336276" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="453.793103448276" y="40" width="372.413793103448" height="307.755102040816" rx="8.85253336276" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="87.34693877551" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.344466747589" font-weight="bold" fill="var(--ok-text)">2. Aggregate</text>
   <text x="640" y="140.612244897959" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.705066725519" fill="var(--ok-text)">Sum incoming fragments</text>
   <text x="640" y="193.877551020408" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.705066725519" fill="var(--ok-text)">inbox(u) = Σ send(v→u)</text>
   <text x="640" y="253.061224489796" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--ok-text)">aggregateMessages API</text>
   <text x="640" y="300.408163265306" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--ok-text)">One shuffle per iteration</text>
 
-  <rect x="867.586206896552" y="40" width="372.413793103448" height="307.755102040816" rx="8.85253336276" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="867.586206896552" y="40" width="372.413793103448" height="307.755102040816" rx="8.85253336276" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1053.793103448276" y="87.34693877551" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.344466747589" font-weight="bold" fill="var(--warn-text)">3. Update</text>
   <text x="1053.793103448276" y="146.530612244897" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--warn-text)">rank' = (1-d)/N + d·inbox</text>
   <text x="1053.793103448276" y="205.714285714285" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--warn-text)">d = damping ≈ 0.85</text>

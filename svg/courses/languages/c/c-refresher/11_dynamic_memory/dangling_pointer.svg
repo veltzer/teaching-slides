@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,25 +90,25 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="548.275862" height="263.636352" rx="7.211276" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="548.275862" height="263.636352" rx="7.211276" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="314.137931" y="80.072709" text-anchor="middle" font-size="22.97825" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Before free(p):</text>
   <rect x="81.37931" y="98.000052" width="155.172414" height="69.600037" rx="7.211276" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="158.965517" y="140.181837" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">p</text>
   <line x1="236.551724" y1="132.800136" x2="360.689655" y2="132.800136" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <rect x="364.827476" y="98.000052" width="155.172414" height="69.600037" rx="7.211276" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="364.827476" y="98.000052" width="155.172414" height="69.600037" rx="7.211276" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="442.413793" y="140.181837" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">42</text>
   <text x="536.551724" y="140.181837" font-size="17.755965" fill="var(--text-faint)" font-family="Arial, sans-serif">(heap)</text>
   <rect x="81.37931" y="192.909134" width="155.172414" height="69.600037" rx="7.211276" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="158.965517" y="235.090919" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">alias</text>
   <line x1="236.551724" y1="227.709218" x2="433.103448" y2="177.090997" stroke="var(--primary-border)" stroke-width="1.7778" stroke-dasharray="7.1111 3.5556"/>
-  <rect x="650.344828" y="40" width="589.655172" height="263.636352" rx="7.211276" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650.344828" y="40" width="589.655172" height="263.636352" rx="7.211276" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="945.172414" y="80.072709" text-anchor="middle" font-size="22.97825" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">After free(p); p = NULL;</text>
   <rect x="691.724138" y="98.000052" width="155.172414" height="69.600037" rx="7.211276" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="769.310345" y="140.181837" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">NULL</text>
-  <rect x="1002.068966" y="98.000052" width="155.172414" height="69.600037" rx="7.211276" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1002.068966" y="98.000052" width="155.172414" height="69.600037" rx="7.211276" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1079.655172" y="140.181837" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">???</text>
   <text x="1172.758621" y="140.181837" font-size="17.755965" fill="var(--text-faint)" font-family="Arial, sans-serif">(freed)</text>
-  <rect x="691.724138" y="192.909134" width="155.172414" height="69.600037" rx="7.211276" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="691.724138" y="192.909134" width="155.172414" height="69.600037" rx="7.211276" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="769.310345" y="235.090919" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">alias</text>
   <line x1="846.896552" y1="227.709218" x2="1069.310345" y2="177.090997" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
   <text x="1002.068966" y="295.199916" font-size="18.800398" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">DANGLING!</text>

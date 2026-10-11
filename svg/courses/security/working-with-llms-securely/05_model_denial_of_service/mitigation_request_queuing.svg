@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="301.214575" height="217.5" rx="6.926199" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="301.214575" height="217.5" rx="6.926199" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="190.607287" y="117.678599" text-anchor="middle" font-size="22.069871" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Incoming Requests</text>
   <text x="190.607287" y="174.642931" text-anchor="middle" font-size="19.060322" fill="var(--text-muted)" font-family="Arial, sans-serif">High volume /</text>
   <text x="190.607287" y="213.999923" text-anchor="middle" font-size="19.060322" fill="var(--text-muted)" font-family="Arial, sans-serif">complex prompts</text>
@@ -105,11 +100,11 @@
   <text x="595.789474" y="174.642931" text-anchor="middle" font-size="19.060322" fill="var(--text)" font-family="Arial, sans-serif">Priority + Limit</text>
   <text x="595.789474" y="213.999923" text-anchor="middle" font-size="19.060322" fill="var(--text)" font-family="Arial, sans-serif">Max depth + Timeout</text>
   <line x1="760.97166" y1="148.749936" x2="846.477733" y2="148.749936" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
-  <rect x="850.364372" y="40" width="388.663968" height="217.5" rx="6.926199" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850.364372" y="40" width="388.663968" height="217.5" rx="6.926199" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1044.696356" y="117.678599" text-anchor="middle" font-size="22.069871" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">LLM Workers</text>
   <text x="1044.696356" y="174.642931" text-anchor="middle" font-size="19.060322" fill="var(--text)" font-family="Arial, sans-serif">Worker pool</text>
   <text x="1044.696356" y="213.999923" text-anchor="middle" font-size="19.060322" fill="var(--text)" font-family="Arial, sans-serif">Rate-limited</text>
-  <rect x="40" y="314.464332" width="1200" height="305.535668" rx="6.926199" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="314.464332" width="1200" height="305.535668" rx="6.926199" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="639.51417" y="379.714319" text-anchor="middle" font-size="22.069871" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Mitigations</text>
   <text x="78.866397" y="438.749936" font-size="20.063582" fill="var(--text)" font-family="Arial, sans-serif">• Priority queuing — paying / trusted users served first</text>
   <text x="78.866397" y="490.535668" font-size="20.063582" fill="var(--text)" font-family="Arial, sans-serif">• Maximum queue depth — reject when overloaded</text>

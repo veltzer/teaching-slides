@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,7 +94,7 @@
   <rect x="40" y="40" width="1200" height="60" rx="12" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="640" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Self-attention is permutation-equivariant; position must be injected</text>
 
-  <rect x="40" y="125" width="380" height="495" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="125" width="380" height="495" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="230" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">Sinusoidal</text>
   <text x="230" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">fixed sine and cosine</text>
 
@@ -114,7 +109,7 @@
 
   <text x="230" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">extrapolates partly</text>
 
-  <rect x="450" y="125" width="380" height="495" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="125" width="380" height="495" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">Learned</text>
   <text x="640" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">embedding per slot</text>
 
@@ -129,7 +124,7 @@
 
   <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">cannot extrapolate</text>
 
-  <rect x="860" y="125" width="380" height="495" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="125" width="380" height="495" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1050" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">Rotary</text>
   <text x="1050" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">rotate Q and K</text>
 

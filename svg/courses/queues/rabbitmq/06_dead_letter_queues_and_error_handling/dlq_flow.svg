@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,37 +94,37 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.854226236055" font-weight="bold" fill="var(--text)">Dead Letter Queue Flow</text>
 
-  <rect x="40" y="106.725663716814" width="206.896551724138" height="82.12389380531" rx="8.244064638873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="106.725663716814" width="206.896551724138" height="82.12389380531" rx="8.244064638873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="143.448275862069" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--info-text)">Producer</text>
   <text x="143.448275862069" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">publishes</text>
 
   <path d="M 248.965517241379 147.787610619469 L 311.034482758621 147.787610619469" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="319.310344827586" y="106.725663716814" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="319.310344827586" y="106.725663716814" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="433.103448275862" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--ok-text)">orders queue</text>
   <text x="433.103448275862" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--ok-text)">x-dead-letter-exchange</text>
 
   <path d="M 548.965517241379 147.787610619469 L 611.034482758621 147.787610619469" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="619.310344827586" y="106.725663716814" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="619.310344827586" y="106.725663716814" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="733.103448275862" y="142.654867256637" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--info-text)">Consumer</text>
   <text x="733.103448275862" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--info-text)">processes</text>
 
   <path d="M 733.103448275862 209.380530973451 L 733.103448275862 270.973451327434" stroke="var(--danger-border)" stroke-width="3" marker-end="url(#arrow)"/>
   <text x="748.620689655172" y="255.575221238938" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--danger-fill)">nack / reject / TTL / max-length</text>
 
-  <rect x="619.310344827586" y="291.504424778761" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="619.310344827586" y="291.504424778761" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="733.103448275862" y="327.433628318584" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--warn-text)">DLX (exchange)</text>
 
   <path d="M 733.103448275862 375.681415929204 L 733.103448275862 414.690265486726" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="619.310344827586" y="424.955752212389" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="619.310344827586" y="424.955752212389" width="227.586206896552" height="82.12389380531" rx="8.244064638873" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="733.103448275862" y="460.884955752212" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--danger-text)">orders.dlq</text>
   <text x="733.103448275862" y="486.548672566372" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--danger-text)">parked here</text>
 
   <path d="M 848.965517241379 466.017699115044 L 911.034482758621 466.017699115044" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="919.310344827586" y="424.955752212389" width="279.310344827586" height="82.12389380531" rx="8.244064638873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="919.310344827586" y="424.955752212389" width="279.310344827586" height="82.12389380531" rx="8.244064638873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1058.965517241379" y="460.884955752212" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.427113118027" font-weight="bold" fill="var(--primary-text)">Triage / replay tool</text>
   <text x="1058.965517241379" y="486.548672566372" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.366096958309" fill="var(--primary-text)">manual or scheduled</text>
 

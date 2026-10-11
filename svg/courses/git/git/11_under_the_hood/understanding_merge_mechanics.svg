@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -100,17 +95,17 @@
   <text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Three-Way Merge</text>
   <text x="640" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--text-muted)">Git finds the common ancestor, diffs both sides, then combines them</text>
 
-  <rect x="40" y="210" width="380" height="200" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="210" width="380" height="200" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="230" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--info-text)">Base</text>
   <text x="230" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--info-text)">Common ancestor</text>
   <text x="230" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--info-text)">merge-base A B</text>
 
-  <rect x="450" y="210" width="380" height="200" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="210" width="380" height="200" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--primary-text)">Branch A</text>
   <text x="640" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">diff base to A</text>
   <text x="640" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">our changes</text>
 
-  <rect x="860" y="210" width="380" height="200" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="210" width="380" height="200" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1050" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--danger-text)">Branch B</text>
   <text x="1050" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">diff base to B</text>
   <text x="1050" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">their changes</text>
@@ -119,7 +114,7 @@
   <line x1="640" y1="410" x2="640" y2="440" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="1050" y1="410" x2="720" y2="440" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="340" y="450" width="600" height="170" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="450" width="600" height="170" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--ok-text)">Merge Commit M</text>
   <text x="640" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">Two parents: A and B</text>
   <text x="640" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">Conflicts surface here</text>

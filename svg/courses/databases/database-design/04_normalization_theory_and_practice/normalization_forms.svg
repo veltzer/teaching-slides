@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,7 +94,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Normalization: 1NF, 2NF, 3NF</text>
 
-  <rect x="40" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="231.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.083414753828" font-weight="bold" fill="var(--danger-text)">Unnormalized</text>
   <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--danger-text)">orders table</text>
   <text x="60.689655172414" y="194.311926605505" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--danger-text)">id | customer | items</text>
@@ -112,7 +107,7 @@
   <text x="60.689655172414" y="364.587155963303" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--danger-text)">- Update one customer = update many rows</text>
   <text x="60.689655172414" y="385.871559633028" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--danger-text)">- Hard to query items</text>
 
-  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.083414753828" font-weight="bold" fill="var(--warn-text)">After 1NF + 2NF</text>
   <text x="469.310344827586" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--warn-text)">orders</text>
   <text x="469.310344827586" y="188.990825688073" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--warn-text)">id | customer</text>
@@ -128,7 +123,7 @@
 
   <text x="469.310344827586" y="476.330275229358" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--warn-text)">Customer still repeated per order</text>
 
-  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.083414753828" font-weight="bold" fill="var(--ok-text)">After 3NF</text>
   <text x="877.931034482759" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--ok-text)">customers</text>
   <text x="877.931034482759" y="188.990825688073" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--ok-text)">id | name</text>

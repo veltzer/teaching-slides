@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
 
 
   <!-- Host resource column (left) -->
-  <rect x="40" y="40" width="260" height="492.999999999999" rx="12.041594578792" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="260" height="492.999999999999" rx="12.041594578792" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="170" y="98.000000000001" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.491508073343" font-weight="bold" fill="var(--info-text)">Host System</text>
   <rect x="70" y="134.25" width="200" height="87.000000000001" rx="9.633275663034" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="170" y="187.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.674870241826" fill="var(--text)">Network</text>
@@ -114,11 +109,11 @@
   <line x1="270" y1="395.25" x2="460" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- QEMU + Guest (right) -->
-  <rect x="470" y="40" width="770" height="492.999999999999" rx="12.041594578792" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="470" y="40" width="770" height="492.999999999999" rx="12.041594578792" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="855" y="98.000000000001" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.491508073343" font-weight="bold" fill="var(--primary-text)">QEMU emulator</text>
 
   <!-- Guest Linux inside QEMU -->
-  <rect x="530" y="141.5" width="650" height="333.5" rx="9.633275663034" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="530" y="141.5" width="650" height="333.5" rx="9.633275663034" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="855" y="199.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.491508073343" font-weight="bold" fill="var(--warn-text)">Guest Linux</text>
   <text x="855" y="264.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.083189157585" fill="var(--warn-text)">ARM / x86 / MIPS / PowerPC</text>
   <text x="855" y="322.750000000001" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.083189157585" fill="var(--warn-text)">your Yocto image</text>

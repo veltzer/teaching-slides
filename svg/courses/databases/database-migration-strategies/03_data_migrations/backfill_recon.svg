@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Backfill and Reconciliation</text>
 
-  <rect x="40" y="102.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="102.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="329.285714285714" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--info-text)">Backfill loop</text>
   <text x="61.428571428571" y="179.821428571429" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--info-text)">1. Pick partition (by id or time)</text>
   <text x="61.428571428571" y="205.714285714286" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--info-text)">2. Read source rows</text>
@@ -106,7 +101,7 @@
   <text x="61.428571428571" y="283.392857142857" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--info-text)">5. Mark watermark, repeat</text>
   <text x="61.428571428571" y="314.464285714286" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">Throttle on lag, pause on errors</text>
 
-  <rect x="661.428571428571" y="102.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="661.428571428571" y="102.142857142857" width="578.571428571429" height="227.857142857143" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="950.714285714286" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068401719647" font-weight="bold" fill="var(--warn-text)">Reconciliation loop</text>
   <text x="682.857142857143" y="179.821428571429" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">Compare source vs target</text>
   <text x="682.857142857143" y="205.714285714286" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">By partition: count, hash, sample</text>
@@ -115,7 +110,7 @@
   <text x="682.857142857143" y="283.392857142857" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">Re-run until clean</text>
   <text x="682.857142857143" y="314.464285714286" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--ok-accent)">Required before cutover</text>
 
-  <rect x="40" y="371.428571428571" width="1200" height="248.571428571429" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="371.428571428571" width="1200" height="248.571428571429" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="407.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.961561547682" font-weight="bold" fill="var(--primary-text)">Late-arriving data complications</text>
   <text x="61.428571428571" y="443.928571428571" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--primary-text)">Old code paths still write to source</text>
   <text x="61.428571428571" y="472.928571428571" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--primary-text)">Reconciliation must keep catching up</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,23 +91,23 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="590" height="290" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="590" height="290" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="335" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">RDD = partitioned dataset</text>
   <text x="335" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="var(--primary-text)">val lines = sc.textFile("log.txt")</text>
 
-  <rect x="70" y="150" width="125" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="150" width="125" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="132" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Partition 0</text>
   <text x="132" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">node A</text>
 
-  <rect x="210" y="150" width="125" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="210" y="150" width="125" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="272" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Partition 1</text>
   <text x="272" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">node B</text>
 
-  <rect x="350" y="150" width="125" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350" y="150" width="125" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="412" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Partition 2</text>
   <text x="412" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">node C</text>
 
-  <rect x="490" y="150" width="125" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="150" width="125" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="552" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Partition 3</text>
   <text x="552" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">node D</text>
 
@@ -124,20 +119,20 @@
   <text x="675" y="230" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">4. Preferred locations</text>
   <text x="675" y="265" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">5. Partitioner (hash/range)</text>
 
-  <rect x="40" y="350" width="390" height="270" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="350" width="390" height="270" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="235" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Immutable</text>
   <text x="235" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">transformations create new</text>
   <text x="235" y="480" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--info-text)">lines.filter(_.contains("ERR"))</text>
   <text x="235" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">safe across tasks</text>
 
-  <rect x="445" y="350" width="390" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="350" width="390" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Lazy</text>
   <text x="640" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">records a plan</text>
   <text x="640" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">transforms: map, filter, join</text>
   <text x="640" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">actions: count, collect</text>
   <text x="640" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Spark fuses before running</text>
 
-  <rect x="850" y="350" width="390" height="270" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="350" width="390" height="270" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1045" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Fault Tolerant</text>
   <text x="1045" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">lost partition recomputed</text>
   <text x="1045" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">from DAG lineage</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,25 +94,25 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Test Doubles</text>
 
-  <rect x="40" y="87.889908256881" width="289.655172413793" height="255.412844036697" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="289.655172413793" height="255.412844036697" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="184.827586206897" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--info-text)">Dummy</text>
   <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Passed but never used</text>
   <text x="60.689655172414" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Just satisfies signature</text>
   <text x="60.689655172414" y="236.880733944954" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--info-text)">e.g. null logger</text>
 
-  <rect x="350.344827586207" y="87.889908256881" width="289.655172413793" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350.344827586207" y="87.889908256881" width="289.655172413793" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="495.172413793103" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--primary-text)">Stub</text>
   <text x="371.034482758621" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Returns canned data</text>
   <text x="371.034482758621" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">No verification</text>
   <text x="371.034482758621" y="236.880733944954" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--primary-text)">e.g. always returns user 42</text>
 
-  <rect x="660.689655172414" y="87.889908256881" width="289.655172413793" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660.689655172414" y="87.889908256881" width="289.655172413793" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="805.51724137931" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">Fake</text>
   <text x="681.379310344828" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Working impl, simplified</text>
   <text x="681.379310344828" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Real logic, in-memory</text>
   <text x="681.379310344828" y="236.880733944954" font-family="Arial, sans-serif" font-size="12.590953502088" font-style="italic" fill="var(--ok-text)">e.g. in-memory DB</text>
 
-  <rect x="971.034482758621" y="87.889908256881" width="268.965517241379" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="971.034482758621" y="87.889908256881" width="268.965517241379" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1105.51724137931" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--warn-text)">Mock</text>
   <text x="991.724137931035" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Verifies interactions</text>
   <text x="991.724137931035" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Asserts how called</text>

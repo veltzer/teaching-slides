@@ -60,9 +60,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -87,16 +84,16 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">RAG Pipeline: Ingestion and Query</text>
   <text x="170" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-muted)">Ingestion (offline)</text>
-  <rect x="40" y="120" width="220" height="100" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="120" width="220" height="100" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="150" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Documents</text>
   <text x="150" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Source corpus</text>
-  <rect x="290" y="120" width="220" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="290" y="120" width="220" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="400" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Chunk</text>
   <text x="400" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Split into pieces</text>
-  <rect x="540" y="120" width="220" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="540" y="120" width="220" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="650" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Embed</text>
   <text x="650" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Chunk vectors</text>
-  <rect x="790" y="120" width="220" height="100" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="790" y="120" width="220" height="100" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="900" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Index</text>
   <text x="900" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Vector store</text>
   <rect x="1040" y="120" width="200" height="100" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -107,19 +104,19 @@
   <path d="M 760 170 L 790 170" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <path d="M 1010 170 L 1040 170" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="170" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-muted)">Query (online)</text>
-  <rect x="40" y="300" width="220" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="300" width="220" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="150" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Question</text>
   <text x="150" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">User asks</text>
-  <rect x="290" y="300" width="220" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="290" y="300" width="220" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="400" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Embed</text>
   <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Query vector</text>
-  <rect x="540" y="300" width="220" height="100" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="540" y="300" width="220" height="100" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="650" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Retrieve</text>
   <text x="650" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Top-k chunks</text>
-  <rect x="790" y="300" width="220" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="790" y="300" width="220" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="900" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Rerank</text>
   <text x="900" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Best matches</text>
-  <rect x="1040" y="300" width="200" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1040" y="300" width="200" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1140" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">LLM</text>
   <text x="1140" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Answer + cite</text>
   <path d="M 260 350 L 290 350" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,36 +92,36 @@
   </defs>
 
   <!-- Pipeline row -->
-  <rect x="40" y="40" width="220" height="113.928571428571" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="220" height="113.928571428571" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="150" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--bg)">Request</text>
   <text x="150" y="112.5" text-anchor="middle" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--bg)">requests.get(url)</text>
 
   <line x1="260" y1="96.964285714286" x2="300" y2="96.964285714286" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="300" y="40" width="220" height="113.928571428571" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="40" width="220" height="113.928571428571" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="410" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--bg)">HTML</text>
   <text x="410" y="112.5" text-anchor="middle" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--bg)">response.text</text>
 
   <line x1="520" y1="96.964285714286" x2="560" y2="96.964285714286" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="560" y="40" width="220" height="113.928571428571" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="560" y="40" width="220" height="113.928571428571" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="670" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--bg)">Parser</text>
   <text x="670" y="112.5" text-anchor="middle" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--bg)">BeautifulSoup</text>
 
   <line x1="780" y1="96.964285714286" x2="820" y2="96.964285714286" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="820" y="40" width="200" height="113.928571428571" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="820" y="40" width="200" height="113.928571428571" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="920" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--bg)">Structured</text>
   <text x="920" y="112.5" text-anchor="middle" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--bg)">dict / DataFrame</text>
 
   <line x1="1020" y1="96.964285714286" x2="1060" y2="96.964285714286" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="1060" y="40" width="180" height="113.928571428571" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1060" y="40" width="180" height="113.928571428571" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1150" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--bg)">Storage</text>
   <text x="1150" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--bg)">CSV / DB / S3</text>
 
   <!-- Detection -->
-  <rect x="40" y="195.357142857143" width="390" height="227.857142857143" rx="8.141603913586" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="195.357142857143" width="390" height="227.857142857143" rx="8.141603913586" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="235" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--bg)">Server Detection</text>
   <text x="235" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--bg)">Rate limit 429</text>
   <text x="235" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--bg)">IP blacklist, CAPTCHA</text>
@@ -135,7 +130,7 @@
   <text x="235" y="392.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--bg)">Dynamic JS content</text>
 
   <!-- Evasion -->
-  <rect x="445" y="195.357142857143" width="390" height="227.857142857143" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="195.357142857143" width="390" height="227.857142857143" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--bg)">Evasion</text>
   <text x="640" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--bg)">Rotate User-Agent</text>
   <text x="640" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--bg)">Random delays</text>
@@ -144,7 +139,7 @@
   <text x="640" y="392.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--bg)">Respect Retry-After</text>
 
   <!-- Scrapy -->
-  <rect x="850" y="195.357142857143" width="390" height="227.857142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="195.357142857143" width="390" height="227.857142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1045" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--bg)">Scrapy Framework</text>
   <text x="1045" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--bg)">Spider + parse()</text>
   <text x="1045" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--bg)">Retry / proxy middleware</text>
@@ -153,7 +148,7 @@
   <text x="1045" y="392.142857142857" text-anchor="middle" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--bg)">scrapy crawl -o out.json</text>
 
   <!-- Legal banner -->
-  <rect x="40" y="454.285714285714" width="1200" height="165.714285714286" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="454.285714285714" width="1200" height="165.714285714286" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="490.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--bg)">Legal &amp; Ethical</text>
   <text x="640" y="526.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--bg)">Check robots.txt and site Terms of Service</text>
   <text x="640" y="557.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--bg)">GDPR applies to personal data</text>

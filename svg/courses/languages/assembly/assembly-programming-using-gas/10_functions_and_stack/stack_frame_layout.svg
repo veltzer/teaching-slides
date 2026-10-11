@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -112,7 +107,7 @@
   <rect x="262.071307" y="216.842157" width="570.458404" height="50.526349" rx="7.149472" fill="var(--text)"/>
   <text x="547.300509" y="248.421011" text-anchor="middle" font-size="17.603788" fill="var(--bg)" font-family="Courier New, monospace">return addr → EBP+4</text>
   <text x="873.27674" y="248.421011" font-size="14.497104" fill="var(--text-faint)" font-family="Arial, sans-serif">pushed by CALL</text>
-  <rect x="262.071307" y="273.684251" width="570.458404" height="50.526349" rx="7.149472" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="262.071307" y="273.684251" width="570.458404" height="50.526349" rx="7.149472" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="547.300509" y="305.263105" text-anchor="middle" font-size="17.603788" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">saved EBP → EBP+0</text>
   <text x="873.27674" y="305.263105" font-size="14.497104" fill="var(--primary-accent)" font-family="Arial, sans-serif">push %ebp; mov %esp,%ebp</text>
   <rect x="262.071307" y="330.526345" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -129,7 +124,7 @@
   <text x="170.390492" y="304.210677" text-anchor="middle" font-size="15.532705" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">EBP →</text>
   <line x1="233.548387" y1="526.315736" x2="262.071307" y2="526.315736" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="170.390492" y="531.579052" text-anchor="middle" font-size="15.532705" font-weight="bold" fill="var(--text-muted)" font-family="Courier New, monospace">ESP →</text>
-  <rect x="893.650255" y="216.842157" width="346.349745" height="221.052631" rx="7.149472" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="893.650255" y="216.842157" width="346.349745" height="221.052631" rx="7.149472" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1066.825127" y="244.210645" text-anchor="middle" font-size="15.532705" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Prologue:</text>
   <text x="914.023769" y="267.368376" font-size="13.461742" fill="var(--text)" font-family="Courier New, monospace">push %ebp</text>
   <text x="914.023769" y="288.421119" font-size="13.461742" fill="var(--text)" font-family="Courier New, monospace">mov  %esp, %ebp</text>
@@ -138,6 +133,6 @@
   <text x="914.023769" y="370.526453" font-size="13.461742" fill="var(--text)" font-family="Courier New, monospace">mov  %ebp, %esp</text>
   <text x="914.023769" y="391.578935" font-size="13.461742" fill="var(--text)" font-family="Courier New, monospace">pop  %ebp</text>
   <text x="914.023769" y="412.631548" font-size="13.461742" fill="var(--text)" font-family="Courier New, monospace">ret</text>
-  <rect x="262.071307" y="572.631588" width="977.928584" height="42.105356" rx="7.149472" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="262.071307" y="572.631588" width="977.928584" height="42.105356" rx="7.149472" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="751.035654" y="598.947256" text-anchor="middle" font-size="16.568187" fill="var(--primary-accent)" font-family="Arial, sans-serif">EBP is stable throughout the function — access args (+offset) and locals (−offset) via EBP</text>
 </svg>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,13 +94,13 @@
   <!-- Eager row -->
   <text x="40" y="40" font-size="22.429499264941" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Eager: every step executes now</text>
 
-  <rect x="40" y="69.10394265233" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="69.10394265233" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="145" y="128.351254480287" text-anchor="middle" font-size="18.351408489497" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">read_parquet</text>
-  <rect x="370" y="69.10394265233" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="370" y="69.10394265233" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="475" y="128.351254480287" text-anchor="middle" font-size="18.351408489497" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">filter</text>
-  <rect x="700" y="69.10394265233" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="700" y="69.10394265233" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="805" y="128.351254480287" text-anchor="middle" font-size="18.351408489497" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">group_by.agg</text>
-  <rect x="1030" y="69.10394265233" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1030" y="69.10394265233" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1135" y="128.351254480287" text-anchor="middle" font-size="18.351408489497" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">result</text>
 
   <line x1="250" y1="121.075268817204" x2="366" y2="121.075268817204" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
@@ -120,13 +115,13 @@
   <!-- Lazy row -->
   <text x="40" y="310.250896057348" font-size="22.429499264941" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Lazy: build a plan, run once</text>
 
-  <rect x="40" y="339.354838709677" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="339.354838709677" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="145" y="398.602150537634" text-anchor="middle" font-size="18.351408489497" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">scan_parquet</text>
-  <rect x="370" y="339.354838709677" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="370" y="339.354838709677" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="475" y="398.602150537634" text-anchor="middle" font-size="18.351408489497" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">filter</text>
-  <rect x="700" y="339.354838709677" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="700" y="339.354838709677" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="805" y="398.602150537634" text-anchor="middle" font-size="18.351408489497" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">group_by.agg</text>
-  <rect x="1030" y="339.354838709677" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1030" y="339.354838709677" width="210" height="103.942652329749" rx="8.156181550888" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1135" y="398.602150537634" text-anchor="middle" font-size="18.351408489497" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">collect()</text>
 
   <line x1="250" y1="391.326164874552" x2="366" y2="391.326164874552" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
@@ -138,7 +133,7 @@
   <text x="805" y="476.559139784946" text-anchor="middle" font-size="15.292840407914" fill="var(--text-muted)" font-family="Arial, sans-serif">grows the plan</text>
   <text x="1135" y="476.559139784946" text-anchor="middle" font-size="15.292840407914" fill="var(--text-muted)" font-family="Arial, sans-serif">optimize, then execute</text>
 
-  <rect x="40" y="526.451612903226" width="1200" height="93.548387096774" rx="8.156181550888" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="526.451612903226" width="1200" height="93.548387096774" rx="8.156181550888" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="568.028673835125" text-anchor="middle" font-size="22.429499264941" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">The optimizer sees the whole query before any work starts</text>
   <text x="640" y="601.290322580645" text-anchor="middle" font-size="16.312363101775" fill="var(--info-text)" font-family="Arial, sans-serif">pushdown, reordering, shared subexpressions</text>
 </svg>

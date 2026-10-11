@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="585" height="280" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="585" height="280" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="332" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">DStream (Micro-batch)</text>
   <text x="332" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Batches every N seconds</text>
   <text x="332" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Each batch is an RDD</text>
@@ -104,7 +99,7 @@
   <text x="332" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Legacy API</text>
   <text x="332" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">at-least-once by default</text>
 
-  <rect x="655" y="40" width="585" height="280" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="655" y="40" width="585" height="280" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="947" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Structured Streaming</text>
   <text x="947" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Unbounded DataFrame model</text>
   <text x="947" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Continuous or micro-batch</text>

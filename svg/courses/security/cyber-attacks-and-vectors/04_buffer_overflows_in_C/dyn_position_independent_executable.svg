@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,8 +93,8 @@
   <rect x="40" y="40" width="1200" height="101.6495" fill="var(--text-muted)" stroke="var(--text-muted)" stroke-width="2.8876" rx="6"/>
   <text x="639.9999" y="105.7732" text-anchor="middle" font-size="24.9013" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Memory Layout: Without ASLR vs With ASLR</text>
   <rect x="40" y="141.6494" width="400" height="83.7113" fill="var(--border)" stroke="var(--text-faint)" stroke-width="2.8876" rx="6"/>
-  <rect x="440" y="141.6494" width="400" height="83.7113" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <rect x="839.9999" y="141.6494" width="400" height="83.7113" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="440" y="141.6494" width="400" height="83.7113" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
+  <rect x="839.9999" y="141.6494" width="400" height="83.7113" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="239.9999" y="195.4639" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Region</text>
   <text x="639.9999" y="195.4639" text-anchor="middle" font-size="22.9858" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Without ASLR</text>
   <text x="1039.9999" y="195.4639" text-anchor="middle" font-size="22.9858" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">With ASLR</text>
@@ -127,8 +122,8 @@
   <text x="639.9999" y="509.3815" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">0x0040...   (fixed)</text>
   <rect x="839.9999" y="458.5567" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6"/>
   <text x="1039.9999" y="509.3815" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">0x5617a1... (random)</text>
-  <rect x="40" y="536.2887" width="600" height="83.7113" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="536.2887" width="600" height="83.7113" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="339.9999" y="590.1031" text-anchor="middle" font-size="22.9858" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Predictable → exploitable!</text>
-  <rect x="639.9999" y="536.2887" width="600" height="83.7113" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="639.9999" y="536.2887" width="600" height="83.7113" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="939.9999" y="590.1031" text-anchor="middle" font-size="22.9858" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Unpredictable → harder to exploit</text>
 </svg>

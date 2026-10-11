@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="299.775281048883" rx="6.600070827084" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="299.775281048883" rx="6.600070827084" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="86.153912" y="72.584381417603" font-size="19.231947088565" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Spark Application</text>
   <text x="86.153912" y="105.168538956596" font-size="17.858251855524" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Driver Metrics:</text>
   <text x="109.230761" y="128.629212857735" font-size="15.110862402837" fill="var(--text)" font-family="Courier New, monospace">spark_driver_jvm_heap_used</text>
@@ -109,15 +104,15 @@
   <text x="686.153912" y="195.101123784744" font-size="15.110862402837" fill="var(--text)" font-family="Courier New, monospace">spark_executor_shuffle_write_bytes</text>
   <text x="640" y="313.707977200156" text-anchor="middle" font-size="16.484557635877" fill="var(--text-muted)" font-family="Arial, sans-serif">/metrics/prometheus endpoint</text>
   <line x1="640" y1="339.775281048883" x2="640" y2="378.876517183718" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="109.230761" y="378.876517183718" width="323.076956" height="58.65168526633" rx="6.600070827084" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="109.230761" y="378.876517183718" width="323.076956" height="58.65168526633" rx="6.600070827084" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="270.769347" y="415.370786526085" text-anchor="middle" font-size="17.858251855524" fill="var(--text)" font-family="Arial, sans-serif">Prometheus</text>
   <line x1="432.307717" y1="407.550561892372" x2="524.615434" y2="407.550561892372" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="524.615434" y="378.876517183718" width="323.076956" height="58.65168526633" rx="6.600070827084" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="524.615434" y="378.876517183718" width="323.076956" height="58.65168526633" rx="6.600070827084" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="686.153912" y="415.370786526085" text-anchor="middle" font-size="17.858251855524" fill="var(--text)" font-family="Arial, sans-serif">Grafana</text>
   <line x1="847.692391" y1="407.550561892372" x2="940.000215" y2="407.550561892372" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="940.000215" y="378.876517183718" width="276.923044" height="58.65168526633" rx="6.600070827084" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940.000215" y="378.876517183718" width="276.923044" height="58.65168526633" rx="6.600070827084" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1078.46163" y="415.370786526085" text-anchor="middle" font-size="17.858251855524" fill="var(--text)" font-family="Arial, sans-serif">Alerts</text>
-  <rect x="40" y="463.595505271809" width="1200" height="156.404494728191" rx="6.600070827084" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="463.595505271809" width="1200" height="156.404494728191" rx="6.600070827084" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="86.153912" y="493.573033890181" font-size="17.858251855524" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Key alerts to set up:</text>
   <text x="109.230761" y="519.640561617517" font-size="16.484557635877" fill="var(--text)" font-family="Arial, sans-serif">• Job duration &gt; 2x historical average</text>
   <text x="109.230761" y="543.101123579351" font-size="16.484557635877" fill="var(--text)" font-family="Arial, sans-serif">• Failed tasks &gt; 5% of total</text>

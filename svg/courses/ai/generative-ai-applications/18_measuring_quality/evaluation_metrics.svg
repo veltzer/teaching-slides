@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
   <!-- BLEU -->
-  <rect x="40" y="40" width="285" height="300" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="285" height="300" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="182" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)">BLEU</text>
   <text x="182" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">n-gram precision</text>
   <text x="182" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">Range 0-1</text>
@@ -107,7 +102,7 @@
   <text x="182" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="var(--bg)">No semantics</text>
 
   <!-- ROUGE -->
-  <rect x="340" y="40" width="285" height="300" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="285" height="300" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="482" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)">ROUGE</text>
   <text x="482" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">n-gram recall</text>
   <text x="482" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">ROUGE-1/2/L</text>
@@ -117,7 +112,7 @@
   <text x="482" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="var(--bg)">Ignores meaning</text>
 
   <!-- BERTScore -->
-  <rect x="640" y="40" width="285" height="300" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="40" width="285" height="300" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="782" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)">BERTScore</text>
   <text x="782" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">Semantic embeddings</text>
   <text x="782" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">P / R / F1</text>
@@ -127,7 +122,7 @@
   <text x="782" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="var(--bg)">Needs BERT</text>
 
   <!-- Human -->
-  <rect x="940" y="40" width="300" height="300" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="300" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1090" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)">Human</text>
   <text x="1090" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">Gold standard</text>
   <text x="1090" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">Fluency, facts</text>
@@ -137,7 +132,7 @@
   <text x="1090" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="var(--bg)">Disagreement</text>
 
   <!-- Comparison table -->
-  <rect x="40" y="370" width="1200" height="250" rx="8" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="370" width="1200" height="250" rx="8" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Cost vs Semantics</text>
 
   <text x="80" y="440" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">Metric</text>

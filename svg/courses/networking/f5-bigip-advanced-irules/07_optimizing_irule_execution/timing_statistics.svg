@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -105,23 +100,23 @@
   <text x="56" y="383.3" text-anchor="start" font-family="Courier New, monospace" font-size="16" fill="var(--surface)">CPU Cycles</text>
   <text x="56" y="407.3" text-anchor="start" font-family="Courier New, monospace" font-size="16" fill="var(--surface)">  Average       4120</text>
   <text x="56" y="431.3" text-anchor="start" font-family="Courier New, monospace" font-size="16" fill="var(--surface)">  Maximum      89330</text>
-  <rect x="600" y="40" width="300" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="600" y="40" width="300" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="750.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Executions</text>
   <text x="750.0" y="116.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">how often it runs</text>
-  <rect x="600" y="200" width="300" height="110" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="600" y="200" width="300" height="110" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="750.0" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Average cycles</text>
   <text x="750.0" y="276.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">typical cost</text>
-  <rect x="600" y="360" width="300" height="110" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="600" y="360" width="300" height="110" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="750.0" y="386" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Maximum cycles</text>
   <text x="750.0" y="436.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">the slow branch</text>
-  <rect x="600" y="510" width="300" height="110" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="600" y="510" width="300" height="110" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="750.0" y="536" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Failures, aborts</text>
   <text x="750.0" y="586.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">runtime errors</text>
   <line x1="520" y1="95" x2="600" y2="95" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="520" y1="255" x2="600" y2="255" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="520" y1="415" x2="600" y2="415" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="520" y1="565" x2="600" y2="565" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="980" y="200" width="260" height="270" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="980" y="200" width="260" height="270" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1110.0" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Microseconds</text>
   <text x="1110.0" y="325.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">cycles / clock rate</text>
   <text x="1110.0" y="356.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">4120 / 2.5 GHz</text>

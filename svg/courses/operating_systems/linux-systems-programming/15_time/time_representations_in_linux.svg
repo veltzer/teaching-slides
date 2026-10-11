@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,18 +90,18 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="128.8889" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="128.8889" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="640" y="115.1852" text-anchor="middle" fill="var(--bg)" font-size="21.7109" font-family="Arial, sans-serif">Epoch Time (time_t): Seconds since 1970-01-01 00:00:00 UTC</text>
-  <rect x="40" y="211.8519" width="582.8571" height="128.8889" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="211.8519" width="582.8571" height="128.8889" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="331.4286" y="265.5556" text-anchor="middle" fill="var(--bg)" font-size="19.9017" font-family="Arial, sans-serif">struct timeval</text>
   <text x="331.4286" y="308.5185" text-anchor="middle" fill="var(--bg)" font-size="18.0925" font-family="Arial, sans-serif">tv_sec + tv_usec (microseconds)</text>
-  <rect x="657.1429" y="211.8519" width="582.8571" height="128.8889" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="657.1429" y="211.8519" width="582.8571" height="128.8889" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="948.5714" y="265.5556" text-anchor="middle" fill="var(--bg)" font-size="19.9017" font-family="Arial, sans-serif">struct timespec</text>
   <text x="948.5714" y="308.5185" text-anchor="middle" fill="var(--bg)" font-size="18.0925" font-family="Arial, sans-serif">tv_sec + tv_nsec (nanoseconds)</text>
-  <rect x="40" y="383.7037" width="582.8571" height="128.8889" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="383.7037" width="582.8571" height="128.8889" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="331.4286" y="437.4074" text-anchor="middle" fill="var(--black)" font-size="19.9017" font-family="Arial, sans-serif">struct tm</text>
   <text x="331.4286" y="480.3704" text-anchor="middle" font-size="18.0925" font-family="Arial, sans-serif" fill="var(--warn-text)">Broken-down time (year, month, day...)</text>
-  <rect x="657.1429" y="383.7037" width="582.8571" height="128.8889" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="657.1429" y="383.7037" width="582.8571" height="128.8889" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="948.5714" y="437.4074" text-anchor="middle" fill="var(--bg)" font-size="19.9017" font-family="Arial, sans-serif">clock_t</text>
   <text x="948.5714" y="480.3704" text-anchor="middle" fill="var(--bg)" font-size="18.0925" font-family="Arial, sans-serif">Processor ticks (CLOCKS_PER_SEC)</text>
   <text x="640" y="620" text-anchor="middle" font-size="19.9017" font-family="Arial, sans-serif" fill="var(--text)">Resolution: time_t (1s) → timeval (1μs) → timespec (1ns)</text>

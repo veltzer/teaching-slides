@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -95,16 +90,16 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40.0" y="226.0" width="269.0" height="131.3" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40.0" y="226.0" width="269.0" height="131.3" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="174.5" y="285.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Server side</text>
   <text x="174.5" y="312.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">egress VLAN internal</text>
-  <rect x="433.1" y="40.0" width="372.4" height="153.2" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="433.1" y="40.0" width="372.4" height="153.2" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="619.3" y="110.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Floating self IP?</text>
   <text x="619.3" y="137.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">10.1.20.240 (HA pair)</text>
-  <rect x="433.1" y="280.8" width="372.4" height="153.2" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="433.1" y="280.8" width="372.4" height="153.2" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="619.3" y="351.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Else non-floating</text>
   <text x="619.3" y="378.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">10.1.20.245</text>
-  <rect x="433.1" y="499.6" width="372.4" height="120.4" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="433.1" y="499.6" width="372.4" height="120.4" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="619.3" y="553.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Else any self IP</text>
   <text x="619.3" y="580.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">other VLAN, avoid</text>
   <line x1="309.0" y1="258.9" x2="433.1" y2="116.6" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,14 +94,14 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">Sufficient statistic: lossless data compression for inference</text>
 
-  <rect x="40" y="86.194690265487" width="300" height="225.840707964602" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="86.194690265487" width="300" height="225.840707964602" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="190" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.250560272274" font-weight="bold" fill="var(--primary-text)">Raw sample</text>
   <text x="190" y="152.920353982301" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">X = (X₁, X₂, ..., Xₙ)</text>
   <text x="190" y="188.849557522124" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">n numbers</text>
   <text x="190" y="214.513274336283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">drawn iid from Pθ</text>
   <text x="190" y="260.70796460177" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">mostly noise</text>
 
-  <rect x="490" y="86.194690265487" width="300" height="225.840707964602" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="86.194690265487" width="300" height="225.840707964602" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.250560272274" font-weight="bold" fill="var(--ok-text)">Sufficient T(X)</text>
   <text x="640" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">e.g. T = (∑Xᵢ, ∑Xᵢ²)</text>
   <text x="640" y="188.849557522124" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">a handful of numbers</text>
@@ -114,7 +109,7 @@
   <text x="640" y="265.840707964602" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">all info about θ</text>
   <text x="640" y="291.504424778761" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">is in T</text>
 
-  <rect x="940" y="86.194690265487" width="300" height="225.840707964602" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="86.194690265487" width="300" height="225.840707964602" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1090" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.250560272274" font-weight="bold" fill="var(--warn-text)">Parameter θ</text>
   <text x="1090" y="158.053097345133" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">what we want to learn</text>
   <text x="1090" y="188.849557522124" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">indexes Pθ</text>
@@ -127,11 +122,11 @@
   <line x1="790" y1="199.115044247788" x2="940" y2="199.115044247788" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
   <text x="865" y="183.716814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--text-muted)">inform</text>
 
-  <rect x="40" y="363.362831858407" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="363.362831858407" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="399.29203539823" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--info-text)">Factorization theorem (Neyman–Fisher)</text>
   <text x="640" y="435.221238938053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--info-text)">T is sufficient ⇔ f(x ; θ) = g(T(x), θ) · h(x)</text>
 
-  <rect x="40" y="486.548672566372" width="1200" height="133.451327433628" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="486.548672566372" width="1200" height="133.451327433628" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="522.477876106195" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">Why it matters</text>
   <text x="640" y="553.274336283186" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--danger-text)">Rao–Blackwell: any estimator improves by conditioning on T.</text>
   <text x="640" y="584.070796460177" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--danger-text)">Minimal + complete ⇒ unique unbiased.</text>

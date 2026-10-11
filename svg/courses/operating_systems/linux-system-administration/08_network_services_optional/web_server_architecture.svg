@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,13 +93,13 @@
 
 
   <!-- Request flow row -->
-  <rect x="40" y="50.740740740741" width="170" height="85.925925925926" rx="8.291003602745" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="50.740740740741" width="170" height="85.925925925926" rx="8.291003602745" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="125" y="88.333333333334" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--bg)">Browser</text>
   <text x="125" y="115.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.436505404118" fill="var(--bg)">HTTPS :443</text>
 
   <line x1="215" y1="93.703703703704" x2="265" y2="93.703703703704" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="270" y="50.740740740741" width="260" height="85.925925925926" rx="8.291003602745" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="270" y="50.740740740741" width="260" height="85.925925925926" rx="8.291003602745" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="400" y="85.111111111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--bg)">Reverse Proxy</text>
   <text x="400" y="109.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.436505404118" fill="var(--bg)">nginx / HAProxy</text>
   <text x="400" y="128.074074074075" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.436505404118" fill="var(--bg)">TLS + load balance</text>
@@ -113,26 +108,26 @@
   <line x1="535" y1="93.703703703704" x2="585" y2="93.703703703704" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="535" y1="115.185185185185" x2="585" y2="131.296296296297" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="590" y="40" width="180" height="36.518518518519" rx="6.21825270206" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="590" y="40" width="180" height="36.518518518519" rx="6.21825270206" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="680" y="64.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" font-weight="bold" fill="var(--bg)">App Server 1</text>
-  <rect x="590" y="77.592592592593" width="180" height="36.518518518519" rx="6.21825270206" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="590" y="77.592592592593" width="180" height="36.518518518519" rx="6.21825270206" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="680" y="102.296296296297" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" font-weight="bold" fill="var(--bg)">App Server 2</text>
-  <rect x="590" y="115.185185185185" width="180" height="36.518518518519" rx="6.21825270206" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="590" y="115.185185185185" width="180" height="36.518518518519" rx="6.21825270206" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="680" y="139.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" font-weight="bold" fill="var(--bg)">App Server 3</text>
 
   <!-- nginx box -->
-  <rect x="800" y="50.740740740741" width="210" height="85.925925925926" rx="8.291003602745" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="800" y="50.740740740741" width="210" height="85.925925925926" rx="8.291003602745" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="905" y="82.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--bg)">nginx</text>
   <text x="905" y="106.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.436505404118" fill="var(--bg)">event-driven</text>
   <text x="905" y="125.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.436505404118" fill="var(--bg)">low memory</text>
 
-  <rect x="1030" y="50.740740740741" width="210" height="85.925925925926" rx="8.291003602745" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1030" y="50.740740740741" width="210" height="85.925925925926" rx="8.291003602745" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1135" y="82.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--bg)">Apache</text>
   <text x="1135" y="106.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.436505404118" fill="var(--bg)">thread-per-request</text>
   <text x="1135" y="125.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.436505404118" fill="var(--bg)">.htaccess</text>
 
   <!-- Proxy benefits -->
-  <rect x="40" y="168.888888888889" width="600" height="225.555555555555" rx="8.291003602745" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="168.888888888889" width="600" height="225.555555555555" rx="8.291003602745" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="340" y="198.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--bg)">Reverse Proxy Benefits</text>
   <text x="60" y="243.333333333333" font-family="Arial, sans-serif" font-size="14.320407608517" fill="var(--bg)">TLS termination</text>
   <text x="60" y="274.722222222222" font-family="Arial, sans-serif" font-size="14.320407608517" fill="var(--bg)">Load balancing</text>
@@ -141,7 +136,7 @@
   <text x="60" y="379.351851851852" font-family="Courier New, monospace" font-size="12.274635093015" fill="var(--bg)">roundrobin | leastconn | ip_hash</text>
 
   <!-- Postfix flow -->
-  <rect x="660" y="168.888888888889" width="580" height="225.555555555555" rx="8.291003602745" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="168.888888888889" width="580" height="225.555555555555" rx="8.291003602745" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="950" y="198.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--bg)">Postfix Mail Flow</text>
   <text x="950" y="243.333333333333" text-anchor="middle" font-family="Courier New, monospace" font-size="13.297521350766" fill="var(--bg)">MUA -&gt; smtpd:587 -&gt; queue</text>
   <text x="950" y="274.722222222222" text-anchor="middle" font-family="Courier New, monospace" font-size="13.297521350766" fill="var(--bg)">queue -&gt; smtp -&gt; remote MTA</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,21 +91,21 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="200" height="210.909090909091" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="200" height="210.909090909091" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="140" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--primary-text)">Token Embed</text>
   <text x="140" y="156" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--primary-text)">"quantum" -&gt; vector</text>
   <text x="140" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">vocab x d_model</text>
 
   <line x1="250" y1="145.454545454545" x2="310" y2="145.454545454545" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="320" y="40" width="200" height="210.909090909091" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="320" y="40" width="200" height="210.909090909091" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="420" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--warn-text)">+ Position</text>
   <text x="420" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">sinusoidal</text>
   <text x="420" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">or RoPE</text>
 
   <line x1="530" y1="145.454545454545" x2="590" y2="145.454545454545" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="600" y="40" width="420" height="210.909090909091" rx="6.16146381663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="600" y="40" width="420" height="210.909090909091" rx="6.16146381663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="810" y="82.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--info-text)">Decoder Block x N</text>
   <text x="710" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--info-text)">Masked Self-Attn</text>
   <text x="710" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">causal, look left</text>
@@ -121,7 +116,7 @@
 
   <line x1="1030" y1="145.454545454545" x2="1090" y2="145.454545454545" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="1100" y="40" width="140" height="210.909090909091" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1100" y="40" width="140" height="210.909090909091" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1170" y="124.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--primary-text)">Linear</text>
   <text x="1170" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">to vocab</text>
   <text x="1170" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--primary-text)">Softmax</text>
@@ -134,7 +129,7 @@
   <text x="340" y="519.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--text-muted)">d_model: 768 to 12288</text>
   <text x="340" y="577.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-style="italic" fill="var(--text-faint)">MLP dominates params</text>
 
-  <rect x="660" y="293.090909090909" width="580" height="326.909090909091" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="293.090909090909" width="580" height="326.909090909091" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--ok-text)">Next token distribution</text>
   <text x="950" y="393.272727272727" text-anchor="middle" font-family="Courier New, monospace" font-size="16.430570177679" fill="var(--ok-text)">"in" 0.32</text>
   <text x="950" y="430.181818181818" text-anchor="middle" font-family="Courier New, monospace" font-size="16.430570177679" fill="var(--ok-text)">"of" 0.18</text>

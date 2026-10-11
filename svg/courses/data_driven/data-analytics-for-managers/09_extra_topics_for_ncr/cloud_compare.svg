@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Cloud Data Stack Comparison</text>
-  <rect x="40" y="80" width="395" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="395" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="237" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">GCP</text>
   <text x="60" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Storage: Cloud Storage</text>
   <text x="60" y="195" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Warehouse: BigQuery</text>
@@ -105,7 +100,7 @@
   <text x="60" y="300" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">ML: Vertex AI</text>
   <text x="60" y="345" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Strength: serverless analytics</text>
   <text x="60" y="380" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Pay-per-query model</text>
-  <rect x="445" y="80" width="395" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="80" width="395" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="642" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">AWS</text>
   <text x="465" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Storage: S3</text>
   <text x="465" y="195" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Warehouse: Redshift</text>
@@ -114,7 +109,7 @@
   <text x="465" y="300" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">ML: SageMaker</text>
   <text x="465" y="345" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Strength: broadest catalogue</text>
   <text x="465" y="380" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Many primitives to compose</text>
-  <rect x="850" y="80" width="390" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="80" width="390" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1045" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Azure</text>
   <text x="870" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Storage: Blob, Data Lake Gen2</text>
   <text x="870" y="195" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Warehouse: Synapse, Fabric</text>

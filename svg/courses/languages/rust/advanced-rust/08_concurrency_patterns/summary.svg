@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,40 +92,40 @@
   </defs>
   <text x="639.999946875006" y="40" text-anchor="middle" font-size="24.188822942598" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Concurrency Patterns Cheatsheet</text>
   <line x1="40" y1="52.719191001057" x2="1240" y2="52.719191001057" stroke="var(--primary-border)" stroke-width="1.8823"/>
-  <rect x="40" y="65.438601300401" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="65.438601300401" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="68.125115380846" y="90.877312249946" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">mpsc::channel</tspan> : unbounded MPSC channel</text>
   <rect x="40" y="109.956153576103" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549"/>
   <text x="68.125115380846" y="135.394864525647" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">mpsc::sync_channel</tspan> : bounded MPSC with backpressure</text>
-  <rect x="40" y="154.473596202661" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="154.473596202661" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="68.125115380846" y="179.912307152206" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">crossbeam-channel</tspan> : MPMC + select! macro</text>
   <rect x="40" y="198.991148478363" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549"/>
   <text x="68.125115380846" y="224.429859427908" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Mutex&lt;T&gt;</tspan> : exclusive access, short locks</text>
-  <rect x="40" y="243.508920052352" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="243.508920052352" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="68.125115380846" y="268.947411703609" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">RwLock&lt;T&gt;</tspan> : many readers, one writer</text>
   <rect x="40" y="288.02636267891" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549"/>
   <text x="68.125115380846" y="313.465073628455" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">AtomicU64/Bool</tspan> : lock-free counters and flags</text>
-  <rect x="40" y="332.543914954612" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="332.543914954612" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="68.125115380846" y="357.982296956726" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Ordering</tspan> : Relaxed &lt; Acquire/Release &lt; SeqCst</text>
   <rect x="40" y="377.061467230314" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549"/>
   <text x="68.125115380846" y="402.500068530715" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">rayon::par_iter</tspan> : data-parallel iterators</text>
-  <rect x="40" y="421.579019506016" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="421.579019506016" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="68.125115380846" y="447.017620806417" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Arc&lt;T&gt;</tspan> : shared ownership across threads</text>
   <rect x="40" y="466.096462132574" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549"/>
   <text x="68.125115380846" y="491.535063432975" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">DashMap</tspan> : concurrent HashMap (sharded)</text>
-  <rect x="40" y="510.614233706563" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="510.614233706563" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="68.125115380846" y="536.052615708677" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">thread::scope</tspan> : borrow stack data in threads</text>
-  <rect x="40" y="555.131676333121" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="555.131676333121" width="1199.999893750013" height="38.158011599745" rx="6.476171120226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="68.125115380846" y="580.570277633522" font-size="17.469579532994" fill="var(--text)" font-family="Arial, sans-serif">
     <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Actor pattern</tspan> : message-driven, no shared state</text>
   <rect x="40" y="599.649118959679" width="1199.999893750013" height="20.350881040321" rx="6.476171120226" fill="none" stroke="var(--border)" stroke-width="1"/>

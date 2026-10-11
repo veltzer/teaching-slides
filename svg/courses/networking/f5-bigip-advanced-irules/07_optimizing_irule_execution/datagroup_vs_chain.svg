@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,32 +92,32 @@
   </defs>
   <rect x="40" y="40" width="560" height="580" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
   <text x="320.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">if / elseif chain</text>
-  <rect x="90" y="100" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="90" y="100" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="320.0" y="134.7" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="var(--warn-text)">if starts_with /admin</text>
   <line x1="320" y1="160" x2="320" y2="184" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
-  <rect x="90" y="184" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="90" y="184" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="320.0" y="218.7" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="var(--warn-text)">if starts_with /setup</text>
   <line x1="320" y1="244" x2="320" y2="268" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
-  <rect x="90" y="268" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="90" y="268" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="320.0" y="302.7" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="var(--warn-text)">if starts_with /backup</text>
   <line x1="320" y1="328" x2="320" y2="352" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
-  <rect x="90" y="352" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="90" y="352" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="320.0" y="386.7" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="var(--warn-text)">if starts_with /private</text>
   <line x1="320" y1="412" x2="320" y2="436" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
-  <rect x="90" y="436" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="90" y="436" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="320.0" y="470.7" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="var(--warn-text)">if starts_with /internal</text>
   <line x1="320" y1="496" x2="320" y2="520" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
-  <rect x="90" y="520" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="90" y="520" width="460" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="320.0" y="554.7" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="var(--warn-text)">if starts_with /debug</text>
   <text x="320" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-border)">n comparisons, n regex compiles</text>
   <rect x="680" y="40" width="560" height="580" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
   <text x="960.0" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">data group lookup</text>
-  <rect x="730" y="130" width="460" height="130" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="730" y="130" width="460" height="130" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="960.0" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">class match</text>
   <text x="960.0" y="201.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">one lookup</text>
   <text x="960.0" y="232.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">starts_with blocked_paths</text>
   <line x1="960" y1="260" x2="960" y2="340" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <rect x="730" y="340" width="460" height="200" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="730" y="340" width="460" height="200" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="960.0" y="366" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">blocked_paths</text>
   <text x="960.0" y="446.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">/admin  /setup  /backup</text>
   <text x="960.0" y="477.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">/private  /internal  /debug</text>

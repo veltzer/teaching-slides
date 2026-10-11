@@ -70,11 +70,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="271.9999" width="1200" height="348.0001" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="271.9999" width="1200" height="348.0001" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640.0001" y="349.3333" text-anchor="middle" fill="var(--bg)" font-size="24.4706" font-family="Arial, sans-serif">async function authenticateUser(credentials) {</text>
   <text x="640.0001" y="407.3333" text-anchor="middle" fill="var(--bg)" font-size="24.4706" font-family="Arial, sans-serif">    const hashedPassword = await bcrypt.hash(credentials.password);</text>
   <text x="640.0001" y="465.3333" text-anchor="middle" fill="var(--bg)" font-size="24.4706" font-family="Arial, sans-serif">    const user = await User.findOne({ email: credentials.email });</text>

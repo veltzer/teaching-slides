@@ -3,20 +3,20 @@
     <type>regular</type>
   </metadata>
   <text x="664.489818471471" y="40" text-anchor="middle" font-size="39.767272386843" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Shellshock Attack Flow</text>
-  <rect x="40" y="81.428519387749" width="318.367465639322" height="82.857160204084" rx="7.131011187121" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="81.428519387749" width="318.367465639322" height="82.857160204084" rx="7.131011187121" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="199.183674656393" y="133.214290051021" text-anchor="middle" font-size="28.720860657247" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Attacker</text>
   <line x1="358.367232986251" y1="122.857038775497" x2="505.306027488542" y2="122.857038775497" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="725.71421924198" y="122.857038775497" text-anchor="middle" font-size="26.511554541291" fill="var(--text-muted)" font-family="Arial, sans-serif">HTTP Request with malicious header</text>
   <line x1="664.489818471471" y1="143.571419897958" x2="664.489818471471" y2="205.714198979581" stroke="var(--text)" stroke-width="2"/>
-  <rect x="40" y="205.714198979581" width="1200" height="103.571419897958" rx="7.131011187121" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="205.714198979581" width="1200" height="103.571419897958" rx="7.131011187121" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="664.489818471471" y="253.357069132644" text-anchor="middle" font-size="28.720860657247" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Web Server (Apache/nginx with CGI)</text>
   <text x="664.489818471471" y="288.571359183665" text-anchor="middle" font-size="24.302248425334" fill="var(--text-muted)" font-family="Arial, sans-serif">Passes headers as env variables</text>
   <line x1="664.489818471471" y1="309.285618877539" x2="664.489818471471" y2="371.428519387749" stroke="var(--text)" stroke-width="2"/>
-  <rect x="40" y="371.428519387749" width="1200" height="103.571419897958" rx="7.131011187121" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="371.428519387749" width="1200" height="103.571419897958" rx="7.131011187121" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="664.489818471471" y="419.071510969398" text-anchor="middle" font-size="26.511554541291" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Bash Shell: env USER_AGENT='() { :;}; malicious'</text>
   <text x="664.489818471471" y="454.285679591832" text-anchor="middle" font-size="24.302248425334" fill="var(--text-muted)" font-family="Arial, sans-serif">Bash parses function AND executes trailing command</text>
   <line x1="664.489818471471" y1="475.000060714293" x2="664.489818471471" y2="537.142839795916" stroke="var(--text)" stroke-width="2"/>
-  <rect x="40" y="537.142839795916" width="1200" height="82.857160204084" rx="7.131011187121" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="537.142839795916" width="1200" height="82.857160204084" rx="7.131011187121" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="664.489818471471" y="588.928610459189" text-anchor="middle" font-size="28.720860657247" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Malicious command runs with web server privileges</text>
   <defs>
     <style id="palette-vars">
@@ -82,11 +82,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
 
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">

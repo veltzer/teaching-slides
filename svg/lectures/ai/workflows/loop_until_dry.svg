@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -95,18 +90,18 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="90" y="40" width="260" height="90" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="90" y="40" width="260" height="90" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="220" y="78" text-anchor="middle" font-size="19" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">round of finders</text>
   <text x="220" y="108" text-anchor="middle" font-size="16" fill="var(--primary-text)" font-family="Arial, sans-serif">run in parallel</text>
   <line x1="350" y1="85" x2="453" y2="85" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="460" y="40" width="220" height="90" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="460" y="40" width="220" height="90" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="570" y="93" text-anchor="middle" font-size="19" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">anything new?</text>
 
   <line x1="680" y1="85" x2="783" y2="85" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
   <text x="730" y="65" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">yes</text>
 
-  <rect x="790" y="40" width="250" height="90" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="790" y="40" width="250" height="90" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="915" y="78" text-anchor="middle" font-size="19" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">dedup vs seen</text>
   <text x="915" y="108" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">reset dry counter</text>
 
@@ -120,7 +115,7 @@
   <text x="570" y="392" text-anchor="middle" font-size="17" fill="var(--text)" font-family="Arial, sans-serif">dry rounds + 1</text>
   <line x1="680" y1="385" x2="783" y2="385" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="790" y="350" width="250" height="70" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="790" y="350" width="250" height="70" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="915" y="392" text-anchor="middle" font-size="17" fill="var(--ok-text)" font-family="Arial, sans-serif">two dry rounds: stop</text>
 
   <text x="640" y="490" text-anchor="middle" font-size="20" fill="var(--text-muted)" font-family="Arial, sans-serif">count what is new, not what is accepted — or it never converges</text>

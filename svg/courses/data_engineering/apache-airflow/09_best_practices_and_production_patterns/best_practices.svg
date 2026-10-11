@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,40 +94,40 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Airflow Production Patterns</text>
 
-  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="231.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--ok-text)">Idempotent tasks</text>
   <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Re-running has no extra effect</text>
   <text x="60.689655172414" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">UPSERT not INSERT</text>
   <text x="60.689655172414" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">Replace partition not append</text>
   <text x="60.689655172414" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--ok-text)">Survives retries safely</text>
 
-  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">Atomic tasks</text>
   <text x="469.310344827586" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">One task = one logical unit</text>
   <text x="469.310344827586" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Partial failure = retry whole</text>
   <text x="469.310344827586" y="220.917431192661" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">No "extract+transform" together</text>
   <text x="469.310344827586" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--warn-text)">Fail fast and clear</text>
 
-  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="255.412844036697" rx="10.49246125174" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--primary-text)">Don't compute in DAG</text>
   <text x="877.931034482759" y="162.385321100917" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">DAG file parsed often</text>
   <text x="877.931034482759" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">Imports run every time</text>
   <text x="877.931034482759" y="215.596330275229" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">No DB queries at top-level</text>
   <text x="877.931034482759" y="263.48623853211" font-family="Arial, sans-serif" font-size="13.640199627262" font-weight="bold" fill="var(--primary-text)">Heavy work in operators</text>
 
-  <rect x="40" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="231.379310344828" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--info-text)">Use connections</text>
   <text x="60.689655172414" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Don't hardcode credentials</text>
   <text x="60.689655172414" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Connection objects in UI</text>
   <text x="60.689655172414" y="513.577981651376" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">Or secret backend</text>
 
-  <rect x="448.620689655172" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">Test DAGs</text>
   <text x="469.310344827586" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Import without errors</text>
   <text x="469.310344827586" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">No cycles in dep graph</text>
   <text x="469.310344827586" y="513.577981651376" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Operators run dry</text>
 
-  <rect x="857.241379310345" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="385.871559633028" width="382.758620689655" height="234.128440366972" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--danger-text)">Avoid</text>
   <text x="877.931034482759" y="460.366972477064" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Top-level DB calls</text>
   <text x="877.931034482759" y="486.97247706422" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">- Variables.get in tasks</text>

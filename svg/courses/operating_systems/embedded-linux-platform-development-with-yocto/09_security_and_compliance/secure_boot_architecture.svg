@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,28 +92,28 @@
   </defs>
 
 
-  <rect x="40" y="40" width="260" height="196.981132075472" rx="6.27664133236" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="260" height="196.981132075472" rx="6.27664133236" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="170" y="83.773584905661" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" font-weight="bold" fill="var(--danger-text)">ROM Code</text>
   <text x="170" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--danger-text)">Immutable silicon</text>
   <text x="170" y="154.905660377359" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--danger-text)">Root public key</text>
   <text x="170" y="187.735849056604" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--danger-text)">Verifies SPL</text>
   <text x="170" y="220.56603773585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--danger-text)">Root of trust</text>
 
-  <rect x="350" y="40" width="260" height="196.981132075472" rx="6.27664133236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350" y="40" width="260" height="196.981132075472" rx="6.27664133236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="480" y="83.773584905661" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" font-weight="bold" fill="var(--primary-text)">U-Boot</text>
   <text x="480" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--primary-text)">FIT, x509 keys</text>
   <text x="480" y="154.905660377359" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--primary-text)">Verifies kernel</text>
   <text x="480" y="187.735849056604" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--primary-text)">Halts on bad sig</text>
   <text x="480" y="220.56603773585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--primary-text)">Second stage</text>
 
-  <rect x="660" y="40" width="260" height="196.981132075472" rx="6.27664133236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="40" width="260" height="196.981132075472" rx="6.27664133236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="790" y="83.773584905661" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" font-weight="bold" fill="var(--primary-text)">Linux Kernel</text>
   <text x="790" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--primary-text)">Signed Image</text>
   <text x="790" y="154.905660377359" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--primary-text)">Checks initramfs</text>
   <text x="790" y="187.735849056604" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--primary-text)">Enables IMA</text>
   <text x="790" y="220.56603773585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--primary-text)">Third stage</text>
 
-  <rect x="970" y="40" width="270" height="196.981132075472" rx="6.27664133236" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="970" y="40" width="270" height="196.981132075472" rx="6.27664133236" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1105" y="83.773584905661" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" font-weight="bold" fill="var(--info-text)">Runtime</text>
   <text x="1105" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--info-text)">TPM / OP-TEE</text>
   <text x="1105" y="154.905660377359" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--info-text)">Seals to PCR</text>
@@ -129,21 +124,21 @@
   <line x1="610" y1="138.490566037736" x2="660" y2="138.490566037736" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
   <line x1="920" y1="138.490566037736" x2="970" y2="138.490566037736" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
 
-  <rect x="40" y="291.698113207547" width="390" height="196.981132075472" rx="6.27664133236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="291.698113207547" width="390" height="196.981132075472" rx="6.27664133236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="235" y="335.471698113207" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" font-weight="bold" fill="var(--warn-text)">RootFS (dm-verity)</text>
   <text x="235" y="379.245283018868" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--warn-text)">Merkle tree of blocks</text>
   <text x="235" y="412.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--warn-text)">Root hash signed</text>
   <text x="235" y="444.905660377359" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--warn-text)">Read-only</text>
   <text x="235" y="477.735849056604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--warn-text)">Tamper-evident</text>
 
-  <rect x="445" y="291.698113207547" width="390" height="196.981132075472" rx="6.27664133236" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="291.698113207547" width="390" height="196.981132075472" rx="6.27664133236" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="335.471698113207" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" font-weight="bold" fill="var(--info-text)">Applications</text>
   <text x="640" y="379.245283018868" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--info-text)">IMA measures files</text>
   <text x="640" y="412.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--info-text)">Signed via OSTree</text>
   <text x="640" y="444.905660377359" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--info-text)">SELinux / AppArmor</text>
   <text x="640" y="477.735849056604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--info-text)">Accountable userspace</text>
 
-  <rect x="850" y="291.698113207547" width="390" height="196.981132075472" rx="6.27664133236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="291.698113207547" width="390" height="196.981132075472" rx="6.27664133236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1045" y="335.471698113207" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" font-weight="bold" fill="var(--ok-text)">Update / Recovery</text>
   <text x="1045" y="379.245283018868" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--ok-text)">A/B slots</text>
   <text x="1045" y="412.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--ok-text)">Anti-rollback fuses</text>

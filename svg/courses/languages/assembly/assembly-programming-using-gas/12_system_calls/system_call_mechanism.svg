@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,14 +92,14 @@
   </defs>
 
 
-  <rect x="40" y="40" width="560" height="238.823529411765" rx="8.531372323694" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="560" height="238.823529411765" rx="8.531372323694" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="320" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728312" font-weight="bold" fill="var(--primary-text)">USER SPACE</text>
   <text x="320" y="119.607843137255" text-anchor="middle" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--primary-text)">EAX = syscall number</text>
   <text x="320" y="153.725490196079" text-anchor="middle" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--primary-text)">EBX, ECX, EDX = args</text>
   <text x="320" y="187.843137254902" text-anchor="middle" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--primary-text)">ESI, EDI = args 4, 5</text>
   <text x="320" y="239.019607843137" text-anchor="middle" font-family="Courier New, monospace" font-size="19.195587728312" font-weight="bold" fill="var(--primary-text)">int $0x80</text>
 
-  <rect x="40" y="324.313725490196" width="560" height="295.686274509804" rx="8.531372323694" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="324.313725490196" width="560" height="295.686274509804" rx="8.531372323694" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="320" y="364.117647058823" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728312" font-weight="bold" fill="var(--danger-text)">KERNEL SPACE</text>
   <text x="320" y="403.921568627451" text-anchor="middle" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--danger-text)">syscall_table[EAX]</text>
   <text x="320" y="449.411764705883" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.929901566464" fill="var(--danger-text)">Dispatches to handler</text>

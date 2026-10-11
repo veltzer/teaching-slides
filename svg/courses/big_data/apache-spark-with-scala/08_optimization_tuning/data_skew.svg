@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -100,7 +95,7 @@
   <text x="640" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">One partition blocks the stage</text>
 
   <!-- Symptom panel -->
-  <rect x="40" y="96.46017699115" width="580" height="297.699115044248" rx="8.10549906201" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="96.46017699115" width="580" height="297.699115044248" rx="8.10549906201" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="330" y="127.256637168142" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--bg)">Symptom</text>
 
   <rect x="70" y="152.920353982301" width="60" height="43.115044247788" rx="4.052749531005" fill="var(--bg)"/>
@@ -121,7 +116,7 @@
   <text x="60" y="345" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">long GC pauses</text>
 
   <!-- Causes panel -->
-  <rect x="660" y="96.46017699115" width="580" height="297.699115044248" rx="8.10549906201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="96.46017699115" width="580" height="297.699115044248" rx="8.10549906201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="950" y="127.256637168142" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--bg)">Causes</text>
   <text x="680" y="168.318584070796" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--bg)">Power-law keys (one user / country)</text>
   <text x="680" y="204.247787610619" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--bg)">NULL keys pooling together</text>
@@ -131,7 +126,7 @@
   <text x="680" y="353.097345132743" font-family="Courier New, monospace" font-size="12.158248593015" fill="var(--bg)">prefer reduceByKey / aggregateByKey</text>
 
   <!-- Fixes -->
-  <rect x="40" y="414.690265486726" width="1200" height="205.309734513274" rx="8.10549906201" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="414.690265486726" width="1200" height="205.309734513274" rx="8.10549906201" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="445.486725663717" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--bg)">Fixes</text>
   <text x="70" y="485" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)">AQE skewJoin splits hot partitions</text>
   <text x="70" y="515" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)">Salt the key, group, strip suffix</text>

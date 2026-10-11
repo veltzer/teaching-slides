@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,22 +92,22 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Engine Migration via Replication</text>
 
-  <rect x="40" y="102.142857142857" width="257.142857142857" height="103.571428571429" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="102.142857142857" width="257.142857142857" height="103.571428571429" rx="10.534200859823" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="168.571428571429" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--info-text)">Source engine</text>
   <text x="168.571428571429" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">primary writes</text>
   <text x="168.571428571429" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--info-text)">app reads here</text>
 
-  <rect x="361.428571428571" y="102.142857142857" width="257.142857142857" height="103.571428571429" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="361.428571428571" y="102.142857142857" width="257.142857142857" height="103.571428571429" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="490" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--warn-text)">Migration tool</text>
   <text x="490" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--warn-text)">snapshot + CDC</text>
   <text x="490" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--warn-text)">schema translate</text>
 
-  <rect x="682.857142857143" y="102.142857142857" width="257.142857142857" height="103.571428571429" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="682.857142857143" y="102.142857142857" width="257.142857142857" height="103.571428571429" rx="10.534200859823" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="811.428571428571" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--ok-text)">Target engine</text>
   <text x="811.428571428571" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--ok-text)">catching up</text>
   <text x="811.428571428571" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--ok-text)">read-only initially</text>
 
-  <rect x="1004.285714285714" y="102.142857142857" width="235.714285714286" height="103.571428571429" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1004.285714285714" y="102.142857142857" width="235.714285714286" height="103.571428571429" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1122.142857142857" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--primary-text)">Application</text>
   <text x="1122.142857142857" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--primary-text)">reads &amp; writes</text>
   <text x="1122.142857142857" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--primary-text)">flag-driven routing</text>
@@ -135,7 +130,7 @@
   <text x="682.857142857143" y="392.142857142857" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--text-muted)">Missing functions in target</text>
   <text x="682.857142857143" y="418.035714285714" font-family="Arial, sans-serif" font-size="13.69446111777" font-weight="bold" fill="var(--danger-accent)">Test early, test often</text>
 
-  <rect x="40" y="475" width="1200" height="145" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="475" width="1200" height="145" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="506.071428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--primary-text)">Rollback plan keeps source warm</text>
   <text x="640" y="535.071428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--primary-text)">Reverse replication — target writes back to source</text>
   <text x="640" y="563.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--primary-text)">Time-bounded rollback window</text>

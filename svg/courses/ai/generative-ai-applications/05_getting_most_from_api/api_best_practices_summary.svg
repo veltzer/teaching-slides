@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,26 +90,26 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="566.6667" height="273.888947530873" rx="6.164414475338" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="566.6667" height="273.888947530873" rx="6.164414475338" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="323.3333" y="80.277789506175" text-anchor="middle" font-size="22.690387761789" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">RELIABILITY</text>
   <text x="90" y="120.555473456778" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Exponential backoff for retries</text>
   <text x="90" y="155.999978888886" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Set appropriate timeouts</text>
   <text x="90" y="191.444484320994" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Handle all error types gracefully</text>
   <text x="90" y="226.888778641958" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Idempotency keys for critical ops</text>
-  <rect x="673.3333" y="40" width="566.6667" height="273.888947530873" rx="6.164414475338" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="673.3333" y="40" width="566.6667" height="273.888947530873" rx="6.164414475338" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="956.6666" y="80.277789506175" text-anchor="middle" font-size="22.690387761789" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">COST</text>
   <text x="723.3333" y="120.555473456778" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Right model for each task</text>
   <text x="723.3333" y="155.999978888886" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Set max_tokens limits</text>
   <text x="723.3333" y="191.444484320994" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Cache deterministic responses</text>
   <text x="723.3333" y="226.888778641958" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Batch API for non-urgent work</text>
   <text x="723.3333" y="262.333284074067" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Monitor usage with middleware</text>
-  <rect x="40" y="346.111052469127" width="566.6667" height="273.888947530873" rx="6.164414475338" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="346.111052469127" width="566.6667" height="273.888947530873" rx="6.164414475338" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="323.3333" y="386.388841975301" text-anchor="middle" font-size="22.690387761789" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">SECURITY</text>
   <text x="90" y="426.666525925904" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Never expose API keys in client code</text>
   <text x="90" y="462.111031358012" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Validate and sanitize all inputs</text>
   <text x="90" y="497.555536790121" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Use moderation API</text>
   <text x="90" y="532.999936666657" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Rate limiting per user</text>
-  <rect x="673.3333" y="346.111052469127" width="566.6667" height="273.888947530873" rx="6.164414475338" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="673.3333" y="346.111052469127" width="566.6667" height="273.888947530873" rx="6.164414475338" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="956.6666" y="386.388841975301" text-anchor="middle" font-size="22.690387761789" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">QUALITY</text>
   <text x="723.3333" y="426.666525925904" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Structured outputs for extraction</text>
   <text x="723.3333" y="462.111031358012" font-size="17.828103104125" fill="var(--text)" font-family="Arial, sans-serif">☐ Validate outputs before using</text>

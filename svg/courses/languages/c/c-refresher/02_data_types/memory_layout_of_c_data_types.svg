@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -121,21 +116,21 @@
   <text x="446.779661" y="326.94739" text-anchor="middle" font-size="14.241355" fill="var(--text)" font-family="Arial, sans-serif">double</text>
   <text x="746.779661" y="326.94739" font-size="13.224257" fill="var(--text-muted)" font-family="Arial, sans-serif">8 bytes</text>
   <text x="40" y="367.649113" font-size="13.224257" fill="var(--text-faint)" font-family="Arial, sans-serif">0x101C</text>
-  <rect x="162.033898" y="349.333325" width="569.491525" height="36.631576" rx="7.023346" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="162.033898" y="349.333325" width="569.491525" height="36.631576" rx="7.023346" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="446.779661" y="373.75446" text-anchor="middle" font-size="14.241355" fill="var(--text)" font-family="Arial, sans-serif">pointer (void *)</text>
   <text x="746.779661" y="373.75446" font-size="13.224257" fill="var(--text-muted)" font-family="Arial, sans-serif">8 bytes (64-bit)</text>
-  <rect x="40" y="416.491257" width="1200" height="203.508743" rx="7.023346" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="416.491257" width="1200" height="203.508743" rx="7.023346" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="451.08776" text-anchor="middle" font-size="19.327662" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Struct Padding Example</text>
   <text x="70.508475" y="481.614115" font-size="14.241355" fill="var(--text-muted)" font-family="Arial, sans-serif">struct { char a; int b; char c; }</text>
   <rect x="70.508475" y="495.85963" width="76.271186" height="32.561303" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="108.135593" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--text)" font-family="Arial, sans-serif">a (1B)</text>
-  <rect x="149.830508" y="495.85963" width="167.79661" height="32.561303" rx="7.023346" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="4.4444 2.6667" filter="url(#shadow)"/>
+  <rect x="149.830508" y="495.85963" width="167.79661" height="32.561303" rx="7.023346" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="4.4444 2.6667"/>
   <text x="234.237288" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--danger-accent)" font-family="Arial, sans-serif">pad (3B)</text>
   <rect x="320.677966" y="495.85963" width="213.559322" height="32.561303" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="427.457627" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--text)" font-family="Arial, sans-serif">b (4B)</text>
   <rect x="537.288136" y="495.85963" width="76.271186" height="32.561303" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="575.932203" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--text)" font-family="Arial, sans-serif">c (1B)</text>
-  <rect x="616.610061" y="495.85963" width="167.79661" height="32.561303" rx="7.023346" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="4.4444 2.6667" filter="url(#shadow)"/>
+  <rect x="616.610061" y="495.85963" width="167.79661" height="32.561303" rx="7.023346" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="4.4444 2.6667"/>
   <text x="701.016949" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--danger-accent)" font-family="Arial, sans-serif">pad (3B)</text>
   <text x="802.711864" y="517.228092" font-size="14.241355" fill="var(--text-muted)" font-family="Arial, sans-serif">Total: 12 bytes (not 6!)</text>
   <text x="70.508475" y="594.561518" font-size="14.241355" fill="var(--text-muted)" font-family="Arial, sans-serif">Alignment: each field aligned to its size boundary. Use __attribute__((packed)) to disable.</text>

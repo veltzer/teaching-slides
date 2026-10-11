@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,35 +91,35 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="230" height="270" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="230" height="270" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="155" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Cache-Aside</text>
   <text x="155" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Read: cache, then DB</text>
   <text x="155" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Write: DB, then invalidate</text>
   <text x="155" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">App manages cache</text>
   <text x="155" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">Most common</text>
 
-  <rect x="290" y="40" width="230" height="270" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="290" y="40" width="230" height="270" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="405" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Write-Through</text>
   <text x="405" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Sync: cache + DB</text>
   <text x="405" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Always consistent</text>
   <text x="405" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Slower writes</text>
   <text x="405" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-text)">Strong consistency</text>
 
-  <rect x="540" y="40" width="230" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="540" y="40" width="230" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="655" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Write-Behind</text>
   <text x="655" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Write cache first</text>
   <text x="655" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Async flush</text>
   <text x="655" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Loss risk</text>
   <text x="655" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">High throughput</text>
 
-  <rect x="790" y="40" width="230" height="270" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="790" y="40" width="230" height="270" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="905" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Read-Through</text>
   <text x="905" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Cache loads from DB</text>
   <text x="905" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">App only sees cache</text>
   <text x="905" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Simple app</text>
   <text x="905" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">Transparent</text>
 
-  <rect x="1040" y="40" width="200" height="270" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1040" y="40" width="200" height="270" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1140" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Refresh-Ahead</text>
   <text x="1140" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Proactive refresh</text>
   <text x="1140" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Before TTL</text>

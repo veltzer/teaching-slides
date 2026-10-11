@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,10 +92,10 @@
   </defs>
 
 
-  <rect x="60" y="40" width="220" height="66.285714315374" rx="6.306459394793" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="40" width="220" height="66.285714315374" rx="6.306459394793" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="170" y="81.98095243434" text-anchor="middle" font-size="23.123684447573" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Server</text>
 
-  <rect x="1000" y="40" width="220" height="66.285714315374" rx="6.306459394793" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1000" y="40" width="220" height="66.285714315374" rx="6.306459394793" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1110" y="81.98095243434" text-anchor="middle" font-size="23.123684447573" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Client</text>
 
   <line x1="170" y1="117.333333540952" x2="170" y2="620" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 4"/>
@@ -113,14 +108,14 @@
   <rect x="40" y="194.66666604381" width="260" height="48.609523762068" rx="6.306459394793" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="170" y="226.704762005605" text-anchor="middle" font-size="18.919378184378" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">listen()</text>
 
-  <rect x="40" y="255.428570746395" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="255.428570746395" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="170" y="287.46666670819" text-anchor="middle" font-size="18.919378184378" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">accept()</text>
 
   <!-- client steps -->
   <rect x="980" y="133.904761341224" width="260" height="48.609523762068" rx="6.306459394793" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="1110" y="165.94285730302" text-anchor="middle" font-size="18.919378184378" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">socket()</text>
 
-  <rect x="980" y="255.428570746395" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="980" y="255.428570746395" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1110" y="287.46666670819" text-anchor="middle" font-size="18.919378184378" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">connect()</text>
 
   <!-- 3-way handshake -->
@@ -132,9 +127,9 @@
   <text x="640" y="391.314285560054" text-anchor="middle" font-size="16.81722505278" font-style="italic" fill="var(--text-muted)" font-family="Arial, sans-serif">ACK — connection established</text>
 
   <!-- data exchange -->
-  <rect x="40" y="426.666666666667" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="426.666666666667" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="170" y="458.704761590367" text-anchor="middle" font-size="18.919378184378" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">recv() / send()</text>
-  <rect x="980" y="426.666666666667" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="980" y="426.666666666667" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1110" y="458.704761590367" text-anchor="middle" font-size="18.919378184378" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">send() / recv()</text>
 
   <line x1="980" y1="498.47619059483" x2="300" y2="498.47619059483" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
@@ -144,9 +139,9 @@
   <text x="640" y="529.409523803592" text-anchor="middle" font-size="16.81722505278" font-style="italic" fill="var(--text-muted)" font-family="Arial, sans-serif">response bytes</text>
 
   <!-- close -->
-  <rect x="40" y="559.238095297415" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="559.238095297415" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="170" y="591.276190221116" text-anchor="middle" font-size="18.919378184378" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">close()</text>
-  <rect x="980" y="559.238095297415" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="980" y="559.238095297415" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1110" y="591.276190221116" text-anchor="middle" font-size="18.919378184378" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">close()</text>
 
   <line x1="300" y1="620" x2="980" y2="620" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>

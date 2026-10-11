@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -99,7 +94,7 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--text)">Data Pipeline Design</text>
 
   <!-- Source -->
-  <rect x="40" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="175" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Source</text>
   <line x1="60" y1="145.454545" x2="290" y2="145.454545" stroke="var(--ok-text)" stroke-width="1" opacity="0.5"/>
   <text x="175" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--ok-text)">Read raw inputs</text>
@@ -110,7 +105,7 @@
   <text x="175" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--ok-text)">Schema captured early</text>
 
   <!-- Process -->
-  <rect x="340" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="475" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">Process</text>
   <line x1="360" y1="145.454545" x2="590" y2="145.454545" stroke="var(--primary-text)" stroke-width="1" opacity="0.5"/>
   <text x="475" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--primary-text)">Clean, validate</text>
@@ -121,7 +116,7 @@
   <text x="475" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--primary-text)">Quarantine bad rows</text>
 
   <!-- Transform -->
-  <rect x="640" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="775" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--info-text)">Transform</text>
   <line x1="660" y1="145.454545" x2="890" y2="145.454545" stroke="var(--info-text)" stroke-width="1" opacity="0.5"/>
   <text x="775" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--info-text)">Business view</text>
@@ -132,7 +127,7 @@
   <text x="775" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--info-text)">Push to Spark SQL</text>
 
   <!-- Load -->
-  <rect x="940" y="71.636364" width="300" height="421.818182" rx="8.215285" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="71.636364" width="300" height="421.818182" rx="8.215285" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1090" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--danger-text)">Load</text>
   <line x1="960" y1="145.454545" x2="1220" y2="145.454545" stroke="var(--danger-text)" stroke-width="1" opacity="0.5"/>
   <text x="1090" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--danger-text)">Publish</text>

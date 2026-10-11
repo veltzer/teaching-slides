@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,22 +92,22 @@
   </defs>
 
   <!-- Pipeline row: 4 stages -->
-  <rect x="40" y="40" width="284.210526" height="164.040403524212" rx="8.884635250309" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="284.210526" height="164.040403524212" rx="8.884635250309" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="182.105263" y="86.868687481665" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.101007816644" font-weight="bold" fill="var(--primary-text)">IDE Copilot</text>
   <text x="182.105263" y="127.878788362718" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.658690707398" fill="var(--primary-text)">inline completion</text>
   <text x="182.105263" y="163.030303707805" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548110914178" fill="var(--primary-text)">stage: dev time</text>
 
-  <rect x="345.263158" y="40" width="284.210526" height="164.040403524212" rx="8.884635250309" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345.263158" y="40" width="284.210526" height="164.040403524212" rx="8.884635250309" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="487.368421" y="86.868687481665" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.101007816644" font-weight="bold" fill="var(--warn-text)">PR AI Review</text>
   <text x="487.368421" y="127.878788362718" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.658690707398" fill="var(--warn-text)">code review bot</text>
   <text x="487.368421" y="163.030303707805" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548110914178" fill="var(--warn-text)">stage: pre-merge</text>
 
-  <rect x="650.526316" y="40" width="284.210526" height="164.040403524212" rx="8.884635250309" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650.526316" y="40" width="284.210526" height="164.040403524212" rx="8.884635250309" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="792.631579" y="86.868687481665" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.101007816644" font-weight="bold" fill="var(--ok-text)">CI AI Checks</text>
   <text x="792.631579" y="127.878788362718" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.658690707398" fill="var(--ok-text)">test selection</text>
   <text x="792.631579" y="163.030303707805" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548110914178" fill="var(--ok-text)">stage: every push</text>
 
-  <rect x="955.789474" y="40" width="284.210526" height="164.040403524212" rx="8.884635250309" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955.789474" y="40" width="284.210526" height="164.040403524212" rx="8.884635250309" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1097.894737" y="86.868687481665" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.101007816644" font-weight="bold" fill="var(--info-text)">Deploy AI</text>
   <text x="1097.894737" y="127.878788362718" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.658690707398" fill="var(--info-text)">risk assessment</text>
   <text x="1097.894737" y="163.030303707805" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548110914178" fill="var(--info-text)">stage: auto-rollback</text>
@@ -124,7 +119,7 @@
   <line x1="1097.894737" y1="204.040404588858" x2="1097.894737" y2="262.626263142455" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="4 3"/>
 
   <!-- Shared context layer -->
-  <rect x="40" y="262.626263142455" width="1200" height="128.888889243771" rx="8.884635250309" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="262.626263142455" width="1200" height="128.888889243771" rx="8.884635250309" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="309.494949559474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.211586578047" font-weight="bold" fill="var(--warn-text)">Shared Context Layer</text>
   <text x="640" y="354.020202187965" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.658690707398" fill="var(--warn-text)">codebase knowledge · team conventions · project history · test results</text>
 
@@ -132,17 +127,17 @@
   <text x="640" y="444.24242433921" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.211586578047" font-weight="bold" fill="var(--text)">Adoption Maturity</text>
 
   <!-- Adoption stages -->
-  <rect x="40" y="467.67676754772" width="378.947368" height="152.32323245228" rx="8.884635250309" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="467.67676754772" width="378.947368" height="152.32323245228" rx="8.884635250309" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="229.473684" y="508.686868428773" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.990428023424" font-weight="bold" fill="var(--primary-text)">Start: Advisory</text>
   <text x="229.473684" y="547.353535521298" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548110914178" fill="var(--primary-text)">non-blocking comments</text>
   <text x="229.473684" y="578.989899118947" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548110914178" fill="var(--primary-text)">build trust first</text>
 
-  <rect x="450.526316" y="467.67676754772" width="378.947368" height="152.32323245228" rx="8.884635250309" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450.526316" y="467.67676754772" width="378.947368" height="152.32323245228" rx="8.884635250309" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="508.686868428773" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.990428023424" font-weight="bold" fill="var(--ok-text)">Grow: Gate-based</text>
   <text x="640" y="547.353535521298" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548110914178" fill="var(--ok-text)">required CI check</text>
   <text x="640" y="578.989899118947" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548110914178" fill="var(--ok-text)">blocks merge on failure</text>
 
-  <rect x="861.052632" y="467.67676754772" width="378.947368" height="152.32323245228" rx="8.884635250309" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="861.052632" y="467.67676754772" width="378.947368" height="152.32323245228" rx="8.884635250309" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1050.526316" y="508.686868428773" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.990428023424" font-weight="bold" fill="var(--info-text)">Mature: Ambient</text>
   <text x="1050.526316" y="547.353535521298" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548110914178" fill="var(--info-text)">proactive improvement PRs</text>
   <text x="1050.526316" y="578.989899118947" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548110914178" fill="var(--info-text)">continuous monitoring</text>

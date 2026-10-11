@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="390" height="318.431372549019" rx="8.531372323694" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="390" height="318.431372549019" rx="8.531372323694" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="235" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728311" font-weight="bold" fill="var(--primary-text)">Ranking</text>
   <text x="235" y="125.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--primary-text)">row_number — unique</text>
   <text x="235" y="159.411764705883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--primary-text)">rank — ties, gaps</text>
@@ -105,7 +100,7 @@
   <text x="235" y="227.647058823529" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--primary-text)">percent_rank</text>
   <text x="235" y="261.764705882353" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--primary-text)">ntile(n) — buckets</text>
 
-  <rect x="445" y="40" width="390" height="318.431372549019" rx="8.531372323694" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="40" width="390" height="318.431372549019" rx="8.531372323694" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728311" font-weight="bold" fill="var(--ok-text)">Aggregate</text>
   <text x="640" y="125.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--ok-text)">sum, avg, min, max, count</text>
   <text x="640" y="159.411764705883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--ok-text)">over a frame, kept per row</text>
@@ -113,7 +108,7 @@
   <text x="640" y="239.019607843138" text-anchor="middle" font-family="Courier New, monospace" font-size="12.797058485541" fill="var(--ok-text)">.orderBy("date")</text>
   <text x="640" y="267.450980392157" text-anchor="middle" font-family="Courier New, monospace" font-size="12.797058485541" fill="var(--ok-text)">.rowsBetween(-6, 0)</text>
 
-  <rect x="850" y="40" width="390" height="318.431372549019" rx="8.531372323694" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="40" width="390" height="318.431372549019" rx="8.531372323694" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1045" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728311" font-weight="bold" fill="var(--warn-text)">Analytic / Offset</text>
   <text x="1045" y="125.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--warn-text)">lag — prior row</text>
   <text x="1045" y="159.411764705883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026002" fill="var(--warn-text)">lead — next row</text>

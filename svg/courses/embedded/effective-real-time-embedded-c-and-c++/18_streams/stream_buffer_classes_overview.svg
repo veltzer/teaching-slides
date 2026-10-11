@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="426.440678" y="40" width="406.779661" height="90.000004" rx="6.962537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="426.440678" y="40" width="406.779661" height="90.000004" rx="6.962537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="629.830508" y="92.000016" text-anchor="middle" font-size="26.219404" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">std::streambuf</text>
   <text x="629.830508" y="117.999962" text-anchor="middle" font-size="16.134982" fill="var(--primary-accent)" font-family="Arial, sans-serif">abstract buffer base</text>
   <line x1="517.966102" y1="132.000115" x2="243.389831" y2="231.999926" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
@@ -123,7 +118,7 @@
   <rect x="975.59322" y="403.99999" width="264.40678" height="90.000004" rx="6.962537" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1107.79661" y="444.000088" text-anchor="middle" font-size="18.151913" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">underflow()</text>
   <text x="1107.79661" y="472.000021" text-anchor="middle" font-size="14.118052" fill="var(--text-muted)" font-family="Arial, sans-serif">called when get area empty</text>
-  <rect x="182.372881" y="540.000051" width="894.915254" height="79.999949" rx="6.962537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="182.372881" y="540.000051" width="894.915254" height="79.999949" rx="6.962537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="629.830508" y="572.00008" text-anchor="middle" font-size="18.151913" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Embedded use: override overflow() and underflow() to connect to UART / SPI</text>
   <text x="629.830508" y="598.000027" text-anchor="middle" font-size="15.126575" fill="var(--text-muted)" font-family="Courier New, monospace">int overflow(int c) { UART_send(c); return c; }</text>
   <text x="629.830508" y="618.000138" text-anchor="middle" font-size="15.126575" fill="var(--text-faint)" font-family="Arial, sans-serif">then wrap in ostream for full operator&lt;&lt; support</text>

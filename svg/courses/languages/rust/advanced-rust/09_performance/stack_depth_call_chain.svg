@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,17 +91,17 @@
     </marker>
   </defs>
   <text x="58.75" y="40" font-size="24.4222" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Flame Graph (CPU Time Visualization)</text>
-  <rect x="40" y="536.1445" width="1199.9998" height="83.8555" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="536.1445" width="1199.9998" height="83.8555" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="51.25" y="595.5422" font-size="26.3008" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">main</text>
-  <rect x="40" y="438.3132" width="674.9999" height="83.8555" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="438.3132" width="674.9999" height="83.8555" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="51.25" y="497.7109" font-size="24.4222" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">process_data</text>
-  <rect x="715" y="438.3132" width="525" height="83.8555" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="715" y="438.3132" width="525" height="83.8555" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="726.25" y="497.7109" font-size="24.4222" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">io::read_file</text>
-  <rect x="40" y="340.4819" width="300" height="83.8555" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="340.4819" width="300" height="83.8555" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="51.25" y="399.8796" font-size="24.4222" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">parse</text>
-  <rect x="349.3749" y="340.4819" width="365.6249" height="83.8555" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="349.3749" y="340.4819" width="365.6249" height="83.8555" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="360.625" y="399.8796" font-size="24.4222" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">transform</text>
-  <rect x="40" y="242.6506" width="300" height="83.8555" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="242.6506" width="300" height="83.8555" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="51.25" y="302.0482" font-size="20.665" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">serde_json ← Bottleneck!</text>
   <text x="58.75" y="151.8072" font-size="20.665" fill="var(--danger-accent)" text-anchor="start" font-family="Arial, sans-serif">^ Wide bar = more CPU time.  serde_json at bottom is the bottleneck.</text>
 </svg>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,35 +94,35 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046200557" font-weight="bold" fill="var(--text)">Load Balancing Strategies</text>
 
-  <rect x="40" y="82.181818181818" width="382.758620689655" height="253.090909090909" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="82.181818181818" width="382.758620689655" height="253.090909090909" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="231.379310344828" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--primary-text)">Round Robin</text>
   <text x="60.689655172414" y="170" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--primary-text)">Cycle through servers</text>
   <text x="60.689655172414" y="210" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">req1-&gt;A, req2-&gt;B</text>
   <text x="60.689655172414" y="260" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">Pro: trivial</text>
   <text x="60.689655172414" y="290" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">Con: ignores load</text>
 
-  <rect x="448.620689655172" y="82.181818181818" width="382.758620689655" height="253.090909090909" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="82.181818181818" width="382.758620689655" height="253.090909090909" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--ok-text)">Least Connections</text>
   <text x="469.310344827586" y="170" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--ok-text)">Pick least busy</text>
   <text x="469.310344827586" y="210" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">Track active conns</text>
   <text x="469.310344827586" y="260" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">Pro: long requests</text>
   <text x="469.310344827586" y="290" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">Con: state required</text>
 
-  <rect x="857.241379310345" y="82.181818181818" width="382.758620689655" height="253.090909090909" rx="10.444659357342" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="82.181818181818" width="382.758620689655" height="253.090909090909" rx="10.444659357342" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--warn-text)">IP / Sticky Hash</text>
   <text x="877.931034482759" y="170" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--warn-text)">hash(client) -&gt; server</text>
   <text x="877.931034482759" y="210" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">Cache stays warm</text>
   <text x="877.931034482759" y="260" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">Pro: affinity</text>
   <text x="877.931034482759" y="290" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">Con: reshard pain</text>
 
-  <rect x="40" y="366.909090909091" width="382.758620689655" height="253.090909090909" rx="10.444659357342" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="366.909090909091" width="382.758620689655" height="253.090909090909" rx="10.444659357342" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="231.379310344828" y="403.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--info-text)">Weighted</text>
   <text x="60.689655172414" y="445" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--info-text)">Capacity-aware</text>
   <text x="60.689655172414" y="480" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">Big -&gt; more traffic</text>
   <text x="60.689655172414" y="540" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">Pro: heterogeneous</text>
   <text x="60.689655172414" y="570" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">Con: weights drift</text>
 
-  <rect x="448.620689655172" y="366.909090909091" width="382.758620689655" height="253.090909090909" rx="10.444659357342" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="366.909090909091" width="382.758620689655" height="253.090909090909" rx="10.444659357342" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="403.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--danger-text)">Random</text>
   <text x="469.310344827586" y="445" font-family="Arial, sans-serif" font-size="14.622523100279" font-weight="bold" fill="var(--danger-text)">Pick at random</text>
   <text x="469.310344827586" y="480" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-text)">No state</text>

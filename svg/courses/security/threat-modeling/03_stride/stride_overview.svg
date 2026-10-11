@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,37 +94,37 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.033512735322" font-weight="bold" fill="var(--text)">STRIDE: Six Threat Categories</text>
 
   <!-- 6 boxes in a 3x2 grid -->
-  <rect x="40" y="107.927927927928" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="107.927927927928" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="236.551724137931" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--primary-text)">S — Spoofing</text>
   <text x="236.551724137931" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--primary-text)">pretending to be another</text>
   <text x="236.551724137931" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">violates: authentication</text>
   <text x="236.551724137931" y="245.873873873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--primary-text)">mitigate: MFA, mTLS, signed tokens</text>
 
-  <rect x="443.448275862069" y="107.927927927928" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.448275862069" y="107.927927927928" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--warn-text)">T — Tampering</text>
   <text x="640" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--warn-text)">modifying data</text>
   <text x="640" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">violates: integrity</text>
   <text x="640" y="245.873873873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--warn-text)">mitigate: validation, signatures</text>
 
-  <rect x="846.896551724138" y="107.927927927928" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.896551724138" y="107.927927927928" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1043.448275862069" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--info-text)">R — Repudiation</text>
   <text x="1043.448275862069" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--info-text)">denying an action</text>
   <text x="1043.448275862069" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--info-text)">violates: non-repudiation</text>
   <text x="1043.448275862069" y="245.873873873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--info-text)">mitigate: audit logs, signatures</text>
 
-  <rect x="40" y="316.936936936937" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="316.936936936937" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="236.551724137931" y="353.513513513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--danger-text)">I — Disclosure</text>
   <text x="236.551724137931" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--danger-text)">leaking data</text>
   <text x="236.551724137931" y="421.441441441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">violates: confidentiality</text>
   <text x="236.551724137931" y="454.882882882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--danger-text)">mitigate: encrypt, access control</text>
 
-  <rect x="443.448275862069" y="316.936936936937" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.448275862069" y="316.936936936937" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="353.513513513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--warn-text)">D — Denial of Service</text>
   <text x="640" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--warn-text)">blocking legitimate users</text>
   <text x="640" y="421.441441441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">violates: availability</text>
   <text x="640" y="454.882882882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--warn-text)">mitigate: rate limits, scaling</text>
 
-  <rect x="846.896551724138" y="316.936936936937" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.896551724138" y="316.936936936937" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1043.448275862069" y="353.513513513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--danger-text)">E — Elevation</text>
   <text x="1043.448275862069" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--danger-text)">unauthorized power</text>
   <text x="1043.448275862069" y="421.441441441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">violates: authorization</text>

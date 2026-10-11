@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,24 +91,24 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="220" height="152.631578947368" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="220" height="152.631578947368" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="150" y="90.877192982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--primary-text)">Source</text>
   <text x="150" y="126.491228070175" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--primary-text)">textFile, parallelize</text>
   <text x="150" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">HDFS, S3, Kafka</text>
 
-  <rect x="300" y="40" width="280" height="152.631578947368" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="40" width="280" height="152.631578947368" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="440" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--ok-text)">Narrow Transforms</text>
   <text x="440" y="116.315789473684" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--ok-text)">map, filter, flatMap</text>
   <text x="440" y="141.754385964912" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--ok-text)">mapPartitions</text>
   <text x="440" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">No shuffle</text>
 
-  <rect x="620" y="40" width="280" height="152.631578947368" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620" y="40" width="280" height="152.631578947368" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="760" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--warn-text)">Wide Transforms</text>
   <text x="760" y="116.315789473684" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--warn-text)">reduceByKey, join</text>
   <text x="760" y="141.754385964912" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--warn-text)">sortBy, distinct</text>
   <text x="760" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--warn-text)">Triggers shuffle</text>
 
-  <rect x="940" y="40" width="300" height="152.631578947368" rx="6.052402741669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="152.631578947368" rx="6.052402741669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1090" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--info-text)">Action</text>
   <text x="1090" y="116.315789473684" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">count, collect, take</text>
   <text x="1090" y="141.754385964912" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">saveAsTextFile</text>
@@ -129,14 +124,14 @@
   <text x="640" y="340.175438596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--text-muted)">Narrow ops pipeline; wide ops cut stages</text>
   <text x="640" y="375.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--text-muted)">Scheduler optimises and submits tasks</text>
 
-  <rect x="40" y="416.491228070175" width="590" height="203.508771929825" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="416.491228070175" width="590" height="203.508771929825" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="335" y="457.19298245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--ok-text)">Lineage</text>
   <text x="335" y="497.894736842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">Recomputes lost partitions</text>
   <text x="335" y="528.421052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">Fault tolerant, no replicas</text>
   <text x="335" y="558.947368421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">Checkpoint long chains</text>
   <text x="335" y="594.561403508772" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--ok-text)">toDebugString</text>
 
-  <rect x="650" y="416.491228070175" width="590" height="203.508771929825" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="416.491228070175" width="590" height="203.508771929825" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="945" y="457.19298245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--warn-text)">Caching</text>
   <text x="945" y="497.894736842105" text-anchor="middle" font-family="Courier New, monospace" font-size="14.122273063895" fill="var(--warn-text)">cache() / persist()</text>
   <text x="945" y="528.421052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">Pick storage level</text>

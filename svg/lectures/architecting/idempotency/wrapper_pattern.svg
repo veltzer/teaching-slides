@@ -4,7 +4,7 @@
   </metadata>
 
   <!-- Client -->
-  <rect x="40" y="233.333333333333" width="227.586206896552" height="145" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.708203932499" filter="url(#shadow)"/>
+  <rect x="40" y="233.333333333333" width="227.586206896552" height="145" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.708203932499"/>
   <text x="153.793103448276" y="293.75" text-anchor="middle" font-size="31.304951684997" font-family="Arial, sans-serif" fill="var(--primary-text)">Client</text>
   <text x="153.793103448276" y="336.041666666667" text-anchor="middle" font-size="22.360679774998" font-family="Arial, sans-serif" fill="var(--primary-text)">sends key</text>
 
@@ -13,13 +13,13 @@
   <text x="640" y="88.333333333333" text-anchor="middle" font-size="29.068883707497" font-family="Arial, sans-serif" fill="var(--text)">Idempotent Wrapper</text>
 
   <!-- Wrapper: logic box -->
-  <rect x="412.413793103448" y="136.666666666667" width="455.172413793103" height="145" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.708203932499" filter="url(#shadow)"/>
+  <rect x="412.413793103448" y="136.666666666667" width="455.172413793103" height="145" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.708203932499"/>
   <text x="640" y="187.416666666667" text-anchor="middle" font-size="26.832815729997" font-family="Arial, sans-serif" fill="var(--ok-text)">check key / single-flight</text>
   <text x="640" y="230.916666666667" text-anchor="middle" font-size="24.596747752498" font-family="Arial, sans-serif" fill="var(--ok-text)">replay stored response</text>
   <text x="640" y="264.75" text-anchor="middle" font-size="22.360679774998" font-family="Arial, sans-serif" fill="var(--ok-text)">on repeat</text>
 
   <!-- Wrapper: key store -->
-  <rect x="412.413793103448" y="354.166666666667" width="455.172413793103" height="169.166666666667" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.708203932499" filter="url(#shadow)"/>
+  <rect x="412.413793103448" y="354.166666666667" width="455.172413793103" height="169.166666666667" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.708203932499"/>
   <text x="640" y="408.541666666667" text-anchor="middle" font-size="26.832815729997" font-family="Arial, sans-serif" fill="var(--info-text)">Key Store</text>
   <text x="640" y="450.833333333333" text-anchor="middle" font-size="22.360679774998" font-family="Arial, sans-serif" fill="var(--info-text)">key → response</text>
   <text x="640" y="487.083333333333" text-anchor="middle" font-size="22.360679774998" font-family="Arial, sans-serif" fill="var(--info-text)">(Redis, DB)</text>
@@ -28,7 +28,7 @@
   <path d="M 640 281.666666666667 L 640 354.166666666667" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Legacy service -->
-  <rect x="1012.413793103448" y="233.333333333333" width="227.586206896552" height="145" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.708203932499" filter="url(#shadow)"/>
+  <rect x="1012.413793103448" y="233.333333333333" width="227.586206896552" height="145" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.708203932499"/>
   <text x="1126.206896551724" y="281.666666666667" text-anchor="middle" font-size="24.596747752498" font-family="Arial, sans-serif" fill="var(--danger-text)">Legacy</text>
   <text x="1126.206896551724" y="317.916666666667" text-anchor="middle" font-size="24.596747752498" font-family="Arial, sans-serif" fill="var(--danger-text)">Non-Idempotent</text>
   <text x="1126.206896551724" y="354.166666666667" text-anchor="middle" font-size="24.596747752498" font-family="Arial, sans-serif" fill="var(--danger-text)">Service</text>
@@ -111,11 +111,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
 
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">

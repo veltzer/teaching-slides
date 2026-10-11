@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,17 +91,17 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="349.090909090909" height="235.135135135135" rx="10.461582932077" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="349.090909090909" height="235.135135135135" rx="10.461582932077" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="214.545454545455" y="110.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.769353063211" font-weight="bold" fill="var(--primary-text)">Synchronous</text>
   <text x="214.545454545455" y="168.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.615467997644" fill="var(--primary-text)">caller waits for the result</text>
   <text x="214.545454545455" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.615467997644" fill="var(--primary-text)">e.g. API Gateway</text>
 
-  <rect x="465.454545454545" y="40" width="349.090909090909" height="235.135135135135" rx="10.461582932077" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="465.454545454545" y="40" width="349.090909090909" height="235.135135135135" rx="10.461582932077" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="110.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.769353063211" font-weight="bold" fill="var(--warn-text)">Asynchronous</text>
   <text x="640" y="168.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.615467997644" fill="var(--warn-text)">fire and forget, retried</text>
   <text x="640" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.615467997644" fill="var(--warn-text)">e.g. S3, SNS</text>
 
-  <rect x="890.909090909091" y="40" width="349.090909090909" height="235.135135135135" rx="10.461582932077" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="890.909090909091" y="40" width="349.090909090909" height="235.135135135135" rx="10.461582932077" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1065.454545454545" y="110.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.769353063211" font-weight="bold" fill="var(--info-text)">Stream / Poll</text>
   <text x="1065.454545454545" y="168.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.615467997644" fill="var(--info-text)">Lambda polls in batches</text>
   <text x="1065.454545454545" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.615467997644" fill="var(--info-text)">e.g. SQS, Kinesis</text>

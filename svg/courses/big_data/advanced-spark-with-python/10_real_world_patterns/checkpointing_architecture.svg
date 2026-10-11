@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,22 +91,22 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="23.320665416469" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Exactly-Once Guarantee Flow (Micro-batch N)</text>
-  <rect x="40" y="66.976666306121" width="1200" height="74.185999783673" rx="6.723785457145" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="66.976666306121" width="1200" height="74.185999783673" rx="6.723785457145" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="77.499957812505" y="93.953555868028" font-size="18.947963607506" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Step 1: Read offsets from checkpoint</text>
   <text x="77.499957812505" y="120.93022217415" font-size="17.490471046579" fill="var(--text)" font-family="Arial, sans-serif">Last committed: topic=events, partition=0, offset=1000</text>
   <line x1="640" y1="141.162777717687" x2="640" y2="168.139555651701" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="168.139555651701" width="1200" height="74.185999783673" rx="6.723785457145" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="168.139555651701" width="1200" height="74.185999783673" rx="6.723785457145" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="77.499957812505" y="195.116333585715" font-size="18.947963607506" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Step 2: Fetch data from source</text>
   <text x="77.499957812505" y="222.092999891836" font-size="17.490471046579" fill="var(--text)" font-family="Arial, sans-serif">Read offsets 1001-1500 from Kafka</text>
   <line x1="640" y1="242.325555435374" x2="640" y2="269.302333369388" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="269.302333369388" width="1200" height="74.185999783673" rx="6.723785457145" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="269.302333369388" width="1200" height="74.185999783673" rx="6.723785457145" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="77.499957812505" y="296.279111303402" font-size="18.947963607506" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Step 3: Process and write to sink</text>
   <text x="77.499957812505" y="323.255777609523" font-size="17.490471046579" fill="var(--text)" font-family="Arial, sans-serif">Write 500 records to Delta Lake</text>
   <line x1="640" y1="343.488333153061" x2="640" y2="370.465111087075" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="370.465111087075" width="1200" height="74.185999783673" rx="6.723785457145" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="370.465111087075" width="1200" height="74.185999783673" rx="6.723785457145" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="77.499957812505" y="397.441777393196" font-size="18.947963607506" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Step 4: Commit offsets to checkpoint</text>
   <text x="77.499957812505" y="424.41855532721" font-size="17.490471046579" fill="var(--text)" font-family="Arial, sans-serif">Update: offset=1500 (atomic)</text>
-  <rect x="40" y="471.627888804762" width="1200" height="148.372111195238" rx="6.723785457145" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="471.627888804762" width="1200" height="148.372111195238" rx="6.723785457145" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="77.499957812505" y="505.34877750136" font-size="17.490471046579" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Failure Recovery:</text>
   <text x="77.499957812505" y="532.325555435374" font-size="17.490471046579" fill="var(--text)" font-family="Arial, sans-serif">• If failure at Step 3: restart replays from 1001</text>
   <text x="77.499957812505" y="559.302221741495" font-size="17.490471046579" fill="var(--text)" font-family="Arial, sans-serif">• If failure at Step 4: restart replays from 1001</text>

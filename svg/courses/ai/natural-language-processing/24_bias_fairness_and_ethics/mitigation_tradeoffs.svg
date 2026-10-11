@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,7 +93,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.071383656624" font-weight="bold" fill="var(--text)">Bias mitigation: where you intervene</text>
 
-  <rect x="40" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="230" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--ok-text)">Pre-processing</text>
   <text x="230" y="164.672897196262" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">change the training data</text>
   <text x="230" y="218.878504672897" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">rebalance by group</text>
@@ -109,7 +104,7 @@
   <text x="230" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">- limited effect on bias</text>
   <text x="230" y="511.588785046729" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">- can degrade representation</text>
     
-  <rect x="450" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--primary-text)">In-processing</text>
   <text x="640" y="164.672897196262" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">change the training objective</text>
   <text x="640" y="218.878504672897" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">fairness regularizer</text>
@@ -120,7 +115,7 @@
   <text x="640" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">- harder to tune</text>
   <text x="640" y="511.588785046729" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">- accuracy/fairness trade-off</text>
     
-  <rect x="860" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1050" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--warn-text)">Post-processing</text>
   <text x="1050" y="164.672897196262" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">adjust model output</text>
   <text x="1050" y="218.878504672897" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">per-group thresholds</text>

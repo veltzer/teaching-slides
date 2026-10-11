@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -99,28 +94,28 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.407787770353" font-weight="bold" fill="var(--text)">Chaining Vulnerabilities</text>
   <text x="640" y="67.358490566038" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--text-muted)">Low-severity flaws combine into critical attacks</text>
 
-  <rect x="40" y="83.77358490566" width="1200" height="120.377358490566" rx="6.383942119187" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="83.77358490566" width="1200" height="120.377358490566" rx="6.383942119187" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="71.034482758621" y="116.603773584906" font-family="Arial, sans-serif" font-size="17.023845651166" font-weight="bold" fill="var(--danger-text)">Chain 1: Disclosure to Takeover</text>
   <text x="71.034482758621" y="149.433962264151" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--danger-text)">dir listing finds backup.sql</text>
   <text x="640" y="149.433962264151" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--danger-text)">hashes extracted</text>
   <text x="71.034482758621" y="182.264150943396" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--danger-text)">crack to admin password</text>
   <text x="640" y="182.264150943396" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--danger-text)">login as admin</text>
 
-  <rect x="40" y="215.094339622641" width="1200" height="120.377358490566" rx="6.383942119187" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="215.094339622641" width="1200" height="120.377358490566" rx="6.383942119187" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="71.034482758621" y="247.924528301887" font-family="Arial, sans-serif" font-size="17.023845651166" font-weight="bold" fill="var(--warn-text)">Chain 2: XSS to Hijack to RCE</text>
   <text x="71.034482758621" y="280.754716981132" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--warn-text)">stored XSS in profile</text>
   <text x="640" y="280.754716981132" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--warn-text)">steal admin cookie</text>
   <text x="71.034482758621" y="313.584905660377" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--warn-text)">reach admin panel</text>
   <text x="640" y="313.584905660377" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--warn-text)">upload plugin = RCE</text>
 
-  <rect x="40" y="346.415094339623" width="1200" height="120.377358490566" rx="6.383942119187" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="346.415094339623" width="1200" height="120.377358490566" rx="6.383942119187" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="71.034482758621" y="379.245283018868" font-family="Arial, sans-serif" font-size="17.023845651166" font-weight="bold" fill="var(--danger-text)">Chain 3: SSRF to Cloud</text>
   <text x="71.034482758621" y="412.075471698113" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--danger-text)">SSRF in image fetcher</text>
   <text x="640" y="412.075471698113" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--danger-text)">hit AWS metadata</text>
   <text x="71.034482758621" y="444.905660377359" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--danger-text)">steal IAM credentials</text>
   <text x="640" y="444.905660377359" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--danger-text)">access S3, EC2</text>
 
-  <rect x="40" y="477.735849056604" width="1200" height="142.264150943396" rx="6.383942119187" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="477.735849056604" width="1200" height="142.264150943396" rx="6.383942119187" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="71.034482758621" y="510.566037735849" font-family="Arial, sans-serif" font-size="17.023845651166" font-weight="bold" fill="var(--warn-text)">Chain 4: SQLi to Shell</text>
   <text x="71.034482758621" y="543.396226415094" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--warn-text)">SQLi LOAD_FILE</text>
   <text x="640" y="543.396226415094" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--warn-text)">find web root</text>

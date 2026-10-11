@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,22 +92,22 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.628328299751" font-weight="bold" fill="var(--text)">Dual Writes With Reconciliation</text>
 
-  <rect x="40" y="102.702702702703" width="214.285714285714" height="83.603603603604" rx="10.58154582134" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="102.702702702703" width="214.285714285714" height="83.603603603604" rx="10.58154582134" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="147.142857142857" y="139.279279279279" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930473314144" font-weight="bold" fill="var(--primary-text)">Application</text>
   <text x="147.142857142857" y="165.405405405405" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--primary-text)">writes both</text>
 
-  <rect x="490" y="60.900900900901" width="257.142857142857" height="83.603603603604" rx="10.58154582134" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="60.900900900901" width="257.142857142857" height="83.603603603604" rx="10.58154582134" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="618.571428571429" y="97.477477477477" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930473314144" font-weight="bold" fill="var(--info-text)">Old database</text>
   <text x="618.571428571429" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--info-text)">authoritative reads</text>
 
-  <rect x="490" y="186.306306306306" width="257.142857142857" height="83.603603603604" rx="10.58154582134" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="186.306306306306" width="257.142857142857" height="83.603603603604" rx="10.58154582134" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="618.571428571429" y="222.882882882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930473314144" font-weight="bold" fill="var(--warn-text)">New database</text>
   <text x="618.571428571429" y="249.009009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--warn-text)">shadow target</text>
 
   <path d="M 254.285714285714 134.054054054054 L 490 102.702702702703" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <path d="M 254.285714285714 154.954954954955 L 490 228.108108108108" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="918.571428571429" y="123.603603603604" width="300" height="104.504504504504" rx="10.58154582134" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="918.571428571429" y="123.603603603604" width="300" height="104.504504504504" rx="10.58154582134" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1068.571428571428" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930473314144" font-weight="bold" fill="var(--ok-text)">Reconciliation job</text>
   <text x="1068.571428571428" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-text)">scheduled diff</text>
   <text x="1068.571428571428" y="205.117117117117" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-text)">count, hash, sample</text>
@@ -122,22 +117,22 @@
 
   <text x="640" y="322.162162162162" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.163091642679" font-weight="bold" fill="var(--text)">Phases</text>
 
-  <rect x="40" y="353.513513513513" width="300" height="83.603603603604" rx="8.465236657072" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="353.513513513513" width="300" height="83.603603603604" rx="8.465236657072" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="190" y="384.864864864865" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--info-text)">Phase 1</text>
   <text x="190" y="407.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--info-text)">dual-write, read old</text>
   <text x="190" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--info-text)">verify equality</text>
 
-  <rect x="361.428571428571" y="353.513513513513" width="300" height="83.603603603604" rx="8.465236657072" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="361.428571428571" y="353.513513513513" width="300" height="83.603603603604" rx="8.465236657072" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="511.428571428571" y="384.864864864865" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--warn-text)">Phase 2</text>
   <text x="511.428571428571" y="407.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--warn-text)">backfill historical</text>
   <text x="511.428571428571" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--warn-text)">resolve diffs</text>
 
-  <rect x="682.857142857143" y="353.513513513513" width="300" height="83.603603603604" rx="8.465236657072" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="682.857142857143" y="353.513513513513" width="300" height="83.603603603604" rx="8.465236657072" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="832.857142857143" y="384.864864864865" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--primary-text)">Phase 3</text>
   <text x="832.857142857143" y="407.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--primary-text)">flip reads to new</text>
   <text x="832.857142857143" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--primary-text)">old still written</text>
 
-  <rect x="1004.285714285714" y="353.513513513513" width="235.714285714286" height="83.603603603604" rx="8.465236657072" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1004.285714285714" y="353.513513513513" width="235.714285714286" height="83.603603603604" rx="8.465236657072" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1122.142857142857" y="384.864864864865" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--ok-text)">Phase 4</text>
   <text x="1122.142857142857" y="407.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-text)">stop old writes</text>
   <text x="1122.142857142857" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--ok-text)">decommission</text>

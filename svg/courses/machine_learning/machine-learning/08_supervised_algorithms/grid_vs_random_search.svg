@@ -14,7 +14,6 @@
       }
     </style>
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
   </defs>
   <rect x="40" y="40" width="380" height="380" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="230" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Grid Search</text>
@@ -42,7 +41,7 @@
   <ellipse cx="360" cy="320" rx="8" ry="8" fill="var(--primary-fill)"/>
   <text x="80" y="400" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">param 1</text>
   <text x="60" y="240" font-family="Arial, sans-serif" font-size="14" fill="var(--text)" transform="rotate(-90 60 240)">param 2</text>
-  <rect x="40" y="440" width="380" height="180" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="440" width="380" height="180" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="60" y="475" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Grid: exhaustive</text>
   <text x="60" y="510" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">All combinations tried</text>
   <text x="60" y="545" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Cost grows exponentially</text>
@@ -64,13 +63,13 @@
   <ellipse cx="610" cy="170" rx="8" ry="8" fill="var(--ok-fill)"/>
   <text x="490" y="400" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">param 1</text>
   <text x="470" y="240" font-family="Arial, sans-serif" font-size="14" fill="var(--text)" transform="rotate(-90 470 240)">param 2</text>
-  <rect x="450" y="440" width="380" height="180" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="440" width="380" height="180" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="470" y="475" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Random: budget-bounded</text>
   <text x="470" y="510" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Explores more along each axis</text>
   <text x="470" y="545" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Better for many params</text>
   <text x="470" y="580" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Often beats grid for same budget</text>
   <text x="470" y="615" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">sklearn: RandomizedSearchCV</text>
-  <rect x="860" y="40" width="380" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="40" width="380" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1050" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Bayesian Search</text>
   <text x="880" y="140" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Build surrogate model</text>
   <text x="880" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Use it to pick next config</text>

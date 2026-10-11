@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,21 +90,21 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="352.2935" height="269.285694132655" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.374054245598" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="352.2935" height="269.285694132655" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.374054245598"/>
   <text x="216.1468" y="122.85722346938" text-anchor="middle" font-size="25.574936552326" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Traditional</text>
   <text x="216.1468" y="189.142844244899" text-anchor="middle" font-size="23.249787797769" font-family="Arial, sans-serif" fill="var(--primary-text)">owner/group/other</text>
   <text x="216.1468" y="255.42857787755" text-anchor="middle" font-size="23.249787797769" font-family="Arial, sans-serif" fill="var(--primary-text)">rwx bits only</text>
   <line x1="392.2935" y1="172.571467265302" x2="458.3486" y2="172.571467265302" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="458.3486" y="40" width="352.2935" height="269.285694132655" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.374054245598" filter="url(#shadow)"/>
+  <rect x="458.3486" y="40" width="352.2935" height="269.285694132655" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.374054245598"/>
   <text x="634.4954" y="122.85722346938" text-anchor="middle" font-size="25.574936552326" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">POSIX ACLs</text>
   <text x="634.4954" y="189.142844244899" text-anchor="middle" font-size="23.249787797769" font-family="Arial, sans-serif" fill="var(--info-text)">setfacl / getfacl</text>
   <text x="634.4954" y="255.42857787755" text-anchor="middle" font-size="23.249787797769" font-family="Arial, sans-serif" fill="var(--info-text)">per-user/group rules</text>
   <line x1="810.6422" y1="172.571467265302" x2="876.6972" y2="172.571467265302" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="876.6972" y="40" width="363.3027" height="269.285694132655" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.374054245598" filter="url(#shadow)"/>
+  <rect x="876.6972" y="40" width="363.3027" height="269.285694132655" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.374054245598"/>
   <text x="1057.2477" y="122.85722346938" text-anchor="middle" font-size="25.574936552326" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">SELinux/AppArmor</text>
   <text x="1057.2477" y="189.142844244899" text-anchor="middle" font-size="23.249787797769" font-family="Arial, sans-serif" fill="var(--ok-text)">Mandatory Access</text>
   <text x="1057.2477" y="255.42857787755" text-anchor="middle" font-size="23.249787797769" font-family="Arial, sans-serif" fill="var(--ok-text)">Control (MAC)</text>
-  <rect x="40" y="392.142804744903" width="1200" height="227.857195255097" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.374054245598" opacity="0.7" filter="url(#shadow)"/>
+  <rect x="40" y="392.142804744903" width="1200" height="227.857195255097" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.374054245598" opacity="0.7"/>
   <text x="634.4954" y="475.000028214283" text-anchor="middle" font-size="23.249787797769" font-family="Courier New, monospace" fill="var(--warn-text)">setfacl -m u:john:rx file.txt    # grant john read+execute</text>
   <text x="634.4954" y="545.428634306116" text-anchor="middle" font-size="23.249787797769" font-family="Courier New, monospace" fill="var(--warn-text)">getfacl file.txt                 # view all ACL entries</text>
 </svg>

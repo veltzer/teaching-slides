@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,17 +93,17 @@
 
   <rect x="40" y="40" width="520" height="44" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="300" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="var(--text)">.kiro/specs/&lt;feature&gt;/</text>
-  <rect x="40" y="100" width="520" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="100" width="520" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="300.0" y="145.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">requirements.md</text>
   <text x="300.0" y="172.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">user stories with</text>
   <text x="300.0" y="193.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">EARS acceptance criteria</text>
   <line x1="300" y1="220" x2="300" y2="240" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="240" width="520" height="120" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="240" width="520" height="120" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="300.0" y="285.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">design.md</text>
   <text x="300.0" y="312.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">architecture, interfaces,</text>
   <text x="300.0" y="333.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">data model, sequence</text>
   <line x1="300" y1="360" x2="300" y2="380" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="380" width="520" height="120" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="380" width="520" height="120" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="300.0" y="425.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">tasks.md</text>
   <text x="300.0" y="452.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">checkbox list, each</text>
   <text x="300.0" y="473.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">task links a requirement</text>
@@ -117,19 +112,19 @@
   <text x="300" y="597" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--text)">.kiro/steering/: the constitution, always in context</text>
   <rect x="660" y="40" width="580" height="44" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="950" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Hooks: keep artifacts in sync</text>
-  <rect x="660" y="100" width="580" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="100" width="580" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="950.0" y="139.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">on file save</text>
   <text x="950.0" y="165.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">run the tests for the</text>
   <text x="950.0" y="186.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">changed module</text>
-  <rect x="660" y="230" width="580" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="230" width="580" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="950.0" y="269.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">on task complete</text>
   <text x="950.0" y="295.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">tick tasks.md, refresh</text>
   <text x="950.0" y="316.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">design.md sections</text>
-  <rect x="660" y="360" width="580" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="360" width="580" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="950.0" y="399.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">on spec edit</text>
   <text x="950.0" y="425.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">flag tasks whose</text>
   <text x="950.0" y="446.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">requirement changed</text>
-  <rect x="660" y="490" width="580" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="490" width="580" height="110" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="950.0" y="529.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">manual trigger</text>
   <text x="950.0" y="555.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">security review of</text>
   <text x="950.0" y="576.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">the current diff</text>

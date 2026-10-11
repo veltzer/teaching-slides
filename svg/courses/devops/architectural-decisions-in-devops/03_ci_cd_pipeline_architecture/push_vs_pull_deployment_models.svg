@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -99,14 +94,14 @@
   <rect x="40" y="40" width="585" height="580" rx="6" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="332" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-accent)">Push (classic)</text>
 
-  <rect x="70" y="110" width="220" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="110" width="220" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">CI Server</text>
   <text x="180" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Jenkins/Actions</text>
   <text x="180" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">holds creds</text>
   <text x="180" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">kubectl apply</text>
   <text x="180" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">terraform apply</text>
 
-  <rect x="375" y="110" width="220" height="150" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="375" y="110" width="220" height="150" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="485" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Production</text>
   <text x="485" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">cluster</text>
   <text x="485" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">passive receive</text>
@@ -130,14 +125,14 @@
   <rect x="655" y="40" width="585" height="580" rx="6" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="947" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-accent)">Pull (GitOps)</text>
 
-  <rect x="685" y="110" width="220" height="150" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="685" y="110" width="220" height="150" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Git Repo</text>
   <text x="795" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">desired state</text>
   <text x="795" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">PR-reviewed</text>
   <text x="795" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">signed commits</text>
   <text x="795" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">source of truth</text>
 
-  <rect x="990" y="110" width="220" height="150" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="990" y="110" width="220" height="150" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1100" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Production</text>
   <text x="1100" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Argo/Flux</text>
   <text x="1100" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">polls repo</text>

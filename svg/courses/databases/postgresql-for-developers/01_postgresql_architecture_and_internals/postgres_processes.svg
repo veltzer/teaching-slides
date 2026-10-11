@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,21 +91,21 @@
     </marker>
   </defs>
   <text x="641.001669449082" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.023362540568" font-weight="bold" fill="var(--text)">Postgres Process Model</text>
-  <rect x="40" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="231.318864774624" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--info-text)">Postmaster</text>
   <text x="60.033388981636" y="155" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">The supervisor</text>
   <text x="60.033388981636" y="185" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">Forks per connection</text>
   <text x="60.033388981636" y="215" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--info-text)">Spawns helpers</text>
   <text x="60.033388981636" y="260" font-family="Arial, sans-serif" font-size="13.010846893835" font-style="italic" fill="var(--info-text)">One per cluster</text>
 
-  <rect x="448.681135225376" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.681135225376" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="641.001669449082" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--primary-text)">Backend per connection</text>
   <text x="468.714524207012" y="155" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--primary-text)">One process per client</text>
   <text x="468.714524207012" y="185" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--primary-text)">Parses, plans, executes</text>
   <text x="468.714524207012" y="215" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--primary-text)">Returns rows</text>
   <text x="468.714524207012" y="260" font-family="Arial, sans-serif" font-size="13.010846893835" font-style="italic" fill="var(--primary-text)">Use a pooler (PgBouncer)</text>
 
-  <rect x="857.362270450751" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.362270450751" y="80" width="382.637729549249" height="540" rx="10.008343764489" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1048.681135225376" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.016687528977" font-weight="bold" fill="var(--warn-text)">Background workers</text>
   <text x="877.395659432387" y="155" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--warn-text)">WAL writer — durability</text>
   <text x="877.395659432387" y="185" font-family="Arial, sans-serif" font-size="14.011681270284" fill="var(--warn-text)">Bgwriter — flushes pages</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,21 +93,21 @@
 
 
   <!-- Row 1 -->
-  <rect x="40" y="40" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="235" y="81.010101010101" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.649177090293" font-weight="bold" fill="var(--primary-text)">Cryptography</text>
   <text x="60" y="122.020202020202" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--primary-text)">AES-NI, SHA-NI</text>
   <text x="60" y="157.171717171717" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--primary-text)">Constant-time code</text>
   <text x="60" y="192.323232323233" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--primary-text)">OpenSSL, libsodium</text>
   <text x="60" y="233.333333333334" font-family="Courier New, monospace" font-size="15.154423963205" fill="var(--primary-text)">aesenc %xmm1, %xmm0</text>
 
-  <rect x="445" y="40" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="40" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="81.010101010101" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.649177090293" font-weight="bold" fill="var(--ok-text)">Media Codecs</text>
   <text x="465" y="122.020202020202" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--ok-text)">H.264, AV1 encode</text>
   <text x="465" y="157.171717171717" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--ok-text)">SIMD DSP</text>
   <text x="465" y="192.323232323233" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--ok-text)">FFmpeg, x264, dav1d</text>
   <text x="465" y="233.333333333334" font-family="Courier New, monospace" font-size="15.154423963205" fill="var(--ok-text)">pmaddwd %xmm2, %xmm1</text>
 
-  <rect x="850" y="40" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="40" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1045" y="81.010101010101" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.649177090293" font-weight="bold" fill="var(--warn-text)">Kernel</text>
   <text x="870" y="122.020202020202" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--warn-text)">Boot + loaders</text>
   <text x="870" y="157.171717171717" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--warn-text)">Context switch</text>
@@ -120,21 +115,21 @@
   <text x="870" y="233.333333333334" font-family="Courier New, monospace" font-size="15.154423963205" fill="var(--warn-text)">swapgs; sysretq</text>
 
   <!-- Row 2 -->
-  <rect x="40" y="315.353535353535" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="315.353535353535" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="235" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.649177090293" font-weight="bold" fill="var(--info-text)">Embedded</text>
   <text x="60" y="397.373737373737" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--info-text)">MCU startup</text>
   <text x="60" y="432.525252525252" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--info-text)">RT interrupt handlers</text>
   <text x="60" y="467.676767676768" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--info-text)">Cortex-M, AVR, RISC-V</text>
   <text x="60" y="508.686868686869" font-family="Courier New, monospace" font-size="15.154423963205" fill="var(--info-text)">cpsid i</text>
 
-  <rect x="445" y="315.353535353535" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="315.353535353535" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.649177090293" font-weight="bold" fill="var(--danger-text)">Hot Paths</text>
   <text x="465" y="397.373737373737" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--danger-text)">memcpy / memset</text>
   <text x="465" y="432.525252525252" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--danger-text)">String ops</text>
   <text x="465" y="467.676767676768" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--danger-text)">Game math, DB sort</text>
   <text x="465" y="508.686868686869" font-family="Courier New, monospace" font-size="15.154423963205" fill="var(--danger-text)">rep movsq</text>
 
-  <rect x="850" y="315.353535353535" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="315.353535353535" width="390" height="251.919191919192" rx="10.824588545147" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1045" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.649177090293" font-weight="bold" fill="var(--warn-text)">Security / RE</text>
   <text x="870" y="397.373737373737" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--warn-text)">Shellcode / exploits</text>
   <text x="870" y="432.525252525252" font-family="Arial, sans-serif" font-size="16.236882817719" fill="var(--warn-text)">Malware analysis</text>

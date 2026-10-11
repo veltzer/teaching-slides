@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,7 +93,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.821872493111" font-weight="bold" fill="var(--text)">Decoding strategies: from determinism to diversity</text>
 
-  <rect x="40" y="77.247706422018" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="77.247706422018" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="185" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--ok-text)">Greedy</text>
   <text x="185" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--ok-text)">argmax at each step</text>
   <text x="185" y="204.954128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--ok-text)">deterministic</text>
@@ -106,7 +101,7 @@
   <text x="185" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--ok-text)">structured tasks</text>
   <text x="185" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--ok-text)">tool calls, code</text>
 
-  <rect x="350" y="77.247706422018" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350" y="77.247706422018" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="495" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--primary-text)">Beam search</text>
   <text x="495" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--primary-text)">k-best partial seqs</text>
   <text x="495" y="204.954128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">beam = 4..10</text>
@@ -114,7 +109,7 @@
   <text x="495" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--primary-text)">MT, summarization</text>
   <text x="495" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--primary-text)">when bland is fine</text>
 
-  <rect x="660" y="77.247706422018" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="77.247706422018" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="805" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--warn-text)">Temperature</text>
   <text x="805" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--warn-text)">scale logits by T</text>
   <text x="805" y="204.954128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--warn-text)">T=0 → greedy</text>
@@ -122,7 +117,7 @@
   <text x="805" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--warn-text)">single most useful</text>
   <text x="805" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--warn-text)">knob in production</text>
 
-  <rect x="970" y="77.247706422018" width="270" height="255.412844036697" rx="14.44254672706" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="970" y="77.247706422018" width="270" height="255.412844036697" rx="14.44254672706" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1105" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--info-text)">Top-K</text>
   <text x="1105" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--info-text)">sample from top K</text>
   <text x="1105" y="204.954128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--info-text)">K=20..50 typical</text>
@@ -130,21 +125,21 @@
   <text x="1105" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--info-text)">simple, predictable</text>
   <text x="1105" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--info-text)">but rigid</text>
 
-  <rect x="40" y="364.587155963303" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="364.587155963303" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="407.155963302752" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--info-text)">Top-P (nucleus)</text>
   <text x="185" y="449.724770642202" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--info-text)">smallest set with</text>
   <text x="185" y="476.330275229358" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--info-text)">cumulative prob ≥ p</text>
       
-  <rect x="350" y="364.587155963303" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350" y="364.587155963303" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="495" y="407.155963302752" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--danger-text)">Repetition penalty</text>
   <text x="495" y="449.724770642202" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--danger-text)">discount recent tokens</text>
         
-  <rect x="660" y="364.587155963303" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="364.587155963303" width="290" height="255.412844036697" rx="14.44254672706" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="805" y="407.155963302752" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--warn-text)">Constrained</text>
   <text x="805" y="449.724770642202" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--warn-text)">grammar / schema</text>
   <text x="805" y="497.614678899083" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--warn-text)">zero out illegal tokens</text>
       
-  <rect x="970" y="364.587155963303" width="270" height="255.412844036697" rx="14.44254672706" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="970" y="364.587155963303" width="270" height="255.412844036697" rx="14.44254672706" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1105" y="407.155963302752" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--primary-text)">Speculative</text>
   <text x="1105" y="449.724770642202" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--primary-text)">draft + verify</text>
   <text x="1105" y="497.614678899083" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">draft model + verifier</text>

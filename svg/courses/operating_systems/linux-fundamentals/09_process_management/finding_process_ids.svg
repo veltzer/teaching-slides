@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,20 +90,20 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="468.5714" y="40" width="342.8571" height="130.967692986477" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.246547127753" filter="url(#shadow)"/>
+  <rect x="468.5714" y="40" width="342.8571" height="130.967692986477" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.246547127753"/>
   <text x="639.9999" y="126.064548994794" text-anchor="middle" font-size="23.978099913712" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Find PID of "nginx"</text>
   <line x1="532.857" y1="170.967801373563" x2="211.4285" y2="264.516153506761" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="639.9999" y1="170.967801373563" x2="639.9999" y2="264.516153506761" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="747.1428" y1="170.967801373563" x2="1068.5714" y2="264.516153506761" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="264.516153506761" width="342.8571" height="168.387033839756" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.246547127753" filter="url(#shadow)"/>
+  <rect x="40" y="264.516153506761" width="342.8571" height="168.387033839756" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.246547127753"/>
   <text x="211.4285" y="331.871032074916" text-anchor="middle" font-size="21.798263184364" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">ps aux | grep</text>
   <text x="211.4285" y="395.483846493239" text-anchor="middle" font-size="21.798263184364" font-family="Arial, sans-serif" fill="var(--primary-text)">classic, verbose output</text>
-  <rect x="468.5714" y="264.516153506761" width="342.8571" height="168.387033839756" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.246547127753" filter="url(#shadow)"/>
+  <rect x="468.5714" y="264.516153506761" width="342.8571" height="168.387033839756" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.246547127753"/>
   <text x="639.9999" y="331.871032074916" text-anchor="middle" font-size="21.798263184364" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">pgrep nginx</text>
   <text x="639.9999" y="395.483846493239" text-anchor="middle" font-size="21.798263184364" font-family="Arial, sans-serif" fill="var(--info-text)">returns PIDs only</text>
-  <rect x="897.1429" y="264.516153506761" width="342.8571" height="168.387033839756" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.246547127753" filter="url(#shadow)"/>
+  <rect x="897.1429" y="264.516153506761" width="342.8571" height="168.387033839756" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.246547127753"/>
   <text x="1068.5714" y="331.871032074916" text-anchor="middle" font-size="21.798263184364" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">pidof nginx</text>
   <text x="1068.5714" y="395.483846493239" text-anchor="middle" font-size="21.798263184364" font-family="Arial, sans-serif" fill="var(--ok-text)">exact name match</text>
-  <rect x="211.4285" y="507.741977440162" width="857.1429" height="112.258022559838" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.246547127753" opacity="0.6" filter="url(#shadow)"/>
+  <rect x="211.4285" y="507.741977440162" width="857.1429" height="112.258022559838" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.246547127753" opacity="0.6"/>
   <text x="639.9999" y="582.580659146721" text-anchor="middle" font-size="21.798263184364" font-family="Arial, sans-serif" fill="var(--danger-text)">Once you have the PID, use it with kill, top -p, strace, etc.</text>
 </svg>

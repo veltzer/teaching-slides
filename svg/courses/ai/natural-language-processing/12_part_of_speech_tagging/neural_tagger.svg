@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -104,23 +99,23 @@
   <text x="900" y="106.140350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--text-muted)">running</text>
   <text x="1140" y="106.140350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--text-muted)">.</text>
 
-  <rect x="40" y="151.929824561404" width="585" height="81.40350877193" rx="10.087337902782" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="151.929824561404" width="585" height="81.40350877193" rx="10.087337902782" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="332" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--primary-text)">word embeddings</text>
   <text x="332" y="212.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">lookup or pretrained vectors</text>
 
-  <rect x="655" y="151.929824561404" width="585" height="81.40350877193" rx="10.087337902782" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="655" y="151.929824561404" width="585" height="81.40350877193" rx="10.087337902782" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="947" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--info-text)">character encoder</text>
   <text x="947" y="212.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--info-text)">captures suffixes and prefixes</text>
 
-  <rect x="40" y="263.859649122807" width="1200" height="91.578947368421" rx="10.087337902782" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="263.859649122807" width="1200" height="91.578947368421" rx="10.087337902782" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="299.473684210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--warn-text)">contextual encoder</text>
   <text x="640" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">BiLSTM or transformer reads the whole sentence in both directions</text>
 
-  <rect x="40" y="385.964912280702" width="1200" height="81.40350877193" rx="10.087337902782" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="385.964912280702" width="1200" height="81.40350877193" rx="10.087337902782" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="421.578947368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--ok-text)">tag projection</text>
   <text x="640" y="447.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">linear layer mapping each hidden state to tag-space logits</text>
 
-  <rect x="40" y="497.894736842105" width="1200" height="81.40350877193" rx="10.087337902782" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="497.894736842105" width="1200" height="81.40350877193" rx="10.087337902782" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="533.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--danger-text)">CRF or greedy decoder</text>
   <text x="640" y="558.947368421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--danger-text)">enforces legal tag transitions and emits the final sequence</text>
 

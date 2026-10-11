@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -100,9 +95,9 @@
   <rect x="40" y="40" width="440" height="440" rx="8" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="260" y="82" text-anchor="middle" font-size="19" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">events.parquet: 80 columns</text>
 
-  <rect x="70" y="110" width="70" height="300" rx="4" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="110" width="70" height="300" rx="4" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="105" y="140" text-anchor="middle" font-size="14" fill="var(--ok-text)" font-family="Arial, sans-serif">city</text>
-  <rect x="152" y="110" width="70" height="300" rx="4" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="152" y="110" width="70" height="300" rx="4" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="187" y="140" text-anchor="middle" font-size="14" fill="var(--ok-text)" font-family="Arial, sans-serif">amount</text>
   <rect x="234" y="110" width="70" height="300" rx="4" fill="var(--bg)" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 4"/>
   <text x="269" y="140" text-anchor="middle" font-size="14" fill="var(--text-faint)" font-family="Arial, sans-serif">ts</text>
@@ -116,17 +111,17 @@
 
   <!-- Scan -->
   <line x1="480" y1="280" x2="596" y2="280" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
-  <rect x="600" y="210" width="300" height="140" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="600" y="210" width="300" height="140" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="750" y="272" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">scan_parquet</text>
   <text x="750" y="308" text-anchor="middle" font-size="15" fill="var(--primary-text)" font-family="Arial, sans-serif">filter and projection pushed here</text>
 
   <!-- Result -->
   <line x1="900" y1="280" x2="1016" y2="280" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
-  <rect x="1020" y="225" width="220" height="110" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1020" y="225" width="220" height="110" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1130" y="275" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">small frame</text>
   <text x="1130" y="308" text-anchor="middle" font-size="15" fill="var(--ok-text)" font-family="Arial, sans-serif">matching rows only</text>
 
-  <rect x="40" y="530" width="1200" height="90" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="530" width="1200" height="90" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="570" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">The fastest work is the work that never happens</text>
   <text x="640" y="602" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">columns and row blocks are skipped inside the file scan itself</text>
 </svg>

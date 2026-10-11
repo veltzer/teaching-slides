@@ -60,9 +60,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -86,17 +83,17 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">MCP Architecture</text>
-  <rect x="40" y="120" width="320" height="200" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="120" width="320" height="200" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="200" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Claude Code</text>
   <text x="200" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">The MCP client</text>
   <text x="200" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Talks to many servers</text>
   <text x="200" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Routes tool calls</text>
-  <rect x="480" y="120" width="320" height="200" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="480" y="120" width="320" height="200" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">MCP server (local)</text>
   <text x="640" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Spawned as a subprocess</text>
   <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">stdio JSON-RPC</text>
   <text x="640" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Filesystem, git, etc</text>
-  <rect x="920" y="120" width="320" height="200" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920" y="120" width="320" height="200" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1080" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">MCP server (remote)</text>
   <text x="1080" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Over HTTPS/SSE</text>
   <text x="1080" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Auth via tokens</text>

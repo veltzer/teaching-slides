@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <text x="234.871795" y="40" font-family="Arial, sans-serif" font-size="18.340355" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Step 1: Two References</text>
-  <rect x="152.820513" y="58.219894" width="174.358974" height="121.465957" rx="6.63248" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="152.820513" y="58.219894" width="174.358974" height="121.465957" rx="6.63248" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="240" y="88.586383" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--bg)" text-anchor="middle" font-weight="bold">PyObject</text>
   <line x1="152.820513" y1="98.708546" x2="327.179487" y2="98.708546" stroke="var(--primary-border)" stroke-width="0.8889"/>
   <text x="240" y="120.977305" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--primary-accent)" text-anchor="middle">type: list</text>
@@ -110,7 +105,7 @@
   <line x1="122.051282" y1="204.991202" x2="152.820513" y2="164.502662" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)"/>
   <text x="240" y="209" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--text-muted)" text-anchor="middle">y = x</text>
   <text x="665.641026" y="40" font-family="Arial, sans-serif" font-size="18.340355" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Step 2: One Reference</text>
-  <rect x="578.461538" y="58.219894" width="174.358974" height="121.465957" rx="6.63248" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="578.461538" y="58.219894" width="174.358974" height="121.465957" rx="6.63248" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="665.641026" y="88.586383" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--bg)" text-anchor="middle" font-weight="bold">PyObject</text>
   <line x1="578.461538" y1="98.708546" x2="752.820403" y2="98.708546" stroke="var(--primary-border)" stroke-width="0.8889"/>
   <text x="665.641026" y="120.977305" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--primary-accent)" text-anchor="middle">type: list</text>
@@ -123,7 +118,7 @@
   <text x="506.666667" y="210.05234" font-size="14.264586" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">y=None</text>
   <text x="665.641026" y="209" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--text-muted)" text-anchor="middle">del y</text>
   <text x="1096.410256" y="40" font-family="Arial, sans-serif" font-size="18.340355" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Step 3: Freed!</text>
-  <rect x="1009.230769" y="58.219894" width="174.358974" height="121.465957" rx="6.63248" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1009.230769" y="58.219894" width="174.358974" height="121.465957" rx="6.63248" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1096.410256" y="88.586383" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--bg)" text-anchor="middle" font-weight="bold">PyObject</text>
   <line x1="1009.230769" y1="98.708546" x2="1183.589744" y2="98.708546" stroke="var(--warn-border)" stroke-width="0.8889"/>
   <text x="1096.410256" y="120.977305" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--danger-accent)" text-anchor="middle">type: list</text>
@@ -143,7 +138,7 @@
   <text x="357.948718" y="420.59322" font-size="14.264586" fill="var(--bg)" font-family="Courier New, monospace">y = x</text>
   <text x="357.948718" y="442.86209" font-size="14.264586" fill="var(--ok-accent)" font-family="Courier New, monospace">sys.getrefcount(x) - 1</text>
   <text x="357.948718" y="465.130849" font-size="14.264586" fill="var(--ok-accent)" font-family="Courier New, monospace"># -1 removes self-ref</text>
-  <rect x="665.641026" y="326.457271" width="553.846154" height="161.954609" rx="6.63248" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="665.641026" y="326.457271" width="553.846154" height="161.954609" rx="6.63248" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="942.564103" y="356.823648" font-family="Arial, sans-serif" font-size="16.302526" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Key Properties</text>
   <text x="696.410256" y="384.153433" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--text)">•  In PyObject (ob_refcnt)</text>
   <text x="696.410256" y="407.434575" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--text)">•  Incr: assign, args</text>

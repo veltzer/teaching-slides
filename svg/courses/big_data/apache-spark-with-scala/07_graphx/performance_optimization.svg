@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="590" height="278.4" rx="10.770329614269" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="590" height="278.4" rx="10.770329614269" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="335" y="84.08" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.694725151391" font-weight="bold" fill="var(--primary-text)">Partition Strategy</text>
   <text x="70" y="132.8" font-family="Arial, sans-serif" font-size="17.23252738283" font-weight="bold" fill="var(--primary-text)">EdgePartition2D</text>
   <text x="70" y="158.32" font-family="Arial, sans-serif" font-size="15.078461459977" fill="var(--primary-text)">Best for power-law graphs</text>
@@ -106,7 +101,7 @@
   <text x="70" y="262.72" font-family="Arial, sans-serif" font-size="17.23252738283" font-weight="bold" fill="var(--primary-text)">CanonicalRandomVertexCut</text>
   <text x="70" y="288.24" font-family="Arial, sans-serif" font-size="15.078461459977" fill="var(--primary-text)">Co-locates both directions</text>
 
-  <rect x="650" y="40" width="590" height="278.4" rx="10.770329614269" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="590" height="278.4" rx="10.770329614269" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="945" y="84.08" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.694725151391" font-weight="bold" fill="var(--ok-text)">Cache / Persist</text>
   <text x="680" y="132.8" font-family="Arial, sans-serif" font-size="17.23252738283" font-weight="bold" fill="var(--ok-text)">graph.cache()</text>
   <text x="680" y="158.32" font-family="Arial, sans-serif" font-size="15.078461459977" fill="var(--ok-text)">Pin across Pregel supersteps</text>
@@ -115,7 +110,7 @@
   <text x="680" y="262.72" font-family="Arial, sans-serif" font-size="17.23252738283" font-weight="bold" fill="var(--ok-text)">graph.unpersist()</text>
   <text x="680" y="288.24" font-family="Arial, sans-serif" font-size="15.078461459977" fill="var(--ok-text)">Drop stale versions</text>
 
-  <rect x="40" y="341.6" width="590" height="278.4" rx="10.770329614269" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="341.6" width="590" height="278.4" rx="10.770329614269" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="335" y="385.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.694725151391" font-weight="bold" fill="var(--info-text)">Pregel Convergence</text>
   <text x="70" y="434.4" font-family="Arial, sans-serif" font-size="17.23252738283" font-weight="bold" fill="var(--info-text)">activeDirection = Out</text>
   <text x="70" y="459.92" font-family="Arial, sans-serif" font-size="15.078461459977" fill="var(--info-text)">Skip idle vertex edges</text>
@@ -124,7 +119,7 @@
   <text x="70" y="564.32" font-family="Arial, sans-serif" font-size="17.23252738283" font-weight="bold" fill="var(--info-text)">Tolerance threshold</text>
   <text x="70" y="589.84" font-family="Arial, sans-serif" font-size="15.078461459977" fill="var(--info-text)">Skip small deltas</text>
 
-  <rect x="650" y="341.6" width="590" height="278.4" rx="10.770329614269" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="341.6" width="590" height="278.4" rx="10.770329614269" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="945" y="385.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.694725151391" font-weight="bold" fill="var(--warn-text)">VertexRDD Indexing</text>
   <text x="680" y="434.4" font-family="Arial, sans-serif" font-size="17.23252738283" font-weight="bold" fill="var(--warn-text)">O(1) lookup</text>
   <text x="680" y="459.92" font-family="Arial, sans-serif" font-size="15.078461459977" fill="var(--warn-text)">No shuffle on joinVertices</text>

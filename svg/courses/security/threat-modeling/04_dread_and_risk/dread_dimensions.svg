@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -105,35 +100,35 @@
   <text x="640" y="406.810810810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text-faint)">average for risk</text>
 
   <!-- D - Damage (top) -->
-  <rect x="495.172413793103" y="107.927927927928" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="495.172413793103" y="107.927927927928" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--danger-text)">D — Damage</text>
   <text x="640" y="174.810810810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">how bad is exploitation?</text>
   <text x="640" y="199.891891891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">CIA impact, regulatory</text>
   <text x="640" y="220.792792792793" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">reputation, financial</text>
 
   <!-- R - Reproducibility (left) -->
-  <rect x="40" y="233.333333333333" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="233.333333333333" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="184.827586206897" y="269.90990990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--warn-text)">R — Reproducibility</text>
   <text x="184.827586206897" y="300.216216216216" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">reliable attack?</text>
   <text x="184.827586206897" y="325.297297297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">10 = every time</text>
   <text x="184.827586206897" y="346.198198198198" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">0 = race condition</text>
 
   <!-- E - Exploitability (right) -->
-  <rect x="950.344827586207" y="233.333333333333" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="950.344827586207" y="233.333333333333" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1095.172413793103" y="269.90990990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--warn-text)">E — Exploitability</text>
   <text x="1095.172413793103" y="300.216216216216" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">how hard to perform?</text>
   <text x="1095.172413793103" y="325.297297297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">10 = browser-only</text>
   <text x="1095.172413793103" y="346.198198198198" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">0 = nation-state tools</text>
 
   <!-- A - Affected users (bottom-left) -->
-  <rect x="40" y="431.891891891892" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="431.891891891892" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="184.827586206897" y="468.468468468468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--info-text)">A — Affected</text>
   <text x="184.827586206897" y="498.774774774775" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--info-text)">how many users?</text>
   <text x="184.827586206897" y="523.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--info-text)">10 = everyone</text>
   <text x="184.827586206897" y="544.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--info-text)">5 = some scenarios</text>
 
   <!-- D - Discoverability (bottom-right) -->
-  <rect x="950.344827586207" y="431.891891891892" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="950.344827586207" y="431.891891891892" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1095.172413793103" y="468.468468468468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--primary-text)">D — Discoverability</text>
   <text x="1095.172413793103" y="498.774774774775" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">how easy to find?</text>
   <text x="1095.172413793103" y="523.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">10 = public CVE</text>

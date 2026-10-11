@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="590" height="267.692307692308" rx="8.44894167246" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="590" height="267.692307692308" rx="8.44894167246" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="335" y="84.615384615384" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--primary-text)">Executor Sizing</text>
   <text x="335" y="129.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--primary-text)">4-8 cores per executor</text>
   <text x="335" y="168.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--primary-text)">16-32 GB heap</text>
@@ -105,14 +100,14 @@
   <text x="335" y="246.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--primary-text)">Reserve 1 core for OS</text>
   <text x="335" y="285.384615384616" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" font-style="italic" fill="var(--primary-text)">Avoid giants and dwarves</text>
 
-  <rect x="650" y="40" width="590" height="267.692307692308" rx="8.44894167246" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="590" height="267.692307692308" rx="8.44894167246" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="945" y="84.615384615384" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--ok-text)">Parallelism</text>
   <text x="945" y="129.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--ok-text)">Total = execs × cores</text>
   <text x="945" y="168.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--ok-text)">shuffle.partitions: 2-4× cores</text>
   <text x="945" y="207.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--ok-text)">~128 MB per partition</text>
   <text x="945" y="246.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--ok-text)">AQE coalesces on-the-fly</text>
 
-  <rect x="40" y="341.153846153846" width="590" height="278.846153846154" rx="8.44894167246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="341.153846153846" width="590" height="278.846153846154" rx="8.44894167246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="335" y="385.769230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--warn-text)">Cluster Capacity</text>
   <text x="335" y="430.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--warn-text)">Data volume drives count</text>
   <text x="335" y="469.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--warn-text)">Plan 2-3× input in memory</text>
@@ -120,7 +115,7 @@
   <text x="335" y="547.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--warn-text)">Headroom for retries</text>
   <text x="335" y="586.538461538461" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--warn-text)">Spot or preemptible mix</text>
 
-  <rect x="650" y="341.153846153846" width="590" height="278.846153846154" rx="8.44894167246" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="341.153846153846" width="590" height="278.846153846154" rx="8.44894167246" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="945" y="385.769230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--info-text)">Dynamic Allocation</text>
   <text x="945" y="430.384615384615" text-anchor="middle" font-family="Courier New, monospace" font-size="14.785647926803" fill="var(--info-text)">dynamicAllocation.enabled</text>
   <text x="945" y="469.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--info-text)">Scales with backlog</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,7 +93,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.460212719154" font-weight="bold" fill="var(--text)">Block Cipher Modes Compared</text>
 
-  <rect x="40" y="81.428571428571" width="285" height="248.571428571429" rx="8.141603913586" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="81.428571428571" width="285" height="248.571428571429" rx="8.141603913586" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="182" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--danger-text)">ECB</text>
   <text x="182" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--danger-text)">never use</text>
   <text x="60" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--danger-text)">- leaks</text>
@@ -106,7 +101,7 @@
   <text x="60" y="231.607142857143" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--danger-text)">- penguin</text>
   <text x="182" y="283.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--danger-text)">don't</text>
 
-  <rect x="345" y="81.428571428571" width="285" height="248.571428571429" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="81.428571428571" width="285" height="248.571428571429" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="487" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--warn-text)">CBC</text>
   <text x="487" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">legacy</text>
   <text x="365" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">- XOR-chained blocks</text>
@@ -114,7 +109,7 @@
   <text x="365" y="231.607142857143" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">- padding oracle</text>
   <text x="487" y="283.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--warn-text)">avoid</text>
 
-  <rect x="650" y="81.428571428571" width="285" height="248.571428571429" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="81.428571428571" width="285" height="248.571428571429" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="792" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--primary-text)">CTR</text>
   <text x="792" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">no integrity</text>
   <text x="670" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">- XOR keystream</text>
@@ -122,7 +117,7 @@
   <text x="670" y="231.607142857143" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">- needs MAC</text>
   <text x="792" y="283.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--primary-text)">good with MAC</text>
 
-  <rect x="955" y="81.428571428571" width="285" height="248.571428571429" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="81.428571428571" width="285" height="248.571428571429" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--ok-text)">GCM</text>
   <text x="1097" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">use this</text>
   <text x="975" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">- AEAD</text>

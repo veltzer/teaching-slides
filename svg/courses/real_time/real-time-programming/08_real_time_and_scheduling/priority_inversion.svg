@@ -40,7 +40,6 @@
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/></marker>
   </defs>
 
@@ -61,16 +60,16 @@
   <line x1="1020" y1="100" x2="1020" y2="540" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="4,4"/>
 
   <!-- Low prio runs first, takes the lock -->
-  <rect x="160" y="400" width="220" height="40" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="4" filter="url(#shadow)"/>
+  <rect x="160" y="400" width="220" height="40" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="4"/>
   <text x="270" y="425" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">low takes lock</text>
 
   <!-- High prio wakes, blocks on lock -->
-  <rect x="380" y="140" width="40" height="40" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="4" filter="url(#shadow)"/>
+  <rect x="380" y="140" width="40" height="40" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="4"/>
   <text x="400" y="130" text-anchor="middle" font-size="12" fill="var(--text)" font-family="Arial, sans-serif">runs</text>
   <text x="430" y="170" font-size="13" fill="var(--danger-border)" font-family="Arial, sans-serif">blocks on lock!</text>
 
   <!-- Medium prio preempts low -->
-  <rect x="380" y="270" width="320" height="40" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="4" filter="url(#shadow)"/>
+  <rect x="380" y="270" width="320" height="40" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="4"/>
   <text x="540" y="295" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">medium runs (low can't release)</text>
 
   <!-- Low waits while medium runs -->
@@ -78,11 +77,11 @@
   <text x="540" y="425" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">low preempted, holds lock</text>
 
   <!-- Medium done; low resumes, releases lock -->
-  <rect x="700" y="400" width="320" height="40" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="4" filter="url(#shadow)"/>
+  <rect x="700" y="400" width="320" height="40" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="4"/>
   <text x="860" y="425" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">low finally runs, releases</text>
 
   <!-- High prio resumes -->
-  <rect x="1020" y="140" width="220" height="40" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="4" filter="url(#shadow)"/>
+  <rect x="1020" y="140" width="220" height="40" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="4"/>
   <text x="1130" y="165" text-anchor="middle" font-size="13" fill="var(--text)" font-family="Arial, sans-serif">high finally runs</text>
 
   <text x="640" y="600" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">high prio waited for medium &#8212; the inversion</text>

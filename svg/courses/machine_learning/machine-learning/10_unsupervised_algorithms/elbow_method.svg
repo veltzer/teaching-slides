@@ -42,7 +42,6 @@
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
@@ -59,16 +58,16 @@
   <text x="440" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Number of clusters k</text>
   <text x="60" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Inertia</text>
   <path d="M 170 220 L 240 290 L 310 360 L 380 420 L 450 470 L 520 490 L 590 500 L 660 506 L 730 510" fill="none" stroke="var(--primary-border)" stroke-width="4"/>
-  <rect x="164" y="214" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="234" y="284" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="304" y="354" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="374" y="414" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="444" y="464" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="514" y="484" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="584" y="494" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="654" y="500" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="724" y="504" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="370" y="410" width="24" height="24" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="164" y="214" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="234" y="284" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="304" y="354" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="374" y="414" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="444" y="464" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="514" y="484" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="584" y="494" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="654" y="500" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="724" y="504" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="370" y="410" width="24" height="24" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <line x1="400" y1="350" x2="470" y2="270" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
   <text x="490" y="260" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-accent)">Elbow ≈ k = 4</text>
   <text x="170" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">2</text>
@@ -80,7 +79,7 @@
   <text x="590" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">8</text>
   <text x="660" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">9</text>
   <text x="730" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">10</text>
-  <rect x="870" y="80" width="370" height="540" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="870" y="80" width="370" height="540" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1055" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">How to read it</text>
   <text x="890" y="155" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">More clusters always lower</text>
   <text x="890" y="185" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">inertia (more centroids).</text>

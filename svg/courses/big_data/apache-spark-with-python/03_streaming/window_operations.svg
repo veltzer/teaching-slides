@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -133,11 +128,11 @@
   <text x="1062.950909" y="145.139268" text-anchor="middle" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">RDD[6]</text>
   <text x="40" y="243.346597" font-size="15.99057" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Window</text>
   <text x="40" y="266.454162" font-size="13.858559" fill="var(--text-muted)" font-family="Arial, sans-serif">3s / slide 1s</text>
-  <rect x="108.852465" y="220.239032" width="432.786923" height="57.76884" rx="7.360221" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="108.852465" y="220.239032" width="432.786923" height="57.76884" rx="7.360221" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="325.245822" y="254.900451" text-anchor="middle" font-size="14.924442" fill="var(--bg)" font-family="Arial, sans-serif">w1: RDD[0]+[1]+[2]</text>
-  <rect x="256.393462" y="296.494096" width="432.786923" height="57.76884" rx="7.360221" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="256.393462" y="296.494096" width="432.786923" height="57.76884" rx="7.360221" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="472.786923" y="331.155514" text-anchor="middle" font-size="14.924442" fill="var(--bg)" font-family="Arial, sans-serif">w2: RDD[1]+[2]+[3]</text>
-  <rect x="403.934458" y="372.749159" width="432.786923" height="57.76884" rx="7.360221" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="403.934458" y="372.749159" width="432.786923" height="57.76884" rx="7.360221" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="620.32792" y="407.410435" text-anchor="middle" font-size="14.924442" fill="var(--bg)" font-family="Arial, sans-serif">w3: RDD[2]+[3]+[4]</text>
   <line x1="108.852465" y1="462.868676" x2="256.393462" y2="462.868676" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)"/>
   <text x="182.622963" y="483.665498" text-anchor="middle" font-size="14.924442" fill="var(--primary-accent)" font-family="Arial, sans-serif">slide = 1s</text>
@@ -147,7 +142,7 @@
   <text x="59.672133" y="566.852788" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">windowed = stream.window(</text>
   <text x="59.672133" y="592.270951" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">    windowDuration=3,   # seconds</text>
   <text x="59.672133" y="617.689401" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">    slideDuration=1)</text>
-  <rect x="679.344213" y="509.083661" width="560.655787" height="110.916339" rx="7.360221" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="679.344213" y="509.083661" width="560.655787" height="110.916339" rx="7.360221" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="959.672212" y="539.123739" text-anchor="middle" font-size="15.99057" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Key parameters</text>
   <text x="699.016451" y="566.852788" font-size="14.924442" fill="var(--text-muted)" font-family="Arial, sans-serif">windowDuration: how much history to include</text>
   <text x="699.016451" y="592.270951" font-size="14.924442" fill="var(--text-muted)" font-family="Arial, sans-serif">slideDuration: how often result is computed</text>

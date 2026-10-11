@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -103,7 +98,7 @@
   <text x="230" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--text)">Feature extractor</text>
   <text x="230" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" font-style="italic" fill="var(--text-muted)">small target dataset</text>
 
-  <rect x="80" y="191.531531531532" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="191.531531531532" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="230" y="224.972972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--danger-text)">classifier head (train)</text>
   <rect x="80" y="259.459459459459" width="300" height="52.252252252252" rx="6.133646682164" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="230" y="292.900900900901" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">frozen layer</text>
@@ -122,11 +117,11 @@
   <text x="640" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--text)">Fine-tune top layers</text>
   <text x="640" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" font-style="italic" fill="var(--text-muted)">medium target dataset</text>
 
-  <rect x="490" y="191.531531531532" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="191.531531531532" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="224.972972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--danger-text)">classifier head (train)</text>
-  <rect x="490" y="259.459459459459" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="259.459459459459" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="292.900900900901" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--warn-text)">top block (low LR)</text>
-  <rect x="490" y="327.387387387387" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="327.387387387387" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="360.828828828829" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--warn-text)">middle block (low LR)</text>
   <rect x="490" y="395.315315315315" width="300" height="52.252252252252" rx="6.133646682164" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="428.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">frozen layer</text>
@@ -141,15 +136,15 @@
   <text x="1050" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--text)">Full fine-tune</text>
   <text x="1050" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" font-style="italic" fill="var(--text-muted)">large dataset / new domain</text>
 
-  <rect x="900" y="191.531531531532" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="900" y="191.531531531532" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1050" y="224.972972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--danger-text)">classifier head (train)</text>
-  <rect x="900" y="259.459459459459" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="900" y="259.459459459459" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1050" y="292.900900900901" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--danger-text)">top block (train)</text>
-  <rect x="900" y="327.387387387387" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="900" y="327.387387387387" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1050" y="360.828828828829" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--danger-text)">middle block (train)</text>
-  <rect x="900" y="395.315315315315" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="900" y="395.315315315315" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1050" y="428.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--danger-text)">lower block (train)</text>
-  <rect x="900" y="463.243243243243" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="900" y="463.243243243243" width="300" height="52.252252252252" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1050" y="496.684684684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--danger-text)">first block (train)</text>
 
   <text x="1050" y="562.522522522523" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text)">tens of thousands+ labels</text>

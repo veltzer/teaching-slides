@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,28 +92,28 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Protobuf Wire Format</text>
 
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Tag</text>
   <text x="60" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Field number plus type</text>
   <text x="60" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Varint encoded</text>
   <text x="60" y="220" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Three low bits = wire type</text>
   <text x="60" y="250" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Remaining bits = field number</text>
 
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Varint</text>
   <text x="365" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Variable length integer</text>
   <text x="365" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Seven data bits per byte</text>
   <text x="365" y="220" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">High bit signals more</text>
   <text x="365" y="250" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Small numbers stay tiny</text>
 
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Length delimited</text>
   <text x="670" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Strings, bytes, messages</text>
   <text x="670" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Tag, then length, then data</text>
   <text x="670" y="220" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Length is a varint too</text>
   <text x="670" y="250" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Embedded messages nest</text>
 
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Fixed</text>
   <text x="975" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Fixed 32 and fixed 64 bits</text>
   <text x="975" y="190" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">No length prefix needed</text>

@@ -42,7 +42,6 @@
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
@@ -52,42 +51,42 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Curse of Dimensionality</text>
-  <rect x="40" y="80" width="280" height="540" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="280" height="540" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">d = 1</text>
   <rect x="70" y="150" width="220" height="30" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="73" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="95" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="117" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="139" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="161" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="183" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="205" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="227" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="249" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="271" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="73" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="95" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="117" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="139" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="161" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="183" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="205" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="227" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="249" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="271" y="153" width="4" height="24" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">10 samples cover line</text>
   <text x="60" y="290" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">Density: 10 points / unit</text>
   <text x="60" y="360" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">ε-neighbourhood: linear in ε</text>
   <text x="60" y="440" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">Far ≫ near — works</text>
   <text x="60" y="530" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Manageable</text>
-  <rect x="345" y="80" width="280" height="540" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="280" height="540" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="485" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">d = 2</text>
   <rect x="375" y="150" width="220" height="220" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="378" y="153" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="400" y="263" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="444" y="241" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="466" y="351" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="488" y="219" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="510" y="329" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="532" y="197" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="554" y="307" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="576" y="175" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="378" y="153" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="400" y="263" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="444" y="241" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="466" y="351" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="488" y="219" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="510" y="329" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="532" y="197" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="554" y="307" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="576" y="175" width="4" height="4" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="485" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Need 100 samples for same density</text>
   <text x="365" y="445" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">Density: 10² = 100 / unit²</text>
   <text x="365" y="495" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Most space is empty</text>
   <text x="365" y="545" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">kNN, clustering degrade</text>
   <text x="365" y="610" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Sparse — bad</text>
-  <rect x="650" y="80" width="280" height="540" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="280" height="540" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="790" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">d = 3</text>
   <rect x="680" y="150" width="220" height="220" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="790" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">10³ = 1000 / unit³</text>
@@ -96,7 +95,7 @@
   <text x="670" y="495" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Volume mostly on faces</text>
   <text x="670" y="545" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">Distance metrics fail</text>
   <text x="670" y="610" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Bad — exponential</text>
-  <rect x="955" y="80" width="285" height="540" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1097" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">d = 100+</text>
   <text x="975" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Need 10¹⁰⁰ samples to cover</text>
   <text x="975" y="230" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Implications:</text>

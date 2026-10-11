@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,28 +92,28 @@
   </defs>
 
 
-  <rect x="40" y="40" width="380" height="250.196078431372" rx="8.531372323694" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="380" height="250.196078431372" rx="8.531372323694" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="230" y="96.862745098039" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--primary-text)">Generic Functions</text>
   <text x="230" y="153.725490196079" text-anchor="middle" font-family="Courier New, monospace" font-size="17.062744647388" fill="var(--primary-text)">fn largest&lt;T&gt;(list: &amp;[T])</text>
   <text x="230" y="204.901960784314" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--primary-text)">T resolved at compile</text>
 
-  <rect x="450" y="40" width="380" height="250.196078431372" rx="8.531372323694" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="40" width="380" height="250.196078431372" rx="8.531372323694" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="96.862745098039" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--info-text)">Generic Structs</text>
   <text x="640" y="153.725490196079" text-anchor="middle" font-family="Courier New, monospace" font-size="17.062744647388" fill="var(--info-text)">struct Point&lt;T&gt; { x: T }</text>
   <text x="640" y="204.901960784314" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--info-text)">distinct per type</text>
 
-  <rect x="860" y="40" width="380" height="250.196078431372" rx="8.531372323694" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="40" width="380" height="250.196078431372" rx="8.531372323694" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1050" y="96.862745098039" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--ok-text)">Generic Enums</text>
   <text x="1050" y="153.725490196079" text-anchor="middle" font-family="Courier New, monospace" font-size="17.062744647388" fill="var(--ok-text)">Option&lt;T&gt;, Result&lt;T,E&gt;</text>
   <text x="1050" y="204.901960784314" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--ok-text)">Built-in, ubiquitous</text>
 
-  <rect x="80" y="324.313725490196" width="1120" height="136.470588235295" rx="8.531372323694" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="324.313725490196" width="1120" height="136.470588235295" rx="8.531372323694" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="375.490196078431" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.461273890159" font-weight="bold" fill="var(--warn-text)">Monomorphization</text>
   <text x="640" y="420.980392156862" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--warn-text)">Compiler specializes per type — zero runtime cost</text>
 
-  <rect x="80" y="494.901960784314" width="540" height="125.098039215686" rx="8.531372323694" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="494.901960784314" width="540" height="125.098039215686" rx="8.531372323694" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="350" y="568.823529411765" text-anchor="middle" font-family="Courier New, monospace" font-size="17.062744647388" fill="var(--danger-text)">foo&lt;T&gt; with i32 → foo_i32</text>
 
-  <rect x="660" y="494.901960784314" width="540" height="125.098039215686" rx="8.531372323694" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="494.901960784314" width="540" height="125.098039215686" rx="8.531372323694" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="930" y="568.823529411765" text-anchor="middle" font-family="Courier New, monospace" font-size="17.062744647388" fill="var(--danger-text)">foo&lt;T&gt; with f64 → foo_f64</text>
 </svg>

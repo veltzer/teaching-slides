@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <!-- Title bar -->
-  <rect x="40" y="40" width="1200" height="61.346215" rx="6.874703" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="61.346215" rx="6.874703" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="77.923077" font-family="Arial, sans-serif" font-size="23.234548" fill="var(--bg)" text-anchor="middle" font-weight="bold">Bash Error Handling Strategies</text>
 
   <!-- set -e -->
@@ -124,7 +119,7 @@
   <text x="900" y="260.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">with: exit 1</text>
 
   <!-- Combined recommended -->
-  <rect x="260" y="324.423138" width="760" height="72.499938" rx="6.874703" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="260" y="324.423138" width="760" height="72.499938" rx="6.874703" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="355.653908" font-size="17.953974" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">Recommended: set -euo pipefail</text>
   <text x="640" y="381.307692" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">combine all three at script top</text>
 

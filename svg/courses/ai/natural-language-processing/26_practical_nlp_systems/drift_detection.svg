@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,7 +93,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.071383656624" font-weight="bold" fill="var(--text)">Three kinds of drift to monitor</text>
 
-  <rect x="40" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="230" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--ok-text)">Input drift</text>
   <text x="230" y="164.672897196262" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">user queries change shape</text>
   <text x="230" y="218.878504672897" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">new languages appear</text>
@@ -109,7 +104,7 @@
   <text x="230" y="392.336448598131" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">distribution distance:</text>
   <text x="230" y="419.439252336449" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">MMD, KL, JS divergence</text>
         
-  <rect x="450" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--warn-text)">Output drift</text>
   <text x="640" y="164.672897196262" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">model responses change</text>
   <text x="640" y="218.878504672897" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">average length shifts</text>
@@ -121,7 +116,7 @@
   <text x="640" y="419.439252336449" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">refusal classifier</text>
   <text x="640" y="484.485981308411" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">often follows model swaps,</text>
       
-  <rect x="860" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1050" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--danger-text)">Performance drift</text>
   <text x="1050" y="164.672897196262" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--danger-text)">accuracy degrades silently</text>
   <text x="1050" y="218.878504672897" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--danger-text)">harder to detect because</text>

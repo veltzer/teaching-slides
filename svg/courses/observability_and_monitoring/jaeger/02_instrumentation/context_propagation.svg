@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,19 +92,19 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.495762407505" font-weight="bold" fill="var(--text)">Context Propagation</text>
 
-  <rect x="40" y="143.571428571429" width="192.857142857143" height="82.857142857143" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="143.571428571429" width="192.857142857143" height="82.857142857143" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="136.428571428571" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--primary-text)">Service A</text>
   <text x="136.428571428571" y="210.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">trace_id=abc</text>
 
-  <rect x="318.571428571429" y="143.571428571429" width="192.857142857143" height="82.857142857143" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="318.571428571429" y="143.571428571429" width="192.857142857143" height="82.857142857143" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="415" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--primary-text)">Service B</text>
   <text x="415" y="210.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">trace_id=abc</text>
 
-  <rect x="597.142857142857" y="143.571428571429" width="192.857142857143" height="82.857142857143" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="597.142857142857" y="143.571428571429" width="192.857142857143" height="82.857142857143" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="693.571428571429" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--primary-text)">Service C</text>
   <text x="693.571428571429" y="210.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">trace_id=abc</text>
 
-  <rect x="875.714285714286" y="143.571428571429" width="192.857142857143" height="82.857142857143" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="875.714285714286" y="143.571428571429" width="192.857142857143" height="82.857142857143" rx="10.534200859823" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="972.142857142857" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--primary-text)">Service D</text>
   <text x="972.142857142857" y="210.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641041031788" fill="var(--primary-text)">trace_id=abc</text>
 
@@ -117,7 +112,7 @@
   <path d="M 511.428571428571 185 L 597.142857142857 185" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <path d="M 790 185 L 875.714285714286 185" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="267.857142857143" width="1200" height="124.285714285714" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="267.857142857143" width="1200" height="124.285714285714" rx="10.534200859823" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="298.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--warn-text)">HTTP headers carry the context</text>
   <text x="82.857142857143" y="335.178571428571" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">traceparent: 00-abc123def456-fedcba987654-01</text>
   <text x="82.857142857143" y="361.071428571429" font-family="Arial, sans-serif" font-size="14.747881203753" fill="var(--warn-text)">tracestate: vendor-specific extensions</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,42 +92,42 @@
   </defs>
 
   <!-- Root question -->
-  <rect x="490" y="40" width="300" height="82.857142857143" rx="6.106202935189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="40" width="300" height="82.857142857143" rx="6.106202935189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--primary-text)">New Workload</text>
   <text x="640" y="102.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">Where does it run?</text>
 
   <!-- Q1: Compliance constraint? -->
-  <rect x="490" y="164.285714285714" width="300" height="82.857142857143" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="164.285714285714" width="300" height="82.857142857143" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="200.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.30090831637" font-weight="bold" fill="var(--warn-text)">Compliance constraint?</text>
   <text x="640" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">Data sovereignty, GDPR</text>
 
   <!-- Q1 Yes -> on-prem -->
-  <rect x="40" y="288.571428571429" width="280" height="82.857142857143" rx="6.106202935189" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="288.571428571429" width="280" height="82.857142857143" rx="6.106202935189" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="180" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--danger-text)">On-Prem</text>
   <text x="180" y="350.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--danger-text)">Required by regulation</text>
 
   <!-- Q2: Bursty demand? -->
-  <rect x="490" y="288.571428571429" width="300" height="82.857142857143" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="288.571428571429" width="300" height="82.857142857143" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.30090831637" font-weight="bold" fill="var(--warn-text)">Bursty / variable load?</text>
   <text x="640" y="350.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">Spikes 5x or more</text>
 
   <!-- Q2 Yes -> cloud -->
-  <rect x="960" y="288.571428571429" width="280" height="82.857142857143" rx="6.106202935189" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="960" y="288.571428571429" width="280" height="82.857142857143" rx="6.106202935189" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1100" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--info-text)">Cloud</text>
   <text x="1100" y="350.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">Elastic, auto-scaling</text>
 
   <!-- Q3: Steady high utilization? -->
-  <rect x="490" y="412.857142857143" width="300" height="82.857142857143" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="412.857142857143" width="300" height="82.857142857143" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="449.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.30090831637" font-weight="bold" fill="var(--warn-text)">Steady, high utilization?</text>
   <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">24/7, predictable</text>
 
   <!-- Q3 Yes -> on-prem (or reserved) -->
-  <rect x="40" y="537.142857142857" width="280" height="82.857142857143" rx="6.106202935189" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="537.142857142857" width="280" height="82.857142857143" rx="6.106202935189" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="180" y="573.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--danger-text)">On-Prem or RIs</text>
   <text x="180" y="599.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--danger-text)">Cheaper at scale</text>
 
   <!-- Q3 No -> cloud default -->
-  <rect x="960" y="537.142857142857" width="280" height="82.857142857143" rx="6.106202935189" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="960" y="537.142857142857" width="280" height="82.857142857143" rx="6.106202935189" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1100" y="573.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--info-text)">Cloud default</text>
   <text x="1100" y="599.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">Faster, more flexible</text>
 

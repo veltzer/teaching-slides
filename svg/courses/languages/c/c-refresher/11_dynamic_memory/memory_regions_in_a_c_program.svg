@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,24 +91,24 @@
     </marker>
   </defs>
   <text x="1240" y="40" font-size="19.125966" fill="var(--text-faint)" font-family="Arial, sans-serif">High addresses</text>
-  <rect x="40" y="44.882062" width="848.780488" height="97.643172" rx="8.2532" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="44.882062" width="848.780488" height="97.643172" rx="8.2532" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="464.390244" y="83.939403" text-anchor="middle" font-size="26.298272" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Stack</text>
   <text x="464.390244" y="111.279409" text-anchor="middle" font-size="19.125966" fill="var(--text-muted)" font-family="Arial, sans-serif">Local variables, function frames</text>
   <text x="464.390244" y="132.760868" text-anchor="middle" font-size="17.930628" fill="var(--primary-accent)" font-family="Arial, sans-serif">(grows downward)</text>
   <polygon points="449.756098,140.572263 464.390244,156.195297 479.02439,140.572263" fill="var(--primary-fill)"/>
   <text x="464.390244" y="199.158215" text-anchor="middle" font-size="38.251932" fill="var(--border)" font-family="Arial, sans-serif">...</text>
   <polygon points="449.756098,212.828279 464.390244,197.205366 479.02439,212.828279" fill="var(--primary-fill)"/>
-  <rect x="40" y="220.639674" width="848.780488" height="97.643172" rx="8.2532" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="220.639674" width="848.780488" height="97.643172" rx="8.2532" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="464.390244" y="259.697016" text-anchor="middle" font-size="26.298272" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Heap</text>
   <text x="464.390244" y="287.037021" text-anchor="middle" font-size="19.125966" fill="var(--text-muted)" font-family="Arial, sans-serif">malloc / calloc / realloc</text>
   <text x="464.390244" y="308.51848" text-anchor="middle" font-size="17.930628" fill="var(--primary-accent)" font-family="Arial, sans-serif">(grows upward)</text>
-  <rect x="40" y="328.047091" width="848.780488" height="68.350196" rx="8.2532" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="328.047091" width="848.780488" height="68.350196" rx="8.2532" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="464.390244" y="362.222249" text-anchor="middle" font-size="23.907595" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Uninitialized Data (.bss)</text>
   <text x="464.390244" y="386.632921" text-anchor="middle" font-size="17.930628" fill="var(--text-muted)" font-family="Arial, sans-serif">static int x;</text>
-  <rect x="40" y="404.208682" width="848.780488" height="68.350196" rx="8.2532" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="404.208682" width="848.780488" height="68.350196" rx="8.2532" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="464.390244" y="438.383962" text-anchor="middle" font-size="23.907595" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Initialized Data (.data)</text>
   <text x="464.390244" y="462.794634" text-anchor="middle" font-size="17.930628" fill="var(--text-muted)" font-family="Arial, sans-serif">static int x = 5;</text>
-  <rect x="40" y="480.370395" width="848.780488" height="68.350196" rx="8.2532" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="480.370395" width="848.780488" height="68.350196" rx="8.2532" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="464.390244" y="514.545554" text-anchor="middle" font-size="23.907595" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Read-Only Data (.rodata)</text>
   <text x="464.390244" y="538.956225" text-anchor="middle" font-size="17.930628" fill="var(--text-muted)" font-family="Arial, sans-serif">string literals</text>
   <rect x="40" y="556.531987" width="848.780488" height="63.468013" rx="8.2532" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>

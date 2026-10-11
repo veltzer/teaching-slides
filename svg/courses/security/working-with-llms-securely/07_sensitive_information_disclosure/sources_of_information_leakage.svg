@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,15 +90,15 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="179.239284" rx="6.538156" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="179.239284" rx="6.538156" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="81.951223" y="99.746314" font-size="24.62128" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Training Data</text>
   <text x="81.951223" y="143.866801" font-size="18.939513" fill="var(--text)" font-family="Arial, sans-serif">PII, credentials, and proprietary code memorized during training</text>
   <text x="81.951223" y="187.068175" font-size="18.939513" fill="var(--text)" font-family="Arial, sans-serif">may be extractable via targeted prompts.</text>
-  <rect x="40" y="240.380244" width="1200" height="179.239284" rx="6.538156" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="240.380244" width="1200" height="179.239284" rx="6.538156" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="81.951223" y="300.126786" font-size="24.62128" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">System Prompts</text>
   <text x="81.951223" y="344.247273" font-size="18.939513" fill="var(--text)" font-family="Arial, sans-serif">Internal instructions, business logic, and API keys embedded in</text>
   <text x="81.951223" y="387.448532" font-size="18.939513" fill="var(--text)" font-family="Arial, sans-serif">system prompts can be leaked through prompt injection.</text>
-  <rect x="40" y="440.760716" width="1200" height="179.239284" rx="6.538156" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="440.760716" width="1200" height="179.239284" rx="6.538156" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="81.951223" y="500.507144" font-size="24.62128" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Connected Data Sources</text>
   <text x="81.951223" y="544.62763" font-size="18.939513" fill="var(--text)" font-family="Arial, sans-serif">RAG databases, APIs, and files with sensitive content accessed</text>
   <text x="81.951223" y="587.828776" font-size="18.939513" fill="var(--text)" font-family="Arial, sans-serif">by the LLM may be disclosed to unauthorized users.</text>

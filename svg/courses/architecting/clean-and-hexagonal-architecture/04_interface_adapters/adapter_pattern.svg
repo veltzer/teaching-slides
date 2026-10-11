@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,28 +91,28 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Interface Adapters</text>
-  <rect x="40" y="80" width="280" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="280" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="180" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Controller</text>
   <text x="60" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Receives HTTP / event</text>
   <text x="60" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Validates input</text>
   <text x="60" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Calls a use case</text>
   <text x="60" y="270" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">No business logic here</text>
 
-  <rect x="340" y="80" width="280" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="80" width="280" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="480" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Presenter</text>
   <text x="360" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Shapes use-case output</text>
   <text x="360" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">For its delivery channel</text>
   <text x="360" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">JSON, HTML, CLI, ...</text>
   <text x="360" y="270" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--primary-text)">View-friendly DTOs</text>
 
-  <rect x="640" y="80" width="280" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="80" width="280" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="780" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Gateway</text>
   <text x="660" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Talks to outside world</text>
   <text x="660" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">DB, queue, web service</text>
   <text x="660" y="215" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Implements port interface</text>
   <text x="660" y="270" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">Maps rows to entities</text>
 
-  <rect x="940" y="80" width="300" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="80" width="300" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1090" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">DTO</text>
   <text x="960" y="155" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Plain data carriers</text>
   <text x="960" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">No methods, no rules</text>

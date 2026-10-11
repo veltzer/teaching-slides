@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="531.147541" height="344.375025" rx="6.518574" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="531.147541" height="344.375025" rx="6.518574" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="305.57377" y="70.812516" text-anchor="middle" font-size="18.882788" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Traditional: Binary root/non-root</text>
   <rect x="69.508197" y="88.937505" width="472.131148" height="108.750049" rx="6.518574" fill="var(--danger-accent)"/>
   <text x="305.57377" y="132.437435" text-anchor="middle" font-size="20.771002" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">root (uid=0)</text>
@@ -105,7 +100,7 @@
   <text x="305.57377" y="277.437576" text-anchor="middle" font-size="14.162037" fill="var(--text-faint)" font-family="Arial, sans-serif">NO privileges</text>
   <text x="305.57377" y="330.000056" text-anchor="middle" font-size="15.106144" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Problem: all-or-nothing</text>
   <text x="305.57377" y="351.750134" text-anchor="middle" font-size="13.217821" fill="var(--text-muted)" font-family="Arial, sans-serif">Root container = full host access</text>
-  <rect x="620.327869" y="40" width="619.672131" height="525.625144" rx="6.518574" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620.327869" y="40" width="619.672131" height="525.625144" rx="6.518574" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="930.163934" y="70.812516" text-anchor="middle" font-size="18.882788" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Capabilities: Fine-grained privileges</text>
   <rect x="647.868852" y="83.49993" width="560.655738" height="108.750049" rx="6.518574" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="699.016393" y="108.874982" font-size="14.162037" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Network</text>
@@ -124,12 +119,12 @@
   <text x="699.016393" y="368.062635" font-size="12.273823" fill="var(--text-muted)" font-family="Courier New, monospace">KILL              — send signals</text>
   <text x="699.016393" y="386.187512" font-size="12.273823" fill="var(--text-muted)" font-family="Courier New, monospace">SETUID/SETGID     — change id</text>
   <text x="1131.803174" y="364.437547" text-anchor="middle" font-size="20.771002" fill="var(--warn-accent)" font-family="Arial, sans-serif">🟡</text>
-  <rect x="647.868852" y="426.062467" width="560.655738" height="108.750049" rx="6.518574" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="647.868852" y="426.062467" width="560.655738" height="108.750049" rx="6.518574" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="930.163934" y="451.437519" text-anchor="middle" font-size="14.162037" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Docker: drop all, add as needed</text>
   <text x="667.540984" y="473.187597" font-size="12.273823" fill="var(--text)" font-family="Courier New, monospace">--cap-drop ALL --cap-add NET_BIND_SERVICE</text>
   <text x="667.540984" y="491.312474" font-size="12.273823" fill="var(--text)" font-family="Courier New, monospace">securityContext:</text>
   <text x="667.540984" y="509.437576" font-size="12.273823" fill="var(--text)" font-family="Courier New, monospace">  capabilities:</text>
   <text x="667.540984" y="525.750077" font-size="12.273823" fill="var(--primary-accent)" font-family="Courier New, monospace">    drop: ["ALL"]   add: ["NET_BIND_SERVICE"]</text>
-  <rect x="40" y="581.937533" width="1199.999895" height="38.062467" rx="6.518574" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="581.937533" width="1199.999895" height="38.062467" rx="6.518574" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="605.499986" text-anchor="middle" font-size="15.106144" fill="var(--primary-accent)" font-family="Arial, sans-serif">Defaults: ~14 caps. Drop ALL; add what's needed.</text>
 </svg>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -99,7 +94,7 @@
 
   <!-- Table: header row -->
   <rect x="40" y="40" width="260" height="49.076923076923" rx="6.336706254344" fill="var(--text-muted)"/>
-  <rect x="300" y="40" width="470" height="49.076923076923" rx="6.336706254344" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="40" width="470" height="49.076923076923" rx="6.336706254344" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <rect x="770" y="40" width="470" height="49.076923076923" rx="6.336706254344" fill="var(--text-muted)"/>
   <text x="170" y="71.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--bg)">Feature</text>
   <text x="535" y="71.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--bg)">POSIX IPC</text>
@@ -142,14 +137,14 @@
 
   <!-- Verdict row -->
   <rect x="40" y="430.384615384615" width="260" height="55.769230769231" rx="6.336706254344" fill="var(--surface)"/>
-  <rect x="300" y="430.384615384615" width="470" height="55.769230769231" rx="6.336706254344" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="770" y="430.384615384615" width="470" height="55.769230769231" rx="6.336706254344" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="430.384615384615" width="470" height="55.769230769231" rx="6.336706254344" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="770" y="430.384615384615" width="470" height="55.769230769231" rx="6.336706254344" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="170" y="466.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926804" font-weight="bold" fill="var(--text-muted)">Verdict</text>
   <text x="535" y="466.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926804" font-weight="bold" fill="var(--ok-text)">Preferred for new code</text>
   <text x="1005" y="466.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926804" font-weight="bold" fill="var(--warn-text)">Legacy, still common</text>
 
   <!-- Footer notes -->
-  <rect x="40" y="508.461538461538" width="1200" height="111.538461538461" rx="8.448941672459" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="508.461538461538" width="1200" height="111.538461538461" rx="8.448941672459" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="547.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--info-text)">Notes</text>
   <text x="640" y="580.961538461538" text-anchor="middle" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--info-text)">-lrt for POSIX mq/shm, -lpthread for sem</text>
   <text x="640" y="608.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--info-text)">Both persist until unlinked; clean up explicitly</text>

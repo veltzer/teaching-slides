@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -100,7 +95,7 @@
   <rect x="40" y="40" width="1200" height="68.235294054787" rx="6.398529361204" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="83.215686270319" text-anchor="middle" font-size="17.062744963212" fill="var(--text-muted)" font-family="Arial, sans-serif">eMMC or SD card: sector 0 holds the partition table (GPT or MBR).</text>
 
-  <rect x="40" y="130.980392429258" width="220" height="489.019607570742" rx="6.398529361204" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="130.980392429258" width="220" height="489.019607570742" rx="6.398529361204" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="150" y="176.470588109573" text-anchor="middle" font-size="19.195588083613" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Boot</text>
   <text x="150" y="221.960784858516" text-anchor="middle" font-size="14.92990184281" fill="var(--primary-text)" font-family="Arial, sans-serif">FAT32, 64 MB</text>
   <text x="150" y="278.823529726067" text-anchor="middle" font-size="14.92990184281" fill="var(--primary-text)" font-family="Arial, sans-serif">U-Boot, MLO</text>
@@ -110,7 +105,7 @@
   <text x="150" y="494.901961077662" text-anchor="middle" font-size="14.92990184281" fill="var(--primary-text)" font-family="Arial, sans-serif">Read by ROM</text>
   <text x="150" y="551.764705945213" text-anchor="middle" font-size="14.92990184281" fill="var(--primary-text)" font-family="Arial, sans-serif">Rarely modified</text>
 
-  <rect x="280" y="130.980392429258" width="220" height="489.019607570742" rx="6.398529361204" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="280" y="130.980392429258" width="220" height="489.019607570742" rx="6.398529361204" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="390" y="176.470588109573" text-anchor="middle" font-size="19.195588083613" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Rootfs A</text>
   <text x="390" y="221.960784858516" text-anchor="middle" font-size="14.92990184281" fill="var(--ok-text)" font-family="Arial, sans-serif">ext4, ~1 GB</text>
   <text x="390" y="278.823529726067" text-anchor="middle" font-size="14.92990184281" fill="var(--ok-text)" font-family="Arial, sans-serif">Kernel modules</text>
@@ -120,7 +115,7 @@
   <text x="390" y="494.901961077662" text-anchor="middle" font-size="14.92990184281" fill="var(--ok-text)" font-family="Arial, sans-serif">Active slot</text>
   <text x="390" y="551.764705945213" text-anchor="middle" font-size="14.92990184281" fill="var(--ok-text)" font-family="Arial, sans-serif">Current release</text>
 
-  <rect x="520" y="130.980392429258" width="220" height="489.019607570742" rx="6.398529361204" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="520" y="130.980392429258" width="220" height="489.019607570742" rx="6.398529361204" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="630" y="176.470588109573" text-anchor="middle" font-size="19.195588083613" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Rootfs B</text>
   <text x="630" y="221.960784858516" text-anchor="middle" font-size="14.92990184281" fill="var(--info-text)" font-family="Arial, sans-serif">ext4, ~1 GB</text>
   <text x="630" y="278.823529726067" text-anchor="middle" font-size="14.92990184281" fill="var(--info-text)" font-family="Arial, sans-serif">Standby slot</text>
@@ -130,7 +125,7 @@
   <text x="630" y="494.901961077662" text-anchor="middle" font-size="14.92990184281" fill="var(--info-text)" font-family="Arial, sans-serif">Rollback on failure</text>
   <text x="630" y="551.764705945213" text-anchor="middle" font-size="14.92990184281" fill="var(--info-text)" font-family="Arial, sans-serif">mender, swupdate</text>
 
-  <rect x="760" y="130.980392429258" width="220" height="489.019607570742" rx="6.398529361204" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="760" y="130.980392429258" width="220" height="489.019607570742" rx="6.398529361204" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="870" y="176.470588109573" text-anchor="middle" font-size="19.195588083613" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Data</text>
   <text x="870" y="221.960784858516" text-anchor="middle" font-size="14.92990184281" fill="var(--warn-text)" font-family="Arial, sans-serif">ext4, variable</text>
   <text x="870" y="278.823529726067" text-anchor="middle" font-size="14.92990184281" fill="var(--warn-text)" font-family="Arial, sans-serif">/var, /home</text>
@@ -140,7 +135,7 @@
   <text x="870" y="494.901961077662" text-anchor="middle" font-size="14.92990184281" fill="var(--warn-text)" font-family="Arial, sans-serif">Encrypted if needed</text>
   <text x="870" y="551.764705945213" text-anchor="middle" font-size="14.92990184281" fill="var(--warn-text)" font-family="Arial, sans-serif">Growth planned</text>
 
-  <rect x="1000" y="130.980392429258" width="240" height="489.019607570742" rx="6.398529361204" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1000" y="130.980392429258" width="240" height="489.019607570742" rx="6.398529361204" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1120" y="176.470588109573" text-anchor="middle" font-size="19.195588083613" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Recovery</text>
   <text x="1120" y="221.960784858516" text-anchor="middle" font-size="14.92990184281" fill="var(--danger-text)" font-family="Arial, sans-serif">squashfs, 128 MB</text>
   <text x="1120" y="278.823529726067" text-anchor="middle" font-size="14.92990184281" fill="var(--danger-text)" font-family="Arial, sans-serif">Minimal rootfs</text>

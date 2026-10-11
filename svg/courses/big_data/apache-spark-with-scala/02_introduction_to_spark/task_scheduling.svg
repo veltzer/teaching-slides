@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="270" height="203.508771929825" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="270" height="203.508771929825" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="175" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--primary-text)">DAGScheduler</text>
   <text x="175" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--primary-text)">build DAG</text>
   <text x="175" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--primary-text)">split into stages</text>
@@ -105,7 +100,7 @@
 
   <line x1="310" y1="141.754385964912" x2="350" y2="141.754385964912" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="360" y="40" width="270" height="203.508771929825" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360" y="40" width="270" height="203.508771929825" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="495" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--ok-text)">TaskScheduler</text>
   <text x="495" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">assign to executors</text>
   <text x="495" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">locality preference</text>
@@ -113,7 +108,7 @@
 
   <line x1="630" y1="141.754385964912" x2="670" y2="141.754385964912" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="680" y="40" width="270" height="203.508771929825" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="680" y="40" width="270" height="203.508771929825" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="815" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--warn-text)">Cluster Manager</text>
   <text x="815" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">YARN / K8s</text>
   <text x="815" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">allocate executors</text>
@@ -121,7 +116,7 @@
 
   <line x1="950" y1="141.754385964912" x2="990" y2="141.754385964912" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="1000" y="40" width="240" height="203.508771929825" rx="6.052402741669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1000" y="40" width="240" height="203.508771929825" rx="6.052402741669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1120" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--info-text)">Executors</text>
   <text x="1120" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--info-text)">run tasks</text>
   <text x="1120" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--info-text)">slot = one core</text>

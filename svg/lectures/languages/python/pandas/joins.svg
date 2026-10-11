@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
 
   <!-- Left table -->
-  <rect x="40" y="40" width="340" height="62.142857142857" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="340" height="62.142857142857" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="210" y="77.285714285714" text-anchor="middle" font-size="17.30090831637" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">orders</text>
   <rect x="40" y="102.142857142857" width="340" height="51.785714285714" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
   <text x="210" y="134.25" text-anchor="middle" font-size="15.265507337973" fill="var(--text)" font-family="Arial, sans-serif">customer_id = 1</text>
@@ -109,7 +104,7 @@
   <text x="210" y="289.607142857143" text-anchor="middle" font-size="15.265507337973" fill="var(--text)" font-family="Arial, sans-serif">customer_id = 4</text>
 
   <!-- Right table -->
-  <rect x="900" y="40" width="340" height="62.142857142857" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="900" y="40" width="340" height="62.142857142857" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1070" y="77.285714285714" text-anchor="middle" font-size="17.30090831637" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">customers</text>
   <rect x="900" y="102.142857142857" width="340" height="51.785714285714" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
   <text x="1070" y="134.25" text-anchor="middle" font-size="15.265507337973" fill="var(--text)" font-family="Arial, sans-serif">customer_id = 1</text>
@@ -119,7 +114,7 @@
   <text x="1070" y="237.821428571429" text-anchor="middle" font-size="15.265507337973" fill="var(--text)" font-family="Arial, sans-serif">customer_id = 5</text>
 
   <!-- Merge box -->
-  <rect x="520" y="122.857142857143" width="240" height="124.285714285714" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="520" y="122.857142857143" width="240" height="124.285714285714" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="176.714285714286" text-anchor="middle" font-size="19.336309294766" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">merge</text>
   <text x="640" y="214" text-anchor="middle" font-size="14.247806848775" fill="var(--info-text)" font-family="Arial, sans-serif">on="customer_id"</text>
 
@@ -127,15 +122,15 @@
   <line x1="900" y1="179.821428571429" x2="764" y2="179.821428571429" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
 
   <!-- Outcomes -->
-  <rect x="40" y="392.142857142857" width="380" height="103.571428571429" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="392.142857142857" width="380" height="103.571428571429" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="230" y="435.642857142857" text-anchor="middle" font-size="19.336309294766" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">inner</text>
   <text x="230" y="470.857142857143" text-anchor="middle" font-size="15.265507337973" fill="var(--ok-text)" font-family="Arial, sans-serif">only 1 and 2 — matched on both sides</text>
 
-  <rect x="450" y="392.142857142857" width="380" height="103.571428571429" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="392.142857142857" width="380" height="103.571428571429" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="435.642857142857" text-anchor="middle" font-size="19.336309294766" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">left</text>
   <text x="640" y="470.857142857143" text-anchor="middle" font-size="15.265507337973" fill="var(--ok-text)" font-family="Arial, sans-serif">1, 2, 3, 4 — unmatched get NaN</text>
 
-  <rect x="860" y="392.142857142857" width="380" height="103.571428571429" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="392.142857142857" width="380" height="103.571428571429" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1050" y="435.642857142857" text-anchor="middle" font-size="19.336309294766" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">outer</text>
   <text x="1050" y="470.857142857143" text-anchor="middle" font-size="15.265507337973" fill="var(--ok-text)" font-family="Arial, sans-serif">1, 2, 3, 4, 5 — everyone survives</text>
 
@@ -143,6 +138,6 @@
   <line x1="640" y1="247.142857142857" x2="640" y2="388" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
   <line x1="720" y1="247.142857142857" x2="1000" y2="388" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
 
-  <rect x="40" y="547.5" width="1200" height="72.5" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="547.5" width="1200" height="72.5" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="592.035714285714" text-anchor="middle" font-size="21.371710273163" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">how= decides whose unmatched rows survive the merge</text>
 </svg>

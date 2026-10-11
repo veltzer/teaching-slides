@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
 
 
   <!-- Pipeline of 4 stages -->
-  <rect x="40" y="40" width="264.40678" height="208.800000308" rx="8.688976469121" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="264.40678" height="208.800000308" rx="8.688976469121" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="172.20339" y="97.99999923" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.894683716871" font-weight="bold" fill="var(--primary-text)">Input Tokens</text>
   <text x="172.20339" y="150.199999857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.377951889434" fill="var(--primary-text)">code + text split</text>
   <text x="172.20339" y="185.000000275" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.377951889434" fill="var(--primary-text)">into subwords</text>
@@ -106,7 +101,7 @@
 
   <line x1="309.491525" y1="144.400000154" x2="350.169492" y2="144.400000154" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="355.254237" y="40" width="264.40678" height="208.800000308" rx="8.688976469121" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="355.254237" y="40" width="264.40678" height="208.800000308" rx="8.688976469121" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="487.457627" y="97.99999923" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.894683716871" font-weight="bold" fill="var(--ok-text)">Self-Attention</text>
   <text x="487.457627" y="150.199999857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.377951889434" fill="var(--ok-text)">every token sees</text>
   <text x="487.457627" y="185.000000275" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.377951889434" fill="var(--ok-text)">every other token</text>
@@ -114,7 +109,7 @@
 
   <line x1="624.745763" y1="144.400000154" x2="665.423729" y2="144.400000154" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="670.508475" y="40" width="264.40678" height="208.800000308" rx="8.688976469121" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="670.508475" y="40" width="264.40678" height="208.800000308" rx="8.688976469121" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="802.711864" y="97.99999923" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.894683716871" font-weight="bold" fill="var(--warn-text)">Feed-Forward</text>
   <text x="802.711864" y="150.199999857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.377951889434" fill="var(--warn-text)">non-linear</text>
   <text x="802.711864" y="185.000000275" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.377951889434" fill="var(--warn-text)">transformations</text>
@@ -122,7 +117,7 @@
 
   <line x1="940" y1="144.400000154" x2="980.677966" y2="144.400000154" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="985.762712" y="40" width="254.237288" height="208.800000308" rx="8.688976469121" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="985.762712" y="40" width="254.237288" height="208.800000308" rx="8.688976469121" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1112.881356" y="97.99999923" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.894683716871" font-weight="bold" fill="var(--danger-text)">Output Probs</text>
   <text x="1112.881356" y="150.199999857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.377951889434" fill="var(--danger-text)">softmax over vocab</text>
   <text x="1112.881356" y="185.000000275" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.377951889434" fill="var(--danger-text)">sample next token</text>

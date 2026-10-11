@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,7 +92,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Method Dispatch</text>
 
-  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Static dispatch</text>
   <text x="60" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Resolved at compile time</text>
   <text x="60" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">By declared type</text>
@@ -105,7 +100,7 @@
   <text x="60" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Inlining possible</text>
   <text x="60" y="290" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">No virtual table cost</text>
 
-  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="490" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Dynamic dispatch</text>
   <text x="365" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Resolved at run time</text>
   <text x="365" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">By actual object type</text>
@@ -113,7 +108,7 @@
   <text x="365" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Heart of polymorphism</text>
   <text x="365" y="290" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Tiny indirection cost</text>
 
-  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="10" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Multiple dispatch</text>
   <text x="670" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Picks based on all args</text>
   <text x="670" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Common in Lisp, Julia</text>
@@ -121,7 +116,7 @@
   <text x="670" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Powerful for math code</text>
   <text x="670" y="290" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Harder to reason about</text>
 
-  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1097" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Tradeoffs</text>
   <text x="975" y="170" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Speed versus flexibility</text>
   <text x="975" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Final keyword limits dispatch</text>

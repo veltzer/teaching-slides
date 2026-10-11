@@ -42,7 +42,6 @@
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
@@ -52,11 +51,11 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Distance Metrics</text>
-  <rect x="40" y="80" width="290" height="540" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="540" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="185" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Euclidean (L2)</text>
   <rect x="60" y="145" width="250" height="180" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="85" y="200" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="245" y="280" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="85" y="200" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="245" y="280" width="12" height="12" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <line x1="91" y1="206" x2="251" y2="286" stroke="var(--primary-accent)" stroke-width="3"/>
   <text x="180" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">√Σ (xᵢ−yᵢ)²</text>
   <text x="60" y="360" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Sensitive to scale</text>
@@ -65,11 +64,11 @@
   <text x="60" y="460" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">  k-means, kNN</text>
   <text x="60" y="490" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">  geometric data</text>
   <text x="60" y="540" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">Curse of dim hits hard</text>
-  <rect x="345" y="80" width="290" height="540" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="80" width="290" height="540" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="490" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Manhattan (L1)</text>
   <rect x="365" y="145" width="250" height="180" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="390" y="200" width="12" height="12" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="550" y="280" width="12" height="12" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="390" y="200" width="12" height="12" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="550" y="280" width="12" height="12" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <line x1="396" y1="206" x2="396" y2="286" stroke="var(--ok-accent)" stroke-width="3"/>
   <line x1="396" y1="286" x2="556" y2="286" stroke="var(--ok-accent)" stroke-width="3"/>
   <text x="490" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Σ |xᵢ−yᵢ|</text>
@@ -79,7 +78,7 @@
   <text x="365" y="460" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">  high-dim, sparse</text>
   <text x="365" y="490" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">  L1 regression</text>
   <text x="365" y="540" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Sometimes wins</text>
-  <rect x="650" y="80" width="290" height="540" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="80" width="290" height="540" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Cosine</text>
   <rect x="670" y="145" width="250" height="180" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <line x1="700" y1="290" x2="870" y2="170" stroke="var(--warn-accent)" stroke-width="3" marker-end="url(#arrow-warn)"/>
@@ -92,7 +91,7 @@
   <text x="670" y="460" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">  text, embeddings</text>
   <text x="670" y="490" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">  recommenders</text>
   <text x="670" y="540" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">Standard for search</text>
-  <rect x="955" y="80" width="285" height="540" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="80" width="285" height="540" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1097" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Other distances</text>
   <text x="975" y="155" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Hamming</text>
   <text x="975" y="185" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">  bit / category mismatch</text>

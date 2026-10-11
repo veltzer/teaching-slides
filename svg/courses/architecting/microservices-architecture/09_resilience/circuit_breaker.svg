@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,7 +94,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.628328299751" font-weight="bold" fill="var(--text)">Circuit Breaker States</text>
 
-  <rect x="40" y="107.927927927928" width="342.857142857143" height="292.612612612613" rx="14.814164149876" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="107.927927927928" width="342.857142857143" height="292.612612612613" rx="14.814164149876" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="211.428571428571" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.279400806947" font-weight="bold" fill="var(--ok-text)">CLOSED</text>
   <text x="211.428571428571" y="191.531531531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--ok-text)">Calls flow through</text>
   <text x="211.428571428571" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-text)">Track failures</text>
@@ -108,7 +103,7 @@
   <text x="211.428571428571" y="343.063063063063" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--ok-text)">N failures in window</text>
   <text x="211.428571428571" y="369.189189189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--ok-text)">-&gt; OPEN</text>
 
-  <rect x="468.571428571428" y="107.927927927928" width="342.857142857143" height="292.612612612613" rx="14.814164149876" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="468.571428571428" y="107.927927927928" width="342.857142857143" height="292.612612612613" rx="14.814164149876" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.279400806947" font-weight="bold" fill="var(--danger-text)">OPEN</text>
   <text x="640" y="191.531531531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--danger-text)">Reject immediately</text>
   <text x="640" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-text)">No calls to downstream</text>
@@ -117,7 +112,7 @@
   <text x="640" y="343.063063063063" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--danger-text)">Cooldown elapsed</text>
   <text x="640" y="369.189189189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--danger-text)">-&gt; HALF-OPEN</text>
 
-  <rect x="897.142857142857" y="107.927927927928" width="342.857142857143" height="292.612612612613" rx="14.814164149876" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="897.142857142857" y="107.927927927928" width="342.857142857143" height="292.612612612613" rx="14.814164149876" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1068.571428571428" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.279400806947" font-weight="bold" fill="var(--warn-text)">HALF-OPEN</text>
   <text x="1068.571428571428" y="191.531531531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.814164149876" font-weight="bold" fill="var(--warn-text)">Trial requests</text>
   <text x="1068.571428571428" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--warn-text)">Limited probe traffic</text>

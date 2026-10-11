@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="20.805361" fill="var(--text-muted)" font-family="Arial, sans-serif">In a mixed expression, the narrower type is promoted to the wider type</text>
-  <rect x="367.272727" y="57.635138" width="545.454545" height="74.459568" rx="7.980321" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="367.272727" y="57.635138" width="545.454545" height="74.459568" rx="7.980321" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="98.783754" text-anchor="middle" font-size="32.363924" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">long double</text>
   <text x="640" y="122.297353" text-anchor="middle" font-size="18.493595" fill="var(--primary-accent)" font-family="Arial, sans-serif">widest · highest precision</text>
   <line x1="640" y1="134.054031" x2="640" y2="155.608184" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
@@ -120,7 +115,7 @@
   <text x="994.545455" y="335.878339" font-size="18.493595" fill="var(--text-faint)" font-family="Arial, sans-serif">Downward requires</text>
   <text x="994.545455" y="357.432492" font-size="18.493595" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">explicit cast</text>
   <text x="994.545455" y="378.986644" font-size="18.493595" fill="var(--text-faint)" font-family="Arial, sans-serif">— may lose data.</text>
-  <rect x="40" y="565.135138" width="1200" height="54.864862" rx="7.980321" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="565.135138" width="1200" height="54.864862" rx="7.980321" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="594.527076" text-anchor="middle" font-size="20.805361" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">Embedded caution: float↔int conversions on MCUs without FPU are expensive</text>
   <text x="640" y="614.121783" text-anchor="middle" font-size="17.337778" fill="var(--text-muted)" font-family="Arial, sans-serif">Use integer math where possible; avoid implicit float promotion in hot paths</text>
 </svg>

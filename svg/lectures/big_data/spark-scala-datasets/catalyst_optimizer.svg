@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,34 +93,34 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.209610966678" font-weight="bold" fill="var(--text)">Catalyst Optimizer Pipeline</text>
 
-  <rect x="40" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="150" y="116.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--primary-text)">Analysis</text>
   <text x="150" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Resolve columns</text>
   <text x="150" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Bind relations</text>
   <text x="150" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Type-check</text>
   <text x="150" y="268.947368421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">Unresolved to resolved</text>
 
-  <rect x="280" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="280" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="390" y="116.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--ok-text)">Logical Opt</text>
   <text x="390" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Predicate pushdown</text>
   <text x="390" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Column pruning</text>
   <text x="390" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Constant folding</text>
   <text x="390" y="268.947368421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">Rule-based</text>
 
-  <rect x="520" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="520" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="630" y="116.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--warn-text)">Physical Plan</text>
   <text x="630" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Strategies</text>
   <text x="630" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Join algorithm</text>
   <text x="630" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Broadcast vs sort</text>
   <text x="630" y="268.947368421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--warn-text)">Cost-based</text>
 
-  <rect x="760" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="760" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="870" y="116.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--info-text)">Codegen</text>
   <text x="870" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Whole-stage</text>
   <text x="870" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Java bytecode</text>
   <text x="870" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Tight loops</text>
 
-  <rect x="1000" y="75.614035087719" width="240" height="244.210526315789" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1000" y="75.614035087719" width="240" height="244.210526315789" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1120" y="116.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--danger-text)">Execution</text>
   <text x="1120" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--danger-text)">RDD DAG</text>
   <text x="1120" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--danger-text)">Tungsten memory</text>

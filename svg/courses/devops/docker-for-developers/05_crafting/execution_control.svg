@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,23 +90,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="364.2857" height="246.0606" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="364.2857" height="246.0606" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="222.1429" y="127.8788" text-anchor="middle" font-size="23.2402" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">ENTRYPOINT</text>
   <text x="222.1429" y="187.6364" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--primary-text)">Fixed executable</text>
   <text x="222.1429" y="240.3637" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">["nginx", "-g"]</text>
-  <rect x="457.8572" y="40" width="364.2857" height="246.0606" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="457.8572" y="40" width="364.2857" height="246.0606" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="640" y="127.8788" text-anchor="middle" font-size="23.2402" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">CMD</text>
   <text x="640" y="187.6364" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--info-text)">Default arguments</text>
   <text x="640" y="240.3637" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">["daemon off;"]</text>
   <line x1="404.2857" y1="163.0303" x2="453.5715" y2="163.0303" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="640" y="363.394" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">Combined at runtime:</text>
-  <rect x="457.8572" y="391.5151" width="364.2857" height="105.4546" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="457.8572" y="391.5151" width="364.2857" height="105.4546" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="640" y="461.8182" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--ok-text)">nginx -g "daemon off;"</text>
-  <rect x="897.1429" y="40" width="342.8571" height="246.0606" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="897.1429" y="40" width="342.8571" height="246.0606" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="1068.5715" y="127.8788" text-anchor="middle" font-size="23.2402" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">RUN</text>
   <text x="1068.5715" y="187.6364" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--warn-text)">Build-time only</text>
   <text x="1068.5715" y="240.3637" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">Creates layers</text>
-  <rect x="40" y="391.5151" width="364.2857" height="228.4849" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" stroke-dasharray="8.2002 6.1502" filter="url(#shadow)"/>
+  <rect x="40" y="391.5151" width="364.2857" height="228.4849" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" stroke-dasharray="8.2002 6.1502"/>
   <text x="222.1429" y="468.8484" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">CMD is overridden by</text>
   <text x="222.1429" y="521.5757" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">docker run args;</text>
   <text x="222.1429" y="574.303" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">ENTRYPOINT is not</text>

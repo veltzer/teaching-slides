@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="390" height="243.047619047619" rx="8.408612364996" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="390" height="243.047619047619" rx="8.408612364996" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="235" y="80.876190476191" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.021530912489" font-weight="bold" fill="var(--primary-text)">Aggregations</text>
   <text x="235" y="122.857142857142" text-anchor="middle" font-family="Courier New, monospace" font-size="14.715071638743" fill="var(--primary-text)">groupBy(window, key)</text>
   <text x="235" y="149.371428571428" text-anchor="middle" font-family="Courier New, monospace" font-size="14.715071638743" fill="var(--primary-text)">.agg(count, sum)</text>
@@ -105,7 +100,7 @@
   <text x="235" y="222.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--primary-text)">Batches merge in</text>
   <text x="235" y="257.638095238095" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--primary-text)">Needs watermark</text>
 
-  <rect x="445" y="40" width="390" height="243.047619047619" rx="8.408612364996" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="40" width="390" height="243.047619047619" rx="8.408612364996" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="80.876190476191" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.021530912489" font-weight="bold" fill="var(--ok-text)">Stream-stream Joins</text>
   <text x="640" y="122.857142857142" text-anchor="middle" font-family="Courier New, monospace" font-size="14.715071638743" fill="var(--ok-text)">clicks.join(impressions,</text>
   <text x="640" y="149.371428571428" text-anchor="middle" font-family="Courier New, monospace" font-size="14.715071638743" fill="var(--ok-text)">time-bound predicate)</text>
@@ -113,7 +108,7 @@
   <text x="640" y="222.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--ok-text)">Evict when out of range</text>
   <text x="640" y="257.638095238095" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--ok-text)">Watermark on both</text>
 
-  <rect x="850" y="40" width="390" height="243.047619047619" rx="8.408612364996" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="40" width="390" height="243.047619047619" rx="8.408612364996" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1045" y="80.876190476191" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.021530912489" font-weight="bold" fill="var(--warn-text)">Arbitrary State</text>
   <text x="1045" y="122.857142857142" text-anchor="middle" font-family="Courier New, monospace" font-size="14.715071638743" fill="var(--warn-text)">mapGroupsWithState</text>
   <text x="1045" y="149.371428571428" text-anchor="middle" font-family="Courier New, monospace" font-size="14.715071638743" fill="var(--warn-text)">flatMapGroupsWithState</text>

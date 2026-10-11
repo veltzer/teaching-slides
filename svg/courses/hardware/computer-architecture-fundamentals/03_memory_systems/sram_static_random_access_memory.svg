@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="380" height="580" rx="6.336706445031" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="380" height="580" rx="6.336706445031" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="230" y="95.769230036982" text-anchor="middle" font-size="25.346824751682" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Pull-up (PMOS)</text>
   <rect x="80" y="129.230768905325" width="140" height="89.230768905325" rx="6.336706445031" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="150" y="182.769230671598" text-anchor="middle" font-size="23.234589612819" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">P1</text>
@@ -114,7 +109,7 @@
   <text x="310" y="517.38461512426" text-anchor="middle" font-size="23.234589612819" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">N4</text>
   <text x="230" y="597.692307773669" text-anchor="middle" font-size="19.010118306651" fill="var(--primary-text)" font-family="Arial, sans-serif">Access transistors</text>
 
-  <rect x="440" y="40" width="400" height="580" rx="6.336706445031" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="440" y="40" width="400" height="580" rx="6.336706445031" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="106.923076678994" text-anchor="middle" font-size="27.459060918987" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Cross-Coupled Latch</text>
   <text x="640" y="162.692307773669" text-anchor="middle" font-size="21.122354473956" fill="var(--ok-text)" font-family="Arial, sans-serif">Two inverters back-to-back</text>
   <text x="640" y="207.307692226331" text-anchor="middle" font-size="21.122354473956" fill="var(--ok-text)" font-family="Arial, sans-serif">Holds one bit as long as</text>
@@ -126,7 +121,7 @@
   <text x="640" y="530.769231094675" text-anchor="middle" font-size="21.122354473956" fill="var(--ok-text)" font-family="Arial, sans-serif">Used for L1, L2, L3 caches</text>
   <text x="640" y="575.384615547337" text-anchor="middle" font-size="21.122354473956" fill="var(--ok-text)" font-family="Arial, sans-serif">and CPU register files</text>
 
-  <rect x="860" y="40" width="380" height="580" rx="6.336706445031" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="40" width="380" height="580" rx="6.336706445031" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1050" y="106.923076678994" text-anchor="middle" font-size="27.459060918987" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Tradeoffs</text>
   <text x="1050" y="173.846153357988" text-anchor="middle" font-size="21.122354473956" fill="var(--warn-text)" font-family="Arial, sans-serif">Fast: sub-nanosecond</text>
   <text x="1050" y="212.884615018491" text-anchor="middle" font-size="21.122354473956" fill="var(--warn-text)" font-family="Arial, sans-serif">access latency</text>

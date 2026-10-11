@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,28 +92,28 @@
   </defs>
 
 
-  <rect x="40" y="40" width="290" height="284.528301886793" rx="6.27664133236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="290" height="284.528301886793" rx="6.27664133236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="185" y="78.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--primary-text)">ADD / SUB</text>
   <text x="185" y="127.547169811321" text-anchor="middle" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--primary-text)">addl %ebx, %eax</text>
   <text x="185" y="165.849056603773" text-anchor="middle" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--primary-text)">dest = dest + src</text>
   <text x="185" y="209.622641509434" text-anchor="middle" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--primary-text)">subl src, dest</text>
   <text x="185" y="247.924528301887" text-anchor="middle" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--primary-text)">10 + 5 → 15</text>
 
-  <rect x="340" y="40" width="290" height="284.528301886793" rx="6.27664133236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="290" height="284.528301886793" rx="6.27664133236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="485" y="78.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--ok-text)">MUL / IMUL</text>
   <text x="485" y="127.547169811321" text-anchor="middle" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--ok-text)">mull %ebx</text>
   <text x="485" y="165.849056603773" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--ok-text)">Uses EAX</text>
   <text x="485" y="198.679245283019" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--ok-text)">Result: EDX:EAX</text>
   <text x="485" y="242.452830188679" text-anchor="middle" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">imull = signed</text>
 
-  <rect x="640" y="40" width="290" height="284.528301886793" rx="6.27664133236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="40" width="290" height="284.528301886793" rx="6.27664133236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="785" y="78.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--warn-text)">DIV / IDIV</text>
   <text x="785" y="127.547169811321" text-anchor="middle" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--warn-text)">divl %ebx</text>
   <text x="785" y="165.849056603773" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--warn-text)">EDX:EAX / src</text>
   <text x="785" y="198.679245283019" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--warn-text)">EAX=quot, EDX=rem</text>
   <text x="785" y="242.452830188679" text-anchor="middle" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--warn-text)">idivl = signed</text>
 
-  <rect x="940" y="40" width="300" height="284.528301886793" rx="6.27664133236" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="284.528301886793" rx="6.27664133236" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1090" y="78.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--danger-text)">INC / DEC / NEG</text>
   <text x="1090" y="127.547169811321" text-anchor="middle" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--danger-text)">incl %eax</text>
   <text x="1090" y="165.849056603773" text-anchor="middle" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--danger-text)">decl %eax</text>
@@ -131,7 +126,7 @@
   <text x="640" y="417.547169811321" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--text-muted)">SF (negative)  •  PF (parity)  •  AF (BCD carry)</text>
 
   <!-- Setup code -->
-  <rect x="40" y="477.735849056604" width="1200" height="142.264150943396" rx="6.27664133236" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="477.735849056604" width="1200" height="142.264150943396" rx="6.27664133236" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="510.566037735848" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" font-weight="bold" fill="var(--info-text)">Division setup (32-bit)</text>
   <text x="60" y="543.396226415094" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--info-text)">xorl %edx, %edx</text>
   <text x="60" y="570.754716981132" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--info-text)">movl $100, %eax</text>

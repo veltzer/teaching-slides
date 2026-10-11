@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,17 +90,17 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="545.454533884297" height="276.190476190476" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="8.355727675777" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="545.454533884297" height="276.190476190476" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="8.355727675777"/>
   <text x="312.727266942149" y="109.047619047619" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Control Plane</text>
   <text x="312.727266942149" y="164.285714285714" text-anchor="middle" font-size="23.143973040621" font-family="Arial, sans-serif" fill="var(--primary-text)">• API Server</text>
   <text x="312.727266942149" y="219.52380952381" text-anchor="middle" font-size="23.143973040621" font-family="Arial, sans-serif" fill="var(--primary-text)">• Scheduler, Controller</text>
   <text x="312.727266942149" y="274.761904761904" text-anchor="middle" font-size="23.143973040621" font-family="Arial, sans-serif" fill="var(--primary-text)">• etcd, Cloud Controller</text>
-  <rect x="694.545466115703" y="40" width="545.454533884297" height="276.190476190476" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="8.355727675777" filter="url(#shadow)"/>
+  <rect x="694.545466115703" y="40" width="545.454533884297" height="276.190476190476" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="8.355727675777"/>
   <text x="967.272733057851" y="109.047619047619" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Worker Nodes</text>
   <text x="967.272733057851" y="164.285714285714" text-anchor="middle" font-size="23.143973040621" font-family="Arial, sans-serif" fill="var(--ok-text)">• Kubelet</text>
   <text x="967.272733057851" y="219.52380952381" text-anchor="middle" font-size="23.143973040621" font-family="Arial, sans-serif" fill="var(--ok-text)">• Container Runtime</text>
   <text x="967.272733057851" y="274.761904761904" text-anchor="middle" font-size="23.143973040621" font-family="Arial, sans-serif" fill="var(--ok-text)">• Kube-proxy</text>
-  <rect x="258.181864462812" y="399.047619047619" width="763.636398347109" height="220.952380952381" fill="url(#grad-warn)" rx="8.355727675777" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="258.181864462812" y="399.047619047619" width="763.636398347109" height="220.952380952381" fill="url(#grad-warn)" rx="8.355727675777" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640.000063636367" y="468.095238095239" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Add-ons</text>
   <text x="640.000063636367" y="523.333333333333" text-anchor="middle" font-size="25.458370344684" font-family="Arial, sans-serif" fill="var(--warn-text)">• CoreDNS, CNI Plugin</text>
   <text x="640.000063636367" y="578.571428571429" text-anchor="middle" font-size="25.458370344684" font-family="Arial, sans-serif" fill="var(--warn-text)">• Metrics Server, Dashboard</text>

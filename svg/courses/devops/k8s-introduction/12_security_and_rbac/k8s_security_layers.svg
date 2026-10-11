@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -105,7 +100,7 @@
   <line x1="180" y1="84.190476190476" x2="215" y2="84.190476190476" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 1. Authentication -->
-  <rect x="220" y="40" width="200" height="309.333333333334" rx="6.306459273747" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="220" y="40" width="200" height="309.333333333334" rx="6.306459273747" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="320" y="73.142857142858" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.766148184367" font-weight="bold" fill="var(--primary-text)">1. Authentication</text>
   <text x="320" y="106.285714285715" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" font-weight="bold" fill="var(--primary-text)">Who are you?</text>
   <text x="240" y="144.952380952382" font-family="Arial, sans-serif" font-size="12.612918547494" fill="var(--primary-text)">X.509 certs</text>
@@ -119,7 +114,7 @@
   <line x1="420" y1="84.190476190476" x2="455" y2="84.190476190476" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 2. Authorization -->
-  <rect x="460" y="40" width="210" height="309.333333333334" rx="6.306459273747" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="460" y="40" width="210" height="309.333333333334" rx="6.306459273747" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="565" y="73.142857142858" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.766148184367" font-weight="bold" fill="var(--ok-text)">2. Authorization</text>
   <text x="565" y="106.285714285715" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" font-weight="bold" fill="var(--ok-text)">What can you do?</text>
   <text x="480" y="144.952380952382" font-family="Arial, sans-serif" font-size="12.612918547494" font-weight="bold" fill="var(--ok-text)">RBAC (default)</text>
@@ -132,7 +127,7 @@
   <line x1="670" y1="84.190476190476" x2="705" y2="84.190476190476" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 3. Admission Control -->
-  <rect x="710" y="40" width="240" height="309.333333333334" rx="6.306459273747" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="710" y="40" width="240" height="309.333333333334" rx="6.306459273747" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="830" y="73.142857142858" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.766148184367" font-weight="bold" fill="var(--warn-text)">3. Admission</text>
   <text x="830" y="106.285714285715" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" font-weight="bold" fill="var(--warn-text)">Valid request?</text>
   <text x="730" y="144.952380952382" font-family="Arial, sans-serif" font-size="12.612918547494" font-weight="bold" fill="var(--warn-text)">Mutating</text>
@@ -156,7 +151,7 @@
   <text x="1115" y="305.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.612918547494" font-weight="bold" fill="var(--text-muted)">201 Created</text>
 
   <!-- RBAC quick ref -->
-  <rect x="40" y="382.47619047619" width="1200" height="237.52380952381" rx="6.306459273747" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="382.47619047619" width="1200" height="237.52380952381" rx="6.306459273747" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="421.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.919377821241" font-weight="bold" fill="var(--info-text)">RBAC Reference</text>
   <text x="60" y="470.857142857143" font-family="Courier New, monospace" font-size="13.663995093118" fill="var(--info-text)">Role → namespace permissions</text>
   <text x="60" y="504" font-family="Courier New, monospace" font-size="13.663995093118" fill="var(--info-text)">ClusterRole → cluster-wide</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,7 +94,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.378891504872" font-weight="bold" fill="var(--text)">Airflow Sensor Modes</text>
 
-  <rect x="40" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="231.379310344828" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--danger-text)">poke (default)</text>
   <text x="60.689655172414" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--danger-text)">Holds a worker slot</text>
   <text x="60.689655172414" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">Sensor sleeps + checks</text>
@@ -112,7 +107,7 @@
   <text x="60.689655172414" y="449.724770642202" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">Short waits (seconds)</text>
   <text x="60.689655172414" y="476.330275229358" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--danger-text)">Few concurrent sensors</text>
 
-  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--warn-text)">reschedule</text>
   <text x="469.310344827586" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--warn-text)">Releases worker between checks</text>
   <text x="469.310344827586" y="199.633027522936" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Check, free slot, scheduler</text>
@@ -124,7 +119,7 @@
   <text x="469.310344827586" y="449.724770642202" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Minutes between checks</text>
   <text x="469.310344827586" y="476.330275229358" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">Daily/hourly waits</text>
 
-  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.241379310345" y="87.889908256881" width="382.758620689655" height="532.110091743119" rx="10.49246125174" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1048.620689655173" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">deferrable (2.2+)</text>
   <text x="877.931034482759" y="162.385321100917" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-text)">Triggerer process polls async</text>
   <text x="877.931034482759" y="199.633027522936" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">No worker held at all</text>

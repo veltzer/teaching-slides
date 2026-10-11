@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <!-- Start: Assess Workload -->
-  <rect x="453.793103" y="40" width="331.034483" height="58.48739" rx="6.536703" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="453.793103" y="40" width="331.034483" height="58.48739" rx="6.536703" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="619.310345" y="77.042013" font-family="Arial, sans-serif" font-size="20.08391" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Assess Workload</text>
   <!-- Arrow down -->
   <line x1="619.310345" y1="98.48739" x2="619.310345" y2="147.226881" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
@@ -107,7 +102,7 @@
   <!-- High -> Stay -->
   <line x1="826.206897" y1="225.210067" x2="1012.413793" y2="225.210067" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="908.965517" y="215.462169" font-family="Arial, sans-serif" font-size="15.062851" font-weight="bold" fill="var(--danger-accent)">High</text>
-  <rect x="1012.413793" y="191.092369" width="227.586207" height="68.235288" rx="6.536703" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1012.413793" y="191.092369" width="227.586207" height="68.235288" rx="6.536703" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1126.206897" y="223.260487" font-family="Arial, sans-serif" font-size="18.075508" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Stay</text>
   <text x="1126.206897" y="246.655443" font-family="Arial, sans-serif" font-size="13.054558" fill="var(--text-faint)" text-anchor="middle">Keep on current cloud</text>
   <!-- Low -> next decision -->
@@ -120,7 +115,7 @@
   <!-- Yes -> Replatform -->
   <line x1="826.206897" y1="429.91593" x2="1012.413793" y2="429.91593" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="908.965517" y="420.168032" font-family="Arial, sans-serif" font-size="15.062851" font-weight="bold" fill="var(--warn-accent)">Yes</text>
-  <rect x="1012.413793" y="395.79834" width="227.586207" height="68.235288" rx="6.536703" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1012.413793" y="395.79834" width="227.586207" height="68.235288" rx="6.536703" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1126.206897" y="427.966351" font-family="Arial, sans-serif" font-size="18.075508" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Replatform</text>
   <text x="1126.206897" y="451.361306" font-family="Arial, sans-serif" font-size="13.054558" fill="var(--text-faint)" text-anchor="middle">Adapt to target platform</text>
   <!-- No -> next decision -->
@@ -133,25 +128,25 @@
   <!-- Yes -> Rehost -->
   <line x1="164.137931" y1="351.932744" x2="164.137931" y2="303.193253" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="184.827586" y="332.436948" font-family="Arial, sans-serif" font-size="15.062851" font-weight="bold" fill="var(--ok-accent)">Yes</text>
-  <rect x="50.344828" y="234.957965" width="227.586207" height="68.235288" rx="6.536703" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="50.344828" y="234.957965" width="227.586207" height="68.235288" rx="6.536703" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="164.137931" y="267.126083" font-family="Arial, sans-serif" font-size="18.075508" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Rehost</text>
   <text x="164.137931" y="290.521039" font-family="Arial, sans-serif" font-size="13.054558" fill="var(--text-faint)" text-anchor="middle">Lift and shift (easiest)</text>
   <!-- No -> Refactor -->
   <line x1="164.137931" y1="507.899116" x2="164.137931" y2="551.764712" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="184.827586" y="537.142811" font-family="Arial, sans-serif" font-size="15.062851" font-weight="bold" fill="var(--info-accent)">No</text>
-  <rect x="50.344828" y="551.764712" width="227.586207" height="68.235288" rx="6.536703" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="50.344828" y="551.764712" width="227.586207" height="68.235288" rx="6.536703" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="164.137931" y="583.932723" font-family="Arial, sans-serif" font-size="18.075508" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Refactor</text>
   <text x="164.137931" y="607.327678" font-family="Arial, sans-serif" font-size="13.054558" fill="var(--text-faint)" text-anchor="middle">Re-architect for portability</text>
   <!-- Legend -->
   <rect x="784.827586" y="527.394913" width="455.172414" height="87.731084" rx="6.536703" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1012.413793" y="551.764712" font-family="Arial, sans-serif" font-size="14.058704" font-weight="bold" fill="var(--text)" text-anchor="middle">Outcomes:</text>
-  <rect x="805.517241" y="561.512503" width="14.482759" height="13.647058" rx="6.536703" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="805.517241" y="561.512503" width="14.482759" height="13.647058" rx="6.536703" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="831.37931" y="573.209981" font-family="Arial, sans-serif" font-size="12.050302" fill="var(--text-muted)">Stay</text>
-  <rect x="888.275862" y="561.512503" width="14.482759" height="13.647058" rx="6.536703" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="888.275862" y="561.512503" width="14.482759" height="13.647058" rx="6.536703" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="914.137931" y="573.209981" font-family="Arial, sans-serif" font-size="12.050302" fill="var(--text-muted)">Rehost</text>
-  <rect x="981.37931" y="561.512503" width="14.482759" height="13.647058" rx="6.536703" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="981.37931" y="561.512503" width="14.482759" height="13.647058" rx="6.536703" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1007.241379" y="573.209981" font-family="Arial, sans-serif" font-size="12.050302" fill="var(--text-muted)">Replatform</text>
-  <rect x="1095.172414" y="561.512503" width="14.482759" height="13.647058" rx="6.536703" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1095.172414" y="561.512503" width="14.482759" height="13.647058" rx="6.536703" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1121.034483" y="573.209981" font-family="Arial, sans-serif" font-size="12.050302" fill="var(--text-muted)">Refactor</text>
   <text x="1012.413793" y="600.504096" font-family="Arial, sans-serif" font-size="12.050302" fill="var(--text-faint)" text-anchor="middle">Cost and effort increase left to right</text>
 </svg>

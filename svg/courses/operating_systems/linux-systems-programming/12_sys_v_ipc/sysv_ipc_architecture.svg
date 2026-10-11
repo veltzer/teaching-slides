@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
 
 
   <!-- Kernel namespace -->
-  <rect x="390" y="40" width="500" height="149.306930693069" rx="8.573502813615" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="390" y="40" width="500" height="149.306930693069" rx="8.573502813615" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="80.19801980198" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.290381330632" font-weight="bold" fill="var(--info-text)">Kernel IPC Namespace</text>
   <text x="640" y="114.653465346535" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.931942072123" fill="var(--info-text)">Global object table, integer key</text>
   <text x="640" y="143.366336633663" text-anchor="middle" font-family="Courier New, monospace" font-size="13.931942072123" fill="var(--info-text)">key = ftok("/tmp/app", 42)</text>
@@ -117,7 +112,7 @@
   <line x1="890" y1="114.653465346535" x2="1068" y2="114.653465346535" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Message Queues -->
-  <rect x="60" y="240.990099009901" width="370" height="344.554455445544" rx="8.573502813615" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="240.990099009901" width="370" height="344.554455445544" rx="8.573502813615" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="245" y="281.188118811882" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.290381330632" font-weight="bold" fill="var(--primary-text)">Message Queues</text>
   <text x="80" y="327.128712871287" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--primary-text)">msgget(key, IPC_CREAT|0666)</text>
   <text x="80" y="367.326732673268" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--primary-text)">msgsnd(id, &amp;msg, size, 0)</text>
@@ -127,7 +122,7 @@
   <text x="80" y="528.118811881189" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--primary-text)">msgctl(id, IPC_RMID, NULL)</text>
 
   <!-- Semaphores -->
-  <rect x="455" y="240.990099009901" width="370" height="344.554455445544" rx="8.573502813615" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="455" y="240.990099009901" width="370" height="344.554455445544" rx="8.573502813615" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="281.188118811882" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.290381330632" font-weight="bold" fill="var(--info-text)">Semaphore Sets</text>
   <text x="475" y="327.128712871287" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--info-text)">semget(key, nsems, 0666)</text>
   <text x="475" y="367.326732673268" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--info-text)">semop(id, &amp;sops, nsops)</text>
@@ -137,7 +132,7 @@
   <text x="475" y="528.118811881189" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--info-text)">semctl(id, 0, IPC_RMID)</text>
 
   <!-- Shared Memory -->
-  <rect x="850" y="240.990099009901" width="370" height="344.554455445544" rx="8.573502813615" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="240.990099009901" width="370" height="344.554455445544" rx="8.573502813615" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1035" y="281.188118811882" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.290381330632" font-weight="bold" fill="var(--ok-text)">Shared Memory</text>
   <text x="870" y="327.128712871287" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--ok-text)">shmget(key, size, 0666)</text>
   <text x="870" y="367.326732673268" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--ok-text)">ptr = shmat(id, NULL, 0)</text>

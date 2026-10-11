@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,33 +92,33 @@
   </defs>
   <text x="639.999892" y="40" text-anchor="middle" font-size="15.087827" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Performance Tuning Checklist</text>
   <line x1="40" y1="49.133765" x2="1239.999783" y2="49.133765" stroke="var(--primary-border)" stroke-width="1.6624"/>
-  <rect x="40" y="62.834592" width="1200" height="109.606257" rx="6.832069" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="62.834592" width="1200" height="109.606257" rx="6.832069" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="89.999838" y="82.929114" font-size="12.258895" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Before Running</text>
   <text x="89.999838" y="101.196644" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Set appropriate executor memory</text>
   <text x="89.999838" y="116.724344" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Set executor cores (2-5 per executor)</text>
   <text x="89.999838" y="132.251924" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Enable AQE</text>
   <text x="89.999838" y="147.779504" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Set shuffle partitions</text>
   <text x="89.999838" y="163.307084" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Enable Kryo serialization</text>
-  <rect x="40" y="181.574733" width="1200" height="100.472492" rx="6.832069" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="181.574733" width="1200" height="100.472492" rx="6.832069" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="89.999838" y="201.669136" font-size="12.258895" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Data Reading</text>
   <text x="89.999838" y="219.936905" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Use columnar formats (Parquet)</text>
   <text x="89.999838" y="235.464366" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Define schema explicitly</text>
   <text x="89.999838" y="250.992065" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Use partition pruning</text>
   <text x="89.999838" y="266.519645" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Push predicates to source</text>
-  <rect x="40" y="291.18099" width="1200" height="109.606257" rx="6.832069" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="291.18099" width="1200" height="109.606257" rx="6.832069" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="89.999838" y="311.275393" font-size="12.258895" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Transformations</text>
   <text x="89.999838" y="329.543282" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Filter early, select early</text>
   <text x="89.999838" y="345.070742" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Avoid UDFs (use built-in functions)</text>
   <text x="89.999838" y="360.598322" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Broadcast small tables in joins</text>
   <text x="89.999838" y="376.126022" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Handle data skew</text>
   <text x="89.999838" y="391.653482" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Cache reused DataFrames</text>
-  <rect x="40" y="409.921251" width="1200" height="100.472492" rx="6.832069" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="409.921251" width="1200" height="100.472492" rx="6.832069" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="89.999838" y="430.015654" font-size="12.258895" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Writing</text>
   <text x="89.999838" y="448.283423" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Coalesce before writing</text>
   <text x="89.999838" y="463.811003" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Partition output by query pattern</text>
   <text x="89.999838" y="479.338464" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Use dynamic partition overwrite</text>
   <text x="89.999838" y="494.866044" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Choose appropriate compression</text>
-  <rect x="40" y="519.527508" width="1200" height="100.472492" rx="6.832069" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="519.527508" width="1200" height="100.472492" rx="6.832069" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="89.999838" y="539.62203" font-size="12.258895" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Monitoring</text>
   <text x="89.999838" y="557.88968" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Check Spark UI for skew</text>
   <text x="89.999838" y="573.41726" font-size="11.386782" fill="var(--text-muted)" font-family="Arial, sans-serif">☐ Check GC time per executor</text>

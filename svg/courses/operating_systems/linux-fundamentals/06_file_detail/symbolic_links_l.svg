@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,23 +90,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="327.2727" height="232.000025280003" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.745665712132" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="327.2727" height="232.000025280003" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.745665712132"/>
   <text x="203.6364" y="132.799984831998" text-anchor="middle" font-size="26.942638565302" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">link.txt</text>
   <text x="203.6364" y="211.679915059189" text-anchor="middle" font-size="24.493174917465" font-family="Arial, sans-serif" fill="var(--primary-text)">(symlink inode)</text>
   <line x1="367.2727" y1="155.999949439993" x2="476.3636" y2="155.999949439993" stroke="var(--text)" stroke-width="2" stroke-dasharray="12.642 6.321" marker-end="url(#arrow)"/>
   <text x="421.8181" y="118.879930227191" text-anchor="middle" font-size="24.493174917465" font-family="Arial, sans-serif" fill="var(--text)">points to</text>
-  <rect x="476.3636" y="40" width="327.2727" height="232.000025280003" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.745665712132" filter="url(#shadow)"/>
+  <rect x="476.3636" y="40" width="327.2727" height="232.000025280003" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.745665712132"/>
   <text x="640" y="132.799984831998" text-anchor="middle" font-size="26.942638565302" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">target.txt</text>
   <text x="640" y="211.679915059189" text-anchor="middle" font-size="24.493174917465" font-family="Arial, sans-serif" fill="var(--info-text)">(path string)</text>
   <line x1="803.6364" y1="155.999949439993" x2="912.7272" y2="155.999949439993" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="858.1817" y="118.879930227191" text-anchor="middle" font-size="24.493174917465" font-family="Arial, sans-serif" fill="var(--text)">resolves</text>
-  <rect x="912.7272" y="40" width="327.2727" height="232.000025280003" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.745665712132" filter="url(#shadow)"/>
+  <rect x="912.7272" y="40" width="327.2727" height="232.000025280003" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.745665712132"/>
   <text x="1076.3635" y="132.799984831998" text-anchor="middle" font-size="26.942638565302" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">data blocks</text>
   <text x="1076.3635" y="211.679915059189" text-anchor="middle" font-size="24.493174917465" font-family="Arial, sans-serif" fill="var(--ok-text)">(actual content)</text>
-  <rect x="40" y="387.999974719997" width="545.4544" height="232.000025280003" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.745665712132" opacity="0.7" filter="url(#shadow)"/>
+  <rect x="40" y="387.999974719997" width="545.4544" height="232.000025280003" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.745665712132" opacity="0.7"/>
   <text x="312.7273" y="480.799959551995" text-anchor="middle" font-size="24.493174917465" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">If target is deleted:</text>
   <text x="312.7273" y="559.680016179202" text-anchor="middle" font-size="24.493174917465" font-family="Arial, sans-serif" fill="var(--danger-text)">symlink becomes broken (dangling)</text>
-  <rect x="672.7272" y="387.999974719997" width="567.2728" height="232.000025280003" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.745665712132" opacity="0.7" filter="url(#shadow)"/>
+  <rect x="672.7272" y="387.999974719997" width="567.2728" height="232.000025280003" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.745665712132" opacity="0.7"/>
   <text x="956.3635" y="480.799959551995" text-anchor="middle" font-size="24.493174917465" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Can cross filesystems</text>
   <text x="956.3635" y="559.680016179202" text-anchor="middle" font-size="24.493174917465" font-family="Arial, sans-serif" fill="var(--warn-text)">Stores path, not inode number</text>
 </svg>

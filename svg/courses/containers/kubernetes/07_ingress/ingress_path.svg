@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,16 +91,16 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Ingress Routing</text>
-  <rect x="40" y="80" width="290" height="100" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="290" height="100" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Cloud LB</text>
   <text x="185" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">External IP</text>
-  <rect x="350" y="80" width="290" height="100" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350" y="80" width="290" height="100" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="495" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Ingress controller</text>
   <text x="495" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">nginx, Traefik, ALB</text>
-  <rect x="660" y="80" width="290" height="100" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="80" width="290" height="100" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="805" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Service</text>
   <text x="805" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">ClusterIP</text>
-  <rect x="970" y="80" width="270" height="100" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="970" y="80" width="270" height="100" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1105" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Pods</text>
   <text x="1105" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Endpoints behind</text>
   <line x1="330" y1="130" x2="350" y2="130" stroke="var(--border)" stroke-width="2" marker-end="url(#arrow)"/>

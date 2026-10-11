@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,19 +90,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="947.3684" height="58" rx="6.196773353932" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="947.3684" height="58" rx="6.196773353932" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="71.579" y="78.666666666667" font-size="20.922992111327" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Warp 0: [T0 T1 T2 T3 ... T31]</text>
   <text x="713.6842" y="78.666666666667" font-size="20.922992111327" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">executing ADD</text>
-  <rect x="40" y="117.333333333333" width="947.3684" height="58" rx="6.196773353932" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="117.333333333333" width="947.3684" height="58" rx="6.196773353932" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="71.579" y="156" font-size="20.922992111327" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Warp 1: [T32 T33 T34 T35 ... T63]</text>
   <text x="713.6842" y="156" font-size="20.922992111327" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">waiting for memory</text>
-  <rect x="40" y="194.666666666667" width="947.3684" height="58" rx="6.196773353932" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="194.666666666667" width="947.3684" height="58" rx="6.196773353932" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="71.579" y="233.333333333333" font-size="20.922992111327" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Warp 2: [T64 T65 T66 T67 ... T95]</text>
   <text x="713.6842" y="233.333333333333" font-size="20.922992111327" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">executing MUL</text>
-  <rect x="40" y="272" width="947.3684" height="58" rx="6.196773353932" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="272" width="947.3684" height="58" rx="6.196773353932" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="71.579" y="310.666666666667" font-size="20.922992111327" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Warp 3: [T96 T97 T98 T99 ... T127]</text>
   <text x="713.6842" y="310.666666666667" font-size="20.922992111327" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">ready to execute</text>
-  <rect x="187.3684" y="378.333333333333" width="1052.6316" height="193.333333333333" rx="6.196773353932" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="187.3684" y="378.333333333333" width="1052.6316" height="193.333333333333" rx="6.196773353932" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="713.6842" y="426.666666666667" text-anchor="middle" font-size="24.72708799375" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Warp Scheduler (each cycle)</text>
   <text x="271.579" y="471.133333333333" font-size="20.922992111327" fill="var(--text)" font-family="Arial, sans-serif">1. Pick a warp that is READY</text>
   <text x="271.579" y="505.93344" font-size="20.922992111327" fill="var(--text)" font-family="Arial, sans-serif">2. Issue its next instruction</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,23 +92,23 @@
   </defs>
   <rect x="40" y="40" width="200" height="193.333248148159" fill="var(--text-faint)" rx="6.782329560854"/>
   <text x="140.0002" y="152.777674845692" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Pod Created</text>
-  <rect x="290" y="40" width="200" height="193.333248148159" fill="url(#grad-primary)" rx="6.782329560854" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="290" y="40" width="200" height="193.333248148159" fill="url(#grad-primary)" rx="6.782329560854" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="390" y="120.555573302467" text-anchor="middle" fill="var(--bg)" font-size="24.033523915363" font-family="Arial, sans-serif">Init Container 1</text>
   <text x="390" y="184.999904166679" text-anchor="middle" fill="var(--bg)" font-size="22.06823088628" font-family="Arial, sans-serif">Check DB</text>
-  <rect x="539.9999" y="40" width="200" height="193.333248148159" fill="url(#grad-primary)" rx="6.782329560854" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="539.9999" y="40" width="200" height="193.333248148159" fill="url(#grad-primary)" rx="6.782329560854" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.0001" y="120.555573302467" text-anchor="middle" fill="var(--bg)" font-size="24.033523915363" font-family="Arial, sans-serif">Init Container 2</text>
   <text x="640.0001" y="184.999904166679" text-anchor="middle" fill="var(--bg)" font-size="22.06823088628" font-family="Arial, sans-serif">Setup Config</text>
-  <rect x="790.0001" y="40" width="200" height="193.333248148159" fill="url(#grad-primary)" rx="6.782329560854" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="790.0001" y="40" width="200" height="193.333248148159" fill="url(#grad-primary)" rx="6.782329560854" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="890.0001" y="120.555573302467" text-anchor="middle" fill="var(--bg)" font-size="24.033523915363" font-family="Arial, sans-serif">Init Container 3</text>
   <text x="890.0001" y="184.999904166679" text-anchor="middle" fill="var(--bg)" font-size="22.06823088628" font-family="Arial, sans-serif">Load Data</text>
-  <rect x="1040" y="40" width="200" height="193.333248148159" fill="url(#grad-ok)" rx="6.782329560854" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1040" y="40" width="200" height="193.333248148159" fill="url(#grad-ok)" rx="6.782329560854" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1140" y="120.555573302467" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Main Container</text>
   <text x="1140" y="184.999904166679" text-anchor="middle" fill="var(--bg)" font-size="22.06823088628" font-family="Arial, sans-serif">App Running</text>
   <path d="M 240.0001 136.666560185198 L 281.6668 136.666560185198" stroke="var(--text-muted)" stroke-width="0.8039" marker-end="url(#arrow)"/>
   <path d="M 490 136.666560185198 L 531.6667 136.666560185198" stroke="var(--text-muted)" stroke-width="0.8039" marker-end="url(#arrow)"/>
   <path d="M 740.0002 136.666560185198 L 781.6668 136.666560185198" stroke="var(--text-muted)" stroke-width="0.8039" marker-end="url(#arrow)"/>
   <path d="M 990.0001 136.666560185198 L 1031.6668 136.666560185198" stroke="var(--text-muted)" stroke-width="0.8039" marker-end="url(#arrow)"/>
-  <rect x="290" y="362.222165432106" width="666.6667" height="257.777834567894" fill="url(#grad-warn)" rx="6.782329560854" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="290" y="362.222165432106" width="666.6667" height="257.777834567894" fill="url(#grad-warn)" rx="6.782329560854" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="623.3333" y="442.777738734573" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Sequential Execution</text>
   <text x="623.3333" y="507.222069598785" text-anchor="middle" font-size="26.218564422219" font-family="Arial, sans-serif" fill="var(--warn-text)">• Each init container must complete successfully</text>
   <text x="623.3333" y="571.66665601852" text-anchor="middle" font-size="26.218564422219" font-family="Arial, sans-serif" fill="var(--warn-text)">• Main containers start only after all init containers finish</text>

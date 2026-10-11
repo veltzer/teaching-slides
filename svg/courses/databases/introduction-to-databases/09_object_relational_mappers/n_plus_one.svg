@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">The N+1 Query Problem</text>
-  <rect x="40" y="80" width="600" height="540" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="600" height="540" rx="10" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="340" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Naive lazy loading</text>
   <text x="60" y="160" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Fetch list of N users</text>
   <text x="60" y="195" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Loop and access user.posts</text>
@@ -107,7 +102,7 @@
   <text x="60" y="380" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">DB CPU spike</text>
   <text x="60" y="410" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Logs flooded</text>
   <text x="60" y="465" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Hard to spot in review</text>
-  <rect x="660" y="80" width="580" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="80" width="580" height="540" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Eager loading fix</text>
   <text x="680" y="160" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Use include or join</text>
   <text x="680" y="195" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Single query with JOIN</text>

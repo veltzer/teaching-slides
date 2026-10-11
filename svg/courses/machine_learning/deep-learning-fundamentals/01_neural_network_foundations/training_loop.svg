@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,31 +94,31 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--text)">The training loop: one step inside an epoch</text>
 
-  <rect x="40" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="150" y="132.389380530973" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--primary-text)">1. Forward</text>
   <text x="150" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">ŷ = f(x ; θ)</text>
   <text x="150" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">layer by layer</text>
   <text x="150" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">cache activations</text>
 
-  <rect x="295" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="295" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="405" y="132.389380530973" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--info-text)">2. Loss</text>
   <text x="405" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">L = loss(ŷ, y)</text>
   <text x="405" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">scalar — how wrong</text>
   <text x="405" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--info-text)">CE, MSE, ...</text>
 
-  <rect x="550" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="550" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="660" y="132.389380530973" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">3. Backward</text>
   <text x="660" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">∇θ L = autograd(L)</text>
   <text x="660" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">chain rule, reversed</text>
   <text x="660" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--warn-text)">gradient per weight</text>
 
-  <rect x="805" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="805" y="96.46017699115" width="220" height="164.247787610619" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="915" y="132.389380530973" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--ok-text)">4. Update</text>
   <text x="915" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">θ ← θ − η ∇θ L</text>
   <text x="915" y="199.115044247788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--ok-text)">optimizer step</text>
   <text x="915" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">SGD, Adam, ...</text>
 
-  <rect x="1060" y="96.46017699115" width="180" height="164.247787610619" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1060" y="96.46017699115" width="180" height="164.247787610619" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1150" y="132.389380530973" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">5. Zero grads</text>
   <text x="1150" y="168.318584070796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">grad.zero_()</text>
   <text x="1150" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--danger-text)">grads accumulate</text>

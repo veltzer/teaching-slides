@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="550.819672" height="580" rx="6.570105" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="550.819672" height="580" rx="6.570105" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="315.409836" y="99.841143" text-anchor="middle" font-size="28.547981" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Inode (metadata)</text>
   <text x="99.016393" y="159.682514" font-size="24.741591" fill="var(--text)" font-family="Arial, sans-serif">- File size</text>
   <text x="99.016393" y="205.714286" font-size="24.741591" fill="var(--text)" font-family="Arial, sans-serif">- Ownership (UID/GID)</text>
@@ -107,7 +102,7 @@
   <text x="99.016393" y="509.523771" font-size="19.03206" fill="var(--danger-accent)" font-family="Arial, sans-serif">No filename stored in inode!</text>
   <text x="99.016393" y="541.745943" font-size="19.03206" fill="var(--text-muted)" font-family="Arial, sans-serif">Filename lives in directory entry</text>
   <line x1="590.819567" y1="343.809486" x2="659.672131" y2="343.809486" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <rect x="669.508197" y="40" width="570.491803" height="580" rx="6.570105" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="669.508197" y="40" width="570.491803" height="580" rx="6.570105" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="954.753993" y="99.841143" text-anchor="middle" font-size="28.547981" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Data Blocks</text>
   <text x="954.753993" y="141.269714" text-anchor="middle" font-size="20.935201" fill="var(--text-muted)" font-family="Arial, sans-serif">(actual content)</text>
   <rect x="708.852459" y="164.285714" width="491.803174" height="303.809486" rx="6.570105" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.7778"/>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,30 +93,30 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.280399254524" font-weight="bold" fill="var(--text)">Evaluation, from cheap to authoritative</text>
 
-  <rect x="40" y="87.889908256881" width="1200" height="85.137614678899" rx="14.689445752436" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="87.889908256881" width="1200" height="85.137614678899" rx="14.689445752436" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="128.330275229358" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--info-text)">Reference-based metrics</text>
   <text x="640" y="157.064220183486" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">BLEU, ROUGE, chrF, METEOR, F1, EM — cheap, deterministic, run on every commit</text>
 
   <line x1="640" y1="173.02752293578" x2="640" y2="204.954128440367" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="40" y="204.954128440367" width="1200" height="85.137614678899" rx="14.689445752436" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="204.954128440367" width="1200" height="85.137614678899" rx="14.689445752436" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="245.394495412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--ok-text)">Embedding and learned metrics</text>
   <text x="640" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">BERTScore, COMET, BLEURT, BARTScore — paraphrase-aware, trained on human ratings</text>
 
   <line x1="640" y1="290.091743119266" x2="640" y2="322.018348623853" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="40" y="322.018348623853" width="1200" height="85.137614678899" rx="14.689445752436" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="322.018348623853" width="1200" height="85.137614678899" rx="14.689445752436" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="362.45871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--warn-text)">LLM as judge</text>
   <text x="640" y="391.192660550459" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">prompt-based scoring with a strong LLM — cheap, calibration to humans required</text>
 
   <line x1="640" y1="407.155963302752" x2="640" y2="439.082568807339" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="40" y="439.082568807339" width="1200" height="85.137614678899" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="439.082568807339" width="1200" height="85.137614678899" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="479.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--primary-text)">Targeted human evaluation</text>
   <text x="640" y="508.256880733945" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">direct assessment, MQM, error annotation, pairwise preference — gold standard for releases</text>
 
   <line x1="640" y1="524.220183486239" x2="640" y2="556.146788990826" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <rect x="40" y="556.146788990826" width="1200" height="63.853211009174" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="556.146788990826" width="1200" height="63.853211009174" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="593.394495412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--primary-text)">A/B test in production with real users on real traffic</text>
 </svg>

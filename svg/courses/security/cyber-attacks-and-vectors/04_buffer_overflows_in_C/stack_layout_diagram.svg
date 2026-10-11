@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,20 +91,20 @@
     </marker>
   </defs>
   <text x="40" y="45.742574342908" text-anchor="middle" font-size="15.530232275131" fill="var(--text-faint)" font-family="Arial, sans-serif">High addr</text>
-  <rect x="136.428571" y="40" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="136.428571" y="40" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="543.571429" y="95.128713044388" text-anchor="middle" font-size="24.404650421249" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Function Arguments</text>
-  <rect x="136.428571" y="137.623762750221" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="136.428571" y="137.623762750221" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="543.571429" y="192.752475794608" text-anchor="middle" font-size="24.404650421249" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Return Address</text>
   <text x="972.142857" y="192.752475794608" text-anchor="start" font-size="19.96744134819" fill="var(--danger-accent)" font-family="Arial, sans-serif">&lt;- Attacker's target</text>
-  <rect x="136.428571" y="235.247525500441" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="136.428571" y="235.247525500441" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="543.571429" y="290.376237465621" text-anchor="middle" font-size="24.404650421249" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Saved Frame Pointer</text>
   <text x="972.142857" y="290.376237465621" text-anchor="start" font-size="19.96744134819" fill="var(--danger-accent)" font-family="Arial, sans-serif">&lt;- Can be overwritten</text>
-  <rect x="136.428571" y="332.871287171454" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="136.428571" y="332.871287171454" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="543.571429" y="388.000000215842" text-anchor="middle" font-size="24.404650421249" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Stack Canary</text>
   <text x="972.142857" y="388.000000215842" text-anchor="start" font-size="19.96744134819" fill="var(--danger-accent)" font-family="Arial, sans-serif">&lt;- Protection mechanism</text>
   <rect x="136.428571" y="430.495049921674" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="543.571429" y="485.623762966062" text-anchor="middle" font-size="24.404650421249" fill="var(--text)" font-family="Arial, sans-serif">Local Variables</text>
-  <rect x="136.428571" y="528.118811592687" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="136.428571" y="528.118811592687" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="543.571429" y="583.247524637075" text-anchor="middle" font-size="24.404650421249" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Buffer[64]</text>
   <text x="972.142857" y="583.247524637075" text-anchor="start" font-size="19.96744134819" fill="var(--danger-accent)" font-family="Arial, sans-serif">&lt;- Overflow starts here</text>
   <line x1="40" y1="74.455446057445" x2="40" y2="579.801980678855" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="289.830508474576" height="259.029126213592" rx="8.561502515622" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="289.830508474576" height="259.029126213592" rx="8.561502515622" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="184.406779661017" y="73.78640776699" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.193192845696" font-weight="bold" fill="var(--primary-text)">Code + Config</text>
   <text x="65.423728813559" y="118.834951456311" font-family="Arial, sans-serif" font-size="14.982629402338" font-weight="bold" fill="var(--primary-text)">I. Codebase</text>
   <text x="65.423728813559" y="141.359223300971" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--primary-text)">One repo, many deploys</text>
@@ -106,7 +101,7 @@
   <text x="65.423728813559" y="242.718446601942" font-family="Arial, sans-serif" font-size="14.982629402338" font-weight="bold" fill="var(--primary-text)">III. Config</text>
   <text x="65.423728813559" y="265.242718446602" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--primary-text)">In environment vars</text>
 
-  <rect x="340" y="40" width="289.830508474576" height="259.029126213592" rx="8.561502515622" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="289.830508474576" height="259.029126213592" rx="8.561502515622" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="484.406779661017" y="73.78640776699" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.193192845696" font-weight="bold" fill="var(--ok-text)">Services + Build</text>
   <text x="365.423728813559" y="118.834951456311" font-family="Arial, sans-serif" font-size="14.982629402338" font-weight="bold" fill="var(--ok-text)">IV. Backing Services</text>
   <text x="365.423728813559" y="141.359223300971" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--ok-text)">Attached resources</text>
@@ -115,7 +110,7 @@
   <text x="365.423728813559" y="242.718446601942" font-family="Arial, sans-serif" font-size="14.982629402338" font-weight="bold" fill="var(--ok-text)">VI. Processes</text>
   <text x="365.423728813559" y="265.242718446602" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--ok-text)">Stateless</text>
 
-  <rect x="640" y="40" width="289.830508474576" height="259.029126213592" rx="8.561502515622" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="40" width="289.830508474576" height="259.029126213592" rx="8.561502515622" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="784.406779661017" y="73.78640776699" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.193192845696" font-weight="bold" fill="var(--warn-text)">Runtime + Scale</text>
   <text x="665.423728813559" y="118.834951456311" font-family="Arial, sans-serif" font-size="14.982629402338" font-weight="bold" fill="var(--warn-text)">VII. Port Binding</text>
   <text x="665.423728813559" y="141.359223300971" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--warn-text)">Self-contained</text>
@@ -124,7 +119,7 @@
   <text x="665.423728813559" y="242.718446601942" font-family="Arial, sans-serif" font-size="14.982629402338" font-weight="bold" fill="var(--warn-text)">IX. Disposability</text>
   <text x="665.423728813559" y="265.242718446602" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--warn-text)">Fast start/stop</text>
 
-  <rect x="940" y="40" width="300" height="259.029126213592" rx="8.561502515622" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="259.029126213592" rx="8.561502515622" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1089.491525423729" y="73.78640776699" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.193192845696" font-weight="bold" fill="var(--info-text)">Operations</text>
   <text x="965.423728813559" y="118.834951456311" font-family="Arial, sans-serif" font-size="14.982629402338" font-weight="bold" fill="var(--info-text)">X. Dev/Prod Parity</text>
   <text x="965.423728813559" y="141.359223300971" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--info-text)">Keep environments close</text>
@@ -136,23 +131,23 @@
   <rect x="40" y="332.815533980582" width="1200" height="287.184466019418" rx="8.561502515622" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="372.233009708738" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.263380660149" font-weight="bold" fill="var(--text)">Lifecycle Flow</text>
 
-  <rect x="70.508474576271" y="400.388349514564" width="172.881355932203" height="101.35922330097" rx="6.421126886717" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70.508474576271" y="400.388349514564" width="172.881355932203" height="101.35922330097" rx="6.421126886717" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="156.949152542373" y="434.174757281554" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.052817216791" font-weight="bold" fill="var(--primary-text)">Develop</text>
   <text x="156.949152542373" y="467.961165048544" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--primary-text)">I, II, III</text>
 
-  <rect x="263.728813559322" y="400.388349514564" width="172.881355932203" height="101.35922330097" rx="6.421126886717" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="263.728813559322" y="400.388349514564" width="172.881355932203" height="101.35922330097" rx="6.421126886717" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="350.169491525424" y="434.174757281554" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.052817216791" font-weight="bold" fill="var(--ok-text)">Build</text>
   <text x="350.169491525424" y="467.961165048544" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--ok-text)">IV, V</text>
 
-  <rect x="456.949152542373" y="400.388349514564" width="172.881355932203" height="101.35922330097" rx="6.421126886717" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="456.949152542373" y="400.388349514564" width="172.881355932203" height="101.35922330097" rx="6.421126886717" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="543.389830508475" y="434.174757281554" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.052817216791" font-weight="bold" fill="var(--warn-text)">Deploy</text>
   <text x="543.389830508475" y="467.961165048544" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--warn-text)">VII, X</text>
 
-  <rect x="650.169491525424" y="400.388349514564" width="172.881355932203" height="101.35922330097" rx="6.421126886717" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650.169491525424" y="400.388349514564" width="172.881355932203" height="101.35922330097" rx="6.421126886717" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="736.610169491525" y="434.174757281554" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.052817216791" font-weight="bold" fill="var(--info-text)">Run</text>
   <text x="736.610169491525" y="467.961165048544" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--info-text)">VI, VIII, IX</text>
 
-  <rect x="843.389830508475" y="400.388349514564" width="172.881355932203" height="101.35922330097" rx="6.421126886717" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="843.389830508475" y="400.388349514564" width="172.881355932203" height="101.35922330097" rx="6.421126886717" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="929.830508474576" y="434.174757281554" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.052817216791" font-weight="bold" fill="var(--danger-text)">Observe</text>
   <text x="929.830508474576" y="467.961165048544" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912441587886" fill="var(--danger-text)">XI, XII</text>
 

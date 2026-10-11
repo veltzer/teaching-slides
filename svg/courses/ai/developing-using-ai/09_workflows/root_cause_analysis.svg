@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,12 +91,12 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" fill="var(--bg)" font-size="42.687816624019" font-weight="bold" font-family="Arial, sans-serif">Bug Investigation Process</text>
-  <rect x="40" y="119.090915289257" width="1200" height="105.45450826446" fill="url(#grad-danger)" rx="7.675226089555" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="119.090915289257" width="1200" height="105.45450826446" fill="url(#grad-danger)" rx="7.675226089555" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="64" y="184.999965909088" fill="var(--bg)" font-size="28.458587056158" font-family="Arial, sans-serif">1. Symptom: Notifications fail silently</text>
-  <rect x="40" y="250.909152892567" width="1200" height="105.45450826446" fill="url(#grad-warn)" rx="7.675226089555" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="250.909152892567" width="1200" height="105.45450826446" fill="url(#grad-warn)" rx="7.675226089555" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="64" y="316.818203512398" fill="var(--bg)" font-size="28.458587056158" font-family="Arial, sans-serif">2. Investigation: Queue logs show "rate limit exceeded"</text>
-  <rect x="40" y="382.72725413223" width="1200" height="105.45450826446" fill="url(#grad-primary)" rx="7.675226089555" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="382.72725413223" width="1200" height="105.45450826446" fill="url(#grad-primary)" rx="7.675226089555" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="64" y="448.636441115708" fill="var(--bg)" font-size="28.458587056158" font-family="Arial, sans-serif">3. Root Cause: Email provider rate limiting</text>
-  <rect x="40" y="514.54549173554" width="1200" height="105.45450826446" fill="url(#grad-ok)" rx="7.675226089555" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="514.54549173554" width="1200" height="105.45450826446" fill="url(#grad-ok)" rx="7.675226089555" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="64" y="580.454542355372" fill="var(--bg)" font-size="28.458587056158" font-family="Arial, sans-serif">4. Solution: Implement exponential backoff</text>
 </svg>

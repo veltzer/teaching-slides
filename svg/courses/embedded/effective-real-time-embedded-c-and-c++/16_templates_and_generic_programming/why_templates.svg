@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="535.714222" height="162.807091" rx="7.209019" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="535.714222" height="162.807091" rx="7.209019" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="307.857168" y="92.912188" text-anchor="middle" font-size="27.147602" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Code Reuse</text>
   <text x="307.857168" y="127.508705" text-anchor="middle" font-size="17.750406" fill="var(--primary-accent)" font-family="Arial, sans-serif">Write once, use for any type</text>
   <text x="307.857168" y="153.964799" text-anchor="middle" font-size="15.662073" fill="var(--primary-accent)" font-family="Courier New, monospace">RingBuffer&lt;uint8_t, 64&gt;</text>
@@ -115,7 +110,7 @@
   <text x="972.142832" y="320.842165" text-anchor="middle" font-size="17.750406" fill="var(--text-muted)" font-family="Arial, sans-serif">Size as template parameter</text>
   <text x="972.142832" y="347.298259" text-anchor="middle" font-size="15.662073" fill="var(--text-faint)" font-family="Courier New, monospace">template&lt;size_t N&gt;</text>
   <text x="972.142832" y="371.719278" text-anchor="middle" font-size="15.662073" fill="var(--text-faint)" font-family="Arial, sans-serif">known at compile time → no malloc</text>
-  <rect x="168.571441" y="440.912314" width="942.857233" height="71.22811" rx="7.209019" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="168.571441" y="440.912314" width="942.857233" height="71.22811" rx="7.209019" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.000057" y="473.473757" text-anchor="middle" font-size="22.971057" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Zero runtime overhead!</text>
   <text x="640.000057" y="499.929851" text-anchor="middle" font-size="17.750406" fill="var(--text-muted)" font-family="Arial, sans-serif">Templates are resolved entirely at compile time — no indirect calls, no type erasure</text>
   <rect x="168.571441" y="544.701741" width="942.857233" height="75.298259" rx="7.209019" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>

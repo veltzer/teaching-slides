@@ -60,9 +60,6 @@
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -89,13 +86,13 @@
   <rect x="40" y="100" width="1200" height="80" rx="10" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">A long document</text>
   <text x="640" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Too big to retrieve as a single unit</text>
-  <rect x="40" y="220" width="380" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="220" width="380" height="100" rx="10" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="230" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Chunk 1</text>
   <text x="230" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">~500 tokens</text>
-  <rect x="350" y="340" width="380" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350" y="340" width="380" height="100" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="540" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Chunk 2</text>
   <text x="540" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">~500 tokens, 70 overlap</text>
-  <rect x="660" y="460" width="380" height="100" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="460" width="380" height="100" rx="10" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="850" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Chunk 3</text>
   <text x="850" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">~500 tokens, 70 overlap</text>
   <text x="60" y="600" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Overlap preserves context across boundary words</text>

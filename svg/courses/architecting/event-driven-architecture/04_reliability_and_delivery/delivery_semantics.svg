@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,7 +93,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.033512735322" font-weight="bold" fill="var(--text)">Delivery Semantics: Trade-Offs</text>
 
-  <rect x="40" y="107.927927927928" width="393.103448275862" height="209.009009009009" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="107.927927927928" width="393.103448275862" height="209.009009009009" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="236.551724137931" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--warn-text)">At-most-once</text>
   <text x="236.551724137931" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--warn-text)">may lose</text>
   <text x="60.689655172414" y="217.657657657658" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">+ lowest latency</text>
@@ -106,7 +101,7 @@
   <text x="60.689655172414" y="273.045045045045" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">- lossy</text>
   <text x="60.689655172414" y="299.171171171171" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">use: telemetry</text>
 
-  <rect x="443.448275862069" y="107.927927927928" width="393.103448275862" height="209.009009009009" rx="6.23850293892" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.448275862069" y="107.927927927928" width="393.103448275862" height="209.009009009009" rx="6.23850293892" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--ok-text)">At-least-once</text>
   <text x="640" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--ok-text)">may duplicate</text>
   <text x="464.137931034483" y="217.657657657658" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">+ broker default</text>
@@ -114,7 +109,7 @@
   <text x="464.137931034483" y="273.045045045045" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">- need dedup</text>
   <text x="464.137931034483" y="299.171171171171" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">use: most production</text>
 
-  <rect x="846.896551724138" y="107.927927927928" width="393.103448275862" height="209.009009009009" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.896551724138" y="107.927927927928" width="393.103448275862" height="209.009009009009" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1043.448275862069" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--danger-text)">Exactly-once</text>
   <text x="1043.448275862069" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--danger-text)">neither lost nor dup</text>
   <text x="867.586206896552" y="217.657657657658" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">+ ideal in theory</text>

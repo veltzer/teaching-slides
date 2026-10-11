@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
 
 
   <!-- Step 1: Error -->
-  <rect x="40" y="40" width="231.578947" height="189.387755308205" rx="8.92984989324" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="231.578947" height="189.387755308205" rx="8.92984989324" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="155.789474" y="99.183673744273" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.557086411817" font-weight="bold" fill="var(--danger-text)">1. Error Occurs</text>
   <text x="155.789474" y="152.448979328405" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.859698727023" fill="var(--danger-text)">test fails</text>
   <text x="155.789474" y="187.959183799459" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.859698727023" fill="var(--danger-text)">tool returns error</text>
@@ -106,7 +101,7 @@
   <line x1="282.105263" y1="134.693878215327" x2="345.263158" y2="134.693878215327" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
   <!-- Step 2: Read -->
-  <rect x="355.789474" y="40" width="231.578947" height="189.387755308205" rx="8.92984989324" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="355.789474" y="40" width="231.578947" height="189.387755308205" rx="8.92984989324" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="471.578947" y="99.183673744273" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.557086411817" font-weight="bold" fill="var(--primary-text)">2. Read Output</text>
   <text x="471.578947" y="152.448979328405" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.859698727023" fill="var(--primary-text)">parse stack trace</text>
   <text x="471.578947" y="187.959183799459" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.859698727023" fill="var(--primary-text)">inspect logs</text>
@@ -114,7 +109,7 @@
   <line x1="597.894737" y1="134.693878215327" x2="661.052632" y2="134.693878215327" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
   <!-- Step 3: Diagnose -->
-  <rect x="671.578947" y="40" width="231.578947" height="189.387755308205" rx="8.92984989324" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="671.578947" y="40" width="231.578947" height="189.387755308205" rx="8.92984989324" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="787.368421" y="99.183673744273" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.557086411817" font-weight="bold" fill="var(--info-text)">3. Diagnose</text>
   <text x="787.368421" y="152.448979328405" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.859698727023" fill="var(--info-text)">reason about cause</text>
   <text x="787.368421" y="187.959183799459" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.859698727023" fill="var(--info-text)">plan a fix</text>
@@ -122,7 +117,7 @@
   <line x1="913.684211" y1="134.693878215327" x2="976.842105" y2="134.693878215327" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
   <!-- Step 4: Fix + Retry -->
-  <rect x="987.368421" y="40" width="252.631579" height="189.387755308205" rx="8.92984989324" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="987.368421" y="40" width="252.631579" height="189.387755308205" rx="8.92984989324" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1113.684211" y="99.183673744273" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.557086411817" font-weight="bold" fill="var(--ok-text)">4. Fix + Retry</text>
   <text x="1113.684211" y="152.448979328405" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.859698727023" fill="var(--ok-text)">edit code</text>
   <text x="1113.684211" y="187.959183799459" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.859698727023" fill="var(--ok-text)">re-run tool</text>

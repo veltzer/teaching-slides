@@ -68,11 +68,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,13 +93,13 @@
   </defs>
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="35.433804945332" font-weight="bold" fill="var(--text)">Keep ISRs Short: Defer Work</text>
-  <rect x="40" y="209.756097560976" width="339.622641509434" height="155.609756097561" rx="7.592958202571" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="209.756097560976" width="339.622641509434" height="155.609756097561" rx="7.592958202571" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="209.811320754717" y="278.648780487805" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.840846742761" font-weight="bold" fill="var(--warn-text)">Hardware event</text>
   <text x="209.811320754717" y="318.258536585366" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.840846742761" fill="var(--warn-text)">(pin / timer)</text>
-  <rect x="470.188679245283" y="209.756097560976" width="339.622641509434" height="155.609756097561" rx="7.592958202571" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="470.188679245283" y="209.756097560976" width="339.622641509434" height="155.609756097561" rx="7.592958202571" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="278.648780487805" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.840846742761" font-weight="bold" fill="var(--danger-text)">ISR</text>
   <text x="640" y="318.258536585366" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.840846742761" fill="var(--danger-text)">set flag, return</text>
-  <rect x="900.377358490566" y="209.756097560976" width="339.622641509434" height="155.609756097561" rx="7.592958202571" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="900.377358490566" y="209.756097560976" width="339.622641509434" height="155.609756097561" rx="7.592958202571" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1070.188679245283" y="278.648780487805" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.840846742761" font-weight="bold" fill="var(--ok-text)">Main loop</text>
   <text x="1070.188679245283" y="318.258536585366" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.840846742761" fill="var(--ok-text)">does the work</text>
   <line x1="379.622641509434" y1="287.560975609756" x2="470.188679245283" y2="287.560975609756" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>

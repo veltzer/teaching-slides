@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="240" height="580" rx="6.398529361204" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="240" height="580" rx="6.398529361204" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="160" y="85.490196748943" text-anchor="middle" font-size="19.195588083613" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Kernel</text>
   <text x="160" y="130.980392429258" text-anchor="middle" font-size="14.92990184281" fill="var(--danger-text)" font-family="Arial, sans-serif">High addresses</text>
   <text x="160" y="187.843137296809" text-anchor="middle" font-size="14.92990184281" fill="var(--danger-text)" font-family="Arial, sans-serif">Protected ring 0</text>
@@ -108,7 +103,7 @@
   <text x="160" y="483.529411890427" text-anchor="middle" font-size="14.92990184281" fill="var(--danger-text)" font-family="Arial, sans-serif">Page tables</text>
   <text x="160" y="551.764705945213" text-anchor="middle" font-size="14.92990184281" fill="var(--danger-text)" font-family="Arial, sans-serif">isolate per task</text>
 
-  <rect x="300" y="40" width="240" height="580" rx="6.398529361204" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="40" width="240" height="580" rx="6.398529361204" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="420" y="85.490196748943" text-anchor="middle" font-size="19.195588083613" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Stack</text>
   <text x="420" y="130.980392429258" text-anchor="middle" font-size="14.92990184281" fill="var(--info-text)" font-family="Arial, sans-serif">Grows downward</text>
   <text x="420" y="187.843137296809" text-anchor="middle" font-size="14.92990184281" fill="var(--info-text)" font-family="Arial, sans-serif">Local variables</text>
@@ -119,7 +114,7 @@
   <text x="420" y="494.901961077662" text-anchor="middle" font-size="14.92990184281" fill="var(--info-text)" font-family="Arial, sans-serif">Guard page catches</text>
   <text x="420" y="551.764705945213" text-anchor="middle" font-size="14.92990184281" fill="var(--info-text)" font-family="Arial, sans-serif">overflow</text>
 
-  <rect x="560" y="40" width="240" height="580" rx="6.398529361204" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="560" y="40" width="240" height="580" rx="6.398529361204" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="680" y="85.490196748943" text-anchor="middle" font-size="19.195588083613" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Mmap / Libs</text>
   <text x="680" y="130.980392429258" text-anchor="middle" font-size="14.92990184281" fill="var(--warn-text)" font-family="Arial, sans-serif">Middle region</text>
   <text x="680" y="187.843137296809" text-anchor="middle" font-size="14.92990184281" fill="var(--warn-text)" font-family="Arial, sans-serif">Shared libraries</text>
@@ -130,7 +125,7 @@
   <text x="680" y="494.901961077662" text-anchor="middle" font-size="14.92990184281" fill="var(--warn-text)" font-family="Arial, sans-serif">ASLR randomizes</text>
   <text x="680" y="551.764705945213" text-anchor="middle" font-size="14.92990184281" fill="var(--warn-text)" font-family="Arial, sans-serif">base address</text>
 
-  <rect x="820" y="40" width="240" height="580" rx="6.398529361204" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="820" y="40" width="240" height="580" rx="6.398529361204" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="940" y="85.490196748943" text-anchor="middle" font-size="19.195588083613" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Heap</text>
   <text x="940" y="130.980392429258" text-anchor="middle" font-size="14.92990184281" fill="var(--ok-text)" font-family="Arial, sans-serif">Grows upward</text>
   <text x="940" y="187.843137296809" text-anchor="middle" font-size="14.92990184281" fill="var(--ok-text)" font-family="Arial, sans-serif">malloc / new</text>
@@ -141,7 +136,7 @@
   <text x="940" y="494.901961077662" text-anchor="middle" font-size="14.92990184281" fill="var(--ok-text)" font-family="Arial, sans-serif">Leaks if orphaned</text>
   <text x="940" y="551.764705945213" text-anchor="middle" font-size="14.92990184281" fill="var(--ok-text)" font-family="Arial, sans-serif">Fragments over time</text>
 
-  <rect x="1080" y="40" width="160" height="580" rx="6.398529361204" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1080" y="40" width="160" height="580" rx="6.398529361204" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1160" y="85.490196748943" text-anchor="middle" font-size="19.195588083613" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">BSS</text>
   <text x="1160" y="130.980392429258" text-anchor="middle" font-size="13.863479765737" fill="var(--primary-text)" font-family="Arial, sans-serif">zero init</text>
   <text x="1160" y="176.470588109573" text-anchor="middle" font-size="13.863479765737" fill="var(--primary-text)" font-family="Arial, sans-serif">globals</text>

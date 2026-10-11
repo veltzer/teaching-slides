@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -111,7 +106,7 @@
   <rect x="384.615385" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="425.641026" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)" font-family="Arial, sans-serif">'o'</text>
   <text x="425.641026" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)" font-family="Arial, sans-serif">0x6F</text>
-  <rect x="470.769231" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="470.769231" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="511.794762" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--danger-accent)" font-family="Arial, sans-serif">'\0'</text>
   <text x="511.794762" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)" font-family="Arial, sans-serif">0x00</text>
   <text x="706.666667" y="99.225331" font-size="17.397529" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Null terminator</text>
@@ -126,13 +121,13 @@
   <text x="101.538462" y="298.345031" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">- Modifiable contents</text>
   <text x="101.538462" y="328.97888" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">- sizeof(str) == 6</text>
   <text x="101.538462" y="359.612602" font-size="16.374061" fill="var(--primary-accent)" font-family="Arial, sans-serif">- str[0] = 'h'; // OK</text>
-  <rect x="665.641026" y="191.126751" width="574.358974" height="214.436688" rx="7.065704" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="665.641026" y="191.126751" width="574.358974" height="214.436688" rx="7.065704" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="952.820513" y="229.929685" text-anchor="middle" font-size="20.467694" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">char *str = "Hello";</text>
   <text x="696.410147" y="267.711183" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">- Pointer to read-only data</text>
   <text x="696.410147" y="298.345031" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">- String in .rodata section</text>
   <text x="696.410147" y="328.97888" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">- sizeof(str) == 8 (pointer)</text>
   <text x="696.410147" y="359.612602" font-size="16.374061" fill="var(--danger-accent)" font-family="Arial, sans-serif">- str[0] = 'h'; // SEGFAULT!</text>
-  <rect x="70.769231" y="446.408486" width="1169.23066" height="173.591514" rx="7.065704" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70.769231" y="446.408486" width="1169.23066" height="173.591514" rx="7.065704" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="655.384615" y="487.25366" text-anchor="middle" font-size="22.514393" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">strlen() vs sizeof()</text>
   <text x="347.692308" y="533.20437" text-anchor="middle" font-size="18.420878" fill="var(--text)" font-family="Arial, sans-serif">strlen("Hello") = 5</text>
   <text x="347.692308" y="566.901515" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">Counts chars until '\0'</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,31 +90,31 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180.659340476459" y="85.854768532935" text-anchor="middle" font-size="23.340048136508" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Strategy</text>
-  <rect x="330.109890728575" y="40" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="330.109890728575" y="40" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="785.054945364288" y="85.854768532935" text-anchor="middle" font-size="23.340048136508" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Description</text>
-  <rect x="40" y="124.273692643332" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="124.273692643332" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180.659340476459" y="170.12815356948" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Bump / Arena</text>
   <rect x="330.109890728575" y="124.273692643332" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="367.472527229334" y="170.12815356948" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Linear allocation, bulk free</text>
-  <rect x="40" y="208.547076419194" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="208.547076419194" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="180.659340476459" y="254.401846212813" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Pool</text>
   <rect x="330.109890728575" y="208.547076419194" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="367.472527229334" y="254.401846212813" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Fixed-size blocks, O(1) alloc/free</text>
-  <rect x="40" y="292.820461455739" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="292.820461455739" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180.659340476459" y="338.675229988674" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Free List</text>
   <rect x="330.109890728575" y="292.820461455739" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="367.472527229334" y="338.675229988674" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Variable size, linked free blocks</text>
-  <rect x="40" y="377.094154099072" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="377.094154099072" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="180.659340476459" y="422.948768828613" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Slab</text>
   <rect x="330.109890728575" y="377.094154099072" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="367.472527229334" y="422.948768828613" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Caches of same-type objects</text>
-  <rect x="40" y="461.367537874933" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="461.367537874933" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180.659340476459" y="507.222307668552" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Buddy</text>
   <rect x="330.109890728575" y="461.367537874933" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="367.472527229334" y="507.222307668552" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Power-of-2 splitting / coalescing</text>
-  <rect x="40" y="545.641076714872" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="545.641076714872" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="180.659340476459" y="591.495846508491" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">jemalloc</text>
   <rect x="330.109890728575" y="545.641076714872" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="367.472527229334" y="591.495846508491" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Thread-local caches, size classes</text>

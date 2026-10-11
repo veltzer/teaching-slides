@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,27 +90,27 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="364.2858" height="232.716074055021" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.236095561661" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="364.2858" height="232.716074055021" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.236095561661"/>
   <text x="222.1427" y="104.44450445816" text-anchor="middle" font-size="21.322146139654" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Message Passing</text>
   <text x="222.1427" y="158.148222165064" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--primary-text)">mpsc::channel()</text>
   <text x="222.1427" y="204.691415371131" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--primary-text)">tx.send() / rx.recv()</text>
   <text x="222.1427" y="251.234500552509" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--primary-text)">"Share by communicating"</text>
-  <rect x="457.8571" y="40" width="364.2858" height="232.716074055021" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.236095561661" filter="url(#shadow)"/>
+  <rect x="457.8571" y="40" width="364.2858" height="232.716074055021" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.236095561661"/>
   <text x="639.9999" y="104.44450445816" text-anchor="middle" font-size="21.322146139654" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">Shared State</text>
   <text x="639.9999" y="158.148222165064" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--info-text)">Arc&lt;Mutex&lt;T&gt;&gt;</text>
   <text x="639.9999" y="204.691415371131" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--info-text)">Arc&lt;RwLock&lt;T&gt;&gt;</text>
   <text x="639.9999" y="251.234500552509" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--info-text)">Atomic types</text>
-  <rect x="875.7142" y="40" width="364.2858" height="232.716074055021" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.236095561661" filter="url(#shadow)"/>
+  <rect x="875.7142" y="40" width="364.2858" height="232.716074055021" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.236095561661"/>
   <text x="1057.8571" y="104.44450445816" text-anchor="middle" font-size="21.322146139654" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Thread Spawn</text>
   <text x="1057.8571" y="158.148222165064" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--ok-text)">thread::spawn(move || {})</text>
   <text x="1057.8571" y="204.691415371131" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--ok-text)">handle.join()</text>
   <text x="1057.8571" y="251.234500552509" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--ok-text)">OS-level threads</text>
-  <rect x="125.7142" y="333.580208238074" width="428.5714" height="125.308638641213" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.236095561661" filter="url(#shadow)"/>
+  <rect x="125.7142" y="333.580208238074" width="428.5714" height="125.308638641213" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.236095561661"/>
   <text x="339.9999" y="387.283925944979" text-anchor="middle" font-size="21.322146139654" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Send trait</text>
   <text x="339.9999" y="437.407381401464" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--warn-text)">Type can be transferred between threads</text>
-  <rect x="618.5713" y="333.580208238074" width="428.5714" height="125.308638641213" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.236095561661" filter="url(#shadow)"/>
+  <rect x="618.5713" y="333.580208238074" width="428.5714" height="125.308638641213" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.236095561661"/>
   <text x="832.857" y="387.283925944979" text-anchor="middle" font-size="21.322146139654" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">Sync trait</text>
   <text x="832.857" y="437.407381401464" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--danger-text)">Type can be shared (&amp;T) between threads</text>
-  <rect x="168.5713" y="512.59267261088" width="942.8571" height="107.40732738912" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.236095561661" filter="url(#shadow)"/>
+  <rect x="168.5713" y="512.59267261088" width="942.8571" height="107.40732738912" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.236095561661"/>
   <text x="639.9999" y="584.19759354519" text-anchor="middle" font-size="21.322146139654" font-family="Arial, sans-serif" fill="var(--primary-text)">Compiler enforces thread safety: data races are compile errors, not runtime bugs</text>
 </svg>

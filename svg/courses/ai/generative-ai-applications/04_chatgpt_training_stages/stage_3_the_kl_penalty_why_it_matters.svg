@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,16 +90,16 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="583.7838" height="339.076894911241" rx="6.226494425112" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="583.7838" height="339.076894911241" rx="6.226494425112" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="331.8918" y="84.615417751481" text-anchor="middle" font-size="23.008764849117" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Without KL Penalty</text>
   <text x="331.8918" y="129.230727810649" text-anchor="middle" font-size="18.078315238592" fill="var(--text-muted)" font-family="Arial, sans-serif">Model exploits reward model weaknesses</text>
   <rect x="72.4324" y="156.000021538463" width="518.9189" height="124.923083550296" rx="6.226494425112" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.5719"/>
   <text x="331.8918" y="191.69237727811" text-anchor="middle" font-size="16.434832035084" fill="var(--text)" font-family="Arial, sans-serif">Prompt: "Write a poem about nature"</text>
   <text x="331.8918" y="223.815271289935" text-anchor="middle" font-size="16.434832035084" fill="var(--danger-accent)" font-family="Arial, sans-serif">"AMAZING INCREDIBLE WONDERFUL</text>
   <text x="331.8918" y="248.799995692307" text-anchor="middle" font-size="16.434832035084" fill="var(--danger-accent)" font-family="Arial, sans-serif">NATURE IS THE BEST!!!!"</text>
-  <rect x="72.4324" y="298.769121420113" width="518.9189" height="53.538479763315" rx="6.226494425112" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="72.4324" y="298.769121420113" width="518.9189" height="53.538479763315" rx="6.226494425112" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="331.8918" y="334.46147715976" text-anchor="middle" font-size="16.434832035084" fill="var(--danger-accent)" font-family="Arial, sans-serif">High reward score but garbage output</text>
-  <rect x="656.2162" y="40" width="583.7838" height="339.076894911241" rx="6.226494425112" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="656.2162" y="40" width="583.7838" height="339.076894911241" rx="6.226494425112" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="948.1082" y="84.615417751481" text-anchor="middle" font-size="23.008764849117" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">With KL Penalty</text>
   <text x="948.1082" y="129.230727810649" text-anchor="middle" font-size="18.078315238592" fill="var(--text-muted)" font-family="Arial, sans-serif">Model stays close to SFT model</text>
   <text x="948.1082" y="173.846037869816" text-anchor="middle" font-size="18.078315238592" fill="var(--text-muted)" font-family="Arial, sans-serif">while improving on preferences</text>
@@ -112,13 +107,13 @@
   <text x="948.1082" y="254.153811360945" text-anchor="middle" font-size="16.434832035084" fill="var(--text)" font-family="Arial, sans-serif">KL = policy(x) * log(policy(x)/ref(x))</text>
   <text x="948.1082" y="298.769121420113" text-anchor="middle" font-size="16.434832035084" fill="var(--ok-accent)" font-family="Arial, sans-serif">Sweet spot: KL ~ 5-15 nats</text>
   <text x="948.1082" y="334.46147715976" text-anchor="middle" font-size="16.434832035084" fill="var(--text-muted)" font-family="Arial, sans-serif">Balance learning and stability</text>
-  <rect x="153.5135" y="423.692204970409" width="972.973" height="107.076851834316" rx="6.226494425112" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="153.5135" y="423.692204970409" width="972.973" height="107.076851834316" rx="6.226494425112" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="468.307730414203" text-anchor="middle" font-size="19.721902217008" fill="var(--danger-accent)" font-family="Arial, sans-serif">KL too high: model is drifting -&gt; increase penalty</text>
   <text x="640" y="503.999978461537" text-anchor="middle" font-size="19.721902217008" fill="var(--danger-accent)" font-family="Arial, sans-serif">KL too low: model isn't learning -&gt; decrease penalty</text>
   <rect x="315.6757" y="566.461520236685" width="648.6487" height="53.538479763315" rx="6.226494425112" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="315.6757" y="566.461520236685" width="215.6757" height="53.538479763315" rx="6.226494425112" fill="url(#grad-danger)" opacity="0.3" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="531.3513" y="566.461520236685" width="217.2973" height="53.538479763315" fill="url(#grad-ok)" opacity="0.3" rx="6.226494425112" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="748.6487" y="566.461520236685" width="215.6757" height="53.538479763315" rx="6.226494425112" fill="url(#grad-danger)" opacity="0.3" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="315.6757" y="566.461520236685" width="215.6757" height="53.538479763315" rx="6.226494425112" fill="url(#grad-danger)" opacity="0.3" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="531.3513" y="566.461520236685" width="217.2973" height="53.538479763315" fill="url(#grad-ok)" opacity="0.3" rx="6.226494425112" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="748.6487" y="566.461520236685" width="215.6757" height="53.538479763315" rx="6.226494425112" fill="url(#grad-danger)" opacity="0.3" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="422.7027" y="602.153875976333" text-anchor="middle" font-size="16.434832035084" fill="var(--danger-accent)" font-family="Arial, sans-serif">Too low</text>
   <text x="640" y="602.153875976333" text-anchor="middle" font-size="16.434832035084" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Sweet spot</text>
   <text x="857.2973" y="602.153875976333" text-anchor="middle" font-size="16.434832035084" fill="var(--danger-accent)" font-family="Arial, sans-serif">Too high</text>

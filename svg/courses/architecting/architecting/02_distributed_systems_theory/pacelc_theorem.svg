@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -99,7 +94,7 @@
 
   <!-- Decision tree -->
   <!-- Root: Is there a partition? -->
-  <rect x="433.1034" y="40" width="413.7931" height="63.272727272727" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="433.1034" y="40" width="413.7931" height="63.272727272727" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="79.018181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800371852618" font-weight="bold" fill="var(--primary-accent)">Is there a network partition?</text>
 
   <!-- Yes branch -->
@@ -107,19 +102,19 @@
   <text x="360.6897" y="129.636363636364" font-family="Arial, sans-serif" font-size="16.711430236654" font-weight="bold" fill="var(--danger-accent)">Yes (P)</text>
 
   <!-- PAC box -->
-  <rect x="122.7586" y="166.545454545455" width="331.0345" height="63.272727272727" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="122.7586" y="166.545454545455" width="331.0345" height="63.272727272727" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="288.2759" y="205.563636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711430236654" font-weight="bold" fill="var(--danger-accent)">Choose: Availability or Consistency</text>
 
   <!-- PA choice -->
   <line x1="205.5172" y1="229.818181818182" x2="153.7931" y2="282.545454545455" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="40" y="282.545454545455" width="227.5862" height="105.454545454545" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="282.545454545455" width="227.5862" height="105.454545454545" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="153.7931" y="319.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711430236654" font-weight="bold" fill="var(--warn-accent)">PA: Availability</text>
   <text x="153.7931" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.533547004724" fill="var(--text-muted)">Accept stale reads</text>
   <text x="153.7931" y="366.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.533547004724" fill="var(--text-muted)">during partition</text>
 
   <!-- PC choice -->
   <line x1="371.0345" y1="229.818181818182" x2="422.7586" y2="282.545454545455" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="308.9655" y="282.545454545455" width="227.5862" height="105.454545454545" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="308.9655" y="282.545454545455" width="227.5862" height="105.454545454545" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="422.7586" y="319.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711430236654" font-weight="bold" fill="var(--primary-accent)">PC: Consistency</text>
   <text x="422.7586" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.533547004724" fill="var(--text-muted)">Reject requests to</text>
   <text x="422.7586" y="366.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.533547004724" fill="var(--text-muted)">ensure correctness</text>
@@ -129,19 +124,19 @@
   <text x="908.9655" y="129.636363636364" font-family="Arial, sans-serif" font-size="16.711430236654" font-weight="bold" fill="var(--ok-accent)">No (E)</text>
 
   <!-- ELC box -->
-  <rect x="826.2069" y="166.545454545455" width="331.0345" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="826.2069" y="166.545454545455" width="331.0345" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="991.7241" y="205.563636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711430236654" font-weight="bold" fill="var(--ok-accent)">Choose: Latency or Consistency</text>
 
   <!-- EL choice -->
   <line x1="908.9655" y1="229.818181818182" x2="857.2414" y2="282.545454545455" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="743.4483" y="282.545454545455" width="227.5862" height="105.454545454545" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="743.4483" y="282.545454545455" width="227.5862" height="105.454545454545" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="857.2414" y="319.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711430236654" font-weight="bold" fill="var(--ok-accent)">EL: Latency</text>
   <text x="857.2414" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.533547004724" fill="var(--text-muted)">Faster responses</text>
   <text x="857.2414" y="366.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.533547004724" fill="var(--text-muted)">eventual consistency</text>
 
   <!-- EC choice -->
   <line x1="1074.4828" y1="229.818181818182" x2="1126.2069" y2="282.545454545455" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="1012.4138" y="282.545454545455" width="227.5862" height="105.454545454545" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1012.4138" y="282.545454545455" width="227.5862" height="105.454545454545" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1126.2069" y="319.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711430236654" font-weight="bold" fill="var(--primary-accent)">EC: Consistency</text>
   <text x="1126.2069" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.533547004724" fill="var(--text-muted)">Synchronous replication</text>
   <text x="1126.2069" y="366.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.533547004724" fill="var(--text-muted)">higher latency</text>

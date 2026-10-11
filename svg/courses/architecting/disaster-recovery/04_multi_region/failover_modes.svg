@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -101,12 +96,12 @@
   <text x="971.034482758621" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889318714684" font-weight="bold" fill="var(--text-muted)">Active-Active</text>
   <line x1="640" y1="82.181818181818" x2="640" y2="609.454545454545" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
 
-  <rect x="40" y="145.454545454545" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="145.454545454545" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="164.137931034483" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--ok-text)">Region A — primary</text>
   <text x="164.137931034483" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">100% traffic</text>
   <text x="164.137931034483" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">writes &amp; reads</text>
 
-  <rect x="329.655172413793" y="145.454545454545" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="329.655172413793" y="145.454545454545" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="453.793103448276" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--warn-text)">Region B — standby</text>
   <text x="453.793103448276" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">replicating async</text>
   <text x="453.793103448276" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">read-only or idle</text>
@@ -114,7 +109,7 @@
   <path d="M 288.275862068966 208.727272727273 L 329.655172413793 208.727272727273" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
   <text x="308.965517241379" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">replication</text>
 
-  <rect x="40" y="345.818181818182" width="537.931034482759" height="63.272727272727" rx="8.355727485873" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="345.818181818182" width="537.931034482759" height="63.272727272727" rx="8.355727485873" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="308.965517241379" y="382.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.666989036013" font-weight="bold" fill="var(--danger-text)">Failover: promote B, redirect DNS</text>
 
   <text x="308.965517241379" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--text)">Trade-offs</text>
@@ -123,12 +118,12 @@
   <text x="60.689655172414" y="530.363636363636" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-accent)">- minutes of downtime</text>
   <text x="60.689655172414" y="554.618181818182" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--danger-accent)">- async = data loss window</text>
 
-  <rect x="702.068965517241" y="145.454545454545" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="702.068965517241" y="145.454545454545" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="826.206896551724" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--ok-text)">Region A</text>
   <text x="826.206896551724" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">50% traffic</text>
   <text x="826.206896551724" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">writes &amp; reads</text>
 
-  <rect x="991.724137931035" y="145.454545454545" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="991.724137931035" y="145.454545454545" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1115.862068965517" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711454971747" font-weight="bold" fill="var(--ok-text)">Region B</text>
   <text x="1115.862068965517" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">50% traffic</text>
   <text x="1115.862068965517" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">writes &amp; reads</text>
@@ -137,7 +132,7 @@
   <path d="M 991.724137931035 229.818181818182 L 950.344827586207 229.818181818182" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
   <text x="971.034482758621" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--text-muted)">bidirectional</text>
 
-  <rect x="702.068965517241" y="345.818181818182" width="537.931034482759" height="63.272727272727" rx="8.355727485873" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="702.068965517241" y="345.818181818182" width="537.931034482759" height="63.272727272727" rx="8.355727485873" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="971.034482758621" y="382.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.666989036013" font-weight="bold" fill="var(--danger-text)">Failover: drain failed region from LB</text>
 
   <text x="971.034482758621" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" font-weight="bold" fill="var(--text)">Trade-offs</text>

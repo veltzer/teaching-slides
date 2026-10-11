@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -100,25 +95,25 @@
   <text x="640" y="80.347826086957" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.095445133606" font-weight="bold" fill="var(--text)">Smoothing redistributes mass to unseen n-grams</text>
   <text x="640" y="105.565217391304" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.065076227458" fill="var(--text-muted)">MLE alone gives zero probability to anything not in training</text>
 
-  <rect x="40" y="150.95652173913" width="290" height="201.739130434783" rx="14.060737812294" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="150.95652173913" width="290" height="201.739130434783" rx="14.060737812294" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="185" y="196.347826086957" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.095445133606" font-weight="bold" fill="var(--danger-text)">MLE</text>
   <text x="185" y="241.739130434783" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.060737812294" fill="var(--danger-text)">raw count ratios</text>
   <text x="185" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.060737812294" fill="var(--danger-text)">zero for unseen</text>
   <text x="185" y="317.391304347826" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399397131" fill="var(--danger-text)">unusable in practice</text>
 
-  <rect x="350" y="150.95652173913" width="290" height="201.739130434783" rx="14.060737812294" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350" y="150.95652173913" width="290" height="201.739130434783" rx="14.060737812294" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="495" y="196.347826086957" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.095445133606" font-weight="bold" fill="var(--warn-text)">Laplace</text>
   <text x="495" y="241.739130434783" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.060737812294" fill="var(--warn-text)">add-one to all counts</text>
   <text x="495" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.060737812294" fill="var(--warn-text)">uniform prior</text>
   <text x="495" y="317.391304347826" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399397131" fill="var(--warn-text)">over-corrects badly</text>
 
-  <rect x="660" y="150.95652173913" width="290" height="201.739130434783" rx="14.060737812294" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="150.95652173913" width="290" height="201.739130434783" rx="14.060737812294" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="805" y="196.347826086957" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.095445133606" font-weight="bold" fill="var(--info-text)">Good-Turing</text>
   <text x="805" y="241.739130434783" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.060737812294" fill="var(--info-text)">use singletons to</text>
   <text x="805" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.060737812294" fill="var(--info-text)">estimate unseen mass</text>
   <text x="805" y="317.391304347826" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399397131" fill="var(--info-text)">unstable at high counts</text>
 
-  <rect x="970" y="150.95652173913" width="270" height="201.739130434783" rx="14.060737812294" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="970" y="150.95652173913" width="270" height="201.739130434783" rx="14.060737812294" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1105" y="196.347826086957" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.095445133606" font-weight="bold" fill="var(--ok-text)">Kneser-Ney</text>
   <text x="1105" y="241.739130434783" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.060737812294" fill="var(--ok-text)">context diversity</text>
   <text x="1105" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.060737812294" fill="var(--ok-text)">drives back-off</text>

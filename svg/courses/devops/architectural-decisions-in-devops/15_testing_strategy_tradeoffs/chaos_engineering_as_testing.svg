@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,19 +90,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="312" height="170.5882" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="312" height="170.5882" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="196.0001" y="108.2353" text-anchor="middle" font-size="28.0416" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">1. Steady State</text>
   <text x="196.0001" y="159.4118" text-anchor="middle" font-size="25.4923" font-family="Arial, sans-serif" fill="var(--ok-text)">Define normal behavior</text>
-  <rect x="472" y="40" width="312" height="170.5882" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="472" y="40" width="312" height="170.5882" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="628" y="108.2353" text-anchor="middle" font-size="28.0416" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">2. Hypothesis</text>
   <text x="628" y="159.4118" text-anchor="middle" font-size="25.4923" font-family="Arial, sans-serif" fill="var(--warn-text)">Predict system response</text>
-  <rect x="904" y="40" width="336" height="170.5882" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="904" y="40" width="336" height="170.5882" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="1072" y="108.2353" text-anchor="middle" font-size="28.0416" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">3. Inject Fault</text>
   <text x="1072" y="159.4118" text-anchor="middle" font-size="25.4923" font-family="Arial, sans-serif" fill="var(--warn-text)">Kill pod, add latency</text>
-  <rect x="256" y="449.4118" width="336" height="170.5882" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="256" y="449.4118" width="336" height="170.5882" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="424" y="517.6471" text-anchor="middle" font-size="28.0416" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">4. Observe</text>
   <text x="424" y="568.8235" text-anchor="middle" font-size="25.4923" font-family="Arial, sans-serif" fill="var(--danger-text)">Compare to hypothesis</text>
-  <rect x="712" y="449.4118" width="336" height="170.5882" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="712" y="449.4118" width="336" height="170.5882" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="880" y="517.6471" text-anchor="middle" font-size="28.0416" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">5. Learn / Fix</text>
   <text x="880" y="568.8235" text-anchor="middle" font-size="25.4923" font-family="Arial, sans-serif" fill="var(--primary-text)">Improve resilience</text>
   <line x1="352" y1="125.2941" x2="472" y2="125.2941" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>

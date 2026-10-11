@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,25 +93,25 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046200557" font-weight="bold" fill="var(--text)">Anatomy of a Tool Call</text>
 
-  <rect x="40" y="103.272727272727" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="103.272727272727" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="164.137931034483" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--primary-text)">LLM</text>
   <text x="164.137931034483" y="171.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">decides to call</text>
   <text x="164.137931034483" y="196.072727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">emits structured</text>
   <text x="164.137931034483" y="217.163636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--primary-text)">JSON arguments</text>
 
-  <rect x="371.034482758621" y="103.272727272727" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="371.034482758621" y="103.272727272727" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="495.172413793103" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--warn-text)">Runtime</text>
   <text x="495.172413793103" y="171.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">parses JSON</text>
   <text x="495.172413793103" y="196.072727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">validates schema</text>
   <text x="495.172413793103" y="217.163636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--warn-text)">checks ACL</text>
 
-  <rect x="702.068965517241" y="103.272727272727" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="702.068965517241" y="103.272727272727" width="248.275862068966" height="126.545454545455" rx="10.444659357342" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="826.206896551724" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--info-text)">Tool fn</text>
   <text x="826.206896551724" y="171.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">executes</text>
   <text x="826.206896551724" y="196.072727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">may call APIs</text>
   <text x="826.206896551724" y="217.163636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">returns result</text>
 
-  <rect x="1033.103448275862" y="103.272727272727" width="206.896551724138" height="126.545454545455" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1033.103448275862" y="103.272727272727" width="206.896551724138" height="126.545454545455" rx="10.444659357342" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1136.551724137931" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--ok-text)">Result</text>
   <text x="1136.551724137931" y="171.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">structured</text>
   <text x="1136.551724137931" y="196.072727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--ok-text)">JSON or error</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
 
   <!-- Background -->
   <!-- Start: Choose EBS Type (diamond) -->
-  <polygon points="624.070796,40 772.743363,97.049191 624.070796,154.098381 475.39823,97.049191" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <polygon points="624.070796,40 772.743363,97.049191 624.070796,154.098381 475.39823,97.049191" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="624.070796" y="92.295144" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.072683" font-weight="bold" fill="var(--bg)">Choose EBS</text>
   <text x="624.070796" y="111.311541" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.072683" font-weight="bold" fill="var(--bg)">Volume Type</text>
 
@@ -106,7 +101,7 @@
   <line x1="624.070796" y1="154.098381" x2="624.070796" y2="192.131175" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Decision 1: High IOPS needed? -->
-  <polygon points="624.070796,201.639374 804.60177,268.196763 624.070796,334.754152 443.539823,268.196763" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <polygon points="624.070796,201.639374 804.60177,268.196763 624.070796,334.754152 443.539823,268.196763" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="624.070796" y="260.590204" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--primary-accent)">High IOPS</text>
   <text x="624.070796" y="279.606601" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--primary-accent)">needed?</text>
 
@@ -115,7 +110,7 @@
   <text x="857.699115" y="256.786924" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--ok-accent)">Yes</text>
 
   <!-- io2 Block Express leaf -->
-  <rect x="932.035398" y="225.409922" width="297.345133" height="85.573786" rx="6.540969" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="932.035398" y="225.409922" width="297.345133" height="85.573786" rx="6.540969" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1080.707965" y="253.934412" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.087307" font-weight="bold" fill="var(--ok-accent)">io2 Block Express</text>
   <text x="1080.707965" y="275.803321" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.063079" fill="var(--text)">Up to 256K IOPS</text>
   <text x="1080.707965" y="294.819718" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.058168" fill="var(--text-muted)">Databases, SAP HANA, I/O-intensive</text>
@@ -125,7 +120,7 @@
   <text x="640" y="361.377107" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--danger-accent)">No</text>
 
   <!-- Decision 2: Sequential throughput? -->
-  <polygon points="624.070796,382.295144 804.60177,448.852533 624.070796,515.409922 443.539823,448.852533" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <polygon points="624.070796,382.295144 804.60177,448.852533 624.070796,515.409922 443.539823,448.852533" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="624.070796" y="441.245974" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--primary-accent)">Sequential</text>
   <text x="624.070796" y="460.262371" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--primary-accent)">throughput?</text>
 
@@ -134,7 +129,7 @@
   <text x="857.699115" y="437.442695" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--ok-accent)">Yes</text>
 
   <!-- st1 leaf -->
-  <rect x="932.035398" y="406.065588" width="297.345133" height="85.573786" rx="6.540969" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="932.035398" y="406.065588" width="297.345133" height="85.573786" rx="6.540969" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1080.707965" y="434.590288" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.087307" font-weight="bold" fill="var(--warn-accent)">st1 (Throughput)</text>
   <text x="1080.707965" y="456.459092" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.063079" fill="var(--text)">500 MB/s throughput</text>
   <text x="1080.707965" y="475.475489" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.058168" fill="var(--text-muted)">Big data, log processing, streaming</text>
@@ -144,7 +139,7 @@
   <text x="385.132743" y="437.442695" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--danger-accent)">No</text>
 
   <!-- Decision 3: Frequent access? -->
-  <polygon points="188.672566,382.295144 316.106195,448.852533 188.672566,515.409922 61.238938,448.852533" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <polygon points="188.672566,382.295144 316.106195,448.852533 188.672566,515.409922 61.238938,448.852533" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="188.672566" y="441.245974" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--primary-accent)">Frequent</text>
   <text x="188.672566" y="460.262371" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--primary-accent)">access?</text>
 
@@ -153,7 +148,7 @@
   <text x="207.787611" y="368.032794" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--ok-accent)">Yes</text>
 
   <!-- gp3 leaf -->
-  <rect x="40" y="249.180366" width="297.345133" height="85.573786" rx="6.540969" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="249.180366" width="297.345133" height="85.573786" rx="6.540969" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="188.672566" y="277.704961" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.087307" font-weight="bold" fill="var(--ok-accent)">gp3 (General Purpose)</text>
   <text x="188.672566" y="299.573765" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.063079" fill="var(--text)">3,000 baseline IOPS</text>
   <text x="188.672566" y="318.590162" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.058168" fill="var(--text-muted)">Boot volumes, dev/test, most workloads</text>
@@ -163,7 +158,7 @@
   <text x="207.787611" y="536.327959" font-family="Arial, sans-serif" font-size="14.067881" font-weight="bold" fill="var(--danger-accent)">No</text>
 
   <!-- sc1 leaf -->
-  <rect x="40" y="558.196763" width="297.345133" height="61.803237" rx="6.540969" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="558.196763" width="297.345133" height="61.803237" rx="6.540969" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="188.672566" y="583.868951" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.087307" font-weight="bold" fill="var(--info-accent)">sc1 (Cold HDD)</text>
   <text x="188.672566" y="605.73786" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.058168" fill="var(--text-muted)">Lowest cost, infrequent access, archival</text>
 

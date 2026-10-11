@@ -40,27 +40,26 @@
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
   </defs>
 
   <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Image layers stack into one filesystem; container adds a writable top</text>
 
-  <rect x="240" y="120" width="500" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="240" y="120" width="500" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="490" y="158" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">FROM ubuntu:22.04 (base layer, ~80 MB)</text>
 
-  <rect x="240" y="200" width="500" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="240" y="200" width="500" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="490" y="238" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">RUN apt-get install python3 (~50 MB)</text>
 
-  <rect x="240" y="280" width="500" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="240" y="280" width="500" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="490" y="318" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">COPY requirements.txt . (~1 KB)</text>
 
-  <rect x="240" y="360" width="500" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="240" y="360" width="500" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="490" y="398" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">RUN pip install -r requirements.txt (~25 MB)</text>
 
-  <rect x="240" y="440" width="500" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="240" y="440" width="500" height="60" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="490" y="478" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">COPY app.py . (~2 KB)</text>
 
-  <rect x="240" y="520" width="500" height="60" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="240" y="520" width="500" height="60" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="490" y="558" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">writable container layer (per-container)</text>
 
   <text x="800" y="160" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">read-only</text>

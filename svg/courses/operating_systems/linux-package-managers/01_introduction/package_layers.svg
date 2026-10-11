@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,19 +94,19 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.982753492379" font-weight="bold" fill="var(--text)">Linux Package Manager Layers</text>
 
-  <rect x="40" y="91.785714285714" width="1200" height="103.571428571429" rx="10.350983390135" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="91.785714285714" width="1200" height="103.571428571429" rx="10.350983390135" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="128.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.701966780271" font-weight="bold" fill="var(--primary-text)">High-level (resolves dependencies)</text>
   <text x="640" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--primary-text)">apt (Debian/Ubuntu)  dnf (Fedora/RHEL)  pacman (Arch)  zypper (openSUSE)</text>
   <text x="640" y="182.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--primary-text)">"apt install firefox" -- find, fetch, resolve, install</text>
 
   <path d="M 640 195.357142857143 L 640 236.785714285714" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="247.142857142857" width="1200" height="103.571428571429" rx="10.350983390135" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="247.142857142857" width="1200" height="103.571428571429" rx="10.350983390135" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="283.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.701966780271" font-weight="bold" fill="var(--ok-text)">Low-level (one-package operations)</text>
   <text x="640" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--ok-text)">dpkg (.deb files)   rpm (.rpm files)</text>
   <text x="640" y="338.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--ok-text)">No dependency resolution; install/remove a single file</text>
 
-  <rect x="40" y="392.142857142857" width="382.758620689655" height="227.857142857143" rx="10.350983390135" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="392.142857142857" width="382.758620689655" height="227.857142857143" rx="10.350983390135" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="231.379310344828" y="428.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--warn-text)">Universal formats</text>
   <text x="60.689655172414" y="459.464285714286" font-family="Arial, sans-serif" font-size="14.491376746189" font-weight="bold" fill="var(--warn-text)">Flatpak</text>
   <text x="60.689655172414" y="483.285714285714" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--warn-text)">Sandboxed desktop apps</text>
@@ -120,7 +115,7 @@
   <text x="60.689655172414" y="573.392857142857" font-family="Arial, sans-serif" font-size="14.491376746189" font-weight="bold" fill="var(--warn-text)">AppImage</text>
   <text x="60.689655172414" y="597.214285714286" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--warn-text)">One-file portable</text>
 
-  <rect x="448.620689655172" y="392.142857142857" width="382.758620689655" height="227.857142857143" rx="10.350983390135" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.620689655172" y="392.142857142857" width="382.758620689655" height="227.857142857143" rx="10.350983390135" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="428.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--info-text)">Language-specific</text>
   <text x="469.310344827586" y="459.464285714286" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">- pip (Python)</text>
   <text x="469.310344827586" y="483.285714285714" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">- npm/yarn (Node)</text>

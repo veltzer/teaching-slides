@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,31 +91,31 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="300" height="160" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="300" height="160" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="190.0" y="105.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Legacy module</text>
   <text x="190.0" y="132.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">no spec, no tests,</text>
   <text x="190.0" y="153.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">three authors gone</text>
-  <rect x="490" y="40" width="300" height="160" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="40" width="300" height="160" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640.0" y="105.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Agent extracts</text>
   <text x="640.0" y="132.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">what the code does today:</text>
   <text x="640.0" y="153.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">inputs, outputs, errors, quirks</text>
-  <rect x="940" y="40" width="300" height="160" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="160" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1090.0" y="105.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Baseline spec</text>
   <text x="1090.0" y="132.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">observed behavior,</text>
   <text x="1090.0" y="153.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">unknowns marked</text>
   <line x1="340" y1="120" x2="490" y2="120" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="790" y1="120" x2="940" y2="120" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="940" y="260" width="300" height="140" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="260" width="300" height="140" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1090.0" y="315.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Human corrects</text>
   <text x="1090.0" y="342.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">is that quirk a bug</text>
   <text x="1090.0" y="363.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">or a contract?</text>
   <line x1="1090" y1="200" x2="1090" y2="260" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
-  <rect x="490" y="260" width="300" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="260" width="300" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640.0" y="315.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Feature spec</text>
   <text x="640.0" y="342.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">written as a delta:</text>
   <text x="640.0" y="363.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">keep, change, add</text>
   <line x1="940" y1="330" x2="790" y2="330" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <rect x="40" y="260" width="300" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="260" width="300" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="190.0" y="315.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Normal SDD loop</text>
   <text x="190.0" y="342.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">plan, tasks,</text>
   <text x="190.0" y="363.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">implement, verify</text>

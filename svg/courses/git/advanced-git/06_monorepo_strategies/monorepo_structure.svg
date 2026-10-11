@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,13 +94,13 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.763275666852" font-weight="bold" fill="var(--text)">Monorepo Structure</text>
 
   <!-- root box -->
-  <rect x="40" y="77.247706422018" width="1200" height="106.422018348624" rx="6.406909769273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="77.247706422018" width="1200" height="106.422018348624" rx="6.406909769273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="109.174311926606" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.356365897578" font-weight="bold" fill="var(--primary-text)">monorepo</text>
   <text x="640" y="138.97247706422" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.949456128305" fill="var(--primary-text)">trunk-based · CODEOWNERS</text>
   <text x="640" y="164.51376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--primary-text)">atomic cross-cutting changes</text>
 
   <!-- four pillars below -->
-  <rect x="40" y="215.596330275229" width="278.571428571429" height="191.559633027523" rx="6.406909769273" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="215.596330275229" width="278.571428571429" height="191.559633027523" rx="6.406909769273" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="179.285714285714" y="247.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--ok-text)">services/</text>
   <text x="61.428571428571" y="279.449541284404" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--ok-text)">auth/</text>
   <text x="61.428571428571" y="304.990825688073" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--ok-text)">payments/</text>
@@ -113,7 +108,7 @@
   <text x="61.428571428571" y="356.073394495413" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--ok-text)">notifications/</text>
   <text x="61.428571428571" y="388" font-family="Arial, sans-serif" font-size="11.746001243668" font-style="italic" fill="var(--ok-text)">team-owned</text>
 
-  <rect x="350.714285714286" y="215.596330275229" width="278.571428571429" height="191.559633027523" rx="6.406909769273" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350.714285714286" y="215.596330275229" width="278.571428571429" height="191.559633027523" rx="6.406909769273" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="490" y="247.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--warn-text)">libs/</text>
   <text x="372.142857142857" y="279.449541284404" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--warn-text)">shared-types/</text>
   <text x="372.142857142857" y="304.990825688073" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--warn-text)">api-client/</text>
@@ -121,7 +116,7 @@
   <text x="372.142857142857" y="356.073394495413" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--warn-text)">utils/</text>
   <text x="372.142857142857" y="388" font-family="Arial, sans-serif" font-size="11.746001243668" font-style="italic" fill="var(--warn-text)">platform team owns</text>
 
-  <rect x="661.428571428571" y="215.596330275229" width="278.571428571429" height="191.559633027523" rx="6.406909769273" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="661.428571428571" y="215.596330275229" width="278.571428571429" height="191.559633027523" rx="6.406909769273" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="800.714285714286" y="247.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--info-text)">infra/</text>
   <text x="682.857142857143" y="279.449541284404" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--info-text)">terraform/</text>
   <text x="682.857142857143" y="304.990825688073" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--info-text)">k8s/</text>
@@ -129,7 +124,7 @@
   <text x="682.857142857143" y="356.073394495413" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--info-text)">ci-templates/</text>
   <text x="682.857142857143" y="388" font-family="Arial, sans-serif" font-size="11.746001243668" font-style="italic" fill="var(--info-text)">infra owns</text>
 
-  <rect x="972.142857142857" y="215.596330275229" width="267.857142857143" height="191.559633027523" rx="6.406909769273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="972.142857142857" y="215.596330275229" width="267.857142857143" height="191.559633027523" rx="6.406909769273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1106.071428571428" y="247.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--primary-text)">tools/</text>
   <text x="993.571428571429" y="279.449541284404" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--primary-text)">build/</text>
   <text x="993.571428571429" y="304.990825688073" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--primary-text)">lint/</text>

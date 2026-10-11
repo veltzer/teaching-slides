@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,11 +91,11 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="71.228070175439" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="71.228070175439" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="75.614035087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--primary-text)">Executor JVM Heap</text>
   <text x="640" y="98" text-anchor="middle" font-family="Courier New, monospace" font-size="14.122273063895" fill="var(--primary-text)">spark.executor.memory</text>
 
-  <rect x="40" y="131.578947368421" width="360" height="234.035087719298" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="131.578947368421" width="360" height="234.035087719298" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="220" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--ok-text)">Execution (~30%)</text>
   <text x="220" y="212.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">Shuffle buffers</text>
   <text x="220" y="243.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">Joins, aggregations</text>
@@ -108,7 +103,7 @@
   <text x="220" y="309.649122807018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Spills to disk</text>
   <text x="220" y="340.175438596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Borrows Storage</text>
 
-  <rect x="420" y="131.578947368421" width="360" height="234.035087719298" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="420" y="131.578947368421" width="360" height="234.035087719298" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="600" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--info-text)">Storage (~30%)</text>
   <text x="600" y="212.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--info-text)">Cached DataFrames</text>
   <text x="600" y="243.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--info-text)">Broadcast variables</text>
@@ -116,7 +111,7 @@
   <text x="600" y="309.649122807018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">LRU eviction</text>
   <text x="600" y="340.175438596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Spills to disk</text>
 
-  <rect x="800" y="131.578947368421" width="440" height="234.035087719298" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="800" y="131.578947368421" width="440" height="234.035087719298" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1020" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--warn-text)">User + Reserved (~40%)</text>
   <text x="1020" y="212.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">User structures, UDFs</text>
   <text x="1020" y="243.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">RDD metadata</text>

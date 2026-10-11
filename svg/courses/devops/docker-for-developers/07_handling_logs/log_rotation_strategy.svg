@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,19 +91,19 @@
     </marker>
   </defs>
   <text x="629.0909" y="40" text-anchor="middle" font-size="23.6667" fill="var(--text-muted)" font-family="Arial, sans-serif">Log rotation prevents disk exhaustion</text>
-  <rect x="40" y="82.963" width="349.0909" height="268.5186" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="40" y="82.963" width="349.0909" height="268.5186" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="214.5455" y="161.7284" text-anchor="middle" font-size="23.6667" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Active Log</text>
   <text x="214.5455" y="226.1729" text-anchor="middle" font-size="21.5151" font-family="Arial, sans-serif" fill="var(--primary-text)">container-json.log</text>
   <text x="214.5455" y="287.037" text-anchor="middle" font-size="21.5151" fill="var(--text-muted)" font-family="Arial, sans-serif">max-size: 10m</text>
   <line x1="389.0909" y1="215.4321" x2="472" y2="215.4321" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="432.7272" y="183.2099" text-anchor="middle" font-size="21.5151" fill="var(--text-muted)" font-family="Arial, sans-serif">rotate</text>
-  <rect x="476.3637" y="82.963" width="349.0909" height="268.5186" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="476.3637" y="82.963" width="349.0909" height="268.5186" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
   <text x="650.9091" y="161.7284" text-anchor="middle" font-size="23.6667" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">Rotated Logs</text>
   <text x="650.9091" y="226.1729" text-anchor="middle" font-size="21.5151" font-family="Arial, sans-serif" fill="var(--info-text)">log.1, log.2, log.3</text>
   <text x="650.9091" y="287.037" text-anchor="middle" font-size="21.5151" fill="var(--text-muted)" font-family="Arial, sans-serif">max-file: 3</text>
   <line x1="825.4546" y1="215.4321" x2="908.3637" y2="215.4321" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="869.0909" y="183.2099" text-anchor="middle" font-size="21.5151" fill="var(--text-muted)" font-family="Arial, sans-serif">oldest</text>
-  <rect x="912.7272" y="82.963" width="327.2728" height="268.5186" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="912.7272" y="82.963" width="327.2728" height="268.5186" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
   <text x="1076.3636" y="161.7284" text-anchor="middle" font-size="23.6667" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">Discarded</text>
   <text x="1076.3636" y="226.1729" text-anchor="middle" font-size="21.5151" font-family="Arial, sans-serif" fill="var(--danger-text)">Oldest file removed</text>
   <text x="1076.3636" y="287.037" text-anchor="middle" font-size="21.5151" fill="var(--text-muted)" font-family="Arial, sans-serif">when limit reached</text>

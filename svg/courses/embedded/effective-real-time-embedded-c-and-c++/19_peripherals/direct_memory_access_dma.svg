@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -103,7 +98,7 @@
   <text x="1100.714286" y="116.603661" text-anchor="middle" font-size="28.153402" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Peripheral</text>
   <text x="1100.714286" y="149.433898" text-anchor="middle" font-size="18.408047" fill="var(--text-muted)" font-family="Courier New, monospace">UART / SPI</text>
   <text x="1100.714286" y="175.698007" text-anchor="middle" font-size="18.408047" fill="var(--text-muted)" font-family="Courier New, monospace">data register</text>
-  <rect x="500.714286" y="85.96236" width="278.571429" height="175.094373" rx="7.476108" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="500.714286" y="85.96236" width="278.571429" height="175.094373" rx="7.476108" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="162.56602" text-anchor="middle" font-size="30.319106" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">DMA</text>
   <text x="640" y="195.396122" text-anchor="middle" font-size="18.408047" fill="var(--primary-accent)" font-family="Arial, sans-serif">controller</text>
   <text x="640" y="223.849166" text-anchor="middle" font-size="16.242343" fill="var(--primary-accent)" font-family="Arial, sans-serif">src · dst · count</text>
@@ -120,7 +115,7 @@
   <path d="M 500.714286 315.773614 Q 275.714286 381.434088 500.714286 468.981207" stroke="var(--text-faint)" stroke-width="1.7778" stroke-dasharray="4.4444 2.6667" fill="none" marker-end="url(#arrow)"/>
   <text x="211.428571" y="348.603851" text-anchor="middle" font-size="15.159429" fill="var(--text-faint)" font-family="Arial, sans-serif">3. IRQ on complete</text>
   <text x="640" y="40" text-anchor="middle" font-size="19.490836" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">2. DMA transfers data without CPU involvement</text>
-  <rect x="168.571429" y="545.585004" width="942.857143" height="74.414996" rx="7.476108" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="168.571429" y="545.585004" width="942.857143" height="74.414996" rx="7.476108" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="578.415241" text-anchor="middle" font-size="19.490836" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">CPU is freed for computation while DMA handles bulk data movement</text>
   <text x="640" y="606.868014" text-anchor="middle" font-size="16.242343" fill="var(--text-muted)" font-family="Arial, sans-serif">Typical use: UART RX/TX, ADC continuous scan, SPI flash read — all without polling</text>
 </svg>

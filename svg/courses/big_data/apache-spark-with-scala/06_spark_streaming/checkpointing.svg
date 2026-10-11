@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,7 +92,7 @@
   </defs>
 
 
-  <rect x="40" y="40" width="580" height="250.196078431372" rx="10.664215404618" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="580" height="250.196078431372" rx="10.664215404618" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="330" y="85.490196078432" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.461273890158" font-weight="bold" fill="var(--primary-text)">Metadata Checkpoint</text>
   <text x="330" y="125.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--primary-text)">Driver recovery info</text>
   <text x="330" y="165.098039215687" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--primary-text)">Config + DStream DAG</text>
@@ -105,7 +100,7 @@
   <text x="330" y="233.333333333334" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--primary-text)">Kafka offsets</text>
   <text x="330" y="273.137254901961" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.929901566465" font-style="italic" fill="var(--primary-text)">small; every batch</text>
 
-  <rect x="660" y="40" width="580" height="250.196078431372" rx="10.664215404618" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="40" width="580" height="250.196078431372" rx="10.664215404618" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="950" y="85.490196078432" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.461273890158" font-weight="bold" fill="var(--info-text)">Data Checkpoint</text>
   <text x="950" y="125.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--info-text)">Truncates RDD lineage</text>
   <text x="950" y="165.098039215687" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--info-text)">Stateful op RDDs</text>
@@ -113,12 +108,12 @@
   <text x="950" y="233.333333333334" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--info-text)">Avoids stack overflow</text>
   <text x="950" y="273.137254901961" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.929901566465" font-style="italic" fill="var(--info-text)">larger; every N batches</text>
 
-  <rect x="40" y="324.313725490196" width="1200" height="136.470588235294" rx="10.664215404618" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="324.313725490196" width="1200" height="136.470588235294" rx="10.664215404618" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="364.117647058823" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.461273890158" font-weight="bold" fill="var(--ok-text)">HDFS-Compatible Storage</text>
   <text x="640" y="403.921568627452" text-anchor="middle" font-family="Courier New, monospace" font-size="17.062744647388" fill="var(--ok-text)">ssc.checkpoint("hdfs://...")</text>
   <text x="640" y="438.039215686275" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--ok-text)">S3, GCS, Azure — replicated, durable</text>
 
-  <rect x="40" y="494.901960784314" width="1200" height="125.098039215686" rx="10.664215404618" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="494.901960784314" width="1200" height="125.098039215686" rx="10.664215404618" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="534.705882352941" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.461273890158" font-weight="bold" fill="var(--danger-text)">Recovery</text>
   <text x="640" y="574.509803921569" text-anchor="middle" font-family="Courier New, monospace" font-size="17.062744647388" fill="var(--danger-text)">StreamingContext.getOrCreate(dir, factory)</text>
   <text x="640" y="606.35294117647" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--danger-text)">Replays last checkpoint; at-least-once default</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,16 +90,16 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="379.130435" y="40" width="782.608696" height="77.620798" rx="8.187237" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="379.130435" y="40" width="782.608696" height="77.620798" rx="8.187237" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="770.434783" y="72.342044" text-anchor="middle" font-size="23.716516" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Writable Container Layer</text>
   <text x="770.434783" y="98.215598" text-anchor="middle" font-size="17.787319" fill="var(--danger-accent)" font-family="Arial, sans-serif">(runtime writes, ephemeral)</text>
   <line x1="770.434783" y1="117.620798" x2="770.434783" y2="141.338368" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
   <text x="861.73913" y="134.869879" font-size="15.415749" fill="var(--text-muted)" font-family="Arial, sans-serif">Read-only image layers below</text>
-  <rect x="379.130435" y="145.650605" width="782.608696" height="77.620798" rx="8.187237" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="379.130435" y="145.650605" width="782.608696" height="77.620798" rx="8.187237" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="770.434783" y="176.914523" text-anchor="middle" font-size="23.716516" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Layer 4 — CMD / ENTRYPOINT</text>
   <text x="770.434783" y="202.788077" text-anchor="middle" font-size="17.787319" fill="var(--primary-accent)" font-family="Arial, sans-serif">CMD ["python", "app.py"]</text>
   <line x1="770.434783" y1="223.271403" x2="770.434783" y2="244.832721" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
-  <rect x="379.130435" y="249.145091" width="782.608696" height="77.620798" rx="8.187237" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="379.130435" y="249.145091" width="782.608696" height="77.620798" rx="8.187237" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="770.434783" y="280.408875" text-anchor="middle" font-size="23.716516" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Layer 3 — Application Code</text>
   <text x="770.434783" y="306.282564" text-anchor="middle" font-size="17.787319" fill="var(--primary-accent)" font-family="Arial, sans-serif">COPY src/ /app/  (your files)</text>
   <line x1="770.434783" y1="326.765889" x2="770.434783" y2="348.327073" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
@@ -116,15 +111,15 @@
   <text x="770.434783" y="487.397714" text-anchor="middle" font-size="23.716516" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Layer 1 — Base OS</text>
   <text x="770.434783" y="513.271269" text-anchor="middle" font-size="17.787319" fill="var(--primary-accent)" font-family="Arial, sans-serif">FROM ubuntu:22.04</text>
   <line x1="770.434783" y1="533.754595" x2="770.434783" y2="555.315912" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
-  <rect x="379.130435" y="559.628283" width="782.608696" height="60.371717" rx="8.187237" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="379.130435" y="559.628283" width="782.608696" height="60.371717" rx="8.187237" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="770.434783" y="590.892067" text-anchor="middle" font-size="21.34481" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Layer 0 — Scratch / Bootfs</text>
   <text x="770.434783" y="611.375393" text-anchor="middle" font-size="15.415749" fill="var(--ok-accent)" font-family="Arial, sans-serif">(shared across all images on this host)</text>
-  <rect x="40" y="40" width="260.869565" height="60.371717" rx="8.187237" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="260.869565" height="60.371717" rx="8.187237" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="170.434783" y="65.873555" text-anchor="middle" font-size="16.601397" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Writable (container)</text>
   <text x="170.434783" y="87.435006" text-anchor="middle" font-size="14.229964" fill="var(--danger-accent)" font-family="Arial, sans-serif">Created at runtime</text>
   <rect x="40" y="117.620798" width="260.869565" height="43.12277" rx="8.187237" fill="var(--primary-accent)"/>
   <text x="170.434783" y="144.572479" text-anchor="middle" font-size="16.601397" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Read-only (image)</text>
-  <rect x="40" y="177.992649" width="260.869565" height="43.12277" rx="8.187237" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="177.992649" width="260.869565" height="43.12277" rx="8.187237" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="170.434783" y="204.944196" text-anchor="middle" font-size="16.601397" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Shared bootfs</text>
   <text x="1240" y="190.929493" font-size="16.601397" fill="var(--text-muted)" font-family="Arial, sans-serif">Each layer is a</text>
   <text x="1240" y="210.334692" font-size="16.601397" fill="var(--text-muted)" font-family="Arial, sans-serif">content-addressed</text>

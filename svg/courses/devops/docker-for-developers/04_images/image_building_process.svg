@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="360" height="290" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="360" height="290" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="220" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Dockerfile</text>
   <text x="220" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">FROM python:3.12-slim</text>
   <text x="220" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">WORKDIR /app</text>
@@ -106,7 +101,7 @@
   <text x="220" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">CMD ["python", "app.py"]</text>
   <text x="220" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">recipe</text>
 
-  <rect x="460" y="40" width="360" height="290" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="460" y="40" width="360" height="290" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">docker build</text>
   <text x="640" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">parse</text>
   <text x="640" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">run in container</text>
@@ -116,7 +111,7 @@
   <text x="640" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">BuildKit parallel</text>
   <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">layer engine</text>
 
-  <rect x="880" y="40" width="360" height="290" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="880" y="40" width="360" height="290" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1060" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Image</text>
   <text x="1060" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">read-only layers</text>
   <text x="1060" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">(tarballs)</text>

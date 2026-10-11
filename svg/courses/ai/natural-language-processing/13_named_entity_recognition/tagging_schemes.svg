@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -100,7 +95,7 @@
   <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--surface)">Sentence</text>
   <text x="640" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--surface)">Marie    Curie    visited    Paris    yesterday    .</text>
 
-  <rect x="40" y="170" width="1200" height="135" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="170" width="1200" height="135" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="115" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">BIO</text>
   <text x="115" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">begin</text>
   <text x="115" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">inside</text>
@@ -113,7 +108,7 @@
   <text x="1140" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">O</text>
   <text x="640" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">single tag distinguishes only span boundaries by type</text>
 
-  <rect x="40" y="335" width="1200" height="135" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="335" width="1200" height="135" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="115" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">BIOES</text>
   <text x="115" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">+ end</text>
   <text x="115" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">+ single</text>
@@ -125,7 +120,7 @@
   <text x="1140" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">O</text>
   <text x="640" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">explicit end and single-token markers help downstream decoding</text>
 
-  <rect x="40" y="500" width="1200" height="120" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="500" width="1200" height="120" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Limitation</text>
   <text x="640" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">A flat tag per token cannot encode nested or overlapping entities.</text>
   <text x="640" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Nested NER needs span enumeration or stacked label layers.</text>

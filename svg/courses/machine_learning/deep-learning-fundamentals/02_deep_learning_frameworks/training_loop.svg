@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -97,27 +92,27 @@
   </defs>
   <text x="634.285714285714" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.613045019179" font-weight="bold" fill="var(--text)">The Training Loop</text>
 
-  <rect x="40" y="129.230769230769" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="129.230769230769" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="154.285714285714" y="168.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--info-text)">Get batch</text>
   <text x="154.285714285714" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--info-text)">x, y from loader</text>
 
-  <rect x="40" y="263.076923076923" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="263.076923076923" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="154.285714285714" y="302.115384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--primary-text)">Forward</text>
   <text x="154.285714285714" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--primary-text)">y_hat = model(x)</text>
 
-  <rect x="40" y="396.923076923077" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="396.923076923077" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="154.285714285714" y="435.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--danger-text)">Loss</text>
   <text x="154.285714285714" y="463.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--danger-text)">L = loss_fn(y_hat, y)</text>
 
-  <rect x="40" y="530.769230769231" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="530.769230769231" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="154.285714285714" y="569.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--warn-text)">Backward</text>
   <text x="154.285714285714" y="597.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--warn-text)">L.backward()</text>
 
-  <rect x="702.857142857143" y="263.076923076923" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="702.857142857143" y="263.076923076923" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="817.142857142857" y="302.115384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--warn-text)">Step</text>
   <text x="817.142857142857" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--warn-text)">opt.step()</text>
 
-  <rect x="702.857142857143" y="396.923076923077" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="702.857142857143" y="396.923076923077" width="228.571428571429" height="89.230769230769" rx="6.774223932681" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="817.142857142857" y="435.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.322671798043" font-weight="bold" fill="var(--ok-text)">Zero grads</text>
   <text x="817.142857142857" y="463.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.677485187476" fill="var(--ok-text)">opt.zero_grad()</text>
 

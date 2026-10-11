@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,17 +90,17 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="137.75000528125" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.166441583516" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="137.75000528125" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.166441583516"/>
   <text x="176.3637" y="79.874918140621" text-anchor="middle" font-size="22.249754521641" fill="var(--code-bg)" font-weight="bold" font-family="Arial, sans-serif">select()</text>
   <line x1="312.7273" y1="47.250100343755" x2="312.7273" y2="170.500010562501" stroke="var(--text-faint)" stroke-width="1.5803"/>
   <text x="330.9092" y="79.874918140621" text-anchor="start" font-size="20.53815588611" fill="var(--text)" font-family="Arial, sans-serif">Pass ALL fds every time → kernel scans all → returns ready ones</text>
   <text x="330.9092" y="112.500052812503" text-anchor="start" font-size="18.826660024605" fill="var(--text-muted)" font-family="Arial, sans-serif">Works on ~1024 fds max. O(n) scan per call.</text>
-  <rect x="40" y="185" width="1200" height="137.75000528125" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.166441583516" filter="url(#shadow)"/>
+  <rect x="40" y="185" width="1200" height="137.75000528125" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.166441583516"/>
   <text x="176.3637" y="224.875023765626" text-anchor="middle" font-size="22.249754521641" fill="var(--code-bg)" font-weight="bold" font-family="Arial, sans-serif">poll()</text>
   <line x1="312.7273" y1="192.24999471875" x2="312.7273" y2="315.499904937495" stroke="var(--text-faint)" stroke-width="1.5803"/>
   <text x="330.9092" y="224.875023765626" text-anchor="start" font-size="20.53815588611" fill="var(--text)" font-family="Arial, sans-serif">Similar to select() but no fd limit.</text>
   <text x="330.9092" y="257.499947187498" text-anchor="start" font-size="18.826660024605" fill="var(--text-muted)" font-family="Arial, sans-serif">Still O(n) — kernel scans the whole list each call.</text>
-  <rect x="40" y="330" width="1200" height="137.75000528125" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.166441583516" filter="url(#shadow)"/>
+  <rect x="40" y="330" width="1200" height="137.75000528125" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.166441583516"/>
   <text x="176.3637" y="369.874918140621" text-anchor="middle" font-size="22.249754521641" fill="var(--code-bg)" font-weight="bold" font-family="Arial, sans-serif">epoll()</text>
   <line x1="312.7273" y1="337.24999471875" x2="312.7273" y2="460.500010562501" stroke="var(--text-faint)" stroke-width="1.5803"/>
   <text x="330.9092" y="369.874918140621" text-anchor="start" font-size="20.53815588611" fill="var(--text)" font-family="Arial, sans-serif">Register fds once; kernel notifies only about ready fds.</text>

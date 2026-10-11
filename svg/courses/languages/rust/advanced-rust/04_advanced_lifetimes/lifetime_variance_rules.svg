@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,28 +92,28 @@
   </defs>
 
 
-  <rect x="40" y="40" width="395" height="225.555555555556" rx="10.363754503432" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="395" height="225.555555555556" rx="10.363754503432" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="237" y="77.592592592592" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509006864" font-weight="bold" fill="var(--ok-text)">Covariant</text>
   <text x="237" y="115.185185185185" text-anchor="middle" font-family="Courier New, monospace" font-size="15.545631755148" fill="var(--ok-text)">&amp;'a T covariant in 'a</text>
   <text x="237" y="152.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304804" fill="var(--ok-text)">If 'long: 'short,</text>
   <text x="237" y="179.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304804" fill="var(--ok-text)">&amp;'long works as &amp;'short</text>
   <text x="237" y="227.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854461" font-style="italic" fill="var(--ok-text)">Longer is a subtype</text>
 
-  <rect x="445" y="40" width="395" height="225.555555555556" rx="10.363754503432" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="40" width="395" height="225.555555555556" rx="10.363754503432" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="642" y="77.592592592592" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509006864" font-weight="bold" fill="var(--warn-text)">Contravariant</text>
   <text x="642" y="115.185185185185" text-anchor="middle" font-family="Courier New, monospace" font-size="15.545631755148" fill="var(--warn-text)">fn(&amp;'a T)</text>
   <text x="642" y="152.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304804" fill="var(--warn-text)">If 'long: 'short,</text>
   <text x="642" y="179.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304804" fill="var(--warn-text)">fn(&amp;'short) fits fn(&amp;'long)</text>
   <text x="642" y="227.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854461" font-style="italic" fill="var(--warn-text)">Shorter is a subtype</text>
 
-  <rect x="850" y="40" width="390" height="225.555555555556" rx="10.363754503432" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="40" width="390" height="225.555555555556" rx="10.363754503432" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1045" y="77.592592592592" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509006864" font-weight="bold" fill="var(--danger-text)">Invariant</text>
   <text x="1045" y="115.185185185185" text-anchor="middle" font-family="Courier New, monospace" font-size="15.545631755148" fill="var(--danger-text)">&amp;'a mut T in T</text>
   <text x="1045" y="152.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304804" fill="var(--danger-text)">No substitution</text>
   <text x="1045" y="179.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304804" fill="var(--danger-text)">Must match exactly</text>
   <text x="1045" y="227.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854461" font-style="italic" fill="var(--danger-text)">Needed for soundness</text>
 
-  <rect x="75" y="297.777777777777" width="1130" height="236.296296296296" rx="10.363754503432" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="75" y="297.777777777777" width="1130" height="236.296296296296" rx="10.363754503432" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="335.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106177" font-weight="bold" fill="var(--primary-text)">Variance of Common Types</text>
 
   <text x="240" y="372.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" font-weight="bold" fill="var(--primary-text)">Type</text>
@@ -141,6 +136,6 @@
   <text x="560" y="495.407407407408" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304804" fill="var(--primary-text)">-</text>
   <text x="935" y="495.407407407408" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304804" fill="var(--primary-text)">T contra, U co</text>
 
-  <rect x="150" y="571.666666666667" width="980" height="48.333333333334" rx="10.363754503432" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="150" y="571.666666666667" width="980" height="48.333333333334" rx="10.363754503432" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="601.740740740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304804" fill="var(--warn-text)">&amp;mut T invariant prevents aliasing tricks</text>
 </svg>

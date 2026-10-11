@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,25 +92,25 @@
   </defs>
   <!-- Left: Three cost streams -->
   <!-- AWS Bill -->
-  <rect x="40" y="40" width="280" height="162.4" rx="7.010849" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="40" width="280" height="52.199936" rx="7.010849" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="78.279936" width="280" height="13.92" fill="url(#grad-primary)" rx="7.010849" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="280" height="162.4" rx="7.010849" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="280" height="52.199936" rx="7.010849" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="78.279936" width="280" height="13.92" fill="url(#grad-primary)" rx="7.010849" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180" y="77.12" font-family="Arial, sans-serif" font-size="21.540716" font-weight="bold" fill="var(--bg)" text-anchor="middle">AWS Bill</text>
   <text x="180" y="127.000064" font-family="Arial, sans-serif" font-size="17.232549" fill="var(--primary-accent)" text-anchor="middle">$45,000/month</text>
   <text x="180" y="156" font-family="Arial, sans-serif" font-size="14.001483" fill="var(--text-faint)" text-anchor="middle">CUR, Cost Explorer</text>
   <text x="180" y="179.2" font-family="Arial, sans-serif" font-size="14.001483" fill="var(--text-faint)" text-anchor="middle">12 accounts, 3 regions</text>
   <!-- Azure Bill -->
-  <rect x="40" y="248.8" width="280" height="162.4" rx="7.010849" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="248.8" width="280" height="52.199936" rx="7.010849" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="287.079936" width="280" height="13.92" fill="url(#grad-info)" rx="7.010849" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="248.8" width="280" height="162.4" rx="7.010849" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="248.8" width="280" height="52.199936" rx="7.010849" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="287.079936" width="280" height="13.92" fill="url(#grad-info)" rx="7.010849" stroke="var(--info-border)" stroke-width="2"/>
   <text x="180" y="285.92" font-family="Arial, sans-serif" font-size="21.540716" font-weight="bold" fill="var(--bg)" text-anchor="middle">Azure Bill</text>
   <text x="180" y="335.800064" font-family="Arial, sans-serif" font-size="17.232549" fill="var(--info-accent)" text-anchor="middle">$28,000/month</text>
   <text x="180" y="364.8" font-family="Arial, sans-serif" font-size="14.001483" fill="var(--text-faint)" text-anchor="middle">Cost Management API</text>
   <text x="180" y="388" font-family="Arial, sans-serif" font-size="14.001483" fill="var(--text-faint)" text-anchor="middle">5 subscriptions, 2 regions</text>
   <!-- GCP Bill -->
-  <rect x="40" y="457.6" width="280" height="162.4" rx="7.010849" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="457.6" width="280" height="52.199936" rx="7.010849" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="495.879936" width="280" height="13.92" fill="url(#grad-ok)" rx="7.010849" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="457.6" width="280" height="162.4" rx="7.010849" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="457.6" width="280" height="52.199936" rx="7.010849" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="495.879936" width="280" height="13.92" fill="url(#grad-ok)" rx="7.010849" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="180" y="494.72" font-family="Arial, sans-serif" font-size="21.540716" font-weight="bold" fill="var(--bg)" text-anchor="middle">GCP Bill</text>
   <text x="180" y="544.600064" font-family="Arial, sans-serif" font-size="17.232549" fill="var(--ok-accent)" text-anchor="middle">$17,000/month</text>
   <text x="180" y="573.6" font-family="Arial, sans-serif" font-size="14.001483" fill="var(--text-faint)" text-anchor="middle">BigQuery Billing Export</text>
@@ -128,7 +123,7 @@
   <rect x="450" y="214" width="380" height="232" rx="7.010849" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="272" font-family="Arial, sans-serif" font-size="23.694682" font-weight="bold" fill="var(--text)" text-anchor="middle">Unified Cost Platform</text>
   <text x="640" y="312.600064" font-family="Arial, sans-serif" font-size="16.155449" fill="var(--text-muted)" text-anchor="middle">CloudHealth / Apptio / Kubecost</text>
-  <rect x="490" y="341.6" width="300" height="40.600064" rx="7.010849" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="490" y="341.6" width="300" height="40.600064" rx="7.010849" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="369.44" font-family="Arial, sans-serif" font-size="17.232549" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Total: $90,000/month</text>
   <text x="640" y="422.8" font-family="Arial, sans-serif" font-size="15.078466" fill="var(--text-faint)" text-anchor="middle">Normalize, tag, allocate, optimize</text>
   <!-- Arrows out to outputs -->
@@ -136,19 +131,19 @@
   <line x1="830" y1="330" x2="930" y2="330" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <line x1="830" y1="388" x2="930" y2="538.8" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <!-- Output 1: Combined Dashboards -->
-  <rect x="930" y="40" width="310" height="162.4" rx="7.010849" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="930" y="40" width="310" height="162.4" rx="7.010849" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1085" y="86.4" font-family="Arial, sans-serif" font-size="21.540716" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Combined Dashboards</text>
   <text x="1085" y="121.2" font-family="Arial, sans-serif" font-size="15.078466" fill="var(--text-muted)" text-anchor="middle">Spend by cloud, service, team</text>
   <text x="1085" y="150.200064" font-family="Arial, sans-serif" font-size="15.078466" fill="var(--text-muted)" text-anchor="middle">Trend analysis, forecasting</text>
   <text x="1085" y="179.2" font-family="Arial, sans-serif" font-size="15.078466" fill="var(--text-faint)" text-anchor="middle">Executive and team views</text>
   <!-- Output 2: Per-team Reports -->
-  <rect x="930" y="248.8" width="310" height="162.4" rx="7.010849" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="930" y="248.8" width="310" height="162.4" rx="7.010849" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1085" y="295.2" font-family="Arial, sans-serif" font-size="21.540716" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Per-Team Reports</text>
   <text x="1085" y="330" font-family="Arial, sans-serif" font-size="15.078466" fill="var(--text-muted)" text-anchor="middle">Chargeback / showback</text>
   <text x="1085" y="359.000064" font-family="Arial, sans-serif" font-size="15.078466" fill="var(--text-muted)" text-anchor="middle">Budget tracking per team</text>
   <text x="1085" y="388" font-family="Arial, sans-serif" font-size="15.078466" fill="var(--text-faint)" text-anchor="middle">Tag-based allocation</text>
   <!-- Output 3: Anomaly Alerts -->
-  <rect x="930" y="457.6" width="310" height="162.4" rx="7.010849" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="930" y="457.6" width="310" height="162.4" rx="7.010849" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1085" y="504" font-family="Arial, sans-serif" font-size="21.540716" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Anomaly Alerts</text>
   <text x="1085" y="538.8" font-family="Arial, sans-serif" font-size="15.078466" fill="var(--text-muted)" text-anchor="middle">Unusual spend detection</text>
   <text x="1085" y="567.800064" font-family="Arial, sans-serif" font-size="15.078466" fill="var(--text-muted)" text-anchor="middle">Budget threshold alerts</text>

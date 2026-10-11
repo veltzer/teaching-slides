@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -101,18 +96,18 @@
   <text x="40" y="238.22796603108" font-size="25.592438799102" fill="var(--text)" font-family="Arial, sans-serif">4. Client sends session ID with every request</text>
   <text x="40" y="304.303760615288" font-size="25.592438799102" fill="var(--text)" font-family="Arial, sans-serif">5. Server looks up session state using the ID</text>
   <text x="40" y="370.379846338723" font-size="25.592438799102" fill="var(--text)" font-family="Arial, sans-serif">6. Session destroyed on logout or timeout</text>
-  <rect x="40" y="436.455786492545" width="259.999982" height="183.544213507455" fill="url(#grad-primary)" rx="7.592468176269" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="436.455786492545" width="259.999982" height="183.544213507455" fill="url(#grad-primary)" rx="7.592468176269" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="169.999881" y="513.544359077069" font-size="27.725162266355" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Client</text>
   <text x="169.999881" y="579.620444800504" font-size="23.459714252702" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(Cookie Store)</text>
   <line x1="299.999982" y1="528.22796603108" x2="495.999868" y2="528.22796603108" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="400" y="502.531726646367" font-size="21.326989706303" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Session ID</text>
   <line x1="500.000018" y1="561.265863323184" x2="303.999912" y2="561.265863323184" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="400" y="616.329171046304" font-size="21.326989706303" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">(Cookie)</text>
-  <rect x="500.000018" y="436.455786492545" width="259.999982" height="183.544213507455" fill="url(#grad-ok)" rx="7.592468176269" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="500.000018" y="436.455786492545" width="259.999982" height="183.544213507455" fill="url(#grad-ok)" rx="7.592468176269" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="629.999899" y="513.544359077069" font-size="27.725162266355" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">App Server</text>
   <line x1="760" y1="528.22796603108" x2="955.999996" y2="528.22796603108" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="860.000018" y="502.531726646367" font-size="21.326989706303" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Session Data</text>
-  <rect x="960.000037" y="436.455786492545" width="279.999963" height="183.544213507455" fill="url(#grad-warn)" rx="7.592468176269" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="960.000037" y="436.455786492545" width="279.999963" height="183.544213507455" fill="url(#grad-warn)" rx="7.592468176269" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1100.000018" y="513.544359077069" font-size="27.725162266355" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">Session Store</text>
   <text x="1100.000018" y="579.620444800504" font-size="23.459714252702" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(Memory/DB/Redis)</text>
 </svg>

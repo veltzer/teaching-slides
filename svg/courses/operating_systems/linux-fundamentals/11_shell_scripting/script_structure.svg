@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -115,27 +110,27 @@
   <text x="60" y="597.692307692308" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--danger-accent)">exit 0</text>
 
   <!-- Right: 5 callout cards -->
-  <rect x="620" y="40" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620" y="40" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="71.230769230769" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--primary-text)">Shebang</text>
   <text x="640" y="101.346153846153" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--primary-text)">#!/usr/bin/env bash</text>
   <text x="640" y="127" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--primary-text)">Must be first line</text>
 
-  <rect x="620" y="151.538461538461" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620" y="151.538461538461" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="182.76923076923" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--warn-text)">Constants</text>
   <text x="640" y="212.884615384616" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--warn-text)">readonly NAME=value</text>
   <text x="640" y="238.538461538462" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--warn-text)">UPPERCASE convention</text>
 
-  <rect x="620" y="263.076923076923" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620" y="263.076923076923" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="294.307692307692" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--ok-text)">Variables &amp; Args</text>
   <text x="640" y="324.423076923077" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--ok-text)">$1 $@ $# $? ${VAR:-default}</text>
   <text x="640" y="350.076923076923" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--ok-text)">local limits scope</text>
 
-  <rect x="620" y="374.615384615384" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620" y="374.615384615384" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="405.846153846153" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--info-text)">Functions</text>
   <text x="640" y="435.961538461539" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--info-text)">name() { ... ; return N ; }</text>
   <text x="640" y="461.615384615385" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--info-text)">Define before use</text>
 
-  <rect x="620" y="486.153846153847" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620" y="486.153846153847" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="640" y="517.384615384615" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--danger-text)">Control Flow</text>
   <text x="640" y="547.5" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--danger-text)">if / for / while / case</text>
   <text x="640" y="573.153846153846" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--danger-text)">exit 0 success, 1-255 error</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,12 +93,12 @@
 
   <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.565178609681" font-weight="bold" fill="var(--text)">Routing Decision: Longest Prefix Match</text>
 
-  <rect x="40" y="86.194690265487" width="203.389830508475" height="102.654867256637" rx="6.130425833003" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="86.194690265487" width="203.389830508475" height="102.654867256637" rx="6.130425833003" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="141.694915254237" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.347802221342" font-weight="bold" fill="var(--primary-text)">Host</text>
   <text x="141.694915254237" y="152.920353982301" text-anchor="middle" font-family="Courier New, monospace" font-size="13.282589304841" fill="var(--primary-text)">10.0.0.5</text>
   <text x="141.694915254237" y="176.530973451327" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.239114027173" fill="var(--primary-text)">→ 8.8.8.8</text>
 
-  <rect x="365.423728813559" y="86.194690265487" width="203.389830508475" height="102.654867256637" rx="6.130425833003" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="365.423728813559" y="86.194690265487" width="203.389830508475" height="102.654867256637" rx="6.130425833003" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="467.118644067797" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.347802221342" font-weight="bold" fill="var(--warn-text)">Router</text>
   <text x="467.118644067797" y="152.920353982301" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.260851666007" fill="var(--warn-text)">looks up 8.8.8.8</text>
 
@@ -123,7 +118,7 @@
   <text x="60.338983050847" y="353.097345132743" font-family="Arial, sans-serif" font-size="14.304326943675" fill="var(--text)">- 0.0.0.0/0 — matches everything else (default)</text>
   <text x="60.338983050847" y="389.026548672566" font-family="Arial, sans-serif" font-size="14.304326943675" font-weight="bold" fill="var(--ok-accent)">→ forward to 198.51.100.1 via eth2</text>
 
-  <rect x="40" y="445.486725663717" width="1200" height="174.513274336283" rx="6.130425833003" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="445.486725663717" width="1200" height="174.513274336283" rx="6.130425833003" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="629.830508474576" y="481.41592920354" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.347802221342" font-weight="bold" fill="var(--ok-text)">Key principles</text>
   <text x="60.338983050847" y="512.212389380531" font-family="Arial, sans-serif" font-size="13.282589304841" fill="var(--ok-text)">- each router decides next hop independently</text>
   <text x="60.338983050847" y="537.87610619469" font-family="Arial, sans-serif" font-size="13.282589304841" fill="var(--ok-text)">- longest prefix match: most-specific route wins</text>

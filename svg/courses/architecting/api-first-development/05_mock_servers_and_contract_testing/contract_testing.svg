@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,7 +94,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.520241619536" font-weight="bold" fill="var(--text)">Consumer-Driven Contract Testing</text>
 
-  <rect x="60.689655172414" y="114.653465346535" width="248.275862068966" height="137.821782178218" rx="10.900086292691" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60.689655172414" y="114.653465346535" width="248.275862068966" height="137.821782178218" rx="10.900086292691" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="184.827586206897" y="154.851485148515" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.440138068306" font-weight="bold" fill="var(--info-text)">Consumer</text>
   <text x="184.827586206897" y="183.564356435644" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--info-text)">writes test against</text>
   <text x="184.827586206897" y="206.534653465347" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--info-text)">a mock provider</text>
@@ -108,7 +103,7 @@
   <path d="M 311.034482758621 183.564356435644 L 476.551724137931 183.564356435644" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
   <text x="391.724137931034" y="172.079207920792" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" font-weight="bold" fill="var(--text-muted)">contract.json</text>
 
-  <rect x="484.827586206897" y="114.653465346535" width="289.655172413793" height="137.821782178218" rx="10.900086292691" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="484.827586206897" y="114.653465346535" width="289.655172413793" height="137.821782178218" rx="10.900086292691" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="629.655172413793" y="154.851485148515" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.440138068306" font-weight="bold" fill="var(--primary-text)">Pact Broker</text>
   <text x="629.655172413793" y="183.564356435644" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--primary-text)">stores contracts</text>
   <text x="629.655172413793" y="206.534653465347" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--primary-text)">+ verification status</text>
@@ -116,13 +111,13 @@
   <path d="M 776.551724137931 183.564356435644 L 942.068965517241 183.564356435644" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
   <text x="857.241379310345" y="172.079207920792" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" font-weight="bold" fill="var(--text-muted)">verify</text>
 
-  <rect x="950.344827586207" y="114.653465346535" width="248.275862068966" height="137.821782178218" rx="10.900086292691" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="950.344827586207" y="114.653465346535" width="248.275862068966" height="137.821782178218" rx="10.900086292691" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1074.48275862069" y="154.851485148515" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.440138068306" font-weight="bold" fill="var(--ok-text)">Provider</text>
   <text x="1074.48275862069" y="183.564356435644" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--ok-text)">replays contract</text>
   <text x="1074.48275862069" y="206.534653465347" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--ok-text)">against real impl</text>
   <text x="1074.48275862069" y="235.247524752475" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.08010355123" font-style="italic" fill="var(--ok-text)">pass / fail = report</text>
 
-  <rect x="40" y="298.415841584158" width="382.758620689655" height="321.584158415842" rx="10.900086292691" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="298.415841584158" width="382.758620689655" height="321.584158415842" rx="10.900086292691" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="231.379310344828" y="338.613861386139" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.620155326845" font-weight="bold" fill="var(--warn-text)">Why not E2E only?</text>
   <text x="60.689655172414" y="378.811881188119" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--warn-text)">- Slow, brittle</text>
   <text x="60.689655172414" y="407.524752475248" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--warn-text)">- All teams in one env</text>

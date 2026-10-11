@@ -68,11 +68,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,21 +91,21 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="63.835708763346" width="572.477137446343" height="143.013690936388" rx="6.560129853626" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="63.835708763346" width="572.477137446343" height="143.013690936388" rx="6.560129853626" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="326.238621934181" y="100.383773068062" text-anchor="middle" font-size="23.20022723384" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Inline (Blocking)</text>
   <text x="84.036792929889" y="135.342610395908" font-size="19.885830960793" fill="var(--text)" font-family="Arial, sans-serif">Request -&gt; WAF -&gt; Server</text>
   <text x="84.036792929889" y="167.123330756228" font-size="19.885830960793" fill="var(--text)" font-family="Arial, sans-serif">WAF blocks attacks</text>
-  <rect x="656.513823954213" y="63.835708763346" width="583.486176045787" height="143.013690936388" rx="6.560129853626" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="656.513823954213" y="63.835708763346" width="583.486176045787" height="143.013690936388" rx="6.560129853626" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="947.156082612576" y="100.383773068062" text-anchor="middle" font-size="23.20022723384" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Out-of-band (Detection)</text>
   <text x="700.550510462083" y="135.342610395908" font-size="19.885830960793" fill="var(--text)" font-family="Arial, sans-serif">Request -&gt; Server</text>
   <text x="700.550510462083" y="167.123330756228" font-size="19.885830960793" fill="var(--text)" font-family="Arial, sans-serif">Copy -&gt; WAF (alerts only)</text>
-  <rect x="40" y="238.630232388791" width="1200" height="174.794411296707" rx="6.560129853626" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="238.630232388791" width="1200" height="174.794411296707" rx="6.560129853626" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="645.50467893275" y="275.178184364769" text-anchor="middle" font-size="23.20022723384" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Popular WAFs</text>
   <text x="84.036792929889" y="310.137021692616" font-size="19.885830960793" fill="var(--text)" font-family="Arial, sans-serif">- ModSecurity (open source, Apache/Nginx)</text>
   <text x="84.036792929889" y="341.917854381673" font-size="19.885830960793" fill="var(--text)" font-family="Arial, sans-serif">- AWS WAF (cloud-native)</text>
   <text x="667.522968975676" y="310.137021692616" font-size="19.885830960793" fill="var(--text)" font-family="Arial, sans-serif">- Cloudflare WAF (CDN-integrated)</text>
   <text x="667.522968975676" y="341.917854381673" font-size="19.885830960793" fill="var(--text)" font-family="Arial, sans-serif">- Imperva / Akamai (enterprise)</text>
-  <rect x="40" y="437.260352448844" width="1200" height="182.739647551156" rx="6.560129853626" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="437.260352448844" width="1200" height="182.739647551156" rx="6.560129853626" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="645.50467893275" y="473.808304424823" text-anchor="middle" font-size="23.20022723384" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">WAF Limitations</text>
   <text x="84.036792929889" y="513.534261039591" font-size="19.885830960793" fill="var(--text)" font-family="Arial, sans-serif">- Can be bypassed with encoding tricks</text>
   <text x="84.036792929889" y="545.315206057385" font-size="19.885830960793" fill="var(--text)" font-family="Arial, sans-serif">- May cause false positives</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,25 +91,25 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="550" height="234.035087719298" rx="6.052402741669" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="550" height="234.035087719298" rx="6.052402741669" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="315" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--danger-text)">Standard Decoding</text>
   <text x="315" y="131.578947368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--danger-text)">70B runs once per token</text>
   <text x="315" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--danger-text)">each token = full pass</text>
   <text x="315" y="223.157894736842" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" font-style="italic" fill="var(--danger-text)">slow for long outputs</text>
 
-  <rect x="630" y="40" width="610" height="234.035087719298" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="630" y="40" width="610" height="234.035087719298" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="935" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--ok-text)">Speculative Decoding</text>
   <text x="935" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">Step 1: draft 7B proposes K tokens</text>
   <text x="935" y="162.105263157895" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">Step 2: 70B verifies all K in one pass</text>
   <text x="935" y="197.719298245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">Step 3: accept matches, reject rest</text>
   <text x="935" y="243.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" font-style="italic" fill="var(--ok-text)">6 tokens in ~2 big-model passes</text>
 
-  <rect x="40" y="304.561403508772" width="1200" height="152.631578947368" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="304.561403508772" width="1200" height="152.631578947368" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="350.350877192982" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--primary-text)">Example Verification</text>
   <text x="640" y="391.052631578947" text-anchor="middle" font-family="Courier New, monospace" font-size="16.139740644452" fill="var(--primary-text)">"The" "capital" "of" "France" "is" "Paris"</text>
   <text x="640" y="431.754385964912" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--primary-text)">all 6 verified in one large-model pass</text>
 
-  <rect x="40" y="487.719298245614" width="1200" height="132.280701754386" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="487.719298245614" width="1200" height="132.280701754386" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="533.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--ok-text)">Speedup 2-3x, quality identical</text>
   <text x="640" y="579.298245614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">large model always has final say</text>
 </svg>

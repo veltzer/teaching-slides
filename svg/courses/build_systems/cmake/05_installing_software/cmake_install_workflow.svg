@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,10 +91,10 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="51.785714285714" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="51.785714285714" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="73.142857142857" text-anchor="middle" font-family="Courier New, monospace" font-size="18.318608805568" font-weight="bold" fill="var(--primary-text)">cmake --install build --prefix /opt/myproject</text>
 
-  <rect x="40" y="112.5" width="380" height="207.142857142857" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="112.5" width="380" height="207.142857142857" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="230" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--primary-text)">1. Declare rules</text>
   <text x="60" y="179.821428571429" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--primary-text)">include(GNUInstallDirs)</text>
   <text x="60" y="205.714285714286" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--primary-text)">install(TARGETS mylib</text>
@@ -109,7 +104,7 @@
 
   <line x1="425" y1="216.071428571429" x2="445" y2="216.071428571429" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="450" y="112.5" width="380" height="207.142857142857" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="112.5" width="380" height="207.142857142857" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--ok-text)">2. Install headers</text>
   <text x="470" y="179.821428571429" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--ok-text)">install(FILES mylib.h</text>
   <text x="470" y="205.714285714286" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--ok-text)">  DESTINATION include)</text>
@@ -119,7 +114,7 @@
 
   <line x1="835" y1="216.071428571429" x2="855" y2="216.071428571429" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="860" y="112.5" width="380" height="207.142857142857" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="112.5" width="380" height="207.142857142857" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1050" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">3. Run install</text>
   <text x="880" y="179.821428571429" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--warn-text)">cmake -B build -S .</text>
   <text x="880" y="205.714285714286" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--warn-text)">cmake --build build</text>
@@ -143,7 +138,7 @@
   <text x="340" y="537.142857142857" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text-muted)">etc</text>
   <text x="60" y="594.107142857143" font-family="Arial, sans-serif" font-size="11.19470538118" fill="var(--text-faint)">relative to CMAKE_INSTALL_PREFIX</text>
 
-  <rect x="640" y="340.357142857143" width="600" height="279.642857142857" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="340.357142857143" width="600" height="279.642857142857" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="940" y="371.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-text)">Components</text>
   <text x="660" y="402.5" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--info-text)">install(TARGETS mylib</text>
   <text x="660" y="428.392857142857" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--info-text)">  RUNTIME DESTINATION bin</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
   <!-- Pillar 1: Metrics -->
-  <rect x="40" y="40" width="364.285714" height="393.571429" rx="6.857143" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="364.285714" height="393.571429" rx="6.857143" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="222.142857" y="86.607086" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.282057" font-weight="bold" fill="var(--primary-accent)">Metrics</text>
   <line x1="82.857143" y1="102.142857" x2="361.428571" y2="102.142857" stroke="var(--primary-border)" stroke-width="1"/>
   <text x="222.142857" y="143.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747886" fill="var(--text)">Time-series data</text>
@@ -109,7 +104,7 @@
   <text x="222.142857" y="371.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641029" fill="var(--text-muted)">Prometheus, Datadog</text>
   <text x="222.142857" y="412.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.694514" font-weight="bold" fill="var(--primary-accent)">What is happening?</text>
   <!-- Pillar 2: Logs -->
-  <rect x="457.857143" y="40" width="364.285714" height="393.571429" rx="6.857143" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="457.857143" y="40" width="364.285714" height="393.571429" rx="6.857143" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="86.607086" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.282057" font-weight="bold" fill="var(--warn-accent)">Logs</text>
   <line x1="500.714286" y1="102.142857" x2="779.285714" y2="102.142857" stroke="var(--warn-border)" stroke-width="1"/>
   <text x="640" y="143.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747886" fill="var(--text)">Structured events</text>
@@ -125,7 +120,7 @@
   <text x="640" y="371.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641029" fill="var(--text-muted)">ELK Stack, Splunk</text>
   <text x="640" y="412.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.694514" font-weight="bold" fill="var(--warn-accent)">Why did it happen?</text>
   <!-- Pillar 3: Traces -->
-  <rect x="875.714286" y="40" width="364.285714" height="393.571429" rx="6.857143" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="875.714286" y="40" width="364.285714" height="393.571429" rx="6.857143" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1057.857143" y="86.607086" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.282057" font-weight="bold" fill="var(--ok-accent)">Traces</text>
   <line x1="918.571429" y1="102.142857" x2="1197.142857" y2="102.142857" stroke="var(--ok-border)" stroke-width="1"/>
   <text x="1057.857143" y="143.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747886" fill="var(--text)">Request path</text>
@@ -133,13 +128,13 @@
   <text x="1057.857143" y="205.714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.747886" fill="var(--text)">Latency breakdown</text>
   <!-- Traces mini waterfall -->
   <rect x="929.285714" y="236.785714" width="257.142857" height="82.857143" rx="6.857143" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="940" y="249.214286" width="192.857143" height="12.428571" rx="6.857143" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="249.214286" width="192.857143" height="12.428571" rx="6.857143" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="945.357143" y="258.535771" font-family="Arial, sans-serif" font-size="11.428571" fill="var(--bg)">API Gateway 200ms</text>
-  <rect x="961.428571" y="265.785714" width="128.571429" height="12.428571" rx="6.857143" fill="url(#grad-ok)" opacity="0.7" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="961.428571" y="265.785714" width="128.571429" height="12.428571" rx="6.857143" fill="url(#grad-ok)" opacity="0.7" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="966.785714" y="275.1072" font-family="Arial, sans-serif" font-size="11.428571" fill="var(--bg)">Lambda 100ms</text>
-  <rect x="982.857143" y="282.357143" width="85.714286" height="12.428571" rx="6.857143" fill="url(#grad-warn)" opacity="0.7" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="982.857143" y="282.357143" width="85.714286" height="12.428571" rx="6.857143" fill="url(#grad-warn)" opacity="0.7" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="988.214286" y="291.678629" font-family="Arial, sans-serif" font-size="11.428571" fill="var(--bg)">DB 50ms</text>
-  <rect x="1004.285714" y="298.928571" width="42.857143" height="12.428571" rx="6.857143" fill="url(#grad-info)" opacity="0.7" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1004.285714" y="298.928571" width="42.857143" height="12.428571" rx="6.857143" fill="url(#grad-info)" opacity="0.7" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1009.642857" y="308.250057" font-family="Arial, sans-serif" font-size="11.428571" fill="var(--bg)">S3</text>
   <text x="1057.857143" y="350.714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641029" fill="var(--text-muted)">X-Ray, Jaeger</text>
   <text x="1057.857143" y="371.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.641029" fill="var(--text-muted)">Zipkin, OpenTelemetry</text>
@@ -148,7 +143,7 @@
   <line x1="222.142857" y1="433.571429" x2="436.428571" y2="547.5" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="640" y1="433.571429" x2="640" y2="535.071429" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="1057.857143" y1="433.571429" x2="843.571429" y2="547.5" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="382.857143" y="547.5" width="514.285714" height="72.5" rx="6.857143" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="382.857143" y="547.5" width="514.285714" height="72.5" rx="6.857143" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="583.749943" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.068457" font-weight="bold" fill="var(--info-accent)">Dashboards &amp; Alerts</text>
   <text x="640" y="609.642857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.694514" fill="var(--text-muted)">Unified observability platform</text>
 </svg>

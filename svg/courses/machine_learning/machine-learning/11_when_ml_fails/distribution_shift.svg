@@ -14,7 +14,6 @@
       }
     </style>
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
   </defs>
   <rect x="40" y="40" width="700" height="580" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="390" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Train and prod distributions diverge</text>
@@ -27,7 +26,7 @@
   <path d="M 350 540 Q 450 540 470 350 Q 500 220 530 220 Q 560 220 590 350 Q 610 540 690 540" stroke="var(--danger-border)" stroke-width="3" fill="none"/>
   <text x="510" y="200" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-border)">production distribution</text>
   <text x="60" y="615" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Model degrades silently as the world changes</text>
-  <rect x="760" y="40" width="480" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="760" y="40" width="480" height="580" rx="10" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1000" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Distribution Shift</text>
   <text x="780" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">Covariate shift:</text>
   <text x="780" y="175" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">P(X) changes, P(y|X) same</text>

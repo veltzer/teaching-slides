@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,7 +90,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="570.491853" height="298.969135" rx="6.83567" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="570.491853" height="298.969135" rx="6.83567" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="325.245822" y="71.890064" text-anchor="middle" font-size="19.801342" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Ownership</text>
   <rect x="59.672133" y="89.82821" width="531.147587" height="99.656419" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="325.245822" y="115.73881" text-anchor="middle" font-size="15.840982" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Move</text>
@@ -111,7 +106,7 @@
   <text x="433.442657" y="279.175233" text-anchor="middle" font-size="11.880851" fill="var(--text-muted)" font-family="Arial, sans-serif">Heap: "hello"</text>
   <text x="433.442657" y="301.09973" text-anchor="middle" font-size="11.880851" fill="var(--text-faint)" font-family="Arial, sans-serif">freed on drop</text>
   <line x1="177.70493" y1="247.285293" x2="315.40986" y2="247.285293" stroke="var(--danger-border)" stroke-width="1.7778" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-danger)"/>
-  <rect x="659.672185" y="40" width="580.327815" height="298.969135" rx="6.83567" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="659.672185" y="40" width="580.327815" height="298.969135" rx="6.83567" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="949.836145" y="71.890064" text-anchor="middle" font-size="19.801342" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Borrowing (&amp;)</text>
   <rect x="679.344213" y="89.82821" width="540.983654" height="89.690728" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="949.836145" y="115.73881" text-anchor="middle" font-size="14.85095" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Immutable: many readers</text>
@@ -123,7 +118,7 @@
   <text x="699.016451" y="265.223439" font-size="13.860803" fill="var(--warn-accent)" font-family="Courier New, monospace">&amp;mut s; // one</text>
   <rect x="40" y="360.893507" width="1200" height="199.312715" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640.000052" y="390.790458" text-anchor="middle" font-size="17.821162" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Rules</text>
-  <rect x="59.672133" y="404.742253" width="334.426259" height="129.55337" rx="6.83567" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="59.672133" y="404.742253" width="334.426259" height="129.55337" rx="6.83567" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="226.885262" y="430.652976" text-anchor="middle" font-size="14.85095" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">1: Owner</text>
   <text x="79.344266" y="454.570586" font-size="13.860803" fill="var(--primary-accent)" font-family="Arial, sans-serif">One owner per value.</text>
   <text x="79.344266" y="476.494835" font-size="13.860803" fill="var(--primary-accent)" font-family="Arial, sans-serif">Drop owner → freed.</text>
@@ -141,6 +136,6 @@
   <text x="826.885315" y="476.494835" font-size="13.860803" fill="var(--text-muted)" font-family="Arial, sans-serif">their data.</text>
   <text x="826.885315" y="498.419332" font-size="13.860803" fill="var(--text-muted)" font-family="Arial, sans-serif">No dangling.</text>
   <text x="826.885315" y="520.343704" font-size="13.860803" fill="var(--text-faint)" font-family="Arial, sans-serif">Compiler enforced.</text>
-  <rect x="40" y="578.144368" width="1200" height="41.855632" rx="6.83567" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="578.144368" width="1200" height="41.855632" rx="6.83567" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640.000052" y="604.055092" text-anchor="middle" font-size="15.840982" fill="var(--primary-accent)" font-family="Arial, sans-serif">Zero-cost safety</text>
 </svg>

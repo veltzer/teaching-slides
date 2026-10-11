@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,32 +92,32 @@
   </defs>
 
   <!-- Register widths -->
-  <rect x="40" y="40" width="610.169491525424" height="62.142857142857" rx="6.157732987455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="610.169491525424" height="62.142857142857" rx="6.157732987455" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="60.338983050847" y="65.892857142857" font-family="Arial, sans-serif" font-size="16.420621299881" font-weight="bold" fill="var(--primary-text)">SSE</text>
   <text x="60.338983050847" y="89.714285714286" font-family="Courier New, monospace" font-size="14.368043637396" fill="var(--primary-text)">xmm0-xmm15  128-bit</text>
 
-  <rect x="40" y="112.5" width="813.559322033898" height="62.142857142857" rx="6.157732987455" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="112.5" width="813.559322033898" height="62.142857142857" rx="6.157732987455" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="60.338983050847" y="138.392857142857" font-family="Arial, sans-serif" font-size="16.420621299881" font-weight="bold" fill="var(--ok-text)">AVX / AVX2</text>
   <text x="60.338983050847" y="162.214285714286" font-family="Courier New, monospace" font-size="14.368043637396" fill="var(--ok-text)">ymm0-ymm15  256-bit</text>
 
-  <rect x="40" y="185" width="1200" height="62.142857142857" rx="6.157732987455" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="185" width="1200" height="62.142857142857" rx="6.157732987455" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="60.338983050847" y="210.892857142857" font-family="Arial, sans-serif" font-size="16.420621299881" font-weight="bold" fill="var(--warn-text)">AVX-512</text>
   <text x="60.338983050847" y="234.714285714286" font-family="Courier New, monospace" font-size="14.368043637396" fill="var(--warn-text)">zmm0-zmm31  512-bit</text>
 
   <!-- Instruction groups -->
-  <rect x="40" y="278.214285714286" width="386.440677966102" height="155.357142857143" rx="8.21031064994" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="278.214285714286" width="386.440677966102" height="155.357142857143" rx="8.21031064994" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="233.220338983051" y="309.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.420621299881" font-weight="bold" fill="var(--info-text)">Packed arithmetic</text>
   <text x="233.220338983051" y="340.357142857143" text-anchor="middle" font-family="Courier New, monospace" font-size="14.368043637396" fill="var(--info-text)">vaddps ymm0, ymm1, ymm2</text>
   <text x="233.220338983051" y="371.428571428571" text-anchor="middle" font-family="Courier New, monospace" font-size="14.368043637396" fill="var(--info-text)">vmulpd  vfmadd231ps</text>
   <text x="233.220338983051" y="410.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--info-text)">8 floats per instruction</text>
 
-  <rect x="446.779661016949" y="278.214285714286" width="386.440677966102" height="155.357142857143" rx="8.21031064994" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="446.779661016949" y="278.214285714286" width="386.440677966102" height="155.357142857143" rx="8.21031064994" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="309.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.420621299881" font-weight="bold" fill="var(--primary-text)">Load / store</text>
   <text x="640" y="340.357142857143" text-anchor="middle" font-family="Courier New, monospace" font-size="14.368043637396" fill="var(--primary-text)">vmovaps (aligned)</text>
   <text x="640" y="371.428571428571" text-anchor="middle" font-family="Courier New, monospace" font-size="14.368043637396" fill="var(--primary-text)">vmovups (unaligned)</text>
   <text x="640" y="410.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.341754806153" fill="var(--primary-text)">32-byte align</text>
 
-  <rect x="853.559322033898" y="278.214285714286" width="386.440677966102" height="155.357142857143" rx="8.21031064994" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="853.559322033898" y="278.214285714286" width="386.440677966102" height="155.357142857143" rx="8.21031064994" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1046.779661016949" y="309.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.420621299881" font-weight="bold" fill="var(--ok-text)">Shuffle / mask</text>
   <text x="1046.779661016949" y="340.357142857143" text-anchor="middle" font-family="Courier New, monospace" font-size="14.368043637396" fill="var(--ok-text)">vpermps  vshufps</text>
   <text x="1046.779661016949" y="371.428571428571" text-anchor="middle" font-family="Courier New, monospace" font-size="14.368043637396" fill="var(--ok-text)">AVX-512 k-masks</text>

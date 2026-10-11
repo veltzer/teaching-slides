@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,49 +92,49 @@
   </defs>
 
 
-  <rect x="40" y="40" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="235.254237288136" y="78.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.043764077982" font-weight="bold" fill="var(--ok-text)">Data Loading</text>
   <text x="235.254237288136" y="111.132075471698" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--ok-text)">Define schema</text>
   <text x="235.254237288136" y="138.490566037736" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--ok-text)">Use Parquet</text>
   <text x="235.254237288136" y="165.849056603773" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--ok-text)">Filter early</text>
   <text x="235.254237288136" y="193.207547169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--ok-text)">Select needed columns</text>
 
-  <rect x="443.728813559322" y="40" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.728813559322" y="40" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="78.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.043764077982" font-weight="bold" fill="var(--primary-text)">Transformations</text>
   <text x="640" y="111.132075471698" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--primary-text)">Built-ins over UDFs</text>
   <text x="640" y="138.490566037736" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--primary-text)">DataFrames over RDDs</text>
   <text x="640" y="165.849056603773" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--primary-text)">reduceByKey over groupByKey</text>
   <text x="640" y="193.207547169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--primary-text)">Chain narrow transforms</text>
 
-  <rect x="848.474576271186" y="40" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="848.474576271186" y="40" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1044.745762711864" y="78.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.043764077982" font-weight="bold" fill="var(--warn-text)">Joins</text>
   <text x="1044.745762711864" y="111.132075471698" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--warn-text)">Broadcast small tables</text>
   <text x="1044.745762711864" y="138.490566037736" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--warn-text)">Salt to handle skew</text>
   <text x="1044.745762711864" y="165.849056603773" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--warn-text)">Filter before joining</text>
   <text x="1044.745762711864" y="193.207547169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--warn-text)">Avoid cartesian</text>
 
-  <rect x="40" y="236.981132075472" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="236.981132075472" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="235.254237288136" y="275.283018867925" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.043764077982" font-weight="bold" fill="var(--info-text)">Memory</text>
   <text x="235.254237288136" y="308.11320754717" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--info-text)">Cache reused frames</text>
   <text x="235.254237288136" y="335.471698113207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--info-text)">Unpersist when done</text>
   <text x="235.254237288136" y="362.830188679245" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--info-text)">Kryo serialization</text>
   <text x="235.254237288136" y="390.188679245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--info-text)">Monitor in Spark UI</text>
 
-  <rect x="443.728813559322" y="236.981132075472" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.728813559322" y="236.981132075472" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="275.283018867925" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.043764077982" font-weight="bold" fill="var(--primary-text)">Partitioning</text>
   <text x="640" y="308.11320754717" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--primary-text)">2-4x core count</text>
   <text x="640" y="335.471698113207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--primary-text)">Target ~128 MB</text>
   <text x="640" y="362.830188679245" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--primary-text)">Coalesce to shrink</text>
   <text x="640" y="390.188679245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--primary-text)">Enable AQE</text>
 
-  <rect x="848.474576271186" y="236.981132075472" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="848.474576271186" y="236.981132075472" width="391.525423728814" height="180.566037735849" rx="8.439479611782" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1044.745762711864" y="275.283018867925" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.043764077982" font-weight="bold" fill="var(--danger-text)">Anti-Patterns</text>
   <text x="1044.745762711864" y="308.11320754717" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--danger-text)">collect() on big data</text>
   <text x="1044.745762711864" y="335.471698113207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--danger-text)">Python UDFs</text>
   <text x="1044.745762711864" y="362.830188679245" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--danger-text)">repartition(1)</text>
   <text x="1044.745762711864" y="390.188679245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.769089320618" fill="var(--danger-text)">Unnecessary shuffles</text>
 
-  <rect x="151.864406779661" y="455.849056603773" width="976.271186440678" height="164.150943396227" rx="8.439479611782" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="151.864406779661" y="455.849056603773" width="976.271186440678" height="164.150943396227" rx="8.439479611782" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="510.566037735848" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.208568932401" font-weight="bold" fill="var(--ok-text)">Golden Rule</text>
   <text x="640" y="548.867924528302" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.878959223564" fill="var(--ok-text)">DataFrames + built-in functions</text>
   <text x="640" y="587.169811320755" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.878959223564" fill="var(--ok-text)">Catalyst + Tungsten win</text>

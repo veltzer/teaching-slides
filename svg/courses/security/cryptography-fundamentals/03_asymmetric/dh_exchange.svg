@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,11 +93,11 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.460212719154" font-weight="bold" fill="var(--text)">Diffie-Hellman: Shared Secret over Public Channel</text>
 
-  <rect x="40" y="81.428571428571" width="280" height="82.857142857143" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="81.428571428571" width="280" height="82.857142857143" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--primary-text)">Alice</text>
   <text x="180" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">picks secret a</text>
 
-  <rect x="960" y="81.428571428571" width="280" height="82.857142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="960" y="81.428571428571" width="280" height="82.857142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1100" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--ok-text)">Bob</text>
   <text x="1100" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">picks secret b</text>
 
@@ -117,12 +112,12 @@
   <text x="640" y="259.571428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="15.265507337973" font-weight="bold" fill="var(--text)">B = g^b mod p</text>
   <text x="640" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-muted)">Bob sends his public value</text>
 
-  <rect x="40" y="324.821428571429" width="540" height="103.571428571429" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="324.821428571429" width="540" height="103.571428571429" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="310" y="355.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--warn-text)">Alice computes</text>
   <text x="310" y="386.964285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="16.283207827171" fill="var(--warn-text)">K = B^a mod p</text>
   <text x="310" y="412.857142857143" text-anchor="middle" font-family="Courier New, monospace" font-size="14.247806848775" fill="var(--warn-text)">= g^(ab) mod p</text>
 
-  <rect x="700" y="324.821428571429" width="540" height="103.571428571429" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="700" y="324.821428571429" width="540" height="103.571428571429" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="970" y="355.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--warn-text)">Bob computes</text>
   <text x="970" y="386.964285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="16.283207827171" fill="var(--warn-text)">K = A^b mod p</text>
   <text x="970" y="412.857142857143" text-anchor="middle" font-family="Courier New, monospace" font-size="14.247806848775" fill="var(--warn-text)">= g^(ab) mod p</text>

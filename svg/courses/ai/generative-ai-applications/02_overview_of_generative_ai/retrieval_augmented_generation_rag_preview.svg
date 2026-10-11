@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -95,32 +90,32 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="533.3334" height="81.882301204154" rx="6.139553450915" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="533.3334" height="81.882301204154" rx="6.139553450915" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="306.6667" y="70.023468559171" text-anchor="middle" font-size="17.523104156037" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Problem</text>
   <text x="306.6667" y="97.317673666435" text-anchor="middle" font-size="16.062913693628" fill="var(--text-muted)" font-family="Arial, sans-serif">LLMs have knowledge cutoffs and hallucinate</text>
-  <rect x="706.6666" y="40" width="533.3334" height="81.882301204154" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="706.6666" y="40" width="533.3334" height="81.882301204154" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="973.3333" y="70.023468559171" text-anchor="middle" font-size="17.523104156037" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Solution</text>
   <text x="973.3333" y="97.317673666435" text-anchor="middle" font-size="16.062913693628" fill="var(--text-muted)" font-family="Arial, sans-serif">Give the model relevant documents at query time</text>
-  <rect x="340.0001" y="162.82355651211" width="600" height="54.588200802769" rx="6.139553450915" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340.0001" y="162.82355651211" width="600" height="54.588200802769" rx="6.139553450915" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="196.941129660901" text-anchor="middle" font-size="17.523104156037" fill="var(--text)" font-family="Arial, sans-serif">User: "What was our Q4 revenue?"</text>
   <line x1="640" y1="217.411757314879" x2="640" y2="258.352907916956" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="340.0001" y="258.352907916956" width="600" height="54.588200802769" rx="6.139553450915" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340.0001" y="258.352907916956" width="600" height="54.588200802769" rx="6.139553450915" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="292.470585771626" text-anchor="middle" font-size="17.523104156037" fill="var(--danger-accent)" font-family="Arial, sans-serif">Step 1: Search company docs</text>
   <line x1="640" y1="312.941108719725" x2="640" y2="340.235313826989" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="340.0001" y="340.235313826989" width="600" height="54.588200802769" rx="6.139553450915" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340.0001" y="340.235313826989" width="600" height="54.588200802769" rx="6.139553450915" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="374.352991681659" text-anchor="middle" font-size="17.523104156037" fill="var(--danger-accent)" font-family="Arial, sans-serif">Step 2: Retrieve "Q4 revenue: $12.3M..."</text>
   <line x1="640" y1="394.823514629758" x2="640" y2="422.117615031143" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="340.0001" y="422.117615031143" width="600" height="54.588200802769" rx="6.139553450915" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340.0001" y="422.117615031143" width="600" height="54.588200802769" rx="6.139553450915" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="456.235292885813" text-anchor="middle" font-size="17.523104156037" fill="var(--danger-accent)" font-family="Arial, sans-serif">Step 3: Generate response WITH document</text>
   <line x1="640" y1="476.705815833912" x2="640" y2="504.000020941176" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="256.6667" y="504.000020941176" width="766.6667" height="54.588200802769" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="256.6667" y="504.000020941176" width="766.6667" height="54.588200802769" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="538.117698795846" text-anchor="middle" font-size="17.523104156037" fill="var(--text)" font-family="Arial, sans-serif">"Based on the financial report, Q4 revenue was $12.3M."</text>
-  <rect x="40" y="579.058744692044" width="266.6667" height="40.941255307956" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="579.058744692044" width="266.6667" height="40.941255307956" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="173.3334" y="606.352949799308" text-anchor="middle" font-size="14.602620905328" fill="var(--text)" font-family="Arial, sans-serif">Grounded in data</text>
-  <rect x="331.6667" y="579.058744692044" width="233.3333" height="40.941255307956" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="331.6667" y="579.058744692044" width="233.3333" height="40.941255307956" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="448.3333" y="606.352949799308" text-anchor="middle" font-size="14.602620905328" fill="var(--text)" font-family="Arial, sans-serif">Up-to-date info</text>
-  <rect x="590" y="579.058744692044" width="233.3333" height="40.941255307956" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="590" y="579.058744692044" width="233.3333" height="40.941255307956" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="706.6666" y="606.352949799308" text-anchor="middle" font-size="14.602620905328" fill="var(--text)" font-family="Arial, sans-serif">Auditable sources</text>
-  <rect x="848.3333" y="579.058744692044" width="316.6667" height="40.941255307956" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="848.3333" y="579.058744692044" width="316.6667" height="40.941255307956" rx="6.139553450915" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1006.6666" y="606.352949799308" text-anchor="middle" font-size="14.602620905328" fill="var(--text)" font-family="Arial, sans-serif">No fine-tuning needed</text>
 </svg>

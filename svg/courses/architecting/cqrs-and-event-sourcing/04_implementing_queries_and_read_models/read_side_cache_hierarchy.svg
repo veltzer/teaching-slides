@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -99,22 +94,22 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.459060435492" font-weight="bold" fill="var(--text)">Read Side: Cache → Read Model → Replay</text>
 
   <!-- Query -->
-  <rect x="40" y="129.230769230769" width="200" height="89.230769230769" rx="14.785647926803" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="129.230769230769" width="200" height="89.230769230769" rx="14.785647926803" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="140" y="168.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--primary-text)">Query</text>
   <text x="140" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--primary-text)">GetOrderSummary</text>
 
   <!-- Cache -->
-  <rect x="320" y="129.230769230769" width="220" height="89.230769230769" rx="14.785647926803" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="320" y="129.230769230769" width="220" height="89.230769230769" rx="14.785647926803" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="430" y="168.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--warn-text)">Cache</text>
   <text x="430" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--warn-text)">Redis, microseconds</text>
 
   <!-- Read model -->
-  <rect x="620" y="129.230769230769" width="220" height="89.230769230769" rx="14.785647926803" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620" y="129.230769230769" width="220" height="89.230769230769" rx="14.785647926803" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="730" y="168.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--ok-text)">Read Model</text>
   <text x="730" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--ok-text)">Postgres, milliseconds</text>
 
   <!-- Event store -->
-  <rect x="920" y="129.230769230769" width="280" height="89.230769230769" rx="14.785647926803" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920" y="129.230769230769" width="280" height="89.230769230769" rx="14.785647926803" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1060" y="168.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--info-text)">Event Store (replay)</text>
   <text x="1060" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--info-text)">slow, always fresh</text>
 
@@ -131,13 +126,13 @@
   <!-- Update path -->
   <text x="640" y="318.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--text)">How updates flow back</text>
 
-  <rect x="920" y="363.461538461538" width="280" height="89.230769230769" rx="14.785647926803" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920" y="363.461538461538" width="280" height="89.230769230769" rx="14.785647926803" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1060" y="402.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--info-text)">New event appended</text>
 
-  <rect x="620" y="363.461538461538" width="220" height="89.230769230769" rx="14.785647926803" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620" y="363.461538461538" width="220" height="89.230769230769" rx="14.785647926803" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="730" y="402.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--ok-text)">Projection updates</text>
 
-  <rect x="320" y="363.461538461538" width="220" height="89.230769230769" rx="14.785647926803" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="320" y="363.461538461538" width="220" height="89.230769230769" rx="14.785647926803" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="430" y="402.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--warn-text)">Cache invalidated</text>
 
   <path d="M 920 408.076923076923 L 840 408.076923076923" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>

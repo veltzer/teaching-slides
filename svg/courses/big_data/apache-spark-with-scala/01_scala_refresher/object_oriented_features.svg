@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -96,40 +91,40 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="290" height="230" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="290" height="230" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="185" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--info-text)">class</text>
   <text x="185" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">constructor args</text>
   <text x="185" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">mutable state</text>
   <text x="185" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">inheritance</text>
   <text x="185" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">visibility modifiers</text>
 
-  <rect x="340" y="40" width="290" height="230" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="290" height="230" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="485" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">case class</text>
   <text x="485" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">immutable fields</text>
   <text x="485" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">auto equals, copy</text>
   <text x="485" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">pattern-matchable</text>
   <text x="485" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">data containers</text>
 
-  <rect x="640" y="40" width="290" height="230" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="40" width="290" height="230" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="785" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--warn-text)">trait</text>
   <text x="785" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">interface + mixin</text>
   <text x="785" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">concrete + abstract</text>
   <text x="785" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">stackable</text>
   <text x="785" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">multiple inheritance</text>
 
-  <rect x="940" y="40" width="300" height="230" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="40" width="300" height="230" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1090" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--danger-text)">object</text>
   <text x="1090" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">singleton instance</text>
   <text x="1090" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">companion factory</text>
   <text x="1090" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">apply, unapply</text>
   <text x="1090" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">replaces Java static</text>
 
-  <rect x="40" y="300" width="590" height="140" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="300" width="590" height="140" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="335" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">sealed / abstract</text>
   <text x="335" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">sealed: exhaustive match</text>
   <text x="335" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">abstract class: ctor args</text>
 
-  <rect x="650" y="300" width="590" height="140" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="300" width="590" height="140" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="945" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">enum (Scala 3)</text>
   <text x="945" y="385" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="var(--info-text)">enum Color { case Red, Green }</text>
   <text x="945" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">ADT shorthand</text>

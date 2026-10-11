@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -98,7 +93,7 @@
 
 
   <!-- Hardcoded column -->
-  <rect x="40" y="40" width="579.310344827586" height="400.727272727272" rx="14.622523100279" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="579.310344827586" height="400.727272727272" rx="14.622523100279" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="329.655172413793" y="98.000000000001" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046200557" font-weight="bold" fill="var(--danger-text)">Hardcoded Config</text>
   <text x="329.655172413793" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.978250586152" fill="var(--danger-text)">✗ Rebuild image for every change</text>
   <text x="329.655172413793" y="214.000000000001" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.978250586152" fill="var(--danger-text)">✗ One image per environment</text>
@@ -110,7 +105,7 @@
   <line x1="624.48275862069" y1="240.363636363636" x2="655.51724137931" y2="240.363636363636" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
   <!-- External column -->
-  <rect x="660.689655172414" y="40" width="579.310344827586" height="400.727272727272" rx="14.622523100279" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660.689655172414" y="40" width="579.310344827586" height="400.727272727272" rx="14.622523100279" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950.344827586207" y="98.000000000001" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046200557" font-weight="bold" fill="var(--ok-text)">External Config</text>
   <text x="950.344827586207" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.978250586152" fill="var(--ok-text)">✓ Change config, no rebuild</text>
   <text x="950.344827586207" y="214.000000000001" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.978250586152" fill="var(--ok-text)">✓ One image, many environments</text>
@@ -119,7 +114,7 @@
   <text x="950.344827586207" y="382.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-style="italic" fill="var(--ok-text)">Flexible, secure, portable</text>
 
   <!-- Kubernetes solution strip -->
-  <rect x="40" y="482.909090909091" width="1200" height="137.09090909091" rx="14.622523100279" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="482.909090909091" width="1200" height="137.09090909091" rx="14.622523100279" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="530.363636363637" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.156114329089" font-weight="bold" fill="var(--warn-text)">Kubernetes answer</text>
   <text x="640" y="572.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.978250586152" fill="var(--warn-text)">ConfigMaps for non-sensitive data</text>
   <text x="640" y="604.181818181819" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.978250586152" fill="var(--warn-text)">Secrets for passwords, tokens, keys</text>

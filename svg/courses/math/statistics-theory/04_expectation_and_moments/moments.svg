@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -98,7 +93,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.424811740757" font-weight="bold" fill="var(--text)">What each moment tells you about the shape</text>
 
-  <rect x="40" y="76.25" width="290" height="543.75" rx="6.106202935189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="76.25" width="290" height="543.75" rx="6.106202935189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="185" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--primary-text)">1st: mean</text>
   <text x="185" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.30090831637" fill="var(--primary-text)">μ = E[X]</text>
   <line x1="80" y1="314.464285714286" x2="290" y2="314.464285714286" stroke="var(--primary-text)" stroke-width="2"/>
@@ -110,7 +105,7 @@
   <text x="185" y="490.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--primary-text)">may fail to exist</text>
   <text x="185" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--primary-text)">(Cauchy)</text>
 
-  <rect x="345" y="76.25" width="290" height="543.75" rx="6.106202935189" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345" y="76.25" width="290" height="543.75" rx="6.106202935189" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="490" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--ok-text)">2nd: variance</text>
   <text x="490" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.30090831637" fill="var(--ok-text)">σ² = E[(X − μ)²]</text>
   <line x1="385" y1="314.464285714286" x2="595" y2="314.464285714286" stroke="var(--ok-text)" stroke-width="2"/>
@@ -121,7 +116,7 @@
   <text x="490" y="490.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--ok-text)">always ≥ 0</text>
   <text x="490" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--ok-text)">SD σ is on X's scale</text>
 
-  <rect x="650" y="76.25" width="290" height="543.75" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="76.25" width="290" height="543.75" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="795" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--warn-text)">3rd: skewness</text>
   <text x="795" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.30090831637" fill="var(--warn-text)">E[(X − μ)³] / σ³</text>
   <line x1="690" y1="314.464285714286" x2="900" y2="314.464285714286" stroke="var(--warn-text)" stroke-width="2"/>
@@ -131,7 +126,7 @@
   <text x="795" y="490.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--warn-text)">income, file sizes,</text>
   <text x="795" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--warn-text)">latency — all positive-skewed</text>
 
-  <rect x="955" y="76.25" width="285" height="543.75" rx="6.106202935189" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955" y="76.25" width="285" height="543.75" rx="6.106202935189" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1097" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--danger-text)">4th: kurtosis</text>
   <text x="1097" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.30090831637" fill="var(--danger-text)">E[(X − μ)⁴] / σ⁴</text>
   <line x1="995" y1="314.464285714286" x2="1200" y2="314.464285714286" stroke="var(--danger-text)" stroke-width="2"/>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,42 +92,42 @@
   </defs>
 
   <!-- 6 tool cards 3x2 -->
-  <rect x="40" y="40" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="60.338983050847" y="75.614035087719" font-family="Courier New, monospace" font-size="20.344929252714" font-weight="bold" fill="var(--primary-text)">GDB</text>
   <text x="60.338983050847" y="106.140350877193" font-family="Arial, sans-serif" font-size="14.2414504769" fill="var(--primary-text)">Interactive debugger</text>
   <text x="60.338983050847" y="136.666666666667" font-family="Arial, sans-serif" font-size="13.224204014264" fill="var(--primary-text)">Breakpoints, stack traces</text>
   <text x="60.338983050847" y="167.19298245614" font-family="Courier New, monospace" font-size="13.224204014264" fill="var(--primary-text)">gcc -g -O0</text>
   <text x="60.338983050847" y="192.631578947368" font-family="Arial, sans-serif" font-size="12.206957551629" font-weight="bold" fill="var(--primary-text)">Native speed</text>
 
-  <rect x="446.779661016949" y="40" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="446.779661016949" y="40" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="467.118644067797" y="75.614035087719" font-family="Courier New, monospace" font-size="20.344929252714" font-weight="bold" fill="var(--info-text)">Valgrind</text>
   <text x="467.118644067797" y="106.140350877193" font-family="Arial, sans-serif" font-size="14.2414504769" fill="var(--info-text)">Memory checker</text>
   <text x="467.118644067797" y="136.666666666667" font-family="Arial, sans-serif" font-size="13.224204014264" fill="var(--info-text)">Leaks, use-after-free</text>
   <text x="467.118644067797" y="167.19298245614" font-family="Courier New, monospace" font-size="13.224204014264" fill="var(--info-text)">valgrind --leak-check</text>
   <text x="467.118644067797" y="192.631578947368" font-family="Arial, sans-serif" font-size="12.206957551629" font-weight="bold" fill="var(--info-text)">10-20x slower</text>
 
-  <rect x="853.559322033898" y="40" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="853.559322033898" y="40" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="873.898305084746" y="75.614035087719" font-family="Courier New, monospace" font-size="20.344929252714" font-weight="bold" fill="var(--ok-text)">ASan</text>
   <text x="873.898305084746" y="106.140350877193" font-family="Arial, sans-serif" font-size="14.2414504769" fill="var(--ok-text)">Address sanitizer</text>
   <text x="873.898305084746" y="136.666666666667" font-family="Arial, sans-serif" font-size="13.224204014264" fill="var(--ok-text)">Buffer overflows</text>
   <text x="873.898305084746" y="167.19298245614" font-family="Courier New, monospace" font-size="13.224204014264" fill="var(--ok-text)">-fsanitize=address</text>
   <text x="873.898305084746" y="192.631578947368" font-family="Arial, sans-serif" font-size="12.206957551629" font-weight="bold" fill="var(--ok-text)">2x slower</text>
 
-  <rect x="40" y="243.508771929825" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="243.508771929825" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="60.338983050847" y="279.122807017544" font-family="Courier New, monospace" font-size="20.344929252714" font-weight="bold" fill="var(--warn-text)">UBSan</text>
   <text x="60.338983050847" y="309.649122807018" font-family="Arial, sans-serif" font-size="14.2414504769" fill="var(--warn-text)">Undefined behavior</text>
   <text x="60.338983050847" y="340.175438596491" font-family="Arial, sans-serif" font-size="13.224204014264" fill="var(--warn-text)">Overflow, div/0</text>
   <text x="60.338983050847" y="370.701754385965" font-family="Courier New, monospace" font-size="13.224204014264" fill="var(--warn-text)">-fsanitize=undefined</text>
   <text x="60.338983050847" y="396.140350877193" font-family="Arial, sans-serif" font-size="12.206957551629" font-weight="bold" fill="var(--warn-text)">2x slower</text>
 
-  <rect x="446.779661016949" y="243.508771929825" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="446.779661016949" y="243.508771929825" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="467.118644067797" y="279.122807017544" font-family="Courier New, monospace" font-size="20.344929252714" font-weight="bold" fill="var(--danger-text)">perf</text>
   <text x="467.118644067797" y="309.649122807018" font-family="Arial, sans-serif" font-size="14.2414504769" fill="var(--danger-text)">CPU profiler</text>
   <text x="467.118644067797" y="340.175438596491" font-family="Arial, sans-serif" font-size="13.224204014264" fill="var(--danger-text)">Hotspots, cache misses</text>
   <text x="467.118644067797" y="370.701754385965" font-family="Courier New, monospace" font-size="13.224204014264" fill="var(--danger-text)">perf record -g</text>
   <text x="467.118644067797" y="396.140350877193" font-family="Arial, sans-serif" font-size="12.206957551629" font-weight="bold" fill="var(--danger-text)">Near-native</text>
 
-  <rect x="853.559322033898" y="243.508771929825" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="853.559322033898" y="243.508771929825" width="386.440677966102" height="172.982456140351" rx="8.137971701086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="873.898305084746" y="279.122807017544" font-family="Courier New, monospace" font-size="20.344929252714" font-weight="bold" fill="var(--primary-text)">clang-tidy</text>
   <text x="873.898305084746" y="309.649122807018" font-family="Arial, sans-serif" font-size="14.2414504769" fill="var(--primary-text)">Static analysis</text>
   <text x="873.898305084746" y="340.175438596491" font-family="Arial, sans-serif" font-size="13.224204014264" fill="var(--primary-text)">Bug patterns</text>

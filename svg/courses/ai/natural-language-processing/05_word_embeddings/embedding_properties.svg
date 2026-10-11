@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,7 +91,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="595" height="280" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="595" height="280" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="337" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Similarity</text>
 
   <rect x="166.0" y="186.0" width="28.0" height="28.0" rx="14.0" fill="var(--bg)"/>
@@ -112,7 +107,7 @@
 
   <text x="337" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">related words cluster, unrelated words separate</text>
 
-  <rect x="655" y="40" width="585" height="280" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="655" y="40" width="585" height="280" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="947" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Analogy</text>
 
   <rect x="770.0" y="160.0" width="20.0" height="20.0" rx="10.0" fill="var(--bg)"/>
@@ -131,7 +126,7 @@
 
   <text x="947" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">king minus man plus woman lands near queen</text>
 
-  <rect x="40" y="340" width="595" height="280" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="340" width="595" height="280" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="337" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Visualization</text>
   <text x="337" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">t-SNE preserves local neighborhoods</text>
   <text x="337" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">UMAP keeps more global structure</text>
@@ -139,7 +134,7 @@
   <text x="337" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">but they can also fabricate them</text>
   <text x="337" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">interpret with care, never as ground truth</text>
 
-  <rect x="655" y="340" width="585" height="280" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="655" y="340" width="585" height="280" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="947" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Bias</text>
   <text x="947" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">embeddings absorb corpus statistics</text>
   <text x="947" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">stereotypes appear as learned geometry</text>

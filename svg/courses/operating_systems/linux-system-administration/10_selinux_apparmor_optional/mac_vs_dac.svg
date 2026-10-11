@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,11 +92,11 @@
   </defs>
 
   <!-- DAC column -->
-  <rect x="40" y="40" width="590" height="70" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="590" height="70" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="335" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)">DAC</text>
   <text x="335" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)">Discretionary Access Control</text>
 
-  <rect x="40" y="125" width="590" height="210" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="125" width="590" height="210" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="335" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--bg)">Owner decides access</text>
   <text x="335" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">chmod / chown / ACLs</text>
   <text x="335" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">root overrides everything</text>
@@ -110,11 +105,11 @@
   <text x="335" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">Risk: nginx pwn exposes /etc/shadow</text>
 
   <!-- MAC column -->
-  <rect x="650" y="40" width="590" height="70" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="590" height="70" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="945" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)">MAC</text>
   <text x="945" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)">Mandatory Access Control</text>
 
-  <rect x="650" y="125" width="590" height="210" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="125" width="590" height="210" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="945" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--bg)">Kernel policy decides</text>
   <text x="945" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">Policy set by security admin</text>
   <text x="945" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">Even root restricted</text>
@@ -123,7 +118,7 @@
   <text x="945" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">Confines breach to policy domain</text>
 
   <!-- SELinux -->
-  <rect x="40" y="360" width="590" height="260" rx="8" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="360" width="590" height="260" rx="8" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="335" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)">SELinux (RHEL)</text>
   <text x="335" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">Label-based</text>
   <rect x="80" y="440" width="510" height="36" rx="6" fill="var(--bg)"/>
@@ -134,7 +129,7 @@
   <text x="335" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="var(--bg)">NSA origin, powerful, complex</text>
 
   <!-- AppArmor -->
-  <rect x="650" y="360" width="590" height="260" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650" y="360" width="590" height="260" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="945" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)">AppArmor (Ubuntu)</text>
   <text x="945" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">Path-based profiles</text>
   <rect x="690" y="440" width="510" height="36" rx="6" fill="var(--bg)"/>

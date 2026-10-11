@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -99,7 +94,7 @@
   <rect x="40" y="40" width="1200" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">IaC Drift Detection Cycle</text>
 
-  <rect x="40" y="150" width="220" height="330" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="150" width="220" height="330" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="150" y="220" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">1. Scan</text>
   <text x="150" y="270" text-anchor="middle" font-size="18" fill="var(--primary-text)" font-family="Arial, sans-serif">read live</text>
   <text x="150" y="295" text-anchor="middle" font-size="18" fill="var(--primary-text)" font-family="Arial, sans-serif">infrastructure</text>
@@ -110,7 +105,7 @@
 
   <line x1="270" y1="315" x2="330" y2="315" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="340" y="150" width="220" height="330" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="150" width="220" height="330" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="450" y="220" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">2. Compare</text>
   <text x="450" y="270" text-anchor="middle" font-size="18" fill="var(--warn-text)" font-family="Arial, sans-serif">declared vs</text>
   <text x="450" y="295" text-anchor="middle" font-size="18" fill="var(--warn-text)" font-family="Arial, sans-serif">actual state</text>
@@ -121,7 +116,7 @@
 
   <line x1="570" y1="315" x2="630" y2="315" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="640" y="150" width="220" height="330" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="150" width="220" height="330" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="750" y="220" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">3. Detect</text>
   <text x="750" y="270" text-anchor="middle" font-size="18" fill="var(--danger-text)" font-family="Arial, sans-serif">drift found?</text>
   <text x="750" y="345" text-anchor="middle" font-size="16" fill="var(--danger-text)" font-family="Arial, sans-serif">alert on-call,</text>
@@ -131,7 +126,7 @@
 
   <line x1="870" y1="315" x2="930" y2="315" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="940" y="150" width="300" height="330" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="150" width="300" height="330" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1090" y="220" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">4. Reconcile</text>
   <text x="1090" y="270" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">bring back into alignment</text>
   <text x="1090" y="345" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">update IaC to match reality, OR</text>

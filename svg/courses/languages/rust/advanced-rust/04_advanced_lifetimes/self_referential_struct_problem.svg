@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
@@ -97,14 +92,14 @@
   </defs>
 
 
-  <rect x="40" y="40" width="486" height="171.851851851851" rx="6.21825270206" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="486" height="171.851851851851" rx="6.21825270206" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="60" y="77.592592592593" font-family="Courier New, monospace" font-size="15.545631755148" font-weight="bold" fill="var(--primary-text)">struct SelfRef {</text>
   <text x="60" y="109.814814814815" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--primary-text)">  data: String,</text>
   <text x="60" y="138.814814814816" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--primary-text)">  slice: &amp;str,</text>
   <text x="60" y="167.814814814816" font-family="Courier New, monospace" font-size="15.545631755148" font-weight="bold" fill="var(--primary-text)">}</text>
   <text x="60" y="195.740740740741" font-family="Arial, sans-serif" font-size="13.472880854462" font-style="italic" fill="var(--primary-text)">Cannot express this lifetime</text>
 
-  <rect x="640" y="40" width="600" height="171.851851851851" rx="6.21825270206" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="40" width="600" height="171.851851851851" rx="6.21825270206" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="940" y="77.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.618382655835" font-weight="bold" fill="var(--ok-text)">Before Move</text>
   <rect x="672" y="93.703703703704" width="243" height="40.814814814815" rx="6.21825270206" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1"/>
   <text x="793" y="120.555555555556" text-anchor="middle" font-family="Courier New, monospace" font-size="13.472880854462" fill="var(--text)">data @ 0x100</text>
@@ -112,7 +107,7 @@
   <text x="793" y="168.888888888889" text-anchor="middle" font-family="Courier New, monospace" font-size="13.472880854462" fill="var(--text)">slice → 0x100</text>
   <text x="960" y="168.888888888889" font-family="Arial, sans-serif" font-size="14.509256304805" font-weight="bold" fill="var(--ok-text)">Valid</text>
 
-  <rect x="40" y="244.074074074074" width="600" height="193.333333333333" rx="6.21825270206" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="244.074074074074" width="600" height="193.333333333333" rx="6.21825270206" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="340" y="281.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.618382655835" font-weight="bold" fill="var(--danger-text)">After Move: DANGLING</text>
   <rect x="72" y="303.148148148148" width="243" height="40.814814814815" rx="6.21825270206" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="4 4"/>
   <text x="193" y="330.000000000001" text-anchor="middle" font-family="Courier New, monospace" font-size="13.472880854462" fill="var(--text-faint)">freed @ 0x100</text>
@@ -121,14 +116,14 @@
   <rect x="72" y="405.185185185186" width="243" height="21.481481481481" rx="6.21825270206" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1"/>
   <text x="360" y="389.074074074074" font-family="Arial, sans-serif" font-size="14.509256304805" font-weight="bold" fill="var(--danger-text)">slice still points to 0x100</text>
 
-  <rect x="688" y="244.074074074074" width="552" height="193.333333333333" rx="6.21825270206" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="688" y="244.074074074074" width="552" height="193.333333333333" rx="6.21825270206" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="964" y="281.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--ok-text)">Solutions</text>
   <text x="712" y="319.259259259259" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--ok-text)">1. Use indices</text>
   <text x="712" y="351.481481481481" font-family="Courier New, monospace" font-size="15.545631755148" fill="var(--ok-text)">2. Pin&lt;Box&lt;T&gt;&gt;</text>
   <text x="712" y="383.703703703704" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--ok-text)">3. ouroboros crate</text>
   <text x="712" y="415.925925925926" font-family="Courier New, monospace" font-size="15.545631755148" fill="var(--ok-text)">4. Rc&lt;str&gt; / Arc&lt;str&gt;</text>
 
-  <rect x="40" y="469.62962962963" width="1200" height="150.37037037037" rx="6.21825270206" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="469.62962962963" width="1200" height="150.37037037037" rx="6.21825270206" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="507.222222222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--warn-text)">Pin&lt;P&gt; - stdlib solution</text>
   <text x="70" y="544.814814814815" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">Guarantees the value will not move in memory</text>
   <text x="70" y="577.037037037037" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">Used by async Futures (self-referential across await)</text>

@@ -67,11 +67,6 @@
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
     <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
@@ -96,26 +91,26 @@
     </marker>
   </defs>
 
-  <rect x="40" y="250.909090909091" width="222.222222222222" height="131.818181818182" rx="7.261354744624" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="250.909090909091" width="222.222222222222" height="131.818181818182" rx="7.261354744624" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="151.111111111111" y="310.227272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.204515815413" font-weight="bold" fill="var(--warn-text)">Event Source</text>
   <text x="151.111111111111" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.15338686156" fill="var(--warn-text)">emits an event</text>
 
   <rect x="373.333333333333" y="40" width="533.333333333333" height="580" rx="12.102257907707" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="640" y="86.136363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.204515815413" font-weight="bold" fill="var(--text)">Lambda Service</text>
 
-  <rect x="417.777777777778" y="132.272727272727" width="444.444444444444" height="105.454545454545" rx="7.261354744624" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="417.777777777778" y="132.272727272727" width="444.444444444444" height="105.454545454545" rx="7.261354744624" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="178.409090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.784064233872" font-weight="bold" fill="var(--primary-text)">1. Find or create environment</text>
   <text x="640" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" fill="var(--primary-text)">a micro-VM with your code</text>
 
-  <rect x="417.777777777778" y="277.272727272727" width="444.444444444444" height="105.454545454545" rx="7.261354744624" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="417.777777777778" y="277.272727272727" width="444.444444444444" height="105.454545454545" rx="7.261354744624" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="323.409090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.784064233872" font-weight="bold" fill="var(--primary-text)">2. Invoke handler(event, context)</text>
   <text x="640" y="359" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" fill="var(--primary-text)">one request per environment</text>
 
-  <rect x="417.777777777778" y="422.272727272727" width="444.444444444444" height="105.454545454545" rx="7.261354744624" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="417.777777777778" y="422.272727272727" width="444.444444444444" height="105.454545454545" rx="7.261354744624" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="640" y="468.409090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.784064233872" font-weight="bold" fill="var(--primary-text)">3. Return result, keep env warm</text>
   <text x="640" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.943161070789" fill="var(--primary-text)">reused for the next request</text>
 
-  <rect x="1017.777777777778" y="250.909090909091" width="222.222222222222" height="131.818181818182" rx="7.261354744624" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1017.777777777778" y="250.909090909091" width="222.222222222222" height="131.818181818182" rx="7.261354744624" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1128.888888888889" y="310.227272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.204515815413" font-weight="bold" fill="var(--warn-text)">Caller</text>
   <text x="1128.888888888889" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.15338686156" fill="var(--warn-text)">gets result</text>
 

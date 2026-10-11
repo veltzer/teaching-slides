@@ -42,7 +42,6 @@
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
@@ -53,13 +52,13 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Class Imbalance</text>
   <rect x="40" y="80" width="1200" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="40" y="80" width="1140" height="80" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80" width="1140" height="80" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="610" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Majority class — 95%</text>
-  <rect x="1180" y="80" width="60" height="80" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1180" y="80" width="60" height="80" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="1210" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">5%</text>
-  <rect x="40" y="175" width="1200" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="175" width="1200" height="60" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="640" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">A constant 'predict majority' classifier scores 95% accuracy</text>
-  <rect x="40" y="250" width="380" height="370" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="250" width="380" height="370" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="230" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">What goes wrong</text>
   <text x="60" y="325" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Accuracy is misleading</text>
   <text x="60" y="355" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Rare class often the goal</text>
@@ -71,7 +70,7 @@
   <text x="60" y="545" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">• Disease screening</text>
   <text x="60" y="575" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">• Manufacturing defects</text>
   <text x="60" y="605" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">• Click prediction</text>
-  <rect x="450" y="250" width="380" height="370" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="250" width="380" height="370" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Better metrics</text>
   <text x="470" y="325" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Precision / Recall</text>
   <text x="470" y="355" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">F1 score</text>
@@ -81,7 +80,7 @@
   <text x="470" y="485" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Calibration plot</text>
   <text x="470" y="525" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Always measure on the rare</text>
   <text x="470" y="555" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">class — the majority is easy</text>
-  <rect x="860" y="250" width="380" height="370" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="250" width="380" height="370" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1050" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Mitigations</text>
   <text x="880" y="325" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Class weights in loss</text>
   <text x="880" y="355" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Oversample minority (SMOTE)</text>
