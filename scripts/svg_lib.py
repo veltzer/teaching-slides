@@ -9,7 +9,7 @@ lines) and string-based defs replacement (deterministic formatting).
 All SVG-editing scripts in this project MUST use this module. It ensures:
 
   1. Byte-identical output for the same logical content (idempotency).
-  2. The <defs> block is always rebuilt from the palette YAML.
+  2. The <defs> block is always rebuilt from the SVG's diagram theme.
   3. Comments, blank lines, and attribute order are preserved.
   4. Files are only written when the output actually differs.
 
@@ -27,8 +27,10 @@ Typical usage:
 
 from __future__ import annotations
 
+import copy
 import math
 import re
+import sys
 from pathlib import Path
 
 import yaml
@@ -37,13 +39,13 @@ from lxml import etree
 SVG_NS = "http://www.w3.org/2000/svg"
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-DEFAULT_PALETTE = ROOT_DIR / "resources" / "palette_diagram.yaml"
-INTRO_PALETTE = ROOT_DIR / "resources" / "palette_intro.yaml"
+# The diagram themes live in shared-themes (diagram-themes.yaml, resolved
+# into diagram_theme.py); this file picks the one each kind of SVG uses.
+SHARED_THEMES_DIR = ROOT_DIR / "shared" / "shared-themes"
+DIAGRAM_THEMES_CONFIG = ROOT_DIR / "resources" / "diagram_themes.yaml"
 
-PALETTES: dict[str, Path] = {
-    "regular": DEFAULT_PALETTE,
-    "title": INTRO_PALETTE,
-}
+# The kinds of SVG, declared in each file's <metadata><type>.
+SVG_TYPES: tuple[str, ...] = ("regular", "title")
 
 # Regex to match the full <defs>...</defs> block including surrounding whitespace.
 _DEFS_BLOCK_RE = re.compile(
@@ -60,23 +62,66 @@ _METADATA_BLOCK_RE = re.compile(
 _palette_cache: dict[str, dict] = {}
 
 
-def load_palette(palette_path: Path = DEFAULT_PALETTE) -> dict:
-    key = str(palette_path)
-    if key not in _palette_cache:
-        _palette_cache[key] = yaml.safe_load(
-            palette_path.read_text(encoding="utf-8")
+def theme_name_for_type(svg_type: str) -> str:
+    """The shared-themes diagram theme an SVG type is drawn with."""
+    config = yaml.safe_load(DIAGRAM_THEMES_CONFIG.read_text(encoding="utf-8"))
+    if set(config) != set(SVG_TYPES):
+        raise ValueError(
+            f"{DIAGRAM_THEMES_CONFIG} must name a theme for exactly {list(SVG_TYPES)}, "
+            f"not {sorted(config)}"
         )
-    return _palette_cache[key]
+    if svg_type not in config:
+        raise ValueError(f"unknown SVG type {svg_type!r} (known: {list(SVG_TYPES)})")
+    return config[svg_type]
+
+
+def load_palette(svg_type: str = "regular") -> dict:
+    """The palette an SVG type is drawn with: its diagram theme from
+    shared-themes, with the theme's `shadow` turned into the drop-shadow
+    filter (`filters`) and the shadow policy (`effects.rect-shadow`) the
+    scripts apply. A theme with `shadow: none` has neither filter nor
+    shadowed elements."""
+    if svg_type in _palette_cache:
+        return _palette_cache[svg_type]
+    name = theme_name_for_type(svg_type)
+    if str(SHARED_THEMES_DIR) not in sys.path:
+        sys.path.insert(0, str(SHARED_THEMES_DIR))
+    from diagram_theme import DIAGRAM_THEMES
+    if name not in DIAGRAM_THEMES:
+        raise ValueError(
+            f"{DIAGRAM_THEMES_CONFIG}: no diagram theme {name!r} in shared-themes "
+            f"(known: {sorted(DIAGRAM_THEMES)})"
+        )
+    data = copy.deepcopy(DIAGRAM_THEMES[name])
+    shadow = data.pop("shadow")
+    effects = data.setdefault("effects", {})
+    if shadow == "none":
+        data["filters"] = {}
+        effects["rect-shadow"] = {"enabled": False, "apply-to": "none"}
+    else:
+        data["filters"] = {
+            "shadow": {
+                "type": "drop-shadow",
+                "dx": shadow["dx"],
+                "dy": shadow["dy"],
+                "stdDeviation": shadow["blur"],
+                "flood-color": shadow["color"],
+            }
+        }
+        effects["rect-shadow"] = {"enabled": True, "apply-to": shadow["apply-to"]}
+    _palette_cache[svg_type] = data
+    return data
 
 
 # ── Canonical defs string ──
 
-def build_defs_string(palette_path: Path = DEFAULT_PALETTE) -> str:
-    """Build the canonical <defs>...</defs> string from the palette YAML.
+def build_defs_string(svg_type: str = "regular") -> str:
+    """Build the canonical <defs>...</defs> string from the SVG type's
+    diagram theme.
 
     This is the SINGLE SOURCE OF TRUTH for the defs block format.
     """
-    data = load_palette(palette_path)
+    data = load_palette(svg_type)
     lines: list[str] = []
     lines.append("  <defs>")
 
@@ -160,9 +205,11 @@ def svg_type_from_tree(root) -> str:
     return "regular"
 
 
-def palette_for_type(svg_type: str) -> Path:
-    """Return the palette path for a given SVG type."""
-    return PALETTES.get(svg_type, DEFAULT_PALETTE)
+def palette_for_type(svg_type: str) -> str:
+    """Check that `svg_type` is a known SVG type, and return it."""
+    if svg_type not in SVG_TYPES:
+        raise ValueError(f"unknown SVG type {svg_type!r} (known: {list(SVG_TYPES)})")
+    return svg_type
 
 
 # ── Helpers ──
@@ -195,24 +242,19 @@ class SvgFile:
     """
 
     def __init__(self, path: Path, root: etree._Element,
-                 original_text: str,
-                 palette_path: Path = DEFAULT_PALETTE):
+                 original_text: str):
         self.path = path
         self.root = root
         self.changed = False
         self._original_text = original_text
-        self._palette_path = palette_path
-        self.svg_type = svg_type_from_tree(root)
+        self.svg_type = palette_for_type(svg_type_from_tree(root))
 
     @classmethod
-    def load(cls, path: Path,
-             palette_path: Path | None = None) -> SvgFile:
+    def load(cls, path: Path) -> SvgFile:
         text = path.read_text(encoding="utf-8")
         parser = etree.XMLParser(remove_blank_text=False)
         root = etree.fromstring(text.encode(), parser)
-        if palette_path is None:
-            palette_path = palette_for_type(svg_type_from_tree(root))
-        return cls(path, root, text, palette_path)
+        return cls(path, root, text)
 
     def content_elements(self, elem_tag: str | None = None):
         """Iterate (element, parent) pairs outside <defs>."""
@@ -280,7 +322,7 @@ class SvgFile:
             text = _SVG_OPEN_RE.sub(r"\1\n" + meta_str + "\n", text, count=1)
 
         # Splice canonical defs
-        defs_str = build_defs_string(self._palette_path)
+        defs_str = build_defs_string(self.svg_type)
 
         if _DEFS_BLOCK_RE.search(text):
             text = _DEFS_BLOCK_RE.sub(defs_str + "\n", text, count=1)

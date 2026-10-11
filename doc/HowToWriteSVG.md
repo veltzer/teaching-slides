@@ -72,28 +72,31 @@ amateurish next to its well-filled neighbours.
 
 ## Colors: use the palette, always
 
-Each SVG declares its type via a `<metadata>` element, which determines
-which palette YAML is used:
+Each SVG declares its type via a `<metadata>` element, which selects its
+diagram theme:
 
 ```xml
 <metadata>
-  <type>regular</type>    <!-- uses resources/palette_diagram.yaml -->
+  <type>regular</type>    <!-- a diagram -->
 </metadata>
 
 <metadata>
-  <type>title</type>      <!-- uses resources/palette_intro.yaml -->
+  <type>title</type>      <!-- course or lecture title artwork -->
 </metadata>
 ```
 
-If no `<metadata><type>` is present, the SVG defaults to `regular`.
-`scripts/install_palette.py` reads this metadata and installs the
-matching `<defs>` block.
+If no `<metadata><type>` is present, the SVG defaults to `regular`; any
+other type is an error. The themes themselves (colours, gradients, drop
+shadow or none, typography, markers) live in shared-themes,
+`shared/shared-themes/diagram-themes.yaml`, and `resources/diagram_themes.yaml`
+names the theme each type uses. `scripts/install_palette.py` reads the
+metadata and installs the matching `<defs>` block.
 
-Both palettes use **semantic role names only** — never appearance-based
+All themes use **semantic role names only** — never appearance-based
 names like "vivid", "pale", "bright", or "soft". Role names describe
 WHAT a color is used for, not what it LOOKS LIKE. This lets us retune
-the whole visual theme by editing hex values in one YAML file; every SVG
-follows automatically.
+the whole visual theme, or switch to another theme, in one place; every SVG
+follows when the palette is installed again.
 
 ### The role set
 
@@ -131,7 +134,7 @@ AND NOT appearance-named variants (which no longer exist):
 ```
 
 The `check_svg.py --colors` check validates every fill/stroke/color
-attribute against the palette YAML. Use `scripts/install_palette.py` to
+attribute against the SVG's diagram theme. Use `scripts/install_palette.py` to
 push the canonical `<defs>` block into every SVG.
 
 ## Shape primitives: one canonical way to draw

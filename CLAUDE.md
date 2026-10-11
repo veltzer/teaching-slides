@@ -22,7 +22,7 @@
 - Never number "parts" in slide headings (e.g., `## Part 3: Foo`, `## Part II: Foo`). Reordering slides breaks the numbering. Just use the descriptive title.
 - Indent sub-items with 4 spaces (four spaces followed by `- item`)
 - No mermaid diagrams — prefer SVG (no fast mermaid tool available yet)
-- Always use the project SVG color palette: `resources/palette_diagram.yaml`
+- Always use the project SVG diagram theme. The themes (colours, gradients, drop shadow or none, typography, markers) live in `shared/shared-themes/diagram-themes.yaml`; `resources/diagram_themes.yaml` names the theme each kind of SVG uses (`regular`, `title`). After changing it, run `scripts/install_palette.py --apply` and `scripts/svg_fix.py --shadows --gradients --fonts`
 - No external image URLs — all images must be in `svg/` or `jpg/` directories
 - SVG font size must be ≥ 10 (enforced by `scripts/check_svg.py --fonts`)
 - All SVG files must use `viewBox="0 0 1280 720"` (16:9, matches Marp slide dimensions). Use `scripts/svg_fix.py --aspect-ratio` to fix existing SVGs.

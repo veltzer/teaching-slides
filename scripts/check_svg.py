@@ -35,7 +35,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-import yaml
+from svg_lib import load_palette, palette_for_type
 
 MIN_FILE_SIZE = 500
 MIN_ELEMENTS = 5
@@ -186,38 +186,21 @@ _NON_COLOR_VALUES = {"none", "currentcolor", "inherit", "transparent"}
 # Tags inside <defs> where raw hex is allowed (gradient stops, marker fills, filter colors)
 _DEFS_TAGS = {"stop", "feDropShadow"}
 
-_DEFAULT_PALETTE = Path("resources/palette_diagram.yaml")
-_INTRO_PALETTE = Path("resources/palette_intro.yaml")
-_PALETTES: dict[str, Path] = {
-    "regular": _DEFAULT_PALETTE,
-    "title": _INTRO_PALETTE,
-}
 _SVG_NS = "http://www.w3.org/2000/svg"
 
 
-def _load_palette_names(palette_path: Path) -> set[str]:
-    """Load allowed semantic color names from a palette YAML file.
+def _load_palette_names(svg_type: str) -> set[str]:
+    """The semantic color names of an SVG type's diagram theme.
 
-    Returns a set of names like {"bg", "primary", "danger-lt", ...}.
+    Returns a set of names like {"bg", "primary-fill", "danger-text", ...}.
     """
-    key = str(palette_path)
-    if key in _PALETTE_CACHE:
-        return _PALETTE_CACHE[key]
-
-    if not palette_path.exists():
-        _PALETTE_CACHE[key] = set()
-        return _PALETTE_CACHE[key]
-
-    with open(palette_path, encoding="utf-8") as f:
-        data = yaml.safe_load(f)
-
+    if svg_type in _PALETTE_CACHE:
+        return _PALETTE_CACHE[svg_type]
     names: set[str] = set()
-    for group in data.get("colors", {}).values():
-        for name in group:
-            names.add(name)
-
-    _PALETTE_CACHE[key] = names
-    return _PALETTE_CACHE[key]
+    for group in load_palette(svg_type).get("colors", {}).values():
+        names.update(group)
+    _PALETTE_CACHE[svg_type] = names
+    return names
 
 
 def _svg_type_from_file(svg_path: Path) -> str:
@@ -239,30 +222,26 @@ def _svg_type_from_file(svg_path: Path) -> str:
     return "regular"
 
 
-def _palette_for_svg(svg_path: Path) -> Path:
-    """Return the palette file for an SVG by reading its <metadata><type>.
-
-    Falls back to the default diagram palette if no metadata is found.
-    """
-    svg_type = _svg_type_from_file(svg_path)
-    return _PALETTES.get(svg_type, _DEFAULT_PALETTE)
+def _palette_for_svg(svg_path: Path) -> str:
+    """The SVG type of a file, from its <metadata><type> ("regular" if it
+    has none). An unknown type is an error."""
+    return palette_for_type(_svg_type_from_file(svg_path))
 
 
 def _check_colors(tree: ET.ElementTree, svg_path: Path | None = None) -> list[str]:
     """Flag SVGs that use colors not expressed as var(--name) from the palette.
 
-    Reads the <metadata><type> element inside the SVG to determine
-    which palette YAML to validate against. Falls back to palette_diagram.yaml
-    if no metadata is present.
+    Reads the <metadata><type> element inside the SVG to determine which
+    diagram theme to validate against ("regular" if no metadata is present).
     Raw hex values and named CSS colors are rejected.
 
     Exception: elements inside <defs> (gradient stops, marker paths, filter
     params) may use raw hex since CSS var() doesn't work reliably there.
     """
-    palette_path = _palette_for_svg(svg_path) if svg_path else _DEFAULT_PALETTE
-    palette_names = _load_palette_names(palette_path)
+    svg_type = _palette_for_svg(svg_path) if svg_path else "regular"
+    palette_names = _load_palette_names(svg_type)
     if not palette_names:
-        return [f"cannot check colors: {palette_path} not found or empty"]
+        return [f"cannot check colors: the {svg_type} diagram theme has no colors"]
 
     errors: list[str] = []
     seen_bad: set[str] = set()
@@ -376,11 +355,7 @@ def _shadow_policy() -> tuple[bool, str, set[str]]:
     global _SHADOW_POLICY
     if _SHADOW_POLICY is not None:
         return _SHADOW_POLICY
-    palette_path = _DEFAULT_PALETTE
-    if not palette_path.exists():
-        _SHADOW_POLICY = (False, "none", set())
-        return _SHADOW_POLICY
-    data = yaml.safe_load(palette_path.read_text(encoding="utf-8"))
+    data = load_palette("regular")
     eff = data.get("effects", {}).get("rect-shadow", {})
     enabled = bool(eff.get("enabled", False))
     apply_to = eff.get("apply-to", "none") if enabled else "none"
@@ -409,6 +384,11 @@ def _check_shadows(tree: ET.ElementTree) -> list[str]:
     for elem in tree.iter():
         if elem in defs_children:
             continue
+        if apply_to == 'none' and 'url(#shadow)' in (elem.get('filter') or ''):
+            # The theme defines no #shadow filter, and an element referring
+            # to a missing filter is not drawn at all.
+            errors.append(f"<{elem.tag.split('}')[-1]}> has filter=\"url(#shadow)\" but the theme has no shadow")
+            continue
         if elem.tag.split('}')[-1] != 'rect':
             continue
         fill = (elem.get('fill') or '').strip()
@@ -433,10 +413,7 @@ def _typography() -> tuple[str, str]:
     global _TYPOGRAPHY
     if _TYPOGRAPHY is not None:
         return _TYPOGRAPHY
-    if not _DEFAULT_PALETTE.exists():
-        _TYPOGRAPHY = ("Arial, sans-serif", "Courier New, monospace")
-        return _TYPOGRAPHY
-    data = yaml.safe_load(_DEFAULT_PALETTE.read_text(encoding="utf-8"))
+    data = load_palette("regular")
     typo = data.get("typography", {})
     _TYPOGRAPHY = (
         typo.get("sans", "Arial, sans-serif"),
@@ -452,10 +429,7 @@ def _rect_fill_policy() -> tuple[str, list[str]]:
     global _RECT_FILL_POLICY
     if _RECT_FILL_POLICY is not None:
         return _RECT_FILL_POLICY
-    if not _DEFAULT_PALETTE.exists():
-        _RECT_FILL_POLICY = ("solid", [])
-        return _RECT_FILL_POLICY
-    data = yaml.safe_load(_DEFAULT_PALETTE.read_text(encoding="utf-8"))
+    data = load_palette("regular")
     style = data.get("effects", {}).get("rect-fill", {}).get("style", "solid")
     fams = []
     for group_name, group in data.get("colors", {}).items():
@@ -583,12 +557,8 @@ def _check_title(tree: ET.ElementTree) -> list[str]:
 
 
 def _load_intro_palette() -> dict:
-    """Load and cache the intro palette YAML."""
-    intro_palette = Path("resources/palette_intro.yaml")
-    if intro_palette.exists():
-        with open(intro_palette, encoding="utf-8") as f:
-            return yaml.safe_load(f)
-    return {}
+    """The diagram theme of title artwork (the "title" SVG type)."""
+    return load_palette("title")
 
 
 def _check_title_bg_rect(tree: ET.ElementTree) -> list[str]:
@@ -596,7 +566,7 @@ def _check_title_bg_rect(tree: ET.ElementTree) -> list[str]:
 
     Only called for title-type SVGs (caller checks metadata type).
     The first <rect> child of the root must match the background-rect spec
-    from palette_intro.yaml.
+    of the title diagram theme.
     """
     errors: list[str] = []
     root = tree.getroot()
@@ -669,7 +639,7 @@ def _check_title_text(tree: ET.ElementTree, path: Path) -> list[str]:
     """For title-type SVGs, verify canonical title and subtitle text.
 
     Only called for title-type SVGs (caller checks metadata type).
-    Reads the title-text and subtitle-text specs from palette_intro.yaml
+    Reads the title-text and subtitle-text specs from the title diagram theme
     and checks that exactly one of each exists as direct children of <svg>
     with the required attributes and positions.
     """
@@ -773,7 +743,7 @@ def main() -> None:
     parser.add_argument('--title', action='store_true',
                         help='Flag SVGs that contain a <title> element')
     parser.add_argument('--colors', action='store_true',
-                        help='Flag SVGs against their <!-- palette: path --> comment (default: palette_diagram)')
+                        help='Flag colors that are not var(--name) of the SVG type\'s diagram theme')
     parser.add_argument('--words', action='store_true',
                         help=f'Flag SVGs whose <text>/<tspan> content exceeds {MAX_WORD_COUNT} words total')
     parser.add_argument('--fill', action='store_true',

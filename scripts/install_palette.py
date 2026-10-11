@@ -10,19 +10,21 @@ Install the canonical palette into every SVG under svg/.
 Each SVG declares its type via a <metadata><type> element:
 
     <metadata>
-      <type>regular</type>    — uses palette_diagram.yaml (default)
+      <type>regular</type>    — a diagram (default)
     </metadata>
 
     <metadata>
-      <type>title</type>      — uses palette_intro.yaml
+      <type>title</type>      — course or lecture title artwork
     </metadata>
 
-The type determines which palette YAML is used to build the <defs> block.
-If no <metadata><type> element is present, the SVG defaults to "regular".
+The type selects the diagram theme the <defs> block is built from: the
+shared-themes theme resources/diagram_themes.yaml names for that type. If no
+<metadata><type> element is present, the SVG defaults to "regular"; an
+unknown type is an error.
 
 For each SVG:
-  1. Reads <metadata><type> to select the palette
-  2. Rebuilds the <defs> block from the selected palette YAML (via svg_lib)
+  1. Reads <metadata><type> to select the diagram theme
+  2. Rebuilds the <defs> block from that theme (via svg_lib)
   3. Converts raw hex color values in attributes to var(--name) references
   4. Renames old gradient/marker IDs to canonical ones
   5. Ensures xmlns, viewBox, and background style on root
@@ -40,7 +42,7 @@ import re
 import sys
 from pathlib import Path
 
-from svg_lib import PALETTES, SvgFile, load_palette
+from svg_lib import SVG_TYPES, SvgFile, load_palette
 
 SVG_ROOT = Path("svg")
 
@@ -180,12 +182,8 @@ def main() -> None:
 
     # Build hex-to-name mapping for each palette type
     hex_to_name_map: dict[str, dict[str, str]] = {}
-    for svg_type, palette_path in PALETTES.items():
-        if not palette_path.exists():
-            print(f"Error: {palette_path} not found", file=sys.stderr)
-            sys.exit(1)
-        data = load_palette(palette_path)
-        hex_to_name_map[svg_type] = _build_hex_to_name(data)
+    for svg_type in SVG_TYPES:
+        hex_to_name_map[svg_type] = _build_hex_to_name(load_palette(svg_type))
 
     svg_files = ([Path(p) for p in args.paths] if args.paths
                  else sorted(SVG_ROOT.rglob("*.svg")))

@@ -120,6 +120,16 @@ def fix_shadows(svg: SvgFile) -> None:
                 family_fills.add(f"var(--{name})")
                 family_fills.add(f"url(#grad-{name[:-len('-fill')]})")
 
+    if apply_to == "none":
+        # The theme has no shadow, so its <defs> has no #shadow filter, and
+        # an element referring to a missing filter is not drawn at all:
+        # every element loses it, not only rects.
+        for elem, _ in svg.content_elements():
+            if "url(#shadow)" in (elem.get("filter") or ""):
+                del elem.attrib["filter"]
+                svg.changed = True
+        return
+
     for elem, _ in svg.content_elements("rect"):
         fill = (elem.get("fill") or "").strip()
         has = elem.get("filter") == "url(#shadow)"
