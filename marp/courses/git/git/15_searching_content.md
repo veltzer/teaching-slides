@@ -40,6 +40,10 @@ Git provides powerful tools for searching content across:
 - Find when specific code was introduced
 - Track evolution of functions or variables
 
+---
+
+## Introduction to Content Search (cont.)
+
 **Multiple branches:**
 - Search across different branches
 - Compare content between branches
@@ -628,6 +632,10 @@ Guidelines for effective content searching:
 1. Use specific file patterns when possible
 1. Combine multiple search methods
 
+---
+
+## Search Best Practices (cont.)
+
 **Performance:**
 1. Limit search scope appropriately
 1. Use specific patterns over broad ones
@@ -657,10 +665,18 @@ Guidelines for effective content searching:
    - Find commits that removed deprecated code
    - Analyze security-related changes over time
 
-1. **Cross-branch analysis:**
+---
+
+## Lab Exercise: Content Search Mastery (cont.)
+
+3. **Cross-branch analysis:**
    - Compare content between development branches
    - Find features that exist in some branches but not others
    - Identify merge conflicts in advance
+
+---
+
+## Lab Exercise: Content Search Mastery (cont.)
 
 **Advanced tasks:**
 1. **Automation development:**
@@ -672,6 +688,10 @@ Guidelines for effective content searching:
    - Benchmark different search approaches
    - Optimize searches for large repositories
    - Integrate with external search tools
+
+---
+
+## Lab Exercise: Content Search Mastery (cont.)
 
 **Deliverables:** Comprehensive search scripts, security scanning automation, code quality analysis tools, and performance optimization guide.
 
@@ -692,16 +712,24 @@ Guidelines for effective content searching:
    - Consider external tools for large repositories
    - Leverage Git's indexing capabilities
 
-1. **Develop systematic approaches:**
+---
+
+## Summary: Mastering Git Content Search (cont.)
+
+3. **Develop systematic approaches:**
    - Start broad, then narrow focus
    - Combine multiple search methods
    - Automate common patterns
    - Document successful strategies
 
-1. **Focus on practical applications:**
+4. **Focus on practical applications:**
    - Code archaeology and debugging
    - Security vulnerability detection
    - Code quality assessment
    - Historical analysis and trends
+
+---
+
+## Summary: Mastering Git Content Search (cont.)
 
 **Remember:** Effective content searching is both an art and a science. The combination of Git's built-in tools with external utilities and systematic approaches enables powerful analysis of codebases. Master these techniques to become more effective at code maintenance, security analysis, and understanding large software projects.

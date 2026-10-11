@@ -790,6 +790,10 @@ Vendors offering Yocto support:
 - **Pengutronix** - BSP development
 - **Bootlin** - Training and consulting
 
+---
+
+## Commercial Support (cont.)
+
 Enterprise features:
 - Long-term support (LTS)
 - Security updates
@@ -811,6 +815,10 @@ Certification:
 - Yocto Project Certified Developer
 - Yocto Project Specialist
 
+---
+
+## Training and Certification (cont.)
+
 Resources:
 - docs.yoctoproject.org
 - wiki.yoctoproject.org
@@ -829,6 +837,10 @@ Mailing lists:
 IRC channels:
 - #yocto on libera.chat
 - #openembedded on libera.chat
+
+---
+
+## Community Resources (cont.)
 
 Bug tracking:
 - bugzilla.yoctoproject.org
@@ -851,6 +863,10 @@ Emerging trends:
 - Reproducible builds
 - Supply chain security
 
+---
+
+## Future Directions (cont.)
+
 Upcoming features:
 - Improved hash equivalence
 - Better incremental builds
@@ -872,6 +888,10 @@ Development:
 - Version control everything
 - Automated testing
 - Continuous integration
+
+---
+
+## Best Practices Summary (cont.)
 
 Production:
 - Security hardening
@@ -901,6 +921,10 @@ Advanced topics covered:
 - Custom distributions
 - Community and ecosystem
 
+---
+
+## Summary (cont.)
+
 Key takeaways:
 - Yocto is highly extensible
 - Strong ecosystem support
@@ -919,11 +943,20 @@ Throughout this course:
 1. Practical image development
 1. Layer management and recipes
 1. Kernel and device integration
-1. Development workflow and tools
-1. Build optimization and CI/CD
-1. Security and compliance
-1. Production deployment
-1. Advanced topics and ecosystem
+
+---
+
+## Course Conclusion (cont.)
+
+7. Development workflow and tools
+8. Build optimization and CI/CD
+9. Security and compliance
+10. Production deployment
+11. Advanced topics and ecosystem
+
+---
+
+## Course Conclusion (cont.)
 
 Next steps:
 - Build your first custom image

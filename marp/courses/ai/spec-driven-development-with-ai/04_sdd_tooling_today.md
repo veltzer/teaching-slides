@@ -111,6 +111,10 @@ specs/
 | `GitHub Copilot` | `.github/prompts/speckit.*.prompt.md` | `/speckit.specify` in agent mode |
 | Cursor | `.cursor/commands/speckit.*.md` | `/speckit.specify` in chat |
 
+---
+
+## Spec Kit With Claude Code, Copilot and Cursor (cont.)
+
 - Same templates, same output files; only the launcher differs
 - Multiple agents in one repository are fine: `specify init --ai` can be run per agent
 - Claude Code additionally reads `CLAUDE.md`; point it at the constitution there
@@ -131,6 +135,11 @@ specs/
     - `requirements.md`: user stories with `EARS` acceptance criteria, generated from one sentence
     - `design.md`: architecture, sequence diagrams, interfaces, data model
     - `tasks.md`: checkbox tasks, each linked to the requirement it satisfies
+
+---
+
+## Kiro Artifacts in Practice (cont.)
+
 - Files live in `.kiro/specs/<feature>/` and are ordinary `Markdown` in your repository
 - `.kiro/steering/` holds always-on context: the constitution, conventions, product facts
 - You start a task from the `tasks.md` file itself; the IDE tracks completion
@@ -229,6 +238,10 @@ specs/
 | Enterprise `Copilot` license only | `Spec Kit` with `Copilot` prompts |
 | Heavy CLI and CI usage | `Spec Kit` with `Claude Code` |
 | Strict prompt governance | DIY, prompts reviewed like code |
+
+---
+
+## Choosing a Toolchain (cont.)
 
 - Decide on the artifacts first, the tool second; artifacts outlive tools
 - Licensing, data residency and which models are approved usually decide before features do

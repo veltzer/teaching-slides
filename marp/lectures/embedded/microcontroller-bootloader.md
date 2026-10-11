@@ -45,6 +45,10 @@ Think of it as the BIOS/UEFI of microcontrollers
 - No dual-bank switching
 - No secure boot features
 
+---
+
+## Why Write a Custom Bootloader? (cont.)
+
 **Custom bootloaders enable:**
 - Network updates (WiFi, Ethernet, Cellular)
 - Cryptographic verification
@@ -947,6 +951,10 @@ const bootloader_info_t __attribute__((section(".bootloader_info")))
 - Document memory layout clearly
 - Plan for field updates from day one
 
+---
+
+## Best Practices Summary (cont.)
+
 **❌ DON'T:**
 - Make bootloader too complex
 - Skip input validation
@@ -1028,6 +1036,10 @@ bool detect_boot_anomaly(void) {
 - **5G connectivity**: Ultra-fast updates
 - **Hardware security modules**: Enhanced crypto
 
+---
+
+## Future Trends (cont.)
+
 **Industry Evolution:**
 - Standardization of update protocols
 - Increased focus on security
@@ -1050,6 +1062,10 @@ bool detect_boot_anomaly(void) {
 - **QEMU**: System emulation
 - **Wireshark**: Protocol analysis
 
+---
+
+## Tools & Resources (cont.)
+
 **Libraries:**
 - **mbedTLS**: Cryptography
 - **FatFs**: File system
@@ -1066,6 +1082,10 @@ bool detect_boot_anomaly(void) {
 - Start simple, add features incrementally
 - Test extensively before deployment
 - Plan for the unexpected
+
+---
+
+## Conclusion (cont.)
 
 **Success Factors:**
 - Clear requirements definition

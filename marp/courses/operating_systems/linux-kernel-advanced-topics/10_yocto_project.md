@@ -39,6 +39,10 @@ Key components:
 1. License compliance
 1. Long-term support
 
+---
+
+## Why Yocto? (cont.)
+
 ### Use Cases
 
 - Embedded Linux systems
@@ -588,7 +592,12 @@ IMAGE_LINGUAS = ""
     - CI/CD integration
     - Nightly builds
     - Testing
-1. **Artifact management**
+
+---
+
+## Production Deployment (cont.)
+
+3. **Artifact management**
     - Image storage
     - Package feeds
     - SDK distribution
@@ -619,7 +628,11 @@ IMAGE_LINGUAS = ""
     - Include license information
     - Test recipes independently
 
-1. **Build Optimization**
+---
+
+## Best Practices (cont.)
+
+3. **Build Optimization**
     - Use shared state cache
     - Implement CI/CD
     - Monitor build times

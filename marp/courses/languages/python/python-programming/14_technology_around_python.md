@@ -49,6 +49,13 @@ def buggy_function(items):
 | `p expr` | Print expression |
 | `pp expr` | Pretty-print expression |
 | `l` (list) | Show source code |
+
+---
+
+## `pdb` Commands (cont.)
+
+| Command | Description |
+|---------|-------------|
 | `w` (where) | Show stack trace |
 | `q` (quit) | Quit debugger |
 | `b N` | Set breakpoint at line N |

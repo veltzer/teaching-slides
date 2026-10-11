@@ -539,7 +539,11 @@ Steps for safe Redis upgrades:
     - Backup data before upgrade
     - Plan for downtime or use replication
 
-1. **Upgrade process (standalone)**
+---
+
+## Upgrading Redis (cont.)
+
+2. **Upgrade process (standalone)**
 
     ```bash
     # Stop Redis
@@ -552,7 +556,7 @@ Steps for safe Redis upgrades:
     systemctl start redis
     ```
 
-1. **Upgrade process (with replicas)**:
+3. **Upgrade process (with replicas)**:
     - Upgrade replicas first
     - Promote a replica to master
     - Upgrade old master last

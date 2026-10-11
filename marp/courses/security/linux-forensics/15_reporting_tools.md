@@ -105,6 +105,13 @@ Creating a New Case:
 | File Type Identification | Verify file types by signature     |
 | Keyword Search           | Search for terms across all files  |
 | Email Parser             | Extract email messages             |
+
+---
+
+## Autopsy Analysis Modules (cont.)
+
+| Module                    | Purpose                            |
+|--------------------------|-------------------------------------|
 | Extension Mismatch       | Find renamed/disguised files       |
 | EXIF Parser              | Extract image metadata             |
 | Encryption Detection     | Find encrypted files/volumes       |
@@ -725,6 +732,10 @@ Required Deliverables:
 - OS artifacts and user activity
 - Password files and data structures
 
+---
+
+## Course Summary: Linux Forensics (cont.)
+
 ### Day 3: Collecting Evidence
 - Data carving with `foremost`, `scalpel`, `bulk_extractor`
 - System and network information collection
@@ -735,6 +746,10 @@ Required Deliverables:
 - `strace`, `ltrace`, `ftrace`, `GDB` for advanced analysis
 - Volatile memory analysis and syscall-hook detection
 - Network forensics from `pcap` evidence
+
+---
+
+## Course Summary: Linux Forensics (cont.)
 
 ### Day 5: Reporting and Capstone
 - Anti-forensics detection and countermeasures
@@ -755,6 +770,10 @@ Required Deliverables:
 - Volatility Foundation: https://www.volatilityfoundation.org/
 - Sleuth Kit: https://www.sleuthkit.org/
 - NIST CFTT: https://www.nist.gov/itl/ssd/software-quality-group
+
+---
+
+## Resources and Further Learning (cont.)
 
 ### Certifications
 - GIAC Certified Forensic Examiner (GCFE)
@@ -1035,6 +1054,10 @@ A web server has been compromised. You have:
 - A memory dump (`server.lime`)
 - Network capture (`traffic.pcap`)
 
+---
+
+## Course Final Exercise (cont.)
+
 ### Tasks:
 1. Mount and analyze the disk image
 1. Build a filesystem timeline
@@ -1042,6 +1065,10 @@ A web server has been compromised. You have:
 1. Correlate network traffic with disk findings
 1. Identify the attack vector and attacker actions
 1. Write a complete forensic report
+
+---
+
+## Course Final Exercise (cont.)
 
 ```misc
 Deliverables:

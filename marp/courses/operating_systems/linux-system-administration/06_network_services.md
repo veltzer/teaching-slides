@@ -1335,6 +1335,10 @@ Modern `Linux` uses predictable network interface names based on hardware topolo
 | `wl` | Wireless LAN |
 | `ww` | Wireless WAN (cellular) |
 
+---
+
+## Network Interface Naming Schemes (cont.)
+
 Naming schemes (in priority order):
 1. `eno1` - onboard device index
 1. `ens3` - PCI Express hotplug slot

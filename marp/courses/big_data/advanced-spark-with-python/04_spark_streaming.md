@@ -1001,6 +1001,13 @@ spark.conf.set("spark.streaming.backpressure.enabled", "true")
 | No watermark on join | Unbounded state growth | Set watermark on both streams |
 | Complete mode + large state | OOM on driver | Use update or append mode |
 | foreachBatch with side effects | Duplicates on retry | Make writes idempotent |
+
+---
+
+## Common Streaming Anti-Patterns (cont.)
+
+| Anti-Pattern | Problem | Solution |
+|---|---|---|
 | No checkpoint | Lost progress on restart | Always set checkpointLocation |
 | Tiny trigger intervals | High overhead | Use processingTime >= 10s |
 | collect() in foreachBatch | Driver OOM | Write directly from DataFrame |

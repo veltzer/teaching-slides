@@ -331,6 +331,10 @@ JetBrains IDE Git features:
 - **Console:** Git command execution
 - **Branches:** Visual branch management
 
+---
+
+## PyCharm Git Integration (cont.)
+
 **Git operations in PyCharm:**
 
 ```python
@@ -344,12 +348,20 @@ JetBrains IDE Git features:
 # VCS → Rebase...
 ```
 
+---
+
+## PyCharm Git Integration (cont.)
+
 **PyCharm Git workflow:**
 1. **Clone repository:** VCS → Get from Version Control
 1. **Make changes:** Edit files normally
 1. **Review changes:** Version Control tool window
 1. **Commit:** Ctrl+K (Windows/Linux) or Cmd+K (macOS)
 1. **Push:** Ctrl+Shift+K or VCS → Push
+
+---
+
+## PyCharm Git Integration (cont.)
 
 **Advanced PyCharm features:**
 - Visual merge conflict resolution
@@ -378,11 +390,19 @@ Right-click project:
 └── Team → Merge...
 ```
 
+---
+
+## Eclipse Git Integration (EGit) (cont.)
+
 **Eclipse Git workflow:**
 1. **Import Git project:** File → Import → Git → Projects from Git
 1. **Stage changes:** Git Staging view
 1. **Commit:** Enter message and commit
 1. **Push/Pull:** Right-click → Team → Push/Pull
+
+---
+
+## Eclipse Git Integration (EGit) (cont.)
 
 **EGit features:**
 - Git Staging view for index management
@@ -791,6 +811,10 @@ if __name__ == '__main__':
 
 ![tool_selection_criteria](svg/courses/git/git/20_tools/tool_selection_criteria.svg)
 
+---
+
+## Tool Selection Criteria (cont.)
+
 ![tool_selection_criteria](svg/courses/git/git/20_tools/tool_selection_criteria.svg)
 
 ---
@@ -844,6 +868,10 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 # Account settings → App passwords
 ```
 
+---
+
+## Security Considerations for Git Tools (cont.)
+
 **Tool security practices:**
 - Use official tool repositories
 - Keep tools updated
@@ -851,6 +879,10 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 - Use encrypted connections (HTTPS/SSH)
 - Enable two-factor authentication
 - Audit tool access regularly
+
+---
+
+## Security Considerations for Git Tools (cont.)
 
 **IDE security:**
 
@@ -954,10 +986,18 @@ if __name__ == "__main__":
    - Set up automated testing with Jenkins/GitHub Actions
    - Configure deployment pipelines
 
-1. **Developer experience:**
+---
+
+## Lab Exercise: Git Tool Ecosystem (cont.)
+
+3. **Developer experience:**
    - Customize Git command-line experience
    - Set up IDE-specific Git workflows
    - Create team Git aliases and configurations
+
+---
+
+## Lab Exercise: Git Tool Ecosystem (cont.)
 
 **Advanced tasks:**
 1. **Custom tool development:**
@@ -969,6 +1009,10 @@ if __name__ == "__main__":
    - Benchmark different tools and workflows
    - Optimize CI/CD pipeline performance
    - Create monitoring and alerting
+
+---
+
+## Lab Exercise: Git Tool Ecosystem (cont.)
 
 **Deliverables:** Complete Git tool ecosystem setup, custom automation tools, team configuration templates, performance benchmarks, and comprehensive documentation.
 
@@ -984,11 +1028,19 @@ Emerging trends in Git tools:
 - Smart merge conflict resolution
 - Predictive branch management
 
+---
+
+## Future of Git Tooling (cont.)
+
 **Cloud-native Git platforms:**
 - Serverless CI/CD pipelines
 - Container-based development environments
 - Distributed version control at scale
 - Edge-computing for Git operations
+
+---
+
+## Future of Git Tooling (cont.)
 
 **Integration trends:**
 - DevSecOps integration
@@ -1019,16 +1071,24 @@ Emerging trends in Git tools:
    - Balance features with complexity
    - Prioritize security and reliability
 
-1. **Integrate thoughtfully:**
+---
+
+## Summary: Mastering the Git Ecosystem (cont.)
+
+3. **Integrate thoughtfully:**
    - Combine tools for optimal workflow
    - Automate repetitive tasks
    - Maintain consistency across team
    - Monitor and optimize performance
 
-1. **Stay current and adaptable:**
+4. **Stay current and adaptable:**
    - Tools evolve rapidly
    - New platforms emerge regularly
    - Team needs change over time
    - Invest in learning core concepts
+
+---
+
+## Summary: Mastering the Git Ecosystem (cont.)
 
 **Remember:** The Git tool ecosystem is vast and constantly evolving. While it's important to leverage tools effectively, remember that they are means to an end. Focus on understanding Git fundamentals first, then choose tools that enhance your productivity without creating unnecessary complexity. The best Git workflow is one that your entire team can understand, use consistently, and maintain over time.

@@ -553,6 +553,10 @@ if (fd == -1 && errno == ENXIO) {
 1. **Local only** - Same machine
 1. **No broadcast** - One reader gets data
 
+---
+
+## Pipe Limitations (cont.)
+
 ## Alternatives:
 - **Sockets** - Network, bidirectional
 - **Message queues** - Boundaries

@@ -18,8 +18,6 @@ audience:
 
 ---
 
-## Why Data Formats Matter
-
 ![data_formats_title](svg/lectures/databases/data_formats/title.svg)
 
 ---
@@ -624,6 +622,13 @@ Sizes and speeds are approximate and depend on the data.
 | Application config | TOML or YAML |
 | Simple config | INI |
 | Spreadsheet export | CSV |
+
+---
+
+## When to Use Each Format (cont.)
+
+| Use Case | Best Format |
+|----------|-------------|
 | Log files | JSON Lines |
 | Big data analytics | Parquet |
 | Local app storage | SQLite |

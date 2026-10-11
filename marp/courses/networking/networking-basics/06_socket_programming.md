@@ -266,6 +266,10 @@ finally:
 | Order | Maintained | Not guaranteed |
 | Boundaries | Stream (no boundaries) | Message boundaries preserved |
 
+---
+
+## TCP vs UDP in Code (cont.)
+
 **Message boundary example:**
 
 ```python
@@ -795,12 +799,23 @@ $ ss -xlnp
 | -l | Listening sockets only |
 | -n | Numeric (don't resolve names) |
 | -p | Show process info |
+
+---
+
+## ss Flags Reference (cont.)
+
+| Flag | Meaning |
+|------|---------|
 | -a | All sockets (listening + non-listening) |
 | -o | Show timer information |
 | -e | Show extended info |
 | -s | Summary statistics |
 | -4 | IPv4 only |
 | -6 | IPv6 only |
+
+---
+
+## ss Flags Reference (cont.)
 
 ```bash
 # Common combinations

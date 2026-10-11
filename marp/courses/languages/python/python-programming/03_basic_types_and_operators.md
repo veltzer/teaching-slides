@@ -615,12 +615,17 @@ x %= 5    # x = x % 5 -> 2.0
 1. `+`, `-`
 1. `<<`, `>>`
 1. `&`
-1. `^`
-1. `|`
-1. Comparisons (`==`, `!=`, `<`, `>`, etc.)
-1. `not`
-1. `and`
-1. `or`
+
+---
+
+## Operator Precedence (High to Low) (cont.)
+
+7. `^`
+8. `|`
+9. Comparisons (`==`, `!=`, `<`, `>`, etc.)
+10. `not`
+11. `and`
+12. `or`
 
 ---
 

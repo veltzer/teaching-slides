@@ -98,6 +98,10 @@ NVMe SSDs, network cards, and more.
 | PCIe 5.0 | 2019 | 32 GT/s | ~4 GB/s | ~64 GB/s |
 | PCIe 6.0 | 2022 | 64 GT/s | ~8 GB/s | ~128 GB/s |
 
+---
+
+## PCIe Generations (cont.)
+
 Each generation doubles the bandwidth. GT/s = gigatransfers per second.
 Actual data bandwidth is slightly less due to encoding overhead
 (128b/130b encoding for PCIe 3.0+).
@@ -174,6 +178,10 @@ peripherals:
 | USB 3.2 | 2017 | 20 Gbps | SuperSpeed+ | Type-C (2 lanes) |
 | USB4 | 2019 | 40 Gbps | USB4 | Type-C only |
 | USB4 v2 | 2022 | 80 Gbps | USB4 v2 | Type-C only |
+
+---
+
+## USB Generations (cont.)
 
 USB4 is based on the Thunderbolt 3 protocol and can tunnel PCIe and
 DisplayPort signals through a USB-C cable.
@@ -372,6 +380,10 @@ Interrupts:
 | Complexity | Simple | Complex (ISR, concurrency) |
 | Power | High (CPU always busy) | Low (CPU can sleep) |
 | Best for | High-frequency events | Infrequent events |
+
+---
+
+## Polling vs Interrupts: Tradeoffs (cont.)
 
 ### Modern approach: hybrid (NAPI in Linux networking)
 
@@ -681,6 +693,13 @@ cache and avoids cross-core communication.
 | SATA vs NVMe | NVMe: PCIe direct, 65k queues, ~10x faster than SATA |
 | Interrupts | Hardware (APIC), software (INT), exceptions (page fault) |
 | MSI-X | Message-based interrupts, per-queue, no sharing |
+
+---
+
+## Summary: I/O and Buses (cont.)
+
+| Topic | Key Points |
+|-------|-----------|
 | Polling vs IRQ | Hybrid (NAPI) is best: IRQ at low load, poll at high load |
 | DMA | Device transfers data directly, scatter-gather for non-contiguous |
 | IOMMU | Address translation and protection for device DMA |

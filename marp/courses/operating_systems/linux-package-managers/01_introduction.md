@@ -75,11 +75,11 @@ This is exactly the world that package managers were built to fix.
 
 Every package manager has to solve, or at least make tradeoffs about, the same five problems:
 
-1. 1. 1. **Dependency resolution** — package A needs library B at version >= 2.0
-1. 1. 1. **Versioning** — multiple versions of the same thing may need to coexist
-1. 1. 1. **Reproducibility** — can I rebuild the same system tomorrow?
-1. 1. 1. **Security** — is this package authentic and unmodified?
-1. 1. 1. **Lifecycle** — install, upgrade, downgrade, remove, audit
+1. **Dependency resolution** — package A needs library B at version >= 2.0
+1. **Versioning** — multiple versions of the same thing may need to coexist
+1. **Reproducibility** — can I rebuild the same system tomorrow?
+1. **Security** — is this package authentic and unmodified?
+1. **Lifecycle** — install, upgrade, downgrade, remove, audit
 
 How a tool answers these is what makes it different from the others.
 
@@ -124,6 +124,11 @@ A piece of software can reach you via several paths:
 - **Distribution repository** — packaged by the distro maintainers, well integrated, often a bit older
 - **Third-party repository** — `PPA`, `Copr`, vendor-hosted (`Docker`, `Google`, ...). Faster updates, more risk
 - **Upstream binary** — `GitHub` release, `.tar.gz` from a website. Latest, but you own the lifecycle
+
+---
+
+## Distribution Repos vs Third-Party vs Upstream (cont.)
+
 - **Language registry** — `pip`, `cargo`, `npm`. Right version for your project, isolated from system
 - **Sandboxed store** — `flatpak`, `snap`. Newest GUI apps, sandboxed from the rest of the system
 - **Source build** — last resort
@@ -170,11 +175,11 @@ This is the order most experienced sysadmins reach for, and the rest of this cou
 
 ## What This Course Covers
 
-1. 1. 1. The `Debian` family: `dpkg` and `apt`
-1. 1. 1. The `Red Hat` family: `rpm` and `dnf`
-1. 1. 1. Universal/sandboxed formats: `flatpak`, `snap`, `appimage`, `nix`
-1. 1. 1. Language package managers: `pip`, `cargo`, `npm`, `gem`, `go`, ...
-1. 1. 1. `GitHub` releases and source builds
-1. 1. 1. How to choose between them, and how to mix them safely
+1. The `Debian` family: `dpkg` and `apt`
+1. The `Red Hat` family: `rpm` and `dnf`
+1. Universal/sandboxed formats: `flatpak`, `snap`, `appimage`, `nix`
+1. Language package managers: `pip`, `cargo`, `npm`, `gem`, `go`, ...
+1. `GitHub` releases and source builds
+1. How to choose between them, and how to mix them safely
 
 By the end you should be able to install almost anything on almost any Linux box, and pick the right tool the first time.

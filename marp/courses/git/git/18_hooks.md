@@ -41,6 +41,10 @@ Git hooks are scripts that run automatically at specific points in Git operation
 - **Server-side:** Run on Git server (GitHub, GitLab, etc.)
 - **Local only:** Not transferred with clone/push
 
+---
+
+## What Are Git Hooks? (cont.)
+
 **Common use cases:**
 - Code quality enforcement
 - Automated testing
@@ -114,6 +118,10 @@ Understanding hook reliability and limitations:
 - Can prevent operations from completing (pre-hooks)
 - Receive relevant information as parameters
 - Run with repository context
+
+---
+
+## What Guarantees Do You Get? (cont.)
 
 **What hooks DON'T guarantee:**
 - **Not shared:** Hooks are local, not cloned/pushed
@@ -836,10 +844,18 @@ fi
    - Set up post-receive deployment triggers
    - Implement automated notifications
 
-1. **Hook sharing and distribution:**
+---
+
+## Lab Exercise: Comprehensive Hook System (cont.)
+
+3. **Hook sharing and distribution:**
    - Create shared hook templates
    - Develop installation and update scripts
    - Document hook requirements
+
+---
+
+## Lab Exercise: Comprehensive Hook System (cont.)
 
 **Advanced tasks:**
 1. **Integration development:**
@@ -851,6 +867,10 @@ fi
    - Add input validation and security checks
    - Implement error handling and recovery
    - Create backup and rollback procedures
+
+---
+
+## Lab Exercise: Comprehensive Hook System (cont.)
 
 **Deliverables:** Complete hook system with documentation, installation scripts, security guidelines, performance benchmarks, and team training materials.
 
@@ -872,16 +892,24 @@ fi
    - Provide clear error messages
    - Test hooks thoroughly
 
-1. **Focus on team adoption:**
+---
+
+## Summary: Mastering Git Hooks (cont.)
+
+3. **Focus on team adoption:**
    - Make hooks easy to install and update
    - Provide clear documentation
    - Balance strictness with usability
    - Consider performance impact
 
-1. **Security and best practices:**
+4. **Security and best practices:**
    - Validate all inputs
    - Use secure coding practices
    - Regular security audits
    - Monitor hook performance
+
+---
+
+## Summary: Mastering Git Hooks (cont.)
 
 **Remember:** Git hooks are powerful automation tools that can significantly improve code quality, security, and development workflows. However, they require careful design, testing, and maintenance. Start simple, iterate based on team feedback, and always consider the balance between automation benefits and development friction.

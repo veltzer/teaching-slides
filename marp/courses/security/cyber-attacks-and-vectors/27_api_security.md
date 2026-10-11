@@ -42,6 +42,13 @@ audience:
 | 3    | Broken Object Property Level Auth       | High       |
 | 4    | Unrestricted Resource Consumption       | High       |
 | 5    | Broken Function Level Authorization     | High       |
+
+---
+
+## OWASP API Security Top 10 (2023) (cont.)
+
+| Rank | Vulnerability                           | Risk Level |
+|------|----------------------------------------|------------|
 | 6    | Unrestricted Access to Sensitive Flows  | Medium     |
 | 7    | Server Side Request Forgery (SSRF)      | High       |
 | 8    | Security Misconfiguration               | Medium     |
@@ -100,6 +107,10 @@ def get_orders(user_id):
 | Peloton        | 2021 | Any user's private account data accessible          |
 | Parler         | 2021 | All posts scraped by incrementing post IDs          |
 | T-Mobile       | 2023 | 37M customer records via API BOLA                   |
+
+---
+
+## BOLA in the Real World (cont.)
 
 **Prevention:**
 - Always verify the authenticated user has permission to access the requested object
@@ -354,9 +365,20 @@ decoded = jwt.decode(token, SECRET, algorithms=["HS256"])
 | Key confusion             | RS256 -> HS256 with public key             | Separate key handling          |
 | JWK header injection      | Embed attacker's key in JWT header         | Ignore JWK in headers          |
 | KID path traversal        | `"kid": "../../../dev/null"` = empty key   | Validate KID parameter         |
+
+---
+
+### Other JWT Attacks (cont.)
+
+| Attack                    | Description                                | Defense                        |
+|---------------------------|--------------------------------------------|--------------------------------|
 | Token not expiring        | Missing or far-future `exp` claim          | Always require and check `exp` |
 | Weak secret               | Brute-force HS256 secret                   | Use 256+ bit random secrets    |
 | Token in URL              | Leaked via Referer header, logs            | Use Authorization header       |
+
+---
+
+### Other JWT Attacks (cont.)
 
 ```bash
 # Brute-force weak JWT secrets with jwt_tool
@@ -653,6 +675,11 @@ apicheck-curl http://api.example.com/openapi.json | \
 - Mass assignment can elevate privileges if you blindly accept all request fields
 - JWT attacks (none algorithm, key confusion) exploit poor library configuration
 - GraphQL requires specific protections: disable introspection, limit query depth and complexity
+
+---
+
+## Key Takeaways (cont.)
+
 - Rate limiting prevents abuse and resource exhaustion
 - API gateways centralize security controls (auth, rate limiting, validation, logging)
 - SSRF through APIs can expose internal services and cloud metadata

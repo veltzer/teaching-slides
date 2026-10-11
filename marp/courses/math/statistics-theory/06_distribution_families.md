@@ -71,6 +71,11 @@ audience:
 - A family has **exponential-family** form if its density/pmf is f(x | &theta;) = h(x) exp( &eta;(&theta;)&#7488; T(x) &minus; A(&theta;) ) — natural parameter &eta;, sufficient statistic T, log-partition / cumulant function A, carrier h
 - Members: Bernoulli, binomial, Poisson, geometric, normal (known or unknown variance), exponential, gamma, beta, &chi;&sup2;, multinomial, Dirichlet, ... — most of the catalogue above
 - Why it matters: **T(x) is a (low-dimensional) sufficient statistic** for any sample size; A is the cumulant generating function of T (E[T] = &nabla;A, Cov(T) = &nabla;&sup2;A); there's a **conjugate prior** of matching form; and the MLE solves the moment equation E_&theta;[T] = T_observed
+
+---
+
+## The Exponential Family (cont.)
+
 - It's the backbone of **generalized linear models** (the "exponential dispersion" subfamily), of variational inference, and of much of modern statistical machinery
 - Heavy-tailed families (Cauchy, t, Pareto) are *not* exponential-family — which is exactly why they're harder
 
@@ -91,6 +96,11 @@ audience:
 - A law is **heavy-tailed** when its tail decays slower than any exponential; **power-law / regularly-varying** tails P(X &gt; x) &sim; x&#8315;&#945; are the canonical case
 - Moment ladder: a Pareto with index &alpha; has finite k-th moment iff k &lt; &alpha; — so the mean fails for &alpha; &leq; 1, the variance for &alpha; &leq; 2; the **Cauchy** (&alpha; = 1) has *no mean* and the sample mean does **not** converge
 - The CLT can fail: sums of i.i.d. infinite-variance variables converge (after the right scaling) to **&alpha;-stable** laws, not the Normal — the Normal is just the &alpha; = 2 stable case
+
+---
+
+## Heavy Tails (cont.)
+
 - Practical fallout: "3-sigma events" are common, sample means and SDs are unstable and misleading, tail risk is systematically underestimated by Gaussian intuition; estimate the **tail index** instead (Hill estimator), report quantiles not moments
 - Where you meet them: file sizes, city sizes, wealth, network degrees, insurance claims, financial returns, queueing delays — "web-scale" data is heavy-tailed by default
 

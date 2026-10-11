@@ -37,6 +37,10 @@ audience:
 - History tracking and manipulation
 - Conflict resolution mechanisms
 
+---
+
+## Git Does Not Force a Workflow (cont.)
+
 **What `Git` does NOT dictate:**
 - How many branches to use
 - When to merge vs rebase
@@ -61,7 +65,11 @@ Without established workflows, teams face:
     - Broken builds on main branch
     - Difficulty tracking features
 
-1. **Release challenges:**
+---
+
+## Why Workflows Matter (cont.)
+
+3. **Release challenges:**
     - Unclear what's ready for production
     - Hard to rollback problematic changes
     - No clear versioning strategy
@@ -81,6 +89,10 @@ Without established workflows, teams face:
 - How changes get into main branches
 - Code review requirements
 - Automated testing integration
+
+---
+
+## Core Workflow Concepts (cont.)
 
 **Release management:**
 - How production releases are created
@@ -233,6 +245,10 @@ git commit -m "Add new feature"
 git push origin main
 ```
 
+---
+
+## Centralized Workflow (cont.)
+
 **Limitations:**
 - No isolation between features
 - Conflicts more frequent
@@ -306,6 +322,10 @@ Simplified workflow popular with continuous deployment:
 1. Discuss and review
 1. Deploy and test
 1. Merge to main
+
+---
+
+## GitHub Flow (cont.)
 
 **Benefits:**
 - Simple and straightforward
@@ -440,6 +460,10 @@ Integrating automated testing and deployment:
 - Require branches to be up to date
 - Restrict pushes to main
 
+---
+
+## Continuous Integration Workflows (cont.)
+
 **CI/CD pipeline:**
 1. Developer pushes to feature branch
 1. Automated tests run
@@ -462,6 +486,10 @@ Integrating automated testing and deployment:
 - Weekly/Monthly: Git flow
 - Scheduled major releases: Release branch workflow
 
+---
+
+## Workflow Selection Criteria (cont.)
+
 **Project type:**
 - Web applications: GitHub flow
 - Desktop software: Git flow
@@ -482,11 +510,15 @@ Integrating automated testing and deployment:
     - More environments need more branches
     - Simple projects can use main + feature branches
 
-1. **What's your team's `Git` experience?**
+---
+
+## Adapting Workflows to Your Needs (cont.)
+
+3. **What's your team's `Git` experience?**
     - Beginners need simple workflows
     - Experienced teams can handle complexity
 
-1. **What are your quality requirements?**
+4. **What are your quality requirements?**
     - High-quality needs mandatory reviews
     - Fast iteration allows more flexibility
 
@@ -503,6 +535,10 @@ Integrating automated testing and deployment:
 - No code review process
 - Direct pushes to production
 - No testing integration
+
+---
+
+## Common Workflow Pitfalls (cont.)
 
 **Inconsistent application:**
 - Team members using different approaches
@@ -566,12 +602,20 @@ git rebase main
 git push -u origin feature/user-authentication
 ```
 
+---
+
+## Working with Pull Requests (cont.)
+
 **PR best practices:**
 1. **Clear title and description**
 1. **Small, focused changes**
 1. **Include tests and documentation**
 1. **Reference related issues**
 1. **Request appropriate reviewers**
+
+---
+
+## Working with Pull Requests (cont.)
 
 **Review process:**
 - At least one approval required
@@ -625,6 +669,10 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 ```
+
+---
+
+## Automated Testing Integration (cont.)
 
 **CI/CD pipeline stages:**
 1. **Unit tests:** Fast, isolated tests
@@ -726,6 +774,10 @@ payment-service/
 notification-service/
 ```
 
+---
+
+## Multi-Repository Workflows (cont.)
+
 **Coordination strategies:**
 1. **Independent releases:** Each service deploys separately
 1. **Synchronized releases:** All services deploy together
@@ -781,6 +833,10 @@ release/*: requires release team approval
 - Shared tooling and configuration
 - Easier dependency management
 - Unified CI/CD pipeline
+
+---
+
+## Monorepo vs Polyrepo Workflows (cont.)
 
 **Monorepo workflow:**
 
@@ -875,7 +931,11 @@ deploy_production:
     - Code review process
     - Deployment procedures
 
-1. **Troubleshooting guides:**
+---
+
+## Workflow Documentation (cont.)
+
+3. **Troubleshooting guides:**
     - Common merge conflicts
     - Failed CI builds
     - Rollback procedures
@@ -914,7 +974,11 @@ deploy_production:
     - Test coverage trends
     - Post-deployment issues
 
-1. **Collaboration metrics:**
+---
+
+## Workflow Metrics and Monitoring (cont.)
+
+3. **Collaboration metrics:**
     - Pull request review participation
     - Merge conflict frequency
     - Branch lifetime
@@ -941,12 +1005,16 @@ deploy_production:
     - Solution: Regular rebasing on main
     - Solution: Feature flags for partial completion
 
-1. **Broken main branch:**
+---
+
+## Workflow Troubleshooting (cont.)
+
+3. **Broken main branch:**
     - Solution: Mandatory pre-merge testing
     - Solution: Rollback procedures
     - Solution: Branch protection rules
 
-1. **Slow code reviews:**
+4. **Slow code reviews:**
     - Solution: Smaller pull requests
     - Solution: Clear reviewer assignments
     - Solution: Review time targets
@@ -995,7 +1063,11 @@ deploy_production:
     - Don't reinvent unnecessarily
     - Learn from similar organizations
 
-1. **Iterate and improve:**
+---
+
+## Custom Workflow Development (cont.)
+
+3. **Iterate and improve:**
     - Start simple
     - Add complexity gradually
     - Gather team feedback
@@ -1025,7 +1097,11 @@ task/PROJ-125-password-validation
     - Code review process
     - Deployment procedures
 
-1. **Tools and automation:**
+---
+
+## Workflow Training and Adoption (cont.)
+
+3. **Tools and automation:**
     - CI/CD pipeline usage
     - Code review tools
     - Monitoring dashboards
@@ -1052,7 +1128,11 @@ task/PROJ-125-password-validation
     - Intelligent conflict resolution
     - Predictive merge analysis
 
-1. **Cloud-native workflows:**
+---
+
+## Future Workflow Trends (cont.)
+
+3. **Cloud-native workflows:**
     - Container-based development
     - Infrastructure as code
     - GitOps practices
@@ -1080,12 +1160,16 @@ task/PROJ-125-password-validation
     - Configure automated testing
     - Establish code review requirements
 
-1. **Create documentation:**
+---
+
+## Lab Exercise: Implementing a Workflow (cont.)
+
+3. **Create documentation:**
     - Write workflow guide
     - Document troubleshooting steps
     - Create team training materials
 
-1. **Practice the workflow:**
+4. **Practice the workflow:**
     - Simulate feature development
     - Handle merge conflicts
     - Execute release process
@@ -1108,12 +1192,16 @@ task/PROJ-125-password-validation
     - Add complexity as needed
     - Regular workflow retrospectives
 
-1. **Automation is essential:**
+---
+
+## Workflow Summary and Best Practices (cont.)
+
+3. **Automation is essential:**
     - Automated testing
     - CI/CD pipelines
     - Quality gates
 
-1. **Documentation and training:**
+4. **Documentation and training:**
     - Clear, up-to-date guides
     - Regular team training
     - Onboarding materials

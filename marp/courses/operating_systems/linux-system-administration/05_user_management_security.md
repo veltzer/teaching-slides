@@ -272,6 +272,10 @@ Control flags:
 | `pam_pwquality.so` | Password quality checks |
 | `pam_google_authenticator.so` | TOTP 2FA |
 
+---
+
+## Common PAM Modules (cont.)
+
 ```bash
 # Resource limits via /etc/security/limits.conf
 # alice  hard  nofile  65536
@@ -941,6 +945,10 @@ Key areas covered:
 1. Authentication (password quality, account lockout)
 1. SSH server hardening
 
+---
+
+## CIS Benchmarks Overview (cont.)
+
 ```bash
 # Example: apply filesystem hardening
 echo "install cramfs /bin/true" > /etc/modprobe.d/cramfs.conf
@@ -1463,6 +1471,10 @@ Overview of major compliance frameworks relevant to `Linux` administrators:
 | DISA STIG | Government security | DoD systems |
 | PCI-DSS | Payment card data | Cardholder environments |
 | SOC 2 | Service organization controls | SaaS, cloud providers |
+
+---
+
+## Security Compliance Frameworks (cont.)
 
 ```bash
 # Automated CIS compliance scanning

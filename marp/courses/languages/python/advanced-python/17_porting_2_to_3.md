@@ -400,6 +400,11 @@ print >> sys.stderr, "Error!"
 * Provides utility functions for writing code that is compatible with both Python 2 and Python 3.
 * Excellent for the incremental porting strategy.
 * Install: `pip install six`
+
+---
+
+## **Tool 2: `six` Library** (cont.)
+
 * **Key Features:**
     * `six.PY2`, `six.PY3` booleans.
     * `six.string_types`, `six.text_type`, `six.binary_type`.
@@ -440,6 +445,11 @@ six.print_("Hello", "world", sep="-", end="!\n")
     * Aims to provide a clean Python 3.x-compatible layer on Python 2.7 and 3.3+.
     * Includes `future` (backports Py3 features to Py2) and `past` (Py2 features on Py3) modules.
     * Tool: `futurize`.
+
+---
+
+## **Tool 3: `python-future` & `python-modernize`** (cont.)
+
 * **`python-modernize`:**
     * A tool that uses `2to3` and `six` to update Python 2 code to a common subset of Python 2 and 3 that uses `six` for compatibility.
     * Often preferred over raw `2to3` if aiming for a Py2/Py3 compatible codebase.
@@ -737,6 +747,11 @@ Once your code is running stably on Python 3, start refactoring to use modern Py
     def greet(name: str) -> str:
         return "Hello, " + name
   ```
+
+---
+
+## **Leverage New Python 3 Features** (cont.)
+
 * **`asyncio` and `async/await`:** For high-performance asynchronous programming.
 * **Pathlib module:** Object-oriented filesystem paths.
   ```python

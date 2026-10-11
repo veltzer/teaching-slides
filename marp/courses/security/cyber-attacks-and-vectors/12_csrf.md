@@ -294,9 +294,14 @@ def login():
    - Auto-submitting hidden form
    - Image-based GET request
 1. Verify the attack works (money transferred without user consent)
-1. Implement defenses one by one and test each:
+
+---
+
+## Exercise: CSRF Lab (cont.)
+
+4. Implement defenses one by one and test each:
    - CSRF tokens in all forms
    - SameSite=Lax cookies
    - Custom header validation (X-Requested-With)
-1. Verify each defense blocks the CSRF attack
-1. Test edge cases: What about JSON API endpoints?
+5. Verify each defense blocks the CSRF attack
+6. Test edge cases: What about JSON API endpoints?

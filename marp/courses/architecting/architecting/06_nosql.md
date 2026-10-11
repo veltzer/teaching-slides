@@ -176,6 +176,10 @@ The nested array lives inside the user document. One fetch returns everything.
 - Schema evolves per-document; no migrations
 - Developer model matches application objects
 
+---
+
+## Document Trade-offs (cont.)
+
 **Cons**:
 - Duplication if the same entity appears in many parents
 - Document size limits (MongoDB: 16 MB)
@@ -293,9 +297,9 @@ The same traversal in SQL would be a self-join per hop — at six hops, the plan
 
 **Pitfall**: your application now owns schema enforcement. Three classes of bug:
 
-1. 1. 1. **Typos become fields** — `emial` silently stored; reads miss the user
-1. 1. 1. **Type drift** — half the records have `age: 30`, half `age: "30"`
-1. 1. 1. **Evolution tangles** — fields renamed over years; every read handles N variants
+1. **Typos become fields** — `emial` silently stored; reads miss the user
+1. **Type drift** — half the records have `age: 30`, half `age: "30"`
+1. **Evolution tangles** — fields renamed over years; every read handles N variants
 
 Mitigations: schema validation (MongoDB `$jsonSchema`, Couchbase enforces via app), versioned documents, regular cleanup jobs.
 
@@ -337,6 +341,10 @@ In leaderless replication, consistency is tunable per operation.
 - **R** — replicas consulted on a read
 
 If `R + W > N`, at least one replica in the read set has the latest write → strong consistency.
+
+---
+
+## Quorum: R + W > N (cont.)
 
 Common settings (N = 3):
 - **W = 1, R = 1** — fast, eventual consistency
@@ -403,6 +411,11 @@ Each store solves one problem well. The cost is operational complexity: backups,
 - **"NoSQL means no schema"** — no, it means the schema is your app's job. Write validators.
 - **Picking by hype** — MongoDB isn't universally right any more than PostgreSQL is universally wrong.
 - **Treating Cassandra like PostgreSQL** — you can't add a WHERE clause and hope. Model by query first.
+
+---
+
+## Common NoSQL Mistakes (cont.)
+
 - **Ignoring consistency defaults** — eventual consistency surprises users. Audit every read path.
 - **Skipping capacity planning** — NoSQL scales horizontally, but auto-sharding is not free.
 - **One giant document** — MongoDB 16 MB limit; Cassandra wide rows can get unworkable; DynamoDB 400 KB item.
@@ -417,6 +430,11 @@ NoSQL databases are sharp tools. Sharp both ways.
 - ACID traded for BASE — eventual consistency, horizontal scale, flexible schema
 - Consistency models are a spectrum; most systems let you pick per operation
 - Design for the access pattern — schema follows queries, not the other way around
+
+---
+
+## Chapter Takeaways (cont.)
+
 - Quorum tuning (R+W > N) gives per-operation consistency in leaderless systems
 - Cross-entity transactions remain the RDBMS's strong point
 - Real systems are usually polyglot — match the store to the workload

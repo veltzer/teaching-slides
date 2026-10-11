@@ -17,8 +17,6 @@ audience:
 
 ---
 
-## What is Linux I/O?
-
 ![title](svg/lectures/operating_systems/linux-io/title.svg)
 
 ---
@@ -94,6 +92,10 @@ fread(buffer, 1, 1024, fp);
 ### Buffer Cache
 1. Caches filesystem metadata
 1. Block device buffering
+
+---
+
+## Page Cache & Buffer Cache (cont.)
 ### Benefits
 1. Reduces disk I/O
 1. Speeds up repeated access

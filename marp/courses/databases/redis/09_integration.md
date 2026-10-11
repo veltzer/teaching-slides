@@ -50,11 +50,15 @@ When choosing a Redis client:
     - Pipelining support
     - Serialization options
 
-1. **Error handling**:
+---
+
+## Client Selection Criteria (cont.)
+
+3. **Error handling**:
     - Retry mechanisms
     - Exception management
 
-1. **Maintenance status**:
+4. **Maintenance status**:
     - Active development
     - Community support
     - Documentation quality

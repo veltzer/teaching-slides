@@ -437,6 +437,10 @@ Phishing simulation best practices:
 - Reward reporting (positive reinforcement)
 - Escalate difficulty gradually
 
+---
+
+## Security Awareness Training (cont.)
+
 **DON'T:**
 - Publicly shame or punish employees who click
 - Use simulations to fire people
@@ -487,14 +491,19 @@ Phishing simulation best practices:
 1. **Triage**: Determine scope -- who else received the email?
 1. **Contain**: Remove email from all mailboxes (admin purge)
 1. **Assess**: Did anyone click? Enter credentials? Download attachments?
-1. **Respond**:
+
+---
+
+## Phishing Incident Response (cont.)
+
+5. **Respond**:
    - Force password reset for affected accounts
    - Revoke active sessions
    - Check for mail forwarding rules (persistence mechanism)
    - Scan endpoints for malware
-1. **Block**: Add sender, domain, and URLs to blocklists
-1. **Communicate**: Alert other users about the phishing campaign
-1. **Improve**: Update email filtering rules, add to training simulations
+6. **Block**: Add sender, domain, and URLs to blocklists
+7. **Communicate**: Alert other users about the phishing campaign
+8. **Improve**: Update email filtering rules, add to training simulations
 
 ---
 
@@ -504,6 +513,11 @@ Phishing simulation best practices:
 - Spear phishing and BEC are highly targeted and cause the greatest financial losses
 - AiTM phishing proxies defeat traditional MFA -- only FIDO2/WebAuthn is fully resistant
 - Email authentication (SPF + DKIM + DMARC with p=reject) blocks domain spoofing
+
+---
+
+## Key Takeaways (cont.)
+
 - Email header analysis reveals spoofed senders and failed authentication
 - Security awareness training with regular simulations reduces click rates significantly
 - Defense requires both technical controls and human awareness

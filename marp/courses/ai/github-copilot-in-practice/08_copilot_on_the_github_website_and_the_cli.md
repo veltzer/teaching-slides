@@ -77,6 +77,13 @@ audience:
 | Manual request | Pull request **Reviewers** menu | One-off second look |
 | Personal setting | Your Copilot settings | Review every pull request you open |
 | Repository ruleset | Settings → Rules → Rulesets | Every pull request on `main` |
+
+---
+
+## Automatic Review Triggers (cont.)
+
+| Trigger | Configured in | Typical use |
+|---|---|---|
 | Organization ruleset | Org settings → Rulesets | Many repositories at once |
 | Review new pushes | Ruleset option | Re-review after each push |
 | Review drafts | Ruleset option | Feedback before ready for review |

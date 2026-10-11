@@ -51,6 +51,13 @@ audience:
 | **Workflows** | Chain multiple playbooks with logic |
 | **Scheduling** | Cron-like job scheduling |
 | **Credentials** | Secure credential management |
+
+---
+
+## Key Features (cont.)
+
+| Feature | Description |
+|---------|-------------|
 | **Inventory Sync** | Auto-sync from cloud providers |
 | **Notifications** | Slack, email, webhook alerts |
 | **Audit Trail** | Full logging of who ran what, when |

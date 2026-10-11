@@ -599,6 +599,10 @@ private:
 - `std::vector::push_back()` (if move constructor can throw)
 - Most STL algorithms
 
+---
+
+## STL Exception Guarantees (cont.)
+
 **No-throw Guarantee:**
 - `std::vector::size()`
 - `std::vector::empty()`
@@ -664,6 +668,10 @@ int main() {
 - Throw by value, catch by reference
 - Use standard exception types when appropriate
 - Provide strong exception safety when possible
+
+---
+
+## Exception Handling Best Practices (cont.)
 
 **Don't:**
 - Throw exceptions from destructors
@@ -746,6 +754,10 @@ Exception handling in modern C++ provides:
 - **Automatic resource cleanup**
 - **Clear separation of concerns**
 - **Type-safe error information**
+
+---
+
+## Summary (cont.)
 
 Key concepts:
 - RAII for resource management

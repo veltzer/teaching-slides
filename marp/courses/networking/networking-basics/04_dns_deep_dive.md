@@ -64,11 +64,22 @@ There are 13 logical root server addresses (A through M), but hundreds of physic
 | C | Cogent | Distributed |
 | D | University of Maryland | College Park |
 | E | NASA Ames | Mountain View |
+
+---
+
+## DNS Root Servers (cont.)
+
+| Letter | Operator | Locations |
+|--------|----------|-----------|
 | F | ISC | Distributed (100+) |
 | J | Verisign | Distributed (100+) |
 | K | RIPE NCC | Distributed |
 | L | ICANN | Distributed |
 | M | WIDE Project | Distributed |
+
+---
+
+## DNS Root Servers (cont.)
 
 ```bash
 # Query a root server directly
@@ -90,6 +101,13 @@ DNS stores various types of records, each serving a different purpose.
 | AAAA | IPv6 address | example.com → 2606:2800:220:1:... |
 | CNAME | Canonical name (alias) | www.example.com → example.com |
 | MX | Mail exchange | example.com → mail.example.com |
+
+---
+
+## DNS Record Types Overview (cont.)
+
+| Record Type | Purpose | Example |
+|-------------|---------|---------|
 | TXT | Text data | SPF, DKIM, domain verification |
 | NS | Name server | example.com → ns1.example.com |
 | SOA | Start of authority | Zone metadata |
@@ -205,6 +223,10 @@ $ dig google._domainkey.example.com TXT +short
 "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA..."
 ```
 
+---
+
+## TXT Records (cont.)
+
 1. **DMARC** -- policy for handling email that fails SPF/DKIM:
 ```bash
 $ dig _dmarc.example.com TXT +short
@@ -254,6 +276,10 @@ example.com.  3600  IN  SOA  ns1.example.com. admin.example.com. (
                             86400       ; Minimum TTL (1 day)
                             )
 ```
+
+---
+
+## SOA Record (cont.)
 
 | Field | Meaning |
 |-------|---------|
@@ -309,6 +335,10 @@ _sip._tcp.example.com. 3600 IN SRV 10 60 5060 sip1.example.com.
 _sip._tcp.example.com. 3600 IN SRV 10 40 5060 sip2.example.com.
 _sip._tcp.example.com. 3600 IN SRV 20 0  5060 sip3.example.com.
 ```
+
+---
+
+## SRV Records (cont.)
 
 | Field | Meaning |
 |-------|---------|
@@ -402,6 +432,10 @@ example.com.        3600    IN    A    93.184.216.34
 | Good for failover scenarios | Changes take longer to propagate |
 | Useful before migrations | Better for stable services |
 
+---
+
+## DNS Caching and TTL (cont.)
+
 **Caching layers:**
 1. Browser cache (Chrome: `chrome://net-internals/#dns`)
 1. OS cache (`systemd-resolved`, `nscd`, Windows DNS Client)
@@ -460,6 +494,10 @@ search example.com corp.example.com  # Search domains
 options timeout:2 attempts:3 rotate  # Options
 ```
 
+---
+
+## Configuring DNS on Linux (cont.)
+
 | Directive | Purpose |
 |-----------|---------|
 | nameserver | IP of DNS resolver (max 3) |
@@ -468,6 +506,10 @@ options timeout:2 attempts:3 rotate  # Options
 | options timeout:N | Query timeout in seconds |
 | options attempts:N | Number of retries |
 | options rotate | Round-robin among nameservers |
+
+---
+
+## Configuring DNS on Linux (cont.)
 
 ### /etc/nsswitch.conf
 
@@ -652,6 +694,10 @@ Traditional DNS queries are sent in plaintext over UDP port 53, allowing eavesdr
 | Blockable | Easily | Moderate | Hard (same as HTTPS) |
 | Standard | RFC 1035 | RFC 7858 | RFC 8484 |
 
+---
+
+## DNS over HTTPS (DoH) and DNS over TLS (DoT) (cont.)
+
 **Popular DoH/DoT providers:**
 
 | Provider | DoH URL | DoT Server |
@@ -825,9 +871,20 @@ Used by CDNs (Cloudflare, AWS Route53, Akamai) for latency-based routing.
 | DNS Spoofing | Forged responses redirect users | DNSSEC |
 | DNS Cache Poisoning | Corrupt resolver cache | DNSSEC, source port randomization |
 | DNS Amplification DDoS | Abuse open resolvers for DDoS | Rate limiting, response rate limiting |
+
+---
+
+## DNS Security Threats (cont.)
+
+| Attack | Description | Mitigation |
+|--------|-------------|------------|
 | DNS Tunneling | Exfiltrate data over DNS queries | Monitor unusual query patterns |
 | Domain Hijacking | Unauthorized domain transfer | Registrar lock, 2FA |
 | Typosquatting | Register similar domain names | Monitor similar domains |
+
+---
+
+## DNS Security Threats (cont.)
 
 ```bash
 # Check for open resolver (should NOT respond to external queries)
@@ -970,6 +1027,10 @@ $ cat /etc/hosts
 1. **Document your DNS records** -- maintain a record of what each entry is for
 1. **Use separate DNS providers** for redundancy (multi-provider DNS)
 1. **Test changes** with `dig` before and after applying them
+
+---
+
+## DNS Best Practices (cont.)
 
 ```bash
 # Quick DNS health check script

@@ -219,6 +219,13 @@ spark.conf.set(
 | Nested types | Excellent | Good |
 | ACID support | Via Delta/Iceberg | Built-in (Hive) |
 | Bloom filters | Yes (column index) | Yes (built-in) |
+
+---
+
+## Parquet vs ORC Comparison (cont.)
+
+| Feature | Parquet | ORC |
+|---|---|---|
 | Predicate pushdown | Row group + page | Stripe + row index |
 | Default in Spark | Yes | No |
 | Compression | Snappy/ZSTD/GZIP | ZLIB/Snappy/ZSTD |
@@ -637,6 +644,13 @@ delta_table.restoreToTimestamp("2024-06-01")
 | Schema evolution | Yes | Yes (richer) |
 | Partition evolution | No (rewrite) | Yes (in-place) |
 | Hidden partitioning | No | Yes |
+
+---
+
+## Iceberg vs Delta Lake (cont.)
+
+| Feature | Delta Lake | Apache Iceberg |
+|---|---|---|
 | Engine support | Spark (best), others | Spark, Flink, Trino, Presto |
 | Catalog support | Unity Catalog | HMS, Glue, REST, Nessie |
 | File formats | Parquet only | Parquet, ORC, Avro |
@@ -1036,6 +1050,10 @@ history.select(
 * Projection pushdown: read only needed columns
 * Z-ordering: co-locate data for better pruning
 * Compression: ZSTD best overall balance
+
+---
+
+## Summary: Data Formats and Storage (cont.)
 
 **Storage Management:**
 * Partition by query pattern (low cardinality)

@@ -284,6 +284,13 @@ spark.conf.set("spark.driver.maxResultSize", "2g")
 | OOM on executor | Partition too large | Increase partitions or memory |
 | OOM on driver | collect() too large | Use take() or write to file |
 | Excessive GC time | Too much cached data | Reduce cache, increase memory |
+
+---
+
+## Memory Tuning Scenarios (cont.)
+
+| Symptom | Likely Cause | Fix |
+|---|---|---|
 | Shuffle spill to disk | Insufficient execution memory | Increase memory fraction |
 | Python worker OOM | Heavy pandas/numpy | Increase pyspark.memory |
 | Container killed by YARN | Memory overhead too low | Increase memoryOverhead |
@@ -593,6 +600,13 @@ base_df.unpersist()
 |---|---|---|---|---|
 | cache() | MEMORY_AND_DISK | Preserved | Recompute from source | Reusable intermediate |
 | persist(level) | Configurable | Preserved | Recompute from source | Control storage level |
+
+---
+
+## cache() vs persist() vs checkpoint() (cont.)
+
+| Method | Storage | Lineage | Recovery | Use Case |
+|---|---|---|---|---|
 | checkpoint() | Disk only | Truncated | Read from checkpoint | Break long lineage |
 | localCheckpoint() | Disk (local) | Truncated | Lost if executor dies | Fast, less reliable |
 
@@ -749,6 +763,13 @@ print(f"\nTotal pipeline time: {total_time:.2f}s")
 | Python UDFs | 10-100x slower | Built-in functions or pandas_udf |
 | SELECT * | No column pruning | Select only needed columns |
 | count() for existence check | Full scan | take(1) or head(1) |
+
+---
+
+## Common Performance Anti-Patterns (cont.)
+
+| Anti-Pattern | Impact | Better Approach |
+|---|---|---|
 | Repeated reading same data | Multiple I/O operations | cache() or persist() |
 | Too many small files | Slow reads | coalesce or repartition before write |
 | Default shuffle partitions | Poor parallelism | Tune to data size |

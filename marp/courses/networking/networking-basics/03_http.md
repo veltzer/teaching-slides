@@ -101,6 +101,10 @@ $ curl -v http://example.com/
 | ETag / If-None-Match | Conditional requests | `"v1.2.3"` |
 | Content-Encoding | Compression | `gzip` |
 
+---
+
+## Important HTTP Headers (cont.)
+
 - HTTP is stateless — cookies and tokens maintain session state
 
 ---

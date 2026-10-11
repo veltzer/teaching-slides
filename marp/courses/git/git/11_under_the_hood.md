@@ -37,6 +37,10 @@ audience:
 - Content-addressable storage
 - Collision detection
 
+---
+
+## Digital Signatures Overview (cont.)
+
 **SHA-256 (modern Git):**
 - 256-bit hash values
 - Enhanced security
@@ -67,7 +71,11 @@ commit a1b2c3d4e5f67890123456789012345678901234567890123456789012345678
     - Changing anything changes all subsequent hashes
     - Guarantees historical integrity
 
-1. **SHA is globally unique:**
+---
+
+## Core Git Ideas: Details (cont.)
+
+3. **SHA is globally unique:**
     - Same content = same hash everywhere
     - Enables distributed development
     - Natural deduplication
@@ -93,6 +101,10 @@ commit a1b2c3d4e5f67890123456789012345678901234567890123456789012345678
 - Stores directory structure
 - Points to blobs and other trees
 - Contains filenames and permissions
+
+---
+
+## The Three Core Structures (cont.)
 
 **3. Commit:**
 - Points to a tree (project snapshot)
@@ -145,6 +157,10 @@ git cat-file -p HEAD^{tree}
 040000 tree g7h8i9j    src
 100755 blob j1k2l3m    deploy.sh
 ```
+
+---
+
+## Tree Objects (cont.)
 
 **Tree format:**
 - Mode (permissions)
@@ -379,6 +395,10 @@ git ls-files --stage
 100644 d4e5f6g7h8i9... 0    src/main.py
 ```
 
+---
+
+## What Happens When You: Add to Staging Area (cont.)
+
 **During `git add`:**
 1. File content is hashed
 1. Blob object created in object store
@@ -407,17 +427,21 @@ git commit -m "Add feature"
     - Create tree objects for directories
     - Write tree objects to object store
 
-1. **Create commit object:**
+---
+
+## What Happens When You: Commit (cont.)
+
+2. **Create commit object:**
     - Reference the root tree
     - Set parent to current HEAD
     - Add author/committer info
     - Include commit message
 
-1. **Update branch pointer:**
+3. **Update branch pointer:**
     - Update refs/heads/branch-name
     - Move HEAD to new commit
 
-1. **Clear merge state** (if applicable)
+4. **Clear merge state** (if applicable)
 
 ---
 
@@ -433,6 +457,10 @@ git branch feature-branch
 1. **Get current commit SHA** (from HEAD)
 1. **Write SHA to new file:** `.git/refs/heads/feature-branch`
 1. **No other changes** (HEAD stays on current branch)
+
+---
+
+## What Happens When You: Create a Branch (cont.)
 
 **Switching to the branch:**
 ```bash
@@ -460,11 +488,15 @@ git tag -a v1.0 -m "Release 1.0"
     - Includes tagger info and message
     - Stored in object database
 
-1. **Write tag reference:**
+---
+
+## What Happens When You: Create an Annotated Tag (cont.)
+
+2. **Write tag reference:**
     - Create `.git/refs/tags/v1.0`
     - Contains SHA of tag object (not commit)
 
-1. **Tag object content:**
+3. **Tag object content:**
 
 ```output
 object a1b2c3d4e5f6789...
@@ -490,6 +522,10 @@ a1b2c3d HEAD@{0}: commit: Add feature
 d4e5f6g HEAD@{1}: checkout: moving from main to feature
 g7h8i9j HEAD@{2}: commit: Fix bug
 ```
+
+---
+
+## The Reflog System (cont.)
 
 **Reflog storage:**
 - `.git/logs/HEAD` - All HEAD movements
@@ -517,6 +553,10 @@ g7h8i9j HEAD@{2}: commit: Fix bug
 - Multiple objects in single file
 - Delta compression between similar objects
 - Much more storage efficient
+
+---
+
+## Object Packing and Compression (cont.)
 
 ```bash
 # Manual packing
@@ -568,6 +608,10 @@ git gc --aggressive
 git gc --prune=2.weeks.ago
 ```
 
+---
+
+## Garbage Collection (cont.)
+
 **GC operations:**
 1. **Pack loose objects** into pack files
 1. **Remove duplicate objects** through delta compression
@@ -596,12 +640,16 @@ git gc --prune=2.weeks.ago
     - No linear searches needed
     - Automatic deduplication
 
-1. **Delta compression:**
+---
+
+## Understanding Git's Performance (cont.)
+
+3. **Delta compression:**
     - Efficient storage of similar content
     - Fast reconstruction algorithms
     - Reduced I/O operations
 
-1. **Caching and indexing:**
+4. **Caching and indexing:**
     - Index file caches working directory state
     - Pack file indexes for fast object lookup
     - Reference caching
@@ -757,6 +805,10 @@ Understanding how rebase works under the hood:
 1. **Handle conflicts:** Stop for manual resolution if needed
 1. **Update references:** Point branch to final commit
 
+---
+
+## Rebase Internals (cont.)
+
 ```bash
 # What rebase does internally:
 # 1. git checkout target-branch
@@ -882,6 +934,10 @@ Understanding Git's object model edge cases:
 - Points to commit in different repository
 - `.gitmodules` file contains submodule configuration
 
+---
+
+## Advanced Object Storage (cont.)
+
 **Large file handling:**
 - Git LFS replaces large files with pointers
 - Pointer files stored as regular blobs
@@ -945,6 +1001,10 @@ git clone https://github.com/user/repo.git local-repo
 1. **Checkout working directory:** Set up files from main branch
 1. **Configure tracking:** Set up branch tracking relationships
 
+---
+
+## Repository Cloning Internals (cont.)
+
 **Clone optimizations:**
 - **Shallow clone:** `--depth=1` for recent history only
 - **Single branch:** `--single-branch` for one branch
@@ -963,6 +1023,10 @@ Git uses different merge strategies:
 - Resolves "criss-cross" merges
 - Uses multiple merge bases when needed
 
+---
+
+## Understanding Git's Merge Algorithms (cont.)
+
 **Octopus strategy:**
 - Merges more than two branches
 - Only works with clean merges
@@ -974,6 +1038,10 @@ Git uses different merge strategies:
 - **Theirs:** Take their version entirely
 - Useful for specific workflows
 - No conflict resolution needed
+
+---
+
+## Understanding Git's Merge Algorithms (cont.)
 
 **Subtree strategy:**
 - Merges separate project as subdirectory
@@ -1060,6 +1128,10 @@ git fsck --full
 git log --all --full-history -p | grep -i "password\|secret"
 ```
 
+---
+
+## Security Considerations (cont.)
+
 **Hook security:**
 - Hooks can execute arbitrary code
 - Be careful with shared repositories
@@ -1087,6 +1159,10 @@ git log --all --full-history -p | grep -i "password\|secret"
 1. Use hooks appropriately
 1. Configure Git properly for your environment
 1. Monitor repository health
+
+---
+
+## Git Internals Best Practices (cont.)
 
 **Performance optimization:**
 1. Pack objects regularly
@@ -1117,12 +1193,16 @@ git log --all --full-history -p | grep -i "password\|secret"
     - Trace what happens during commit, branch, merge
     - Analyze pack file contents
 
-1. **Performance investigation:**
+---
+
+## Lab Exercise: Git Internals Exploration (cont.)
+
+3. **Performance investigation:**
     - Measure repository statistics
     - Identify large objects
     - Optimize repository storage
 
-1. **Recovery simulation:**
+4. **Recovery simulation:**
     - Create "lost" commits
     - Use reflog and fsck for recovery
     - Understand reference mechanics
@@ -1190,12 +1270,16 @@ git log --all --full-history -p | grep -i "password\|secret"
     - More efficient workflows
     - Confidence in complex operations
 
-1. **Performance matters:**
+---
+
+## Summary: Git Under the Hood (cont.)
+
+3. **Performance matters:**
     - Repository maintenance is important
     - Understanding when Git is slow
     - Optimization strategies available
 
-1. **Git is robust:**
+4. **Git is robust:**
     - Strong integrity guarantees
     - Recovery mechanisms available
     - Distributed nature provides redundancy

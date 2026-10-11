@@ -743,6 +743,13 @@ Problem: "Slow execution"
 | `ansible-lint` | Playbook linting |
 | `ansible-navigator` | TUI for `Ansible` content |
 | `ansible-builder` | Build execution environments |
+
+---
+
+## Ansible Ecosystem Tools (cont.)
+
+| Tool | Purpose |
+|------|---------|
 | `molecule` | Role testing framework |
 | `ansible-pull` | Pull-mode execution |
 | `ansible-inventory` | Inventory inspection |
@@ -785,6 +792,10 @@ Problem: "Slow execution"
 - Ad-hoc commands and common modules
 - Playbook basics: plays, tasks, handlers
 
+---
+
+## Course Summary (cont.)
+
 **Day 2**: Playbooks, Roles, and Advanced Features
 - Variables, facts, and `Jinja2` templating
 - Conditionals, loops, and filters
@@ -792,6 +803,10 @@ Problem: "Slow execution"
 - Error handling and debugging
 - `Ansible Vault` for secrets management
 - Tags, includes, and imports
+
+---
+
+## Course Summary (cont.)
 
 **Day 3**: Advanced Ansible and Real-World Patterns
 - Dynamic inventory (AWS, Azure, GCP)

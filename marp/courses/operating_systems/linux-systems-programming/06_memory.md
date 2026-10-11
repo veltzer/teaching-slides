@@ -479,6 +479,10 @@ obstack_free(&mystack, NULL);
 1. **String building**
 1. **Stack-like** allocation pattern
 
+---
+
+## Obstack Use Cases (cont.)
+
 ## Benefits:
 - Fast allocation
 - Easy bulk free
@@ -729,16 +733,20 @@ void overflow() {
    memset(ptr, 0, size);
    ```
 
-1. **Free what you allocate**
+---
 
-1. **Set pointers to NULL after free**
+## Best Practices (cont.)
 
-1. **Use appropriate allocator**
+3. **Free what you allocate**
+
+4. **Set pointers to NULL after free**
+
+5. **Use appropriate allocator**
     - malloc for general use
     - mmap for large allocations
     - alloca for small temporary
 
-1. **Profile memory usage**
+6. **Profile memory usage**
 
 ---
 

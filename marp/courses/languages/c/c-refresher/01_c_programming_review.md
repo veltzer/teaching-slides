@@ -142,6 +142,10 @@ int main(int argc, char *argv[]) {
 | `-fsanitize=address` | AddressSanitizer (ASan) |
 | `-fsanitize=undefined` | UndefinedBehaviorSanitizer (UBSan) |
 
+---
+
+## Compiler Flags You Should Always Use (cont.)
+
 Recommended development command:
 
 ```bash

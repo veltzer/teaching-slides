@@ -166,12 +166,12 @@ If executives think SRE is "ops", they will resource it like ops. Reframe in the
 ## Final survival rules for SRE teams
 
 1. Defend the 50% engineering time — every quarter
-1. 1. Define SLOs, document them, review them
-1. 1. Write the error budget policy — get it signed by leadership
-1. 1. Make on-call sustainable; pay for it
-1. 1. Blameless postmortems; track action items to completion
-1. 1. Automate the worst toil item every quarter
-1. 1. Hire engineers, not "operators"
-1. 1. Read the SRE Book and Workbook (free online from Google)
+1. Define SLOs, document them, review them
+1. Write the error budget policy — get it signed by leadership
+1. Make on-call sustainable; pay for it
+1. Blameless postmortems; track action items to completion
+1. Automate the worst toil item every quarter
+1. Hire engineers, not "operators"
+1. Read the SRE Book and Workbook (free online from Google)
 
 The discipline matters more than any single practice.

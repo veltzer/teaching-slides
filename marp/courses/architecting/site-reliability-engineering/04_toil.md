@@ -77,11 +77,11 @@ Google's target: toil ≤ 50% of an SRE's time. If higher, push work back to dev
 ## The toil reduction loop
 
 1. **Track** — quarterly survey or time tracking
-1. 1. **Rank** — top 5 toil sources by hours consumed
-1. 1. **Pick one** — the worst, or the easiest to fix
-1. 1. **Engineer** — write code, build tooling, automate
-1. 1. **Measure** — did the toil go down?
-1. 1. **Repeat** — next quarter, next item
+1. **Rank** — top 5 toil sources by hours consumed
+1. **Pick one** — the worst, or the easiest to fix
+1. **Engineer** — write code, build tooling, automate
+1. **Measure** — did the toil go down?
+1. **Repeat** — next quarter, next item
 
 This is engineering work. It belongs in the 50% engineering half of an SRE's time.
 
@@ -106,11 +106,11 @@ The pattern: a person doing the same decision tree repeatedly is a script waitin
 ## The automation hierarchy
 
 1. **No automation** — humans do everything
-1. 1. **System-specific automation** — bash scripts per box
-1. 1. **Externalized automation** — config files, central scripts
-1. 1. **Internal automation** — system manages itself with operator approval
-1. 1. **Autonomous automation** — system manages itself, alerts on anomalies
-1. 1. **Self-healing** — system detects and fixes problems automatically
+1. **System-specific automation** — bash scripts per box
+1. **Externalized automation** — config files, central scripts
+1. **Internal automation** — system manages itself with operator approval
+1. **Autonomous automation** — system manages itself, alerts on anomalies
+1. **Self-healing** — system detects and fixes problems automatically
 
 Most teams sit at level 2-3. The ROI on moving up the ladder is huge.
 

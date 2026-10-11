@@ -248,6 +248,13 @@ except requests.HTTPError as e:
 | `flask` | Web framework (lightweight) |
 | `django` | Web framework (full-featured) |
 | `fastapi` | Modern async web framework |
+
+---
+
+## Popular Third Party Packages (cont.)
+
+| Package | Purpose |
+|---------|---------|
 | `pytest` | Testing framework |
 | `sqlalchemy` | Database ORM |
 | `pillow` | Image processing |

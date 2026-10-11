@@ -73,6 +73,10 @@ audience:
     - `{"type": "tool", "name": "X"}` -- force a specific tool
 - High-quality `description` fields drastically improve selection accuracy
 
+---
+
+## Steering Tool Selection with Prompts (cont.)
+
 ## Writing Effective Tool Descriptions
 - Be specific: `"Search Git log by author and date range"` beats `"Search logs"`
 - Mention constraints: `"Returns max 50 results, sorted by date"`
@@ -145,6 +149,10 @@ audience:
       "input": { "pattern": "TODO", "path": "src/" } }
 ]}
 ```
+
+---
+
+## Parallel Tool Calls (cont.)
 
 ## When to Use Parallel Calls
 - Reading multiple files that the model needs simultaneously
@@ -225,6 +233,10 @@ audience:
 - Large file reads or verbose API responses can exhaust the window
 - The model loses access to earlier context as tokens accumulate
 
+---
+
+## Managing Context Window with Tool Output (cont.)
+
 ## Mitigation Strategies
 1. **Truncation**: cap tool output at a fixed token limit
 1. **Summarization**: post-process results before returning to the model
@@ -253,6 +265,10 @@ def truncate_result(content: str, max_chars: int = 8000) -> str:
   "content": "File not found: src/auth.ts. Did you mean src/lib/auth.ts?"
 }
 ```
+
+---
+
+## Error Handling and Feedback (cont.)
 
 ## Key Principles
 - Never silently swallow failures
@@ -336,6 +352,10 @@ result = edit_file(
 - `web_fetch(url)` -- download page content as markdown
 - Essential for up-to-date information beyond training data
 
+---
+
+## Built-in Tools: Shell, Web, LSP (cont.)
+
 ## LSP Integration
 - Go-to-definition, find references, rename symbol
 - Gives the agent IDE-level code intelligence
@@ -349,6 +369,10 @@ result = edit_file(
 - Tools can be registered at runtime rather than hardcoded at startup
 - MCP servers advertise capabilities via `tools/list` endpoint
 - Agents discover available tools and adapt their behavior accordingly
+
+---
+
+## Tool Discovery and Registration (cont.)
 
 ## Capability Negotiation
 - Agent queries the registry for tools matching the current task
@@ -434,6 +458,10 @@ async def debug_wrapper(name: str, input: dict) -> dict:
     return result
 ```
 
+---
+
+## Debugging Tool Calls (cont.)
+
 ## Common Failure Modes
 - Schema mismatch: model sends unexpected field types
 - Timeout: external API takes too long to respond
@@ -451,6 +479,10 @@ async def debug_wrapper(name: str, input: dict) -> dict:
 ## Rate Limiting
 - Apply per-tool rate limits to protect downstream services
 - Return `429`-style errors with retry hints so the model can back off
+
+---
+
+## Tool Performance and Caching (cont.)
 
 ## Latency Optimization
 - Use connection pooling for HTTP-based tools
@@ -475,6 +507,10 @@ async def stream_shell(command: str):
     code = await process.wait()
     yield {"status": "complete", "exit_code": code}
 ```
+
+---
+
+## Streaming Tool Results (cont.)
 
 ## Progress Updates
 - Report percentage or stage for multi-step operations
@@ -526,6 +562,10 @@ def test_schema_compliance():
 - New versions add optional fields; never remove or rename required ones
 - Support multiple versions concurrently during migration periods
 - Include a `version` field in tool schemas for explicit negotiation
+
+---
+
+## Tool Versioning Strategies (cont.)
 
 ## Deprecation and Migration
 1. Mark deprecated tools with a warning in the `description` field

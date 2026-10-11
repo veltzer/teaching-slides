@@ -269,10 +269,21 @@ The `<stdint.h>` header provides types with guaranteed sizes:
 | `int16_t` | 16 bits | -32768 to 32767 |
 | `int32_t` | 32 bits | -2^31 to 2^31-1 |
 | `int64_t` | 64 bits | -2^63 to 2^63-1 |
+
+---
+
+## Fixed-Width Integer Types (C99) (cont.)
+
+| Type | Width | Signed Range |
+|------|-------|-------------|
 | `uint8_t` | 8 bits | 0 to 255 |
 | `uint16_t` | 16 bits | 0 to 65535 |
 | `uint32_t` | 32 bits | 0 to 2^32-1 |
 | `uint64_t` | 64 bits | 0 to 2^64-1 |
+
+---
+
+## Fixed-Width Integer Types (C99) (cont.)
 
 ```c
 #include <stdint.h>
@@ -419,6 +430,13 @@ int main(void) {
 | `long` | `%ld` | `%ld` | Long signed |
 | `unsigned long` | `%lu` | `%lu` | Long unsigned |
 | `long long` | `%lld` | `%lld` | Long long signed |
+
+---
+
+## Format Specifiers Reference Table (cont.)
+
+| Type | printf | scanf | Notes |
+|------|--------|-------|-------|
 | `float` | `%f` | `%f` | 6 decimal places |
 | `double` | `%f` or `%lf` | `%lf` | scanf needs `%lf` |
 | `size_t` | `%zu` | `%zu` | Unsigned size |

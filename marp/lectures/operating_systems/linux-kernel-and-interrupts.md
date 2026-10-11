@@ -769,7 +769,11 @@ domain:  PCI-MSI-0000:00:1c.0
    - Check electrical noise
    - Verify sharing compatibility
 
-1. **IRQ storms**
+---
+
+## Common IRQ Problems and Solutions (cont.)
+
+3. **IRQ storms**
    - Implement proper masking
    - Use IRQF_ONESHOT for level interrupts
    - Check hardware configuration
@@ -786,12 +790,16 @@ domain:  PCI-MSI-0000:00:1c.0
    - Automatic cleanup
    - Prevents resource leaks
 
-1. **Choose appropriate IRQ flags**
+---
+
+## Best Practices Summary (cont.)
+
+3. **Choose appropriate IRQ flags**
    - IRQF_SHARED for PCI devices
    - IRQF_ONESHOT for threaded handlers
    - Correct trigger type
 
-1. **Handle errors properly**
+4. **Handle errors properly**
    - Check all return values
    - Clean up on failure
 
@@ -852,6 +860,10 @@ domain = irq_domain_create_hierarchy(parent_domain, 0, nr_irqs,
    - Dynamic allocation
    - Better resource management
 
-1. **Always use highest-level API available**
+---
+
+## Summary (cont.)
+
+3. **Always use highest-level API available**
    - platform_get_irq() for most cases
    - Bus-specific helpers when needed

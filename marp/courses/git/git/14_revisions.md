@@ -36,6 +36,10 @@ Git revisions are ways to specify commits, trees, and other objects:
 - Flexible syntax allows many ways to reference the same object
 - Foundation for understanding Git's power and flexibility
 
+---
+
+## What Are Git Revisions? (cont.)
+
 **Common revision types:**
 - **SHA hashes:** Direct object references
 - **Branch names:** References to commit objects
@@ -67,6 +71,10 @@ Understanding what different revision expressions refer to:
 - Specifically refers to commit objects
 - Has author, committer, message, tree pointer
 - Most commonly used in Git operations
+
+---
+
+## Object Types in Git (cont.)
 
 **`<tree>`:**
 - Directory snapshots
@@ -254,6 +262,10 @@ Understanding what different revisions can represent:
 - Resolve to tree objects (directory snapshots)
 - Examples: commit-ish objects, tree SHAs, commit:path
 - Can be used where Git expects a tree
+
+---
+
+## Commit-ish vs Tree-ish (cont.)
 
 ```bash
 # Commit-ish examples
@@ -749,10 +761,18 @@ git show --format="Commit: %H%nAuthor: %an%nDate: %ad" --no-patch "$SHA"
    - Use rev-parse to understand resolutions
    - Explore object dereferencing
 
-1. **Range operations:**
+---
+
+## Lab Exercise: Revision Mastery (cont.)
+
+3. **Range operations:**
    - Create and analyze different range types
    - Compare two-dot vs three-dot ranges
    - Generate meaningful range queries
+
+---
+
+## Lab Exercise: Revision Mastery (cont.)
 
 **Advanced tasks:**
 1. **Complex expressions:**
@@ -764,6 +784,10 @@ git show --format="Commit: %H%nAuthor: %an%nDate: %ad" --no-patch "$SHA"
    - Create scripts using revision parameters
    - Implement proper validation and error handling
    - Build tools leveraging revision flexibility
+
+---
+
+## Lab Exercise: Revision Mastery (cont.)
 
 **Deliverables:** Comprehensive revision reference guide, practical scripts demonstrating usage patterns, and troubleshooting documentation for common revision issues.
 
@@ -784,16 +808,24 @@ git show --format="Commit: %H%nAuthor: %an%nDate: %ad" --no-patch "$SHA"
    - Range specifications for commit sets
    - Path-based references for specific files
 
-1. **Use efficiently:**
+---
+
+## Summary: Mastering Git Revisions (cont.)
+
+3. **Use efficiently:**
    - Validate revisions in scripts
    - Choose appropriate forms for readability
    - Consider performance implications
    - Handle edge cases gracefully
 
-1. **Apply practically:**
+4. **Apply practically:**
    - Integrate with daily Git workflows
    - Build automation using revision flexibility
    - Troubleshoot issues systematically
    - Document patterns for team use
+
+---
+
+## Summary: Mastering Git Revisions (cont.)
 
 **Remember:** Git revision syntax is incredibly powerful and flexible. Understanding these concepts deeply will make you much more effective at navigating Git history, building automation, and solving complex version control challenges. The investment in learning this syntax pays dividends in all aspects of Git usage.

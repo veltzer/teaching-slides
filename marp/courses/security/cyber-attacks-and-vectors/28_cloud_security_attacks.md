@@ -761,6 +761,11 @@ aws guardduty create-detector --enable
 - Publicly accessible storage buckets (S3, GCS) remain one of the most common misconfigurations
 - IAM privilege escalation through overly permissive policies is a critical attack path
 - IMDS attacks (169.254.169.254) can leak IAM credentials via SSRF -- enforce IMDSv2
+
+---
+
+## Key Takeaways (cont.)
+
 - Serverless functions are not immune to injection attacks -- validate all event inputs
 - Open source tools (ScoutSuite, Prowler, Checkov) provide excellent security posture visibility
 - IaC scanning catches misconfigurations before deployment (shift left)

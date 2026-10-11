@@ -369,6 +369,13 @@ def many_shot_classify(text, example_bank, k=50):
 | Translation | Good | Small | Strong pre-training on this |
 | Summarization | Good | Moderate | Format examples help |
 | Custom classification | Poor | Large | Domain-specific labels need examples |
+
+---
+
+## Few-Shot for Different Task Types (cont.)
+
+| Task | Zero-shot | Few-shot Gains | Notes |
+|------|-----------|---------------|-------|
 | Data extraction | Moderate | Large | Format specification helps a lot |
 | Code generation | Good | Moderate | Style/convention examples help |
 | Creative writing | Good | Large | Tone/style examples are critical |

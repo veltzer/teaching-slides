@@ -78,6 +78,10 @@ void processPacket() {
 - Enumeration types
 - Implementation-defined integral types
 
+---
+
+## Bitfield Types and Constraints (cont.)
+
 **Constraints:**
 - Cannot take address of bitfield
 - Cannot create references to bitfields
@@ -768,6 +772,10 @@ public:
 - Use template validation
 - Prefer standard integers for bitfield types
 
+---
+
+## Best Practices for Bitfields (cont.)
+
 **Don't:**
 - Rely on implementation-defined behavior
 - Mix signed and unsigned bitfields
@@ -1390,6 +1398,10 @@ void debugExample() {
 - **Unions**: Type-unsafe but memory-efficient alternatives
 - **Portability**: Major concern across platforms
 - **Modern alternatives**: `std::variant`, `std::bitset`, template solutions
+
+---
+
+## Summary (cont.)
 
 **Best Practices:**
 - Use standard alternatives when possible

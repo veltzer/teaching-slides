@@ -356,6 +356,13 @@ A signed package + a published key + `gpgcheck=1` in the repo definition = a cha
 | Search | `apt search text` | `dnf search text` |
 | Info | `apt show pkg` | `dnf info pkg` |
 | Upgrade all | `apt upgrade` | `dnf upgrade` |
+
+---
+
+## Side-by-Side: `apt` vs `dnf` (cont.)
+
+| Task | `apt` (Debian/Ubuntu) | `dnf` (RHEL/Fedora) |
+|---|---|---|
 | List files | `dpkg -L pkg` | `rpm -ql pkg` |
 | File owner | `dpkg -S /path` | `rpm -qf /path` |
 | Hold | `apt-mark hold pkg` | `dnf versionlock pkg` |
@@ -373,6 +380,10 @@ A signed package + a published key + `gpgcheck=1` in the repo definition = a cha
 - `apt-file` and `apt-cache` are very pleasant
 - `Debian`'s policy and stability story
 - Massive community knowledge base
+
+---
+
+## Why You Might Prefer One Over the Other (cont.)
 
 `dnf` strengths:
 

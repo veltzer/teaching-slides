@@ -907,6 +907,10 @@ Key concepts covered:
 - Package splitting and dependencies
 - Advanced recipe techniques
 
+---
+
+## Summary (cont.)
+
 Best practices:
 - Organize layers logically
 - Follow naming conventions

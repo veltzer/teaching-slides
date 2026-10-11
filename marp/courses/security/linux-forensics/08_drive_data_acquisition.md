@@ -584,6 +584,11 @@ cat source_hash.txt
 - FTK Imager CLI creates E01 format images with metadata
 - `LiME` captures volatile memory via kernel module
 - `fmem` provides alternative memory access via `/dev/fmem`
+
+---
+
+## Summary: Drive Data Acquisition (cont.)
+
 - Network acquisition minimizes footprint on evidence system
 - `ddrescue` handles failing drives with bad sectors
 - E01 format provides compression and built-in verification

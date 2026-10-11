@@ -271,6 +271,13 @@ source "amazon-ebs" "web" {
 | `source_ami` | Base AMI ID |
 | `source_ami_filter` | Dynamic AMI selection |
 | `ssh_username` | SSH user for provisioning |
+
+---
+
+## AWS Builder Options (cont.)
+
+| Option | Description |
+|--------|-------------|
 | `vpc_id` | VPC for build instance |
 | `subnet_id` | Subnet for build instance |
 | `security_group_id` | SG for build instance |

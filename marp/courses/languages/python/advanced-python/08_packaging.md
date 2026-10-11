@@ -958,6 +958,10 @@ def calculate_statistics(values, include_outliers=True):
 - License information
 - Support information
 
+---
+
+## Documenting Your Module: README Files (cont.)
+
 ```markdown
 # MyPackage
 

@@ -318,6 +318,10 @@ Pros:
 - Provides fault isolation (issues in one shard don't affect others)
 - Enables geographic distribution of data
 
+---
+
+## Sharded Pros and Cons (cont.)
+
 Cons:
 - Increases complexity in data management and application logic
 - Can lead to data distribution skew if shard key is poorly chosen
@@ -362,6 +366,10 @@ Pros:
 - Provides consistent governance policies across domains
 - Enables independent evolution of domain data models
 - Reduces bottlenecks of centralized data teams
+
+---
+
+## Data Mesh Pros and Cons (cont.)
 
 Cons:
 - Increases overall organizational complexity

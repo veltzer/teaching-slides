@@ -42,10 +42,10 @@ This is fundamentally different from "ops as a separate team that gets paged whe
 ## Five core tenets
 
 1. **Embrace risk** — 100% reliability is the wrong target
-1. 1. **Service Level Objectives** — define what reliable means, in numbers
-1. 1. **Eliminate toil** — automate repetitive operational work
-1. 1. **Monitor everything** — alert on symptoms, not causes
-1. 1. **Automate this year's job away** — engineering, not babysitting
+1. **Service Level Objectives** — define what reliable means, in numbers
+1. **Eliminate toil** — automate repetitive operational work
+1. **Monitor everything** — alert on symptoms, not causes
+1. **Automate this year's job away** — engineering, not babysitting
 
 These compose: SLOs measure risk you took, error budgets translate risk into velocity, toil reduction frees time to do the engineering.
 

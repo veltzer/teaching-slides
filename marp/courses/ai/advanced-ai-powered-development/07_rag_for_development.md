@@ -78,8 +78,19 @@ With RAG:
 | Language support | 100+ languages via grammars | One language per parser |
 | Error tolerance | Parses incomplete/broken code | Fails on syntax errors |
 | Incremental parsing | Yes, re-parses only changes | Full re-parse required |
+
+---
+
+## Tree-sitter vs AST Chunking Comparison (cont.)
+
+| Aspect | `tree-sitter` | Language-Native Parsers (e.g., Python `ast`) |
+|--------|---------------|----------------------------------------------|
 | Granularity control | Configurable node types | Language-specific APIs |
 | Maintenance | Community-maintained grammars | Tied to language version |
+
+---
+
+## Tree-sitter vs AST Chunking Comparison (cont.)
 
 ```python
 import tree_sitter_python as tspython
@@ -145,6 +156,10 @@ def extract_functions(source: str) -> list[dict]:
 | Self-hosting | No | No | Yes |
 | Multilingual code | Strong | Moderate | Moderate |
 
+---
+
+## Embedding Model Selection Guide (cont.)
+
 **Selection criteria**:
 1. Start with open-source models for prototyping and cost control
 1. Move to `voyage-code-3` when retrieval quality is critical
@@ -207,8 +222,19 @@ Not all project knowledge lives in source code:
 | Architecture diagrams | Vision model captioning + text embed | Design intent retrieval |
 | Screenshots (UI bugs) | `CLIP` / vision embeddings | Visual regression context |
 | Config files (YAML/JSON) | Flatten to key-value text chunks | Infrastructure questions |
+
+---
+
+## Multi-Modal RAG: Diagrams, Screenshots, Config Files (cont.)
+
+| Asset Type | Embedding Approach | Use Case |
+|------------|-------------------|----------|
 | Database schemas | DDL statement chunking | Data model queries |
 | Log files | Time-window chunking with severity tags | Debugging context |
+
+---
+
+## Multi-Modal RAG: Diagrams, Screenshots, Config Files (cont.)
 
 **Pipeline**:
 1. Detect asset type by file extension and MIME type
@@ -227,6 +253,10 @@ Not all project knowledge lives in source code:
 ### Function-level
 - Best precision for most codebases
 - Requires language-aware parsing (`tree-sitter`, `ast`)
+
+---
+
+## Indexing Strategies: Choosing Granularity (cont.)
 
 ### Chunk-level with overlap
 - Fallback for binary docs, logs, unstructured text
@@ -331,6 +361,10 @@ Index more than just source code:
 | Private data safety | Data stays in your infra | Data used in training |
 | Coding style adoption | Weak | Strong |
 | Factual accuracy | High (grounded) | Risk of hallucination |
+
+---
+
+## RAG vs Fine-Tuning: When to Use Which (cont.)
 
 **Decision guide**:
 - Use **RAG** when answers must reference specific files, APIs, or docs
@@ -477,9 +511,20 @@ def recall_at_k(retrieved_ids, relevant_ids, k=10):
 | Irrelevant chunks retrieved | Poor chunking boundaries | Switch to AST-based chunking |
 | Correct file missed entirely | Embedding model mismatch | Try code-specific embedding model |
 | Top result is always the same file | Metadata not diverse enough | Add file-path diversity re-ranking |
+
+---
+
+## Common RAG Failure Modes and Debugging (cont.)
+
+| Symptom | Likely Cause | Fix |
+|---------|-------------|-----|
 | Answer hallucinates despite context | Context too noisy / too much | Reduce `k`, improve re-ranker |
 | Exact identifier not found | Vector search misses literals | Enable hybrid search (BM25 + vector) |
 | Stale results after code changes | Index not updated | Implement incremental indexing via `git diff` |
+
+---
+
+## Common RAG Failure Modes and Debugging (cont.)
 
 **Debugging tip**: log the retrieved chunks alongside every LLM response so you can trace failures back to retrieval vs generation.
 
@@ -547,6 +592,10 @@ class EmbeddingCache:
 | Relevance drift | Weekly `nDCG@10` on golden dataset | Drop > 5% |
 | Index freshness | Time since last incremental index | > 1 hour |
 
+---
+
+## RAG Pipeline Monitoring in Production (cont.)
+
 **Implementation checklist**:
 1. Log every query, retrieved chunk IDs, and response
 1. Track embedding API costs per day/week
@@ -590,6 +639,10 @@ def secure_query(query: str, user: User, collection):
 | High query volume | Read replicas for vector DB, horizontal scaling |
 | Index size (millions of chunks) | Tiered storage: hot (recent) vs cold (archived) indexes |
 
+---
+
+## Scaling RAG to Large Organizations (cont.)
+
 **Architecture pattern**:
 1. Each team owns and maintains their repository index
 1. A central query router fans out searches across relevant indexes
@@ -609,6 +662,10 @@ Build a working code RAG pipeline in 6 steps using `ChromaDB`:
 1. **Store in ChromaDB**: upsert chunks with metadata (file path, language, line number)
 1. **Query**: embed user question, retrieve top-k chunks, re-rank
 1. **Generate answer**: pass retrieved chunks + question to an LLM
+
+---
+
+## Hands-On: Building a RAG Pipeline from Scratch (cont.)
 
 ```python
 import chromadb
@@ -641,6 +698,10 @@ collection = client.get_or_create_collection("code")
   }
 ]
 ```
+
+---
+
+## Exercise: Evaluate Your RAG with a Golden Dataset (cont.)
 
 1. Run your RAG pipeline on each query, record retrieved chunk IDs
 1. Compute `Recall@5`, `MRR`, and `nDCG@10` against the golden set

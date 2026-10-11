@@ -37,6 +37,10 @@ Tags mark important points in your repository's history:
 - **Deployment markers:** Track what's deployed where
 - **Historical reference:** Mark significant events
 
+---
+
+## Why Tag? (cont.)
+
 **Benefits of tagging:**
 - Permanent references to specific commits
 - Human-readable names for releases
@@ -61,6 +65,10 @@ Git supports two types of tags with different characteristics:
 - Just a name pointing to commit SHA
 - No additional metadata
 - Similar to a branch that doesn't move
+
+---
+
+## Lightweight vs Annotated Tags: Details (cont.)
 
 **Annotated tags:**
 - Full Git objects stored in database
@@ -95,12 +103,20 @@ git tag milestone-demo HEAD~2
 git tag
 ```
 
+---
+
+## Creating Lightweight Tags (cont.)
+
 **Lightweight tag characteristics:**
 - No `-a` flag needed
 - No message or metadata
 - Very lightweight (just a reference)
 - Quick to create
 - Good for temporary markers
+
+---
+
+## Creating Lightweight Tags (cont.)
 
 **When to use lightweight tags:**
 - Temporary markers
@@ -195,6 +211,10 @@ git tag v1.0.0-beta.2
 git tag v1.0.0-rc.1     # Release candidate
 ```
 
+---
+
+## Tag Naming Conventions (cont.)
+
 **Date-based versioning:**
 ```bash
 git tag v2024.01.15
@@ -229,6 +249,10 @@ git tag -d v1.0.0-alpha v1.0.0-beta
 # Delete all tags matching pattern (be careful!)
 git tag -d $(git tag -l "v0.*")
 ```
+
+---
+
+## Deleting Tags (cont.)
 
 **When to delete tags:**
 - Incorrect tag names
@@ -450,6 +474,10 @@ jobs:
           git push origin v$VERSION
 ```
 
+---
+
+## Automated Tagging (cont.)
+
 **Semantic release tools:**
 - Automatically determine version numbers
 - Generate changelogs
@@ -472,12 +500,20 @@ jobs:
 1. Clear pre-release naming
 1. Document naming conventions
 
+---
+
+## Tag Management Best Practices (cont.)
+
 **Release process:**
 1. Test thoroughly before tagging
 1. Use annotated tags for releases
 1. Include meaningful messages
 1. Push tags after creating them
 1. Coordinate with team members
+
+---
+
+## Tag Management Best Practices (cont.)
 
 **Maintenance:**
 1. Clean up development tags
@@ -701,6 +737,10 @@ git push origin --tags
 - Signed tags: slightly larger due to signatures
 - Overall impact usually negligible
 
+---
+
+## Tag Performance and Scalability (cont.)
+
 **Optimization strategies:**
 
 ```bash
@@ -728,7 +768,11 @@ git gc --aggressive
    - Practice tag operations (create, delete, rename)
    - Set up signed tags with GPG
 
-1. **Integration testing:**
+---
+
+## Lab Exercise: Complete Tagging Workflow (cont.)
+
+3. **Integration testing:**
    - Push and pull tags between repositories
    - Use tags in various Git commands
    - Create branches from tags
@@ -739,7 +783,11 @@ git gc --aggressive
    - Set up CI/CD integration
    - Implement tag-based deployment
 
-1. **Team workflow:**
+---
+
+## Lab Exercise: Complete Tagging Workflow (cont.)
+
+2. **Team workflow:**
    - Design release process documentation
    - Create tag naming guidelines
    - Implement tag protection and verification
@@ -762,14 +810,22 @@ git gc --aggressive
    - Document team conventions
    - Maintain professional appearance
 
-1. **Integrate with workflows:**
+---
+
+## Summary: Effective Tag Management (cont.)
+
+3. **Integrate with workflows:**
    - Automate where possible
    - Coordinate with CI/CD systems
    - Plan for deployment and rollback
 
-1. **Maintain tag hygiene:**
+4. **Maintain tag hygiene:**
    - Clean up development tags
    - Protect important release tags
    - Regular auditing and maintenance
+
+---
+
+## Summary: Effective Tag Management (cont.)
 
 **Remember:** Tags are permanent markers in your project's history. Use them thoughtfully to create clear milestones, enable easy navigation through your project's evolution, and support reliable release management. Good tagging practices contribute significantly to professional software development and team collaboration.

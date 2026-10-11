@@ -405,6 +405,10 @@ double d = (double)i; // Old C-style cast
 float* fp = (float*)&i; // Dangerous C-style cast
 ```
 
+---
+
+## C-Style Cast vs C++ Casts (cont.)
+
 Problems with C-style casts:
 - Hard to spot in code
 - Can perform any combination of conversions

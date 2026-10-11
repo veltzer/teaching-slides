@@ -114,6 +114,11 @@ audience:
     - **Model supply chain**: vet third-party models and components; protect model artifacts from tampering
     - **Evaluation**: red-team for misuse, harmful outputs, and emergent behavior before release
     - **Disclosure**: document model limitations, intended use, and known risks; handle reported issues
+
+---
+
+## NIST SP 800-218A — Secure Development For Generative AI (cont.)
+
 - It is the federal-procurement-facing baseline for secure `AI` development — read it alongside the `OWASP` `AI`/`ML` `Top` 10 lists
 
 ---

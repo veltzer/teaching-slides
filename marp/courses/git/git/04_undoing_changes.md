@@ -328,6 +328,10 @@ pick ghi789 Third commit
 1. ✅ Revert for safe public undoing
 1. ✅ Interactive rebase basics
 
+---
+
+## First Half Summary (cont.)
+
 ## Coming Up Next
 
 1. Advanced rebase techniques

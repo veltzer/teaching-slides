@@ -759,6 +759,10 @@ Threading overhead factors:
 - Cache coherency issues
 - Lock contention
 
+---
+
+## Performance Considerations (cont.)
+
 Best practices:
 - Use thread pools for short-lived tasks
 - Minimize shared state

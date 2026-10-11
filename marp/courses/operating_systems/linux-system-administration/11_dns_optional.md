@@ -612,6 +612,10 @@ $TTL 300
 www     IN  A   10.0.1.1
 ```
 
+---
+
+## DNS Migration Strategies (cont.)
+
 1. **Set up new server** and replicate all zone data:
 
 ```bash
@@ -627,6 +631,10 @@ dig @new-ns example.com ANY +short | wc -l
 1. **Update NS records** at the registrar to point to new servers
 1. **Monitor** for 48-72 hours, then decommission old server
 1. **Restore TTL** to original value after migration is stable
+
+---
+
+## DNS Migration Strategies (cont.)
 
 Key pitfalls:
 - Forgetting to lower TTL before migration
@@ -651,6 +659,10 @@ apt install unbound
 unbound-checkconf
 systemctl restart unbound
 ```
+
+---
+
+## Exercise: Build a Caching DNS Resolver (cont.)
 
 1. Configure the system to use the local resolver:
 

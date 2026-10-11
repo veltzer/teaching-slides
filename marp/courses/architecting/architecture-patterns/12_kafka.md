@@ -102,6 +102,10 @@ audience:
 - Log aggregation
 - Long-term event storage
 
+---
+
+## Kafka vs SQS: Use Cases (cont.)
+
 ### SQS Ideal For
 - Decoupling microservices
 - Task queues
@@ -146,6 +150,10 @@ audience:
 - Auto-scaling
 - Limited batching
 - At-least-once delivery
+
+---
+
+## Performance Characteristics (cont.)
 
 ### RabbitMQ Performance
 - In-memory with disk backup
@@ -280,6 +288,10 @@ audience:
 - Redrive policies
 - Maximum receives
 
+---
+
+## Error Handling Comparison (cont.)
+
 ### Error Handling in RabbitMQ
 - Negative acknowledgments
 - Dead letter exchanges
@@ -321,12 +333,20 @@ Key Metrics to Watch
 - Complex event patterns
 - Large scale deployments
 
+---
+
+## When to Choose What (cont.)
+
 ### Choose SQS When
 - Serverless architecture
 - Simple queue patterns
 - AWS integration needed
 - Variable load patterns
 - Minimal maintenance desired
+
+---
+
+## When to Choose What (cont.)
 
 ### Choose RabbitMQ When
 - Complex routing needed

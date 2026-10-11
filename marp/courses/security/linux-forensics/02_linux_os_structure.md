@@ -248,6 +248,10 @@ systemd-analyze blame | head -10
 | Device    | `.device`  | Kernel device                  |
 | Slice     | `.slice`   | Resource management group      |
 
+---
+
+## `systemd` Unit Types (cont.)
+
 ```bash
 # List all unit types
 systemctl -t help

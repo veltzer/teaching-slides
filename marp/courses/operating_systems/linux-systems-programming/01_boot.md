@@ -49,6 +49,10 @@ audience:
 - MBR partition scheme limitation (2TB max)
 - Simple but limited
 
+---
+
+## Firmware Types (cont.)
+
 ## UEFI (Modern)
 - **Unified Extensible Firmware Interface**
 - 32/64-bit protected mode
@@ -64,6 +68,10 @@ audience:
 1. Read MBR (first 512 bytes)
 1. Execute MBR bootloader
 1. Chain load to partition bootloader
+
+---
+
+## Boot Process: BIOS vs UEFI (cont.)
 
 ## UEFI Boot
 1. POST → UEFI initialization
@@ -342,6 +350,10 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 - **Prevention** of rootkits and bootkits
 - **UEFI standard** feature (since 2.3.1)
 
+---
+
+## What is Secure Boot? (cont.)
+
 ## Requirements:
 - UEFI firmware
 - Signed bootloader
@@ -364,11 +376,15 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
     - Updates db/dbx
     - Multiple keys allowed
 
-1. **db (Signature Database)**
+---
+
+## Secure Boot Keys Hierarchy (cont.)
+
+3. **db (Signature Database)**
     - Allowed signatures
     - Trusted certificates
 
-1. **dbx (Revoked Signatures)**
+4. **dbx (Revoked Signatures)**
     - Blacklisted signatures
     - Compromised certificates
 
@@ -420,11 +436,15 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
     - Root of storage hierarchy
     - Protects other keys
 
-1. **AIK (Attestation Identity Key)**
+---
+
+## TPM Key Hierarchy (cont.)
+
+3. **AIK (Attestation Identity Key)**
     - Platform attestation
     - Privacy-preserving
 
-1. **Binding/Signing Keys**
+4. **Binding/Signing Keys**
     - User-generated
     - Application-specific
 
@@ -463,11 +483,15 @@ PCR 23: Application specific
     - Prove platform state
     - Cryptographic evidence
 
-1. **Key Management**
+---
+
+## TPM Operations (cont.)
+
+3. **Key Management**
     - Generate keys
     - Store keys securely
 
-1. **Random Numbers**
+4. **Random Numbers**
     - True RNG
     - Cryptographic quality
 
@@ -523,11 +547,15 @@ tpm2_createprimary -C e -g sha256 -G rsa
     - Record measurements
     - Extend PCRs
 
-1. **Attestation**
+---
+
+## Secure Boot + TPM Integration (cont.)
+
+3. **Attestation**
     - Prove boot state
     - Remote verification
 
-1. **Sealed Storage**
+4. **Sealed Storage**
     - Protect secrets
     - Bind to boot state
 
@@ -585,7 +613,11 @@ hexdump -C module.ko | tail
     - Configuration changed
     - Reseal secrets
 
-1. **Key Management**
+---
+
+## Debugging Boot Issues (cont.)
+
+4. **Key Management**
     - Lost keys
     - Backup critical keys
 

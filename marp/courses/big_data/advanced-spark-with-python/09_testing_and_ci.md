@@ -1194,6 +1194,10 @@ def test_compute_user_totals_single_user(spark):
 * Use `chispa` for DataFrame equality
 * Test edge cases: empty, nulls, special chars
 
+---
+
+## Summary: Testing and CI/CD (cont.)
+
 **Fixtures:**
 * Session-scoped SparkSession (create once)
 * Function-scoped DataFrames (fresh per test)

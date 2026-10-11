@@ -60,6 +60,10 @@ Current Landscape of Major Players:
 - Spark Streaming
 - Druid
 
+---
+
+## Quick Classification (cont.)
+
 ### Interactive Query
 - Trino/Presto
 - Databricks SQL
@@ -90,6 +94,10 @@ Core Strengths
 - GraphX for graph processing
 - Strong community support
 - Extensive language support
+
+---
+
+## Apache Spark (cont.)
 
 Primary Use Cases
 1. Large-scale ETL
@@ -266,6 +274,10 @@ Primary Use Cases
 - Recommendations (Spark)
 - Inventory (Druid)
 - Security (Splunk)
+
+---
+
+## Industry-Specific Use Cases (cont.)
 
 ### Healthcare
 - Patient analytics (Spark)

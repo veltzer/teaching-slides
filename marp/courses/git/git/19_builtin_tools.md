@@ -49,7 +49,13 @@ git instaweb
 git instaweb --httpd=webrick     # Ruby WEBrick
 git instaweb --httpd=apache2     # Apache
 git instaweb --httpd=nginx       # Nginx
+```
 
+---
+
+## Git Instaweb (cont.)
+
+```bash
 # Specify port
 git instaweb --port=8080
 
@@ -60,12 +66,20 @@ git instaweb --start --browser=firefox
 git instaweb --stop
 ```
 
+---
+
+## Git Instaweb (cont.)
+
 **What instaweb provides:**
 - Repository browsing interface
 - Commit history viewing
 - File content inspection
 - Diff visualization
 - Branch and tag navigation
+
+---
+
+## Git Instaweb (cont.)
 
 **Use cases:**
 - Quick repository sharing
@@ -858,10 +872,18 @@ echo "git:x:1001:1001:Git User:/home/git:/usr/bin/git-shell" >> /etc/passwd
     - Create release archives and bundles
     - Implement git notes for code reviews
 
-1. **Maintenance procedures:**
+---
+
+## Lab Exercise: Built-in Tools Mastery (cont.)
+
+3. **Maintenance procedures:**
     - Set up automated garbage collection
     - Create repository integrity checks
     - Implement backup strategies using bundles
+
+---
+
+## Lab Exercise: Built-in Tools Mastery (cont.)
 
 **Advanced tasks:**
 1. **Integration scripting:**
@@ -873,6 +895,10 @@ echo "git:x:1001:1001:Git User:/home/git:/usr/bin/git-shell" >> /etc/passwd
     - Analyze repository performance
     - Optimize pack files and objects
     - Create performance monitoring
+
+---
+
+## Lab Exercise: Built-in Tools Mastery (cont.)
 
 **Deliverables:** Complete Git infrastructure setup, workflow automation scripts, maintenance procedures, security configuration, and team documentation.
 
@@ -892,14 +918,22 @@ echo "git:x:1001:1001:Git User:/home/git:/usr/bin/git-shell" >> /etc/passwd
     - Authentication and access control
     - Portable bundles for offline sharing
 
-1. **Maintenance and debugging:**
+---
+
+## Summary: Leveraging Git's Built-in Tools (cont.)
+
+3. **Maintenance and debugging:**
     - Repository health monitoring
     - Performance optimization tools
     - Recovery and troubleshooting utilities
 
-1. **Workflow integration:**
+4. **Workflow integration:**
     - Tools can be combined effectively
     - Scripting enables automation
     - Built-in help and documentation
+
+---
+
+## Summary: Leveraging Git's Built-in Tools (cont.)
 
 **Remember:** Git's built-in tools provide a comprehensive foundation for version control workflows. While external tools can add convenience and features, understanding and leveraging Git's built-in capabilities ensures you can work effectively in any environment and provides a solid foundation for building custom solutions.

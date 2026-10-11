@@ -464,6 +464,11 @@ echo "[+] SYN flood defenses configured"
 - IP spoofing makes SYN floods difficult to filter by source address
 - SYN cookies are the most important kernel-level defense (encode state in the SYN-ACK)
 - Kernel tuning (backlog size, retry counts, timeouts) provides additional resilience
+
+---
+
+## Key Takeaways (cont.)
+
 - iptables/nftables rate limiting adds a firewall-level defense layer
 - Hardware SYN proxies and cloud scrubbing centers handle large-scale attacks
 - Defense in depth: combine kernel tuning + firewall rules + upstream filtering

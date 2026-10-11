@@ -418,6 +418,13 @@ spec:
 | `latest` image tag | Pin specific versions |
 | Storing secrets in `ConfigMaps` | Use `Secrets` + encryption |
 | Single replica in prod | 3+ replicas with PDB |
+
+---
+
+## Anti-Patterns to Avoid (cont.)
+
+| Anti-Pattern | Better Approach |
+|-------------|----------------|
 | No health probes | Liveness + readiness + startup |
 | Hardcoded configs | `ConfigMaps` + `Secrets` |
 | No `NetworkPolicies` | Deny-all, then allow specific |

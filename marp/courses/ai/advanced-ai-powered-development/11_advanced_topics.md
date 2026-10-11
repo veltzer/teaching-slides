@@ -354,6 +354,10 @@ Quality tradeoffs by bit-width:
 1. **Q4_K_M** -- good balance, ~75% size reduction
 1. **Q2** -- noticeable degradation, only for constrained environments
 
+---
+
+## Quantization and Model Optimization (cont.)
+
 ```bash
 # Convert a model to GGUF Q4_K_M using llama.cpp
 python convert_hf_to_gguf.py ./codellama-7b --outtype q4_k_m
@@ -443,6 +447,10 @@ Board composition:
 1. **Legal/compliance** -- licensing, data privacy, regulatory
 1. **Product owner** -- business value and roadmap alignment
 
+---
+
+## AI Governance: Building a Review Board (cont.)
+
 Evaluation criteria for new AI tools:
 1. Data handling and privacy guarantees
 1. Model transparency and audit capabilities
@@ -488,9 +496,14 @@ Recommended onboarding path:
     - Understanding context windows and token limits
 1. **Week 2:** Tool-specific workflows
     - IDE integration, CLI tools, code review assistants
-1. **Week 3:** Advanced patterns
+
+---
+
+## Team Onboarding and Training (cont.)
+
+3. **Week 3:** Advanced patterns
     - Multi-step generation, chain-of-thought for debugging
-1. **Week 4:** Best practices and pitfalls
+4. **Week 4:** Best practices and pitfalls
     - When not to use AI, reviewing AI output critically
 
 ---
@@ -504,6 +517,10 @@ Common resistance patterns and responses:
 1. **"AI will replace me"** -- reframe as augmentation, show productivity data
 1. **"I don't trust the output"** -- teach verification workflows, share error rates
 1. **"It slows me down"** -- provide structured training, pair with power users
+
+---
+
+## Change Management for AI Adoption (cont.)
 
 Practical training program:
 1. Lunch-and-learn sessions with live demos
@@ -522,6 +539,10 @@ Identifying advocates:
 1. Developers who naturally experiment with new tools
 1. Team leads who track productivity improvements
 1. Engineers who contribute to internal documentation
+
+---
+
+## Building Internal AI Champions (cont.)
 
 Building a community of practice:
 1. Create a dedicated Slack/Teams channel for AI tips
@@ -633,6 +654,10 @@ Key concerns:
 1. **Accessibility gaps** -- AI-generated UIs often omit ARIA labels, keyboard navigation, and screen reader support
 1. **Environmental cost** -- large model inference has a measurable carbon footprint
 
+---
+
+## Ethical Considerations in AI Development (cont.)
+
 Mitigations:
 1. Include accessibility linting (`axe`, `pa11y`) in AI-assisted pipelines
 1. Add inclusive language checks to code review checklists
@@ -664,9 +689,20 @@ Mitigations:
 | Autonomy level | Medium | High | Medium | High |
 | Terminal access | Limited | Full | Limited | Sandboxed |
 | Multi-file edits | Yes | Yes | Yes | Yes |
+
+---
+
+## Agentic Tool Comparison Matrix (cont.)
+
+| Feature | `Cursor` | `Claude Code` | `Windsurf` | `Copilot Workspace` |
+|---------|----------|---------------|------------|---------------------|
 | Custom tools/MCP | No | Yes | No | No |
 | Offline/local | No | No | No | No |
 | Pricing model | Subscription | Token-based | Subscription | Subscription |
+
+---
+
+## Agentic Tool Comparison Matrix (cont.)
 
 Selection criteria:
 1. Does your workflow require terminal and shell access?
@@ -684,9 +720,14 @@ Emerging trends:
     - Reduces need for retrieval and chunking strategies
 1. **Multi-modal development** -- diagrams, screenshots, and voice as input
     - Design-to-code workflows become more natural
-1. **Collaborative agents** -- multiple specialized agents working in concert
+
+---
+
+## Future Directions (cont.)
+
+3. **Collaborative agents** -- multiple specialized agents working in concert
     - One agent writes code, another reviews, a third writes tests
-1. **Model distillation** -- compress large model capabilities into smaller, faster models
+4. **Model distillation** -- compress large model capabilities into smaller, faster models
     - Custom small models that match large model quality on specific domains
 
 The long-term trajectory: AI as a persistent development partner, not a tool you invoke.

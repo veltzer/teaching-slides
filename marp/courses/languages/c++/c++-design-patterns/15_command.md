@@ -222,6 +222,10 @@ public:
 - You need undoable operations
 - You want to decouple the object that invokes the operation from the object that performs it
 
+---
+
+## When to Use Command (cont.)
+
 **Common examples:**
 
 - Text editor undo/redo

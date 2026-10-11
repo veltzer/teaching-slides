@@ -55,6 +55,11 @@ audience:
 - X&#8345; i.i.d., mean &mu;, **finite variance** &sigma;&sup2; &isin; (0, &infin;). Then **&radic;n (X&#772;&#8345; &minus; &mu;) / &sigma; &#8658; N(0, 1)** (convergence in distribution)
 - Equivalently: the centered sum S&#8345; &minus; n&mu; has fluctuations of order &radic;n, and on that scale they're Gaussian regardless of the shape of the X&#8345;
 - Proof via characteristic functions: with Y&#8345; = (X&#8345; &minus; &mu;)/&sigma;, &phi;_{(&Sigma;Y&#8345;)/&radic;n}(t) = [&phi;_Y(t/&radic;n)]&#8319;; expand &phi;_Y(s) = 1 &minus; s&sup2;/2 + o(s&sup2;) (using E[Y] = 0, E[Y&sup2;] = 1), so the n-th power &#8594; e&#8315;&#8348;&#178;&#8725;&#178;, the standard-normal characteristic function; Lévy's continuity theorem finishes it
+
+---
+
+## The Classical Central Limit Theorem (cont.)
+
 - It's why the normal distribution is *everywhere* — anything that's a sum/average of many small independent contributions is approximately normal
 - Caveat: it's a statement about the **average / sum**, not about individual observations, and the rate of approach depends on the distribution (slide on Berry&ndash;Esseen)
 
@@ -65,6 +70,11 @@ audience:
 - **Lindeberg CLT**: independent but *not* identically distributed X&#8345;; under the **Lindeberg condition** (no single term dominates the variance in the limit), the standardized sum still &#8658; N(0,1) — the modern, definitive form
 - **Lyapunov CLT**: a simpler-to-check sufficient condition — for some &delta; &gt; 0, &Sigma; E|X&#8345; &minus; &mu;&#8345;|^{2+&delta;} / (s&#8345;^{2+&delta;}) &#8594; 0 (s&#8345;&sup2; = total variance); Lyapunov &#8658; Lindeberg
 - **Triangular arrays**: the row-wise version (entries may change with n) — the right framework for, e.g., the CLT behind the Poisson approximation, m-dependent sequences, and U-statistics
+
+---
+
+## CLT Variants (cont.)
+
 - **Multivariate CLT**: &radic;n(X&#772;&#8345; &minus; &mu;) &#8658; N(0, &Sigma;) in &#8477;&#8316; — proved by the Cramér&ndash;Wold device (reduce to all 1-D linear combinations)
 - Dependent data: there are CLTs under mixing / martingale-difference conditions (the **martingale CLT**), but the *long-run variance* replaces &sigma;&sup2; — naive variance estimates are then wrong (need HAC/Newey&ndash;West-type corrections)
 
@@ -81,6 +91,11 @@ audience:
 - The CLT is a *limit*; for finite n the normal approximation has error. **Berry&ndash;Esseen**: if &rho; = E|X&#8321; &minus; &mu;|&sup3; &lt; &infin;, then sup_x | F&#8345;(x) &minus; &Phi;(x) | &leq; C &rho; / (&sigma;&sup3; &radic;n), with C an absolute constant (&lt; 0.5)
 - Two takeaways: the uniform error decays like **1/&radic;n**, and it's worse for **skewed** distributions (large third moment) — symmetry buys you a faster, O(1/n), approach (Edgeworth)
 - This is the theory behind rules of thumb like "n &geq; 30": adequate for mildly skewed data, far too optimistic for heavily skewed or heavy-tailed data
+
+---
+
+## How Fast: Berry&ndash;Esseen (cont.)
+
 - It bounds the *CDF* uniformly; tail probabilities (the region you care about for p-values) can be relatively *much* worse — large-deviation / saddlepoint corrections do better there
 - Practical advice: when n is moderate and the data is skewed, prefer a bootstrap or an exact/permutation method over the normal approximation
 
@@ -91,6 +106,11 @@ audience:
 - **Infinite mean** (Cauchy, Pareto &alpha; &leq; 1): the SLLN fails outright — X&#772;&#8345; does not settle down; it's as variable as a single observation
 - **Infinite variance** (Pareto 1 &lt; &alpha; &lt; 2): the LLN still holds (mean exists), but the CLT does **not** — properly normalized sums converge to a non-Gaussian **&alpha;-stable** law with heavy tails; the right scaling is n^{1/&alpha;}, not &radic;n. The Normal is precisely the &alpha; = 2 stable distribution
 - **Strong dependence** (long memory, unit roots): both can fail or change form — the variance of the sum need not grow like n, and limits can be functionals of Brownian motion rather than Gaussian
+
+---
+
+## When The Classical Results Break (cont.)
+
 - **Sums of maxima** rather than averages: governed by **extreme-value theory** (Fréchet / Gumbel / Weibull limits), an entirely different limit law family
 - Diagnostic instinct: if the data plausibly has a power-law tail or persistent autocorrelation, don't reach for &radic;n-CLT inference — check the tail index, model the dependence, or resample with blocks
 

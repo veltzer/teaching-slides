@@ -46,10 +46,20 @@ audience:
     - An operation that retrieves data from the system
     - Represents a request for information without modifying the state
     - Often uses a simplified read model optimized for querying
+
+---
+
+## CQRS Key Concepts (cont.)
+
 - Command Model
     - Represents the write model of the system
     - Responsible for handling commands and modifying the state
     - Focused on the behavior and the business rules of the system
+
+---
+
+## CQRS Key Concepts (cont.)
+
 - Query Model
     - Represents the read model of the system
     - Responsible for handling queries and returning data
@@ -75,6 +85,10 @@ Pros:
 - Enables using different data models for reads and writes
 - Facilitates implementing complex querying and reporting requirements
 - Can improve system maintainability and evolution over time
+
+---
+
+## CQRS Pros and Cons (cont.)
 
 Cons:
 - Introduces complexity in terms of maintaining multiple models
@@ -115,6 +129,11 @@ Cons:
     - A storage mechanism optimized for storing and retrieving events
     - Provides an append-only log of events
     - Supports efficient retrieval of events based on criteria such as time or aggregate ID
+
+---
+
+## Event Sourcing Key Concepts (cont.)
+
 - Aggregate
     - A domain object or entity that encapsulates state and behavior
     - Represents a consistency boundary and maintains invariants
@@ -140,6 +159,10 @@ Pros:
 - Supports flexible querying and reporting by creating projections
 - Facilitates implementing undo/redo functionality and state reconstruction
 - Can improve scalability and performance when combined with CQRS
+
+---
+
+## Event Sourcing Pros and Cons (cont.)
 
 Cons:
 - Introduces complexity in terms of event modeling and handling
@@ -183,6 +206,11 @@ Cons:
     - Divided into two types: inbound ports (API) and outbound ports (SPI)
     - Inbound ports handle requests from the outside and delegate to the domain
     - Outbound ports define the dependencies and services required by the domain
+
+---
+
+## Hexagonal Key Concepts (cont.)
+
 - Adapters
     - Implementations that connect the ports to specific technologies or services
     - Adapt the external dependencies to the interfaces defined by the ports
@@ -207,6 +235,10 @@ Pros:
 - Enhances maintainability and flexibility by allowing easy replacement of adapters
 - Enables parallel development of the domain and adapters
 - Supports evolutionary architecture and incremental development
+
+---
+
+## Hexagonal Pros and Cons (cont.)
 
 Cons:
 - Introduces additional complexity and indirection
@@ -249,6 +281,11 @@ Cons:
     - Contain the application-specific business rules and logic
     - Orchestrate the flow of data to and from the entities
     - Should not be affected by changes in external layers
+
+---
+
+## Clean Architecture Key Concepts (cont.)
+
 - Interface Adapters
     - Convert data from the format most convenient for the use cases and entities to the format most convenient for the external layers
     - Include presenters, views, and controllers
@@ -274,6 +311,10 @@ Pros:
 - Improves maintainability by reducing the impact of changes in outer layers
 - Supports flexibility and interchangeability of frameworks and drivers
 - Enables parallel development of different layers
+
+---
+
+## Clean Architecture Pros and Cons (cont.)
 
 Cons:
 - Can introduce additional complexity and abstraction layers
@@ -314,6 +355,11 @@ Cons:
 - Domain Services
     - Implement the use cases and business logic that operate on the domain model
     - Depend only on the domain model and other domain services
+
+---
+
+## Onion Key Concepts (cont.)
+
 - Application Services
     - Coordinate the interaction between the domain layer and the external layers
     - Depend on the domain model and domain services
@@ -339,6 +385,10 @@ Pros:
 - Makes the application more testable by isolating the core logic
 - Allows for easier maintenance and evolution of the system
 - Supports the substitution of external frameworks and technologies
+
+---
+
+## Onion Pros and Cons (cont.)
 
 Cons:
 - Can introduce additional layers of abstraction and complexity
@@ -377,11 +427,21 @@ Cons:
     - Provides the basic services and abstractions for plugins to build upon
     - Responsible for managing the communication between plugins
     - Remains stable and unchanged as plugins are added or modified
+
+---
+
+## Microkernel Key Concepts (cont.)
+
 - Plugins
     - Independent components that add specific features and capabilities to the system
     - Extend the functionality of the microkernel without modifying it
     - Communicate with the microkernel and other plugins through well-defined interfaces
     - Can be added, removed, or updated without affecting the microkernel or other plugins
+
+---
+
+## Microkernel Key Concepts (cont.)
+
 - Contracts
     - Define the interfaces and communication protocols between the microkernel and plugins
     - Specify the responsibilities and expectations of both the microkernel and plugins
@@ -403,6 +463,10 @@ Pros:
 - Facilitates the development and deployment of plugins independently of the microkernel
 - Improves maintainability by keeping the microkernel stable and separate from plugins
 - Supports the reuse and sharing of plugins across different systems
+
+---
+
+## Microkernel Pros and Cons (cont.)
 
 Cons:
 - Increases the overall complexity of the system due to the separation of concerns

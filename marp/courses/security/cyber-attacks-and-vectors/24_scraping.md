@@ -72,6 +72,13 @@ audience:
 | Scrapy          | Python     | Full framework    | Large-scale crawling projects   |
 | Selenium        | Multi      | Browser automation| JavaScript-heavy sites          |
 | Puppeteer       | Node.js    | Browser automation| Headless Chrome automation      |
+
+---
+
+## Scraping Tools Overview (cont.)
+
+| Tool/Library    | Language   | Type              | Best For                        |
+|-----------------|------------|-------------------|---------------------------------|
 | Playwright      | Multi      | Browser automation| Cross-browser testing/scraping  |
 | requests-html   | Python     | HTTP + render     | Simple JS rendering needs       |
 | curl / wget     | CLI        | HTTP client       | Simple page downloads           |

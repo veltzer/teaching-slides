@@ -321,6 +321,11 @@ json_handler.setFormatter(json_formatter)
 - `%(levelname)s` - Text logging level ('DEBUG', 'INFO', etc.)
 - `%(levelno)d` - Numeric logging level (10, 20, etc.)
 - `%(lineno)d` - Line number where logging was invoked
+
+---
+
+## Configuring Logging: Format Specification Attributes (cont.)
+
 - `%(message)s` - Logged message
 - `%(module)s` - Module name
 - `%(name)s` - Logger name
@@ -547,11 +552,21 @@ def process_order(order_id, items):
     - Configuration loaded
     - Tasks started/completed successfully
     - User actions (login, logout, etc.)
+
+---
+
+## Using Logging Correctly: Log Level Guidelines (cont.)
+
 - **WARNING** - Non-critical issues, but needs attention
     - Deprecated feature used
     - Resource usage nearing limits
     - Missing optional configuration
     - Automatic recovery from errors
+
+---
+
+## Using Logging Correctly: Log Level Guidelines (cont.)
+
 - **ERROR** - Serious problems, function failed
     - Failed to connect to database
     - API request failed

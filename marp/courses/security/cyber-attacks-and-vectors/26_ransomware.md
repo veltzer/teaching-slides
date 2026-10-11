@@ -238,6 +238,15 @@ taskkill /F /IM outlook.exe
 | Encryption      | AES-128 + RSA-2048                             |
 | Ransom          | $300-$600 in Bitcoin                           |
 | Scale           | 230,000+ systems in 150 countries              |
+
+---
+
+## Notable Ransomware Campaigns (cont.)
+
+### WannaCry (2017)
+
+| Aspect          | Detail                                         |
+|-----------------|------------------------------------------------|
 | Notable victims | UK NHS (hospitals shut down), Renault, FedEx   |
 | Damage          | ~$4 billion estimated                          |
 | Kill switch     | Marcus Hutchins found unregistered domain      |
@@ -282,6 +291,8 @@ taskkill /F /IM outlook.exe
 - Demanded $70M for universal decryptor
 - Operated as RaaS with sophisticated affiliate program
 - Taken down by international law enforcement in 2022
+
+---
 
 ### LockBit
 
@@ -390,6 +401,10 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
     grep -c "\.encrypted$\|\.locked$\|\.crypto$"
 ```
 
+---
+
+## Ransomware Detection (cont.)
+
 ### Detection Indicators
 
 | Indicator                            | Stage              | Tool                |
@@ -469,9 +484,20 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 | Business impact               | Critical systems down      | Systems recoverable        |
 | Decryptor availability        | None (check nomoreransom.org)| Free decryptor exists   |
 | Legal considerations          | Varies by jurisdiction     | OFAC sanctions risk        |
+
+---
+
+## To Pay or Not to Pay? (cont.)
+
+| Factor                        | Pay                        | Don't Pay                  |
+|-------------------------------|----------------------------|----------------------------|
 | Data exfiltration             | Sensitive data stolen      | No data exfiltration       |
 | Attacker reliability          | Reputable RaaS group       | Unknown/unreliable group   |
 | Insurance coverage            | Cyber insurance covers it  | No coverage                |
+
+---
+
+## To Pay or Not to Pay? (cont.)
 
 **Key considerations:**
 - Paying funds criminal operations and encourages more attacks
@@ -496,6 +522,11 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 - The 3-2-1-1-0 backup rule with immutable/air-gapped copies is the foundation of resilience
 - Prevention requires defense in depth: email security, patching, MFA, segmentation, EDR
 - Detection should focus on pre-encryption indicators (shadow copy deletion, lateral movement)
+
+---
+
+## Key Takeaways (cont.)
+
 - Have a tested incident response playbook before an attack occurs
 - Paying ransoms is discouraged: it funds criminals and does not guarantee recovery
 - Check nomoreransom.org for free decryption tools before considering payment

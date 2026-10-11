@@ -443,6 +443,10 @@ curl -X GET "localhost:9600/_node/stats/pipelines"
 1. Enrich data with external sources
 1. Normalize different formats
 
+---
+
+## Common Use Cases (cont.)
+
 ### Real-time Analytics
 1. Process streaming data
 1. Calculate metrics on-the-fly
@@ -729,6 +733,10 @@ output {
 1. Use conditional processing
 1. Monitor queue depth
 
+---
+
+## Troubleshooting Common Issues (cont.)
+
 ### Connection Issues
 1. Check network connectivity
 1. Verify authentication
@@ -864,6 +872,10 @@ output {
 1. **Real-time transformation** - Process as data flows
 1. **Integration** - Connect diverse systems
 1. **Scalability** - Handle growing data volumes
+
+---
+
+## Key Takeaways (cont.)
 
 **Remember:**
 1. Start simple, add complexity gradually

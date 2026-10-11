@@ -281,6 +281,13 @@ apparmor_parser -R /etc/apparmor.d/usr.sbin.nginx
 | `k` | Lock |
 | `m` | Memory map executable |
 | `x` | Execute |
+
+---
+
+## AppArmor Permission Flags (cont.)
+
+| Flag | Permission |
+|------|-----------|
 | `ix` | Inherit execute (same profile) |
 | `px` | Profile execute (switch to target profile) |
 | `ux` | Unconfined execute |
@@ -454,6 +461,13 @@ Create custom abstractions for shared rules across profiles.
 | Policy scope | System-wide | Per-application |
 | Learning curve | Steep | Moderate |
 | Granularity | Very fine-grained | Coarser |
+
+---
+
+## SELinux vs AppArmor Comparison (cont.)
+
+| Feature | SELinux | AppArmor |
+|---------|---------|----------|
 | File identification | By inode label | By file path |
 | Hardlink safety | Secure (label follows) | Risk (path changes) |
 | New file handling | Inherits parent context | Matched by path rule |
@@ -627,6 +641,10 @@ semanage fcontext -a -t postgresql_db_t \
   "/data/pgdata(/.*)?"
 restorecon -Rv /data/pgdata
 ```
+
+---
+
+## Exercise: MAC Policy for a Database Server (cont.)
 
 1. **AppArmor approach** (Ubuntu):
     - Generate a profile with `aa-genprof /usr/lib/postgresql/16/bin/postgres`

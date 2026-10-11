@@ -307,6 +307,10 @@ on:
     - Requires network access and a reliable registry
     - Risk of upstream changes or registry outages
 
+---
+
+## Dependency Vendoring vs Dynamic Resolution (cont.)
+
 | Factor | Vendoring | Dynamic |
 |---|---|---|
 | Reproducibility | High | Medium |

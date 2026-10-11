@@ -481,6 +481,10 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 1. Escalate privileges to root
 1. Capture the flag in `/root/flag.txt`
 
+---
+
+## Lab: Boot2Root Challenge (cont.)
+
 **Rules**:
 - Only attack the designated target
 - Document every step

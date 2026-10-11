@@ -428,6 +428,10 @@ expert.severity == warn
 expert.severity == note
 ```
 
+---
+
+## Expert Information (cont.)
+
 Common expert info messages:
 
 | Severity | Message | Meaning |
@@ -682,6 +686,10 @@ dig nonexistent.invalid
 # Stop capture
 kill $TSHARK_PID
 ```
+
+---
+
+## Exercise: Network Troubleshooting with Wireshark (cont.)
 
 1. Analyze the capture:
     - Use `tshark -r /tmp/exercise.pcap -q -z io,phs` to view protocol distribution

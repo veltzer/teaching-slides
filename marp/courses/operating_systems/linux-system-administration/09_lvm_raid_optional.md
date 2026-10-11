@@ -40,6 +40,10 @@ Advantages over raw partitions:
 - Striping for performance
 - Mirroring for redundancy
 
+---
+
+## Why Use LVM? (cont.)
+
 When NOT to use LVM:
 - Simple single-disk systems
 - When raw performance is critical (minimal overhead)
@@ -569,9 +573,13 @@ mdadm --create /dev/md99 --level=1 \
     - Format with `ext4` and mount
     - Write test data to the filesystem
 
-1. Take an LVM snapshot, modify data, then merge to restore
-1. Simulate a disk failure with `mdadm --fail` and observe rebuild after adding a replacement
-1. Verify data integrity after each operation
+---
+
+## Exercise: LVM Snapshot and RAID Recovery (cont.)
+
+2. Take an LVM snapshot, modify data, then merge to restore
+3. Simulate a disk failure with `mdadm --fail` and observe rebuild after adding a replacement
+4. Verify data integrity after each operation
 
 ---
 

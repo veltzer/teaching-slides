@@ -33,6 +33,10 @@ Common attack vectors:
 - Physical access
 - Supply chain attacks
 
+---
+
+## Security Threats (cont.)
+
 Defense strategy:
 - Defense in depth
 - Least privilege principle
@@ -699,6 +703,10 @@ System hardening:
 - [ ] Encrypted storage
 - [ ] Secure network protocols
 
+---
+
+## Hardening Checklist (cont.)
+
 Application hardening:
 - [ ] Input validation
 - [ ] Output encoding
@@ -746,6 +754,10 @@ Common standards:
 - PCI DSS (Payment)
 - HIPAA (Healthcare)
 
+---
+
+## Compliance Standards (cont.)
+
 Documentation requirements:
 - Security architecture
 - Threat model
@@ -764,12 +776,20 @@ Development:
 - Static analysis
 - Security testing
 
+---
+
+## Security Best Practices (cont.)
+
 Deployment:
 - Least privilege
 - Defense in depth
 - Secure defaults
 - Regular updates
 - Monitoring and logging
+
+---
+
+## Security Best Practices (cont.)
 
 Maintenance:
 - Patch management
@@ -790,6 +810,10 @@ Key security areas:
 - Mandatory Access Control (MAC)
 - CVE tracking and patching
 - License compliance and SBOM
+
+---
+
+## Summary (cont.)
 
 Best practices:
 - Minimize attack surface

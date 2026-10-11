@@ -248,6 +248,10 @@ AI handles the mundane, you handle the creative:
 - Error messages
 - Documentation format
 
+---
+
+## Productivity Impact: Cognitive Load Reduction (cont.)
+
 **You Focus On**:
 - Business logic
 - System design
@@ -314,6 +318,10 @@ Balance AI assistance with skill development:
 - Practice core concepts
 - Review AI output critically
 
+---
+
+## Maintaining Coding Skills (cont.)
+
 **Don't**:
 - Blindly copy-paste
 - Skip learning fundamentals
@@ -350,6 +358,10 @@ Professional integrity remains paramount
 - Reduced mundane tasks
 - Better code consistency
 - More time for creativity
+
+---
+
+## Setting Expectations (cont.)
 
 **What NOT to Expect**:
 - Perfect code every time

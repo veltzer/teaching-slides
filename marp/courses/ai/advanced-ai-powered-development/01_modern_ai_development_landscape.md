@@ -126,6 +126,10 @@ Assistant: "The shared counter is modified without a lock.
 | Iteration | Manual edits | Copy result back | Automatic retries |
 | Test execution | Manual | Manual | Automated |
 
+---
+
+## Hands-On: Comparing Tool Categories (cont.)
+
 - **Discussion points**:
     - Which tool required the least context-switching?
     - Which produced the most complete solution?
@@ -246,6 +250,10 @@ Workflow:
 "  return x + y" → ["  return", " x", " +", " y"]  # 4 tokens
 ```
 
+---
+
+## Tokenization Deep Dive (cont.)
+
 - Code is generally **less token-efficient** than natural language:
     - Variable names with camelCase or underscores split into many tokens
     - Indentation and special characters consume tokens
@@ -304,6 +312,11 @@ Choosing a model depends on your task:
     - `HumanEval` is heavily gamed; most frontier models score >90%
     - Training data contamination inflates scores on older benchmarks
     - `SWE-bench` tasks vary wildly in difficulty and scope
+
+---
+
+## Model Benchmarks: Reading Them Critically (cont.)
+
 - **How to read them**:
     - Compare models on the **same** benchmark version and split
     - Prefer benchmarks with held-out or rolling test sets
@@ -379,6 +392,10 @@ Choosing a model depends on your task:
 | Test run + fix cycle (x3) | ~40,000 | ~6,000 | ~$0.22 |
 | **Total session** | **~127,000** | **~17,000** | **~$0.65** |
 
+---
+
+## Token Economics: Estimating Real-World Costs (cont.)
+
 - A developer doing 20 such sessions per day: ~$13/day or ~$260/month
 - Compare to: developer salary cost of $400-800/day
 - **Key insight**: output tokens cost 3-5x more than input tokens
@@ -411,6 +428,11 @@ Choosing a model depends on your task:
 - **Hallucinated packages**: the model invents package names that do not exist
     - Attackers register these names and publish malicious packages
     - Always verify dependencies exist and are legitimate before installing
+
+---
+
+## Security Risks of AI-Generated Code (cont.)
+
 - **Insecure patterns**: models may generate code with known vulnerabilities
     - SQL injection via string concatenation instead of parameterized queries
     - Hardcoded secrets or weak cryptographic choices
@@ -431,6 +453,11 @@ Choosing a model depends on your task:
     - Are AI-generated contributions compatible with your project license?
 - **Active lawsuits**: multiple cases challenging training on copyrighted code
     - Outcomes will shape enterprise policies for years
+
+---
+
+## Licensing and Legal Landscape (cont.)
+
 - **Enterprise guidance**:
     - Document which AI tools are approved and how they are used
     - Maintain records of AI-assisted contributions for audit trails
@@ -464,6 +491,11 @@ Choosing a model depends on your task:
 - **Safety-critical systems**: avionics, medical devices, automotive controls
     - Certification standards (DO-178C, IEC 62304) may not accept AI-generated code
     - Traceability requirements conflict with opaque generation
+
+---
+
+## When NOT to Use AI Tools (cont.)
+
 - **Novel algorithms**: if the algorithm does not exist in training data, the model will hallucinate
     - AI excels at applying known patterns, not inventing new ones
 - **Other cases to be cautious**:
@@ -483,6 +515,11 @@ Choosing a model depends on your task:
     - Naming, formatting, idioms, and architectural patterns
 - **Security**: does it introduce vulnerabilities?
     - Injection flaws, improper access control, data exposure
+
+---
+
+## Evaluating AI Output Quality (cont.)
+
 - **Performance**: is it efficient enough for your use case?
     - Unnecessary allocations, O(n^2) where O(n) suffices, blocking I/O
 - **Evaluation checklist**:
@@ -505,6 +542,10 @@ Choosing a model depends on your task:
 | Cost per developer | 15% | Score | Score | Score |
 | Privacy compliance | 15% | Score | Score | Score |
 | Team satisfaction | 10% | Score | Score | Score |
+
+---
+
+## Building an AI Tool Evaluation Framework (cont.)
 
 - **Process**:
     - Define evaluation criteria with your team before testing

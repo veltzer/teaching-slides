@@ -591,12 +591,17 @@ Overloaded operators maintain the same precedence as built-in operators:
 1. `*` `/` `%`
 1. `+` `-`
 1. `<<` `>>`
-1. `<` `<=` `>` `>=`
-1. `==` `!=`
-1. `&` (bitwise AND)
-1. `^` (XOR)
-1. `|` (bitwise OR)
-1. `=` `+=` `-=` (lowest)
+
+---
+
+## Operator Precedence (cont.)
+
+7. `<` `<=` `>` `>=`
+8. `==` `!=`
+9. `&` (bitwise AND)
+10. `^` (XOR)
+11. `|` (bitwise OR)
+12. `=` `+=` `-=` (lowest)
 
 ---
 

@@ -468,6 +468,11 @@ Key skills acquired:
 - Authentication and session attack techniques
 - `SQL injection` detection and exploitation
 - `XSS` discovery and exploitation
+
+---
+
+## Thank You (cont.)
+
 - Back-end attack techniques
 - Privilege escalation methodology
 - Server hardening best practices

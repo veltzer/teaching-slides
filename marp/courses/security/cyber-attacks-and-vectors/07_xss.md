@@ -400,12 +400,17 @@ const safeHTML = DOMPurify.sanitize(userInput, config);
    - Steal cookies and send to your listener (`nc -l 8888`)
    - Inject a fake login form
    - Modify page content
-1. Implement defenses one at a time and test each:
+
+---
+
+## Exercise: XSS Lab (cont.)
+
+4. Implement defenses one at a time and test each:
    - Output encoding (template auto-escaping)
    - Content Security Policy header
    - HttpOnly cookie flag
    - DOMPurify for user-generated HTML
-1. Test with XSStrike to verify all XSS vectors are closed
+5. Test with XSStrike to verify all XSS vectors are closed
 
 ---
 

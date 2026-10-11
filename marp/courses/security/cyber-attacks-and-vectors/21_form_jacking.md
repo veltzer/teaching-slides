@@ -39,6 +39,13 @@ audience:
 | Direct website compromise     | Attacker gains access to web server            | Common     |
 | Third-party script compromise | Inject via analytics, chat, or ad scripts      | Very common|
 | Supply chain attack           | Compromise an npm/CDN dependency               | Growing    |
+
+---
+
+## Attack Vectors (cont.)
+
+| Vector                        | Description                                    | Prevalence |
+|-------------------------------|------------------------------------------------|------------|
 | Magento/CMS vulnerabilities   | Exploit known CMS security flaws               | Common     |
 | Compromised admin credentials | Access CMS admin panel, inject code            | Common     |
 | CDN/hosting compromise        | Modify scripts served from CDN                 | Rare       |
@@ -50,6 +57,10 @@ audience:
 - "Magecart" is an umbrella term for cybercriminal groups specializing in formjacking
 - Named after the Magento e-commerce platform they initially targeted
 - At least 12 distinct groups identified by researchers
+
+---
+
+## Magecart Groups (cont.)
 
 | Group       | Notable Targets                          | Technique                    |
 |-------------|------------------------------------------|------------------------------|
@@ -171,6 +182,10 @@ Content-Security-Policy:
     report-uri /csp-report;
 ```
 
+---
+
+## Content Security Policy (CSP) as Defense: Example (cont.)
+
 ### Key CSP Directives for Formjacking Defense
 
 | Directive      | Purpose                                      | Example Value              |
@@ -178,6 +193,13 @@ Content-Security-Policy:
 | `script-src`   | Allowed JavaScript sources                   | `'self' https://cdn.com`   |
 | `connect-src`  | Allowed AJAX/fetch/WebSocket destinations    | `'self' https://api.com`   |
 | `form-action`  | Allowed form submission targets              | `'self'`                   |
+
+---
+
+## Content Security Policy (CSP) as Defense: Example (cont.)
+
+| Directive      | Purpose                                      | Example Value              |
+|----------------|----------------------------------------------|----------------------------|
 | `img-src`      | Allowed image sources (blocks pixel exfil)   | `'self' data:`             |
 | `report-uri`   | Where to send CSP violation reports          | `/csp-violations`          |
 
@@ -395,6 +417,11 @@ diff known_good_hashes.txt current.txt
 - Magecart groups have evolved sophisticated, targeted skimming techniques
 - Third-party scripts are the most common attack vector -- minimize and control them
 - CSP is the strongest browser-level defense: restrict script sources and data destinations
+
+---
+
+## Key Takeaways (cont.)
+
 - SRI ensures external scripts have not been tampered with
 - Tokenized payment forms (Stripe Elements, Braintree) are the best architectural defense
 - PCI DSS 4.0 now requires script inventory, integrity checks, and tamper detection

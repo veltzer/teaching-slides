@@ -1086,6 +1086,15 @@ Programming: `libibverbs` — register memory regions, create queue pairs, post 
 | `MSG_ZEROCOPY`         | Socket send            | Yes             | 4.14       |
 | `io_uring` fixed bufs  | Any I/O                | Yes             | 5.1        |
 | `io_uring` send_zc     | Socket send            | Yes             | 6.0        |
+
+*With scatter-gather DMA support on the NIC.
+
+---
+
+## Summary: API Comparison (cont.)
+
+| API / Subsystem        | Scope                  | True Zero-Copy? | Min Kernel |
+|------------------------|------------------------|-----------------|------------|
 | `copy_file_range()`    | File → file            | Depends on FS   | 4.5        |
 | Shared memory          | Process ↔ process      | Yes             | All        |
 | `memfd_create()`       | Process ↔ process      | Yes             | 3.17       |
@@ -1093,8 +1102,6 @@ Programming: `libibverbs` — register memory regions, create queue pairs, post 
 | DPDK                   | Network packets        | Yes             | N/A        |
 | DMA-BUF                | Device ↔ device        | Yes             | 3.3        |
 | RDMA                   | Machine ↔ machine      | Yes             | 2.6.11     |
-
-*With scatter-gather DMA support on the NIC.
 
 ---
 

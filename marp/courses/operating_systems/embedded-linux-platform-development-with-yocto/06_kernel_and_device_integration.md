@@ -979,6 +979,10 @@ Key integration topics:
 - Bootloader integration
 - Hardware peripheral support
 
+---
+
+## Summary (cont.)
+
 Best practices:
 - Use defconfig + fragments
 - Maintain clean device trees

@@ -894,6 +894,13 @@ ansible web01 -m setup -a "filter=ansible_memory_mb"
 | `-b` / `--become` | Use sudo |
 | `-K` / `--ask-become-pass` | Prompt for sudo password |
 | `-u` | Remote user |
+
+---
+
+## Ad-Hoc Command Options (cont.)
+
+| Option | Description |
+|--------|-------------|
 | `-k` / `--ask-pass` | Prompt for SSH password |
 | `-f` | Number of forks (parallelism) |
 | `-v` / `-vvv` / `-vvvv` | Verbosity level |
@@ -1004,6 +1011,13 @@ ansible-playbook --limit web01 first_playbook.yml
 | `vars` | Variables for this play |
 | `vars_files` | Load variables from files |
 | `tasks` | List of tasks to execute |
+
+---
+
+## Play Keywords (cont.)
+
+| Keyword | Description |
+|---------|-------------|
 | `handlers` | Tasks triggered by `notify` |
 | `pre_tasks` | Tasks run before roles |
 | `post_tasks` | Tasks run after roles |
@@ -1353,7 +1367,12 @@ ansible-playbook --list-hosts site.yml
     - Check disk space on all hosts
     - Install `htop` on all hosts
     - Create a directory `/opt/myapp` on webservers
-1. Write a playbook that:
+
+---
+
+## Exercise: Day 1 Lab (cont.)
+
+6. Write a playbook that:
     - Installs `nginx` on webservers
     - Installs `postgresql` on dbservers
     - Starts and enables both services

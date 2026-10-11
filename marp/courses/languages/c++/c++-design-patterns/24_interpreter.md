@@ -224,6 +224,10 @@ std::cout << std::boolalpha << expr->interpret(ctx) << "\n";
 - The grammar is complex (use a proper parser generator instead)
 - Performance is critical (tree walking is slow for large expressions)
 
+---
+
+## When to Use Interpreter (cont.)
+
 **Common examples:**
 
 - SQL WHERE clause parsing

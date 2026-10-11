@@ -255,7 +255,7 @@ sft_examples = [
 
 ---
 
-## Stage 3: RLHF — Reinforcement Learning from Human Feedback
+## Stage 3: RL from Human Feedback (RLHF)
 
 ![stage_3_rlhf_reinforcement_learning_from_human_feedback](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/stage_3_rlhf_reinforcement_learning_from_human_feedback.svg)
 

@@ -51,6 +51,13 @@ audience:
 | Typosquatting                | Similar package names with typos          | crossenv / cross-env  |
 | Compromised maintainer       | Hijack or bribe package maintainer        | event-stream (2018)   |
 | Build pipeline compromise    | Inject into CI/CD system                  | SolarWinds (2020)     |
+
+---
+
+## Types of Software Supply Chain Attacks (cont.)
+
+| Attack Type                  | Vector                                    | Example               |
+|------------------------------|-------------------------------------------|-----------------------|
 | Code signing compromise      | Steal or forge code signing keys          | ASUS ShadowHammer     |
 | Vendor software compromise   | Backdoor vendor's product                 | 3CX (2023)            |
 | Open source contribution     | Malicious PR merged into project          | xz-utils (2024)       |
@@ -435,6 +442,11 @@ grype myapp:latest
 - The xz-utils incident showed that long-term social engineering can compromise open source
 - Dependency confusion and typosquatting are low-effort, high-impact attack vectors
 - SBOMs provide visibility into what components are in your software
+
+---
+
+## Key Takeaways (cont.)
+
 - Sigstore enables keyless signing, making artifact verification more accessible
 - SLSA framework provides maturity levels for build pipeline security
 - Defense requires: dependency pinning, lockfiles, auditing, signing, and monitoring

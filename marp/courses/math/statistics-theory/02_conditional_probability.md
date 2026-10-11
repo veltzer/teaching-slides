@@ -95,6 +95,11 @@ audience:
 - When P(B) = 0 (e.g. conditioning a continuous variable on "X = x"), P(A | B) = P(A&cap;B)/P(B) is the indeterminate 0/0 — the elementary definition simply doesn't apply
 - The fix: define **conditional expectation** E[1&#8336; | G] with respect to a *sub-&sigma;-algebra* G — the G-measurable random variable whose integral matches P over every set in G (existence and a.s.-uniqueness from the Radon&ndash;Nikodym theorem)
 - "Conditional probability given X = x" is then read off this object as a **regular conditional distribution**, defined for almost every x
+
+---
+
+## Conditioning On A &sigma;-Algebra (cont.)
+
 - This resolves classical paradoxes (Borel&ndash;Kolmogorov): "condition on a measure-zero event" is ambiguous *unless* you say which &sigma;-algebra you're conditioning on
 - We'll develop conditional expectation properly when we have integration in hand; for now, just know the elementary formula is a special case, not the whole story
 

@@ -680,6 +680,10 @@ Typical slow points:
 1. Filesystem mounting (100-300ms)
 1. Driver probing (varies)
 
+---
+
+## Common Bottlenecks (cont.)
+
 Solutions:
 - Defer USB if not critical
 - Optimize MMC voltage switching

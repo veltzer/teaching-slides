@@ -148,6 +148,13 @@ On Linux/macOS x86-64, function arguments are passed in registers:
 | 4th | RCX | Fourth integer/pointer arg |
 | 5th | R8 | Fifth integer/pointer arg |
 | 6th | R9 | Sixth integer/pointer arg |
+
+---
+
+## Register Conventions (System V AMD64 ABI) (cont.)
+
+| Argument # | Register | Purpose |
+|------------|----------|---------|
 | Return | RAX | Return value |
 | Stack ptr | RSP | Stack pointer |
 | Base ptr | RBP | Frame pointer (optional) |
@@ -318,6 +325,10 @@ first all "not taken", then all "taken". Prediction accuracy ~99%.
 If `data` is unsorted, the branch is essentially random.
 Prediction accuracy ~50%. Massive performance penalty.
 
+---
+
+## Branch Prediction Impact (cont.)
+
 **Benchmark result (typical):**
 
 | Data | Time |
@@ -380,6 +391,13 @@ Two fundamental CPU design philosophies:
 | Complexity | In hardware | In compiler |
 | Examples | x86, x86-64 | ARM, RISC-V, MIPS, PowerPC |
 | Registers | Fewer (historically) | Many (32+) |
+
+---
+
+## CISC vs RISC (cont.)
+
+| Aspect | CISC | RISC |
+|--------|------|------|
 | Memory access | Many instructions can access memory | Load/Store only |
 | Encoding | Variable (1-15 bytes on x86) | Fixed (4 bytes on ARM) |
 | Decode | Complex, multi-cycle | Simple, single-cycle |
@@ -444,6 +462,13 @@ ARM design principles:
 | Performance/Watt | Good | Excellent |
 | ISA license | Intel/AMD only | Licensed to many vendors |
 | Software | Vast legacy ecosystem | Growing rapidly |
+
+---
+
+## x86 vs ARM: Modern Comparison (cont.)
+
+| Feature | x86-64 (Intel/AMD) | ARM (AArch64) |
+|---------|-------------------|----------------|
 | Server examples | Intel Xeon, AMD EPYC | AWS Graviton, Ampere Altra |
 | Desktop examples | Intel Core, AMD Ryzen | Apple M-series |
 | Decode complexity | High (variable length) | Low (fixed length) |

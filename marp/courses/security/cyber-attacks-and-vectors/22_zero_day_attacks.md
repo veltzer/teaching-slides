@@ -181,6 +181,13 @@ audience:
 | EternalBlue        | CVE-2017-0144    | 2017 | 9.8  | SMBv1 RCE, WannaCry          |
 | Spectre/Meltdown   | CVE-2017-5753/54 | 2018 | 5.6  | CPU side-channel attacks      |
 | BlueKeep           | CVE-2019-0708    | 2019 | 9.8  | RDP pre-auth RCE             |
+
+---
+
+## More Notable Zero-Days (cont.)
+
+| Vulnerability      | CVE              | Year | CVSS | Impact                        |
+|--------------------|------------------|------|------|-------------------------------|
 | SolarWinds (SUNBURST)| N/A           | 2020 | N/A  | Supply chain, 18K+ orgs      |
 | ProxyLogon         | CVE-2021-26855   | 2021 | 9.8  | Exchange Server RCE           |
 | Log4Shell          | CVE-2021-44228   | 2021 | 10.0 | Log4j JNDI injection RCE     |

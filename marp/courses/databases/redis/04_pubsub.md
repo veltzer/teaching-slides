@@ -73,6 +73,10 @@ audience:
 - Chat applications
 - Non-critical events
 
+---
+
+## When to Use Redis Pub/Sub (cont.)
+
 **Not ideal for**:
 - Mission-critical messaging
 - Guaranteed delivery
@@ -389,11 +393,15 @@ Best practices:
     - Re-subscribe after reconnection
     - Keep subscription list
 
-1. **Missed messages**:
+---
+
+## Handling Pub/Sub Connection Issues (cont.)
+
+3. **Missed messages**:
     - Consider supplementary storage
     - Use timestamp-based reconciliation
 
-1. **Health checks**:
+4. **Health checks**:
     - PING/PONG mechanism
     - Heartbeat channels
 
@@ -411,11 +419,15 @@ Security practices:
     - TLS encryption
     - VPN or secure network
 
-1. **Channel access control**:
+---
+
+## Pub/Sub Security Considerations (cont.)
+
+3. **Channel access control**:
     - Use Redis ACLs to restrict channel access
     - Implement application-level permissions
 
-1. **Message validation**:
+4. **Message validation**:
     - Validate message structure
     - Sign/verify important messages
 

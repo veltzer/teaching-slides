@@ -331,6 +331,10 @@ lsusb -v 2>/dev/null | grep -E "idVendor|idProduct|iSerial"
 - Maximum disk size: 2 TB
 - Boot code: 446 bytes, partition table: 64 bytes, signature: 2 bytes
 
+---
+
+## Partitioning: MBR vs GPT (cont.)
+
 ### GPT (GUID Partition Table)
 - Modern partitioning scheme (UEFI standard)
 - Supports up to 128 partitions
@@ -411,6 +415,10 @@ sudo blkid
 | 0xEF      | FAT32      | EFI System Partition |
 | 0xFD      | -          | Linux RAID           |
 | 0x8E      | -          | Linux LVM            |
+
+---
+
+## Common Partition Types (cont.)
 
 ```bash
 # List known partition types
@@ -552,6 +560,10 @@ sudo losetup -fP /evidence/disk_image.dd
 - Often FAT32 or NTFS formatted
 - May have hidden partitions
 - Wear leveling less aggressive than SSDs
+
+---
+
+## Storage Media: Other Types (cont.)
 
 ### SD Cards / microSD
 - Common in phones, cameras, IoT devices

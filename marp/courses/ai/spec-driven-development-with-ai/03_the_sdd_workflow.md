@@ -223,6 +223,11 @@ the diff that no requirement asked for. Do not fix anything.
 - **The plan silently contradicts the requirements**
     - Symptom: a plan item that no criterion explains, or a criterion with no plan item
     - Fix: require a traceability list in the plan; review it line by line
+
+---
+
+## Failure Modes in the Loop (cont.)
+
 - **Scope expands mid-run**
     - Symptom: "I also refactored..." in the summary
     - Fix: non-goals in the spec, one task per run, reject diffs that exceed the task

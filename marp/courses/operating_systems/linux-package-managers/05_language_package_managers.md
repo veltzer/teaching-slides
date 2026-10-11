@@ -403,6 +403,11 @@ stack install pandoc       # ~/.local/bin/pandoc
 - **Lockfiles in git.** `package-lock.json`, `Cargo.lock`, `poetry.lock`, `Gemfile.lock`, `go.sum` all belong in `git`. Without them, "works on my machine" is the rule.
 - **Mixing system and language packages.** `pip install` as `root` is the canonical way to break a `Linux` desktop. Use `venv`/`pipx`. Same for `npm install -g` as `root`.
 - **Stale registries.** Always run the equivalent of `*-update` before installing on a fresh machine.
+
+---
+
+## Common Cross-Language Pitfalls (cont.)
+
 - **Trusting transitive dependencies.** A small `npm` app can pull 800 packages from 300 maintainers. Audit it.
 - **Typosquatting.** `pip install requets` (note typo) is a known attack vector. Copy-paste from the official docs.
 - **Dependency confusion.** A private package name accidentally also exists on the public registry, and the public one wins.
@@ -420,6 +425,10 @@ Different ecosystems mean different things by `>=1.2.0` and `^1.2.0`.
 | `~1.2.3` | `>=1.2.3 <1.3.0` | n/a (different meaning in `cabal`) | `>=1.2.3 <1.3.0` |
 | `1.2.*` | n/a | `>=1.2,<1.3` | n/a |
 | `>=1.2,<2` | yes | yes | `>=1.2,<2` |
+
+---
+
+## A Note on Versioning Schemes (cont.)
 
 When you read someone else's manifest, check what the symbols mean in *that* ecosystem. The same character can mean different things.
 

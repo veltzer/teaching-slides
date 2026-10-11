@@ -994,6 +994,10 @@ Key workflow tools:
 - GDB for debugging
 - Performance analysis tools
 
+---
+
+## Summary (cont.)
+
 Best practices:
 - Use devtool workflow
 - Test in QEMU first

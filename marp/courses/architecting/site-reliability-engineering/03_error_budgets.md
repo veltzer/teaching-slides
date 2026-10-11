@@ -53,6 +53,10 @@ Things that consume your budget:
 - Bugs in error-handling that surface to users
 - Overly aggressive load-shedding
 
+---
+
+## Spending the budget (cont.)
+
 Things that **save** budget:
 
 - Canary deploys catching issues

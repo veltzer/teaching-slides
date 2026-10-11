@@ -123,6 +123,10 @@ Natural language conversations about your code
 - Reference entire codebase
 - Image understanding
 
+---
+
+## Cursor Unique Features (cont.)
+
 **Cmd+I (Compose)**:
 - Generate new files
 - Create from specifications

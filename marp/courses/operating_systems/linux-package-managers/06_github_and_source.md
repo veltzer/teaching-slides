@@ -381,6 +381,10 @@ When a CVE drops in `openssl`:
 - `dnf` users run `dnf upgrade` and they're done.
 - `flatpak`/`snap` users get an automatic background update.
 
+---
+
+## The Hidden Cost: Security Updates (cont.)
+
 But:
 
 - Manually-installed `/usr/local/bin/foo` linked against a vendored `openssl`? You have to know about the CVE, find the project's release page, download a new binary, verify it, install it.
@@ -394,12 +398,12 @@ Multiplied across dozens of manual installs on a server, this becomes the differ
 
 If you're going to build from source, make it survivable.
 
-1. 1. 1. Document *what* and *why* in `/usr/local/src/<app>/README.md` or similar.
-1. 1. 1. Verify signature/checksum before building.
-1. 1. 1. Build into `/usr/local/stow/<app>-<version>/` or `/opt/<app>/`. Never `/usr/bin/`.
-1. 1. 1. Wrap with `checkinstall` if it's a one-off binary.
-1. 1. 1. Record the build dependencies (`apt build-dep` output).
-1. 1. 1. Subscribe to the project's security mailing list or `Atom` feed.
-1. 1. 1. Plan the *uninstall* before you do the install. If you can't, don't.
+1. Document *what* and *why* in `/usr/local/src/<app>/README.md` or similar.
+1. Verify signature/checksum before building.
+1. Build into `/usr/local/stow/<app>-<version>/` or `/opt/<app>/`. Never `/usr/bin/`.
+1. Wrap with `checkinstall` if it's a one-off binary.
+1. Record the build dependencies (`apt build-dep` output).
+1. Subscribe to the project's security mailing list or `Atom` feed.
+1. Plan the *uninstall* before you do the install. If you can't, don't.
 
 If any of these feels like too much effort: that's a sign you should be looking for a `flatpak`, a `snap`, a third-party repo, or a language-package version instead.

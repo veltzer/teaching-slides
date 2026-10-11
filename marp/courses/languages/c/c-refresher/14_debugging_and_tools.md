@@ -21,6 +21,11 @@ audience:
 - Read error messages carefully before reaching for tools
 - Reproduce the bug reliably first, then fix it
 - Add assertions and checks early -- they catch bugs close to the source
+
+---
+
+## The Debugging Mindset (cont.)
+
 - Use the right tool for the job:
 
 | Problem | Tool |
@@ -52,6 +57,10 @@ gcc -Wall -Wextra -Werror -Wpedantic -Wshadow -Wconversion \
     -Wmissing-prototypes -Wold-style-definition \
     -std=c11 program.c
 ```
+
+---
+
+## Compiler Warnings: Your First Defense (cont.)
 
 | Flag | What It Catches |
 |------|----------------|
@@ -110,6 +119,10 @@ gdb ./program
 gdb -p <pid>
 ```
 
+---
+
+## GDB: Getting Started (cont.)
+
 Essential GDB commands:
 
 | Command | Short | Description |
@@ -119,6 +132,13 @@ Essential GDB commands:
 | `break file.c:42` | `b file.c:42` | Break at line 42 |
 | `next` | `n` | Step over (next line) |
 | `step` | `s` | Step into function |
+
+---
+
+## GDB: Getting Started (cont.)
+
+| Command | Short | Description |
+|---------|-------|-------------|
 | `continue` | `c` | Continue to next breakpoint |
 | `print expr` | `p expr` | Print expression |
 | `backtrace` | `bt` | Show call stack |

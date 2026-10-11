@@ -31,10 +31,10 @@ Most outages are caused by recent changes. The release process is therefore your
 Don't deploy to 100% of users at once. Stage it:
 
 1. **Dev/staging** — internal smoke tests
-1. 1. **Canary** — 1-5% of production for hours
-1. 1. **Wave 1** — 10-25% for hours-to-day
-1. 1. **Wave 2** — 50%
-1. 1. **Full rollout** — 100%
+1. **Canary** — 1-5% of production for hours
+1. **Wave 1** — 10-25% for hours-to-day
+1. **Wave 2** — 50%
+1. **Full rollout** — 100%
 
 Each wave generates SLI data. Auto-pause if errors spike. Auto-rollback if the SLO budget is hit.
 

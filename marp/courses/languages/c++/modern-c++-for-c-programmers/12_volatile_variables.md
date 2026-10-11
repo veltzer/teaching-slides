@@ -1631,11 +1631,19 @@ Guidelines for using volatile effectively:
 - Variables accessed by setjmp/longjmp
 - Communication with interrupt service routines
 
+---
+
+## Best Practices for Volatile (cont.)
+
 **Don't Use Volatile For:**
 - Thread synchronization (use atomic instead)
 - General multi-threading (use std::atomic)
 - Performance optimization (it prevents optimizations)
 - Cache coherency (use proper memory barriers)
+
+---
+
+## Best Practices for Volatile (cont.)
 
 ```cpp
 // Good: Hardware register access
@@ -1655,7 +1663,13 @@ void badThreadSync() {
         // Busy wait - volatile doesn't provide synchronization
     }
 }
+```
 
+---
+
+## Best Practices for Volatile (cont.)
+
+```cpp
 // Good: Thread synchronization
 std::atomic<bool> atomicFlag{false};
 
@@ -1998,6 +2012,10 @@ public:
 - Does NOT provide thread synchronization
 - Has performance implications due to prevented optimizations
 
+---
+
+## Summary and Best Practices (cont.)
+
 **Key Guidelines:**
 1. **Use volatile for hardware programming** - memory-mapped registers
 1. **Use atomic for thread synchronization** - not volatile
@@ -2005,6 +2023,10 @@ public:
 1. **Use RAII** for hardware resource management
 1. **Handle errors gracefully** with timeout and retry logic
 1. **Profile performance impact** of volatile access patterns
+
+---
+
+## Summary and Best Practices (cont.)
 
 **Modern C++ Approach:**
 - Prefer `std::atomic` over volatile for thread safety

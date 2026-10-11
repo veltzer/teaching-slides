@@ -35,6 +35,11 @@ audience:
     - The entire application is deployed as a single unit
     - Any changes to the application require redeploying the entire monolith
     - Scaling is achieved by running multiple instances of the monolith
+
+---
+
+## Monolithic Architecture Key Concepts (cont.)
+
 - Shared Database
     - The application typically relies on a single, shared database
     - All components access the same database schema and tables
@@ -56,6 +61,10 @@ Pros:
 - Enables rapid development and iteration in the early stages of a project
 - Provides good performance due to the tight coupling and shared memory space
 - Simplifies testing and debugging as all components are within the same codebase
+
+---
+
+## Monolithic Architecture Pros and Cons (cont.)
 
 Cons:
 - Becomes complex and difficult to maintain as the application grows in size and complexity
@@ -98,6 +107,11 @@ Cons:
     - Define the contracts and communication channels between modules
     - Specify the input and output data structures and operations
     - Ensure loose coupling and encapsulation of module internals
+
+---
+
+## Modular Monolith Key Concepts (cont.)
+
 - Shared Database
     - Modules typically share a single database
     - Each module owns a subset of the database tables or schemas
@@ -123,6 +137,10 @@ Pros:
 - Allows for incremental adoption and refactoring of legacy monoliths
 - Reduces the complexity and overhead compared to microservices
 - Simplifies deployment and operations compared to distributed systems
+
+---
+
+## Modular Monolith Pros and Cons (cont.)
 
 Cons:
 - Modules are still tightly coupled within the monolith
@@ -161,6 +179,11 @@ Cons:
     - Services are independent and can be developed, deployed, and scaled separately
 - Encapsulation
     - Services hide their internal details and expose functionality through well-defined interfaces
+
+---
+
+## Microservices Key Principles (cont.)
+
 - Autonomy
     - Services have control over their own data and can make decisions independently
 - Resilience
@@ -181,6 +204,10 @@ Pros:
 - Supports technology diversity and using the right tool for the job
 - Facilitates incremental adoption and migration from monolithic applications
 - Improves fault isolation and resilience
+
+---
+
+## Microservices Pros and Cons (cont.)
 
 Cons:
 - Increases complexity in terms of distributed systems and service orchestration
@@ -217,6 +244,11 @@ Cons:
     - Services are independent and can be developed, deployed, and maintained separately
 - Service Abstraction
     - Services hide their internal details and expose functionality through abstract interfaces
+
+---
+
+## Service-Oriented Architecture Key Principles (cont.)
+
 - Service Reusability
     - Services are designed to be reusable across multiple business processes and applications
 - Service Composability
@@ -240,6 +272,10 @@ Pros:
 - Facilitates loose coupling and independence of services
 - Allows for flexible composition and orchestration of services
 - Enables incremental adoption and migration from legacy systems
+
+---
+
+## Service-Oriented Architecture Pros and Cons (cont.)
 
 Cons:
 - Requires significant upfront design and modeling of service contracts
@@ -276,6 +312,11 @@ Cons:
     - Can be triggered by user actions, system state changes, or external stimuli
 - Event Producer
     - A component that generates or publishes events to an event channel or broker
+
+---
+
+## Event-Driven Architecture Key Concepts (cont.)
+
 - Event Consumer
     - A component that subscribes to and consumes events from an event channel or broker
 - Event Channel
@@ -299,6 +340,10 @@ Pros:
 - Facilitates scalability and flexibility, as producers and consumers can be added or removed independently
 - Allows for event-driven workflows and complex event processing
 - Enables integration with external systems and services through event-based interfaces
+
+---
+
+## Event-Driven Architecture Pros and Cons (cont.)
 
 Cons:
 - Can introduce complexity in terms of event management, routing, and consistency
@@ -338,6 +383,11 @@ Cons:
 - Event
     - A trigger that causes the execution of a function
     - Can be HTTP requests, database changes, file uploads, scheduled jobs, etc.
+
+---
+
+## Serverless Key Concepts (cont.)
+
 - Serverless Platform
     - A cloud computing service that manages the execution environment for functions
     - Handles scaling, provisioning, and resource allocation automatically
@@ -345,6 +395,11 @@ Cons:
 - API Gateway
     - An entry point for client requests to access serverless functions
     - Provides routing, authentication, throttling, and request/response transformation
+
+---
+
+## Serverless Key Concepts (cont.)
+
 - Stateless
     - Functions do not maintain persistent state between invocations
     - State is typically stored in external services like databases or object storage
@@ -365,6 +420,10 @@ Pros:
 - Offers pay-per-use pricing, reducing costs for infrequently used functions
 - Enables rapid development and deployment of small, focused functions
 - Supports event-driven architectures and asynchronous processing
+
+---
+
+## Serverless Pros and Cons (cont.)
 
 Cons:
 - Limited control over the execution environment and performance
@@ -406,6 +465,11 @@ Cons:
     - A distributed cache that stores data in memory across multiple nodes
     - Provides fast read and write access to data
     - Supports data replication and partitioning for scalability and fault tolerance
+
+---
+
+## Space-Based Key Concepts (cont.)
+
 - Messaging Grid
     - A distributed messaging system for communication between processing units
     - Enables asynchronous and decoupled communication
@@ -431,6 +495,10 @@ Pros:
 - Provides fault tolerance and resilience through distributed processing units
 - Enables linear scalability by adding more processing units and nodes
 - Supports real-time data processing and analytics
+
+---
+
+## Space-Based Pros and Cons (cont.)
 
 Cons:
 - Increases complexity in terms of data consistency and synchronization
@@ -472,6 +540,11 @@ Cons:
     - Nodes communicate with each other through message passing or APIs
     - Messages are sent over a network to exchange data or coordinate tasks
     - Message passing enables loose coupling between nodes
+
+---
+
+## Share-Nothing Key Concepts (cont.)
+
 - Distributed Data
     - Data is partitioned and distributed across the nodes
     - Each node manages its own subset of the data
@@ -497,6 +570,10 @@ Pros:
 - Fault tolerance and resilience as failures are isolated to individual nodes
 - Flexibility in terms of technology choices and independent node upgrades
 - Enables handling large volumes of data and processing-intensive tasks
+
+---
+
+## Share-Nothing Pros and Cons (cont.)
 
 Cons:
 - Increased complexity in terms of system design and coordination between nodes

@@ -906,13 +906,17 @@ htop  # Press H to show threads
     - Consistent lock ordering
     - Try-lock with timeout
 
-1. **Keep critical sections short**
+---
 
-1. **Use thread pools** for task parallelism
+## Thread Best Practices (cont.)
 
-1. **Profile before optimizing**
+4. **Keep critical sections short**
 
-1. **Test thoroughly**
+5. **Use thread pools** for task parallelism
+
+6. **Profile before optimizing**
+
+7. **Test thoroughly**
     - Race conditions are hard to reproduce
 
 ---
@@ -924,6 +928,10 @@ htop  # Press H to show threads
 - Frequent communication
 - Low creation overhead
 - Cache efficiency matters
+
+---
+
+## Threads vs Processes Decision (cont.)
 
 ## Use Processes When:
 - Need isolation

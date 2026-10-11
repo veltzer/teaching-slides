@@ -43,6 +43,13 @@ Advanced Kubernetes Course - Day 3, Module 4
 | `list` | GET | List multiple resources |
 | `watch` | GET (streaming) | Watch for changes |
 | `create` | POST | Create a resource |
+
+---
+
+## `RBAC` API Verbs (cont.)
+
+| Verb | HTTP Method | Description |
+|------|-------------|-------------|
 | `update` | PUT | Full update |
 | `patch` | PATCH | Partial update |
 | `delete` | DELETE | Delete a resource |

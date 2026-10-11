@@ -175,6 +175,10 @@ Pros:
 - Can prioritize critical operations under high load
 - Helps in capacity planning and resource management
 
+---
+
+## Throttling Pros and Cons (cont.)
+
 Cons:
 - May degrade user experience if not carefully implemented
 - Can be complex to configure and fine-tune
@@ -221,6 +225,10 @@ Pros:
 - Can improve security and performance
 - Allows for API composition and transformation
 
+---
+
+## API Gateway Pros and Cons (cont.)
+
 Cons:
 - Can become a single point of failure
 - May introduce additional latency
@@ -266,6 +274,10 @@ Pros:
 - Allows independent evolution of client-specific APIs
 - Can handle client-specific authentication and authorization
 
+---
+
+## BFF Pros and Cons (cont.)
+
 Cons:
 - Increases overall system complexity
 - Can lead to code duplication across BFFs
@@ -310,6 +322,10 @@ Pros:
 - Improves maintainability by centralizing integration logic
 - Allows for independent evolution of connected systems
 - Reduces the risk of corrupting the new system's domain model
+
+---
+
+## ACL Pros and Cons (cont.)
 
 Cons:
 - Adds an extra layer of complexity to the overall architecture
@@ -400,6 +416,10 @@ Pros:
 - Enhances data security by isolating data access
 - Facilitates easier schema changes and database upgrades
 
+---
+
+## Database per Service Pros and Cons (cont.)
+
 Cons:
 - Increases complexity in data management and consistency
 - Can lead to data duplication across services
@@ -448,6 +468,10 @@ Pros:
 - Facilitates compliance with data residency requirements
 - Enhances fault tolerance and availability
 
+---
+
+## Geode Pros and Cons (cont.)
+
 Cons:
 - Increases overall system complexity
 - Can be challenging to maintain data consistency across geodes
@@ -493,6 +517,10 @@ Pros:
 - Improves application resilience through built-in retry and circuit breaking
 - Enables easier updates to service communication without changing the main application
 - Facilitates implementation of cross-cutting concerns like logging and monitoring
+
+---
+
+## Ambassador Pros and Cons (cont.)
 
 Cons:
 - Adds an extra network hop, potentially increasing latency
@@ -540,6 +568,10 @@ Pros:
 - Allows for standardization of cross-cutting concerns across different services
 - Enables updating or replacing the sidecar without modifying the main application
 
+---
+
+## Sidecar Pros and Cons (cont.)
+
 Cons:
 - Increases overall system complexity
 - Can introduce additional resource overhead
@@ -586,6 +618,10 @@ Pros:
 - Enhances security through limited-scope access
 - Simplifies client-side implementation for resource access
 - Allows fine-grained control over resource permissions
+
+---
+
+## Valet Key Pros and Cons (cont.)
 
 Cons:
 - Increases complexity in managing and securing access tokens

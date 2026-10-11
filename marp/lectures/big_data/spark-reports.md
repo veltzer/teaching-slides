@@ -17,8 +17,6 @@ audience:
 
 ---
 
-## Overview of Spark Reports
-
 ![title](svg/lectures/big_data/spark-reports/title.svg)
 
 ---

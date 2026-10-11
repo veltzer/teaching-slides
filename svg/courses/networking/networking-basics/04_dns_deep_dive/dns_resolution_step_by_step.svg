@@ -95,17 +95,30 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="40" y="40" font-size="129.987177" fill="var(--text)" font-family="Arial, sans-serif">Step 1:  Browser checks its own DNS cache</text>
-  <text x="40" y="89.361733" font-size="129.987177" fill="var(--text)" font-family="Arial, sans-serif">Step 2:  OS checks /etc/hosts file</text>
-  <text x="40" y="138.723345" font-size="129.987177" fill="var(--text)" font-family="Arial, sans-serif">Step 3:  OS checks its DNS cache (systemd-resolved, nscd)</text>
-  <text x="40" y="188.085199" font-size="129.987177" fill="var(--text)" font-family="Arial, sans-serif">Step 4:  Query sent to configured recursive resolver</text>
-  <text x="40" y="237.446811" font-size="129.987177" fill="var(--text)" font-family="Arial, sans-serif">Step 5:  Resolver checks its cache</text>
-  <text x="40" y="286.808423" font-size="129.987177" fill="var(--text)" font-family="Arial, sans-serif">Step 6:  If not cached, resolver walks the DNS hierarchy:</text>
-  <text x="1240" y="332.056638" font-size="129.987177" fill="var(--text-muted)" font-family="Arial, sans-serif">6a:  Query root server → get .com NS</text>
-  <text x="1240" y="377.304974" font-size="129.987177" fill="var(--text-muted)" font-family="Arial, sans-serif">6b:  Query .com NS → get example.com NS</text>
-  <text x="1240" y="422.553189" font-size="129.987177" fill="var(--text-muted)" font-family="Arial, sans-serif">6c:  Query example.com NS → get A record</text>
-  <text x="40" y="471.914922" font-size="129.987177" fill="var(--text)" font-family="Arial, sans-serif">Step 7:  Resolver caches the result and returns it</text>
-  <text x="40" y="521.276534" font-size="129.987177" fill="var(--text)" font-family="Arial, sans-serif">Step 8:  OS caches the result</text>
-  <text x="40" y="570.638267" font-size="129.987177" fill="var(--text)" font-family="Arial, sans-serif">Step 9:  Browser caches the result</text>
-  <text x="40" y="620" font-size="129.987177" fill="var(--text)" font-family="Arial, sans-serif">Step 10: Browser uses IP to establish TCP connection</text>
+  <rect x="40" y="40" width="1200" height="38" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" rx="8"/>
+  <text x="60" y="67" font-size="24" fill="var(--text)" font-family="Arial, sans-serif">Step 1:  Browser checks its own DNS cache</text>
+  <rect x="40" y="85.1667" width="1200" height="38" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" rx="8"/>
+  <text x="60" y="112.1667" font-size="24" fill="var(--text)" font-family="Arial, sans-serif">Step 2:  OS checks /etc/hosts file</text>
+  <rect x="40" y="130.3333" width="1200" height="38" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" rx="8"/>
+  <text x="60" y="157.3333" font-size="24" fill="var(--text)" font-family="Arial, sans-serif">Step 3:  OS checks its DNS cache (systemd-resolved, nscd)</text>
+  <rect x="40" y="175.5" width="1200" height="38" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" rx="8"/>
+  <text x="60" y="202.5" font-size="24" fill="var(--text)" font-family="Arial, sans-serif">Step 4:  Query sent to configured recursive resolver</text>
+  <rect x="40" y="220.6667" width="1200" height="38" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" rx="8"/>
+  <text x="60" y="247.6667" font-size="24" fill="var(--text)" font-family="Arial, sans-serif">Step 5:  Resolver checks its cache</text>
+  <rect x="40" y="265.8333" width="1200" height="38" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" rx="8"/>
+  <text x="60" y="292.8333" font-size="24" fill="var(--text)" font-family="Arial, sans-serif">Step 6:  If not cached, resolver walks the DNS hierarchy:</text>
+  <rect x="120" y="311" width="1120" height="38" fill="var(--bg)" stroke="var(--border)" stroke-width="2" rx="8"/>
+  <text x="140" y="338" font-size="24" fill="var(--text-muted)" font-family="Arial, sans-serif">6a:  Query root server → get .com NS</text>
+  <rect x="120" y="356.1667" width="1120" height="38" fill="var(--bg)" stroke="var(--border)" stroke-width="2" rx="8"/>
+  <text x="140" y="383.1667" font-size="24" fill="var(--text-muted)" font-family="Arial, sans-serif">6b:  Query .com NS → get example.com NS</text>
+  <rect x="120" y="401.3333" width="1120" height="38" fill="var(--bg)" stroke="var(--border)" stroke-width="2" rx="8"/>
+  <text x="140" y="428.3333" font-size="24" fill="var(--text-muted)" font-family="Arial, sans-serif">6c:  Query example.com NS → get A record</text>
+  <rect x="40" y="446.5" width="1200" height="38" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" rx="8"/>
+  <text x="60" y="473.5" font-size="24" fill="var(--text)" font-family="Arial, sans-serif">Step 7:  Resolver caches the result and returns it</text>
+  <rect x="40" y="491.6667" width="1200" height="38" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" rx="8"/>
+  <text x="60" y="518.6667" font-size="24" fill="var(--text)" font-family="Arial, sans-serif">Step 8:  OS caches the result</text>
+  <rect x="40" y="536.8333" width="1200" height="38" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" rx="8"/>
+  <text x="60" y="563.8333" font-size="24" fill="var(--text)" font-family="Arial, sans-serif">Step 9:  Browser caches the result</text>
+  <rect x="40" y="582" width="1200" height="38" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" rx="8"/>
+  <text x="60" y="609" font-size="24" fill="var(--text)" font-family="Arial, sans-serif">Step 10: Browser uses IP to establish TCP connection</text>
 </svg>

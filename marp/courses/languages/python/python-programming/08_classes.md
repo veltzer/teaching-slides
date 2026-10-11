@@ -316,6 +316,13 @@ print(v1 * 3)     # Vector(3, 6)
 | `/` | `__truediv__` |
 | `//` | `__floordiv__` |
 | `%` | `__mod__` |
+
+---
+
+## Operator Overloading Methods (cont.)
+
+| Operator | Method |
+|----------|--------|
 | `**` | `__pow__` |
 | `==` | `__eq__` |
 | `<` | `__lt__` |

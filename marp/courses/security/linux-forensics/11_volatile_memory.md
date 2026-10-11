@@ -475,6 +475,11 @@ strings /evidence/ram.lime | grep -i "password" | head
 - Volatility framework provides comprehensive memory analysis
 - Process listing reveals running programs and their relationships
 - Bash history in memory survives history clearing
+
+---
+
+## Summary: Volatile Memory Analysis (cont.)
+
 - Network connections show active communications
 - Kernel module analysis detects rootkits
 - Credential extraction may find passwords and keys in cleartext

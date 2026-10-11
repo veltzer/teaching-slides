@@ -59,6 +59,10 @@ Use VMs for: strong isolation, different OS kernels.
 **cgroups** - resource limits:
 - CPU, memory, I/O, network bandwidth
 
+---
+
+## Linux Kernel Features Behind Containers (cont.)
+
 ```bash
 # View namespaces of a process
 ls -la /proc/<PID>/ns/
@@ -872,9 +876,13 @@ docker network create --subnet=172.25.0.0/16 appnet
     - `PostgreSQL` database (backend network only)
     - Named volume for database persistence
 
-1. Add a `HEALTHCHECK` to each service
-1. Configure `nginx` to proxy requests to the application
-1. Verify network isolation:
+---
+
+## Exercise: Multi-Service Container Deployment (cont.)
+
+2. Add a `HEALTHCHECK` to each service
+3. Configure `nginx` to proxy requests to the application
+4. Verify network isolation:
 
 ```bash
 # The database should NOT be reachable from nginx
@@ -886,8 +894,8 @@ docker exec app ping -c1 db
 docker exec app ping -c1 nginx
 ```
 
-1. Test the backup and restore procedure for the database volume
-1. Scale the application to 3 replicas and verify load balancing
+5. Test the backup and restore procedure for the database volume
+6. Scale the application to 3 replicas and verify load balancing
 
 ---
 

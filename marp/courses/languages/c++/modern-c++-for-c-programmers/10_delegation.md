@@ -989,6 +989,10 @@ public:
 - Virtual inheritance has additional overhead
 - Use judiciously and profile when performance matters
 
+---
+
+## Performance Considerations (cont.)
+
 **Composition:**
 - Additional indirection for delegated calls
 - Can be optimized away by compiler

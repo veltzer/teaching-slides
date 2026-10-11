@@ -29,6 +29,11 @@ audience:
     - Represents the data and business logic of the application
     - Independent of the user interface and presentation
     - Notifies the View when data changes
+
+---
+
+## MVC Component Roles (cont.)
+
 - View
     - Presents the data to the user and handles user interaction
     - Receives updates from the Model and renders the data
@@ -88,6 +93,11 @@ Cons:
 - Terminal Expression
     - Implements an interpret operation associated with terminal symbols in the grammar
     - No recursion since it is a leaf node
+
+---
+
+## Interpreter Component Roles (cont.)
+
 - Non-terminal Expression
     - Implements an interpret operation for non-terminal symbols in the grammar
     - Recursively calls interpret on its child nodes
@@ -193,6 +203,10 @@ Pros:
 - Enables composition of commands (Macro Commands)
 - Simplifies implementation of transactional systems
 
+---
+
+## Command Pros and Cons (cont.)
+
 Cons:
 - Can lead to a high number of small, similar command classes
 - May introduce unnecessary complexity for simple applications
@@ -237,6 +251,10 @@ Pros:
 - Follows Single Responsibility Principle by dividing functionality into classes
 - Allows for a "pay as you go" approach to adding features
 
+---
+
+## Decorator Pros and Cons (cont.)
+
 Cons:
 - Can result in many small objects in the design, making it harder to learn and debug
 - Can be complex for developers unfamiliar with the pattern
@@ -280,6 +298,10 @@ Pros:
 - Promotes loose coupling between subsystems and its clients
 - Can layer facades to compose complex systems
 - Shields clients from subsystem components, reducing dependencies
+
+---
+
+## Facade Pros and Cons (cont.)
 
 Cons:
 - Can become a "god object" coupled to all classes of an app

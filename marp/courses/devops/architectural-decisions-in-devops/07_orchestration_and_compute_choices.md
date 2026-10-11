@@ -102,6 +102,11 @@ audience:
 - **Managed containers** require:
     - Cloud platform familiarity
     - Container building skills
+
+---
+
+## Team Capability Requirements (cont.)
+
 - **`Serverless`** requires:
     - Cloud SDK knowledge
     - Event-driven programming experience
@@ -172,6 +177,11 @@ NOT justified:
     - Task-level scaling (seconds)
     - No node management needed
     - Upper limits per account/region
+
+---
+
+## Scaling Characteristics (cont.)
+
 - **`Serverless`**:
     - Near-instant scaling (milliseconds to seconds)
     - Scales to zero automatically
@@ -255,6 +265,10 @@ NOT justified:
 **By environment**:
 - `dev`, `staging`, `production`
 - Simple but limited isolation
+
+---
+
+## Namespace Strategies (cont.)
 
 **By application**:
 - `order-service`, `payment-service`, `user-service`
@@ -372,6 +386,10 @@ When to consider:
 - Custom control plane configurations
 - Edge computing scenarios
 
+---
+
+## Self-Managed Kubernetes (cont.)
+
 Tools for self-management:
 - `kubeadm` - official bootstrapping tool
 - `kops` - production-grade cluster management
@@ -416,6 +434,10 @@ Tools for self-management:
 | `.NET` | 500ms-3s | CLR initialization |
 | `Rust` | 50-150ms | Compiled, very fast |
 
+---
+
+## Cold Start Impact by Runtime (cont.)
+
 Mitigation strategies:
 - Provisioned concurrency (pre-warmed instances)
 - Keep functions small and dependency-light
@@ -432,10 +454,15 @@ Mitigation strategies:
 1. **Keep-alive pings**
     - Schedule periodic invocations to keep instances warm
     - Unreliable: provider may still reclaim instances
-1. **Optimize package size**
+
+---
+
+## Cold Start Mitigation Techniques (cont.)
+
+3. **Optimize package size**
     - Smaller deployment = faster download and init
     - Use tree-shaking and avoid unnecessary dependencies
-1. **Use `SnapStart`** (Java on `AWS Lambda`)
+4. **Use `SnapStart`** (Java on `AWS Lambda`)
     - Snapshots initialized JVM state
     - Reduces Java cold starts to ~200ms
 
@@ -455,6 +482,10 @@ Mitigation strategies:
 - `IAM` roles and policies
 - `CloudWatch` for logging
 - `DynamoDB` Streams, `S3` events, `Kinesis`
+
+---
+
+## Serverless Lock-In: Practical Examples (cont.)
 
 **Migrating away requires rewriting**:
 - All event source integrations
@@ -491,6 +522,10 @@ The business logic is portable; everything around it is not.
 - Database change streams
 - Scheduled tasks (`cron`)
 - IoT sensor data ingestion
+
+---
+
+## Event-Driven vs Request-Driven (cont.)
 
 **Request-driven** (may prefer containers):
 - Synchronous API endpoints
@@ -535,6 +570,11 @@ Most real-world systems combine compute models:
 - **Managed containers** for:
     - Batch processing jobs
     - Internal tools and dashboards
+
+---
+
+## Hybrid Architectures (cont.)
+
 - **`Serverless`** for:
     - Event processing pipelines
     - Webhooks and integrations
@@ -582,6 +622,10 @@ rules:
 1. Implement `VPA` to auto-adjust resource requests
 1. Monitor with `Kubecost` or `kubectl top`
 
+---
+
+## Cost Optimization Strategies (cont.)
+
 **`Serverless`**:
 1. Optimize memory allocation (more memory = more CPU = faster)
 1. Use `ARM` architecture (`Graviton2`: 20% cheaper)
@@ -605,6 +649,10 @@ kubectl top pods -n production
 | Custom dashboards | Full control | Limited | Limited |
 | Cost tracking | `Kubecost` | Provider tools | Provider tools |
 
+---
+
+## Observability Across Compute Models (cont.)
+
 - Unified observability across models is challenging
 - Consider `OpenTelemetry` as a vendor-neutral standard
 
@@ -622,6 +670,10 @@ kubectl top pods -n production
 - Image scanning by provider
 - Task-level IAM roles
 - VPC networking
+
+---
+
+## Security Considerations by Model (cont.)
 
 **`Serverless`**:
 - Function-level IAM (least privilege)
@@ -669,10 +721,15 @@ Ask these questions in order:
 1. **What is your traffic pattern?**
     - Spiky/unpredictable: Serverless
     - Steady: Containers / `Kubernetes`
-1. **Do you need multi-cloud portability?**
+
+---
+
+## Decision Framework (cont.)
+
+3. **Do you need multi-cloud portability?**
     - Yes: `Kubernetes`
     - No: Managed containers or serverless
-1. **What is your team size?**
+4. **What is your team size?**
     - < 5 engineers: Avoid self-managed `K8s`
     - 15+: Any model works
 
@@ -695,10 +752,15 @@ Ask these questions in order:
 1. **Serverless monolith**
     - One giant `Lambda` function defeats the purpose
     - But too many tiny functions creates orchestration hell
-1. **Ignoring cold starts in user-facing paths**
+
+---
+
+## Anti-Patterns to Avoid (cont.)
+
+4. **Ignoring cold starts in user-facing paths**
     - Test latency under realistic conditions
     - Provision concurrency for critical endpoints
-1. **No cost alerts**
+5. **No cost alerts**
     - Serverless can generate surprise bills
 
 ---
@@ -712,6 +774,11 @@ Ask these questions in order:
 - **`Kubernetes` simplification**
     - `GKE Autopilot`, `EKS Auto Mode`
     - Reducing operational burden while keeping `K8s` API
+
+---
+
+## Emerging Trends (cont.)
+
 - **Edge compute**
     - `Cloudflare Workers`, `Deno Deploy`, `Lambda@Edge`
     - Functions at CDN edge locations worldwide

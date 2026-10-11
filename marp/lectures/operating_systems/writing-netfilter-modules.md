@@ -17,8 +17,6 @@ audience:
 
 ---
 
-## Outline
-
 ![title](svg/lectures/operating_systems/writing-netfilter-modules/title.svg)
 
 ---

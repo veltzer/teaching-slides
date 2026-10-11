@@ -85,6 +85,10 @@ Pros:
 - Supports complex analytics on large datasets
 - Enables correction of errors in real-time layer through batch processing
 
+---
+
+## Lambda Pros and Cons (cont.)
+
 Cons:
 - Increased complexity in system architecture
 - Requires maintaining two separate systems for batch and speed layers
@@ -129,6 +133,10 @@ Pros:
 - Allows easy reprocessing of data by replaying the event stream
 - Provides consistency between "batch" and "real-time" results
 - Typically easier to reason about and debug
+
+---
+
+## Kappa Pros and Cons (cont.)
 
 Cons:
 - May require more storage for maintaining a long-term log

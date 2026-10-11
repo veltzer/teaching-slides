@@ -45,6 +45,11 @@ audience:
 - **A03 Injection** — `SQL`, OS command, `LDAP`; untrusted data in a command
 - **A04 Insecure Design** — the flaw is in the design, not the code
 - **A05 Security Misconfiguration** — defaults, debug endpoints, verbose errors
+
+---
+
+## OWASP Top 10 (2021) (cont.)
+
 - **A06 Vulnerable and Outdated Components** — the supply chain again
 - **A07 Identification and Authentication Failures** — weak login, session handling
 - **A08 Software and Data Integrity Failures** — unverified updates, insecure deserialization
@@ -116,6 +121,11 @@ audience:
 - **PS — Protect the Software** — protect source and artifacts from tampering (signing, access control)
 - **PW — Produce Well-Secured Software** — threat modeling, secure design, code review, testing
 - **RV — Respond to Vulnerabilities** — disclosure process, triage, remediation, root-cause
+
+---
+
+## NIST Secure Software Development Framework (SSDF) (cont.)
+
 - This is the framework US federal software procurement increasingly requires attestation against
 - Note: `NIST` SP 800-218A extends `SSDF` to generative `AI` (covered in the `AI` chapter)
 

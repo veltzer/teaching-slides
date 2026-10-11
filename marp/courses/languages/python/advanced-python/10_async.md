@@ -590,6 +590,10 @@ Less Suitable:
 - Threading: Multiple threads, preemptive multitasking
 - Multiprocessing: Multiple processes, true parallelism
 
+---
+
+## What is Asynchronous Programming?: Async vs. Multi-threading vs. Multi-processing (cont.)
+
 | Characteristic | Async | Threading | Multiprocessing |
 |---------------|-------|-----------|-----------------|
 | Concurrency | Yes | Yes | Yes |

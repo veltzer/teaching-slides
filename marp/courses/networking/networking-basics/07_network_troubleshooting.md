@@ -359,6 +359,10 @@ $ sudo tcpdump -i eth0 -nn port 80
 15:30:01.168000 IP 93.184.216.34.80 > 10.0.0.5.54321: Flags [P.], seq 2001:3501, ack 1201
 ```
 
+---
+
+## Reading tcpdump Output (cont.)
+
 **TCP Flag meanings:**
 
 | Flag | Symbol | Meaning |
@@ -774,6 +778,13 @@ $ sudo ethtool --test eth0
 | Does DNS work? | `dig example.com` |
 | What is listening? | `ss -tlnp` |
 | Is port open remotely? | `nc -zv host port` |
+
+---
+
+## Quick Reference: Troubleshooting Commands (cont.)
+
+| Problem | Command |
+|---------|---------|
 | Where do packets go? | `traceroute host` |
 | Sustained test | `mtr -r -c 100 host` |
 | Capture packets | `sudo tcpdump -i eth0 -nn` |
@@ -791,6 +802,11 @@ $ sudo ethtool --test eth0
 - **ping** tests basic connectivity; interpret results carefully (timeouts vs resets)
 - **traceroute/mtr** reveal the network path and where problems occur
 - **tcpdump** captures raw packets for deep analysis
+
+---
+
+## Review: Network Troubleshooting Key Concepts (cont.)
+
 - **Wireshark** provides graphical packet analysis with powerful filters
 - **ss** shows socket state, replacing netstat
 - Common issues: DNS misconfiguration, firewall drops, MTU mismatches, routing problems

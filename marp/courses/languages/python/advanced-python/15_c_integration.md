@@ -103,6 +103,10 @@ Potential speedup: ~60x
 1. **SWIG**: Simplified Wrapper and Interface Generator
 1. **pybind11**: C++11 header-only library
 
+---
+
+## Integration Methods Overview (cont.)
+
 | Method | Complexity | Performance | Flexibility |
 |--------|-----------|-------------|-------------|
 | Python C API | High | High | High |

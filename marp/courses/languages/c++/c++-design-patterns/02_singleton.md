@@ -168,6 +168,10 @@ public:
 - Testing becomes difficult due to tight coupling
 - Multiple instances might be needed in the future
 
+---
+
+## Singleton: When to Use and When to Avoid (cont.)
+
 **Alternatives:**
 
 - Dependency injection

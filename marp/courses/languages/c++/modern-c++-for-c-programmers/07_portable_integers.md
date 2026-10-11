@@ -1,5 +1,7 @@
 # Portable Integers and Robust Constructors
 
+---
+
 ## The Integer Size Problem
 
 C++ integer types have implementation-defined sizes, making portable code challenging
@@ -10,6 +12,10 @@ C++ integer types have implementation-defined sizes, making portable code challe
 - `int` ≥ 16 bits
 - `long` ≥ 32 bits
 - `long long` ≥ 64 bits (C++11)
+
+---
+
+## The Integer Size Problem (cont.)
 
 **Reality varies by platform:**
 - 32-bit systems: `int` = 32 bits, `long` = 32 bits
@@ -1774,12 +1780,20 @@ void demonstrateADL() {
 1. **Validate ranges** in constructors and setter functions
 1. **Use delegating constructors** to centralize initialization logic
 
+---
+
+## Best Practices Summary (cont.)
+
 **Template Best Practices:**
 1. **Constrain templates** with SFINAE or concepts (C++20)
 1. **Provide clear error messages** with static_assert
 1. **Use explicit instantiation** to control compilation units
 1. **Organize with namespaces** to avoid naming conflicts
 1. **Document template requirements** clearly
+
+---
+
+## Best Practices Summary (cont.)
 
 **Constructor Design:**
 1. **Single point of maintenance** through delegation

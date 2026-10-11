@@ -2887,10 +2887,18 @@ Design Patterns in Modern C++:
 1. **SOLID principles** - patterns support good design principles
 1. **Modern C++** enhances pattern implementation
 
+---
+
+## Summary (cont.)
+
 **Pattern Categories:**
 - **Creational (5 patterns)**: Factory, Abstract Factory, Builder, Prototype, Singleton
 - **Structural (6 patterns)**: Adapter, Bridge, Composite, Decorator, Facade, Proxy
 - **Behavioral (11 patterns)**: Observer, Strategy, Command, Template Method, State, Chain of Responsibility, Visitor, Iterator, Mediator, Memento, Null Object
+
+---
+
+## Summary (cont.)
 
 **Modern Enhancements:**
 - Smart pointers for automatic memory management
@@ -2899,6 +2907,10 @@ Design Patterns in Modern C++:
 - Move semantics for efficient object transfer
 - Concepts for better template constraints (C++20)
 
+---
+
+## Summary (cont.)
+
 **Best Practices:**
 - Choose patterns based on actual requirements
 - Combine patterns when solving complex problems
@@ -2906,6 +2918,10 @@ Design Patterns in Modern C++:
 - Use modern C++ features to simplify implementation
 - Focus on testability and maintainability
 - Avoid anti-patterns and over-engineering
+
+---
+
+## Summary (cont.)
 
 **Remember:**
 Patterns are tools, not goals. Use them when they genuinely improve your design, code clarity, and maintainability. Start simple and add patterns when complexity demands structure.

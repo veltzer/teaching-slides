@@ -346,6 +346,13 @@ logrotate -f /etc/logrotate.d/myapp
 | `delaycompress` | Compress on next rotation |
 | `missingok` | Don't error if log missing |
 | `notifempty` | Don't rotate if empty |
+
+---
+
+## logrotate Options Reference (cont.)
+
+| Option | Purpose |
+|--------|---------|
 | `copytruncate` | Copy then truncate (no restart) |
 | `sharedscripts` | Run postrotate once for all |
 | `maxsize 100M` | Rotate if file exceeds size |
@@ -818,6 +825,13 @@ cat /proc/meminfo
 | `MemAvailable` | Estimated available for new apps |
 | `Buffers` | Block device I/O cache |
 | `Cached` | Page cache (file contents) |
+
+---
+
+## /proc/meminfo Deep Dive (cont.)
+
+| Field | Meaning |
+|-------|---------|
 | `SwapTotal/Free` | Swap space usage |
 | `Dirty` | Data waiting to be written to disk |
 | `Slab` | Kernel data structure cache |
@@ -1027,6 +1041,13 @@ cat /proc/diskstats
 | Reads merged | Adjacent reads combined by scheduler |
 | Sectors read | Total sectors read (512 bytes each) |
 | Read time (ms) | Total time spent reading |
+
+---
+
+## /proc/diskstats Explained (cont.)
+
+| Field | Meaning |
+|-------|---------|
 | Writes completed | Total write operations |
 | Writes merged | Adjacent writes combined |
 | I/Os in progress | Currently active I/O operations |

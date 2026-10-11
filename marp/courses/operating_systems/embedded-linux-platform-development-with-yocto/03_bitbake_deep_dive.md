@@ -253,6 +253,10 @@ Packaging:
 - `package_rpm/deb/ipk` - Package formats
 - `packagegroup` - Package collections
 
+---
+
+## Common Classes (cont.)
+
 Utilities:
 - `pkgconfig` - pkg-config support
 - `gettext` - Internationalization
@@ -659,6 +663,10 @@ BitBake mastery requires understanding:
 - Fetcher capabilities
 - Event handling
 - Debugging techniques
+
+---
+
+## Summary (cont.)
 
 Key concepts:
 - Everything is metadata

@@ -28,6 +28,13 @@ audience:
 | 22     | SSH            | TCP      |
 | 25     | SMTP           | TCP      |
 | 53     | DNS            | TCP/UDP  |
+
+---
+
+## What is Port Scanning? (cont.)
+
+| Port   | Service        | Protocol |
+|--------|----------------|----------|
 | 80     | HTTP           | TCP      |
 | 443    | HTTPS          | TCP      |
 | 3306   | MySQL          | TCP      |
@@ -311,6 +318,10 @@ nmap --script http-brute -p 80 192.168.1.1
 # Script categories
 nmap --script "safe and discovery" 192.168.1.1
 ```
+
+---
+
+## Nmap Scripting Engine (NSE) (cont.)
 
 ### NSE Script Categories
 

@@ -47,6 +47,10 @@ audience:
 - Packet routing
 - Fragmentation and reassembly
 
+---
+
+## Internet Protocol (IP) (cont.)
+
 **Key Features:**
 - Connectionless protocol
 - Best-effort delivery
@@ -119,6 +123,10 @@ audience:
 - No flow control
 - No error recovery
 - Minimal overhead
+
+---
+
+## User Datagram Protocol (UDP) (cont.)
 
 **Common Uses:**
 - DNS queries
@@ -310,6 +318,10 @@ audience:
 - FTP clients
 - Terminal emulators
 - Custom applications
+
+---
+
+## Client Applications (cont.)
 
 **Protocols:**
 - HTTP/HTTPS

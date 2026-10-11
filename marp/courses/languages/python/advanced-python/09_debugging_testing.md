@@ -857,6 +857,11 @@ if __name__ == '__main__':
 - `assertIsNot(a, b)` - Check if a is not b
 - `assertIsNone(x)` - Check if x is None
 - `assertIsNotNone(x)` - Check if x is not None
+
+---
+
+## Testing with unittest: unittest Assertions (cont.)
+
 - `assertIn(a, b)` - Check if a in b
 - `assertNotIn(a, b)` - Check if a not in b
 - `assertRaises(exc, fun, *args, **kwds)` - Check if fun(*args, **kwds) raises exc

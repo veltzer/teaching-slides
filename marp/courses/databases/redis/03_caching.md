@@ -434,11 +434,15 @@ Multiple application instances using shared Redis cache:
     - High-load failures when keys expire
     - Solution: Mutex locks or staggered expiry
 
-1. **Cache avalanche**:
+---
+
+## Caching Common Pitfalls (cont.)
+
+3. **Cache avalanche**:
     - Many keys expire simultaneously
     - Solution: Add random jitter to TTL
 
-1. **Thundering herd**:
+4. **Thundering herd**:
     - Multiple processes rebuild cache at once
     - Solution: Leader election for rebuilds
 
@@ -624,6 +628,10 @@ Key metrics to monitor:
 1. **Memory usage**: Current and peak memory usage
 1. **Eviction rate**: Keys evicted due to memory pressure
 1. **Expiration rate**: Keys expired naturally
+
+---
+
+## Monitoring Cache Performance (cont.)
 
 Tools:
 - Redis INFO command

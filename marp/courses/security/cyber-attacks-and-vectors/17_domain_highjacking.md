@@ -81,6 +81,10 @@ audience:
 - Attacker compromises home/office router (default credentials)
 - Changes DHCP-provided DNS servers to malicious ones
 
+---
+
+## DNS Hijacking Techniques (cont.)
+
 ### 3. Man-in-the-Middle DNS
 - Attacker intercepts DNS queries on the network
 - Responds with forged DNS answers before the legitimate server
@@ -88,6 +92,10 @@ audience:
 ### 4. Rogue DNS Server
 - Attacker operates a DNS resolver that returns malicious results
 - Users are tricked or configured to use it
+
+---
+
+## DNS Hijacking Techniques (cont.)
 
 ```bash
 # Check your current DNS resolver

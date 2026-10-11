@@ -36,6 +36,10 @@ Submodules allow you to include one Git repository inside another:
 - **Specific commit:** Submodule points to exact commit SHA
 - **Nested structure:** Submodules can contain other submodules
 
+---
+
+## What Are Git Submodules? (cont.)
+
 **Common use cases:**
 - Shared libraries across projects
 - Third-party dependencies
@@ -64,6 +68,10 @@ Benefits and trade-offs of submodules:
 - **Independence:** Each submodule has own history
 - **Modularity:** Clear separation of concerns
 - **Selective updates:** Update only when needed
+
+---
+
+## Why Use Submodules?: Details (cont.)
 
 **Disadvantages:**
 - **Complexity:** More complex workflows
@@ -122,6 +130,10 @@ The `.gitmodules` file tracks submodule configuration:
     url = https://github.com/user/auth-plugin.git
     branch = stable
 ```
+
+---
+
+## Understanding .gitmodules File (cont.)
 
 **Configuration options:**
 - `path`: Local directory path
@@ -416,6 +428,10 @@ Guidelines for effective submodule usage:
 1. Document submodule purposes
 1. Maintain consistent structure
 
+---
+
+## Submodule Best Practices (cont.)
+
 **Version management:**
 1. Pin to specific versions for stability
 1. Test before updating submodules
@@ -591,6 +607,10 @@ cat .gitmodules
 git config submodule.lib/shared.url https://github.com/user/lib.git
 ```
 
+---
+
+## Submodule Security Considerations (cont.)
+
 **Access control:**
 - Ensure team has access to all submodule repositories
 - Consider private submodules access requirements
@@ -679,10 +699,18 @@ git config submodule.lib/shared.ignore dirty
     - Update submodules to latest versions
     - Make changes within submodules
 
-1. **Workflow simulation:**
+---
+
+## Lab Exercise: Submodule Management (cont.)
+
+3. **Workflow simulation:**
     - Simulate team development with submodules
     - Handle merge conflicts involving submodules
     - Practice submodule removal and replacement
+
+---
+
+## Lab Exercise: Submodule Management (cont.)
 
 **Advanced tasks:**
 1. **Automation setup:**
@@ -694,6 +722,10 @@ git config submodule.lib/shared.ignore dirty
     - Simulate and resolve common submodule issues
     - Practice recovery from submodule problems
     - Compare with alternative approaches
+
+---
+
+## Lab Exercise: Submodule Management (cont.)
 
 **Deliverables:** Complete submodule-based project structure, management scripts, CI/CD configuration, troubleshooting guide, and comparison with alternatives.
 
@@ -714,15 +746,23 @@ git config submodule.lib/shared.ignore dirty
     - Document setup and update procedures
     - Test thoroughly before updates
 
-1. **Use appropriate workflows:**
+---
+
+## Summary: Effective Submodule Usage (cont.)
+
+3. **Use appropriate workflows:**
     - Fixed versions for stable dependencies
     - Latest versions for active development
     - Clear communication with team members
 
-1. **Prepare for common issues:**
+4. **Prepare for common issues:**
     - Submodule synchronization problems
     - Complex merge scenarios
     - CI/CD integration challenges
     - Performance considerations
+
+---
+
+## Summary: Effective Submodule Usage (cont.)
 
 **Remember:** Git submodules are powerful but complex. They work well for specific use cases like shared libraries and modular architectures, but require careful planning, clear documentation, and team coordination. Consider simpler alternatives like Git subtrees or package managers unless you specifically need the independence and version control that submodules provide.

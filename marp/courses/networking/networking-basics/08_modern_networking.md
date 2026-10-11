@@ -573,6 +573,10 @@ message UserResponse {
 | Performance | Good | Excellent (~10x faster) |
 | Human readable | Yes | No (binary) |
 
+---
+
+## gRPC vs REST Comparison (cont.)
+
 **When to use gRPC:**
 - Microservice-to-microservice communication
 - High-throughput, low-latency requirements
@@ -757,6 +761,11 @@ modules:
     - **Services** provide stable endpoints
     - **Ingress** handles HTTP routing
     - **Network Policies** act as Pod-level firewalls
+
+---
+
+## Review: Modern Networking Key Concepts (cont.)
+
 - **Service mesh** (Istio, Linkerd) handles mTLS, retries, observability
 - **CDNs** cache content at edge locations for low latency
 - **WebSocket** enables real-time bidirectional communication

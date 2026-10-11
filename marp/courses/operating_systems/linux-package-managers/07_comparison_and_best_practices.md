@@ -18,12 +18,12 @@ audience:
 
 We've now seen six worlds:
 
-1. 1. 1. Distribution: `dpkg`/`apt`, `rpm`/`dnf`, `pacman`, `apk`
-1. 1. 1. Sandboxed/universal: `flatpak`, `snap`, `appimage`
-1. 1. 1. Declarative: `nix`, `guix`
-1. 1. 1. Language: `pip`, `cargo`, `npm`, `gem`, `go`, ...
-1. 1. 1. `GitHub` releases / pre-built binaries
-1. 1. 1. Source builds
+1. Distribution: `dpkg`/`apt`, `rpm`/`dnf`, `pacman`, `apk`
+1. Sandboxed/universal: `flatpak`, `snap`, `appimage`
+1. Declarative: `nix`, `guix`
+1. Language: `pip`, `cargo`, `npm`, `gem`, `go`, ...
+1. `GitHub` releases / pre-built binaries
+1. Source builds
 
 A real Linux machine usually mixes several. The question is not "which one is best?" — it's "which one for this need?"
 
@@ -38,6 +38,11 @@ For a given thing you want to install:
 - Is it a sandboxed desktop GUI app? → **`flatpak` (or `snap`)**
 - Is it a project-scoped library or developer tool? → **language package manager** in a project-local environment
 - Is it a `Python` CLI tool you want available globally? → **`pipx`**
+
+---
+
+## A Decision Flow (cont.)
+
 - Is it a `Rust` / `Go` CLI tool? → **`cargo install`** / **`go install`**
 - Is it a static binary published as a `GitHub` release? → **download + verify + `/usr/local/bin/`**
 - None of the above? → **build from source**, with `stow` or `checkinstall`
@@ -63,6 +68,13 @@ How much do you have to trust to install this?
 | `flatpak` from `flathub` | `Flathub` reviewers + app maintainer |
 | `snap` from store | Canonical + publisher |
 | `pip`/`cargo`/`npm` | Registry + every transitive author |
+
+---
+
+## Comparison: Trust Surface (cont.)
+
+| Source | What you trust |
+|---|---|
 | `GitHub` release with signature | Project owners + their CI |
 | `GitHub` release, no signature | The project + the network path |
 | `curl ... \| sudo bash` | Everything, every time, no record |
@@ -101,6 +113,10 @@ The further you get from system tools, the more security updates become *your* j
 | `GitHub` release | Yes (tag is immutable) |
 | Source build | Only if you pin source + toolchain + flags |
 
+---
+
+## Comparison: Reproducibility (cont.)
+
 If you care about reproducibility, the answer rotates around lock files and pins.
 
 ---
@@ -113,6 +129,11 @@ You will mix them. Some rules of thumb that prevent most pain:
 - **One installer per app.** Don't have `firefox` from `apt`, `flatpak`, *and* `snap`.
 - **Project tools live in projects.** `Node.js` deps in `node_modules/`. `Python` deps in `.venv/`. Don't put them in `/usr/`.
 - **System tools live in system paths.** `nginx` belongs to `apt`. Don't `pip install` something that conflicts.
+
+---
+
+## Mixing Package Managers Safely (cont.)
+
 - **Per-user is your friend.** `~/.local/`, `~/.cargo/`, `~/.npm-global/`, `pipx`. No `sudo` needed, no system corruption possible.
 
 If your `$PATH` has more than two `bin` directories, you're fine. If you're not sure which one wins, run `which`.
@@ -215,14 +236,19 @@ The point: at *some* level you should have a written description of what's on th
 
 The most-recommended-and-most-ignored list in this whole course.
 
-1. 1. 1. **Use signed repositories.** `gpgcheck=1`. `signed-by=`. Always.
-1. 1. 1. **Verify GitHub releases** with checksums and, if available, signatures (`gh attestation`, `cosign`).
-1. 1. 1. **Pin language deps** with lock files in `git`.
-1. 1. 1. **Run security updates promptly.** Configure `unattended-upgrades` (Debian/Ubuntu) or `dnf-automatic` (RHEL/Fedora).
-1. 1. 1. **Don't `pip install` / `npm install -g` as `root`.** Use `pipx`, `venv`, per-user prefixes.
-1. 1. 1. **Don't `curl | sudo bash`.** If you do, save the script first and read it.
-1. 1. 1. **Keep an inventory.** Manual installs need a written record.
-1. 1. 1. **Remove what you don't use.** `apt autoremove`, `flatpak uninstall --unused`, `pipx uninstall`.
+1. **Use signed repositories.** `gpgcheck=1`. `signed-by=`. Always.
+1. **Verify GitHub releases** with checksums and, if available, signatures (`gh attestation`, `cosign`).
+1. **Pin language deps** with lock files in `git`.
+
+---
+
+## Security: A Short List (cont.)
+
+4. **Run security updates promptly.** Configure `unattended-upgrades` (Debian/Ubuntu) or `dnf-automatic` (RHEL/Fedora).
+5. **Don't `pip install` / `npm install -g` as `root`.** Use `pipx`, `venv`, per-user prefixes.
+6. **Don't `curl | sudo bash`.** If you do, save the script first and read it.
+7. **Keep an inventory.** Manual installs need a written record.
+8. **Remove what you don't use.** `apt autoremove`, `flatpak uninstall --unused`, `pipx uninstall`.
 
 ---
 
@@ -261,11 +287,15 @@ Mix freely. Just keep one installer per app.
 
 Take any small open-source CLI tool of your choice. Install it five different ways and compare:
 
-1. 1. 1. From the distro repository (if available)
-1. 1. 1. From the project's `GitHub` release (verified)
-1. 1. 1. As a `flatpak` or `snap` (if available)
-1. 1. 1. With its language's package manager (`cargo install`, `pipx`, `npm install -g`, `go install`)
-1. 1. 1. Built from source
+1. From the distro repository (if available)
+1. From the project's `GitHub` release (verified)
+1. As a `flatpak` or `snap` (if available)
+1. With its language's package manager (`cargo install`, `pipx`, `npm install -g`, `go install`)
+1. Built from source
+
+---
+
+## Closing Exercise (cont.)
 
 For each:
 

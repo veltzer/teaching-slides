@@ -68,6 +68,10 @@ again soon.
 addresses near X soon.
 - Example: iterating through arrays, sequential instruction execution
 
+---
+
+## Why a Hierarchy? (cont.)
+
 **Quantified**: A typical program spends 90% of its time in 10% of its code.
 A well-designed cache can satisfy >95% of memory requests.
 
@@ -134,6 +138,13 @@ DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 | Cost/bit | ~10x more expensive | Cheap |
 | Refresh | Not needed | Every ~64 ms |
 | Power (idle) | Low (no refresh) | Higher (refresh) |
+
+---
+
+## SRAM vs DRAM Comparison (cont.)
+
+| Property | SRAM | DRAM |
+|----------|------|------|
 | Power (active) | Higher | Lower |
 | Typical size | KB to tens of MB | GB to hundreds of GB |
 | Use case | CPU caches | Main memory |
@@ -178,6 +189,10 @@ than activating a different row.
 | Channels/DIMM | 1 | 1 | 2 |
 | Max DIMM size | 8 GB typical | 32 GB typical | 64 GB typical |
 | ECC | Optional | Optional | On-die ECC |
+
+---
+
+## DDR Memory Generations (cont.)
 
 **DDR = Double Data Rate**: transfers data on both rising and falling clock edges.
 
@@ -252,6 +267,10 @@ starting from 0; no need to worry about where physical memory is.
 
 **3. Memory overcommit**: processes can allocate more virtual memory than
 physical RAM exists. Unused pages are not allocated until accessed.
+
+---
+
+## Benefits of Virtual Memory (cont.)
 
 **4. Demand paging**: pages are loaded from disk only when first accessed
 (page fault), not when the program starts.
@@ -386,6 +405,10 @@ Virtual Address ──> ┌───────┐ ──HIT──> Physical Ad
                 (+ update TLB)
 ```
 
+---
+
+## The TLB (Translation Lookaside Buffer) (cont.)
+
 **Typical TLB sizes:**
 
 | TLB Level | Entries | Page Size | Coverage |
@@ -431,6 +454,10 @@ memory (Present bit = 0), a **page fault** occurs:
 - Example: first access to a newly allocated page (demand paging)
 - The OS allocates a frame and updates the page table
 - Cost: ~1-10 microseconds
+
+---
+
+## Page Faults (cont.)
 
 **Major page fault**: page must be loaded from disk (swap)
 - Example: page was swapped out to make room for other pages
@@ -785,6 +812,13 @@ for (int i = 0; i < N; i++) {
 | DDR generations | Each generation: higher bandwidth, lower voltage |
 | Virtual memory | Isolation, overcommit, demand paging |
 | Page tables | 4-level radix tree on x86-64, 4 KB pages |
+
+---
+
+## Summary: Memory Systems (cont.)
+
+| Concept | Key Takeaway |
+|---------|-------------|
 | TLB | Caches address translations, huge pages reduce misses |
 | mmap | Map files and devices into address space |
 | DMA | Devices transfer data without CPU involvement |

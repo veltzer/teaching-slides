@@ -97,6 +97,10 @@ you cannot determine from the code as UNKNOWN. Do not suggest changes.
 | Feature in a legacy module | High | Large: baseline plus safety net |
 | Handover to another team | Low | Large: the spec is the handover |
 
+---
+
+## The Honest Cost-Benefit Line (cont.)
+
 - The cost is roughly fixed per feature; the payoff scales with size, risk and headcount
 - Track re-prompts and review rounds before and after; that is the metric that convinces skeptics
 

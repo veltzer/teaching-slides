@@ -24,12 +24,17 @@ audience:
 1. Multi-Core Processors
 1. Hyper-Threading and SMT
 1. NUMA vs UMA Memory
-1. GPU Architecture
-1. Vector Processing and SIMD Instructions
-1. Interconnects Between Cores
-1. Cache Coherence in Multiprocessors
-1. Amdahl's Law
-1. Gustafson's Law
+
+---
+
+## Table of Contents (cont.)
+
+7. GPU Architecture
+8. Vector Processing and SIMD Instructions
+9. Interconnects Between Cores
+10. Cache Coherence in Multiprocessors
+11. Amdahl's Law
+12. Gustafson's Law
 
 ---
 
@@ -193,6 +198,10 @@ on a single die (chip). Each core has its own L1/L2 caches.
 | Interconnect | Ring bus, mesh, or crossbar between cores |
 | Coherence | Hardware maintains cache consistency (MESI/MOESI) |
 
+---
+
+## Multi-Core: Key Characteristics (cont.)
+
 **Examples of modern core counts:**
 
 | Processor | Cores | Threads | Market |
@@ -258,6 +267,10 @@ both threads compete for the same execution units, caches, and bandwidth.
 | Scientific HPC | Low or negative | Threads fight over cache and FPU |
 | Real-time / latency | Negative | Unpredictable interference |
 | Crypto / security | Disabled | Side-channel attack surface |
+
+---
+
+## SMT: When It Helps and When It Hurts (cont.)
 
 **Checking SMT status on Linux:**
 
@@ -329,6 +342,10 @@ access. Accessing another processor's memory is slower.
 | Programming | Simpler | Must consider data placement |
 | Used in | Laptops, desktops | Servers, workstations |
 | Examples | Single-socket systems | Dual/quad-socket AMD EPYC |
+
+---
+
+## NUMA vs UMA: Comparison (cont.)
 
 **Checking NUMA topology on Linux:**
 
@@ -728,6 +745,10 @@ avoid patterns that stress it, like false sharing).
                                   └───────>  I  <──┘
 ```
 
+---
+
+## MESI Protocol: Detailed State Transitions (cont.)
+
 | Transition | Trigger | Action |
 |-----------|---------|--------|
 | I -> E | Read miss, no sharers | Load from memory |
@@ -797,6 +818,10 @@ performance:
 | S | Shared -- clean, may have copies elsewhere |
 | I | Invalid |
 
+---
+
+## MOESI and MESIF Extensions (cont.)
+
 The **Owned** state allows a dirty line to be shared without writing
 back to memory first. The owner supplies the data directly to other
 cores on a snoop, reducing memory traffic.
@@ -835,6 +860,13 @@ parallelizing only a fraction of it.
 | 2 | 1.82x |
 | 4 | 3.08x |
 | 8 | 4.71x |
+
+---
+
+## Amdahl's Law: Comparison (cont.)
+
+| Processors (N) | Speedup |
+|-----------------|---------|
 | 16 | 6.40x |
 | 64 | 8.77x |
 | 256 | 9.69x |
@@ -867,6 +899,10 @@ Where:
   P = parallel fraction (measured on the parallel system)
 ```
 
+---
+
+## Gustafson's Law (cont.)
+
 **Key difference from Amdahl:**
 
 ```misc
@@ -878,6 +914,10 @@ Gustafson:  Fixed time, scale problem with processors
             "How much MORE can we solve in the SAME time?"
             Speedup scales linearly with processors
 ```
+
+---
+
+## Gustafson's Law (cont.)
 
 **Example** (P = 0.9, serial fraction = 10%):
 
@@ -931,6 +971,13 @@ Gustafson:  Fixed time, scale problem with processors
 | Instruction-level | Pipelining, superscalar, OoO | No (hardware) |
 | Data-level (SIMD) | SSE, AVX, NEON | Yes (intrinsics or auto) |
 | Thread-level (SMT) | Hyper-threading | Yes (OS sees more CPUs) |
+
+---
+
+## Practical Parallelism: Putting It All Together: Comparison (cont.)
+
+| Parallelism Level | Mechanism | Programmer Visible? |
+|-------------------|-----------|-------------------|
 | Core-level | Multi-core | Yes (threads/processes) |
 | Socket-level | Multi-socket NUMA | Yes (NUMA awareness) |
 | Node-level | Clusters, MPI | Yes (distributed computing) |

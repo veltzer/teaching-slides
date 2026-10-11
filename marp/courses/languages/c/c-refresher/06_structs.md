@@ -419,6 +419,11 @@ int main(void) {
 - Be aware of struct padding -- reorder fields largest-to-smallest to minimize waste
 - Use `offsetof` to inspect field positions
 - Flexible array members allow variable-size structs
+
+---
+
+## Summary (cont.)
+
 - Tagged unions combine an enum type tag with a union for type-safe variant types
 - Structs can be assigned but not compared with `==`
 - Use structs when you need to store multiple related values simultaneously

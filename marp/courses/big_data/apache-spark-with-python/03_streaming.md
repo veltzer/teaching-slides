@@ -288,7 +288,11 @@ ssc.addStreamingListener(CustomListener())
     - Optimize batch size
     - Increase parallelism
     - Monitor backpressure
-1. Memory Issues
+
+---
+
+## Common Issues and Solutions (cont.)
+3. Memory Issues
     - Tune executor memory
     - Adjust cleaning interval
     - Monitor garbage collection

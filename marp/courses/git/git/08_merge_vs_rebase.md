@@ -106,12 +106,16 @@ git rebase main  # DON'T DO THIS!
     - Important to show parallel development
     - Feature has significant scope/complexity
 
-1. **Following team policies:**
+---
+
+## When to Use Merge (cont.)
+
+3. **Following team policies:**
     - Organization requires merge commits
     - Compliance or audit requirements
     - Automated tooling expects merges
 
-1. **Working with public/shared branches:**
+4. **Working with public/shared branches:**
     - Branch has been pushed and shared
     - Others have based work on the commits
     - Breaking the golden rule would cause problems
@@ -132,13 +136,17 @@ git rebase main  # DON'T DO THIS!
     - Fix commit messages
     - Create logical, atomic commits
 
-1. **Maintaining linear project history:**
+---
+
+## When to Use Rebase (cont.)
+
+3. **Maintaining linear project history:**
     - Easier code reviews
     - Simpler bisect operations
     - Cleaner release notes
     - Better understanding of project evolution
 
-1. **Before sharing work:**
+4. **Before sharing work:**
     - Polish commits before pushing
     - Organize work logically
     - Remove experimental commits
@@ -326,7 +334,11 @@ git push --force-with-lease origin feature-branch
     - Code review requirements
     - Testing before integration
 
-1. **Communication protocols:**
+---
+
+## Team Policies and Agreements (cont.)
+
+3. **Communication protocols:**
     - Notify team before rebasing shared work
     - Use descriptive commit messages
     - Document complex rebase operations
@@ -347,6 +359,10 @@ git push --force-with-lease origin feature-branch
 - Easier to identify when bugs were introduced
 - Better for `git bisect` operations
 - Simplified release notes and changelogs
+
+---
+
+## Performance Considerations (cont.)
 
 **Choose based on:**
 - Team size and collaboration patterns
@@ -380,6 +396,10 @@ git rebase feature  # main is public!
 git rebase main  # main might be outdated
 ```
 **Solution:** Always `git fetch` or `git pull` main first
+
+---
+
+## Common Mistakes and How to Avoid Them (cont.)
 
 ### Mistake 3: Force pushing without checking
 

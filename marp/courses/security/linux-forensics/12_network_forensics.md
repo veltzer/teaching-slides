@@ -162,7 +162,7 @@ tshark -r /evidence/capture.pcap -Y "dns" \
 Analyze the provided capture from a compromised host.
 
 Deliverables:
-1. 1. The protocol hierarchy and top three conversations by volume
-1. 1. A reconstructed SSH session showing the suspected exfiltration flow
-1. 1. Any files recovered from the traffic, with hashes
-1. 1. An IOC list of external IPs and domains, tied to a host process
+1. The protocol hierarchy and top three conversations by volume
+1. A reconstructed SSH session showing the suspected exfiltration flow
+1. Any files recovered from the traffic, with hashes
+1. An IOC list of external IPs and domains, tied to a host process

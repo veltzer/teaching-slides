@@ -501,7 +501,11 @@ kernel_size_check:
    - Test each change
    - Document results
 
-1. **Platform Testing**
+---
+
+## Best Practices (cont.)
+
+3. **Platform Testing**
    - Test on target hardware
    - Verify functionality
    - Check edge cases

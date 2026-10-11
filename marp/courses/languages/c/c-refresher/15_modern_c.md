@@ -297,10 +297,21 @@ Compile: `gcc -std=c11 -pthread -o atomic atomic.c`
 | `atomic_load(&a)` | Load value |
 | `atomic_fetch_add(&a, n)` | Add and return old value |
 | `atomic_fetch_sub(&a, n)` | Subtract and return old value |
+
+---
+
+## Atomic Operations Reference (cont.)
+
+| Operation | Description |
+|-----------|-------------|
 | `atomic_fetch_or(&a, n)` | OR and return old value |
 | `atomic_fetch_and(&a, n)` | AND and return old value |
 | `atomic_exchange(&a, val)` | Swap and return old value |
 | `atomic_compare_exchange_strong(&a, &exp, val)` | CAS operation |
+
+---
+
+## Atomic Operations Reference (cont.)
 
 Memory orderings:
 
@@ -787,6 +798,13 @@ int main(void) {
 | Explicit types | `auto x = expr;` | C23 |
 | `xxd -i file.bin` | `#embed "file.bin"` | C23 |
 | `#define ABS(x) ...` | `_Generic` dispatch | C11 |
+
+---
+
+## Modern C Idioms Summary (cont.)
+
+| Old Way | Modern Way | Since |
+|---------|-----------|-------|
 | Runtime assertion | `_Static_assert` | C11 |
 | `volatile` flag | `_Atomic` variable | C11 |
 | Global thread state | `_Thread_local` | C11 |

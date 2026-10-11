@@ -369,6 +369,10 @@ if (pid == 0) {
 - Resource limits
 - Environment variables
 
+---
+
+## What Gets Inherited (cont.)
+
 ## Unique in Child:
 - Process ID (PID)
 - Parent PID (PPID)

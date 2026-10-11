@@ -52,8 +52,13 @@ Requirements:
 1. **Speed** - Must be fast for large projects
 1. **Simple design** - Easy to understand and extend
 1. **Strong support for non-linear development** - Thousands of parallel branches
-1. **Fully distributed** - No single point of failure
-1. **Able to handle large projects** - Like the Linux kernel
+
+---
+
+## The Birth of Git (2005) (cont.)
+
+4. **Fully distributed** - No single point of failure
+5. **Able to handle large projects** - Like the Linux kernel
 
 ---
 
@@ -131,7 +136,12 @@ According to Stack Overflow Developer Survey:
 1. **No single point of failure**
     - Any repository can be the "master"
     - Easy backup and recovery
-1. **Flexible workflows**
+
+---
+
+## Git's Distributed Nature (cont.)
+
+3. **Flexible workflows**
     - Centralized workflow
     - Feature branch workflow
     - Gitflow workflow
@@ -343,7 +353,12 @@ After committing:
     - GitLab CE
     - Gitea
     - Gogs
-1. **Simple Hosting**
+
+---
+
+## Git Hosting Options (cont.)
+
+3. **Simple Hosting**
     - SSH server
     - Network share
     - Even Dropbox (not recommended)
@@ -404,7 +419,12 @@ After committing:
 1. **Use branches**
     - Keep `main` stable
     - Feature branches for development
-1. **Pull before push**
+
+---
+
+## Best Practices from Day One (cont.)
+
+4. **Pull before push**
     - Avoid conflicts
     - Stay synchronized
 
@@ -449,10 +469,15 @@ WIP
 1. **Sign commits** (optional)
     - GPG signatures
     - Verify authenticity
-1. **Access control**
+
+---
+
+## Security Considerations (cont.)
+
+3. **Access control**
     - Who can push to main?
     - Protected branches
-1. **Audit trail**
+4. **Audit trail**
     - Git logs everything
     - Cannot delete history silently
 
@@ -469,7 +494,12 @@ WIP
 1. **Backup solution**
     - Every clone is a full backup
     - Distributed = resilient
-1. **Time machine**
+
+---
+
+## Git is More Than Version Control (cont.)
+
+4. **Time machine**
     - Go back to any point
     - See what changed when
 
@@ -485,6 +515,11 @@ WIP
     - 3.5 million files
     - 300 GB repository
     - Moved from Source Depot to Git
+
+---
+
+## Real-World Git Success Stories (cont.)
+
 - Android
     - 800+ Git repositories
     - Managed with repo tool

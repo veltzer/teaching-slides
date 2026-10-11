@@ -74,6 +74,11 @@ audience:
   1. CPU-bound tasks
   1. Tasks that need to bypass the GIL
   1. When memory isolation is desired
+
+---
+
+## When to Use Each Concurrency Model (cont.)
+
 - Asyncio:
   1. Many concurrent I/O operations
   1. Network servers, clients

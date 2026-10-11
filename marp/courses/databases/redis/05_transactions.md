@@ -398,12 +398,16 @@ Scripts execute with high privileges:
     - `lua-time-limit` configuration option
     - Long-running scripts block Redis
 
-1. **Resource consumption**:
+---
+
+## Script Security Considerations (cont.)
+
+2. **Resource consumption**:
     - Scripts can consume significant CPU
     - Use `SCRIPT KILL` for runaway scripts
     - Only works if script hasn't modified data
 
-1. **Avoid non-deterministic operations**:
+3. **Avoid non-deterministic operations**:
     - No random functions except `math.random()`
     - No system calls or file access
     - Helps with replication and clustering
@@ -440,11 +444,15 @@ Scripts work differently in distributed Redis:
     - Operate on multiple keys atomically
     - Example: Move element between sets
 
-1. **Extended data structures**:
+---
+
+## Scripting Design Patterns (cont.)
+
+3. **Extended data structures**:
     - Implement custom data structures
     - Example: Priority queue with scores
 
-1. **Business logic validation**:
+4. **Business logic validation**:
     - Validate operations server-side
     - Example: Check balance before transfer
 
@@ -463,6 +471,10 @@ Scripts work differently in distributed Redis:
 - No conditional logic needed
 - Optimistic locking with WATCH is sufficient
 - Client already has all needed data
+
+---
+
+## Lua Script vs. MULTI/EXEC: When to Use Each (cont.)
 
 **Use Lua scripts when**:
 - Complex logic with conditionals
@@ -485,11 +497,15 @@ Since Redis has no debugging tools for Lua:
     - Test with Lua interpreter first
     - Mock Redis commands for testing
 
-1. **Use return values**:
+---
+
+## Debugging Redis Scripts (cont.)
+
+3. **Use return values**:
     - Return intermediate values for debugging
     - Remove in production
 
-1. **Error handling**:
+4. **Error handling**:
     - Use `pcall()` to catch errors
     - Return descriptive error messages
 

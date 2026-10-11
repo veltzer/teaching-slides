@@ -165,6 +165,10 @@ def worker_loop(agent):
     - Include status, data, and error fields consistently
 1. **Descriptive docstrings**: the LLM reads them to decide when to call
 
+---
+
+## Tool Design Best Practices (cont.)
+
 ```python
 @function_tool
 def search_code(query: str, file_glob: str = "**/*.py",
@@ -426,6 +430,10 @@ test_agent = Agent(
     - Propose a minimal fix and write it to the file
     - Re-run the test to verify the fix passes
 1. Add a **max iteration limit** of 5 to prevent infinite loops
+
+---
+
+## Hands-On: Build a Debugging Agent (cont.)
 
 ```python
 debug_agent = Agent(
@@ -767,6 +775,10 @@ agent = Agent(name="assistant", model=config["model"],
     - Delegates to all three reviewers in parallel
     - Aggregates findings into a unified review report
 1. Add a `priority_classifier` tool that labels each finding as `critical`, `warning`, or `info`
+
+---
+
+## Hands-On: Build a Multi-Agent Code Review System (cont.)
 
 ```python
 supervisor = Agent(name="review_supervisor",

@@ -752,6 +752,10 @@ flatpak update
 1. Use `unattended-upgrades` for security patches
 1. Monitor `/var/log/apt/history.log` for audit trail
 
+---
+
+## Package Management Best Practices (cont.)
+
 ```bash
 # Export list of manually installed packages
 apt-mark showmanual > packages.txt
@@ -1014,6 +1018,13 @@ dnf downgrade httpd-2.4.51
 | Remove | `apt remove pkg` | `dnf remove pkg` |
 | Search | `apt search text` | `dnf search text` |
 | Upgrade all | `apt upgrade` | `dnf upgrade` |
+
+---
+
+## Comparing `apt` vs `dnf` Side by Side (cont.)
+
+| Task | `apt` (Debian/Ubuntu) | `dnf` (RHEL/Fedora) |
+|------|----------------------|---------------------|
 | Show info | `apt show pkg` | `dnf info pkg` |
 | List files | `dpkg -L pkg` | `rpm -ql pkg` |
 | File owner | `dpkg -S /path` | `rpm -qf /path` |
@@ -1101,6 +1112,10 @@ Never remove essential packages on a production system.
 1. Create a local `apt` repository in `/opt/local-repo` with at least one `.deb` file
 1. Compare the installed packages on your system with a fresh `packages.txt` export
 1. Use `debsums` to verify the integrity of the `openssh-server` package files
+
+---
+
+## Exercise: Package Management Scenarios (cont.)
 
 ```bash
 # Helpful commands

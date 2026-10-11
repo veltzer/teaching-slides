@@ -618,6 +618,10 @@ Image development involves:
 - Optimizing for size and security
 - Testing thoroughly
 
+---
+
+## Summary (cont.)
+
 Best practices:
 - Start with minimal image
 - Add features incrementally

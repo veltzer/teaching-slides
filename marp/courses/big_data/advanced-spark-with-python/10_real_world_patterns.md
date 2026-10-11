@@ -368,6 +368,13 @@ moved.show()
 | Storage growth | Constant | Grows with changes | Constant |
 | Query complexity | Simple | Needs is_current filter | Simple |
 | Surrogate keys | Not needed | Required | Not needed |
+
+---
+
+## SCD Type Comparison (cont.)
+
+| Feature | Type 1 | Type 2 | Type 3 |
+|---|---|---|---|
 | Slowly changing | Any frequency | Any frequency | Infrequent changes |
 | Reporting at point-in-time | No | Yes | Limited |
 | Implementation complexity | Low | High | Medium |
@@ -1281,6 +1288,10 @@ if __name__ == "__main__":
 * SCD Type 2 for full history tracking
 * Use Delta Lake `MERGE` for all upsert patterns
 * Handle schema evolution with `mergeSchema`
+
+---
+
+## Summary: Real-World Patterns (cont.)
 
 **Data Quality:**
 * Validate at each layer boundary

@@ -252,6 +252,10 @@ Understanding the difference between `fetch` and `pull`:
 - Does NOT modify your working directory
 - Safe operation, never causes conflicts
 
+---
+
+## Git Fetch vs Git Pull (cont.)
+
 **`git pull`:**
 - Combines `git fetch` + `git merge`
 - Downloads AND integrates changes
@@ -405,6 +409,10 @@ git merge branch1 branch2 branch3
 # Creates single merge commit with multiple parents
 ```
 
+---
+
+## Octopus Merges (cont.)
+
 **Limitations:**
 - No conflict resolution allowed
 - All branches must merge cleanly
@@ -483,13 +491,17 @@ git merge --no-commit feature-branch
     package-lock.json merge=union
    ```
 
-1. **Clean up before merging:**
+---
+
+## Merge Performance Tips (cont.)
+
+3. **Clean up before merging:**
    ```bash
     git clean -fd
     git reset --hard HEAD
    ```
 
-1. **Use merge commits strategically:**
+4. **Use merge commits strategically:**
     - Preserve feature branch context
     - Group related changes
     - Maintain release points
@@ -507,6 +519,10 @@ git merge --no-commit feature-branch
 - Conflicts exist in files
 - Manual resolution required
 - Use `git status` to identify conflicted files
+
+---
+
+## Troubleshooting Common Merge Issues (cont.)
 
 **"fatal: refusing to merge unrelated histories":**
 ```bash
@@ -533,12 +549,16 @@ git merge --allow-unrelated-histories other-branch
     - Test after resolving each conflict
     - Commit with descriptive messages
 
-1. **After merging:**
+---
+
+## Merge Best Practices Summary (cont.)
+
+3. **After merging:**
     - Delete merged feature branches
     - Push the updated main branch
     - Verify the merge in your CI/CD system
 
-1. **Team practices:**
+4. **Team practices:**
     - Establish merge policies
     - Use pull requests for code review
     - Maintain a clean, readable history
@@ -552,6 +572,10 @@ git merge --allow-unrelated-histories other-branch
 1. Practice different merge strategies
 1. Resolve conflicts using various tools
 1. Compare merge vs rebase outcomes
+
+---
+
+## Lab Exercise: Complex Merge Scenario (cont.)
 
 **Tasks:**
 1. Create merge conflicts intentionally

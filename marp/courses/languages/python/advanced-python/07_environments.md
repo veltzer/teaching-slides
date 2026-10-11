@@ -1199,6 +1199,10 @@ monorepo/
     - hatch.pypa.io
     - docs.conda.io
 
+---
+
+## Resources (cont.)
+
 ```python
 # Remember:
 """Good environment management leads to:

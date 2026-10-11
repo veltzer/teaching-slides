@@ -197,7 +197,11 @@ void setup_page_table(struct process *p) {
     - Handles page faults
     - Enforces policy
 
-1. **TLB** (Translation Lookaside Buffer)
+---
+
+## How Memory Protection Works (cont.)
+
+3. **TLB** (Translation Lookaside Buffer)
     - Caches translations
     - Fast path for memory access
 
@@ -276,6 +280,10 @@ syscall           ; Fast system call
 | **SYSCALL** | ~150 | Modern Linux |
 | **INT 0x80** | ~400 | Legacy Linux |
 | **SYSENTER** | ~200 | 32-bit systems |
+
+---
+
+## System Call Performance (cont.)
 
 ## Optimization Strategies:
 - Batch operations
@@ -365,6 +373,10 @@ struct context {
 1. **Page Protection**: Control access
 1. **NX Bit**: Prevent code injection
 1. **SMEP/SMAP**: Supervisor mode protection
+
+---
+
+## Protection Mechanisms Summary (cont.)
 
 ## Software Features:
 1. **ASLR**: Randomize memory layout

@@ -113,6 +113,10 @@ Modern agents combine planning with a **tool-use loop**:
 1. LLM incorporates the result into its next decision
 1. Repeat until a terminal condition is met
 
+---
+
+## Architecture: Tool-Use Loops (cont.)
+
 **Key tools in coding agents**:
 - `read_file`, `edit_file`, `write_file`
 - `bash` / `shell` execution
@@ -160,6 +164,10 @@ IDE-integrated agents share a common interaction model:
 1. **Inline diffs**: proposed changes appear as colored diffs in the editor
 1. **Context pinning**: pin files, symbols, or docs as persistent context
 1. **Accept/reject**: approve or discard individual edits before they apply
+
+---
+
+## Cursor / Windsurf / Cline: IDE Agent Walkthrough (cont.)
 
 **Key differences**:
 
@@ -247,6 +255,10 @@ GitHub's plan-based development agent:
 1. **Validate**: runs the repository's test suite
 1. **Open a PR**: creates a pull request with the full changeset
 
+---
+
+## Copilot Workspace Deep Dive (cont.)
+
 **Key differentiator**: the user can edit the spec and plan before implementation starts
 
 - Best suited for well-described issues with clear acceptance criteria
@@ -305,6 +317,10 @@ cd agent-exercise
 npm test  # one test fails
 ```
 
+---
+
+## Hands-On: Agent-Driven Bug Fix (cont.)
+
 **Steps**:
 1. Feed the failing test output to your agent
 1. Observe: does the agent find the right file?
@@ -329,6 +345,10 @@ Agents need boundaries. Common permission tiers:
 - File edits shown as diffs for user to accept/reject
 - Shell commands displayed before execution
 
+---
+
+## Permissions and Safety Models (cont.)
+
 **Autonomous** (opt-in, use carefully):
 - Agent runs without confirmation prompts
 - Useful for trusted, well-scoped tasks
@@ -349,6 +369,10 @@ Agents with tool access can cause real damage:
 1. **Committing secrets**: agent stages `.env` or credentials in a git commit
 1. **Overwriting files**: agent replaces working code with broken output
 1. **Network abuse**: agent `curl`s external APIs or downloads unknown packages
+
+---
+
+## Agent Safety: What Can Go Wrong (cont.)
 
 **Mitigations**:
 - Always work on a git branch with uncommitted changes stashed
@@ -440,6 +464,10 @@ Writing effective instructions that guide agent behavior:
 - "only modify files in `src/auth/`"
 - "do not add new dependencies"
 
+---
+
+## Prompt Engineering for Agents (cont.)
+
 **Provide acceptance criteria**:
 - "all existing tests must still pass"
 - "add a test for the new validation logic"
@@ -523,6 +551,10 @@ Agents vary in effectiveness depending on the task type:
 - Boilerplate and CRUD operations
 - Code review and documentation
 
+---
+
+## Comparing Agent Effectiveness (cont.)
+
 **Agents struggle with**:
 - Novel architecture decisions
 - Performance optimization without profiling data
@@ -541,6 +573,10 @@ Measuring real-world agent performance with standardized tests:
 1. **HumanEval / MBPP**: function-level code generation (simpler)
 1. **Aider polyglot benchmark**: multi-language edit accuracy
 1. **Terminal-bench**: CLI-based task completion
+
+---
+
+## Agent Benchmarking: SWE-bench and Beyond (cont.)
 
 **What benchmarks miss**:
 - Multi-file architectural changes
@@ -610,6 +646,10 @@ Mistakes that reduce agent effectiveness:
 1. **Ignoring diffs**: approving changes you do not understand
 1. **No version control**: running agents on uncommitted work with no safety net
 1. **Skipping tests**: assuming agent-generated code is correct
+
+---
+
+## Common Agent Anti-Patterns (cont.)
 
 **Fix the pattern, not the symptom**:
 - Write clear, scoped prompts with explicit acceptance criteria

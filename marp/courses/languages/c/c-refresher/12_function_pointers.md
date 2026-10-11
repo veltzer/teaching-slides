@@ -711,6 +711,10 @@ int main(void) {
 | Readability | Simple cases | Complex dispatch |
 | Plugin support | No | Yes |
 
+---
+
+## Function Pointers vs Switch: Comparison (cont.)
+
 Use switch for:
 - Small, fixed set of cases
 - Performance-critical inner loops

@@ -709,14 +709,18 @@ python3 -m http.server 8002 &
     - Rate limiting at 5 requests/second with burst of 10
     - Security headers (`X-Frame-Options`, `X-Content-Type-Options`)
 
-1. Test with `ab` or `wrk`:
+---
+
+## Exercise: Deploy a Reverse Proxy Stack (cont.)
+
+2. Test with `ab` or `wrk`:
 
 ```bash
 ab -n 1000 -c 50 http://localhost/
 ```
 
-1. Verify rate limiting triggers `503` errors under load
-1. Check the access log to confirm requests are distributed across backends
+3. Verify rate limiting triggers `503` errors under load
+4. Check the access log to confirm requests are distributed across backends
 
 ---
 

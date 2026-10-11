@@ -142,11 +142,15 @@ Minimum recommended configuration:
     - Failure detection
     - Cluster state consensus
 
-1. **Hash slot migration**:
+---
+
+## Redis Cluster Key Points (cont.)
+
+3. **Hash slot migration**:
     - Move slots between nodes
     - Enables online scaling and rebalancing
 
-1. **Automatic failover**:
+4. **Automatic failover**:
     - Replica promotion to master
     - Configuration update and propagation
 
@@ -292,7 +296,11 @@ All keys with the same hash tag `{123}` will be assigned to the same hash slot.
     - FLUSHALL/FLUSHDB (per-node only)
     - SELECT (only DB 0 available)
 
-1. **No ability to ensure strong consistency**:
+---
+
+## Redis Cluster Limitations (cont.)
+
+3. **No ability to ensure strong consistency**:
     - Some writes may be lost during failover
     - Designed for performance over consistency
 
@@ -413,12 +421,16 @@ cluster-require-full-coverage no
     redis-cli -c -p 7000 CLUSTER NODES
     ```
 
-1. **Visualization tools**:
+---
+
+## Redis Cluster Monitoring Tools (cont.)
+
+2. **Visualization tools**:
     - Redis Insight
     - RedisGraph for cluster topology
     - Custom dashboards (Grafana)
 
-1. **Metrics to watch**:
+3. **Metrics to watch**:
     - Slot distribution
     - Memory usage per node
     - Keyspace hits/misses
@@ -443,6 +455,10 @@ Design your keys with sharding in mind:
 user:{userId}:profile
 user:{userId}:sessions
 ```
+
+---
+
+## Key Design for Redis Cluster (cont.)
 
 1. **Avoid cross-slot operations** (or use hash tags):
     - MGET/MSET
@@ -472,6 +488,10 @@ Potential consistency issues:
 1. **Asynchronous replication**
 1. **Race conditions during failover**
 
+---
+
+## Redis Cluster Consistency Guarantees (cont.)
+
 For stronger consistency:
 - Use appropriate wait commands
 - Implement client-side retry logic
@@ -491,12 +511,16 @@ Alternative scaling approaches:
     - Client determines shard
     - Consistent hashing algorithms
 
-1. **Proxy-based solutions**:
+---
+
+## Scaling Redis Without Cluster (cont.)
+
+3. **Proxy-based solutions**:
     - Twemproxy (Twitter)
     - Envoy (Lyft)
     - Redis Cluster Proxy
 
-1. **Redis Enterprise**:
+4. **Redis Enterprise**:
     - Commercial solution
     - More features and guarantees
 
@@ -543,7 +567,11 @@ When migrating to Redis Cluster:
     - Verify data consistency
     - Switch reads to new system
 
-1. **Gradual feature migration**:
+---
+
+## Data Migration Strategies (cont.)
+
+3. **Gradual feature migration**:
     - Move one feature at a time
     - Minimize risk
     - Easier rollback
@@ -564,12 +592,16 @@ Key areas for optimization:
     - Appropriate eviction policies
     - Leave headroom for resharding
 
-1. **Client connection handling**:
+---
+
+## Performance Tuning Redis Cluster (cont.)
+
+3. **Client connection handling**:
     - Connection pooling
     - Pipelining where appropriate
     - Minimize redirects (use hash tags)
 
-1. **Monitoring and adjusting**:
+4. **Monitoring and adjusting**:
     - Track latency and throughput
     - Identify hot keys/slots
     - Rebalance as needed

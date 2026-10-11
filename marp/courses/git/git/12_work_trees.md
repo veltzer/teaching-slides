@@ -36,6 +36,10 @@ Traditional Git workflow limitations:
 - Context switching is expensive
 - Parallel work requires multiple clones
 
+---
+
+## Why Are Worktrees Needed? (cont.)
+
 **Common scenarios requiring worktrees:**
 - Testing a feature while developing another
 - Quick hotfixes without losing current work
@@ -211,6 +215,10 @@ git worktree repair ../new-location
 git worktree list
 ```
 
+---
+
+## Moving and Renaming Worktrees (cont.)
+
 **When to move worktrees:**
 - Better organization of directories
 - Different filesystem or drive
@@ -239,6 +247,10 @@ git worktree remove --force ../feature-login
 rm -rf ../feature-login
 git worktree prune
 ```
+
+---
+
+## Removing Worktrees (cont.)
 
 **Removal checks:**
 - Uncommitted changes (blocks removal unless forced)
@@ -269,6 +281,10 @@ git worktree prune --expire=7.days.ago
 # Verbose pruning
 git worktree prune --verbose
 ```
+
+---
+
+## Pruning Worktrees (cont.)
 
 **When pruning is needed:**
 - Worktree directories manually deleted
@@ -355,6 +371,10 @@ git config --show-origin user.email
 echo "*.local" >> .git/info/exclude
 ```
 
+---
+
+## Worktree-Specific Configuration (cont.)
+
 **Configuration hierarchy in worktrees:**
 1. Worktree-specific (if supported)
 1. Repository-local (shared across worktrees)
@@ -417,6 +437,10 @@ cd ../pr-123-review
 - No network operations needed
 - Instant branch switching between worktrees
 
+---
+
+## Performance Considerations (cont.)
+
 **Memory usage:**
 - Each worktree needs separate index
 - File system cache for each working directory
@@ -450,6 +474,10 @@ git worktree add ../main-copy -b main-copy main
 - Worktrees must be outside main repository
 - Cannot be subdirectories of main repo
 - Paths must not exist or be empty directories
+
+---
+
+## Worktree Limitations and Gotchas (cont.)
 
 **Submodule considerations:**
 - Submodules need separate initialization in each worktree
@@ -543,6 +571,10 @@ cd ../main-worktree && make build &
 wait  # Wait for both builds
 ```
 
+---
+
+## Integration with Development Tools (cont.)
+
 **CI/CD considerations:**
 - Use worktrees for parallel testing
 - Separate build environments
@@ -610,6 +642,10 @@ worktrees/                 # Dedicated worktree directory
 - Documentation of worktree usage
 - Consistent naming conventions
 
+---
+
+## Team Workflows with Worktrees (cont.)
+
 **Communication strategies:**
 ```bash
 # Document active worktrees
@@ -643,12 +679,20 @@ git worktree add ../feature-2 feature-2
 git worktree add ../hotfix hotfix
 ```
 
+---
+
+## Migrating to Worktree Workflows (cont.)
+
 **Migration steps:**
 1. Identify current multiple clone usage
 1. Consolidate to single main repository
 1. Create worktrees for active branches
 1. Update development scripts and tools
 1. Train team on new workflow
+
+---
+
+## Migrating to Worktree Workflows (cont.)
 
 **Benefits of migration:**
 - Reduced disk usage
@@ -673,7 +717,11 @@ git worktree add ../hotfix hotfix
    - Practice switching between contexts
    - Test parallel development scenarios
 
-1. **Maintenance procedures:**
+---
+
+## Lab Exercise: Worktree Workflow Implementation (cont.)
+
+3. **Maintenance procedures:**
    - Implement cleanup routines
    - Practice troubleshooting scenarios
    - Document worktree management processes
@@ -684,7 +732,11 @@ git worktree add ../hotfix hotfix
    - Test different feature combinations
    - Implement automated worktree management
 
-1. **Team coordination:**
+---
+
+## Lab Exercise: Worktree Workflow Implementation (cont.)
+
+2. **Team coordination:**
    - Develop naming conventions
    - Create documentation templates
    - Design sharing and communication strategies
@@ -701,6 +753,10 @@ git worktree add ../hotfix hotfix
 - Limited disk space
 - Simple projects
 - Learning Git basics
+
+---
+
+## When NOT to Use Worktrees (cont.)
 
 **Alternative approaches:**
 
@@ -741,14 +797,22 @@ git merge new-feature
    - Regular maintenance and cleanup
    - Proper documentation
 
-1. **Know the limitations:**
+---
+
+## Summary: Effective Worktree Usage (cont.)
+
+3. **Know the limitations:**
    - Branch checkout restrictions
    - Path requirements
    - Submodule complexity
 
-1. **Use appropriately:**
+4. **Use appropriately:**
    - Great for complex projects
    - Overkill for simple workflows
    - Consider team needs and resources
+
+---
+
+## Summary: Effective Worktree Usage (cont.)
 
 **Remember:** Worktrees are a powerful feature that can significantly improve development workflows when used appropriately. They enable true parallel development while maintaining the benefits of a single repository. Master the basics first, then gradually incorporate advanced techniques as your needs grow.

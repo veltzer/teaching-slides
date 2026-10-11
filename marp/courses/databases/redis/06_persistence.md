@@ -124,6 +124,10 @@ Background saving started
 - Better performance impact
 - Can be used for replicas
 
+---
+
+## RDB Advantages and Disadvantages (cont.)
+
 **Disadvantages**:
 - More data loss in case of crashes
 - Less frequent snapshots
@@ -213,6 +217,10 @@ Background append only file rewriting started
 - Easier to understand and parse
 - Safe append-only operations
 - Per-command granularity
+
+---
+
+## AOF Advantages and Disadvantages (cont.)
 
 **Disadvantages**:
 - Larger files than RDB
@@ -340,11 +348,15 @@ Minimize impact on main Redis process:
     - Account for COW memory usage
     - Set `maxmemory` below total available RAM
 
-1. **CPU considerations**:
+---
+
+## Managing Persistence Performance (cont.)
+
+3. **CPU considerations**:
     - Ensure multiple cores for forked processes
     - Monitor CPU usage during persistence operations
 
-1. **Disk I/O optimization**:
+4. **Disk I/O optimization**:
     - Use fast storage (SSD/NVMe)
     - Separate Redis data from OS/swap
 
@@ -379,7 +391,11 @@ Restoring from backups:
     - Copy AOF file to data directory
     - Start Redis
 
-1. **Verification**:
+---
+
+## Recovery Procedures (cont.)
+
+3. **Verification**:
     - Check Redis logs for successful loading
     - Verify data with sample queries
     - Monitor memory usage
@@ -547,11 +563,15 @@ Monitor:
     - Configure auto-rewrite thresholds
     - Implement backup rotation and cleanup
 
-1. **Schedule around traffic patterns**:
+---
+
+## Persistence Best Practices (cont.)
+
+3. **Schedule around traffic patterns**:
     - Trigger BGSAVE during low traffic
     - Configure save directives accordingly
 
-1. **Resource allocation**:
+4. **Resource allocation**:
     - Allocate sufficient memory for COW
     - Fast storage for persistence files
     - Separate Redis data directory

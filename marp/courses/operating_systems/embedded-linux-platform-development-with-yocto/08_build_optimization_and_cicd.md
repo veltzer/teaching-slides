@@ -873,6 +873,10 @@ Optimization strategies:
 - Build server infrastructure
 - Automated testing
 
+---
+
+## Summary (cont.)
+
 CI/CD best practices:
 - Automated builds
 - Continuous testing

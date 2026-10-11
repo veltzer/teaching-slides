@@ -551,6 +551,13 @@ if __name__ == "__main__":
 | `json` | JSON encoding/decoding |
 | `re` | Regular expressions |
 | `datetime` | Date and time |
+
+---
+
+## Standard Library Overview (cont.)
+
+| Module | Purpose |
+|--------|---------|
 | `collections` | Specialized containers |
 | `itertools` | Iterator building blocks |
 | `functools` | Higher-order functions |

@@ -98,6 +98,11 @@ audience:
 - **Provenance** — a signed statement of *how* it was built: which source commit, which builder, which steps
 - **SLSA** (Supply-chain Levels for Software Artifacts) — a maturity ladder for build integrity
     - L1: provenance exists → L2: signed by the build service → L3: hardened, isolated builds
+
+---
+
+## Artifact Integrity And Provenance (cont.)
+
 - Store artifacts in a registry with immutability and access control; never overwrite a published version
 - Generate the `SBOM` here too, and attach it as an attestation alongside the artifact
 - Verify provenance at deploy — an unverified attestation proves nothing
@@ -106,12 +111,12 @@ audience:
 
 ## A Hardened Pipeline, End To End
 
-1. 1. 1. Commit pushed → secret scan, `SAST`, lint run on an isolated runner
-1. 1. 1. PR requires review from someone other than the author (separation of duties)
-1. 1. 1. On merge: hermetic build, `SBOM` generated, artifact + provenance signed via OIDC
-1. 1. 1. Image scanned for CVEs; build fails on new criticals
-1. 1. 1. Artifact pushed to an immutable registry
-1. 1. 1. Deploy: admission controller verifies signature, provenance, and scan status — or rejects
+1. Commit pushed → secret scan, `SAST`, lint run on an isolated runner
+1. PR requires review from someone other than the author (separation of duties)
+1. On merge: hermetic build, `SBOM` generated, artifact + provenance signed via OIDC
+1. Image scanned for CVEs; build fails on new criticals
+1. Artifact pushed to an immutable registry
+1. Deploy: admission controller verifies signature, provenance, and scan status — or rejects
 
 ---
 

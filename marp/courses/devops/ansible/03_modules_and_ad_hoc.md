@@ -50,6 +50,13 @@ audience:
 | Files | `copy`, `file`, `template`, `lineinfile`, `blockinfile` |
 | Packaging | `apt`, `yum`, `pip`, `npm` |
 | System | `service`, `systemd`, `user`, `group`, `cron` |
+
+---
+
+## Module Categories (cont.)
+
+| Category | Examples |
+|----------|---------|
 | Database | `mysql_db`, `postgresql_db`, `mongodb_user` |
 | Network | `ios_command`, `nxos_config`, `vyos_system` |
 | Source Control | `git`, `subversion` |

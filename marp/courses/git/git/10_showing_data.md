@@ -410,7 +410,11 @@ git log --stat
     - Commit history visualization
     - Built into Git
 
-1. **Tig** - Text-mode interface
+---
+
+## Visual Git Tools Overview (cont.)
+
+2. **Tig** - Text-mode interface
    ```bash
     tig
    ```
@@ -434,7 +438,11 @@ git log --stat
     - Merge conflict resolution
     - Team collaboration features
 
-1. **GitHub Desktop**
+---
+
+## Desktop Git Clients (cont.)
+
+3. **GitHub Desktop**
     - Simple interface
     - GitHub integration
     - Good for beginners
@@ -462,6 +470,10 @@ git cola
 - **GitEye**: Eclipse-based
 - **QGit**: Qt-based browser
 - **GitG**: GNOME Git browser
+
+---
+
+## Git Cola and Other Linux Tools (cont.)
 
 **IDE Integration:**
 - VS Code Git extensions
@@ -717,12 +729,16 @@ git log --numstat --pretty=format: | python analyze_code_changes.py
     - Find when specific features were introduced
     - Track the evolution of important files
 
-1. **Quality assessment:**
+---
+
+## Lab Exercise: Repository Analysis (cont.)
+
+3. **Quality assessment:**
     - Look for commits that might indicate problems
     - Find unusually large commits
     - Identify potential security issues
 
-1. **Visualization:**
+4. **Visualization:**
     - Create visual representations of the data
     - Generate reports for stakeholders
     - Recommend improvements based on findings
@@ -745,12 +761,16 @@ git log --numstat --pretty=format: | python analyze_code_changes.py
     - Visual tools for complex analysis
     - Combination approaches for best results
 
-1. **Develop systematic approaches:**
+---
+
+## Summary: Effective Git Data Exploration (cont.)
+
+3. **Develop systematic approaches:**
     - Start with broad views, then narrow focus
     - Combine multiple commands for insights
     - Document findings and patterns
 
-1. **Automate common tasks:**
+4. **Automate common tasks:**
     - Create aliases for frequent operations
     - Build scripts for complex analyses
     - Integrate with external tools when needed

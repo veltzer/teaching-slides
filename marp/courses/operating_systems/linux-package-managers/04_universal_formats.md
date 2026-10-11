@@ -51,6 +51,13 @@ Universal formats answer:
 | Server | `flathub` (and others) | `Snap Store` (single) | none — direct download |
 | Sandboxed | yes (`bubblewrap`) | yes (`apparmor`) | no |
 | Install required | yes | yes | no — just run the file |
+
+---
+
+## The Three Big Universal Formats (cont.)
+
+| | `flatpak` | `snap` | `appimage` |
+|---|---|---|---|
 | Auto-update | optional | yes, mandatory by default | manual |
 | Cross-distro | yes | yes | yes |
 | Server can be self-hosted | yes | no (single store) | n/a |
@@ -301,6 +308,10 @@ Strengths:
 - Rollback is one command (`nix-env --rollback`).
 - Works alongside *any* host distro without conflict.
 
+---
+
+## `nix` Strengths and Costs (cont.)
+
 Costs:
 
 - The learning curve is real. The Nix language is its own thing.
@@ -335,6 +346,11 @@ Rough guide:
 - **Distribution package** — first choice. Tightest integration, smallest footprint, fastest startup, best security updates.
 - **`flatpak`** — desktop GUI apps you want sandboxed and current. Most "I want the latest Firefox/GIMP/VS Code" use cases.
 - **`snap`** — same niche as `flatpak`; specifically attractive on `Ubuntu` and for server-side apps `Canonical` ships (`lxd`, `microk8s`).
+
+---
+
+## When to Use Which (cont.)
+
 - **`appimage`** — one-shot tools, portable runs from a USB stick, demos.
 - **`nix`/`guix`** — reproducibility-critical environments, multi-version dev setups, `NixOS` systems.
 

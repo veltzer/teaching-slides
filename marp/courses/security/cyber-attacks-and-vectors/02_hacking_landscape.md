@@ -218,6 +218,13 @@ An alternative model to the Kill Chain that describes adversary behavior:
 | Persistence         | Maintaining access                       | Registry keys, scheduled tasks|
 | Privilege Escalation| Getting higher permissions               | Exploit sudo, token manipulation|
 | Defense Evasion     | Avoiding detection                       | Obfuscation, disabling logs |
+
+---
+
+## MITRE ATT&CK Framework (cont.)
+
+| Tactic              | Description                              | Example Techniques         |
+|---------------------|------------------------------------------|----------------------------|
 | Credential Access   | Stealing credentials                     | Keylogging, credential dumping|
 | Discovery           | Learning about the environment           | Network scanning, file enum  |
 | Lateral Movement    | Moving through the network               | Pass-the-hash, RDP           |

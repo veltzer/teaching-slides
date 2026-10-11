@@ -925,6 +925,10 @@ Static variables have performance characteristics:
 - Increased memory usage (exists for program lifetime)
 - Potential cache line contention in multi-threaded code
 
+---
+
+## Performance Implications (cont.)
+
 ```cpp
 // Cache-friendly access
 static std::array<int, 1000> staticArray = {};
@@ -991,6 +995,10 @@ int main() {
 - Use thread_local for per-thread data
 - Make static members const when possible
 - Use RAII for static resource management
+
+---
+
+## Best Practices Summary (cont.)
 
 **Don't:**
 - Create global variables for mutable state

@@ -979,6 +979,13 @@ Key considerations when planning storage for production servers:
 | `/boot` | 1-2 GB | `nodev,nosuid` |
 | `/home` | Per-user quotas | `nodev,nosuid,usrquota` |
 | `/var` | 20-100 GB (logs grow) | `nodev,nosuid` |
+
+---
+
+## Storage Planning for Production (cont.)
+
+| Mount Point | Sizing Guidance | Options |
+|-------------|----------------|---------|
 | `/var/log` | 10-50 GB separate | `nodev,nosuid,noexec` |
 | `/tmp` | 5-10 GB or `tmpfs` | `nodev,nosuid,noexec` |
 | `/opt` | As needed | `nodev` |
@@ -1078,6 +1085,10 @@ gunzip -c /backup/sda.img.gz | \
     - Hard limit: 150 MB per user
 1. Create a full backup of `/etc` using `tar`, then create an incremental backup
 1. Use `dd` to clone the loop device to a second image file and verify with `diff`
+
+---
+
+## Exercise: Storage Management Tasks (cont.)
 
 ```bash
 # Setup hints

@@ -103,12 +103,12 @@ audience:
 
 ## A Worked Example: Device Onboarding
 
-1. 1. 1. Device boots; secure boot verifies firmware (chain of trust holds)
-1. 1. 1. Device generates a key pair inside its secure element
-1. 1. 1. Device sends the public key plus a signed attestation of its firmware state
-1. 1. 1. Backend verifies the attestation against known-good measurements
-1. 1. 1. Backend issues a certificate binding the device identity to the public key
-1. 1. 1. All later traffic uses mutually authenticated `TLS` with that certificate
+1. Device boots; secure boot verifies firmware (chain of trust holds)
+1. Device generates a key pair inside its secure element
+1. Device sends the public key plus a signed attestation of its firmware state
+1. Backend verifies the attestation against known-good measurements
+1. Backend issues a certificate binding the device identity to the public key
+1. All later traffic uses mutually authenticated `TLS` with that certificate
 
 ---
 

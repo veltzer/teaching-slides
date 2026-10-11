@@ -31,6 +31,11 @@ audience:
     - Coordinates application activity
     - Doesn't contain business logic
     - Delegates to business logic layer
+
+---
+
+## Layer Responsibilities (cont.)
+
 - Business Logic Layer
     - Core functionality and business rules
     - Independent of other layers
@@ -200,6 +205,11 @@ Cons:
     - Shared data structure that holds the problem state and partial solutions
     - Accessible by all Knowledge Sources for reading and writing
     - Organized into hierarchical levels of abstraction
+
+---
+
+## Blackboard Component Roles (cont.)
+
 - Knowledge Source (KS)
     - Independent module that encapsulates a specific piece of knowledge or expertise
     - Reads data from the Blackboard, processes it, and writes results back
@@ -224,6 +234,10 @@ Pros:
 - Supports incremental and opportunistic problem solving
 - Provides flexibility in adding or modifying Knowledge Sources
 - Allows for multiple control strategies and conflict resolution mechanisms
+
+---
+
+## Blackboard Pros and Cons (cont.)
 
 Cons:
 - Can lead to complex interactions and dependencies between Knowledge Sources

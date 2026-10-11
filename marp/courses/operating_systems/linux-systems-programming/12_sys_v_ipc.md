@@ -142,6 +142,13 @@ key_t ftok(const char *pathname, int proj_id);
 | :--- | :--- | :--- | :--- |
 | **Message Queues** | `msgget` family | `mq_open` family | POSIX is generally faster and more flexible. POSIX queues can be used with `select`/`poll`/`epoll`. |
 | **Semaphores** | `semget` family | `sem_open` family | POSIX semaphores are much simpler and lighter-weight. Sys V semaphores are complex but offer atomic operations on sets. |
+
+---
+
+## Performance Compared to POSIX Equivalents (cont.)
+
+| IPC Type | System V | POSIX | Performance Comparison |
+| :--- | :--- | :--- | :--- |
 | **Shared Memory** | `shmget` family | `shm_open` family | Performance is very similar. The main difference is the API. POSIX shared memory uses file descriptors, which can be more convenient. |
 
 ---

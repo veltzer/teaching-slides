@@ -31,6 +31,10 @@ Key relationships:
 - Configuration controls how to build
 - Layers organize metadata
 
+---
+
+## Core Components Relationship (cont.)
+
 All work together to:
 - Parse recipes
 - Execute tasks
@@ -284,6 +288,10 @@ What happens during parsing:
 1. Expand variables
 1. Generate task graph
 
+---
+
+## Parsing Phase Details (cont.)
+
 Output:
 - Task dependency tree
 - Variable database
@@ -308,6 +316,10 @@ Build tasks:
 - `do_configure` - Configure build
 - `do_compile` - Compile sources
 - `do_install` - Install to staging
+
+---
+
+## Standard Tasks (cont.)
 
 Package tasks:
 - `do_package` - Split into packages
@@ -645,6 +657,10 @@ Key architectural concepts:
 - Task-based execution model
 - Shared state acceleration
 - Package management infrastructure
+
+---
+
+## Summary (cont.)
 
 Understanding the architecture enables:
 - Effective debugging

@@ -518,6 +518,13 @@ target_compile_definitions(app PRIVATE
 | `$<OR:a,b>` | Logical OR |
 | `$<NOT:a>` | Logical NOT |
 | `$<IF:cond,t,f>` | Conditional value |
+
+---
+
+## Common Generator Expressions (cont.)
+
+| Expression | Description |
+|------------|-------------|
 | `$<TARGET_FILE:tgt>` | Full path to target file |
 | `$<TARGET_FILE_DIR:tgt>` | Directory of target file |
 | `$<BUILD_INTERFACE:...>` | Value when building |

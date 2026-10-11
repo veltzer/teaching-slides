@@ -145,6 +145,13 @@ DNS is not the only protocol abused for amplification:
 | NTP         | 123   | 556x                | Extreme             |
 | Memcached   | 11211 | 51,000x             | Extreme             |
 | SSDP        | 1900  | 30x                 | High                |
+
+---
+
+## Other Amplification Protocols (cont.)
+
+| Protocol    | Port  | Amplification Factor | Bandwidth Potential |
+|-------------|-------|---------------------|---------------------|
 | SNMP        | 161   | 6x                  | Medium              |
 | CharGEN     | 19    | 358x                | High                |
 | LDAP        | 389   | 46-55x              | High                |

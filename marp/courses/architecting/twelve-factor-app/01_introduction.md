@@ -42,12 +42,17 @@ audience:
 1. Backing services — treat as attached resources
 1. Build, release, run — strictly separate
 1. Processes — execute as stateless processes
-1. Port binding — export services via port binding
-1. Concurrency — scale via the process model
-1. Disposability — fast startup, graceful shutdown
-1. Dev/prod parity — keep environments similar
-1. Logs — treat as event streams
-1. Admin processes — run as one-off tasks
+
+---
+
+## The Twelve Factors at a Glance (cont.)
+
+7. Port binding — export services via port binding
+8. Concurrency — scale via the process model
+9. Disposability — fast startup, graceful shutdown
+10. Dev/prod parity — keep environments similar
+11. Logs — treat as event streams
+12. Admin processes — run as one-off tasks
 
 ---
 

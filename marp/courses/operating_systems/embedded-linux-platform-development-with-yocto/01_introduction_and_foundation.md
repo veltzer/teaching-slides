@@ -40,6 +40,10 @@ Manual approach challenges:
 - Root filesystem creation
 - Hardware adaptation
 
+---
+
+## Traditional Embedded Linux Development (cont.)
+
 Each project starts from scratch:
 - No standardization
 - Limited reusability
@@ -91,6 +95,10 @@ Ideal for:
 - Compliance requirements
 - Complex customization needs
 - Team collaboration
+
+---
+
+## When to Choose Yocto (cont.)
 
 Not ideal for:
 - Quick prototypes
@@ -277,7 +285,11 @@ Similar to:
     - Resolve variables
     - Generate task graph
 
-1. **Execution Phase**
+---
+
+## Build Workflow Overview (cont.)
+
+3. **Execution Phase**
     - Fetch sources
     - Compile packages
     - Create root filesystem
@@ -467,7 +479,11 @@ Configuration optimization:
     - Clear naming
     - Minimal dependencies
 
-1. **Build Automation**
+---
+
+## Development Best Practices (cont.)
+
+3. **Build Automation**
     - CI/CD integration
     - Nightly builds
     - Automated testing

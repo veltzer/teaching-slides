@@ -37,6 +37,13 @@ Advanced Kubernetes Course - Day 2, Module 5
 | `hostPath` | Node lifetime | Node-level access (testing only) |
 | `configMap` | Cluster lifetime | Configuration files |
 | `secret` | Cluster lifetime | Sensitive data |
+
+---
+
+## Volume Types Overview (cont.)
+
+| Type | Persistence | Use Case |
+|------|-------------|----------|
 | `persistentVolumeClaim` | Independent | Databases, stateful apps |
 | `projected` | Varies | Combine multiple sources |
 | `csi` | Varies | Custom storage via `CSI` |

@@ -45,6 +45,11 @@ audience:
 - A **statistic** is any (measurable) function T = T(X) of the *data alone* — no unknown &theta; in it; T has a distribution, derived from P&#952;, that generally *does* depend on &theta;
 - A **parameter** (or estimand) is a function &psi;(&theta;) of the index — the thing you want to know (the mean, a quantile, a regression coefficient, P&#952;(X &gt; 0))
 - An estimator is a statistic chosen to estimate a parameter; an estimate is its observed value — keep the procedure/realization distinction (it's the source of every "the CI either does or doesn't contain &mu;" subtlety)
+
+---
+
+## Statistics, Parameters, Identifiability (cont.)
+
 - **Identifiability**: the map &theta; &#8614; P&#952; must be injective — distinct parameters must give distinct distributions, else no amount of data can separate them (mixture-label swapping, over-parameterized models)
 - Non-identifiability is a *model* defect, not a sample-size problem: fix the parametrization (constraints, reparametrize) before estimating anything
 
@@ -55,6 +60,11 @@ audience:
 - A statistic T(X) is **sufficient** for &theta; if the conditional distribution of X given T = t **does not depend on &theta;** — once you know T, the rest of the data carries no further information about &theta;
 - Equivalently: you could *throw away* X and keep only T without losing anything for inference about &theta; — and you could even simulate a fresh dataset from the &theta;-free conditional that's just as informative
 - The full data X is trivially sufficient; the content of the concept is in finding a *small* (low-dimensional) sufficient statistic — that's data reduction without information loss
+
+---
+
+## Sufficiency (cont.)
+
 - Examples: for X&#8345; i.i.d. Bernoulli(p), &Sigma;X&#8345; is sufficient for p; for N(&mu;,&sigma;&sup2;), (&Sigma;X&#8345;, &Sigma;X&#8345;&sup2;) is sufficient for (&mu;,&sigma;&sup2;); for Uniform(0,&theta;), max X&#8345; is sufficient
 - The **likelihood function** &theta; &#8614; L(&theta; | x) is itself the "ultimate" sufficient summary — sufficiency is precisely "T captures everything the likelihood depends on through x"
 
@@ -75,6 +85,11 @@ audience:
 - T is **minimal sufficient** if it is sufficient *and* is a function of every other sufficient statistic — the coarsest possible reduction that still loses nothing; it's unique up to one-to-one transformations
 - **Lehmann&ndash;Scheffé recipe**: T(x) is minimal sufficient iff [ the likelihood ratio f(x | &theta;)/f(y | &theta;) is constant in &theta; ] &hArr; [ T(x) = T(y) ] — partition the sample space by "same likelihood shape"
 - For a **full-rank exponential family**, the natural statistic (&Sigma; T&#8321;(x&#8345;), ..., &Sigma; T&#8344;(x&#8345;)) is minimal sufficient — and its dimension is fixed, no matter the sample size; this is exactly *why* exponential families are so tractable
+
+---
+
+## Minimal Sufficiency (cont.)
+
 - Contrast: for many non-exponential families (Cauchy location, Uniform with both endpoints unknown beyond {min, max}) the minimal sufficient statistic has dimension that does **not** shrink to a constant — full data reduction is impossible
 - Minimal sufficiency is the floor for *information*; the next concept (completeness) is what you need for *optimality*
 
@@ -85,6 +100,11 @@ audience:
 - A (sufficient) statistic T is **complete** if the only function g with E&#952;[g(T)] = 0 for *all* &theta; is g &#8801; 0 — informally, T's distribution "moves enough with &theta;" that no non-trivial unbiased estimator of zero can be built from it
 - A statistic A is **ancillary** if its distribution **does not depend on &theta; at all** — it carries no marginal information about &theta; (sample range in a location family; n itself; a residual configuration)
 - The two are polar opposites: a complete statistic is "maximally informative / non-redundant", an ancillary one is "informationless"
+
+---
+
+## Completeness And Ancillarity (cont.)
+
 - For a full-rank exponential family, the natural minimal sufficient statistic is also **complete** — the happy case where everything works
 - **Conditionality principle** (motivating ancillarity): inference should arguably be carried out *conditional on the observed value of an ancillary statistic* — e.g. condition on the realized design / sample size — which is where many "exact" conditional procedures come from
 
@@ -95,6 +115,11 @@ audience:
 - **Basu's theorem**: if T is **complete sufficient** for &theta; and A is **ancillary**, then T and A are **independent** — for every &theta;
 - It's a striking, "free" independence result that you'd never guess from the joint density; the proof is a two-line application of completeness
 - Flagship payoff: for X&#8345; i.i.d. N(&mu;, &sigma;&sup2;) with &sigma;&sup2; known... and more usefully, the sample mean X&#772; (complete sufficient for &mu; when &sigma; known) is independent of the sample variance S&sup2; (whose distribution doesn't depend on &mu;) — *Basu gives this in one stroke*, and that independence is exactly what makes the t-statistic's distribution exact
+
+---
+
+## Basu's Theorem (cont.)
+
 - General use: to compute E&#952;[ T(X) ] for some statistic, find an ancillary A and a complete sufficient C, write things conditionally, and the &theta;-free pieces decouple — turns ugly expectations into easy ones
 - Hidden subtlety: completeness is *essential* — drop it (Uniform-with-both-endpoints, where {min, max} is sufficient but not complete) and the conclusion can fail
 

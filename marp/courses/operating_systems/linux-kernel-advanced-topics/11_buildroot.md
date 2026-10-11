@@ -39,6 +39,10 @@ Key features:
 1. Easy to understand
 1. No runtime package management
 
+---
+
+## Buildroot Philosophy (cont.)
+
 Best for:
 - Simple embedded systems
 - Quick prototypes
@@ -103,6 +107,11 @@ Main menu structure:
 - Toolchain
 - System configuration
 - Kernel
+
+---
+
+## Configuration System (cont.)
+
 - Target packages
 - Filesystem images
 - Bootloaders
@@ -760,6 +769,10 @@ BR2_RELRO_FULL=y
 1. Learning embedded Linux
 1. Small teams
 
+---
+
+## When to Use Buildroot (cont.)
+
 ### Not Ideal For
 
 1. Complex products
@@ -781,6 +794,10 @@ When you need:
 - Commercial support
 - Compliance tools
 
+---
+
+## Migration Path (cont.)
+
 Keep Buildroot for:
 - Prototyping
 - Simple products
@@ -800,7 +817,11 @@ Keep Buildroot for:
    - Runtime tests
    - Hardware testing
 
-1. **Documentation**
+---
+
+## Best Practices (cont.)
+
+3. **Documentation**
    - Document customizations
    - Board setup guides
    - Build instructions

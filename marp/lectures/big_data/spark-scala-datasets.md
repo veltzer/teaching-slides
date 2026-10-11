@@ -17,8 +17,6 @@ audience:
 
 ---
 
-## Core Concepts
-
 ![title](svg/lectures/big_data/spark-scala-datasets/title.svg)
 
 ---

@@ -176,6 +176,10 @@ Try these tasks and record your findings:
 1. Check system uptime with `uptime`
 1. Review recent `dmesg` output for hardware messages
 
+---
+
+## Exercise: Explore the System (cont.)
+
 Discuss with your partner:
 - What services are running that you did not expect?
 - How much RAM does your VM have? (`free -h`)
@@ -222,10 +226,21 @@ Man pages are organized into numbered sections:
 | 2 | System calls (`open`, `read`) |
 | 3 | Library functions (`printf`, `malloc`) |
 | 4 | Special files (`/dev/null`) |
+
+---
+
+## Getting Help: Man Pages In Depth (cont.)
+
+| Section | Content |
+|---------|---------|
 | 5 | File formats (`/etc/passwd`, `fstab`) |
 | 6 | Games |
 | 7 | Miscellaneous (protocols, conventions) |
 | 8 | System administration (`mount`, `iptables`) |
+
+---
+
+## Getting Help: Man Pages In Depth (cont.)
 
 ```bash
 # Read a specific section
@@ -256,11 +271,16 @@ When man pages are not enough, use these trusted sources:
     - `wiki.archlinux.org` - excellent technical depth
     - `help.ubuntu.com` - official `Ubuntu` docs
     - `wiki.debian.org` - `Debian`-specific guides
-1. **Mailing lists and chat**
+
+---
+
+## Getting Help: Online Resources (cont.)
+
+3. **Mailing lists and chat**
     - Distribution-specific mailing lists
     - `IRC` channels on `Libera.Chat` (`#ubuntu`, `#debian`)
     - `Matrix` rooms (modern alternative to `IRC`)
-1. **Official documentation**
+4. **Official documentation**
     - `kernel.org/doc` for kernel docs
     - `systemd.io` for `systemd` docs
     - `man7.org` for comprehensive man pages online

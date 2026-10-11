@@ -85,6 +85,11 @@ Cons:
     - Maintains a registry of available services and their locations
     - Receives client requests and forwards them to appropriate servers
     - May provide additional services like logging, security, or transaction management
+
+---
+
+## Broker Component Roles (cont.)
+
 - Client
     - Requests services from the broker using a common interface
     - Does not need to know the location or implementation details of servers
@@ -221,6 +226,10 @@ Pros:
 - Cheap and fast — direct method calls, no serialization, no network
 - Easy to add a new reaction to an existing event without touching the publisher
 
+---
+
+## Event Bus Pros and Cons (cont.)
+
 Cons:
 - Bounded to one process — does not span services or machines
 - Synchronous dispatch means a slow handler blocks the publisher
@@ -259,11 +268,21 @@ Cons:
 - Subscriber
     - A separate process or service that connects to the broker and consumes from topics
     - Multiple independent subscribers can each receive their own copy of the same message
+
+---
+
+## Publish-Subscribe Key Concepts (cont.)
+
 - Message Broker
     - A dedicated piece of infrastructure (Kafka, RabbitMQ, NATS, etc.) that you deploy and operate
     - Buffers messages so publisher and subscriber do not need to be online at the same time
     - May persist messages on disk and allow replay from an offset
     - Performs routing, filtering, and fan-out based on topic and subscription
+
+---
+
+## Publish-Subscribe Key Concepts (cont.)
+
 - Topic or Channel
     - A named stream on the broker that publishers write to and subscribers read from
     - The unit of routing — there is no event-type dispatch, just topic membership
@@ -285,6 +304,10 @@ Pros:
 - Buffering and persistence let producers and consumers run at different rates and survive restarts
 - Replay from a stored offset enables new subscribers to catch up on history (Kafka-style brokers)
 - Fan-out: a single message reaches many independent subscriber groups
+
+---
+
+## Publish-Subscribe Pros and Cons (cont.)
 
 Cons:
 - You must deploy, secure, monitor, and upgrade the broker — real operational cost
@@ -313,6 +336,13 @@ Cons:
 | Transport | In-memory method calls | Network protocol over a broker |
 | Routing key | Event type (class) | Topic / channel name |
 | Default timing | Synchronous | Asynchronous |
+
+---
+
+## Event Bus vs Publish-Subscribe (cont.)
+
+| | Event Bus | Publish-Subscribe |
+|---|---|---|
 | Infrastructure | A library | A broker you must operate |
 | Durability / replay | None | Available (Kafka-style) |
 | If no subscriber | Event is dropped | Broker buffers (and may persist) |

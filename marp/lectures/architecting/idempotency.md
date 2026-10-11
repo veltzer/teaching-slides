@@ -142,11 +142,11 @@ key = f"{user_id}:{timestamp}:{hash(request_content)}"
 
 ## Implementation Strategy
 
-1. 1. 1. **Generate unique keys** (UUID, hash, etc.)
-1. 1. 1. **Store key-response pairs** (database, cache)
-1. 1. 1. **Check for existing keys** before processing
-1. 1. 1. **Return cached response** if key exists
-1. 1. 1. **Clean up old keys** periodically
+1. **Generate unique keys** (UUID, hash, etc.)
+1. **Store key-response pairs** (database, cache)
+1. **Check for existing keys** before processing
+1. **Return cached response** if key exists
+1. **Clean up old keys** periodically
 
 ---
 
@@ -723,10 +723,10 @@ You don't always control the actor. Third-party APIs, legacy services, and vendo
 
 The wrapper is a small service (or sidecar) that owns:
 
-1. 1. 1. **Key storage** — durable record of `key → response`
-1. 1. 1. **Single-flight** — only one in-flight call per key
-1. 1. 1. **Result capture** — store what the legacy service returned
-1. 1. 1. **Replay** — return the stored response on repeat
+1. **Key storage** — durable record of `key → response`
+1. **Single-flight** — only one in-flight call per key
+1. **Result capture** — store what the legacy service returned
+1. **Replay** — return the stored response on repeat
 
 The legacy service stays untouched. The wrapper is the new source of truth for "did this already happen?".
 
@@ -764,6 +764,10 @@ The legacy service charged the card, then the wrapper crashed before storing the
 - The key is claimed but has no committed response
 - A retry sees the claim and waits, then times out
 - We **don't know** if the effect happened
+
+---
+
+## The Dangerous Case: Crash Mid-Call (cont.)
 
 Options:
 - **Reconcile**: query the legacy service (`GET /charges?client_ref=key`) — requires the legacy API to accept your key as a lookup field

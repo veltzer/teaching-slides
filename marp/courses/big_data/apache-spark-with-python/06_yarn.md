@@ -42,13 +42,16 @@ audience:
     - Reports node health
     - Monitors resource usage
 
-1. Application Master (AM)
+---
+
+## Key Components Explained (cont.)
+3. Application Master (AM)
     - One per application
     - Negotiates resources with RM
     - Works with NM to execute tasks
     - Monitors application progress
 
-1. Container
+4. Container
     - Resource allocation unit
     - CPU, memory, disk, network
     - Execution environment for tasks

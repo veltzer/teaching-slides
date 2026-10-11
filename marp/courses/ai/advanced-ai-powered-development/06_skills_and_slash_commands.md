@@ -134,6 +134,10 @@ Available context variables in skill instructions:
 | `$PR_NUMBER` | Pull request number (in PR context) |
 | `$DIFF` | Staged or current diff content |
 
+---
+
+## Context Variables and Templating (cont.)
+
 ```yaml
 instructions: |
   {% if BRANCH.startswith("hotfix/") %}
@@ -245,6 +249,10 @@ chain:
 | `skip` | Log the failure and continue to next step |
 | `warn` | Display a warning and continue |
 | `retry` | Retry up to N times with backoff |
+
+---
+
+## Error Handling and Resilience (cont.)
 
 ```yaml
 chain:
@@ -673,6 +681,10 @@ alerts:
 1. Measure usage and gather feedback before expanding
 1. Promote successful experiments to team-wide standards
 
+---
+
+## Adoption Patterns and Anti-Patterns (cont.)
+
 **Common anti-patterns to avoid:**
 
 | Anti-Pattern | Problem | Better Approach |
@@ -681,6 +693,10 @@ alerts:
 | No parameters | Hardcoded values everywhere | Use parameters with sensible defaults |
 | No testing | Skills break silently | Add snapshot tests and `--dry-run` |
 | Copy-paste skills | Drift between copies | Use inheritance and shared registries |
+
+---
+
+## Adoption Patterns and Anti-Patterns (cont.)
 
 - Treat skills like code: review, test, version, and document them
 - Assign skill ownership to prevent orphaned definitions

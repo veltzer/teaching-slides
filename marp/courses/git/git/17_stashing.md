@@ -37,6 +37,10 @@ Stashing temporarily saves your work when you need a clean working directory:
 - **Context switching:** Quick task interruption
 - **Clean state needed:** For builds, tests, or deployments
 
+---
+
+## Why Would You Want Stashing? (cont.)
+
 **What stashing saves:**
 - Modified tracked files
 - Staged changes (optional)
@@ -548,12 +552,20 @@ Understanding stash constraints:
 - Stack operations are O(1)
 - Searching stashes is O(n)
 
+---
+
+## Performance and Limitations (cont.)
+
 **Limitations:**
 - Local only (not shared)
 - Not suitable for long-term storage
 - Can't stash merge conflicts
 - Binary files stored inefficiently
 - Limited to current repository
+
+---
+
+## Performance and Limitations (cont.)
 
 **Size considerations:**
 ```bash
@@ -581,10 +593,18 @@ done
    - Practice different resolution strategies
    - Handle complex merge scenarios
 
-1. **Workflow integration:**
+---
+
+## Lab Exercise: Mastering Git Stash (cont.)
+
+3. **Workflow integration:**
    - Implement stashing in daily workflows
    - Practice context switching patterns
    - Use stashing for experimental changes
+
+---
+
+## Lab Exercise: Mastering Git Stash (cont.)
 
 **Advanced tasks:**
 1. **Automation development:**
@@ -596,6 +616,10 @@ done
    - Develop stashing conventions
    - Create cleanup procedures
    - Document best practices
+
+---
+
+## Lab Exercise: Mastering Git Stash (cont.)
 
 **Deliverables:** Comprehensive stashing workflows, automation scripts, team guidelines, troubleshooting procedures, and integration documentation.
 
@@ -671,16 +695,24 @@ done
    - Don't let stash stack grow too large
    - Document stashing conventions
 
-1. **Master the techniques:**
+---
+
+## Summary: Effective Stash Management (cont.)
+
+3. **Master the techniques:**
    - Selective stashing for precision
    - Conflict resolution strategies
    - Recovery from stash problems
    - Integration with daily workflows
 
-1. **Consider alternatives:**
+4. **Consider alternatives:**
    - Commits for permanent saves
    - Worktrees for parallel work
    - Branches for experimental features
    - External backup for important work
+
+---
+
+## Summary: Effective Stash Management (cont.)
 
 **Remember:** Git stash is a powerful tool for managing temporary work and context switching. Used properly, it enables fluid development workflows and helps manage the complexity of modern software development. However, stashes are meant to be temporary - don't use them as a replacement for proper version control practices with commits and branches.

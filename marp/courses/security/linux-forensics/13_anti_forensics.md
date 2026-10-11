@@ -165,7 +165,7 @@ cat /mnt/evidence/etc/modprobe.d/*.conf
 Investigate the provided image for signs of tampering.
 
 Deliverables:
-1. 1. Files with inconsistent timestamps, with the evidence for each
-1. 1. The result of log-integrity verification and any gaps found
-1. 1. Any data recovered from hidden or in-memory storage locations
-1. 1. A short note on which artifacts you trusted, and why
+1. Files with inconsistent timestamps, with the evidence for each
+1. The result of log-integrity verification and any gaps found
+1. Any data recovered from hidden or in-memory storage locations
+1. A short note on which artifacts you trusted, and why

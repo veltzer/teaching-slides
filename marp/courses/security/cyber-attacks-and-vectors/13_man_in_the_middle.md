@@ -245,12 +245,17 @@ curl -sI https://example.com | grep -i strict-transport
 1. Use Wireshark on the victim to capture normal ARP traffic baseline
 1. Perform ARP spoofing from the attacker VM (use arpspoof or bettercap)
 1. Observe ARP table changes on the victim
-1. Detect the attack using:
+
+---
+
+## Exercise: MITM Detection Lab (cont.)
+
+5. Detect the attack using:
    - arpwatch alerts
    - Wireshark ARP anomaly detection
    - Manual ARP table inspection
-1. Implement countermeasures:
+6. Implement countermeasures:
    - Static ARP entries
    - Enable HSTS on a test web server
    - Configure 802.1X port authentication
-1. Verify the countermeasures prevent the attack
+7. Verify the countermeasures prevent the attack

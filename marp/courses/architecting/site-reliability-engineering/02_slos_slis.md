@@ -74,9 +74,9 @@ Latency SLO: 95% of requests complete in under 500ms
 Process:
 
 1. Look at current performance — what does the service actually do?
-1. 1. Look at user expectations — what do they need?
-1. 1. Set the target slightly below current performance
-1. 1. Leave room — "stretch" SLOs cause perpetual error budget drains
+1. Look at user expectations — what do they need?
+1. Set the target slightly below current performance
+1. Leave room — "stretch" SLOs cause perpetual error budget drains
 
 The SLO target sets the **error budget**, which is what enables velocity.
 

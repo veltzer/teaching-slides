@@ -302,6 +302,10 @@ Required documentation:
 - Emergency contact list
 - Disaster recovery runbooks
 
+---
+
+## Documentation and Emergency Procedures (cont.)
+
 Emergency procedures:
 - Known-good system image backups
 - Boot media with rescue tools
@@ -643,6 +647,10 @@ cd /tmp/transfer
 sha256sum *.deb > SHA256SUMS
 gpg --sign SHA256SUMS
 ```
+
+---
+
+## Exercise: Air-Gapped Package Update Pipeline (cont.)
 
 1. Transfer to air-gapped system via approved USB
 1. On the air-gapped system, verify and install:

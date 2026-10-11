@@ -35,6 +35,13 @@ audience:
 | Bridge | Separate abstraction from implementation | Composition over inheritance |
 | Composite | Treat groups and individuals uniformly | Tree structure |
 | Decorator | Add behavior dynamically | Wrapping chain |
+
+---
+
+## Structural Patterns Overview (cont.)
+
+| Pattern | Purpose | Key Idea |
+|---------|---------|----------|
 | Facade | Simplify complex subsystem | Unified interface |
 | Flyweight | Share common state to save memory | Intrinsic vs extrinsic state |
 | Proxy | Control access to an object | Surrogate with same interface |
@@ -49,10 +56,24 @@ audience:
 | Command | Encapsulate request as object | Undo/redo support |
 | Interpreter | Evaluate language grammar | Expression tree |
 | Iterator | Sequential access to elements | `begin()`/`end()` |
+
+---
+
+## Behavioral Patterns Overview (cont.)
+
+| Pattern | Purpose | Key Idea |
+|---------|---------|----------|
 | Mediator | Centralize complex interactions | Hub-and-spoke |
 | Memento | Save and restore state | Snapshot without exposing internals |
 | Observer | Notify dependents of state changes | Publish-subscribe |
 | State | Behavior varies by internal state | State objects |
+
+---
+
+## Behavioral Patterns Overview (cont.)
+
+| Pattern | Purpose | Key Idea |
+|---------|---------|----------|
 | Strategy | Swap algorithms at runtime | Composition of behavior |
 | Template Method | Define algorithm skeleton | Override steps via inheritance |
 | Visitor | Add operations without modifying classes | Double dispatch |

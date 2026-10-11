@@ -86,6 +86,10 @@ Tables:
 - mangle
 - raw
 
+---
+
+## IPTables Basic Structure (cont.)
+
 Chains:
 - INPUT
 - OUTPUT

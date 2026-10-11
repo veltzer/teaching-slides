@@ -85,6 +85,11 @@ audience:
 - **Moment generating function** M_X(t) = E[e&#8348;&#7587;], when finite in a neighborhood of 0 — then moments fall out by differentiation: E[X&#8319;] = M_X&#8317;&#8319;&#8318;(0)
 - When the MGF exists near 0 it **determines the distribution uniquely** and turns sums of independents into products: M_(X+Y) = M_X M_Y — the slick proof tool for "sum of Normals is Normal", etc.
 - But the MGF often *fails to exist* (lognormal, Cauchy, t) — heavy tails again
+
+---
+
+## Generating Functions (cont.)
+
 - The **characteristic function** &phi;_X(t) = E[e&#8305;&#8348;&#7587;] always exists, always determines the law (uniqueness/inversion theorems), and is the right tool for the CLT (next chapter)
 - **Cumulants** &kappa;_n come from log M_X(t) (or log &phi;): &kappa;&#8321; = mean, &kappa;&#8322; = variance, &kappa;&#8323; = third central moment, and cumulants of independent sums simply *add* — which is exactly why the normal (all &kappa;_n = 0 for n &geq; 3) is the natural "additive" limit
 

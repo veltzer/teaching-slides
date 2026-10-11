@@ -430,6 +430,11 @@ gcc -Wall -c math_ops.c -o math_ops.o
 - Use opaque types for true encapsulation
 - Use static linkage to keep functions file-private
 - Auto-generate Makefile dependencies with `-MMD -MP`
+
+---
+
+## Conclusion (cont.)
+
 - Key components:
     - Header files (interfaces)
     - Source files (implementations)

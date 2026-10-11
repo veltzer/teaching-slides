@@ -255,6 +255,13 @@ jobs:
 | `github.event_name == 'pull_request'`        | Only on pull requests       |
 | `contains(github.event.head_commit.message, '[skip ci]')` | Commit message check |
 | `success()`                                  | Previous steps succeeded    |
+
+---
+
+## Common `if` Conditions (cont.)
+
+| Condition                                    | Meaning                     |
+|----------------------------------------------|-----------------------------|
 | `failure()`                                  | A previous step failed      |
 | `always()`                                   | Run regardless of status    |
 | `cancelled()`                                | Workflow was cancelled      |

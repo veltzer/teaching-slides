@@ -58,6 +58,13 @@ The `kube-controller-manager` runs many controllers:
 | `StatefulSet` | Ordered, stateful pods |
 | `DaemonSet` | One pod per node |
 | `Job` | Run-to-completion tasks |
+
+---
+
+## Built-in Controllers (cont.)
+
+| Controller | Manages |
+|-----------|---------|
 | `CronJob` | Scheduled jobs |
 | `Node` | Node lifecycle |
 | `ServiceAccount` | Default service accounts |

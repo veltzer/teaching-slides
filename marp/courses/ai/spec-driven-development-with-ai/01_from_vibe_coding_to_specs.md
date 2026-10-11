@@ -104,6 +104,10 @@ the system shall return the file within 30 seconds.
 | Read by humans once | Read by the agent on every run |
 | Separate from the code | Committed next to the code |
 
+---
+
+## Why SDD Is Not Big Design Up Front (cont.)
+
 - `TDD` gives you tests as spec; `BDD` gives you Gherkin precision; `DDD` gives you the vocabulary
 - `SDD` combines them into prose the agent can act on and the reviewer can check
 

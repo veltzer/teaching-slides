@@ -75,6 +75,11 @@ audience:
 - The honest way to estimate how well a model will predict **new** data — because in-sample error (training R&sup2;, training accuracy) is optimistically biased
 - **k-fold CV**: split the data into k parts; train on k&minus;1, test on the held-out one; rotate so each part is the test set once; average the test errors. **Leave-one-out** is the k = n extreme
 - Use it to compare models and to tune hyperparameters — pick the model/setting with the best *cross-validated* error, not the best fit
+
+---
+
+## Cross-Validation (cont.)
+
 - Pitfalls: any preprocessing fitted on the data (scaling, feature selection, imputation) must happen **inside** each fold, or you've leaked the test set; for time series use forward-chaining (no peeking into the future); for grouped data, keep whole groups together
 - "Tuned on CV, then also reported CV error as the final estimate" is mild double-dipping — keep a separate untouched test set for the final number
 

@@ -57,6 +57,10 @@ Modern `Linux` merges `/bin` -> `/usr/bin` and `/sbin` -> `/usr/sbin`.
 | `/usr/local` | Locally installed software |
 | `/usr/src` | Source code (e.g., kernel headers) |
 
+---
+
+## The /usr Hierarchy (cont.)
+
 ```bash
 # Verify the merge on Ubuntu
 ls -la /bin    # symlink to /usr/bin
@@ -1204,6 +1208,10 @@ Key special device files every admin should know:
 | `/dev/loop*` | Loop devices for mounting files |
 | `/dev/mapper/*` | Device mapper virtual devices |
 
+---
+
+## `/dev` Special Files (cont.)
+
 ```bash
 # Common usage patterns
 command > /dev/null 2>&1          # discard output
@@ -1221,11 +1229,16 @@ Perform the following tasks on your lab system:
 1. Measure the boot time using `systemd-analyze` and find the 5 slowest services
 1. Write a custom `systemd` unit file for a simple script that logs the date to `/var/log/myapp.log` every run
 1. Create a `systemd` timer that triggers the service every 10 minutes
-1. Apply the following `sysctl` parameters and verify they are active after reboot:
+
+---
+
+## Exercise: System Architecture Exploration (cont.)
+
+5. Apply the following `sysctl` parameters and verify they are active after reboot:
     - `vm.swappiness=10`
     - `net.ipv4.tcp_fin_timeout=15`
-1. Use `systemd-tmpfiles` to create a configuration that ensures `/run/exercise` exists with mode `0755`
-1. Explore `cgroups` by limiting a `stress` process to 256M of memory using `systemd-run`
+6. Use `systemd-tmpfiles` to create a configuration that ensures `/run/exercise` exists with mode `0755`
+7. Explore `cgroups` by limiting a `stress` process to 256M of memory using `systemd-run`
 
 ```bash
 # Hint: install stress for the last task

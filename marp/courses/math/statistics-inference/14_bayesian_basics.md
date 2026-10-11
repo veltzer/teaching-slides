@@ -84,6 +84,11 @@ print(f"P(rate > 4%) = {1 - post.cdf(0.04):.2%}")   # a question frequentists ca
 - A **credible interval** is a range that contains the parameter with stated *probability* — "95% probability &theta; is in [a, b]", a direct statement about &theta; given this data
 - A **confidence interval** is the frequentist analog with a *procedural* guarantee — "95% of intervals built this way would contain &theta;" — *not* a probability about this particular interval
 - With a flat prior and enough data, the two often nearly coincide numerically — but they *mean* different things
+
+---
+
+## Credible Intervals vs Confidence Intervals (cont.)
+
 - Two flavors of credible interval: the **equal-tailed** one (2.5% in each tail) and the **highest-posterior-density (HPD)** one (the shortest interval with the given mass) — they differ for skewed posteriors
 - Most people *want* the credible-interval interpretation — just be honest about which one you actually computed
 
@@ -110,6 +115,11 @@ print(f"P(rate > 4%) = {1 - post.cdf(0.04):.2%}")   # a question frequentists ca
 - Real models (many parameters, hierarchical structure, non-conjugate priors) have posteriors with no closed form and impossible-to-do integrals
 - **Markov chain Monte Carlo (MCMC)** — and modern variants like Hamiltonian Monte Carlo / NUTS — *draws samples* from the posterior instead of computing it analytically; you summarize the samples
 - Probabilistic programming tools (PyMC, Stan, NumPyro) let you write the model declaratively and handle the sampling for you
+
+---
+
+## When Conjugacy Runs Out: MCMC (cont.)
+
 - Always check the diagnostics: trace plots that look like "fuzzy caterpillars", R-hat near 1.0, adequate effective sample size — a chain that hasn't converged gives garbage that *looks* like an answer
 - **Hierarchical (multilevel) models** are where Bayesian methods especially shine — partial pooling across groups, principled shrinkage, honest uncertainty when some groups have little data
 

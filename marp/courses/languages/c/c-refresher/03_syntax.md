@@ -370,6 +370,13 @@ extern int shared_across_files;  /* defined elsewhere */
 | 5 | `<<` `>>` | Left to right |
 | 6 | `<` `<=` `>` `>=` | Left to right |
 | 7 | `==` `!=` | Left to right |
+
+---
+
+## Operator Precedence Table (Key Levels) (cont.)
+
+| Precedence | Operators | Associativity |
+|------------|-----------|---------------|
 | 8 | `&` | Left to right |
 | 9 | `^` | Left to right |
 | 10 | `\|` | Left to right |

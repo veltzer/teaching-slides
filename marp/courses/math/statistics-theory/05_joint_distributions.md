@@ -75,6 +75,11 @@ audience:
 - **E[Y | X]** is a random variable — a (measurable) function of X — namely the &sigma;(X)-measurable function whose integral matches Y's over every event in &sigma;(X); existence and a.s.-uniqueness from Radon&ndash;Nikodym
 - Geometric picture in L&sup2;: E[Y | X] is the **orthogonal projection** of Y onto the subspace of square-integrable functions of X — it's the best mean-squared predictor of Y from X, E[(Y &minus; g(X))&sup2;] minimized at g(x) = E[Y | X = x]
 - Core properties: linearity; **tower / law of total expectation** E[E[Y | X]] = E[Y]; **take out what is known** E[g(X)Y | X] = g(X)E[Y | X]; if Y &#8869; X then E[Y | X] = E[Y]
+
+---
+
+## Conditional Expectation (cont.)
+
 - **Conditional variance** Var(Y | X) := E[(Y &minus; E[Y|X])&sup2; | X], giving the **variance decomposition (EVE / law of total variance)**: Var(Y) = E[Var(Y | X)] + Var(E[Y | X]) — "within-group noise plus between-group signal"
 - This object is the rigorous home of "P(A | X = x)" for continuous X, the foundation of regression theory, and the building block of martingales
 
@@ -85,6 +90,11 @@ audience:
 - If X &#8869; Y, the law of S = X + Y is the **convolution** of their laws: discrete p_S(s) = &Sigma;_k p_X(k) p_Y(s&minus;k); continuous f_S(s) = &#8747; f_X(t) f_Y(s&minus;t) dt
 - Moments add the easy way: E[S] = E[X] + E[Y] always (no independence needed); **Var(S) = Var(X) + Var(Y)** *with* independence; and cumulants add — &kappa;_n(S) = &kappa;_n(X) + &kappa;_n(Y)
 - Transform shortcut: characteristic functions multiply, &phi;_S = &phi;_X &phi;_Y (likewise MGFs when they exist) — convolution becomes multiplication, which is how "stable" families are identified
+
+---
+
+## Sums Of Independent Variables (cont.)
+
 - **Closure under convolution**: sums of independent Normals are Normal; of Poissons, Poisson (rates add); of Gammas with equal scale, Gamma (shapes add); of independent &chi;&sup2;, &chi;&sup2; (df add) — these facts power the sampling distributions in later chapters
 - The sample mean X&#772; = (1/n)&Sigma; X&#8345; of i.i.d. data thus has mean &mu; and variance &sigma;&sup2;/n — and, by repeated convolution + the CLT, an approximately normal law for large n
 

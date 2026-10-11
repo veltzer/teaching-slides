@@ -826,6 +826,10 @@ print(date3)  # 2023-01-01
     - Utility functions related to the class domain
     - Purely functional operations
 
+---
+
+## Class Methods vs Static Methods (cont.)
+
 ```python
 class Sample:
     count = 0

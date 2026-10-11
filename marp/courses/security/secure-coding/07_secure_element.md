@@ -72,6 +72,11 @@ audience:
 - Code in the enclave runs isolated from the OS, hypervisor, even physical RAM probing (memory is encrypted)
 - **ARM TrustZone** — secure/normal world split; common in mobile and embedded (fingerprint, DRM, key handling)
 - **Intel SGX** — application enclaves on the CPU (history of side-channel CVEs; partly deprecated on client)
+
+---
+
+## Secure Enclaves And TEEs (cont.)
+
 - **AMD SEV-SNP / Intel TDX** — encrypt and attest whole VMs (the basis of "confidential computing" in the cloud)
 - Apple **Secure Enclave**, Google **Titan M / Tensor** — dedicated coprocessors playing the same role
 - Strength: run *arbitrary* trusted code with attestation. Weakness: bigger TCB than a fixed-function SE, and a steady stream of side-channel research
@@ -85,6 +90,13 @@ audience:
 | Form | chip on board | appliance / card | region of main CPU | small dedicated chip |
 | Throughput | low | very high | medium–high | low |
 | Runs your code | no (fixed ops) | mostly no | **yes** | no |
+
+---
+
+## Comparing The Options (cont.)
+
+| | `TPM` | `HSM` | TEE / Enclave | Discrete SE |
+|---|---|---|---|---|
 | Typical use | device identity, boot | CA keys, payments | confidential compute | IoT device keys |
 | Cost | cents | thousands+ | "free" (in the CPU) | cents |
 
@@ -103,6 +115,11 @@ Pick by question: protecting *a key on a device* → `TPM`/SE. *A fleet of keys 
 - Code to a standard interface — **`PKCS#11`** for `HSM`s/`TPM`s, vendor SDKs for SEs/TEEs — not directly to the silicon
 - Your app holds **handles**, never key bytes: "sign with object 0x04", "unwrap with the SRK"
 - Plan for **provisioning** — getting the right keys/certs onto the device at manufacture, securely
+
+---
+
+## Integrating Secure Elements Into Applications (cont.)
+
 - Plan for **failure** — the device dies, the chip dies, the slot fills up; a non-extractable key cannot be restored, so design recovery (re-provisioning, backup keys, key hierarchies) up front
 - Performance: offload the *key* operations (sign, key-agree, unwrap); do bulk symmetric crypto in software with the derived key
 - Cost / complexity is real — use a secure element where the threat justifies it, not reflexively

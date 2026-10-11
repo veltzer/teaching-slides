@@ -80,6 +80,11 @@ POST /_bulk
 - Start around 5-15 MB per request, or a few thousand docs, then tune empirically
 - Too small wastes round-trips; too large pressures heap and the bulk thread pool queue
 - Send bulk requests concurrently from multiple client threads to saturate nodes
+
+---
+
+## Sizing Bulk Batches (cont.)
+
 - Always inspect the response: a 200 status does not mean every item succeeded
 
 ```bash

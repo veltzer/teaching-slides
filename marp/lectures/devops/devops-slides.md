@@ -77,7 +77,11 @@ DevOps is a set of practices combining software development (Dev) and IT operati
     - Right to left
     - Fast feedback loops
     - Quality at source
-1. **Third Way**: Continuous Learning
+---
+
+## The Three Ways of DevOps (cont.)
+
+3. **Third Way**: Continuous Learning
     - Culture of experimentation
     - Learning from failure
     - Practice and mastery
@@ -118,6 +122,10 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 - Technical debt
 - Tool complexity
 
+---
+
+## Challenges in DevOps Adoption (cont.)
+
 ### Process Challenges
 - Security compliance
 - Skill gaps
@@ -147,7 +155,11 @@ DevOps is a set of practices combining software development (Dev) and IT operati
     - Self-organizing teams
     - Cross-functional collaboration
     - Daily communication
-1. **Continuous Improvement**
+---
+
+## Agile Principles in Practice (cont.)
+
+3. **Continuous Improvement**
     - Sprint retrospectives
     - Iterative development
     - Adaptive planning
@@ -164,7 +176,11 @@ DevOps is a set of practices combining software development (Dev) and IT operati
     - Fast feedback
     - Experimentation
     - Knowledge sharing
-1. **Decide Late**
+---
+
+## Lean Principles in DevOps (cont.)
+
+3. **Decide Late**
     - Flexible architecture
     - Feature toggles
     - Progressive delivery
@@ -187,7 +203,11 @@ DevOps is a set of practices combining software development (Dev) and IT operati
     - Build scripts
     - Dependencies management
     - Artifacts storage
-1. **Automated Testing**
+---
+
+## Continuous Integration Practices (cont.)
+
+3. **Automated Testing**
     - Unit tests
     - Integration tests
     - Performance tests
@@ -222,7 +242,11 @@ DevOps is a set of practices combining software development (Dev) and IT operati
     - Secure variables
     - Access controls
     - Compliance checks
-1. **Testing**
+---
+
+## IaC Best Practices (cont.)
+
+3. **Testing**
     - Static analysis
     - Policy validation
     - Integration testing
@@ -245,7 +269,11 @@ DevOps is a set of practices combining software development (Dev) and IT operati
     - Service mesh
     - API gateway
     - Load balancing
-1. **Cloud Services**
+---
+
+## Cloud Native DevOps (cont.)
+
+3. **Cloud Services**
     - Managed services
     - Serverless
     - Auto-scaling
@@ -268,7 +296,11 @@ DevOps is a set of practices combining software development (Dev) and IT operati
     - Blame culture
     - Resistance to change
     - Lack of ownership
-1. **Process Problems**
+---
+
+## DevOps Anti-Patterns (cont.)
+
+3. **Process Problems**
     - Manual approvals
     - Limited automation
     - Poor documentation
@@ -297,7 +329,11 @@ DevOps is a set of practices combining software development (Dev) and IT operati
     - Roadmap
     - Resources
     - Timeline
-1. **Implementation**
+---
+
+## Getting Started with DevOps (cont.)
+
+3. **Implementation**
     - Pilot project
     - Scale gradually
     - Measure results

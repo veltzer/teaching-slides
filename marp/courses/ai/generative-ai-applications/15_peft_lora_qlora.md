@@ -672,6 +672,10 @@ trainer.save_model()
 - Prompt Tuning, Prefix Tuning, and `IA3`
 - Advanced techniques: `DoRA`, `LoRA+`, multiple adapters
 
+---
+
+## Day 4 Summary and Q&A (cont.)
+
 **Key insight:** With `QLoRA`, you can fine-tune a 70B parameter model on a single consumer GPU, achieving near-full-fine-tuning quality at a fraction of the cost.
 
 **Tomorrow:** Image generation, personalization, quality measurement, bias, and AI safety.

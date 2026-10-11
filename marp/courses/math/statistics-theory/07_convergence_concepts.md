@@ -94,6 +94,11 @@ audience:
 
 - **Continuous Mapping Theorem**: if X&#8345; &#8594; X (a.s. / in prob / in dist) and g is continuous (more generally, continuous on a set of probability 1 under X), then g(X&#8345;) &#8594; g(X) *in the same mode*
 - **Slutsky's theorem**: if X&#8345; &#8658; X and Y&#8345; &#8597;&#7510; c (a constant), then X&#8345; + Y&#8345; &#8658; X + c, X&#8345;Y&#8345; &#8658; cX, and X&#8345;/Y&#8345; &#8658; X/c (c &ne; 0) — this is what lets you replace an unknown &sigma; by a consistent estimate s in &radic;n(X&#772;&minus;&mu;)/s and still get N(0,1)
+
+---
+
+## The Working Toolbox (cont.)
+
 - **Delta method**: if &radic;n(&theta;&#770;&#8345; &minus; &theta;) &#8658; N(0, &sigma;&sup2;) and g is differentiable at &theta; with g'(&theta;) &ne; 0, then &radic;n(g(&theta;&#770;&#8345;) &minus; g(&theta;)) &#8658; N(0, g'(&theta;)&sup2;&sigma;&sup2;) — propagate asymptotic normality through a smooth transform (multivariate version uses the gradient: variance &nabla;g&#7488;&Sigma;&nabla;g)
 - Second-order delta method when g'(&theta;) = 0: scale by n and get a &chi;&sup2;-type limit instead
 - These three, plus the CLT and the LLN, are the entire engine of classical large-sample inference

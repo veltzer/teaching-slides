@@ -17,8 +17,6 @@ audience:
 
 ---
 
-## What Are NoSQL Databases?
-
 ![title](svg/lectures/databases/nosql-database-fundamentals/title.svg)
 
 ---

@@ -503,6 +503,11 @@ def check_login(username, password):
 - Credential stuffing exploits password reuse -- use breached password detection and MFA
 - Always hash passwords with bcrypt or Argon2id, never MD5/SHA
 - JWT tokens require careful implementation (algorithm whitelisting, expiration, key management)
+
+---
+
+## Key Takeaways (cont.)
+
 - Session fixation is prevented by regenerating session IDs after login
 - MFA significantly reduces risk but is not bulletproof -- prefer FIDO2/WebAuthn
 - OAuth flows must strictly validate redirect URIs and use PKCE

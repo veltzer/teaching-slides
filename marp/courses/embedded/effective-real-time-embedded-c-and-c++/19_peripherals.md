@@ -1587,15 +1587,20 @@ float getPeripheralReliability(uint8_t peripheralId) {
 
 Key principles for effective peripheral programming:
 
-1. 1. **Initialize peripherals in correct order**
+1. **Initialize peripherals in correct order**
     - Clocks first, then GPIO, then complex peripherals
-1. 1. **Use appropriate data types**
+1. **Use appropriate data types**
     - volatile for hardware registers
     - const for configuration data
-1. 1. **Handle errors gracefully**
+
+---
+
+## Best Practices Summary: Principles (cont.)
+
+3. **Handle errors gracefully**
     - Check return values and status flags
     - Implement timeout mechanisms
-1. 1. **Optimize for your application**
+4. **Optimize for your application**
     - Use DMA for high-throughput applications
     - Use interrupts for real-time response
 
@@ -1603,16 +1608,21 @@ Key principles for effective peripheral programming:
 
 ## Best Practices Summary: ISRs, Documentation, Testing, Power
 
-1. 1. **Keep interrupt handlers short**
+1. **Keep interrupt handlers short**
     - Minimal processing in ISRs
     - Use flags for main loop processing
-1. 1. **Document hardware dependencies**
+1. **Document hardware dependencies**
     - Pin assignments and alternate functions
     - Timing requirements and constraints
-1. 1. **Test thoroughly**
+
+---
+
+## Best Practices Summary: ISRs, Documentation, Testing, Power (cont.)
+
+3. **Test thoroughly**
     - Unit tests for individual peripherals
     - Integration tests for complete systems
-1. 1. **Consider power consumption**
+4. **Consider power consumption**
     - Disable unused peripherals
     - Use appropriate low-power modes
 

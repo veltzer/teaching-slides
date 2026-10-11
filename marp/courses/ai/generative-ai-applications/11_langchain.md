@@ -522,6 +522,10 @@ os.environ["LANGCHAIN_PROJECT"] = "my-genai-app"
 | Debugging | LangSmith | Built-in | Custom |
 | Best for | Agents, chains | RAG, data | Simple apps |
 
+---
+
+## Comparing LangChain with Alternatives (cont.)
+
 **Rule of thumb:**
 - Simple apps → Direct API calls
 - RAG-heavy apps → `LlamaIndex` or `LangChain`

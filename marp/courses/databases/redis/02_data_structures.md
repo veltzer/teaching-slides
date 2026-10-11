@@ -239,11 +239,15 @@ SRANDMEMBER key [count]        # Get random members
     - Articles, posts, products
     - Efficient lookups by tag
 
-1. **Common relationships**:
+---
+
+## Set Use Cases (cont.)
+
+3. **Common relationships**:
     - Find mutual friends: `SINTER friends:user1 friends:user2`
     - Recommendation systems
 
-1. **Random selection**:
+4. **Random selection**:
     - Randomly select winners from contest entries
     - Poll sampling
 
@@ -311,11 +315,15 @@ ZPOPMAX key [count]              # Remove and return members with highest scores
     - Use timestamp as score
     - Range queries by time
 
-1. **Weighted queues**:
+---
+
+## Sorted Set Use Cases (cont.)
+
+3. **Weighted queues**:
     - Priority processing
     - Task scheduling
 
-1. **Ranking systems**:
+4. **Ranking systems**:
     - Product ratings
     - Search suggestions with weights
 
@@ -381,11 +389,15 @@ HSCAN key cursor [MATCH pattern] [COUNT count] # Scan through fields
     - Page views by section
     - Votes by category
 
-1. **Rate limiting**:
+---
+
+## Hash Use Cases (cont.)
+
+3. **Rate limiting**:
     - Track multiple limits for single entity
     - Different time windows
 
-1. **Configuration storage**:
+4. **Configuration storage**:
     - Application settings
     - Feature toggles
 
@@ -427,6 +439,10 @@ PFADD key element [element ...]         # Add elements
 PFCOUNT key [key ...]                   # Get estimated cardinality
 PFMERGE destkey sourcekey [sourcekey ...] # Merge HyperLogLogs
 ```
+
+---
+
+## HyperLogLog Introduction (cont.)
 
 Use cases:
 - Unique visitors

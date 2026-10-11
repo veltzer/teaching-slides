@@ -40,12 +40,12 @@ mount -o ro,loop,offset=$((2048*512)) /evidence/disk.dd /mnt/case
 
 ## Objectives
 
-1. 1. Establish the initial point of compromise and its timestamp
-1. 1. Reconstruct the attacker's timeline across disk and memory
-1. 1. Identify the privilege escalation path to root
-1. 1. Recover the implant and characterize what it does
-1. 1. Assess persistence, then classify the incident's risk
-1. 1. Produce a court-ready report with a full evidence trail
+1. Establish the initial point of compromise and its timestamp
+1. Reconstruct the attacker's timeline across disk and memory
+1. Identify the privilege escalation path to root
+1. Recover the implant and characterize what it does
+1. Assess persistence, then classify the incident's risk
+1. Produce a court-ready report with a full evidence trail
 
 ---
 
@@ -109,11 +109,11 @@ readelf -a recovered_implant | less
 
 ## Deliverables
 
-1. 1. An executive summary and an incident risk classification
-1. 1. A timeline reconstructing the compromise from entry to detection
-1. 1. The privilege escalation path, with the evidence for each step
-1. 1. The implant analysis: persistence, IOCs, and capabilities
-1. 1. A hash-verified evidence appendix and a chain-of-custody record
+1. An executive summary and an incident risk classification
+1. A timeline reconstructing the compromise from entry to detection
+1. The privilege escalation path, with the evidence for each step
+1. The implant analysis: persistence, IOCs, and capabilities
+1. A hash-verified evidence appendix and a chain-of-custody record
 
 ---
 
