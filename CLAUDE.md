@@ -18,7 +18,7 @@
 - Title slide (slide 1): only `# Title`, `## Author`, `## Email` — no content, no images
 - No empty slides (two consecutive `---` with nothing between them)
 - Always close code fences before starting a new slide (`---`)
-- Use `1. 1. 1.` for ordered lists, not `1. 2. 3.` — the renderer numbers automatically
+- Use `1. 1. 1.` for ordered lists, not `1. 2. 3.` — the renderer numbers automatically. The one exception: a numbered list continued from the previous slide (`## Title (cont.)`) starts at its number and counts on in sequence (`6. 7. 8.`), so the numbering carries on across the split; markdown lint accepts a list that is all `1.` or in sequence, not a mix
 - Never number "parts" in slide headings (e.g., `## Part 3: Foo`, `## Part II: Foo`). Reordering slides breaks the numbering. Just use the descriptive title.
 - Indent sub-items with 4 spaces (four spaces followed by `- item`)
 - No mermaid diagrams — prefer SVG (no fast mermaid tool available yet)

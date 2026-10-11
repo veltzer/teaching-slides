@@ -52,6 +52,8 @@ _IMAGE_RE = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
 _SVG_IMAGE_RE = re.compile(r'!\[.*?\]\(.*?\.svg\)')
 _HEADING_RE = re.compile(r'^#{1,6}\s')
 _NUMBERED_LIST_RE = re.compile(r'^(\s*)([2-9]\d*)\. ')
+# A list item: its indentation, then its number if it is a numbered one.
+_LIST_ITEM_RE = re.compile(r'^(\s*)(?:[-*+]|(\d+)\.) ')
 
 MAX_TABLE_COLUMNS = 6
 MAX_SLIDE_LINES = 40
@@ -262,15 +264,46 @@ def _check_images(path: Path, _text: str, text_no_code: str, _lines: list[str]) 
 
 
 def _check_numbering(path: Path, _text: str, _text_no_code: str, lines: list[str]) -> list[str]:
+    """A numbered list is written `1. 1. 1.`; the renderer numbers it. A
+    list continued from the previous slide starts at its number instead
+    (Markdown counts on from the first item's number) and is then written
+    in sequence, `6. 7. 8.`, as markdown lint requires of a list that does
+    not start at 1."""
     errors = []
     in_code = False
+    # Per indentation of an open numbered list: the number its next item
+    # must have (1 for a `1. 1. 1.` list).
+    open_lists: dict[int, int] = {}
     for line_no, line in enumerate(lines, 1):
         if line.strip().startswith('```'):
             in_code = not in_code
-        if not in_code:
-            m = _NUMBERED_LIST_RE.match(line)
-            if m:
-                errors.append(f"{path}:{line_no}: sequential numbering (use 1. not {m.group(2)}.)")
+        if in_code or not line.strip():
+            continue
+        item = _LIST_ITEM_RE.match(line)
+        if item is None:
+            if not line.startswith((' ', '\t')):
+                open_lists.clear()
+            continue
+        indent = len(item.group(1))
+        open_lists = {i: n for i, n in open_lists.items() if i <= indent}
+        if item.group(2) is None:
+            open_lists.pop(indent, None)
+            continue
+        number = int(item.group(2))
+        expected = open_lists.get(indent)
+        if expected is None:
+            # The first item: 1, or the start of a continued list.
+            open_lists[indent] = 1 if number == 1 else number + 1
+        elif number != expected:
+            if expected == 1:
+                errors.append(f"{path}:{line_no}: sequential numbering (use 1. not {number}.)")
+            else:
+                errors.append(
+                    f"{path}:{line_no}: a continued list counts on in sequence (use {expected}. not {number}.)"
+                )
+            open_lists[indent] = 1 if expected == 1 else number + 1
+        else:
+            open_lists[indent] = 1 if expected == 1 else number + 1
     return errors
 
 
