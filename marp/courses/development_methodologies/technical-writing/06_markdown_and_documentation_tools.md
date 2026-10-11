@@ -75,7 +75,7 @@ bold, italic, code (use single backticks for inline)
 ```python
 def hello():
     print("hi")
-```misc
+```
 ````
 
 - Language tag for syntax highlighting

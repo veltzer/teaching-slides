@@ -142,7 +142,7 @@ def add(a, b):
 ```python
 def hello():
     print("hi")
-```misc
+```
 ````
 
 - Always specify the language
