@@ -2,5 +2,37 @@
 <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
 <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">Event-Driven Architecture</text>
 <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">Mark Veltzer</text>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+  <text x="190" y="225" font-size="16" fill="var(--text-faint)">producers</text>
+  <text x="1090" y="225" font-size="16" fill="var(--text-faint)">consumers</text>
+  <rect x="90" y="245" width="200" height="50" rx="8" fill="var(--primary-fill)"/>
+  <text x="190" y="276" font-size="18" fill="var(--primary-text)">Orders</text>
+  <rect x="90" y="375" width="200" height="50" rx="8" fill="var(--primary-fill)"/>
+  <text x="190" y="406" font-size="18" fill="var(--primary-text)">Payments</text>
+  <rect x="990" y="245" width="200" height="50" rx="8" fill="var(--ok-fill)"/>
+  <text x="1090" y="276" font-size="18" fill="var(--ok-text)">Inventory</text>
+  <rect x="990" y="375" width="200" height="50" rx="8" fill="var(--ok-fill)"/>
+  <text x="1090" y="406" font-size="18" fill="var(--ok-text)">Analytics</text>
+  <line x1="290" y1="270" x2="398" y2="312" stroke="var(--text-muted)" stroke-width="2"/>
+  <polygon points="-10,-7 10,0 -10,7" fill="var(--text-muted)" transform="translate(400,313) rotate(21)"/>
+  <line x1="290" y1="400" x2="398" y2="358" stroke="var(--text-muted)" stroke-width="2"/>
+  <polygon points="-10,-7 10,0 -10,7" fill="var(--text-muted)" transform="translate(400,357) rotate(-21)"/>
+  <line x1="880" y1="312" x2="978" y2="274" stroke="var(--text-muted)" stroke-width="2"/>
+  <polygon points="-10,-7 10,0 -10,7" fill="var(--text-muted)" transform="translate(980,273) rotate(-21)"/>
+  <line x1="880" y1="358" x2="978" y2="396" stroke="var(--text-muted)" stroke-width="2"/>
+  <polygon points="-10,-7 10,0 -10,7" fill="var(--text-muted)" transform="translate(980,397) rotate(21)"/>
+  <rect x="410" y="250" width="470" height="170" rx="10" fill="none" stroke="var(--warn-fill)" stroke-width="3"/>
+  <text x="645" y="282" font-size="18" font-weight="bold" fill="var(--warn-fill)">Broker</text>
+  <text x="645" y="400" font-size="15" fill="var(--text-faint)">topic: orders &#8212; append-only log</text>
+  <rect x="430" y="305" width="100" height="56" rx="4" fill="var(--warn-accent)"/>
+  <text x="480" y="339" font-size="16" fill="var(--warn-text)">Placed</text>
+  <rect x="538" y="305" width="100" height="56" rx="4" fill="var(--warn-accent)"/>
+  <text x="588" y="339" font-size="16" fill="var(--warn-text)">Paid</text>
+  <rect x="646" y="305" width="100" height="56" rx="4" fill="var(--warn-border)"/>
+  <text x="696" y="339" font-size="16" fill="var(--warn-text)">Packed</text>
+  <rect x="754" y="305" width="106" height="56" rx="4" fill="var(--warn-fill)"/>
+  <text x="807" y="339" font-size="16" fill="var(--warn-text)">Shipped</text>
+  <text x="640" y="505" font-size="16" fill="var(--text-faint)">message brokers &#8226; event sourcing &amp; CQRS &#8226; delivery semantics &#8226; sagas &#8226; schema evolution &#8226; microservices</text>
+</g>
 <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">mark.veltzer@gmail.com</text>
 </svg>

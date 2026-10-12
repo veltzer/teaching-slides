@@ -2,5 +2,27 @@
 <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
 <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">PostgreSQL for Developers</text>
 <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">Advanced SQL, JSONB, performance</text>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+  <text x="300" y="240" text-anchor="start" font-family="Consolas, monospace" font-size="18" fill="var(--text-faint)">EXPLAIN ANALYZE</text>
+  <line x1="640" y1="262" x2="640" y2="290" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="640" y1="342" x2="410" y2="370" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="640" y1="342" x2="870" y2="370" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="870" y1="422" x2="870" y2="450" stroke="var(--text-muted)" stroke-width="2"/>
+  <rect x="530" y="210" width="220" height="52" rx="8" fill="var(--primary-accent)"/>
+  <text x="640" y="233" font-size="18" fill="var(--primary-text)">Sort</text>
+  <text x="640" y="253" font-size="14" font-family="Consolas, monospace" fill="var(--primary-text)">by total</text>
+  <rect x="530" y="290" width="220" height="52" rx="8" fill="var(--info-fill)"/>
+  <text x="640" y="313" font-size="18" fill="var(--info-text)">Hash Join</text>
+  <text x="640" y="333" font-size="14" font-family="Consolas, monospace" fill="var(--info-text)">on customer id</text>
+  <rect x="300" y="370" width="220" height="52" rx="8" fill="var(--ok-fill)"/>
+  <text x="410" y="393" font-size="18" fill="var(--ok-text)">Index Scan</text>
+  <text x="410" y="413" font-size="14" font-family="Consolas, monospace" fill="var(--ok-text)">orders</text>
+  <rect x="760" y="370" width="220" height="52" rx="8" fill="var(--warn-fill)"/>
+  <text x="870" y="393" font-size="18" fill="var(--warn-text)">Hash</text>
+  <text x="870" y="413" font-size="14" font-family="Consolas, monospace" fill="var(--warn-text)">in memory</text>
+  <rect x="760" y="450" width="220" height="52" rx="8" fill="var(--danger-fill)"/>
+  <text x="870" y="473" font-size="18" fill="var(--danger-text)">Seq Scan</text>
+  <text x="870" y="493" font-size="14" font-family="Consolas, monospace" fill="var(--danger-text)">customers</text>
+</g>
 <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">internals &#8226; SQL &#8226; window &#8226; indexes &#8226; JSONB &#8226; PL/pgSQL</text>
 </svg>

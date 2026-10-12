@@ -2,5 +2,38 @@
 <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
 <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">DynamoDB</text>
 <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">Mark Veltzer</text>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+  <rect x="240" y="205" width="220" height="40" fill="var(--warn-fill)"/>
+  <text x="350" y="231" font-size="17" font-weight="bold" fill="var(--warn-text)">PK (partition key)</text>
+  <rect x="460" y="205" width="240" height="40" fill="var(--info-fill)"/>
+  <text x="580" y="231" font-size="17" font-weight="bold" fill="var(--info-text)">SK (sort key)</text>
+  <rect x="700" y="205" width="340" height="40" fill="var(--primary-fill)"/>
+  <text x="870" y="231" font-size="17" font-weight="bold" fill="var(--primary-text)">attributes</text>
+  <rect x="240" y="245" width="800" height="176" fill="none" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="240" y1="289" x2="1040" y2="289" stroke="var(--text-muted)" stroke-width="1"/>
+  <line x1="240" y1="333" x2="1040" y2="333" stroke="var(--text-muted)" stroke-width="1"/>
+  <line x1="240" y1="377" x2="1040" y2="377" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="460" y1="245" x2="460" y2="421" stroke="var(--text-muted)" stroke-width="1"/>
+  <line x1="700" y1="245" x2="700" y2="421" stroke="var(--text-muted)" stroke-width="1"/>
+  <g font-family="Courier New, monospace" font-size="17">
+    <text x="350" y="273" fill="var(--warn-fill)">USER#42</text>
+    <text x="580" y="273" fill="var(--surface)">PROFILE</text>
+    <text x="870" y="273" fill="var(--text-faint)">name: Ada, plan: pro</text>
+    <text x="350" y="317" fill="var(--warn-fill)">USER#42</text>
+    <text x="580" y="317" fill="var(--surface)">ORDER#1001</text>
+    <text x="870" y="317" fill="var(--text-faint)">total: 59, status: shipped</text>
+    <text x="350" y="361" fill="var(--warn-fill)">USER#42</text>
+    <text x="580" y="361" fill="var(--surface)">ORDER#1002</text>
+    <text x="870" y="361" fill="var(--text-faint)">total: 12, status: pending</text>
+    <text x="350" y="405" fill="var(--warn-fill)">USER#77</text>
+    <text x="580" y="405" fill="var(--surface)">PROFILE</text>
+    <text x="870" y="405" fill="var(--text-faint)">name: Lin, plan: free</text>
+  </g>
+  <path d="M224,250 L212,250 L212,372 L224,372" fill="none" stroke="var(--ok-fill)" stroke-width="3"/>
+  <text x="150" y="306" font-size="16" fill="var(--ok-fill)">item</text>
+  <text x="150" y="328" font-size="16" fill="var(--ok-fill)">collection</text>
+  <text x="640" y="460" font-family="Courier New, monospace" font-size="18" fill="var(--ok-fill)">Query(PK = USER#42, SK begins_with ORDER#)</text>
+  <text x="640" y="505" font-size="16" fill="var(--text-faint)">access patterns first &#8226; single-table design &#8226; GSI &amp; LSI &#8226; capacity &amp; cost &#8226; global tables &#8226; streams</text>
+</g>
 <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">mark.veltzer@gmail.com</text>
 </svg>
