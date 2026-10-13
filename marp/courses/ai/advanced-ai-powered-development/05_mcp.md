@@ -836,7 +836,6 @@ npx @modelcontextprotocol/inspector python server.py
 claude mcp add project-metrics -- python server.py
 ```
 
-- Time estimate: 30-45 minutes
 - Bonus: add a `run_tests` tool that executes `pytest` and returns results
 
 ---

@@ -13,7 +13,7 @@ audience:
 ---
 
 # Linux Network Command Line Tools
-## Chapter 4: System Administration and Monitoring
+## System Administration and Monitoring
 
 ---
 

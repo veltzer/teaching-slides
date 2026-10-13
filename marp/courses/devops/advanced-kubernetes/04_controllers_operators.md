@@ -14,7 +14,7 @@ audience:
 
 # Controllers and Operators
 
-Advanced Kubernetes Course - Day 1, Module 4
+Advanced Kubernetes Course
 
 ---
 

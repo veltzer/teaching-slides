@@ -14,7 +14,7 @@ audience:
 
 # Init Containers & Custom Resource Definitions
 
-Advanced Kubernetes Course - Day 1, Module 5
+Advanced Kubernetes Course
 
 ---
 

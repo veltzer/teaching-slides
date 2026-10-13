@@ -382,7 +382,7 @@ doc_topics = svd.fit_transform(tfidf_matrix)
 
 ## Practical Pipeline
 
-- Tokenize and normalize as in the previous chapter
+- Tokenize and normalize as in the *Text Preprocessing and Tokenization* chapter
 - Build a vocabulary with sensible frequency cutoffs
 - Choose a weighting scheme: `TF-IDF` for retrieval, raw or binary for some classifiers
 - Pick a dimensionality reduction if the downstream model needs dense inputs

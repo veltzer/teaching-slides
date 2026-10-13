@@ -16,9 +16,9 @@ audience:
 
 ---
 
-## Day 5: Image Generation & AI Safety
+## Image Generation & AI Safety
 
-![day_5_image_generation_ai_safety](svg/courses/ai/generative-ai-applications/16_image_generation/day_5_image_generation_ai_safety.svg)
+![image_generation_ai_safety](svg/courses/ai/generative-ai-applications/16_image_generation/image_generation_ai_safety.svg)
 
 ---
 

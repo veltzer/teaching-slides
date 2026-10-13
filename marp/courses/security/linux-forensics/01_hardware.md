@@ -12,7 +12,7 @@ audience:
 
 # Computer Hardware Fundamentals for Forensics
 
-## Course: Linux Forensics - Day 1
+## Course: Linux Forensics
 - Understanding hardware is the foundation of digital forensics
 - Investigators must know how data is physically stored
 - Hardware knowledge helps with evidence acquisition and preservation

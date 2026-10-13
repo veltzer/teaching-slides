@@ -398,11 +398,8 @@ Build the capability once; let every agent plug in.
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - MCP is the standard port between agents and the world
 - Write a tool once; any host can speak to it
 - Start with one trusted server and grow from there
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

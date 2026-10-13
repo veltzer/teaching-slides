@@ -14,7 +14,7 @@ audience:
 
 # Autoscaling in `Kubernetes`
 
-Advanced Kubernetes Course - Day 1, Module 2
+Advanced Kubernetes Course
 
 ---
 

@@ -780,7 +780,7 @@ git instaweb  # Starts local web server
 
 ## Next Up: Merging Changes
 
-In the next session, we'll deep dive into:
+We'll deep dive into:
 
 1. Advanced merging strategies
 1. Conflict resolution techniques
@@ -792,6 +792,6 @@ In the next session, we'll deep dive into:
 
 ---
 
-## Branches Complete! 🎉
+## Branches Recap
 
 ![branches_complete](svg/courses/git/git/06_branches/branches_complete.svg)

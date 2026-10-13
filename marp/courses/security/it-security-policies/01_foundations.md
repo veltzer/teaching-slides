@@ -18,7 +18,7 @@ audience:
 ## Course Overview
 
 - IT Security Policies for all employees
-- One-day course covering essential security awareness
+- Focused course covering essential security awareness
 - No technical background required
 - Goal: practical skills you can use today
 
@@ -168,4 +168,4 @@ Every employee is both a potential vulnerability AND a powerful line of defense.
 
 ## Key Takeaway: Details
 
-- The rest of today: practical steps to protect yourself and the company
+- The rest of the course: practical steps to protect yourself and the company

@@ -14,7 +14,7 @@ audience:
 
 # Observability in `Kubernetes`
 
-Advanced Kubernetes Course - Day 2, Module 2
+Advanced Kubernetes Course
 
 ---
 

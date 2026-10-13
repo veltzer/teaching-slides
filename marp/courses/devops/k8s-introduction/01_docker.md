@@ -32,7 +32,6 @@ audience:
 1. From zero to beginner level
 1. Hands-on with real systems
 1. Real cluster orchestration
-1. 40 hours / 5 days
 
 ---
 
@@ -425,11 +424,11 @@ livenessProbe:
 
 ## Course Journey Ahead
 
-1. **Day 1**: Docker and basics
-1. **Day 2**: Core Kubernetes concepts
-1. **Day 3**: Services and networking
-1. **Day 4**: Storage and configuration
-1. **Day 5**: Production practices
+1. `Docker` and basics
+1. Core `Kubernetes` concepts
+1. Services and networking
+1. Storage and configuration
+1. Production practices
 
 ---
 

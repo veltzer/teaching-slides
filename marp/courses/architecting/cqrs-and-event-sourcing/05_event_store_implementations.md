@@ -63,7 +63,7 @@ audience:
 
 - Append takes `expected_version` — the version the writer thinks the stream is at
 - Store rejects the append if the actual version differs
-- No locks; the writer retries on conflict (we covered this in chapter 3)
+- No locks; the writer retries on conflict (see the *Implementing Commands and Command Handlers* chapter)
 - Cheap to implement; scales well; the write path stays single-writer per aggregate
 
 ---
@@ -174,7 +174,7 @@ ORDER BY version ASC;
 
 - One indexed lookup
 - Returns all events for the aggregate in order
-- Pair with a snapshot table to short-circuit long streams (chapter 7)
+- Pair with a snapshot table to short-circuit long streams (see the *Snapshotting* chapter)
 
 ---
 
@@ -272,9 +272,9 @@ ORDER BY version ASC;
 
 ---
 
-## Snapshotting Is Coming
+## Snapshotting Preview
 
-- We will cover snapshots in chapter 7
+- We cover snapshots in the *Snapshotting* chapter
 - For now: a snapshot is a saved aggregate state at a known version
 - Loading an aggregate becomes "load latest snapshot, then events after that version"
 - Necessary when streams grow into thousands of events

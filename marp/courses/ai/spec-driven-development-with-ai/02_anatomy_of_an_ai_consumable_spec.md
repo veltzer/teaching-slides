@@ -251,7 +251,7 @@ class ExportJob(BaseModel):
 ## Hands-On: Repair a Spec
 
 - You receive a one-page requirements document for a "notification preferences" feature
-- Work in pairs, 25 minutes, with your own agent
+- Work in pairs, with your own agent
 
 1. Rewrite every acceptance criterion in `EARS` form
 1. Add the edge cases, errors and limits the document is silent about

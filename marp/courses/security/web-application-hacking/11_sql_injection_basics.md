@@ -470,4 +470,4 @@ http://localhost:8080/vulnerabilities/sqli/?id=INJECT&Submit=Submit
 - Time-based injection is the slowest but most reliable
 - `information_schema` is the key to mapping databases
 
-> Tomorrow: Advanced SQL Injection & Automation
+> Next: Advanced SQL Injection & Automation

@@ -209,7 +209,7 @@ export PATH="${HOME}/bin:${HOME}/scripts:${HOME}/tools:${PATH}"
 
 ---
 
-## Day 1 Summary
+## Summary: Shell Theory, Variables & Expansion
 - The shell is the interface between you and the kernel
 - `bash` is the standard scripting shell on `Linux`
 - The shell parses commands through multiple expansion stages

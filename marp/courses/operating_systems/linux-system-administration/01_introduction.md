@@ -20,7 +20,7 @@ audience:
 - Managing `Linux` systems in production environments
 - Storage, networking, security, and monitoring
 - Hands-on exercises on `Ubuntu` 24.04
-- 5-day intensive course
+- Intensive course
 
 ---
 
@@ -56,15 +56,15 @@ audience:
 
 ---
 
-## Day-by-Day Schedule
+## Topic Areas
 
-| Day | Topics |
-|-----|--------|
-| Day 1 | Core System Architecture, FHS, Boot, `systemd` |
-| Day 2 | Storage Management, Filesystems, Backups |
-| Day 3 | User Management, Security, `SSH` |
-| Day 4 | Network Services, Firewalls, VPN |
-| Day 5 | Monitoring, Maintenance, Automation |
+| Area | Topics |
+|------|--------|
+| Architecture | Core System Architecture, FHS, Boot, `systemd` |
+| Storage | Storage Management, Filesystems, Backups |
+| Security | User Management, Security, `SSH` |
+| Networking | Network Services, Firewalls, VPN |
+| Operations | Monitoring, Maintenance, Automation |
 
 ---
 

@@ -145,13 +145,13 @@ audience:
 
 ## Course Roadmap
 
-- Chapter 2: principles and what makes a service "micro"
-- Chapter 3-4: decomposition and bounded contexts
-- Chapter 5-6: communication and APIs
-- Chapter 7: data
-- Chapter 8-9: discovery and resilience
-- Chapter 10-12: deployment, testing, observability
-- Chapter 13-14: composition and scaling
+- Principles and what makes a service "micro"
+- Decomposition and bounded contexts
+- Communication and APIs
+- Data
+- Discovery and resilience
+- Deployment, testing, observability
+- Composition and scaling
 
 ---
 

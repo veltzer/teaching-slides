@@ -12,7 +12,7 @@ audience:
 
 # Analyzing Captured Images
 
-## Course: Linux Forensics - Day 4
+## Course: Linux Forensics
 - Once evidence is captured, analysis begins
 - Forensic images are examined without modifying original evidence
 - This module covers image analysis tools, inode analysis,

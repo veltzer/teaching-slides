@@ -13,7 +13,7 @@ audience:
 ---
 
 # Linux Namespaces
-## Chapter 9: Resource Isolation and Control Groups
+## Resource Isolation and Control Groups
 
 ---
 

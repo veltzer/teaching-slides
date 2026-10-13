@@ -41,7 +41,7 @@ audience:
 - It reads files, edits code, runs commands, and uses git — under your control
 - The working directory is its world; your repo is its context
 - You steer it with plain language; it does the mechanical work
-- It is an *agent harness* — everything from the previous lecture applies
+- It is an *agent harness* — everything about agent loops and tools applies
 
 ---
 
@@ -405,11 +405,8 @@ claude -p "run the test suite and report failures" \
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - An agent in the terminal is a colleague, not a vending machine
 - Teach it once in CLAUDE.md; correct it early in the loop
 - Small sessions, clear briefs, and review — that is the whole craft
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

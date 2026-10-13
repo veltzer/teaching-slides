@@ -562,7 +562,7 @@ atq
 atrm 5
 ```
 
-`systemd` timers (covered in chapter 1) offer advantages:
+`systemd` timers (see the *Core System Architecture* chapter) offer advantages:
 - Logged via `journalctl`
 - Dependency management
 - Calendar expressions (`OnCalendar=Mon..Fri *-*-* 09:00`)

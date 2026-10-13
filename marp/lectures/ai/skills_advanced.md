@@ -373,11 +373,8 @@ A skill library is software — engineer it like software.
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - Advanced skills are an exercise in **systems engineering**
 - The artifact is simple; the **interactions** are where the difficulty lives
 - Measure, scope, version, and review
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

@@ -11,7 +11,7 @@ audience:
 ---
 
 # Network Device Overview
-## Chapter 6: Device Drivers and Network Stack Integration
+## Device Drivers and Network Stack Integration
 
 ---
 

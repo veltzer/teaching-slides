@@ -24,7 +24,6 @@ audience:
 ---
 
 ## Course Overview
-- Duration: 3 days (~24 hours)
 - Focus: deep understanding of `bash` scripting
 - Emphasis on real-world patterns and common pitfalls
 - Hands-on: lots of code examples and exercises
@@ -47,9 +46,9 @@ audience:
 ---
 
 ## What You Will Learn
-- Day 1: Shell theory, variables, redirection, globbing
-- Day 2: Writing scripts, syntax, pipes, I/O, multiprocessing
-- Day 3: Functions, arrays, arithmetic, advanced topics
+- Shell theory, variables, redirection, globbing
+- Writing scripts, syntax, pipes, I/O, multiprocessing
+- Functions, arrays, arithmetic, advanced topics
 
 ---
 

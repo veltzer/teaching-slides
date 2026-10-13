@@ -771,7 +771,7 @@ Problem: "Slow execution"
 
 ---
 
-## Day 3 Summary
+## Summary: Advanced Ansible & Real-World Patterns
 
 - Dynamic inventory discovers hosts from cloud APIs
 - Custom modules extend `Ansible` for proprietary systems
@@ -785,7 +785,7 @@ Problem: "Slow execution"
 
 ## Course Summary
 
-**Day 1**: Fundamentals
+**Fundamentals**
 - `Ansible` architecture and agentless design
 - Installation, configuration, `SSH` setup
 - Inventory management (static, groups, variables)
@@ -796,7 +796,7 @@ Problem: "Slow execution"
 
 ## Course Summary (cont.)
 
-**Day 2**: Playbooks, Roles, and Advanced Features
+**Playbooks, Roles, and Advanced Features**
 - Variables, facts, and `Jinja2` templating
 - Conditionals, loops, and filters
 - Roles: structure, creation, `Galaxy`
@@ -808,7 +808,7 @@ Problem: "Slow execution"
 
 ## Course Summary (cont.)
 
-**Day 3**: Advanced Ansible and Real-World Patterns
+**Advanced Ansible and Real-World Patterns**
 - Dynamic inventory (AWS, Azure, GCP)
 - Custom modules and plugins
 - Tower/AWX overview
@@ -836,10 +836,8 @@ Build a complete `Ansible` project that:
 
 ---
 
-## Thank You
+## Next Steps
 
-- Questions and discussion
-- Feedback welcome
 - Continue practicing with your lab environment
 - Join the `Ansible` community forums
 - Consider Red Hat Ansible certification

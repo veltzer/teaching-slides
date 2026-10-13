@@ -159,7 +159,7 @@ spec:
 
 - LoadBalancer: cloud LB
 - NodePort: open port on every node
-- Ingress: HTTP routing (next chapter)
+- Ingress: HTTP routing (see the *Ingress* chapter)
 - Pick by use case
 
 ---

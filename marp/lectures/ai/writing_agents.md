@@ -983,11 +983,8 @@ log_transcript(messages)           # flight recorder
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - The loop is simple; the engineering around it is the craft
 - Start small, measure everything, and grow autonomy with trust
 - The best agent is the one whose failures are boring
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

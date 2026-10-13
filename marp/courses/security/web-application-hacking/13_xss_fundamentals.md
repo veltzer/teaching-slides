@@ -797,4 +797,4 @@ Tasks:
 - Output encoding at the point of rendering is the primary defense
 - Use `DOMPurify` for any required HTML rendering
 
-> Tomorrow: Back-End Attacks & Application Logic
+> Next: Back-End Attacks & Application Logic

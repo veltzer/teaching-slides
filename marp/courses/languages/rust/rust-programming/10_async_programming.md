@@ -11,7 +11,7 @@ audience:
 ---
 
 # Async Programming
-## Chapter 9: Asynchronous Programming in Rust
+## Asynchronous Programming in Rust
 
 ---
 

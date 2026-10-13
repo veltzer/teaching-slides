@@ -438,11 +438,8 @@ The window is a workbench: keep on it exactly what the work needs.
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - One fixed buffer of tokens decides what the model knows right now
 - Lean context is cheaper, faster, and more accurate
 - Files, retrieval, and fresh windows scale beyond any limit
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

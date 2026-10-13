@@ -627,7 +627,7 @@ during the transition period.
 - Propose one extraction candidate with justification
 
 ```misc
-Exercise steps (30 minutes):
+Exercise steps:
 1. Ask the AI: "List the top-level directory structure
    and explain what each module likely does"
 1. Ask: "Find the main entry point(s) of this application"

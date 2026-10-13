@@ -350,11 +350,8 @@ The mental shift is loops → whole-array thinking; the rest follows.
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - Arrays are typed contiguous memory — that is the whole trick
 - Vectorize, broadcast, and mind your views
 - NumPy is the floor the rest of the data stack stands on
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

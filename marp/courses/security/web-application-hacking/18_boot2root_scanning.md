@@ -14,19 +14,17 @@ audience:
 
 # Boot2Root: Scanning & Enumeration
 
-## Day 5: Putting It All Together
+## Putting It All Together
 
 ---
 
-## Day 5 Overview
+## Boot2Root Overview
 
-| Session | Topic |
-|---------|-------|
-| Morning Part 1 | Scanning, enumeration, resource mapping |
-| Morning Part 2 | Testing for injections |
-| Afternoon Part 1 | Code injection & control connections |
-| Afternoon Part 2 | Privilege escalation & persistence |
-| Late Afternoon | CTF exercise |
+- Scanning, enumeration, resource mapping
+- Testing for injections
+- Code injection & control connections
+- Privilege escalation & persistence
+- CTF exercise
 
 ---
 

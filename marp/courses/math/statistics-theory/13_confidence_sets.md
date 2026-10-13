@@ -62,7 +62,7 @@ audience:
 
 ## Construction By Inverting Tests
 
-- **The universal recipe** (the duality of the previous chapter, run as a *construction*): for each candidate value &psi;&#8320;, take a level-&alpha; test of H&#8320;: &psi;(&theta;) = &psi;&#8320; with acceptance region A(&psi;&#8320;); then **C(X) = { &psi;&#8320; : X &isin; A(&psi;&#8320;) }** — the set of values *not rejected* — has coverage &geq; 1&minus;&alpha; for free
+- **The universal recipe** (the duality of the *Hypothesis Testing Theory* chapter, run as a *construction*): for each candidate value &psi;&#8320;, take a level-&alpha; test of H&#8320;: &psi;(&theta;) = &psi;&#8320; with acceptance region A(&psi;&#8320;); then **C(X) = { &psi;&#8320; : X &isin; A(&psi;&#8320;) }** — the set of values *not rejected* — has coverage &geq; 1&minus;&alpha; for free
 - It needs *no pivot* and handles **nuisance parameters** cleanly: use a test that already does (a t-test, an exact conditional test, a profile-likelihood test), and the nuisance is dealt with inside the test
 - Conversely every confidence set defines a family of tests ("reject &psi;&#8320; iff &psi;&#8320; &notin; C(X)") — tests and confidence sets are **the same object viewed two ways**; "&psi;&#8320; &notin; 95% CI" &hArr; "reject &psi; = &psi;&#8320; at level 0.05"
 
@@ -92,7 +92,7 @@ audience:
 
 ## Asymptotic Intervals: Wald, Score, Likelihood-Ratio
 
-- Three asymptotically-equivalent 1&minus;&alpha; intervals for a scalar &theta;, dual to the three tests of Chapter 11&ndash;12, each "centered" differently:
+- Three asymptotically-equivalent 1&minus;&alpha; intervals for a scalar &theta;, dual to the three tests of the *Maximum Likelihood and Asymptotics* and *Hypothesis Testing Theory* chapters, each "centered" differently:
     - **Wald**: &theta;&#770; &plusmn; z&#8901; / &radic;( I_n(&theta;&#770;) ) (or use observed information / a robust sandwich SE) — trivial to compute, but **not parametrization-invariant** (a Wald interval for &sigma; isn't the square root of one for &sigma;&sup2;), can stray outside the parameter space (negative variances, probabilities &gt; 1), and is poor near boundaries or under weak identification
     - **Score (Rao)**: { &theta;&#8320; : &#8467;'(&theta;&#8320;)&sup2; / I_n(&theta;&#8320;) &leq; z&#8901;&sup2; } — needs only the *restricted* fit, naturally respects the parameter range; the Wilson interval for a binomial p is exactly the score interval (and far out-performs the Wald "p&#770; &plusmn; z&radic;(p&#770;(1&minus;p&#770;)/n)" near 0 and 1)
 
@@ -100,7 +100,7 @@ audience:
 
 ## Asymptotic Intervals: Wald, Score, Likelihood-Ratio (cont.)
 
-- Three asymptotically-equivalent 1&minus;&alpha; intervals for a scalar &theta;, dual to the three tests of Chapter 11&ndash;12, each "centered" differently:
+- Three asymptotically-equivalent 1&minus;&alpha; intervals for a scalar &theta;, dual to the three tests of the *Maximum Likelihood and Asymptotics* and *Hypothesis Testing Theory* chapters, each "centered" differently:
     - **Likelihood-ratio (profile)**: { &theta;&#8320; : 2[ &#8467;(&theta;&#770;) &minus; &#8467;_profile(&theta;&#8320;) ] &leq; &chi;&sup2;&#8321;,&#8321;&#8331;&#945; } — **parametrization-invariant**, generally the best finite-sample coverage, the recommended default; just possibly disconnected or asymmetric (which is *honest* when the likelihood is)
 
 ---

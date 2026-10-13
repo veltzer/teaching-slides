@@ -36,7 +36,7 @@ audience:
 - A single "typical value" is the first compression
 - But "typical" has three different meanings
 - Pick the wrong one and you mislead — sometimes on purpose
-- Always pair center with spread (next chapter)
+- Always pair center with spread (see the *Summarizing Data: Spread and Shape* chapter)
 
 ---
 

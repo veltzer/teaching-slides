@@ -180,7 +180,7 @@ source ~/.bashrc
 
 ---
 
-## Day 3 & Course Summary
+## Summary: Functions, Types & Advanced
 - Functions: use `local`, return codes vs stdout, namerefs
 - Variable types: strings (default), integers, arrays, assoc. arrays
 - Arithmetic: `$(( ))` for integers, `bc`/`awk` for floats
@@ -225,7 +225,7 @@ Code Quality:
 
 ---
 
-## Thank You!
+## Closing Thoughts
 - Practice daily: automate one task per week
 - Read other people's scripts (in `/etc/init.d/`, GitHub)
 - Start simple, add complexity only when needed

@@ -112,7 +112,7 @@ audience:
 
 - Don't ship `v1` and hope to never make a breaking change
 - Plan for change; version explicitly
-- We cover versioning in chapter 4
+- We cover versioning in the *Versioning Strategies* chapter
 
 ---
 
@@ -121,7 +121,7 @@ audience:
 - Authentication is required, not optional
 - Authorization checks happen on the server, not the client
 - Sensitive data is filtered from responses
-- We cover this in chapter 9
+- We cover this in the *Authentication and Security* chapter
 
 ---
 

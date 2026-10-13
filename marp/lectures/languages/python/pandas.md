@@ -345,11 +345,8 @@ One real dataset teaches more than ten tutorials.
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - DataFrames are labeled, typed columns sharing an index
 - Select with intent, stay vectorized, reshape freely
 - pandas is the lingua franca — speak it well before optimizing
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

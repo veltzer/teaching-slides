@@ -32,7 +32,7 @@ Good prompt:
   → Precise, structured, actionable output
 ```
 
-**Prompt engineering is the primary interface** for working with generative AI — it's the most important skill for Day 2.
+**Prompt engineering is the primary interface** for working with generative AI — it's the most important skill when working with model `API`s.
 
 ---
 

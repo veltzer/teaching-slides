@@ -14,7 +14,7 @@ audience:
 
 # Authentication Technologies & Design Flaws
 
-## Day 2: Breaking and Securing Login Mechanisms
+## Breaking and Securing Login Mechanisms
 
 ---
 
@@ -24,15 +24,13 @@ audience:
 
 ---
 
-## Day 2 Overview
+## Login and Sessions Overview
 
-| Session | Topic |
-|---------|-------|
-| Morning Part 1 | Authentication technologies & design flaws |
-| Morning Part 2 | Brute-forcing & implementation flaws |
-| Afternoon Part 1 | Securing authentication |
-| Afternoon Part 2 | Session management attacks |
-| Late Afternoon | SQL injection basics |
+- Authentication technologies & design flaws
+- Brute-forcing & implementation flaws
+- Securing authentication
+- Session management attacks
+- SQL injection basics
 
 ---
 

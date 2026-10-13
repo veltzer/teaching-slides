@@ -50,7 +50,7 @@ audience:
 - One log line = one JSON object
 - Searchable, filterable, alertable
 - Common fields: timestamp, level, service, trace_id, message
-- See twelve-factor course chapter 11
+- See the *Factor XI: Logs* chapter of the *Twelve-Factor App* course
 
 ---
 

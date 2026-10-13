@@ -18,7 +18,7 @@ audience:
 
 ## Welcome to Generative AI Applications
 
-A comprehensive 5-day course covering the full landscape of generative AI
+A comprehensive course covering the full landscape of generative AI
 
 **Course Goals:**
 - Understand the foundations of generative AI models
@@ -31,13 +31,13 @@ A comprehensive 5-day course covering the full landscape of generative AI
 
 ## Course Structure
 
-| Day | Topic | Focus |
-|-----|-------|-------|
-| 1 | Overview & Foundations | How generative AI works |
-| 2 | APIs of Generative Models | Prompt engineering & fine-tuning |
-| 3 | Agents, Memory & `LangChain` | Building intelligent systems |
-| 4 | Open Source Models | `HuggingFace`, `LoRA`, `QLoRA` |
-| 5 | Image Generation & AI Safety | Diffusion, bias, deep fakes |
+| Topic | Focus |
+|-------|-------|
+| Overview & Foundations | How generative AI works |
+| APIs of Generative Models | Prompt engineering & fine-tuning |
+| Agents, Memory & `LangChain` | Building intelligent systems |
+| Open Source Models | `HuggingFace`, `LoRA`, `QLoRA` |
+| Image Generation & AI Safety | Diffusion, bias, deep fakes |
 
 ---
 
@@ -49,7 +49,7 @@ To get the most from this course, you should have:
 - Familiarity with basic machine learning concepts
 - A computer with `Python` 3.10+ installed
 - Access to `OpenAI` API key (provided during class)
-- Optional: GPU access for Day 4–5 exercises
+- Optional: GPU access for the open-source model and image generation exercises
 
 ---
 
@@ -147,7 +147,7 @@ Each topic follows this pattern:
 1. **Practice** — Hands-on exercises
 1. **Discussion** — Real-world applications and limitations
 
-**Every day includes:**
+**Throughout the course:**
 - Live coding demonstrations
 - Guided exercises
 - Open Q&A sessions
@@ -176,19 +176,19 @@ Each topic follows this pattern:
 ```python
 # Core libraries used throughout the course
 
-# Day 1-2: API and prompting
+# API and prompting
 from openai import OpenAI       # OpenAI API client
 import tiktoken                 # Token counting
 
-# Day 2: Evaluation
+# Evaluation
 from rouge_score import rouge_scorer  # Text evaluation
 from bert_score import score          # Semantic evaluation
 
-# Day 3: Agents and RAG
+# Agents and RAG
 import langchain                # LLM application framework
 import chromadb                 # Vector database
 
-# Day 4: Open source models
+# Open source models
 from transformers import (      # HuggingFace models
     AutoModelForCausalLM,
     AutoTokenizer,
@@ -200,7 +200,7 @@ from peft import (              # Parameter efficient fine-tuning
 )
 from datasets import load_dataset  # HuggingFace datasets
 
-# Day 5: Image generation
+# Image generation
 from diffusers import (         # Image generation
     StableDiffusionPipeline,
     StableDiffusionXLPipeline,
@@ -223,20 +223,9 @@ from diffusers import (         # Image generation
 
 ---
 
-## Daily Schedule
+## Exercise Levels
 
 ```output
-Each day follows this structure:
-
-09:00 - 10:30  │ Morning session (theory + demos)
-10:30 - 10:45  │ Break
-10:45 - 12:15  │ Deep dive (code examples + practice)
-12:15 - 13:15  │ Lunch
-13:15 - 14:45  │ Afternoon session (hands-on exercises)
-14:45 - 15:00  │ Break
-15:00 - 16:30  │ Advanced topics + Q&A
-16:30 - 17:00  │ Day summary + preview of tomorrow
-
 Exercises: Work at your own pace.
   ★      = Essential (everyone should complete)
   ★★     = Recommended (solidifies understanding)
@@ -252,24 +241,24 @@ Real-world GenAI application uses ALL the skills:
 
 EXAMPLE: Customer support chatbot
 
-Day 1 knowledge:
+Foundations:
   └─ Choose the right model for cost/quality tradeoff
 
-Day 2 knowledge:
+APIs and prompting:
   └─ Design effective system prompts
   └─ Use function calling for ticket creation
   └─ Fine-tune for your company's tone
 
-Day 3 knowledge:
+Agents and memory:
   └─ RAG over your knowledge base
   └─ Conversation memory for context
   └─ Agent routing for complex queries
 
-Day 4 knowledge:
+Open source models:
   └─ Deploy locally for data privacy
   └─ LoRA fine-tune for your domain
 
-Day 5 knowledge:
+Quality, bias and safety:
   └─ Evaluate response quality
   └─ Monitor for bias
   └─ Implement safety guardrails

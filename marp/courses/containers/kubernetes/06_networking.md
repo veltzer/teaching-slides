@@ -141,7 +141,7 @@ spec:
 ## External Traffic
 
 - LoadBalancer: cloud LB
-- Ingress: HTTP routing (next chapter)
+- Ingress: HTTP routing (see the *Ingress* chapter)
 - Gateway API: newer alternative
 
 ---

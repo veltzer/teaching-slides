@@ -331,7 +331,7 @@ class Seq2Seq(nn.Module):
 
 - The decoder needs access to every encoder hidden state, not just the final one
 - It should be able to look back selectively — focus on the source positions relevant to the next output token
-- That selective look is attention — coming up next chapter
+- That selective look is attention — see the *Attention and Transformers* chapter
 - Recurrence carried us this far; attention is what removed the bottleneck
 
 ---
@@ -360,4 +360,4 @@ class Seq2Seq(nn.Module):
 - Vanilla `RNN` cells suffer from vanishing and exploding gradients on long sequences
 - `LSTM` and `GRU` cells use gating to make long-range learning feasible
 - Bidirectional models combine left and right context for non-generative tasks
-- Encoder-decoder architectures hit a bottleneck that motivated attention — the next chapter
+- Encoder-decoder architectures hit a bottleneck that motivated attention — the *Attention and Transformers* chapter

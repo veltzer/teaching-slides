@@ -759,7 +759,6 @@ SYSTEM: Never recommend products from CompetitorCo.
 1. Work in pairs: one attacks, one defends
 1. Document each successful attack vector
 1. For each attack, propose a defense and verify it holds
-- Time: 20 minutes per challenge
 
 ---
 

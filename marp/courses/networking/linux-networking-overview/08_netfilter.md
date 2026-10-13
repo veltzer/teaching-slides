@@ -13,7 +13,7 @@ audience:
 ---
 
 # Netfilters
-## Chapter 8: Network Packet Filtering Framework
+## Network Packet Filtering Framework
 
 ---
 

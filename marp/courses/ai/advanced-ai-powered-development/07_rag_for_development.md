@@ -677,7 +677,7 @@ collection = client.get_or_create_collection("code")
 # Add chunks, query, and build from here
 ```
 
-- Target: a working prototype in under 60 minutes
+- Target: a working prototype you can query
 
 ---
 

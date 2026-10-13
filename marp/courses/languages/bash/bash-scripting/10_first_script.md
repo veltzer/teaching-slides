@@ -23,7 +23,7 @@ audience:
 
 ---
 
-## Day 2: Scripts, Syntax & I/O
+## Scripts, Syntax & I/O
 - Writing and running scripts
 - Control flow: conditionals, loops
 - Pipes and how they work

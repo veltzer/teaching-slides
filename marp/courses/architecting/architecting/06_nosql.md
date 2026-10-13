@@ -43,7 +43,7 @@ In return you get horizontal scalability, flexible schemas, and models that fit 
 
 ## CAP Recap
 
-From chapter 2: during a network partition, a distributed system can guarantee either **Consistency** or **Availability**, not both.
+From the *Distributed Systems Theory* chapter: during a network partition, a distributed system can guarantee either **Consistency** or **Availability**, not both.
 
 - **CP** systems — refuse writes during partition to preserve correctness (HBase, MongoDB with majority writes)
 - **AP** systems — stay available and reconcile later (Cassandra, DynamoDB, Riak)

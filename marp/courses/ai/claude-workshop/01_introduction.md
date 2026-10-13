@@ -160,7 +160,7 @@ audience:
 
 ## Workshop Ground Rules
 
-- We work on a real repo all day
+- We work on a real repo throughout
 - Capture prompts, configs, outputs
 - Break things on purpose
 - Ask out loud, not in DMs

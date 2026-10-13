@@ -10,7 +10,7 @@ audience:
 ---
 
 # Structs and Enums
-## Chapter 4: Custom Data Types in Rust
+## Custom Data Types in Rust
 
 ---
 

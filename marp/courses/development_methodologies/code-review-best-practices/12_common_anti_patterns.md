@@ -122,7 +122,7 @@ audience:
 - Reviewers can't actually review it
 - Approved by "trust"
 - Bugs make it through
-- Solution: split (covered in chapter 7)
+- Solution: split (see the *PR Size and Structure* chapter)
 
 ---
 
@@ -152,7 +152,7 @@ audience:
 - Reviewers stop commenting
 - Quality declines
 - Often: imposter syndrome, fear of being wrong
-- Fix: receive feedback gracefully (chapter 6)
+- Fix: receive feedback gracefully (see the *Receiving Feedback Gracefully* chapter)
 
 ---
 

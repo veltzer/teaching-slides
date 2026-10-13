@@ -115,7 +115,7 @@ audience:
 - Teach the principles that work across formats
 - Cover the document types engineers actually write
 - Cover the tools the industry uses
-- Practical advice you can apply tomorrow
+- Practical advice you can apply right away
 - Habits that compound over a career
 
 ---

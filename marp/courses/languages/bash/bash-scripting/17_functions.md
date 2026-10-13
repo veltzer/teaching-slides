@@ -17,7 +17,7 @@ audience:
 
 ---
 
-## Day 3: Functions, Types & Advanced
+## Functions, Types & Advanced
 - Functions: definition, return codes, parameters
 - Variable types: strings, arrays, associative arrays
 - Arithmetic: integer and floating point

@@ -212,7 +212,7 @@ tmsh show sys provision
 - Browsers warn about it; production replaces it with a CA signed one
 - System > Certificate Management > Device Certificate Management
 - Files: `/config/httpd/conf/ssl.crt/server.crt` and `ssl.key/server.key`
-- Device trust between `BIG-IP` systems (day 3) also uses these certificates
+- Device trust between `BIG-IP` systems (covered with high availability) also uses these certificates
 
 ---
 

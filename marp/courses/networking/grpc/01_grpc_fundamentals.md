@@ -184,15 +184,15 @@ audience:
 
 ## Course Roadmap
 
-- Chapter 2: Protocol Buffers syntax
-- Chapter 3: The four RPC types
-- Chapter 4: Streaming patterns
-- Chapter 5: Metadata, errors, deadlines
-- Chapter 6: Interceptors
-- Chapter 7: Authentication and security
-- Chapter 8: Load balancing and health
-- Chapter 9: gRPC-Web and Gateway
-- Chapter 10: Testing and performance
+- Protocol Buffers syntax
+- The four RPC types
+- Streaming patterns
+- Metadata, errors, deadlines
+- Interceptors
+- Authentication and security
+- Load balancing and health
+- gRPC-Web and Gateway
+- Testing and performance
 
 ---
 

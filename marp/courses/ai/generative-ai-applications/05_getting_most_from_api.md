@@ -16,9 +16,9 @@ audience:
 
 ---
 
-## Day 2: APIs of Generative Models
+## APIs of Generative Models
 
-![day_2_apis_of_generative_models](svg/courses/ai/generative-ai-applications/05_getting_most_from_api/day_2_apis_of_generative_models.svg)
+![apis_of_generative_models](svg/courses/ai/generative-ai-applications/05_getting_most_from_api/apis_of_generative_models.svg)
 
 ---
 

@@ -12,7 +12,7 @@ audience:
 ---
 
 # The Linux Networking Stack
-## Chapter 2: Architecture and Implementation
+## Architecture and Implementation
 
 ---
 

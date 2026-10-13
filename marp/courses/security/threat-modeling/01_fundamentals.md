@@ -220,13 +220,13 @@ audience:
 
 ## Course Roadmap
 
-- Chapter 2 — Data flow diagrams: the foundation
-- Chapter 3 — STRIDE: systematic threat enumeration
-- Chapter 4 — DREAD: ranking what we found
-- Chapter 5 — Attack trees and PASTA
-- Chapter 6 — LINDDUN for privacy
-- Chapter 7 — Modeling for microservices, cloud, APIs
-- Chapter 8 — Integrating threat modeling and tracking remediation
+- Data flow diagrams: the foundation
+- STRIDE: systematic threat enumeration
+- DREAD: ranking what we found
+- Attack trees and PASTA
+- LINDDUN for privacy
+- Modeling for microservices, cloud, APIs
+- Integrating threat modeling and tracking remediation
 
 ---
 

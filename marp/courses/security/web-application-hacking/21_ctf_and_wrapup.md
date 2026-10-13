@@ -25,7 +25,6 @@ audience:
 - Multiple challenges of varying difficulty
 - Each challenge contains a hidden flag
 - Flags follow the format: `FLAG{description_here}`
-- Time limit: 3 hours
 - Work individually or in pairs
 - Hints available (but cost points!)
 
@@ -58,10 +57,10 @@ Total: **1100 points** available
 7. Think OUTSIDE the box for logic challenges
 8. DOCUMENT your steps (needed for the report)
 
-Time Management:
-  First 30 min:  Scan everything, get the big picture
-  Next 90 min:   Work through challenges systematically
-  Last 60 min:   Focus on remaining flags + documentation
+Pacing:
+  First:    Scan everything, get the big picture
+  Then:     Work through challenges systematically
+  Finally:  Focus on remaining flags + documentation
 ```
 
 ---
@@ -293,9 +292,9 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 
 ---
 
-## Course Review: Day 1
+## Course Review: (In)security & Mapping
 
-Web Application (In)security & Mapping - Key takeaways:
+Key takeaways:
 - Web applications are the #1 attack vector
 - Technology stack identification guides testing
 - Burp Suite is the essential testing tool
@@ -305,9 +304,9 @@ Web Application (In)security & Mapping - Key takeaways:
 
 ---
 
-## Course Review: Day 2
+## Course Review: Authentication, Sessions & SQLi Basics
 
-Authentication & Session Attacks + SQL Injection Basics - Key takeaways:
+Key takeaways:
 - Authentication flaws enable account takeover
 - Password spraying and credential stuffing are effective
 - Session management requires cryptographic randomness
@@ -317,9 +316,9 @@ Authentication & Session Attacks + SQL Injection Basics - Key takeaways:
 
 ---
 
-## Course Review: Day 3
+## Course Review: Advanced SQL Injection & XSS
 
-Advanced SQL Injection & XSS - Key takeaways:
+Key takeaways:
 - `UNION`-based, blind, and time-based `SQL injection` techniques
 - `sqlmap` automates detection and exploitation
 - Filter bypass requires creative encoding
@@ -330,9 +329,9 @@ Advanced SQL Injection & XSS - Key takeaways:
 
 ---
 
-## Course Review: Day 4
+## Course Review: Back-End Attacks, Logic Flaws & Hardening
 
-Back-End Attacks, Logic Flaws & Hardening - Key takeaways:
+Key takeaways:
 - OS command injection gives full system access
 - File path attacks read/write arbitrary files
 - Deserialization is extremely dangerous
@@ -343,9 +342,9 @@ Back-End Attacks, Logic Flaws & Hardening - Key takeaways:
 
 ---
 
-## Course Review: Day 5
+## Course Review: Boot2Root & CTF
 
-Boot2Root & CTF - Key takeaways:
+Key takeaways:
 - Systematic methodology from scanning to root
 - Chain multiple vulnerabilities for full compromise
 - Privilege escalation exploits misconfigurations
@@ -459,11 +458,8 @@ Appendices:
 
 ---
 
-## Thank You
+## Key Skills Acquired
 
-### Web Application Hacking Course Complete
-
-Key skills acquired:
 - Web application reconnaissance and mapping
 - Authentication and session attack techniques
 - `SQL injection` detection and exploitation
@@ -471,7 +467,7 @@ Key skills acquired:
 
 ---
 
-## Thank You (cont.)
+## Key Skills Acquired (cont.)
 
 - Back-end attack techniques
 - Privilege escalation methodology

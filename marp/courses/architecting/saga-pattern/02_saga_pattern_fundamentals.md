@@ -229,9 +229,9 @@ def reserve_inventory(reservation_id, items):
 
 ## What We Cover in the Rest of the Course
 
-- Chapters 3-4: each style in depth
-- Chapter 5: compensation design — semantic rollback, pivot transactions, non-compensatable steps
-- Chapter 6: testing, debugging, monitoring, and operating sagas
+- Each style in depth
+- Compensation design — semantic rollback, pivot transactions, non-compensatable steps
+- Testing, debugging, monitoring, and operating sagas
 
 ---
 

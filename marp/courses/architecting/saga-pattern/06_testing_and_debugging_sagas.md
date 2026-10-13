@@ -324,12 +324,12 @@ def test_OrderPlaced_contract():
 
 ## Course Recap
 
-- Chapter 1: distributed transactions, why 2PC fails, eventual consistency contract
-- Chapter 2: saga fundamentals
-- Chapter 3: choreography
-- Chapter 4: orchestration
-- Chapter 5: compensations and pivots
-- Chapter 6: testing, debugging, monitoring
+- Distributed transactions, why 2PC fails, eventual consistency contract
+- Saga fundamentals
+- Choreography
+- Orchestration
+- Compensations and pivots
+- Testing, debugging, monitoring
 
 ---
 

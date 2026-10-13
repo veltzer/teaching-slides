@@ -174,7 +174,7 @@ class OrderSummaryProjection:
     1. **Inline** — update the read model in the same transaction as the event append
     1. **Asynchronous** — a subscriber tails the event log and projects later
     1. **On-demand** — replay the events when the query arrives
-- Most production systems use asynchronous; chapter 6 goes deep
+- Most production systems use asynchronous; the *Eventual Consistency and Projections* chapter goes deep
 
 ---
 

@@ -11,7 +11,7 @@ audience:
 ---
 
 # Network C Programming Essentials
-## Chapter 3: Socket Programming in Linux
+## Socket Programming in Linux
 
 ---
 

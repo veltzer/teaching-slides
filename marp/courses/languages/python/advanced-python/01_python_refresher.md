@@ -11,9 +11,9 @@ audience:
 # Python Refresher
 
 ## Overview
-- 2-hour refresher on Python fundamentals
+- Refresher on Python fundamentals
 - Review of basic concepts for advanced Python developers
-- Foundation for more complex topics in later chapters
+- Foundation for more complex topics in the rest of the course
 
 ---
 
@@ -410,9 +410,8 @@ for i in range(3):
 
 ---
 
-## Next Chapter Preview
+## Next Up: Idiomatic Python
 
-## Idiomatic Python
 - Writing more Pythonic code
 - Leveraging Python's built-in features effectively
 - Using standard libraries the way they were designed

@@ -14,7 +14,7 @@ audience:
 
 # Cluster Provisioning
 
-Advanced Kubernetes Course - Day 2, Module 1
+Advanced Kubernetes Course
 
 ---
 

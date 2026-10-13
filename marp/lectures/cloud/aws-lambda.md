@@ -276,9 +276,3 @@ def handler(event, context):
 - Scales automatically; you pay only for what you use
 - Mind cold starts, concurrency, IAM, and idempotency
 - Ideal for event-driven, bursty, glue-style workloads
-
----
-
-## Thank You
-## Mark Veltzer
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

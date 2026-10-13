@@ -11,7 +11,7 @@ audience:
 
 # Project Structure and Tools
 
-## Chapter 10: Organizing and Managing Rust Projects
+## Organizing and Managing Rust Projects
 
 ---
 

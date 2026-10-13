@@ -12,7 +12,7 @@ audience:
 
 # Working with Volatile Memory
 
-## Course: Linux Forensics - Day 4 (continued)
+## Course: Linux Forensics
 - RAM contains evidence unavailable on disk
 - Volatile memory is lost when system powers off
 - Running processes, network connections, and encryption keys live in RAM

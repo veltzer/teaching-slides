@@ -924,7 +924,7 @@ git reset --hard HEAD@{2}
 
 ## Next Up: Configuration
 
-In the next session, we'll explore:
+We'll explore:
 
 1. Configuring Git for your workflow
 1. Setting up aliases for efficiency
@@ -935,6 +935,6 @@ In the next session, we'll explore:
 
 ---
 
-## Git Basics Complete! 🎉
+## Git Basics Recap
 
 ![git_basics_complete](svg/courses/git/git/02_basics/git_basics_complete.svg)

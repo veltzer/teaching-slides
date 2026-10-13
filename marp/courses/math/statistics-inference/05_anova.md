@@ -66,7 +66,7 @@ audience:
 - **Normality** of residuals (or large groups, via the CLT)
 - **Homogeneity of variance** (homoscedasticity) — roughly equal spread across groups; check with Levene's test or a residual plot
 - Unequal variances? Use **Welch's ANOVA** — the multi-group analog of Welch's t-test
-- Badly non-normal with small groups? Use the **Kruskal&ndash;Wallis** test (later chapter)
+- Badly non-normal with small groups? Use the **Kruskal&ndash;Wallis** test (see the *Non-Parametric Tests* chapter)
 
 ---
 

@@ -167,8 +167,8 @@ audience:
 
 ## What This Course Will Do
 
-- Day 1: how to *collect* data and make it usable
-- Day 2: frameworks for *thinking* about data
-- Day 3: *tools* — from spreadsheet to data lake
-- Day 4: *advanced topics* — AI, big data, what's coming
+- How to *collect* data and make it usable
+- Frameworks for *thinking* about data
+- *Tools* — from spreadsheet to data lake
+- *Advanced topics* — AI, big data, what's coming
 - Throughout: the *business* lens, not the technical one

@@ -136,7 +136,7 @@ audience:
 - Don't try to "be compliant" all at once — pick the highest-risk gaps first
 - **Threat model** the system → the model tells you which `Top` 10 items actually apply
 - Turn the standard into a **PR review checklist** — make it part of the normal flow
-- Automate what you can: `SAST`, dependency scans, secret scanning in `CI` (next chapter)
+- Automate what you can: `SAST`, dependency scans, secret scanning in `CI` (see the *CI/CD Security* chapter)
 - Track exceptions explicitly — a documented, time-boxed exception beats silent non-compliance
 - Map your controls to the framework once, maintain the map, reuse it for every audit
 

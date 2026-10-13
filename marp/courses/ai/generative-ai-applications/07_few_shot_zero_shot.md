@@ -453,7 +453,7 @@ Test tickets:
 1. **5-8 examples** is typically the sweet spot
 1. **Balance** examples across all categories
 1. **Many-shot** (50+) with long context windows approaches fine-tuning quality
-1. When few-shot isn't enough, consider **fine-tuning** (covered later today)
+1. When few-shot isn't enough, consider **fine-tuning** (covered later)
 
 ---
 

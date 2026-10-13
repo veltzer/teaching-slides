@@ -354,7 +354,7 @@ def upcast(raw: dict) -> Event:
 
 ## CQRS Without Event Sourcing
 
-- The two patterns are independent (we covered this in chapter 1)
+- The two patterns are independent (see the *Introduction to CQRS* chapter)
 - Reminder: CQRS splits read and write models; ES is about persistence format
 - Many production systems use one without the other
 

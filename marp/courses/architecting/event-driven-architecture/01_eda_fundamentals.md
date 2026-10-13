@@ -218,12 +218,12 @@ audience:
 
 ## Course Roadmap
 
-- Chapter 2: brokers and streaming platforms
-- Chapter 3: event sourcing and CQRS
-- Chapter 4: reliability and delivery guarantees
-- Chapter 5: sagas and choreography
-- Chapter 6: schema evolution
-- Chapter 7: microservices in practice
+- Brokers and streaming platforms
+- Event sourcing and CQRS
+- Reliability and delivery guarantees
+- Sagas and choreography
+- Schema evolution
+- Microservices in practice
 
 ---
 

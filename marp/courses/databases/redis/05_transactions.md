@@ -666,4 +666,4 @@ return redis.call('ZREVRANGE', KEYS[1], 0, 9, 'WITHSCORES') -- Top 10
 - Redis 7.0+ offers improved Function commands
 - Both features enable building complex, atomic operations
 
-Next chapter: Redis Persistence
+Next up: the *Redis Persistence* chapter

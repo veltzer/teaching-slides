@@ -145,7 +145,7 @@ atomic_fetch_add(&counter, 1);
 - The basic mutual-exclusion primitive
 - Linux: futex underneath; cheap when uncontended, syscall when contended
 - Worst case: arbitrary wait
-- For RT: use priority inheritance mutexes (next chapter)
+- For RT: use priority inheritance mutexes (see the *Real-Time and Scheduling* chapter)
 - Keep critical sections short
 
 ---

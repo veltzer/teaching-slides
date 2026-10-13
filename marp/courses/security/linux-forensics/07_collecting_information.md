@@ -12,7 +12,7 @@ audience:
 
 # Collecting Information
 
-## Course: Linux Forensics - Day 3 (continued)
+## Course: Linux Forensics
 - Systematic evidence collection is the foundation of forensic investigation
 - Every artifact must be documented and preserved
 - This module covers program execution evidence, hidden files, network artifacts,

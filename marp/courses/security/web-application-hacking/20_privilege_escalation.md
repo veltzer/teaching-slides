@@ -489,7 +489,7 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 - Only attack the designated target
 - Document every step
 - Try to use multiple techniques
-- Ask for hints if stuck for more than 20 minutes
+- Ask for hints if you stay stuck
 
 ---
 

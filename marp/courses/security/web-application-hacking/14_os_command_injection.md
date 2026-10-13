@@ -14,19 +14,17 @@ audience:
 
 # OS Command Injection
 
-## Day 4: Executing System Commands Through Web Applications
+## Executing System Commands Through Web Applications
 
 ---
 
-## Day 4 Overview
+## Back-End Attacks Overview
 
-| Session | Topic |
-|---------|-------|
-| Morning Part 1 | OS Command Injection |
-| Morning Part 2 | File Path Manipulation & Deserialization |
-| Afternoon Part 1 | Logic Flaws |
-| Afternoon Part 2 | OS & Server Hardening |
-| Late Afternoon | Web Server Hardening & Defense Labs |
+- OS Command Injection
+- File Path Manipulation & Deserialization
+- Logic Flaws
+- OS & Server Hardening
+- Web Server Hardening & Defense Labs
 
 ---
 

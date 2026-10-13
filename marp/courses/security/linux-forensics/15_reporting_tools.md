@@ -12,7 +12,7 @@ audience:
 
 # Tools for Correct Reporting
 
-## Course: Linux Forensics - Day 5 (continued)
+## Course: Linux Forensics
 - Specialized tools streamline forensic reporting
 - `Autopsy` provides integrated case management and analysis
 - `Dradis` centralizes findings and generates reports
@@ -722,12 +722,12 @@ Required Deliverables:
 
 ## Course Summary: Linux Forensics
 
-### Day 1: Hardware & OS Structure
+### Hardware & OS Structure
 - Drive anatomy, SSD forensic implications
 - `Linux` filesystem hierarchy
 - `systemd`, users, groups, shells
 
-### Day 2: Forensic Fundamentals
+### Forensic Fundamentals
 - Hashes for evidence integrity
 - OS artifacts and user activity
 - Password files and data structures
@@ -736,12 +736,12 @@ Required Deliverables:
 
 ## Course Summary: Linux Forensics (cont.)
 
-### Day 3: Collecting Evidence
+### Collecting Evidence
 - Data carving with `foremost`, `scalpel`, `bulk_extractor`
 - System and network information collection
 - Drive imaging with `dd`, `dcfldd`, FTK, `LiME`
 
-### Day 4: Analysis
+### Analysis
 - Image analysis with The Sleuth Kit
 - `strace`, `ltrace`, `ftrace`, `GDB` for advanced analysis
 - Volatile memory analysis and syscall-hook detection
@@ -751,7 +751,7 @@ Required Deliverables:
 
 ## Course Summary: Linux Forensics (cont.)
 
-### Day 5: Reporting and Capstone
+### Reporting and Capstone
 - Anti-forensics detection and countermeasures
 - Report structure, Autopsy, and Dradis
 - Capstone investigation of a compromised system

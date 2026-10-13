@@ -36,7 +36,7 @@ audience:
 - &beta;&#8320; (intercept) and &beta;&#8321; (slope) are the population parameters we estimate
 - The noise &epsilon; is assumed to have mean 0, constant variance &sigma;&sup2;, and to be independent across observations (and roughly normal, for small-sample inference)
 - We observe noisy points and want to recover (and bound) &beta;&#8320; and &beta;&#8321;, and predict new y's
-- "Simple" = one predictor; the next chapter does many
+- "Simple" = one predictor; the *Multiple Regression* chapter does many
 
 ---
 
@@ -100,7 +100,7 @@ audience:
 
 - Curved relationship? Try a **log transform** of y, of x, or both — `log(y) ~ log(x)` fits a power law as a line
 - Non-constant variance often improves under a log or square-root transform of y
-- y is a count or a 0/1 outcome? A straight line is the wrong model — use Poisson or logistic regression (next chapters)
+- y is a count or a 0/1 outcome? A straight line is the wrong model — use Poisson or logistic regression (see the *Logistic Regression* chapter)
 - Extreme outliers? Robust regression, or fix the data — don't just hope
 - **Never extrapolate** far beyond the observed range of x; the line is a local approximation, not a law of nature
 

@@ -14,7 +14,7 @@ audience:
 
 # Deploying Resilient Applications in `Kubernetes`
 
-Advanced Kubernetes Course - Day 1, Module 1
+Advanced Kubernetes Course
 
 ---
 

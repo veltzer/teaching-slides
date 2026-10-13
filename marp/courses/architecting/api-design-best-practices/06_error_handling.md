@@ -184,7 +184,7 @@ audience:
 - A retried operation should produce the same result on success
 - For errors, the retry might succeed (transient) or fail again (permanent)
 - The error response should indicate which: status 5xx (retry) vs 4xx (don't)
-- We cover idempotency in chapter 7
+- We cover idempotency in the *Rate Limiting and Idempotency* chapter
 
 ---
 

@@ -486,9 +486,9 @@ Bonus:
 
 ---
 
-## Day 3 Summary and Q&A
+## Summary: Agents, Memory and LangChain
 
-**What we covered today:**
+**What we covered:**
 - AI agents: architecture, planning, and the observe-think-act loop
 - Memory systems: buffer, summary, vector, and entity memory
 - RAG: retrieval-augmented generation for knowledge-grounded responses
@@ -497,7 +497,7 @@ Bonus:
 
 **Key insight:** The combination of `LLM` reasoning + external tools + persistent memory unlocks a new class of intelligent applications.
 
-**Tomorrow:** We move to open-source models with `HuggingFace` and efficient fine-tuning techniques.
+**Next:** We move to open-source models with `HuggingFace` and efficient fine-tuning techniques.
 
 ---
 

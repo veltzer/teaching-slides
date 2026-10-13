@@ -671,11 +671,11 @@ Success comes from integration into daily workflow
 
 ## Next Steps
 
-Coming up in following chapters:
+Chapters that build on this one:
 
-1. **Chapter 3**: Chat-Based Development - conversational coding
-1. **Chapter 4**: Prompt Engineering - crafting perfect prompts
-1. **Chapter 5**: AI-Enhanced Practices - TDD, refactoring, debugging
-1. **Chapter 6**: Learning with AI - skill development strategies
+- ***Chat-Based Development Workflows*** - conversational coding
+- ***Prompt Engineering for Developers*** - crafting perfect prompts
+- ***AI-Enhanced Coding Practices*** - TDD, refactoring, debugging
+- ***Learning and Skill Development*** - skill development strategies
 
 Ready to explore conversational development!

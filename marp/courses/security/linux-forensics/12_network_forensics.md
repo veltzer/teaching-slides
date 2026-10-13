@@ -12,7 +12,7 @@ audience:
 
 # Network Forensics and Intrusion Tracing
 
-## Course: Linux Forensics - Day 4 (continued)
+## Course: Linux Forensics
 - Network evidence connects a host compromise to the wider attack
 - Packet captures reveal exfiltration, command channels, and lateral movement
 - This module covers `pcap` analysis, session reconstruction, and traffic IOCs

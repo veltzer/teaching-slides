@@ -100,11 +100,3 @@ audience:
 1. Two cores cooperate via **IPCC + shared SRAM**
 1. Concurrency brings **races** — barriers and HSEM defend
 1. Low power is a **first-class design constraint**
-
----
-
-## Thank You
-
-1. Questions welcome
-1. [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
-1. Go build something that talks to the sky

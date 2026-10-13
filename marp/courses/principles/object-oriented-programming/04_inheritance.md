@@ -70,7 +70,7 @@ public class Dog extends Animal {
 - The new version runs whenever the method is called *through that subclass*
 - Java requires `@Override` (good practice — catches typos)
 - Python has no annotation; just define a method with the same name
-- The pattern of using overriding for varied behaviour is *polymorphism* (next chapter)
+- The pattern of using overriding for varied behaviour is *polymorphism* (see the *Polymorphism* chapter)
 
 ---
 
@@ -154,7 +154,7 @@ public class Cat implements Speaker { ... }
 - "Customer is-a Person" — actually no, model what the system needs
 - Forcing a hierarchy on essentially-flat data
 - More than 2-3 levels deep — the chain becomes hard to reason about
-- When a Liskov violation lurks (next chapter)
+- When a Liskov violation lurks (see the *SOLID Principles* chapter)
 
 ---
 

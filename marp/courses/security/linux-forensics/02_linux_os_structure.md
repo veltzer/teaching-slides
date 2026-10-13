@@ -12,7 +12,7 @@ audience:
 
 # Understanding Linux OS Structure
 
-## Course: Linux Forensics - Day 1 (continued)
+## Course: Linux Forensics
 - The `Linux` operating system is built on well-defined structures
 - Understanding these structures is essential for forensic investigation
 - Knowing where data lives helps locate evidence efficiently

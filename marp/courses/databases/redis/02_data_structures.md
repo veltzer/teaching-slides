@@ -569,4 +569,4 @@ Counters can be:
 - Hashes: field-value pairs, objects
 - Special types: Streams, HyperLogLog, Geospatial, Bitmaps
 
-Next chapter: Caching with Redis
+Next up: the *Caching with Redis* chapter

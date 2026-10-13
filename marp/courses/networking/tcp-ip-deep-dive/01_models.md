@@ -228,13 +228,13 @@ audience:
 
 ## Course Roadmap
 
-- Chapter 2: Link layer (Ethernet, MAC)
-- Chapter 3: IP and subnetting
-- Chapter 4: ARP and ICMP
-- Chapter 5: TCP deep dive
-- Chapter 6: UDP and DNS
-- Chapter 7: Routing
-- Chapter 8: Packet analysis with Wireshark
+- Link layer (Ethernet, MAC)
+- IP and subnetting
+- ARP and ICMP
+- TCP deep dive
+- UDP and DNS
+- Routing
+- Packet analysis with Wireshark
 
 ---
 

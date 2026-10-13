@@ -14,7 +14,7 @@ audience:
 
 # Role-Based Access Control (`RBAC`)
 
-Advanced Kubernetes Course - Day 3, Module 4
+Advanced Kubernetes Course
 
 ---
 

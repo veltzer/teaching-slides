@@ -493,11 +493,8 @@ Start with one real pipeline; the API will carry you from there.
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - Polars brings modern engine design to everyday Python data work
 - Expressions and lazy plans are the two ideas that matter most
 - Migrate one pipeline at a time — interop makes it painless
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

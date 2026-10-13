@@ -2321,11 +2321,11 @@ Each specialization leverages AI's deep domain knowledge
 
 ## Next Steps
 
-Coming up in following chapters:
+Chapters that build on this one:
 
-1. **Chapter 7**: Quality and Best Practices - maintaining high standards
-1. **Chapter 8**: Real-World Project Workflows - end-to-end development
-1. **Chapter 9**: Team Collaboration with AI - enhancing team productivity
-1. **Chapter 10**: Advanced AI Usage Patterns - complex workflows
+- ***Quality and Best Practices*** - maintaining high standards
+- ***Real-World Project Workflows*** - end-to-end development
+- ***Team Collaboration with AI*** - enhancing team productivity
+- ***Advanced AI Usage Patterns*** - complex workflows
 
 Ready to ensure quality in AI-assisted development!

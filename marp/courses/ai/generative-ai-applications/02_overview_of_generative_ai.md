@@ -706,11 +706,11 @@ Text + Video → Text (emerging)
 
 ---
 
-## Practical Exercise: End of Day 1
+## Practical Exercise: Foundations Review
 
 ```python
 """
-Day 1 Comprehensive Exercise:
+Foundations Comprehensive Exercise:
 
 Part 1: Tokenization Exploration
   - Compare token counts across 3 languages

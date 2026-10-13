@@ -25,7 +25,7 @@ audience:
 
 ---
 
-## What We Configured Today
+## What We Configured
 
 - A user-level settings.json
 - A project settings.json
@@ -172,12 +172,3 @@ audience:
 - Configuration and context outlast prompts
 - Trust but verify, every time
 - Have fun with it
-
----
-
-## Thank You
-
-- Questions and discussion
-- Feedback shapes the next workshop
-- Stay in touch
-- mark.veltzer@gmail.com

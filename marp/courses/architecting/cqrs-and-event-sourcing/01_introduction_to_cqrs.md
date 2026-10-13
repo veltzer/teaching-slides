@@ -295,13 +295,13 @@ class OrderSummary:
 
 ## Course Roadmap
 
-- Chapter 2: Event Sourcing fundamentals (the natural companion)
-- Chapters 3-4: implementing the command side and the query side
-- Chapter 5: event store implementations
-- Chapter 6: eventual consistency and projections
-- Chapter 7: snapshotting
-- Chapter 8: integration with DDD and microservices
-- Chapter 9: testing CQRS/ES systems
+- Event Sourcing fundamentals (the natural companion)
+- Implementing the command side and the query side
+- Event store implementations
+- Eventual consistency and projections
+- Snapshotting
+- Integration with DDD and microservices
+- Testing CQRS/ES systems
 
 ---
 

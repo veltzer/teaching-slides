@@ -11,7 +11,7 @@ audience:
 ---
 
 # Collections
-## Chapter 5: Working with Data Structures
+## Working with Data Structures
 
 ---
 

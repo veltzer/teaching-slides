@@ -14,7 +14,7 @@ audience:
 
 # `Kubernetes` Schedulers
 
-Advanced Kubernetes Course - Day 1, Module 3
+Advanced Kubernetes Course
 
 ---
 

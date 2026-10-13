@@ -256,9 +256,9 @@ katana -u https://target.com -d 5 -o katana-results.txt
 
 ---
 
-## Day 1 Lab: Complete Mapping Exercise
+## Lab: Complete Mapping Exercise
 
-**Tasks** (60 minutes):
+**Tasks**:
 
 1. **Enumerate** all pages and functionality of DVWA
 1. **Discover** hidden content with `gobuster`
@@ -266,7 +266,7 @@ katana -u https://target.com -d 5 -o katana-results.txt
 1. **Map** authentication and authorization
 1. **Document** the technology stack
 1. **Create** an attack surface matrix
-1. **Prioritize** targets for Day 2 testing
+1. **Prioritize** targets for the authentication and session testing
 
 **Deliverable**: Complete attack surface report
 
@@ -349,7 +349,7 @@ Goal: Access Admin Panel
 
 ---
 
-## Day 1 Summary
+## Mapping and Reconnaissance Summary
 
 - Web applications are complex, multi-layered systems
 - Every technology component is a potential attack vector
@@ -359,4 +359,4 @@ Goal: Access Admin Panel
 - Attack surface mapping guides efficient testing
 - Prioritize by impact and likelihood
 
-> Tomorrow: Authentication & Session Attacks
+> Next: Authentication & Session Attacks

@@ -232,7 +232,7 @@ audience:
 
 - Each local operation is atomic; cross-service is not
 - Design with eventual consistency in mind
-- Sagas (next chapter) coordinate multi-service transactions
+- Sagas (see the *Saga and Choreography Patterns* chapter) coordinate multi-service transactions
 - Don't pretend strong consistency you don't have
 - Document the consistency contract per use case
 

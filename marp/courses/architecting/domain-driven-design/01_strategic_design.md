@@ -17,7 +17,7 @@ audience:
 
 - DDD is two halves: strategic (the big picture) and tactical (the building blocks)
 - This chapter: strategic — bounded contexts, language, context maps
-- Later chapters: tactical building blocks, integration with CQRS/ES, sagas, refactoring
+- The rest of the course: tactical building blocks, integration with CQRS/ES, sagas, refactoring
 
 ---
 

@@ -35,7 +35,7 @@ audience:
 - The system's behavior is **learned, not coded** — you cannot fully audit it by reading source
 - New trust boundary: the **prompt / input** is attacker-controlled and gets *interpreted*, not just processed
 - The model itself is valuable IP and may have *memorized* sensitive training data
-- Everything from the earlier chapters still applies — `AI` adds risks, it does not replace the old ones
+- Everything from the other chapters of this course still applies — `AI` adds risks, it does not replace the old ones
 
 ---
 
@@ -129,4 +129,4 @@ audience:
 - Poisoning and backdoors come in through training data — demand and document data provenance
 - Treat model output as **untrusted input**: sandbox tools, validate, filter, keep a human in the loop
 - Use safe model formats (`safetensors`), scan and sign model artifacts, rate-limit and monitor the API
-- Follow `NIST` SP 800-218A and the `OWASP` `AI`/`ML` `Top` 10 — and remember the earlier chapters still apply
+- Follow `NIST` SP 800-218A and the `OWASP` `AI`/`ML` `Top` 10 — and remember the other chapters still apply

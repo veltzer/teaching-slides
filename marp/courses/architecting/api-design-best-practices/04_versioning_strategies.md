@@ -187,4 +187,4 @@ audience:
 - Additive changes don't need a new version; breaking ones do
 - Be explicit about default version
 - Limit live versions to two: current and previous
-- Migration is a separate problem (chapter 11)
+- Migration is a separate problem (see the *Backward Compatibility and Deprecation* chapter)

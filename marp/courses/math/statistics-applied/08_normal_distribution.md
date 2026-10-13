@@ -79,7 +79,7 @@ audience:
 
 ## Why Normal Shows Up Everywhere
 
-- The central limit theorem (next chapter): *sums and averages* tend to be normal, whatever the raw data looks like
+- The central limit theorem (see the *Sampling and Sampling Distributions* chapter): *sums and averages* tend to be normal, whatever the raw data looks like
 - Many measurements are the sum of many small independent influences
 - That's why heights, errors, totals, and especially *sample means* look bell-shaped
 - It is the reason most of inferential statistics works at all

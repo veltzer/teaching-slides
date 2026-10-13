@@ -205,7 +205,7 @@ example.com. SOA ns1.example.com. admin.example.com. (
 - DS — Delegation Signer (in parent zone)
 - DNSKEY — public keys (in child zone)
 - The chain of trust for DNSSEC
-- Covered in detail in chapter 5
+- Covered in detail in the *DNSSEC* chapter
 - Mention here for record type completeness
 
 ---

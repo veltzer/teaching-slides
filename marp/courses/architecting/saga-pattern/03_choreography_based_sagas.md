@@ -62,7 +62,7 @@ Email       → reacts; sends confirmation
 ## Event Contracts
 
 - Every event published is a public contract for downstream services
-- The schema must be stable; changes need versioning (chapter 5)
+- The schema must be stable; changes need versioning
 - Producers own the schema, but consumers depend on it
 - Use a schema registry to enforce compatibility
 

@@ -656,4 +656,4 @@ Remember:
 - Trade-offs: some consistency guarantees for performance
 - Alternative scaling options exist for different needs
 
-Next chapter: Integrating Redis with Applications
+Next up: the *Integrating Redis with Applications* chapter

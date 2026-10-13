@@ -208,7 +208,7 @@ spec:
 
 ---
 
-## Where to Apply This Tomorrow
+## Where to Apply This First
 
 - Audit one service against the twelve factors
 - Identify the violations

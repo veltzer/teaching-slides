@@ -398,7 +398,7 @@ tmsh modify ltm profile http http_lab \
     header-insert "X-Lab: bigip1" header-erase "X-Debug"
 ```
 
-- For more than one header or conditional logic, use a local traffic policy (later chapter)
+- For more than one header or conditional logic, use a local traffic policy (see the *Customizing Application Delivery with Local Traffic Policies* chapter)
 
 ---
 

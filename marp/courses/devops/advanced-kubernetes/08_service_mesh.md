@@ -14,7 +14,7 @@ audience:
 
 # Service Mesh & Network Policies
 
-Advanced Kubernetes Course - Day 2, Module 3
+Advanced Kubernetes Course
 
 ---
 

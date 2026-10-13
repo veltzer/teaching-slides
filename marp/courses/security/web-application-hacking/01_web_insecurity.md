@@ -26,7 +26,7 @@ audience:
 
 ## Course Overview
 
-- 5-day intensive Web Application Hacking course
+- Intensive hands-on Web Application Hacking course
 - Focus on **authorized** penetration testing techniques
 - Every attack paired with **defense and mitigation**
 - Hands-on labs and a final CTF exercise
@@ -226,13 +226,13 @@ docker run -d -p 8080:80 vulnerables/web-dvwa
 
 ## What We Will Cover
 
-| Day | Topics |
-|-----|--------|
-| **Day 1** | Web (In)security, Mapping, Reconnaissance |
-| **Day 2** | Authentication, Sessions, SQL Injection basics |
-| **Day 3** | Advanced SQL Injection, XSS |
-| **Day 4** | Back-end Attacks, Logic Flaws, Hardening |
-| **Day 5** | Boot2Root, CTF, Putting It All Together |
+| Block | Topics |
+|-------|--------|
+| **Foundations** | Web (In)security, Mapping, Reconnaissance |
+| **Login and sessions** | Authentication, Sessions, SQL Injection basics |
+| **Injection** | Advanced SQL Injection, XSS |
+| **Back end** | Back-end Attacks, Logic Flaws, Hardening |
+| **Capstone** | Boot2Root, CTF, Putting It All Together |
 
 ---
 
@@ -343,7 +343,7 @@ MOVEit (2023) - 2,000+ organizations
 
 ---
 
-## Summary - Day 1 Opening
+## Summary - Course Opening
 
 - Web applications are the #1 attack vector
 - The OWASP Top 10 provides a prioritized risk list

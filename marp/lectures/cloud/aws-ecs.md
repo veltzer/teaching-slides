@@ -312,9 +312,3 @@ audience:
 - Fargate removes server management; EC2 gives control
 - Integrates with ELB, ECR, IAM, CloudWatch, and auto scaling
 - A pragmatic path to running containers in production
-
----
-
-## Thank You
-- Questions?
-- [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

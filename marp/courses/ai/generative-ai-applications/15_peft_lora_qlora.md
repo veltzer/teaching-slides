@@ -660,9 +660,9 @@ trainer.save_model()
 
 ---
 
-## Day 4 Summary and Q&A
+## Summary: Open Source Models and PEFT
 
-**What we covered today:**
+**What we covered:**
 - Open source model landscape and choosing the right model
 - Running models locally with `Transformers`, `vLLM`, and `Ollama`
 - `HuggingFace` Hub, Datasets, and Spaces
@@ -674,11 +674,11 @@ trainer.save_model()
 
 ---
 
-## Day 4 Summary and Q&A (cont.)
+## Summary: Open Source Models and PEFT (cont.)
 
 **Key insight:** With `QLoRA`, you can fine-tune a 70B parameter model on a single consumer GPU, achieving near-full-fine-tuning quality at a fraction of the cost.
 
-**Tomorrow:** Image generation, personalization, quality measurement, bias, and AI safety.
+**Next:** Image generation, personalization, quality measurement, bias, and AI safety.
 
 ---
 

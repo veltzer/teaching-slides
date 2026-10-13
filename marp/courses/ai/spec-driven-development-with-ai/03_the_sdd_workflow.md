@@ -244,4 +244,4 @@ the diff that no requirement asked for. Do not fix anything.
     1. Keep tasks whose diffs pass their tests; revert the rest
     1. Fix the spec or task wording that allowed the drift
     1. Restart from the first failed task in a fresh session
-- Hands-on: each pair gets a branch with a derailed run and its spec, 30 minutes to recover it
+- Hands-on: each pair gets a branch with a derailed run and its spec to recover

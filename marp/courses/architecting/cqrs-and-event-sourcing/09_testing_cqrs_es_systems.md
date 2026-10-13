@@ -392,14 +392,14 @@ def shipped_order(order_id="42"):
 
 ## Course Recap
 
-- Chapter 1: CQRS — separate read and write models
-- Chapter 2: Event Sourcing — events as the source of truth
-- Chapters 3-4: write side and read side
-- Chapter 5: event store choices
-- Chapter 6: projections and eventual consistency
-- Chapter 7: snapshots
-- Chapter 8: DDD, microservices, and integration
-- Chapter 9: testing the whole thing
+- CQRS — separate read and write models
+- Event Sourcing — events as the source of truth
+- Write side and read side
+- Event store choices
+- Projections and eventual consistency
+- Snapshots
+- DDD, microservices, and integration
+- Testing the whole thing
 
 ---
 

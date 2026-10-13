@@ -129,7 +129,7 @@ audience:
 
 ---
 
-## Where We're Going Today
+## Where We're Going
 
 - Most of this course is Scrum, since it's the most common
 - We'll touch Kanban as a complementary technique

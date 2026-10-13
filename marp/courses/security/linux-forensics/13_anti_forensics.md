@@ -12,7 +12,7 @@ audience:
 
 # Anti-Forensics and Countermeasures
 
-## Course: Linux Forensics - Day 4 (continued)
+## Course: Linux Forensics
 - Attackers actively try to destroy, hide, or falsify evidence
 - Recognizing anti-forensics is what separates a thorough investigation
 - This module covers detecting tampering and where hidden data lives

@@ -12,7 +12,7 @@ audience:
 
 # Data and File Structure
 
-## Course: Linux Forensics - Day 2 (continued)
+## Course: Linux Forensics
 - Understanding file formats at the binary level
 - Hex editors reveal hidden data within files
 - File structure knowledge enables manual data recovery

@@ -11,7 +11,7 @@ audience:
 ---
 
 # Understanding Ownership
-## Chapter 3: Rust's Unique Memory Management
+## Rust's Unique Memory Management
 
 ---
 

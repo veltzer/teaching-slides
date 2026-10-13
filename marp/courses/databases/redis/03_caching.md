@@ -678,4 +678,4 @@ Tools:
 - Monitor cache performance for optimization
 - Use appropriate eviction policies based on needs
 
-Next chapter: Pub/Sub Messaging with Redis
+Next up: the *Pub/Sub Messaging with Redis* chapter

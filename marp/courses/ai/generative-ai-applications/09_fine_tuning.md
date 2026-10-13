@@ -463,9 +463,9 @@ templates = {
 
 ---
 
-## Day 2 Summary and Q&A
+## Summary: APIs, Prompting and Fine-Tuning
 
-**What we covered today:**
+**What we covered:**
 - `OpenAI` `API` fundamentals: chat completions, streaming, function calling
 - Prompt engineering: structure, roles, templates, injection defense
 - Few-shot and zero-shot learning: when and how to use examples
@@ -474,7 +474,7 @@ templates = {
 
 **Key insight:** Start with prompt engineering, move to few-shot, and only fine-tune when you have sufficient data and a clear need for consistency.
 
-**Tomorrow:** We build agents with memory and `LangChain`.
+**Next:** We build agents with memory and `LangChain`.
 
 ---
 

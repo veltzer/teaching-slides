@@ -12,8 +12,8 @@ audience:
 
 # Capstone Forensic Investigation
 
-## Course: Linux Forensics - Day 5 (continued)
-- A full investigation that exercises every skill from the week
+## Course: Linux Forensics
+- A full investigation that exercises every skill from the course
 - You receive a disk image and a memory dump from a compromised host
 - Work the case end to end, then defend your conclusions in the report
 - This is analysis of prepared evidence in an isolated lab environment

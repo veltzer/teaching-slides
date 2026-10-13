@@ -17,10 +17,10 @@ audience:
 # Ansible Fundamentals
 
 ## Course Overview
-- 3-day comprehensive `Ansible` training
-- Day 1: Fundamentals, inventory, ad-hoc commands, playbook basics
-- Day 2: Playbooks, roles, advanced features, secrets management
-- Day 3: Advanced patterns, custom modules, Tower/AWX, CI/CD
+- Comprehensive `Ansible` training
+- Fundamentals, inventory, ad-hoc commands, playbook basics
+- Playbooks, roles, advanced features, secrets management
+- Advanced patterns, custom modules, Tower/AWX, CI/CD
 
 ---
 
@@ -1357,7 +1357,7 @@ ansible-playbook --list-hosts site.yml
 
 ---
 
-## Exercise: Day 1 Lab
+## Exercise: Fundamentals Lab
 
 1. Set up `ansible.cfg` in your project directory
 1. Create an inventory file with at least 2 groups
@@ -1370,7 +1370,7 @@ ansible-playbook --list-hosts site.yml
 
 ---
 
-## Exercise: Day 1 Lab (cont.)
+## Exercise: Fundamentals Lab (cont.)
 
 6. Write a playbook that:
     - Installs `nginx` on webservers
@@ -1380,7 +1380,7 @@ ansible-playbook --list-hosts site.yml
 
 ---
 
-## Day 1 Summary
+## Summary: Fundamentals, Inventory & Playbooks
 
 - `Ansible` is an agentless automation tool using `SSH` and `Python`
 - Configuration is done in `YAML`

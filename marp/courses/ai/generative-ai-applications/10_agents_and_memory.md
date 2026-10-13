@@ -16,9 +16,9 @@ audience:
 
 ---
 
-## Day 3: Agents, Memory & LangChain
+## Agents, Memory & LangChain
 
-![day_3_agents_memory_langchain](svg/courses/ai/generative-ai-applications/10_agents_and_memory/day_3_agents_memory_langchain.svg)
+![agents_memory_langchain](svg/courses/ai/generative-ai-applications/10_agents_and_memory/agents_memory_langchain.svg)
 
 ---
 

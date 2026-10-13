@@ -18,7 +18,7 @@ audience:
 
 ## Welcome to the Course
 
-This comprehensive 4-day course will enhance your C and C++ programming skills for real-time embedded systems development.
+This comprehensive course will enhance your C and C++ programming skills for real-time embedded systems development.
 
 ---
 
@@ -89,10 +89,10 @@ This comprehensive 4-day course will enhance your C and C++ programming skills f
 
 ## Course Structure
 
-1. **Day 1**: Embedded C fundamentals and memory
-1. **Day 2**: Communication, synchronization, and toolchain
-1. **Day 3**: Hardware, timing, and safety
-1. **Day 4**: C++ for embedded systems
+1. Embedded C fundamentals and memory
+1. Communication, synchronization, and toolchain
+1. Hardware, timing, and safety
+1. C++ for embedded systems
 
 ---
 

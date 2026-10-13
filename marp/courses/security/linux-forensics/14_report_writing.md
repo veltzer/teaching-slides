@@ -12,7 +12,7 @@ audience:
 
 # Introduction to Report Writing
 
-## Course: Linux Forensics - Day 5
+## Course: Linux Forensics
 - Forensic reports are the primary deliverable of an investigation
 - Reports must be clear, accurate, and legally defensible
 - This module covers report structure, evidence documentation,

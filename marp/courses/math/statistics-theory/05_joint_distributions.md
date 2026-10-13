@@ -95,7 +95,7 @@ audience:
 
 ## Sums Of Independent Variables (cont.)
 
-- **Closure under convolution**: sums of independent Normals are Normal; of Poissons, Poisson (rates add); of Gammas with equal scale, Gamma (shapes add); of independent &chi;&sup2;, &chi;&sup2; (df add) — these facts power the sampling distributions in later chapters
+- **Closure under convolution**: sums of independent Normals are Normal; of Poissons, Poisson (rates add); of Gammas with equal scale, Gamma (shapes add); of independent &chi;&sup2;, &chi;&sup2; (df add) — these facts power the sampling distributions of the *Common Distribution Families* chapter
 - The sample mean X&#772; = (1/n)&Sigma; X&#8345; of i.i.d. data thus has mean &mu; and variance &sigma;&sup2;/n — and, by repeated convolution + the CLT, an approximately normal law for large n
 
 ---

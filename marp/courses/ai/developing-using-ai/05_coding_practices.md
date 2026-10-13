@@ -1341,11 +1341,11 @@ Practice makes perfect!
 
 ## Next Steps
 
-Coming up in following chapters:
+Chapters that build on this one:
 
-1. **Chapter 6**: Learning and Skill Development - accelerate your growth
-1. **Chapter 7**: Specialized Development Tasks - domain-specific AI
-1. **Chapter 8**: Quality and Best Practices - maintaining standards
-1. **Chapter 9**: Real-World Project Workflows - end-to-end development
+- ***Learning and Skill Development*** - accelerate your growth
+- ***Specialized Development Tasks*** - domain-specific AI
+- ***Quality and Best Practices*** - maintaining standards
+- ***Real-World Project Workflows*** - end-to-end development
 
 Ready to accelerate your learning with AI!

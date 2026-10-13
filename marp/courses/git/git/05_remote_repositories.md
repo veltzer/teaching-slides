@@ -770,7 +770,7 @@ build:
 
 ## Next Up: Branches
 
-In the next session, we'll deep dive into:
+We'll deep dive into:
 
 1. Branch theory and internals
 1. Creating and managing branches
@@ -782,6 +782,6 @@ In the next session, we'll deep dive into:
 
 ---
 
-## Remote Repositories Complete! 🎉
+## Remote Repositories Recap
 
 ![remote_repositories_complete](svg/courses/git/git/05_remote_repositories/remote_repositories_complete.svg)

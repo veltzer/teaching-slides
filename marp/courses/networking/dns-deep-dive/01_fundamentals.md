@@ -190,7 +190,7 @@ audience:
 - Default: UDP port 53
 - TCP port 53 for large responses (>512 bytes traditionally)
 - Modern DNS: EDNS(0) extends UDP up to 4096 bytes
-- DoH/DoT for encrypted variants (later chapter)
+- DoH/DoT for encrypted variants (see the *DNS over HTTPS and DNS over TLS* chapter)
 - Simple binary format; not human-readable
 
 ---
@@ -281,4 +281,4 @@ audience:
 - Stub asks recursive; recursive walks the hierarchy
 - TTL governs caching at every level
 - Caching is what makes DNS fast — and propagation slow
-- The next chapters go deep on records, security, and operations
+- The *DNS Record Types*, *DNSSEC* and *DNS Security and Troubleshooting* chapters go deep on records, security, and operations

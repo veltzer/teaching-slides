@@ -660,4 +660,4 @@ redis-cli -c -p 7000 CLUSTER NODES
 - High availability options: replication, Sentinel, Cluster
 - Management tools simplify administration tasks
 
-Next chapter: Redis Cluster and Scalability
+Next up: the *Redis Cluster and Scalability* chapter

@@ -467,4 +467,4 @@ Security practices:
 - Can be extended with Streams for persistence
 - Easy to integrate with different programming languages
 
-Next chapter: Redis Transactions and Scripting
+Next up: the *Redis Transactions and Scripting* chapter

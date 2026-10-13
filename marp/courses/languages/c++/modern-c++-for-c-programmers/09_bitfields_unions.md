@@ -1,5 +1,5 @@
 # Modern C++ for C Programmers
-## Chapter 9: Bitfields and Unions
+## Bitfields and Unions
 
 ---
 

@@ -381,11 +381,8 @@ Roles are how you give an AI system structure — use the lightest one that work
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - Roles are labels that scope behaviour and assign authority
 - Four message roles run every conversation; a handful of agent roles run a team
 - Match the structure to the problem — no more, no less
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

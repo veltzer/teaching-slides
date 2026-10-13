@@ -14,19 +14,17 @@ audience:
 
 # Advanced SQL Injection
 
-## Day 3: UNION Extraction, Blind Injection & Beyond
+## UNION Extraction, Blind Injection & Beyond
 
 ---
 
-## Day 3 Overview
+## Advanced Injection Overview
 
-| Session | Topic |
-|---------|-------|
-| Morning Part 1 | UNION-based extraction deep dive |
-| Morning Part 2 | Blind injection techniques |
-| Afternoon Part 1 | sqlmap automation |
-| Afternoon Part 2 | Bypassing filters, second-order SQLi |
-| Late Afternoon | XSS introduction |
+- UNION-based extraction deep dive
+- Blind injection techniques
+- sqlmap automation
+- Bypassing filters, second-order SQLi
+- XSS introduction
 
 ---
 

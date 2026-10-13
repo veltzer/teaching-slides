@@ -47,7 +47,7 @@ audience:
 
 ## How To Read This Course
 
-- This is a **review course** — one day, eight topics, breadth over depth
+- This is a **review course** — eight topics, breadth over depth
 - Each chapter could be a course on its own; here we map the terrain
 - The goal: know what exists, what the risks are, where to dig deeper
 - Examples come from `Linux`, C, `C++`, and `Python`

@@ -448,11 +448,8 @@ report = merge(results)               # merge: plain code
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - Fixed structure where you can, runtime structure where you must
 - The model judges; the code decides; the journal remembers
 - The best workflow is the one whose failures are boring
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

@@ -16,7 +16,7 @@ audience:
 
 ---
 
-## What We'll Cover Today
+## What We'll Cover
 
 1. History of Git
 1. Why Git was created
@@ -553,7 +553,7 @@ WIP
 
 ## What's Next?
 
-In the upcoming sessions, we'll dive into:
+The rest of the course dives into:
 
 1. **Git Basics** - Hands-on with essential commands
 1. **Configuration** - Customizing Git for your needs

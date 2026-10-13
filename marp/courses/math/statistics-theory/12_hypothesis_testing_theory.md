@@ -100,7 +100,7 @@ audience:
 
 ## Likelihood-Ratio Tests And Wilks' Theorem (cont.)
 
-- Asymptotically the LR statistic is equivalent to the **Wald** and **score** statistics from the previous chapter; they can disagree in finite samples, and when they do the LR test usually behaves best (parametrization-invariant, better calibrated) — prefer it
+- Asymptotically the LR statistic is equivalent to the **Wald** and **score** statistics from the *Maximum Likelihood and Asymptotics* chapter; they can disagree in finite samples, and when they do the LR test usually behaves best (parametrization-invariant, better calibrated) — prefer it
 - Caveats: it's *asymptotic* (use exact/bootstrap versions for small n), and the &chi;&sup2; limit **fails on the boundary** — if H&#8320; sits at the edge of the parameter space (e.g. a variance component = 0), the limit is a *mixture* of &chi;&sup2;'s (Self&ndash;Liang, Chernoff), not a plain &chi;&sup2;
 
 ---

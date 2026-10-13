@@ -14,7 +14,7 @@ audience:
 
 # Serverless with `Knative`
 
-Advanced Kubernetes Course - Day 3, Module 5
+Advanced Kubernetes Course
 
 ---
 
@@ -598,7 +598,7 @@ kubectl apply -f event-source.yaml
 
 ---
 
-## Course Summary - Day 3
+## Course Summary: Config, Deployment, RBAC & Serverless
 
 Key takeaways:
 

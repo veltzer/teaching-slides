@@ -234,11 +234,11 @@ audience:
 
 ## Course Roadmap
 
-- Chapter 2: Pod Security Standards
-- Chapter 3: Network Policies
-- Chapter 4: Admission Controllers and RBAC
-- Chapter 5: Secrets and Image Scanning
-- Chapter 6: Runtime Security and Hardening
+- Pod Security Standards
+- Network Policies
+- Admission Controllers and RBAC
+- Secrets and Image Scanning
+- Runtime Security and Hardening
 
 ---
 
@@ -269,4 +269,4 @@ audience:
 - Misconfigurations are the most common source of incidents
 - Defense in depth across layers; no silver bullets
 - CIS Benchmark is the baseline; tools automate the audit
-- The next chapters go deep on each layer
+- The chapters on the roadmap go deep on each layer

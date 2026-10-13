@@ -654,4 +654,4 @@ Database:
 - Database users should have minimal required privileges
 - Regular scanning verifies hardening effectiveness
 
-> Tomorrow: Boot2Root & CTF
+> Next: Boot2Root & CTF

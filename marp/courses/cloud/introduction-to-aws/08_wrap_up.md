@@ -255,9 +255,6 @@ aws budgets create-budget \
 
 ---
 
-## Thank You
-- Questions and discussion
-- Feedback welcome
+## Closing Thoughts
 - Continue learning with hands-on practice
 - AWS Free Tier is your sandbox
-- Good luck on your AWS journey

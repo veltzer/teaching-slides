@@ -381,11 +381,8 @@ Give the model judgement *and* the hands to act on it.
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - Tools turn a text engine into an agent that can act
 - The model decides; your runtime stays in control
 - Start narrow, type tightly, and keep a human on the dangerous calls
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

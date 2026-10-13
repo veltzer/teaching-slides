@@ -438,4 +438,4 @@ Monitoring tools:
 - Simple to use but powerful
 - Offers optional persistence
 
-Next chapter: Redis Data Structures in Depth
+Next up: the *Redis Data Structures* chapter

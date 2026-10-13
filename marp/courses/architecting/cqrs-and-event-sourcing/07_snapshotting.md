@@ -169,7 +169,7 @@ def from_snapshot(raw):
     return Order.from_v3(raw)
 ```
 
-- Like event upcasters (chapter 2)
+- Like event upcasters (see the *Event Sourcing Fundamentals* chapter)
 - Old snapshots remain useful through schema changes
 - Trade complexity for not paying the discard cost
 

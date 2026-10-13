@@ -16,9 +16,9 @@ audience:
 
 ---
 
-## Day 4: Open Source Models
+## Open Source Models
 
-![day_4_open_source_models](svg/courses/ai/generative-ai-applications/13_open_source_models/day_4_open_source_models.svg)
+![open_source_models](svg/courses/ai/generative-ai-applications/13_open_source_models/open_source_models.svg)
 
 ---
 

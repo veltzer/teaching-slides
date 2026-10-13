@@ -11,7 +11,7 @@ audience:
 ---
 
 # Linux Module Primer
-## Chapter 5: Kernel Module Development
+## Kernel Module Development
 
 ---
 

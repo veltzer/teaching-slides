@@ -12,7 +12,7 @@ audience:
 ---
 
 # eBPF Overview and Usage
-## Chapter 10: Extended Berkeley Packet Filter
+## Extended Berkeley Packet Filter
 
 ---
 

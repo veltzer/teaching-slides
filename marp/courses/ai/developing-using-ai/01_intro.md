@@ -475,11 +475,11 @@ Success requires balanced approach: embrace AI while maintaining core skills
 
 ## Looking Ahead
 
-Next chapters will cover:
+Chapters that build on this one:
 
-1. **Chapter 2**: AI-Powered Coding Assistants - hands-on with tools
-1. **Chapter 3**: Chat-Based Development Workflows - conversational coding
-1. **Chapter 4**: Prompt Engineering - getting the best results
-1. **Chapter 5**: AI-Enhanced Coding Practices - real-world applications
+- ***AI-Powered Coding Assistants*** - hands-on with tools
+- ***Chat-Based Development Workflows*** - conversational coding
+- ***Prompt Engineering for Developers*** - getting the best results
+- ***AI-Enhanced Coding Practices*** - real-world applications
 
 Ready to transform your development workflow!

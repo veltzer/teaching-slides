@@ -735,7 +735,7 @@ ansible-project/
 - Follow naming conventions: `rolename_variable_name`
 - Never hardcode values; always use variables
 - Use FQCN for modules: `ansible.builtin.apt`
-- Test roles with `Molecule` (covered in Day 3)
+- Test roles with `Molecule` (covered later in the course)
 
 ---
 

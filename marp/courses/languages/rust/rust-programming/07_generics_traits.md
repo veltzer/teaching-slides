@@ -10,7 +10,7 @@ audience:
 ---
 
 # Generic Types and Traits
-## Chapter 6: Abstraction and Code Reuse
+## Abstraction and Code Reuse
 
 ---
 

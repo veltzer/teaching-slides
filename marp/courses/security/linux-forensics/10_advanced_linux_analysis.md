@@ -12,7 +12,7 @@ audience:
 
 # Advanced Linux OS Analysis
 
-## Course: Linux Forensics - Day 4 (continued)
+## Course: Linux Forensics
 - Advanced analysis techniques reveal deeper system behavior
 - Tracing system calls and library calls exposes program actions
 - Binary analysis uncovers malware functionality

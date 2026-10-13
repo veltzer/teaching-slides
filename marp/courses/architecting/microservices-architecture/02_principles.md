@@ -85,7 +85,7 @@ audience:
 ## Domain-Driven Boundaries
 
 - Service boundaries follow the domain, not the org chart
-- Bounded contexts (chapter 4) are the unit
+- Bounded contexts (see the *Service Boundaries and Bounded Contexts* chapter) are the unit
 - Conway's Law: the system structure mirrors the team structure — be intentional about it
 
 ---
@@ -156,5 +156,5 @@ audience:
 - Single responsibility per service, owned by a single team
 - Independent deployment, owned data, clear API contracts
 - Design for failure; build observability first
-- Domain boundaries (next chapter), not technical boundaries
+- Domain boundaries (see the *Decomposition Strategies* chapter), not technical boundaries
 - The "micro" is about discipline, not size

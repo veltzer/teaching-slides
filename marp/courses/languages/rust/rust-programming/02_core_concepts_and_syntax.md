@@ -10,7 +10,7 @@ audience:
 ---
 
 # Rust Fundamentals
-## Chapter 2: Core Concepts and Basic Syntax
+## Core Concepts and Basic Syntax
 
 ---
 

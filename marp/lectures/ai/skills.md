@@ -423,11 +423,8 @@ Move expertise out of heads and into versioned, reusable files.
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - Skills turn run-time instructions into reusable assets
 - No retraining, no lock-in, fully inspectable
 - Start small, iterate, and share
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

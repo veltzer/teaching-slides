@@ -378,9 +378,7 @@ Resources:
 
 ---
 
-## Thank You
-- Questions and discussion
-- Feedback welcome
+## Closing Thoughts
 - Apply these patterns in your own architectures
 - Start simple, evolve as you learn
 - The cloud is a powerful tool: use it wisely

@@ -220,11 +220,11 @@ audience:
 ## Course Roadmap
 
 - This chapter: the problem
-- Chapter 2: saga fundamentals — choreography vs orchestration
-- Chapter 3: choreography deep-dive
-- Chapter 4: orchestration deep-dive
-- Chapter 5: compensating transactions
-- Chapter 6: testing, debugging, and operating sagas
+- Saga fundamentals — choreography vs orchestration
+- Choreography deep-dive
+- Orchestration deep-dive
+- Compensating transactions
+- Testing, debugging, and operating sagas
 
 ---
 

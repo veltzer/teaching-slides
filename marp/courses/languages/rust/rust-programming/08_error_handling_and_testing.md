@@ -11,7 +11,7 @@ audience:
 ---
 
 # Error Handling and Testing
-## Chapter 7: Writing Reliable Code
+## Writing Reliable Code
 
 ---
 

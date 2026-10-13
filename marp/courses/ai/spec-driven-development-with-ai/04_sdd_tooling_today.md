@@ -63,7 +63,7 @@ as CSV; large exports run in the background.
 
 - `/speckit.constitution` writes `.specify/memory/constitution.md`
 - `/speckit.specify` creates a numbered feature branch and `specs/001-audit-export/spec.md`
-- The spec template forces the sections from the previous chapter: stories, criteria, edge cases
+- The spec template forces the sections from the *Anatomy of an AI-Consumable Spec* chapter: stories, criteria, edge cases
 - `/speckit.clarify` interviews you about the gaps before planning
 
 ---

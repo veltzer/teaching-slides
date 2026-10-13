@@ -351,7 +351,7 @@ class SafeGenAISystem:
 """
 Exercise: Conduct a safety audit of an LLM application.
 
-1. RED TEAMING (test your Day 3 database assistant):
+1. RED TEAMING (test your database assistant):
    - Try prompt injection attacks
    - Attempt to extract system prompt
    - Test with adversarial SQL queries
@@ -378,9 +378,9 @@ Write a 1-page safety report of your findings.
 
 ---
 
-## Day 5 and Course Summary
+## Summary: Images, Quality and Safety
 
-**What we covered today:**
+**What we covered:**
 - Image generation with diffusion models and `Stable Diffusion`
 - Personalizing image models with `DreamBooth` and `Textual Inversion`
 - Measuring text quality: BLEU, ROUGE, BERTScore, LLM-as-Judge
@@ -389,9 +389,9 @@ Write a 1-page safety report of your findings.
 
 ---
 
-## Course Recap — Five Days of Generative AI
+## Course Recap — Generative AI
 
-![course_recap_five_days_of_generative_ai](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/course_recap_five_days_of_generative_ai.svg)
+![course_recap_generative_ai](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/course_recap_generative_ai.svg)
 
 ---
 

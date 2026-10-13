@@ -299,7 +299,7 @@ Exercise: Build and run an evaluation pipeline.
 
 2. Generate responses from:
    - GPT-4o-mini (baseline)
-   - Your fine-tuned model (from Day 2/4)
+   - Your fine-tuned model (from the fine-tuning exercises)
    - A local model (Mistral 7B via Ollama)
 
 3. Compute automatic metrics:

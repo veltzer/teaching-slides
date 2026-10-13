@@ -12,7 +12,7 @@ audience:
 
 # Hashes and Encodings
 
-## Course: Linux Forensics - Day 2
+## Course: Linux Forensics
 - Hash functions are the backbone of digital forensics integrity
 - Encodings transform data between formats
 - Understanding both is essential for evidence handling

@@ -277,7 +277,7 @@ audience:
 - STRIDE — daily/sprintly threat enumeration
 - Attack trees — focused deep-dives for critical assets
 - PASTA — annual comprehensive risk reviews
-- LINDDUN — privacy-specific overlays (next chapter)
+- LINDDUN — privacy-specific overlays (see the *LINDDUN: Privacy Threats* chapter)
 - Pick a stack appropriate to your maturity
 
 ---

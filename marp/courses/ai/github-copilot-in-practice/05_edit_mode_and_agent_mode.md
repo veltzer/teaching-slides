@@ -36,7 +36,7 @@ audience:
 - `Edit`: proposes changes to files you choose
 - `Agent`: picks files itself, runs tools, iterates
 - `Plan`: researches and writes a plan before any edit
-- Custom agents add your own named modes (next chapter)
+- Custom agents add your own named modes (see the *Customizing Copilot for Your Repository* chapter)
 
 ---
 

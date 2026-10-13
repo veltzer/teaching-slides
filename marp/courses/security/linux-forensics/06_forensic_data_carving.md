@@ -12,7 +12,7 @@ audience:
 
 # Forensic Data Carving
 
-## Course: Linux Forensics - Day 3
+## Course: Linux Forensics
 - Data carving recovers files from raw disk data
 - Works without filesystem metadata
 - Essential when filesystems are damaged or evidence is deleted

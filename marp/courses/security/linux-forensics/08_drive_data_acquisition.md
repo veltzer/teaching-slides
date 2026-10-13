@@ -12,7 +12,7 @@ audience:
 
 # Drive Data Acquisition
 
-## Course: Linux Forensics - Day 3 (continued)
+## Course: Linux Forensics
 - Forensic acquisition creates exact copies of evidence media
 - Proper imaging preserves the original evidence untouched
 - This module covers FTK Imager CLI, `LiME`, `fmem`, and imaging best practices

@@ -13,7 +13,7 @@ audience:
 ---
 
 # TCP/IP Essentials
-## Chapter 1: Introduction to Computer Networks
+## Introduction to Computer Networks
 
 ---
 

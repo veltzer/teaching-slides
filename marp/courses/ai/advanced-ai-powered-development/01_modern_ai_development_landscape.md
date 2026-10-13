@@ -134,7 +134,7 @@ Assistant: "The shared counter is modified without a lock.
     - Which tool required the least context-switching?
     - Which produced the most complete solution?
     - Where did each tool struggle?
-- Time-box: 15 minutes per tool, then group comparison
+- Try each tool in turn, then compare as a group
 
 ---
 

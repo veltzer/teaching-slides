@@ -11,7 +11,7 @@ audience:
 ---
 
 # Threads and Concurrency
-## Chapter 8: Parallel Programming in Rust
+## Parallel Programming in Rust
 
 ---
 

@@ -14,7 +14,7 @@ audience:
 
 # Advanced Volumes, `ConfigMaps` & `Secrets`
 
-Advanced Kubernetes Course - Day 2, Module 5
+Advanced Kubernetes Course
 
 ---
 

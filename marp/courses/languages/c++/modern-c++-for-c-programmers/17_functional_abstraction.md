@@ -535,7 +535,7 @@ public:
 
 ---
 
-## Next Chapter: Containers
+## Next Up: Containers
 
 - STL Container Classes
 - Container Selection

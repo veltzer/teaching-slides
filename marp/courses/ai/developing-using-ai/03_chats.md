@@ -701,11 +701,11 @@ Success comes from treating AI as an intelligent collaborator
 
 ## Next Steps
 
-Coming up in following chapters:
+Chapters that build on this one:
 
-1. **Chapter 4**: Prompt Engineering - crafting perfect prompts
-1. **Chapter 5**: AI-Enhanced Practices - TDD, refactoring, debugging
-1. **Chapter 6**: Learning and Skill Development - accelerated growth
-1. **Chapter 7**: Specialized Development - domain-specific AI use
+- ***Prompt Engineering for Developers*** - crafting perfect prompts
+- ***AI-Enhanced Coding Practices*** - TDD, refactoring, debugging
+- ***Learning and Skill Development*** - accelerated growth
+- ***Specialized Development Tasks*** - domain-specific AI use
 
 Ready to master the art of prompting!

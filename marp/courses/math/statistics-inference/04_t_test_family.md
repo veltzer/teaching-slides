@@ -76,7 +76,7 @@ audience:
 - **Normality** of the data (or, by the CLT, of the sample means) — matters mainly for small n
 - **Equal variances** — only for Student's; Welch waives it
 - The t-test is fairly robust to mild non-normality at moderate n; it is *not* robust to dependence or to a few wild outliers
-- Tiny, heavily skewed samples: use a permutation test or a rank test instead (later chapters)
+- Tiny, heavily skewed samples: use a permutation test or a rank test instead (see the *Resampling and Simulation* and *Non-Parametric Tests* chapters)
 
 ---
 

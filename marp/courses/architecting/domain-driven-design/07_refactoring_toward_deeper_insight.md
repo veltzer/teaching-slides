@@ -199,13 +199,13 @@ audience:
 
 ## Course Recap
 
-- Chapter 1: strategic design — bounded contexts, ubiquitous language
-- Chapter 2: event storming for discovery
-- Chapter 3: tactical building blocks
-- Chapter 4: CQRS and event sourcing
-- Chapter 5: sagas and process managers
-- Chapter 6: hexagonal architecture and microservices
-- Chapter 7: refactoring as discipline
+- Strategic design — bounded contexts, ubiquitous language
+- Event storming for discovery
+- Tactical building blocks
+- CQRS and event sourcing
+- Sagas and process managers
+- Hexagonal architecture and microservices
+- Refactoring as discipline
 
 ---
 

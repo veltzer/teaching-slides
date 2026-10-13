@@ -60,7 +60,7 @@ audience:
 
 ## Aggregate Boundaries Are Event Boundaries
 
-- A command operates on one aggregate (chapter 3)
+- A command operates on one aggregate (see the *Implementing Commands and Command Handlers* chapter)
 - Events emitted belong to that aggregate
 - The stream `order-42` only contains events from the Order aggregate
 - This keeps the consistency story simple
@@ -265,7 +265,7 @@ InventoryReleased        → MarkOrderFailed
 ## Versioning Integration Events
 
 - Integration events are an external contract; breaking changes hurt
-- Strategies (similar to chapter 2's domain event strategies):
+- Strategies (similar to the domain event strategies in the *Event Sourcing Fundamentals* chapter):
     - Additive only: never remove fields, never change types
     - Versioned types: `OrderPlacedV1`, `OrderPlacedV2` published in parallel for a window
     - Schema registry: every event validated against a registered schema

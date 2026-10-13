@@ -508,9 +508,9 @@ safety_categories = {
 
 ---
 
-## Day 1 Summary and Q&A
+## Summary: Foundations of Generative AI
 
-**What we covered today:**
+**What we covered:**
 - The landscape and history of generative AI
 - Transformer architecture and self-attention
 - `GPT` model family and evolution
@@ -520,7 +520,7 @@ safety_categories = {
 
 **Key insight:** Generative AI is built on surprisingly simple objectives (predict the next token), but achieves remarkable capabilities through scale and alignment.
 
-**Tomorrow:** We dive into hands-on `API` usage, prompt engineering, and fine-tuning.
+**Next:** We dive into hands-on `API` usage, prompt engineering, and fine-tuning.
 
 ---
 

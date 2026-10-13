@@ -634,4 +634,4 @@ Alternative persistence approaches:
 - Implement proper backup and recovery procedures
 - Test recovery scenarios regularly
 
-Next chapter: Redis Configuration and Management
+Next up: the *Redis Configuration and Management* chapter

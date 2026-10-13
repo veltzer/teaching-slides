@@ -868,7 +868,7 @@ git branch backup-$(date +%Y%m%d-%H%M%S)
 
 ## Next Up: Remote Repositories
 
-In the next session, we'll explore:
+We'll explore:
 
 1. Working with remote repositories
 1. Setting up and publishing repositories
@@ -880,6 +880,6 @@ In the next session, we'll explore:
 
 ---
 
-## Undoing Things Complete! 🎉
+## Undoing Things Recap
 
 ![undoing_things_complete](svg/courses/git/git/04_undoing_changes/undoing_things_complete.svg)

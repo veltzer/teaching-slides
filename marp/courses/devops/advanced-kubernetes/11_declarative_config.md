@@ -14,7 +14,7 @@ audience:
 
 # Declarative Object Configuration
 
-Advanced Kubernetes Course - Day 3, Module 1
+Advanced Kubernetes Course
 
 ---
 

@@ -30,6 +30,12 @@
 - SVG diagrams must NOT include a title inside the SVG. The `##` slide heading serves as the title.
 - SVG content must not extend below y=630. Marp renders the `##` heading above the image, so the image is scaled to ~640px tall. Keep viewBox at 1280x720 but treat y=630 as the effective bottom boundary.
 - SVG drawing content must be exactly fitted to the usable area [40,1240]x[40,620] (enforced by `scripts/check_svg.py --fit`). Run `scripts/svg_fix.py --fit` to fix.
+- Never refer to durations (days, hours) from within the content of the slides themselves.
+- Never refer to the course's own sessions or schedule ("In the next session", "Day 2", "Tomorrow:", "today we covered"). The "Next Up: X" heading carries the pointer; the text names the topics, not when they happen.
+- Refer to another chapter or lecture by its title, never by its number or position ("chapter 7", "the next chapter", "the previous lecture", "## Chapter 3: Foo"). The title survives reordering; the position does not. Write "the *Snapshotting* chapter", and drop "Chapter N:" prefixes from roadmap lists and headings.
+- No celebration or farewell slides at the end of a deck ("X Complete! 🎉", "Thank You"). If such a slide carries recap content, retitle it as a recap ("## X Recap").
+- Never have a "Questions?" slide at the end of the presentation.
+- Never have a "Thank You" (farewell) slide at the end of the presentation, and no "Thank You" closing lines on the last slide either.
 
 ## Validation
 - Check markdown: `scripts/check_marp_md.py` (run via `rsconstruct build --verbose -j10`)

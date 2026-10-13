@@ -369,11 +369,8 @@ The method is the product: the model is only as good as the system around it.
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - The model is a power tool: aim it small, verify everything
 - Context, knowledge files, and guardrails do the heavy lifting
 - Same discipline for monoliths and microservices — only the seams differ
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

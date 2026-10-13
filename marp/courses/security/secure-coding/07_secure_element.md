@@ -41,7 +41,7 @@ audience:
 - A standardized (TCG `TPM` 2.0) security chip — discrete, firmware, or integrated into the CPU (fTPM, PTT)
 - What it gives you:
     - Secure key generation and storage (keys wrapped under a hardware root)
-    - **PCRs** — measurement registers for measured boot and sealing (previous chapter)
+    - **PCRs** — measurement registers for measured boot and sealing (see the *Secure Boot* chapter)
     - **Attestation** — signed quotes of platform state
     - A hardware RNG and a monotonic counter (anti-rollback)
 - On Linux: `/dev/tpm0`, the `tpm2-tools` suite, `tpm2-pkcs11`; integrates with LUKS, `systemd-cryptenroll`, SSH

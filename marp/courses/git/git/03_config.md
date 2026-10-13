@@ -969,7 +969,7 @@ git config --global alias.recent-branches \
 
 ## Next Up: Undoing Things
 
-In the next session, we'll explore:
+We'll explore:
 
 1. Why and when to rewrite history
 1. Amending commits
@@ -981,6 +981,6 @@ In the next session, we'll explore:
 
 ---
 
-## Configuration Complete! 🎉
+## Configuration Recap
 
 ![configuration_complete](svg/courses/git/git/03_config/configuration_complete.svg)

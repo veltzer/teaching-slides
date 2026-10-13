@@ -12,7 +12,7 @@ audience:
 
 # Linux OS Artifacts
 
-## Course: Linux Forensics - Day 2 (continued)
+## Course: Linux Forensics
 - `Linux` systems generate extensive forensic artifacts
 - User activity, system events, and application data leave traces
 - Knowing where to find artifacts is key to successful investigation

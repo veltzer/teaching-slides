@@ -17,10 +17,10 @@ audience:
 # Introduction to Terraform
 
 ## Course Overview
-- 3-day comprehensive `Terraform` training
-- Day 1: Fundamentals, project structure, resources, data sources, variables, state
-- Day 2: Reuse patterns, drift management, security, functions
-- Day 3: Building infrastructure, provisioners, debugging, Packer
+- Comprehensive `Terraform` training
+- Fundamentals, project structure, resources, data sources, variables, state
+- Reuse patterns, drift management, security, functions
+- Building infrastructure, provisioners, debugging, Packer
 
 ---
 

@@ -887,11 +887,11 @@ Better prompts = Better code = Less time wasted
 
 ## Next Steps
 
-Coming up in following chapters:
+Chapters that build on this one:
 
-1. **Chapter 5**: AI-Enhanced Coding Practices - TDD, refactoring, debugging
-1. **Chapter 6**: Learning and Skill Development - accelerated growth
-1. **Chapter 7**: Specialized Development Tasks - domain-specific AI
-1. **Chapter 8**: Quality and Best Practices - maintaining standards
+- ***AI-Enhanced Coding Practices*** - TDD, refactoring, debugging
+- ***Learning and Skill Development*** - accelerated growth
+- ***Specialized Development Tasks*** - domain-specific AI
+- ***Quality and Best Practices*** - maintaining standards
 
 Ready to apply these prompting skills in practice!

@@ -482,11 +482,8 @@ audience:
 
 ---
 
-## Questions?
+## Closing Thoughts
 
 - Map the category to the problem, and the tool of the month is easy
 - Start thin, measure, and let pain justify every new dependency
 - The best stack is the one your team can debug
-
-## Thank You
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

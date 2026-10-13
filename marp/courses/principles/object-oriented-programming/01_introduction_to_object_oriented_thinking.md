@@ -140,7 +140,7 @@ audience:
 - Algorithms with no state (use functions)
 - Performance-critical loops (object overhead can matter)
 - Domains with no obvious "things" — forcing classes on them adds noise
-- Teams that misuse inheritance — the topic of a later chapter
+- Teams that misuse inheritance — the topic of the *Composition vs Inheritance* chapter
 
 ---
 

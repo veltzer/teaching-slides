@@ -48,7 +48,7 @@ audience:
 - DDD term for a conceptually distinct part of the domain
 - Sales is a subdomain; Shipping is a subdomain; Reporting is a subdomain
 - Each subdomain has its own model and language
-- Subdomain ≈ bounded context (chapter 4)
+- Subdomain ≈ bounded context (see the *Service Boundaries and Bounded Contexts* chapter)
 
 ---
 

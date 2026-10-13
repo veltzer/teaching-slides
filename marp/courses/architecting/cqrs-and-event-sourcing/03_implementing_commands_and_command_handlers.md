@@ -129,7 +129,7 @@ def load_order(order_id: OrderId) -> Order:
 
 - Read all events for the stream
 - Replay them onto a fresh aggregate
-- Snapshots can short-circuit this for long streams (chapter 7)
+- Snapshots can short-circuit this for long streams (see the *Snapshotting* chapter)
 
 ---
 
@@ -390,7 +390,7 @@ for attempt in range(3):
 ## One Command, One Aggregate
 
 - A command operates on exactly one aggregate root
-- Multi-aggregate workflows are coordinated by a process manager (chapter 8)
+- Multi-aggregate workflows are coordinated by a process manager (see the *Integration with DDD and Microservices* chapter)
 - This keeps the unit of consistency clear
 - Cross-aggregate operations are explicit, not accidental
 
@@ -401,7 +401,7 @@ for attempt in range(3):
 - Given a sequence of past events
 - When a command is dispatched
 - Then a specific sequence of new events is produced (or a specific failure)
-- We cover this in detail in chapter 9
+- We cover this in detail in the *Testing CQRS / Event-Sourced Systems* chapter
 
 ---
 

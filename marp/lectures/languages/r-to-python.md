@@ -573,8 +573,7 @@ ro.r("summary(lm(mpg ~ wt, data = mtcars))")
 
 ---
 
-## Thank You
+## Next Steps
 
-- Practice: port one real R script this week
+- Practice: port one real R script
 - Reference: pandas, NumPy, scikit-learn, statsmodels docs
-- Questions? [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

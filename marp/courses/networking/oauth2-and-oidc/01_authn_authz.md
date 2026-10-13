@@ -197,14 +197,14 @@ audience:
 
 ## Course Roadmap
 
-- Chapter 2: OAuth2 basics
-- Chapter 3: Authorization Code flow with PKCE
-- Chapter 4: Other grant types
-- Chapter 5: Token types
-- Chapter 6: OpenID Connect
-- Chapter 7: JWTs in depth
-- Chapter 8: Security best practices
-- Chapter 9: Real providers and integration
+- OAuth2 basics
+- Authorization Code flow with PKCE
+- Other grant types
+- Token types
+- OpenID Connect
+- JWTs in depth
+- Security best practices
+- Real providers and integration
 
 ---
 

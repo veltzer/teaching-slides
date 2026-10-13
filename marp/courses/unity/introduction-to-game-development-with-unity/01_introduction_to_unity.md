@@ -188,7 +188,7 @@ audience:
 
 ## What's Next
 
-- Next chapter: 3D modeling concepts and bringing models into Unity
+- Next up: the *3D Modeling and Asset Import* chapter — bringing models into Unity
 - After that: writing C# scripts to make objects do things
 - The course builds toward shipping a small playable game
 - Don't be precious about saving — experimentation is the point

@@ -209,9 +209,6 @@ audience:
 
 ---
 
-## Thank You
-- Questions and discussion
-- Feedback welcome
+## Closing Thoughts
 - Continue learning with hands-on practice
 - Cloud free tiers are your sandbox
-- Good luck on your cloud journey

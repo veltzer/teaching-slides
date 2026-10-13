@@ -169,7 +169,7 @@ audience:
 
 - Waiting for a lock = waiting for an arbitrary amount of time
 - For RT: minimise locking, use lock-free data structures, or use priority inheritance
-- The "priority inversion" problem (next chapter)
+- The "priority inversion" problem (see the *Real-Time and Scheduling* chapter)
 - Even short locks can cascade into long waits under contention
 - A locked thread is an unscheduled thread
 

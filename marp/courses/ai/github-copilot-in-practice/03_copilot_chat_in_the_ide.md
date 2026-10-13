@@ -139,7 +139,7 @@ audience:
 - `/fix` reads diagnostics from the Problems panel, not only the code
 - `/tests` looks for existing test files to imitate their style
 - `/new` produces a file tree preview before creating anything
-- Prompt files you write appear in the same `/` list (next chapter)
+- Prompt files you write appear in the same `/` list (see the *Customizing Copilot for Your Repository* chapter)
 
 ---
 
