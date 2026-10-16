@@ -93,6 +93,10 @@ def load_palette(svg_type: str = "regular") -> dict:
             f"(known: {sorted(DIAGRAM_THEMES)})"
         )
     data = copy.deepcopy(DIAGRAM_THEMES[name])
+    # The theme's name travels with the palette: the defs builder writes it on
+    # the style block, so a renderer that knows the deck's page palette can
+    # pick the matching variant (shared-themes' diagram-themes.json).
+    data["theme"] = name
     shadow = data.pop("shadow")
     effects = data.setdefault("effects", {})
     if shadow == "none":
@@ -125,7 +129,7 @@ def build_defs_string(svg_type: str = "regular") -> str:
     lines: list[str] = []
     lines.append("  <defs>")
 
-    lines.append('    <style id="palette-vars">')
+    lines.append(f'    <style id="palette-vars" data-theme="{data["theme"]}">')
     lines.append("      :root, svg {")
     for group in data.get("colors", {}).values():
         for name, hexval in group.items():

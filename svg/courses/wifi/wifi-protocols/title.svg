@@ -3,7 +3,7 @@
     <type>title</type>
   </metadata>
   <defs>
-    <style id="palette-vars">
+    <style id="palette-vars" data-theme="intro">
       :root, svg {
         --bg: #ffffff;
         --surface: #f5f5f5;
@@ -35,10 +35,54 @@
         --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#2196f3"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--primary-border)"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--danger-border)"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--info-border)"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--bg)"/>
+    </marker>
   </defs>
 
   <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
@@ -55,8 +99,8 @@
   <path d="M 480 360 Q 640 230 800 360" fill="none" stroke="var(--primary-fill)" stroke-width="3" opacity="0.6"/>
   <path d="M 420 350 Q 640 170 860 350" fill="none" stroke="var(--primary-fill)" stroke-width="3" opacity="0.35"/>
 
-  <text x="240" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">OFDM &#8226; MIMO</text>
+  <text x="240" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">OFDM • MIMO</text>
   <text x="500" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">802.11 a/b/g/n/ac/ax</text>
   <text x="780" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Wi-Fi 6 / Wi-Fi 6E</text>
-  <text x="1040" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">WEP &#8594; WPA3</text>
+  <text x="1040" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">WEP → WPA3</text>
 </svg>

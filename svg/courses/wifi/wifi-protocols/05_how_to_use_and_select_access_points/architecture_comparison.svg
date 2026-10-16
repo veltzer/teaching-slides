@@ -3,7 +3,7 @@
     <type>regular</type>
   </metadata>
   <defs>
-    <style id="palette-vars">
+    <style id="palette-vars" data-theme="flat">
       :root, svg {
         --bg: #ffffff;
         --surface: #c4cdd6;
@@ -36,11 +36,59 @@
         --info-accent: #2f253b;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
-    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/></marker>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="var(--primary-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--bg)"/>
+      <stop offset="100%" stop-color="var(--surface)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="var(--ok-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="var(--warn-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="var(--danger-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="var(--info-border)"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--primary-border)"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--danger-border)"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--info-border)"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--bg)"/>
+    </marker>
   </defs>
 
   <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">AP deployment architectures</text>
@@ -50,7 +98,7 @@
   <text x="230" y="115" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Standalone</text>
   <rect x="180" y="160" width="100" height="50" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2" rx="4"/>
   <text x="230" y="190" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">AP (web UI)</text>
-  <text x="230" y="260" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">cheap &#8226; small scale</text>
+  <text x="230" y="260" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">cheap • small scale</text>
   <text x="230" y="290" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">manual roaming</text>
 
   <!-- Controller-based -->
@@ -67,7 +115,7 @@
   <line x1="630" y1="175" x2="555" y2="220" stroke="var(--text-muted)" stroke-width="2"/>
   <line x1="640" y1="175" x2="640" y2="220" stroke="var(--text-muted)" stroke-width="2"/>
   <line x1="650" y1="175" x2="725" y2="220" stroke="var(--text-muted)" stroke-width="2"/>
-  <text x="640" y="290" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">central config &#8226; coordinated channels &#8226; fast roaming</text>
+  <text x="640" y="290" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">central config • coordinated channels • fast roaming</text>
 
   <!-- Mesh -->
   <rect x="860" y="80" width="380" height="240" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
@@ -88,7 +136,7 @@
 
   <rect x="40" y="400" width="1200" height="40" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6"/>
   <text x="100" y="425" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Standalone</text>
-  <text x="640" y="425" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">home, &#8804; 3 APs, single VLAN, no roaming requirements</text>
+  <text x="640" y="425" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">home, ≤ 3 APs, single VLAN, no roaming requirements</text>
 
   <rect x="40" y="450" width="1200" height="40" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6"/>
   <text x="100" y="475" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Controller</text>

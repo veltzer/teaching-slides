@@ -3,7 +3,7 @@
     <type>regular</type>
   </metadata>
   <defs>
-    <style id="palette-vars">
+    <style id="palette-vars" data-theme="flat">
       :root, svg {
         --bg: #ffffff;
         --surface: #c4cdd6;
@@ -36,14 +36,62 @@
         --info-accent: #2f253b;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
-    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/></marker>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="var(--primary-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--bg)"/>
+      <stop offset="100%" stop-color="var(--surface)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="var(--ok-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="var(--warn-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="var(--danger-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="var(--info-border)"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--primary-border)"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--danger-border)"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--info-border)"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--bg)"/>
+    </marker>
   </defs>
 
-  <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Player presses Fire &#8594; Bullet spawns &#8594; Bullet hits Enemy &#8594; Enemy dies</text>
+  <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Player presses Fire → Bullet spawns → Bullet hits Enemy → Enemy dies</text>
 
   <rect x="40" y="120" width="240" height="160" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="160" y="170" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Player</text>
@@ -84,5 +132,5 @@
   <text x="60" y="555" font-size="14" fill="var(--text)" font-family="Courier New, monospace">    }</text>
   <text x="60" y="580" font-size="14" fill="var(--text)" font-family="Courier New, monospace">}</text>
 
-  <text x="640" y="620" text-anchor="middle" font-size="13" fill="var(--text-faint)" font-family="Arial, sans-serif">small script per object &#8594; readable, testable, easy to extend</text>
+  <text x="640" y="620" text-anchor="middle" font-size="13" fill="var(--text-faint)" font-family="Arial, sans-serif">small script per object → readable, testable, easy to extend</text>
 </svg>

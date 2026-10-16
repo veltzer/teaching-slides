@@ -3,7 +3,7 @@
     <type>regular</type>
   </metadata>
   <defs>
-    <style id="palette-vars">
+    <style id="palette-vars" data-theme="flat">
       :root, svg {
         --bg: #ffffff;
         --surface: #c4cdd6;
@@ -36,50 +36,58 @@
         --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="100%" stop-color="var(--primary-border)"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
+      <stop offset="0%" stop-color="var(--bg)"/>
+      <stop offset="100%" stop-color="var(--surface)"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
+      <stop offset="100%" stop-color="var(--ok-border)"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
+      <stop offset="100%" stop-color="var(--warn-border)"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
+      <stop offset="100%" stop-color="var(--danger-border)"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
+      <stop offset="100%" stop-color="var(--info-border)"/>
     </linearGradient>
-    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--primary-border)"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--danger-border)"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--info-border)"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--bg)"/>
     </marker>
   </defs>
 
@@ -106,15 +114,15 @@
   <!-- Topic boxes inside broker -->
   <rect x="480" y="180" width="320" height="100" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2" rx="6"/>
   <text x="640" y="215" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Topic: orders</text>
-  <text x="640" y="250" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">durable log &#8226; offsets &#8226; partitions</text>
+  <text x="640" y="250" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">durable log • offsets • partitions</text>
 
   <rect x="480" y="310" width="320" height="100" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2" rx="6"/>
   <text x="640" y="345" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Topic: metrics</text>
-  <text x="640" y="380" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">durable log &#8226; offsets &#8226; partitions</text>
+  <text x="640" y="380" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">durable log • offsets • partitions</text>
 
   <text x="640" y="445" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">routed by TOPIC name</text>
-  <text x="640" y="470" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">asynchronous &#8226; buffered</text>
-  <text x="640" y="495" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">persistent &#8226; replayable</text>
+  <text x="640" y="470" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">asynchronous • buffered</text>
+  <text x="640" y="495" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">persistent • replayable</text>
   <text x="640" y="540" text-anchor="middle" font-size="13" fill="var(--text-muted)" font-family="Arial, sans-serif">network protocol (TCP / AMQP / Kafka wire)</text>
 
   <!-- Subscriber process A -->

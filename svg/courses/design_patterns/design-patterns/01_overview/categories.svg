@@ -3,7 +3,7 @@
     <type>regular</type>
   </metadata>
   <defs>
-    <style id="palette-vars">
+    <style id="palette-vars" data-theme="flat">
       :root, svg {
         --bg: #ffffff;
         --surface: #c4cdd6;
@@ -36,9 +36,59 @@
         --info-accent: #2f253b;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="var(--primary-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--bg)"/>
+      <stop offset="100%" stop-color="var(--surface)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="var(--ok-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="var(--warn-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="var(--danger-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="var(--info-border)"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--primary-border)"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--danger-border)"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--info-border)"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--bg)"/>
+    </marker>
   </defs>
 
   <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">23 GoF patterns in 3 categories</text>
@@ -46,35 +96,35 @@
   <rect x="40" y="80" width="380" height="540" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
   <text x="230" y="125" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Creational (5)</text>
   <text x="230" y="155" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">how objects come into existence</text>
-  <text x="60" y="205" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Singleton</text>
-  <text x="60" y="240" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Factory Method</text>
-  <text x="60" y="275" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Abstract Factory</text>
-  <text x="60" y="310" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Builder</text>
-  <text x="60" y="345" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Prototype</text>
+  <text x="60" y="205" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Singleton</text>
+  <text x="60" y="240" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Factory Method</text>
+  <text x="60" y="275" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Abstract Factory</text>
+  <text x="60" y="310" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Builder</text>
+  <text x="60" y="345" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Prototype</text>
 
   <rect x="450" y="80" width="380" height="540" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
   <text x="640" y="125" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Structural (7)</text>
   <text x="640" y="155" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">how classes and objects compose</text>
-  <text x="470" y="205" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Adapter</text>
-  <text x="470" y="240" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Bridge</text>
-  <text x="470" y="275" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Composite</text>
-  <text x="470" y="310" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Decorator</text>
-  <text x="470" y="345" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Facade</text>
-  <text x="470" y="380" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Flyweight</text>
-  <text x="470" y="415" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Proxy</text>
+  <text x="470" y="205" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Adapter</text>
+  <text x="470" y="240" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Bridge</text>
+  <text x="470" y="275" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Composite</text>
+  <text x="470" y="310" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Decorator</text>
+  <text x="470" y="345" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Facade</text>
+  <text x="470" y="380" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Flyweight</text>
+  <text x="470" y="415" font-size="16" fill="var(--text)" font-family="Arial, sans-serif">• Proxy</text>
 
   <rect x="860" y="80" width="380" height="540" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
   <text x="1050" y="125" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Behavioural (11)</text>
   <text x="1050" y="155" text-anchor="middle" font-size="14" fill="var(--text)" font-family="Arial, sans-serif">how objects share work</text>
-  <text x="880" y="205" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Chain of Responsibility</text>
-  <text x="880" y="235" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Command</text>
-  <text x="880" y="265" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Interpreter</text>
-  <text x="880" y="295" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Iterator</text>
-  <text x="880" y="325" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Mediator</text>
-  <text x="880" y="355" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Memento</text>
-  <text x="880" y="385" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Observer</text>
-  <text x="880" y="415" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; State</text>
-  <text x="880" y="445" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Strategy</text>
-  <text x="880" y="475" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Template Method</text>
-  <text x="880" y="505" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">&#8226; Visitor</text>
+  <text x="880" y="205" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">• Chain of Responsibility</text>
+  <text x="880" y="235" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">• Command</text>
+  <text x="880" y="265" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">• Interpreter</text>
+  <text x="880" y="295" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">• Iterator</text>
+  <text x="880" y="325" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">• Mediator</text>
+  <text x="880" y="355" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">• Memento</text>
+  <text x="880" y="385" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">• Observer</text>
+  <text x="880" y="415" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">• State</text>
+  <text x="880" y="445" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">• Strategy</text>
+  <text x="880" y="475" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">• Template Method</text>
+  <text x="880" y="505" font-size="15" fill="var(--text)" font-family="Arial, sans-serif">• Visitor</text>
 </svg>

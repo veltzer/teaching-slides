@@ -3,7 +3,7 @@
     <type>regular</type>
   </metadata>
   <defs>
-    <style id="palette-vars">
+    <style id="palette-vars" data-theme="flat">
       :root, svg {
         --bg: #ffffff;
         --surface: #c4cdd6;
@@ -36,14 +36,62 @@
         --info-accent: #2f253b;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
-    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/></marker>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="var(--primary-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--bg)"/>
+      <stop offset="100%" stop-color="var(--surface)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="var(--ok-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="var(--warn-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="var(--danger-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="var(--info-border)"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--primary-border)"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--danger-border)"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--info-border)"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--bg)"/>
+    </marker>
   </defs>
 
-  <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">A simple Animator: Idle &#8596; Walk &#8596; Run, with a Jump from any state</text>
+  <text x="40" y="40" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">A simple Animator: Idle ↔ Walk ↔ Run, with a Jump from any state</text>
 
   <ellipse cx="280" cy="280" rx="140" ry="70" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="280" y="280" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Idle</text>
@@ -75,5 +123,5 @@
   <line x1="640" y1="350" x2="640" y2="430" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
   <line x1="1100" y1="350" x2="740" y2="475" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
 
-  <text x="640" y="620" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">solid: parameter-driven transitions &#8226; dashed: &quot;any state&quot; transition</text>
+  <text x="640" y="620" text-anchor="middle" font-size="14" fill="var(--text-muted)" font-family="Arial, sans-serif">solid: parameter-driven transitions • dashed: "any state" transition</text>
 </svg>

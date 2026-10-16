@@ -1,4 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)"><metadata><type>title</type></metadata><defs><style id="palette-vars">:root, svg { --bg: #ffffff; --surface: #f5f5f5; --border: #e0e0e0; --text: #212121; --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --black: #000000; --primary-fill: #2196f3; --primary-border: #1565c0; --primary-text: #ffffff; --primary-accent: #0d47a1; --ok-fill: #4caf50; --ok-border: #2e7d32; --ok-text: #ffffff; --ok-accent: #1b5e20; --warn-fill: #ff9800; --warn-border: #e65100; --warn-text: #ffffff; --warn-accent: #bf360c; --danger-fill: #e74c3c; --danger-border: #c62828; --danger-text: #ffffff; --danger-accent: #b71c1c; --info-fill: #9c27b0; --info-border: #6a1b9a; --info-text: #ffffff; --info-accent: #4a148c; }</style></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars" data-theme="intro">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--primary-border)"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--danger-border)"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--info-border)"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--bg)"/>
+    </marker>
+  </defs>
 <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
 <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">OpenTelemetry</text>
 <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">Observability standard</text>
@@ -12,7 +96,7 @@
   </g>
   <line x1="260" y1="205" x2="260" y2="462" stroke="var(--text-muted)" stroke-width="1"/>
   <rect x="260" y="215" width="840" height="36" rx="4" fill="var(--primary-fill)"/>
-  <text x="680" y="239" font-size="17" fill="var(--primary-text)">GET /checkout &#8212; 240 ms</text>
+  <text x="680" y="239" font-size="17" fill="var(--primary-text)">GET /checkout — 240 ms</text>
   <rect x="278" y="263" width="140" height="36" rx="4" fill="var(--info-fill)"/>
   <text x="348" y="287" font-size="16" fill="var(--info-text)">verify token</text>
   <rect x="435" y="311" width="385" height="36" rx="4" fill="var(--warn-fill)"/>
@@ -34,5 +118,5 @@
     <text x="1100" y="488">240 ms</text>
   </g>
 </g>
-<text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">traces &#8226; metrics &#8226; logs &#8226; collector</text>
+<text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">traces • metrics • logs • collector</text>
 </svg>
