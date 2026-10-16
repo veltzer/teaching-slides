@@ -23,6 +23,7 @@ Defaults match where this repo's rsconstruct.toml puts things
 import argparse
 import json
 import os
+import shutil
 import subprocess
 import sys
 from datetime import UTC, datetime
@@ -309,9 +310,19 @@ def build_info_html() -> str:
     )
 
 
+def publish_fonts(site_dir: Path) -> None:
+    """Copy the shared-themes fonts next to the index, where the inlined
+    fonts.css expects them. Committed files in the submodule; nothing is
+    fetched."""
+    shutil.copytree(SHARED_THEMES_DIR / "fonts", site_dir / "fonts", dirs_exist_ok=True)
+
+
 def generate_index(entries: list[dict[str, Any]]) -> str:
     """Generate the self-contained HTML index page."""
     shared_css_parts = [
+        # fonts.css first: its url("fonts/...") entries are relative to the page
+        # the CSS is inlined into, and publish_fonts() puts fonts/ beside it.
+        (SHARED_THEMES_DIR / "fonts.css").read_text(encoding="utf-8"),
         (SHARED_THEMES_DIR / "themes.css").read_text(encoding="utf-8"),
         (SHARED_THEMES_DIR / "base.css").read_text(encoding="utf-8"),
         (SHARED_THEMES_DIR / "typography.css").read_text(encoding="utf-8"),
@@ -411,6 +422,7 @@ def main() -> None:
 
     out_file.parent.mkdir(parents=True, exist_ok=True)
     out_file.write_text(html, encoding="utf-8")
+    publish_fonts(out_file.parent)
     print(f"Index built: {n_courses} courses, {n_lectures} lectures ({len(entries)} total)")
     print(f"Output: {out_file}")
 
