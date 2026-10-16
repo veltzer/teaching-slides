@@ -21,9 +21,9 @@ Defaults match where this repo's rsconstruct.toml puts things
 """
 
 import argparse
+import importlib.util
 import json
 import os
-import shutil
 import subprocess
 import sys
 from datetime import UTC, datetime
@@ -236,27 +236,6 @@ def build_lecture_entries(
     return entries
 
 
-def theme_options() -> str:
-    """The theme <select> entries, from shared-themes' themes.json, so the
-    list, its order, its labels and their hints ("Midnight (dark blue)") are
-    never retyped in this repo. The default theme is marked selected to
-    match what :root applies."""
-    palette = json.loads((SHARED_THEMES_DIR / "themes.json").read_text(encoding="utf-8"))
-    lines = []
-    for theme in palette["themes"]:
-        code = theme["code"]
-        label = f'{theme["label"]} ({theme["description"]})'
-        selected = " selected" if code == palette["default"] else ""
-        if UI_VARIANT == "material_web":
-            lines.append(
-                f'<md-select-option value="{code}"{selected}>'
-                f'<div slot="headline">{label}</div></md-select-option>'
-            )
-        else:
-            lines.append(f'<option value="{code}"{selected}>{label}</option>')
-    return "\n".join(lines)
-
-
 def make_options(values: list[str]) -> str:
     """Generate option tags from a sorted list of unique values, in
     whichever flavour the active UI variant expects."""
@@ -312,25 +291,21 @@ def build_info_html() -> str:
     )
 
 
-def publish_fonts(site_dir: Path) -> None:
-    """Copy the shared-themes fonts next to the index, where the inlined
-    fonts.css expects them. Committed files in the submodule; nothing is
-    fetched."""
-    shutil.copytree(SHARED_THEMES_DIR / "fonts", site_dir / "fonts", dirs_exist_ok=True)
+
+def load_shared_themes():
+    """The consumer helper from the shared-themes submodule (shared_themes.py):
+    the inlined CSS layers, the switcher, the theme <select> entries and the
+    fonts copy, one implementation for every index page in the fleet."""
+    path = SHARED_THEMES_DIR / "shared_themes.py"
+    spec = importlib.util.spec_from_file_location("shared_themes", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def generate_index(entries: list[dict[str, Any]]) -> str:
     """Generate the self-contained HTML index page."""
-    shared_css_parts = [
-        # fonts.css first: its url("fonts/...") entries are relative to the page
-        # the CSS is inlined into, and publish_fonts() puts fonts/ beside it.
-        (SHARED_THEMES_DIR / "fonts.css").read_text(encoding="utf-8"),
-        (SHARED_THEMES_DIR / "themes.css").read_text(encoding="utf-8"),
-        (SHARED_THEMES_DIR / "base.css").read_text(encoding="utf-8"),
-        (SHARED_THEMES_DIR / "typography.css").read_text(encoding="utf-8"),
-        (SHARED_THEMES_DIR / "components.css").read_text(encoding="utf-8"),
-    ]
-    shared_js = (SHARED_THEMES_DIR / "theme-switcher.js").read_text(encoding="utf-8")
+    shared = load_shared_themes()
 
     html_path = RESOURCES_DIR / f"courses_index_{UI_VARIANT}.html"
     css_path = RESOURCES_DIR / f"courses_index_{UI_VARIANT}.css"
@@ -340,8 +315,8 @@ def generate_index(entries: list[dict[str, Any]]) -> str:
             f"Unknown MATERIAL_VARIANT '{UI_VARIANT}': {html_path} not found"
         )
 
-    css = "\n".join(shared_css_parts) + "\n" + css_path.read_text(encoding="utf-8")
-    js = shared_js + "\n" + js_path.read_text(encoding="utf-8")
+    css = shared.css() + css_path.read_text(encoding="utf-8")
+    js = shared.js() + js_path.read_text(encoding="utf-8")
     template = html_path.read_text(encoding="utf-8")
 
     levels = [e["level"] for e in entries]
@@ -360,7 +335,7 @@ def generate_index(entries: list[dict[str, Any]]) -> str:
         .replace("<!--{{TYPE_OPTIONS}}-->", make_options(types))
         .replace("<!--{{TAG_OPTIONS}}-->", make_options(tags))
         .replace("<!--{{AUDIENCE_OPTIONS}}-->", make_options(audiences))
-        .replace("<!--{{THEME_OPTIONS}}-->", theme_options())
+        .replace("<!--{{THEME_OPTIONS}}-->", shared.theme_options(material_web=UI_VARIANT == "material_web"))
         .replace("{{BUILD_INFO}}", build_info_html())
     )
 
@@ -424,7 +399,7 @@ def main() -> None:
 
     out_file.parent.mkdir(parents=True, exist_ok=True)
     out_file.write_text(html, encoding="utf-8")
-    publish_fonts(out_file.parent)
+    load_shared_themes().publish_fonts(out_file.parent)
     print(f"Index built: {n_courses} courses, {n_lectures} lectures ({len(entries)} total)")
     print(f"Output: {out_file}")
 
