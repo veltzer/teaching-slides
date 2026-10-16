@@ -49,6 +49,9 @@ src_extensions = [".md"]
 output_dir = "out/chapters/courses"
 output_extension = "pdf"
 batch = true
+# rsslide.toml names the shared-themes palettes a deck may render in; a
+# change to either changes every deck.
+dep_inputs = ["rsslide.toml", "shared/shared-themes/themes.json", "shared/shared-themes/diagram-themes.json"]
 
 # Standalone lectures have no united PDF; the site links them individually.
 [processor.generator.generic.rsslide_lectures]
@@ -59,6 +62,7 @@ src_extensions = [".md"]
 output_dir = "_site/marp/lectures"
 output_extension = "pdf"
 batch = true
+dep_inputs = ["rsslide.toml", "shared/shared-themes/themes.json", "shared/shared-themes/diagram-themes.json"]
 
 [processor.checker.ruff]
 src_dirs = ["scripts"]
