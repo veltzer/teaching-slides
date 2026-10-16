@@ -235,6 +235,25 @@ def build_lecture_entries(
     return entries
 
 
+def theme_options() -> str:
+    """The theme <select> entries, from shared-themes' themes.json, so the
+    list, its order and its labels are never retyped in this repo. The
+    default theme is marked selected to match what :root applies."""
+    palette = json.loads((SHARED_THEMES_DIR / "themes.json").read_text(encoding="utf-8"))
+    lines = []
+    for theme in palette["themes"]:
+        code, label = theme["code"], theme["label"]
+        selected = " selected" if code == palette["default"] else ""
+        if UI_VARIANT == "material_web":
+            lines.append(
+                f'<md-select-option value="{code}"{selected}>'
+                f'<div slot="headline">{label}</div></md-select-option>'
+            )
+        else:
+            lines.append(f'<option value="{code}"{selected}>{label}</option>')
+    return "\n".join(lines)
+
+
 def make_options(values: list[str]) -> str:
     """Generate option tags from a sorted list of unique values, in
     whichever flavour the active UI variant expects."""
@@ -328,6 +347,7 @@ def generate_index(entries: list[dict[str, Any]]) -> str:
         .replace("<!--{{TYPE_OPTIONS}}-->", make_options(types))
         .replace("<!--{{TAG_OPTIONS}}-->", make_options(tags))
         .replace("<!--{{AUDIENCE_OPTIONS}}-->", make_options(audiences))
+        .replace("<!--{{THEME_OPTIONS}}-->", theme_options())
         .replace("{{BUILD_INFO}}", build_info_html())
     )
 
