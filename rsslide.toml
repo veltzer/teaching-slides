@@ -1,9 +1,13 @@
 # rsslide configuration for this repository's decks.
 #
 # Everything not set here keeps rsslide's defaults, which reproduce marp's
-# default theme. The one setting is where the fleet's page palettes live: a
-# deck may name one in its front matter (`theme: midnight`) and render in it,
-# diagrams included (see rsslide's README, Themes).
+# default theme, except the palette: the decks render in the fleet's azure
+# palette from shared-themes, the one veltzer.github.io and the syllabi use,
+# so a deck, the site that lists it and its syllabus look like one family. A
+# deck may name another palette in its front matter (`theme: midnight`), or
+# `theme: default` for marp's look; diagrams follow the palette (see
+# rsslide's README, Themes).
 
 [theme]
 shared_themes = "shared/shared-themes"
+default = "azure"
