@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars" data-theme="flat">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --code-text: #f5f5f5;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="var(--primary-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--bg)"/>
+      <stop offset="100%" stop-color="var(--surface)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="var(--ok-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="var(--warn-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="var(--danger-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="var(--info-border)"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--primary-border)"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--danger-border)"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--info-border)"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--bg)"/>
+    </marker>
+  </defs>
+  <rect x="40" y="40" width="380" height="150" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="230" y="110" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Observation</text>
+  <text x="230" y="135" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">what the artifact shows</text>
+  <rect x="40" y="230" width="380" height="140" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="230" y="293" text-anchor="middle" font-size="18" fill="var(--text)" font-family="Arial, sans-serif">USB serial AA0123456</text>
+  <text x="230" y="317" text-anchor="middle" font-size="18" fill="var(--text)" font-family="Arial, sans-serif">recorded at 21:07 UTC</text>
+  <text x="230" y="430" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">verifiable by anyone</text>
+  <text x="230" y="465" text-anchor="middle" font-size="18" fill="var(--text-muted)" font-family="Arial, sans-serif">state it as fact</text>
+  <line x1="422" y1="115" x2="446" y2="115" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="450" y="40" width="380" height="150" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="110" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Inference</text>
+  <text x="640" y="135" text-anchor="middle" font-size="18" fill="var(--warn-text)" font-family="Arial, sans-serif">what it means</text>
+  <rect x="450" y="230" width="380" height="140" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="293" text-anchor="middle" font-size="18" fill="var(--text)" font-family="Arial, sans-serif">exhibit JD/2 was</text>
+  <text x="640" y="317" text-anchor="middle" font-size="18" fill="var(--text)" font-family="Arial, sans-serif">connected to JD/1</text>
+  <text x="640" y="430" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">show the reasoning</text>
+  <text x="640" y="465" text-anchor="middle" font-size="18" fill="var(--text-muted)" font-family="Arial, sans-serif">name the alternatives</text>
+  <line x1="832" y1="115" x2="856" y2="115" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="860" y="40" width="380" height="150" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1050" y="110" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Opinion</text>
+  <text x="1050" y="135" text-anchor="middle" font-size="18" fill="var(--info-text)" font-family="Arial, sans-serif">evaluated against propositions</text>
+  <rect x="860" y="230" width="380" height="140" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1050" y="293" text-anchor="middle" font-size="18" fill="var(--text)" font-family="Arial, sans-serif">strong support that the</text>
+  <text x="1050" y="317" text-anchor="middle" font-size="18" fill="var(--text)" font-family="Arial, sans-serif">files were copied to JD/2</text>
+  <text x="1050" y="430" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">label it as opinion</text>
+  <text x="1050" y="465" text-anchor="middle" font-size="18" fill="var(--text-muted)" font-family="Arial, sans-serif">give its basis and scale</text>
+  <rect x="40" y="540" width="1200" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="586" text-anchor="middle" font-size="20" fill="var(--text)" font-family="Arial, sans-serif">Keep the three apart in the text, and label each one</text>
+</svg>
