@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars" data-theme="flat">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --code-text: #f5f5f5;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="var(--primary-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--bg)"/>
+      <stop offset="100%" stop-color="var(--surface)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="var(--ok-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="var(--warn-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="var(--danger-border)"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="var(--info-border)"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--primary-border)"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--danger-border)"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--info-border)"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--bg)"/>
+    </marker>
+  </defs>
+  <rect x="40" y="40" width="540" height="160" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="310" y="107.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Kiro IDE</text>
+  <text x="310" y="141.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">chat panel, spec editor, hooks UI</text>
+  <text x="310" y="164.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Supervised or Autopilot</text>
+  <rect x="700" y="40" width="540" height="160" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="970" y="107.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">Kiro CLI</text>
+  <text x="970" y="141.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">kiro-cli chat</text>
+  <text x="970" y="164.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">custom agents, --no-interactive</text>
+  <rect x="340" y="300" width="600" height="160" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="377" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="var(--text)">the shared .kiro/ directory</text>
+  <text x="640" y="407" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">steering, specs, hooks, mcp.json, agents</text>
+  <line x1="310" y1="200" x2="540" y2="292" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="970" y1="200" x2="740" y2="292" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <rect x="40" y="520" width="380" height="100" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="230" y="567" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="var(--warn-text)">your laptop</text>
+  <text x="230" y="596" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">interactive, you approve</text>
+  <line x1="230" y1="520" x2="350" y2="468" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+  <rect x="450" y="520" width="380" height="100" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="567" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="var(--danger-text)">CI runner</text>
+  <text x="640" y="596" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">one shot, sandboxed, pinned agent</text>
+  <line x1="640" y1="520" x2="640" y2="468" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+  <rect x="860" y="520" width="380" height="100" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1050" y="567" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="var(--info-text)">autonomous agent</text>
+  <text x="1050" y="596" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">cloud, from an issue to a pull request</text>
+  <line x1="1050" y1="520" x2="930" y2="468" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow-info)"/>
+</svg>
