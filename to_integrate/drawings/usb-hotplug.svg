@@ -1,0 +1,349 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1980" height="2369" viewBox="0 0 1980 2369" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs>
+  <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#343a40"/>
+  </marker>
+  <style>
+    .t  { font-size: 13px; font-weight: 700; fill: #212529; }
+    .l  { font-size: 11.5px; fill: #343a40; }
+    .m  { font-size: 11px; fill: #343a40; font-family: 'JetBrains Mono', 'DejaVu Sans Mono', Menlo, Consolas, monospace; }
+    .al { font-size: 10.5px; font-weight: 600; fill: #495057; font-family: 'DejaVu Sans Mono', Menlo, Consolas, monospace; }
+    .ph { font-size: 13px; font-weight: 700; fill: #212529; }
+    .lh { font-size: 14px; font-weight: 800; letter-spacing: 0.5px; }
+    .ls { font-size: 11px; fill: #495057; }
+  </style>
+</defs>
+<rect width="1980" height="2369" fill="#ffffff"/>
+<text x="20" y="42" font-size="24" font-weight="800" fill="#212529">Linux USB hotplug: from plug-in to a working device</text>
+<text x="20" y="66" font-size="13" fill="#495057">A USB device whose driver exists on the system, attached to an xHCI host controller. Example IDs are a Logitech receiver (046d:c52b) handled by usbhid → input.</text>
+<rect x="220" y="88" width="360" height="2161" rx="10" fill="#fff4e6"/>
+<text x="400.0" y="110" text-anchor="middle" class="lh" fill="#e8590c">HARDWARE</text>
+<text x="400.0" y="127" text-anchor="middle" class="ls">device · cable · hub · xHCI controller</text>
+<rect x="680" y="88" width="360" height="2161" rx="10" fill="#e7f1ff"/>
+<text x="860.0" y="110" text-anchor="middle" class="lh" fill="#1c64d1">KERNEL — USB core &amp; HCD</text>
+<text x="860.0" y="127" text-anchor="middle" class="ls">drivers/usb/core, drivers/usb/host/xhci*</text>
+<rect x="1140" y="88" width="360" height="2161" rx="10" fill="#f3ecff"/>
+<text x="1320.0" y="110" text-anchor="middle" class="lh" fill="#7048e8">KERNEL — driver core &amp; your driver</text>
+<text x="1320.0" y="127" text-anchor="middle" class="ls">drivers/base, kmod, your usb_driver</text>
+<rect x="1600" y="88" width="360" height="2161" rx="10" fill="#e9f8ee"/>
+<text x="1780.0" y="110" text-anchor="middle" class="lh" fill="#2b8a3e">USERSPACE</text>
+<text x="1780.0" y="127" text-anchor="middle" class="ls">systemd-udevd · systemd · apps</text>
+<circle cx="38" cy="202.0" r="15" fill="#212529"/>
+<text x="38" y="206.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1</text>
+<text x="62" y="206.5" class="ph">Physical attach</text>
+<line x1="20" y1="264" x2="1960" y2="264" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="326.0" r="15" fill="#212529"/>
+<text x="38" y="330.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2</text>
+<text x="62" y="322.5" class="ph">Port change</text>
+<text x="62" y="338.5" class="ph">notification</text>
+<line x1="20" y1="388" x2="1960" y2="388" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="450.0" r="15" fill="#212529"/>
+<text x="38" y="454.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3</text>
+<text x="62" y="446.5" class="ph">Debounce, reset</text>
+<text x="62" y="462.5" class="ph">&amp; speed</text>
+<line x1="20" y1="512" x2="1960" y2="512" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="574.0" r="15" fill="#212529"/>
+<text x="38" y="578.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">4</text>
+<text x="62" y="578.5" class="ph">Addressing</text>
+<line x1="20" y1="636" x2="1960" y2="636" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="705.5" r="15" fill="#212529"/>
+<text x="38" y="710.0" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">5</text>
+<text x="62" y="702.0" class="ph">Descriptor</text>
+<text x="62" y="718.0" class="ph">enumeration</text>
+<line x1="20" y1="775" x2="1960" y2="775" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="837.0" r="15" fill="#212529"/>
+<text x="38" y="841.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">6</text>
+<text x="62" y="833.5" class="ph">usb_device</text>
+<text x="62" y="849.5" class="ph">registered</text>
+<line x1="20" y1="899" x2="1960" y2="899" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="961.0" r="15" fill="#212529"/>
+<text x="38" y="965.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">7</text>
+<text x="62" y="965.5" class="ph">Configuration</text>
+<line x1="20" y1="1023" x2="1960" y2="1023" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="1100.0" r="15" fill="#212529"/>
+<text x="38" y="1104.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">8</text>
+<text x="62" y="1088.5" class="ph">Interfaces</text>
+<text x="62" y="1104.5" class="ph">registered</text>
+<text x="62" y="1120.5" class="ph">+ uevent</text>
+<line x1="20" y1="1177" x2="1960" y2="1177" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="1246.5" r="15" fill="#212529"/>
+<text x="38" y="1251.0" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">9</text>
+<text x="62" y="1243.0" class="ph">Finding the</text>
+<text x="62" y="1259.0" class="ph">driver</text>
+<line x1="20" y1="1316" x2="1960" y2="1316" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="1370.5" r="15" fill="#212529"/>
+<text x="38" y="1375.0" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">10</text>
+<text x="62" y="1367.0" class="ph">Module init</text>
+<text x="62" y="1383.0" class="ph">(path B only)</text>
+<line x1="20" y1="1425" x2="1960" y2="1425" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="1502.0" r="15" fill="#212529"/>
+<text x="38" y="1506.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">11</text>
+<text x="62" y="1506.5" class="ph">probe()</text>
+<line x1="20" y1="1579" x2="1960" y2="1579" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="1656.0" r="15" fill="#212529"/>
+<text x="38" y="1660.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">12</text>
+<text x="62" y="1652.5" class="ph">Subsystem</text>
+<text x="62" y="1668.5" class="ph">device + /dev</text>
+<line x1="20" y1="1733" x2="1960" y2="1733" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="1810.0" r="15" fill="#212529"/>
+<text x="38" y="1814.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">13</text>
+<text x="62" y="1814.5" class="ph">udev rules</text>
+<line x1="20" y1="1887" x2="1960" y2="1887" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="1949.0" r="15" fill="#212529"/>
+<text x="38" y="1953.5" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">14</text>
+<text x="62" y="1945.5" class="ph">Consumers</text>
+<text x="62" y="1961.5" class="ph">react</text>
+<line x1="20" y1="2011" x2="1960" y2="2011" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="2065.5" r="15" fill="#212529"/>
+<text x="38" y="2070.0" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">15</text>
+<text x="62" y="2062.0" class="ph">Working:</text>
+<text x="62" y="2078.0" class="ph">request path</text>
+<line x1="20" y1="2120" x2="1960" y2="2120" stroke="#ced4da" stroke-dasharray="4 4"/>
+<circle cx="38" cy="2174.5" r="15" fill="#212529"/>
+<text x="38" y="2179.0" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">16</text>
+<text x="62" y="2171.0" class="ph">Working:</text>
+<text x="62" y="2187.0" class="ph">completion path</text>
+<path d="M400.0,250 V278" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M568,318.5 H692" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M860.0,374 V402" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M692,442.5 H568" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M860.0,498 V526" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M692,566.5 H568" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M860.0,622 V650" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M692,683.0 H568" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M900.0,761 V775 H1280.0 V789" stroke="#343a40" stroke-width="1.6" fill="none" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M1280.0,885 V899 H900.0 V913" stroke="#343a40" stroke-width="1.6" fill="none" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M692,938.5 H568" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M900.0,1009 V1023 H1280.0 V1037" stroke="#343a40" stroke-width="1.6" fill="none" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M1488,1077.5 H1612" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M1320.0,1118 V1191" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M1780.0,1163 V1191" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M1740.0,1302 V1316 H900.0 V1330" stroke="#343a40" stroke-width="1.6" fill="none" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M1320.0,1287 V1439" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M900.0,1411 V1425 H1280.0 V1439" stroke="#343a40" stroke-width="1.6" fill="none" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M1152,1472.0 H568" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M1320.0,1565 V1593" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M1360.0,1719 V1733 H1740.0 V1747" stroke="#343a40" stroke-width="1.6" fill="none" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M1780.0,1873 V1901" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M1780.0,1997 V2025" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M1612,2058.0 H1488" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M1152,2058.0 H1028" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M692,2058.0 H568" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M400.0,2091 V2134" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M568,2159.5 H692" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M1028,2167.0 H1152" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<path d="M1488,2159.5 H1612" stroke="#343a40" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+<rect x="232" y="154" width="336" height="96" rx="7" fill="#ffffff" stroke="#e8590c" stroke-width="1.6"/>
+<rect x="232" y="154" width="5" height="96" rx="2" fill="#e8590c"/>
+<text x="246" y="172" class="t">Plug-in &amp; electrical detection</text>
+<text x="246" y="190" class="l" xml:space="preserve">VBUS 5 V powers the device (≤100 mA until configured)</text>
+<text x="246" y="205" class="l" xml:space="preserve">Device pulls up D+ (full/high speed) or D− (low speed)</text>
+<text x="246" y="220" class="l" xml:space="preserve">Hub sets the port's C_PORT_CONNECTION status bit</text>
+<text x="246" y="235" class="l" xml:space="preserve">USB 3: SuperSpeed link training (LFPS, Polling → U0)</text>
+<rect x="232" y="278" width="336" height="81" rx="7" fill="#ffffff" stroke="#e8590c" stroke-width="1.6"/>
+<rect x="232" y="278" width="5" height="81" rx="2" fill="#e8590c"/>
+<text x="246" y="296" class="t">Hub reports the change</text>
+<text x="246" y="314" class="l" xml:space="preserve">External hub: bitmap on its interrupt-IN endpoint</text>
+<text x="246" y="329" class="l" xml:space="preserve">Root hub: xHCI puts a Port Status Change Event</text>
+<text x="246" y="344" class="l" xml:space="preserve">on the event ring and raises an MSI-X interrupt</text>
+<rect x="692" y="278" width="336" height="96" rx="7" fill="#ffffff" stroke="#1c64d1" stroke-width="1.6"/>
+<rect x="692" y="278" width="5" height="96" rx="2" fill="#1c64d1"/>
+<text x="706" y="296" class="t">hub_wq worker wakes up</text>
+<text x="706" y="314" class="m" xml:space="preserve">xhci_irq() → usb_hcd_poll_rh_status()</text>
+<text x="706" y="329" class="m" xml:space="preserve">hub_irq() → kick_hub_wq()</text>
+<text x="706" y="344" class="m" xml:space="preserve">hub_event() → port_event()</text>
+<text x="706" y="359" class="m" xml:space="preserve">  → hub_port_connect_change()</text>
+<rect x="232" y="402" width="336" height="81" rx="7" fill="#ffffff" stroke="#e8590c" stroke-width="1.6"/>
+<rect x="232" y="402" width="5" height="81" rx="2" fill="#e8590c"/>
+<text x="246" y="420" class="t">Bus reset</text>
+<text x="246" y="438" class="l" xml:space="preserve">Hub drives SE0 on the port for 10–20 ms</text>
+<text x="246" y="453" class="l" xml:space="preserve">High-speed chirp handshake (K, then J-K-J-K)</text>
+<text x="246" y="468" class="l" xml:space="preserve">Device enters Default state, answers address 0</text>
+<rect x="692" y="402" width="336" height="96" rx="7" fill="#ffffff" stroke="#1c64d1" stroke-width="1.6"/>
+<rect x="692" y="402" width="5" height="96" rx="2" fill="#1c64d1"/>
+<text x="706" y="420" class="t">Debounce &amp; reset the port</text>
+<text x="706" y="438" class="m" xml:space="preserve">hub_port_debounce()  — stable ≥100 ms</text>
+<text x="706" y="453" class="m" xml:space="preserve">usb_alloc_dev() → struct usb_device</text>
+<text x="706" y="468" class="m" xml:space="preserve">hub_port_reset(): SET_FEATURE(PORT_RESET)</text>
+<text x="706" y="483" class="l" xml:space="preserve">Speed read from port status: LS / FS / HS / SS</text>
+<rect x="232" y="526" width="336" height="81" rx="7" fill="#ffffff" stroke="#e8590c" stroke-width="1.6"/>
+<rect x="232" y="526" width="5" height="81" rx="2" fill="#e8590c"/>
+<text x="246" y="544" class="t">Control transfers on endpoint 0</text>
+<text x="246" y="562" class="l" xml:space="preserve">Device answers SETUP packets on the default pipe</text>
+<text x="246" y="577" class="l" xml:space="preserve">Takes the assigned address (1–127)</text>
+<text x="246" y="592" class="l" xml:space="preserve">State: Default → Address</text>
+<rect x="692" y="526" width="336" height="96" rx="7" fill="#ffffff" stroke="#1c64d1" stroke-width="1.6"/>
+<rect x="692" y="526" width="5" height="96" rx="2" fill="#1c64d1"/>
+<text x="706" y="544" class="t">hub_port_init()</text>
+<text x="706" y="562" class="l" xml:space="preserve">xHCI Enable Slot command → slot ID</text>
+<text x="706" y="577" class="m" xml:space="preserve">xhci_alloc_dev(); Address Device command</text>
+<text x="706" y="592" class="l" xml:space="preserve">  (the xHC issues SET_ADDRESS itself)</text>
+<text x="706" y="607" class="l" xml:space="preserve">GET_DESCRIPTOR(Device, 8/64 B) → bMaxPacketSize0</text>
+<rect x="232" y="650" width="336" height="66" rx="7" fill="#ffffff" stroke="#e8590c" stroke-width="1.6"/>
+<rect x="232" y="650" width="5" height="66" rx="2" fill="#e8590c"/>
+<text x="246" y="668" class="t">Device returns descriptors</text>
+<text x="246" y="686" class="l" xml:space="preserve">Device, Configuration, Interface, Endpoint,</text>
+<text x="246" y="701" class="l" xml:space="preserve">BOS, IAD, String descriptors</text>
+<rect x="692" y="650" width="336" height="111" rx="7" fill="#ffffff" stroke="#1c64d1" stroke-width="1.6"/>
+<rect x="692" y="650" width="5" height="111" rx="2" fill="#1c64d1"/>
+<text x="706" y="668" class="t">usb_new_device() → usb_enumerate_device()</text>
+<text x="706" y="686" class="l" xml:space="preserve">Device descriptor (18 B): idVendor, idProduct,</text>
+<text x="706" y="701" class="l" xml:space="preserve">  bcdDevice, bDeviceClass, bNumConfigurations</text>
+<text x="706" y="716" class="m" xml:space="preserve">usb_get_configuration(): config + iface + EP</text>
+<text x="706" y="731" class="l" xml:space="preserve">Strings: Manufacturer / Product / SerialNumber</text>
+<text x="706" y="746" class="m" xml:space="preserve">usb_detect_quirks(), authorization check</text>
+<rect x="1152" y="789" width="336" height="96" rx="7" fill="#ffffff" stroke="#7048e8" stroke-width="1.6"/>
+<rect x="1152" y="789" width="5" height="96" rx="2" fill="#7048e8"/>
+<text x="1166" y="807" class="t">device_add(&amp;udev-&gt;dev)</text>
+<text x="1166" y="825" class="l" xml:space="preserve">/sys/bus/usb/devices/1-2 appears in sysfs</text>
+<text x="1166" y="840" class="l" xml:space="preserve">uevent: SUBSYSTEM=usb DEVTYPE=usb_device</text>
+<text x="1166" y="855" class="l" xml:space="preserve">devtmpfs node /dev/bus/usb/001/005 (libusb)</text>
+<text x="1166" y="870" class="l" xml:space="preserve">Matches usb_generic_driver → generic_probe()</text>
+<rect x="232" y="913" width="336" height="51" rx="7" fill="#ffffff" stroke="#e8590c" stroke-width="1.6"/>
+<rect x="232" y="913" width="5" height="51" rx="2" fill="#e8590c"/>
+<text x="246" y="931" class="t">Device Configured</text>
+<text x="246" y="949" class="l" xml:space="preserve">Endpoints live; may now draw bMaxPower</text>
+<rect x="692" y="913" width="336" height="96" rx="7" fill="#ffffff" stroke="#1c64d1" stroke-width="1.6"/>
+<rect x="692" y="913" width="5" height="96" rx="2" fill="#1c64d1"/>
+<text x="706" y="931" class="t">Select &amp; set configuration</text>
+<text x="706" y="949" class="m" xml:space="preserve">usb_choose_configuration() picks config n</text>
+<text x="706" y="964" class="m" xml:space="preserve">usb_set_configuration(): SET_CONFIGURATION(n)</text>
+<text x="706" y="979" class="l" xml:space="preserve">xHCI Configure Endpoint cmd sets up EP rings</text>
+<text x="706" y="994" class="l" xml:space="preserve">One struct usb_interface per interface (alt 0)</text>
+<rect x="1152" y="1037" width="336" height="81" rx="7" fill="#ffffff" stroke="#7048e8" stroke-width="1.6"/>
+<rect x="1152" y="1037" width="5" height="81" rx="2" fill="#7048e8"/>
+<text x="1166" y="1055" class="t">device_add(&amp;intf-&gt;dev) for each interface</text>
+<text x="1166" y="1073" class="l" xml:space="preserve">/sys/bus/usb/devices/1-2:1.0</text>
+<text x="1166" y="1088" class="m" xml:space="preserve">kobject_uevent(KOBJ_ADD) → netlink broadcast</text>
+<text x="1166" y="1103" class="m" xml:space="preserve">bus_probe_device() → try every usb_driver</text>
+<rect x="1612" y="1037" width="336" height="126" rx="7" fill="#ffffff" stroke="#2b8a3e" stroke-width="1.6"/>
+<rect x="1612" y="1037" width="5" height="126" rx="2" fill="#2b8a3e"/>
+<text x="1626" y="1055" class="t">uevent received by systemd-udevd</text>
+<text x="1626" y="1073" class="m" xml:space="preserve">ACTION=add  SUBSYSTEM=usb</text>
+<text x="1626" y="1088" class="m" xml:space="preserve">DEVTYPE=usb_interface</text>
+<text x="1626" y="1103" class="m" xml:space="preserve">DEVPATH=/devices/pci0000:00/…/1-2/1-2:1.0</text>
+<text x="1626" y="1118" class="m" xml:space="preserve">PRODUCT=46d/c52b/1211  INTERFACE=3/1/2</text>
+<text x="1626" y="1133" class="m" xml:space="preserve">MODALIAS=usb:v046DpC52Bd1211dc00dsc00dp00</text>
+<text x="1626" y="1148" class="m" xml:space="preserve">          ic03isc01ip02in00</text>
+<rect x="1152" y="1191" width="336" height="96" rx="7" fill="#ffffff" stroke="#7048e8" stroke-width="1.6"/>
+<rect x="1152" y="1191" width="5" height="96" rx="2" fill="#7048e8"/>
+<text x="1166" y="1209" class="t">Path A: driver already in the kernel</text>
+<text x="1166" y="1227" class="l" xml:space="preserve">Built-in, or module loaded earlier</text>
+<text x="1166" y="1242" class="m" xml:space="preserve">__device_attach() → usb_device_match()</text>
+<text x="1166" y="1257" class="m" xml:space="preserve">usb_match_id(intf, drv-&gt;id_table)</text>
+<text x="1166" y="1272" class="l" xml:space="preserve">VID/PID, class/subclass/protocol, new_id</text>
+<rect x="1612" y="1191" width="336" height="111" rx="7" fill="#ffffff" stroke="#2b8a3e" stroke-width="1.6"/>
+<rect x="1612" y="1191" width="5" height="111" rx="2" fill="#2b8a3e"/>
+<text x="1626" y="1209" class="t">Path B: driver is an unloaded module</text>
+<text x="1626" y="1227" class="l" xml:space="preserve">80-drivers.rules: ENV{MODALIAS}=="?*"</text>
+<text x="1626" y="1242" class="m" xml:space="preserve">RUN{builtin}+="kmod load $env{MODALIAS}"</text>
+<text x="1626" y="1257" class="l" xml:space="preserve">libkmod resolves modules.alias (written by</text>
+<text x="1626" y="1272" class="l" xml:space="preserve">  depmod from MODULE_DEVICE_TABLE(usb, …))</text>
+<text x="1626" y="1287" class="m" xml:space="preserve">finit_module(fd, …) syscall</text>
+<rect x="692" y="1330" width="336" height="81" rx="7" fill="#ffffff" stroke="#1c64d1" stroke-width="1.6"/>
+<rect x="692" y="1330" width="5" height="81" rx="2" fill="#1c64d1"/>
+<text x="706" y="1348" class="t">module_init → usb_register(&amp;drv)</text>
+<text x="706" y="1366" class="m" xml:space="preserve">usb_register_driver() → driver_register()</text>
+<text x="706" y="1381" class="l" xml:space="preserve">Bus walks unbound interfaces, runs the same</text>
+<text x="706" y="1396" class="l" xml:space="preserve">  usb_match_id() against the new id_table</text>
+<rect x="232" y="1439" width="336" height="66" rx="7" fill="#ffffff" stroke="#e8590c" stroke-width="1.6"/>
+<rect x="232" y="1439" width="5" height="66" rx="2" fill="#e8590c"/>
+<text x="246" y="1457" class="t">Hardware initialised</text>
+<text x="246" y="1475" class="l" xml:space="preserve">Vendor control requests, firmware upload,</text>
+<text x="246" y="1490" class="l" xml:space="preserve">alt-setting selected, interrupt/bulk EPs active</text>
+<rect x="1152" y="1439" width="336" height="126" rx="7" fill="#ffffff" stroke="#7048e8" stroke-width="1.6"/>
+<rect x="1152" y="1439" width="5" height="126" rx="2" fill="#7048e8"/>
+<text x="1166" y="1457" class="t">really_probe() → yourdrv_probe(intf, id)</text>
+<text x="1166" y="1475" class="m" xml:space="preserve">usb_find_common_endpoints(altsetting, …)</text>
+<text x="1166" y="1490" class="l" xml:space="preserve">kzalloc private state; usb_set_intfdata()</text>
+<text x="1166" y="1505" class="m" xml:space="preserve">usb_alloc_urb() / usb_alloc_coherent()</text>
+<text x="1166" y="1520" class="l" xml:space="preserve">Init device: usb_control_msg(), set_interface</text>
+<text x="1166" y="1535" class="l" xml:space="preserve">Submit interrupt/bulk-IN URB (or on open)</text>
+<text x="1166" y="1550" class="l" xml:space="preserve">Register with a kernel subsystem ↓</text>
+<rect x="1152" y="1593" width="336" height="126" rx="7" fill="#ffffff" stroke="#7048e8" stroke-width="1.6"/>
+<rect x="1152" y="1593" width="5" height="126" rx="2" fill="#7048e8"/>
+<text x="1166" y="1611" class="t">Class device registered</text>
+<text x="1166" y="1629" class="l" xml:space="preserve">e.g. input_register_device(), usb_register_dev(),</text>
+<text x="1166" y="1644" class="l" xml:space="preserve">  tty_port_register_device(), register_netdev(),</text>
+<text x="1166" y="1659" class="l" xml:space="preserve">  snd_card_register(), add_disk()</text>
+<text x="1166" y="1674" class="m" xml:space="preserve">device_add() with dev_t MAJOR:MINOR</text>
+<text x="1166" y="1689" class="l" xml:space="preserve">devtmpfs creates /dev/input/event7 (root, 0600)</text>
+<text x="1166" y="1704" class="l" xml:space="preserve">2nd uevent: SUBSYSTEM=input DEVNAME=input/event7</text>
+<rect x="1612" y="1747" width="336" height="126" rx="7" fill="#ffffff" stroke="#2b8a3e" stroke-width="1.6"/>
+<rect x="1612" y="1747" width="5" height="126" rx="2" fill="#2b8a3e"/>
+<text x="1626" y="1765" class="t">systemd-udevd processes the event</text>
+<text x="1626" y="1783" class="l" xml:space="preserve">Builtins: hwdb, usb_id, input_id, path_id, net_id</text>
+<text x="1626" y="1798" class="l" xml:space="preserve">OWNER / GROUP / MODE; TAG+="uaccess" (logind ACL)</text>
+<text x="1626" y="1813" class="l" xml:space="preserve">Symlinks: /dev/input/by-id/…, /dev/serial/by-id/…</text>
+<text x="1626" y="1828" class="l" xml:space="preserve">Network interface rename (80-net-setup-link)</text>
+<text x="1626" y="1843" class="l" xml:space="preserve">DB written: /run/udev/data/c13:71</text>
+<text x="1626" y="1858" class="l" xml:space="preserve">Re-broadcast on the netlink "udev" group</text>
+<rect x="1612" y="1901" width="336" height="96" rx="7" fill="#ffffff" stroke="#2b8a3e" stroke-width="1.6"/>
+<rect x="1612" y="1901" width="5" height="96" rx="2" fill="#2b8a3e"/>
+<text x="1626" y="1919" class="t">Listeners (libudev / sd-device)</text>
+<text x="1626" y="1937" class="l" xml:space="preserve">systemd: .device unit active; SYSTEMD_WANTS=</text>
+<text x="1626" y="1952" class="l" xml:space="preserve">  starts services</text>
+<text x="1626" y="1967" class="l" xml:space="preserve">libinput/compositor, PipeWire, NetworkManager,</text>
+<text x="1626" y="1982" class="l" xml:space="preserve">  ModemManager, udisks2, fwupd, …</text>
+<rect x="232" y="2025" width="336" height="66" rx="7" fill="#ffffff" stroke="#e8590c" stroke-width="1.6"/>
+<rect x="232" y="2025" width="5" height="66" rx="2" fill="#e8590c"/>
+<text x="246" y="2043" class="t">Transfer on the wire</text>
+<text x="246" y="2061" class="l" xml:space="preserve">xHC schedules transactions per endpoint type</text>
+<text x="246" y="2076" class="l" xml:space="preserve">Device returns DATA / ACK / NAK / STALL</text>
+<rect x="692" y="2025" width="336" height="81" rx="7" fill="#ffffff" stroke="#1c64d1" stroke-width="1.6"/>
+<rect x="692" y="2025" width="5" height="81" rx="2" fill="#1c64d1"/>
+<text x="706" y="2043" class="t">usbcore → HCD</text>
+<text x="706" y="2061" class="m" xml:space="preserve">usb_hcd_submit_urb() → xhci_urb_enqueue()</text>
+<text x="706" y="2076" class="l" xml:space="preserve">TRBs on the endpoint's transfer ring,</text>
+<text x="706" y="2091" class="l" xml:space="preserve">  doorbell register rung</text>
+<rect x="1152" y="2025" width="336" height="66" rx="7" fill="#ffffff" stroke="#7048e8" stroke-width="1.6"/>
+<rect x="1152" y="2025" width="5" height="66" rx="2" fill="#7048e8"/>
+<text x="1166" y="2043" class="t">Driver I/O</text>
+<text x="1166" y="2061" class="l" xml:space="preserve">file_operations / subsystem callbacks</text>
+<text x="1166" y="2076" class="m" xml:space="preserve">usb_fill_*_urb(); usb_submit_urb()</text>
+<rect x="1612" y="2025" width="336" height="66" rx="7" fill="#ffffff" stroke="#2b8a3e" stroke-width="1.6"/>
+<rect x="1612" y="2025" width="5" height="66" rx="2" fill="#2b8a3e"/>
+<text x="1626" y="2043" class="t">Application</text>
+<text x="1626" y="2061" class="l" xml:space="preserve">open()/read()/write()/ioctl() on the /dev node,</text>
+<text x="1626" y="2076" class="l" xml:space="preserve">or a socket (net) / libusb via /dev/bus/usb</text>
+<rect x="232" y="2134" width="336" height="51" rx="7" fill="#ffffff" stroke="#e8590c" stroke-width="1.6"/>
+<rect x="232" y="2134" width="5" height="51" rx="2" fill="#e8590c"/>
+<text x="246" y="2152" class="t">Completion interrupt</text>
+<text x="246" y="2170" class="l" xml:space="preserve">Transfer Event TRB on the event ring + MSI-X</text>
+<rect x="692" y="2134" width="336" height="66" rx="7" fill="#ffffff" stroke="#1c64d1" stroke-width="1.6"/>
+<rect x="692" y="2134" width="5" height="66" rx="2" fill="#1c64d1"/>
+<text x="706" y="2152" class="t">URB given back</text>
+<text x="706" y="2170" class="m" xml:space="preserve">xhci_irq() → handle_tx_event()</text>
+<text x="706" y="2185" class="m" xml:space="preserve">usb_hcd_giveback_urb() (BH / tasklet)</text>
+<rect x="1152" y="2134" width="336" height="81" rx="7" fill="#ffffff" stroke="#7048e8" stroke-width="1.6"/>
+<rect x="1152" y="2134" width="5" height="81" rx="2" fill="#7048e8"/>
+<text x="1166" y="2152" class="t">urb-&gt;complete() callback</text>
+<text x="1166" y="2170" class="l" xml:space="preserve">Data handed to subsystem (input_report_*,</text>
+<text x="1166" y="2185" class="l" xml:space="preserve">  netif_rx, tty_flip_buffer_push, …),</text>
+<text x="1166" y="2200" class="l" xml:space="preserve">URB resubmitted; reader woken</text>
+<rect x="1612" y="2134" width="336" height="51" rx="7" fill="#ffffff" stroke="#2b8a3e" stroke-width="1.6"/>
+<rect x="1612" y="2134" width="5" height="51" rx="2" fill="#2b8a3e"/>
+<text x="1626" y="2152" class="t">Application gets data</text>
+<text x="1626" y="2170" class="l" xml:space="preserve">read()/poll()/epoll returns; device is working</text>
+<text x="630.0" y="312.5" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">IRQ</text>
+<text x="630.0" y="436.5" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">PORT_RESET</text>
+<text x="630.0" y="560.5" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">SETUP/DATA/STATUS</text>
+<text x="630.0" y="677.0" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">GET_DESCRIPTOR</text>
+<text x="1090.0" y="894" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">generic_probe()</text>
+<text x="630.0" y="932.5" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">SET_CONFIGURATION</text>
+<text x="1550.0" y="1071.5" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">netlink</text>
+<text x="1320.0" y="1311" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">module loaded</text>
+<text x="1328.0" y="1367.0" text-anchor="start" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">match → probe</text>
+<text x="860.0" y="1466.0" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">usb_control_msg()</text>
+<text x="1550.0" y="1728" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">uevent #2</text>
+<text x="1550.0" y="2052.0" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">syscall</text>
+<text x="1090.0" y="2052.0" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">URB</text>
+<text x="630.0" y="2052.0" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">doorbell</text>
+<text x="630.0" y="2153.5" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">MSI-X</text>
+<text x="1090.0" y="2161.0" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">giveback</text>
+<text x="1550.0" y="2153.5" text-anchor="middle" class="al" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">wake_up</text>
+<text x="20" y="2271" font-size="12" fill="#495057">• Path A and Path B converge at probe(): A when the driver is built in or its module is already loaded; B when udev autoloads the module from MODALIAS.</text>
+<text x="20" y="2291" font-size="12" fill="#495057">• Every interface is matched separately, so one device can bind several drivers (e.g. usbhid on 1.0, cdc_acm on 1.1). Rows 6–8 repeat per interface; row 12 per subsystem device.</text>
+<text x="20" y="2311" font-size="12" fill="#495057">• Afterwards: runtime PM may autosuspend the idle device (USB suspend → U3). Unplug runs the reverse: port change → usb_disconnect() → yourdrv_disconnect() → KOBJ_REMOVE uevents.</text>
+<text x="20" y="2331" font-size="12" fill="#495057">• Inspect it live:  udevadm monitor --kernel --udev --property   ·   dmesg -w   ·   lsusb -t   ·   cat /sys/kernel/debug/usb/devices</text>
+</svg>
