@@ -26,6 +26,9 @@ src_dirs = ["tera.templates"]
 command = "scripts/check_svg.py"
 # a Python script, which writes bytecode
 required_tools = ["python"]
+# the diagram themes the script checks colors against (read by
+# scripts/svg_lib.py, which it imports)
+dep_inputs = ["resources/diagram_themes.yaml"]
 src_extensions = [".svg"]
 src_dirs = ["svg"]
 batch = true
@@ -34,6 +37,8 @@ batch = true
 command = "scripts/check_marp_md.py"
 # a Python script, which writes bytecode
 required_tools = ["python"]
+# the code-block language labels the script accepts
+dep_inputs = ["text_labels.yaml"]
 src_extensions = [".md"]
 src_dirs = ["marp"]
 batch = true
@@ -77,7 +82,8 @@ src_dirs = ["scripts"]
 src_dirs = ["resources"]
 src_extensions = [".css"]
 args = ["--config-path", "shared/shared-themes/biome-tokens.jsonc"]
-dep_inputs = ["shared/shared-themes/biome-tokens.jsonc", "shared/shared-themes/design-tokens.grit"]
+# package.json too: biome reads it to find the project root and its settings
+dep_inputs = ["shared/shared-themes/biome-tokens.jsonc", "shared/shared-themes/design-tokens.grit", "package.json"]
 
 [processor.checker.zspell]
 src_dirs = ["marp"]
@@ -109,6 +115,10 @@ input_globs = [
     "shared/shared-themes/fonts/*",
     "_site/pdfunite/**/*.pdf",
     "_site/marp/lectures/**/*.pdf",
+    # the index lists every course and lecture by the metadata in its
+    # sources, which build_index.py scans itself (it ignores --inputs)
+    "marp/courses/**/*.md",
+    "marp/lectures/**/*.md",
 ]
 output_dirs = [ "_site" ]
 
