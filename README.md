@@ -21,11 +21,11 @@ version: 0.0.1
 ## Slide numbers
 
 - Currently there are 145 courses in this repo.
-- Currently there are 50 lectures in this repo.
+- Currently there are 51 lectures in this repo.
 - Currently there are 1693 marp files in this repo.
-- Currently there are 40746 marp slides in this repo.
+- Currently there are 40800 marp slides in this repo.
 - Currently there are 5505 SVG diagrams in this repo.
-- Currently there are 1042 tables in this repo.
+- Currently there are 1044 tables in this repo.
 
 ## contact me
 
