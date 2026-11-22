@@ -24,7 +24,7 @@ audience:
 
 ---
 
-## Simpson's Paradox
+## Simpson's Paradox (Diagram)
 
 ![simpsons_paradox](svg/courses/math/statistics-applied/15_common_pitfalls/simpsons_paradox.svg)
 

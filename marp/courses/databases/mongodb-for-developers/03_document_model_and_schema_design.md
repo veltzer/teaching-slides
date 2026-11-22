@@ -57,7 +57,7 @@ audience:
 
 ---
 
-## Embed vs Reference
+## Embed vs Reference (Diagram)
 
 ![embed_vs_reference](svg/courses/databases/mongodb-for-developers/03_document_model_and_schema_design/embed_vs_reference.svg)
 

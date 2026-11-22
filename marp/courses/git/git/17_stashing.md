@@ -565,7 +565,7 @@ Understanding stash constraints:
 
 ---
 
-## Performance and Limitations (cont.)
+## Performance and Limitations (cont.) (cont.)
 
 **Size considerations:**
 ```bash
@@ -604,7 +604,7 @@ done
 
 ---
 
-## Lab Exercise: Mastering Git Stash (cont.)
+## Lab Exercise: Mastering Git Stash (cont.) (cont.)
 
 **Advanced tasks:**
 1. **Automation development:**
@@ -619,7 +619,7 @@ done
 
 ---
 
-## Lab Exercise: Mastering Git Stash (cont.)
+## Lab Exercise: Mastering Git Stash (cont.) (cont. 2)
 
 **Deliverables:** Comprehensive stashing workflows, automation scripts, team guidelines, troubleshooting procedures, and integration documentation.
 
@@ -713,6 +713,6 @@ done
 
 ---
 
-## Summary: Effective Stash Management (cont.)
+## Summary: Effective Stash Management (cont.) (cont.)
 
 **Remember:** Git stash is a powerful tool for managing temporary work and context switching. Used properly, it enables fluid development workflows and helps manage the complexity of modern software development. However, stashes are meant to be temporary - don't use them as a replacement for proper version control practices with commits and branches.

@@ -24,7 +24,7 @@ audience:
 
 ---
 
-## Population vs Sample
+## Population vs Sample (Diagram)
 
 ![population_vs_sample](svg/courses/math/statistics-applied/01_what_statistics_is/population_vs_sample.svg)
 

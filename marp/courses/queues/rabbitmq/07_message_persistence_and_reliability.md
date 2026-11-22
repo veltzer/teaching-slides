@@ -19,7 +19,7 @@ audience:
 
 ---
 
-## Publisher Confirms
+## Publisher Confirms (Diagram)
 
 ![publisher_confirms](svg/courses/queues/rabbitmq/07_message_persistence_and_reliability/publisher_confirms.svg)
 

@@ -51,7 +51,7 @@ Every input and output channel is a potential attack vector
 
 ---
 
-## OWASP Top 10 for `LLM` Applications
+## OWASP Top 10 for `LLM` Applications: The List
 
 | #     | Vulnerability                      |
 |-------|------------------------------------|

@@ -466,13 +466,13 @@ audience:
 
 ---
 
-## Goodhart's Law
+## Goodhart's Law (Diagram)
 
 ![goodharts_law](svg/courses/machine_learning/machine-learning/11_when_ml_fails/goodharts_law.svg)
 
 ---
 
-## Distribution Shift
+## Distribution Shift (Diagram)
 
 ![distribution_shift](svg/courses/machine_learning/machine-learning/11_when_ml_fails/distribution_shift.svg)
 
@@ -484,7 +484,7 @@ audience:
 
 ---
 
-## Long Tail
+## Long Tail (Diagram)
 
 ![long_tail](svg/courses/machine_learning/machine-learning/11_when_ml_fails/long_tail.svg)
 
@@ -496,7 +496,7 @@ audience:
 
 ---
 
-## Survivorship Bias
+## Survivorship Bias (Diagram)
 
 ![survivorship_bias](svg/courses/machine_learning/machine-learning/11_when_ml_fails/survivorship_bias.svg)
 

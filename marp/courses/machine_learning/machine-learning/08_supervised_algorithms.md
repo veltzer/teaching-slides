@@ -573,7 +573,7 @@ gs.fit(X_train, y_train)
 
 ---
 
-## Regularisation
+## Regularisation (Diagram)
 
 ![regularization](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/regularization.svg)
 
@@ -585,7 +585,7 @@ gs.fit(X_train, y_train)
 
 ---
 
-## Naive Bayes
+## Naive Bayes (Diagram)
 
 ![naive_bayes](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/naive_bayes.svg)
 
@@ -603,7 +603,7 @@ gs.fit(X_train, y_train)
 
 ---
 
-## Kernel Trick
+## Kernel Trick (Diagram)
 
 ![kernel_trick](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/kernel_trick.svg)
 
@@ -615,7 +615,7 @@ gs.fit(X_train, y_train)
 
 ---
 
-## Perceptron
+## Perceptron (Diagram)
 
 ![perceptron](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/perceptron.svg)
 
@@ -639,7 +639,7 @@ gs.fit(X_train, y_train)
 
 ---
 
-## Soft Margin
+## Soft Margin (Diagram)
 
 ![soft_margin](svg/courses/machine_learning/machine-learning/08_supervised_algorithms/soft_margin.svg)
 

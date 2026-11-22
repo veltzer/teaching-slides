@@ -13,7 +13,7 @@ audience:
 
 ---
 
-## Feedback Loops
+## Feedback Loops (Diagram)
 
 ![feedback_loops](svg/courses/unity/introduction-to-game-development-with-unity/07_game_design_principles/feedback_loops.svg)
 

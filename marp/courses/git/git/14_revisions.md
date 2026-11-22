@@ -772,7 +772,7 @@ git show --format="Commit: %H%nAuthor: %an%nDate: %ad" --no-patch "$SHA"
 
 ---
 
-## Lab Exercise: Revision Mastery (cont.)
+## Lab Exercise: Revision Mastery (cont.) (cont.)
 
 **Advanced tasks:**
 1. **Complex expressions:**
@@ -787,7 +787,7 @@ git show --format="Commit: %H%nAuthor: %an%nDate: %ad" --no-patch "$SHA"
 
 ---
 
-## Lab Exercise: Revision Mastery (cont.)
+## Lab Exercise: Revision Mastery (cont.) (cont. 2)
 
 **Deliverables:** Comprehensive revision reference guide, practical scripts demonstrating usage patterns, and troubleshooting documentation for common revision issues.
 
@@ -826,6 +826,6 @@ git show --format="Commit: %H%nAuthor: %an%nDate: %ad" --no-patch "$SHA"
 
 ---
 
-## Summary: Mastering Git Revisions (cont.)
+## Summary: Mastering Git Revisions (cont.) (cont.)
 
 **Remember:** Git revision syntax is incredibly powerful and flexible. Understanding these concepts deeply will make you much more effective at navigating Git history, building automation, and solving complex version control challenges. The investment in learning this syntax pays dividends in all aspects of Git usage.

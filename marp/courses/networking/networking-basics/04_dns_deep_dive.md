@@ -79,7 +79,7 @@ There are 13 logical root server addresses (A through M), but hundreds of physic
 
 ---
 
-## DNS Root Servers (cont.)
+## DNS Root Servers (cont.) (cont.)
 
 ```bash
 # Query a root server directly
@@ -509,7 +509,7 @@ options timeout:2 attempts:3 rotate  # Options
 
 ---
 
-## Configuring DNS on Linux (cont.)
+## Configuring DNS on Linux (cont.) (cont.)
 
 ### /etc/nsswitch.conf
 
@@ -884,7 +884,7 @@ Used by CDNs (Cloudflare, AWS Route53, Akamai) for latency-based routing.
 
 ---
 
-## DNS Security Threats (cont.)
+## DNS Security Threats (cont.) (cont.)
 
 ```bash
 # Check for open resolver (should NOT respond to external queries)

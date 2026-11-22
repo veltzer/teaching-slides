@@ -497,7 +497,7 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 
 ---
 
-## To Pay or Not to Pay? (cont.)
+## To Pay or Not to Pay? (cont.) (cont.)
 
 **Key considerations:**
 - Paying funds criminal operations and encourages more attacks

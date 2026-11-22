@@ -350,7 +350,7 @@ JetBrains IDE Git features:
 
 ---
 
-## PyCharm Git Integration (cont.)
+## PyCharm Git Integration (cont.) (cont.)
 
 **PyCharm Git workflow:**
 1. **Clone repository:** VCS → Get from Version Control
@@ -361,7 +361,7 @@ JetBrains IDE Git features:
 
 ---
 
-## PyCharm Git Integration (cont.)
+## PyCharm Git Integration (cont.) (cont. 2)
 
 **Advanced PyCharm features:**
 - Visual merge conflict resolution
@@ -402,7 +402,7 @@ Right-click project:
 
 ---
 
-## Eclipse Git Integration (EGit) (cont.)
+## Eclipse Git Integration (EGit) (cont.) (cont.)
 
 **EGit features:**
 - Git Staging view for index management
@@ -882,7 +882,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 
 ---
 
-## Security Considerations for Git Tools (cont.)
+## Security Considerations for Git Tools (cont.) (cont.)
 
 **IDE security:**
 
@@ -997,7 +997,7 @@ if __name__ == "__main__":
 
 ---
 
-## Lab Exercise: Git Tool Ecosystem (cont.)
+## Lab Exercise: Git Tool Ecosystem (cont.) (cont.)
 
 **Advanced tasks:**
 1. **Custom tool development:**
@@ -1012,7 +1012,7 @@ if __name__ == "__main__":
 
 ---
 
-## Lab Exercise: Git Tool Ecosystem (cont.)
+## Lab Exercise: Git Tool Ecosystem (cont.) (cont. 2)
 
 **Deliverables:** Complete Git tool ecosystem setup, custom automation tools, team configuration templates, performance benchmarks, and comprehensive documentation.
 
@@ -1040,7 +1040,7 @@ Emerging trends in Git tools:
 
 ---
 
-## Future of Git Tooling (cont.)
+## Future of Git Tooling (cont.) (cont.)
 
 **Integration trends:**
 - DevSecOps integration
@@ -1089,6 +1089,6 @@ Emerging trends in Git tools:
 
 ---
 
-## Summary: Mastering the Git Ecosystem (cont.)
+## Summary: Mastering the Git Ecosystem (cont.) (cont.)
 
 **Remember:** The Git tool ecosystem is vast and constantly evolving. While it's important to leverage tools effectively, remember that they are means to an end. Focus on understanding Git fundamentals first, then choose tools that enhance your productivity without creating unnecessary complexity. The best Git workflow is one that your entire team can understand, use consistently, and maintain over time.

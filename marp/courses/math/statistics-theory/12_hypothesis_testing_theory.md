@@ -118,7 +118,7 @@ audience:
 
 ---
 
-## p-Values And Multiplicity (cont.)
+## p-Values And Multiplicity (cont.) (cont.)
 
 - The garden of forking paths / **p-hacking**: choosing the hypothesis, the test, the covariates, or the stopping rule *after* seeing the data inflates the true Type I rate without ever printing a "corrected" number — *pre-register* the analysis, or treat post-hoc findings as hypotheses for fresh data
 - **Optional stopping**: peeking at the data and stopping the first time p &lt; 0.05 makes the actual Type I rate balloon (toward 1 as you peek indefinitely) — use a procedure *designed* for sequential looks: group-sequential boundaries (O'Brien&ndash;Fleming, Pocock), alpha-spending functions, or always-valid e-values / e-processes

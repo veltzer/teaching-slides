@@ -240,7 +240,7 @@ Man pages are organized into numbered sections:
 
 ---
 
-## Getting Help: Man Pages In Depth (cont.)
+## Getting Help: Man Pages In Depth (cont.) (cont.)
 
 ```bash
 # Read a specific section

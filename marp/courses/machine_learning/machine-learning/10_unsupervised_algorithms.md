@@ -490,13 +490,13 @@ preds = iso.fit_predict(X)
 
 ---
 
-## Dendrogram
+## Dendrogram (Diagram)
 
 ![dendrogram](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/dendrogram.svg)
 
 ---
 
-## DBSCAN
+## DBSCAN (Diagram)
 
 ![dbscan](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/dbscan.svg)
 
@@ -508,7 +508,7 @@ preds = iso.fit_predict(X)
 
 ---
 
-## PCA
+## PCA (Diagram)
 
 ![pca](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/pca.svg)
 
@@ -520,13 +520,13 @@ preds = iso.fit_predict(X)
 
 ---
 
-## Association Rules
+## Association Rules (Diagram)
 
 ![association_rules](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/association_rules.svg)
 
 ---
 
-## Isolation Forest
+## Isolation Forest (Diagram)
 
 ![isolation_forest](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/isolation_forest.svg)
 
@@ -538,7 +538,7 @@ preds = iso.fit_predict(X)
 
 ---
 
-## Elbow Method
+## Elbow Method (Diagram)
 
 ![elbow_method](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/elbow_method.svg)
 
@@ -550,7 +550,7 @@ preds = iso.fit_predict(X)
 
 ---
 
-## EM Algorithm
+## EM Algorithm (Diagram)
 
 ![em_algorithm](svg/courses/machine_learning/machine-learning/10_unsupervised_algorithms/em_algorithm.svg)
 

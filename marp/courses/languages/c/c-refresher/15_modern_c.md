@@ -311,7 +311,7 @@ Compile: `gcc -std=c11 -pthread -o atomic atomic.c`
 
 ---
 
-## Atomic Operations Reference (cont.)
+## Atomic Operations Reference (cont.) (cont.)
 
 Memory orderings:
 

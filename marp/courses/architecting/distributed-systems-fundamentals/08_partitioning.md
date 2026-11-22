@@ -41,7 +41,7 @@ audience:
 
 ---
 
-## Rebalancing
+## Rebalancing (Diagram)
 
 ![rebalancing](svg/courses/architecting/distributed-systems-fundamentals/08_partitioning/rebalancing.svg)
 

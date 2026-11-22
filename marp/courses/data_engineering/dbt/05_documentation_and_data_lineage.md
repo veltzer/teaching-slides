@@ -13,7 +13,7 @@ audience:
 
 ---
 
-## Lineage Graph
+## Lineage Graph (Diagram)
 
 ![lineage_graph](svg/courses/data_engineering/dbt/05_documentation_and_data_lineage/lineage_graph.svg)
 

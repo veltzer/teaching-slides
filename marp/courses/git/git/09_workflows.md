@@ -615,7 +615,7 @@ git push -u origin feature/user-authentication
 
 ---
 
-## Working with Pull Requests (cont.)
+## Working with Pull Requests (cont.) (cont.)
 
 **Review process:**
 - At least one approval required

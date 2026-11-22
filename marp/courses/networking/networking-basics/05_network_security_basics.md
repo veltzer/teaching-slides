@@ -799,7 +799,7 @@ notAfter=Mar 14 23:59:59 2025 GMT
 
 ---
 
-## Zero Trust Network Architecture
+## Zero Trust Network Architecture (Diagram)
 ![zero_trust_network_architecture](svg/courses/networking/networking-basics/05_network_security_basics/zero_trust_network_architecture.svg)
 
 ---
@@ -813,7 +813,7 @@ The traditional "castle and moat" model (trust everything inside the network) is
 
 ---
 
-## Zero Trust Network Architecture
+## Zero Trust Network Architecture (Diagram) (cont.)
 
 ![zero_trust_network_architecture](svg/courses/networking/networking-basics/05_network_security_basics/zero_trust_network_architecture.svg)
 

@@ -189,7 +189,7 @@ InventoryReleased        → MarkOrderFailed
 
 ---
 
-## Choreography vs Orchestration
+## Choreography vs Orchestration (Diagram)
 
 ![choreography_vs_orchestration](svg/courses/architecting/cqrs-and-event-sourcing/08_integration_with_ddd_and_microservices/choreography_vs_orchestration.svg)
 

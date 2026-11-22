@@ -189,7 +189,7 @@ jobs:
 
 ---
 
-## Workflow Status Badges
+## Workflow Status Badges (cont.)
 
 - Badge shows the status of the latest run:
     - Green: passing

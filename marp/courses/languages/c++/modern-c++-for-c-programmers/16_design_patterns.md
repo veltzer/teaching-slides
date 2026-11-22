@@ -2898,7 +2898,7 @@ Design Patterns in Modern C++:
 
 ---
 
-## Summary (cont.)
+## Summary (cont.) (cont.)
 
 **Modern Enhancements:**
 - Smart pointers for automatic memory management
@@ -2909,7 +2909,7 @@ Design Patterns in Modern C++:
 
 ---
 
-## Summary (cont.)
+## Summary (cont.) (cont. 2)
 
 **Best Practices:**
 - Choose patterns based on actual requirements
@@ -2921,7 +2921,7 @@ Design Patterns in Modern C++:
 
 ---
 
-## Summary (cont.)
+## Summary (cont.) (cont. 3)
 
 **Remember:**
 Patterns are tools, not goals. Use them when they genuinely improve your design, code clarity, and maintainability. Start simple and add patterns when complexity demands structure.

@@ -13,7 +13,7 @@ audience:
 
 ---
 
-## Consumer Groups
+## Consumer Groups (Diagram)
 
 ![consumer_groups](svg/courses/queues/kafka/03_consumer_api/consumer_groups.svg)
 

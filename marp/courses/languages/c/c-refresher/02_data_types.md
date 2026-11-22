@@ -283,7 +283,7 @@ The `<stdint.h>` header provides types with guaranteed sizes:
 
 ---
 
-## Fixed-Width Integer Types (C99) (cont.)
+## Fixed-Width Integer Types (C99) (cont.) (cont.)
 
 ```c
 #include <stdint.h>

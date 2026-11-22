@@ -565,7 +565,7 @@ def process_order(order_id, items):
 
 ---
 
-## Using Logging Correctly: Log Level Guidelines (cont.)
+## Using Logging Correctly: Log Level Guidelines (cont.) (cont.)
 
 - **ERROR** - Serious problems, function failed
     - Failed to connect to database

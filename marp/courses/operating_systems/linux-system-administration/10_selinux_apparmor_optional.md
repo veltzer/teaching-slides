@@ -657,6 +657,6 @@ restorecon -Rv /data/pgdata
 
 ---
 
-## SELinux Modes
+## SELinux Modes (Diagram)
 
 ![selinux_modes](svg/courses/operating_systems/linux-system-administration/10_selinux_apparmor_optional/selinux_modes.svg)

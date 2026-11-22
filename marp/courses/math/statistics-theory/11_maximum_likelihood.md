@@ -105,7 +105,7 @@ audience:
 
 ---
 
-## Information In Practice; The Three Asymptotic Tests (cont.)
+## Information In Practice; The Three Asymptotic Tests (cont.) (cont.)
 
 - They agree to first order but can disagree noticeably in finite samples — when they do, trust the **likelihood-ratio** statistic; for variance-component / boundary nulls the limit is a *mixture* of &chi;&sup2;'s, not a plain &chi;&sup2;
 - Same trio reappears throughout applied statistics: t-tests, ANOVA F-tests, the deviance tests in GLMs, the LM tests in econometrics — all instances of Wald / score / LR

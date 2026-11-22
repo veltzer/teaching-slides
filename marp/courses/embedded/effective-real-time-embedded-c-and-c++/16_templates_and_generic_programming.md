@@ -964,6 +964,6 @@ void printType() {
 
 ---
 
-## Template Metaprogramming
+## Template Metaprogramming (Diagram)
 
 ![template_metaprogramming](svg/courses/embedded/effective-real-time-embedded-c-and-c++/16_templates_and_generic_programming/template_metaprogramming.svg)

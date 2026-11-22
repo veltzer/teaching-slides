@@ -36,7 +36,7 @@ audience:
 
 ---
 
-## Role Directory Structure
+## Role Directory Structure (Diagram)
 
 ![role_directory_structure](svg/courses/devops/ansible/07_roles/role_directory_structure.svg)
 
@@ -755,7 +755,7 @@ ansible-project/
 
 ---
 
-## Role Dependencies
+## Role Dependencies (Diagram)
 
 ![role_dependencies](svg/courses/devops/ansible/07_roles/role_dependencies.svg)
 

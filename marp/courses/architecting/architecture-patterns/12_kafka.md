@@ -346,7 +346,7 @@ Key Metrics to Watch
 
 ---
 
-## When to Choose What (cont.)
+## When to Choose What (cont.) (cont.)
 
 ### Choose RabbitMQ When
 - Complex routing needed

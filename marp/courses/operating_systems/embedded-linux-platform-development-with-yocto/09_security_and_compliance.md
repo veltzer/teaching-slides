@@ -789,7 +789,7 @@ Deployment:
 
 ---
 
-## Security Best Practices (cont.)
+## Security Best Practices (cont.) (cont.)
 
 Maintenance:
 - Patch management

@@ -13,7 +13,7 @@ audience:
 
 ---
 
-## Pact Flow
+## Pact Flow (Diagram)
 
 ![pact_flow](svg/courses/testing/api-testing/04_contract_testing/pact_flow.svg)
 

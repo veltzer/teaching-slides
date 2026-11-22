@@ -394,7 +394,7 @@ sizes, train, test = learning_curve(
 
 ---
 
-## Dropout
+## Dropout (Diagram)
 
 ![dropout](svg/courses/machine_learning/machine-learning/05_fitting/dropout.svg)
 

@@ -298,7 +298,7 @@ review = client.chat.completions.create(
 
 ---
 
-## Prompt Chaining and Multi-Stage Pipelines
+## Prompt Chaining and Multi-Stage Pipelines (Diagram)
 
 ![breaking_complex_tasks_into_stages](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/breaking_complex_tasks_into_stages.svg)
 
@@ -439,13 +439,13 @@ prompt = REVIEW_TEMPLATE.render(
 
 ---
 
-## Fitting the Right Context into Limited Windows
+## Fitting the Right Context into Limited Windows (Diagram)
 
 ![fitting_the_right_context_into_limited_windows](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/fitting_the_right_context_into_limited_windows.svg)
 
 ---
 
-## Context Management: Priority-Based Assembly
+## Context Management: Priority-Based Assembly (cont.)
 
 - Always reserve tokens for the model's response
 - Drop lowest-priority items first when the window is tight
@@ -545,7 +545,7 @@ response = client.messages.create(
 
 ---
 
-## Evaluating and Iterating on Prompts
+## Evaluating and Iterating on Prompts (Diagram)
 
 ![building_a_prompt_evaluation_loop](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/building_a_prompt_evaluation_loop.svg)
 

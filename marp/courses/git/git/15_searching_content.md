@@ -676,7 +676,7 @@ Guidelines for effective content searching:
 
 ---
 
-## Lab Exercise: Content Search Mastery (cont.)
+## Lab Exercise: Content Search Mastery (cont.) (cont.)
 
 **Advanced tasks:**
 1. **Automation development:**
@@ -691,7 +691,7 @@ Guidelines for effective content searching:
 
 ---
 
-## Lab Exercise: Content Search Mastery (cont.)
+## Lab Exercise: Content Search Mastery (cont.) (cont. 2)
 
 **Deliverables:** Comprehensive search scripts, security scanning automation, code quality analysis tools, and performance optimization guide.
 
@@ -730,6 +730,6 @@ Guidelines for effective content searching:
 
 ---
 
-## Summary: Mastering Git Content Search (cont.)
+## Summary: Mastering Git Content Search (cont.) (cont.)
 
 **Remember:** Effective content searching is both an art and a science. The combination of Git's built-in tools with external utilities and systematic approaches enables powerful analysis of codebases. Master these techniques to become more effective at code maintenance, security analysis, and understanding large software projects.

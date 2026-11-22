@@ -595,7 +595,7 @@ When the CPU writes data, when does it update main memory?
 
 ---
 
-## Write Policies
+## Write Policies (Diagram)
 
 ![write_policies_1](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/write_policies_1.svg)
 
@@ -607,7 +607,7 @@ When the CPU writes data, when does it update main memory?
 
 ---
 
-## Write Policies
+## Write Policies (Diagram) (cont.)
 
 ![write_policies_2](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/write_policies_2.svg)
 

@@ -583,6 +583,6 @@ mdadm --create /dev/md99 --level=1 \
 
 ---
 
-## LVM Thin Provisioning
+## LVM Thin Provisioning (Diagram)
 
 ![lvm_thin_provisioning](svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_thin_provisioning.svg)

@@ -18,7 +18,7 @@ audience:
 
 ---
 
-## Data Source Use Cases
+## Data Source Use Cases (Diagram)
 
 ![data_source_uses](svg/courses/devops/terraform/04_data_sources/data_source_uses.svg)
 

@@ -565,7 +565,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
 
 ---
 
-### **Iterative Process**
+### **Iterative Process** (Diagram)
 
 ![iterative_process](svg/courses/languages/python/advanced-python/17_porting_2_to_3/iterative_process.svg)
 

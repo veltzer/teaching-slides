@@ -18,7 +18,7 @@ audience:
 
 ---
 
-## Standard Project Layout
+## Standard Project Layout (Diagram)
 
 ![standard_layout](svg/courses/devops/terraform/02_project_structure/standard_layout.svg)
 

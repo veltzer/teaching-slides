@@ -692,7 +692,7 @@ git worktree add ../hotfix hotfix
 
 ---
 
-## Migrating to Worktree Workflows (cont.)
+## Migrating to Worktree Workflows (cont.) (cont.)
 
 **Benefits of migration:**
 - Reduced disk usage
@@ -734,7 +734,7 @@ git worktree add ../hotfix hotfix
 
 ---
 
-## Lab Exercise: Worktree Workflow Implementation (cont.)
+## Lab Exercise: Worktree Workflow Implementation (cont.) (cont.)
 
 2. **Team coordination:**
    - Develop naming conventions
@@ -813,6 +813,6 @@ git merge new-feature
 
 ---
 
-## Summary: Effective Worktree Usage (cont.)
+## Summary: Effective Worktree Usage (cont.) (cont.)
 
 **Remember:** Worktrees are a powerful feature that can significantly improve development workflows when used appropriately. They enable true parallel development while maintaining the benefits of a single repository. Master the basics first, then gradually incorporate advanced techniques as your needs grow.

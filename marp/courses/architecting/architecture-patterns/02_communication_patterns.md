@@ -281,7 +281,7 @@ Cons:
 
 ---
 
-## Publish-Subscribe Key Concepts (cont.)
+## Publish-Subscribe Key Concepts (cont.) (cont.)
 
 - Topic or Channel
     - A named stream on the broker that publishers write to and subscribers read from

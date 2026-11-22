@@ -634,7 +634,7 @@ dig @new-ns example.com ANY +short | wc -l
 
 ---
 
-## DNS Migration Strategies (cont.)
+## DNS Migration Strategies (cont.) (cont.)
 
 Key pitfalls:
 - Forgetting to lower TTL before migration
@@ -688,6 +688,6 @@ dig @127.0.0.1 example.com +stats
 
 ---
 
-## DNS Record Types
+## DNS Record Types (Diagram)
 
 ![dns_record_types](svg/courses/operating_systems/linux-system-administration/11_dns_optional/dns_record_types.svg)

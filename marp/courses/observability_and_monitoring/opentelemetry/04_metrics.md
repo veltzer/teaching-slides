@@ -12,7 +12,7 @@ audience:
 
 ---
 
-## Instrument Types
+## Instrument Types (Diagram)
 
 ![metric_types](svg/courses/observability_and_monitoring/opentelemetry/04_metrics/metric_types.svg)
 

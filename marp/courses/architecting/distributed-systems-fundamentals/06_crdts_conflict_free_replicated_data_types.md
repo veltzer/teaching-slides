@@ -39,7 +39,7 @@ audience:
 
 ---
 
-## CRDT Use Cases
+## CRDT Use Cases (Diagram)
 
 ![crdt_use_cases](svg/courses/architecting/distributed-systems-fundamentals/06_crdts_conflict_free_replicated_data_types/crdt_use_cases.svg)
 

@@ -18,7 +18,7 @@ audience:
 
 ---
 
-## Variable Types
+## Variable Types (Diagram)
 
 ![variable_types](svg/courses/devops/terraform/05_variables/variable_types.svg)
 

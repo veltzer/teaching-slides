@@ -46,7 +46,7 @@ audience:
 
 ---
 
-## The Boot Chain Of Trust
+## The Boot Chain Of Trust (Diagram)
 
 ![chain of trust](svg/courses/security/secure-coding/06_secure_boot/chain_of_trust.svg)
 

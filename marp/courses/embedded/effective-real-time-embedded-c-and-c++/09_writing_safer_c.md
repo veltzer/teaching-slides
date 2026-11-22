@@ -741,6 +741,6 @@ void secure_function(void) {
 
 ---
 
-## Defensive Programming
+## Defensive Programming (Diagram)
 
 ![defensive_programming](svg/courses/embedded/effective-real-time-embedded-c-and-c++/09_writing_safer_c/defensive_programming.svg)

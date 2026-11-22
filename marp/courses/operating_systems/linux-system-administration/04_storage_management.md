@@ -1254,6 +1254,6 @@ parted -s /dev/sdb mkpart primary ext4 1MiB 100%
 
 ---
 
-## Swap Space Management
+## Swap Space Management (Diagram)
 
 ![swap_space_management](svg/courses/operating_systems/linux-system-administration/04_storage_management/swap_space_management.svg)

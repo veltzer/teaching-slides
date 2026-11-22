@@ -58,7 +58,7 @@ audience:
 
 ---
 
-## CQRS Key Concepts (cont.)
+## CQRS Key Concepts (cont.) (cont.)
 
 - Query Model
     - Represents the read model of the system
@@ -440,7 +440,7 @@ Cons:
 
 ---
 
-## Microkernel Key Concepts (cont.)
+## Microkernel Key Concepts (cont.) (cont.)
 
 - Contracts
     - Define the interfaces and communication protocols between the microkernel and plugins

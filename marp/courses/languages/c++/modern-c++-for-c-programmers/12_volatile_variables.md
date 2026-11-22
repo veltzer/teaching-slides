@@ -1643,7 +1643,7 @@ Guidelines for using volatile effectively:
 
 ---
 
-## Best Practices for Volatile (cont.)
+## Best Practices for Volatile (cont.) (cont.)
 
 ```cpp
 // Good: Hardware register access
@@ -1667,7 +1667,7 @@ void badThreadSync() {
 
 ---
 
-## Best Practices for Volatile (cont.)
+## Best Practices for Volatile (cont.) (cont. 2)
 
 ```cpp
 // Good: Thread synchronization
@@ -2026,7 +2026,7 @@ public:
 
 ---
 
-## Summary and Best Practices (cont.)
+## Summary and Best Practices (cont.) (cont.)
 
 **Modern C++ Approach:**
 - Prefer `std::atomic` over volatile for thread safety

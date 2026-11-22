@@ -118,7 +118,7 @@ audience:
 
 ---
 
-## Admissibility, Complete Classes, Objective Priors (cont.)
+## Admissibility, Complete Classes, Objective Priors (cont.) (cont.)
 
 - **Objective / reference priors** when you want "let the data speak": **Jeffreys' prior** &pi;(&theta;) &prop; &radic;det I(&theta;) (invariant under reparametrization — its defining virtue), **reference priors** (Bernardo — maximize the expected information the data adds), **maximum-entropy** priors (least committal given stated constraints); these are often *improper*, so always verify the posterior is proper, and beware that "objective" is a name, not a guarantee — different objective recipes disagree, especially in multiparameter problems
 - **Sensitivity analysis is mandatory**: report results under a few defensible priors (an informative one, a weakly-informative one, a reference one); if conclusions swing with the prior, *that* is the finding — say so rather than hiding behind one prior

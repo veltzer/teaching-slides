@@ -855,7 +855,7 @@ fi
 
 ---
 
-## Lab Exercise: Comprehensive Hook System (cont.)
+## Lab Exercise: Comprehensive Hook System (cont.) (cont.)
 
 **Advanced tasks:**
 1. **Integration development:**
@@ -870,7 +870,7 @@ fi
 
 ---
 
-## Lab Exercise: Comprehensive Hook System (cont.)
+## Lab Exercise: Comprehensive Hook System (cont.) (cont. 2)
 
 **Deliverables:** Complete hook system with documentation, installation scripts, security guidelines, performance benchmarks, and team training materials.
 
@@ -910,6 +910,6 @@ fi
 
 ---
 
-## Summary: Mastering Git Hooks (cont.)
+## Summary: Mastering Git Hooks (cont.) (cont.)
 
 **Remember:** Git hooks are powerful automation tools that can significantly improve code quality, security, and development workflows. However, they require careful design, testing, and maintenance. Start simple, iterate based on team feedback, and always consider the balance between automation benefits and development friction.

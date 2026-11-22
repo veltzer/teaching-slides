@@ -23,7 +23,7 @@ audience:
 
 ---
 
-## Deprecation Timeline
+## Deprecation Timeline (Diagram)
 
 ![deprecation_timeline](svg/courses/architecting/api-design-best-practices/11_backward_compatibility_and_deprecation/deprecation_timeline.svg)
 

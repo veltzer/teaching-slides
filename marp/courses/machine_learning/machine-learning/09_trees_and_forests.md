@@ -513,25 +513,25 @@ stack = StackingClassifier(estimators=estimators, final_estimator=LogisticRegres
 
 ---
 
-## Feature Importance
+## Feature Importance (Diagram)
 
 ![feature_importance](svg/courses/machine_learning/machine-learning/09_trees_and_forests/feature_importance.svg)
 
 ---
 
-## Early Stopping
+## Early Stopping (Diagram)
 
 ![early_stopping](svg/courses/machine_learning/machine-learning/09_trees_and_forests/early_stopping.svg)
 
 ---
 
-## Information Gain
+## Information Gain (Diagram)
 
 ![information_gain](svg/courses/machine_learning/machine-learning/09_trees_and_forests/information_gain.svg)
 
 ---
 
-## Learning Rate
+## Learning Rate (Diagram)
 
 ![learning_rate](svg/courses/machine_learning/machine-learning/09_trees_and_forests/learning_rate.svg)
 

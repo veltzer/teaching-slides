@@ -88,7 +88,7 @@ mail IN A    5.6.7.8
 
 ---
 
-## Zone File Anatomy
+## Zone File Anatomy (Diagram)
 
 ![zone_file](svg/courses/networking/dns-deep-dive/03_authoritative_dns/zone_file.svg)
 

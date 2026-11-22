@@ -35,7 +35,7 @@ audience:
 
 ---
 
-## Why Tools?
+## Why Tools? (Diagram)
 
 ![why_tools](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/why_tools.svg)
 
@@ -126,7 +126,7 @@ audience:
 
 ---
 
-## Chaining Multiple Calls
+## Chaining Multiple Calls (Diagram)
 
 ![chaining_multiple_calls](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/chaining_multiple_calls.svg)
 
@@ -185,13 +185,13 @@ audience:
 
 ---
 
-## Chaining Tools into Pipelines
+## Chaining Tools into Pipelines (Diagram)
 
 ![chaining_tools_into_pipelines](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/chaining_tools_into_pipelines.svg)
 
 ---
 
-## Tool Composition Patterns
+## Tool Composition Patterns (cont.)
 
 ## Orchestration Strategies
 - **Sequential**: each step depends on the previous result
@@ -621,7 +621,7 @@ class ToolAdapter:
 
 ---
 
-## Evolution Without Breaking Agents
+## Evolution Without Breaking Agents (Diagram)
 
 ![evolution_without_breaking_agents](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/evolution_without_breaking_agents.svg)
 

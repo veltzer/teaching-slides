@@ -813,7 +813,7 @@ echo "venv/" > .gitignore
 
 ## Practical Workflow: pipenv
 
-## Step-by-Step Project Setup
+## Step-by-Step Project Setup (cont.)
 - Create project directory
 - Initialize Pipenv project
 - Install dependencies
@@ -849,7 +849,7 @@ git commit -m "Initialize project with dependencies"
 
 ## Practical Workflow: poetry
 
-## Step-by-Step Project Setup
+## Step-by-Step Project Setup (cont. 2)
 - Create new poetry project
 - Configure project metadata
 - Add dependencies

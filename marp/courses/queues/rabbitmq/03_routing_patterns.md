@@ -40,7 +40,7 @@ audience:
 
 ---
 
-## Topic Routing
+## Topic Routing (Diagram)
 
 ![topic_routing](svg/courses/queues/rabbitmq/03_routing_patterns/topic_routing.svg)
 

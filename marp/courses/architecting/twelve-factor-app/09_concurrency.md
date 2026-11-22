@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## Process Types
+## Process Types (Diagram)
 
 ![concurrency_via_processes](svg/courses/architecting/twelve-factor-app/09_concurrency/concurrency_via_processes.svg)
 

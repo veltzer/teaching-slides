@@ -13,7 +13,7 @@ audience:
 
 ---
 
-## Token Bucket
+## Token Bucket (Diagram)
 
 ![token_bucket](svg/courses/architecting/api-gateway-patterns/05_rate_limiting_and_throttling/token_bucket.svg)
 

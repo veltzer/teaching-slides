@@ -19,7 +19,7 @@ audience:
 
 ---
 
-## Virtual Nodes
+## Virtual Nodes (Diagram)
 
 ![virtual_nodes](svg/courses/architecting/system-design/07_consistent_hashing/virtual_nodes.svg)
 

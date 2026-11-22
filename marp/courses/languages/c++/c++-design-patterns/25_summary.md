@@ -70,7 +70,7 @@ audience:
 
 ---
 
-## Behavioral Patterns Overview (cont.)
+## Behavioral Patterns Overview (cont.) (cont.)
 
 | Pattern | Purpose | Key Idea |
 |---------|---------|----------|

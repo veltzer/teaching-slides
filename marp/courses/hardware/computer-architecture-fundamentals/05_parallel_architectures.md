@@ -609,7 +609,7 @@ The interconnect topology determines communication speed.
 
 ---
 
-## Interconnects Between Cores
+## Interconnects Between Cores (Diagram)
 
 ![interconnects_between_cores_1](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_between_cores_1.svg)
 
@@ -623,7 +623,7 @@ Simple but becomes a bottleneck with more cores.
 
 ---
 
-## Interconnects Between Cores
+## Interconnects Between Cores (Diagram) (cont.)
 
 ![interconnects_between_cores_2](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_between_cores_2.svg)
 
@@ -642,7 +642,7 @@ Latency increases with core count (must traverse more hops).
 
 ---
 
-## Interconnects: Mesh and Crossbar
+## Interconnects: Mesh and Crossbar (Diagram)
 
 ![interconnects_mesh_and_crossbar_1](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_mesh_and_crossbar_1.svg)
 
@@ -657,7 +657,7 @@ a ring. Maximum hops = rows + columns - 2.
 
 ---
 
-## Interconnects: Mesh and Crossbar
+## Interconnects: Mesh and Crossbar (Diagram) (cont.)
 
 ![interconnects_mesh_and_crossbar_2](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_mesh_and_crossbar_2.svg)
 
@@ -917,7 +917,7 @@ Gustafson:  Fixed time, scale problem with processors
 
 ---
 
-## Gustafson's Law (cont.)
+## Gustafson's Law (cont.) (cont.)
 
 **Example** (P = 0.9, serial fraction = 10%):
 

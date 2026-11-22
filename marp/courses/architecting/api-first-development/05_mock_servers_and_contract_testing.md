@@ -13,7 +13,7 @@ audience:
 
 ---
 
-## Contract Testing
+## Contract Testing (Diagram)
 
 ![contract_testing](svg/courses/architecting/api-first-development/05_mock_servers_and_contract_testing/contract_testing.svg)
 

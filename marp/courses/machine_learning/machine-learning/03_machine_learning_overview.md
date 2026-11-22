@@ -256,7 +256,7 @@ audience:
 
 ---
 
-## Bias vs Variance
+## Bias vs Variance (Diagram)
 
 ![bias_variance](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/bias_variance.svg)
 
@@ -412,7 +412,7 @@ for clf in [LogisticRegression(), RandomForestClassifier(), GradientBoostingClas
 
 ---
 
-## Gradient Descent
+## Gradient Descent (Diagram)
 
 ![gradient_descent](svg/courses/machine_learning/machine-learning/03_machine_learning_overview/gradient_descent.svg)
 

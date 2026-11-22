@@ -710,7 +710,7 @@ git config submodule.lib/shared.ignore dirty
 
 ---
 
-## Lab Exercise: Submodule Management (cont.)
+## Lab Exercise: Submodule Management (cont.) (cont.)
 
 **Advanced tasks:**
 1. **Automation setup:**
@@ -725,7 +725,7 @@ git config submodule.lib/shared.ignore dirty
 
 ---
 
-## Lab Exercise: Submodule Management (cont.)
+## Lab Exercise: Submodule Management (cont.) (cont. 2)
 
 **Deliverables:** Complete submodule-based project structure, management scripts, CI/CD configuration, troubleshooting guide, and comparison with alternatives.
 
@@ -763,6 +763,6 @@ git config submodule.lib/shared.ignore dirty
 
 ---
 
-## Summary: Effective Submodule Usage (cont.)
+## Summary: Effective Submodule Usage (cont.) (cont.)
 
 **Remember:** Git submodules are powerful but complex. They work well for specific use cases like shared libraries and modular architectures, but require careful planning, clear documentation, and team coordination. Consider simpler alternatives like Git subtrees or package managers unless you specifically need the independence and version control that submodules provide.

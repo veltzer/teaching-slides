@@ -32,7 +32,7 @@ audience:
 
 ---
 
-## Architecture
+## Architecture (Diagram)
 
 ![airflow_arch](svg/courses/data_engineering/apache-airflow/01_introduction_to_apache_airflow/airflow_arch.svg)
 

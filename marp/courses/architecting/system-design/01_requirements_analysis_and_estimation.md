@@ -28,7 +28,7 @@ audience:
 
 ---
 
-## Capacity Estimation
+## Capacity Estimation (Diagram)
 
 ![capacity_estimation](svg/courses/architecting/system-design/01_requirements_analysis_and_estimation/capacity_estimation.svg)
 

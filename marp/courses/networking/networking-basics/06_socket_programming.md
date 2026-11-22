@@ -40,7 +40,7 @@ audience:
 
 ---
 
-## Socket API: System Call Flow
+## Socket API: System Call Flow (Diagram)
 
 ![tcp_connection_lifecycle](svg/courses/networking/networking-basics/06_socket_programming/tcp_connection_lifecycle.svg)
 
@@ -815,7 +815,7 @@ $ ss -xlnp
 
 ---
 
-## ss Flags Reference (cont.)
+## ss Flags Reference (cont.) (cont.)
 
 ```bash
 # Common combinations

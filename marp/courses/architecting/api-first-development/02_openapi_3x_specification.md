@@ -12,7 +12,7 @@ audience:
 
 ---
 
-## Document Structure
+## Document Structure (Diagram)
 
 ![openapi_structure](svg/courses/architecting/api-first-development/02_openapi_3x_specification/openapi_structure.svg)
 

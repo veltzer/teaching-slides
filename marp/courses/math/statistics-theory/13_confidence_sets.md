@@ -105,7 +105,7 @@ audience:
 
 ---
 
-## Asymptotic Intervals: Wald, Score, Likelihood-Ratio (cont.)
+## Asymptotic Intervals: Wald, Score, Likelihood-Ratio (cont.) (cont.)
 
 - All three deliver coverage &#8594; 1&minus;&alpha; *as n &#8594; &infin;*; for small n, near a boundary (the &chi;&sup2; becomes a mixture), or with separation, they can each miscover — then use **exact**, **conditional**, or **bootstrap** intervals (the studentized / BCa bootstrap intervals are second-order accurate, better than first-order Wald)
 - Multivariate version: an asymptotic **confidence ellipsoid** { &theta; : (&theta;&#770; &minus; &theta;)&#7488; I_n(&theta;&#770;) (&theta;&#770; &minus; &theta;) &leq; &chi;&sup2;&#7496;,&#8321;&#8331;&#945; } — Wald-flavored; the LR version uses the joint profile
@@ -124,13 +124,13 @@ audience:
 
 ---
 
-## Simultaneous Confidence Regions (cont.)
+## Simultaneous Confidence Regions (cont.) (cont.)
 
 - A natural simultaneous region is the **confidence ellipsoid** above (the Wald or LR region for the whole parameter vector) — its 1-D "shadows" are the simultaneous Scheffé intervals; the ellipsoid can declare the vector different from a point even when *every* individual interval contains its null coordinate (and vice versa) — a geometric cousin of Simpson-style surprises
 
 ---
 
-## Simultaneous Confidence Regions (cont.)
+## Simultaneous Confidence Regions (cont.) (cont. 2)
 
 - **Confidence bands** are the function-valued case: a region covering an entire curve f(&middot;) (a regression line, a survival curve, a CDF) with simultaneous probability 1&minus;&alpha; — e.g. the Kolmogorov&ndash;Smirnov band around the empirical CDF, Working&ndash;Hotelling bands for a regression line; **pointwise** bands (one CI per x) are narrower but only cover *that x*, not the whole curve
 - Rule of thumb: decide *up front* whether you need pointwise or simultaneous coverage, and over how many quantities — then widen accordingly; reporting many "95%" intervals and acting on the most extreme one is multiplicity by the back door

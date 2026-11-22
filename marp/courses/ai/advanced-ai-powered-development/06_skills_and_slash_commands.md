@@ -696,7 +696,7 @@ alerts:
 
 ---
 
-## Adoption Patterns and Anti-Patterns (cont.)
+## Adoption Patterns and Anti-Patterns (cont.) (cont.)
 
 - Treat skills like code: review, test, version, and document them
 - Assign skill ownership to prevent orphaned definitions

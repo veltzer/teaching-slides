@@ -806,7 +806,7 @@ Problem: "Slow execution"
 
 ---
 
-## Course Summary (cont.)
+## Course Summary (cont.) (cont.)
 
 **Advanced Ansible and Real-World Patterns**
 - Dynamic inventory (AWS, Azure, GCP)

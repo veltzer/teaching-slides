@@ -749,7 +749,7 @@ Required Deliverables:
 
 ---
 
-## Course Summary: Linux Forensics (cont.)
+## Course Summary: Linux Forensics (cont.) (cont.)
 
 ### Reporting and Capstone
 - Anti-forensics detection and countermeasures
@@ -1068,7 +1068,7 @@ A web server has been compromised. You have:
 
 ---
 
-## Course Final Exercise (cont.)
+## Course Final Exercise (cont.) (cont.)
 
 ```misc
 Deliverables:

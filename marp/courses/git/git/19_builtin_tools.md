@@ -68,7 +68,7 @@ git instaweb --stop
 
 ---
 
-## Git Instaweb (cont.)
+## Git Instaweb (cont.) (cont.)
 
 **What instaweb provides:**
 - Repository browsing interface
@@ -79,7 +79,7 @@ git instaweb --stop
 
 ---
 
-## Git Instaweb (cont.)
+## Git Instaweb (cont.) (cont. 2)
 
 **Use cases:**
 - Quick repository sharing
@@ -883,7 +883,7 @@ echo "git:x:1001:1001:Git User:/home/git:/usr/bin/git-shell" >> /etc/passwd
 
 ---
 
-## Lab Exercise: Built-in Tools Mastery (cont.)
+## Lab Exercise: Built-in Tools Mastery (cont.) (cont.)
 
 **Advanced tasks:**
 1. **Integration scripting:**
@@ -898,7 +898,7 @@ echo "git:x:1001:1001:Git User:/home/git:/usr/bin/git-shell" >> /etc/passwd
 
 ---
 
-## Lab Exercise: Built-in Tools Mastery (cont.)
+## Lab Exercise: Built-in Tools Mastery (cont.) (cont. 2)
 
 **Deliverables:** Complete Git infrastructure setup, workflow automation scripts, maintenance procedures, security configuration, and team documentation.
 
@@ -934,6 +934,6 @@ echo "git:x:1001:1001:Git User:/home/git:/usr/bin/git-shell" >> /etc/passwd
 
 ---
 
-## Summary: Leveraging Git's Built-in Tools (cont.)
+## Summary: Leveraging Git's Built-in Tools (cont.) (cont.)
 
 **Remember:** Git's built-in tools provide a comprehensive foundation for version control workflows. While external tools can add convenience and features, understanding and leveraging Git's built-in capabilities ensures you can work effectively in any environment and provides a solid foundation for building custom solutions.

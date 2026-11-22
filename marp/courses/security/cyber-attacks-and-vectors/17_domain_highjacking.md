@@ -95,7 +95,7 @@ audience:
 
 ---
 
-## DNS Hijacking Techniques (cont.)
+## DNS Hijacking Techniques (cont.) (cont.)
 
 ```bash
 # Check your current DNS resolver

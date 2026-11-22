@@ -407,7 +407,7 @@ from sklearn.metrics import (
 
 ---
 
-## Calibration
+## Calibration (Diagram)
 
 ![calibration](svg/courses/machine_learning/machine-learning/06_evaluation/calibration.svg)
 
@@ -431,7 +431,7 @@ from sklearn.metrics import (
 
 ---
 
-## Time Series CV
+## Time Series CV (Diagram)
 
 ![time_series_cv](svg/courses/machine_learning/machine-learning/06_evaluation/time_series_cv.svg)
 

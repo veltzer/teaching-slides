@@ -90,7 +90,7 @@ With RAG:
 
 ---
 
-## Tree-sitter vs AST Chunking Comparison (cont.)
+## Tree-sitter vs AST Chunking Comparison (cont.) (cont.)
 
 ```python
 import tree_sitter_python as tspython
@@ -234,7 +234,7 @@ Not all project knowledge lives in source code:
 
 ---
 
-## Multi-Modal RAG: Diagrams, Screenshots, Config Files (cont.)
+## Multi-Modal RAG: Diagrams, Screenshots, Config Files (cont.) (cont.)
 
 **Pipeline**:
 1. Detect asset type by file extension and MIME type
@@ -524,7 +524,7 @@ def recall_at_k(retrieved_ids, relevant_ids, k=10):
 
 ---
 
-## Common RAG Failure Modes and Debugging (cont.)
+## Common RAG Failure Modes and Debugging (cont.) (cont.)
 
 **Debugging tip**: log the retrieved chunks alongside every LLM response so you can trace failures back to retrieval vs generation.
 

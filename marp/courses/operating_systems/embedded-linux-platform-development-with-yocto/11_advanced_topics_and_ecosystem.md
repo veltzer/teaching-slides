@@ -956,7 +956,7 @@ Throughout this course:
 
 ---
 
-## Course Conclusion (cont.)
+## Course Conclusion (cont.) (cont.)
 
 Next steps:
 - Build your first custom image

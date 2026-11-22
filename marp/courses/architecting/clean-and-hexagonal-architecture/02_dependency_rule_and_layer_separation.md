@@ -18,7 +18,7 @@ audience:
 
 ---
 
-## Four Layers
+## Four Layers (Diagram)
 
 ![four_layers](svg/courses/architecting/clean-and-hexagonal-architecture/02_dependency_rule_and_layer_separation/four_layers.svg)
 

@@ -401,7 +401,7 @@ Keeping docs current:
 
 ---
 
-## Documentation Updates
+## Documentation Updates (Diagram)
 
 ![documentation_updates](svg/courses/ai/developing-using-ai/09_workflows/documentation_updates.svg)
 

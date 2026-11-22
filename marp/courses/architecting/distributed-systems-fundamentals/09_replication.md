@@ -19,7 +19,7 @@ audience:
 
 ---
 
-## Replication Lag
+## Replication Lag (Diagram)
 
 ![replication_lag](svg/courses/architecting/distributed-systems-fundamentals/09_replication/replication_lag.svg)
 

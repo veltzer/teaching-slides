@@ -196,7 +196,7 @@ Content-Security-Policy:
 
 ---
 
-## Content Security Policy (CSP) as Defense: Example (cont.)
+## Content Security Policy (CSP) as Defense: Example (cont.) (cont.)
 
 | Directive      | Purpose                                      | Example Value              |
 |----------------|----------------------------------------------|----------------------------|

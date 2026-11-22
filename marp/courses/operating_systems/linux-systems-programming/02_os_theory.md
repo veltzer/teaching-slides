@@ -209,7 +209,7 @@ void setup_page_table(struct process *p) {
 
 ## System Calls - The Gateway
 
-## Definition
+## System Call Definition
 **Controlled entry points** from user space to kernel space
 
 ## Purpose

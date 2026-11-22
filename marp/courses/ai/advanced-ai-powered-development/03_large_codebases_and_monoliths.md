@@ -285,7 +285,7 @@ Navigation workflow:
 
 ---
 
-## Understanding Call Graphs and Data Flow
+## Understanding Call Graphs and Data Flow (Diagram)
 
 ![understanding_call_graphs_and_data_flow](svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/understanding_call_graphs_and_data_flow.svg)
 

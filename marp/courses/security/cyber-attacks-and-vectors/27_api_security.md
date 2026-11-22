@@ -378,7 +378,7 @@ decoded = jwt.decode(token, SECRET, algorithms=["HS256"])
 
 ---
 
-### Other JWT Attacks (cont.)
+### Other JWT Attacks (cont.) (cont.)
 
 ```bash
 # Brute-force weak JWT secrets with jwt_tool

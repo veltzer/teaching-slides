@@ -526,7 +526,7 @@ void large_function(void) {
 
 ---
 
-## Volatile Keyword
+## Volatile Keyword (Diagram)
 
 ![volatile_keyword](svg/courses/embedded/effective-real-time-embedded-c-and-c++/02_embedded_c/volatile_keyword.svg)
 

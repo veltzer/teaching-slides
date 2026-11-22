@@ -1793,7 +1793,7 @@ void demonstrateADL() {
 
 ---
 
-## Best Practices Summary (cont.)
+## Best Practices Summary (cont.) (cont.)
 
 **Constructor Design:**
 1. **Single point of maintenance** through delegation

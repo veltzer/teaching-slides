@@ -1041,7 +1041,7 @@ Git uses different merge strategies:
 
 ---
 
-## Understanding Git's Merge Algorithms (cont.)
+## Understanding Git's Merge Algorithms (cont.) (cont.)
 
 **Subtree strategy:**
 - Merges separate project as subdirectory

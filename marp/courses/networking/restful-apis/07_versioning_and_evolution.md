@@ -13,7 +13,7 @@ audience:
 
 ---
 
-## Breaking vs Non-Breaking
+## Breaking vs Non-Breaking (Diagram)
 
 ![breaking_changes](svg/courses/networking/restful-apis/07_versioning_and_evolution/breaking_changes.svg)
 

@@ -326,6 +326,6 @@ db_host: db.prod.internal
 
 ---
 
-## Vault Best Practices
+## Vault Best Practices (Diagram)
 
 ![vault_best_practices](svg/courses/devops/ansible/09_vault/vault_best_practices.svg)

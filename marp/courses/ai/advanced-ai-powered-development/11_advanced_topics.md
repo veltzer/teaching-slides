@@ -702,7 +702,7 @@ Mitigations:
 
 ---
 
-## Agentic Tool Comparison Matrix (cont.)
+## Agentic Tool Comparison Matrix (cont.) (cont.)
 
 Selection criteria:
 1. Does your workflow require terminal and shell access?

@@ -116,7 +116,7 @@ git tag
 
 ---
 
-## Creating Lightweight Tags (cont.)
+## Creating Lightweight Tags (cont.) (cont.)
 
 **When to use lightweight tags:**
 - Temporary markers
@@ -513,7 +513,7 @@ jobs:
 
 ---
 
-## Tag Management Best Practices (cont.)
+## Tag Management Best Practices (cont.) (cont.)
 
 **Maintenance:**
 1. Clean up development tags
@@ -785,7 +785,7 @@ git gc --aggressive
 
 ---
 
-## Lab Exercise: Complete Tagging Workflow (cont.)
+## Lab Exercise: Complete Tagging Workflow (cont.) (cont.)
 
 2. **Team workflow:**
    - Design release process documentation
@@ -826,6 +826,6 @@ git gc --aggressive
 
 ---
 
-## Summary: Effective Tag Management (cont.)
+## Summary: Effective Tag Management (cont.) (cont.)
 
 **Remember:** Tags are permanent markers in your project's history. Use them thoughtfully to create clear milestones, enable easy navigation through your project's evolution, and support reliable release management. Good tagging practices contribute significantly to professional software development and team collaboration.

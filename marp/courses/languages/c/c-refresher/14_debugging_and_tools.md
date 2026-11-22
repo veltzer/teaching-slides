@@ -135,7 +135,7 @@ Essential GDB commands:
 
 ---
 
-## GDB: Getting Started (cont.)
+## GDB: Getting Started (cont.) (cont.)
 
 | Command | Short | Description |
 |---------|-------|-------------|

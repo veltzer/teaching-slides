@@ -336,7 +336,7 @@ audience:
 
 ---
 
-## Performance Metrics
+## Service Performance Metrics
 1. Response time
 1. Throughput
 1. Resource usage

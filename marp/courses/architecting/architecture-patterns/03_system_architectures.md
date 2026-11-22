@@ -398,7 +398,7 @@ Cons:
 
 ---
 
-## Serverless Key Concepts (cont.)
+## Serverless Key Concepts (cont.) (cont.)
 
 - Stateless
     - Functions do not maintain persistent state between invocations

@@ -103,7 +103,7 @@ audience:
 
 ---
 
-## F-Tests And The Geometry Of ANOVA (cont.)
+## F-Tests And The Geometry Of ANOVA (cont.) (cont.)
 
 - Sequential vs. simultaneous: adding predictors corresponds to **nesting subspaces** C(X&#8321;) ⊆ C(X&#8321;,X&#8322;) ⊆ ...; "Type I SS" decomposes &#8214;ŷ&#8214;&sup2; along this chain (order-dependent unless the columns are orthogonal), "Type III SS" tests each block last — pure linear algebra, no new statistics
 - Power and non-null behavior: under the alternative the numerator follows a **non-central F** with non-centrality &lambda; = (R&beta; &minus; r)&#7488;(...)&#8315;&sup1;(R&beta; &minus; r)/&sigma;&sup2; — that's what drives sample-size / power calculations for ANOVA and regression tests
@@ -122,13 +122,13 @@ audience:
 
 ---
 
-## Beyond OLS: Diagnostics, GLS, Shrinkage (cont.)
+## Beyond OLS: Diagnostics, GLS, Shrinkage (cont.) (cont.)
 
 - **Ridge regression / shrinkage**: &beta;&#770;_ridge = (X&#7488;X + &lambda;I)&#8315;&sup1;X&#7488;y — a *biased* estimator that, for a suitable &lambda; &gt; 0, has **smaller mean-squared error than OLS** (especially when X is ill-conditioned or p is large relative to n); it's the **posterior mean under a Gaussian prior** &beta; ~ N(0, &tau;&sup2;I) (the Bayesian face of regularization) and the regression incarnation of **Stein's paradox** — pulling the OLS estimate toward 0 (or toward a common value) provably wins in p &geq; 3. LASSO (an &#8467;&#8321; penalty) does this *and* zeroes out coefficients (selection); elastic net blends both. The price of all of them: the classical exact t/F distribution theory no longer applies — inference needs bootstrap, selective-inference, or Bayesian tools
 
 ---
 
-## Beyond OLS: Diagnostics, GLS, Shrinkage (cont.)
+## Beyond OLS: Diagnostics, GLS, Shrinkage (cont.) (cont. 2)
 
 - Other escapes when assumptions break: **robust regression** (M-estimators, MM-estimators) for heavy-tailed errors / outliers; **quantile regression** when you care about a quantile (or the whole conditional distribution) rather than the mean; **GLMs** (next-level generalization: a link function + an exponential-family response) for binary, count, or positive-skewed responses — logistic and Poisson regression are the headline cases, and they reduce to *iteratively reweighted least squares*, i.e. weighted projections again
 - The throughline: OLS is the **orthogonal projection** answer, optimal under the spherical-Gaussian-error story; change the error geometry &#8658; project in a different inner product (GLS); allow bias &#8658; shrink the projection (ridge/Stein); change the response type &#8658; project iteratively on a transformed scale (GLMs) — one geometric idea, many statistical models

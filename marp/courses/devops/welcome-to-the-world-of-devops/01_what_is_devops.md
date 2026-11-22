@@ -81,7 +81,7 @@ Before:
 
 ---
 
-## Breaking Down Silos
+## Breaking Down Silos (Diagram)
 
 ![breaking_down_silos_1](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/breaking_down_silos_1.svg)
 
@@ -93,7 +93,7 @@ After:
 
 ---
 
-## Breaking Down Silos
+## Breaking Down Silos (Diagram) (cont.)
 
 ![breaking_down_silos_2](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/breaking_down_silos_2.svg)
 

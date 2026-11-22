@@ -1501,7 +1501,7 @@ Key practices across all frameworks:
 
 ---
 
-## Password Policies
+## Password Policies (Diagram)
 
 ![password_policies](svg/courses/operating_systems/linux-system-administration/05_user_management_security/password_policies.svg)
 

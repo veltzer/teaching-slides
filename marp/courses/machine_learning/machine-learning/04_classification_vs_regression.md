@@ -331,7 +331,7 @@ reg.fit(X, y_real).predict(X_new)
 
 ---
 
-## Class Imbalance
+## Class Imbalance (Diagram)
 
 ![class_imbalance](svg/courses/machine_learning/machine-learning/04_classification_vs_regression/class_imbalance.svg)
 

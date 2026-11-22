@@ -13,7 +13,7 @@ audience:
 
 ---
 
-## Adapter Roles
+## Adapter Roles (Diagram)
 
 ![adapter_roles](svg/courses/architecting/clean-and-hexagonal-architecture/04_interface_adapters/adapter_roles.svg)
 
@@ -40,7 +40,7 @@ audience:
 
 ---
 
-## Adapter Roles
+## Adapter Roles (Diagram) (cont.)
 
 ![adapter_pattern](svg/courses/architecting/clean-and-hexagonal-architecture/04_interface_adapters/adapter_pattern.svg)
 

@@ -205,7 +205,7 @@ lemma.lemmatize("mice",    pos="n")  # -> "mouse"
 
 ---
 
-## Morphologically Rich Languages
+## Morphologically Rich Languages (Diagram)
 
 ![morph_rich_languages](svg/courses/ai/natural-language-processing/03_morphology_and_lemmatization/morph_rich_languages.svg)
 

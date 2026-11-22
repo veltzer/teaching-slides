@@ -401,13 +401,13 @@ audience:
 
 ---
 
-## MLOps Pipeline
+## MLOps Pipeline (Diagram)
 
 ![mlops_pipeline](svg/courses/machine_learning/machine-learning/12_real_world_cycle/mlops_pipeline.svg)
 
 ---
 
-## Train-Serve Skew
+## Train-Serve Skew (Diagram)
 
 ![train_serve_skew](svg/courses/machine_learning/machine-learning/12_real_world_cycle/train_serve_skew.svg)
 

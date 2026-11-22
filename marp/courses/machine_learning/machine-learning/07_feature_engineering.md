@@ -387,19 +387,19 @@ ct = ColumnTransformer([
 
 ---
 
-## Scaling
+## Scaling (Diagram)
 
 ![scaling](svg/courses/machine_learning/machine-learning/07_feature_engineering/scaling.svg)
 
 ---
 
-## Cyclical Encoding
+## Cyclical Encoding (Diagram)
 
 ![cyclical_encoding](svg/courses/machine_learning/machine-learning/07_feature_engineering/cyclical_encoding.svg)
 
 ---
 
-## Target Encoding
+## Target Encoding (Diagram)
 
 ![target_encoding](svg/courses/machine_learning/machine-learning/07_feature_engineering/target_encoding.svg)
 
@@ -411,25 +411,25 @@ ct = ColumnTransformer([
 
 ---
 
-## Binning
+## Binning (Diagram)
 
 ![binning](svg/courses/machine_learning/machine-learning/07_feature_engineering/binning.svg)
 
 ---
 
-## Log Transform
+## Log Transform (Diagram)
 
 ![log_transform](svg/courses/machine_learning/machine-learning/07_feature_engineering/log_transform.svg)
 
 ---
 
-## Embedding Encoding
+## Embedding Encoding (Diagram)
 
 ![embedding_encoding](svg/courses/machine_learning/machine-learning/07_feature_engineering/embedding_encoding.svg)
 
 ---
 
-## Feature Pipeline
+## Feature Pipeline (Diagram)
 
 ![feature_pipeline](svg/courses/machine_learning/machine-learning/07_feature_engineering/feature_pipeline.svg)
 

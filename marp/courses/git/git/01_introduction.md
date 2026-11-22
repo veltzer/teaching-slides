@@ -182,7 +182,7 @@ According to Stack Overflow Developer Survey:
 
 ---
 
-## Snapshots, Not Differences
+## Snapshots, Not Differences (Diagram)
 
 ![snapshots_not_differences_1](svg/courses/git/git/01_introduction/snapshots_not_differences_1.svg)
 
@@ -194,7 +194,7 @@ According to Stack Overflow Developer Survey:
 
 ---
 
-## Snapshots, Not Differences
+## Snapshots, Not Differences (Diagram) (cont.)
 
 ![snapshots_not_differences_2](svg/courses/git/git/01_introduction/snapshots_not_differences_2.svg)
 
