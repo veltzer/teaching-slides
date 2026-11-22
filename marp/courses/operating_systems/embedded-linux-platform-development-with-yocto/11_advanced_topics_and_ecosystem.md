@@ -830,9 +830,9 @@ Resources:
 ## Community Resources
 
 Mailing lists:
-- yocto@lists.yoctoproject.org
-- openembedded-core@lists.openembedded.org
-- meta-openembedded@lists.openembedded.org
+- <yocto@lists.yoctoproject.org>
+- <openembedded-core@lists.openembedded.org>
+- <meta-openembedded@lists.openembedded.org>
 
 IRC channels:
 - #yocto on libera.chat

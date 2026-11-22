@@ -99,7 +99,7 @@ DNS stores various types of records, each serving a different purpose.
 |-------------|---------|---------|
 | A | IPv4 address | example.com → 93.184.216.34 |
 | AAAA | IPv6 address | example.com → 2606:2800:220:1:... |
-| CNAME | Canonical name (alias) | www.example.com → example.com |
+| CNAME | Canonical name (alias) | <https://www.example.com> → example.com |
 | MX | Mail exchange | example.com → mail.example.com |
 
 ---
@@ -702,9 +702,9 @@ Traditional DNS queries are sent in plaintext over UDP port 53, allowing eavesdr
 
 | Provider | DoH URL | DoT Server |
 |----------|---------|------------|
-| Google | https://dns.google/dns-query | dns.google |
-| Cloudflare | https://cloudflare-dns.com/dns-query | 1dot1dot1dot1.cloudflare-dns.com |
-| Quad9 | https://dns.quad9.net/dns-query | dns.quad9.net |
+| Google | <https://dns.google/dns-query> | dns.google |
+| Cloudflare | <https://cloudflare-dns.com/dns-query> | 1dot1dot1dot1.cloudflare-dns.com |
+| Quad9 | <https://dns.quad9.net/dns-query> | dns.quad9.net |
 
 ```bash
 # Test DoH with curl

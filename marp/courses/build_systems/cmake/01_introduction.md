@@ -215,7 +215,7 @@ Generators
 - CMake is developed and maintained by **Kitware**
 - Open-source under a permissive BSD license
 - Active community on Discourse, GitLab, and Stack Overflow
-- Documentation at https://cmake.org/documentation/
+- Documentation at <https://cmake.org/documentation/>
 
 ---
 
@@ -257,7 +257,7 @@ Generators
 - Web-based dashboard for collecting test results
 - Shows build/test/coverage history over time
 - Supports continuous, nightly, and experimental builds
-- Hosted at https://my.cdash.org or self-hosted
+- Hosted at <https://my.cdash.org> or self-hosted
 
 ---
 
@@ -276,7 +276,7 @@ On macOS:
 brew install cmake
 ```
 
-On Windows: download from https://cmake.org/download/
+On Windows: download from <https://cmake.org/download/>
 
 ---
 

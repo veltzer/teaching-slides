@@ -51,7 +51,7 @@ brew install git
 ```
 
 ### Windows
-- Download from https://git-scm.com
+- Download from <https://git-scm.com>
 - Or use Git Bash / WSL
 
 ---
@@ -747,7 +747,7 @@ venv/
 .DS_Store
 ```
 
-### Find more at: https://github.com/github/gitignore
+### Find more at: <https://github.com/github/gitignore>
 
 ---
 

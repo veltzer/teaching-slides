@@ -209,7 +209,7 @@ audience:
 - User Data: bootstrap script run at first launch
 - Install packages, configure software
 - Instance Metadata: info about the instance
-- Available at http://169.254.169.254/latest/meta-data/
+- Available at <http://169.254.169.254/latest/meta-data/>
 - Retrieve instance ID, IP, IAM role credentials
 
 ---

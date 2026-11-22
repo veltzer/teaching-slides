@@ -503,7 +503,7 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 - Paying funds criminal operations and encourages more attacks
 - No guarantee of receiving working decryptor (~8% of paying victims do not)
 - OFAC sanctions: paying certain groups (e.g., in North Korea, Russia) may violate US law
-- Check https://www.nomoreransom.org for free decryption tools
+- Check <https://www.nomoreransom.org> for free decryption tools
 - Law enforcement strongly recommends NOT paying
 
 ---

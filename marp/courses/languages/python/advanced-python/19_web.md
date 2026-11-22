@@ -2614,9 +2614,9 @@ jobs:
 ## Further Reading
 - Flask documentation: flask.palletsprojects.com
 - Requests documentation: docs.python-requests.org
-- BeautifulSoup documentation: www.crummy.com/software/BeautifulSoup/bs4/doc/
+- BeautifulSoup documentation: <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>
 - Scrapy documentation: docs.scrapy.org
 - lxml documentation: lxml.de
-- Selenium documentation: www.selenium.dev/documentation/
+- Selenium documentation: <https://www.selenium.dev/documentation/>
 - "Web Scraping with Python" by Ryan Mitchell
 - "Flask Web Development" by Miguel Grinberg

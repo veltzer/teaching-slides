@@ -289,7 +289,7 @@ Always quote strings that could be misinterpreted.
 - Designed to be a minimal configuration file format
 - Easy to read due to obvious semantics
 - Used by Rust (`Cargo.toml`), Python (`pyproject.toml`), Hugo
-- Specification: https://toml.io
+- Specification: <https://toml.io>
 
 ---
 

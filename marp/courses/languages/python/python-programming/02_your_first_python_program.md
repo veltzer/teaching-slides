@@ -47,7 +47,7 @@ python3 --version
 ---
 
 ## Installing Python on Windows
-- Download from https://python.org
+- Download from <https://python.org>
 - Check "Add Python to PATH" during installation
 - Verify in Command Prompt:
 

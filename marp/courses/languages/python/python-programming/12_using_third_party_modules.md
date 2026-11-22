@@ -22,7 +22,7 @@ audience:
 ---
 
 ## PyPI - Python Package Index
-- https://pypi.org
+- <https://pypi.org>
 - The official repository for Python packages
 - Anyone can publish packages
 - Packages have version numbers, documentation, and metadata

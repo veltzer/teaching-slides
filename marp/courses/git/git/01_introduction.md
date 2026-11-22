@@ -567,13 +567,13 @@ The rest of the course dives into:
 ## Resources
 
 1. **Official Documentation**
-    - https://git-scm.com/doc
+    - <https://git-scm.com/doc>
 1. **Pro Git Book** (free online)
-    - https://git-scm.com/book
+    - <https://git-scm.com/book>
 1. **Interactive Tutorials**
-    - https://learngitbranching.js.org
+    - <https://learngitbranching.js.org>
 1. **Git Cheat Sheet**
-    - https://education.github.com/git-cheat-sheet-education.pdf
+    - <https://education.github.com/git-cheat-sheet-education.pdf>
 
 ---
 

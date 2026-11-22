@@ -1663,10 +1663,10 @@ tox
 ## Resources
 
 ## Further Learning
-- Python Debugging: https://docs.python.org/3/library/pdb.html
-- mypy Type Checking: https://mypy.readthedocs.io/
-- pytest Documentation: https://docs.pytest.org/
-- unittest Documentation: https://docs.python.org/3/library/unittest.html
-- coverage.py: https://coverage.readthedocs.io/
-- Black: https://black.readthedocs.io/
+- Python Debugging: <https://docs.python.org/3/library/pdb.html>
+- mypy Type Checking: <https://mypy.readthedocs.io/>
+- pytest Documentation: <https://docs.pytest.org/>
+- unittest Documentation: <https://docs.python.org/3/library/unittest.html>
+- coverage.py: <https://coverage.readthedocs.io/>
+- Black: <https://black.readthedocs.io/>
 - Python Testing with pytest (Book by Brian Okken)

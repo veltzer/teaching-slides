@@ -5,7 +5,7 @@
 
 description: Slides for my teaching
 
-project website: https://veltzer.github.io/teaching-slides
+project website: <https://veltzer.github.io/teaching-slides>
 
 author: Mark Veltzer
 

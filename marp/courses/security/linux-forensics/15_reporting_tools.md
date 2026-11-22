@@ -766,10 +766,10 @@ Required Deliverables:
 - "Digital Forensics with Kali Linux" by Shashank Mishra
 
 ### Online Resources
-- SANS DFIR: https://www.sans.org/digital-forensics-incident-response/
-- Volatility Foundation: https://www.volatilityfoundation.org/
-- Sleuth Kit: https://www.sleuthkit.org/
-- NIST CFTT: https://www.nist.gov/itl/ssd/software-quality-group
+- SANS DFIR: <https://www.sans.org/digital-forensics-incident-response/>
+- Volatility Foundation: <https://www.volatilityfoundation.org/>
+- Sleuth Kit: <https://www.sleuthkit.org/>
+- NIST CFTT: <https://www.nist.gov/itl/ssd/software-quality-group>
 
 ---
 

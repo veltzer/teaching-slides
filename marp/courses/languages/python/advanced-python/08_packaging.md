@@ -986,7 +986,7 @@ print(result)
 
 ## Documentation
 
-Full documentation is available at https://mypackage.readthedocs.io
+Full documentation is available at <https://mypackage.readthedocs.io>
 
 ## License
 
@@ -1230,6 +1230,6 @@ twine upload dist/*
 - Python Packaging User Guide: packaging.python.org
 - Setuptools Documentation: setuptools.pypa.io
 - Python Packaging Authority (PyPA): pypa.io
-- Python Enhancement Proposals (PEPs): www.python.org/dev/peps/
+- Python Enhancement Proposals (PEPs): <https://www.python.org/dev/peps/>
 - "How to Package Your Python Code" (Real Python)
 - "Packaging a python library" (PyOpenSci)

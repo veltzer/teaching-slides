@@ -114,7 +114,7 @@ docker run -d --name rabbit \
 
 ## The Management UI
 
-- Web UI at http://host:15672 (default user: guest/guest, localhost only)
+- Web UI at <http://host:15672> (default user: guest/guest, localhost only)
 - Inspect connections, channels, exchanges, queues, bindings
 - Publish and consume messages manually
 - Monitor: messages/second, memory, disk
