@@ -59,12 +59,12 @@ audience:
 
 ## TCP vs UDP: When to Use Which
 
-### Use TCP when:
+### Use TCP when
 - Data must arrive completely and in order (files, web pages, APIs)
 - You need flow control and congestion control
 - Example: HTTP, SSH, database connections, email (SMTP)
 
-### Use UDP when:
+### Use UDP when
 - Speed matters more than reliability (real-time audio/video)
 - You can tolerate some packet loss
 - You need multicast or broadcast

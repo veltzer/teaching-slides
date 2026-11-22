@@ -467,7 +467,7 @@ echo "Layer 2: $LAYER2"
 
 ## Exercise: Hash and Encoding Practice
 
-### Tasks:
+### Tasks
 1. Compute MD5, SHA-1, and SHA-256 of a test file
 1. Verify hash integrity after copying a file
 1. Decode a base64-encoded suspicious string

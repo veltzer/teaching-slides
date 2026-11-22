@@ -549,7 +549,7 @@ VERIFICATION:
 
 ## Exercise: Drive Acquisition Lab
 
-### Tasks:
+### Tasks
 1. Set up software write blocking on a test device
 1. Create a raw `dd` image with hash verification
 1. Create an E01 image using available tools

@@ -629,7 +629,7 @@ forensic_note() {
 
 ## Exercise: Report Writing
 
-### Tasks:
+### Tasks
 1. Write an evidence identification section for a sample case
 1. Document the chain of custody for a hard drive
 1. Write three findings with evidence references

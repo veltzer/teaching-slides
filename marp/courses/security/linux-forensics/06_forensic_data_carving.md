@@ -482,7 +482,7 @@ echo "Survey complete: $OUTPUT"
 
 ## Exercise: Data Carving Lab
 
-### Tasks:
+### Tasks
 1. Create a test image with various file types
 1. Delete some files and carve them back
 1. Use `foremost` to recover JPEG and PDF files

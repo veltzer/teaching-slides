@@ -81,7 +81,7 @@ audience:
 
 ---
 
-## Mintlify, Readme.com, etc.
+## Mintlify, Readme.com and others
 
 - Hosted docs platforms
 - OpenAPI in; pretty docs out

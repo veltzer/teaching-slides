@@ -432,7 +432,7 @@ git log --oneline --decorate
 git log --follow file.txt
 ```
 
-### Output example:
+### Output example
 ```output
 a3d8f2c - John Doe, 2 hours ago : Add login feature
 b7c9e1a - Jane Smith, 5 hours ago : Fix database connection
@@ -669,7 +669,7 @@ git lg      # Pretty log output
 touch .gitignore
 ```
 
-### `.gitignore` patterns:
+### `.gitignore` patterns
 
 ```gitignore
 # Ignore all .log files
@@ -772,7 +772,7 @@ echo "!.gitignore" >> empty_dir/.gitignore
 
 ## File Attributes
 
-### `.gitattributes` file:
+### `.gitattributes` file
 
 ```gitattributes
 # Set default behavior

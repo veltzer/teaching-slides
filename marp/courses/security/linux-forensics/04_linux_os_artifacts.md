@@ -864,7 +864,7 @@ ls -la /evidence/carved/zip/
 
 ## Exercise: OS Artifacts Collection
 
-### Tasks:
+### Tasks
 1. Collect all shell histories from the system
 1. Analyze authentication logs for suspicious activity
 1. Check for unusual SUID/SGID files

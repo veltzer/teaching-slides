@@ -116,7 +116,7 @@ gcc source.o helper.o -o program
 
 ## Essential GCC Options
 
-## Compilation Flags:
+## Compilation Flags
 
 ```bash
 # Optimization levels
@@ -135,7 +135,7 @@ gcc -O2 program.c -o program
 
 ## Warning Flags
 
-## Catch More Bugs:
+## Catch More Bugs
 
 ```bash
 # Essential warnings
@@ -158,7 +158,7 @@ gcc -Wall -Wextra -Werror -O2 source.c
 
 ## Debug Options
 
-## Debugging Support:
+## Debugging Support
 
 ```bash
 # Debug symbols
@@ -179,7 +179,7 @@ gcc -Wall -Wextra -Werror -O2 source.c
 
 ## Architecture Options
 
-## Target Specific Code:
+## Target Specific Code
 
 ```bash
 # Architecture
@@ -253,7 +253,7 @@ clean:
 
 ## Make Variables
 
-## Automatic Variables:
+## Automatic Variables
 
 ```makefile
 # $@ - Target name
@@ -329,7 +329,7 @@ clean:
 
 ## Make Dependencies
 
-## Automatic Dependency Generation:
+## Automatic Dependency Generation
 
 ```makefile
 # Generate .d files with dependencies
@@ -348,7 +348,7 @@ CFLAGS += -MMD -MP
 
 ## Building Applications
 
-## Simple Application:
+## Simple Application
 
 ```bash
 # Single file
@@ -374,7 +374,7 @@ gcc -static -o program main.c
 
 ## Creating Static Libraries
 
-## Archive (.a) Files:
+## Archive (.a) Files
 
 ```bash
 # Compile object files
@@ -398,7 +398,7 @@ gcc main.c -L. -lmylib -o program
 
 ## Creating Shared Libraries
 
-## Dynamic (.so) Files:
+## Dynamic (.so) Files
 
 ```bash
 # Compile with PIC
@@ -421,7 +421,7 @@ ln -s libmylib.so.1 libmylib.so
 
 ## Library Versioning
 
-## SONAME Convention:
+## SONAME Convention
 
 ```bash
 libname.so.MAJOR.MINOR.PATCH
@@ -448,7 +448,7 @@ gcc -shared -Wl,--version-script=version.map ...
 
 ## Finding Libraries at Runtime
 
-## Library Search Path:
+## Library Search Path
 
 ```bash
 # 1. RPATH (compiled in)
@@ -472,7 +472,7 @@ sudo ldconfig
 
 ## Dynamic Linker
 
-## Runtime Linking:
+## Runtime Linking
 
 ```bash
 # View dependencies
@@ -499,7 +499,7 @@ LD_PRELOAD=/path/to/lib.so ./program
 
 ## Symbol Visibility
 
-## Controlling Exports:
+## Controlling Exports
 
 ```c
 // Default visibility
@@ -606,7 +606,7 @@ default program
 
 ## Package Config (pkg-config)
 
-## Finding Libraries:
+## Finding Libraries
 
 ```bash
 # Check if library exists
@@ -647,7 +647,7 @@ Cflags: -I${includedir}
 
 ## Debugging Tools
 
-## Essential Debugging:
+## Essential Debugging
 
 ```bash
 # GDB - GNU Debugger
@@ -712,7 +712,7 @@ gcc -fsanitize=address -g program.c
 
 ## Best Practices
 
-## Code Organization:
+## Code Organization
 
 ```tree
 project/
@@ -830,7 +830,7 @@ jobs:
 
 ## Summary
 
-## Key Takeaways:
+## Key Takeaways
 
 - **GCC** is more than a compiler
 - **Make** automates builds efficiently

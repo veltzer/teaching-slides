@@ -62,7 +62,7 @@ audience:
 
 ---
 
-## A Tool Is Not...
+## A Tool Is Not…
 
 - **Not** something the model runs itself — *your* runtime executes it
 - **Not** baked into the weights — it is supplied at request time

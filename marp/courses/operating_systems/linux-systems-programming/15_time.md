@@ -29,7 +29,7 @@ audience:
 
 ## What is Time in Computing?
 
-## Multiple Concepts:
+## Multiple Concepts
 
 - **Wall Clock Time** - Real-world time (can change)
 - **Monotonic Time** - Always increases (never jumps)
@@ -1389,7 +1389,7 @@ cat /sys/devices/system/clocksource/clocksource0/available_clocksource
 
 ## Summary
 
-## Key Takeaways:
+## Key Takeaways
 
 - **Multiple clocks** serve different purposes
 - **vDSO** makes time access fast (~25ns)

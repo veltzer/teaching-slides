@@ -35,7 +35,7 @@ audience:
 
 ## What are Threads?
 
-## Definition:
+## Definition
 - **Lightweight processes** sharing memory
 - **Parallel execution** within process
 - **Shared address space**
@@ -281,7 +281,7 @@ void recursive_function(int depth) {
 
 ## How Futexes Work
 
-## Fast Userspace Mutexes:
+## Fast Userspace Mutexes
 
 ```c
 // Simplified futex operation (kernel interface)
@@ -776,7 +776,7 @@ void *worker_thread(void *arg) {
 
 ## Thread Safety
 
-## Making Code Thread-Safe:
+## Making Code Thread-Safe
 
 ```c
 // 1. Mutex protection
@@ -923,7 +923,7 @@ htop  # Press H to show threads
 
 ## Threads vs Processes Decision
 
-## Use Threads When:
+## Use Threads When
 - Need shared memory
 - Frequent communication
 - Low creation overhead
@@ -933,13 +933,13 @@ htop  # Press H to show threads
 
 ## Threads vs Processes Decision (cont.)
 
-## Use Processes When:
+## Use Processes When
 - Need isolation
 - Fault tolerance required
 - Different privileges
 - Distributed system
 
-## Hybrid Approach:
+## Hybrid Approach
 - Multiple processes with thread pools
 - Best of both worlds
 
@@ -947,7 +947,7 @@ htop  # Press H to show threads
 
 ## Summary
 
-## Key Takeaways:
+## Key Takeaways
 
 - **Threads** share memory within process
 - **pthread** library for POSIX threads

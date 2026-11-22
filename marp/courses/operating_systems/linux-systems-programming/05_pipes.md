@@ -29,7 +29,7 @@ audience:
 
 ## What is a Pipe?
 
-## Definition:
+## Definition
 - **Unidirectional** data channel
 - **Byte stream** interface
 - **In-memory** buffer
@@ -45,7 +45,7 @@ ls | grep txt | wc -l
 
 ## Pipe Characteristics
 
-## Properties:
+## Properties
 
 1. **Unidirectional** - Data flows one way
 1. **Byte-oriented** - No message boundaries
@@ -464,7 +464,7 @@ unlink("/tmp/myfifo");
 
 ## FIFO Characteristics
 
-## Named Pipes:
+## Named Pipes
 
 1. **Exist in filesystem** - Have a path
 1. **Survive process** - Persistent
@@ -508,7 +508,7 @@ if (fd == -1 && errno == ENXIO) {
 
 ## FIFO Use Cases
 
-## Common Applications:
+## Common Applications
 
 1. **Client-Server** on same machine
 1. **Command line** data passing
@@ -544,7 +544,7 @@ if (fd == -1 && errno == ENXIO) {
 
 ## Pipe Limitations
 
-## Issues:
+## Issues
 
 1. **Unidirectional** - Need two for duplex
 1. **Related processes** - Or use FIFO
@@ -557,7 +557,7 @@ if (fd == -1 && errno == ENXIO) {
 
 ## Pipe Limitations (cont.)
 
-## Alternatives:
+## Alternatives
 - **Sockets** - Network, bidirectional
 - **Message queues** - Boundaries
 - **Shared memory** - Faster
@@ -818,7 +818,7 @@ if (fork() == 0) {
 
 ## Summary
 
-## Key Takeaways:
+## Key Takeaways
 
 - **Pipes** enable IPC between related processes
 - **pipe()** creates anonymous pipe

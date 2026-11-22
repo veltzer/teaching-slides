@@ -47,7 +47,7 @@ audience:
 
 ## Memory Segments Explained
 
-## Segments:
+## Segments
 
 1. **Text** - Executable code, read-only
 1. **Data** - Initialized globals/statics
@@ -109,7 +109,7 @@ void free(void *ptr);
 
 ## malloc() Implementation
 
-## glibc malloc (ptmalloc2):
+## glibc malloc (ptmalloc2)
 
 1. **Small requests** (<= 512 bytes)
     - Fast bins
@@ -127,7 +127,7 @@ void free(void *ptr);
 
 ## malloc() Problems
 
-## Issues:
+## Issues
 
 1. **Fragmentation** - Wasted space
 1. **Overhead** - Metadata per chunk
@@ -472,7 +472,7 @@ obstack_free(&mystack, NULL);
 
 ## Obstack Use Cases
 
-## When to Use:
+## When to Use
 
 1. **Temporary allocations** in phases
 1. **Compiler/parser** symbol tables
@@ -483,7 +483,7 @@ obstack_free(&mystack, NULL);
 
 ## Obstack Use Cases (cont.)
 
-## Benefits:
+## Benefits
 - Fast allocation
 - Easy bulk free
 - No fragmentation
@@ -901,7 +901,7 @@ void arena_destroy(Arena *arena) {
 
 ## Summary
 
-## Key Takeaways:
+## Key Takeaways
 
 - **Memory layout** understanding is crucial
 - **malloc()** good for general use

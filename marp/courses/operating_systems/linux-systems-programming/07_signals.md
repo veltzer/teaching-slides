@@ -35,7 +35,7 @@ audience:
 
 ## What are Signals?
 
-## Definition:
+## Definition
 - **Software interrupts** to processes
 - **Asynchronous notifications** of events
 - **IPC mechanism** between processes
@@ -48,7 +48,7 @@ Like hardware interrupts but for processes!
 
 ## Why Signals?
 
-## Use Cases:
+## Use Cases
 
 1. **Process control** - Stop, continue, terminate
 1. **Error notification** - Segfault, illegal instruction
@@ -140,7 +140,7 @@ int main() {
 
 ## Problems with signal()
 
-## Issues:
+## Issues
 
 1. **Unreliable** on old systems
 1. **Race conditions**
@@ -148,7 +148,7 @@ int main() {
 1. **Handler reset** on some systems
 1. **No signal masking** during handler
 
-## Solution: Use sigaction()!
+## Solution: Use sigaction()
 
 ---
 
@@ -237,7 +237,7 @@ sigpending(&pending);
 
 ## Signal-Safe Functions
 
-## Async-Signal-Safe Functions:
+## Async-Signal-Safe Functions
 
 ```c
 // SAFE in signal handlers:
@@ -349,7 +349,7 @@ int main() {
 
 ## How Signals are Implemented
 
-## Kernel Implementation:
+## Kernel Implementation
 
 1. **Signal generation**
     - Set bit in target's pending mask
@@ -808,7 +808,7 @@ if (pid > 0) {
 
 ## Signal Safety Rules
 
-## Best Practices:
+## Best Practices
 
 1. **Keep handlers simple**
     - Set flags only
@@ -861,7 +861,7 @@ int setup_signal_handling() {
 
 ## Signal Handling in Real-Time Linux
 
-## RT Considerations:
+## RT Considerations
 
 ```c
 // Real-time systems need predictable signal handling
@@ -913,7 +913,7 @@ void handler(int sig) {
 
 ## Signal Use Cases
 
-## Common Applications:
+## Common Applications
 
 1. **Daemon reload** - SIGHUP for config
 1. **Graceful shutdown** - SIGTERM/SIGINT
@@ -979,7 +979,7 @@ while (1) {
 
 ## Summary
 
-## Key Takeaways:
+## Key Takeaways
 
 - **Signals** are asynchronous notifications
 - **Safety** is critical in handlers

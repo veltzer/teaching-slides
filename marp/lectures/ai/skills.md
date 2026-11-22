@@ -62,7 +62,7 @@ audience:
 
 ---
 
-## A Skill Is Not...
+## A Skill Is Not…
 
 - **Not** training or fine-tuning — the weights never change
 - **Not** a prompt you paste every time — it loads itself

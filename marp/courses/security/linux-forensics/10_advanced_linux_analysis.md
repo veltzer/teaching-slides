@@ -578,7 +578,7 @@ rkhunter --check
 
 ## Exercise: Advanced Analysis Lab
 
-### Tasks:
+### Tasks
 1. Use `strace` to trace a sample program's behavior
 1. Use `ltrace` to identify library calls
 1. Analyze a binary with `strings` and `readelf`

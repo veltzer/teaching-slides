@@ -33,7 +33,7 @@ Declarative Macros, Procedural Macros, and Metaprogramming
 
 ---
 
-## Basic macro_rules!
+## Basic `macro_rules!`
 
 ```rust
 macro_rules! say_hello {

@@ -630,7 +630,7 @@ shred -vfz -n 3 sensitive_file.txt
 
 ## Exercise: Hardware Identification Lab
 
-### Tasks:
+### Tasks
 1. List all block devices and their properties
 1. Identify the partition table type for each disk
 1. Record serial numbers of all connected drives
@@ -904,7 +904,7 @@ file /home/.ecryptfs/*/\.Private/*
 
 ## Exercise: Advanced Hardware Lab
 
-### Tasks:
+### Tasks
 1. Identify all storage devices including NVMe and USB
 1. Check for HPA/DCO on available drives
 1. Review USB connection history from system logs

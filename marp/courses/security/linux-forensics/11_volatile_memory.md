@@ -439,7 +439,7 @@ Evidence Timeline from Memory Analysis:
 
 ## Exercise: Volatile Memory Lab
 
-### Tasks:
+### Tasks
 1. Capture memory using `LiME`
 1. Analyze processes with Volatility
 1. Extract bash history from memory
@@ -684,7 +684,7 @@ cat /proc/iomem
 
 ## Exercise: Comprehensive Memory Lab
 
-### Tasks:
+### Tasks
 1. Capture memory using LiME
 1. List all processes and identify suspicious ones
 1. Extract bash history from all shells

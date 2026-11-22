@@ -28,14 +28,14 @@ audience:
 
 ## What is a Protected Operating System?
 
-## Definition:
+## Definition
 An OS that **isolates** and **controls** access between:
 - User processes
 - System resources
 - Hardware devices
 - Memory regions
 
-## Goal:
+## Goal
 **Prevent** programs from interfering with each other or the system
 
 ---
@@ -80,7 +80,7 @@ Without protection: DOS, early Windows, embedded systems
 
 ## How Privilege Works
 
-## CPU Privilege Checking:
+## CPU Privilege Checking
 
 ```c
 // Every instruction checked by CPU
@@ -97,7 +97,7 @@ if (current_privilege_level > required_privilege) {
 
 ---
 
-## Stored in CS register (Code Segment):
+## Stored in CS register (Code Segment)
 
 ![stored_in_cs_register_code_segment](svg/courses/operating_systems/linux-systems-programming/02_os_theory/stored_in_cs_register_code_segment.svg)
 
@@ -111,7 +111,7 @@ if (current_privilege_level > required_privilege) {
 
 ## Memory Protection Overview
 
-## Key Concepts:
+## Key Concepts
 
 1. **Virtual Memory**: Each process sees its own address space
 1. **Page Tables**: Map virtual to physical addresses
@@ -127,13 +127,13 @@ if (current_privilege_level > required_privilege) {
 
 ---
 
-## 4-Level Paging (x86_64):
+## 4-Level Paging (x86_64)
 
 ![4_level_paging_x8664](svg/courses/operating_systems/linux-systems-programming/02_os_theory/4_level_paging_x8664.svg)
 
 ---
 
-## Protection Bits:
+## Protection Bits
 
 ![protection_bits](svg/courses/operating_systems/linux-systems-programming/02_os_theory/protection_bits.svg)
 
@@ -162,7 +162,7 @@ void setup_page_table(struct process *p) {
 
 ## Memory Protection Violations
 
-## Common Faults:
+## Common Faults
 
 1. **Segmentation Fault**
    ```c
@@ -185,7 +185,7 @@ void setup_page_table(struct process *p) {
 
 ## How Memory Protection Works
 
-## Hardware + OS Cooperation:
+## Hardware + OS Cooperation
 
 1. **CPU MMU** (Memory Management Unit)
     - Translates virtual → physical
@@ -209,10 +209,10 @@ void setup_page_table(struct process *p) {
 
 ## System Calls - The Gateway
 
-## Definition:
+## Definition
 **Controlled entry points** from user space to kernel space
 
-## Purpose:
+## Purpose
 - Request kernel services
 - Access hardware
 - Manage resources
@@ -228,7 +228,7 @@ void setup_page_table(struct process *p) {
 
 ## System Call Implementation (x86_64)
 
-## Modern Fast System Call:
+## Modern Fast System Call
 
 ```asm
 ; User space (Ring 3)
@@ -250,7 +250,7 @@ syscall           ; Fast system call
 
 ## System Call Numbers
 
-## Common Linux System Calls:
+## Common Linux System Calls
 
 ```c
 // arch/x86/include/asm/unistd_64.h
@@ -272,7 +272,7 @@ syscall           ; Fast system call
 
 ## System Call Performance
 
-## Overhead Comparison:
+## Overhead Comparison
 
 | Method | Cycles | Use Case |
 |--------|--------|----------|
@@ -285,7 +285,7 @@ syscall           ; Fast system call
 
 ## System Call Performance (cont.)
 
-## Optimization Strategies:
+## Optimization Strategies
 - Batch operations
 - Use vDSO for some calls
 - Minimize context switches
@@ -294,7 +294,7 @@ syscall           ; Fast system call
 
 ## vDSO - Virtual Dynamic Shared Object
 
-## System Calls Without Kernel Entry:
+## System Calls Without Kernel Entry
 
 ```c
 // Some "system calls" don't enter kernel
@@ -314,7 +314,7 @@ getcpu()        // CPU and NUMA node
 
 ## System Call Tracing
 
-## Tools for Debugging:
+## Tools for Debugging
 
 ```bash
 # strace - trace system calls
@@ -334,7 +334,7 @@ bpftrace -e 'syscall:sys_enter_* { @[probe] = count(); }'
 
 ---
 
-## Hardware/Software Interrupts:
+## Hardware/Software Interrupts
 
 ![hardware_software_interrupts](svg/courses/operating_systems/linux-systems-programming/02_os_theory/hardware_software_interrupts.svg)
 
@@ -342,7 +342,7 @@ bpftrace -e 'syscall:sys_enter_* { @[probe] = count(); }'
 
 ## Context Switching
 
-## Process State During Switch:
+## Process State During Switch
 
 ```c
 struct context {
@@ -366,7 +366,7 @@ struct context {
 
 ## Protection Mechanisms Summary
 
-## Hardware Features:
+## Hardware Features
 
 1. **Privilege Rings**: Isolate kernel/user
 1. **Virtual Memory**: Isolate processes
@@ -378,7 +378,7 @@ struct context {
 
 ## Protection Mechanisms Summary (cont.)
 
-## Software Features:
+## Software Features
 1. **ASLR**: Randomize memory layout
 1. **Stack Canaries**: Detect overflow
 1. **SELinux/AppArmor**: Mandatory access control
@@ -387,7 +387,7 @@ struct context {
 
 ## Modern Protection Extensions
 
-## Intel CET (Control-flow Enforcement):
+## Intel CET (Control-flow Enforcement)
 
 ```c
 // Shadow Stack - Prevents ROP attacks
@@ -398,13 +398,13 @@ ret             // Verify shadow stack matches
 jmp rax         // Must land on ENDBR instruction
 ```
 
-## Intel MPX (Memory Protection Extensions):
+## Intel MPX (Memory Protection Extensions)
 - Bounds checking in hardware
 - Deprecated but influential
 
 ---
 
-## Memory Layout:
+## Memory Layout
 
 ![memory_layout](svg/courses/operating_systems/linux-systems-programming/02_os_theory/memory_layout.svg)
 
@@ -412,14 +412,14 @@ jmp rax         // Must land on ENDBR instruction
 
 ## Protection Domain Transitions
 
-## Types of Transitions:
+## Types of Transitions
 
 1. **System Calls**: User → Kernel (voluntary)
 1. **Interrupts**: Any → Kernel (hardware)
 1. **Exceptions**: Any → Kernel (faults)
 1. **Signals**: Kernel → User (async)
 
-## Cost:
+## Cost
 - Save/restore context
 - TLB flush (sometimes)
 - Cache pollution
@@ -428,7 +428,7 @@ jmp rax         // Must land on ENDBR instruction
 
 ## Security Implications
 
-## Attack Vectors and Mitigations:
+## Attack Vectors and Mitigations
 
 | Attack | Protection |
 |--------|------------|
@@ -442,7 +442,7 @@ jmp rax         // Must land on ENDBR instruction
 
 ## Meltdown and Spectre
 
-## CPU Vulnerabilities:
+## CPU Vulnerabilities
 
 ```c
 // Meltdown - Read kernel memory from user space
@@ -461,7 +461,7 @@ jmp rax         // Must land on ENDBR instruction
 
 ## Container Security
 
-## Namespaces and cgroups:
+## Namespaces and cgroups
 
 ```c
 // Namespaces - Isolation
@@ -482,7 +482,7 @@ blkio.weight
 
 ## Virtualization and Protection
 
-## Hardware Virtualization Extensions:
+## Hardware Virtualization Extensions
 
 1. **Intel VT-x / AMD-V**
     - VMX root/non-root modes
@@ -497,7 +497,7 @@ blkio.weight
 
 ## System Call Best Practices
 
-## For Developers:
+## For Developers
 
 1. **Minimize syscalls** - Batch operations
 1. **Use appropriate APIs** - libc vs direct
@@ -510,7 +510,7 @@ blkio.weight
 
 ## Debugging Protection Issues
 
-## Common Tools:
+## Common Tools
 
 ```bash
 # Check process memory map
@@ -533,7 +533,7 @@ aa-status
 
 ## Future of OS Protection
 
-## Emerging Technologies:
+## Emerging Technologies
 
 1. **Hardware Security**
     - Intel TDX (Trust Domain Extensions)
@@ -564,7 +564,7 @@ aa-status
 
 ## Summary
 
-## Protected OS Components:
+## Protected OS Components
 
 - **CPU Rings**: Hardware privilege levels
 - **MMU**: Memory protection unit

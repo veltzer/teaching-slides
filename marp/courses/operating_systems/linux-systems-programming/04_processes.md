@@ -41,7 +41,7 @@ audience:
 
 ## What is a Process?
 
-## Definition:
+## Definition
 - **Running instance** of a program
 - Own **address space** and resources
 - **PID** (Process ID) identifier
@@ -102,7 +102,7 @@ cat /proc/$$/stat
 
 ## /sbin/init - The First Process
 
-## PID 1 Special Properties:
+## PID 1 Special Properties
 
 1. **Started by kernel** at boot
 1. **Parent of all** processes
@@ -122,7 +122,7 @@ cat /proc/$$/stat
 
 ## Systemd Overview
 
-## Modern Init System:
+## Modern Init System
 
 - **Parallel startup** - Fast boot
 - **Dependency management** - Correct order
@@ -230,7 +230,7 @@ systemctl daemon-reload
 
 ## Container Initialization Problem
 
-## The PID 1 Problem in Containers:
+## The PID 1 Problem in Containers
 
 ```dockerfile
 # BAD: Application as PID 1
@@ -252,7 +252,7 @@ CMD ["python", "app.py"]
 
 ## Container Init Solutions
 
-## Options:
+## Options
 
 1. **tini** - Minimal init (1MB)
 1. **dumb-init** - Python-based
@@ -335,7 +335,7 @@ int main() {
 
 ## Copy-on-Write (COW)
 
-## Memory Efficiency:
+## Memory Efficiency
 
 ```c
 int global = 100;
@@ -358,7 +358,7 @@ if (pid == 0) {
 
 ## What Gets Inherited
 
-## Inherited from Parent:
+## Inherited from Parent
 - Memory (text, data, heap, stack)
 - Open file descriptors
 - Signal handlers
@@ -373,7 +373,7 @@ if (pid == 0) {
 
 ## What Gets Inherited (cont.)
 
-## Unique in Child:
+## Unique in Child
 - Process ID (PID)
 - Parent PID (PPID)
 - File locks
@@ -584,7 +584,7 @@ exit(0);
 
 ## Fork Performance
 
-## vfork() - Optimized Fork:
+## vfork() - Optimized Fork
 
 ```c
 // vfork() shares parent's memory

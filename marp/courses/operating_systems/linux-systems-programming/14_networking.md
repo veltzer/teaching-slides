@@ -35,7 +35,7 @@ audience:
 
 ## What are Sockets?
 
-## Definition:
+## Definition
 - **Endpoints** for communication
 - **File descriptors** in Unix
 - **Bidirectional** data flow

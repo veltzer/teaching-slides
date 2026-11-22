@@ -101,7 +101,7 @@ audience:
 
 ---
 
-## Configuring software that you use:
+## Configuring software that you use
 * Why keeping the default configuration is the best
 * If you can't use the default, change the configuration as little as possible.
 * Make sure your entire team uses the same configuration
@@ -163,7 +163,7 @@ audience:
 
 ---
 
-## Stop using MS-Windows!
+## Stop using MS-Windows
 * Why Linux is better for developers and facilitates all of the above
 * Why using Windows is making your developers bad developers.
 

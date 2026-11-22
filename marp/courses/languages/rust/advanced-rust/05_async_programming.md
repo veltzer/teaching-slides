@@ -689,7 +689,7 @@ async fn main() {
 
 ---
 
-## select! and join!
+## `select!` and `join!`
 
 Combining multiple futures
 

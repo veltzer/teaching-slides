@@ -150,7 +150,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 GRUB_CMDLINE_LINUX=""
 ```
 
-## Update configuration:
+## Update configuration
 ```bash
 # After editing /etc/default/grub
 update-grub
@@ -198,7 +198,7 @@ grub> boot
 
 ## GRUB Rescue Mode
 
-## When normal boot fails:
+## When normal boot fails
 
 ```bash
 grub rescue> set prefix=(hd0,1)/boot/grub
@@ -207,7 +207,7 @@ grub rescue> insmod normal
 grub rescue> normal
 ```
 
-## Common recovery tasks:
+## Common recovery tasks
 - Fix broken configurations
 - Boot from different kernels
 - Pass emergency parameters
@@ -216,7 +216,7 @@ grub rescue> normal
 
 ## Kernel Parameters via GRUB
 
-## Common parameters:
+## Common parameters
 
 ```bash
 # Single user mode
@@ -304,7 +304,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## U-Boot Network Boot
 
-## TFTP Boot Example:
+## TFTP Boot Example
 
 ```bash
 # Set network parameters
@@ -344,7 +344,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## What is Secure Boot?
 
-## Key Concepts:
+## Key Concepts
 - **Cryptographic verification** of boot components
 - **Chain of trust** from hardware to OS
 - **Prevention** of rootkits and bootkits
@@ -354,7 +354,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## What is Secure Boot? (cont.)
 
-## Requirements:
+## Requirements
 - UEFI firmware
 - Signed bootloader
 - Signed kernel
@@ -364,7 +364,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## Secure Boot Keys Hierarchy
 
-## Four Key Databases:
+## Four Key Databases
 
 1. **PK (Platform Key)**
     - Top-level key
@@ -426,7 +426,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## TPM Key Hierarchy
 
-## Key Types:
+## Key Types
 
 1. **EK (Endorsement Key)**
     - Permanent, unique per TPM
@@ -452,7 +452,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## Platform Configuration Registers (PCRs)
 
-## PCR Usage (TPM 2.0 - 24 registers):
+## PCR Usage (TPM 2.0 - 24 registers)
 
 ```misc
 PCR 0:  BIOS/UEFI firmware
@@ -473,7 +473,7 @@ PCR 23: Application specific
 
 ## TPM Operations
 
-## Core Functions:
+## Core Functions
 
 1. **Sealing/Unsealing**
     - Encrypt data to PCR state
@@ -514,7 +514,7 @@ PCR[n] = SHA256(PCR[n] || new_measurement)
 
 ## Linux TPM Tools
 
-## TPM 2.0 Tools:
+## TPM 2.0 Tools
 
 ```bash
 # Install TPM2 tools
@@ -537,7 +537,7 @@ tpm2_createprimary -C e -g sha256 -G rsa
 
 ## Secure Boot + TPM Integration
 
-## Full Verified Boot:
+## Full Verified Boot
 
 1. **UEFI Secure Boot**
     - Verify signatures
@@ -563,7 +563,7 @@ tpm2_createprimary -C e -g sha256 -G rsa
 
 ## Implementing Secure Boot on Linux
 
-## Steps:
+## Steps
 
 ```bash
 # 1. Check Secure Boot status
@@ -582,7 +582,7 @@ hexdump -C module.ko | tail
 
 ---
 
-## GRUB with Secure Boot: Shim Bootloader:
+## GRUB with Secure Boot: Shim Bootloader
 
 - **First-stage bootloader**
 - Signed by Microsoft
@@ -599,7 +599,7 @@ hexdump -C module.ko | tail
 
 ## Debugging Boot Issues
 
-## Common Problems:
+## Common Problems
 
 1. **Secure Boot Violation**
     - Unsigned bootloader/kernel
@@ -625,7 +625,7 @@ hexdump -C module.ko | tail
 
 ## Boot Logs and Diagnostics
 
-## Viewing Boot Information:
+## Viewing Boot Information
 
 ```bash
 # Kernel boot messages
@@ -649,7 +649,7 @@ tpm2_eventlog /sys/kernel/security/tpm0/binary_bios_measurements
 
 ## Performance Optimization
 
-## Boot Speed Improvements:
+## Boot Speed Improvements
 
 1. **Reduce GRUB timeout**
    ```bash
@@ -689,7 +689,7 @@ tpm2_eventlog /sys/kernel/security/tpm0/binary_bios_measurements
 
 ## Summary
 
-## Key Takeaways:
+## Key Takeaways
 
 - **Boot chain** establishes system trust
 - **GRUB** handles desktop/server boots

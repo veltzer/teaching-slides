@@ -691,7 +691,7 @@ Presentation Tips:
 
 ## Exercise: Reporting Lab
 
-### Tasks:
+### Tasks
 1. Create a case in Autopsy with a sample disk image
 1. Tag three findings during analysis
 1. Generate an HTML report from Autopsy
@@ -1048,7 +1048,7 @@ During an Incident:
 
 ## Course Final Exercise
 
-### Scenario:
+### Scenario
 A web server has been compromised. You have:
 - A disk image (`server.dd`)
 - A memory dump (`server.lime`)
@@ -1058,7 +1058,7 @@ A web server has been compromised. You have:
 
 ## Course Final Exercise (cont.)
 
-### Tasks:
+### Tasks
 1. Mount and analyze the disk image
 1. Build a filesystem timeline
 1. Analyze memory for running processes

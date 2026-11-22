@@ -635,7 +635,7 @@ echo "Collection complete: $EVIDENCE"
 
 ## Exercise: Information Collection
 
-### Tasks:
+### Tasks
 1. Run a comprehensive system survey
 1. Identify all network connections and associated processes
 1. Check for persistence mechanisms

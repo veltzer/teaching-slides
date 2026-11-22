@@ -400,7 +400,7 @@ zipdetails archive.zip  # Very detailed
 
 ## Exercise: File Structure Analysis
 
-### Tasks:
+### Tasks
 1. Identify file types by magic numbers (not extensions)
 1. Extract metadata from image and document files
 1. Search a hex dump for specific patterns

@@ -129,7 +129,7 @@ print(greet("Alice", greeting="Hey"))  # Hey, Alice!
 
 ---
 
-## Mutable Default Arguments - Beware!
+## Mutable Default Arguments - Beware
 
 ```python
 # BUG: mutable default is shared across calls

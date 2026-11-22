@@ -76,7 +76,7 @@ command &>> all_output.txt    # bash 4.0+
 
 ---
 
-## Order Matters!
+## Order Matters
 
 ```bash
 # RIGHT: redirect stdout, then stderr to stdout's location

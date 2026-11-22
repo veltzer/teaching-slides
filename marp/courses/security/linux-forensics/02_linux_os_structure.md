@@ -1169,7 +1169,7 @@ zgrep "error" /var/log/syslog.*.gz
 
 ## Exercise: Linux Structure Investigation
 
-### Tasks:
+### Tasks
 1. Map the filesystem structure of the target system
 1. Identify all user accounts and their privileges
 1. List all running services and scheduled tasks

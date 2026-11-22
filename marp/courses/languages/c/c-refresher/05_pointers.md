@@ -102,7 +102,7 @@ printf("%d", *(ptr + 1)); // Outputs: 2
 
 - Pointers can be passed to functions to modify the original data.
 
-### Example:
+### Example
 
 ```c
 void increment(int *p) {
@@ -125,7 +125,7 @@ int main() {
 - Pointers are essential for managing dynamic memory in C.
 - Functions like `malloc`, `calloc`, `realloc`, and `free` manage heap memory.
 
-### Example:
+### Example
 
 ```c
 int *ptr = (int *)malloc(sizeof(int) * 10); // Allocate space for 10 ints
@@ -400,7 +400,7 @@ int main(void) {
 
 ---
 
-## Quiz Time!
+## Quiz Time
 
 1. What does the `&` operator do?
 1. How do you dereference a pointer?

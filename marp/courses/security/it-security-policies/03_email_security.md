@@ -167,7 +167,7 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ---
 
-## If You Already Clicked...
+## If You Already Clicked…
 
 - Do not panic, but act quickly
 - **Disconnect** from the network if instructed by IT

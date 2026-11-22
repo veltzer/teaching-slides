@@ -64,7 +64,7 @@ audience:
 
 ---
 
-## The Context Window Is Not...
+## The Context Window Is Not…
 
 - **Not** long-term memory — it is wiped between sessions
 - **Not** a database — there is no lookup, only one linear read
