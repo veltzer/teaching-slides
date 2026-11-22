@@ -72,6 +72,7 @@ Installation steps for VS Code:
 ## Copilot Core Features
 
 **Inline Suggestions**:
+
 ```python
 # Write a function to calculate compound interest
 def calculate_compound_interest(principal, rate, time, n=12):
@@ -278,6 +279,7 @@ AI sees open tabs and recent edits
 ## Language-Specific Techniques
 
 **Python optimizations**:
+
 ```python
 # Type hints improve suggestions
 def process_items(items: List[Dict[str, Any]]) -> pd.DataFrame:
@@ -285,6 +287,7 @@ def process_items(items: List[Dict[str, Any]]) -> pd.DataFrame:
 ```
 
 **TypeScript advantages**:
+
 ```typescript
 // Interfaces guide AI
 interface UserData {
@@ -301,6 +304,7 @@ interface UserData {
 AI adapts to framework patterns:
 
 **React components**:
+
 ```jsx
 // AI knows React patterns
 const UserCard = ({ user }) => {
@@ -309,6 +313,7 @@ const UserCard = ({ user }) => {
 ```
 
 **Django views**:
+
 ```python
 # AI suggests Django patterns
 class UserViewSet(viewsets.ModelViewSet):

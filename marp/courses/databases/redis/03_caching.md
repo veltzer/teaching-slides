@@ -189,6 +189,7 @@ Cache proactively refreshes before expiration:
 - Balance between freshness and cache hit rate
 
 Commands:
+
 ```bash
 EXPIRE key seconds        # Set TTL in seconds
 EXPIREAT key timestamp    # Set TTL at UNIX timestamp
@@ -204,18 +205,21 @@ PERSIST key               # Remove expiration
 Different ways to set TTL:
 
 1. **With SET command**:
+
 ```bash
 SET key value EX seconds
 SET key value PX milliseconds
 ```
 
 1. **After SET**:
+
 ```bash
 SET key value
 EXPIRE key seconds
 ```
 
 1. **With pattern-based expiry**:
+
 ```bash
 # Expire all session keys after 1 hour
 SCAN 0 MATCH "session:*" COUNT 100

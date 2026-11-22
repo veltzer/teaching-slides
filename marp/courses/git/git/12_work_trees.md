@@ -192,6 +192,7 @@ git worktree add ../duplicate main
 - Exception: detached HEAD state
 
 **Working around restrictions:**
+
 ```bash
 # Create new branch based on existing one
 git worktree add ../main-copy -b main-copy main
@@ -390,6 +391,7 @@ echo "*.local" >> .git/info/exclude
 ## Advanced Worktree Scenarios
 
 **Cross-platform development:**
+
 ```bash
 # Different worktrees for different platforms
 git worktree add ../linux-build -b linux-build
@@ -564,6 +566,7 @@ git worktree add ../recreated branch-name
 - Vim: Works naturally with different directories
 
 **Build system integration:**
+
 ```bash
 # Parallel builds in different worktrees
 cd ../feature-worktree && make build &
@@ -581,6 +584,7 @@ wait  # Wait for both builds
 - Isolated dependency installation
 
 **Script automation:**
+
 ```bash
 #!/bin/bash
 # Create worktree for each active PR
@@ -647,6 +651,7 @@ worktrees/                 # Dedicated worktree directory
 ## Team Workflows with Worktrees (cont.)
 
 **Communication strategies:**
+
 ```bash
 # Document active worktrees
 git worktree list > WORKTREES.md

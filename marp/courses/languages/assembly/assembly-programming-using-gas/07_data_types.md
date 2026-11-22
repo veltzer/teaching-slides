@@ -29,6 +29,7 @@ audience:
 - Quadword (64 bits): -2^63 to 2^63-1 or 0 to 2^64-1
 
 Example:
+
 ```gas
 .data
     byte_val:  .byte  42
@@ -46,6 +47,7 @@ Example:
 - Same bit patterns, different interpretations
 
 Example:
+
 ```gas
     mov $-1, %eax   # EAX = 0xFFFFFFFF (signed)
     mov $0xFFFFFFFF, %ebx  # EBX = 4294967295 (unsigned)
@@ -59,6 +61,7 @@ Example:
 - Double precision (64 bits): ~15 decimal digits precision
 
 Example:
+
 ```gas
 .data
     pi_single: .float  3.14159
@@ -73,6 +76,7 @@ Example:
 - Unicode: Variable-length encoding (UTF-8, UTF-16, UTF-32)
 
 Example:
+
 ```gas
 .data
     ascii_string: .ascii "Hello"
@@ -86,6 +90,7 @@ Example:
 Basic syntax: `mov source, destination`
 
 Examples:
+
 ```gas
     mov $42, %eax          # Immediate to register
     mov %eax, %ebx         # Register to register
@@ -102,6 +107,7 @@ Examples:
 - `movb`, `movw`, `movl`, `movq`: Move specific sizes
 
 Examples:
+
 ```gas
     movzx %al, %eax    # Zero-extend 8-bit to 32-bit
     movsx %ax, %eax    # Sign-extend 16-bit to 32-bit
@@ -115,6 +121,7 @@ Examples:
 `lea` (Load Effective Address) calculates an address without accessing memory.
 
 Example:
+
 ```gas
     lea (%ebx, %ecx, 4), %eax   # EAX = EBX + ECX * 4
 ```
@@ -130,6 +137,7 @@ Useful for:
 `xchg` exchanges the contents of two operands.
 
 Example:
+
 ```gas
     xchg %eax, %ebx   # Swap contents of EAX and EBX
 ```
@@ -146,6 +154,7 @@ Stack operations for saving and retrieving data:
 - `pop`: Retrieves value from stack and increments ESP
 
 Example:
+
 ```gas
     push %eax    # Save EAX on stack
     # ... some operations ...
@@ -161,6 +170,7 @@ Example:
 - Use `.align` directive to ensure proper alignment
 
 Example:
+
 ```gas
 .data
     .align 4
@@ -179,6 +189,7 @@ SIMD (Single Instruction, Multiple Data) instructions for parallel data movement
 - `movdqu`: Move Unaligned Packed Double-Quadword
 
 Example:
+
 ```gas
     movaps %xmm0, %xmm1   # Move 4 floats at once
 ```

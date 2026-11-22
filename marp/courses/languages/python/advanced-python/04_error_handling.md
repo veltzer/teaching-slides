@@ -877,6 +877,7 @@ def api_endpoint(request):
 ## Real-World Example: API Client
 
 ## Complete Error Handling Example: Exception Hierarchy
+
 ```python
 class APIError(Exception):
     """Base exception for API errors."""

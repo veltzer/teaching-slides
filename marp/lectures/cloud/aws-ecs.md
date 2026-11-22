@@ -98,6 +98,7 @@ audience:
 ---
 
 ## Example Task Definition
+
 ```json
 {
   "family": "web-app",

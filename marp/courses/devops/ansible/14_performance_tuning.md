@@ -70,6 +70,7 @@ callback_whitelist = timer, profile_tasks, profile_roles
 [defaults]
 forks = 20   # Default is 5
 ```
+
 ```bash
 # Override per run
 ansible-playbook site.yml -f 50

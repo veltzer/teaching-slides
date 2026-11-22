@@ -131,6 +131,7 @@ dig @9.9.9.9 example.com +short    # Quad9 DNS
 - Email sent to old addresses can be intercepted
 - Subdomains of other sites may still point to the expired domain
 - Existing trust relationships (SSL certificates, OAuth callbacks)
+
 ```bash
 # Tools to find expiring domains
 whois example.com | grep -i "expir"

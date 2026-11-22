@@ -7,11 +7,13 @@
 Operator overloading allows you to define how operators work with user-defined types (classes and structs).
 
 Instead of writing:
+
 ```cpp
 Vector result = vector1.add(vector2);
 ```
 
 You can write:
+
 ```cpp
 Vector result = vector1 + vector2;
 ```
@@ -32,6 +34,7 @@ Vector result = vector1 + vector2;
 Two ways to overload operators:
 
 **Member function:**
+
 ```cpp
 class MyClass {
     ReturnType operator+(const MyClass& other) const;
@@ -39,6 +42,7 @@ class MyClass {
 ```
 
 **Non-member function:**
+
 ```cpp
 ReturnType operator+(const MyClass& left, const MyClass& right);
 ```
@@ -105,6 +109,7 @@ int main() {
 ## Member vs Non-Member Functions
 
 **Member function approach:**
+
 ```cpp
 class Vector {
     Vector operator+(const Vector& other) const;
@@ -114,6 +119,7 @@ class Vector {
 ```
 
 **Non-member function approach:**
+
 ```cpp
 Vector operator+(const Vector& left, const Vector& right);
 // Both operands are parameters
@@ -452,6 +458,7 @@ public:
 ## Common Mistakes
 
 1. **Not returning reference from assignment operators**
+
 ```cpp
 // Wrong:
 MyClass operator=(const MyClass& other);
@@ -461,6 +468,7 @@ MyClass& operator=(const MyClass& other);
 ```
 
 1. **Forgetting const correctness**
+
 ```cpp
 // Wrong:
 bool operator==(MyClass& other);
@@ -474,6 +482,7 @@ bool operator==(const MyClass& other) const;
 ## More Common Mistakes
 
 1. **Not checking for self-assignment**
+
 ```cpp
 MyClass& operator=(const MyClass& other) {
     if (this == &other) return *this;  // Important!
@@ -483,6 +492,7 @@ MyClass& operator=(const MyClass& other) {
 ```
 
 1. **Inconsistent operator relationships**
+
 ```cpp
 // If you implement ==, also implement !=
 // If you implement <, consider implementing >, <=, >=

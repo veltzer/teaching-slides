@@ -24,12 +24,15 @@ audience:
 ## Your First Shell Script: Example
 
 Basic script:
+
 ```bash
 #!/bin/bash
 # My first script
 echo "Hello, World!"
 ```
+
 Running the script:
+
 ```bash
 chmod +x script.sh
 ./script.sh
@@ -77,6 +80,7 @@ exit 0
 ## Variables: Example
 
 Variable examples:
+
 ```bash
 # Assignment
 name="John"
@@ -101,6 +105,7 @@ read -p "Enter name: " user_name
 ## Command Line Arguments: Example
 
 Argument handling:
+
 ```bash
 #!/bin/bash
 echo "Script name: $0"
@@ -147,6 +152,7 @@ let "count--"
 ## Exit Status and Error Handling: Example
 
 Error handling:
+
 ```bash
 #!/bin/bash
 # Check command success
@@ -172,6 +178,7 @@ fi
 ## Expressions and Operators: Example
 
 Examples:
+
 ```bash
 # Arithmetic
 [ $a -eq $b ]  # Equal
@@ -246,6 +253,7 @@ esac
 ## Loops: Example
 
 Examples:
+
 ```bash
 # For loop
 for i in 1 2 3 4 5; do

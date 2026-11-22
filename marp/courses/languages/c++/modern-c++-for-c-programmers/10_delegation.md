@@ -172,6 +172,7 @@ public:
 ## Object Adapter vs Class Adapter
 
 **Object Adapter** (preferred in C++):
+
 ```cpp
 class ObjectAdapter : public Target {
 private:
@@ -185,6 +186,7 @@ public:
 ```
 
 **Class Adapter** (using multiple inheritance):
+
 ```cpp
 class ClassAdapter : public Target, private Adaptee {
 public:
@@ -301,18 +303,21 @@ class PrivateDerived : private Base {
 ## When to Use Each Inheritance Type
 
 **Public Inheritance** - "is-a" relationship:
+
 ```cpp
 class Vehicle {};
 class Car : public Vehicle {};  // Car IS-A Vehicle
 ```
 
 **Protected Inheritance** - rarely used, controlled "is-a":
+
 ```cpp
 class TimerImplementation {};
 class Timer : protected TimerImplementation {};
 ```
 
 **Private Inheritance** - "implemented-in-terms-of":
+
 ```cpp
 class Timer {};
 class Widget : private Timer {  // Widget implemented using Timer

@@ -38,6 +38,7 @@ audience:
 ---
 
 ## Streaming Sources
+
 ```python
 # Kafka source example
 stream = spark.readStream \
@@ -63,6 +64,7 @@ stream = spark.readStream \
 ---
 
 ## Event Time Processing
+
 ```python
 from pyspark.sql.functions import window
 
@@ -80,6 +82,7 @@ windowed = stream.groupBy(
 ---
 
 ## Late Data Handling
+
 ```python
 # Configure watermark
 stream_df = stream_df \
@@ -104,6 +107,7 @@ stream_df = stream_df \
 ---
 
 ## Window Types
+
 ```python
 # Sliding window
 windowed = stream.groupBy(
@@ -114,6 +118,7 @@ windowed = stream.groupBy(
 ---
 
 ## State Management
+
 ```python
 # Maintain running count
 def update_state(key, value, state):
@@ -139,6 +144,7 @@ def update_state(key, value, state):
 ---
 
 ## Output Modes
+
 ```python
 # Complete output mode
 query = stream.writeStream \
@@ -163,6 +169,7 @@ query = stream.writeStream \
 ---
 
 ## Stream-Stream Join
+
 ```python
 # Join two streams
 joined = stream1.join(
@@ -188,6 +195,7 @@ joined = stream1.join(
 ---
 
 ## Trigger Options
+
 ```python
 # Process every 5 minutes
 query = stream.writeStream \
@@ -211,6 +219,7 @@ query = stream.writeStream \
 ---
 
 ## Error Handling
+
 ```python
 def handle_errors(df, epoch_id):
     try:
@@ -227,6 +236,7 @@ def handle_errors(df, epoch_id):
 ---
 
 ## Schema Evolution
+
 ```python
 # Schema enforcement
 stream = spark.readStream \
@@ -237,6 +247,7 @@ stream = spark.readStream \
 ---
 
 ## Custom Sources
+
 ```python
 from pyspark.sql.streaming import Source
 
@@ -261,6 +272,7 @@ class CustomSource(Source):
 ---
 
 ## Kafka Integration
+
 ```python
 # Write to Kafka
 query = stream.writeStream \
@@ -285,6 +297,7 @@ query = stream.writeStream \
 ---
 
 ## Recovery Mechanisms
+
 ```python
 # Checkpoint configuration
 stream.writeStream \
@@ -308,6 +321,7 @@ stream.writeStream \
 ---
 
 ## Advanced Patterns
+
 ```python
 # Streaming aggregation pattern
 def process_stream(batch_df, batch_id):
@@ -331,6 +345,7 @@ def process_stream(batch_df, batch_id):
 ---
 
 ## Metrics Collection
+
 ```python
 # Custom metrics
 def process_metrics(batch_df, epoch_id):
@@ -354,6 +369,7 @@ def process_metrics(batch_df, epoch_id):
 ---
 
 ## Best Practices
+
 ```python
 # Configure proper watermark
 df = df.withWatermark("timestamp", "1 hour")
@@ -377,6 +393,7 @@ df = df.withWatermark("timestamp", "1 hour")
 ---
 
 ## Advanced Features
+
 ```python
 # Arbitrary stateful processing
 def update_state(key, values, state):
@@ -400,6 +417,7 @@ def update_state(key, values, state):
 ---
 
 ## Production Checklist
+
 ```python
 # Essential configurations
 spark.conf.set("spark.streaming.stopGracefullyOnShutdown", "true")

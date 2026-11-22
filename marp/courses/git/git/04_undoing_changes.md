@@ -735,22 +735,26 @@ GIT_SEQUENCE_EDITOR="sed -i 's/pick/reword/g'" \
 ## Common Pitfalls to Avoid
 
 ❌ **Force pushing to main**
+
 ```bash
 git push --force origin main  # NEVER!
 ```
 
 ❌ **Resetting without checking**
+
 ```bash
 git reset --hard  # Check git status first!
 ```
 
 ❌ **Rebasing public branches**
+
 ```bash
 git checkout main
 git rebase feature  # Don't rebase shared branches
 ```
 
 ❌ **Amending pushed commits**
+
 ```bash
 git push
 git commit --amend  # Too late!

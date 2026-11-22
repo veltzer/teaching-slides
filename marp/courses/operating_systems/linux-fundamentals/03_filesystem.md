@@ -67,6 +67,7 @@ Key Directories:
 ## Understanding Paths: Example
 
 Examples:
+
 ```bash
 # Absolute path
 cd /home/user/documents
@@ -113,6 +114,7 @@ cd -
 ## Home Directories: Example
 
 Access methods:
+
 ```bash
 # Using tilde
 cd ~
@@ -216,6 +218,7 @@ echo $HOME
 ## Common Path Operations: Example
 
 Examples:
+
 ```bash
 # Extract components
 path="/home/user/docs/file.txt"

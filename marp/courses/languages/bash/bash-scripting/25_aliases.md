@@ -194,6 +194,7 @@ source ~/.bashrc
 ---
 
 ## Best Practices: Final Checklist
+
 ```misc
 Scripts:
   [x] Always use #!/bin/bash or #!/usr/bin/env bash

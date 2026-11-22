@@ -189,6 +189,7 @@ Features:
 ## Configuration Files
 
 Machine configuration:
+
 ```bash
 # conf/machine/my-board.conf
 require conf/machine/include/tune-cortexa9.inc

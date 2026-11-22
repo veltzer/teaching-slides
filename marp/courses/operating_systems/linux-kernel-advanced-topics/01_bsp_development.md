@@ -99,6 +99,7 @@ void platform_init(void) {
 ## Board Files vs Device Tree
 
 ### Board Files (Legacy)
+
 ```c
 static struct platform_device my_device = {
     .name = "my-device",
@@ -111,6 +112,7 @@ static struct platform_device my_device = {
 ```
 
 ### Device Tree (Modern)
+
 ```dts
 my_device@10000000 {
     compatible = "vendor,my-device";

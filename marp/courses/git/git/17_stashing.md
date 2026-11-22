@@ -311,6 +311,7 @@ git add file.py
 Different approaches to using stashes:
 
 **Quick context switching:**
+
 ```bash
 # Interrupted workflow
 git stash push -m "WIP: $(git branch --show-current)"
@@ -321,6 +322,7 @@ git stash pop
 ```
 
 **Experimental changes:**
+
 ```bash
 # Try different approach
 git stash push -m "Current approach - backup"
@@ -331,6 +333,7 @@ git stash pop
 ```
 
 **Collaborative development:**
+
 ```bash
 # Before pulling updates
 git stash
@@ -346,6 +349,7 @@ git stash pop
 Guidelines for effective stash usage:
 
 **Naming conventions:**
+
 ```bash
 # Include context and purpose
 git stash push -m "BRANCH: PURPOSE - DETAILS"
@@ -354,6 +358,7 @@ git stash push -m "main: DEBUG - added console logs for investigation"
 ```
 
 **Regular cleanup:**
+
 ```bash
 # Weekly stash audit
 git stash list
@@ -392,6 +397,7 @@ fi
 ```
 
 **Git hooks with stashing:**
+
 ```bash
 #!/bin/bash
 # pre-checkout hook
@@ -568,6 +574,7 @@ Understanding stash constraints:
 ## Performance and Limitations (cont.) (cont.)
 
 **Size considerations:**
+
 ```bash
 # Check stash sizes
 git stash list --format="%gd" | while read stash; do

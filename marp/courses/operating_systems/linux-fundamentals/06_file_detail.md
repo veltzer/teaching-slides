@@ -24,6 +24,7 @@ audience:
 ## Seven File Types in UNIX: Example
 
 First character in ls -l output indicates type:
+
 ```bash
 -rw-r--r--  # Regular file
 drwxr-xr-x  # Directory
@@ -207,6 +208,7 @@ Example output:
 ## Hard Links vs Symbolic Links: Example
 
 Creating Links:
+
 ```bash
 # Create hard link
 ln target.txt hardlink.txt

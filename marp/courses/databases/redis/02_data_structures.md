@@ -43,6 +43,7 @@ Strings are the most basic Redis data type:
 ## String Basic Operations
 
 Basic operations:
+
 ```bash
 SET key value [EX seconds] [PX milliseconds] [NX|XX]
 GET key
@@ -129,6 +130,7 @@ Lists are linked lists of string values:
 ## List Basic Operations
 
 Basic operations:
+
 ```bash
 LPUSH key value [value ...]  # Push to head
 RPUSH key value [value ...]  # Push to tail
@@ -195,6 +197,7 @@ Sets are unordered collections of unique strings:
 ## Set Basic Operations
 
 Basic operations:
+
 ```bash
 SADD key member [member ...]    # Add members
 SREM key member [member ...]    # Remove members
@@ -274,6 +277,7 @@ Sorted sets are sets with scores (ordering values):
 ## Sorted Set Basic Operations
 
 Basic operations:
+
 ```bash
 ZADD key score member [score member ...] # Add members with scores
 ZRANGE key start stop [WITHSCORES]      # Get range by index
@@ -350,6 +354,7 @@ Hashes are maps of field-value pairs:
 ## Hash Basic Operations
 
 Basic operations:
+
 ```bash
 HSET key field value [field value ...] # Set hash fields
 HGET key field                        # Get value of field
@@ -417,6 +422,7 @@ Streams (added in Redis 5.0):
 - Support consumer groups
 
 Basic operations:
+
 ```bash
 XADD key ID field value [field value ...] # Add entry to stream
 XREAD [COUNT count] [BLOCK milliseconds] STREAMS key [key ...] ID [ID ...] # Read from streams
@@ -434,6 +440,7 @@ HyperLogLog:
 - Very memory efficient (12kB max)
 
 Basic operations:
+
 ```bash
 PFADD key element [element ...]         # Add elements
 PFCOUNT key [key ...]                   # Get estimated cardinality
@@ -458,6 +465,7 @@ Geospatial commands:
 - Implemented using sorted sets
 
 Basic operations:
+
 ```bash
 GEOADD key longitude latitude member [longitude latitude member ...] # Add locations
 GEODIST key member1 member2 [unit]      # Get distance between points
@@ -472,12 +480,14 @@ Bitmaps (implemented using strings):
 - String operations treating strings as bit arrays
 - Very memory efficient
 Basic operations:
+
 ```bash
 SETBIT key offset value                 # Set bit at offset
 GETBIT key offset                       # Get bit at offset
 BITCOUNT key [start end]                # Count set bits
 BITOP operation destkey key [key ...]   # Bitwise operations
 ```
+
 Use case: User online status tracking
 
 ---

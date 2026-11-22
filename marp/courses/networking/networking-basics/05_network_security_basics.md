@@ -493,6 +493,7 @@ IPSec operates at the network layer (L3), encrypting IP packets.
 - **ESP** (Encapsulating Security Payload): encryption + authentication
 - **AH** (Authentication Header): authentication only (no encryption)
 - **IKE** (Internet Key Exchange): negotiates security parameters
+
 ```bash
 # Check IPSec status (using strongSwan)
 $ sudo ipsec status
@@ -645,6 +646,7 @@ A DMZ is a network segment that sits between the public internet and the interna
 
 **Mitigations:** TLS with certificate validation, certificate pinning, HSTS
 ### 2. ARP Spoofing
+
 ```bash
 # Attacker sends fake ARP replies
 # "I am the gateway" → all traffic flows through attacker
@@ -712,11 +714,14 @@ $ sudo ss -tlnp    # Check what's listening
 **Mitigation:** Disable open resolvers, BCP38 (ingress filtering), rate limiting
 ### 7. SSL Stripping
 Downgrades HTTPS connections to HTTP, allowing eavesdropping.
+
 ```misc
 Client ──HTTP──→ Attacker ──HTTPS──→ Server
        ←HTTP───          ←HTTPS───
 ```
+
 **Mitigation:** HSTS (HTTP Strict Transport Security), HSTS preload list
+
 ```bash
 # HSTS header (server sends this)
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload

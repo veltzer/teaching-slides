@@ -470,6 +470,7 @@ When forming a reference to a reference, the following rules apply:
 - T&& && becomes T&&
 
 This is key to understanding how universal references work:
+
 ```cpp
 template<typename T>
 void f(T&& param) {

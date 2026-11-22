@@ -160,6 +160,7 @@ jfrog rt build-promote \
   --comment "Passed integration tests" \
   --copy true
 ```
+
 - Build name: `my-app`, build number: `42`
 - Target repository: `staging-local`
 - `--copy true` keeps the original in dev
@@ -335,6 +336,7 @@ cosign verify \
   --key cosign.pub \
   myregistry.io/myapp:2.3.1
 ```
+
 - Signatures are stored alongside the image in the registry
 - Kubernetes admission controllers can enforce verification
 

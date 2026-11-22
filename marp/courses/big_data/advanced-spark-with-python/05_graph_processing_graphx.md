@@ -38,6 +38,7 @@ audience:
 ---
 
 ## Creating Graphs
+
 ```python
 # Create vertices and edges as DataFrames
 from graphframes import GraphFrame
@@ -65,6 +66,7 @@ graph = GraphFrame(v, e)
 ---
 
 ## Graph Properties
+
 ```python
 # Add properties to vertices
 def add_property(v):
@@ -88,6 +90,7 @@ vertices_with_props = vertices.map(add_property)
 ---
 
 ## Vertex Programs
+
 ```python
 # Vertex-centric computation
 def update_vertex(id, attr, message):
@@ -102,6 +105,7 @@ def update_vertex(id, attr, message):
 ---
 
 ## Triplet Views
+
 ```python
 # Process triplets
 def process_triplet(triplet):
@@ -119,6 +123,7 @@ def process_triplet(triplet):
 ---
 
 ## PageRank Implementation
+
 ```python
 # Run PageRank
 results = g.pageRank(
@@ -135,6 +140,7 @@ results = g.pageRank(
 ---
 
 ## Shortest Paths
+
 ```python
 # Compute shortest paths
 paths = g.shortestPaths(
@@ -158,6 +164,7 @@ paths = g.shortestPaths(
 ---
 
 ## Custom Algorithms
+
 ```python
 def custom_graph_algo(graph):
     # Algorithm implementation
@@ -180,6 +187,7 @@ def custom_graph_algo(graph):
 ---
 
 ## Iterative Computation
+
 ```python
 # Iterative process
 for i in range(max_iterations):
@@ -203,6 +211,7 @@ for i in range(max_iterations):
 ---
 
 ## Performance Tuning
+
 ```python
 # Configure partitioning
 graph = graph.partitionBy(
@@ -227,6 +236,7 @@ graph = graph.partitionBy(
 ---
 
 ## Graph Views
+
 ```python
 # Create subgraph
 subgraph = graph.filter(
@@ -250,6 +260,7 @@ subgraph = graph.filter(
 ---
 
 ## Visualization
+
 ```python
 # Export for visualization
 def export_graph(graph, path):
@@ -272,6 +283,7 @@ def export_graph(graph, path):
 ---
 
 ## Graph ETL
+
 ```python
 # Transform graph data
 def transform_graph(data):
@@ -296,6 +308,7 @@ def transform_graph(data):
 ---
 
 ## Monitoring
+
 ```python
 # Monitor metrics
 def track_metrics(graph):
@@ -320,6 +333,7 @@ def track_metrics(graph):
 ---
 
 ## Common Patterns
+
 ```python
 # Common graph pattern
 def process_graph_pattern(graph):
@@ -343,6 +357,7 @@ def process_graph_pattern(graph):
 ---
 
 ## Performance Analysis
+
 ```python
 # Analyze performance
 def analyze_performance(graph):
@@ -366,6 +381,7 @@ def analyze_performance(graph):
 ---
 
 ## Case Studies
+
 ```python
 # Real-world example
 def social_network_analysis(graph):

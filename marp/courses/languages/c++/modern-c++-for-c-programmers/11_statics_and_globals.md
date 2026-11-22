@@ -595,6 +595,7 @@ std::mutex SingletonRegistry<T>::registryMutex;
 Singleton pattern has several drawbacks:
 
 **Testing Issues:**
+
 ```cpp
 class DatabaseSingleton {
     // Hard to mock for testing
@@ -615,6 +616,7 @@ public:
 ```
 
 **Hidden Dependencies:**
+
 ```cpp
 void processOrder(const Order& order) {
     // Hidden dependency on Logger singleton
@@ -631,6 +633,7 @@ void processOrder(const Order& order) {
 Consider these alternatives before using Singleton:
 
 **Dependency Injection:**
+
 ```cpp
 class Application {
 private:
@@ -649,6 +652,7 @@ public:
 ```
 
 **Factory Pattern:**
+
 ```cpp
 class ServiceFactory {
 public:

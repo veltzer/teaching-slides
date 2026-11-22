@@ -299,6 +299,7 @@ data:
 ## Using `ConfigMaps`
 
 **As environment variables:**
+
 ```yaml
 spec:
   containers:
@@ -315,6 +316,7 @@ spec:
 ```
 
 **As volume mount:**
+
 ```yaml
 spec:
   containers:
@@ -421,6 +423,7 @@ stringData:          # Plain text (encoded on apply)
 **By default, `Secrets` are NOT encrypted at rest!**
 
 Enable encryption:
+
 ```yaml
 # /etc/kubernetes/enc/enc.yaml
 apiVersion: apiserver.config.k8s.io/v1

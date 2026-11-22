@@ -637,6 +637,7 @@ Performance gain: [estimate]
 ## Prompt Templates Library: Example
 
 Building reusable templates:
+
 ```markdown
 # Bug Fix Template
 I encountered this error: {error_message}
@@ -670,16 +671,19 @@ Team standards: {guidelines}
 Finding the sweet spot:
 
 **Too Short**: Missing critical context
+
 ```markdown
 "Fix this bug"
 ```
 
 **Too Long**: Dilutes important information
+
 ```markdown
 [500 lines of context for a simple question]
 ```
 
 **Just Right**: Balanced and focused
+
 ```markdown
 Context: Python web scraper using BeautifulSoup
 Issue: Getting AttributeError on line 23
@@ -744,6 +748,7 @@ Debug prompts like code - systematically
 Tailoring to your field:
 
 **Frontend Development**:
+
 ```markdown
 Create a React component for a data table with:
 - TypeScript interfaces
@@ -754,6 +759,7 @@ Create a React component for a data table with:
 ```
 
 **Data Science**:
+
 ```markdown
 Write a Python function using pandas to:
 - Clean missing data (forward fill for time series)

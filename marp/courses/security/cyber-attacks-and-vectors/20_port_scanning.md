@@ -118,6 +118,7 @@ nmap 192.168.1.0/24
 # SYN scan (requires root, stealthy)
 sudo nmap -sS 192.168.1.1
 ```
+
 - Most popular scan type -- fast and relatively stealthy
 - Does not complete the TCP handshake (half-open)
 - Less likely to be logged by applications (but IDS will detect it)
@@ -249,6 +250,7 @@ sudo nmap -A 192.168.1.1
 # Network Distance: 1 hop
 # TCP Sequence Prediction: Difficulty=261 (Good luck!)
 ```
+
 - Analyzes TCP/IP stack implementation details
 - Examines: TTL values, window sizes, TCP options ordering
 - Each OS has a unique "fingerprint" of these values

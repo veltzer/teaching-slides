@@ -399,6 +399,7 @@ FuncB b = reinterpret_cast<FuncB>(funcA); // DANGEROUS!
 ## C-Style Cast vs C++ Casts
 
 C-style cast:
+
 ```cpp
 int i = 42;
 double d = (double)i; // Old C-style cast

@@ -195,6 +195,7 @@ export PATH="${HOME}/bin:${HOME}/scripts:${HOME}/tools:${PATH}"
 ---
 
 ## Expansion Order Summary
+
 ```misc
 1. Brace expansion:       {a,b,c}
 2. Tilde expansion:       ~

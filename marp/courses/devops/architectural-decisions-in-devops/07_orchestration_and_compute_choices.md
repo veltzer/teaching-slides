@@ -686,6 +686,7 @@ kubectl top pods -n production
 ## CI/CD Patterns by Compute Model
 
 **`Kubernetes`**:
+
 ```bash
 # GitOps flow
 git push -> CI builds image -> push to registry
@@ -693,6 +694,7 @@ git push -> CI builds image -> push to registry
 ```
 
 **Managed containers**:
+
 ```bash
 # Pipeline flow
 git push -> CI builds image -> push to registry
@@ -700,6 +702,7 @@ git push -> CI builds image -> push to registry
 ```
 
 **`Serverless`**:
+
 ```bash
 # SAM/CDK flow
 git push -> CI runs tests -> sam build

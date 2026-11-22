@@ -106,6 +106,7 @@ git log -- src/ docs/
 ```
 
 **Combining filters:**
+
 ```bash
 git log --author="Jane" --since="1 month ago" --grep="feature"
 ```
@@ -350,12 +351,14 @@ Elements: commit hash, author, date, timezone, line number, content
 Both show line-by-line authorship information:
 
 **Git blame (more common):**
+
 ```bash
 git blame file.txt
 # Shows compact format by default
 ```
 
 **Git annotate (more detailed):**
+
 ```bash
 git annotate file.txt
 # Shows more verbose format
@@ -391,6 +394,7 @@ git whatchanged -- src/
 **Note:** `git whatchanged` is largely superseded by `git log --raw` or `git log --stat`, but still useful in some scripts.
 
 **Modern equivalent:**
+
 ```bash
 git log --name-status
 git log --stat
@@ -403,9 +407,11 @@ git log --stat
 **Command-line tools:**
 
 1. **Gitk** - Built-in Git GUI
+
    ```bash
     gitk --all
    ```
+
     - Repository browser
     - Commit history visualization
     - Built into Git
@@ -415,9 +421,11 @@ git log --stat
 ## Visual Git Tools Overview (cont.)
 
 2. **Tig** - Text-mode interface
+
    ```bash
     tig
    ```
+
     - Terminal-based
     - Interactive browsing
     - Efficient for SSH environments
@@ -458,9 +466,11 @@ git log --stat
 ## Git Cola and Other Linux Tools
 
 **Git Cola:**
+
 ```bash
 git cola
 ```
+
 - Python-based GUI
 - Cross-platform
 - Good for commit preparation
@@ -589,12 +599,14 @@ export GIT_EDITOR="vim"
 **Common debugging scenarios:**
 
 1. **"Where did my changes go?"**
+
    ```bash
     git reflog
     git log --all --full-history -- path/to/file
    ```
 
 1. **"Who broke the build?"**
+
    ```bash
     git bisect start
     git bisect bad HEAD
@@ -602,12 +614,14 @@ export GIT_EDITOR="vim"
    ```
 
 1. **"What changed between releases?"**
+
    ```bash
     git log v1.0..v2.0 --oneline
     git diff v1.0..v2.0 --stat
    ```
 
 1. **"When was this bug introduced?"**
+
    ```bash
     git log -S"buggy_code" --oneline
     git blame file.txt | grep -n "buggy_line"

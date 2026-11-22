@@ -509,17 +509,20 @@ bitbake -g recipe_name
 ### Troubleshooting
 
 1. **Fetch failures**
+
    ```bash
    bitbake recipe -c cleanall
    bitbake recipe -c fetch
    ```
 
 1. **Signature changes**
+
    ```bash
    bitbake-diffsigs task-sig1.* task-sig2.*
    ```
 
 1. **Missing dependencies**
+
    ```bash
    bitbake -k recipe_name
    ```

@@ -257,24 +257,30 @@ the one after that is being fetched.
 Three types of hazards can stall or break the pipeline:
 
 **1. Data Hazards** -- An instruction needs data not yet produced:
+
 ```asm
 ADD RAX, RBX    ; produces RAX
 SUB RCX, RAX    ; needs RAX -- but ADD hasn't written it yet!
 ```
+
 Solution: **forwarding/bypassing** -- route ALU output directly to next stage.
 
 **2. Control Hazards** -- Branch instructions change flow:
+
 ```asm
 CMP RAX, 0
 JZ  label       ; do we take the branch? Pipeline already fetched next instr
 ADD RBX, 1      ; this might need to be flushed
 ```
+
 Solution: **branch prediction** (next slide).
 
 **3. Structural Hazards** -- Two instructions need the same hardware:
+
 ```misc
 Both instruction fetch and data load need memory in same cycle
 ```
+
 Solution: **separate I-cache and D-cache** (Harvard architecture internally).
 
 ---
@@ -421,6 +427,7 @@ ENTER 16, 0        ; create stack frame: push RBP, mov RBP RSP, sub RSP 16
 ```
 
 Variable-length instruction encoding:
+
 ```misc
 90                      ; NOP                    (1 byte)
 48 89 C3                ; MOV RBX, RAX           (3 bytes)
@@ -530,6 +537,7 @@ This exploits **spatial locality**: if you access one byte, you are likely
 to access nearby bytes soon.
 
 **Implication for programming:**
+
 ```c
 // GOOD: sequential access, uses spatial locality
 for (int i = 0; i < N; i++)
@@ -575,6 +583,7 @@ When a cache set is full and a new line must be loaded, which line is evicted?
 | RRIP | Re-Reference Interval Prediction | Intel L3 |
 
 **LRU example (4-way set):**
+
 ```misc
 Access sequence: A B C D E
 

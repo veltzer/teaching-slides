@@ -230,6 +230,7 @@ cursor.execute(query, (username,))
 ## Parameterized Queries: All Languages
 
 ### Python (SQLAlchemy ORM - recommended)
+
 ```python
 # Using ORM - no raw SQL at all
 user = User.query.filter_by(username=username).first()
@@ -243,6 +244,7 @@ result = db.execute(
 ```
 
 ### Java (Prepared Statement)
+
 ```java
 String query = "SELECT * FROM users WHERE username=? AND password=?";
 PreparedStatement pstmt = connection.prepareStatement(query);
@@ -252,6 +254,7 @@ ResultSet rs = pstmt.executeQuery();
 ```
 
 ### PHP (PDO)
+
 ```php
 $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :user AND password = :pass");
 $stmt->execute(['user' => $username, 'pass' => $password]);
@@ -259,6 +262,7 @@ $user = $stmt->fetch();
 ```
 
 ### Node.js (pg library)
+
 ```javascript
 const query = 'SELECT * FROM users WHERE username = $1 AND password = $2';
 const result = await pool.query(query, [username, password]);

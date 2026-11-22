@@ -216,6 +216,7 @@ main.o: config.h
 ```
 
 This is equivalent to:
+
 ```makefile
 main.o: main.c utils.h config.h
     gcc -c main.c

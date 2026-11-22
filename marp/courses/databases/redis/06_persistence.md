@@ -108,6 +108,7 @@ LASTSAVE
 ```
 
 Example:
+
 ```bash
 127.0.0.1:6379> BGSAVE
 Background saving started
@@ -202,6 +203,7 @@ BGREWRITEAOF
 ```
 
 Example:
+
 ```bash
 127.0.0.1:6379> BGREWRITEAOF
 Background append only file rewriting started
@@ -412,6 +414,7 @@ redis-check-aof [--fix] <aof-file>
 ```
 
 Example:
+
 ```bash
 $ redis-check-aof --fix appendonly.aof
 AOF analyzed: size=1052, ok_up_to=1024, diff=28
@@ -432,6 +435,7 @@ redis-check-rdb <rdb-file>
 ```
 
 Example:
+
 ```bash
 $ redis-check-rdb dump.rdb
 [offset 0] Checking RDB file dump.rdb

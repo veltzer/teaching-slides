@@ -58,17 +58,21 @@ audience:
 ## **Difference 1: `print` Statement vs. Function**
 
 * **Python 2:** `print "Hello"` (statement)
+
 ```python
 # Python 2
 print "Value:", x
 print >> sys.stderr, "Error!"
 ```
+
 * **Python 3:** `print("Hello")` (function)
+
   ```python
     # Python 3
     print("Value:", x)
     print("Error!", file=sys.stderr)
   ```
+
   Offers more flexibility (e.g., `sep`, `end`, `file` arguments).
 
 ---
@@ -76,18 +80,22 @@ print >> sys.stderr, "Error!"
 ## **Difference 2: Integer Division**
 
 * **Python 2:** `/` operator performs floor division for integers.
+
   ```python
     # Python 2
     print 3 / 2  # Output: 1
     print 3 // 2 # Output: 1
     print 3 / 2.0 # Output: 1.5
   ```
+
 * **Python 3:** `/` operator performs true division. `//` is for floor division.
+
   ```python
     # Python 3
     print(3 / 2)  # Output: 1.5
     print(3 // 2) # Output: 1
   ```
+
 * To get Python 3 division behavior in Python 2: `from __future__ import division`
 
 ---
@@ -98,15 +106,18 @@ print >> sys.stderr, "Error!"
     * `str`: Byte strings (ASCII by default).
     * `unicode`: Unicode strings.
     * Implicit coercion between `str` and `unicode` can lead to errors.
+
   ```python
     # Python 2
     s = "hello"  # bytes
     u = u"你好" # unicode
   ```
+
 * **Python 3:**
     * `str`: Unicode strings (UTF-8 by default).
     * `bytes`: Byte strings.
     * No implicit coercion. Explicit `encode()` and `decode()`.
+
   ```python
     # Python 3
     s = "hello"  # unicode (str)
@@ -121,6 +132,7 @@ print >> sys.stderr, "Error!"
 ## **Difference 4: Exception Handling**
 
 * **Python 2:**
+
   ```python
     # Python 2
     try:
@@ -128,7 +140,9 @@ print >> sys.stderr, "Error!"
     except IOError, e: # Comma syntax
         print "Error:", e
   ```
+
 * **Python 3:**
+
   ```python
     # Python 3
     try:
@@ -136,6 +150,7 @@ print >> sys.stderr, "Error!"
     except IOError as e: # 'as' keyword
         print("Error:", e)
   ```
+
     * The `as` keyword is mandatory in Python 3.
     * Exception objects are not directly accessible via `sys.exc_info()` in the `except` block as easily.
 
@@ -146,14 +161,17 @@ print >> sys.stderr, "Error!"
 * **Python 2:**
     * `range()`: Returns a list.
     * `xrange()`: Returns an iterator (more memory efficient for large ranges).
+
   ```python
     # Python 2
     my_list = range(10)    # Creates a list [0, ..., 9]
     my_iterator = xrange(10) # Creates an xrange object
   ```
+
 * **Python 3:**
     * `range()`: Behaves like Python 2's `xrange()`, returning an immutable sequence type.
     * `xrange()` is gone.
+
   ```python
     # Python 3
     my_range_obj = range(10) # Creates a range object
@@ -166,15 +184,18 @@ print >> sys.stderr, "Error!"
 
 * **Python 2:** These methods return lists.
     * `.iterkeys()`, `.itervalues()`, `.iteritems()` return iterators.
+
   ```python
     # Python 2
     d = {'a': 1, 'b': 2}
     keys_list = d.keys()
     items_iterator = d.iteritems()
   ```
+
 * **Python 3:** These methods return dictionary "views" (iterator-like).
     * They are dynamic and reflect changes in the dictionary.
     * To get a list: `list(d.keys())`.
+
   ```python
     # Python 3
     d = {'a': 1, 'b': 2}
@@ -187,16 +208,20 @@ print >> sys.stderr, "Error!"
 ## **Difference 7: `map()`, `filter()`, `zip()`**
 
 * **Python 2:** These functions return lists.
+
   ```python
     # Python 2
     squared_numbers = map(lambda x: x*x, [1, 2, 3]) # list
   ```
+
 * **Python 3:** These functions return iterators.
+
   ```python
     # Python 3
     squared_numbers_iter = map(lambda x: x*x, [1, 2, 3]) # iterator
     # list(map(...)) to get a list
   ```
+
     * This change is for memory efficiency.
     * `itertools` module has `imap`, `ifilter`, `izip` in Python 2 for iterator behavior.
 
@@ -231,15 +256,18 @@ print >> sys.stderr, "Error!"
 * **Python 2:**
     * `raw_input()`: Reads a line from stdin and returns it as a string.
     * `input()`: Reads a line from stdin, then `eval()`s it (SECURITY RISK!).
+
   ```python
     # Python 2
     name = raw_input("Enter name: ") # Safe
     # data = input("Enter data: ") # Unsafe!
   ```
+
 * **Python 3:**
     * `input()`: Behaves like Python 2's `raw_input()`.
     * `raw_input()` is gone.
     * If you need `eval()` behavior, use `eval(input())`.
+
   ```python
     # Python 3
     name = input("Enter name: ") # Safe, returns string
@@ -251,11 +279,13 @@ print >> sys.stderr, "Error!"
 
 * **Python 2:** Allows implicit relative imports (e.g., `import mymodule` could find `mymodule.py` in the same directory). This can be ambiguous.
 * **Python 3:** Requires explicit relative imports for modules within the same package.
+
   ```python
     # Python 3 - inside a package
     from . import sibling_module
     from .. import parent_module_sibling
   ```
+
 * Python 2 can enable this behavior with `from __future__ import absolute_import`.
 
 ---
@@ -263,18 +293,22 @@ print >> sys.stderr, "Error!"
 ## **Difference 12: Metaclass Syntax**
 
 * **Python 2:**
+
   ```python
     # Python 2
     class MyClass(object):
         __metaclass__ = MyMeta
         # ...
   ```
+
 * **Python 3:**
+
   ```python
     # Python 3
     class MyClass(metaclass=MyMeta):
         # ...
   ```
+
 * The `six` library provides a compatible way: `six.with_metaclass(MyMeta, MyBaseClass)`.
 
 ---
@@ -324,6 +358,7 @@ print >> sys.stderr, "Error!"
 
 * Install the latest stable Python 3 version.
 * Use virtual environments (`venv`, `conda`).
+
   ```bash
     python3 -m venv py3env
     source py3env/bin/activate
@@ -331,6 +366,7 @@ print >> sys.stderr, "Error!"
     conda create -n py3env python=3.x
     conda activate py3env
   ```
+
 * Install necessary tools and dependencies in this environment.
 
 ---
@@ -339,9 +375,11 @@ print >> sys.stderr, "Error!"
 
 * **Commit Often:** Before, during, and after making changes.
 * **Use Branches:** Create a dedicated branch for the porting effort (e.g., `py3-porting`).
+
   ```bash
     git checkout -b py3-porting
   ```
+
 * Makes it easy to:
     * Track changes.
     * Revert if something goes wrong.
@@ -363,11 +401,13 @@ print >> sys.stderr, "Error!"
 * A Python script that reads Python 2 source code and applies a series of "fixers" to transform it into valid Python 3 code.
 * Comes bundled with Python.
 * **Basic Usage:**
+
   ```bash
     2to3 my_python2_script.py  # Shows diffs
     2to3 -w my_python2_script.py # Writes changes back to file
     2to3 -w -n --no-diffs my_project_dir/ # Process a directory, no backup
   ```
+
 * Can run specific fixers or exclude some.
 
 ---
@@ -453,6 +493,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
 * **`python-modernize`:**
     * A tool that uses `2to3` and `six` to update Python 2 code to a common subset of Python 2 and 3 that uses `six` for compatibility.
     * Often preferred over raw `2to3` if aiming for a Py2/Py3 compatible codebase.
+
   ```bash
     pip install future modernize
     python-modernize -w my_project_dir/
@@ -519,6 +560,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
     * Distinguish text (Unicode, `str` in Py3) from binary data (`bytes` in Py3).
     * Ensure proper `encode()` (str -> bytes) and `decode()` (bytes -> str) at I/O boundaries.
     * Open files in text mode (`'r'`, `'w'`) or binary mode (`'rb'`, `'wb'`) explicitly.
+
    ```python
     # Python 3
     with open('data.txt', 'r', encoding='utf-8') as f: # Text mode
@@ -574,6 +616,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
 ## **Example: `dict.iteritems()` to `dict.items()`**
 
 **Python 2:**
+
 ```python
 d = {'a': 1, 'b': 2}
 for k, v in d.iteritems(): # Returns an iterator
@@ -594,6 +637,7 @@ for k, v in six.iteritems(d):
 # Direct 2to3 might change d.items() to list(d.items())
 # and d.iteritems() to d.items()
 ```
+
 **Python 3 (idiomatic):**
 
 ```python
@@ -633,6 +677,7 @@ def process_data(text_data: str): # Expect unicode string
 #    content = f.read() # content is str (unicode)
 # process_data(content)
 ```
+
 * Be clear about text vs. binary data.
 * Decode bytes to text at input boundaries, encode text to bytes at output boundaries.
 
@@ -693,6 +738,7 @@ def process_data(text_data: str): # Expect unicode string
 
 * Even if you're still on Python 2, start writing new code that is easily portable or already Python 2/3 compatible.
 * Use `from __future__ import ...` statements:
+
   ```python
     # In Python 2 code
     from __future__ import absolute_import
@@ -700,6 +746,7 @@ def process_data(text_data: str): # Expect unicode string
     from __future__ import print_function
     from __future__ import unicode_literals # Be careful, can have wide impact
   ```
+
 * Avoid Python 2-only idioms.
 
 ---
@@ -738,11 +785,14 @@ def process_data(text_data: str): # Expect unicode string
 Once your code is running stably on Python 3, start refactoring to use modern Python 3 features:
 
 * **f-strings (Formatted String Literals):** Cleaner, faster string formatting.
+
   ```python
     name = "World"
     print(f"Hello, {name}!") # Python 3.6+
   ```
+
 * **Type Hinting (PEP 484):** Improved code clarity and tooling (e.g., MyPy).
+
   ```python
     def greet(name: str) -> str:
         return "Hello, " + name
@@ -754,11 +804,13 @@ Once your code is running stably on Python 3, start refactoring to use modern Py
 
 * **`asyncio` and `async/await`:** For high-performance asynchronous programming.
 * **Pathlib module:** Object-oriented filesystem paths.
+
   ```python
     from pathlib import Path
     p = Path("/usr/local/bin")
     for child in p.iterdir(): print(child)
   ```
+
 * **Walrus Operator (`:=`) (PEP 572):** Assignment expressions (Python 3.8+).
 * Dictionary comprehensions, set comprehensions, extended iterable unpacking, etc.
 

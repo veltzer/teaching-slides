@@ -64,6 +64,7 @@ drwxr-xr-x 2 user group 4.0K Nov 19 09:45 directory
 ## Viewing File Contents: Example
 
 Examples:
+
 ```bash
 # View entire file
 cat file.txt
@@ -114,6 +115,7 @@ mv old_dir new_dir
 ## Disk Usage Commands: Example
 
 Examples:
+
 ```bash
 # Check filesystem usage
 df -h
@@ -199,6 +201,7 @@ sort file.txt | uniq -d
 ## Finding Files: Example
 
 Examples:
+
 ```bash
 # Find by name
 find . -name "*.txt"

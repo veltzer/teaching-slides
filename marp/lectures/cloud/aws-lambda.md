@@ -68,6 +68,7 @@ audience:
 ---
 
 ## A Minimal Python Handler
+
 ```python
 def handler(event, context):
     name = event.get("name", "world")
@@ -76,6 +77,7 @@ def handler(event, context):
         "body": f"Hello, {name}!"
     }
 ```
+
 - `event` carries the input data
 - `context` exposes request id, deadline, memory limit
 - Return a plain dict — AWS serializes it for you

@@ -96,6 +96,7 @@ git rebase main  # DON'T DO THIS!
 ## When to Use Merge
 
 1. **Integrating feature branches into main:**
+
    ```bash
     git checkout main
     git merge --no-ff feature-branch
@@ -125,6 +126,7 @@ git rebase main  # DON'T DO THIS!
 ## When to Use Rebase
 
 1. **Updating private feature branches:**
+
    ```bash
     git checkout feature-branch
     git rebase main
@@ -273,18 +275,21 @@ git rebase --onto main~2 main feature
 ## The Rebase Workflow
 
 1. **Start with updated main:**
+
    ```bash
     git checkout main
     git pull origin main
    ```
 
 1. **Rebase your feature branch:**
+
    ```bash
     git checkout feature-branch
     git rebase main
    ```
 
 1. **Handle any conflicts:**
+
    ```bash
     # Fix conflicts, stage files, continue
     git add .
@@ -292,6 +297,7 @@ git rebase --onto main~2 main feature
    ```
 
 1. **Force push if already shared:**
+
    ```bash
     git push --force-with-lease origin feature-branch
    ```
@@ -387,6 +393,7 @@ git push --force-with-lease origin feature-branch
 git checkout main
 git rebase feature  # main is public!
 ```
+
 **Solution:** Use merge for public branches
 
 ### Mistake 2: Not updating before rebasing
@@ -395,6 +402,7 @@ git rebase feature  # main is public!
 # Missing step
 git rebase main  # main might be outdated
 ```
+
 **Solution:** Always `git fetch` or `git pull` main first
 
 ---
@@ -407,6 +415,7 @@ git rebase main  # main might be outdated
 # Dangerous
 git push --force
 ```
+
 **Solution:** Use `--force-with-lease` and communicate with team
 
 ### Mistake 4: Rebasing too frequently

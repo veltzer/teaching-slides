@@ -334,6 +334,7 @@ ls .git/refs/heads/
 Tags come in two types:
 
 **Lightweight tags:**
+
 ```bash
 # Stored like branches
 cat .git/refs/tags/v1.0
@@ -341,6 +342,7 @@ cat .git/refs/tags/v1.0
 ```
 
 **Annotated tags:**
+
 ```bash
 # Create tag object with metadata
 git cat-file -p v2.0
@@ -463,6 +465,7 @@ git branch feature-branch
 ## What Happens When You: Create a Branch (cont.)
 
 **Switching to the branch:**
+
 ```bash
 git checkout feature-branch
 ```
@@ -845,6 +848,7 @@ git config --system user.name "Anonymous"   # system
 ```
 
 **Configuration sections:**
+
 ```ini
 [core]
     editor = vim
@@ -926,10 +930,12 @@ ssh git@server.com git-upload-pack '/path/to/repo.git'
 Understanding Git's object model edge cases:
 
 **Submodule storage:**
+
 ```bash
 # Submodule in tree object
 160000 commit a1b2c3d4e5f6...    submodule-name
 ```
+
 - Mode `160000` indicates submodule
 - Points to commit in different repository
 - `.gitmodules` file contains submodule configuration

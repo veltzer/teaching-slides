@@ -100,6 +100,7 @@ CISC (e.g., x86):
 ## Instruction Comparison
 
 ARM (RISC):
+
 ```arm
 ldr r0, [r1]    @ Load from memory
 add r0, r0, r2  @ Add
@@ -107,6 +108,7 @@ str r0, [r1]    @ Store to memory
 ```
 
 x86 (CISC):
+
 ```nasm
 add [ecx], edx  @ Load, add, and store in one instruction
 ```

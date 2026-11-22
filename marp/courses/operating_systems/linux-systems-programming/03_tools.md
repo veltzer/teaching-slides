@@ -731,16 +731,19 @@ project/
 ## Compilation Best Practices
 
 1. **Always use warning flags**
+
    ```bash
    -Wall -Wextra -Werror
    ```
 
 1. **Enable optimization for release**
+
    ```bash
    -O2 or -O3
    ```
 
 1. **Include debug info for development**
+
    ```bash
    -g -Og
    ```

@@ -31,6 +31,7 @@ audience:
 ---
 
 ## Dataset Definition
+
 ```scala
 case class Person(name: String, age: Int)
 val ds: Dataset[Person] = spark.read
@@ -41,6 +42,7 @@ val ds: Dataset[Person] = spark.read
 ---
 
 ## DataFrame Definition
+
 ```scala
 val df: DataFrame = spark.read
   .json("people.json")
@@ -54,6 +56,7 @@ val df: DataFrame = spark.read
 ---
 
 ## Basic Transformations
+
 ```scala
 // Dataset
 personDS.filter(_.age > 21)
@@ -65,6 +68,7 @@ personDF.filter($"age" > 21)
 ---
 
 ## Schema Definition
+
 ```scala
 // Dataset implicit schema from case class
 case class Person(name: String, age: Int)
@@ -79,6 +83,7 @@ val schema = StructType(Array(
 ---
 
 ## Dataset Type Safety Example
+
 ```scala
 case class Person(name: String, age: Int)
 val ds = spark.read.json("people.json").as[Person]
@@ -90,6 +95,7 @@ ds.map(p => p.age.substring(1))
 ---
 
 ## DataFrame Runtime Checks
+
 ```scala
 val df = spark.read.json("people.json")
 
@@ -113,6 +119,7 @@ df.select($"age".cast("string").substring(1))
 ---
 
 ## Converting Between Types
+
 ```scala
 // DataFrame to Dataset
 case class Person(name: String, age: Int)
@@ -125,6 +132,7 @@ val df = ds.toDF()
 ---
 
 ## SQL Operations
+
 ```scala
 // Register temporary view
 ds.createOrReplaceTempView("people")
@@ -181,6 +189,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 ---
 
 ## Common Operations
+
 ```scala
 // Dataset
 ds.filter(_.age > 21)
@@ -198,6 +207,7 @@ df.filter($"age" > 21)
 ---
 
 ## Aggregations
+
 ```scala
 // Dataset
 ds.groupByKey(_.age)
@@ -211,6 +221,7 @@ df.groupBy($"age")
 ---
 
 ## Join Operations
+
 ```scala
 case class Order(id: Int, personId: Int)
 val orders: Dataset[Order] = ...
@@ -230,6 +241,7 @@ persons.joinWith(orders,
 ---
 
 ## Debugging Tools
+
 ```scala
 // View execution plan
 ds.explain()
@@ -241,6 +253,7 @@ ds.explain(true)
 ---
 
 ## Error Handling
+
 ```scala
 // Dataset - compile-time error
 ds.map(_.nonexistentField) // Won't compile
@@ -260,6 +273,7 @@ df.select($"nonexistentField") // Runtime error
 ---
 
 ## Data Sources
+
 ```scala
 // Read parquet
 val ds = spark.read.parquet("data.parquet").as[Person]
@@ -271,6 +285,7 @@ ds.write.parquet("output.parquet")
 ---
 
 ## Custom Encoders
+
 ```scala
 // Custom encoder for complex type
 implicit val encoder = Encoders.kryo[CustomType]
@@ -309,6 +324,7 @@ val ds: Dataset[CustomType] = ...
 ---
 
 ## Real-world Usage
+
 ```scala
 case class SalesRecord(
   id: Long,

@@ -813,6 +813,7 @@ void tls_increment() {
 ## Common Thread Bugs
 
 ## 1. Race Conditions
+
 ```c
 // BAD: Unsynchronized access
 int shared = 0;
@@ -822,6 +823,7 @@ void *thread2() { shared++; }
 ```
 
 ## 2. Deadlock
+
 ```c
 // BAD: Lock ordering
 // Thread 1: lock(A); lock(B);
@@ -829,6 +831,7 @@ void *thread2() { shared++; }
 ```
 
 ## 3. Missing volatile
+
 ```c
 // BAD: Compiler optimization
 int flag = 0;  // Should be volatile

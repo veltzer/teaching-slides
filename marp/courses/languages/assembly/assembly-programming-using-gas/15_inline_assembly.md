@@ -39,6 +39,7 @@ __asm__ (
 ```
 
 Example:
+
 ```c
 __asm__ (
     "movl $1, %eax\n\t"
@@ -61,6 +62,7 @@ __asm__ (
 ```
 
 Example:
+
 ```c
 int a = 10, b = 20, result;
 __asm__ (
@@ -78,6 +80,7 @@ __asm__ (
 - Use "=" for write-only, "+" for read-write
 
 Example:
+
 ```c
 int result;
 __asm__ (
@@ -94,6 +97,7 @@ __asm__ (
 - Can use variables or constants
 
 Example:
+
 ```c
 int a = 10, b = 20;
 __asm__ (
@@ -111,6 +115,7 @@ __asm__ (
 - Use "memory" for any memory writes
 
 Example:
+
 ```c
 __asm__ (
     "cpuid"
@@ -147,6 +152,7 @@ __asm__ (
 ## Using Inline Assembly for Optimization
 
 Example: Fast integer square root
+
 ```c
 static inline int isqrt(int num) {
     int result;
@@ -168,6 +174,7 @@ static inline int isqrt(int num) {
 ## Accessing Special CPU Instructions
 
 Example: Using RDTSC to read CPU timestamp
+
 ```c
 unsigned long long rdtsc() {
     unsigned long long result;
@@ -188,6 +195,7 @@ unsigned long long rdtsc() {
 ## Inline Assembly in Functions
 
 Example: Optimized strlen
+
 ```c
 size_t my_strlen(const char *str) {
     size_t len;
@@ -215,6 +223,7 @@ size_t my_strlen(const char *str) {
 - Consider using intrinsics or compiler-specific extensions instead
 
 Example of using intrinsics:
+
 ```c
 #include <immintrin.h>
 

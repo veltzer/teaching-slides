@@ -252,6 +252,7 @@ load 'test_helper/bats-assert/load'
 ---
 
 ## Testing Best Practices
+
 ```misc
 1. Test the interface, not the implementation
 2. Each test should be independent

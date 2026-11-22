@@ -35,6 +35,7 @@ audience:
 - 8 80-bit registers (ST0-ST7)
 
 Example (GAS / AT&T syntax):
+
 ```gas
 flds x            # Load x into ST0
 flds y            # Load y into ST0, push previous value to ST1
@@ -50,6 +51,7 @@ fstps z           # Store result in z and pop
 - 128-bit XMM registers (XMM0-XMM15)
 
 Example (GAS / AT&T syntax):
+
 ```gas
 movss x, %xmm0       # Move single-precision float x to xmm0
 addss y, %xmm0       # Add single-precision float y to xmm0
@@ -64,6 +66,7 @@ movss %xmm0, z       # Store result in z
 - 256-bit YMM registers
 
 Example (GAS / AT&T syntax):
+
 ```gas
 vmovaps array1, %ymm0        # Load 8 floats from array1
 vmovaps array2, %ymm1        # Load 8 floats from array2
@@ -79,6 +82,7 @@ vmovaps [result], ymm2   ; Store 8 float results
 - 128-bit XMM registers
 
 Example (4 simultaneous integer additions):
+
 ```nasm
 movdqa xmm0, [array1]    ; Load 4 ints from array1
 paddd xmm0, [array2]     ; Add 4 ints from array2
@@ -93,6 +97,7 @@ movdqa [result], xmm0    ; Store 4 int results
 - 256-bit YMM registers
 
 Example (8 simultaneous float multiplications):
+
 ```nasm
 vmovaps ymm0, [array1]   ; Load 8 floats from array1
 vmulps ymm0, ymm0, [array2] ; Multiply by 8 floats from array2
@@ -140,6 +145,7 @@ pthread_mutex_unlock(&mutex);
 ```
 
 In assembly (GAS / AT&T syntax):
+
 ```gas
 lock xaddl %eax, mutex
 ```
@@ -149,11 +155,13 @@ lock xaddl %eax, mutex
 ## Atomic Operations
 
 Example: Atomic increment (GAS / AT&T syntax)
+
 ```gas
 lock incl counter
 ```
 
 Example: Compare and Swap (GAS / AT&T syntax)
+
 ```gas
 movl old_value, %eax
 lock cmpxchgl new_value, address
@@ -167,6 +175,7 @@ lock cmpxchgl new_value, address
 - Memory barriers ensure proper ordering
 
 Example:
+
 ```nasm
 mfence  ; Full memory barrier
 lfence  ; Load fence

@@ -164,6 +164,7 @@ Example:
 - Improves readability and maintainability
 
 Example:
+
 ```nasm
 .macro push_all
     push eax
@@ -188,6 +189,7 @@ Example:
 - Align similar instructions
 
 Example:
+
 ```nasm
 .loop:
     mov eax, [ebx]
@@ -223,6 +225,7 @@ Example:
 - Use it only when absolutely necessary
 
 Instead of:
+
 ```nasm
     mov byte [instruction+1], 42
 instruction:
@@ -239,6 +242,7 @@ Use variables or conditional execution
 - Use assertions to catch errors early
 
 Example:
+
 ```nasm
     call calculate_sum
     cmp eax, expected_sum

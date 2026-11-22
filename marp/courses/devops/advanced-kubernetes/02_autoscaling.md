@@ -178,6 +178,7 @@ kubectl top nodes
 ```
 
 Example output:
+
 ```misc
 NAME      REFERENCE        TARGETS         MINPODS   MAXPODS   REPLICAS
 web-hpa   Deployment/web   65%/70%, 45%/80%   2        20        4

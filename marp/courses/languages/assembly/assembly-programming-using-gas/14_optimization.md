@@ -175,6 +175,7 @@ xor eax, eax
 ```
 
 SIMD example:
+
 ```nasm
 movdqa xmm0, [array1]
 paddd xmm0, [array2]
@@ -189,6 +190,7 @@ movdqa [result], xmm0
 - Use SIMD instructions for data-level parallelism
 
 Example (pseudo-code):
+
 ```nasm
 ; Divide work among threads
 mov ecx, thread_id

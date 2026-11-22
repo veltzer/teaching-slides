@@ -143,6 +143,7 @@ gcc math_operations.o main.o -o program
 - Rebuild only what's necessary
 
 Example Makefile:
+
 ```makefile
 CC = gcc
 CFLAGS = -Wall -Wextra

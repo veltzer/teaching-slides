@@ -196,6 +196,7 @@ audience:
 ## Declarative vs Imperative
 
 ## Imperative
+
 ```bash
 kubectl create deployment nginx --image=nginx
 kubectl scale deployment nginx --replicas=3
@@ -203,6 +204,7 @@ kubectl expose deployment nginx --port=80
 ```
 
 ## Declarative
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -363,6 +365,7 @@ metadata:
 ## Scaling Applications
 
 ## Horizontal Pod Autoscaler
+
 ```yaml
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler

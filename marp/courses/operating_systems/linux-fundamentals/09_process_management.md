@@ -36,6 +36,7 @@ audience:
 ## The ps Command: Example
 
 Basic usage:
+
 ```bash
 # Simple process list
 ps
@@ -84,6 +85,7 @@ TIME  - CPU time used
 ## Finding Process IDs: Example
 
 Different methods:
+
 ```bash
 # Using ps and grep
 ps aux | grep nginx
@@ -105,6 +107,7 @@ ps -o ppid= -p PID
 ## Sending Signals (kill): Example
 
 Common signals:
+
 ```bash
 # Terminate gracefully (SIGTERM)
 kill PID
@@ -142,6 +145,7 @@ kill -CONT PID
 ## Monitoring with top: Example
 
 Interactive commands:
+
 ```misc
 h - help
 k - kill process
@@ -179,6 +183,7 @@ Key sections:
 ## Dealing with Zombies: Example
 
 Identifying zombies:
+
 ```bash
 # Show zombie processes
 ps aux | grep 'Z'
@@ -198,6 +203,7 @@ kill -9 PARENT_PID
 ## The Shell and Jobs: Example
 
 Job control:
+
 ```bash
 # Start background job
 command &
@@ -219,6 +225,7 @@ bg %1
 ## Process Priorities (nice): Example
 
 Managing priorities:
+
 ```bash
 # Start with priority
 nice -n 10 command
@@ -287,6 +294,7 @@ watch -n 1 'free -m'
 ## Process Troubleshooting: Example
 
 Common commands:
+
 ```bash
 # CPU usage
 pidstat -p PID 1

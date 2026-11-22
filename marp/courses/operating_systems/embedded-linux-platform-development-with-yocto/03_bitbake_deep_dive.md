@@ -41,6 +41,7 @@ Originally from OpenEmbedded:
 ## Recipe Anatomy
 
 Basic recipe structure:
+
 ```bash
 SUMMARY = "Short description"
 DESCRIPTION = "Longer description of the package"

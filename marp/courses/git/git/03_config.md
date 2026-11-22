@@ -102,6 +102,7 @@ git config --show-origin user.email
 ## Configuration File Format
 
 **~/.gitconfig example:**
+
 ```ini
 [user]
     name = John Doe
@@ -393,6 +394,7 @@ Host gitlab.com
 ```
 
 **Usage:**
+
 ```bash
 git clone git@github-work:company/repo.git
 ```
@@ -695,6 +697,7 @@ git clone --filter=tree:0 <url>     # Omit trees
 ```
 
 **~/.gitconfig-work:**
+
 ```ini
 [user]
     email = john@company.com
@@ -704,6 +707,7 @@ git clone --filter=tree:0 <url>     # Omit trees
 ```
 
 **~/.gitconfig-personal:**
+
 ```ini
 [user]
     email = john@personal.com
@@ -822,6 +826,7 @@ git commit --amend --author="Name <correct@email.com>"
 ```
 
 **Problem**: Line ending issues
+
 ```bash
 # Windows
 git config --global core.autocrlf true
@@ -830,6 +835,7 @@ git config --global core.autocrlf input
 ```
 
 **Problem**: SSL certificate errors
+
 ```bash
 # Temporary fix (NOT RECOMMENDED)
 git config --global http.sslVerify false
@@ -863,6 +869,7 @@ cp ~/dotfiles/.gitignore_global ~/
 ## EditorConfig Integration
 
 **.editorconfig:**
+
 ```ini
 # EditorConfig helps maintain consistent coding styles
 root = true
@@ -892,6 +899,7 @@ indent_style = tab
 ## Configuration Examples by Role
 
 ## For Developers
+
 ```bash
 git config --global core.editor "code --wait"
 git config --global merge.tool vscode
@@ -899,6 +907,7 @@ git config --global pull.rebase true
 ```
 
 ## For DevOps
+
 ```bash
 git config --global alias.deploy '!git push production main'
 git config --global push.followTags true
@@ -906,6 +915,7 @@ git config --global tag.sort -version:refname
 ```
 
 ## For Team Leads
+
 ```bash
 git config --global alias.team-log 'shortlog -sn --all'
 git config --global alias.recent-branches \

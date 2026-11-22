@@ -92,6 +92,7 @@ List<String> sorted = names.stream()
 ---
 
 ## Stream API Example
+
 ```java
 List<User> activeAdmins = users.stream()
     .filter(User::isActive)

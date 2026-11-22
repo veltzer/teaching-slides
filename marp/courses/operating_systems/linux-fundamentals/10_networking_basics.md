@@ -45,6 +45,7 @@ Common examples:
 ## Network Interface Configuration: Example
 
 Using ifconfig:
+
 ```bash
 # Show all interfaces
 ifconfig
@@ -86,6 +87,7 @@ ip route add default via 192.168.1.1
 ## Interface Management: Example
 
 Basic commands:
+
 ```bash
 # Bring interface up
 ifup eth0
@@ -106,6 +108,7 @@ ip link show eth0
 ## Network Statistics (netstat): Example
 
 Common options:
+
 ```bash
 # Show all connections
 netstat -a
@@ -129,6 +132,7 @@ netstat -r
 ## SSH (Secure Shell): Example
 
 Basic usage:
+
 ```bash
 # Connect to remote host
 ssh user@remote.host
@@ -148,6 +152,7 @@ ssh user@remote.host 'ls -l'
 ## SSH Configuration and Keys: Example
 
 Key management:
+
 ```bash
 # Generate key pair
 ssh-keygen -t rsa -b 4096
@@ -170,6 +175,7 @@ Host server1
 ## Remote File Transfer: Example
 
 Examples:
+
 ```bash
 # Copy file to remote
 scp file.txt user@remote.host:~/
@@ -209,6 +215,7 @@ Note: These commands are insecure and should be avoided in favor of SSH.
 ## Trust Relationships: Example
 
 Configuration files:
+
 ```bash
 # System-wide trust
 /etc/hosts.equiv
@@ -228,6 +235,7 @@ Configuration files:
 ## Network Troubleshooting: Example
 
 Common commands:
+
 ```bash
 # Test connectivity
 ping google.com

@@ -24,6 +24,7 @@ audience:
 ## Logging In and Out: Example
 
 Common commands:
+
 ```bash
 logout    # Clean shell exit
 exit      # Exit current shell
@@ -33,6 +34,7 @@ Ctrl+D    # EOF (same as exit)
 ---
 
 ## Password Management: Example
+
 ```bash
 # Change your password
 passwd
@@ -52,10 +54,13 @@ chage -d 0 username
 
 ## Command Structure: Example
 Basic syntax:
+
 ```bash
 command [options] [arguments]
 ```
+
 Examples:
+
 ```bash
 ls -l /home
 cp -r source_dir destination_dir
@@ -103,6 +108,7 @@ mv old.txt new.txt
 ---
 
 ## Getting Help: Example
+
 ```bash
 # View manual page
 man ls
@@ -149,6 +155,7 @@ Common control characters:
 ## Command Line Editing: Example
 
 Navigation shortcuts:
+
 ```bash
 Ctrl+A  # Move to beginning of line
 Ctrl+E  # Move to end of line
@@ -192,6 +199,7 @@ mv backup_notes.txt ../notes_backup.txt
 ## Common Mistakes and Solutions: Example
 
 Solutions:
+
 ```bash
 # Permission denied
 sudo command

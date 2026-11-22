@@ -143,6 +143,7 @@ class Article(TimestampMixin):
 ## A Refactoring Example
 
 Before:
+
 ```python
 class FileWriter(BaseLogger):
     def log(self, msg):
@@ -150,6 +151,7 @@ class FileWriter(BaseLogger):
 ```
 
 After:
+
 ```python
 class FileWriter:
     def __init__(self, formatter):

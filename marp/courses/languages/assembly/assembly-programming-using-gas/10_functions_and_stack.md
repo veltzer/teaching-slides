@@ -41,6 +41,7 @@ Basic stack instructions:
 - `pop`: Load value and increment ESP
 
 Example:
+
 ```gas
     push %eax    # Push EAX onto the stack
     pop %ebx     # Pop top of stack into EBX
@@ -86,6 +87,7 @@ Common ways to pass arguments:
 1. Via registers (fastcall convention)
 
 Stack example (cdecl):
+
 ```gas
     push $20        # Second argument
     push $10        # First argument
@@ -156,6 +158,7 @@ Common methods:
 1. Via the stack (for larger structures)
 
 Example:
+
 ```gas
     mov $42, %eax   # Set return value
     ret             # Return to caller

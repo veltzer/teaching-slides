@@ -165,17 +165,20 @@ void setup_page_table(struct process *p) {
 ## Common Faults
 
 1. **Segmentation Fault**
+
    ```c
    int *p = NULL;
    *p = 42;  // SIGSEGV
    ```
 
 1. **Stack Overflow**
+
    ```c
    void recurse() { recurse(); }
    ```
 
 1. **Permission Denied**
+
    ```c
    char *code = "code";
    ((void(*)())code)();  // NX bit

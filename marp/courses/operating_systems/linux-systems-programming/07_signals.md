@@ -886,6 +886,7 @@ sa.sa_flags = SA_NODEFER;  // Don't block signal
 ## Common Signal Bugs
 
 ## 1. Non-reentrant Functions
+
 ```c
 // BAD: printf in handler
 void handler(int sig) {
@@ -894,6 +895,7 @@ void handler(int sig) {
 ```
 
 ## 2. Race Conditions
+
 ```c
 // BAD: Check-then-act
 if (!flag) {  // Signal can arrive here!
@@ -902,6 +904,7 @@ if (!flag) {  // Signal can arrive here!
 ```
 
 ## 3. Forgetting errno
+
 ```c
 // BAD: errno corrupted
 void handler(int sig) {

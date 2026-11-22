@@ -94,6 +94,7 @@ metadata:
 ## Multi-Tenancy Patterns
 
 **Namespace-based isolation:**
+
 ```yaml
 # ResourceQuota per tenant
 apiVersion: v1
@@ -141,6 +142,7 @@ metadata:
 ```
 
 **Restricted pod example:**
+
 ```yaml
 spec:
   securityContext:

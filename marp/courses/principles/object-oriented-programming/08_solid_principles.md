@@ -154,6 +154,7 @@ public interface Feedable  { void eat(); }
 ## DIP Worked Example
 
 Before (high-level depends on low-level):
+
 ```python
 class OrderService:
     def __init__(self):
@@ -161,6 +162,7 @@ class OrderService:
 ```
 
 After (both depend on abstraction):
+
 ```python
 class OrderService:
     def __init__(self, db: Database):  # abstract

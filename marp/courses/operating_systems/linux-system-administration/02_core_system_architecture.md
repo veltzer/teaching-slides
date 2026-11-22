@@ -1184,6 +1184,7 @@ The device mapper (`dm`) is a kernel framework for mapping block devices. It und
 
 ## Device Mapper Overview: Example
 The device mapper (`dm`) is a kernel framework for mapping block devices. It underpins `LVM`, `LUKS`, and `multipath`.
+
 ```bash
 # List device mapper devices
 dmsetup ls

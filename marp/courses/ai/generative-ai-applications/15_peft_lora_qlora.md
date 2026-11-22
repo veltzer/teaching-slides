@@ -37,6 +37,7 @@ audience:
 ## LoRA — Low-Rank Adaptation: Example
 
 The key insight: weight updates during fine-tuning have low rank.
+
 ```misc
 Standard fine-tuning:
   W_new = W_original + ΔW

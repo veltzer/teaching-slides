@@ -70,6 +70,7 @@ public:
 ```
 
 Cannot instantiate abstract classes:
+
 ```cpp
 Database db;        // Error: cannot instantiate abstract class
 Database* db = new MySQLDatabase();  // OK: concrete implementation

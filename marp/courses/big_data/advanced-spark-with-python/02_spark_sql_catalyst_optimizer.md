@@ -56,6 +56,7 @@ spark.sql("SELECT name FROM table WHERE age > 25")
 ---
 
 ## Logical Plan Analysis
+
 ```python
 df.explain(mode="extended")
 # Shows unresolved and resolved logical plans
@@ -72,6 +73,7 @@ df.explain(mode="extended")
 ---
 
 ## Understanding Query Plans
+
 ```python
 # View the execution plan
 df.select("name", "age").groupBy("age").count().explain(True)
@@ -93,6 +95,7 @@ df.select("name", "age").groupBy("age").count().explain(True)
 ---
 
 ## Join Optimization
+
 ```python
 # Join with broadcast hint
 from pyspark.sql.functions import broadcast
@@ -102,6 +105,7 @@ df1.join(broadcast(df2), "key")
 ---
 
 ## Column Pruning Example
+
 ```python
 # Before: SELECT * FROM table
 # After: SELECT id, name FROM table WHERE age > 25
@@ -116,6 +120,7 @@ df.select("id", "name").filter("age > 25")
 ---
 
 ## Statistics Collection
+
 ```python
 # Analyze table to collect statistics
 spark.sql("ANALYZE TABLE my_table COMPUTE STATISTICS")
@@ -124,6 +129,7 @@ spark.sql("ANALYZE TABLE my_table COMPUTE STATISTICS")
 ---
 
 ## Column Statistics
+
 ```python
 # Collect column-level statistics
 spark.sql("ANALYZE TABLE my_table COMPUTE STATISTICS FOR COLUMNS id, name")
@@ -132,6 +138,7 @@ spark.sql("ANALYZE TABLE my_table COMPUTE STATISTICS FOR COLUMNS id, name")
 ---
 
 ## User-Defined Functions
+
 ```python
 from pyspark.sql.functions import udf
 from pyspark.sql.types import StringType
@@ -152,6 +159,7 @@ def upper_custom(s):
 ---
 
 ## Vectorized UDFs
+
 ```python
 from pyspark.sql.functions import pandas_udf
 from pyspark.sql.types import StringType
@@ -169,6 +177,7 @@ def upper_vectorized(s):
 ---
 
 ## Data Sources API
+
 ```python
 # Read from external source
 df = spark.read.format("jdbc")
@@ -188,6 +197,7 @@ df = spark.read.format("jdbc")
 ---
 
 ## Data Source Options
+
 ```python
 # Parquet with specific options
 df.write.format("parquet")
@@ -212,6 +222,7 @@ df.write.format("parquet")
 ---
 
 ## Query Performance
+
 ```python
 # Cache frequently accessed data
 df.cache()
@@ -235,6 +246,7 @@ spark.sql.shuffle.partitions=200
 ---
 
 ## JDBC Optimization
+
 ```python
 # Parallel read configuration
 properties = {
@@ -248,6 +260,7 @@ properties = {
 ---
 
 ## Schema Handling
+
 ```python
 # Define explicit schema
 from pyspark.sql.types import *
@@ -268,6 +281,7 @@ schema = StructType([
 ---
 
 ## Query Plan Caching
+
 ```python
 # Enable query plan caching
 spark.catalog.cacheTable("frequently_used")
@@ -281,6 +295,7 @@ spark.catalog.cacheTable("frequently_used")
 ---
 
 ## Cost Model Tuning
+
 ```python
 spark.conf.set("spark.sql.cbo.enabled", "true")
 spark.conf.set("spark.sql.cbo.joinReorder.enabled", "true")
@@ -297,6 +312,7 @@ spark.conf.set("spark.sql.cbo.joinReorder.enabled", "true")
 ---
 
 ## Adaptive Query Execution
+
 ```python
 # Enable adaptive query execution
 spark.conf.set("spark.sql.adaptive.enabled", "true")
@@ -318,6 +334,7 @@ spark.conf.set("spark.sql.adaptive.enabled", "true")
 ---
 
 ## Window Function Optimization
+
 ```python
 # Efficient window function
 windowSpec = Window.partitionBy("department").orderBy("salary")
@@ -327,6 +344,7 @@ df.withColumn("rank", rank().over(windowSpec))
 ---
 
 ## Subquery Handling
+
 ```python
 # Correlated subquery optimization
 df1.join(df2, df1.id == df2.id).where(df2.value > df1.value)
@@ -348,6 +366,7 @@ df1.join(df2, df1.id == df2.id).where(df2.value > df1.value)
 ---
 
 ## Error Handling
+
 ```python
 # Handle corrupt records
 df = spark.read.option("mode", "PERMISSIVE")

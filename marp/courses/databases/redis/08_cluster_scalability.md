@@ -172,6 +172,7 @@ Requirements for Redis Cluster setup:
     cluster-config-file nodes.conf
     cluster-node-timeout 5000
     ```
+
 1. **Persistence**: Same configuration on all nodes
 1. **Memory**: Sufficient memory for data + overhead
 
@@ -376,6 +377,7 @@ Important: Never remove a master with assigned slots!
     - Multiple nodes agree (objective down)
     - Replica with highest replication offset becomes master
 1. Manual failover:
+
    ```bash
     # On a replica:
     CLUSTER FAILOVER
@@ -398,6 +400,7 @@ Cluster fails when:
 ## Redis Cluster Availability - Configuration
 
 Configuration option:
+
 ```conf
 # Allow writes when some slots not covered
 cluster-require-full-coverage no

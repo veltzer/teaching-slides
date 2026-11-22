@@ -238,6 +238,7 @@ spark.memory.storageFraction: 0.3
 ---
 
 ## Log Analysis
+
 ```bash
 # Aggregate logs
 yarn logs -applicationId <app_id> > application_logs.txt

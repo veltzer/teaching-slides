@@ -106,6 +106,7 @@ spec:
 ## `DaemonSet` Update Strategies
 
 **RollingUpdate** (default):
+
 ```yaml
 spec:
   updateStrategy:
@@ -116,6 +117,7 @@ spec:
 ```
 
 **OnDelete** (manual control):
+
 ```yaml
 spec:
   updateStrategy:
@@ -193,6 +195,7 @@ spec:
 ## Parallel `Jobs`
 
 **Fixed completion count:**
+
 ```yaml
 apiVersion: batch/v1
 kind: Job

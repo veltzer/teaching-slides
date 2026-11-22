@@ -81,6 +81,7 @@ Basic string instructions:
 - `repne`/`repnz`: Repeat while not equal/not zero
 
 Example:
+
 ```gas
     cld              # Clear direction flag (forward)
     mov $5, %ecx     # Set counter

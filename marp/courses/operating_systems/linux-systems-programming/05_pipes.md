@@ -512,6 +512,7 @@ if (fd == -1 && errno == ENXIO) {
 
 1. **Client-Server** on same machine
 1. **Command line** data passing
+
    ```bash
    mkfifo pipe
    gzip < pipe &
@@ -519,6 +520,7 @@ if (fd == -1 && errno == ENXIO) {
    ```
 
 1. **Video streaming**
+
    ```bash
    mkfifo video.pipe
    ffmpeg -i input.mp4 -f mpegts video.pipe &
@@ -666,6 +668,7 @@ cat /tmp/myfifo
 ## Common Pipe Bugs
 
 ## 1. Deadlock
+
 ```c
 // BAD: Circular wait
 // Parent writes, waits for child
@@ -674,12 +677,14 @@ cat /tmp/myfifo
 ```
 
 ## 2. Not Closing FDs
+
 ```c
 // BAD: EOF never arrives
 // Forgot close(pipefd[1]) in reader
 ```
 
 ## 3. SIGPIPE Crash
+
 ```c
 // BAD: Default SIGPIPE kills process
 write(pipefd[1], data, size);  // Boom!
@@ -690,17 +695,20 @@ write(pipefd[1], data, size);  // Boom!
 ## Best Practices
 
 1. **Always close unused ends**
+
    ```c
    close(pipefd[write_end]);  // In reader
    close(pipefd[read_end]);   // In writer
    ```
 
 1. **Handle SIGPIPE**
+
    ```c
    signal(SIGPIPE, SIG_IGN);
    ```
 
 1. **Check return values**
+
    ```c
    if (read(fd, buf, size) == -1) {
        perror("read");
@@ -719,6 +727,7 @@ write(pipefd[1], data, size);  // Boom!
 ## Performance Tips
 
 1. **Adjust pipe size** for throughput
+
    ```c
    fcntl(fd, F_SETPIPE_SZ, 1048576);
    ```

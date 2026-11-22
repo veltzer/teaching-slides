@@ -121,6 +121,7 @@ DNS stores various types of records, each serving a different purpose.
 The most fundamental DNS records -- they map domain names to IP addresses.
 
 **A Record** (IPv4):
+
 ```bash
 $ dig example.com A +short
 93.184.216.34
@@ -132,6 +133,7 @@ example.com.        3600    IN    A    93.184.216.34
 ```
 
 **AAAA Record** (IPv6):
+
 ```bash
 $ dig example.com AAAA +short
 2606:2800:220:1:248:1893:25c8:1946
@@ -143,6 +145,7 @@ example.com.        3600    IN    AAAA    2606:2800:220:1:248:1893:25c8:1946
 ```
 
 A domain can have multiple A records for load balancing (round-robin DNS):
+
 ```bash
 $ dig google.com A +short
 142.250.80.46
@@ -172,6 +175,7 @@ $ dig www.example.com
 www.example.com.    3600    IN    CNAME   example.com.
 example.com.        3600    IN    A       93.184.216.34
 ```
+
 **Important CNAME rules:**
 - A CNAME cannot coexist with other record types for the same name
 - A CNAME cannot be at the zone apex (e.g., example.com itself)
@@ -182,6 +186,7 @@ example.com.        3600    IN    A       93.184.216.34
 ## MX Records: Example
 
 MX (Mail Exchange) records direct email for a domain to the correct mail servers.
+
 ```bash
 $ dig example.com MX
 ;; ANSWER SECTION:
@@ -189,6 +194,7 @@ example.com.    3600    IN    MX    10 mail1.example.com.
 example.com.    3600    IN    MX    20 mail2.example.com.
 example.com.    3600    IN    MX    30 mail3.example.com.
 ```
+
 The number before the server name is the **priority** (lower = higher priority).
 
 ---
@@ -212,12 +218,14 @@ TXT records hold arbitrary text data. Widely used for domain verification and em
 **Common uses:**
 
 1. **SPF** (Sender Policy Framework) -- specifies which servers can send email for your domain:
+
 ```bash
 $ dig example.com TXT +short
 "v=spf1 include:_spf.google.com ~all"
 ```
 
 1. **DKIM** (DomainKeys Identified Mail) -- email authentication via cryptographic signatures:
+
 ```bash
 $ dig google._domainkey.example.com TXT +short
 "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA..."
@@ -228,12 +236,14 @@ $ dig google._domainkey.example.com TXT +short
 ## TXT Records (cont.)
 
 1. **DMARC** -- policy for handling email that fails SPF/DKIM:
+
 ```bash
 $ dig _dmarc.example.com TXT +short
 "v=DMARC1; p=reject; rua=mailto:dmarc@example.com"
 ```
 
 1. **Domain verification** (Google, Microsoft, Let's Encrypt):
+
 ```bash
 $ dig example.com TXT +short
 "google-site-verification=abc123..."
@@ -244,12 +254,14 @@ $ dig example.com TXT +short
 ## NS Records: Example
 
 NS (Name Server) records delegate a DNS zone to specific authoritative name servers.
+
 ```bash
 $ dig example.com NS
 ;; ANSWER SECTION:
 example.com.    86400    IN    NS    a.iana-servers.net.
 example.com.    86400    IN    NS    b.iana-servers.net.
 ```
+
 NS records form the delegation chain from root to your domain:
 
 ---
@@ -371,6 +383,7 @@ DNS resolution can happen in two modes:
 ## Recursive vs Iterative Resolution: Example
 
 **Iterative Resolution** -- each server returns the next server to ask:
+
 ```misc
 Client asks Root:    "Where is www.example.com?"
 Root responds:       "I don't know, but ask .com NS at 192.5.6.30"
@@ -379,6 +392,7 @@ Client asks .com:    "Where is www.example.com?"
 Client asks example.com NS: "Where is www.example.com?"
 example.com responds:       "Here: 93.184.216.34"
 ```
+
 In practice, your computer uses recursive resolution (asking your configured DNS resolver), and the resolver uses iterative resolution to walk the hierarchy.
 
 ---
@@ -514,6 +528,7 @@ options timeout:2 attempts:3 rotate  # Options
 ### /etc/nsswitch.conf
 
 Controls the order of name resolution:
+
 ```bash
 $ grep hosts /etc/nsswitch.conf
 hosts: files dns mymachines myhostname
@@ -671,6 +686,7 @@ DNSSEC (DNS Security Extensions) adds cryptographic signatures to DNS records to
 - **DNSKEY**: Contains the public key used to verify signatures
 - **DS**: Delegation Signer -- links parent zone to child zone keys
 - **NSEC/NSEC3**: Proves a record does not exist (authenticated denial)
+
 ```bash
 # Check if a domain uses DNSSEC
 $ dig example.com +dnssec +short
@@ -832,6 +848,7 @@ _sip._tcp  IN  SRV  10 60 5060 sip.example.com.
 
 ### Round-Robin DNS
 Multiple A records for the same name -- clients get different IPs in rotation:
+
 ```bash
 $ dig loadbalanced.example.com A
 ;; ANSWER SECTION:

@@ -185,6 +185,7 @@ image = pipe("A mountain landscape in <my-art-style>").images[0]
 | Textual Inv. | 1 embedding | ~3 KB | ★★★☆☆ | 30-60 min | Yes |
 
 **Composability:**
+
 ```misc
 Textual Inversion allows combining concepts:
   "<my-dog> sitting in <my-room> painted by <my-style>"

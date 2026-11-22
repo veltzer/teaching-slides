@@ -187,6 +187,7 @@ Moving changes from newer versions to older versions:
 - Customer-specific patches
 
 **Cherry-pick approach:**
+
 ```bash
 # Apply specific commit to older branch
 git checkout release/v1.0
@@ -194,6 +195,7 @@ git cherry-pick <commit-hash-from-main>
 ```
 
 **Merge approach:**
+
 ```bash
 # Create patch branch from older version
 git checkout -b hotfix/security-patch release/v1.0
@@ -554,6 +556,7 @@ Integrating automated testing and deployment:
 `Jenkins` can automate many `Git` workflow steps:
 
 **Pipeline triggers:**
+
 ```groovy
 pipeline {
     agent any
@@ -595,6 +598,7 @@ pipeline {
 Pull requests enable code review and discussion before integration:
 
 **Creating effective pull requests:**
+
 ```bash
 # Prepare your branch
 git checkout feature/user-authentication
@@ -660,6 +664,7 @@ git push origin HEAD:refs/for/main
 Integrate testing at multiple workflow points:
 
 **Pre-commit hooks:**
+
 ```bash
 #!/bin/sh
 # .git/hooks/pre-commit
@@ -767,6 +772,7 @@ git push origin main --tags
 Managing workflows across multiple repositories:
 
 **Microservices architecture:**
+
 ```bash
 # Each service has its own repository
 user-service/
@@ -864,6 +870,7 @@ npm run build:backend
 ## Workflow Automation Tools
 
 **GitHub Actions:**
+
 ```yaml
 name: CI/CD Pipeline
 on:
@@ -894,6 +901,7 @@ jobs:
 ## Workflow Automation Tools: GitLab CI
 
 **GitLab CI/CD:**
+
 ```yaml
 stages:
   - test
@@ -941,6 +949,7 @@ deploy_production:
     - Rollback procedures
 
 **Documentation format:**
+
 ```markdown
 # Development Workflow
 
@@ -1024,6 +1033,7 @@ deploy_production:
 ## Migrating Between Workflows
 
 **From centralized to feature branch:**
+
 ```bash
 # Train team on branching
 # Implement branch protection
@@ -1032,6 +1042,7 @@ deploy_production:
 ```
 
 **From Git Flow to GitHub Flow:**
+
 ```bash
 # Simplify branch structure
 # Remove unnecessary branches
@@ -1074,6 +1085,7 @@ deploy_production:
     - Measure effectiveness
 
 **Example custom workflow:**
+
 ```bash
 # Company-specific branch naming
 epic/PROJ-123-user-management

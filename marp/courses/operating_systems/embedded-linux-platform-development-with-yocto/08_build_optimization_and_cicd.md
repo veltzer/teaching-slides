@@ -344,6 +344,7 @@ pipeline {
 ## GitLab CI/CD
 
 `.gitlab-ci.yml`:
+
 ```yaml
 variables:
   DL_DIR: /cache/downloads

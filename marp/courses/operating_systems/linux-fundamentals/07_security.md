@@ -79,10 +79,13 @@ wc -l /etc/passwd
 ## The `/etc/shadow` File: Example
 
 Structure:
+
 ```misc
 username:password:lastchg:min:max:warn:inactive:expire:
 ```
+
 Example:
+
 ```bash
 john:$6$xyz...:18900:0:99999:7:::
 ```
@@ -214,6 +217,7 @@ chmod 400 file.txt
 ## Special Permissions: Example
 
 Examples:
+
 ```bash
 # Set SUID
 chmod u+s file.txt
@@ -237,6 +241,7 @@ chmod 1755 directory
 ## The umask Command: Example
 
 Common umask values:
+
 ```bash
 # View current umask
 umask
@@ -312,6 +317,7 @@ groups john
 ## Advanced Security Topics: Example
 
 Example with ACLs:
+
 ```bash
 # Set ACL
 setfacl -m u:john:rx file.txt

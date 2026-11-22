@@ -118,6 +118,7 @@ audience:
 - Often impersonates legal proceedings, regulatory bodies, or other executives
 
 **Example whaling email:**
+
 ```c
 From: legal-department@company-legal-notice.com
 To: ceo@company.com

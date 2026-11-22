@@ -65,6 +65,7 @@ assembler = VectorAssembler(
 ---
 
 ## Advanced Feature Processing
+
 ```python
 from pyspark.ml.feature import StandardScaler, PCA
 
@@ -77,6 +78,7 @@ scaler = StandardScaler(
 ---
 
 ## Pipeline Construction
+
 ```python
 from pyspark.ml import Pipeline
 
@@ -90,6 +92,7 @@ pipeline = Pipeline(stages=[
 ---
 
 ## Custom Transformers
+
 ```python
 from pyspark.ml import Transformer
 from pyspark.ml.param.shared import HasInputCol, HasOutputCol
@@ -107,6 +110,7 @@ class CustomTransformer(Transformer, HasInputCol, HasOutputCol):
 ---
 
 ## Hyperparameter Tuning
+
 ```python
 from pyspark.ml.tuning import ParamGridBuilder
 
@@ -119,6 +123,7 @@ paramGrid = ParamGridBuilder()\
 ---
 
 ## Cross Validation
+
 ```python
 from pyspark.ml.tuning import CrossValidator
 
@@ -145,6 +150,7 @@ cv = CrossValidator(
 ---
 
 ## Custom Evaluator
+
 ```python
 from pyspark.ml.evaluation import Evaluator
 
@@ -156,6 +162,7 @@ class CustomEvaluator(Evaluator):
 ---
 
 ## Model Selection
+
 ```python
 # Get best model from cross validation
 bestModel = cvModel.bestModel
@@ -190,6 +197,7 @@ loaded_model = PipelineModel.load("hdfs://model/path")
 ---
 
 ## Ensemble Methods
+
 ```python
 from pyspark.ml.classification import RandomForestClassifier
 
@@ -207,6 +215,7 @@ rf = RandomForestClassifier(
 ---
 
 ## Custom Algorithms
+
 ```python
 from pyspark.ml.classification import Classifier
 
@@ -218,6 +227,7 @@ class CustomClassifier(Classifier):
 ---
 
 ## Online Learning
+
 ```python
 # Streaming model updates
 for batch in streaming_data:
@@ -240,6 +250,7 @@ for batch in streaming_data:
 ---
 
 ## Monitoring ML Pipelines
+
 ```python
 # Log metrics
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
@@ -263,6 +274,7 @@ accuracy = evaluator.evaluate(predictions)
 ---
 
 ## Pipeline Optimization
+
 ```python
 # Cache frequently used datasets
 transformed_data = pipeline.fit(train_data)\
@@ -285,6 +297,7 @@ transformed_data = pipeline.fit(train_data)\
 ---
 
 ## Model Registry
+
 ```python
 # Register model in MLflow
 mlflow.spark.log_model(spark_model, "model")
@@ -306,6 +319,7 @@ mlflow.spark.log_model(spark_model, "model")
 ---
 
 ## Deployment Strategies
+
 ```python
 # Rolling deployment
 def deploy_model(new_model, old_model):
@@ -316,6 +330,7 @@ def deploy_model(new_model, old_model):
 ---
 
 ## Error Handling
+
 ```python
 try:
     predictions = model.transform(dataset)
@@ -339,6 +354,7 @@ except Exception as e:
 ---
 
 ## Automated ML
+
 ```python
 # AutoML example
 from pyspark.ml.tuning import TrainValidationSplit
@@ -364,6 +380,7 @@ automl = TrainValidationSplit(
 ---
 
 ## Streaming Predictions
+
 ```python
 # Streaming prediction pipeline
 def process_stream(batch_df, epoch_id):
@@ -387,6 +404,7 @@ def process_stream(batch_df, epoch_id):
 ---
 
 ## Debugging Techniques
+
 ```python
 # Debug transformation
 debug_df = transformer.transform(input_df)

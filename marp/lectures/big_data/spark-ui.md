@@ -62,6 +62,7 @@ audience:
 ---
 
 ## Stage Information
+
 ```scala
 // Example operation showing multiple stages
 df.groupBy("column")
@@ -93,6 +94,7 @@ df.groupBy("column")
 ---
 
 ## Executor Details
+
 ```scala
 // Configuration affecting executors
 spark.executor.memory
@@ -127,6 +129,7 @@ spark.executor.instances
 ---
 
 ## Port Management
+
 ```bash
 # Default ports
 4040 - First application
@@ -137,6 +140,7 @@ spark.executor.instances
 ---
 
 ## Accessing Remote UI
+
 ```bash
 ssh -L 4040:localhost:4040 user@cluster
 ```
@@ -144,6 +148,7 @@ ssh -L 4040:localhost:4040 user@cluster
 ---
 
 ## Configuration Options
+
 ```scala
 spark.conf.set("spark.ui.port", "4050")
 spark.conf.set("spark.ui.enabled", true)
@@ -173,6 +178,7 @@ spark.conf.set("spark.ui.enabled", true)
 ---
 
 ## Task Metrics
+
 ```scala
 // Operations generating tasks
 df.repartition(10)
@@ -220,6 +226,7 @@ df.repartition(10)
 ---
 
 ## History Server
+
 ```bash
 ./sbin/start-history-server.sh
 ```

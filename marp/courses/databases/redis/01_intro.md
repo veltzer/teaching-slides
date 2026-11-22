@@ -82,6 +82,7 @@ audience:
 ## Redis Installation
 
 1. **Linux/macOS**:
+
 ```bash
 sudo apt-get install redis-server  # Debian/Ubuntu
 brew install redis                 # macOS
@@ -93,6 +94,7 @@ brew install redis                 # macOS
     - Use Redis Labs Windows port (unofficial)
 
 1. **Docker**:
+
 ```bash
 docker run --name redis -p 6379:6379 -d redis
 ```
@@ -102,17 +104,20 @@ docker run --name redis -p 6379:6379 -d redis
 ## Redis CLI Basics
 
 Connect to Redis server:
+
 ```bash
 redis-cli
 ```
 
 Test connection:
+
 ```bash
 127.0.0.1:6379> PING
 PONG
 ```
 
 Get server info:
+
 ```bash
 127.0.0.1:6379> INFO
 # Server
@@ -148,6 +153,7 @@ Key configurations:
 - Maximum size: 512MB
 
 Basic operations:
+
 ```bash
 SET key value
 GET key
@@ -162,6 +168,7 @@ STRLEN key
 ## Working with Strings
 
 Examples:
+
 ```bash
 127.0.0.1:6379> SET greeting "Hello Redis"
 OK
@@ -184,6 +191,7 @@ OK
 - Operations on both ends (head and tail)
 
 Basic operations:
+
 ```bash
 LPUSH key value [value ...]
 RPUSH key value [value ...]
@@ -197,6 +205,7 @@ LRANGE key start stop
 ## Working with Lists
 
 Examples:
+
 ```bash
 127.0.0.1:6379> LPUSH tasks "Send email"
 (integer) 1
@@ -219,6 +228,7 @@ Examples:
 - Set operations: union, intersection, difference
 
 Basic operations:
+
 ```bash
 SADD key member [member ...]
 SREM key member [member ...]
@@ -233,6 +243,7 @@ SUNION key [key ...]
 ## Working with Sets
 
 Examples:
+
 ```bash
 127.0.0.1:6379> SADD tags "redis" "database" "nosql"
 (integer) 3
@@ -255,6 +266,7 @@ Examples:
 - Fast operations by score or position
 
 Basic operations:
+
 ```bash
 ZADD key score member [score member ...]
 ZRANGE key start stop [WITHSCORES]
@@ -267,6 +279,7 @@ ZREM key member [member ...]
 ## Working with Sorted Sets
 
 Examples:
+
 ```bash
 127.0.0.1:6379> ZADD leaderboard 100 "alice"
 (integer) 1
@@ -292,6 +305,7 @@ Examples:
 - Efficient for representing objects
 
 Basic operations:
+
 ```bash
 HSET key field value [field value ...]
 HGET key field
@@ -305,6 +319,7 @@ HEXISTS key field
 ## Working with Hashes
 
 Examples:
+
 ```bash
 127.0.0.1:6379> HSET user:1000 username "john" email "john@example.com" visits 10
 (integer) 3
@@ -324,6 +339,7 @@ Examples:
 ## Redis Key Management
 
 Key operations:
+
 ```bash
 EXISTS key [key ...]
 DEL key [key ...]
@@ -401,6 +417,7 @@ Security considerations:
 ## Redis Monitoring
 
 Key commands:
+
 ```bash
 MONITOR  # Stream of commands (high overhead)
 INFO     # Server statistics

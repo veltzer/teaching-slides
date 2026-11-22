@@ -834,6 +834,7 @@ ss -tlnp
 ## LDAP/NSS Overview: Example
 
 `NSS` (Name Service Switch) lets applications resolve users, groups, and hosts from multiple backends.
+
 ```bash
 # /etc/nsswitch.conf with LDAP
 passwd: files ldap

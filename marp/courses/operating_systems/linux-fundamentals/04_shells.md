@@ -125,6 +125,7 @@ set files = `ls`
 ## Glob Patterns: Example
 
 Examples:
+
 ```bash
 # List all text files
 ls *.txt
@@ -145,6 +146,7 @@ ls [a-z]*.txt
 ## Input/Output Redirection: Example
 
 Examples:
+
 ```bash
 # Redirect input
 sort < input.txt
@@ -201,6 +203,7 @@ unalias ll
 ## Pipes: Example
 
 Examples:
+
 ```bash
 # Count files
 ls | wc -l
@@ -256,13 +259,16 @@ history
 ## Session Initialization: Example
 
 Files for Bourne Family:
+
 ```bash
 /etc/profile            # System-wide
 ~/.profile             # User login
 ~/.bashrc              # Interactive bash
 ~/.bash_profile        # Login specific
 ```
+
 Files for C Shell Family:
+
 ```bash
 /etc/csh.cshrc         # System-wide
 ~/.cshrc               # User specific

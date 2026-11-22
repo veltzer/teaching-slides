@@ -773,6 +773,7 @@ def retry(attempts=3):
 ## Practical Examples
 
 ## Complete Decorator Example: Setup and Signature
+
 ```python
 import time
 import functools

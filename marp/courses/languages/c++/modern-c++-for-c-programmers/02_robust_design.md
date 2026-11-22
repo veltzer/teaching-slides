@@ -22,6 +22,7 @@
 ## Single Responsibility Principle (cont.)
 
 Bad approach:
+
 ```cpp
 class UserManager {
 public:
@@ -35,6 +36,7 @@ public:
 ```
 
 Better approach:
+
 ```cpp
 class UserManager {
 public:
@@ -75,6 +77,7 @@ public:
 ## Reducing Complexity: Example
 
 Before:
+
 ```cpp
 void processOrder(Order* o, bool applyDiscount, int discountType,
                  double discountValue, bool calculateTax,
@@ -107,6 +110,7 @@ void processOrder(Order* o, bool applyDiscount, int discountType,
 ## Reducing Complexity: Example (cont.)
 
 After:
+
 ```cpp
 enum class DiscountType { Fixed, Percentage };
 
@@ -246,6 +250,7 @@ public:
 ## Keeping Header Files Clean: Example
 
 Before:
+
 ```cpp
 // customer.h
 #include <string>
@@ -274,6 +279,7 @@ private:
 ## Keeping Header Files Clean: Example (cont.)
 
 After:
+
 ```cpp
 // customer.h
 #pragma once
@@ -370,6 +376,7 @@ private:
 ## Coding Style: Naming Conventions
 
 Different styles:
+
 ```cpp
 // Snake case (common for variables and functions in C++)
 int items_count = 0;
@@ -390,6 +397,7 @@ const int MAX_RETRY_COUNT = 3;
 ```
 
 Style consistency:
+
 ```cpp
 // Inconsistent - hard to read and maintain
 int itemsCount = 0;

@@ -208,12 +208,14 @@ def plan_and_execute(task):
 ## The Memory Problem: Example
 
 `LLM`s have no persistent memory — each API call starts fresh:
+
 ```misc
 Call 1: User: "My name is Alice"
         AI:   "Nice to meet you, Alice!"
 Call 2: User: "What's my name?"
         AI:   "I don't know your name."  ← No memory!
 ```
+
 **Solutions:**
 
 ---

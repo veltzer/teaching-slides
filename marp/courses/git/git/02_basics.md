@@ -31,12 +31,14 @@ audience:
 ## Installing Git
 
 ### Linux (Debian/Ubuntu)
+
 ```bash
 sudo apt-get update
 sudo apt-get install git
 ```
 
 ### Linux (Fedora/RHEL)
+
 ```bash
 sudo dnf install git
 # or
@@ -44,6 +46,7 @@ sudo yum install git
 ```
 
 ### macOS
+
 ```bash
 # With Homebrew
 brew install git
@@ -364,6 +367,7 @@ git commit -S -m "Signed commit"
 ## Commit Message Examples
 
 ## Good ✅
+
 ```template
 Fix race condition in user session handler
 
@@ -375,12 +379,15 @@ Fixes #456
 ```
 
 ## Bad ❌
+
 ```template
 updated stuff
 ```
+
 ```template
 Fixed bug
 ```
+
 ```template
 Changes
 ```
@@ -433,6 +440,7 @@ git log --follow file.txt
 ```
 
 ### Output example
+
 ```output
 a3d8f2c - John Doe, 2 hours ago : Add login feature
 b7c9e1a - Jane Smith, 5 hours ago : Fix database connection
@@ -722,6 +730,7 @@ git config --global core.excludesfile ~/.gitignore_global
 ## Common Gitignore Templates
 
 **Node.js project:**
+
 ```gitignore
 node_modules/
 npm-debug.log*
@@ -731,6 +740,7 @@ dist/
 ```
 
 **Python project:**
+
 ```gitignore
 __pycache__/
 *.py[cod]
@@ -740,6 +750,7 @@ venv/
 ```
 
 **IDE/Editor:**
+
 ```gitignore
 .vscode/
 .idea/
@@ -827,21 +838,25 @@ git push origin main
 ## Troubleshooting Common Issues
 
 ### Changes not staged for commit
+
 ```bash
 git add <files>  # Stage the files
 ```
 
 ### Your branch is ahead of origin
+
 ```bash
 git push  # Push your commits
 ```
 
 ### Your branch is behind origin
+
 ```bash
 git pull  # Get remote changes
 ```
 
 ### Merge conflict
+
 ```bash
 # Fix conflicts in files, then:
 git add <fixed-files>

@@ -197,6 +197,7 @@ jobs:
 Atlassian's Git platform features:
 
 **Bitbucket Pipelines:**
+
 ```yaml
 # bitbucket-pipelines.yml
 image: python:3.9
@@ -254,6 +255,7 @@ for repo in response.json()['values']:
 GitLab's DevOps platform capabilities:
 
 **GitLab CI/CD:**
+
 ```yaml
 # .gitlab-ci.yml
 stages:

@@ -98,6 +98,7 @@ setfacl -b /var/log/application.log
 ## PAM (Pluggable Authentication Modules): Example
 
 PAM controls authentication on Linux systems:
+
 ```bash
 # /etc/pam.d/common-password - Password policy configuration
 # Require minimum length 12, complexity rules
@@ -181,6 +182,7 @@ Tools for automated compliance checking:
 - **OpenSCAP**: Open-source compliance scanner
 - **Lynis**: Security auditing tool for Unix/Linux
 - **InSpec**: Infrastructure testing framework
+
 ```bash
 # Run Lynis security audit
 sudo lynis audit system

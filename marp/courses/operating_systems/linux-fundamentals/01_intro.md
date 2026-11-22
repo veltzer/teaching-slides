@@ -146,6 +146,7 @@ chmod 777 /some/system/file  # Succeeds
 ## File System Security: Example
 
 Example permission setting:
+
 ```bash
 # Setting permissions
 chmod 755 file.txt  # rwxr-xr-x

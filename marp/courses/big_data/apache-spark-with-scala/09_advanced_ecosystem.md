@@ -626,9 +626,11 @@ spark.ssl.trustStorePassword=${TRUSTSTORE_PASSWORD}
 - **At-rest encryption**: HDFS encryption, cloud storage encryption
 - **In-transit encryption**: SSL/TLS
 - **HDFS transparent encryption**:
+
   ```bash
   hdfs crypto -createZone -keyName sparkKey -path /data/secure
   ```
+
 - **Client-side encryption**: Custom encryption utilities
 
 ---
@@ -636,6 +638,7 @@ spark.ssl.trustStorePassword=${TRUSTSTORE_PASSWORD}
 ## Secrets Management
 
 **Bad practice:**
+
 ```scala
 val jdbcUsername = "admin"  // Hardcoded credentials
 val jdbcPassword = "P@ssw0rd123"
@@ -644,6 +647,7 @@ val jdbcPassword = "P@ssw0rd123"
 ```
 
 **Better approach:**
+
 ```scala
 // Using secret management services
 val secret = spark.sparkContext.hadoopConfiguration

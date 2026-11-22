@@ -58,6 +58,7 @@ audience:
 ## Refactoring Example
 
 Before:
+
 ```python
 def start_engine(car):
     car['running'] = True
@@ -70,6 +71,7 @@ start_engine(car)
 ```
 
 After:
+
 ```python
 class Car:
     def __init__(self):

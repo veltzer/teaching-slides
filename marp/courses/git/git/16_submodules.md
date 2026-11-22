@@ -358,6 +358,7 @@ git commit -m "Remove shared library submodule"
 Different approaches to submodule management:
 
 **Fixed version workflow:**
+
 ```bash
 # Lock to specific versions
 git submodule add https://github.com/user/lib.git lib
@@ -369,6 +370,7 @@ git commit -m "Lock library to v1.2.0"
 ```
 
 **Latest version workflow:**
+
 ```bash
 # Always use latest
 git submodule update --remote --merge
@@ -377,6 +379,7 @@ git commit -m "Update submodules to latest"
 ```
 
 **Development workflow:**
+
 ```bash
 # Work on submodule and parent simultaneously
 cd lib/shared
@@ -577,6 +580,7 @@ steps:
 ```
 
 **Jenkins pipeline:**
+
 ```groovy
 pipeline {
     agent any

@@ -40,6 +40,7 @@ audience:
 ---
 
 ## Jupyter with PySpark
+
 ```python
 from pyspark.sql import SparkSession
 spark = SparkSession.builder \
@@ -50,6 +51,7 @@ spark = SparkSession.builder \
 ---
 
 ## Apache Zeppelin
+
 ```scala
 %spark
 val df = spark.read.json("data.json")
@@ -75,6 +77,7 @@ df = spark.read.json("data.json")
 ---
 
 ## Data Visualization
+
 ```python
 # Example visualization code
 df.groupBy("category") \
@@ -114,6 +117,7 @@ display(df)
 ---
 
 ## Notebook Widgets
+
 ```python
 from ipywidgets import interact
 @interact(column=df.columns)

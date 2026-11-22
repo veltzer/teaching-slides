@@ -39,6 +39,7 @@ audience:
     - `0` - stdin (standard input)
     - `1` - stdout (standard output)
     - `2` - stderr (standard error)
+
 ```c
 int fd = open("/path/to/file", O_RDONLY);
 read(fd, buffer, size);
@@ -72,6 +73,7 @@ close(fd);
 1. User-space buffering
 1. Reduces system calls
 1. `fread()`, `fwrite()`, `fprintf()`
+
 ```c
 FILE *fp = fopen("file.txt", "r");
 fread(buffer, 1, 1024, fp);

@@ -431,6 +431,7 @@ git merge branch1 branch2 branch3
 Automate merge-related tasks with `Git` hooks:
 
 **`pre-merge-commit`:**
+
 ```bash
 #!/bin/sh
 # Run tests before creating merge commit
@@ -438,6 +439,7 @@ npm test || exit 1
 ```
 
 **`post-merge`:**
+
 ```bash
 #!/bin/sh
 # Update dependencies after merge
@@ -456,6 +458,7 @@ bundle install
 ## Advanced Merge Scenarios
 
 **Merge with custom strategy:**
+
 ```bash
 # Use specific strategy
 git merge -s recursive -X theirs feature-branch
@@ -463,6 +466,7 @@ git merge -s octopus branch1 branch2 branch3
 ```
 
 **Squash merge:**
+
 ```bash
 # Combine all commits into one
 git merge --squash feature-branch
@@ -470,6 +474,7 @@ git commit -m "Implement complete feature"
 ```
 
 **No-commit merge:**
+
 ```bash
 # Merge but don't commit
 git merge --no-commit feature-branch
@@ -486,6 +491,7 @@ git merge --no-commit feature-branch
     - Faster merge operations
 
 1. **Use `.gitattributes` for merge strategies:**
+
    ```config
     *.generated merge=ours
     package-lock.json merge=union
@@ -496,6 +502,7 @@ git merge --no-commit feature-branch
 ## Merge Performance Tips (cont.)
 
 3. **Clean up before merging:**
+
    ```bash
     git clean -fd
     git reset --hard HEAD
@@ -525,6 +532,7 @@ git merge --no-commit feature-branch
 ## Troubleshooting Common Merge Issues (cont.)
 
 **"fatal: refusing to merge unrelated histories":**
+
 ```bash
 # Force merge of unrelated repositories
 git merge --allow-unrelated-histories other-branch

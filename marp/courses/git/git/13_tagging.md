@@ -196,6 +196,7 @@ git tag -n5    # First 5 lines
 Consistent naming improves project management:
 
 **Semantic Versioning (SemVer):**
+
 ```bash
 # Format: MAJOR.MINOR.PATCH
 git tag v1.0.0      # Initial release
@@ -205,6 +206,7 @@ git tag v2.0.0      # Breaking changes
 ```
 
 **Pre-release versions:**
+
 ```bash
 git tag v1.0.0-alpha.1
 git tag v1.0.0-beta.2
@@ -216,6 +218,7 @@ git tag v1.0.0-rc.1     # Release candidate
 ## Tag Naming Conventions (cont.)
 
 **Date-based versioning:**
+
 ```bash
 git tag v2024.01.15
 git tag v2024.02.01
@@ -434,6 +437,7 @@ git checkout v1.2.0
 ```
 
 **Gitflow tagging:**
+
 ```bash
 # Tag on main branch after merge
 git checkout main
@@ -443,6 +447,7 @@ git push origin main --tags
 ```
 
 **Hotfix tagging:**
+
 ```bash
 # Create hotfix from previous release
 git checkout -b hotfix-1.2.1 v1.2.0
@@ -457,6 +462,7 @@ git tag -a v1.2.1 -m "Hotfix release 1.2.1"
 Integrate tagging with CI/CD systems:
 
 **GitHub Actions example:**
+
 ```yaml
 name: Release
 on:
@@ -598,6 +604,7 @@ git tag -f v1.0.0 correct-commit-sha
 ## Tag Integration with Tools
 
 **Package managers:**
+
 ```json
 // package.json
 {
@@ -610,6 +617,7 @@ git tag -f v1.0.0 correct-commit-sha
 ```
 
 **Docker integration:**
+
 ```bash
 # Build Docker image from tag
 git checkout v1.0.0
@@ -686,6 +694,7 @@ git tag -a "v$VERSION" -m "Release $VERSION"
 ```
 
 **Verification workflow:**
+
 ```bash
 # Verify tag signature before deployment
 git tag -v v1.0.0 || exit 1

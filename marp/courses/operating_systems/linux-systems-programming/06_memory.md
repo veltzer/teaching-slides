@@ -724,11 +724,13 @@ void overflow() {
 ## Best Practices
 
 1. **Check allocation success**
+
    ```c
    if (ptr == NULL) handle_error();
    ```
 
 1. **Initialize memory**
+
    ```c
    memset(ptr, 0, size);
    ```

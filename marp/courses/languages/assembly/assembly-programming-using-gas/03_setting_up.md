@@ -33,12 +33,14 @@ audience:
 ## Installing Tools on Linux
 
 Ubuntu/Debian:
+
 ```bash
 sudo apt-get update
 sudo apt-get install build-essential gdb
 ```
 
 Fedora/CentOS:
+
 ```bash
 sudo dnf groupinstall "Development Tools"
 sudo dnf install gdb
@@ -49,16 +51,19 @@ sudo dnf install gdb
 ## Verifying Installation
 
 Check GCC version:
+
 ```bash
 gcc --version
 ```
 
 Check GAS version:
+
 ```bash
 as --version
 ```
 
 Check GDB version:
+
 ```bash
 gdb --version
 ```
@@ -78,6 +83,7 @@ Popular choices:
 ## Configuring Vim for Assembly
 
 Add to ~/.vimrc:
+
 ```vim
 syntax on
 set syntax=nasm
@@ -92,6 +98,7 @@ set autoindent
 
 1. Install `x86 and x86_64 Assembly` extension
 1. Configure settings.json:
+
 ```json
 {
     "files.associations": {
@@ -147,6 +154,7 @@ clean:
 ## Basic Assembly Program
 
 src/main.s:
+
 ```gas
 .section .text
 .globl _start
@@ -180,12 +188,14 @@ echo $?
 ## Debugging with GDB
 
 1. Compile with debugging symbols:
+
    ```bash
    as --32 -g -o main.o main.s
    ld -m elf_i386 -o my_program main.o
    ```
 
 1. Start GDB:
+
    ```bash
    gdb ./my_program
    ```

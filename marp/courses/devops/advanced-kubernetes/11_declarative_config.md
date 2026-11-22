@@ -31,6 +31,7 @@ Advanced Kubernetes Course
 ## Imperative vs Declarative
 
 **Imperative** - Tell `Kubernetes` what to do:
+
 ```bash
 kubectl create deployment nginx --image=nginx:1.25
 kubectl scale deployment nginx --replicas=3
@@ -39,6 +40,7 @@ kubectl expose deployment nginx --port=80
 ```
 
 **Declarative** - Tell `Kubernetes` what you want:
+
 ```bash
 kubectl apply -f deployment.yaml
 # Edit the YAML, then:
@@ -199,6 +201,7 @@ secretGenerator:
 ## `Kustomize` Patches
 
 **Strategic merge patch:**
+
 ```yaml
 # overlays/production/replica-patch.yaml
 apiVersion: apps/v1
@@ -210,6 +213,7 @@ spec:
 ```
 
 **JSON patch:**
+
 ```yaml
 # overlays/production/resource-patch.yaml
 apiVersion: apps/v1

@@ -355,6 +355,7 @@ spec:
 ## `NetworkPolicy` Patterns
 
 **Allow from specific namespace:**
+
 ```yaml
 ingress:
 - from:
@@ -364,6 +365,7 @@ ingress:
 ```
 
 **Allow DNS egress (essential!):**
+
 ```yaml
 egress:
 - to:
@@ -376,6 +378,7 @@ egress:
 ```
 
 **CIDR block:**
+
 ```yaml
 egress:
 - to:

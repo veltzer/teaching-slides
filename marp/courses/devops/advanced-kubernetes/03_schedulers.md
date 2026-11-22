@@ -149,6 +149,7 @@ matchExpressions:
 ## Pod Affinity - Co-locate Pods: Example
 
 Place pods near related pods:
+
 ```yaml
 spec:
   affinity:
@@ -174,6 +175,7 @@ spec:
 ## Pod Anti-Affinity - Spread Pods: Example
 
 Keep pods away from each other:
+
 ```yaml
 spec:
   affinity:
@@ -199,12 +201,14 @@ spec:
 ## Taints and Tolerations
 
 **Taint a node** (repel pods):
+
 ```bash
 kubectl taint nodes gpu-node-1 gpu=nvidia:NoSchedule
 kubectl taint nodes maintenance-node key=value:NoExecute
 ```
 
 **Tolerate the taint** (pod-level):
+
 ```yaml
 spec:
   tolerations:

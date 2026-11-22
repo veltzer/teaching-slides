@@ -304,6 +304,7 @@ spec:
 
 ## Kubernetes Network Policies: Example
 Network Policies control traffic flow between Pods (like a firewall for Pods).
+
 ```yaml
 # Allow only specific Pods to access the database
 apiVersion: networking.k8s.io/v1
@@ -445,6 +446,7 @@ WebSocket provides full-duplex communication over a single TCP connection, unlik
 ## WebSocket Protocol: Example
 
 **WebSocket handshake (HTTP upgrade):**
+
 ```http
 Client → Server:
 GET /chat HTTP/1.1
@@ -539,6 +541,7 @@ gRPC uses HTTP/2 for transport and Protocol Buffers for serialization. Much more
 ## gRPC: Modern RPC Framework: Example
 
 **Protocol Buffers definition:**
+
 ```protobuf
 // user.proto
 syntax = "proto3";
@@ -610,6 +613,7 @@ HTTP/3 replaces TCP with QUIC (built on UDP) for better performance.
 - **No head-of-line blocking**: stream loss doesn't block other streams
 - **Connection migration**: survives IP changes (Wi-Fi to cellular)
 - **Built-in encryption**: TLS 1.3 is mandatory and integrated
+
 ```bash
 # Check if a site supports HTTP/3
 $ curl --http3 -I https://cloudflare.com

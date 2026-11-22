@@ -22,6 +22,7 @@ Redis commands are atomic by default:
 - Guarantees consistency for individual operations
 
 Example:
+
 ```bash
 INCR counter  # Atomic - will never result in a partial increment
 HSET user:123 visits 10 name "John"  # Atomic - all fields are set or none
@@ -240,6 +241,7 @@ EVAL script numkeys key [key ...] arg [arg ...]
 - `arg [arg ...]`: Additional arguments
 
 Example:
+
 ```bash
 EVAL "return redis.call('SET', KEYS[1], ARGV[1])" 1 mykey myvalue
 ```
@@ -311,6 +313,7 @@ SCRIPT KILL
 ## Basic Script Examples
 
 **Atomic counter with limit**:
+
 ```lua
 -- KEYS[1]: counter key
 -- ARGV[1]: maximum value
@@ -323,6 +326,7 @@ end
 ```
 
 **Get and delete in one operation**:
+
 ```lua
 -- KEYS[1]: key to get and delete
 local value = redis.call('GET', KEYS[1])

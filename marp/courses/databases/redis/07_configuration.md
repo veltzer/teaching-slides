@@ -74,6 +74,7 @@ redis-cli INFO
 ```
 
 Example:
+
 ```bash
 127.0.0.1:6379> CONFIG GET maxmemory
 1) "maxmemory"
@@ -387,11 +388,13 @@ redis-cli MEMORY STATS
 
 Key expiration and eviction:
 1. **Explicit expiration**:
+
    ```bash
    EXPIRE key seconds
    EXPIREAT key timestamp
    SETEX key seconds value
    ```
+
 1. **Implicit eviction**:
     - When `maxmemory` limit is reached
     - According to `maxmemory-policy`
@@ -469,6 +472,7 @@ redis-cli MEMORY DOCTOR
 ```
 
 Sample script:
+
 ```bash
 redis-cli --scan --pattern 'user:*' | xargs -L 100 redis-cli MEMORY USAGE
 ```

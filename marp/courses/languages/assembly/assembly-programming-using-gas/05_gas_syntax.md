@@ -42,6 +42,7 @@ addl $10, (%ebx)
 ```
 
 Equivalent Intel Syntax:
+
 ```nasm
 mov eax, 42
 add [ebx], 10
@@ -154,6 +155,7 @@ GAS supports two types of comments:
 1. End-of-line comments start with `#` or `//`
 
 Example:
+
 ```gas
 # This is a full-line comment
 movl $1, %eax  // This is an end-of-line comment

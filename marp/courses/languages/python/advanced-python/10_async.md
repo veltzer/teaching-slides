@@ -1430,6 +1430,7 @@ async def test_fetch_with_timeout():
 ## Practical Example
 
 ## Complete Async Web API Client: Class Setup
+
 ```python
 import asyncio
 import aiohttp

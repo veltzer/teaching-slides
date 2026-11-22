@@ -970,6 +970,7 @@ A Python library for processing data with efficiency and elegance.
 ## Installation
 
 ```
+
 ```bash
 pip install mypackage
 ```

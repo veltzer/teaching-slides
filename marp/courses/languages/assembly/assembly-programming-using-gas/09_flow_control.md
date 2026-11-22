@@ -22,6 +22,7 @@ The `jmp` instruction:
 - Can be used for loops, function calls, and more
 
 Example:
+
 ```gas
     jmp label     # Jump to label
     # ...

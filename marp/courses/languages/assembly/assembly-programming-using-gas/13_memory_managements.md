@@ -39,6 +39,7 @@ Typical memory layout of a program:
 - Lifetime is the entire program execution
 
 Example:
+
 ```gas
 .data
     static_int: .long 42
@@ -55,6 +56,7 @@ Example:
 - Local variables, function parameters
 
 Example:
+
 ```gas
     sub $16, %esp      # Allocate 16 bytes on stack
     mov $42, (%esp)    # Use allocated memory
@@ -112,6 +114,7 @@ Advantages:
 - Supports file-backed memory mapping
 
 Example:
+
 ```gas
     # Allocate 4096 bytes
     mov $192, %eax     # sys_mmap2
@@ -134,6 +137,7 @@ Example:
 - Use `.align` directive or ensure proper allocation
 
 Example:
+
 ```gas
 .data
     .align 16
@@ -149,6 +153,7 @@ Example:
 - Consider cache line size (typically 64 bytes)
 
 Example of stride-1 access:
+
 ```gas
     mov $0, %ecx
 loop:
@@ -168,6 +173,7 @@ loop:
 - x86 is strongly ordered, but still important for portable code
 
 Example (full barrier):
+
 ```gas
     mfence
 ```

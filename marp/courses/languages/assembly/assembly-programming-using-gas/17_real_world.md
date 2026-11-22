@@ -134,6 +134,7 @@ module_exit(cleanup_module);
 ## Disassembly Example
 
 Original C code:
+
 ```c
 int add(int a, int b) {
     return a + b;
@@ -141,6 +142,7 @@ int add(int a, int b) {
 ```
 
 Disassembled x86 code (GAS / AT&T syntax):
+
 ```gas
 add:
     pushl %ebp
@@ -164,6 +166,7 @@ add:
 ## Buffer Overflow Example
 
 Vulnerable C code:
+
 ```c
 void vulnerable_function(char *input) {
     char buffer[64];

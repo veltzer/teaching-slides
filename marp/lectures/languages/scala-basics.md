@@ -33,6 +33,7 @@ audience:
 ---
 
 ## Setting Up Scala
+
 ```scala
 // Installing via coursier
 cs setup
@@ -44,6 +45,7 @@ scala
 ---
 
 ## Variables
+
 ```scala
 val immutable = 42        // Immutable
 var mutable = "Hello"     // Mutable
@@ -53,6 +55,7 @@ lazy val computed = heavyComputation()
 ---
 
 ## Type System Basics
+
 ```scala
 val explicit: Int = 42
 val inferred = 42         // Type inference
@@ -71,6 +74,7 @@ val nullable: String = null
 ---
 
 ## 6. String Operations I
+
 ```scala
 val name = "World"
 s"Hello $name"            // String interpolation
@@ -80,6 +84,7 @@ f"Pi = ${math.Pi}%.2f"   // Format interpolation
 ---
 
 ## 7. String Operations II
+
 ```scala
 """This is a
   |multiline
@@ -92,6 +97,7 @@ f"Pi = ${math.Pi}%.2f"   // Format interpolation
 ---
 
 ## Basic Control Structures
+
 ```scala
 if (x > 0) "positive" else "negative"
 
@@ -103,6 +109,7 @@ while (condition) {
 ---
 
 ## For Loops - Basic
+
 ```scala
 for (i <- 1 to 5) println(i)
 for (i <- 1 until 5) println(i)
@@ -111,6 +118,7 @@ for (i <- 1 until 5) println(i)
 ---
 
 ## For Comprehensions
+
 ```scala
 for {
   i <- 1 to 3
@@ -121,6 +129,7 @@ for {
 ---
 
 ## Pattern Matching Basics
+
 ```scala
 value match {
   case 0 => "zero"
@@ -132,6 +141,7 @@ value match {
 ---
 
 ## Pattern Matching Advanced
+
 ```scala
 (x, y) match {
   case (0, 0) => "origin"
@@ -144,6 +154,7 @@ value match {
 ---
 
 ## Collections - List
+
 ```scala
 val numbers = List(1, 2, 3)
 val empty = List.empty[Int]
@@ -153,6 +164,7 @@ val cons = 1 :: List(2, 3)
 ---
 
 ## Collections - Set
+
 ```scala
 val unique = Set(1, 2, 3)
 unique + 4    // Add element
@@ -162,6 +174,7 @@ unique - 1    // Remove element
 ---
 
 ## Collections - Map
+
 ```scala
 val dict = Map(
   "one" -> 1,
@@ -173,6 +186,7 @@ dict.get("one")  // Some(1)
 ---
 
 ## Collection Operations I
+
 ```scala
 list.map(_ * 2)
 list.filter(_ > 2)
@@ -182,6 +196,7 @@ list.find(_ == 3)
 ---
 
 ## Collection Operations II
+
 ```scala
 list.foldLeft(0)(_ + _)
 list.reduce(_ + _)
@@ -191,6 +206,7 @@ list.groupBy(_ % 2)
 ---
 
 ## Collection Operations III
+
 ```scala
 list.flatten
 list.flatMap(x => List(x, x))
@@ -200,6 +216,7 @@ list.collect { case x if x > 2 => x * 2 }
 ---
 
 ## Functions - Basics
+
 ```scala
 def add(x: Int, y: Int): Int = x + y
 def greet() = println("Hello")
@@ -208,6 +225,7 @@ def greet() = println("Hello")
 ---
 
 ## Functions - Parameters
+
 ```scala
 def default(x: Int = 0) = x + 1
 def repeated(x: Int*) = x.sum
@@ -217,6 +235,7 @@ def named(x: Int, y: Int) = x + y
 ---
 
 ## Anonymous Functions
+
 ```scala
 val add = (x: Int, y: Int) => x + y
 List(1,2,3).map(x => x * 2)
@@ -226,6 +245,7 @@ List(1,2,3).map(_ * 2)  // Shorthand
 ---
 
 ## Higher-Order Functions
+
 ```scala
 def operate(x: Int, y: Int, f: (Int, Int) => Int) = f(x, y)
 operate(2, 3, _ + _)
@@ -235,6 +255,7 @@ operate(2, 3, _ * _)
 ---
 
 ## Function Composition
+
 ```scala
 val double = (x: Int) => x * 2
 val addOne = (x: Int) => x + 1
@@ -244,6 +265,7 @@ val composed = double.compose(addOne)
 ---
 
 ## Currying
+
 ```scala
 def multiply(x: Int)(y: Int) = x * y
 val timesFive = multiply(5)_
@@ -253,6 +275,7 @@ timesFive(3)  // 15
 ---
 
 ## Classes - Basics
+
 ```scala
 class Person(name: String, age: Int) {
   def greet = s"Hi, I'm $name"
@@ -262,6 +285,7 @@ class Person(name: String, age: Int) {
 ---
 
 ## Classes - Constructor Parameters
+
 ```scala
 class Person(
   val name: String,      // Public field
@@ -272,6 +296,7 @@ class Person(
 ---
 
 ## Case Classes
+
 ```scala
 case class Point(x: Int, y: Int)
 val origin = Point(0, 0)
@@ -281,6 +306,7 @@ val Point(x, y) = origin  // Destructuring
 ---
 
 ## Objects
+
 ```scala
 object Singleton {
   def getInstance = new Instance()
@@ -290,6 +316,7 @@ object Singleton {
 ---
 
 ## Companion Objects
+
 ```scala
 case class Person(name: String)
 object Person {
@@ -301,6 +328,7 @@ object Person {
 ---
 
 ## Traits - Basics
+
 ```scala
 trait Greeting {
   def greet: String
@@ -310,6 +338,7 @@ trait Greeting {
 ---
 
 ## Traits - Implementation
+
 ```scala
 trait Logged {
   def log(msg: String): Unit = println(msg)
@@ -322,6 +351,7 @@ class Service extends Logged {
 ---
 
 ## Inheritance
+
 ```scala
 class Employee(
   name: String,
@@ -333,6 +363,7 @@ class Employee(
 ---
 
 ## Abstract Classes
+
 ```scala
 abstract class Animal {
   def sound: String
@@ -343,6 +374,7 @@ abstract class Animal {
 ---
 
 ## Option Type
+
 ```scala
 val present: Option[String] = Some("value")
 val absent: Option[String] = None
@@ -351,6 +383,7 @@ val absent: Option[String] = None
 ---
 
 ## Option Operations
+
 ```scala
 opt.getOrElse("default")
 opt.map(_.toUpperCase)
@@ -360,6 +393,7 @@ opt.flatMap(x => Some(x.length))
 ---
 
 ## Either Type
+
 ```scala
 def divide(x: Int, y: Int): Either[String, Int] =
   if (y == 0) Left("division by zero")
@@ -369,6 +403,7 @@ def divide(x: Int, y: Int): Either[String, Int] =
 ---
 
 ## Try Type
+
 ```scala
 import scala.util.{Try, Success, Failure}
 val result = Try {
@@ -379,6 +414,7 @@ val result = Try {
 ---
 
 ## Error Handling
+
 ```scala
 try {
   // risky code
@@ -392,6 +428,7 @@ try {
 ---
 
 ## Implicit Parameters
+
 ```scala
 def greet(name: String)(implicit greeting: String) =
   s"$greeting, $name"
@@ -401,6 +438,7 @@ implicit val defaultGreeting: String = "Hello"
 ---
 
 ## Implicit Conversions
+
 ```scala
 implicit class StringOps(s: String) {
   def exclaim: String = s + "!"
@@ -411,6 +449,7 @@ implicit class StringOps(s: String) {
 ---
 
 ## Type Parameters
+
 ```scala
 class Box[T](value: T) {
   def get: T = value
@@ -420,6 +459,7 @@ class Box[T](value: T) {
 ---
 
 ## Variance
+
 ```scala
 class Covariant[+T]
 class Contravariant[-T]
@@ -429,6 +469,7 @@ class Invariant[T]
 ---
 
 ## Type Bounds
+
 ```scala
 def process[T <: Number](value: T): Double
 class Container[T >: String]
@@ -437,6 +478,7 @@ class Container[T >: String]
 ---
 
 ## Lazy Evaluation
+
 ```scala
 lazy val expensive = {
   // computed only when needed
@@ -447,6 +489,7 @@ lazy val expensive = {
 ---
 
 ## By-Name Parameters
+
 ```scala
 def debug(msg: => String) =
   if (logging) println(msg)
@@ -455,6 +498,7 @@ def debug(msg: => String) =
 ---
 
 ## Partial Functions
+
 ```scala
 val sqrt = new PartialFunction[Double, Double] {
   def isDefinedAt(x: Double) = x >= 0
@@ -465,6 +509,7 @@ val sqrt = new PartialFunction[Double, Double] {
 ---
 
 ## Collection Views
+
 ```scala
 val view = List(1,2,3).view
   .map(_ + 1)
@@ -474,6 +519,7 @@ val view = List(1,2,3).view
 ---
 
 ## Futures
+
 ```scala
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -486,6 +532,7 @@ val f = Future {
 ---
 
 ## Promises
+
 ```scala
 import scala.concurrent.Promise
 

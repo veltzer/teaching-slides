@@ -95,6 +95,7 @@ command 2>&1 > file.txt
 ---
 
 ## Visualizing Redirect Order
+
 ```misc
 CORRECT: command > file.txt 2>&1
 

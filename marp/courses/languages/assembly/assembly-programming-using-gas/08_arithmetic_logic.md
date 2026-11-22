@@ -31,6 +31,7 @@ audience:
 - `dec`: Decrement
 
 Example:
+
 ```gas
     mov $10, %eax
     add $5, %eax      # EAX = 15
@@ -48,6 +49,7 @@ Example:
 - `neg`: Negate (two's complement)
 
 Example:
+
 ```gas
     mov $-5, %eax
     imul $-3, %eax    # EAX = 15
@@ -62,6 +64,7 @@ Example:
 - Result stored in EDX:EAX (high:low)
 
 Example:
+
 ```gas
     mov $1000000, %eax
     mov $1000, %ebx
@@ -76,6 +79,7 @@ Example:
 - Quotient stored in EAX, remainder in EDX
 
 Example:
+
 ```gas
     mov $0, %edx
     mov $100, %eax
@@ -93,6 +97,7 @@ Example:
 - `not`: Bitwise NOT
 
 Example:
+
 ```gas
     mov $0b1100, %eax
     and $0b1010, %eax  # EAX = 0b1000
@@ -112,6 +117,7 @@ Example:
 - `ror`: Rotate right
 
 Example:
+
 ```gas
     mov $8, %eax
     shl $2, %eax     # EAX = 32 (8 * 2^2)
@@ -162,6 +168,7 @@ Used to set flags for conditional jumps:
 - `btc`: Bit test and complement
 
 Example:
+
 ```gas
     mov $0b1010, %eax
     bt $1, %eax      # Test bit 1, CF = 1
@@ -180,6 +187,7 @@ SIMD instructions for parallel arithmetic:
 - `divps`: Divide Packed Single-Precision
 
 Example:
+
 ```gas
     movaps (%esi), %xmm0
     movaps (%edi), %xmm1
@@ -198,6 +206,7 @@ x87 FPU instructions for floating-point arithmetic:
 - `fdiv`: Floating-point divide
 
 Example:
+
 ```gas
     flds var1
     fadds var2

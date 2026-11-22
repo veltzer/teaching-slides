@@ -233,6 +233,7 @@ git commit -m "Update README"
 1. **Clean history** - Create meaningful commit history
 
 Example:
+
 ```bash
 # You changed 3 files but want to commit only 2
 git add file1.txt file2.txt
@@ -252,6 +253,7 @@ git commit -m "Feature A implementation"
 1. **Impossible to change anything without Git knowing**
 
 Example SHA-1:
+
 ```misc
 24b9da6552252987aa493b52f8696cd6d3b00373
 ```
@@ -433,6 +435,7 @@ After committing:
 ## Git Commit Messages
 
 ## Good ✅
+
 ```template
 Add user authentication module
 
@@ -442,12 +445,15 @@ Add user authentication module
 ```
 
 ## Bad ❌
+
 ```template
 fixed stuff
 ```
+
 ```template
 asdfasdf
 ```
+
 ```template
 WIP
 ```

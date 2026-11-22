@@ -80,6 +80,7 @@ Key features:
 ## systemd Units: Example
 
 Common unit types:
+
 ```bash
 # Service units
 .service    # System services
@@ -121,6 +122,7 @@ systemctl disable nginx.service
 ## Service Management: Example
 
 Common operations:
+
 ```bash
 # Manage service
 systemctl start service
@@ -164,6 +166,7 @@ WantedBy=multi-user.target
 ## Service File Sections: Example
 
 Common options:
+
 ```ini
 # Unit section
 Description=
@@ -267,6 +270,7 @@ exit 0
 ## Systemd Targets: Example
 
 Target management:
+
 ```bash
 # Get default target
 systemctl get-default
@@ -286,6 +290,7 @@ systemctl isolate graphical.target
 ## Troubleshooting Boot Issues: Example
 
 Debug commands:
+
 ```bash
 # View boot logs
 journalctl -b

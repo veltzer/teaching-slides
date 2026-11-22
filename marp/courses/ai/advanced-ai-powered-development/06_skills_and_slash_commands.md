@@ -234,6 +234,7 @@ chain:
   - skill: create-pr
     params: { draft: false }
 ```
+
 - Each step receives context from the previous one
 - `on_fail` controls flow: `abort`, `skip`, or `warn`
 
@@ -476,6 +477,7 @@ claude skills override review --local
 - User-level skills provide personal defaults across all projects
 - Team-level skills target role-specific workflows
 - Override any inherited skill with a local definition
+
 ```yaml
 # .claude/skills/review.yaml (project override)
 extends: shared/review

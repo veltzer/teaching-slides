@@ -166,6 +166,7 @@ CONFIG_DEBUG_STACK_USAGE=y
 ```
 
 Monitor with:
+
 ```bash
 cat /proc/<pid>/stack
 ```
@@ -239,6 +240,7 @@ echo 1 > /sys/devices/system/cpu/cpu2/online
 ```
 
 Assign RT tasks:
+
 ```bash
 taskset -c 2,3 ./rt_application
 ```
@@ -345,16 +347,19 @@ cat /sys/kernel/debug/tracing/tracing_max_latency
 ### Kernel Static Checkers
 
 1. **Sparse**
+
    ```bash
    make C=1 CHECK=sparse
    ```
 
 1. **Coccinelle**
+
    ```bash
    make coccicheck
    ```
 
 1. **Smatch**
+
    ```bash
    make CHECK="smatch -p=kernel" C=1
    ```

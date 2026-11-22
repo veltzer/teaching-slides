@@ -24,6 +24,7 @@ audience:
 ## Layer Anatomy
 
 Standard layer structure:
+
 ```tree
 meta-custom/
 ├── COPYING.MIT                    # License file

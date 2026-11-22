@@ -100,6 +100,7 @@ audience:
 ## GRUB Installation Locations
 
 ## MBR Systems
+
 ```bash
 # Install to MBR
 grub-install /dev/sda
@@ -109,6 +110,7 @@ grub-install /dev/sda
 ```
 
 ## UEFI Systems
+
 ```bash
 # Install to ESP
 grub-install --target=x86_64-efi --efi-directory=/boot/efi
@@ -151,6 +153,7 @@ GRUB_CMDLINE_LINUX=""
 ```
 
 ## Update configuration
+
 ```bash
 # After editing /etc/default/grub
 update-grub
@@ -652,21 +655,25 @@ tpm2_eventlog /sys/kernel/security/tpm0/binary_bios_measurements
 ## Boot Speed Improvements
 
 1. **Reduce GRUB timeout**
+
    ```bash
    GRUB_TIMEOUT=1
    ```
 
 1. **Disable unnecessary services**
+
    ```bash
    systemctl disable service-name
    ```
 
 1. **Use systemd-analyze**
+
    ```bash
    systemd-analyze critical-chain
    ```
 
 1. **Optimize initramfs**
+
    ```bash
    # Remove unnecessary modules
    update-initramfs -u

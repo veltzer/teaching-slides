@@ -418,6 +418,7 @@ daemon -1 daemon -1 ! - - - Daemon User
 ```
 
 Configuration:
+
 ```bash
 BR2_ROOTFS_USERS_TABLES="board/myboard/users.txt"
 ```
@@ -437,6 +438,7 @@ BR2_ROOTFS_USERS_TABLES="board/myboard/users.txt"
 ```
 
 Configuration:
+
 ```bash
 BR2_ROOTFS_DEVICE_TABLE="board/myboard/device_table.txt"
 ```
@@ -597,11 +599,13 @@ include $(sort $(wildcard $(BR2_EXTERNAL_MYCOMPANY_PATH)/package/*/*.mk))
 ### Optimization Tips
 
 1. **Use ccache**
+
    ```bash
    BR2_CCACHE=y
    ```
 
 1. **Parallel jobs**
+
    ```bash
    BR2_JLEVEL=8
    ```

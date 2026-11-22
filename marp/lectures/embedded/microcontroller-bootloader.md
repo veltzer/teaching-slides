@@ -97,6 +97,7 @@ void relocate_vector_table(void) {
 ```
 
 **Linker script modification needed:**
+
 ```ld
 MEMORY {
     FLASH (rx) : ORIGIN = 0x08004000, LENGTH = 240K
@@ -132,6 +133,7 @@ int main(void) {
 ## Hardware Initialization
 
 **Minimal requirements:**
+
 ```c
 void bootloader_init(void) {
     // System clock (often HSI for reliability)
@@ -367,6 +369,7 @@ Bootloader → Application → Runtime components
 - **Ed25519**: Alternative signature scheme
 
 **Implementation:**
+
 ```c
 // Use hardware crypto if available
 #ifdef STM32_HAS_CRYPTO
@@ -567,6 +570,7 @@ bool apply_differential_update(uint8_t *patch_data, uint32_t patch_size) {
 ## Bootloader Testing Strategy
 
 **Unit Tests:**
+
 ```c
 void test_crc_calculation(void) {
     uint8_t test_data[] = {0x01, 0x02, 0x03, 0x04};
@@ -596,6 +600,7 @@ void test_application_validation(void) {
 ## Debugging Bootloader Issues
 
 **Common Problems:**
+
 ```c
 // Stack overflow detection
 void check_stack_usage(void) {
@@ -625,6 +630,7 @@ bool verify_flash_write(uint32_t address, uint8_t *data, uint32_t size) {
 ## Performance Optimization
 
 **Minimize Boot Time:**
+
 ```c
 // Fast clock setup (HSI instead of HSE+PLL during boot)
 void quick_clock_init(void) {
@@ -713,6 +719,7 @@ bool check_rollback_protection(version_info_t *new_version) {
 ## Bootloader Size Optimization
 
 **Techniques to minimize size:**
+
 ```c
 // Use -Os optimization flag
 // Disable unused features
@@ -968,6 +975,7 @@ const bootloader_info_t __attribute__((section(".bootloader_info")))
 ## Troubleshooting Common Issues
 
 **Boot Loop Issues:**
+
 ```c
 // Detect and handle boot loops
 void check_boot_loop(void) {
@@ -996,6 +1004,7 @@ void check_boot_loop(void) {
 ## Advanced Topics
 
 **Real-Time Operating System Integration:**
+
 ```c
 // FreeRTOS bootloader task
 void bootloader_task(void *parameters) {
@@ -1012,6 +1021,7 @@ void bootloader_task(void *parameters) {
 ```
 
 **Machine Learning Integration:**
+
 ```c
 // Anomaly detection for boot behavior
 bool detect_boot_anomaly(void) {

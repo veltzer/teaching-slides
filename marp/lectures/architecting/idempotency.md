@@ -116,18 +116,21 @@ Same key = same result, regardless of how many times called
 ## Key Generation Strategies
 
 - **Client-generated (Recommended)**
+
 ```javascript
 const key = crypto.randomUUID();
 // 550e8400-e29b-41d4-a716-446655440000
 ```
 
 - **Content-based**
+
 ```python
 import hashlib
 key = hashlib.sha256(json.dumps(request_data, sort_keys=True).encode()).hexdigest()
 ```
 
 - **Timestamp + User ID**
+
 ```python
 key = f"{user_id}:{timestamp}:{hash(request_content)}"
 ```
@@ -843,18 +846,21 @@ def test_idempotent_order_creation():
 ## Common Pitfalls
 
 - **Caching errors**
+
 ```python
 # Wrong - caches 500 errors
 store.commit(key, error_response)
 ```
 
 - **No key validation**
+
 ```python
 # Wrong - accepts any key format
 idempotency_key = request.headers.get('key')
 ```
 
 - **Infinite TTL**
+
 ```python
 # Wrong - keys never expire
 redis_client.set(key, response)  # No expiration
@@ -873,6 +879,7 @@ redis_client.set(key, response)  # No expiration
     - Storage capacity issues
     - Failed key lookups
 - **Logging**
+
   ```python
     logger.info(f"Idempotency key {key}: {'HIT' if cached else 'MISS'}")
   ```
@@ -882,6 +889,7 @@ redis_client.set(key, response)  # No expiration
 ## Advanced Patterns
 
 - **Conditional Idempotency**
+
 ```python
 # Only idempotent for certain operations
 if request.json.get('amount', 0) > 1000:
@@ -889,6 +897,7 @@ if request.json.get('amount', 0) > 1000:
 ```
 
 - **Fingerprinting**
+
 ```python
 # Generate key from request content
 def generate_fingerprint(user_id, request_data):

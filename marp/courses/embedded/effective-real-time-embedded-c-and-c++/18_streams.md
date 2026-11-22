@@ -105,6 +105,7 @@ void processFile(const string& filename) {
 Watch out for these common mistakes:
 
 1. **Forgetting to check file open status**
+
 ```cpp
 // BAD
 ofstream file("data.txt");

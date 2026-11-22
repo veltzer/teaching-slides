@@ -86,6 +86,7 @@ Example:
 - Useful for disassembling binary files
 
 Basic usage:
+
 ```bash
 objdump -d program
 ```
@@ -164,11 +165,13 @@ gprof program gmon.out > analysis.txt
 ## perf Example
 
 Record performance data:
+
 ```bash
 perf record ./program
 ```
 
 Analyze the data:
+
 ```bash
 perf report
 ```
@@ -183,6 +186,7 @@ perf report
 - Callgrind: Call-graph generating cache profiler
 
 Example:
+
 ```bash
 valgrind --tool=callgrind ./program
 ```

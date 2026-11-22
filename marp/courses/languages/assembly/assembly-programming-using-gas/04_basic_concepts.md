@@ -44,6 +44,7 @@ audience:
 - Big Endian vs Little Endian
 
 Example:
+
 ```gas
 section .data
     my_variable dd 0x12345678
@@ -69,6 +70,7 @@ section .data
 ```
 
 Example:
+
 ```gas
 _start:
     mov eax, 5      ; Move 5 into EAX register
@@ -174,6 +176,7 @@ inc eax         ; EAX now contains 7
 - SHL/SHR: Shift left/right
 
 Example:
+
 ```gas
 mov eax, 0b1100
 and eax, 0b1010  ; EAX now contains 0b1000
@@ -189,6 +192,7 @@ and eax, 0b1010  ; EAX now contains 0b1000
 - RET: Return from a function
 
 Example:
+
 ```gas
     cmp eax, 10
     je equal_ten

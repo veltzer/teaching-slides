@@ -38,6 +38,7 @@ audience:
 ---
 
 ## Kubernetes Integration
+
 ```python
 # Kubernetes configuration
 spark.kubernetes.container.image=spark:v3.0
@@ -60,6 +61,7 @@ spark.kubernetes.namespace=spark
 ---
 
 ## Cloud Configuration
+
 ```python
 # AWS EMR configuration
 spark.conf.set(
@@ -84,6 +86,7 @@ spark.conf.set(
 ---
 
 ## Delta Lake Operations
+
 ```python
 # Write to Delta Lake
 df.write.format("delta") \
@@ -99,6 +102,7 @@ df.write.format("delta") \
 ---
 
 ## Time Travel
+
 ```python
 # Read specific version
 df = spark.read.format("delta") \
@@ -117,6 +121,7 @@ df = spark.read.format("delta") \
 ---
 
 ## Delta Operations
+
 ```python
 from delta.tables import *
 deltaTable = DeltaTable.forPath(
@@ -140,6 +145,7 @@ deltaTable = DeltaTable.forPath(
 ---
 
 ## Monitoring Setup
+
 ```python
 # Configure monitoring
 spark.conf.set(
@@ -164,6 +170,7 @@ spark.conf.set(
 ---
 
 ## Authentication Setup
+
 ```python
 # Kerberos configuration
 spark.conf.set(
@@ -188,6 +195,7 @@ spark.conf.set(
 ---
 
 ## Backup Strategies
+
 ```python
 # Backup configuration
 def backup_data():
@@ -211,6 +219,7 @@ def backup_data():
 ---
 
 ## Testing Framework
+
 ```python
 # Unit test example
 def test_transformation():
@@ -234,6 +243,7 @@ def test_transformation():
 ---
 
 ## Resource Planning
+
 ```python
 # Resource configuration
 spark.conf.set(
@@ -258,6 +268,7 @@ spark.conf.set(
 ---
 
 ## Production Pipeline
+
 ```python
 # Pipeline configuration
 pipeline = create_pipeline()
@@ -280,6 +291,7 @@ mlflow.spark.log_model(pipeline, "model")
 ---
 
 ## Code Standards
+
 ```python
 # Example structure
 class SparkJob:
@@ -303,6 +315,7 @@ class SparkJob:
 ---
 
 ## Common Issues
+
 ```python
 # Memory issues
 spark.conf.set(
@@ -327,6 +340,7 @@ spark.conf.set(
 ---
 
 ## Version Management
+
 ```python
 # Version compatibility
 spark.conf.set(
@@ -351,6 +365,7 @@ spark.conf.set(
 ---
 
 ## Cost Management
+
 ```python
 # Cost optimization
 def optimize_resources():

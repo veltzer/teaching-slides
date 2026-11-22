@@ -81,6 +81,7 @@ spec:
 Two types of selectors:
 
 **Equality-based:**
+
 ```yaml
 selector:
   matchLabels:
@@ -89,6 +90,7 @@ selector:
 ```
 
 **Set-based:**
+
 ```yaml
 selector:
   matchExpressions:
@@ -131,11 +133,13 @@ The reconciliation loop runs continuously.
 ## Scaling `ReplicaSets`
 
 **Imperative:**
+
 ```bash
 kubectl scale replicaset web-frontend --replicas=5
 ```
 
 **Declarative:**
+
 ```bash
 kubectl apply -f - <<EOF
 apiVersion: apps/v1
@@ -148,6 +152,7 @@ EOF
 ```
 
 **Verify:**
+
 ```bash
 kubectl get rs web-frontend
 kubectl describe rs web-frontend
@@ -276,12 +281,14 @@ Setting `clusterIP: None` makes it headless - DNS returns individual pod IPs ins
 ## `StatefulSet` Ordering Guarantees
 
 **OrderedReady** (default):
+
 ```misc
 Deploy:  postgres-0 → postgres-1 → postgres-2
 Scale down: postgres-2 → postgres-1 → postgres-0
 ```
 
 **Parallel** (for apps that don't need ordering):
+
 ```yaml
 spec:
   podManagementPolicy: Parallel
@@ -296,6 +303,7 @@ Deploy:  postgres-0, postgres-1, postgres-2 (simultaneously)
 ## `StatefulSet` Update Strategies
 
 **RollingUpdate** (default):
+
 ```yaml
 spec:
   updateStrategy:
@@ -307,6 +315,7 @@ spec:
 With `partition: 1`, only pods with ordinal >= 1 are updated. Great for **canary testing**.
 
 **OnDelete:**
+
 ```yaml
 spec:
   updateStrategy:
@@ -467,6 +476,7 @@ spec:
 ## Readiness Probes: Example
 
 Determines if a container is **ready to receive traffic**. If it fails, the pod is removed from `Service` endpoints.
+
 ```yaml
 spec:
   containers:
@@ -517,6 +527,7 @@ Maximum startup time: `failureThreshold * periodSeconds` = 300 seconds
 ## Probe Types Compared
 
 **HTTP GET:**
+
 ```yaml
 httpGet:
   path: /healthz
@@ -527,12 +538,14 @@ httpGet:
 ```
 
 **TCP Socket:**
+
 ```yaml
 tcpSocket:
   port: 3306
 ```
 
 **Exec Command:**
+
 ```yaml
 exec:
   command:
@@ -542,6 +555,7 @@ exec:
 ```
 
 **gRPC:**
+
 ```yaml
 grpc:
   port: 50051
@@ -573,12 +587,14 @@ spec:
 ```
 
 Or use `maxUnavailable`:
+
 ```yaml
 spec:
   maxUnavailable: 1
 ```
 
 Or percentage:
+
 ```yaml
 spec:
   minAvailable: "75%"

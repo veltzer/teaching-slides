@@ -51,6 +51,7 @@ audience:
 ---
 
 ## Key Transformation Types
+
 ```python
 # mapPartitions example
 def process_partition(iterator):
@@ -68,6 +69,7 @@ def process_partition(iterator):
 ---
 
 ## Aggregate Operations
+
 ```python
 # Complex aggregation
 result = rdd.aggregate(
@@ -80,6 +82,7 @@ result = rdd.aggregate(
 ---
 
 ## Cogroup Operations
+
 ```python
 rdd1 = sc.parallelize([("a", 1), ("b", 2)])
 rdd2 = sc.parallelize([("a", 3), ("a", 4)])
@@ -120,6 +123,7 @@ class DatePartitioner(Partitioner):
 ---
 
 ## Data Skew Handling
+
 ```python
 def balance_partitions(rdd):
     counts = rdd.countByKey()
@@ -135,6 +139,7 @@ def balance_partitions(rdd):
 ---
 
 ## Broadcast Variables Basics
+
 ```python
 lookup_table = {"key1": "value1", "key2": "value2"}
 broadcast_lookup = sc.broadcast(lookup_table)
@@ -143,6 +148,7 @@ broadcast_lookup = sc.broadcast(lookup_table)
 ---
 
 ## Broadcast Variable Usage
+
 ```python
 def process_with_lookup(record):
     return broadcast_lookup.value.get(record, "default")
@@ -161,6 +167,7 @@ result = rdd.map(process_with_lookup)
 ---
 
 ## Accumulators Introduction
+
 ```python
 error_count = sc.accumulator(0)
 warning_count = sc.accumulator(0)
@@ -187,6 +194,7 @@ class SetAccumulator(AccumulatorParam):
 ---
 
 ## Window Function Basics
+
 ```python
 from pyspark.sql.window import Window
 window_spec = Window.partitionBy("department")
@@ -203,6 +211,7 @@ window_spec = Window.partitionBy("department")
 ---
 
 ## Advanced Window Operations
+
 ```python
 window_spec = (Window
     .partitionBy("department")
@@ -213,6 +222,7 @@ window_spec = (Window
 ---
 
 ## Complex Window Example
+
 ```python
 from pyspark.sql import functions as F
 df = df.withColumn(
@@ -229,6 +239,7 @@ df = df.withColumn(
 ---
 
 ## Memory Tuning
+
 ```python
 spark.conf.set("spark.memory.fraction", 0.8)
 spark.conf.set("spark.memory.storageFraction", 0.3)
@@ -245,6 +256,7 @@ spark.conf.set("spark.memory.storageFraction", 0.3)
 ---
 
 ## Network Optimization
+
 ```python
 spark.conf.set("spark.shuffle.compress", "true")
 spark.conf.set("spark.rdd.compress", "true")
@@ -266,6 +278,7 @@ spark.conf.set("spark.rdd.compress", "true")
 ---
 
 ## When to Cache
+
 ```python
 # Expensive computation
 complex_rdd = rdd.map(expensive_function).cache()
@@ -279,6 +292,7 @@ complex_rdd = rdd.map(expensive_function).cache()
 ---
 
 ## Join Optimization
+
 ```python
 # Broadcast join example
 small_df = spark.table("small_table")
@@ -297,6 +311,7 @@ joined = large_df.join(broadcast(small_df), "key")
 ---
 
 ## Data Serialization
+
 ```python
 spark.conf.set("spark.serializer",
     "org.apache.spark.serializer.KryoSerializer")
@@ -318,6 +333,7 @@ spark.conf.set("spark.serializer",
 ---
 
 ## Resource Management
+
 ```python
 spark.conf.set("spark.executor.memory", "4g")
 spark.conf.set("spark.executor.cores", "4")
@@ -334,6 +350,7 @@ spark.conf.set("spark.executor.cores", "4")
 ---
 
 ## Debugging Techniques
+
 ```python
 def debug_function(partition):
     for record in partition:
@@ -351,6 +368,7 @@ debug_rdd = rdd.mapPartitions(debug_function)
 ---
 
 ## Advanced UDF Usage
+
 ```python
 from pyspark.sql.functions import udf
 from pyspark.sql.types import StringType
@@ -384,6 +402,7 @@ def complex_transformation(value):
 ---
 
 ## Advanced Configurations
+
 ```python
 spark.conf.set("spark.sql.adaptive.enabled", "true")
 spark.conf.set("spark.sql.adaptive.skewJoin.enabled", "true")

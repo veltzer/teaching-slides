@@ -210,6 +210,7 @@ kubectl create deployment test --image=nginx --dry-run=client
 ## Imperative vs Declarative
 
 ## Imperative Commands
+
 ```bash
 kubectl create deployment nginx --image=nginx
 kubectl expose deployment nginx --port=80
@@ -217,6 +218,7 @@ kubectl scale deployment nginx --replicas=3
 ```
 
 ## Declarative Approach
+
 ```bash
 kubectl apply -f nginx-deployment.yaml
 kubectl apply -f nginx-service.yaml

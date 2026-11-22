@@ -226,6 +226,7 @@ platform_device_register(&my_device);
    - Future-proof
 
 1. **Check return values**
+
    ```c
    irq = platform_get_irq(pdev, 0);
    if (irq < 0)
@@ -233,6 +234,7 @@ platform_device_register(&my_device);
    ```
 
 1. **Support multiple IRQs**
+
    ```c
    irq = platform_get_irq(pdev, index);
    ```
@@ -812,6 +814,7 @@ domain:  PCI-MSI-0000:00:1c.0
    - Defer work to bottom halves
 
 1. **IRQ Affinity**
+
    ```bash
    echo 2 > /proc/irq/42/smp_affinity_list
    ```

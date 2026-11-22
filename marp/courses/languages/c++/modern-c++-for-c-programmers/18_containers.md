@@ -23,6 +23,7 @@ STL containers are organized into three main categories:
 ## std::vector
 
 Dynamic array that grows as needed:
+
 ```cpp
 std::vector<int> numbers;
 numbers.push_back(10);
@@ -63,6 +64,7 @@ vec.insert(vec.begin(), value);  // O(n)
 ## std::deque
 
 Double-ended queue - efficient insertion/deletion at both ends:
+
 ```cpp
 std::deque<std::string> messages;
 messages.push_front("First");
@@ -87,6 +89,7 @@ messages.pop_back();   // Remove last
 ## std::list
 
 Doubly-linked list for efficient insertion/deletion anywhere:
+
 ```cpp
 std::list<int> numbers = {1, 2, 3, 4, 5};
 
@@ -110,6 +113,7 @@ numbers.remove(3);  // Removes all 3s
 ## std::forward_list
 
 Singly-linked list for memory efficiency:
+
 ```cpp
 std::forward_list<int> flist = {1, 2, 3};
 
@@ -126,6 +130,7 @@ int count = std::distance(flist.begin(), flist.end());
 ## std::array
 
 Fixed-size array with STL interface:
+
 ```cpp
 std::array<int, 5> fixed_array = {1, 2, 3, 4, 5};
 
@@ -150,6 +155,7 @@ static_assert(sizeof(fixed_array) == 5 * sizeof(int));
 ## std::set
 
 Ordered collection of unique elements:
+
 ```cpp
 std::set<int> unique_numbers;
 unique_numbers.insert(3);
@@ -173,6 +179,7 @@ if (unique_numbers.find(3) != unique_numbers.end()) {
 ## std::map
 
 Ordered key-value pairs:
+
 ```cpp
 std::map<std::string, int> word_count;
 word_count["hello"] = 1;
@@ -197,6 +204,7 @@ for (const auto& [word, count] : word_count) {
 ## std::unordered_map
 
 Hash table for O(1) average access:
+
 ```cpp
 std::unordered_map<std::string, double> prices;
 prices["apple"] = 1.99;
@@ -225,6 +233,7 @@ for (const auto& [item, price] : prices) {
 ## std::stack
 
 LIFO (Last In, First Out) adapter:
+
 ```cpp
 std::stack<int> s;
 s.push(10);
@@ -245,6 +254,7 @@ std::stack<int, std::vector<int>> vec_stack;
 ## std::queue
 
 FIFO (First In, First Out) adapter:
+
 ```cpp
 std::queue<std::string> tasks;
 tasks.push("Task 1");
@@ -262,6 +272,7 @@ while (!tasks.empty()) {
 ## std::priority_queue
 
 Heap-based priority queue:
+
 ```cpp
 // Max heap by default
 std::priority_queue<int> pq;
@@ -301,6 +312,7 @@ std::priority_queue<int, std::vector<int>, std::greater<int>> min_pq;
 ## Common Container Functions
 
 All containers support:
+
 ```cpp
 container.size();        // Number of elements
 container.empty();       // Check if empty
@@ -318,6 +330,7 @@ container.cend();        // Const past-the-end
 ## Container-Specific Functions
 
 Sequence containers:
+
 ```cpp
 // vector/deque
 vec.push_back(val);
@@ -355,6 +368,7 @@ map.at(key);       // Throws if not found
 ## Iterators
 
 All containers provide iterator support:
+
 ```cpp
 std::vector<int> vec = {1, 2, 3, 4, 5};
 
@@ -385,6 +399,7 @@ for (auto rit = vec.rbegin(); rit != vec.rend(); ++rit) {
 ## Algorithms with Containers
 
 STL algorithms work with all containers:
+
 ```cpp
 std::vector<int> vec = {3, 1, 4, 1, 5, 9};
 
@@ -407,6 +422,7 @@ std::transform(vec.begin(), vec.end(), vec.begin(),
 ## Container Memory Management
 
 Containers handle memory automatically:
+
 ```cpp
 {
     std::vector<std::string> strings;
@@ -423,6 +439,7 @@ Containers handle memory automatically:
 ## Emplace Operations
 
 Construct elements in-place for efficiency:
+
 ```cpp
 struct Point {
     int x, y;
