@@ -13,6 +13,7 @@ audience:
 ---
 
 # TCP/IP Essentials
+
 ## Introduction to Computer Networks
 
 ---
@@ -233,6 +234,7 @@ audience:
 ---
 
 ## Network Address Translation (NAT)
+
 ![network_address_translation_nat](svg/courses/networking/linux-networking-overview/01_tcpip_essentials/network_address_translation_nat.svg)
 
 ---

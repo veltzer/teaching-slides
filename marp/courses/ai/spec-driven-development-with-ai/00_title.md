@@ -17,7 +17,9 @@ audience:
 ---
 
 # Spec-Driven Development with AI
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

@@ -31,6 +31,7 @@ audience:
 ---
 
 ## Architecture
+
 ![architecture](svg/courses/big_data/apache-spark-with-python/04_sql/architecture.svg)
 
 ---
@@ -240,6 +241,7 @@ result = spark.sql("SELECT * FROM hive_table")
 ---
 
 ## Catalyst Optimizer
+
 ![catalyst_optimizer](svg/courses/big_data/apache-spark-with-python/04_sql/catalyst_optimizer.svg)
 
 ---

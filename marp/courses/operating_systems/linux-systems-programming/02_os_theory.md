@@ -29,6 +29,7 @@ audience:
 ## What is a Protected Operating System?
 
 ## Definition
+
 An OS that **isolates** and **controls** access between:
 - User processes
 - System resources
@@ -36,6 +37,7 @@ An OS that **isolates** and **controls** access between:
 - Memory regions
 
 ## Goal
+
 **Prevent** programs from interfering with each other or the system
 
 ---
@@ -213,6 +215,7 @@ void setup_page_table(struct process *p) {
 ## System Calls - The Gateway
 
 ## System Call Definition
+
 **Controlled entry points** from user space to kernel space
 
 ## Purpose

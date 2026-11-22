@@ -11,8 +11,11 @@ audience:
 ---
 
 # Advanced Skills
+
 ## Engineering a Skill Library in Production
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

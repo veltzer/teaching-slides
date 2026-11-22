@@ -1049,6 +1049,7 @@ During an Incident:
 ## Course Final Exercise
 
 ### Scenario
+
 A web server has been compromised. You have:
 - A disk image (`server.dd`)
 - A memory dump (`server.lime`)

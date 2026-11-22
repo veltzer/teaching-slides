@@ -12,8 +12,11 @@ audience:
 ---
 
 # Tools in AI
+
 ## Giving LLM Agents Hands to Act on the World
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

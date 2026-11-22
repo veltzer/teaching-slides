@@ -11,6 +11,7 @@ audience:
 ---
 
 # Multi-Platform Development and Modern Architecture
+
 ## Building Cross-Platform and Scalable Applications
 
 ---
@@ -253,6 +254,7 @@ class StateManager<T> {
 ---
 
 ## Assignment Preview
+
 ### Multi-Platform Implementation
 
 Create an application that:

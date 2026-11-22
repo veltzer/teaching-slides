@@ -14,6 +14,7 @@ audience:
 ---
 
 # Automation and Scripting
+
 Leveraging automation for DevOps efficiency
 
 ---

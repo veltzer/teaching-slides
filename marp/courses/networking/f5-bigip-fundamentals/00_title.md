@@ -20,7 +20,9 @@ audience:
 ---
 
 # F5 BIG-IP LTM Fundamentals
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

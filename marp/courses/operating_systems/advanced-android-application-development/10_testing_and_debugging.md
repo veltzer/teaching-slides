@@ -11,6 +11,7 @@ audience:
 ---
 
 # Testing and Debugging
+
 ## Building Reliable Android Applications
 
 ---
@@ -309,6 +310,7 @@ android {
 ---
 
 ## Assignment Preview
+
 ### Testing Implementation
 
 Create tests for an application:

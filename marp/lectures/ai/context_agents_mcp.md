@@ -16,8 +16,11 @@ audience:
 ---
 
 # Context Engineering, Agentic Workflows, and MCP
+
 ## What the Model Sees, What It Does, and What It Can Reach
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

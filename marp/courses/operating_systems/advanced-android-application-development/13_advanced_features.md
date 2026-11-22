@@ -11,6 +11,7 @@ audience:
 ---
 
 # Advanced Features and Integrations
+
 ## Enhancing Android Applications with Advanced Capabilities
 
 ---
@@ -292,6 +293,7 @@ public class RichNotificationManager {
 ---
 
 ## Assignment Preview
+
 ### Advanced Features Implementation
 
 Create an application that:

@@ -25,6 +25,7 @@ audience:
 ---
 
 ## Graph Abstractions
+
 ![graph_abstractions](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_abstractions.svg)
 
 ---
@@ -53,6 +54,7 @@ graph = GraphFrame(v, e)
 ---
 
 ## Graph Construction
+
 ![graph_construction](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_construction.svg)
 
 ---
@@ -77,6 +79,7 @@ vertices_with_props = vertices.map(add_property)
 ---
 
 ## Basic Operations
+
 ![basic_operations](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/basic_operations.svg)
 
 ---
@@ -100,6 +103,7 @@ def update_vertex(id, attr, message):
 ---
 
 ## Edge Operations
+
 ![edge_operations](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/edge_operations.svg)
 
 ---
@@ -135,6 +139,7 @@ results = g.pageRank(
 ---
 
 ## Connected Components
+
 ![connected_components](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/connected_components.svg)
 
 ---
@@ -151,6 +156,7 @@ paths = g.shortestPaths(
 ---
 
 ## Triangle Counting
+
 ![triangle_counting](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/triangle_counting.svg)
 
 ---
@@ -174,6 +180,7 @@ def custom_graph_algo(graph):
 ---
 
 ## Pregel API
+
 ![pregel_api](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/pregel_api.svg)
 
 ---
@@ -198,6 +205,7 @@ for i in range(max_iterations):
 ---
 
 ## Graph Partitioning
+
 ![graph_partitioning](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_partitioning.svg)
 
 ---
@@ -223,6 +231,7 @@ graph = graph.partitionBy(
 ---
 
 ## Memory Management
+
 ![memory_management](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/memory_management.svg)
 
 ---
@@ -247,6 +256,7 @@ subgraph = graph.filter(
 ---
 
 ## Graph Metrics
+
 ![graph_metrics](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_metrics.svg)
 
 ---
@@ -270,6 +280,7 @@ def export_graph(graph, path):
 ---
 
 ## Graph Formats
+
 ![graph_formats](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_formats.svg)
 
 ---
@@ -295,6 +306,7 @@ def transform_graph(data):
 ---
 
 ## Security Considerations
+
 ![security_considerations](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/security_considerations.svg)
 
 ---
@@ -320,6 +332,7 @@ def track_metrics(graph):
 ---
 
 ## Error Handling
+
 ![error_handling](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/error_handling.svg)
 
 ---
@@ -344,6 +357,7 @@ def process_graph_pattern(graph):
 ---
 
 ## Advanced Features
+
 ![advanced_features](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/advanced_features.svg)
 
 ---
@@ -368,6 +382,7 @@ def analyze_performance(graph):
 ---
 
 ## Optimization Techniques
+
 ![optimization_techniques](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/optimization_techniques.svg)
 
 ---
@@ -393,6 +408,7 @@ def social_network_analysis(graph):
 ---
 
 ## Production Checklist
+
 ![production_checklist](svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/production_checklist.svg)
 
 ---

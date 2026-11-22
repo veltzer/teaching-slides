@@ -11,6 +11,7 @@ audience:
 ---
 
 # Collections
+
 ## Working with Data Structures
 
 ---

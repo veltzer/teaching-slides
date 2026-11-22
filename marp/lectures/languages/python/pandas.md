@@ -13,8 +13,11 @@ audience:
 ---
 
 # pandas and Python
+
 ## Practical Data Analysis with DataFrames
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

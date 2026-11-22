@@ -26,6 +26,7 @@ audience:
 ---
 
 ## MLlib Architecture
+
 ![mllib_architecture](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/mllib_architecture.svg)
 
 ---
@@ -52,6 +53,7 @@ assembler = VectorAssembler(
 ---
 
 ## Feature Engineering
+
 ![feature_engineering](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/feature_engineering.svg)
 
 ---
@@ -105,6 +107,7 @@ class CustomTransformer(Transformer, HasInputCol, HasOutputCol):
 ---
 
 ## Model Training
+
 ![model_training](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_training.svg)
 
 ---
@@ -145,6 +148,7 @@ cv = CrossValidator(
 ---
 
 ## Evaluation Metrics
+
 ![evaluation_metrics](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/evaluation_metrics.svg)
 
 ---
@@ -172,6 +176,7 @@ bestPipeline = bestModel.stages[-1]
 ---
 
 ## Distributed Training
+
 ![distributed_training](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/distributed_training.svg)
 
 ---
@@ -210,6 +215,7 @@ rf = RandomForestClassifier(
 ---
 
 ## Neural Networks
+
 ![neural_networks](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/neural_networks.svg)
 
 ---
@@ -237,6 +243,7 @@ for batch in streaming_data:
 ---
 
 ## Model Serving
+
 ![model_serving](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_serving.svg)
 
 ---
@@ -261,6 +268,7 @@ accuracy = evaluator.evaluate(predictions)
 ---
 
 ## Performance Optimization
+
 ![performance_optimization](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/performance_optimization.svg)
 
 ---
@@ -284,6 +292,7 @@ transformed_data = pipeline.fit(train_data)\
 ---
 
 ## Distributed Processing
+
 ![distributed_processing](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/distributed_processing.svg)
 
 ---
@@ -306,6 +315,7 @@ mlflow.spark.log_model(spark_model, "model")
 ---
 
 ## A/B Testing
+
 ![a_b_testing](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/a_b_testing.svg)
 
 ---
@@ -341,6 +351,7 @@ except Exception as e:
 ---
 
 ## Data Validation
+
 ![data_validation](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/data_validation.svg)
 
 ---
@@ -367,6 +378,7 @@ automl = TrainValidationSplit(
 ---
 
 ## Transfer Learning
+
 ![transfer_learning](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/transfer_learning.svg)
 
 ---
@@ -391,6 +403,7 @@ def process_stream(batch_df, epoch_id):
 ---
 
 ## Security Considerations
+
 ![security_considerations](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/security_considerations.svg)
 
 ---
@@ -414,6 +427,7 @@ debug_df.show()
 ---
 
 ## Best Practices
+
 ![best_practices](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/best_practices.svg)
 
 ---
@@ -435,6 +449,7 @@ debug_df.show()
 ---
 
 ## MLOps Integration
+
 ![mlops_integration](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/mlops_integration.svg)
 
 ---

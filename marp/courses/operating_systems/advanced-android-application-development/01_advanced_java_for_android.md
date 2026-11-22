@@ -11,6 +11,7 @@ audience:
 ---
 
 # Advanced Java for Android
+
 ## Advanced Features and Modern Patterns
 
 ---
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Lambda Expressions
+
 ### Simplified Anonymous Functions
 
 Before:
@@ -63,6 +65,7 @@ button.setOnClickListener(v -> performAction());
 ---
 
 ## Method References
+
 ### Four Types of Method References
 
 ```java
@@ -192,6 +195,7 @@ public class AppException extends Exception {
 ---
 
 ## Practice Exercise
+
 ### Lambda and Streams
 
 ```java
@@ -223,6 +227,7 @@ public class Exercise {
 ---
 
 ## Assignment Preview
+
 ### Build a Utility Library
 
 Create a utility library that implements:

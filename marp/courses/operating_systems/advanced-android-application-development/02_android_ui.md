@@ -11,6 +11,7 @@ audience:
 ---
 
 # Android UI Architecture
+
 ## Advanced View Development and Layout Systems
 
 ---
@@ -253,6 +254,7 @@ public class FlowLayout extends ViewGroup {
 ---
 
 ## Assignment Preview
+
 ### Custom UI Components
 
 Create an application that demonstrates:

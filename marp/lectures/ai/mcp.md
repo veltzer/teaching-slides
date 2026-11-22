@@ -13,8 +13,11 @@ audience:
 ---
 
 # The Model Context Protocol
+
 ## A Universal Standard for Connecting LLMs to the World
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

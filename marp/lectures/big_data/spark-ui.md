@@ -13,7 +13,9 @@ audience:
 ---
 
 # Understanding the Spark UI
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
@@ -34,6 +36,7 @@ audience:
 ---
 
 ## Accessing the UI
+
 ![accessing_the_ui](svg/lectures/big_data/spark-ui/accessing_the_ui.svg)
 
 ---
@@ -49,6 +52,7 @@ audience:
 ---
 
 ## Jobs Tab Overview
+
 ![jobs_tab_overview](svg/lectures/big_data/spark-ui/jobs_tab_overview.svg)
 
 ---
@@ -81,6 +85,7 @@ df.groupBy("column")
 ---
 
 ## Storage Tab
+
 ![storage_tab](svg/lectures/big_data/spark-ui/storage_tab.svg)
 
 ---
@@ -165,6 +170,7 @@ spark.conf.set("spark.ui.enabled", true)
 ---
 
 ## Memory Management
+
 ![memory_management](svg/lectures/big_data/spark-ui/memory_management.svg)
 
 ---
@@ -197,6 +203,7 @@ df.repartition(10)
 ---
 
 ## Shuffle Analysis
+
 ![shuffle_analysis](svg/lectures/big_data/spark-ui/shuffle_analysis.svg)
 
 ---
@@ -242,6 +249,7 @@ df.repartition(10)
 ---
 
 ## Common Issues
+
 ![common_issues](svg/lectures/big_data/spark-ui/common_issues.svg)
 
 ---
@@ -279,6 +287,7 @@ df.repartition(10)
 ---
 
 ## Cluster Monitoring
+
 ![cluster_monitoring](svg/lectures/big_data/spark-ui/cluster_monitoring.svg)
 
 ---

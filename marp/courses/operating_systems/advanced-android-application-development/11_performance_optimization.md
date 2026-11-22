@@ -11,6 +11,7 @@ audience:
 ---
 
 # Performance Optimization
+
 ## Building High-Performance Android Applications
 
 ---
@@ -295,6 +296,7 @@ public class BackgroundTaskManager {
 ---
 
 ## Assignment Preview
+
 ### Performance Optimization
 
 Optimize an application:

@@ -14,6 +14,7 @@ audience:
 ---
 
 # Testing Strategy Tradeoffs
+
 Balancing speed, cost, and confidence in CI/CD testing
 
 ---

@@ -12,6 +12,7 @@ audience:
 ---
 
 # Database Isolation Levels
+
 ## Understanding and Implementing Transaction Isolation
 
 ---

@@ -14,8 +14,11 @@ audience:
 ---
 
 # NumPy and Python
+
 ## The Foundation of Numerical Computing in Python
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

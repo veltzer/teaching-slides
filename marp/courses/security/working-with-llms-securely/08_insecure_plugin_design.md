@@ -13,6 +13,7 @@ audience:
 ---
 
 # LLM07: Insecure Plugin Design
+
 ## When Tools Become Attack Surfaces
 
 ---

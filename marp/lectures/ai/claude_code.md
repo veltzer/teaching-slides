@@ -12,8 +12,11 @@ audience:
 ---
 
 # Agents at the Command Line
+
 ## Working with the Claude Code CLI
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

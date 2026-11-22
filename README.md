@@ -18,6 +18,7 @@ version: 0.0.1
 ## build
 
 ![build](https://github.com/veltzer/teaching-slides/workflows/build/badge.svg)
+
 ## Slide numbers
 
 - Currently there are 145 courses in this repo.

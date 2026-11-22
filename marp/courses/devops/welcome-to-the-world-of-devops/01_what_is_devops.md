@@ -14,6 +14,7 @@ audience:
 ---
 
 # What is DevOps?
+
 Understanding the fundamentals of DevOps practices and culture
 
 ---

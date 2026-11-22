@@ -11,6 +11,7 @@ audience:
 ---
 
 # Emerging Technologies and Future Trends
+
 ## Next Generation Android Development
 
 ---
@@ -310,6 +311,7 @@ class ExperimentManager {
 ---
 
 ## Assignment Preview
+
 ### Future Technologies Implementation
 
 Create an application that:

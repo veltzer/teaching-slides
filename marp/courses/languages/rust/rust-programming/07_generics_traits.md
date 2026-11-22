@@ -10,6 +10,7 @@ audience:
 ---
 
 # Generic Types and Traits
+
 ## Abstraction and Code Reuse
 
 ---

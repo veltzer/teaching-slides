@@ -12,8 +12,11 @@ audience:
 ---
 
 # Roles in AI
+
 ## From Chat Messages to Multi-Agent Teams
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

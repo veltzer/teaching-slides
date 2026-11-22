@@ -12,6 +12,7 @@ audience:
 ---
 
 # Modern Data Processing Engines
+
 ## A Comparison
 
 ---
@@ -36,6 +37,7 @@ audience:
 ---
 
 ## Processing Engines Overview
+
 Current Landscape of Major Players:
 - Apache Spark
 - Trino (formerly PrestoSQL)

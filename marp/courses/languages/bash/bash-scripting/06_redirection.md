@@ -18,6 +18,7 @@ audience:
 ---
 
 ## File Descriptors
+
 ![file_descriptors](svg/courses/languages/bash/bash-scripting/06_redirection/file_descriptors.svg)
 
 ---

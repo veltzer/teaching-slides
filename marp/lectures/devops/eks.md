@@ -12,8 +12,11 @@ audience:
 ---
 
 # Amazon EKS Deep Dive
+
 ## Kubernetes on AWS Made Simple
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

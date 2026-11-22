@@ -12,8 +12,11 @@ audience:
 ---
 
 # AI Everywhere
+
 ## One Technology, Every Field of Human Endeavour
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

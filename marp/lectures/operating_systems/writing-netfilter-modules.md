@@ -11,8 +11,11 @@ audience:
 ---
 
 # Writing Netfilter Modules
+
 ## An Introduction with Examples
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
@@ -43,6 +46,7 @@ audience:
 ---
 
 ## Netfilter Hook Points
+
 Five main hook points:
 1. `NF_INET_PRE_ROUTING`
 1. `NF_INET_LOCAL_IN`

@@ -26,6 +26,7 @@ audience:
 ---
 
 ## Why Spark SQL?
+
 ![why_spark_sql](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/why_spark_sql.svg)
 
 ---
@@ -51,6 +52,7 @@ spark.sql("SELECT name FROM table WHERE age > 25")
 ---
 
 ## Catalyst Optimizer Phases
+
 ![catalyst_optimizer_phases](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/catalyst_optimizer_phases.svg)
 
 ---
@@ -90,6 +92,7 @@ df.select("name", "age").groupBy("age").count().explain(True)
 ---
 
 ## Predicate Pushdown
+
 ![predicate_pushdown](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/predicate_pushdown.svg)
 
 ---
@@ -115,6 +118,7 @@ df.select("id", "name").filter("age > 25")
 ---
 
 ## Cost-Based Optimization
+
 ![cost_based_optimization](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/cost_based_optimization.svg)
 
 ---
@@ -172,6 +176,7 @@ def upper_vectorized(s):
 ---
 
 ## UDF Best Practices
+
 ![udf_best_practices](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/udf_best_practices.svg)
 
 ---
@@ -209,6 +214,7 @@ df.write.format("parquet")
 ---
 
 ## File Format Optimization
+
 ![file_format_optimization](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/file_format_optimization.svg)
 
 ---
@@ -233,6 +239,7 @@ spark.sql.shuffle.partitions=200
 ---
 
 ## Memory Management
+
 ![memory_management](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/memory_management.svg)
 
 ---
@@ -290,6 +297,7 @@ spark.catalog.cacheTable("frequently_used")
 ---
 
 ## Dynamic Partition Pruning
+
 ![dynamic_partition_pruning](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/dynamic_partition_pruning.svg)
 
 ---
@@ -321,6 +329,7 @@ spark.conf.set("spark.sql.adaptive.enabled", "true")
 ---
 
 ## Runtime Statistics
+
 ![runtime_statistics](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/runtime_statistics.svg)
 
 ---
@@ -353,6 +362,7 @@ df1.join(df2, df1.id == df2.id).where(df2.value > df1.value)
 ---
 
 ## Data Skew Handling
+
 ![data_skew_handling](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/data_skew_handling.svg)
 
 ---
@@ -377,6 +387,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 ---
 
 ## Monitoring and Debugging
+
 ![monitoring_and_debugging](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/monitoring_and_debugging.svg)
 
 ---
@@ -414,6 +425,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 ---
 
 ## Optimization Checklist
+
 ![optimization_checklist](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/optimization_checklist.svg)
 
 ---

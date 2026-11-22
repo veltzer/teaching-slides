@@ -11,8 +11,11 @@ audience:
 ---
 
 # Linux I/O Architecture
+
 ## Understanding Input/Output in Linux Systems
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
@@ -49,6 +52,7 @@ close(fd);
 ---
 
 ## I/O System Calls
+
 ### Core Operations
 1. `open()` - Open file/device
 1. `read()` - Read data
@@ -60,15 +64,18 @@ close(fd);
 ---
 
 ## Virtual File System (VFS)
+
 ![virtual_file_system_vfs](svg/lectures/operating_systems/linux-io/virtual_file_system_vfs.svg)
 
 ---
 
 ## Buffered vs Unbuffered I/O
+
 ### Unbuffered (System Calls)
 1. Direct kernel interaction
 1. Immediate but expensive
 1. `read()`, `write()`
+
 ### Buffered (stdio)
 1. User-space buffering
 1. Reduces system calls
@@ -82,15 +89,18 @@ fread(buffer, 1, 1024, fp);
 ---
 
 ## I/O Models
+
 ![i_o_models](svg/lectures/operating_systems/linux-io/i_o_models.svg)
 
 ---
 
 ## Page Cache & Buffer Cache
+
 ### Page Cache
 1. Caches file data in memory
 1. Automatic and transparent
 1. Improves read performance
+
 ### Buffer Cache
 1. Caches filesystem metadata
 1. Block device buffering
@@ -98,6 +108,7 @@ fread(buffer, 1, 1024, fp);
 ---
 
 ## Page Cache & Buffer Cache (cont.)
+
 ### Benefits
 1. Reduces disk I/O
 1. Speeds up repeated access
@@ -106,12 +117,15 @@ fread(buffer, 1, 1024, fp);
 ---
 
 ## Advanced I/O Techniques
+
 ### Direct I/O
 1. Bypass page cache with `O_DIRECT`
 1. Database systems use case
+
 ### Memory-mapped I/O
 1. Map files directly to memory
 1. `mmap()` system call
+
 ### io_uring (Linux 5.1+)
 1. High-performance async I/O
 1. Ring buffers for submission/completion
@@ -127,5 +141,7 @@ fread(buffer, 1, 1024, fp);
     - `iostat` - I/O statistics
     - `iotop` - Per-process I/O
     - `strace` - Trace system calls
+
 ### Key Takeaway
+
 Understanding Linux I/O layers helps optimize application performance!

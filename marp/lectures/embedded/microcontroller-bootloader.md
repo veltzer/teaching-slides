@@ -11,8 +11,11 @@ audience:
 ---
 
 # Writing Bootloaders for Microcontrollers
+
 ## From Reset Vector to Application Launch
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

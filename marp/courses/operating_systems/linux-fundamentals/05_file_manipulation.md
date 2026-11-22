@@ -12,6 +12,7 @@ audience:
 ---
 
 # File and Disk Manipulation
+
 ## Essential Commands and Power Tools
 
 ---
@@ -57,6 +58,7 @@ drwxr-xr-x 2 user group 4.0K Nov 19 09:45 directory
 ---
 
 ## Viewing File Contents
+
 ![viewing_file_contents](svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/viewing_file_contents.svg)
 
 ---
@@ -108,6 +110,7 @@ mv old_dir new_dir
 ---
 
 ## Disk Usage Commands
+
 ![disk_usage_commands](svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/disk_usage_commands.svg)
 
 ---
@@ -194,6 +197,7 @@ sort file.txt | uniq -d
 ---
 
 ## Finding Files
+
 ![finding_files](svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/finding_files.svg)
 
 ---

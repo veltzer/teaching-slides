@@ -11,8 +11,11 @@ audience:
 ---
 
 # Skills in AI
+
 ## Packaging Reusable Expertise for LLM Agents
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

@@ -11,6 +11,7 @@ audience:
 ---
 
 # SELinux and AppArmor (Optional)
+
 ## Mandatory Access Control
 
 ---

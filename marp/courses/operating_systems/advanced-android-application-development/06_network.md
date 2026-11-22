@@ -11,6 +11,7 @@ audience:
 ---
 
 # Network Operations
+
 ## Building Robust Networked Applications
 
 ---
@@ -301,6 +302,7 @@ public class NetworkSecurity {
 ---
 
 ## Assignment Preview
+
 ### Client-Server Application
 
 Create an application that:

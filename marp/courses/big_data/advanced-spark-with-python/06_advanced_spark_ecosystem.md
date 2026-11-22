@@ -25,6 +25,7 @@ audience:
 ---
 
 ## Modern Architecture
+
 ![modern_architecture](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/modern_architecture.svg)
 
 ---
@@ -48,6 +49,7 @@ spark.kubernetes.namespace=spark
 ---
 
 ## Resource Management
+
 ![resource_management](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/resource_management.svg)
 
 ---
@@ -73,6 +75,7 @@ spark.conf.set(
 ---
 
 ## Storage Integration
+
 ![storage_integration](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/storage_integration.svg)
 
 ---
@@ -97,6 +100,7 @@ df.write.format("delta") \
 ---
 
 ## Version Control
+
 ![version_control](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/version_control.svg)
 
 ---
@@ -132,6 +136,7 @@ deltaTable = DeltaTable.forPath(
 ---
 
 ## Optimization Methods
+
 ![optimization_methods](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/optimization_methods.svg)
 
 ---
@@ -157,6 +162,7 @@ spark.conf.set(
 ---
 
 ## Metrics Collection
+
 ![metrics_collection](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/metrics_collection.svg)
 
 ---
@@ -182,6 +188,7 @@ spark.conf.set(
 ---
 
 ## Authorization Model
+
 ![authorization_model](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/authorization_model.svg)
 
 ---
@@ -206,6 +213,7 @@ def backup_data():
 ---
 
 ## Disaster Recovery
+
 ![disaster_recovery](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/disaster_recovery.svg)
 
 ---
@@ -230,6 +238,7 @@ def test_transformation():
 ---
 
 ## Quality Assurance
+
 ![quality_assurance](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/quality_assurance.svg)
 
 ---
@@ -255,6 +264,7 @@ spark.conf.set(
 ---
 
 ## Capacity Planning
+
 ![capacity_planning](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/capacity_planning.svg)
 
 ---
@@ -278,6 +288,7 @@ mlflow.spark.log_model(pipeline, "model")
 ---
 
 ## Workflow Management
+
 ![workflow_management](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/workflow_management.svg)
 
 ---
@@ -302,6 +313,7 @@ class SparkJob:
 ---
 
 ## Documentation
+
 ![documentation](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/documentation.svg)
 
 ---
@@ -327,6 +339,7 @@ spark.conf.set(
 ---
 
 ## Error Handling
+
 ![error_handling](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/error_handling.svg)
 
 ---
@@ -352,6 +365,7 @@ spark.conf.set(
 ---
 
 ## Future Planning
+
 ![future_planning](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/future_planning.svg)
 
 ---
@@ -376,6 +390,7 @@ def optimize_resources():
 ---
 
 ## Scaling Strategies
+
 ![scaling_strategies](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/scaling_strategies.svg)
 
 ---

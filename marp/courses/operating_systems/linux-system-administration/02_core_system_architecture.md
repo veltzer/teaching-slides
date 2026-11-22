@@ -11,11 +11,13 @@ audience:
 ---
 
 # Core System Architecture
+
 ## Filesystem, Boot Process, and systemd
 
 ---
 
 ## Linux Filesystem Hierarchy Standard (FHS)
+
 ![linux_filesystem_hierarchy_standard_fhs](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/linux_filesystem_hierarchy_standard_fhs.svg)
 
 ---
@@ -109,6 +111,7 @@ df -i
 ---
 
 ## The Boot Process Overview
+
 ![the_boot_process_overview](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/the_boot_process_overview.svg)
 
 ---
@@ -847,6 +850,7 @@ systemctl list-sockets
 ---
 
 ## Socket Activation Benefits
+
 ![socket_activation_benefits](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/socket_activation_benefits.svg)
 
 ---
@@ -1183,6 +1187,7 @@ The device mapper (`dm`) is a kernel framework for mapping block devices. It und
 ---
 
 ## Device Mapper Overview: Example
+
 The device mapper (`dm`) is a kernel framework for mapping block devices. It underpins `LVM`, `LUKS`, and `multipath`.
 
 ```bash

@@ -14,6 +14,7 @@ audience:
 ---
 
 # Challenges in DevOps Adoption
+
 Common obstacles and solutions in DevOps transformation
 
 ---

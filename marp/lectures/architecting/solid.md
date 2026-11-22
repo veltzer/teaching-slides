@@ -11,8 +11,11 @@ audience:
 ---
 
 # SOLID Principles
+
 ## Understanding the Foundation of Object-Oriented Design
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
@@ -525,6 +528,7 @@ class OrderService {
 ---
 
 ## Summary
+
 SOLID Principles:
 1. Single Responsibility
 1. Open/Closed

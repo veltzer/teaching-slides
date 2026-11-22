@@ -12,7 +12,9 @@ audience:
 ---
 
 # Firmware Development On The STM32 NUCLEO-WL55JC1
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

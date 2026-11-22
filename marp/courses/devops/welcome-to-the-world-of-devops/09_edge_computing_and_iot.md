@@ -14,6 +14,7 @@ audience:
 ---
 
 # Edge Computing and IoT
+
 Managing distributed infrastructure and DevOps at the edge
 
 ---

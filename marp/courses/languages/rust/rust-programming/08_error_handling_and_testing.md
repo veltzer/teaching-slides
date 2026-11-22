@@ -11,6 +11,7 @@ audience:
 ---
 
 # Error Handling and Testing
+
 ## Writing Reliable Code
 
 ---
@@ -387,6 +388,7 @@ cargo tarpaulin -o Html
 ---
 
 ## Practice Exercise
+
 Create a library that:
 1. Implements error handling
 1. Has comprehensive tests

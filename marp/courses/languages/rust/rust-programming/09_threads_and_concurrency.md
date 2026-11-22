@@ -11,6 +11,7 @@ audience:
 ---
 
 # Threads and Concurrency
+
 ## Parallel Programming in Rust
 
 ---
@@ -392,6 +393,7 @@ match handle.join() {
 ---
 
 ## Practice Exercise
+
 Create a concurrent application that:
 1. Uses multiple threads
 1. Shares data safely

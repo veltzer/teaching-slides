@@ -11,8 +11,11 @@ audience:
 ---
 
 # GCC CPU-Specific Optimization
+
 ## A Comprehensive Guide
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

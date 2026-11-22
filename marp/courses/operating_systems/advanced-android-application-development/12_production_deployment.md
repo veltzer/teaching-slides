@@ -11,6 +11,7 @@ audience:
 ---
 
 # Production Deployment
+
 ## Preparing and Deploying Android Applications
 
 ---
@@ -293,6 +294,7 @@ end
 ---
 
 ## Assignment Preview
+
 ### Production Deployment
 
 Prepare an application for production:

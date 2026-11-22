@@ -1,6 +1,7 @@
 # Containers
 
 ## The Standard Template Library (STL)
+
 The STL provides a comprehensive set of container classes that manage collections of objects. These containers handle memory management automatically and provide consistent interfaces for common operations.
 
 ---

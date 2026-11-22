@@ -12,6 +12,7 @@ audience:
 ---
 
 # Computer Architecture Fundamentals
+
 ## From Basic Principles to Modern Systems
 
 ---

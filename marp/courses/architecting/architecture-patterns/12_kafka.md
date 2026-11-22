@@ -12,6 +12,7 @@ audience:
 ---
 
 # Message Queue Systems
+
 ## Kafka vs Traditional Queue Systems
 
 ---

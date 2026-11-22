@@ -16,8 +16,11 @@ audience:
 ---
 
 # What Developers Using AI Still Need to Know
+
 ## The Programming Judgment AI Cannot Supply
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

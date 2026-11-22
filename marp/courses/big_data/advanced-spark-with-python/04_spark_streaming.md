@@ -25,6 +25,7 @@ audience:
 ---
 
 ## Stream Processing Models
+
 ![stream_processing_models](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/stream_processing_models.svg)
 
 ---
@@ -51,6 +52,7 @@ stream = spark.readStream \
 ---
 
 ## Input Data Sources
+
 ![input_data_sources](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/input_data_sources.svg)
 
 ---
@@ -77,6 +79,7 @@ windowed = stream.groupBy(
 ---
 
 ## Watermark Configuration
+
 ![watermark_configuration](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/watermark_configuration.svg)
 
 ---
@@ -102,6 +105,7 @@ stream_df = stream_df \
 ---
 
 ## Window Operations
+
 ![window_operations](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/window_operations.svg)
 
 ---
@@ -131,6 +135,7 @@ def update_state(key, value, state):
 ---
 
 ## Checkpointing
+
 ![checkpointing](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/checkpointing.svg)
 
 ---
@@ -156,6 +161,7 @@ query = stream.writeStream \
 ---
 
 ## Output Sinks
+
 ![output_sinks](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/output_sinks.svg)
 
 ---
@@ -182,6 +188,7 @@ joined = stream1.join(
 ---
 
 ## Performance Optimization
+
 ![performance_optimization](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/performance_optimization.svg)
 
 ---
@@ -206,6 +213,7 @@ query = stream.writeStream \
 ---
 
 ## Monitoring Streams
+
 ![monitoring_streams](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/monitoring_streams.svg)
 
 ---
@@ -231,6 +239,7 @@ def handle_errors(df, epoch_id):
 ---
 
 ## Data Quality
+
 ![data_quality](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/data_quality.svg)
 
 ---
@@ -259,6 +268,7 @@ class CustomSource(Source):
 ---
 
 ## Custom Sinks
+
 ![custom_sinks](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/custom_sinks.svg)
 
 ---
@@ -284,6 +294,7 @@ query = stream.writeStream \
 ---
 
 ## Security Setup
+
 ![security_setup](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/security_setup.svg)
 
 ---
@@ -308,6 +319,7 @@ stream.writeStream \
 ---
 
 ## Testing Strategies
+
 ![testing_strategies](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/testing_strategies.svg)
 
 ---
@@ -332,6 +344,7 @@ def process_stream(batch_df, batch_id):
 ---
 
 ## Stream Processing Patterns
+
 ![stream_processing_patterns](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/stream_processing_patterns.svg)
 
 ---
@@ -356,6 +369,7 @@ def process_metrics(batch_df, epoch_id):
 ---
 
 ## Monitoring Dashboard
+
 ![monitoring_dashboard](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/monitoring_dashboard.svg)
 
 ---
@@ -380,6 +394,7 @@ df = df.withWatermark("timestamp", "1 hour")
 ---
 
 ## Common Pitfalls
+
 ![common_pitfalls](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/common_pitfalls.svg)
 
 ---
@@ -404,6 +419,7 @@ def update_state(key, values, state):
 ---
 
 ## Future Development
+
 ![future_development](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/future_development.svg)
 
 ---
@@ -427,6 +443,7 @@ spark.conf.set("spark.sql.streaming.checkpointLocation", "path")
 ---
 
 ## Documentation
+
 ![documentation](svg/courses/big_data/advanced-spark-with-python/04_spark_streaming/documentation.svg)
 
 ---

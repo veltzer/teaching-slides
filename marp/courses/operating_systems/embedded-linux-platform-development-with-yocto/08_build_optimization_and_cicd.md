@@ -49,6 +49,7 @@ Memory recommendations:
 ---
 
 ## Storage Optimization: Overview
+
 SSD vs HDD performance:
 
 ---

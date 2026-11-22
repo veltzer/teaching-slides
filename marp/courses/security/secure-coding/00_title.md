@@ -23,7 +23,9 @@ audience:
 ---
 
 # Secure Coding
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

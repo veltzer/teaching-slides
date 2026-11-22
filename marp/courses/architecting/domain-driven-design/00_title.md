@@ -13,7 +13,9 @@ audience:
 ---
 
 # Domain-Driven Design
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

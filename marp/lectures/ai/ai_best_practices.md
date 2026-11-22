@@ -13,7 +13,9 @@ audience:
 ---
 
 # Working with AI Coding Agents
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

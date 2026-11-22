@@ -10,6 +10,7 @@ audience:
 ---
 
 # Structs and Enums
+
 ## Custom Data Types in Rust
 
 ---

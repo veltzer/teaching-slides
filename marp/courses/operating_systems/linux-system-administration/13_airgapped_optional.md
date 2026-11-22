@@ -11,6 +11,7 @@ audience:
 ---
 
 # Maintaining Linux in Air-Gapped Environments (Optional)
+
 ## Offline Package Management, Security, and Updates
 
 ---

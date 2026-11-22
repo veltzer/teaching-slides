@@ -64,6 +64,7 @@ def process_partition(iterator):
 ---
 
 ## MapPartitions vs Map
+
 ![mappartitions_vs_map](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/mappartitions_vs_map.svg)
 
 ---
@@ -92,6 +93,7 @@ grouped = rdd1.cogroup(rdd2)
 ---
 
 ## Understanding Partitioning
+
 ![understanding_partitioning](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/understanding_partitioning.svg)
 
 ---
@@ -110,6 +112,7 @@ class DatePartitioner(Partitioner):
 ---
 
 ## Partition Distribution
+
 ![partition_distribution](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/partition_distribution.svg)
 
 ---
@@ -134,6 +137,7 @@ def balance_partitions(rdd):
 ---
 
 ## Memory Management
+
 ![memory_management](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/memory_management.svg)
 
 ---
@@ -189,6 +193,7 @@ class SetAccumulator(AccumulatorParam):
 ---
 
 ## Accumulator Applications
+
 ![accumulator_applications](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/accumulator_applications.svg)
 
 ---
@@ -234,6 +239,7 @@ df = df.withColumn(
 ---
 
 ## Performance Optimization
+
 ![performance_optimization](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/performance_optimization.svg)
 
 ---
@@ -265,6 +271,7 @@ spark.conf.set("spark.rdd.compress", "true")
 ---
 
 ## Storage Strategies
+
 ![storage_strategies](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/storage_strategies.svg)
 
 ---
@@ -287,6 +294,7 @@ complex_rdd = rdd.map(expensive_function).cache()
 ---
 
 ## Persistence Options
+
 ![persistence_options](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/persistence_options.svg)
 
 ---
@@ -320,6 +328,7 @@ spark.conf.set("spark.serializer",
 ---
 
 ## Monitoring Tools
+
 ![monitoring_tools](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/monitoring_tools.svg)
 
 ---
@@ -363,6 +372,7 @@ debug_rdd = rdd.mapPartitions(debug_function)
 ---
 
 ## Data Skew Solutions
+
 ![data_skew_solutions](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/data_skew_solutions.svg)
 
 ---
@@ -389,6 +399,7 @@ def complex_transformation(value):
 ---
 
 ## Best Practices Summary
+
 ![best_practices_summary](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/best_practices_summary.svg)
 
 ---
@@ -411,6 +422,7 @@ spark.conf.set("spark.sql.adaptive.skewJoin.enabled", "true")
 ---
 
 ## Production Deployment
+
 ![production_deployment](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/production_deployment.svg)
 
 ---

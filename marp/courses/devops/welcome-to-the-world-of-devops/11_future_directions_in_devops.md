@@ -14,6 +14,7 @@ audience:
 ---
 
 # Future Directions in DevOps
+
 Emerging trends and methodologies
 
 ---

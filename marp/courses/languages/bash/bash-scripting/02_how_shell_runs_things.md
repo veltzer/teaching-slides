@@ -213,6 +213,7 @@ strace -f -e trace=clone,execve bash -c 'ls /tmp' 2>&1 | head -20
 ---
 
 ## The Search Order
+
 When you type a command name, `bash` searches in this order:
 
 1. **Aliases** (interactive shells only)

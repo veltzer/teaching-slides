@@ -14,6 +14,7 @@ audience:
 ---
 
 # Case Studies
+
 Real-world DevOps transformation examples
 
 ---

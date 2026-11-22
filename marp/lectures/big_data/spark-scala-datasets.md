@@ -12,7 +12,9 @@ audience:
 ---
 
 # Spark Datasets and DataFrames in Scala
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
@@ -51,6 +53,7 @@ val df: DataFrame = spark.read
 ---
 
 ## Type Safety
+
 ![type_safety](svg/lectures/big_data/spark-scala-datasets/type_safety.svg)
 
 ---
@@ -106,6 +109,7 @@ df.select($"age".cast("string").substring(1))
 ---
 
 ## Performance Characteristics
+
 ![performance_characteristics](svg/lectures/big_data/spark-scala-datasets/performance_characteristics.svg)
 
 ---
@@ -144,6 +148,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 ---
 
 ## Catalyst Optimizer
+
 ![catalyst_optimizer](svg/lectures/big_data/spark-scala-datasets/catalyst_optimizer.svg)
 
 ---
@@ -295,6 +300,7 @@ val ds: Dataset[CustomType] = ...
 ---
 
 ## Serialization
+
 ![serialization](svg/lectures/big_data/spark-scala-datasets/serialization.svg)
 
 ---

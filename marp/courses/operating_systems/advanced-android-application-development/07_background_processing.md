@@ -11,6 +11,7 @@ audience:
 ---
 
 # Background Processing
+
 ## Managing Background Tasks and Services
 
 ---
@@ -297,6 +298,7 @@ public class RobustWorker extends Worker {
 ---
 
 ## Assignment Preview
+
 ### Background Processing Implementation
 
 Create an application that:

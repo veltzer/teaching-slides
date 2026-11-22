@@ -11,6 +11,7 @@ audience:
 ---
 
 # System Monitoring and Maintenance
+
 ## Performance, Logs, Automation, and Disaster Recovery
 
 ---
@@ -413,6 +414,7 @@ systemctl restart rsyslog
 ---
 
 ## Automated Monitoring: Prometheus and Grafana
+
 ![automated_monitoring_prometheus_and_grafana](svg/courses/operating_systems/linux-system-administration/07_monitoring_maintenance/automated_monitoring_prometheus_and_grafana.svg)
 
 ---
@@ -1200,6 +1202,7 @@ sha256sum -c /root/config-checksums.txt
 ---
 
 ## Change Management Workflow
+
 ![change_management_workflow](svg/courses/operating_systems/linux-system-administration/07_monitoring_maintenance/change_management_workflow.svg)
 
 ---

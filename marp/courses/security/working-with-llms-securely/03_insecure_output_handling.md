@@ -13,6 +13,7 @@ audience:
 ---
 
 # LLM02: Insecure Output Handling
+
 ## When `LLM` Output Becomes a Weapon
 
 ---

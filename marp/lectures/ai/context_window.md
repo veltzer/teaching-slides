@@ -12,8 +12,11 @@ audience:
 ---
 
 # The Context Window
+
 ## What an LLM Can See, and What It Forgets
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

@@ -12,6 +12,7 @@ audience:
 ---
 
 # Linux Boot System
+
 ## Understanding systemd and Boot Process
 
 ---
@@ -23,6 +24,7 @@ audience:
 ---
 
 ## Linux Boot Sequence
+
 ![linux_boot_sequence](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/linux_boot_sequence.svg)
 
 ---
@@ -38,6 +40,7 @@ audience:
 ---
 
 ## Old SysV Init System
+
 ![old_sysv_init_system](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/old_sysv_init_system.svg)
 
 ---
@@ -56,6 +59,7 @@ Traditional runlevels:
 ---
 
 ## systemd Introduction
+
 ![systemd_introduction](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_introduction.svg)
 
 ---
@@ -73,6 +77,7 @@ Key features:
 ---
 
 ## systemd Units
+
 ![systemd_units](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_units.svg)
 
 ---
@@ -115,6 +120,7 @@ systemctl disable nginx.service
 ---
 
 ## Service Management
+
 ![service_management](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/service_management.svg)
 
 ---
@@ -159,6 +165,7 @@ WantedBy=multi-user.target
 ---
 
 ## Service File Sections
+
 ![service_file_sections](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/service_file_sections.svg)
 
 ---
@@ -263,6 +270,7 @@ exit 0
 ---
 
 ## Systemd Targets
+
 ![systemd_targets](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_targets.svg)
 
 ---
@@ -283,6 +291,7 @@ systemctl isolate graphical.target
 ---
 
 ## Troubleshooting Boot Issues
+
 ![troubleshooting_boot_issues](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/troubleshooting_boot_issues.svg)
 
 ---

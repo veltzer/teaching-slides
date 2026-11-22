@@ -10,6 +10,7 @@ audience:
 ---
 
 # Socket Programming
+
 ## Building Networked Applications
 
 ---
@@ -47,12 +48,15 @@ audience:
 ---
 
 ## UDP Communication (no connection)
+
 ![udp_communication_no_connection](svg/courses/networking/networking-basics/06_socket_programming/udp_communication_no_connection.svg)
 
 ---
 
 ## Socket API: System Call Flow
+
 ### TCP Connection Lifecycle
+
 ### UDP Communication (no connection)
 
 ---

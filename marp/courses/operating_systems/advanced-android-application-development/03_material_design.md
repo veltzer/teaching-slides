@@ -11,6 +11,7 @@ audience:
 ---
 
 # Material Design and Animations
+
 ## Creating Engaging User Interfaces
 
 ---
@@ -215,6 +216,7 @@ public class PulseAnimation extends Animation {
 ---
 
 ## Assignment Preview
+
 ### Material Design Implementation
 
 Create an app screen that demonstrates:

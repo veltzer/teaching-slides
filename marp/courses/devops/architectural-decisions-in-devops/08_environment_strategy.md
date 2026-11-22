@@ -14,6 +14,7 @@ audience:
 ---
 
 # Environment Strategy
+
 ## Architectural Decisions in DevOps
 
 ---

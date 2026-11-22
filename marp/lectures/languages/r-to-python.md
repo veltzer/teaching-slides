@@ -13,8 +13,11 @@ audience:
 ---
 
 # From R to Python
+
 ## A Migration Guide for R Users
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

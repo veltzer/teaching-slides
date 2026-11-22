@@ -219,6 +219,7 @@ def service_health(name: str) -> str:
 - Reusable prompt templates exposed by servers
 - Accept arguments, return structured messages
 - Example: a `code-review` prompt that formats a diff for review
+
 ## Sampling
 - Lets the **server** request an LLM completion from the host
 - Enables agentic patterns where tools need reasoning mid-execution

@@ -11,6 +11,7 @@ audience:
 ---
 
 # Data Management
+
 ## Efficient Data Storage and Retrieval in Android
 
 ---
@@ -310,6 +311,7 @@ public class BackupManager {
 ---
 
 ## Assignment Preview
+
 ### Data-Driven Application
 
 Create an application that:

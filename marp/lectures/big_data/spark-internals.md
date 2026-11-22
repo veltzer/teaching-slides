@@ -12,7 +12,9 @@ audience:
 ---
 
 # Spark Internals: From Query to Execution
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

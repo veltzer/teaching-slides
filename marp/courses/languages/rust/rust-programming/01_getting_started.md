@@ -10,6 +10,7 @@ audience:
 ---
 
 # Getting Started with Rust
+
 ## Introduction to Rust Programming
 
 ---

@@ -12,11 +12,13 @@ audience:
 ---
 
 # Modern Networking
+
 ## SDN, Containers, Service Mesh, and Beyond
 
 ---
 
 ## The Evolution of Networking
+
 ![the_evolution_of_networking](svg/courses/networking/networking-basics/08_modern_networking/the_evolution_of_networking.svg)
 
 ---
@@ -55,6 +57,7 @@ SDN separates the **control plane** (decision-making) from the **data plane** (p
 ---
 
 ## SDN Architecture
+
 ![sdn_architecture](svg/courses/networking/networking-basics/08_modern_networking/sdn_architecture.svg)
 
 ---
@@ -73,6 +76,7 @@ SDN separates the **control plane** (decision-making) from the **data plane** (p
 ---
 
 ## Network Virtualization: Comparison
+
 Network virtualization creates logical networks on top of physical infrastructure.
 **Key technologies:**
 
@@ -172,6 +176,7 @@ $ docker service create --name web --network myoverlay --replicas 3 nginx
 ---
 
 ## Kubernetes Networking Model: Details
+
 Kubernetes networking has these fundamental requirements:
 1. Every Pod gets its own IP address
 1. All Pods can communicate with each other without NAT
@@ -303,6 +308,7 @@ spec:
 ---
 
 ## Kubernetes Network Policies: Example
+
 Network Policies control traffic flow between Pods (like a firewall for Pods).
 
 ```yaml

@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Course Overview
+
 ![course_overview](svg/courses/git/git/21_summary/course_overview.svg)
 
 ---
@@ -46,6 +47,7 @@ audience:
 ---
 
 ## Branch Operations
+
 ![branch_operations](svg/courses/git/git/21_summary/branch_operations.svg)
 
 ---
@@ -115,6 +117,7 @@ audience:
 ---
 
 ## Next Learning Steps
+
 ![next_learning_steps](svg/courses/git/git/21_summary/next_learning_steps.svg)
 
 ---

@@ -55,6 +55,7 @@ audience:
 ---
 
 ## The Process Tree
+
 ![the_process_tree](svg/courses/operating_systems/linux-fundamentals/01_intro/the_process_tree.svg)
 
 ---
@@ -69,6 +70,7 @@ audience:
 ---
 
 ## Process Lifecycle
+
 ![process_lifecycle](svg/courses/operating_systems/linux-fundamentals/01_intro/process_lifecycle.svg)
 
 ---
@@ -107,6 +109,7 @@ int main() {
 ---
 
 ## Basic Security Model
+
 ![basic_security_model](svg/courses/operating_systems/linux-fundamentals/01_intro/basic_security_model.svg)
 
 ---
@@ -139,6 +142,7 @@ chmod 777 /some/system/file  # Succeeds
 ---
 
 ## File System Security
+
 ![file_system_security](svg/courses/operating_systems/linux-fundamentals/01_intro/file_system_security.svg)
 
 ---
@@ -156,6 +160,7 @@ chown user:group file.txt
 ---
 
 ## Process Isolation
+
 ![process_isolation](svg/courses/operating_systems/linux-fundamentals/01_intro/process_isolation.svg)
 
 ---

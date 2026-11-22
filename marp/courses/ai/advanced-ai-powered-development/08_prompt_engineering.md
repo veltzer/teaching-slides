@@ -340,6 +340,7 @@ def pipeline(code: str) -> dict:
 ## Hands-On: Build a Prompt Chain for Code Migration
 
 ## Exercise: 3-Step Migration Chain
+
 Build a prompt chain that migrates a `Flask` route handler to `FastAPI`.
 
 **Step 1 - Analyze**: extract route path, method, parameters, and response type

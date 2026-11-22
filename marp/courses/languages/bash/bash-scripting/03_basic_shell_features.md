@@ -282,6 +282,7 @@ echo "$pattern"    # prints: *
 ---
 
 ## The Golden Rule of Quoting
+
 > **Always double-quote your variables unless you have
 > a specific reason not to.**
 

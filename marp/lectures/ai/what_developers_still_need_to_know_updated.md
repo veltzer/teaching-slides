@@ -20,8 +20,11 @@ audience:
 ---
 
 # What Every Developer Needs to Know About Working with AI
+
 ## Context, Feedback and Limits
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

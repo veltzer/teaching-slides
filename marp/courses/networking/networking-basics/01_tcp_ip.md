@@ -11,6 +11,7 @@ audience:
 ---
 
 # TCP/IP Fundamentals
+
 ## Understanding the Internet's Core Protocols
 
 ---
@@ -30,6 +31,7 @@ audience:
 ---
 
 ## The TCP/IP Protocol Stack
+
 ![the_tcp_ip_protocol_stack](svg/courses/networking/networking-basics/01_tcp_ip/the_tcp_ip_protocol_stack.svg)
 
 ---
@@ -51,6 +53,7 @@ audience:
 ---
 
 ## IP Address Classes (IPv4)
+
 ![ip_address_classes_ipv4](svg/courses/networking/networking-basics/01_tcp_ip/ip_address_classes_ipv4.svg)
 
 ---
@@ -70,6 +73,7 @@ audience:
 ---
 
 ## TCP vs UDP
+
 ### Key Differences
 
 | TCP | UDP |
@@ -82,6 +86,7 @@ audience:
 ---
 
 ## TCP Three-Way Handshake
+
 ![tcp_three_way_handshake](svg/courses/networking/networking-basics/01_tcp_ip/tcp_three_way_handshake.svg)
 
 ---
@@ -167,6 +172,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## Domain Name System (DNS)
+
 ![domain_name_system_dns](svg/courses/networking/networking-basics/01_tcp_ip/domain_name_system_dns.svg)
 
 ---
@@ -196,6 +202,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## NAT Operation
+
 ![nat_operation](svg/courses/networking/networking-basics/01_tcp_ip/nat_operation.svg)
 
 ---

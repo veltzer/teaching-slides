@@ -11,6 +11,7 @@ audience:
 ---
 
 # Security and Permissions
+
 ## Implementing Android Security Best Practices
 
 ---
@@ -294,6 +295,7 @@ public class SecureDatabase {
 ---
 
 ## Assignment Preview
+
 ### Security Implementation
 
 Create an application that:

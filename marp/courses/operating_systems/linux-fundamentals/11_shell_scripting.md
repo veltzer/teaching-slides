@@ -12,11 +12,13 @@ audience:
 ---
 
 # Shell Scripting Introduction
+
 ## Getting Started with Shell Programming
 
 ---
 
 ## Your First Shell Script
+
 ![your_first_shell_script](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/your_first_shell_script.svg)
 
 ---
@@ -73,6 +75,7 @@ exit 0
 ---
 
 ## Variables
+
 ![variables](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/variables.svg)
 
 ---
@@ -98,6 +101,7 @@ read -p "Enter name: " user_name
 ---
 
 ## Command Line Arguments
+
 ![command_line_arguments](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/command_line_arguments.svg)
 
 ---
@@ -145,6 +149,7 @@ let "count--"
 ---
 
 ## Exit Status and Error Handling
+
 ![exit_status_and_error_handling](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/exit_status_and_error_handling.svg)
 
 ---
@@ -171,6 +176,7 @@ fi
 ---
 
 ## Expressions and Operators
+
 ![expressions_and_operators](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/expressions_and_operators.svg)
 
 ---
@@ -246,6 +252,7 @@ esac
 ---
 
 ## Loops
+
 ![loops](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/loops.svg)
 
 ---

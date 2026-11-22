@@ -16,7 +16,9 @@ audience:
 ---
 
 # Linux System Administration
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

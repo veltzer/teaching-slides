@@ -25,6 +25,7 @@ audience:
 ---
 
 ## Core Components
+
 ![core_components](svg/courses/big_data/apache-spark-with-python/06_yarn/core_components.svg)
 
 ---

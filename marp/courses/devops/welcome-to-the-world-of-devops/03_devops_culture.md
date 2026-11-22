@@ -14,6 +14,7 @@ audience:
 ---
 
 # DevOps Culture
+
 Understanding the cultural transformation required for DevOps success
 
 ---

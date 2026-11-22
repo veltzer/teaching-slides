@@ -14,6 +14,7 @@ audience:
 ---
 
 # Artifact Management and Promotion
+
 ## Architectural Decisions in DevOps
 
 ---
@@ -104,6 +105,7 @@ audience:
 ---
 
 ## Artifact Repository Architecture
+
 ![artifact_repository_architecture](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/artifact_repository_architecture.svg)
 
 ---
@@ -118,6 +120,7 @@ audience:
 ---
 
 ## Promotion Pipeline: Overview
+
 ![promotion_pipeline_overview](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/promotion_pipeline_overview.svg)
 
 ---
@@ -181,6 +184,7 @@ jfrog rt build-promote \
 ---
 
 ## SemVer: Version Ordering
+
 ![semver_version_ordering](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/semver_version_ordering.svg)
 
 ---
@@ -247,6 +251,7 @@ jfrog rt build-promote \
 ---
 
 ## Traceability: From Deploy to Source
+
 ![traceability_from_deploy_to_source](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/traceability_from_deploy_to_source.svg)
 
 ---
@@ -286,6 +291,7 @@ jfrog rt build-promote \
 ---
 
 ## Container Image Layers
+
 ![container_image_layers](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/container_image_layers.svg)
 
 ---
@@ -304,6 +310,7 @@ jfrog rt build-promote \
 ---
 
 ## Base Image Tiering
+
 ![base_image_tiering](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/base_image_tiering.svg)
 
 ---
@@ -387,6 +394,7 @@ trivy image \
 ---
 
 ## Policy Enforcement Architecture
+
 ![policy_enforcement_architecture](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/policy_enforcement_architecture.svg)
 
 ---
@@ -444,6 +452,7 @@ spec:
 ---
 
 ## Slim Image Comparison
+
 ![slim_image_comparison](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/slim_image_comparison.svg)
 
 ---
@@ -469,6 +478,7 @@ CMD ["/myapp"]
 ---
 
 ## Multi-Stage Build: Layer Diagram
+
 ![multi_stage_build_layer_diagram](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/multi_stage_build_layer_diagram.svg)
 
 ---
@@ -535,6 +545,7 @@ image: myregistry.io/myapp@sha256:a3f8...
 ---
 
 ## Container Image Lifecycle
+
 ![container_image_lifecycle](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/container_image_lifecycle.svg)
 
 ---

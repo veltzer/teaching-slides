@@ -12,6 +12,7 @@ audience:
 ---
 
 # DNS Deep Dive
+
 ## Understanding the Domain Name System
 
 ---
@@ -847,6 +848,7 @@ _sip._tcp  IN  SRV  10 60 5060 sip.example.com.
 ## DNS Load Balancing Techniques: Example
 
 ### Round-Robin DNS
+
 Multiple A records for the same name -- clients get different IPs in rotation:
 
 ```bash
@@ -858,6 +860,7 @@ loadbalanced.example.com. 300 IN A 10.0.0.3
 ```
 
 ### GeoDNS
+
 Returns different IP addresses based on the client's geographic location:
 
 ---

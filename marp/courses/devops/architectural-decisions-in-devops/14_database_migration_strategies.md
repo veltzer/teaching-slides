@@ -14,6 +14,7 @@ audience:
 ---
 
 # Database Migration Strategies in CI/CD
+
 Approaches for safe, automated schema and data migrations in modern pipelines
 
 ---

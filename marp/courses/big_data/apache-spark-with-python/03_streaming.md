@@ -25,6 +25,7 @@ audience:
 ---
 
 ## Architecture Overview
+
 ![architecture_overview](svg/courses/big_data/apache-spark-with-python/03_streaming/architecture_overview.svg)
 
 ---

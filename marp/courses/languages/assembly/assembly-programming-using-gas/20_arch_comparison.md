@@ -23,6 +23,7 @@ audience:
 ---
 
 ## ARM vs x86: Register Set
+
 ARM:
 - r0-r15 (general-purpose registers)
 - sp (stack pointer, alias for r13)

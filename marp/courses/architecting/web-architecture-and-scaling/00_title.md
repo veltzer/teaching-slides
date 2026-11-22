@@ -11,7 +11,9 @@ audience:
 ---
 
 # Web Architecture and Scaling
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

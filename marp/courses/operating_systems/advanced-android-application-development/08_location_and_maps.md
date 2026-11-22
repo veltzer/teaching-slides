@@ -11,6 +11,7 @@ audience:
 ---
 
 # Location and Maps
+
 ## Implementing Location-Based Services
 
 ---
@@ -325,6 +326,7 @@ public class ActivityRecognitionManager {
 ---
 
 ## Assignment Preview
+
 ### Location-Aware Application
 
 Create an application that:

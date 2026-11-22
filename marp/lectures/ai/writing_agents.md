@@ -12,8 +12,11 @@ audience:
 ---
 
 # Writing Agents
+
 ## Designing and Building LLM Agents That Work
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

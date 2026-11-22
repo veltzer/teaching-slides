@@ -14,8 +14,11 @@ audience:
 ---
 
 # Working with Kiro
+
 ## The Spec-Driven Agentic IDE from AWS
+
 ## Mark Veltzer
+
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---

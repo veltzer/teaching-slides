@@ -18,6 +18,7 @@ audience:
 ---
 
 ## Two Kinds of Variables
+
 ![two_kinds_of_variables](svg/courses/languages/bash/bash-scripting/05_environment_variables/two_kinds_of_variables.svg)
 
 ---
@@ -232,6 +233,7 @@ unset PI
 ---
 
 ## Variable Scope: Summary
+
 ![variable_scope_summary](svg/courses/languages/bash/bash-scripting/05_environment_variables/variable_scope_summary.svg)
 
 ---

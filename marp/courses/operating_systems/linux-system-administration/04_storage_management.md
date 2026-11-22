@@ -11,6 +11,7 @@ audience:
 ---
 
 # Storage Management and File Systems
+
 ## Devices, Partitions, Quotas, and Backups
 
 ---
@@ -386,6 +387,7 @@ filefrag /path/to/file       # ext4 fragmentation
 ---
 
 ## Backup Strategies
+
 ![backup_strategies](svg/courses/operating_systems/linux-system-administration/04_storage_management/backup_strategies.svg)
 
 ---

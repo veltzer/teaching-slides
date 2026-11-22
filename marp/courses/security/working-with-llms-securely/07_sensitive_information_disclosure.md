@@ -13,6 +13,7 @@ audience:
 ---
 
 # LLM06: Sensitive Information Disclosure
+
 ## When `LLMs` Reveal Too Much
 
 ---

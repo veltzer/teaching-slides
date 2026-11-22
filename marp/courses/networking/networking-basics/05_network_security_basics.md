@@ -13,6 +13,7 @@ audience:
 ---
 
 # Network Security Basics
+
 ## Encryption, Firewalls, and VPNs
 
 ---
@@ -645,6 +646,7 @@ A DMZ is a network segment that sits between the public internet and the interna
 ## Common Network Attacks: Example
 
 **Mitigations:** TLS with certificate validation, certificate pinning, HSTS
+
 ### 2. ARP Spoofing
 
 ```bash
@@ -712,7 +714,9 @@ $ sudo ss -tlnp    # Check what's listening
 ## Common Network Attacks (continued): Example
 
 **Mitigation:** Disable open resolvers, BCP38 (ingress filtering), rate limiting
+
 ### 7. SSL Stripping
+
 Downgrades HTTPS connections to HTTP, allowing eavesdropping.
 
 ```misc
@@ -805,11 +809,13 @@ notAfter=Mar 14 23:59:59 2025 GMT
 ---
 
 ## Zero Trust Network Architecture (Diagram)
+
 ![zero_trust_network_architecture](svg/courses/networking/networking-basics/05_network_security_basics/zero_trust_network_architecture.svg)
 
 ---
 
 ## Zero Trust Network Architecture: Details
+
 The traditional "castle and moat" model (trust everything inside the network) is outdated. Zero Trust assumes no implicit trust.
 **Principles:**
 1. **Never trust, always verify** -- authenticate and authorize every request
