@@ -188,7 +188,8 @@ options = ["custom-tags: blocklevel", "drop-empty-elements: no"]
 [processor.checker.oxlint]
 src_dirs = ["resources"]
 src_files = [".marprc.mjs"]
-args = ["-c", ".oxlintrc.json"]
+args = ["-c", ".oxlintrc.repo.json"]
+dep_inputs = [".oxlintrc.repo.json"]
 
 [processor.generator.tags]
 # Validates the marp decks' front-matter against the shared vocabulary, the
