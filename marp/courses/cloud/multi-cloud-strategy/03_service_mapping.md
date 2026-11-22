@@ -18,6 +18,7 @@ audience:
 ---
 
 ## Why Service Mapping Matters
+
 - Understanding equivalents is foundational for multi-cloud
 - Services are similar but never identical
 - Feature gaps can break migration plans
@@ -27,6 +28,7 @@ audience:
 ---
 
 ## Compute: Virtual Machines
+
 - AWS: EC2 (Elastic Compute Cloud)
 - Azure: Virtual Machines
 - GCP: Compute Engine
@@ -36,6 +38,7 @@ audience:
 ---
 
 ## Compute: Instance Type Comparison
+
 - AWS: m5.xlarge (4 vCPU, 16 GB)
 - Azure: Standard_D4s_v5 (4 vCPU, 16 GB)
 - GCP: n2-standard-4 (4 vCPU, 16 GB)
@@ -92,6 +95,7 @@ gcloud compute instances create web-server \
 ---
 
 ## Key Differences in VM Creation
+
 - AWS uses AMI IDs; Azure uses image URNs; GCP uses image families
 - Azure requires a resource group; AWS and GCP do not
 - GCP requires explicit zone; AWS uses AZ via subnet
@@ -107,6 +111,7 @@ gcloud compute instances create web-server \
 ---
 
 ## Compute: Container Orchestration
+
 - AWS: EKS (Elastic Kubernetes Service)
 - Azure: AKS (Azure Kubernetes Service)
 - GCP: GKE (Google Kubernetes Engine)
@@ -116,6 +121,7 @@ gcloud compute instances create web-server \
 ---
 
 ## Container Services: Beyond Kubernetes
+
 - AWS: ECS (proprietary), Fargate (serverless containers)
 - Azure: Container Instances (ACI), Container Apps
 - GCP: Cloud Run (serverless containers)
@@ -125,6 +131,7 @@ gcloud compute instances create web-server \
 ---
 
 ## Serverless: Functions as a Service
+
 - AWS: Lambda (pioneer, largest ecosystem)
 - Azure: Functions (strong .NET integration)
 - GCP: Cloud Functions (tight integration with Google services)
@@ -134,6 +141,7 @@ gcloud compute instances create web-server \
 ---
 
 ## Serverless: Key Differences
+
 - Maximum execution time: Lambda 15min, Azure Functions 60min, GCF 60min
 - Memory limits: Lambda 10GB, Azure Functions 14GB, GCF 32GB
 - Cold start behavior varies significantly
@@ -143,6 +151,7 @@ gcloud compute instances create web-server \
 ---
 
 ## Object Storage
+
 - AWS: S3 (Simple Storage Service)
 - Azure: Blob Storage
 - GCP: Cloud Storage
@@ -152,6 +161,7 @@ gcloud compute instances create web-server \
 ---
 
 ## Object Storage Tiers Mapping
+
 - Hot: S3 Standard / Hot / Standard
 - Infrequent: S3 IA / Cool / Nearline
 - Archive: S3 Glacier / Archive / Coldline
@@ -186,6 +196,7 @@ gcloud storage buckets create gs://my-bucket-name \
 ---
 
 ## Networking: Virtual Private Cloud
+
 - AWS: VPC (Virtual Private Cloud)
 - Azure: VNet (Virtual Network)
 - GCP: VPC (global by default, subnets are regional)
@@ -195,6 +206,7 @@ gcloud storage buckets create gs://my-bucket-name \
 ---
 
 ## Networking: Key Differences
+
 - AWS: explicit route tables per subnet
 - Azure: system routes with optional UDRs
 - GCP: routes are global, applied via network tags
@@ -204,6 +216,7 @@ gcloud storage buckets create gs://my-bucket-name \
 ---
 
 ## Load Balancing
+
 - AWS: ALB (L7), NLB (L4), Classic LB (legacy)
 - Azure: Application Gateway (L7), Load Balancer (L4)
 - GCP: Cloud Load Balancing (global L7 and L4)
@@ -213,6 +226,7 @@ gcloud storage buckets create gs://my-bucket-name \
 ---
 
 ## Managed Databases: Relational
+
 - AWS: RDS (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server), Aurora
 - Azure: Azure SQL, Azure Database for MySQL/PostgreSQL
 - GCP: Cloud SQL (MySQL, PostgreSQL, SQL Server), AlloyDB
@@ -222,6 +236,7 @@ gcloud storage buckets create gs://my-bucket-name \
 ---
 
 ## Managed Databases: NoSQL
+
 - AWS: DynamoDB (key-value/document)
 - Azure: Cosmos DB (multi-model, multi-API)
 - GCP: Bigtable (wide-column), Firestore (document)
@@ -237,6 +252,7 @@ gcloud storage buckets create gs://my-bucket-name \
 ---
 
 ## Messaging and Queuing
+
 - AWS: SQS (queue), SNS (pub/sub), EventBridge (event bus)
 - Azure: Service Bus (queue), Event Grid (event bus), Event Hubs (streaming)
 - GCP: Pub/Sub (unified pub/sub and streaming)
@@ -246,6 +262,7 @@ gcloud storage buckets create gs://my-bucket-name \
 ---
 
 ## AI and Machine Learning
+
 - AWS: SageMaker, Bedrock, Rekognition, Comprehend
 - Azure: Azure ML, OpenAI Service, AI services (formerly Cognitive Services)
 - GCP: Vertex AI, Gemini API, Vision AI, Natural Language
@@ -256,6 +273,7 @@ gcloud storage buckets create gs://my-bucket-name \
 ---
 
 ## Identity and Access Management
+
 - AWS: IAM (users, roles, policies in JSON)
 - Azure: Entra ID (formerly Azure AD) + RBAC
 - GCP: Cloud IAM (roles, service accounts, policy bindings)
@@ -265,6 +283,7 @@ gcloud storage buckets create gs://my-bucket-name \
 ---
 
 ## Monitoring and Observability
+
 - AWS: CloudWatch (metrics, logs, alarms)
 - Azure: Monitor (metrics, Log Analytics, alerts)
 - GCP: Cloud Monitoring + Cloud Logging (formerly Stackdriver)
@@ -274,6 +293,7 @@ gcloud storage buckets create gs://my-bucket-name \
 ---
 
 ## Service Mapping Strategy
+
 1. Inventory all services used in current workloads
 1. Map each to equivalents on target clouds
 1. Identify feature gaps that would require workarounds

@@ -263,6 +263,7 @@ trap 'cleanup; exit 0' TERM
 ---
 
 ## Summary: Scripts, Syntax & I/O
+
 - Scripts need a shebang, `chmod +x`, and error handling
 - Use `set -euo pipefail` as the standard starting point
 - `[[` is preferred over `[` in `bash` scripts

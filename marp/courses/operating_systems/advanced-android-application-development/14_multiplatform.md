@@ -258,6 +258,7 @@ class StateManager<T> {
 ### Multi-Platform Implementation
 
 Create an application that:
+
 1. Uses Kotlin Multiplatform
 1. Implements Jetpack Compose UI
 1. Follows MVI architecture

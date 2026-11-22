@@ -23,6 +23,7 @@ audience:
 ---
 
 ## Azure Monitor Overview
+
 - Resource metrics
 - Activity logs
 - Diagnostic settings
@@ -38,6 +39,7 @@ audience:
 ---
 
 ## Log Analytics
+
 - Data collection
 - Query language
 - Workspaces
@@ -47,6 +49,7 @@ audience:
 ---
 
 ## Application Insights
+
 - Performance monitoring
 - Usage tracking
 - Dependency mapping
@@ -56,6 +59,7 @@ audience:
 ---
 
 ## Alert Management
+
 - Alert rules
 - Action groups
 - Severity levels
@@ -65,6 +69,7 @@ audience:
 ---
 
 ## Cost Management
+
 - Budget setup
 - Cost analysis
 - Recommendations
@@ -80,6 +85,7 @@ audience:
 ---
 
 ## Cost Optimization
+
 - Right-sizing
 - Reserved instances
 - Hybrid benefits
@@ -89,6 +95,7 @@ audience:
 ---
 
 ## Azure Advisor
+
 - Cost recommendations
 - Security suggestions
 - Performance tips
@@ -98,6 +105,7 @@ audience:
 ---
 
 ## Resource Organization
+
 - Management groups
 - Subscriptions
 - Resource groups
@@ -107,6 +115,7 @@ audience:
 ---
 
 ## Azure Policy
+
 - Policy definitions
 - Initiatives
 - Assignments
@@ -116,6 +125,7 @@ audience:
 ---
 
 ## Azure Automation
+
 - Runbooks
 - Configuration management
 - Update management
@@ -125,6 +135,7 @@ audience:
 ---
 
 ## Management Tools
+
 - Azure Portal
 - Azure CLI
 - PowerShell
@@ -134,6 +145,7 @@ audience:
 ---
 
 ## Resource Templates
+
 - ARM templates
 - Bicep
 - Template specs
@@ -149,6 +161,7 @@ audience:
 ---
 
 ## Governance Framework
+
 - Policies
 - Standards
 - Compliance
@@ -158,6 +171,7 @@ audience:
 ---
 
 ## Service Health
+
 - Azure status
 - Service issues
 - Planned maintenance
@@ -167,6 +181,7 @@ audience:
 ---
 
 ## Backup Management
+
 - Backup policies
 - Recovery services
 - Retention periods
@@ -176,6 +191,7 @@ audience:
 ---
 
 ## Update Management
+
 - Assessment
 - Scheduling
 - Deployment
@@ -185,6 +201,7 @@ audience:
 ---
 
 ## Capacity Planning
+
 - Resource utilization
 - Growth forecasting
 - Performance metrics
@@ -194,6 +211,7 @@ audience:
 ---
 
 ## Resource Lifecycle
+
 - Provisioning
 - Configuration
 - Monitoring
@@ -203,6 +221,7 @@ audience:
 ---
 
 ## Cost Allocation
+
 - Subscription structure
 - Resource organization
 - Tagging strategy
@@ -212,6 +231,7 @@ audience:
 ---
 
 ## Budget Management
+
 - Budget creation
 - Alert thresholds
 - Forecast analysis
@@ -221,6 +241,7 @@ audience:
 ---
 
 ## Performance Optimization
+
 - Resource sizing
 - Scaling strategies
 - Performance testing
@@ -230,6 +251,7 @@ audience:
 ---
 
 ## Compliance Management
+
 - Policy compliance
 - Regulatory requirements
 - Audit logging
@@ -239,6 +261,7 @@ audience:
 ---
 
 ## Operational Excellence
+
 - Process automation
 - Documentation
 - Change management
@@ -248,6 +271,7 @@ audience:
 ---
 
 ## Reporting and Analytics
+
 - Custom dashboards
 - Power BI integration
 - Scheduled reports
@@ -257,6 +281,7 @@ audience:
 ---
 
 ## Future Management
+
 - AI operations
 - Predictive analytics
 - Automation advances
@@ -266,6 +291,7 @@ audience:
 ---
 
 ## Best Practices Summary
+
 - Resource organization
 - Cost optimization
 - Monitoring strategy

@@ -13,6 +13,7 @@ audience:
 ---
 
 ## What Makes a Python Package?
+
 - A directory with Python files
 - An `__init__.py` file (can be empty)
 - Organized source code
@@ -89,6 +90,7 @@ my_project/
 ---
 
 ## The `__init__.py` File
+
 - Makes a directory a Python package
 - Can be empty or contain initialization code
 - Controls what gets imported with `from package import *`
@@ -141,6 +143,7 @@ from . import utils
 ---
 
 ## The `__all__` Variable
+
 - Controls what `from module import *` exports
 
 ```python
@@ -180,6 +183,7 @@ BASE_URL = "https://api.example.com"
 ---
 
 ## Documenting with Docstrings
+
 - Every module, class, and function should have a docstring
 - Follow Google, NumPy, or Sphinx style
 
@@ -573,6 +577,7 @@ mypy src/my_package/
 ---
 
 ## Summary
+
 - Packages are directories with `__init__.py`
 - Use relative imports within packages
 - Document code with docstrings (Google or NumPy style)

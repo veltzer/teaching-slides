@@ -500,6 +500,7 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 ## To Pay or Not to Pay? (cont.) (cont.)
 
 **Key considerations:**
+
 - Paying funds criminal operations and encourages more attacks
 - No guarantee of receiving working decryptor (~8% of paying victims do not)
 - OFAC sanctions: paying certain groups (e.g., in North Korea, Russia) may violate US law

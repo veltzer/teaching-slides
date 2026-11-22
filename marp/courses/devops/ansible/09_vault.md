@@ -17,6 +17,7 @@ audience:
 # Ansible Vault for Secrets Management
 
 ## Topics Covered
+
 - Why encrypt secrets
 - Creating and editing encrypted files
 - Encrypting individual variables

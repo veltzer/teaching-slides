@@ -30,6 +30,7 @@ audience:
 
 A **bootloader** is the first piece of code that runs when a microcontroller starts up.
 **Primary Functions:**
+
 - Initialize basic hardware
 - Check for firmware updates
 - Validate application integrity
@@ -42,6 +43,7 @@ Think of it as the BIOS/UEFI of microcontrollers
 ## Why Write a Custom Bootloader?
 
 **Built-in bootloaders are limited:**
+
 - Fixed communication interfaces (UART, USB, SPI)
 - No custom protocols
 - No application validation
@@ -53,6 +55,7 @@ Think of it as the BIOS/UEFI of microcontrollers
 ## Why Write a Custom Bootloader? (cont.)
 
 **Custom bootloaders enable:**
+
 - Network updates (WiFi, Ethernet, Cellular)
 - Cryptographic verification
 - Multiple application slots
@@ -77,6 +80,7 @@ Think of it as the BIOS/UEFI of microcontrollers
 ```
 
 **Key Considerations:**
+
 - Bootloader size should be power of 2
 - Application must be relocated
 - Reserve space for configuration data
@@ -366,6 +370,7 @@ Bootloader → Application → Runtime components
 ## Cryptographic Considerations
 
 **Algorithms to consider:**
+
 - **AES-256**: Firmware encryption
 - **SHA-256**: Integrity checking
 - **ECDSA P-256**: Digital signatures
@@ -752,6 +757,7 @@ __attribute__((noinline)) void rarely_used_function(void);
 ## Production Deployment
 
 **Manufacturing Flow:**
+
 1. **Program bootloader** via SWD/JTAG
 1. **Set option bytes** (boot configuration)
 1. **Program initial application**
@@ -886,6 +892,7 @@ void send_telemetry(void) {
 ## Bootloader Standards & Compliance
 
 **Common Standards:**
+
 - **UDS (ISO 14229)**: Automotive diagnostics
 - **XCP**: Measurement and calibration
 - **DFU**: USB Device Firmware Upgrade
@@ -920,6 +927,7 @@ void handle_uds_request(uint8_t *data, uint8_t len) {
 ## Bootloader Documentation
 
 **Essential Documentation:**
+
 - Memory map and linker scripts
 - Communication protocol specification
 - Update procedure manual
@@ -953,6 +961,7 @@ const bootloader_info_t __attribute__((section(".bootloader_info")))
 ## Best Practices Summary
 
 **✅ DO:**
+
 - Keep bootloader simple and robust
 - Validate all inputs and firmware
 - Implement proper error handling
@@ -966,6 +975,7 @@ const bootloader_info_t __attribute__((section(".bootloader_info")))
 ## Best Practices Summary (cont.)
 
 **❌ DON'T:**
+
 - Make bootloader too complex
 - Skip input validation
 - Use dynamic memory allocation
@@ -997,6 +1007,7 @@ void check_boot_loop(void) {
 ```
 
 **Communication Issues:**
+
 - Check baud rate and parity settings
 - Verify packet framing and checksums
 - Test with known-good hardware
@@ -1043,6 +1054,7 @@ bool detect_boot_anomaly(void) {
 ## Future Trends
 
 **Emerging Technologies:**
+
 - **AI-assisted updates**: Predictive maintenance
 - **Blockchain verification**: Immutable update logs
 - **Edge computing**: Local update distribution
@@ -1054,6 +1066,7 @@ bool detect_boot_anomaly(void) {
 ## Future Trends (cont.)
 
 **Industry Evolution:**
+
 - Standardization of update protocols
 - Increased focus on security
 - Cloud-native update infrastructure
@@ -1064,12 +1077,14 @@ bool detect_boot_anomaly(void) {
 ## Tools & Resources
 
 **Development Tools:**
+
 - **STM32CubeProgrammer**: ST bootloader tool
 - **OpenOCD**: Open source debugging
 - **MCUXpresso**: NXP development suite
 - **ESP-IDF**: Espressif bootloader framework
 
 **Testing Tools:**
+
 - **Unity**: C unit testing framework
 - **Renode**: Hardware simulation
 - **QEMU**: System emulation
@@ -1080,6 +1095,7 @@ bool detect_boot_anomaly(void) {
 ## Tools & Resources (cont.)
 
 **Libraries:**
+
 - **mbedTLS**: Cryptography
 - **FatFs**: File system
 - **lwIP**: TCP/IP stack
@@ -1090,6 +1106,7 @@ bool detect_boot_anomaly(void) {
 ## Conclusion
 
 **Key Takeaways:**
+
 - Bootloaders are critical for field-updatable devices
 - Security and reliability are paramount
 - Start simple, add features incrementally
@@ -1101,6 +1118,7 @@ bool detect_boot_anomaly(void) {
 ## Conclusion (cont.)
 
 **Success Factors:**
+
 - Clear requirements definition
 - Proper architecture design
 - Thorough testing strategy

@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Security Risks with Containers
+
 - Kernel Exploits
     - Containers share the host kernel
     - Vulnerability in the kernel can compromise all containers
@@ -230,6 +231,7 @@ spec:
 ---
 
 ## Mitigating Container Security Risks
+
 - Use Hardened Operating System
     - Deploy containers on a minimal, hardened OS
 - Implement Least Privilege

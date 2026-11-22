@@ -16,6 +16,7 @@ audience:
 ---
 
 ## What is Cloud Computing?
+
 - On-demand delivery of IT resources
 - Pay-as-you-go pricing
 - No upfront capital investment
@@ -25,6 +26,7 @@ audience:
 ---
 
 ## NIST Definition
+
 - On-demand self-service
 - Broad network access
 - Resource pooling
@@ -34,6 +36,7 @@ audience:
 ---
 
 ## Before the Cloud
+
 - Buy and rack physical servers
 - Weeks or months to provision
 - Capacity planning guesswork
@@ -43,6 +46,7 @@ audience:
 ---
 
 ## The Cloud Shift
+
 - Provision in minutes, not months
 - Convert CapEx to OpEx
 - Scale to actual demand
@@ -58,6 +62,7 @@ audience:
 ---
 
 ## Benefits of the AWS Cloud
+
 - Agility and speed
 - Elasticity and scalability
 - Cost savings (pay only for what you use)
@@ -67,6 +72,7 @@ audience:
 ---
 
 ## Trade Variable for Fixed Expense
+
 - No more guessing capacity
 - Pay only for resources consumed
 - Scale up and down as needed
@@ -76,6 +82,7 @@ audience:
 ---
 
 ## Economies of Scale
+
 - AWS aggregates usage from hundreds of thousands of customers
 - Lower pay-as-you-go prices
 - Savings passed to customers
@@ -84,6 +91,7 @@ audience:
 ---
 
 ## Stop Guessing Capacity
+
 - Over-provision: waste money
 - Under-provision: performance problems
 - Cloud: scale in minutes
@@ -93,6 +101,7 @@ audience:
 ---
 
 ## Speed and Agility
+
 - New resources a click away
 - Experiment at low cost
 - Fail fast, iterate quickly
@@ -102,6 +111,7 @@ audience:
 ---
 
 ## Go Global in Minutes
+
 - Deploy to multiple Regions
 - Reduce latency for users worldwide
 - No physical data center buildout
@@ -111,6 +121,7 @@ audience:
 ---
 
 ## Why AWS?
+
 - Largest cloud provider by market share
 - Most mature platform (launched 2006)
 - Widest range of services (200+)
@@ -120,6 +131,7 @@ audience:
 ---
 
 ## AWS History
+
 - 2002: Amazon.com infrastructure ideas
 - 2004: SQS launched (first service)
 - 2006: S3 and EC2 launched publicly
@@ -129,6 +141,7 @@ audience:
 ---
 
 ## AWS Market Position
+
 - ~31% of global cloud market
 - Used by startups and Fortune 500
 - Netflix, Airbnb, NASA, Samsung
@@ -138,6 +151,7 @@ audience:
 ---
 
 ## AWS Global Infrastructure: Details
+
 - Regions: geographic areas with data centers
 - Availability Zones: isolated data centers within a region
 - Edge Locations: content delivery endpoints
@@ -152,6 +166,7 @@ audience:
 ---
 
 ## AWS Regions
+
 - 30+ Regions worldwide (and growing)
 - Each Region is fully independent
 - Services and pricing vary by Region
@@ -161,6 +176,7 @@ audience:
 ---
 
 ## Availability Zones
+
 - Each Region has 2+ Availability Zones
 - Physically separated data centers
 - Independent power, cooling, networking
@@ -170,6 +186,7 @@ audience:
 ---
 
 ## Edge Locations
+
 - 400+ Points of Presence globally
 - Used by CloudFront (CDN)
 - Cache content close to users
@@ -179,6 +196,7 @@ audience:
 ---
 
 ## Local Zones and Wavelength
+
 - Local Zones: AWS in metro areas (low latency)
 - Wavelength: AWS in telecom 5G networks
 - Outposts: AWS hardware on your premises
@@ -187,6 +205,7 @@ audience:
 ---
 
 ## The AWS Management Console
+
 - Web-based interface for all AWS services
 - Service search and navigation
 - Resource management dashboards
@@ -196,6 +215,7 @@ audience:
 ---
 
 ## Console Navigation Tips
+
 - Pin frequently used services to favorites
 - Use the search bar for quick access
 - Check the Region selector before creating resources
@@ -205,6 +225,7 @@ audience:
 ---
 
 ## AWS CLI
+
 - Command-line tool for AWS services
 - Available on Windows, macOS, Linux
 - Scriptable and automatable
@@ -231,6 +252,7 @@ aws sts get-caller-identity
 ---
 
 ## AWS SDKs
+
 - Libraries for many programming languages
 - Python (boto3), Java, JavaScript, Go, .NET, etc.
 - Integrate AWS into your applications
@@ -240,6 +262,7 @@ aws sts get-caller-identity
 ---
 
 ## Infrastructure as Code
+
 - AWS CloudFormation: declarative YAML/JSON templates
 - AWS CDK: define infrastructure in code (TypeScript, Python, etc.)
 - Terraform: popular third-party IaC tool
@@ -268,6 +291,7 @@ Resources:
 ---
 
 ## AWS Free Tier
+
 - 12 months of free usage for many services
 - Always-free tier for some services (Lambda, DynamoDB)
 - Trial offers for new services
@@ -277,6 +301,7 @@ Resources:
 ---
 
 ## Shared Responsibility Model: Details
+
 - AWS manages security **of** the cloud
 - Customer manages security **in** the cloud
 - Shared controls (patch management, configuration)

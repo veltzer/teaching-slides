@@ -13,6 +13,7 @@ audience:
 # Collecting Information
 
 ## Course: Linux Forensics
+
 - Systematic evidence collection is the foundation of forensic investigation
 - Every artifact must be documented and preserved
 - This module covers program execution evidence, hidden files, network artifacts,
@@ -636,6 +637,7 @@ echo "Collection complete: $EVIDENCE"
 ## Exercise: Information Collection
 
 ### Tasks
+
 1. Run a comprehensive system survey
 1. Identify all network connections and associated processes
 1. Check for persistence mechanisms

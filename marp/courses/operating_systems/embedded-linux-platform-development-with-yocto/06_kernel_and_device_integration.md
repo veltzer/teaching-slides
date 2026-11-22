@@ -40,6 +40,7 @@ KERNEL_FEATURES_append = " features/netfilter/netfilter.scc"
 ```
 
 Available kernel recipes:
+
 - `linux-yocto` - Reference kernel
 - `linux-yocto-rt` - Real-time kernel
 - `linux-yocto-tiny` - Minimal kernel
@@ -972,6 +973,7 @@ IMAGE_INSTALL_append = " can-utils"
 ## Summary
 
 Key integration topics:
+
 - Kernel recipe customization
 - Configuration management
 - Device tree fundamentals
@@ -984,6 +986,7 @@ Key integration topics:
 ## Summary (cont.)
 
 Best practices:
+
 - Use defconfig + fragments
 - Maintain clean device trees
 - Organize BSP layers properly

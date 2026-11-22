@@ -17,6 +17,7 @@ audience:
 # Ansible Fundamentals
 
 ## Course Overview
+
 - Comprehensive `Ansible` training
 - Fundamentals, inventory, ad-hoc commands, playbook basics
 - Playbooks, roles, advanced features, secrets management

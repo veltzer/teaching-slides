@@ -3,6 +3,7 @@
 Tracks the comprehensive restructuring work for `marp/courses/architecting/modern-software-architecture/`.
 
 ## Status legend
+
 - [ ] — not started
 - [~] — in progress
 - [x] — done

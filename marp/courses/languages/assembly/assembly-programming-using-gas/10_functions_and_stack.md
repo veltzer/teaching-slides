@@ -37,6 +37,7 @@ audience:
 ## Stack Operations
 
 Basic stack instructions:
+
 - `push`: Decrement ESP and store value
 - `pop`: Load value and increment ESP
 
@@ -83,6 +84,7 @@ Cleanup at the end of a function:
 ## Passing Arguments
 
 Common ways to pass arguments:
+
 1. Via the stack (cdecl calling convention)
 1. Via registers (fastcall convention)
 
@@ -153,6 +155,7 @@ my_function:
 ## Returning Values
 
 Common methods:
+
 1. Via EAX register (for 32-bit values)
 1. Via EDX:EAX (for 64-bit values)
 1. Via the stack (for larger structures)

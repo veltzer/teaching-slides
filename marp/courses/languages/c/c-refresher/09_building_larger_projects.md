@@ -245,6 +245,7 @@ run: $(TARGET)
 ```
 
 Key features:
+
 - Automatic dependency tracking with `-MMD -MP`
 - Wildcard source file discovery
 - Separate compile and link flags

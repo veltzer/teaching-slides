@@ -20,6 +20,7 @@ audience:
 Ensure quality while leveraging AI's speed and capabilities
 
 This chapter covers:
+
 1. Code quality with AI
 1. Security considerations
 1. Performance optimization

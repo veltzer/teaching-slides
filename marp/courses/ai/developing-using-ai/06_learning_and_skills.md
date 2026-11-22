@@ -20,6 +20,7 @@ audience:
 Transform from learner to expert at unprecedented speed
 
 This chapter covers:
+
 1. Using AI for learning
 1. Skill enhancement strategies
 1. Problem-solving approaches

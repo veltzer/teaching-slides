@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Why On-Prem Still Matters
+
 - Many workloads remain on-prem for regulatory or latency reasons
 - Hybrid environments are the norm, not the exception
 - On-prem cost discipline is older but often less rigorous
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## How On-Prem Costs Differ from Cloud
+
 - Costs are mostly fixed once hardware is bought
 - Capacity is purchased years in advance
 - Utilization drives unit cost, not consumption
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## CapEx vs OpEx
+
 - CapEx: capital expense, depreciated over years
 - OpEx: operating expense, hits the books immediately
 - On-prem hardware is mostly CapEx
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## Total Cost of Ownership (TCO)
+
 - TCO = all costs over the asset's useful life
 - Hardware purchase + maintenance + power + cooling
 - Plus space, networking, staff, and software licenses
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## TCO Components
+
 - Hardware: servers, storage, network gear
 - Facilities: datacenter space, racks, cabling
 - Power and cooling: ongoing operational cost
@@ -68,6 +73,7 @@ audience:
 ---
 
 ## Hardware Depreciation
+
 - Servers typically depreciated over 3-5 years
 - Storage arrays often 5-7 years
 - Network equipment 5-7 years
@@ -77,6 +83,7 @@ audience:
 ---
 
 ## Depreciation Schedule Example
+
 - Server purchase price: $10,000
 - Useful life: 5 years
 - Annual depreciation: $2,000 (straight-line)
@@ -89,6 +96,7 @@ audience:
 ---
 
 ## Power Costs
+
 - Measured in kilowatt-hours (kWh)
 - Server power draw: 200-800W typical, 1-2kW for GPUs
 - Industrial power: $0.05-0.15 per kWh
@@ -98,6 +106,7 @@ audience:
 ---
 
 ## Cooling Costs
+
 - Roughly equal to compute power draw
 - Power Usage Effectiveness (PUE) measures overhead
 - PUE = total facility power / IT equipment power
@@ -107,6 +116,7 @@ audience:
 ---
 
 ## Space and Facilities
+
 - Datacenter rack space: $500-2000/month per rack
 - Colocation vs owned vs leased
 - Cabling, raised floors, fire suppression
@@ -116,6 +126,7 @@ audience:
 ---
 
 ## Networking Hardware
+
 - Top-of-rack switches, core switches, routers
 - Firewalls and load balancers
 - Cabling and patch panels
@@ -131,6 +142,7 @@ audience:
 ---
 
 ## Software Licensing
+
 - OS licenses: Windows Server, RHEL subscriptions
 - Hypervisor: VMware, Hyper-V, KVM (free vs paid)
 - Database licenses (Oracle, SQL Server)
@@ -140,6 +152,7 @@ audience:
 ---
 
 ## Personnel Costs
+
 - Hardware ops: rack-and-stack, replacement, maintenance
 - Network operations and security teams
 - Datacenter facility staff
@@ -149,6 +162,7 @@ audience:
 ---
 
 ## Hardware Refresh Cycles
+
 - Servers: typically refreshed every 4-5 years
 - Storage: 5-7 years (data migration is painful)
 - Network: 7-10 years
@@ -158,6 +172,7 @@ audience:
 ---
 
 ## When to Refresh: Details
+
 - Vendor support is ending (extended support is expensive)
 - Power efficiency of new hardware exceeds old
 - Performance limits are blocking growth
@@ -173,6 +188,7 @@ audience:
 ---
 
 ## Calculating Cost Per Workload
+
 - Allocate hardware cost based on resources consumed
 - Include depreciation, power, cooling, facilities
 - Spread shared costs (network, storage) by usage
@@ -182,6 +198,7 @@ audience:
 ---
 
 ## Common On-Prem Cost Pitfalls
+
 - Sunk-cost thinking ("we already paid for it")
 - Ignoring power and cooling in cost models
 - Counting only hardware, not staff or facilities

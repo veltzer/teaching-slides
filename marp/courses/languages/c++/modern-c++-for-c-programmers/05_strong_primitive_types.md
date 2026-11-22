@@ -82,6 +82,7 @@ void chronoExample() {
 ## Creating Strongly Typed Primitive Types
 
 Goals for custom primitive types:
+
 1. Type safety - prevent mixing with other types
 1. Range validation - ensure values are within valid range
 1. Self-documenting - clear semantics through type names

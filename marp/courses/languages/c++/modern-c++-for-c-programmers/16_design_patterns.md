@@ -7,6 +7,7 @@
 Design patterns are reusable solutions to commonly occurring problems in software design
 
 Key benefits:
+
 1. **Proven solutions** - tested and refined over time
 1. **Common vocabulary** - shared language for developers
 1. **Design quality** - promote loose coupling and high cohesion
@@ -2881,6 +2882,7 @@ public:
 Design Patterns in Modern C++:
 
 **Key Principles:**
+
 1. **Solve actual problems** - don't over-engineer
 1. **Common vocabulary** - communicate design intent clearly
 1. **Proven solutions** - tested and refined over time
@@ -2892,6 +2894,7 @@ Design Patterns in Modern C++:
 ## Summary (cont.)
 
 **Pattern Categories:**
+
 - **Creational (5 patterns)**: Factory, Abstract Factory, Builder, Prototype, Singleton
 - **Structural (6 patterns)**: Adapter, Bridge, Composite, Decorator, Facade, Proxy
 - **Behavioral (11 patterns)**: Observer, Strategy, Command, Template Method, State, Chain of Responsibility, Visitor, Iterator, Mediator, Memento, Null Object
@@ -2901,6 +2904,7 @@ Design Patterns in Modern C++:
 ## Summary (cont.) (cont.)
 
 **Modern Enhancements:**
+
 - Smart pointers for automatic memory management
 - Lambdas for functional and callback patterns
 - Templates for compile-time polymorphism
@@ -2912,6 +2916,7 @@ Design Patterns in Modern C++:
 ## Summary (cont.) (cont. 2)
 
 **Best Practices:**
+
 - Choose patterns based on actual requirements
 - Combine patterns when solving complex problems
 - Prefer composition over inheritance

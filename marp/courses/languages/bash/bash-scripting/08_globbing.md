@@ -24,6 +24,7 @@ audience:
 ---
 
 ## What is Globbing?
+
 - Pattern matching for filenames
 - Performed by the **shell**, not by commands
 - Happens before the command sees its arguments

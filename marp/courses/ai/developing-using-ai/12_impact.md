@@ -28,6 +28,7 @@ audience:
 ## Why Measuring AI Impact Matters
 
 Quantifying AI impact enables:
+
 - **Justification of AI tool investments** to management and stakeholders
 - **Data-driven optimization** of AI usage patterns and workflows
 - **Identification of high-value use cases** and areas for expansion

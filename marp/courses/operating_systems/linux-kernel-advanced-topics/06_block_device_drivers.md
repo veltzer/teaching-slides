@@ -223,6 +223,7 @@ static int my_blk_mq_init(void)
 ## I/O Schedulers
 
 Available schedulers:
+
 - `noop` - Simple FIFO
 - `deadline` - Latency guarantees
 - `cfq` - Completely Fair Queuing
@@ -726,12 +727,14 @@ trace_block_rq_complete(req, error);
 ## Summary
 
 Block driver development involves:
+
 - Understanding block layer architecture
 - Request queue management
 - Bio/request handling
 - I/O scheduling integration
 
 Key concepts:
+
 - Multi-queue for scalability
 - DMA for efficient transfers
 - Proper cache handling

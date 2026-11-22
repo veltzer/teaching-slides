@@ -13,6 +13,7 @@ audience:
 # Computer Hardware Fundamentals for Forensics
 
 ## Course: Linux Forensics
+
 - Understanding hardware is the foundation of digital forensics
 - Investigators must know how data is physically stored
 - Hardware knowledge helps with evidence acquisition and preservation
@@ -325,6 +326,7 @@ lsusb -v 2>/dev/null | grep -E "idVendor|idProduct|iSerial"
 ## Partitioning: MBR vs GPT
 
 ### MBR (Master Boot Record)
+
 - Legacy partitioning scheme (since 1983)
 - Located in first 512 bytes (LBA 0)
 - Maximum 4 primary partitions
@@ -336,6 +338,7 @@ lsusb -v 2>/dev/null | grep -E "idVendor|idProduct|iSerial"
 ## Partitioning: MBR vs GPT (cont.)
 
 ### GPT (GUID Partition Table)
+
 - Modern partitioning scheme (UEFI standard)
 - Supports up to 128 partitions
 - Maximum disk size: 9.4 ZB
@@ -556,6 +559,7 @@ sudo losetup -fP /evidence/disk_image.dd
 ## Storage Media: Other Types
 
 ### USB Flash Drives
+
 - Use NAND flash similar to SSDs
 - Often FAT32 or NTFS formatted
 - May have hidden partitions
@@ -566,11 +570,13 @@ sudo losetup -fP /evidence/disk_image.dd
 ## Storage Media: Other Types (cont.)
 
 ### SD Cards / microSD
+
 - Common in phones, cameras, IoT devices
 - Usually FAT32 or exFAT
 - Relatively easy to image
 
 ### Optical Media (CD/DVD/Blu-ray)
+
 - Write-once media preserves original data
 - ISO 9660 / UDF filesystems
 - `dd if=/dev/sr0 of=disc_image.iso`
@@ -631,6 +637,7 @@ shred -vfz -n 3 sensitive_file.txt
 ## Exercise: Hardware Identification Lab
 
 ### Tasks
+
 1. List all block devices and their properties
 1. Identify the partition table type for each disk
 1. Record serial numbers of all connected drives
@@ -905,6 +912,7 @@ file /home/.ecryptfs/*/\.Private/*
 ## Exercise: Advanced Hardware Lab
 
 ### Tasks
+
 1. Identify all storage devices including NVMe and USB
 1. Check for HPA/DCO on available drives
 1. Review USB connection history from system logs

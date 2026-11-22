@@ -224,6 +224,7 @@ watch -n 1 'ss -tn state established | wc -l'
 ```
 
 ### Signs of Slowloris Attack
+
 - Unusually high number of connections from a single IP or small range
 - Many connections in ESTABLISHED state with little data transfer
 - Server response time degrading while bandwidth utilization is low

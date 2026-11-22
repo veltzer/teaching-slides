@@ -161,6 +161,7 @@ setenv bootargs root=/dev/mmcblk0p${bootpart} rootwait
 ```
 
 Update process:
+
 1. Download to inactive partition
 1. Verify downloaded image
 1. Set boot flag to new partition
@@ -389,6 +390,7 @@ fleet/
 ```
 
 Update rollout strategy:
+
 1. Canary deployment (1-5% devices)
 1. Monitor for issues
 1. Staged rollout (25%, 50%, 100%)
@@ -602,6 +604,7 @@ fi
 ## Compliance Documentation
 
 Required documentation:
+
 - Bill of Materials (BOM)
 - Software Bill of Materials (SBOM)
 - License manifest
@@ -634,6 +637,7 @@ tar czf compliance-docs-${VERSION}.tar.gz \
 ## Production Checklist
 
 Pre-deployment:
+
 - [ ] Security hardening complete
 - [ ] All tests passing
 - [ ] Performance validated
@@ -650,6 +654,7 @@ Pre-deployment:
 ## Production Checklist (cont.)
 
 Post-deployment:
+
 - [ ] Initial health check
 - [ ] Connectivity verified
 - [ ] Services running
@@ -661,6 +666,7 @@ Post-deployment:
 ## Field Deployment
 
 Deployment phases:
+
 1. **Pilot** - 1-10 devices
 1. **Limited** - 10-100 devices
 1. **Regional** - 100-1000 devices
@@ -671,6 +677,7 @@ Deployment phases:
 ## Field Deployment (cont.)
 
 Success criteria:
+
 - Zero critical failures
 - <1% minor issues
 - All metrics within range
@@ -682,6 +689,7 @@ Success criteria:
 ## Incident Response
 
 Incident handling process:
+
 1. Detection and alerting
 1. Initial assessment
 1. Containment
@@ -717,6 +725,7 @@ fi
 ## End-of-Life Management
 
 EOL process:
+
 1. Announce EOL date (12+ months ahead)
 1. Final security updates
 1. Migration path documentation
@@ -745,6 +754,7 @@ curl -X POST https://ca.example.com/revoke \
 ## Summary
 
 Key deployment topics:
+
 - Release management and versioning
 - Image formats and packaging
 - Update strategies (A/B, atomic, delta)
@@ -759,6 +769,7 @@ Key deployment topics:
 ## Summary (cont.)
 
 Best practices:
+
 - Automate everything
 - Test update mechanisms thoroughly
 - Monitor continuously

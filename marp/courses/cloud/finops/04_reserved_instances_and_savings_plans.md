@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Commitment-Based Discounts
+
 - All major cloud providers offer them
 - Trade flexibility for lower prices
 - 1-year or 3-year commitments
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## How Commitments Work
+
 - Commit to a certain level of usage
 - Pay a lower rate in exchange
 - Unused commitment is still charged
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## AWS Reserved Instances (RIs)
+
 - Specific instance type, Region, and OS
 - Standard RI: fixed attributes
 - Convertible RI: can change instance type
@@ -44,6 +47,7 @@ audience:
 ---
 
 ## RI Payment Options
+
 - All Upfront: largest discount, pay 100% now
 - Partial Upfront: moderate discount, pay ~50% now
 - No Upfront: smallest discount, pay monthly
@@ -53,6 +57,7 @@ audience:
 ---
 
 ## AWS Savings Plans
+
 - More flexible than Reserved Instances
 - Compute Savings Plan: any family, Region, OS, tenancy
 - EC2 Instance Savings Plan: specific family and Region
@@ -77,6 +82,7 @@ aws ce get-savings-plans-coverage \
 ---
 
 ## Savings Plans vs Reserved Instances
+
 - Savings Plans: simpler, more flexible
 - RIs: slightly higher savings in some cases
 - Savings Plans cover Lambda and Fargate too
@@ -92,6 +98,7 @@ aws ce get-savings-plans-coverage \
 ---
 
 ## Azure Reservations
+
 - Similar concept to AWS RIs
 - Available for VMs, SQL Database, Cosmos DB, etc.
 - 1-year or 3-year terms
@@ -101,6 +108,7 @@ aws ce get-savings-plans-coverage \
 ---
 
 ## GCP Committed Use Discounts
+
 - Committed Use Discounts (CUDs): 1 or 3 year
 - Resource-based: specific vCPU and memory
 - Spend-based: commit to $ amount
@@ -110,6 +118,7 @@ aws ce get-savings-plans-coverage \
 ---
 
 ## Choosing the Right Commitment Level
+
 - Analyze historical usage (at least 3 months)
 - Commit to baseline (steady-state) usage only
 - Leave headroom for variable workloads
@@ -119,6 +128,7 @@ aws ce get-savings-plans-coverage \
 ---
 
 ## Break-Even Analysis: Details
+
 - Calculate when savings exceed commitment cost
 - All Upfront 1-year: break-even ~7-9 months
 - No Upfront 1-year: savings from day one
@@ -134,6 +144,7 @@ aws ce get-savings-plans-coverage \
 ---
 
 ## Managing Commitments
+
 - Track utilization of existing RIs/Savings Plans
 - Unused commitments are wasted money
 - AWS Cost Explorer RI/SP utilization reports
@@ -143,6 +154,7 @@ aws ce get-savings-plans-coverage \
 ---
 
 ## RI Marketplace
+
 - AWS allows reselling unused Standard RIs
 - Recover value from commitments you no longer need
 - Buy RIs at a discount from other sellers
@@ -152,6 +164,7 @@ aws ce get-savings-plans-coverage \
 ---
 
 ## Commitment Strategy Best Practices
+
 - Start with Savings Plans for flexibility
 - Layer commitments gradually (don't over-commit)
 - Review and renew quarterly

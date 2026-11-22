@@ -125,6 +125,7 @@ Example:
 ---
 
 ## Proper Alignment
+
 - Align data for optimal performance
 - Use appropriate directives
 
@@ -139,6 +140,7 @@ sse_data:
 ---
 
 ## Error Handling in Assembly
+
 - Use conditional jumps for error checking
 - Set error codes in a consistent manner
 

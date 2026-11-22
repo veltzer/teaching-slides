@@ -566,6 +566,7 @@ openssl dhparam -out dhparam.pem 2048
 ```
 
 Best practices:
+
 - Disable TLS 1.0 and 1.1
 - Use strong cipher suites
 - Enable HSTS
@@ -600,6 +601,7 @@ openssl verify -CAfile /etc/ssl/certs/ca-certificates.crt \
 ## VPN Overview
 
 Common `VPN` solutions for `Linux`:
+
 - `WireGuard` - modern, fast, simple
 - `OpenVPN` - mature, widely supported
 - `IPsec`/`StrongSwan` - enterprise, standards-based
@@ -695,6 +697,7 @@ network:
 ## IPv6 Essentials
 
 Key concepts:
+
 1. `::1/128` - loopback
 1. `fe80::/10` - link-local (auto-configured)
 1. `2000::/3` - global unicast (routable)
@@ -1342,6 +1345,7 @@ Modern `Linux` uses predictable network interface names based on hardware topolo
 ## Network Interface Naming Schemes (cont.)
 
 Naming schemes (in priority order):
+
 1. `eno1` - onboard device index
 1. `ens3` - PCI Express hotplug slot
 1. `enp0s3` - PCI bus/slot/function
@@ -1421,6 +1425,7 @@ traceroute -T -p 443 example.com  # TCP
 ```
 
 Interpreting `mtr` results:
+
 - Loss at a single hop but not beyond = that router deprioritizes ICMP (not real loss)
 - Loss at a hop and all subsequent hops = real loss at that point
 - Loss only at the final hop = destination issue

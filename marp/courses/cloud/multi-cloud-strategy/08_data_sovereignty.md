@@ -24,6 +24,7 @@ audience:
 ---
 
 ## What is Data Sovereignty?
+
 - Data is subject to the laws of the country where it is stored
 - Governments require certain data to remain within borders
 - Multi-cloud amplifies the challenge: data may cross multiple jurisdictions
@@ -33,6 +34,7 @@ audience:
 ---
 
 ## Why Multi-Cloud Makes This Harder
+
 - Each provider has different Region availability
 - Data replication may cross borders automatically
 - CDN edge locations introduce additional jurisdictions
@@ -42,6 +44,7 @@ audience:
 ---
 
 ## Key Regulatory Frameworks
+
 - GDPR (EU): data protection for EU residents
 - HIPAA (US): protected health information
 - SOC 2: security controls audit framework
@@ -51,6 +54,7 @@ audience:
 ---
 
 ## GDPR Requirements
+
 - Lawful basis for processing personal data
 - Data subject rights (access, deletion, portability)
 - Data cannot leave EEA without adequate safeguards
@@ -61,6 +65,7 @@ audience:
 ---
 
 ## HIPAA in Multi-Cloud
+
 - Protected Health Information (PHI) must be encrypted at rest and in transit
 - Business Associate Agreements (BAAs) required with each cloud provider
 - AWS, Azure, and GCP all offer HIPAA-eligible services
@@ -70,6 +75,7 @@ audience:
 ---
 
 ## SOC 2 Compliance
+
 - Trust Service Criteria: Security, Availability, Processing Integrity, Confidentiality, Privacy
 - Requires demonstrating controls over time (Type II)
 - Each cloud provider has SOC 2 reports for their infrastructure
@@ -79,6 +85,7 @@ audience:
 ---
 
 ## Data Residency Requirements
+
 - Some industries require data to stay in specific countries
 - Financial services: often country-specific regulators
 - Government data: may require domestic clouds or sovereign regions
@@ -94,6 +101,7 @@ audience:
 ---
 
 ## Cloud Provider Region Selection
+
 - AWS: 33+ Regions globally
 - Azure: 60+ Regions globally
 - GCP: 40+ Regions globally
@@ -140,6 +148,7 @@ resource "azurerm_resource_group" "eu_data" {
 ---
 
 ## Data Classification
+
 - Not all data has the same residency requirements
 - Classify data by sensitivity: public, internal, confidential, restricted
 - Apply residency rules based on classification
@@ -149,6 +158,7 @@ resource "azurerm_resource_group" "eu_data" {
 ---
 
 ## Encryption Across Clouds
+
 - Encryption at rest: AES-256 standard across all major clouds
 - Encryption in transit: TLS 1.2+ for all cross-cloud communication
 - Key management: AWS KMS, Azure Key Vault, GCP Cloud KMS
@@ -158,6 +168,7 @@ resource "azurerm_resource_group" "eu_data" {
 ---
 
 ## Audit and Governance
+
 - Centralized logging across all clouds
 - AWS CloudTrail, Azure Monitor, GCP Cloud Audit Logs
 - Aggregate into SIEM (Splunk, Datadog, Sentinel)
@@ -167,6 +178,7 @@ resource "azurerm_resource_group" "eu_data" {
 ---
 
 ## Policy as Code for Compliance
+
 - Define compliance rules as code, not documentation
 - OPA (Open Policy Agent): cloud-agnostic policy engine
 - AWS Config Rules, Azure Policy, GCP Organization Policy
@@ -176,6 +188,7 @@ resource "azurerm_resource_group" "eu_data" {
 ---
 
 ## Cloud-Native Compliance Tools
+
 - AWS: Config, Security Hub, Macie, GuardDuty
 - Azure: Policy, Defender for Cloud, Purview
 - GCP: Security Command Center, DLP API, Policy Intelligence
@@ -185,6 +198,7 @@ resource "azurerm_resource_group" "eu_data" {
 ---
 
 ## Key Takeaways
+
 - Know your regulatory requirements before choosing Regions
 - Classify data and apply residency rules per classification
 - Use policy as code to enforce residency constraints automatically

@@ -11,6 +11,7 @@ audience:
 # C and Python Integration
 
 ## Overview
+
 - Bridging Python and C code
 - Python's C API
 - Building C extensions
@@ -96,6 +97,7 @@ Potential speedup: ~60x
 ## Integration Methods Overview
 
 ## Main Approaches to C/Python Integration
+
 1. **Python C API**: Direct C extensions using Python's C API
 1. **ctypes**: Python standard library for calling C functions
 1. **CFFI**: C Foreign Function Interface for Python
@@ -1128,6 +1130,7 @@ def fast_multiply(np.ndarray[np.float64_t, ndim=2] a,
 ## Alternative Approach: pybind11
 
 ## What is pybind11?
+
 - Header-only C++11 library for creating Python extensions
 - Modern, lightweight alternative to SWIG
 - Exposes C++ classes, functions, and types to Python
@@ -1175,6 +1178,7 @@ PYBIND11_MODULE(example, m) {
 ## Alternative Approach: SWIG
 
 ## What is SWIG?
+
 - Simplified Wrapper and Interface Generator
 - Generates bindings for many languages, not just Python
 - Processes interface files to create wrappers
@@ -1476,6 +1480,7 @@ print("Results match!")
 ## Summary
 
 ## Key Takeaways
+
 - Direct C extensions offer maximum flexibility and performance
 - Python C API provides full access to Python's internals
 - Alternative approaches like ctypes, CFFI, and Cython provide easier integration
@@ -1489,6 +1494,7 @@ print("Results match!")
 ## Resources
 
 ## Further Learning
+
 - [Python/C API Reference Manual](https://docs.python.org/3/c-api/)
 - [Extending and Embedding Python](https://docs.python.org/3/extending/index.html)
 - [CFFI Documentation](https://cffi.readthedocs.io/)

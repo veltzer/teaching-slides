@@ -5,6 +5,7 @@
 Storage classes determine the lifetime, scope, and linkage of variables in C++
 
 **Four main storage classes:**
+
 - **Automatic** - local variables (default)
 - **Static** - persists for program duration
 - **Dynamic** - heap allocated with new/delete
@@ -920,11 +921,13 @@ void function() {
 Static variables have performance characteristics:
 
 **Advantages:**
+
 - No allocation/deallocation overhead
 - CPU cache friendly (predictable memory location)
 - No constructor/destructor calls for POD types
 
 **Disadvantages:**
+
 - Thread synchronization overhead for shared access
 - Increased memory usage (exists for program lifetime)
 - Potential cache line contention in multi-threaded code
@@ -994,6 +997,7 @@ int main() {
 ## Best Practices Summary
 
 **Do:**
+
 - Use static local variables for lazy initialization
 - Prefer dependency injection over singletons
 - Use thread_local for per-thread data
@@ -1005,6 +1009,7 @@ int main() {
 ## Best Practices Summary (cont.)
 
 **Don't:**
+
 - Create global variables for mutable state
 - Use singleton as a global variable replacement
 - Rely on static initialization order between translation units

@@ -17,6 +17,7 @@ audience:
 # CI/CD Integration
 
 ## Topics Covered
+
 - `Ansible` in CI/CD pipelines
 - GitHub Actions integration
 - GitLab CI/CD integration

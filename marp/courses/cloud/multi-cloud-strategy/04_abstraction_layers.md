@@ -18,6 +18,7 @@ audience:
 ---
 
 ## Why Abstraction Layers?
+
 - Single interface to manage multiple clouds
 - Reduce cognitive load on engineering teams
 - Enable workload portability
@@ -27,6 +28,7 @@ audience:
 ---
 
 ## The Lowest Common Denominator Problem
+
 - Abstractions can only expose what all providers share
 - Unique provider features get hidden or ignored
 - Performance optimizations may be unavailable
@@ -36,6 +38,7 @@ audience:
 ---
 
 ## Terraform: The Multi-Cloud Standard
+
 - HashiCorp Configuration Language (HCL)
 - Provider plugins for every major cloud
 - Declarative: describe desired state, Terraform reconciles
@@ -122,6 +125,7 @@ resource "google_compute_instance" "this" {
 ---
 
 ## Terraform Limitations for Multi-Cloud
+
 - HCL is declarative but provider resources are unique
 - Modules must map between different resource models
 - State files are per-workspace — cross-cloud references are awkward
@@ -137,6 +141,7 @@ resource "google_compute_instance" "this" {
 ---
 
 ## Pulumi: Infrastructure as Real Code
+
 - Use Python, TypeScript, Go, Java, C# instead of HCL
 - Full programming language: loops, conditionals, abstractions
 - Same provider coverage as Terraform (uses Terraform providers)
@@ -146,6 +151,7 @@ resource "google_compute_instance" "this" {
 ---
 
 ## OpenTofu: The Open-Source Fork
+
 - Fork of Terraform after HashiCorp BSL license change
 - Drop-in replacement for Terraform
 - Community-governed under Linux Foundation
@@ -155,6 +161,7 @@ resource "google_compute_instance" "this" {
 ---
 
 ## Crossplane: Kubernetes-Native Infrastructure
+
 - Manage cloud resources using Kubernetes custom resources
 - Declarative, GitOps-friendly
 - Composition: define your own platform APIs
@@ -226,6 +233,7 @@ spec:
 ---
 
 ## Abstraction Trade-Offs Summary
+
 - More abstraction: better portability, fewer provider features
 - Less abstraction: full provider capabilities, harder to switch
 - There is no perfect abstraction — choose based on priorities
@@ -241,6 +249,7 @@ spec:
 ---
 
 ## Choosing the Right Tool
+
 - Terraform/OpenTofu: broad adoption, large ecosystem, mature
 - Pulumi: strong for developer-centric teams
 - Crossplane: ideal for platform teams running Kubernetes

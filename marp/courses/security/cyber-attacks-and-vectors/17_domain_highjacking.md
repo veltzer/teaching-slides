@@ -74,10 +74,12 @@ audience:
 ## DNS Hijacking Techniques
 
 ### 1. Local DNS Hijacking
+
 - Malware modifies the victim's local DNS settings (`/etc/resolv.conf` or router config)
 - All DNS queries from the victim go to attacker-controlled resolver
 
 ### 2. Router DNS Hijacking
+
 - Attacker compromises home/office router (default credentials)
 - Changes DHCP-provided DNS servers to malicious ones
 
@@ -86,10 +88,12 @@ audience:
 ## DNS Hijacking Techniques (cont.)
 
 ### 3. Man-in-the-Middle DNS
+
 - Attacker intercepts DNS queries on the network
 - Responds with forged DNS answers before the legitimate server
 
 ### 4. Rogue DNS Server
+
 - Attacker operates a DNS resolver that returns malicious results
 - Users are tricked or configured to use it
 
@@ -127,6 +131,7 @@ dig @9.9.9.9 example.com +short    # Quad9 DNS
 ## Expired Domain Takeover: Example
 
 **Why expired domains are valuable to attackers:**
+
 - May still have backlinks and SEO authority
 - Email sent to old addresses can be intercepted
 - Subdomains of other sites may still point to the expired domain

@@ -21,6 +21,7 @@ audience:
 ---
 
 ## Course Introduction
+
 - Welcome to the Python fundamentals section
 - This crash course is designed for those familiar with programming but new to Python
 - We'll cover essential concepts needed for Spark development
@@ -167,6 +168,7 @@ sorted_pairs = sorted(pairs, key=lambda x: x[1])
 ---
 
 ## Python Best Practices for Spark
+
 - Use meaningful variable names
 - Follow PEP 8 guidelines
 - Keep functions small and focused
@@ -212,6 +214,7 @@ total = sum(t["amount"] for t in transactions)
 ---
 
 ## Summary
+
 - Python's syntax is clean and readable
 - Key data structures: tuples, lists, dictionaries
 - Lambda functions for functional programming

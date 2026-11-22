@@ -11,6 +11,7 @@ audience:
 # Debugging, Linting, and Testing your Python Code
 
 ## Overview
+
 - Python debugging techniques and tools
 - Using assertions correctly
 - Type hints for code quality
@@ -24,6 +25,7 @@ audience:
 ## Code Quality Fundamentals
 
 ## The Python Code Quality Ecosystem
+
 - Debugging: Find and fix logical errors
 - Linting: Identify stylistic and potential issues
 - Type checking: Verify type consistency
@@ -1525,6 +1527,7 @@ Coverage Report Guidelines:
 ## Continuous Integration
 
 ## CI for Python Testing
+
 - Automated testing on every commit
 - Multiple environments and Python versions
 - Linting and type checking
@@ -1650,6 +1653,7 @@ tox
 ## Summary
 
 ## Key Takeaways
+
 - Debugging: Use appropriate tools for different situations
 - Assertions: Validate internal assumptions and invariants
 - Type hints: Catch errors before runtime
@@ -1663,6 +1667,7 @@ tox
 ## Resources
 
 ## Further Learning
+
 - Python Debugging: <https://docs.python.org/3/library/pdb.html>
 - mypy Type Checking: <https://mypy.readthedocs.io/>
 - pytest Documentation: <https://docs.pytest.org/>

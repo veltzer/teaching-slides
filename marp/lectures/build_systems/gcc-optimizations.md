@@ -35,6 +35,7 @@ audience:
 ---
 
 ## Basic Optimization Flags and Inspection
+
 - `-O0`: No optimization (default)
 - `-O1`: Basic optimization
 - `-O2`: Recommended optimization level
@@ -52,6 +53,7 @@ gcc -O2 -fopt-info
 ---
 
 ## CPU-Specific Flags Overview
+
 - `-march`: Architecture-specific instructions
 - `-mtune`: Performance tuning
 - `-mcpu`: Combined architecture and tuning (some platforms)
@@ -59,6 +61,7 @@ gcc -O2 -fopt-info
 ---
 
 ## Understanding -march
+
 - Sets minimum CPU architecture
 - Generates CPU-specific instructions
 - Code won't run on older processors
@@ -67,6 +70,7 @@ gcc -O2 -fopt-info
 ---
 
 ## Understanding -mtune
+
 - Optimizes for target CPU
 - Maintains backward compatibility
 - Safe for distribution
@@ -75,6 +79,7 @@ gcc -O2 -fopt-info
 ---
 
 ## Auto-detection with 'native'
+
 - `-march=native`
 - `-mtune=native`
 - Automatically detects host CPU
@@ -85,12 +90,14 @@ gcc -O2 -fopt-info
 ## Common CPU Types
 
 ### Intel
+
 - skylake
 - haswell
 - broadwell
 - icelake
 
 ### AMD
+
 - znver1 (Zen 1)
 - znver2 (Zen 2)
 - znver3 (Zen 3)
@@ -98,6 +105,7 @@ gcc -O2 -fopt-info
 ---
 
 ## Vector Extensions
+
 - `-mavx`
 - `-mavx2`
 - `-msse4.2`
@@ -129,6 +137,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 ---
 
 ## Profiling Tools
+
 - `-fprofile-generate`
 - `-fprofile-use`
 - Allows optimization based on runtime behavior
@@ -137,6 +146,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 ---
 
 ## Common Pitfalls
+
 - Over-optimization
 - Platform compatibility issues
 - Testing implications
@@ -145,6 +155,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 ---
 
 ## Best Practices
+
 1. Test performance impact
 1. Maintain compatibility requirements
 1. Document CPU requirements
@@ -153,6 +164,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 ---
 
 ## Performance Monitoring
+
 - Use perf tools
 - Benchmark before/after
 - Monitor CPU utilization
@@ -161,6 +173,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 ---
 
 ## Distribution Considerations
+
 - Binary compatibility
 - Target audience
 - Platform support
@@ -169,6 +182,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 ---
 
 ## Optimization Strategy
+
 1. Start with -O2
 1. Profile code
 1. Add CPU-specific flags
@@ -178,6 +192,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 ---
 
 ## When to Use CPU-Specific Tuning
+
 - Performance-critical applications
 - Known deployment environment
 - Local builds
@@ -186,6 +201,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 ---
 
 ## Additional Resources
+
 - GCC documentation
 - CPU vendor optimization guides
 - Performance tuning guides
@@ -194,6 +210,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 ---
 
 ## Questions to Consider
+
 1. What is your target platform?
 1. Performance requirements?
 1. Distribution needs?
@@ -202,6 +219,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 ---
 
 ## Summary
+
 - CPU tuning can improve performance
 - Consider compatibility needs
 - Test thoroughly

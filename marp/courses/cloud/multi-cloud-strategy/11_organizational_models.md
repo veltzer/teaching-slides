@@ -18,6 +18,7 @@ audience:
 ---
 
 ## People Before Technology
+
 - Multi-cloud strategy fails without the right organizational structure
 - Technology decisions are easier than people decisions
 - Team structure shapes cloud architecture (Conway's Law)
@@ -27,6 +28,7 @@ audience:
 ---
 
 ## Conway's Law in Multi-Cloud
+
 - Organizations design systems that mirror their communication structure
 - Siloed cloud teams produce siloed cloud architectures
 - Cross-functional teams produce integrated architectures
@@ -36,6 +38,7 @@ audience:
 ---
 
 ## Common Organizational Models
+
 1. Cloud-per-team: each team owns one cloud
 1. Platform team: central team manages all clouds
 1. Cloud Center of Excellence: advisory and governance body
@@ -45,6 +48,7 @@ audience:
 ---
 
 ## Cloud-Per-Team Model
+
 - Team A uses AWS, Team B uses Azure, Team C uses GCP
 - Simple: each team goes deep on one cloud
 - Risk: silos, inconsistent practices, duplication of effort
@@ -54,6 +58,7 @@ audience:
 ---
 
 ## Central Platform Team Model
+
 - Dedicated team manages infrastructure across all clouds
 - Provides standardized APIs, templates, and guardrails
 - Application teams consume platform services
@@ -63,6 +68,7 @@ audience:
 ---
 
 ## Cloud Center of Excellence (CCoE)
+
 - Advisory body, not an operational team
 - Sets standards, best practices, and approved patterns
 - Reviews architecture decisions across clouds
@@ -72,6 +78,7 @@ audience:
 ---
 
 ## CCoE Responsibilities
+
 - Define multi-cloud architecture standards
 - Evaluate and approve new cloud services
 - Maintain reference architectures and templates
@@ -81,6 +88,7 @@ audience:
 ---
 
 ## Federated Model
+
 - Central team sets guardrails and standards
 - Individual teams have autonomy within guardrails
 - Balance between consistency and agility
@@ -90,6 +98,7 @@ audience:
 ---
 
 ## Platform Team Structure
+
 - Platform engineering: IaC, CI/CD, observability
 - Security engineering: identity, compliance, policy
 - FinOps: cost management and optimization
@@ -105,6 +114,7 @@ audience:
 ---
 
 ## Self-Service Platforms
+
 - Developers should not need to understand every cloud
 - Provide abstracted interfaces: CLI, portal, API
 - Internal Developer Platform (IDP): Backstage, Port, Humanitec
@@ -114,6 +124,7 @@ audience:
 ---
 
 ## Skills and Training Strategy
+
 - Each cloud requires specialized knowledge
 - Full-stack multi-cloud expertise is rare and expensive
 - Strategy: T-shaped skills (deep in one, broad across all)
@@ -123,6 +134,7 @@ audience:
 ---
 
 ## Training Investment
+
 - Budget for certifications and training per engineer
 - Hands-on labs are more effective than lectures alone
 - Sandbox accounts for experimentation on each cloud
@@ -132,6 +144,7 @@ audience:
 ---
 
 ## Key Takeaways
+
 - Organizational structure determines multi-cloud success or failure
 - Federated model with a platform team scales best
 - Cloud Center of Excellence provides governance without bottlenecks

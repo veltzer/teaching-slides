@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Why Cloud Architecture Matters
+
 - Cloud is not just someone else's computer
 - New environment demands new thinking
 - Old patterns do not translate directly
@@ -25,6 +26,7 @@ audience:
 ---
 
 ## Cloud vs On-Premises Architecture
+
 - On-premises: design for peak capacity
 - Cloud: design for elasticity
 - On-premises: vertical scaling
@@ -40,6 +42,7 @@ audience:
 ---
 
 ## Advantages of Cloud Computing
+
 - Elastic scaling to actual demand
 - Global deployment in minutes
 - Pay only for what you consume
@@ -49,6 +52,7 @@ audience:
 ---
 
 ## The Cost of Getting It Wrong
+
 - Over-architected: too complex, too expensive
 - Under-architected: outages, poor performance
 - Lift-and-shift without rethinking: worst of both worlds
@@ -58,6 +62,7 @@ audience:
 ---
 
 ## Well-Architected Apps: Basic Principles
+
 - Design for failure (everything fails eventually)
 - Decouple components (loose coupling)
 - Think horizontally (scale out, not up)
@@ -67,6 +72,7 @@ audience:
 ---
 
 ## Design for Failure
+
 - Assume any component can fail at any time
 - No single points of failure
 - Graceful degradation over hard crashes
@@ -76,6 +82,7 @@ audience:
 ---
 
 ## Decouple Components
+
 - Components should communicate through well-defined interfaces
 - Queues between producers and consumers
 - Events for asynchronous communication
@@ -85,6 +92,7 @@ audience:
 ---
 
 ## Think Horizontally
+
 - Prefer many small instances over few large ones
 - Stateless services scale easily
 - Shared-nothing architecture
@@ -94,6 +102,7 @@ audience:
 ---
 
 ## Automate Everything
+
 - Infrastructure as Code for all resources
 - Automated deployments and rollbacks
 - Auto-healing (replace failed instances)
@@ -125,6 +134,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Use Managed Services
+
 - Don't run what the cloud provider can run for you
 - Managed databases, queues, caches, search
 - Lower operational burden
@@ -134,6 +144,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## First Example: A Simple Web App
+
 - Load balancer in front
 - Auto-scaled web tier (stateless)
 - Managed database backend (Multi-AZ)
@@ -143,6 +154,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Scaling the Simple Web App
+
 - Add read replicas for database reads
 - Add caching layer (ElastiCache/Memcached)
 - Move sessions to external store (Redis/DynamoDB)
@@ -158,6 +170,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Architecture Decision Process
+
 1. Identify the requirements (functional and non-functional)
 1. Consider multiple options
 1. Evaluate trade-offs (cost, complexity, performance)
@@ -167,6 +180,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## The Twelve-Factor App
+
 - Methodology for building cloud-native applications
 - Codebase in version control
 - Config in environment, not code
@@ -177,6 +191,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Non-Functional Requirements in the Cloud
+
 - Availability: what uptime do you need? (99.9% vs 99.99%)
 - Scalability: how many users, requests, data volume?
 - Latency: acceptable response time?
@@ -186,6 +201,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Trade-Offs Are Everywhere
+
 - Cost vs performance
 - Consistency vs availability (CAP theorem)
 - Complexity vs resilience
@@ -195,6 +211,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Cost as an Architecture Constraint
+
 - Cloud makes cost a first-class architecture concern
 - Right architecture can save 10x on cloud bills
 - Wrong architecture can bankrupt you
@@ -204,6 +221,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## The Well-Architected Framework
+
 - AWS Well-Architected Framework (6 pillars)
 - Azure Well-Architected Framework (5 pillars)
 - GCP Architecture Framework
@@ -219,6 +237,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Architecture Documentation
+
 - Architecture Decision Records (ADRs)
 - Document the decision, context, and rationale
 - Lightweight format (1 page per decision)
@@ -228,6 +247,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Anti-Patterns to Avoid
+
 - Treating cloud like a data center
 - Ignoring cost in architecture decisions
 - Building everything from scratch
@@ -237,6 +257,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Operational Excellence in the Cloud
+
 - Automate operations (runbooks, scripts)
 - Monitor everything
 - Learn from failures (blameless post-mortems)
@@ -246,6 +267,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Reliability Principles
+
 - Test recovery procedures
 - Automatically recover from failure
 - Scale horizontally to increase availability
@@ -255,6 +277,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Performance Efficiency
+
 - Democratize advanced technologies (managed services)
 - Go global in minutes
 - Use serverless architectures where appropriate
@@ -264,6 +287,7 @@ resource "aws_autoscaling_group" "web" {
 ---
 
 ## Course Roadmap
+
 - Identity and security
 - Compute: renting and managing machines
 - Scalability patterns

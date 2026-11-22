@@ -11,6 +11,7 @@ audience:
 # Python's `with` Statement
 
 ## Overview
+
 - Understanding the `with` statement
 - Context managers in Python
 - Creating your own context managers
@@ -1460,6 +1461,7 @@ with request_context(user_id="user456") as ctx:
 ## Summary
 
 ## Key Takeaways
+
 - The `with` statement simplifies resource management
 - Context managers ensure proper cleanup even with exceptions
 - Create custom context managers using classes or generators
@@ -1472,6 +1474,7 @@ with request_context(user_id="user456") as ctx:
 ## Resources
 
 ## Further Reading
+
 - Python documentation on context managers
 - PEP 343: The "with" Statement
 - `contextlib` module documentation

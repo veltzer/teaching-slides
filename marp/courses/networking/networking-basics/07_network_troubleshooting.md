@@ -164,6 +164,7 @@ $ ping -c 3 -D 8.8.8.8
 ```
 
 **Interpreting ping output:**
+
 - **ttl**: Time To Live -- decremented by each router. Helps estimate hop count.
 - **time**: Round-trip time in milliseconds
 - **packet loss**: % of packets that didn't get a response
@@ -486,6 +487,7 @@ Unicast reply from 10.0.0.1 [52:54:00:aa:bb:cc]  0.563ms
 ```
 
 **Common ARP issues:**
+
 - Duplicate IP addresses (two hosts with same IP)
 - ARP cache poisoning (security attack)
 - Stale ARP entries after MAC address change

@@ -13,6 +13,7 @@ audience:
 ---
 
 ## Python's Built-in Types
+
 - **Numeric**: `int`, `float`, `complex`
 - **Text**: `str`
 - **Boolean**: `bool`
@@ -29,6 +30,7 @@ print(type(True))     # <class 'bool'>
 ---
 
 ## Integers (`int`)
+
 - Whole numbers, positive or negative
 - Unlimited precision (no overflow!)
 
@@ -42,6 +44,7 @@ print(type(x))   # <class 'int'>
 ---
 
 ## Integer Literals
+
 - Decimal: `42`
 - Binary: `0b101010`
 - Octal: `0o52`
@@ -105,6 +108,7 @@ print(oct(8))         # '0o10'
 ---
 
 ## Floats (`float`)
+
 - Floating-point numbers (IEEE 754 double precision)
 - 64-bit, ~15-17 significant digits
 
@@ -120,6 +124,7 @@ print(type(x))  # <class 'float'>
 ---
 
 ## Float Precision Issues
+
 - Floats cannot represent all decimal numbers exactly
 
 ```python
@@ -134,6 +139,7 @@ print(math.isclose(0.1 + 0.2, 0.3))  # True
 ---
 
 ## The `decimal` Module
+
 - For exact decimal arithmetic
 
 ```python
@@ -215,6 +221,7 @@ print(float("3.14")) # 3.14
 ---
 
 ## Booleans (`bool`)
+
 - Two values: `True` and `False`
 - Subclass of `int` (`True` is `1`, `False` is `0`)
 
@@ -272,6 +279,7 @@ print(False and 1/0)    # False (1/0 not evaluated)
 ---
 
 ## Truthiness and Falsiness
+
 - These are falsy (evaluate to `False`):
     - `False`, `None`
     - `0`, `0.0`, `0j`
@@ -290,6 +298,7 @@ print(bool("hi"))  # True
 ---
 
 ## The `None` Type
+
 - Represents the absence of a value
 - Only one `None` object exists (singleton)
 - Always use `is` to compare with `None`
@@ -304,6 +313,7 @@ print(x == None)     # True (but use 'is')
 ---
 
 ## `==` vs `is`
+
 - `==` checks value equality
 - `is` checks identity (same object in memory)
 
@@ -320,6 +330,7 @@ print(a is c)   # True (same object)
 ---
 
 ## Strings (`str`)
+
 - Sequence of Unicode characters
 - Immutable (cannot be changed after creation)
 - Created with single, double, or triple quotes
@@ -355,6 +366,7 @@ print("She said \"hi\"")
 ---
 
 ## Raw Strings
+
 - Prefix with `r` to disable escape processing
 - Useful for regex patterns and file paths
 
@@ -391,6 +403,7 @@ print(s[-2])   # 'o'
 ---
 
 ## String Slicing
+
 - `s[start:stop:step]`
 - `start` is inclusive, `stop` is exclusive
 
@@ -489,6 +502,7 @@ print("hello".islower())   # True
 ---
 
 ## String Formatting - f-strings (Python 3.6+)
+
 - Recommended way to format strings
 
 ```python
@@ -609,6 +623,7 @@ x %= 5    # x = x % 5 -> 2.0
 ---
 
 ## Operator Precedence (High to Low)
+
 1. `**` (exponentiation)
 1. `~`, `+x`, `-x` (unary)
 1. `*`, `/`, `//`, `%`
@@ -660,6 +675,7 @@ print(pow(2, 10))      # 1024
 ---
 
 ## Summary
+
 - Python has rich built-in types: `int`, `float`, `str`, `bool`, `None`
 - Integers have unlimited precision
 - Floats follow IEEE 754 (be aware of precision issues)

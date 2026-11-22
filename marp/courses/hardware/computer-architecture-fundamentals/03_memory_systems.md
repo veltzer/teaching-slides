@@ -62,10 +62,12 @@ Programs do not access memory uniformly. They exhibit:
 
 **Temporal locality**: If you accessed address X, you will likely access X
 again soon.
+
 - Example: loop counter variables, frequently called functions
 
 **Spatial locality**: If you accessed address X, you will likely access
 addresses near X soon.
+
 - Example: iterating through arrays, sequential instruction execution
 
 ---
@@ -98,6 +100,7 @@ SRAM stores each bit using a flip-flop circuit (6 transistors per bit).
 ## SRAM: Static Random Access Memory: Details
 
 **Properties:**
+
 - Fast: ~1 ns access time
 - No refresh needed (static)
 - Expensive: 6 transistors per bit
@@ -121,6 +124,7 @@ DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 ## DRAM: Dynamic Random Access Memory: Details
 
 **Properties:**
+
 - Slower: ~50-100 ns access time
 - Must refresh every ~64 ms (charge leaks)
 - Cheap: 1T + 1C per bit
@@ -168,6 +172,7 @@ DRAM is organized as a 2D array of rows and columns:
 ## DRAM Organization: Details
 
 **Access steps:**
+
 1. **RAS** (Row Address Strobe): activate a row, copy to row buffer (~13 ns)
 1. **CAS** (Column Address Strobe): select column from row buffer (~13 ns)
 1. **Data** appears on the data bus
@@ -216,6 +221,7 @@ Example: DDR4-3200, 64-bit bus, dual channel
 ```
 
 **But actual throughput is lower** due to:
+
 - Row activation latency (tRAS)
 - CAS latency (CL)
 - Refresh cycles stealing bandwidth
@@ -451,6 +457,7 @@ When a process accesses a virtual page that is not currently in physical
 memory (Present bit = 0), a **page fault** occurs:
 
 **Minor page fault**: page is in memory but not yet mapped
+
 - Example: first access to a newly allocated page (demand paging)
 - The OS allocates a frame and updates the page table
 - Cost: ~1-10 microseconds
@@ -460,6 +467,7 @@ memory (Present bit = 0), a **page fault** occurs:
 ## Page Faults (cont.)
 
 **Major page fault**: page must be loaded from disk (swap)
+
 - Example: page was swapped out to make room for other pages
 - The OS reads the page from swap space on disk
 - Cost: ~1-10 milliseconds (1000x slower!)
@@ -502,6 +510,7 @@ close(fd);
 ```
 
 **Advantages over read():**
+
 - No extra copy from kernel buffer to user buffer
 - OS manages pages automatically
 - Multiple processes can share the same physical pages
@@ -552,6 +561,7 @@ without involving the CPU for each byte.
 ## DMA: Direct Memory Access: Details
 
 **DMA flow:**
+
 1. CPU programs the DMA controller (source, destination, size)
 1. DMA controller transfers data directly between device and memory
 1. DMA controller interrupts CPU when transfer is complete

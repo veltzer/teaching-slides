@@ -306,6 +306,7 @@ let mut map: HashMap<_, _, BuildHasherDefault<DefaultHasher>> =
 <div>
 
 ## Vec<T>
+
 - Dynamic size
 - Heap allocated
 - Growable
@@ -314,6 +315,7 @@ let mut map: HashMap<_, _, BuildHasherDefault<DefaultHasher>> =
 <div>
 
 ## Array/Slice
+
 - Fixed size
 - Stack possible
 - Immutable size
@@ -404,6 +406,7 @@ fn main() {
 ## Practice Exercise
 
 Create a simple text analyzer that:
+
 1. Counts word frequency
 1. Tracks unique words
 1. Finds longest/shortest words
@@ -418,6 +421,7 @@ Create a simple text analyzer that:
 ---
 
 ## Common Pitfalls
+
 1. Index out of bounds
 1. Invalid string slicing
 1. HashMap key type constraints
@@ -427,6 +431,7 @@ Create a simple text analyzer that:
 ---
 
 ## Summary
+
 - Vectors for sequences
 - Strings for text
 - HashMaps for key-value data

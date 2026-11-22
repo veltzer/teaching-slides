@@ -20,6 +20,7 @@ audience:
 From concept to production using AI assistance
 
 This chapter covers:
+
 1. Project initialization
 1. Feature development
 1. Bug fixing workflows

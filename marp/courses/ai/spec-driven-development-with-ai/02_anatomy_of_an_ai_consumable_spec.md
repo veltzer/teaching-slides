@@ -18,6 +18,7 @@ audience:
 # Anatomy of an AI-Consumable Spec
 
 ## Overview
+
 - The three artifacts: requirements, technical plan, task list
 - Writing requirements the agent cannot misread: stories, `EARS`, edge cases, open questions
 - Writing the technical plan: constraints, interfaces, decisions

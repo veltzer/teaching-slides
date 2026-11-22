@@ -47,6 +47,7 @@ git log --graph --oneline --all
 ```
 
 **Common options:**
+
 - `--oneline`: Condensed format
 - `--graph`: ASCII graph of branches
 - `--all`: Show all branches
@@ -74,6 +75,7 @@ git log -- path/to/file.txt
 ```
 
 **Format placeholders:**
+
 - `%h`: Short hash
 - `%H`: Full hash
 - `%an`: Author name
@@ -366,6 +368,7 @@ git annotate file.txt
 ```
 
 **Key differences:**
+
 - `annotate` shows more context
 - `blame` is more commonly used
 - Both support similar options
@@ -456,6 +459,7 @@ git log --stat
     - Good for beginners
 
 **Benefits of visual tools:**
+
 - Easier branch visualization
 - Intuitive merge conflict resolution
 - Better for complex repository layouts
@@ -476,6 +480,7 @@ git cola
 - Good for commit preparation
 
 **Other tools:**
+
 - **SmartGit**: Commercial Git client
 - **GitEye**: Eclipse-based
 - **QGit**: Qt-based browser
@@ -486,6 +491,7 @@ git cola
 ## Git Cola and Other Linux Tools (cont.)
 
 **IDE Integration:**
+
 - VS Code Git extensions
 - IntelliJ Git support
 - Vim Git plugins
@@ -535,6 +541,7 @@ git log --full-history -S"deleted_line" -- file.txt
 ```
 
 **Case studies:**
+
 - When was this function introduced?
 - Who last modified this configuration?
 - What commits affected the login system?
@@ -560,6 +567,7 @@ git log -- specific/directory/
 ```
 
 **For very large repositories:**
+
 - Use `--first-parent` for simpler history
 - Limit with `--max-count=N`
 - Consider partial clones with `--filter`
@@ -675,6 +683,7 @@ git log --name-only --pretty=format: | sort -u | grep -E '\.(pem|key|p12)$'
 ```
 
 **Best practices:**
+
 - Regularly audit repository contents
 - Use `.gitignore` for sensitive files
 - Consider Git-crypt for encrypted storage
@@ -701,6 +710,7 @@ git log --oneline --since="6 months ago" | wc -l
 ```
 
 **Visualization ideas:**
+
 - Commit frequency over time
 - Code churn by author
 - File modification hotspots
@@ -733,6 +743,7 @@ git log --numstat --pretty=format: | python analyze_code_changes.py
 **Scenario:** Analyze a repository to understand development patterns and identify potential issues.
 
 **Tasks:**
+
 1. **Historical analysis:**
     - Find the most active contributors
     - Identify most frequently changed files

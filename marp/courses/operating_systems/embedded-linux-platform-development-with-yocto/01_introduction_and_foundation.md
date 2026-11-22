@@ -18,12 +18,14 @@ audience:
 ## What is Embedded Linux?
 
 Linux operating system tailored for embedded devices:
+
 - Resource-constrained environments
 - Specific hardware platforms
 - Real-time requirements
 - Custom functionality
 
 Key characteristics:
+
 - Minimal footprint
 - Cross-compilation
 - Hardware-specific drivers
@@ -34,6 +36,7 @@ Key characteristics:
 ## Traditional Embedded Linux Development
 
 Manual approach challenges:
+
 - Toolchain management
 - Dependency resolution
 - Package compilation order
@@ -45,6 +48,7 @@ Manual approach challenges:
 ## Traditional Embedded Linux Development (cont.)
 
 Each project starts from scratch:
+
 - No standardization
 - Limited reusability
 - Maintenance burden
@@ -61,12 +65,14 @@ Each project starts from scratch:
 ## Why Yocto?
 
 Industry standard for embedded Linux:
+
 - Used by major semiconductor vendors
 - Powers automotive systems (AGL)
 - IoT and industrial applications
 - Telecommunications infrastructure
 
 Key advantages:
+
 - Reproducible builds
 - Extensive hardware support
 - Active community
@@ -90,6 +96,7 @@ Key advantages:
 ## When to Choose Yocto
 
 Ideal for:
+
 - Multi-platform products
 - Long product lifecycles
 - Compliance requirements
@@ -101,6 +108,7 @@ Ideal for:
 ## When to Choose Yocto (cont.)
 
 Not ideal for:
+
 - Quick prototypes
 - Simple applications
 - Resource-limited teams
@@ -117,12 +125,14 @@ Not ideal for:
 ## Industry Adoption
 
 Automotive:
+
 - **AGL** (Automotive Grade Linux)
 - Tesla, BMW, Mercedes-Benz
 - Infotainment systems
 - ADAS platforms
 
 Industrial IoT:
+
 - Factory automation
 - Smart meters
 - Medical devices
@@ -133,12 +143,14 @@ Industrial IoT:
 ## Telecommunications
 
 5G Infrastructure:
+
 - **O-RAN** Alliance
 - Base stations
 - Edge computing
 - Network equipment
 
 Consumer Electronics:
+
 - Smart TVs
 - Set-top boxes
 - Home automation
@@ -149,12 +161,14 @@ Consumer Electronics:
 ## Development Environment Requirements
 
 Hardware requirements:
+
 - CPU: 4+ cores recommended
 - RAM: 8GB minimum, 16GB+ recommended
 - Storage: 100GB+ free space
 - SSD strongly recommended
 
 Software requirements:
+
 - Linux host (Ubuntu, Fedora, Debian)
 - Git, Python 3
 - Development packages
@@ -179,12 +193,14 @@ sudo apt-get install gawk wget git diffstat unzip \
 ## Storage Considerations
 
 Build space requirements:
+
 - Source downloads: ~10GB
 - Build workspace: ~50GB per configuration
 - Shared state cache: ~20GB
 - Deploy images: ~5GB
 
 Optimization tips:
+
 - Use SSD for build directory
 - NFS for shared state cache
 - Separate partition for builds
@@ -207,6 +223,7 @@ docker run --rm -it \
 ```
 
 Benefits:
+
 - Consistent environment
 - No host contamination
 - Easy CI/CD integration
@@ -223,12 +240,14 @@ Benefits:
 ## Poky Reference Distribution
 
 What is Poky?
+
 - Reference implementation
 - Starting point for custom distributions
 - Includes essential metadata
 - Regular release cycle
 
 Components:
+
 - BitBake build tool
 - OpenEmbedded-Core metadata
 - Reference BSPs
@@ -239,12 +258,14 @@ Components:
 ## OpenEmbedded-Core
 
 Core metadata providing:
+
 - Base recipes
 - Common classes
 - Configuration templates
 - Standard policies
 
 Key directories:
+
 - `meta/` - Core layer
 - `meta-poky/` - Poky-specific
 - `meta-yocto-bsp/` - Reference BSPs
@@ -255,12 +276,14 @@ Key directories:
 ## BitBake Build Engine
 
 Task scheduler and executor:
+
 - Parses metadata
 - Resolves dependencies
 - Executes tasks in parallel
 - Manages shared state
 
 Similar to:
+
 - Make (but more powerful)
 - Maven/Gradle (for embedded)
 - Bazel (different domain)
@@ -346,6 +369,7 @@ ls tmp/deploy/images/qemux86-64/
 ```
 
 Build time expectations:
+
 - First build: 1-3 hours
 - Subsequent builds: 10-30 minutes
 - Depends on hardware and network
@@ -355,12 +379,14 @@ Build time expectations:
 ## Understanding Build Output
 
 Key directories:
+
 - `tmp/deploy/images/` - Final images
 - `tmp/deploy/rpm/` - Package feed
 - `tmp/work/` - Build workspace
 - `tmp/sysroots/` - Cross-compilation roots
 
 Important files:
+
 - `*.wic` - Disk images
 - `*.tar.gz` - Root filesystems
 - `*.manifest` - Package lists
@@ -434,6 +460,7 @@ bitbake -c listtasks core-image-minimal
 ## Troubleshooting Basics
 
 Common issues:
+
 - Disk space exhaustion
 - Network timeouts
 - Missing dependencies
@@ -454,12 +481,14 @@ bitbake -g core-image-minimal
 ## Performance Tips
 
 Hardware optimization:
+
 - Use SSD for build directory
 - Maximize RAM allocation
 - Enable CPU scaling
 - Dedicated build machine
 
 Configuration optimization:
+
 - Shared state cache
 - Download mirrors
 - Parallel builds
@@ -493,12 +522,14 @@ Configuration optimization:
 ## Team Collaboration
 
 Shared resources:
+
 - Centralized downloads
 - Network sstate cache
 - Package feeds
 - Documentation wiki
 
 Communication:
+
 - Layer maintainers
 - Code reviews
 - Build status
@@ -509,12 +540,14 @@ Communication:
 ## Security Considerations
 
 Build security:
+
 - Trusted sources
 - GPG verification
 - CVE monitoring
 - License compliance
 
 Runtime security:
+
 - Minimal attack surface
 - Security features
 - Update mechanism
@@ -535,6 +568,7 @@ bitbake -e busybox | grep ^LICENSE=
 ```
 
 Compliance:
+
 - GPL requirements
 - Commercial licenses
 - Export restrictions
@@ -545,12 +579,14 @@ Compliance:
 ## Documentation Resources
 
 Official documentation:
+
 - Yocto Project Manual
 - BitBake User Manual
 - Kernel Development Manual
 - BSP Developer's Guide
 
 Community resources:
+
 - Mailing lists
 - IRC channels
 - Stack Overflow
@@ -561,12 +597,14 @@ Community resources:
 ## Getting Help
 
 Where to ask:
+
 - `yocto@lists.yoctoproject.org`
 - `#yocto` on IRC
 - Vendor support forums
 - Commercial support
 
 How to ask:
+
 - Provide build configuration
 - Include error logs
 - Describe expected behavior
@@ -577,12 +615,14 @@ How to ask:
 ## Summary
 
 Key takeaways:
+
 - Yocto provides structured embedded Linux development
 - Industry-standard solution with broad adoption
 - Steep learning curve but powerful capabilities
 - Strong ecosystem and community support
 
 Next steps:
+
 - Set up development environment
 - Complete first build
 - Explore core concepts

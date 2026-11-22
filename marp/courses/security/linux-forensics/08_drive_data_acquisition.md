@@ -13,6 +13,7 @@ audience:
 # Drive Data Acquisition
 
 ## Course: Linux Forensics
+
 - Forensic acquisition creates exact copies of evidence media
 - Proper imaging preserves the original evidence untouched
 - This module covers FTK Imager CLI, `LiME`, `fmem`, and imaging best practices
@@ -550,6 +551,7 @@ VERIFICATION:
 ## Exercise: Drive Acquisition Lab
 
 ### Tasks
+
 1. Set up software write blocking on a test device
 1. Create a raw `dd` image with hash verification
 1. Create an E01 image using available tools

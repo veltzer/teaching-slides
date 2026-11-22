@@ -53,6 +53,7 @@ section .data
 ---
 
 ## Instruction Set Architecture (ISA)
+
 - Set of instructions that a CPU can execute
 - Defines:
     - Available operations
@@ -130,6 +131,7 @@ mov eax, [ebx + ecx*4]
 ---
 
 ## Data Types
+
 - Byte: 8 bits
 - Word: 16 bits
 - Double Word: 32 bits

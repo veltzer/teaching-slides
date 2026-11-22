@@ -17,6 +17,7 @@ audience:
 ---
 
 ## What is Serverless?
+
 - Run code without provisioning servers
 - Provider manages all infrastructure
 - Auto-scales from zero to massive
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Cloud Function Services
+
 - AWS Lambda
 - Azure Functions
 - Google Cloud Functions
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## How Do You Pay?
+
 - Per request: $0.20 per million requests (Lambda)
 - Per compute time: $0.0000166667 per GB-second
 - No charge when not executing
@@ -44,6 +47,7 @@ audience:
 ---
 
 ## Why Better Than Renting Machines?
+
 - No idle costs: zero traffic = zero cost
 - No scaling configuration: automatic
 - No OS patching or server maintenance
@@ -53,6 +57,7 @@ audience:
 ---
 
 ## When Serverless Is Not Ideal
+
 - Long-running processes (15-minute limit on Lambda)
 - GPU or specialized hardware needs
 - Consistent high throughput (may be cheaper with reserved instances)
@@ -62,6 +67,7 @@ audience:
 ---
 
 ## Cold Starts
+
 - First invocation after idle period is slower
 - Runtime needs to initialize (load code, dependencies)
 - Java/C# have longer cold starts than Python/Node.js
@@ -77,6 +83,7 @@ audience:
 ---
 
 ## Function Triggers
+
 - HTTP/API Gateway: web APIs
 - Queue messages (SQS, Service Bus)
 - Object storage events (S3, Blob)
@@ -93,6 +100,7 @@ audience:
 ---
 
 ## Function Design Principles
+
 - Single responsibility: one function, one job
 - Small and focused: fast cold start
 - Idempotent: safe to retry
@@ -125,6 +133,7 @@ def handler(event, context):
 ---
 
 ## Function Configuration
+
 - Memory allocation (128 MB to 10 GB on Lambda)
 - CPU scales with memory
 - Timeout setting (max 15 minutes on Lambda)
@@ -134,6 +143,7 @@ def handler(event, context):
 ---
 
 ## Connecting Functions to Other Services
+
 - Functions call APIs and AWS services
 - Use SDKs within function code
 - IAM roles grant permissions (no hardcoded keys)
@@ -143,6 +153,7 @@ def handler(event, context):
 ---
 
 ## Chains of Functions
+
 - One function triggers another
 - Event-driven pipeline
 - S3 upload -> resize image -> store thumbnail -> update database
@@ -152,6 +163,7 @@ def handler(event, context):
 ---
 
 ## Step Functions and Orchestration
+
 - AWS Step Functions, Azure Durable Functions, GCP Workflows
 - Orchestrate multiple functions into workflows
 - Visual workflow designer
@@ -167,6 +179,7 @@ def handler(event, context):
 ---
 
 ## Patterns: API Backend
+
 - API Gateway + Lambda
 - Each route maps to a function
 - Auto-scaling, pay-per-request
@@ -176,6 +189,7 @@ def handler(event, context):
 ---
 
 ## Patterns: Event Processing
+
 - Queue or stream triggers a function
 - Process each message/event
 - Scale to handle burst traffic
@@ -185,6 +199,7 @@ def handler(event, context):
 ---
 
 ## Patterns: Scheduled Tasks
+
 - Cron-like triggers (CloudWatch Events, EventBridge)
 - Database cleanup, report generation
 - No always-running instance needed
@@ -217,6 +232,7 @@ Resources:
 ---
 
 ## Patterns: Data Transformation
+
 - S3/Blob upload triggers function
 - Transform, validate, or enrich data
 - Store result in another location
@@ -226,6 +242,7 @@ Resources:
 ---
 
 ## Patterns: Webhooks and Integrations
+
 - Receive events from external services
 - API Gateway + Lambda as webhook receiver
 - Process GitHub events, Stripe payments, Slack commands
@@ -235,6 +252,7 @@ Resources:
 ---
 
 ## Patterns: Real-Time File Processing
+
 - Upload -> trigger -> process -> store result
 - Image resizing, video transcoding
 - Document parsing and indexing
@@ -244,6 +262,7 @@ Resources:
 ---
 
 ## Lambda Layers
+
 - Shared code and dependencies across functions
 - Package common libraries once
 - Reduce function deployment size
@@ -275,6 +294,7 @@ sam deploy --guided
 ---
 
 ## Lambda@Edge and CloudFront Functions
+
 - Run code at CDN edge locations
 - Modify requests and responses
 - A/B testing, URL rewriting, auth
@@ -284,6 +304,7 @@ sam deploy --guided
 ---
 
 ## Serverless Application Model (SAM)
+
 - AWS-specific serverless IaC
 - Simplified CloudFormation syntax
 - Local testing and debugging (sam local)
@@ -293,6 +314,7 @@ sam deploy --guided
 ---
 
 ## Cost Optimization for Serverless
+
 - Right-size memory allocation (affects CPU)
 - Minimize cold starts (keep warm or provisioned concurrency)
 - Reduce execution time (optimize code)
@@ -302,6 +324,7 @@ sam deploy --guided
 ---
 
 ## Serverless Frameworks
+
 - Serverless Framework: multi-cloud
 - AWS SAM: AWS-native
 - AWS CDK: programmatic (TypeScript, Python)
@@ -311,6 +334,7 @@ sam deploy --guided
 ---
 
 ## Monitoring Serverless
+
 - CloudWatch Logs: function output
 - CloudWatch Metrics: invocations, errors, duration
 - X-Ray: distributed tracing
@@ -320,6 +344,7 @@ sam deploy --guided
 ---
 
 ## Concurrency and Throttling
+
 - Concurrent executions: functions running simultaneously
 - Default limit: 1,000 concurrent (AWS, can increase)
 - Reserved concurrency: guarantee capacity for critical functions
@@ -329,6 +354,7 @@ sam deploy --guided
 ---
 
 ## Function Composition
+
 - Don't chain functions directly (coupling + error handling)
 - Use Step Functions/Durable Functions for workflows
 - Use queues for async fan-out
@@ -338,6 +364,7 @@ sam deploy --guided
 ---
 
 ## Testing Serverless Applications
+
 - Unit test function logic locally
 - SAM Local / Azure Functions Core Tools for local testing
 - Integration tests against deployed stack
@@ -347,6 +374,7 @@ sam deploy --guided
 ---
 
 ## Serverless Databases
+
 - DynamoDB: serverless NoSQL
 - Aurora Serverless: serverless relational
 - Firestore: serverless document database
@@ -356,6 +384,7 @@ sam deploy --guided
 ---
 
 ## Serverless Security
+
 - IAM roles per function (least privilege)
 - No OS to patch
 - Input validation in function code
@@ -365,6 +394,7 @@ sam deploy --guided
 ---
 
 ## Serverless Best Practices
+
 - Keep functions small and focused
 - Minimize dependencies (faster cold start)
 - Use provisioned concurrency for latency-sensitive paths

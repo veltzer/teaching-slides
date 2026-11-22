@@ -82,6 +82,7 @@ audience:
 ## IPTables Basic Structure
 
 Tables:
+
 - filter (default)
 - nat
 - mangle
@@ -92,6 +93,7 @@ Tables:
 ## IPTables Basic Structure (cont.)
 
 Chains:
+
 - INPUT
 - OUTPUT
 - FORWARD
@@ -247,6 +249,7 @@ tcpdump -i interface 'tcp port port'
 <div>
 
 **Input Chain:**
+
 - Loopback traffic
 - Established connections
 - Required services
@@ -256,6 +259,7 @@ tcpdump -i interface 'tcp port port'
 <div>
 
 **Output Chain:**
+
 - Established connections
 - Required services
 - Default policy

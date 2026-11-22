@@ -28,6 +28,7 @@ audience:
 Master the language that makes AI understand exactly what you need
 
 This chapter covers:
+
 1. Fundamentals of effective prompting
 1. Code generation prompts
 1. Debugging and problem-solving prompts

@@ -484,6 +484,7 @@ obstack_free(&mystack, NULL);
 ## Obstack Use Cases (cont.)
 
 ## Benefits
+
 - Fast allocation
 - Easy bulk free
 - No fragmentation

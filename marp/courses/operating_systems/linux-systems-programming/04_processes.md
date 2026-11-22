@@ -42,6 +42,7 @@ audience:
 ## What is a Process?
 
 ## Definition
+
 - **Running instance** of a program
 - Own **address space** and resources
 - **PID** (Process ID) identifier
@@ -359,6 +360,7 @@ if (pid == 0) {
 ## What Gets Inherited
 
 ## Inherited from Parent
+
 - Memory (text, data, heap, stack)
 - Open file descriptors
 - Signal handlers
@@ -374,6 +376,7 @@ if (pid == 0) {
 ## What Gets Inherited (cont.)
 
 ## Unique in Child
+
 - Process ID (PID)
 - Parent PID (PPID)
 - File locks

@@ -322,6 +322,7 @@ valgrind --tool=helgrind ./threaded_program
 ```
 
 Helgrind detects:
+
 - Data races (unsynchronized access to shared data)
 - Lock order violations (potential deadlocks)
 - Misuse of POSIX threads API
@@ -339,6 +340,7 @@ cg_annotate cachegrind.out.<pid>
 ```
 
 Output shows:
+
 - L1 instruction/data cache miss rates
 - Last-level cache miss rates
 - Branch prediction miss rates
@@ -482,6 +484,7 @@ clang-tidy -fix program.c -- -std=c11
 ```
 
 Common clang-tidy checks:
+
 - `bugprone-sizeof-expression`: suspicious sizeof usage
 - `bugprone-string-literal-with-embedded-nul`: nulls in strings
 - `clang-analyzer-core.NullDereference`: potential NULL deref
@@ -507,6 +510,7 @@ cppcheck --enable=all --xml-version=2 src/ 2> report.xml
 ```
 
 What cppcheck finds:
+
 - Null pointer dereferences
 - Buffer overflows
 - Resource leaks (file handles)

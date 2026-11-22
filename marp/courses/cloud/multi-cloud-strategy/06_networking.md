@@ -18,6 +18,7 @@ audience:
 ---
 
 ## Why Cross-Cloud Networking Is Hard
+
 - Each provider has its own networking model
 - No native peering between AWS, Azure, and GCP
 - Data transfer between clouds traverses the public internet by default
@@ -27,6 +28,7 @@ audience:
 ---
 
 ## Cross-Cloud Connectivity Options
+
 - Public internet with TLS (simplest, highest latency)
 - Site-to-site VPN tunnels (encrypted, moderate latency)
 - Dedicated interconnects via colocation (lowest latency, highest cost)
@@ -36,6 +38,7 @@ audience:
 ---
 
 ## Site-to-Site VPN
+
 - IPsec tunnels between cloud VPCs/VNets
 - AWS: Virtual Private Gateway or Transit Gateway
 - Azure: VPN Gateway
@@ -46,6 +49,7 @@ audience:
 ---
 
 ## Dedicated Interconnects
+
 - AWS: Direct Connect
 - Azure: ExpressRoute
 - GCP: Cloud Interconnect (Dedicated or Partner)
@@ -62,6 +66,7 @@ audience:
 ---
 
 ## Colocation as Multi-Cloud Hub
+
 - Place network equipment in a carrier-neutral data center
 - Establish direct connections to multiple clouds from one location
 - Reduce latency between clouds to sub-millisecond
@@ -142,6 +147,7 @@ resource "google_compute_vpn_tunnel" "to_aws" {
 ---
 
 ## DNS and Traffic Management
+
 - Global DNS for intelligent routing across clouds
 - AWS Route 53, Azure Traffic Manager, GCP Cloud DNS
 - Third-party: Cloudflare, NS1, Akamai
@@ -197,6 +203,7 @@ resource "google_compute_vpn_tunnel" "to_aws" {
 ---
 
 ## Data Transfer Costs
+
 - Egress fees are the hidden tax of multi-cloud
 - AWS: $0.09/GB to internet, $0.02/GB cross-region
 - Azure: $0.087/GB to internet
@@ -207,6 +214,7 @@ resource "google_compute_vpn_tunnel" "to_aws" {
 ---
 
 ## Minimizing Data Transfer Costs
+
 - Keep tightly coupled services on the same cloud
 - Use data compression for cross-cloud communication
 - Cache aggressively to reduce repeated transfers
@@ -216,6 +224,7 @@ resource "google_compute_vpn_tunnel" "to_aws" {
 ---
 
 ## Network Architecture Patterns
+
 - Hub-and-spoke: one cloud as hub, others as spokes
 - Mesh: direct connections between all clouds
 - Transit: dedicated transit network connecting all clouds
@@ -225,6 +234,7 @@ resource "google_compute_vpn_tunnel" "to_aws" {
 ---
 
 ## Latency Considerations
+
 - Same region, same cloud: sub-millisecond
 - Cross-region, same cloud: 10-100ms (depending on distance)
 - Cross-cloud via VPN: 5-20ms additional overhead
@@ -234,6 +244,7 @@ resource "google_compute_vpn_tunnel" "to_aws" {
 ---
 
 ## Security Across Cloud Networks
+
 - Encrypt all cross-cloud traffic (VPN provides this)
 - Implement zero-trust networking principles
 - Centralize firewall policy management
@@ -243,6 +254,7 @@ resource "google_compute_vpn_tunnel" "to_aws" {
 ---
 
 ## Service Mesh for Multi-Cloud
+
 - Istio, Linkerd, Consul Connect
 - Unified service-to-service communication
 - mTLS encryption between all services

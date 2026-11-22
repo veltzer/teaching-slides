@@ -318,6 +318,7 @@ fn unnecessary(s: &mut String) {  // Use &String if not modifying
 ## Practice Exercise
 
 Create functions that:
+
 1. Use immutable references
 1. Use mutable references
 1. Handle multiple references
@@ -327,6 +328,7 @@ Create functions that:
 ---
 
 ## Common Pitfalls
+
 1. Fighting the borrow checker
 1. Unnecessary mutable references
 1. Reference lifetime issues
@@ -336,6 +338,7 @@ Create functions that:
 ---
 
 ## Summary
+
 - Reference basics
 - Borrowing rules
 - Mutable references

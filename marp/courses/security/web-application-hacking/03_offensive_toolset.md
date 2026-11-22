@@ -527,6 +527,7 @@ script -a session.log   # Record terminal session
 ## Lab Exercise: Tool Setup & Verification
 
 **Tasks**:
+
 1. Start Burp Suite and configure browser proxy
 1. Launch DVWA container and log in
 1. Browse DVWA through Burp and examine traffic

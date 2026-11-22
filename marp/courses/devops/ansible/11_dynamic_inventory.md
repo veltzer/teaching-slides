@@ -17,6 +17,7 @@ audience:
 # Dynamic Inventory
 
 ## Topics Covered
+
 - Why dynamic inventory
 - Inventory plugins vs scripts
 - AWS EC2 dynamic inventory

@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Scalability
+
 - Vertical scaling: increase instance size (scale up)
 - Horizontal scaling: add more instances (scale out)
 - Handle millions of users without redesign
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Elasticity
+
 - Automatically adjust resources to demand
 - Auto Scaling responds to metrics in real time
 - Handle flash sales, viral content, seasonal peaks
@@ -40,6 +42,7 @@ audience:
 ---
 
 ## Flexibility
+
 - Choose from hundreds of services
 - Mix and match technologies
 - Experiment with new approaches at low risk
@@ -49,6 +52,7 @@ audience:
 ---
 
 ## Reduced Capital Expenditure
+
 - No upfront hardware purchases
 - Convert CapEx to OpEx
 - Pay monthly instead of large purchases
@@ -58,6 +62,7 @@ audience:
 ---
 
 ## Global Reach and Availability
+
 - Deploy to dozens of Regions worldwide
 - Serve users from nearby data centers
 - Reduce latency for global audiences
@@ -67,6 +72,7 @@ audience:
 ---
 
 ## High Availability
+
 - Multiple Availability Zones per Region
 - Automatic failover mechanisms
 - SLAs guaranteeing uptime (99.9% - 99.999%)
@@ -82,6 +88,7 @@ audience:
 ---
 
 ## Faster Time to Market
+
 - Provision infrastructure in minutes
 - Pre-built services (databases, AI, analytics)
 - No waiting for hardware procurement
@@ -91,6 +98,7 @@ audience:
 ---
 
 ## Disaster Recovery
+
 - Replicate data across Regions
 - Automated backup services
 - Recovery time measured in minutes, not days
@@ -100,6 +108,7 @@ audience:
 ---
 
 ## Innovation Acceleration
+
 - Access to cutting-edge services (AI, IoT, blockchain)
 - Experiment cheaply and fail fast
 - Managed services remove undifferentiated heavy lifting
@@ -109,6 +118,7 @@ audience:
 ---
 
 ## Environmental Benefits
+
 - Shared infrastructure is more efficient
 - Cloud providers invest in renewable energy
 - Higher server utilization reduces waste
@@ -118,6 +128,7 @@ audience:
 ---
 
 ## Security Benefits
+
 - Cloud providers invest billions in security
 - Compliance certifications (SOC 2, ISO 27001, HIPAA)
 - Encryption services built in
@@ -127,6 +138,7 @@ audience:
 ---
 
 ## Operational Efficiency
+
 - Managed services reduce operational burden
 - Automated scaling, patching, backups
 - Infrastructure as Code for repeatability

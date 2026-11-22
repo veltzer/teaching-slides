@@ -11,6 +11,7 @@ audience:
 # Python Meta-classes
 
 ## Overview
+
 - Understanding Python's class system
 - What are metaclasses and how they work
 - Use cases for metaclasses
@@ -23,6 +24,7 @@ audience:
 ## Python's Class System
 
 ## Classes as Objects
+
 - In Python, everything is an object
 - Classes are objects too
 - Classes are instances of a type called `type`
@@ -1365,6 +1367,7 @@ class MyClass(metaclass=DebugMeta):
 ## Summary
 
 ## Key Takeaways
+
 - Metaclasses are classes that create classes
 - They allow customizing class creation and behavior
 - Useful for frameworks, DSLs, and declarative APIs
@@ -1377,6 +1380,7 @@ class MyClass(metaclass=DebugMeta):
 ## Resources
 
 ## Further Reading
+
 - Python documentation on metaclasses
 - "Python Cookbook" by David Beazley and Brian Jones
 - "Fluent Python" by Luciano Ramalho

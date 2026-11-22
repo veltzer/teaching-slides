@@ -149,11 +149,13 @@ Trade-off: Performance vs Consistency
 ## Locking Mechanisms
 
 **Row-level locks:**
+
 - Fine granularity
 - Higher concurrency
 - More overhead
 
 **Table-level locks:**
+
 - Coarse granularity
 - Lower concurrency
 - Less overhead
@@ -233,12 +235,14 @@ Writes to master, reads from slaves
 ## Replication and CAP
 
 **Synchronous Replication:**
+
 - Choose CP
 - Wait for all replicas
 - Strong consistency
 - Lower availability
 
 **Asynchronous Replication:**
+
 - Choose AP
 - Don't wait for replicas
 - Eventual consistency
@@ -370,11 +374,13 @@ Reduces connection overhead
 ## Partitioning Strategies for SQL
 
 **Vertical Partitioning:**
+
 - Split tables by columns
 - Different tables on different servers
 - Maintain relationships carefully
 
 **Horizontal Partitioning:**
+
 - Split tables by rows
 - Same schema, different data
 - Sharding key crucial

@@ -18,6 +18,7 @@ audience:
 # Building Custom Agents
 
 ## Overview
+
 - Agent design patterns and architectures
 - Survey of major agent frameworks
 - Implementing specialized development agents
@@ -43,11 +44,13 @@ audience:
 ## Single-Turn vs Multi-Turn Agents
 
 ## Single-Turn
+
 - One request, one response, no follow-up
 - Stateless: each invocation is independent
 - Good for: code formatting, linting, simple Q&A
 
 ## Multi-Turn
+
 - Maintains conversation context across exchanges
 - Tracks progress toward a goal over multiple steps
 - Good for: debugging sessions, iterative refactoring, complex migrations
@@ -450,11 +453,13 @@ debug_agent = Agent(
 ## Documentation and Migration Agents
 
 ## Documentation Agent
+
 - Reads source code and existing docs
 - Generates or updates docstrings, API references, changelogs
 - Validates that docs match current function signatures
 
 ## Migration Agent
+
 - Analyzes codebase for deprecated patterns
 - Applies transformation rules (e.g., Python 2 to 3, React class to hooks)
 - Runs tests after each transformation to verify correctness
@@ -522,11 +527,13 @@ class TokenBudget:
 ## Short-Term and Long-Term Memory
 
 ## Short-Term Memory
+
 - Conversation history within a single session
 - Managed automatically by the framework's message list
 - Limited by context window size
 
 ## Long-Term Memory
+
 - Persisted across sessions in a vector store or database
 - Stores past decisions, user preferences, project conventions
 

@@ -76,6 +76,7 @@ Pacing:
 **Objective**: Find the hidden flag on the web server
 
 Hints:
+
 - Not all content is linked from the main page
 - Check common files and directories
 - Some files are meant to be hidden but aren't
@@ -94,6 +95,7 @@ curl http://TARGET/.git/HEAD
 **Objective**: Extract the admin password from the database
 
 Steps:
+
 1. Find the injectable parameter
 1. Determine the database type
 1. Enumerate tables and columns
@@ -112,6 +114,7 @@ sqlmap -u "http://TARGET/page?id=1" --batch -D ctfdb -T flags --dump
 **Objective**: Steal the admin's cookie via stored XSS
 
 Steps:
+
 1. Find a page that stores and displays user input
 1. Craft an `XSS` payload that sends cookies to your server
 1. Trigger the admin bot to visit the page
@@ -134,6 +137,7 @@ python3 -m http.server 8888
 **Objective**: Log in as admin without knowing the password
 
 Possible attack vectors:
+
 - `SQL injection` in login form
 - Weak password / default credentials
 - Password reset vulnerability
@@ -147,6 +151,7 @@ Possible attack vectors:
 **Objective**: Get root access and read `/root/flag.txt`
 
 Steps:
+
 1. Get initial access via web exploitation
 1. Enumerate the system
 1. Find a privilege escalation vector
@@ -168,6 +173,7 @@ cat /etc/crontab
 **Objective**: Purchase an item for free (or negative price)
 
 Possible attack vectors:
+
 - Price manipulation in requests
 - Coupon/discount abuse
 - Quantity manipulation
@@ -295,6 +301,7 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 ## Course Review: (In)security & Mapping
 
 Key takeaways:
+
 - Web applications are the #1 attack vector
 - Technology stack identification guides testing
 - Burp Suite is the essential testing tool
@@ -307,6 +314,7 @@ Key takeaways:
 ## Course Review: Authentication, Sessions & SQLi Basics
 
 Key takeaways:
+
 - Authentication flaws enable account takeover
 - Password spraying and credential stuffing are effective
 - Session management requires cryptographic randomness
@@ -319,6 +327,7 @@ Key takeaways:
 ## Course Review: Advanced SQL Injection & XSS
 
 Key takeaways:
+
 - `UNION`-based, blind, and time-based `SQL injection` techniques
 - `sqlmap` automates detection and exploitation
 - Filter bypass requires creative encoding
@@ -332,6 +341,7 @@ Key takeaways:
 ## Course Review: Back-End Attacks, Logic Flaws & Hardening
 
 Key takeaways:
+
 - OS command injection gives full system access
 - File path attacks read/write arbitrary files
 - Deserialization is extremely dangerous
@@ -345,6 +355,7 @@ Key takeaways:
 ## Course Review: Boot2Root & CTF
 
 Key takeaways:
+
 - Systematic methodology from scanning to root
 - Chain multiple vulnerabilities for full compromise
 - Privilege escalation exploits misconfigurations

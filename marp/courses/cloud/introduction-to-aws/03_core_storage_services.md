@@ -17,6 +17,7 @@ audience:
 ---
 
 ## AWS Storage Options
+
 - Object storage (S3)
 - Block storage (EBS)
 - File storage (EFS, FSx)
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Storage Types Compared
+
 - Object: files accessed by key, web-scale
 - Block: low-latency, attached to single instance
 - File: shared file system, NFS/SMB
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## Amazon S3 Overview
+
 - Simple Storage Service
 - Object storage with unlimited capacity
 - 99.999999999% (11 nines) durability
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## S3 Key Concepts
+
 - Buckets: containers for objects
 - Objects: files + metadata (up to 5 TB each)
 - Keys: unique identifier within a bucket
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## S3 Operations
+
 - PUT: upload objects
 - GET: retrieve objects
 - DELETE: remove objects
@@ -86,6 +91,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## S3 Storage Classes
+
 - S3 Standard: frequent access, low latency
 - S3 Intelligent-Tiering: auto-moves between tiers
 - S3 Standard-IA: infrequent access, lower cost
@@ -96,6 +102,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## S3 Storage Class Selection
+
 - How often is the data accessed?
 - How quickly must it be retrieved?
 - How critical is multi-AZ redundancy?
@@ -105,6 +112,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## S3 Lifecycle Policies
+
 - Automatically transition objects between classes
 - Example: Standard -> IA after 30 days -> Glacier after 90 days
 - Delete objects after a set period
@@ -120,6 +128,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## S3 Security
+
 - Bucket policies (resource-based, JSON)
 - IAM policies (identity-based)
 - Block Public Access settings (account or bucket level)
@@ -151,6 +160,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## S3 Versioning
+
 - Keep all versions of an object
 - Protect against accidental deletes
 - Delete marker instead of permanent removal
@@ -160,6 +170,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## S3 Replication
+
 - Cross-Region Replication (CRR): compliance, latency
 - Same-Region Replication (SRR): aggregation, compliance
 - Requires versioning on both buckets
@@ -169,6 +180,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## S3 Event Notifications
+
 - Trigger actions on object events
 - New object created, deleted, etc.
 - Targets: Lambda, SQS, SNS
@@ -178,6 +190,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## S3 Use Cases
+
 - Static website hosting
 - Data lake foundation
 - Backup and disaster recovery
@@ -187,6 +200,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## S3 Performance
+
 - 3,500 PUT and 5,500 GET requests per second per prefix
 - Multipart upload for large objects
 - S3 Transfer Acceleration: fast long-distance transfers
@@ -196,6 +210,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## Amazon EBS Overview
+
 - Elastic Block Store
 - Persistent block-level storage for EC2
 - Like a virtual hard drive
@@ -205,6 +220,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## EBS Volume Types
+
 - gp3: General Purpose SSD (baseline 3,000 IOPS)
 - gp2: General Purpose SSD (burst to 3,000 IOPS)
 - io2: Provisioned IOPS SSD (up to 64,000 IOPS)
@@ -214,6 +230,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## Choosing an EBS Volume Type
+
 - gp3: most workloads (default choice)
 - io2: databases needing consistent high IOPS
 - st1: sequential large reads (data warehousing)
@@ -229,6 +246,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## EBS Snapshots
+
 - Point-in-time backup of EBS volumes
 - Stored incrementally in S3
 - Can create new volumes from snapshots
@@ -238,6 +256,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## EBS Encryption
+
 - Encrypt volumes and snapshots at rest
 - Uses AWS KMS keys
 - Encryption at rest, in transit, and snapshots
@@ -247,6 +266,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## Amazon EFS Overview
+
 - Elastic File System
 - Fully managed NFS file system
 - Shared access across multiple EC2 instances
@@ -256,6 +276,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## EFS Performance Modes
+
 - General Purpose: low latency (web serving, CMS)
 - Max I/O: higher throughput, slightly higher latency
 - Elastic throughput: auto-scales with workload
@@ -265,6 +286,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## EFS Storage Classes
+
 - Standard: frequently accessed files
 - Infrequent Access (IA): lower cost for rare access
 - Lifecycle management moves files automatically
@@ -274,6 +296,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## Amazon FSx
+
 - Fully managed third-party file systems
 - FSx for Windows File Server: SMB protocol, Active Directory
 - FSx for Lustre: high-performance computing
@@ -283,6 +306,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## Amazon S3 Glacier
+
 - Long-term archive storage
 - Very low cost per GB
 - Expedited retrieval: 1-5 minutes
@@ -292,6 +316,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## Glacier Deep Archive
+
 - Lowest cost storage in AWS
 - 12-hour standard retrieval
 - 48-hour bulk retrieval
@@ -301,6 +326,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## Glacier Vault Lock
+
 - WORM (Write Once Read Many) compliance
 - Immutable policy once locked
 - Time-based retention rules
@@ -310,6 +336,7 @@ aws s3 ls s3://my-app-bucket-2024/ --recursive
 ---
 
 ## Choosing the Right Storage
+
 - S3: unstructured data, web content, backups
 - EBS: databases, boot volumes, low-latency apps
 - EFS: shared file access, content management

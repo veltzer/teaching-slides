@@ -23,6 +23,7 @@ audience:
 ---
 
 ## Storage Account Overview
+
 - Unique namespace
 - Global replication
 - Data redundancy
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## Storage Account Types
+
 1. Standard general-purpose v2
 1. Premium block blobs
 1. Premium file shares
@@ -46,6 +48,7 @@ audience:
 ---
 
 ## Understanding Blob Storage
+
 - Binary Large Objects
 - Unstructured data
 - Video, audio, images
@@ -55,6 +58,7 @@ audience:
 ---
 
 ## Blob Types
+
 - Block blobs
 - Append blobs
 - Page blobs
@@ -63,6 +67,7 @@ audience:
 ---
 
 ## Blob Access Tiers
+
 - Hot tier
 - Cool tier
 - Archive tier
@@ -71,6 +76,7 @@ audience:
 ---
 
 ## Blob Storage Features
+
 - Soft delete
 - Versioning
 - Change feed
@@ -80,6 +86,7 @@ audience:
 ---
 
 ## Azure Files Overview
+
 - SMB file shares
 - Native mounting
 - Hybrid scenarios
@@ -89,6 +96,7 @@ audience:
 ---
 
 ## File Share Configuration
+
 - Share size limits
 - File permissions
 - Network access
@@ -98,6 +106,7 @@ audience:
 ---
 
 ## Azure Queue Storage
+
 - Message queuing
 - Asynchronous processing
 - Application decoupling
@@ -107,6 +116,7 @@ audience:
 ---
 
 ## Queue Storage Concepts
+
 - Queue service
 - Queue names
 - Messages
@@ -116,6 +126,7 @@ audience:
 ---
 
 ## Azure Table Storage
+
 - NoSQL data store
 - Key-value pairs
 - Schema-less design
@@ -125,6 +136,7 @@ audience:
 ---
 
 ## Table Storage Components
+
 - Tables
 - Entities
 - Properties
@@ -140,6 +152,7 @@ audience:
 ---
 
 ## Authentication Methods
+
 - Shared Key
 - SAS tokens
 - Azure AD
@@ -149,6 +162,7 @@ audience:
 ---
 
 ## Shared Access Signatures
+
 - Account SAS
 - Service SAS
 - User delegation SAS
@@ -158,6 +172,7 @@ audience:
 ---
 
 ## Storage Networking
+
 - Public endpoints
 - Private endpoints
 - Service endpoints
@@ -167,6 +182,7 @@ audience:
 ---
 
 ## Data Protection
+
 - Soft delete
 - Point-in-time restore
 - Immutable storage
@@ -176,6 +192,7 @@ audience:
 ---
 
 ## Storage Monitoring
+
 - Metrics
 - Diagnostics
 - Activity logs
@@ -185,6 +202,7 @@ audience:
 ---
 
 ## Performance Tiers
+
 - Standard performance
 - Premium performance
 - IOPS limits
@@ -194,6 +212,7 @@ audience:
 ---
 
 ## Cost Optimization
+
 - Access tiers
 - Lifecycle management
 - Reserved capacity
@@ -203,6 +222,7 @@ audience:
 ---
 
 ## Storage Management Tools
+
 - Azure Portal
 - Azure CLI
 - PowerShell
@@ -212,6 +232,7 @@ audience:
 ---
 
 ## Lifecycle Management
+
 - Automated tiering
 - Deletion rules
 - Policy-based actions
@@ -221,6 +242,7 @@ audience:
 ---
 
 ## Data Migration
+
 - AzCopy
 - Storage Explorer
 - Data Box
@@ -230,6 +252,7 @@ audience:
 ---
 
 ## Backup and Recovery
+
 - Snapshot management
 - Geo-replication
 - Disaster recovery
@@ -239,6 +262,7 @@ audience:
 ---
 
 ## Storage Integration
+
 - Azure Functions
 - Logic Apps
 - Event Grid
@@ -248,6 +272,7 @@ audience:
 ---
 
 ## Best Practices
+
 - Performance optimization
 - Security hardening
 - Cost management
@@ -257,6 +282,7 @@ audience:
 ---
 
 ## Compliance and Governance
+
 - Data residency
 - Encryption requirements
 - Access auditing
@@ -266,6 +292,7 @@ audience:
 ---
 
 ## Storage Patterns
+
 - Content distribution
 - Data archival
 - Backup storage
@@ -275,6 +302,7 @@ audience:
 ---
 
 ## Future Roadmap
+
 - Storage updates
 - New features
 - Performance improvements

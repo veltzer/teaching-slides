@@ -24,6 +24,7 @@ audience:
 ---
 
 ## Course Overview
+
 - Focus: deep understanding of `bash` scripting
 - Emphasis on real-world patterns and common pitfalls
 - Hands-on: lots of code examples and exercises
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Who Should Take This Course?
+
 - System administrators automating tasks
 - DevOps engineers writing deployment scripts
 - Developers who work in `Linux` environments
@@ -39,6 +41,7 @@ audience:
 ---
 
 ## Prerequisites
+
 - Basic familiarity with `Linux` or `macOS`
 - Ability to open a terminal and type commands
 - No prior scripting experience required
@@ -46,6 +49,7 @@ audience:
 ---
 
 ## What You Will Learn
+
 - Shell theory, variables, redirection, globbing
 - Writing scripts, syntax, pipes, I/O, multiprocessing
 - Functions, arrays, arithmetic, advanced topics
@@ -53,6 +57,7 @@ audience:
 ---
 
 ## Course Materials
+
 - All examples tested on `bash` 5.x
 - Compatible with most `Linux` distributions
 - `macOS` users: install modern `bash` via `brew`
@@ -61,6 +66,7 @@ audience:
 ---
 
 ## What is a Shell?
+
 - A program that interprets commands
 - The interface between the user and the operating system kernel
 - Takes text input, executes programs, returns output
@@ -73,6 +79,7 @@ User --> Shell --> Kernel --> Hardware
 ---
 
 ## Why Do We Need a Shell?
+
 - The kernel does not have a user interface
 - Somebody must translate human intent into system calls
 - The shell is that translator
@@ -94,6 +101,7 @@ User --> Shell --> Kernel --> Hardware
 ---
 
 ## When to Use a Shell
+
 - Automating repetitive tasks
 - Managing remote servers via `SSH`
 - Processing text files and log data
@@ -104,6 +112,7 @@ User --> Shell --> Kernel --> Hardware
 ---
 
 ## When a GUI Wins
+
 - Image and video editing
 - Web browsing
 - Complex IDE features (debugging, refactoring)
@@ -133,6 +142,7 @@ User --> Shell --> Kernel --> Hardware
 ---
 
 ## The Bourne Shell (`sh`)
+
 - Written by Stephen Bourne at Bell Labs in 1977
 - Shipped with Unix Version 7
 - Introduced key concepts: variables, control flow, here documents
@@ -142,6 +152,7 @@ User --> Shell --> Kernel --> Hardware
 ---
 
 ## The Korn Shell (`ksh`)
+
 - Written by David Korn at Bell Labs in 1983
 - Backward compatible with `sh`
 - Added: arrays, arithmetic, built-in string manipulation
@@ -151,6 +162,7 @@ User --> Shell --> Kernel --> Hardware
 ---
 
 ## The Birth of `bash`
+
 - "Bourne Again Shell" - a pun on "born again"
 - Written by Brian Fox for the GNU project in 1989
 - Goal: free replacement for `sh` with `ksh` features
@@ -189,6 +201,7 @@ echo "${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}"
 ---
 
 ## Why `bash`?
+
 - Installed everywhere (every `Linux`, `macOS`, `WSL`)
 - POSIX compatible (mostly)
 - Enormous ecosystem of scripts and documentation
@@ -210,6 +223,7 @@ echo "${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}"
 ---
 
 ## The Takeaway
+
 - Write scripts in `bash` for portability
 - Use `zsh` or `fish` interactively if you prefer
 - Always specify `#!/bin/bash` in scripts

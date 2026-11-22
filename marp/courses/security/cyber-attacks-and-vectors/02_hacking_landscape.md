@@ -252,6 +252,7 @@ An alternative model to the Kill Chain that describes adversary behavior:
 ## Digital Forensics Process: Details
 
 Key forensic tools:
+
 - **Volatility**: Memory forensics framework
 - **Autopsy / Sleuth Kit**: Disk forensics
 - **Wireshark**: Network traffic analysis

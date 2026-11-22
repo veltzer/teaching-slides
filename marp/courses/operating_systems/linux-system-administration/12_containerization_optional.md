@@ -51,6 +51,7 @@ Use VMs for: strong isolation, different OS kernels.
 ## Linux Kernel Features Behind Containers
 
 **Namespaces** - isolation:
+
 - `PID` - process IDs
 - `NET` - network interfaces
 - `MNT` - mount points
@@ -59,6 +60,7 @@ Use VMs for: strong isolation, different OS kernels.
 - `USER` - user/group IDs
 
 **cgroups** - resource limits:
+
 - CPU, memory, I/O, network bandwidth
 
 ---
@@ -180,6 +182,7 @@ CMD ["myapp"]
 ```
 
 Layer best practices:
+
 - Combine `RUN` commands to reduce layers
 - Put frequently changing steps last
 - Use `.dockerignore` to exclude files
@@ -316,6 +319,7 @@ podman rm web
 ```
 
 Key differences from `Docker`:
+
 - Daemonless - no background service
 - Rootless by default - better security
 - `Systemd` integration for container services
@@ -534,6 +538,7 @@ docker inspect --format='{{json .State.Health}}' web \
 
 Health states: `starting`, `healthy`, `unhealthy`.
 Use health checks for:
+
 - Load balancer integration
 - Automatic restart with `--restart=on-failure`
 - `Docker Compose` `depends_on` with `condition: service_healthy`
@@ -591,6 +596,7 @@ trivy image --exit-code 1 \
 ```
 
 Best practices:
+
 - Scan in CI/CD pipeline before pushing
 - Use minimal base images (`alpine`, `distroless`)
 - Regularly rebuild images to pick up patches
@@ -622,6 +628,7 @@ docker buildx ls
 ```
 
 Use cases:
+
 - Deploy same image on `x86_64` servers and `ARM` edge devices
 - Support `Apple Silicon` development alongside production `AMD64`
 
@@ -662,6 +669,7 @@ machinectl stop mycontainer
 ```
 
 Advantages over `Docker`:
+
 - No daemon required
 - Uses `systemd` natively
 - Good for testing full OS environments
@@ -694,6 +702,7 @@ cat /sys/fs/cgroup/docker/<id>/cpu.max
 ```
 
 Monitor for:
+
 - Memory approaching limits (OOM kills)
 - CPU throttling
 - Network I/O bottlenecks

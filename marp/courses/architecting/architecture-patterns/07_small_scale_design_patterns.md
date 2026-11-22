@@ -54,12 +54,14 @@ audience:
 ## MVC Pros and Cons
 
 Pros:
+
 - Separates concerns and responsibilities between components
 - Enables independent development and testing of components
 - Supports multiple Views for the same Model
 - Facilitates code reuse and maintainability
 
 Cons:
+
 - Can lead to increased complexity and indirection
 - Tight coupling between View and Controller can occur
 - Potential for excessive updates and notifications between components
@@ -116,12 +118,14 @@ Cons:
 ## Interpreter Pros and Cons
 
 Pros:
+
 - Provides a way to interpret a language or grammar
 - Easy to change and extend the grammar by adding new expression classes
 - Enables adding new ways to interpret expressions
 - Supports recursive traversal of complex structures
 
 Cons:
+
 - Complex grammars can lead to a large number of expression classes
 - Inefficient for complex grammars or large expressions
 - Interpreter design pattern can be overkill for simple expressions
@@ -156,12 +160,14 @@ Cons:
 ## Repository Pros and Cons
 
 Pros:
+
 - Separation of concerns
 - Improved testability
 - Flexibility in data source
 - Centralized data access logic
 
 Cons:
+
 - Additional layer of abstraction
 - Potential for over-engineering in simple applications
 - Learning curve for developers new to the pattern
@@ -197,6 +203,7 @@ Cons:
 ## Command Pros and Cons
 
 Pros:
+
 - Decouples the sender and receiver of a request
 - Allows for extensibility: new commands can be added without changing existing code
 - Supports undo/redo functionality
@@ -208,6 +215,7 @@ Pros:
 ## Command Pros and Cons (cont.)
 
 Cons:
+
 - Can lead to a high number of small, similar command classes
 - May introduce unnecessary complexity for simple applications
 - Can be overkill for applications with simple, straightforward operations
@@ -245,6 +253,7 @@ Cons:
 ## Decorator Pros and Cons
 
 Pros:
+
 - Extends an object's behavior without making a new subclass
 - Adds responsibilities dynamically at runtime
 - Combines multiple behaviors using multiple decorators
@@ -256,6 +265,7 @@ Pros:
 ## Decorator Pros and Cons (cont.)
 
 Cons:
+
 - Can result in many small objects in the design, making it harder to learn and debug
 - Can be complex for developers unfamiliar with the pattern
 - Decorators and their components aren't identical, so shouldn't be used where object identity is important
@@ -293,6 +303,7 @@ Cons:
 ## Facade Pros and Cons
 
 Pros:
+
 - Simplifies the interface for a complex system
 - Decouples client code from subsystem code
 - Promotes loose coupling between subsystems and its clients
@@ -304,6 +315,7 @@ Pros:
 ## Facade Pros and Cons (cont.)
 
 Cons:
+
 - Can become a "god object" coupled to all classes of an app
 - May introduce an additional level of indirection, affecting performance
 - Might hide useful lower-level functionality from clients

@@ -37,6 +37,7 @@ audience:
 ## Network Device Interface
 
 **Key Components:**
+
 - `net_device` structure
 - Device registration
 - Interface flags
@@ -64,6 +65,7 @@ struct net_device {
 ## Network Device States
 
 **Common States:**
+
 - `__LINK_STATE_START`
 - `__LINK_STATE_PRESENT`
 - `__LINK_STATE_NOCARRIER`
@@ -81,6 +83,7 @@ struct net_device {
 ## The Protocol Stack
 
 **Layers:**
+
 1. Socket Layer
 1. Transport Layer
 1. Network Layer
@@ -124,6 +127,7 @@ struct socket {
 ## Protocol Operations
 
 **Key Operations:**
+
 - `create()`
 - `bind()`
 - `connect()`
@@ -158,6 +162,7 @@ struct sk_buff {
 ## Protocol Implementation
 
 **TCP Implementation:**
+
 - Connection handling
 - Window management
 - Congestion control
@@ -174,6 +179,7 @@ struct sk_buff {
 ## Network Layer (IP)
 
 **Functions:**
+
 - Routing
 - Fragmentation
 - Reassembly
@@ -190,6 +196,7 @@ struct sk_buff {
 ## Link Layer Operations
 
 **Key Functions:**
+
 - Frame transmission
 - Frame reception
 - MAC addressing
@@ -206,6 +213,7 @@ struct sk_buff {
 ## Queue Disciplines (qdisc)
 
 **Types:**
+
 - FIFO
 - Priority
 - Fair queuing
@@ -217,6 +225,7 @@ struct sk_buff {
 ## User Space API
 
 **Key Interfaces:**
+
 - Socket API
 - NETLINK
 - IOCTL
@@ -247,6 +256,7 @@ struct sk_buff {
 ## IOCTL Operations
 
 **Common Operations:**
+
 - Get/Set interface flags
 - Get/Set interface address
 - Get/Set routing table
@@ -257,6 +267,7 @@ struct sk_buff {
 ## Proc Filesystem
 
 **Key Files:**
+
 - `/proc/net/dev`
 - `/proc/net/tcp`
 - `/proc/net/udp`
@@ -270,6 +281,7 @@ struct sk_buff {
 **Location:** `/sys/class/net`
 
 **Per-device entries:**
+
 - `address`
 - `mtu`
 - `flags`
@@ -281,6 +293,7 @@ struct sk_buff {
 ## Debug and Monitoring
 
 **Tools:**
+
 - `netstat`
 - `ss`
 - `ip`

@@ -520,6 +520,7 @@ static const struct ieee80211_ops my_mac80211_ops = {
 ## Virtual Network Devices
 
 Types of virtual devices:
+
 - Bridge
 - VLAN
 - TUN/TAP
@@ -615,6 +616,7 @@ DEFINE_EVENT(net_dev_template, net_dev_queue,
 ## Performance Tuning
 
 Optimization techniques:
+
 1. Use NAPI for interrupt mitigation
 1. Implement hardware offloading
 1. Optimize ring buffer sizes
@@ -760,12 +762,14 @@ static int my_net_resume(struct device *dev)
 ## Summary
 
 Network driver development requires:
+
 - Understanding Linux network stack
 - SKB management expertise
 - Hardware knowledge
 - Performance optimization skills
 
 Key concepts:
+
 - NAPI for interrupt mitigation
 - Hardware offloading features
 - Ring buffer management

@@ -17,6 +17,7 @@ audience:
 # Best Practices and Real-World Patterns
 
 ## Topics Covered
+
 - Project structure and organization
 - Naming conventions
 - Security best practices
@@ -785,7 +786,8 @@ Problem: "Slow execution"
 
 ## Course Summary
 
-**Fundamentals**
+### Fundamentals
+
 - `Ansible` architecture and agentless design
 - Installation, configuration, `SSH` setup
 - Inventory management (static, groups, variables)
@@ -796,7 +798,8 @@ Problem: "Slow execution"
 
 ## Course Summary (cont.)
 
-**Playbooks, Roles, and Advanced Features**
+### Playbooks, Roles, and Advanced Features
+
 - Variables, facts, and `Jinja2` templating
 - Conditionals, loops, and filters
 - Roles: structure, creation, `Galaxy`
@@ -808,7 +811,8 @@ Problem: "Slow execution"
 
 ## Course Summary (cont.) (cont.)
 
-**Advanced Ansible and Real-World Patterns**
+### Advanced Ansible and Real-World Patterns
+
 - Dynamic inventory (AWS, Azure, GCP)
 - Custom modules and plugins
 - Tower/AWX overview

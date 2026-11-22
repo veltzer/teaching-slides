@@ -20,6 +20,7 @@ audience:
 Transform your IDE into an intelligent development environment
 
 This chapter explores:
+
 1. Popular AI coding tools setup and features
 1. Effective usage patterns
 1. Advanced features mastery
@@ -37,6 +38,7 @@ This chapter explores:
 ## GitHub Copilot: The Pioneer
 
 **Key Features**:
+
 - Powered by OpenAI Codex/GPT models
 - Extensive language support
 - IDE integration (VS Code, JetBrains, Neovim)
@@ -102,6 +104,7 @@ Natural language conversations about your code
 ## Cursor: The AI-First IDE
 
 **Built from ground up for AI**:
+
 - Fork of VS Code with AI deeply integrated
 - Multiple AI model support (GPT-4, Claude)
 - Codebase-wide understanding
@@ -115,11 +118,13 @@ Natural language conversations about your code
 ## Cursor Unique Features
 
 **Cmd+K (Inline Edit)**:
+
 - Edit code with natural language
 - Multi-file refactoring
 - Instant rewrites
 
 **Cmd+L (Chat)**:
+
 - Context-aware conversations
 - Reference entire codebase
 - Image understanding
@@ -129,6 +134,7 @@ Natural language conversations about your code
 ## Cursor Unique Features (cont.)
 
 **Cmd+I (Compose)**:
+
 - Generate new files
 - Create from specifications
 
@@ -143,6 +149,7 @@ Natural language conversations about your code
 ## Codeium: The Free Alternative
 
 **Generous free tier includes**:
+
 - Unlimited autocomplete
 - Chat assistance
 - 70+ language support
@@ -150,6 +157,7 @@ Natural language conversations about your code
 - No telemetry collection
 
 **Pro features** ($10/month):
+
 - Advanced models
 - Unlimited chat
 - Priority support
@@ -182,6 +190,7 @@ function processData(items) {
 ## Amazon CodeWhisperer
 
 **AWS-integrated AI assistant**:
+
 - Optimized for AWS services
 - Security scanning built-in
 - Reference tracking
@@ -201,6 +210,7 @@ Best for AWS-heavy development
 ## Tabnine: Enterprise-Ready
 
 **Focus on team collaboration**:
+
 - Private model training on your code
 - Self-hosted options
 - Team knowledge sharing
@@ -226,6 +236,7 @@ Collaborative intelligence:
 ## JetBrains AI Assistant
 
 **Deep IDE integration**:
+
 - Native IntelliJ integration
 - Refactoring assistance
 - Test generation
@@ -367,6 +378,7 @@ class DataProcessor:
 Understanding complex code:
 
 Select code and ask AI to explain:
+
 - Algorithm logic
 - Design patterns used
 - Performance implications
@@ -611,12 +623,14 @@ Maximize AI assistant efficiency:
 ## Troubleshooting Common Issues
 
 **Poor suggestions?**
+
 - Check context window
 - Verify language support
 - Review recent edits
 - Clear cache if needed
 
 **Slow performance?**
+
 - Reduce file size
 - Check network connection
 - Disable for large files

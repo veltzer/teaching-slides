@@ -384,6 +384,7 @@ match handle.join() {
 ---
 
 ## Performance Considerations
+
 1. Thread creation overhead
 1. Context switching costs
 1. Cache coherency
@@ -395,6 +396,7 @@ match handle.join() {
 ## Practice Exercise
 
 Create a concurrent application that:
+
 1. Uses multiple threads
 1. Shares data safely
 1. Handles errors
@@ -404,6 +406,7 @@ Create a concurrent application that:
 ---
 
 ## Common Pitfalls
+
 1. Race conditions
 1. Deadlocks
 1. Thread leak
@@ -413,6 +416,7 @@ Create a concurrent application that:
 ---
 
 ## Summary
+
 - Thread basics
 - Message passing
 - Shared state

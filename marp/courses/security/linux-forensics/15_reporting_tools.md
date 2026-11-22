@@ -13,6 +13,7 @@ audience:
 # Tools for Correct Reporting
 
 ## Course: Linux Forensics
+
 - Specialized tools streamline forensic reporting
 - `Autopsy` provides integrated case management and analysis
 - `Dradis` centralizes findings and generates reports
@@ -692,6 +693,7 @@ Presentation Tips:
 ## Exercise: Reporting Lab
 
 ### Tasks
+
 1. Create a case in Autopsy with a sample disk image
 1. Tag three findings during analysis
 1. Generate an HTML report from Autopsy
@@ -723,11 +725,13 @@ Required Deliverables:
 ## Course Summary: Linux Forensics
 
 ### Hardware & OS Structure
+
 - Drive anatomy, SSD forensic implications
 - `Linux` filesystem hierarchy
 - `systemd`, users, groups, shells
 
 ### Forensic Fundamentals
+
 - Hashes for evidence integrity
 - OS artifacts and user activity
 - Password files and data structures
@@ -737,11 +741,13 @@ Required Deliverables:
 ## Course Summary: Linux Forensics (cont.)
 
 ### Collecting Evidence
+
 - Data carving with `foremost`, `scalpel`, `bulk_extractor`
 - System and network information collection
 - Drive imaging with `dd`, `dcfldd`, FTK, `LiME`
 
 ### Analysis
+
 - Image analysis with The Sleuth Kit
 - `strace`, `ltrace`, `ftrace`, `GDB` for advanced analysis
 - Volatile memory analysis and syscall-hook detection
@@ -752,6 +758,7 @@ Required Deliverables:
 ## Course Summary: Linux Forensics (cont.) (cont.)
 
 ### Reporting and Capstone
+
 - Anti-forensics detection and countermeasures
 - Report structure, Autopsy, and Dradis
 - Capstone investigation of a compromised system
@@ -761,11 +768,13 @@ Required Deliverables:
 ## Resources and Further Learning
 
 ### Books
+
 - "File System Forensic Analysis" by Brian Carrier
 - "The Art of Memory Forensics" by Ligh et al.
 - "Digital Forensics with Kali Linux" by Shashank Mishra
 
 ### Online Resources
+
 - SANS DFIR: <https://www.sans.org/digital-forensics-incident-response/>
 - Volatility Foundation: <https://www.volatilityfoundation.org/>
 - Sleuth Kit: <https://www.sleuthkit.org/>
@@ -776,12 +785,14 @@ Required Deliverables:
 ## Resources and Further Learning (cont.)
 
 ### Certifications
+
 - GIAC Certified Forensic Examiner (GCFE)
 - GIAC Certified Forensic Analyst (GCFA)
 - EnCase Certified Examiner (EnCE)
 - AccessData Certified Examiner (ACE)
 
 ### Practice
+
 - DFIR challenges and CTF competitions
 - NIST CFReDS sample images
 
@@ -1051,6 +1062,7 @@ During an Incident:
 ### Scenario
 
 A web server has been compromised. You have:
+
 - A disk image (`server.dd`)
 - A memory dump (`server.lime`)
 - Network capture (`traffic.pcap`)
@@ -1060,6 +1072,7 @@ A web server has been compromised. You have:
 ## Course Final Exercise (cont.)
 
 ### Tasks
+
 1. Mount and analyze the disk image
 1. Build a filesystem timeline
 1. Analyze memory for running processes

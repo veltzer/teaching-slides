@@ -97,6 +97,7 @@ audience:
 ## Kafka vs SQS: Use Cases
 
 ### Kafka Ideal For
+
 - High-throughput event streaming
 - Real-time analytics
 - Event sourcing
@@ -108,6 +109,7 @@ audience:
 ## Kafka vs SQS: Use Cases (cont.)
 
 ### SQS Ideal For
+
 - Decoupling microservices
 - Task queues
 - Serverless architectures
@@ -141,12 +143,14 @@ audience:
 ## Performance Characteristics
 
 ### Kafka Performance
+
 - Sequential disk I/O
 - Zero-copy data transfer
 - Batch processing
 - Partition-based parallelism
 
 ### SQS Performance
+
 - Distributed queues
 - Auto-scaling
 - Limited batching
@@ -157,6 +161,7 @@ audience:
 ## Performance Characteristics (cont.)
 
 ### RabbitMQ Performance
+
 - In-memory with disk backup
 - Smart routing
 - Publisher confirms
@@ -278,12 +283,14 @@ audience:
 ## Error Handling Comparison
 
 ### Error Handling in Kafka
+
 - Retry policies
 - Dead letter topics
 - Error topic patterns
 - Transaction support
 
 ### Error Handling in SQS
+
 - Visibility timeout
 - Dead letter queues
 - Redrive policies
@@ -294,6 +301,7 @@ audience:
 ## Error Handling Comparison (cont.)
 
 ### Error Handling in RabbitMQ
+
 - Negative acknowledgments
 - Dead letter exchanges
 - Poison message handling
@@ -316,6 +324,7 @@ audience:
 ## Monitoring Essentials
 
 Key Metrics to Watch
+
 - Producer batch size
 - Request latency
 - Broker CPU & memory
@@ -328,6 +337,7 @@ Key Metrics to Watch
 ## When to Choose What
 
 ### Choose Kafka When
+
 - Need high throughput
 - Long-term storage required
 - Stream processing needed
@@ -339,6 +349,7 @@ Key Metrics to Watch
 ## When to Choose What (cont.)
 
 ### Choose SQS When
+
 - Serverless architecture
 - Simple queue patterns
 - AWS integration needed
@@ -350,6 +361,7 @@ Key Metrics to Watch
 ## When to Choose What (cont.) (cont.)
 
 ### Choose RabbitMQ When
+
 - Complex routing needed
 - Low latency required
 - Traditional messaging patterns
@@ -376,11 +388,13 @@ Key Metrics to Watch
 ## Future Considerations
 
 ### Future of Kafka
+
 - KRaft (replacement for ZooKeeper)
 - Tiered storage
 - Improved exactly-once semantics
 
 ### Future of Queue Systems
+
 - Serverless integration
 - Enhanced security features
 - Cross-region improvements
@@ -391,6 +405,7 @@ Key Metrics to Watch
 ## Resources
 
 Resources
+
 - kafka.apache.org
 - aws.amazon.com/sqs
 - rabbitmq.com

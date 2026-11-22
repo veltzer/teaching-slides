@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Building a Security-First Culture
+
 - Security is not a one-time event - it is a daily habit
 - Small actions compound into strong protection
 - This chapter covers practical habits for your daily work
@@ -24,11 +25,13 @@ audience:
 ---
 
 ## Clean Desk Policy
+
 - Sensitive documents left on desks can be seen or stolen
 - Unlocked screens expose company data to anyone walking by
 - Visitors, cleaning staff, and even colleagues may see things they should not
 
 ### The Rules
+
 - Lock your screen every time you leave your desk (`Win+L` or `Ctrl+Cmd+Q`)
 - Put away sensitive documents in locked drawers
 - Shred documents you no longer need
@@ -44,6 +47,7 @@ audience:
 ---
 
 ## Physical Security
+
 - Do not let strangers tailgate through secure doors
 - Politely challenge unfamiliar faces in restricted areas
 - Wear your badge visibly at all times
@@ -67,6 +71,7 @@ audience:
 ---
 
 ## Social Media Security
+
 - Where you work and what you do
 - When you are traveling (home is empty)
 - Names of colleagues and managers
@@ -127,11 +132,13 @@ audience:
 ---
 
 ## Third-Party Vendor Security
+
 - Your organization is only as secure as its weakest partner
 - Vendors with access to your systems or data are a risk
 - Major breaches have occurred through vendor access
 
 ### Your Role
+
 - Only grant vendors the minimum access they need
 - Ensure vendors follow your company's security policies
 - Report if a vendor asks for unusual access
@@ -153,12 +160,14 @@ audience:
 ---
 
 ## Travel Security
+
 - Back up your data before leaving
 - Only bring devices you actually need
 - Enable device encryption and remote wipe
 - Know how to contact IT security from abroad
 
 ### During Travel
+
 - Never leave devices unattended
 - Use a `VPN` for all connections
 - Be cautious of public charging stations ("juice jacking")
@@ -168,12 +177,14 @@ audience:
 ---
 
 ## AI and Chatbot Security
+
 - Do not paste confidential data into public AI chatbots
 - Do not upload company documents to external AI services
 - AI-generated phishing emails are more convincing than ever
 - Deepfake audio and video can impersonate colleagues
 
 ### Guidelines
+
 - Use only company-approved AI tools
 - Treat AI output with the same caution as any external source
 - Verify any AI-generated instructions through official channels
@@ -244,6 +255,7 @@ Security is a team effort. Every good decision you make protects not just you, b
 ---
 
 ## Resources
+
 - Company security policy portal
 - IT security helpdesk
 - Phishing simulation platform

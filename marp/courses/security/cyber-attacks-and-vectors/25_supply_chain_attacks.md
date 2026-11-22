@@ -128,6 +128,7 @@ audience:
 ```
 
 **SUNBURST technical details:**
+
 - Backdoor waited 12-14 days before activating (evade sandbox analysis)
 - Used DNS for C2 communication (encoded in subdomain names)
 - Checked for security tools and disabled them before acting

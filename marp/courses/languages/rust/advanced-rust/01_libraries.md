@@ -182,11 +182,13 @@ pub enum AppError {
 ## When to Use Which?
 
 **Use `anyhow` when:**
+
 - Building applications
 - You want simple error handling
 - Error types don't matter to callers
 
 **Use `thiserror` when:**
+
 - Building libraries
 - You need specific error types
 - Callers need to match on errors
@@ -473,6 +475,7 @@ let service = ServiceBuilder::new()
 ```
 
 Tower provides composable middleware for:
+
 - Rate limiting
 - Timeouts
 - Load balancing

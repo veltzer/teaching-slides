@@ -65,6 +65,7 @@ public:
 ## Embedded C++ (EC++) Standard
 
 Key restrictions for embedded use:
+
 1. **No exceptions** - too much overhead
 1. **No RTTI** - runtime type information
 1. **Limited STL** - avoid dynamic allocation

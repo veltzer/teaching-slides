@@ -17,6 +17,7 @@ audience:
 # Roles: Structure, Creation, and Galaxy
 
 ## Topics Covered
+
 - What are roles and why use them
 - Role directory structure
 - Creating roles from scratch

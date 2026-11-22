@@ -28,6 +28,7 @@ audience:
 ---
 
 Chapter Overview
+
 - QEMU tracing and instrumentation
 - Using QEMU for kernel fuzzing
 - Continuous Integration (CI) with QEMU
@@ -35,6 +36,7 @@ Chapter Overview
 ---
 
 QEMU Tracing Framework
+
 - Overview of QEMU's tracing capabilities
 - Enabling and configuring traces
 - Analyzing trace output for kernel debugging
@@ -50,6 +52,7 @@ QEMU Tracing Architecture
 ---
 
 Instrumenting QEMU for Kernel Analysis
+
 - Adding custom trace points
 - Correlating QEMU and kernel events
 - Performance impact of tracing
@@ -57,6 +60,7 @@ Instrumenting QEMU for Kernel Analysis
 ---
 
 QEMU's GDB Stub
+
 - Advanced usage of QEMU's GDB stub
 - Remote debugging techniques
 - Kernel-specific GDB extensions
@@ -64,6 +68,7 @@ QEMU's GDB Stub
 ---
 
 QEMU Record and Replay
+
 - Principles of deterministic replay debugging
 - Implementing record and replay for kernel testing
 - Analyzing non-deterministic bugs
@@ -71,6 +76,7 @@ QEMU Record and Replay
 ---
 
 QEMU Checkpointing
+
 - Creating and managing VM checkpoints
 - Using checkpoints for kernel debugging
 - Integrating checkpoints in test workflows
@@ -78,6 +84,7 @@ QEMU Checkpointing
 ---
 
 QEMU for Kernel Fuzzing
+
 - Overview of kernel fuzzing techniques
 - Implementing fuzzers with QEMU
 - AFL (American Fuzzy Lop) integration with QEMU
@@ -85,6 +92,7 @@ QEMU for Kernel Fuzzing
 ---
 
 Sanitizers and QEMU
+
 - Using address sanitizer (ASAN) with QEMU
 - Memory sanitizer (MSAN) for kernel testing
 - Undefined behavior sanitizer (UBSAN) in virtualized environments
@@ -92,6 +100,7 @@ Sanitizers and QEMU
 ---
 
 QEMU and Kernel Coverage Analysis
+
 - Generating kernel code coverage with QEMU
 - Integrating coverage data in CI pipelines
 - Strategies for improving kernel test coverage
@@ -99,6 +108,7 @@ QEMU and Kernel Coverage Analysis
 ---
 
 QEMU Plugins
+
 - Introduction to QEMU plugin architecture
 - Writing custom plugins for kernel analysis
 - Use cases: memory profiling, instruction counting
@@ -106,6 +116,7 @@ QEMU Plugins
 ---
 
 TCG (Tiny Code Generator) Instrumentation
+
 - Understanding QEMU's TCG
 - Instrumenting TCG for kernel analysis
 - Performance implications of TCG instrumentation
@@ -113,6 +124,7 @@ TCG (Tiny Code Generator) Instrumentation
 ---
 
 QEMU and Hardware-Assisted Virtualization
+
 - Advanced KVM usage in QEMU
 - Nested virtualization for kernel testing
 - Analyzing virtualization overhead
@@ -120,6 +132,7 @@ QEMU and Hardware-Assisted Virtualization
 ---
 
 QEMU for Multi-Architecture Kernel Testing
+
 - Cross-architecture kernel compilation
 - Running kernels on emulated architectures
 - Challenges in multi-architecture testing
@@ -127,6 +140,7 @@ QEMU for Multi-Architecture Kernel Testing
 ---
 
 QEMU in Continuous Integration Pipelines
+
 - Setting up QEMU-based CI for kernel testing
 - Automated test suite execution
 - Reporting and analyzing test results
@@ -134,6 +148,7 @@ QEMU in Continuous Integration Pipelines
 ---
 
 QEMU Networking Advanced Features
+
 - Software-defined networking (SDN) with QEMU
 - Network namespaces and QEMU
 - Testing complex network topologies
@@ -141,6 +156,7 @@ QEMU Networking Advanced Features
 ---
 
 QEMU Storage Advanced Features
+
 - QEMU image format internals
 - Implementing custom block drivers
 - Testing advanced storage features (e.g., thin provisioning, snapshots)
@@ -148,6 +164,7 @@ QEMU Storage Advanced Features
 ---
 
 QEMU for Real-Time Kernel Testing
+
 - Simulating real-time environments
 - Testing scheduler latency and deadlines
 - Analyzing interrupt handling in real-time scenarios
@@ -155,6 +172,7 @@ QEMU for Real-Time Kernel Testing
 ---
 
 QEMU and Kernel Memory Management
+
 - Advanced memory management features in QEMU
 - Testing huge pages and NUMA configurations
 - Analyzing memory fragmentation
@@ -162,6 +180,7 @@ QEMU and Kernel Memory Management
 ---
 
 QEMU for Power Management Testing
+
 - Simulating power states (S3, S4)
 - Testing ACPI implementations
 - Analyzing kernel power management code
@@ -169,6 +188,7 @@ QEMU for Power Management Testing
 ---
 
 QEMU and Trusted Execution Environments
+
 - Emulating secure enclaves (e.g., Intel SGX)
 - Testing Trusted Execution Environment (TEE) drivers
 - Challenges in security-focused virtualization
@@ -176,6 +196,7 @@ QEMU and Trusted Execution Environments
 ---
 
 QEMU for Kernel Profiling
+
 - Integration with perf and oprofile
 - Kernel hot spot analysis in virtualized environments
 - Optimizing kernel performance with QEMU insights
@@ -183,6 +204,7 @@ QEMU for Kernel Profiling
 ---
 
 QEMU and Kernel Debugging Automation
+
 - Scripting GDB for automated debugging
 - Creating repeatable debug scenarios
 - Integrating debugging in CI workflows
@@ -190,6 +212,7 @@ QEMU and Kernel Debugging Automation
 ---
 
 QEMU for Kernel Regression Testing
+
 - Implementing kernel bisection with QEMU
 - Automated regression test suites
 - Strategies for quick issue isolation
@@ -197,6 +220,7 @@ QEMU for Kernel Regression Testing
 ---
 
 QEMU and Kernel Module Testing
+
 - Advanced techniques for kernel module testing
 - Simulating module load/unload scenarios
 - Analyzing module dependencies
@@ -204,6 +228,7 @@ QEMU and Kernel Module Testing
 ---
 
 QEMU for Kernel Security Testing
+
 - Simulating security vulnerabilities
 - Testing kernel exploit mitigations
 - Analyzing kernel security features in isolated environments
@@ -211,6 +236,7 @@ QEMU for Kernel Security Testing
 ---
 
 QEMU and Kernel Documentation
+
 - Generating kernel documentation with QEMU setups
 - Creating reproducible examples for kernel features
 - Automating kernel API testing and documentation
@@ -218,6 +244,7 @@ QEMU and Kernel Documentation
 ---
 
 QEMU for Kernel Performance Benchmarking
+
 - Setting up consistent benchmark environments
 - Comparative analysis of kernel versions
 - Isolating performance regressions
@@ -225,6 +252,7 @@ QEMU for Kernel Performance Benchmarking
 ---
 
 Future Trends in QEMU for Kernel Development
+
 - Emerging QEMU features for kernel developers
 - Potential impacts of hardware trends on QEMU and kernel testing
 - Preparing for future challenges in kernel development with QEMU

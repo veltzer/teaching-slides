@@ -41,6 +41,7 @@ audience:
 ## TCP Three-Way Handshake Review: Details
 
 **Key points:**
+
 - Step 1: Client sends SYN with initial sequence number
 - Step 2: Server allocates resources (TCB) and responds with SYN-ACK
 - Step 3: Client completes handshake with ACK

@@ -127,6 +127,7 @@ Example:
 ```
 
 Useful for:
+
 - Address calculations
 - Simple arithmetic (addition and multiplication)
 

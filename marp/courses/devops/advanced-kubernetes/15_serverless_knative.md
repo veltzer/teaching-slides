@@ -212,6 +212,7 @@ spec:
 ```
 
 Each tag gets its own URL:
+
 - `https://stable-api.default.example.com`
 - `https://canary-api.default.example.com`
 - `https://latest-api.default.example.com`

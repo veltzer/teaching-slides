@@ -18,6 +18,7 @@ audience:
 # The SDD Workflow
 
 ## Overview
+
 - The loop end to end: specify, plan, tasks, implement, verify
 - The human review gates and what each one catches
 - Verifying against the spec: derived tests and a second-agent audit

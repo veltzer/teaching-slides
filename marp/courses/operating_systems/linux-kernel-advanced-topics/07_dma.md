@@ -18,6 +18,7 @@ audience:
 ## DMA Overview
 
 Direct Memory Access enables:
+
 - Hardware to access memory without CPU
 - High-speed data transfers
 - Reduced CPU overhead
@@ -38,11 +39,13 @@ Key benefit: CPU can perform other tasks during transfers
 Two main categories:
 
 ### Coherent DMA (Consistent)
+
 - CPU and device see same data
 - No cache management needed
 - Higher overhead allocation
 
 ### Streaming DMA
+
 - Requires explicit synchronization
 - Better performance
 - Cache management required
@@ -641,11 +644,13 @@ cat /sys/kernel/debug/tracing/trace
 ## DMA vs CPU Performance
 
 When to use DMA:
+
 - Large transfers (> 1KB typically)
 - CPU needs to do other work
 - Hardware supports it efficiently
 
 When to avoid:
+
 - Small transfers (overhead > benefit)
 - Infrequent transfers
 - Complex setup requirements
@@ -655,11 +660,13 @@ When to avoid:
 ## Security Considerations
 
 DMA security issues:
+
 1. DMA attacks (DMA from untrusted devices)
 1. Memory isolation violations
 1. Information leakage
 
 Mitigations:
+
 - IOMMU usage
 - DMA restricted zones
 - Proper unmapping
@@ -681,12 +688,14 @@ Mitigations:
 ## Summary
 
 DMA is essential for:
+
 - High-performance I/O
 - Reduced CPU overhead
 - Power efficiency
 - Real-time requirements
 
 Key concepts:
+
 - Coherent vs streaming DMA
 - DMA engine framework
 - IOMMU benefits

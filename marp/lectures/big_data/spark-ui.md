@@ -42,6 +42,7 @@ audience:
 ---
 
 ## Core Components
+
 1. Jobs tab
 1. Stages tab
 1. Storage tab
@@ -58,6 +59,7 @@ audience:
 ---
 
 ## Job Details
+
 1. Job ID and description
 1. Submission time
 1. Duration information
@@ -77,6 +79,7 @@ df.groupBy("column")
 ---
 
 ## Understanding Stages
+
 1. DAG visualization
 1. Task distribution
 1. Data skew detection
@@ -91,6 +94,7 @@ df.groupBy("column")
 ---
 
 ## Caching Metrics
+
 1. Memory usage
 1. Disk usage
 1. Cache hit ratio
@@ -110,6 +114,7 @@ spark.executor.instances
 ---
 
 ## Executor Metrics
+
 1. Task completion time
 1. Memory consumption
 1. Disk I/O
@@ -118,6 +123,7 @@ spark.executor.instances
 ---
 
 ## SQL Tab Features
+
 1. Query execution plans
 1. Query metrics
 1. Operation timeline
@@ -126,6 +132,7 @@ spark.executor.instances
 ---
 
 ## Environment Information
+
 1. Spark configuration
 1. JVM information
 1. System properties
@@ -162,6 +169,7 @@ spark.conf.set("spark.ui.enabled", true)
 ---
 
 ## Monitoring Performance
+
 1. Task duration
 1. Shuffle read/write
 1. Serialization time
@@ -176,6 +184,7 @@ spark.conf.set("spark.ui.enabled", true)
 ---
 
 ## Data Locality
+
 1. PROCESS_LOCAL
 1. NODE_LOCAL
 1. RACK_LOCAL
@@ -195,6 +204,7 @@ df.repartition(10)
 ---
 
 ## Understanding DAGs
+
 1. Stage boundaries
 1. Shuffle operations
 1. Task dependencies
@@ -209,6 +219,7 @@ df.repartition(10)
 ---
 
 ## Resource Utilization
+
 1. CPU usage
 1. Memory consumption
 1. Disk I/O
@@ -217,6 +228,7 @@ df.repartition(10)
 ---
 
 ## Debugging Tools
+
 1. Stage details
 1. Task logs
 1. Exception traces
@@ -225,6 +237,7 @@ df.repartition(10)
 ---
 
 ## Performance Tuning
+
 1. Identify bottlenecks
 1. Monitor resources
 1. Optimize shuffle
@@ -241,6 +254,7 @@ df.repartition(10)
 ---
 
 ## History Server Features
+
 1. Completed applications
 1. Event logs
 1. Application comparison
@@ -255,6 +269,7 @@ df.repartition(10)
 ---
 
 ## Troubleshooting
+
 1. Check port availability
 1. Monitor memory usage
 1. Review error logs
@@ -263,6 +278,7 @@ df.repartition(10)
 ---
 
 ## UI Security
+
 1. Authentication setup
 1. SSL configuration
 1. Access control
@@ -271,6 +287,7 @@ df.repartition(10)
 ---
 
 ## Best Practices
+
 1. Regular monitoring
 1. Performance baselines
 1. Alert configuration
@@ -279,6 +296,7 @@ df.repartition(10)
 ---
 
 ## Advanced Features
+
 1. Custom metrics
 1. REST API access
 1. Metric exporters
@@ -293,6 +311,7 @@ df.repartition(10)
 ---
 
 ## Real-time Analysis
+
 1. Active task tracking
 1. Resource monitoring
 1. Performance alerts
@@ -301,6 +320,7 @@ df.repartition(10)
 ---
 
 ## Integration Options
+
 1. Monitoring systems
 1. Log aggregators
 1. Metrics platforms
@@ -309,6 +329,7 @@ df.repartition(10)
 ---
 
 ## Future Developments
+
 1. Enhanced visualizations
 1. Better metrics
 1. More integrations
@@ -317,6 +338,7 @@ df.repartition(10)
 ---
 
 ## Practical Tips
+
 1. Bookmark important pages
 1. Monitor key metrics
 1. Set up alerts

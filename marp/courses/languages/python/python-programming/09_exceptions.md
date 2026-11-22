@@ -13,6 +13,7 @@ audience:
 ---
 
 ## What are Exceptions?
+
 - Exceptions are errors that occur during program execution
 - They interrupt the normal flow of the program
 - Python uses exceptions extensively (EAFP style)
@@ -28,6 +29,7 @@ print(int("hello"))
 ---
 
 ## EAFP vs LBYL
+
 - **EAFP**: Easier to Ask Forgiveness than Permission
 - **LBYL**: Look Before You Leap
 
@@ -307,6 +309,7 @@ BaseException
 ---
 
 ## `BaseException` vs `Exception`
+
 - `BaseException`: Root of all exceptions
 - `Exception`: Base for most user-catchable exceptions
 - `KeyboardInterrupt`, `SystemExit`: Not subclasses of `Exception`
@@ -576,6 +579,7 @@ print(calculate_average([1, 2, 3]))  # 2.0
 ---
 
 ## Summary
+
 - Exceptions interrupt normal flow; `try`/`except` handles them
 - Catch specific exceptions, not broad ones
 - `else` runs on success; `finally` always runs

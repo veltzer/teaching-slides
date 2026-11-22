@@ -24,6 +24,7 @@ audience:
 ---
 
 ## Brace Expansion
+
 - Generates arbitrary strings
 - Processed BEFORE variable expansion
 - Not a glob: works even if files don't exist
@@ -211,6 +212,7 @@ export PATH="${HOME}/bin:${HOME}/scripts:${HOME}/tools:${PATH}"
 ---
 
 ## Summary: Shell Theory, Variables & Expansion
+
 - The shell is the interface between you and the kernel
 - `bash` is the standard scripting shell on `Linux`
 - The shell parses commands through multiple expansion stages

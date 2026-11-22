@@ -25,6 +25,7 @@ audience:
 ## devtool Overview
 
 Primary development tool for Yocto:
+
 - Recipe creation
 - Source modification
 - Dependency tracking
@@ -378,6 +379,7 @@ devtool build myapp
 ```
 
 eSDK advantages:
+
 - Full BitBake environment
 - Recipe development
 - On-target testing
@@ -871,6 +873,7 @@ tmp/work/*/myapp/*/temp/log.do_compile
 ```
 
 Common issues:
+
 - Missing dependencies
 - Wrong paths
 - Configuration errors
@@ -988,6 +991,7 @@ bitbake-layers layerindex-show-depends meta-custom
 ## Summary
 
 Key workflow tools:
+
 - devtool for recipe development
 - QEMU for testing
 - SDK for application development
@@ -999,6 +1003,7 @@ Key workflow tools:
 ## Summary (cont.)
 
 Best practices:
+
 - Use devtool workflow
 - Test in QEMU first
 - Enable build history

@@ -18,6 +18,7 @@ audience:
 ---
 
 ## What Is Multi-Cloud?
+
 - Using services from two or more public cloud providers
 - Distinct from hybrid cloud (public + private)
 - Deliberate strategy, not accidental sprawl
@@ -27,6 +28,7 @@ audience:
 ---
 
 ## Multi-Cloud vs Hybrid Cloud
+
 - Multi-cloud: multiple public clouds (AWS + Azure + GCP)
 - Hybrid cloud: public cloud + on-premises infrastructure
 - These are orthogonal — you can have both
@@ -38,6 +40,7 @@ audience:
 ---
 
 ## Why Multi-Cloud: Avoiding Vendor Lock-In
+
 - Reduce dependency on a single provider
 - Maintain negotiating leverage on pricing
 - Protect against provider outages or policy changes
@@ -47,6 +50,7 @@ audience:
 ---
 
 ## Why Multi-Cloud: Best-of-Breed Services
+
 - AWS excels in breadth and ecosystem maturity
 - Azure leads in enterprise identity and Microsoft integration
 - GCP leads in data analytics and machine learning
@@ -56,6 +60,7 @@ audience:
 ---
 
 ## Why Multi-Cloud: Compliance and Data Sovereignty
+
 - Regulations may require specific geographic regions
 - Some regions only available on certain providers
 - Government contracts may mandate specific clouds
@@ -65,6 +70,7 @@ audience:
 ---
 
 ## Why Multi-Cloud: Business Resilience
+
 - Provider-level outages do happen (AWS us-east-1, Azure AD)
 - Multi-cloud enables disaster recovery across providers
 - Reduces blast radius of any single failure
@@ -74,6 +80,7 @@ audience:
 ---
 
 ## Why Multi-Cloud: Mergers and Acquisitions
+
 - Acquired companies often use different providers
 - Forcing migration is expensive and risky
 - Multi-cloud lets you integrate gradually
@@ -83,6 +90,7 @@ audience:
 ---
 
 ## The Cost of Multi-Cloud: Complexity
+
 - Every additional provider multiplies operational surface
 - Different APIs, SDKs, CLIs, and consoles
 - Networking between clouds is non-trivial
@@ -92,6 +100,7 @@ audience:
 ---
 
 ## The Cost of Multi-Cloud: Skills Gap
+
 - Engineers need expertise across multiple platforms
 - Certifications and training multiply
 - Hiring becomes more difficult
@@ -107,6 +116,7 @@ audience:
 ---
 
 ## The Cost of Multi-Cloud: Financial Overhead
+
 - Volume discounts are diluted across providers
 - Reserved instances and committed-use lose effectiveness
 - Data transfer between clouds is expensive
@@ -116,6 +126,7 @@ audience:
 ---
 
 ## Common Multi-Cloud Patterns
+
 - Active-active: workloads run simultaneously on multiple clouds
 - Active-passive: failover from primary to secondary cloud
 - Segmented: different workloads on different clouds
@@ -167,6 +178,7 @@ provider "google" {
 ---
 
 ## When Multi-Cloud Makes Sense
+
 - Large enterprises with diverse workload requirements
 - Strict compliance or data sovereignty needs
 - Business-critical applications requiring provider-level DR
@@ -176,6 +188,7 @@ provider "google" {
 ---
 
 ## When Multi-Cloud Is Not Worth It
+
 - Small to mid-size organizations
 - Teams lacking cloud expertise depth
 - Workloads with tight inter-service coupling

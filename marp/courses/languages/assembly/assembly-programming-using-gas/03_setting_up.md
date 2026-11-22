@@ -73,6 +73,7 @@ gdb --version
 ## Text Editors for Assembly
 
 Popular choices:
+
 - Vim
 - Emacs
 - Visual Studio Code

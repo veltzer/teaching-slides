@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Ecosystem Overview
+
 * Kubernetes integration
 * Cloud platforms
 * Delta Lake
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Deployment Options
+
 1. Standalone cluster
 1. YARN deployment
 1. Kubernetes deployment
@@ -55,6 +57,7 @@ spark.kubernetes.namespace=spark
 ---
 
 ## Cloud Integration
+
 1. AWS EMR
 1. Azure Synapse
 1. Google Dataproc
@@ -81,6 +84,7 @@ spark.conf.set(
 ---
 
 ## Delta Lake Overview
+
 1. ACID transactions
 1. Schema enforcement
 1. Time travel
@@ -117,6 +121,7 @@ df = spark.read.format("delta") \
 ---
 
 ## Schema Evolution
+
 1. Add columns
 1. Remove columns
 1. Change types
@@ -142,6 +147,7 @@ deltaTable = DeltaTable.forPath(
 ---
 
 ## Performance Tuning
+
 1. File sizing
 1. Partitioning
 1. Caching
@@ -168,6 +174,7 @@ spark.conf.set(
 ---
 
 ## Security Framework
+
 1. Authentication
 1. Authorization
 1. Encryption
@@ -194,6 +201,7 @@ spark.conf.set(
 ---
 
 ## Data Governance
+
 1. Lineage tracking
 1. Audit logging
 1. Policy enforcement
@@ -219,6 +227,7 @@ def backup_data():
 ---
 
 ## CI/CD Pipeline
+
 1. Build process
 1. Testing
 1. Deployment
@@ -244,6 +253,7 @@ def test_transformation():
 ---
 
 ## Cost Optimization
+
 1. Resource sizing
 1. Spot instances
 1. Storage tiers
@@ -270,6 +280,7 @@ spark.conf.set(
 ---
 
 ## MLflow Integration
+
 1. Experiment tracking
 1. Model registry
 1. Deployment
@@ -294,6 +305,7 @@ mlflow.spark.log_model(pipeline, "model")
 ---
 
 ## Best Practices
+
 1. Code organization
 1. Documentation
 1. Testing
@@ -319,6 +331,7 @@ class SparkJob:
 ---
 
 ## Troubleshooting
+
 1. Log analysis
 1. Metrics review
 1. Performance audit
@@ -345,6 +358,7 @@ spark.conf.set(
 ---
 
 ## Maintenance
+
 1. Updates
 1. Patches
 1. Optimization
@@ -371,6 +385,7 @@ spark.conf.set(
 ---
 
 ## Migration Strategies
+
 1. Version upgrade
 1. Platform migration
 1. Data migration
@@ -396,6 +411,7 @@ def optimize_resources():
 ---
 
 ## Advanced Features
+
 1. Custom extensions
 1. Plugins
 1. Integrations
@@ -404,6 +420,7 @@ def optimize_resources():
 ---
 
 ## Community Resources
+
 * Documentation
 * Forums
 * Blogs

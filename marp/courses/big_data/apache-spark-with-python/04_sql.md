@@ -23,6 +23,7 @@ audience:
 ---
 
 ## Spark SQL Overview
+
 - High-level API for structured data processing
 - Seamless integration with SQL and DataFrame operations
 - Optimized execution through Catalyst optimizer
@@ -37,6 +38,7 @@ audience:
 ---
 
 ## Key Components
+
 1. DataFrame API
 1. Dataset API
 1. Catalyst Optimizer
@@ -263,6 +265,7 @@ df.unpersist()
 ---
 
 ## Query Optimization Tips
+
 1. Predicate Pushdown
 
 ```python
@@ -356,6 +359,7 @@ df = spark.read.schema(schema).csv("data.csv")
 ---
 
 ## Memory Management
+
 1. Broadcast joins for small tables
 
 ```python
@@ -376,6 +380,7 @@ df = df.repartition(10)
 ---
 
 ## Summary
+
 - Spark SQL provides unified data access
 - DataFrames offer type-safe, structured operations
 - Multiple data source integration

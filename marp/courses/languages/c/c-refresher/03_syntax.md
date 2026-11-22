@@ -70,6 +70,7 @@ const float PI = 3.14159;
 ## Data Types
 
 Basic data types:
+
 - `int`: Integer
 - `float`: Single-precision floating-point
 - `double`: Double-precision floating-point
@@ -582,6 +583,7 @@ int main(void) {
 ---
 
 ## Summary
+
 - C programs have a specific structure with the `main()` function as the entry point
 - Variables and constants store data, with various data types available
 - Control structures (`if-else`, `switch`) and loops (`for`, `while`) control program flow

@@ -31,6 +31,7 @@ audience:
 Traditional Git workflow limitations:
 
 **Single working directory problem:**
+
 - Can only work on one branch at a time
 - Switching branches affects entire working directory
 - Context switching is expensive
@@ -41,6 +42,7 @@ Traditional Git workflow limitations:
 ## Why Are Worktrees Needed? (cont.)
 
 **Common scenarios requiring worktrees:**
+
 - Testing a feature while developing another
 - Quick hotfixes without losing current work
 - Code review of different branches
@@ -63,6 +65,7 @@ git stash pop               # Restore work
 Worktrees allow multiple working directories for a single repository:
 
 **Key concepts:**
+
 - **Main worktree:** Original repository location
 - **Linked worktrees:** Additional working directories
 - **Shared repository:** Common `.git` directory
@@ -95,6 +98,7 @@ git worktree add worktrees/testing testing-branch
 ```
 
 **What happens during creation:**
+
 1. New directory created at specified path
 1. Branch checked out in new directory
 1. Worktree registered in `.git/worktrees/`
@@ -161,6 +165,7 @@ git status            # Shows status for this worktree only
 ```
 
 **Each worktree maintains:**
+
 - Separate working directory
 - Independent HEAD pointer
 - Own staging area (index)
@@ -186,6 +191,7 @@ git worktree add ../duplicate main
 ```
 
 **Important restrictions:**
+
 - Same branch cannot be checked out in multiple worktrees
 - Prevents conflicts and confusion
 - Use different branches for different worktrees
@@ -221,12 +227,14 @@ git worktree list
 ## Moving and Renaming Worktrees (cont.)
 
 **When to move worktrees:**
+
 - Better organization of directories
 - Different filesystem or drive
 - Renaming for clarity
 - Temporary relocation
 
 **What gets updated:**
+
 - Worktree registration in `.git/worktrees/`
 - Path references in metadata
 - `.git` file in worktree directory
@@ -254,11 +262,13 @@ git worktree prune
 ## Removing Worktrees (cont.)
 
 **Removal checks:**
+
 - Uncommitted changes (blocks removal unless forced)
 - Untracked files (warning but allows removal)
 - Current worktree (cannot remove current location)
 
 **What gets cleaned up:**
+
 - Worktree directory and files
 - Worktree metadata from `.git/worktrees/`
 - Associated branch (if orphaned)
@@ -288,12 +298,14 @@ git worktree prune --verbose
 ## Pruning Worktrees (cont.)
 
 **When pruning is needed:**
+
 - Worktree directories manually deleted
 - Network shares become unavailable
 - System crashes or interruptions
 - Storage device failures
 
 **Prune criteria:**
+
 - Worktree directory no longer exists
 - Worktree directory not accessible
 - Worktree corrupted or invalid
@@ -321,6 +333,7 @@ git worktree remove --force ../important-feature # Still respects lock
 ```
 
 **Use cases for locking:**
+
 - Prevent accidental removal
 - Network-mounted worktrees
 - Shared development environments
@@ -347,6 +360,7 @@ git worktree add ../feature-new -b feature-new
 ```
 
 **Benefits of bare + worktrees:**
+
 - No "main" working directory confusion
 - All branches equal status
 - Cleaner organization
@@ -377,12 +391,14 @@ echo "*.local" >> .git/info/exclude
 ## Worktree-Specific Configuration (cont.)
 
 **Configuration hierarchy in worktrees:**
+
 1. Worktree-specific (if supported)
 1. Repository-local (shared across worktrees)
 1. User global
 1. System
 
 **Shared vs separate:**
+
 - **Shared:** Most configuration, hooks, references
 - **Separate:** HEAD, index, working files, some logs
 
@@ -430,11 +446,13 @@ cd ../pr-123-review
 ## Performance Considerations
 
 **Storage efficiency:**
+
 - Object database shared across worktrees
 - Only working files duplicated
 - Significant space savings vs multiple clones
 
 **Operation speed:**
+
 - Faster than cloning for new branches
 - No network operations needed
 - Instant branch switching between worktrees
@@ -444,6 +462,7 @@ cd ../pr-123-review
 ## Performance Considerations (cont.)
 
 **Memory usage:**
+
 - Each worktree needs separate index
 - File system cache for each working directory
 - Consider system resources with many worktrees
@@ -473,6 +492,7 @@ git worktree add ../main-copy -b main-copy main
 ```
 
 **Path requirements:**
+
 - Worktrees must be outside main repository
 - Cannot be subdirectories of main repo
 - Paths must not exist or be empty directories
@@ -482,11 +502,13 @@ git worktree add ../main-copy -b main-copy main
 ## Worktree Limitations and Gotchas (cont.)
 
 **Submodule considerations:**
+
 - Submodules need separate initialization in each worktree
 - Submodule paths relative to each worktree
 - More complex setup and maintenance
 
 **Hook behavior:**
+
 - Hooks shared across all worktrees
 - May cause unexpected behavior
 - Consider worktree-aware hooks
@@ -513,6 +535,7 @@ du -sh ../worktree-*          # Individual worktree sizes
 ```
 
 **Backup considerations:**
+
 - Main `.git` directory contains everything critical
 - Worktree directories contain only working files
 - Include `.git/worktrees/` metadata in backups
@@ -561,6 +584,7 @@ git worktree add ../recreated branch-name
 ## Integration with Development Tools
 
 **IDE support:**
+
 - VS Code: Can open different worktrees in separate windows
 - IntelliJ: Project-level awareness of worktrees
 - Vim: Works naturally with different directories
@@ -579,6 +603,7 @@ wait  # Wait for both builds
 ## Integration with Development Tools (cont.)
 
 **CI/CD considerations:**
+
 - Use worktrees for parallel testing
 - Separate build environments
 - Isolated dependency installation
@@ -624,6 +649,7 @@ worktrees/                 # Dedicated worktree directory
 ```
 
 **Cleanup routine:**
+
 1. Remove completed worktrees promptly
 1. Lock long-term worktrees
 1. Regular pruning of stale references
@@ -635,12 +661,14 @@ worktrees/                 # Dedicated worktree directory
 ## Team Workflows with Worktrees
 
 **Individual developer benefits:**
+
 - Work on multiple features simultaneously
 - Quick context switching
 - Parallel testing
 - Isolated experiments
 
 **Team considerations:**
+
 - Worktrees are local to each developer
 - Shared workflows still use branches
 - Documentation of worktree usage
@@ -659,6 +687,7 @@ git worktree list > WORKTREES.md
 ```
 
 **Collaboration patterns:**
+
 - Use worktrees for local development
 - Share branches through normal Git workflows
 - Coordinate branch usage to avoid conflicts
@@ -689,6 +718,7 @@ git worktree add ../hotfix hotfix
 ## Migrating to Worktree Workflows (cont.)
 
 **Migration steps:**
+
 1. Identify current multiple clone usage
 1. Consolidate to single main repository
 1. Create worktrees for active branches
@@ -700,6 +730,7 @@ git worktree add ../hotfix hotfix
 ## Migrating to Worktree Workflows (cont.) (cont.)
 
 **Benefits of migration:**
+
 - Reduced disk usage
 - Faster branch creation
 - Simplified maintenance
@@ -712,6 +743,7 @@ git worktree add ../hotfix hotfix
 **Scenario:** Implement a complete worktree-based development workflow for a team project with multiple concurrent features.
 
 **Setup tasks:**
+
 1. **Create main repository structure:**
    - Initialize repository with sample project
    - Create multiple feature branches
@@ -732,6 +764,7 @@ git worktree add ../hotfix hotfix
    - Document worktree management processes
 
 **Advanced tasks:**
+
 1. **Integration testing:**
    - Set up parallel build environments
    - Test different feature combinations
@@ -753,6 +786,7 @@ git worktree add ../hotfix hotfix
 ## When NOT to Use Worktrees
 
 **Inappropriate scenarios:**
+
 - Single feature development
 - Infrequent branch switching
 - Limited disk space
@@ -781,6 +815,7 @@ git merge new-feature
 ```
 
 **Resource constraints:**
+
 - Limited disk space
 - Slow file system
 - Memory-constrained systems

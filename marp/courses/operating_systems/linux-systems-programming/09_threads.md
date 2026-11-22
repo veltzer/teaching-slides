@@ -36,6 +36,7 @@ audience:
 ## What are Threads?
 
 ## Definition
+
 - **Lightweight processes** sharing memory
 - **Parallel execution** within process
 - **Shared address space**
@@ -927,6 +928,7 @@ htop  # Press H to show threads
 ## Threads vs Processes Decision
 
 ## Use Threads When
+
 - Need shared memory
 - Frequent communication
 - Low creation overhead
@@ -937,12 +939,14 @@ htop  # Press H to show threads
 ## Threads vs Processes Decision (cont.)
 
 ## Use Processes When
+
 - Need isolation
 - Fault tolerance required
 - Different privileges
 - Distributed system
 
 ## Hybrid Approach
+
 - Multiple processes with thread pools
 - Best of both worlds
 

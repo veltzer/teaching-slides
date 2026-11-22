@@ -63,6 +63,7 @@ NUMA node(s):             1
 ```
 
 **Questions to answer:**
+
 1. How many physical cores does the system have?
 1. Is hyper-threading (SMT) enabled? How can you tell?
 1. What is the L3 cache size? Is it shared or per-core?
@@ -830,6 +831,7 @@ gcc -O0 -o show_maps show_maps.c
 ```
 
 **Observe:**
+
 - Small allocations (< ~128 KB) grow the heap with brk/sbrk
 - Large allocations use mmap (appear as anonymous mappings)
 - After free, mmap regions may be returned to the OS immediately

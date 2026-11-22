@@ -18,6 +18,7 @@ audience:
 ## Boot Time Optimization Goals
 
 Target boot times:
+
 - Consumer electronics: < 1 second
 - Automotive: < 2 seconds
 - Industrial: < 5 seconds
@@ -531,11 +532,13 @@ pr_info("Operation took %lld ms\n", delta);
 ## Platform-Specific Tips
 
 ARM platforms:
+
 - Skip CPU errata workarounds if not needed
 - Optimize ATAG/DTB passing
 - Use compressed DTB
 
 x86 platforms:
+
 - Disable unused legacy support
 - Skip BIOS/UEFI delays
 - Use coreboot for fast boot
@@ -674,6 +677,7 @@ Achievable targets:
 ## Common Bottlenecks
 
 Typical slow points:
+
 1. USB enumeration (100-500ms)
 1. MMC/SD initialization (200-400ms)
 1. Network DHCP (1-3s)
@@ -685,6 +689,7 @@ Typical slow points:
 ## Common Bottlenecks (cont.)
 
 Solutions:
+
 - Defer USB if not critical
 - Optimize MMC voltage switching
 - Use static IP
@@ -708,12 +713,14 @@ Solutions:
 ## Summary
 
 Boot optimization requires:
+
 - Systematic measurement
 - Understanding boot sequence
 - Hardware-specific tuning
 - Continuous profiling
 
 Key techniques:
+
 - Kernel configuration
 - Async initialization
 - Compression selection

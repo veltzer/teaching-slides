@@ -111,6 +111,7 @@ ss -p          # Show processes
 <div>
 
 **ethtool:**
+
 - Link status
 - Driver info
 - NIC settings
@@ -120,6 +121,7 @@ ss -p          # Show processes
 <div>
 
 **mii-tool:**
+
 - PHY status
 - Link modes
 - Auto-negotiation
@@ -328,6 +330,7 @@ tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 \
 <div>
 
 **Classes:**
+
 - prio
 - tbf
 - htb
@@ -338,6 +341,7 @@ tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 \
 <div>
 
 **Parameters:**
+
 - rate
 - burst
 - latency

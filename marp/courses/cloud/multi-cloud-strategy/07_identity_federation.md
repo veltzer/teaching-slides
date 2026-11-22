@@ -24,6 +24,7 @@ audience:
 ---
 
 ## Why Identity Federation Matters
+
 - Users need access to AWS, Azure, and GCP
 - Separate credentials per cloud is unsustainable
 - Security risk: credential sprawl and inconsistent policies
@@ -33,6 +34,7 @@ audience:
 ---
 
 ## Identity Providers (IdP)
+
 - Central authority for user identity
 - Examples: Okta, Azure AD (Entra ID), Google Workspace, Ping Identity
 - Supports protocols: SAML 2.0, OIDC, WS-Federation
@@ -42,6 +44,7 @@ audience:
 ---
 
 ## Single Sign-On Across Clouds
+
 - User authenticates once against the IdP
 - IdP issues tokens for each cloud provider
 - No separate passwords per cloud
@@ -51,6 +54,7 @@ audience:
 ---
 
 ## SAML 2.0 Federation
+
 - Industry standard for enterprise SSO
 - IdP (e.g., Okta) sends SAML assertion to cloud SP
 - Cloud provider trusts the IdP via metadata exchange
@@ -60,6 +64,7 @@ audience:
 ---
 
 ## OIDC Federation
+
 - Modern, token-based federation protocol
 - Preferred for programmatic and workload identity
 - IdP issues JWT tokens
@@ -69,6 +74,7 @@ audience:
 ---
 
 ## AWS IAM Identity Center
+
 - Centralized access for multiple AWS accounts
 - Integrates with external IdPs via SAML or SCIM
 - Permission sets define access per account
@@ -78,6 +84,7 @@ audience:
 ---
 
 ## Microsoft Entra ID
+
 - Microsoft identity platform (formerly Azure AD)
 - Native IdP for Azure, also federates to AWS and GCP
 - Supports SAML, OIDC, and WS-Federation
@@ -87,6 +94,7 @@ audience:
 ---
 
 ## GCP Workload Identity Federation
+
 - Allows external workloads to access GCP without service account keys
 - Supports AWS, Azure, OIDC, and SAML identity providers
 - Maps external identity to GCP IAM role
@@ -122,6 +130,7 @@ gcloud iam workload-identity-pools providers create-oidc \
 ---
 
 ## Cross-Cloud IAM Mapping
+
 - Map IdP groups to cloud-specific roles
 - Example: "CloudAdmins" group -> AWS Admin role + Azure Contributor + GCP Editor
 - Maintain mapping table in IaC (Terraform)
@@ -137,6 +146,7 @@ gcloud iam workload-identity-pools providers create-oidc \
 ---
 
 ## Workload Identity vs User Identity
+
 - User identity: humans accessing consoles and APIs
 - Workload identity: services calling other services across clouds
 - Workload identity avoids storing secrets in code
@@ -147,6 +157,7 @@ gcloud iam workload-identity-pools providers create-oidc \
 ---
 
 ## Secrets Management Across Clouds
+
 - Each cloud has a secrets manager (AWS Secrets Manager, Azure Key Vault, GCP Secret Manager)
 - Challenge: applications may need secrets from multiple clouds
 - Options: centralize in one vault or use cloud-native per provider
@@ -156,6 +167,7 @@ gcloud iam workload-identity-pools providers create-oidc \
 ---
 
 ## HashiCorp Vault for Multi-Cloud
+
 - Single secrets management plane across all clouds
 - Dynamic secrets: generates short-lived credentials on demand
 - AWS, Azure, and GCP secrets engines built in
@@ -165,6 +177,7 @@ gcloud iam workload-identity-pools providers create-oidc \
 ---
 
 ## Key Takeaways
+
 - Use a single IdP (Okta, Entra ID) as the identity source of truth
 - SAML for console access, OIDC for programmatic/workload access
 - Workload Identity Federation eliminates long-lived cross-cloud credentials

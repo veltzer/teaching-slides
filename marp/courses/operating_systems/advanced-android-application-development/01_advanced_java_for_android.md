@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Course Overview
+
 - Java 8+ features in Android
 - Lambda expressions
 - Stream API
@@ -231,6 +232,7 @@ public class Exercise {
 ### Build a Utility Library
 
 Create a utility library that implements:
+
 - Custom stream operations
 - Thread-safe data structures
 - Error handling framework

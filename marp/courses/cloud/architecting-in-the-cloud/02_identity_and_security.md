@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Security as a Foundation
+
 - Security is not an afterthought
 - Build security into architecture from day one
 - Shared responsibility model
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Identity is the New Perimeter
+
 - Traditional: castle-and-moat (firewall around everything)
 - Cloud: identity-based access control
 - Every API call is authenticated and authorized
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## Corporate Identity Mapping
+
 - Map corporate identities to cloud identities
 - Single Sign-On (SSO) via SAML or OIDC
 - AWS IAM Identity Center, Azure AD, Google Workspace
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## Federation
+
 - Connect existing identity provider to cloud
 - Active Directory, Okta, Auth0, Ping Identity
 - Users don't need separate cloud credentials
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## Service Accounts and Roles
+
 - Applications need identity too
 - Use cloud-native roles (IAM Roles, Managed Identities)
 - No hardcoded credentials in code
@@ -85,6 +90,7 @@ audience:
 ---
 
 ## Least Privilege at Scale
+
 - Start with no permissions
 - Add only what is needed
 - Use policy conditions for fine-grained control
@@ -94,6 +100,7 @@ audience:
 ---
 
 ## Multi-Account Strategy
+
 - Separate accounts for different purposes
 - Production, staging, development, security, logging
 - Blast radius containment
@@ -103,6 +110,7 @@ audience:
 ---
 
 ## Account Structure Example
+
 1. Root/Management account (billing, organization)
 1. Security account (CloudTrail, GuardDuty, SIEM)
 1. Shared Services account (CI/CD, DNS, artifacts)
@@ -118,6 +126,7 @@ audience:
 ---
 
 ## Creating VPN with the Cloud
+
 - Site-to-site VPN: connect on-premises to cloud
 - Encrypted tunnel over public internet
 - IPSec protocols
@@ -127,6 +136,7 @@ audience:
 ---
 
 ## Dedicated Connections
+
 - AWS Direct Connect, Azure ExpressRoute, GCP Interconnect
 - Private, dedicated network link to cloud
 - Lower latency, consistent performance
@@ -136,6 +146,7 @@ audience:
 ---
 
 ## When to Use VPN vs Dedicated Connect
+
 - VPN: lower cost, quick setup, moderate bandwidth
 - Dedicated: high bandwidth, low latency, consistency
 - Many organizations start with VPN, add dedicated later
@@ -151,6 +162,7 @@ audience:
 ---
 
 ## Working with Multiple Accounts
+
 - Cross-account roles for access
 - Centralized logging account
 - Shared VPC / Transit Gateway for networking
@@ -160,6 +172,7 @@ audience:
 ---
 
 ## Network Security in the Cloud
+
 - VPC isolation between workloads
 - Security Groups and Network ACLs
 - Private subnets for sensitive resources
@@ -169,6 +182,7 @@ audience:
 ---
 
 ## Encryption Everywhere
+
 - Encrypt data at rest (KMS-managed keys)
 - Encrypt data in transit (TLS everywhere)
 - Encrypt data in use (confidential computing emerging)
@@ -178,6 +192,7 @@ audience:
 ---
 
 ## Secrets Management
+
 - Never store secrets in code or environment variables
 - Use Secrets Manager, Parameter Store, Key Vault
 - Automatic rotation of database credentials
@@ -206,6 +221,7 @@ password = resp['SecretString']
 ---
 
 ## Security Monitoring
+
 - CloudTrail / Activity Log for API auditing
 - GuardDuty / Defender for threat detection
 - Security Hub / Sentinel for centralized security posture
@@ -215,6 +231,7 @@ password = resp['SecretString']
 ---
 
 ## Zero Trust Architecture
+
 - Never trust, always verify
 - Verify every request regardless of network location
 - Micro-segmentation: fine-grained access control
@@ -224,6 +241,7 @@ password = resp['SecretString']
 ---
 
 ## WAF and DDoS Protection
+
 - Web Application Firewall: filter malicious HTTP traffic
 - AWS WAF, Azure WAF, Cloud Armor
 - DDoS protection: AWS Shield, Azure DDoS Protection
@@ -233,6 +251,7 @@ password = resp['SecretString']
 ---
 
 ## Security Automation
+
 - Automated compliance scanning (Config, Policy)
 - Auto-remediation of violations
 - Infrastructure as Code for security configs
@@ -242,6 +261,7 @@ password = resp['SecretString']
 ---
 
 ## Compliance in Cloud Architecture
+
 - Choose Regions based on data residency requirements
 - Use compliance-certified services
 - Implement audit logging from day one
@@ -251,6 +271,7 @@ password = resp['SecretString']
 ---
 
 ## API Security
+
 - Authenticate all API calls
 - Rate limiting and throttling
 - API keys for external consumers
@@ -260,6 +281,7 @@ password = resp['SecretString']
 ---
 
 ## Data Classification
+
 - Classify data by sensitivity level
 - Public, internal, confidential, restricted
 - Apply controls based on classification
@@ -269,6 +291,7 @@ password = resp['SecretString']
 ---
 
 ## Incident Response Planning
+
 - Prepare before incidents occur
 - Runbooks for common scenarios
 - Automated evidence collection (snapshots, logs)
@@ -278,6 +301,7 @@ password = resp['SecretString']
 ---
 
 ## Security Architecture Best Practices
+
 - Identity-based access everywhere
 - Encrypt everything by default
 - Least privilege for all entities

@@ -14,6 +14,7 @@ audience:
 # Introduction to Cloud Computing
 
 ## What is Cloud Computing?
+
 - Computing services over internet
 - On-demand resources
 - Pay-as-you-go model
@@ -29,6 +30,7 @@ audience:
 ---
 
 ## Key Characteristics
+
 - Self-service provisioning
 - Resource pooling
 - Rapid elasticity
@@ -44,6 +46,7 @@ audience:
 ---
 
 ## Infrastructure as a Service
+
 - Virtual machines
 - Storage
 - Networks
@@ -53,6 +56,7 @@ audience:
 ---
 
 ## Platform as a Service
+
 - Development platforms
 - Middleware
 - Tools and services
@@ -62,6 +66,7 @@ audience:
 ---
 
 ## Software as a Service
+
 - Ready-to-use applications
 - Web-based access
 - Subscription model
@@ -71,6 +76,7 @@ audience:
 ---
 
 ## Service Model Comparison
+
 1. Management scope
 1. Control level
 1. Flexibility
@@ -80,6 +86,7 @@ audience:
 ---
 
 ## Cloud Deployment Models
+
 - Public cloud
 - Private cloud
 - Hybrid cloud
@@ -89,6 +96,7 @@ audience:
 ---
 
 ## Public Cloud
+
 - Available to everyone
 - Third-party provider
 - Shared infrastructure
@@ -98,6 +106,7 @@ audience:
 ---
 
 ## Private Cloud
+
 - Single organization
 - Dedicated resources
 - Enhanced control
@@ -107,6 +116,7 @@ audience:
 ---
 
 ## Hybrid Cloud
+
 - Public + Private
 - Workload flexibility
 - Data sovereignty
@@ -116,6 +126,7 @@ audience:
 ---
 
 ## Multi-Cloud Strategy
+
 - Multiple providers
 - Service selection
 - Risk mitigation
@@ -131,6 +142,7 @@ audience:
 ---
 
 ## Cost Benefits
+
 - Operational efficiency
 - Capital expense reduction
 - Pay-per-use model
@@ -140,6 +152,7 @@ audience:
 ---
 
 ## Scalability and Elasticity
+
 - Vertical scaling
 - Horizontal scaling
 - Auto-scaling
@@ -149,6 +162,7 @@ audience:
 ---
 
 ## Agility and Innovation
+
 - Rapid deployment
 - Quick experimentation
 - Service integration
@@ -158,6 +172,7 @@ audience:
 ---
 
 ## Global Reach
+
 - Multiple regions
 - Edge locations
 - Content delivery
@@ -167,6 +182,7 @@ audience:
 ---
 
 ## Security in the Cloud
+
 - Shared responsibility
 - Advanced protection
 - Compliance standards
@@ -176,6 +192,7 @@ audience:
 ---
 
 ## Performance Considerations
+
 - Network latency
 - Resource allocation
 - Service levels
@@ -185,6 +202,7 @@ audience:
 ---
 
 ## Compliance and Governance
+
 - Data sovereignty
 - Industry standards
 - Regulatory requirements
@@ -194,6 +212,7 @@ audience:
 ---
 
 ## Cost Management
+
 - Resource tracking
 - Budget planning
 - Cost optimization
@@ -203,6 +222,7 @@ audience:
 ---
 
 ## Migration Strategies
+
 - Rehost (lift-and-shift)
 - Refactor
 - Rearchitect
@@ -218,6 +238,7 @@ audience:
 ---
 
 ## Best Practices
+
 - Design principles
 - Security measures
 - Cost optimization
@@ -227,6 +248,7 @@ audience:
 ---
 
 ## Future Trends
+
 - Edge computing
 - Serverless
 - AI/ML integration
@@ -236,6 +258,7 @@ audience:
 ---
 
 ## Industry Impact
+
 - Digital transformation
 - Business models
 - Innovation speed
@@ -245,6 +268,7 @@ audience:
 ---
 
 ## Getting Started
+
 - Assessment
 - Strategy development
 - Provider selection
@@ -254,6 +278,7 @@ audience:
 ---
 
 ## Cloud Skills
+
 - Technical expertise
 - Architecture design
 - Security knowledge

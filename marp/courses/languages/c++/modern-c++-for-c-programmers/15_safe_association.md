@@ -7,6 +7,7 @@
 Safe association ensures objects maintain valid relationships throughout their lifetimes
 
 Key challenges with raw pointers:
+
 1. **Dangling pointers** - pointing to destroyed objects
 1. **Memory leaks** - forgetting to delete allocated memory
 1. **Double deletion** - deleting the same memory twice
@@ -882,6 +883,7 @@ void goodExample() {
 Best practices for using smart pointers effectively:
 
 **Ownership Rules:**
+
 1. Use `std::unique_ptr` by default
 1. Use `std::shared_ptr` only when sharing is necessary
 1. Use `std::weak_ptr` to break cycles

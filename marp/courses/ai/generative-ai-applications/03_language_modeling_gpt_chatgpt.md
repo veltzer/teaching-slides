@@ -162,6 +162,7 @@ What GPT models are trained on:
 ## Pre-Training Data: Details
 
 **Data quality matters enormously:**
+
 - Deduplication reduces memorization
 - Filtering removes toxic/low-quality content
 - Domain mixing affects model capabilities

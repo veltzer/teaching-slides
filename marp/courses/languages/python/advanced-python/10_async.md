@@ -11,6 +11,7 @@ audience:
 # Async Python
 
 ## Overview
+
 - Understanding generators and iterators
 - Coroutines and how they work
 - Asynchronous programming concepts
@@ -1185,6 +1186,7 @@ trio.run(parent_task)
 ## Integrating Different Async Frameworks
 
 ## Working with Multiple Frameworks
+
 - Challenges in compatibility
 - Adapter patterns
 - Bridging between frameworks
@@ -1529,6 +1531,7 @@ if __name__ == "__main__":
 ## Summary
 
 ## Key Takeaways
+
 - Generators yield values and maintain state
 - Coroutines are the foundation of async Python
 - asyncio provides a standard async framework
@@ -1543,6 +1546,7 @@ if __name__ == "__main__":
 ## Resources
 
 ## Further Learning
+
 - Python asyncio documentation
 - "Python Concurrency with asyncio" by Matthew Fowler
 - Trio documentation

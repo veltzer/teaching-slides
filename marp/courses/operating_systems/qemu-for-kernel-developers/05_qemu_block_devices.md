@@ -28,6 +28,7 @@ audience:
 ---
 
 Chapter Overview
+
 - Virtual block devices in QEMU
 - Implementing and testing file system drivers
 - Using QEMU disk images
@@ -35,6 +36,7 @@ Chapter Overview
 ---
 
 Importance of Block Devices in Kernel Development
+
 - Storage subsystem testing
 - File system driver development
 - I/O scheduler optimization
@@ -50,6 +52,7 @@ QEMU Block Device Models
 ---
 
 IDE/ATA Emulation
+
 - Legacy block device support
 - Testing compatibility with older systems
 - Use cases in kernel development
@@ -57,6 +60,7 @@ IDE/ATA Emulation
 ---
 
 SCSI Device Emulation
+
 - SCSI disk and CD-ROM emulation
 - Testing SCSI drivers and functionality
 - Advanced SCSI features in QEMU
@@ -64,6 +68,7 @@ SCSI Device Emulation
 ---
 
 Virtio-blk Deep Dive
+
 - Architecture of virtio-blk
 - Performance benefits over emulated devices
 - Developing and testing virtio-blk drivers
@@ -71,6 +76,7 @@ Virtio-blk Deep Dive
 ---
 
 NVMe Emulation in QEMU
+
 - NVMe protocol support
 - Testing NVMe drivers and features
 - Performance characteristics of emulated NVMe
@@ -78,6 +84,7 @@ NVMe Emulation in QEMU
 ---
 
 Custom Block Devices
+
 - Implementing custom block device models
 - Use cases in specialized storage research
 - Extending QEMU for new storage paradigms
@@ -85,6 +92,7 @@ Custom Block Devices
 ---
 
 QEMU Disk Image Formats
+
 - Raw images
 - QCOW2 (QEMU Copy-On-Write version 2)
 - VMDK, VDI, VHD, and other formats
@@ -92,6 +100,7 @@ QEMU Disk Image Formats
 ---
 
 Working with QCOW2 Images
+
 - Creating and managing QCOW2 images
 - Snapshots and backing files
 - Performance considerations
@@ -99,6 +108,7 @@ Working with QCOW2 Images
 ---
 
 Block Device Backend Types
+
 - Files
 - Host devices
 - Network block devices (NBD)
@@ -107,6 +117,7 @@ Block Device Backend Types
 ---
 
 Configuring Block Devices in QEMU
+
 - Basic syntax: -drive option=value,option=value
 - Common options and their meanings
 - Best practices for kernel testing scenarios
@@ -122,6 +133,7 @@ QEMU Block Layer Architecture
 ---
 
 I/O Throttling and QoS
+
 - Configuring I/O limits
 - Testing I/O scheduler under constrained conditions
 - Simulating different storage performance profiles
@@ -129,6 +141,7 @@ I/O Throttling and QoS
 ---
 
 RAID Emulation in QEMU
+
 - Setting up software RAID
 - Testing RAID configurations and recovery
 - Performance analysis of RAID setups
@@ -136,6 +149,7 @@ RAID Emulation in QEMU
 ---
 
 File System Testing with QEMU
+
 - Creating file system images
 - Mounting file systems in QEMU
 - Strategies for thorough file system testing
@@ -143,6 +157,7 @@ File System Testing with QEMU
 ---
 
 Implementing New File System Drivers
+
 - Using QEMU for rapid prototyping
 - Testing edge cases and error handling
 - Performance benchmarking of new file systems
@@ -150,6 +165,7 @@ Implementing New File System Drivers
 ---
 
 Block Device Hotplugging
+
 - Dynamic addition and removal of block devices
 - Testing kernel hotplug capabilities
 - Use cases in high-availability scenarios
@@ -157,6 +173,7 @@ Block Device Hotplugging
 ---
 
 Persistent Memory Emulation
+
 - NVDIMM support in QEMU
 - Testing persistent memory drivers
 - Developing software for persistent memory systems
@@ -164,6 +181,7 @@ Persistent Memory Emulation
 ---
 
 Virtual Storage Area Networks (VSAN)
+
 - Emulating SAN environments
 - Testing multi-path I/O
 - Scenarios for distributed storage testing
@@ -171,6 +189,7 @@ Virtual Storage Area Networks (VSAN)
 ---
 
 Encryption and Security Features
+
 - Disk encryption in QEMU
 - Testing encrypted file systems
 - Secure erase and cryptographic operations
@@ -178,6 +197,7 @@ Encryption and Security Features
 ---
 
 Performance Tuning for Block Devices
+
 - Choosing the right virtual hardware
 - Optimizing host I/O subsystem
 - Profiling and benchmarking techniques
@@ -185,6 +205,7 @@ Performance Tuning for Block Devices
 ---
 
 Debugging Block Device Issues
+
 - Using QEMU tracing for block operations
 - Analyzing I/O patterns
 - Common issues and their solutions
@@ -192,6 +213,7 @@ Debugging Block Device Issues
 ---
 
 Advanced Topics: Thin Provisioning and Deduplication
+
 - Implementing thin provisioning in QEMU
 - Testing deduplication features
 - Implications for kernel storage stack
@@ -199,6 +221,7 @@ Advanced Topics: Thin Provisioning and Deduplication
 ---
 
 Block Device Passthrough
+
 - Passing host block devices to VMs
 - Use cases and limitations
 - Security considerations
@@ -206,6 +229,7 @@ Block Device Passthrough
 ---
 
 Network Block Devices (NBD)
+
 - Setting up NBD servers and clients
 - Testing network block device drivers
 - Performance considerations for network storage
@@ -213,6 +237,7 @@ Network Block Devices (NBD)
 ---
 
 Simulating Storage Failures
+
 - Injecting errors in block devices
 - Testing kernel resilience to storage failures
 - Developing robust error handling in drivers
@@ -220,6 +245,7 @@ Simulating Storage Failures
 ---
 
 Integration with User-space File Systems (FUSE)
+
 - Testing FUSE file systems with QEMU
 - Debugging user-space and kernel interactions
 - Performance analysis of FUSE implementations
@@ -227,6 +253,7 @@ Integration with User-space File Systems (FUSE)
 ---
 
 Container Storage vs. VM Storage
+
 - Comparing container and VM storage models
 - Testing storage drivers across paradigms
 - Hybrid setups for comprehensive testing
@@ -234,6 +261,7 @@ Container Storage vs. VM Storage
 ---
 
 Emerging Storage Technologies
+
 - Emulating Zoned Namespaces (ZNS) SSDs
 - Testing kernel support for new storage paradigms
 - Preparing for future storage architectures
@@ -241,6 +269,7 @@ Emerging Storage Technologies
 ---
 
 Best Practices for Storage Testing in Kernel Development
+
 - Setting up reproducible storage environments
 - Version control for disk images and configs
 - Automated storage testing strategies
@@ -248,6 +277,7 @@ Best Practices for Storage Testing in Kernel Development
 ---
 
 Future of QEMU Storage Emulation
+
 - Upcoming features and improvements
 - Trends in virtualized storage
 - Challenges in emulating next-gen storage systems

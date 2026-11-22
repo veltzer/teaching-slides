@@ -223,6 +223,7 @@ static void __exit my_module_exit(void)
 <div>
 
 **Accept:**
+
 - Continue processing
 - Normal packet flow
 - Next hook point
@@ -231,6 +232,7 @@ static void __exit my_module_exit(void)
 <div>
 
 **Drop:**
+
 - Discard packet
 - Stop processing
 - No notification

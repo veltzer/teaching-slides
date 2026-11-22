@@ -23,6 +23,7 @@ audience:
 ---
 
 ## Security in AWS
+
 - Security is the top priority
 - Built into every service
 - Shared responsibility model
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## AWS IAM Overview
+
 - Identity and Access Management
 - Controls who can do what in AWS
 - Authentication (who are you?)
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## IAM Root User
+
 - Created when you first set up AWS account
 - Full access to everything
 - Should NOT be used for daily tasks
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## Root User Best Practices
+
 - Create IAM admin user for daily work
 - Enable MFA on root account
 - Do not create access keys for root
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## IAM Users
+
 - Individual identity within AWS
 - Unique credentials (password, access keys)
 - Assigned permissions via policies
@@ -68,6 +73,7 @@ audience:
 ---
 
 ## Console vs Programmatic Access
+
 - Console: username + password + optional MFA
 - Programmatic: access key ID + secret access key
 - CLI and SDK use access keys
@@ -77,6 +83,7 @@ audience:
 ---
 
 ## IAM Groups
+
 - Collection of IAM users
 - Attach policies to groups, not individual users
 - Users inherit group permissions
@@ -86,6 +93,7 @@ audience:
 ---
 
 ## IAM Group Best Practices
+
 - Create groups by job function
 - Attach policies to groups, not users
 - Use multiple groups for overlapping responsibilities
@@ -101,6 +109,7 @@ audience:
 ---
 
 ## IAM Roles
+
 - Temporary credentials for trusted entities
 - No permanent credentials (no passwords or keys)
 - Assumed by users, services, or external identities
@@ -110,6 +119,7 @@ audience:
 ---
 
 ## When to Use Roles
+
 - EC2 instances accessing S3 or DynamoDB
 - Lambda functions calling other AWS services
 - Cross-account access
@@ -119,6 +129,7 @@ audience:
 ---
 
 ## IAM Policies Overview
+
 - JSON documents defining permissions
 - Attached to users, groups, or roles
 - Evaluated together to determine access
@@ -128,6 +139,7 @@ audience:
 ---
 
 ## Policy Structure
+
 - Version: policy language version
 - Statement: one or more permission blocks
 - Effect: Allow or Deny
@@ -153,6 +165,7 @@ audience:
 ---
 
 ## Types of Policies
+
 - AWS Managed: pre-built by AWS (e.g., AmazonS3ReadOnlyAccess)
 - Customer Managed: you create and maintain
 - Inline: embedded directly in a user/group/role
@@ -162,6 +175,7 @@ audience:
 ---
 
 ## Policy Evaluation Logic
+
 1. All requests start as denied
 1. Evaluate all applicable policies
 1. Any explicit Deny -> access denied
@@ -177,6 +191,7 @@ audience:
 ---
 
 ## Least Privilege Principle
+
 - Grant only the permissions needed
 - Start with minimal access
 - Add permissions as needed
@@ -186,6 +201,7 @@ audience:
 ---
 
 ## Multi-Factor Authentication
+
 - Something you know (password)
 - Something you have (MFA device)
 - Virtual MFA (Google Authenticator, Authy)
@@ -195,6 +211,7 @@ audience:
 ---
 
 ## IAM Access Keys
+
 - Pair: Access Key ID + Secret Access Key
 - Used for CLI and SDK access
 - Never share or commit to code
@@ -204,6 +221,7 @@ audience:
 ---
 
 ## IAM Password Policy
+
 - Set minimum password length
 - Require specific character types
 - Enable password expiration
@@ -213,6 +231,7 @@ audience:
 ---
 
 ## AWS Organizations
+
 - Manage multiple AWS accounts centrally
 - Consolidated billing across accounts
 - Service Control Policies (SCPs)
@@ -228,6 +247,7 @@ audience:
 ---
 
 ## Service Control Policies
+
 - Guardrails for accounts in an Organization
 - Restrict which services and actions are allowed
 - Applied to OUs or individual accounts
@@ -261,6 +281,7 @@ audience:
 ---
 
 ## AWS IAM Identity Center
+
 - Successor to AWS SSO
 - Single sign-on for multiple AWS accounts
 - Integrate with corporate directory (Active Directory)
@@ -270,6 +291,7 @@ audience:
 ---
 
 ## Security Best Practices Summary
+
 - Enable MFA everywhere
 - Use roles instead of access keys
 - Apply least privilege

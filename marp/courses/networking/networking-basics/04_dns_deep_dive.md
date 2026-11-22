@@ -48,6 +48,7 @@ DNS is organized as an inverted tree structure with the root at the top.
 ## The DNS Hierarchy: Details
 
 Each level is called a "zone" and is managed by different organizations:
+
 - **Root zone**: managed by ICANN, served by 13 root server clusters (a.root-servers.net through m.root-servers.net)
 - **TLD zone**: managed by registries (.com by Verisign, .org by PIR, ccTLDs by country organizations)
 - **Second-level domains**: managed by domain owners (you!)
@@ -178,6 +179,7 @@ example.com.        3600    IN    A       93.184.216.34
 ```
 
 **Important CNAME rules:**
+
 - A CNAME cannot coexist with other record types for the same name
 - A CNAME cannot be at the zone apex (e.g., example.com itself)
 - Some providers offer "ALIAS" or "ANAME" as a workaround for apex CNAMEs
@@ -328,6 +330,7 @@ dns.google.
 ```
 
 **Why reverse DNS matters:**
+
 - Email servers check PTR records to verify sending servers (anti-spam)
 - Logging and monitoring tools resolve IPs to names for readability
 - Some services reject connections from IPs without valid PTR records
@@ -361,6 +364,7 @@ _sip._tcp.example.com. 3600 IN SRV 20 0  5060 sip3.example.com.
 | Target | Hostname providing the service |
 
 **Common SRV uses:**
+
 - SIP (VoIP): `_sip._tcp`
 - XMPP (chat): `_xmpp-client._tcp`
 - LDAP: `_ldap._tcp`
@@ -452,6 +456,7 @@ example.com.        3600    IN    A    93.184.216.34
 ## DNS Caching and TTL (cont.)
 
 **Caching layers:**
+
 1. Browser cache (Chrome: `chrome://net-internals/#dns`)
 1. OS cache (`systemd-resolved`, `nscd`, Windows DNS Client)
 1. Recursive resolver cache (ISP, 8.8.8.8, 1.1.1.1)
@@ -683,6 +688,7 @@ DNSSEC (DNS Security Extensions) adds cryptographic signatures to DNS records to
 ## DNSSEC: Securing DNS: Example
 
 **DNSSEC record types:**
+
 - **RRSIG**: Contains the signature for a record set
 - **DNSKEY**: Contains the public key used to verify signatures
 - **DS**: Delegation Signer -- links parent zone to child zone keys
@@ -1028,6 +1034,7 @@ $ cat /etc/hosts
 ```
 
 **Use cases:**
+
 - Local development (map custom domains to localhost)
 - Testing before DNS changes go live
 - Simple ad/tracker blocking

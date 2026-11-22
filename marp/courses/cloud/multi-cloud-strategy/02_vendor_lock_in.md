@@ -24,6 +24,7 @@ audience:
 ---
 
 ## What Is Vendor Lock-In?
+
 - Dependency on a provider that makes switching costly
 - Not just technical — also contractual and operational
 - Exists on a spectrum from minimal to total
@@ -33,6 +34,7 @@ audience:
 ---
 
 ## The Lock-In Spectrum
+
 - Low lock-in: VMs, block storage, standard containers
 - Medium lock-in: managed databases, load balancers
 - High lock-in: proprietary serverless, AI/ML services
@@ -44,6 +46,7 @@ audience:
 ---
 
 ## Lock-In Vectors: Compute
+
 - VM images and machine types are mostly portable
 - Auto-scaling configurations are provider-specific
 - Placement groups and dedicated hosts differ
@@ -53,6 +56,7 @@ audience:
 ---
 
 ## Lock-In Vectors: Storage
+
 - Object storage APIs differ (S3, Blob, Cloud Storage)
 - S3 API is a de facto standard — Azure and GCP partially support it
 - Managed file systems (EFS, Azure Files, Filestore) differ
@@ -62,6 +66,7 @@ audience:
 ---
 
 ## Lock-In Vectors: Databases
+
 - Managed relational databases (RDS, Cloud SQL, Azure SQL) use standard engines
 - Proprietary databases (DynamoDB, Cosmos DB, Bigtable) are strong lock-in
 - Aurora, Spanner: enhanced but proprietary
@@ -71,6 +76,7 @@ audience:
 ---
 
 ## Lock-In Vectors: Serverless
+
 - AWS Lambda, Azure Functions, Google Cloud Functions
 - Different runtime APIs and deployment models
 - Event sources and triggers are provider-specific
@@ -80,6 +86,7 @@ audience:
 ---
 
 ## Lock-In Vectors: Identity and Access
+
 - AWS IAM, Azure AD/Entra ID, Google Cloud IAM
 - Policy languages and permission models differ greatly
 - Service accounts and roles are not portable
@@ -89,6 +96,7 @@ audience:
 ---
 
 ## Lock-In Vectors: Networking
+
 - VPC concepts are similar but implementations differ
 - Security groups vs NSGs vs firewall rules
 - Load balancer features and configuration vary
@@ -98,6 +106,7 @@ audience:
 ---
 
 ## Data Gravity: Details
+
 - Data attracts compute — not the other way around
 - Moving petabytes between clouds takes weeks or months
 - Egress costs make frequent data movement expensive
@@ -113,6 +122,7 @@ audience:
 ---
 
 ## Calculating Exit Costs
+
 - Data egress fees (typically $0.08-0.12/GB)
 - Staff time for migration engineering
 - Application refactoring effort
@@ -149,6 +159,7 @@ resource "aws_db_instance" "orders" {
 ---
 
 ## Evaluating Portability: A Framework
+
 1. List all cloud services consumed
 1. Rate each on the lock-in spectrum (low/medium/high)
 1. Estimate migration effort for each service
@@ -165,6 +176,7 @@ resource "aws_db_instance" "orders" {
 ---
 
 ## Managed Services vs Self-Managed Open Source
+
 - Managed: lower ops burden, higher lock-in
 - Self-managed: higher ops burden, higher portability
 - Examples: RDS PostgreSQL vs self-hosted PostgreSQL on VMs
@@ -174,6 +186,7 @@ resource "aws_db_instance" "orders" {
 ---
 
 ## Open-Source Alternatives to Proprietary Services
+
 - DynamoDB alternative: CockroachDB, ScyllaDB, Cassandra
 - Lambda alternative: Knative, OpenFaaS
 - SQS/SNS alternative: RabbitMQ, Kafka
@@ -183,6 +196,7 @@ resource "aws_db_instance" "orders" {
 ---
 
 ## Contractual Lock-In
+
 - Enterprise agreements with spending commitments
 - Reserved instances and savings plans
 - Credits and promotional pricing
@@ -192,6 +206,7 @@ resource "aws_db_instance" "orders" {
 ---
 
 ## Building a Lock-In Mitigation Strategy
+
 - Accept some lock-in where the value is clear
 - Use open standards and open-source where practical
 - Maintain abstraction layers for critical services

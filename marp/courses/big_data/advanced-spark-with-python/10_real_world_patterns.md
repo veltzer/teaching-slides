@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Chapter Overview
+
 * ETL pipeline design patterns
 * Slowly Changing Dimensions (SCD Type 1/2/3)
 * Data quality checks and validation
@@ -28,6 +29,7 @@ audience:
 ---
 
 ## Learning Objectives
+
 * Design robust ETL pipelines with clear separation of concerns
 * Implement SCD Type 1, 2, and 3 with Delta Lake MERGE
 * Build data quality checks using Great Expectations and custom rules
@@ -1279,11 +1281,13 @@ if __name__ == "__main__":
 ## Summary: Real-World Patterns
 
 **Pipeline Design:**
+
 * Use Bronze/Silver/Gold layered architecture
 * Separate extract, transform, load concerns
 * Make every step idempotent (safe to re-run)
 
 **Data Management:**
+
 * SCD Type 1 for simple overwrites
 * SCD Type 2 for full history tracking
 * Use Delta Lake `MERGE` for all upsert patterns
@@ -1294,6 +1298,7 @@ if __name__ == "__main__":
 ## Summary: Real-World Patterns (cont.)
 
 **Data Quality:**
+
 * Validate at each layer boundary
 * Check nulls, ranges, uniqueness, referential
 * Fail fast on critical violations

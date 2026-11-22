@@ -31,12 +31,14 @@ audience:
 Git hooks are scripts that run automatically at specific points in Git operations:
 
 **Core concepts:**
+
 - **Event-driven:** Triggered by Git operations
 - **Customizable:** Write scripts in any language
 - **Automatic:** Run without manual intervention
 - **Enforceable:** Can prevent operations from completing
 
 **Hook locations:**
+
 - **Client-side:** Run on developer's machine
 - **Server-side:** Run on Git server (GitHub, GitLab, etc.)
 - **Local only:** Not transferred with clone/push
@@ -46,6 +48,7 @@ Git hooks are scripts that run automatically at specific points in Git operation
 ## What Are Git Hooks? (cont.)
 
 **Common use cases:**
+
 - Code quality enforcement
 - Automated testing
 - Message formatting
@@ -114,6 +117,7 @@ exit 0      # Allow commit to proceed
 Understanding hook reliability and limitations:
 
 **What hooks guarantee:**
+
 - Execute at specific Git operation points
 - Can prevent operations from completing (pre-hooks)
 - Receive relevant information as parameters
@@ -124,6 +128,7 @@ Understanding hook reliability and limitations:
 ## What Guarantees Do You Get? (cont.)
 
 **What hooks DON'T guarantee:**
+
 - **Not shared:** Hooks are local, not cloned/pushed
 - **Can be bypassed:** `git commit --no-verify`
 - **No execution order:** Multiple hooks run in filename order
@@ -175,6 +180,7 @@ echo "Pre-commit checks passed!"
 ```
 
 **Pre-commit use cases:**
+
 - Code linting and formatting
 - Running unit tests
 - Security scans
@@ -834,6 +840,7 @@ fi
 **Scenario:** Implement a complete Git hook system for a development team with quality gates, automation, and security checks.
 
 **Setup tasks:**
+
 1. **Client-side hook development:**
    - Create pre-commit hooks for code quality
    - Implement commit message validation
@@ -858,6 +865,7 @@ fi
 ## Lab Exercise: Comprehensive Hook System (cont.) (cont.)
 
 **Advanced tasks:**
+
 1. **Integration development:**
    - Connect hooks with CI/CD systems
    - Implement performance optimizations

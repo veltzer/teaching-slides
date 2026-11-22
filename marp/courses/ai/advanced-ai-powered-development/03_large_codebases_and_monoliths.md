@@ -18,6 +18,7 @@ audience:
 # Working with Large Codebases and Monoliths
 
 ## Overview
+
 - Challenges AI faces in large, complex codebases
 - Strategies for effective AI use in monoliths
 - Code navigation and exploration with AI agents
@@ -94,6 +95,7 @@ Mitigations:
 ## Challenges of AI in Large Codebases
 
 ## Cost and Performance: Token Budgeting for Large Repos
+
 - Every token sent to the model has a dollar cost
 - Large files and verbose outputs multiply expenses quickly
 - Cache prompt prefixes when making repeated queries on the same module
@@ -279,6 +281,7 @@ Navigation workflow:
 ## Code Navigation with AI Agents
 
 ## Understanding Call Graphs and Data Flow
+
 - Ask the AI to trace a function from entry point to storage
 - Use static analysis tools to generate call graphs, then feed them in
 - Map the lifecycle of a request across service boundaries
@@ -507,6 +510,7 @@ Example output:
 ## AI-Powered Code Review in Monoliths
 
 ## Reviewing Changes That Span Multiple Modules
+
 - Monolith PRs often touch 10+ files across different domains
 - AI can map each changed file to its module and flag cross-cutting risk
 - Ask the AI to verify that all call sites are updated consistently
@@ -623,6 +627,7 @@ during the transition period.
 ## Hands-On Exercise
 
 ## Exploring an Unfamiliar Monolith
+
 - Clone the provided sample monolith repository
 - Use AI to build a mental map without reading any documentation
 - Identify module boundaries, entry points, and shared state
@@ -650,6 +655,7 @@ Debrief questions:
 ## Key Takeaways
 
 ## Working Effectively with AI in Large Codebases
+
 - AI is powerful but context-limited; your job is to be the guide
 - Invest in `CLAUDE.md`, project maps, and structured documentation
 - Feed context incrementally: interfaces first, then implementations

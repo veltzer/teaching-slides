@@ -109,6 +109,7 @@ BITPOS key bit [start] [end] # Find first set/unset bit
 ```
 
 Use cases:
+
 - User presence tracking (online/offline)
 - Feature flags
 - Real-time analytics
@@ -417,6 +418,7 @@ HSCAN key cursor [MATCH pattern] [COUNT count] # Scan through fields
 ## Streams Introduction
 
 Streams (added in Redis 5.0):
+
 - Append-only log data structures
 - Similar to Kafka/messaging systems
 - Support consumer groups
@@ -435,6 +437,7 @@ XLEN key                                 # Get stream length
 ## HyperLogLog Introduction
 
 HyperLogLog:
+
 - Probabilistic data structure
 - Estimates cardinality (unique elements)
 - Very memory efficient (12kB max)
@@ -452,6 +455,7 @@ PFMERGE destkey sourcekey [sourcekey ...] # Merge HyperLogLogs
 ## HyperLogLog Introduction (cont.)
 
 Use cases:
+
 - Unique visitors
 - Metrics on large datasets
 - When approximate count is acceptable
@@ -461,6 +465,7 @@ Use cases:
 ## Geospatial Data Introduction
 
 Geospatial commands:
+
 - Store and query points on Earth
 - Implemented using sorted sets
 
@@ -477,6 +482,7 @@ GEOSEARCH key [FROMMEMBER member | FROMLONLAT longitude latitude] [BYRADIUS radi
 ## Bitmaps Introduction: Example
 
 Bitmaps (implemented using strings):
+
 - String operations treating strings as bit arrays
 - Very memory efficient
 Basic operations:
@@ -550,6 +556,7 @@ Different counter implementations:
 1. **Atomic Counter**: `INCR counter:global`
 
 Counters can be:
+
 - Global vs. scoped
 - Persistent vs. temporary
 - Simple vs. time-windowed

@@ -83,6 +83,7 @@ kubectl apply --server-side \
 ```
 
 Benefits:
+
 - Better conflict detection
 - Field ownership tracking
 - No annotation size limits

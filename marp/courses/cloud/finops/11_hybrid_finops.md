@@ -18,6 +18,7 @@ audience:
 ---
 
 ## The Hybrid Reality
+
 - Most enterprises run both cloud and on-prem
 - Pure-cloud and pure-on-prem are the exceptions
 - Cost discipline must span both
@@ -27,6 +28,7 @@ audience:
 ---
 
 ## Why Workloads Stay On-Prem
+
 - Regulatory and data sovereignty requirements
 - Latency-sensitive applications (factory floor, trading)
 - Specialized hardware (mainframes, niche accelerators)
@@ -36,6 +38,7 @@ audience:
 ---
 
 ## Why Workloads Move to Cloud
+
 - Variable or bursty demand
 - Geographic reach without building datacenters
 - Faster time to market
@@ -45,6 +48,7 @@ audience:
 ---
 
 ## Comparing On-Prem vs Cloud TCO
+
 - Use the same unit (cost per vCPU-hour, per GB-month)
 - Include all costs on both sides
 - Account for cloud commitments and on-prem depreciation
@@ -60,6 +64,7 @@ audience:
 ---
 
 ## When On-Prem Wins
+
 - Steady-state workloads at high utilization
 - Already-purchased hardware with remaining life
 - Heavy data egress (cloud egress fees are punishing)
@@ -69,6 +74,7 @@ audience:
 ---
 
 ## When Cloud Wins
+
 - Bursty or unpredictable workloads
 - Workloads needing global reach
 - Short-lived projects and experiments
@@ -78,6 +84,7 @@ audience:
 ---
 
 ## The 70/20/10 Rule
+
 - ~70% of stable production: on-prem or reserved cloud
 - ~20% variable load: cloud auto-scaling
 - ~10% bursty/experimental: cloud spot or serverless
@@ -87,6 +94,7 @@ audience:
 ---
 
 ## Workload Placement Decisions
+
 - Start with workload requirements (latency, scale, compliance)
 - Calculate cost in each environment
 - Factor in migration cost and risk
@@ -102,6 +110,7 @@ audience:
 ---
 
 ## Avoiding the Worst of Both Worlds
+
 - "Lift and shift" without optimizing: pay cloud prices for on-prem patterns
 - Cloud-native rewrite for steady workloads: pay rewrite cost for no benefit
 - Spreading thin across both: doubled operational overhead
@@ -110,6 +119,7 @@ audience:
 ---
 
 ## Data Gravity
+
 - Where data lives, compute follows
 - Moving petabytes between cloud and on-prem is expensive
 - Egress fees are the silent killer of hybrid
@@ -119,6 +129,7 @@ audience:
 ---
 
 ## Egress Cost Awareness
+
 - AWS egress to internet: $0.09/GB (first 10TB)
 - Azure egress to internet: $0.087/GB
 - GCP egress to internet: $0.08-0.12/GB
@@ -130,6 +141,7 @@ audience:
 ---
 
 ## Hybrid Connectivity Costs
+
 - AWS Direct Connect: $0.30/hour port + data transfer
 - Azure ExpressRoute: similar tiered pricing
 - GCP Cloud Interconnect: per-port and per-VLAN
@@ -139,6 +151,7 @@ audience:
 ---
 
 ## Unified Cost Visibility
+
 - Cloud: native tools (Cost Explorer, Cost Management)
 - On-prem: home-built or vendor metering
 - Combine in a single dashboard
@@ -148,6 +161,7 @@ audience:
 ---
 
 ## Hybrid Tagging Strategy
+
 - Use the same tag schema across cloud and on-prem
 - Team, Environment, CostCenter, Application
 - Enforce in IaC for both VMware and Terraform
@@ -163,6 +177,7 @@ audience:
 ---
 
 ## Governance Across Environments
+
 - Same approval workflows for cloud and on-prem
 - Same budget and alert structures
 - Same showback or chargeback model
@@ -172,6 +187,7 @@ audience:
 ---
 
 ## Migration Cost Planning
+
 - Migration is not free: tooling, labor, downtime
 - Plan workload-by-workload, not all-at-once
 - Some workloads should never move
@@ -181,6 +197,7 @@ audience:
 ---
 
 ## Repatriation: Moving Back to On-Prem
+
 - Some workloads cost less on-prem at scale
 - Common for steady, high-volume databases
 - Storage-heavy workloads with low elasticity
@@ -190,6 +207,7 @@ audience:
 ---
 
 ## Hybrid FinOps Maturity
+
 - Crawl: separate tracking, separate teams
 - Walk: unified tagging, joint reporting
 - Run: workload placement decisions are data-driven
@@ -199,6 +217,7 @@ audience:
 ---
 
 ## Hybrid FinOps Anti-Patterns
+
 - Treating cloud as "someone else's problem"
 - Treating on-prem as "free" because it's already paid for
 - Different cost languages for different teams
@@ -208,6 +227,7 @@ audience:
 ---
 
 ## Getting Started with Hybrid FinOps
+
 1. Inventory all workloads across cloud and on-prem
 1. Build a unified tagging schema
 1. Establish unit costs for each environment

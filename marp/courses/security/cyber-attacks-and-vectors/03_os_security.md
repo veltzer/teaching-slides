@@ -179,6 +179,7 @@ The Center for Internet Security provides hardening baselines:
 ## CIS Benchmarks: Example
 
 Tools for automated compliance checking:
+
 - **OpenSCAP**: Open-source compliance scanner
 - **Lynis**: Security auditing tool for Unix/Linux
 - **InSpec**: Infrastructure testing framework

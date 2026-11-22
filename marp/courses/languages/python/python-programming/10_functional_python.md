@@ -13,6 +13,7 @@ audience:
 ---
 
 ## What is Functional Programming?
+
 - Programming paradigm that treats computation as evaluation of functions
 - Key principles:
     - First-class functions
@@ -24,6 +25,7 @@ audience:
 ---
 
 ## Iterables
+
 - An iterable is any object you can loop over
 - Examples: `list`, `tuple`, `str`, `dict`, `set`, `range`, `file`
 
@@ -39,6 +41,7 @@ for x in range(5): pass
 ---
 
 ## The Iterator Protocol
+
 - An **iterable** has an `__iter__` method that returns an **iterator**
 - An **iterator** has a `__next__` method that returns values one at a time
 - Raises `StopIteration` when exhausted
@@ -98,6 +101,7 @@ for n in Countdown(5):
 ---
 
 ## Iterators are Lazy
+
 - Iterators produce values on demand
 - They do not store all values in memory
 - Once consumed, they are exhausted
@@ -119,6 +123,7 @@ for n in numbers:
 ---
 
 ## Generators - Introduction
+
 - A simpler way to create iterators
 - Use `yield` instead of `return`
 - Function state is preserved between calls
@@ -212,6 +217,7 @@ print(list(flatten(data)))
 ---
 
 ## Generator Expressions
+
 - Like list comprehensions but lazy
 - Use parentheses instead of square brackets
 
@@ -340,6 +346,7 @@ print(roots)  # [4.0, 5.0]
 ---
 
 ## When NOT to Use Comprehensions
+
 - When the logic is complex (use a loop instead)
 - When you do not need the result (use a loop for side effects)
 - When readability suffers
@@ -693,6 +700,7 @@ print(result)  # [1, 4, 9, 16, 25]
 ---
 
 ## Pure Functions
+
 - Same input always produces same output
 - No side effects (no modifying external state)
 
@@ -738,6 +746,7 @@ class Config:
 ---
 
 ## Summary
+
 - Iterators produce values lazily using `__next__`
 - Generators simplify iterator creation with `yield`
 - Comprehensions create lists, dicts, and sets concisely

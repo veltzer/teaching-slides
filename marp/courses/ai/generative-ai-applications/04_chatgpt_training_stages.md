@@ -511,6 +511,7 @@ safety_categories = {
 ## Summary: Foundations of Generative AI
 
 **What we covered:**
+
 - The landscape and history of generative AI
 - Transformer architecture and self-attention
 - `GPT` model family and evolution

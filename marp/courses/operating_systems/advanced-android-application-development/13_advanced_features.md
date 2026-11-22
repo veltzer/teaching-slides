@@ -297,6 +297,7 @@ public class RichNotificationManager {
 ### Advanced Features Implementation
 
 Create an application that:
+
 1. Implements ML Kit features
 1. Integrates AR functionality
 1. Sets up push notifications

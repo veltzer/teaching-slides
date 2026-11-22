@@ -13,6 +13,7 @@ audience:
 ---
 
 ## Variable Assignment
+
 - Variables are created by assignment
 - No declaration needed
 - Variable names: letters, digits, underscores (cannot start with digit)
@@ -61,6 +62,7 @@ x **= 2  # x = x ** 2
 ---
 
 ## The Walrus Operator `:=` (Python 3.8+)
+
 - Assignment expression: assigns and returns a value
 
 ```python
@@ -290,6 +292,7 @@ for i in reversed(range(5)):
 ---
 
 ## `range()` is Lazy
+
 - `range()` does not create a list in memory
 - It generates numbers on demand
 
@@ -342,6 +345,7 @@ for i in range(1, 4):
 ---
 
 ## The `break` Statement
+
 - Exits the innermost loop immediately
 
 ```python
@@ -362,6 +366,7 @@ for n in numbers:
 ---
 
 ## The `continue` Statement
+
 - Skips the rest of the current iteration
 
 ```python
@@ -381,6 +386,7 @@ for i in range(10):
 ---
 
 ## The `else` Clause on Loops
+
 - Executes when the loop completes without `break`
 
 ```python
@@ -398,6 +404,7 @@ else:
 ---
 
 ## The `pass` Statement
+
 - Does nothing (placeholder)
 
 ```python
@@ -610,6 +617,7 @@ for n in sorted(numbers, reverse=True):
 ---
 
 ## The `del` Statement
+
 - Deletes variables, list items, dict keys
 
 ```python
@@ -649,6 +657,7 @@ assert age > 0, "Age must be positive"
 ---
 
 ## Summary
+
 - Assignment creates variables; no declaration needed
 - `if`/`elif`/`else` for conditional branching
 - `while` for condition-based loops

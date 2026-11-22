@@ -11,6 +11,7 @@ audience:
 # Functional Python
 
 ## Overview
+
 - What is functional programming?
 - Python's functional features
 - Higher-order functions
@@ -1553,6 +1554,7 @@ for user_id, stats in session_stats.items():
 ## Summary
 
 ## Key Takeaways
+
 - Python has strong support for functional programming
 - Functions are first-class objects
 - Higher-order functions enable powerful abstractions
@@ -1566,6 +1568,7 @@ for user_id, stats in session_stats.items():
 ## Further Reading
 
 ## Resources for Functional Python
+
 - "Functional Programming in Python" by David Mertz
 - "Python Cookbook" by David Beazley and Brian K. Jones
 - "Fluent Python" by Luciano Ramalho

@@ -19,12 +19,14 @@ audience:
 ## What is BitBake?
 
 Generic task execution engine:
+
 - Processes metadata
 - Manages dependencies
 - Executes tasks in parallel
 - Handles caching
 
 Originally from OpenEmbedded:
+
 - Inspired by Portage (Gentoo)
 - Python-based implementation
 - Domain-specific language
@@ -244,12 +246,14 @@ example_do_compile() {
 ## Common Classes
 
 Build systems:
+
 - `autotools` - ./configure && make
 - `cmake` - CMake projects
 - `meson` - Meson build
 - `setuptools3` - Python packages
 
 Packaging:
+
 - `package` - Package splitting
 - `package_rpm/deb/ipk` - Package formats
 - `packagegroup` - Package collections
@@ -259,6 +263,7 @@ Packaging:
 ## Common Classes (cont.)
 
 Utilities:
+
 - `pkgconfig` - pkg-config support
 - `gettext` - Internationalization
 - `update-rc.d` - Init scripts
@@ -658,6 +663,7 @@ BBMASK += "|.*_git.bb"
 ## Summary
 
 BitBake mastery requires understanding:
+
 - Variable expansion and overrides
 - Task system and dependencies
 - Class inheritance
@@ -670,6 +676,7 @@ BitBake mastery requires understanding:
 ## Summary (cont.)
 
 Key concepts:
+
 - Everything is metadata
 - Tasks execute in dependency order
 - Hashing enables caching

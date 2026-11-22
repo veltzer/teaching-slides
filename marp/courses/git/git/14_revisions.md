@@ -31,6 +31,7 @@ audience:
 Git revisions are ways to specify commits, trees, and other objects:
 
 **Core concept:**
+
 - Revisions are expressions that resolve to Git objects
 - Used throughout Git commands to specify what to operate on
 - Flexible syntax allows many ways to reference the same object
@@ -41,6 +42,7 @@ Git revisions are ways to specify commits, trees, and other objects:
 ## What Are Git Revisions? (cont.)
 
 **Common revision types:**
+
 - **SHA hashes:** Direct object references
 - **Branch names:** References to commit objects
 - **Tag names:** References to commits or other objects
@@ -63,11 +65,13 @@ git show main@{yesterday}     # Date-based reference
 Understanding what different revision expressions refer to:
 
 **`<object>`:**
+
 - Any Git object (blob, tree, commit, tag)
 - Can be referenced by SHA hash
 - Most general object reference
 
 **`<commit>`:**
+
 - Specifically refers to commit objects
 - Has author, committer, message, tree pointer
 - Most commonly used in Git operations
@@ -77,11 +81,13 @@ Understanding what different revision expressions refer to:
 ## Object Types in Git (cont.)
 
 **`<tree>`:**
+
 - Directory snapshots
 - Contains file and subdirectory references
 - Represents project state at specific time
 
 **`<blob>`:**
+
 - File contents
 - Raw data without filename or metadata
 - Content-addressable by hash
@@ -106,6 +112,7 @@ git show -- -feature-branch
 ```
 
 **How branches work as revisions:**
+
 - Branch name resolves to commit SHA
 - Always points to latest commit on branch
 - Updates when new commits added
@@ -136,6 +143,7 @@ git show --abbrev-commit a1b2c3d4e5f6789012345678901234567890abcd
 ```
 
 **SHA hash characteristics:**
+
 - Globally unique identifiers
 - Can be abbreviated if unambiguous
 - Git auto-detects minimum length needed
@@ -211,6 +219,7 @@ git show v1.0.0~1         # 1 commit before tag v1.0.0
 ```
 
 **Tilde behavior:**
+
 - Always follows first parent
 - Linear traversal through history
 - Ignores merge commit complexity
@@ -237,6 +246,7 @@ git show HEAD^2~3          # 3rd ancestor of 2nd parent
 ```
 
 **Caret vs Tilde:**
+
 - `^` selects which parent
 - `~` selects how many generations back
 - Important for merge commits with multiple parents
@@ -254,11 +264,13 @@ git show HEAD^2~3          # 3rd ancestor of 2nd parent
 Understanding what different revisions can represent:
 
 **Commit-ish objects:**
+
 - Resolve to commit objects
 - Examples: branch names, commit SHAs, tags pointing to commits
 - Can be used where Git expects a commit
 
 **Tree-ish objects:**
+
 - Resolve to tree objects (directory snapshots)
 - Examples: commit-ish objects, tree SHAs, commit:path
 - Can be used where Git expects a tree
@@ -307,6 +319,7 @@ fi
 ```
 
 **rev-parse options:**
+
 - `--short`: Abbreviated SHA output
 - `--verify`: Exit with error if revision invalid
 - `--symbolic`: Keep symbolic names when possible
@@ -338,6 +351,7 @@ git show 'HEAD@{2.weeks.2.days.ago}'
 ```
 
 **Date format flexibility:**
+
 - Various formats supported
 - Timezone handling
 - Reflog-based resolution
@@ -369,6 +383,7 @@ git reflog --date=relative
 ```
 
 **Reflog characteristics:**
+
 - Local to each repository
 - Records reference movements
 - Limited retention (default 90 days)
@@ -396,6 +411,7 @@ git log HEAD~5..HEAD -- *.py
 ```
 
 **Path reference syntax:**
+
 - `revision:path` for file/directory at revision
 - `--` to separate revisions from paths
 - Supports glob patterns
@@ -423,6 +439,7 @@ git log B C --not A       # Same as above
 ```
 
 **Range use cases:**
+
 - Show changes between branches
 - Find commits to merge
 - Generate release notes
@@ -455,6 +472,7 @@ git rev-parse v1.0.0^{commit}  # Always get commit SHA
 ```
 
 **Tag dereferencing:**
+
 - Handles annotated vs lightweight differences
 - Explicit object type specification
 - Consistent behavior across tag types
@@ -479,6 +497,7 @@ git rev-parse HEAD^{commit} HEAD^{tree} HEAD:README.md
 ```
 
 **Expression building blocks:**
+
 - Base reference (branch, SHA, tag)
 - Ancestry operators (~, ^)
 - Date specifications (@{})
@@ -508,6 +527,7 @@ git rev-parse --abbrev-ref HEAD
 ```
 
 **Validation use cases:**
+
 - Script safety checks
 - User input validation
 - Conditional operations
@@ -608,6 +628,7 @@ git log --grep="bug.*#[0-9]+" --oneline
 ```
 
 **Pattern contexts:**
+
 - Branch and tag listing
 - Reference iteration
 - Commit message searching
@@ -638,6 +659,7 @@ done
 ```
 
 **Caching considerations:**
+
 - Git caches resolution results
 - Repeated complex expressions are optimized
 - Rev-parse caches object lookups
@@ -739,6 +761,7 @@ git show --format="Commit: %H%nAuthor: %an%nDate: %ad" --no-patch "$SHA"
 ```
 
 **Scripting patterns:**
+
 - Always validate input revisions
 - Use rev-parse for normalization
 - Handle edge cases gracefully
@@ -751,6 +774,7 @@ git show --format="Commit: %H%nAuthor: %an%nDate: %ad" --no-patch "$SHA"
 **Scenario:** Master Git revision specifications through practical exercises covering all major syntax forms.
 
 **Basic tasks:**
+
 1. **Revision exploration:**
    - Use different ways to reference the same commit
    - Practice relative references (~, ^)
@@ -775,6 +799,7 @@ git show --format="Commit: %H%nAuthor: %an%nDate: %ad" --no-patch "$SHA"
 ## Lab Exercise: Revision Mastery (cont.) (cont.)
 
 **Advanced tasks:**
+
 1. **Complex expressions:**
    - Build multi-part revision expressions
    - Combine different reference types

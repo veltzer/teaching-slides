@@ -5,6 +5,7 @@
 Delegation is a fundamental design principle where one object hands off responsibility for a task to another object
 
 Key benefits:
+
 - **Separation of concerns** - each class has a single responsibility
 - **Flexibility** - can change behavior without modifying client code
 - **Reusability** - delegated components can be reused in different contexts
@@ -808,12 +809,14 @@ using ArrayPtr = SmartPointer<ArrayStorage>;
 ## Delegation vs Inheritance Guidelines
 
 **Use Composition When:**
+
 - You need runtime flexibility
 - You want to avoid inheritance hierarchies
 - You need to combine behaviors from multiple sources
 - You want clear ownership semantics
 
 **Use Inheritance When:**
+
 - You have a clear "is-a" relationship
 - You need polymorphic behavior
 - You want to provide a common interface
@@ -985,11 +988,13 @@ public:
 ## Performance Considerations
 
 **Virtual Function Calls:**
+
 - Small overhead due to vtable lookup
 - Modern CPUs predict virtual calls well
 - Consider CRTP for zero-overhead static polymorphism
 
 **Multiple Inheritance:**
+
 - Potential for larger object sizes
 - Virtual inheritance has additional overhead
 - Use judiciously and profile when performance matters
@@ -999,6 +1004,7 @@ public:
 ## Performance Considerations (cont.)
 
 **Composition:**
+
 - Additional indirection for delegated calls
 - Can be optimized away by compiler
 - Consider inlining for small, frequently called functions

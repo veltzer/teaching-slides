@@ -257,6 +257,7 @@ public class UserViewModelTest {
 ### Refactor Application
 
 Tasks:
+
 1. Implement MVVM architecture
 1. Add Clean Architecture layers
 1. Set up Dagger DI

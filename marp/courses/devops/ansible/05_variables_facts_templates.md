@@ -17,6 +17,7 @@ audience:
 # Variables, Facts, and Templating
 
 ## Topics Covered
+
 - Advanced variable usage
 - Magic variables and special variables
 - `Jinja2` templating engine

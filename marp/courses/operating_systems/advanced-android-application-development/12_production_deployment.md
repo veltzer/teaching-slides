@@ -298,6 +298,7 @@ end
 ### Production Deployment
 
 Prepare an application for production:
+
 1. Configure build variants
 1. Setup CI/CD pipeline
 1. Implement app bundle

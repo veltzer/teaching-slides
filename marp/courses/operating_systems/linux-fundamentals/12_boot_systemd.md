@@ -48,6 +48,7 @@ audience:
 ## Old SysV Init System: Details
 
 Traditional runlevels:
+
 - 0: Halt
 - 1: Single user
 - 2: Multi-user (no networking)
@@ -67,6 +68,7 @@ Traditional runlevels:
 ## systemd Introduction: Details
 
 Key features:
+
 - Service management
 - Dependency resolution
 - Parallel execution

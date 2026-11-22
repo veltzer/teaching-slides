@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Your Connection Is Your Lifeline
+
 - Everything you do at work depends on the network
 - Attackers target network connections to intercept data
 - Understanding basic network safety keeps you and the company safe
@@ -24,6 +25,7 @@ audience:
 ---
 
 ## Secure Internet Usage
+
 - Only visit `HTTPS` websites (look for the padlock icon)
 - Do not download software from unknown sources
 - Do not click on pop-up ads or "You've won!" banners
@@ -143,6 +145,7 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 ---
 
 ## Recognizing Network Threats
+
 - Unusually slow internet connection
 - Browser redirecting to unexpected websites
 - Pop-ups appearing even when the browser is closed

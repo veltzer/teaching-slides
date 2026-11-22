@@ -25,6 +25,7 @@ audience:
 ---
 
 ## A Brief History of Python
+
 - 1989: Guido van Rossum starts working on Python
 - 1991: Python 0.9.0 released
 - 2000: Python 2.0 released
@@ -49,6 +50,7 @@ audience:
 ---
 
 ## Why Python?
+
 - Easy to learn and read
 - Huge standard library ("batteries included")
 - Massive ecosystem of third-party packages
@@ -59,6 +61,7 @@ audience:
 ---
 
 ## Python Use Cases
+
 - Web development (Django, Flask, FastAPI)
 - Data science and machine learning (NumPy, Pandas, scikit-learn)
 - Automation and scripting
@@ -70,6 +73,7 @@ audience:
 ---
 
 ## Who Uses Python?
+
 - Google (YouTube, search infrastructure)
 - Netflix (recommendation engine)
 - Instagram (backend)
@@ -158,6 +162,7 @@ import this
 ---
 
 ## Dynamic Typing
+
 - Variables do not have a fixed type
 - Types are checked at runtime, not compile time
 
@@ -170,6 +175,7 @@ x = [1, 2, 3] # now x is a list
 ---
 
 ## Dynamic Typing - Implications
+
 - More flexible code
 - Faster prototyping
 - Potential runtime errors that static typing would catch
@@ -183,6 +189,7 @@ def greet(name: str) -> str:
 ---
 
 ## Python is Strongly Typed
+
 - Python is dynamically typed but strongly typed
 - You cannot mix types implicitly
 
@@ -194,6 +201,7 @@ def greet(name: str) -> str:
 ---
 
 ## Indentation Matters
+
 - Python uses indentation to define code blocks
 - No curly braces `{}` like C/Java
 - Standard is 4 spaces per level
@@ -208,6 +216,7 @@ if True:
 ---
 
 ## Everything is an Object
+
 - In Python, everything is an object
 - Integers, strings, functions, classes, modules
 - Every object has a type, an identity, and a value
@@ -222,6 +231,7 @@ print(x.__add__)   # even int has methods
 ---
 
 ## Python Implementations
+
 - **CPython**: The reference implementation (written in C)
 - **PyPy**: JIT-compiled, faster for long-running programs
 - **Jython**: Runs on the JVM
@@ -232,6 +242,7 @@ print(x.__add__)   # even int has methods
 ---
 
 ## The Python Community
+
 - Python Enhancement Proposals (PEPs)
 - PEP 8: Style guide for Python code
 - PEP 20: The Zen of Python
@@ -241,6 +252,7 @@ print(x.__add__)   # even int has methods
 ---
 
 ## Python Versioning
+
 - Current stable: Python 3.13 (3.14 released Oct 2025)
 - New minor version every year (October)
 - Each version supported for ~5 years
@@ -255,6 +267,7 @@ print(sys.version)
 ---
 
 ## The GIL (Global Interpreter Lock)
+
 - CPython has a Global Interpreter Lock
 - Only one thread executes Python bytecode at a time
 - Affects CPU-bound multithreading
@@ -265,6 +278,7 @@ print(sys.version)
 ---
 
 ## Python's Philosophy
+
 - "There should be one-- and preferably only one --obvious way to do it"
 - Favor readability over cleverness
 - Explicit is better than implicit
@@ -274,6 +288,7 @@ print(sys.version)
 ---
 
 ## REPL - Read Eval Print Loop
+
 - Python has an interactive interpreter
 - Great for experimentation and learning
 
@@ -289,6 +304,7 @@ Hello
 ---
 
 ## Python in the Real World
+
 - Most popular language on GitHub (2024)
 - #1 on TIOBE index
 - Fastest growing language for data science
@@ -298,6 +314,7 @@ Hello
 ---
 
 ## Summary
+
 - Python is a high-level, interpreted, dynamically typed language
 - Created in 1991 by Guido van Rossum
 - Python 3 is the current and only supported version

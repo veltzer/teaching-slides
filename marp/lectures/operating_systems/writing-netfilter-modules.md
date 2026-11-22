@@ -38,6 +38,7 @@ audience:
 ---
 
 ## Introduction to Netfilter
+
 - Netfilter is the packet filtering framework in the Linux kernel
 - It allows packet filtering, network address translation (NAT), and other packet mangling
 - Netfilter provides a set of hooks in the networking stack
@@ -48,6 +49,7 @@ audience:
 ## Netfilter Hook Points
 
 Five main hook points:
+
 1. `NF_INET_PRE_ROUTING`
 1. `NF_INET_LOCAL_IN`
 1. `NF_INET_FORWARD`

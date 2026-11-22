@@ -17,6 +17,7 @@ audience:
 # Modules and Ad-Hoc Commands
 
 ## Topics Covered
+
 - Understanding `Ansible` modules
 - Module categories and common modules
 - Ad-hoc command patterns

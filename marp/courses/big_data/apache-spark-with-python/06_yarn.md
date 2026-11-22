@@ -17,6 +17,7 @@ audience:
 ---
 
 ## YARN Architecture Overview
+
 - Yet Another Resource Negotiator (YARN)
 - Second generation Hadoop compute platform
 - Separates resource management from processing model
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Key Components Explained
+
 1. Resource Manager (RM)
     - Global resource scheduler
     - Manages application lifecycle
@@ -46,6 +48,7 @@ audience:
 ---
 
 ## Key Components Explained (cont.)
+
 3. Application Master (AM)
     - One per application
     - Negotiates resources with RM
@@ -67,6 +70,7 @@ audience:
 ---
 
 ## YARN Client Mode Characteristics
+
 - Driver runs on client machine
 - Better for interactive applications
 - Client must stay alive
@@ -81,6 +85,7 @@ audience:
 ---
 
 ## YARN Cluster Mode Characteristics
+
 - Driver runs on cluster
 - Better for production
 - Client can disconnect
@@ -164,6 +169,7 @@ spark.dynamicAllocation.schedulerBacklogTimeout: 1s
 ---
 
 ## YARN Web UI
+
 - Resource Manager UI (port 8088)
     - Cluster overview
     - Application status
@@ -204,6 +210,7 @@ spark.conf.set("spark.metrics.conf.*.sink.graphite.port", "2003")
 ---
 
 ## Resource Issues
+
 1. Container Launch Failure
 
 ```yaml
@@ -221,6 +228,7 @@ yarn logs -applicationId application_1234567890_0001
 ---
 
 ## Performance Issues
+
 1. Data Skew
 
 ```python
@@ -256,6 +264,7 @@ grep "ERROR" application_logs.txt
 ---
 
 ## Resource Planning
+
 1. Calculate Resources
 
 ```python
@@ -289,6 +298,7 @@ yarn.resourcemanager.cluster-id: cluster1
 ---
 
 ## Monitoring Strategy
+
 1. Set up alerts
 1. Monitor key metrics
     - Resource utilization
@@ -299,6 +309,7 @@ yarn.resourcemanager.cluster-id: cluster1
 ---
 
 ## Summary
+
 - YARN provides robust cluster management
 - Multiple deployment modes for different uses
 - Extensive configuration options

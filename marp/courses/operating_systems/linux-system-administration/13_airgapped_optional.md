@@ -95,6 +95,7 @@ apt update
 ## Package Transport Mechanisms
 
 Transfer methods for air-gapped systems:
+
 1. Removable media (USB drives, DVDs)
 1. One-way data diodes
 1. Cross-domain transfer stations
@@ -296,6 +297,7 @@ lynis audit system
 ## Documentation and Emergency Procedures
 
 Required documentation:
+
 - Hardware and software inventory
 - Network diagrams (even if isolated)
 - Approved software baseline
@@ -308,6 +310,7 @@ Required documentation:
 ## Documentation and Emergency Procedures (cont.)
 
 Emergency procedures:
+
 - Known-good system image backups
 - Boot media with rescue tools
 - Documented rollback procedures
@@ -471,6 +474,7 @@ ssh-keygen -D /usr/lib/libsofthsm2.so
 ```
 
 Use cases in air-gapped environments:
+
 - Package signing and verification
 - Disk encryption key management (`LUKS`)
 - TLS certificate management for internal services
@@ -564,6 +568,7 @@ socat UDP-RECV:9999 - | tar xzf - -C /opt/incoming/
 ```
 
 Design principles for diode configurations:
+
 - Hardware diodes physically cut the return fiber/wire
 - Software diodes use `iptables` with strict one-way rules
 - Always verify integrity of received data with checksums

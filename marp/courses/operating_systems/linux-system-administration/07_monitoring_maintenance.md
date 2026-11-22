@@ -46,6 +46,7 @@ MiB Swap:  4096.0 total,  4000.0 free,    96.0 used
 ```
 
 Key metrics:
+
 - **load average**: 1/5/15 min (compare to CPU count)
 - **us**: user space CPU, **sy**: kernel CPU
 - **wa**: I/O wait (high = disk bottleneck)
@@ -493,6 +494,7 @@ groups:
     - Template-based configuration
 
 Both support:
+
 - Custom check scripts
 - Escalation policies
 - Distributed monitoring
@@ -565,6 +567,7 @@ atrm 5
 ```
 
 `systemd` timers (see the *Core System Architecture* chapter) offer advantages:
+
 - Logged via `journalctl`
 - Dependency management
 - Calendar expressions (`OnCalendar=Mon..Fri *-*-* 09:00`)
@@ -575,10 +578,12 @@ atrm 5
 ## Disaster Recovery Planning
 
 Key components:
+
 - **RPO** (Recovery Point Objective) - max acceptable data loss
 - **RTO** (Recovery Time Objective) - max acceptable downtime
 
 Checklist:
+
 1. Documented backup and restore procedures
 1. Regular backup verification and restore testing
 1. Off-site backup copies
@@ -915,6 +920,7 @@ systemctl enable --now grafana-server
 ```
 
 Key dashboard components:
+
 1. **Data source** - connect to `Prometheus`, `InfluxDB`, etc.
 1. **Panels** - graphs, gauges, tables, heatmaps
 1. **Variables** - dynamic filters (host, service)
@@ -1086,6 +1092,7 @@ sh /tmp/netdata-kickstart.sh --stable-channel
 ```
 
 Key features:
+
 1. Zero-configuration for most system metrics
 1. Per-second granularity by default
 1. Built-in health alarms for anomaly detection
@@ -1164,6 +1171,7 @@ cat /var/run/reboot-required  # Ubuntu
 ```
 
 Benefits:
+
 - Eliminates reboot windows for security patches
 - Reduces downtime for production systems
 - Patches are verified for safety before application
@@ -1210,6 +1218,7 @@ sha256sum -c /root/config-checksums.txt
 ## Change Management Workflow: Details
 
 Key principles:
+
 1. All changes tracked in version control (IaC)
 1. No direct production changes without review
 1. Rollback plan documented before deployment

@@ -68,12 +68,14 @@ Excellent:  correct-horse-battery-staple
 ---
 
 ## Creating Strong Passwords: The Passphrase Method
+
 - Pick 4-5 random, unrelated words
 - Add a number or symbol between them
 - Example: `purple-hammer-cloud-bicycle-9`
 - Easy to remember, hard to crack
 
 ### Rules to Follow
+
 - Minimum 12 characters (16+ is better)
 - Never reuse passwords across accounts
 - Never use personal information
@@ -82,12 +84,14 @@ Excellent:  correct-horse-battery-staple
 ---
 
 ## Password Managers
+
 - Store all your passwords in one encrypted vault
 - Generate strong, unique passwords for every account
 - Auto-fill login forms securely
 - You only need to remember one master password
 
 ### Recommended by Our Organization
+
 - Use the company-approved password manager
 - Store work passwords only in the approved tool
 - Never store passwords in browsers, sticky notes, or spreadsheets
@@ -101,6 +105,7 @@ Excellent:  correct-horse-battery-staple
 ---
 
 ## Multi-Factor Authentication (MFA)
+
 - Something you **know** (password)
 - Something you **have** (phone, security key)
 - Something you **are** (fingerprint, face)
@@ -125,11 +130,13 @@ Using two or more of these factors dramatically improves security
 ---
 
 ## Role-Based Access Control (`RBAC`)
+
 - You should only have access to what you need for your job
 - No more, no less
 - If you change roles, your access should be updated
 
 ### Why This Matters
+
 - Limits damage if your account is compromised
 - Reduces accidental exposure of sensitive data
 - Meets compliance requirements (`GDPR`, `SOX`, `HIPAA`)
@@ -160,6 +167,7 @@ Using two or more of these factors dramatically improves security
 ## Exercise: Check Your Password Hygiene
 
 Ask yourself:
+
 - Do I reuse passwords across accounts?
 - Is my password based on personal information?
 - Do I have `MFA` enabled on my critical accounts?

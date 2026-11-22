@@ -19,6 +19,7 @@ audience:
 ---
 
 ## Why Network Security Matters: Details
+
 - Data in transit is vulnerable to interception, modification, and impersonation
 - Every packet crosses multiple networks and devices you do not control
 - Threats range from passive eavesdropping to active man-in-the-middle attacks
@@ -161,6 +162,7 @@ TLS 1.3 reduces the handshake to just 1 round trip:
 ## TLS 1.3 Handshake: Details
 
 **TLS 1.3 improvements:**
+
 - 1-RTT handshake (vs 2-RTT in TLS 1.2)
 - 0-RTT resumption for returning clients (with caveats -- replay risk)
 - Removed insecure algorithms (RC4, DES, MD5, SHA-1, static RSA)
@@ -184,6 +186,7 @@ TLS 1.3 reduces the handshake to just 1 round trip:
 ## Certificates and PKI: Details
 
 **Certificate chain verification:**
+
 1. Server sends its certificate + intermediate CA certificates
 1. Client finds the Root CA in its trusted store
 1. Client verifies each signature in the chain
@@ -468,6 +471,7 @@ A VPN (Virtual Private Network) creates an encrypted tunnel between two points o
 ## VPN Overview: Details
 
 **VPN use cases:**
+
 - Remote access to corporate networks
 - Privacy (hide traffic from ISP)
 - Site-to-site connectivity (connect offices)
@@ -491,6 +495,7 @@ IPSec operates at the network layer (L3), encrypting IP packets.
 ## IPSec VPN: Example
 
 **IPSec protocols:**
+
 - **ESP** (Encapsulating Security Payload): encryption + authentication
 - **AH** (Authentication Header): authentication only (no encryption)
 - **IKE** (Internet Key Exchange): negotiates security parameters
@@ -602,6 +607,7 @@ Dividing a network into isolated segments limits the blast radius of security br
 ## Network Segmentation: Details
 
 **Segmentation benefits:**
+
 - Limits lateral movement by attackers
 - Reduces attack surface per segment
 - Enables different security policies per segment
@@ -624,6 +630,7 @@ A DMZ is a network segment that sits between the public internet and the interna
 ## DMZ (Demilitarized Zone): Details
 
 **DMZ rules:**
+
 - Internet can reach DMZ services (ports 80, 443, 25, 53)
 - DMZ servers can reach specific internal services (e.g., database)
 - Internet cannot reach internal network directly
@@ -818,6 +825,7 @@ notAfter=Mar 14 23:59:59 2025 GMT
 
 The traditional "castle and moat" model (trust everything inside the network) is outdated. Zero Trust assumes no implicit trust.
 **Principles:**
+
 1. **Never trust, always verify** -- authenticate and authorize every request
 1. **Least privilege access** -- grant minimum necessary permissions
 1. **Assume breach** -- design as if attackers are already inside
@@ -833,6 +841,7 @@ The traditional "castle and moat" model (trust everything inside the network) is
 ## Zero Trust Network Architecture: Details (2)
 
 **Implementation components:**
+
 - Identity-aware proxy (BeyondCorp, Tailscale)
 - Mutual TLS (mTLS) between services
 - Microsegmentation

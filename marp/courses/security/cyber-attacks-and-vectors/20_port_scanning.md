@@ -61,12 +61,14 @@ audience:
 ## Why Port Scanning is Done
 
 **Offensive (Red Team / Attackers):**
+
 - Identify running services and their versions
 - Find vulnerable or misconfigured services
 - Map the network topology
 - Identify operating systems
 
 **Defensive (Blue Team / Admins):**
+
 - Audit network security posture
 - Verify firewall rules are working
 - Find unauthorized services

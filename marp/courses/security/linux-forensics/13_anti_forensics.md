@@ -13,6 +13,7 @@ audience:
 # Anti-Forensics and Countermeasures
 
 ## Course: Linux Forensics
+
 - Attackers actively try to destroy, hide, or falsify evidence
 - Recognizing anti-forensics is what separates a thorough investigation
 - This module covers detecting tampering and where hidden data lives
@@ -165,6 +166,7 @@ cat /mnt/evidence/etc/modprobe.d/*.conf
 Investigate the provided image for signs of tampering.
 
 Deliverables:
+
 1. Files with inconsistent timestamps, with the evidence for each
 1. The result of log-integrity verification and any gaps found
 1. Any data recovered from hidden or in-memory storage locations

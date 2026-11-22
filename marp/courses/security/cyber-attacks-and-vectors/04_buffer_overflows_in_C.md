@@ -23,6 +23,7 @@ audience:
 ---
 
 ## What is a Buffer Overflow?
+
 - Occurs when a program tries to write data beyond the bounds of a buffer
 - Can overwrite adjacent memory locations
 - Allows an attacker to gain control of the program flow
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## How Buffer Overflows Happen
+
 - Common coding mistakes:
     - Using insecure functions (e.g. `strcpy`, `strcat`, `sprintf`)
     - Off-by-one errors
@@ -247,6 +249,7 @@ void secure_integer(size_t count, size_t element_size) {
 ---
 
 ## Consequences
+
 - Execution of malicious code
 - Privilege escalation
 - Denial of service
@@ -279,6 +282,7 @@ The bug: Server trusts client-specified length without bounds checking.
 ---
 
 ## Defending Against Buffer Overflows
+
 - Use safe functions (`strncpy`, `strncat`) with bounds checking
 - Enable compiler warnings and address sanitizers
 - Perform input validation and sanitization
@@ -323,6 +327,7 @@ gcc -Wall -Wextra -Werror \
 ---
 
 ## Mitigation Techniques
+
 - Data Execution Prevention (DEP)
     - Marks memory regions as non-executable
 - Address Space Layout Randomization (ASLR)

@@ -21,6 +21,7 @@ audience:
 A comprehensive course covering the full landscape of generative AI
 
 **Course Goals:**
+
 - Understand the foundations of generative AI models
 - Master `API`-based development with `LLM`s
 - Build agents and memory-augmented systems with `LangChain`
@@ -104,6 +105,7 @@ Unlike **discriminative** models (classify existing data), generative models **p
 ## Why Generative AI Matters Now: Details
 
 Three converging factors enabled the current explosion:
+
 1. **Scale of data** — Trillions of tokens from the internet
 1. **Scale of compute** — Thousands of GPUs training for months
 1. **Architectural breakthroughs** — The Transformer (2017)
@@ -148,6 +150,7 @@ Each topic follows this pattern:
 1. **Discussion** — Real-world applications and limitations
 
 **Throughout the course:**
+
 - Live coding demonstrations
 - Guided exercises
 - Open Q&A sessions
@@ -165,6 +168,7 @@ Each topic follows this pattern:
 | Course Repository | (provided separately) |
 
 **Key Papers:**
+
 - "Attention Is All You Need" (Vaswani et al., 2017)
 - "Language Models are Few-Shot Learners" (Brown et al., 2020)
 - "Training language models to follow instructions" (Ouyang et al., 2022)

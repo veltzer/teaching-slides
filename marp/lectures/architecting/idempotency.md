@@ -87,6 +87,7 @@ POST /api/orders
 ```
 
 Each call creates a **new order**
+
 - First call: Order #1001
 - Second call: Order #1002
 - Third call: Order #1003
@@ -776,6 +777,7 @@ The legacy service charged the card, then the wrapper crashed before storing the
 ## The Dangerous Case: Crash Mid-Call (cont.)
 
 Options:
+
 - **Reconcile**: query the legacy service (`GET /charges?client_ref=key`) — requires the legacy API to accept your key as a lookup field
 - **Manual review**: flag the key, alert an operator
 - **Accept the risk**: only safe for low-stakes effects (emails, not payments)

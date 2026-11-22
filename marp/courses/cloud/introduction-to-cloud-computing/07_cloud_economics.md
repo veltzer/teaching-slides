@@ -18,6 +18,7 @@ audience:
 ---
 
 ## The Pay-As-You-Go Model
+
 - Pay only for resources consumed
 - No upfront hardware purchase
 - Billing by the second, hour, GB, or request
@@ -27,6 +28,7 @@ audience:
 ---
 
 ## CapEx vs OpEx
+
 - CapEx: buy servers, 3-5 year depreciation
 - OpEx: pay monthly for cloud usage
 - Cloud shifts IT from CapEx to OpEx
@@ -42,6 +44,7 @@ audience:
 ---
 
 ## Cloud Pricing Dimensions
+
 - Compute: per second or per hour of CPU time
 - Storage: per GB per month
 - Data transfer: per GB out (inbound usually free)
@@ -57,6 +60,7 @@ audience:
 ---
 
 ## On-Demand Pricing
+
 - Pay full price, no commitment
 - Most flexible option
 - Best for unpredictable or short-term workloads
@@ -66,6 +70,7 @@ audience:
 ---
 
 ## Reserved Instances and Commitments
+
 - Commit to usage for 1 or 3 years
 - Significant discounts (up to 72% off)
 - All upfront, partial upfront, or no upfront
@@ -75,6 +80,7 @@ audience:
 ---
 
 ## Savings Plans
+
 - Flexible commitment-based pricing
 - Commit to $/hour of usage
 - Applies across instance families and Regions
@@ -84,6 +90,7 @@ audience:
 ---
 
 ## Spot and Preemptible Instances
+
 - Use spare cloud capacity at deep discounts
 - Up to 90% savings vs on-demand
 - Can be interrupted with short notice
@@ -93,6 +100,7 @@ audience:
 ---
 
 ## Spot Instance Use Cases
+
 - CI/CD build and test pipelines
 - Data processing and ETL
 - Rendering and media encoding
@@ -102,6 +110,7 @@ audience:
 ---
 
 ## Cost Monitoring Tools
+
 - Cloud provider billing dashboards
 - Cost Explorer: visualize spending trends
 - Budgets and alerts: get notified on thresholds
@@ -124,6 +133,7 @@ aws ce get-cost-and-usage \
 ---
 
 ## Cost Optimization Strategies
+
 - Right-size instances based on actual usage
 - Use auto-scaling to match demand
 - Delete unused resources (unattached disks, idle IPs)
@@ -133,6 +143,7 @@ aws ce get-cost-and-usage \
 ---
 
 ## Total Cost of Ownership (TCO)
+
 - Compare cloud costs vs on-premises costs
 - Include: hardware, power, cooling, space, staff
 - Include: networking, maintenance, refresh cycles
@@ -142,6 +153,7 @@ aws ce get-cost-and-usage \
 ---
 
 ## Hidden Costs to Watch
+
 - Data transfer between Regions or out to internet
 - NAT Gateway per-GB charges
 - Idle resources still incurring charges
@@ -151,6 +163,7 @@ aws ce get-cost-and-usage \
 ---
 
 ## Cost Governance
+
 - Establish budgets per team and project
 - Tag all resources for cost attribution
 - Regular cost reviews (weekly or monthly)
@@ -160,6 +173,7 @@ aws ce get-cost-and-usage \
 ---
 
 ## Cloud Financial Planning
+
 - Forecast costs based on growth projections
 - Use cloud pricing calculators
 - Plan commitment purchases annually
@@ -169,6 +183,7 @@ aws ce get-cost-and-usage \
 ---
 
 ## Pricing Calculators
+
 - AWS Pricing Calculator
 - Azure Pricing Calculator
 - GCP Pricing Calculator
@@ -178,6 +193,7 @@ aws ce get-cost-and-usage \
 ---
 
 ## Cost Allocation Tags
+
 - Tag every resource (project, team, environment)
 - Tags appear in billing reports
 - Enable showback and chargeback
@@ -200,6 +216,7 @@ aws ec2 create-tags \
 ---
 
 ## Automating Cost Savings
+
 - Schedule dev/test environments to shut down at night
 - Auto-delete old snapshots and AMIs
 - Use Lambda/Functions for automated cleanup
@@ -209,6 +226,7 @@ aws ec2 create-tags \
 ---
 
 ## Cloud vs On-Premises TCO Example
+
 - On-premises: $500K server purchase + $100K/year ops
 - Cloud: $80K/year with right-sizing and commitments
 - Break-even in 2-3 years for many workloads
@@ -218,6 +236,7 @@ aws ec2 create-tags \
 ---
 
 ## The Economics Advantage
+
 - Start small, grow as revenue grows
 - Experiment without financial risk
 - No wasted capacity

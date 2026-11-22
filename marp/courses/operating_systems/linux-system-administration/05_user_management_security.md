@@ -254,6 +254,7 @@ auth    required    pam_deny.so
 ```
 
 Control flags:
+
 - `required` - must pass, but continues checking
 - `requisite` - must pass, fails immediately if not
 - `sufficient` - if passes, skip remaining
@@ -773,6 +774,7 @@ systemctl list-timers | grep certbot
 ```
 
 Certificate files:
+
 - `/etc/letsencrypt/live/example.com/fullchain.pem`
 - `/etc/letsencrypt/live/example.com/privkey.pem`
 
@@ -939,6 +941,7 @@ TrustedUserCAKeys /etc/ssh/ca_key.pub
 CIS (Center for Internet Security) benchmarks provide hardening checklists.
 
 Key areas covered:
+
 1. Filesystem configuration (disable `cramfs`, `squashfs`)
 1. Software updates and patching
 1. Secure boot settings
@@ -979,6 +982,7 @@ cat /var/log/lynis-report.dat
 ```
 
 Key output sections:
+
 - **Warnings** - issues requiring immediate attention
 - **Suggestions** - recommended improvements
 - **Hardening index** - overall score (0-100)
@@ -1218,6 +1222,7 @@ chmod 644 /home/restricted_user/.bash_profile
 ```
 
 Restrictions enforced by `rbash`:
+
 - Cannot `cd` to another directory
 - Cannot change `PATH`, `SHELL`, or `ENV`
 - Cannot run commands containing `/`
@@ -1422,6 +1427,7 @@ chattr -i /etc/resolv.conf
 ```
 
 Use cases:
+
 - Protect `/etc/resolv.conf` from being overwritten by `DHCP`
 - Protect critical config files from accidental changes
 - Ensure log files can only be appended to (tamper resistance)
@@ -1492,6 +1498,7 @@ oscap xccdf eval --profile stig \
 ```
 
 Key practices across all frameworks:
+
 1. Maintain patch management and system hardening
 1. Enable logging and audit trails (`auditd`, `journald`)
 1. Enforce least privilege and access controls

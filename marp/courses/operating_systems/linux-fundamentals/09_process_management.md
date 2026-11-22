@@ -172,6 +172,7 @@ MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.  11699.4 avail Mem
 ```
 
 Key sections:
+
 - System uptime and load
 - Task summary
 - CPU states
@@ -262,6 +263,7 @@ ulimit -m 1000000
 ```
 
 Example limits:
+
 - Maximum file size
 - Maximum process count
 - Stack size

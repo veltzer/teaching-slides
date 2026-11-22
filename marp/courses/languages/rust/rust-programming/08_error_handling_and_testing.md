@@ -390,6 +390,7 @@ cargo tarpaulin -o Html
 ## Practice Exercise
 
 Create a library that:
+
 1. Implements error handling
 1. Has comprehensive tests
 1. Includes documentation tests
@@ -399,6 +400,7 @@ Create a library that:
 ---
 
 ## Common Pitfalls
+
 1. Inadequate error handling
 1. Missing edge cases
 1. Brittle tests
@@ -408,6 +410,7 @@ Create a library that:
 ---
 
 ## Summary
+
 - Error types and handling
 - Testing methodology
 - Test organization

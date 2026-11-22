@@ -328,6 +328,7 @@ issue = project.issues.create({'title': 'Bug report',
 JetBrains IDE Git features:
 
 **Version Control Tool Window:**
+
 - **Local Changes:** View modified files
 - **Log:** Interactive commit history
 - **Console:** Git command execution
@@ -355,6 +356,7 @@ JetBrains IDE Git features:
 ## PyCharm Git Integration (cont.) (cont.)
 
 **PyCharm Git workflow:**
+
 1. **Clone repository:** VCS → Get from Version Control
 1. **Make changes:** Edit files normally
 1. **Review changes:** Version Control tool window
@@ -366,6 +368,7 @@ JetBrains IDE Git features:
 ## PyCharm Git Integration (cont.) (cont. 2)
 
 **Advanced PyCharm features:**
+
 - Visual merge conflict resolution
 - Interactive rebase
 - Shelve changes (similar to stash)
@@ -397,6 +400,7 @@ Right-click project:
 ## Eclipse Git Integration (EGit) (cont.)
 
 **Eclipse Git workflow:**
+
 1. **Import Git project:** File → Import → Git → Projects from Git
 1. **Stage changes:** Git Staging view
 1. **Commit:** Enter message and commit
@@ -407,6 +411,7 @@ Right-click project:
 ## Eclipse Git Integration (EGit) (cont.) (cont.)
 
 **EGit features:**
+
 - Git Staging view for index management
 - Git Repositories view for repository navigation
 - History view for commit browsing
@@ -430,6 +435,7 @@ pip install spyder-git
 ```
 
 **Git operations in Spyder:**
+
 - **Git pane:** Shows repository status
 - **File differences:** Compare working vs committed
 - **Commit interface:** Stage and commit changes
@@ -581,6 +587,7 @@ stages:
 ## Bamboo Git Integration Features
 
 **Bamboo Git integration features:**
+
 - Repository polling
 - Branch detection
 - Merge check builds
@@ -875,6 +882,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 ## Security Considerations for Git Tools (cont.)
 
 **Tool security practices:**
+
 - Use official tool repositories
 - Keep tools updated
 - Review tool permissions
@@ -978,6 +986,7 @@ if __name__ == "__main__":
 **Scenario:** Set up a complete Git tool ecosystem for a development team with multiple platforms and automation requirements.
 
 **Setup tasks:**
+
 1. **Platform integration:**
    - Configure GitHub/GitLab repository with CI/CD
    - Set up IDE Git integration for team members
@@ -1002,6 +1011,7 @@ if __name__ == "__main__":
 ## Lab Exercise: Git Tool Ecosystem (cont.) (cont.)
 
 **Advanced tasks:**
+
 1. **Custom tool development:**
    - Build repository analysis tools
    - Create workflow automation scripts
@@ -1025,6 +1035,7 @@ if __name__ == "__main__":
 Emerging trends in Git tools:
 
 **AI-powered Git tools:**
+
 - Intelligent commit message generation
 - Automated code review suggestions
 - Smart merge conflict resolution
@@ -1035,6 +1046,7 @@ Emerging trends in Git tools:
 ## Future of Git Tooling (cont.)
 
 **Cloud-native Git platforms:**
+
 - Serverless CI/CD pipelines
 - Container-based development environments
 - Distributed version control at scale
@@ -1045,12 +1057,14 @@ Emerging trends in Git tools:
 ## Future of Git Tooling (cont.) (cont.)
 
 **Integration trends:**
+
 - DevSecOps integration
 - Infrastructure as Code (GitOps)
 - Machine learning model versioning
 - Blockchain-based code integrity
 
 **Developer experience improvements:**
+
 - Better conflict resolution UIs
 - Real-time collaboration features
 - Voice-controlled Git operations

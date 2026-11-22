@@ -13,6 +13,7 @@ audience:
 ---
 
 ## What is a Class?
+
 - A blueprint for creating objects
 - Bundles data (attributes) and behavior (methods)
 - Supports code reuse through inheritance
@@ -32,6 +33,7 @@ print(rex.bark())  # Rex says Woof!
 ---
 
 ## Class vs Instance
+
 - **Class**: The blueprint (template)
 - **Instance**: A specific object created from the class
 - Each instance has its own data
@@ -50,6 +52,7 @@ print(dog2.name)      # Buddy
 ---
 
 ## The `__init__` Method
+
 - Called automatically when creating an instance
 - Initializes instance attributes
 - `self` refers to the instance being created
@@ -67,6 +70,7 @@ print(p.x, p.y)  # 3 4
 ---
 
 ## The `self` Parameter
+
 - First parameter of every instance method
 - Refers to the current instance
 - Must be explicit (unlike `this` in Java/C++)
@@ -227,6 +231,7 @@ print([p])      # [Point(3, 4)] - uses __repr__
 ---
 
 ## `__str__` vs `__repr__`
+
 - `__str__`: Human-readable representation
     - Used by `print()` and `str()`
 - `__repr__`: Unambiguous developer representation
@@ -546,6 +551,7 @@ print(D.__mro__)
 ---
 
 ## Mixins
+
 - A class designed to add specific behavior
 - Not meant to be instantiated on its own
 
@@ -751,6 +757,7 @@ print(s)  # Student(name='Alice', age=20, grades=[95])
 ---
 
 ## `__slots__`
+
 - Restricts attributes to a fixed set
 - Saves memory, slightly faster attribute access
 
@@ -770,6 +777,7 @@ print(p.x)     # 3
 ---
 
 ## Private and Protected Naming
+
 - Python has no true private attributes
 - Convention only:
     - `_name`: Protected (internal use, do not access from outside)
@@ -791,6 +799,7 @@ print(obj._MyClass__private)  # 3 (name-mangled)
 ---
 
 ## The `__dict__` Attribute
+
 - Every instance stores its attributes in `__dict__`
 
 ```python
@@ -881,6 +890,7 @@ p.price = 10     # OK
 ---
 
 ## Composition vs Inheritance
+
 - Inheritance: "is-a" relationship
 - Composition: "has-a" relationship
 
@@ -904,6 +914,7 @@ print(car.start())  # Engine started
 ---
 
 ## Summary
+
 - Classes bundle data and behavior into objects
 - `__init__` initializes instances; `self` refers to the instance
 - Special methods (`__str__`, `__repr__`, `__eq__`, etc.) customize behavior

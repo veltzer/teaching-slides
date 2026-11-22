@@ -9,6 +9,7 @@ The STL provides a comprehensive set of container classes that manage collection
 ## Container Categories
 
 STL containers are organized into three main categories:
+
 1. **Sequence Containers** - Elements in linear order
 1. **Associative Containers** - Elements organized by keys
 1. **Container Adapters** - Specialized interfaces built on other containers

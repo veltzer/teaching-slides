@@ -61,11 +61,13 @@ audience:
 ## Managed Containers and Serverless Overview
 
 **Managed container services**:
+
 - `AWS ECS` / `Fargate`, `Azure Container Instances`, `Google Cloud Run`
 - No cluster management needed
 - Provider-specific APIs and configurations
 
 **Serverless**:
+
 - `AWS Lambda`, `Azure Functions`, `Google Cloud Functions`
 - Provider manages all infrastructure
 - Pay only for actual execution time
@@ -117,6 +119,7 @@ audience:
 ## When K8s Complexity Is Justified
 
 Justified:
+
 - Running 50+ microservices
 - Need fine-grained control over networking (`Istio`, `Cilium`)
 - Complex deployment strategies (canary, blue-green)
@@ -124,6 +127,7 @@ Justified:
 - Strict compliance needs requiring infrastructure control
 
 NOT justified:
+
 - Small team (fewer than 5 developers)
 - Fewer than 10 services
 - No dedicated ops/platform team
@@ -148,12 +152,14 @@ NOT justified:
 ## Cost Models: Managed Containers and Serverless
 
 **Managed containers** (`AWS Fargate` example):
+
 - Per-container-hour pricing
 - $0.04048 per `vCPU` per hour
 - $0.004445 per `GB` memory per hour
 - No charge when containers are stopped
 
 **Serverless** (`AWS Lambda` example):
+
 - $0.20 per 1M requests
 - $0.0000166667 per `GB`-second
 - 1M free requests per month
@@ -221,11 +227,13 @@ NOT justified:
 ## Cluster Per Team: Pros and Cons
 
 **Pros**:
+
 - Complete isolation (security, performance, failures)
 - Teams have full admin access to their cluster
 - No noisy-neighbor problems
 
 **Cons**:
+
 - Higher infrastructure cost (control plane per team)
 - Duplicated tooling and monitoring setup
 - Cross-cluster service communication is harder
@@ -243,12 +251,14 @@ NOT justified:
 ## Shared Clusters: Pros and Cons
 
 **Pros**:
+
 - Lower cost: single control plane, shared nodes
 - Easier cross-service communication
 - Centralized monitoring and logging
 - Single upgrade path
 
 **Cons**:
+
 - Noisy-neighbor risk (CPU, memory, I/O)
 - Complex `RBAC` configuration
 - Blast radius: cluster failure affects all teams
@@ -259,10 +269,12 @@ NOT justified:
 ## Namespace Strategies
 
 **By team**:
+
 - `team-frontend`, `team-backend`, `team-data`
 - Maps to organizational structure
 
 **By environment**:
+
 - `dev`, `staging`, `production`
 - Simple but limited isolation
 
@@ -271,10 +283,12 @@ NOT justified:
 ## Namespace Strategies (cont.)
 
 **By application**:
+
 - `order-service`, `payment-service`, `user-service`
 - Fine-grained but many namespaces
 
 **Hybrid** (recommended):
+
 - `team-backend-prod`, `team-backend-dev`
 - Combines team ownership with environment separation
 
@@ -364,6 +378,7 @@ spec:
 ## Managed K8s: What You Still Own
 
 Even with managed `Kubernetes`, you are responsible for:
+
 - Worker node OS patches and upgrades
 - `Container` runtime configuration
 - Application-level security
@@ -380,6 +395,7 @@ Even with managed `Kubernetes`, you are responsible for:
 ## Self-Managed Kubernetes
 
 When to consider:
+
 - Regulatory requirements (air-gapped environments)
 - On-premises data center deployments
 - Need for specific `Kubernetes` version/patch
@@ -391,6 +407,7 @@ When to consider:
 ## Self-Managed Kubernetes (cont.)
 
 Tools for self-management:
+
 - `kubeadm` - official bootstrapping tool
 - `kops` - production-grade cluster management
 - `Rancher` - multi-cluster management platform
@@ -439,6 +456,7 @@ Tools for self-management:
 ## Cold Start Impact by Runtime (cont.)
 
 Mitigation strategies:
+
 - Provisioned concurrency (pre-warmed instances)
 - Keep functions small and dependency-light
 - Use compiled languages for latency-sensitive paths
@@ -477,6 +495,7 @@ Mitigation strategies:
 ## Serverless Lock-In: Practical Examples
 
 **`AWS Lambda`** ties you to:
+
 - `API Gateway` for HTTP routing
 - `SQS`/`SNS`/`EventBridge` for event sources
 - `IAM` roles and policies
@@ -488,6 +507,7 @@ Mitigation strategies:
 ## Serverless Lock-In: Practical Examples (cont.)
 
 **Migrating away requires rewriting**:
+
 - All event source integrations
 - Authentication and authorization
 - Monitoring and alerting
@@ -528,6 +548,7 @@ The business logic is portable; everything around it is not.
 ## Event-Driven vs Request-Driven (cont.)
 
 **Request-driven** (may prefer containers):
+
 - Synchronous API endpoints
 - WebSocket connections
 - Long-running computations
@@ -617,6 +638,7 @@ rules:
 ## Cost Optimization Strategies
 
 **`Kubernetes`**:
+
 1. Right-size nodes to match workload profiles
 1. Use spot/preemptible instances (60-90% savings)
 1. Implement `VPA` to auto-adjust resource requests
@@ -627,6 +649,7 @@ rules:
 ## Cost Optimization Strategies (cont.)
 
 **`Serverless`**:
+
 1. Optimize memory allocation (more memory = more CPU = faster)
 1. Use `ARM` architecture (`Graviton2`: 20% cheaper)
 1. Batch operations per invocation
@@ -661,12 +684,14 @@ kubectl top pods -n production
 ## Security Considerations by Model
 
 **`Kubernetes`**:
+
 - Container image scanning (`Trivy`, `Snyk`)
 - Pod Security Standards (restricted, baseline, privileged)
 - Network policies for micro-segmentation
 - Secrets management (`Vault`, `Sealed Secrets`, `ESO`)
 
 **Managed containers**:
+
 - Image scanning by provider
 - Task-level IAM roles
 - VPC networking
@@ -676,6 +701,7 @@ kubectl top pods -n production
 ## Security Considerations by Model (cont.)
 
 **`Serverless`**:
+
 - Function-level IAM (least privilege)
 - No OS to patch
 - Provider handles runtime security

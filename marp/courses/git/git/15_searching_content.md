@@ -31,11 +31,13 @@ audience:
 Git provides powerful tools for searching content across:
 
 **Current working directory:**
+
 - Search files in current state
 - Include or exclude specific file types
 - Pattern matching and regular expressions
 
 **Repository history:**
+
 - Search content across all commits
 - Find when specific code was introduced
 - Track evolution of functions or variables
@@ -45,11 +47,13 @@ Git provides powerful tools for searching content across:
 ## Introduction to Content Search (cont.)
 
 **Multiple branches:**
+
 - Search across different branches
 - Compare content between branches
 - Find code that exists in some branches but not others
 
 **Why content search matters:**
+
 - Code archaeology and debugging
 - Finding examples of API usage
 - Locating security vulnerabilities
@@ -80,6 +84,7 @@ git grep -l "class.*User"
 ```
 
 **Basic options:**
+
 - `-i`: Case-insensitive search
 - `-n`: Show line numbers
 - `-l`: Show only filenames with matches
@@ -110,6 +115,7 @@ git grep -C 5 "TODO"            # 5 lines context both sides
 ```
 
 **Pattern types:**
+
 - Basic regex (default)
 - Extended regex (`-E`)
 - Perl regex (`-P`)
@@ -143,6 +149,7 @@ git grep --untracked "pattern"
 ```
 
 **Path specifications:**
+
 - Glob patterns for file matching
 - Directory-specific searches
 - Exclusion patterns
@@ -169,6 +176,7 @@ git grep "config" $(git rev-list --since="1 month ago" --all)
 ```
 
 **Historical search patterns:**
+
 - All repository history
 - Specific branch history
 - Time-based ranges
@@ -195,6 +203,7 @@ git log -G"regex_pattern" --oneline
 ```
 
 **Search types:**
+
 - `-S`: Pickaxe search (additions/deletions)
 - `-G`: Regex search in diff content
 - `--grep`: Search commit messages
@@ -232,6 +241,7 @@ git log --grep="bug" --grep="fix" --all-match -S"critical"
 ```
 
 **Log search options:**
+
 - `--grep`: Commit message patterns
 - `--author`: Author name patterns
 - `--committer`: Committer name patterns
@@ -262,6 +272,7 @@ git log -S"API_KEY" -- "*.py" "*.js"
 ```
 
 **Pickaxe vs Grep differences:**
+
 - `-S`: Finds commits that change occurrence count
 - `-G`: Finds commits where diff matches regex
 - `-S` is faster for simple string searches
@@ -292,6 +303,7 @@ git diff main..develop -- | grep -E "^\+.*search_term"
 ```
 
 **Branch search strategies:**
+
 - All local branches
 - Remote branches
 - Branch pattern matching
@@ -321,6 +333,7 @@ git grep "pattern" -- "*.py" "*.js" | head -20
 ```
 
 **Performance tips:**
+
 - Limit scope when possible
 - Use specific file patterns
 - Exclude generated files
@@ -348,6 +361,7 @@ git grep -I "." -- | head -5  # Will show text files only
 ```
 
 **Binary considerations:**
+
 - Git automatically detects binary files
 - Text search in binaries usually not useful
 - May want to exclude common binary types
@@ -378,6 +392,7 @@ git grep -c "TODO" -- "*.py" | sort -t: -k2 -n
 ```
 
 **Output customization:**
+
 - Function context display
 - Color control for terminals
 - Script-friendly formats
@@ -408,6 +423,7 @@ ag "pattern" --files-with-matches | xargs git log --oneline --
 ```
 
 **Tool combinations:**
+
 - System utilities (wc, sort, uniq)
 - Modern search tools (rg, ag)
 - File processing tools
@@ -434,6 +450,7 @@ git grep -l "deprecated" | xargs -I {} sh -c 'echo "=== {} ==="; git blame {} | 
 ```
 
 **Analysis techniques:**
+
 - Frequency counting
 - Statistical summaries
 - Cross-referencing with blame
@@ -460,6 +477,7 @@ git log --follow -G"class.*User" --oneline
 ```
 
 **Evolution tracking:**
+
 - Line-specific history
 - Function-level tracking
 - Pattern evolution
@@ -486,6 +504,7 @@ git grep -E "(TODO|FIXME).*security" -i
 ```
 
 **Security search patterns:**
+
 - Credential detection
 - Dangerous function usage
 - Security-related comments
@@ -513,6 +532,7 @@ git grep "^.{120,}$" -- "*.py"
 ```
 
 **Quality indicators:**
+
 - Debug statements
 - Commented code blocks
 - Magic numbers
@@ -549,6 +569,7 @@ done
 ```
 
 **Automation benefits:**
+
 - Consistent search procedures
 - Combined search strategies
 - Repeatable analysis
@@ -577,6 +598,7 @@ time ag "pattern"
 ```
 
 **Performance considerations:**
+
 - Repository size impact
 - Search scope optimization
 - Tool comparison
@@ -627,6 +649,7 @@ git grep -F "literal.string"   # Fixed string
 Guidelines for effective content searching:
 
 **Search strategy:**
+
 1. Start with current files
 1. Expand to recent history if needed
 1. Use specific file patterns when possible
@@ -637,12 +660,14 @@ Guidelines for effective content searching:
 ## Search Best Practices (cont.)
 
 **Performance:**
+
 1. Limit search scope appropriately
 1. Use specific patterns over broad ones
 1. Exclude unnecessary file types
 1. Consider using external tools for large repos
 
 **Accuracy:**
+
 1. Test regex patterns carefully
 1. Use word boundaries for exact matches
 1. Consider case sensitivity needs
@@ -655,6 +680,7 @@ Guidelines for effective content searching:
 **Scenario:** Implement comprehensive content search strategies for a large codebase with security and code quality requirements.
 
 **Basic tasks:**
+
 1. **Current content analysis:**
    - Find all TODO/FIXME items with context
    - Locate debug statements across file types
@@ -679,6 +705,7 @@ Guidelines for effective content searching:
 ## Lab Exercise: Content Search Mastery (cont.) (cont.)
 
 **Advanced tasks:**
+
 1. **Automation development:**
    - Create scripts for common search patterns
    - Implement automated security scanning

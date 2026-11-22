@@ -20,6 +20,7 @@ audience:
 Transform development through natural language interaction
 
 This chapter covers:
+
 1. Using ChatGPT/Claude/Gemini for development
 1. Problem-solving with AI chat
 1. Learning and research techniques
@@ -51,6 +52,7 @@ Beyond autocomplete to true collaboration
 ## ChatGPT for Developers
 
 **Strengths**:
+
 - Vast knowledge base
 - Code generation across languages
 - Problem decomposition
@@ -65,6 +67,7 @@ Beyond autocomplete to true collaboration
 ## Claude for Development
 
 **Strengths**:
+
 - Longer context window (100K+ tokens)
 - Exceptional code reasoning
 - Detailed explanations
@@ -79,6 +82,7 @@ Beyond autocomplete to true collaboration
 ## Gemini for Development
 
 **Strengths**:
+
 - Google ecosystem integration
 - Multi-modal capabilities
 - Real-time information
@@ -160,6 +164,7 @@ def process_data(data: List[float]) -> List[float]:
 Mining AI for insights:
 
 **Effective questions**:
+
 - "What are the trade-offs between X and Y?"
 - "What edge cases should I consider?"
 - "What's the industry best practice for...?"
@@ -183,6 +188,7 @@ Example dialogue:
 **You**: "I need to find all pairs in an array that sum to a target"
 
 **AI**: "Here are three approaches with trade-offs:
+
 1. Nested loops - O(n²) time, O(1) space
 1. Hash map - O(n) time, O(n) space
 1. Two pointers - O(n log n) time, O(1) space"
@@ -268,6 +274,7 @@ Discovering new technologies:
 **You**: "Should I use Redis or Memcached for my caching layer?"
 
 **AI**: Provides:
+
 - Feature comparison table
 - Use case recommendations
 - Performance benchmarks
@@ -398,6 +405,7 @@ Rapid prototyping workflow:
 **You**: "I need a quick prototype for a URL shortener service"
 
 **AI provides**:
+
 1. Basic Express server setup
 1. URL validation and shortening logic
 1. Simple in-memory storage

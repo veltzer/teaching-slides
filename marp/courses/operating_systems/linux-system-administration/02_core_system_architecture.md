@@ -23,6 +23,7 @@ audience:
 ---
 
 ## Linux Filesystem Hierarchy Standard (FHS): Details
+
 - `/bin`, `/sbin` - essential binaries
 - `/etc` - system configuration
 - `/var` - variable data (logs, mail, spool)
@@ -117,6 +118,7 @@ df -i
 ---
 
 ## The Boot Process Overview: Details
+
 1. Firmware (BIOS/UEFI) performs POST and finds boot device
 1. Bootloader (`GRUB2`) loads kernel and `initramfs`
 1. Kernel initializes hardware and mounts root filesystem
@@ -187,6 +189,7 @@ update-initramfs -c -k $(uname -r)
 ```
 
 Purpose:
+
 - Load drivers needed to mount root filesystem
 - Handle encrypted root partitions
 - Assemble RAID/LVM before root mount
@@ -634,6 +637,7 @@ sysctl -p
 ```
 
 Common tunable parameters:
+
 - `vm.swappiness` - swap aggressiveness
 - `net.core.somaxconn` - max socket connections
 - `fs.file-max` - max open file descriptors
@@ -856,6 +860,7 @@ systemctl list-sockets
 ---
 
 ## Socket Activation Benefits: Details
+
 - Faster boot: services start only when needed
 - No port conflicts: `systemd` holds sockets during restarts
 - Zero-downtime restarts: connections queue while service restarts
@@ -1035,6 +1040,7 @@ ls /usr/lib/sysusers.d/
 ```
 
 Advantages over manual `useradd`:
+
 - Declarative and idempotent
 - Runs early in boot before services start
 - Automatically assigns UIDs from the system range

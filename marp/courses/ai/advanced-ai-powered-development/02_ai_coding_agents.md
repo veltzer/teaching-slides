@@ -118,6 +118,7 @@ Modern agents combine planning with a **tool-use loop**:
 ## Architecture: Tool-Use Loops (cont.)
 
 **Key tools in coding agents**:
+
 - `read_file`, `edit_file`, `write_file`
 - `bash` / `shell` execution
 - `grep` / `glob` for codebase search
@@ -144,6 +145,7 @@ Advanced setups use multiple agents collaborating:
 1. **Execution agents**: each subtask runs in parallel with a faster model
 1. **Review agent**: validates outputs and merges results
 **Use cases**:
+
 - Large-scale refactors across many files simultaneously
 - Generating tests for multiple modules in parallel
 - Code review with separate security, style, and correctness agents
@@ -220,6 +222,7 @@ git diff HEAD~3 | claude -p "review these changes"
 ```
 
 **Key differentiators**:
+
 - Full shell access within your project
 - Reads and edits files with diff-based patching
 - Runs tests, interprets failures, and retries
@@ -298,10 +301,12 @@ Agent steps:
 ## Error Recovery: Observe-Diagnose-Retry Loop
 
 The **observe-diagnose-retry** loop:
+
 1. Agent runs a tool (e.g., `npm test`) and it fails
 1. Agent reads the error output and reasons about the cause
 1. Agent edits the code and retries the tool
 1. Loop continues until the test passes or a retry limit is hit
+
 - Good agents cap retries to avoid infinite loops
 
 ---
@@ -322,6 +327,7 @@ npm test  # one test fails
 ## Hands-On: Agent-Driven Bug Fix (cont.)
 
 **Steps**:
+
 1. Feed the failing test output to your agent
 1. Observe: does the agent find the right file?
 1. Observe: does the agent understand the root cause?
@@ -329,6 +335,7 @@ npm test  # one test fails
 1. Review the diff the agent produced
 
 **Discussion**:
+
 - How many iterations did the agent need?
 - Did the fix match what you would have written?
 
@@ -339,9 +346,11 @@ npm test  # one test fails
 Agents need boundaries. Common permission tiers:
 
 **Read-only** (safe):
+
 - File reading, codebase search, `git log`, `git diff`
 
 **Write with approval** (default in most tools):
+
 - File edits shown as diffs for user to accept/reject
 - Shell commands displayed before execution
 
@@ -350,6 +359,7 @@ Agents need boundaries. Common permission tiers:
 ## Permissions and Safety Models (cont.)
 
 **Autonomous** (opt-in, use carefully):
+
 - Agent runs without confirmation prompts
 - Useful for trusted, well-scoped tasks
 
@@ -375,6 +385,7 @@ Agents with tool access can cause real damage:
 ## Agent Safety: What Can Go Wrong (cont.)
 
 **Mitigations**:
+
 - Always work on a git branch with uncommitted changes stashed
 - Use permission tiers to require approval for destructive operations
 - Set token and cost limits per session
@@ -457,10 +468,12 @@ A `CLAUDE.md` file teaches the agent your project's conventions:
 Writing effective instructions that guide agent behavior:
 
 **Be specific about the outcome**:
+
 - Bad: "improve this code"
 - Good: "add input validation to `createUser` that rejects emails without an `@` sign"
 
 **Constrain the scope**:
+
 - "only modify files in `src/auth/`"
 - "do not add new dependencies"
 
@@ -469,10 +482,12 @@ Writing effective instructions that guide agent behavior:
 ## Prompt Engineering for Agents (cont.)
 
 **Provide acceptance criteria**:
+
 - "all existing tests must still pass"
 - "add a test for the new validation logic"
 
 **Reference existing patterns**:
+
 - "follow the same error handling pattern used in `OrderService.ts`"
 
 - Treat agent prompts like user stories: clear, scoped, testable
@@ -514,6 +529,7 @@ Agents must work within finite context windows:
 ## Token Budgets: Strategies
 
 **Strategies agents use to stay within budget**:
+
 1. **Repo maps**: compact outline of files and symbols (Aider approach)
 1. **Selective reading**: only load files relevant to the current step
 1. **Summarization**: compress earlier conversation turns
@@ -545,6 +561,7 @@ claude -p "add a note to CLAUDE.md about our test conventions"
 Agents vary in effectiveness depending on the task type:
 
 **Agents excel at**:
+
 - Bug fixes with clear error messages
 - Mechanical refactors (rename, restructure, migrate patterns)
 - Test generation from existing code
@@ -556,6 +573,7 @@ Agents vary in effectiveness depending on the task type:
 ## Comparing Agent Effectiveness (cont.)
 
 **Agents struggle with**:
+
 - Novel architecture decisions
 - Performance optimization without profiling data
 - Tasks requiring deep domain knowledge not in the codebase
@@ -579,6 +597,7 @@ Measuring real-world agent performance with standardized tests:
 ## Agent Benchmarking: SWE-bench and Beyond (cont.)
 
 **What benchmarks miss**:
+
 - Multi-file architectural changes
 - Performance and security considerations
 - Integration with existing team workflows
@@ -596,6 +615,7 @@ Practical metrics for evaluating agent-assisted development:
 1. **Defect rate**: do agent-generated changes introduce more bugs?
 
 **Rule of thumb**: if you spend more time reviewing and fixing agent output than writing the code yourself, adjust your approach:
+
 - Break the task into smaller pieces
 - Provide more context upfront
 - Switch to a different tool for that task type
@@ -652,6 +672,7 @@ Mistakes that reduce agent effectiveness:
 ## Common Agent Anti-Patterns (cont.)
 
 **Fix the pattern, not the symptom**:
+
 - Write clear, scoped prompts with explicit acceptance criteria
 - Always review diffs line by line
 - Run the test suite after every agent change

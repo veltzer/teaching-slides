@@ -11,6 +11,7 @@ audience:
 # Python Environments
 
 ## Overview
+
 - Python package management
 - Virtual environments
 - Dependency management
@@ -781,6 +782,7 @@ requests = "~2.25.1"
 ## Practical Workflow: venv
 
 ## Step-by-Step Project Setup
+
 - Create project directory
 - Create and activate virtual environment
 - Install packages
@@ -814,6 +816,7 @@ echo "venv/" > .gitignore
 ## Practical Workflow: pipenv
 
 ## Step-by-Step Project Setup (cont.)
+
 - Create project directory
 - Initialize Pipenv project
 - Install dependencies
@@ -850,6 +853,7 @@ git commit -m "Initialize project with dependencies"
 ## Practical Workflow: poetry
 
 ## Step-by-Step Project Setup (cont. 2)
+
 - Create new poetry project
 - Configure project metadata
 - Add dependencies
@@ -1176,6 +1180,7 @@ monorepo/
 ## Summary
 
 ## Key Takeaways
+
 - Always use virtual environments
 - Choose tools appropriate for your project
 - Lock dependencies for applications
@@ -1189,6 +1194,7 @@ monorepo/
 ## Resources
 
 ## Further Learning
+
 - Python Packaging User Guide: packaging.python.org
 - Python Dependency Management Guide: realpython.com
 - Tool documentation:

@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Cloud Storage Overview
+
 - Storage as a service, not a disk to manage
 - Object storage: the cloud-native default
 - Virtually unlimited capacity
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## What Do You Get?
+
 - Object storage: S3, Blob Storage, Cloud Storage
 - 11 nines of durability (99.999999999%)
 - Data replicated across multiple facilities
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## How is it Different from a Disk?
+
 - Not a file system (no directories, no POSIX)
 - Objects accessed by key, not path
 - No in-place updates (write full object)
@@ -44,6 +47,7 @@ audience:
 ---
 
 ## Object Storage Architecture: Details
+
 - Flat namespace with key-based access
 - Metadata attached to each object
 - Eventual consistency for some operations (mostly consistent now)
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## How Costly Is It?
+
 - Storage: $0.02-0.03/GB/month (standard tier)
 - Requests: $0.005 per 1000 GET, $0.05 per 1000 PUT
 - Data transfer out: $0.09/GB (first 10 TB)
@@ -68,6 +73,7 @@ audience:
 ---
 
 ## Cost Optimization for Storage
+
 - Use lifecycle policies to move data to cheaper tiers
 - Standard -> Infrequent Access -> Glacier
 - Delete old versions and expired objects
@@ -77,6 +83,7 @@ audience:
 ---
 
 ## Storage Tiers: Details
+
 - Hot: frequently accessed, highest cost
 - Warm: infrequent access, lower cost
 - Cold: archive, very low cost, retrieval time
@@ -92,6 +99,7 @@ audience:
 ---
 
 ## Durability vs Availability
+
 - Durability: probability data won't be lost (11 nines)
 - Availability: probability you can access data (99.99%)
 - High durability doesn't mean always accessible
@@ -101,6 +109,7 @@ audience:
 ---
 
 ## Types of Durability
+
 - Single-AZ: data in one data center (risk of facility failure)
 - Multi-AZ: data replicated across AZs (standard)
 - Cross-Region: data replicated across Regions (highest)
@@ -110,6 +119,7 @@ audience:
 ---
 
 ## Object Storage Use Cases
+
 - Static website hosting
 - Data lake and analytics
 - Application assets (images, videos, documents)
@@ -119,6 +129,7 @@ audience:
 ---
 
 ## Object Storage Patterns
+
 - Direct upload: client uploads directly to storage (signed URLs)
 - CDN origin: serve content globally via edge caching
 - Event-driven: trigger processing on upload (Lambda, Functions)
@@ -128,6 +139,7 @@ audience:
 ---
 
 ## Cross-Region Replication
+
 - Replicate objects to another Region
 - Compliance, latency, and DR use cases
 - Asynchronous replication
@@ -137,6 +149,7 @@ audience:
 ---
 
 ## Data Lakes on Object Storage
+
 - Store raw data in any format
 - Schema on read (not schema on write)
 - Query with Athena, BigQuery, Presto
@@ -146,6 +159,7 @@ audience:
 ---
 
 ## Lifecycle Policies
+
 - Automatically transition objects between tiers
 - Delete expired objects
 - Example: Standard -> IA after 30 days -> Glacier after 90
@@ -155,6 +169,7 @@ audience:
 ---
 
 ## Multi-Part Upload
+
 - Required for objects > 5 GB
 - Recommended for objects > 100 MB
 - Upload parts in parallel
@@ -164,6 +179,7 @@ audience:
 ---
 
 ## Transfer Acceleration
+
 - Use CloudFront edge locations for uploads
 - Faster long-distance transfers
 - Especially useful for global users
@@ -173,6 +189,7 @@ audience:
 ---
 
 ## Security for Object Storage
+
 - Bucket policies and IAM policies
 - Block Public Access (enable by default)
 - Server-side encryption (SSE)
@@ -205,6 +222,7 @@ audience:
 ---
 
 ## Object Storage Best Practices
+
 - Enable versioning for critical data
 - Use lifecycle policies from day one
 - Block public access unless explicitly needed
@@ -215,6 +233,7 @@ audience:
 ---
 
 ## S3 Select and Glacier Select
+
 - Query data in S3 without downloading entire object
 - SQL-like expressions on CSV, JSON, Parquet
 - Reduce data transfer costs
@@ -224,6 +243,7 @@ audience:
 ---
 
 ## Object Storage Consistency
+
 - S3 provides strong read-after-write consistency
 - PUT -> immediately readable with latest data
 - DELETE -> immediately reflected
@@ -233,6 +253,7 @@ audience:
 ---
 
 ## Comparing Storage Costs
+
 - S3 Standard: ~$0.023/GB/month
 - S3 IA: ~$0.0125/GB/month
 - S3 Glacier: ~$0.004/GB/month
@@ -249,6 +270,7 @@ audience:
 ---
 
 ## Block Storage in Detail
+
 - EBS: network-attached, persistent, per-instance
 - Instance Store: local NVMe, ephemeral, highest performance
 - EBS snapshots for backup and migration
@@ -258,6 +280,7 @@ audience:
 ---
 
 ## File Storage in the Cloud
+
 - EFS: managed NFS, multi-instance shared access
 - FSx for Windows: SMB protocol, Active Directory
 - FSx for Lustre: HPC, high throughput
@@ -267,6 +290,7 @@ audience:
 ---
 
 ## When Object Storage Is Not Enough
+
 - Need POSIX file system semantics: use EFS/FSx
 - Need low-latency block access: use EBS
 - Need shared file access: use managed file systems

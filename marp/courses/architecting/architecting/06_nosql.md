@@ -172,6 +172,7 @@ The nested array lives inside the user document. One fetch returns everything.
 ## Document Trade-offs
 
 **Pros**:
+
 - No joins for aggregate reads
 - Schema evolves per-document; no migrations
 - Developer model matches application objects
@@ -181,6 +182,7 @@ The nested array lives inside the user document. One fetch returns everything.
 ## Document Trade-offs (cont.)
 
 **Cons**:
+
 - Duplication if the same entity appears in many parents
 - Document size limits (MongoDB: 16 MB)
 - Cross-document transactions are expensive or unavailable
@@ -237,11 +239,13 @@ The partition key (`user_id`) determines which node stores the data. The cluster
 ## Wide-Column Trade-offs
 
 **Pros**:
+
 - Massive write throughput (LSM-trees optimize for appends)
 - Scales linearly with nodes (Cassandra)
 - Time-series and event data fit naturally
 
 **Cons**:
+
 - Query patterns must be known upfront
 - Ad-hoc queries require full scan or secondary indexes
 - Eventual consistency by default; strong reads cost latency
@@ -347,6 +351,7 @@ If `R + W > N`, at least one replica in the read set has the latest write → st
 ## Quorum: R + W > N (cont.)
 
 Common settings (N = 3):
+
 - **W = 1, R = 1** — fast, eventual consistency
 - **W = 3, R = 1** — fast reads, slow writes
 - **W = 2, R = 2** — balanced, strong reads
@@ -361,6 +366,7 @@ Cassandra, DynamoDB, and Riak all expose these as tunable knobs.
 **Per-document** is the common denominator. Most NoSQL systems guarantee atomicity of a single document/row update.
 
 **Multi-document transactions** — supported, with restrictions:
+
 - **MongoDB** — since 4.0, multi-document ACID transactions (slower, still per-replica-set)
 - **DynamoDB** — `TransactWriteItems`, up to 100 items, same region
 - **Cassandra** — lightweight transactions (`IF NOT EXISTS`) via Paxos, one partition

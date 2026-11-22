@@ -162,6 +162,7 @@ gtk = { version = "0.1", optional = true }
 <div>
 
 ## Structure
+
 - Clear hierarchy
 - Logical grouping
 - Public interfaces
@@ -171,6 +172,7 @@ gtk = { version = "0.1", optional = true }
 <div>
 
 ## Naming
+
 - Descriptive names
 - Consistent style
 - Clear purpose
@@ -394,6 +396,7 @@ cargo new my_project --bin
 ## Practice Exercise
 
 Create a complete project that:
+
 1. Uses proper structure
 1. Implements workspaces
 1. Has comprehensive tests
@@ -403,6 +406,7 @@ Create a complete project that:
 ---
 
 ## Summary
+
 - Project organization
 - Tools and workflows
 - Documentation

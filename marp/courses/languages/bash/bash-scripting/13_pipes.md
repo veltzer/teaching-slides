@@ -18,6 +18,7 @@ audience:
 ---
 
 ## What is a Pipe?
+
 - Connects stdout of one command to stdin of another
 - Data flows left to right
 - Each command runs in its own process

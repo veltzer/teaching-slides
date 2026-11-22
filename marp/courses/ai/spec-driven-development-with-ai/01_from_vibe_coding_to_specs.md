@@ -18,6 +18,7 @@ audience:
 # From Vibe Coding to Specs
 
 ## Overview
+
 - Why prompt-by-prompt development stops working once a task spans more than one sitting
 - The core idea of Spec-Driven Development (`SDD`): the specification is the source of truth
 - How `SDD` relates to `TDD`, `BDD` and `DDD`, and why it is not waterfall in disguise

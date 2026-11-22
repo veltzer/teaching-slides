@@ -267,6 +267,7 @@ print(t[1:])    # (2, 3)
 ---
 
 ## Why Use Tuples?
+
 - Immutable: safe to use as dictionary keys
 - Slightly faster than lists
 - Signal intent: data should not change
@@ -433,6 +434,7 @@ defaults |= custom
 ---
 
 ## Dictionary Ordering
+
 - Since Python 3.7, dictionaries maintain insertion order
 - Before 3.7, use `collections.OrderedDict`
 
@@ -522,6 +524,7 @@ print(a.isdisjoint({4, 5}))  # True (no common elements)
 ---
 
 ## Frozen Sets
+
 - Immutable version of a set
 - Can be used as dictionary keys or set elements
 
@@ -539,6 +542,7 @@ s = {frozenset([1, 2]), frozenset([3, 4])}
 ---
 
 ## The `enumerate()` Function
+
 - Pairs each element with its index
 
 ```python
@@ -574,6 +578,7 @@ for i, fruit in enumerate(fruits, start=1):
 ---
 
 ## The `zip()` Function
+
 - Combines iterables element by element
 
 ```python
@@ -637,6 +642,7 @@ print(list(zip_longest(a, b, fillvalue=0)))
 ---
 
 ## When to Use What?
+
 - **List**: Ordered collection, need index access, allow duplicates
 - **Tuple**: Immutable sequence, function return values, dict keys
 - **Dict**: Key-value mapping, fast lookup by key
@@ -702,6 +708,7 @@ for subject, scores in grades.items():
 ---
 
 ## The `collections` Module
+
 - `Counter`: Count occurrences
 - `defaultdict`: Dict with default factory
 - `deque`: Double-ended queue
@@ -757,6 +764,7 @@ print(d)           # deque([1, 2, 3])
 ---
 
 ## Summary
+
 - **Lists**: Mutable, ordered, `[]`, most versatile
 - **Tuples**: Immutable, ordered, `()`, safe and fast
 - **Dicts**: Key-value pairs, `{}`, O(1) lookup

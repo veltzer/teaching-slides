@@ -17,12 +17,14 @@ audience:
 ## Overview
 
 Buildroot is:
+
 - Simple build system
 - Generates embedded Linux systems
 - Uses familiar technologies
 - Cross-compilation toolchain
 
 Key features:
+
 - `Kconfig` configuration
 - `Makefile` based
 - Minimal learning curve
@@ -44,6 +46,7 @@ Key features:
 ## Buildroot Philosophy (cont.)
 
 Best for:
+
 - Simple embedded systems
 - Quick prototypes
 - Learning embedded Linux
@@ -102,6 +105,7 @@ buildroot/
 ### Menuconfig Interface
 
 Main menu structure:
+
 - Target options
 - Build options
 - Toolchain
@@ -793,6 +797,7 @@ BR2_RELRO_FULL=y
 ### From Buildroot to Yocto
 
 When you need:
+
 - More packages
 - Runtime package management
 - Multiple machine support
@@ -804,6 +809,7 @@ When you need:
 ## Migration Path (cont.)
 
 Keep Buildroot for:
+
 - Prototyping
 - Simple products
 - Resource constraints
@@ -852,12 +858,14 @@ Keep Buildroot for:
 ## Summary
 
 Buildroot provides:
+
 - Simple build system
 - Fast development cycle
 - Minimal footprint
 - Easy customization
 
 Perfect for:
+
 - Embedded devices
 - Learning Linux
 - Rapid prototyping

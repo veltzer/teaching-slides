@@ -56,6 +56,7 @@ audience:
 ## Monolithic Architecture Pros and Cons
 
 Pros:
+
 - Simple development and deployment process
 - Easier to understand and maintain for small to medium-sized applications
 - Enables rapid development and iteration in the early stages of a project
@@ -67,6 +68,7 @@ Pros:
 ## Monolithic Architecture Pros and Cons (cont.)
 
 Cons:
+
 - Becomes complex and difficult to maintain as the application grows in size and complexity
 - Tight coupling between components makes it harder to modify or replace individual parts
 - Scaling the application can be challenging as the entire monolith needs to be scaled
@@ -132,6 +134,7 @@ Cons:
 ## Modular Monolith Pros and Cons
 
 Pros:
+
 - Provides a modular structure while maintaining the simplicity of a monolith
 - Enables independent development, testing, and maintenance of modules
 - Allows for incremental adoption and refactoring of legacy monoliths
@@ -143,6 +146,7 @@ Pros:
 ## Modular Monolith Pros and Cons (cont.)
 
 Cons:
+
 - Modules are still tightly coupled within the monolith
 - Limited scalability compared to microservices
 - Shared database can become a bottleneck and cause tight coupling
@@ -200,6 +204,7 @@ Cons:
 ## Microservices Pros and Cons
 
 Pros:
+
 - Enables independent development, deployment, and scaling of services
 - Supports technology diversity and using the right tool for the job
 - Facilitates incremental adoption and migration from monolithic applications
@@ -210,6 +215,7 @@ Pros:
 ## Microservices Pros and Cons (cont.)
 
 Cons:
+
 - Increases complexity in terms of distributed systems and service orchestration
 - Requires careful design to avoid tight coupling and maintain data consistency
 - Can lead to increased overhead in terms of communication and data serialization
@@ -267,6 +273,7 @@ Cons:
 ## Service-Oriented Architecture Pros and Cons
 
 Pros:
+
 - Enables integration and interoperability between heterogeneous systems
 - Supports reuse of business functionality across multiple applications
 - Facilitates loose coupling and independence of services
@@ -278,6 +285,7 @@ Pros:
 ## Service-Oriented Architecture Pros and Cons (cont.)
 
 Cons:
+
 - Requires significant upfront design and modeling of service contracts
 - Can lead to increased complexity in terms of service governance and management
 - May introduce performance overhead due to message serialization and transport
@@ -335,6 +343,7 @@ Cons:
 ## Event-Driven Architecture Pros and Cons
 
 Pros:
+
 - Enables loose coupling and asynchronous communication between components
 - Supports building reactive and real-time systems that can respond to events
 - Facilitates scalability and flexibility, as producers and consumers can be added or removed independently
@@ -346,6 +355,7 @@ Pros:
 ## Event-Driven Architecture Pros and Cons (cont.)
 
 Cons:
+
 - Can introduce complexity in terms of event management, routing, and consistency
 - Requires careful design to ensure reliable event delivery and processing
 - Debugging and tracing event flows can be challenging in a distributed system
@@ -415,6 +425,7 @@ Cons:
 ## Serverless Pros and Cons
 
 Pros:
+
 - Eliminates server management and infrastructure concerns
 - Provides automatic scaling based on incoming requests or events
 - Offers pay-per-use pricing, reducing costs for infrequently used functions
@@ -426,6 +437,7 @@ Pros:
 ## Serverless Pros and Cons (cont.)
 
 Cons:
+
 - Limited control over the execution environment and performance
 - Cold starts can introduce latency for infrequently invoked functions
 - Vendor lock-in and dependency on the serverless platform
@@ -490,6 +502,7 @@ Cons:
 ## Space-Based Pros and Cons
 
 Pros:
+
 - Enables high scalability and performance through data replication and partitioning
 - Supports low latency and high throughput for read and write operations
 - Provides fault tolerance and resilience through distributed processing units
@@ -501,6 +514,7 @@ Pros:
 ## Space-Based Pros and Cons (cont.)
 
 Cons:
+
 - Increases complexity in terms of data consistency and synchronization
 - Requires careful design and configuration of data partitioning and replication
 - May introduce overhead in terms of memory usage and network communication
@@ -565,6 +579,7 @@ Cons:
 ## Share-Nothing Pros and Cons
 
 Pros:
+
 - High scalability by adding more nodes to the system
 - Improved performance through parallel processing and distributed data
 - Fault tolerance and resilience as failures are isolated to individual nodes
@@ -576,6 +591,7 @@ Pros:
 ## Share-Nothing Pros and Cons (cont.)
 
 Cons:
+
 - Increased complexity in terms of system design and coordination between nodes
 - Requires careful data partitioning and distribution strategies
 - Message passing and network communication can introduce latency and overhead

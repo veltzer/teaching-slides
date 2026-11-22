@@ -7,6 +7,7 @@
 C++ integer types have implementation-defined sizes, making portable code challenging
 
 **Standard guarantees (minimum sizes):**
+
 - `char` ≥ 8 bits
 - `short` ≥ 16 bits
 - `int` ≥ 16 bits
@@ -18,6 +19,7 @@ C++ integer types have implementation-defined sizes, making portable code challe
 ## The Integer Size Problem (cont.)
 
 **Reality varies by platform:**
+
 - 32-bit systems: `int` = 32 bits, `long` = 32 bits
 - 64-bit Windows: `int` = 32 bits, `long` = 32 bits
 - 64-bit Unix/Linux: `int` = 32 bits, `long` = 64 bits
@@ -1774,6 +1776,7 @@ void demonstrateADL() {
 ## Best Practices Summary
 
 **Portable Integer Guidelines:**
+
 1. **Use fixed-width types** (`int32_t`, `uint64_t`) when exact size matters
 1. **Use size_t** for array indices and container sizes
 1. **Use appropriate fastest types** for performance-critical loops
@@ -1785,6 +1788,7 @@ void demonstrateADL() {
 ## Best Practices Summary (cont.)
 
 **Template Best Practices:**
+
 1. **Constrain templates** with SFINAE or concepts (C++20)
 1. **Provide clear error messages** with static_assert
 1. **Use explicit instantiation** to control compilation units
@@ -1796,6 +1800,7 @@ void demonstrateADL() {
 ## Best Practices Summary (cont.) (cont.)
 
 **Constructor Design:**
+
 1. **Single point of maintenance** through delegation
 1. **Validate all parameters** with appropriate error handling
 1. **Use custom literals** for intuitive initialization

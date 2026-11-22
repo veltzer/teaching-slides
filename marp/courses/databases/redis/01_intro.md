@@ -132,6 +132,7 @@ redis_version:7.0.5
 Default config file: `/etc/redis/redis.conf`
 
 Key configurations:
+
 - `port 6379` - Default port
 - `bind 127.0.0.1` - Interface to listen on
 - `maxmemory 100mb` - Memory limit
@@ -354,6 +355,7 @@ SCAN cursor [MATCH pattern] [COUNT count]
 ## Key Naming Conventions: Details
 
 Best practices:
+
 - Use namespaces: `object-type:id:field`
 - Examples:
     - `user:1000:followers`
@@ -388,6 +390,7 @@ Best practices:
 ## Redis Security Basics
 
 Security considerations:
+
 - Bind to specific interfaces
 - Password authentication with `requirepass`
 - Disable/rename dangerous commands
@@ -426,6 +429,7 @@ CLIENT LIST  # Connected clients
 ```
 
 Monitoring tools:
+
 - redis-cli
 - Redis Dashboard
 - Prometheus + Redis Exporter

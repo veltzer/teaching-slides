@@ -123,12 +123,14 @@ server {
 ## Other Related Terms
 
 ### Firewall
+
 - Monitors and controls network traffic based on rules
 - **Stateful**: tracks connection state (allows return traffic automatically)
 - **Stateless**: evaluates each packet independently against rules
 - Modern firewalls inspect application-layer content (Layer 7)
 
 ### VPN (Virtual Private Network)
+
 - Creates an encrypted tunnel over a public network
 - Remote workers appear to be on the office LAN
 - Common protocols: WireGuard, OpenVPN, IPSec

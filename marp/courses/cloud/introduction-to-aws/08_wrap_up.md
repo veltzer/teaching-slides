@@ -16,6 +16,7 @@ audience:
 ---
 
 ## The Well-Architected Framework
+
 - Six pillars for building in the cloud
 - AWS Well-Architected Tool for self-review
 - Best practices for each pillar
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Pillar: Operational Excellence
+
 - Run and monitor systems effectively
 - Automate changes and responses
 - Learn from operational events
@@ -40,6 +42,7 @@ audience:
 ---
 
 ## Pillar: Security
+
 - Protect information and systems
 - Strong identity foundation (IAM)
 - Enable traceability (CloudTrail)
@@ -49,6 +52,7 @@ audience:
 ---
 
 ## Pillar: Reliability
+
 - Recover from failures automatically
 - Test recovery procedures
 - Scale horizontally for availability
@@ -58,6 +62,7 @@ audience:
 ---
 
 ## Pillar: Performance Efficiency
+
 - Use computing resources efficiently
 - Select the right resource types and sizes
 - Monitor performance metrics
@@ -67,6 +72,7 @@ audience:
 ---
 
 ## Pillar: Cost Optimization
+
 - Avoid unnecessary costs
 - Understand and control spending
 - Select the right pricing model
@@ -76,6 +82,7 @@ audience:
 ---
 
 ## Pillar: Sustainability
+
 - Minimize environmental impact
 - Understand your impact
 - Maximize utilization
@@ -85,6 +92,7 @@ audience:
 ---
 
 ## Understanding AWS Pricing
+
 - Pay-as-you-go: no upfront costs
 - Save when you commit (Reserved, Savings Plans)
 - Pay less by using more (volume discounts)
@@ -94,6 +102,7 @@ audience:
 ---
 
 ## Pricing by Service Type
+
 - Compute: per second or per hour
 - Storage: per GB per month
 - Data transfer: per GB out (inbound is free)
@@ -103,6 +112,7 @@ audience:
 ---
 
 ## AWS Pricing Calculator
+
 - Estimate costs before deploying
 - Build detailed cost models
 - Compare configurations
@@ -112,6 +122,7 @@ audience:
 ---
 
 ## AWS Cost Explorer
+
 - Visualize spending over time
 - Filter by service, Region, tag
 - Forecast future costs
@@ -121,6 +132,7 @@ audience:
 ---
 
 ## AWS Budgets
+
 - Set custom cost and usage budgets
 - Alert when thresholds are exceeded
 - Track Reserved Instance utilization
@@ -159,6 +171,7 @@ aws budgets create-budget \
 ---
 
 ## Cost Allocation Tags
+
 - Tag resources by project, team, environment
 - Appear in billing reports
 - AWS-generated tags (e.g., aws:createdBy)
@@ -168,6 +181,7 @@ aws budgets create-budget \
 ---
 
 ## Avoiding Bill Surprises
+
 - Set up billing alerts immediately
 - Use AWS Budgets for thresholds
 - Monitor Free Tier usage dashboard
@@ -177,6 +191,7 @@ aws budgets create-budget \
 ---
 
 ## AWS Support Plans
+
 - Basic: free, documentation and forums
 - Developer: email support, 12-hour response
 - Business: 24/7 phone, 1-hour response for production down
@@ -186,6 +201,7 @@ aws budgets create-budget \
 ---
 
 ## Path to AWS Certification
+
 1. AWS Certified Cloud Practitioner (foundational)
 1. AWS Certified Solutions Architect - Associate
 1. AWS Certified Developer - Associate
@@ -201,6 +217,7 @@ aws budgets create-budget \
 ---
 
 ## Cloud Practitioner Exam
+
 - Entry-level certification
 - Cloud concepts, security, technology, billing
 - 65 questions, 90 minutes
@@ -210,6 +227,7 @@ aws budgets create-budget \
 ---
 
 ## Additional AWS Services to Explore
+
 - AWS Lambda: serverless compute
 - Amazon SQS/SNS: messaging
 - AWS Step Functions: workflow orchestration
@@ -219,6 +237,7 @@ aws budgets create-budget \
 ---
 
 ## Learning Resources
+
 - AWS Skill Builder (free and paid courses)
 - AWS documentation and whitepapers
 - AWS re:Invent and re:Post
@@ -228,6 +247,7 @@ aws budgets create-budget \
 ---
 
 ## Hands-On Next Steps
+
 - Create an AWS Free Tier account
 - Launch an EC2 instance
 - Create an S3 bucket and upload objects
@@ -237,6 +257,7 @@ aws budgets create-budget \
 ---
 
 ## Key Takeaways
+
 - AWS is the leading cloud platform with 200+ services
 - Core services: EC2, S3, VPC, IAM, RDS, DynamoDB
 - Security is a shared responsibility
@@ -247,6 +268,7 @@ aws budgets create-budget \
 ---
 
 ## Additional AWS Services Worth Knowing
+
 - Amazon SNS: pub/sub notifications
 - Amazon SQS: message queuing
 - AWS Elastic Beanstalk: easy app deployment
@@ -256,5 +278,6 @@ aws budgets create-budget \
 ---
 
 ## Closing Thoughts
+
 - Continue learning with hands-on practice
 - AWS Free Tier is your sandbox

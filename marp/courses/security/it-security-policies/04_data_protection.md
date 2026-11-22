@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Why Data Protection Matters
+
 - Data is one of the most valuable assets your organization holds
 - Customer trust depends on how you handle their information
 - Regulatory fines for data breaches can be devastating
@@ -50,6 +51,7 @@ audience:
 ---
 
 ## Personally Identifiable Information (`PII`)
+
 - Full name combined with:
     - Social security / national ID number
     - Date of birth
@@ -118,6 +120,7 @@ audience:
 ---
 
 ## `GDPR` Key Principles (EU Regulation, Global Impact)
+
 - **Lawfulness** - you must have a legal basis to process personal data
 - **Purpose limitation** - collect data only for specified purposes
 - **Data minimization** - collect only what you need
@@ -136,18 +139,21 @@ audience:
 - **Right to object** - people can opt out of certain processing
 
 ### Fines
+
 - Up to 20 million euros or 4% of annual global revenue
 - Whichever is higher
 
 ---
 
 ## `CCPA` - California Consumer Privacy Act
+
 - Right to know what data is collected
 - Right to delete personal information
 - Right to opt out of data selling
 - Right to non-discrimination for exercising rights
 
 ### Why It Matters Even Outside California
+
 - Many companies apply `CCPA` standards globally
 - Other US states are passing similar laws
 - The trend is toward stronger privacy protections everywhere
@@ -165,10 +171,12 @@ audience:
 ---
 
 ## Mobile Device Security
+
 - Company email, files, and apps on your phone are at risk
 - Lost or stolen phones are a major source of data breaches
 
 ### Protection Measures
+
 - Enable screen lock (PIN, fingerprint, or face recognition)
 - Enable remote wipe capability
 - Keep your operating system and apps updated

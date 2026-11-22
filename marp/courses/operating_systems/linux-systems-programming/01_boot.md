@@ -44,6 +44,7 @@ audience:
 ## Firmware Types
 
 ## BIOS (Legacy)
+
 - **Basic Input/Output System**
 - 16-bit real mode operation
 - MBR partition scheme limitation (2TB max)
@@ -54,6 +55,7 @@ audience:
 ## Firmware Types (cont.)
 
 ## UEFI (Modern)
+
 - **Unified Extensible Firmware Interface**
 - 32/64-bit protected mode
 - GPT partition support
@@ -64,6 +66,7 @@ audience:
 ## Boot Process: BIOS vs UEFI
 
 ## BIOS Boot
+
 1. POST → BIOS initialization
 1. Read MBR (first 512 bytes)
 1. Execute MBR bootloader
@@ -74,6 +77,7 @@ audience:
 ## Boot Process: BIOS vs UEFI (cont.)
 
 ## UEFI Boot
+
 1. POST → UEFI initialization
 1. Read ESP (EFI System Partition)
 1. Execute EFI application directly
@@ -84,6 +88,7 @@ audience:
 ## GRUB - Grand Unified Bootloader
 
 ## What is GRUB?
+
 - **Most common Linux bootloader**
 - Supports multiple operating systems
 - Highly configurable
@@ -211,6 +216,7 @@ grub rescue> normal
 ```
 
 ## Common recovery tasks
+
 - Fix broken configurations
 - Boot from different kernels
 - Pass emergency parameters
@@ -240,6 +246,7 @@ linux /vmlinuz root=/dev/sda2 init=/bin/bash
 ## U-Boot - Universal Bootloader
 
 ## Embedded Systems Focus
+
 - **ARM, MIPS, PowerPC, x86**
 - Small footprint
 - Network boot support
@@ -348,6 +355,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 ## What is Secure Boot?
 
 ## Key Concepts
+
 - **Cryptographic verification** of boot components
 - **Chain of trust** from hardware to OS
 - **Prevention** of rootkits and bootkits
@@ -358,6 +366,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 ## What is Secure Boot? (cont.)
 
 ## Requirements
+
 - UEFI firmware
 - Signed bootloader
 - Signed kernel

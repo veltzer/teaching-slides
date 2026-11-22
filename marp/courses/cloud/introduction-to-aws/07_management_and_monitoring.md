@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Why Monitoring Matters
+
 - Detect issues before users do
 - Understand resource utilization
 - Optimize costs
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## AWS Management Tools Overview
+
 - Amazon CloudWatch: metrics and monitoring
 - AWS CloudTrail: API activity logging
 - AWS Config: resource configuration tracking
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## Amazon CloudWatch Overview
+
 - Monitoring and observability service
 - Collects metrics from all AWS services
 - Custom metrics from your applications
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## CloudWatch Metrics
+
 - Pre-built metrics for all AWS services
 - EC2: CPU, network, disk, status checks
 - RDS: connections, IOPS, free storage
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## CloudWatch Custom Metrics
+
 - Publish your own application metrics
 - Memory utilization (not collected by default)
 - Application-level counters
@@ -68,6 +73,7 @@ audience:
 ---
 
 ## CloudWatch Alarms
+
 - Monitor a single metric over time
 - Trigger actions based on thresholds
 - States: OK, ALARM, INSUFFICIENT_DATA
@@ -77,6 +83,7 @@ audience:
 ---
 
 ## CloudWatch Alarm Example
+
 - Metric: EC2 CPUUtilization
 - Threshold: > 80% for 5 minutes
 - Action: send SNS notification to ops team
@@ -92,6 +99,7 @@ audience:
 ---
 
 ## CloudWatch Logs
+
 - Collect and store log files
 - Log Groups: collection of related streams
 - Log Streams: individual sources
@@ -101,6 +109,7 @@ audience:
 ---
 
 ## CloudWatch Logs Insights
+
 - Interactive query language for log analysis
 - Search across log groups
 - Aggregate and visualize log data
@@ -134,6 +143,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## CloudWatch Dashboards
+
 - Customizable visualizations
 - Cross-service and cross-account views
 - Automatic refresh intervals
@@ -143,6 +153,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## CloudWatch Agent
+
 - Install on EC2 instances
 - Collect OS-level metrics (memory, disk space)
 - Collect application log files
@@ -152,6 +163,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## AWS CloudTrail Overview
+
 - Records all API calls in your account
 - Who did what, when, and from where
 - Enabled by default (90-day event history)
@@ -161,6 +173,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## CloudTrail Event Types
+
 - Management Events: control plane operations (create, delete, configure)
 - Data Events: data plane operations (S3 object access, Lambda invocations)
 - Insights Events: detect unusual API activity
@@ -170,6 +183,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## CloudTrail Event Record
+
 - Event time and source
 - User identity (who made the call)
 - Source IP address
@@ -179,6 +193,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## CloudTrail Use Cases
+
 - Security investigation and incident response
 - Compliance auditing (who changed what)
 - Operational troubleshooting
@@ -188,6 +203,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## AWS Config
+
 - Records resource configuration changes over time
 - Configuration history for every resource
 - Compliance rules (managed and custom)
@@ -197,6 +213,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## Config Rules
+
 - Evaluate resource configurations
 - AWS Managed Rules (pre-built)
 - Custom Rules (Lambda functions)
@@ -206,6 +223,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## Config vs CloudTrail
+
 - CloudTrail: who did what (API calls)
 - Config: what is the current state and how did it change
 - CloudTrail: event-focused
@@ -215,6 +233,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## AWS Trusted Advisor
+
 - Best practice recommendations
 - Five categories of checks
 - Some checks free, full set with Business/Enterprise support
@@ -224,6 +243,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## Trusted Advisor Categories
+
 1. Cost Optimization: idle resources, underutilized instances
 1. Performance: overutilized resources, service limits
 1. Security: open ports, MFA, public access
@@ -233,6 +253,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## AWS Systems Manager
+
 - Operational management for AWS resources
 - Patch management across fleets
 - Parameter Store: configuration and secrets
@@ -242,6 +263,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## Systems Manager Parameter Store
+
 - Centralized configuration storage
 - Hierarchical key-value pairs
 - Plaintext or encrypted (KMS)
@@ -251,6 +273,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## AWS Health Dashboard
+
 - Service Health: status of all AWS services by Region
 - Personal Health: events affecting your resources
 - Proactive notifications
@@ -260,6 +283,7 @@ aws cloudwatch put-metric-alarm \
 ---
 
 ## Monitoring Best Practices
+
 - Set alarms for critical metrics from day one
 - Use dashboards for operational visibility
 - Enable CloudTrail in all Regions

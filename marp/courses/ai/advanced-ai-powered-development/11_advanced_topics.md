@@ -18,6 +18,7 @@ audience:
 # Advanced Topics
 
 ## Overview
+
 - Multi-model strategies and cost optimization
 - Fine-tuning vs prompt engineering for development
 - Running local models for privacy and offline work
@@ -350,6 +351,7 @@ Both expose an OpenAI-compatible API for tool integration.
 | `AWQ` | Activation-aware, preserves salient weights | `vLLM`, `TGI` |
 
 Quality tradeoffs by bit-width:
+
 1. **Q8** -- near-lossless, ~50% size reduction
 1. **Q4_K_M** -- good balance, ~75% size reduction
 1. **Q2** -- noticeable degradation, only for constrained environments
@@ -371,6 +373,7 @@ python convert_hf_to_gguf.py ./codellama-7b --outtype q4_k_m
 - Legal landscape is still evolving
 
 Key considerations:
+
 1. Training data provenance matters for license compliance
 1. Most jurisdictions: AI output is not independently copyrightable
 1. The developer who reviews and integrates the code bears responsibility
@@ -418,6 +421,7 @@ Run license scanners (`scancode`, `FOSSA`, `Snyk`) on AI-generated code.
 - Balance productivity gains with risk management
 
 Essential policy areas:
+
 1. **Approved models and providers** -- maintain an allow-list
 1. **Data classification** -- which code can be sent to cloud APIs
 1. **Review requirements** -- AI-generated code must pass standard review
@@ -442,6 +446,7 @@ Essential policy areas:
 - Provides oversight without blocking developer productivity
 
 Board composition:
+
 1. **Engineering lead** -- technical feasibility and integration
 1. **Security representative** -- risk assessment and threat modeling
 1. **Legal/compliance** -- licensing, data privacy, regulatory
@@ -452,6 +457,7 @@ Board composition:
 ## AI Governance: Building a Review Board (cont.)
 
 Evaluation criteria for new AI tools:
+
 1. Data handling and privacy guarantees
 1. Model transparency and audit capabilities
 1. Cost projections at team and org scale
@@ -468,6 +474,7 @@ Meet monthly; publish decisions in an internal decision log.
 - Threat model must extend to prompts, models, and outputs
 
 Key risk areas:
+
 1. **Prompt injection in CI** -- malicious code comments that manipulate AI review bots
 1. **Model poisoning** -- tampered fine-tuning data introduces backdoors
 1. **Data exfiltration** -- sensitive code sent to external APIs without controls
@@ -491,6 +498,7 @@ Key risk areas:
 - Structured onboarding accelerates effective adoption
 
 Recommended onboarding path:
+
 1. **Week 1:** Prompt engineering fundamentals
     - Writing effective system prompts
     - Understanding context windows and token limits
@@ -514,6 +522,7 @@ Recommended onboarding path:
 - Developers may resist AI tools for valid reasons
 
 Common resistance patterns and responses:
+
 1. **"AI will replace me"** -- reframe as augmentation, show productivity data
 1. **"I don't trust the output"** -- teach verification workflows, share error rates
 1. **"It slows me down"** -- provide structured training, pair with power users
@@ -523,6 +532,7 @@ Common resistance patterns and responses:
 ## Change Management for AI Adoption (cont.)
 
 Practical training program:
+
 1. Lunch-and-learn sessions with live demos
 1. Curated prompt libraries for common team tasks
 1. Buddy system pairing skeptics with early adopters
@@ -536,6 +546,7 @@ Practical training program:
 - They bridge the gap between tooling teams and daily practitioners
 
 Identifying advocates:
+
 1. Developers who naturally experiment with new tools
 1. Team leads who track productivity improvements
 1. Engineers who contribute to internal documentation
@@ -545,6 +556,7 @@ Identifying advocates:
 ## Building Internal AI Champions (cont.)
 
 Building a community of practice:
+
 1. Create a dedicated Slack/Teams channel for AI tips
 1. Host bi-weekly show-and-tell sessions for prompt techniques
 1. Maintain a shared wiki of effective patterns and anti-patterns
@@ -586,6 +598,7 @@ Champions should have direct access to the governance board for fast feedback lo
 - Combine quantitative data with developer surveys
 
 Key metrics to track:
+
 1. **Acceptance rate** -- % of AI suggestions accepted
 1. **Time to completion** -- task duration with/without AI
 1. **Code quality** -- defect rate in AI-assisted vs manual code
@@ -650,6 +663,7 @@ Each level requires the foundations of the previous one.
 - Teams must actively address fairness and accessibility
 
 Key concerns:
+
 1. **Bias in suggestions** -- models may default to non-inclusive variable names, culturally biased examples, or inaccessible patterns
 1. **Accessibility gaps** -- AI-generated UIs often omit ARIA labels, keyboard navigation, and screen reader support
 1. **Environmental cost** -- large model inference has a measurable carbon footprint
@@ -659,6 +673,7 @@ Key concerns:
 ## Ethical Considerations in AI Development (cont.)
 
 Mitigations:
+
 1. Include accessibility linting (`axe`, `pa11y`) in AI-assisted pipelines
 1. Add inclusive language checks to code review checklists
 1. Track per-team inference carbon estimates using tools like `codecarbon`
@@ -705,6 +720,7 @@ Mitigations:
 ## Agentic Tool Comparison Matrix (cont.) (cont.)
 
 Selection criteria:
+
 1. Does your workflow require terminal and shell access?
 1. How important is custom tool integration (`MCP`, plugins)?
 1. What level of autonomy is acceptable given your codebase sensitivity?
@@ -716,6 +732,7 @@ Selection criteria:
 - The AI-assisted development landscape is shifting toward deeper integration
 
 Emerging trends:
+
 1. **Longer context windows** -- million-token contexts enable whole-repo understanding
     - Reduces need for retrieval and chunking strategies
 1. **Multi-modal development** -- diagrams, screenshots, and voice as input

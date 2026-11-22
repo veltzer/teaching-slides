@@ -43,6 +43,7 @@ audience:
 ## Why Use Logstash?
 
 **Problems it Solves:**
+
 1. **Data silos** - Data scattered across different systems
 1. **Format inconsistency** - Different log formats and structures
 1. **Real-time processing** - Need to process data as it arrives
@@ -60,6 +61,7 @@ audience:
 ## Logstash Architecture: Details
 
 **Core Components:**
+
 1. **Input Plugins** - Collect data from sources
 1. **Filter Plugins** - Process and transform data
 1. **Output Plugins** - Send data to destinations
@@ -70,6 +72,7 @@ audience:
 ## Input Plugins
 
 **Common Input Sources:**
+
 1. **File** - Log files, CSV files
 1. **Beats** - Filebeat, Metricbeat, etc.
 1. **HTTP** - REST API endpoints
@@ -106,6 +109,7 @@ input {
 ## Filter Plugins
 
 **Data Processing & Transformation:**
+
 1. **Grok** - Parse unstructured data with patterns
 1. **Mutate** - Modify fields (add, remove, rename)
 1. **Date** - Parse timestamps
@@ -194,6 +198,7 @@ filter {
 ```
 
 **Why Important?**
+
 1. Proper time-based indexing in Elasticsearch
 1. Time-series analysis and visualization
 1. Log correlation across systems
@@ -231,6 +236,7 @@ filter {
 ## Output Plugins
 
 **Common Destinations:**
+
 1. **Elasticsearch** - Primary destination for ELK stack
 1. **File** - Write to local files
 1. **HTTP** - Send to web endpoints
@@ -306,6 +312,7 @@ output {
 ## Logstash Performance
 
 **Optimization Strategies:**
+
 1. **Pipeline Workers** - Increase parallel processing
 1. **Batch Size** - Process multiple events together
 1. **Queue Management** - Handle backpressure
@@ -420,6 +427,7 @@ logstash -f config.conf --path.logs /var/log/logstash/
 ## Monitoring Logstash
 
 **Built-in Monitoring:**
+
 1. **Node Stats API** - Performance metrics
 1. **Hot Threads API** - CPU usage analysis
 1. **Plugins API** - Plugin information
@@ -438,11 +446,13 @@ curl -X GET "localhost:9600/_node/stats/pipelines"
 ## Common Use Cases
 
 ### Log Aggregation
+
 1. Collect logs from multiple servers
 1. Centralize in Elasticsearch
 1. Analyze with Kibana
 
 ### Data Transformation
+
 1. Convert CSV to JSON
 1. Enrich data with external sources
 1. Normalize different formats
@@ -452,6 +462,7 @@ curl -X GET "localhost:9600/_node/stats/pipelines"
 ## Common Use Cases (cont.)
 
 ### Real-time Analytics
+
 1. Process streaming data
 1. Calculate metrics on-the-fly
 1. Trigger alerts
@@ -467,6 +478,7 @@ curl -X GET "localhost:9600/_node/stats/pipelines"
 ## Log Aggregation Architecture: Details
 
 **Benefits:**
+
 1. Centralized logging
 1. Consistent format
 1. Real-time search
@@ -501,6 +513,7 @@ filter {
 ## Security Considerations
 
 **Best Practices:**
+
 1. **Encrypt data in transit** - Use SSL/TLS
 1. **Secure configuration files** - Restrict file permissions
 1. **Filter sensitive data** - Remove passwords, tokens
@@ -537,6 +550,7 @@ filter {
 ## Error Handling
 
 **Strategies:**
+
 1. **Dead Letter Queues** - Capture failed events
 1. **Conditional Processing** - Handle different scenarios
 1. **Retry Logic** - Automatic retry mechanisms
@@ -564,6 +578,7 @@ output {
 ## Debugging Techniques
 
 **Common Debug Methods:**
+
 1. **stdout output** - See processed events
 1. **rubydebug codec** - Detailed event structure
 1. **Conditional outputs** - Test specific scenarios
@@ -583,12 +598,14 @@ output {
 ## Performance Tuning
 
 **Key Metrics:**
+
 1. **Throughput** - Events per second
 1. **Latency** - Processing delay
 1. **Memory usage** - Heap utilization
 1. **CPU usage** - Processing efficiency
 
 **Tuning Parameters:**
+
 1. Pipeline workers: `pipeline.workers: 8`
 1. Batch size: `pipeline.batch.size: 1000`
 1. JVM heap: `-Xms4g -Xmx4g`
@@ -630,6 +647,7 @@ queue.checkpoint.writes: 1024
 ```
 
 **Benefits:**
+
 1. **Data protection** - Survive crashes
 1. **Backpressure handling** - Manage load spikes
 1. **Replay capability** - Reprocess events
@@ -661,11 +679,13 @@ end
 ## Integration with Other Tools
 
 **Elastic Stack:**
+
 1. **Elasticsearch** - Primary data store
 1. **Kibana** - Visualization and dashboards
 1. **Beats** - Lightweight data shippers
 
 **Third-party:**
+
 1. **Kafka** - Message streaming
 1. **Redis** - Caching and queuing
 1. **Prometheus** - Metrics collection
@@ -728,11 +748,13 @@ output {
 ## Troubleshooting Common Issues
 
 ### High Memory Usage
+
 1. Reduce batch size
 1. Increase pipeline workers
 1. Check for memory leaks in filters
 
 ### Slow Processing
+
 1. Optimize Grok patterns
 1. Use conditional processing
 1. Monitor queue depth
@@ -742,6 +764,7 @@ output {
 ## Troubleshooting Common Issues (cont.)
 
 ### Connection Issues
+
 1. Check network connectivity
 1. Verify authentication
 1. Review firewall rules
@@ -751,12 +774,14 @@ output {
 ## Best Practices
 
 **Configuration:**
+
 1. **Version control** - Track config changes
 1. **Environment separation** - Dev/test/prod configs
 1. **Documentation** - Comment complex logic
 1. **Validation** - Test before deployment
 
 **Operations:**
+
 1. **Monitoring** - Track performance metrics
 1. **Backup** - Persistent queue data
 1. **Logging** - Centralized log management
@@ -810,6 +835,7 @@ filter {
 ## Future of Logstash
 
 **Recent Developments:**
+
 1. **Performance improvements** - Better throughput
 1. **New input plugins** - Cloud services integration
 1. **Enhanced monitoring** - Better observability
@@ -871,6 +897,7 @@ output {
 ## Key Takeaways
 
 **Logstash is Essential for:**
+
 1. **Data pipeline creation** - Flexible and powerful
 1. **Log processing** - Parse any format
 1. **Real-time transformation** - Process as data flows
@@ -882,6 +909,7 @@ output {
 ## Key Takeaways (cont.)
 
 **Remember:**
+
 1. Start simple, add complexity gradually
 1. Test configurations thoroughly
 1. Monitor performance continuously
@@ -892,11 +920,13 @@ output {
 ## Resources & Next Steps
 
 **Documentation:**
+
 1. [Elastic Logstash Guide](https://www.elastic.co/guide/en/logstash/)
 1. [Plugin Documentation](https://www.elastic.co/guide/en/logstash/current/input-plugins.html)
 1. [Grok Patterns](https://github.com/elastic/logstash/tree/master/patterns)
 
 **Community:**
+
 1. [Elastic Community Forums](https://discuss.elastic.co/)
 1. [Stack Overflow](https://stackoverflow.com/questions/tagged/logstash)
 1. [GitHub Repository](https://github.com/elastic/logstash)

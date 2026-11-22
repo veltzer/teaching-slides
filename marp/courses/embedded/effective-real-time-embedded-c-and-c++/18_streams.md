@@ -16,6 +16,7 @@ audience:
 ## Common Background of I/O Streams: Details
 
 C++ provides a comprehensive I/O system based on streams
+
 - Stream: sequence of characters flowing from source to destination
 - Type-safe and extensible compared to C's printf/scanf
 - Consistent interface for files, strings, and console I/O
@@ -31,6 +32,7 @@ C++ provides a comprehensive I/O system based on streams
 ## Stream Hierarchy Overview: Details
 
 All stream classes derive from common base classes
+
 - `ios_base`: platform-independent base functionality
 - `ios`: template base class with character type
 - Input streams derive from `istream`
@@ -47,6 +49,7 @@ All stream classes derive from common base classes
 ## Fundamental Stream Classes and Objects
 
 Key stream objects available globally:
+
 - `cin`: standard input stream
 - `cout`: standard output stream
 - `cerr`: unbuffered error stream
@@ -164,6 +167,7 @@ int main() {
 ## Stream States and Error Handling
 
 Every stream has state flags indicating its condition:
+
 - `good()`: stream is ready for I/O
 - `eof()`: end-of-file reached
 - `fail()`: I/O operation failed
@@ -187,10 +191,12 @@ void checkStreamState(istream& stream) {
 ## Standard Stream Operators << and >>
 
 Insertion operator (<<) for output:
+
 - Converts data to character sequence
 - Returns reference to stream for chaining
 
 Extraction operator (>>) for input:
+
 - Converts character sequence to data
 - Skips whitespace by default
 
@@ -237,6 +243,7 @@ cout << "Point: " << p << endl;  // Output: Point: (3, 4)
 ## Standard Input/Output Functions
 
 Alternative I/O functions for specific needs:
+
 - `get()`: read single character or line
 - `getline()`: read entire line including spaces
 - `put()`: write single character
@@ -261,6 +268,7 @@ cout.put('A');
 ## Manipulators Overview
 
 Manipulators modify stream behavior:
+
 - **Parameterless**: `endl`, `flush`, `ws`
 - **Parameterized**: `setw()`, `setprecision()`, `setfill()`
 - **State-changing**: `hex`, `oct`, `dec`, `fixed`, `scientific`
@@ -397,6 +405,7 @@ int main() {
 ## File Access Basics
 
 File streams provide file I/O capabilities:
+
 - `ifstream`: input file stream
 - `ofstream`: output file stream
 - `fstream`: bidirectional file stream
@@ -567,6 +576,7 @@ int main() {
 ## Stream Classes for Strings
 
 String streams allow in-memory string manipulation:
+
 - `istringstream`: read from string
 - `ostringstream`: write to string
 - `stringstream`: bidirectional string I/O
@@ -704,6 +714,7 @@ public:
 ## Stream Buffer Classes Overview: Details
 
 Stream buffers manage the actual I/O operations:
+
 - `streambuf`: abstract base class
 - `filebuf`: file buffer
 - `stringbuf`: string buffer

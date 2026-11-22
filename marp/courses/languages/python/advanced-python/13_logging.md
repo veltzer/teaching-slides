@@ -11,6 +11,7 @@ audience:
 # Logging in Python
 
 ## Overview
+
 - Introduction to Python's logging module
 - Logging levels and hierarchy
 - Configuration options and methods
@@ -1565,6 +1566,7 @@ class TestLogging(unittest.TestCase):
 ## Summary
 
 ## Key Takeaways
+
 - Use appropriate log levels for different information
 - Configure logging with handlers and formatters
 - Structure logging hierarchy for components
@@ -1579,6 +1581,7 @@ class TestLogging(unittest.TestCase):
 ## Resources
 
 ## Further Reading
+
 - Python logging module documentation
 - "Python Logging Cookbook" in Python docs
 - "Logging HOWTO" in Python docs

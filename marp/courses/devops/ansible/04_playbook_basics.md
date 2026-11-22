@@ -17,6 +17,7 @@ audience:
 # Playbook Basics
 
 ## Topics Covered
+
 - Playbook structure and execution
 - Variables and variable precedence
 - Gathering and using facts

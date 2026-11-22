@@ -17,6 +17,7 @@ audience:
 ---
 
 ## What is Infrastructure as Code?
+
 - Manage infrastructure through definition files
 - Treat infrastructure like application code
 - Version controlled, reviewed, tested
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Why Infrastructure as Code?
+
 - Eliminate configuration drift
 - Reproduce environments exactly
 - Audit trail through version control
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## Declarative vs Imperative
+
 - Declarative: describe the desired state ("I want 3 servers")
 - Imperative: describe the steps ("create server, then create server, then...")
 - Declarative is preferred for IaC
@@ -44,6 +47,7 @@ audience:
 ---
 
 ## Manual vs Automated
+
 - Manual: log into console, click buttons
 - Problems: human error, inconsistency, no audit trail
 - Automated: define in code, apply with a command
@@ -53,6 +57,7 @@ audience:
 ---
 
 ## Configuration Drift
+
 - Over time, environments diverge from intended state
 - Manual changes accumulate
 - Staging no longer matches production
@@ -62,6 +67,7 @@ audience:
 ---
 
 ## Terraform
+
 - Open-source IaC tool by HashiCorp
 - Cloud-agnostic: works with AWS, Azure, GCP, and more
 - Declarative HCL language
@@ -90,6 +96,7 @@ resource "aws_instance" "web" {
 ---
 
 ## AWS CloudFormation
+
 - AWS-native IaC service
 - YAML or JSON templates
 - Deep integration with all AWS services
@@ -114,6 +121,7 @@ Resources:
 ---
 
 ## AWS CDK
+
 - Cloud Development Kit
 - Define infrastructure in TypeScript, Python, Java, etc.
 - Compiles down to CloudFormation
@@ -123,6 +131,7 @@ Resources:
 ---
 
 ## Pulumi
+
 - IaC using general-purpose programming languages
 - TypeScript, Python, Go, C#, Java
 - Multi-cloud support
@@ -147,6 +156,7 @@ bucket = aws.s3.Bucket("my-bucket",
 ---
 
 ## IaC Best Practices
+
 - Store templates in version control
 - Use modules for reusable components
 - Review changes before applying (plan/preview)
@@ -156,6 +166,7 @@ bucket = aws.s3.Bucket("my-bucket",
 ---
 
 ## IaC in the Development Workflow
+
 1. Developer writes infrastructure code
 1. Code review via pull request
 1. CI pipeline validates and plans changes
@@ -171,6 +182,7 @@ bucket = aws.s3.Bucket("my-bucket",
 ---
 
 ## Getting Started with IaC
+
 - Start with a small project
 - Use a single tool consistently
 - Learn the declarative mindset

@@ -55,6 +55,7 @@ add [ebx], 10
 Directives are commands to the assembler, not CPU instructions.
 
 Common directives:
+
 - `.text`: Start of code section
 - `.data`: Start of data section
 - `.bss`: Start of uninitialized data section

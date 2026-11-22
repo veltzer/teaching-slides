@@ -193,6 +193,7 @@ Stateless apps are easy. But what about:
 - **Search engines** (`Elasticsearch`)
 
 These need:
+
 - Stable network identity
 - Stable persistent storage
 - Ordered deployment and scaling

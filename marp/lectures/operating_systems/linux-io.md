@@ -37,6 +37,7 @@ audience:
 ---
 
 ## File Descriptors
+
 1. Integer handles to open files/resources
 1. Standard descriptors:
     - `0` - stdin (standard input)
@@ -54,6 +55,7 @@ close(fd);
 ## I/O System Calls
 
 ### Core Operations
+
 1. `open()` - Open file/device
 1. `read()` - Read data
 1. `write()` - Write data
@@ -72,11 +74,13 @@ close(fd);
 ## Buffered vs Unbuffered I/O
 
 ### Unbuffered (System Calls)
+
 1. Direct kernel interaction
 1. Immediate but expensive
 1. `read()`, `write()`
 
 ### Buffered (stdio)
+
 1. User-space buffering
 1. Reduces system calls
 1. `fread()`, `fwrite()`, `fprintf()`
@@ -97,11 +101,13 @@ fread(buffer, 1, 1024, fp);
 ## Page Cache & Buffer Cache
 
 ### Page Cache
+
 1. Caches file data in memory
 1. Automatic and transparent
 1. Improves read performance
 
 ### Buffer Cache
+
 1. Caches filesystem metadata
 1. Block device buffering
 
@@ -110,6 +116,7 @@ fread(buffer, 1, 1024, fp);
 ## Page Cache & Buffer Cache (cont.)
 
 ### Benefits
+
 1. Reduces disk I/O
 1. Speeds up repeated access
 1. Write coalescing
@@ -119,14 +126,17 @@ fread(buffer, 1, 1024, fp);
 ## Advanced I/O Techniques
 
 ### Direct I/O
+
 1. Bypass page cache with `O_DIRECT`
 1. Database systems use case
 
 ### Memory-mapped I/O
+
 1. Map files directly to memory
 1. `mmap()` system call
 
 ### io_uring (Linux 5.1+)
+
 1. High-performance async I/O
 1. Ring buffers for submission/completion
 1. Reduces syscall overhead
@@ -134,6 +144,7 @@ fread(buffer, 1, 1024, fp);
 ---
 
 ## Performance Tips
+
 1. **Use appropriate buffer sizes** - Match filesystem block size
 1. **Choose right I/O model** - Blocking vs async based on workload
 1. **Leverage page cache** - Let kernel optimize for you

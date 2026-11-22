@@ -633,11 +633,13 @@ pub fn init_heap() {
 ## Available `no_std` Crates
 
 **Core functionality:**
+
 - `heapless`: Collections without allocation
 - `nb`: Non-blocking I/O traits
 - `embedded-hal`: Hardware abstraction
 
 **Data structures:**
+
 - `arrayvec`: Vector backed by array
 - `smallvec`: Small vector optimization
 - `hashbrown`: HashMap implementation

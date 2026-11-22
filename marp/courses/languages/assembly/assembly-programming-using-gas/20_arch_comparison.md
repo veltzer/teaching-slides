@@ -16,6 +16,7 @@ audience:
 ---
 
 ## ARM Assembly Basics
+
 - Reduced Instruction Set Computing (RISC)
 - Used in mobile devices, embedded systems
 - Different syntax and conventions from x86
@@ -25,6 +26,7 @@ audience:
 ## ARM vs x86: Register Set
 
 ARM:
+
 - r0-r15 (general-purpose registers)
 - sp (stack pointer, alias for r13)
 - lr (link register, alias for r14)
@@ -87,11 +89,13 @@ message:
 ## RISC vs CISC
 
 RISC (e.g., ARM):
+
 - Simple instructions
 - Fixed instruction length
 - Load-store architecture
 
 CISC (e.g., x86):
+
 - Complex instructions
 - Variable instruction length
 - Memory-to-memory operations
@@ -208,6 +212,7 @@ message:
 ---
 
 ## Architectural Trade-offs
+
 - Performance vs Power consumption
 - Code density vs Simplicity
 - Hardware complexity vs Software flexibility
@@ -216,6 +221,7 @@ message:
 ---
 
 ## Choosing an Architecture
+
 - Consider target platform (mobile, desktop, server)
 - Evaluate performance requirements
 - Assess development tools and ecosystem

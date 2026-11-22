@@ -7,6 +7,7 @@
 ## Chapter Overview
 
 **Topics Covered:**
+
 - Bitfields for memory-efficient storage
 - Anonymous unions
 - Endianness and portability issues
@@ -33,6 +34,7 @@ struct StatusFlags {
 ```
 
 **Benefits:**
+
 - Memory efficient
 - Natural bit manipulation
 - Self-documenting code
@@ -73,6 +75,7 @@ void processPacket() {
 ## Bitfield Types and Constraints
 
 **Allowed Types:**
+
 - `int`, `unsigned int`
 - `signed int`
 - `bool`
@@ -84,6 +87,7 @@ void processPacket() {
 ## Bitfield Types and Constraints (cont.)
 
 **Constraints:**
+
 - Cannot take address of bitfield
 - Cannot create references to bitfields
 - Cannot create arrays of bitfields
@@ -767,6 +771,7 @@ public:
 ## Best Practices for Bitfields
 
 **Do:**
+
 - Use for space-critical applications
 - Document bit layouts clearly
 - Consider endianness for serialization
@@ -778,6 +783,7 @@ public:
 ## Best Practices for Bitfields (cont.)
 
 **Don't:**
+
 - Rely on implementation-defined behavior
 - Mix signed and unsigned bitfields
 - Use for performance-critical bit manipulation
@@ -1405,6 +1411,7 @@ void debugExample() {
 ## Summary (cont.)
 
 **Best Practices:**
+
 - Use standard alternatives when possible
 - Consider endianness for serialization
 - Validate with static assertions

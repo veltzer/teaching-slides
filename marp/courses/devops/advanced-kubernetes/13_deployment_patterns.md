@@ -267,6 +267,7 @@ histogram_quantile(0.99,
 ```
 
 **Auto-rollback criteria:**
+
 - Error rate > 5% higher than stable
 - P99 latency > 2x stable
 - Custom business metrics degraded
@@ -518,6 +519,7 @@ data:
 ```
 
 Combine with deployment patterns for safe feature delivery:
+
 1. Deploy code with feature flag **off**
 1. Gradually enable via flag (no redeploy needed)
 1. Roll back by disabling flag (instant)

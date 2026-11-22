@@ -17,6 +17,7 @@ audience:
 ## Overview of Embedded Peripherals: Details
 
 Embedded systems interact with the physical world through peripherals:
+
 - **GPIO**: General Purpose Input/Output pins
 - **UART**: Serial communication interface
 - **ADC**: Analog-to-Digital Converter
@@ -36,6 +37,7 @@ Embedded systems interact with the physical world through peripherals:
 ## General Purpose Input/Output (GPIO)
 
 GPIO pins provide basic digital I/O functionality:
+
 - **Input mode**: Read digital signals (0V or VCC)
 - **Output mode**: Drive pins high or low
 - **Alternative functions**: UART, SPI, PWM, etc.
@@ -136,6 +138,7 @@ void updateOutput(GPIO_TypeDef* gpio, uint16_t mask, uint16_t value) {
 ## Universal Asynchronous Receiver-Transmitter (UART): Details
 
 UART provides serial communication:
+
 - **Asynchronous**: No clock line needed
 - **Configurable**: Baud rate, data bits, parity, stop bits
 - **Full duplex**: Simultaneous TX and RX
@@ -284,6 +287,7 @@ UARTStatus uartReceiveByteWithErrorCheck(uint8_t* data) {
 ## Analog-to-Digital Converter (ADC): Details
 
 ADC converts analog voltages to digital values:
+
 - **Resolution**: 8, 10, 12, 16 bits typical
 - **Reference voltage**: Determines full-scale range
 - **Sampling rate**: Conversions per second
@@ -443,6 +447,7 @@ void DMA1_Channel1_IRQHandler() {
 ## Serial Peripheral Interface (SPI): Details
 
 SPI provides high-speed synchronous communication:
+
 - **Full duplex**: Simultaneous TX and RX
 - **Master/Slave**: One master, multiple slaves
 - **Four wires**: MOSI, MISO, SCK, CS/SS
@@ -584,6 +589,7 @@ bool spiSendByteNonBlocking(uint8_t data) {
 ## Inter-Integrated Circuit (I2C): Details
 
 I2C provides multi-master, multi-slave communication:
+
 - **Two wires**: SDA (data) and SCL (clock)
 - **Addressing**: 7-bit or 10-bit slave addresses
 - **Open drain**: Requires pull-up resistors
@@ -786,6 +792,7 @@ I2CStatus i2cReadData(uint8_t address, uint8_t* data, uint16_t size) {
 ## Direct Memory Access (DMA): Details
 
 DMA enables data transfer without CPU intervention:
+
 - **Memory-to-Memory**: Copy data between memory locations
 - **Memory-to-Peripheral**: Send data to peripherals
 - **Peripheral-to-Memory**: Receive data from peripherals
@@ -911,6 +918,7 @@ void adcStartDMACircular() {
 ## Nested Vector Interrupt Controller (NVIC)
 
 NVIC manages interrupt priorities and handling:
+
 - **Priority levels**: Configurable interrupt priorities
 - **Preemption**: Higher priority interrupts can preempt lower ones
 - **Nesting**: Support for nested interrupts

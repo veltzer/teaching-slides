@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Compute in the Cloud
+
 - Run applications without owning hardware
 - Multiple compute models available
 - Virtual machines, containers, serverless
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Amazon EC2 Overview
+
 - Elastic Compute Cloud
 - Virtual servers in the cloud
 - Resizable compute capacity
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## EC2 Instance Lifecycle: Details
+
 1. Launch (from an AMI)
 1. Pending (booting up)
 1. Running (billing starts)
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## Amazon Machine Images (AMIs)
+
 - Pre-configured templates for instances
 - Contains OS, application server, applications
 - AWS provides many standard AMIs
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## Creating Custom AMIs
+
 - Launch an instance, configure it
 - Create an image from the running instance
 - Use that AMI to launch identical instances
@@ -74,6 +79,7 @@ audience:
 ---
 
 ## EC2 Instance Types: General Purpose
+
 - t3, t3a: burstable performance, web servers
 - m6i, m6a: balanced compute/memory/networking
 - Good for web applications, small databases
@@ -83,6 +89,7 @@ audience:
 ---
 
 ## EC2 Instance Types: Compute Optimized
+
 - c6i, c6a, c7g: high-performance processors
 - Batch processing
 - Media transcoding
@@ -92,6 +99,7 @@ audience:
 ---
 
 ## EC2 Instance Types: Memory Optimized
+
 - r6i, r6a: high memory-to-CPU ratio
 - x2idn: up to 4 TB of RAM
 - In-memory databases (Redis, Memcached)
@@ -101,6 +109,7 @@ audience:
 ---
 
 ## EC2 Instance Types: Storage and Accelerated
+
 - i3, i4i: high sequential read/write (NVMe)
 - d3: dense HDD storage, data warehousing
 - p4d, p5: GPU instances for ML training
@@ -110,6 +119,7 @@ audience:
 ---
 
 ## Instance Type Naming Convention
+
 - Example: m6i.xlarge
 - m = family (General Purpose)
 - 6 = generation
@@ -119,6 +129,7 @@ audience:
 ---
 
 ## Choosing the Right Instance Type
+
 - Match type to workload requirements
 - Consider CPU, memory, storage, networking
 - Start small, scale up as needed
@@ -128,6 +139,7 @@ audience:
 ---
 
 ## EC2 Pricing: On-Demand
+
 - Pay by the second (minimum 60 seconds)
 - No upfront commitment
 - Most flexible option
@@ -137,6 +149,7 @@ audience:
 ---
 
 ## EC2 Pricing: Reserved Instances
+
 - 1 or 3 year commitment
 - Up to 72% savings vs On-Demand
 - Standard RI: fixed instance type
@@ -146,6 +159,7 @@ audience:
 ---
 
 ## EC2 Pricing: Savings Plans
+
 - Commit to $/hour of usage for 1 or 3 years
 - Compute Savings Plan: any instance family, Region, OS
 - EC2 Instance Savings Plan: specific family and Region
@@ -155,6 +169,7 @@ audience:
 ---
 
 ## EC2 Pricing: Spot Instances
+
 - Bid on unused EC2 capacity
 - Up to 90% savings vs On-Demand
 - Can be interrupted with 2-minute warning
@@ -164,6 +179,7 @@ audience:
 ---
 
 ## EC2 Pricing: Dedicated
+
 - Dedicated Instances: hardware not shared with others
 - Dedicated Hosts: entire physical server
 - Compliance or licensing requirements
@@ -179,6 +195,7 @@ audience:
 ---
 
 ## Key Pairs
+
 - SSH access to Linux instances
 - RDP access to Windows instances
 - Public key stored on instance
@@ -188,6 +205,7 @@ audience:
 ---
 
 ## Security Groups
+
 - Instance-level virtual firewall
 - Stateful: return traffic automatically allowed
 - Allow rules only (no deny rules)
@@ -197,6 +215,7 @@ audience:
 ---
 
 ## Security Group Examples
+
 - Web server: allow port 80/443 from 0.0.0.0/0
 - SSH access: allow port 22 from your IP only
 - Database: allow port 3306 from web server SG
@@ -206,6 +225,7 @@ audience:
 ---
 
 ## User Data and Metadata
+
 - User Data: bootstrap script run at first launch
 - Install packages, configure software
 - Instance Metadata: info about the instance
@@ -246,6 +266,7 @@ aws ec2 authorize-security-group-ingress \
 ---
 
 ## Elastic Load Balancing (ELB)
+
 - Distributes incoming traffic across targets
 - Increases availability and fault tolerance
 - Health checks for target instances
@@ -255,6 +276,7 @@ aws ec2 authorize-security-group-ingress \
 ---
 
 ## Types of Load Balancers
+
 - Application Load Balancer (Layer 7): HTTP/HTTPS
 - Network Load Balancer (Layer 4): TCP/UDP, ultra-low latency
 - Gateway Load Balancer (Layer 3): third-party appliances
@@ -263,6 +285,7 @@ aws ec2 authorize-security-group-ingress \
 ---
 
 ## ALB Features
+
 - Path-based routing (/api, /images)
 - Host-based routing (a.example.com, b.example.com)
 - Sticky sessions
@@ -272,6 +295,7 @@ aws ec2 authorize-security-group-ingress \
 ---
 
 ## Auto Scaling Overview
+
 - Automatically adjust number of EC2 instances
 - Scale out when demand increases
 - Scale in when demand decreases
@@ -281,6 +305,7 @@ aws ec2 authorize-security-group-ingress \
 ---
 
 ## Auto Scaling Components
+
 - Launch Template: instance configuration
 - Auto Scaling Group: collection of instances
 - Scaling Policies: when and how to scale
@@ -296,6 +321,7 @@ aws ec2 authorize-security-group-ingress \
 ---
 
 ## Scaling Policy Types
+
 - Target Tracking: maintain a metric at a target (e.g., 50% CPU)
 - Step Scaling: scale by amount based on alarm severity
 - Simple Scaling: scale by fixed amount on alarm
@@ -305,6 +331,7 @@ aws ec2 authorize-security-group-ingress \
 ---
 
 ## EC2 Best Practices
+
 - Use the latest generation instance types
 - Right-size instances based on actual usage
 - Use Auto Scaling for variable workloads

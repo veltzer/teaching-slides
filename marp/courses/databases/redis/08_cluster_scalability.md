@@ -24,6 +24,7 @@ As data and traffic grow, single Redis instances face limitations:
 - **Single point of failure**: Reliability concerns
 
 Scaling strategies:
+
 - **Vertical scaling**: Larger server (limited)
 - **Horizontal scaling**: Multiple servers
 - **Functional partitioning**: Separate instances by function
@@ -88,6 +89,7 @@ Scaling strategies:
 ## Introduction to Redis Cluster: Details
 
 Redis Cluster is the official Redis distributed solution:
+
 - Native, server-side sharding
 - Automatic fail-over
 - No single point of failure
@@ -106,6 +108,7 @@ Redis Cluster is the official Redis distributed solution:
 ## Redis Cluster Data Sharding: Details
 
 Redis Cluster uses a hash slot approach:
+
 - 16,384 hash slots distributed across masters
 - Each key maps to a hash slot using CRC16(key) % 16384
 - Each master handles a subset of hash slots
@@ -197,6 +200,7 @@ cluster-node-timeout 5000
 ```
 
 For each node:
+
 - Use a different port (7000, 7001, 7002, etc.)
 - Use a different data directory
 - Adjust log file and pid file paths
@@ -216,6 +220,7 @@ redis-cli --cluster create \
 ```
 
 Steps performed:
+
 1. Assigns slots to masters
 1. Sets up replication relationships
 1. Joins nodes into a cluster
@@ -263,6 +268,7 @@ CLUSTER FAILOVER
 ## Redis Cluster Connection Modes
 
 Two connection modes:
+
 1. **Smart clients**: Handle redirects automatically
 1. **Cluster proxy**: Routes commands to correct node
 
@@ -326,6 +332,7 @@ redis-cli --cluster reshard 127.0.0.1:7000 \
 ```
 
 Steps performed:
+
 1. Prepares nodes for slot migration
 1. Moves keys in batches
 1. Updates slot mappings
@@ -487,6 +494,7 @@ Redis Cluster is "eventually consistent":
 - CAP theorem trade-off: Favors availability and partition tolerance
 
 Potential consistency issues:
+
 1. **Split-brain during partitions**
 1. **Asynchronous replication**
 1. **Race conditions during failover**
@@ -496,6 +504,7 @@ Potential consistency issues:
 ## Redis Cluster Consistency Guarantees (cont.)
 
 For stronger consistency:
+
 - Use appropriate wait commands
 - Implement client-side retry logic
 - Consider Redis Enterprise
@@ -626,10 +635,12 @@ DR strategies for Redis Cluster:
 ## Disaster Recovery Backup Approaches
 
 Backup approaches:
+
 1. **Coordinated RDB snapshots**
 1. **Geo-distributed replicas**
 1. **Cross-datacenter replication**
 Remember:
+
 - Test recovery regularly
 - Document procedures
 - Automate where possible

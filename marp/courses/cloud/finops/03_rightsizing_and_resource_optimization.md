@@ -17,6 +17,7 @@ audience:
 ---
 
 ## What is Rightsizing?
+
 - Matching resource size to actual workload needs
 - Most common source of cloud waste
 - Over-provisioned instances cost too much
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## The Rightsizing Opportunity
+
 - Studies show 30-40% of cloud instances are over-provisioned
 - Average CPU utilization in cloud: 10-20%
 - Even small reductions multiply across fleets
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## Identifying Underutilized Resources
+
 - CPU utilization consistently below 20%
 - Memory utilization consistently below 30%
 - Network throughput far below capacity
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## Identifying Idle Resources
+
 - Instances with near-zero CPU for days
 - Load balancers with no targets
 - Unattached EBS volumes or disks
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## Rightsizing Compute Instances
+
 - Analyze CPU, memory, network utilization
 - Move to smaller instance types
 - Consider burstable instances (t3) for variable workloads
@@ -68,6 +73,7 @@ audience:
 ---
 
 ## Graviton and ARM Instances
+
 - AWS Graviton (ARM-based) processors
 - 20-40% better price/performance than x86
 - Azure Ampere-based VMs, GCP Tau T2A
@@ -77,6 +83,7 @@ audience:
 ---
 
 ## Storage Tier Optimization
+
 - Move infrequently accessed data to cheaper tiers
 - S3 Standard -> S3 IA -> Glacier
 - EBS gp3 is cheaper than gp2 with better performance
@@ -86,6 +93,7 @@ audience:
 ---
 
 ## Database Rightsizing
+
 - Review RDS instance sizes vs actual utilization
 - Consider Aurora Serverless for variable workloads
 - Move to reserved capacity for steady databases
@@ -95,6 +103,7 @@ audience:
 ---
 
 ## Automated Rightsizing Recommendations
+
 - AWS Compute Optimizer
 - Azure Advisor
 - GCP Recommender
@@ -121,6 +130,7 @@ aws compute-optimizer \
 ---
 
 ## The Rightsizing Process
+
 1. Collect utilization data (2-4 weeks minimum)
 1. Identify over-provisioned and idle resources
 1. Validate recommendations with application owners
@@ -136,6 +146,7 @@ aws compute-optimizer \
 ---
 
 ## Rightsizing Challenges
+
 - Fear of performance degradation
 - Lack of ownership ("who approved this instance?")
 - Stale resources nobody remembers
@@ -145,6 +156,7 @@ aws compute-optimizer \
 ---
 
 ## Auto Scaling as Rightsizing
+
 - Instead of one big instance, auto-scale smaller ones
 - Match capacity to demand in real time
 - Scale to zero when possible (serverless)
@@ -154,6 +166,7 @@ aws compute-optimizer \
 ---
 
 ## Waste Elimination Checklist
+
 - Unattached EBS volumes
 - Old snapshots (>90 days)
 - Unused Elastic IPs

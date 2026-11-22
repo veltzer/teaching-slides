@@ -71,6 +71,7 @@ df = spark.read.json("data.json")
 ---
 
 ## Mixed Language Support
+
 1. Python (PySpark)
 1. Scala
 1. SQL
@@ -91,6 +92,7 @@ df.groupBy("category") \
 ---
 
 ## Magic Commands
+
 1. %%spark
 1. %%sql
 1. %%configure
@@ -111,6 +113,7 @@ display(df)
 ---
 
 ## Interactive Analysis
+
 1. Cell execution
 1. Real-time results
 1. Memory management
@@ -130,6 +133,7 @@ def plot_distribution(column):
 ---
 
 ## Collaboration Features
+
 1. Shared workspaces
 1. Version control
 1. Comments
@@ -144,6 +148,7 @@ def plot_distribution(column):
 ---
 
 ## Performance Tips
+
 1. Cache wisely
 1. Clean up resources
 1. Monitor memory
@@ -164,6 +169,7 @@ df.cache()
 ---
 
 ## Debugging Tools
+
 1. Cell outputs
 1. Spark UI access
 1. Error tracebacks
@@ -172,6 +178,7 @@ df.cache()
 ---
 
 ## Integration Options
+
 1. Version control
 1. Data sources
 1. External libraries
@@ -180,6 +187,7 @@ df.cache()
 ---
 
 ## Export Capabilities
+
 1. HTML format
 1. PDF documents
 1. Python scripts
@@ -188,6 +196,7 @@ df.cache()
 ---
 
 ## Security Features
+
 1. Access control
 1. Credential management
 1. Cluster isolation
@@ -202,6 +211,7 @@ df.cache()
 ---
 
 ## Development Workflow
+
 1. Prototyping
 1. Testing
 1. Documentation
@@ -210,6 +220,7 @@ df.cache()
 ---
 
 ## Notebook Extensions
+
 1. Code formatters
 1. Git integration
 1. Variable inspector
@@ -218,6 +229,7 @@ df.cache()
 ---
 
 ## Cloud Integration
+
 1. AWS services
 1. Azure platforms
 1. Google Cloud
@@ -226,6 +238,7 @@ df.cache()
 ---
 
 ## Production Usage
+
 1. Scheduled jobs
 1. API endpoints
 1. Dashboard creation
@@ -234,6 +247,7 @@ df.cache()
 ---
 
 ## Future Trends
+
 1. Enhanced collaboration
 1. Better performance
 1. More integrations

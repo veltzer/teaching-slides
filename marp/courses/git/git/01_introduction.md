@@ -49,6 +49,7 @@ audience:
 **Linus Torvalds** created Git in April 2005
 
 Requirements:
+
 1. **Speed** - Must be fast for large projects
 1. **Simple design** - Easy to understand and extend
 1. **Strong support for non-linear development** - Thousands of parallel branches
@@ -83,6 +84,7 @@ Linus Torvalds quipped:
 **git** (British slang): an unpleasant or contemptible person
 
 But also:
+
 1. **Simple** - Three letter command
 1. **Not taken** - Available as a command name
 1. **Memorable** - Easy to remember
@@ -269,6 +271,7 @@ Example SHA-1:
 1. **Can experiment without fear** of losing work
 
 After committing:
+
 1. Snapshot is safely stored
 1. Can always revert to that state
 1. History is preserved
@@ -298,11 +301,13 @@ After committing:
 ## Git vs GitHub/GitLab/Bitbucket
 
 **Git** is the version control system:
+
 1. Command-line tool
 1. Manages repositories locally
 1. Free and open source
 
 **GitHub/GitLab/Bitbucket** are hosting platforms:
+
 1. Store repositories online
 1. Add collaboration features
 1. Provide web interface
@@ -331,6 +336,7 @@ After committing:
 ## When to Use Git
 
 **Perfect for:**
+
 1. Source code (any language)
 1. Configuration files
 1. Documentation (Markdown, LaTeX)
@@ -338,6 +344,7 @@ After committing:
 1. Scripts and automation
 
 **Not ideal for:**
+
 1. Large binary files (videos, images)
 1. Generated files (build artifacts)
 1. Sensitive data (passwords, keys)
@@ -385,6 +392,7 @@ After committing:
 1. **Big bang** - Convert everything at once (risky!)
 
 **Tools for migration:**
+
 - `git svn` - Import from SVN
 - `git cvsimport` - Import from CVS
 - `git p4` - Import from Perforce

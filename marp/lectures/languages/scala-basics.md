@@ -68,6 +68,7 @@ val nullable: String = null
 ---
 
 ## 5. Basic Types
+
 - Numeric: `Byte`, `Short`, `Int`, `Long`
 - Floating-point: `Float`, `Double`
 - Text: `Char`, `String`
@@ -547,6 +548,7 @@ p.success("Done!")
 ---
 
 ## Best Practices
+
 - Prefer immutability
 - Use pattern matching
 - Leverage type inference

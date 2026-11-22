@@ -26,6 +26,7 @@ audience:
 ## Why Use a Shell: Details
 
 The shell is your interface to the system:
+
 - Command interpretation
 - Script execution
 - Process control
@@ -83,6 +84,7 @@ echo $PATH
 ```
 
 Key differences:
+
 - `set` for local variables
 - `setenv` for environment variables
 - Different syntax for assignment

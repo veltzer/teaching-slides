@@ -23,6 +23,7 @@ audience:
 ---
 
 ## Azure SQL Database
+
 - Managed SQL Server
 - Built-in intelligence
 - Automatic tuning
@@ -38,6 +39,7 @@ audience:
 ---
 
 ## Service Tiers
+
 1. General Purpose
 1. Business Critical
 1. Hyperscale
@@ -47,6 +49,7 @@ audience:
 ---
 
 ## SQL Database Features
+
 - Automatic tuning
 - Query performance insight
 - Threat detection
@@ -56,6 +59,7 @@ audience:
 ---
 
 ## High Availability
+
 - Built-in redundancy
 - Automatic backups
 - Geo-replication
@@ -65,6 +69,7 @@ audience:
 ---
 
 ## SQL Security
+
 - Authentication methods
 - Authorization
 - Row-level security
@@ -74,6 +79,7 @@ audience:
 ---
 
 ## Azure Cosmos DB
+
 - Multi-model database
 - Global distribution
 - Automatic scaling
@@ -89,6 +95,7 @@ audience:
 ---
 
 ## Cosmos DB Consistency
+
 - Strong
 - Bounded staleness
 - Session
@@ -98,6 +105,7 @@ audience:
 ---
 
 ## Partitioning Strategy
+
 - Partition keys
 - Logical partitions
 - Physical partitions
@@ -107,6 +115,7 @@ audience:
 ---
 
 ## Global Distribution
+
 - Multi-region writes
 - Automatic failover
 - Conflict resolution
@@ -116,6 +125,7 @@ audience:
 ---
 
 ## Cosmos DB Security
+
 - Network security
 - Authentication
 - Authorization
@@ -125,6 +135,7 @@ audience:
 ---
 
 ## Azure MySQL
+
 - Managed MySQL
 - Community edition
 - High availability
@@ -134,6 +145,7 @@ audience:
 ---
 
 ## MySQL Configuration
+
 - Server parameters
 - Performance settings
 - Storage options
@@ -143,6 +155,7 @@ audience:
 ---
 
 ## Azure PostgreSQL
+
 - Managed PostgreSQL
 - Single server
 - Flexible server
@@ -152,6 +165,7 @@ audience:
 ---
 
 ## PostgreSQL Features
+
 - High availability
 - Automatic backups
 - Point-in-time restore
@@ -161,6 +175,7 @@ audience:
 ---
 
 ## Database Migration
+
 - Azure Migrate
 - Database Migration Service
 - Offline migration
@@ -176,6 +191,7 @@ audience:
 ---
 
 ## Performance Monitoring
+
 - Azure Monitor
 - Query insights
 - Performance recommendations
@@ -185,6 +201,7 @@ audience:
 ---
 
 ## Database Scaling
+
 - Vertical scaling
 - Horizontal scaling
 - Auto-scaling
@@ -194,6 +211,7 @@ audience:
 ---
 
 ## Backup and Recovery
+
 - Automated backups
 - Manual backups
 - Long-term retention
@@ -203,6 +221,7 @@ audience:
 ---
 
 ## Security Best Practices
+
 - Network isolation
 - Access control
 - Data encryption
@@ -212,6 +231,7 @@ audience:
 ---
 
 ## Cost Optimization
+
 - Right-sizing
 - Reserved capacity
 - Performance tiers
@@ -221,6 +241,7 @@ audience:
 ---
 
 ## Database DevOps
+
 - CI/CD integration
 - Schema management
 - Version control
@@ -236,6 +257,7 @@ audience:
 ---
 
 ## Data Synchronization
+
 - Data sync services
 - Replication
 - Change tracking
@@ -245,6 +267,7 @@ audience:
 ---
 
 ## Monitoring and Alerting
+
 - Performance metrics
 - Resource utilization
 - Query performance
@@ -254,6 +277,7 @@ audience:
 ---
 
 ## Compliance and Governance
+
 - Data residency
 - Regulatory compliance
 - Audit logging
@@ -263,6 +287,7 @@ audience:
 ---
 
 ## Database Networking
+
 - Virtual network integration
 - Private endpoints
 - Service endpoints
@@ -272,6 +297,7 @@ audience:
 ---
 
 ## Future Roadmap
+
 - Service updates
 - New features
 - Performance improvements

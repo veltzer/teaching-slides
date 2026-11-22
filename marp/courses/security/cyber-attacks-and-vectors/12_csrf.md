@@ -88,6 +88,7 @@ Example:
 ---
 
 ## Same-Site Cookies
+
 - Set the `SameSite` attribute on cookies
 - Prevents the browser from sending cookies in cross-site requests
 - Options:
@@ -103,6 +104,7 @@ Set-Cookie: session=abc123; SameSite=Strict; Secure
 ---
 
 ## Custom Request Headers
+
 - Leverage the Same-Origin Policy for custom headers
 - Add a custom header to AJAX requests
 - Server verifies the presence of this header
@@ -120,6 +122,7 @@ fetch('/api/data', {
 ---
 
 ## Double Submit Cookies
+
 1. Set a random token as a cookie
 1. Include the same token as a hidden field in forms
 1. Server verifies that both values match

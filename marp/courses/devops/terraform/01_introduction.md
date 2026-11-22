@@ -17,6 +17,7 @@ audience:
 # Introduction to Terraform
 
 ## Course Overview
+
 - Comprehensive `Terraform` training
 - Fundamentals, project structure, resources, data sources, variables, state
 - Reuse patterns, drift management, security, functions

@@ -56,6 +56,7 @@ audience:
 Working directly on the main branch with minimal or no branching
 
 **Philosophy:**
+
 - Continuous integration is paramount
 - Small, frequent commits
 - Feature flags over feature branches
@@ -120,11 +121,13 @@ Working directly on the main branch with minimal or no branching
 ## Feature Branches: Integration Frequency
 
 **Conservative Approach:**
+
 - Merge only when fully complete
 - Comprehensive testing before merge
 - Lower risk to main branch
 
 **Progressive Approach:**
+
 - Merge early and often
 - Partial features behind flags
 - Continuous integration mindset
@@ -179,6 +182,7 @@ Simplified workflow centered around pull requests
 ## Pull Requests: The Philosophy
 
 **Code Review Culture:**
+
 - Knowledge sharing
 - Quality gatekeeping
 - Mentorship opportunities
@@ -189,11 +193,13 @@ Simplified workflow centered around pull requests
 ## Pull Requests: Timing Strategies
 
 **Early PR (Draft/WIP):**
+
 - Get feedback on approach
 - Avoid wasted effort
 - Share progress transparently
 
 **Complete PR:**
+
 - Ready for final review
 - All tests passing
 - Documentation complete
@@ -209,12 +215,14 @@ Simplified workflow centered around pull requests
 ## Small PRs: The Arguments
 
 **Benefits:**
+
 - Easier to review thoroughly
 - Faster approval cycle
 - Lower risk of bugs
 - Easier to revert
 
 **Challenges:**
+
 - More PRs to manage
 - Potential for incomplete features
 - Coordination overhead
@@ -224,6 +232,7 @@ Simplified workflow centered around pull requests
 ## Commit Philosophy: Atomic Commits
 
 Each commit should:
+
 - Represent one logical change
 - Be self-contained
 - Pass all tests
@@ -235,11 +244,13 @@ Each commit should:
 ## Commit Frequency Strategies
 
 **Frequent Commits:**
+
 - Save work in progress
 - Document thought process
 - Easy to bisect issues
 
 **Polished Commits:**
+
 - Clean history
 - Squash before merge
 - Meaningful commit log
@@ -255,11 +266,13 @@ Each commit should:
 ## Merge Strategy
 
 **Preserve History:**
+
 - Shows actual development timeline
 - Maintains context of changes
 - Easier to understand complex features
 
 **When to Use:**
+
 - Public branches
 - Shared feature branches
 - When history matters
@@ -269,11 +282,13 @@ Each commit should:
 ## Rebase Strategy
 
 **Linear History:**
+
 - Cleaner project history
 - Easier to follow main line
 - Simplified debugging with bisect
 
 **When to Use:**
+
 - Private branches
 - Before merging PR
 - Cleaning up local commits
@@ -283,11 +298,13 @@ Each commit should:
 ## Integration Frequency Philosophy
 
 **Continuous Integration:**
+
 - Multiple integrations per day
 - Small, incremental changes
 - Fast feedback loops
 
 **Periodic Integration:**
+
 - Weekly or sprint-based
 - Larger feature sets
 - Controlled release cycles
@@ -303,6 +320,7 @@ Each commit should:
 ## The Cost of Branching
 
 **Hidden Costs:**
+
 - Merge conflict resolution
 - Context switching
 - Delayed feedback
@@ -314,11 +332,13 @@ Each commit should:
 ## Synchronization Strategies
 
 **Aggressive Sync:**
+
 - Pull main into feature daily
 - Resolve conflicts immediately
 - Stay close to main
 
 **Lazy Sync:**
+
 - Sync only when needed
 - Resolve conflicts at merge
 - Maintain isolation
@@ -328,11 +348,13 @@ Each commit should:
 ## Team Size Considerations
 
 **Small Teams (2-5):**
+
 - Can work directly on main
 - Informal code review
 - High trust environment
 
 **Large Teams (20+):**
+
 - Need structured workflows
 - Formal review process
 - Clear ownership boundaries
@@ -342,11 +364,13 @@ Each commit should:
 ## Release Strategy Impact
 
 **Continuous Deployment:**
+
 - Favor trunk-based
 - Automated everything
 - Feature flags crucial
 
 **Scheduled Releases:**
+
 - Favor release branches
 - Manual QA phases
 - Version management
@@ -362,11 +386,13 @@ Each commit should:
 ## Code Review Philosophy
 
 **Async Review:**
+
 - Non-blocking development
 - Documented discussions
 - Time zone friendly
 
 **Pair Programming:**
+
 - Real-time review
 - Knowledge transfer
 - Immediate feedback
@@ -376,11 +402,13 @@ Each commit should:
 ## The Pull vs Push Debate
 
 **Pull-Based:**
+
 - Developer controls integration
 - Review before merge
 - Quality gates
 
 **Push-Based:**
+
 - Immediate sharing
 - Trust-based system
 - Rapid iteration
@@ -390,11 +418,13 @@ Each commit should:
 ## Monorepo vs Multirepo
 
 **Monorepo Philosophy:**
+
 - Atomic changes across projects
 - Simplified dependency management
 - Unified versioning
 
 **Multirepo Philosophy:**
+
 - Clear boundaries
 - Independent deployment
 - Focused ownership
@@ -404,6 +434,7 @@ Each commit should:
 ## Choosing Your Strategy
 
 Consider these factors:
+
 1. Team size and distribution
 1. Release frequency
 1. Risk tolerance

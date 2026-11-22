@@ -30,6 +30,7 @@ audience:
 ## What is a Pipe?
 
 ## Definition
+
 - **Unidirectional** data channel
 - **Byte stream** interface
 - **In-memory** buffer
@@ -560,6 +561,7 @@ if (fd == -1 && errno == ENXIO) {
 ## Pipe Limitations (cont.)
 
 ## Alternatives
+
 - **Sockets** - Network, bidirectional
 - **Message queues** - Boundaries
 - **Shared memory** - Faster

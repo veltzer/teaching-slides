@@ -17,6 +17,7 @@ audience:
 # Inventory Deep Dive
 
 ## Topics Covered
+
 - Static inventory patterns and best practices
 - Inventory plugins
 - Dynamic inventory concepts

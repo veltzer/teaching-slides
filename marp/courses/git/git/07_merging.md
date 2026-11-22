@@ -235,6 +235,7 @@ git mergetool
 ```
 
 **Popular merge tools:**
+
 - `vimdiff` - Terminal-based, comes with vim
 - `meld` - Visual diff tool for Linux
 - `kdiff3` - Cross-platform GUI tool
@@ -247,6 +248,7 @@ git mergetool
 Understanding the difference between `fetch` and `pull`:
 
 **`git fetch`:**
+
 - Downloads commits from remote
 - Updates remote tracking branches
 - Does NOT modify your working directory
@@ -257,6 +259,7 @@ Understanding the difference between `fetch` and `pull`:
 ## Git Fetch vs Git Pull (cont.)
 
 **`git pull`:**
+
 - Combines `git fetch` + `git merge`
 - Downloads AND integrates changes
 - Can cause merge conflicts
@@ -286,6 +289,7 @@ git config --global pull.rebase true
 ```
 
 **Benefits:**
+
 - Cleaner, linear history
 - Easier to follow project timeline
 - Reduces "merge commits" clutter
@@ -315,6 +319,7 @@ git cherry-pick <start-commit>..<end-commit>
 ```
 
 **Use cases:**
+
 - Apply hotfixes to multiple branches
 - Select features from experimental branches
 - Backport changes to older versions
@@ -338,6 +343,7 @@ git merge feature-branch --ff-only
 ```
 
 **Best practices:**
+
 - Describe what the merge accomplishes
 - Reference ticket/issue numbers
 - Mention breaking changes
@@ -361,6 +367,7 @@ git status
 ```
 
 **When to abort:**
+
 - Too many conflicts to resolve
 - Wrong branch merged
 - Merge was started accidentally
@@ -390,6 +397,7 @@ git merge-base --all main feature-branch
 ```
 
 **Why it matters:**
+
 - Determines what changes to compare
 - Affects conflict resolution
 - Influences merge strategy selection
@@ -414,12 +422,14 @@ git merge branch1 branch2 branch3
 ## Octopus Merges (cont.)
 
 **Limitations:**
+
 - No conflict resolution allowed
 - All branches must merge cleanly
 - Rarely used in practice
 - Complex to understand and debug
 
 **Better approach:**
+
 - Merge branches one at a time
 - Resolve conflicts individually
 - Clearer history and attribution
@@ -448,6 +458,7 @@ bundle install
 ```
 
 **Common uses:**
+
 - Run automated tests
 - Update dependencies
 - Send notifications
@@ -518,11 +529,13 @@ git merge --no-commit feature-branch
 ## Troubleshooting Common Merge Issues
 
 **"Already up to date" message:**
+
 - Target branch has no new commits
 - All changes already integrated
 - Check branch relationships with `git log --graph`
 
 **"Automatic merge failed":**
+
 - Conflicts exist in files
 - Manual resolution required
 - Use `git status` to identify conflicted files
@@ -539,6 +552,7 @@ git merge --allow-unrelated-histories other-branch
 ```
 
 **Large binary file conflicts:**
+
 - Choose one version explicitly
 - Use `.gitattributes` for binary files
 - Consider `Git LFS` for large files
@@ -576,6 +590,7 @@ git merge --allow-unrelated-histories other-branch
 ## Lab Exercise: Complex Merge Scenario
 
 **Setup:**
+
 1. Create a repository with conflicting changes
 1. Practice different merge strategies
 1. Resolve conflicts using various tools
@@ -586,6 +601,7 @@ git merge --allow-unrelated-histories other-branch
 ## Lab Exercise: Complex Merge Scenario (cont.)
 
 **Tasks:**
+
 1. Create merge conflicts intentionally
 1. Use `git mergetool` to resolve conflicts
 1. Abort and retry merges with different strategies

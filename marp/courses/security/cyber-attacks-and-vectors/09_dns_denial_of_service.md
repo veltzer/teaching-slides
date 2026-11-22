@@ -48,6 +48,7 @@ audience:
 ---
 
 ## Mitigating DNS DoS Attacks
+
 1. **Implement Rate Limiting**: Configure DNS servers to limit the number of requests accepted from a single source within a specific time frame.
 1. **Use Anycast DNS**: Distribute the DNS service across multiple networks and servers, making it more resilient to localized attacks.
 1. **Leverage Cloud-based DNS Services**: Utilize cloud-based DNS services that offer robust DDoS mitigation capabilities and global load balancing.

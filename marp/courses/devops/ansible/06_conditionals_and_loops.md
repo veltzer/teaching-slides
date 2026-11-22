@@ -17,6 +17,7 @@ audience:
 # Conditionals and Loops
 
 ## Topics Covered
+
 - Advanced conditional patterns
 - Complex loop constructs
 - Combining conditions and loops

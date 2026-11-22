@@ -13,6 +13,7 @@ audience:
 # Working with Volatile Memory
 
 ## Course: Linux Forensics
+
 - RAM contains evidence unavailable on disk
 - Volatile memory is lost when system powers off
 - Running processes, network connections, and encryption keys live in RAM
@@ -440,6 +441,7 @@ Evidence Timeline from Memory Analysis:
 ## Exercise: Volatile Memory Lab
 
 ### Tasks
+
 1. Capture memory using `LiME`
 1. Analyze processes with Volatility
 1. Extract bash history from memory
@@ -685,6 +687,7 @@ cat /proc/iomem
 ## Exercise: Comprehensive Memory Lab
 
 ### Tasks
+
 1. Capture memory using LiME
 1. List all processes and identify suspicious ones
 1. Extract bash history from all shells

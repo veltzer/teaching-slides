@@ -24,6 +24,7 @@ audience:
 ---
 
 ## Why Multi-Cloud DR?
+
 - Single-cloud DR protects against Region failure
 - Multi-cloud DR protects against provider-level failure
 - Cloud provider outages do happen (AWS us-east-1, Azure AD, GCP networking)
@@ -33,6 +34,7 @@ audience:
 ---
 
 ## Multi-Cloud DR vs Single-Cloud DR
+
 - Single-cloud: replicate across Regions within one provider
 - Multi-cloud: replicate across providers entirely
 - Multi-cloud DR is significantly more complex
@@ -42,6 +44,7 @@ audience:
 ---
 
 ## RPO and RTO in Multi-Cloud
+
 - RPO (Recovery Point Objective): how much data loss is acceptable
 - RTO (Recovery Time Objective): how much downtime is acceptable
 - Multi-cloud adds latency to replication (cross-provider network)
@@ -51,6 +54,7 @@ audience:
 ---
 
 ## DR Strategy Spectrum
+
 1. Backup to another cloud: lowest cost, highest RTO
 1. Pilot light cross-cloud: minimal always-on footprint
 1. Warm standby cross-cloud: scaled-down running copy
@@ -65,6 +69,7 @@ audience:
 ---
 
 ## Backup to Another Cloud
+
 - Regular backups exported to a second cloud provider
 - Example: AWS S3 backups replicated to Azure Blob Storage
 - Rebuild infrastructure from IaC on the second cloud
@@ -74,6 +79,7 @@ audience:
 ---
 
 ## Pilot Light Cross-Cloud
+
 - Core data replicated continuously to second cloud
 - Minimal compute running (DNS, database replica)
 - Scale up on failover event
@@ -83,6 +89,7 @@ audience:
 ---
 
 ## Warm Standby Cross-Cloud
+
 - Scaled-down but functional copy running on second cloud
 - All components present at reduced capacity
 - Traffic can be shifted quickly via DNS
@@ -92,6 +99,7 @@ audience:
 ---
 
 ## Active-Active Multi-Cloud
+
 - Full production workload on both clouds simultaneously
 - Global load balancer distributes traffic
 - Database replication is the hardest part
@@ -101,6 +109,7 @@ audience:
 ---
 
 ## Data Replication Across Clouds
+
 - No native cross-cloud replication (unlike cross-Region)
 - Options: application-level replication, third-party tools, custom sync
 - Database-specific: PostgreSQL logical replication, MySQL replication
@@ -163,6 +172,7 @@ resource "aws_route53_record" "failover_secondary" {
 ---
 
 ## Failover Automation
+
 - Manual failover is too slow for production
 - Use health checks to trigger automated failover
 - DNS-based failover is the simplest cross-cloud mechanism
@@ -172,6 +182,7 @@ resource "aws_route53_record" "failover_secondary" {
 ---
 
 ## Database DR Across Clouds
+
 - Most complex aspect of multi-cloud DR
 - PostgreSQL: logical replication between AWS RDS and GCP Cloud SQL
 - MySQL: native replication or tools like Debezium for CDC
@@ -181,6 +192,7 @@ resource "aws_route53_record" "failover_secondary" {
 ---
 
 ## Testing Multi-Cloud DR
+
 - DR plan without testing is fiction
 - Tabletop exercises: walk through the plan
 - Partial failover: shift percentage of traffic to DR cloud
@@ -190,6 +202,7 @@ resource "aws_route53_record" "failover_secondary" {
 ---
 
 ## Key Takeaways
+
 - Multi-cloud DR protects against provider-level outages
 - Complexity and cost are significantly higher than single-cloud DR
 - DNS-based failover is the simplest cross-cloud DR mechanism

@@ -66,6 +66,7 @@ audience:
 ## When to Use Redis Pub/Sub
 
 **Good for**:
+
 - Real-time notifications
 - Broadcasting events
 - Simple workflows
@@ -78,6 +79,7 @@ audience:
 ## When to Use Redis Pub/Sub (cont.)
 
 **Not ideal for**:
+
 - Mission-critical messaging
 - Guaranteed delivery
 - Complex workflows
@@ -128,6 +130,7 @@ PSUBSCRIBE *:error
 ```
 
 Pattern matching:
+
 - `?` matches any single character
 - `*` matches any sequence of characters
 - `[abc]` matches any character in the brackets
@@ -295,6 +298,7 @@ Use Redis Pub/Sub for Redis Sentinel events:
 ## Introduction to Redis Streams: Details
 
 Streams (introduced in Redis 5.0):
+
 - Append-only data structures
 - Persistent append-only logs
 - Support consumer groups

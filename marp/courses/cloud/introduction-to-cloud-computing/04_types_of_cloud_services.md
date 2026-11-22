@@ -18,6 +18,7 @@ audience:
 ---
 
 ## The Service Model Spectrum
+
 - From maximum control to maximum convenience
 - IaaS: you manage the most
 - PaaS: provider manages infrastructure
@@ -33,6 +34,7 @@ audience:
 ---
 
 ## Infrastructure as a Service (IaaS)
+
 - Rent virtual machines, storage, networks
 - You manage the OS, runtime, and applications
 - Maximum control and flexibility
@@ -42,6 +44,7 @@ audience:
 ---
 
 ## IaaS Responsibilities
+
 - Provider: physical hardware, networking, virtualization
 - Customer: OS, patches, runtime, application, data
 - Most control but most management burden
@@ -51,6 +54,7 @@ audience:
 ---
 
 ## Platform as a Service (PaaS)
+
 - Deploy applications without managing infrastructure
 - Provider manages OS, runtime, middleware
 - You manage the application code and data
@@ -60,6 +64,7 @@ audience:
 ---
 
 ## PaaS Responsibilities
+
 - Provider: hardware, OS, runtime, middleware
 - Customer: application code, data, configuration
 - Less control but less management
@@ -69,6 +74,7 @@ audience:
 ---
 
 ## Software as a Service (SaaS)
+
 - Ready-to-use applications over the internet
 - Provider manages everything
 - You use the application and manage your data
@@ -78,6 +84,7 @@ audience:
 ---
 
 ## SaaS Characteristics
+
 - Accessible via web browser
 - Automatic updates and patches
 - Multi-tenant architecture
@@ -87,6 +94,7 @@ audience:
 ---
 
 ## Function as a Service (FaaS)
+
 - Serverless compute model
 - Upload code, provider runs it
 - No servers to provision or manage
@@ -96,6 +104,7 @@ audience:
 ---
 
 ## FaaS Characteristics
+
 - Event-driven execution
 - Automatic scaling (zero to thousands)
 - Millisecond billing granularity
@@ -118,6 +127,7 @@ def handler(event, context):
 ---
 
 ## Comparing Service Models
+
 - IaaS: "Give me a machine, I'll handle the rest"
 - PaaS: "Give me a platform, I'll write the code"
 - SaaS: "Give me a working application"
@@ -127,6 +137,7 @@ def handler(event, context):
 ---
 
 ## Shared Responsibility Across Models
+
 - IaaS: customer manages most, provider manages least
 - PaaS: responsibility shifts toward provider
 - SaaS: provider manages almost everything
@@ -142,6 +153,7 @@ def handler(event, context):
 ---
 
 ## Choosing the Right Model
+
 - Legacy applications: often start with IaaS
 - New web applications: PaaS is efficient
 - End-user tools: SaaS when available
@@ -151,6 +163,7 @@ def handler(event, context):
 ---
 
 ## Beyond the Core Models
+
 - CaaS: Containers as a Service (ECS, AKS, GKE)
 - DBaaS: Database as a Service (RDS, Cloud SQL)
 - AIaaS: AI as a Service (SageMaker, Vertex AI)

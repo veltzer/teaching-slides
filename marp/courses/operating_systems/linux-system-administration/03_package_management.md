@@ -25,6 +25,7 @@ audience:
 - Audit trail of installed software
 
 Without package management:
+
 - Manual dependency tracking
 - No clean uninstall
 - No automatic security updates
@@ -943,6 +944,7 @@ apt autoremove -s
 ```
 
 Key output to watch:
+
 - "NEW" packages that will be installed
 - Packages that will be "REMOVED" (collateral)
 - "kept back" packages (held or broken deps)
@@ -1055,6 +1057,7 @@ apt install postfix
 ```
 
 Common virtual packages:
+
 - `mail-transport-agent` - MTA (postfix, exim4)
 - `httpd` - web server (apache2, nginx)
 - `java-runtime` - JRE (openjdk, default-jre)

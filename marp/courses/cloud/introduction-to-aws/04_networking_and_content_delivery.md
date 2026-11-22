@@ -23,6 +23,7 @@ audience:
 ---
 
 ## Networking in AWS
+
 - Virtual networks you fully control
 - Isolation, security, connectivity
 - Mirrors traditional networking concepts
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## Amazon VPC Overview
+
 - Virtual Private Cloud
 - Logically isolated section of AWS
 - You control the network configuration
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## VPC CIDR Blocks
+
 - Define IP address range for your VPC
 - Example: 10.0.0.0/16 (65,536 addresses)
 - Cannot overlap with other connected VPCs
@@ -71,6 +74,7 @@ aws ec2 create-subnet \
 ---
 
 ## Subnets
+
 - Divide a VPC into smaller segments
 - Each subnet lives in one Availability Zone
 - Public subnet: has route to Internet Gateway
@@ -80,6 +84,7 @@ aws ec2 create-subnet \
 ---
 
 ## VPC Components
+
 - Route Tables: traffic routing rules
 - Internet Gateway: internet access for public subnets
 - NAT Gateway: outbound internet for private subnets
@@ -89,6 +94,7 @@ aws ec2 create-subnet \
 ---
 
 ## Internet Gateway
+
 - Allows communication between VPC and internet
 - Horizontally scaled, redundant, highly available
 - One per VPC
@@ -98,6 +104,7 @@ aws ec2 create-subnet \
 ---
 
 ## NAT Gateway
+
 - Network Address Translation
 - Allows private subnet instances to reach internet
 - Blocks inbound internet traffic
@@ -107,6 +114,7 @@ aws ec2 create-subnet \
 ---
 
 ## Route Tables
+
 - Rules that determine where traffic goes
 - Each subnet associated with one route table
 - Local route: traffic within VPC (automatic)
@@ -116,6 +124,7 @@ aws ec2 create-subnet \
 ---
 
 ## Public vs Private Subnets
+
 - Public: route to Internet Gateway, direct internet access
 - Private: no direct internet route
 - Web servers, load balancers -> public
@@ -131,6 +140,7 @@ aws ec2 create-subnet \
 ---
 
 ## Security Groups
+
 - Instance-level virtual firewall
 - Stateful: return traffic automatically allowed
 - Allow rules only (no deny rules)
@@ -140,6 +150,7 @@ aws ec2 create-subnet \
 ---
 
 ## Security Group Rules
+
 - Inbound: control incoming traffic
 - Outbound: control outgoing traffic
 - Specify protocol, port range, source/destination
@@ -149,6 +160,7 @@ aws ec2 create-subnet \
 ---
 
 ## Network ACLs
+
 - Subnet-level firewall
 - Stateless: must allow return traffic explicitly
 - Allow and deny rules
@@ -158,6 +170,7 @@ aws ec2 create-subnet \
 ---
 
 ## Security Groups vs NACLs: Details
+
 - Security Groups: instance-level, stateful, allow only
 - NACLs: subnet-level, stateless, allow and deny
 - Use Security Groups as primary defense
@@ -173,6 +186,7 @@ aws ec2 create-subnet \
 ---
 
 ## Elastic IP Addresses
+
 - Static public IPv4 addresses
 - Persist across instance stop/start
 - Associated with an instance or network interface
@@ -182,6 +196,7 @@ aws ec2 create-subnet \
 ---
 
 ## Amazon Route 53
+
 - Managed DNS service
 - Domain name registration
 - Health checking and routing
@@ -191,6 +206,7 @@ aws ec2 create-subnet \
 ---
 
 ## Route 53 Hosted Zones
+
 - Public Hosted Zone: route internet traffic
 - Private Hosted Zone: route within VPCs
 - Contains DNS records (A, AAAA, CNAME, MX, etc.)
@@ -200,6 +216,7 @@ aws ec2 create-subnet \
 ---
 
 ## Route 53 Routing Policies
+
 - Simple: single resource
 - Weighted: distribute traffic by percentage
 - Latency-based: route to lowest-latency Region
@@ -233,6 +250,7 @@ aws route53 change-resource-record-sets \
 ---
 
 ## Route 53 Health Checks
+
 - Monitor endpoint health
 - HTTP, HTTPS, or TCP checks
 - Configurable interval and failure threshold
@@ -242,6 +260,7 @@ aws route53 change-resource-record-sets \
 ---
 
 ## Amazon CloudFront
+
 - Content Delivery Network (CDN)
 - 400+ edge locations worldwide
 - Caches content close to users
@@ -251,6 +270,7 @@ aws route53 change-resource-record-sets \
 ---
 
 ## CloudFront Distributions
+
 - Web distribution: HTTP/HTTPS content
 - Origin: where content comes from (S3, ALB, custom)
 - Behaviors: path patterns and caching rules
@@ -266,6 +286,7 @@ aws route53 change-resource-record-sets \
 ---
 
 ## CloudFront Security
+
 - HTTPS with custom SSL certificates
 - Origin Access Control (OAC) for S3
 - AWS WAF integration (web application firewall)
@@ -275,6 +296,7 @@ aws route53 change-resource-record-sets \
 ---
 
 ## CloudFront Use Cases
+
 - Static asset delivery (images, CSS, JS)
 - Dynamic content acceleration
 - Video streaming (live and on-demand)
@@ -284,6 +306,7 @@ aws route53 change-resource-record-sets \
 ---
 
 ## VPC Peering
+
 - Connect two VPCs privately
 - Traffic stays on AWS backbone
 - Works across Regions and accounts
@@ -293,6 +316,7 @@ aws route53 change-resource-record-sets \
 ---
 
 ## VPC Endpoints
+
 - Private connection to AWS services
 - Traffic stays within AWS network
 - Gateway Endpoints: S3, DynamoDB (free)
@@ -302,6 +326,7 @@ aws route53 change-resource-record-sets \
 ---
 
 ## AWS Transit Gateway
+
 - Hub-and-spoke connectivity
 - Connect multiple VPCs and on-premises networks
 - Single gateway, simplified management

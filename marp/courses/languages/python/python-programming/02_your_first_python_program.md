@@ -13,6 +13,7 @@ audience:
 ---
 
 ## Installing Python on Linux
+
 - Most Linux distributions come with Python pre-installed
 - Check your version:
 
@@ -30,6 +31,7 @@ sudo apt install python3 python3-pip python3-venv
 ---
 
 ## Installing Python on macOS
+
 - macOS may come with an older Python
 - Recommended: use Homebrew
 
@@ -47,6 +49,7 @@ python3 --version
 ---
 
 ## Installing Python on Windows
+
 - Download from <https://python.org>
 - Check "Add Python to PATH" during installation
 - Verify in Command Prompt:
@@ -60,6 +63,7 @@ python --version
 ---
 
 ## The Python Interactive Shell
+
 - Start by typing `python3` in terminal
 - The `>>>` prompt means Python is ready
 
@@ -76,6 +80,7 @@ Python 3.12.0 (main, Oct  2 2023)
 ---
 
 ## Using the Interactive Shell
+
 - Immediate feedback for expressions
 - Great for testing small code snippets
 - Use `help()` for built-in documentation
@@ -90,6 +95,7 @@ Python 3.12.0 (main, Oct  2 2023)
 ---
 
 ## IPython - Enhanced Interactive Shell
+
 - More powerful than the default shell
 - Install with `pip install ipython`
 - Features:
@@ -106,6 +112,7 @@ ipython
 ---
 
 ## Your First Script
+
 - Create a file called `hello.py`
 
 ```python
@@ -127,6 +134,7 @@ Hello, World!
 ---
 
 ## The Shebang Line
+
 - On Unix systems, you can make scripts executable
 
 ```python
@@ -144,6 +152,7 @@ chmod +x hello.py
 ---
 
 ## Comments in Python
+
 - Single-line comments start with `#`
 - No multi-line comment syntax (use multiple `#`)
 
@@ -159,6 +168,7 @@ x = 42  # This is an inline comment
 ---
 
 ## Docstrings
+
 - Triple-quoted strings used for documentation
 - First statement in a module, function, class, or method
 
@@ -178,6 +188,7 @@ def greet(name):
 ---
 
 ## The `print()` Function
+
 - Outputs text to the console
 - Can print multiple values separated by space
 
@@ -205,6 +216,7 @@ No newline here
 ---
 
 ## The `input()` Function
+
 - Reads text input from the user
 - Always returns a string
 
@@ -233,6 +245,7 @@ print(f"Hello {name}, you are {age} years old!")
 ---
 
 ## Running Python with `-c` Flag
+
 - Execute a one-liner from the command line
 
 ```bash
@@ -246,6 +259,7 @@ python3 -c "print(2 ** 10)"
 ---
 
 ## Running Python with `-m` Flag
+
 - Run a module as a script
 
 ```bash
@@ -258,6 +272,7 @@ python3 -m pip install requests
 ---
 
 ## IDEs for Python - VS Code
+
 - Free, open source, by Microsoft
 - Excellent Python extension
 - Features:
@@ -270,6 +285,7 @@ python3 -m pip install requests
 ---
 
 ## IDEs for Python - PyCharm
+
 - By JetBrains
 - Community Edition is free
 - Professional Edition is paid
@@ -283,6 +299,7 @@ python3 -m pip install requests
 ---
 
 ## IDEs for Python - Other Options
+
 - **Vim/Neovim**: With Python plugins
 - **Emacs**: With `elpy` or `lsp-mode`
 - **Sublime Text**: Lightweight, fast
@@ -293,6 +310,7 @@ python3 -m pip install requests
 ---
 
 ## Jupyter Notebooks
+
 - Interactive documents mixing code and text
 - Popular in data science and education
 - Install and run:
@@ -308,6 +326,7 @@ jupyter notebook
 ---
 
 ## Python File Encoding
+
 - Python 3 source files are UTF-8 by default
 - You can specify encoding explicitly:
 
@@ -321,6 +340,7 @@ jupyter notebook
 ---
 
 ## Python Style Guide (PEP 8)
+
 - Use 4 spaces for indentation (never tabs)
 - Maximum line length: 79 characters
 - Two blank lines before top-level definitions
@@ -351,6 +371,7 @@ PI = 3.14159
 ---
 
 ## Linting with `flake8`
+
 - Checks code against PEP 8
 
 ```bash
@@ -367,6 +388,7 @@ flake8 my_script.py
 ---
 
 ## Formatting with `black`
+
 - Automatic code formatter
 - Opinionated: one way to format
 
@@ -381,6 +403,7 @@ black my_script.py
 ---
 
 ## Type Checking with `mypy`
+
 - Static type checker for Python
 - Uses type hints to find bugs
 
@@ -399,6 +422,7 @@ add("hello", "world")  # mypy catches this
 ---
 
 ## Summary
+
 - Python can be installed on all major platforms
 - Use `python3` to start the interactive shell
 - Write scripts in `.py` files

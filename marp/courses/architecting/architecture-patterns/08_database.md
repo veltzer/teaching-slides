@@ -312,6 +312,7 @@ def store_data(key, value):
 ## Sharded Pros and Cons
 
 Pros:
+
 - Improves scalability for large datasets
 - Enhances query performance through parallelization
 - Allows for better resource utilization
@@ -323,6 +324,7 @@ Pros:
 ## Sharded Pros and Cons (cont.)
 
 Cons:
+
 - Increases complexity in data management and application logic
 - Can lead to data distribution skew if shard key is poorly chosen
 - Makes it challenging to perform queries across multiple shards
@@ -361,6 +363,7 @@ Cons:
 ## Data Mesh Pros and Cons
 
 Pros:
+
 - Improves scalability of data ownership across many domains
 - Enhances data quality by aligning ownership with domain expertise
 - Provides consistent governance policies across domains
@@ -372,6 +375,7 @@ Pros:
 ## Data Mesh Pros and Cons (cont.)
 
 Cons:
+
 - Increases overall organizational complexity
 - Requires mature platform tooling for self-service
 - May have a steep learning curve for teams

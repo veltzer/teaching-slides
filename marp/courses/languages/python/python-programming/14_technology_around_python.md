@@ -13,6 +13,7 @@ audience:
 ---
 
 ## Overview
+
 - Debugging Python code
 - Profiling performance
 - Code formatting and linting
@@ -23,6 +24,7 @@ audience:
 ---
 
 ## The Python Debugger (`pdb`)
+
 - Built-in interactive debugger
 - Set breakpoints, inspect variables, step through code
 
@@ -160,6 +162,7 @@ ipdb.set_trace()
 ---
 
 ## VS Code Debugging
+
 - Set breakpoints by clicking line numbers
 - Run with F5 or Debug panel
 - Features:
@@ -180,6 +183,7 @@ ipdb.set_trace()
 ---
 
 ## Profiling - Why?
+
 - Find performance bottlenecks
 - Understand where time is spent
 - Optimize the right parts of code
@@ -374,6 +378,7 @@ include = '\.pyi?$'
 ---
 
 ## Code Formatting - `isort`
+
 - Sorts and organizes imports
 
 ```bash
@@ -424,6 +429,7 @@ flake8 --max-line-length 88 src/
 ---
 
 ## Linting - `ruff`
+
 - Modern, fast Python linter (written in Rust)
 - Replaces `flake8`, `isort`, `pyupgrade`, and more
 
@@ -692,6 +698,7 @@ CMD ["python3", "-m", "my_package"]
 ---
 
 ## Python Performance Tips
+
 1. Use built-in functions (`sum`, `max`, `min`, `sorted`)
 1. Use list comprehensions over loops
 1. Use `set` for membership testing
@@ -761,6 +768,7 @@ def process():
 ---
 
 ## Developer Workflow Summary
+
 1. Use `pyenv` to manage Python versions
 1. Create virtual environment with `venv` or `uv`
 1. Install dependencies with `pip` or `poetry`
@@ -775,6 +783,7 @@ def process():
 ---
 
 ## Summary
+
 - `pdb` and `breakpoint()` for debugging
 - `cProfile` and `timeit` for profiling
 - `black`/`ruff` for formatting, `flake8`/`ruff` for linting

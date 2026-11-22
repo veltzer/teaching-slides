@@ -11,6 +11,7 @@ audience:
 # Idiomatic Python
 
 ## Overview
+
 - Writing pythonic code
 - Using Python as it was designed
 - Leveraging language-specific features and idioms
@@ -47,6 +48,7 @@ audience:
 ## Why Write Idiomatic Python?
 
 ## Benefits
+
 - More readable by Python developers
 - Typically more concise
 - Often more efficient
@@ -407,6 +409,7 @@ print(f"{age:03d}")   # Zero-padded, 3 digits
 ## Correct Use of Basic Features: Correct Iteration
 
 ## Range vs. Direct Iteration
+
 - Iterate directly over containers when possible
 - Use range only when you need the index numbers
 - Use enumerate when you need both items and indices
@@ -917,6 +920,7 @@ class Student:
 ## Summary
 
 ## Key Points
+
 - Choose the right data structure for your needs
 - Leverage Python's built-in features and libraries
 - Prefer clear, concise, and readability
@@ -928,6 +932,7 @@ class Student:
 ## Further Reading
 
 ## Resources
+
 - "Fluent Python" by Luciano Ramalho
 - "Effective Python" by Brett Slatkin
 - "Python Cookbook" by David Beazley and Brian K. Jones

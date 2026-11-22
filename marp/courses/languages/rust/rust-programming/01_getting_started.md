@@ -43,6 +43,7 @@ audience:
 <div>
 
 ### Benefits
+
 - Memory safety
 - Zero-cost abstractions
 - Modern tooling
@@ -52,6 +53,7 @@ audience:
 <div>
 
 ### Features
+
 - No garbage collector
 - Concurrency support
 - Cross-platform
@@ -89,6 +91,7 @@ curl --proto '=https' --tlsv1.2 -sSf 'https://sh.rustup.rs' | sh
 <div>
 
 ### Windows
+
 - Download rustup-init.exe
 - Run installer
 - Follow prompts
@@ -122,6 +125,7 @@ rustup component list
 ## Development Environment
 
 ### Recommended Setup
+
 - VS Code
 - rust-analyzer extension
 - CodeLLDB extension
@@ -304,6 +308,7 @@ fn main() {
 <div>
 
 ### Development
+
 - Use rust-analyzer
 - Follow style guide
 - Write documentation
@@ -313,6 +318,7 @@ fn main() {
 <div>
 
 ### Code Quality
+
 - Use `cargo clippy`
 - Write tests
 - Handle errors
@@ -335,6 +341,7 @@ fn main() {
 <div>
 
 ### Official
+
 - The Rust Book
 - Rust by Example
 - Standard Library Docs
@@ -344,6 +351,7 @@ fn main() {
 <div>
 
 ### Community
+
 - Discord
 - Reddit (r/rust)
 - Stack Overflow

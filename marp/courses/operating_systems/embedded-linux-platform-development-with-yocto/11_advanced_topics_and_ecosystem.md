@@ -783,6 +783,7 @@ earlyprintk debug loglevel=8
 ## Commercial Support
 
 Vendors offering Yocto support:
+
 - **Wind River** - VxWorks and Linux
 - **Mentor Graphics** - CodeBench and tools
 - **Timesys** - Long-term support
@@ -795,6 +796,7 @@ Vendors offering Yocto support:
 ## Commercial Support (cont.)
 
 Enterprise features:
+
 - Long-term support (LTS)
 - Security updates
 - Compliance certification
@@ -806,12 +808,14 @@ Enterprise features:
 ## Training and Certification
 
 Official training:
+
 - Yocto Project Fundamentals
 - BSP Development
 - Application Development
 - Kernel Development
 
 Certification:
+
 - Yocto Project Certified Developer
 - Yocto Project Specialist
 
@@ -820,6 +824,7 @@ Certification:
 ## Training and Certification (cont.)
 
 Resources:
+
 - docs.yoctoproject.org
 - wiki.yoctoproject.org
 - Yocto Project Summit
@@ -830,11 +835,13 @@ Resources:
 ## Community Resources
 
 Mailing lists:
+
 - <yocto@lists.yoctoproject.org>
 - <openembedded-core@lists.openembedded.org>
 - <meta-openembedded@lists.openembedded.org>
 
 IRC channels:
+
 - #yocto on libera.chat
 - #openembedded on libera.chat
 
@@ -843,9 +850,11 @@ IRC channels:
 ## Community Resources (cont.)
 
 Bug tracking:
+
 - bugzilla.yoctoproject.org
 
 Wiki and documentation:
+
 - wiki.yoctoproject.org
 - docs.yoctoproject.org
 
@@ -854,6 +863,7 @@ Wiki and documentation:
 ## Future Directions
 
 Emerging trends:
+
 - Enhanced container support
 - Cloud-native builds
 - AI/ML integration
@@ -868,6 +878,7 @@ Emerging trends:
 ## Future Directions (cont.)
 
 Upcoming features:
+
 - Improved hash equivalence
 - Better incremental builds
 - Enhanced testing framework
@@ -879,11 +890,13 @@ Upcoming features:
 ## Best Practices Summary
 
 Architecture:
+
 - Layer organization
 - Separation of concerns
 - Clear dependencies
 
 Development:
+
 - Use devtool workflow
 - Version control everything
 - Automated testing
@@ -894,12 +907,14 @@ Development:
 ## Best Practices Summary (cont.)
 
 Production:
+
 - Security hardening
 - Update mechanisms
 - Monitoring and logging
 - Compliance documentation
 
 Community:
+
 - Contribute upstream
 - Share improvements
 - Document thoroughly
@@ -910,6 +925,7 @@ Community:
 ## Summary
 
 Advanced topics covered:
+
 - Real-time Linux and Xenomai
 - Virtualization and containers
 - Multi-architecture builds
@@ -926,6 +942,7 @@ Advanced topics covered:
 ## Summary (cont.)
 
 Key takeaways:
+
 - Yocto is highly extensible
 - Strong ecosystem support
 - Active community
@@ -937,6 +954,7 @@ Key takeaways:
 ## Course Conclusion
 
 Throughout this course:
+
 1. Introduction and fundamentals
 1. Architecture deep dive
 1. BitBake and build system
@@ -959,6 +977,7 @@ Throughout this course:
 ## Course Conclusion (cont.) (cont.)
 
 Next steps:
+
 - Build your first custom image
 - Develop your BSP
 - Contribute to community

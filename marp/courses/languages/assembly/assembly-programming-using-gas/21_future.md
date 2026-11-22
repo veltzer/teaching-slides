@@ -22,6 +22,7 @@ audience:
 ---
 
 ## Current Role of Assembly
+
 - Performance-critical sections
 - Device drivers and OS kernels
 - Embedded systems
@@ -30,6 +31,7 @@ audience:
 ---
 
 ## High-Level Languages vs Assembly
+
 - Most applications: High-level languages
 - Specific use cases: Assembly still relevant
 - Compilers becoming increasingly sophisticated
@@ -51,6 +53,7 @@ int add(int a, int b) {
 ---
 
 ## Emerging Architectures
+
 - RISC-V: Open-source ISA
 - Quantum Computing
 - Neuromorphic Computing
@@ -92,6 +95,7 @@ aesenc xmm0, xmm1   ; AES encryption round
 ---
 
 ## Assembly in Education
+
 - Teaching computer architecture
 - Understanding low-level operations
 - Foundation for systems programming
@@ -99,6 +103,7 @@ aesenc xmm0, xmm1   ; AES encryption round
 ---
 
 ## WebAssembly (Wasm)
+
 - Binary instruction format for stack-based VM
 - Designed for client and server-side web programming
 - Can be generated from languages like C, C++, Rust
@@ -118,6 +123,7 @@ Example:
 ---
 
 ## Just-In-Time (JIT) Compilation
+
 - Runtime compilation of code
 - Combines advantages of interpreted and compiled code
 - Often uses low-level optimization techniques
@@ -125,6 +131,7 @@ Example:
 ---
 
 ## Assembly in Heterogeneous Computing
+
 - CPU-GPU hybrid systems
 - FPGA programming
 - Custom accelerators
@@ -141,6 +148,7 @@ __global__ void add(int *a, int *b, int *c) {
 ---
 
 ## Optimizing for Modern Hardware
+
 - Instruction pipelining
 - Branch prediction
 - Cache-friendly code
@@ -162,6 +170,7 @@ Example of loop unrolling:
 ---
 
 ## Security Considerations
+
 - Control-flow Integrity (CFI)
 - Return-Oriented Programming (ROP) defenses
 - Hardware-level security features
@@ -181,6 +190,7 @@ check_target:
 ---
 
 ## Assembly in IoT and Embedded Systems
+
 - Resource-constrained devices
 - Real-time systems
 - Power efficiency
@@ -196,6 +206,7 @@ Example for an ARM Cortex-M:
 ---
 
 ## Ongoing Relevance of Assembly
+
 - Performance optimization
 - Hardware-software interface
 - Low-level system control
@@ -204,6 +215,7 @@ Example for an ARM Cortex-M:
 ---
 
 ## Challenges and Opportunities
+
 - Keeping up with new architectures
 - Balancing performance and maintainability
 - Integrating with high-level languages

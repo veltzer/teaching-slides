@@ -17,6 +17,7 @@ audience:
 ---
 
 ## What Are Spot Instances?
+
 - Unused cloud capacity offered at deep discounts
 - Up to 90% savings vs on-demand
 - Can be interrupted with short notice (2 minutes on AWS)
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## How Spot Pricing Works
+
 - Price fluctuates based on supply and demand
 - When your max price < spot price, instance is reclaimed
 - AWS: no longer auction-based, gradual price changes
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## Spot-Friendly Workload Patterns
+
 - Stateless applications behind load balancers
 - Batch processing and data pipelines
 - CI/CD build and test jobs
@@ -44,6 +47,7 @@ audience:
 ---
 
 ## Workloads to Avoid on Spot
+
 - Stateful databases
 - Single-instance applications with no redundancy
 - Long-running jobs that cannot checkpoint
@@ -53,6 +57,7 @@ audience:
 ---
 
 ## Handling Interruptions
+
 - Design for graceful shutdown
 - Checkpoint progress regularly
 - Use interruption notices (2 min on AWS)
@@ -83,6 +88,7 @@ done
 ---
 
 ## Spot Fleet Management
+
 - Request a mix of instance types and AZs
 - Diversification reduces interruption risk
 - AWS Spot Fleet, Azure VMSS, GCP MIGs
@@ -92,6 +98,7 @@ done
 ---
 
 ## Mixing Spot and On-Demand
+
 - Base capacity on on-demand or reserved
 - Burst capacity on spot
 - Auto Scaling groups with mixed instances
@@ -107,6 +114,7 @@ done
 ---
 
 ## Spot in Kubernetes
+
 - Node pools with spot instances
 - Pod disruption budgets handle evictions
 - Cluster Autoscaler supports spot
@@ -116,6 +124,7 @@ done
 ---
 
 ## Cost Savings Estimation
+
 - Compare on-demand price vs average spot price
 - Factor in interruption overhead (re-runs)
 - Typical effective savings: 60-80%
@@ -125,6 +134,7 @@ done
 ---
 
 ## Spot Instance Best Practices
+
 - Diversify across at least 4 instance types
 - Use capacity-optimized allocation
 - Implement graceful shutdown handlers
@@ -134,6 +144,7 @@ done
 ---
 
 ## AWS Spot Features
+
 - Spot Placement Score: likelihood of getting capacity
 - Spot Fleet: manage a collection of spot instances
 - EC2 Fleet: combine on-demand, reserved, and spot
@@ -143,6 +154,7 @@ done
 ---
 
 ## Real-World Spot Savings
+
 - Many organizations run 50-70% of compute on spot
 - Netflix, Lyft, Samsung use spot extensively
 - CI/CD pipelines: nearly 100% spot

@@ -31,6 +31,7 @@ audience:
 Tags mark important points in your repository's history:
 
 **Common use cases:**
+
 - **Release versions:** Mark software releases (v1.0, v2.1.3)
 - **Milestones:** Important project milestones
 - **Stable points:** Known good states for testing
@@ -42,6 +43,7 @@ Tags mark important points in your repository's history:
 ## Why Tag? (cont.)
 
 **Benefits of tagging:**
+
 - Permanent references to specific commits
 - Human-readable names for releases
 - Easy checkout of specific versions
@@ -61,6 +63,7 @@ git checkout v1.0.0               # Return to this version anytime
 Git supports two types of tags with different characteristics:
 
 **Lightweight tags:**
+
 - Simple pointer to a commit
 - Just a name pointing to commit SHA
 - No additional metadata
@@ -71,6 +74,7 @@ Git supports two types of tags with different characteristics:
 ## Lightweight vs Annotated Tags: Details (cont.)
 
 **Annotated tags:**
+
 - Full Git objects stored in database
 - Contains tagger information
 - Includes tagging date and message
@@ -108,6 +112,7 @@ git tag
 ## Creating Lightweight Tags (cont.)
 
 **Lightweight tag characteristics:**
+
 - No `-a` flag needed
 - No message or metadata
 - Very lightweight (just a reference)
@@ -119,6 +124,7 @@ git tag
 ## Creating Lightweight Tags (cont.) (cont.)
 
 **When to use lightweight tags:**
+
 - Temporary markers
 - Personal bookmarks
 - Quick testing references
@@ -150,6 +156,7 @@ git tag -a v2.0.0 -m "Major release 2.0.0
 ```
 
 **Annotated tag benefits:**
+
 - Complete metadata
 - Proper audit trail
 - Can be cryptographically signed
@@ -182,6 +189,7 @@ git tag -n5    # First 5 lines
 ```
 
 **Tag information includes:**
+
 - Tag name and type
 - Target commit SHA
 - Tagger name and email
@@ -225,6 +233,7 @@ git tag v2024.02.01
 ```
 
 **Common patterns:**
+
 - Always use consistent prefix (`v` for version)
 - Follow semantic versioning principles
 - Include pre-release identifiers
@@ -258,12 +267,14 @@ git tag -d $(git tag -l "v0.*")
 ## Deleting Tags (cont.)
 
 **When to delete tags:**
+
 - Incorrect tag names
 - Pre-release tags no longer needed
 - Mistakenly created tags
 - Cleanup of old experimental tags
 
 **Important notes:**
+
 - Deleting local tag doesn't affect remote
 - Must explicitly delete from remote
 - Consider impact on other developers
@@ -305,6 +316,7 @@ git pull
 ```
 
 **Tag sharing considerations:**
+
 - Tags must be explicitly pushed
 - `--tags` pushes all local tags
 - Tags are globally visible once pushed
@@ -334,6 +346,7 @@ git log v1.0.0..HEAD --oneline
 ```
 
 **Detached HEAD state:**
+
 - Checking out tag creates detached HEAD
 - Can examine files and make experimental changes
 - Create branch if you need to make commits
@@ -410,6 +423,7 @@ git config tag.gpgSign true
 ```
 
 **Benefits of signed tags:**
+
 - Verify authenticity of releases
 - Ensure tags weren't tampered with
 - Compliance and security requirements
@@ -485,12 +499,14 @@ jobs:
 ## Automated Tagging (cont.)
 
 **Semantic release tools:**
+
 - Automatically determine version numbers
 - Generate changelogs
 - Create tags based on commit messages
 - Integrate with package managers
 
 **Benefits:**
+
 - Consistent tagging process
 - Reduced human error
 - Automated changelog generation
@@ -501,6 +517,7 @@ jobs:
 ## Tag Management Best Practices
 
 **Naming consistency:**
+
 1. Use semantic versioning
 1. Consistent prefixes (v1.0.0)
 1. Clear pre-release naming
@@ -511,6 +528,7 @@ jobs:
 ## Tag Management Best Practices (cont.)
 
 **Release process:**
+
 1. Test thoroughly before tagging
 1. Use annotated tags for releases
 1. Include meaningful messages
@@ -522,6 +540,7 @@ jobs:
 ## Tag Management Best Practices (cont.) (cont.)
 
 **Maintenance:**
+
 1. Clean up development tags
 1. Keep release tags permanently
 1. Document important tags
@@ -679,6 +698,7 @@ git tag -a "v$VERSION" -m "Release $VERSION"
 ## Tag Security Considerations
 
 **Protecting important tags:**
+
 - Use signed tags for releases
 - Restrict tag push permissions
 - Audit tag creation and deletion
@@ -735,12 +755,14 @@ git push origin --tags
 ## Tag Performance and Scalability
 
 **Performance considerations:**
+
 - Tags are lightweight references
 - Large numbers of tags don't significantly impact performance
 - Tag listing may be slow with thousands of tags
 - Use tag patterns for filtering
 
 **Repository size impact:**
+
 - Lightweight tags: minimal impact
 - Annotated tags: small objects in database
 - Signed tags: slightly larger due to signatures
@@ -767,6 +789,7 @@ git gc --aggressive
 **Scenario:** Implement a complete tagging strategy for a software project with proper release management.
 
 **Setup tasks:**
+
 1. **Create release workflow:**
    - Establish semantic versioning scheme
    - Create first release with proper tag
@@ -787,6 +810,7 @@ git gc --aggressive
    - Create branches from tags
 
 **Advanced tasks:**
+
 1. **Automation setup:**
    - Create scripts for automated tagging
    - Set up CI/CD integration

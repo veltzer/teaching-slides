@@ -302,6 +302,7 @@ public class RobustWorker extends Worker {
 ### Background Processing Implementation
 
 Create an application that:
+
 1. Uses Foreground Service
 1. Implements WorkManager
 1. Handles system events

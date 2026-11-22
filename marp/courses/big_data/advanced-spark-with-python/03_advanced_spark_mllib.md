@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Chapter Overview
+
 * Scalable ML pipelines
 * Advanced model training
 * Hyperparameter tuning
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## Pipeline Components
+
 1. Feature transformers
 1. Estimators
 1. Evaluators
@@ -59,6 +61,7 @@ assembler = VectorAssembler(
 ---
 
 ## Feature Transformers
+
 1. StringIndexer
 1. OneHotEncoder
 1. VectorAssembler
@@ -140,6 +143,7 @@ cv = CrossValidator(
 ---
 
 ## Model Evaluation
+
 1. Binary classification metrics
 1. Multiclass metrics
 1. Regression metrics
@@ -194,6 +198,7 @@ loaded_model = PipelineModel.load("hdfs://model/path")
 ---
 
 ## Advanced Algorithms
+
 1. Gradient Boosted Trees
 1. Neural Networks
 1. Random Forests
@@ -249,6 +254,7 @@ for batch in streaming_data:
 ---
 
 ## Production Pipeline
+
 1. Data validation
 1. Feature computation
 1. Model prediction
@@ -274,6 +280,7 @@ accuracy = evaluator.evaluate(predictions)
 ---
 
 ## Resource Management
+
 1. Memory configuration
 1. CPU allocation
 1. GPU utilization
@@ -298,6 +305,7 @@ transformed_data = pipeline.fit(train_data)\
 ---
 
 ## Feature Store Integration
+
 1. Feature versioning
 1. Feature sharing
 1. Computation reuse
@@ -321,6 +329,7 @@ mlflow.spark.log_model(spark_model, "model")
 ---
 
 ## Model Versioning
+
 1. Version control
 1. Model lineage
 1. Experiment tracking
@@ -357,6 +366,7 @@ except Exception as e:
 ---
 
 ## Model Explainability
+
 1. Feature importance
 1. SHAP values
 1. Partial dependence
@@ -384,6 +394,7 @@ automl = TrainValidationSplit(
 ---
 
 ## Model Compression
+
 1. Pruning
 1. Quantization
 1. Knowledge distillation
@@ -409,6 +420,7 @@ def process_stream(batch_df, epoch_id):
 ---
 
 ## Testing ML Pipelines
+
 1. Unit tests
 1. Integration tests
 1. Performance tests
@@ -433,6 +445,7 @@ debug_df.show()
 ---
 
 ## Production Checklist
+
 1. Model validation
 1. Performance metrics
 1. Monitoring setup
@@ -441,6 +454,7 @@ debug_df.show()
 ---
 
 ## Future Developments
+
 1. AutoML improvements
 1. Distributed deep learning
 1. Edge deployment
@@ -455,6 +469,7 @@ debug_df.show()
 ---
 
 ## Additional Resources
+
 * Official documentation
 * Research papers
 * Community guides

@@ -24,6 +24,7 @@ audience:
 ---
 
 ## What is an Alias?
+
 - A shortcut for a command or command sequence
 - Text substitution before the shell parses the line
 - Only work in interactive shells (by default)
@@ -181,6 +182,7 @@ source ~/.bashrc
 ---
 
 ## Summary: Functions, Types & Advanced
+
 - Functions: use `local`, return codes vs stdout, namerefs
 - Variable types: strings (default), integers, arrays, assoc. arrays
 - Arithmetic: `$(( ))` for integers, `bc`/`awk` for floats
@@ -217,6 +219,7 @@ Code Quality:
 ---
 
 ## Recommended Reading
+
 - `man bash` — the definitive reference
 - "Advanced Bash-Scripting Guide" (tldp.org)
 - `shellcheck` wiki — explains every warning
@@ -227,6 +230,7 @@ Code Quality:
 ---
 
 ## Closing Thoughts
+
 - Practice daily: automate one task per week
 - Read other people's scripts (in `/etc/init.d/`, GitHub)
 - Start simple, add complexity only when needed

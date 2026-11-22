@@ -11,6 +11,7 @@ audience:
 # Python Descriptors
 
 ## Overview
+
 - What are descriptors?
 - The descriptor protocol
 - Types of descriptors
@@ -1002,6 +1003,7 @@ print(user.dict())
 ## Summary
 
 ## Key Takeaways
+
 - Descriptors provide a powerful way to customize attribute access
 - Foundation for many Python language features
 - Useful for validation, computed properties, and more
@@ -1014,6 +1016,7 @@ print(user.dict())
 ## Further Reading
 
 ## Resources
+
 - Python documentation on descriptors
 - "Python Cookbook" by David Beazley and Brian Jones
 - "Fluent Python" by Luciano Ramalho

@@ -152,6 +152,7 @@ bitbake-layers layerindex-show-depends meta-qt5
 ## Recipe Naming Conventions
 
 Standard naming:
+
 - `packagename_version.bb` - Base recipe
 - `packagename_version.bbappend` - Recipe extension
 - `packagename.inc` - Include file
@@ -901,6 +902,7 @@ do_install_append() {
 ## Summary
 
 Key concepts covered:
+
 - Layer structure and management
 - Recipe organization and naming
 - Source management and patching
@@ -913,6 +915,7 @@ Key concepts covered:
 ## Summary (cont.)
 
 Best practices:
+
 - Organize layers logically
 - Follow naming conventions
 - Use classes effectively

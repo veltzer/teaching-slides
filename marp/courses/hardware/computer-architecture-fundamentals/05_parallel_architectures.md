@@ -140,6 +140,7 @@ This is the rarest category and mainly theoretical.
 ## MISD: Multiple Instructions, Single Data: Details
 
 **Practical uses:**
+
 - Fault-tolerant systems: run the same computation with different
   algorithms, compare results (Space Shuttle flight computer)
 - Systolic arrays: data flows through a pipeline of different
@@ -166,6 +167,7 @@ different data. This is the most common parallel architecture today.
 ## MIMD: Multiple Instructions, Multiple Data: Details
 
 **Examples:**
+
 - Multi-core CPUs (each core runs its own thread)
 - Multi-socket servers (multiple CPUs on one motherboard)
 - Distributed clusters (many machines connected by network)
@@ -388,6 +390,7 @@ accesses memory on the wrong NUMA node can be 30-50% slower.
 ```
 
 **NUMA-aware programming tips:**
+
 - Allocate memory on the same node where threads will access it
 - Use `numactl --localalloc` to force local allocation
 - Use `libnuma` for fine-grained control in C/C++

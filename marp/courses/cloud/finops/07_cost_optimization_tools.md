@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Cloud-Native Tools Overview
+
 - Every major provider offers built-in cost tools
 - Free or low-cost to use
 - Good starting point before third-party tools
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## AWS Cost Explorer
+
 - Visualize spending over time
 - Filter by service, Region, tag, account
 - Group by dimensions (service, instance type)
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## AWS Cost and Usage Reports (CUR)
+
 - Most detailed billing data available
 - Hourly or daily line items for every resource
 - Export to S3 for custom analysis
@@ -66,6 +69,7 @@ LIMIT 10;
 ---
 
 ## AWS Compute Optimizer
+
 - ML-based rightsizing recommendations
 - Analyzes CloudWatch metrics (CPU, memory, network)
 - Covers EC2, Auto Scaling, EBS, Lambda
@@ -75,6 +79,7 @@ LIMIT 10;
 ---
 
 ## Azure Cost Management
+
 - Cost analysis and visualization
 - Budget creation and alerts
 - Advisor recommendations
@@ -84,6 +89,7 @@ LIMIT 10;
 ---
 
 ## Azure Advisor
+
 - Personalized best practice recommendations
 - Cost: idle resources, rightsizing, reservations
 - Performance, security, reliability checks
@@ -93,6 +99,7 @@ LIMIT 10;
 ---
 
 ## GCP Billing and Recommender
+
 - Cloud Billing reports and export
 - BigQuery export for detailed analysis
 - Recommender: rightsizing, commitment suggestions
@@ -102,6 +109,7 @@ LIMIT 10;
 ---
 
 ## Third-Party FinOps Platforms
+
 - CloudHealth (VMware): multi-cloud cost management
 - Spot.io (NetApp): optimization and automation
 - Kubecost: Kubernetes cost allocation
@@ -111,6 +119,7 @@ LIMIT 10;
 ---
 
 ## When to Use Third-Party Tools
+
 - Multi-cloud environments
 - Need for advanced allocation and showback
 - Kubernetes cost visibility
@@ -120,6 +129,7 @@ LIMIT 10;
 ---
 
 ## Infrastructure as Code for Cost Control
+
 - Define resource sizes in code (prevent over-provisioning)
 - Review cost impact in pull requests
 - Infracost: estimate cost changes in CI/CD
@@ -129,6 +139,7 @@ LIMIT 10;
 ---
 
 ## Automated Scheduling
+
 - Stop dev/test environments outside business hours
 - AWS Instance Scheduler, Azure Automation
 - Save 65%+ on non-production compute
@@ -138,6 +149,7 @@ LIMIT 10;
 ---
 
 ## Waste Detection and Cleanup
+
 - Automated scans for idle resources
 - AWS Trusted Advisor checks
 - Custom Lambda/Functions for cleanup
@@ -147,6 +159,7 @@ LIMIT 10;
 ---
 
 ## Building a Cost Optimization Dashboard
+
 - Combine native and third-party data
 - Key metrics: spend trend, savings rate, coverage
 - Per-team and per-service breakdowns

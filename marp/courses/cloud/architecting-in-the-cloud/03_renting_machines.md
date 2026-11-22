@@ -17,6 +17,7 @@ audience:
 ---
 
 ## What Are Machines in the Cloud?
+
 - Virtual machines running on shared physical hardware
 - Hypervisor isolates tenants
 - You get a slice of CPU, memory, storage, network
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Virtual Machine Internals
+
 - Host machine runs the hypervisor (Xen, KVM, Nitro)
 - VMs share physical resources
 - NUMA awareness for performance-sensitive workloads
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## What is Your Responsibility?
+
 - OS patches and updates
 - Application installation and configuration
 - Security hardening
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## Provider Responsibility
+
 - Physical hardware maintenance
 - Hypervisor patches
 - Network infrastructure
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## Should You Get Your Own Machine?
+
 - Default: shared tenancy (multi-tenant)
 - Dedicated Instances: hardware not shared
 - Dedicated Hosts: entire physical server
@@ -68,6 +73,7 @@ audience:
 ---
 
 ## When to Use Dedicated/Bare Metal
+
 - Licensing requirements (per-socket, per-core)
 - Compliance requirements (isolated hardware)
 - Performance-sensitive workloads (no noisy neighbors)
@@ -77,6 +83,7 @@ audience:
 ---
 
 ## Bare Metal Instances
+
 - Physical server, no hypervisor
 - AWS i3.metal, Azure dedicated hosts, GCP sole-tenant
 - Maximum performance, direct hardware access
@@ -86,6 +93,7 @@ audience:
 ---
 
 ## Choosing Between Instance Families
+
 - General purpose: web servers, app servers, dev environments
 - Compute optimized: batch processing, HPC, gaming
 - Memory optimized: in-memory databases, real-time analytics
@@ -101,6 +109,7 @@ audience:
 ---
 
 ## Instance Sizing Strategy
+
 - Start with the smallest size that meets requirements
 - Monitor CPU, memory, network for 2-4 weeks
 - Right-size based on actual utilization
@@ -110,6 +119,7 @@ audience:
 ---
 
 ## Burstable Instances (T-series)
+
 - Baseline CPU + burst credits
 - Accumulate credits when CPU is low
 - Spend credits during burst periods
@@ -119,6 +129,7 @@ audience:
 ---
 
 ## GPU and Accelerated Instances
+
 - NVIDIA GPUs for ML training and inference
 - AWS p4d/p5, Azure NC/ND, GCP A2/A3
 - Also for rendering, HPC, scientific computing
@@ -128,6 +139,7 @@ audience:
 ---
 
 ## EC2 Nitro System
+
 - AWS custom hypervisor
 - Hardware-level networking and storage
 - Improved performance and security
@@ -137,6 +149,7 @@ audience:
 ---
 
 ## Security on Your Own Machine
+
 - Harden the OS (CIS benchmarks)
 - Disable unnecessary services
 - Patch regularly and automatically
@@ -146,6 +159,7 @@ audience:
 ---
 
 ## Instance Hardening Checklist
+
 1. Use latest AMI/image with patches
 1. Enable automatic security updates
 1. Remove default accounts and keys
@@ -156,6 +170,7 @@ audience:
 ---
 
 ## Where Is My Machine, Anyway?
+
 - You choose the Region
 - You choose (or let the provider choose) the AZ
 - You do not know the exact physical location
@@ -165,6 +180,7 @@ audience:
 ---
 
 ## Regions and Placement
+
 - Choose Region for latency, compliance, cost
 - Not all instance types available in all Regions
 - Pricing varies by Region (US East is often cheapest)
@@ -174,6 +190,7 @@ audience:
 ---
 
 ## Cost Issues
+
 - Instance pricing: on-demand, reserved, spot, savings plans
 - Running instances always cost money (even idle)
 - Stopped instances: no compute charge, but EBS charges remain
@@ -183,6 +200,7 @@ audience:
 ---
 
 ## Cost Optimization for Compute
+
 - Right-size: match instance to actual utilization
 - Use latest generation (better price/performance)
 - Auto-scale: don't run instances you don't need
@@ -192,6 +210,7 @@ audience:
 ---
 
 ## Organizing Your Machines
+
 - Tags for identification (Name, Environment, Team)
 - Resource Groups or naming conventions
 - Auto Scaling Groups for fleets
@@ -201,6 +220,7 @@ audience:
 ---
 
 ## Naming Conventions
+
 - Consistent and informative
 - Include: environment, service, role, index
 - Example: prod-api-web-001
@@ -210,6 +230,7 @@ audience:
 ---
 
 ## Instance Metadata and User Data
+
 - Metadata service: instance ID, IP, IAM role, Region
 - User Data: bootstrap script on first launch
 - Install agents, configure software, join clusters
@@ -236,6 +257,7 @@ curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
 ---
 
 ## Disks for Your Machines
+
 - Boot volume: OS and application binaries
 - Data volumes: application data, databases
 - Ephemeral storage: temporary, lost on stop (instance store)
@@ -245,6 +267,7 @@ curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
 ---
 
 ## EBS Volume Types Recap
+
 - gp3: general purpose, most workloads (3,000 IOPS baseline)
 - io2: high IOPS for databases (up to 64,000 IOPS)
 - st1: throughput-optimized HDD (big data sequential reads)
@@ -254,6 +277,7 @@ curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
 ---
 
 ## Instance Store vs EBS
+
 - Instance Store: physically attached, highest IOPS
 - Instance Store: data lost on stop/terminate
 - EBS: network-attached, persistent
@@ -269,6 +293,7 @@ curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
 ---
 
 ## Snapshots and Backups
+
 - EBS snapshots: point-in-time backup to S3
 - Incremental: only changed blocks stored
 - Automate with Data Lifecycle Manager
@@ -295,6 +320,7 @@ aws ec2 create-image \
 ---
 
 ## Machine Images (AMIs/Images)
+
 - Template for launching instances
 - Contains OS, patches, applications, configuration
 - Golden image pattern: pre-baked and tested
@@ -304,6 +330,7 @@ aws ec2 create-image \
 ---
 
 ## Golden Image vs Bootstrap: Details
+
 - Golden image: everything pre-installed, fast launch
 - Bootstrap: install at launch via user data, slow but flexible
 - Hybrid: golden image + light bootstrap for configuration
@@ -319,6 +346,7 @@ aws ec2 create-image \
 ---
 
 ## Fleet Management
+
 - Manage hundreds or thousands of instances
 - AWS Systems Manager, Azure Update Management
 - Patch management across the fleet
@@ -328,6 +356,7 @@ aws ec2 create-image \
 ---
 
 ## Spot Instances for Cost Optimization
+
 - Use spare capacity at up to 90% discount
 - 2-minute interruption notice (AWS)
 - Great for batch processing, CI/CD, rendering
@@ -337,6 +366,7 @@ aws ec2 create-image \
 ---
 
 ## Reserved Instances and Savings Plans
+
 - Commit for 1 or 3 years for significant discounts
 - Up to 72% savings vs on-demand
 - Savings Plans: flexible across instance families
@@ -346,6 +376,7 @@ aws ec2 create-image \
 ---
 
 ## Instance Lifecycle Management
+
 - Auto Scaling Groups manage instance lifecycle
 - Launch Template defines configuration
 - Scale out on demand, scale in when idle
@@ -355,6 +386,7 @@ aws ec2 create-image \
 ---
 
 ## Monitoring Your Machines
+
 - CloudWatch metrics: CPU, network, disk
 - CloudWatch Agent: memory, disk space (OS-level)
 - Application-level metrics
@@ -364,6 +396,7 @@ aws ec2 create-image \
 ---
 
 ## Automation with Systems Manager
+
 - Run Command: execute scripts without SSH
 - Patch Manager: automated OS patching
 - State Manager: enforce desired configuration
@@ -373,6 +406,7 @@ aws ec2 create-image \
 ---
 
 ## Immutable Infrastructure
+
 - Don't patch running instances
 - Build new AMI, replace instances
 - Infrastructure as Code defines everything
@@ -382,6 +416,7 @@ aws ec2 create-image \
 ---
 
 ## When NOT to Use VMs
+
 - Stateless microservices: consider containers
 - Event-driven workloads: consider serverless
 - Simple web apps: consider PaaS
@@ -391,6 +426,7 @@ aws ec2 create-image \
 ---
 
 ## Placement Groups
+
 - Cluster: low latency, high throughput between instances
 - Spread: instances on different hardware (fault isolation)
 - Partition: large distributed workloads (Hadoop, Kafka)
@@ -400,6 +436,7 @@ aws ec2 create-image \
 ---
 
 ## Network Enhanced Instances
+
 - Enhanced networking: higher bandwidth, lower latency
 - ENA (Elastic Network Adapter): up to 100 Gbps
 - EFA (Elastic Fabric Adapter): HPC, ML training
@@ -409,6 +446,7 @@ aws ec2 create-image \
 ---
 
 ## Instance Profiles and IAM Roles
+
 - Attach IAM role to EC2 instance via instance profile
 - Applications get temporary credentials automatically
 - No access keys in code or configuration
@@ -418,6 +456,7 @@ aws ec2 create-image \
 ---
 
 ## Tagging Strategy for Instances
+
 - Name: human-readable identifier
 - Environment: dev, staging, prod
 - Team/Owner: accountability
@@ -427,6 +466,7 @@ aws ec2 create-image \
 ---
 
 ## Scheduled Instances
+
 - Schedule non-production to stop at night and weekends
 - Save 65-70% on dev/test environments
 - AWS Instance Scheduler or Lambda + CloudWatch Events
@@ -436,6 +476,7 @@ aws ec2 create-image \
 ---
 
 ## Windows Instances
+
 - Full Windows Server support
 - RDP access instead of SSH
 - License included in instance price (or BYOL)
@@ -445,6 +486,7 @@ aws ec2 create-image \
 ---
 
 ## Linux Instance Best Practices
+
 - Use Amazon Linux 2023 or Ubuntu LTS
 - Enable SSM Agent for remote management
 - Disable SSH password authentication
@@ -454,6 +496,7 @@ aws ec2 create-image \
 ---
 
 ## Cost Reporting for Compute
+
 - Tag all instances for cost allocation
 - Use Cost Explorer to analyze compute spend
 - Identify idle and underutilized instances
@@ -463,6 +506,7 @@ aws ec2 create-image \
 ---
 
 ## Compute Architecture Decision Tree
+
 1. Can it be serverless? -> Lambda/Functions
 1. Does it need containers? -> EKS/ECS/AKS/GKE
 1. Does it need PaaS? -> Beanstalk/App Service
@@ -478,6 +522,7 @@ aws ec2 create-image \
 ---
 
 ## Key Takeaways
+
 - VMs in the cloud are flexible but still require management
 - Secure, patch, and monitor your machines
 - Choose the right instance type and size for your workload

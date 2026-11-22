@@ -330,6 +330,7 @@ public class ActivityRecognitionManager {
 ### Location-Aware Application
 
 Create an application that:
+
 1. Tracks user location
 1. Displays Google Maps
 1. Implements geofencing

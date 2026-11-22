@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Introduction to GraphX
+
 * Graph computation model
 * Vertices and edges
 * Property graphs
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Basic Components
+
 1. Vertex RDD
 1. Edge RDD
 1. Property graph
@@ -60,6 +62,7 @@ graph = GraphFrame(v, e)
 ---
 
 ## Property Graphs
+
 1. Vertex properties
 1. Edge properties
 1. Graph metadata
@@ -85,6 +88,7 @@ vertices_with_props = vertices.map(add_property)
 ---
 
 ## Graph Transformations
+
 1. Map vertices
 1. Map edges
 1. Map triplets
@@ -119,6 +123,7 @@ def process_triplet(triplet):
 ---
 
 ## Graph Algorithms
+
 1. PageRank
 1. Connected components
 1. Shortest paths
@@ -162,6 +167,7 @@ paths = g.shortestPaths(
 ---
 
 ## Graph Algorithms API
+
 1. Built-in algorithms
 1. Custom algorithms
 1. Algorithm composition
@@ -186,6 +192,7 @@ def custom_graph_algo(graph):
 ---
 
 ## Message Passing
+
 1. Send messages
 1. Receive messages
 1. Update state
@@ -211,6 +218,7 @@ for i in range(max_iterations):
 ---
 
 ## Partition Strategies
+
 1. Random partitioning
 1. Edge partitioning
 1. Vertex partitioning
@@ -237,6 +245,7 @@ graph = graph.partitionBy(
 ---
 
 ## Caching Strategies
+
 1. Cache vertices
 1. Cache edges
 1. Cache graphs
@@ -262,6 +271,7 @@ subgraph = graph.filter(
 ---
 
 ## Graph Analytics
+
 1. Degree distribution
 1. Centrality measures
 1. Clustering coefficient
@@ -286,6 +296,7 @@ def export_graph(graph, path):
 ---
 
 ## Data Integration
+
 1. Load from files
 1. Database integration
 1. Streaming graphs
@@ -312,6 +323,7 @@ def transform_graph(data):
 ---
 
 ## Production Deployment
+
 1. Resource allocation
 1. Monitoring setup
 1. Error handling
@@ -338,6 +350,7 @@ def track_metrics(graph):
 ---
 
 ## Best Practices
+
 1. Efficient partitioning
 1. Memory management
 1. Algorithm selection
@@ -363,6 +376,7 @@ def process_graph_pattern(graph):
 ---
 
 ## Integration Patterns
+
 1. ML pipelines
 1. Streaming systems
 1. Storage systems
@@ -388,6 +402,7 @@ def analyze_performance(graph):
 ---
 
 ## Future Developments
+
 1. Enhanced algorithms
 1. Better performance
 1. New features
@@ -414,6 +429,7 @@ def social_network_analysis(graph):
 ---
 
 ## Additional Resources
+
 * Official documentation
 * Research papers
 * Community guides

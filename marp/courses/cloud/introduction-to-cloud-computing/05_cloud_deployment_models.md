@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Four Deployment Models
+
 - Public cloud
 - Private cloud
 - Hybrid cloud
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Public Cloud
+
 - Owned and operated by a third-party provider
 - Shared infrastructure, multi-tenant
 - Available to anyone over the internet
@@ -40,6 +42,7 @@ audience:
 ---
 
 ## Public Cloud Advantages
+
 - No upfront investment
 - Elastic scaling
 - Global reach
@@ -49,6 +52,7 @@ audience:
 ---
 
 ## Public Cloud Concerns
+
 - Data sovereignty and compliance
 - Shared infrastructure (noisy neighbors)
 - Vendor lock-in risk
@@ -58,6 +62,7 @@ audience:
 ---
 
 ## Private Cloud
+
 - Dedicated infrastructure for one organization
 - On-premises or hosted by a provider
 - Full control over security and compliance
@@ -67,6 +72,7 @@ audience:
 ---
 
 ## Private Cloud Advantages
+
 - Complete control over infrastructure
 - Customized security policies
 - Meet strict regulatory requirements
@@ -76,6 +82,7 @@ audience:
 ---
 
 ## Private Cloud Disadvantages
+
 - High upfront and ongoing costs
 - Limited scalability compared to public
 - Requires specialized staff
@@ -85,6 +92,7 @@ audience:
 ---
 
 ## Hybrid Cloud
+
 - Combination of public and private cloud
 - Workloads move between environments
 - Connected via VPN or dedicated links
@@ -94,6 +102,7 @@ audience:
 ---
 
 ## Hybrid Cloud Use Cases
+
 - Sensitive data on-premises, compute in public cloud
 - Burst to public cloud during peak demand
 - Disaster recovery in public cloud
@@ -109,6 +118,7 @@ audience:
 ---
 
 ## Multi-Cloud Strategy
+
 - Using two or more public cloud providers
 - Avoid vendor lock-in
 - Best-of-breed service selection
@@ -118,6 +128,7 @@ audience:
 ---
 
 ## Multi-Cloud Challenges
+
 - Increased complexity in management
 - Skills needed for multiple platforms
 - Networking between clouds
@@ -127,6 +138,7 @@ audience:
 ---
 
 ## Choosing the Right Deployment Model
+
 - Public: most workloads, cost-effective, scalable
 - Private: strict compliance, legacy systems
 - Hybrid: transition period, specific compliance needs

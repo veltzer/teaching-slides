@@ -78,6 +78,7 @@ audience:
 ## Process Lifecycle: Details
 
 ### Zombie Processes
+
 - Terminated but not yet cleaned up
 - Parent must read exit status
 - Adopted by init if parent dies
@@ -117,6 +118,7 @@ int main() {
 ## Basic Security Model: Details
 
 ### Key Security Features
+
 - File system permissions
 - Process isolation
 - User/group-based access control

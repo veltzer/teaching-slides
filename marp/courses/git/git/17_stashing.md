@@ -31,6 +31,7 @@ audience:
 Stashing temporarily saves your work when you need a clean working directory:
 
 **Common scenarios:**
+
 - **Emergency branch switches:** Urgent hotfix needed
 - **Pull requirements:** Can't pull with uncommitted changes
 - **Experimental work:** Try different approach temporarily
@@ -42,6 +43,7 @@ Stashing temporarily saves your work when you need a clean working directory:
 ## Why Would You Want Stashing? (cont.)
 
 **What stashing saves:**
+
 - Modified tracked files
 - Staged changes (optional)
 - Untracked files (optional)
@@ -64,6 +66,7 @@ git stash pop                # Restore saved work
 Git stash is a stack-based temporary storage:
 
 **Stash characteristics:**
+
 - **Stack structure:** Last In, First Out (LIFO)
 - **Temporary storage:** Not meant for long-term use
 - **Local only:** Stashes are not shared via push/pull
@@ -102,6 +105,7 @@ git stash --staged
 ```
 
 **What gets stashed:**
+
 - **Default:** Modified tracked files
 - **With -u:** + untracked files
 - **With -a:** + ignored files
@@ -133,6 +137,7 @@ git show stash@{0}               # Full commit-like view
 ```
 
 **Stash reference format:**
+
 - `stash@{0}`: Latest stash
 - `stash@{1}`: Second most recent
 - `stash@{n}`: nth stash from top
@@ -160,6 +165,7 @@ git stash apply stash@{0}
 ```
 
 **Apply vs Pop:**
+
 - **apply:** Restores changes, keeps stash in stack
 - **pop:** Restores changes, removes stash from stack
 - **pop fails:** If conflicts occur, stash remains in stack
@@ -184,6 +190,7 @@ git stash push -m "Config changes only" -- config.yml settings.json
 ```
 
 **Naming best practices:**
+
 1. Include branch context
 1. Describe what was being worked on
 1. Note if experimental or temporary
@@ -216,6 +223,7 @@ git stash --keep-index
 ```
 
 **Selective stashing use cases:**
+
 - Separate unrelated changes
 - Keep some changes for testing
 - Stash only completed parts
@@ -268,6 +276,7 @@ git stash list | tail -n +2 | cut -d: -f1 | xargs -n1 git stash drop
 ```
 
 **When to delete stashes:**
+
 - After successfully applying changes
 - When stash is no longer needed
 - Regular cleanup to avoid clutter
@@ -299,6 +308,7 @@ git add file.py
 ```
 
 **Conflict resolution strategies:**
+
 1. Edit files to resolve conflicts
 1. Use merge tools: `git mergetool`
 1. Choose one version: `git checkout --theirs file.py`
@@ -369,6 +379,7 @@ git stash drop stash@{5}
 ```
 
 **Team coordination:**
+
 - Document stash usage in workflows
 - Agree on naming conventions
 - Regular cleanup reminders
@@ -486,6 +497,7 @@ git apply stash-content.patch
 Stash integration in different environments:
 
 **IDE integration:**
+
 - VS Code: Git stash commands in command palette
 - IntelliJ: VCS → Git → Stash Changes
 - Vim: Fugitive plugin stash commands
@@ -553,6 +565,7 @@ cd ../original-work
 Understanding stash constraints:
 
 **Performance characteristics:**
+
 - Fast for small changes
 - Slower with many files or large files
 - Stack operations are O(1)
@@ -563,6 +576,7 @@ Understanding stash constraints:
 ## Performance and Limitations (cont.)
 
 **Limitations:**
+
 - Local only (not shared)
 - Not suitable for long-term storage
 - Can't stash merge conflicts
@@ -590,6 +604,7 @@ done
 **Scenario:** Implement a comprehensive stashing workflow for a development team with multiple concurrent tasks and frequent context switching.
 
 **Basic tasks:**
+
 1. **Stash creation and management:**
    - Create stashes with meaningful names
    - Practice selective stashing (files, hunks)
@@ -614,6 +629,7 @@ done
 ## Lab Exercise: Mastering Git Stash (cont.) (cont.)
 
 **Advanced tasks:**
+
 1. **Automation development:**
    - Create scripts for smart stashing
    - Implement Git hooks with stashing
@@ -678,6 +694,7 @@ done
 ```
 
 **Best practices:**
+
 1. Don't stash credentials or secrets
 1. Review stash contents before sharing repositories
 1. Regular stash audits for sensitive data

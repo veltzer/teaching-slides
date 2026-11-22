@@ -63,6 +63,7 @@ audience:
 <div>
 
 ## Stack
+
 - Fixed size
 - LIFO (Last In, First Out)
 - Fast access
@@ -73,6 +74,7 @@ audience:
 <div>
 
 ## Heap
+
 - Dynamic size
 - Random access
 - Slower than stack
@@ -329,6 +331,7 @@ fn main() {
 <div>
 
 ## String
+
 - Owned
 - Growable
 - Heap allocated
@@ -338,6 +341,7 @@ fn main() {
 <div>
 
 ## &str
+
 - Borrowed
 - Fixed size
 - Read-only
@@ -384,6 +388,7 @@ fn main() {
 ## Practice Exercise
 
 Create a function that:
+
 1. Takes a string slice
 1. Returns first word
 1. Uses string slices
@@ -392,6 +397,7 @@ Create a function that:
 ---
 
 ## Summary
+
 - Ownership rules
 - References and borrowing
 - Slices

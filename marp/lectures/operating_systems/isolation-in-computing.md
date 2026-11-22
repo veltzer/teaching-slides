@@ -30,6 +30,7 @@ audience:
 
 Isolation is the fundamental principle of separating components to prevent unwanted interaction
 Key benefits:
+
 1. Security - Prevent unauthorized access
 1. Stability - Contain failures
 1. Performance - Resource management
@@ -42,6 +43,7 @@ Key benefits:
 Modern computing systems are complex ecosystems
 
 Without isolation:
+
 1. Single failure crashes everything
 1. Security breaches spread unchecked
 1. Resource conflicts degrade performance
@@ -54,6 +56,7 @@ Without isolation:
 Isolation is not just a computing concept - it's fundamental engineering
 
 Examples:
+
 1. Electrical circuits - fuses and breakers
 1. Ships - watertight compartments
 1. Buildings - fireproof walls
@@ -90,6 +93,7 @@ Examples:
 Operating systems are the foundation of isolation in computing
 
 Key mechanisms:
+
 1. Process isolation
 1. Memory protection
 1. User permissions
@@ -567,6 +571,7 @@ Consider your requirements:
 Isolation is fundamental to modern computing
 
 Key takeaways:
+
 1. Multiple layers provide defense in depth
 1. Choose appropriate isolation for your needs
 1. Understand the trade-offs

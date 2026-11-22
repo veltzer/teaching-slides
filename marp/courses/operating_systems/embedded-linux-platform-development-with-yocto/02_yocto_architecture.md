@@ -26,6 +26,7 @@ audience:
 BitBake + Metadata = Build System
 
 Key relationships:
+
 - BitBake reads metadata
 - Metadata defines what to build
 - Configuration controls how to build
@@ -36,6 +37,7 @@ Key relationships:
 ## Core Components Relationship (cont.)
 
 All work together to:
+
 - Parse recipes
 - Execute tasks
 - Generate packages
@@ -46,12 +48,14 @@ All work together to:
 ## Poky Distribution
 
 Reference distribution components:
+
 - BitBake build tool
 - OpenEmbedded-Core (OE-Core)
 - Yocto-specific metadata
 - Documentation and tools
 
 Not a fork, but integration:
+
 - Combines upstream projects
 - Adds polish and testing
 - Provides stable releases
@@ -86,12 +90,14 @@ meta/
 ## Recipe Categories
 
 BSP (Board Support Package):
+
 - Bootloaders (U-Boot, GRUB)
 - Kernel configuration
 - Device trees
 - Firmware files
 
 Core:
+
 - Init systems
 - Base utilities
 - Package managers
@@ -102,12 +108,14 @@ Core:
 ## More Recipe Categories
 
 Development:
+
 - Compilers and toolchains
 - Debuggers
 - Build tools
 - Version control
 
 Extended:
+
 - System daemons
 - Network tools
 - File utilities
@@ -157,12 +165,14 @@ FILES_${PN} = "${bindir}/app"
 ## Common Classes
 
 Build system classes:
+
 - `autotools` - GNU autoconf/automake
 - `cmake` - CMake build system
 - `meson` - Meson build system
 - `qmake5` - Qt5 qmake
 
 Packaging classes:
+
 - `kernel` - Linux kernel recipes
 - `module` - Kernel modules
 - `image` - Image recipes
@@ -173,12 +183,14 @@ Packaging classes:
 ## Utility Classes
 
 Development:
+
 - `devshell` - Development shell
 - `testimage` - Runtime testing
 - `populate_sdk` - SDK generation
 - `cross` - Cross-compilation tools
 
 Features:
+
 - `systemd` - systemd integration
 - `update-rc.d` - SysV init
 - `useradd` - User management
@@ -282,6 +294,7 @@ LAYERSERIES_COMPAT_custom = "kirkstone"
 ## Parsing Phase Details
 
 What happens during parsing:
+
 1. Read configuration files
 1. Locate all layers
 1. Parse recipe files
@@ -294,6 +307,7 @@ What happens during parsing:
 ## Parsing Phase Details (cont.)
 
 Output:
+
 - Task dependency tree
 - Variable database
 - Recipe cache
@@ -309,11 +323,13 @@ Output:
 ## Standard Tasks
 
 Fetch tasks:
+
 - `do_fetch` - Download sources
 - `do_unpack` - Extract archives
 - `do_patch` - Apply patches
 
 Build tasks:
+
 - `do_configure` - Configure build
 - `do_compile` - Compile sources
 - `do_install` - Install to staging
@@ -323,6 +339,7 @@ Build tasks:
 ## Standard Tasks (cont.)
 
 Package tasks:
+
 - `do_package` - Split into packages
 - `do_package_qa` - Quality checks
 - `do_package_write_*` - Create packages
@@ -332,6 +349,7 @@ Package tasks:
 ## Task Dependencies
 
 Types of dependencies:
+
 - Task dependencies within recipe
 - Inter-recipe dependencies
 - Runtime dependencies
@@ -361,12 +379,14 @@ RDEPENDS_${PN} = "python3-core"
 ## Sstate Benefits
 
 Performance improvements:
+
 - Skip redundant compilation
 - Share across builds
 - Network cache sharing
 - Incremental builds
 
 Hash-based validation:
+
 - Input hash (recipe, dependencies)
 - Output hash (generated files)
 - Automatic invalidation
@@ -460,6 +480,7 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-yocto"
 ```
 
 Common virtuals:
+
 - `virtual/kernel` - Linux kernel
 - `virtual/libc` - C library
 - `virtual/bootloader` - Bootloader
@@ -483,6 +504,7 @@ recipes-devtools/python/
 ```
 
 Version operators:
+
 - `%` - Wildcard match
 - `>=` - Minimum version
 - `<=` - Maximum version
@@ -520,6 +542,7 @@ RDEPENDS_${PN}-tools = "${PN}"
 ## Rootfs Assembly
 
 Steps:
+
 1. Install packages from feed
 1. Run post-install scripts
 1. Apply IMAGE_FEATURES
@@ -540,6 +563,7 @@ IMAGE_LINGUAS = "en-us"
 ## Image Types
 
 Common formats:
+
 - `ext4` - Ext4 filesystem
 - `tar.gz` - Compressed tarball
 - `wic` - Partitioned disk image
@@ -653,6 +677,7 @@ LICENSE_FLAGS_WHITELIST = "commercial_foo"
 ## Summary
 
 Key architectural concepts:
+
 - Metadata-driven build system
 - Layer-based organization
 - Task-based execution model
@@ -664,6 +689,7 @@ Key architectural concepts:
 ## Summary (cont.)
 
 Understanding the architecture enables:
+
 - Effective debugging
 - Performance optimization
 - Custom implementations

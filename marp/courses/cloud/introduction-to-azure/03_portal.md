@@ -22,6 +22,7 @@ audience:
 ---
 
 ## Portal Navigation
+
 - Global search
 - Favorites menu
 - Recent resources
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Dashboard Customization
+
 - Add tiles
 - Resize widgets
 - Move components
@@ -46,6 +48,7 @@ audience:
 ---
 
 ## Creating Resources
+
 1. Select resource type
 1. Choose subscription
 1. Pick resource group
@@ -55,6 +58,7 @@ audience:
 ---
 
 ## Resource Groups
+
 - Logical containers
 - Access control
 - Policy application
@@ -64,6 +68,7 @@ audience:
 ---
 
 ## Portal Settings
+
 - Theme preferences
 - Language options
 - Regional settings
@@ -73,6 +78,7 @@ audience:
 ---
 
 ## Azure Cloud Shell
+
 - Browser-based shell
 - PowerShell
 - Bash
@@ -82,6 +88,7 @@ audience:
 ---
 
 ## Command Line Tools
+
 - Azure CLI
 - PowerShell
 - Cloud Shell
@@ -91,6 +98,7 @@ audience:
 ---
 
 ## Portal Blades
+
 - Resource details
 - Configuration
 - Monitoring
@@ -100,6 +108,7 @@ audience:
 ---
 
 ## Monitoring Views
+
 - Resource health
 - Activity logs
 - Metrics
@@ -109,6 +118,7 @@ audience:
 ---
 
 ## Cost Management
+
 - Subscription costs
 - Resource costs
 - Budgets
@@ -118,6 +128,7 @@ audience:
 ---
 
 ## Access Control
+
 - Role assignments
 - Custom roles
 - Access review
@@ -133,6 +144,7 @@ audience:
 ---
 
 ## Portal Extensions
+
 - Marketplace tools
 - Custom extensions
 - Third-party apps
@@ -142,6 +154,7 @@ audience:
 ---
 
 ## Azure Advisor
+
 - Recommendations
 - Best practices
 - Cost optimization
@@ -151,6 +164,7 @@ audience:
 ---
 
 ## Service Health
+
 - Global health
 - Service issues
 - Planned maintenance
@@ -160,6 +174,7 @@ audience:
 ---
 
 ## Portal Search
+
 - Global search
 - Resource search
 - Documentation
@@ -169,6 +184,7 @@ audience:
 ---
 
 ## Resource Tags
+
 - Organization
 - Cost allocation
 - Environment
@@ -178,6 +194,7 @@ audience:
 ---
 
 ## Subscription Management
+
 - Billing
 - Access control
 - Policies
@@ -187,6 +204,7 @@ audience:
 ---
 
 ## Template Deployment
+
 - ARM templates
 - Template gallery
 - Custom templates
@@ -196,6 +214,7 @@ audience:
 ---
 
 ## Portal Shortcuts
+
 - Keyboard shortcuts
 - Quick actions
 - Favorites
@@ -205,6 +224,7 @@ audience:
 ---
 
 ## Documentation Access
+
 - Quick docs
 - Contextual help
 - How-to guides
@@ -214,6 +234,7 @@ audience:
 ---
 
 ## Support and Help
+
 - Documentation
 - Support tickets
 - Community
@@ -223,6 +244,7 @@ audience:
 ---
 
 ## Mobile Experience
+
 - Mobile portal
 - Responsive design
 - App integration
@@ -232,6 +254,7 @@ audience:
 ---
 
 ## Portal Security
+
 - Authentication
 - Authorization
 - Audit logs
@@ -241,6 +264,7 @@ audience:
 ---
 
 ## Marketplace Integration
+
 - Solution browsing
 - Deployment
 - Management
@@ -250,6 +274,7 @@ audience:
 ---
 
 ## Automation Tools
+
 - Resource Manager
 - PowerShell
 - CLI
@@ -259,6 +284,7 @@ audience:
 ---
 
 ## Best Practices
+
 - Organization
 - Navigation
 - Resource management
@@ -268,6 +294,7 @@ audience:
 ---
 
 ## Troubleshooting
+
 - Diagnostic tools
 - Activity logs
 - Resource logs
@@ -277,6 +304,7 @@ audience:
 ---
 
 ## Portal Updates
+
 - New features
 - Improvements
 - Preview features

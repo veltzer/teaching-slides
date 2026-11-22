@@ -13,6 +13,7 @@ audience:
 # Data and File Structure
 
 ## Course: Linux Forensics
+
 - Understanding file formats at the binary level
 - Hex editors reveal hidden data within files
 - File structure knowledge enables manual data recovery
@@ -222,6 +223,7 @@ df -i /
 ## Timestamps in Forensic Context
 
 ### MAC(B) Times
+
 - **M**odify: content last changed
 - **A**ccess: content last read
 - **C**hange: metadata last changed (permissions, ownership)
@@ -401,6 +403,7 @@ zipdetails archive.zip  # Very detailed
 ## Exercise: File Structure Analysis
 
 ### Tasks
+
 1. Identify file types by magic numbers (not extensions)
 1. Extract metadata from image and document files
 1. Search a hex dump for specific patterns

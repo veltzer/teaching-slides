@@ -24,6 +24,7 @@ audience:
 ---
 
 ## What is a Return Code?
+
 - Every command that runs produces a return code (exit status)
 - It is an integer from 0 to 255
 - 0 means **success**

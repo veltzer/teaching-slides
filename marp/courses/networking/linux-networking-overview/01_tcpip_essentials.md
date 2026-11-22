@@ -19,6 +19,7 @@ audience:
 ---
 
 ## Course Overview
+
 - Fundamentals of TCP/IP Protocol Suite
 - Core Network Protocols: TCP, UDP, IP
 - Essential Network Components
@@ -44,6 +45,7 @@ audience:
 ## Internet Protocol (IP)
 
 **Core Functions:**
+
 - Network addressing
 - Packet routing
 - Fragmentation and reassembly
@@ -53,6 +55,7 @@ audience:
 ## Internet Protocol (IP) (cont.)
 
 **Key Features:**
+
 - Connectionless protocol
 - Best-effort delivery
 - No guarantee of:
@@ -65,11 +68,13 @@ audience:
 ## IP Addressing
 
 **IPv4:**
+
 - 32-bit addresses
 - Format: xxx.xxx.xxx.xxx
 - Example: 192.168.1.1
 
 **IPv6:**
+
 - 128-bit addresses
 - Format: xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx
 - Example: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
@@ -85,6 +90,7 @@ audience:
 ## Transmission Control Protocol (TCP)
 
 **Key Features:**
+
 - Connection-oriented
 - Reliable data delivery
 - Flow control
@@ -92,6 +98,7 @@ audience:
 - Ordered delivery
 
 **Use Cases:**
+
 - Web browsing (HTTP)
 - Email (SMTP)
 - File transfer (FTP)
@@ -119,6 +126,7 @@ audience:
 ## User Datagram Protocol (UDP)
 
 **Characteristics:**
+
 - Connectionless
 - Unreliable delivery
 - No flow control
@@ -130,6 +138,7 @@ audience:
 ## User Datagram Protocol (UDP) (cont.)
 
 **Common Uses:**
+
 - DNS queries
 - Streaming media
 - Online gaming
@@ -143,6 +152,7 @@ audience:
 <div>
 
 ### TCP
+
 - Connection-oriented
 - Reliable
 - Ordered delivery
@@ -154,6 +164,7 @@ audience:
 <div>
 
 ### UDP
+
 - Connectionless
 - Unreliable
 - No ordering
@@ -180,11 +191,13 @@ audience:
 ## Router
 
 **Purpose:**
+
 - Connects different networks
 - Makes forwarding decisions
 - Operates at Layer 3 (IP)
 
 **Functions:**
+
 - Packet forwarding
 - Path selection
 - Route optimization
@@ -194,10 +207,12 @@ audience:
 ## Switch
 
 **Purpose:**
+
 - Connects devices within same network
 - Operates at Layer 2 (Ethernet)
 
 **Functions:**
+
 - MAC address learning
 - Frame forwarding
 - Loop prevention
@@ -208,11 +223,13 @@ audience:
 ## Modem
 
 **Types:**
+
 - Cable modem
 - DSL modem
 - Fiber modem
 
 **Functions:**
+
 - Signal modulation/demodulation
 - Digital-to-analog conversion
 - Physical media interface
@@ -222,11 +239,13 @@ audience:
 ## Gateway
 
 **Purpose:**
+
 - Protocol translation
 - Network interconnection
 - Security enforcement
 
 **Types:**
+
 - Protocol gateways
 - Security gateways
 - Application gateways
@@ -242,6 +261,7 @@ audience:
 ## Network Address Translation (NAT): Details
 
 **Benefits:**
+
 - IP address conservation
 - Network security
 - Network isolation
@@ -265,11 +285,13 @@ audience:
 ## Domain Name System (DNS)
 
 **Purpose:**
+
 - Name resolution
 - Service discovery
 - Load balancing
 
 **Components:**
+
 - DNS servers
 - DNS resolvers
 - DNS records
@@ -304,6 +326,7 @@ audience:
 ## Server Types
 
 **Common Servers:**
+
 - Web servers (Apache, Nginx)
 - Mail servers (Postfix, Exchange)
 - File servers (FTP, SMB)
@@ -315,6 +338,7 @@ audience:
 ## Client Applications
 
 **Types:**
+
 - Web browsers
 - Email clients
 - FTP clients
@@ -326,6 +350,7 @@ audience:
 ## Client Applications (cont.)
 
 **Protocols:**
+
 - HTTP/HTTPS
 - SMTP/IMAP/POP3
 - FTP/SFTP
@@ -336,6 +361,7 @@ audience:
 ## Network Security Fundamentals
 
 **Key Areas:**
+
 1. Authentication
 1. Authorization
 1. Encryption

@@ -17,6 +17,7 @@ audience:
 ## Why Redis in Modern Applications: Details
 
 Redis enhances application architecture:
+
 - **Performance acceleration**: Microsecond response times
 - **Scalability enabler**: Offload from primary database
 - **Simplifies architecture**: Many patterns in one tool

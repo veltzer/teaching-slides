@@ -444,6 +444,7 @@ def multiply[T](x: T, y: T)(implicit num: Numeric[T]): T =
 ## Final Exercise
 
 Create a small application demonstrating:
+
 1. Case class definition
 1. Pattern matching
 1. Collection operations

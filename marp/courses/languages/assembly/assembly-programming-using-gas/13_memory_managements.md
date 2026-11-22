@@ -18,6 +18,7 @@ audience:
 ## Memory Layout
 
 Typical memory layout of a program:
+
 1. Text (Code) segment
 1. Data segment
 1. BSS segment
@@ -72,6 +73,7 @@ Example:
 - Requires explicit management
 
 System calls:
+
 - `brk`: Change program break
 - `mmap`: Map files or devices into memory
 
@@ -80,6 +82,7 @@ System calls:
 ## Using brk for Heap Allocation
 
 Steps:
+
 1. Get current program break
 1. Increment break to allocate memory
 1. Use allocated memory
@@ -110,6 +113,7 @@ Steps:
 ## Using mmap for Allocation
 
 Advantages:
+
 - Can allocate memory at specific addresses
 - Supports file-backed memory mapping
 

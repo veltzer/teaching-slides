@@ -574,11 +574,13 @@ conn.close()
 ## Binary Formats: MessagePack and Protocol Buffers
 
 **MessagePack:**
+
 - Binary JSON — same data model, smaller and faster
 - Drop-in replacement where JSON is used
 - No schema required
 
 **Protocol Buffers (Protobuf):**
+
 - Google's schema-driven binary format
 - Requires `.proto` schema definition
 - Extremely compact and fast

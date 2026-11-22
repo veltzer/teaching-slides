@@ -130,10 +130,12 @@ Vector operator+(const Vector& left, const Vector& right);
 ## When to Use Each Approach
 
 **Use member functions for:**
+
 - Operators that modify the object (`+=`, `-=`, `++`, `--`)
 - Operators where left operand is always your class type
 
 **Use non-member functions for:**
+
 - Symmetric operators (`+`, `-`, `*`, `/`)
 - When left operand might be a different type
 - Better encapsulation (can be friends if needed)
@@ -919,6 +921,7 @@ void testComplexOperators() {
 ## Summary
 
 Operator overloading allows you to:
+
 - Create intuitive interfaces for custom types
 - Integrate seamlessly with C++ features
 - Write more expressive and readable code

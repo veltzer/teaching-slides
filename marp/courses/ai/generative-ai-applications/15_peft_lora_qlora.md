@@ -664,6 +664,7 @@ trainer.save_model()
 ## Summary: Open Source Models and PEFT
 
 **What we covered:**
+
 - Open source model landscape and choosing the right model
 - Running models locally with `Transformers`, `vLLM`, and `Ollama`
 - `HuggingFace` Hub, Datasets, and Spaces

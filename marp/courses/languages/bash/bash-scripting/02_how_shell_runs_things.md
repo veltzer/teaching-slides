@@ -18,6 +18,7 @@ audience:
 ---
 
 ## What Happens When You Type a Command?
+
 - You type `ls -la /tmp` and press Enter
 - The shell must figure out:
     1. What program to run
@@ -34,6 +35,7 @@ audience:
 ---
 
 ## The Full Parsing Order
+
 1. Brace expansion: `{a,b,c}`
 1. Tilde expansion: `~`
 1. Parameter/variable expansion: `$VAR`
@@ -93,6 +95,7 @@ type -a echo
 ---
 
 ## Built-in Commands
+
 - Executed inside the shell process itself
 - No new process is created
 - Can modify shell state (variables, directory, etc.)
@@ -124,6 +127,7 @@ cd /tmp  # changes THIS shell's directory
 ---
 
 ## External Commands and `PATH`
+
 - External commands are programs on disk
 - The shell must find them before executing
 - `PATH` is the search path: a colon-separated list of directories

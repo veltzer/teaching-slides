@@ -306,6 +306,7 @@ public class NetworkSecurity {
 ### Client-Server Application
 
 Create an application that:
+
 1. Implements REST API calls
 1. Handles WebSocket connections
 1. Implements image loading

@@ -17,12 +17,14 @@ audience:
 ## Overview
 
 The Yocto Project is:
+
 - Open source collaboration project
 - Provides templates and tools
 - Creates custom Linux distributions
 - Hardware agnostic
 
 Key components:
+
 - `BitBake` build engine
 - `OpenEmbedded-Core` metadata
 - `Poky` reference distribution
@@ -661,12 +663,14 @@ IMAGE_LINGUAS = ""
 ## Summary
 
 Yocto Project provides:
+
 - Complete build framework
 - Reproducible builds
 - Extensive customization
 - Professional support
 
 Ideal for:
+
 - Complex embedded systems
 - Long-term products
 - Compliance requirements

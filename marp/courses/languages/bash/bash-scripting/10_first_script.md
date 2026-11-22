@@ -24,6 +24,7 @@ audience:
 ---
 
 ## Scripts, Syntax & I/O
+
 - Writing and running scripts
 - Control flow: conditionals, loops
 - Pipes and how they work
@@ -34,6 +35,7 @@ audience:
 ---
 
 ## What is a Script?
+
 - A text file containing shell commands
 - Executed top to bottom (like a program)
 - Can include variables, logic, loops, functions

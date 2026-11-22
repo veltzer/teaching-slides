@@ -28,6 +28,7 @@ audience:
 ---
 
 Chapter Overview
+
 - Network models in QEMU
 - Configuring and using virtual network devices
 - Testing network drivers and protocols
@@ -35,6 +36,7 @@ Chapter Overview
 ---
 
 Importance of Networking in Kernel Development
+
 - Driver development and testing
 - Protocol implementation and debugging
 - Performance optimization
@@ -50,6 +52,7 @@ QEMU Network Models Overview
 ---
 
 User Networking (SLIRP)
+
 - Default networking mode
 - NAT-based connectivity
 - Limitations for kernel development
@@ -57,6 +60,7 @@ User Networking (SLIRP)
 ---
 
 Tap Networking
+
 - Direct connection to host network stack
 - Requires root privileges or proper setup
 - Flexible for kernel network testing
@@ -64,6 +68,7 @@ Tap Networking
 ---
 
 Bridge Networking
+
 - Connects VM to physical network
 - Requires host bridge setup
 - Ideal for complex network scenarios
@@ -71,6 +76,7 @@ Bridge Networking
 ---
 
 VDE (Virtual Distributed Ethernet) Networking
+
 - Flexible virtual network infrastructure
 - Useful for multi-VM setups
 - Less common but powerful for specific use cases
@@ -78,12 +84,14 @@ VDE (Virtual Distributed Ethernet) Networking
 ---
 
 Custom Backend Networking
+
 - Implementing custom network backends
 - Use cases in specialized kernel development
 
 ---
 
 Network Device Types in QEMU
+
 - e1000, rtl8139, virtio-net
 - Emulated vs. paravirtualized devices
 - Choosing the right device for testing
@@ -91,6 +99,7 @@ Network Device Types in QEMU
 ---
 
 Virtio-net Deep Dive
+
 - Architecture of virtio-net
 - Performance benefits
 - Testing virtio-net drivers
@@ -98,6 +107,7 @@ Virtio-net Deep Dive
 ---
 
 QEMU Network Configuration Syntax
+
 - Basic syntax: -net nic,model=xxx -net user
 - Advanced options and their meanings
 - Common configurations for kernel testing
@@ -113,6 +123,7 @@ Setting Up a Basic Network
 ---
 
 Configuring Tap Networking
+
 - Creating and managing tap interfaces
 - QEMU command-line options for tap
 - Testing kernel changes with tap networking
@@ -120,6 +131,7 @@ Configuring Tap Networking
 ---
 
 Bridge Networking Setup
+
 - Creating a bridge on the host
 - Connecting QEMU to the bridge
 - Use cases in kernel network stack testing
@@ -127,6 +139,7 @@ Bridge Networking Setup
 ---
 
 Multi-VM Networking Scenarios
+
 - Connecting multiple VMs
 - Testing routing and firewall functionalities
 - Simulating complex network topologies
@@ -134,6 +147,7 @@ Multi-VM Networking Scenarios
 ---
 
 Network Namespaces and QEMU
+
 - Utilizing network namespaces
 - Isolating VM networks
 - Testing namespace-aware kernel features
@@ -141,6 +155,7 @@ Network Namespaces and QEMU
 ---
 
 VLAN Support in QEMU
+
 - Configuring VLANs for VMs
 - Testing VLAN implementations in the kernel
 - Performance considerations
@@ -148,6 +163,7 @@ VLAN Support in QEMU
 ---
 
 Socket-based Networking
+
 - Using Unix sockets for VM communication
 - Testing IPC mechanisms
 - Custom protocols development
@@ -155,6 +171,7 @@ Socket-based Networking
 ---
 
 Network Performance Tuning
+
 - TCP/IP stack optimization
 - Interrupt coalescing and CPU pinning
 - Benchmarking network performance
@@ -162,6 +179,7 @@ Network Performance Tuning
 ---
 
 Simulating Network Conditions
+
 - Introducing latency and packet loss
 - Bandwidth limitation techniques
 - Testing kernel behavior under poor network conditions
@@ -169,6 +187,7 @@ Simulating Network Conditions
 ---
 
 IPv6 Testing with QEMU
+
 - Setting up IPv6 networks
 - Testing dual-stack implementations
 - IPv6-specific protocol testing
@@ -176,6 +195,7 @@ IPv6 Testing with QEMU
 ---
 
 Wireless Networking Emulation
+
 - Limitations of wireless emulation in QEMU
 - Workarounds for testing wireless drivers
 - External tools for wireless simulation
@@ -183,6 +203,7 @@ Wireless Networking Emulation
 ---
 
 Network Debugging Techniques
+
 - Using tcpdump and Wireshark with QEMU
 - Kernel network stack debugging
 - Tracing network-related system calls
@@ -190,6 +211,7 @@ Network Debugging Techniques
 ---
 
 QEMU Network Backends Implementation
+
 - Overview of QEMU's network backend code
 - Extending QEMU with custom network features
 - Considerations for upstream contributions
@@ -197,6 +219,7 @@ QEMU Network Backends Implementation
 ---
 
 Security Considerations in VM Networking
+
 - Isolating VM networks
 - Testing kernel network security features
 - Simulating network attacks for defense testing
@@ -204,6 +227,7 @@ Security Considerations in VM Networking
 ---
 
 Container Networking vs. QEMU Networking
+
 - Comparing container and VM networking models
 - Testing kernel features across both paradigms
 - Hybrid setups for comprehensive testing
@@ -211,6 +235,7 @@ Container Networking vs. QEMU Networking
 ---
 
 Software-Defined Networking (SDN) with QEMU
+
 - Integrating QEMU with SDN controllers
 - Testing SDN implementations in the kernel
 - OpenFlow and P4 experiments
@@ -218,6 +243,7 @@ Software-Defined Networking (SDN) with QEMU
 ---
 
 Advanced Topics: SR-IOV and DPDK
+
 - Single Root I/O Virtualization (SR-IOV) testing
 - Data Plane Development Kit (DPDK) with QEMU
 - High-performance networking scenarios
@@ -231,6 +257,7 @@ Advanced Topics: SR-IOV and DPDK
 ---
 
 Troubleshooting QEMU Networking Issues
+
 - Common problems and their solutions
 - Debugging tools and techniques
 - Resources for further assistance
@@ -238,6 +265,7 @@ Troubleshooting QEMU Networking Issues
 ---
 
 Best Practices for Network Testing in Kernel Development
+
 - Setting up reproducible network environments
 - Documentation and version control for network configs
 - Automated network testing strategies
@@ -245,6 +273,7 @@ Best Practices for Network Testing in Kernel Development
 ---
 
 Future of QEMU Networking
+
 - Upcoming features and improvements
 - Trends in virtualized networking
 - Preparing for future kernel networking challenges

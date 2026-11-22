@@ -71,6 +71,7 @@ git instaweb --stop
 ## Git Instaweb (cont.) (cont.)
 
 **What instaweb provides:**
+
 - Repository browsing interface
 - Commit history viewing
 - File content inspection
@@ -82,6 +83,7 @@ git instaweb --stop
 ## Git Instaweb (cont.) (cont. 2)
 
 **Use cases:**
+
 - Quick repository sharing
 - Code review in web interface
 - Demo repository contents
@@ -114,6 +116,7 @@ git daemon --detach --syslog --export-all --base-path=/var/git
 ```
 
 **Daemon configuration:**
+
 - Uses Git protocol (port 9418)
 - Read-only by default
 - No authentication built-in
@@ -154,6 +157,7 @@ CGI program for serving Git over HTTP:
 ```
 
 **HTTP backend features:**
+
 - Standard HTTP/HTTPS protocols
 - Authentication support
 - Firewall-friendly
@@ -289,6 +293,7 @@ git describe --dirty
 ```
 
 **Describe format explanation:**
+
 - `v1.2.0`: Most recent tag
 - `14`: Number of commits since tag
 - `g2414721`: 'g' + abbreviated commit hash
@@ -321,6 +326,7 @@ git archive HEAD | tar -x -C /tmp/extracted/
 ```
 
 **Archive options:**
+
 - Multiple formats (tar, zip, tar.gz)
 - Specific commits, tags, or branches
 - Directory prefixes
@@ -361,6 +367,7 @@ git fetch bundle-origin
 ```
 
 **Bundle use cases:**
+
 - Offline repository transfer
 - Backup creation
 - Air-gapped environments
@@ -532,6 +539,7 @@ git clean -f -e "*.log"
 ```
 
 **Clean safety features:**
+
 - Requires `-f` flag for actual removal
 - Dry run mode for preview
 - Interactive mode for selection
@@ -568,6 +576,7 @@ git reset --hard HEAD@{2}
 ```
 
 **Reflog use cases:**
+
 - Recover lost commits
 - Undo dangerous operations
 - Debug reference changes
@@ -862,6 +871,7 @@ echo "git:x:1001:1001:Git User:/home/git:/usr/bin/git-shell" >> /etc/passwd
 **Scenario:** Set up a complete Git infrastructure using only built-in tools for a small development team.
 
 **Setup tasks:**
+
 1. **Repository server setup:**
     - Configure git daemon for local network access
     - Set up HTTP backend with authentication
@@ -886,6 +896,7 @@ echo "git:x:1001:1001:Git User:/home/git:/usr/bin/git-shell" >> /etc/passwd
 ## Lab Exercise: Built-in Tools Mastery (cont.) (cont.)
 
 **Advanced tasks:**
+
 1. **Integration scripting:**
     - Combine multiple tools in release scripts
     - Create monitoring and reporting tools

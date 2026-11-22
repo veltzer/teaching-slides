@@ -23,6 +23,7 @@ audience:
 ---
 
 ## What is TCP/IP?
+
 - Transmission Control Protocol/Internet Protocol
 - Foundation of the internet and modern networking
 - Suite of protocols that enable reliable data transmission
@@ -37,6 +38,7 @@ audience:
 ---
 
 ## Protocol Stack Details
+
 - Application Layer: HTTP, FTP, SMTP, DNS
 - Transport Layer: TCP, UDP
 - Internet Layer: IP, ICMP, ARP
@@ -45,6 +47,7 @@ audience:
 ---
 
 ## IP Addressing
+
 - Unique identifier for devices on a network
 - IPv4: 32-bit address (e.g., 192.168.1.1)
 - IPv6: 128-bit address (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334)
@@ -59,6 +62,7 @@ audience:
 ---
 
 ## Subnetting
+
 - Dividing networks into smaller networks
 - Uses subnet masks to define network boundaries
 - Enhances network management and security
@@ -109,6 +113,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## TCP Flow Control
+
 - Prevents overwhelming receivers
 - Uses sliding window mechanism
 - Window size adjusts dynamically
@@ -143,6 +148,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## UDP Characteristics
+
 - Lightweight protocol
 - No connection establishment
 - No guarantee of delivery
@@ -178,6 +184,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## ARP (Address Resolution Protocol)
+
 - Maps IP addresses to MAC addresses
 - Essential for local network communication
 - Maintains ARP cache for efficiency
@@ -186,6 +193,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## ICMP (Internet Control Message Protocol)
+
 - Network diagnostic tool
 - Error reporting
 - Echo request/reply (ping)
@@ -194,6 +202,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## Network Security Basics
+
 - Firewalls
 - Access Control Lists
 - Encryption (IPSec)
@@ -208,6 +217,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## IPv6 Features
+
 - Larger address space
 - Built-in security (IPSec)
 - Simplified header format
@@ -217,6 +227,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## IPv6 Address Types
+
 - Unicast
 - Multicast
 - Anycast
@@ -226,6 +237,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## Quality of Service (QoS)
+
 - Traffic prioritization
 - Bandwidth allocation
 - Delay management
@@ -246,6 +258,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## Troubleshooting Tools
+
 - ping
 - traceroute/tracert
 - nslookup/dig
@@ -255,6 +268,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## Best Practices
+
 - Regular monitoring
 - Security updates
 - Documentation
@@ -264,6 +278,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## Future of TCP/IP
+
 - IPv6 adoption
 - QUIC protocol
 - Network automation
@@ -273,6 +288,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ---
 
 ## Review & Key Takeaways
+
 - TCP/IP is fundamental to networking
 - Understanding layers helps troubleshooting
 - Security is critical

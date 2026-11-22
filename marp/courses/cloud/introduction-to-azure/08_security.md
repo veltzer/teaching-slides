@@ -23,6 +23,7 @@ audience:
 ---
 
 ## Microsoft Entra ID
+
 - Identity management (formerly Azure AD)
 - Authentication
 - Authorization
@@ -38,6 +39,7 @@ audience:
 ---
 
 ## Authentication Methods
+
 1. Username/Password
 1. Multi-factor authentication
 1. Windows Hello
@@ -47,6 +49,7 @@ audience:
 ---
 
 ## Role-Based Access Control
+
 - Built-in roles
 - Custom roles
 - Scope levels
@@ -56,6 +59,7 @@ audience:
 ---
 
 ## Azure Key Vault
+
 - Secret management
 - Key management
 - Certificate management
@@ -65,6 +69,7 @@ audience:
 ---
 
 ## Data Encryption
+
 - At-rest encryption
 - In-transit encryption
 - Client-side encryption
@@ -80,6 +85,7 @@ audience:
 ---
 
 ## Azure Firewall Features
+
 - Application rules
 - Network rules
 - NAT rules
@@ -89,6 +95,7 @@ audience:
 ---
 
 ## DDoS Protection
+
 - Basic protection
 - Standard protection
 - Attack analytics
@@ -98,6 +105,7 @@ audience:
 ---
 
 ## Web Application Firewall
+
 - Rule sets
 - Custom rules
 - Bot protection
@@ -107,6 +115,7 @@ audience:
 ---
 
 ## Microsoft Defender for Cloud
+
 - Replaces the former Azure Security Center
 - Cloud Security Posture Management (CSPM)
 - Cloud Workload Protection (CWP)
@@ -116,6 +125,7 @@ audience:
 ---
 
 ## Defender Capabilities
+
 - Threat detection and alerts
 - Investigation tools
 - Automated response playbooks
@@ -125,6 +135,7 @@ audience:
 ---
 
 ## Security Monitoring
+
 - Log Analytics
 - Security alerts
 - Threat detection
@@ -134,6 +145,7 @@ audience:
 ---
 
 ## Compliance Management
+
 - Regulatory standards
 - Compliance scores
 - Assessment tools
@@ -149,6 +161,7 @@ audience:
 ---
 
 ## Data Classification
+
 - Information types
 - Sensitivity labels
 - Retention policies
@@ -158,6 +171,7 @@ audience:
 ---
 
 ## Secure DevOps
+
 - Pipeline security
 - Code scanning
 - Secret management
@@ -167,6 +181,7 @@ audience:
 ---
 
 ## Security Operations
+
 - Incident response
 - Threat hunting
 - Vulnerability management
@@ -176,6 +191,7 @@ audience:
 ---
 
 ## Identity Governance
+
 - Access reviews
 - Entitlement management
 - Privileged access
@@ -185,6 +201,7 @@ audience:
 ---
 
 ## Azure Policy
+
 - Policy definitions
 - Initiatives
 - Assignments
@@ -194,6 +211,7 @@ audience:
 ---
 
 ## Security Assessments
+
 - Vulnerability scanning
 - Penetration testing
 - Security reviews
@@ -203,6 +221,7 @@ audience:
 ---
 
 ## Incident Response
+
 - Detection
 - Investigation
 - Containment
@@ -212,6 +231,7 @@ audience:
 ---
 
 ## Security Automation
+
 - Playbooks
 - Logic Apps
 - Azure Functions
@@ -221,6 +241,7 @@ audience:
 ---
 
 ## Private Networking
+
 - Private endpoints
 - Service endpoints
 - VNet integration
@@ -230,6 +251,7 @@ audience:
 ---
 
 ## Cloud Security Posture
+
 - Asset inventory
 - Security controls
 - Risk assessment
@@ -239,6 +261,7 @@ audience:
 ---
 
 ## Security Training
+
 - Awareness programs
 - Technical training
 - Compliance training
@@ -248,6 +271,7 @@ audience:
 ---
 
 ## Security Documentation
+
 - Policies
 - Procedures
 - Standards
@@ -257,6 +281,7 @@ audience:
 ---
 
 ## Security Metrics
+
 - Key indicators
 - Risk scores
 - Compliance rates
@@ -266,6 +291,7 @@ audience:
 ---
 
 ## Future Security Trends
+
 - Zero Trust evolution
 - AI/ML in security
 - Cloud security

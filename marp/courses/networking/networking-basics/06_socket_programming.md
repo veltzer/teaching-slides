@@ -16,6 +16,7 @@ audience:
 ---
 
 ## What is a Socket?: Details
+
 - A socket is an endpoint for network communication
 - Provides a file-descriptor-like interface for sending/receiving data
 - Originated in BSD Unix (1983) -- the "Berkeley Sockets API"
@@ -64,11 +65,13 @@ audience:
 ## TCP vs UDP: When to Use Which
 
 ### Use TCP when
+
 - Data must arrive completely and in order (files, web pages, APIs)
 - You need flow control and congestion control
 - Example: HTTP, SSH, database connections, email (SMTP)
 
 ### Use UDP when
+
 - Speed matters more than reliability (real-time audio/video)
 - You can tolerate some packet loss
 - You need multicast or broadcast

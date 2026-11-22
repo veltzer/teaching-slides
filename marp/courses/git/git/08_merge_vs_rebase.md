@@ -58,12 +58,14 @@ git rebase -i HEAD~3
 ## History Comparison: Merge vs Rebase
 
 **Merge preserves context:**
+
 - Shows when branches diverged and merged
 - Maintains original commit timestamps
 - Creates merge commits
 - History reflects actual development process
 
 **Rebase creates linear history:**
+
 - Appears as if work was done sequentially
 - Cleaner, easier to follow timeline
 - No merge commits
@@ -76,6 +78,7 @@ git rebase -i HEAD~3
 ### Never rebase commits that have been pushed to a shared repository and others may have based work on
 
 Why this rule exists:
+
 - Rebasing changes commit SHA hashes
 - Other developers' work becomes "orphaned"
 - Causes confusion and potential data loss
@@ -164,6 +167,7 @@ git rebase -i HEAD~4
 ```
 
 **Available actions:**
+
 - `pick` - keep commit as-is
 - `reword` - change commit message
 - `edit` - modify commit content
@@ -200,12 +204,14 @@ squash j1k2l3m Fix validation bug
 ## Rebase vs Merge: Team Workflow Impact: Details
 
 **Merge-based workflow:**
+
 - Natural reflection of development process
 - Preserves all historical context
 - Can become cluttered with merge commits
 - Harder to identify feature boundaries
 
 **Rebase-based workflow:**
+
 - Clean, linear history
 - Easy to follow feature development
 - Requires discipline and understanding
@@ -239,6 +245,7 @@ git rebase --abort
 ```
 
 **Key differences from merge conflicts:**
+
 - Each commit is applied individually
 - May encounter multiple conflict points
 - Can skip commits with `--skip`
@@ -265,6 +272,7 @@ git rebase --onto main~2 main feature
 ```
 
 **When to use each:**
+
 - Standard: Most common case
 - Preserve merges: Complex branch structures
 - Strategy options: Automated conflict resolution
@@ -317,6 +325,7 @@ git push --force-with-lease origin feature-branch
 ```
 
 **What `--force-with-lease` does:**
+
 - Checks if remote branch matches your expectation
 - Fails if someone else pushed changes
 - Prevents accidental overwrites
@@ -355,12 +364,14 @@ git push --force-with-lease origin feature-branch
 ## Performance Considerations
 
 **Merge advantages:**
+
 - Fast operation, no history rewriting
 - Preserves all commit metadata
 - No risk of introducing bugs during rebase
 - Works well with automated tools
 
 **Rebase advantages:**
+
 - Cleaner history for debugging
 - Easier to identify when bugs were introduced
 - Better for `git bisect` operations
@@ -371,6 +382,7 @@ git push --force-with-lease origin feature-branch
 ## Performance Considerations (cont.)
 
 **Choose based on:**
+
 - Team size and collaboration patterns
 - Project complexity and history importance
 - Tooling and automation requirements
@@ -419,6 +431,7 @@ git push --force
 **Solution:** Use `--force-with-lease` and communicate with team
 
 ### Mistake 4: Rebasing too frequently
+
 - Creates unnecessary churn
 - Confuses team members
 - Makes debugging harder
@@ -430,6 +443,7 @@ git push --force
 ## Next Steps
 
 In the next half of this chapter, we'll cover:
+
 - Advanced rebase techniques
 - Handling complex scenarios
 - Tooling and automation

@@ -34,6 +34,7 @@ audience:
 - Variety: Different forms of data
 
 Additional V's:
+
 - Veracity: Data quality
 - Value: Business impact
 
@@ -79,6 +80,7 @@ Additional V's:
 ## Lambda Pros and Cons
 
 Pros:
+
 - Handles both real-time and batch processing
 - Provides fault tolerance and scalability
 - Allows reprocessing of data in batch layer
@@ -90,6 +92,7 @@ Pros:
 ## Lambda Pros and Cons (cont.)
 
 Cons:
+
 - Increased complexity in system architecture
 - Requires maintaining two separate systems for batch and speed layers
 - May lead to increased operational and development costs
@@ -128,6 +131,7 @@ Cons:
 ## Kappa Pros and Cons
 
 Pros:
+
 - Simplifies architecture by using a single processing path
 - Reduces code duplication and maintenance overhead
 - Allows easy reprocessing of data by replaying the event stream
@@ -139,6 +143,7 @@ Pros:
 ## Kappa Pros and Cons (cont.)
 
 Cons:
+
 - May require more storage for maintaining a long-term log
 - Can be less efficient for certain types of batch processing
 - Relies heavily on the scalability of the stream processing system

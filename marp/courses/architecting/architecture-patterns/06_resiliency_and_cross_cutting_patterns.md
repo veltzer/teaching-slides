@@ -44,12 +44,14 @@ audience:
 ## Circuit Breaker Pros and Cons
 
 Pros:
+
 - Prevents system overload
 - Improves system resilience
 - Enables fast failure detection
 - Allows for graceful degradation
 
 Cons:
+
 - Adds complexity to the system
 - Requires careful configuration
 - May mask underlying issues if not monitored
@@ -85,12 +87,14 @@ Cons:
 ## Bulkhead Pros and Cons
 
 Pros:
+
 - Isolates failures, preventing system-wide cascading failures
 - Improves resilience and fault tolerance
 - Allows for better resource allocation and management
 - Enables different scaling strategies for different components
 
 Cons:
+
 - Can increase system complexity
 - May lead to underutilization of resources if not properly configured
 - Requires careful capacity planning
@@ -127,12 +131,14 @@ Cons:
 ## Saga Pros and Cons
 
 Pros:
+
 - Maintains data consistency across services
 - Supports long-lived transactions
 - Improves system resilience
 - Allows for complex failure recovery
 
 Cons:
+
 - Increases complexity in business logic
 - Requires careful design of compensating actions
 - Can be challenging to debug and test
@@ -169,6 +175,7 @@ Cons:
 ## Throttling Pros and Cons
 
 Pros:
+
 - Prevents system overload and improves stability
 - Ensures fair resource allocation among clients
 - Protects against certain types of DoS attacks
@@ -180,6 +187,7 @@ Pros:
 ## Throttling Pros and Cons (cont.)
 
 Cons:
+
 - May degrade user experience if not carefully implemented
 - Can be complex to configure and fine-tune
 - Might introduce additional latency
@@ -219,6 +227,7 @@ Cons:
 ## API Gateway Pros and Cons
 
 Pros:
+
 - Centralizes cross-cutting concerns
 - Simplifies client-side code
 - Enables microservice refactoring without affecting clients
@@ -230,6 +239,7 @@ Pros:
 ## API Gateway Pros and Cons (cont.)
 
 Cons:
+
 - Can become a single point of failure
 - May introduce additional latency
 - Can become a development bottleneck
@@ -268,6 +278,7 @@ Cons:
 ## BFF Pros and Cons
 
 Pros:
+
 - Optimizes API for each client type
 - Improves performance by reducing data transfer
 - Simplifies client-side code
@@ -279,6 +290,7 @@ Pros:
 ## BFF Pros and Cons (cont.)
 
 Cons:
+
 - Increases overall system complexity
 - Can lead to code duplication across BFFs
 - Requires additional development and maintenance effort
@@ -317,6 +329,7 @@ Cons:
 ## ACL Pros and Cons
 
 Pros:
+
 - Isolates and protects the new system from legacy complexities
 - Facilitates incremental migration and modernization
 - Improves maintainability by centralizing integration logic
@@ -328,6 +341,7 @@ Pros:
 ## ACL Pros and Cons (cont.)
 
 Cons:
+
 - Adds an extra layer of complexity to the overall architecture
 - Can introduce performance overhead due to additional translations
 - Requires effort to design, implement, and maintain the translation layer
@@ -367,12 +381,14 @@ Cons:
 ## Strangler Fig Pros and Cons
 
 Pros:
+
 - Reduces risk of big-bang rewrite
 - Allows for incremental migration and value delivery
 - Enables easier rollback if issues arise
 - Provides opportunity to learn and adjust during migration
 
 Cons:
+
 - Can be slower than a full rewrite
 - Requires careful planning and coordination
 - May introduce temporary complexity during transition
@@ -410,6 +426,7 @@ Cons:
 ## Database per Service Pros and Cons
 
 Pros:
+
 - Supports service autonomy and independent deployment
 - Allows for choosing the best database type for each service
 - Improves scalability and performance through focused optimization
@@ -421,6 +438,7 @@ Pros:
 ## Database per Service Pros and Cons (cont.)
 
 Cons:
+
 - Increases complexity in data management and consistency
 - Can lead to data duplication across services
 - Makes it challenging to perform queries across multiple services
@@ -462,6 +480,7 @@ Cons:
 ## Geode Pros and Cons
 
 Pros:
+
 - Reduces latency for geographically distributed users
 - Improves application responsiveness and user experience
 - Enables better scalability and load distribution
@@ -473,6 +492,7 @@ Pros:
 ## Geode Pros and Cons (cont.)
 
 Cons:
+
 - Increases overall system complexity
 - Can be challenging to maintain data consistency across geodes
 - Requires careful management of data replication and synchronization
@@ -512,6 +532,7 @@ Cons:
 ## Ambassador Pros and Cons
 
 Pros:
+
 - Simplifies client application by offloading connectivity concerns
 - Provides a consistent interface to diverse external services
 - Improves application resilience through built-in retry and circuit breaking
@@ -523,6 +544,7 @@ Pros:
 ## Ambassador Pros and Cons (cont.)
 
 Cons:
+
 - Adds an extra network hop, potentially increasing latency
 - Increases overall system complexity
 - Can become a single point of failure if not properly managed
@@ -562,6 +584,7 @@ Cons:
 ## Sidecar Pros and Cons
 
 Pros:
+
 - Separation of concerns between core functionality and peripheral tasks
 - Language-agnostic way to extend application capabilities
 - Easier to develop, test, and maintain components independently
@@ -573,6 +596,7 @@ Pros:
 ## Sidecar Pros and Cons (cont.)
 
 Cons:
+
 - Increases overall system complexity
 - Can introduce additional resource overhead
 - Potential latency in communication between application and sidecar
@@ -613,6 +637,7 @@ Cons:
 ## Valet Key Pros and Cons
 
 Pros:
+
 - Reduces load on application servers
 - Improves performance for large data transfers
 - Enhances security through limited-scope access
@@ -624,6 +649,7 @@ Pros:
 ## Valet Key Pros and Cons (cont.)
 
 Cons:
+
 - Increases complexity in managing and securing access tokens
 - Requires careful implementation to prevent token misuse
 - May need additional infrastructure for token generation/validation

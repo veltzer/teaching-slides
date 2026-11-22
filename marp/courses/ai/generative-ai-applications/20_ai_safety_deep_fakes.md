@@ -381,6 +381,7 @@ Write a 1-page safety report of your findings.
 ## Summary: Images, Quality and Safety
 
 **What we covered:**
+
 - Image generation with diffusion models and `Stable Diffusion`
 - Personalizing image models with `DreamBooth` and `Textual Inversion`
 - Measuring text quality: BLEU, ROUGE, BERTScore, LLM-as-Judge

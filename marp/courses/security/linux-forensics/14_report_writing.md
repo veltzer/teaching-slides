@@ -13,6 +13,7 @@ audience:
 # Introduction to Report Writing
 
 ## Course: Linux Forensics
+
 - Forensic reports are the primary deliverable of an investigation
 - Reports must be clear, accurate, and legally defensible
 - This module covers report structure, evidence documentation,
@@ -228,6 +229,7 @@ ANALYSIS METHODOLOGY
 ## Writing Findings
 
 ### Guidelines for Findings Section
+
 - State **facts**, not opinions
 - Support every finding with evidence
 - Reference specific evidence items (E001, etc.)
@@ -630,6 +632,7 @@ forensic_note() {
 ## Exercise: Report Writing
 
 ### Tasks
+
 1. Write an evidence identification section for a sample case
 1. Document the chain of custody for a hard drive
 1. Write three findings with evidence references

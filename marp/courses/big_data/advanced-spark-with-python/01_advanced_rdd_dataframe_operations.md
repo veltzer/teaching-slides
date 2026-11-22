@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Chapter topics
+
 * Advanced transformations and actions
 * Custom partitioning strategies
 * Broadcast variables and accumulators
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Learning Objectives
+
 * Master complex RDD transformations
 * Implement custom partitioning
 * Optimize memory usage with broadcast variables
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## Prerequisites Check
+
 * Basic Python programming
 * Spark fundamentals
 * DataFrame operations
@@ -43,6 +46,7 @@ audience:
 ---
 
 ## Complex Transformations
+
 * Beyond basic operations
 * Chaining transformations
 * Optimization opportunities
@@ -118,6 +122,7 @@ class DatePartitioner(Partitioner):
 ---
 
 ## Partitioning Strategies
+
 1. Key-based partitioning
 1. Range-based partitioning
 1. Custom logic partitioning
@@ -163,6 +168,7 @@ result = rdd.map(process_with_lookup)
 ---
 
 ## Broadcast Best Practices
+
 1. Use for static reference data
 1. Monitor memory usage
 1. Consider update frequency
@@ -208,6 +214,7 @@ window_spec = Window.partitionBy("department")
 ---
 
 ## Window Function Types
+
 1. Ranking functions
 1. Analytic functions
 1. Aggregate functions
@@ -254,6 +261,7 @@ spark.conf.set("spark.memory.storageFraction", 0.3)
 ---
 
 ## CPU Optimization
+
 1. Partition sizing
 1. Task scheduling
 1. Resource allocation
@@ -277,6 +285,7 @@ spark.conf.set("spark.rdd.compress", "true")
 ---
 
 ## Caching Levels
+
 1. MEMORY_ONLY
 1. MEMORY_AND_DISK
 1. MEMORY_ONLY_SER
@@ -311,6 +320,7 @@ joined = large_df.join(broadcast(small_df), "key")
 ---
 
 ## Shuffle Optimization
+
 1. Reduce shuffle partitions
 1. Use broadcast joins
 1. Partition data properly
@@ -334,6 +344,7 @@ spark.conf.set("spark.serializer",
 ---
 
 ## Performance Metrics
+
 1. Execution time
 1. Memory usage
 1. Shuffle read/write
@@ -351,6 +362,7 @@ spark.conf.set("spark.executor.cores", "4")
 ---
 
 ## Common Anti-patterns
+
 1. Unnecessary shuffling
 1. Poor partitioning
 1. Memory leaks
@@ -391,6 +403,7 @@ def complex_transformation(value):
 ---
 
 ## Pipeline Optimization
+
 1. Stage optimization
 1. Task combining
 1. Memory management
@@ -405,6 +418,7 @@ def complex_transformation(value):
 ---
 
 ## Performance Checklist
+
 1. Monitor memory usage
 1. Optimize shuffling
 1. Use appropriate partitioning
@@ -428,6 +442,7 @@ spark.conf.set("spark.sql.adaptive.skewJoin.enabled", "true")
 ---
 
 ## Security Considerations
+
 1. Authentication
 1. Authorization
 1. Encryption
@@ -436,6 +451,7 @@ spark.conf.set("spark.sql.adaptive.skewJoin.enabled", "true")
 ---
 
 ## Future Learning Path
+
 1. Streaming processing
 1. Machine learning
 1. Graph processing
@@ -444,6 +460,7 @@ spark.conf.set("spark.sql.adaptive.skewJoin.enabled", "true")
 ---
 
 ## Chapter Summary
+
 1. Complex transformations
 1. Custom partitioning
 1. Memory optimization
@@ -452,6 +469,7 @@ spark.conf.set("spark.sql.adaptive.skewJoin.enabled", "true")
 ---
 
 ## Practice Exercises
+
 1. Implement custom partitioner
 1. Optimize join operations
 1. Debug performance issues

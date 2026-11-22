@@ -32,6 +32,7 @@ audience:
 ## Basic File System Structure: Details
 
 Key Directories:
+
 - `/bin`: Essential commands
 - `/etc`: System configuration
 - `/home`: User directories

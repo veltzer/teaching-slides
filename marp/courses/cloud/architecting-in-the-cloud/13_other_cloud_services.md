@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Beyond the Core
+
 - Cloud providers offer 200+ services each
 - Most architectures use a handful
 - Knowing what exists helps you avoid reinventing
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## DevOps Services
+
 - CI/CD pipelines in the cloud
 - AWS CodePipeline/CodeBuild, Azure DevOps, Cloud Build
 - GitHub Actions works across all clouds
@@ -67,6 +69,7 @@ jobs:
 ---
 
 ## Source Control
+
 - AWS CodeCommit (being deprecated), GitHub, GitLab
 - Azure Repos (part of Azure DevOps)
 - Cloud Source Repositories (GCP)
@@ -76,6 +79,7 @@ jobs:
 ---
 
 ## CI/CD Pipeline Architecture
+
 1. Developer pushes code
 1. Build and unit test (CodeBuild, Cloud Build)
 1. Static analysis and security scanning
@@ -92,6 +96,7 @@ jobs:
 ---
 
 ## Artifact Management
+
 - Store build artifacts and packages
 - AWS CodeArtifact, Azure Artifacts, Artifact Registry
 - npm, Maven, PyPI, NuGet packages
@@ -101,6 +106,7 @@ jobs:
 ---
 
 ## Mobile Services
+
 - Push notifications (SNS, Firebase Cloud Messaging)
 - Mobile analytics (Pinpoint, App Center, Firebase Analytics)
 - Authentication (Cognito, Azure AD B2C, Firebase Auth)
@@ -110,6 +116,7 @@ jobs:
 ---
 
 ## Mobile Backend Architecture
+
 - API Gateway for REST/GraphQL endpoints
 - Lambda/Functions for serverless backend
 - DynamoDB/Firestore for low-latency data
@@ -119,6 +126,7 @@ jobs:
 ---
 
 ## Testing Services
+
 - Load testing: AWS does not have managed, use k6/Gatling
 - Azure Load Testing (managed JMeter)
 - Device testing: AWS Device Farm, Firebase Test Lab
@@ -128,6 +136,7 @@ jobs:
 ---
 
 ## AI and Machine Learning
+
 - Pre-built AI services (vision, language, speech)
 - AWS Rekognition, Azure AI services, Google Vision
 - ML platforms: SageMaker, Azure ML, Vertex AI
@@ -137,6 +146,7 @@ jobs:
 ---
 
 ## AI Services Examples
+
 - Image and video analysis
 - Natural language processing
 - Speech to text and text to speech
@@ -147,6 +157,7 @@ jobs:
 ---
 
 ## Data Analytics Services
+
 - Data warehousing: Redshift, Synapse, BigQuery
 - Real-time streaming: Kinesis, Event Hubs, Dataflow
 - ETL: Glue, Data Factory, Dataflow
@@ -156,6 +167,7 @@ jobs:
 ---
 
 ## IoT Services
+
 - Device management and connectivity
 - AWS IoT Core, Azure IoT Hub (GCP retired Cloud IoT Core in 2023)
 - Edge computing on devices
@@ -165,6 +177,7 @@ jobs:
 ---
 
 ## Notification Services
+
 - Email: SES, SendGrid
 - SMS: SNS, Twilio integration
 - Push notifications: SNS, Firebase
@@ -174,6 +187,7 @@ jobs:
 ---
 
 ## Search Services
+
 - Managed Elasticsearch/OpenSearch
 - AWS OpenSearch, Azure AI Search, Elastic Cloud
 - Full-text search, analytics, logging
@@ -183,6 +197,7 @@ jobs:
 ---
 
 ## API Management
+
 - API Gateway: rate limiting, authentication, throttling
 - AWS API Gateway, Azure API Management, Apigee (GCP)
 - Usage plans and API keys
@@ -216,6 +231,7 @@ Resources:
 ---
 
 ## When to Use Managed Services
+
 - Does the cloud offer a managed version? Use it.
 - Will save weeks or months of engineering
 - Built-in HA, scaling, patching, backups
@@ -225,6 +241,7 @@ Resources:
 ---
 
 ## Evaluating a New Cloud Service
+
 1. Does it solve your actual problem?
 1. What is the pricing model?
 1. What are the limits and quotas?
@@ -235,6 +252,7 @@ Resources:
 ---
 
 ## Blockchain and Ledger Services
+
 - Amazon QLDB: immutable, cryptographically verifiable ledger
 - Amazon Managed Blockchain
 - Azure Confidential Ledger
@@ -244,6 +262,7 @@ Resources:
 ---
 
 ## Media Services
+
 - Video transcoding: MediaConvert, Azure Media Services
 - Live streaming: MediaLive, Azure Media Services
 - Content delivery: CloudFront, Azure CDN
@@ -253,6 +272,7 @@ Resources:
 ---
 
 ## Migration Services
+
 - AWS Migration Hub, Azure Migrate, GCP Migrate
 - Server migration: replicate VMs to cloud
 - Database migration: DMS, Azure DMS
@@ -262,6 +282,7 @@ Resources:
 ---
 
 ## Governance and Compliance Services
+
 - AWS Control Tower: landing zone setup
 - Azure Landing Zones: best-practice account structure
 - GCP Organization Policy: guardrails
@@ -271,6 +292,7 @@ Resources:
 ---
 
 ## Architecture Review Checklist: Details
+
 - Is the architecture multi-AZ? Multi-Region if needed?
 - Are all components scalable?
 - Is state externalized (databases, caches, queues)?
@@ -287,6 +309,7 @@ Resources:
 ---
 
 ## Cost Optimization in Architecture
+
 - Architect for cost from the start
 - Right-size all resources
 - Use serverless for variable workloads
@@ -296,6 +319,7 @@ Resources:
 ---
 
 ## Observability Architecture
+
 - Metrics, logs, and traces: the three pillars
 - Centralized logging (CloudWatch, ELK, Datadog)
 - Distributed tracing (X-Ray, Jaeger)
@@ -311,6 +335,7 @@ Resources:
 ---
 
 ## Multi-Tenancy Architecture
+
 - Serve multiple customers from shared infrastructure
 - Silo model: separate resources per tenant
 - Pool model: shared resources, logical isolation
@@ -326,6 +351,7 @@ Resources:
 ---
 
 ## Edge Computing: Details
+
 - Run compute close to end users
 - CloudFront Functions, Lambda@Edge
 - Azure Edge Zones, GCP Distributed Cloud
@@ -341,6 +367,7 @@ Resources:
 ---
 
 ## Course Summary
+
 - Cloud architecture requires new thinking
 - Design for failure, scale horizontally, decouple
 - Use managed services to reduce operational burden
@@ -352,6 +379,7 @@ Resources:
 ---
 
 ## Well-Architected Review
+
 - Regular architecture reviews against best practices
 - AWS Well-Architected Tool: self-assessment
 - Identify risks and improvement opportunities
@@ -361,6 +389,7 @@ Resources:
 ---
 
 ## Architecture Evolution
+
 - Architecture is not a one-time activity
 - Revisit as requirements change
 - Monitor and measure real-world performance
@@ -370,6 +399,7 @@ Resources:
 ---
 
 ## Recommended Reading
+
 - AWS Well-Architected Framework whitepaper
 - "Designing Data-Intensive Applications" by Martin Kleppmann
 - "Building Microservices" by Sam Newman
@@ -379,6 +409,7 @@ Resources:
 ---
 
 ## Closing Thoughts
+
 - Apply these patterns in your own architectures
 - Start simple, evolve as you learn
 - The cloud is a powerful tool: use it wisely

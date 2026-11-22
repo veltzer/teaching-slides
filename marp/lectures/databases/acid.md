@@ -28,6 +28,7 @@ audience:
 ## What Are ACID Guarantees?: Details
 
 ACID is an acronym that stands for:
+
 - Atomicity
 - Consistency
 - Isolation
@@ -48,6 +49,7 @@ These properties ensure reliable processing of database transactions.
 ## Atomicity
 
 A transaction is an all-or-nothing operation.
+
 - Either all operations in a transaction succeed
 - Or none of them take effect
 
@@ -75,6 +77,7 @@ If any statement fails, the entire transaction is rolled back.
 ## Consistency
 
 The database must transition from one valid state to another.
+
 - Database constraints must be maintained
 - Referential integrity is preserved
 - Business rules are enforced
@@ -107,6 +110,7 @@ COMMIT;
 ## Isolation
 
 Concurrent transactions should not interfere with each other.
+
 - Each transaction should appear to execute in isolation
 - Intermediate states should not be visible to other transactions
 
@@ -185,6 +189,7 @@ BEGIN TRANSACTION;
 ## Durability
 
 Once a transaction is committed, it remains committed.
+
 - Changes survive system failures
 - Committed data is permanently stored
 - Recovery mechanisms ensure data persistence
@@ -209,6 +214,7 @@ COMMIT;
 ```
 
 Even if the system crashes immediately after commit:
+
 - The record will be recovered during restart
 - No committed data is lost
 
@@ -262,6 +268,7 @@ BEGIN TRANSACTION;
 ## NoSQL and BASE
 
 Many NoSQL systems follow BASE instead of ACID:
+
 - Basically Available
 - Soft state
 - Eventual consistency
@@ -342,6 +349,7 @@ END$$;
 ## Monitoring ACID Compliance
 
 Key metrics to track:
+
 1. Transaction rollback rate
 1. Deadlock frequency
 1. Lock wait times

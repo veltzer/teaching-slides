@@ -31,6 +31,7 @@ audience:
 ## Definition
 
 An OS that **isolates** and **controls** access between:
+
 - User processes
 - System resources
 - Hardware devices
@@ -219,6 +220,7 @@ void setup_page_table(struct process *p) {
 **Controlled entry points** from user space to kernel space
 
 ## Purpose
+
 - Request kernel services
 - Access hardware
 - Manage resources
@@ -292,6 +294,7 @@ syscall           ; Fast system call
 ## System Call Performance (cont.)
 
 ## Optimization Strategies
+
 - Batch operations
 - Use vDSO for some calls
 - Minimize context switches
@@ -385,6 +388,7 @@ struct context {
 ## Protection Mechanisms Summary (cont.)
 
 ## Software Features
+
 1. **ASLR**: Randomize memory layout
 1. **Stack Canaries**: Detect overflow
 1. **SELinux/AppArmor**: Mandatory access control
@@ -405,6 +409,7 @@ jmp rax         // Must land on ENDBR instruction
 ```
 
 ## Intel MPX (Memory Protection Extensions)
+
 - Bounds checking in hardware
 - Deprecated but influential
 
@@ -426,6 +431,7 @@ jmp rax         // Must land on ENDBR instruction
 1. **Signals**: Kernel → User (async)
 
 ## Cost
+
 - Save/restore context
 - TLB flush (sometimes)
 - Cache pollution

@@ -32,6 +32,7 @@ audience:
 `Git` uses cryptographic hashing to ensure data integrity:
 
 **SHA-1 hashing (legacy):**
+
 - 160-bit hash values
 - Hexadecimal representation (40 characters)
 - Content-addressable storage
@@ -42,6 +43,7 @@ audience:
 ## Digital Signatures Overview (cont.)
 
 **SHA-256 (modern Git):**
+
 - 256-bit hash values
 - Enhanced security
 - Backward compatibility considerations
@@ -93,11 +95,13 @@ commit a1b2c3d4e5f67890123456789012345678901234567890123456789012345678
 `Git` stores all data in three types of objects:
 
 **1. Blob (Binary Large Object):**
+
 - Stores file content
 - No filename or metadata
 - Content-addressable by hash
 
 **2. Tree:**
+
 - Stores directory structure
 - Points to blobs and other trees
 - Contains filenames and permissions
@@ -107,6 +111,7 @@ commit a1b2c3d4e5f67890123456789012345678901234567890123456789012345678
 ## The Three Core Structures (cont.)
 
 **3. Commit:**
+
 - Points to a tree (project snapshot)
 - Contains metadata (author, date, message)
 - Points to parent commit(s)
@@ -127,6 +132,7 @@ git show 2b5e1e3
 ```
 
 **Key characteristics:**
+
 - Only file content, no filename
 - Same content = same blob across entire repository
 - Efficient storage through deduplication
@@ -163,12 +169,14 @@ git cat-file -p HEAD^{tree}
 ## Tree Objects (cont.)
 
 **Tree format:**
+
 - Mode (permissions)
 - Object type (blob/tree)
 - SHA hash
 - Filename
 
 **Modes:**
+
 - `100644`: Regular file
 - `100755`: Executable file
 - `040000`: Directory (tree)
@@ -197,6 +205,7 @@ and session management.
 ```
 
 **Commit components:**
+
 - Tree pointer (project snapshot)
 - Parent commit(s)
 - Author information
@@ -257,6 +266,7 @@ How `Git` stores objects efficiently:
 ```
 
 **Loose vs packed objects:**
+
 - **Loose**: Individual files per object
 - **Packed**: Multiple objects in single file
 - **Automatic packing**: Triggered by gc operations
@@ -294,6 +304,7 @@ HEAD → commit_sha
 ```
 
 **HEAD states:**
+
 - **Normal**: Points to branch reference
 - **Detached**: Points directly to commit
 - **During merge**: Special states during operations
@@ -323,6 +334,7 @@ ls .git/refs/heads/
 ```
 
 **Branch operations:**
+
 - Creating branch: Write commit SHA to file
 - Switching branch: Update HEAD to point to branch
 - Deleting branch: Remove the file
@@ -356,6 +368,7 @@ Release version 2.0
 ```
 
 **Tag object structure:**
+
 - Points to any Git object (usually commits)
 - Contains metadata (tagger, date, message)
 - Can be signed with GPG
@@ -402,12 +415,14 @@ git ls-files --stage
 ## What Happens When You: Add to Staging Area (cont.)
 
 **During `git add`:**
+
 1. File content is hashed
 1. Blob object created in object store
 1. Index updated with file path → blob SHA mapping
 1. Working directory unchanged
 
 **Index format:**
+
 - Binary file for performance
 - Maps file paths to blob SHAs
 - Includes file metadata (timestamps, permissions)
@@ -424,6 +439,7 @@ git commit -m "Add feature"
 ```
 
 **Commit process:**
+
 1. **Create tree from index:**
     - Read current index state
     - Create tree objects for directories
@@ -456,6 +472,7 @@ git branch feature-branch
 ```
 
 **Branch creation process:**
+
 1. **Get current commit SHA** (from HEAD)
 1. **Write SHA to new file:** `.git/refs/heads/feature-branch`
 1. **No other changes** (HEAD stays on current branch)
@@ -485,6 +502,7 @@ git tag -a v1.0 -m "Release 1.0"
 ```
 
 **Tag creation process:**
+
 1. **Create tag object:**
     - Object type: tag
     - Points to current commit
@@ -531,12 +549,14 @@ g7h8i9j HEAD@{2}: commit: Fix bug
 ## The Reflog System (cont.)
 
 **Reflog storage:**
+
 - `.git/logs/HEAD` - All HEAD movements
 - `.git/logs/refs/heads/branch` - Branch-specific logs
 - Default retention: 90 days for unreachable commits
 - 30 days for reachable commits
 
 **Reflog uses:**
+
 - Recovery of lost commits
 - Understanding command history
 - Debugging complex operations
@@ -548,11 +568,13 @@ g7h8i9j HEAD@{2}: commit: Fix bug
 `Git` optimizes storage through packing:
 
 **Loose objects:**
+
 - Individual files per object
 - Immediate storage for new objects
 - Less efficient for large repositories
 
 **Pack files:**
+
 - Multiple objects in single file
 - Delta compression between similar objects
 - Much more storage efficient
@@ -583,6 +605,7 @@ size-pack 856      # KB in pack files
 How `Git` stores similar objects efficiently:
 
 **Delta storage:**
+
 - Base object stored fully
 - Similar objects stored as differences
 - Chain of deltas for multiple versions
@@ -616,6 +639,7 @@ git gc --prune=2.weeks.ago
 ## Garbage Collection (cont.)
 
 **GC operations:**
+
 1. **Pack loose objects** into pack files
 1. **Remove duplicate objects** through delta compression
 1. **Delete unreferenced objects** older than expiry time
@@ -623,6 +647,7 @@ git gc --prune=2.weeks.ago
 1. **Update reference indexes** for faster lookups
 
 **Automatic triggers:**
+
 - Too many loose objects (>6700)
 - Too many pack files (>50)
 - After certain operations (fetch, merge)
@@ -681,6 +706,7 @@ git ls-files --debug
 ```
 
 **Index optimization:**
+
 - Binary format for speed
 - Sorted by path for efficient lookup
 - Includes file metadata to detect changes
@@ -706,6 +732,7 @@ git symbolic-ref refs/heads/current
 ```
 
 **Symbolic reference uses:**
+
 - `HEAD` pointing to current branch
 - Branch aliases
 - Remote HEAD tracking
@@ -729,6 +756,7 @@ git fsck --connectivity-only
 ```
 
 **Common fsck findings:**
+
 - **Dangling blobs:** Unreferenced file content
 - **Dangling commits:** Unreachable commits
 - **Missing objects:** Corrupted object database
@@ -769,6 +797,7 @@ git cat-file -p 557db03
 ```
 
 **Object creation tools:**
+
 - `hash-object`: Create objects from files
 - `mktree`: Create tree objects
 - `commit-tree`: Create commit objects
@@ -781,6 +810,7 @@ git cat-file -p 557db03
 What happens during a three-way merge:
 
 **Merge process:**
+
 1. **Find merge base:** Common ancestor of branches
 1. **Create temporary trees:** One for each branch
 1. **Compare changes:** From base to each branch
@@ -802,6 +832,7 @@ What happens during a three-way merge:
 Understanding how rebase works under the hood:
 
 **Rebase process:**
+
 1. **Find commits to replay:** From merge base to branch tip
 1. **Reset to target:** Move branch to rebase target
 1. **Apply commits sequentially:** Cherry-pick each commit
@@ -821,6 +852,7 @@ Understanding how rebase works under the hood:
 ```
 
 **Rebase vs merge differences:**
+
 - **Rebase:** Replays commits, creates new commit SHAs
 - **Merge:** Combines trees, preserves original commits
 
@@ -831,6 +863,7 @@ Understanding how rebase works under the hood:
 Git's layered configuration system:
 
 **Configuration hierarchy:**
+
 1. **System:** `/etc/gitconfig` (system-wide)
 1. **Global:** `~/.gitconfig` (user-specific)
 1. **Local:** `.git/config` (repository-specific)
@@ -868,6 +901,7 @@ git config --system user.name "Anonymous"   # system
 Git hooks provide extension points:
 
 **Hook types:**
+
 - **Pre-hooks:** Execute before operations
 - **Post-hooks:** Execute after operations
 - **Update hooks:** Execute during ref updates
@@ -918,6 +952,7 @@ ssh git@server.com git-upload-pack '/path/to/repo.git'
 ```
 
 **Protocol phases:**
+
 1. **Reference discovery:** List available refs
 1. **Negotiation:** Determine needed objects
 1. **Pack transfer:** Send compressed object data
@@ -945,12 +980,14 @@ Understanding Git's object model edge cases:
 ## Advanced Object Storage (cont.)
 
 **Large file handling:**
+
 - Git LFS replaces large files with pointers
 - Pointer files stored as regular blobs
 - Actual content stored separately
 - Transparent to most Git operations
 
 **Binary file storage:**
+
 - All files stored as blobs regardless of type
 - No special binary file handling
 - Delta compression still applies
@@ -985,6 +1022,7 @@ main-repo/
 ```
 
 **Shared vs separate:**
+
 - **Shared:** Object database, configuration, references
 - **Separate:** HEAD, index, working directory
 
@@ -999,6 +1037,7 @@ git clone https://github.com/user/repo.git local-repo
 ```
 
 **Clone process:**
+
 1. **Create directory:** `local-repo/`
 1. **Initialize repository:** `git init`
 1. **Add remote:** `origin` pointing to source URL
@@ -1012,6 +1051,7 @@ git clone https://github.com/user/repo.git local-repo
 ## Repository Cloning Internals (cont.)
 
 **Clone optimizations:**
+
 - **Shallow clone:** `--depth=1` for recent history only
 - **Single branch:** `--single-branch` for one branch
 - **Bare clone:** `--bare` for no working directory
@@ -1024,6 +1064,7 @@ git clone https://github.com/user/repo.git local-repo
 Git uses different merge strategies:
 
 **Recursive strategy (default):**
+
 - Handles most common cases
 - Can detect renames and copies
 - Resolves "criss-cross" merges
@@ -1034,12 +1075,14 @@ Git uses different merge strategies:
 ## Understanding Git's Merge Algorithms (cont.)
 
 **Octopus strategy:**
+
 - Merges more than two branches
 - Only works with clean merges
 - Stops at first conflict
 - Rarely used in practice
 
 **Ours/Theirs strategies:**
+
 - **Ours:** Keep our version entirely
 - **Theirs:** Take their version entirely
 - Useful for specific workflows
@@ -1050,6 +1093,7 @@ Git uses different merge strategies:
 ## Understanding Git's Merge Algorithms (cont.) (cont.)
 
 **Subtree strategy:**
+
 - Merges separate project as subdirectory
 - Handles path prefix differences
 - Complex but powerful
@@ -1076,6 +1120,7 @@ git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -nr | head -10
 ```
 
 **Performance tuning:**
+
 - Regular garbage collection
 - Optimize pack files
 - Use shallow clones when appropriate
@@ -1107,6 +1152,7 @@ git config --list --show-origin --show-scope
 ```
 
 **Common debugging scenarios:**
+
 - Corrupted object database
 - Missing references
 - Configuration conflicts
@@ -1120,6 +1166,7 @@ git config --list --show-origin --show-scope
 Git security aspects:
 
 **SHA collision attacks:**
+
 - Git moving from SHA-1 to SHA-256
 - Collision detection in modern Git
 - Repository verification important
@@ -1139,12 +1186,14 @@ git log --all --full-history -p | grep -i "password\|secret"
 ## Security Considerations (cont.)
 
 **Hook security:**
+
 - Hooks can execute arbitrary code
 - Be careful with shared repositories
 - Validate hook sources
 - Consider hook signing
 
 **Transport security:**
+
 - Use HTTPS or SSH
 - Verify server certificates
 - Use SSH key authentication
@@ -1155,12 +1204,14 @@ git log --all --full-history -p | grep -i "password\|secret"
 ## Git Internals Best Practices
 
 **Repository maintenance:**
+
 1. Regular garbage collection
 1. Monitor repository size
 1. Use appropriate ignore files
 1. Clean up old branches
 
 **Development practices:**
+
 1. Understand object model implications
 1. Use hooks appropriately
 1. Configure Git properly for your environment
@@ -1171,12 +1222,14 @@ git log --all --full-history -p | grep -i "password\|secret"
 ## Git Internals Best Practices (cont.)
 
 **Performance optimization:**
+
 1. Pack objects regularly
 1. Use shallow clones for CI/CD
 1. Consider partial clone for huge repos
 1. Monitor object count and size
 
 **Troubleshooting approach:**
+
 1. Understand what Git commands actually do
 1. Use low-level commands for diagnosis
 1. Check object database integrity
@@ -1189,6 +1242,7 @@ git log --all --full-history -p | grep -i "password\|secret"
 **Scenario:** Explore a repository's internal structure and understand how Git operations work under the hood.
 
 **Tasks:**
+
 1. **Object exploration:**
     - Find and examine blob, tree, and commit objects
     - Trace object relationships

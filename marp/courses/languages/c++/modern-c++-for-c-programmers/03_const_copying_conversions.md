@@ -152,10 +152,12 @@ void useContainer() {
 ## Logical vs Physical Constness
 
 Physical constness:
+
 - Doesn't modify any bits within the object
 - What the compiler enforces with `const`
 
 Logical constness:
+
 - Appears constant to external users
 - May modify internal implementation details
 - Implemented using `mutable` keyword
@@ -230,6 +232,7 @@ void printVector(const std::vector<int>& vec) {
 ## C++ Casts Overview
 
 C++ provides type-safe casting operators:
+
 - `static_cast`: Compile-time checked conversions
 - `dynamic_cast`: Runtime checked downcasting
 - `const_cast`: Add/remove const or volatile
@@ -411,11 +414,13 @@ float* fp = (float*)&i; // Dangerous C-style cast
 ## C-Style Cast vs C++ Casts (cont.)
 
 Problems with C-style casts:
+
 - Hard to spot in code
 - Can perform any combination of conversions
 - Compiler won't warn about dangerous conversions
 
 Advantages of C++ casts:
+
 - More visible in code
 - Express intent clearly
 - More type-safe

@@ -389,6 +389,7 @@ class SmartCache:
 ## Monitoring Cache Performance
 
 Key Metrics:
+
 - Hit Rate
 - Miss Rate
 - Latency

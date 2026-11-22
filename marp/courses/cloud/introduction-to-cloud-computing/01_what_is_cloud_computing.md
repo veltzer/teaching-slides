@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Definition
+
 - On-demand delivery of IT resources over the internet
 - Pay-as-you-go pricing model
 - No need to own or manage physical hardware
@@ -25,6 +26,7 @@ audience:
 ---
 
 ## NIST Definition
+
 - National Institute of Standards and Technology
 - Five essential characteristics
 - Three service models
@@ -40,6 +42,7 @@ audience:
 ---
 
 ## On-Demand Self-Service
+
 - Provision resources without human interaction
 - No need to call or email an IT department
 - Web console, CLI, or API
@@ -49,6 +52,7 @@ audience:
 ---
 
 ## Broad Network Access
+
 - Available over the network (internet or private)
 - Standard mechanisms and protocols
 - Accessible from any device
@@ -58,6 +62,7 @@ audience:
 ---
 
 ## Resource Pooling
+
 - Provider serves multiple customers from shared resources
 - Multi-tenant model
 - Resources dynamically assigned and reassigned
@@ -67,6 +72,7 @@ audience:
 ---
 
 ## Rapid Elasticity
+
 - Scale up and down quickly
 - Capabilities appear unlimited to the consumer
 - Provision and release automatically
@@ -76,6 +82,7 @@ audience:
 ---
 
 ## Measured Service
+
 - Resource usage monitored, controlled, and reported
 - Transparency for provider and consumer
 - Pay-per-use billing
@@ -85,6 +92,7 @@ audience:
 ---
 
 ## Before the Cloud
+
 - Buy and rack physical servers
 - Weeks or months to provision
 - Capacity planning guesswork
@@ -94,6 +102,7 @@ audience:
 ---
 
 ## The Problem with Traditional IT
+
 - Over-provision: waste money on idle resources
 - Under-provision: performance problems and outages
 - Hardware refresh cycles every 3-5 years
@@ -103,6 +112,7 @@ audience:
 ---
 
 ## How Cloud Solves This
+
 - Convert CapEx to OpEx
 - Provision in minutes, not months
 - Scale to actual demand
@@ -118,6 +128,7 @@ audience:
 ---
 
 ## Cloud vs Virtualization
+
 - Virtualization: run multiple VMs on one physical server
 - Cloud: virtualization + self-service + metering + elasticity
 - Virtualization is a building block of cloud
@@ -127,6 +138,7 @@ audience:
 ---
 
 ## Cloud vs Hosting
+
 - Traditional hosting: fixed servers, fixed price
 - Cloud: elastic resources, usage-based pricing
 - Hosting: manual scaling (call support)
@@ -136,6 +148,7 @@ audience:
 ---
 
 ## Cloud Service Categories
+
 - Compute: virtual machines, containers, functions
 - Storage: object, block, file
 - Networking: virtual networks, DNS, CDN
@@ -145,6 +158,7 @@ audience:
 ---
 
 ## Who Uses Cloud?
+
 - Startups: launch without capital investment
 - Enterprises: modernize and scale
 - Government: improve citizen services
@@ -154,6 +168,7 @@ audience:
 ---
 
 ## Cloud Adoption Trends
+
 - Majority of enterprise workloads now in cloud
 - Multi-cloud strategies are common
 - Cloud-native development is the default for new apps
@@ -163,6 +178,7 @@ audience:
 ---
 
 ## Cloud Terminology
+
 - Instance: a virtual server
 - Region: geographic data center cluster
 - Availability Zone: isolated data center
@@ -172,6 +188,7 @@ audience:
 ---
 
 ## More Cloud Terminology
+
 - Provisioning: creating and configuring resources
 - Elasticity: automatic scaling to demand
 - Orchestration: automated arrangement of services
@@ -181,6 +198,7 @@ audience:
 ---
 
 ## Cloud vs Colocation
+
 - Colocation: rent space in a data center, bring your hardware
 - Cloud: provider owns all hardware, you rent capacity
 - Colocation: you manage everything except the building
@@ -190,6 +208,7 @@ audience:
 ---
 
 ## Cloud Myths
+
 - "Cloud is always cheaper" (not always, depends on usage)
 - "Cloud is not secure" (often more secure than on-premises)
 - "Cloud means losing control" (you control what matters)
@@ -199,6 +218,7 @@ audience:
 ---
 
 ## Real-World Cloud Scale
+
 - Netflix: streams to 200M+ subscribers from AWS
 - Spotify: runs entirely on GCP
 - LinkedIn: migrated to Azure
@@ -208,6 +228,7 @@ audience:
 ---
 
 ## When Cloud May Not Be the Answer
+
 - Ultra-low latency requirements (microseconds)
 - Strict data sovereignty preventing any cloud use
 - Predictable, steady workloads (sometimes cheaper on-premises)
@@ -217,6 +238,7 @@ audience:
 ---
 
 ## Summary
+
 - Cloud = on-demand, elastic, metered IT resources
 - Five NIST characteristics define cloud
 - Solves the problems of traditional IT

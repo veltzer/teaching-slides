@@ -91,6 +91,7 @@ public:
 ## Efficiency and Integrity Issues (cont.)
 
 Common issues:
+
 - Memory leaks
 - Dangling pointers
 - Double deletion

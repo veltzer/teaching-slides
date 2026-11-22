@@ -11,6 +11,7 @@ audience:
 # Python Function Decorators
 
 ## Overview
+
 - Understanding function decorators
 - How decorators work internally
 - Creating your own decorators
@@ -65,6 +66,7 @@ my_function = my_decorator(my_function)
 ## How Decorators Work
 
 ## Decorator Fundamentals
+
 - Decorators are callable objects that take a function as input
 - They return a new function that wraps the original
 - The wrapper adds functionality before/after the original function
@@ -849,6 +851,7 @@ except ZeroDivisionError:
 ## Summary
 
 ## Key Takeaways
+
 - Decorators are a powerful tool for modifying function behavior
 - They implement the wrapper pattern with a clean syntax
 - Always use @functools.wraps to preserve metadata

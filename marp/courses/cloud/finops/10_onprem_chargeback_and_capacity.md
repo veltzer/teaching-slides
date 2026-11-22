@@ -17,6 +17,7 @@ audience:
 ---
 
 ## The On-Prem Allocation Problem
+
 - One bill for the whole datacenter
 - Many teams share the same hardware
 - No automatic per-workload billing
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Showback for On-Prem
+
 - Report cost per team without billing them
 - Builds awareness of consumption
 - First step toward chargeback
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## Chargeback for On-Prem
+
 - Actually charge teams for their consumption
 - Drives stronger accountability than showback
 - Internal billing requires finance buy-in
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## Building a Unit Cost Model
+
 - Pick a unit: vCPU-hour, GB-month, IOPS-hour
 - Sum all costs (hardware, power, facilities, staff)
 - Divide by total available capacity
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## Unit Cost Calculation Example
+
 - Annual rack cost (full TCO): $120,000
 - Servers per rack: 20
 - Cores per server: 64
@@ -71,6 +76,7 @@ audience:
 ---
 
 ## Tagging in On-Prem
+
 - VMs and containers can carry metadata tags
 - vSphere custom attributes, Kubernetes labels
 - Tag for team, project, environment, cost center
@@ -80,6 +86,7 @@ audience:
 ---
 
 ## Resource Metering Sources
+
 - Hypervisor metrics: vSphere, Hyper-V, KVM
 - Kubernetes: kube-state-metrics, Prometheus
 - Storage arrays: SNMP, vendor APIs
@@ -95,6 +102,7 @@ audience:
 ---
 
 ## Capacity Planning Basics
+
 - Forecast demand before buying hardware
 - Lead times: 8-16 weeks for new servers
 - Storage growth is usually predictable
@@ -104,6 +112,7 @@ audience:
 ---
 
 ## Capacity Headroom
+
 - Never run at 100% capacity
 - Industry rule of thumb: order at 70-80% utilization
 - Headroom absorbs spikes and failures
@@ -113,6 +122,7 @@ audience:
 ---
 
 ## Utilization Tracking
+
 - CPU, memory, storage, network per server
 - Aggregate by cluster, rack, datacenter
 - Track over time to spot trends
@@ -143,6 +153,7 @@ sum(node_filesystem_size_bytes
 ---
 
 ## Consolidation Opportunities
+
 - Servers running below 20% utilization
 - Multiple under-loaded VMs on separate hosts
 - Redundant test/dev environments
@@ -152,6 +163,7 @@ sum(node_filesystem_size_bytes
 ---
 
 ## Private Cloud Models
+
 - VMware vCloud, OpenStack, Apache CloudStack
 - Self-service provisioning for internal users
 - Quotas and resource limits per project
@@ -161,6 +173,7 @@ sum(node_filesystem_size_bytes
 ---
 
 ## Kubernetes On-Prem
+
 - Bare-metal or VM-based clusters
 - Same cost-allocation challenges as cloud K8s
 - Kubecost works on-prem too
@@ -170,6 +183,7 @@ sum(node_filesystem_size_bytes
 ---
 
 ## Procurement Cycles
+
 - Annual or bi-annual hardware purchases
 - Volume discounts for bulk orders
 - Vendor relationships matter (Dell, HPE, Lenovo)
@@ -179,6 +193,7 @@ sum(node_filesystem_size_bytes
 ---
 
 ## Forecasting Demand
+
 - Historical growth + planned business changes
 - New product launches, acquisitions, peak seasons
 - Engage application teams early
@@ -194,6 +209,7 @@ sum(node_filesystem_size_bytes
 ---
 
 ## Decommissioning Old Hardware
+
 - Track end-of-support dates per asset
 - Migrate workloads off aging hardware
 - Wipe and dispose securely
@@ -203,6 +219,7 @@ sum(node_filesystem_size_bytes
 ---
 
 ## Common On-Prem Allocation Pitfalls
+
 - Allocating fixed costs as if variable
 - Charging teams for capacity they didn't request
 - Ignoring shared services (network, storage)

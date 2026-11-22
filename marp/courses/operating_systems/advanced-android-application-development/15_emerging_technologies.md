@@ -315,6 +315,7 @@ class ExperimentManager {
 ### Future Technologies Implementation
 
 Create an application that:
+
 1. Implements on-device ML
 1. Uses advanced Compose patterns
 1. Follows privacy-first design

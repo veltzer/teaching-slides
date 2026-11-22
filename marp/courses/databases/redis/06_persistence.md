@@ -37,6 +37,7 @@ Without persistence, all data is lost when Redis restarts!
 ## RDB (Redis Database) Snapshots: Details
 
 Point-in-time snapshots of the dataset:
+
 - Creates a single compact binary file
 - Snapshot represents Redis data at one moment
 - Usually scheduled at specific intervals
@@ -119,6 +120,7 @@ Background saving started
 ## RDB Advantages and Disadvantages
 
 **Advantages**:
+
 - Compact single-file format
 - Perfect for backups
 - Faster restarts than AOF
@@ -130,6 +132,7 @@ Background saving started
 ## RDB Advantages and Disadvantages (cont.)
 
 **Disadvantages**:
+
 - More data loss in case of crashes
 - Less frequent snapshots
 - Fork can be expensive with large datasets
@@ -140,6 +143,7 @@ Background saving started
 ## AOF (Append-Only File): Details
 
 Log of all write operations that modify data:
+
 - Logs every write operation as it occurs
 - Higher durability than RDB
 - Can be compacted/rewritten to save space
@@ -214,6 +218,7 @@ Background append only file rewriting started
 ## AOF Advantages and Disadvantages
 
 **Advantages**:
+
 - Better durability (less data loss)
 - Automatic rewrites to manage file size
 - Easier to understand and parse
@@ -225,6 +230,7 @@ Background append only file rewriting started
 ## AOF Advantages and Disadvantages (cont.)
 
 **Disadvantages**:
+
 - Larger files than RDB
 - Slower restart times
 - Sometimes slower than RDB depending on fsync policy
@@ -245,6 +251,7 @@ aof-use-rdb-preamble yes
 ```
 
 How it works:
+
 - AOF file starts with RDB snapshot (preamble)
 - Commands since snapshot are appended after
 - Faster restarts than pure AOF
@@ -279,6 +286,7 @@ appendonly no
 ```
 
 Use cases:
+
 - Pure cache
 - Temporary data
 - Volatile session storage
@@ -532,6 +540,7 @@ redis-benchmark -t set,get -n 1000000
 ```
 
 Monitor:
+
 - Throughput (operations/second)
 - Latency (average and percentiles)
 - Memory usage (resident set size)

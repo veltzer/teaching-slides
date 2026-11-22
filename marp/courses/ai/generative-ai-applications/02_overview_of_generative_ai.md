@@ -19,9 +19,11 @@ audience:
 ## What Does "Generative" Mean?
 
 **Discriminative models** learn boundaries between classes:
+
 - Input: image → Output: "cat" or "dog"
 
 **Generative models** learn the underlying data distribution:
+
 - Input: "a photo of a cat" → Output: a new cat image
 
 ```misc
@@ -127,6 +129,7 @@ Instead of one attention function, use multiple "heads" in parallel:
 ## Multi-Head Attention: Details
 
 Each head can learn different relationship patterns:
+
 - Head 1: syntactic relationships
 - Head 2: semantic relationships
 - Head 3: positional relationships
@@ -372,6 +375,7 @@ prompt = "Who won the 2026 Nobel Prize in Physics?"
 ```
 
 **Why it happens:**
+
 - Models learn **statistical patterns**, not **truth**
 - Training data contains contradictions
 - No built-in fact-checking mechanism

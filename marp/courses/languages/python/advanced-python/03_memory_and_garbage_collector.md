@@ -11,6 +11,7 @@ audience:
 # Memory and Garbage Collector
 
 ## Overview
+
 - Understanding Python's memory management
 - Memory usage of Python data structures
 - Garbage collection mechanisms
@@ -226,6 +227,7 @@ print(sys.getsizeof([1, 2, 3])) # List with 3 elements
 ## Object Size in Memory: Size of Common Types
 
 ## Integers
+
 - Fixed overhead plus variable storage
 - Small integers (-5 to 256) are pre-allocated
 - Arbitrary precision (can grow as needed)
@@ -244,6 +246,7 @@ print(sys.getsizeof(2**100)) # Larger due to value size
 ## Object Size in Memory: Size of Common Types (2)
 
 ## Strings
+
 - Fixed overhead plus character storage
 - Latin-1 strings: 1 byte per character
 - Unicode strings: up to 4 bytes per character
@@ -264,6 +267,7 @@ print(sys.getsizeof("🐍"))    # Unicode character
 ## Object Size in Memory: Size of Common Types (3)
 
 ## Lists
+
 - Fixed overhead (typically 64-80 bytes)
 - Plus references to contained objects
 - Over-allocation for append efficiency
@@ -290,6 +294,7 @@ print(sys.getsizeof(many_items))
 ## Object Size in Memory: Size of Common Types (4)
 
 ## Dictionaries
+
 - Significant overhead (typically 232+ bytes)
 - Hash table with pre-allocated slots
 - Sparse structure for collision avoidance
@@ -447,6 +452,7 @@ def process_file_generator(filename):
 ## Reducing Memory Footprint: Specialized Libraries
 
 ## NumPy
+
 - Efficient array storage
 - Uses contiguous memory blocks
 - Much smaller footprint than Python lists
@@ -469,6 +475,7 @@ print(f"NumPy array: {sys.getsizeof(np_array) / (1024 * 1024):.2f} MB")
 ## Reducing Memory Footprint: Specialized Libraries (2)
 
 ## Arrays Module
+
 - Homogeneous numeric arrays
 - More memory-efficient than lists
 - Good for large collections of uniform data
@@ -492,6 +499,7 @@ print(f"Array size: {sys.getsizeof(int_array)} bytes")
 ## Reducing Memory Footprint: Specialized Libraries (3)
 
 ## Collections
+
 - `collections.namedtuple` for small, immutable records
 - More memory-efficient than classes
 - `collections.deque` for efficient queue operations
@@ -877,6 +885,7 @@ def process_data_in_chunks(data_source, chunk_size=1000):
 ## Summary
 
 ## Key Takeaways
+
 - Understand how Python manages memory
 - Measure and monitor memory usage
 - Choose appropriate data structures
@@ -890,6 +899,7 @@ def process_data_in_chunks(data_source, chunk_size=1000):
 ## Further Reading
 
 ## Resources
+
 - "High Performance Python" by Micha Gorelick and Ian Ozsvald
 - Python documentation on garbage collection
 - Memory profiler documentation

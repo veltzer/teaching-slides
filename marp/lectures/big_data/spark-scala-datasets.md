@@ -115,6 +115,7 @@ df.select($"age".cast("string").substring(1))
 ---
 
 ## Memory Usage
+
 1. Datasets: Object creation overhead
 1. DataFrames: Optimized internal format
 1. Memory management considerations
@@ -154,6 +155,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 ---
 
 ## Encoder Operations
+
 1. Serialization
 1. Deserialization
 1. Schema generation
@@ -162,6 +164,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 ---
 
 ## Dataset Advantages
+
 1. Type safety
 1. Object-oriented interface
 1. IDE support
@@ -170,6 +173,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 ---
 
 ## DataFrame Advantages
+
 1. Better performance
 1. Dynamic typing
 1. SQL-like operations
@@ -178,6 +182,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 ---
 
 ## When to Use Datasets
+
 1. Complex domain objects
 1. Type safety requirement
 1. Java/Scala codebase
@@ -186,6 +191,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 ---
 
 ## When to Use DataFrames
+
 1. Simple operations
 1. Best performance needed
 1. Dynamic typing preferred
@@ -238,6 +244,7 @@ persons.joinWith(orders,
 ---
 
 ## Performance Tuning
+
 1. Caching strategies
 1. Partition management
 1. Memory configuration
@@ -270,6 +277,7 @@ df.select($"nonexistentField") // Runtime error
 ---
 
 ## Schema Evolution
+
 1. Adding columns
 1. Removing columns
 1. Type changes
@@ -306,6 +314,7 @@ val ds: Dataset[CustomType] = ...
 ---
 
 ## Best Practices
+
 1. Use appropriate types
 1. Consider performance impact
 1. Handle schema evolution
@@ -314,6 +323,7 @@ val ds: Dataset[CustomType] = ...
 ---
 
 ## Dataset APIs
+
 1. Transformation operations
 1. Action operations
 1. Aggregation functions
@@ -322,6 +332,7 @@ val ds: Dataset[CustomType] = ...
 ---
 
 ## DataFrame APIs
+
 1. Column operations
 1. SQL functions
 1. Window expressions
@@ -346,6 +357,7 @@ sales.groupByKey(_.date)
 ---
 
 ## Performance Monitoring
+
 1. Spark UI metrics
 1. Memory usage
 1. Execution time
@@ -354,6 +366,7 @@ sales.groupByKey(_.date)
 ---
 
 ## Common Pitfalls
+
 1. Excessive object creation
 1. Inefficient serialization
 1. Memory leaks
@@ -362,6 +375,7 @@ sales.groupByKey(_.date)
 ---
 
 ## Future Considerations
+
 1. Scala 3 support
 1. Performance improvements
 1. API enhancements

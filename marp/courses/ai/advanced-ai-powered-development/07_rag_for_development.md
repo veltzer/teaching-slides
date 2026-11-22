@@ -34,11 +34,13 @@ audience:
 ## The Hallucination Problem Without RAG
 
 Without RAG, an LLM asked about your internal `PaymentService`:
+
 - Invents plausible but wrong method signatures
 - Guesses at configuration patterns
 - Cannot reference actual error handling logic
 
 With RAG:
+
 - Retrieves the real `PaymentService` source code
 - References actual method signatures and docstrings
 - Grounds answers in your test cases and usage examples
@@ -141,6 +143,7 @@ def extract_functions(source: str) -> list[dict]:
 | `nomic-embed-code` | Open-source, strong code understanding | 768 |
 
 **Tips**:
+
 - Code-specific models outperform general models by 15-30% on code retrieval
 - Always benchmark on your own codebase before committing
 
@@ -161,6 +164,7 @@ def extract_functions(source: str) -> list[dict]:
 ## Embedding Model Selection Guide (cont.)
 
 **Selection criteria**:
+
 1. Start with open-source models for prototyping and cost control
 1. Move to `voyage-code-3` when retrieval quality is critical
 1. Use `text-embedding-3-large` when mixing code with natural language docs
@@ -237,6 +241,7 @@ Not all project knowledge lives in source code:
 ## Multi-Modal RAG: Diagrams, Screenshots, Config Files (cont.) (cont.)
 
 **Pipeline**:
+
 1. Detect asset type by file extension and MIME type
 1. Route to appropriate preprocessor (vision model, flattener, parser)
 1. Generate text representation, then embed as usual
@@ -247,10 +252,12 @@ Not all project knowledge lives in source code:
 ## Indexing Strategies: Choosing Granularity
 
 ### File-level
+
 - Fast to build, coarse retrieval
 - Works for small projects (<500 files)
 
 ### Function-level
+
 - Best precision for most codebases
 - Requires language-aware parsing (`tree-sitter`, `ast`)
 
@@ -259,6 +266,7 @@ Not all project knowledge lives in source code:
 ## Indexing Strategies: Choosing Granularity (cont.)
 
 ### Chunk-level with overlap
+
 - Fallback for binary docs, logs, unstructured text
 - Use 512-1024 token chunks with 20% overlap
 
@@ -367,6 +375,7 @@ Index more than just source code:
 ## RAG vs Fine-Tuning: When to Use Which (cont.)
 
 **Decision guide**:
+
 - Use **RAG** when answers must reference specific files, APIs, or docs
 - Use **fine-tuning** when you want the model to internalize coding style or patterns
 - Use **both** together for maximum quality: fine-tune for style, RAG for facts
@@ -415,6 +424,7 @@ def rewrite_query(user_query: str, llm) -> list[str]:
 ```
 
 **Techniques**:
+
 1. Multi-query expansion (generate 3-5 variants)
 1. HyDE (Hypothetical Document Embeddings): ask the LLM to write a hypothetical answer, then embed that
 1. Step-back prompting: generalize the query first
@@ -452,10 +462,12 @@ def rag_pipeline(query: str, collection, reranker, llm):
 ## Context Window Budgeting: Allocation Rules
 
 **Budget allocation rules**:
+
 1. Reserve 10-15% for system prompt and instructions
 1. Allocate 50-60% for retrieved code chunks
 1. Reserve 5-10% for the user query and conversation history
 1. Leave 20-30% for the model response generation
+
 - Always count tokens before sending: truncate lowest-ranked chunks first
 
 ---
@@ -574,10 +586,12 @@ class EmbeddingCache:
 ```
 
 **Optimization strategies**:
+
 1. Cache embeddings on disk keyed by content hash
 1. Cache query results with short TTL (5-15 minutes)
 1. Use incremental indexing to avoid re-embedding unchanged files
 1. Batch embedding calls (process 100+ chunks per API request)
+
 - Typical speedup: 10-50x on re-indexing with warm cache
 
 ---
@@ -597,10 +611,12 @@ class EmbeddingCache:
 ## RAG Pipeline Monitoring in Production (cont.)
 
 **Implementation checklist**:
+
 1. Log every query, retrieved chunk IDs, and response
 1. Track embedding API costs per day/week
 1. Set up weekly automated evaluation against golden dataset
 1. Monitor vector DB disk usage and query throughput
+
 - Use `Prometheus` + `Grafana` or your existing observability stack
 
 ---
@@ -644,6 +660,7 @@ def secure_query(query: str, user: User, collection):
 ## Scaling RAG to Large Organizations (cont.)
 
 **Architecture pattern**:
+
 1. Each team owns and maintains their repository index
 1. A central query router fans out searches across relevant indexes
 1. Results are merged, re-ranked, and filtered by access control
@@ -686,6 +703,7 @@ collection = client.get_or_create_collection("code")
 **Goal**: create a reusable evaluation set and measure retrieval quality.
 
 **Steps**:
+
 1. Collect 20 real developer questions about your codebase
 1. For each question, manually identify the 1-3 source files/functions that answer it
 1. Store as query/document pairs in a JSON file:

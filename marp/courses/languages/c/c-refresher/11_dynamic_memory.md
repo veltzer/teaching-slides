@@ -376,6 +376,7 @@ gcc -g -fsanitize=address -fno-omit-frame-pointer -o program program.c
 ```
 
 ASan detects at runtime:
+
 - Heap buffer overflow
 - Stack buffer overflow
 - Use-after-free
@@ -658,6 +659,7 @@ int main(void) {
 ## Custom Allocator Overview: Details
 
 When to use each:
+
 - **Arena**: short-lived, batch-freed allocations (parsers, per-request)
 - **Pool**: many same-sized objects (network connections, game entities)
 - **Free list**: general-purpose, variable sizes

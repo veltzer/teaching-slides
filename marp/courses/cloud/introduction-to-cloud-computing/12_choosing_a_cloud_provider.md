@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Evaluation Criteria
+
 - Service catalog and capabilities
 - Pricing and cost structure
 - Global infrastructure and Regions
@@ -25,6 +26,7 @@ audience:
 ---
 
 ## Technical Considerations
+
 - Does the provider have the services you need?
 - Performance in your target Regions
 - Integration with your existing tools
@@ -34,6 +36,7 @@ audience:
 ---
 
 ## Organizational Considerations
+
 - Existing vendor relationships (Microsoft, Google)
 - Team skills and training availability
 - Enterprise support agreements
@@ -49,6 +52,7 @@ audience:
 ---
 
 ## Vendor Lock-In
+
 - Proprietary services create dependencies
 - Data egress costs make leaving expensive
 - Unique APIs and SDKs
@@ -58,6 +62,7 @@ audience:
 ---
 
 ## Reducing Lock-In Risk
+
 - Use open standards (Kubernetes, Terraform, SQL)
 - Abstract provider-specific APIs
 - Design for portability where it matters
@@ -88,6 +93,7 @@ provider "kubernetes" {
 ---
 
 ## When Lock-In Is Acceptable
+
 - Managed service significantly reduces development effort
 - No realistic plan to switch providers
 - The productivity gains outweigh the risk
@@ -97,6 +103,7 @@ provider "kubernetes" {
 ---
 
 ## Migration Strategies
+
 - Rehost (lift-and-shift): move as-is
 - Replatform: minor adjustments for cloud
 - Refactor: redesign for cloud-native
@@ -106,6 +113,7 @@ provider "kubernetes" {
 ---
 
 ## The 6 R's of Migration: Details
+
 1. Rehost: lift and shift
 1. Replatform: lift and reshape
 1. Repurchase: switch to SaaS
@@ -122,6 +130,7 @@ provider "kubernetes" {
 ---
 
 ## Migration Planning
+
 - Assess current portfolio (what do you have?)
 - Prioritize workloads for migration
 - Start with low-risk, high-value workloads
@@ -131,6 +140,7 @@ provider "kubernetes" {
 ---
 
 ## Multi-Cloud Strategies
+
 - Use multiple providers strategically
 - Best-of-breed service selection
 - Geographic or regulatory requirements
@@ -140,6 +150,7 @@ provider "kubernetes" {
 ---
 
 ## Exit Strategies
+
 - Plan your exit before you enter
 - Ensure data export capabilities
 - Document provider-specific dependencies
@@ -149,6 +160,7 @@ provider "kubernetes" {
 ---
 
 ## Making the Decision
+
 - No universally "best" cloud provider
 - Depends on your specific requirements
 - Start with one provider, expand if needed

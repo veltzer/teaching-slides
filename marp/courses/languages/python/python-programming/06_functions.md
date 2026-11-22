@@ -77,6 +77,7 @@ print(absolute(3))   # 3
 ---
 
 ## Parameters vs Arguments
+
 - **Parameters**: Variables in the function definition
 - **Arguments**: Values passed when calling the function
 
@@ -205,6 +206,7 @@ kwargs={'x': 5, 'y': 6}
 ---
 
 ## Parameter Order Rules
+
 - The order must be:
     1. Regular positional parameters
     1. `*args`
@@ -222,6 +224,7 @@ func(1, 2, 3, 4, c=20, x=30)
 ---
 
 ## Keyword-Only Arguments
+
 - Parameters after `*` must be passed as keywords
 
 ```python
@@ -236,6 +239,7 @@ connect("localhost", 8080, timeout=10)
 ---
 
 ## Positional-Only Arguments (Python 3.8+)
+
 - Parameters before `/` must be passed positionally
 
 ```python
@@ -281,6 +285,7 @@ print(add(**kwargs))  # 6
 ---
 
 ## Lambda Functions
+
 - Anonymous, single-expression functions
 
 ```python
@@ -376,6 +381,7 @@ print(product)  # 120
 ---
 
 ## Variable Scope - LEGB Rule
+
 - Python looks up names in this order:
     1. **L**ocal: Inside the current function
     1. **E**nclosing: In enclosing function(s)
@@ -449,6 +455,7 @@ outer()
 ---
 
 ## Closures
+
 - A function that remembers values from its enclosing scope
 
 ```python
@@ -488,6 +495,7 @@ print(c())  # 3
 ---
 
 ## Functions are First-Class Objects
+
 - Functions can be:
     - Assigned to variables
     - Passed as arguments
@@ -522,6 +530,7 @@ print(apply(len, [1, 2, 3]))  # 3
 ---
 
 ## Decorators - Concept
+
 - A decorator wraps a function to extend its behavior
 
 ```python
@@ -750,6 +759,7 @@ print(callable(add5))  # True
 ---
 
 ## Summary
+
 - Functions are defined with `def` and can return values
 - Parameters support defaults, `*args`, `**kwargs`
 - Keyword-only and positional-only parameters control calling syntax

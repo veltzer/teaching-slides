@@ -18,6 +18,7 @@ audience:
 ---
 
 ## Table of Contents
+
 1. System Architecture Basics
 1. Data Management
 1. Performance & Scaling
@@ -28,6 +29,7 @@ audience:
 ---
 
 ## What is Computer Architecture?
+
 - Design and organization of computing systems
 - Hardware and software integration
 - Optimization of resources
@@ -36,6 +38,7 @@ audience:
 ---
 
 ## Key Architecture Components
+
 - Processing units (CPU, GPU)
 - Memory systems
 - Storage
@@ -45,6 +48,7 @@ audience:
 ---
 
 ## System Boundaries
+
 - Physical boundaries
 - Logical boundaries
 - Security perimeters
@@ -53,6 +57,7 @@ audience:
 ---
 
 ## Data Duplication
+
 - Purpose and benefits
 - Types of duplication
     - Full copies
@@ -63,6 +68,7 @@ audience:
 ---
 
 ## Data Consistency
+
 - Strong consistency
 - Eventual consistency
 - CAP theorem basics
@@ -71,6 +77,7 @@ audience:
 ---
 
 ## Caching Strategies
+
 - Cache levels
 - Cache invalidation
 - Write-through vs Write-back
@@ -79,6 +86,7 @@ audience:
 ---
 
 ## Data Locality
+
 - Temporal locality
 - Spatial locality
 - Data placement strategies
@@ -87,6 +95,7 @@ audience:
 ---
 
 ## Load Balancing
+
 - Purpose
 - Common algorithms
     - Round-robin
@@ -97,6 +106,7 @@ audience:
 ---
 
 ## Load Balancer Types
+
 - Layer 4 (Transport)
 - Layer 7 (Application)
 - DNS-based
@@ -105,6 +115,7 @@ audience:
 ---
 
 ## Scaling Patterns
+
 - Vertical scaling (Up/Down)
 - Horizontal scaling (Out/In)
 - When to use each
@@ -113,6 +124,7 @@ audience:
 ---
 
 ## Performance Metrics
+
 - Throughput
 - Latency
 - IOPS
@@ -122,6 +134,7 @@ audience:
 ---
 
 ## Concurrent Operations
+
 - Parallel processing
 - Asynchronous I/O
 - Thread management
@@ -130,6 +143,7 @@ audience:
 ---
 
 ## I/O Optimization
+
 - Buffering
 - Queuing
 - Batching
@@ -138,6 +152,7 @@ audience:
 ---
 
 ## High Availability Basics
+
 - Availability calculations
 - SLA definitions
 - Redundancy levels
@@ -152,6 +167,7 @@ audience:
 ---
 
 ## Redundancy Patterns: Summary
+
 - N+1
 - N+2
 - 2N
@@ -161,6 +177,7 @@ audience:
 ---
 
 ## Fault Tolerance
+
 - Failure detection
 - Failover mechanisms
 - Recovery procedures
@@ -169,6 +186,7 @@ audience:
 ---
 
 ## Self-Healing Systems
+
 - Automated recovery
 - Health monitoring
 - Auto-scaling
@@ -177,6 +195,7 @@ audience:
 ---
 
 ## Disaster Recovery
+
 - RPO (Recovery Point Objective)
 - RTO (Recovery Time Objective)
 - Backup strategies
@@ -185,6 +204,7 @@ audience:
 ---
 
 ## Basic Encryption
+
 - Symmetric encryption
 - Asymmetric encryption
 - Key management
@@ -193,6 +213,7 @@ audience:
 ---
 
 ## Data in Transit
+
 - TLS/SSL
 - VPN
 - Protocol security
@@ -201,6 +222,7 @@ audience:
 ---
 
 ## Data at Rest
+
 - Disk encryption
 - Database encryption
 - Key storage
@@ -209,6 +231,7 @@ audience:
 ---
 
 ## Security Layers
+
 - Physical security
 - Network security
 - Application security
@@ -217,6 +240,7 @@ audience:
 ---
 
 ## Microservices
+
 - Service boundaries
 - Inter-service communication
 - Deployment patterns
@@ -225,6 +249,7 @@ audience:
 ---
 
 ## Containerization
+
 - Container basics
 - Orchestration
 - Service mesh
@@ -233,6 +258,7 @@ audience:
 ---
 
 ## Serverless Architecture
+
 - Functions as a Service (FaaS)
 - Event-driven design
 - Cold starts
@@ -241,6 +267,7 @@ audience:
 ---
 
 ## Edge Computing
+
 - Edge vs. Cloud
 - Use cases
 - Deployment strategies
@@ -249,6 +276,7 @@ audience:
 ---
 
 ## Cloud Native Design
+
 - Cloud services
 - Managed services
 - Infrastructure as Code
@@ -257,6 +285,7 @@ audience:
 ---
 
 ## Best Practices: Documentation
+
 - Architecture diagrams
 - System specifications
 - Runbooks
@@ -265,6 +294,7 @@ audience:
 ---
 
 ## Monitoring
+
 - System metrics
 - Application metrics
 - User metrics
@@ -273,6 +303,7 @@ audience:
 ---
 
 ## Performance Testing
+
 - Load testing
 - Stress testing
 - Capacity planning
@@ -281,6 +312,7 @@ audience:
 ---
 
 ## Cost Optimization
+
 - Resource sizing
 - Usage patterns
 - Cost allocation
@@ -289,6 +321,7 @@ audience:
 ---
 
 ## Future Trends
+
 - Quantum computing
 - AI/ML integration
 - Sustainable computing

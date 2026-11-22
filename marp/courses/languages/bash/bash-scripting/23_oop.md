@@ -24,6 +24,7 @@ audience:
 ---
 
 ## OOP in `bash`? Really?
+
 - `bash` is not an OOP language
 - But we can simulate some OOP patterns
 - Associative arrays can act as "objects"

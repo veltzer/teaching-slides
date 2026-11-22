@@ -16,6 +16,7 @@ audience:
 ---
 
 ## What is a BSP?: Details
+
 1. Software layer between hardware and OS kernel
 1. Hardware-specific code and configurations
 1. Enables Linux to run on specific hardware platforms

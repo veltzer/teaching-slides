@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Cloud Architecture Patterns
+
 - Recurring solutions to common cloud problems
 - Battle-tested by thousands of organizations
 - Not prescriptions: adapt to your context
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Pattern: Direct Download from Storage
+
 - Client uploads/downloads directly to S3/Blob Storage
 - Use pre-signed URLs (time-limited, authenticated)
 - Application generates URL, client interacts with storage
@@ -55,6 +57,7 @@ url = s3.generate_presigned_url(
 ---
 
 ## Pre-Signed URL Flow: Details
+
 1. Client requests download from application
 1. Application generates pre-signed URL (valid for N minutes)
 1. Application returns URL to client
@@ -70,6 +73,7 @@ url = s3.generate_presigned_url(
 ---
 
 ## Pattern: Direct Upload to Storage
+
 - Same pattern for uploads
 - Client gets pre-signed POST/PUT URL
 - Client uploads directly to S3
@@ -79,6 +83,7 @@ url = s3.generate_presigned_url(
 ---
 
 ## Pattern: CDN for Non-Data-Center Caches
+
 - CloudFront/CDN in front of S3 or application
 - Edge locations serve content globally
 - Reduce latency from 200ms to 20ms
@@ -88,6 +93,7 @@ url = s3.generate_presigned_url(
 ---
 
 ## Pattern: Static Website with API
+
 - Static frontend hosted on S3 + CloudFront
 - API backend on Lambda or containers
 - No web servers to manage
@@ -120,6 +126,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Service-to-Service via API
+
 - REST or gRPC between microservices
 - Service discovery (DNS, service mesh, cloud map)
 - Circuit breakers for fault tolerance
@@ -129,6 +136,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Event-Driven Architecture
+
 - Components communicate through events
 - EventBridge, SNS, Pub/Sub as event bus
 - Loose coupling: producers don't know consumers
@@ -144,6 +152,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: CQRS
+
 - Command Query Responsibility Segregation
 - Separate read and write models
 - Write to primary database
@@ -153,6 +162,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Saga
+
 - Distributed transaction across microservices
 - Each step has a compensating action
 - Choreography: events trigger next step
@@ -162,6 +172,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Strangler Fig
+
 - Gradually migrate from monolith to microservices
 - Route traffic: old system or new service
 - Migrate one feature at a time
@@ -171,6 +182,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Sidecar
+
 - Auxiliary container alongside main application
 - Handles cross-cutting concerns
 - Logging, monitoring, security, networking
@@ -180,6 +192,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Circuit Breaker
+
 - Detect when a downstream service is failing
 - Stop calling it (open circuit)
 - Return fallback or error immediately
@@ -195,6 +208,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Bulkhead
+
 - Isolate failures to a subset of resources
 - Separate thread pools or instances per dependency
 - One failing dependency doesn't consume all resources
@@ -204,6 +218,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Retry with Exponential Backoff
+
 - Retry failed requests with increasing delays
 - 1s, 2s, 4s, 8s... with jitter
 - Handles transient failures (network blips, throttling)
@@ -213,6 +228,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Queue-Based Load Leveling
+
 - Place a queue between producer and consumer
 - Absorbs traffic spikes
 - Consumer processes at its own pace
@@ -222,6 +238,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Backend for Frontend (BFF)
+
 - Separate backend per frontend type
 - Web, mobile, IoT each get their own API
 - Optimize response for each client
@@ -231,6 +248,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Ambassador
+
 - Helper service alongside main application
 - Handle cross-cutting concerns
 - TLS termination, logging, routing
@@ -240,6 +258,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Competing Consumers
+
 - Multiple consumers read from the same queue
 - Each message processed by one consumer
 - Auto-scale consumers based on queue depth
@@ -249,6 +268,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Priority Queue
+
 - Multiple queues with different priority levels
 - High-priority queue: processed first
 - Low-priority queue: processed when capacity allows
@@ -258,6 +278,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Anti-Pattern: Distributed Monolith
+
 - Microservices that are tightly coupled
 - All services must deploy together
 - Synchronous calls everywhere
@@ -267,6 +288,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Anti-Pattern: Chatty Microservices
+
 - Excessive inter-service communication
 - Many round trips for a single operation
 - High latency and failure risk
@@ -276,6 +298,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Anti-Pattern: Over-Engineering
+
 - Using microservices for a simple CRUD app
 - Adding message queues when direct calls suffice
 - Multi-Region when a single Region is enough
@@ -285,6 +308,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Health Endpoint Monitoring
+
 - Expose /health endpoint on every service
 - Check dependencies (database, cache, external APIs)
 - Load balancers use for routing decisions
@@ -294,6 +318,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Pattern: Throttling
+
 - Protect services from overload
 - Return 429 (Too Many Requests) when exceeded
 - Token bucket or sliding window algorithms
@@ -303,6 +328,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 ---
 
 ## Choosing Patterns
+
 - Start simple, add complexity when needed
 - Monolith is fine for many applications
 - Patterns solve specific problems

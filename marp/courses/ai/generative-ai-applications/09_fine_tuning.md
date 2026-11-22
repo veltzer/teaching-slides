@@ -31,6 +31,7 @@ Adapting a pre-trained model to your specific task by continuing training on you
 ## What is Fine-Tuning?: Details
 
 **When to fine-tune vs. when to use prompting:**
+
 - Prompting: Quick iteration, small tasks, flexible
 - Fine-tuning: Consistent style, large volume, cost optimization
 
@@ -466,6 +467,7 @@ templates = {
 ## Summary: APIs, Prompting and Fine-Tuning
 
 **What we covered:**
+
 - `OpenAI` `API` fundamentals: chat completions, streaming, function calling
 - Prompt engineering: structure, roles, templates, injection defense
 - Few-shot and zero-shot learning: when and how to use examples

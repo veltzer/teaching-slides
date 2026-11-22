@@ -54,6 +54,7 @@ brew install git
 ```
 
 ### Windows
+
 - Download from <https://git-scm.com>
 - Or use Git Bash / WSL
 
@@ -98,6 +99,7 @@ drwxr-xr-x  7 user user 4096 Jan 15 10:00 .git
 ```
 
 **What's inside `.git`?**
+
 - `HEAD` - Points to current branch
 - `config` - Repository configuration
 - `objects/` - All your data (commits, files)
@@ -119,6 +121,7 @@ drwxr-xr-x  7 user user 4096 Jan 15 10:00 .git
 | Local only | Ready to push/pull |
 
 **When to use which?**
+
 - `init`: Starting a brand new project
 - `clone`: Contributing to existing project
 
@@ -151,6 +154,7 @@ Untracked files:
 ```
 
 **Three sections to watch:**
+
 1. Changes to be committed (staged)
 1. Changes not staged (modified but not staged)
 1. Untracked files (new files)
@@ -220,6 +224,7 @@ Stage this hunk [y,n,q,a,d,e,?]?
 ```
 
 **Options:**
+
 - `y` - Stage this hunk
 - `n` - Don't stage this hunk
 - `s` - Split into smaller hunks
@@ -329,6 +334,7 @@ index 3b18e51..2f4e349 100644
 ```
 
 **Reading the diff:**
+
 - `---` Old version
 - `+++` New version
 - `@@ -1,4 +1,5 @@` Line numbers (old and new)
@@ -489,6 +495,7 @@ git grep "pattern" HEAD~3
 ```
 
 **Advantages over regular `grep`:**
+
 - Only searches tracked files
 - Faster for large repositories
 - Can search in any commit
@@ -721,6 +728,7 @@ git config --global core.excludesfile ~/.gitignore_global
 ```
 
 **Use cases:**
+
 - **Local**: Project-specific (node_modules, *.pyc)
 - **Global**: Your editor files (.vscode, .idea)
 - **Exclude**: Temporary personal files

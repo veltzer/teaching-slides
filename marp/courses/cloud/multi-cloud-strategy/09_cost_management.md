@@ -24,6 +24,7 @@ audience:
 ---
 
 ## The Multi-Cloud Cost Challenge
+
 - Each cloud has different pricing models and units
 - Comparing costs across providers is not straightforward
 - Egress charges compound in multi-cloud architectures
@@ -33,6 +34,7 @@ audience:
 ---
 
 ## Unified Cost Visibility
+
 - Single pane of glass for all cloud spending
 - Normalize costs across different billing formats
 - Tools: CloudHealth, Apptio Cloudability, Finout, Vantage
@@ -48,6 +50,7 @@ audience:
 ---
 
 ## FinOps for Multi-Cloud
+
 - FinOps is the practice of managing cloud costs as a team sport
 - Three phases: Inform, Optimize, Operate
 - Inform: who is spending what, where
@@ -57,6 +60,7 @@ audience:
 ---
 
 ## FinOps Team Structure
+
 - FinOps practitioner: central coordination
 - Engineering: owns resource usage decisions
 - Finance: budget tracking and forecasting
@@ -66,6 +70,7 @@ audience:
 ---
 
 ## Consistent Tagging Strategy
+
 - Tags are the foundation of cost allocation
 - Enforce the same tag keys across all clouds
 - Minimum tags: Team, Environment, CostCenter, Application
@@ -118,6 +123,7 @@ resource "google_compute_instance" "app" {
 ---
 
 ## Cost Allocation and Chargeback
+
 - Allocate costs to business units or teams
 - Showback: show teams what they spend (informational)
 - Chargeback: charge teams for what they spend (financial)
@@ -127,6 +133,7 @@ resource "google_compute_instance" "app" {
 ---
 
 ## Committed Use Discounts
+
 - AWS: Reserved Instances (RIs), Savings Plans
 - Azure: Reserved VM Instances, Azure Savings Plans
 - GCP: Committed Use Discounts (CUDs)
@@ -136,6 +143,7 @@ resource "google_compute_instance" "app" {
 ---
 
 ## Discount Strategy in Multi-Cloud
+
 - Commit to each cloud proportionally to steady-state usage
 - Use on-demand for burst and variable workloads
 - Do not over-commit to one cloud if migration is planned
@@ -145,6 +153,7 @@ resource "google_compute_instance" "app" {
 ---
 
 ## Egress Costs: The Hidden Tax
+
 - Cloud providers charge for data leaving their network
 - Cross-cloud data transfer doubles egress costs
 - AWS: $0.09/GB out, Azure: $0.087/GB, GCP: $0.12/GB (approximate)
@@ -154,6 +163,7 @@ resource "google_compute_instance" "app" {
 ---
 
 ## Reducing Egress Costs
+
 - Use cloud interconnects (AWS Direct Connect, Azure ExpressRoute, GCP Interconnect)
 - Dedicated interconnects have lower per-GB costs
 - Compress data before transferring across clouds
@@ -163,6 +173,7 @@ resource "google_compute_instance" "app" {
 ---
 
 ## Rightsizing Across Clouds
+
 - Instance types differ across providers
 - Use cloud-native rightsizing tools per provider
 - AWS Compute Optimizer, Azure Advisor, GCP Recommender
@@ -172,6 +183,7 @@ resource "google_compute_instance" "app" {
 ---
 
 ## Key Takeaways
+
 - Unified visibility across all clouds is non-negotiable
 - Consistent tagging is the foundation of cost management
 - FinOps practices apply to multi-cloud with added complexity

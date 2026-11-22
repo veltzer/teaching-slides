@@ -13,6 +13,7 @@ audience:
 # Capstone Forensic Investigation
 
 ## Course: Linux Forensics
+
 - A full investigation that exercises every skill from the course
 - You receive a disk image and a memory dump from a compromised host
 - Work the case end to end, then defend your conclusions in the report

@@ -109,6 +109,7 @@ void main_loop(void) {
 ## Volatile Keyword
 
 Essential for:
+
 1. Memory-mapped I/O registers
 1. Variables modified in ISRs
 1. Variables shared between tasks

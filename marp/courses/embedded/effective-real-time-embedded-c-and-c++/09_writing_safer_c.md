@@ -145,6 +145,7 @@ if (&arr1[5] > &arr1[3]) { }  // Same array
 ## Common Weakness Enumeration (CWE)
 
 Major vulnerability categories:
+
 1. **CWE-120**: Buffer overflow
 1. **CWE-416**: Use after free
 1. **CWE-476**: NULL pointer dereference

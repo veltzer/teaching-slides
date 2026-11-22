@@ -37,6 +37,7 @@ audience:
 ---
 
 ## Why SOLID?
+
 - Maintainable code
 - Easier testing
 - Flexible architecture
@@ -49,6 +50,7 @@ audience:
 ## Single Responsibility Principle
 
 > "A class should have one, and only one, reason to change."
+>
 > - Robert C. Martin
 
 ---
@@ -111,6 +113,7 @@ class EmailService {
 ## Open/Closed Principle
 
 > "Software entities should be open for extension, but closed for modification."
+>
 > - Bertrand Meyer
 
 ---
@@ -183,6 +186,7 @@ class Circle implements Shape {
 ## Liskov Substitution Principle
 
 > "Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
+>
 > - Barbara Liskov
 
 ---
@@ -244,6 +248,7 @@ class Penguin implements Bird {
 ## Interface Segregation Principle
 
 > "Clients should not be forced to depend upon interfaces that they do not use."
+>
 > - Robert C. Martin
 
 ---
@@ -315,6 +320,7 @@ class Robot implements Workable {
 ## Dependency Inversion Principle
 
 > "High-level modules should not depend on low-level modules. Both should depend on abstractions."
+>
 > - Robert C. Martin
 
 ---
@@ -456,6 +462,7 @@ class OrderService {
 ---
 
 ## Benefits of SOLID in the E-commerce Example
+
 1. Single Responsibility: Each class has one job
 1. Open/Closed: New payment methods without changing existing code
 1. Liskov Substitution: Different repository implementations are interchangeable
@@ -465,6 +472,7 @@ class OrderService {
 ---
 
 ## Common SOLID Violations
+
 1. God Classes
 1. Tight Coupling
 1. Inheritance Abuse
@@ -474,6 +482,7 @@ class OrderService {
 ---
 
 ## How to Identify SOLID Violations
+
 1. Multiple responsibilities in one class
 1. Frequent changes to existing code
 1. Inheritance breaking functionality
@@ -483,6 +492,7 @@ class OrderService {
 ---
 
 ## Refactoring Towards SOLID
+
 1. Extract Class
 1. Extract Interface
 1. Dependency Injection
@@ -492,6 +502,7 @@ class OrderService {
 ---
 
 ## Testing Benefits with SOLID
+
 - Easier unit testing
 - Better mock objects
 - Isolated components
@@ -501,6 +512,7 @@ class OrderService {
 ---
 
 ## Best Practices
+
 1. Keep classes small and focused
 1. Use composition over inheritance
 1. Program to interfaces
@@ -510,6 +522,7 @@ class OrderService {
 ---
 
 ## Common Questions
+
 1. When to break SOLID principles?
 1. How to balance SOLID with pragmatism?
 1. What about performance impact?
@@ -519,6 +532,7 @@ class OrderService {
 ---
 
 ## Tools and Techniques
+
 1. Static Code Analysis
 1. Design Pattern Recognition
 1. Dependency Injection Frameworks
@@ -530,6 +544,7 @@ class OrderService {
 ## Summary
 
 SOLID Principles:
+
 1. Single Responsibility
 1. Open/Closed
 1. Liskov Substitution
@@ -539,6 +554,7 @@ SOLID Principles:
 ---
 
 ## Additional Resources
+
 1. *Clean Code* — Robert C. Martin
 1. *Agile Software Development: Principles, Patterns, and Practices* — Robert C. Martin (the original SOLID source)
 1. *Design Patterns* — Gang of Four

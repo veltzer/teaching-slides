@@ -82,6 +82,7 @@ Hello, World!
     - `%ebx`, `%ecx`, `%edx`: Arguments
 
 Common system calls:
+
 - 1: exit
 - 4: write
 
@@ -206,6 +207,7 @@ _start:
 ---
 
 ## Additional Resources
+
 - [GAS manual](https://sourceware.org/binutils/docs/as)
 - [x86 instruction set reference](https://www.felixcloutier.com/x86)
 - [Linux system call table](https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md)

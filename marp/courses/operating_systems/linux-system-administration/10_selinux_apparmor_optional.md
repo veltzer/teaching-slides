@@ -45,6 +45,7 @@ audience:
 | Protection | Against other users | Against compromised processes |
 
 MAC is essential when:
+
 - A compromised service should not access arbitrary files
 - Compliance requires mandatory security controls
 - Defense-in-depth is required
@@ -476,6 +477,7 @@ Create custom abstractions for shared rules across profiles.
 | Network control | Port labeling | Basic network rules |
 
 Choose based on:
+
 - Distribution default (path of least resistance)
 - Team familiarity
 - Compliance requirements (some mandate `SELinux`)
@@ -485,6 +487,7 @@ Choose based on:
 ## Exercise: Confining a Web Application
 
 Scenario: confine `/usr/local/bin/webapp` that needs:
+
 - Read config from `/etc/webapp/`
 - Write logs to `/var/log/webapp/`
 - Listen on port `8080`
@@ -580,6 +583,7 @@ Control network access per application with `AppArmor`:
 ```
 
 Network rule syntax:
+
 - `network inet tcp` - allow IPv4 TCP
 - `network inet6 dgram` - allow IPv6 UDP
 - `network unix stream` - allow Unix stream sockets
@@ -618,6 +622,7 @@ podman run -v /host/data:/data:Z myapp
 ```
 
 Key points:
+
 - Default container profiles block `mount`, `ptrace`, and raw sockets
 - Custom profiles can restrict filesystem and network access further
 - `SELinux` prevents container escapes via `svirt` separation

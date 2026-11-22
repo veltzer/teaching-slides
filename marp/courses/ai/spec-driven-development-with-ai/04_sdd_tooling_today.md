@@ -18,6 +18,7 @@ audience:
 # SDD Tooling Today
 
 ## Overview
+
 - `Spec Kit`: installation, the command sequence, the generated files, agent integrations
 - `Kiro` and IDE-native `SDD`: requirements, design and tasks as first-class artifacts, hooks
 - `SDD` without a framework: plain `Markdown` specs wired into instruction files

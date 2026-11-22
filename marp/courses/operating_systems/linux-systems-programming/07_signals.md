@@ -36,6 +36,7 @@ audience:
 ## What are Signals?
 
 ## Definition
+
 - **Software interrupts** to processes
 - **Asynchronous notifications** of events
 - **IPC mechanism** between processes

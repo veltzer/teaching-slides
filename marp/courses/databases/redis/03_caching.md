@@ -508,6 +508,7 @@ DEL "session:$sessionId"
 ```
 
 Benefits:
+
 - Fast access
 - Automatic expiration
 - Centralized session storage
@@ -540,6 +541,7 @@ def rate_limit(user_id, limit=5, window=60):
 ```
 
 Alternative using sorted sets:
+
 - Track exact timestamps
 - Sliding window instead of fixed window
 - More precise but more complex
@@ -638,6 +640,7 @@ Key metrics to monitor:
 ## Monitoring Cache Performance (cont.)
 
 Tools:
+
 - Redis INFO command
 - Redis-specific monitoring (Redis Insight, redis-cli)
 - APM solutions (New Relic, Datadog)

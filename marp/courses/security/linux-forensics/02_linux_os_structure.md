@@ -13,6 +13,7 @@ audience:
 # Understanding Linux OS Structure
 
 ## Course: Linux Forensics
+
 - The `Linux` operating system is built on well-defined structures
 - Understanding these structures is essential for forensic investigation
 - Knowing where data lives helps locate evidence efficiently
@@ -1170,6 +1171,7 @@ zgrep "error" /var/log/syslog.*.gz
 ## Exercise: Linux Structure Investigation
 
 ### Tasks
+
 1. Map the filesystem structure of the target system
 1. Identify all user accounts and their privileges
 1. List all running services and scheduled tasks

@@ -26,6 +26,7 @@ audience:
 ## The Evolution of Networking: Details
 
 Key trends driving modern networking:
+
 - **Cloud computing**: networks must be dynamic and programmable
 - **Microservices**: thousands of services need to communicate
 - **Containers**: ephemeral workloads with dynamic IPs
@@ -49,6 +50,7 @@ SDN separates the **control plane** (decision-making) from the **data plane** (p
 ## Software-Defined Networking (SDN): Details
 
 **Benefits of SDN:**
+
 - Centralized network management and visibility
 - Programmable via APIs
 - Dynamic reconfiguration without touching devices
@@ -178,6 +180,7 @@ $ docker service create --name web --network myoverlay --replicas 3 nginx
 ## Kubernetes Networking Model: Details
 
 Kubernetes networking has these fundamental requirements:
+
 1. Every Pod gets its own IP address
 1. All Pods can communicate with each other without NAT
 1. All Nodes can communicate with all Pods without NAT
@@ -386,6 +389,7 @@ A CDN (Content Delivery Network) caches content at edge locations worldwide to r
 ## CDN Architecture: Details
 
 **How CDNs work:**
+
 1. User requests `cdn.example.com/image.png`
 1. DNS resolves to nearest edge server (GeoDNS / anycast)
 1. If edge has cached copy: serve immediately (cache HIT)
@@ -587,12 +591,14 @@ message UserResponse {
 ## gRPC vs REST Comparison (cont.)
 
 **When to use gRPC:**
+
 - Microservice-to-microservice communication
 - High-throughput, low-latency requirements
 - Streaming data (real-time updates, video, telemetry)
 - Polyglot environments (code generation for 10+ languages)
 
 **When to use REST:**
+
 - Public-facing APIs (browser clients)
 - Simple CRUD operations
 - Human-readable debugging needed
@@ -615,6 +621,7 @@ HTTP/3 replaces TCP with QUIC (built on UDP) for better performance.
 ## HTTP/3 and QUIC: Example
 
 **QUIC advantages:**
+
 - **Faster connection establishment**: 1-RTT (or 0-RTT on reconnect)
 - **No head-of-line blocking**: stream loss doesn't block other streams
 - **Connection migration**: survives IP changes (Wi-Fi to cellular)
@@ -646,6 +653,7 @@ eBPF (extended Berkeley Packet Filter) allows running custom programs in the Lin
 ## eBPF: Programmable Networking in the Kernel: Details
 
 **eBPF in networking:**
+
 - **Cilium**: Kubernetes CNI that uses eBPF for networking and security (replaces iptables)
 - **XDP**: eXpress Data Path -- process packets before they reach the kernel network stack
 - Enables: load balancing, firewalling, observability at kernel speed

@@ -99,6 +99,7 @@ This comprehensive course will enhance your C and C++ programming skills for rea
 ## Development Environment
 
 Typical embedded development setup:
+
 1. Cross-compiler toolchain
 1. Hardware debugger (JTAG/SWD)
 1. Target board or simulator
@@ -144,6 +145,7 @@ Typical embedded development setup:
 ## Real-Time Operating Systems (RTOS)
 
 Popular choices:
+
 1. FreeRTOS
 1. Zephyr
 1. RT-Thread

@@ -72,6 +72,7 @@ audience:
 ## Optional Modules
 
 Depending on time and audience needs:
+
 - Network Services (`nginx`, `Apache`, `HAProxy`, `Postfix`)
 - `LVM` and `RAID`
 - `SELinux`/`AppArmor`
@@ -182,6 +183,7 @@ Try these tasks and record your findings:
 ## Exercise: Explore the System (cont.)
 
 Discuss with your partner:
+
 - What services are running that you did not expect?
 - How much RAM does your VM have? (`free -h`)
 - What block devices are available? (`lsblk`)

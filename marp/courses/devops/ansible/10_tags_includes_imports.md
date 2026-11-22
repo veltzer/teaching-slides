@@ -17,6 +17,7 @@ audience:
 # Tags, Includes, and Imports
 
 ## Topics Covered
+
 - Tag strategies for large projects
 - Static imports vs dynamic includes
 - Task file organization

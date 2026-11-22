@@ -25,6 +25,7 @@ audience:
 ## LVM Architecture: Details
 
 Three layers:
+
 - **PV** (Physical Volumes) - actual disks/partitions
 - **VG** (Volume Groups) - pool of PVs
 - **LV** (Logical Volumes) - usable volumes from VG
@@ -34,6 +35,7 @@ Three layers:
 ## Why Use LVM?
 
 Advantages over raw partitions:
+
 - Resize volumes without downtime
 - Span volumes across multiple disks
 - Create point-in-time snapshots
@@ -47,6 +49,7 @@ Advantages over raw partitions:
 ## Why Use LVM? (cont.)
 
 When NOT to use LVM:
+
 - Simple single-disk systems
 - When raw performance is critical (minimal overhead)
 - Boot partitions (use regular partitions)
@@ -172,6 +175,7 @@ lvremove /dev/data-vg/home-snap
 ```
 
 Use cases:
+
 - Pre-upgrade backups
 - Consistent backup of running system
 - Testing changes safely
@@ -451,6 +455,7 @@ lvm dumpconfig
 ```
 
 Common issues:
+
 - **VG inactive**: run `vgchange -ay`
 - **Duplicate PVs**: caused by cloned disks, use `vgimportclone`
 - **Thin pool full**: extend with `lvextend`
@@ -473,6 +478,7 @@ lvcreate -L 50G -n vm-data data-vg \
 ```
 
 Best practices for VM storage:
+
 - Use thin provisioning to overcommit safely
 - Monitor thin pool usage with automated alerts
 - Snapshot VMs before upgrades (merge to rollback)

@@ -18,6 +18,7 @@ audience:
 # SDD on a Real Team
 
 ## Overview
+
 - Brownfield reality: specifying inside a codebase that has no specs
 - Specs in the team workflow: review, living documentation, ownership
 - Pitfalls: drift, ceremony creep, the spec nobody reads

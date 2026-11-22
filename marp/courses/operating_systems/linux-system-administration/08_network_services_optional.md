@@ -538,6 +538,7 @@ echo "GET http://localhost/" | \
 ```
 
 Key metrics to watch:
+
 - Requests per second (throughput)
 - Latency percentiles (p50, p95, p99)
 - Error rate under load

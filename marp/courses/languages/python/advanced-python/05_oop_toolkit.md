@@ -11,6 +11,7 @@ audience:
 # Object Oriented Python Toolkit
 
 ## Overview
+
 - Object-Oriented refresher in Python
 - Functions as first-class objects
 - Classes and inheritance
@@ -111,6 +112,7 @@ print(duck.speak())  # Quack!
 ---
 
 ## The Diamond Problem
+
 - A class inherits from two classes with common ancestor
 - Which method should be called when both inherit same method?
 - MRO provides consistent resolution
@@ -816,6 +818,7 @@ print(date3)  # 2023-01-01
 ## Class Methods vs Static Methods
 
 ## Choosing Between Them
+
 - _Class methods_:
     - Need access to the class
     - Create instances using cls
@@ -1636,6 +1639,7 @@ print(temp)  # 26.85°C (80.33°F, 300K)
 ## Summary
 
 ## Key Takeaways
+
 - Python offers rich OOP features
 - Inheritance provides code reuse and specialization
 - Properties allow attribute-like access with control
@@ -1650,6 +1654,7 @@ print(temp)  # 26.85°C (80.33°F, 300K)
 ## Next Steps
 
 ## Further Exploration
+
 - Design patterns in Python
 - Meta-programming with metaclasses
 - Attribute access customization
@@ -1663,6 +1668,7 @@ print(temp)  # 26.85°C (80.33°F, 300K)
 ## Resources
 
 ## Further Reading
+
 - "Fluent Python" by Luciano Ramalho
 - "Python Cookbook" by David Beazley and Brian K. Jones
 - "Effective Python" by Brett Slatkin

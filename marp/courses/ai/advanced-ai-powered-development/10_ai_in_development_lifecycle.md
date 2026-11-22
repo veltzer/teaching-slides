@@ -18,6 +18,7 @@ audience:
 # AI in the Development Lifecycle
 
 ## Overview
+
 - AI-assisted planning and design: from requirements to architecture
 - AI-powered code review: automated agents and security scanning
 - AI-assisted testing: generation, fuzzing, and visual regression

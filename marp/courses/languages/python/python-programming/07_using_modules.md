@@ -13,6 +13,7 @@ audience:
 ---
 
 ## What is a Module?
+
 - A module is a `.py` file containing Python code
 - Provides reusable functions, classes, and variables
 - Helps organize code into logical units
@@ -25,6 +26,7 @@ import math_utils
 ---
 
 ## Why Use Modules?
+
 - Code reuse across multiple files
 - Namespace separation (avoid name collisions)
 - Logical organization of code
@@ -108,6 +110,7 @@ print(now)
 ---
 
 ## Namespaces
+
 - A namespace maps names to objects
 - Python has several namespaces:
     - **Built-in**: `print`, `len`, `int`, etc.
@@ -124,6 +127,7 @@ import math
 ---
 
 ## The `dir()` Function
+
 - Lists names in a module or current namespace
 
 ```python
@@ -155,6 +159,7 @@ help(json.loads)     # Function documentation
 ---
 
 ## How Python Finds Modules
+
 - Python searches for modules in this order:
     1. Current directory
     1. `PYTHONPATH` environment variable
@@ -198,6 +203,7 @@ python3 my_script.py
 ---
 
 ## Module Attributes
+
 - Every module has special attributes
 
 ```python
@@ -212,6 +218,7 @@ print(math.__spec__)   # Module specification
 ---
 
 ## The `__name__` Variable
+
 - Set to `"__main__"` when script runs directly
 - Set to the module name when imported
 
@@ -252,6 +259,7 @@ greetings.greet("Alice")   # "Hello, Alice!"
 ---
 
 ## Reloading Modules
+
 - Modules are cached after first import
 - Changes to module source are not automatically reflected
 
@@ -567,6 +575,7 @@ if __name__ == "__main__":
 ---
 
 ## Circular Imports
+
 - Module A imports B, and B imports A
 - Can cause `ImportError` or partial imports
 
@@ -586,6 +595,7 @@ from a import func_a  # Circular!
 ---
 
 ## Summary
+
 - Modules are `.py` files that organize reusable code
 - Import with `import`, `from ... import`, or aliases
 - `dir()` and `help()` for exploring modules

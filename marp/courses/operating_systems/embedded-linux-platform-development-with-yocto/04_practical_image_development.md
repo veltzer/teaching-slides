@@ -24,6 +24,7 @@ audience:
 ## Core Image Types
 
 Base images provided by Yocto:
+
 - `core-image-minimal` - Minimal bootable image
 - `core-image-minimal-dev` - Minimal with dev packages
 - `core-image-base` - Console-only base
@@ -612,6 +613,7 @@ MACHINE_FEATURES += "suspend"
 ## Summary
 
 Image development involves:
+
 - Selecting appropriate base image
 - Configuring features and packages
 - Customizing rootfs
@@ -623,6 +625,7 @@ Image development involves:
 ## Summary (cont.)
 
 Best practices:
+
 - Start with minimal image
 - Add features incrementally
 - Test in QEMU first

@@ -23,6 +23,7 @@ audience:
 ---
 
 ## What is SQL Injection?
+
 - A technique to exploit web applications by injecting malicious SQL statements
 - Attacker can gain unauthorized access to databases
 - Can lead to data theft, data manipulation, or even server takeover
@@ -37,6 +38,7 @@ audience:
 ---
 
 ## How Does SQL Injection Work?: Details
+
 1. User input is not properly sanitized
 1. Malicious SQL code is injected into application queries
 1. Injected code is executed by the database
@@ -58,6 +60,7 @@ audience:
 ---
 
 ## Examples of SQL Injection
+
 - Login bypass: `' OR '1'='1`
 - Retrieving data: `UNION SELECT password FROM users`
 - Adding data: `'; INSERT INTO users VALUES ('admin', 'password')`
@@ -206,6 +209,7 @@ $result = mysqli_query($conn, $query);
 ---
 
 ## Preventing SQL Injection
+
 1. **Input Validation**: Validate and sanitize user input
 1. **Parameterized Queries**: Use parameterized queries or prepared statements
 1. **Least Privileged Accounts**: Use database accounts with minimal privileges
@@ -294,6 +298,7 @@ Note: Stored procedures alone do not prevent SQLi if they use dynamic SQL intern
 ---
 
 ## Sanitizing User Input
+
 - Remove or escape special characters (', ", `, etc.)
 - Use allowlists (whitelisting) instead of denylists (blacklisting)
 - Apply strong input validation rules
@@ -383,6 +388,7 @@ GRANT SELECT ON myapp.products TO 'webapp'@'localhost';
 ---
 
 ## Best Practices
+
 - Follow the principle of "least privilege" for database accounts
 - Implement secure authentication and access control mechanisms
 - Keep software up-to-date with security patches and updates

@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Streaming Fundamentals
+
 * Real-time data processing
 * Stream processing models
 * Micro-batch processing
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Basic Concepts
+
 1. Data sources
 1. Processing time
 1. Event time
@@ -58,6 +60,7 @@ stream = spark.readStream \
 ---
 
 ## Stream Processing Modes
+
 1. Micro-batch processing
 1. Continuous processing
 1. Trigger options
@@ -97,6 +100,7 @@ stream_df = stream_df \
 ---
 
 ## Stateful Processing
+
 1. Window operations
 1. Aggregations
 1. State management
@@ -141,6 +145,7 @@ def update_state(key, value, state):
 ---
 
 ## Fault Tolerance
+
 1. Exactly-once processing
 1. Checkpoint configuration
 1. Recovery mechanisms
@@ -167,6 +172,7 @@ query = stream.writeStream \
 ---
 
 ## Streaming Joins
+
 1. Stream-stream joins
 1. Stream-static joins
 1. Watermark considerations
@@ -194,6 +200,7 @@ joined = stream1.join(
 ---
 
 ## Memory Management
+
 1. State cleanup
 1. Watermark tuning
 1. Checkpoint cleanup
@@ -219,6 +226,7 @@ query = stream.writeStream \
 ---
 
 ## Performance Metrics
+
 1. Input rate
 1. Processing rate
 1. Batch duration
@@ -274,6 +282,7 @@ class CustomSource(Source):
 ---
 
 ## Rate Limiting
+
 1. Input rate control
 1. Processing rate control
 1. Backpressure handling
@@ -300,6 +309,7 @@ query = stream.writeStream \
 ---
 
 ## Production Deployment
+
 1. Monitoring setup
 1. Alert configuration
 1. Resource planning
@@ -325,6 +335,7 @@ stream.writeStream \
 ---
 
 ## Debugging Tools
+
 1. Progress monitoring
 1. Query explanation
 1. Metrics tracking
@@ -350,6 +361,7 @@ def process_stream(batch_df, batch_id):
 ---
 
 ## State Store
+
 1. RocksDB backend
 1. State versioning
 1. Cleanup policies
@@ -375,6 +387,7 @@ def process_metrics(batch_df, epoch_id):
 ---
 
 ## Scaling Considerations
+
 1. Partition management
 1. Resource allocation
 1. Cluster sizing
@@ -400,6 +413,7 @@ df = df.withWatermark("timestamp", "1 hour")
 ---
 
 ## Optimization Tips
+
 1. Proper partitioning
 1. Efficient watermarks
 1. Memory management
@@ -425,6 +439,7 @@ def update_state(key, values, state):
 ---
 
 ## Integration Patterns
+
 1. Lambda architecture
 1. Kappa architecture
 1. Hybrid solutions
@@ -449,6 +464,7 @@ spark.conf.set("spark.sql.streaming.checkpointLocation", "path")
 ---
 
 ## Additional Resources
+
 * Official documentation
 * Community guides
 * Best practices

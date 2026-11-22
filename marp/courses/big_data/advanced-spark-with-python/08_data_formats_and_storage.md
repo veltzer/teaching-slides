@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Chapter Overview
+
 * Parquet deep dive: row groups, column chunks, page-level statistics
 * Predicate pushdown and projection pushdown
 * ORC comparison and Avro for streaming
@@ -27,6 +28,7 @@ audience:
 ---
 
 ## Learning Objectives
+
 * Understand Parquet internal structure and optimization mechanisms
 * Compare columnar vs row-based formats for different workloads
 * Perform Delta Lake operations including MERGE, time travel, and VACUUM
@@ -860,6 +862,7 @@ orders.write \
 ```
 
 **Problems:**
+
 * Slow reads: metadata overhead per file
 * HDFS/S3 listing bottleneck
 * NameNode memory pressure (HDFS)
@@ -1040,12 +1043,14 @@ history.select(
 ## Summary: Data Formats and Storage
 
 **Formats:**
+
 * Parquet: default for analytics, columnar
 * ORC: alternative for Hive-centric stacks
 * Avro: row-based, streaming, schema evolution
 * Delta / Iceberg: ACID on top of Parquet
 
 **Optimization:**
+
 * Predicate pushdown: filter at storage layer
 * Projection pushdown: read only needed columns
 * Z-ordering: co-locate data for better pruning
@@ -1056,6 +1061,7 @@ history.select(
 ## Summary: Data Formats and Storage (cont.)
 
 **Storage Management:**
+
 * Partition by query pattern (low cardinality)
 * Bucket by join key (high cardinality)
 * Compact small files regularly

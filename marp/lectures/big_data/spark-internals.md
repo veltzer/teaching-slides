@@ -28,6 +28,7 @@ audience:
 ## Slide 2: Logical Planning: Details
 
 ### Query Analysis
+
 * SQL queries are parsed into an Abstract Syntax Tree (AST)
 * RDD transformations create a lineage graph
 * Both are converted into a logical plan
@@ -42,6 +43,7 @@ audience:
 ## Slide 3: Physical Planning
 
 ### Converting Logic to Action
+
 * Logical plan transforms into physical execution plan
 * Multiple strategies evaluated for each operation
 * Cost-based optimizer selects best implementation
@@ -55,6 +57,7 @@ audience:
 ## Slide 4: DAG and Stage Creation
 
 ### Breaking Down the Work
+
 * Physical plan becomes a Directed Acyclic Graph (DAG)
 * Stages are created at shuffle boundaries
 * Each stage contains multiple tasks
@@ -73,6 +76,7 @@ audience:
 ## Slide 5: Task Execution
 
 ### Parallel Processing in Action
+
 * Each stage divided into tasks based on partitions
 * Tasks are fundamental unit of parallelism
 * Executor nodes:
@@ -86,6 +90,7 @@ audience:
 ## Slide 6: Data Movement and Shuffling
 
 ### The Critical Path
+
 * Shuffle operations move data between executors
 * Types of data movement:
     * Narrow dependencies (no shuffle)
@@ -100,6 +105,7 @@ audience:
 ## Slide 7: Memory Management
 
 ### Keeping Data Close
+
 * Memory hierarchy:
     * On-heap storage
     * Off-heap storage
@@ -115,6 +121,7 @@ audience:
 ## Slide 8: Why This Architecture Works
 
 ### Key Design Principles
+
 * Lazy evaluation enables optimization
 * Immutable RDDs provide fault tolerance
 * In-memory processing reduces I/O
@@ -127,6 +134,7 @@ audience:
 ## Slide 9: Performance Considerations
 
 ### Optimizing Your Queries
+
 * Partition tuning affects parallelism
 * Broadcast joins reduce shuffling
 * Caching strategies matter

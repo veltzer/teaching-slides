@@ -24,6 +24,7 @@ audience:
 ---
 
 ## Why Test Bash Scripts?
+
 - Scripts grow complex over time
 - Manual testing misses edge cases
 - Regression testing catches breakage

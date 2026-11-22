@@ -66,6 +66,7 @@ loop_start:
 ## String Operations
 
 Basic string instructions:
+
 - `movsb`, `movsw`, `movsd`: Move string
 - `cmpsb`, `cmpsw`, `cmpsd`: Compare string
 - `scasb`, `scasw`, `scasd`: Scan string

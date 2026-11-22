@@ -105,6 +105,7 @@ Simplest NoSQL model - pure associative arrays
 ## Key-Value Stores: Operations
 
 Basic operations:
+
 - `PUT(key, value)` - Store value
 - `GET(key)` - Retrieve value
 - `DELETE(key)` - Remove value
@@ -199,6 +200,7 @@ System continues despite network failures
 ## Why You Must Choose P
 
 In distributed systems:
+
 - Networks fail (it's not if, it's when)
 - Partitions are inevitable
 - Can't sacrifice P in practice
@@ -303,11 +305,13 @@ Alternative to ACID for distributed systems:
 ## Replication Strategies
 
 **Single-Master Replication:**
+
 - One node handles writes
 - Replicas handle reads
 - Simple consistency model
 
 **Multi-Master Replication:**
+
 - Any node can handle writes
 - Conflict resolution required
 - Higher availability
@@ -403,11 +407,13 @@ Conflict-free Replicated Data Types:
 ## Data Modeling Differences
 
 **RDBMS:**
+
 - Normalize to avoid redundancy
 - JOIN at query time
 - Schema first
 
 **NoSQL:**
+
 - Denormalize for performance
 - Pre-compute JOINs
 - Access patterns first
@@ -432,6 +438,7 @@ Conflict-free Replicated Data Types:
 ## Secondary Indexing
 
 Most NoSQL databases offer:
+
 - Local secondary indexes (per partition)
 - Global secondary indexes (across partitions)
 - Trade-off: Consistency vs Performance
@@ -448,11 +455,13 @@ Most NoSQL databases offer:
 ## Choosing NoSQL Type
 
 **Key-Value:**
+
 - Simple lookups
 - Session storage
 - Caching
 
 **Document:**
+
 - Flexible schemas
 - Content management
 - Catalogs
@@ -462,11 +471,13 @@ Most NoSQL databases offer:
 ## Choosing NoSQL Type (cont.)
 
 **Column-Family:**
+
 - Time-series data
 - Write-heavy workloads
 - Analytics
 
 **Graph:**
+
 - Social networks
 - Recommendations
 - Fraud detection

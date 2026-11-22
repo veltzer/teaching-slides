@@ -16,6 +16,7 @@ audience:
 ---
 
 ## GDB for Assembly Programs
+
 - GNU Debugger (GDB)
 - Powerful tool for debugging assembly code
 - Supports both source-level and machine-level debugging

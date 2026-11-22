@@ -17,6 +17,7 @@ audience:
 # Testing with Molecule
 
 ## Topics Covered
+
 - Why test `Ansible` code
 - Testing pyramid for infrastructure
 - `Molecule` framework overview

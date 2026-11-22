@@ -13,6 +13,7 @@ audience:
 ---
 
 ## Overview
+
 - File I/O and text processing
 - Formatted output
 - Working with JSON and YAML
@@ -835,6 +836,7 @@ while True:
 ---
 
 ## Summary
+
 - Use `open()` with `with` statement for file I/O
 - `pathlib` for modern file system operations
 - `json` for structured data serialization

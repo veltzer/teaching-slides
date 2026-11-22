@@ -220,6 +220,7 @@ public class PulseAnimation extends Animation {
 ### Material Design Implementation
 
 Create an app screen that demonstrates:
+
 - Custom theme implementation
 - Complex animations
 - Material components usage

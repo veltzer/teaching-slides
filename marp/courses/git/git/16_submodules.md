@@ -31,6 +31,7 @@ audience:
 Submodules allow you to include one Git repository inside another:
 
 **Key concepts:**
+
 - **Parent repository:** Contains the submodule reference
 - **Submodule:** Independent Git repository
 - **Specific commit:** Submodule points to exact commit SHA
@@ -41,6 +42,7 @@ Submodules allow you to include one Git repository inside another:
 ## What Are Git Submodules? (cont.)
 
 **Common use cases:**
+
 - Shared libraries across projects
 - Third-party dependencies
 - Micro-service architectures
@@ -63,6 +65,7 @@ main-project/
 Benefits and trade-offs of submodules:
 
 **Advantages:**
+
 - **Code reuse:** Share common code across projects
 - **Version control:** Lock to specific versions
 - **Independence:** Each submodule has own history
@@ -74,6 +77,7 @@ Benefits and trade-offs of submodules:
 ## Why Use Submodules?: Details (cont.)
 
 **Disadvantages:**
+
 - **Complexity:** More complex workflows
 - **Learning curve:** Additional commands to learn
 - **Synchronization:** Can get out of sync easily
@@ -108,6 +112,7 @@ git commit -m "Add shared library submodule"
 ```
 
 **What happens during submodule addition:**
+
 1. Repository is cloned to specified path
 1. `.gitmodules` file is created/updated
 1. Submodule directory added to index
@@ -136,12 +141,14 @@ The `.gitmodules` file tracks submodule configuration:
 ## Understanding .gitmodules File (cont.)
 
 **Configuration options:**
+
 - `path`: Local directory path
 - `url`: Remote repository URL
 - `branch`: Default branch to track
 - `update`: Update strategy (merge, rebase, checkout)
 
 **Important notes:**
+
 - `.gitmodules` is tracked by Git
 - Shared with all repository users
 - Can be edited manually if needed
@@ -201,6 +208,7 @@ git status    # Shows submodule has new commits
 ```
 
 **Submodule states:**
+
 - **Clean:** Submodule matches recorded commit
 - **Modified:** Working directory has changes
 - **New commits:** Submodule HEAD differs from recorded commit
@@ -231,6 +239,7 @@ git submodule foreach git pull origin main
 ```
 
 **Update strategies:**
+
 - Manual update per submodule
 - Batch update all submodules
 - Automatic update to latest
@@ -255,6 +264,7 @@ git submodule update --remote
 ```
 
 **Update modes:**
+
 - **checkout:** (default) Detached HEAD at specific commit
 - **merge:** Merge upstream changes into current branch
 - **rebase:** Rebase local changes onto upstream
@@ -287,6 +297,7 @@ git config --list | grep submodule
 ```
 
 **Status indicators:**
+
 - " ": Submodule is up to date
 - "+": Submodule has new commits
 - "-": Submodule is not initialized
@@ -315,6 +326,7 @@ git submodule foreach git branch -v
 ```
 
 **Foreach command features:**
+
 - Execute arbitrary commands
 - Access to submodule variables
 - Conditional execution
@@ -345,6 +357,7 @@ git commit -m "Remove shared library submodule"
 ```
 
 **Removal steps:**
+
 1. Deinitialize the submodule
 1. Remove from Git index
 1. Remove directory
@@ -413,6 +426,7 @@ project/
 ```
 
 **Nested considerations:**
+
 - Increased complexity
 - Longer clone times
 - More potential for issues
@@ -426,6 +440,7 @@ project/
 Guidelines for effective submodule usage:
 
 **Repository organization:**
+
 1. Keep submodules in dedicated directories
 1. Use descriptive submodule names
 1. Document submodule purposes
@@ -436,12 +451,14 @@ Guidelines for effective submodule usage:
 ## Submodule Best Practices (cont.)
 
 **Version management:**
+
 1. Pin to specific versions for stability
 1. Test before updating submodules
 1. Document version requirements
 1. Use semantic versioning in submodules
 
 **Team coordination:**
+
 1. Always commit submodule changes
 1. Update submodules together with related code
 1. Communicate submodule updates to team
@@ -524,6 +541,7 @@ gem install shared-gem          # Ruby
 ```
 
 **Build tools:**
+
 - Git submodules in build scripts
 - Dependency management tools
 - Container-based solutions
@@ -616,12 +634,14 @@ git config submodule.lib/shared.url https://github.com/user/lib.git
 ## Submodule Security Considerations (cont.)
 
 **Access control:**
+
 - Ensure team has access to all submodule repositories
 - Consider private submodules access requirements
 - Audit submodule dependencies regularly
 - Monitor for malicious updates
 
 **Best practices:**
+
 1. Verify submodule sources
 1. Pin to specific commits
 1. Regular security audits
@@ -681,6 +701,7 @@ git config submodule.lib/shared.ignore dirty
 ```
 
 **Configuration options:**
+
 - Fetch behavior
 - Update strategies
 - Ignore patterns
@@ -693,6 +714,7 @@ git config submodule.lib/shared.ignore dirty
 **Scenario:** Set up a project with multiple submodules representing shared libraries and manage their lifecycle.
 
 **Setup tasks:**
+
 1. **Create submodule structure:**
     - Add multiple submodules with different purposes
     - Configure appropriate update strategies
@@ -717,6 +739,7 @@ git config submodule.lib/shared.ignore dirty
 ## Lab Exercise: Submodule Management (cont.) (cont.)
 
 **Advanced tasks:**
+
 1. **Automation setup:**
     - Create scripts for submodule management
     - Set up CI/CD with submodule handling

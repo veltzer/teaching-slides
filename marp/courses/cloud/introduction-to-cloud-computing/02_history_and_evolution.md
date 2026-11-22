@@ -16,6 +16,7 @@ audience:
 ---
 
 ## The Mainframe Era (1960s-1980s)
+
 - Centralized computing on large machines
 - Time-sharing: multiple users share one computer
 - Terminals connect to a central mainframe
@@ -25,6 +26,7 @@ audience:
 ---
 
 ## Client-Server Era (1980s-1990s)
+
 - PCs and workstations replace terminals
 - Servers provide shared services
 - Distributed computing becomes standard
@@ -34,6 +36,7 @@ audience:
 ---
 
 ## The Rise of Virtualization (2000s)
+
 - VMware makes x86 virtualization practical (1999)
 - Run multiple OS instances on one physical machine
 - Better hardware utilization (from ~10% to ~60%)
@@ -43,6 +46,7 @@ audience:
 ---
 
 ## Birth of Cloud Computing
+
 - 2002: Amazon internally standardizes infrastructure
 - 2004: Amazon SQS launched (first cloud service)
 - 2006: AWS launches S3 and EC2 publicly
@@ -52,6 +56,7 @@ audience:
 ---
 
 ## Cloud Explosion (2010s)
+
 - Rapid growth in services and providers
 - Containers (Docker 2013) change deployment
 - Kubernetes (2014) becomes the orchestration standard
@@ -61,6 +66,7 @@ audience:
 ---
 
 ## The Modern Cloud (2020s)
+
 - Multi-cloud and hybrid strategies are common
 - Edge computing extends cloud to the periphery
 - AI/ML services become mainstream
@@ -70,6 +76,7 @@ audience:
 ---
 
 ## Key Milestones Timeline
+
 1. 1999: Salesforce launches SaaS CRM
 1. 2006: AWS S3 and EC2 launch
 1. 2008: Google App Engine
@@ -87,6 +94,7 @@ audience:
 ---
 
 ## How Cloud Changed IT
+
 - From CapEx to OpEx
 - From months to minutes for provisioning
 - From fixed capacity to elastic scaling
@@ -96,6 +104,7 @@ audience:
 ---
 
 ## How Cloud Changed Business
+
 - Startups can compete with enterprises
 - Global reach without global offices
 - Innovation speed increased dramatically
@@ -105,6 +114,7 @@ audience:
 ---
 
 ## The Democratization of Technology
+
 - Small teams access the same infrastructure as Fortune 500
 - AI/ML available without PhD teams
 - Global deployment from a laptop
@@ -114,6 +124,7 @@ audience:
 ---
 
 ## Open Source and Cloud
+
 - Linux is the dominant cloud OS
 - Kubernetes: open-source container orchestration
 - Terraform: open-source infrastructure as code
@@ -123,6 +134,7 @@ audience:
 ---
 
 ## Looking Ahead
+
 - Continued growth in cloud spending
 - AI-driven infrastructure management
 - Quantum computing as a cloud service

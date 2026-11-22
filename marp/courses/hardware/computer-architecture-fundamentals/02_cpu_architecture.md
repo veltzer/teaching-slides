@@ -56,11 +56,13 @@ I/O operations.
 The ALU performs all arithmetic and logical operations inside the CPU.
 
 **Arithmetic operations:**
+
 - Addition, subtraction
 - Multiplication, division
 - Increment, decrement
 
 **Logical operations:**
+
 - AND, OR, NOT, XOR
 - Shift left, shift right
 - Comparison (sets flags)
@@ -291,6 +293,7 @@ Modern CPUs predict branch outcomes to keep the pipeline full.
 A misprediction costs 10-20+ cycles (pipeline flush).
 
 **Static prediction:**
+
 - Always predict "not taken"
 - Backward branches predicted taken (loops)
 
@@ -380,6 +383,7 @@ Original order:           Reordered execution:
 ```
 
 Key hardware for OoO execution:
+
 - **Reorder Buffer (ROB)**: tracks instruction order for correct retirement
 - **Reservation Stations**: hold instructions waiting for operands
 - **Register Renaming**: eliminates false dependencies (WAR, WAW hazards)
@@ -453,6 +457,7 @@ CBZ  X0, label          ; compare and branch if zero
 ```
 
 ARM design principles:
+
 - All instructions same size (easy to decode, easy to pipeline)
 - Load/Store architecture (only LDR/STR access memory)
 - Conditional execution (reduces branches)
@@ -565,6 +570,7 @@ Where can a cache line be placed? This defines associativity:
 ## Cache Associativity: Details
 
 **Typical modern CPUs:**
+
 - L1: 8-12 way set associative
 - L2: 8-16 way set associative
 - L3: 12-20 way set associative
@@ -625,6 +631,7 @@ When the CPU writes data, when does it update main memory?
 ## Write Policies: Details
 
 **Write-Allocate vs No-Write-Allocate:**
+
 - Write-Allocate: on a write miss, load the line into cache first, then write
 - No-Write-Allocate: on a write miss, write directly to memory, skip cache
 
@@ -685,6 +692,7 @@ Understanding cache behavior is essential for performance tuning:
 **Hit rate**: percentage of accesses found in cache (target: >95% for L1)
 
 **Miss types:**
+
 - **Compulsory (cold)**: first access to a line, unavoidable
 - **Capacity**: cache is too small to hold all needed data
 - **Conflict**: multiple addresses map to same set

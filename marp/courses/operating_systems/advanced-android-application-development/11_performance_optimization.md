@@ -300,6 +300,7 @@ public class BackgroundTaskManager {
 ### Performance Optimization
 
 Optimize an application:
+
 1. Implement memory management
 1. Optimize layouts
 1. Improve network efficiency

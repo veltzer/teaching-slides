@@ -546,6 +546,7 @@ data:
 ```
 
 Benefits:
+
 - Protects against accidental changes
 - Reduces `API` server load (no watch needed)
 - Improves cluster performance at scale

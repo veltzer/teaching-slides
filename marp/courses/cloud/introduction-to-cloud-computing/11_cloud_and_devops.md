@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Cloud and DevOps Together
+
 - Cloud enables DevOps practices
 - DevOps maximizes cloud benefits
 - Automation is the common thread
@@ -25,6 +26,7 @@ audience:
 ---
 
 ## CI/CD Pipelines in the Cloud
+
 - Continuous Integration: merge and test frequently
 - Continuous Delivery: always ready to deploy
 - Cloud-hosted CI/CD services
@@ -46,6 +48,7 @@ audience:
 ---
 
 ## CI/CD Benefits
+
 - Faster feedback on code changes
 - Automated testing catches bugs early
 - Consistent and repeatable deployments
@@ -55,6 +58,7 @@ audience:
 ---
 
 ## Containerization
+
 - Package applications with all dependencies
 - Docker: standard container runtime
 - Consistent across development, staging, production
@@ -78,6 +82,7 @@ CMD ["node", "server.js"]
 ---
 
 ## Container Orchestration
+
 - Manage containers at scale
 - Kubernetes: the industry standard
 - Managed services: EKS (AWS), AKS (Azure), GKE (GCP)
@@ -87,6 +92,7 @@ CMD ["node", "server.js"]
 ---
 
 ## Serverless and DevOps
+
 - No infrastructure to manage
 - Deploy functions, not servers
 - Provider handles scaling and availability
@@ -96,6 +102,7 @@ CMD ["node", "server.js"]
 ---
 
 ## Monitoring and Logging Services
+
 - CloudWatch (AWS), Azure Monitor, Cloud Monitoring (GCP)
 - Centralized logging and metrics
 - Alerting on anomalies
@@ -105,6 +112,7 @@ CMD ["node", "server.js"]
 ---
 
 ## Observability
+
 - Metrics: quantitative measurements over time
 - Logs: detailed event records
 - Traces: request path through distributed systems
@@ -114,6 +122,7 @@ CMD ["node", "server.js"]
 ---
 
 ## Automation and Configuration Management
+
 - Infrastructure as Code (Terraform, CloudFormation)
 - Configuration management (Ansible, Chef, Puppet)
 - Automated patching and updates
@@ -123,6 +132,7 @@ CMD ["node", "server.js"]
 ---
 
 ## Immutable Infrastructure
+
 - Never modify running servers
 - Deploy new instances with changes
 - Replace, don't patch
@@ -148,6 +158,7 @@ kubectl rollout undo deployment/web
 ---
 
 ## Blue-Green and Canary Deployments
+
 - Blue-Green: two identical environments, switch traffic
 - Canary: roll out to small subset first
 - Reduce risk of deployments
@@ -157,6 +168,7 @@ kubectl rollout undo deployment/web
 ---
 
 ## DevOps Culture in the Cloud
+
 - Break down silos between Dev and Ops
 - Shared ownership of the full lifecycle
 - Blameless post-mortems

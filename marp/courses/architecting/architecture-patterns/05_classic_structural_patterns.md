@@ -54,12 +54,14 @@ audience:
 ## Layered Pros and Cons
 
 Pros:
+
 - Separation of concerns and modularity
 - Changes in one layer don't affect others
 - Easy to understand and implement
 - Supports incremental development
 
 Cons:
+
 - Potential for tight coupling between layers
 - Performance overhead from layer-to-layer communication
 - Limited flexibility and scalability
@@ -110,12 +112,14 @@ Cons:
 ## Master-Slave Pros and Cons
 
 Pros:
+
 - Enables parallel processing for better performance
 - Supports scalability by adding more slaves
 - Provides fault tolerance if slaves fail
 - Simplifies slave implementation and testing
 
 Cons:
+
 - Master can be a single point of failure
 - Added latency from master-slave communication
 - Limited applicability outside parallel processing
@@ -167,12 +171,14 @@ Cons:
 ## Pipe-Filter Pros and Cons
 
 Pros:
+
 - Supports reuse and late binding of filters
 - Easy to understand and maintain individual filters
 - Flexible and adaptable to changing requirements
 - Naturally fits batch processing scenarios
 
 Cons:
+
 - Not suitable for interactive or request-response interactions
 - Error handling and recovery can be complex
 - Potential performance overhead from data flow between filters
@@ -230,6 +236,7 @@ Cons:
 ## Blackboard Pros and Cons
 
 Pros:
+
 - Enables collaboration among independent, heterogeneous Knowledge Sources
 - Supports incremental and opportunistic problem solving
 - Provides flexibility in adding or modifying Knowledge Sources
@@ -240,6 +247,7 @@ Pros:
 ## Blackboard Pros and Cons (cont.)
 
 Cons:
+
 - Can lead to complex interactions and dependencies between Knowledge Sources
 - Performance may depend on the efficiency of the Blackboard and Control components
 - Debugging and tracing the problem-solving process can be challenging

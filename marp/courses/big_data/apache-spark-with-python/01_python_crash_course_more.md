@@ -15,6 +15,7 @@ audience:
 ---
 
 ## Course Overview
+
 - Introduction to Python programming
 - Focus on Spark-relevant concepts
 - Hands-on approach with examples
@@ -23,6 +24,7 @@ audience:
 ---
 
 ## Why Python for Spark?
+
 - Easy to learn and read
 - Rich ecosystem of libraries
 - Strong data processing capabilities
@@ -32,6 +34,7 @@ audience:
 ---
 
 ## Learning Objectives
+
 - Master Python syntax and concepts
 - Understand data structures
 - Learn functional programming concepts
@@ -535,6 +538,7 @@ def transform_data(data):
 ---
 
 ## Key Takeaways
+
 - Python fundamentals mastered
 - Data structures and their operations
 - Functional programming concepts
@@ -544,6 +548,7 @@ def transform_data(data):
 ---
 
 ## Preparation for Spark
+
 - Practice with large datasets
 - Focus on functional programming
 - Understand memory management
@@ -552,6 +557,7 @@ def transform_data(data):
 ---
 
 ## Final Notes
+
 - Keep code readable and maintainable
 - Focus on efficiency with large datasets
 - Practice functional programming concepts

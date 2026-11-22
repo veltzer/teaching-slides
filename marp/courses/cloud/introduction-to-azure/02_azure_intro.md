@@ -14,6 +14,7 @@ audience:
 # Introduction to Microsoft Azure
 
 ## What is Azure?
+
 - Microsoft's cloud platform
 - Global infrastructure
 - Integrated services
@@ -35,6 +36,7 @@ audience:
 ---
 
 ## Azure Regions
+
 - Geographic areas
 - Multiple data centers
 - Data residency
@@ -44,6 +46,7 @@ audience:
 ---
 
 ## Availability Zones
+
 - Physical separation
 - Independent power
 - Networking
@@ -53,6 +56,7 @@ audience:
 ---
 
 ## Core Azure Services
+
 1. Compute
 1. Storage
 1. Networking
@@ -68,6 +72,7 @@ audience:
 ---
 
 ## Management Structure
+
 - Management groups
 - Subscriptions
 - Resource groups
@@ -77,6 +82,7 @@ audience:
 ---
 
 ## Azure Subscriptions
+
 - Billing boundary
 - Access control
 - Resource limits
@@ -86,6 +92,7 @@ audience:
 ---
 
 ## Resource Groups
+
 - Logical containers
 - Resource organization
 - Access control
@@ -95,6 +102,7 @@ audience:
 ---
 
 ## Azure Resource Manager
+
 - Deployment control
 - Access management
 - Resource organization
@@ -104,6 +112,7 @@ audience:
 ---
 
 ## Identity Services
+
 - Microsoft Entra ID (formerly Azure Active Directory)
 - Single sign-on
 - Multi-factor auth
@@ -113,6 +122,7 @@ audience:
 ---
 
 ## Security Features
+
 - Network security
 - Data protection
 - Identity management
@@ -122,6 +132,7 @@ audience:
 ---
 
 ## Monitoring Tools
+
 - Azure Monitor
 - Application Insights
 - Log Analytics
@@ -131,6 +142,7 @@ audience:
 ---
 
 ## Cost Management
+
 - Pricing calculator
 - Cost analysis
 - Budgets
@@ -140,6 +152,7 @@ audience:
 ---
 
 ## Support Options
+
 - Basic
 - Developer
 - Standard
@@ -149,6 +162,7 @@ audience:
 ---
 
 ## Azure Service Levels
+
 - Free services
 - Basic services
 - Standard services
@@ -158,6 +172,7 @@ audience:
 ---
 
 ## Compliance Standards
+
 - Industry compliance
 - Regional standards
 - Security certifications
@@ -167,6 +182,7 @@ audience:
 ---
 
 ## Azure Marketplace
+
 - Pre-built solutions
 - Third-party services
 - Templates
@@ -176,6 +192,7 @@ audience:
 ---
 
 ## Development Tools
+
 - Visual Studio
 - VS Code
 - SDKs
@@ -185,6 +202,7 @@ audience:
 ---
 
 ## Azure CLI and PowerShell
+
 - Command-line tools
 - Automation
 - Scripting
@@ -194,6 +212,7 @@ audience:
 ---
 
 ## Integration Services
+
 - Logic Apps
 - Service Bus
 - Event Grid
@@ -203,6 +222,7 @@ audience:
 ---
 
 ## Azure Solutions
+
 - Web applications
 - Mobile backends
 - IoT solutions
@@ -212,6 +232,7 @@ audience:
 ---
 
 ## Industry Solutions
+
 - Healthcare
 - Financial services
 - Manufacturing
@@ -221,6 +242,7 @@ audience:
 ---
 
 ## Partner Ecosystem
+
 - Solution providers
 - Managed services
 - System integrators
@@ -230,6 +252,7 @@ audience:
 ---
 
 ## Getting Started
+
 - Free account
 - Learning resources
 - Documentation
@@ -239,6 +262,7 @@ audience:
 ---
 
 ## Best Practices
+
 - Architecture design
 - Security implementation
 - Cost optimization
@@ -248,6 +272,7 @@ audience:
 ---
 
 ## Future Roadmap
+
 - Service evolution
 - New features
 - Industry focus
@@ -257,6 +282,7 @@ audience:
 ---
 
 ## Success Stories
+
 - Enterprise adoption
 - Digital transformation
 - Innovation examples
@@ -266,6 +292,7 @@ audience:
 ---
 
 ## Next Steps
+
 - Account creation
 - Service exploration
 - Skills development

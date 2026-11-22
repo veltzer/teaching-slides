@@ -65,6 +65,7 @@ audience:
 ## Credential Stuffing Attacks: Details
 
 **Defense against credential stuffing:**
+
 - Rate limiting login attempts per IP and per account
 - CAPTCHA after failed attempts
 - Breached password detection (Have I Been Pwned API)
@@ -108,6 +109,7 @@ audience:
 ```
 
 **Defense:**
+
 - Always regenerate session ID after successful authentication
 - Never accept session IDs from URL parameters
 - Set `HttpOnly` and `Secure` flags on session cookies
@@ -334,6 +336,7 @@ except Exception:
 ```
 
 **Defense against MFA bypass:**
+
 - Use phishing-resistant methods (FIDO2/WebAuthn)
 - Implement number matching for push notifications
 - Rate limit MFA attempts

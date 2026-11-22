@@ -41,6 +41,7 @@ audience:
 <div>
 
 **Classic BPF:**
+
 - Simple filter rules
 - Limited functionality
 - Fixed registers
@@ -50,11 +51,13 @@ audience:
 <div>
 
 **Extended BPF:**
+
 - Rich programming model
 - Multiple program types
 - Extended registers
 - Function calls
 - Maps
+
 </div>
 </div>
 

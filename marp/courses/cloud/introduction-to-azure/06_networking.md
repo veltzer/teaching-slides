@@ -23,6 +23,7 @@ audience:
 ---
 
 ## Virtual Networks Overview
+
 - Network isolation
 - Subnet organization
 - IP addressing
@@ -38,6 +39,7 @@ audience:
 ---
 
 ## IP Addressing
+
 - Address spaces
 - Subnet ranges
 - Public IPs
@@ -47,6 +49,7 @@ audience:
 ---
 
 ## Subnet Planning
+
 - Logical segmentation
 - Address ranges
 - Service requirements
@@ -56,6 +59,7 @@ audience:
 ---
 
 ## Network Security Groups
+
 - Security rules
 - Inbound rules
 - Outbound rules
@@ -65,6 +69,7 @@ audience:
 ---
 
 ## NSG Rule Components
+
 1. Name
 1. Priority
 1. Source/Destination
@@ -75,6 +80,7 @@ audience:
 ---
 
 ## Application Security Groups
+
 - Logical grouping
 - Application-centric
 - Simplified management
@@ -84,6 +90,7 @@ audience:
 ---
 
 ## Azure Load Balancer
+
 - Traffic distribution
 - High availability
 - Scale-out services
@@ -93,6 +100,7 @@ audience:
 ---
 
 ## Load Balancer Types
+
 - Public load balancer
 - Internal load balancer
 - Basic SKU
@@ -102,6 +110,7 @@ audience:
 ---
 
 ## Application Gateway
+
 - Web traffic routing
 - SSL termination
 - Cookie-based affinity
@@ -117,6 +126,7 @@ audience:
 ---
 
 ## Azure Firewall
+
 - Managed service
 - Network filtering
 - Application rules
@@ -126,6 +136,7 @@ audience:
 ---
 
 ## VPN Gateway
+
 - Site-to-site VPN
 - Point-to-site VPN
 - VNet-to-VNet
@@ -135,6 +146,7 @@ audience:
 ---
 
 ## ExpressRoute
+
 - Private connectivity
 - Layer 3 connectivity
 - Global reach
@@ -144,6 +156,7 @@ audience:
 ---
 
 ## DNS Services
+
 - Azure DNS
 - Private DNS zones
 - DNS resolution
@@ -153,6 +166,7 @@ audience:
 ---
 
 ## Traffic Manager
+
 - Global load balancing
 - Routing methods
 - Endpoint monitoring
@@ -162,6 +176,7 @@ audience:
 ---
 
 ## Front Door
+
 - Global load balancing
 - SSL offload
 - URL-based routing
@@ -171,6 +186,7 @@ audience:
 ---
 
 ## Network Watcher
+
 - Connection monitor
 - Packet capture
 - Flow logs
@@ -180,6 +196,7 @@ audience:
 ---
 
 ## DDoS Protection
+
 - Always-on monitoring
 - Adaptive tuning
 - Attack metrics
@@ -189,6 +206,7 @@ audience:
 ---
 
 ## Private Link
+
 - Private endpoints
 - Service connections
 - Network isolation
@@ -198,6 +216,7 @@ audience:
 ---
 
 ## Service Endpoints
+
 - Virtual network integration
 - Direct connection
 - Network isolation
@@ -207,6 +226,7 @@ audience:
 ---
 
 ## Network Peering
+
 - VNet peering
 - Global VNet peering
 - Transitive routing
@@ -222,6 +242,7 @@ audience:
 ---
 
 ## Network Security
+
 - Defense in depth
 - Zero trust
 - Microsegmentation
@@ -231,6 +252,7 @@ audience:
 ---
 
 ## Virtual WAN
+
 - Global transit network
 - Branch connectivity
 - User VPN
@@ -240,6 +262,7 @@ audience:
 ---
 
 ## Azure Bastion
+
 - Secure RDP/SSH
 - Browser-based
 - No public IPs
@@ -249,6 +272,7 @@ audience:
 ---
 
 ## Network Monitoring
+
 - Metrics
 - Diagnostics
 - Flow logs
@@ -258,6 +282,7 @@ audience:
 ---
 
 ## Performance Optimization
+
 - Load balancing
 - Traffic routing
 - Caching
@@ -267,6 +292,7 @@ audience:
 ---
 
 ## Cost Management
+
 - Bandwidth pricing
 - Service pricing
 - Reserved instances
@@ -276,6 +302,7 @@ audience:
 ---
 
 ## Disaster Recovery
+
 - Geographic redundancy
 - Failover options
 - Business continuity

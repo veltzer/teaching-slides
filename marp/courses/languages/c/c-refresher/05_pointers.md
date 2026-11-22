@@ -42,6 +42,7 @@ int *ptr = &x; // ptr is a pointer to an int, initialized with the address of x
 ```
 
 ### Key Points
+
 - `*` indicates that the variable is a pointer.
 - The `&` operator is used to get the address of a variable.
 - Pointers must be initialized before use to avoid undefined behavior.

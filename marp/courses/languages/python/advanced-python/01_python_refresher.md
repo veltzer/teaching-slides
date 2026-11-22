@@ -11,6 +11,7 @@ audience:
 # Python Refresher
 
 ## Overview
+
 - Refresher on Python fundamentals
 - Review of basic concepts for advanced Python developers
 - Foundation for more complex topics in the rest of the course
@@ -237,6 +238,7 @@ for num in count_up_to(5):
 ## Python Iterators: Iterator Tools
 
 ## The itertools Module
+
 - Efficient iterator algebra
 - Functions like `chain()`, `cycle()`, `islice()`
 - Combinatoric functions like `permutations()`, `combinations()`
@@ -403,6 +405,7 @@ for i in range(3):
 ## Questions to Consider
 
 ## For Your Projects
+
 - Are you using the most appropriate data structures?
 - Are you following Python's idiomatic patterns?
 - Do you understand how your code behaves with Python's memory model?

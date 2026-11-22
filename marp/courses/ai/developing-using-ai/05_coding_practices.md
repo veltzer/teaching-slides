@@ -20,6 +20,7 @@ audience:
 Elevate traditional coding practices using AI assistance
 
 This chapter covers:
+
 1. Test-driven development with AI
 1. Refactoring with AI assistance
 1. Code review enhancement

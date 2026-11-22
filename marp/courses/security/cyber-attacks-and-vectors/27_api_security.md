@@ -113,6 +113,7 @@ def get_orders(user_id):
 ## BOLA in the Real World (cont.)
 
 **Prevention:**
+
 - Always verify the authenticated user has permission to access the requested object
 - Use UUIDs instead of sequential integers for resource IDs
 - Implement centralized authorization middleware

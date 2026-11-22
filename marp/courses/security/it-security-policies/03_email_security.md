@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Email: The #1 Attack Vector
+
 - Over 90% of cyberattacks start with a phishing email
 - Attackers send 3.4 billion phishing emails every day
 - Email is easy to forge and hard to fully secure
@@ -100,6 +101,7 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ## Real vs. Fake: Can You Tell?
 
 ### Scenario 1
+
 - From: `helpdesk@yourcompany.com`
 - Subject: "Password reset required by Friday"
 - Contains a link to `https://yourcompany.okta.com/reset`
@@ -107,6 +109,7 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 **Likely legitimate** - but verify with IT if unexpected
 
 ### Scenario 2
+
 - From: `helpdesk@yourcompany.security-reset.com`
 - Subject: "URGENT: Password expires in 1 hour!!!"
 - Contains a link to `https://security-reset.com/yourcompany`
@@ -118,12 +121,14 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ## Email Attachments: Proceed with Caution
 
 ### Dangerous File Types
+
 - `.exe`, `.bat`, `.cmd` - executable programs
 - `.zip`, `.rar` - compressed files that may hide malware
 - `.docm`, `.xlsm` - Office files with macros
 - `.js`, `.vbs` - script files
 
 ### Safe Practices
+
 - Do not open attachments you were not expecting
 - Verify with the sender through a separate channel
 - Use the company's file-sharing platform instead of email attachments

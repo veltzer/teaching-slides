@@ -299,6 +299,7 @@ public class SecureDatabase {
 ### Security Implementation
 
 Create an application that:
+
 1. Implements runtime permissions
 1. Uses encryption for data storage
 1. Implements SSL pinning

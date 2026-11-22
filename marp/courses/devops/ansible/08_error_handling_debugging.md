@@ -17,6 +17,7 @@ audience:
 # Error Handling and Debugging
 
 ## Topics Covered
+
 - Error handling strategies
 - `ignore_errors` and `failed_when`
 - Block/rescue/always patterns

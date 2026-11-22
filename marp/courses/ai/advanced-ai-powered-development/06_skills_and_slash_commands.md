@@ -18,6 +18,7 @@ audience:
 # Skills and Slash Commands
 
 ## Overview
+
 - What are skills in AI development tools
 - Built-in vs custom skills
 - Creating and parameterizing custom skills
@@ -30,6 +31,7 @@ audience:
 ## What Are Skills?
 
 ## Reusable AI Capabilities
+
 - Skills are packaged instructions that extend an AI tool's behavior
 - Think of them as "macros" or "plugins" for your AI assistant
 - Invoked via slash commands (e.g., `/commit`, `/review-pr`)
@@ -679,6 +681,7 @@ alerts:
 ## Getting Skills Right in Your Organization
 
 **Start small, iterate fast:**
+
 1. Begin with one or two high-value, low-risk skills (e.g., `/commit`)
 1. Measure usage and gather feedback before expanding
 1. Promote successful experiments to team-wide standards
@@ -733,6 +736,7 @@ hooks:
 ```
 
 Key takeaways:
+
 - Skills encode **what** to do; hooks enforce **when** and **how**
 - Both live in version control and travel with the project
 - Start with built-in skills, then customize as patterns emerge

@@ -16,6 +16,7 @@ audience:
 ---
 
 ## When Things Go Wrong
+
 - No security system is 100% effective
 - Incidents will happen - what matters is how we respond
 - Speed of response directly affects the damage
@@ -57,6 +58,7 @@ audience:
 ---
 
 ## Step 1: Detect and Identify
+
 - Unexpected pop-ups or system behavior
 - Files that have been encrypted or renamed
 - Accounts locked out without reason
@@ -70,6 +72,7 @@ Trust your instincts - **if something feels wrong, report it**
 ---
 
 ## Step 2: Contain the Damage
+
 - **Do not turn off your computer** (it may destroy evidence)
 - Disconnect from Wi-Fi or unplug the network cable
 - Do not log into other accounts from the affected device
@@ -86,6 +89,7 @@ Trust your instincts - **if something feels wrong, report it**
 ---
 
 ## Reporting: What to Say
+
 - **What happened**: "I clicked a link in an email and was taken to a login page that looked suspicious"
 - **When**: "Today at 2:15 PM"
 - **What system/device**: "My work laptop, Windows, connected to office Wi-Fi"
@@ -113,6 +117,7 @@ Trust your instincts - **if something feels wrong, report it**
 ---
 
 ## Business Continuity Planning
+
 - The plan for keeping the business running during and after a disruption
 - Covers scenarios like:
     - Cyberattack (ransomware, data breach)
@@ -186,6 +191,7 @@ Trust your instincts - **if something feels wrong, report it**
 ---
 
 ## Lessons from Real Incidents
+
 - Root cause analysis identifies what went wrong
 - Improvements are made to prevent recurrence
 - Policies and procedures are updated
@@ -193,6 +199,7 @@ Trust your instincts - **if something feels wrong, report it**
 - No incident is wasted if we learn from it
 
 ### Common Root Causes
+
 - Phishing email clicked (most common)
 - Weak or reused passwords
 - Unpatched software

@@ -24,6 +24,7 @@ audience:
 ---
 
 ## Understanding Azure Virtual Machines
+
 - Infrastructure as a Service
 - Full control over OS
 - Custom software
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## VM Size Categories
+
 1. General purpose
 1. Compute optimized
 1. Memory optimized
@@ -48,6 +50,7 @@ audience:
 ---
 
 ## VM Best Practices
+
 - Right-size VMs
 - Use availability sets
 - Implement backup strategy
@@ -57,6 +60,7 @@ audience:
 ---
 
 ## Creating a Virtual Machine
+
 1. Choose subscription
 1. Select resource group
 1. Define VM name
@@ -67,6 +71,7 @@ audience:
 ---
 
 ## VM Configuration Options
+
 - Operating System
 - Authentication
 - Inbound ports
@@ -77,6 +82,7 @@ audience:
 ---
 
 ## VM Storage Options
+
 - OS disk
 - Temporary disk
 - Data disks
@@ -86,6 +92,7 @@ audience:
 ---
 
 ## VM Networking
+
 - Virtual networks
 - Network interfaces
 - Public IP
@@ -95,6 +102,7 @@ audience:
 ---
 
 ## VM Security
+
 - Disk encryption
 - Network security groups
 - Microsoft Defender for Cloud
@@ -104,6 +112,7 @@ audience:
 ---
 
 ## VM Scale Sets
+
 - Automatic scaling
 - Load balanced VMs
 - High availability
@@ -118,6 +127,7 @@ audience:
 ---
 
 ## Configuring Scale Sets
+
 - Instance count
 - Scaling rules
 - Load balancing
@@ -127,6 +137,7 @@ audience:
 ---
 
 ## Azure App Service
+
 - Platform as a Service
 - Web applications
 - API applications
@@ -136,6 +147,7 @@ audience:
 ---
 
 ## App Service Plans
+
 - Shared compute
 - Dedicated compute
 - Premium
@@ -145,6 +157,7 @@ audience:
 ---
 
 ## App Service Features
+
 - Auto-scaling
 - Deployment slots
 - Custom domains
@@ -154,6 +167,7 @@ audience:
 ---
 
 ## Deployment Options
+
 - Visual Studio
 - Git
 - FTP
@@ -163,6 +177,7 @@ audience:
 ---
 
 ## App Service Networking
+
 - Inbound traffic
 - Outbound traffic
 - Network integration
@@ -178,6 +193,7 @@ audience:
 ---
 
 ## Azure Kubernetes Service
+
 - Managed Kubernetes
 - Container orchestration
 - Auto-scaling
@@ -187,6 +203,7 @@ audience:
 ---
 
 ## AKS Architecture
+
 - Control plane
 - Node pools
 - Pods
@@ -196,6 +213,7 @@ audience:
 ---
 
 ## Container Instances
+
 - Fast deployment
 - Per-second billing
 - No orchestration
@@ -205,6 +223,7 @@ audience:
 ---
 
 ## Azure Functions
+
 - Serverless compute
 - Event-driven
 - Pay-per-execution
@@ -214,6 +233,7 @@ audience:
 ---
 
 ## Function Triggers
+
 - HTTP
 - Timer
 - Queue
@@ -224,6 +244,7 @@ audience:
 ---
 
 ## Function Bindings
+
 - Input bindings
 - Output bindings
 - Multiple bindings
@@ -233,6 +254,7 @@ audience:
 ---
 
 ## Durable Functions
+
 - Stateful functions
 - Workflow orchestration
 - Complex patterns
@@ -242,6 +264,7 @@ audience:
 ---
 
 ## Azure Batch
+
 - Large-scale parallel
 - HPC applications
 - Job scheduling
@@ -251,6 +274,7 @@ audience:
 ---
 
 ## Cost Management
+
 - Resource optimization
 - Auto-shutdown
 - Reserved instances
@@ -260,6 +284,7 @@ audience:
 ---
 
 ## Monitoring Compute
+
 - Azure Monitor
 - Application Insights
 - Log Analytics
@@ -269,6 +294,7 @@ audience:
 ---
 
 ## Disaster Recovery
+
 - Backup solutions
 - Site recovery
 - High availability
@@ -278,6 +304,7 @@ audience:
 ---
 
 ## Performance Optimization
+
 - Right-sizing
 - Scaling policies
 - Load testing

@@ -20,6 +20,7 @@ audience:
 Leverage AI for specialized technical challenges across domains
 
 This chapter covers:
+
 1. Database development
 1. Frontend development
 1. Backend development

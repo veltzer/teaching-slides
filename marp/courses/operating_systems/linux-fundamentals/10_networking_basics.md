@@ -32,6 +32,7 @@ audience:
 ## The Client/Server Model: Details
 
 Common examples:
+
 - Web servers (HTTP)
 - File transfer (FTP)
 - Remote login (SSH)
@@ -318,6 +319,7 @@ rsync -avz --progress /local/dir/ \
 ## Best Practices: Details
 
 Key points:
+
 - Always use encrypted protocols
 - Regularly update system
 - Monitor access attempts

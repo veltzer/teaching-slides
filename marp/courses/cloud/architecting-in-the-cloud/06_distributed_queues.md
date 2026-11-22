@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Why Queues?
+
 - Decouple producers from consumers
 - Buffer for traffic spikes
 - Enable asynchronous processing
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Synchronous vs Asynchronous
+
 - Synchronous: caller waits for response
 - Asynchronous: caller sends message and continues
 - Queues enable asynchronous communication
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## What Do Cloud Queues Give You?
+
 - Fully managed message queuing service
 - No servers to provision or manage
 - Automatic scaling to handle any throughput
@@ -44,6 +47,7 @@ audience:
 ---
 
 ## Cloud Queue Services
+
 - AWS SQS (Simple Queue Service)
 - Azure Queue Storage / Service Bus
 - GCP Pub/Sub / Cloud Tasks
@@ -73,6 +77,7 @@ aws sqs delete-message --queue-url $URL \
 ---
 
 ## SNS: Pub/Sub Notifications
+
 - Amazon Simple Notification Service
 - Publish a message to a topic
 - Multiple subscribers receive it (fan-out)
@@ -106,6 +111,7 @@ aws sns publish \
 ---
 
 ## EventBridge
+
 - Serverless event bus
 - Rule-based event routing
 - Filter events by content
@@ -115,6 +121,7 @@ aws sns publish \
 ---
 
 ## Message Size and Limits
+
 - SQS: max 256 KB per message
 - Large messages: use S3 + pointer in SQS
 - SNS: max 256 KB per message
@@ -124,6 +131,7 @@ aws sns publish \
 ---
 
 ## How Costly Is It?
+
 - SQS: ~$0.40 per million requests
 - Very cheap for most workloads
 - No charge for empty queues
@@ -133,6 +141,7 @@ aws sns publish \
 ---
 
 ## Is It Better to Run Your Own?
+
 - Almost always no
 - Running RabbitMQ or Kafka: operational burden
 - Patching, scaling, monitoring, failover
@@ -142,6 +151,7 @@ aws sns publish \
 ---
 
 ## Queue Semantics: At-Least-Once
+
 - Message delivered at least once
 - Consumer may receive duplicates
 - Application must handle idempotency
@@ -151,6 +161,7 @@ aws sns publish \
 ---
 
 ## Queue Semantics: Exactly-Once
+
 - Each message processed exactly once
 - Much harder to implement at scale
 - SQS FIFO queues offer exactly-once within scope
@@ -160,6 +171,7 @@ aws sns publish \
 ---
 
 ## Queue Semantics: Ordering
+
 - Standard queues: best-effort ordering
 - FIFO queues: strict first-in-first-out
 - Standard: higher throughput
@@ -169,6 +181,7 @@ aws sns publish \
 ---
 
 ## Queue Patterns: Work Queue
+
 - One producer, multiple consumers
 - Each message processed by one consumer
 - Load distribution across workers
@@ -178,6 +191,7 @@ aws sns publish \
 ---
 
 ## Queue Patterns: Fan-Out
+
 - One message sent to multiple subscribers
 - Use SNS + SQS (or Pub/Sub + subscriptions)
 - Each subscriber gets a copy
@@ -187,6 +201,7 @@ aws sns publish \
 ---
 
 ## Queue Patterns: Dead Letter Queue
+
 - Messages that fail processing repeatedly
 - Moved to a separate DLQ after N retries
 - Investigate and reprocess failures
@@ -202,6 +217,7 @@ aws sns publish \
 ---
 
 ## Guarantees from Various Cloud Queues
+
 - SQS Standard: at-least-once, best-effort order, unlimited throughput
 - SQS FIFO: exactly-once, strict order, 300-3000 msg/sec
 - Azure Service Bus: at-least-once, FIFO with sessions
@@ -211,6 +227,7 @@ aws sns publish \
 ---
 
 ## Visibility Timeout: Details
+
 - After a consumer receives a message, it becomes invisible
 - Consumer has a window to process and delete
 - If not deleted, message reappears for another consumer
@@ -226,6 +243,7 @@ aws sns publish \
 ---
 
 ## Long Polling
+
 - Standard polling: frequent empty responses (wasteful)
 - Long polling: wait up to 20 seconds for a message
 - Reduces cost and latency
@@ -235,6 +253,7 @@ aws sns publish \
 ---
 
 ## Scaling with Queues
+
 - Monitor queue depth (ApproximateNumberOfMessages)
 - Auto-scale consumers based on queue depth
 - If queue grows: add consumers
@@ -244,6 +263,7 @@ aws sns publish \
 ---
 
 ## Queue Security
+
 - IAM policies control who can send/receive
 - Encryption at rest and in transit
 - VPC endpoints for private access
@@ -253,6 +273,7 @@ aws sns publish \
 ---
 
 ## Queues vs Event Streaming
+
 - Queues: message consumed once, then deleted
 - Streaming (Kafka, Kinesis): messages retained, replay possible
 - Queues: simple work distribution
@@ -268,6 +289,7 @@ aws sns publish \
 ---
 
 ## Event Streaming: Kafka and Kinesis
+
 - Messages retained for days or weeks (not deleted on consume)
 - Multiple consumer groups read independently
 - Replay capability for reprocessing
@@ -277,6 +299,7 @@ aws sns publish \
 ---
 
 ## When to Use Streaming vs Queues
+
 - Queue: task distribution, one consumer per message
 - Streaming: event log, multiple consumers, replay
 - Queue: simpler, cheaper for simple work distribution
@@ -286,6 +309,7 @@ aws sns publish \
 ---
 
 ## Event-Driven Architecture with Queues
+
 - SNS + SQS: fan-out pattern
 - EventBridge: rule-based routing
 - Pub/Sub: flexible filtering
@@ -295,6 +319,7 @@ aws sns publish \
 ---
 
 ## Idempotency in Queue Consumers
+
 - Consumer may receive the same message twice
 - Processing must be safe to repeat
 - Use unique message IDs for deduplication
@@ -304,6 +329,7 @@ aws sns publish \
 ---
 
 ## Batch Processing with Queues
+
 - Accumulate messages, process in batches
 - SQS: receive up to 10 messages at once
 - Lambda: batch event source mapping
@@ -313,6 +339,7 @@ aws sns publish \
 ---
 
 ## FIFO Queues in Detail
+
 - Strict ordering guarantees
 - Exactly-once processing (within deduplication window)
 - Message Group ID: ordering within a group
@@ -322,6 +349,7 @@ aws sns publish \
 ---
 
 ## Delay Queues
+
 - Delay delivery of new messages
 - SQS: up to 15 minutes delay
 - Use case: schedule processing for later
@@ -331,6 +359,7 @@ aws sns publish \
 ---
 
 ## Queue Monitoring
+
 - Queue depth: how many messages waiting
 - Age of oldest message: processing lag
 - Number of messages in flight: being processed
@@ -340,6 +369,7 @@ aws sns publish \
 ---
 
 ## Queue Architecture Best Practices
+
 - Always use a dead letter queue
 - Design consumers to be idempotent
 - Use long polling to reduce costs

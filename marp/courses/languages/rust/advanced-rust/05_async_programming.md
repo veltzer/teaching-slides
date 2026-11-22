@@ -54,6 +54,7 @@ pub enum Poll<T> {
 ```
 
 A Future is a value that:
+
 - May not have finished computing yet
 - Can be polled to check if it is done
 - Returns `Pending` with a waker to be notified later

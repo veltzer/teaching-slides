@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Establishing a FinOps Team
+
 - Dedicated or virtual team
 - Cross-functional: engineering, finance, management
 - Starts small (1-2 people), grows with maturity
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## FinOps Team Responsibilities
+
 - Maintain cost visibility and reporting
 - Drive optimization initiatives
 - Educate teams on cost awareness
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## Center of Excellence Model
+
 - Central team sets standards and provides tools
 - Each team owns their own cost optimization
 - Central team enables, not bottlenecks
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## Engineering Practices That Reduce Cost
+
 - Choose the right architecture (serverless vs always-on)
 - Implement caching to reduce compute and API calls
 - Optimize data transfer (compress, batch, reduce)
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## Cost-Aware Architecture
+
 - Consider cost in architecture decisions
 - Serverless for intermittent workloads
 - Spot for batch and CI/CD
@@ -68,6 +73,7 @@ audience:
 ---
 
 ## Cost in the Development Lifecycle
+
 - Estimate costs during design phase
 - Include cost in pull request reviews (Infracost)
 - Cost metrics in deployment dashboards
@@ -99,6 +105,7 @@ infracost comment github \
 ---
 
 ## Vendor Negotiation
+
 - Enterprise Discount Programs (EDPs)
 - Commit to spend in exchange for discounts
 - AWS: EDP, Azure: Enterprise Agreement, GCP: CUDs
@@ -108,6 +115,7 @@ infracost comment github \
 ---
 
 ## Enterprise Agreements
+
 - Multi-year commitments with volume discounts
 - Private pricing for specific services
 - Dedicated support and account management
@@ -117,6 +125,7 @@ infracost comment github \
 ---
 
 ## Continuous Improvement
+
 - FinOps is never done
 - Regular optimization sprints
 - Quarterly business reviews of cloud spending
@@ -126,6 +135,7 @@ infracost comment github \
 ---
 
 ## KPIs for FinOps
+
 - Cost per unit (per customer, per transaction, per request)
 - Savings rate (optimized vs on-demand equivalent)
 - Coverage rate (% of spend under commitments)
@@ -135,6 +145,7 @@ infracost comment github \
 ---
 
 ## Communicating Cost Savings
+
 - Quantify savings in dollars
 - Show trend over time
 - Celebrate wins publicly
@@ -144,6 +155,7 @@ infracost comment github \
 ---
 
 ## Common FinOps Anti-Patterns
+
 - Optimizing without visibility (measure first)
 - Over-committing to reservations
 - Ignoring data transfer costs
@@ -153,6 +165,7 @@ infracost comment github \
 ---
 
 ## Getting Started Checklist
+
 1. Enable detailed billing and cost allocation tags
 1. Set up budgets and alerts
 1. Identify and eliminate obvious waste

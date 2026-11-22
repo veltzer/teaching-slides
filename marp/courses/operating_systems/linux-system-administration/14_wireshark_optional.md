@@ -214,6 +214,7 @@ tshark -r capture.pcap -q \
 ```
 
 In the GUI:
+
 1. Right-click a packet in a TCP connection
 1. Select "Follow" -> "TCP Stream"
 1. View the complete conversation in a single window
@@ -406,6 +407,7 @@ tshark -r capture.pcap -q \
 ```
 
 In the GUI: Statistics -> IO Graphs
+
 - Add multiple graph lines with different display filters
 - Compare normal vs problematic traffic patterns
 - Identify traffic spikes and anomalies
@@ -473,6 +475,7 @@ tshark -r capture.pcap \
 ```
 
 Important notes:
+
 - Only works for sessions captured while logging was active
 - Key log file contains sensitive secrets - delete after use
 - Works with `TLS` 1.2 and 1.3
@@ -509,6 +512,7 @@ tshark -C "DNS-Debug" -r capture.pcap
 ```
 
 Recommended profiles:
+
 - **HTTP Debug**: columns for method, host, status, response time
 - **DNS Analysis**: columns for query name, type, response code, latency
 - **TCP Troubleshooting**: coloring for retransmissions, resets, zero windows

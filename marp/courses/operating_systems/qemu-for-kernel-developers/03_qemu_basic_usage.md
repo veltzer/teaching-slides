@@ -28,6 +28,7 @@ audience:
 ---
 
 Chapter Overview
+
 - Booting kernels with QEMU
 - Configuring virtual hardware
 - Command-line options for kernel developers
@@ -35,6 +36,7 @@ Chapter Overview
 ---
 
 QEMU Command Line Basics
+
 - General syntax: qemu-system-[arch] [options] [disk_image]
 - Common options: -m (memory), -smp (CPUs), -kernel, -append
 
@@ -49,6 +51,7 @@ Kernel Boot Process in QEMU
 ---
 
 Specifying the Kernel Image
+
 - Using -kernel option
 - Supported kernel formats
 - Kernel image location considerations
@@ -56,6 +59,7 @@ Specifying the Kernel Image
 ---
 
 Kernel Command Line Parameters
+
 - Using -append option
 - Common kernel parameters
 - Debugging-related parameters
@@ -63,6 +67,7 @@ Kernel Command Line Parameters
 ---
 
 Initial RAM Disk (initrd/initramfs)
+
 - Purpose of initrd/initramfs
 - Using -initrd option
 - Creating custom initrd for testing
@@ -70,6 +75,7 @@ Initial RAM Disk (initrd/initramfs)
 ---
 
 Root Filesystem Options
+
 - Using disk images as root filesystem
 - Network-based root filesystems
 - Implications for kernel testing
@@ -77,6 +83,7 @@ Root Filesystem Options
 ---
 
 Virtual CPU Configuration
+
 - Specifying CPU model with -cpu
 - SMP configuration with -smp
 - CPU feature enablement/disablement
@@ -84,6 +91,7 @@ Virtual CPU Configuration
 ---
 
 Memory Configuration
+
 - Setting memory size with -m
 - Memory hotplug options
 - Testing kernel memory management features
@@ -91,6 +99,7 @@ Memory Configuration
 ---
 
 Block Device Emulation
+
 - Types of emulated block devices
 - Using -hda, -hdb, etc., options
 - Attaching disk images and raw devices
@@ -98,6 +107,7 @@ Block Device Emulation
 ---
 
 Network Device Emulation
+
 - Common virtual network adapters
 - Basic networking with -net user
 - Advanced networking with tap devices
@@ -113,6 +123,7 @@ Virtual Network Configuration
 ---
 
 PCI Device Emulation and Passthrough
+
 - Emulating PCI devices
 - PCI passthrough for testing drivers
 - Using -device option
@@ -120,6 +131,7 @@ PCI Device Emulation and Passthrough
 ---
 
 USB Device Emulation
+
 - Emulating USB controllers and devices
 - USB passthrough options
 - Testing USB drivers in QEMU
@@ -127,6 +139,7 @@ USB Device Emulation
 ---
 
 Graphics and Display Options
+
 - VGA emulation options
 - Using -nographic for headless operation
 - Connecting with VNC or SDL
@@ -134,6 +147,7 @@ Graphics and Display Options
 ---
 
 Audio Device Emulation
+
 - Emulating sound cards
 - Audio backend configuration
 - Testing audio drivers in QEMU
@@ -141,6 +155,7 @@ Audio Device Emulation
 ---
 
 QEMU Monitor
+
 - Accessing QEMU monitor (Ctrl-Alt-2 or -monitor)
 - Useful monitor commands for kernel developers
 - Using monitor to manipulate VM state
@@ -148,6 +163,7 @@ QEMU Monitor
 ---
 
 GDB Integration
+
 - Setting up QEMU for GDB debugging (-s and -S options)
 - Connecting GDB to QEMU
 - Basic kernel debugging workflow
@@ -155,6 +171,7 @@ GDB Integration
 ---
 
 QEMU Tracing and Logging
+
 - Enabling QEMU traces (-trace events)
 - Understanding QEMU logs
 - Using logs for kernel debugging
@@ -162,6 +179,7 @@ QEMU Tracing and Logging
 ---
 
 Snapshotting in QEMU
+
 - Creating and managing snapshots
 - Using snapshots for kernel testing
 - Snapshot internal mechanics
@@ -169,6 +187,7 @@ Snapshotting in QEMU
 ---
 
 Performance Tuning
+
 - CPU throttling options
 - I/O throttling
 - Using KVM for near-native performance
@@ -176,6 +195,7 @@ Performance Tuning
 ---
 
 QEMU and Kernel Modules
+
 - Loading kernel modules in QEMU
 - Testing module loading/unloading
 - Debugging kernel modules
@@ -183,6 +203,7 @@ QEMU and Kernel Modules
 ---
 
 Multi-VM Scenarios
+
 - Running multiple VMs
 - Inter-VM communication
 - Testing distributed kernel features
@@ -190,6 +211,7 @@ Multi-VM Scenarios
 ---
 
 QEMU Networking Modes
+
 - User networking (SLIRP)
 - Bridged networking
 - Custom network configurations
@@ -197,6 +219,7 @@ QEMU Networking Modes
 ---
 
 Storage Performance Testing
+
 - Emulating different storage devices
 - I/O scheduling testing
 - Block layer benchmarking in QEMU
@@ -204,6 +227,7 @@ Storage Performance Testing
 ---
 
 Memory Management Features
+
 - Testing huge pages
 - Memory ballooning
 - NUMA emulation
@@ -211,6 +235,7 @@ Memory Management Features
 ---
 
 QEMU Command-line Examples
+
 - Booting a custom kernel with a specific rootfs
 - Setting up a multi-core VM with custom networking
 - Enabling KVM and performance options
@@ -218,6 +243,7 @@ QEMU Command-line Examples
 ---
 
 Automated Testing with QEMU
+
 - Scripting QEMU for automated tests
 - Integrating with CI/CD pipelines
 - Kernel regression testing strategies
@@ -225,6 +251,7 @@ Automated Testing with QEMU
 ---
 
 Troubleshooting Common Issues
+
 - Boot failures
 - Networking problems
 - Performance issues
@@ -232,6 +259,7 @@ Troubleshooting Common Issues
 ---
 
 Best Practices for Kernel Development with QEMU
+
 - Organizing disk images and kernel builds
 - Version control integration
 - Documenting QEMU configurations

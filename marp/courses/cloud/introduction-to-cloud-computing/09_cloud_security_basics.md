@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Identity and Access Management
+
 - Control who can access what
 - Authentication: verify identity
 - Authorization: grant permissions
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Least Privilege Principle
+
 - Grant only the minimum permissions needed
 - Start with no access, add as required
 - Review and trim permissions regularly
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## Multi-Factor Authentication
+
 - Something you know (password)
 - Something you have (phone, hardware key)
 - Dramatically reduces account compromise risk
@@ -44,6 +47,7 @@ audience:
 ---
 
 ## Encryption at Rest
+
 - Data stored in encrypted form
 - Protect against physical theft or unauthorized access
 - Provider-managed or customer-managed keys
@@ -53,6 +57,7 @@ audience:
 ---
 
 ## Encryption in Transit
+
 - Protect data moving between services
 - TLS/HTTPS for all communications
 - VPN for site-to-site connections
@@ -68,6 +73,7 @@ audience:
 ---
 
 ## Key Management
+
 - Centralized key management services (KMS)
 - Create, rotate, and control access to keys
 - Hardware Security Modules (HSM) for high security
@@ -93,6 +99,7 @@ aws kms encrypt \
 ---
 
 ## Network Security in the Cloud
+
 - Virtual Private Clouds for isolation
 - Security Groups as instance-level firewalls
 - Network ACLs for subnet-level control
@@ -102,6 +109,7 @@ aws kms encrypt \
 ---
 
 ## Firewall and Access Control
+
 - Default deny: block everything, allow explicitly
 - Layered security (defense in depth)
 - Web Application Firewalls (WAF) for HTTP traffic
@@ -117,6 +125,7 @@ aws kms encrypt \
 ---
 
 ## Logging and Monitoring
+
 - Log all API calls and access
 - Monitor for unusual activity
 - Set up alerts for security events
@@ -126,6 +135,7 @@ aws kms encrypt \
 ---
 
 ## Compliance and Regulatory Considerations
+
 - GDPR: European data protection
 - HIPAA: healthcare data in the US
 - SOC 2: service organization controls
@@ -135,6 +145,7 @@ aws kms encrypt \
 ---
 
 ## Data Residency
+
 - Some regulations require data in specific countries
 - Choose cloud Regions accordingly
 - Understand where replicas and backups are stored
@@ -144,6 +155,7 @@ aws kms encrypt \
 ---
 
 ## Security Automation
+
 - Infrastructure as Code for security configurations
 - Automated compliance scanning
 - Auto-remediation of policy violations
@@ -153,6 +165,7 @@ aws kms encrypt \
 ---
 
 ## Incident Response in the Cloud
+
 - Have a plan before incidents occur
 - Leverage cloud logging for investigation
 - Isolate compromised resources quickly

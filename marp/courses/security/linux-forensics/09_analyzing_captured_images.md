@@ -13,6 +13,7 @@ audience:
 # Analyzing Captured Images
 
 ## Course: Linux Forensics
+
 - Once evidence is captured, analysis begins
 - Forensic images are examined without modifying original evidence
 - This module covers image analysis tools, inode analysis,
@@ -564,6 +565,7 @@ autopsy
 ## Exercise: Image Analysis Lab
 
 ### Tasks
+
 1. Mount a forensic image read-only
 1. Use `fls` to list directory contents and deleted files
 1. Use `istat` to analyze inodes of interest

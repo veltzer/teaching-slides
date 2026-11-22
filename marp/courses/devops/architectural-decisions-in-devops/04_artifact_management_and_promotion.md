@@ -20,6 +20,7 @@ audience:
 ---
 
 ## Table of Contents
+
 1. Artifact Repository Strategies
 1. Promotion Between Stages
 1. Versioning Strategies
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## What Is an Artifact?
+
 - An artifact is any output produced by a build process
 - Examples include:
     - Compiled binaries (`.jar`, `.dll`, `.exe`)
@@ -44,6 +46,7 @@ audience:
 ---
 
 ## Why Artifact Management Matters
+
 - Reproducibility: rebuild or redeploy any release
 - Traceability: link every deployment back to source code
 - Security: scan and validate before production
@@ -66,6 +69,7 @@ audience:
 ---
 
 ## Single Artifact Repository
+
 - One centralized repository for all artifact types
 - Advantages:
     - Unified access control and policies
@@ -80,6 +84,7 @@ audience:
 ---
 
 ## Multiple Artifact Repositories
+
 - Separate repositories per team, format, or environment
 - Advantages:
     - Isolation and blast radius reduction
@@ -111,6 +116,7 @@ audience:
 ---
 
 ## Promotion Between Stages
+
 - Promotion = moving an artifact from one stage to the next
 - Typical pipeline: `dev` -> `staging` -> `production`
 - Key principle: **never rebuild** between stages
@@ -126,6 +132,7 @@ audience:
 ---
 
 ## Promotion Strategies
+
 - **Copy promotion**: artifact is copied to a new repository
     - Clear separation between stages
     - Higher storage cost
@@ -139,6 +146,7 @@ audience:
 ---
 
 ## Promotion Gates
+
 - Each promotion step should require passing quality gates
 - Common gates:
     - Unit test pass rate >= threshold
@@ -171,6 +179,7 @@ jfrog rt build-promote \
 ---
 
 ## Semantic Versioning (SemVer)
+
 - Format: `MAJOR.MINOR.PATCH`
     - `MAJOR`: breaking changes
     - `MINOR`: new features, backward compatible
@@ -190,6 +199,7 @@ jfrog rt build-promote \
 ---
 
 ## Commit-Based Versioning
+
 - Use the `git` commit hash as the version identifier
 - Format: `<branch>-<short-sha>-<timestamp>`
 - Example: `main-a3f8b2c-20260215`
@@ -218,6 +228,7 @@ jfrog rt build-promote \
 ---
 
 ## Hybrid Versioning
+
 - Combine `SemVer` with commit metadata
 - Format: `MAJOR.MINOR.PATCH+build.sha`
 - Example: `2.3.1+build.a3f8b2c`
@@ -230,6 +241,7 @@ jfrog rt build-promote \
 ---
 
 ## Immutable Artifacts
+
 - Once published, an artifact version must never change
 - Overwriting a version is a critical anti-pattern
 - Rules:
@@ -241,6 +253,7 @@ jfrog rt build-promote \
 ---
 
 ## Why Immutability Matters
+
 - **Reproducibility**: re-deploy any past version exactly
 - **Security**: tampering is detectable
 - **Caching**: proxies and clients can cache safely
@@ -257,6 +270,7 @@ jfrog rt build-promote \
 ---
 
 ## Implementing Traceability
+
 - Embed metadata in every artifact:
     - `git` commit SHA
     - Build number and timestamp
@@ -268,6 +282,7 @@ jfrog rt build-promote \
 ---
 
 ## SBOM: Software Bill of Materials
+
 - A machine-readable inventory of all components
 - Standards: `SPDX`, `CycloneDX`
 - Contents:
@@ -280,6 +295,7 @@ jfrog rt build-promote \
 ---
 
 ## Container Image Management
+
 - Container images are the dominant artifact type in modern DevOps
 - Key concerns:
     - Base image selection
@@ -297,6 +313,7 @@ jfrog rt build-promote \
 ---
 
 ## Base Image Strategies
+
 - **Official images**: maintained by Docker or vendors
     - `node:20`, `python:3.12`, `openjdk:21`
 - **Verified publisher images**: from trusted organizations
@@ -316,6 +333,7 @@ jfrog rt build-promote \
 ---
 
 ## Supply Chain Security for Images
+
 - Software supply chain attacks target build dependencies
 - Key protections:
     - Sign images with `cosign` or Docker Content Trust
@@ -350,6 +368,7 @@ cosign verify \
 ---
 
 ## Image Scanning Overview
+
 - Scanning detects known vulnerabilities (CVEs) in image layers
 - When to scan:
     - At build time (fail the pipeline)
@@ -400,6 +419,7 @@ trivy image \
 ---
 
 ## Kubernetes Admission Control
+
 - Enforce image policies at deploy time
 - Tools: `OPA Gatekeeper`, `Kyverno`, `Sigstore Policy Controller`
 - Common policies:
@@ -458,6 +478,7 @@ spec:
 ---
 
 ## Multi-Stage Builds
+
 - Separate build environment from runtime environment
 - Build stage has compilers and tools
 - Runtime stage has only the application binary
@@ -484,6 +505,7 @@ CMD ["/myapp"]
 ---
 
 ## Distroless Images
+
 - Created by Google, contain only the application and runtime
 - No shell, no package manager, no OS utilities
 - Benefits:
@@ -501,6 +523,7 @@ CMD ["app.jar"]
 ---
 
 ## When NOT to Use Slim Images
+
 - During development (need debugging tools)
 - When troubleshooting production issues
 - When the application requires OS-level packages
@@ -519,6 +542,7 @@ services:
 ---
 
 ## Tag Strategies for Container Images
+
 - Avoid using `latest` in production
 - Good tagging practices:
     - `myapp:2.3.1` (SemVer release)
@@ -534,6 +558,7 @@ image: myregistry.io/myapp@sha256:a3f8...
 ---
 
 ## The Danger of Mutable Tags
+
 - Tags like `latest`, `stable`, `v2` can be overwritten
 - Problem: same tag may point to different images over time
 - Real-world incident example:
@@ -551,6 +576,7 @@ image: myregistry.io/myapp@sha256:a3f8...
 ---
 
 ## Garbage Collection and Retention
+
 - Artifact repositories accumulate data quickly
 - Retention policies are essential:
     - Keep last N versions of each artifact
@@ -562,6 +588,7 @@ image: myregistry.io/myapp@sha256:a3f8...
 ---
 
 ## Registry Mirroring and Caching
+
 - Pull-through cache reduces external dependency
 - Mirror strategy:
     - Primary registry in main region
@@ -604,6 +631,7 @@ jobs:
 ---
 
 ## Artifact Metadata Best Practices
+
 - Label every artifact with:
     - `org.opencontainers.image.source` (repo URL)
     - `org.opencontainers.image.revision` (commit SHA)
@@ -622,6 +650,7 @@ LABEL org.opencontainers.image.version=\
 ---
 
 ## Anti-Patterns to Avoid
+
 - Rebuilding artifacts between environments
 - Using `latest` tag in production deployments
 - Storing secrets in artifact layers
@@ -646,6 +675,7 @@ LABEL org.opencontainers.image.version=\
 ---
 
 ## Key Takeaways
+
 - Store artifacts in a central repository with clear promotion stages
 - Never rebuild between environments; promote the tested artifact
 - Choose versioning strategy based on audience: `SemVer` for public, commit-based for internal

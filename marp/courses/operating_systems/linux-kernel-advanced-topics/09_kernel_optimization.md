@@ -17,12 +17,14 @@ audience:
 ## Overview
 
 Linux kernel optimization focuses on:
+
 1. Reducing memory footprint
 1. Improving performance
 1. Minimizing latency
 1. Decreasing kernel size
 
 These optimizations are crucial for:
+
 - Embedded systems
 - Real-time applications
 - Resource-constrained devices
@@ -40,6 +42,7 @@ These optimizations are crucial for:
 ### Configuration Options
 
 Key `CONFIG_` options to disable:
+
 - `CONFIG_DEBUG_KERNEL`
 - `CONFIG_KALLSYMS`
 - `CONFIG_BUG`
@@ -76,6 +79,7 @@ cat /proc/modules
 ```
 
 Remove drivers for:
+
 - Unused filesystems
 - Unnecessary network protocols
 - Unused hardware support
@@ -94,6 +98,7 @@ KBUILD_CFLAGS += -O3  # Aggressive
 ```
 
 Trade-offs:
+
 - `-Os`: Smallest code
 - `-O2`: Balanced
 - `-O3`: Fastest, larger
@@ -111,6 +116,7 @@ CONFIG_LTO_GCC=y
 ```
 
 Benefits:
+
 1. Cross-function optimization
 1. Dead code elimination
 1. Better inlining decisions
@@ -205,6 +211,7 @@ request_threaded_irq(irq, NULL,
 ```
 
 Benefits:
+
 - Preemptible handlers
 - Priority control
 - Better latency
@@ -532,12 +539,14 @@ kernel_size_check:
 ## Summary
 
 Kernel optimization requires:
+
 - Clear performance goals
 - Systematic approach
 - Careful measurement
 - Thorough testing
 
 Balance between:
+
 - Size vs features
 - Speed vs power
 - Latency vs throughput

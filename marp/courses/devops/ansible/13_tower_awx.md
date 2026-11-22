@@ -17,6 +17,7 @@ audience:
 # Ansible Tower / AWX Overview
 
 ## Topics Covered
+
 - What is `Ansible Tower` / `AWX`
 - Architecture and components
 - Key features: RBAC, workflows, inventories

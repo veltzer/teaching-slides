@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Chapter Overview
+
 * Unit testing PySpark with pytest
 * Creating test SparkSessions and fixtures
 * DataFrame assertions and comparison libraries
@@ -28,6 +29,7 @@ audience:
 ---
 
 ## Learning Objectives
+
 * Write effective unit tests for PySpark transformations
 * Set up reusable test fixtures with conftest.py
 * Use chispa for DataFrame equality assertions
@@ -1188,6 +1190,7 @@ def test_compute_user_totals_single_user(spark):
 ## Summary: Testing and CI/CD
 
 **Testing Strategy:**
+
 * Separate pure logic from Spark operations
 * Test pure Python functions without Spark
 * Use `local[2]` SparkSession for unit tests
@@ -1199,11 +1202,13 @@ def test_compute_user_totals_single_user(spark):
 ## Summary: Testing and CI/CD (cont.)
 
 **Fixtures:**
+
 * Session-scoped SparkSession (create once)
 * Function-scoped DataFrames (fresh per test)
 * `conftest.py` for shared fixtures
 
 **CI/CD:**
+
 * Lint (pylint), format (black), type (mypy)
 * Unit tests first, integration tests second
 * Java 11+ required for Spark in CI

@@ -321,6 +321,7 @@ delv example.com
 ```
 
 `DNSSEC` provides:
+
 - Authentication of DNS data origin
 - Data integrity verification
 - Authenticated denial of existence
@@ -415,6 +416,7 @@ view "external" {
 ```
 
 Use cases:
+
 - Internal services resolve to private IPs
 - External clients get public IPs
 - Different `MX` records per network
@@ -443,6 +445,7 @@ done
 ```
 
 Limitations of DNS load balancing:
+
 - No health checking (stale records serve dead hosts)
 - Client caching ignores TTL
 - Uneven distribution (DNS caches)
@@ -639,6 +642,7 @@ dig @new-ns example.com ANY +short | wc -l
 ## DNS Migration Strategies (cont.) (cont.)
 
 Key pitfalls:
+
 - Forgetting to lower TTL before migration
 - Not testing reverse DNS (`PTR`) records
 - Missing `DNSSEC` DS record updates at registrar

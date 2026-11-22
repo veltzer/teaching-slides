@@ -23,6 +23,7 @@ audience:
 ---
 
 ## Why Containers?
+
 - Package application with all dependencies
 - Consistent across dev, staging, production
 - Lightweight (shared OS kernel, no hypervisor)
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## Containers vs Virtual Machines
+
 - VMs: full OS per instance, heavy, slow to start
 - Containers: share host OS, lightweight, fast
 - VMs: stronger isolation
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## Why Orchestration?
+
 - Running one container is easy
 - Running hundreds or thousands requires orchestration
 - Scheduling, scaling, networking, health management
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## Kubernetes Overview
+
 - Open-source container orchestration platform
 - Originally from Google (Borg heritage)
 - Declarative configuration
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## Managed Kubernetes Services
+
 - AWS EKS (Elastic Kubernetes Service)
 - Azure AKS (Azure Kubernetes Service)
 - GCP GKE (Google Kubernetes Engine)
@@ -68,6 +73,7 @@ audience:
 ---
 
 ## Managed vs Self-Managed Kubernetes
+
 - Managed: control plane handled by provider
 - Self-managed: you run everything (kubeadm, kops)
 - Managed: less operational burden, faster setup
@@ -83,6 +89,7 @@ audience:
 ---
 
 ## EKS vs AKS vs GKE
+
 - GKE: most mature, fastest updates, best auto-scaling
 - EKS: deepest AWS integration, largest customer base
 - AKS: best Azure/AD integration, free control plane
@@ -92,6 +99,7 @@ audience:
 ---
 
 ## Kubernetes Architecture
+
 - Control plane: API server, scheduler, controller manager, etcd
 - Worker nodes: run your containers (pods)
 - Pods: smallest deployable unit (one or more containers)
@@ -101,6 +109,7 @@ audience:
 ---
 
 ## Key Kubernetes Resources
+
 - Deployment: manages replica sets of pods
 - Service: load balancing and discovery
 - ConfigMap/Secret: configuration and credentials
@@ -140,6 +149,7 @@ spec:
 ---
 
 ## Scaling in Kubernetes
+
 - Horizontal Pod Autoscaler (HPA): scale pods based on metrics
 - Vertical Pod Autoscaler (VPA): resize pod resources
 - Cluster Autoscaler: add/remove nodes
@@ -149,6 +159,7 @@ spec:
 ---
 
 ## Kubernetes Networking
+
 - Every pod gets an IP address
 - Services provide stable endpoints
 - Ingress controllers for HTTP routing
@@ -158,6 +169,7 @@ spec:
 ---
 
 ## Container Registries
+
 - Store and distribute container images
 - AWS ECR, Azure ACR, GCP Artifact Registry
 - Private registries for proprietary images
@@ -167,6 +179,7 @@ spec:
 ---
 
 ## Service Mesh
+
 - Manage service-to-service communication
 - Istio, Linkerd, AWS App Mesh
 - Traffic management (canary, blue-green)
@@ -176,6 +189,7 @@ spec:
 ---
 
 ## Kubernetes Security
+
 - RBAC for access control
 - Pod Security Standards (restricted, baseline)
 - Network Policies for pod-to-pod traffic
@@ -185,6 +199,7 @@ spec:
 ---
 
 ## Kubernetes Cost Optimization
+
 - Right-size pod resource requests and limits
 - Use Cluster Autoscaler for node management
 - Spot/preemptible nodes for non-critical workloads
@@ -194,6 +209,7 @@ spec:
 ---
 
 ## Helm and Package Management
+
 - Helm: package manager for Kubernetes
 - Charts: reusable application templates
 - Values: customize deployments
@@ -223,6 +239,7 @@ helm rollback my-redis 1
 ---
 
 ## GitOps for Kubernetes
+
 - Git as the single source of truth for cluster state
 - ArgoCD or Flux watches Git, syncs to cluster
 - Declarative: desired state in Git
@@ -232,6 +249,7 @@ helm rollback my-redis 1
 ---
 
 ## Do You Need a Cloud-Portable Application?
+
 - Kubernetes runs on any cloud
 - But cloud-native services don't port easily
 - True portability has a cost (lowest common denominator)
@@ -241,6 +259,7 @@ helm rollback my-redis 1
 ---
 
 ## Kubernetes vs Serverless
+
 - Kubernetes: more control, more complexity
 - Serverless: less control, less management
 - Kubernetes: good for complex, long-running services
@@ -250,6 +269,7 @@ helm rollback my-redis 1
 ---
 
 ## Serverless Containers
+
 - AWS Fargate: serverless compute for ECS/EKS
 - Azure Container Instances: single container, no orchestration
 - GCP Cloud Run: serverless containers from Docker images
@@ -259,6 +279,7 @@ helm rollback my-redis 1
 ---
 
 ## Container Observability
+
 - Prometheus for metrics collection
 - Grafana for dashboards
 - Jaeger/Zipkin for distributed tracing
@@ -268,6 +289,7 @@ helm rollback my-redis 1
 ---
 
 ## Multi-Cluster Kubernetes
+
 - Separate clusters per environment (dev, staging, prod)
 - Multi-Region clusters for DR
 - Fleet management tools (Rancher, Anthos)
@@ -277,6 +299,7 @@ helm rollback my-redis 1
 ---
 
 ## Container Orchestration Best Practices
+
 - Use managed Kubernetes unless you have a specific reason not to
 - Define resource requests and limits for all pods
 - Use namespaces for logical separation

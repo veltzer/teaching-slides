@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Chapter Overview
+
 * Spark UI interpretation and DAG visualization
 * Shuffle optimization and partition tuning
 * Memory management and configuration
@@ -27,6 +28,7 @@ audience:
 ---
 
 ## Learning Objectives
+
 * Read and interpret the Spark Web UI
 * Diagnose performance bottlenecks from DAGs and metrics
 * Configure memory, shuffle, and partition settings
@@ -43,6 +45,7 @@ audience:
 ---
 
 ## The Spark Web UI
+
 1. Jobs tab: shows all jobs triggered by actions
 1. Stages tab: shows stages within each job
 1. Storage tab: shows cached/persisted RDDs and DataFrames

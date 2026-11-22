@@ -18,6 +18,7 @@ audience:
 ---
 
 ## The Honest Question
+
 - Multi-cloud is not always the right answer
 - Every architecture decision has trade-offs
 - Multi-cloud adds complexity, cost, and cognitive load
@@ -27,6 +28,7 @@ audience:
 ---
 
 ## Multi-Cloud Complexity Tax
+
 - Every abstraction layer adds latency, bugs, and maintenance
 - Teams must learn multiple cloud platforms
 - IaC templates must support multiple providers
@@ -36,6 +38,7 @@ audience:
 ---
 
 ## The Lowest Common Denominator Problem
+
 - Abstracting across clouds means using only common features
 - You lose access to each cloud's best capabilities
 - Example: DynamoDB Streams, Azure AI services, BigQuery ML
@@ -45,6 +48,7 @@ audience:
 ---
 
 ## When Single-Cloud is Better
+
 - Small to medium organizations with limited cloud teams
 - Workloads that heavily use cloud-native services
 - When one cloud clearly dominates your requirements
@@ -54,6 +58,7 @@ audience:
 ---
 
 ## Cost Reality Check
+
 - Multi-cloud overhead: 15-30% higher total cost of ownership
 - Egress fees between clouds add up quickly
 - Dual tooling: monitoring, security, governance tools for each cloud
@@ -69,6 +74,7 @@ audience:
 ---
 
 ## The Vendor Lock-In Fear
+
 - Lock-in fear is the top driver for multi-cloud adoption
 - But how real is the risk?
 - Major cloud providers are stable, well-funded companies
@@ -78,6 +84,7 @@ audience:
 ---
 
 ## Analyzing Lock-In Risk
+
 - Compute (VMs, containers): low lock-in, easily portable
 - Managed databases: moderate lock-in, standard engines help
 - Serverless (Lambda, Cloud Functions): high lock-in
@@ -87,6 +94,7 @@ audience:
 ---
 
 ## Portability Without Multi-Cloud
+
 - Use open standards: Kubernetes, PostgreSQL, Terraform
 - Avoid proprietary APIs where open alternatives exist
 - Containerize everything
@@ -206,6 +214,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## Unnecessary Multi-Cloud Scenarios
+
 - Using GCP just for BigQuery when AWS Redshift would suffice
 - Running secondary cloud for a single non-critical workload
 - Multi-cloud to satisfy a checkbox without clear requirements
@@ -215,6 +224,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## The Multi-Cloud Decision Framework
+
 - Step 1: Identify the specific problem you are trying to solve
 - Step 2: Quantify the risk of single-cloud (probability x impact)
 - Step 3: Estimate the cost of multi-cloud (TCO + opportunity cost)
@@ -237,6 +247,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## When Multi-Cloud IS Justified
+
 - Regulatory requirement for provider diversity
 - Merger/acquisition brings a second cloud
 - Specific best-of-breed service on another cloud (e.g., GCP for ML)
@@ -246,6 +257,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## Accidental Multi-Cloud
+
 - Most multi-cloud is not strategic, it is accidental
 - One team chose AWS, another chose Azure
 - Acquisition brought GCP workloads
@@ -255,6 +267,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## Rationalizing Accidental Multi-Cloud
+
 - Audit all cloud usage across the organization
 - Decide: consolidate or embrace
 - If consolidating: migrate to the dominant provider
@@ -264,6 +277,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## The Build vs Buy Tradeoff
+
 - Multi-cloud abstraction layers can be built or bought
 - Building: full control, high maintenance cost
 - Buying: Anthos, Azure Arc, vendor-managed platforms
@@ -273,6 +287,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## Opportunity Cost
+
 - Every hour spent on multi-cloud abstraction is not spent on product
 - Engineering velocity matters more than theoretical resilience
 - Startups should almost never go multi-cloud
@@ -282,6 +297,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## Case Study: Startup That Went Multi-Cloud Too Early
+
 - 20-person startup, B2B SaaS product
 - CTO mandated multi-cloud from day one
 - Built Kubernetes abstraction across AWS and GCP
@@ -292,6 +308,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## Case Study: Enterprise That Benefited from Multi-Cloud
+
 - Fortune 500 financial services company
 - Regulatory requirement for provider diversity
 - AWS for primary workloads, Azure for Microsoft integrations
@@ -302,6 +319,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## Case Study: The Middle Ground
+
 - Mid-size company, 200 engineers
 - Primary cloud: AWS (95% of workloads)
 - Secondary use: GCP BigQuery for analytics only
@@ -312,6 +330,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## Avoiding Multi-Cloud Pitfalls
+
 - Do not abstract prematurely
 - Start with single-cloud, add second only when justified
 - Keep portability in mind without over-engineering for it
@@ -321,6 +340,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## The Pragmatic Path
+
 - Default to single-cloud until proven otherwise
 - Invest in portability (containers, open standards, IaC)
 - Add a second cloud only for specific, justified reasons
@@ -330,6 +350,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## Questions to Ask Before Going Multi-Cloud
+
 - What specific problem does multi-cloud solve for us?
 - Can we solve it with single-cloud alternatives?
 - Do we have the team to support multiple clouds?
@@ -339,6 +360,7 @@ resource "helm_release" "postgresql" {
 ---
 
 ## Key Takeaways
+
 - Multi-cloud is a tool, not a goal
 - Single-cloud with portability is often the better strategy
 - Quantify the actual risk of vendor lock-in for your workloads

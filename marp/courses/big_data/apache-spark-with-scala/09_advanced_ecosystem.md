@@ -254,6 +254,7 @@ spark.sql("VACUUM delta_db.customer_data RETAIN 168 HOURS")
 ## Spark Monitoring Metrics
 
 Key metrics to track:
+
 - **Executor/driver memory usage**
 - **CPU utilization**
 - **Shuffle read/write size**
@@ -436,6 +437,7 @@ spark.shuffle.service.enabled=true
 ```
 
 Benefits:
+
 - Automatically adjusts resources
 - Improves cluster utilization
 - Reduces costs in cloud environments
@@ -551,6 +553,7 @@ rdd.checkpoint()
 ## Spark Security Framework
 
 Key security domains:
+
 - **Authentication**: Identity verification
 - **Authorization**: Access control
 - **Encryption**: Data protection
@@ -673,6 +676,7 @@ spark.driver.extraJavaOptions=-Dlog4j.configuration=log4j-audit.properties
 ```
 
 Key events to audit:
+
 - Authentication attempts
 - Authorization decisions
 - Data access patterns

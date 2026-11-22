@@ -18,6 +18,7 @@ audience:
 # The Modern AI Development Landscape
 
 ## Overview
+
 - How AI-assisted development evolved from autocomplete to autonomous agents
 - Categories of tools available today and when to use each
 - Understanding context windows, models, and deployment tradeoffs
@@ -294,6 +295,7 @@ Workflow:
 - **Open-source**: `DeepSeek Coder`, `Qwen 2.5 Coder`, `Llama`, `Codestral`
 
 Choosing a model depends on your task:
+
 1. Inline completion: smaller, faster models (`Codestral`, fine-tuned variants)
 1. Chat and reasoning: frontier models (`Claude`, `GPT-4o`)
 1. Long-context tasks: `Gemini 1.5 Pro` or `Claude` with 200K window

@@ -17,6 +17,7 @@ audience:
 ---
 
 ## What is Phishing?
+
 - Phishing is a type of cyber attack where criminals attempt to steal sensitive information like login credentials or financial information
 - Phishers use fraudulent emails, texts, websites, and other tactics to trick victims into revealing this information
 - Phishing attacks often impersonate legitimate companies, organizations, or individuals
@@ -432,6 +433,7 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 Phishing simulation best practices:
 
 **DO:**
+
 - Use realistic but safe simulations
 - Provide immediate education when someone clicks
 - Track metrics over time (click rate, report rate)
@@ -443,6 +445,7 @@ Phishing simulation best practices:
 ## Security Awareness Training (cont.)
 
 **DON'T:**
+
 - Publicly shame or punish employees who click
 - Use simulations to fire people
 - Make simulations too easy (builds false confidence)

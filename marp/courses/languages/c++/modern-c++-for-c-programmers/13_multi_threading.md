@@ -5,6 +5,7 @@
 ## Course Overview
 
 Modern C++ provides powerful built-in support for multithreading
+
 - Thread creation and management
 - Synchronization primitives
 - Lock-free programming with atomics
@@ -16,6 +17,7 @@ Modern C++ provides powerful built-in support for multithreading
 ## Why Multithreading?
 
 Performance benefits of concurrent execution:
+
 - Utilize multiple CPU cores
 - Overlap I/O operations with computation
 - Improve responsiveness in user interfaces
@@ -185,6 +187,7 @@ void safe_increment() {
 ## Lock Guard Benefits
 
 RAII ensures proper cleanup:
+
 - Lock acquired in constructor
 - Lock released in destructor
 - Exception-safe
@@ -753,6 +756,7 @@ std::unique_ptr<ThreadSafeSingleton> ThreadSafeSingleton::instance;
 ## Performance Considerations
 
 Threading overhead factors:
+
 - Thread creation/destruction cost
 - Context switching overhead
 - Memory synchronization penalties
@@ -764,6 +768,7 @@ Threading overhead factors:
 ## Performance Considerations (cont.)
 
 Best practices:
+
 - Use thread pools for short-lived tasks
 - Minimize shared state
 - Prefer lock-free algorithms when possible
@@ -784,6 +789,7 @@ Best practices:
 ## Debugging Multithreaded Code
 
 Tools and techniques:
+
 - Thread sanitizers (TSan)
 - Helgrind (Valgrind)
 - Visual Studio Concurrency Visualizer
@@ -842,6 +848,7 @@ void stress_test_counter() {
 ## Modern C++ Threading Benefits
 
 C++11/14/17 improvements:
+
 - Standardized threading library
 - RAII-based lock management
 - Atomic operations without inline assembly
@@ -855,6 +862,7 @@ C++11/14/17 improvements:
 ## Practical Exercise
 
 Implement a parallel file processor:
+
 1. Create a thread pool
 1. Process multiple files concurrently
 1. Collect results safely

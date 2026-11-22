@@ -489,6 +489,7 @@ Bonus:
 ## Summary: Agents, Memory and LangChain
 
 **What we covered:**
+
 - AI agents: architecture, planning, and the observe-think-act loop
 - Memory systems: buffer, summary, vector, and entity memory
 - RAG: retrieval-augmented generation for knowledge-grounded responses

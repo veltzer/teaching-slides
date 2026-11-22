@@ -17,6 +17,7 @@ audience:
 ---
 
 ## What is Disaster Recovery?
+
 - Plan and process for recovering from major failures
 - Not just backup: full service restoration
 - Minimize downtime and data loss
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## RPO and RTO: Details
+
 - RPO (Recovery Point Objective): how much data can you lose?
 - RTO (Recovery Time Objective): how long can you be down?
 - RPO = 0: no data loss (synchronous replication)
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## DR Strategies Spectrum: Details
+
 1. Backup and Restore: lowest cost, highest RTO
 1. Pilot Light: minimal always-on footprint
 1. Warm Standby: scaled-down running copy
@@ -55,6 +58,7 @@ audience:
 ---
 
 ## Backup and Restore
+
 - Regular backups to another Region
 - Rebuild infrastructure from IaC on recovery
 - Restore data from backups
@@ -64,6 +68,7 @@ audience:
 ---
 
 ## Pilot Light
+
 - Core components always running in DR Region
 - Database replicated (but minimal compute)
 - Scale up on failover
@@ -73,6 +78,7 @@ audience:
 ---
 
 ## Warm Standby
+
 - Scaled-down but fully functional copy in DR Region
 - All components running at reduced capacity
 - Scale up on failover
@@ -82,6 +88,7 @@ audience:
 ---
 
 ## Multi-Site Active-Active
+
 - Full copy running in both Regions
 - Traffic distributed across both
 - Instant failover (no recovery needed)
@@ -91,6 +98,7 @@ audience:
 ---
 
 ## Using the Cloud as DR
+
 - On-premises primary, cloud DR
 - Replicate data to cloud continuously
 - Stand up infrastructure from IaC on failure
@@ -100,6 +108,7 @@ audience:
 ---
 
 ## Fault Tolerance vs Disaster Recovery
+
 - Fault tolerance: survive component failure without interruption
 - DR: recover from major disaster after interruption
 - Multi-AZ: fault tolerance
@@ -109,6 +118,7 @@ audience:
 ---
 
 ## Cloud DR Building Blocks
+
 - Cross-Region replication (S3, RDS, DynamoDB)
 - AMI/image copies across Regions
 - Infrastructure as Code (rebuild in minutes)
@@ -142,6 +152,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## Database DR
+
 - RDS Multi-AZ: automatic failover within Region
 - RDS Cross-Region Read Replicas: promote on DR
 - DynamoDB Global Tables: multi-Region active-active
@@ -151,6 +162,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## Testing DR
+
 - DR plan without testing is just documentation
 - Regular DR drills (quarterly or annually)
 - Simulate real failures
@@ -160,6 +172,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## Chaos Engineering
+
 - Deliberately inject failures to find weaknesses
 - Netflix Chaos Monkey: random instance termination
 - AWS Fault Injection Simulator
@@ -169,6 +182,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## DR Automation
+
 - Manual DR failover is slow and error-prone
 - Automate failover with scripts and runbooks
 - Use health checks to trigger automatic failover
@@ -178,6 +192,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## Patterns of DR in the Cloud
+
 - DNS-based failover: simplest
 - Database promotion: promote read replica
 - Full stack redeployment from IaC
@@ -187,6 +202,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## Multi-Region Data Replication
+
 - S3 Cross-Region Replication
 - RDS Cross-Region Read Replicas
 - DynamoDB Global Tables
@@ -196,6 +212,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## DNS-Based Failover
+
 - Route 53 / Cloud DNS health checks
 - Failover routing policy
 - If primary Region unhealthy, route to DR Region
@@ -234,6 +251,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## Backup Strategy
+
 - 3-2-1 rule: 3 copies, 2 media types, 1 offsite
 - Automate all backups
 - Test restoration regularly (not just backup)
@@ -243,6 +261,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## Recovery Runbook Example
+
 1. Confirm the outage (not a transient issue)
 1. Notify the team and stakeholders
 1. Execute failover (automated or manual)
@@ -253,6 +272,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## DR Cost Optimization
+
 - Backup and Restore: storage costs only
 - Pilot Light: minimal compute (small instances)
 - Warm Standby: reduced-size instances
@@ -262,6 +282,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## DR Documentation
+
 - Document every step of the recovery process
 - Runbooks for each failure scenario
 - Contact information and escalation paths
@@ -271,6 +292,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## Storage DR Strategies
+
 - S3 Cross-Region Replication: continuous
 - EBS snapshots copied to DR Region: periodic
 - EFS replication: AWS Backup cross-Region
@@ -280,6 +302,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## Application DR Considerations
+
 - Stateless apps: easiest to recover (just redeploy)
 - Stateful apps: data synchronization is the challenge
 - DNS TTL affects failover speed
@@ -289,6 +312,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## DR for Serverless
+
 - Lambda functions: deploy to multiple Regions
 - DynamoDB Global Tables: automatic multi-Region
 - API Gateway: deploy to DR Region
@@ -298,6 +322,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## Business Continuity Planning
+
 - DR is part of broader business continuity
 - Communication plan during outages
 - Customer notification procedures
@@ -307,6 +332,7 @@ aws s3api put-bucket-replication \
 ---
 
 ## Key Takeaways
+
 - Define RPO and RTO based on business requirements
 - Choose DR strategy based on cost vs recovery speed
 - Cloud makes DR affordable (pay for storage, not idle compute)

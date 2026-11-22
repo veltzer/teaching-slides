@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Why Optimize?
+
 - Improve execution speed
 - Reduce memory usage
 - Enhance energy efficiency
@@ -24,6 +25,7 @@ audience:
 ---
 
 ## Common Optimization Strategies
+
 1. Loop optimization
 1. Function inlining
 1. Branch prediction optimization
@@ -77,6 +79,7 @@ After:
 ---
 
 ## Function Inlining
+
 - Replace function call with actual code
 - Eliminates call/return overhead
 - May increase code size
@@ -96,6 +99,7 @@ mov [result], eax
 ---
 
 ## Branch Prediction Optimization
+
 - Arrange code so that the most likely path is fall-through
 - Use conditional moves instead of branches for simple conditions
 
@@ -122,6 +126,7 @@ Can be optimized to:
 ---
 
 ## Data Alignment
+
 - Align data to natural boundaries
 - Improves memory access efficiency
 
@@ -137,6 +142,7 @@ my_array:
 ---
 
 ## Register Allocation
+
 - Keep frequently used values in registers
 - Minimize memory access
 
@@ -161,6 +167,7 @@ mov [counter], eax
 ---
 
 ## Instruction Selection
+
 - Choose instructions with lower latency or higher throughput
 - Use SIMD instructions for data parallelism
 
@@ -211,6 +218,7 @@ add esi, array_start  ; starting point for this thread
 ---
 
 ## Profiling and Benchmarking
+
 - Use tools like `gprof`, `perf`, or `valgrind`
 - Identify performance bottlenecks
 - Measure impact of optimizations
@@ -226,6 +234,7 @@ gprof program gmon.out > analysis.txt
 ---
 
 ## Optimization Pitfalls
+
 - Premature optimization
 - Over-optimization leading to unreadable code
 - Architecture-specific optimizations reducing portability

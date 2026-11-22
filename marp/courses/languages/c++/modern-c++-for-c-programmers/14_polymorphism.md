@@ -7,6 +7,7 @@
 Polymorphism allows objects of different types to be treated as objects of a common base type
 
 Key benefits:
+
 1. Code reusability and flexibility
 1. Runtime behavior selection
 1. Clean separation of interface and implementation
@@ -106,6 +107,7 @@ public:
 ```
 
 Performance considerations:
+
 1. Virtual table lookup (vtable)
 1. Indirect function call
 1. Prevents some compiler optimizations
@@ -644,6 +646,7 @@ Use polymorphism when:
 1. **Code reuse** across different types is beneficial
 
 Avoid when:
+
 1. **Performance** is critical and overhead matters
 1. **Only one implementation** will ever exist
 1. **Compile-time selection** is sufficient

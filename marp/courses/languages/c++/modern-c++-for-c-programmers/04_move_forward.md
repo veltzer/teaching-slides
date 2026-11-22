@@ -174,6 +174,7 @@ void performanceExample() {
 ## Compiler Synthesized Member Functions
 
 In C++11, compiler can synthesize:
+
 1. Default constructor
 1. Destructor
 1. Copy constructor
@@ -182,6 +183,7 @@ In C++11, compiler can synthesize:
 1. Move assignment operator
 
 Default behavior:
+
 - Performs memberwise copy/move for each member
 - Calls base class copy/move operations
 
@@ -464,6 +466,7 @@ g(Widget());       // OK: T deduced as Widget, so param is Widget&&
 ## Reference Collapsing Rules
 
 When forming a reference to a reference, the following rules apply:
+
 - T& & becomes T&
 - T& && becomes T&
 - T&& & becomes T&

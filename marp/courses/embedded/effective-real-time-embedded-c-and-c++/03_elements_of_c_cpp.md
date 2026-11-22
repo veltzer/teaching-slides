@@ -27,6 +27,7 @@ audience:
 ## Type Specifiers
 
 Basic type specifiers in C/C++:
+
 1. `char`, `int`, `float`, `double`
 1. `short`, `long`, `long long`
 1. `signed`, `unsigned`

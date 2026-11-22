@@ -47,6 +47,7 @@ lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINT,UUID
 ```
 
 Device naming:
+
 - `/dev/sda`, `/dev/sdb` - SCSI/SATA disks
 - `/dev/nvme0n1` - NVMe drives
 - `/dev/vda` - VirtIO disks (VMs)
@@ -129,6 +130,7 @@ sfdisk /dev/sdb < sdb-partitions.bak
 ```
 
 Best practices:
+
 - Always use GPT for new systems
 - Align partitions to 1MiB boundaries
 - Keep partition table backups

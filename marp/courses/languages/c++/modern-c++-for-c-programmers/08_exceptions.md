@@ -5,12 +5,14 @@
 ## Why Exception Handling?
 
 Traditional error handling approaches:
+
 - Return codes (error-prone, ignored)
 - Global error variables (not thread-safe)
 - Assertions (debug-only)
 - Callbacks (complex control flow)
 
 **Exceptions provide:**
+
 - Automatic error propagation
 - Separation of error handling from normal logic
 - Type-safe error information
@@ -51,11 +53,13 @@ int main() {
 ## Classifying Exceptions
 
 **By Recoverability:**
+
 - **Recoverable**: Network timeout, file not found
 - **Programming errors**: Null pointer, array bounds
 - **System failures**: Out of memory, hardware failure
 
 **By Source:**
+
 - **Standard library exceptions**
 - **User-defined exceptions**
 - **System exceptions**
@@ -591,11 +595,13 @@ private:
 ## STL Exception Guarantees
 
 **Strong Guarantee:**
+
 - `std::vector::push_back()` (if move constructor is noexcept)
 - `std::list::insert()`
 - `std::map::insert()`
 
 **Basic Guarantee:**
+
 - `std::vector::push_back()` (if move constructor can throw)
 - Most STL algorithms
 
@@ -604,6 +610,7 @@ private:
 ## STL Exception Guarantees (cont.)
 
 **No-throw Guarantee:**
+
 - `std::vector::size()`
 - `std::vector::empty()`
 - Move operations (when properly implemented)
@@ -663,6 +670,7 @@ int main() {
 ## Exception Handling Best Practices
 
 **Do:**
+
 - Use RAII for resource management
 - Catch exceptions by const reference
 - Throw by value, catch by reference
@@ -674,6 +682,7 @@ int main() {
 ## Exception Handling Best Practices (cont.)
 
 **Don't:**
+
 - Throw exceptions from destructors
 - Catch everything with `catch(...)`
 - Use exceptions for normal control flow
@@ -750,6 +759,7 @@ TEST(VectorTest, ExceptionSafety) {
 ## Summary
 
 Exception handling in modern C++ provides:
+
 - **Robust error propagation**
 - **Automatic resource cleanup**
 - **Clear separation of concerns**
@@ -760,6 +770,7 @@ Exception handling in modern C++ provides:
 ## Summary (cont.)
 
 Key concepts:
+
 - RAII for resource management
 - Exception safety guarantees
 - Stack unwinding

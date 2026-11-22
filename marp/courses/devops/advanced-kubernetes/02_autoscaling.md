@@ -80,6 +80,7 @@ desiredReplicas = ceil[currentReplicas * (currentMetric / desiredMetric)]
 ```
 
 **Example:**
+
 - Current replicas: 3
 - Current CPU utilization: 90%
 - Target CPU utilization: 70%

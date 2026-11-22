@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Why Managed Databases?
+
 - No server provisioning or patching
 - Automated backups and recovery
 - High availability built in
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## Database Models
+
 - Relational (SQL): structured data, ACID transactions
 - Key-Value: simple lookups, high throughput
 - Document: flexible schemas, JSON-like data
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## SQL vs NoSQL
+
 - SQL: fixed schema, joins, transactions
 - NoSQL: flexible schema, horizontal scaling
 - SQL: best for complex queries and relationships
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## AWS Database Services Overview
+
 - Amazon RDS: managed relational databases
 - Amazon Aurora: high-performance relational
 - Amazon DynamoDB: managed NoSQL
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## Amazon RDS Overview
+
 - Relational Database Service
 - Managed relational databases
 - Handles provisioning, patching, backups
@@ -68,6 +73,7 @@ audience:
 ---
 
 ## RDS Supported Engines
+
 1. Amazon Aurora (MySQL and PostgreSQL compatible)
 1. MySQL
 1. PostgreSQL
@@ -78,6 +84,7 @@ audience:
 ---
 
 ## RDS Instance Classes
+
 - Standard (db.m6i): general purpose
 - Memory Optimized (db.r6i): memory-intensive
 - Burstable (db.t3): variable workloads
@@ -87,6 +94,7 @@ audience:
 ---
 
 ## Amazon Aurora
+
 - AWS-built relational database
 - MySQL and PostgreSQL compatible
 - Up to 5x faster than standard MySQL
@@ -96,6 +104,7 @@ audience:
 ---
 
 ## Aurora Architecture: Details
+
 - Shared distributed storage layer
 - 6 copies of data across 3 AZs
 - Self-healing storage
@@ -111,6 +120,7 @@ audience:
 ---
 
 ## Aurora Serverless
+
 - On-demand auto-scaling Aurora
 - Scales compute capacity up and down
 - Pay per second of usage
@@ -120,6 +130,7 @@ audience:
 ---
 
 ## RDS Multi-AZ Deployments
+
 - Synchronous replication to standby
 - Automatic failover on failure (60-120 seconds)
 - No manual intervention required
@@ -135,6 +146,7 @@ audience:
 ---
 
 ## RDS Read Replicas
+
 - Asynchronous replication
 - Offload read traffic from primary
 - Up to 5 read replicas (RDS), 15 (Aurora)
@@ -144,6 +156,7 @@ audience:
 ---
 
 ## RDS Backups
+
 - Automated daily backups (snapshot + transaction logs)
 - Retention period: 1-35 days
 - Manual snapshots (no expiration)
@@ -153,6 +166,7 @@ audience:
 ---
 
 ## RDS Security
+
 - Encryption at rest with KMS
 - Encryption in transit with SSL/TLS
 - Network isolation with VPC
@@ -178,6 +192,7 @@ aws rds create-db-instance \
 ---
 
 ## Amazon DynamoDB Overview
+
 - Fully managed NoSQL database
 - Key-value and document data model
 - Single-digit millisecond performance at any scale
@@ -187,6 +202,7 @@ aws rds create-db-instance \
 ---
 
 ## DynamoDB Key Concepts
+
 - Tables: collection of items
 - Items: collection of attributes (like rows)
 - Primary Key: partition key or partition + sort key
@@ -216,6 +232,7 @@ aws dynamodb put-item \
 ---
 
 ## DynamoDB Partition Key
+
 - Hash key: determines data distribution
 - Must be unique if used alone
 - Composite key: partition key + sort key
@@ -225,6 +242,7 @@ aws dynamodb put-item \
 ---
 
 ## DynamoDB Capacity Modes
+
 - Provisioned: specify read/write capacity units
 - On-Demand: pay per request, auto-scales
 - Provisioned with Auto Scaling: automatic adjustment
@@ -234,6 +252,7 @@ aws dynamodb put-item \
 ---
 
 ## DynamoDB Secondary Indexes
+
 - Global Secondary Index (GSI): different partition key
 - Local Secondary Index (LSI): same partition key, different sort key
 - Query data using alternative keys
@@ -243,6 +262,7 @@ aws dynamodb put-item \
 ---
 
 ## DynamoDB Advanced Features
+
 - Global Tables: multi-Region, multi-active replication
 - DynamoDB Streams: capture item-level changes
 - DAX: in-memory caching (microsecond reads)
@@ -252,6 +272,7 @@ aws dynamodb put-item \
 ---
 
 ## DynamoDB Use Cases
+
 - Web session management
 - Gaming leaderboards
 - IoT data ingestion
@@ -261,6 +282,7 @@ aws dynamodb put-item \
 ---
 
 ## Amazon ElastiCache
+
 - Managed in-memory caching
 - Redis or Memcached engines
 - Microsecond response times
@@ -270,6 +292,7 @@ aws dynamodb put-item \
 ---
 
 ## Choosing Between RDS and DynamoDB
+
 - RDS: complex queries, joins, transactions
 - DynamoDB: simple access patterns, massive scale
 - RDS: predictable schema, SQL skills
@@ -279,6 +302,7 @@ aws dynamodb put-item \
 ---
 
 ## Database Migration
+
 - AWS Database Migration Service (DMS)
 - Migrate to and from AWS
 - Supports homogeneous and heterogeneous migrations

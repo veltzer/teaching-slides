@@ -20,6 +20,7 @@ audience:
 The bootloader is the first software that runs when a system powers on
 
 Key responsibilities:
+
 1. Initialize basic hardware
 1. Load the kernel into memory
 1. Pass control to the kernel
@@ -51,6 +52,7 @@ Key responsibilities:
 Universal Bootloader - most common bootloader for embedded Linux
 
 Key features:
+
 - Support for multiple architectures
 - Extensive device drivers
 - Network boot support
@@ -75,6 +77,7 @@ make <board>_defconfig
 ```
 
 Key configuration files:
+
 - `configs/<board>_defconfig`
 - `include/configs/<board>.h`
 - `board/<vendor>/<board>/`
@@ -115,6 +118,7 @@ ls -la u-boot*
 ## SPL (Secondary Program Loader)
 
 Small first-stage bootloader:
+
 - Fits in limited SRAM
 - Initializes DRAM
 - Loads full U-Boot
@@ -214,6 +218,7 @@ run bootscript
 ## Device Tree in U-Boot
 
 U-Boot uses Device Tree for:
+
 - Hardware configuration
 - Pin multiplexing
 - Driver binding
@@ -254,6 +259,7 @@ fdt mknode / mynode
 ## Implementing Secure Boot
 
 Key components:
+
 1. Hardware root of trust
 1. Signed bootloader images
 1. Certificate chain
@@ -302,6 +308,7 @@ FIT (Flattened Image Tree) images:
 ## Bootloader to Kernel Handoff
 
 Information passed to kernel:
+
 1. Machine type (ARM)
 1. Memory information
 1. Command line parameters
@@ -313,11 +320,13 @@ Information passed to kernel:
 ## ATAGS vs Device Tree
 
 Legacy ATAGS:
+
 - Architecture-specific
 - Limited information
 - Deprecated
 
 Modern Device Tree:
+
 - Architecture-independent
 - Comprehensive hardware description
 - Standard format
@@ -417,6 +426,7 @@ bootstage report
 ## Optimizing U-Boot
 
 Reduce boot time:
+
 1. Remove unnecessary features
 1. Optimize environment size
 1. Use faster storage
@@ -567,12 +577,14 @@ U_BOOT_CMD(
 ## Summary
 
 Bootloader is critical for:
+
 - Hardware initialization
 - Loading operating system
 - System recovery
 - Security foundation
 
 Key skills:
+
 - U-Boot configuration
 - Boot optimization
 - Secure boot implementation

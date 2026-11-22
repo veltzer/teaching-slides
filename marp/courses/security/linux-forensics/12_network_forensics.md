@@ -13,6 +13,7 @@ audience:
 # Network Forensics and Intrusion Tracing
 
 ## Course: Linux Forensics
+
 - Network evidence connects a host compromise to the wider attack
 - Packet captures reveal exfiltration, command channels, and lateral movement
 - This module covers `pcap` analysis, session reconstruction, and traffic IOCs
@@ -162,6 +163,7 @@ tshark -r /evidence/capture.pcap -Y "dns" \
 Analyze the provided capture from a compromised host.
 
 Deliverables:
+
 1. The protocol hierarchy and top three conversations by volume
 1. A reconstructed SSH session showing the suspected exfiltration flow
 1. Any files recovered from the traffic, with hashes

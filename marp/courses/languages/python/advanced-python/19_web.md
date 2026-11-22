@@ -11,6 +11,7 @@ audience:
 # Python and the Web
 
 ## Overview
+
 - Web servers with Flask
 - Web clients using the requests module
 - Web scraping with BeautifulSoup and Scrapy
@@ -29,6 +30,7 @@ audience:
 ## Web Development with Python
 
 ## The Python Web Ecosystem
+
 - Python is widely used for web development
 - Server-side applications and APIs
 - Client and automation tools
@@ -2599,6 +2601,7 @@ jobs:
 ## Summary
 
 ## Key Takeaways
+
 - Flask provides a lightweight framework for web servers
 - Requests simplifies HTTP client operations
 - BeautifulSoup and Scrapy excel at web scraping
@@ -2612,6 +2615,7 @@ jobs:
 ## Resources
 
 ## Further Reading
+
 - Flask documentation: flask.palletsprojects.com
 - Requests documentation: docs.python-requests.org
 - BeautifulSoup documentation: <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>

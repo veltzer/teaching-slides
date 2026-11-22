@@ -97,6 +97,7 @@ printf("Debug: x = %d\n", x);
 ---
 
 ## Macro Pitfalls and Best Practices
+
 - Be cautious with side effects
 - Use parentheses in macro definitions
 - Consider using inline functions instead
@@ -111,6 +112,7 @@ printf("Debug: x = %d\n", x);
 ---
 
 ## #pragma Directive
+
 - Compiler-specific instructions
 - Common uses:
     - Control struct packing

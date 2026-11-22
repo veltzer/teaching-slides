@@ -22,6 +22,7 @@ audience:
 ---
 
 Chapter Overview
+
 - QEMU source code organization
 - TCG (Tiny Code Generator) basics
 - Contributing to QEMU
@@ -29,6 +30,7 @@ Chapter Overview
 ---
 
 QEMU Project Structure
+
 - Repository organization
 - Key directories and their purposes
 - Build system overview
@@ -44,6 +46,7 @@ QEMU Source Code Architecture
 ---
 
 QEMU's Event Loop
+
 - Main loop implementation
 - Event handling and processing
 - Timers and bottom halves
@@ -51,6 +54,7 @@ QEMU's Event Loop
 ---
 
 Memory Management in QEMU
+
 - Guest physical memory emulation
 - Memory API and allocation strategies
 - Page table emulation
@@ -58,6 +62,7 @@ Memory Management in QEMU
 ---
 
 QEMU CPU Emulation Overview
+
 - Generic CPU API
 - Target-specific CPU implementations
 - CPU state management
@@ -65,6 +70,7 @@ QEMU CPU Emulation Overview
 ---
 
 Tiny Code Generator (TCG) Basics
+
 - TCG's role in CPU emulation
 - Front-end and back-end separation
 - Basic block translation process
@@ -72,6 +78,7 @@ Tiny Code Generator (TCG) Basics
 ---
 
 TCG Intermediate Representation
+
 - TCG operations and their semantics
 - Register allocation in TCG
 - Optimization passes in TCG
@@ -87,6 +94,7 @@ TCG Code Generation Process
 ---
 
 KVM Integration in QEMU
+
 - KVM API usage in QEMU
 - Switching between TCG and KVM
 - VCPU threading model
@@ -94,6 +102,7 @@ KVM Integration in QEMU
 ---
 
 QEMU Device Model Implementation
+
 - QOM (QEMU Object Model) basics
 - Device state and VMState
 - Implementing device functionality
@@ -101,6 +110,7 @@ QEMU Device Model Implementation
 ---
 
 QEMU Bus Models
+
 - PCI/PCIe bus emulation
 - Other bus implementations (e.g., USB, I2C)
 - Hotplugging support
@@ -108,6 +118,7 @@ QEMU Bus Models
 ---
 
 I/O Emulation in QEMU
+
 - Memory-mapped I/O (MMIO)
 - Port I/O emulation
 - DMA emulation
@@ -115,6 +126,7 @@ I/O Emulation in QEMU
 ---
 
 QEMU Block Layer
+
 - Block driver implementation
 - I/O request processing
 - Block device features (snapshots, migration)
@@ -122,6 +134,7 @@ QEMU Block Layer
 ---
 
 QEMU Network Stack
+
 - Network backend implementations
 - Packet processing in QEMU
 - Network device models interaction
@@ -129,6 +142,7 @@ QEMU Network Stack
 ---
 
 QEMU User Mode Emulation
+
 - Linux user mode implementation
 - System call translation
 - Signal handling in user mode
@@ -136,6 +150,7 @@ QEMU User Mode Emulation
 ---
 
 QEMU Tools and Utilities
+
 - QEMU disk image utilities
 - QEMU I/O library
 - Other QEMU-related tools
@@ -143,6 +158,7 @@ QEMU Tools and Utilities
 ---
 
 QEMU Debugging Internals
+
 - GDB stub implementation
 - Debugging interfaces for device models
 - Internal debugging techniques
@@ -150,6 +166,7 @@ QEMU Debugging Internals
 ---
 
 QEMU Tracing Subsystem
+
 - Trace event definition and generation
 - Trace backends implementation
 - Using tracing for QEMU development
@@ -157,6 +174,7 @@ QEMU Tracing Subsystem
 ---
 
 QEMU Migration Subsystem
+
 - Live migration implementation
 - Tracking dirty pages
 - Handling device state during migration
@@ -164,6 +182,7 @@ QEMU Migration Subsystem
 ---
 
 QEMU and BIOS/UEFI Interaction
+
 - Firmware loading process
 - QEMU and SeaBIOS interaction
 - UEFI support in QEMU
@@ -171,6 +190,7 @@ QEMU and BIOS/UEFI Interaction
 ---
 
 QEMU Monitor Implementation
+
 - Human Monitor Interface (HMI)
 - QEMU Monitor Protocol (QMP)
 - Implementing new monitor commands
@@ -178,6 +198,7 @@ QEMU Monitor Implementation
 ---
 
 QEMU Configuration Subsystem
+
 - Command-line parsing
 - Configuration file handling
 - Runtime configuration changes
@@ -185,6 +206,7 @@ QEMU Configuration Subsystem
 ---
 
 Testing QEMU Internals
+
 - Unit testing framework
 - QEMU test suite organization
 - Continuous Integration for QEMU
@@ -192,6 +214,7 @@ Testing QEMU Internals
 ---
 
 Profiling and Optimizing QEMU
+
 - Performance bottlenecks in QEMU
 - Profiling techniques for QEMU
 - Optimization strategies
@@ -199,6 +222,7 @@ Profiling and Optimizing QEMU
 ---
 
 QEMU Security Considerations
+
 - Potential security issues in QEMU
 - Secure coding practices
 - Handling security vulnerabilities
@@ -206,6 +230,7 @@ QEMU Security Considerations
 ---
 
 Extending QEMU
+
 - Adding new CPU architectures
 - Implementing new device models
 - Creating QEMU plugins
@@ -213,6 +238,7 @@ Extending QEMU
 ---
 
 QEMU Community and Development Process
+
 - Mailing lists and communication channels
 - Patch submission process
 - Code review practices
@@ -220,6 +246,7 @@ QEMU Community and Development Process
 ---
 
 Future Directions in QEMU Development
+
 - Ongoing research and development areas
 - Potential new features and improvements
 - Challenges in emulation and virtualization

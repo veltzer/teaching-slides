@@ -24,6 +24,7 @@ audience:
 ---
 
 ## Why Migrate to Multi-Cloud?
+
 - Avoid vendor lock-in after single-cloud adoption
 - Leverage best-of-breed services across providers
 - Meet regulatory requirements for provider diversity
@@ -33,6 +34,7 @@ audience:
 ---
 
 ## Migration is Not Lift-and-Shift
+
 - Moving between clouds is not the same as moving to the cloud
 - Cloud-native services differ fundamentally between providers
 - Database engines, APIs, and networking models are different
@@ -42,6 +44,7 @@ audience:
 ---
 
 ## The 7 Rs of Migration
+
 1. Rehost: move as-is (VMs, containers)
 1. Replatform: minor adjustments (e.g., swap managed database)
 1. Refactor: rearchitect for target cloud
@@ -53,6 +56,7 @@ audience:
 ---
 
 ## Assessing Workloads for Migration
+
 - Inventory all workloads on current cloud
 - Categorize by migration complexity
 - Factors: cloud-specific dependencies, data volume, latency requirements
@@ -68,6 +72,7 @@ audience:
 ---
 
 ## Workload Assessment Matrix
+
 - Business value: high vs low
 - Migration difficulty: easy vs hard
 - Four quadrants determine priority
@@ -78,6 +83,7 @@ audience:
 ---
 
 ## Phased Migration Approach
+
 1. Phase 1: Assessment and planning (weeks 1-4)
 1. Phase 2: Foundation (networking, identity, governance) (weeks 5-8)
 1. Phase 3: Pilot migration (1-2 workloads) (weeks 9-12)
@@ -87,6 +93,7 @@ audience:
 ---
 
 ## Phase 1: Assessment Deep Dive
+
 - Discovery tools: AWS Migration Hub, Azure Migrate, GCP Migration Center
 - Map all dependencies between services
 - Identify data gravity (where is the most data?)
@@ -96,6 +103,7 @@ audience:
 ---
 
 ## Phase 2: Foundation Setup
+
 - Networking: set up cross-cloud connectivity (VPN, interconnect)
 - Identity: federate identity across both clouds
 - IaC: establish Terraform modules for target cloud
@@ -105,6 +113,7 @@ audience:
 ---
 
 ## Phase 3: Pilot Migration
+
 - Select 1-2 low-risk, representative workloads
 - Execute full migration including data
 - Validate functionality, performance, and cost
@@ -114,6 +123,7 @@ audience:
 ---
 
 ## Data Migration Challenges
+
 - Data is the hardest part of any migration
 - Volume: terabytes or petabytes take time to transfer
 - Consistency: data changes during migration
@@ -123,6 +133,7 @@ audience:
 ---
 
 ## Database Migration Approaches
+
 - Dump and restore: simplest, requires downtime
 - Continuous replication: near-zero downtime
 - Schema conversion: tools for translating DDL
@@ -160,6 +171,7 @@ gcloud sql import sql my-gcp-instance \
 ---
 
 ## Container Migration
+
 - Containers are the most portable workload type
 - Docker images work across all cloud container services
 - Migration path: EKS -> AKS or GKE (or vice versa)
@@ -193,6 +205,7 @@ kubectl get svc -n my-app
 ---
 
 ## Serverless Migration Challenges
+
 - Lambda, Azure Functions, Cloud Functions have different runtimes
 - Event sources differ completely between providers
 - No standard packaging format (each has its own)
@@ -202,6 +215,7 @@ kubectl get svc -n my-app
 ---
 
 ## Networking During Migration
+
 - Both clouds must be connected during transition
 - VPN or dedicated interconnect between clouds
 - DNS-based traffic splitting for gradual cutover
@@ -211,6 +225,7 @@ kubectl get svc -n my-app
 ---
 
 ## Testing and Validation
+
 - Functional testing: does the migrated workload work correctly?
 - Performance testing: latency, throughput, resource utilization
 - Data integrity: compare checksums, row counts, sample queries
@@ -220,6 +235,7 @@ kubectl get svc -n my-app
 ---
 
 ## Rollback Planning
+
 - Every migration phase needs a rollback plan
 - Rollback criteria: define what triggers a rollback
 - Data rollback is the hardest: how to sync changes back
@@ -229,6 +245,7 @@ kubectl get svc -n my-app
 ---
 
 ## Migration Tools
+
 - Terraform Import: import existing resources into IaC
 - Velero: Kubernetes backup and migration
 - AWS DMS / Azure DMS / GCP DMS: database migration
@@ -238,6 +255,7 @@ kubectl get svc -n my-app
 ---
 
 ## Cost of Migration
+
 - Direct costs: tooling, consulting, cloud spend during dual-running
 - Indirect costs: team time, reduced velocity, opportunity cost
 - Egress charges for data transfer out of source cloud
@@ -247,6 +265,7 @@ kubectl get svc -n my-app
 ---
 
 ## Post-Migration Optimization
+
 - Do not just replicate the old architecture on the new cloud
 - Leverage target cloud's native services where appropriate
 - Rightsize resources (instance types differ between providers)
@@ -256,6 +275,7 @@ kubectl get svc -n my-app
 ---
 
 ## Common Migration Pitfalls
+
 - Underestimating data migration complexity
 - Not accounting for egress costs
 - Skipping the pilot phase
@@ -266,6 +286,7 @@ kubectl get svc -n my-app
 ---
 
 ## Case Study: E-Commerce Platform Migration
+
 - AWS-only platform migrating critical services to GCP
 - Phase 1: Containerized microservices (EKS to GKE) - 4 weeks
 - Phase 2: Database migration (RDS PostgreSQL to Cloud SQL) - 3 weeks
@@ -276,6 +297,7 @@ kubectl get svc -n my-app
 ---
 
 ## Key Takeaways
+
 - Assess workloads before deciding what to migrate
 - Phase the migration: foundation, pilot, waves, optimize
 - Data migration is the hardest part; plan for it specifically

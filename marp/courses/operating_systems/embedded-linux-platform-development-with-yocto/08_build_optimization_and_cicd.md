@@ -41,6 +41,7 @@ PARALLEL_MAKE = "-j 12"
 ```
 
 Memory recommendations:
+
 - Minimum: 8GB RAM
 - Recommended: 16GB+ RAM
 - Optimal: 32GB+ RAM
@@ -167,6 +168,7 @@ RM_WORK_EXCLUDE += "temp"
 ```
 
 Disk space savings:
+
 - Without rm_work: ~150GB
 - With rm_work: ~50GB
 - Trade-off: Slower incremental builds
@@ -856,6 +858,7 @@ IMAGE_NAME = "${IMAGE_BASENAME}-${MACHINE}-${IMAGE_VERSION}"
 ```
 
 Release checklist:
+
 - Build all target machines
 - Run automated tests
 - Generate SDK
@@ -869,6 +872,7 @@ Release checklist:
 ## Summary
 
 Optimization strategies:
+
 - Hardware: SSD, RAM, CPU cores
 - Configuration: Parallelism, caching
 - Network: Mirrors, bandwidth
@@ -880,6 +884,7 @@ Optimization strategies:
 ## Summary (cont.)
 
 CI/CD best practices:
+
 - Automated builds
 - Continuous testing
 - Artifact management

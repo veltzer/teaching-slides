@@ -5,6 +5,7 @@
 The `volatile` keyword tells the compiler that a variable's value may change at any time without any action being taken by the code
 
 **Key characteristics:**
+
 - Prevents compiler optimizations that assume the value doesn't change
 - Forces the compiler to read from memory every time
 - Does NOT provide thread synchronization
@@ -1626,6 +1627,7 @@ void useHardwareResource() {
 Guidelines for using volatile effectively:
 
 **Do Use Volatile For:**
+
 - Memory-mapped hardware registers
 - Variables modified by signal handlers
 - Variables accessed by setjmp/longjmp
@@ -1636,6 +1638,7 @@ Guidelines for using volatile effectively:
 ## Best Practices for Volatile (cont.)
 
 **Don't Use Volatile For:**
+
 - Thread synchronization (use atomic instead)
 - General multi-threading (use std::atomic)
 - Performance optimization (it prevents optimizations)
@@ -2007,6 +2010,7 @@ public:
 ## Summary and Best Practices
 
 **Volatile Summary:**
+
 - Use for hardware registers and memory-mapped I/O
 - Prevents compiler optimizations, not CPU reordering
 - Does NOT provide thread synchronization
@@ -2017,6 +2021,7 @@ public:
 ## Summary and Best Practices (cont.)
 
 **Key Guidelines:**
+
 1. **Use volatile for hardware programming** - memory-mapped registers
 1. **Use atomic for thread synchronization** - not volatile
 1. **Combine with placement new** for hardware object construction
@@ -2029,6 +2034,7 @@ public:
 ## Summary and Best Practices (cont.) (cont.)
 
 **Modern C++ Approach:**
+
 - Prefer `std::atomic` over volatile for thread safety
 - Use memory ordering specifications for performance
 - Apply RAII principles to hardware resource management

@@ -80,6 +80,7 @@ audience:
 ## CQRS Pros and Cons
 
 Pros:
+
 - Allows optimizing read and write operations independently
 - Supports scalability and performance by separating concerns
 - Enables using different data models for reads and writes
@@ -91,6 +92,7 @@ Pros:
 ## CQRS Pros and Cons (cont.)
 
 Cons:
+
 - Introduces complexity in terms of maintaining multiple models
 - Requires careful consideration of eventual consistency and synchronization
 - May lead to increased development and maintenance efforts
@@ -154,6 +156,7 @@ Cons:
 ## Event Sourcing Pros and Cons
 
 Pros:
+
 - Provides a complete audit trail and history of changes
 - Enables temporal queries and debugging by replaying events
 - Supports flexible querying and reporting by creating projections
@@ -165,6 +168,7 @@ Pros:
 ## Event Sourcing Pros and Cons (cont.)
 
 Cons:
+
 - Introduces complexity in terms of event modeling and handling
 - Requires careful consideration of event schema evolution and versioning
 - May lead to increased storage requirements for storing events
@@ -230,6 +234,7 @@ Cons:
 ## Hexagonal Pros and Cons
 
 Pros:
+
 - Promotes loose coupling and separation of concerns
 - Improves testability by isolating the domain from external dependencies
 - Enhances maintainability and flexibility by allowing easy replacement of adapters
@@ -241,6 +246,7 @@ Pros:
 ## Hexagonal Pros and Cons (cont.)
 
 Cons:
+
 - Introduces additional complexity and indirection
 - Requires upfront design and definition of ports and adapters
 - May lead to increased development effort and code duplication
@@ -306,6 +312,7 @@ Cons:
 ## Clean Architecture Pros and Cons
 
 Pros:
+
 - Promotes separation of concerns and modularity
 - Enhances testability by isolating the core logic from external dependencies
 - Improves maintainability by reducing the impact of changes in outer layers
@@ -317,6 +324,7 @@ Pros:
 ## Clean Architecture Pros and Cons (cont.)
 
 Cons:
+
 - Can introduce additional complexity and abstraction layers
 - Requires strict adherence to the dependency rule and architecture boundaries
 - May lead to increased development effort and code duplication
@@ -380,6 +388,7 @@ Cons:
 ## Onion Pros and Cons
 
 Pros:
+
 - Promotes a clear separation of concerns and modularity
 - Enables the domain model to be independent of external dependencies
 - Makes the application more testable by isolating the core logic
@@ -391,6 +400,7 @@ Pros:
 ## Onion Pros and Cons (cont.)
 
 Cons:
+
 - Can introduce additional layers of abstraction and complexity
 - Requires a good understanding of the principles and patterns involved
 - May lead to increased development effort and code duplication
@@ -458,6 +468,7 @@ Cons:
 ## Microkernel Pros and Cons
 
 Pros:
+
 - Promotes extensibility and flexibility by allowing the addition of new features through plugins
 - Enables the system to be customized and adapted to specific needs
 - Facilitates the development and deployment of plugins independently of the microkernel
@@ -469,6 +480,7 @@ Pros:
 ## Microkernel Pros and Cons (cont.)
 
 Cons:
+
 - Increases the overall complexity of the system due to the separation of concerns
 - Requires careful design and definition of contracts between the microkernel and plugins
 - May introduce performance overhead due to the communication between the microkernel and plugins

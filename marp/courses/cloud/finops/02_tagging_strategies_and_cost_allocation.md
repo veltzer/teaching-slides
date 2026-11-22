@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Why Tagging Matters
+
 - Tags are the foundation of cost allocation
 - Without tags, costs are a black box
 - Answer: "Who is spending what and why?"
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## What Are Tags?
+
 - Key-value pairs attached to cloud resources
 - Example: Environment=Production, Team=Backend
 - Metadata that describes the resource
@@ -57,6 +59,7 @@ resource "aws_instance" "web" {
 ---
 
 ## Designing a Tagging Strategy
+
 - Define mandatory tags for all resources
 - Keep tag keys consistent (naming convention)
 - Document the strategy and share widely
@@ -66,6 +69,7 @@ resource "aws_instance" "web" {
 ---
 
 ## Common Tag Categories
+
 - Cost allocation: Team, Project, CostCenter
 - Environment: Environment (dev, staging, prod)
 - Operations: Owner, ManagedBy, Application
@@ -75,6 +79,7 @@ resource "aws_instance" "web" {
 ---
 
 ## Mandatory vs Optional Tags
+
 - Mandatory: must be present on every resource
 - Optional: useful but not required
 - Minimum mandatory set: Team, Environment, Project
@@ -84,6 +89,7 @@ resource "aws_instance" "web" {
 ---
 
 ## Tag Naming Conventions
+
 - Consistent case: CamelCase or snake_case
 - Prefix for organization: company:team
 - Avoid spaces and special characters
@@ -93,6 +99,7 @@ resource "aws_instance" "web" {
 ---
 
 ## Tag Enforcement
+
 - Prevention: block resource creation without tags
 - Detection: scan and report untagged resources
 - AWS: SCP policies, AWS Config rules
@@ -127,6 +134,7 @@ resource "aws_instance" "web" {
 ---
 
 ## Automation for Tagging
+
 - Tag on creation via IaC templates
 - Auto-tag from CI/CD pipelines
 - Lambda/Functions to tag untagged resources
@@ -136,6 +144,7 @@ resource "aws_instance" "web" {
 ---
 
 ## Cost Allocation Using Tags
+
 - Activate cost allocation tags in billing settings
 - Tags appear in Cost Explorer and billing reports
 - Filter and group costs by any tag
@@ -151,6 +160,7 @@ resource "aws_instance" "web" {
 ---
 
 ## Account-Based Cost Allocation
+
 - Separate AWS accounts per team or project
 - Costs automatically separated
 - AWS Organizations for account management
@@ -160,6 +170,7 @@ resource "aws_instance" "web" {
 ---
 
 ## Showback vs Chargeback
+
 - Showback: inform teams of their spending (no billing)
 - Chargeback: bill teams for their actual usage
 - Showback is a good starting point
@@ -169,6 +180,7 @@ resource "aws_instance" "web" {
 ---
 
 ## Cost Allocation Reports
+
 - Regular reports per team, project, environment
 - Trend analysis: is spending growing?
 - Anomaly detection: sudden spikes
@@ -178,6 +190,7 @@ resource "aws_instance" "web" {
 ---
 
 ## Common Tagging Pitfalls
+
 - Inconsistent tag values (prod vs production vs PROD)
 - Too many mandatory tags (creates friction)
 - Not enforcing tags (they decay quickly)

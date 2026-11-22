@@ -238,6 +238,7 @@ void bubbleSort(int arr[], int size) {
 ---
 
 ## Array Limitations and Considerations
+
 1. Fixed size: Cannot be resized after declaration
 1. No bounds checking: Accessing out-of-bounds elements can cause undefined behavior
 1. No built-in size information: Size must be tracked separately
@@ -414,6 +415,7 @@ int main(void) {
 ---
 
 ## Best Practices
+
 1. Always initialize arrays when declared, if possible
 1. Use const for arrays that shouldn't be modified
 1. Use sizeof() carefully with arrays (doesn't work as expected when arrays decay to pointers)
@@ -426,6 +428,7 @@ int main(void) {
 ---
 
 ## Summary
+
 - Arrays in C are fixed-size collections of elements of the same type
 - They are closely related to pointers and are passed by reference to functions
 - Multidimensional arrays and arrays of pointers provide more complex data structures

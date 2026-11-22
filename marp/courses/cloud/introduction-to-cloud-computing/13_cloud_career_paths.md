@@ -16,6 +16,7 @@ audience:
 ---
 
 ## Cloud Roles Overview
+
 - Cloud is not a single job title
 - Multiple specializations and career paths
 - Demand exceeds supply across all roles
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Cloud Architect
+
 - Design cloud solutions and architectures
 - Choose services, patterns, and strategies
 - Ensure scalability, reliability, security, cost
@@ -40,6 +42,7 @@ audience:
 ---
 
 ## Cloud Architect Skills
+
 - Deep understanding of cloud services
 - Networking, security, databases, compute
 - Cost optimization awareness
@@ -49,6 +52,7 @@ audience:
 ---
 
 ## Cloud Engineer
+
 - Build and maintain cloud infrastructure
 - Implement architectures designed by architects
 - Write Infrastructure as Code
@@ -58,6 +62,7 @@ audience:
 ---
 
 ## Cloud Engineer Skills
+
 - Infrastructure as Code (Terraform, CloudFormation)
 - Scripting (Python, Bash)
 - Networking fundamentals
@@ -67,6 +72,7 @@ audience:
 ---
 
 ## DevOps Engineer
+
 - Bridge development and operations
 - Build CI/CD pipelines
 - Automate everything possible
@@ -76,6 +82,7 @@ audience:
 ---
 
 ## DevOps Engineer Skills
+
 - CI/CD tools (Jenkins, GitHub Actions, GitLab)
 - Containers and Kubernetes
 - Infrastructure as Code
@@ -85,6 +92,7 @@ audience:
 ---
 
 ## Cloud Security Specialist
+
 - Secure cloud environments
 - Identity and access management
 - Compliance and governance
@@ -94,6 +102,7 @@ audience:
 ---
 
 ## Cloud Security Skills
+
 - IAM policies and best practices
 - Encryption and key management
 - Network security
@@ -103,6 +112,7 @@ audience:
 ---
 
 ## Site Reliability Engineer (SRE)
+
 - Ensure systems are reliable and performant
 - Define and monitor SLOs (Service Level Objectives)
 - Balance reliability with feature velocity
@@ -112,6 +122,7 @@ audience:
 ---
 
 ## Data Engineer in the Cloud
+
 - Build data pipelines and data lakes
 - Use managed services for ETL and analytics
 - BigQuery, Redshift, Glue, Databricks
@@ -121,6 +132,7 @@ audience:
 ---
 
 ## FinOps Practitioner
+
 - Manage and optimize cloud costs
 - Bridge finance and engineering
 - Tagging, budgeting, and reporting
@@ -130,6 +142,7 @@ audience:
 ---
 
 ## AWS Certifications
+
 1. Cloud Practitioner (foundational)
 1. Solutions Architect Associate
 1. Developer Associate
@@ -140,6 +153,7 @@ audience:
 ---
 
 ## Azure Certifications
+
 1. Azure Fundamentals (AZ-900)
 1. Azure Administrator (AZ-104)
 1. Azure Developer (AZ-204)
@@ -149,6 +163,7 @@ audience:
 ---
 
 ## GCP Certifications
+
 1. Cloud Digital Leader
 1. Associate Cloud Engineer
 1. Professional Cloud Architect
@@ -158,6 +173,7 @@ audience:
 ---
 
 ## Multi-Cloud Certifications
+
 - Kubernetes: CKA, CKAD, CKS
 - Terraform: HashiCorp Certified
 - Linux: LFCS, RHCSA
@@ -173,6 +189,7 @@ audience:
 ---
 
 ## Building Your Cloud Career
+
 - Start with fundamentals (this course)
 - Get hands-on with free tiers
 - Earn a foundational certification
@@ -182,6 +199,7 @@ audience:
 ---
 
 ## Learning Resources
+
 - Cloud provider official training (Skill Builder, Learn, etc.)
 - Online courses (Coursera, Udemy, A Cloud Guru)
 - Documentation and whitepapers
@@ -191,6 +209,7 @@ audience:
 ---
 
 ## Key Takeaways
+
 - Cloud skills are in high demand across all industries
 - Multiple career paths to choose from
 - Certifications validate knowledge but hands-on matters more
@@ -200,6 +219,7 @@ audience:
 ---
 
 ## Course Summary
+
 - Cloud computing: on-demand, elastic, metered resources
 - Service models: IaaS, PaaS, SaaS, FaaS
 - Deployment models: public, private, hybrid, multi-cloud
@@ -210,5 +230,6 @@ audience:
 ---
 
 ## Closing Thoughts
+
 - Continue learning with hands-on practice
 - Cloud free tiers are your sandbox

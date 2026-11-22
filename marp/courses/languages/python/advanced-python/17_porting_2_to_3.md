@@ -586,6 +586,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
 ---
 
 ### **Phase 4: Testing! Testing! Testing!**
+
 1. **Run ALL Tests in Python 3:**
     * Execute your entire test suite using your Python 3 interpreter.
     * `python3 -m unittest discover` or `pytest`

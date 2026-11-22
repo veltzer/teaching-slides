@@ -59,6 +59,7 @@ Return type    Pointer name    Parameters
 ```
 
 Reading the declaration:
+
 - `op` is a pointer to a function that takes two `int` parameters and returns `int`
 
 Without parentheses: `int *op(int, int)` means a function returning `int *` -- very different!
@@ -716,10 +717,12 @@ int main(void) {
 ## Function Pointers vs Switch: Comparison (cont.)
 
 Use switch for:
+
 - Small, fixed set of cases
 - Performance-critical inner loops
 
 Use function pointers for:
+
 - Extensible systems (plugins, callbacks)
 - Strategy pattern
 - State machines

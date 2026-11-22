@@ -25,6 +25,7 @@ audience:
 ## Security Threats
 
 Common attack vectors:
+
 - Unauthorized access
 - Code injection
 - Buffer overflows
@@ -38,6 +39,7 @@ Common attack vectors:
 ## Security Threats (cont.)
 
 Defense strategy:
+
 - Defense in depth
 - Least privilege principle
 - Secure by default
@@ -85,6 +87,7 @@ PACKAGECONFIG_remove_pn-systemd = "networkd resolved"
 ```
 
 Size comparison:
+
 - Full image: ~400MB
 - Minimal image: ~10MB
 - Custom secure: ~15-20MB
@@ -326,6 +329,7 @@ CONFIG_DEFAULT_SECURITY_SELINUX=y
 ```
 
 SELinux modes:
+
 - Enforcing: Blocks violations
 - Permissive: Logs violations
 - Disabled: No enforcement
@@ -692,6 +696,7 @@ AllowedIPs = 10.0.0.0/24
 ## Hardening Checklist
 
 System hardening:
+
 - [ ] Minimal package installation
 - [ ] Disable unnecessary services
 - [ ] Read-only rootfs
@@ -708,6 +713,7 @@ System hardening:
 ## Hardening Checklist (cont.)
 
 Application hardening:
+
 - [ ] Input validation
 - [ ] Output encoding
 - [ ] Memory safety
@@ -746,6 +752,7 @@ afl-fuzz -i input/ -o output/ ./myapp @@
 ## Compliance Standards
 
 Common standards:
+
 - IEC 62443 (Industrial)
 - ISO 27001 (Information Security)
 - NIST Cybersecurity Framework
@@ -759,6 +766,7 @@ Common standards:
 ## Compliance Standards (cont.)
 
 Documentation requirements:
+
 - Security architecture
 - Threat model
 - Risk assessment
@@ -770,6 +778,7 @@ Documentation requirements:
 ## Security Best Practices
 
 Development:
+
 - Security by design
 - Threat modeling
 - Code reviews
@@ -781,6 +790,7 @@ Development:
 ## Security Best Practices (cont.)
 
 Deployment:
+
 - Least privilege
 - Defense in depth
 - Secure defaults
@@ -792,6 +802,7 @@ Deployment:
 ## Security Best Practices (cont.) (cont.)
 
 Maintenance:
+
 - Patch management
 - Vulnerability scanning
 - Security audits
@@ -803,6 +814,7 @@ Maintenance:
 ## Summary
 
 Key security areas:
+
 - Build security and supply chain
 - System hardening and access control
 - Secure boot and encryption
@@ -816,6 +828,7 @@ Key security areas:
 ## Summary (cont.)
 
 Best practices:
+
 - Minimize attack surface
 - Enable security features
 - Regular security updates

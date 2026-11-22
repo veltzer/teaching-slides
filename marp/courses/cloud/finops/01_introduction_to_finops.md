@@ -16,6 +16,7 @@ audience:
 ---
 
 ## What is FinOps?
+
 - Financial Operations for cloud
 - Cross-functional practice for cloud cost management
 - Combination of finance, technology, and business
@@ -25,6 +26,7 @@ audience:
 ---
 
 ## The Cloud Cost Problem
+
 - Cloud spending is growing 20-30% year over year
 - Easy to provision, hard to track
 - No one "owns" the bill
@@ -34,6 +36,7 @@ audience:
 ---
 
 ## FinOps vs Traditional IT Finance
+
 - Traditional: fixed budgets, annual procurement
 - FinOps: variable costs, continuous optimization
 - Traditional: finance reviews quarterly
@@ -43,9 +46,11 @@ audience:
 ---
 
 ## The FinOps Lifecycle: Details
+
 1. Inform: visibility and allocation
 1. Optimize: rates and usage
 1. Operate: continuous improvement
+
 - Iterative, not one-time
 - Each phase feeds the next
 
@@ -58,6 +63,7 @@ audience:
 ---
 
 ## Phase: Inform
+
 - See where money is going
 - Allocate costs to teams, projects, products
 - Create shared understanding of spending
@@ -67,6 +73,7 @@ audience:
 ---
 
 ## Phase: Optimize
+
 - Reduce rates (commitments, reserved instances)
 - Reduce usage (right-sizing, waste elimination)
 - Architectural optimization
@@ -76,6 +83,7 @@ audience:
 ---
 
 ## Phase: Operate
+
 - Establish policies and governance
 - Track optimization over time
 - Continuous feedback loops
@@ -85,6 +93,7 @@ audience:
 ---
 
 ## Building a FinOps Culture
+
 - Cost awareness is everyone's responsibility
 - Engineers understand cost of their decisions
 - Finance understands cloud pricing models
@@ -94,6 +103,7 @@ audience:
 ---
 
 ## FinOps Principles
+
 - Teams need to collaborate
 - Everyone takes ownership of cloud usage
 - A centralized team drives FinOps
@@ -103,6 +113,7 @@ audience:
 ---
 
 ## More FinOps Principles
+
 - Take advantage of the variable cost model
 - Start with cloud-native cost management
 - FinOps data should be real-time
@@ -112,6 +123,7 @@ audience:
 ---
 
 ## Roles and Responsibilities
+
 - FinOps Practitioner: drives the practice
 - Engineering: implements optimizations
 - Finance: budgeting and forecasting
@@ -121,6 +133,7 @@ audience:
 ---
 
 ## The FinOps Team
+
 - Often called Cloud Center of Excellence (CCoE)
 - Small central team enabling the organization
 - Not a bottleneck -- an enabler
@@ -130,6 +143,7 @@ audience:
 ---
 
 ## FinOps Maturity Model: Details
+
 - Crawl: basic visibility, reactive
 - Walk: proactive optimization, team engagement
 - Run: automated, real-time, embedded in culture

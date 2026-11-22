@@ -48,6 +48,7 @@ if (sock == -1) {
 ```
 
 **Domains:**
+
 - AF_INET (IPv4)
 - AF_INET6 (IPv6)
 - AF_UNIX (Unix domain)
@@ -57,11 +58,13 @@ if (sock == -1) {
 ## Socket Types
 
 **Stream Sockets (SOCK_STREAM):**
+
 - Connection-oriented
 - Reliable delivery
 - Used with TCP
 
 **Datagram Sockets (SOCK_DGRAM):**
+
 - Connectionless
 - Unreliable delivery
 - Used with UDP
@@ -124,6 +127,7 @@ if (listen(sock, SOMAXCONN) == -1) {
 ```
 
 **Backlog Values:**
+
 - SOMAXCONN (System maximum)
 - Typical values: 5-128
 - Configurable via sysctl

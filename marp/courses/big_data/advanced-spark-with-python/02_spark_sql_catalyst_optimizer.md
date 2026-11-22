@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Chapter Overview
+
 * Query optimization techniques
 * Catalyst optimizer internals
 * User-Defined Functions (UDFs)
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## Spark SQL Architecture
+
 1. SQL Parser
 1. Analyzer
 1. Optimizer
@@ -67,6 +69,7 @@ df.explain(mode="extended")
 ---
 
 ## Query Planning
+
 1. Parse SQL/DataFrame
 1. Resolve references
 1. Apply optimizations
@@ -84,6 +87,7 @@ df.select("name", "age").groupBy("age").count().explain(True)
 ---
 
 ## Plan Optimization Rules
+
 1. Constant folding
 1. Predicate pushdown
 1. Column pruning
@@ -155,6 +159,7 @@ def upper_custom(s):
 ---
 
 ## UDF Performance
+
 1. Serialization overhead
 1. Type conversion costs
 1. Limited optimization
@@ -194,6 +199,7 @@ df = spark.read.format("jdbc")
 ---
 
 ## Custom Data Sources
+
 1. Implement BaseRelation
 1. Define schema
 1. Implement scanning
@@ -220,6 +226,7 @@ df.write.format("parquet")
 ---
 
 ## Parquet Optimization
+
 1. Predicate pushdown
 1. Column pruning
 1. Dictionary encoding
@@ -245,6 +252,7 @@ spark.sql.shuffle.partitions=200
 ---
 
 ## External Data Sources
+
 1. JDBC connections
 1. Cloud storage
 1. NoSQL databases
@@ -280,6 +288,7 @@ schema = StructType([
 ---
 
 ## Schema Evolution
+
 1. Add columns
 1. Remove columns
 1. Change data types
@@ -312,6 +321,7 @@ spark.conf.set("spark.sql.cbo.joinReorder.enabled", "true")
 ---
 
 ## Query Plan Analysis
+
 1. Logical plan inspection
 1. Physical plan review
 1. Execution statistics
@@ -335,6 +345,7 @@ spark.conf.set("spark.sql.adaptive.enabled", "true")
 ---
 
 ## Join Strategies
+
 1. Broadcast hash join
 1. Sort merge join
 1. Shuffle hash join
@@ -368,6 +379,7 @@ df1.join(df2, df1.id == df2.id).where(df2.value > df1.value)
 ---
 
 ## Configuration Tuning
+
 1. Memory settings
 1. Shuffle parameters
 1. Compression options
@@ -393,6 +405,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 ---
 
 ## Performance Metrics
+
 1. Query execution time
 1. Memory usage
 1. Shuffle data size
@@ -401,6 +414,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 ---
 
 ## Best Practices Summary
+
 1. Use appropriate data formats
 1. Optimize join operations
 1. Leverage statistics
@@ -409,6 +423,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 ---
 
 ## Common Pitfalls
+
 1. Inefficient joins
 1. Poor partitioning
 1. Memory issues
@@ -417,6 +432,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 ---
 
 ## Advanced Topics
+
 1. Custom optimizers
 1. Extension points
 1. Query rewrite rules
@@ -431,6 +447,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 ---
 
 ## Production Deployment
+
 1. Resource allocation
 1. Monitoring setup
 1. Error handling
@@ -439,6 +456,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 ---
 
 ## Future Directions
+
 1. Enhanced optimization
 1. Better statistics
 1. Improved adaptivity
@@ -447,6 +465,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 ---
 
 ## Additional Resources
+
 * Official documentation
 * Research papers
 * Community guides

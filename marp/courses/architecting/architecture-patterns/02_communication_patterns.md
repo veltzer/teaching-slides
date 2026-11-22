@@ -47,12 +47,14 @@ audience:
 ## Client-Server Pros and Cons
 
 Pros:
+
 - Centralized control and management of resources
 - Supports many clients with different capabilities
 - Easy to add new clients without changing the server
 - Clients and servers can evolve independently
 
 Cons:
+
 - Server can be a single point of failure
 - Potential performance bottlenecks at the server
 - Limited offline capability for thin clients
@@ -109,12 +111,14 @@ Cons:
 ## Broker Pros and Cons
 
 Pros:
+
 - Decouples clients from servers
 - Enables location transparency and platform independence
 - Supports dynamic registration and discovery of services
 - Can provide additional services and optimizations
 
 Cons:
+
 - Broker can become a performance bottleneck or single point of failure
 - Added complexity from the broker component and interactions
 - Potential latency overhead from indirection through broker
@@ -164,12 +168,14 @@ Cons:
 ## Peer-to-Peer Pros and Cons
 
 Pros:
+
 - Eliminates the need for central servers or authorities
 - Can increase robustness and availability through redundancy
 - Enables collaborative resource sharing and aggregation
 - Supports scalability by distributing load among peers
 
 Cons:
+
 - Complexity of peer discovery and communication
 - Potential security and trust issues between peers
 - Performance can be unpredictable and depends on peer capabilities
@@ -221,6 +227,7 @@ Cons:
 ## Event Bus Pros and Cons
 
 Pros:
+
 - Decouples modules within one process without inventing interfaces between them
 - Trivial to set up — just a library, no infrastructure to deploy or operate
 - Cheap and fast — direct method calls, no serialization, no network
@@ -231,6 +238,7 @@ Pros:
 ## Event Bus Pros and Cons (cont.)
 
 Cons:
+
 - Bounded to one process — does not span services or machines
 - Synchronous dispatch means a slow handler blocks the publisher
 - A throwing handler can break the publisher unless the bus isolates errors
@@ -299,6 +307,7 @@ Cons:
 ## Publish-Subscribe Pros and Cons
 
 Pros:
+
 - Decouples services across process and machine boundaries — publisher and subscriber can be written in different languages and deployed independently
 - Asynchronous: a slow or down subscriber does not block the publisher
 - Buffering and persistence let producers and consumers run at different rates and survive restarts
@@ -310,6 +319,7 @@ Pros:
 ## Publish-Subscribe Pros and Cons (cont.)
 
 Cons:
+
 - You must deploy, secure, monitor, and upgrade the broker — real operational cost
 - Network and serialization add latency a function call would not
 - At-least-once delivery is the norm — subscribers must be idempotent

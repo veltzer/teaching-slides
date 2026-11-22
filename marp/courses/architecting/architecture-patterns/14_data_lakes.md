@@ -101,6 +101,7 @@ pq.write_table(
 ## Evolution to Data Lakehouse
 
 Traditional Problems:
+
 - Data reliability issues
 - Lack of ACID transactions
 - Performance challenges

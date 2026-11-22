@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Relational vs NoSQL
+
 - Relational: structured data, ACID, SQL, joins
 - NoSQL: flexible schema, eventual consistency, scale-out
 - Not a binary choice: use both where appropriate
@@ -26,6 +27,7 @@ audience:
 ---
 
 ## When to Choose Relational
+
 - Complex queries with joins
 - ACID transactions (banking, inventory)
 - Well-defined, stable schema
@@ -35,6 +37,7 @@ audience:
 ---
 
 ## When to Choose NoSQL
+
 - Massive scale (millions of operations/second)
 - Flexible or evolving schema
 - Simple access patterns (key-value, document)
@@ -44,6 +47,7 @@ audience:
 ---
 
 ## Managed Relational Databases
+
 - AWS RDS, Azure SQL, Cloud SQL
 - Provider manages patching, backups, failover
 - Multi-AZ for high availability
@@ -53,6 +57,7 @@ audience:
 ---
 
 ## Amazon Aurora
+
 - AWS-built relational database
 - MySQL and PostgreSQL compatible
 - 3-5x faster than standard engines
@@ -62,6 +67,7 @@ audience:
 ---
 
 ## Aurora Architecture: Details
+
 - Shared distributed storage layer
 - 6 copies of data across 3 AZs
 - Self-healing: automatically repairs corruption
@@ -77,6 +83,7 @@ audience:
 ---
 
 ## Aurora Serverless
+
 - Auto-scales compute up and down
 - Scales to zero (v2 scales to minimum)
 - Pay per ACU-second (Aurora Capacity Unit)
@@ -86,6 +93,7 @@ audience:
 ---
 
 ## Managed NoSQL Databases
+
 - AWS DynamoDB, Azure Cosmos DB, Google Firestore
 - Fully managed, serverless
 - Single-digit millisecond latency
@@ -95,6 +103,7 @@ audience:
 ---
 
 ## DynamoDB Architecture
+
 - Partitioned across many storage nodes
 - Partition key determines data placement
 - Consistent performance at any scale
@@ -124,6 +133,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Cosmos DB Overview
+
 - Microsoft's globally distributed NoSQL
 - Multiple APIs: SQL, MongoDB, Cassandra, Gremlin, Table
 - Tunable consistency levels (5 options)
@@ -133,6 +143,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Rolling Databases on Your Own
+
 - Run MySQL, PostgreSQL, MongoDB on EC2/VMs
 - Full control over configuration and version
 - Full operational burden (patches, backups, failover)
@@ -142,6 +153,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## When to Self-Manage
+
 - Need a specific database version or extension
 - Very custom configuration requirements
 - License restrictions on managed services
@@ -151,6 +163,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Caching in the Cloud
+
 - ElastiCache (Redis, Memcached), Azure Cache, Memorystore
 - In-memory data store for microsecond latency
 - Reduce database load
@@ -160,6 +173,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Caching Patterns
+
 - Cache-Aside: application checks cache, then database
 - Write-Through: write to cache and database simultaneously
 - Write-Behind: write to cache, async write to database
@@ -169,6 +183,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## When to Cache
+
 - Read-heavy workloads (90%+ reads)
 - Data that doesn't change frequently
 - Expensive database queries
@@ -178,6 +193,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Graph Databases
+
 - Model relationships between entities
 - Amazon Neptune, Azure Cosmos DB (Gremlin), Neo4j
 - Social networks, recommendation engines, fraud detection
@@ -187,6 +203,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Time Series Databases
+
 - Optimized for time-stamped data
 - Amazon Timestream, InfluxDB, TimescaleDB
 - IoT sensor data, metrics, financial data
@@ -196,6 +213,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Data Warehouses
+
 - Optimized for analytical queries
 - Amazon Redshift, Azure Synapse, Google BigQuery
 - Columnar storage for fast aggregations
@@ -205,6 +223,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Database Encryption
+
 - Encryption at rest: enable for all databases
 - KMS-managed keys or customer-managed keys
 - Encryption in transit: SSL/TLS connections
@@ -214,6 +233,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Database Monitoring
+
 - CloudWatch metrics: CPU, connections, IOPS, free storage
 - Performance Insights: SQL-level performance analysis
 - Slow query logs
@@ -223,6 +243,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Database Backup Strategy
+
 - Automated daily snapshots (RDS)
 - Point-in-time recovery (to any second in retention period)
 - Manual snapshots for major changes
@@ -232,6 +253,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Database Migration
+
 - AWS DMS (Database Migration Service)
 - Azure Database Migration Service
 - Homogeneous: same engine (MySQL -> MySQL)
@@ -241,6 +263,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Multi-Model Databases
+
 - Azure Cosmos DB: document, key-value, graph, column-family
 - Amazon DynamoDB: key-value and document
 - Single database, multiple access patterns
@@ -250,6 +273,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Data Storage Decision Framework
+
 1. What is the data model? (relational, key-value, document, graph)
 1. What are the access patterns? (complex queries vs simple lookups)
 1. What scale is needed? (thousands vs millions of operations)
@@ -265,6 +289,7 @@ aws dynamodb query --table-name Orders \
 ---
 
 ## Connection Pooling
+
 - Database connections are expensive to create
 - Connection pools reuse connections
 - RDS Proxy: managed connection pooling for AWS
@@ -295,6 +320,7 @@ resource "aws_db_proxy" "app" {
 ---
 
 ## Read/Write Splitting: Details
+
 - Write to primary database
 - Read from read replicas
 - Application or proxy routes queries
@@ -310,6 +336,7 @@ resource "aws_db_proxy" "app" {
 ---
 
 ## Database Sharding
+
 - Split data across multiple database instances
 - Each shard holds a subset of data
 - Enables horizontal write scaling
@@ -319,6 +346,7 @@ resource "aws_db_proxy" "app" {
 ---
 
 ## Data Storage Best Practices
+
 - Use managed services by default
 - Choose the right database for the access pattern
 - Implement caching for read-heavy workloads

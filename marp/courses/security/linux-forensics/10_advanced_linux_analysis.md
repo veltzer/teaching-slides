@@ -13,6 +13,7 @@ audience:
 # Advanced Linux OS Analysis
 
 ## Course: Linux Forensics
+
 - Advanced analysis techniques reveal deeper system behavior
 - Tracing system calls and library calls exposes program actions
 - Binary analysis uncovers malware functionality
@@ -579,6 +580,7 @@ rkhunter --check
 ## Exercise: Advanced Analysis Lab
 
 ### Tasks
+
 1. Use `strace` to trace a sample program's behavior
 1. Use `ltrace` to identify library calls
 1. Analyze a binary with `strings` and `readelf`

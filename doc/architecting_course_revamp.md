@@ -3,6 +3,7 @@
 Tracks the restructuring work for `marp/courses/architecting/architecture-patterns/`.
 
 ## Status legend
+
 - [ ] — not started
 - [~] — in progress
 - [x] — done

@@ -28,6 +28,7 @@ audience:
 ## Why Pitfall Awareness Matters
 
 Understanding common mistakes prevents:
+
 - **Over-dependence** on AI tools leading to skill atrophy
 - **Quality degradation** through insufficient verification
 - **Security vulnerabilities** from unchecked AI suggestions
@@ -47,6 +48,7 @@ Understanding common mistakes prevents:
 The most common and dangerous pitfall in AI-assisted development:
 
 ### Warning Signs
+
 - Inability to code without AI assistance
 - Panic when AI tools are unavailable
 - Accepting all AI suggestions without review

@@ -32,6 +32,7 @@ audience:
 `Git` is a tool, not a process. It provides primitives that can support many different workflows:
 
 **What `Git` provides:**
+
 - Branching and merging capabilities
 - Distributed development support
 - History tracking and manipulation
@@ -42,6 +43,7 @@ audience:
 ## Git Does Not Force a Workflow (cont.)
 
 **What `Git` does NOT dictate:**
+
 - How many branches to use
 - When to merge vs rebase
 - Code review processes
@@ -81,11 +83,13 @@ Without established workflows, teams face:
 ## Core Workflow Concepts
 
 **Branching strategy:**
+
 - How branches are created and named
 - Which branches are long-lived vs short-lived
 - Branch protection rules
 
 **Integration patterns:**
+
 - How changes get into main branches
 - Code review requirements
 - Automated testing integration
@@ -95,6 +99,7 @@ Without established workflows, teams face:
 ## Core Workflow Concepts (cont.)
 
 **Release management:**
+
 - How production releases are created
 - Versioning and tagging strategies
 - Hotfix procedures
@@ -121,6 +126,7 @@ git merge feature/user-authentication
 ```
 
 **Benefits:**
+
 - Isolate feature development
 - Enable parallel work
 - Facilitate code reviews
@@ -148,6 +154,7 @@ sarah/api-optimization
 ```
 
 **Best practices:**
+
 - Be consistent across the team
 - Include context (type, ticket, description)
 - Use lowercase and hyphens
@@ -158,12 +165,14 @@ sarah/api-optimization
 ## Development vs Production Branches: Details
 
 **Development branch (`develop`):**
+
 - Integration branch for features
 - Contains latest development work
 - May be unstable
 - Used for testing and QA
 
 **Production branch (`main`/`master`):**
+
 - Always production-ready
 - Only stable, tested code
 - Protected from direct pushes
@@ -182,6 +191,7 @@ sarah/api-optimization
 Moving changes from newer versions to older versions:
 
 **Common scenarios:**
+
 - Security fixes to older releases
 - Critical bug fixes
 - Customer-specific patches
@@ -220,6 +230,7 @@ git branch -d feature/new-functionality
 ```
 
 **Personal best practices:**
+
 - Use meaningful commit messages
 - Create atomic commits
 - Test before merging to main
@@ -233,6 +244,7 @@ git branch -d feature/new-functionality
 Similar to traditional version control systems:
 
 **Characteristics:**
+
 - Everyone works on the main branch
 - Linear history
 - Simple to understand
@@ -252,6 +264,7 @@ git push origin main
 ## Centralized Workflow (cont.)
 
 **Limitations:**
+
 - No isolation between features
 - Conflicts more frequent
 - Hard to review changes
@@ -264,6 +277,7 @@ git push origin main
 Most common modern approach:
 
 **Process:**
+
 1. Create feature branch from main
 1. Develop feature in isolation
 1. Push branch to remote
@@ -289,6 +303,7 @@ git push -u origin feature/user-profiles
 Structured workflow with specific branch types:
 
 **Branch types:**
+
 - `main`: production releases
 - `develop`: integration branch
 - `feature/*`: individual features
@@ -318,6 +333,7 @@ git flow release finish 1.2.0
 Simplified workflow popular with continuous deployment:
 
 **Process:**
+
 1. Create branch from main
 1. Add commits
 1. Open pull request
@@ -330,6 +346,7 @@ Simplified workflow popular with continuous deployment:
 ## GitHub Flow (cont.)
 
 **Benefits:**
+
 - Simple and straightforward
 - Good for continuous deployment
 - Fast iteration cycles
@@ -344,6 +361,7 @@ Simplified workflow popular with continuous deployment:
 Combines feature branches with environment branches:
 
 **Structure:**
+
 - `main`: latest development
 - `production`: current production code
 - `pre-production`: staging environment
@@ -370,6 +388,7 @@ git merge main
 Used in open source projects:
 
 **Process:**
+
 1. Fork repository to personal account
 1. Clone personal fork
 1. Create feature branch
@@ -399,6 +418,7 @@ git push origin feature/improvement
 For projects with scheduled releases:
 
 **Branch structure:**
+
 - `main`: ongoing development
 - `release/v1.0`: release preparation
 - `release/v1.1`: next release
@@ -445,6 +465,7 @@ git merge staging
 ```
 
 **Benefits:**
+
 - Clear promotion path
 - Environment-specific configurations
 - Controlled release process
@@ -457,6 +478,7 @@ git merge staging
 Integrating automated testing and deployment:
 
 **Branch protection rules:**
+
 - Require pull request reviews
 - Require status checks to pass
 - Require branches to be up to date
@@ -467,6 +489,7 @@ Integrating automated testing and deployment:
 ## Continuous Integration Workflows (cont.)
 
 **CI/CD pipeline:**
+
 1. Developer pushes to feature branch
 1. Automated tests run
 1. Code review required
@@ -479,11 +502,13 @@ Integrating automated testing and deployment:
 ## Workflow Selection Criteria
 
 **Team size:**
+
 - Small (1-5): Simple feature branch or GitHub flow
 - Medium (5-20): Git flow or GitLab flow
 - Large (20+): Forking workflow or custom enterprise workflow
 
 **Release frequency:**
+
 - Continuous: GitHub flow
 - Weekly/Monthly: Git flow
 - Scheduled major releases: Release branch workflow
@@ -493,6 +518,7 @@ Integrating automated testing and deployment:
 ## Workflow Selection Criteria (cont.)
 
 **Project type:**
+
 - Web applications: GitHub flow
 - Desktop software: Git flow
 - Open source: Forking workflow
@@ -529,11 +555,13 @@ Integrating automated testing and deployment:
 ## Common Workflow Pitfalls
 
 **Over-engineering:**
+
 - Too many branch types
 - Overly complex rules
 - Unnecessary bureaucracy
 
 **Under-engineering:**
+
 - No code review process
 - Direct pushes to production
 - No testing integration
@@ -543,6 +571,7 @@ Integrating automated testing and deployment:
 ## Common Workflow Pitfalls (cont.)
 
 **Inconsistent application:**
+
 - Team members using different approaches
 - Partial adoption of workflow rules
 - No documentation or training
@@ -586,6 +615,7 @@ pipeline {
 ```
 
 **Branch-specific builds:**
+
 - Feature branches: run tests only
 - `develop`: run tests + integration tests
 - `main`: full build + deploy to staging
@@ -611,6 +641,7 @@ git push -u origin feature/user-authentication
 ## Working with Pull Requests (cont.)
 
 **PR best practices:**
+
 1. **Clear title and description**
 1. **Small, focused changes**
 1. **Include tests and documentation**
@@ -622,6 +653,7 @@ git push -u origin feature/user-authentication
 ## Working with Pull Requests (cont.) (cont.)
 
 **Review process:**
+
 - At least one approval required
 - Address feedback promptly
 - Keep discussions constructive
@@ -634,6 +666,7 @@ git push -u origin feature/user-authentication
 `Gerrit` provides a different approach to code review:
 
 **Key concepts:**
+
 - Every commit becomes a change request
 - Review before integration (not after)
 - Score-based approval system
@@ -680,12 +713,14 @@ fi
 ## Automated Testing Integration (cont.)
 
 **CI/CD pipeline stages:**
+
 1. **Unit tests:** Fast, isolated tests
 1. **Integration tests:** Component interaction
 1. **End-to-end tests:** Full system validation
 1. **Performance tests:** Load and stress testing
 
 **Quality gates:**
+
 - Minimum test coverage
 - No critical security vulnerabilities
 - Code style compliance
@@ -759,6 +794,7 @@ git push origin main --tags
 ```
 
 **Emergency deployment process:**
+
 1. Create hotfix branch
 1. Implement minimal fix
 1. Test thoroughly
@@ -785,11 +821,13 @@ notification-service/
 ## Multi-Repository Workflows (cont.)
 
 **Coordination strategies:**
+
 1. **Independent releases:** Each service deploys separately
 1. **Synchronized releases:** All services deploy together
 1. **Progressive deployment:** Gradual rollout across services
 
 **Tools for multi-repo management:**
+
 - `Git` submodules
 - `Git` subtrees
 - Monorepo tools (Lerna, Nx)
@@ -825,6 +863,7 @@ release/*: requires release team approval
 ```
 
 **Approval workflows:**
+
 - Multiple reviewers required
 - Domain expert approval
 - Security team review for sensitive changes
@@ -835,6 +874,7 @@ release/*: requires release team approval
 ## Monorepo vs Polyrepo Workflows
 
 **Monorepo benefits:**
+
 - Atomic changes across projects
 - Shared tooling and configuration
 - Easier dependency management
@@ -860,6 +900,7 @@ npm run build:backend
 ```
 
 **Polyrepo benefits:**
+
 - Independent team ownership
 - Separate release cycles
 - Isolated dependencies
@@ -993,6 +1034,7 @@ deploy_production:
     - Branch lifetime
 
 **Tools for metrics:**
+
 - GitHub/GitLab analytics
 - Jenkins build metrics
 - Custom dashboards
@@ -1051,6 +1093,7 @@ deploy_production:
 ```
 
 **Migration best practices:**
+
 1. Plan the transition carefully
 1. Train team members
 1. Run workflows in parallel initially
@@ -1119,6 +1162,7 @@ task/PROJ-125-password-validation
     - Monitoring dashboards
 
 **Adoption strategies:**
+
 - Pair programming sessions
 - Workflow champions
 - Regular retrospectives
@@ -1150,6 +1194,7 @@ task/PROJ-125-password-validation
     - GitOps practices
 
 **Preparing for change:**
+
 - Stay flexible in workflow design
 - Invest in automation
 - Focus on principles over tools
@@ -1162,6 +1207,7 @@ task/PROJ-125-password-validation
 **Scenario:** Small development team (5 developers) building a web application with weekly releases.
 
 **Tasks:**
+
 1. **Design a workflow:**
     - Choose branch strategy
     - Define integration process

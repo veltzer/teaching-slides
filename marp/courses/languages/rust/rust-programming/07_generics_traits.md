@@ -367,6 +367,7 @@ fn generic<T: ?Sized>(t: &T) {
 ## Practice Exercise
 
 Create a generic data structure that:
+
 1. Stores any type
 1. Implements multiple traits
 1. Uses associated types
@@ -400,6 +401,7 @@ fn process_string(x: String) {
 ---
 
 ## Common Pitfalls
+
 1. Overly generic code
 1. Unnecessary trait bounds
 1. Object safety violations
@@ -409,6 +411,7 @@ fn process_string(x: String) {
 ---
 
 ## Summary
+
 - Generic types
 - Traits and bounds
 - Associated types

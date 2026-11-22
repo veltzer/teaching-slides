@@ -18,6 +18,7 @@ audience:
 ---
 
 ## Why Kubernetes for Multi-Cloud?
+
 - Standard API across all providers
 - Workloads defined in portable YAML
 - Large ecosystem of cloud-agnostic tools
@@ -27,6 +28,7 @@ audience:
 ---
 
 ## Managed Kubernetes Services
+
 - AWS: EKS (Elastic Kubernetes Service)
 - Azure: AKS (Azure Kubernetes Service)
 - GCP: GKE (Google Kubernetes Engine)
@@ -42,6 +44,7 @@ audience:
 ---
 
 ## What Kubernetes Standardizes
+
 - Container scheduling and orchestration
 - Service discovery and load balancing
 - Rolling deployments and rollbacks
@@ -51,6 +54,7 @@ audience:
 ---
 
 ## What Kubernetes Does NOT Standardize
+
 - Ingress controller implementations
 - Storage classes and provisioners
 - Load balancer annotations
@@ -95,6 +99,7 @@ spec:
 ---
 
 ## This Deployment Works Identically On
+
 - EKS (AWS)
 - AKS (Azure)
 - GKE (GCP)
@@ -199,6 +204,7 @@ kubectl exec -it pod/web-app-abc123 -- /bin/sh
 ---
 
 ## Platform Engineering with Kubernetes
+
 - Build an internal developer platform on top of Kubernetes
 - Standardize deployment patterns across clouds
 - Provide self-service capabilities through custom resources
@@ -208,6 +214,7 @@ kubectl exec -it pod/web-app-abc123 -- /bin/sh
 ---
 
 ## Limitations of Kubernetes as Abstraction
+
 - Storage: PersistentVolume provisioners are cloud-specific
 - Networking: CNI plugins and policies vary
 - Autoscaling: cluster autoscaler configuration differs

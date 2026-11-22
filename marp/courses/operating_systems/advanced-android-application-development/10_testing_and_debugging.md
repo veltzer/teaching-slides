@@ -314,6 +314,7 @@ android {
 ### Testing Implementation
 
 Create tests for an application:
+
 1. Write unit tests
 1. Implement UI tests
 1. Add integration tests

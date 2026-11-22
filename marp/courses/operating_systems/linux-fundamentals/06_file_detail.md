@@ -60,6 +60,7 @@ ls -l regular.txt
 ```
 
 Common types:
+
 - Text files
 - Binary files
 - Data files
@@ -92,11 +93,13 @@ ls -ld newdir
 ## Device Files (c, b)
 
 Character Devices (c):
+
 - Serial ports
 - Terminals
 - Mouse/keyboard
 
 Block Devices (b):
+
 - Hard drives
 - SSDs
 - USB drives
@@ -168,6 +171,7 @@ cat < mypipe
 ## The INODE Concept: Details
 
 Inode contains:
+
 - File type
 - Permissions
 - Link count
@@ -319,6 +323,7 @@ ln -s /absolute/path/target.txt abslink.txt
 ## File System Layout: Details
 
 Key components:
+
 - Superblock: File system metadata
 - Inode table: File metadata
 - Data blocks: Actual file content

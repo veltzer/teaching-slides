@@ -66,6 +66,7 @@ messages = [
 ```
 
 **Common effective roles:**
+
 - "You are an expert in [domain]..."
 - "Act as a [profession] with 20 years of experience..."
 - "You are a helpful assistant that specializes in..."

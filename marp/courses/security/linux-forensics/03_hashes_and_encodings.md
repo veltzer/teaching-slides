@@ -13,6 +13,7 @@ audience:
 # Hashes and Encodings
 
 ## Course: Linux Forensics
+
 - Hash functions are the backbone of digital forensics integrity
 - Encodings transform data between formats
 - Understanding both is essential for evidence handling
@@ -468,6 +469,7 @@ echo "Layer 2: $LAYER2"
 ## Exercise: Hash and Encoding Practice
 
 ### Tasks
+
 1. Compute MD5, SHA-1, and SHA-256 of a test file
 1. Verify hash integrity after copying a file
 1. Decode a base64-encoded suspicious string

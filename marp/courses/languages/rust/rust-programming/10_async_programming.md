@@ -363,6 +363,7 @@ async fn test_async_function() {
 <div>
 
 ## To Consider
+
 - Task size
 - Blocking operations
 - Memory usage
@@ -372,6 +373,7 @@ async fn test_async_function() {
 <div>
 
 ## To Avoid
+
 - CPU-bound tasks
 - Long-running tasks
 - Excessive spawning
@@ -385,6 +387,7 @@ async fn test_async_function() {
 ## Practice Exercise
 
 Create an async application that:
+
 1. Handles HTTP requests
 1. Processes data streams
 1. Uses proper error handling
@@ -394,6 +397,7 @@ Create an async application that:
 ---
 
 ## Common Pitfalls
+
 1. Blocking in async
 1. Task starvation
 1. Resource leaks
@@ -403,6 +407,7 @@ Create an async application that:
 ---
 
 ## Summary
+
 - Async/Await syntax
 - Future and Stream
 - Task management

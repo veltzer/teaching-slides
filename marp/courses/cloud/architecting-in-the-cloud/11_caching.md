@@ -17,6 +17,7 @@ audience:
 ---
 
 ## Why Caching?
+
 - Reduce latency (milliseconds -> microseconds)
 - Reduce load on databases and backends
 - Handle more traffic without scaling backend
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## Caching Close to the Client
+
 - CDN caching (CloudFront, Akamai, Fastly)
 - Cache static assets at edge locations globally
 - Reduce origin server load
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## CDN Cache Behavior
+
 - TTL (Time to Live): how long to cache
 - Cache-Control headers from origin
 - Cache invalidation when content changes
@@ -50,6 +53,7 @@ audience:
 ---
 
 ## CDN Cache Strategies
+
 - Cache everything with long TTL + invalidation on deploy
 - Use versioned URLs (style.v2.css) for immutable assets
 - Short TTL for dynamic content
@@ -59,6 +63,7 @@ audience:
 ---
 
 ## Browser Caching
+
 - Cache-Control and Expires headers
 - ETags for conditional requests (304 Not Modified)
 - Immutable assets with cache-busting URLs
@@ -68,6 +73,7 @@ audience:
 ---
 
 ## API Gateway Caching
+
 - Cache API responses at the gateway level
 - AWS API Gateway: built-in caching
 - TTL per endpoint
@@ -77,6 +83,7 @@ audience:
 ---
 
 ## Application-Level Caching
+
 - In-memory caches within the application
 - Local cache: fastest, but per-instance only
 - Distributed cache: shared across instances (Redis, Memcached)
@@ -86,6 +93,7 @@ audience:
 ---
 
 ## Managed Cache Services
+
 - AWS ElastiCache (Redis, Memcached)
 - Azure Cache for Redis
 - GCP Memorystore
@@ -116,6 +124,7 @@ def get_user(user_id):
 ---
 
 ## Redis vs Memcached
+
 - Redis: rich data structures (lists, sets, sorted sets, hashes)
 - Redis: persistence, replication, pub/sub
 - Memcached: simpler, multi-threaded, pure caching
@@ -125,6 +134,7 @@ def get_user(user_id):
 ---
 
 ## Cache-Aside Pattern: Details
+
 1. Application checks cache for data
 1. Cache hit: return data
 1. Cache miss: query database
@@ -140,6 +150,7 @@ def get_user(user_id):
 ---
 
 ## Write-Through Pattern
+
 - Write to cache and database simultaneously
 - Cache always has latest data
 - Higher write latency (two writes)
@@ -149,6 +160,7 @@ def get_user(user_id):
 ---
 
 ## Write-Behind (Write-Back) Pattern
+
 - Write to cache immediately
 - Asynchronously write to database
 - Very low write latency
@@ -158,6 +170,7 @@ def get_user(user_id):
 ---
 
 ## Cache Invalidation
+
 - "The two hard things in CS: cache invalidation and naming things"
 - TTL-based: simplest, eventual staleness
 - Event-based: invalidate on data change
@@ -167,6 +180,7 @@ def get_user(user_id):
 ---
 
 ## Cache Eviction Policies
+
 - LRU (Least Recently Used): most common
 - LFU (Least Frequently Used): keep popular items
 - TTL (Time to Live): expire after time
@@ -176,6 +190,7 @@ def get_user(user_id):
 ---
 
 ## Caching Anti-Patterns
+
 - Caching everything (wastes memory)
 - No TTL (stale data forever)
 - Cache stampede (many misses at once overwhelm DB)
@@ -185,6 +200,7 @@ def get_user(user_id):
 ---
 
 ## Cache Stampede Prevention
+
 - Lock on cache miss (only one request refreshes)
 - Probabilistic early expiration
 - Background refresh before TTL expires
@@ -194,6 +210,7 @@ def get_user(user_id):
 ---
 
 ## Monitoring Cache Performance
+
 - Cache hit ratio (target: >90%)
 - Latency (cache hit vs miss)
 - Memory utilization
@@ -203,6 +220,7 @@ def get_user(user_id):
 ---
 
 ## DAX: DynamoDB Accelerator
+
 - In-memory cache purpose-built for DynamoDB
 - Microsecond read latency
 - API compatible (drop-in replacement)
@@ -212,6 +230,7 @@ def get_user(user_id):
 ---
 
 ## ElastiCache Architecture: Details
+
 - Cluster mode: shard data across nodes
 - Replication: primary + replicas per shard
 - Multi-AZ for high availability
@@ -227,6 +246,7 @@ def get_user(user_id):
 ---
 
 ## Session Caching Pattern
+
 - Store user sessions in Redis
 - Faster than database lookups
 - Shared across all application instances
@@ -236,6 +256,7 @@ def get_user(user_id):
 ---
 
 ## Full-Page Caching
+
 - Cache entire rendered HTML pages
 - Serve without hitting application code
 - Varnish, CloudFront, or Redis
@@ -245,6 +266,7 @@ def get_user(user_id):
 ---
 
 ## Caching for Microservices
+
 - Each service may have its own cache
 - Shared cache for common data
 - Distributed cache prevents data duplication
@@ -254,6 +276,7 @@ def get_user(user_id):
 ---
 
 ## Warm-Up Strategies
+
 - Pre-populate cache on deployment
 - Gradual traffic shift to new instances
 - Cache warming scripts run before going live
@@ -263,6 +286,7 @@ def get_user(user_id):
 ---
 
 ## Caching Cost Considerations
+
 - ElastiCache: instance cost per hour
 - Right-size cache nodes based on data volume
 - Use reserved nodes for steady-state caches
@@ -272,6 +296,7 @@ def get_user(user_id):
 ---
 
 ## Caching Best Practices
+
 - Cache close to the consumer (CDN > app cache > DB cache)
 - Set appropriate TTLs for each data type
 - Monitor and tune cache hit ratios

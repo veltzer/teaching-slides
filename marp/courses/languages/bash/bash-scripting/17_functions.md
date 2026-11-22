@@ -18,6 +18,7 @@ audience:
 ---
 
 ## Functions, Types & Advanced
+
 - Functions: definition, return codes, parameters
 - Variable types: strings, arrays, associative arrays
 - Arithmetic: integer and floating point

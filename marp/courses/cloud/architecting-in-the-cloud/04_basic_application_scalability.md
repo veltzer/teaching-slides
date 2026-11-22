@@ -23,6 +23,7 @@ audience:
 ---
 
 ## Why Scalability Matters
+
 - Users expect fast, always-available applications
 - Traffic is rarely constant
 - Flash sales, product launches, viral content
@@ -32,6 +33,7 @@ audience:
 ---
 
 ## Vertical vs Horizontal Scaling: Details
+
 - Vertical (scale up): bigger machine, more CPU/RAM
 - Horizontal (scale out): more machines
 - Vertical has a ceiling (largest instance available)
@@ -47,6 +49,7 @@ audience:
 ---
 
 ## Stateless vs Stateful
+
 - Stateless: no data stored on the instance between requests
 - Stateful: instance holds session data, state
 - Stateless services are easy to scale horizontally
@@ -56,6 +59,7 @@ audience:
 ---
 
 ## Making Applications Stateless
+
 - Store sessions in Redis, DynamoDB, or Memcached
 - Store files in S3 or shared file systems
 - Store user data in databases
@@ -65,6 +69,7 @@ audience:
 ---
 
 ## Load Balancers
+
 - Distribute traffic across multiple instances
 - Health checks remove unhealthy instances
 - Single entry point for the application
@@ -74,6 +79,7 @@ audience:
 ---
 
 ## Types of Load Balancers
+
 - Layer 4 (Network): routes based on IP/port (fast, simple)
 - Layer 7 (Application): routes based on HTTP content (flexible)
 - Layer 7: path-based, host-based, header-based routing
@@ -83,6 +89,7 @@ audience:
 ---
 
 ## Load Balancing Algorithms
+
 - Round Robin: equal distribution
 - Least Connections: send to least busy
 - Weighted: proportional distribution
@@ -98,6 +105,7 @@ audience:
 ---
 
 ## Health Checks
+
 - Load balancer pings instances periodically
 - HTTP check: expects 200 response
 - TCP check: expects successful connection
@@ -129,6 +137,7 @@ resource "aws_lb_target_group" "web" {
 ---
 
 ## Auto Scaling
+
 - Automatically add/remove instances based on demand
 - Scale out on high CPU, request count, queue depth
 - Scale in when demand drops
@@ -144,6 +153,7 @@ resource "aws_lb_target_group" "web" {
 ---
 
 ## Scaling Policies
+
 - Target Tracking: maintain a target (e.g., 60% CPU)
 - Step Scaling: add N instances when metric exceeds threshold
 - Scheduled Scaling: scale at known times (business hours)
@@ -171,6 +181,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Scaling Considerations
+
 - Cooldown periods prevent rapid oscillation
 - Scale out fast, scale in slow
 - Test scaling behavior under load
@@ -180,6 +191,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Spreading Across Data Centers
+
 - Deploy to multiple Availability Zones
 - Load balancer distributes across AZs
 - Survive the loss of an entire data center
@@ -189,6 +201,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Multi-Region Architecture: Details
+
 - Deploy to multiple Regions for global reach
 - DNS-based routing (Route 53, Cloud DNS)
 - Active-active or active-passive
@@ -204,6 +217,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Cross-AZ Data Transfer Costs
+
 - Traffic between AZs is charged (typically $0.01/GB)
 - Can add up for chatty services
 - Optimize: keep related services in same AZ when possible
@@ -213,6 +227,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Connection Draining
+
 - When scaling in, allow existing connections to complete
 - Load balancer deregisters target gracefully
 - Configurable drain timeout (default 300 seconds)
@@ -222,6 +237,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Load Testing
+
 - Test scalability before going to production
 - Tools: k6, Gatling, Locust, JMeter
 - Simulate realistic traffic patterns
@@ -231,6 +247,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Database Scalability
+
 - Databases are often the scalability bottleneck
 - Read replicas for read scaling
 - Caching layer reduces database load
@@ -240,6 +257,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Microservices and Scalability
+
 - Each service scales independently
 - Scale the bottleneck, not the entire application
 - Loose coupling enables independent scaling
@@ -249,6 +267,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Should You Go Serverless?
+
 - Serverless eliminates instance management entirely
 - Auto-scales from zero to thousands
 - Pay only for execution time
@@ -258,6 +277,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Serverless vs Containers vs VMs
+
 - VMs: full control, most overhead
 - Containers: good isolation, fast start, orchestration needed
 - Serverless: zero management, limited control
@@ -267,6 +287,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Global Accelerator
+
 - AWS Global Accelerator: static IP anycast routing
 - Routes to optimal Region based on health and proximity
 - Improves availability and performance
@@ -276,6 +297,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Auto Scaling Lifecycle Hooks
+
 - Perform actions during scale-out and scale-in
 - Scale-out: register with service discovery, warm cache
 - Scale-in: deregister, drain connections, save state
@@ -285,6 +307,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Capacity Planning
+
 - Analyze historical traffic patterns
 - Identify peak times (daily, weekly, seasonal)
 - Set Auto Scaling minimums for baseline
@@ -294,6 +317,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Scalability Anti-Patterns
+
 - Single instance behind a public IP (no LB)
 - Session state stored in local memory
 - Hard-coded instance IPs in configuration
@@ -303,6 +327,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Throttling and Rate Limiting
+
 - Protect your services from overload
 - API Gateway rate limiting
 - Application-level throttling
@@ -312,6 +337,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Session Management
+
 - Sessions must not live on the instance
 - Redis: fast, feature-rich session store
 - DynamoDB: serverless, scalable
@@ -321,6 +347,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Asynchronous Processing
+
 - Not everything needs an immediate response
 - Queue work for background processing
 - Return 202 Accepted, process later
@@ -330,6 +357,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Content Delivery Networks
+
 - Cache and serve content at edge locations
 - Reduce load on origin servers
 - Lower latency for global users
@@ -339,6 +367,7 @@ aws autoscaling put-scaling-policy \
 ---
 
 ## Scalability Checklist
+
 1. Application is stateless
 1. Load balancer in front
 1. Auto Scaling configured

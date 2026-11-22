@@ -475,6 +475,7 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 ## Lab: Boot2Root Challenge
 
 **Objectives**:
+
 1. Scan the target and enumerate all services
 1. Find and exploit a web vulnerability
 1. Get an initial shell on the target
@@ -486,6 +487,7 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 ## Lab: Boot2Root Challenge (cont.)
 
 **Rules**:
+
 - Only attack the designated target
 - Document every step
 - Try to use multiple techniques

@@ -18,6 +18,7 @@ audience:
 # Tool Use and Function Calling
 
 ## Overview
+
 - The tool-use pattern in LLMs
 - Designing effective tools for AI agents
 - Built-in tools in popular agents
@@ -28,6 +29,7 @@ audience:
 ## The Tool-Use Pattern
 
 ## Why Tools?
+
 - LLMs generate text but cannot act on the world directly
 - Tools bridge the gap between reasoning and execution
 - The model decides **when** and **which** tool to call
@@ -44,6 +46,7 @@ audience:
 ## Tool Definitions and Schemas
 
 ## Declaring Tools for the Model
+
 - Tools are described as JSON schemas in the system/config layer
 - The model never executes code; it emits a structured tool-call message
 
@@ -67,6 +70,7 @@ audience:
 ## Steering Tool Selection with Prompts
 
 ## Controlling Which Tools Get Called
+
 - The `tool_choice` parameter controls model behavior
     - `"auto"` -- model decides freely (default)
     - `"any"` -- model must call at least one tool
@@ -78,6 +82,7 @@ audience:
 ## Steering Tool Selection with Prompts (cont.)
 
 ## Writing Effective Tool Descriptions
+
 - Be specific: `"Search Git log by author and date range"` beats `"Search logs"`
 - Mention constraints: `"Returns max 50 results, sorted by date"`
 - Describe when **not** to use the tool to reduce false positives
@@ -95,6 +100,7 @@ audience:
 ## Tool Result Handling
 
 ## The Round-Trip
+
 1. Model emits a `tool_use` content block with `name` and `input`
 1. Your runtime executes the actual function
 1. You return a `tool_result` message back to the model
@@ -119,6 +125,7 @@ audience:
 ## Multi-Turn Tool Conversations
 
 ## Chaining Multiple Calls
+
 - A single user request may require several tool invocations
 - The model decides autonomously which tools to call next
 - Each tool result becomes context for subsequent reasoning
@@ -135,6 +142,7 @@ audience:
 ## Parallel Tool Calls
 
 ## Fan-Out Execution
+
 - A model can emit multiple `tool_use` blocks in one response
 - The runtime executes them concurrently and returns all results at once
 - Reduces latency when tool calls are independent of each other
@@ -155,6 +163,7 @@ audience:
 ## Parallel Tool Calls (cont.)
 
 ## When to Use Parallel Calls
+
 - Reading multiple files that the model needs simultaneously
 - Running independent searches or lookups
 - Fetching data from unrelated APIs in a single turn
@@ -164,6 +173,7 @@ audience:
 ## Designing Effective Tools
 
 ## Tool Granularity
+
 - **Too coarse**: one tool does everything, hard to compose
 - **Too fine**: many tiny tools, wastes context and turns
 - Aim for single-responsibility tools that compose well
@@ -179,6 +189,7 @@ audience:
 ## Tool Composition Patterns
 
 ## Chaining Tools into Pipelines
+
 - Tools can be composed sequentially: output of one feeds the next
 - The model acts as the orchestrator between pipeline stages
 - Common patterns: read-transform-write, search-analyze-act
@@ -194,6 +205,7 @@ audience:
 ## Tool Composition Patterns (cont.)
 
 ## Orchestration Strategies
+
 - **Sequential**: each step depends on the previous result
 - **Fan-out/fan-in**: parallel reads, then aggregate and act
 - **Conditional**: branch based on tool output (e.g., skip if tests pass)
@@ -203,6 +215,7 @@ audience:
 ## Input/Output Schema Design
 
 ## Best Practices
+
 - Use descriptive `description` fields on every property
 - Prefer enums over free-form strings where possible
 - Keep required parameters minimal; use sensible defaults
@@ -229,6 +242,7 @@ audience:
 ## Managing Context Window with Tool Output
 
 ## The Problem
+
 - Tool results consume context tokens alongside the conversation
 - Large file reads or verbose API responses can exhaust the window
 - The model loses access to earlier context as tokens accumulate
@@ -238,6 +252,7 @@ audience:
 ## Managing Context Window with Tool Output (cont.)
 
 ## Mitigation Strategies
+
 1. **Truncation**: cap tool output at a fixed token limit
 1. **Summarization**: post-process results before returning to the model
 1. **Pagination**: return a page of results with a `next_cursor` field
@@ -255,6 +270,7 @@ def truncate_result(content: str, max_chars: int = 8000) -> str:
 ## Error Handling and Feedback
 
 ## Giving the Model Useful Errors
+
 - Return structured errors, not stack traces
 - Include actionable hints so the model can self-correct
 - Distinguish user errors from system failures
@@ -271,6 +287,7 @@ def truncate_result(content: str, max_chars: int = 8000) -> str:
 ## Error Handling and Feedback (cont.)
 
 ## Key Principles
+
 - Never silently swallow failures
 - Suggest alternatives when a tool call is invalid
 - Rate-limit or reject dangerous operations explicitly
@@ -280,11 +297,13 @@ def truncate_result(content: str, max_chars: int = 8000) -> str:
 ## Security: Allow-Lists and Least-Privilege
 
 ## Permission Models
+
 - Define an **allow-list** of permitted tools per session or user role
 - Sensitive tools (shell, file write) require explicit user approval
 - Enforce **least-privilege**: only expose tools the task actually needs
 
 ## Sandboxed Execution
+
 - Run shell tools inside containers or VMs with restricted access
 - Apply filesystem scoping: tools can only read/write within a project root
 - Network policies prevent tools from reaching internal services
@@ -300,6 +319,7 @@ def truncate_result(content: str, max_chars: int = 8000) -> str:
 ## Idempotency and Safety
 
 ## Designing for Repeated Calls
+
 - Tools may be retried on failure or called redundantly
 - **Idempotent** tools produce the same result on repeated calls
 - Guard destructive operations with confirmation or dry-run modes
@@ -323,6 +343,7 @@ def delete_resource(resource_id: str, dry_run: bool = False) -> dict:
 ## Built-in Tools: File Operations
 
 ## Common File Tools in AI Agents
+
 - `read_file(path, offset?, limit?)` -- read file contents
 - `write_file(path, content)` -- create or overwrite a file
 - `edit_file(path, old_string, new_string)` -- surgical text replacement
@@ -344,11 +365,13 @@ result = edit_file(
 ## Built-in Tools: Shell, Web, LSP
 
 ## Shell Execution
+
 - Run arbitrary commands: build, test, deploy
 - Capture `stdout`, `stderr`, and exit code
 - Apply timeouts and sandboxing for safety
 
 ## Web Search and Fetch
+
 - `web_search(query)` -- retrieve search results
 - `web_fetch(url)` -- download page content as markdown
 - Essential for up-to-date information beyond training data
@@ -358,6 +381,7 @@ result = edit_file(
 ## Built-in Tools: Shell, Web, LSP (cont.)
 
 ## LSP Integration
+
 - Go-to-definition, find references, rename symbol
 - Gives the agent IDE-level code intelligence
 - Reduces hallucination on symbol names and types
@@ -367,6 +391,7 @@ result = edit_file(
 ## Tool Discovery and Registration
 
 ## Dynamic Tool Loading
+
 - Tools can be registered at runtime rather than hardcoded at startup
 - MCP servers advertise capabilities via `tools/list` endpoint
 - Agents discover available tools and adapt their behavior accordingly
@@ -376,6 +401,7 @@ result = edit_file(
 ## Tool Discovery and Registration (cont.)
 
 ## Capability Negotiation
+
 - Agent queries the registry for tools matching the current task
 - New tools can be hot-loaded without restarting the agent
 - Tool metadata includes version, permissions, and rate limits
@@ -398,6 +424,7 @@ available = registry.list_tools(role="developer")
 ## Building Custom Tools
 
 ## Tool Definition Formats
+
 - OpenAI/Anthropic: JSON Schema under `tools[]`
 - MCP (Model Context Protocol): standardized tool discovery
 - LangChain/LlamaIndex: Python decorators
@@ -432,6 +459,7 @@ async def handle_tool_call(name: str, input: dict) -> dict:
 ```
 
 ## Guidelines
+
 - Validate inputs before execution
 - Wrap external calls in try/except and return structured errors
 - Keep handlers stateless when possible
@@ -442,6 +470,7 @@ async def handle_tool_call(name: str, input: dict) -> dict:
 ## Debugging Tool Calls
 
 ## Inspecting Request and Response
+
 - Log the full `tool_use` block (name, input, id) on every call
 - Log the `tool_result` with timing and status
 - Use structured logging (JSON) for easy filtering and search
@@ -464,6 +493,7 @@ async def debug_wrapper(name: str, input: dict) -> dict:
 ## Debugging Tool Calls (cont.)
 
 ## Common Failure Modes
+
 - Schema mismatch: model sends unexpected field types
 - Timeout: external API takes too long to respond
 - Auth expiry: tokens or keys have expired mid-session
@@ -473,11 +503,13 @@ async def debug_wrapper(name: str, input: dict) -> dict:
 ## Tool Performance and Caching
 
 ## Caching Strategies
+
 - Cache tool results keyed by `(tool_name, input_hash)`
 - Use short TTLs for volatile data (API calls) and longer for stable data (file reads)
 - Invalidate cache on known mutations (e.g., after `edit_file`)
 
 ## Rate Limiting
+
 - Apply per-tool rate limits to protect downstream services
 - Return `429`-style errors with retry hints so the model can back off
 
@@ -486,6 +518,7 @@ async def debug_wrapper(name: str, input: dict) -> dict:
 ## Tool Performance and Caching (cont.)
 
 ## Latency Optimization
+
 - Use connection pooling for HTTP-based tools
 - Batch multiple small queries into a single tool call where possible
 - Set aggressive timeouts and return partial results on expiry
@@ -495,6 +528,7 @@ async def debug_wrapper(name: str, input: dict) -> dict:
 ## Streaming Tool Results
 
 ## Handling Long-Running Tools
+
 - Some tools (builds, deployments, large searches) take minutes
 - Stream intermediate output so the model and user see progress
 - Use a `status` field to indicate completion state
@@ -514,6 +548,7 @@ async def stream_shell(command: str):
 ## Streaming Tool Results (cont.)
 
 ## Progress Updates
+
 - Report percentage or stage for multi-step operations
 - Allow the model to cancel a tool call if early output shows an error
 - Buffer streamed output and return a final summary to the model
@@ -529,6 +564,7 @@ async def stream_shell(command: str):
 ## Production Architecture: Components
 
 ## Key Concerns
+
 - **API Gateway**: rate limiting, request validation, routing
 - **Registry**: tool catalog with schemas and versioning
 - **Auth**: per-tool permission checks and token management
@@ -539,6 +575,7 @@ async def stream_shell(command: str):
 ## Testing Tools with AI Agents
 
 ## Strategies
+
 1. **Unit tests**: validate handler logic in isolation
 1. **Schema validation**: ensure inputs/outputs match declared schemas
 1. **Simulation tests**: feed synthetic tool calls and assert results
@@ -560,6 +597,7 @@ def test_schema_compliance():
 ## Tool Versioning Strategies
 
 ## Backward Compatibility
+
 - New versions add optional fields; never remove or rename required ones
 - Support multiple versions concurrently during migration periods
 - Include a `version` field in tool schemas for explicit negotiation
@@ -569,6 +607,7 @@ def test_schema_compliance():
 ## Tool Versioning Strategies (cont.)
 
 ## Deprecation and Migration
+
 1. Mark deprecated tools with a warning in the `description` field
 1. Log usage of deprecated tools to track migration progress
 1. Set a sunset date and remove after all consumers have migrated
@@ -587,6 +626,7 @@ def test_schema_compliance():
 ## Cross-Platform Tool Compatibility
 
 ## Making Tools Work Across Different AI Agents
+
 - Each provider has slightly different schema conventions
 - Abstract tool definitions into a shared format and generate per-platform schemas
 - MCP provides a vendor-neutral protocol for tool interoperability
@@ -615,6 +655,7 @@ class ToolAdapter:
 ## Versioning and Maintaining Tools
 
 ## Evolution Without Breaking Agents
+
 - Add new optional parameters; never remove required ones
 - Use semantic versioning for tool packages
 - Deprecate old tools gracefully with warnings in descriptions
@@ -631,6 +672,7 @@ class ToolAdapter:
 ## Hands-On: Building a Custom Tool End-to-End
 
 ## Exercise: Build a `query_logs` Tool
+
 1. Define the JSON schema with `service`, `level`, `since`, and `limit` parameters
 1. Implement the handler that queries an Elasticsearch backend
 1. Add input validation, error handling, and structured output
@@ -654,6 +696,7 @@ LOG_TOOL_SCHEMA = {
 ```
 
 ## Steps
+
 - Write the handler, add caching, then test with unit and integration tests
 
 ---
@@ -661,6 +704,7 @@ LOG_TOOL_SCHEMA = {
 ## Key Takeaways
 
 ## Summary
+
 - Tool use turns LLMs from text generators into **autonomous agents**
 - Good tool design follows single-responsibility, clear schemas, and idempotency
 - Built-in tools (file, shell, web, LSP) cover most coding workflows

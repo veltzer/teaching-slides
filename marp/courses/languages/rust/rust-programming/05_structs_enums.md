@@ -441,6 +441,7 @@ match value {
 ## Practice Exercise
 
 Create a basic state machine using enums:
+
 1. Define states
 1. Implement transitions
 1. Add validation
@@ -455,6 +456,7 @@ Create a basic state machine using enums:
 ---
 
 ## Summary
+
 - Structs and their types
 - Methods and associated functions
 - Enums and variants

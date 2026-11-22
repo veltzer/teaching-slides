@@ -277,6 +277,7 @@ spec:
 ```
 
 Bound tokens are:
+
 - Time-limited (auto-rotated)
 - Audience-bound
 - Object-bound (invalidated when pod deleted)

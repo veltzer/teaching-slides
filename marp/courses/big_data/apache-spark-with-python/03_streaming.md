@@ -17,6 +17,7 @@ audience:
 ---
 
 ## What is Spark Streaming
+
 - Extension of core Spark API for stream processing
 - Enables scalable, high-throughput, fault-tolerant processing
 - Supports both real-time and batch processing
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## Supported Input Sources
+
 - Kafka
 - Flume
 - Kinesis
@@ -41,6 +43,7 @@ audience:
 ---
 
 ## Key Features
+
 1. Fault Tolerance
     - Exactly-once semantics
     - Automatic recovery
@@ -53,6 +56,7 @@ audience:
 ---
 
 ## DStream Basics
+
 - Continuous sequence of RDDs
 - Each RDD contains data from a specific interval
 - Supports all RDD operations
@@ -206,6 +210,7 @@ avg_response = response_times.meanByWindow(60, 10)
 ---
 
 ## Batch Size Optimization
+
 - Smaller batches: lower latency but higher overhead
 - Larger batches: higher throughput but increased latency
 - Finding the right balance:
@@ -281,6 +286,7 @@ ssc.addStreamingListener(CustomListener())
 ---
 
 ## Common Issues and Solutions
+
 1. Data Loss
     - Enable Write Ahead Logs
     - Use reliable receivers
@@ -293,6 +299,7 @@ ssc.addStreamingListener(CustomListener())
 ---
 
 ## Common Issues and Solutions (cont.)
+
 3. Memory Issues
     - Tune executor memory
     - Adjust cleaning interval
@@ -331,6 +338,7 @@ stream.foreachRDD(lambda rdd: rdd.foreachPartition(save_partition))
 ---
 
 ## Production Deployment Best Practices
+
 1. Monitoring Setup
     - Implement custom metrics
     - Set up alerting
@@ -358,6 +366,7 @@ def test_streaming_word_count():
 ---
 
 ## Summary
+
 - Spark Streaming enables real-time processing
 - DStreams provide high-level abstraction
 - Rich ecosystem integration

@@ -11,6 +11,7 @@ audience:
 # Packaging and Delivering Python Modules
 
 ## Overview
+
 - Python packaging systems
 - Creating distributable packages
 - Building source distributions and wheels
@@ -278,6 +279,7 @@ dependencies = [
 ## Modern Packaging: Modern Packaging Tools
 
 ## setuptools + build
+
 - setuptools remains the most common build backend
 - build module provides standardized builder
 - Simple, standardized approach
@@ -300,6 +302,7 @@ python -m build --wheel
 ## Modern Packaging: Modern Packaging Tools (2)
 
 ## poetry
+
 - Complete package management
 - Dependency resolution
 - Virtual environment management
@@ -325,6 +328,7 @@ poetry publish
 ## Modern Packaging: Modern Packaging Tools (3)
 
 ## flit
+
 - Simplest way to package Python modules
 - Minimal configuration
 - Auto-detection of metadata
@@ -347,6 +351,7 @@ flit publish
 ## Modern Packaging: Modern Packaging Tools (4)
 
 ## hatch
+
 - Modern Python project manager
 - Standardized project structure
 - Virtual environment management
@@ -577,6 +582,7 @@ twine upload dist/*
 ## Private Package Repositories: PyPI Server Options
 
 ## PyPI-Server
+
 - Simple, lightweight PyPI server
 - Easy to set up and use
 - Support for package uploads
@@ -601,6 +607,7 @@ pip install --index-url http://localhost:8080/simple/ mypackage
 ## Private Package Repositories: PyPI Server Options (2)
 
 ## Artifactory/Nexus/DevPi
+
 - Enterprise-grade package repositories
 - Advanced security features
 - Multiple repository types (not just Python)
@@ -658,6 +665,7 @@ mypackage==1.0.0
 ## Binary Distributions: Creating Binary Distributions
 
 ## PyInstaller
+
 - Bundles Python app into standalone executable
 - Cross-platform support
 - Handles dependencies automatically
@@ -683,6 +691,7 @@ pyinstaller --onefile --windowed --icon=myicon.ico myscript.py
 ## Binary Distributions: Creating Binary Distributions (2)
 
 ## cx_Freeze
+
 - Creates standalone executables
 - Cross-platform
 - More customizable than PyInstaller
@@ -715,6 +724,7 @@ setup(
 ## Binary Distributions: Creating Binary Distributions (3)
 
 ## py2exe/py2app
+
 - Windows-specific (py2exe)
 - macOS-specific (py2app)
 - Mature and well-tested
@@ -746,6 +756,7 @@ setup(
 ## Binary Distributions: Creating Binary Distributions (4)
 
 ## Docker Containers
+
 - Package application with Python runtime
 - Consistent environment across systems
 - Excellent for web applications and services
@@ -998,6 +1009,7 @@ MIT License
 ## Documenting Your Module: Documentation Tools
 
 ## Sphinx
+
 - Standard documentation generator for Python
 - reStructuredText format
 - Automatic API documentation from docstrings
@@ -1021,6 +1033,7 @@ make html
 ## Documenting Your Module: Documentation Tools (2)
 
 ## MkDocs
+
 - Simpler alternative to Sphinx
 - Markdown format
 - Clean, modern themes
@@ -1052,6 +1065,7 @@ plugins:
 ## Documenting Your Module: Hosting Documentation
 
 ## ReadTheDocs
+
 - Free hosting for open source projects
 - Automatic builds from GitHub/GitLab
 - Versioned documentation
@@ -1083,6 +1097,7 @@ sphinx:
 ## Distributing Documentation
 
 ## Documentation Distribution
+
 - Include in source distributions
 - Host online (ReadTheDocs, GitHub Pages)
 - Package with application
@@ -1215,6 +1230,7 @@ twine upload dist/*
 ## Summary
 
 ## Key Takeaways
+
 - Choose appropriate packaging tools for your project
 - Build both source and wheel distributions
 - Design stable, well-documented APIs
@@ -1228,6 +1244,7 @@ twine upload dist/*
 ## Resources
 
 ## Further Reading
+
 - Python Packaging User Guide: packaging.python.org
 - Setuptools Documentation: setuptools.pypa.io
 - Python Packaging Authority (PyPA): pypa.io

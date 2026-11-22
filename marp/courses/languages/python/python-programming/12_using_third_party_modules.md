@@ -13,6 +13,7 @@ audience:
 ---
 
 ## What are Third Party Modules?
+
 - Packages not included in Python's standard library
 - Published on PyPI (Python Package Index)
 - Installed using `pip` (Python's package manager)
@@ -22,6 +23,7 @@ audience:
 ---
 
 ## PyPI - Python Package Index
+
 - <https://pypi.org>
 - The official repository for Python packages
 - Anyone can publish packages
@@ -435,6 +437,7 @@ safety check
 ---
 
 ## Summary
+
 - PyPI hosts over 500,000 Python packages
 - Use `pip` to install and manage packages
 - Virtual environments isolate project dependencies

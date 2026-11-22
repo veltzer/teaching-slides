@@ -26,6 +26,7 @@ audience:
 ## UNIX Accounts: Details
 
 Key components:
+
 - Username (human readable)
 - UID (system identifier)
 - Group memberships
@@ -170,6 +171,7 @@ chmod 754 file.txt
 ## How File Access is Determined: Details
 
 Access check order:
+
 1. Is user the owner?
 1. Is user in the group?
 1. What are "other" permissions?

@@ -11,6 +11,7 @@ audience:
 # Advanced Error Handling in Python
 
 ## Overview
+
 - Building robust Python applications
 - Correct exception handling patterns
 - Creating custom exception hierarchies
@@ -974,6 +975,7 @@ class APIClient:
 ## Summary
 
 ## Key Takeaways
+
 - Handle exceptions at the appropriate level
 - Create meaningful exception hierarchies
 - Use `raise from` to maintain context
@@ -986,6 +988,7 @@ class APIClient:
 ## Next Steps
 
 ## Further Resources
+
 - Python documentation on exceptions
 - "Effective Python" by Brett Slatkin
 - Python's `traceback` module

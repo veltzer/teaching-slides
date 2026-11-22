@@ -23,6 +23,7 @@ Redis is configured through:
 1. **Runtime commands** (`CONFIG SET/GET`)
 
 Default configuration file locations:
+
 - `/etc/redis/redis.conf` (Linux packages)
 - `/usr/local/etc/redis.conf` (macOS Homebrew)
 - Source directory when compiled from source
@@ -162,6 +163,7 @@ replica-ignore-maxmemory yes
 ```
 
 Available policies:
+
 - `noeviction`: Return errors when limit reached
 - `allkeys-lru`: Evict least recently used keys
 - `allkeys-lfu`: Evict least frequently used keys
@@ -387,6 +389,7 @@ redis-cli MEMORY STATS
 ## Automatic Key Management: Example
 
 Key expiration and eviction:
+
 1. **Explicit expiration**:
 
    ```bash
@@ -482,6 +485,7 @@ redis-cli --scan --pattern 'user:*' | xargs -L 100 redis-cli MEMORY USAGE
 ## Identifying Memory Issues
 
 Memory fragmentation in Redis:
+
 - **mem_fragmentation_ratio < 1.0** - Redis needs more memory than available
 - **mem_fragmentation_ratio 1.0-1.5** - Normal
 - **mem_fragmentation_ratio > 1.5** - Significant fragmentation
@@ -592,6 +596,7 @@ sentinel parallel-syncs mymaster 1
 ```
 
 Key concepts:
+
 - Monitors Redis master and replicas
 - Automatic failover if master fails
 - Client notifications

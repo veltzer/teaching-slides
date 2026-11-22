@@ -20,6 +20,7 @@ audience:
 AI is transforming how we write, test, and maintain code
 
 This chapter explores:
+
 1. Current state of AI for developers
 1. Types of AI assistance available
 1. Tool ecosystem overview
@@ -33,6 +34,7 @@ This chapter explores:
 AI has evolved from simple autocomplete to intelligent coding partners
 
 Key milestones:
+
 - **2021**: GitHub Copilot launch - first mainstream AI pair programmer
 - **2022**: ChatGPT revolution - conversational AI for development
 - **2023**: Specialized coding AIs emerge - Cursor, Codeium, Claude
@@ -44,6 +46,7 @@ Key milestones:
 ## Why AI-Assisted Development Matters
 
 Traditional development challenges:
+
 - Repetitive boilerplate code
 - Documentation burden
 - Learning curve for new technologies
@@ -65,6 +68,7 @@ AI addresses each of these pain points directly
 ### Automatic code completion and generation
 
 Examples:
+
 - Function implementation from comments
 - Boilerplate code generation
 - Pattern-based code suggestions
@@ -83,6 +87,7 @@ def calculate_fibonacci(n):
 ### AI-powered error detection and resolution
 
 Capabilities:
+
 - Error message interpretation
 - Stack trace analysis
 - Root cause identification
@@ -98,6 +103,7 @@ Reduces debugging time by up to 50%
 ### Automatic documentation generation
 
 AI can create:
+
 - Inline code comments
 - Function/class documentation
 - README files
@@ -114,6 +120,7 @@ Maintains consistency and completeness
 ### Automated code quality analysis
 
 AI assists with:
+
 - Bug detection before human review
 - Style consistency checking
 - Security vulnerability scanning
@@ -128,6 +135,7 @@ AI assists with:
 ### On-demand knowledge and guidance
 
 AI provides:
+
 - Technology explanations
 - Code examples
 - Best practice guidance
@@ -148,12 +156,14 @@ Your personal tutor available 24/7
 ## Commercial vs Open Source Tools
 
 ### Commercial Tools
+
 - GitHub Copilot - Microsoft/OpenAI backed
 - Cursor - AI-first IDE
 - Amazon CodeWhisperer - AWS integrated
 - Tabnine - Enterprise focused
 
 ### Open Source Tools
+
 - Codeium - Free tier available
 - CodeGeeX - Hugging Face models
 - LocalAI - Self-hosted solutions
@@ -178,12 +188,14 @@ Choose based on your security and performance needs
 ## General vs Specialized AI Assistants
 
 ### General Purpose
+
 - ChatGPT, Claude, Gemini
 - Broad knowledge base
 - Flexible use cases
 - Natural conversation
 
 ### Specialized Tools
+
 - SQL-specific assistants
 - Frontend component generators
 - DevOps automation tools
@@ -242,6 +254,7 @@ Junior developers reach productivity faster
 AI handles the mundane, you handle the creative:
 
 **AI Manages**:
+
 - Syntax details
 - Library APIs
 - Boilerplate patterns
@@ -253,6 +266,7 @@ AI handles the mundane, you handle the creative:
 ## Productivity Impact: Cognitive Load Reduction (cont.)
 
 **You Focus On**:
+
 - Business logic
 - System design
 - User experience
@@ -270,6 +284,7 @@ AI handles the mundane, you handle the creative:
 ## Understanding AI Limitations
 
 **What AI Cannot Do**:
+
 1. Replace human creativity and judgment
 1. Understand complex business context
 1. Make architectural decisions independently
@@ -313,6 +328,7 @@ AI doesn't understand your security context
 Balance AI assistance with skill development:
 
 **Do**:
+
 - Understand generated code
 - Learn from AI suggestions
 - Practice core concepts
@@ -323,6 +339,7 @@ Balance AI assistance with skill development:
 ## Maintaining Coding Skills (cont.)
 
 **Don't**:
+
 - Blindly copy-paste
 - Skip learning fundamentals
 - Lose problem-solving skills
@@ -353,6 +370,7 @@ Professional integrity remains paramount
 ## Setting Expectations
 
 **What to Expect**:
+
 - Significant productivity boost
 - Faster learning curve
 - Reduced mundane tasks
@@ -364,6 +382,7 @@ Professional integrity remains paramount
 ## Setting Expectations (cont.)
 
 **What NOT to Expect**:
+
 - Perfect code every time
 - Complete automation
 - No need for expertise
@@ -430,11 +449,13 @@ Essential first steps:
 ## Investment Considerations
 
 **Time Investment**:
+
 - Initial setup: 2-4 hours
 - Learning curve: 1-2 weeks
 - Proficiency: 1-2 months
 
 **Financial Investment**:
+
 - Free tiers available
 - Paid plans: $10-30/month
 - Enterprise: Custom pricing

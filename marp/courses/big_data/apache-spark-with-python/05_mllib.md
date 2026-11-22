@@ -17,6 +17,7 @@ audience:
 ---
 
 ## What is Machine Learning
+
 - Automated pattern recognition
 - Learning from data without explicit programming
 - Making predictions or decisions based on data
@@ -31,6 +32,7 @@ audience:
 ---
 
 ## MLlib Key Components
+
 1. Transformers
     - Transform one DataFrame to another
     - Implement transform() method
@@ -358,6 +360,7 @@ class CustomFeatureTransformer(Transformer):
 ---
 
 ## Summary
+
 - MLlib provides scalable ML algorithms
 - Pipeline API for end-to-end ML workflows
 - Rich set of features for data preprocessing

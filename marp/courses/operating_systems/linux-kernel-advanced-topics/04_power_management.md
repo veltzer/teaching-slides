@@ -17,6 +17,7 @@ audience:
 ## Power Management Overview
 
 Linux power management aims to:
+
 - Reduce power consumption
 - Extend battery life
 - Manage thermal constraints
@@ -35,6 +36,7 @@ Key challenge: Balance power savings with system responsiveness
 ## Power States
 
 System power states (`/sys/power/state`):
+
 - `freeze` - Suspend to idle
 - `standby` - Power-on suspend
 - `mem` - Suspend to RAM
@@ -47,6 +49,7 @@ System power states (`/sys/power/state`):
 Dynamic frequency adjustment based on load
 
 Key components:
+
 - Governors - Policy algorithms
 - Drivers - Hardware control
 - Core - Framework infrastructure
@@ -56,6 +59,7 @@ Key components:
 ## CPUFreq Governors
 
 Available governors:
+
 - `performance` - Maximum frequency
 - `powersave` - Minimum frequency
 - `ondemand` - Dynamic scaling
@@ -106,6 +110,7 @@ static int __init my_cpufreq_module_init(void)
 ## CPU Idle States
 
 C-States for idle CPU management:
+
 - `C0` - Active state
 - `C1` - Halt
 - `C2` - Stop clock
@@ -153,6 +158,7 @@ static struct cpuidle_driver my_idle_driver = {
 Device-level power management
 
 Key concepts:
+
 - Automatic suspend/resume
 - Reference counting
 - Parent-child relationships
@@ -194,6 +200,7 @@ static const struct dev_pm_ops my_pm_ops = {
 Suspend entire system to save power
 
 Phases:
+
 1. Prepare - Prevent new operations
 1. Suspend - Save state and power down
 1. Suspend_late - Final operations
@@ -307,6 +314,7 @@ pm_runtime_put(dev);        /* Clocks disabled */
 Temperature monitoring and control
 
 Components:
+
 - Thermal zones
 - Cooling devices
 - Governors
@@ -443,6 +451,7 @@ dev_pm_qos_remove_request(&qos_req);
 ## Dynamic Power Management
 
 Strategies:
+
 1. Clock gating
 1. Power gating
 1. Voltage scaling
@@ -607,6 +616,7 @@ echo 2 > /sys/devices/system/cpu/kernel_max
 ## ACPI Power Management
 
 ACPI states mapping:
+
 - `S0` - Working
 - `S1` - Power on suspend
 - `S3` - Suspend to RAM
@@ -647,12 +657,14 @@ echo 1 > /sys/module/pcie_aspm/parameters/policy
 ## Summary
 
 Power management involves:
+
 - Multiple frameworks working together
 - Hardware and software coordination
 - Trade-offs between power and performance
 - Comprehensive testing needed
 
 Key takeaways:
+
 - Runtime PM for devices
 - CPUFreq/CPUIdle for processors
 - Thermal management critical

@@ -39,6 +39,7 @@ audience:
 ## Processing Engines Overview
 
 Current Landscape of Major Players:
+
 - Apache Spark
 - Trino (formerly PrestoSQL)
 - PrestoDB
@@ -53,11 +54,13 @@ Current Landscape of Major Players:
 ## Quick Classification
 
 ### Batch Processing
+
 - Spark (Primary)
 - EMR
 - Databricks
 
 ### Stream Processing
+
 - Flink (Primary)
 - Spark Streaming
 - Druid
@@ -67,10 +70,12 @@ Current Landscape of Major Players:
 ## Quick Classification (cont.)
 
 ### Interactive Query
+
 - Trino/Presto
 - Databricks SQL
 
 ### Specialized
+
 - Splunk (Logs)
 - Druid (Time Series)
 
@@ -91,6 +96,7 @@ Current Landscape of Major Players:
 ## Apache Spark
 
 Core Strengths
+
 - Unified engine (batch/streaming)
 - Rich ML ecosystem (MLlib)
 - GraphX for graph processing
@@ -102,6 +108,7 @@ Core Strengths
 ## Apache Spark (cont.)
 
 Primary Use Cases
+
 1. Large-scale ETL
 1. Machine Learning pipelines
 1. Interactive analytics
@@ -112,12 +119,14 @@ Primary Use Cases
 ## Trino (PrestoSQL)
 
 Core Strengths
+
 - Fast SQL queries
 - Federation capabilities
 - Cost-based optimizer
 - Low memory footprint
 
 Primary Use Cases
+
 1. Interactive querying
 1. Data lake analytics
 1. Multi-source federation
@@ -128,12 +137,14 @@ Primary Use Cases
 ## Apache Flink
 
 ### Core Strengths
+
 - True stream processing
 - Exactly-once semantics
 - Advanced state management
 - Event-time processing
 
 ### Primary Use Cases
+
 1. Real-time analytics
 1. Complex event processing
 1. Streaming ETL
@@ -144,12 +155,14 @@ Primary Use Cases
 ## Databricks Platform
 
 Core Strengths
+
 - Managed Spark platform
 - MLflow integration
 - Delta Lake support
 - Collaborative notebooks
 
 Primary Use Cases
+
 1. End-to-end ML
 1. Data engineering
 1. Collaborative science
@@ -160,12 +173,14 @@ Primary Use Cases
 ## Apache Druid
 
 Core Strengths
+
 - Sub-second OLAP queries
 - Real-time ingestion
 - High availability
 - Time series optimization
 
 Primary Use Cases
+
 1. User-facing analytics
 1. Click stream analysis
 1. Network telemetry
@@ -176,12 +191,14 @@ Primary Use Cases
 ## Splunk
 
 Core Strengths
+
 - Log analysis specialist
 - Security features
 - Machine data processing
 - Real-time alerting
 
 Primary Use Cases
+
 1. SIEM
 1. IT Operations
 1. APM
@@ -204,11 +221,13 @@ Primary Use Cases
 ## Architecture Patterns
 
 ### Lambda Architecture
+
 - Batch: Spark/EMR
 - Speed: Flink/Druid
 - Serving: Trino/Presto
 
 ### Kappa Architecture
+
 - Stream: Flink
 - Storage: Druid
 - Query: Trino
@@ -252,12 +271,14 @@ Primary Use Cases
 ## Cost Considerations
 
 ### Direct Costs
+
 - License fees
 - Infrastructure
 - Storage
 - Network
 
 ### Indirect Costs
+
 - Operations team
 - Training
 - Maintenance
@@ -268,11 +289,13 @@ Primary Use Cases
 ## Industry-Specific Use Cases
 
 ### Financial Services
+
 - Fraud detection (Flink)
 - Risk analytics (Spark)
 - Compliance (Splunk)
 
 ### E-commerce
+
 - Recommendations (Spark)
 - Inventory (Druid)
 - Security (Splunk)
@@ -282,6 +305,7 @@ Primary Use Cases
 ## Industry-Specific Use Cases (cont.)
 
 ### Healthcare
+
 - Patient analytics (Spark)
 - Monitoring (Flink)
 - Compliance (Splunk)
@@ -291,12 +315,14 @@ Primary Use Cases
 ## Decision Framework Factors
 
 ### Business Factors
+
 1. Budget constraints
 1. Team expertise
 1. Time to market
 1. Scale requirements
 
 ### Technical Factors
+
 1. Data volume
 1. Query patterns
 1. Latency needs
@@ -318,12 +344,14 @@ Primary Use Cases
 ## Future Trends
 
 ### Current
+
 - Cloud-native deployments
 - Unified processing
 - AI/ML integration
 - Serverless offerings
 
 ### Emerging
+
 - Enhanced automation
 - Cost optimization
 - Improved security

@@ -27,6 +27,7 @@ audience:
 ---
 
 ## What is ECS?
+
 - Fully managed container orchestration service from AWS
 - Runs and scales Docker containers without managing your own orchestrator
 - Deeply integrated with the rest of the AWS ecosystem
@@ -36,6 +37,7 @@ audience:
 ---
 
 ## Why Container Orchestration?
+
 - Containers package an app with its dependencies
 - Production needs more than `docker run` on one host
 - Scheduling: where should each container run?
@@ -46,6 +48,7 @@ audience:
 ---
 
 ## Where ECS Fits
+
 - ECS is the orchestrator (the "brain")
 - It decides what runs, where, and how many
 - It does not build your images — that is Docker / a CI pipeline
@@ -55,6 +58,7 @@ audience:
 ---
 
 ## ECS vs EKS vs Kubernetes
+
 - **ECS**: AWS-native, simpler, no control-plane to manage
 - **EKS**: managed Kubernetes, portable, more complex
 - **Self-managed k8s**: maximum control, maximum operational burden
@@ -64,6 +68,7 @@ audience:
 ---
 
 ## Core Building Blocks
+
 - **Cluster**: logical grouping of capacity
 - **Task Definition**: blueprint for one or more containers
 - **Task**: a running instance of a task definition
@@ -73,6 +78,7 @@ audience:
 ---
 
 ## The Cluster
+
 - A logical boundary for running tasks and services
 - Provides isolation between workloads and environments
 - Backed by EC2 instances, Fargate, or both
@@ -82,6 +88,7 @@ audience:
 ---
 
 ## Task Definitions
+
 - JSON blueprint describing how to run containers
 - Specifies image, CPU, memory, ports, and environment
 - Defines volumes, logging, and IAM roles
@@ -91,6 +98,7 @@ audience:
 ---
 
 ## Anatomy of a Task Definition
+
 - **Family**: name shared across revisions
 - **Container definitions**: one or more containers
 - **CPU / memory**: at task and container level
@@ -121,6 +129,7 @@ audience:
 ---
 
 ## Tasks
+
 - A task is a running instance of a task definition
 - Can hold a single container or several tightly coupled ones
 - Containers in a task share networking and lifecycle
@@ -130,6 +139,7 @@ audience:
 ---
 
 ## Services
+
 - Maintains a desired count of running tasks
 - Restarts tasks that fail or are stopped
 - Integrates with load balancers to spread traffic
@@ -139,6 +149,7 @@ audience:
 ---
 
 ## Launch Types Overview
+
 - **EC2**: you provide and manage the instances
 - **Fargate**: AWS provides the compute, serverless
 - Both run the same task definitions (mostly)
@@ -148,6 +159,7 @@ audience:
 ---
 
 ## EC2 Launch Type
+
 - You run a fleet of EC2 instances in the cluster
 - The ECS agent on each host reports capacity
 - You control instance type, AMI, and patching
@@ -157,6 +169,7 @@ audience:
 ---
 
 ## Fargate Launch Type
+
 - Serverless — no EC2 instances to manage
 - You specify CPU and memory per task
 - AWS handles provisioning, patching, and scaling of hosts
@@ -166,6 +179,7 @@ audience:
 ---
 
 ## EC2 vs Fargate
+
 - **Control**: EC2 wins (custom AMIs, GPUs, special instances)
 - **Operations**: Fargate wins (no host management)
 - **Cost**: EC2 can be cheaper at high steady utilization
@@ -175,6 +189,7 @@ audience:
 ---
 
 ## Networking: awsvpc Mode
+
 - Each task gets its own elastic network interface (ENI)
 - Tasks receive a private IP from your VPC
 - Security groups apply directly to tasks
@@ -184,6 +199,7 @@ audience:
 ---
 
 ## Other Network Modes (EC2)
+
 - **bridge**: Docker's default virtual network
 - **host**: container shares the host's network stack
 - **none**: no external networking
@@ -193,6 +209,7 @@ audience:
 ---
 
 ## Load Balancing
+
 - Services register tasks with an Elastic Load Balancer
 - **Application Load Balancer (ALB)**: HTTP/HTTPS, path routing
 - **Network Load Balancer (NLB)**: TCP/UDP, high performance
@@ -202,6 +219,7 @@ audience:
 ---
 
 ## Service Discovery
+
 - Tasks come and go, so IPs change constantly
 - **AWS Cloud Map** maps service names to running tasks
 - Enables DNS-based discovery within the VPC
@@ -211,6 +229,7 @@ audience:
 ---
 
 ## ECR: The Image Registry
+
 - Elastic Container Registry stores your Docker images
 - Private, secure, and integrated with IAM
 - ECS pulls images directly from ECR at launch
@@ -220,6 +239,7 @@ audience:
 ---
 
 ## Auto Scaling: Service
+
 - **Service Auto Scaling** adjusts the task count
 - Target tracking on CPU, memory, or custom metrics
 - Step scaling reacts to CloudWatch alarm thresholds
@@ -229,6 +249,7 @@ audience:
 ---
 
 ## Auto Scaling: Cluster (EC2)
+
 - **Cluster capacity providers** scale the EC2 fleet
 - Add instances when tasks cannot be placed
 - Remove instances when capacity is idle
@@ -238,6 +259,7 @@ audience:
 ---
 
 ## IAM and Permissions
+
 - **Execution role**: lets ECS pull images and write logs
 - **Task role**: permissions for the app inside the container
 - Scope task roles tightly to what the app needs
@@ -247,6 +269,7 @@ audience:
 ---
 
 ## Logging and Monitoring
+
 - **awslogs** driver ships container logs to CloudWatch
 - **Container Insights** gives cluster and service metrics
 - Track CPU, memory, task counts, and failures
@@ -256,6 +279,7 @@ audience:
 ---
 
 ## Deployment Strategies
+
 - **Rolling update**: gradually replace old tasks (default)
 - **Blue/green** (via CodeDeploy): shift traffic between versions
 - Health checks gate the rollout
@@ -265,6 +289,7 @@ audience:
 ---
 
 ## Secrets Management
+
 - Never hardcode secrets in task definitions or images
 - Pull from **AWS Secrets Manager** or **SSM Parameter Store**
 - Injected as environment variables at task start
@@ -274,6 +299,7 @@ audience:
 ---
 
 ## Cost Considerations
+
 - Fargate: pay per vCPU and GB-second per task
 - EC2: pay for the instances regardless of task usage
 - Use Spot capacity for fault-tolerant workloads
@@ -283,6 +309,7 @@ audience:
 ---
 
 ## Best Practices
+
 - Use `awsvpc` networking and tight security groups
 - Separate task role from execution role
 - One concern per task definition family
@@ -292,6 +319,7 @@ audience:
 ---
 
 ## Common Pitfalls
+
 - Over-provisioning CPU/memory and wasting money
 - Forgetting health checks, causing bad rollouts
 - Storing secrets in plain environment variables
@@ -301,6 +329,7 @@ audience:
 ---
 
 ## When to Use ECS
+
 - You are already invested in AWS
 - You want containers without running Kubernetes
 - You value low operational overhead
@@ -310,6 +339,7 @@ audience:
 ---
 
 ## Summary
+
 - ECS is AWS-native container orchestration
 - Task definitions are blueprints; services keep them running
 - Fargate removes server management; EC2 gives control

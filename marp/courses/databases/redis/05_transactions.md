@@ -17,6 +17,7 @@ audience:
 ## Redis Atomicity
 
 Redis commands are atomic by default:
+
 - Single commands execute without interruption
 - No partial execution of a command
 - Guarantees consistency for individual operations
@@ -45,6 +46,7 @@ Single atomic commands aren't always enough:
 ## What are Redis Transactions?: Details
 
 Redis transactions allow executing multiple commands as a single atomic operation:
+
 - All commands execute sequentially
 - No interruption by other clients
 - All-or-nothing execution*
@@ -111,6 +113,7 @@ Unlike traditional RDBMS transactions:
 ## Optimistic Locking with WATCH
 
 WATCH provides optimistic locking:
+
 - Monitor keys for changes
 - Abort transaction if watched keys change
 - Use between WATCH and EXEC
@@ -471,6 +474,7 @@ Scripts work differently in distributed Redis:
 ## Lua Script vs. MULTI/EXEC: When to Use Each
 
 **Use MULTI/EXEC when**:
+
 - Simple operations (few commands)
 - No conditional logic needed
 - Optimistic locking with WATCH is sufficient
@@ -481,6 +485,7 @@ Scripts work differently in distributed Redis:
 ## Lua Script vs. MULTI/EXEC: When to Use Each (cont.)
 
 **Use Lua scripts when**:
+
 - Complex logic with conditionals
 - Need to make decisions based on data values
 - Multiple operations on the same keys
@@ -558,6 +563,7 @@ FUNCTION LIST
 ```
 
 Benefits:
+
 - Better organization of scripts
 - Proper namespacing
 - Improved script management
