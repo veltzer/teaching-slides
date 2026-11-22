@@ -166,6 +166,8 @@ src_files = ["package.json"]
 # ─── xml / svg ───────────────────────────────────────────────────────────────
 
 [processor.checker.ixmllint]
+# warnings fail too, not only fatal errors
+strict = true
 src_dirs = ["svg", "to_integrate"]
 
 # ─── lua ─────────────────────────────────────────────────────────────────────
