@@ -341,6 +341,11 @@ class SvgFile:
 
         return text
 
+    @property
+    def original_text(self) -> str:
+        """The file's text as last read from or written to disk."""
+        return self._original_text
+
     def save_if_changed(self) -> bool:
         new_text = self.serialize()
         if new_text == self._original_text:

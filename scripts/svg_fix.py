@@ -379,7 +379,7 @@ def process_file(path: Path, fixes: set[str], dry_run: bool) -> bool:
         if "skipped" not in info:
             new_text = fitted
 
-    if new_text == svg._original_text:
+    if new_text == svg.original_text:
         return False
     if not dry_run:
         path.write_text(new_text, encoding="utf-8")

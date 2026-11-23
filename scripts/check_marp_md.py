@@ -544,7 +544,7 @@ def _collect_files(paths: list[str]) -> list[Path]:
     return result
 
 
-def main() -> None:  # pylint: disable=too-many-statements
+def main() -> None:
     parser = argparse.ArgumentParser(
         description='Unified markdown checker for Marp slides.'
     )
