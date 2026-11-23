@@ -35,11 +35,13 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import functools
 import re
 import sys
 from pathlib import Path
 
 from lxml import etree
+
 from svg_lib import (
     SvgFile,
     fit_svg,
@@ -48,14 +50,10 @@ from svg_lib import (
     tag,
 )
 
-_palette_cache: dict | None = None
 
-
+@functools.cache
 def _palette() -> dict:
-    global _palette_cache
-    if _palette_cache is None:
-        _palette_cache = load_palette()
-    return _palette_cache
+    return load_palette()
 
 
 # ── Fix: fonts ──
@@ -85,9 +83,7 @@ def fix_gradients(svg: SvgFile) -> None:
     for gname, group in data.get("colors", {}).items():
         if gname == "neutrals":
             continue
-        for name in group:
-            if name.endswith("-fill"):
-                families.append(name[:-len("-fill")])
+        families.extend(name[:-len("-fill")] for name in group if name.endswith("-fill"))
     solid_for = {f: f"var(--{f}-fill)" for f in families}
     grad_for = {f: f"url(#grad-{f})" for f in families}
     if style == "gradient":
@@ -263,9 +259,9 @@ def fix_no_background(svg: SvgFile) -> None:
 # ── Fix: text-fill ──
 
 def fix_text_fill(svg: SvgFile) -> None:
-    FAMILY_NAMES = ["primary", "ok", "warn", "danger", "info"]
+    family_names = ["primary", "ok", "warn", "danger", "info"]
     family_fills = set()
-    for f in FAMILY_NAMES:
+    for f in family_names:
         family_fills.add(f"var(--{f}-fill)")
         family_fills.add(f"url(#grad-{f})")
 
@@ -273,7 +269,7 @@ def fix_text_fill(svg: SvgFile) -> None:
     for elem, _ in svg.content_elements("rect"):
         fill = (elem.get("fill") or "").strip()
         fam = None
-        for f in FAMILY_NAMES:
+        for f in family_names:
             if fill in (f"var(--{f}-fill)", f"url(#grad-{f})"):
                 fam = f
                 break

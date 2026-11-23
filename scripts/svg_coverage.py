@@ -76,7 +76,7 @@ def tier_for(ratio):
 
 def print_table(headers, rows, aligns=None):
     """Print rows as a fixed-width table. aligns: 'l' or 'r' per column."""
-    cols = list(zip(headers, *rows))
+    cols = list(zip(headers, *rows, strict=False))
     widths = [max(len(str(c)) for c in col) for col in cols]
     if aligns is None:
         aligns = ["l"] * len(headers)
@@ -84,7 +84,7 @@ def print_table(headers, rows, aligns=None):
     def fmt(cells):
         return "  ".join(
             (str(c).rjust(w) if a == "r" else str(c).ljust(w))
-            for c, w, a in zip(cells, widths, aligns)
+            for c, w, a in zip(cells, widths, aligns, strict=False)
         )
 
     print(fmt(headers))
@@ -118,7 +118,7 @@ def main():
 
     if args.md:
         md_rows = []
-        for course_dir, md_files in course_dirs(Path(args.root)):
+        for _course_dir, md_files in course_dirs(Path(args.root)):
             for md in sorted(md_files):
                 if md.name.startswith("00_title") or md.name == "00_title.md":
                     continue

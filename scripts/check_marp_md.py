@@ -94,10 +94,7 @@ def _check_links(path: Path, _text: str, text_no_code: str, _lines: list[str]) -
         clean = link.split('#')[0]
         if not clean:
             continue
-        if os.path.isabs(clean):
-            target = Path(clean)
-        else:
-            target = (path.parent / clean).resolve()
+        target = Path(clean) if os.path.isabs(clean) else (path.parent / clean).resolve()
         if not target.exists():
             errors.append(f"{path}: broken link [{link_text}]({link})")
     return errors

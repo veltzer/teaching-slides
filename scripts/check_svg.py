@@ -30,12 +30,13 @@ Usage:
 """
 
 import argparse
+import functools
 import re
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from svg_lib import load_palette, palette_for_type
+from svg_lib import compute_bbox, load_palette, palette_for_type
 
 MIN_FILE_SIZE = 500
 MIN_ELEMENTS = 5
@@ -217,7 +218,7 @@ def _svg_type_from_file(svg_path: Path) -> str:
                 local = t.split("}", 1)[1] if "}" in t else t
                 if local == "type" and child.text:
                     return child.text.strip()
-    except Exception:  # noqa: BLE001,S110 - best-effort probe, default below
+    except Exception:  # noqa: BLE001 - best-effort probe, default below
         pass
     return "regular"
 
@@ -299,7 +300,6 @@ def _check_colors(tree: ET.ElementTree, svg_path: Path | None = None) -> list[st
 def _check_fill(path: Path) -> list[str]:
     """Flag SVGs whose drawing bbox fills less than MIN_FILL_PCT of the
     usable area (1200x580)."""
-    from svg_lib import compute_bbox
     content = path.read_text(encoding="utf-8", errors="replace")
     outside = re.sub(r'<defs\b.*?</defs>', '', content, flags=re.DOTALL)
     bbox = compute_bbox(outside)
@@ -323,7 +323,6 @@ def _check_fit(path: Path) -> list[str]:
     """Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620].
 
     Run scripts/svg_fix.py --fit to fix."""
-    from svg_lib import compute_bbox
     content = path.read_text(encoding="utf-8", errors="replace")
     outside = re.sub(r'<defs\b.*?</defs>', '', content, flags=re.DOTALL)
     bbox = compute_bbox(outside)
@@ -348,13 +347,8 @@ def _check_fit(path: Path) -> list[str]:
     return []
 
 
-_SHADOW_POLICY: tuple[bool, str, set[str]] | None = None
-
-
+@functools.cache
 def _shadow_policy() -> tuple[bool, str, set[str]]:
-    global _SHADOW_POLICY
-    if _SHADOW_POLICY is not None:
-        return _SHADOW_POLICY
     data = load_palette("regular")
     eff = data.get("effects", {}).get("rect-shadow", {})
     enabled = bool(eff.get("enabled", False))
@@ -367,8 +361,7 @@ def _shadow_policy() -> tuple[bool, str, set[str]]:
             if name.endswith("-fill"):
                 family_fills.add(f"var(--{name})")
                 family_fills.add(f"url(#grad-{name[:-len('-fill')]})")
-    _SHADOW_POLICY = (enabled, apply_to, family_fills)
-    return _SHADOW_POLICY
+    return (enabled, apply_to, family_fills)
 
 
 def _check_shadows(tree: ET.ElementTree) -> list[str]:
@@ -406,40 +399,26 @@ def _check_shadows(tree: ET.ElementTree) -> list[str]:
     return errors
 
 
-_TYPOGRAPHY: tuple[str, str] | None = None
-
-
+@functools.cache
 def _typography() -> tuple[str, str]:
-    global _TYPOGRAPHY
-    if _TYPOGRAPHY is not None:
-        return _TYPOGRAPHY
     data = load_palette("regular")
     typo = data.get("typography", {})
-    _TYPOGRAPHY = (
+    return (
         typo.get("sans", "Arial, sans-serif"),
         typo.get("mono", "Courier New, monospace"),
     )
-    return _TYPOGRAPHY
 
 
-_RECT_FILL_POLICY: tuple[str, list[str]] | None = None
-
-
+@functools.cache
 def _rect_fill_policy() -> tuple[str, list[str]]:
-    global _RECT_FILL_POLICY
-    if _RECT_FILL_POLICY is not None:
-        return _RECT_FILL_POLICY
     data = load_palette("regular")
     style = data.get("effects", {}).get("rect-fill", {}).get("style", "solid")
     fams = []
     for group_name, group in data.get("colors", {}).items():
         if group_name == "neutrals":
             continue
-        for name in group:
-            if name.endswith("-fill"):
-                fams.append(name[:-len("-fill")])
-    _RECT_FILL_POLICY = (style, fams)
-    return _RECT_FILL_POLICY
+        fams.extend(name[:-len("-fill")] for name in group if name.endswith("-fill"))
+    return (style, fams)
 
 
 def _check_gradients(tree: ET.ElementTree) -> list[str]:
@@ -635,7 +614,7 @@ def _find_text_matches(root, spec: dict, check_weight: bool = True) -> list:
     return matches
 
 
-def _check_title_text(tree: ET.ElementTree, path: Path) -> list[str]:
+def _check_title_text(tree: ET.ElementTree) -> list[str]:
     """For title-type SVGs, verify canonical title and subtitle text.
 
     Only called for title-type SVGs (caller checks metadata type).
@@ -851,7 +830,7 @@ def main() -> None:
 
             # Checks that apply ONLY to title SVGs
             if is_title and do_title_text:
-                errors.extend(_check_title_text(tree, path))
+                errors.extend(_check_title_text(tree))
                 errors.extend(_check_title_bg_rect(tree))
 
         for error in errors:

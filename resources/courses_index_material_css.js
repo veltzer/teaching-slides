@@ -132,7 +132,7 @@ function render() {
         if (type && e.type !== type) return false;
         if (tag && !e.tags.includes(tag)) return false;
         if (audience && !e.audience.includes(audience)) return false;
-        if (duration && e.duration_days !== parseInt(duration)) return false;
+        if (duration && e.duration_days !== parseInt(duration, 10)) return false;
         return true;
     });
 
@@ -275,7 +275,7 @@ acList.addEventListener("mousedown", function(ev) {
     var item = ev.target.closest(".autocomplete-item");
     if (item) {
         acList.classList.remove("visible");
-        var idx = parseInt(item.dataset.index);
+        var idx = parseInt(item.dataset.index, 10);
         var query = searchEl.value.toLowerCase();
         var matches = DATA.filter(e => e.name.toLowerCase().includes(query));
         if (matches[idx]) {

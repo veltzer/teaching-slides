@@ -28,6 +28,7 @@ Typical usage:
 from __future__ import annotations
 
 import copy
+import importlib
 import math
 import re
 import sys
@@ -86,13 +87,13 @@ def load_palette(svg_type: str = "regular") -> dict:
     name = theme_name_for_type(svg_type)
     if str(SHARED_THEMES_DIR) not in sys.path:
         sys.path.insert(0, str(SHARED_THEMES_DIR))
-    from diagram_theme import DIAGRAM_THEMES
-    if name not in DIAGRAM_THEMES:
+    diagram_themes = importlib.import_module("diagram_theme").DIAGRAM_THEMES
+    if name not in diagram_themes:
         raise ValueError(
             f"{DIAGRAM_THEMES_CONFIG}: no diagram theme {name!r} in shared-themes "
-            f"(known: {sorted(DIAGRAM_THEMES)})"
+            f"(known: {sorted(diagram_themes)})"
         )
-    data = copy.deepcopy(DIAGRAM_THEMES[name])
+    data = copy.deepcopy(diagram_themes[name])
     # The theme's name travels with the palette: the defs builder writes it on
     # the style block, so a renderer that knows the deck's page palette can
     # pick the matching variant (shared-themes' diagram-themes.json).
@@ -148,11 +149,11 @@ def build_defs_string(svg_type: str = "regular") -> str:
             lines.append(
                 f'    <linearGradient id="{gid}" x1="0" y1="0" x2="0" y2="1">'
             )
-            for stop in gdata.get("stops", []):
-                lines.append(
-                    f'      <stop offset="{stop["offset"]}"'
-                    f' stop-color="{stop["color"]}"/>'
-                )
+            lines.extend(
+                f'      <stop offset="{stop["offset"]}"'
+                f' stop-color="{stop["color"]}"/>'
+                for stop in gdata.get("stops", [])
+            )
             lines.append("    </linearGradient>")
 
     filters = data.get("filters", {})
@@ -386,10 +387,10 @@ def _parse_num(val: str | None) -> float | None:
 
 
 def _fmt_num(v: float) -> str:
-    if v != v:  # noqa: PLR0124 - NaN check: NaN is the only value not equal to itself
+    if v != v:
         return "0"
     out = f"{v:.12f}".rstrip("0").rstrip(".")
-    return out if out else "0"
+    return out or "0"
 
 
 def _element_bbox(
@@ -436,10 +437,7 @@ def _element_bbox(
 
 
 def _is_non_translate_transform(transform: str) -> bool:
-    for m in _ANY_TRANSFORM_FN.finditer(transform):
-        if m.group(1) != "translate":
-            return True
-    return False
+    return any(m.group(1) != "translate" for m in _ANY_TRANSFORM_FN.finditer(transform))
 
 
 def _translate_offset(transform_attr: str) -> tuple[float, float]:
@@ -577,7 +575,7 @@ def _transform_element(
             new = []
             for i in range(0, len(nums) - 1, 2):
                 new.extend([nums[i] * sx + tx, nums[i + 1] * sy + ty])
-            pts = " ".join(f"{_fmt_num(a)},{_fmt_num(b)}" for a, b in zip(new[0::2], new[1::2]))
+            pts = " ".join(f"{_fmt_num(a)},{_fmt_num(b)}" for a, b in zip(new[0::2], new[1::2], strict=False))
             attrs_str = re.sub(r'\bpoints="[^"]*"', f'points="{pts}"', attrs_str, count=1)
     elif elem_tag == "path":
         m = re.search(r'\bd="([^"]*)"', attrs_str)

@@ -160,9 +160,8 @@ def process_file(path: Path, hex_to_name_map: dict[str, dict[str, str]],
 
     if apply:
         return svg.save_if_changed()
-    else:
-        new = svg.serialize()
-        return new != svg._original_text
+    new = svg.serialize()
+    return new != svg._original_text
 
 
 def main() -> None:

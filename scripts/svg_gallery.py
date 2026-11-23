@@ -41,8 +41,8 @@ STATE_LOCK = threading.Lock()
 def load_state() -> None:
     if not QUEUE.exists():
         return
-    for line in QUEUE.read_text().splitlines():
-        line = line.strip()
+    for raw_line in QUEUE.read_text().splitlines():
+        line = raw_line.strip()
         if not line:
             continue
         try:
