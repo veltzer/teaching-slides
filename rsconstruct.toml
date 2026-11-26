@@ -207,3 +207,7 @@ dep_inputs = [".oxlintrc.repo.json"]
 # tags_dir defaults to "tags", so the submodule location must be named.
 tags_dir = "shared/shared-tags"
 src_dirs = ["marp"]
+
+# lint the TOML files of the repo with taplo
+[processor.checker.taplo]
+src_files = [".ruff.toml", ".rumdl.marp.toml", ".rumdl.toml", "pyproject.toml", "rsconstruct.toml", "rsslide.toml"]
