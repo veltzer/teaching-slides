@@ -73,7 +73,8 @@ def theme_name_for_type(svg_type: str) -> str:
         )
     if svg_type not in config:
         raise ValueError(f"unknown SVG type {svg_type!r} (known: {list(SVG_TYPES)})")
-    return config[svg_type]
+    theme: str = config[svg_type]
+    return theme
 
 
 def load_palette(svg_type: str = "regular") -> dict:
@@ -93,7 +94,7 @@ def load_palette(svg_type: str = "regular") -> dict:
             f"{DIAGRAM_THEMES_CONFIG}: no diagram theme {name!r} in shared-themes "
             f"(known: {sorted(diagram_themes)})"
         )
-    data = copy.deepcopy(diagram_themes[name])
+    data: dict = copy.deepcopy(diagram_themes[name])
     # The theme's name travels with the palette: the defs builder writes it on
     # the style block, so a renderer that knows the deck's page palette can
     # pick the matching variant (shared-themes' diagram-themes.json).
@@ -206,7 +207,8 @@ def svg_type_from_tree(root) -> str:
             t = child.tag
             local = t.split("}", 1)[1] if "}" in t else t
             if local == "type" and child.text:
-                return child.text.strip()
+                svg_type: str = child.text.strip()
+                return svg_type
     return "regular"
 
 
@@ -223,7 +225,7 @@ def tag(elem) -> str:
     """Return local tag name, stripping namespace."""
     if callable(elem.tag):
         return ""  # comment
-    t = elem.tag
+    t: str = elem.tag
     return t.split("}", 1)[1] if "}" in t else t
 
 

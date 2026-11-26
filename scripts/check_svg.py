@@ -29,6 +29,8 @@ Usage:
     check_svg.py --colors file1.svg file2.svg ...
 """
 
+from __future__ import annotations
+
 import argparse
 import functools
 import re
@@ -60,7 +62,7 @@ def _check_size(path: Path) -> list[str]:
     return []
 
 
-def _check_parse(path: Path) -> tuple[ET.ElementTree | None, list[str]]:
+def _check_parse(path: Path) -> tuple[ET.ElementTree[ET.Element] | None, list[str]]:
     """Parse the SVG and return the tree and any errors."""
     try:
         tree = ET.parse(path)
@@ -69,7 +71,7 @@ def _check_parse(path: Path) -> tuple[ET.ElementTree | None, list[str]]:
         return None, [f"XML parse error: {e}"]
 
 
-def _check_elements(tree: ET.ElementTree) -> list[str]:
+def _check_elements(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """Flag SVGs with too few elements (likely stubs)."""
     count = sum(1 for _ in tree.iter())
     if count < MIN_ELEMENTS:
@@ -100,7 +102,7 @@ def _check_words(path: Path) -> list[str]:
     return []
 
 
-def _check_fonts(tree: ET.ElementTree) -> list[str]:
+def _check_fonts(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """Flag SVGs with font-size below minimum."""
     for elem in tree.iter():
         fs = elem.get("font-size")
@@ -118,7 +120,7 @@ def _check_fonts(tree: ET.ElementTree) -> list[str]:
 SVG_NS = "http://www.w3.org/2000/svg"
 
 
-def _check_namespace(tree: ET.ElementTree) -> list[str]:
+def _check_namespace(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """Flag SVGs whose root <svg> lacks xmlns="http://www.w3.org/2000/svg".
 
     Without the SVG namespace the browser treats the file as generic XML
@@ -135,7 +137,7 @@ def _check_namespace(tree: ET.ElementTree) -> list[str]:
     return [f'root <svg> missing xmlns="{SVG_NS}"']
 
 
-def _check_dimensions(tree: ET.ElementTree) -> list[str]:
+def _check_dimensions(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """Flag SVGs that do not have exactly viewBox="0 0 1280 720"."""
     root = tree.getroot()
     viewbox = root.get("viewBox")
@@ -147,7 +149,7 @@ def _check_dimensions(tree: ET.ElementTree) -> list[str]:
     return []
 
 
-def _check_bounds(tree: ET.ElementTree) -> list[str]:
+def _check_bounds(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """Flag SVGs with elements drawn below the maximum Y boundary."""
     for elem in tree.iter():
         tag = elem.tag.split('}')[-1]
@@ -229,7 +231,7 @@ def _palette_for_svg(svg_path: Path) -> str:
     return palette_for_type(_svg_type_from_file(svg_path))
 
 
-def _check_colors(tree: ET.ElementTree, svg_path: Path | None = None) -> list[str]:
+def _check_colors(tree: ET.ElementTree[ET.Element], svg_path: Path | None = None) -> list[str]:
     """Flag SVGs that use colors not expressed as var(--name) from the palette.
 
     Reads the <metadata><type> element inside the SVG to determine which
@@ -364,7 +366,7 @@ def _shadow_policy() -> tuple[bool, str, set[str]]:
     return (enabled, apply_to, family_fills)
 
 
-def _check_shadows(tree: ET.ElementTree) -> list[str]:
+def _check_shadows(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """Validate <rect> shadow usage against palette effects.rect-shadow."""
     _enabled, apply_to, family_fills = _shadow_policy()
     errors: list[str] = []
@@ -421,7 +423,7 @@ def _rect_fill_policy() -> tuple[str, list[str]]:
     return (style, fams)
 
 
-def _check_gradients(tree: ET.ElementTree) -> list[str]:
+def _check_gradients(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """Validate <rect> family fills against palette effects.rect-fill.style."""
     style, families = _rect_fill_policy()
     errors: list[str] = []
@@ -454,7 +456,7 @@ def _check_gradients(tree: ET.ElementTree) -> list[str]:
     return errors
 
 
-def _check_typography(tree: ET.ElementTree) -> list[str]:
+def _check_typography(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """Validate font-family on every <text>/<tspan> against palette typography."""
     sans, mono = _typography()
     allowed = {sans, mono}
@@ -472,7 +474,7 @@ def _check_typography(tree: ET.ElementTree) -> list[str]:
     return errors
 
 
-def _check_no_circles(tree: ET.ElementTree) -> list[str]:
+def _check_no_circles(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """Flag SVGs that contain <circle> elements.
 
     Circles are locked to a 1:1 aspect ratio and don't stretch correctly
@@ -488,7 +490,7 @@ def _check_no_circles(tree: ET.ElementTree) -> list[str]:
     return []
 
 
-def _check_no_border(tree: ET.ElementTree) -> list[str]:
+def _check_no_border(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """Flag SVGs whose first non-defs <rect> spans the full usable area.
 
     A rect at x=40, y=40, width=1200, height=580 acts as a visible border
@@ -526,7 +528,7 @@ def _check_no_border(tree: ET.ElementTree) -> list[str]:
     return []
 
 
-def _check_title(tree: ET.ElementTree) -> list[str]:
+def _check_title(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """Flag SVGs that contain a <title> element."""
     for elem in tree.iter():
         tag = elem.tag.split('}')[-1]
@@ -540,7 +542,7 @@ def _load_intro_palette() -> dict:
     return load_palette("title")
 
 
-def _check_title_bg_rect(tree: ET.ElementTree) -> list[str]:
+def _check_title_bg_rect(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """For title-type SVGs, verify the background rect has canonical attributes.
 
     Only called for title-type SVGs (caller checks metadata type).
@@ -614,7 +616,7 @@ def _find_text_matches(root, spec: dict, check_weight: bool = True) -> list:
     return matches
 
 
-def _check_title_text(tree: ET.ElementTree) -> list[str]:
+def _check_title_text(tree: ET.ElementTree[ET.Element]) -> list[str]:
     """For title-type SVGs, verify canonical title and subtitle text.
 
     Only called for title-type SVGs (caller checks metadata type).
