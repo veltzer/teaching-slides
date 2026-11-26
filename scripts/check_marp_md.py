@@ -32,10 +32,13 @@ import argparse
 import os
 import re
 import sys
-from collections.abc import Callable, Iterator
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 import yaml
+
+if TYPE_CHECKING:
+    from collections.abc import Callable, Iterator
 
 _ROOT = Path(".")
 if not (_ROOT / ".git").exists():
