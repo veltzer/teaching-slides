@@ -215,3 +215,8 @@ src_dirs = ["marp"]
 # lint the TOML files of the repo with taplo
 [processor.checker.taplo]
 src_files = [".ruff.toml", ".rumdl.marp.toml", ".rumdl.toml", "pyproject.toml", "rsconstruct.toml", "rsslide.toml"]
+
+# every lint suppression names a rule and says why (see the fleet's CLAUDE.md)
+[processor.checker.suppressions]
+src_dirs = [".github", "config", "doc", "marp", "resources", "scripts"]
+src_files = [".marprc.mjs", ".yamllint.yaml", "CLAUDE.md", "README.md", "text_labels.yaml"]
