@@ -152,9 +152,15 @@ args = ["--offline", "--no-progress", "--persona=pedantic"]
 
 # ─── markdown ────────────────────────────────────────────────────────────────
 
-[processor.checker.rumdl]
-src_dirs = ["doc", "marp"]
+[processor.checker.rumdl.prose]
+src_dirs = ["doc"]
 src_files = ["CLAUDE.md", "README.md"]
+
+# the slide decks are linted with the slide config (.rumdl.marp.toml), which
+# also resolves links from the project root, where Marp addresses images from.
+[processor.checker.rumdl.slides]
+src_dirs = ["marp"]
+args = ["--config", ".rumdl.marp.toml"]
 
 # ─── yaml ────────────────────────────────────────────────────────────────────
 

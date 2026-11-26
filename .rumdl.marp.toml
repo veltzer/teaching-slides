@@ -1,0 +1,30 @@
+# Markdown lint rules for Marp / Slidev slide decks (rsmultigit check same,
+# shared across the slide repos). It is the prose .rumdl.toml with one
+# declaration added for the slide format, under [MD057] below. Every rule
+# the prose file runs, runs here.
+
+# MD014 (commands-show-output): shell examples keep their "$" prompt on
+# purpose, as the prose file explains.
+[global]
+disable = ["MD014"]
+
+# MD033 (no-inline-html) is on, allowing only the elements Markdown has no
+# syntax for and the fleet's pages need: Marp slide layouts (div), images
+# sized or styled (img), charts and diagrams drawn in the page (script, svg,
+# canvas), collapsible sections (details, summary), superscript (sup), and
+# left-to-right runs inside Hebrew text (bdi). Any other element is reported.
+[MD033]
+allowed_elements = ["bdi", "canvas", "details", "div", "img", "script", "summary", "sup", "svg"]
+
+[MD007]
+indent = 4
+
+[MD013]
+line_length = 1000
+
+# MD057 (existing-relative-links) is on. A deck addresses its images from the
+# project root, not from the file that holds the link (.marprc.mjs sets
+# baseUrl to the repo root), so the root is declared as a place to resolve
+# links from.
+[MD057]
+search-paths = ["."]
