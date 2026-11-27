@@ -33,10 +33,13 @@ import math
 import re
 import sys
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 import yaml
 from lxml import etree
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
 
 SVG_NS = "http://www.w3.org/2000/svg"
 
@@ -526,7 +529,7 @@ def _transform_element(
         return attrs_str
     s_mean = math.sqrt(sx * sy) if sx > 0 and sy > 0 else max(sx, sy)
 
-    def rewrite(name, fn):
+    def rewrite(name: str, fn: Callable[[float], float]) -> None:
         nonlocal attrs_str
         m = re.search(rf'\b{re.escape(name)}="([^"]*)"', attrs_str)
         if not m:
@@ -537,7 +540,7 @@ def _transform_element(
         attrs_str = re.sub(rf'\b{re.escape(name)}="[^"]*"',
                            f'{name}="{_fmt_num(fn(val))}"', attrs_str, count=1)
 
-    def ensure(name, default, fn):
+    def ensure(name: str, default: float, fn: Callable[[float], float]) -> None:
         nonlocal attrs_str
         m = re.search(rf'\b{re.escape(name)}="([^"]*)"', attrs_str)
         if m is None:
