@@ -24,6 +24,12 @@
 # which .rumdl.toml enables for prose, are not asked of slide decks: a
 # slide has no anchor, a title slide is headings and nothing else, and a
 # slide may repeat the title of the one before it.
+# MD063 (heading capitalization) stays off, by decision (2026-11-27). What
+# it would write is often wrong: it breaks compound tokens (I/O to I/o,
+# C/C++ to C/c++), capitalises identifiers and file names (mmap() to
+# Mmap(), main.tf to Main.tf), and applies English title case to the
+# Russian and Hebrew pages. Passing it would take an ignore list of
+# hundreds of words here.
 [global]
 disable = ["MD014"]
 extend-enable = ["MD060", "MD070", "MD072", "MD075", "MD081", "MD083", "MD084", "MD085", "MD087", "MD088", "MD091"]
