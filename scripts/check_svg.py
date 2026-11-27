@@ -66,9 +66,10 @@ def _check_parse(path: Path) -> tuple[ET.ElementTree[ET.Element] | None, list[st
     """Parse the SVG and return the tree and any errors."""
     try:
         tree = ET.parse(path)
-        return tree, []
     except ET.ParseError as e:
         return None, [f"XML parse error: {e}"]
+    else:
+        return tree, []
 
 
 def _check_elements(tree: ET.ElementTree[ET.Element]) -> list[str]:
