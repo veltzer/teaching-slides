@@ -26,7 +26,7 @@ import subprocess
 import sys
 import threading
 import urllib.parse
-from typing import override
+from typing import Any, override
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SVG_DIR = ROOT / "svg"
@@ -35,7 +35,7 @@ PORT = 8765
 
 # In-memory store: path -> {"marked": bool, "note": str}
 # Loaded from QUEUE on startup, persisted on every change.
-STATE: dict[str, dict] = {}
+STATE: dict[str, dict[str, Any]] = {}
 STATE_LOCK = threading.Lock()
 
 
@@ -64,7 +64,7 @@ def save_state() -> None:
     QUEUE.write_text("\n".join(lines) + ("\n" if lines else ""))
 
 
-def queue_list() -> list[dict]:
+def queue_list() -> list[dict[str, Any]]:
     out = []
     for path, info in STATE.items():
         if info.get("marked"):
@@ -193,7 +193,7 @@ refreshQueue();
 </script></body></html>"""
 
 
-def make_handler(html: str, server_holder: list):
+def make_handler(html: str, server_holder: list[socketserver.ThreadingTCPServer]):
     class H(http.server.SimpleHTTPRequestHandler):
         @override
         def do_GET(self):
@@ -312,7 +312,7 @@ def main() -> None:
 
     load_state()
     html = render_html(paths)
-    server_holder: list = []
+    server_holder: list[socketserver.ThreadingTCPServer] = []
     handler = make_handler(html, server_holder)
 
     with GalleryServer(("127.0.0.1", args.port), handler) as srv:

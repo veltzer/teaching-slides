@@ -61,7 +61,7 @@ _METADATA_BLOCK_RE = re.compile(
 
 # ── Palette loading ──
 
-_palette_cache: dict[str, dict] = {}
+_palette_cache: dict[str, dict[str, Any]] = {}
 
 
 def theme_name_for_type(svg_type: str) -> str:
@@ -78,7 +78,7 @@ def theme_name_for_type(svg_type: str) -> str:
     return theme
 
 
-def load_palette(svg_type: str = "regular") -> dict:
+def load_palette(svg_type: str = "regular") -> dict[str, Any]:
     """The palette an SVG type is drawn with: its diagram theme from
     shared-themes, with the theme's `shadow` turned into the drop-shadow
     filter (`filters`) and the shadow policy (`effects.rect-shadow`) the
@@ -267,7 +267,7 @@ class SvgFile:
 
     def content_elements(self, elem_tag: str | None = None):
         """Iterate (element, parent) pairs outside <defs>."""
-        defs_set: set = set()
+        defs_set: set[etree._Element] = set()
         for elem in self.root.iter():
             if is_comment(elem):
                 continue
@@ -275,7 +275,7 @@ class SvgFile:
                 for child in elem.iter():
                     defs_set.add(child)
 
-        parent_map: dict = {}
+        parent_map: dict[etree._Element, etree._Element] = {}
         for parent in self.root.iter():
             if is_comment(parent):
                 continue
@@ -623,7 +623,7 @@ def _apply_fit_transform(
     return out
 
 
-def fit_svg(content: str) -> tuple[str, dict]:
+def fit_svg(content: str) -> tuple[str, dict[str, Any]]:
     """Fit SVG content to the usable area [40,1240]x[40,620].
 
     Returns (new_content, info_dict). If info contains "skipped", no

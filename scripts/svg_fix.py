@@ -39,6 +39,7 @@ import functools
 import re
 import sys
 from pathlib import Path
+from typing import Any
 
 from lxml import etree
 
@@ -52,7 +53,7 @@ from svg_lib import (
 
 
 @functools.cache
-def _palette() -> dict:
+def _palette() -> dict[str, Any]:
     return load_palette()
 
 

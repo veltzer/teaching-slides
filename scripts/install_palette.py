@@ -41,6 +41,7 @@ import argparse
 import re
 import sys
 from pathlib import Path
+from typing import Any
 
 from svg_lib import SVG_TYPES, SvgFile, load_palette
 
@@ -91,7 +92,7 @@ COLOR_ATTRS = {"fill", "stroke", "stop-color", "flood-color"}
 _HEX_RE = re.compile(r"^#[0-9a-fA-F]{3,8}$")
 
 
-def _build_hex_to_name(data: dict) -> dict[str, str]:
+def _build_hex_to_name(data: dict[str, Any]) -> dict[str, str]:
     mapping: dict[str, str] = {}
     for group in data["colors"].values():
         for name, hexval in group.items():

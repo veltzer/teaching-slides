@@ -37,6 +37,7 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from typing import Any
 
 from svg_lib import compute_bbox, load_palette, palette_for_type
 
@@ -538,7 +539,7 @@ def _check_title(tree: ET.ElementTree[ET.Element]) -> list[str]:
     return []
 
 
-def _load_intro_palette() -> dict:
+def _load_intro_palette() -> dict[str, Any]:
     """The diagram theme of title artwork (the "title" SVG type)."""
     return load_palette("title")
 
@@ -591,7 +592,7 @@ def _check_title_bg_rect(tree: ET.ElementTree[ET.Element]) -> list[str]:
     return errors
 
 
-def _find_text_matches(root, spec: dict, *, check_weight: bool = True) -> list:
+def _find_text_matches(root, spec: dict[str, Any], *, check_weight: bool = True) -> list[ET.Element]:
     """Find <text> elements that are direct children of root matching spec."""
     expected_ff = spec.get("font-family", "Arial, sans-serif")
     expected_fs = str(spec.get("font-size", 39))
@@ -599,7 +600,7 @@ def _find_text_matches(root, spec: dict, *, check_weight: bool = True) -> list:
     expected_ta = spec.get("text-anchor", "middle")
     expected_fw = spec.get("font-weight", "")
 
-    matches = []
+    matches: list[ET.Element] = []
     for child in root:
         tag = child.tag.split("}")[-1] if "}" in child.tag else child.tag
         if tag != "text":

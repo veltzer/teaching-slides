@@ -72,7 +72,7 @@ def _remove_code_blocks(content: str) -> str:
     return re.sub(r'```[^`]*```', '', content, flags=re.DOTALL)
 
 
-def _load_labels() -> frozenset:
+def _load_labels() -> frozenset[str]:
     labels_file = _ROOT / 'text_labels.yaml'
     with open(labels_file, encoding='utf-8') as f:
         data = yaml.safe_load(f)
