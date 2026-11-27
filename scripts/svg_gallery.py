@@ -26,6 +26,7 @@ import subprocess
 import sys
 import threading
 import urllib.parse
+from typing import override
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SVG_DIR = ROOT / "svg"
@@ -194,6 +195,7 @@ refreshQueue();
 
 def make_handler(html: str, server_holder: list):
     class H(http.server.SimpleHTTPRequestHandler):
+        @override
         def do_GET(self):
             if self.path == "/":
                 self._send(200, "text/html; charset=utf-8", html.encode())
@@ -275,6 +277,7 @@ def make_handler(html: str, server_holder: list):
             self.end_headers()
             self.wfile.write(body)
 
+        @override
         def log_message(self, *args, **kwargs):
             pass
     return H
