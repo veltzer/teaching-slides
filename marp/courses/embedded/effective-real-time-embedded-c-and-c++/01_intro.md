@@ -110,7 +110,7 @@ Typical embedded development setup:
 ## Embedded vs Desktop Programming
 
 | Desktop | Embedded |
-|---------|----------|
+| --------- | ---------- |
 | Abundant resources | Limited resources |
 | OS abstractions | Direct hardware access |
 | Virtual memory | Fixed memory |

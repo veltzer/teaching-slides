@@ -161,7 +161,7 @@ REQUEST_LATENCY = Histogram(
 ## Log Levels
 
 | Level | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `TRACE` | Very detailed diagnostic information |
 | `DEBUG` | Diagnostic information for developers |
 | `INFO` | General operational events |
@@ -332,7 +332,7 @@ with tracer.start_as_current_span("process"):
 ## Shallow vs Deep Health Checks
 
 | Type | What It Checks | Use Case |
-|------|---------------|----------|
+| ------ | --------------- | ---------- |
 | Shallow | Service is running | Liveness probe |
 | Deep | Service + critical dependencies | Readiness probe (with care) |
 

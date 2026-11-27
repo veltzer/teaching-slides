@@ -323,7 +323,7 @@ long line"
 ## Special Characters Summary
 
 | Character | Meaning | Escape with |
-|-----------|---------|-------------|
+| ----------- | --------- | ------------- |
 | `$` | Variable expansion | `\$` or single quotes |
 | `` ` `` | Command substitution | `` \` `` or `$(...)` |
 | `"` | Double quote | `\"` |

@@ -110,7 +110,7 @@ Using an `LLM` as the **sole** security reviewer is dangerous
 ## Risks of Overreliance in Production Systems
 
 | Scenario | Risk |
-|----------|------|
+| ---------- | ------ |
 | `LLM` auto-generates code | Vulnerable code deployed |
 | `LLM` writes documentation | Incorrect docs mislead developers |
 | `LLM` classifies security alerts | False negatives miss real threats |

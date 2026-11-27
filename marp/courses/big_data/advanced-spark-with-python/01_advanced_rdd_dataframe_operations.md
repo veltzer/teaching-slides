@@ -515,7 +515,7 @@ print(f"Processed {result_rdd.count()} records")
 ## mapPartitions vs map: Performance Comparison
 
 | Aspect | map() | mapPartitions() |
-|---|---|---|
+| --- | --- | --- |
 | Function calls | Once per element | Once per partition |
 | Resource init | Per element (slow) | Per partition (fast) |
 | Memory usage | Low per call | Entire partition in memory |
@@ -834,7 +834,7 @@ result.show(truncate=False)
 ## Window Function Types Reference
 
 | Category | Functions | Use Case |
-|---|---|---|
+| --- | --- | --- |
 | Ranking | rank(), dense_rank(), row_number() | Top-N, deduplication |
 | Analytic | lag(), lead(), first(), last() | Comparisons, gaps |
 | Aggregate | sum(), avg(), min(), max(), count() | Running totals |
@@ -896,7 +896,7 @@ sort_merge_join.explain()
 ## Anti-Patterns and Fixes
 
 | Anti-Pattern | Problem | Fix |
-|---|---|---|
+| --- | --- | --- |
 | collect() in UDF | OOM on driver | Use broadcast variable |
 | groupByKey() | Shuffles all data | Use reduceByKey() |
 | repartition(1) | Single partition bottleneck | Use coalesce() for reduction |
@@ -1018,7 +1018,7 @@ spark.conf.set("spark.dynamicAllocation.maxExecutors", "100")
 ## Storage Level Comparison
 
 | Storage Level | Space | CPU | In Memory | On Disk | Replicated |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | MEMORY_ONLY | High | Low | Yes | No | No |
 | MEMORY_AND_DISK | High | Medium | Partial | Partial | No |
 | MEMORY_ONLY_SER | Low | High | Yes | No | No |

@@ -94,13 +94,13 @@ void HAL_GPIO_EXTI_Callback(uint16_t pin) {
 
 ## The Low-Power Modes
 
-| Mode      | CPU   | RAM kept   | Wake latency | Typical use        |
-| --------- | ----- | ---------- | ------------ | ------------------ |
-| Run       | on    | all        | —            | active work        |
-| Sleep     | clock off | all    | instant      | idle between IRQs  |
-| Stop2     | off   | retained   | microseconds | between RF frames  |
-| Standby   | off   | mostly lost| milliseconds | long deep sleep    |
-| Shutdown  | off   | lost       | reset-like   | shelf / ship mode  |
+| Mode     | CPU       | RAM kept    | Wake latency | Typical use       |
+| -------- | --------- | ----------- | ------------ | ----------------- |
+| Run      | on        | all         | —            | active work       |
+| Sleep    | clock off | all         | instant      | idle between IRQs |
+| Stop2    | off       | retained    | microseconds | between RF frames |
+| Standby  | off       | mostly lost | milliseconds | long deep sleep   |
+| Shutdown | off       | lost        | reset-like   | shelf / ship mode |
 
 ---
 

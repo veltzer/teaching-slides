@@ -137,7 +137,7 @@ cmake -DENABLE_TESTS=OFF ..
 ## Cache Variable Types
 
 | Type | Description | GUI Widget |
-|------|-------------|------------|
+| ------ | ------------- | ------------ |
 | `BOOL` | `ON`/`OFF` toggle | Checkbox |
 | `STRING` | Arbitrary text | Text field |
 | `PATH` | Directory path | Dir chooser |
@@ -241,7 +241,7 @@ list(REMOVE_ITEM MY_LIST b) # a;c;d
 ## Common list() Operations
 
 | Operation | Example | Description |
-|-----------|---------|-------------|
+| ----------- | --------- | ------------- |
 | `LENGTH` | `list(LENGTH L n)` | Element count |
 | `GET` | `list(GET L 0 val)` | Element at index |
 | `APPEND` | `list(APPEND L x)` | Add to end |
@@ -511,7 +511,7 @@ target_compile_definitions(app PRIVATE
 ## Common Generator Expressions
 
 | Expression | Description |
-|------------|-------------|
+| ------------ | ------------- |
 | `$<CONFIG:cfg>` | 1 if config matches |
 | `$<BOOL:val>` | 1 if truthy |
 | `$<AND:a,b>` | Logical AND |
@@ -524,7 +524,7 @@ target_compile_definitions(app PRIVATE
 ## Common Generator Expressions (cont.)
 
 | Expression | Description |
-|------------|-------------|
+| ------------ | ------------- |
 | `$<TARGET_FILE:tgt>` | Full path to target file |
 | `$<TARGET_FILE_DIR:tgt>` | Directory of target file |
 | `$<BUILD_INTERFACE:...>` | Value when building |

@@ -253,7 +253,7 @@ spec:
 ## `VPA` Modes
 
 | Mode | Description |
-|------|-------------|
+| ------ | ------------- |
 | `Off` | Only provides recommendations, no changes |
 | `Initial` | Sets resources only at pod creation |
 | `Auto` | Updates running pods (may restart them) |
@@ -278,7 +278,7 @@ Recommendation:
 ## `HPA` vs `VPA` - When to Use
 
 | Scenario | Use |
-|----------|-----|
+| ---------- | ----- |
 | Stateless web apps | `HPA` |
 | Batch processing | `HPA` |
 | Database pods | `VPA` |
@@ -332,7 +332,7 @@ spec:
 ## `Cluster Autoscaler` Expander Strategies
 
 | Strategy | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | `random` | Picks a random node group |
 | `most-pods` | Schedules the most pending pods |
 | `least-waste` | Minimizes idle resources after scaling |
@@ -405,7 +405,7 @@ spec:
 `KEDA` supports 60+ event sources:
 
 | Category | Scalers |
-|----------|---------|
+| ---------- | --------- |
 | Message Queues | `Kafka`, `RabbitMQ`, `NATS`, `SQS` |
 | Databases | `PostgreSQL`, `MySQL`, `MongoDB` |
 | Cloud | `AWS CloudWatch`, `Azure Monitor` |

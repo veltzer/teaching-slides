@@ -35,7 +35,7 @@ audience:
 ## Key FHS Directories
 
 | Directory | Purpose |
-|-----------|---------|
+| ----------- | --------- |
 | `/boot` | Kernel and bootloader files |
 | `/dev` | Device files |
 | `/proc` | Process and kernel info (virtual) |
@@ -51,7 +51,7 @@ audience:
 Modern `Linux` merges `/bin` -> `/usr/bin` and `/sbin` -> `/usr/sbin`.
 
 | Directory | Purpose |
-|-----------|---------|
+| ----------- | --------- |
 | `/usr/bin` | User commands |
 | `/usr/sbin` | System admin commands |
 | `/usr/lib` | Shared libraries |
@@ -129,7 +129,7 @@ df -i
 ## BIOS vs UEFI
 
 | Feature | BIOS | UEFI |
-|---------|------|------|
+| --------- | ------ | ------ |
 | Partition table | MBR | GPT |
 | Max disk size | 2 TB | 9.4 ZB |
 | Boot partition | First sector | ESP (`/boot/efi`) |
@@ -222,7 +222,7 @@ systemd-analyze time
 ## systemd Unit Types
 
 | Unit Type | Extension | Purpose |
-|-----------|-----------|---------|
+| ----------- | ----------- | --------- |
 | Service | `.service` | Daemons and processes |
 | Socket | `.socket` | IPC/network sockets |
 | Target | `.target` | Groups of units |
@@ -239,7 +239,7 @@ systemd-analyze time
 Targets group units into meaningful states:
 
 | Target | SysV Runlevel | Purpose |
-|--------|---------------|---------|
+| -------- | --------------- | --------- |
 | `poweroff.target` | 0 | System halt |
 | `rescue.target` | 1 | Single-user mode |
 | `multi-user.target` | 3 | Multi-user, no GUI |
@@ -332,7 +332,7 @@ Save to `/etc/systemd/system/myapp.service`, then `systemctl daemon-reload`.
 ## Unit File: Service Types
 
 | Type | Behavior |
-|------|----------|
+| ------ | ---------- |
 | `simple` | Default. Process started by `ExecStart` is the main process |
 | `forking` | Process forks and parent exits. Use `PIDFile=` |
 | `oneshot` | Process exits after finishing. Good for scripts |
@@ -1100,7 +1100,7 @@ systemctl isolate emergency.target
 ```
 
 | Mode | Root FS | Services | Use Case |
-|------|---------|----------|----------|
+| ------ | --------- | ---------- | ---------- |
 | Rescue | Read-write | Minimal | Fix configs, services |
 | Emergency | Read-only | None | Fix `/etc/fstab`, disk issues |
 
@@ -1211,7 +1211,7 @@ ls -l /dev/mapper/
 Key special device files every admin should know:
 
 | Device | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `/dev/null` | Discards all data written to it |
 | `/dev/zero` | Produces infinite zero bytes |
 | `/dev/urandom` | Cryptographically secure random bytes |

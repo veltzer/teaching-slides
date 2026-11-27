@@ -107,13 +107,13 @@ HAL_Delay(500);   // milliseconds, driven by SysTick
 
 ## Compare The Two Styles
 
-| Concern        | Bare metal           | HAL                       |
-| -------------- | -------------------- | ------------------------- |
-| Clock enable   | `RCC->AHB2ENR \|= …` | `__HAL_RCC_GPIOB_CLK_ENABLE()` |
-| Pin config     | `MODER`, `PUPDR` …   | `HAL_GPIO_Init(&cfg)`     |
-| Toggle         | `ODR ^= bit`         | `HAL_GPIO_TogglePin()`    |
-| Delay          | busy loop            | `HAL_Delay(ms)`           |
-| Portability    | none                 | whole STM32 family        |
+| Concern      | Bare metal           | HAL                            |
+| ------------ | -------------------- | ------------------------------ |
+| Clock enable | `RCC->AHB2ENR \|= …` | `__HAL_RCC_GPIOB_CLK_ENABLE()` |
+| Pin config   | `MODER`, `PUPDR` …   | `HAL_GPIO_Init(&cfg)`          |
+| Toggle       | `ODR ^= bit`         | `HAL_GPIO_TogglePin()`         |
+| Delay        | busy loop            | `HAL_Delay(ms)`                |
+| Portability  | none                 | whole STM32 family             |
 
 ---
 

@@ -29,7 +29,7 @@ audience:
 - Use the right tool for the job:
 
 | Problem | Tool |
-|---------|------|
+| --------- | ------ |
 | Logic errors, crashes | GDB |
 | Memory errors | Valgrind, ASan |
 | Undefined behavior | UBSan |
@@ -63,7 +63,7 @@ gcc -Wall -Wextra -Werror -Wpedantic -Wshadow -Wconversion \
 ## Compiler Warnings: Your First Defense (cont.)
 
 | Flag | What It Catches |
-|------|----------------|
+| ------ | ---------------- |
 | `-Wall` | Most common issues |
 | `-Wextra` | Additional warnings |
 | `-Werror` | Treat warnings as errors |
@@ -126,7 +126,7 @@ gdb -p <pid>
 Essential GDB commands:
 
 | Command | Short | Description |
-|---------|-------|-------------|
+| --------- | ------- | ------------- |
 | `run [args]` | `r` | Start program |
 | `break main` | `b main` | Set breakpoint at main |
 | `break file.c:42` | `b file.c:42` | Break at line 42 |
@@ -138,7 +138,7 @@ Essential GDB commands:
 ## GDB: Getting Started (cont.) (cont.)
 
 | Command | Short | Description |
-|---------|-------|-------------|
+| --------- | ------- | ------------- |
 | `continue` | `c` | Continue to next breakpoint |
 | `print expr` | `p expr` | Print expression |
 | `backtrace` | `bt` | Show call stack |
@@ -270,7 +270,7 @@ valgrind --leak-check=full --show-leak-kinds=all \
 What Valgrind detects:
 
 | Error Type | Example |
-|-----------|---------|
+| ----------- | --------- |
 | Invalid read/write | Buffer overflow, use-after-free |
 | Conditional jump on uninitialized value | `if (uninitialized_var)` |
 | Memory leak | malloc without free |
@@ -386,7 +386,7 @@ allocated by thread T0 here:
 ## ASan vs Valgrind Comparison
 
 | Feature | AddressSanitizer | Valgrind Memcheck |
-|---------|-----------------|-------------------|
+| --------- | ----------------- | ------------------- |
 | Slowdown | ~2x | ~10-20x |
 | Memory overhead | ~3x | ~2x |
 | Requires recompilation | Yes | No |
@@ -692,7 +692,7 @@ perf script | stackcollapse-perf.pl | flamegraph.pl > flame.svg
 Key perf stat metrics:
 
 | Metric | Meaning |
-|--------|---------|
+| -------- | --------- |
 | task-clock | CPU time used |
 | instructions | Total instructions executed |
 | cycles | CPU cycles consumed |

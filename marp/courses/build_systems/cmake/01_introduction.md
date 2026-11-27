@@ -37,7 +37,7 @@ audience:
 ## CMake Timeline
 
 | Year | Milestone |
-|------|-----------|
+| ------ | ----------- |
 | 2000 | Initial release |
 | 2006 | CMake 2.4 - widespread adoption begins |
 | 2014 | CMake 3.0 - modern CMake paradigm |
@@ -70,7 +70,7 @@ audience:
 ## CMake vs Other Build Systems
 
 | Feature | CMake | Make | Meson | Bazel |
-|---------|-------|------|-------|-------|
+| --------- | ------- | ------ | ------- | ------- |
 | Cross-platform | Yes | Limited | Yes | Yes |
 | Generator | Yes | No | Yes | No |
 | Learning curve | Medium | Low | Low | High |

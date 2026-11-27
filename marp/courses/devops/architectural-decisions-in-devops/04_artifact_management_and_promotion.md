@@ -58,7 +58,7 @@ audience:
 ## Artifact Repository Landscape
 
 | Repository | Primary Use | Formats |
-|------------|-------------|---------|
+| ------------ | ------------- | --------- |
 | `JFrog Artifactory` | Universal | All |
 | `Sonatype Nexus` | Java-centric | Maven, npm, Docker |
 | `AWS ECR` | Container images | OCI, Docker |
@@ -100,7 +100,7 @@ audience:
 ## Single vs Multiple: Decision Matrix
 
 | Factor | Single Repo | Multiple Repos |
-|--------|-------------|----------------|
+| -------- | ------------- | ---------------- |
 | Small team (<20 devs) | Preferred | Overkill |
 | Regulated industry | Simpler audit | Harder audit |
 | Multi-region deploy | Needs mirrors | Natural fit |
@@ -217,7 +217,7 @@ jfrog rt build-promote \
 ## SemVer vs Commit-Based: When to Use
 
 | Scenario | Recommended Strategy |
-|----------|---------------------|
+| ---------- | --------------------- |
 | Public library / API | `SemVer` |
 | Internal microservice | Commit-based |
 | Mobile app (app store) | `SemVer` |
@@ -403,7 +403,7 @@ trivy image \
 ## Vulnerability Severity Levels
 
 | Severity | Action | SLA Example |
-|----------|--------|-------------|
+| ---------- | -------- | ------------- |
 | Critical | Block deployment | Fix within 24 hours |
 | High | Block promotion to prod | Fix within 7 days |
 | Medium | Allow with exception | Fix within 30 days |
@@ -448,7 +448,7 @@ spec:
 ## Slim Images vs Full Images
 
 | Aspect | Full Image | Slim Image |
-|--------|-----------|------------|
+| -------- | ----------- | ------------ |
 | Size | 200-900 MB | 5-50 MB |
 | Attack surface | Large | Minimal |
 | Debugging tools | Included | Missing |
@@ -461,7 +461,7 @@ spec:
 ## Common Base Image Options
 
 | Image | Size | Shell | Package Manager |
-|-------|------|-------|-----------------|
+| ------- | ------ | ------- | ----------------- |
 | `ubuntu:22.04` | ~77 MB | `bash` | `apt` |
 | `debian:bookworm-slim` | ~52 MB | `bash` | `apt` |
 | `alpine:3.19` | ~7 MB | `ash` | `apk` |
@@ -665,7 +665,7 @@ LABEL org.opencontainers.image.version=\
 ## Artifact Management Maturity Model
 
 | Level | Characteristics |
-|-------|----------------|
+| ------- | ---------------- |
 | Level 1 | Manual builds, no central repository |
 | Level 2 | Central repository, basic CI uploads |
 | Level 3 | Automated promotion, scanning gates |

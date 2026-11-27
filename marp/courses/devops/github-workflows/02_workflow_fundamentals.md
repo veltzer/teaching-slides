@@ -112,13 +112,13 @@ jobs:
 
 ## Understanding Runners
 
-| Runner Label       | Operating System        | CPU  | RAM   |
-|--------------------|------------------------|------|-------|
-| `ubuntu-latest`    | Ubuntu 22.04 or 24.04  | 2    | 7 GB  |
-| `ubuntu-24.04`     | Ubuntu 24.04           | 2    | 7 GB  |
-| `windows-latest`   | Windows Server 2022    | 2    | 7 GB  |
-| `macos-latest`     | macOS 14 (Sonoma)      | 3    | 14 GB |
-| `macos-13`         | macOS 13 (Ventura)     | 3    | 14 GB |
+| Runner Label     | Operating System      | CPU | RAM   |
+| ---------------- | --------------------- | --- | ----- |
+| `ubuntu-latest`  | Ubuntu 22.04 or 24.04 | 2   | 7 GB  |
+| `ubuntu-24.04`   | Ubuntu 24.04          | 2   | 7 GB  |
+| `windows-latest` | Windows Server 2022   | 2   | 7 GB  |
+| `macos-latest`   | macOS 14 (Sonoma)     | 3   | 14 GB |
+| `macos-13`       | macOS 13 (Ventura)    | 3   | 14 GB |
 
 - GitHub-hosted runners come pre-installed with common tools
 - `-latest` tags may change over time

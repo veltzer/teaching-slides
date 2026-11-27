@@ -58,7 +58,7 @@ audience:
 ## HTTP Methods
 
 | Method | Purpose | Idempotent | Safe |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | GET | Read | yes | yes |
 | HEAD | Read headers only | yes | yes |
 | POST | Create / process | no | no |

@@ -38,7 +38,7 @@ Advanced Kubernetes Course
 ## Filter Plugins (Predicates)
 
 | Plugin | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `NodeResourcesFit` | Node has enough CPU/memory |
 | `NodePorts` | Requested ports are available |
 | `NodeAffinity` | Node matches affinity rules |
@@ -52,7 +52,7 @@ Advanced Kubernetes Course
 ## Score Plugins (Priorities)
 
 | Plugin | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `NodeResourcesBalancedAllocation` | Balance CPU/memory usage |
 | `ImageLocality` | Prefer nodes with container images |
 | `InterPodAffinity` | Score based on pod affinity |
@@ -129,7 +129,7 @@ spec:
 ## Node Affinity Operators
 
 | Operator | Meaning |
-|----------|---------|
+| ---------- | --------- |
 | `In` | Label value is in the set |
 | `NotIn` | Label value is not in the set |
 | `Exists` | Label key exists (any value) |
@@ -227,7 +227,7 @@ spec:
 ## Taint Effects
 
 | Effect | Behavior |
-|--------|----------|
+| -------- | ---------- |
 | `NoSchedule` | New pods without toleration won't be scheduled |
 | `PreferNoSchedule` | Scheduler tries to avoid, but not guaranteed |
 | `NoExecute` | Evicts existing pods without toleration |
@@ -247,7 +247,7 @@ kubectl taint nodes gpu-node-1 gpu=nvidia:NoSchedule-
 `Kubernetes` automatically adds these taints:
 
 | Taint | Condition |
-|-------|-----------|
+| ------- | ----------- |
 | `node.kubernetes.io/not-ready` | Node is not ready |
 | `node.kubernetes.io/unreachable` | Node is unreachable |
 | `node.kubernetes.io/memory-pressure` | Node has memory pressure |

@@ -82,7 +82,7 @@ audience:
 ## Prompt vs Context Engineering
 
 | Aspect | Prompt engineering | Context engineering |
-|---|---|---|
+| --- | --- | --- |
 | Unit | One message | The whole window |
 | Owner | Whoever types | The team and the repo |
 | Lifetime | One turn | Every session |
@@ -273,7 +273,7 @@ audience:
 ## The Tools an Agent Needs
 
 | Tool | Purpose | Risk |
-|---|---|---|
+| --- | --- | --- |
 | Read / search | Understand the code | None |
 | Edit / write | Change the code | Medium |
 | Run command | Build, test, script | High |
@@ -442,7 +442,7 @@ audience:
 ## The Three Primitives
 
 | Primitive | Direction | Example |
-|---|---|---|
+| --- | --- | --- |
 | Tool | Model calls it | `create_pull_request` |
 | Resource | Model reads it | `ci://run/1234/log` |
 | Prompt | User invokes it | "triage this issue" |

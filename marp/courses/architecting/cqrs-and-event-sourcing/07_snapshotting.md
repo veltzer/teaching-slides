@@ -220,7 +220,7 @@ def from_snapshot(raw):
 ## Practical Snapshot Cadence
 
 | Aggregate type | Typical event count | Snapshot every |
-|---|---|---|
+| --- | --- | --- |
 | Order (placed → delivered) | 5–50 | not needed |
 | Subscription | 100–10,000 | 100 events |
 | Account ledger | 1,000–100,000+ | 100 or 500 events |

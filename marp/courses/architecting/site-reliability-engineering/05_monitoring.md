@@ -27,7 +27,7 @@ The goal of monitoring is not to know everything; it is to know exactly what mat
 ## Three signals, three uses
 
 | Type | Used for | Example |
-|---|---|---|
+| --- | --- | --- |
 | **Alerts** | Wake someone up | latency over budget burn rate |
 | **Tickets** | Action this week | disk filling up at current rate |
 | **Logs** | Investigate later | full request traces |

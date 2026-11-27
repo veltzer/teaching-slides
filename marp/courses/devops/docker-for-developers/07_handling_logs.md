@@ -24,7 +24,7 @@ audience:
 ## Log Handlers in Docker
 
 | Handler | Description | Use Case |
-|---------|-------------|----------|
+| --------- | ------------- | ---------- |
 | json-file | Default JSON logging | Local development |
 | syslog | System logging | System integration |
 | journald | systemd journal | Linux systems |
@@ -48,7 +48,7 @@ audience:
 ## Log Driver Configuration
 
 | Option | Purpose | Example |
-|--------|---------|---------|
+| -------- | --------- | --------- |
 | max-size | Rotate by size | `--log-opt max-size=10m` |
 | max-file | Number of files | `--log-opt max-file=3` |
 | compress | Compress old logs | `--log-opt compress=true` |
@@ -80,7 +80,7 @@ audience:
 ## Common Logging Patterns
 
 | Pattern | Purpose | Example |
-|---------|---------|---------|
+| --------- | --------- | --------- |
 | Request ID | Track requests | `req-123-abc` |
 | Correlation ID | Link related events | `corr-456-xyz` |
 | Stack Traces | Debug errors | Include full trace |
@@ -103,7 +103,7 @@ audience:
 ## Log Level Guidelines
 
 | Level | Usage | Example |
-|-------|--------|---------|
+| ------- | -------- | --------- |
 | ERROR | System failures | Database connection lost |
 | WARN | Potential issues | High resource usage |
 | INFO | Normal operations | Request completed |

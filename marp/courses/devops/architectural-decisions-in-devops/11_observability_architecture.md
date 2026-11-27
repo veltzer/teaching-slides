@@ -114,7 +114,7 @@ audience:
 ## Signal Comparison Table
 
 | Aspect | Metrics | Logs | Traces |
-|--------|---------|------|--------|
+| -------- | --------- | ------ | -------- |
 | Data type | Numeric aggregates | Text events | Request spans |
 | Storage cost | Low | High | Medium |
 | Cardinality | Labels-limited | Unbounded | Bounded by sampling |
@@ -200,7 +200,7 @@ scrape_configs:
 ## Scalability: Pull vs Push
 
 | Factor | Pull | Push |
-|--------|------|------|
+| -------- | ------ | ------ |
 | 10s of targets | Easy | Easy |
 | 1000s of targets | Federation needed | Load-balance collectors |
 | Short-lived jobs | `Pushgateway` workaround | Native support |
@@ -272,7 +272,7 @@ service:
 ## Build vs Buy: Decision Framework
 
 | Factor | Build (Open Source) | Buy (SaaS) |
-|--------|-------------------|-------------|
+| -------- | ------------------- | ------------- |
 | Up-front cost | Low (free software) | Subscription fees |
 | Operational cost | High (team maintains) | Low (vendor manages) |
 | Customization | Full control | Limited to vendor features |
@@ -380,7 +380,7 @@ groups:
 - A burn rate of 1x means the budget is exactly exhausted in the window
 
 | Burn rate | Budget consumed in | Urgency |
-|-----------|--------------------|---------|
+| ----------- | -------------------- | --------- |
 | 14.4x | 1 hour (over 30-day window) | Page immediately |
 | 6x | 5 hours | Page |
 | 1x | 30 days | Ticket |
@@ -413,7 +413,7 @@ groups:
 ## SLO-Based vs Threshold-Based
 
 | Aspect | Threshold-Based | SLO-Based |
-|--------|----------------|-----------|
+| -------- | ---------------- | ----------- |
 | What it measures | Raw metric values | User impact |
 | Adaptability | Static, needs tuning | Self-adjusting via budget |
 | False positives | Common | Fewer |
@@ -562,7 +562,7 @@ with tracer.start_as_current_span("process_payment") as span:
 ## Maturity Model
 
 | Level | Characteristics |
-|-------|----------------|
+| ------- | ---------------- |
 | 1. Reactive | Basic infrastructure monitoring, manual log checking |
 | 2. Proactive | Structured logging, basic dashboards, threshold alerts |
 | 3. Integrated | Correlated signals, SLO-based alerts, runbooks |

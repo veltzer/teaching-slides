@@ -160,12 +160,12 @@ steps:
 
 ## Version Pinning Strategies
 
-| Strategy        | Example              | Security | Updates     |
-|-----------------|----------------------|----------|-------------|
-| Major version   | `@v4`                | Medium   | Auto minor  |
-| Exact tag       | `@v4.1.7`            | High     | Manual      |
-| Commit SHA      | `@b4ffde6...`        | Highest  | Manual      |
-| Branch          | `@main`              | Low      | Always      |
+| Strategy      | Example       | Security | Updates    |
+| ------------- | ------------- | -------- | ---------- |
+| Major version | `@v4`         | Medium   | Auto minor |
+| Exact tag     | `@v4.1.7`     | High     | Manual     |
+| Commit SHA    | `@b4ffde6...` | Highest  | Manual     |
+| Branch        | `@main`       | Low      | Always     |
 
 - **Production**: use SHA pinning with Dependabot for updates
 - **Development**: major version tags are convenient

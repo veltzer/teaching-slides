@@ -83,7 +83,7 @@ Key advantages:
 ## Yocto vs Alternatives
 
 | Aspect | Yocto | Buildroot | OpenWrt |
-|--------|-------|-----------|---------|
+| -------- | ------- | ----------- | --------- |
 | Learning Curve | Steep | Moderate | Easy |
 | Flexibility | Very High | High | Moderate |
 | Build Time | Long | Short | Short |

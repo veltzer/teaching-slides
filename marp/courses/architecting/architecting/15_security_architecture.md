@@ -107,7 +107,7 @@ header.payload.signature
 ## mTLS vs Token Auth
 
 | Aspect | mTLS | Bearer token |
-|--------|------|-------------|
+| -------- | ------ | ------------- |
 | Identity | Certificate | Claim in token |
 | Rotation | Short-lived certs, automated | Refresh tokens |
 | Revocation | CRL / OCSP / short TTL | Token blacklist |

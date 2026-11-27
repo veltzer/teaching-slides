@@ -25,7 +25,7 @@ audience:
 ## MVVM Components
 
 | Component | Responsibility | Example Classes |
-|-----------|----------------|-----------------|
+| ----------- | ---------------- | ----------------- |
 | View | UI Elements | Activity, Fragment |
 | ViewModel | UI Logic & State | AndroidViewModel |
 | Model | Data & Business Logic | Repository, DataSource |

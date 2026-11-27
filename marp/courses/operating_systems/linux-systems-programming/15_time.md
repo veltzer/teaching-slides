@@ -172,7 +172,7 @@ void show_all_clocks() {
 ## Clock Properties Comparison
 
 | Clock | Affected by NTP | Monotonic | Suspend |
-|-------|-----------------|-----------|---------|
+| ------- | ----------------- | ----------- | --------- |
 | **REALTIME** | Yes | No | Continues |
 | **REALTIME_COARSE** | Yes | No | Continues |
 | **MONOTONIC** | Rate only | Yes | Stops |
@@ -187,7 +187,7 @@ void show_all_clocks() {
 ## Clock Resolution and Use Cases
 
 | Clock | Resolution | Use Case |
-|-------|------------|----------|
+| ------- | ------------ | ---------- |
 | **REALTIME** | ~1ns | Wall clock |
 | **REALTIME_COARSE** | ~1-4ms | Fast wall clock |
 | **MONOTONIC** | ~1ns | Intervals |

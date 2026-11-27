@@ -47,7 +47,7 @@ audience:
 ## Material Components
 
 | Component | Usage | Key Attributes |
-|-----------|-------|----------------|
+| ----------- | ------- | ---------------- |
 | MaterialButton | Interactive buttons | `app:cornerRadius`, `app:icon` |
 | TextInputLayout | Text input fields | `app:errorEnabled`, `app:helperText` |
 | Card | Content containers | `app:cardElevation`, `app:cardCornerRadius` |

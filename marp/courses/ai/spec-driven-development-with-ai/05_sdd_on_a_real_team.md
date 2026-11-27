@@ -91,7 +91,7 @@ you cannot determine from the code as UNKNOWN. Do not suggest changes.
 ## The Honest Cost-Benefit Line
 
 | Situation | Spec cost | Payoff |
-|---|---|---|
+| --- | --- | --- |
 | One-hour fix, one developer | High relative | None |
 | One-day feature, one developer | Moderate | Fewer re-prompts, reviewable PR |
 | Multi-day feature, parallel agents | Low relative | Large: shared contract |

@@ -38,7 +38,7 @@ audience:
 ## Types of Phishing
 
 | Type | Description | Target |
-|------|-------------|--------|
+| ------ | ------------- | -------- |
 | **Phishing** | Mass emails to many people | Anyone |
 | **Spear phishing** | Targeted at a specific person | Individual |
 | **Whaling** | Targeted at executives | CEO, CFO |

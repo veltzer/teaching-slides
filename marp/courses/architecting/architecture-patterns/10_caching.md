@@ -231,7 +231,7 @@ def get_trending_posts():
 ## Choosing an Invalidation Strategy
 
 | Strategy | Freshness | Complexity | When to use |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | TTL | bounded by TTL | low | bounded staleness OK; rankings/aggregates |
 | Event-based | near-real-time | medium | writes drive cache; loss is tolerable |
 | Version-based | strong | medium | rare writes; no stale reads allowed |

@@ -203,7 +203,7 @@ add_custom_command(TARGET myapp POST_BUILD
 ## OUTPUT vs TARGET Forms Compared
 
 | Aspect | OUTPUT form | TARGET form |
-|--------|-------------|-------------|
+| -------- | ------------- | ------------- |
 | Trigger | When output file is needed | When target is built |
 | Rerun | When dependencies change | Every build of target |
 | Use case | Code generation | Post-build steps |
@@ -320,7 +320,7 @@ execute_process(
 ## Toolchain File Variables
 
 | Variable | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | `CMAKE_SYSTEM_NAME` | Target OS (Linux, Windows, etc.) |
 | `CMAKE_SYSTEM_PROCESSOR` | Target CPU (arm, aarch64, etc.) |
 | `CMAKE_C_COMPILER` | C compiler path |

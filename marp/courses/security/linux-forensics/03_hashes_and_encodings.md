@@ -65,13 +65,13 @@ sha256sum /dev/null
 
 ## Common Hash Algorithms
 
-| Algorithm | Output Size | Status          | Use in Forensics    |
-|-----------|------------|-----------------|---------------------|
-| MD5       | 128 bits   | Broken (collisions) | Legacy, still common |
-| SHA-1     | 160 bits   | Deprecated      | Being phased out    |
-| SHA-256   | 256 bits   | Current standard| Recommended         |
-| SHA-512   | 512 bits   | Current standard| High security needs |
-| SHA-3     | Variable   | Latest standard | Emerging use        |
+| Algorithm | Output Size | Status              | Use in Forensics     |
+| --------- | ----------- | ------------------- | -------------------- |
+| MD5       | 128 bits    | Broken (collisions) | Legacy, still common |
+| SHA-1     | 160 bits    | Deprecated          | Being phased out     |
+| SHA-256   | 256 bits    | Current standard    | Recommended          |
+| SHA-512   | 512 bits    | Current standard    | High security needs  |
+| SHA-3     | Variable    | Latest standard     | Emerging use         |
 
 - Use **SHA-256** or **SHA-512** for forensic work
 - MD5 is still used alongside SHA-256 for backward compatibility
@@ -231,12 +231,12 @@ ssdeep -d -r /evidence/documents/
 
 ## Base Encodings Overview
 
-| Encoding  | Alphabet Size | Use Case                    |
-|-----------|--------------|------------------------------|
-| Base16    | 16 (hex)     | Binary data display          |
-| Base32    | 32           | Case-insensitive encoding    |
-| Base64    | 64           | Email attachments, web data  |
-| Base85    | 85           | PDF, Git binary data         |
+| Encoding | Alphabet Size | Use Case                    |
+| -------- | ------------- | --------------------------- |
+| Base16   | 16 (hex)      | Binary data display         |
+| Base32   | 32            | Case-insensitive encoding   |
+| Base64   | 64            | Email attachments, web data |
+| Base85   | 85            | PDF, Git binary data        |
 
 - Encoding is NOT encryption - it is reversible without a key
 - Attackers often encode data to bypass detection
@@ -427,16 +427,16 @@ john --show hashes.txt
 
 ## Encoding Detection Cheat Sheet
 
-| Pattern                        | Likely Encoding    |
-|-------------------------------|--------------------|
-| `[A-Za-z0-9+/]+=*`           | Base64             |
-| `[0-9A-Fa-f]+` (even length) | Hexadecimal        |
-| `%[0-9A-Fa-f]{2}`            | URL encoding       |
-| `&#[0-9]+;` or `&#x[0-9a-f]+;` | HTML entities   |
-| `\x[0-9a-f]{2}`              | Hex escape         |
-| `\u[0-9a-f]{4}`              | Unicode escape     |
-| `=?UTF-8?B?...?=`            | MIME Base64        |
-| `=?UTF-8?Q?...?=`            | MIME Quoted-Print  |
+| Pattern                        | Likely Encoding   |
+| ------------------------------ | ----------------- |
+| `[A-Za-z0-9+/]+=*`             | Base64            |
+| `[0-9A-Fa-f]+` (even length)   | Hexadecimal       |
+| `%[0-9A-Fa-f]{2}`              | URL encoding      |
+| `&#[0-9]+;` or `&#x[0-9a-f]+;` | HTML entities     |
+| `\x[0-9a-f]{2}`                | Hex escape        |
+| `\u[0-9a-f]{4}`                | Unicode escape    |
+| `=?UTF-8?B?...?=`              | MIME Base64       |
+| `=?UTF-8?Q?...?=`              | MIME Quoted-Print |
 
 ---
 

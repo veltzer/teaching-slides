@@ -62,7 +62,7 @@ Walk the list top-to-bottom. Stop at the first match.
 How much do you have to trust to install this?
 
 | Source | What you trust |
-|---|---|
+| --- | --- |
 | Distro package | Distro maintainers + signed repo |
 | Third-party repo with `signed-by` | Vendor + their key |
 | `flatpak` from `flathub` | `Flathub` reviewers + app maintainer |
@@ -74,7 +74,7 @@ How much do you have to trust to install this?
 ## Comparison: Trust Surface (cont.)
 
 | Source | What you trust |
-|---|---|
+| --- | --- |
 | `GitHub` release with signature | Project owners + their CI |
 | `GitHub` release, no signature | The project + the network path |
 | `curl ... \| sudo bash` | Everything, every time, no record |
@@ -86,7 +86,7 @@ Each row down trusts more parties. Pick accordingly.
 ## Comparison: Update Story
 
 | Source | Updates |
-|---|---|
+| --- | --- |
 | Distro package | `apt upgrade` / `dnf upgrade` |
 | Third-party repo | Same as distro |
 | `flatpak` | `flatpak update` (or auto) |
@@ -102,7 +102,7 @@ The further you get from system tools, the more security updates become *your* j
 ## Comparison: Reproducibility
 
 | Source | Same input → same output? |
-|---|---|
+| --- | --- |
 | Distro package | Yes (with pinned version + repo snapshot) |
 | Third-party repo | Yes |
 | `flatpak`/`snap` | Yes (channels + revisions) |

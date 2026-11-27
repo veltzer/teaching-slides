@@ -173,7 +173,7 @@ auto widget = factory.create("button");
 ## Factory Method vs Direct Construction
 
 | Aspect | Direct `new` | Factory Method |
-|--------|-------------|----------------|
+| -------- | ------------- | ---------------- |
 | Coupling | Tight | Loose |
 | Adding types | Modify existing code | Add new creator class |
 | Testing | Hard to mock | Easy to substitute |

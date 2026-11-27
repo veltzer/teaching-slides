@@ -191,7 +191,7 @@ audience:
 ## PACELC Examples
 
 | System | Partition (P) | Else (E) |
-|--------|--------------|----------|
+| -------- | -------------- | ---------- |
 | `DynamoDB` | A | L |
 | `Cassandra` | A | L |
 | `MongoDB` | C | C |
@@ -336,7 +336,7 @@ Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT r
 ## Availability Tiers
 
 | Level | Uptime | Downtime/Year |
-|-------|--------|---------------|
+| ------- | -------- | --------------- |
 | 99% | Two nines | 3.65 days |
 | 99.9% | Three nines | 8.76 hours |
 | 99.99% | Four nines | 52.6 minutes |

@@ -29,7 +29,7 @@ audience:
 ## Bitwise Operators
 
 | Operator | Name | Description |
-|----------|------|-------------|
+| ---------- | ------ | ------------- |
 | `&` | AND | 1 if both bits are 1 |
 | `\|` | OR | 1 if either bit is 1 |
 | `^` | XOR | 1 if bits differ |

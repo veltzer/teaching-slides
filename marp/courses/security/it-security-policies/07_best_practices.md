@@ -95,7 +95,7 @@ audience:
 ## What Not to Post
 
 | Seems Harmless | Why It Is Risky |
-|----------------|-----------------|
+| ---------------- | ----------------- |
 | Photo at your desk | Badge, screen content, or documents visible |
 | "Excited to start using [new software]!" | Tells attackers what to target |
 | "Working late, office is empty" | Physical security risk |
@@ -149,7 +149,7 @@ audience:
 ## Third-Party Risk Examples
 
 | Incident | What Happened |
-|----------|---------------|
+| ---------- | --------------- |
 | Target (2013) | Attacker compromised an HVAC vendor's credentials |
 | SolarWinds (2020) | Malicious code inserted into a trusted software update |
 | Kaseya (2021) | Ransomware delivered through IT management software |

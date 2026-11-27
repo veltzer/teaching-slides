@@ -60,7 +60,7 @@ audience:
 ## Topic Areas
 
 | Area | Topics |
-|------|--------|
+| ------ | -------- |
 | Architecture | Core System Architecture, FHS, Boot, `systemd` |
 | Storage | Storage Management, Filesystems, Backups |
 | Security | User Management, Security, `SSH` |
@@ -195,7 +195,7 @@ Discuss with your partner:
 LTS (Long-Term Support) vs regular releases:
 
 | Release Type | Support Period | Use Case |
-|-------------|---------------|----------|
+| ------------- | --------------- | ---------- |
 | `Ubuntu` LTS | 5 years (10 with ESM) | Production servers |
 | `Ubuntu` interim | 9 months | Development, testing |
 | `RHEL` | 10 years | Enterprise production |
@@ -224,7 +224,7 @@ Plan upgrades before EOL (End of Life) to maintain security patches.
 Man pages are organized into numbered sections:
 
 | Section | Content |
-|---------|---------|
+| --------- | --------- |
 | 1 | User commands (`ls`, `grep`) |
 | 2 | System calls (`open`, `read`) |
 | 3 | Library functions (`printf`, `malloc`) |
@@ -235,7 +235,7 @@ Man pages are organized into numbered sections:
 ## Getting Help: Man Pages In Depth (cont.)
 
 | Section | Content |
-|---------|---------|
+| --------- | --------- |
 | 5 | File formats (`/etc/passwd`, `fstab`) |
 | 6 | Games |
 | 7 | Miscellaneous (protocols, conventions) |

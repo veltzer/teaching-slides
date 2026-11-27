@@ -47,7 +47,7 @@ audience:
 ## Logs vs Metrics vs Traces
 
 | Pillar | Use For | Storage Cost | Query Pattern |
-|--------|---------|--------------|---------------|
+| -------- | --------- | -------------- | --------------- |
 | Logs | Detailed event context | High | Full-text search |
 | Metrics | Trends and alerts | Low | Time-series query |
 | Traces | Request flow analysis | Medium | Trace ID lookup |

@@ -553,7 +553,7 @@ if __name__ == "__main__":
 ## Standard Library Overview
 
 | Module | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `os`, `pathlib` | File system operations |
 | `sys` | System-specific parameters |
 | `json` | JSON encoding/decoding |
@@ -565,7 +565,7 @@ if __name__ == "__main__":
 ## Standard Library Overview (cont.)
 
 | Module | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `collections` | Specialized containers |
 | `itertools` | Iterator building blocks |
 | `functools` | Higher-order functions |

@@ -177,7 +177,7 @@ Do not change any other endpoint.
 ## Comparing the Surfaces
 
 | Surface | Who picks files | Runs commands | Best for |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Completions | You, by cursor | No | The next few lines |
 | Ask mode | Nobody | No | Questions, explanations |
 | Edit mode | You, working set | No | Known change, known files |

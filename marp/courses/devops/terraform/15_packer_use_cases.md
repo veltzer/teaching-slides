@@ -377,7 +377,7 @@ build {
 ## Packer vs Dockerfile
 
 | Feature | Packer | Dockerfile |
-|---------|--------|------------|
+| --------- | -------- | ------------ |
 | Multi-platform | Yes (AMI + Docker) | Docker only |
 | Language | HCL | Dockerfile syntax |
 | Caching | Limited | Layer caching |

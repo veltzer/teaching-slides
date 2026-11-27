@@ -179,7 +179,7 @@ audience:
 - Aim for single-responsibility tools that compose well
 
 | Granularity | Example | Tradeoff |
-|---|---|---|
+| --- | --- | --- |
 | Too coarse | `manage_database(action, ...)` | Ambiguous, error-prone |
 | Too fine | `open_file`, `seek_file`, `read_byte` | Too many round-trips |
 | Right | `read_file(path, offset?, limit?)` | Clear, composable |

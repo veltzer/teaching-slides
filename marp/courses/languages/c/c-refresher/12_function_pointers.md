@@ -704,7 +704,7 @@ int main(void) {
 ## Function Pointers vs Switch: Comparison
 
 | Aspect | Switch Statement | Function Pointer Table |
-|--------|-----------------|----------------------|
+| -------- | ----------------- | ---------------------- |
 | Adding cases | Modify switch code | Add entry to table |
 | Runtime selection | Compile-time paths | Fully dynamic |
 | Open/Closed | Closed (modify source) | Open (extensible) |

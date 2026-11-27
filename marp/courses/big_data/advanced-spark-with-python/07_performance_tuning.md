@@ -58,7 +58,7 @@ audience:
 ## Spark UI: Key Metrics to Watch
 
 | Metric | Where to Find | What it Tells You |
-|---|---|---|
+| --- | --- | --- |
 | Task Duration | Stages tab | Skew if max >> median |
 | Shuffle Read/Write | Stages tab | Excessive data movement |
 | GC Time | Executors tab | Memory pressure |
@@ -115,7 +115,7 @@ query.explain(mode="codegen")
 ## Execution Plan Key Operators
 
 | Operator | Symbol | Meaning |
-|---|---|---|
+| --- | --- | --- |
 | FileScan | Scan parquet | Reading from storage |
 | Filter | Filter | Row-level predicate |
 | Project | Project | Column selection |
@@ -230,7 +230,7 @@ df_by_key = df.repartition(100, "user_id")
 ## Partition Size Guidelines
 
 | Partition Size | Status | Action |
-|---|---|---|
+| --- | --- | --- |
 | < 10 MB | Too small | Coalesce partitions |
 | 10 - 50 MB | Small | Consider coalescing |
 | 50 - 200 MB | Optimal | No action needed |
@@ -283,7 +283,7 @@ spark.conf.set("spark.driver.maxResultSize", "2g")
 ## Memory Tuning Scenarios
 
 | Symptom | Likely Cause | Fix |
-|---|---|---|
+| --- | --- | --- |
 | OOM on executor | Partition too large | Increase partitions or memory |
 | OOM on driver | collect() too large | Use take() or write to file |
 | Excessive GC time | Too much cached data | Reduce cache, increase memory |
@@ -293,7 +293,7 @@ spark.conf.set("spark.driver.maxResultSize", "2g")
 ## Memory Tuning Scenarios (cont.)
 
 | Symptom | Likely Cause | Fix |
-|---|---|---|
+| --- | --- | --- |
 | Shuffle spill to disk | Insufficient execution memory | Increase memory fraction |
 | Python worker OOM | Heavy pandas/numpy | Increase pyspark.memory |
 | Container killed by YARN | Memory overhead too low | Increase memoryOverhead |
@@ -600,7 +600,7 @@ base_df.unpersist()
 ## cache() vs persist() vs checkpoint()
 
 | Method | Storage | Lineage | Recovery | Use Case |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | cache() | MEMORY_AND_DISK | Preserved | Recompute from source | Reusable intermediate |
 | persist(level) | Configurable | Preserved | Recompute from source | Control storage level |
 
@@ -609,7 +609,7 @@ base_df.unpersist()
 ## cache() vs persist() vs checkpoint() (cont.)
 
 | Method | Storage | Lineage | Recovery | Use Case |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | checkpoint() | Disk only | Truncated | Read from checkpoint | Break long lineage |
 | localCheckpoint() | Disk (local) | Truncated | Lost if executor dies | Fast, less reliable |
 
@@ -760,7 +760,7 @@ print(f"\nTotal pipeline time: {total_time:.2f}s")
 ## Common Performance Anti-Patterns
 
 | Anti-Pattern | Impact | Better Approach |
-|---|---|---|
+| --- | --- | --- |
 | collect() on large DataFrame | Driver OOM | Use take(n) or write to storage |
 | groupByKey() on RDDs | Full shuffle of values | reduceByKey() or aggregateByKey() |
 | Python UDFs | 10-100x slower | Built-in functions or pandas_udf |
@@ -772,7 +772,7 @@ print(f"\nTotal pipeline time: {total_time:.2f}s")
 ## Common Performance Anti-Patterns (cont.)
 
 | Anti-Pattern | Impact | Better Approach |
-|---|---|---|
+| --- | --- | --- |
 | Repeated reading same data | Multiple I/O operations | cache() or persist() |
 | Too many small files | Slow reads | coalesce or repartition before write |
 | Default shuffle partitions | Poor parallelism | Tune to data size |

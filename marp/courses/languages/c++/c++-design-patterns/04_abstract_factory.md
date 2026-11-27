@@ -181,7 +181,7 @@ std::unique_ptr<GUIFactory> createFactory() {
 ## Abstract Factory vs Factory Method
 
 | Aspect | Factory Method | Abstract Factory |
-|--------|---------------|-----------------|
+| -------- | --------------- | ----------------- |
 | Creates | One product | Family of products |
 | Uses | Inheritance | Composition |
 | Extension | New creator subclass | New factory subclass |

@@ -72,7 +72,7 @@ Without protection: DOS, early Windows, embedded systems
 ## Real Mode vs Protected Mode
 
 | Feature | Real Mode | Protected Mode |
-|---------|-----------|----------------|
+| --------- | ----------- | ---------------- |
 | **Memory** | 1MB limit | 4GB+ (32-bit) |
 | **Protection** | None | Full |
 | **Privilege** | Single level | 4 rings |
@@ -283,7 +283,7 @@ syscall           ; Fast system call
 ## Overhead Comparison
 
 | Method | Cycles | Use Case |
-|--------|--------|----------|
+| -------- | -------- | ---------- |
 | **Function Call** | ~5 | User space only |
 | **SYSCALL** | ~150 | Modern Linux |
 | **INT 0x80** | ~400 | Legacy Linux |
@@ -443,7 +443,7 @@ jmp rax         // Must land on ENDBR instruction
 ## Attack Vectors and Mitigations
 
 | Attack | Protection |
-|--------|------------|
+| -------- | ------------ |
 | **Buffer Overflow** | NX bit, ASLR, Canaries |
 | **Return-to-libc** | ASLR, PIE |
 | **ROP/JOP** | CET, CFI |

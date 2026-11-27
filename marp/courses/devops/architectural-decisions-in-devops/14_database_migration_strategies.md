@@ -109,7 +109,7 @@ CREATE TABLE users (
 ## Versioned vs State-Based Comparison
 
 | Aspect | Versioned | State-Based |
-|--------|-----------|-------------|
+| -------- | ----------- | ------------- |
 | History | Explicit | Implicit |
 | Repeatability | High | Medium |
 | Merge conflicts | Per-file | Schema-wide |
@@ -485,7 +485,7 @@ migrations/
 - Not all databases support transactional DDL
 
 | Database | Transactional DDL |
-|----------|------------------|
+| ---------- | ------------------ |
 | `PostgreSQL` | Yes |
 | `MySQL` | No (implicit commit) |
 | `SQL Server` | Yes |

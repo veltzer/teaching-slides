@@ -119,7 +119,7 @@ According to Stack Overflow Developer Survey:
 ## Key Differences from SVN
 
 | Feature | SVN | Git |
-|---------|-----|-----|
+| --------- | ----- | ----- |
 | **Architecture** | Centralized | Distributed |
 | **Speed** | Slower (network) | Fast (local) |
 | **Offline work** | Limited | Full capability |

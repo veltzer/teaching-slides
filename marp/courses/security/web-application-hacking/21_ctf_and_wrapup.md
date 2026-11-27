@@ -33,7 +33,7 @@ audience:
 ## CTF Challenge Categories
 
 | Category | Points | Skills Tested |
-|----------|--------|--------------|
+| ---------- | -------- | -------------- |
 | **Reconnaissance** | 100 | Scanning, enumeration |
 | **Web Exploitation** | 200 | SQLi, XSS, LFI |
 | **Authentication** | 200 | Brute-force, bypass |
@@ -391,7 +391,7 @@ Key takeaways:
 ## Continuing Your Learning
 
 | Resource | Type | Focus |
-|----------|------|-------|
+| ---------- | ------ | ------- |
 | **PortSwigger Web Security Academy** | Free labs | Web vulnerabilities |
 | **HackTheBox** | Platform | Realistic machines |
 | **TryHackMe** | Platform | Guided learning |

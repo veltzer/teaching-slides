@@ -209,7 +209,7 @@ Each type has different lifetime expectations. Confusing them creates tech debt.
 ## Choosing a Strategy
 
 | Change type | Best strategy |
-|-------------|--------------|
+| ------------- | -------------- |
 | Minor version bump | Rolling update |
 | Breaking API change | Blue/Green or expand/contract |
 | Risky business logic | Canary + feature flag |

@@ -160,12 +160,12 @@ ROLLBACK; -- Balance is back to original value
 
 ## Isolation Level Comparison
 
-| Isolation Level | Dirty Reads | Non-repeatable Reads | Phantom Reads |
-|-----------------|-------------|----------------------|---------------|
-| Read Uncommitted| Possible    | Possible             | Possible      |
-| Read Committed  | Prevented   | Possible             | Possible      |
-| Repeatable Read | Prevented   | Prevented            | Possible      |
-| Serializable    | Prevented   | Prevented            | Prevented     |
+| Isolation Level  | Dirty Reads | Non-repeatable Reads | Phantom Reads |
+| ---------------- | ----------- | -------------------- | ------------- |
+| Read Uncommitted | Possible    | Possible             | Possible      |
+| Read Committed   | Prevented   | Possible             | Possible      |
+| Repeatable Read  | Prevented   | Prevented            | Possible      |
+| Serializable     | Prevented   | Prevented            | Prevented     |
 
 ---
 

@@ -305,7 +305,7 @@ unset TF_LOG_PATH
 ## Log Levels Explained
 
 | Level | Description | Use Case |
-|-------|-------------|----------|
+| ------- | ------------- | ---------- |
 | `TRACE` | All internal operations | Deep debugging |
 | `DEBUG` | Detailed operations | Provider issues |
 | `INFO` | General information | Normal operations |
@@ -424,7 +424,7 @@ terraform apply tfplan
 ## Common Mistakes and Fixes
 
 | Mistake | Fix |
-|---------|-----|
+| --------- | ----- |
 | Hardcoded AMI IDs | Use `data.aws_ami` data source |
 | Missing `depends_on` | Add explicit dependencies |
 | Not using `-out` with plan | Always save plan file |

@@ -55,7 +55,7 @@ audience:
 ## Side by Side
 
 | Aspect | Agent mode (IDE) | Coding agent (GitHub) |
-|---|---|---|
+| --- | --- | --- |
 | Where it runs | Your machine | `Actions` runner |
 | Supervision | You approve tools live | Unattended, review at the end |
 | Output | Edits in your working tree | Draft pull request |
@@ -289,7 +289,7 @@ jobs:
 ## What It Costs
 
 | Resource | Consumed by | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Premium requests | Each session (start or steering round) | One request times model multiplier |
 | `Actions` minutes | The runner, for the whole session | Counted against your plan |
 | Larger runners | Optional in setup steps | Billed at larger-runner rates |
@@ -308,7 +308,7 @@ At time of writing - check docs.github.com for current rates.
 ## Task Shapes
 
 | Succeeds | Wastes money |
-|---|---|
+| --- | --- |
 | Bug with a reproduction and a test | "Something is slow somewhere" |
 | Add tests to an untested module | Large refactor across the codebase |
 | Dependency bump with a green suite | Change requiring production access |

@@ -110,7 +110,7 @@ Potential speedup: ~60x
 ## Integration Methods Overview (cont.)
 
 | Method | Complexity | Performance | Flexibility |
-|--------|-----------|-------------|-------------|
+| -------- | ----------- | ------------- | ------------- |
 | Python C API | High | High | High |
 | ctypes | Low | Medium | Medium |
 | CFFI | Medium | High | High |

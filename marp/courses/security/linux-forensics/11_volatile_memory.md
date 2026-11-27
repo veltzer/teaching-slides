@@ -35,15 +35,15 @@ audience:
 
 ## Memory Acquisition Methods: Comparison
 
-| Method          | Pros                      | Cons                      |
-|----------------|---------------------------|---------------------------|
-| `LiME`         | Clean, reliable, LKM      | Requires module loading   |
-| `/proc/kcore`  | No module needed           | Virtual addresses, complex|
-| `/dev/mem`     | Direct access              | Often restricted          |
-| `fmem`         | Bypasses restrictions      | Requires compilation      |
-| `AVML`         | Microsoft tool, no LKM     | Newer, less tested        |
-| Cold boot      | Works when locked           | Hardware access needed    |
-| Crash dump     | Automatic on panic         | Not controllable          |
+| Method        | Pros                   | Cons                       |
+| ------------- | ---------------------- | -------------------------- |
+| `LiME`        | Clean, reliable, LKM   | Requires module loading    |
+| `/proc/kcore` | No module needed       | Virtual addresses, complex |
+| `/dev/mem`    | Direct access          | Often restricted           |
+| `fmem`        | Bypasses restrictions  | Requires compilation       |
+| `AVML`        | Microsoft tool, no LKM | Newer, less tested         |
+| Cold boot     | Works when locked      | Hardware access needed     |
+| Crash dump    | Automatic on panic     | Not controllable           |
 
 ---
 

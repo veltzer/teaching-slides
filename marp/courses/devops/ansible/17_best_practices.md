@@ -736,7 +736,7 @@ Problem: "Slow execution"
 ## Ansible Ecosystem Tools
 
 | Tool | Purpose |
-|------|---------|
+| ------ | --------- |
 | `ansible-playbook` | Execute playbooks |
 | `ansible-galaxy` | Install roles and collections |
 | `ansible-vault` | Encrypt/decrypt secrets |
@@ -750,7 +750,7 @@ Problem: "Slow execution"
 ## Ansible Ecosystem Tools (cont.)
 
 | Tool | Purpose |
-|------|---------|
+| ------ | --------- |
 | `molecule` | Role testing framework |
 | `ansible-pull` | Pull-mode execution |
 | `ansible-inventory` | Inventory inspection |

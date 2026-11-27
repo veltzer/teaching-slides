@@ -24,7 +24,7 @@ audience:
 ## Stack vs Heap
 
 | Feature | Stack | Heap |
-|---------|-------|------|
+| --------- | ------- | ------ |
 | Allocation | Automatic | Manual (malloc/free) |
 | Deallocation | Automatic (scope exit) | Manual (free) |
 | Speed | Very fast | Slower |
@@ -93,7 +93,7 @@ int main(void) {
 malloc vs calloc:
 
 | Feature | `malloc(n)` | `calloc(count, size)` |
-|---------|------------|---------------------|
+| --------- | ------------ | --------------------- |
 | Initialization | None (garbage) | Zero-filled |
 | Overflow check | No | Yes (count * size) |
 | Speed | Slightly faster | Slightly slower |
@@ -676,7 +676,7 @@ When to use each:
 ## Common Memory Errors Summary
 
 | Error | Symptom | Detection |
-|-------|---------|-----------|
+| ------- | --------- | ----------- |
 | Memory leak | Growing RSS, OOM | Valgrind, ASan |
 | Use-after-free | Corrupted data, crash | ASan, Valgrind |
 | Double free | Crash, heap corruption | ASan, Valgrind |

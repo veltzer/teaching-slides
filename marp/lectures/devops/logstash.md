@@ -142,7 +142,7 @@ filter {
 ## Common Grok Patterns
 
 | Pattern | Matches | Example |
-|---------|---------|---------|
+| --------- | --------- | --------- |
 | `%{IP}` | IP Address | `192.168.1.1` |
 | `%{WORD}` | Single word | `GET` |
 | `%{NUMBER}` | Integer/Float | `200`, `1.5` |
@@ -823,7 +823,7 @@ filter {
 ## Logstash vs Alternatives
 
 | Tool | Strengths | Use Cases |
-|------|-----------|-----------|
+| ------ | ----------- | ----------- |
 | **Logstash** | Rich plugins, flexible | Complex transformations |
 | **Fluentd** | Lightweight, Ruby | Container environments |
 | **Fluent Bit** | Very lightweight | Resource-constrained |

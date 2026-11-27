@@ -424,7 +424,7 @@ data:
 ## Key `Kubernetes` Metrics to Monitor
 
 | Category | Metrics |
-|----------|---------|
+| ---------- | --------- |
 | **Cluster** | Node count, CPU/memory capacity |
 | **Node** | CPU%, memory%, disk%, network |
 | **Pod** | Restarts, CPU/memory usage, OOMKills |

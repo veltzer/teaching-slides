@@ -66,23 +66,23 @@ audience:
 
 ## Scraping Tools Overview
 
-| Tool/Library    | Language   | Type              | Best For                        |
-|-----------------|------------|-------------------|---------------------------------|
-| BeautifulSoup   | Python     | HTML parser       | Simple static page scraping     |
-| Scrapy          | Python     | Full framework    | Large-scale crawling projects   |
-| Selenium        | Multi      | Browser automation| JavaScript-heavy sites          |
-| Puppeteer       | Node.js    | Browser automation| Headless Chrome automation      |
+| Tool/Library  | Language | Type               | Best For                      |
+| ------------- | -------- | ------------------ | ----------------------------- |
+| BeautifulSoup | Python   | HTML parser        | Simple static page scraping   |
+| Scrapy        | Python   | Full framework     | Large-scale crawling projects |
+| Selenium      | Multi    | Browser automation | JavaScript-heavy sites        |
+| Puppeteer     | Node.js  | Browser automation | Headless Chrome automation    |
 
 ---
 
 ## Scraping Tools Overview (cont.)
 
-| Tool/Library    | Language   | Type              | Best For                        |
-|-----------------|------------|-------------------|---------------------------------|
-| Playwright      | Multi      | Browser automation| Cross-browser testing/scraping  |
-| requests-html   | Python     | HTTP + render     | Simple JS rendering needs       |
-| curl / wget     | CLI        | HTTP client       | Simple page downloads           |
-| Cheerio         | Node.js    | HTML parser       | Server-side jQuery-like parsing |
+| Tool/Library  | Language | Type               | Best For                        |
+| ------------- | -------- | ------------------ | ------------------------------- |
+| Playwright    | Multi    | Browser automation | Cross-browser testing/scraping  |
+| requests-html | Python   | HTTP + render      | Simple JS rendering needs       |
+| curl / wget   | CLI      | HTTP client        | Simple page downloads           |
+| Cheerio       | Node.js  | HTML parser        | Server-side jQuery-like parsing |
 
 ---
 
@@ -298,14 +298,14 @@ Crawl-delay: 10
 
 ## CAPTCHA Systems
 
-| CAPTCHA Type    | Mechanism                              | Bypass Difficulty |
-|-----------------|----------------------------------------|-------------------|
-| Text CAPTCHA    | Distorted text recognition             | Easy (OCR)        |
-| Image CAPTCHA   | Select images with specific objects    | Medium            |
-| reCAPTCHA v2    | "I'm not a robot" checkbox + risk      | Medium            |
-| reCAPTCHA v3    | Invisible, risk scoring (0.0 - 1.0)   | Hard              |
-| hCaptcha        | Image labeling tasks                   | Medium            |
-| Cloudflare Turnstile | Invisible challenge               | Hard              |
+| CAPTCHA Type         | Mechanism                           | Bypass Difficulty |
+| -------------------- | ----------------------------------- | ----------------- |
+| Text CAPTCHA         | Distorted text recognition          | Easy (OCR)        |
+| Image CAPTCHA        | Select images with specific objects | Medium            |
+| reCAPTCHA v2         | "I'm not a robot" checkbox + risk   | Medium            |
+| reCAPTCHA v3         | Invisible, risk scoring (0.0 - 1.0) | Hard              |
+| hCaptcha             | Image labeling tasks                | Medium            |
+| Cloudflare Turnstile | Invisible challenge                 | Hard              |
 
 ```bash
 ┌──────────────────────────────────────────────────────────┐

@@ -243,7 +243,7 @@ except requests.HTTPError as e:
 ## Popular Third Party Packages
 
 | Package | Purpose |
-|---------|---------|
+| --------- | --------- |
 | `requests` | HTTP client |
 | `numpy` | Numerical computing |
 | `pandas` | Data analysis |
@@ -256,7 +256,7 @@ except requests.HTTPError as e:
 ## Popular Third Party Packages (cont.)
 
 | Package | Purpose |
-|---------|---------|
+| --------- | --------- |
 | `pytest` | Testing framework |
 | `sqlalchemy` | Database ORM |
 | `pillow` | Image processing |

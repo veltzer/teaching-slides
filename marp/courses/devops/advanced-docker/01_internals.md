@@ -219,15 +219,15 @@ curl -s -H "Accept: application/vnd.oci.image.manifest.v1+json" \
 
 ## Linux Namespaces - Overview
 
-| Namespace | Flag            | Isolates                        |
-|-----------|-----------------|----------------------------------|
-| Mount     | `CLONE_NEWNS`   | Mount points                     |
-| UTS       | `CLONE_NEWUTS`  | Hostname and domain name         |
-| IPC       | `CLONE_NEWIPC`  | IPC resources                    |
-| PID       | `CLONE_NEWPID`  | Process IDs                      |
-| Network   | `CLONE_NEWNET`  | Network devices, stacks, ports   |
-| User      | `CLONE_NEWUSER` | User and group IDs               |
-| Cgroup    | `CLONE_NEWCGROUP`| Cgroup root directory           |
+| Namespace | Flag              | Isolates                       |
+| --------- | ----------------- | ------------------------------ |
+| Mount     | `CLONE_NEWNS`     | Mount points                   |
+| UTS       | `CLONE_NEWUTS`    | Hostname and domain name       |
+| IPC       | `CLONE_NEWIPC`    | IPC resources                  |
+| PID       | `CLONE_NEWPID`    | Process IDs                    |
+| Network   | `CLONE_NEWNET`    | Network devices, stacks, ports |
+| User      | `CLONE_NEWUSER`   | User and group IDs             |
+| Cgroup    | `CLONE_NEWCGROUP` | Cgroup root directory          |
 
 ---
 
@@ -380,13 +380,13 @@ cat /proc/$PID/uid_map
 
 ## Cgroups v1 vs v2
 
-| Feature          | cgroups v1               | cgroups v2               |
-|------------------|--------------------------|--------------------------|
-| Hierarchy        | Multiple hierarchies     | Single unified hierarchy |
-| Controllers      | Per-hierarchy            | Per-subtree              |
-| Thread support   | Limited                  | Full                     |
-| Pressure info    | No                       | `PSI` support            |
-| Default on       | Older kernels            | Kernel 5.x+              |
+| Feature        | cgroups v1           | cgroups v2               |
+| -------------- | -------------------- | ------------------------ |
+| Hierarchy      | Multiple hierarchies | Single unified hierarchy |
+| Controllers    | Per-hierarchy        | Per-subtree              |
+| Thread support | Limited              | Full                     |
+| Pressure info  | No                   | `PSI` support            |
+| Default on     | Older kernels        | Kernel 5.x+              |
 
 ```bash
 # Check which version is in use
@@ -592,14 +592,14 @@ cat $UPPER/testfile
 
 ## Alternative OCI Runtimes
 
-| Runtime     | Description                              |
-|-------------|------------------------------------------|
-| `runc`      | Reference `OCI` runtime (default)        |
-| `crun`      | Fast `OCI` runtime written in C          |
-| `gVisor`    | Application kernel for sandboxing        |
-| `Kata`      | Lightweight VMs as containers            |
-| `youki`     | `OCI` runtime written in Rust            |
-| `Firecracker` | Micro-VMs from `AWS`                  |
+| Runtime       | Description                       |
+| ------------- | --------------------------------- |
+| `runc`        | Reference `OCI` runtime (default) |
+| `crun`        | Fast `OCI` runtime written in C   |
+| `gVisor`      | Application kernel for sandboxing |
+| `Kata`        | Lightweight VMs as containers     |
+| `youki`       | `OCI` runtime written in Rust     |
+| `Firecracker` | Micro-VMs from `AWS`              |
 
 ```bash
 # Use an alternative runtime

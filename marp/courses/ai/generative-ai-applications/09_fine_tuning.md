@@ -46,7 +46,7 @@ Adapting a pre-trained model to your specific task by continuing training on you
 ## Benefits of Fine-Tuning
 
 | Benefit | Explanation |
-|---------|-------------|
+| --------- | ------------- |
 | **Consistency** | Same style every time (no prompt variance) |
 | **Cost reduction** | Shorter prompts needed → fewer tokens |
 | **Latency** | Less input processing → faster responses |

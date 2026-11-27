@@ -175,7 +175,7 @@ free(ptr);  // Double free!
 ## Alternative Allocators
 
 | Allocator | Pros | Cons |
-|-----------|------|------|
+| ----------- | ------ | ------ |
 | **ptmalloc** | Default, general | Fragmentation |
 | **tcmalloc** | Fast, per-thread | Memory overhead |
 | **jemalloc** | Scalable, stats | Complex |
@@ -240,7 +240,7 @@ MAP_LOCKED    // Lock in RAM
 ## mmap() vs malloc()
 
 | Feature | malloc() | mmap() |
-|---------|----------|--------|
+| --------- | ---------- | -------- |
 | **Min size** | 1 byte | Page (4KB) |
 | **Zeroed** | No | Yes |
 | **Control** | Limited | Full |

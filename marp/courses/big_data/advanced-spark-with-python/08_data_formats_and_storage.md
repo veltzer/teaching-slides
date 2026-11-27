@@ -197,7 +197,7 @@ spark.conf.set(
 ## Compression Comparison
 
 | Codec | Ratio | Write Speed | Read Speed | Splittable | Use Case |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | Snappy | ~2x | Very fast | Very fast | Yes | Default, balanced |
 | GZIP | ~4x | Slow | Medium | Yes | Storage-optimized |
 | ZSTD | ~3.5x | Fast | Fast | Yes | Best overall |
@@ -215,7 +215,7 @@ spark.conf.set(
 ## Parquet vs ORC Comparison
 
 | Feature | Parquet | ORC |
-|---|---|---|
+| --- | --- | --- |
 | Origin | Twitter + Cloudera | Facebook (Hive) |
 | Ecosystem fit | Spark, Impala, Dremio | Hive, Presto |
 | Nested types | Excellent | Good |
@@ -227,7 +227,7 @@ spark.conf.set(
 ## Parquet vs ORC Comparison (cont.)
 
 | Feature | Parquet | ORC |
-|---|---|---|
+| --- | --- | --- |
 | Predicate pushdown | Row group + page | Stripe + row index |
 | Default in Spark | Yes | No |
 | Compression | Snappy/ZSTD/GZIP | ZLIB/Snappy/ZSTD |
@@ -638,7 +638,7 @@ delta_table.restoreToTimestamp("2024-06-01")
 ## Iceberg vs Delta Lake
 
 | Feature | Delta Lake | Apache Iceberg |
-|---|---|---|
+| --- | --- | --- |
 | Origin | Databricks | Netflix |
 | License | Apache 2.0 | Apache 2.0 |
 | ACID transactions | Yes | Yes |
@@ -652,7 +652,7 @@ delta_table.restoreToTimestamp("2024-06-01")
 ## Iceberg vs Delta Lake (cont.)
 
 | Feature | Delta Lake | Apache Iceberg |
-|---|---|---|
+| --- | --- | --- |
 | Engine support | Spark (best), others | Spark, Flink, Trino, Presto |
 | Catalog support | Unity Catalog | HMS, Glue, REST, Nessie |
 | File formats | Parquet only | Parquet, ORC, Avro |

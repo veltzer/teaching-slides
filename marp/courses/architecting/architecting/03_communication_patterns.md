@@ -65,7 +65,7 @@ audience:
 ## Sync vs Async Comparison
 
 | Aspect | Synchronous | Asynchronous |
-|--------|------------|--------------|
+| -------- | ------------ | -------------- |
 | Coupling | Temporal | Decoupled |
 | Latency | Caller waits | Fire and forget |
 | Complexity | Simpler to reason about | Requires message infrastructure |
@@ -120,7 +120,7 @@ audience:
 ## HTTP Methods for REST
 
 | Method | Purpose | Idempotent | Safe |
-|--------|---------|------------|------|
+| -------- | --------- | ------------ | ------ |
 | `GET` | Read a resource | Yes | Yes |
 | `POST` | Create a resource | No | No |
 | `PUT` | Replace a resource | Yes | No |
@@ -190,7 +190,7 @@ audience:
 ## gRPC vs REST
 
 | Aspect | gRPC | REST |
-|--------|------|------|
+| -------- | ------ | ------ |
 | Protocol | `HTTP/2` | `HTTP/1.1` or `HTTP/2` |
 | Serialization | `Protocol Buffers` (binary) | `JSON` (text) |
 | Code generation | Built-in | External tools |
@@ -282,7 +282,7 @@ message OrderResponse {
 ## Kafka vs RabbitMQ
 
 | Aspect | `Apache Kafka` | `RabbitMQ` |
-|--------|-------------|------------|
+| -------- | ------------- | ------------ |
 | Model | Distributed log | Message queue |
 | Ordering | Per partition | Per queue |
 | Retention | Time or size based | Until consumed |

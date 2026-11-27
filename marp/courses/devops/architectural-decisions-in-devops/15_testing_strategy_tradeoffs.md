@@ -47,7 +47,7 @@ Balancing speed, cost, and confidence in CI/CD testing
 ## Unit Test Tradeoffs
 
 | Advantage | Disadvantage |
-|-----------|-------------|
+| ----------- | ------------- |
 | Fast execution | Miss integration issues |
 | Easy to write | Can become tightly coupled to implementation |
 | Cheap to run | False sense of confidence |
@@ -137,7 +137,7 @@ jobs:
 ## Linting Tradeoffs
 
 | Approach | Pros | Cons |
-|----------|------|------|
+| ---------- | ------ | ------ |
 | Strict rules | Consistent code | Developer friction |
 | Relaxed rules | Faster development | Inconsistent quality |
 | Auto-fix on commit | Seamless workflow | May hide issues |
@@ -212,7 +212,7 @@ jobs:
 ## Ephemeral vs Shared Environments
 
 | Aspect | Ephemeral | Shared |
-|--------|-----------|--------|
+| -------- | ----------- | -------- |
 | Isolation | Full per-branch | Shared state |
 | Cost | Pay-per-use | Always running |
 | Data | Fresh each run | Persistent |

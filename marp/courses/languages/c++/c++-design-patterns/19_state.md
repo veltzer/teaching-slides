@@ -173,7 +173,7 @@ std::cout << doc.render() << "\n";  // Hello World
 ## State vs Strategy
 
 | Aspect | State | Strategy |
-|--------|-------|----------|
+| -------- | ------- | ---------- |
 | Purpose | Behavior varies by state | Algorithm selection |
 | Transitions | States know about each other | Strategies are independent |
 | Who decides | State objects trigger transitions | Client selects strategy |

@@ -26,7 +26,7 @@ audience:
 GAS primarily uses AT&T syntax, which differs from Intel syntax:
 
 | Feature | AT&T Syntax | Intel Syntax |
-|---------|-------------|--------------|
+| --------- | ------------- | -------------- |
 | Order of operands | Source, Destination | Destination, Source |
 | Register names | Prefixed with % | No prefix |
 | Immediate values | Prefixed with $ | No prefix |

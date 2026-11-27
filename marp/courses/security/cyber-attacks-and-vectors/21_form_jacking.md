@@ -34,21 +34,21 @@ audience:
 
 ## Attack Vectors
 
-| Vector                        | Description                                    | Prevalence |
-|-------------------------------|------------------------------------------------|------------|
-| Direct website compromise     | Attacker gains access to web server            | Common     |
-| Third-party script compromise | Inject via analytics, chat, or ad scripts      | Very common|
-| Supply chain attack           | Compromise an npm/CDN dependency               | Growing    |
+| Vector                        | Description                               | Prevalence  |
+| ----------------------------- | ----------------------------------------- | ----------- |
+| Direct website compromise     | Attacker gains access to web server       | Common      |
+| Third-party script compromise | Inject via analytics, chat, or ad scripts | Very common |
+| Supply chain attack           | Compromise an npm/CDN dependency          | Growing     |
 
 ---
 
 ## Attack Vectors (cont.)
 
-| Vector                        | Description                                    | Prevalence |
-|-------------------------------|------------------------------------------------|------------|
-| Magento/CMS vulnerabilities   | Exploit known CMS security flaws               | Common     |
-| Compromised admin credentials | Access CMS admin panel, inject code            | Common     |
-| CDN/hosting compromise        | Modify scripts served from CDN                 | Rare       |
+| Vector                        | Description                         | Prevalence |
+| ----------------------------- | ----------------------------------- | ---------- |
+| Magento/CMS vulnerabilities   | Exploit known CMS security flaws    | Common     |
+| Compromised admin credentials | Access CMS admin panel, inject code | Common     |
+| CDN/hosting compromise        | Modify scripts served from CDN      | Rare       |
 
 ---
 
@@ -62,14 +62,14 @@ audience:
 
 ## Magecart Groups (cont.)
 
-| Group       | Notable Targets                          | Technique                    |
-|-------------|------------------------------------------|------------------------------|
-| Magecart 1  | Magento stores                           | Direct server compromise     |
-| Magecart 3  | Feedify (cloud widget)                   | Supply chain attack          |
-| Magecart 5  | Ticketmaster (via Inbenta)               | Third-party script injection |
-| Magecart 6  | British Airways, Newegg                  | Custom targeted skimmers     |
-| Magecart 9  | Various e-commerce                       | Obfuscated JS injection      |
-| Magecart 12 | OpenCart, Magento stores                 | Google Analytics mimicry     |
+| Group       | Notable Targets            | Technique                    |
+| ----------- | -------------------------- | ---------------------------- |
+| Magecart 1  | Magento stores             | Direct server compromise     |
+| Magecart 3  | Feedify (cloud widget)     | Supply chain attack          |
+| Magecart 5  | Ticketmaster (via Inbenta) | Third-party script injection |
+| Magecart 6  | British Airways, Newegg    | Custom targeted skimmers     |
+| Magecart 9  | Various e-commerce         | Obfuscated JS injection      |
+| Magecart 12 | OpenCart, Magento stores   | Google Analytics mimicry     |
 
 ---
 
@@ -188,20 +188,20 @@ Content-Security-Policy:
 
 ### Key CSP Directives for Formjacking Defense
 
-| Directive      | Purpose                                      | Example Value              |
-|----------------|----------------------------------------------|----------------------------|
-| `script-src`   | Allowed JavaScript sources                   | `'self' https://cdn.com`   |
-| `connect-src`  | Allowed AJAX/fetch/WebSocket destinations    | `'self' https://api.com`   |
-| `form-action`  | Allowed form submission targets              | `'self'`                   |
+| Directive     | Purpose                                   | Example Value            |
+| ------------- | ----------------------------------------- | ------------------------ |
+| `script-src`  | Allowed JavaScript sources                | `'self' https://cdn.com` |
+| `connect-src` | Allowed AJAX/fetch/WebSocket destinations | `'self' https://api.com` |
+| `form-action` | Allowed form submission targets           | `'self'`                 |
 
 ---
 
 ## Content Security Policy (CSP) as Defense: Example (cont.) (cont.)
 
-| Directive      | Purpose                                      | Example Value              |
-|----------------|----------------------------------------------|----------------------------|
-| `img-src`      | Allowed image sources (blocks pixel exfil)   | `'self' data:`             |
-| `report-uri`   | Where to send CSP violation reports          | `/csp-violations`          |
+| Directive    | Purpose                                    | Example Value     |
+| ------------ | ------------------------------------------ | ----------------- |
+| `img-src`    | Allowed image sources (blocks pixel exfil) | `'self' data:`    |
+| `report-uri` | Where to send CSP violation reports        | `/csp-violations` |
 
 ---
 
@@ -327,15 +327,15 @@ diff known_good_hashes.txt current.txt
 
 ## Detection Tools and Services
 
-| Tool / Service        | Type             | Capability                          |
-|-----------------------|------------------|-------------------------------------|
-| CSP Reporting         | Built-in browser | Detect unauthorized script sources  |
-| AIDE / OSSEC          | Server-side      | File integrity monitoring           |
-| MutationObserver API  | Client-side      | Detect DOM manipulation             |
-| Jscrambler            | Commercial       | Real-time webpage integrity         |
-| PerimeterX            | Commercial       | Bot and skimmer detection           |
-| Source Defense        | Commercial       | Client-side protection platform     |
-| Report URI            | SaaS             | CSP violation monitoring            |
+| Tool / Service       | Type             | Capability                         |
+| -------------------- | ---------------- | ---------------------------------- |
+| CSP Reporting        | Built-in browser | Detect unauthorized script sources |
+| AIDE / OSSEC         | Server-side      | File integrity monitoring          |
+| MutationObserver API | Client-side      | Detect DOM manipulation            |
+| Jscrambler           | Commercial       | Real-time webpage integrity        |
+| PerimeterX           | Commercial       | Bot and skimmer detection          |
+| Source Defense       | Commercial       | Client-side protection platform    |
+| Report URI           | SaaS             | CSP violation monitoring           |
 
 ---
 

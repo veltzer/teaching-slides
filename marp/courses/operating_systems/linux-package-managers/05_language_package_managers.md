@@ -419,7 +419,7 @@ stack install pandoc       # ~/.local/bin/pandoc
 Different ecosystems mean different things by `>=1.2.0` and `^1.2.0`.
 
 | | `npm`/`Cargo` | `pip` | `gem` |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `1.2.3` | exact | exact | exact |
 | `^1.2.3` | `>=1.2.3 <2.0.0` | n/a | n/a |
 | `~1.2.3` | `>=1.2.3 <1.3.0` | n/a (different meaning in `cabal`) | `>=1.2.3 <1.3.0` |

@@ -67,12 +67,12 @@ audience:
 
 ## The Zero-Day Exploit Market
 
-| Market Segment   | Buyers                              | Price Range (2024)     |
-|------------------|-------------------------------------|------------------------|
-| Black market     | Cybercriminals, nation-states       | $10K - $2.5M+          |
-| Gray market      | Exploit brokers (Zerodium, etc.)    | $25K - $2.5M           |
-| Bug bounties     | Vendors (Google, Apple, Microsoft)  | $500 - $300K           |
-| Government       | NSA, GCHQ, intelligence agencies    | $100K - $2M+           |
+| Market Segment | Buyers                             | Price Range (2024) |
+| -------------- | ---------------------------------- | ------------------ |
+| Black market   | Cybercriminals, nation-states      | $10K - $2.5M+      |
+| Gray market    | Exploit brokers (Zerodium, etc.)   | $25K - $2.5M       |
+| Bug bounties   | Vendors (Google, Apple, Microsoft) | $500 - $300K       |
+| Government     | NSA, GCHQ, intelligence agencies   | $100K - $2M+       |
 
 ```bash
 ┌──────────────────────────────────────────────────────────┐
@@ -101,13 +101,13 @@ audience:
 
 ### CVSS Severity Ratings
 
-| Score    | Severity | Example                                  |
-|----------|----------|------------------------------------------|
-| 0.0      | None     | Informational finding                    |
-| 0.1-3.9  | Low      | Minor info disclosure                    |
-| 4.0-6.9  | Medium   | XSS requiring interaction               |
-| 7.0-8.9  | High     | Authenticated RCE                        |
-| 9.0-10.0 | Critical | Unauthenticated remote code execution    |
+| Score    | Severity | Example                               |
+| -------- | -------- | ------------------------------------- |
+| 0.0      | None     | Informational finding                 |
+| 0.1-3.9  | Low      | Minor info disclosure                 |
+| 4.0-6.9  | Medium   | XSS requiring interaction             |
+| 7.0-8.9  | High     | Authenticated RCE                     |
+| 9.0-10.0 | Critical | Unauthenticated remote code execution |
 
 ---
 
@@ -174,25 +174,25 @@ audience:
 
 ## More Notable Zero-Days
 
-| Vulnerability      | CVE              | Year | CVSS | Impact                        |
-|--------------------|------------------|------|------|-------------------------------|
-| Heartbleed         | CVE-2014-0160    | 2014 | 7.5  | OpenSSL memory disclosure     |
-| Shellshock         | CVE-2014-6271    | 2014 | 10.0 | Bash RCE via env variables    |
-| EternalBlue        | CVE-2017-0144    | 2017 | 9.8  | SMBv1 RCE, WannaCry          |
-| Spectre/Meltdown   | CVE-2017-5753/54 | 2018 | 5.6  | CPU side-channel attacks      |
-| BlueKeep           | CVE-2019-0708    | 2019 | 9.8  | RDP pre-auth RCE             |
+| Vulnerability    | CVE              | Year | CVSS | Impact                     |
+| ---------------- | ---------------- | ---- | ---- | -------------------------- |
+| Heartbleed       | CVE-2014-0160    | 2014 | 7.5  | OpenSSL memory disclosure  |
+| Shellshock       | CVE-2014-6271    | 2014 | 10.0 | Bash RCE via env variables |
+| EternalBlue      | CVE-2017-0144    | 2017 | 9.8  | SMBv1 RCE, WannaCry        |
+| Spectre/Meltdown | CVE-2017-5753/54 | 2018 | 5.6  | CPU side-channel attacks   |
+| BlueKeep         | CVE-2019-0708    | 2019 | 9.8  | RDP pre-auth RCE           |
 
 ---
 
 ## More Notable Zero-Days (cont.)
 
-| Vulnerability      | CVE              | Year | CVSS | Impact                        |
-|--------------------|------------------|------|------|-------------------------------|
-| SolarWinds (SUNBURST)| N/A           | 2020 | N/A  | Supply chain, 18K+ orgs      |
-| ProxyLogon         | CVE-2021-26855   | 2021 | 9.8  | Exchange Server RCE           |
-| Log4Shell          | CVE-2021-44228   | 2021 | 10.0 | Log4j JNDI injection RCE     |
-| Spring4Shell       | CVE-2022-22965   | 2022 | 9.8  | Spring Framework RCE          |
-| MOVEit             | CVE-2023-34362   | 2023 | 9.8  | SQL injection, mass breach    |
+| Vulnerability         | CVE            | Year | CVSS | Impact                     |
+| --------------------- | -------------- | ---- | ---- | -------------------------- |
+| SolarWinds (SUNBURST) | N/A            | 2020 | N/A  | Supply chain, 18K+ orgs    |
+| ProxyLogon            | CVE-2021-26855 | 2021 | 9.8  | Exchange Server RCE        |
+| Log4Shell             | CVE-2021-44228 | 2021 | 10.0 | Log4j JNDI injection RCE   |
+| Spring4Shell          | CVE-2022-22965 | 2022 | 9.8  | Spring Framework RCE       |
+| MOVEit                | CVE-2023-34362 | 2023 | 9.8  | SQL injection, mass breach |
 
 ---
 
@@ -328,15 +328,15 @@ location / {
 
 ## Advanced Detection Technologies
 
-| Technology                    | How It Helps Against Zero-Days              |
-|-------------------------------|---------------------------------------------|
-| Behavior-based EDR            | Detects anomalous process behavior           |
-| Network Traffic Analysis (NTA)| Identifies unusual communication patterns    |
-| Sandboxing                    | Detonates suspicious files in isolation       |
-| Deception (honeypots)         | Attackers interact with fake assets          |
-| SIEM + UEBA                  | Correlates events, detects anomalies         |
-| Memory protection (CFI, CET)  | Prevents exploitation at hardware level      |
-| Application whitelisting      | Only approved executables can run            |
+| Technology                     | How It Helps Against Zero-Days            |
+| ------------------------------ | ----------------------------------------- |
+| Behavior-based EDR             | Detects anomalous process behavior        |
+| Network Traffic Analysis (NTA) | Identifies unusual communication patterns |
+| Sandboxing                     | Detonates suspicious files in isolation   |
+| Deception (honeypots)          | Attackers interact with fake assets       |
+| SIEM + UEBA                    | Correlates events, detects anomalies      |
+| Memory protection (CFI, CET)   | Prevents exploitation at hardware level   |
+| Application whitelisting       | Only approved executables can run         |
 
 ```bash
 # Example: Linux application whitelisting with fapolicyd

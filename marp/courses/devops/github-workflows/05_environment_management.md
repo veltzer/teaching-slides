@@ -122,11 +122,11 @@ steps:
 
 ## Types of Secrets
 
-| Scope         | Set By          | Available To                   |
-|---------------|-----------------|-------------------------------|
-| Repository    | Repo admin      | All workflows in the repo      |
-| Environment   | Repo admin      | Jobs targeting that environment|
-| Organization  | Org admin       | Selected repositories          |
+| Scope        | Set By     | Available To                    |
+| ------------ | ---------- | ------------------------------- |
+| Repository   | Repo admin | All workflows in the repo       |
+| Environment  | Repo admin | Jobs targeting that environment |
+| Organization | Org admin  | Selected repositories           |
 
 ```yaml
 jobs:
@@ -183,16 +183,16 @@ steps:
 
 ## Available Contexts
 
-| Context    | Description                              | Example                        |
-|------------|------------------------------------------|--------------------------------|
-| `github`   | Workflow run information                 | `github.ref`, `github.sha`     |
-| `env`      | Environment variables                   | `env.MY_VAR`                   |
-| `vars`     | Repository/org variables                | `vars.APP_URL`                 |
-| `job`      | Current job information                 | `job.status`                   |
-| `steps`    | Step outputs and status                 | `steps.id.outputs.name`        |
-| `runner`   | Runner machine information              | `runner.os`, `runner.arch`     |
-| `secrets`  | Secrets available to the workflow       | `secrets.API_KEY`              |
-| `inputs`   | Workflow dispatch inputs                | `inputs.environment`           |
+| Context   | Description                       | Example                    |
+| --------- | --------------------------------- | -------------------------- |
+| `github`  | Workflow run information          | `github.ref`, `github.sha` |
+| `env`     | Environment variables             | `env.MY_VAR`               |
+| `vars`    | Repository/org variables          | `vars.APP_URL`             |
+| `job`     | Current job information           | `job.status`               |
+| `steps`   | Step outputs and status           | `steps.id.outputs.name`    |
+| `runner`  | Runner machine information        | `runner.os`, `runner.arch` |
+| `secrets` | Secrets available to the workflow | `secrets.API_KEY`          |
+| `inputs`  | Workflow dispatch inputs          | `inputs.environment`       |
 
 ---
 

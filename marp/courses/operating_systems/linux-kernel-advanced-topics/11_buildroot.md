@@ -757,7 +757,7 @@ BR2_RELRO_FULL=y
 ## Comparison with Yocto
 
 | Aspect | Buildroot | Yocto |
-|--------|-----------|-------|
+| -------- | ----------- | ------- |
 | Learning | Days | Weeks |
 | Build Time | Fast | Slow |
 | Flexibility | Limited | High |

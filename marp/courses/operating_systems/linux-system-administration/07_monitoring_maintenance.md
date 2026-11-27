@@ -341,7 +341,7 @@ logrotate -f /etc/logrotate.d/myapp
 ## logrotate Options Reference
 
 | Option | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `daily/weekly/monthly` | Rotation frequency |
 | `rotate N` | Keep N old files |
 | `compress` | gzip old files |
@@ -354,7 +354,7 @@ logrotate -f /etc/logrotate.d/myapp
 ## logrotate Options Reference (cont.)
 
 | Option | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `copytruncate` | Copy then truncate (no restart) |
 | `sharedscripts` | Run postrotate once for all |
 | `maxsize 100M` | Rotate if file exceeds size |
@@ -826,7 +826,7 @@ cat /proc/meminfo
 ```
 
 | Field | Meaning |
-|-------|---------|
+| ------- | --------- |
 | `MemTotal` | Total physical RAM |
 | `MemFree` | Completely unused RAM |
 | `MemAvailable` | Estimated available for new apps |
@@ -838,7 +838,7 @@ cat /proc/meminfo
 ## /proc/meminfo Deep Dive (cont.)
 
 | Field | Meaning |
-|-------|---------|
+| ------- | --------- |
 | `SwapTotal/Free` | Swap space usage |
 | `Dirty` | Data waiting to be written to disk |
 | `Slab` | Kernel data structure cache |
@@ -985,7 +985,7 @@ df -i /
 Key metrics to track for capacity planning:
 
 | Resource | Warning | Critical |
-|----------|---------|----------|
+| ---------- | --------- | ---------- |
 | CPU | Sustained > 70% | Sustained > 90% |
 | Memory | `MemAvailable` < 20% | `MemAvailable` < 10% |
 | Disk | > 80% used | > 90% used |
@@ -1044,7 +1044,7 @@ cat /proc/diskstats
 ```
 
 | Field | Meaning |
-|-------|---------|
+| ------- | --------- |
 | Reads completed | Total read operations |
 | Reads merged | Adjacent reads combined by scheduler |
 | Sectors read | Total sectors read (512 bytes each) |
@@ -1055,7 +1055,7 @@ cat /proc/diskstats
 ## /proc/diskstats Explained (cont.)
 
 | Field | Meaning |
-|-------|---------|
+| ------- | --------- |
 | Writes completed | Total write operations |
 | Writes merged | Adjacent writes combined |
 | I/Os in progress | Currently active I/O operations |

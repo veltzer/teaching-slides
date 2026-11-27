@@ -195,7 +195,7 @@ ls !(*.txt)               # all files except .txt files
 ## Globbing vs Regular Expressions
 
 | Glob | Regex | Meaning |
-|------|-------|---------|
+| ------ | ------- | --------- |
 | `*` | `.*` | Any characters |
 | `?` | `.` | One character |
 | `[abc]` | `[abc]` | Character class |

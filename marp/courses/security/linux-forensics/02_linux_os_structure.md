@@ -238,16 +238,16 @@ systemd-analyze blame | head -10
 
 ## `systemd` Unit Types
 
-| Unit Type | Extension   | Purpose                        |
-|-----------|------------|--------------------------------|
-| Service   | `.service` | Daemon or one-shot process     |
-| Socket    | `.socket`  | IPC or network socket          |
-| Timer     | `.timer`   | Scheduled activation           |
-| Mount     | `.mount`   | Filesystem mount point         |
-| Target    | `.target`  | Grouping of units              |
-| Path      | `.path`    | File system path monitoring    |
-| Device    | `.device`  | Kernel device                  |
-| Slice     | `.slice`   | Resource management group      |
+| Unit Type | Extension  | Purpose                     |
+| --------- | ---------- | --------------------------- |
+| Service   | `.service` | Daemon or one-shot process  |
+| Socket    | `.socket`  | IPC or network socket       |
+| Timer     | `.timer`   | Scheduled activation        |
+| Mount     | `.mount`   | Filesystem mount point      |
+| Target    | `.target`  | Grouping of units           |
+| Path      | `.path`    | File system path monitoring |
+| Device    | `.device`  | Kernel device               |
+| Slice     | `.slice`   | Resource management group   |
 
 ---
 
@@ -483,13 +483,13 @@ sudo grep "sshd" /var/log/auth.log | grep "Failed"
 
 ### Common Shells
 
-| Shell    | Path              | Config Files                |
-|----------|------------------|-----------------------------|
-| `bash`   | `/bin/bash`      | `.bashrc`, `.bash_profile`  |
-| `zsh`    | `/bin/zsh`       | `.zshrc`, `.zprofile`       |
-| `sh`     | `/bin/sh`        | `.profile`                  |
-| `fish`   | `/usr/bin/fish`  | `config.fish`               |
-| `dash`   | `/bin/dash`      | (minimal, no history)       |
+| Shell  | Path            | Config Files               |
+| ------ | --------------- | -------------------------- |
+| `bash` | `/bin/bash`     | `.bashrc`, `.bash_profile` |
+| `zsh`  | `/bin/zsh`      | `.zshrc`, `.zprofile`      |
+| `sh`   | `/bin/sh`       | `.profile`                 |
+| `fish` | `/usr/bin/fish` | `config.fish`              |
+| `dash` | `/bin/dash`     | (minimal, no history)      |
 
 ```bash
 # Check default shell for a user
@@ -793,16 +793,16 @@ ss -tlnp
 
 ## Filesystem Types in Linux
 
-| Filesystem | Description                    | Forensic Note             |
-|-----------|--------------------------------|---------------------------|
-| `ext4`    | Default Linux filesystem       | Journal aids recovery     |
-| `xfs`     | High-performance (RHEL default)| Journal, good for large files|
-| `btrfs`   | Copy-on-write filesystem       | Snapshots, checksums      |
-| `zfs`     | Advanced filesystem            | Snapshots, integrity      |
-| `tmpfs`   | RAM-based filesystem           | Volatile, lost on reboot  |
-| `vfat`    | FAT32 (EFI, USB drives)       | No permissions, simple    |
-| `ntfs`    | Windows filesystem             | NTFS-3G driver on Linux   |
-| `squashfs`| Read-only compressed           | Used in snap packages     |
+| Filesystem | Description                     | Forensic Note                 |
+| ---------- | ------------------------------- | ----------------------------- |
+| `ext4`     | Default Linux filesystem        | Journal aids recovery         |
+| `xfs`      | High-performance (RHEL default) | Journal, good for large files |
+| `btrfs`    | Copy-on-write filesystem        | Snapshots, checksums          |
+| `zfs`      | Advanced filesystem             | Snapshots, integrity          |
+| `tmpfs`    | RAM-based filesystem            | Volatile, lost on reboot      |
+| `vfat`     | FAT32 (EFI, USB drives)         | No permissions, simple        |
+| `ntfs`     | Windows filesystem              | NTFS-3G driver on Linux       |
+| `squashfs` | Read-only compressed            | Used in snap packages         |
 
 ---
 

@@ -264,7 +264,7 @@ void *               8 bytes
 The `<stdint.h>` header provides types with guaranteed sizes:
 
 | Type | Width | Signed Range |
-|------|-------|-------------|
+| ------ | ------- | ------------- |
 | `int8_t` | 8 bits | -128 to 127 |
 | `int16_t` | 16 bits | -32768 to 32767 |
 | `int32_t` | 32 bits | -2^31 to 2^31-1 |
@@ -275,7 +275,7 @@ The `<stdint.h>` header provides types with guaranteed sizes:
 ## Fixed-Width Integer Types (C99) (cont.)
 
 | Type | Width | Signed Range |
-|------|-------|-------------|
+| ------ | ------- | ------------- |
 | `uint8_t` | 8 bits | 0 to 255 |
 | `uint16_t` | 16 bits | 0 to 65535 |
 | `uint32_t` | 32 bits | 0 to 2^32-1 |
@@ -423,7 +423,7 @@ int main(void) {
 ## Format Specifiers Reference Table
 
 | Type | printf | scanf | Notes |
-|------|--------|-------|-------|
+| ------ | -------- | ------- | ------- |
 | `char` | `%c` | `%c` | Single character |
 | `int` | `%d` or `%i` | `%d` or `%i` | Signed decimal |
 | `unsigned` | `%u` | `%u` | Unsigned decimal |
@@ -436,7 +436,7 @@ int main(void) {
 ## Format Specifiers Reference Table (cont.)
 
 | Type | printf | scanf | Notes |
-|------|--------|-------|-------|
+| ------ | -------- | ------- | ------- |
 | `float` | `%f` | `%f` | 6 decimal places |
 | `double` | `%f` or `%lf` | `%lf` | scanf needs `%lf` |
 | `size_t` | `%zu` | `%zu` | Unsigned size |

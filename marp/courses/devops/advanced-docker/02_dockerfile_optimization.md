@@ -293,15 +293,15 @@ docker build \
 
 ## Minimal Base Images Comparison
 
-| Base Image            | Size       | Packages  | Use Case              |
-|-----------------------|------------|-----------|------------------------|
-| `ubuntu:22.04`        | ~77MB      | Many      | General purpose        |
-| `debian:bookworm-slim`| ~74MB      | Medium    | Debian-based apps      |
-| `alpine:3.19`         | ~7MB       | Minimal   | Small footprint        |
-| `distroless`          | ~2-20MB    | None      | Minimal runtime        |
-| `scratch`             | 0MB        | Nothing   | Static binaries only   |
-| `busybox`             | ~1.2MB     | Basic CLI | Lightweight tooling    |
-| `chainguard/static`   | ~2MB       | None      | Hardened distroless     |
+| Base Image             | Size    | Packages  | Use Case             |
+| ---------------------- | ------- | --------- | -------------------- |
+| `ubuntu:22.04`         | ~77MB   | Many      | General purpose      |
+| `debian:bookworm-slim` | ~74MB   | Medium    | Debian-based apps    |
+| `alpine:3.19`          | ~7MB    | Minimal   | Small footprint      |
+| `distroless`           | ~2-20MB | None      | Minimal runtime      |
+| `scratch`              | 0MB     | Nothing   | Static binaries only |
+| `busybox`              | ~1.2MB  | Basic CLI | Lightweight tooling  |
+| `chainguard/static`    | ~2MB    | None      | Hardened distroless  |
 
 ---
 

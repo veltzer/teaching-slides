@@ -389,7 +389,7 @@ int main() {
 ## TCP vs UDP Comparison
 
 | Feature | TCP | UDP |
-|---------|-----|-----|
+| --------- | ----- | ----- |
 | **Connection** | Connection-oriented | Connectionless |
 | **Reliability** | Guaranteed delivery | Best effort |
 | **Ordering** | In-order delivery | No ordering |
@@ -603,7 +603,7 @@ void epoll_server(int server_fd) {
 ## I/O Multiplexing Comparison
 
 | Feature | select() | poll() | epoll() |
-|---------|----------|--------|---------|
+| --------- | ---------- | -------- | --------- |
 | **Max FDs** | 1024 (typical) | No limit | No limit |
 | **Performance** | O(n) | O(n) | O(1) |
 | **Portability** | POSIX | POSIX | Linux only |
@@ -771,7 +771,7 @@ int bind_to_vrf(int sockfd, const char *vrf_name) {
 ## Network Namespaces vs VRF
 
 | Feature | Network Namespaces | VRF |
-|---------|-------------------|-----|
+| --------- | ------------------- | ----- |
 | **Isolation** | Complete | Routing only |
 | **Resource Usage** | Higher | Lower |
 | **Management** | Complex | Simple |

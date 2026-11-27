@@ -33,7 +33,7 @@ audience:
 ## XSS Types
 
 | Type | Storage | Trigger | Severity |
-|------|---------|---------|----------|
+| ------ | --------- | --------- | ---------- |
 | **Reflected** | Not stored | URL parameter | Medium-High |
 | **Stored** | Database | Page load | High-Critical |
 | **DOM-based** | Client-side | URL/client input | Medium-High |

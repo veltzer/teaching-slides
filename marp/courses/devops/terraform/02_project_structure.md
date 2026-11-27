@@ -27,7 +27,7 @@ audience:
 ## Terraform File Types
 
 | Extension | Purpose |
-|-----------|---------|
+| ----------- | --------- |
 | `.tf` | Main configuration files |
 | `.tfvars` | Variable value definitions |
 | `.tfstate` | State file (auto-generated) |

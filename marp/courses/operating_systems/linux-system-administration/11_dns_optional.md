@@ -54,7 +54,7 @@ dig example.com +stats
 ## DNS Record Types
 
 | Type | Purpose | Example |
-|------|---------|---------|
+| ------ | --------- | --------- |
 | A | IPv4 address | `www  A  93.184.216.34` |
 | AAAA | IPv6 address | `www  AAAA  2001:db8::1` |
 | CNAME | Alias | `blog  CNAME  www` |

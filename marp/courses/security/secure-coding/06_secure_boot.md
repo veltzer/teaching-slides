@@ -102,7 +102,7 @@ audience:
 ## Secure Boot vs Measured Boot
 
 | | Secure Boot | Measured Boot |
-|---|---|---|
+| --- | --- | --- |
 | Action | refuse bad stages | record every stage |
 | Decision point | at boot, locally | later, by a verifier |
 | Backing | firmware key DB | `TPM` PCRs |

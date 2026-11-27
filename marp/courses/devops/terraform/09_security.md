@@ -306,7 +306,7 @@ Terraform Cloud Organization
 ## Terraform Cloud Permission Levels
 
 | Permission | Capabilities |
-|-----------|-------------|
+| ----------- | ------------- |
 | Read | View state, view runs |
 | Plan | Queue plans (no apply) |
 | Write | Queue plans and apply |
@@ -425,7 +425,7 @@ resource "aws_iam_role" "github_actions" {
 ## Security Scanning Tools
 
 | Tool | Purpose |
-|------|---------|
+| ------ | --------- |
 | `tfsec` | Static analysis for security issues |
 | `checkov` | Policy-as-code scanning |
 | `terrascan` | Compliance scanning |

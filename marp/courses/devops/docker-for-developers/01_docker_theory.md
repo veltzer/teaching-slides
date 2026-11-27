@@ -46,7 +46,7 @@ audience:
 ## Common Docker Commands
 
 | Category | Command | Purpose |
-|----------|---------|----------|
+| ---------- | --------- | ---------- |
 | Images | `docker build` | Build an image |
 | | `docker pull` | Download image |
 | | `docker push` | Upload image |
@@ -73,7 +73,7 @@ audience:
 ## Resource Management
 
 | Resource | Description | Command |
-|----------|-------------|---------|
+| ---------- | ------------- | --------- |
 | CPU | Limit CPU usage | `--cpus`, `--cpu-shares` |
 | Memory | Set memory limits | `--memory`, `--memory-swap` |
 | Storage | Manage disk space | `--storage-opt` |
@@ -102,7 +102,7 @@ audience:
 ## Development Best Practices
 
 | Area | Practice | Benefit |
-|------|----------|---------|
+| ------ | ---------- | --------- |
 | Images | Use official base images | Security, reliability |
 | Layers | Minimize layers | Smaller images |
 | Cache | Optimize build cache | Faster builds |

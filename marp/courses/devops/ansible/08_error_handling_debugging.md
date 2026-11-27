@@ -450,7 +450,7 @@ use_default_rules: true
 ## Common ansible-lint Rules
 
 | Rule | Description |
-|------|-------------|
+| ------ | ------------- |
 | `yaml[truthy]` | Use `true`/`false` not `yes`/`no` |
 | `name[missing]` | All tasks should have names |
 | `command-instead-of-module` | Use specific module instead of `command` |

@@ -269,7 +269,7 @@ public class DebugLogger {
 ## Testing Best Practices
 
 | Category | Practice | Benefit |
-|----------|----------|---------|
+| ---------- | ---------- | --------- |
 | Unit Tests | Test one thing | Clear failures |
 | Mock Dependencies | Isolate tests | Reliable tests |
 | UI Tests | Test user flows | Catch regressions |

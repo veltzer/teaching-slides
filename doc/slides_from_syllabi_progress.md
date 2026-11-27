@@ -38,7 +38,7 @@ Tracks the work of writing slide materials for syllabi in `../teaching-syllabi/`
 ## Summary
 
 | Domain | Existing | Missing | Total |
-|--------|----------|---------|-------|
+| -------- | ---------- | --------- | ------- |
 | ai | 3 | 13 | 16 |
 | architecting | 8 | 18 | 26 |
 | big_data | 0 | 16 | 16 |

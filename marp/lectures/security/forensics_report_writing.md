@@ -68,7 +68,7 @@ audience:
 ## Kinds of Reports
 
 | Kind | Purpose | Typical reader |
-|------|---------|----------------|
+| ------ | --------- | ---------------- |
 | Preliminary / interim | Early findings, explicitly provisional | Case lead, management |
 | Full examination report | Complete record of the examination | Investigators, counsel |
 | Expert witness report | Opinion evidence for a court | Judge, jury, opposing expert |
@@ -179,7 +179,7 @@ audience:
 ## Document Control Table
 
 | Version | Date | Author | Change | Status |
-|---------|------|--------|--------|--------|
+| --------- | ------ | -------- | -------- | -------- |
 | 0.1 | 2026-03-02 | J. Doe | First draft | Draft |
 | 0.2 | 2026-03-05 | J. Doe | Peer review comments addressed | Draft |
 | 1.0 | 2026-03-07 | J. Doe | Approved by A. Smith | Final |
@@ -243,7 +243,7 @@ proposition that the files were copied to the USB device.
 ## Evidence Received: The Exhibit List
 
 | Exhibit | Description | Serial / ID | Received | Hash (SHA-256) |
-|---------|-------------|-------------|----------|----------------|
+| --------- | ------------- | ------------- | ---------- | ---------------- |
 | JD/1 | Laptop, Dell Latitude 7440 | `5CG2341XYZ` | 2026-03-01 | n/a (device) |
 | JD/1/A | Image of internal SSD of JD/1 | image file | 2026-03-02 | `9f2c…e41a` |
 | JD/2 | USB flash drive, 64 GB | `AA0123456` | 2026-03-03 | `41b7…0cd9` |
@@ -272,7 +272,7 @@ proposition that the files were copied to the USB device.
 ## Chain of Custody: What to Record
 
 | Exhibit | Date / time (UTC) | Released by | Received by | Purpose | Seal |
-|---------|-------------------|-------------|-------------|---------|------|
+| --------- | ------------------- | ------------- | ------------- | --------- | ------ |
 | JD/1 | 2026-03-01 09:14 | P. Green (client) | J. Doe | Examination | S-0412 intact |
 | JD/1 | 2026-03-01 09:40 | J. Doe | Evidence store | Storage | S-0412 intact |
 | JD/1 | 2026-03-02 08:05 | Evidence store | J. Doe | Imaging | S-0412 broken, resealed S-0419 |
@@ -296,7 +296,7 @@ proposition that the files were copied to the USB device.
 ## Tools Table
 
 | Tool | Version | Purpose | Validation |
-|------|---------|---------|------------|
+| ------ | --------- | --------- | ------------ |
 | Imaging tool A | 4.7.1 | Acquisition of JD/1 | Lab validation VR-2025-11 |
 | Analysis suite B | 2.3.0 | Artifact parsing | Lab validation VR-2026-02 |
 | Hash utility C | 9.4 | Integrity verification | Vendor test set |
@@ -348,7 +348,7 @@ date range in question.
 ## Timeline Example
 
 | Time (UTC) | Event | Exhibit | Source |
-|------------|-------|---------|--------|
+| ------------ | ------- | --------- | -------- |
 | 2026-02-14 21:02:10 | User `jsmith` logs on | JD/1/A | Finding 2 |
 | 2026-02-14 21:07:32 | USB device AA0123456 connected | JD/1/A | Finding 3 |
 | 2026-02-14 21:08–21:19 | 1,284 files in `Customers` accessed | JD/1/A | Finding 4 |
@@ -422,7 +422,7 @@ date range in question.
 ## Language: Weak and Strong Phrasing
 
 | Avoid | Prefer |
-|-------|--------|
+| ------- | -------- |
 | The suspect deleted the files | The files were deleted while account `jsmith` was logged on |
 | It is obvious that data was stolen | The findings are consistent with data being copied to JD/2 |
 | The hacker used malware | An executable not part of the OS was found; see Finding 6 |
@@ -445,7 +445,7 @@ date range in question.
 ## A Verbal Scale of Support
 
 | Verbal expression | Meaning |
-|-------------------|---------|
+| ------------------- | --------- |
 | No support | Findings equally likely under both propositions |
 | Weak support | Findings slightly more likely under one proposition |
 | Moderate support | Findings clearly more likely under one proposition |

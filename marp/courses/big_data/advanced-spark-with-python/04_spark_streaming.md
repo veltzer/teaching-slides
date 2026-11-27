@@ -582,7 +582,7 @@ query.awaitTermination()
 ## Trigger Modes Comparison
 
 | Trigger | Latency | Throughput | Use Case |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | processingTime="0" | Lowest micro-batch | Lower | Near real-time |
 | processingTime="30s" | ~30 seconds | Higher | Standard ETL |
 | processingTime="5m" | ~5 minutes | Highest | Batch-like |
@@ -926,7 +926,7 @@ def update_session_state(key, events, state):
 ## Output Modes Comparison
 
 | Output Mode | Description | Supported Ops | Use Case |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Append | New rows only | No aggregations, or watermarked agg | Log shipping |
 | Update | Changed rows only | All aggregations | Dashboard metrics |
 | Complete | Full result table | Aggregations only | Small result tables |
@@ -1048,7 +1048,7 @@ spark.conf.set("spark.streaming.backpressure.enabled", "true")
 ## Common Streaming Anti-Patterns
 
 | Anti-Pattern | Problem | Solution |
-|---|---|---|
+| --- | --- | --- |
 | No watermark on join | Unbounded state growth | Set watermark on both streams |
 | Complete mode + large state | OOM on driver | Use update or append mode |
 | foreachBatch with side effects | Duplicates on retry | Make writes idempotent |
@@ -1058,7 +1058,7 @@ spark.conf.set("spark.streaming.backpressure.enabled", "true")
 ## Common Streaming Anti-Patterns (cont.)
 
 | Anti-Pattern | Problem | Solution |
-|---|---|---|
+| --- | --- | --- |
 | No checkpoint | Lost progress on restart | Always set checkpointLocation |
 | Tiny trigger intervals | High overhead | Use processingTime >= 10s |
 | collect() in foreachBatch | Driver OOM | Write directly from DataFrame |

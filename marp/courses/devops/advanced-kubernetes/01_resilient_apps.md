@@ -107,7 +107,7 @@ selector:
 ## `ReplicaSet` vs `Deployment`
 
 | Feature | `ReplicaSet` | `Deployment` |
-|---------|-------------|-------------|
+| --------- | ------------- | ------------- |
 | Pod management | Yes | Yes (via `ReplicaSet`) |
 | Rolling updates | No | Yes |
 | Rollback | No | Yes |
@@ -344,7 +344,7 @@ spec:
 ```
 
 | | Requests | Limits |
-|---|----------|--------|
+| --- | ---------- | -------- |
 | Purpose | Scheduling guarantee | Maximum allowed |
 | CPU exceeded | N/A | Throttled |
 | Memory exceeded | N/A | OOMKilled |
@@ -390,7 +390,7 @@ Note: Mi (Mebibyte) ≠ M (Megabyte)
 `Kubernetes` assigns Quality of Service classes automatically:
 
 | `QoS` Class | Condition | Eviction Priority |
-|-----------|-----------|-------------------|
+| ----------- | ----------- | ------------------- |
 | **Guaranteed** | requests == limits for all containers | Last (lowest) |
 | **Burstable** | requests < limits for at least one | Middle |
 | **BestEffort** | No requests or limits set | First (highest) |

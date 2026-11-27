@@ -40,7 +40,7 @@ audience:
 ## HTTP Methods
 
 | Method | Purpose | Idempotent? | Body? |
-|--------|---------|-------------|-------|
+| -------- | --------- | ------------- | ------- |
 | GET | Retrieve a resource | Yes | No |
 | POST | Submit data / create resource | No | Yes |
 | PUT | Replace a resource entirely | Yes | Yes |
@@ -54,7 +54,7 @@ audience:
 ## HTTP Status Codes
 
 | Range | Category | Common Examples |
-|-------|----------|-----------------|
+| ------- | ---------- | ----------------- |
 | 1xx | Informational | 101 Switching Protocols |
 | 2xx | Success | 200 OK, 201 Created, 204 No Content |
 | 3xx | Redirection | 301 Moved Permanently, 304 Not Modified |
@@ -92,7 +92,7 @@ $ curl -v http://example.com/
 ## Important HTTP Headers
 
 | Header | Purpose | Example |
-|--------|---------|---------|
+| -------- | --------- | --------- |
 | Content-Type | Body format | `application/json` |
 | Authorization | Authentication | `Bearer eyJhbG...` |
 | Cache-Control | Caching rules | `max-age=3600, public` |
@@ -208,14 +208,14 @@ $ curl -v http://example.com/
 
 ## Version Comparison
 
-| Feature           | HTTP/1.0 | HTTP/1.1 | HTTP/2   | HTTP/3   |
-|-------------------|----------|----------|----------|----------|
-| Connections       | One-off  | Persistent | Multiplexed | Multiplexed |
-| Compression       | No       | Yes      | HPACK    | QPACK    |
-| Multiplexing      | No       | Limited  | Yes      | Yes      |
-| Server Push       | No       | No       | Yes      | Yes      |
-| HOL Blocking      | Yes      | Yes      | Reduced  | Eliminated |
-| Transport Protocol| TCP      | TCP      | TCP      | UDP (QUIC) |
+| Feature            | HTTP/1.0 | HTTP/1.1   | HTTP/2      | HTTP/3      |
+| ------------------ | -------- | ---------- | ----------- | ----------- |
+| Connections        | One-off  | Persistent | Multiplexed | Multiplexed |
+| Compression        | No       | Yes        | HPACK       | QPACK       |
+| Multiplexing       | No       | Limited    | Yes         | Yes         |
+| Server Push        | No       | No         | Yes         | Yes         |
+| HOL Blocking       | Yes      | Yes        | Reduced     | Eliminated  |
+| Transport Protocol | TCP      | TCP        | TCP         | UDP (QUIC)  |
 
 ---
 

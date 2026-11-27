@@ -223,13 +223,13 @@ def login_with_backoff():
 
 ## Real-World ATO Incidents
 
-| Incident               | Year | Details                                 |
-|------------------------|------|-----------------------------------------|
-| Dunkin' Donuts         | 2019 | Credential stuffing, rewards points stolen|
-| Zoom                   | 2020 | 500K accounts sold on dark web ($0.002 each)|
-| The North Face         | 2020 | Credential stuffing on customer accounts |
-| PayPal                 | 2022 | 35,000 accounts breached via stuffing    |
-| 23andMe                | 2023 | 6.9M profiles accessed via credential stuffing|
+| Incident       | Year | Details                                        |
+| -------------- | ---- | ---------------------------------------------- |
+| Dunkin' Donuts | 2019 | Credential stuffing, rewards points stolen     |
+| Zoom           | 2020 | 500K accounts sold on dark web ($0.002 each)   |
+| The North Face | 2020 | Credential stuffing on customer accounts       |
+| PayPal         | 2022 | 35,000 accounts breached via stuffing          |
+| 23andMe        | 2023 | 6.9M profiles accessed via credential stuffing |
 
 ---
 

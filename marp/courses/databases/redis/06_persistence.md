@@ -596,7 +596,7 @@ Monitor:
 Decision matrix based on requirements:
 
 | Requirement | RDB | AOF (everysec) | AOF (always) | Hybrid |
-|-------------|-----|----------------|--------------|--------|
+| ------------- | ----- | ---------------- | -------------- | -------- |
 | Performance | ✓✓✓ | ✓✓ | ✗ | ✓✓ |
 | Durability | ✗ | ✓✓ | ✓✓✓ | ✓✓ |
 | Recovery speed | ✓✓✓ | ✗ | ✗ | ✓✓ |

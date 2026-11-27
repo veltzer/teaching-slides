@@ -183,7 +183,7 @@ public:
 ## Singleton vs Static Class
 
 | Aspect | Singleton | Static Class |
-|--------|-----------|-------------|
+| -------- | ----------- | ------------- |
 | Polymorphism | Yes | No |
 | Lazy initialization | Yes | No |
 | Interface implementation | Yes | No |

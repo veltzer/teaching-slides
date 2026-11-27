@@ -428,10 +428,10 @@ set_tests_properties(custom_tests PROPERTIES
 - Supports multiple platforms, compilers, and configurations
 - Available at `https://my.cdash.org` or self-hosted
 
-| Build Name    | Configure | Build | Test | Cover |
-|---------------|-----------|-------|------|-------|
-| Linux-GCC-13  |    OK     |  OK   | 98%  |  85%  |
-| macOS-Clang   |    OK     | 1 err | 95%  |  82%  |
+| Build Name   | Configure | Build | Test | Cover |
+| ------------ | --------- | ----- | ---- | ----- |
+| Linux-GCC-13 | OK        | OK    | 98%  | 85%   |
+| macOS-Clang  | OK        | 1 err | 95%  | 82%   |
 
 ---
 

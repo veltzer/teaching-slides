@@ -44,7 +44,7 @@ usermod -aG wireshark alice
 ## Wireshark vs tcpdump
 
 | Feature | `Wireshark` | `tcpdump` |
-|---------|-------------|-----------|
+| --------- | ------------- | ----------- |
 | Interface | GUI | CLI |
 | Protocol decoding | Deep, hundreds of protocols | Basic |
 | Filtering | Display + capture filters | Capture filters only |
@@ -438,7 +438,7 @@ expert.severity == note
 Common expert info messages:
 
 | Severity | Message | Meaning |
-|----------|---------|---------|
+| ---------- | --------- | --------- |
 | Error | `Malformed Packet` | Protocol parsing failed |
 | Warning | `TCP Retransmission` | Packet was resent |
 | Warning | `TCP Zero Window` | Receiver buffer full |

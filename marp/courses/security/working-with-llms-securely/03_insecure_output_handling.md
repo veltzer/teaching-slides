@@ -41,14 +41,14 @@ audience:
 
 ## Attack Vectors Through `LLM` Output
 
-| Downstream Target | Potential Attack        |
-|--------------------|------------------------|
-| Web browser        | `XSS` (Cross-Site Scripting) |
-| Database query     | `SQL` Injection         |
-| Shell command      | Command Injection       |
-| `API` calls        | `SSRF`, parameter injection |
-| File system        | Path traversal          |
-| Email system       | Header injection        |
+| Downstream Target | Potential Attack             |
+| ----------------- | ---------------------------- |
+| Web browser       | `XSS` (Cross-Site Scripting) |
+| Database query    | `SQL` Injection              |
+| Shell command     | Command Injection            |
+| `API` calls       | `SSRF`, parameter injection  |
+| File system       | Path traversal               |
+| Email system      | Header injection             |
 
 ---
 

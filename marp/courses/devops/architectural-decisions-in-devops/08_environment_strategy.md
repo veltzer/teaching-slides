@@ -129,7 +129,7 @@ audience:
 ## Cost Growth Example
 
 | Environments | Monthly Compute | Storage | Networking | Total |
-|-------------|----------------|---------|------------|-------|
+| ------------- | ---------------- | --------- | ------------ | ------- |
 | 3 (Dev/Stg/Prod) | $3,000 | $500 | $200 | $3,700 |
 | 5 (+QA, UAT) | $5,000 | $900 | $350 | $6,250 |
 | 8 (+Perf, DR, Demo) | $8,000 | $1,500 | $600 | $10,100 |
@@ -551,7 +551,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 ## Data Strategies for Non-production
 
 | Strategy | Pros | Cons |
-|----------|------|------|
+| ---------- | ------ | ------ |
 | Production clone | Most realistic | PII risk, expensive |
 | Anonymized copy | Realistic + safe | Complex to maintain |
 | Synthetic data | Safe, customizable | May miss edge cases |
@@ -681,7 +681,7 @@ environments/
 ## Environment Strategy Decision Matrix
 
 | Factor | Fewer Environments | More Environments |
-|--------|-------------------|-------------------|
+| -------- | ------------------- | ------------------- |
 | Team size | Small (< 10) | Large (> 50) |
 | Deploy frequency | Weekly or less | Multiple times daily |
 | Regulation | Low | High (SOC2, HIPAA) |

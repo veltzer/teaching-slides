@@ -54,7 +54,7 @@ echo $?    # 0 (the previous echo succeeded!)
 ## Common Return Codes
 
 | Code | Meaning |
-|------|---------|
+| ------ | --------- |
 | 0 | Success |
 | 1 | General error |
 | 2 | Misuse of built-in command |

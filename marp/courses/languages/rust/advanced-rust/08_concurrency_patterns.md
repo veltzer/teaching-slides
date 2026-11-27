@@ -128,7 +128,7 @@ fn main() {
 ```
 
 | Channel Type      | Buffer   | Send Behavior            |
-|-------------------|----------|--------------------------|
+| ----------------- | -------- | ------------------------ |
 | `channel()`       | Infinite | Never blocks             |
 | `sync_channel(0)` | None     | Blocks until recv called |
 | `sync_channel(n)` | n items  | Blocks when full         |

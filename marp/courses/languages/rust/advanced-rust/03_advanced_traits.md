@@ -129,7 +129,7 @@ A trait object is a fat pointer: data pointer + vtable pointer (2 x usize).
 ## When to Use Which
 
 | Aspect | Generics (static) | Trait objects (dynamic) |
-|--------|-------------------|----------------------|
+| -------- | ------------------- | ---------------------- |
 | Performance | Inlined, zero-cost | Indirect call overhead |
 | Binary size | Larger (monomorphized) | Smaller (shared code) |
 | Heterogeneous collections | No | Yes |

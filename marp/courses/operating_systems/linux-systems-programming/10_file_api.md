@@ -264,15 +264,15 @@ void list_dir(const char *path) {
 
 `UNIX` file systems support several types of files, visible in the output of `ls -l`.
 
-| Type | Character | Description |
-| :--- | :--- | :--- |
-| Regular File | `-` | A file containing data. |
-| Directory | `d` | A file that holds other files. |
-| Symbolic Link | `l` | A pointer to another file. |
-| Block Device | `b` | A buffered device (e.g., hard disk). |
-| Character Device | `c` | An unbuffered device (e.g., terminal). |
-| Named Pipe (FIFO)| `p` | A file for inter-process communication. |
-| Socket | `s` | A file for network communication. |
+| Type              | Character | Description                             |
+| :---------------- | :-------- | :-------------------------------------- |
+| Regular File      | `-`       | A file containing data.                 |
+| Directory         | `d`       | A file that holds other files.          |
+| Symbolic Link     | `l`       | A pointer to another file.              |
+| Block Device      | `b`       | A buffered device (e.g., hard disk).    |
+| Character Device  | `c`       | An unbuffered device (e.g., terminal).  |
+| Named Pipe (FIFO) | `p`       | A file for inter-process communication. |
+| Socket            | `s`       | A file for network communication.       |
 
 ---
 

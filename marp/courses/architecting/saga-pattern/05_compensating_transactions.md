@@ -70,7 +70,7 @@ audience:
 ## Compensation Examples
 
 | Forward step | Compensation |
-|---|---|
+| --- | --- |
 | Reserve inventory | Release inventory |
 | Capture payment | Refund payment |
 | Schedule shipment | Cancel shipment |

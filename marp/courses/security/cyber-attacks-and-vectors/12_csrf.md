@@ -251,10 +251,10 @@ def transfer():
 ## SameSite Cookie Comparison
 
 | SameSite Value | Cross-site POST | Cross-site GET (top-level) | Same-site |
-|----------------|----------------|---------------------------|-----------|
-| `Strict`       | Blocked        | Blocked                   | Sent      |
-| `Lax`          | Blocked        | Sent                      | Sent      |
-| `None`         | Sent           | Sent                      | Sent      |
+| -------------- | --------------- | -------------------------- | --------- |
+| `Strict`       | Blocked         | Blocked                    | Sent      |
+| `Lax`          | Blocked         | Sent                       | Sent      |
+| `None`         | Sent            | Sent                       | Sent      |
 
 ```python
 # Flask: Set SameSite cookies
@@ -277,13 +277,13 @@ def login():
 
 ## Real-World CSRF Case Studies
 
-| Incident                | Year | Impact                                  |
-|------------------------|------|-----------------------------------------|
-| Netflix CSRF           | 2006 | Change account email, enable DVD ship   |
-| Gmail filter injection | 2007 | Create email forwarding rules silently   |
-| ING Direct             | 2008 | Transfer funds between accounts          |
-| YouTube CSRF           | 2008 | Subscribe, add favorites as victim       |
-| WordPress              | 2015 | Multiple CSRF vulnerabilities in admin   |
+| Incident               | Year | Impact                                 |
+| ---------------------- | ---- | -------------------------------------- |
+| Netflix CSRF           | 2006 | Change account email, enable DVD ship  |
+| Gmail filter injection | 2007 | Create email forwarding rules silently |
+| ING Direct             | 2008 | Transfer funds between accounts        |
+| YouTube CSRF           | 2008 | Subscribe, add favorites as victim     |
+| WordPress              | 2015 | Multiple CSRF vulnerabilities in admin |
 
 ---
 

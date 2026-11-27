@@ -196,7 +196,7 @@ public:
 ## Strategy vs Template Method
 
 | Aspect | Strategy | Template Method |
-|--------|----------|----------------|
+| -------- | ---------- | ---------------- |
 | Mechanism | Composition | Inheritance |
 | Varies | Entire algorithm | Steps in an algorithm |
 | Selection | Runtime | Compile time |

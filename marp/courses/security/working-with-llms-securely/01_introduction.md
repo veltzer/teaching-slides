@@ -54,25 +54,25 @@ Every input and output channel is a potential attack vector
 
 ## OWASP Top 10 for `LLM` Applications: The List
 
-| #     | Vulnerability                      |
-|-------|------------------------------------|
-| LLM01 | Prompt Injection                  |
-| LLM02 | Insecure Output Handling          |
-| LLM03 | Training Data Poisoning           |
-| LLM04 | Model Denial of Service           |
-| LLM05 | Supply Chain Vulnerabilities      |
+| #     | Vulnerability                |
+| ----- | ---------------------------- |
+| LLM01 | Prompt Injection             |
+| LLM02 | Insecure Output Handling     |
+| LLM03 | Training Data Poisoning      |
+| LLM04 | Model Denial of Service      |
+| LLM05 | Supply Chain Vulnerabilities |
 
 ---
 
 ## OWASP Top 10 for `LLM` Applications (cont.)
 
-| #     | Vulnerability                      |
-|-------|------------------------------------|
-| LLM06 | Sensitive Information Disclosure  |
-| LLM07 | Insecure Plugin Design            |
-| LLM08 | Excessive Agency                  |
-| LLM09 | Overreliance                      |
-| LLM10 | Model Theft                       |
+| #     | Vulnerability                    |
+| ----- | -------------------------------- |
+| LLM06 | Sensitive Information Disclosure |
+| LLM07 | Insecure Plugin Design           |
+| LLM08 | Excessive Agency                 |
+| LLM09 | Overreliance                     |
+| LLM10 | Model Theft                      |
 
 ---
 

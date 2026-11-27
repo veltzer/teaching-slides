@@ -115,7 +115,7 @@ struct socket {
 ## Socket States
 
 | State | Description |
-|-------|-------------|
+| ------- | ------------- |
 | SS_FREE | Not allocated |
 | SS_UNCONNECTED | Unconnected |
 | SS_CONNECTING | In process of connecting |
@@ -237,7 +237,7 @@ struct sk_buff {
 ## Socket API Functions
 
 | Function | Purpose |
-|----------|---------|
+| ---------- | --------- |
 | socket() | Create socket |
 | bind() | Bind to address |
 | listen() | Listen for connections |

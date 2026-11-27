@@ -596,7 +596,7 @@ Less Suitable:
 ## What is Asynchronous Programming?: Async vs. Multi-threading vs. Multi-processing (cont.)
 
 | Characteristic | Async | Threading | Multiprocessing |
-|---------------|-------|-----------|-----------------|
+| --------------- | ------- | ----------- | ----------------- |
 | Concurrency | Yes | Yes | Yes |
 | Parallelism | No | Limited by GIL | Yes |
 | Switching | Cooperative | Preemptive | Process-based |

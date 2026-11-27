@@ -53,13 +53,13 @@ audience:
 
 ## Choosing Your Approach
 
-| Goal                         | Use                       |
-| ---------------------------- | ------------------------- |
-| Learn the silicon            | bare metal                |
-| Ship an app fast             | HAL                       |
-| Tight ISR / radio timing     | LL or registers           |
-| Use the radio at all         | dual-core + ST middleware |
-| Shared mutable state         | HSEM                      |
+| Goal                     | Use                       |
+| ------------------------ | ------------------------- |
+| Learn the silicon        | bare metal                |
+| Ship an app fast         | HAL                       |
+| Tight ISR / radio timing | LL or registers           |
+| Use the radio at all     | dual-core + ST middleware |
+| Shared mutable state     | HSEM                      |
 
 ---
 

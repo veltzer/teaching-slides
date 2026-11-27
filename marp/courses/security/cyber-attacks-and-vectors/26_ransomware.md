@@ -114,15 +114,15 @@ audience:
 
 ## Delivery Methods
 
-| Method                   | Prevalence | Description                              |
-|--------------------------|------------|------------------------------------------|
-| Phishing emails          | ~45%       | Malicious attachments or links           |
-| RDP brute force          | ~25%       | Exposed RDP with weak credentials        |
-| Software vulnerabilities | ~15%       | Unpatched VPN, Exchange, etc.            |
-| Drive-by downloads       | ~5%        | Compromised websites serving exploits    |
-| USB/physical access      | ~3%        | Infected removable media                 |
-| Supply chain             | ~5%        | Compromised updates (Kaseya, MOVEit)    |
-| Insider threat           | ~2%        | Malicious or compromised employee        |
+| Method                   | Prevalence | Description                           |
+| ------------------------ | ---------- | ------------------------------------- |
+| Phishing emails          | ~45%       | Malicious attachments or links        |
+| RDP brute force          | ~25%       | Exposed RDP with weak credentials     |
+| Software vulnerabilities | ~15%       | Unpatched VPN, Exchange, etc.         |
+| Drive-by downloads       | ~5%        | Compromised websites serving exploits |
+| USB/physical access      | ~3%        | Infected removable media              |
+| Supply chain             | ~5%        | Compromised updates (Kaseya, MOVEit)  |
+| Insider threat           | ~2%        | Malicious or compromised employee     |
 
 ---
 
@@ -232,12 +232,12 @@ taskkill /F /IM outlook.exe
 
 ### WannaCry (2017)
 
-| Aspect          | Detail                                         |
-|-----------------|------------------------------------------------|
-| Propagation     | EternalBlue (SMBv1 exploit), self-spreading worm|
-| Encryption      | AES-128 + RSA-2048                             |
-| Ransom          | $300-$600 in Bitcoin                           |
-| Scale           | 230,000+ systems in 150 countries              |
+| Aspect      | Detail                                           |
+| ----------- | ------------------------------------------------ |
+| Propagation | EternalBlue (SMBv1 exploit), self-spreading worm |
+| Encryption  | AES-128 + RSA-2048                               |
+| Ransom      | $300-$600 in Bitcoin                             |
+| Scale       | 230,000+ systems in 150 countries                |
 
 ---
 
@@ -245,12 +245,12 @@ taskkill /F /IM outlook.exe
 
 ### WannaCry (2017)
 
-| Aspect          | Detail                                         |
-|-----------------|------------------------------------------------|
-| Notable victims | UK NHS (hospitals shut down), Renault, FedEx   |
-| Damage          | ~$4 billion estimated                          |
-| Kill switch     | Marcus Hutchins found unregistered domain      |
-| Attribution     | North Korea (Lazarus Group)                    |
+| Aspect          | Detail                                       |
+| --------------- | -------------------------------------------- |
+| Notable victims | UK NHS (hospitals shut down), Renault, FedEx |
+| Damage          | ~$4 billion estimated                        |
+| Kill switch     | Marcus Hutchins found unregistered domain    |
+| Attribution     | North Korea (Lazarus Group)                  |
 
 ---
 
@@ -407,15 +407,15 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 
 ### Detection Indicators
 
-| Indicator                            | Stage              | Tool                |
-|--------------------------------------|--------------------|---------------------|
-| Unusual login activity (RDP, VPN)    | Initial access     | SIEM                |
-| Mimikatz/credential dumping          | Privilege escalation| EDR                |
-| Mass SMB/WMI connections             | Lateral movement   | NDR                 |
-| Large data uploads to cloud storage  | Exfiltration       | DLP/NDR             |
-| Shadow copy deletion commands        | Pre-encryption     | EDR/Sysmon          |
-| Rapid file modifications/renames     | Encryption         | File integrity mon. |
-| Ransom note creation                 | Post-encryption    | EDR                 |
+| Indicator                           | Stage                | Tool                |
+| ----------------------------------- | -------------------- | ------------------- |
+| Unusual login activity (RDP, VPN)   | Initial access       | SIEM                |
+| Mimikatz/credential dumping         | Privilege escalation | EDR                 |
+| Mass SMB/WMI connections            | Lateral movement     | NDR                 |
+| Large data uploads to cloud storage | Exfiltration         | DLP/NDR             |
+| Shadow copy deletion commands       | Pre-encryption       | EDR/Sysmon          |
+| Rapid file modifications/renames    | Encryption           | File integrity mon. |
+| Ransom note creation                | Post-encryption      | EDR                 |
 
 ---
 
@@ -478,22 +478,22 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 
 ## To Pay or Not to Pay?
 
-| Factor                        | Pay                        | Don't Pay                  |
-|-------------------------------|----------------------------|----------------------------|
-| Backup availability           | No viable backups          | Clean backups available    |
-| Business impact               | Critical systems down      | Systems recoverable        |
-| Decryptor availability        | None (check nomoreransom.org)| Free decryptor exists   |
-| Legal considerations          | Varies by jurisdiction     | OFAC sanctions risk        |
+| Factor                 | Pay                           | Don't Pay               |
+| ---------------------- | ----------------------------- | ----------------------- |
+| Backup availability    | No viable backups             | Clean backups available |
+| Business impact        | Critical systems down         | Systems recoverable     |
+| Decryptor availability | None (check nomoreransom.org) | Free decryptor exists   |
+| Legal considerations   | Varies by jurisdiction        | OFAC sanctions risk     |
 
 ---
 
 ## To Pay or Not to Pay? (cont.)
 
-| Factor                        | Pay                        | Don't Pay                  |
-|-------------------------------|----------------------------|----------------------------|
-| Data exfiltration             | Sensitive data stolen      | No data exfiltration       |
-| Attacker reliability          | Reputable RaaS group       | Unknown/unreliable group   |
-| Insurance coverage            | Cyber insurance covers it  | No coverage                |
+| Factor               | Pay                       | Don't Pay                |
+| -------------------- | ------------------------- | ------------------------ |
+| Data exfiltration    | Sensitive data stolen     | No data exfiltration     |
+| Attacker reliability | Reputable RaaS group      | Unknown/unreliable group |
+| Insurance coverage   | Cyber insurance covers it | No coverage              |
 
 ---
 

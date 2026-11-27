@@ -296,7 +296,7 @@ public class BackupManager {
 ## Performance Optimization
 
 | Technique | Implementation | Benefit |
-|-----------|---------------|----------|
+| ----------- | --------------- | ---------- |
 | Indexing | `@ColumnInfo(index = true)` | Faster queries |
 | Lazy Loading | `@Relation` with lazy fetch | Memory efficient |
 | Batch Operations | `@Insert(onConflict = ...)` | Better throughput |

@@ -110,7 +110,7 @@ Modified:  username=admin'--&password=test
 ## Burp Suite - Intruder Attack Types
 
 | Attack Type | Use Case |
-|------------|----------|
+| ------------ | ---------- |
 | **Sniper** | One payload position at a time |
 | **Battering Ram** | Same payload in all positions |
 | **Pitchfork** | Different payload lists, parallel |
@@ -129,7 +129,7 @@ Payload list: rockyou.txt (top 1000)
 ## Burp Suite - Useful Extensions
 
 | Extension | Purpose |
-|-----------|---------|
+| ----------- | --------- |
 | **Autorize** | Access control testing |
 | **Logger++** | Enhanced logging |
 | **JSON Beautifier** | Format JSON responses |

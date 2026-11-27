@@ -87,7 +87,7 @@ The policy must be agreed by dev and SRE leadership in advance. Negotiating duri
 Burn rate = how fast you are spending the budget right now
 
 | Burn | Meaning | Action |
-|---|---|---|
+| --- | --- | --- |
 | 1× | spending at the SLO target rate | sustainable |
 | 2× | will burn 28-day budget in 14 days | investigate |
 | 10× | will burn 28-day budget in 2.8 days | page on-call |

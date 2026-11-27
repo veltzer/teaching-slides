@@ -44,7 +44,7 @@ def buggy_function(items):
 ## `pdb` Commands
 
 | Command | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `n` (next) | Execute next line |
 | `s` (step) | Step into function |
 | `c` (continue) | Continue to next breakpoint |
@@ -57,7 +57,7 @@ def buggy_function(items):
 ## `pdb` Commands (cont.)
 
 | Command | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `w` (where) | Show stack trace |
 | `q` (quit) | Quit debugger |
 | `b N` | Set breakpoint at line N |
@@ -527,7 +527,7 @@ pre-commit run --all-files
 ## `virtualenv` vs `venv`
 
 | Feature | `venv` | `virtualenv` |
-|---------|--------|-------------|
+| --------- | -------- | ------------- |
 | Built-in | Yes (3.3+) | No (pip install) |
 | Speed | Slower | Faster |
 | Python versions | Current only | Any version |
@@ -756,7 +756,7 @@ def process():
 ## Environment Management Summary
 
 | Tool | Purpose |
-|------|---------|
+| ------ | --------- |
 | `venv` | Built-in virtual environments |
 | `virtualenv` | Enhanced virtual environments |
 | `pyenv` | Python version management |

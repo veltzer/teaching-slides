@@ -24,7 +24,7 @@ audience:
 ## Docker Inspect Deep Dive
 
 | Section | Information | Usage |
-|---------|-------------|-------|
+| --------- | ------------- | ------- |
 | Config | Container configuration | Check environment, cmd |
 | State | Current state | Health, status, pid |
 | NetworkSettings | Network configuration | IP, ports, networks |
@@ -47,7 +47,7 @@ audience:
 ## Debug Commands Reference
 
 | Command | Purpose | Example |
-|---------|---------|---------|
+| --------- | --------- | --------- |
 | `docker logs` | View output | `docker logs -f container` |
 | `docker exec` | Run commands | `docker exec -it container bash` |
 | `docker inspect` | Check config | `docker inspect container` |
@@ -64,7 +64,7 @@ audience:
 ## Common Error Messages
 
 | Error | Possible Cause | Solution |
-|-------|---------------|----------|
+| ------- | --------------- | ---------- |
 | Cannot connect to daemon | Docker not running | Start Docker service |
 | Port already allocated | Port conflict | Change port mapping |
 | OOM Killed | Out of memory | Increase memory limit |
@@ -81,7 +81,7 @@ audience:
 ## Network Debugging
 
 | Tool | Purpose | Example |
-|------|---------|---------|
+| ------ | --------- | --------- |
 | ping | Connectivity | `docker exec container ping host` |
 | netstat | Port status | `docker exec container netstat -tulpn` |
 | curl | HTTP testing | `docker exec container curl service` |
@@ -98,7 +98,7 @@ audience:
 ## Performance Investigation
 
 | Area | Check | Tool |
-|------|-------|------|
+| ------ | ------- | ------ |
 | CPU | Usage patterns | top, stats |
 | Memory | Memory consumption | stats, inspect |
 | IO | Disk activity | iotop |
@@ -115,7 +115,7 @@ audience:
 ## Container Recovery
 
 | State | Action | Command |
-|-------|--------|---------|
+| ------- | -------- | --------- |
 | Stopped | Start | `docker start container` |
 | Unresponsive | Restart | `docker restart container` |
 | Broken | Remove/Recreate | `docker rm; docker run` |

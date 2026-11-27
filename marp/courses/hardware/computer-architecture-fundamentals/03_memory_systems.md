@@ -78,7 +78,7 @@ addresses near X soon.
 A well-designed cache can satisfy >95% of memory requests.
 
 | Memory Level | Typical Hit Rate |
-|-------------|-----------------|
+| ------------- | ----------------- |
 | L1 Cache | 95-97% |
 | L2 Cache | 80-95% of L1 misses |
 | L3 Cache | 70-90% of L2 misses |
@@ -136,7 +136,7 @@ DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 ## SRAM vs DRAM Comparison
 
 | Property | SRAM | DRAM |
-|----------|------|------|
+| ---------- | ------ | ------ |
 | Speed | ~1 ns | ~50-100 ns |
 | Density | Low (6T/bit) | High (1T+1C/bit) |
 | Cost/bit | ~10x more expensive | Cheap |
@@ -148,7 +148,7 @@ DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 ## SRAM vs DRAM Comparison (cont.)
 
 | Property | SRAM | DRAM |
-|----------|------|------|
+| ---------- | ------ | ------ |
 | Power (active) | Higher | Lower |
 | Typical size | KB to tens of MB | GB to hundreds of GB |
 | Use case | CPU caches | Main memory |
@@ -185,7 +185,7 @@ than activating a different row.
 ## DDR Memory Generations
 
 | Feature | DDR3 | DDR4 | DDR5 |
-|---------|------|------|------|
+| --------- | ------ | ------ | ------ |
 | Year | 2007 | 2014 | 2020 |
 | Data Rate | 800-2133 MT/s | 1600-3200 MT/s | 3200-8800 MT/s |
 | Voltage | 1.5V | 1.2V | 1.1V |
@@ -374,7 +374,7 @@ Each page table entry on x86-64 contains:
 ## Page Table Entry (PTE) Format: Comparison
 
 | Bit | Name | Meaning |
-|-----|------|---------|
+| ----- | ------ | --------- |
 | P (0) | Present | Page is in physical memory |
 | W (1) | Writable | Page is writable (else read-only) |
 | U (2) | User | Accessible from user mode (ring 3) |
@@ -418,7 +418,7 @@ Virtual Address ──> ┌───────┐ ──HIT──> Physical Ad
 **Typical TLB sizes:**
 
 | TLB Level | Entries | Page Size | Coverage |
-|-----------|---------|-----------|----------|
+| ----------- | --------- | ----------- | ---------- |
 | L1 ITLB | 64-128 | 4 KB | 256-512 KB |
 | L1 DTLB | 64-96 | 4 KB | 256-384 KB |
 | L2 STLB | 1536-2048 | 4 KB | 6-8 MB |
@@ -520,7 +520,7 @@ close(fd);
 ## mmap() Flags and Uses
 
 | Flag | Meaning |
-|------|---------|
+| ------ | --------- |
 | MAP_PRIVATE | Copy-on-write, changes are private |
 | MAP_SHARED | Changes are visible to other processes and written to file |
 | MAP_ANONYMOUS | No file backing, just allocate memory |
@@ -638,7 +638,7 @@ from optimizing away reads/writes or reordering them.
 ## Port-Mapped I/O vs Memory-Mapped I/O
 
 | Feature | Port-Mapped I/O (PMIO) | Memory-Mapped I/O (MMIO) |
-|---------|----------------------|------------------------|
+| --------- | ---------------------- | ------------------------ |
 | Instructions | Special (IN/OUT on x86) | Regular (MOV/LOAD/STORE) |
 | Address space | Separate I/O space | Shared with memory |
 | Address bits | 16-bit (65536 ports) | Full address space |
@@ -816,7 +816,7 @@ for (int i = 0; i < N; i++) {
 ## Summary: Memory Systems
 
 | Concept | Key Takeaway |
-|---------|-------------|
+| --------- | ------------- |
 | Memory hierarchy | Speed vs size vs cost tradeoff |
 | SRAM vs DRAM | 6T fast for cache, 1T+1C dense for main memory |
 | DDR generations | Each generation: higher bandwidth, lower voltage |
@@ -828,7 +828,7 @@ for (int i = 0; i < N; i++) {
 ## Summary: Memory Systems (cont.)
 
 | Concept | Key Takeaway |
-|---------|-------------|
+| --------- | ------------- |
 | TLB | Caches address translations, huge pages reduce misses |
 | mmap | Map files and devices into address space |
 | DMA | Devices transfer data without CPU involvement |

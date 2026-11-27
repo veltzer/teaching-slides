@@ -47,7 +47,7 @@ Example:
 `GPT` = **G**enerative **P**re-trained **T**ransformer
 
 | Model | Year | Params | Training Data | Key Innovation |
-|-------|------|--------|---------------|----------------|
+| ------- | ------ | -------- | --------------- | ---------------- |
 | `GPT-1` | 2018 | 117M | BookCorpus (5GB) | Pretrain + fine-tune |
 | `GPT-2` | 2019 | 1.5B | WebText (40GB) | Zero-shot capabilities |
 | `GPT-3` | 2020 | 175B | 570GB text | Few-shot learning |
@@ -374,7 +374,7 @@ response = client.chat.completions.create(
 ```
 
 | Parameter | Low Value | High Value |
-|-----------|-----------|------------|
+| ----------- | ----------- | ------------ |
 | `temperature` | Focused, deterministic | Creative, diverse |
 | `top_p` | Very selective | More options considered |
 | `frequency_penalty` | May repeat phrases | Avoids repetition |
@@ -455,7 +455,7 @@ Examples: `GPT-4o-mini`, `Claude 3.5 Haiku`, `Phi-3`
 ## Benchmarks — How We Measure LLMs
 
 | Benchmark | What It Measures | Top Score |
-|-----------|-----------------|-----------|
+| ----------- | ----------------- | ----------- |
 | `MMLU` | Multitask knowledge (57 subjects) | ~90% |
 | `HumanEval` | Code generation (`Python`) | ~95% |
 | `GSM8K` | Grade school math | ~97% |

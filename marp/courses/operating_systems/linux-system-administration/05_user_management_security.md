@@ -41,7 +41,7 @@ groupdel devs
 ## Important User Files
 
 | File | Purpose |
-|------|---------|
+| ------ | --------- |
 | `/etc/passwd` | User account info |
 | `/etc/shadow` | Encrypted passwords |
 | `/etc/group` | Group definitions |
@@ -265,7 +265,7 @@ Control flags:
 ## Common PAM Modules
 
 | Module | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `pam_unix.so` | Standard UNIX auth |
 | `pam_deny.so` | Always deny access |
 | `pam_permit.so` | Always allow access |
@@ -392,7 +392,7 @@ ssh-add -l
 ## SSH Key Types and Best Practices
 
 | Key Type | Recommended | Notes |
-|----------|------------|-------|
+| ---------- | ------------ | ------- |
 | `ed25519` | Yes | Modern, fast, secure |
 | `rsa` (4096) | Yes | Wide compatibility |
 | `ecdsa` | Acceptable | NIST curves |
@@ -1044,7 +1044,7 @@ getcap -r / 2>/dev/null
 Common capabilities:
 
 | Capability | Purpose |
-|-----------|---------|
+| ----------- | --------- |
 | `CAP_NET_BIND_SERVICE` | Bind to ports below 1024 |
 | `CAP_NET_RAW` | Use raw sockets (`ping`) |
 | `CAP_SYS_PTRACE` | Trace processes (`strace`) |
@@ -1147,7 +1147,7 @@ ausearch -m avc -ts recent
 The hash prefix in `/etc/shadow` identifies the algorithm used.
 
 | Prefix | Algorithm | Strength |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | `$1$` | MD5 | Weak, avoid |
 | `$5$` | SHA-256 | Acceptable |
 | `$6$` | SHA-512 | Recommended |
@@ -1476,7 +1476,7 @@ systemd-analyze security nginx.service
 Overview of major compliance frameworks relevant to `Linux` administrators:
 
 | Framework | Focus | Scope |
-|-----------|-------|-------|
+| ----------- | ------- | ------- |
 | CIS Benchmarks | System hardening | Per-OS checklists |
 | DISA STIG | Government security | DoD systems |
 | PCI-DSS | Payment card data | Cardholder environments |

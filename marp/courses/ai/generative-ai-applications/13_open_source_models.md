@@ -25,7 +25,7 @@ audience:
 ## Why Open Source Models?: Comparison
 
 | Advantage | Explanation |
-|-----------|-------------|
+| ----------- | ------------- |
 | **Privacy** | Data never leaves your infrastructure |
 | **Cost** | No per-token API fees (just compute) |
 | **Customization** | Full control over model behavior |

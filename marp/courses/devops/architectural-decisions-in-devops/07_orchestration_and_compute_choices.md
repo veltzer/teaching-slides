@@ -84,7 +84,7 @@ audience:
 ## Operational Complexity Comparison
 
 | Aspect | `Kubernetes` | Managed Containers | `Serverless` |
-|--------|-------------|-------------------|-------------|
+| -------- | ------------- | ------------------- | ------------- |
 | Cluster mgmt | You manage | Partial | None |
 | Networking | Complex | Simplified | Abstracted |
 | Scaling config | Manual rules | Auto-scale groups | Automatic |
@@ -198,7 +198,7 @@ NOT justified:
 ## Portability vs Convenience Matrix
 
 | Factor | Self-Managed K8s | Managed K8s | Managed Containers | Serverless |
-|--------|-----------------|------------|-------------------|------------|
+| -------- | ----------------- | ------------ | ------------------- | ------------ |
 | Portability | High | Medium | Low | Very Low |
 | Ops Burden | Very High | Medium | Low | Very Low |
 | Flexibility | Very High | High | Medium | Low |
@@ -347,7 +347,7 @@ spec:
 ## Multi-Tenancy Models
 
 | Model | Isolation | Cost | Complexity |
-|-------|-----------|------|------------|
+| ------- | ----------- | ------ | ------------ |
 | Cluster per tenant | Strongest | Highest | Low per cluster |
 | Namespace per tenant | Moderate | Medium | Medium |
 | Virtual clusters | Strong | Medium | High |
@@ -362,7 +362,7 @@ spec:
 ## Managed Kubernetes Services Comparison
 
 | Feature | `EKS` | `AKS` | `GKE` |
-|---------|------|------|------|
+| --------- | ------ | ------ | ------ |
 | Provider | AWS | Azure | Google |
 | Control plane cost | $0.10/hr | Free | Free (Standard) |
 | Auto-upgrade | Optional | Optional | Default |
@@ -443,7 +443,7 @@ Tools for self-management:
 ## Cold Start Impact by Runtime
 
 | Runtime | Typical Cold Start | Notes |
-|---------|-------------------|-------|
+| --------- | ------------------- | ------- |
 | `Python` | 200-500ms | Fast init, large packages slow it |
 | `Node.js` | 200-500ms | V8 startup is efficient |
 | `Java` | 1-10s | JVM startup is heavy |
@@ -568,7 +568,7 @@ Event-driven workloads align best with serverless economics.
 ## Serverless Limits to Know
 
 | Limit | `AWS Lambda` | `Azure Functions` | `Cloud Functions` |
-|-------|-------------|-------------------|-------------------|
+| ------- | ------------- | ------------------- | ------------------- |
 | Max timeout | 15 min | 10 min (consumption) | 60 min (v2) |
 | Max memory | 10 `GB` | 1.5 `GB` (consumption) | 32 `GB` |
 | Package size | 250 `MB` unzipped | No hard limit | 500 `MB` unzipped |
@@ -665,7 +665,7 @@ kubectl top pods -n production
 ## Observability Across Compute Models
 
 | Aspect | `Kubernetes` | Managed Containers | `Serverless` |
-|--------|-------------|-------------------|-------------|
+| -------- | ------------- | ------------------- | ------------- |
 | Metrics | `Prometheus`/`Grafana` | CloudWatch/Monitor | Built-in |
 | Logging | `EFK`/`Loki` stack | Provider logs | Provider logs |
 | Tracing | `Jaeger`/`Zipkin` | `X-Ray`/App Insights | `X-Ray`/built-in |

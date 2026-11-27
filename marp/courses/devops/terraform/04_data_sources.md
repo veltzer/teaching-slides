@@ -54,7 +54,7 @@ output "result" {
 ## Data Source vs Resource: Comparison
 
 | Feature | Resource | Data Source |
-|---------|----------|-------------|
+| --------- | ---------- | ------------- |
 | Block type | `resource` | `data` |
 | Action | Create/Update/Delete | Read only |
 | State | Tracked in state | Refreshed each run |
@@ -483,7 +483,7 @@ resource "aws_instance" "web" {
 ## Data Source Use Cases
 
 | Use Case | Data Source |
-|---------------------------|-----------------------------------|
+| --------------------------- | ----------------------------------- |
 | Find latest AMI | aws_ami |
 | Get current account info | aws_caller_identity |
 | List availability zones | aws_availability_zones |

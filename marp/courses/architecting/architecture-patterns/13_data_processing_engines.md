@@ -84,7 +84,7 @@ Current Landscape of Major Players:
 ## Core Characteristics Comparison
 
 | Engine | Processing Type | Best For | Language | Latency |
-|--------|----------------|----------|-----------|---------|
+| -------- | ---------------- | ---------- | ----------- | --------- |
 | Spark | Batch & Micro-batch | ML, ETL | Multiple | Seconds+ |
 | Trino | Interactive Query | Ad-hoc | SQL | Sub-second |
 | Flink | Stream & Batch | Real-time | Multiple | Milliseconds |
@@ -209,7 +209,7 @@ Primary Use Cases
 ## Performance Metrics
 
 | Engine | Query Speed | Scalability | Resource Usage |
-|--------|-------------|-------------|----------------|
+| -------- | ------------- | ------------- | ---------------- |
 | Spark | High | Excellent | High |
 | Trino | Very High | Good | Moderate |
 | Flink | Very High | Excellent | Moderate |
@@ -237,7 +237,7 @@ Primary Use Cases
 ## Cloud Integration Matrix
 
 | Engine | AWS | Azure | GCP |
-|--------|-----|-------|-----|
+| -------- | ----- | ------- | ----- |
 | Spark | EMR | HDInsight | Dataproc |
 | Trino | EMR/EC2 | AKS | GKE |
 | Flink | Kinesis | AKS | Dataflow |
@@ -249,7 +249,7 @@ Primary Use Cases
 ## Development Experience
 
 | Engine | IDEs | Languages | Testing |
-|--------|------|-----------|----------|
+| -------- | ------ | ----------- | ---------- |
 | Spark | Multiple | Many | Unit/Integration |
 | Trino | IntelliJ | SQL | Query |
 | Flink | Multiple | Many | Unit/Integration |
@@ -260,7 +260,7 @@ Primary Use Cases
 ## Security Features
 
 | Feature | Authentication | Authorization | Encryption |
-|---------|----------------|---------------|------------|
+| --------- | ---------------- | --------------- | ------------ |
 | Spark | Kerberos/LDAP | ACLs | TLS |
 | Trino | LDAP/OAuth | Role-based | TLS |
 | Flink | Kerberos | Role-based | TLS |

@@ -98,7 +98,7 @@ the system shall return the file within 30 seconds.
 - `SDD` differs on every axis that made waterfall fail
 
 | Waterfall spec | `SDD` spec |
-|---|---|
+| --- | --- |
 | Whole system | One feature |
 | Months before code | Hours before code |
 | Frozen after sign-off | Amended when reality wins |

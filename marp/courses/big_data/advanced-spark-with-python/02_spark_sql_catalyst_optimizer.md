@@ -663,7 +663,7 @@ print(f"Speedup (builtin vs python): {python_time/builtin_time:.1f}x")
 ## UDF Performance Comparison
 
 | UDF Type | Serialization | Vectorized | Optimizer | Relative Speed |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Python UDF | Row-by-row Python<->JVM | No | Opaque | 1x (baseline) |
 | Pandas UDF | Arrow batches | Yes | Opaque | 3-100x |
 | Built-in Functions | None (JVM native) | Yes | Full optimization | 10-1000x |
@@ -744,7 +744,7 @@ df_by_quarter = spark.read.jdbc(
 ## Join Strategy Comparison
 
 | Join Strategy | When Used | Shuffle? | Sort? | Best For |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Broadcast Hash | One side < 10MB | No | No | Small dim + large fact |
 | Sort Merge | Both sides large | Yes | Yes | Large table joins |
 | Shuffle Hash | Medium tables | Yes | No | Equi-joins, no sort needed |

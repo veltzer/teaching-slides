@@ -74,13 +74,13 @@ audience:
 - Goals: espionage, sabotage, geopolitical influence
 - Notable groups:
 
-| Group Name   | Attributed To | Known Operations                |
-|-------------|---------------|----------------------------------|
-| APT28       | Russia        | DNC hack, Olympic attacks        |
-| APT41       | China         | Supply chain, healthcare attacks |
-| Lazarus     | North Korea   | WannaCry, SWIFT bank heists      |
-| APT33       | Iran          | Energy sector targeting           |
-| Equation    | USA (NSA)     | Stuxnet, EternalBlue             |
+| Group Name | Attributed To | Known Operations                 |
+| ---------- | ------------- | -------------------------------- |
+| APT28      | Russia        | DNC hack, Olympic attacks        |
+| APT41      | China         | Supply chain, healthcare attacks |
+| Lazarus    | North Korea   | WannaCry, SWIFT bank heists      |
+| APT33      | Iran          | Energy sector targeting          |
+| Equation   | USA (NSA)     | Stuxnet, EternalBlue             |
 
 ---
 
@@ -109,14 +109,14 @@ audience:
 
 ## Motivation Deep Dive
 
-| Motivation | Actor Type  | Typical Attack            |
-|------------|-------------|---------------------------|
-| Financial  | Criminal    | Ransomware, card theft    |
-| Political  | Hacktivist  | DDoS, defacement, leaks   |
-| Espionage  | State APT   | Zero-day, supply chain    |
-| Challenge  | Script kid  | Website hacks, SQLi       |
-| Revenge    | Insider     | Data theft, sabotage      |
-| Warfare    | State APT   | Infrastructure attacks    |
+| Motivation | Actor Type | Typical Attack          |
+| ---------- | ---------- | ----------------------- |
+| Financial  | Criminal   | Ransomware, card theft  |
+| Political  | Hacktivist | DDoS, defacement, leaks |
+| Espionage  | State APT  | Zero-day, supply chain  |
+| Challenge  | Script kid | Website hacks, SQLi     |
+| Revenge    | Insider    | Data theft, sabotage    |
+| Warfare    | State APT  | Infrastructure attacks  |
 
 ---
 
@@ -211,25 +211,25 @@ dig example.com NS
 
 An alternative model to the Kill Chain that describes adversary behavior:
 
-| Tactic              | Description                              | Example Techniques         |
-|---------------------|------------------------------------------|----------------------------|
-| Initial Access      | Getting into the network                 | Phishing, exploit public app|
-| Execution           | Running malicious code                   | PowerShell, scripting       |
-| Persistence         | Maintaining access                       | Registry keys, scheduled tasks|
-| Privilege Escalation| Getting higher permissions               | Exploit sudo, token manipulation|
-| Defense Evasion     | Avoiding detection                       | Obfuscation, disabling logs |
+| Tactic               | Description                | Example Techniques               |
+| -------------------- | -------------------------- | -------------------------------- |
+| Initial Access       | Getting into the network   | Phishing, exploit public app     |
+| Execution            | Running malicious code     | PowerShell, scripting            |
+| Persistence          | Maintaining access         | Registry keys, scheduled tasks   |
+| Privilege Escalation | Getting higher permissions | Exploit sudo, token manipulation |
+| Defense Evasion      | Avoiding detection         | Obfuscation, disabling logs      |
 
 ---
 
 ## MITRE ATT&CK Framework (cont.)
 
-| Tactic              | Description                              | Example Techniques         |
-|---------------------|------------------------------------------|----------------------------|
-| Credential Access   | Stealing credentials                     | Keylogging, credential dumping|
-| Discovery           | Learning about the environment           | Network scanning, file enum  |
-| Lateral Movement    | Moving through the network               | Pass-the-hash, RDP           |
-| Collection          | Gathering target data                    | Screen capture, email collection|
-| Exfiltration        | Stealing data out                        | DNS tunneling, cloud storage |
+| Tactic            | Description                    | Example Techniques               |
+| ----------------- | ------------------------------ | -------------------------------- |
+| Credential Access | Stealing credentials           | Keylogging, credential dumping   |
+| Discovery         | Learning about the environment | Network scanning, file enum      |
+| Lateral Movement  | Moving through the network     | Pass-the-hash, RDP               |
+| Collection        | Gathering target data          | Screen capture, email collection |
+| Exfiltration      | Stealing data out              | DNS tunneling, cloud storage     |
 
 ---
 

@@ -34,7 +34,7 @@ audience:
 ## Containers vs Virtual Machines
 
 | Feature | Containers | Virtual Machines |
-|---------|-----------|-----------------|
+| --------- | ----------- | ----------------- |
 | Isolation | Process-level | Hardware-level |
 | Startup | Seconds | Minutes |
 | Size | MBs | GBs |

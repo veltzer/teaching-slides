@@ -41,7 +41,7 @@ A good SLI is the kind of metric the user themselves would write down.
 ## Common SLI categories
 
 | Service type | Typical SLIs |
-|---|---|
+| --- | --- |
 | Request/response | availability, latency |
 | Storage | durability, throughput |
 | Data pipeline | freshness, correctness |
@@ -85,7 +85,7 @@ The SLO target sets the **error budget**, which is what enables velocity.
 ## The "nines" cost
 
 | SLO | Annual downtime | Engineering effort |
-|---|---|---|
+| --- | --- | --- |
 | 90% | 36.5 days | trivial |
 | 99% | 3.65 days | basic redundancy |
 | 99.9% | 8.76 hours | mainstream production |
@@ -100,7 +100,7 @@ Each nine is roughly 10× harder than the last. Decide deliberately, not by ambi
 ## SLO is not SLA
 
 | | SLO | SLA |
-|---|---|---|
+| --- | --- | --- |
 | Audience | Internal | External (customers) |
 | Consequence | Engineering decisions | Money / refunds |
 | Target | Tighter than SLA | Looser than SLO |

@@ -90,7 +90,7 @@ This is engineering work. It belongs in the 50% engineering half of an SRE's tim
 ## Common toil sources and fixes
 
 | Toil | Fix |
-|---|---|
+| --- | --- |
 | Manual production deploys | CI/CD pipeline |
 | Approving routine alerts | Auto-remediation, alert tuning |
 | Provisioning new resources | Self-service portal, IaC |

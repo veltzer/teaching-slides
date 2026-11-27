@@ -346,7 +346,7 @@ int main(void) {
 ## Storage Class Specifiers
 
 | Specifier | Scope | Lifetime | Default Value | Typical Use |
-|-----------|-------|----------|---------------|-------------|
+| ----------- | ------- | ---------- | --------------- | ------------- |
 | `auto` | Block | Automatic | Garbage | Local variables (default) |
 | `static` (local) | Block | Static | 0 | Persistent local state |
 | `static` (global) | File | Static | 0 | Internal linkage |
@@ -363,7 +363,7 @@ extern int shared_across_files;  /* defined elsewhere */
 ## Operator Precedence Table (Key Levels)
 
 | Precedence | Operators | Associativity |
-|------------|-----------|---------------|
+| ------------ | ----------- | --------------- |
 | 1 (highest) | `()` `[]` `->` `.` | Left to right |
 | 2 | `!` `~` `++` `--` `+` `-` `*` `&` `(type)` `sizeof` | Right to left |
 | 3 | `*` `/` `%` | Left to right |
@@ -377,7 +377,7 @@ extern int shared_across_files;  /* defined elsewhere */
 ## Operator Precedence Table (Key Levels) (cont.)
 
 | Precedence | Operators | Associativity |
-|------------|-----------|---------------|
+| ------------ | ----------- | --------------- |
 | 8 | `&` | Left to right |
 | 9 | `^` | Left to right |
 | 10 | `\|` | Left to right |

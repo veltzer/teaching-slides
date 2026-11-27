@@ -137,7 +137,7 @@ f.close()
 ## File Modes
 
 | Mode | Description |
-|------|-------------|
+| ------ | ------------- |
 | `"r"` | Read (default) |
 | `"w"` | Write (truncate) |
 | `"a"` | Append |
@@ -376,7 +376,7 @@ with open("data.json") as f:
 ## JSON - Type Mapping
 
 | Python | JSON |
-|--------|------|
+| -------- | ------ |
 | `dict` | object |
 | `list`, `tuple` | array |
 | `str` | string |

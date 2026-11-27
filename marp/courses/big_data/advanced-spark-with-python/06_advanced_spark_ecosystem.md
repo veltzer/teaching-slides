@@ -493,7 +493,7 @@ spark = SparkSession.builder \
 ## Kubernetes vs YARN Deployment
 
 | Aspect | YARN | Kubernetes |
-|---|---|---|
+| --- | --- | --- |
 | Resource isolation | Container-based | Pod-based (stronger) |
 | Scaling | Static/Dynamic | Dynamic (autoscaler) |
 | Multi-tenancy | Queue-based | Namespace-based |
@@ -567,7 +567,7 @@ csv_with_select = spark.read \
 ## Cloud Platform Comparison
 
 | Feature | AWS EMR | Azure Synapse | Google Dataproc |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Storage | S3 | ADLS Gen2 | GCS |
 | Auto-scaling | Yes (managed) | Yes (serverless) | Yes |
 | Spot/Preemptible | Spot instances | Low-priority | Preemptible VMs |

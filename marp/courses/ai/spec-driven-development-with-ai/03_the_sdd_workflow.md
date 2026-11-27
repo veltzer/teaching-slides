@@ -88,7 +88,7 @@ implementation. List every assumption you made under Open questions.
 ## Implement: One Task at a Time vs Letting It Run
 
 | | One task per run | Autonomous run over all tasks |
-|---|---|---|
+| --- | --- | --- |
 | Review | After each diff | At the end |
 | Drift | Caught early | Compounds silently |
 | Speed | Slower wall clock | Fast until it is wrong |

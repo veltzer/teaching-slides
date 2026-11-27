@@ -53,7 +53,7 @@ User types:  /review-pr 1234
 ## Two Tiers of Capability
 
 | Aspect | Built-in Skills | Custom Skills |
-|--------|----------------|---------------|
+| -------- | ---------------- | --------------- |
 | Source | Ships with the tool | Defined by your team |
 | Scope | Generic workflows | Domain-specific |
 | Update | Tool vendor | You control |
@@ -129,7 +129,7 @@ instructions: |
 Available context variables in skill instructions:
 
 | Variable | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | `$FILE` | Current file path being operated on |
 | `$COMMIT_SHA` | Latest commit hash |
 | `$BRANCH` | Current git branch name |
@@ -247,7 +247,7 @@ chain:
 ## Strategies When Skills Fail
 
 | Strategy | Behavior |
-|----------|----------|
+| ---------- | ---------- |
 | `abort` | Stop the entire chain immediately |
 | `skip` | Log the failure and continue to next step |
 | `warn` | Display a warning and continue |
@@ -693,7 +693,7 @@ alerts:
 **Common anti-patterns to avoid:**
 
 | Anti-Pattern | Problem | Better Approach |
-|-------------|---------|-----------------|
+| ------------- | --------- | ----------------- |
 | Mega-skill | One skill does everything | Compose small, focused skills |
 | No parameters | Hardcoded values everywhere | Use parameters with sensible defaults |
 | No testing | Skills break silently | Add snapshot tests and `--dry-run` |

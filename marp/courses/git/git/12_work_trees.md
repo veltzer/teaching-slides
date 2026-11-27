@@ -470,7 +470,7 @@ cd ../pr-123-review
 **Comparison with alternatives:**
 
 | Operation | Multiple Clones | Worktrees | Stash/Switch |
-|-----------|----------------|-----------|--------------|
+| ----------- | ---------------- | ----------- | -------------- |
 | Disk Usage | High | Low | Lowest |
 | Setup Time | Slow | Fast | Fastest |
 | Parallel Work | Excellent | Excellent | Poor |

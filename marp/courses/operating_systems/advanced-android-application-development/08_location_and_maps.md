@@ -317,7 +317,7 @@ public class ActivityRecognitionManager {
 ## Error Handling
 
 | Scenario | Solution | Implementation |
-|----------|----------|----------------|
+| ---------- | ---------- | ---------------- |
 | No GPS | Fall back to network | Switch provider |
 | No permissions | Request or explain | Show dialog |
 | Location disabled | Prompt settings | Open settings |

@@ -41,7 +41,7 @@ audience:
 ## Incident Severity Levels
 
 | Level | Severity | Example | Response Time |
-|-------|----------|---------|---------------|
+| ------- | ---------- | --------- | --------------- |
 | 1 | **Critical** | Ransomware attack, major data breach | Immediate |
 | 2 | **High** | Compromised executive account, active intrusion | Within 1 hour |
 | 3 | **Medium** | Phishing email clicked, lost USB drive | Within 4 hours |

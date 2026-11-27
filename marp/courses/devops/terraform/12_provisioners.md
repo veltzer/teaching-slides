@@ -19,7 +19,7 @@ audience:
 ## Provisioner Types Overview
 
 | Provisioner | Description | Runs On |
-|-------------|-------------|---------|
+| ------------- | ------------- | --------- |
 | `local-exec` | Execute command locally | Your machine |
 | `remote-exec` | Execute command remotely | Target resource |
 | `file` | Upload files/directories | Target resource |
@@ -532,7 +532,7 @@ resource "aws_instance" "web" {
 ## Alternatives to Provisioners
 
 | Need | Instead of Provisioner | Use |
-|------|----------------------|-----|
+| ------ | ---------------------- | ----- |
 | Install packages | `remote-exec` | User data / cloud-init |
 | Configure server | `remote-exec` | Packer pre-baked image |
 | Deploy app | `remote-exec` | CI/CD pipeline |

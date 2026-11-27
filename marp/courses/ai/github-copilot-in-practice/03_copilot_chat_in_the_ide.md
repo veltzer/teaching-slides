@@ -71,7 +71,7 @@ audience:
 ## Which Surface for Which Question
 
 | Question | Surface |
-|---|---|
+| --- | --- |
 | How does the payment flow work? | Chat view |
 | Rewrite this function with early returns | Inline chat |
 | What does `git rebase --onto` do? | Quick chat |
@@ -94,7 +94,7 @@ audience:
 ## The Built-in Participants
 
 | Participant | Knows about | Typical question |
-|---|---|---|
+| --- | --- | --- |
 | `@workspace` | Your project's code | Where is the retry logic? |
 | `@terminal` | The integrated terminal | Explain the last command's error |
 | `@vscode` | Editor settings and commands | How do I enable format on save? |
@@ -122,7 +122,7 @@ audience:
 ## Slash Commands
 
 | Command | What it does |
-|---|---|
+| --- | --- |
 | `/explain` | Explain the selected code or the active file |
 | `/fix` | Propose a fix for the selection or the reported problem |
 | `/tests` | Generate tests for the selection, using your test framework |
@@ -163,7 +163,7 @@ audience:
 ## Controlling Context Explicitly
 
 | Reference | Adds |
-|---|---|
+| --- | --- |
 | `#file` | A specific file |
 | `#selection` | The current editor selection |
 | `#codebase` | Relevant chunks found by searching the workspace |

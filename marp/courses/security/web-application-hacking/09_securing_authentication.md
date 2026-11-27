@@ -464,7 +464,7 @@ def register():
 Compare DVWA brute-force module at each security level:
 
 | Level | Protection |
-|-------|-----------|
+| ------- | ----------- |
 | **Low** | No protection at all |
 | **Medium** | `sleep(2)` on failure |
 | **High** | Random token + sleep |

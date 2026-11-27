@@ -150,7 +150,7 @@ echo "${#user[@]}"       # 3
 ## When to Use Which Type
 
 | Type | Use Case |
-|------|----------|
+| ------ | ---------- |
 | Plain string | Single values, paths, messages |
 | Integer (`-i`) | Counters, arithmetic variables |
 | Indexed array | Ordered lists, command args |

@@ -49,7 +49,7 @@ Two fundamental approaches to encryption, both used in network security.
 ## Symmetric vs Asymmetric Encryption: Comparison
 
 | Algorithm | Key Size | Speed | Use Case |
-|-----------|----------|-------|----------|
+| ----------- | ---------- | ------- | ---------- |
 | AES-128 | 128 bits | Very fast | Bulk data encryption |
 | AES-256 | 256 bits | Fast | High-security data |
 | ChaCha20 | 256 bits | Very fast | TLS, mobile devices |
@@ -73,7 +73,7 @@ Uses a key pair: public key (shared freely) and private key (kept secret).
 ## Asymmetric Encryption: Comparison
 
 | Algorithm | Key Size | Speed | Use Case |
-|-----------|----------|-------|----------|
+| ----------- | ---------- | ------- | ---------- |
 | RSA | 2048-4096 bits | Slow | Key exchange, signatures |
 | ECDSA | 256-384 bits | Moderate | TLS certificates |
 | Ed25519 | 256 bits | Fast | SSH keys, modern TLS |
@@ -111,7 +111,7 @@ TLS combines symmetric and asymmetric encryption for the best of both worlds:
 ## TLS/SSL Overview (cont.)
 
 | Version | Year | Status |
-|---------|------|--------|
+| --------- | ------ | -------- |
 | SSL 2.0 | 1995 | Deprecated, insecure |
 | SSL 3.0 | 1996 | Deprecated (POODLE attack) |
 | TLS 1.0 | 1999 | Deprecated |
@@ -274,7 +274,7 @@ A firewall controls network traffic based on predefined rules.
 **Types of firewalls:**
 
 | Type | Layer | Description |
-|------|-------|-------------|
+| ------ | ------- | ------------- |
 | Packet filter | L3-L4 | Inspects headers (IP, port, protocol) |
 | Stateful | L3-L4 | Tracks connection state |
 | Application | L7 | Inspects application-layer data |
@@ -518,7 +518,7 @@ WireGuard is a modern, high-performance VPN protocol with a minimal codebase.
 **WireGuard vs IPSec:**
 
 | Feature | WireGuard | IPSec |
-|---------|-----------|-------|
+| --------- | ----------- | ------- |
 | Codebase | ~4,000 lines | ~400,000 lines |
 | Crypto | ChaCha20, Curve25519 | Configurable (many options) |
 | Performance | Very fast | Good |

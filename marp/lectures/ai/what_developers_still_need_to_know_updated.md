@@ -88,7 +88,7 @@ audience:
 ## The Failure Modes Worth Knowing by Name
 
 | Failure | What it looks like |
-|---------|--------------------|
+| --------- | -------------------- |
 | Hallucination | An `API`, a package or a fact that does not exist |
 | Plausible code | Works on the happy path, misses the edge cases |
 | Wrong problem | A good solution to a problem you did not have |
@@ -193,7 +193,7 @@ audience:
 ## Agent Memory Versus Documentation
 
 | | Agent memory | Documentation |
-|---|--------------|---------------|
+| --- | -------------- | --------------- |
 | Written by | The agent, automatically | People and agents, deliberately |
 | Seen by | One developer | The whole team |
 | Reviewed | No | Yes, like code |

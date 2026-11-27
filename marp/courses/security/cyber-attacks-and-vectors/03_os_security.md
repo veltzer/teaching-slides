@@ -223,12 +223,12 @@ stat /var/log/apt/history.log
 apt list --installed 2>/dev/null | wc -l
 ```
 
-| Patch Priority | Response Time | Example                    |
-|---------------|---------------|----------------------------|
-| Critical      | 24-48 hours   | Remote code execution      |
-| High          | 1 week        | Privilege escalation       |
-| Medium        | 30 days       | Information disclosure     |
-| Low           | Next cycle    | Minor configuration issue  |
+| Patch Priority | Response Time | Example                   |
+| -------------- | ------------- | ------------------------- |
+| Critical       | 24-48 hours   | Remote code execution     |
+| High           | 1 week        | Privilege escalation      |
+| Medium         | 30 days       | Information disclosure    |
+| Low            | Next cycle    | Minor configuration issue |
 
 ---
 

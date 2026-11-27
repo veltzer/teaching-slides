@@ -43,7 +43,7 @@ SELECT * FROM users WHERE username='admin'--' AND password='anything'
 ## Impact of SQL Injection
 
 | Impact | Description |
-|--------|-------------|
+| -------- | ------------- |
 | **Authentication Bypass** | Log in as any user without password |
 | **Data Theft** | Extract entire database contents |
 | **Data Modification** | Insert, update, delete records |

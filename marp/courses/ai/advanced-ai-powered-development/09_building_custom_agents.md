@@ -192,7 +192,7 @@ def search_code(query: str, file_glob: str = "**/*.py",
 - Common failure modes and mitigations:
 
 | Failure | Mitigation |
-|---|---|
+| --- | --- |
 | Tool returns an error | Retry with corrected args, or try alternative tool |
 | Hallucinated tool name | Validate against registered tool list before execution |
 | Infinite reasoning loop | Set `max_turns` limit, detect repeated outputs |
@@ -241,7 +241,7 @@ agent = Agent(name="deployer",
 ## Framework Comparison
 
 | Framework | Strengths | Best For |
-|---|---|---|
+| --- | --- | --- |
 | `Anthropic Agent SDK` | Simple, native tool use | Claude-based agents |
 | `LangGraph` | Stateful graphs, checkpoints | Complex workflows |
 | `CrewAI` | Role-based collaboration | Multi-agent teams |

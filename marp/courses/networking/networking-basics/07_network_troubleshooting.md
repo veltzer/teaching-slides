@@ -40,7 +40,7 @@ audience:
 Work from the bottom of the stack upward:
 
 | Layer | Check | Tools |
-|-------|-------|-------|
+| ------- | ------- | ------- |
 | Physical | Cable connected? Link light on? | `ip link`, `ethtool` |
 | Data Link | Interface up? MAC address? | `ip link`, `arp`, `bridge` |
 | Network | IP assigned? Route exists? | `ip addr`, `ip route`, `ping` |
@@ -368,7 +368,7 @@ $ sudo tcpdump -i eth0 -nn port 80
 **TCP Flag meanings:**
 
 | Flag | Symbol | Meaning |
-|------|--------|---------|
+| ------ | -------- | --------- |
 | SYN | [S] | Connection initiation |
 | SYN-ACK | [S.] | Connection acknowledgment |
 | ACK | [.] | Acknowledgment |
@@ -772,7 +772,7 @@ $ sudo ethtool --test eth0
 ## Quick Reference: Troubleshooting Commands
 
 | Problem | Command |
-|---------|---------|
+| --------- | --------- |
 | Is interface up? | `ip link show eth0` |
 | What is my IP? | `ip addr show` |
 | What is my gateway? | `ip route \| grep default` |
@@ -787,7 +787,7 @@ $ sudo ethtool --test eth0
 ## Quick Reference: Troubleshooting Commands (cont.)
 
 | Problem | Command |
-|---------|---------|
+| --------- | --------- |
 | Where do packets go? | `traceroute host` |
 | Sustained test | `mtr -r -c 100 host` |
 | Capture packets | `sudo tcpdump -i eth0 -nn` |

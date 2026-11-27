@@ -157,7 +157,7 @@ bazel query \
 ## Impact on Team Autonomy and Coupling
 
 | Factor | Monorepo | Polyrepo |
-|---|---|---|
+| --- | --- | --- |
 | Autonomy | Lower | Higher |
 | Coupling | Higher | Lower |
 | Consistency | Enforced | Divergent |
@@ -172,7 +172,7 @@ bazel query \
 ## Choosing: Monorepo vs Polyrepo
 
 | Factor | Monorepo | Polyrepo |
-|---|---|---|
+| --- | --- | --- |
 | Team size | Small-medium | Any |
 | Shared code | Heavy | Minimal |
 | Release cadence | Unified | Independent |
@@ -235,7 +235,7 @@ bazel query \
 ## Trunk-Based vs Feature Branching
 
 | Aspect | Trunk-Based | Feature Branch |
-|---|---|---|
+| --- | --- | --- |
 | Branch lifetime | Hours | Days to weeks |
 | Merge conflicts | Rare | Common |
 | Code review | Post-commit or pair | Pre-merge PR |
@@ -337,7 +337,7 @@ bazel query \
 - **Rebase merge**: replays commits on top of `main`, linear history
 
 | Policy | History | Bisectability | Simplicity |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Merge commit | Full context | Good | Complex graph |
 | Squash merge | Clean, linear | Per-feature | Loses detail |
 | Rebase merge | Linear | Per-commit | Rewrites SHAs |

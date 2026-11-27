@@ -44,7 +44,7 @@ audience:
 ## What Changed: From Completion to Agency
 
 | Capability | Completion | Chat | Agentic |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Context | Current file | Selected code | Entire codebase |
 | Interaction | Passive | Request/response | Goal-directed |
 | Tool use | None | Limited | Shell, files, web |
@@ -121,7 +121,7 @@ Assistant: "The shared counter is modified without a lock.
 - Task: "Add input validation to an existing REST endpoint"
 
 | Step | Inline Completion | Chat Assistant | Agentic Tool |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Context setup | Open the file | Copy-paste the function | Point at the repo |
 | Interaction | Accept suggestions | Ask for validation code | Describe the goal |
 | Iteration | Manual edits | Copy result back | Automatic retries |
@@ -228,7 +228,7 @@ Workflow:
 - Measured in `tokens` (~0.75 words per token, ~4 chars per token)
 
 | Model | Context Window | Approximate Lines of Code |
-|---|---|---|
+| --- | --- | --- |
 | `GPT-4o` | 128K tokens | ~50K lines |
 | `Claude Opus/Sonnet` | 200K tokens | ~80K lines |
 | `Gemini 1.5 Pro` | 1M+ tokens | ~400K lines |
@@ -353,7 +353,7 @@ Choosing a model depends on your task:
 ## Cloud-Hosted vs Local Models
 
 | Factor | Cloud-Hosted | Local / Self-Hosted |
-|---|---|---|
+| --- | --- | --- |
 | Performance | Frontier quality | Good, but behind frontier |
 | Latency | Network-dependent | Predictable, often lower |
 | Privacy | Data leaves your network | Full control |
@@ -386,7 +386,7 @@ Choosing a model depends on your task:
 - Example: a single agentic coding session (multi-file refactor)
 
 | Phase | Input Tokens | Output Tokens | Cost (Claude Sonnet) |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Initial context load | ~50,000 | 0 | ~$0.15 |
 | Planning response | ~2,000 | ~3,000 | ~$0.05 |
 | File reads (5 files) | ~30,000 | 0 | ~$0.09 |
@@ -472,7 +472,7 @@ Choosing a model depends on your task:
 ## Choosing Your Tool Stack
 
 | Need | Recommended Category |
-|---|---|
+| --- | --- |
 | Fast boilerplate completion | Inline engine |
 | Architecture discussion | Chat assistant |
 | Multi-file refactoring | Terminal or IDE agent |
@@ -537,7 +537,7 @@ Choosing a model depends on your task:
 - Teams need a structured process to select and adopt AI tools
 
 | Criterion | Weight | Tool A | Tool B | Tool C |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Code quality output | 25% | Score | Score | Score |
 | Security posture | 20% | Score | Score | Score |
 | Integration ease | 15% | Score | Score | Score |

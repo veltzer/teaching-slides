@@ -535,7 +535,7 @@ if (fd == -1 && errno == ENXIO) {
 ## Pipe vs FIFO Comparison
 
 | Feature | Pipe | FIFO |
-|---------|------|------|
+| --------- | ------ | ------ |
 | **Creation** | pipe() | mkfifo() |
 | **Name** | Anonymous | Named path |
 | **Persistence** | Process lifetime | Until deleted |

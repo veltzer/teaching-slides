@@ -22,25 +22,25 @@ audience:
 - Ports are virtual numbered connections (0-65535) that allow communication between devices
 - Different ports are used for different services:
 
-| Port   | Service        | Protocol |
-|--------|----------------|----------|
-| 21     | FTP            | TCP      |
-| 22     | SSH            | TCP      |
-| 25     | SMTP           | TCP      |
-| 53     | DNS            | TCP/UDP  |
+| Port | Service | Protocol |
+| ---- | ------- | -------- |
+| 21   | FTP     | TCP      |
+| 22   | SSH     | TCP      |
+| 25   | SMTP    | TCP      |
+| 53   | DNS     | TCP/UDP  |
 
 ---
 
 ## What is Port Scanning? (cont.)
 
-| Port   | Service        | Protocol |
-|--------|----------------|----------|
-| 80     | HTTP           | TCP      |
-| 443    | HTTPS          | TCP      |
-| 3306   | MySQL          | TCP      |
-| 3389   | RDP            | TCP      |
-| 5432   | PostgreSQL     | TCP      |
-| 8080   | HTTP Proxy     | TCP      |
+| Port | Service    | Protocol |
+| ---- | ---------- | -------- |
+| 80   | HTTP       | TCP      |
+| 443  | HTTPS      | TCP      |
+| 3306 | MySQL      | TCP      |
+| 3389 | RDP        | TCP      |
+| 5432 | PostgreSQL | TCP      |
+| 8080 | HTTP Proxy | TCP      |
 
 ---
 
@@ -204,16 +204,16 @@ sudo nmap -sX 192.168.1.1
 
 ## Scan Type Comparison
 
-| Scan Type    | Flag | Root? | Speed  | Stealth | Works on Windows |
-|-------------|------|-------|--------|---------|-----------------|
-| SYN (-sS)   | SYN  | Yes   | Fast   | Medium  | Yes             |
-| Connect (-sT)| Full | No   | Medium | Low     | Yes             |
-| UDP (-sU)   | UDP  | Yes   | Slow   | Medium  | Yes             |
-| FIN (-sF)   | FIN  | Yes   | Medium | High    | No              |
-| NULL (-sN)  | None | Yes   | Medium | High    | No              |
-| Xmas (-sX)  | FPU  | Yes   | Medium | High    | No              |
-| ACK (-sA)   | ACK  | Yes   | Fast   | Medium  | Yes             |
-| Idle (-sI)  | SYN  | Yes   | Slow   | Highest | Yes             |
+| Scan Type     | Flag | Root? | Speed  | Stealth | Works on Windows |
+| ------------- | ---- | ----- | ------ | ------- | ---------------- |
+| SYN (-sS)     | SYN  | Yes   | Fast   | Medium  | Yes              |
+| Connect (-sT) | Full | No    | Medium | Low     | Yes              |
+| UDP (-sU)     | UDP  | Yes   | Slow   | Medium  | Yes              |
+| FIN (-sF)     | FIN  | Yes   | Medium | High    | No               |
+| NULL (-sN)    | None | Yes   | Medium | High    | No               |
+| Xmas (-sX)    | FPU  | Yes   | Medium | High    | No               |
+| ACK (-sA)     | ACK  | Yes   | Fast   | Medium  | Yes              |
+| Idle (-sI)    | SYN  | Yes   | Slow   | Highest | Yes              |
 
 ---
 
@@ -283,14 +283,14 @@ nmap --max-retries 2 192.168.1.1      # Max 2 retransmissions
 nmap --host-timeout 300s 192.168.1.1  # 5 min timeout per host
 ```
 
-| Template | Probe Timeout | Scan Delay | Parallelism | Use Case          |
-|----------|---------------|------------|-------------|-------------------|
-| T0       | 5 min         | 5 min      | Serial      | IDS evasion       |
-| T1       | 15 sec        | 15 sec     | Serial      | IDS evasion       |
-| T2       | 1 sec         | 0.4 sec    | Serial      | Courtesy scan     |
-| T3       | 1 sec         | 0           | Parallel    | Default           |
-| T4       | 500 ms        | 0           | Parallel    | Fast LAN scan     |
-| T5       | 250 ms        | 0           | Parallel    | Speed over accuracy|
+| Template | Probe Timeout | Scan Delay | Parallelism | Use Case            |
+| -------- | ------------- | ---------- | ----------- | ------------------- |
+| T0       | 5 min         | 5 min      | Serial      | IDS evasion         |
+| T1       | 15 sec        | 15 sec     | Serial      | IDS evasion         |
+| T2       | 1 sec         | 0.4 sec    | Serial      | Courtesy scan       |
+| T3       | 1 sec         | 0          | Parallel    | Default             |
+| T4       | 500 ms        | 0          | Parallel    | Fast LAN scan       |
+| T5       | 250 ms        | 0          | Parallel    | Speed over accuracy |
 
 ---
 
@@ -329,15 +329,15 @@ nmap --script "safe and discovery" 192.168.1.1
 
 ### NSE Script Categories
 
-| Category  | Purpose                                    | Example Script           |
-|-----------|--------------------------------------------|--------------------------|
-| auth      | Authentication bypass/brute force          | ssh-brute                |
-| default   | Safe, useful scripts (run with -sC)        | ssh-hostkey              |
-| discovery | Enumerate services and information         | http-enum                |
-| exploit   | Actively exploit vulnerabilities           | smb-vuln-ms17-010        |
-| vuln      | Check for known vulnerabilities            | ssl-heartbleed           |
-| safe      | Non-intrusive, won't crash services        | http-headers             |
-| intrusive | May crash services or trigger alerts       | http-sql-injection       |
+| Category  | Purpose                              | Example Script     |
+| --------- | ------------------------------------ | ------------------ |
+| auth      | Authentication bypass/brute force    | ssh-brute          |
+| default   | Safe, useful scripts (run with -sC)  | ssh-hostkey        |
+| discovery | Enumerate services and information   | http-enum          |
+| exploit   | Actively exploit vulnerabilities     | smb-vuln-ms17-010  |
+| vuln      | Check for known vulnerabilities      | ssl-heartbleed     |
+| safe      | Non-intrusive, won't crash services  | http-headers       |
+| intrusive | May crash services or trigger alerts | http-sql-injection |
 
 ---
 

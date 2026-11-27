@@ -30,7 +30,7 @@ audience:
 ## Port Mapping Syntax
 
 | Command | Description | Example |
-|---------|-------------|---------|
+| --------- | ------------- | --------- |
 | `-p hostPort:containerPort` | Specific port mapping | `-p 8080:80` |
 | `-p IP:hostPort:containerPort` | Interface specific | `-p 127.0.0.1:8080:80` |
 | `-p containerPort` | Random host port | `-p 80` |
@@ -41,7 +41,7 @@ audience:
 ## Network Command Reference
 
 | Command | Purpose | Example |
-|---------|---------|---------|
+| --------- | --------- | --------- |
 | `docker network create` | Create network | `docker network create mynet` |
 | `docker network connect` | Connect container | `docker network connect mynet cont1` |
 | `docker network ls` | List networks | `docker network ls` |
@@ -58,7 +58,7 @@ audience:
 ## Network Drivers
 
 | Driver | Use Case | Features |
-|--------|----------|----------|
+| -------- | ---------- | ---------- |
 | bridge | Default networking | Container isolation |
 | host | Performance | Direct host access |
 | none | Security | No network access |
@@ -82,7 +82,7 @@ audience:
 ## Network Troubleshooting
 
 | Issue | Command | Purpose |
-|-------|---------|---------|
+| ------- | --------- | --------- |
 | Connectivity | `docker exec cont1 ping cont2` | Test connection |
 | Port Mapping | `docker port container` | Check port mappings |
 | Network Config | `docker network inspect` | View network details |
@@ -99,7 +99,7 @@ audience:
 ## Network Creation Options
 
 | Option | Purpose | Example |
-|--------|---------|---------|
+| -------- | --------- | --------- |
 | `--driver` | Set network driver | `--driver bridge` |
 | `--subnet` | Define subnet | `--subnet 172.18.0.0/16` |
 | `--gateway` | Set gateway | `--gateway 172.18.0.1` |
@@ -122,7 +122,7 @@ audience:
 ## Common Network Patterns
 
 | Pattern | Description | Use Case |
-|---------|-------------|----------|
+| --------- | ------------- | ---------- |
 | Frontend-Backend | Separated networks | Web applications |
 | Load Balancer | Port distribution | Scaled services |
 | Service Discovery | Automatic discovery | Microservices |

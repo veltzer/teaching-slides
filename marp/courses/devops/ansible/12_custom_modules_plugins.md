@@ -621,7 +621,7 @@ def test_create_new_config(module_args, tmp_path):
 ## Plugin Types Summary
 
 | Plugin Type | Location | Purpose |
-|-------------|----------|---------|
+| ------------- | ---------- | --------- |
 | Modules | `library/` | Perform actions on hosts |
 | Filter | `filter_plugins/` | Transform data in templates |
 | Callback | `callback_plugins/` | React to events |

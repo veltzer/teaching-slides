@@ -296,7 +296,7 @@ std::priority_queue<int, std::vector<int>, std::greater<int>> min_pq;
 ## Container Selection Guide
 
 | Container | Use When |
-|-----------|----------|
+| ----------- | ---------- |
 | vector | Default sequential container |
 | deque | Need push_front/pop_front |
 | list | Frequent insertion/deletion in middle |

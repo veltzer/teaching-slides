@@ -90,7 +90,7 @@ User --> Shell --> Kernel --> Hardware
 ## Shell vs GUI
 
 | Feature | Shell (CLI) | GUI |
-|---------|------------|-----|
+| --------- | ------------ | ----- |
 | Speed | Fast for experts | Slower, more clicks |
 | Automation | Easily scriptable | Hard to automate |
 | Remote access | Works over `SSH` | Needs X forwarding / VNC |
@@ -174,7 +174,7 @@ User --> Shell --> Kernel --> Hardware
 ## `bash` Version History
 
 | Version | Year | Key Features |
-|---------|------|-------------|
+| --------- | ------ | ------------- |
 | 1.0 | 1989 | Initial release |
 | 2.0 | 1996 | Programmable completion |
 | 3.0 | 2004 | Regex matching `=~` |
@@ -213,7 +213,7 @@ echo "${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}"
 ## `bash` vs `zsh` vs `fish`
 
 | Feature | `bash` | `zsh` | `fish` |
-|---------|--------|-------|--------|
+| --------- | -------- | ------- | -------- |
 | Default on `Linux` | Yes | No | No |
 | Default on `macOS` | No (was) | Yes | No |
 | POSIX compatible | Yes | Mostly | No |

@@ -71,7 +71,7 @@ Content-Length: 512
 ## Headers a Security Team Cares About
 
 | Header | Direction | Why it matters |
-|--------|-----------|----------------|
+| -------- | ----------- | ---------------- |
 | `Host` | request | virtual hosting, routing decisions |
 | `X-Forwarded-For` | request | real client address behind the proxy |
 | `Content-Type` | both | parser selection, upload filtering |
@@ -101,7 +101,7 @@ Content-Length: 512
 ## Request Events Versus Response Events
 
 | Event | Fires when | Typical use |
-|-------|------------|-------------|
+| ------- | ------------ | ------------- |
 | `HTTP_REQUEST` | request headers parsed | routing, blocking, rewriting |
 | `HTTP_REQUEST_DATA` | collected request body ready | body inspection |
 | `HTTP_RESPONSE` | response headers from the server | header hardening |
@@ -312,7 +312,7 @@ when HTTP_REQUEST {
 ## The URI Commands
 
 | Command | Input | Returns |
-|---------|-------|---------|
+| --------- | ------- | --------- |
 | `URI::path` | full `URI` | directory part with slashes |
 | `URI::basename` | full `URI` | last path segment |
 | `URI::query` | `URI` and name | value of one query parameter |

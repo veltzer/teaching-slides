@@ -162,7 +162,7 @@ for (int val : LegacyListAdapter(legacyList)) {
 ## Object Adapter vs Class Adapter
 
 | Aspect | Object Adapter | Class Adapter |
-|--------|---------------|---------------|
+| -------- | --------------- | --------------- |
 | Mechanism | Composition | Multiple inheritance |
 | Adaptee access | Through reference | Direct (inherited) |
 | Can adapt subclasses | Yes | No (fixed to one class) |

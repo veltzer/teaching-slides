@@ -59,7 +59,7 @@ audience:
 ## Packer Terminology
 
 | Term | Description |
-|------|-------------|
+| ------ | ------------- |
 | Template | Configuration file defining the image |
 | Builder | Plugin that creates the image for a platform |
 | Provisioner | Script/tool that installs software |
@@ -264,7 +264,7 @@ source "amazon-ebs" "web" {
 ## AWS Builder Options
 
 | Option | Description |
-|--------|-------------|
+| -------- | ------------- |
 | `ami_name` | Name for the output AMI |
 | `instance_type` | EC2 instance type for build |
 | `region` | AWS region |
@@ -277,7 +277,7 @@ source "amazon-ebs" "web" {
 ## AWS Builder Options (cont.)
 
 | Option | Description |
-|--------|-------------|
+| -------- | ------------- |
 | `vpc_id` | VPC for build instance |
 | `subnet_id` | Subnet for build instance |
 | `security_group_id` | SG for build instance |
@@ -336,7 +336,7 @@ source "azure-arm" "ubuntu" {
 ## Packer Provisioners
 
 | Provisioner | Description |
-|-------------|-------------|
+| ------------- | ------------- |
 | `shell` | Run shell commands |
 | `shell-local` | Run local commands |
 | `file` | Upload files |
@@ -454,7 +454,7 @@ build {
 ## Post-Processor Types
 
 | Post-Processor | Description |
-|----------------|-------------|
+| ---------------- | ------------- |
 | `manifest` | Write build info to JSON file |
 | `shell-local` | Run local script after build |
 | `compress` | Compress artifact |

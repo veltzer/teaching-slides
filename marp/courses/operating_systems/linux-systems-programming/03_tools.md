@@ -522,7 +522,7 @@ void exported_function() { }
 ## Build Tools Comparison
 
 | Tool | Pros | Cons | Use Case |
-|------|------|------|----------|
+| ------ | ------ | ------ | ---------- |
 | **Make** | Simple, ubiquitous | Complex syntax | Small projects |
 | **CMake** | Cross-platform | Extra step | Large projects |
 | **Ninja** | Very fast | Not human-friendly | Build backend |

@@ -21,7 +21,7 @@ audience:
 ## Brute-Force Attack Types
 
 | Type | Description | Speed |
-|------|-------------|-------|
+| ------ | ------------- | ------- |
 | **Simple brute-force** | Try all combinations | Very slow |
 | **Dictionary attack** | Use word list | Moderate |
 | **Credential stuffing** | Use leaked credentials | Fast |

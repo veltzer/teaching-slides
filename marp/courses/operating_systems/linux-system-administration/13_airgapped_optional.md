@@ -504,7 +504,7 @@ aureport --file --summary
 Maintain a transfer log for every media crossing the air gap:
 
 | Field | Example |
-|-------|---------|
+| ------- | --------- |
 | Date/time | 2026-03-24 14:30 |
 | Operator | alice |
 | Media ID | USB-0042 |

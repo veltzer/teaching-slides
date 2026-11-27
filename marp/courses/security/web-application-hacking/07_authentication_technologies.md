@@ -58,7 +58,7 @@ Multi-Factor Authentication (MFA):
 ## Authentication Technologies
 
 | Technology | Mechanism | Common In |
-|-----------|-----------|-----------|
+| ----------- | ----------- | ----------- |
 | **Form-based** | Username/password via HTML form | Most web apps |
 | **HTTP Basic** | Base64 credentials in header | APIs, legacy |
 | **HTTP Digest** | Challenge-response | Legacy systems |

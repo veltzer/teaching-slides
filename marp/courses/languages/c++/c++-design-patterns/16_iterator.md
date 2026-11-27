@@ -164,7 +164,7 @@ public:
 ## STL Iterator Categories
 
 | Category | Operations | Examples |
-|----------|-----------|----------|
+| ---------- | ----------- | ---------- |
 | Input | `++`, `*`, `==` | `istream_iterator` |
 | Output | `++`, `*` | `ostream_iterator` |
 | Forward | Input + multi-pass | `forward_list::iterator` |

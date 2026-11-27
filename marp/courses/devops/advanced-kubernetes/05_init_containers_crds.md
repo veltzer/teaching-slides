@@ -67,7 +67,7 @@ spec:
 ## Init Container Properties
 
 | Property | Init Container | Regular Container |
-|----------|---------------|-------------------|
+| ---------- | --------------- | ------------------- |
 | Runs | Before app containers | After init completes |
 | Order | Sequential | Parallel |
 | Must succeed | Yes (all) | Depends on `restartPolicy` |
@@ -514,7 +514,7 @@ spec:
 ```
 
 | Feature | `CRD` | Aggregated `API` |
-|---------|------|-----------------|
+| --------- | ------ | ----------------- |
 | Storage | `etcd` (built-in) | Custom backend |
 | Validation | OpenAPI + Webhooks | Custom code |
 | Subresources | Limited | Full control |

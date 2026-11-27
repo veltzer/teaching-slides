@@ -28,7 +28,7 @@ A hash is a fingerprint: small, fast, and uniquely tied to the input.
 ## The SHA family
 
 | Algorithm | Digest size | Status |
-|---|---|---|
+| --- | --- | --- |
 | MD5 | 128 bits | broken — never use |
 | SHA-1 | 160 bits | broken — collisions found 2017 |
 | SHA-256 | 256 bits | safe, default workhorse |
@@ -134,12 +134,12 @@ If you encrypt without authenticating, attackers can flip ciphertext bits and yo
 
 ## MAC vs digital signature
 
-|  | MAC | Signature |
-|---|---|---|
-| Key model | shared symmetric | asymmetric pair |
-| Verifier | anyone with the key | anyone with public key |
-| Non-repudiation | no | yes |
-| Speed | fast | slower |
-| Use | API auth, cookies | code signing, certificates |
+|                 | MAC                 | Signature                  |
+| --------------- | ------------------- | -------------------------- |
+| Key model       | shared symmetric    | asymmetric pair            |
+| Verifier        | anyone with the key | anyone with public key     |
+| Non-repudiation | no                  | yes                        |
+| Speed           | fast                | slower                     |
+| Use             | API auth, cookies   | code signing, certificates |
 
 MAC = "we both have the key, so I trust this came from one of us." Signature = "anyone in the world can verify this came from me, and only me."

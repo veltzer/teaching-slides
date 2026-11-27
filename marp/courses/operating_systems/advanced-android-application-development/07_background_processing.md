@@ -246,7 +246,7 @@ public class AlarmScheduler {
 ## Background Task Priority
 
 | Task Type | Tool | When to Use |
-|-----------|------|-------------|
+| ----------- | ------ | ------------- |
 | Immediate | Foreground Service | User-initiated tasks |
 | Deferred | WorkManager | Background sync |
 | Periodic | PeriodicWorkRequest | Regular updates |

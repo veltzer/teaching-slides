@@ -134,7 +134,7 @@ public:
 ## Memory Savings
 
 | Approach | Per Tree | 1M Trees |
-|----------|---------|----------|
+| ---------- | --------- | ---------- |
 | Without Flyweight | ~15 MB | ~15 TB |
 | With Flyweight | ~16 bytes (x, y + pointer) | ~16 MB |
 | Shared TreeTypes | ~15 MB each | ~150 MB (for 10 types) |

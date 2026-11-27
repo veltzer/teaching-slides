@@ -88,7 +88,7 @@ The flags register records the outcome of the last ALU operation.
 Conditional branches use these flags to make decisions.
 
 | Flag | Name | Set When |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | ZF | Zero Flag | Result is zero |
 | CF | Carry Flag | Unsigned overflow occurred |
 | OF | Overflow Flag | Signed overflow occurred |
@@ -143,7 +143,7 @@ Writing to `EAX` zero-extends into `RAX`. Writing to `AX` or `AL` does not.
 On Linux/macOS x86-64, function arguments are passed in registers:
 
 | Argument # | Register | Purpose |
-|------------|----------|---------|
+| ------------ | ---------- | --------- |
 | 1st | RDI | First integer/pointer arg |
 | 2nd | RSI | Second integer/pointer arg |
 | 3rd | RDX | Third integer/pointer arg |
@@ -156,7 +156,7 @@ On Linux/macOS x86-64, function arguments are passed in registers:
 ## Register Conventions (System V AMD64 ABI) (cont.)
 
 | Argument # | Register | Purpose |
-|------------|----------|---------|
+| ------------ | ---------- | --------- |
 | Return | RAX | Return value |
 | Stack ptr | RSP | Stack pointer |
 | Base ptr | RBP | Frame pointer (optional) |
@@ -341,7 +341,7 @@ Prediction accuracy ~50%. Massive performance penalty.
 **Benchmark result (typical):**
 
 | Data | Time |
-|------|------|
+| ------ | ------ |
 | Sorted array | ~5 ms |
 | Unsorted array | ~15 ms |
 
@@ -395,7 +395,7 @@ Key hardware for OoO execution:
 Two fundamental CPU design philosophies:
 
 | Aspect | CISC | RISC |
-|--------|------|------|
+| -------- | ------ | ------ |
 | Full name | Complex Instruction Set | Reduced Instruction Set |
 | Instructions | Many, variable-length | Few, fixed-length |
 | Complexity | In hardware | In compiler |
@@ -407,7 +407,7 @@ Two fundamental CPU design philosophies:
 ## CISC vs RISC (cont.)
 
 | Aspect | CISC | RISC |
-|--------|------|------|
+| -------- | ------ | ------ |
 | Memory access | Many instructions can access memory | Load/Store only |
 | Encoding | Variable (1-15 bytes on x86) | Fixed (4 bytes on ARM) |
 | Decode | Complex, multi-cycle | Simple, single-cycle |
@@ -468,7 +468,7 @@ ARM design principles:
 ## x86 vs ARM: Modern Comparison
 
 | Feature | x86-64 (Intel/AMD) | ARM (AArch64) |
-|---------|-------------------|----------------|
+| --------- | ------------------- | ---------------- |
 | Market | Desktop, Server, Laptop | Mobile, Embedded, Server |
 | Power | 15-250W typical | 1-30W typical |
 | Performance/Watt | Good | Excellent |
@@ -480,7 +480,7 @@ ARM design principles:
 ## x86 vs ARM: Modern Comparison (cont.)
 
 | Feature | x86-64 (Intel/AMD) | ARM (AArch64) |
-|---------|-------------------|----------------|
+| --------- | ------------------- | ---------------- |
 | Server examples | Intel Xeon, AMD EPYC | AWS Graviton, Ampere Altra |
 | Desktop examples | Intel Core, AMD Ryzen | Apple M-series |
 | Decode complexity | High (variable length) | Low (fixed length) |
@@ -582,7 +582,7 @@ Where can a cache line be placed? This defines associativity:
 When a cache set is full and a new line must be loaded, which line is evicted?
 
 | Policy | Description | Used In |
-|--------|-------------|---------|
+| -------- | ------------- | --------- |
 | LRU | Least Recently Used | Approximated in L1/L2 |
 | Pseudo-LRU | Tree-based LRU approximation | Common in hardware |
 | Random | Randomly select victim | Some ARM designs |
@@ -664,7 +664,7 @@ The most common cache coherence protocol. Each cache line has one of
 four states:
 
 | State | Meaning |
-|-------|---------|
+| ------- | --------- |
 | **M**odified | Line is dirty, only in this cache, must write back |
 | **E**xclusive | Line is clean, only in this cache |
 | **S**hared | Line is clean, may be in other caches too |

@@ -86,7 +86,7 @@ audience:
 ## Comparing The Options
 
 | | `TPM` | `HSM` | TEE / Enclave | Discrete SE |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Form | chip on board | appliance / card | region of main CPU | small dedicated chip |
 | Throughput | low | very high | medium–high | low |
 | Runs your code | no (fixed ops) | mostly no | **yes** | no |
@@ -96,7 +96,7 @@ audience:
 ## Comparing The Options (cont.)
 
 | | `TPM` | `HSM` | TEE / Enclave | Discrete SE |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Typical use | device identity, boot | CA keys, payments | confidential compute | IoT device keys |
 | Cost | cents | thousands+ | "free" (in the CPU) | cents |
 

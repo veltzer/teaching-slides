@@ -48,14 +48,14 @@ audience:
 
 ## Types of SQL Injection
 
-| Type          | Description                                  | Visibility |
-|---------------|----------------------------------------------|------------|
-| In-band       | Results returned directly in response        | High       |
-| Error-based   | Database errors reveal information           | Medium     |
-| UNION-based   | UNION queries extract additional data        | High       |
-| Blind Boolean | True/false responses infer data              | Low        |
-| Blind Time    | Response timing reveals data                 | Low        |
-| Out-of-band   | Data sent via DNS/HTTP to attacker server    | None       |
+| Type          | Description                               | Visibility |
+| ------------- | ----------------------------------------- | ---------- |
+| In-band       | Results returned directly in response     | High       |
+| Error-based   | Database errors reveal information        | Medium     |
+| UNION-based   | UNION queries extract additional data     | High       |
+| Blind Boolean | True/false responses infer data           | Low        |
+| Blind Time    | Response timing reveals data              | Low        |
+| Out-of-band   | Data sent via DNS/HTTP to attacker server | None       |
 
 ---
 
@@ -308,13 +308,13 @@ Note: Stored procedures alone do not prevent SQLi if they use dynamic SQL intern
 
 ## Real-World SQL Injection Incidents
 
-| Incident             | Year | Impact                                 |
-|---------------------|------|----------------------------------------|
-| Heartland Payment   | 2008 | 134 million credit cards stolen         |
-| Sony PlayStation    | 2011 | 77 million accounts compromised        |
-| Yahoo               | 2012 | 450,000 credentials leaked             |
-| TalkTalk            | 2015 | 157,000 customer records, 60M GBP fine |
-| Equifax             | 2017 | 147 million records (via Struts vuln)  |
+| Incident          | Year | Impact                                 |
+| ----------------- | ---- | -------------------------------------- |
+| Heartland Payment | 2008 | 134 million credit cards stolen        |
+| Sony PlayStation  | 2011 | 77 million accounts compromised        |
+| Yahoo             | 2012 | 450,000 credentials leaked             |
+| TalkTalk          | 2015 | 157,000 customer records, 60M GBP fine |
+| Equifax           | 2017 | 147 million records (via Struts vuln)  |
 
 ---
 

@@ -83,7 +83,7 @@ The goal is not to be as reliable as possible. The goal is to be exactly as reli
 ## SRE vs DevOps
 
 | | DevOps | SRE |
-|---|---|---|
+| --- | --- | --- |
 | Origin | Cultural movement | Specific Google practice |
 | Scope | Dev + ops collaboration | Reliability engineering specifically |
 | Metrics | Loose (DORA, etc.) | Strict (SLOs, error budgets) |

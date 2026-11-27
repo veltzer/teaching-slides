@@ -102,7 +102,7 @@ Throwing a new engineer into solo on-call after one week is a known anti-pattern
 ## SRE team models
 
 | Model | Description | When |
-|---|---|---|
+| --- | --- | --- |
 | **Embedded** | SRE inside product team | Small org, single product |
 | **Centralized** | SRE team supports many services | Many services, shared expertise |
 | **Consulting** | SRE advises, dev teams own ops | Dev-led culture |

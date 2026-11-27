@@ -287,7 +287,7 @@ public class BackgroundTaskManager {
 ## Best Practices
 
 | Category | Practice | Impact |
-|----------|----------|---------|
+| ---------- | ---------- | --------- |
 | Memory | Use WeakReferences | Prevent leaks |
 | Layout | Flatten hierarchies | Faster rendering |
 | Network | Implement caching | Reduced bandwidth |

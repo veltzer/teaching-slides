@@ -112,12 +112,12 @@ audience:
 - No RST comes back to free the backlog slot quickly
 - Makes it very difficult to filter by source IP
 
-| Spoofing Method     | Description                                | Effectiveness |
-|---------------------|--------------------------------------------|---------------|
-| Random spoofing     | Random source IPs per packet               | High          |
-| Subnet spoofing     | IPs from same subnet as target             | Medium        |
-| Reflector spoofing  | IPs of real hosts that will send RST       | Lower         |
-| No spoofing         | Real attacker IP (easy to block)           | Low           |
+| Spoofing Method    | Description                          | Effectiveness |
+| ------------------ | ------------------------------------ | ------------- |
+| Random spoofing    | Random source IPs per packet         | High          |
+| Subnet spoofing    | IPs from same subnet as target       | Medium        |
+| Reflector spoofing | IPs of real hosts that will send RST | Lower         |
+| No spoofing        | Real attacker IP (easy to block)     | Low           |
 
 ---
 
@@ -353,14 +353,14 @@ for i in range(1000):
 
 ## SYN Flood vs Other TCP Attacks
 
-| Attack         | Mechanism                            | Layer   | Defense               |
-|----------------|--------------------------------------|---------|-----------------------|
-| SYN Flood      | Half-open connections fill backlog   | L4      | SYN cookies           |
-| ACK Flood      | Massive ACK packets consume CPU      | L4      | Stateful firewall     |
-| FIN Flood      | FIN packets for nonexistent sessions | L4      | Stateful firewall     |
-| RST Attack     | Forged RST to kill connections       | L4      | TCP MD5 / TCP-AO      |
-| Sockstress     | Tiny TCP window keeps conns open     | L4      | Timeout tuning        |
-| Slowloris      | Slow HTTP headers exhaust threads    | L7      | Reverse proxy         |
+| Attack     | Mechanism                            | Layer | Defense           |
+| ---------- | ------------------------------------ | ----- | ----------------- |
+| SYN Flood  | Half-open connections fill backlog   | L4    | SYN cookies       |
+| ACK Flood  | Massive ACK packets consume CPU      | L4    | Stateful firewall |
+| FIN Flood  | FIN packets for nonexistent sessions | L4    | Stateful firewall |
+| RST Attack | Forged RST to kill connections       | L4    | TCP MD5 / TCP-AO  |
+| Sockstress | Tiny TCP window keeps conns open     | L4    | Timeout tuning    |
+| Slowloris  | Slow HTTP headers exhaust threads    | L7    | Reverse proxy     |
 
 ---
 

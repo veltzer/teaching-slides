@@ -233,7 +233,7 @@ public class FlowLayout extends ViewGroup {
 ## Performance Optimization
 
 | Technique | Implementation | Benefit |
-|-----------|---------------|----------|
+| ----------- | --------------- | ---------- |
 | View Flattening | Merge layouts | Reduces hierarchy |
 | ViewStub | Lazy loading | Memory efficient |
 | RecyclerView | View recycling | Smooth scrolling |

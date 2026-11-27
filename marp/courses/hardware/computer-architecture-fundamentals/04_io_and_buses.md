@@ -51,7 +51,7 @@ A bus is a communication system that transfers data between components.
 **Key bus characteristics:**
 
 | Property | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | Width | Number of parallel data lines (bits per transfer) |
 | Clock speed | Frequency of data transfers |
 | Bandwidth | Width x Clock x Transfers_per_clock |
@@ -91,7 +91,7 @@ NVMe SSDs, network cards, and more.
 ## PCIe Generations
 
 | Generation | Year | Per-Lane Rate | x1 Bandwidth | x16 Bandwidth |
-|-----------|------|---------------|-------------|---------------|
+| ----------- | ------ | --------------- | ------------- | --------------- |
 | PCIe 1.0 | 2003 | 2.5 GT/s | 250 MB/s | 4 GB/s |
 | PCIe 2.0 | 2007 | 5 GT/s | 500 MB/s | 8 GB/s |
 | PCIe 3.0 | 2010 | 8 GT/s | ~1 GB/s | ~16 GB/s |
@@ -172,7 +172,7 @@ peripherals:
 ## USB Generations
 
 | Standard | Year | Speed | Name | Connector |
-|----------|------|-------|------|-----------|
+| ---------- | ------ | ------- | ------ | ----------- |
 | USB 1.0 | 1996 | 1.5 Mbps | Low Speed | Type-A |
 | USB 1.1 | 1998 | 12 Mbps | Full Speed | Type-A |
 | USB 2.0 | 2000 | 480 Mbps | High Speed | Type-A, Mini, Micro |
@@ -196,7 +196,7 @@ DisplayPort signals through a USB-C cable.
 USB defines four transfer types for different use cases:
 
 | Transfer Type | Use Case | Latency | Guaranteed BW | Error Recovery |
-|--------------|----------|---------|---------------|----------------|
+| -------------- | ---------- | --------- | --------------- | ---------------- |
 | Control | Configuration, setup | Low priority | No | Retry |
 | Bulk | Mass storage, printing | Best-effort | No | Retry |
 | Interrupt | Keyboard, mouse | Guaranteed polling | Yes | Retry |
@@ -225,7 +225,7 @@ Two storage interfaces with very different architectures:
 ## SATA and NVMe: Comparison
 
 | Feature | SATA (AHCI) | NVMe |
-|---------|-------------|------|
+| --------- | ------------- | ------ |
 | Interface | SATA 3.0 | PCIe (x2 or x4) |
 | Max bandwidth | 600 MB/s | ~7 GB/s (PCIe 4.0 x4) |
 | Command queues | 1 | Up to 65535 |
@@ -378,7 +378,7 @@ Interrupts:
 ## Polling vs Interrupts: Tradeoffs
 
 | Aspect | Polling | Interrupts |
-|--------|---------|------------|
+| -------- | --------- | ------------ |
 | CPU usage | Wastes cycles checking | CPU free until event |
 | Latency | Predictable (poll interval) | Variable (ISR overhead) |
 | Throughput (low load) | Wasteful | Efficient |
@@ -569,7 +569,7 @@ echo "none" > /sys/block/nvme0n1/queue/scheduler
 ## Linux I/O Schedulers: Comparison
 
 | Scheduler | Best For | Strategy |
-|-----------|----------|----------|
+| ----------- | ---------- | ---------- |
 | `none` (noop) | NVMe SSDs | No reordering, direct submission |
 | `mq-deadline` | SSDs, general | Deadline-based, prevents starvation |
 | `bfq` | Desktop, latency-sensitive | Budget Fair Queuing, good for interactive |
@@ -601,7 +601,7 @@ hardware-specific operations:
 ## Device Driver Types in Linux
 
 | Type | Interface | Examples |
-|------|-----------|---------|
+| ------ | ----------- | --------- |
 | Character | `/dev/ttyS0`, `/dev/random` | Serial ports, input devices |
 | Block | `/dev/sda`, `/dev/nvme0n1` | Disks, SSDs |
 | Network | `eth0`, `wlan0` | Ethernet, WiFi adapters |
@@ -694,7 +694,7 @@ cache and avoids cross-core communication.
 ## Summary: I/O and Buses
 
 | Topic | Key Points |
-|-------|-----------|
+| ------- | ----------- |
 | PCIe | Serial point-to-point, scalable lanes, doubles BW each gen |
 | USB | Tiered-star, host-controlled, 4 transfer types |
 | SATA vs NVMe | NVMe: PCIe direct, 65k queues, ~10x faster than SATA |
@@ -706,7 +706,7 @@ cache and avoids cross-core communication.
 ## Summary: I/O and Buses (cont.)
 
 | Topic | Key Points |
-|-------|-----------|
+| ------- | ----------- |
 | Polling vs IRQ | Hybrid (NAPI) is best: IRQ at low load, poll at high load |
 | DMA | Device transfers data directly, scatter-gather for non-contiguous |
 | IOMMU | Address translation and protection for device DMA |

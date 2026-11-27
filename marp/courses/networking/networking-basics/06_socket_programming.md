@@ -264,7 +264,7 @@ finally:
 ## TCP vs UDP in Code
 
 | Aspect | TCP | UDP |
-|--------|-----|-----|
+| -------- | ----- | ----- |
 | Socket type | SOCK_STREAM | SOCK_DGRAM |
 | Setup | connect() + accept() | No connection |
 | Send | send() / sendall() | sendto() |
@@ -458,7 +458,7 @@ while inputs:
 ## select vs poll vs epoll: Comparison
 
 | Feature | select | poll | epoll |
-|---------|--------|------|-------|
+| --------- | -------- | ------ | ------- |
 | Max FDs | 1024 (FD_SETSIZE) | Unlimited | Unlimited |
 | Scaling | O(n) per call | O(n) per call | O(1) per event |
 | Copies FD set | Every call | Every call | Once (kernel) |
@@ -800,7 +800,7 @@ $ ss -xlnp
 ## ss Flags Reference
 
 | Flag | Meaning |
-|------|---------|
+| ------ | --------- |
 | -t | TCP sockets |
 | -u | UDP sockets |
 | -l | Listening sockets only |
@@ -812,7 +812,7 @@ $ ss -xlnp
 ## ss Flags Reference (cont.)
 
 | Flag | Meaning |
-|------|---------|
+| ------ | --------- |
 | -a | All sockets (listening + non-listening) |
 | -o | Show timer information |
 | -e | Show extended info |
@@ -864,7 +864,7 @@ sock_dual.bind(('::', 8080))
 ```
 
 | Family | Description | Address Format |
-|--------|-------------|---------------|
+| -------- | ------------- | --------------- |
 | AF_INET | IPv4 | ('host', port) |
 | AF_INET6 | IPv6 | ('host', port, flowinfo, scopeid) |
 | AF_UNIX | Local (Unix socket) | '/path/to/socket' |
@@ -1107,7 +1107,7 @@ def robust_connect(host, port, timeout=10):
 **Common socket errors:**
 
 | Error | Meaning |
-|-------|---------|
+| ------- | --------- |
 | ECONNREFUSED | No process listening on port |
 | ETIMEDOUT | Connection attempt timed out |
 | ECONNRESET | Connection forcefully closed by peer |

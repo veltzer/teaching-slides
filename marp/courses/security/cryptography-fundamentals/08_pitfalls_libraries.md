@@ -50,7 +50,7 @@ Track nonces. Use a counter or 12 bytes from `os.urandom`. Never reset.
 ## Weak algorithms still in use
 
 | Should be gone | Sometimes still seen |
-|---|---|
+| --- | --- |
 | MD5 | yes — git, package checksums |
 | SHA-1 | yes — TLS certs (mostly retired), git |
 | RC4 | yes — old WPA, old TLS |

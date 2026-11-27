@@ -57,7 +57,7 @@ The ALIGNMENT PROBLEM:
 ## Alignment Techniques — Summary: Comparison
 
 | Technique | Description | Used By |
-|-----------|-------------|---------|
+| ----------- | ------------- | --------- |
 | `RLHF` | Human feedback guides behavior | OpenAI, Meta |
 | `Constitutional AI` | Self-critique against principles | Anthropic |
 | `DPO` | Direct preference optimization | Various |

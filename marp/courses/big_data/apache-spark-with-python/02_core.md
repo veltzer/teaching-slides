@@ -41,7 +41,7 @@ audience:
 ## Key Components
 
 | Component | Description |
-|-----------|-------------|
+| ----------- | ------------- |
 | Driver Program | Contains application's main function; Creates SparkContext |
 | Spark Context | Coordinates and manages job execution on the cluster |
 | Cluster Manager | Allocates resources across applications |
@@ -203,7 +203,7 @@ first_elem = lambda x: x[0]
 ## Shuffle Impact
 
 | Operation | Shuffle Required? | Performance Impact |
-|-----------|------------------|-------------------|
+| ----------- | ------------------ | ------------------- |
 | map() | No | Fast |
 | filter() | No | Fast |
 | reduceByKey() | Yes | Medium |
@@ -223,7 +223,7 @@ first_elem = lambda x: x[0]
 ## Storage Levels
 
 | Level | Memory | Disk | Description |
-|-------|---------|------|-------------|
+| ------- | --------- | ------ | ------------- |
 | MEMORY_ONLY | Yes | No | Default, pure memory |
 | MEMORY_AND_DISK | Yes | Yes | Spill to disk if needed |
 | DISK_ONLY | No | Yes | Only disk storage |
@@ -296,7 +296,7 @@ errors = logs.filter(lambda line: "ERROR" in line) \
 ## Troubleshooting Common Issues
 
 | Issue | Possible Cause | Solution |
-|-------|---------------|----------|
+| ------- | --------------- | ---------- |
 | Out of Memory | Large data/poor caching | Adjust partition size |
 | Slow Performance | Poor parallelization | Optimize partitioning |
 | Serialization Errors | Complex objects | Simplify data structures |

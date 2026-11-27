@@ -79,7 +79,7 @@ audience:
 ## Comparing the Three Approaches
 
 | Aspect | Single Cloud | Multi-Cloud | Hybrid |
-|--------|-------------|-------------|--------|
+| -------- | ------------- | ------------- | -------- |
 | Complexity | Low | High | Medium |
 | Vendor lock-in | High | Low | Medium |
 | Cost optimization | Good | Best potential | Variable |
@@ -299,7 +299,7 @@ resource "google_compute_instance" "web" {
 ## DR Tiers
 
 | Tier | Strategy | RTO | RPO | Cost |
-|------|----------|-----|-----|------|
+| ------ | ---------- | ----- | ----- | ------ |
 | 1 | Backup and Restore | Hours | Hours | Low |
 | 2 | Pilot Light | 30 min | Minutes | Medium |
 | 3 | Warm Standby | Minutes | Seconds | High |

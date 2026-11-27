@@ -27,7 +27,7 @@ audience:
 ## Assembly vs. High-Level Languages
 
 | Assembly | High-Level Languages |
-|----------|----------------------|
+| ---------- | ---------------------- |
 | Direct hardware control | Abstracted from hardware |
 | Architecture-specific | Portable across platforms |
 | Manual memory management | Automatic memory management |

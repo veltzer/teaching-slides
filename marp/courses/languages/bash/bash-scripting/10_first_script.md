@@ -51,7 +51,7 @@ echo "Hello, World!"
 ## Choosing an Editor
 
 | Editor | Type | Learning Curve | Power |
-|--------|------|---------------|-------|
+| -------- | ------ | --------------- | ------- |
 | `nano` | Terminal | Easy | Low |
 | `vim` | Terminal | Steep | High |
 | `emacs` | Terminal/GUI | Steep | Very High |

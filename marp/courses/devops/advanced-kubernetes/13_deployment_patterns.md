@@ -189,7 +189,7 @@ kubectl delete deployment web-blue
 ## Blue-Green Pros and Cons
 
 | Pros | Cons |
-|------|------|
+| ------ | ------ |
 | Instant rollback | Double resources needed |
 | Full testing before switch | Database migrations tricky |
 | Zero downtime | Long-lived connections may break |
@@ -481,7 +481,7 @@ spec:
 ## Deployment Strategy Decision Matrix
 
 | Criteria | Rolling | Blue-Green | Canary |
-|----------|---------|------------|--------|
+| ---------- | --------- | ------------ | -------- |
 | Zero downtime | Yes | Yes | Yes |
 | Instant rollback | No | Yes | Yes (with mesh) |
 | Resource overhead | Low | 2x | Low-Medium |

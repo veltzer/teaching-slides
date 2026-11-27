@@ -285,7 +285,7 @@ end
 ## Best Practices
 
 | Category | Practice | Benefit |
-|----------|----------|---------|
+| ---------- | ---------- | --------- |
 | Signing | Use CI Variables | Secure keys |
 | Testing | Automated Tests | Reliable releases |
 | Deployment | Staged Rollout | Control risks |

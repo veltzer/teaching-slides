@@ -49,7 +49,7 @@ audience:
 ## IaC Approaches
 
 | Approach | Description | Tools |
-|----------|-------------|-------|
+| ---------- | ------------- | ------- |
 | Declarative | Define desired state | `Terraform`, `CloudFormation` |
 | Imperative | Define exact steps | `Ansible`, scripts |
 | Mutable | Modify existing resources | `Ansible`, `Chef` |
@@ -82,7 +82,7 @@ audience:
 ## Terraform vs Other IaC Tools
 
 | Feature | `Terraform` | `CloudFormation` | `Pulumi` | `Ansible` |
-|---------|-----------|----------------|---------|---------|
+| --------- | ----------- | ---------------- | --------- | --------- |
 | Multi-Cloud | Yes | AWS only | Yes | Yes |
 | Language | `HCL` | `JSON`/`YAML` | General purpose | `YAML` |
 | State | Yes | Managed | Yes | No |
@@ -198,7 +198,7 @@ block_type "label1" "label2" {
 ## HCL Data Types
 
 | Type | Example | Description |
-|------|---------|-------------|
+| ------ | --------- | ------------- |
 | `string` | `"hello"` | Text value |
 | `number` | `42`, `3.14` | Numeric value |
 | `bool` | `true`, `false` | Boolean value |
@@ -402,7 +402,7 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 ## Plan Symbols
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | `+` | Resource will be created |
 | `-` | Resource will be destroyed |
 | `~` | Resource will be updated in-place |
@@ -414,7 +414,7 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 ## Terraform CLI Commands Overview
 
 | Command | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `terraform init` | Initialize working directory |
 | `terraform plan` | Preview changes |
 | `terraform apply` | Apply changes |

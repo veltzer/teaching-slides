@@ -81,7 +81,7 @@ audience:
 ### Key Differences
 
 | TCP | UDP |
-|-----|-----|
+| ----- | ----- |
 | Connection-oriented | Connectionless |
 | Reliable | Best effort |
 | Ordered delivery | No order guarantee |
@@ -124,7 +124,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ## TCP Connection States
 
 | State | Meaning |
-|-------|---------|
+| ------- | --------- |
 | LISTEN | Server waiting for connections |
 | SYN_SENT | Client sent SYN, waiting for SYN-ACK |
 | ESTABLISHED | Connection open, data flows |
@@ -159,7 +159,7 @@ sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0
 ## Common Applications
 
 | Protocol | Port | Use Case |
-|----------|------|----------|
+| ---------- | ------ | ---------- |
 | HTTP | 80 | Web browsing |
 | HTTPS | 443 | Secure web |
 | FTP | 21 | File transfer |

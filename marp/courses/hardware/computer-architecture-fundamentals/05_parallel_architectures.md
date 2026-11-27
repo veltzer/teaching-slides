@@ -75,7 +75,7 @@ instruction streams and data streams they process simultaneously.
 ## Flynn's Taxonomy: Comparison
 
 | Category | Instructions | Data | Examples |
-|----------|-------------|------|----------|
+| ---------- | ------------- | ------ | ---------- |
 | SISD | Single | Single | Classic uniprocessor |
 | SIMD | Single | Multiple | GPU, vector units, SSE/AVX |
 | MISD | Multiple | Single | Rare (fault tolerance) |
@@ -192,7 +192,7 @@ on a single die (chip). Each core has its own L1/L2 caches.
 ## Multi-Core: Key Characteristics
 
 | Feature | Description |
-|---------|-------------|
+| --------- | ------------- |
 | Core count | 4-128+ cores per chip (consumer to server) |
 | Private caches | Each core has own L1 and L2 |
 | Shared cache | L3 shared by all cores |
@@ -207,7 +207,7 @@ on a single die (chip). Each core has its own L1/L2 caches.
 **Examples of modern core counts:**
 
 | Processor | Cores | Threads | Market |
-|-----------|-------|---------|--------|
+| ----------- | ------- | --------- | -------- |
 | Intel Core i9-14900K | 24 (8P+16E) | 32 | Desktop |
 | AMD Ryzen 9 7950X | 16 | 32 | Desktop |
 | AMD EPYC 9654 | 96 | 192 | Server |
@@ -262,7 +262,7 @@ both threads compete for the same execution units, caches, and bandwidth.
 ## SMT: When It Helps and When It Hurts
 
 | Workload | SMT Benefit | Why |
-|----------|------------|-----|
+| ---------- | ------------ | ----- |
 | Web server | High (+25-30%) | Many threads stall on I/O, other thread runs |
 | Database queries | High (+20-25%) | Memory latency hiding |
 | Video encoding | Medium (+10-15%) | Compute-heavy, some parallelism |
@@ -336,7 +336,7 @@ access. Accessing another processor's memory is slower.
 ## NUMA vs UMA: Comparison
 
 | Aspect | UMA | NUMA |
-|--------|-----|------|
+| -------- | ----- | ------ |
 | Memory latency | Same from all cores | Depends on which node |
 | Local access | ~100 ns | ~80 ns |
 | Remote access | ~100 ns | ~130-200 ns |
@@ -477,7 +477,7 @@ both paths must execute serially. This wastes throughput.
 ## CPU vs GPU: Architecture Comparison: Comparison
 
 | Feature | CPU | GPU |
-|---------|-----|-----|
+| --------- | ----- | ----- |
 | Cores | 4-128 complex cores | 1000-16000+ simple cores |
 | Clock speed | 3-5.5 GHz | 1.5-2.5 GHz |
 | Design goal | Low latency | High throughput |
@@ -506,7 +506,7 @@ This is the SIMD paradigm at the instruction level.
 x86 CPUs include progressively wider SIMD instruction sets:
 
 | ISA Extension | Register Width | Floats per Op | Year |
-|---------------|---------------|---------------|------|
+| --------------- | --------------- | --------------- | ------ |
 | MMX | 64-bit | 2 (int only) | 1997 |
 | SSE | 128-bit (XMM) | 4 float | 1999 |
 | SSE2 | 128-bit (XMM) | 2 double | 2001 |
@@ -675,7 +675,7 @@ Any-to-any connection. Low latency but expensive (O(N^2) switches).
 ## Interconnect Comparison: Comparison
 
 | Topology | Latency | Bandwidth | Scalability | Cost | Used In |
-|----------|---------|-----------|-------------|------|---------|
+| ---------- | --------- | ----------- | ------------- | ------ | --------- |
 | Bus | Low (few cores) | Low (shared) | Poor | Low | Legacy SMP |
 | Ring | Medium | Medium | Fair (10-14 cores) | Medium | Intel client |
 | Mesh | Low-Medium | High | Excellent | High | Intel Xeon, AMD EPYC |
@@ -753,7 +753,7 @@ avoid patterns that stress it, like false sharing).
 ## MESI Protocol: Detailed State Transitions (cont.)
 
 | Transition | Trigger | Action |
-|-----------|---------|--------|
+| ----------- | --------- | -------- |
 | I -> E | Read miss, no sharers | Load from memory |
 | I -> S | Read miss, other has it | Get copy from other cache |
 | I -> M | Write miss | Load, invalidate others |
@@ -814,7 +814,7 @@ performance:
 **MOESI (AMD):**
 
 | State | Meaning |
-|-------|---------|
+| ------- | --------- |
 | M | Modified -- dirty, exclusive |
 | O | **Owned** -- dirty, but shared with others |
 | E | Exclusive -- clean, only copy |
@@ -832,7 +832,7 @@ cores on a snoop, reducing memory traffic.
 **MESIF (Intel):**
 
 | State | Meaning |
-|-------|---------|
+| ------- | --------- |
 | F | **Forward** -- clean, shared, designated responder |
 
 The **Forward** state selects one cache to respond to snoop requests,
@@ -858,7 +858,7 @@ parallelizing only a fraction of it.
 **Example**: If 90% of a program is parallelizable (P = 0.9):
 
 | Processors (N) | Speedup |
-|-----------------|---------|
+| ----------------- | --------- |
 | 1 | 1.0x |
 | 2 | 1.82x |
 | 4 | 3.08x |
@@ -869,7 +869,7 @@ parallelizing only a fraction of it.
 ## Amdahl's Law: Comparison (cont.)
 
 | Processors (N) | Speedup |
-|-----------------|---------|
+| ----------------- | --------- |
 | 16 | 6.40x |
 | 64 | 8.77x |
 | 256 | 9.69x |
@@ -925,7 +925,7 @@ Gustafson:  Fixed time, scale problem with processors
 **Example** (P = 0.9, serial fraction = 10%):
 
 | Processors | Amdahl Speedup | Gustafson Speedup |
-|-----------|----------------|-------------------|
+| ----------- | ---------------- | ------------------- |
 | 4 | 3.08x | 3.70x |
 | 16 | 6.40x | 14.50x |
 | 64 | 8.77x | 57.70x |
@@ -969,7 +969,7 @@ Gustafson:  Fixed time, scale problem with processors
 ## Practical Parallelism: Putting It All Together: Comparison
 
 | Parallelism Level | Mechanism | Programmer Visible? |
-|-------------------|-----------|-------------------|
+| ------------------- | ----------- | ------------------- |
 | Bit-level | Wider data paths (8->16->32->64 bit) | No |
 | Instruction-level | Pipelining, superscalar, OoO | No (hardware) |
 | Data-level (SIMD) | SSE, AVX, NEON | Yes (intrinsics or auto) |
@@ -980,7 +980,7 @@ Gustafson:  Fixed time, scale problem with processors
 ## Practical Parallelism: Putting It All Together: Comparison (cont.)
 
 | Parallelism Level | Mechanism | Programmer Visible? |
-|-------------------|-----------|-------------------|
+| ------------------- | ----------- | ------------------- |
 | Core-level | Multi-core | Yes (threads/processes) |
 | Socket-level | Multi-socket NUMA | Yes (NUMA awareness) |
 | Node-level | Clusters, MPI | Yes (distributed computing) |

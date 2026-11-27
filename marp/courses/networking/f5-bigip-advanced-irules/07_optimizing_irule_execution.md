@@ -49,7 +49,7 @@ audience:
 ## The Arithmetic of a Slow iRule
 
 | Per request | At 5,000 req/s | At 50,000 req/s |
-|-------------|----------------|-----------------|
+| ----------- | -------------- | --------------- |
 | 5 us        | 2.5% of a core | 25% of a core   |
 | 50 us       | 25% of a core  | 2.5 cores       |
 | 500 us      | 2.5 cores      | 25 cores        |
@@ -426,11 +426,11 @@ when HTTP_REQUEST {
 
 ## Efficiency Tips and Their Gain
 
-| Tip                                      | Gain            |
-|------------------------------------------|-----------------|
-| Reject in `CLIENT_ACCEPTED`              | Skips `HTTP` parsing |
-| `class match` instead of `if` chains     | Constant time lookup |
-| `switch -glob` instead of `regexp`       | No regex compile     |
-| Guard `log` with a debug flag            | No string building   |
-| `HSL` instead of `log`                   | No host disk `I/O`   |
-| `return` after the decision              | Skips the rest       |
+| Tip                                  | Gain                 |
+| ------------------------------------ | -------------------- |
+| Reject in `CLIENT_ACCEPTED`          | Skips `HTTP` parsing |
+| `class match` instead of `if` chains | Constant time lookup |
+| `switch -glob` instead of `regexp`   | No regex compile     |
+| Guard `log` with a debug flag        | No string building   |
+| `HSL` instead of `log`               | No host disk `I/O`   |
+| `return` after the decision          | Skips the rest       |

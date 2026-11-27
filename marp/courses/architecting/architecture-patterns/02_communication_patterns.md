@@ -341,7 +341,7 @@ Cons:
 ## Event Bus vs Publish-Subscribe
 
 | | Event Bus | Publish-Subscribe |
-|---|---|---|
+| --- | --- | --- |
 | Scope | Inside one process | Across processes / services / machines |
 | Transport | In-memory method calls | Network protocol over a broker |
 | Routing key | Event type (class) | Topic / channel name |
@@ -352,7 +352,7 @@ Cons:
 ## Event Bus vs Publish-Subscribe (cont.)
 
 | | Event Bus | Publish-Subscribe |
-|---|---|---|
+| --- | --- | --- |
 | Infrastructure | A library | A broker you must operate |
 | Durability / replay | None | Available (Kafka-style) |
 | If no subscriber | Event is dropped | Broker buffers (and may persist) |

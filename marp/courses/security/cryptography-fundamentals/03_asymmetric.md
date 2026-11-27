@@ -33,7 +33,7 @@ You can encrypt to anyone whose public key you can find, without ever sharing a 
 ## Two distinct uses
 
 | Direction | Public key does | Private key does | Purpose |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Encrypt | encrypts | decrypts | confidentiality |
 | Sign | verifies | signs | authentication |
 
@@ -124,7 +124,7 @@ You almost never use raw asymmetric encryption on application data.
 ## Performance comparison
 
 | Operation | RSA-2048 | RSA-4096 | ECDSA P-256 | Ed25519 |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Sign | 1ms | 6ms | 0.05ms | 0.05ms |
 | Verify | 0.05ms | 0.1ms | 0.15ms | 0.1ms |
 | Key gen | 100ms | 1000ms | 0.1ms | 0.05ms |

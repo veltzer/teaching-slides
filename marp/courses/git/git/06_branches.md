@@ -724,7 +724,7 @@ git instaweb  # Starts local web server
 ## Common Branch Commands Reference
 
 | Command | Purpose |
-|---------|---------|
+| --------- | --------- |
 | `git branch` | List branches |
 | `git branch feature` | Create branch |
 | `git switch feature` | Switch to branch |

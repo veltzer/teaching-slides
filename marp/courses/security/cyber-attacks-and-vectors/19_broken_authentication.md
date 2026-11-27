@@ -75,13 +75,13 @@ audience:
 
 ## Brute Force vs Credential Stuffing
 
-| Aspect              | Brute Force              | Credential Stuffing        |
-|---------------------|--------------------------|----------------------------|
-| Source of passwords | Generated/dictionary     | Leaked from other breaches |
-| Success rate        | Very low (< 0.1%)       | Higher (0.1% - 2%)        |
-| Speed               | Slow (many attempts)     | Fast (one attempt per pair)|
-| Detection           | Easier (many failures)   | Harder (looks like normal) |
-| Defense             | Account lockout          | Breached password check    |
+| Aspect              | Brute Force            | Credential Stuffing         |
+| ------------------- | ---------------------- | --------------------------- |
+| Source of passwords | Generated/dictionary   | Leaked from other breaches  |
+| Success rate        | Very low (< 0.1%)      | Higher (0.1% - 2%)          |
+| Speed               | Slow (many attempts)   | Fast (one attempt per pair) |
+| Detection           | Easier (many failures) | Harder (looks like normal)  |
+| Defense             | Account lockout        | Breached password check     |
 
 ---
 
@@ -203,14 +203,14 @@ def verify_token(token):
         return None  # Invalid token
 ```
 
-| JWT Pitfall                | Defense                                     |
-|----------------------------|---------------------------------------------|
-| "none" algorithm accepted  | Whitelist specific algorithms                |
-| Algorithm confusion        | Never mix symmetric and asymmetric           |
-| No expiration              | Always set and verify `exp` claim            |
-| Token in URL               | Use Authorization header or HttpOnly cookie  |
-| Secret in source code      | Use environment variables or key vault       |
-| Long-lived tokens          | Short expiry + refresh token rotation        |
+| JWT Pitfall               | Defense                                     |
+| ------------------------- | ------------------------------------------- |
+| "none" algorithm accepted | Whitelist specific algorithms               |
+| Algorithm confusion       | Never mix symmetric and asymmetric          |
+| No expiration             | Always set and verify `exp` claim           |
+| Token in URL              | Use Authorization header or HttpOnly cookie |
+| Secret in source code     | Use environment variables or key vault      |
+| Long-lived tokens         | Short expiry + refresh token rotation       |
 
 ---
 
@@ -224,13 +224,13 @@ def verify_token(token):
 
 ### Why bcrypt/Argon2 are Preferred
 
-| Algorithm  | Speed (hashes/sec) | Memory Usage | Resistant To        |
-|------------|--------------------|--------------|--------------------|
-| MD5        | ~10 billion/sec    | Negligible   | Nothing            |
-| SHA-256    | ~5 billion/sec     | Negligible   | Nothing            |
-| bcrypt     | ~30,000/sec        | 4 KB         | GPU attacks        |
-| scrypt     | ~20,000/sec        | 16+ MB       | GPU + ASIC attacks |
-| Argon2id   | ~10,000/sec        | 64+ MB       | GPU, ASIC, side-ch.|
+| Algorithm | Speed (hashes/sec) | Memory Usage | Resistant To        |
+| --------- | ------------------ | ------------ | ------------------- |
+| MD5       | ~10 billion/sec    | Negligible   | Nothing             |
+| SHA-256   | ~5 billion/sec     | Negligible   | Nothing             |
+| bcrypt    | ~30,000/sec        | 4 KB         | GPU attacks         |
+| scrypt    | ~20,000/sec        | 16+ MB       | GPU + ASIC attacks  |
+| Argon2id  | ~10,000/sec        | 64+ MB       | GPU, ASIC, side-ch. |
 
 ---
 
@@ -297,14 +297,14 @@ except Exception:
 
 ### MFA Strength Comparison
 
-| Method            | Security Level | Phishing Resistant | User Experience |
-|-------------------|---------------|-------------------|-----------------|
-| SMS OTP           | Low           | No                | Easy            |
-| Email OTP         | Low           | No                | Easy            |
-| TOTP (Authenticator)| Medium     | No                | Medium          |
-| Push notification | Medium        | Partially         | Easy            |
-| FIDO2/WebAuthn    | High          | Yes               | Easy            |
-| Hardware key (YubiKey)| Highest  | Yes               | Medium          |
+| Method                 | Security Level | Phishing Resistant | User Experience |
+| ---------------------- | -------------- | ------------------ | --------------- |
+| SMS OTP                | Low            | No                 | Easy            |
+| Email OTP              | Low            | No                 | Easy            |
+| TOTP (Authenticator)   | Medium         | No                 | Medium          |
+| Push notification      | Medium         | Partially          | Easy            |
+| FIDO2/WebAuthn         | High           | Yes                | Easy            |
+| Hardware key (YubiKey) | Highest        | Yes                | Medium          |
 
 ---
 
@@ -411,15 +411,15 @@ app.config.update(
 )
 ```
 
-| Session Setting        | Purpose                              | Recommended Value |
-|------------------------|--------------------------------------|-------------------|
-| `Secure` flag          | Only send over HTTPS                 | Always True       |
-| `HttpOnly` flag        | Prevent XSS access to cookie         | Always True       |
-| `SameSite` attribute   | CSRF protection                      | `Lax` or `Strict` |
-| Session timeout        | Limit session lifetime               | 15-30 minutes     |
-| Session ID length      | Prevent brute force                  | 128+ bits entropy |
-| Regenerate on login    | Prevent session fixation             | Always            |
-| Invalidate on logout   | Prevent session reuse                | Always            |
+| Session Setting      | Purpose                      | Recommended Value |
+| -------------------- | ---------------------------- | ----------------- |
+| `Secure` flag        | Only send over HTTPS         | Always True       |
+| `HttpOnly` flag      | Prevent XSS access to cookie | Always True       |
+| `SameSite` attribute | CSRF protection              | `Lax` or `Strict` |
+| Session timeout      | Limit session lifetime       | 15-30 minutes     |
+| Session ID length    | Prevent brute force          | 128+ bits entropy |
+| Regenerate on login  | Prevent session fixation     | Always            |
+| Invalidate on logout | Prevent session reuse        | Always            |
 
 ---
 

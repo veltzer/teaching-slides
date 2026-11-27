@@ -128,7 +128,7 @@ def reset_spark_context(spark):
 ## Why These SparkSession Settings
 
 | Setting | Value | Reason |
-|---|---|---|
+| --- | --- | --- |
 | master | local[2] | 2 threads catches parallelism bugs |
 | shuffle.partitions | 2 | Faster than default 200 for small data |
 | default.parallelism | 2 | Match local[2] thread count |

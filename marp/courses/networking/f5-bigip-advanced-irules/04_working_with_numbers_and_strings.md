@@ -135,7 +135,7 @@ HTTP::respond 200 content "ok" \
 ## Special Symbols
 
 | Symbol | Meaning |
-|--------|---------|
+| -------- | --------- |
 | `$` | variable substitution |
 | `[ ]` | command substitution |
 | `{ }` | group without substitution |
@@ -344,7 +344,7 @@ substr $path 5 "/"               ;# v2
 ## Parsing Commands Compared
 
 | Command | Selects by | Best for |
-|---------|-----------|----------|
+| --------- | ----------- | ---------- |
 | `findstr` | search string plus terminator | a value after a key |
 | `getfield` | separator and field number | one field of a delimited path |
 | `substr` | offset and length or terminator | a fixed position slice |

@@ -120,12 +120,12 @@ server:
 
 ## Real-World DNS DoS Incidents
 
-| Incident          | Year | Impact                                        |
-|-------------------|------|-----------------------------------------------|
-| Dyn DNS Attack    | 2016 | Twitter, Reddit, Netflix, GitHub down          |
-| Spamhaus Attack   | 2013 | 300 Gbps, slowed European internet             |
-| NS1 Attack        | 2016 | Major DNS provider targeted                    |
-| AWS Route 53      | 2019 | 8-hour DDoS affecting AWS customers            |
+| Incident        | Year | Impact                                |
+| --------------- | ---- | ------------------------------------- |
+| Dyn DNS Attack  | 2016 | Twitter, Reddit, Netflix, GitHub down |
+| Spamhaus Attack | 2013 | 300 Gbps, slowed European internet    |
+| NS1 Attack      | 2016 | Major DNS provider targeted           |
+| AWS Route 53    | 2019 | 8-hour DDoS affecting AWS customers   |
 
 The 2016 Dyn attack used the Mirai botnet (IoT devices) to generate massive DNS query floods.
 

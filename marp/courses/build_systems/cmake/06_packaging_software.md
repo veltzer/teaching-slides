@@ -59,7 +59,7 @@ audience:
 ## CPack Generators Overview
 
 | Generator | Format | Platform |
-|-----------|--------|----------|
+| ----------- | -------- | ---------- |
 | `TGZ` | `.tar.gz` | All |
 | `ZIP` | `.zip` | All |
 | `TXZ` | `.tar.xz` | All |
@@ -90,7 +90,7 @@ include(CPack)
 ## Essential CPACK Variables
 
 | Variable | Purpose |
-|----------|---------|
+| ---------- | --------- |
 | `CPACK_PACKAGE_NAME` | Package name |
 | `CPACK_PACKAGE_VERSION` | Full version string |
 | `CPACK_PACKAGE_DESCRIPTION_SUMMARY` | One-line description |

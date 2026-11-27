@@ -33,7 +33,7 @@ A comprehensive course covering the full landscape of generative AI
 ## Course Structure
 
 | Topic | Focus |
-|-------|-------|
+| ------- | ------- |
 | Overview & Foundations | How generative AI works |
 | APIs of Generative Models | Prompt engineering & fine-tuning |
 | Agents, Memory & `LangChain` | Building intelligent systems |
@@ -121,7 +121,7 @@ Three converging factors enabled the current explosion:
 ## Key Terminology
 
 | Term | Meaning |
-|------|---------|
+| ------ | --------- |
 | `LLM` | Large Language Model — neural network trained on text |
 | `Token` | Basic unit of text (word or subword piece) |
 | `Prompt` | Input text given to the model |
@@ -161,7 +161,7 @@ Each topic follows this pattern:
 ## Resources & References
 
 | Resource | URL |
-|----------|-----|
+| ---------- | ----- |
 | OpenAI API Docs | `platform.openai.com/docs` |
 | LangChain Docs | `python.langchain.com` |
 | HuggingFace Hub | `huggingface.co` |

@@ -53,7 +53,7 @@ Configuration Management:        Provisioning:
 ## Providers vs Provisioners
 
 | Concept | Provider | Provisioner |
-|---------|----------|-------------|
+| --------- | ---------- | ------------- |
 | Purpose | Manage resources via API | Run scripts on resources |
 | When | Create/update/delete | After resource creation |
 | Scope | Full CRUD lifecycle | One-time or on-destroy |

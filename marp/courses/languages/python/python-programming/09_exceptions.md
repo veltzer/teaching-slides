@@ -50,7 +50,7 @@ except KeyError:
 ## Common Built-in Exceptions
 
 | Exception | Cause |
-|-----------|-------|
+| ----------- | ------- |
 | `TypeError` | Wrong type |
 | `ValueError` | Wrong value |
 | `KeyError` | Missing dict key |

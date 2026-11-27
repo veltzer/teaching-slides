@@ -651,7 +651,7 @@ CONFIG_LTO_GCC=y
 Achievable targets:
 
 | Device Type | Target | Achieved |
-|------------|---------|----------|
+| ------------ | --------- | ---------- |
 | TV/STB | < 2s | 0.8s |
 | Automotive | < 2s | 1.2s |
 | Phone | < 1s | 0.6s |

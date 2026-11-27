@@ -81,7 +81,7 @@ COMMIT;
 ## SQL vs NoSQL
 
 | SQL | NoSQL |
-|-----|--------|
+| ----- | -------- |
 | Fixed Schema | Flexible Schema |
 | ACID | BASE |
 | Vertical Scaling | Horizontal Scaling |

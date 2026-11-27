@@ -105,7 +105,7 @@ You almost always want the high-level tool. The low-level tool is for surgery.
 ## The Linux Package Management Landscape
 
 | Family | Low-level | High-level | Format |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `Debian`/`Ubuntu` | `dpkg` | `apt` | `.deb` |
 | `RHEL`/`Fedora` | `rpm` | `dnf` (was `yum`) | `.rpm` |
 | `Arch` | — | `pacman` | `.pkg.tar.zst` |

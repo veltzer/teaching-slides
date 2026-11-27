@@ -18,7 +18,7 @@ audience:
 ## Creational Patterns Overview
 
 | Pattern | Purpose | Key Idea |
-|---------|---------|----------|
+| --------- | --------- | ---------- |
 | Singleton | One instance globally | Static local variable (Meyers') |
 | Factory Method | Delegate creation to subclasses | Virtual creation method |
 | Abstract Factory | Create families of related objects | Factory of factories |
@@ -30,7 +30,7 @@ audience:
 ## Structural Patterns Overview
 
 | Pattern | Purpose | Key Idea |
-|---------|---------|----------|
+| --------- | --------- | ---------- |
 | Adapter | Make incompatible interfaces work together | Wrapper class |
 | Bridge | Separate abstraction from implementation | Composition over inheritance |
 | Composite | Treat groups and individuals uniformly | Tree structure |
@@ -41,7 +41,7 @@ audience:
 ## Structural Patterns Overview (cont.)
 
 | Pattern | Purpose | Key Idea |
-|---------|---------|----------|
+| --------- | --------- | ---------- |
 | Facade | Simplify complex subsystem | Unified interface |
 | Flyweight | Share common state to save memory | Intrinsic vs extrinsic state |
 | Proxy | Control access to an object | Surrogate with same interface |
@@ -51,7 +51,7 @@ audience:
 ## Behavioral Patterns Overview
 
 | Pattern | Purpose | Key Idea |
-|---------|---------|----------|
+| --------- | --------- | ---------- |
 | Chain of Responsibility | Pass request along a chain | Linked handlers |
 | Command | Encapsulate request as object | Undo/redo support |
 | Interpreter | Evaluate language grammar | Expression tree |
@@ -62,7 +62,7 @@ audience:
 ## Behavioral Patterns Overview (cont.)
 
 | Pattern | Purpose | Key Idea |
-|---------|---------|----------|
+| --------- | --------- | ---------- |
 | Mediator | Centralize complex interactions | Hub-and-spoke |
 | Memento | Save and restore state | Snapshot without exposing internals |
 | Observer | Notify dependents of state changes | Publish-subscribe |
@@ -73,7 +73,7 @@ audience:
 ## Behavioral Patterns Overview (cont.) (cont.)
 
 | Pattern | Purpose | Key Idea |
-|---------|---------|----------|
+| --------- | --------- | ---------- |
 | Strategy | Swap algorithms at runtime | Composition of behavior |
 | Template Method | Define algorithm skeleton | Override steps via inheritance |
 | Visitor | Add operations without modifying classes | Double dispatch |

@@ -48,7 +48,7 @@ audience:
 ## Testing Tools Overview
 
 | Tool | Purpose |
-|------|---------|
+| ------ | --------- |
 | `yamllint` | `YAML` syntax validation |
 | `ansible-lint` | `Ansible` best practices |
 | `ansible-playbook --syntax-check` | Playbook syntax |

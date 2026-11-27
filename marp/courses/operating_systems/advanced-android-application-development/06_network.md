@@ -287,7 +287,7 @@ public class NetworkSecurity {
 ## Network Performance Optimization
 
 | Technique | Implementation | Benefit |
-|-----------|---------------|----------|
+| ----------- | --------------- | ---------- |
 | Response Caching | OkHttp Cache | Reduces requests |
 | Image Caching | Glide disk cache | Faster loading |
 | Connection Pooling | OkHttp pool | Resource reuse |

@@ -515,17 +515,17 @@ QUALITY CHECKLIST
 
 ## Common Report Writing Mistakes
 
-| Mistake                       | Correction                    |
-|------------------------------|-------------------------------|
-| Using imprecise timestamps   | Always use UTC with full date |
-| Stating opinions as facts    | Distinguish findings from analysis |
-| Missing evidence references  | Cite evidence item for every finding |
-| Incomplete chain of custody  | Document every transfer       |
-| Jargon without explanation   | Include glossary, define terms|
-| Missing hash verification    | Hash at acquisition AND analysis |
-| Inconsistent formatting      | Use templates and style guides|
-| Omitting negative results    | Report what was NOT found too |
-| Tool version not documented  | Record every tool and version |
+| Mistake                     | Correction                           |
+| --------------------------- | ------------------------------------ |
+| Using imprecise timestamps  | Always use UTC with full date        |
+| Stating opinions as facts   | Distinguish findings from analysis   |
+| Missing evidence references | Cite evidence item for every finding |
+| Incomplete chain of custody | Document every transfer              |
+| Jargon without explanation  | Include glossary, define terms       |
+| Missing hash verification   | Hash at acquisition AND analysis     |
+| Inconsistent formatting     | Use templates and style guides       |
+| Omitting negative results   | Report what was NOT found too        |
+| Tool version not documented | Record every tool and version        |
 
 ---
 

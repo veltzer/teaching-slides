@@ -72,15 +72,15 @@ python3 cloud_enum.py -k companyname -l results.txt
 
 ## Notable S3 Bucket Breaches
 
-| Company         | Year | Records Exposed        | Data Type                      |
-|-----------------|------|------------------------|--------------------------------|
-| US Military     | 2017 | 1.8 billion            | Social media monitoring data   |
-| Verizon         | 2017 | 6 million              | Customer PINs and records      |
-| Dow Jones       | 2017 | 2.2 million            | Customer personal data         |
-| Tesla           | 2018 | Unknown                | Telemetry and manufacturing    |
-| Capital One     | 2019 | 106 million            | Credit applications (via SSRF) |
-| Twitch          | 2021 | Entire source code     | Code + earnings data           |
-| Microsoft       | 2023 | 38 TB                  | Employee data, passwords       |
+| Company     | Year | Records Exposed    | Data Type                      |
+| ----------- | ---- | ------------------ | ------------------------------ |
+| US Military | 2017 | 1.8 billion        | Social media monitoring data   |
+| Verizon     | 2017 | 6 million          | Customer PINs and records      |
+| Dow Jones   | 2017 | 2.2 million        | Customer personal data         |
+| Tesla       | 2018 | Unknown            | Telemetry and manufacturing    |
+| Capital One | 2019 | 106 million        | Credit applications (via SSRF) |
+| Twitch      | 2021 | Entire source code | Code + earnings data           |
+| Microsoft   | 2023 | 38 TB              | Employee data, passwords       |
 
 ---
 
@@ -358,13 +358,13 @@ curl -H "Metadata: true" \
 
 ## IMDS Across Cloud Providers
 
-| Provider | URL                          | Authentication                    | Version |
-|----------|------------------------------|-----------------------------------|---------|
-| AWS      | 169.254.169.254              | IMDSv2: PUT token required        | v1/v2   |
-| GCP      | 169.254.169.254              | Metadata-Flavor header required   | v1      |
-| Azure    | 169.254.169.254              | Metadata: true header required    | Various |
-| DigitalOcean| 169.254.169.254           | None                              | v1      |
-| Oracle   | 169.254.169.254              | Authorization header optional     | v2      |
+| Provider     | URL             | Authentication                  | Version |
+| ------------ | --------------- | ------------------------------- | ------- |
+| AWS          | 169.254.169.254 | IMDSv2: PUT token required      | v1/v2   |
+| GCP          | 169.254.169.254 | Metadata-Flavor header required | v1      |
+| Azure        | 169.254.169.254 | Metadata: true header required  | Various |
+| DigitalOcean | 169.254.169.254 | None                            | v1      |
+| Oracle       | 169.254.169.254 | Authorization header optional   | v2      |
 
 ---
 
@@ -526,14 +526,14 @@ def handler(event, context):
 
 ## Cloud Security Scanning Tools
 
-| Tool           | Type          | Cloud Support       | License      |
-|----------------|---------------|---------------------|--------------|
-| ScoutSuite     | Multi-cloud   | AWS, Azure, GCP     | Open source  |
-| Prowler        | AWS-focused   | AWS (primary)       | Open source  |
-| Checkov        | IaC scanning  | AWS, Azure, GCP     | Open source  |
-| CloudSploit    | Multi-cloud   | AWS, Azure, GCP     | Open source  |
-| Trivy          | Multi-purpose | AWS, containers     | Open source  |
-| CSPM tools     | Platform      | Varies              | Commercial   |
+| Tool        | Type          | Cloud Support   | License     |
+| ----------- | ------------- | --------------- | ----------- |
+| ScoutSuite  | Multi-cloud   | AWS, Azure, GCP | Open source |
+| Prowler     | AWS-focused   | AWS (primary)   | Open source |
+| Checkov     | IaC scanning  | AWS, Azure, GCP | Open source |
+| CloudSploit | Multi-cloud   | AWS, Azure, GCP | Open source |
+| Trivy       | Multi-purpose | AWS, containers | Open source |
+| CSPM tools  | Platform      | Varies          | Commercial  |
 
 ---
 

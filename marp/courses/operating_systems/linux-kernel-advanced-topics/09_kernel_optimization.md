@@ -151,7 +151,7 @@ cat /proc/pagetypeinfo
 Choose allocator based on needs:
 
 | Allocator | Use Case | Memory Overhead |
-|-----------|----------|-----------------|
+| ----------- | ---------- | ----------------- |
 | `SLUB` | General purpose | Medium |
 | `SLAB` | Cache-heavy | High |
 | `SLOB` | Embedded | Low |
@@ -259,7 +259,7 @@ taskset -c 2,3 ./rt_application
 ### Debug Options Overhead
 
 | Option | Performance Impact |
-|--------|-------------------|
+| -------- | ------------------- |
 | `CONFIG_DEBUG_KERNEL` | 5-10% |
 | `CONFIG_KASAN` | 3x slower |
 | `CONFIG_DEBUG_SPINLOCK` | 10-15% |

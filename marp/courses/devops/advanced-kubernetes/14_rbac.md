@@ -38,7 +38,7 @@ Advanced Kubernetes Course
 ## `RBAC` API Verbs
 
 | Verb | HTTP Method | Description |
-|------|-------------|-------------|
+| ------ | ------------- | ------------- |
 | `get` | GET | Read a single resource |
 | `list` | GET | List multiple resources |
 | `watch` | GET (streaming) | Watch for changes |
@@ -49,7 +49,7 @@ Advanced Kubernetes Course
 ## `RBAC` API Verbs (cont.)
 
 | Verb | HTTP Method | Description |
-|------|-------------|-------------|
+| ------ | ------------- | ------------- |
 | `update` | PUT | Full update |
 | `patch` | PATCH | Partial update |
 | `delete` | DELETE | Delete a resource |
@@ -199,7 +199,7 @@ roleRef:
 ## Built-in `ClusterRoles`
 
 | Role | Permissions |
-|------|------------|
+| ------ | ------------ |
 | `cluster-admin` | Full cluster access (superuser) |
 | `admin` | Full namespace access, including `RBAC` |
 | `edit` | Read/write most resources (no `RBAC`) |
@@ -430,7 +430,7 @@ rules:
 ## `RBAC` Common Mistakes
 
 | Mistake | Fix |
-|---------|-----|
+| --------- | ----- |
 | Using `cluster-admin` everywhere | Create minimal roles |
 | Wildcard verbs (`*`) | List explicit verbs |
 | Wildcard resources (`*`) | List explicit resources |

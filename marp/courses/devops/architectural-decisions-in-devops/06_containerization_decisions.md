@@ -155,7 +155,7 @@ docker info | grep "containerd"
 ## Runtime Comparison
 
 | Feature | `Docker` | `containerd` | `CRI-O` |
-|---------|----------|--------------|---------|
+| --------- | ---------- | -------------- | --------- |
 | K8s support | via `cri-dockerd` | Native CRI | Native CRI |
 | Build tools | Built-in | Separate | Separate |
 | Footprint | Larger | Medium | Smallest |
@@ -213,7 +213,7 @@ docker run hello-world
 ## Rootless vs Rootful: Trade-offs
 
 | Aspect | Rootful | Rootless |
-|--------|---------|----------|
+| -------- | --------- | ---------- |
 | Networking | Full capabilities | Limited (no raw sockets) |
 | Port binding | Any port | Ports > 1024 by default |
 | Storage | `overlayfs` native | `fuse-overlayfs` |

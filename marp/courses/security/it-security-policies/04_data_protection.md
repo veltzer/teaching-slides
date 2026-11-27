@@ -39,7 +39,7 @@ audience:
 ## Data Classification Levels: Comparison
 
 | Level | Label | Examples | Handling |
-|-------|-------|----------|----------|
+| ------- | ------- | ---------- | ---------- |
 | 1 | **Public** | Marketing brochures, press releases | Share freely |
 | 2 | **Internal** | Org charts, internal memos | Keep within the company |
 | 3 | **Confidential** | Financial reports, contracts | Share on need-to-know basis |
@@ -98,7 +98,7 @@ audience:
 ## Secure File Sharing
 
 | Instead of... | Use... |
-|---------------|--------|
+| --------------- | -------- |
 | Email attachments with sensitive data | Company-approved file sharing platform |
 | Personal cloud storage (`Google Drive`, `Dropbox`) | Corporate cloud storage |
 | USB drives | Secure file transfer tools |

@@ -365,7 +365,7 @@ Finally, provide a recommendation with justification.
 ## Comparing CoT Techniques
 
 | Technique | Accuracy Boost | Cost | Latency | Best For |
-|-----------|---------------|------|---------|----------|
+| ----------- | --------------- | ------ | --------- | ---------- |
 | Zero-shot CoT | +10-15% | 1× | ~1× | Quick improvement |
 | Few-shot CoT | +15-25% | 1× | ~1× | Consistent format |
 | Self-consistency | +5-10% over CoT | 5× | 5× | High-stakes decisions |

@@ -37,14 +37,14 @@ Persistent data management for containers
 
 ## Storage Drivers Comparison
 
-| Driver       | Backing FS     | Status          | Performance |
-|-------------|----------------|-----------------|-------------|
-| `overlay2`  | `ext4`, `xfs`  | Recommended     | Excellent   |
-| `fuse-overlayfs` | Any       | Rootless        | Good        |
-| `btrfs`     | `btrfs`        | Stable          | Good        |
-| `zfs`       | `zfs`          | Stable          | Good        |
-| `devicemapper`| Direct-lvm   | Deprecated      | Good        |
-| `vfs`       | Any            | Debug/testing   | Poor        |
+| Driver           | Backing FS    | Status        | Performance |
+| ---------------- | ------------- | ------------- | ----------- |
+| `overlay2`       | `ext4`, `xfs` | Recommended   | Excellent   |
+| `fuse-overlayfs` | Any           | Rootless      | Good        |
+| `btrfs`          | `btrfs`       | Stable        | Good        |
+| `zfs`            | `zfs`         | Stable        | Good        |
+| `devicemapper`   | Direct-lvm    | Deprecated    | Good        |
+| `vfs`            | Any           | Debug/testing | Poor        |
 
 ```bash
 # Check current storage driver
@@ -246,15 +246,15 @@ docker run -d --name secure \
 
 ## Bind Mounts vs Named Volumes
 
-| Feature            | Bind Mount              | Named Volume           |
-|--------------------|------------------------|------------------------|
-| Location           | Anywhere on host       | `/var/lib/docker/volumes` |
-| Pre-populated      | No                     | Yes (from image)       |
-| Portability        | Host-dependent         | Portable               |
-| Managed by Docker  | No                     | Yes                    |
-| Backup             | Standard tools         | `docker volume` commands|
-| Permission issues  | Common                 | Rare                   |
-| Driver support     | Local only             | Multiple drivers       |
+| Feature           | Bind Mount       | Named Volume              |
+| ----------------- | ---------------- | ------------------------- |
+| Location          | Anywhere on host | `/var/lib/docker/volumes` |
+| Pre-populated     | No               | Yes (from image)          |
+| Portability       | Host-dependent   | Portable                  |
+| Managed by Docker | No               | Yes                       |
+| Backup            | Standard tools   | `docker volume` commands  |
+| Permission issues | Common           | Rare                      |
+| Driver support    | Local only       | Multiple drivers          |
 
 ---
 

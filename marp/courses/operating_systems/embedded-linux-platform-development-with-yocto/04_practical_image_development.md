@@ -38,7 +38,7 @@ Base images provided by Yocto:
 ## Image Size Comparison
 
 | Image Type | Typical Size | Use Case |
-|------------|-------------|----------|
+| ------------ | ------------- | ---------- |
 | core-image-minimal | 8-12 MB | Embedded devices |
 | core-image-base | 40-60 MB | Network appliances |
 | core-image-full-cmdline | 100-150 MB | Servers |
@@ -149,7 +149,7 @@ IMAGE_FEATURES = "ssh-server-openssh package-management tools-debug"
 ## Feature Effects
 
 | Feature | Effect |
-|---------|---------|
+| --------- | --------- |
 | debug-tweaks | Empty root password, debug configs |
 | ssh-server-* | SSH server (openssh/dropbear) |
 | package-management | Runtime package manager |

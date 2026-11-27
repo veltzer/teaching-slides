@@ -204,7 +204,7 @@ do_install() {
 ### Variables
 
 | Variable | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | `PN` | Package name |
 | `PV` | Package version |
 | `PR` | Package revision |
@@ -612,7 +612,7 @@ IMAGE_LINGUAS = ""
 ## Yocto vs Alternatives
 
 | Feature | Yocto | Buildroot | OpenWrt |
-|---------|-------|-----------|---------|
+| --------- | ------- | ----------- | --------- |
 | Complexity | High | Low | Medium |
 | Flexibility | High | Medium | Low |
 | Package Count | 10000+ | 2500+ | 5000+ |

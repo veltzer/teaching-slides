@@ -142,17 +142,17 @@ docker run --privileged myapp  # DANGEROUS
 
 ## Capabilities Reference
 
-| Capability          | Purpose                              | Drop? |
-|---------------------|--------------------------------------|-------|
-| `NET_RAW`           | Raw sockets (ping, ARP)             | Yes   |
-| `SYS_ADMIN`        | Mount, sethostname, many things     | Yes   |
-| `SYS_PTRACE`       | Trace/debug processes               | Yes   |
-| `SYS_MODULE`       | Load kernel modules                 | Yes   |
-| `NET_ADMIN`        | Network configuration               | Yes   |
-| `SYS_TIME`         | Set system clock                    | Yes   |
-| `NET_BIND_SERVICE`  | Bind to ports < 1024               | Maybe |
-| `CHOWN`            | Change file ownership               | Maybe |
-| `SETUID`/`SETGID`  | Change UID/GID                      | Maybe |
+| Capability         | Purpose                         | Drop? |
+| ------------------ | ------------------------------- | ----- |
+| `NET_RAW`          | Raw sockets (ping, ARP)         | Yes   |
+| `SYS_ADMIN`        | Mount, sethostname, many things | Yes   |
+| `SYS_PTRACE`       | Trace/debug processes           | Yes   |
+| `SYS_MODULE`       | Load kernel modules             | Yes   |
+| `NET_ADMIN`        | Network configuration           | Yes   |
+| `SYS_TIME`         | Set system clock                | Yes   |
+| `NET_BIND_SERVICE` | Bind to ports < 1024            | Maybe |
+| `CHOWN`            | Change file ownership           | Maybe |
+| `SETUID`/`SETGID`  | Change UID/GID                  | Maybe |
 
 ---
 

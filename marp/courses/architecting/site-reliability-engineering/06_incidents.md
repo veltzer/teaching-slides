@@ -167,7 +167,7 @@ Drill these as a team — chaos engineering, game days, on-call simulations.
 ## Maturing the practice
 
 | Stage | Look like |
-|---|---|
+| --- | --- |
 | Reactive | "What just broke?" |
 | Aware | Pages exist, but no IC structure |
 | Defined | IC role assigned; postmortems written |

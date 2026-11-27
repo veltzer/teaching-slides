@@ -27,7 +27,7 @@ audience:
 Each stage serves a different purpose:
 
 | Stage | Purpose | Analogy |
-|-------|---------|---------|
+| ------- | --------- | --------- |
 | Pre-training | Learn language and knowledge | Going to school for 20 years |
 | SFT | Learn to follow instructions | Job-specific training |
 | RLHF | Align with human preferences | On-the-job feedback |
@@ -411,7 +411,7 @@ Step 4: RLAIF (RL from AI Feedback)
 ## Comparing Alignment Approaches
 
 | Approach | Human Label Cost | Scalability | Quality |
-|----------|-----------------|-------------|---------|
+| ---------- | ----------------- | ------------- | --------- |
 | `RLHF` (OpenAI) | High | Limited | High |
 | `DPO` | Medium | Good | High |
 | `CAI/RLAIF` (Anthropic) | Low | Excellent | High |

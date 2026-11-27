@@ -436,7 +436,7 @@ result = pl.sql(
 ## Coming from pandas
 
 | pandas | Polars |
-|---|---|
+| --- | --- |
 | `df[df.x > 3]` | `df.filter(pl.col("x") > 3)` |
 | `df.assign(y=...)` | `df.with_columns(...)` |
 | `df.groupby().agg()` | `df.group_by().agg()` |

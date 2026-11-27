@@ -288,7 +288,7 @@ review = client.chat.completions.create(
 ## OpenAI vs Anthropic vs Google Prompt Styles
 
 | Feature | OpenAI | Anthropic | Google |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | System prompt | `role: "system"` | `system` parameter | `system_instruction` |
 | Structured output | `response_format` | tool use w/ schema | `response_schema` |
 | Thinking | not exposed | `extended_thinking` | `thinking` config |

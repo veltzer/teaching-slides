@@ -105,13 +105,13 @@ done
 
 ## Real-World Fast Flux Usage
 
-| Malware/Botnet   | Year  | Usage                                    |
-|------------------|-------|------------------------------------------|
-| Storm Worm       | 2007  | Pioneered fast flux for C&C              |
-| Conficker        | 2008  | Used domain generation + fast flux       |
-| Avalanche        | 2009+ | Hosted phishing, malware distribution    |
-| Emotet           | 2018+ | Fast flux for payload delivery           |
-| Cobalt Strike    | 2020+ | Fast flux for C&C beacons                |
+| Malware/Botnet | Year  | Usage                                 |
+| -------------- | ----- | ------------------------------------- |
+| Storm Worm     | 2007  | Pioneered fast flux for C&C           |
+| Conficker      | 2008  | Used domain generation + fast flux    |
+| Avalanche      | 2009+ | Hosted phishing, malware distribution |
+| Emotet         | 2018+ | Fast flux for payload delivery        |
+| Cobalt Strike  | 2020+ | Fast flux for C&C beacons             |
 
 The Avalanche network takedown in 2016 required coordinated effort across 30+ countries.
 

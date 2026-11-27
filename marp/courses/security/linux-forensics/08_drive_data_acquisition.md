@@ -39,14 +39,14 @@ audience:
 
 ## Types of Forensic Images
 
-| Format      | Extension | Description                      |
-|-------------|-----------|----------------------------------|
-| Raw/dd      | `.dd`     | Bit-for-bit copy, no metadata    |
-| E01         | `.E01`    | EnCase format, compressed, hashed|
-| AFF         | `.aff`    | Advanced Forensic Format         |
-| AFF4        | `.aff4`   | Modern, supports large images    |
-| SMART       | `.s01`    | ASR Data format                  |
-| VMDK        | `.vmdk`   | VMware virtual disk              |
+| Format | Extension | Description                       |
+| ------ | --------- | --------------------------------- |
+| Raw/dd | `.dd`     | Bit-for-bit copy, no metadata     |
+| E01    | `.E01`    | EnCase format, compressed, hashed |
+| AFF    | `.aff`    | Advanced Forensic Format          |
+| AFF4   | `.aff4`   | Modern, supports large images     |
+| SMART  | `.s01`    | ASR Data format                   |
+| VMDK   | `.vmdk`   | VMware virtual disk               |
 
 ```bash
 # Raw format is simplest and most universal

@@ -31,7 +31,7 @@ audience:
 ## Automatic Metrics — Overview
 
 | Metric | Measures | Best For | Range |
-|--------|----------|----------|-------|
+| -------- | ---------- | ---------- | ------- |
 | `BLEU` | N-gram overlap with reference | Translation | 0-1 |
 | `ROUGE` | Recall of reference n-grams | Summarization | 0-1 |
 | `METEOR` | Alignment with synonyms | Translation | 0-1 |

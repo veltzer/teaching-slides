@@ -47,7 +47,7 @@ audience:
 ## The Evolution of Web Attacks
 
 | Era | Primary Attacks | Defenses |
-|-----|----------------|----------|
+| ----- | ---------------- | ---------- |
 | 1990s | Simple defacement | Firewalls |
 | 2000s | `SQL injection`, `XSS` | WAFs, input validation |
 | 2010s | API attacks, logic flaws | DevSecOps, SAST/DAST |
@@ -125,7 +125,7 @@ audience:
 ## Attack Categories
 
 | Category | Examples |
-|----------|----------|
+| ---------- | ---------- |
 | **Injection** | `SQL injection`, `XSS`, `OS command injection` |
 | **Broken Auth** | Credential stuffing, session hijacking |
 | **Data Exposure** | Sensitive data in responses, weak crypto |
@@ -209,7 +209,7 @@ which sqlmap && echo "sqlmap installed"
 ## Practice Targets (Legal!)
 
 | Target | Description |
-|--------|-------------|
+| -------- | ------------- |
 | **DVWA** | Damn Vulnerable Web Application |
 | **WebGoat** | OWASP training application |
 | **Juice Shop** | Modern `JavaScript` app with vulns |
@@ -227,7 +227,7 @@ docker run -d -p 8080:80 vulnerables/web-dvwa
 ## What We Will Cover
 
 | Block | Topics |
-|-------|--------|
+| ------- | -------- |
 | **Foundations** | Web (In)security, Mapping, Reconnaissance |
 | **Login and sessions** | Authentication, Sessions, SQL Injection basics |
 | **Injection** | Advanced SQL Injection, XSS |
@@ -245,7 +245,7 @@ docker run -d -p 8080:80 vulnerables/web-dvwa
 ## Types of Security Testing
 
 | Type | Description | Approach |
-|------|------------|----------|
+| ------ | ------------ | ---------- |
 | **Black Box** | No prior knowledge | Simulates external attacker |
 | **Gray Box** | Partial knowledge (creds, docs) | Most common pentest |
 | **White Box** | Full source code access | Code review + testing |

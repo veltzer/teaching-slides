@@ -466,7 +466,7 @@ FetchContent_MakeAvailable(dep1)
 ## FetchContent vs ExternalProject
 
 | Feature | FetchContent | ExternalProject |
-|---|---|---|
+| --- | --- | --- |
 | When it runs | Configure time | Build time |
 | Targets visible | Yes | No |
 | Build integration | Full | Separate build |

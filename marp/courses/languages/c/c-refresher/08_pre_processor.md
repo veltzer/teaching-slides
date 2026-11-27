@@ -201,7 +201,7 @@ void my_function(void);
 ```
 
 | Feature | Include Guards | `#pragma once` |
-|---------|---------------|----------------|
+| --------- | --------------- | ---------------- |
 | Standard C | Yes | No (extension) |
 | Portability | All compilers | Most compilers |
 | Handles symlinks | Yes | May fail |

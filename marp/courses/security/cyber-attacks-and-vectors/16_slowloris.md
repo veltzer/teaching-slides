@@ -82,14 +82,14 @@ audience:
 
 ## Why Slowloris is Effective
 
-| Characteristic       | Slowloris              | Volumetric DDoS         |
-|----------------------|------------------------|-------------------------|
-| Bandwidth required   | Very low (< 1 Mbps)   | High (Gbps - Tbps)      |
-| Packets per second   | Very few               | Millions                 |
-| Detection difficulty | Hard                   | Easier (volume spikes)   |
-| Single machine       | Can be effective       | Requires botnet          |
-| Target               | Application layer      | Network layer            |
-| Cost to attacker     | Nearly free            | Expensive infrastructure |
+| Characteristic       | Slowloris           | Volumetric DDoS          |
+| -------------------- | ------------------- | ------------------------ |
+| Bandwidth required   | Very low (< 1 Mbps) | High (Gbps - Tbps)       |
+| Packets per second   | Very few            | Millions                 |
+| Detection difficulty | Hard                | Easier (volume spikes)   |
+| Single machine       | Can be effective    | Requires botnet          |
+| Target               | Application layer   | Network layer            |
+| Cost to attacker     | Nearly free         | Expensive infrastructure |
 
 ---
 
@@ -176,13 +176,13 @@ def slowloris_attack():
 
 ## Slowloris Variants
 
-| Variant            | Technique                                     | Target          |
-|--------------------|-----------------------------------------------|-----------------|
-| Slowloris          | Partial HTTP headers                          | HTTP servers    |
-| Slow POST (RUDY)  | Sends POST body one byte at a time            | HTTP servers    |
-| Slow Read          | Reads response very slowly (tiny TCP window)  | HTTP servers    |
-| Apache Killer      | Overlapping Range headers                     | Apache httpd    |
-| HashDoS            | Crafted parameters causing hash collisions    | App frameworks  |
+| Variant          | Technique                                    | Target         |
+| ---------------- | -------------------------------------------- | -------------- |
+| Slowloris        | Partial HTTP headers                         | HTTP servers   |
+| Slow POST (RUDY) | Sends POST body one byte at a time           | HTTP servers   |
+| Slow Read        | Reads response very slowly (tiny TCP window) | HTTP servers   |
+| Apache Killer    | Overlapping Range headers                    | Apache httpd   |
+| HashDoS          | Crafted parameters causing hash collisions   | App frameworks |
 
 ---
 
@@ -252,14 +252,14 @@ curl http://localhost/server-status?auto | \
 
 ## Apache vs Nginx Resilience: Comparison
 
-| Feature                    | Apache (prefork/worker) | Nginx                    |
-|----------------------------|------------------------|--------------------------|
-| Connection model           | Thread per connection   | Event-driven (async)     |
-| Default max connections    | 150-256                | 1024+ per worker         |
-| Slowloris vulnerability    | HIGH                   | LOW                      |
-| Resource per connection    | ~2-8 MB thread stack   | ~few KB per connection   |
-| Idle connection cost       | Very expensive          | Very cheap               |
-| Timeout handling           | Waits per thread       | Async timeout per event  |
+| Feature                 | Apache (prefork/worker) | Nginx                   |
+| ----------------------- | ----------------------- | ----------------------- |
+| Connection model        | Thread per connection   | Event-driven (async)    |
+| Default max connections | 150-256                 | 1024+ per worker        |
+| Slowloris vulnerability | HIGH                    | LOW                     |
+| Resource per connection | ~2-8 MB thread stack    | ~few KB per connection  |
+| Idle connection cost    | Very expensive          | Very cheap              |
+| Timeout handling        | Waits per thread        | Async timeout per event |
 
 ---
 
@@ -397,12 +397,12 @@ nft add rule inet filter input \
 
 ## Cloud-Based Mitigation
 
-| Service            | Feature                                  |
-|--------------------|------------------------------------------|
-| Cloudflare         | Automatic Slowloris protection at edge   |
-| AWS ALB/CloudFront | Connection timeout and rate limiting     |
-| Akamai             | Slow POST protection, connection limits  |
-| Azure Front Door   | WAF rules for slow HTTP attacks          |
+| Service            | Feature                                 |
+| ------------------ | --------------------------------------- |
+| Cloudflare         | Automatic Slowloris protection at edge  |
+| AWS ALB/CloudFront | Connection timeout and rate limiting    |
+| Akamai             | Slow POST protection, connection limits |
+| Azure Front Door   | WAF rules for slow HTTP attacks         |
 
 - Cloud CDN and WAF services sit in front of your origin server
 - They handle thousands of concurrent connections efficiently

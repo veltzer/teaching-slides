@@ -15,7 +15,7 @@ audience:
 ## Python's Built-in Data Structures
 
 | Type | Ordered | Mutable | Duplicates | Syntax |
-|------|---------|---------|------------|--------|
+| ------ | --------- | --------- | ------------ | -------- |
 | `list` | Yes | Yes | Yes | `[1, 2, 3]` |
 | `tuple` | Yes | No | Yes | `(1, 2, 3)` |
 | `dict` | Yes* | Yes | Keys: No | `{"a": 1}` |
@@ -631,7 +631,7 @@ print(list(zip_longest(a, b, fillvalue=0)))
 ## Performance - Time Complexity
 
 | Operation | List | Dict | Set |
-|-----------|------|------|-----|
+| ----------- | ------ | ------ | ----- |
 | Access by index | O(1) | - | - |
 | Search | O(n) | O(1) | O(1) |
 | Insert at end | O(1) | O(1) | O(1) |

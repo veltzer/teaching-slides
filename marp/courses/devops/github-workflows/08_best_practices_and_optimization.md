@@ -116,14 +116,14 @@ steps:
 
 ## `GITHUB_TOKEN` Permissions
 
-| Permission       | Read              | Write                          |
-|------------------|-------------------|-------------------------------|
-| `contents`       | Clone, read files | Push commits, create releases  |
-| `pull-requests`  | Read PRs          | Comment, approve, merge PRs    |
-| `issues`         | Read issues       | Create, label, close issues    |
-| `packages`       | Download packages | Publish packages               |
-| `actions`        | Read workflows    | Manage workflow runs           |
-| `deployments`    | Read deployments  | Create deployments             |
+| Permission      | Read              | Write                         |
+| --------------- | ----------------- | ----------------------------- |
+| `contents`      | Clone, read files | Push commits, create releases |
+| `pull-requests` | Read PRs          | Comment, approve, merge PRs   |
+| `issues`        | Read issues       | Create, label, close issues   |
+| `packages`      | Download packages | Publish packages              |
+| `actions`       | Read workflows    | Manage workflow runs          |
+| `deployments`   | Read deployments  | Create deployments            |
 
 ---
 
@@ -152,14 +152,14 @@ steps:
 
 ## Reducing Build Times
 
-| Strategy                    | Savings              |
-|-----------------------------|----------------------|
-| Cache dependencies          | 30-60%               |
-| Shallow clone (depth=1)     | 10-30%               |
-| Path filtering              | Skip entire runs     |
+| Strategy                    | Savings                |
+| --------------------------- | ---------------------- |
+| Cache dependencies          | 30-60%                 |
+| Shallow clone (depth=1)     | 10-30%                 |
+| Path filtering              | Skip entire runs       |
 | Matrix fail-fast            | Stops on first failure |
-| Smaller runner images       | Faster provisioning  |
-| Conditional expensive steps | Varies               |
+| Smaller runner images       | Faster provisioning    |
+| Conditional expensive steps | Varies                 |
 
 - Measure before optimizing: check the **timing** tab in workflow runs
 - Focus on the slowest steps first
@@ -190,15 +190,15 @@ steps:
 
 ## Troubleshooting Common Issues
 
-| Problem                          | Solution                                   |
-|----------------------------------|--------------------------------------------|
-| Workflow not triggering          | Check branch filters and event types       |
-| Permission denied                | Review `permissions` and `GITHUB_TOKEN`    |
-| Secret not available             | Verify secret name and scope               |
-| Cache not restoring              | Check `key` and `restore-keys` patterns    |
-| Action version error             | Pin to a specific tag or SHA               |
-| Job timeout                      | Increase `timeout-minutes` (default: 360)  |
-| Scheduled workflow not running   | Only runs on default branch                |
+| Problem                        | Solution                                  |
+| ------------------------------ | ----------------------------------------- |
+| Workflow not triggering        | Check branch filters and event types      |
+| Permission denied              | Review `permissions` and `GITHUB_TOKEN`   |
+| Secret not available           | Verify secret name and scope              |
+| Cache not restoring            | Check `key` and `restore-keys` patterns   |
+| Action version error           | Pin to a specific tag or SHA              |
+| Job timeout                    | Increase `timeout-minutes` (default: 360) |
+| Scheduled workflow not running | Only runs on default branch               |
 
 ---
 

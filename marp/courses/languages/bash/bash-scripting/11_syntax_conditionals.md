@@ -234,7 +234,7 @@ pattern='^[0-9]+$'
 ## `[` vs `[[` Summary
 
 | Feature | `[` (test) | `[[` |
-|---------|-----------|------|
+| --------- | ----------- | ------ |
 | POSIX compatible | Yes | No (bash only) |
 | Word splitting | Yes (quote!) | No |
 | Glob patterns | No | `==` |

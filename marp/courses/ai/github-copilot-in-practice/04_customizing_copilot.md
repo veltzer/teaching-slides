@@ -113,7 +113,7 @@ audience:
 ## Keep It Short and Concrete
 
 | Weak instruction | Strong instruction |
-|---|---|
+| --- | --- |
 | Write good tests | Tests use `pytest` fixtures from `tests/conftest.py` |
 | Follow our style | Functions over 40 lines must be split |
 | Be careful with the database | All queries go through `core/db/repo.py` |
@@ -153,7 +153,7 @@ description: "Conventions for Python tests"
 ## Different Rules for Different Code
 
 | File | `applyTo` | Typical rules |
-|---|---|---|
+| --- | --- | --- |
 | `tests.instructions.md` | `tests/**` | fixtures, naming, no sleeps |
 | `frontend.instructions.md` | `web/src/**/*.tsx` | components, hooks, styling system |
 | `sql.instructions.md` | `**/*.sql` | migration style, no `SELECT *` |
@@ -262,7 +262,7 @@ Add a new endpoint `${input:route:e.g. GET /orders/{id}}`.
 ## Instructions vs Prompt Files
 
 | Question | Instructions | Prompt file |
-|---|---|---|
+| --- | --- | --- |
 | When is it used? | Every request, automatically | Only when you type `/name` |
 | What does it hold? | Rules and conventions | A task and its steps |
 | Parameters? | No | Yes, `${input:...}` |
@@ -309,7 +309,7 @@ You are a planning assistant. Never edit files.
 ## Instructions, Prompt Files and Custom Agents
 
 | | Instructions | Prompt file | Custom agent |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Activated by | Automatically | `/name` | Agent dropdown |
 | Lifetime | Every request | One request | Whole conversation |
 | Restricts tools | No | Yes | Yes |

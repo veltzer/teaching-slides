@@ -178,7 +178,7 @@ terraform {
 ## Available Backends
 
 | Backend | Provider | Locking | Encryption |
-|---------|----------|---------|------------|
+| --------- | ---------- | --------- | ------------ |
 | `s3` | AWS | DynamoDB | Yes |
 | `azurerm` | Azure | Blob lease | Yes |
 | `gcs` | GCP | Native | Yes |

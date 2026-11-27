@@ -286,7 +286,7 @@ public class SecureDatabase {
 ## Permission Groups and Categories
 
 | Permission Group | Common Permissions | Protection Level |
-|-----------------|-------------------|------------------|
+| ----------------- | ------------------- | ------------------ |
 | STORAGE | READ_EXTERNAL_STORAGE | Dangerous |
 | LOCATION | ACCESS_FINE_LOCATION | Dangerous |
 | CAMERA | CAMERA | Dangerous |

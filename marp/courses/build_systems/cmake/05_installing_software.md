@@ -66,7 +66,7 @@ cmake --install .
 ## Default Install Locations
 
 | Platform | Default Prefix |
-|----------|----------------|
+| ---------- | ---------------- |
 | Linux / macOS | `/usr/local` |
 | Windows | `C:\Program Files\<project>` |
 
@@ -132,7 +132,7 @@ install(TARGETS mylib
 ## RUNTIME, LIBRARY, and ARCHIVE
 
 | Component | File Types | Typical Destination |
-|-----------|-----------|---------------------|
+| ----------- | ----------- | --------------------- |
 | `RUNTIME` | `.exe`, `.dll` | `bin/` |
 | `LIBRARY` | `.so`, `.dylib` | `lib/` |
 | `ARCHIVE` | `.a`, `.lib`, import libs | `lib/` |
@@ -280,7 +280,7 @@ install(FILES include/mylib.h
 ## GNUInstallDirs Variables
 
 | Variable | Default Value |
-|----------|---------------|
+| ---------- | --------------- |
 | `CMAKE_INSTALL_BINDIR` | `bin` |
 | `CMAKE_INSTALL_LIBDIR` | `lib` or `lib64` |
 | `CMAKE_INSTALL_INCLUDEDIR` | `include` |
@@ -386,7 +386,7 @@ write_basic_package_version_file(
 ## VERSION Compatibility Modes
 
 | Mode | Meaning |
-|------|---------|
+| ------ | --------- |
 | `AnyNewerVersion` | Any version >= requested |
 | `SameMajorVersion` | Same major, any minor/patch |
 | `SameMinorVersion` | Same major.minor, any patch |

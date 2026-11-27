@@ -38,17 +38,17 @@ Logging, monitoring, health checks, and lifecycle management
 
 ## Logging Drivers
 
-| Driver        | Description                    | Supports `docker logs` |
-|---------------|--------------------------------|:----------------------:|
-| `json-file`   | Default, `JSON` format files  | Yes                    |
-| `local`       | Optimized local storage        | Yes                    |
-| `journald`    | `systemd` journal              | Yes                    |
-| `syslog`      | `syslog` daemon                | No                     |
-| `fluentd`     | `Fluentd` collector            | No                     |
-| `splunk`      | `Splunk` `HTTP` Event Collector| No                     |
-| `awslogs`     | `AWS CloudWatch` Logs          | No                     |
-| `gcplogs`     | `Google Cloud` Logging         | No                     |
-| `none`        | No logging                     | No                     |
+| Driver      | Description                     | Supports `docker logs` |
+| ----------- | ------------------------------- | :--------------------: |
+| `json-file` | Default, `JSON` format files    |          Yes           |
+| `local`     | Optimized local storage         |          Yes           |
+| `journald`  | `systemd` journal               |          Yes           |
+| `syslog`    | `syslog` daemon                 |           No           |
+| `fluentd`   | `Fluentd` collector             |           No           |
+| `splunk`    | `Splunk` `HTTP` Event Collector |           No           |
+| `awslogs`   | `AWS CloudWatch` Logs           |           No           |
+| `gcplogs`   | `Google Cloud` Logging          |           No           |
+| `none`      | No logging                      |           No           |
 
 ---
 
@@ -408,12 +408,12 @@ HEALTHCHECK --interval=15s --timeout=5s \
 
 ## Health Check Parameters
 
-| Parameter        | Default | Description                          |
-|------------------|---------|--------------------------------------|
-| `--interval`     | 30s     | Time between checks                 |
-| `--timeout`      | 30s     | Max time for check to complete      |
-| `--start-period` | 0s      | Grace period for startup            |
-| `--retries`      | 3       | Consecutive failures before unhealthy|
+| Parameter        | Default | Description                           |
+| ---------------- | ------- | ------------------------------------- |
+| `--interval`     | 30s     | Time between checks                   |
+| `--timeout`      | 30s     | Max time for check to complete        |
+| `--start-period` | 0s      | Grace period for startup              |
+| `--retries`      | 3       | Consecutive failures before unhealthy |
 
 ```bash
 # Health check exit codes:
@@ -705,12 +705,12 @@ docker run -d --restart=unless-stopped myapp
 docker run -d --restart=on-failure:5 myapp
 ```
 
-| Policy            | On crash | On daemon restart | On `docker stop` |
-|-------------------|----------|-------------------|-------------------|
-| `no`              | No       | No                | No                |
-| `always`          | Yes      | Yes               | No (restarts)     |
-| `unless-stopped`  | Yes      | No (if stopped)   | No                |
-| `on-failure:N`    | Yes (N)  | No                | No                |
+| Policy           | On crash | On daemon restart | On `docker stop` |
+| ---------------- | -------- | ----------------- | ---------------- |
+| `no`             | No       | No                | No               |
+| `always`         | Yes      | Yes               | No (restarts)    |
+| `unless-stopped` | Yes      | No (if stopped)   | No               |
+| `on-failure:N`   | Yes (N)  | No                | No               |
 
 ---
 

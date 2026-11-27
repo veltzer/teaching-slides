@@ -415,7 +415,7 @@ nmap -O server.example.com
 ## Tool Selection Guide
 
 | Task | Primary Tool | Alternative |
-|------|-------------|-------------|
+| ------ | ------------- | ------------- |
 | Interface Config | ip | ifconfig |
 | Connection Info | ss | netstat |
 | Packet Capture | tcpdump | wireshark |

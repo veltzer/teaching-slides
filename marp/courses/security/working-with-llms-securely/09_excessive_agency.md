@@ -52,10 +52,10 @@ Agency turns language manipulation into **real-world damage**
 
 ## Three Dimensions of Excessive Agency Detail
 
-| Dimension           | Description                          |
-|---------------------|--------------------------------------|
-| **Excessive Functionality** | Too many plugins/tools available |
-| **Excessive Permissions**   | Tools have more access than needed |
+| Dimension                   | Description                          |
+| --------------------------- | ------------------------------------ |
+| **Excessive Functionality** | Too many plugins/tools available     |
+| **Excessive Permissions**   | Tools have more access than needed   |
 | **Excessive Autonomy**      | Actions taken without human approval |
 
 ---
@@ -217,11 +217,11 @@ def execute_action(action, user_session):
 
 ## Mitigation: Action Classification
 
-| Risk Level | Examples                    | Control          |
-|------------|-----------------------------|------------------|
-| **Low**    | Read data, search, summarize | Auto-execute     |
-| **Medium** | Send message, create record  | Log + notify     |
-| **High**   | Delete data, send payment    | Human approval   |
+| Risk Level   | Examples                      | Control        |
+| ------------ | ----------------------------- | -------------- |
+| **Low**      | Read data, search, summarize  | Auto-execute   |
+| **Medium**   | Send message, create record   | Log + notify   |
+| **High**     | Delete data, send payment     | Human approval |
 | **Critical** | Modify permissions, admin ops | Block entirely |
 
 ---

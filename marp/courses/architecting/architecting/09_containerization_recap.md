@@ -162,7 +162,7 @@ volumes:
 ## Base Image Comparison
 
 | Base Image | Size | Use Case |
-|-----------|------|----------|
+| ----------- | ------ | ---------- |
 | `ubuntu:22.04` | ~77 MB | General purpose |
 | `python:3.11` | ~900 MB | Full Python environment |
 | `python:3.11-slim` | ~120 MB | Stripped Python |

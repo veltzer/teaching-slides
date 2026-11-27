@@ -37,7 +37,7 @@ audience:
 ## DAC vs MAC Comparison
 
 | Feature | DAC | MAC |
-|---------|-----|-----|
+| --------- | ----- | ----- |
 | Access decisions | File owner | System policy |
 | Root bypass | Root can override | Root is restricted |
 | Configuration | `chmod`/`chown` | Policy files |
@@ -55,7 +55,7 @@ MAC is essential when:
 ## SELinux Modes
 
 | Mode | Description |
-|------|-------------|
+| ------ | ------------- |
 | Enforcing | Policies enforced, violations denied and logged |
 | Permissive | Violations logged but not denied |
 | Disabled | SELinux completely off |
@@ -145,7 +145,7 @@ semodule -i mypolicy.pp
 ## Common SELinux Booleans
 
 | Boolean | Purpose |
-|---------|---------|
+| --------- | --------- |
 | `httpd_can_network_connect` | Allow HTTP to connect to network |
 | `httpd_can_network_connect_db` | Allow HTTP to connect to DB |
 | `httpd_enable_homedirs` | Serve content from home dirs |
@@ -214,7 +214,7 @@ ausearch -m AVC -ts recent | audit2why
 ## AppArmor Modes
 
 | Mode | Description |
-|------|-------------|
+| ------ | ------------- |
 | Enforce | Policy enforced, violations denied |
 | Complain | Violations logged, not denied |
 | Disabled | Profile not loaded |
@@ -276,7 +276,7 @@ apparmor_parser -R /etc/apparmor.d/usr.sbin.nginx
 ## AppArmor Permission Flags
 
 | Flag | Permission |
-|------|-----------|
+| ------ | ----------- |
 | `r` | Read |
 | `w` | Write |
 | `a` | Append |
@@ -289,7 +289,7 @@ apparmor_parser -R /etc/apparmor.d/usr.sbin.nginx
 ## AppArmor Permission Flags (cont.)
 
 | Flag | Permission |
-|------|-----------|
+| ------ | ----------- |
 | `ix` | Inherit execute (same profile) |
 | `px` | Profile execute (switch to target profile) |
 | `ux` | Unconfined execute |
@@ -457,7 +457,7 @@ Create custom abstractions for shared rules across profiles.
 ## SELinux vs AppArmor Comparison
 
 | Feature | SELinux | AppArmor |
-|---------|---------|----------|
+| --------- | --------- | ---------- |
 | Approach | Labels on all objects | Path-based rules |
 | Default distros | RHEL, Fedora, CentOS | Ubuntu, SUSE, Debian |
 | Policy scope | System-wide | Per-application |
@@ -469,7 +469,7 @@ Create custom abstractions for shared rules across profiles.
 ## SELinux vs AppArmor Comparison (cont.)
 
 | Feature | SELinux | AppArmor |
-|---------|---------|----------|
+| --------- | --------- | ---------- |
 | File identification | By inode label | By file path |
 | Hardlink safety | Secure (label follows) | Risk (path changes) |
 | New file handling | Inherits parent context | Matched by path rule |

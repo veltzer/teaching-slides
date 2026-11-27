@@ -141,13 +141,13 @@ type ls
 
 Common control characters:
 
-| Key      | Function          |
-|----------|-------------------|
-| Ctrl+C   | Interrupt        |
-| Ctrl+Z   | Suspend          |
-| Ctrl+D   | End of input     |
-| Ctrl+L   | Clear screen     |
-| Ctrl+R   | Search history   |
+| Key    | Function       |
+| ------ | -------------- |
+| Ctrl+C | Interrupt      |
+| Ctrl+Z | Suspend        |
+| Ctrl+D | End of input   |
+| Ctrl+L | Clear screen   |
+| Ctrl+R | Search history |
 
 ---
 

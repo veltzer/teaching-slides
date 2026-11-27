@@ -108,7 +108,7 @@ audience:
 ## Monolith vs Microservices Comparison
 
 | Aspect | Monolith | Microservices |
-|--------|----------|---------------|
+| -------- | ---------- | --------------- |
 | Deployment | Single unit | Independent services |
 | Scaling | Vertical | Horizontal per service |
 | Technology | Uniform stack | Polyglot |
@@ -138,7 +138,7 @@ audience:
 ## SOA vs Microservices
 
 | Aspect | SOA | Microservices |
-|--------|-----|---------------|
+| -------- | ----- | --------------- |
 | Service size | Large, coarse-grained | Small, fine-grained |
 | Communication | `ESB`, `SOAP` | `REST`, `gRPC`, messaging |
 | Data | Shared databases common | Database per service |

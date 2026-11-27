@@ -113,7 +113,7 @@ drwxr-xr-x  7 user user 4096 Jan 15 10:00 .git
 ## Git Init vs Clone
 
 | `git init` | `git clone` |
-|------------|-------------|
+| ------------ | ------------- |
 | Creates new repository | Copies existing repository |
 | Empty history | Full history included |
 | No remote configured | Remote "origin" configured |
@@ -911,7 +911,7 @@ git reset --hard HEAD@{2}
 ## Key Commands Reference
 
 | Command | Purpose |
-|---------|---------|
+| --------- | --------- |
 | `git init` | Create repository |
 | `git add` | Stage changes |
 | `git commit` | Save snapshot |

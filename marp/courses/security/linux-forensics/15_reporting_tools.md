@@ -99,25 +99,25 @@ Creating a New Case:
 
 ## Autopsy Analysis Modules
 
-| Module                    | Purpose                            |
-|--------------------------|-------------------------------------|
+| Module                   | Purpose                             |
+| ------------------------ | ----------------------------------- |
 | Recent Activity          | Browser history, downloads, cookies |
-| Hash Lookup              | NSRL filtering, known bad files    |
-| File Type Identification | Verify file types by signature     |
-| Keyword Search           | Search for terms across all files  |
-| Email Parser             | Extract email messages             |
+| Hash Lookup              | NSRL filtering, known bad files     |
+| File Type Identification | Verify file types by signature      |
+| Keyword Search           | Search for terms across all files   |
+| Email Parser             | Extract email messages              |
 
 ---
 
 ## Autopsy Analysis Modules (cont.)
 
-| Module                    | Purpose                            |
-|--------------------------|-------------------------------------|
-| Extension Mismatch       | Find renamed/disguised files       |
-| EXIF Parser              | Extract image metadata             |
-| Encryption Detection     | Find encrypted files/volumes       |
-| Interesting Files        | Flag files matching custom rules   |
-| Android Analyzer         | Parse Android device data          |
+| Module               | Purpose                          |
+| -------------------- | -------------------------------- |
+| Extension Mismatch   | Find renamed/disguised files     |
+| EXIF Parser          | Extract image metadata           |
+| Encryption Detection | Find encrypted files/volumes     |
+| Interesting Files    | Flag files matching custom rules |
+| Android Analyzer     | Parse Android device data        |
 
 ---
 
@@ -475,16 +475,16 @@ Integrated Forensic Workflow:
 
 ## Other Reporting Tools
 
-| Tool           | Type          | Key Feature                  |
-|---------------|---------------|------------------------------|
-| Autopsy       | Analysis + Report | Integrated TSK frontend  |
-| Dradis CE     | Collaboration     | Multi-user, templates    |
-| Magnet AXIOM  | Commercial        | Comprehensive suite      |
-| X-Ways        | Commercial        | Fast, efficient          |
-| DFIR-IRIS     | Open source       | Incident response        |
-| TheHive       | Open source       | Case management          |
-| Plaso/log2timeline | Timeline     | Super timeline generation|
-| Timesketch    | Timeline          | Collaborative timelines  |
+| Tool               | Type              | Key Feature               |
+| ------------------ | ----------------- | ------------------------- |
+| Autopsy            | Analysis + Report | Integrated TSK frontend   |
+| Dradis CE          | Collaboration     | Multi-user, templates     |
+| Magnet AXIOM       | Commercial        | Comprehensive suite       |
+| X-Ways             | Commercial        | Fast, efficient           |
+| DFIR-IRIS          | Open source       | Incident response         |
+| TheHive            | Open source       | Case management           |
+| Plaso/log2timeline | Timeline          | Super timeline generation |
+| Timesketch         | Timeline          | Collaborative timelines   |
 
 ---
 

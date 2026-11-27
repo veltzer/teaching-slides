@@ -229,7 +229,7 @@ lvs -a -o +devices /dev/data-vg/mirror-lv
 ## RAID Levels Overview
 
 | Level | Min Disks | Redundancy | Performance | Capacity |
-|-------|-----------|------------|-------------|----------|
+| ------- | ----------- | ------------ | ------------- | ---------- |
 | RAID 0 | 2 | None | Best read/write | 100% |
 | RAID 1 | 2 | Mirror | Good read | 50% |
 | RAID 5 | 3 | 1 disk | Good read | (N-1)/N |

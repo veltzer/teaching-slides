@@ -30,7 +30,7 @@ audience:
 ## Resource Limits and Constraints
 
 | Resource | Flag | Purpose | Example |
-|----------|------|---------|---------|
+| ---------- | ------ | --------- | --------- |
 | CPU | --cpus | Limit CPU usage | `--cpus=2` |
 | Memory | --memory | Set memory limit | `--memory=1g` |
 | Swap | --memory-swap | Set swap limit | `--memory-swap=2g` |
@@ -47,7 +47,7 @@ audience:
 ## Build Optimization Techniques
 
 | Technique | Implementation | Benefit |
-|-----------|---------------|----------|
+| ----------- | --------------- | ---------- |
 | Layer ordering | Most stable first | Better cache usage |
 | Multi-stage | Separate build/run | Smaller final image |
 | Cache mounting | `--mount=type=cache` | Faster builds |
@@ -64,7 +64,7 @@ audience:
 ## Network Performance
 
 | Aspect | Optimization | Impact |
-|--------|-------------|---------|
+| -------- | ------------- | --------- |
 | DNS | Custom resolvers | Faster lookups |
 | Network mode | Host networking | Better performance |
 | Port binding | Efficient mapping | Reduced overhead |
@@ -81,7 +81,7 @@ audience:
 ## Memory Management
 
 | Strategy | Implementation | Purpose |
-|----------|---------------|----------|
+| ---------- | --------------- | ---------- |
 | Limit setting | --memory | Prevent OOM |
 | Swap control | --memory-swap | Control swap usage |
 | OOM priority | --oom-score-adj | Set OOM priority |
@@ -98,7 +98,7 @@ audience:
 ## Performance Testing
 
 | Test Type | Tool | Metrics |
-|-----------|------|---------|
+| ----------- | ------ | --------- |
 | Load testing | Apache Bench | Requests/second |
 | Resource monitoring | docker stats | CPU/Memory usage |
 | Network testing | iperf | Network throughput |
@@ -115,7 +115,7 @@ audience:
 ## Best Practices Summary
 
 | Area | Practice | Benefit |
-|------|----------|---------|
+| ------ | ---------- | --------- |
 | Images | Use multi-stage builds | Smaller images |
 | Cache | Optimize layer order | Faster builds |
 | Resources | Set appropriate limits | Better stability |

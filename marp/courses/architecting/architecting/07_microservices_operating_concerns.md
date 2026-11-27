@@ -63,7 +63,7 @@ audience:
 ## BFF vs Single API Gateway
 
 | Aspect | Single Gateway | BFF |
-|--------|---------------|-----|
+| -------- | --------------- | ----- |
 | Clients | All clients | One per client type |
 | Ownership | Platform team | Frontend teams |
 | API shape | Generic | Client-specific |
@@ -195,7 +195,7 @@ audience:
 ## Choreography vs Orchestration
 
 | Aspect | Choreography | Orchestration |
-|--------|-------------|---------------|
+| -------- | ------------- | --------------- |
 | Coupling | Loosely coupled | Central coordinator |
 | Visibility | Hard to trace flow | Clear workflow |
 | Complexity | Distributed logic | Centralized logic |

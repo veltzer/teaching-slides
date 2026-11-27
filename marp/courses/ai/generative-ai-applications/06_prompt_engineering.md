@@ -306,7 +306,7 @@ Process:
 ## Common Prompt Engineering Patterns
 
 | Pattern | Description | Example |
-|---------|-------------|---------|
+| --------- | ------------- | --------- |
 | **Persona** | Assign a role | "You are a security expert" |
 | **Decomposition** | Break complex tasks | "First X, then Y, then Z" |
 | **Enumeration** | Request numbered items | "List exactly 5 points" |

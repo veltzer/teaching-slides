@@ -136,13 +136,13 @@ hadolint Dockerfile
 # missing USER instruction, etc.
 ```
 
-| Tool          | Type                    | Focus                    |
-|---------------|-------------------------|--------------------------|
-| Trivy         | Multi-purpose scanner   | CVEs, secrets, IaC       |
-| Grype         | Vulnerability scanner   | CVEs in images           |
-| Hadolint      | Dockerfile linter       | Best practices           |
-| Dockle        | Image linter            | CIS Benchmark compliance |
-| Falco         | Runtime security        | Behavioral monitoring    |
+| Tool     | Type                  | Focus                    |
+| -------- | --------------------- | ------------------------ |
+| Trivy    | Multi-purpose scanner | CVEs, secrets, IaC       |
+| Grype    | Vulnerability scanner | CVEs in images           |
+| Hadolint | Dockerfile linter     | Best practices           |
+| Dockle   | Image linter          | CIS Benchmark compliance |
+| Falco    | Runtime security      | Behavioral monitoring    |
 
 ---
 

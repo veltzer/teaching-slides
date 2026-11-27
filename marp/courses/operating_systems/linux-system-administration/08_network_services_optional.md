@@ -388,7 +388,7 @@ systemctl restart apache2
 ```
 
 | MPM | Model | Best For |
-|-----|-------|----------|
+| ----- | ------- | ---------- |
 | `prefork` | Process per connection | Legacy `mod_php` |
 | `worker` | Thread pool per process | General purpose |
 | `event` | Async event-driven | High concurrency |

@@ -63,7 +63,7 @@ audience:
 ## Redis vs Traditional Databases
 
 | Feature | Redis | Traditional RDBMS |
-|---------|-------|-------------------|
+| --------- | ------- | ------------------- |
 | Data Model | In-memory, NoSQL | Disk-based, SQL |
 | Query Language | Command-based | SQL |
 | Transaction Support | Limited (MULTI/EXEC) | ACID compliant |

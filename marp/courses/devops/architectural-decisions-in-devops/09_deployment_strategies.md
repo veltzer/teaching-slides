@@ -42,7 +42,7 @@ audience:
 ## Strategy Comparison
 
 | Strategy | Downtime | Rollback Speed | Infra Cost | Complexity |
-|----------|----------|----------------|------------|------------|
+| ---------- | ---------- | ---------------- | ------------ | ------------ |
 | Blue/Green | None | Instant | High | Low |
 | Canary | None | Fast | Medium | Medium |
 | Rolling | None | Moderate | Low | Medium |
@@ -619,7 +619,7 @@ def check_stale_flags():
 ## Rollback Strategies Compared
 
 | Strategy | Rollback Method | Time to Rollback | Data Risk |
-|----------|----------------|------------------|-----------|
+| ---------- | ---------------- | ------------------ | ----------- |
 | Blue/Green | Switch traffic back | Seconds | Low |
 | Canary | Remove canary instances | Seconds | Low |
 | Rolling | Re-deploy old version | Minutes | Medium |

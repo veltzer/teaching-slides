@@ -24,7 +24,7 @@ audience:
 ## How Virtual Machines Work
 
 | Component | Role | Resource Impact |
-|-----------|------|----------------|
+| ----------- | ------ | ---------------- |
 | Guest OS | Complete OS copy | 5-20GB storage |
 | Hypervisor | Resource management | 10-20% overhead |
 | Virtual Hardware | Hardware emulation | Memory overhead |
@@ -52,7 +52,7 @@ audience:
 ## Container Advantages
 
 | Feature | Containers | Virtual Machines |
-|---------|------------|------------------|
+| --------- | ------------ | ------------------ |
 | Startup Time | Seconds | Minutes |
 | Size | MBs | GBs |
 | Resource Usage | Low overhead | High overhead |
@@ -82,7 +82,7 @@ audience:
 ## Namespace Isolation
 
 | Namespace | Purpose | Isolation |
-|-----------|---------|-----------|
+| ----------- | --------- | ----------- |
 | PID | Process isolation | Process tree |
 | NET | Network isolation | Network stack |
 | MNT | Filesystem isolation | Mount points |

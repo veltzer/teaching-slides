@@ -43,13 +43,13 @@ audience:
 
 ## Types of Buffer Overflows
 
-| Type              | Location    | Difficulty | Common Target          |
-|-------------------|-------------|------------|------------------------|
-| Stack overflow    | Stack       | Medium     | Return address         |
-| Heap overflow     | Heap        | Hard       | Function pointers      |
-| Integer overflow  | Anywhere    | Medium     | Size calculations      |
-| Format string     | Stack       | Medium     | Arbitrary read/write   |
-| Off-by-one        | Stack/Heap  | Hard       | Frame pointer          |
+| Type             | Location   | Difficulty | Common Target        |
+| ---------------- | ---------- | ---------- | -------------------- |
+| Stack overflow   | Stack      | Medium     | Return address       |
+| Heap overflow    | Heap       | Hard       | Function pointers    |
+| Integer overflow | Anywhere   | Medium     | Size calculations    |
+| Format string    | Stack      | Medium     | Arbitrary read/write |
+| Off-by-one       | Stack/Heap | Hard       | Frame pointer        |
 
 ---
 
@@ -143,14 +143,14 @@ void dynamic_function(const char *user_input) {
 
 ## Unsafe vs Safe C Functions
 
-| Unsafe Function | Safe Alternative         | Notes                        |
-|-----------------|--------------------------|------------------------------|
-| `strcpy`        | `strncpy` / `strlcpy`   | Always specify max length    |
-| `strcat`        | `strncat` / `strlcat`   | Track remaining buffer space |
-| `sprintf`       | `snprintf`              | Specify buffer size          |
-| `gets`          | `fgets`                 | `gets` removed in C11       |
-| `scanf("%s")`   | `scanf("%63s")`         | Specify field width          |
-| `vsprintf`      | `vsnprintf`             | Specify buffer size          |
+| Unsafe Function | Safe Alternative      | Notes                        |
+| --------------- | --------------------- | ---------------------------- |
+| `strcpy`        | `strncpy` / `strlcpy` | Always specify max length    |
+| `strcat`        | `strncat` / `strlcat` | Track remaining buffer space |
+| `sprintf`       | `snprintf`            | Specify buffer size          |
+| `gets`          | `fgets`               | `gets` removed in C11        |
+| `scanf("%s")`   | `scanf("%63s")`       | Specify field width          |
+| `vsprintf`      | `vsnprintf`           | Specify buffer size          |
 
 ---
 
@@ -259,13 +259,13 @@ void secure_integer(size_t count, size_t element_size) {
 
 ## Real-World Case Studies
 
-| Vulnerability   | Year | Impact                                      |
-|----------------|------|----------------------------------------------|
-| Morris Worm    | 1988 | First internet worm, fingerd overflow         |
-| Code Red       | 2001 | IIS buffer overflow, 359,000 hosts infected   |
-| Slammer        | 2003 | SQL Server overflow, infected 75K hosts in 10m|
-| Heartbleed     | 2014 | OpenSSL buffer over-read, leaked private keys |
-| EternalBlue    | 2017 | SMB overflow, enabled WannaCry ransomware     |
+| Vulnerability | Year | Impact                                         |
+| ------------- | ---- | ---------------------------------------------- |
+| Morris Worm   | 1988 | First internet worm, fingerd overflow          |
+| Code Red      | 2001 | IIS buffer overflow, 359,000 hosts infected    |
+| Slammer       | 2003 | SQL Server overflow, infected 75K hosts in 10m |
+| Heartbleed    | 2014 | OpenSSL buffer over-read, leaked private keys  |
+| EternalBlue   | 2017 | SMB overflow, enabled WannaCry ransomware      |
 
 ---
 
@@ -317,9 +317,9 @@ gcc -Wall -Wextra -Werror \
     -o program program.c
 ```
 
-| Flag                     | Protection                          |
-|--------------------------|-------------------------------------|
-| `-fstack-protector-all`  | Stack canaries on all functions     |
+| Flag                    | Protection                          |
+| ----------------------- | ----------------------------------- |
+| `-fstack-protector-all` | Stack canaries on all functions     |
 | `-D_FORTIFY_SOURCE=2`   | Runtime bounds checking for libc    |
 | `-fPIE -pie`            | Position independent executable     |
 | `-z relro -z now`       | Read-only relocations (GOT protect) |

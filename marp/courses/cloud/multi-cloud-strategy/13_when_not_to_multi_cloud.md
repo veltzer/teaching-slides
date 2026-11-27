@@ -236,7 +236,7 @@ resource "helm_release" "postgresql" {
 ## Decision Matrix
 
 | Factor | Single-Cloud | Multi-Cloud |
-|--------|-------------|-------------|
+| -------- | ------------- | ------------- |
 | Complexity | Lower | Higher |
 | Cost | Lower | 15-30% higher |
 | Talent needs | Focused | Broader |

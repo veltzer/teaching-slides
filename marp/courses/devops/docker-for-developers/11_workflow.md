@@ -30,7 +30,7 @@ audience:
 ## Local Development Best Practices
 
 | Practice | Purpose | Implementation |
-|----------|---------|----------------|
+| ---------- | --------- | ---------------- |
 | Volume mounts | Code sync | `-v $(pwd):/app` |
 | Hot reload | Quick iteration | Development servers |
 | Docker Compose | Multi-container | `docker-compose.yml` |
@@ -47,7 +47,7 @@ audience:
 ## IDE Integration Tips
 
 | IDE | Features | Setup |
-|-----|----------|-------|
+| ----- | ---------- | ------- |
 | VS Code | Docker extension | Remote containers |
 | IntelliJ | Docker integration | Docker compose |
 | Eclipse | Docker tooling | Container launch |
@@ -64,7 +64,7 @@ audience:
 ## Debugging Tools
 
 | Tool | Purpose | Usage |
-|------|---------|-------|
+| ------ | --------- | ------- |
 | docker exec | Shell access | Interactive debugging |
 | docker logs | Log viewing | Monitoring output |
 | docker inspect | Container info | Configuration check |
@@ -81,7 +81,7 @@ audience:
 ## Environment Management
 
 | File | Purpose | Example |
-|------|---------|---------|
+| ------ | --------- | --------- |
 | .env | Environment vars | `DB_HOST=localhost` |
 | docker-compose.override.yml | Local overrides | Development settings |
 | .dockerignore | Exclude files | `node_modules` |
@@ -98,7 +98,7 @@ audience:
 ## Version Control Integration
 
 | Aspect | Practice | Purpose |
-|--------|----------|---------|
+| -------- | ---------- | --------- |
 | Dockerfile | Version control | Track changes |
 | Images | Tagged versions | Release management |
 | Compose files | Environment specific | Configuration control |
@@ -115,7 +115,7 @@ audience:
 ## Performance Optimization
 
 | Area | Technique | Benefit |
-|------|-----------|---------|
+| ------ | ----------- | --------- |
 | Build cache | Layer optimization | Faster builds |
 | Multi-stage | Smaller images | Reduced size |
 | Development mounts | Quick updates | Faster iteration |

@@ -62,7 +62,7 @@ With RAG:
 ## Document Chunking Strategies for Code
 
 | Strategy | Granularity | Best For |
-|----------|------------|----------|
+| ---------- | ------------ | ---------- |
 | File-level | Entire files | Small files, configs |
 | Function-level | Individual functions/methods | Most source code |
 | Class-level | Full class definitions | OOP-heavy codebases |
@@ -76,7 +76,7 @@ With RAG:
 ## Tree-sitter vs AST Chunking Comparison
 
 | Aspect | `tree-sitter` | Language-Native Parsers (e.g., Python `ast`) |
-|--------|---------------|----------------------------------------------|
+| -------- | --------------- | ---------------------------------------------- |
 | Language support | 100+ languages via grammars | One language per parser |
 | Error tolerance | Parses incomplete/broken code | Fails on syntax errors |
 | Incremental parsing | Yes, re-parses only changes | Full re-parse required |
@@ -86,7 +86,7 @@ With RAG:
 ## Tree-sitter vs AST Chunking Comparison (cont.)
 
 | Aspect | `tree-sitter` | Language-Native Parsers (e.g., Python `ast`) |
-|--------|---------------|----------------------------------------------|
+| -------- | --------------- | ---------------------------------------------- |
 | Granularity control | Configurable node types | Language-specific APIs |
 | Maintenance | Community-maintained grammars | Tied to language version |
 
@@ -136,7 +136,7 @@ def extract_functions(source: str) -> list[dict]:
 ## Embedding Models for Source Code
 
 | Model | Strengths | Dimension |
-|-------|-----------|-----------|
+| ------- | ----------- | ----------- |
 | `text-embedding-3-large` | General purpose, good for mixed code+docs | 3072 |
 | `voyage-code-3` | Purpose-built for code retrieval | 1024 |
 | `codesage-large` | Open-source, multi-language code | 1024 |
@@ -152,7 +152,7 @@ def extract_functions(source: str) -> list[dict]:
 ## Embedding Model Selection Guide
 
 | Criteria | `voyage-code-3` | `text-embedding-3-large` | `nomic-embed-code` |
-|----------|-----------------|--------------------------|---------------------|
+| ---------- | ----------------- | -------------------------- | --------------------- |
 | Code retrieval accuracy | Highest | Good | Good |
 | Dimensions | 1024 | 3072 | 768 |
 | Cost per 1M tokens | ~$0.06 | ~$0.13 | Free (open-source) |
@@ -175,7 +175,7 @@ def extract_functions(source: str) -> list[dict]:
 ## Vector Databases Comparison
 
 | Database | Deployment | Strengths |
-|----------|-----------|-----------|
+| ---------- | ----------- | ----------- |
 | `ChromaDB` | Embedded / self-hosted | Easy setup, great for prototyping |
 | `Qdrant` | Self-hosted / cloud | High performance, rich filtering |
 | `Pinecone` | Managed cloud | Zero-ops, serverless option |
@@ -222,7 +222,7 @@ def hybrid_search(query: str, collection, bm25_index, alpha=0.7):
 Not all project knowledge lives in source code:
 
 | Asset Type | Embedding Approach | Use Case |
-|------------|-------------------|----------|
+| ------------ | ------------------- | ---------- |
 | Architecture diagrams | Vision model captioning + text embed | Design intent retrieval |
 | Screenshots (UI bugs) | `CLIP` / vision embeddings | Visual regression context |
 | Config files (YAML/JSON) | Flatten to key-value text chunks | Infrastructure questions |
@@ -232,7 +232,7 @@ Not all project knowledge lives in source code:
 ## Multi-Modal RAG: Diagrams, Screenshots, Config Files (cont.)
 
 | Asset Type | Embedding Approach | Use Case |
-|------------|-------------------|----------|
+| ------------ | ------------------- | ---------- |
 | Database schemas | DDL statement chunking | Data model queries |
 | Log files | Time-window chunking with severity tags | Debugging context |
 
@@ -348,7 +348,7 @@ def incremental_index(collection, since_commit: str):
 Index more than just source code:
 
 | Source | Chunking Strategy | Value |
-|--------|-------------------|-------|
+| -------- | ------------------- | ------- |
 | READMEs / design docs | Section-level by headings | Architecture context |
 | API documentation | Endpoint-level | Interface contracts |
 | Slack / Teams threads | Thread-level | Decision rationale |
@@ -362,7 +362,7 @@ Index more than just source code:
 ## RAG vs Fine-Tuning: When to Use Which
 
 | Criteria | RAG | Fine-Tuning |
-|----------|-----|-------------|
+| ---------- | ----- | ------------- |
 | Knowledge updates | Instant (re-index) | Requires retraining |
 | Cost | Low (embedding + storage) | High (GPU training) |
 | Traceability | Citations to source | Black-box answers |
@@ -499,7 +499,7 @@ Answer:"""
 ## Measuring Retrieval Quality
 
 | Metric | What It Measures | Target |
-|--------|-----------------|--------|
+| -------- | ----------------- | -------- |
 | `Recall@k` | % of relevant docs in top-k results | > 0.85 |
 | `MRR` (Mean Reciprocal Rank) | Rank of first relevant result | > 0.70 |
 | `nDCG@k` | Ranking quality weighted by position | > 0.75 |
@@ -519,7 +519,7 @@ def recall_at_k(retrieved_ids, relevant_ids, k=10):
 ## Common RAG Failure Modes and Debugging
 
 | Symptom | Likely Cause | Fix |
-|---------|-------------|-----|
+| --------- | ------------- | ----- |
 | Irrelevant chunks retrieved | Poor chunking boundaries | Switch to AST-based chunking |
 | Correct file missed entirely | Embedding model mismatch | Try code-specific embedding model |
 | Top result is always the same file | Metadata not diverse enough | Add file-path diversity re-ranking |
@@ -529,7 +529,7 @@ def recall_at_k(retrieved_ids, relevant_ids, k=10):
 ## Common RAG Failure Modes and Debugging (cont.)
 
 | Symptom | Likely Cause | Fix |
-|---------|-------------|-----|
+| --------- | ------------- | ----- |
 | Answer hallucinates despite context | Context too noisy / too much | Reduce `k`, improve re-ranker |
 | Exact identifier not found | Vector search misses literals | Enable hybrid search (BM25 + vector) |
 | Stale results after code changes | Index not updated | Implement incremental indexing via `git diff` |
@@ -599,7 +599,7 @@ class EmbeddingCache:
 ## RAG Pipeline Monitoring in Production
 
 | Metric | What to Track | Alert Threshold |
-|--------|--------------|-----------------|
+| -------- | -------------- | ----------------- |
 | Retrieval latency (p95) | Time from query to chunks returned | > 500ms |
 | End-to-end latency (p95) | Time from query to final answer | > 5s |
 | Retrieval hit rate | % of queries with at least 1 relevant chunk | < 80% |
@@ -648,7 +648,7 @@ def secure_query(query: str, user: User, collection):
 ## Scaling RAG to Large Organizations
 
 | Challenge | Solution |
-|-----------|---------|
+| ----------- | --------- |
 | Thousands of repositories | Federated indexes: one collection per repo, cross-repo query router |
 | Multiple programming languages | Per-language chunking pipelines with shared embedding model |
 | Teams with different needs | Scoped indexes with team-specific metadata filters |
@@ -733,7 +733,7 @@ collection = client.get_or_create_collection("code")
 Common tuning levers and their impact:
 
 | Lever | When to Adjust |
-|-------|---------------|
+| ------- | --------------- |
 | Chunk size | Recall is low, chunks too large or too small |
 | Chunk overlap | Relevant code split across chunk boundaries |
 | Embedding model | Semantic search missing obvious matches |

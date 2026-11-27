@@ -117,7 +117,7 @@ SELECT COUNT(*) FROM accounts WHERE balance > 1000;  -- Returns 6
 ## Isolation Level Characteristics
 
 | Level | Dirty Read | Non-repeatable Read | Phantom Read |
-|-------|------------|---------------------|--------------|
+| ------- | ------------ | --------------------- | -------------- |
 | Read Uncommitted | Yes | Yes | Yes |
 | Read Committed | No | Yes | Yes |
 | Repeatable Read | No | No | Yes* |

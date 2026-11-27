@@ -114,7 +114,7 @@ audience:
 ## TCP Segment Structure
 
 | Field | Size | Purpose |
-|-------|------|---------|
+| ------- | ------ | --------- |
 | Source Port | 16 bits | Sender's port |
 | Destination Port | 16 bits | Receiver's port |
 | Sequence Number | 32 bits | Data ordering |
@@ -308,7 +308,7 @@ audience:
 ## DNS Record Types
 
 | Type | Purpose | Example |
-|------|---------|---------|
+| ------ | --------- | --------- |
 | A | IPv4 address | example.com → 93.184.216.34 |
 | AAAA | IPv6 address | example.com → 2606:2800:220:1:248:1893:25c8:1946 |
 | CNAME | Alias | www → example.com |
@@ -374,7 +374,7 @@ audience:
 ## Common Network Protocols
 
 | Protocol | Port | Purpose |
-|----------|------|---------|
+| ---------- | ------ | --------- |
 | HTTP | 80 | Web traffic |
 | HTTPS | 443 | Secure web traffic |
 | FTP | 21 | File transfer |

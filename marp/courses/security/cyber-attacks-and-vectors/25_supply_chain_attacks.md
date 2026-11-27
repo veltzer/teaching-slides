@@ -45,23 +45,23 @@ audience:
 
 ## Types of Software Supply Chain Attacks
 
-| Attack Type                  | Vector                                    | Example               |
-|------------------------------|-------------------------------------------|-----------------------|
-| Dependency confusion         | Package registry name collision           | Alex Birsan (2021)    |
-| Typosquatting                | Similar package names with typos          | crossenv / cross-env  |
-| Compromised maintainer       | Hijack or bribe package maintainer        | event-stream (2018)   |
-| Build pipeline compromise    | Inject into CI/CD system                  | SolarWinds (2020)     |
+| Attack Type               | Vector                             | Example              |
+| ------------------------- | ---------------------------------- | -------------------- |
+| Dependency confusion      | Package registry name collision    | Alex Birsan (2021)   |
+| Typosquatting             | Similar package names with typos   | crossenv / cross-env |
+| Compromised maintainer    | Hijack or bribe package maintainer | event-stream (2018)  |
+| Build pipeline compromise | Inject into CI/CD system           | SolarWinds (2020)    |
 
 ---
 
 ## Types of Software Supply Chain Attacks (cont.)
 
-| Attack Type                  | Vector                                    | Example               |
-|------------------------------|-------------------------------------------|-----------------------|
-| Code signing compromise      | Steal or forge code signing keys          | ASUS ShadowHammer     |
-| Vendor software compromise   | Backdoor vendor's product                 | 3CX (2023)            |
-| Open source contribution     | Malicious PR merged into project          | xz-utils (2024)       |
-| Container image poisoning    | Malicious Docker images on registries     | Various               |
+| Attack Type                | Vector                                | Example           |
+| -------------------------- | ------------------------------------- | ----------------- |
+| Code signing compromise    | Steal or forge code signing keys      | ASUS ShadowHammer |
+| Vendor software compromise | Backdoor vendor's product             | 3CX (2023)        |
+| Open source contribution   | Malicious PR merged into project      | xz-utils (2024)   |
+| Container image poisoning  | Malicious Docker images on registries | Various           |
 
 ---
 
@@ -224,15 +224,15 @@ def verify_packages():
 
 ## npm and PyPI Security Incidents
 
-| Incident                | Year | Package/Registry | Impact                         |
-|-------------------------|------|------------------|--------------------------------|
-| event-stream            | 2018 | npm              | Crypto wallet theft            |
-| ua-parser-js            | 2021 | npm              | Cryptominer + password stealer |
-| colors / faker          | 2022 | npm              | Maintainer protest (corruption)|
-| PyPI typosquats         | 2022 | PyPI             | 400+ malicious packages found  |
-| ctx + phpass            | 2022 | PyPI/PHP         | Exfiltrated env variables      |
-| Ledger Connect Kit      | 2023 | npm              | Crypto wallet drainer injected |
-| polyfill.io takeover    | 2024 | CDN              | Malicious JS served to 100K+ sites |
+| Incident             | Year | Package/Registry | Impact                             |
+| -------------------- | ---- | ---------------- | ---------------------------------- |
+| event-stream         | 2018 | npm              | Crypto wallet theft                |
+| ua-parser-js         | 2021 | npm              | Cryptominer + password stealer     |
+| colors / faker       | 2022 | npm              | Maintainer protest (corruption)    |
+| PyPI typosquats      | 2022 | PyPI             | 400+ malicious packages found      |
+| ctx + phpass         | 2022 | PyPI/PHP         | Exfiltrated env variables          |
+| Ledger Connect Kit   | 2023 | npm              | Crypto wallet drainer injected     |
+| polyfill.io takeover | 2024 | CDN              | Malicious JS served to 100K+ sites |
 
 ---
 

@@ -102,7 +102,7 @@ cargo build --release
 ## Type Compatibility
 
 | Rust Type | C Type | Notes |
-|-----------|---------|-------|
+| ----------- | --------- | ------- |
 | `i8/u8` | `char/unsigned char` | 8-bit |
 | `i16/u16` | `short/unsigned short` | 16-bit |
 | `i32/u32` | `int/unsigned int` | 32-bit |

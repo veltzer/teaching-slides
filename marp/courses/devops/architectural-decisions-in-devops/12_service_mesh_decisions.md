@@ -82,7 +82,7 @@ audience:
 ## Complexity Cost Breakdown
 
 | Complexity Area | Impact |
-|---|---|
+| --- | --- |
 | Deployment | Sidecar injection, `init` containers, `CNI` plugins |
 | Upgrades | Control plane and data plane version coordination |
 | Debugging | Additional network hop complicates troubleshooting |
@@ -127,7 +127,7 @@ audience:
 ## Comparing Alternatives
 
 | Approach | mTLS | Traffic Mgmt | Observability | Overhead |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Service Mesh | Yes | Advanced | Deep | High |
 | Library-based | Manual | Moderate | Code-dependent | Low |
 | API Gateway | Edge only | Edge only | Edge only | Medium |
@@ -219,7 +219,7 @@ audience:
 ## Sidecar vs Proxyless: Comparison
 
 | Dimension | Sidecar Proxy | Proxyless |
-|---|---|---|
+| --- | --- | --- |
 | Latency overhead | 1-3ms per hop | Near zero |
 | Memory per pod | 64-128Mi | Included in app |
 | Language support | Any language | `gRPC`-capable only |

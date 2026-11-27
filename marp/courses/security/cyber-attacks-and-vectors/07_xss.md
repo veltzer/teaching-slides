@@ -333,13 +333,13 @@ Content-Security-Policy:
 
 ## Real-World XSS Case Studies
 
-| Incident          | Year | Impact                                     |
-|-------------------|------|--------------------------------------------|
-| Samy Worm (MySpace)| 2005 | 1M friend requests in 20 hours via stored XSS|
-| Twitter StalkDaily | 2009 | Self-propagating XSS worm on Twitter        |
-| eBay              | 2015 | Stored XSS in product listings              |
-| British Airways   | 2018 | Magecart XSS stole 380K payment cards       |
-| Fortnite          | 2019 | XSS could hijack player accounts            |
+| Incident            | Year | Impact                                        |
+| ------------------- | ---- | --------------------------------------------- |
+| Samy Worm (MySpace) | 2005 | 1M friend requests in 20 hours via stored XSS |
+| Twitter StalkDaily  | 2009 | Self-propagating XSS worm on Twitter          |
+| eBay                | 2015 | Stored XSS in product listings                |
+| British Airways     | 2018 | Magecart XSS stole 380K payment cards         |
+| Fortnite            | 2019 | XSS could hijack player accounts              |
 
 ---
 

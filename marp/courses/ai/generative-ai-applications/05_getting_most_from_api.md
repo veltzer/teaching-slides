@@ -334,7 +334,7 @@ print(cosine_similarity(e1, e3))  # ~0.42 (unrelated)
 ```
 
 | Model | Dimensions | Price/1M tokens |
-|-------|-----------|-----------------|
+| ------- | ----------- | ----------------- |
 | `text-embedding-3-small` | 1536 | $0.02 |
 | `text-embedding-3-large` | 3072 | $0.13 |
 

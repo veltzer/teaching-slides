@@ -69,7 +69,7 @@ SDN separates the **control plane** (decision-making) from the **data plane** (p
 **SDN controllers:**
 
 | Controller | Language | Use Case |
-|-----------|----------|----------|
+| ----------- | ---------- | ---------- |
 | ONOS | Java | Service provider, large scale |
 | OpenDaylight | Java | Enterprise, multi-vendor |
 | Floodlight | Java | Research, education |
@@ -83,7 +83,7 @@ Network virtualization creates logical networks on top of physical infrastructur
 **Key technologies:**
 
 | Technology | Description |
-|-----------|-------------|
+| ----------- | ------------- |
 | VLAN | L2 segmentation within a switch (802.1Q) |
 | VXLAN | L2 overlay over L3 (extends VLANs across data centers) |
 | GRE | Generic Routing Encapsulation (tunneling) |
@@ -117,7 +117,7 @@ $ docker network inspect bridge
 **Docker network modes:**
 
 | Mode | Description |
-|------|-------------|
+| ------ | ------------- |
 | bridge | Default. Containers get private IPs on a virtual bridge |
 | host | Container uses host's network stack directly |
 | none | No networking |
@@ -199,7 +199,7 @@ Kubernetes networking has these fundamental requirements:
 CNI plugins implement the networking for Kubernetes.
 
 | CNI Plugin | Technology | Key Feature |
-|-----------|-----------|-------------|
+| ----------- | ----------- | ------------- |
 | Flannel | VXLAN, host-gw | Simple, easy to set up |
 | Calico | BGP, eBPF | Network policies, high performance |
 | Cilium | eBPF | Advanced security, observability |
@@ -242,7 +242,7 @@ Services provide stable network endpoints for dynamic Pods.
 **Service types:**
 
 | Type | Scope | Use Case |
-|------|-------|----------|
+| ------ | ------- | ---------- |
 | ClusterIP | Internal only | Default, inter-service communication |
 | NodePort | External via node IP:port | Development, simple exposure |
 | LoadBalancer | External via cloud LB | Production external access |
@@ -361,7 +361,7 @@ A service mesh is a dedicated infrastructure layer for service-to-service commun
 **Popular service meshes:**
 
 | Mesh | Sidecar Proxy | Key Feature |
-|------|---------------|-------------|
+| ------ | --------------- | ------------- |
 | Istio | Envoy | Feature-rich, complex |
 | Linkerd | linkerd2-proxy | Lightweight, simple |
 | Consul Connect | Envoy or built-in | Multi-platform |
@@ -576,7 +576,7 @@ message UserResponse {
 ## gRPC vs REST Comparison
 
 | Feature | REST | gRPC |
-|---------|------|------|
+| --------- | ------ | ------ |
 | Protocol | HTTP/1.1 or HTTP/2 | HTTP/2 only |
 | Payload | JSON (text) | Protobuf (binary) |
 | Contract | OpenAPI/Swagger (optional) | .proto files (required) |

@@ -71,7 +71,7 @@ audience:
 ## Which Block Do I Need?
 
 | The need | The building block |
-|---|---|
+| --- | --- |
 | A better answer to a one-time question | Prompt |
 | The same task, repeated by many people | Command or skill |
 | Answers grounded in our own documents | RAG |
@@ -99,7 +99,7 @@ audience:
 ## Chatbot, Workflow, or Agent?
 
 | | Chatbot | Workflow | Agent |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Who decides the steps? | Nobody, one answer | The designer, in advance | The model, at run time |
 | Predictability | High | High | Lower |
 | Good for | Questions and drafts | Known, repeatable processes | Open-ended tasks |

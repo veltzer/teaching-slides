@@ -117,7 +117,7 @@ iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 ## Common IPTables Actions
 
 | Action | Description |
-|--------|-------------|
+| -------- | ------------- |
 | ACCEPT | Allow packet |
 | DROP | Silently discard |
 | REJECT | Discard with response |

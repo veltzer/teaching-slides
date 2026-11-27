@@ -97,7 +97,7 @@ Like hardware interrupts but for processes!
 ## Signal Default Actions
 
 | Action | Description | Signals |
-|--------|-------------|---------|
+| -------- | ------------- | --------- |
 | **Term** | Terminate process | SIGTERM, SIGINT, SIGHUP |
 | **Core** | Terminate + core dump | SIGSEGV, SIGQUIT, SIGILL |
 | **Ign** | Ignore signal | SIGCHLD, SIGURG |

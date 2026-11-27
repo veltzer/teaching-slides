@@ -24,7 +24,7 @@ audience:
 ## System Requirements
 
 | Component | Linux | Windows | macOS |
-|-----------|--------|----------|--------|
+| ----------- | -------- | ---------- | -------- |
 | OS Version | Ubuntu 22.04+ | Windows 10 Pro+ | macOS 10.15+ |
 | Memory | 4GB minimum | 4GB minimum | 4GB minimum |
 | CPU | 2 cores | 2 cores, Hyper-V | 2 cores |
@@ -41,7 +41,7 @@ audience:
 ## Verifying Installation
 
 | Command | Purpose | Expected Output |
-|---------|---------|----------------|
+| --------- | --------- | ---------------- |
 | `docker --version` | Check Docker version | Docker version X.X.X |
 | `docker info` | System information | Docker system info |
 | `docker run hello-world` | Test installation | Hello from Docker! |
@@ -58,7 +58,7 @@ audience:
 ## Basic Docker Commands
 
 | Command | Usage | Example |
-|---------|--------|---------|
+| --------- | -------- | --------- |
 | `pull` | Download image | `docker pull ubuntu` |
 | `run` | Run container | `docker run nginx` |
 | `ps` | List containers | `docker ps -a` |
@@ -94,7 +94,7 @@ audience:
 ## Image Naming Convention
 
 | Component | Example | Description |
-|-----------|---------|-------------|
+| ----------- | --------- | ------------- |
 | Registry | docker.io | Image registry host |
 | Repository | nginx | Image name |
 | Tag | latest | Image version |
@@ -111,7 +111,7 @@ audience:
 ## Common Networking Options
 
 | Option | Usage | Example |
-|--------|--------|---------|
+| -------- | -------- | --------- |
 | `-p` | Port mapping | `-p 8080:80` |
 | `--network` | Network type | `--network bridge` |
 | `-h` | Hostname | `-h mycontainer` |

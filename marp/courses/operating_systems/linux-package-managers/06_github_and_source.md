@@ -129,7 +129,7 @@ If a project offers signatures and you skip them, you've made the download untru
 `Linux` has informal conventions. Pick one and be consistent.
 
 | Path | When to use |
-|---|---|
+| --- | --- |
 | `/usr/local/bin/` | Available to all users, you're root |
 | `/opt/<app>/` | Self-contained app with many files |
 | `~/.local/bin/` | Per-user, no `sudo` needed |

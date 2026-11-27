@@ -314,7 +314,7 @@ print(v1 * 3)     # Vector(3, 6)
 ## Operator Overloading Methods
 
 | Operator | Method |
-|----------|--------|
+| ---------- | -------- |
 | `+` | `__add__` |
 | `-` | `__sub__` |
 | `*` | `__mul__` |
@@ -327,7 +327,7 @@ print(v1 * 3)     # Vector(3, 6)
 ## Operator Overloading Methods (cont.)
 
 | Operator | Method |
-|----------|--------|
+| ---------- | -------- |
 | `**` | `__pow__` |
 | `==` | `__eq__` |
 | `<` | `__lt__` |

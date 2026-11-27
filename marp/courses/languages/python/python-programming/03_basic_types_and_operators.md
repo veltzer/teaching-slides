@@ -63,7 +63,7 @@ print(1_000_000)   # 1000000
 ## Arithmetic Operators
 
 | Operator | Description | Example |
-|----------|-------------|---------|
+| ---------- | ------------- | --------- |
 | `+` | Addition | `5 + 3` = `8` |
 | `-` | Subtraction | `5 - 3` = `2` |
 | `*` | Multiplication | `5 * 3` = `15` |
@@ -237,7 +237,7 @@ print(isinstance(True, int))  # True
 ## Comparison Operators
 
 | Operator | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | `==` | Equal to |
 | `!=` | Not equal to |
 | `<` | Less than |
@@ -349,7 +349,7 @@ multi-line"""
 ## String Escape Characters
 
 | Escape | Meaning |
-|--------|---------|
+| -------- | --------- |
 | `\n` | Newline |
 | `\t` | Tab |
 | `\\` | Backslash |
@@ -597,7 +597,7 @@ print(s)  # 'Hello'
 ## Bitwise Operators
 
 | Operator | Description | Example |
-|----------|-------------|---------|
+| ---------- | ------------- | --------- |
 | `&` | AND | `5 & 3` = `1` |
 | `\|` | OR | `5 \| 3` = `7` |
 | `^` | XOR | `5 ^ 3` = `6` |

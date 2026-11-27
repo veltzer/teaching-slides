@@ -30,7 +30,7 @@ The application speaks plaintext on a TLS socket; the library handles the rest.
 ## TLS version history
 
 | Version | Year | Status |
-|---|---|---|
+| --- | --- | --- |
 | SSL 2.0/3.0 | 1995 | broken, removed |
 | TLS 1.0 | 1999 | deprecated, padding-oracle attacks |
 | TLS 1.1 | 2006 | deprecated |

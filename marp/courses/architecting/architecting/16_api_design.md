@@ -207,7 +207,7 @@ Pick one convention organization-wide.
 ## Pagination Patterns
 
 | Pattern | Good for | Avoid when |
-|---------|----------|-----------|
+| --------- | ---------- | ----------- |
 | Offset/limit | Small static collections | Large or mutable collections |
 | Cursor (opaque) | Mutable, large, sorted collections | Random-access UIs |
 | Keyset (seek) | Known-column sorts | Complex dynamic filters |

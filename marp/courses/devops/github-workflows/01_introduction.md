@@ -68,14 +68,14 @@ With CI/CD:
 
 ## Core Components Overview
 
-| Component  | Description                                      |
-|------------|--------------------------------------------------|
-| Workflow   | Automated process defined in YAML                |
-| Event      | Trigger that starts a workflow                   |
-| Job        | Set of steps running on the same runner           |
-| Step       | Individual task within a job                     |
-| Action     | Reusable unit of code for a step                 |
-| Runner     | Server that executes the workflow                |
+| Component | Description                             |
+| --------- | --------------------------------------- |
+| Workflow  | Automated process defined in YAML       |
+| Event     | Trigger that starts a workflow          |
+| Job       | Set of steps running on the same runner |
+| Step      | Individual task within a job            |
+| Action    | Reusable unit of code for a step        |
+| Runner    | Server that executes the workflow       |
 
 ---
 
@@ -117,13 +117,13 @@ jobs:
 
 ## GitHub Actions vs Other CI/CD Platforms
 
-| Feature          | GitHub Actions | Jenkins    | GitLab CI  | CircleCI   |
-|------------------|---------------|------------|------------|------------|
-| Hosting          | Cloud/Self    | Self-hosted| Cloud/Self | Cloud      |
-| Config Format    | YAML          | Groovy     | YAML       | YAML       |
-| GitHub Integration| Native       | Plugin     | Limited    | Good       |
-| Marketplace      | Yes           | Plugins    | Limited    | Orbs       |
-| Free Tier        | Generous      | Free OSS   | Limited    | Limited    |
+| Feature            | GitHub Actions | Jenkins     | GitLab CI  | CircleCI |
+| ------------------ | -------------- | ----------- | ---------- | -------- |
+| Hosting            | Cloud/Self     | Self-hosted | Cloud/Self | Cloud    |
+| Config Format      | YAML           | Groovy      | YAML       | YAML     |
+| GitHub Integration | Native         | Plugin      | Limited    | Good     |
+| Marketplace        | Yes            | Plugins     | Limited    | Orbs     |
+| Free Tier          | Generous       | Free OSS    | Limited    | Limited  |
 
 ---
 

@@ -174,7 +174,7 @@ IDE-integrated agents share a common interaction model:
 **Key differences**:
 
 | Feature | Cursor | Windsurf | Cline |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Model choice | Multiple | Multiple | Multiple |
 | Auto-apply edits | Yes (toggleable) | Yes | Ask first |
 | Terminal access | Yes | Yes | Yes |
@@ -233,7 +233,7 @@ git diff HEAD~3 | claude -p "review these changes"
 ## Agent Capabilities Matrix
 
 | Capability | Claude Code | Cursor Agent | Aider | Cline |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | File read/edit | Yes | Yes | Yes | Yes |
 | Shell commands | Yes | Yes | No | Yes |
 | Codebase search | Yes | Yes | Repo map | Yes |
@@ -406,7 +406,7 @@ claude --disallowedTools "Bash(rm *),Bash(curl *)"
 ```
 
 | Tool | Cursor | Cline | Claude Code |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | File read | Always allowed | Always allowed | Always allowed |
 | File write | Ask / Auto | Ask / Auto | Ask / Auto |
 | Shell commands | Ask / Auto | Ask / Auto | Allowlist |

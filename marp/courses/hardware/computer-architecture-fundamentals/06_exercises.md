@@ -872,7 +872,7 @@ diff seq.txt rand.txt
 **Key metrics to watch:**
 
 | Metric | Good | Bad |
-|--------|------|-----|
+| -------- | ------ | ----- |
 | Instructions per cycle (IPC) | > 2.0 | < 0.5 |
 | L1 cache miss rate | < 3% | > 10% |
 | LLC miss rate | < 5% | > 20% |

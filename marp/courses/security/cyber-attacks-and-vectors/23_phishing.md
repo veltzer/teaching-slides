@@ -65,17 +65,17 @@ audience:
 
 ## Types of Phishing Attacks
 
-| Type              | Target           | Channel       | Sophistication |
-|-------------------|------------------|---------------|----------------|
-| Email Phishing    | Mass / anyone    | Email         | Low            |
-| Spear Phishing    | Specific person  | Email         | High           |
-| Whaling           | C-suite/execs    | Email         | Very High      |
-| Vishing           | Anyone           | Voice/phone   | Medium         |
-| Smishing          | Anyone           | SMS/text      | Medium         |
-| Angler Phishing   | Social users     | Social media  | Medium         |
-| Pharming          | Anyone           | DNS redirect  | High           |
-| BEC               | Finance teams    | Email         | Very High      |
-| Clone Phishing    | Previous recipients| Email       | High           |
+| Type            | Target              | Channel      | Sophistication |
+| --------------- | ------------------- | ------------ | -------------- |
+| Email Phishing  | Mass / anyone       | Email        | Low            |
+| Spear Phishing  | Specific person     | Email        | High           |
+| Whaling         | C-suite/execs       | Email        | Very High      |
+| Vishing         | Anyone              | Voice/phone  | Medium         |
+| Smishing        | Anyone              | SMS/text     | Medium         |
+| Angler Phishing | Social users        | Social media | Medium         |
+| Pharming        | Anyone              | DNS redirect | High           |
+| BEC             | Finance teams       | Email        | Very High      |
+| Clone Phishing  | Previous recipients | Email        | High           |
 
 ---
 
@@ -418,13 +418,13 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 
 ### Effective Training Program Elements
 
-| Component                    | Frequency       | Purpose                         |
-|------------------------------|-----------------|----------------------------------|
-| Initial onboarding training  | Once            | Baseline security knowledge      |
-| Simulated phishing exercises | Monthly         | Test and reinforce awareness     |
-| Micro-learning modules       | Quarterly       | Focused topic updates            |
-| Incident debrief             | After incidents | Learn from real events           |
-| Role-specific training       | Annual          | Targeted for high-risk roles     |
+| Component                    | Frequency       | Purpose                      |
+| ---------------------------- | --------------- | ---------------------------- |
+| Initial onboarding training  | Once            | Baseline security knowledge  |
+| Simulated phishing exercises | Monthly         | Test and reinforce awareness |
+| Micro-learning modules       | Quarterly       | Focused topic updates        |
+| Incident debrief             | After incidents | Learn from real events       |
+| Role-specific training       | Annual          | Targeted for high-risk roles |
 
 ---
 

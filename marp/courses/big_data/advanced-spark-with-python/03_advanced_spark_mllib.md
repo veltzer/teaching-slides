@@ -698,7 +698,7 @@ for name, model in models.items():
 ## Model Comparison Results Table
 
 | Model | AUC-ROC | Training Time | Interpretable | Handles Nulls |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Logistic Regression | ~0.82 | Fast | Yes (coefficients) | No |
 | Random Forest | ~0.87 | Medium | Partial (importance) | Yes |
 | GBT | ~0.89 | Slow | Partial (importance) | Yes |

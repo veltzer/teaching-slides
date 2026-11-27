@@ -35,25 +35,25 @@ audience:
 
 ## OWASP API Security Top 10 (2023)
 
-| Rank | Vulnerability                           | Risk Level |
-|------|----------------------------------------|------------|
-| 1    | Broken Object Level Authorization       | Critical   |
-| 2    | Broken Authentication                   | Critical   |
-| 3    | Broken Object Property Level Auth       | High       |
-| 4    | Unrestricted Resource Consumption       | High       |
-| 5    | Broken Function Level Authorization     | High       |
+| Rank | Vulnerability                       | Risk Level |
+| ---- | ----------------------------------- | ---------- |
+| 1    | Broken Object Level Authorization   | Critical   |
+| 2    | Broken Authentication               | Critical   |
+| 3    | Broken Object Property Level Auth   | High       |
+| 4    | Unrestricted Resource Consumption   | High       |
+| 5    | Broken Function Level Authorization | High       |
 
 ---
 
 ## OWASP API Security Top 10 (2023) (cont.)
 
-| Rank | Vulnerability                           | Risk Level |
-|------|----------------------------------------|------------|
-| 6    | Unrestricted Access to Sensitive Flows  | Medium     |
-| 7    | Server Side Request Forgery (SSRF)      | High       |
-| 8    | Security Misconfiguration               | Medium     |
-| 9    | Improper Inventory Management           | Medium     |
-| 10   | Unsafe Consumption of APIs              | Medium     |
+| Rank | Vulnerability                          | Risk Level |
+| ---- | -------------------------------------- | ---------- |
+| 6    | Unrestricted Access to Sensitive Flows | Medium     |
+| 7    | Server Side Request Forgery (SSRF)     | High       |
+| 8    | Security Misconfiguration              | Medium     |
+| 9    | Improper Inventory Management          | Medium     |
+| 10   | Unsafe Consumption of APIs             | Medium     |
 
 ---
 
@@ -100,13 +100,13 @@ def get_orders(user_id):
 
 ## BOLA in the Real World
 
-| Company        | Year | What Happened                                      |
-|----------------|------|----------------------------------------------------|
-| Facebook       | 2018 | Access tokens of 50M users leaked via BOLA          |
-| Uber           | 2019 | Driver personal data accessible by changing IDs     |
-| Peloton        | 2021 | Any user's private account data accessible          |
-| Parler         | 2021 | All posts scraped by incrementing post IDs          |
-| T-Mobile       | 2023 | 37M customer records via API BOLA                   |
+| Company  | Year | What Happened                                   |
+| -------- | ---- | ----------------------------------------------- |
+| Facebook | 2018 | Access tokens of 50M users leaked via BOLA      |
+| Uber     | 2019 | Driver personal data accessible by changing IDs |
+| Peloton  | 2021 | Any user's private account data accessible      |
+| Parler   | 2021 | All posts scraped by incrementing post IDs      |
+| T-Mobile | 2023 | 37M customer records via API BOLA               |
 
 ---
 
@@ -360,22 +360,22 @@ decoded = jwt.decode(token, SECRET, algorithms=["HS256"])
 
 ### Other JWT Attacks
 
-| Attack                    | Description                                | Defense                        |
-|---------------------------|--------------------------------------------|--------------------------------|
-| None algorithm            | Remove signature verification              | Whitelist algorithms           |
-| Key confusion             | RS256 -> HS256 with public key             | Separate key handling          |
-| JWK header injection      | Embed attacker's key in JWT header         | Ignore JWK in headers          |
-| KID path traversal        | `"kid": "../../../dev/null"` = empty key   | Validate KID parameter         |
+| Attack               | Description                              | Defense                |
+| -------------------- | ---------------------------------------- | ---------------------- |
+| None algorithm       | Remove signature verification            | Whitelist algorithms   |
+| Key confusion        | RS256 -> HS256 with public key           | Separate key handling  |
+| JWK header injection | Embed attacker's key in JWT header       | Ignore JWK in headers  |
+| KID path traversal   | `"kid": "../../../dev/null"` = empty key | Validate KID parameter |
 
 ---
 
 ### Other JWT Attacks (cont.)
 
-| Attack                    | Description                                | Defense                        |
-|---------------------------|--------------------------------------------|--------------------------------|
-| Token not expiring        | Missing or far-future `exp` claim          | Always require and check `exp` |
-| Weak secret               | Brute-force HS256 secret                   | Use 256+ bit random secrets    |
-| Token in URL              | Leaked via Referer header, logs            | Use Authorization header       |
+| Attack             | Description                       | Defense                        |
+| ------------------ | --------------------------------- | ------------------------------ |
+| Token not expiring | Missing or far-future `exp` claim | Always require and check `exp` |
+| Weak secret        | Brute-force HS256 secret          | Use 256+ bit random secrets    |
+| Token in URL       | Leaked via Referer header, logs   | Use Authorization header       |
 
 ---
 
@@ -536,13 +536,13 @@ def execute_persisted_query(query_id, variables):
 
 ## API Authentication Best Practices
 
-| Method              | Use Case                     | Security Level |
-|---------------------|------------------------------|----------------|
-| API Keys            | Server-to-server, low-risk   | Low            |
-| OAuth 2.0 + PKCE    | User-facing applications     | High           |
-| JWT (short-lived)   | Stateless authentication     | Medium-High    |
-| mTLS                | Service-to-service (mesh)    | Very High      |
-| HMAC Signatures     | Webhook verification         | High           |
+| Method            | Use Case                   | Security Level |
+| ----------------- | -------------------------- | -------------- |
+| API Keys          | Server-to-server, low-risk | Low            |
+| OAuth 2.0 + PKCE  | User-facing applications   | High           |
+| JWT (short-lived) | Stateless authentication   | Medium-High    |
+| mTLS              | Service-to-service (mesh)  | Very High      |
+| HMAC Signatures   | Webhook verification       | High           |
 
 ```python
 # Secure API key validation middleware

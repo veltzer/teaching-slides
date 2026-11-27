@@ -52,7 +52,7 @@ Every controller follows the same reconciliation loop:
 The `kube-controller-manager` runs many controllers:
 
 | Controller | Manages |
-|-----------|---------|
+| ----------- | --------- |
 | `ReplicaSet` | Maintains desired pod count |
 | `Deployment` | Rolling updates, rollbacks |
 | `StatefulSet` | Ordered, stateful pods |
@@ -64,7 +64,7 @@ The `kube-controller-manager` runs many controllers:
 ## Built-in Controllers (cont.)
 
 | Controller | Manages |
-|-----------|---------|
+| ----------- | --------- |
 | `CronJob` | Scheduled jobs |
 | `Node` | Node lifecycle |
 | `ServiceAccount` | Default service accounts |
@@ -76,7 +76,7 @@ The `kube-controller-manager` runs many controllers:
 ## Controller vs Operator
 
 | | Controller | Operator |
-|---|-----------|----------|
+| --- | ----------- | ---------- |
 | Manages | Any `Kubernetes` resource | Application-specific `CRD` |
 | Domain knowledge | Generic | Application-specific |
 | Complexity | Simple reconcile | Full lifecycle management |
@@ -474,7 +474,7 @@ kubectl describe postgresql production-db
 ## Real-World Operators
 
 | Operator | Purpose |
-|----------|---------|
+| ---------- | --------- |
 | `prometheus-operator` | Monitoring stack |
 | `cert-manager` | TLS certificate management |
 | `strimzi` | `Apache Kafka` on `Kubernetes` |

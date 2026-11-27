@@ -114,7 +114,7 @@ dpkg --configure -a
 ```
 
 | Code | Meaning |
-|------|---------|
+| ------ | --------- |
 | `ii` | Installed, OK |
 | `rc` | Removed, config files remain |
 | `un` | Unknown, not installed |
@@ -367,7 +367,7 @@ Pin-Priority: 400
 ```
 
 | Priority | Behavior |
-|----------|----------|
+| ---------- | ---------- |
 | < 0 | Never install |
 | 0-99 | Install only if not installed |
 | 100-499 | Install if newer than current |
@@ -734,7 +734,7 @@ flatpak update
 ```
 
 | Feature | apt/dnf | Snap | Flatpak |
-|---------|---------|------|---------|
+| --------- | --------- | ------ | --------- |
 | Sandboxing | No | Yes | Yes |
 | Auto-update | Configurable | Yes | Yes |
 | Size | Small | Larger | Larger |
@@ -1017,7 +1017,7 @@ dnf downgrade httpd-2.4.51
 ## Comparing `apt` vs `dnf` Side by Side
 
 | Task | `apt` (Debian/Ubuntu) | `dnf` (RHEL/Fedora) |
-|------|----------------------|---------------------|
+| ------ | ---------------------- | --------------------- |
 | Update metadata | `apt update` | `dnf check-update` |
 | Install | `apt install pkg` | `dnf install pkg` |
 | Remove | `apt remove pkg` | `dnf remove pkg` |
@@ -1029,7 +1029,7 @@ dnf downgrade httpd-2.4.51
 ## Comparing `apt` vs `dnf` Side by Side (cont.)
 
 | Task | `apt` (Debian/Ubuntu) | `dnf` (RHEL/Fedora) |
-|------|----------------------|---------------------|
+| ------ | ---------------------- | --------------------- |
 | Show info | `apt show pkg` | `dnf info pkg` |
 | List files | `dpkg -L pkg` | `rpm -ql pkg` |
 | File owner | `dpkg -S /path` | `rpm -qf /path` |

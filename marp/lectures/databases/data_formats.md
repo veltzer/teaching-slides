@@ -185,7 +185,7 @@ dark_mode = false
 ## JSON Data Types
 
 | Type | Example |
-|------|---------|
+| ------ | --------- |
 | String | `"hello"` |
 | Number | `42`, `3.14`, `-1` |
 | Boolean | `true`, `false` |
@@ -340,7 +340,7 @@ role = "backend"
 ## TOML vs YAML vs JSON for Config
 
 | Feature | JSON | YAML | TOML |
-|---------|------|------|------|
+| --------- | ------ | ------ | ------ |
 | Comments | No | Yes | Yes |
 | Date type | No | Yes | Yes |
 | Human editing | OK | Good | Good |
@@ -591,7 +591,7 @@ conn.close()
 ## Binary Formats Comparison
 
 | Feature | JSON | MessagePack | Protobuf |
-|---------|------|-------------|----------|
+| --------- | ------ | ------------- | ---------- |
 | Human-readable | Yes | No | No |
 | Schema required | No | No | Yes |
 | Size | Large | Small | Smallest |
@@ -606,7 +606,7 @@ conn.close()
 For 1 million records with 5 fields:
 
 | Format | Approx Size | Write Speed | Read Speed |
-|--------|-------------|-------------|------------|
+| -------- | ------------- | ------------- | ------------ |
 | CSV | 50 MB | Fast | Fast |
 | JSON | 80 MB | Medium | Medium |
 | JSONL | 75 MB | Fast | Fast |
@@ -621,7 +621,7 @@ Sizes and speeds are approximate and depend on the data.
 ## When to Use Each Format
 
 | Use Case | Best Format |
-|----------|-------------|
+| ---------- | ------------- |
 | Web API responses | JSON |
 | Application config | TOML or YAML |
 | Simple config | INI |
@@ -632,7 +632,7 @@ Sizes and speeds are approximate and depend on the data.
 ## When to Use Each Format (cont.)
 
 | Use Case | Best Format |
-|----------|-------------|
+| ---------- | ------------- |
 | Log files | JSON Lines |
 | Big data analytics | Parquet |
 | Local app storage | SQLite |
@@ -721,7 +721,7 @@ print(json.dumps(data, indent=4))
 ## Streaming vs Batch Processing
 
 | Format | Streaming | Batch |
-|--------|-----------|-------|
+| -------- | ----------- | ------- |
 | CSV | Line by line | Full file |
 | JSON | Requires SAX-style parser | Full file |
 | JSONL | Line by line | Full file |
@@ -735,7 +735,7 @@ JSON Lines and CSV are the best choices for streaming workloads.
 ## Schema Enforcement
 
 | Format | Built-in Schema | External Schema |
-|--------|----------------|-----------------|
+| -------- | ---------------- | ----------------- |
 | CSV | None | None |
 | INI | None | None |
 | JSON | None | JSON Schema |
@@ -782,7 +782,7 @@ Parquet with Snappy compression is often smaller than gzipped CSV.
 ## Ecosystem and Tooling
 
 | Format | CLI Tools | Python Library |
-|--------|-----------|---------------|
+| -------- | ----------- | --------------- |
 | CSV | `csvtool`, `miller` | `csv`, `pandas` |
 | INI | — | `configparser` |
 | JSON | `jq` | `json`, `orjson` |

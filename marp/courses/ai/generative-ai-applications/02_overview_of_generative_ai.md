@@ -193,7 +193,7 @@ for t in tokens:
 ## Tokenization Methods: Comparison
 
 | Method | Description | Used By |
-|--------|-------------|---------|
+| -------- | ------------- | --------- |
 | `BPE` | Byte-Pair Encoding — merge frequent pairs | `GPT`, `LLaMA` |
 | `WordPiece` | Similar to BPE, uses likelihood | `BERT` |
 | `SentencePiece` | Language-agnostic, works on raw text | `T5`, `LLaMA` |
@@ -278,7 +278,7 @@ for _ in range(max_new_tokens):
 ## Sampling Strategies
 
 | Strategy | Description | Effect |
-|----------|-------------|--------|
+| ---------- | ------------- | -------- |
 | **Greedy** | Always pick highest probability token | Deterministic, can be repetitive |
 | **Temperature** | Scale logits before softmax | Low=focused, High=creative |
 | **Top-k** | Only consider k most likely tokens | Reduces unlikely outputs |
@@ -345,7 +345,7 @@ Research shows predictable relationships between model size and performance:
 Many early models were **undertrained** relative to their size:
 
 | Model | Parameters | Training Tokens | Ratio |
-|-------|-----------|-----------------|-------|
+| ------- | ----------- | ----------------- | ------- |
 | `GPT-3` | 175B | 300B | 1.7× |
 | `Chinchilla` | 70B | 1.4T | 20× |
 | `LLaMA` | 65B | 1.4T | 21.5× |
@@ -386,7 +386,7 @@ prompt = "Who won the 2026 Nobel Prize in Physics?"
 ## Context Windows — How Much Can a Model "See"?: Comparison
 
 | Model | Context Window | Equivalent |
-|-------|---------------|------------|
+| ------- | --------------- | ------------ |
 | `GPT-3` | 4K tokens | ~3 pages |
 | `GPT-3.5` | 16K tokens | ~12 pages |
 | `GPT-4` | 128K tokens | ~100 pages |
@@ -439,7 +439,7 @@ pricing = {
 ## Generative AI vs. Traditional ML
 
 | Aspect | Traditional ML | Generative AI |
-|--------|---------------|---------------|
+| -------- | --------------- | --------------- |
 | Training data | Labeled, structured | Unlabeled text corpus |
 | Task specification | Feature engineering | Natural language prompt |
 | Adaptation | Retrain model | Prompt / few examples |

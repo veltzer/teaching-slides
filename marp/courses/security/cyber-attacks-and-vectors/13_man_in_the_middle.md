@@ -241,13 +241,13 @@ curl -sI https://example.com | grep -i strict-transport
 
 ## Real-World MITM Incidents
 
-| Incident              | Year | Details                                   |
-|-----------------------|------|-------------------------------------------|
-| DigiNotar breach      | 2011 | Fake Google certs, Iranian surveillance    |
-| Superfish (Lenovo)    | 2015 | Pre-installed MITM proxy on laptops        |
-| Equifax redirect      | 2017 | MITM on credit monitoring redirect         |
-| Kazakhstan MITM cert  | 2019 | Government mandated MITM root certificate  |
-| SolarWinds Orion      | 2020 | Supply chain MITM for update mechanism     |
+| Incident             | Year | Details                                   |
+| -------------------- | ---- | ----------------------------------------- |
+| DigiNotar breach     | 2011 | Fake Google certs, Iranian surveillance   |
+| Superfish (Lenovo)   | 2015 | Pre-installed MITM proxy on laptops       |
+| Equifax redirect     | 2017 | MITM on credit monitoring redirect        |
+| Kazakhstan MITM cert | 2019 | Government mandated MITM root certificate |
+| SolarWinds Orion     | 2020 | Supply chain MITM for update mechanism    |
 
 ---
 

@@ -34,7 +34,7 @@ audience:
 ## Common System Calls
 
 | Number | Name | Description |
-|--------|------|-------------|
+| -------- | ------ | ------------- |
 | 1 | sys_exit | Terminate the program |
 | 2 | sys_fork | Create a new process |
 | 3 | sys_read | Read from a file descriptor |

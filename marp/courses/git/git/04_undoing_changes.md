@@ -209,7 +209,7 @@ git reset HEAD~1 -- file.txt
 ## Reset vs Checkout vs Restore
 
 | Command | Scope | Working Dir | Staging | HEAD |
-|---------|-------|-------------|---------|------|
+| --------- | ------- | ------------- | --------- | ------ |
 | `reset --soft` | Commit | No change | No change | Moves |
 | `reset --mixed` | Commit | No change | Updates | Moves |
 | `reset --hard` | Commit | Updates | Updates | Moves |
@@ -847,7 +847,7 @@ git branch backup-$(date +%Y%m%d-%H%M%S)
 ## Quick Reference Card
 
 | Problem | Local | Public |
-|---------|-------|--------|
+| --------- | ------- | -------- |
 | Wrong message | `commit --amend` | `revert` + new commit |
 | Bad commit | `reset` | `revert` |
 | Multiple fixes | `rebase -i` | separate commits |

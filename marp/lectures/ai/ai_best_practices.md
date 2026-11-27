@@ -180,7 +180,7 @@ Gate: `rsconstruct build --verbose -j10` is green after every item.
 ## Adjective vs Example
 
 | Vague ask | Inspectable ask |
-|-----------|-----------------|
+| ----------- | ----------------- |
 | "Write clean code" | "Match the style of `src/parser.py`" |
 | "Add good tests" | "Follow `tests/test_loader.py`, then run `pytest tests/`" |
 | "Make it fast" | "`bench.sh` must report under 200 ms" |

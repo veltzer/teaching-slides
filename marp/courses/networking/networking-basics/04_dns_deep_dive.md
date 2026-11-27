@@ -60,7 +60,7 @@ Each level is called a "zone" and is managed by different organizations:
 There are 13 logical root server addresses (A through M), but hundreds of physical servers worldwide using anycast routing.
 
 | Letter | Operator | Locations |
-|--------|----------|-----------|
+| -------- | ---------- | ----------- |
 | A | Verisign | Distributed |
 | B | USC-ISI | Los Angeles |
 | C | Cogent | Distributed |
@@ -72,7 +72,7 @@ There are 13 logical root server addresses (A through M), but hundreds of physic
 ## DNS Root Servers (cont.)
 
 | Letter | Operator | Locations |
-|--------|----------|-----------|
+| -------- | ---------- | ----------- |
 | F | ISC | Distributed (100+) |
 | J | Verisign | Distributed (100+) |
 | K | RIPE NCC | Distributed |
@@ -98,7 +98,7 @@ dig . NS +short
 DNS stores various types of records, each serving a different purpose.
 
 | Record Type | Purpose | Example |
-|-------------|---------|---------|
+| ------------- | --------- | --------- |
 | A | IPv4 address | example.com → 93.184.216.34 |
 | AAAA | IPv6 address | example.com → 2606:2800:220:1:... |
 | CNAME | Canonical name (alias) | <https://www.example.com> → example.com |
@@ -109,7 +109,7 @@ DNS stores various types of records, each serving a different purpose.
 ## DNS Record Types Overview (cont.)
 
 | Record Type | Purpose | Example |
-|-------------|---------|---------|
+| ------------- | --------- | --------- |
 | TXT | Text data | SPF, DKIM, domain verification |
 | NS | Name server | example.com → ns1.example.com |
 | SOA | Start of authority | Zone metadata |
@@ -297,7 +297,7 @@ example.com.  3600  IN  SOA  ns1.example.com. admin.example.com. (
 ## SOA Record (cont.)
 
 | Field | Meaning |
-|-------|---------|
+| ------- | --------- |
 | ns1.example.com. | Primary name server |
 | admin.example.com. | Admin email (@ replaced with .) |
 | Serial | Zone version (often YYYYMMDDNN format) |
@@ -357,7 +357,7 @@ _sip._tcp.example.com. 3600 IN SRV 20 0  5060 sip3.example.com.
 ## SRV Records (cont.)
 
 | Field | Meaning |
-|-------|---------|
+| ------- | --------- |
 | Priority | Lower = preferred (like MX) |
 | Weight | Load balancing among same-priority targets |
 | Port | TCP/UDP port for the service |
@@ -445,7 +445,7 @@ example.com.        3600    IN    A    93.184.216.34
 **TTL trade-offs:**
 
 | Short TTL (60-300s) | Long TTL (3600-86400s) |
-|---------------------|------------------------|
+| --------------------- | ------------------------ |
 | Quick DNS changes propagate fast | Reduced DNS query load |
 | Higher DNS query volume | Faster resolution (cached) |
 | Good for failover scenarios | Changes take longer to propagate |
@@ -519,7 +519,7 @@ options timeout:2 attempts:3 rotate  # Options
 ## Configuring DNS on Linux (cont.)
 
 | Directive | Purpose |
-|-----------|---------|
+| ----------- | --------- |
 | nameserver | IP of DNS resolver (max 3) |
 | search | Domains appended to short hostnames |
 | domain | Default search domain (alternative to search) |
@@ -710,7 +710,7 @@ $ dig +sigchase +trusted-key=/etc/trusted-key.key example.com
 Traditional DNS queries are sent in plaintext over UDP port 53, allowing eavesdropping. DoH and DoT encrypt DNS queries.
 
 | Feature | Traditional DNS | DNS over TLS (DoT) | DNS over HTTPS (DoH) |
-|---------|----------------|--------------------|-----------------------|
+| --------- | ---------------- | -------------------- | ----------------------- |
 | Port | 53 (UDP/TCP) | 853 (TCP) | 443 (TCP) |
 | Encryption | None | TLS | HTTPS (TLS) |
 | Privacy | Low | High | High |
@@ -724,7 +724,7 @@ Traditional DNS queries are sent in plaintext over UDP port 53, allowing eavesdr
 **Popular DoH/DoT providers:**
 
 | Provider | DoH URL | DoT Server |
-|----------|---------|------------|
+| ---------- | --------- | ------------ |
 | Google | <https://dns.google/dns-query> | dns.google |
 | Cloudflare | <https://cloudflare-dns.com/dns-query> | 1dot1dot1dot1.cloudflare-dns.com |
 | Quad9 | <https://dns.quad9.net/dns-query> | dns.quad9.net |
@@ -893,7 +893,7 @@ Used by CDNs (Cloudflare, AWS Route53, Akamai) for latency-based routing.
 ## DNS Security Threats
 
 | Attack | Description | Mitigation |
-|--------|-------------|------------|
+| -------- | ------------- | ------------ |
 | DNS Spoofing | Forged responses redirect users | DNSSEC |
 | DNS Cache Poisoning | Corrupt resolver cache | DNSSEC, source port randomization |
 | DNS Amplification DDoS | Abuse open resolvers for DDoS | Rate limiting, response rate limiting |
@@ -903,7 +903,7 @@ Used by CDNs (Cloudflare, AWS Route53, Akamai) for latency-based routing.
 ## DNS Security Threats (cont.)
 
 | Attack | Description | Mitigation |
-|--------|-------------|------------|
+| -------- | ------------- | ------------ |
 | DNS Tunneling | Exfiltrate data over DNS queries | Monitor unusual query patterns |
 | Domain Hijacking | Unauthorized domain transfer | Registrar lock, 2FA |
 | Typosquatting | Register similar domain names | Monitor similar domains |

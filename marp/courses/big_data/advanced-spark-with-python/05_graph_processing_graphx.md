@@ -615,7 +615,7 @@ print(f"Number of triangle patterns: {triangles_motif.count()}")
 ## Graph Algorithms Comparison
 
 | Algorithm | Complexity | Use Case | Distributed? |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | PageRank | O(V + E) per iter | Node importance | Yes |
 | Connected Components | O(V + E) | Cluster detection | Yes |
 | Shortest Paths | O(V * E) | Route finding | Yes |
@@ -763,7 +763,7 @@ risk_scores.select("id", "account_type", "country",
 ## Graph Partitioning Strategies
 
 | Strategy | How it Works | Best For |
-|---|---|---|
+| --- | --- | --- |
 | Random | Hash vertex IDs | General purpose |
 | EdgePartition1D | Partition by source | High out-degree graphs |
 | EdgePartition2D | 2D grid on (src,dst) | Balanced edge distribution |

@@ -140,7 +140,7 @@ Best practices:
 ## Filesystem Types Comparison
 
 | Filesystem | Max Size | Journal | Features |
-|------------|----------|---------|----------|
+| ------------ | ---------- | --------- | ---------- |
 | `ext4` | 1 EiB | Yes | Mature, widely supported |
 | `XFS` | 8 EiB | Yes | Great for large files |
 | `Btrfs` | 16 EiB | CoW | Snapshots, compression |
@@ -224,7 +224,7 @@ mount -a
 ## Advanced Mount Options
 
 | Option | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `noexec` | Prevent execution of binaries |
 | `nosuid` | Ignore setuid/setgid bits |
 | `nodev` | Ignore device files |
@@ -575,7 +575,7 @@ mount -t nfs server:/shared /mnt/nfs
 ```
 
 | Option | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `rw` / `ro` | Read-write or read-only |
 | `sync` | Write to disk before responding |
 | `no_root_squash` | Allow root on client to be root on NFS |
@@ -879,7 +879,7 @@ ls /dev/loop0p*    # partitions appear automatically
 The I/O scheduler determines how read/write requests are ordered and merged.
 
 | Scheduler | Best For | Algorithm |
-|-----------|----------|-----------|
+| ----------- | ---------- | ----------- |
 | `none` | NVMe, fast SSDs | No reordering (FIFO) |
 | `mq-deadline` | SSDs, databases | Deadline-based, fair |
 | `bfq` | Desktop, latency-sensitive | Budget Fair Queuing |
@@ -978,7 +978,7 @@ multipath -v2
 Key considerations when planning storage for production servers:
 
 | Mount Point | Sizing Guidance | Options |
-|-------------|----------------|---------|
+| ------------- | ---------------- | --------- |
 | `/` | 20-50 GB | `noatime` |
 | `/boot` | 1-2 GB | `nodev,nosuid` |
 | `/home` | Per-user quotas | `nodev,nosuid,usrquota` |
@@ -989,7 +989,7 @@ Key considerations when planning storage for production servers:
 ## Storage Planning for Production (cont.)
 
 | Mount Point | Sizing Guidance | Options |
-|-------------|----------------|---------|
+| ------------- | ---------------- | --------- |
 | `/var/log` | 10-50 GB separate | `nodev,nosuid,noexec` |
 | `/tmp` | 5-10 GB or `tmpfs` | `nodev,nosuid,noexec` |
 | `/opt` | As needed | `nodev` |
@@ -1219,7 +1219,7 @@ Integrate these scripts with `cron` or `systemd` timers and send alerts via emai
 Modern disks may have different logical and physical sector sizes.
 
 | Type | Logical | Physical | Common On |
-|------|---------|----------|-----------|
+| ------ | --------- | ---------- | ----------- |
 | 512n | 512 B | 512 B | Older HDDs |
 | 512e | 512 B | 4096 B | Most modern HDDs |
 | 4Kn | 4096 B | 4096 B | Enterprise SSDs, new HDDs |

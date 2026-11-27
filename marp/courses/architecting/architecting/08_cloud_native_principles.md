@@ -27,7 +27,7 @@ audience:
 ## Cloud-Native vs Cloud-Hosted
 
 | Aspect | Cloud-Hosted | Cloud-Native |
-|--------|-------------|-------------|
+| -------- | ------------- | ------------- |
 | Architecture | Monolith on a VM | Microservices in containers |
 | Scaling | Vertical | Horizontal, auto-scaling |
 | State | Stateful servers | Stateless services |
@@ -158,7 +158,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ## Stateful vs Stateless Summary
 
 | Aspect | Stateless | Stateful |
-|--------|-----------|----------|
+| -------- | ----------- | ---------- |
 | Scaling | Trivial horizontal | Complex, requires rebalancing |
 | Failure recovery | Replace instance | Restore state from replica |
 | Deployment | Rolling update | Careful orchestration |

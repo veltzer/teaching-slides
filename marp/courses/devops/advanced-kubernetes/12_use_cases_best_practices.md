@@ -83,7 +83,7 @@ metadata:
 ```
 
 | Strategy | Pros | Cons |
-|----------|------|------|
+| ---------- | ------ | ------ |
 | Per environment | Simple, clear | Teams share namespace |
 | Per team | Team isolation | Env separation lost |
 | Per service | Maximum isolation | Overhead, many namespaces |
@@ -414,7 +414,7 @@ spec:
 ## Anti-Patterns to Avoid
 
 | Anti-Pattern | Better Approach |
-|-------------|----------------|
+| ------------- | ---------------- |
 | Running as root | `runAsNonRoot: true` |
 | No resource limits | Always set requests + limits |
 | `latest` image tag | Pin specific versions |
@@ -426,7 +426,7 @@ spec:
 ## Anti-Patterns to Avoid (cont.)
 
 | Anti-Pattern | Better Approach |
-|-------------|----------------|
+| ------------- | ---------------- |
 | No health probes | Liveness + readiness + startup |
 | Hardcoded configs | `ConfigMaps` + `Secrets` |
 | No `NetworkPolicies` | Deny-all, then allow specific |

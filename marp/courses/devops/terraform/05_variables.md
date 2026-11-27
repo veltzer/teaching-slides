@@ -56,7 +56,7 @@ variable "name" {
 ## Variable Types
 
 | Type | Example | Description |
-|------|---------|-------------|
+| ------ | --------- | ------------- |
 | `string` | `"hello"` | Text |
 | `number` | `42` | Numeric |
 | `bool` | `true` | Boolean |
@@ -489,7 +489,7 @@ resource "aws_instance" "web" {
 ## locals vs variables
 
 | Feature | `variable` | `locals` |
-|---------|-----------|----------|
+| --------- | ----------- | ---------- |
 | Set by | User/caller | Internal computation |
 | Scope | Module input | Within module only |
 | Reusable | Across modules | Within declaring module |

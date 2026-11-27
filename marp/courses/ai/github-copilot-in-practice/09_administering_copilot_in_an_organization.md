@@ -86,7 +86,7 @@ gh api /orgs/acme/copilot/billing/seats \
 ## Policy Areas
 
 | Area | Typical choice | Why it matters |
-|---|---|---|
+| --- | --- | --- |
 | Copilot in the IDE | enabled | the baseline feature |
 | Chat on `github.com` | enabled | questions about repositories and PRs |
 | Agent mode, coding agent | pilot teams first | runs commands, opens PRs |
@@ -143,7 +143,7 @@ gh api /orgs/acme/copilot/billing/seats \
 ## Data Retention
 
 | Surface | Prompts and suggestions | Notes |
-|---|---|---|
+| --- | --- | --- |
 | IDE code completions | not retained | discarded after the response |
 | IDE chat, `CLI`, web chat | retained about 28 days | for abuse monitoring |
 | Coding agent | session logs kept with the PR | visible in the repository |
@@ -226,7 +226,7 @@ gh api /orgs/acme/copilot/metrics \
 ## Metrics That Mean Something
 
 | Vanity metric | Better question |
-|---|---|
+| --- | --- |
 | Acceptance rate | Did accepted code survive review and stay? |
 | Lines suggested | Did lead time from issue to merge change? |
 | Number of chat turns | Did onboarding time to first PR drop? |
@@ -266,7 +266,7 @@ gh api /orgs/acme/copilot/metrics \
 ## Decisions Every Organization Must Make
 
 | Decision | Options |
-|---|---|
+| --- | --- |
 | Plan | `Business` or `Enterprise` |
 | Who gets seats | everyone, teams, on request |
 | Public code matching | block (indemnity) or allow with references |
@@ -279,7 +279,7 @@ gh api /orgs/acme/copilot/metrics \
 ## More Decisions
 
 | Decision | Options |
-|---|---|
+| --- | --- |
 | Content exclusion | which paths and repositories |
 | `MCP` servers | none, allowlist, open |
 | Contractors | same policy, restricted, none |

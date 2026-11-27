@@ -239,7 +239,7 @@ class StateManager<T> {
 ## Performance Considerations
 
 | Aspect | Native | Shared | Recommendation |
-|--------|--------|--------|----------------|
+| -------- | -------- | -------- | ---------------- |
 | UI Rendering | Platform-specific | Compose | Mix based on needs |
 | Business Logic | Duplicated | Shared | Share when possible |
 | Platform Features | Direct access | Limited | Use expect/actual |

@@ -32,7 +32,7 @@ Advanced Kubernetes Course
 ## Volume Types Overview
 
 | Type | Persistence | Use Case |
-|------|-------------|----------|
+| ------ | ------------- | ---------- |
 | `emptyDir` | Pod lifetime | Temp data, shared between containers |
 | `hostPath` | Node lifetime | Node-level access (testing only) |
 | `configMap` | Cluster lifetime | Configuration files |
@@ -43,7 +43,7 @@ Advanced Kubernetes Course
 ## Volume Types Overview (cont.)
 
 | Type | Persistence | Use Case |
-|------|-------------|----------|
+| ------ | ------------- | ---------- |
 | `persistentVolumeClaim` | Independent | Databases, stateful apps |
 | `projected` | Varies | Combine multiple sources |
 | `csi` | Varies | Custom storage via `CSI` |
@@ -96,7 +96,7 @@ spec:
 ## Access Modes
 
 | Mode | Abbreviation | Description |
-|------|-------------|-------------|
+| ------ | ------------- | ------------- |
 | `ReadWriteOnce` | `RWO` | Single node read-write |
 | `ReadOnlyMany` | `ROX` | Multiple nodes read-only |
 | `ReadWriteMany` | `RWX` | Multiple nodes read-write |
@@ -114,7 +114,7 @@ RWOP: Pod-A RW           Pod-B ✗
 ## Reclaim Policies
 
 | Policy | Behavior |
-|--------|----------|
+| -------- | ---------- |
 | `Retain` | Keep PV and data after PVC deletion |
 | `Delete` | Delete PV and underlying storage |
 | `Recycle` | Deprecated, use dynamic provisioning |
@@ -372,7 +372,7 @@ spec:
 ## `Secrets` - Types
 
 | Type | Usage |
-|------|-------|
+| ------ | ------- |
 | `Opaque` | Arbitrary data (default) |
 | `kubernetes.io/tls` | TLS certificate + key |
 | `kubernetes.io/dockerconfigjson` | Docker registry auth |

@@ -81,7 +81,7 @@ declare -p PATH
 ## Common Environment Variables
 
 | Variable | Purpose |
-|----------|---------|
+| ---------- | --------- |
 | `PATH` | Command search path |
 | `HOME` | User's home directory |
 | `USER` | Current username |

@@ -25,11 +25,11 @@ audience:
 
 ## Types of Custom Actions
 
-| Type        | Language      | Runs On          | Best For                   |
-|-------------|--------------|------------------|----------------------------|
-| JavaScript  | Node.js      | Runner directly  | Fast, cross-platform       |
-| Docker      | Any language | Container        | Specific OS/tool needs     |
-| Composite   | YAML         | Runner directly  | Combining existing actions |
+| Type       | Language     | Runs On         | Best For                   |
+| ---------- | ------------ | --------------- | -------------------------- |
+| JavaScript | Node.js      | Runner directly | Fast, cross-platform       |
+| Docker     | Any language | Container       | Specific OS/tool needs     |
+| Composite  | YAML         | Runner directly | Combining existing actions |
 
 ```tree
 Custom Action

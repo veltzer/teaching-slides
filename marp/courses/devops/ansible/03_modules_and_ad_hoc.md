@@ -46,7 +46,7 @@ audience:
 ## Module Categories
 
 | Category | Examples |
-|----------|---------|
+| ---------- | --------- |
 | Cloud | `amazon.aws.ec2_instance`, `azure.azcollection.azure_rm_virtualmachine` |
 | Files | `copy`, `file`, `template`, `lineinfile`, `blockinfile` |
 | Packaging | `apt`, `yum`, `pip`, `npm` |
@@ -57,7 +57,7 @@ audience:
 ## Module Categories (cont.)
 
 | Category | Examples |
-|----------|---------|
+| ---------- | --------- |
 | Database | `mysql_db`, `postgresql_db`, `mongodb_user` |
 | Network | `ios_command`, `nxos_config`, `vyos_system` |
 | Source Control | `git`, `subversion` |

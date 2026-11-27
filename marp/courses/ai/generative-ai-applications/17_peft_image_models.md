@@ -179,7 +179,7 @@ image = pipe("A mountain landscape in <my-art-style>").images[0]
 ## Comparing Personalization Methods
 
 | Method | Trainable | Storage | Quality | Training | Compose? |
-|--------|-----------|---------|---------|----------|----------|
+| -------- | ----------- | --------- | --------- | ---------- | ---------- |
 | DreamBooth | Full model | ~5 GB | ★★★★★ | 30-60 min | No |
 | DB + LoRA | LoRA adapters | ~50 MB | ★★★★☆ | 15-30 min | Yes |
 | Textual Inv. | 1 embedding | ~3 KB | ★★★☆☆ | 30-60 min | Yes |

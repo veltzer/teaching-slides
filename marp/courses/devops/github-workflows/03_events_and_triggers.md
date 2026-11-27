@@ -64,13 +64,13 @@ on:
 
 ## Push vs Pull Request Events
 
-| Aspect              | `push`                    | `pull_request`           |
-|---------------------|---------------------------|--------------------------|
-| Trigger             | Direct push to branch     | PR opened/updated        |
-| Runs on             | Pushed commit             | Merge commit             |
-| Secrets access      | Full access               | Limited for forks        |
-| Common use          | Deploy, publish           | CI checks, code review   |
-| `GITHUB_REF`        | `refs/heads/branch`       | `refs/pull/N/merge`      |
+| Aspect         | `push`                | `pull_request`         |
+| -------------- | --------------------- | ---------------------- |
+| Trigger        | Direct push to branch | PR opened/updated      |
+| Runs on        | Pushed commit         | Merge commit           |
+| Secrets access | Full access           | Limited for forks      |
+| Common use     | Deploy, publish       | CI checks, code review |
+| `GITHUB_REF`   | `refs/heads/branch`   | `refs/pull/N/merge`    |
 
 ---
 
@@ -98,13 +98,13 @@ on:
 
 ## Cron Expression Examples
 
-| Expression       | Schedule                        |
-|------------------|---------------------------------|
-| `0 0 * * *`      | Every day at midnight UTC       |
-| `30 5 * * 1-5`   | Weekdays at 5:30 AM UTC        |
-| `0 */6 * * *`    | Every 6 hours                   |
-| `0 12 1 * *`     | First day of month at noon      |
-| `0 0 * * 0`      | Every Sunday at midnight        |
+| Expression     | Schedule                   |
+| -------------- | -------------------------- |
+| `0 0 * * *`    | Every day at midnight UTC  |
+| `30 5 * * 1-5` | Weekdays at 5:30 AM UTC    |
+| `0 */6 * * *`  | Every 6 hours              |
+| `0 12 1 * *`   | First day of month at noon |
+| `0 0 * * 0`    | Every Sunday at midnight   |
 
 - Minimum interval: once every 5 minutes
 - Scheduled workflows run on the default branch only
@@ -249,22 +249,22 @@ jobs:
 
 ## Common `if` Conditions
 
-| Condition                                    | Meaning                     |
-|----------------------------------------------|-----------------------------|
-| `github.ref == 'refs/heads/main'`            | Only on main branch         |
-| `github.event_name == 'pull_request'`        | Only on pull requests       |
-| `contains(github.event.head_commit.message, '[skip ci]')` | Commit message check |
-| `success()`                                  | Previous steps succeeded    |
+| Condition                                                 | Meaning                  |
+| --------------------------------------------------------- | ------------------------ |
+| `github.ref == 'refs/heads/main'`                         | Only on main branch      |
+| `github.event_name == 'pull_request'`                     | Only on pull requests    |
+| `contains(github.event.head_commit.message, '[skip ci]')` | Commit message check     |
+| `success()`                                               | Previous steps succeeded |
 
 ---
 
 ## Common `if` Conditions (cont.)
 
-| Condition                                    | Meaning                     |
-|----------------------------------------------|-----------------------------|
-| `failure()`                                  | A previous step failed      |
-| `always()`                                   | Run regardless of status    |
-| `cancelled()`                                | Workflow was cancelled      |
+| Condition     | Meaning                  |
+| ------------- | ------------------------ |
+| `failure()`   | A previous step failed   |
+| `always()`    | Run regardless of status |
+| `cancelled()` | Workflow was cancelled   |
 
 ---
 

@@ -267,10 +267,10 @@ when HTTP_REQUEST {
 
 ## Cookie Attributes
 
-| Attribute  | Protects against                       |
-|------------|----------------------------------------|
-| `Secure`   | Sending the cookie over plain `HTTP`   |
-| `HttpOnly` | Reading the cookie from `JavaScript`   |
+| Attribute  | Protects against                          |
+| ---------- | ----------------------------------------- |
+| `Secure`   | Sending the cookie over plain `HTTP`      |
+| `HttpOnly` | Reading the cookie from `JavaScript`      |
 | `SameSite` | Sending the cookie on cross site requests |
 
 - The application should set them; the iRule guarantees it
@@ -310,14 +310,14 @@ curl -ik https://vs.example.com/ | grep -i set-cookie
 
 ## Security Headers
 
-| Header                         | Purpose                         |
-|--------------------------------|---------------------------------|
-| `Strict-Transport-Security`    | Force `HTTPS` on the browser    |
-| `X-Content-Type-Options`       | Stop `MIME` sniffing            |
-| `X-Frame-Options`              | Stop clickjacking               |
-| `Content-Security-Policy`      | Limit script and resource origins |
-| `Referrer-Policy`              | Limit what `Referer` leaks      |
-| `Permissions-Policy`           | Limit browser features          |
+| Header                      | Purpose                           |
+| --------------------------- | --------------------------------- |
+| `Strict-Transport-Security` | Force `HTTPS` on the browser      |
+| `X-Content-Type-Options`    | Stop `MIME` sniffing              |
+| `X-Frame-Options`           | Stop clickjacking                 |
+| `Content-Security-Policy`   | Limit script and resource origins |
+| `Referrer-Policy`           | Limit what `Referer` leaks        |
+| `Permissions-Policy`        | Limit browser features            |
 
 ---
 

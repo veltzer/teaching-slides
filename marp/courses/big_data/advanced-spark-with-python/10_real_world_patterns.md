@@ -365,7 +365,7 @@ moved.show()
 ## SCD Type Comparison
 
 | Feature | Type 1 | Type 2 | Type 3 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | History preserved | No | Full history | Previous value only |
 | Storage growth | Constant | Grows with changes | Constant |
 | Query complexity | Simple | Needs is_current filter | Simple |
@@ -376,7 +376,7 @@ moved.show()
 ## SCD Type Comparison (cont.)
 
 | Feature | Type 1 | Type 2 | Type 3 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Slowly changing | Any frequency | Any frequency | Infrequent changes |
 | Reporting at point-in-time | No | Yes | Limited |
 | Implementation complexity | Low | High | Medium |

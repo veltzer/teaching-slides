@@ -300,7 +300,7 @@ def new_customers(customers, orders):
 ## Choose the Structure from the Access Pattern
 
 | Access pattern | Structure | Typical cost |
-|---|---|---|
+| --- | --- | --- |
 | Index by position, iterate in order | Array / dynamic array | O(1) index |
 | Membership, lookup by key | Hash set / hash map | O(1) average |
 | Ordered keys, range queries | Balanced tree, sorted array | O(log n) |
@@ -412,7 +412,7 @@ if key not in cache:          # check
 ## Threads, Processes or Async
 
 | Model | Best for | Main risk |
-|---|---|---|
+| --- | --- | --- |
 | Threads | Shared-memory parallel work | Races, deadlocks |
 | Processes | CPU-bound work, isolation | Serialization and startup cost |
 | Async | Many concurrent waits on I/O | A blocking call stalls everything |

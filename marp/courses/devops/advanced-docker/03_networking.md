@@ -32,14 +32,14 @@ Mastering container connectivity
 
 ## Docker Network Drivers Overview
 
-| Driver    | Scope   | Description                          |
-|-----------|---------|--------------------------------------|
-| `bridge`  | Local   | Default. Isolated network on host    |
-| `host`    | Local   | Container shares host network stack  |
-| `none`    | Local   | No networking                        |
-| `overlay` | Swarm   | Multi-host networking                |
-| `macvlan` | Local   | Assign MAC address to container      |
-| `ipvlan`  | Local   | Share host MAC, separate IPs         |
+| Driver    | Scope | Description                         |
+| --------- | ----- | ----------------------------------- |
+| `bridge`  | Local | Default. Isolated network on host   |
+| `host`    | Local | Container shares host network stack |
+| `none`    | Local | No networking                       |
+| `overlay` | Swarm | Multi-host networking               |
+| `macvlan` | Local | Assign MAC address to container     |
+| `ipvlan`  | Local | Share host MAC, separate IPs        |
 
 ```bash
 # List available networks
@@ -101,13 +101,13 @@ docker exec api ping db
 
 ## User-Defined Bridge - Features
 
-| Feature                    | Default Bridge | User-Defined Bridge |
-|----------------------------|:--------------:|:-------------------:|
-| Automatic DNS resolution   | No             | Yes                 |
-| Network isolation          | Basic          | Full                |
-| Connect/disconnect live    | No             | Yes                 |
-| Custom subnet              | No             | Yes                 |
-| Link containers            | `--link` only  | Automatic           |
+| Feature                  | Default Bridge | User-Defined Bridge |
+| ------------------------ | :------------: | :-----------------: |
+| Automatic DNS resolution |       No       |         Yes         |
+| Network isolation        |     Basic      |        Full         |
+| Connect/disconnect live  |       No       |         Yes         |
+| Custom subnet            |       No       |         Yes         |
+| Link containers          | `--link` only  |      Automatic      |
 
 ```bash
 # Connect a running container to a network
@@ -356,11 +356,11 @@ docker network create -d ipvlan \
   ipvlan-l3
 ```
 
-| Feature     | `Macvlan`       | `IPvlan` L2     | `IPvlan` L3     |
-|-------------|-----------------|-----------------|-----------------|
-| MAC address | Unique per cnt  | Shared with host| Shared with host|
-| Broadcast   | Yes             | Yes             | No              |
-| Routing     | L2              | L2              | L3              |
+| Feature     | `Macvlan`      | `IPvlan` L2      | `IPvlan` L3      |
+| ----------- | -------------- | ---------------- | ---------------- |
+| MAC address | Unique per cnt | Shared with host | Shared with host |
+| Broadcast   | Yes            | Yes              | No               |
+| Routing     | L2             | L2               | L3               |
 
 ---
 

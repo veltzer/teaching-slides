@@ -376,7 +376,7 @@ kubectl delete cluster production
 ## `CAPI` Providers Ecosystem
 
 | Category | Providers |
-|----------|-----------|
+| ---------- | ----------- |
 | Infrastructure | `AWS`, `Azure`, `GCP`, `vSphere`, `OpenStack`, `Metal3` |
 | Bootstrap | `kubeadm`, `Talos`, `EKS`, `MicroK8s` |
 | Control Plane | `kubeadm`, `Talos`, `Nested` |

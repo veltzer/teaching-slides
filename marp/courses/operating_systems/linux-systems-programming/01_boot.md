@@ -336,7 +336,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 ## U-Boot vs GRUB Comparison
 
 | Feature | GRUB | U-Boot |
-|---------|------|--------|
+| --------- | ------ | -------- |
 | **Target** | Desktops/Servers | Embedded |
 | **Size** | ~30MB | ~500KB |
 | **File Systems** | Many | Limited |

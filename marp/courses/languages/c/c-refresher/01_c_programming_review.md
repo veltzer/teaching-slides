@@ -131,7 +131,7 @@ int main(int argc, char *argv[]) {
 ## Compiler Flags You Should Always Use
 
 | Flag | Purpose |
-|------|---------|
+| ------ | --------- |
 | `-Wall` | Enable most common warnings |
 | `-Wextra` | Enable additional warnings |
 | `-Werror` | Treat warnings as errors |
@@ -190,7 +190,7 @@ free(q);     /* UB! */
 ## Implementation-Defined vs Unspecified vs Undefined
 
 | Category | Meaning | Example |
-|----------|---------|---------|
+| ---------- | --------- | --------- |
 | **Defined** | Standard specifies exactly | `sizeof(char)` is always 1 |
 | **Implementation-defined** | Compiler chooses, must document | Size of `int` |
 | **Unspecified** | Compiler chooses, need not document | Order of function argument evaluation |

@@ -30,7 +30,7 @@ audience:
 ## Volume Commands
 
 | Command | Purpose | Example |
-|---------|---------|---------|
+| --------- | --------- | --------- |
 | `docker volume create` | Create new volume | `docker volume create mydata` |
 | `docker volume ls` | List volumes | `docker volume ls` |
 | `docker volume inspect` | Volume details | `docker volume inspect mydata` |
@@ -41,7 +41,7 @@ audience:
 ## Bind Mounts vs Named Volumes
 
 | Feature | Bind Mounts | Named Volumes |
-|---------|-------------|---------------|
+| --------- | ------------- | --------------- |
 | Location | Host-specified | Docker-managed |
 | Portability | Less portable | More portable |
 | Backup | Direct access | Docker commands |
@@ -65,7 +65,7 @@ audience:
 ## Volume Drivers
 
 | Driver | Purpose | Use Case |
-|--------|---------|----------|
+| -------- | --------- | ---------- |
 | local | Local storage | Single-host deployment |
 | nfs | Network storage | Multi-host access |
 | cifs | Windows shares | Windows integration |
@@ -88,7 +88,7 @@ audience:
 ## Mounting Syntax
 
 | Syntax | Description | Example |
-|--------|-------------|---------|
+| -------- | ------------- | --------- |
 | `-v name:/path` | Named volume | `-v mydata:/app/data` |
 | `-v /host:/container` | Bind mount | `-v /data:/app/data` |
 | `--mount type=volume` | Mount flag | `--mount source=mydata,target=/app/data` |
@@ -104,7 +104,7 @@ audience:
 ## Volume Security
 
 | Consideration | Solution | Implementation |
-|---------------|----------|----------------|
+| --------------- | ---------- | ---------------- |
 | Access Control | File permissions | `chmod`, `chown` |
 | Mount options | Read-only mounts | `:ro` flag |
 | SELinux | Labels | `z` or `Z` options |
@@ -121,7 +121,7 @@ audience:
 ## Performance Optimization
 
 | Strategy | Implementation | Benefit |
-|----------|---------------|---------|
+| ---------- | --------------- | --------- |
 | Mount caching | `:cached` flag | Better read performance |
 | Delegation | `:delegated` flag | Better write performance |
 | Volume plugins | Storage drivers | Optimized I/O |

@@ -63,7 +63,7 @@ Without idempotency: chaos and data corruption
 ## HTTP Methods and Idempotency
 
 | Method | Idempotent?  | Safe? |
-|--------|--------------|-------|
+| ------ | ------------ | ----- |
 | GET    | Yes          | Yes   |
 | HEAD   | Yes          | Yes   |
 | PUT    | Yes          | No    |
@@ -609,13 +609,13 @@ The Kafka log is the canonical key store; `seen` is just a materialized view. If
 
 ## Comparing the Five Backends
 
-| Backend   | Atomic with business write | Crash-safe commit | Multi-node | Native TTL | Latency |
-|-----------|---------------------------|-------------------|------------|------------|---------|
-| SQL       | Yes (same txn)            | Yes               | Yes        | Manual     | ~1-5 ms |
-| Redis     | No                        | Yes (AOF)         | Yes        | Yes        | <1 ms   |
-| Disk      | No                        | Yes (with fsync)  | No         | Manual     | 1-10 ms |
-| DynamoDB  | Yes (TransactWriteItems)  | Yes               | Yes        | Yes        | ~5-10 ms|
-| Kafka     | Yes (cross-topic txn)     | Yes               | Yes        | No (compaction) | ~10 ms |
+| Backend  | Atomic with business write | Crash-safe commit | Multi-node | Native TTL      | Latency  |
+| -------- | -------------------------- | ----------------- | ---------- | --------------- | -------- |
+| SQL      | Yes (same txn)             | Yes               | Yes        | Manual          | ~1-5 ms  |
+| Redis    | No                         | Yes (AOF)         | Yes        | Yes             | <1 ms    |
+| Disk     | No                         | Yes (with fsync)  | No         | Manual          | 1-10 ms  |
+| DynamoDB | Yes (TransactWriteItems)   | Yes               | Yes        | Yes             | ~5-10 ms |
+| Kafka    | Yes (cross-topic txn)      | Yes               | Yes        | No (compaction) | ~10 ms   |
 
 ---
 
@@ -789,7 +789,7 @@ There is no purely technical fix if the legacy service has no lookup by your key
 ## Wrapper vs. Fix the Actor
 
 | | Wrapper | Fix the actor |
-|---|---|---|
+| --- | --- | --- |
 | Effort | Low | High (often impossible for 3rd party) |
 | Correctness under crash | Requires reconciliation | Atomic with the effect |
 | Latency | +1 hop | None |

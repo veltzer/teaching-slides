@@ -188,7 +188,7 @@ spec:
 ## Service Types
 
 | Type | Description |
-|------|-------------|
+| ------ | ------------- |
 | `ClusterIP` | Internal-only IP, default type |
 | `NodePort` | Exposes on each node's IP at a static port |
 | `LoadBalancer` | Provisions an external load balancer |

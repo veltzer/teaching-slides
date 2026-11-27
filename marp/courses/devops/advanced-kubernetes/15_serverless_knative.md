@@ -164,7 +164,7 @@ spec:
 ## Autoscaling Metrics
 
 | Metric | Description | Default Target |
-|--------|-------------|----------------|
+| -------- | ------------- | ---------------- |
 | `concurrency` | Requests in flight per pod | 100 |
 | `rps` | Requests per second per pod | 200 |
 
@@ -502,7 +502,7 @@ spec:
 ## `Knative` vs Other Serverless
 
 | Feature | `Knative` | AWS Lambda | `OpenFaaS` |
-|---------|---------|------------|----------|
+| --------- | --------- | ------------ | ---------- |
 | Platform | `Kubernetes` | AWS | `Kubernetes` |
 | Scale to zero | Yes | Yes | Yes |
 | Container support | Any | Custom runtime | Any |

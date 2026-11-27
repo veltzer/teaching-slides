@@ -67,7 +67,7 @@ echo "*.txt"
 ## Finding Commands: Three Types
 
 | Built-in Commands | Function Definitions | External Programs |
-|-------------------|----------------------|-------------------|
+| ------------------- | ---------------------- | ------------------- |
 | cd, echo, pwd, export, read, test, [, [[ | User-defined functions in the current shell session | /usr/bin/ls, /usr/bin/grep, /usr/bin/awk |
 | No fork needed | No fork needed | Fork + exec |
 

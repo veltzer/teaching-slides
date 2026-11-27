@@ -115,7 +115,7 @@ dpkg -S /usr/sbin/nginx
 ```
 
 | Code | Meaning |
-|---|---|
+| --- | --- |
 | `ii` | Installed, configured, OK |
 | `rc` | Removed, config files remain |
 | `hi` | Held, installed |
@@ -330,7 +330,7 @@ Pin-Priority: -1
 ```
 
 | Priority | Behavior |
-|---|---|
+| --- | --- |
 | < 0 | Never install |
 | 1–99 | Only install if not already installed |
 | 100–499 | Install if newer than current |

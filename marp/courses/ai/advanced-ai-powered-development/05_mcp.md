@@ -46,7 +46,7 @@ audience:
 ## MCP vs Other Tool Integration Approaches
 
 | Feature | **MCP** | **OpenAI Function Calling** | **LangChain Tools** |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Protocol | Open standard (JSON-RPC) | Proprietary API parameter | Python/JS library |
 | Discovery | Dynamic at runtime | Static in prompt | Static in code |
 | Transport | `stdio`, HTTP, SSE | HTTPS only | In-process |

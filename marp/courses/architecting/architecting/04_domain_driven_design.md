@@ -206,7 +206,7 @@ class Money:
 ## Entity vs Value Object
 
 | Aspect | Entity | Value Object |
-|--------|--------|-------------|
+| -------- | -------- | ------------- |
 | Identity | Has unique ID | No identity |
 | Equality | By ID | By attributes |
 | Mutability | Mutable | Immutable |

@@ -21,7 +21,7 @@ audience:
 ## Server Operating Systems
 
 | OS | Market Share | Common Use |
-|----|-------------|------------|
+| ---- | ------------- | ------------ |
 | **Linux** (Ubuntu, CentOS, RHEL) | ~75% of web servers | Most web applications |
 | **Windows Server** | ~20% | `.NET`, `IIS`, enterprise |
 | **FreeBSD** | ~3% | Netflix, WhatsApp |
@@ -126,7 +126,7 @@ IIS 10.0       ->  Windows Server 2016/2019/2022
 ## Web Application Frameworks
 
 | Language | Frameworks | Security Features |
-|----------|-----------|-------------------|
+| ---------- | ----------- | ------------------- |
 | **Python** | Django, Flask, FastAPI | CSRF tokens, ORM |
 | **JavaScript** | Express, Next.js, Nest | Helmet.js, CORS |
 | **Java** | Spring, Struts, JSF | Spring Security |
@@ -165,7 +165,7 @@ curl -s https://target.com/sitemap.xml
 ## Data Stores - Relational Databases
 
 | Database | Default Port | Common With |
-|----------|-------------|-------------|
+| ---------- | ------------- | ------------- |
 | `MySQL` / `MariaDB` | 3306 | PHP, Python, Java |
 | `PostgreSQL` | 5432 | Python, Ruby, Java |
 | `Microsoft SQL Server` | 1433 | `.NET`, Java |
@@ -181,7 +181,7 @@ curl -s https://target.com/sitemap.xml
 ## NoSQL Data Stores
 
 | Database | Type | Default Port |
-|----------|------|-------------|
+| ---------- | ------ | ------------- |
 | `MongoDB` | Document | 27017 |
 | `Redis` | Key-Value | 6379 |
 | `Cassandra` | Wide-Column | 9042 |
@@ -335,7 +335,7 @@ Content-Length: 1234
 ## HTTP Methods & Security
 
 | Method | Purpose | Security Notes |
-|--------|---------|---------------|
+| -------- | --------- | --------------- |
 | `GET` | Retrieve data | Params in URL, logged, cached |
 | `POST` | Submit data | Body not in URL, not cached |
 | `PUT` | Update/create | Can overwrite resources |
@@ -387,7 +387,7 @@ testssl.sh target.com
 ## Encoding Schemes in Web Security
 
 | Encoding | Example | Use |
-|----------|---------|-----|
+| ---------- | --------- | ----- |
 | URL encoding | `%3Cscript%3E` | URL parameters |
 | HTML entities | `&lt;script&gt;` | HTML content |
 | Base64 | `PHNjcmlwdD4=` | Binary data, tokens |

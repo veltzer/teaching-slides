@@ -47,7 +47,7 @@ audience:
 ## Symmetric vs Asymmetric
 
 | | Symmetric | Asymmetric |
-|---|---|---|
+| --- | --- | --- |
 | Keys | one shared secret | public + private pair |
 | Speed | fast | slow |
 | Use for | bulk data | key exchange, signatures |

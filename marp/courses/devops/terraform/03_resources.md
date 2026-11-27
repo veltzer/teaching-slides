@@ -104,7 +104,7 @@ provider "aws" {
 ## Provider Version Constraints
 
 | Constraint | Meaning |
-|-----------|---------|
+| ----------- | --------- |
 | `= 5.0.0` | Exact version |
 | `>= 5.0` | Minimum version |
 | `~> 5.0` | Any 5.x version |
@@ -144,7 +144,7 @@ resource "aws_instance" "west_server" {
 ## Popular Providers
 
 | Provider | Source | Use Case |
-|----------|--------|----------|
+| ---------- | -------- | ---------- |
 | `aws` | `hashicorp/aws` | Amazon Web Services |
 | `azurerm` | `hashicorp/azurerm` | Microsoft Azure |
 | `google` | `hashicorp/google` | Google Cloud |
@@ -383,7 +383,7 @@ output "private_ip" {
 ## Argument vs Attribute
 
 | Concept | Description | Example |
-|---------|-------------|---------|
+| --------- | ------------- | --------- |
 | Argument | Value you set in config | `instance_type = "t3.micro"` |
 | Attribute | Value returned by provider | `aws_instance.web.id` |
 | Computed | Set by provider, not user | `public_ip` |
@@ -463,7 +463,7 @@ resource "aws_instance" "servers" {
 ## count vs for_each
 
 | Feature | `count` | `for_each` |
-|---------|---------|------------|
+| --------- | --------- | ------------ |
 | Index type | Numeric | String key |
 | Removal | Shifts indices | Removes by key |
 | Input | Number | Map or set |

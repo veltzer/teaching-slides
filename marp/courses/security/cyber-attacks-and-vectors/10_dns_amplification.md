@@ -139,22 +139,22 @@ If all ISPs implemented BCP38, IP spoofing-based amplification would be impossib
 
 DNS is not the only protocol abused for amplification:
 
-| Protocol    | Port  | Amplification Factor | Bandwidth Potential |
-|-------------|-------|---------------------|---------------------|
-| DNS         | 53    | 28-54x              | Very High           |
-| NTP         | 123   | 556x                | Extreme             |
-| Memcached   | 11211 | 51,000x             | Extreme             |
-| SSDP        | 1900  | 30x                 | High                |
+| Protocol  | Port  | Amplification Factor | Bandwidth Potential |
+| --------- | ----- | -------------------- | ------------------- |
+| DNS       | 53    | 28-54x               | Very High           |
+| NTP       | 123   | 556x                 | Extreme             |
+| Memcached | 11211 | 51,000x              | Extreme             |
+| SSDP      | 1900  | 30x                  | High                |
 
 ---
 
 ## Other Amplification Protocols (cont.)
 
-| Protocol    | Port  | Amplification Factor | Bandwidth Potential |
-|-------------|-------|---------------------|---------------------|
-| SNMP        | 161   | 6x                  | Medium              |
-| CharGEN     | 19    | 358x                | High                |
-| LDAP        | 389   | 46-55x              | High                |
+| Protocol | Port | Amplification Factor | Bandwidth Potential |
+| -------- | ---- | -------------------- | ------------------- |
+| SNMP     | 161  | 6x                   | Medium              |
+| CharGEN  | 19   | 358x                 | High                |
+| LDAP     | 389  | 46-55x               | High                |
 
 The 2018 GitHub attack used Memcached amplification: 1.35 Tbps!
 

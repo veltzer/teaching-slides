@@ -512,7 +512,7 @@ os.environ["LANGCHAIN_PROJECT"] = "my-genai-app"
 ## Comparing LangChain with Alternatives
 
 | Feature | LangChain | LlamaIndex | Direct API |
-|---------|-----------|------------|------------|
+| --------- | ----------- | ------------ | ------------ |
 | Learning curve | Medium | Medium | Low |
 | Flexibility | High | Medium | Highest |
 | RAG support | Good | Excellent | Manual |

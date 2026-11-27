@@ -189,7 +189,7 @@ CKEditor              4.11.0     Multiple XSS
 ## Attack Surface Prioritization
 
 | Priority | Attack Surface | Reason |
-|----------|---------------|--------|
+| ---------- | --------------- | -------- |
 | **Critical** | Authentication/Login | Direct access to accounts |
 | **Critical** | File uploads | Potential RCE |
 | **Critical** | Admin panels | Full system control |

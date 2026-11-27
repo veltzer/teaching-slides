@@ -851,7 +851,7 @@ time git diff HEAD~1..HEAD
 **Memory and CPU usage:**
 
 | Tool Type | Memory Usage | CPU Usage | Startup Time |
-|-----------|--------------|-----------|--------------|
+| ----------- | -------------- | ----------- | -------------- |
 | Command Line | Low | Low | Instant |
 | IDE Integration | Medium | Medium | Fast |
 | Desktop GUI | High | Medium | Medium |

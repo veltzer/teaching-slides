@@ -24,7 +24,7 @@ audience:
 ## Basic Dockerfile Structure
 
 | Instruction | Purpose | Example |
-|-------------|---------|---------|
+| ------------- | --------- | --------- |
 | FROM | Base image | `FROM ubuntu:22.04` |
 | WORKDIR | Set working directory | `WORKDIR /app` |
 | COPY | Copy files | `COPY . /app` |
@@ -88,7 +88,7 @@ CMD ["python", "app.py"]
 ## Best Practices for Dockerfile
 
 | Category | Practice | Reason |
-|----------|----------|---------|
+| ---------- | ---------- | --------- |
 | Base Image | Use official, specific version | Security, stability |
 | Layer Order | Most stable first | Better caching |
 | Commands | Combine RUN commands | Reduce layers |
@@ -112,7 +112,7 @@ CMD ["python", "app.py"]
 ## Image Tagging Strategy
 
 | Tag Type | Purpose | Example |
-|----------|---------|---------|
+| ---------- | --------- | --------- |
 | Latest | Most recent version | `myapp:latest` |
 | Version | Specific release | `myapp:1.0.0` |
 | Stage | Development phase | `myapp:staging` |

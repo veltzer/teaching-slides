@@ -55,7 +55,7 @@ audience:
 ## Ansible vs Other Tools
 
 | Feature | `Ansible` | `Puppet` | `Chef` | `SaltStack` |
-|---------|---------|--------|------|-----------|
+| --------- | --------- | -------- | ------ | ----------- |
 | Language | `YAML` | Ruby DSL | Ruby DSL | `YAML` |
 | Architecture | Agentless | Agent-based | Agent-based | Agent/Agentless |
 | Transport | `SSH` | HTTPS | HTTPS | ZeroMQ/`SSH` |
@@ -383,7 +383,7 @@ pipelining = true
 ## Important Configuration Options
 
 | Option | Description | Default |
-|--------|-------------|---------|
+| -------- | ------------- | --------- |
 | `inventory` | Path to inventory file | `/etc/ansible/hosts` |
 | `remote_user` | SSH user for connections | Current user |
 | `become` | Enable privilege escalation | `false` |
@@ -888,7 +888,7 @@ ansible web01 -m setup -a "filter=ansible_memory_mb"
 ## Ad-Hoc Command Options
 
 | Option | Description |
-|--------|-------------|
+| -------- | ------------- |
 | `-i` | Inventory file |
 | `-m` | Module name |
 | `-a` | Module arguments |
@@ -901,7 +901,7 @@ ansible web01 -m setup -a "filter=ansible_memory_mb"
 ## Ad-Hoc Command Options (cont.)
 
 | Option | Description |
-|--------|-------------|
+| -------- | ------------- |
 | `-k` / `--ask-pass` | Prompt for SSH password |
 | `-f` | Number of forks (parallelism) |
 | `-v` / `-vvv` / `-vvvv` | Verbosity level |
@@ -1004,7 +1004,7 @@ ansible-playbook --limit web01 first_playbook.yml
 ## Play Keywords
 
 | Keyword | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `name` | Description of the play |
 | `hosts` | Target hosts/groups |
 | `become` | Enable privilege escalation |
@@ -1018,7 +1018,7 @@ ansible-playbook --limit web01 first_playbook.yml
 ## Play Keywords (cont.)
 
 | Keyword | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `handlers` | Tasks triggered by `notify` |
 | `pre_tasks` | Tasks run before roles |
 | `post_tasks` | Tasks run after roles |

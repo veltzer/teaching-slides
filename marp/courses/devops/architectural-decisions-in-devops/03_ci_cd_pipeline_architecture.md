@@ -117,7 +117,7 @@ jobs:
 - **SaaS**: `GitHub Actions`, `GitLab` SaaS, `CircleCI`, `Buildkite`
 
 | Dimension | Self-Hosted | SaaS |
-|---|---|---|
+| --- | --- | --- |
 | Setup cost | High | Low |
 | Maintenance | Your team | Vendor |
 | Customization | Unlimited | Limited |
@@ -235,7 +235,7 @@ jobs:
 ## Triggered vs Scheduled vs Event-Driven Pipelines
 
 | Type | Trigger | Use Case |
-|---|---|---|
+| --- | --- | --- |
 | Triggered | `git push`, PR open | Standard CI builds |
 | Scheduled | Cron expression | Nightly builds, dependency checks |
 | Event-driven | Webhook, message queue | Cross-repo orchestration |
@@ -312,7 +312,7 @@ on:
 ## Dependency Vendoring vs Dynamic Resolution (cont.)
 
 | Factor | Vendoring | Dynamic |
-|---|---|---|
+| --- | --- | --- |
 | Reproducibility | High | Medium |
 | Repo size | Large | Small |
 | Build speed (cold) | Fast | Slow |
@@ -555,7 +555,7 @@ CMD ["node", "/app/index.js"]
 ## Key Decisions and Framework
 
 | Decision | Trade-off |
-|---|---|
+| --- | --- |
 | Centralized vs decentralized | Control vs autonomy |
 | Build vs buy | Flexibility vs operational cost |
 | Pipeline as code vs UI | Auditability vs ease of use |

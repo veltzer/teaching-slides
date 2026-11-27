@@ -58,7 +58,7 @@ button.setOnClickListener(v -> performAction());
 ## Common Lambda Use Cases
 
 | Scenario | Traditional | Lambda |
-|----------|-------------|---------|
+| ---------- | ------------- | --------- |
 | Click Listener | `new OnClickListener() {...}` | `v -> handleClick()` |
 | Runnable | `new Runnable() {...}` | `() -> performTask()` |
 | Comparator | `new Comparator<T>() {...}` | `(a, b) -> a.compareTo(b)` |

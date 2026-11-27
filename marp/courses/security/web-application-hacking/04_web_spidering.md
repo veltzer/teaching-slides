@@ -37,7 +37,7 @@ audience:
 ## Spidering vs Content Discovery
 
 | Spidering | Content Discovery |
-|-----------|-------------------|
+| ----------- | ------------------- |
 | Follows existing links | Brute-forces paths |
 | Discovers linked content | Finds unlinked content |
 | Respects `robots.txt` | Ignores `robots.txt` |

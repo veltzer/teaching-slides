@@ -34,7 +34,7 @@ audience:
 - Latency requirements differ by use case
 
 | Task | Recommended Tier | Example |
-|------|-----------------|---------|
+| ------ | ----------------- | --------- |
 | Code completion | Fast, cheap | `GPT-4o-mini`, `Claude Haiku` |
 | Architecture review | High reasoning | `Claude Opus`, `GPT-4o` |
 | Test generation | Mid-tier | `Claude Sonnet`, `GPT-4o` |
@@ -166,7 +166,7 @@ Feed `COST_LOG` into Grafana or a simple HTML chart for visibility.
 - Fine-tuning is warranted when prompts become unwieldy
 
 | Criteria | Prompt Engineering | Fine-Tuning |
-|----------|-------------------|-------------|
+| ---------- | ------------------- | ------------- |
 | Setup cost | Low | High |
 | Iteration speed | Minutes | Hours/days |
 | Domain adaptation | Moderate | Strong |
@@ -327,7 +327,7 @@ Both expose an OpenAI-compatible API for tool integration.
 - Quantization trades accuracy for speed and memory
 
 | Model Size | Quantization | VRAM Required | Tokens/sec (RTX 4090) |
-|-----------|-------------|---------------|----------------------|
+| ----------- | ------------- | --------------- | ---------------------- |
 | 7B | Q4_K_M | ~4 GB | ~80 |
 | 13B | Q4_K_M | ~8 GB | ~45 |
 | 34B | Q4_K_M | ~20 GB | ~20 |
@@ -345,7 +345,7 @@ Both expose an OpenAI-compatible API for tool integration.
 - Multiple formats target different hardware and workflows
 
 | Format | Approach | Best For |
-|--------|----------|----------|
+| -------- | ---------- | ---------- |
 | `GGUF` | CPU + GPU split inference | `llama.cpp`, `Ollama` |
 | `GPTQ` | GPU-only, post-training quantization | `vLLM`, `AutoGPTQ` |
 | `AWQ` | Activation-aware, preserves salient weights | `vLLM`, `TGI` |
@@ -700,7 +700,7 @@ Mitigations:
 - Each tool makes different tradeoffs in autonomy and integration
 
 | Feature | `Cursor` | `Claude Code` | `Windsurf` | `Copilot Workspace` |
-|---------|----------|---------------|------------|---------------------|
+| --------- | ---------- | --------------- | ------------ | --------------------- |
 | Autonomy level | Medium | High | Medium | High |
 | Terminal access | Limited | Full | Limited | Sandboxed |
 | Multi-file edits | Yes | Yes | Yes | Yes |
@@ -710,7 +710,7 @@ Mitigations:
 ## Agentic Tool Comparison Matrix (cont.)
 
 | Feature | `Cursor` | `Claude Code` | `Windsurf` | `Copilot Workspace` |
-|---------|----------|---------------|------------|---------------------|
+| --------- | ---------- | --------------- | ------------ | --------------------- |
 | Custom tools/MCP | No | Yes | No | No |
 | Offline/local | No | No | No | No |
 | Pricing model | Subscription | Token-based | Subscription | Subscription |

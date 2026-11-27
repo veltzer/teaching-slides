@@ -132,7 +132,7 @@ project(HelloWorld
 ## Variables Set by project()
 
 | Variable | Value |
-|----------|-------|
+| ---------- | ------- |
 | `PROJECT_NAME` | HelloWorld |
 | `PROJECT_VERSION` | 1.0.0 |
 | `PROJECT_VERSION_MAJOR` | 1 |
@@ -204,7 +204,7 @@ target_link_libraries(hello PRIVATE mylib)
 ## PRIVATE vs PUBLIC vs INTERFACE
 
 | Keyword | Used by target | Propagated to dependents |
-|---------|---------------|------------------------|
+| --------- | --------------- | ------------------------ |
 | `PRIVATE` | Yes | No |
 | `PUBLIC` | Yes | Yes |
 | `INTERFACE` | No | Yes |
@@ -333,7 +333,7 @@ cmake -DCMAKE_BUILD_TYPE=MinSizeRel ..
 ```
 
 | Type | Optimization | Debug Info |
-|------|-------------|------------|
+| ------ | ------------- | ------------ |
 | `Debug` | `-O0` | Yes (`-g`) |
 | `Release` | `-O3` | No |
 | `RelWithDebInfo` | `-O2` | Yes (`-g`) |

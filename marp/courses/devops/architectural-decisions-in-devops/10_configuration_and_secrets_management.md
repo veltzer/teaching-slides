@@ -166,7 +166,7 @@ services:
 ## Restart vs Hot-Reload Tradeoffs
 
 | Aspect | Restart | Hot-Reload |
-|--------|---------|------------|
+| -------- | --------- | ------------ |
 | Downtime | Brief interruption | Zero downtime |
 | Complexity | Simple, stateless | Must handle state |
 | Safety | Clean slate | Risk of partial state |
@@ -326,7 +326,7 @@ sops -d secrets/prod.enc.yaml
 ## Vault vs Encrypted Config: When to Use Each
 
 | Criteria | Vault / Secrets Mgr | Encrypted Config |
-|----------|---------------------|------------------|
+| ---------- | --------------------- | ------------------ |
 | Team size | Large, multiple teams | Small, single team |
 | Rotation needs | Frequent, automated | Infrequent, manual |
 | Audit requirements | Strict compliance | Basic tracking |

@@ -42,7 +42,7 @@ audience:
 ## CQRS Maps Cleanly Onto DDD
 
 | DDD concept | CQRS / ES expression |
-|---|---|
+| --- | --- |
 | Aggregate | Write model; emits events |
 | Domain event | Event in the stream |
 | Repository | Event store reader/writer |

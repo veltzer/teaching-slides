@@ -25,7 +25,7 @@ audience:
 ```
 
 | Standard | Key Additions |
-|----------|--------------|
+| ---------- | -------------- |
 | C89/C90 | First standard, function prototypes |
 | C99 | `//` comments, VLAs, `_Bool`, `<stdint.h>`, designated initializers |
 | C11 | `_Generic`, `_Static_assert`, `_Atomic`, `_Thread_local`, anonymous structs |
@@ -292,7 +292,7 @@ Compile: `gcc -std=c11 -pthread -o atomic atomic.c`
 ## Atomic Operations Reference
 
 | Operation | Description |
-|-----------|-------------|
+| ----------- | ------------- |
 | `atomic_store(&a, val)` | Store value |
 | `atomic_load(&a)` | Load value |
 | `atomic_fetch_add(&a, n)` | Add and return old value |
@@ -303,7 +303,7 @@ Compile: `gcc -std=c11 -pthread -o atomic atomic.c`
 ## Atomic Operations Reference (cont.)
 
 | Operation | Description |
-|-----------|-------------|
+| ----------- | ------------- |
 | `atomic_fetch_or(&a, n)` | OR and return old value |
 | `atomic_fetch_and(&a, n)` | AND and return old value |
 | `atomic_exchange(&a, val)` | Swap and return old value |
@@ -316,7 +316,7 @@ Compile: `gcc -std=c11 -pthread -o atomic atomic.c`
 Memory orderings:
 
 | Order | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `memory_order_relaxed` | No ordering (fastest) |
 | `memory_order_acquire` | Load barrier |
 | `memory_order_release` | Store barrier |
@@ -433,7 +433,7 @@ int main(void) {
 ```
 
 | Pro | Con |
-|-----|-----|
+| ----- | ----- |
 | Natural syntax for dynamic-size arrays | Stack overflow risk with large sizes |
 | `sizeof` works correctly | Cannot detect allocation failure |
 | No need for malloc/free | Optional in C11+ |
@@ -792,7 +792,7 @@ int main(void) {
 ## Modern C Idioms Summary
 
 | Old Way | Modern Way | Since |
-|---------|-----------|-------|
+| --------- | ----------- | ------- |
 | `#define MAX 100` | `enum { MAX = 100 };` or `constexpr int MAX = 100;` | C23 |
 | `(void *)0` or `0` | `nullptr` | C23 |
 | Explicit types | `auto x = expr;` | C23 |
@@ -804,7 +804,7 @@ int main(void) {
 ## Modern C Idioms Summary (cont.)
 
 | Old Way | Modern Way | Since |
-|---------|-----------|-------|
+| --------- | ----------- | ------- |
 | Runtime assertion | `_Static_assert` | C11 |
 | `volatile` flag | `_Atomic` variable | C11 |
 | Global thread state | `_Thread_local` | C11 |

@@ -56,7 +56,7 @@ err tmm[12345]: 01220001:3: TCL error: /Common/my_rule
 ## Common Runtime Error Messages
 
 | Message | Cause |
-|---------|-------|
+| --------- | ------- |
 | `can't read "x": no such variable` | set in another event or branch |
 | `invalid command name` | typo or a `Tcl` command not in iRules |
 | `command is not valid in current event context` | `HTTP::` used in `CLIENT_ACCEPTED` |

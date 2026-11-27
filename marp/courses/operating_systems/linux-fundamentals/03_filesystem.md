@@ -49,16 +49,16 @@ Key Directories:
 
 ## Important System Directories
 
-| Directory | Purpose |
-|-----------|---------|
-| `/bin`    | Essential commands |
-| `/sbin`   | System binaries |
+| Directory | Purpose             |
+| --------- | ------------------- |
+| `/bin`    | Essential commands  |
+| `/sbin`   | System binaries     |
 | `/etc`    | Configuration files |
-| `/dev`    | Device files |
+| `/dev`    | Device files        |
 | `/proc`   | Process information |
-| `/tmp`    | Temporary files |
-| `/var`    | Variable data |
-| `/root`   | Root user's home |
+| `/tmp`    | Temporary files     |
+| `/var`    | Variable data       |
+| `/root`   | Root user's home    |
 
 ---
 

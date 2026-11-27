@@ -107,7 +107,7 @@ specs/
 ## Spec Kit With Claude Code, Copilot and Cursor
 
 | Agent | Command files | How to invoke |
-|---|---|---|
+| --- | --- | --- |
 | `Claude Code` | `.claude/commands/speckit.*.md` | `/speckit.specify ...` in the CLI |
 | `GitHub Copilot` | `.github/prompts/speckit.*.prompt.md` | `/speckit.specify` in agent mode |
 | Cursor | `.cursor/commands/speckit.*.md` | `/speckit.specify` in chat |
@@ -233,7 +233,7 @@ specs/
 ## Choosing a Toolchain
 
 | Constraint | Leans toward |
-|---|---|
+| --- | --- |
 | Team standardized on one IDE | `Kiro` or Cursor rules |
 | Mixed agents across the team | `Spec Kit` or DIY `Markdown` |
 | Enterprise `Copilot` license only | `Spec Kit` with `Copilot` prompts |
@@ -255,7 +255,7 @@ specs/
 - Every approach produces the same `Markdown` trio, so migration is a file move plus a re-pointed instruction file
 
 | From | To | What moves | What is rewritten |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `Spec Kit` | `Kiro` | `specs/*` into `.kiro/specs/*` | constitution into steering |
 | `Kiro` | DIY | `.kiro/specs/*` into `docs/specs/*` | hooks into `git` or agent hooks |
 | DIY | `Spec Kit` | `docs/specs/*` into `specs/*` | template headings aligned |

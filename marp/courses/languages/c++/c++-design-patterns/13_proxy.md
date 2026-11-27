@@ -191,7 +191,7 @@ public:
 ## Proxy vs Decorator vs Adapter
 
 | Pattern | Purpose | Interface |
-|---------|---------|-----------|
+| --------- | --------- | ----------- |
 | Proxy | Controls access | Same as subject |
 | Decorator | Adds behavior | Same as component |
 | Adapter | Converts interface | Different from adaptee |

@@ -170,14 +170,14 @@ What the compiler does for you
   opt-level = 2          # Optimize dependencies even in dev mode
 ```
 
-| Level | Speed | Compile Time | Binary Size | Debug Info |
-|-------|-------|-------------|-------------|------------|
-| 0     | Slow  | Fast        | Large       | Full       |
-| 1     | OK    | OK          | Smaller     | Full       |
-| 2     | Fast  | Slower      | Smaller     | Partial    |
-| 3     | Fastest| Slowest    | Varies      | Minimal    |
-| "s"   | Good  | Slower      | Small       | Minimal    |
-| "z"   | Good  | Slower      | Smallest    | Minimal    |
+| Level | Speed   | Compile Time | Binary Size | Debug Info |
+| ----- | ------- | ------------ | ----------- | ---------- |
+| 0     | Slow    | Fast         | Large       | Full       |
+| 1     | OK      | OK           | Smaller     | Full       |
+| 2     | Fast    | Slower       | Smaller     | Partial    |
+| 3     | Fastest | Slowest      | Varies      | Minimal    |
+| "s"   | Good    | Slower       | Small       | Minimal    |
+| "z"   | Good    | Slower       | Smallest    | Minimal    |
 
 ---
 

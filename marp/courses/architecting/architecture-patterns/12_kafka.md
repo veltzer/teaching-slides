@@ -69,7 +69,7 @@ audience:
 ## Message Queue Comparison
 
 | Feature | Kafka | SQS | RabbitMQ | ActiveMQ |
-|---------|-------|-----|----------|----------|
+| --------- | ------- | ----- | ---------- | ---------- |
 | Throughput | Very High | Medium | High | Medium |
 | Latency | ~10ms | ~100ms | ~1ms | ~1ms |
 | Max Message Size | 1MB default | 256KB | No limit | No limit |
@@ -202,7 +202,7 @@ audience:
 ## Message Delivery Guarantees
 
 | System | At Most Once | At Least Once | Exactly Once |
-|--------|--------------|---------------|--------------|
+| -------- | -------------- | --------------- | -------------- |
 | Kafka | Yes | Yes | Yes (with transactions) |
 | SQS | No | Yes | No |
 | RabbitMQ | Yes | Yes | Yes (with plugins) |
@@ -312,7 +312,7 @@ audience:
 ## Cost Considerations
 
 | Aspect | Kafka | SQS | RabbitMQ |
-|--------|-------|-----|----------|
+| -------- | ------- | ----- | ---------- |
 | Infrastructure | High | Low | Medium |
 | Maintenance | High | Low | Medium |
 | Message Cost | Very Low | Per Message | N/A |

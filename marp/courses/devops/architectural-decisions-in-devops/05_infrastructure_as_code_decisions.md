@@ -193,7 +193,7 @@ Outputs:
 ## Tool Comparison Matrix
 
 | Criteria | `Terraform` | `Pulumi` | `CloudFormation` |
-|----------|-----------|---------|----------------|
+| ---------- | ----------- | --------- | ---------------- |
 | Language | `HCL` | General-purpose | `YAML`/`JSON` |
 | Multi-cloud | Yes | Yes | No (AWS only) |
 | State mgmt | Self-managed | Self or managed | AWS-managed |

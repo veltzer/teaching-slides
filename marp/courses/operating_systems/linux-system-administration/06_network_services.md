@@ -979,7 +979,7 @@ ip link set gre1 up
 ## NetworkManager vs systemd-networkd
 
 | Feature | `NetworkManager` | `systemd-networkd` |
-|---------|-----------------|-------------------|
+| --------- | ----------------- | ------------------- |
 | Target use | Desktops, laptops | Servers, containers |
 | WiFi support | Full | Limited |
 | VPN plugins | Many | None built-in |
@@ -1335,7 +1335,7 @@ nft add rule inet filter forward \
 Modern `Linux` uses predictable network interface names based on hardware topology.
 
 | Prefix | Meaning |
-|--------|---------|
+| -------- | --------- |
 | `en` | Ethernet |
 | `wl` | Wireless LAN |
 | `ww` | Wireless WAN (cellular) |

@@ -55,7 +55,7 @@ Security parameters quantify the work an attacker would need:
 The building blocks you will compose into systems
 
 | Primitive | Purpose | Examples |
-|---|---|---|
+| --- | --- | --- |
 | Symmetric cipher | Bulk encryption | AES, ChaCha20 |
 | Asymmetric cipher | Key exchange, signatures | RSA, ECC |
 | Hash | Fingerprint, integrity | SHA-256 |

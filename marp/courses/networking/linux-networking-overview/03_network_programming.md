@@ -211,7 +211,7 @@ ssize_t send(int sockfd, const void *buf, size_t len, int flags);
 ## Send/Recv Flags
 
 | Flag | Description |
-|------|-------------|
+| ------ | ------------- |
 | MSG_PEEK | Look at data without removing |
 | MSG_OOB | Send/receive out-of-band data |
 | MSG_WAITALL | Wait for full buffer |
@@ -308,7 +308,7 @@ int getsockopt(int sockfd, int level, int optname,
 ## Common Socket Options
 
 | Option | Level | Purpose |
-|--------|-------|---------|
+| -------- | ------- | --------- |
 | SO_REUSEADDR | SOL_SOCKET | Allow address reuse |
 | SO_KEEPALIVE | SOL_SOCKET | Keep connection alive |
 | TCP_NODELAY | IPPROTO_TCP | Disable Nagle's algorithm |

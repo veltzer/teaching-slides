@@ -46,7 +46,7 @@ Universal formats answer:
 ## The Three Big Universal Formats
 
 | | `flatpak` | `snap` | `appimage` |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Origin | community / `Red Hat` ties | `Canonical` | community |
 | Server | `flathub` (and others) | `Snap Store` (single) | none — direct download |
 | Sandboxed | yes (`bubblewrap`) | yes (`apparmor`) | no |
@@ -57,7 +57,7 @@ Universal formats answer:
 ## The Three Big Universal Formats (cont.)
 
 | | `flatpak` | `snap` | `appimage` |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Auto-update | optional | yes, mandatory by default | manual |
 | Cross-distro | yes | yes | yes |
 | Server can be self-hosted | yes | no (single store) | n/a |
@@ -179,7 +179,7 @@ sudo snap remove firefox
 A snap publisher offers up to four parallel streams of the same app.
 
 | Channel | Meaning |
-|---|---|
+| --- | --- |
 | `stable` | Production. The default. |
 | `candidate` | About to become `stable`. |
 | `beta` | Pre-release. |

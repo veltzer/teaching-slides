@@ -127,17 +127,17 @@ kill -CONT PID
 
 ## Common Signal Numbers
 
-| Signal    | Number | Purpose               |
-|-----------|--------|----------------------|
-| SIGHUP    | 1      | Hangup              |
-| SIGINT    | 2      | Interrupt (Ctrl+C)  |
-| SIGQUIT   | 3      | Quit                |
-| SIGKILL   | 9      | Force Kill          |
-| SIGTERM   | 15     | Terminate           |
-| SIGSTOP   | 19     | Stop                |
-| SIGCONT   | 18     | Continue            |
-| SIGUSR1   | 10     | User defined        |
-| SIGUSR2   | 12     | User defined        |
+| Signal  | Number | Purpose            |
+| ------- | ------ | ------------------ |
+| SIGHUP  | 1      | Hangup             |
+| SIGINT  | 2      | Interrupt (Ctrl+C) |
+| SIGQUIT | 3      | Quit               |
+| SIGKILL | 9      | Force Kill         |
+| SIGTERM | 15     | Terminate          |
+| SIGSTOP | 19     | Stop               |
+| SIGCONT | 18     | Continue           |
+| SIGUSR1 | 10     | User defined       |
+| SIGUSR2 | 12     | User defined       |
 
 ---
 

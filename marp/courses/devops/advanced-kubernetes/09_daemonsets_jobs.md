@@ -93,7 +93,7 @@ spec:
 ## `DaemonSet` Use Cases
 
 | Use Case | Example |
-|----------|---------|
+| ---------- | --------- |
 | Log collection | `Fluent Bit`, `Filebeat`, `Fluentd` |
 | Monitoring agent | `Prometheus` Node Exporter, `Datadog` Agent |
 | Network plugin | `Calico`, `Cilium`, `Weave` |
@@ -236,7 +236,7 @@ spec:
 ## `Job` Configuration Options
 
 | Field | Description | Default |
-|-------|-------------|---------|
+| ------- | ------------- | --------- |
 | `completions` | Number of completions needed | 1 |
 | `parallelism` | Max parallel pods | 1 |
 | `backoffLimit` | Retries before marking failed | 6 |
@@ -312,7 +312,7 @@ spec:
 ## Concurrency Policies
 
 | Policy | Behavior |
-|--------|----------|
+| -------- | ---------- |
 | `Allow` | Multiple jobs can run simultaneously |
 | `Forbid` | Skip new run if previous still running |
 | `Replace` | Cancel running job, start new one |

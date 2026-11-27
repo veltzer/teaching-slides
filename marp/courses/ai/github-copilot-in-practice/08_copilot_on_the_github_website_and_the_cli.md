@@ -73,7 +73,7 @@ audience:
 ## Automatic Review Triggers
 
 | Trigger | Configured in | Typical use |
-|---|---|---|
+| --- | --- | --- |
 | Manual request | Pull request **Reviewers** menu | One-off second look |
 | Personal setting | Your Copilot settings | Review every pull request you open |
 | Repository ruleset | Settings → Rules → Rulesets | Every pull request on `main` |
@@ -83,7 +83,7 @@ audience:
 ## Automatic Review Triggers (cont.)
 
 | Trigger | Configured in | Typical use |
-|---|---|---|
+| --- | --- | --- |
 | Organization ruleset | Org settings → Rulesets | Many repositories at once |
 | Review new pushes | Ruleset option | Re-review after each push |
 | Review drafts | Ruleset option | Feedback before ready for review |
@@ -175,7 +175,7 @@ applyTo: "src/api/**/*.ts"
 ## Knowledge Bases Became Spaces
 
 | | Knowledge bases (retired) | Copilot Spaces |
-|---|---|---|
+| --- | --- | --- |
 | Plan | Enterprise only | All plans with chat |
 | Content | Markdown files in repositories | Code, files, issues, PRs, free text |
 | Instructions | None | Per-Space instructions |
@@ -232,7 +232,7 @@ $ copilot
 ## Permission Flags
 
 | Flag | Effect |
-|---|---|
+| --- | --- |
 | `--allow-tool 'shell(git)'` | Run any `git` command without asking |
 | `--deny-tool 'shell(rm)'` | Never run `rm`, even if allowed elsewhere |
 | `--allow-tool 'write'` | Edit files without asking |
@@ -244,7 +244,7 @@ $ copilot
 ## Useful Slash Commands
 
 | Command | What it does |
-|---|---|
+| --- | --- |
 | `/model` | Switch the model for this session |
 | `/mcp` | List, add or disable `MCP` servers |
 | `/delegate` | Hand the task to the coding agent as a pull request |

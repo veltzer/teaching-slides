@@ -43,7 +43,7 @@ audience:
 ## Load Balancing Algorithms
 
 | Algorithm | How it Works | Best For |
-|-----------|-------------|----------|
+| ----------- | ------------- | ---------- |
 | Round Robin | Each server gets the next request | Equal-capacity servers |
 | Least Connections | Send to server with fewest active connections | Varying request duration |
 | IP Hash | Hash client IP to pick server | Session persistence |
@@ -140,7 +140,7 @@ server {
 ## Comparison
 
 | Term | Primary Function | Location | Direction |
-|------|------------------|----------|-----------|
+| ------ | ------------------ | ---------- | ----------- |
 | Load Balancer | Distribute traffic | In front of servers | Inbound |
 | Proxy | Intermediary for clients | Client side | Outbound |
 | Reverse Proxy | Intermediary for servers | Server side | Inbound |

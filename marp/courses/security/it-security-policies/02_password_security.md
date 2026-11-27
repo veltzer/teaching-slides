@@ -27,7 +27,7 @@ audience:
 ## Most Common Passwords (Still!)
 
 | Rank | Password | Time to Crack |
-|------|----------|---------------|
+| ------ | ---------- | --------------- |
 | 1 | `123456` | Instant |
 | 2 | `password` | Instant |
 | 3 | `qwerty` | Instant |
@@ -117,7 +117,7 @@ Using two or more of these factors dramatically improves security
 ## MFA in Practice: Common Second Factors
 
 | Method | Security Level | Convenience |
-|--------|---------------|-------------|
+| -------- | --------------- | ------------- |
 | `SMS` code | Fair | High |
 | Authenticator app | Good | High |
 | Hardware key (`YubiKey`) | Excellent | Medium |

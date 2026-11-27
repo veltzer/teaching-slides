@@ -466,7 +466,7 @@ spec:
 ## `Kustomize` vs `Helm` vs GitOps
 
 | Feature | `Kustomize` | `Helm` | GitOps |
-|---------|-----------|------|--------|
+| --------- | ----------- | ------ | -------- |
 | Template engine | No (patches) | Yes (Go templates) | Uses either |
 | Package management | No | Yes | No |
 | Rollback | Via Git | Built-in | Via Git |

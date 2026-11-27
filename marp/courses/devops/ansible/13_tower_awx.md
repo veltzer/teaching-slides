@@ -46,7 +46,7 @@ audience:
 ## Key Features
 
 | Feature | Description |
-|---------|-------------|
+| --------- | ------------- |
 | **RBAC** | Role-based access control for teams |
 | **Job Templates** | Reusable playbook run configurations |
 | **Workflows** | Chain multiple playbooks with logic |
@@ -58,7 +58,7 @@ audience:
 ## Key Features (cont.)
 
 | Feature | Description |
-|---------|-------------|
+| --------- | ------------- |
 | **Inventory Sync** | Auto-sync from cloud providers |
 | **Notifications** | Slack, email, webhook alerts |
 | **Audit Trail** | Full logging of who ran what, when |
@@ -137,7 +137,7 @@ Start
 ## Credential Types
 
 | Type | Use Case |
-|------|----------|
+| ------ | ---------- |
 | Machine | `SSH` keys for managed nodes |
 | Source Control | `Git` repository access |
 | Vault | `Ansible Vault` password |
@@ -223,7 +223,7 @@ awx --conf.host https://awx.example.com \
 ## Tower vs AWX Comparison
 
 | Feature | AWX (Free) | Tower (Paid) |
-|---------|-----------|--------------|
+| --------- | ----------- | -------------- |
 | Core features | Yes | Yes |
 | Red Hat support | No | Yes |
 | Security patches | Community | Guaranteed SLA |

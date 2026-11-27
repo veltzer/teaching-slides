@@ -39,15 +39,15 @@ audience:
 
 ## Types of Domain Hijacking
 
-| Type                        | Method                                    | Difficulty |
-|-----------------------------|-------------------------------------------|------------|
-| Registrar Account Takeover  | Compromise registrar login credentials    | Medium     |
-| Social Engineering          | Trick registrar support into transferring | Medium     |
-| DNS Hijacking               | Modify DNS records at server level        | Medium     |
-| Domain Slamming             | Unauthorized transfer to another registrar| Low        |
-| Registry Hijacking          | Exploit vulnerabilities at registry level | High       |
-| Expired Domain Takeover     | Register domains after they expire        | Low        |
-| Subdomain Takeover          | Claim dangling DNS records                | Low        |
+| Type                       | Method                                     | Difficulty |
+| -------------------------- | ------------------------------------------ | ---------- |
+| Registrar Account Takeover | Compromise registrar login credentials     | Medium     |
+| Social Engineering         | Trick registrar support into transferring  | Medium     |
+| DNS Hijacking              | Modify DNS records at server level         | Medium     |
+| Domain Slamming            | Unauthorized transfer to another registrar | Low        |
+| Registry Hijacking         | Exploit vulnerabilities at registry level  | High       |
+| Expired Domain Takeover    | Register domains after they expire         | Low        |
+| Subdomain Takeover         | Claim dangling DNS records                 | Low        |
 
 ---
 
@@ -156,14 +156,14 @@ whois example.com | grep -i "expir"
 
 **Vulnerable services for subdomain takeover:**
 
-| Service          | DNS Record Type | Fingerprint (when unclaimed)     |
-|------------------|-----------------|----------------------------------|
-| GitHub Pages     | CNAME           | "There isn't a GitHub Pages site"|
-| AWS S3           | CNAME           | "NoSuchBucket"                   |
-| Heroku           | CNAME           | "No such app"                    |
-| Azure            | CNAME           | "404 - Web Site is not found"    |
-| Shopify          | CNAME           | "Sorry, this shop is not available"|
-| Fastly           | CNAME           | "Fastly error: unknown domain"   |
+| Service      | DNS Record Type | Fingerprint (when unclaimed)        |
+| ------------ | --------------- | ----------------------------------- |
+| GitHub Pages | CNAME           | "There isn't a GitHub Pages site"   |
+| AWS S3       | CNAME           | "NoSuchBucket"                      |
+| Heroku       | CNAME           | "No such app"                       |
+| Azure        | CNAME           | "404 - Web Site is not found"       |
+| Shopify      | CNAME           | "Sorry, this shop is not available" |
+| Fastly       | CNAME           | "Fastly error: unknown domain"      |
 
 ---
 
@@ -197,13 +197,13 @@ nuclei -l subdomains.txt -t takeovers/
 
 ## Monitoring Tools and Services
 
-| Tool / Service       | Type           | Purpose                              |
-|----------------------|----------------|--------------------------------------|
-| SecurityTrails       | Commercial     | Domain and DNS intelligence          |
-| DNStwist             | Open Source    | Detect phishing/typosquatting domains|
-| Whois History        | Commercial     | Track WHOIS record changes           |
-| CertStream          | Open Source    | Monitor Certificate Transparency logs|
-| domaincheck          | Open Source    | Domain expiration monitoring         |
+| Tool / Service | Type        | Purpose                               |
+| -------------- | ----------- | ------------------------------------- |
+| SecurityTrails | Commercial  | Domain and DNS intelligence           |
+| DNStwist       | Open Source | Detect phishing/typosquatting domains |
+| Whois History  | Commercial  | Track WHOIS record changes            |
+| CertStream     | Open Source | Monitor Certificate Transparency logs |
+| domaincheck    | Open Source | Domain expiration monitoring          |
 
 ```bash
 # DNStwist: Find domains similar to yours (phishing/typosquat)
@@ -327,15 +327,15 @@ fi
 
 ## Real-World Domain Hijacking Incidents
 
-| Incident                    | Year | Impact                                    |
-|-----------------------------|------|-------------------------------------------|
-| Panix.com hijacking         | 2005 | ISP domain transferred without consent    |
-| CheckFree.com               | 2008 | Financial site redirected, malware served |
-| Twitter DNS hijack          | 2009 | Iranian Cyber Army defaced Twitter        |
-| Lenovo.com                  | 2015 | Domain redirected by Lizard Squad         |
-| Brazilian bank hijack       | 2017 | All bank domains hijacked for 5 hours     |
-| MyEtherWallet DNS hijack    | 2018 | BGP hijack to steal cryptocurrency        |
-| Squarespace mass hijack     | 2024 | Domains migrated from Google Domains      |
+| Incident                 | Year | Impact                                    |
+| ------------------------ | ---- | ----------------------------------------- |
+| Panix.com hijacking      | 2005 | ISP domain transferred without consent    |
+| CheckFree.com            | 2008 | Financial site redirected, malware served |
+| Twitter DNS hijack       | 2009 | Iranian Cyber Army defaced Twitter        |
+| Lenovo.com               | 2015 | Domain redirected by Lizard Squad         |
+| Brazilian bank hijack    | 2017 | All bank domains hijacked for 5 hours     |
+| MyEtherWallet DNS hijack | 2018 | BGP hijack to steal cryptocurrency        |
+| Squarespace mass hijack  | 2024 | Domains migrated from Google Domains      |
 
 ---
 

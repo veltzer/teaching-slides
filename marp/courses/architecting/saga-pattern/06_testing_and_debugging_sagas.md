@@ -83,7 +83,7 @@ def test_payment_failed_triggers_compensation():
 ## Failure Test Coverage Matrix
 
 | Step | Success | Transient fail | Permanent fail | Timeout |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Reserve inventory | ✓ | ✓ | ✓ | ✓ |
 | Capture payment | ✓ | ✓ | ✓ | ✓ |
 | Schedule shipment | ✓ | ✓ | ✓ | ✓ |

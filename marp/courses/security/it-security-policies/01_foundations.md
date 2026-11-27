@@ -36,7 +36,7 @@ audience:
 ## Real-World Impact: Notable Breaches
 
 | Company | Year | Cause | Impact |
-|---------|------|-------|--------|
+| --------- | ------ | ------- | -------- |
 | Target | 2013 | Vendor credentials stolen | 40M credit cards |
 | Equifax | 2017 | Unpatched software | 147M records |
 | Marriott | 2018 | Compromised credentials | 500M guests |
@@ -102,7 +102,7 @@ The three pillars of information security:
 ## Who Are the Attackers?
 
 | Attacker Type | Motivation | Example |
-|---------------|------------|---------|
+| --------------- | ------------ | --------- |
 | Cybercriminals | Money | Ransomware gangs |
 | Nation-states | Espionage | Government-sponsored hackers |
 | Hacktivists | Ideology | Political protest groups |

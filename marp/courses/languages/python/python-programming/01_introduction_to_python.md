@@ -40,7 +40,7 @@ audience:
 ## Python 2 vs Python 3
 
 | Feature | Python 2 | Python 3 |
-|---------|----------|----------|
+| --------- | ---------- | ---------- |
 | Print | `print "hello"` | `print("hello")` |
 | Division | `5/2 = 2` | `5/2 = 2.5` |
 | Strings | ASCII by default | Unicode by default |
@@ -87,7 +87,7 @@ audience:
 ## Python vs C/C++
 
 | Aspect | Python | C/C++ |
-|--------|--------|-------|
+| -------- | -------- | ------- |
 | Typing | Dynamic | Static |
 | Speed | Slower (interpreted) | Faster (compiled) |
 | Memory | Automatic GC | Manual management |
@@ -99,7 +99,7 @@ audience:
 ## Python vs Java
 
 | Aspect | Python | Java |
-|--------|--------|------|
+| -------- | -------- | ------ |
 | Typing | Dynamic | Static |
 | Syntax | Concise | Verbose |
 | Indentation | Meaningful | Cosmetic |
@@ -111,7 +111,7 @@ audience:
 ## Python vs JavaScript
 
 | Aspect | Python | JavaScript |
-|--------|--------|------------|
+| -------- | -------- | ------------ |
 | Primary use | General purpose | Web (now general) |
 | Typing | Dynamic | Dynamic |
 | Concurrency | GIL limits threads | Event loop |
@@ -123,7 +123,7 @@ audience:
 ## Python vs Bash
 
 | Aspect | Python | Bash |
-|--------|--------|------|
+| -------- | -------- | ------ |
 | Readability | High | Low for complex scripts |
 | Portability | Cross-platform | Unix-focused |
 | Data structures | Rich | Limited |

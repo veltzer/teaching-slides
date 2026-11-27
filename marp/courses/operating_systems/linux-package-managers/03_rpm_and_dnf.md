@@ -348,7 +348,7 @@ A signed package + a published key + `gpgcheck=1` in the repo definition = a cha
 ## Side-by-Side: `apt` vs `dnf`
 
 | Task | `apt` (Debian/Ubuntu) | `dnf` (RHEL/Fedora) |
-|---|---|---|
+| --- | --- | --- |
 | Refresh metadata | `apt update` | `dnf check-update` |
 | Install | `apt install pkg` | `dnf install pkg` |
 | Remove | `apt remove pkg` | `dnf remove pkg` |
@@ -362,7 +362,7 @@ A signed package + a published key + `gpgcheck=1` in the repo definition = a cha
 ## Side-by-Side: `apt` vs `dnf` (cont.)
 
 | Task | `apt` (Debian/Ubuntu) | `dnf` (RHEL/Fedora) |
-|---|---|---|
+| --- | --- | --- |
 | List files | `dpkg -L pkg` | `rpm -ql pkg` |
 | File owner | `dpkg -S /path` | `rpm -qf /path` |
 | Hold | `apt-mark hold pkg` | `dnf versionlock pkg` |

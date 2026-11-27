@@ -304,7 +304,7 @@ make 2> error.log > output.log
 ## Shell Features Comparison
 
 | Feature | Bourne Family | C Shell Family |
-|---------|--------------|----------------|
+| --------- | -------------- | ---------------- |
 | Variables | name=value | set name = value |
 | Environment | export name=value | setenv name value |
 | Arithmetic | $((expr)) | @ result = (expr) |

@@ -40,13 +40,13 @@ audience:
 ## Data Size Units
 
 | Unit     | Abbreviation | Size                    |
-|----------|-------------|-------------------------|
-| Bit      | b           | 0 or 1                  |
-| Byte     | B           | 8 bits                  |
-| Kilobyte | KB          | 1,024 bytes             |
-| Megabyte | MB          | 1,048,576 bytes         |
-| Gigabyte | GB          | 1,073,741,824 bytes     |
-| Terabyte | TB          | 1,099,511,627,776 bytes |
+| -------- | ------------ | ----------------------- |
+| Bit      | b            | 0 or 1                  |
+| Byte     | B            | 8 bits                  |
+| Kilobyte | KB           | 1,024 bytes             |
+| Megabyte | MB           | 1,048,576 bytes         |
+| Gigabyte | GB           | 1,073,741,824 bytes     |
+| Terabyte | TB           | 1,099,511,627,776 bytes |
 
 - Forensic tools often report sizes in bytes for precision
 - Be aware of the difference between KB (1024) and kB (1000)
@@ -204,15 +204,15 @@ sudo hdparm -I /dev/sda | grep TRIM
 
 ## SSD vs HDD: Forensic Comparison
 
-| Feature          | HDD                      | SSD                      |
-|-----------------|--------------------------|--------------------------|
-| Deleted data    | Often recoverable        | May be wiped by TRIM     |
-| Write patterns  | Sequential preferred     | Random access efficient  |
-| Wear leveling   | Not applicable           | Active, moves data       |
-| Data remnants   | Magnetic residue exists  | Electrical charges fade  |
-| Imaging speed   | Slower                   | Faster                   |
-| Physical damage | Head crash, platter damage| Controller failure       |
-| Hidden areas    | HPA, DCO                 | Over-provisioned space   |
+| Feature         | HDD                        | SSD                     |
+| --------------- | -------------------------- | ----------------------- |
+| Deleted data    | Often recoverable          | May be wiped by TRIM    |
+| Write patterns  | Sequential preferred       | Random access efficient |
+| Wear leveling   | Not applicable             | Active, moves data      |
+| Data remnants   | Magnetic residue exists    | Electrical charges fade |
+| Imaging speed   | Slower                     | Faster                  |
+| Physical damage | Head crash, platter damage | Controller failure      |
+| Hidden areas    | HPA, DCO                   | Over-provisioned space  |
 
 ---
 
@@ -240,14 +240,14 @@ sudo hdparm --dco-identify /dev/sda
 
 ## Disk Interfaces
 
-| Interface | Speed         | Use Case              |
-|-----------|--------------|----------------------|
-| SATA III  | 6 Gbps      | Consumer HDDs/SSDs   |
-| SAS       | 12 Gbps     | Enterprise servers   |
-| NVMe      | 32 Gbps+    | Modern SSDs (PCIe)   |
-| USB 3.0   | 5 Gbps      | External drives      |
-| USB 3.1   | 10 Gbps     | External SSDs        |
-| USB 3.2   | 20 Gbps     | Fast external storage|
+| Interface | Speed    | Use Case              |
+| --------- | -------- | --------------------- |
+| SATA III  | 6 Gbps   | Consumer HDDs/SSDs    |
+| SAS       | 12 Gbps  | Enterprise servers    |
+| NVMe      | 32 Gbps+ | Modern SSDs (PCIe)    |
+| USB 3.0   | 5 Gbps   | External drives       |
+| USB 3.1   | 10 Gbps  | External SSDs         |
+| USB 3.2   | 20 Gbps  | Fast external storage |
 
 ```bash
 # Identify disk interfaces
@@ -408,8 +408,8 @@ sudo blkid
 
 ## Common Partition Types
 
-| Type Code | Filesystem | Description           |
-|-----------|------------|----------------------|
+| Type Code | Filesystem | Description          |
+| --------- | ---------- | -------------------- |
 | 0x83      | ext4       | Linux filesystem     |
 | 0x82      | swap       | Linux swap           |
 | 0x07      | NTFS       | Windows NTFS         |
@@ -475,13 +475,13 @@ sudo vgchange -an vg_name
 
 ## RAID Configurations
 
-| Level  | Description         | Min Disks | Forensic Note                |
-|--------|--------------------|-----------|-----------------------------|
-| RAID 0 | Striping           | 2         | All disks needed            |
-| RAID 1 | Mirroring          | 2         | Either disk has full copy   |
-| RAID 5 | Striping + Parity  | 3         | Can rebuild with N-1 disks  |
-| RAID 6 | Striping + 2 Parity| 4         | Can rebuild with N-2 disks  |
-| RAID 10| Mirror + Stripe    | 4         | Need one from each mirror   |
+| Level   | Description         | Min Disks | Forensic Note              |
+| ------- | ------------------- | --------- | -------------------------- |
+| RAID 0  | Striping            | 2         | All disks needed           |
+| RAID 1  | Mirroring           | 2         | Either disk has full copy  |
+| RAID 5  | Striping + Parity   | 3         | Can rebuild with N-1 disks |
+| RAID 6  | Striping + 2 Parity | 4         | Can rebuild with N-2 disks |
+| RAID 10 | Mirror + Stripe     | 4         | Need one from each mirror  |
 
 ```bash
 # Check for software RAID
