@@ -151,6 +151,7 @@ def _convert_colors(svg: SvgFile, hex_to_name: dict[str, str]) -> None:
 
 
 def process_file(path: Path, hex_to_name_map: dict[str, dict[str, str]],
+                 *,
                  apply: bool) -> bool:
     """Process one SVG. Returns True if the file changed."""
     svg = SvgFile.load(path)
@@ -192,7 +193,7 @@ def main() -> None:
 
     for path in svg_files:
         try:
-            if process_file(path, hex_to_name_map, args.apply):
+            if process_file(path, hex_to_name_map, apply=args.apply):
                 changed.append(path)
         except Exception as exc:  # noqa: BLE001 - collect per-file failures, keep processing
             errors.append((path, exc))

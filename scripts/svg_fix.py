@@ -360,7 +360,7 @@ FIX_MAP = {
 # separate functions — SvgFile always ensures them.
 
 
-def process_file(path: Path, fixes: set[str], dry_run: bool) -> bool:
+def process_file(path: Path, fixes: set[str], *, dry_run: bool) -> bool:
     svg = SvgFile.load(path)
 
     for name in ALL_FIXES:
@@ -425,7 +425,7 @@ def main() -> None:
         if not path.is_file() or path.suffix != ".svg":
             continue
         total += 1
-        if process_file(path, fixes, args.dry_run):
+        if process_file(path, fixes, dry_run=args.dry_run):
             changed += 1
 
     action = "would change" if args.dry_run else "changed"

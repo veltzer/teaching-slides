@@ -502,7 +502,7 @@ def _check_no_border(tree: ET.ElementTree[ET.Element]) -> list[str]:
         for child in node:
             tag = child.tag.split('}')[-1]
             if tag == 'defs':
-                yield from walk(child, True)
+                yield from walk(child, inside_defs=True)
                 continue
             if inside_defs:
                 yield from walk(child, inside_defs)
@@ -510,7 +510,7 @@ def _check_no_border(tree: ET.ElementTree[ET.Element]) -> list[str]:
             yield child
             yield from walk(child, inside_defs)
 
-    for elem in walk(root, False):
+    for elem in walk(root, inside_defs=False):
         tag = elem.tag.split('}')[-1]
         if tag != 'rect':
             continue
@@ -590,7 +590,7 @@ def _check_title_bg_rect(tree: ET.ElementTree[ET.Element]) -> list[str]:
     return errors
 
 
-def _find_text_matches(root, spec: dict, check_weight: bool = True) -> list:
+def _find_text_matches(root, spec: dict, *, check_weight: bool = True) -> list:
     """Find <text> elements that are direct children of root matching spec."""
     expected_ff = spec.get("font-family", "Arial, sans-serif")
     expected_fs = str(spec.get("font-size", 39))
